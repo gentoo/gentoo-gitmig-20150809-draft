@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Felix Kurth <felix@fkurth.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.2.ebuild,v 1.3 2003/09/06 23:50:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.2.ebuild,v 1.4 2003/09/11 01:48:20 msterret Exp $
 
 inherit latex-package
 S=${WORKDIR}/eurosym
@@ -14,15 +14,15 @@ KEYWORDS="~x86 ~ppc"
 SUPPLIER="public"
 
 src_install() {
-    cd ${S}
+	cd ${S}
 	cd src
-    latex-package_src_doinstall all
-    cd ${S}
+	latex-package_src_doinstall all
+	cd ${S}
 	cd tfm
-    latex-package_src_doinstall all
+	latex-package_src_doinstall all
 	cd ${S}
 	cd sty
-    latex-package_src_doinstall all
+	latex-package_src_doinstall all
 	cd ${S}
 	insinto ${TEXMF}/fonts/type1/${SUPPLIER}/latex-eurosym
 	doins contrib/type1/fonts/type1/eurosym/*
@@ -32,11 +32,11 @@ src_install() {
 	dodoc README Changes
 	cd doc
 	dodoc *
- }
+}
 
 pkg_postinst() {
 	latex-package_pkg_postinst
-    einfo ""
+	einfo ""
 	einfo "Please edit \"/usr/share/texmf/dvips/config/updmap\" and"
 	einfo "add \"eurosym.map\" on line 24 (extra_modules)"
 	einfo "Then run \"/usr/share/texmf/dvips/config/updmap\""
