@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.28 2003/12/04 23:01:31 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.29 2003/12/12 23:38:04 plasmaroo Exp $
+
+  12 Dec 2003; <plasmaroo@gentoo.org> gs-sources-2.4.23_pre8-r1.ebuild,
+  files/gs-sources-2.4.23_pre8-af_irda.patch:
+  Added a patch to fix a slight typo in the linux-2.4.23 pre-patch; thanks to
+  Brian Harring for filing the bug. Bug #35646 is resolved as a result.
 
 *gs-sources-2.4.23_pre8-r1 (02 Dec 2003)
 

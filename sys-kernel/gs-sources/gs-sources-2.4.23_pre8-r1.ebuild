@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.23_pre8-r1.ebuild,v 1.1 2003/12/02 07:09:02 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.23_pre8-r1.ebuild,v 1.2 2003/12/12 23:38:04 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -53,4 +53,5 @@ src_unpack() {
 	fi
 
 	kernel_src_unpack
+	cd ${S} && epatch ${FILESDIR}/${P}-af_irda.patch || die
 }

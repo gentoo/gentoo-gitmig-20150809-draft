@@ -1,0 +1,20 @@
+--- net/irda/af_irda.c.orig	2003-12-12 03:00:22.000000000 -0600
++++ net/irda/af_irda.c	2003-12-12 03:00:12.000000000 -0600
+@@ -285,7 +285,7 @@
+ 		self->max_data_size = irttp_get_max_seg_size(self->tsap);
+ 	};
+ 
+-	IRDA_DEBUG(2, "%s(), max_data_size=%d\n", __FUNCTION__
++	IRDA_DEBUG(2, "%s(), max_data_size=%d\n", __FUNCTION__,
+ 		   self->max_data_size);
+ 
+ 	memcpy(&self->qos_tx, qos, sizeof(struct qos_info));
+@@ -384,7 +384,7 @@
+ 
+ 	/* Check if request succeeded */
+ 	if (result != IAS_SUCCESS) {
+-		IRDA_DEBUG(1, "%s(), IAS query failed! (%d)\n", __FUNCTION__
++		IRDA_DEBUG(1, "%s(), IAS query failed! (%d)\n", __FUNCTION__,
+ 			   result);
+ 
+ 		self->errno = result;	/* We really need it later */
