@@ -1,4 +1,4 @@
-MD5 ac6f72506b937f4570c84d940edb0fa6 files/digest-mp3c-0.27 61
-MD5 8f076fbb1b56124f6f15b74d13a51a6f ChangeLog 205
-MD5 6027e9b31ab35c722b9f822f1f8044be mp3c-0.27.ebuild 864
+MD5 d769018e7a3db125578ba2fe236856b8 mp3c-0.27.ebuild 854
+MD5 3054cee5e2f618138418ae206d3b424a ChangeLog 291
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 ac6f72506b937f4570c84d940edb0fa6 files/digest-mp3c-0.27 61
