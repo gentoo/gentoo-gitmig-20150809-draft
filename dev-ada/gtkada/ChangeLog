@@ -1,6 +1,13 @@
 # ChangeLog for dev-ada/gtkada
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.1 2003/07/14 23:13:21 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.2 2003/08/14 01:01:32 dholm Exp $
+
+*gtkada-2.2.0-r1 (14 Aug 2003)
+
+  14 Aug 2003; David Holm <avatar@gentoo.org> gtkada-2.2.0-r1.ebuild:
+  The shared libraries are now linked into /usr/lib so that applications linked
+  against them will find them. The gtkada-config script has been fixed (it
+  previously returned invalid paths).
 
 *gtkada-2.2.0.ebuild (14 Jul 2003)
 
