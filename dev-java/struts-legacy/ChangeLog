@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts-legacy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.5 2004/07/13 17:33:59 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.6 2004/10/03 13:48:55 karltk Exp $
+
+  03 Oct 2004; Karl Trygve Kalleberg <karltk@gentoo.org> struts-legacy-1.0-r1.ebuild:
+  jdbc2-stdext is present in 1.4, and is only needed for 1.3 vms. Removed old 
+  revision.
 
   13 Jul 2004; <SeJo@gentoo.org> struts-legacy-1.0-r1.ebuild,
   struts-legacy-1.0.ebuild:
