@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.1 2002/10/13 11:57:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.2 2002/10/14 20:01:28 seemant Exp $
 
 MMPV=6.05
 MMPN=ExtUtils-MakeMaker
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.perl.org"
 
 SLOT="0"
 LICENSE="Artistic GPL-2"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 
 RDEPEND="berkdb? ( >=sys-libs/db-3.2.3h-r3 
