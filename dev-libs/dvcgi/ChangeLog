@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dvcgi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvcgi/ChangeLog,v 1.6 2004/03/02 11:30:16 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvcgi/ChangeLog,v 1.7 2004/03/17 09:02:18 seemant Exp $
+
+  17 Mar 2004; Seemant Kulleen <seemant@gentoo.org> dvcgi-0.5.10.ebuild,
+  dvcgi-0.5.7.ebuild, dvcgi-0.5.8.ebuild:
+  fix for bug #44712 by Michael Sterret <mr_bones_@gentoo.org>
 
 *dvcgi-0.5.10 (28 Oct 2003)
 

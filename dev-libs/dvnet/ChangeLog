@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dvnet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.5 2004/03/14 12:05:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.6 2004/03/17 09:06:21 seemant Exp $
+
+  17 Mar 2004; Seemant Kulleen <seemant@gentoo.org> dvnet-0.9.4.ebuild,
+  dvnet-0.9.5.ebuild, dvnet-0.9.6.ebuild, dvnet-0.9.7.ebuild,
+  dvnet-0.9.8.ebuild:
+  fix for bug #44712 by Michael Sterret <mr_bones_@gentoo.org>
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> dvnet-0.9.4.ebuild,
   dvnet-0.9.5.ebuild, dvnet-0.9.6.ebuild, dvnet-0.9.7.ebuild,
