@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.19-r2.ebuild,v 1.2 2004/05/31 00:26:50 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.19-r2.ebuild,v 1.3 2004/06/05 00:58:24 kloeri Exp $
 
 inherit eutils ssl-cert
 
@@ -23,7 +23,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 s390"
+KEYWORDS="~x86 ~sparc ~ppc alpha ~amd64 s390"
 IUSE="ipv6 pam ldap mysql postgres ssl sasl vda maildir mbox"
 
 PROVIDE="virtual/mta virtual/mda"
