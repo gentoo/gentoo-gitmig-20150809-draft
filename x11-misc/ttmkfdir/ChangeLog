@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/ttmkfdir
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.7 2002/12/13 11:00:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.8 2002/12/23 01:25:26 azarah Exp $
+
+*ttmkfdir-2.0-r1 (23 Dec 2002)
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> ttmkfdir-2.0-r1.ebuild :
+
+  Fix ttmkfdir to ignore FIRSTINDEX it usually borks on.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
