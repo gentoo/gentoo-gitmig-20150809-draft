@@ -3,10 +3,10 @@ Hash: SHA1
 
 MD5 7cd0d58b54b5130dcb6ab812e53148da rails-0.9.5.ebuild 917
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 cce0b60823e0daca0356c86a883af52d ChangeLog 1296
+MD5 6ddfdabb904b9d669c2a68ce2b360d2c ChangeLog 1408
 MD5 045d88293f571daf97daae650f5b8b92 rails-0.10.0-r1.ebuild 1158
 MD5 a466ff97a9d7354ccc2ba957a71349af rails-0.10.1.ebuild 1129
-MD5 18d4ed6f13873b5614f127045e673f2a rails-0.11.0-r1.ebuild 1441
+MD5 5806426858a6dc24ae197fbbbfbda078 rails-0.11.0-r1.ebuild 1493
 MD5 e7525516e42eccce38edf56245e77f36 files/digest-rails-0.10.0-r1 60
 MD5 937edc8b22617c57edda938e9d6e5445 files/digest-rails-0.9.5 59
 MD5 b90ec8b0a5b4c6f49320babf37ffe62a files/digest-rails-0.10.1 60
@@ -15,7 +15,7 @@ MD5 d1fcc78a6710f38b21e3c155deb9a9cf files/digest-rails-0.11.0-r1 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCQ5Bez2gxt1z4IGYRAuXMAJ9lZXZM74ly9EdyUtSYalpSyzP+QQCg1seZ
-4CqlWB8zwQPA2qLsr65/pVw=
-=Yhlt
+iD8DBQFCRO2+z2gxt1z4IGYRAoOyAKDIhfDbqlcDXKwUBlqu1z3Ttkk9BgCgnaiO
+MgRY7mSkwPFV9MUxDXuyhWM=
+=U0sw
 -----END PGP SIGNATURE-----
