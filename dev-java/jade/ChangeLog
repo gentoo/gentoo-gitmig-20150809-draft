@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.7 2004/07/29 20:38:16 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.8 2004/08/31 03:48:14 zx Exp $
+
+  30 Aug 2004; Chris Aniszczyk <zx@gentoo.org> jade-3.2.ebuild:
+  Marking x86
 
 *jade-3.2 (29 Jul 2004)
 
