@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.3 2003/05/28 10:18:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.4 2003/05/28 20:53:01 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -39,7 +39,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.1.3"
+PATCH_VER="1.1.4"
 FT2_VER="2.1.3"
 XCUR_VER="0.2"
 SISDRV_VER="180403-1"
@@ -49,7 +49,6 @@ MGADRV_VER="1_3_0beta"
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
 S="${WORKDIR}/xc"
-DESCRIPTION="Xfree86: famous and free X server"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${BASE_PV}/source"
 SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
@@ -68,12 +67,27 @@ X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 # Latest SIS drivers:  http://www.winischhofer.net/
 # Glide headers for compiling the tdfx modules
 
+# For the MS Core fonts ..
+MS_COREFONTS="./andale32.exe ./arial32.exe
+	./arialb32.exe ./comic32.exe
+	./courie32.exe ./georgi32.exe
+	./impact32.exe ./times32.exe
+	./trebuc32.exe ./verdan32.exe
+	./webdin32.exe"
+#	./IELPKTH.CAB"
+# Need windows license to use this one
+MS_FONT_URLS="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
+
 SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	${SRC_PATH0}/X${MY_SV}src-2.tgz
 	${SRC_PATH0}/X${MY_SV}src-3.tgz
+	${SRC_PATH0}/X${MY_SV}src-4.tgz
+	${SRC_PATH0}/X${MY_SV}src-5.tgz
 	${SRC_PATH1}/X${MY_SV}src-1.tgz
 	${SRC_PATH1}/X${MY_SV}src-2.tgz
 	${SRC_PATH1}/X${MY_SV}src-3.tgz
+	${SRC_PATH1}/X${MY_SV}src-4.tgz
+	${SRC_PATH1}/X${MY_SV}src-5.tgz
 	doc? ( ${SRC_PATH0}/X${MY_SV}src-6.tgz
 		${SRC_PATH0}/X${MY_SV}src-7.tgz
 		${SRC_PATH1}/X${MY_SV}src-6.tgz
@@ -82,17 +96,18 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 SRC_URI="${SRC_URI}
 	${X_PATCHES}
 	${X_DRIVERS}
-	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2"
-#	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
-#	mirror://gentoo/eurofonts-X11.tar.bz2
-#	mirror://gentoo/xfsft-encodings.tar.bz2
-#	mirror://gentoo/XFree86-compose.dir.bz2
-#	mirror://gentoo/XFree86-en_US.UTF-8.old.bz2
-#	mirror://gentoo/XFree86-locale.alias.bz2
-#	mirror://gentoo/XFree86-locale.dir.bz2"
+	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
+	mirror://gentoo/eurofonts-X11.tar.bz2
+	mirror://gentoo/xfsft-encodings.tar.bz2
+	mirror://gentoo/XFree86-compose.dir.bz2
+	mirror://gentoo/XFree86-en_US.UTF-8.old.bz2
+	mirror://gentoo/XFree86-locale.alias.bz2
+	mirror://gentoo/XFree86-locale.dir.bz2
+	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
+	truetype? ( ${MS_FONT_URLS} )"
 
+LICENSE="X11 MSttfEULA"
 SLOT="0"
-LICENSE="X11"
 KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa arm"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
@@ -125,26 +140,31 @@ PROVIDE="virtual/x11
 #do the right thing. Otherwise RDEPEND doesn't get set properly.
 inherit eutils flag-o-matic gcc
 
+DESCRIPTION="Xfree86: famous and free X server"
+
 src_unpack() {
-	ebegin "unpacking shit"
+
 	# Unpack source and patches
-	unpack X${MY_SV}src-{1,2,3}.tgz
+	unpack X${MY_SV}src-{1,2,3,4,5}.tgz
+	if [ -n "`use doc`" ]
+	then
+		unpack X${MY_SV}src-{6,7}.tgz
+	fi
 	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 	# Unpack TaD's gentoo cursors
 	unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2
-	eend 0
 
 	# Unpack extra fonts stuff from Mandrake
-#	if [ -n "`use nls`" ]
-#	then
-#		unpack gemini-koi8-u.tar.bz2
-#	fi
-#	unpack eurofonts-X11.tar.bz2
-#	unpack xfsft-encodings.tar.bz2
+	if [ -n "`use nls`" ]
+	then
+		unpack gemini-koi8-u.tar.bz2
+	fi
+	unpack eurofonts-X11.tar.bz2
+	unpack xfsft-encodings.tar.bz2
 	
 	# Remove bum encoding
-#	rm -f ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/urdunaqsh-0.enc
+	rm -f ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/urdunaqsh-0.enc
 	
 	# Update the Savage Driver
 	# savage driver 1.1.27t is a .zip and contains a savage directory
@@ -193,9 +213,7 @@ src_unpack() {
 	else
 		rm -f ${WORKDIR}/patch/076*
 	fi
-	
-	rm ${WORKDIR}/patch/063*
-	rm ${WORKDIR}/patch/107*
+
 	# Various Patches from all over
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch/
 	
@@ -219,28 +237,27 @@ src_unpack() {
 		eend 0
 	fi
 	
+	# Unpack the MS fonts
+	if [ -n "`use truetype`" ]
+	then
+		einfo "Unpacking MS Core Fonts..."
+		mkdir -p ${WORKDIR}/truetype; cd ${WORKDIR}/truetype
+		for x in ${MS_COREFONTS}
+		do
+			if [ -f ${DISTDIR}/${x} ]
+			then
+				einfo "  ${x/\.\/}..."
+				cabextract --lowercase ${DISTDIR}/${x} > /dev/null || die
+			fi
+		done
+		ebegin "Done unpacking Core Fonts"; eend 0
+	fi
 	# Customise font directory to /usr/share/fonts
 	ebegin "Changing Font directory to /usr/share/fonts"
 	sed -i "s:#define FontDir.*:#define FontDir /usr/share/fonts:" \
 		${S}/config/cf/X11.tmpl
 	eend 0
 
-	# Unpack the MS fonts
-#	if [ -n "`use truetype`" ]
-#	then
-#		einfo "Unpacking MS Core Fonts..."
-#		mkdir -p ${WORKDIR}/truetype; cd ${WORKDIR}/truetype
-#		for x in ${MS_COREFONTS}
-#		do
-#			if [ -f ${DISTDIR}/${x} ]
-#			then
-#				einfo "  ${x/\.\/}..."
-#				cabextract --lowercase ${DISTDIR}/${x} > /dev/null || die
-#			fi
-#		done
-#		ebegin "Done unpacking Core Fonts"; eend 0
-#	fi
-	
 	ebegin "Setting up config/cf/host.def"
 	cd ${S}; cp ${FILESDIR}/${PV}/site.def config/cf/host.def || die
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
@@ -281,7 +298,7 @@ src_unpack() {
 		echo "#define XFree86Devel	YES" >> config/cf/host.def
 		echo "#define DoLoadableServer	NO" >>config/cf/host.def
 	else
-	#	echo "#define ExtraXInputDrivers acecad" >> config/cf/host.def
+		echo "#define ExtraXInputDrivers acecad" >> config/cf/host.def
 		# use less ram .. got this from Spider's makeedit.eclass :)
 		echo "#define GccWarningOptions -Wno-return-type -w" \
 			>> config/cf/host.def
@@ -375,26 +392,22 @@ src_unpack() {
 	fi
 
 	# Native Language Support Fonts
-#	if [ -z "`use nls`" ]
-#	then
-#		echo "#define BuildCyrillicFonts NO" >> config/cf/host.def
-#		echo "#define BuildArabicFonts NO" >> config/cf/host.def
-#		echo "#define BuildGreekFonts NO" >> config/cf/host.def
-#		echo "#define BuildHebrewFonts NO" >> config/cf/host.def
-#		echo "#define BuildThaiFonts NO" >> config/cf/host.def
-#
-#		if [ -z "`use cjk`" ]
-#		then
-#			echo "#define BuildCIDFonts NO" >> config/cf/host.def
-#			echo "#define BuildJapaneseFonts NO" >> config/cf/host.def
-#			echo "#define BuildKoreanFonts NO" >> config/cf/host.def
-#			echo "#define BuildChineseFonts NO" >> config/cf/host.def
-#		fi
-#	fi
+	if [ -z "`use nls`" ]
+	then
+		echo "#define BuildCyrillicFonts NO" >> config/cf/host.def
+		echo "#define BuildArabicFonts NO" >> config/cf/host.def
+		echo "#define BuildGreekFonts NO" >> config/cf/host.def
+		echo "#define BuildHebrewFonts NO" >> config/cf/host.def
+		echo "#define BuildThaiFonts NO" >> config/cf/host.def
 
-	echo "#define BuildFonts NO" >> config/cf/host.def
-	echo "#define DefaultFontPath /usr/share/fonts" >> config/cf/host.def
-	echo "#define FontDir /usr/share/fonts" >> config/cf/host.def
+		if [ -z "`use cjk`" ]
+		then
+			echo "#define BuildCIDFonts NO" >> config/cf/host.def
+			echo "#define BuildJapaneseFonts NO" >> config/cf/host.def
+			echo "#define BuildKoreanFonts NO" >> config/cf/host.def
+			echo "#define BuildChineseFonts NO" >> config/cf/host.def
+		fi
+	fi
 
 #	# Build with the binary MatroxHAL driver
 #	echo "#define HaveMatroxHal YES" >> config/cf/host.def
@@ -411,11 +424,11 @@ src_unpack() {
 	# End the host.def definitions here
 	eend 0
 
-#	cd ${S}
-#	bzcat ${DISTDIR}/XFree86-compose.dir.bz2 > nls/compose.dir
-#	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
-#	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
-#	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
+	cd ${S}
+	bzcat ${DISTDIR}/XFree86-compose.dir.bz2 > nls/compose.dir
+	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
+	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
+	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
 	
 	if use doc
 	then
@@ -543,21 +556,21 @@ src_install() {
 	newins ${S}/programs/Xserver/hw/xfree86/XF86Config XF86Config.example
 	
 	# Install MS fonts.
-#	if [ -n "`use truetype`" ]
-#	then
-#		ebegin "Installing MS Core Fonts"
-#		dodir /usr/X11R6/lib/X11/fonts/truetype
-#		cp -af ${WORKDIR}/truetype/*.ttf ${D}/usr/X11R6/lib/X11/fonts/truetype
-#		eend 0
-#	fi
+	if [ -n "`use truetype`" ]
+	then
+		ebegin "Installing MS Core Fonts"
+		dodir /usr/share/fonts/truetype
+		cp -af ${WORKDIR}/truetype/*.ttf ${D}/usr/share/fonts/truetype
+		eend 0
+	fi
 
 	# EURO support
-#	ebegin "Euro Support..."
-#	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-8x14.bdf | \
-#		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-8x14-lat9.pcf.gz
-#	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
-#		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-9x16-lat9.pcf.gz
-#	eend 0
+	ebegin "Euro Support..."
+	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-8x14.bdf | \
+		gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-8x14-lat9.pcf.gz
+	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
+		gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-9x16-lat9.pcf.gz
+	eend 0
 
 	# Standard symlinks
 	dodir /usr/{bin,include,lib}
@@ -643,16 +656,16 @@ src_install() {
 	done
 	eend 0
 
-#	if [ -n "`use nls`" ]
-#	then
-#		ebegin "gemini-koi8 fonts..."
-#		cd ${WORKDIR}/ukr
-#		gunzip *.Z
-#		gzip -9 *.pcf
-#		cd ${S}
-#		cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
-#		eend 0
-#	fi
+	if [ -n "`use nls`" ]
+	then
+		ebegin "gemini-koi8 fonts..."
+		cd ${WORKDIR}/ukr
+		gunzip *.Z
+		gzip -9 *.pcf
+		cd ${S}
+		cp -a ${WORKDIR}/ukr ${D}/usr/share/fonts
+		eend 0
+	fi
 	
 	exeinto /etc/X11
 	# new session management script
@@ -903,7 +916,7 @@ pkg_postinst() {
 				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 				then
 					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
-						-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
+						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
 				fi
 			done
