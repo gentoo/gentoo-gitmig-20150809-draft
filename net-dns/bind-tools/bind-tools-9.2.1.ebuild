@@ -8,7 +8,7 @@ DESCRIPTION="bind tools: dig, nslookup, and host"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.isc.org/BIND/bind9.html"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="as-is"
 SLOT="0"
 
@@ -20,7 +20,7 @@ src_unpack() {
 }
  
 src_compile() {
-	./configure --host=${CHOST} || die "configure failed"
+	econf || die "configure failed"
 
 	cd ${S}/lib/isc
 	emake || die "make failed in /lib/isc"

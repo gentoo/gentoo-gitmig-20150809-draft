@@ -1,19 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ccmsn/ccmsn-0.3.ebuild,v 1.1 2002/06/30 23:41:45 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ccmsn/ccmsn-0.3.ebuild,v 1.2 2002/07/16 04:54:32 seemant Exp $
 
 RP="ccmsn-0.3p3"
+S=${WORKDIR}/${RP}
 DESCRIPTION="A nice little MSN Client written in TclTk"
 HOMEPAGE="http://messenger.compucreations.com"
-LICENSE="gpl"
-
-SLOT="0"
-DEPEND="dev-lang/tcl dev-lang/tk"
-RDEPEND=""
-
 SRC_URI="http://messenger.compucreations.com/${RP}.tgz"
 
-S=${WORKDIR}/${RP}
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
+
+
+DEPEND="dev-lang/tcl dev-lang/tk"
+RDEPEND=""
 
 src_compile() {
 	mkdir ${S}/${RP}

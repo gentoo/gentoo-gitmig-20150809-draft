@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.3-r1.ebuild,v 1.3 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.3-r1.ebuild,v 1.4 2002/07/16 04:54:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="kernel NFS client and server daemons"
@@ -8,7 +8,10 @@ SRC_URI="http://download.sourceforge.net/nfs/${P}.tar.gz"
 HOMEPAGE="http://nfs.sourceforge.net/"
 DEPEND="virtual/glibc tcpd? ( sys-apps/tcp-wrappers )"
 RDEPEND="virtual/glibc >=net-nds/portmap-5b-r6"
+
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	./configure \

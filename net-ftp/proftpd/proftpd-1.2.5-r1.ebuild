@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5-r1.ebuild,v 1.3 2002/07/09 22:21:17 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5-r1.ebuild,v 1.4 2002/07/16 04:54:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An advanced and very configurable FTP server"
 SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P}.tar.bz2"
 HOMEPAGE="http://www.proftpd.net/"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 

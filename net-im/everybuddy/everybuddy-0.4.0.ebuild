@@ -1,18 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.0.ebuild,v 1.4 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.0.ebuild,v 1.5 2002/07/16 04:54:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Universal Instant Messaging Client"
 SRC_URI="http://www.everybuddy.com/files/${P}.tar.gz"
 HOMEPAGE="http://www.everybuddy.com/"
-SLOT="0"
-DEPEND="virtual/glibc 
-	virtual/x11
-	=x11-libs/gtk+-1.2*
+DEPEND="=x11-libs/gtk+-1.2*
 	arts? ( >=kde-base/arts-1.0.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.4 )
 	esd? ( >=media-sound/esound-0.2.24 )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 src_compile() {
     local myconf

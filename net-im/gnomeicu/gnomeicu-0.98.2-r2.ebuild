@@ -1,12 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r2.ebuild,v 1.2 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r2.ebuild,v 1.3 2002/07/16 04:54:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
 SRC_URI="http://download.sourceforge.net/gnomeicu/${P}.tar.gz"
 HOMEPAGE="http://gnomeicu.sourceforge.net/"
-SLOT="0"
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
 	 >=sys-libs/gdbm-1.8.0
 	 (	>=gnome-base/libglade-0.16
@@ -19,24 +18,22 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext ) "
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
+
 src_compile() {                           
 	local myconf
 
-	if [ -z "`use esd`" ]
-	then
-		myconf="--disable-esd-test"
-	fi
-	if [ "`use socks5`" ];
-	then
-		myconf="${myconf} --enable-socks5"
-	fi
+	use esd || myconf="--disable-esd-test"
+
+	use socks5 && myconf="${myconf} --enable-socks5"
 	
-	if [ -z "`use nls`" ]
-	then
+	use nls || ( \
 		myconf="${myconf} --disable-nls"
 		mkdir ./intl
 		touch ./intl/libgettext.h
-	fi
+	)
 	# remove the panel applet if you dont use gnome, nice hack for gnome2 compability
 	use gnome || myconf="${myconf} --disable-applet" 	
 	./configure --host=${CHOST} \
