@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/fluxbox-syntax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/ChangeLog,v 1.5 2004/12/07 18:29:31 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/ChangeLog,v 1.6 2004/12/10 15:21:18 ciaranm Exp $
+
+  10 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  fluxbox-syntax-1.5.ebuild:
+  x86 sparc mips stable
 
   07 Dec 2004; Tom Martin <slarti@gentoo.org> fluxbox-syntax-1.5.ebuild:
   Marked ~amd64.
