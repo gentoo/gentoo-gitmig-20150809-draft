@@ -1,8 +1,13 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.32 2002/07/22 16:16:34 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.33 2002/07/26 06:07:42 lostlogic Exp $
 
 *gentoolkit-0.1.15-r1 (19 Jul 2002)
+
+  26 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg :
+
+  Fix weird bug that Cardoe was experiencing in qpkg -d
+  no -r bump needed as he is the first report I've had.
 
   22 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.15-r1.ebuild :
 

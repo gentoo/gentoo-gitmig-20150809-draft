@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.13 2002/07/14 22:39:40 lostlogic Exp $
-ID='$Id: qpkg,v 1.13 2002/07/14 22:39:40 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.14 2002/07/26 06:07:42 lostlogic Exp $
+ID='$Id: qpkg,v 1.14 2002/07/26 06:07:42 lostlogic Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -213,30 +213,31 @@ fi
 #For the --dups switch only
 if [ "${dups}" ]; then
 	#First dig out the list of packages with duplicates
-	dups=`/usr/lib/portage/bin/pkglist | 
-		sed -e 's:-r[0-9]*::' -e 's:-[^-]*$::' | 
+	find /var/db/pkg -iname "*${arg}*.ebuild" 2> /dev/null > /tmp/qpkg.lst
+	dups=`cat /tmp/qpkg.lst | cut -f7 -d/ |
+		sed -e 's:\.ebuild$::; s:-r[0-9]*$::; s:-[^-]*$::; /^$/d' |
 		sort | 
 		uniq -d`
 
 	#Next get all the exact versions
-	duppak=`ls /var/db/pkg/*/*/*${arg}*.ebuild 2>/dev/null | fgrep "${dups}"`
+	duppak=`cat /tmp/qpkg.lst | fgrep "${dups}"`
 
 	#Now cut that down to the directory name so we can be smart
-	dirs=`echo ${duppak}|sed -e "s:\ :\n:g"|sed -e "s:/[^/]*$::"`
+	dirs=`sed -e 's:/[^/]*$::' /tmp/qpkg.lst`
 
 	#Go through each package's DB and create a sortable file
 	#to play with
+	declare -i defcount=`cat /var/cache/edb/counter`
 	for DIR in ${dirs}
 	do	#Package COUNTER
-		NUM=`cat "${DIR}/COUNTER"`
+		NUM=`cat "${DIR}/COUNTER" 2> /dev/null`
+		[ -z "${NUM}" ] && NUM=defcount
 		#Package slot if requested
 		[ ${slot} ] && SLOT=`cat "${DIR}/SLOT"`
 		#Package fullname
-		PKG=`ls ${DIR}/*.ebuild|cut -f5,7 -d"/"`
+		PKG=`ls --color=no -1 ${DIR}/*.ebuild|cut -f5,7 -d"/"`
 		#Package basename
-		NAME=`echo "${PKG}"|sed -e "s:\.ebuild$::" \
-					-e "s:-r[0-9]\+$::" \
-					-e "s:-[0-9].*$::"`
+		NAME=`echo "${PKG}"|sed -e 's:\.ebuild$::; s:-r[0-9]\+$::; s:-[0-9].*$::'`
 		echo "${NUM} ${PKG} ${NAME}${SLOT}"
 	#Finish loop, and sort that nice sortable file based on 
 	#installation order, and then based on package basename
