@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.1.ebuild,v 1.2 2003/07/02 23:05:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.1.ebuild,v 1.3 2003/07/12 11:37:22 cretin Exp $
 
-IUSE="cups opengl"
+IUSE="cups opengl nptl"
 
 inherit eutils
 
@@ -65,6 +65,9 @@ src_compile() {
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 
+	# for nptl threads
+	use nptl && myconf="$myconf --enable-pthreads"
+	
 	# patching winex to not compile wcmd
 	epatch ${FILESDIR}/winex-cvs-3.0_pre1.patch
 
