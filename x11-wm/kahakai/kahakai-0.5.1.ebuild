@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.5.1.ebuild,v 1.1 2003/11/07 07:05:38 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.5.1.ebuild,v 1.2 2003/11/12 02:26:46 bcowan Exp $
 
 IUSE="truetype xinerama"
 S=${WORKDIR}/${P}
@@ -17,6 +17,7 @@ DEPEND="virtual/x11
 	truetype? ( virtual/xft )
 	<dev-lang/swig-1.3.18
 	media-libs/imlib2
+	dev-util/pkgconfig
 	media-fonts/artwiz-fonts"
 
 #PROVIDE="virtual/blackbox"
