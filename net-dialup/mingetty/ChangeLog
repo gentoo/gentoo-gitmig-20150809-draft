@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.5 2003/02/12 07:53:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.6 2003/08/13 15:29:06 agriffis Exp $
+
+  13 Aug 2003; Aron Griffis <agriffis@gentoo.org> mingetty-1.00.3.ebuild:
+  Mark stable on alpha for LiveCD
 
   31 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: Added autologin patch to
   mingetty-1.00.3. Not bumping rev as I did this about 20 mins after unmasking
