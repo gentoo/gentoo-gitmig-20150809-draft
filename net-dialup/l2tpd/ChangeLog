@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/l2tpd
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.8 2004/07/01 22:08:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.9 2004/07/20 17:23:42 lanius Exp $
+
+*l2tpd-0.69-r2 (20 Jul 2004)
+
+  20 Jul 2004; Heinrich Wendel <lanius@gentoo.org> l2tpd-0.69-r1.ebuild,
+  l2tpd-0.69-r2.ebuild, l2tpd-0.69.ebuild,
+  files/l2tpd-0.69-can-2004-0649.patch:
+  fix possible buffer overflow, remove vulnerable versions
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> l2tpd-0.69-r1.ebuild,
   l2tpd-0.69.ebuild:

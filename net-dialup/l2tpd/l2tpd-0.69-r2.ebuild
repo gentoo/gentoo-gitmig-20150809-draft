@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.69-r1.ebuild,v 1.5 2004/07/01 22:08:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.69-r2.ebuild,v 1.1 2004/07/20 17:23:42 lanius Exp $
 
 inherit eutils
 
@@ -33,6 +33,8 @@ src_unpack() {
 	epatch ../${PN}-warnings.patch.bz2
 	epatch ../${PN}-listenaddr.patch.bz2
 	epatch ../${PN}-MSL2TP-hostname.patch.bz2
+
+	epatch ${FILESDIR}/${P}-can-2004-0649.patch
 
 	sed -i.orig -e "s|-g -O2|${CFLAGS}|" Makefile
 		#-e "s|^#\(OSFLAGS+= -DUSE_KERNEL\)|\1|" \
