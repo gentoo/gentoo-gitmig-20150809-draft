@@ -1,6 +1,4 @@
 MD5 8905da6553d835f4060ca3cc7dfece05 ChangeLog 789
-MD5 06b735db349c40bfb6371eea0aa4bc85 uqm-0.2.ebuild 2017
 MD5 0ad1369c0959caa554898f2cc4b93e16 uqm-0.3.ebuild 2068
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 c11ab9abbb79bb9cf614402daa6d3bcf files/digest-uqm-0.2 261
 MD5 352d8c8a28dfc130e621263c405143f4 files/digest-uqm-0.3 261
