@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-1.4.ebuild,v 1.13 2004/02/20 06:01:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-1.4.ebuild,v 1.14 2004/03/15 02:06:00 seemant Exp $
 
-PN=${P/_/.}
-S=${WORKDIR}/${PN}
+MY_P=${P/_/.}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Bochs is a pc emulator.
 This ebuild is set up to emulate a Pentium, with a NE2000 network card, and a
 CDROM drive.
 It also comes with a disk image using dlxlinux."
-SRC_URI="mirror://sourceforge/bochs/${PN}.tar.gz
+SRC_URI="mirror://sourceforge/bochs/${MY_P}.tar.gz
 	 http://bochs.sourceforge.net/guestos/dlxlinux3.tar.gz"
 HOMEPAGE="http://bochs.sourceforge.net"
 LICENSE="LGPL-2.1"
@@ -22,7 +22,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 KEYWORDS="x86 ppc"
 
 src_unpack() {
-	unpack ${PN}.tar.gz
+	unpack ${MY_P}.tar.gz
 
 	cd $S
 	cp Makefile.in Makefile.in.orig

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.22 2004/03/07 21:11:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.23 2004/03/15 02:05:59 seemant Exp $
+
+  14 Mar 2004; Seemant Kulleen <seemant@gentoo.org> bochs-1.4.ebuild:
+  use MY_P for a custom name NOT PN
 
   07 Mar 2004; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
   Added a workaround as suggested in bug #43878
