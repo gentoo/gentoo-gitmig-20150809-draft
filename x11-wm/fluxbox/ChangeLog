@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.139 2005/01/18 19:04:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.140 2005/01/19 10:06:12 ciaranm Exp $
+
+  19 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> fluxbox-0.9.12.ebuild:
+  Fix imlib2 option
 
 *fluxbox-0.9.12 (18 Jan 2005)
 
