@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.2.ebuild,v 1.2 2004/04/28 17:35:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.2.ebuild,v 1.3 2004/05/21 01:58:37 leonardop Exp $
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Gnome Onscreen Keyboard"
 HOMEPAGE="http://www.gok.ca/"
