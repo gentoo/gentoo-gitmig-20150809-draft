@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-mad
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.14 2004/03/26 21:18:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.15 2004/04/28 15:19:02 weeve Exp $
+
+  28 Apr 2004; Jason Wever <weeve@gentoo.org> xmms-mad-0.5.6-r1.ebuild:
+  Added ~sparc keyword.
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-mad-0.5.1.ebuild, xmms-mad-0.5.4.ebuild, xmms-mad-0.5.6-r1.ebuild:
