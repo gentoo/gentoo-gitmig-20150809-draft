@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/gtk-cpuspeedy-0.1.ebuild,v 1.1 2004/03/29 04:15:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/gtk-cpuspeedy-0.1.ebuild,v 1.2 2004/03/29 13:33:43 dholm Exp $
 
 DESCRIPTION="Graphical GTK+-2 frontend for cpuspeedy."
 SRC_URI="mirror://sourceforge/cpuspeedy/${P}.tar.gz"
 HOMEPAGE="http://cpuspeedy.sourceforge.net/"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
