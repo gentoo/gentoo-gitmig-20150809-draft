@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.19 2003/04/18 13:34:58 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.20 2003/04/20 07:29:22 lostlogic Exp $
+
+*mm-sources-2.5.68-r1 (20 Apr 2003)
+
+  20 Apr 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.68-r1.ebuild:
+  Bump, and PLEASE DO NOT USE EPATCH FOR KERNELS, thank you.
+  Reason:  epatch tries to patch with -p0, then -p1, etc. until one 
+  succeeds, doing a dry-run on a patch of kernel size is just idiotic.
+  Kernel patches are BY POLICY applied from the linux-version dir with
+  -p1.  Thank you for NOT USING EPATCH ON KERNELS (or in my opinion on 
+  anything).
 
 *mm-sources-2.5.67-r4 (18 Apr 2003)
 
