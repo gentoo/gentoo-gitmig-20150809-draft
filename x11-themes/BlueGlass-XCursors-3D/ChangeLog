@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/BlueGlass-XCursors-3D
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/BlueGlass-XCursors-3D/ChangeLog,v 1.1 2003/06/18 13:17:08 tad Exp $
+
+*BlueGlass-XCursors-3D-0.3 (18 Jun 2003)
+
+  18 Jun 2003; Troy Dack <tad@gentoo.org> BlueGlass-XCursors-3D-0.3.ebuild:
+  Initial import. Thanks to Eric Ball <phoenix@webone.com.au> for submitting the
+  ebuilds. Closes Bug #19996.
+
