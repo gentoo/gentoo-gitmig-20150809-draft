@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.57 2005/01/04 00:30:20 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.58 2005/01/04 00:38:32 brix Exp $
+
+*ipw2100-1.0.2-r2 (04 Jan 2005)
+
+  04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> +ipw2100-0.56-r3.ebuild,
+  +ipw2100-1.0.2-r2.ebuild:
+  Ported to use linux-mod.eclass, split out firmware to
+  net-wireless/ipw2100-firmware, added modules.d files.
 
   04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> ipw2100-0.56-r1.ebuild,
   ipw2100-0.56-r2.ebuild, ipw2100-1.0.0-r1.ebuild, ipw2100-1.0.0.ebuild,
