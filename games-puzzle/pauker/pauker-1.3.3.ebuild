@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.3.3.ebuild,v 1.1 2004/03/02 23:43:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.3.3.ebuild,v 1.2 2004/03/03 00:26:47 mr_bones_ Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pauker/pauker-${MY_P}.jar"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4*
