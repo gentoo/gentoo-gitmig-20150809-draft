@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.15 2004/08/11 02:43:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.16 2004/12/16 09:57:14 mr_bones_ Exp $
+
+*sdl-ttf-2.0.7 (16 Dec 2004)
+
+  16 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +sdl-ttf-2.0.7.ebuild:
+  version bump
 
   10 Aug 2004; Tom Gall <tgall@gentoo.org> sdl-ttf-2.0.6.ebuild:
   stable on ppc64, bug #57993
