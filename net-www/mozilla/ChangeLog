@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.186 2004/08/08 19:15:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.187 2004/08/09 00:35:47 slarti Exp $
+
+  09 Aug 2004; Tom Martin <slarti@gentoo.org> mozilla-1.7.2.ebuild:
+  Stable on amd64 for security bug #59419.
 
 *mozilla-1.7.2 (08 Aug 2004)
 
