@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/razor
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.5 2003/01/05 19:24:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.6 2003/02/10 11:42:32 seemant Exp $
 
 *razor-2.20
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> razor-2.20.ebuild :
+
+  Changed the ` to ' in the einfo section. Closes bug #15424 by Wayne Davison
+  <gentoo@blorf.net>
 
   05 Jan 2003; Michael Cummings <mcummings@gentoo.org>: version bump
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/razor-2.20.ebuild,v 1.1 2003/01/05 19:24:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/razor-2.20.ebuild,v 1.2 2003/02/10 11:42:32 seemant Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ S="${WORKDIR}/razor-agents-${PV}"
 
 DESCRIPTION="Vipul's Razor is a distributed, collaborative spam detection and filtering network"
 HOMEPAGE="http://razor.sourceforge.net"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/razor/razor-agents-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/razor/razor-agents-${PV}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc "
@@ -32,7 +32,7 @@ pkg_postinst() {
 # insures appropriate symlinks have been created
 	/usr/bin/razor-client
 
-einfo "Run `razor-admin -create' to create a default config file in your"
+einfo "Run 'razor-admin -create' to create a default config file in your"
 einfo "home directory under /home/user/.razor. (Remember to change user to"
 einfo "your username from root before running razor-admin)"
 einfo ""
@@ -41,7 +41,7 @@ einfo "be computed over time and they can participate in the revocation"
 einfo "mechanism. Registration is done with razor-admin -register. It has to be"
 einfo "manually invoked in either of the following ways:"
 einfo ""
-einfo "To register user foo with `s1kret' as password: "
+einfo "To register user foo with 's1kret' as password: "
 einfo ""
 einfo "razor-admin -register -user=foo -pass=s1kr3t"
 einfo ""
