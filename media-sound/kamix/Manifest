@@ -1,4 +1,16 @@
-MD5 013dce606a0ff845f4d76ce795c86107 ChangeLog 600
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 37d9933f618aa0e35afd1bb8a97174ba ChangeLog 687
 MD5 9f0cf363711737cae1e140210eb0719a kamix-0.5.4.ebuild 505
+MD5 6b66273dd5d4c46fd140156c835c6f64 kamix-0.5.5.ebuild 504
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
 MD5 f129e2fc0b169d2924ce941e7cfec3b4 files/digest-kamix-0.5.4 64
+MD5 62d7e68ae855c9b050dec026a32befc4 files/digest-kamix-0.5.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBU4lFE67gNkjlZFIRAsfeAJ44LtIQ4uWjw/SQDvVK7mQj9r1B3gCeKl89
+y2GF3mhv9uAyJILs/VX16aM=
+=HmIE
+-----END PGP SIGNATURE-----
