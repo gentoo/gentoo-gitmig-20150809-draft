@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.4-r2.ebuild,v 1.1 2001/01/08 19:00:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.4-r3.ebuild,v 1.1 2001/01/11 23:10:59 drobbins Exp $
  
 A=""
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ DESCRIPTION="Portage autobuild system"
 SRC_URI=""
 RDEPEND=">=sys-apps/bash-2.04
 	>=sys-devel/perl-5.6.0
-	>=virtual/python-1.5.2"
+	>=virtual/python-2.0"
 
 src_unpack() {
   mkdir ${S}
@@ -31,7 +31,7 @@ src_install() {
   doins ebuild *.sh
   insinto /usr/sbin
   doins portage-merge portage-unmerge pkgname
-  insinto /usr/lib/python1.5
+  insinto /usr/lib/python2.0
   doins portage.py
   exeinto /usr/lib/portage/bin
   doexe bin/* mega* portage-maintain
