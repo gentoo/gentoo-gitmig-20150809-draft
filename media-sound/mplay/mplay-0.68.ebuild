@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.68.ebuild,v 1.2 2004/09/04 06:05:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.68.ebuild,v 1.3 2004/09/04 23:11:29 dholm Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/mplay/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
