@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2 2003/03/26 10:29:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3 2003/03/26 21:48:25 avenj Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -12,4 +12,6 @@ x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
 x11-base/xfree-drm:sis - If you have an SiS video card
 net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
 net-www/mozila:moznomail - If you do NOT want the mail client built with mozilla
-
+sys-devel/oskit:oskit-noassert - Disable assertions in debugging
+sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
+sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
