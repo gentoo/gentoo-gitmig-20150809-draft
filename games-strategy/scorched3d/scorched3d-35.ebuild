@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-35.ebuild,v 1.1 2003/09/10 05:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-35.ebuild,v 1.2 2003/10/07 16:54:13 vapier Exp $
 
 inherit games gcc eutils
 
@@ -30,14 +30,17 @@ src_unpack() {
 }
 
 src_compile() {
-	# yeah, I know runningi it twice, but egamesconf has a lot more stuff.
+	# yeah, I know running it twice, but egamesconf has a lot more stuff
 	./autogen.sh
-	egamesconf --exec_prefix=${GAMES_PREFIX} --datadir=${GAMES_DATADIR}/${PN} \
+	egamesconf \
+		--exec_prefix=${GAMES_PREFIX} \
+		--datadir=${GAMES_DATADIR}/${PN} \
 		|| die
 
 	sed -i \
-		-e "s:/usr/games/scorched3d/:${GAMES_DATADIR}/${PN}/:" \
-			src/scorched/Makefile || die "sed src/scorched/Makefile failed"
+		"s:/usr/games/scorched3d/:${GAMES_DATADIR}/${PN}/:" \
+		src/scorched/Makefile \
+		|| die "sed src/scorched/Makefile failed"
 	emake || die "emake failed"
 }
 
