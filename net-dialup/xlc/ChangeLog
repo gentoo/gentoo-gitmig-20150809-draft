@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/xlc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xlc/ChangeLog,v 1.1 2004/11/28 10:44:06 mrness Exp $
+
+*xlc-1.0.6 (28 Nov 2004)
+
+  28 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +xlc-1.0.6.ebuild:
+  Initial import from #65005, thanks to Werner Schneider <gip@gmx.de>.
+
