@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.2 2003/06/24 02:38:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.3 2003/07/08 23:17:37 liquidx Exp $
 
 inherit gcc
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="ppc x86 sparc alpha"
 
 RDEPEND="=x11-libs/gtkmm-1.2*
+	>=gnome-base/gnome-libs-1.4
 	>=gnome-base/ORBit-0.5.11
 	=sys-libs/db-1*"
 
