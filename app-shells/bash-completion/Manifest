@@ -2,25 +2,25 @@
 Hash: SHA1
 
 MD5 996c137519fdde99cc4d06114009072e ChangeLog 14008
+MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
+MD5 2c7adfe2e73433c49c7d276d7da5b523 bash-completion-20050103.ebuild 2645
 MD5 b14e733dad85348f883a6214d21cfee7 bash-completion-20040704-r1.ebuild 2091
 MD5 1e7793d7236ad87efdd637cb3901f980 bash-completion-20040711.ebuild 2093
 MD5 5c025c16b6b1214ae6b54beb797a0af1 bash-completion-20041017-r1.ebuild 2265
-MD5 d475312b16e2adccf7dd8984ca93b78f bash-completion-20050103.ebuild 2646
-MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
-MD5 2a829c87c01d34224e07a5c2d51332f9 bash-completion-20041017-r3.ebuild 2688
+MD5 cb7dd2c202fcf41ce6b6f26737254847 bash-completion-20041017-r3.ebuild 2682
 MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
-MD5 b6b11ab0684a97cfd9a9ba78f5fa9f9a files/20041017-rcs.diff 574
+MD5 236fd9c517ac5642cae8df109dbaf9f6 files/digest-bash-completion-20041017-r1 152
+MD5 6bfeb038d793aa50d7496c6d08913183 files/digest-bash-completion-20050103 152
 MD5 49e9f0b0674471ff56169ce7d9265fb2 files/digest-bash-completion-20040704-r1 151
 MD5 73c3177da25971c1db7bb6482b5d1580 files/digest-bash-completion-20040711 151
-MD5 62c632c282cbbd0b28ba064ec57e2111 files/20050103-gentoo.diff 2060
-MD5 236fd9c517ac5642cae8df109dbaf9f6 files/digest-bash-completion-20041017-r1 152
+MD5 b6b11ab0684a97cfd9a9ba78f5fa9f9a files/20041017-rcs.diff 574
 MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
-MD5 6bfeb038d793aa50d7496c6d08913183 files/digest-bash-completion-20050103 152
 MD5 9aca91cdcddd5454ebc4f17efe465d71 files/digest-bash-completion-20041017-r3 152
+MD5 62c632c282cbbd0b28ba064ec57e2111 files/20050103-gentoo.diff 2060
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2tU5KRy60XGEcJIRAocpAKCVHiKT0oXLWKd3Mtd320YDfLVF+gCgo9k9
-h6wud4MS6rIRFsTqoaxG2IY=
-=Auph
+iD8DBQFB23rDroRuSHgZdywRAvqVAJ9KPaVLNsenFoed2cV2jskB2S6uvACfRoAh
+bAkTqGPtaMB4dF3tb9ig2ww=
+=09eE
 -----END PGP SIGNATURE-----
