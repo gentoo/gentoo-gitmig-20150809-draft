@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/pike
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.1 2003/08/30 21:49:31 scandium Exp $
+
+*pike-7.4.20 (30 Aug 2003)
+
+  30 Aug 2003; Rainer Groesslinger <scandium@gentoo.org> pike-7.4.20.ebuild:
+  Initial commit.
+  ebuild provided by <emil@math.su.se> in bug #25415
+  with some fixes added
