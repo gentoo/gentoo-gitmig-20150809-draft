@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3787 2005/04/02 18:34:11 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3788 2005/04/02 22:52:17 dsd Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -257,10 +257,6 @@ net-firewall/ipset
 # solar <solar@gentoo> (01 Mar 2005)
 # security masked by request of bug #79720
 x11-misc/xfontselector
-
-# foser <foser@gentoo.org> (02 Mar 2005)
-# does not work with most available kernels
->=app-admin/gamin-0.0.26-r5
 
 # Jeremy Huddleston <eradicator@gentoo.org> (01 Mar 2005)
 # Still in development.  Doesn't work right.  I know it doesn't work right.  Don't use it.  Also, it triggers a sandbox bug.
