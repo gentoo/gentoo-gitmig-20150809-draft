@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha3.ebuild,v 1.13 2004/08/23 08:32:32 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha3.ebuild,v 1.14 2004/09/02 02:26:46 vapier Exp $
 
 DESCRIPTION="The Theora Video Compression Codec"
 HOMEPAGE="http://www.theora.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.theora.org/files/${P/_}.tar.bz2"
 
 LICENSE="xiph"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa ppc64 ~mips"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa ppc64 ~mips ~ia64"
 IUSE=""
 
 DEPEND=">=media-libs/libogg-1.1.0
