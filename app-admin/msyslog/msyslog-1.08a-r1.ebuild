@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a.ebuild,v 1.1 2002/01/13 23:46:59 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r1.ebuild,v 1.1 2002/03/11 22:40:52 azarah Exp $
 
 DESCRIPTION="Flexible and easy to integrate syslog with modularized input/output"
 HOMEPAGE="http://www.core-sdi.com/download/download1.html"
