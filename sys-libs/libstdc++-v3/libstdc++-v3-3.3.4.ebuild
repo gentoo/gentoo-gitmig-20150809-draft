@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.10 2004/11/22 03:22:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.11 2005/02/07 08:25:28 corsair Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -67,7 +67,7 @@ do_filter_flags() {
 	# in gcc 3.3 there is a bug on ppc64 where if -mcpu is used
 	# the compiler incorrectly assumes the code you are about to build
 	# is 32 bit
-	use ppc64 setting="`get-flag mcpu`"
+	use ppc64 && setting="`get-flag mcpu`"
 	[ ! -z "${setting}" ] && filter-flags -mcpu="${setting}"
 
 	# only allow the flags that we -know- are supported

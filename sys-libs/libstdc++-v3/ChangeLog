@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstdc++-v3
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.30 2004/11/22 03:22:20 tgall Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.31 2005/02/07 08:25:28 corsair Exp $
+
+  07 Feb 2005; Markus Rothe <corsair@gentoo.org> libstdc++-v3-3.3.4.ebuild:
+  Fix typo in ppc64 CFLAGS-filter
 
   21 Nov 2004; Tom Gall <tgall@gentoo.org> libstdc++-v3-3.3.4.ebuild:
   fix bug #70972 on ppc64
