@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r1.ebuild,v 1.1 2004/10/27 19:51:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r1.ebuild,v 1.2 2004/10/28 01:24:03 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ DEPEND="sys-devel/gcc
 	sys-devel/flex
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	>=media-libs/freetype-2.0.0
-	jack? ( media-sound/jack )
+	jack? ( media-sound/jack-audio-connection-kit )
 	X? ( virtual/x11 )
 	tcltk? ( dev-lang/tcl dev-lang/tk )
 	arts? ( kde-base/arts )
