@@ -1,36 +1,30 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.3 2004/09/18 13:30:13 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.4 2004/09/20 10:55:39 ka0ttic Exp $
 
-DESCRIPTION="An http regression testing and benchmarking utility"
+DESCRIPTION="A HTTP regression testing and benchmarking utility"
 HOMEPAGE="http://www.joedog.org/siege/"
-SRC_URI="ftp://sid.joedog.org/pub/siege/${P}.tar.gz"
+SRC_URI="ftp://sid.joedog.org/pub/${PN}/${P}.tar.gz"
 
+LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 SLOT="0"
-LICENSE="GPL-2"
 IUSE="ssl"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )"
+RDEPEND="${DEPEND}
+	dev-lang/perl"
 
 src_compile() {
-	has_version '=dev-libs/openssl-0.9.7*' \
-		&& sed -i -e "s:^# include <openssl/e_os.h>::" src/ssl.h
-	local myconf
-	use ssl && myconf="--with-ssl" || myconf="--with-ssl=off"
-	econf ${myconf} || die "econf failed"
+	econf $(use_with ssl) || die
 	emake || die
-
 }
 
 src_install() {
-	# makefile tries to install into $HOME by default... bad monkey!
-	dodir /usr/share/doc/${P}
-
-	einstall SIEGERC="${D}/usr/share/doc/${P}/siegerc-example"
-
-	# all non-html docs must be gzip'd
-	gzip ${D}/usr/share/doc/${P}/siegerc-example
-
-	dodoc AUTHORS ChangeLog INSTALL KNOWNBUGS NEWS MACHINES README
+	emake DESTDIR="${D}" \
+		SIEGERC="${S}/siegerc-example" \
+		install || die
+	dodoc AUTHORS ChangeLog INSTALL MACHINES README \
+		KNOWNBUGS siegerc-example
+	use ssl && dodoc README.https
 }
