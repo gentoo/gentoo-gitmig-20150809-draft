@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.20 2005/01/29 22:54:17 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.21 2005/02/24 18:09:39 greg_g Exp $
+
+  24 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> kvirc-3.0.1-r1.ebuild,
+  -kvirc-3.0.1.ebuild:
+  Stable on x86.
 
 *kvirc-3.0.1-r1 (29 Jan 2005)
 
