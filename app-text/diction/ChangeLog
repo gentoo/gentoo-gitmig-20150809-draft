@@ -1,6 +1,11 @@
 # ChangeLog for app-text/diction
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.1 2003/02/18 12:18:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.2 2003/02/28 12:13:41 lu_zero Exp $
+
+*diction-1.02 (28 Feb 2003)
+
+  28 Feb 2003; Luca Barbato <lu_zero@gentoo.org> diction-1.02-r1.ebuild :
+  Path location fixed.
 
 *diction-1.02 (18 Feb 2003)
 

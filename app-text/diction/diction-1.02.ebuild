@@ -16,11 +16,11 @@ KEYWORDS="~x86"
 DEPEND="sys-devel/gettext"
 
 src_compile() {
-    ./configure --prefix=${D}usr --mandir=${D}usr/share/man ||die
+    ./configure --prefix=/usr ||die
     emake || die
 
 }
 
 src_install () {
-    make DESTDIR=${D} install
+    make prefix=${D}/usr install
 }
