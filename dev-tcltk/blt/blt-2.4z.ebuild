@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.9 2004/05/04 02:12:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.10 2004/05/27 23:59:58 fmccor Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DEPEND=">=dev-lang/tk-8.0"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 S="${WORKDIR}/${PN}${PV}"
 
