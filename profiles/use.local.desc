@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.205 2004/01/04 03:23:05 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.206 2004/01/04 03:26:26 strider Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -55,13 +55,13 @@ dev-java/ant:antlr - Enable ANTLR support
 dev-java/ant:bcel - Enable jakarta-bcel support
 dev-java/ant:bsf - Enable IBM Bean Scripting Framework Support
 dev-java/ant:bsh - Enable BeanShell support
-dev-java/ant:js - Enable Rhino JavaScript Support
 dev-java/ant:jsch - Enable Jsch Support
 dev-java/ant:jdepend - Enable jdepend support
 dev-java/ant:jython - Enable Jython support.
 dev-java/ant:log4j - Enable Log4J support.
 dev-java/ant:oro - Enable jakarta-oro support
 dev-java/ant:regexp - Enable jakarta-regexp support
+dev-java/ant:rhino - Enable Rhino JavaScript support
 dev-java/ant:xerces - Enable Xerces support
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
