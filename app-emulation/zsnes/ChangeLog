@@ -1,9 +1,8 @@
 # ChangeLog for app-emulation/zsnes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.13 2002/12/09 04:17:42 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.14 2002/12/13 10:56:08 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *zsnes-1.36 (21 Jul 2002)
 
