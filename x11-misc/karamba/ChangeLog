@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/karamba
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.7 2004/06/19 14:25:16 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.8 2004/06/20 18:16:42 port001 Exp $
+
+  20 Jun 2004; Ian Leitch <port001@gentoo.org> karamba-0.17-r1.ebuild:
+  Added IUSE
 
   19 Jun 2004; <pyrania@gentoo.org> karamba-0.17-r1.ebuild:
   Stable on x86.
