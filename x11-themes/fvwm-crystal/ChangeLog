@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.8 2004/06/24 23:26:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.9 2004/07/03 23:11:43 weeve Exp $
+
+  03 Jul 2004; Jason Wever <weeve@gentoo.org> fvwm-crystal-1.0.3_pre1.ebuild:
+  Added ~sparc keyword.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> fvwm-crystal-1.0.1.ebuild:
   Inherit eutils.
