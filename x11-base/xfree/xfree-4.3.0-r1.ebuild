@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.9 2003/03/21 03:24:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.10 2003/03/21 03:31:27 weeve Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -593,13 +593,6 @@ src_install() {
 			strip --strip-debug ${x} || :
 		fi
 	done
-
-	# Add another sparc keyboard patch to fix Ctrl+Alt+Fx key problems
-        if use sparc &> /dev/null
-        then
-                epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-gentoo-sparc-kb.patch
-        fi
-
 }
 
 pkg_preinst() {
