@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openquicktime
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.11 2003/10/05 11:44:02 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.12 2004/02/24 05:41:19 eradicator Exp $
+
+  23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  openquicktime-1.0-r1.ebuild, openquicktime-1.0.ebuild:
+  Updated mpg123 to virtual/mpg123
 
   06 Oct 2003; Martin Holzer <mholzer@gentoo.org> openquicktime-1.0-r1.ebuild:
   fixed typo. PROVIDES -> PROVIDE.
