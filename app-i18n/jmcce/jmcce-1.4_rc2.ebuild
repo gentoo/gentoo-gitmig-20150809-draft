@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.1 2003/05/25 15:10:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.2 2003/06/29 22:12:03 aliz Exp $
 
 MY_PV=${PV/_rc/RC}
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -10,7 +10,7 @@ SRC_URI="http://zope.slat.org/Project/Jmcce/DOWNLOAD/${PN}-${MY_PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=media-libs/svgalib-1.4.3

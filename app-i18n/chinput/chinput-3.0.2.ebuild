@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/chinput/chinput-3.0.2.ebuild,v 1.1 2003/05/25 15:10:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/chinput/chinput-3.0.2.ebuild,v 1.2 2003/06/29 22:12:03 aliz Exp $
 
 MY_P=${P/chinput/Chinput}
 DESCRIPTION="Featureful Chinese Input Method XIM Server"
@@ -9,7 +9,7 @@ SRC_URI="http://www.opencjk.org/~yumj/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="app-i18n/unicon

@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/kde-i18n-pt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-pt/ChangeLog,v 1.12 2003/03/20 12:56:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-pt/ChangeLog,v 1.13 2003/06/29 22:12:03 aliz Exp $
 
 *kde-i18n-pt-3.1.1 (20 Mar 2003)
 
@@ -53,6 +53,11 @@
   20 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   KDE 3.0.3 version released.
+
+*kde-i18n-pt-3.0.2 (13 Feb 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *kde-i18n-pt-3.0 (4 Apr 2002)
 

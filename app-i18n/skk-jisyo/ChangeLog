@@ -1,6 +1,8 @@
 # ChangeLog for app-i18n/skk-jisyo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.13 2003/03/27 08:41:41 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.14 2003/06/29 22:12:04 aliz Exp $
+
+*skk-jisyo-200303-r1 (27 Mar 2003)
 
 *skk-jisyo-200303 (01 Mar 2003)
   27 Mar 2003; Masatomo Nakano <nakano@gentoo.org> skk-jisyo-200303-r1.ebuild:

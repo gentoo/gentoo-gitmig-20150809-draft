@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200303.ebuild,v 1.1 2003/02/28 19:16:11 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200303.ebuild,v 1.2 2003/06/29 22:12:04 aliz Exp $
 
 DESCRIPTION="Jisyo (dictionary) files for the SKK Japanese-input software"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 MY_PN="`echo ${PN} | gawk '{ print toupper($1) }'`"
 SRC_PATH="http://gentoojp.sourceforge.jp/distfiles/${PN}"

@@ -1,6 +1,8 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.3 2003/06/24 07:46:37 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.4 2003/06/29 22:12:03 aliz Exp $
+
+*dbskkd-cdb-1.01-r1 (24 Jun 2003)
 
   24 Jun 2003; Patrick Kursawe <phosphan@gentoo.org>
   dbskkd-cdb-1.01-r1.ebuild:
