@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.2 2002/03/21 12:02:54 seemant Exp $
+
+*nasm-0.98-r4 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> nasm-0.98-r4.ebuild :
+
+  HTML documentation will no longer be gzipped because it is being handled by
+  dohtml instead of dodoc.  Thanks to stefan@mdy.univie.ac.at for pointing it
+  out.
 
 *nasm-0.98-r3 (1 Feb 2002)
 
