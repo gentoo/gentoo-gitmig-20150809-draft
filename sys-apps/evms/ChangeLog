@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/evms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.14 2003/03/05 23:15:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.15 2003/04/03 20:52:40 vladimir Exp $
 
 *evms-1.2.1-r1 (05 Mar 2003)
+
+  03 Apr 2003; Graham Forest <vladimir@gentoo.org> evms-1.2.1-r1.ebuild:
+  set ~ppc in keywords
 
   05 Mar 2003; Brandon Low <lostlogic@gentoo.org> evms-1.2.1-r1.ebuild:
   Set keyword stable to match gentoo-sources release
