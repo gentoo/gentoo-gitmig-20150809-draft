@@ -5,7 +5,6 @@
 <maintainer>
   <email>warpzero@gentoo.org</email>
   <name>Joshua Charles Campbell</name>
-<!--  <description>Description of the maintainership</description> -->
 </maintainer>
 <longdescription>OpenVPN is an easy-to-use, robust and highly 
 configurable VPN daemon which can be used to securely link two or more 
