@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.51.ebuild,v 1.3 2004/03/29 00:33:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.51.ebuild,v 1.4 2004/04/02 15:06:33 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -451,14 +451,14 @@ src_install() {
 	cd ${PATCHDIR}/desktop/
 	insinto /usr/share/pixmaps
 	doins *.png
+	for menu in drawing presentation spreadsheet textdoc; do
+		intltool-merge -d ../po ${menu}.desktop.in xoo-${menu}.desktop;
+	done
+	sed -i -e s/'=oo'/'=xoo'/g *.desktop
 
 	einfo "Installing Menu shortcuts and mime info (need \"gnome\" or \"kde\" in USE)..."
 	if [ -n "`use gnome`" ]
 	then
-		for menu in drawing presentation spreadsheet textdoc; do
-			intltool-merge -d ../po ${menu}.desktop.in xoo-${menu}.desktop;
-		done
-		sed -i -e s/'=oo'/'=xoo'/g *.desktop
 		insinto /usr/share/applications
 		doins *.desktop
 		insinto /usr/share/application-registry
