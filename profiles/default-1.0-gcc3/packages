@@ -168,3 +168,4 @@
 
 # ickle 0.2.2 breaks with gcc3. lost history, permissions and dates.
 >=net-im/ickle-0.3.0
+>=app-sci/octave-2.1
