@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.7 2004/02/04 17:37:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.8 2004/03/10 23:43:14 agriffis Exp $
+
+  10 Mar 2004; Aron Griffis <agriffis@gentoo.org> netperf-2.2.4.ebuild:
+  stable on alpha, ia64 and x86
 
   04 Feb 2004; Aron Griffis <agriffis@gentoo.org> netperf-2.2.4.ebuild:
   Fix NETHOME in the example scripts to point to /usr/bin
