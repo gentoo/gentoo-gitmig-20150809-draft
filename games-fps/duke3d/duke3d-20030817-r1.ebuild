@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.12 2004/04/18 06:16:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.13 2004/04/18 07:22:55 mr_bones_ Exp $
 
 ECVS_PASS="anonymous"
 ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -29,8 +29,8 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
-use_tf() { use ${1} && echo true || echo false; }
-use_ft() { use ${1} && echo false || echo true; }
+use_tf() { use ${1} > /dev/null && echo "true" || echo "false"; }
+use_ft() { use ${1} > /dev/null && echo "false" || echo "true"; }
 
 src_unpack() {
 	local fromcvs=0
@@ -45,25 +45,24 @@ src_unpack() {
 
 	# configure buildengine
 	cd ${S}/source/buildengine
-#		-e "/^usephysfs := /s:=.*:= `use_ft nophysfs`:" \
 	sed -i \
-		-e "/^useperl := /s:=.*:= `use_tf perl`:" \
-		-e "/^useopengl := /s:=.*:= `use_tf opengl`:" \
-		-e "/^usephysfs := /s:=.*:= false:" Makefile \
+		-e "/^useperl := / s:=.*:= $(use_tf perl):" \
+		-e "/^useopengl := / s:=.*:= $(use_tf opengl):" \
+		-e "/^usephysfs := / s:=.*:= false:" Makefile \
 			|| die "sed Makefile failed"
 	if use x86 ; then
 		sed -i \
 			-e 's:^#USE_ASM:USE_ASM:' Makefile \
 				|| die "sed Makefile failed (x86)"
 	fi
-	epatch ${FILESDIR}/${PV}-buildengine-makefile-cflags.patch
+	epatch "${FILESDIR}/${PV}-buildengine-makefile-cflags.patch"
 	sed -i \
 		-e 's:/usr/lib/perl5/i386-linux/CORE/libperl.a::' Makefile \
-			|| die "sed Makefile failed"
+			|| die "sed Makefile failed (libperl)"
 
 	# configure duke3d
 	cd ${S}/source
-	epatch ${FILESDIR}/${PV}-duke3d-makefile-opts.patch
+	epatch "${FILESDIR}/${PV}-duke3d-makefile-opts.patch"
 	if use x86 ; then
 		sed -i \
 			-e '/^#use_asm/s:#::' Makefile \
@@ -86,21 +85,20 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin ${FILESDIR}/duke3d
-	dosed "s:GENTOO_DIR:${GAMES_DATADIR}/${PN}:" ${GAMES_BINDIR}/duke3d
+	games_make_wrapper duke3d "${GAMES_BINDIR}/duke3d.bin" "${GAMES_DATADIR}/${PN}"
 	newgamesbin source/duke3d duke3d.bin || die "newgamesbin failed"
 
 	dodoc readme.txt
 
 	cd testdata
-	insinto ${GAMES_DATADIR}/${PN}
+	insinto "${GAMES_DATADIR}/${PN}"
 	newins defs.con DEFS.CON
 	newins game.con GAME.CON
 	newins user.con USER.CON
-	doins ${FILESDIR}/network.cfg
-	insinto ${GAMES_SYSCONFDIR}
-	doins ${FILESDIR}/duke3d.cfg
-	dosym ${GAMES_SYSCONFDIR}/duke3d.cfg ${GAMES_DATADIR}/${PN}/DUKE3D.CFG
+	doins "${FILESDIR}/network.cfg"
+	insinto "${GAMES_SYSCONFDIR}"
+	doins "${FILESDIR}/duke3d.cfg"
+	dosym "${GAMES_SYSCONFDIR}/duke3d.cfg" "${GAMES_DATADIR}/${PN}/DUKE3D.CFG"
 
 	prepgamesdirs
 }
