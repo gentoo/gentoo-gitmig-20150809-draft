@@ -1,0 +1,23 @@
+diff -NurB libgsf-1.8.2-orig/doc/Makefile.in libgsf-1.8.2/doc/Makefile.in
+--- libgsf-1.8.2-orig/doc/Makefile.in	2004-03-20 13:48:45.000000000 -0500
++++ libgsf-1.8.2/doc/Makefile.in	2004-03-20 14:48:20.000000000 -0500
+@@ -112,7 +112,7 @@
+ DOC_MAIN_SGML_FILE = gsf-docs.sgml
+ 
+ # The directory containing the source code. Relative to $(srcdir)
+-DOC_SOURCE_DIR = ../gsf
++DOC_SOURCE_DIR = ..
+ 
+ # Extra options to pass to gtkdoc-scangobj
+ SCANGOBJ_OPTIONS = --type-init-func="g_type_init ()" 
+@@ -127,8 +127,8 @@
+ FIXXREF_OPTIONS = 
+ 
+ # Used for dependencies
+-HFILE_GLOB = $(top_srcdir)/gsf/*.h
+-CFILE_GLOB = $(top_srcdir)/gsf/*.c
++HFILE_GLOB = $(top_srcdir)/gsf/*.h $(top_srcdir)/gsf-gnome/*.h
++CFILE_GLOB = $(top_srcdir)/gsf/*.c $(top_srcdir)/gsf-gnome/*.c
+ 
+ # Header files to ignore when scanning
+ IGNORE_HFILES =  	biff-types.h
