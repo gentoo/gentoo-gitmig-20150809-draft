@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.10.ebuild,v 1.8 2004/06/24 21:34:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.10.ebuild,v 1.9 2004/07/03 22:03:01 carlo Exp $
 
 inherit kde
 
@@ -20,8 +20,6 @@ DEPEND="kde? ( >=kde-base/kdebase-3.2.2 )
 	mad? ( >=media-sound/madplay-0.14.2b )
 	oggvorbis? ( media-libs/libvorbis )"
 
-need-kde 3.1
-
 RDEPEND="${DEPEND}
 	>=app-cdr/cdrtools-1.11
 	>=app-cdr/cdrdao-1.1.7-r3
@@ -31,6 +29,7 @@ RDEPEND="${DEPEND}
 		  media-sound/sox
 		  media-video/transcode
 		  media-video/vcdimager )"
+need-kde 3.1
 
 # These are the languages supported by k3b as of version 0.11.6.
 # If you are using this ebuild as a model for another ebuild for

@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/kover-2.9.5.ebuild,v 1.3 2004/06/27 21:16:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/kover-2.9.5.ebuild,v 1.4 2004/07/03 22:07:33 carlo Exp $
 
 inherit kde
-need-kde 3
 
 DESCRIPTION="KDE program for CD Cover Creation"
-SRC_URI="http://lisas.de/kover/${P}.tar.gz"
 HOMEPAGE="http://lisas.de/kover/"
+SRC_URI="http://lisas.de/kover/${P}.tar.gz"
 
+SLOT="0"
 LICENSE="GPL-2"
-IUSE=""
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE=""
 
 RDEPEND="media-libs/libvorbis
 	media-libs/tiff
@@ -25,3 +25,4 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-lang/perl
 	sys-devel/gcc"
+need-kde 3

@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.6 2004/06/28 13:03:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.7 2004/07/03 22:05:11 carlo Exp $
 
 inherit kde eutils gcc
-need-kde 3
+
 
 MY_P=${P/_/}
+S="${WORKDIR}/${PN}"
 
 DESCRIPTION="A KDE frontend to CD burning and CD ripping tools"
 HOMEPAGE="http://arson.sourceforge.net/"
 SRC_URI="mirror://sourceforge/arson/${MY_P}.tar.bz2"
 
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc ~amd64"
 IUSE="oggvorbis"
 
@@ -25,8 +26,7 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-sound/lame-3.92
 	>=app-cdr/cdrdao-1.1.5
 	>=media-libs/flac-1.1.0"
-
-S="${WORKDIR}/${PN}"
+need-kde 3
 
 #added base_src_unpack() with conditional fix of code allowing compilation with gcc-3.4.0
 base_src_unpack() {

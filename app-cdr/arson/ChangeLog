@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.31 2004/06/28 06:13:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.32 2004/07/03 22:05:11 carlo Exp $
+
+  04 Jul 2004; Carsten Lohrke <carlo@gentoo.org> arson-0.9.7-r1.ebuild,
+  arson-0.9.7-r3.ebuild, arson-0.9.8_beta2.ebuild:
+  QA: need-kde after R/DEPEND
 
   27 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   arson-0.9.8_beta2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/kover
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.13 2004/06/24 21:35:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.14 2004/07/03 22:07:33 carlo Exp $
+
+  04 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kover-2.8.7.ebuild,
+  kover-2.9.3.ebuild, kover-2.9.5.ebuild:
+  QA: need-kde after R/DEPEND
 
 *kover-2.9.5 (07 Jun 2004)
 
