@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/gstreamripper
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/ChangeLog,v 1.1 2004/06/15 07:39:34 eradicator Exp $
+
+*gstreamripper-0.2 (15 Jun 2004)
+
+  15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +gstreamripper-0.2.ebuild:
+  Initial commit. Initial ebuild submitted by Jeremy Guarini
+  <j.g@logicdistributed.com> in bug #49931 with heavy editing by me.
+
