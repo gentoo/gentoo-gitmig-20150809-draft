@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.39 2004/01/01 15:26:02 spider Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.40 2004/01/09 23:23:33 agriffis Exp $
+
+  09 Jan 2004; Aron Griffis <agriffis@gentoo.org> gnucash-1.8.8.ebuild:
+  stable on alpha
 
   01 Jan 2004; <spider@gentoo.org> gnucash-1.8.8.ebuild:
   KEYWORDS="x86"
