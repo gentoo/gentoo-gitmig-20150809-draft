@@ -1,0 +1,14 @@
+diff -aur GtkAda-2.2.0.orig/src/gtkada-config.in GtkAda-2.2.0/src/gtkada-config.in
+--- GtkAda-2.2.0.orig/src/gtkada-config.in	2002-06-14 10:44:59.000000000 +0200
++++ GtkAda-2.2.0/src/gtkada-config.in	2003-07-04 13:27:17.000000000 +0200
+@@ -4,8 +4,8 @@
+ prefix=@prefix@
+ 
+ gtk_libs="@GTK_LIBS@"
+-gtkada_libs="-L$prefix/include/gtkada -L$prefix/lib"
+-gtkada_cflags="-I$prefix/include/gtkada"
++gtkada_libs="-L$prefix/lib/ada/adalib/gtkada -L$prefix/lib"
++gtkada_cflags="-I$prefix/lib/ada/adainclude/gtkada"
+ gtkada_lflags="-lgtkada"
+ 
+ usage()

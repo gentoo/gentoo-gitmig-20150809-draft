@@ -1,0 +1,10 @@
+# ChangeLog for dev-ada/gtkada
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.1 2003/07/14 23:13:21 george Exp $
+
+*gtkada-2.2.0.ebuild (14 Jul 2003)
+
+  14 Jul 2003; George Shapovalov <george@gentoo.org> gtkada-2.2.0.ebuild, Manifest, files/{digest-gtkada-2.2.0,gtkada-2.2.0-gentoo.patch} :
+  initial release (#11292)
+  Gtk+ bindings to the Ada language
+  ebuild submitted by Mikko Ala-Fossi <maf@iki.fi> and updated by David Holm <dholm@telia.com>
