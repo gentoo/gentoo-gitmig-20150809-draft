@@ -1,45 +1,38 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.32-r2.ebuild,v 1.7 2003/06/21 21:19:39 drobbins Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.32-r2.ebuild,v 1.8 2003/06/24 20:34:16 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 KEYWORDS="x86 amd64 ppc sparc alpha hppa arm mips"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="nls"
 
 #debianutils is for 'readlink'
-DEPEND="virtual/glibc
+DEPEND="${DEPEND}
+	virtual/glibc
 	nls? ( sys-devel/gettext )
 	sys-apps/debianutils
 	sys-apps/texinfo"
-	
 RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-
 	# Fix a cosmetic error in mk_cmds's help output.
 	cd ${S}; epatch ${FILESDIR}/${P}-mk_cmds-cosmetic.patch
 }
 
 src_compile() {
-	local myconf=""
-	
-	use nls \
-		&& myconf="--enable-nls" \
-		|| myconf="--disable-nls"
-	
-	econf	--enable-dynamic-e2fsck \
+	econf \
+		--enable-dynamic-e2fsck \
 		--enable-elf-shlibs \
-		${myconf} || die
+		`use_enable nls` \
+		|| die
 		
 	# Parallel make sometimes fails
 	MAKEOPTS="-j1" emake || die
@@ -110,4 +103,3 @@ src_install() {
 	insinto /usr/share/ss
 	doins ct_c.awk
 }
-
