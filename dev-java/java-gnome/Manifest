@@ -1,10 +1,20 @@
-MD5 267de9212e95a913626675acad6f8035 ChangeLog 3124
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 90e3c444913def0075d911ad5e608414 java-gnome-0.8.3.ebuild 1719
+MD5 3eec01d17dab5462a2e5ee8018184c21 java-gnome-2.6.0.1-r1.ebuild 2764
 MD5 f0202da9a3b2534ea914ae6c8b3fc3a4 java-gnome-2.6.0.1.ebuild 2697
+MD5 9607337b773d7b890d62e0b15ee62345 ChangeLog 3237
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 4cbfbea0ce3a8dad87ee775ac021c54a java-gnome-2.6.0.1-r1.ebuild 2733
-MD5 d0548db82a1916704411084a9a019f05 files/digest-java-gnome-0.8.3 70
-MD5 a26e989caf78aa69cbd7e1572f1f6d35 files/digest-java-gnome-2.6.0.1 72
 MD5 95eae7ebf2d8a9d2443cb7f138aab94b files/java-gnome-0.8.3-gentoo.diff 3998
 MD5 3b0e994589f54485c4c6f43618005bc7 files/gentoo-java-gnome-2.6.0.1.patch 3574
+MD5 a26e989caf78aa69cbd7e1572f1f6d35 files/digest-java-gnome-2.6.0.1 72
 MD5 a26e989caf78aa69cbd7e1572f1f6d35 files/digest-java-gnome-2.6.0.1-r1 72
+MD5 d0548db82a1916704411084a9a019f05 files/digest-java-gnome-0.8.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBNYzv/rLF9B432nYRAmdqAKCy495ul1fSylmuMbg8oaDGJESb8wCgkG8Y
+6o7KspGQZPupctQY/RlCRTk=
+=vUaL
+-----END PGP SIGNATURE-----

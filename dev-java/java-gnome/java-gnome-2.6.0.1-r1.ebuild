@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.6.0.1-r1.ebuild,v 1.3 2004/08/15 18:10:00 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.6.0.1-r1.ebuild,v 1.4 2004/09/01 08:47:37 axxo Exp $
 
 inherit eutils
 
@@ -12,7 +12,8 @@ DEPEND="virtual/libc
 		>=gnome-base/libgnomeui-2.6.0
 		>=gnome-base/libgnomecanvas-2.6.0
 		=gnome-extra/libgtkhtml-2.6*
-		>=gnome-base/libglade-2.0
+		>=gnome-base/libglade-2.3.6
+		>=gnome-base/gconf-2.6.0
 		virtual/jdk
 		app-text/docbook-sgml
 		>=app-text/docbook-sgml-utils-0.6.12
