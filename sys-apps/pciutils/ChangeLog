@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/pciutils
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.1 2002/02/25 01:43:19 blocke Exp $
+
+*pciutils-2.1.9 (24 Feb 2002)
+
+  22 Feb 2002; Bruce A. Locke <blocke@shivan.org> pciutils-2.1.9.ebuild :
+
+  - app-admin/pciutils moved to sys-apps/pciutils
+  - Updated ebuild contributed by folokai@earthlink.net (scott worley)
+
