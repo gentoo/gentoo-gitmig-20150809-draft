@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.76 2003/11/17 04:03:10 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.77 2003/11/17 19:30:50 ciaranm Exp $
+
+  17 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> fluxbox-0.9.6.ebuild:
+  Moved to ~sparc
 
 *fluxbox-0.9.6 (16 Nov 2003)
 
