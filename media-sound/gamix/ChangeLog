@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/gamix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.5 2003/09/20 12:19:49 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.6 2003/12/04 17:33:51 seemant Exp $
+
+*gamix-1.99_p13-r1 (04 Dec 2003)
+
+  04 Dec 2003; Seemant Kulleen <seemant@gentoo.org> gamix-1.99_p13-r1.ebuild,
+  gamix-1.99_p14-r1.ebuild:
+  fixed dependency information. This sorts out virtual/alsa and the gtk/gtk2 use
+  flag situation. Spider opened bug #34564, but Jonathan Kraut
+  <krautj@earthlink.net> did the excellent work to fix them up
 
 *gamix-1.99_p14 (20 Sep 2003)
 
