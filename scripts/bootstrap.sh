@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.47 2003/06/06 16:55:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.48 2003/06/07 04:31:24 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -205,7 +205,7 @@ then
 fi
 
 export USE="${ORIGUSE} bootstrap"
-emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} ${myGLIBC} ${MYBASELAYOUT} ${myZLIB} || cleanup 1
+emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} ${myGLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
 export USE="${ORIGUSE}"
 emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
