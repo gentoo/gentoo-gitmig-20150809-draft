@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d975f85cb140e1d0618a8745cdfd5f60 ChangeLog 577
+MD5 21c30936e1aff725bb7461177e2bca01 neotools-0.8.1.ebuild 869
+MD5 5a692e7cb554452b6d001dc3e200c39e neotools-0.7.0.ebuild 817
+MD5 9e28acd03e2e4c2b6cd116bdf04a7b41 neotools-0.8.0.ebuild 869
+MD5 644f52c50d184e5fa879cf76a94bdc63 ChangeLog 715
 MD5 2bea91bd3c0cec937ef3019b5dae161b metadata.xml 473
-MD5 de17ae43afd44899300bdaf631c1155a neotools-0.7.0.ebuild 797
-MD5 bc83f0e86a6c2bf742cd0f1222a8937d neotools-0.8.0.ebuild 849
-MD5 32e1e30cbca50f99c678067b1e67b51c neotools-0.8.1.ebuild 849
 MD5 d11cc8463ef6e6d26ca3aaccb25a1a23 files/digest-neotools-0.7.0 67
 MD5 7706793d1da9e4ed465a9f3676e2f664 files/digest-neotools-0.8.0 70
 MD5 5b830b64facde8a5b6569e9372495ea6 files/digest-neotools-0.8.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4YWZHTu7gpaalycRAl+6AJwNtYG42Yp78OEmf5aSqrJxYk7isACeLI3f
-8UFh9DxlGB6VYOmo9I4t3QM=
-=tRzs
------END PGP SIGNATURE-----
