@@ -1,7 +1,17 @@
-MD5 8d955f84a63a4192855ab800c9fe7c65 sniffit-0.3.7.ebuild 957
-MD5 7ca3818bb11b09be8dce2bba0fb73465 ChangeLog 1206
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 55cf0d1639490ae5f2955d39189279e3 ChangeLog 1367
+MD5 3c080f1888f1a0d200e6a79c31fdcd73 sniffit-0.3.7-r1.ebuild 1057
+MD5 96546e0d05ffd9a9bf56a0a74ea67e33 sniffit-0.3.7.ebuild 954
 MD5 40b0266de29ac4ef5e575bd2050de1b5 metadata.xml 221
-MD5 79cb696524eb784b79ef336db1598425 sniffit-0.3.7-r1.ebuild 1060
-MD5 ebb45c9f97d37af79ffeea797b411aca files/sniffit-0.3.7-gcc33.patch 496
-MD5 fd2c46d1c2224db83c42a34b03bdad44 files/digest-sniffit-0.3.7-r1 140
 MD5 fd2c46d1c2224db83c42a34b03bdad44 files/digest-sniffit-0.3.7 140
+MD5 fd2c46d1c2224db83c42a34b03bdad44 files/digest-sniffit-0.3.7-r1 140
+MD5 ebb45c9f97d37af79ffeea797b411aca files/sniffit-0.3.7-gcc33.patch 496
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtbmdTrptrqvGERAsqvAJ0YoLocFCb4LvcRKICMYpq5Q3btLgCeMXAQ
+HLijFApaSZKzRwMpK4BiGxQ=
+=A3bG
+-----END PGP SIGNATURE-----

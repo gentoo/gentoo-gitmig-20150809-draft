@@ -1,4 +1,14 @@
-MD5 088d1011264f2712c36c96790d65b927 nast-0.2.0.ebuild 719
-MD5 ae3ad3960edbb3b805a7c5c93f901b05 ChangeLog 504
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3673c8b08ab37ecfcb812a2bc9bfc277 ChangeLog 635
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+MD5 d48a10a8ab70d5b1b1a7276b2be41a72 nast-0.2.0.ebuild 716
 MD5 3caeb124c059b304993c9f79e9192344 files/digest-nast-0.2.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtcmdTrptrqvGERAtEZAJ4/7uIeTD8m+Ib2DxgizJRuGKulTQCeP7ac
+OdiTswQno5ILK08taVhVeqY=
+=PDpe
+-----END PGP SIGNATURE-----

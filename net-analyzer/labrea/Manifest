@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c36dca83cc9af90a9e6b6159420a88bc labrea-2.5.ebuild 857
-MD5 ede35e7432089dec2af40e1522c70571 ChangeLog 513
+MD5 22d887096677261134ab7abd1d47fad8 ChangeLog 644
+MD5 e2fb9aa4f6e7b6edd0ebf630d54a5f64 labrea-2.5.ebuild 862
 MD5 50bd000ac8d7a56d6ba14c18a174d261 metadata.xml 220
 MD5 4653152ea460bf93b94635cb7f867e2a files/digest-labrea-2.5 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBII4PT+MN7JbqCpMRAkVXAJ4vCRnR6YD+wyq5TTz3WpZ8yWIJbQCaA0K4
-E+3IhB8jhrRDHHyF5DlgrgE=
-=Q3mD
+iD8DBQFB+xtamdTrptrqvGERAjfVAJ9YcV3H7+OEPFrXfqh26Z+c+LvpYgCgnI5b
+kSGODkztROXg7FjcKVCR8ic=
+=XUGR
 -----END PGP SIGNATURE-----

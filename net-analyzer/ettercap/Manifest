@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4b30b28f5eb501e0c8e4b96a158a37e3 ChangeLog 4978
-MD5 6cf6956d47801f78219fc69c5d41891c ettercap-0.7.2.ebuild 1713
-MD5 e2e3189eaf5c8b74528530fe3edf3fd3 ettercap-0.7.0.ebuild 1700
-MD5 7babc7abab55d019109b3fa09fb51821 ettercap-0.7.1.ebuild 1712
+MD5 cff64510ba161f9425f261a0686c949c ChangeLog 5155
+MD5 908661e58c7ceecef6b9669a134f4a5c ettercap-0.7.2.ebuild 1704
+MD5 af0d7d60afd50554f602c2680adcf481 ettercap-0.7.0.ebuild 1691
+MD5 790244e0adb9c28e0c3607cfc46af7e4 ettercap-0.7.1.ebuild 1703
 MD5 61da3c68a3ae57136cdc2a17fbaedfaf metadata.xml 223
 MD5 6dc46b78f823aea675d64411673851a2 files/digest-ettercap-0.7.0 70
 MD5 2dfc113de5700233c282ca6a0d7c8ea0 files/digest-ettercap-0.7.1 70
@@ -12,7 +12,7 @@ MD5 137f9af8e37b29a7035cc143186523e4 files/digest-ettercap-0.7.2 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB3526mdTrptrqvGERAlCuAJsGYETnWE+r1tGXAcCtvTvcp9RkyACeMQSb
-woELzENj1/FE5fODSOn5RuQ=
-=eAwg
+iD8DBQFB+xtamdTrptrqvGERAqkxAJ9HK7Y5y6dg44VoXL6fUnf+hUEuXACeJoLh
+CIOuk9ibSANWt+3RHuPTd2k=
+=kx0Z
 -----END PGP SIGNATURE-----

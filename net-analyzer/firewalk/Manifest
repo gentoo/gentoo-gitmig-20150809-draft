@@ -1,4 +1,14 @@
-MD5 5adfba28ea4044e27352532724abcf51 firewalk-5.0.ebuild 759
-MD5 f4fb1d4e328e548a802d0765c98962b7 ChangeLog 773
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d32e8e98db91516e6657fb5622c2b953 ChangeLog 901
+MD5 cd2638d25557ee0fcc1be68d4fcdea28 firewalk-5.0.ebuild 751
 MD5 ac3074aa551da20b321f380c591f0847 metadata.xml 256
 MD5 c4a3bbb4496f45c9f93b13ec8504ea42 files/digest-firewalk-5.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtbmdTrptrqvGERAvSEAJ9H+JyFXEZPvMGmjJRYAjI0R+Z5AQCeKW3/
+SrafUVwVSFE3n4rDIapRYK8=
+=zG3A
+-----END PGP SIGNATURE-----

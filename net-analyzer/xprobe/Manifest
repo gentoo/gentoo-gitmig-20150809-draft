@@ -1,7 +1,17 @@
-MD5 151643cb33ad51bd64c85b548f6f0bcb ChangeLog 1141
-MD5 47c9773d1421e31e4f0e1cbec12e5c2c xprobe-0.0.2.ebuild 762
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 18b4599a8ae3cdaa7a43f67877173da6 ChangeLog 1297
+MD5 aaa7f5bb15e8db514726c44edc25c853 xprobe-0.0.2.ebuild 759
 MD5 ac6c11d70b477833baa876a5460fba26 metadata.xml 224
-MD5 38ece8849b42872604ba9d216fb1f428 xprobe-0.2.1.ebuild 1224
+MD5 23d9f2a326c0c4798217e21521e4557a xprobe-0.2.1.ebuild 1221
 MD5 2d7fd3216e38d4a4adb0d40c689bb944 files/digest-xprobe-0.0.2 63
 MD5 9610e3d9785f7b6eb29ab995ef30fb08 files/xprobe-0.0.2-gentoo.patch 387
 MD5 6b20f3d65e14741fe524b8b88dbdbd73 files/digest-xprobe-0.2.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtamdTrptrqvGERAvdyAKCEWOC61mUAbAC1nyeFbeyZU4/lOACgkxUZ
+RXZCLCv2Jb6oYRnYEBlOvvY=
+=KWL/
+-----END PGP SIGNATURE-----

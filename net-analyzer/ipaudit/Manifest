@@ -1,4 +1,14 @@
-MD5 789e8354f1835a447324fe82019e94a6 ipaudit-1.0_beta1.ebuild 753
-MD5 f36c0cdfb884f866ea0710395b701224 ChangeLog 397
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 32354adc0ea3c243ea997aa28e3c97e2 ChangeLog 533
+MD5 3544139cbbd0671b76a9a7c53eb0f10f ipaudit-1.0_beta1.ebuild 756
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 276e07ebd117b9c60ef6fa7d5316b0b9 files/digest-ipaudit-1.0_beta1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtbmdTrptrqvGERAg10AJ9D95Yf1hxG8R5GLIPvfUpTMMU7NQCeIRZe
+nUvUdcQ+kUEij8DBdNufQ4o=
+=mtyF
+-----END PGP SIGNATURE-----

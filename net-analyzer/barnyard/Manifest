@@ -1,8 +1,18 @@
-MD5 45d0145787ba417d828362a1f083ef5d ChangeLog 1626
-MD5 a1880902e0179c96b2445051f4f8d0be barnyard-0.1.0.ebuild 1327
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1a32edbac7742ae0be0e912b28431765 ChangeLog 1787
+MD5 20781d966c89d732a0a2b0a8d7deadad barnyard-0.1.0.ebuild 1332
 MD5 17784ab6e148b4abf7f6aa2390ce1bce metadata.xml 223
-MD5 7ea0b7b0b336310630a4818451cc4fa5 barnyard-0.2.0.ebuild 1223
+MD5 76615f3cb9b609a11d3abf6d6abe1ec4 barnyard-0.2.0.ebuild 1228
 MD5 3e857c89ec58ac318ebd669e7f427908 files/barnyard.confd 556
 MD5 d513768e805f1e68bce21b6cffcf846a files/barnyard.rc6 762
 MD5 e1650eb517daf81cb0abb45eee02a727 files/digest-barnyard-0.1.0 66
 MD5 7393a1ed7bc62178acd52f2da6f01185 files/digest-barnyard-0.2.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtamdTrptrqvGERArv1AJ9VtdTmH+DWTmmmx/JmafQjBx38GACfVWSn
++L4J0zEsjBdOmbQ2PjohBj4=
+=TKMa
+-----END PGP SIGNATURE-----

@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e47107eff72fa18b18f1f24a2fb08636 ns-2.27-r1.ebuild 2524
-MD5 36176cf68befcae0477d449d898e2447 ChangeLog 1625
+MD5 095b7d5bc03bfe34b64dbcbe4368f0dd ChangeLog 1754
 MD5 c132a750577527d57e9e3ce8747b212c metadata.xml 212
-MD5 f7b94c91182a6e9cf19719c8abd4dfda files/ns-2.27-gentoo.diff 11242
+MD5 144de4bbceec78fa613208feee423e12 ns-2.27-r1.ebuild 2527
 MD5 cbd46edc227114c8538b564b0bdf1ae6 files/digest-ns-2.27-r1 65
+MD5 f7b94c91182a6e9cf19719c8abd4dfda files/ns-2.27-gentoo.diff 11242
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB832IEZCkKN40op4RAkZ/AKC+soZcjN9hr78TOsWc7Y5eBsJ3ugCfTXeN
-PkbWwRv5ExbfY/bnmtvUVGI=
-=vqou
+iD8DBQFB+xtcmdTrptrqvGERAmZXAKCKyPCRa60z2hQoAmtiti4P0J45EwCfXErz
+xaCbTAyBIr7Zbqyfebf4LDo=
+=jriu
 -----END PGP SIGNATURE-----

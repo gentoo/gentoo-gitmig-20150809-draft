@@ -1,4 +1,14 @@
-MD5 ce1d674f81fc42d044f5295d03914f43 tcpslice-1.1_alpha3.ebuild 1221
-MD5 db32233cb6e5bc314be56208f6434fe5 ChangeLog 869
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b405202cd3008fdf16e5d579563399a5 ChangeLog 1007
 MD5 50f280bced8e4dcee548ea16d5e11dc3 metadata.xml 351
+MD5 3c08e28f28a18a8a30c771e5b8618d2c tcpslice-1.1_alpha3.ebuild 1211
 MD5 169f554c588ee6189a800e3355f66d24 files/digest-tcpslice-1.1_alpha3 140
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtcmdTrptrqvGERAqHzAJ0ZR8NhoeJIpwOEhdgXZbu1CgA5KACgjPr2
+dmKAI5qCbsveAvVvdC/FZJY=
+=xr/X
+-----END PGP SIGNATURE-----

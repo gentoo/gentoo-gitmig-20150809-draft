@@ -1,5 +1,15 @@
-MD5 6e55bad912692e0aeb6547ca46d9c960 nstats-0.4.ebuild 680
-MD5 a5cd04ef4cf006f67561655067a767d9 ChangeLog 765
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 72866ec45b7979298c56bf08bb7cd94b ChangeLog 896
+MD5 b8c10f9e3e5a10adbb057b5fdd7e1c2c nstats-0.4.ebuild 677
 MD5 471824686805ceb0bc7fbffbfe341a4b metadata.xml 266
-MD5 e254a6da19563f0f805c36e922d82892 files/nstats-0.3.2-r2-gentoo.diff 543
 MD5 436fb40a1859860df36dbcf6ba534dcc files/digest-nstats-0.4 61
+MD5 e254a6da19563f0f805c36e922d82892 files/nstats-0.3.2-r2-gentoo.diff 543
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtcmdTrptrqvGERAo1iAJ9cbXO5RCtwN+cBGqLWo+pkXYaTQACfWTOy
++PoiVipszxJnIGxLNCqXqm0=
+=j4WB
+-----END PGP SIGNATURE-----

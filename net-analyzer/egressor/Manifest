@@ -1,7 +1,17 @@
-MD5 2b83502db99fcfd5cfaec25cb46860f8 ChangeLog 806
-MD5 c44273e12dbd3abecd6f6f5abf230bc2 egressor-1.0-r1.ebuild 888
-MD5 61709ba2987dd7d0205e2c0d4fd4659d egressor-1.0.ebuild 765
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a72173185ea579e1fbbcd1f1a0c77ecf ChangeLog 965
+MD5 d7224ddab687aafe2f2f19164630560a egressor-1.0-r1.ebuild 893
+MD5 4a571af4bb546953409fa6e3c77a1065 egressor-1.0.ebuild 767
 MD5 c75a90f831c2bbf877d41b987645c097 metadata.xml 233
 MD5 6ef1810e065d4ab8c789a28901381fb2 files/1.0-libnet-1.0.patch 396
 MD5 a2561d000de00f86c31180af32ab084e files/digest-egressor-1.0 70
 MD5 a2561d000de00f86c31180af32ab084e files/digest-egressor-1.0-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtamdTrptrqvGERAsmzAJ9aGWRH7ESdOIQCkZRJh/AIj33ajgCfUJOa
+swiq2jYu0qKiU2aFysDBmvk=
+=QTgo
+-----END PGP SIGNATURE-----

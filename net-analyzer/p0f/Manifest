@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6dc57985b92bcc85f71ce115235e9d0f p0f-2.0.3.ebuild 837
-MD5 d7754be65f973d0c7f7c3e667b601cb2 ChangeLog 1879
+MD5 c9c66fdffaeeae718a2379b7525e0437 ChangeLog 2009
+MD5 341f35b78971d65e839655b8adcf7721 p0f-2.0.3.ebuild 838
 MD5 a6504b2ab3f5f778d46643a087162f71 metadata.xml 250
 MD5 f184953061e4a88dad985e15eb2b4f22 files/p0f-1.8.2-makefile.patch 377
 MD5 aec7b9a8cf64ab5785008f4f5fc64095 files/p0f-1.8.2.rc 1274
 MD5 d68117a6108bcd2769ac8128cec37896 files/digest-p0f-2.0.3 58
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBjNmqT+MN7JbqCpMRAuwAAJ4uPFQjcFyQASu3OtcB5e3y+zxfPgCggX0X
-fS2AEYMx6IwjOWKPRkbPNCA=
-=FMKa
+iD8DBQFB+xtamdTrptrqvGERAss2AKCHYp/APBOXMVZImzfDqy3/RK/CqgCfT+vO
+Gikw1BudJ25FPI2C3hzOMgQ=
+=jsUB
 -----END PGP SIGNATURE-----

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f840c76d04a92efe732193fdf076a02 fragroute-1.2.ebuild 799
-MD5 4c0fe2ff64fc76fadaf08cdbba175b79 ChangeLog 958
+MD5 8349bff45de834d2241c106ed37c3c12 ChangeLog 1092
+MD5 e3fcabedd7b08d30ea3f329590a53518 fragroute-1.2.ebuild 796
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 36fafeafa71dc2dfd15c10be5f698314 files/digest-fragroute-1.2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBKzg5T+MN7JbqCpMRAnchAKCN102XoATnZdGCE5qgpIxiPhiMJACfQtMU
-Hmxky0qd1XZtBiU5QuLrdWc=
-=6GRI
+iD8DBQFB+xtcmdTrptrqvGERAoG9AJ9yO8Sya1B3IFOhHFAVnG7bAmhUsQCfXYnN
+ve0y3OAZua7XR/1VJYbKvAM=
+=9QjX
 -----END PGP SIGNATURE-----

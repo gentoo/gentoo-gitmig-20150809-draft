@@ -1,6 +1,16 @@
-MD5 769d4dc5fb699606e0fddf31a33e8fee tcptrack-1.1.2.ebuild 636
-MD5 f3fec0ce9ed5b5ed89c00d4d8d7eaad2 ChangeLog 923
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9895c49310e274dd06416631ed069eca ChangeLog 1079
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 dc17b0a4bad10fd1f3c4a7cf2943768c tcptrack-1.1.1.ebuild 620
+MD5 1bda4e380bb23fb93a49be3ffb94f09d tcptrack-1.1.1.ebuild 617
+MD5 156d488eb4a6dbc1d27b42c410b428bb tcptrack-1.1.2.ebuild 629
 MD5 e2e0333d5455a5c752c95705a99ee5bd files/digest-tcptrack-1.1.1 66
 MD5 394db036d00660835313071049108de3 files/digest-tcptrack-1.1.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+xtbmdTrptrqvGERAqtpAJ9bqfbtF+xQaI95IvbQUXUMHC1n2gCeKhzd
+RTNG9x7vTKG3j3D8GL8ojdk=
+=oMUa
+-----END PGP SIGNATURE-----
