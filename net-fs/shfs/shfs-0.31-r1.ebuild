@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.5 2003/10/21 17:11:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.6 2003/11/23 23:44:45 seemant Exp $
 
 IUSE="amd doc"
 
@@ -9,9 +9,11 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Secure Shell File System"
 HOMEPAGE="http://shfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc amd64"
+
 DEPEND="virtual/linux-sources
 		net-misc/openssh
 		amd? ( net-fs/am-utils )"
