@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/dsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/ChangeLog,v 1.3 2003/03/20 13:04:25 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/ChangeLog,v 1.4 2003/08/11 18:21:29 vapier Exp $
+
+*dsh-0.23.4-r2 (11 Aug 2003)
+
+  11 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Move configuration dir from /etc/ to /etc/dsh/ #26254
 
 *dsh-0.23.4-r1 (20 Mar 2003)
 
