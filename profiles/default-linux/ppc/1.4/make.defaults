@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/1.4/make.defaults,v 1.5 2004/09/09 12:58:03 vapier Exp $
-
-GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/1.4/make.defaults,v 1.6 2004/09/15 21:35:42 vapier Exp $
 
 ARCH="ppc"
+ACCEPT_KEYWORDS="ppc"
+
+GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
 
 USE="oss dvd xv slang readline gpm berkdb gdbm tcpd pam libwww ssl jpeg
 nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk gtk2 X qt kde
 motif opengl mozilla png truetype ppc cups foomaticdb"
-
-ACCEPT_KEYWORDS="ppc"
 
 FEATURES="sandbox sfperms"

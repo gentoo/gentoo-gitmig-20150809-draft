@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/1.0/make.defaults,v 1.5 2004/09/09 12:58:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/1.0/make.defaults,v 1.6 2004/09/15 21:35:42 vapier Exp $
 
 ARCH="ppc"
+ACCEPT_KEYWORDS="ppc"
 
 USE="oss dvd xv slang readline gpm berkdb gdbm tcpd pam libwww ssl jpeg
 nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde
 motif opengl mozilla png truetype ppc"
-
-ACCEPT_KEYWORDS="ppc"
 
 FEATURES="sandbox sfperms"
