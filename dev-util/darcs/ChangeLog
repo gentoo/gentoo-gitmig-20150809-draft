@@ -1,0 +1,12 @@
+# ChangeLog for dev-util/darcs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.1 2003/07/03 12:43:45 kosmikus Exp $
+
+*darcs-0.9.10 (03 Jul 2003)
+
+  03 Jul 2003; Andres Loeh <kosmikus@gentoo.org> darcs-0.9.10.ebuild,
+  darcs-0.9.11.ebuild:
+  Initial import. darcs is a version control system with advanced underlying
+  theory. It is written in Haskell. Thanks to Peter Simons
+  <simons+gentoo@cryp.to> for pushing me (bug 23771) to do this.
+
