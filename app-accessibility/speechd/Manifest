@@ -1,7 +1,17 @@
-MD5 623133af78c9aea8a59f8095d7eb8e44 ChangeLog 1800
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aebaaada3ed89980f1f36f7287554e8a ChangeLog 1899
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
 MD5 e1fe24e435e557100e732fcf12b229aa speechd-0.56-r1.ebuild 1191
 MD5 cedd40d448110b0813ba8601218545be speechd-0.56.ebuild 1370
 MD5 bc0a2d35e9d4d817f657a8aad30d3a14 files/digest-speechd-0.56 63
 MD5 bc0a2d35e9d4d817f657a8aad30d3a14 files/digest-speechd-0.56-r1 63
-MD5 c4de075c04f81e0417cc8fbffe0467b3 files/speechd.rc 501
+MD5 946d2d86e6a6b6640fcdd745d47a04d7 files/speechd.rc 500
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHiMEI1lqEGTUzyQRAhnnAJ9OqlouYKKZj6hvckpFsKxBx/EmdgCfdyUK
+QS7QDVzuMGfiFX/QyJYctt0=
+=+Y7S
+-----END PGP SIGNATURE-----
