@@ -1,7 +1,17 @@
-MD5 8b981c8416b19bb5ea221b15a910f45f ChangeLog 1399
-MD5 96c5a9a96b7414a4cc00bb34c82d807c metadata.xml 275
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fa8347838f53d2150799793ae0570af ne-1.36.ebuild 1067
-MD5 80ee0789d097fed44404e913d43dcf32 ne-1.37.ebuild 1068
+MD5 96c5a9a96b7414a4cc00bb34c82d807c metadata.xml 275
+MD5 320af58cb0941c12dd61a94df5da84cf ChangeLog 1526
+MD5 2947bccc6fc9b5f0c142ea99acac1ecd ne-1.38.ebuild 992
 MD5 f42f170988b1e65d3614a7f8c8e1e3d8 files/1.36-include-fix.patch 825
 MD5 00fcc22f5e66eaa8d63653b147365adb files/digest-ne-1.36 60
-MD5 957fcbf3d32a65e17400ffa24f29b0b8 files/digest-ne-1.37 60
+MD5 fee9c062d0bb6450e91880380c8f4331 files/digest-ne-1.38 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcdWHI1lqEGTUzyQRAgZuAKCU42pJczQURIRk08Y0zzIkS3a/twCgo/12
+WNs6ML43vFPwWG2TGDeFvuQ=
+=X6uW
+-----END PGP SIGNATURE-----

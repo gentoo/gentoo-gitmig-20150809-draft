@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.37.ebuild,v 1.1 2004/09/24 17:53:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.38.ebuild,v 1.1 2004/10/17 02:14:21 swegener Exp $
 
 inherit eutils
 
@@ -16,15 +16,10 @@ IUSE=""
 DEPEND=">=sys-libs/ncurses-5.2"
 PROVIDE="virtual/editor"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/1.36-include-fix.patch
-}
-
 src_compile() {
-	emake -j1 -C src ne CFLAGS="${CFLAGS} -DNODEBUG -D_POSIX_C_SOURCE=199506L" LIBS="-lncurses" || die "emake failed"
+	emake -j1 -C src ne \
+		CFLAGS="${CFLAGS} -DNODEBUG -D_POSIX_C_SOURCE=199506L" \
+		LIBS="-lncurses" || die "emake failed"
 }
 
 src_install() {
