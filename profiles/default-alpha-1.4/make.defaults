@@ -1,30 +1,70 @@
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
 
+USE="
+alpha
+berkdb
+crypt
+cups
+encode
+gdbm
+gif
+gnome
+gpm
+gtk
+imlib
+jpeg
+kde
+libg++
+libwww
+mikmod
+motif
+ncurses
+nls
+oggvorbis
+opengl
+oss
+pam
+pdflib
+png
+python
+qt
+qtmt
+quicktime
+readline
+sdl
+slang
+spell
+ssl
+svga
+tcpd
+truetype
+X
+xml2
+xmms
+xv
+zlib
+"
+
 ARCH="alpha"
-
-# Host-type
-
-CHOST=alpha-unknown-linux-gnu
-PLATFORM=$CHOST
-
-# Options passed to make during the build process
-MAKEOPTS="-j2"
-
-# Fetching command (5 tries, passive ftp for firewall compatibility)
-FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
-# Global configure options
-
-# C Compiler flags
-CFLAGS="-O3 -pipe "
-# C++ Compiler flags
-CXXFLAGS=${CFLAGS}
-
-USE="oss dvd xv slang readline gpm berkdb gdbm tcpd pam libwww ssl jpeg
-nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde
-motif opengl mozilla alpha"
-
+COMPILER="gcc3"
 ACCEPT_KEYWORDS="alpha"
 
-COMPILER="gcc3"
+# The following flags have historically been set in this file but I
+# believe it is redundant.  Commenting them out until proven they're
+# unneeded...  (16 Dec 02 agriffis)
 
+#CHOST=alpha-unknown-linux-gnu
+#PLATFORM=$CHOST
+#
+## Options passed to make during the build process
+#MAKEOPTS="-j2"
+#
+## Fetching command (5 tries, passive ftp for firewall compatibility)
+#FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
+## Global configure options
+#
+## C Compiler flags
+#CFLAGS="-O3 -pipe "
+## C++ Compiler flags
+#CXXFLAGS=${CFLAGS}
