@@ -1,7 +1,8 @@
-This profile has not yet been released, and as such we don't recommend
-using it on production systems.  That being said, many users have been
-successfully upgrading to this profile to help us test, and if you want
-to help us in that process, please check out the following URL for full
+As of Monday 28th, 2005, this profile has gone stable. All previous
+profiles are considere deprecated. Please update to one of the 2005.0
+profiles.
+
+For upgrade instructions, please check out the following URL for full
 instructions:
 
 http://www.gentoo.org/proj/en/base/amd64/2005.0-upgrade-amd64.xml
