@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.21 2004/01/22 07:37:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.22 2004/01/25 11:15:41 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -12,25 +12,34 @@
 # to automate configuration, make and install process (they override default
 # econf, emake and einstall defined by ebuild.sh respectively).
 
+# Functions:
+# src_unpack	Unpacks source archive(s) and apply patches if any.
+# src_compile	Invokes econf and emake.
+# src_install	Runs einstall and erubydoc.
+# econf		Detects setup.rb, install.rb, extconf.rb and configure,
+#		and then runs the configure script.
+# emake		Runs make if any Makefile exists.
+# einstall	Calls install script or Makefile. If both not present,
+#		installs programs under sitedir.
+# erubydoc	Finds any documents and puts them in the right place.
+#		erubydoc needs more sophistication to handle all types of
+#		appropriate documents.
+
 # Variables:
 # USE_RUBY	Space delimited list of supported ruby.
 #		Set it to "any" if it installs only version independent files.
 #		If your ebuild supports both ruby 1.6 and 1.8 but has version
 #		depenedent files such as libraries, set it to something like
-#		"ruby16 ruby18". Possible values are "any ruby16 shim18 ruby18"
-#		Note: USE_RUBY="shim18" doesn't take any effect at the moment.
-# WITH_RUBY	Contains space delimited list of installed ruby which is
-#		supported (supported ruby should be specified in USE_RUBY).
-#		It is automatically defined if your ebuild set DEPEND list
-#		correctly, so usually you shouldn't set this variable by hand.
+#		"ruby16 ruby18". Possible values are "any ruby16 ruby18 ruby19"
 # EXTRA_ECONF	You can pass extra arguments to econf by defining this
 #		variable. Note that you cannot specify them by command line
 #		if you are using <sys-apps/portage-2.0.49-r17.
+# PATCHES	Space delimited list of patch files.
 
 ECLASS=ruby
 INHERITED="${INHERITED} ${ECLASS}"
-EXPORT_FUNCTIONS erubyconf erubymake erubyinstall erubydoc \
-	src_unpack econf emake src_compile einstall src_install
+EXPORT_FUNCTIONS src_unpack src_compile src_install prepall \
+	econf emake einstall erubyconf erubymake erubyinstall erubydoc
 
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
@@ -39,16 +48,8 @@ SLOT="0"
 LICENSE="Ruby"
 
 newdepend ">=dev-lang/ruby-1.6.8"
-if has_version '=dev-lang/ruby-1.6*' && [[ "${USE_RUBY/ruby16/}" != "${USE_RUBY}" ]] ; then
-	WITH_RUBY="${WITH_RUBY} ruby16"
-fi
-if has_version '=dev-lang/ruby-1.8*' && [[ "${USE_RUBY/ruby18/}" != "${USE_RUBY}" ]] ; then
-	WITH_RUBY="${WITH_RUBY} ruby18"
-fi
-if has_version '=dev-lang/ruby-1.6*' && has_version '=dev-lang/ruby-1.8*' \
-	&& [[ "${USE_RUBY/any/}" != "${USE_RUBY}" ]] ; then
-	WITH_RUBY="${WITH_RUBY} any"
-fi
+
+export RUBY=/usr/bin/ruby
 
 ruby_src_unpack() {
 
@@ -59,24 +60,9 @@ ruby_src_unpack() {
 			epatch $p
 		done
 	fi
-
-	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		cd ${WORKDIR}
-		mkdir ${T}/build
-		tar cf - . | ( cd ${T}/build ; tar xpf - )
-	fi
 }
 
-erubyconf() {
-	local RUBY
-	if [ "$1" = ruby16 ] ; then
-		RUBY=/usr/bin/ruby16
-	elif [ "$1" = ruby18 ] ; then
-		RUBY=/usr/bin/ruby18
-	else
-		RUBY=/usr/bin/ruby
-	fi
-	shift
+ruby_econf() {
 
 	if [ -f configure ] ; then
 		./configure \
@@ -108,70 +94,21 @@ erubyconf() {
 	fi
 }
 
-ruby_econf() {
-	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running econf for ruby 1.6 ;)"
-		erubyconf ruby16 $@ || die
-		einfo "running econf for ruby 1.8 ;)"
-		cd ${T}/build/${S#${WORKDIR}}
-		erubyconf ruby18 $@ || die
-		cd -
-	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running econf for ruby 1.6 ;)"
-		erubyconf ruby16 $@ || die
-	elif [[ "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running econf for ruby 1.8 ;)"
-		erubyconf ruby18 $@ || die
-	else
-		einfo "running econf for ruby ;)"
-		erubyconf ruby $@ || die
-	fi
-}
-
-erubymake() {
-	if [ -f makefiles -o -f GNUmakefile -o -f makefile -o -f Makefile ] ; then
-		make $@ || die "emake for ruby failed"
-	fi
-}
-
 ruby_emake() {
-	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running emake for ruby 1.6 ;)"
-		erubymake $@ || die
-		einfo "running emake for ruby 1.8 ;)"
-		cd ${T}/build/${S#${WORKDIR}}
-		erubymake $@ || die
-		cd -
-	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running emake for ruby 1.6 ;)"
-		[[ -x /usr/bin/ruby16 ]] && RUBY=ruby16 || RUBY=ruby
-		erubymake RUBY=${RUBY} $@
-	elif [[ "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running emake for ruby 1.8 ;)"
-		[[ -x /usr/bin/ruby18 ]] && RUBY=ruby18 || RUBY=ruby
-		erubymake RUBY=${RUBY} $@
-	else
-		einfo "running emake for ruby ;)"
-		erubymake $@ || die
+	if [ -f makefiles -o -f GNUmakefile -o -f makefile -o -f Makefile ] ; then
+		make CC=${CC:-gcc} CXX=${CXX:-g++} $@ || die "emake for ruby failed"
 	fi
 }
 
 ruby_src_compile() {
 
+	# You can pass configure options via EXTRA_ECONF
 	ruby_econf || die
 	ruby_emake $@ || die
 }
 
-erubyinstall() {
-	local RUBY siteruby
-	if [ "$1" = ruby16 -a -x /usr/bin/ruby16 ] ; then
-		RUBY=/usr/bin/ruby16
-	elif [ "$1" = ruby18 -a -x /usr/bin/ruby18 ] ; then
-		RUBY=/usr/bin/ruby18
-	else
-		RUBY=/usr/bin/ruby
-	fi
-	shift
+ruby_einstall() {
+	local siteruby
 
 	if [ -f install.rb ] ; then
 		${RUBY} install.rb config --prefix=${D}/usr $@ \
@@ -186,59 +123,9 @@ erubyinstall() {
 	elif [ -f extconf.rb -o -f Makefile ] ; then
 		make DESTDIR=${D} $@ install || die "make install failed"
 	else
-		if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-			siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
-		else
-			siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
-		fi
+		siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
 		insinto ${siteruby}
 		doins *.rb || "doins failed"
-	fi
-}
-
-ruby_einstall() {
-
-	local siteruby=$(ruby -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
-
-	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running einstall for ruby 1.6 ;)"
-		erubyinstall ruby16 $@
-		einfo "running einstall for ruby 1.8 ;)"
-		cd ${T}/build/${S#${WORKDIR}}
-		erubyinstall ruby18 $@
-		cd -
-	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running einstall for ruby 1.6 ;)"
-		erubyinstall ruby16 $@
-	elif [[ "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		einfo "running einstall for ruby 1.8 ;)"
-		erubyinstall ruby18 $@
-	elif [[ "${WITH_RUBY/any/}" != "${WITH_RUBY}" ]] ; then
-		if [ -n "`use ruby16`" ] ; then
-			erubyinstall ruby16 $@
-			if [ -d ${D}${siteruby}/../1.6 ] ; then
-				cd ${D}${siteruby}/../1.6
-				dodir ${siteruby}/../1.8
-				for x in * ; do
-					ln -s ../1.6/$x ../1.8/$x
-				done
-				cd -
-			fi
-		else
-			erubyinstall ruby18 $@
-			if [ -d ${D}${siteruby}/../1.8 ] ; then
-				cd ${D}${siteruby}/../1.8
-				dodir ${siteruby}/../1.6
-				for x in * ; do
-					ln -s ../1.8/$x ../1.6/$x
-				done
-				cd -
-			fi
-		fi
-		erubyinstall
-	else
-		einfo "running einstall for ruby ;)"
-		erubyinstall ruby $@
 	fi
 }
 
@@ -271,3 +158,59 @@ ruby_src_install() {
 
 	erubydoc
 }
+
+# erubyconf, erubymake and erubyinstall are kept for compatibility
+erubyconf() {
+	ruby_econf $@
+}
+
+erubymake() {
+	ruby_emake $@
+}
+
+erubyinstall() {
+	ruby_einstall $@
+}
+
+# prepall adds SLOT support for ruby.eclass
+prepall() {
+
+	[[ ! -x /usr/bin/ruby16 ]] && export USE_RUBY=${USE_RUBY/ruby16/}
+	[[ ! -x /usr/bin/ruby18 ]] && export USE_RUBY=${USE_RUBY/ruby18/}
+	[[ ! -x /usr/bin/ruby19 ]] && export USE_RUBY=${USE_RUBY/ruby19/}
+
+	if [ -n "${USE_RUBY}" -a "${USE_RUBY}" != "any" ] ; then
+		einfo "Now we are building the package for ${USE_RUBY}"
+		for rb in ${USE_RUBY} ruby ; do
+			einfo "Using $rb"
+			export RUBY=/usr/bin/$rb
+			ruby() { /usr/bin/$rb $* ; }
+			mkdir -p ${S}
+			cd ${WORKDIR}
+			einfo "Unpacking for $rb"
+			src_unpack || die "src_unpack failed"
+			cd ${S}
+			einfo "Building for $rb"
+			src_compile || die "src_compile failed"
+			cd ${S}
+			einfo "Installing for $rb"
+			src_install || die "src_install failed"
+		done
+	elif [ "${USE_RUBY}" == "any" ] ; then
+		siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
+		# in case no directories found in siteruby
+		shopt -sq nullglob
+
+		for x in ${D}/${siteruby}/* ; do
+			mv $x ${D}/${siteruby}/..
+		done
+		if [ -d ${D}${siteruby} ] ; then
+			rmdir --ignore-fail-on-non-empty ${D}/${siteruby}
+		fi
+	fi
+
+	prepallman
+	prepallinfo
+	prepallstrip
+}
+
