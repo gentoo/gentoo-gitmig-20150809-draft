@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7ba65161a20cfcfd7dc1e6b78c84645b ChangeLog 3294
 MD5 5d4b2f0f8efaaff7ebbcb77bc1258334 gift-openft-0.2.1.3.ebuild 1198
-MD5 5f42fb8aa34efb8be879fb89c35f6c5c gift-openft-0.2.1.4.ebuild 1456
-MD5 9d32abe42ae5482e1cbbd27890bacbec ChangeLog 3204
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
+MD5 c6e7dce1e4ecb29988417c4552baec67 gift-openft-0.2.1.4.ebuild 1451
 MD5 79751211679f0e879c97aa37a46d9d68 files/digest-gift-openft-0.2.1.3 72
 MD5 4df11e57302a8164df847367820d27ba files/digest-gift-openft-0.2.1.4 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBQyL4cAgAdbxYsnERAqqDAJ95aAYrYeQS7iIuetnmO4ifbRLxhgCeN5Rq
-PgTwgWsHVEbjAIAWrTSVphs=
-=QPbs
------END PGP SIGNATURE-----
