@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/gigaset-isdn-0.4.0.ebuild,v 1.2 2004/12/05 21:40:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/gigaset-isdn-0.4.0.ebuild,v 1.3 2004/12/14 19:45:39 mrness Exp $
+
+inherit linux-mod
 
 MY_P=${P/-isdn/}
 S=${WORKDIR}/${MY_P}
@@ -14,26 +16,33 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="debug"
 
-src_compile() {
-	cd "${S}"
-	./configure --kernel=${KV} --root=${D} --prefix=/usr \
-		--with-ring `use_with debug`
+MODULE_NAMES="bas_gigaset(drivers/isdn:) ser_gigaset(drivers/isdn:) usb_gigaset(drivers/isdn:)"
+BUILD_TARGETS="all"
+CONFIG_CHECK="ISDN_I4L"
+ISDN_I4L_ERROR="This driver requires that your kernel is compiled with support for ISDN4Linux (I4L)"
 
-	(
-		unset ARCH
-		emake || die "Compilation failed"
-	)
+src_unpack() {
+	unpack ${A}
+
+	# Fix broken makefile
+	convert_to_m ${S}/Makefile.26.in
+
+	# We will take care of installing modules, not you
+	sed -i "s:if \[ \$\# -ne 0 \]:if \[ 0 -ne 0 \]:g" ${S}/generic/installfiles
+
+	# We will run depmod, not you
+	sed -i "s:.*generic/post.*::g" ${S}/generic/install
+}
+
+src_compile() {
+	./configure --kernel=${KV_FULL} --kerneldir=${KV_DIR} --root=${D} --prefix=/usr \
+		--with-ring $(use_with debug)
+
+	linux-mod_src_compile
 }
 
 src_install () {
-	cd "${S}"
-	#Disable depmod while in sandbox
-	sed -i -e 's:.*depmod :#&:' generic/post
-	einstall ROOT=${D} || die "Failed to install drivers"
-
+	linux-mod_src_install
+	einstall ROOT=${D} || die "Failed to install frontend"
 	dodoc README Release.notes TODO known_bugs.txt
-}
-
-pkg_postinst () {
-	depmod -ae ${KV}
 }
