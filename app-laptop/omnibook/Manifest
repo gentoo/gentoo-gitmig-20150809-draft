@@ -1,4 +1,6 @@
-MD5 34a065c9b78a0064ca1fde91e8db59f0 ChangeLog 1622
+MD5 c0b941ca685050fee967cec645157b54 omnibook-20050217.ebuild 951
+MD5 88697b9cc73d69575b00186d687c3cea ChangeLog 1755
 MD5 68687e57187b5ff3508d3bfd3744362f omnibook-20040916.ebuild 951
 MD5 f17c483cfcc1efe580afd0b737d3f2c3 metadata.xml 264
 MD5 e35908816aae2b9d8c6753e0a34bc5fc files/digest-omnibook-20040916 70
+MD5 2d8576708b1ba220c34b3844d5a9e7ec files/digest-omnibook-20050217 70
