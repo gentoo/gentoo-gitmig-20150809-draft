@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.8 2002/08/19 06:01:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.9 2002/09/28 07:08:50 azarah Exp $
+
+*gal-0.20 (28 Sep 2002)
+  28 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Update version.  Update to use gnome.org eclass.  Add
+  symlink with version of previous version to remove the
+  need to remerge deps (like evolution).
 
 *gal-0.19.3 (29 Jul 2002)
   19 Aug 2002; Spider <spider@gentoo.org> gal-0.19.3.ebuild :
