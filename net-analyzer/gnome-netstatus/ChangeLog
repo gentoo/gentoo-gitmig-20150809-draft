@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.8 2004/05/12 11:53:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.9 2004/05/16 13:35:18 geoman Exp $
+
+  16 May 2004; Stephen P. Becker <geoman@gentoo.org>
+  gnome-netstatus-2.6.0.1.ebuild, gnome-netstatus-2.6.1.ebuild:
+  Added ~mips keyword.
 
 *gnome-netstatus-2.6.1 (04 May 2004)
 
