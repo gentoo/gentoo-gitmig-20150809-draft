@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.6.ebuild,v 1.2 2003/05/14 15:16:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.6.ebuild,v 1.3 2003/05/14 17:14:36 lu_zero Exp $
 
 inherit gcc eutils
 export WANT_GCC_3="yes"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 -ppc"
 
 DEPEND="virtual/x11
 	virtual/glibc
@@ -40,10 +40,10 @@ src_compile() {
 
 src_install() {
 	local myarch
-	if [ -n `use x86` ]; then
+	if [ -n "`use x86`" ]; then
 	myarch="i686"
 	fi
-	if [ -n `use ppc` ]; then
+	if [ -n "`use ppc`" ]; then
 	myarch="ppc"	
 	fi
 	cd ${S}/${PN}/${myarch}
