@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/speedfreq
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/ChangeLog,v 1.1 2003/08/21 02:31:55 vapier Exp $
+
+*speedfreq-0.5 (20 Aug 2003)
+
+  20 Aug 2003; Christian Axelsson <smiler@lanil.mine.nu> speedfreq-0.5.ebuild :
+  Initial release.  #26973

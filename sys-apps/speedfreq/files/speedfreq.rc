@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/files/speedfreq.rc,v 1.1 2003/08/21 02:31:55 vapier Exp $
+
+depend() {
+	need modules logger
+	use acpid
+}
+
+check_acpi() {
+	[ "${SPEEDFREQ_SPEED}" == "auto" ] || return 0
+	[ ! -f /proc/acpi/battery/BAT1/state ] && return 0
+
+	local status="`echo $(</proc/acpi/battery/BAT1/state) | grep charging | cut -c 26-`"
+	case ${status} in
+		charging)		SPEEDFREQ_SPEED=performance;;
+		discharging)	SPEEDFREQ_SPEED=powersave;;
+		*)				SPEEDFREQ_SPEED=performance;;
+	esac
+}
+
+start() {
+	check_acpi
+
+	ebegin "Starting speedfreq"
+	/usr/sbin/speedfreqd -P -p ${SPEEDFREQ_SPEED}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping speedfreq"
+	if [ -e /var/run/speedfreq.pid ] ; then
+		local pid="$(</var/run/speedfreq.pid)"
+		kill ${pid} >& /dev/null
+		eend $? "Could not kill pid '${pid}'"
+	else
+		eend 1 "Lost pid file :("
+	fi
+}
