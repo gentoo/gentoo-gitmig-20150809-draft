@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.2 2004/09/03 01:07:40 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.3 2004/09/06 13:26:43 gustavoz Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 S=${WORKDIR}/${P/_}
 
 src_unpack() {
