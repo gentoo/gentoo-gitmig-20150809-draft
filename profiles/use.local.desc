@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.222 2004/02/01 06:34:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.223 2004/02/01 06:50:40 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -75,7 +75,7 @@ dev-lang/ruby:ruby16 - Use ruby-1.6 as default ruby
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
-dev-libs/uclibc:etdyn - enables etdyn support for PaX Address Space Layout Randomization
+dev-libs/uclibc:pie - adds support for Position Independent Executables
 dev-lisp/bigloo-lib:expat - enable expat support
 dev-lisp/bigloo-lib:ipcs - enable ipcs support
 dev-ml/lablgtk:svg - Enable librsvg bindings compilation.
