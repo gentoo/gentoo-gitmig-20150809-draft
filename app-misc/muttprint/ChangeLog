@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.19 2004/10/14 12:24:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.20 2004/11/01 15:33:31 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  muttprint-0.72a.ebuild:
+  Marked ~ppc64; bug #66216
 
   14 Oct 2004; Aron Griffis <agriffis@gentoo.org> -muttprint-0.71.ebuild,
   muttprint-0.72a.ebuild:

@@ -1,4 +1,4 @@
-MD5 9f1133d7662dd2e0787bc7a816adb533 muttprint-0.72a.ebuild 813
-MD5 4a8adb182d59caee34d4d821b7df4e18 ChangeLog 2663
-MD5 75129b19f90f3b9e9cd0a258fe884482 files/muttprint-0.72a-platex.patch 654
+MD5 c820c118644f62effc4af88a4252228f ChangeLog 2767
+MD5 44bf60002076ee4fd80a28dfd43080fc muttprint-0.72a.ebuild 819
 MD5 4f1eb6f695cc9ae2070de833996803ad files/digest-muttprint-0.72a 67
+MD5 75129b19f90f3b9e9cd0a258fe884482 files/muttprint-0.72a-platex.patch 654
