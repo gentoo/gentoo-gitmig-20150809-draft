@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1-r1.ebuild,v 1.9 2003/02/28 20:44:52 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1-r1.ebuild,v 1.10 2003/03/08 12:23:02 weeve Exp $
 NEED_KDE_DONT_ADD_KDELIBS_DEP=1 # we're a special case, see below
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc ~alpha"
 PATCHES="${FILESDIR}/${PVR}/${P}-kpager.diff"
 
 newdepend ">=media-sound/cdparanoia-3.9.8
