@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.8 2005/01/25 18:48:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.9 2005/02/17 23:02:19 mrness Exp $
+
+  18 Feb 2005; Alin Nastac <mrness@gentoo.org> fcdsl-2.6.20.7-r2.ebuild,
+  fcdsl-2.6.20.7-r3.ebuild:
+  Remove /lib/isdn symlink as is no longer required by the current version of
+  isdn4k-utils.
 
   25 Jan 2005; Stefan Schweizer <genstef@gentoo.org> -fcdsl-2.6.20.7.ebuild:
   Remove obsolete kmod-inheriting version
