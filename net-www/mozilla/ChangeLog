@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.89 2003/03/22 06:15:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.90 2003/03/30 20:23:29 azarah Exp $
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> mozilla-1.3-r1.ebuild :
+  Seems like the mail component have issues if the composer is disabled,
+  so only disable if we disable mail.
 
 *mozilla-1.3-r1 (22 Mar 2003)
 

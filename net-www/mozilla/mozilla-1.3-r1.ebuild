@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r1.ebuild,v 1.1 2003/03/22 06:15:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r1.ebuild,v 1.2 2003/03/30 20:23:30 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -309,7 +309,7 @@ src_compile() {
 	then
 		myconf="${myconf} --disable-mailnews"
 	fi
-	if [ -n "`use moznocompose`" ]
+	if [ -n "`use moznocompose`" -a -n "`use moznomail`" ]
 	then
 		myconf="${myconf} --disable-composer"
 	fi
