@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/snarf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/ChangeLog,v 1.6 2003/02/12 08:32:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/ChangeLog,v 1.7 2003/04/15 23:10:33 taviso Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *snarf-7.0-r1 (30 Aug 2002)
+
+  16 Apr 2003; Tavis Ormandy <taviso@gentoo.org> snarf-7.0-r1.ebuild:
+  Marking stable on alpha.
 
   30 Aug 2002; Sasha Schwabbauer <cybersystem@gentoo.org> snarf-7.0-r1.ebuild :
 
