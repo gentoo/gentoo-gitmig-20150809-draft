@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs-2,v 1.1 2003/07/19 19:29:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs-2,v 1.2 2003/07/26 09:32:16 cretin Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
@@ -61,8 +61,9 @@ start() {
 	if grep -q '^/' /etc/exports &>/dev/null; then
 		ebegin "Exporting NFS directories"
 		$exportfs -r 1>&2 &
-		( sleep 30; kill -9 $! &>/dev/null & )
-		wait
+		pid=$!
+		( sleep 30; kill -9 $pid &>/dev/null ) &
+		wait $pid
 		eend $? "Error exporting NFS directories"
 	fi
 
@@ -127,8 +128,9 @@ stop() {
 		# If that's the case, then try to kill it so the
 		# shutdown process can continue.
 		$exportfs -ua 1>&2 &
-		( sleep 30; kill -9 $! &>/dev/null & )
-		wait
+		pid=$!
+		( sleep 30; kill -9 $pid &>/dev/null ) &
+		wait $pid
 		eend $? "Error unexporting NFS directories"
 	fi
 
@@ -141,8 +143,9 @@ reload() {
 	# bootup process can continue.
 	ebegin "Reloading /etc/exports"
 	$exportfs -r 1>&2 &
-	( sleep 30; kill -9 $! &>/dev/null & )
-	wait
+	pid=$!
+	( sleep 30; kill -9 $pid &>/dev/null ) &
+	wait $pid
 	eend $? "Error exporting NFS directories"
 }
 
