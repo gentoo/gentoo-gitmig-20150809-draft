@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.4 2003/11/11 13:07:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.5 2003/12/06 02:44:29 zul Exp $
 
 NEWP=${P}-04Jun03
 S=${WORKDIR}/${NEWP}
@@ -78,7 +78,7 @@ src_install() {
 	dodoc ABOUT-NLS COPYING ChangeLog CheckList INSTALL \
 		README ReleaseNotes kernstodo doc/bacula.pdf
 	cp -a examples ${D}/usr/share/doc/${PF}
-	chown -R root.root ${D}/usr/share/doc/${PF} #hrmph :\
+	chown -R root:root ${D}/usr/share/doc/${PF} #hrmph :\
 	dohtml -r doc/html-manual doc/home-page
 
 	exeinto /etc/init.d
