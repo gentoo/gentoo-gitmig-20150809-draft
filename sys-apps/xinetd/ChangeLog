@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.2 2002/03/30 15:30:48 seemant Exp $
+
+*xinetd-2.3.4 (30 Mar 2002)
+
+  30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xinetd-2.3.4.ebuild :
+
+  Version bump -- copied the 2.3.3-r7 ebuild over.
 
 *xinetd-2.3.3-r7 (1 Feb 2002)
 
