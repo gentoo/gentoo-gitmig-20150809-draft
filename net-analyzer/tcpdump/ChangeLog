@@ -1,12 +1,17 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.4 2002/05/09 18:12:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.5 2002/07/18 15:01:43 nitro Exp $
 
 
 
 *tcpdump-3.7.1 (9 May 2002)
+  18 Jul 2002; Kyle Manna <nitro@gentoo.org tcpdump-3.7.1.ebuild
+  tcpdump-3.6.2-r1.ebuild :
+  Added KEYWORDS, SLOT, and LICENSE.
+
   9 May 2002; Spider <spider@gentoo.org> tcpdump-3.7.1.ebuild :
-  New version again :)  Not sure if this is BETA, devel, tested, working etc. etc. But it has the security patch already applied ;)
+  New version again :)  Not sure if this is BETA, devel, tested, working etc.
+  But it has the security patch already applied ;)
 
 *tcpdump-3.6.2-r1 (9 May 2002)
   9 May 2002; Spider <spider@gentoo.org> tcpdump-3.6.2-r1.ebuild :
