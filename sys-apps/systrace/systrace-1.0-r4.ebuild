@@ -1,21 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/systrace-1.0-r4.ebuild,v 1.3 2003/11/09 19:41:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/systrace-1.0-r4.ebuild,v 1.4 2003/12/15 21:45:09 seemant Exp $
 
 DESCRIPTION="Systrace userland binary"
 HOMEPAGE="http://www.systrace.org/"
 SRC_URI="http://www.citi.umich.edu/u/provos/systrace/usr-systrace-2003-06-23.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="~x86"
+
 IUSE="gtk"
 
 DEPEND="dev-libs/libevent
 	gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )"
 
 pkg_setup() {
-	if ! [ -f /usr/include/linux/systrace.h ] ;
+	if ! [ -f ${ROOT}/usr/include/linux/systrace.h ] ;
 	then
 		einfo
 		einfo "ERROR: It does not look like you have a systrace capable kernel. If"
@@ -34,6 +35,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	[ `use gtk` ] || epatch ${FILESDIR}/${PV}-no-gtk.patch
+
+	export WANT_AUTOCONF_2_5=1
 }
 
 src_install() {

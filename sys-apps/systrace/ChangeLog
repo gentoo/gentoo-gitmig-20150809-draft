@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systrace
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/ChangeLog,v 1.6 2003/11/09 19:41:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/ChangeLog,v 1.7 2003/12/15 21:45:09 seemant Exp $
+
+  15 Dec 2003; Seemant Kulleen <seemant@gentoo.org> systrace-1.0-r4.ebuild:
+  autoconf-2.5 is required for hardened
 
 *systrace-1.0-r4 (26 Jun 2003)
 
