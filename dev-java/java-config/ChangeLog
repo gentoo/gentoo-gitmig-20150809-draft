@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.7 2002/06/24 21:58:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.8 2002/08/01 17:54:33 karltk Exp $
 
 *java-config-0.2.4-r1 (24 Jun 2002)
+
+  01 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> java-config-0.2.4-r1.ebuild :
+
+  Added KEYWORDS, SLOT and LICENSE. Removed old versions.
 
   24 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> java-config-0.2.4-r1.ebuild files/digest-java-config-0.2.4-r1:
 
