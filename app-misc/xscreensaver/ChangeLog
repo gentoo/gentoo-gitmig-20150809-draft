@@ -1,11 +1,19 @@
 # ChangeLog for app-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.12 2002/06/10 06:19:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.13 2002/06/11 11:11:33 seemant Exp $
 
+
+*xscreensaver-4.05 (11 Jun 2002)
+
+  11 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  xscreensaver-4.05.ebuild files/digest-xscreensaver-4.05 :
+
+  Version bump, which is supposed to fix the GTK2 configure stage errors, as
+  reported in bug #3506 by erichey2@attbi.com (kde123)
 
 *xscreensaver-4.04.2-r2 (9 Jun 2002)
 
-  9 Jun 2002; Seemant Kulleen <seemant@gentoo.orG>
+  9 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
   xscreensaver-4.04.2-r2.ebuild files/digest-xscreensaver-4.04.2-r2 :
 
   There was a typo in the last revision which caused GL screenhacks to fail.
