@@ -1,0 +1,10 @@
+# ChangeLog for app-text/po4a
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.1 2005/01/18 12:02:23 mcummings Exp $
+
+*po4a-0.19 (18 Jan 2005)
+
+  18 Jan 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +po4a-0.19.ebuild:
+  Bug 55156; ebuild provided by Jordi Vilalta <jvprat@wanadoo.es>;
+
