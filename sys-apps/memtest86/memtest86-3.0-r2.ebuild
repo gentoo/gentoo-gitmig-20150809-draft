@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r2.ebuild,v 1.5 2004/06/27 17:13:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r2.ebuild,v 1.6 2004/06/30 20:49:50 agriffis Exp $
 
 inherit mount-boot eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 -amd64 -ppc -sparc "
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -73,4 +73,3 @@ pkg_postinst() {
 	einfo "    > label  = Memtest86"
 	einfo
 }
-
