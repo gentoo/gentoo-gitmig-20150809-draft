@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.9 2005/01/10 01:38:57 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.10 2005/03/08 16:45:46 blauwers Exp $
+
+*nvidia-cg-toolkit-1.3.0501.0700 (08 Mar 2005)
+
+ 08 Mar 2005; Bart Lauwers ,blauwers@gentoo.org> nvidia-cg-toolkit-1.3.0501.0700.ebuild:
+ version bump per bug #75792, this ebuild also add initial x64 support
 
 *nvidia-cg-toolkit-1.3.0408.0400 (10 Jan 2005)
 
