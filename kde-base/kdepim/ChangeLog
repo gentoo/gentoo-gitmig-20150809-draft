@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.123 2004/12/02 12:21:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.124 2004/12/02 13:15:11 jhuebel Exp $
+
+  02 Dec 2004; Jason Huebel <jhuebel@gentoo.org> kdepim-3.3.0-r1.ebuild:
+  stable on amd64, bug #72616
 
   02 Dec 2004; Daniel Black <dragonheart@gentoo.org> kdepim-3.3.0.ebuild:
   Removing GPGME_CONFIG=/usr/bin/gpgme4-config cause this is in gpgme-0.4*
