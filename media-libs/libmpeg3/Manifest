@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 4d8f535f2342a977471c9874e1a184af ChangeLog 432
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 e1293b380762ac586871d66fe8c0f4e3 libmpeg3-1.5.2-r1.ebuild 2669
+MD5 e1fd6ece97b4fb870b7590cc116d4d60 libmpeg3-1.5.2-r1.ebuild 2680
 MD5 86cf602270d3f2a2e8ca221aeaff11c6 libmpeg3-1.5.2.ebuild 2133
 MD5 d3a05866020d3e1f064974f5363c6c53 files/1.5.1-gentoo-mpeg3split.patch 2315
 MD5 8c1c4667609bae1089a66ea6c8ee1f28 files/1.5.1-gentoo-p1.patch 1376
@@ -27,7 +27,7 @@ MD5 81b6cc87dac447d9be64d2327bd6193c files/digest-libmpeg3-1.5.2-r1 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSc4vArHZZzCEUG0RArt5AJ0XULG6vzOhhxkCrFss81GnZ7sCRgCfRs+U
-nUOUc9ctB3Mx3B/niZAgZC0=
-=cBv2
+iD8DBQFCTJ2xArHZZzCEUG0RAqNFAJ9tF9DoArWvxaEE4OLAiO7QWbHYcQCeNlqf
+b7ViHanRWZZiPxVDf3NbRsY=
+=THjb
 -----END PGP SIGNATURE-----
