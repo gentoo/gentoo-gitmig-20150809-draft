@@ -1,6 +1,9 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.58 2004/07/15 23:15:45 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.59 2004/07/18 00:00:04 kloeri Exp $
+
+  18 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> squid-2.5.6.ebuild:
+  Keyworded ~alpha.
 
   16 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; squid-2.5.6.ebuild:
   SASL V 1/2 is now supported natively
