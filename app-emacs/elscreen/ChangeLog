@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/elscreen
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.1 2003/05/05 16:36:10 mkennedy Exp $
+
+*elscreen-1.2.4 (05 May 2003)
+
+  05 May 2003; Matthew Kennedy <mkennedy@gentoo.org> elscreen-1.2.4.ebuild,
+  files/60elscreen-gentoo.el:
+  Initial import.
+
