@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.0.ebuild,v 1.1 2004/04/13 16:29:23 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.0.ebuild,v 1.2 2004/04/22 16:53:42 zul Exp $
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
@@ -48,14 +48,10 @@ src_compile() {
 	if use mysql
 	then
 		myconf="${myconf} --with-mysql=/usr"
-	fi
-
-	if use sqlite
+	elif use sqlite
 	then
 		myconf="${myconf} --with-sqlite=/usr/include"
-	fi
-
-	if use sqlite && use mysql && postgres
+	elif  use sqlite && use mysql 
 	then
 		myconf="${myconf/--with-sqlite/}"
 	fi
