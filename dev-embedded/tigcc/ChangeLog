@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/tigcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.6 2005/01/01 17:56:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.7 2005/02/17 17:13:36 robbat2 Exp $
+
+  17 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> tigcc-0.95-r2.ebuild,
+  tigcc-0.95_p3.ebuild:
+  Bug #69831: Ensure unzip is in DEPEND.
 
 *tigcc-0.95_p3 (04 Dec 2004)
 
