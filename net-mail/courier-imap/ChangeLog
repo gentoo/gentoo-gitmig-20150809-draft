@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.91 2004/08/31 02:40:34 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.92 2004/09/22 16:32:35 langthang Exp $
+
+*courier-imap-3.0.8 (22 Sep 2004)
+
+  22 Sep 2004; Tuan Van <langthang@gentoo.org>
+  +files/courier-imap-3.0.8-db4-bdbobj_configure.in.patch,
+  +files/courier-imap-3.0.8-db4-configure.in.patch,
+  +files/courier-imap-3.0.8-disable-fam-configure.in.patch,
+  +courier-imap-3.0.8.ebuild:
+  Version bump.
 
   30 Aug 2004; Tom Gall <tgall@gentoo.org> courier-imap-3.0.7.ebuild:
   stable on ppc64, bug #61745
