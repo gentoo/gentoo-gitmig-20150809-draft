@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012.ebuild,v 1.1 2003/02/08 03:22:49 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012.ebuild,v 1.2 2003/02/14 03:14:07 latexer Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-IUSE="pcmcia pci plx"
+IUSE="pcmcia"
 
 DEPEND="pcmcia? ( >=sys-apps/pcmcia-cs-3.2.1* )"
 

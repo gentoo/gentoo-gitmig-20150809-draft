@@ -1,8 +1,17 @@
 # ChangeLog for net-wireless/hostap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.1 2003/02/08 03:22:49 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.2 2003/02/14 03:14:07 latexer Exp $
+
+*hostap-20021012-r1 (13 Feb 2003)
+
+  13 Feb 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012-r1.ebuild
+  files/digest-hostap-20021012-r1 :
+  Ebuild now can use HOSTAP_DRIVERS to specify which drivers to build.
 
 *hostap-20021012 (07 Feb 2003)
+
+  13 Feb 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012.ebuild :
+  Fixed IUSE
 
   08 Feb 2003; Peter Johanson <latexer@gentoo.org> :
   Moved from sys-apps to net-wireless.
