@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.3_pre1-r1.ebuild,v 1.1 2002/11/02 08:20:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.3_pre1-r1.ebuild,v 1.2 2002/11/02 11:37:59 seemant Exp $
 
 MY_P="icewm-1.2.3pre1"
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,6 @@ HOMEPAGE="http://www.icewm.org"
 IUSE="esd gnome imlib nls spell truetype"
 
 DEPEND="virtual/x11
-	sys-apps/supersed
 	esd? ( media-sound/esound )
 	gnome? ( gnome-base/gnome )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
@@ -23,23 +22,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 src_unpack(){
 	unpack ${A}
-
-	cd ${S}
-	
-	patch -p1< ${FILESDIR}/${P}-gcc31-gentoo.patch || die
-	patch -p1< ${FILESDIR}/${P}-aapm-gentoo.patch || die
-	
-	# icewm's doc dir layout is un-gentoo-like.  To fix it, we have
-	# "make install" skip the docs install, and do it ourselves.  That also
-	# means we have to adjust the Makefile so that it can find the help files
-	# when you choose the 'help' item out of its menu.
-	ssed -i 's:icewm-$(VERSION)::' Makefile.in
-	ssed -i 's:icewm-$(VERSION)::' Makefile
-	
-	cd ${S}/src
-	ssed -i 's:icewm-$(VERSION)::' Makefile.in
-	ssed -i 's:icewm-$(VERSION)::' Makefile
-
+	patch -p0 < ${FILESDIR}/${P}-gentoo.patch || die
 }
 
 src_compile(){

@@ -1,12 +1,14 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.14 2002/11/02 08:20:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.15 2002/11/02 11:37:59 seemant Exp $
 
 *icewm-1.2.3_pre1-r1 icewm-1.2.2-r1 (02 Nov 2002)
 
   02 Nov 2002; Seemant Kulleen <seemant@gentoo.org> icewm-1.2.3_pre1-r1.ebuild
-  icewm-1.2.2-r1.ebuild files/digest-icewm-1.2.4_pre1-r1
-  files/digest-icewm-1.2.2-r1 :
+  icewm-1.2.2-r1.ebuild files/digest-icewm-1.2.3_pre1-r1
+  files/digest-icewm-1.2.2-r1 files/icewm-1.2.3_pre1-gentoo.patch :
+
+  Later on: unified the gcc31, aapm.c patches and ssed lines into one patch.
 
   pez@apocalyptech.com (CJ Kucera) in bug #10057 pointed out that an extra
   sed was needed for icewm to know its doc directory.

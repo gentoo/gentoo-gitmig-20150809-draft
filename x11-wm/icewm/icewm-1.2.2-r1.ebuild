@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.2-r1.ebuild,v 1.1 2002/11/02 08:20:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.2-r1.ebuild,v 1.2 2002/11/02 11:37:59 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ice Window Manager"
@@ -31,12 +31,10 @@ src_unpack(){
 	# means we have to adjust the Makefile so that it can find the help files
 	# when you choose the 'help' item out of its menu.
 	ssed -i 's:icewm-$(VERSION)::' Makefile.in
-
 	ssed -i 's:icewm-$(VERSION)::' Makefile
 	
 	cd ${S}/src
 	ssed -i 's:icewm-$(VERSION)::' Makefile
-
 	ssed -i 's:icewm-$(VERSION)::' Makefile.in
 }
 
@@ -76,16 +74,6 @@ src_compile(){
 }
 
 src_install(){
-#	make \
-#		PREFIX=${D}/usr \
-#		BINDIR=${D}/usr/bin \
-#		LIBDIR=${D}/usr/lib/icewm \
-#		CFGDIR=${D}/etc/icewm \
-#		LOCDIR=${D}/usr/share/locale \
-#		DOCDIR=${S}/share/doc/${PF} \
-#		KDEDIR=${D}/usr/share \
-#		install || die "make install failed"
-
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS BUGS CHANGES COPYING FAQ PLATFORMS README* TODO VERSION
