@@ -1,7 +1,11 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.12 2002/07/30 04:21:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.13 2002/08/06 10:18:58 spider Exp $
 
+*gnome-games-2.0.2 (06 Aug 2002)
+  06 Aug 2002; Spider <spider@gentoo.org> gnome-games-2.0.2.ebuild :
+  new version
+  
 *gnome-games-2.0.1.1 (29 Jul 2002)
 
   29 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
