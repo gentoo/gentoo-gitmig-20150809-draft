@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.43 2004/02/16 17:48:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.44 2004/03/01 10:28:57 aliz Exp $
 
 *autoconf-2.59-r3 (16 Feb 2004)
 
@@ -10,6 +10,7 @@
   ac-wrapper-3.pl with fixed fix for bug #40983.
 
 *autoconf-2.59-r2 (16 Feb 2004)
+*autoconf-2.58-r1 (16 Feb 2004)
 
   16 Feb 2004; Brad House <brad_mssw@gentoo.org> autoconf-2.58-r1.ebuild,
   autoconf-2.59-r2.ebuild:

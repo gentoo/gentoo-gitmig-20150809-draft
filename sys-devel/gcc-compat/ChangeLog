@@ -1,10 +1,10 @@
 # ChangeLog for sys-devel/gcc-compat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/ChangeLog,v 1.4 2003/02/12 09:14:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/ChangeLog,v 1.5 2004/03/01 10:30:40 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*sys-lib/gcc-compat-1.4 (19 Sep 2002)
+*gcc-compat-1.4 (19 Sep 2002)
 
   19 Sep 2002; Nicholas Jones <carpaski@gentoo.org> :
   Created the ebuild. $PV == PROFILE TO ATTAIN
