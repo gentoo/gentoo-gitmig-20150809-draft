@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.8-r1.ebuild,v 1.2 2002/07/17 05:26:37 seemant Exp $
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.1.ebuild,v 1.1 2002/07/31 02:51:05 seemant Exp $
 
 
 MY_P="sylpheed-${PV}claws"
@@ -14,14 +14,14 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
+	pda? ( >=app-misc/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	crypt? ( >=app-crypt/gpgme-0.2.3 )
 	gnome? ( >=media-libs/gdk-pixbuf-0.16 )
 	imlib? ( >=media-libs/imlib-1.9.10 )
 	spell? ( >=app-text/pspell-0.12.2 )
-	xface? ( >=media-libs/compface-1.4 )
-	pda? ( >=app-misc/jpilot-0.99 )"
+	xface? ( >=media-libs/compface-1.4 )"
 	
 RDEPEND="$DEPEND
 	nls? ( sys-devel/gettext )"
@@ -53,11 +53,7 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
+	econf \
 		--program-suffix=-claws \
 		${myconf} || die "./configure failed"
 
