@@ -1,6 +1,9 @@
 # ChangeLog for app-text/vlna
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.1 2004/02/26 19:38:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.2 2004/05/05 09:52:54 usata Exp $
+
+  05 May 2004; Mamoru KOMACHI <usata@gentoo.org> vlna-1.2.ebuild:
+  Stable on x86
 
 *vlna-1.2 (27 Feb 2004)
 
