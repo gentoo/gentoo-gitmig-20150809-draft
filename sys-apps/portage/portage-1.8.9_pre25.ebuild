@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre25.ebuild,v 1.1 2002/03/11 18:35:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre25.ebuild,v 1.2 2002/03/18 06:04:25 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -93,13 +93,6 @@ src_install() {
 	chmod 1777 ${D}/var/tmp
 	touch ${D}/var/tmp/.keep
 	
-	# create the initial profile symlink
-	if [ "`use build`" ] 
-	then
-		#convenience; overwrite existing symlink
-		ln -sf ../usr/portage/profiles/default-1.0_rc6 ${D}/etc/make.profile
-	fi
-	
 	#documentation
 	dodoc ${S}/ChangeLog
 }
@@ -108,7 +101,7 @@ pkg_postinst() {
 	if [ ! -e ${ROOT}/etc/make.profile ]
 	then
 		cd ${ROOT}/etc
-		ln -s ../usr/portage/profiles/default-1.0_rc6 make.profile
+		ln -s ../usr/portage/profiles/default-1.0 make.profile
 	fi
 	local x
 	#remove possible previous sandbox files that could cause conflicts
