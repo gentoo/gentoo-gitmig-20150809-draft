@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.108 2003/03/09 21:16:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.109 2003/03/09 22:36:13 azarah Exp $
+
+  10 Mar 2003; Martin Schlemmer <azarah@gentoo.org> xfree-4.3.0-r1.ebuild :
+  Add back Drobbins's fix that was dropped by mistake.  Move DRI patch
+  to X_PATCHES as this was what its intended for.  Remove fc-{cache,list}
+  from /usr/X11R6/bin.
 
 *xfree-4.3.0-r1 (09 Mar 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.3 2003/03/09 21:16:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.4 2003/03/09 22:36:13 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -54,7 +54,8 @@ SRC_PATH_SS="http://www.ibiblio.org/gentoo/gentoo-sources"
 HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="mirror://gentoo/XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2"
+X_PATCHES="mirror://gentoo/XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2
+	http://www.cpbotha.net/files/dri_resume/xfree86-dri-resume-v8.patch"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
@@ -101,8 +102,7 @@ fi
 SRC_URI="${SRC_URI}
 	${X_PATCHES}
 	${X_DRIVERS}
-	truetype? ( ${MS_FONT_URLS} )
-	http://www.cpbotha.net/files/dri_resume/xfree86-dri-resume-v8.patch"
+	truetype? ( ${MS_FONT_URLS} )"
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
@@ -152,17 +152,6 @@ src_unpack() {
 	
 	unpack XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2
 
-	# Install the glide3 headers for compiling the tdfx driver
-#	if [ -n "`use 3dfx`" ]
-#	then
-#		ebegin "Installing tempory glide3 headers"
-#		cd ${WORKDIR}; unpack glide3-headers.tar.bz2
-#		cp -f ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile ${T}
-#		sed -e 's:$(GLIDE3INCDIR):$(WORKDIR)/glide3:g' \
-#			${T}/Imakefile > ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile
-#		eend 0
-#	fi
-
 	if [ "`gcc-version`" = "2.95" ]
 	then
 		# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
@@ -175,17 +164,21 @@ src_unpack() {
 	unset EPATCH_EXCLUDE
 	
 	# enable the nv driver on ppc
-	if use ppc; then
+	if use ppc &> /dev/null
+	then
 		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-enable-nv-on-ppc.patch 
 	fi
 
 	# Fix HOME and END keys to work in xterm, bug #15254
 	epatch ${FILESDIR}/xfree-4.2.x-home_end-keys.patch
+
+	# Fix DRI related problems
 	cd ${S}/programs/Xserver/hw/xfree86/
 	epatch ${DISTDIR}/xfree86-dri-resume-v8.patch
 	
 	# Fix keyboard issue on sparc
-	if use sparc; then
+	if use sparc &> /dev/null
+	then
 		cd ${S}
 		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-sparc-kb.patch
 	fi
@@ -336,6 +329,13 @@ src_compile() {
 	# Set MAKEOPTS to have proper -j? option ..
 	get_number_of_jobs
 
+	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
+	# MAKEOPTS, they'll redefine an internal XFree86 Makefile variable and the
+	# xfree build will silently die. This is tricky to track down, so I'm
+	# adding a preemptive fix for this issue by making sure that MAKE_OPTS is
+	# unset. (drobbins, 08 Mar 2003)
+	unset MAKE_OPTS
+
 	einfo "Building XFree86..."
 	emake World || die
 
@@ -368,7 +368,7 @@ src_install() {
 	rm -f ${D}/usr/X11R6/man/man3/Xft.3x*
 	rm -rf ${D}/usr/X11R6/include/fontconfig
 	rm -f ${D}/usr/X11R6/lib/libfontconfig.*
-	rm -f ${D}/usr/X11R6/bin/fontconfig-config
+	rm -f ${D}/usr/X11R6/bin/{fontconfig-config,fc-cache,fc-list}
 	rm -f ${D}/usr/X11R6/man/man3/fontconfig.3x*
 	rm -rf ${D}/etc/fonts/
 
