@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5.ebuild,v 1.5 2004/04/07 18:02:08 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5.ebuild,v 1.6 2004/05/26 01:20:58 vapier Exp $
 
 inherit gnuconfig elisp-common
 
-DESCRIPTION="CScope - interactively examine a C program"
+DESCRIPTION="interactively examine a C program"
+HOMEPAGE="http://cscope.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cscope/${P}.tar.gz"
-HOMEPAGE="http://cscope.sourceforge.net"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa -mips ~amd64 ~ia64 s390"
-
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc -mips ~alpha arm ~hppa ~amd64 ~ia64 s390"
 IUSE="emacs"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
@@ -33,7 +32,7 @@ src_compile() {
 	make clean || die
 	emake || die
 
-	if use emacs; then
+	if use emacs ; then
 		cd ${S}/contrib/xcscope || die
 		elisp-compile *.el || die
 	fi
@@ -41,9 +40,9 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc NEWS AUTHORS TODO COPYING ChangeLog INSTALL README* || die
+	dodoc NEWS AUTHORS TODO ChangeLog INSTALL README* || die
 
-	if use emacs; then
+	if use emacs ; then
 		cd ${S}/contrib/xcscope || die
 		elisp-install xcscope *.el *.elc || die
 		elisp-site-file-install ${FILESDIR}/${SITEFILE} xcscope || die
