@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.3.2.ebuild,v 1.1 2004/11/22 15:47:52 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.3.2.ebuild,v 1.2 2004/11/23 21:18:19 sekretarz Exp $
 
 inherit eutils
 
@@ -10,9 +10,7 @@ SRC_URI="http://www.schleef.org/${PN}/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-# Excluding other keywords until those arches can test liboil
-#KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 IUSE="X mozilla gtk sdl mad"
 

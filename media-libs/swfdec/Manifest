@@ -1,11 +1,21 @@
-MD5 8d77f44b5f7dd9a791710e4e6031db62 ChangeLog 1331
-MD5 1562374fbb6639e8cc0b7e0dc8f7b6b8 metadata.xml 536
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e0f427c86c437d168b08e234c5de2968 swfdec-0.3.2.ebuild 1180
 MD5 9826734481d9707932d0914829d8ae2e swfdec-0.2.2-r1.ebuild 1240
-MD5 b50fd227af636451c6bef340ac867f77 swfdec-0.2.2.ebuild 944
 MD5 52d2f32101d6438135b883d1bc9da206 swfdec-0.3.1.ebuild 1319
-MD5 01da22923291c9f05c205ecb506b347d swfdec-0.3.2.ebuild 1267
-MD5 12bdd91b6d3b97f0fc97d097da17c087 files/digest-swfdec-0.2.2 64
+MD5 b50fd227af636451c6bef340ac867f77 swfdec-0.2.2.ebuild 944
+MD5 edd6332383111df496e5520279afc102 ChangeLog 1442
+MD5 1562374fbb6639e8cc0b7e0dc8f7b6b8 metadata.xml 536
 MD5 12bdd91b6d3b97f0fc97d097da17c087 files/digest-swfdec-0.2.2-r1 64
-MD5 a0b799b2f641cbbf734d8bfae023e3c5 files/swfdec-mozilla.patch 988
+MD5 12bdd91b6d3b97f0fc97d097da17c087 files/digest-swfdec-0.2.2 64
 MD5 f09c32e2baefa29d1a00826ba8053bdb files/digest-swfdec-0.3.1 64
 MD5 3c94b8844c3ef0a8efcfe05b1137593f files/digest-swfdec-0.3.2 64
+MD5 a0b799b2f641cbbf734d8bfae023e3c5 files/swfdec-mozilla.patch 988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBo6knZ/iYVBmujdURAiniAJ0d2KSWspUoOd4RSOs+L+i+k/ZElwCeLAFY
+PGvhMhcYiRcpIKtRdiF7+Lc=
+=Np1G
+-----END PGP SIGNATURE-----
