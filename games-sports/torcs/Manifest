@@ -1,5 +1,5 @@
-MD5 101ccb88b5f04bd6dd72c5e144c0a383 ChangeLog 1493
-MD5 a096142ae84e9ecc1199e74cbfdfdaa1 torcs-1.2.1.ebuild 1282
+MD5 b60b83f8472418f8a8f1cc10b4ee0c65 ChangeLog 1592
+MD5 09b475d1632a9106e2c71b243883d142 torcs-1.2.1.ebuild 1344
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 b7c33d077766374852ff5805de11cc43 torcs-1.2.2.ebuild 2148
 MD5 f1cf989071a4da657bd3a2a1412e8bc7 files/digest-torcs-1.2.1 448
