@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.63 2003/10/13 15:00:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.64 2003/10/13 15:12:15 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -994,13 +994,14 @@ check_license() {
 		fi
 	fi
 	[ ! -f "${lic}" ] && die "Could not find requested license ${src}"
+	local l="`basename ${lic}`"
 
 	# here is where we check for the licenses the user already
 	# accepted ... if we don't find a match, we make the user accept
 	local alic
-	for alic in "${ACCEPT_LICENSE}" ; do
+	for alic in ${ACCEPT_LICENSE} ; do
 		[ "${alic}" == "*" ] && return 0
-		[ "${alic}" == "${lic}" ] && return 0
+		[ "${alic}" == "${l}" ] && return 0
 	done
 
 	local licmsg="`mymktemp ${T}`"
@@ -1015,7 +1016,7 @@ CTRL+C out of this, the install will not run!
 EOF
 	cat ${lic} >> ${licmsg}
 	${PAGER:-less} ${licmsg} || die "Could not execute pager (${PAGER}) to accept ${lic}"
-	einfon "Do you accept the terms of this license? [yes/no] "
+	einfon "Do you accept the terms of this license (${l})? [yes/no] "
 	read alic
 	case ${alic} in
 		yes|Yes|y|Y)
