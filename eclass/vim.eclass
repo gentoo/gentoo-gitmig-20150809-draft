@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.49 2004/02/16 04:23:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.50 2004/03/21 04:51:05 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -13,10 +13,6 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack
 
 IUSE="$IUSE ncurses nls acl"
-
-# Vim doesn't build with 9libs, though it would probably run with it
-# installed, so we don't put this in RDEPEND.  See bug 35765
-DEPEND="$DEPEND !dev-libs/9libs"
 
 if [ ${PN} != vim-core ]; then
 	IUSE="$IUSE cscope gpm perl python ruby"
@@ -164,7 +160,12 @@ vim_src_unpack() {
 		${S}/runtime/doc/tagsrch.txt \
 		${S}/runtime/doc/usr_29.txt \
 		${S}/runtime/menu.vim \
-		${S}/src/configure.in
+		${S}/src/configure.in || die 'sed failed'
+
+	# Don't be fooled by /usr/include/libc.h.  When found, vim thinks
+	# this is NeXT, but it's actually just a file in dev-libs/9libs
+	# This fixes bug 43885 (20 Mar 2004 agriffis)
+	sed -i 's/ libc\.h / /' ${S}/src/configure.in || die 'sed failed'
 }
 
 src_compile() {
