@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.17 2003/10/18 23:02:41 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.18 2003/12/06 16:19:17 mholzer Exp $
+
+  06 Dec 2003; Martin Holzer <mholzer@gentoo.org> xmule-1.6.0a-r1.ebuild,
+  xmule-1.6.0a.ebuild, xmule-1.6.1.ebuild:
+  adding RESTRICT="nomirror"
 
   19 Oct 2003; Rainer Groesslinger <scandium@gentoo.org>
   xmule-1.6.0a-r1.ebuild, xmule-1.6.0a.ebuild, xmule-1.6.1.ebuild:

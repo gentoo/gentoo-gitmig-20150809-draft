@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.6.1.ebuild,v 1.5 2003/09/08 08:58:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.6.1.ebuild,v 1.6 2003/12/06 16:26:36 mholzer Exp $
+
 inherit kde-base
 
 IUSE="kde"
 use kde && need-kde 3 || need-qt 3
 
 SRC_URI="mirror://sourceforge/qtella/${P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.qtella.net"
 DESCRIPTION="Excellent QT/KDE Gnutella Client"
 

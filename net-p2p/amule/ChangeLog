@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.6 2003/11/10 14:13:51 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.7 2003/12/06 16:22:39 mholzer Exp $
+
+  06 Dec 2003; Martin Holzer <mholzer@gentoo.org> amule-1.1.0.ebuild,
+  amule-1.1.2.ebuild:
+  adding RESTRICT="nomirror"
 
 *amule-1.1.2 (09 Nov 2003)
 

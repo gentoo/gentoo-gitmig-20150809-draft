@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.1.ebuild,v 1.4 2003/10/18 23:19:16 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.1.ebuild,v 1.5 2003/12/06 16:19:17 mholzer Exp $
 
 MY_P=${P//a}
 S=${WORKDIR}/${MY_P}
@@ -8,6 +8,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="wxWindows based client for the eDonkey/eMule/lMule network"
 HOMEPAGE="http://www.xmule.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"

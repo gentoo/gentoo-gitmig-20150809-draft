@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.2.ebuild,v 1.2 2003/12/06 16:22:39 mholzer Exp $
 
 MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
@@ -8,6 +8,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="aNOTHER wxWindows based eMule P2P Client"
 HOMEPAGE="http://sourceforge.net/projects/amule"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
