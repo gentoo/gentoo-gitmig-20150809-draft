@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/cdcd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.4 2002/07/19 13:13:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.5 2002/12/07 06:47:21 jmorgan Exp $
 
 *cdcd-0.6.4 (19 Jul 2002)
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> cdcd-0.6.4.ebuild :
+  Changed sparc64 to sparc keyword
 
   19 Jul 2002; Seeamnt Kulleen <seemant@gentoo.org> cdcd-0.6.4.ebuild
   files/digest-cdcd-0.6.4 :
