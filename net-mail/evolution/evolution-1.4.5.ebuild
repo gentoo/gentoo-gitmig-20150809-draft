@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.5 2003/10/22 12:55:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.6 2003/11/28 20:41:57 weeve Exp $
 
 inherit flag-o-matic virtualx gnome2
 use kde && inherit kde
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.ximian.com"
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~hppa ~alpha"
+KEYWORDS="x86 ~ppc sparc ~hppa ~alpha"
 
 # Top stanza are ximian deps
 RDEPEND=">=gnome-extra/libgtkhtml-3.0.9

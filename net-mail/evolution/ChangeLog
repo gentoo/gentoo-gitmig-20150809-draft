@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.83 2003/10/22 12:55:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.84 2003/11/28 20:41:56 weeve Exp $
+
+  28 Nov 2003; Jason Wever <weeve@gentoo.org> evolution-1.4.5.ebuild:
+  Marked stable on sparc, fixes bug #32744.
 
   22 Oct 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild,
   evolution-1.2.4.ebuild, evolution-1.4.3.ebuild, evolution-1.4.4.ebuild,
