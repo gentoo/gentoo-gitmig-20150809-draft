@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 59e4dcc1bde033b02fd5ccb40273a864 taglib-1.0.ebuild 850
-MD5 da62f8078272b20ec516c00642a890e7 taglib-1.2.ebuild 895
-MD5 2c221bbabd9c4236fd4e0221e3754bcd taglib-1.1.ebuild 889
-MD5 750873506395f749a2460344924c9716 taglib-1.3.ebuild 901
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 96fd9919709b18bba8001266155f211f taglib-1.3.1.ebuild 903
 MD5 a7ebb2f90bd09a57b886a827cd4384ba ChangeLog 3250
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 e5d3c1a247ce1f6d9f56f6bdc2fe5bb4 files/digest-taglib-1.0 62
-MD5 5bf7e9ce7bf6ca9af9361b7b5b909873 files/digest-taglib-1.1 62
-MD5 b3ed88057b7e51136adaa1711b749831 files/digest-taglib-1.2 62
-MD5 9a9b4381886b133dd250c078fb7332d6 files/digest-taglib-1.3 62
 MD5 cc8a58ea8028f3539fcee148baeffcc1 files/digest-taglib-1.3.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCGu8YM+I1L6GK/u4RAv+OAJ0d6RTk903JnxVcuj8RtIbx13tBJACfZAh0
-+LnTpOzKUiiRdNmRu1h/DaM=
-=zXKc
------END PGP SIGNATURE-----
