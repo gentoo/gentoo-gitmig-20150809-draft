@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/raggle-0.2.4.ebuild,v 1.3 2003/12/29 03:00:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/raggle-0.2.4.ebuild,v 1.4 2003/12/29 03:27:53 twp Exp $
 
 DESCRIPTION="A console RSS aggregator, written in Ruby"
 HOMEPAGE="http://www.raggle.org/"
 SRC_URI="http://www.raggle.org/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa"
 IUSE=""
 DEPEND=">=dev-lang/ruby-1.8.0
 	dev-ruby/ncurses-ruby"

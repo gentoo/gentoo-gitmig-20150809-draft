@@ -1,6 +1,10 @@
 # ChangeLog for net-www/raggle
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/ChangeLog,v 1.4 2003/12/29 03:00:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/ChangeLog,v 1.5 2003/12/29 03:27:53 twp Exp $
+
+  29 Dec 2003; Tom Payne <twp@gentoo.org> raggle-0.2.4.ebuild :
+  Marked back to unstable in other ARCHes in case of other problems.
+  Hey look, time zone effects in a ChangeLog ;-)
 
   28 Dec 2003; Jason Wever <weeve@gentoo.org> raggle-0.2.4.ebuild:
   Marked back to ~sparc since developer cannot do simple QA.
