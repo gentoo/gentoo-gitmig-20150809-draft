@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.0_rc2.ebuild,v 1.1 2003/12/07 19:36:10 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.0_rc2.ebuild,v 1.2 2003/12/18 20:47:43 mholzer Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -72,6 +72,7 @@ src_install() {
 	dodir /usr/include/sound
 	make DESTDIR=${D} install || die
 
+	rm doc/Makefile
 	dodoc CARDS-STATUS COPYING FAQ INSTALL README WARNING TODO doc/*
 }
 
