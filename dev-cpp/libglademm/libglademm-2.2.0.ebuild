@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.2.0.ebuild,v 1.3 2004/07/13 23:31:47 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.2.0.ebuild,v 1.4 2004/09/06 11:26:13 sekretarz Exp $
 
 MY_PV=2.2
-inherit gnome2
+inherit gnome2 eutils
 IUSE=""
 DESCRIPTION="C++ bindings for libglade"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
@@ -22,3 +22,8 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 # export SED=sed
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README TODO INSTALL"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gcc34.patch
+}
