@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.25 2003/07/02 11:45:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.26 2003/07/08 18:28:41 pauldv Exp $
+
+  08 Jul 2003; <paul@gentoo.org> openoffice-1.1_beta2-r1.ebuild:
+  Block on glibc-2.3.1 as it won't work (bug #24085 and oo bug #10210)
 
   30 Jun 2003; Brad Laue <brad@gentoo.org> openoffice-1.1_beta2-r1.ebuild:
   Add ooweb symlink

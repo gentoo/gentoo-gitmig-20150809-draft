@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_beta2-r1.ebuild,v 1.2 2003/06/30 14:34:42 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_beta2-r1.ebuild,v 1.3 2003/07/08 18:28:41 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -68,6 +68,7 @@ KEYWORDS="-x86 -ppc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
+	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
 	virtual/x11
 	app-arch/zip
