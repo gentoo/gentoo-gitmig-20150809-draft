@@ -1,14 +1,17 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.19 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.20 2003/01/18 04:13:35 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*DirectFB-0.9.16 (17 Jan 2003)
+
+  17 Jan 2003; Mike Frysinger <vapier@gentoo.org> DirectFB-0.9.16.ebuild
+  files/digest-DirectFB-0.9.16 :
+  Version bump.
+
 *DirectFB-0.9.15 (13 Nov 2002)
 
   13 Nov 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.15.ebuild
   files/digest-DirectFB-0.9.15 :
-
   Version bump.
 
 *DirectFB-0.9.13-r1 (30 Oct 2002)
