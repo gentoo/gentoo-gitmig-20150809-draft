@@ -1,6 +1,11 @@
 # ChangeLog for net-www/phpBB
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.9 2003/12/15 20:42:30 stuart Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.10 2004/03/02 16:18:13 mholzer Exp $
+
+*phpBB-2.0.6-r2 (02 Mar 2004)
+
+  02 Mar 2004; Martin Holzer <mholzer@gentoo.org> phpBB-2.0.6-r2.ebuild:
+  this is 2.0.6d which is a security release. see bug 43474
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org> phpBB-2.0.6-r1.ebuild:
   Fix for bug #32636
