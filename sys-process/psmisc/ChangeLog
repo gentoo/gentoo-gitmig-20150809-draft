@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.4 2005/03/14 06:17:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.5 2005/03/19 13:04:21 kloeri Exp $
+
+  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> psmisc-21.5.ebuild:
+  Stable on alpha.
 
   14 Mar 2005; <solar@gentoo.org> files/psmisc-21.6-nonls.patch:
   - update nonls patch
