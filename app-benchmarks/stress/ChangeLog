@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/stress
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.4 2003/03/28 11:13:06 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.5 2003/04/28 19:50:04 method Exp $
+
+*stress-0.17_pre16 (28 Apr 2003)
+
+  28 Apr 2003; Joshua Brindle <method@gentoo.org> Manifest,
+  stress-0.17_pre16.ebuild:
+  Version bump
 
 *stress-0.17pre7 (08 Dec 2002)
 
