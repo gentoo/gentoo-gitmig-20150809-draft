@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.3.0.ebuild,v 1.1 2004/05/02 00:55:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.3.0.ebuild,v 1.2 2004/05/02 05:04:41 mr_bones_ Exp $
 
 inherit distutils
 
@@ -24,7 +24,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo 
+	einfo
 	einfo "Documentation is sparse at the moment. Use pydoc,"
 	einfo "or read the HTML documentation at the dnspython home page"
 	einfo
