@@ -1,5 +1,5 @@
 --- optipng-0.4.5.orig/src/scripts/Makefile.gcc	2004-05-31 10:38:00.000000000 +0100
-+++ optipng-0.4.5/src/scripts/Makefile.gcc	2004-06-02 23:49:49.134972424 +0100
++++ optipng-0.4.5/src/scripts/Makefile.gcc	2004-06-03 09:21:38.958025528 +0100
 @@ -3,22 +3,40 @@
  
  all: optipng
@@ -47,13 +47,19 @@
  
  libpng.a: ../lib-cos/libpng/libpng.a
  	cp ../lib-cos/libpng/libpng.a libpng.a
-@@ -28,10 +46,10 @@
+@@ -27,11 +45,14 @@
+ 	cp ../lib-cos/zlib/libz.a libz.a
  
  ../lib-cos/libpng/libpng.a: ../lib-cos/zlib/libz.a
- 	cd ../lib-cos/libpng; \
+-	cd ../lib-cos/libpng; \
 -	${MAKE} -f scripts/makefile.gcc; \
-+	${MAKE} -f scripts/${pngmake}; \
- 	cd ../../src
+-	cd ../../src
++ifeq (${usemmx},1)
++	cd ../lib-cos/libpng; ${MAKE} -f scripts/makefile.gcmmx; cd ../../src
++else
++	cd ../lib-cos/libpng; ${MAKE} -f scripts/makefile.gcc; cd ../../src
++endif
++
  
  ../lib-cos/zlib/libz.a:
  	cd ../lib-cos/zlib; \
