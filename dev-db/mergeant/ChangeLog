@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mergeant
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.4 2003/06/03 10:33:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.5 2003/06/16 09:43:23 liquidx Exp $
+
+*mergeant-0.12.1 (16 Jun 2003)
+
+  16 Jun 2003; Alastair Tse <liquidx@gentoo.org> mergeant-0.12.1.ebuild:
+  new gnomedb release
 
 *mergeant-0.12.0 (03 Jun 2003)
 
