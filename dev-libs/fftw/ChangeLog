@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.19 2004/04/19 13:05:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.20 2004/04/19 14:16:07 phosphan Exp $
+
+*fftw-3.0.1-r1 (19 Apr 2004)
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> fftw-3.0.1-r1.ebuild:
+  Substituting --enable-3dnow by --enable-k7 because of bug #38076
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> fftw-2.1.5-r1.ebuild:
   Removing S=... with no effect
