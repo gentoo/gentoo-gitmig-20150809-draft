@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.8 2002/08/01 14:25:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.9 2002/09/11 20:47:00 gerk Exp $
 
 inherit kde-functions 
 
@@ -23,7 +23,9 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( gnome-base/ORBit )
 	oggvorbis? ( media-libs/libvorbis )"
 
-DEPEND="${RDEPEND} dev-lang/nasm sys-devel/perl"
+DEPEND="${RDEPEND} 
+	x86? ( dev-lang/nasm )
+	sys-devel/perl"
 
 SLOT="0"
 LICENSE="GPL-2"

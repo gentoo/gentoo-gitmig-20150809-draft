@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.7 2002/08/01 14:25:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.8 2002/09/11 20:50:47 gerk Exp $
 
 inherit kde-functions 
 
@@ -23,7 +23,7 @@ RDEPEND="=dev-libs/glib-1.2*
 	gnome? ( gnome-base/ORBit )
 	oggvorbis? ( media-libs/libvorbis )"
 
-DEPEND="dev-lang/nasm 
+DEPEND="x86? ( dev-lang/nasm ) 
 sys-devel/perl"
 
 SLOT="0"
