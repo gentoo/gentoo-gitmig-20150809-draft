@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gnome-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.11 2005/02/21 19:41:58 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.12 2005/03/14 23:56:06 latexer Exp $
+
+  14 Mar 2005; Peter Johanson <latexer@gentoo.org> gnome-sharp-1.0.4.ebuild:
+  Mark stable on x86
 
 *gnome-sharp-1.0.6 (20 Feb 2005)
 

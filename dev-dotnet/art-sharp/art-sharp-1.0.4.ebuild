@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/art-sharp-1.0.4.ebuild,v 1.10 2005/02/19 22:24:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/art-sharp-1.0.4.ebuild,v 1.11 2005/03/14 23:55:17 latexer Exp $
 
 inherit gtk-sharp-component
 
 SLOT="1"
-KEYWORDS="~x86 ~ppc -amd64"
+KEYWORDS="x86 ~ppc -amd64"
 IUSE=""
 
 DEPEND="${DEPEND}
