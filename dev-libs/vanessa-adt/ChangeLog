@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vanessa-adt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.9 2005/01/21 21:47:18 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.10 2005/03/07 17:58:45 xmerlin Exp $
+
+  07 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  vanessa-adt-0.0.6.ebuild:
+  vanessa-adt-0.0.6 marked stable on x86
 
   22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> :
   added metadata.xml, improved ebuild maintainability
