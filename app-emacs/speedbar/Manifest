@@ -1,5 +1,5 @@
-MD5 80c9392feac95c458240cc54328038e5 ChangeLog 433
+MD5 c53d2c672061fa4b93c094a9df86c559 ChangeLog 523
+MD5 87ec2bdbaae9d43f844678cecba956a9 speedbar-0.14_beta4.ebuild 869
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 776e3c0f7ebbdc88e0b4ec0377edff5e speedbar-0.14_beta4.ebuild 866
 MD5 ed60a4bd23cf34d2f8c59756479ed460 files/50speedbar-gentoo.el 567
 MD5 403667ee38c8662388fc629c7305276f files/digest-speedbar-0.14_beta4 70
