@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.8.ebuild,v 1.2 2004/12/18 23:57:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.8.ebuild,v 1.3 2005/01/13 20:57:02 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -40,7 +40,7 @@ src_test() {
 }
 
 src_install () {
-
+	dodir /usr/share/doc/${PF}
 	emake DESTDIR=${D} docdir=/usr/share/doc/${PF} install || \
 		die "install failed - please include above output in a bug report to bugs.gentoo.org"
 	dodoc ChangeLog ChangeLog.1 LICENSE README README.binutils \

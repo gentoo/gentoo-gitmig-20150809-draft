@@ -219,3 +219,41 @@
  	fi
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
+--- configure.orig	2004-11-05 07:38:45.000000000 +0930
++++ configure	2005-01-14 06:08:52.448523272 +0930
+@@ -3717,7 +3717,7 @@
+ 		AR_FLAGS="-rv"
+ 		RANLIB="ar ts"
+ 	;;
+-	g++) 		CXX_VENDOR="GNU"
++	*g++) 		CXX_VENDOR="GNU"
+ 		GCC_V=`g++ --version`
+ 		gcc_version=`expr "$GCC_V" : '.* \([0-9]\)\..*'`
+ 		gcc_release=`expr "$GCC_V" : '.* [0-9]\.\([0-9]\).*'`
+@@ -3841,7 +3841,7 @@
+           ac_config_commands="$ac_config_commands blitz/sgi/bzconfig.h"
+ 
+             COMPILER_SPECIFIC_HEADER="sgi/bzconfig.h" ;;
+-  g++)
++  *g++)
+           ac_config_commands="$ac_config_commands blitz/gnu/bzconfig.h"
+ 
+             COMPILER_SPECIFIC_HEADER="gnu/bzconfig.h" ;;
+@@ -4053,7 +4053,7 @@
+ 			AR_FLAGS="-q64 $AR_FLAGS"
+ 			LDFLAGS="-b64 $LDFLAGS"
+ 		;;
+-		g++)
++		*g++)
+ 			CXXFLAGS="-maix64 $CXXFLAGS"
+ 			AR_FLAGS="-cruX64"
+ 			LDFLAGS="-Wl,-b64 $LDFLAGS"
+@@ -4085,7 +4085,7 @@
+ 			LDFLAGS="-64 $LDFLAGS"
+ 			AR_FLAGS="-64 $AR_FLAGS"
+ 		;;
+-		g++)
++		*g++)
+ 			CXXFLAGS="-mabi=64 $CXXFLAGS"
+ 			LDFLAGS="-Wl,-64 $LDFLAGS"
+ 		;;
