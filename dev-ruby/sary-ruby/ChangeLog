@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sary-ruby
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.1 2003/11/03 11:04:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.2 2003/12/24 22:18:13 usata Exp $
+
+  25 Dec 2003; Mamoru KOMACHI <usata@gentoo.org>
+  sary-ruby-0.5_pre20030507.ebuild,
+  files/sary-ruby-0.5_pre20030507-gentoo.diff:
+  Marked as stable. Added a patch to make prime running on ruby 1.8
 
 *sary-ruby-0.5_pre20030507 (03 Nov 2003)
 
