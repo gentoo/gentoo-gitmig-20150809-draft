@@ -1,6 +1,11 @@
 #!/sbin/runscript
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/files/init.d_ircd,v 1.2 2004/07/18 03:59:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/files/init.d_ircd,v 1.3 2004/09/27 00:35:14 swegener Exp $
+
+opts="${opts} rehash"
+
+ipv4pid="/var/run/ircd/ircd-ipv4.pid"
+ipv6pid="/var/run/ircd/ircd-ipv6.pid"
 
 depend()
 {
@@ -9,41 +14,55 @@ depend()
 
 start()
 {
-	if [ "${IPV4_OPTS}" != "no" ]; then
+	if [ "${IPV4_OPTS}" != "no" ]
+	then
 		ebegin "Starting IRCd-Hybrid7 IPv4 daemon"
-		start-stop-daemon --start --quiet --background --chuid ircd --exec \
-\
+		start-stop-daemon --start --quiet --background --chuid hybrid --exec \
 			/usr/sbin/ircd-ipv4 -- ${IPV4_OPTS}
-
 		eend $?
 	fi
 
-	if [ -x "/usr/sbin/ircd-ipv6" -a "${IPV6_OPTS}" != "no" ]; then
+	if [ -x "/usr/sbin/ircd-ipv6" -a "${IPV6_OPTS}" != "no" ]
+	then
 		ebegin "Starting IRCd-Hybrid7 IPv6 daemon"
-		start-stop-daemon --start --quiet --background --chuid ircd --exec \
-\
+		start-stop-daemon --start --quiet --background --chuid hybrid --exec \
 			/usr/sbin/ircd-ipv6 -- ${IPV6_OPTS}
-
 		eend $?
 	fi
 }
 
 stop()
 {
-	local ipv4pid="/var/run/ircd/ircd-ipv4.pid"
-	local ipv6pid="/var/run/ircd/ircd-ipv6.pid"
-
-	if [ -r "${ipv4pid}" ]; then
+	if [ -r "${ipv4pid}" ]
+	then
 		ebegin "Stopping IRCd-Hybrid7 IPv4 daemon"
 		start-stop-daemon --stop --quiet --pidfile="${ipv4pid}"
 		eend $?
 		rm -f "${ipv4pid}"
 	fi
 
-	if [ -r "${ipv6pid}" ]; then
+	if [ -r "${ipv6pid}" ]
+	then
 		ebegin "Stopping IRCd-Hybrid7 IPv6 daemon"
 		start-stop-daemon --stop --quiet --pidfile="${ipv6pid}"
 		eend $?
 		rm -f "${ipv6pid}"
+	fi
+}
+
+rehash()
+{
+	if [ -r "${ipv4pid}" ]
+	then
+		ebegin "Rehashing IRCd-Hybrid7 IPv4 daemon"
+		kill -s SIGHUP $(cat "${ipv4pid}")
+		eend $?
+	fi
+
+	if [ -r "${ipv6pid}" ]
+	then
+		ebegin "Rehashing IRCd-Hybrid7 IPv6 daemon"
+		kill -s SIGHUP $(cat "${ipv6pid}")
+		eend $?
 	fi
 }

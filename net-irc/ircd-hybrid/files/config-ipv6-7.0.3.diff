@@ -1,0 +1,78 @@
+--- ircd-hybrid-7.0.2/include/config.h	2003-10-26 02:08:12.000000000 +0000
++++ ircd-hybrid-7.0.2.gentoo/include/config.h	2004-05-15 15:19:20.101532544 +0000
+@@ -136,31 +136,31 @@
+ 
+ /* dirs */
+ #define DPATH   IRCD_PREFIX                                                     
+-#define BINPATH IRCD_PREFIX "/bin/"
+-#define MODPATH IRCD_PREFIX "/modules/"
+-#define AUTOMODPATH IRCD_PREFIX "/modules/autoload/"
++#define BINPATH "/usr/sbin/"
++#define MODPATH "/usr/lib/ircd-hybrid-7/ipv6/"
++#define AUTOMODPATH MODPATH "/autoload/"
+ #define MSGPATH IRCD_PREFIX "/messages/"
+-#define ETCPATH IRCD_PREFIX "/etc"
+-#define LOGPATH IRCD_PREFIX "/logs"
++#define ETCPATH "/etc/ircd"
++#define LOGPATH "/var/log/ircd"
+ #define UHPATH   IRCD_PREFIX "/help/users"
+ #define HPATH  IRCD_PREFIX "/help/opers"
+ 
+ /* files */
+-#define SPATH   BINPATH "/ircd"                 /* ircd executable */
++#define SPATH   BINPATH "/ircd-ipv6"                 /* ircd executable */
+ #define SLPATH  BINPATH "/servlink"             /* servlink executable */
+-#define CPATH   ETCPATH "/ircd.conf"            /* ircd.conf file */
+-#define KPATH   ETCPATH "/kline.conf"           /* kline file */
+-#define XPATH   ETCPATH "/xline.conf"           /* xline file */
+-#define NRESVPATH   ETCPATH "/nresv.conf"       /* nick resv file */
+-#define CRESVPATH   ETCPATH "/cresv.conf"       /* channel resv file */
+-#define DLPATH  ETCPATH "/dline.conf"           /* dline file */
+-#define GPATH   LOGPATH "/gline.log"            /* gline logfile */
+-#define RPATH   ETCPATH "/ircd.rsa"             /* ircd rsa private keyfile */
+-#define MPATH   ETCPATH "/ircd.motd"            /* MOTD file */
+-#define LPATH   LOGPATH "/ircd.log"             /* ircd logfile */
+-#define PPATH   ETCPATH "/ircd.pid"             /* pid file */
+-#define OPATH   ETCPATH "/opers.motd"           /* oper MOTD file */
+-#define LIPATH  ETCPATH "/links.txt"            /* cached links file */
++#define CPATH   ETCPATH "/ircd-ipv6.conf"            /* ircd.conf file */
++#define KPATH   ETCPATH "/kline-ipv6.conf"           /* kline file */
++#define XPATH   ETCPATH "/xline-ipv6.conf"           /* xline file */
++#define NRESVPATH   ETCPATH "/nresv-ipv6.conf"       /* nick resv file */
++#define CRESVPATH   ETCPATH "/cresv-ipv6.conf"       /* channel resv file */
++#define DLPATH  ETCPATH "/dline-ipv6.conf"           /* dline file */
++#define GPATH   LOGPATH "/gline-ipv6.log"            /* gline logfile */
++#define RPATH   ETCPATH "/ircd-ipv6.rsa"             /* ircd rsa private keyfile */
++#define MPATH   ETCPATH "/ircd-ipv6.motd"            /* MOTD file */
++#define LPATH   LOGPATH "/ircd-ipv6.log"             /* ircd logfile */
++#define PPATH   "/var/run/ircd/ircd-ipv6.pid"             /* pid file */
++#define OPATH   ETCPATH "/opers-ipv6.motd"           /* oper MOTD file */
++#define LIPATH  ETCPATH "/links-ipv6.txt"            /* cached links file */
+ #endif /* !VMS */
+ 
+ /* WANT_GETTEXT - toggle gettext support.
+@@ -217,18 +217,18 @@
+  * this option is used unless you tell the system administrator beforehand
+  * and obtain their permission to send messages to the system log files.
+  */
+-#undef  USE_SYSLOG
++#define  USE_SYSLOG
+ 
+ #ifdef  USE_SYSLOG
+ /* SYSLOG_KILL SYSLOG_SQUIT SYSLOG_CONNECT SYSLOG_USERS SYSLOG_OPER
+  * If you use syslog above, you may want to turn some (none) of the
+  * spurious log messages for KILL,SQUIT,etc off.
+  */
+-#undef  SYSLOG_KILL     /* log all operator kills to syslog */
+-#undef  SYSLOG_SQUIT    /* log all remote squits for all servers to syslog */
+-#undef  SYSLOG_CONNECT  /* log remote connect messages for other all servs */
+-#undef  SYSLOG_USERS    /* send userlog stuff to syslog */
+-#undef  SYSLOG_OPER     /* log all users who successfully become an Op */
++#define  SYSLOG_KILL     /* log all operator kills to syslog */
++#define  SYSLOG_SQUIT    /* log all remote squits for all servers to syslog */
++#define  SYSLOG_CONNECT  /* log remote connect messages for other all servs */
++#define  SYSLOG_USERS    /* send userlog stuff to syslog */
++#define  SYSLOG_OPER     /* log all users who successfully become an Op */
+ 
+ /* LOG_FACILITY - facility to use for syslog()
+  * Define the facility you want to use for syslog().  Ask your
