@@ -1,30 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.4.ebuild,v 1.7 2003/02/28 01:46:36 gerk Exp $
-
-IUSE="sse xmms"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.4.ebuild,v 1.8 2003/04/25 13:45:33 vapier Exp $
 
 inherit libtool
 
-DESCRIPTION="FLAC is a free lossless audio encoder which includes an XMMS plugin."
+DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
 SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 HOMEPAGE="http://flac.sourceforge.net/"
-S=${WORKDIR}/${P}
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc ~sparc"
+IUSE="sse xmms"
 
 RDEPEND="virtual/glibc 
 	>=media-libs/libogg-1.0_rc2
 	xmms? ( media-sound/xmms )"
-
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm ) 
 	sys-apps/gawk"
 
 src_compile() {
-
 	use xmms || {
 		cp src/Makefile.in src/Makefile.in.orig
 		sed -e '/^@FLaC__HAS_XMMS_TRUE/d' \
@@ -48,8 +44,8 @@ src_compile() {
 
 	#emake seems to mess up the building of the xmms input plugin
 	make || die
-
 }
+
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR=${D} install || die
 }
