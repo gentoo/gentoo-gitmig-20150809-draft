@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.59 2003/12/14 03:52:54 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.60 2003/12/14 14:37:10 mholzer Exp $
+
+*gkrellm-2.1.22 (14 Dec 2003)
+
+  14 Dec 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.22.ebuild,
+  metadata.xml:
+  Version bumped. Closes #35782.
 
   14 Dec 2003; Lars Weiler <pylon@gentoo.org> gkrellm-2.1.21.ebuild:
   Make stable on ppc
@@ -139,7 +145,6 @@
 
   23 Dec 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.1.4.ebuild
   files/digest-gkrellm-2.1.4 :
-
   Upstream bugfix release. Thanks to: jspectre@mindspring.com (johnathan
   spectre) in bug #12617 for notification of the new release.
 
@@ -166,13 +171,11 @@
 
   25 Nov 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.1.1.ebuild
   ChangeLog files/digest-gkrellm-2.1.1. :
-
   Version bump.
 
 *gkrellm-2.1.0 (20 Oct 2002)
 
   14 Nov 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.1.0.ebuild :
-
   Moved to stable for x86
 
   26 Oct 2002; Olivier Reisch <doctomoe@gentoo.org> gkrellm-2.1.0.ebuild:
@@ -180,7 +183,6 @@
 
   20 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.1.0.ebuild
   files/digest-gkrellm-2.1.0 :
-
   Version bump, thanks to: pilux@gmx.net (Andreas Dolfen) in bug #9370.
 
 *gkrellm-2.0.4 (15 Oct 2002)
@@ -208,68 +210,57 @@
 
   20 Sep 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.0.2.ebuild
   files/digest-gkrellm-2.0.2 :
-
   Version bump.
 
 *gkrellm-2.0.0 (23 Aug 2002)
 
   23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.0.0.ebuild
   files/digest-gkrellm-2.0.0 :
-
   Version bump to gtk2 version (slotified).
 
 *gkrellm-1.2.13 (02 Jul 2002)
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
-
   Added PPC to KEYWORDS.
 
   02 Jul 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-1.2.13.ebuild
   files/digest-gkrellm-1.2.13 :
-
   Version bump thanks to Rachel Holmes.
 
 *gkrellm-1.2.12 (23 Jun 2002)
 
   23 Jun 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-1.2.12.ebuild :
-
   Version bump thanks to Rachel Holmes.
 
 *gkrellm-1.2.11 (28 Mar 2002)
 
 	28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-1.2.11.ebuild:
-
 	Version bump, with new features and bug fixes.
 
 *gkrellm-1.2.10 (21 Mar 2002)
 
 	21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-1.2.10.ebuild:
-
 	HTML documentation will not be gzipped now.
 
 *gkrellm-1.2.10 (19 Mar 2002)
 
 	19 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-1.2.10.ebuild:
-
 	Updated to new version of gkrellm.  Copied over old one and made it
 	fetch a tar.bz2 instead of a tar.gz
 
 *gkrellm-1.2.9 (19 Feb 2002)
 
 	19 Feb 2002; Aron Griffis <agriffis@gentoo.org> gkrellm-1.2.9.ebuild:
-
 	Updated to new version of gkrellm.  Fixed up the dependencies to include
 	gettext.  Thanks to Seemant Kulleen for the ebuild.
 
 *gkrellm-1.2.5 (1 Feb 2002)
 
 	6 Mar 2002; T.Neidt <tod@gentoo.org> ChangeLog, gkrellm-1.2.5.ebuild:
-
 	Removed. Tarball no longer available from SRC_URI.
 	Bug# 862, thanks Jochem Prins.
 	
 	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-	
 	Added initial ChangeLog which should be updated whenever the package is
 	updated in any way. This changelog is targetted to users. This means that
 	the comments should well explained and written in clean English. The
