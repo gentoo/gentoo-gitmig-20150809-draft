@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.21.ebuild,v 1.3 2002/10/24 18:52:18 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.21.ebuild,v 1.4 2002/10/25 17:34:12 woodchip Exp $
 
 IUSE="tcpd"
 
@@ -14,7 +14,7 @@ DEPEND=">=dev-libs/libol-0.3.3
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 src_compile() {
 
