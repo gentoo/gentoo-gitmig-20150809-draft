@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.9 2002/04/17 11:33:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.10 2002/04/17 15:56:22 seemant Exp $
+
+  17 Apr 2002; Seemant Kulleen <seemant@gentoo.org> mplayer-0.60-r6.ebuild
+  files/digest-mplayer-0.60-r6 :
+
+  Removed -- the old source tarball will be mirrored on ibilio instead.
 
 *mplayer-0.60-r6 (17 Apr 2002)
 
