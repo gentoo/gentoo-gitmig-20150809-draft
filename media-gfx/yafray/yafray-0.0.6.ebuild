@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.6.ebuild,v 1.3 2004/02/18 09:36:56 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.6.ebuild,v 1.4 2004/05/03 14:37:16 hanno Exp $
 
 inherit gcc
 
@@ -27,6 +27,7 @@ export WANT_AUTOMAKE="1.7"
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/yafray-gcc34-fix.gz
 	cd ${S}
 
 	sed -i \
