@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4_rc2.ebuild,v 1.2 2005/03/04 23:26:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4_rc2.ebuild,v 1.3 2005/03/09 07:10:48 st_lim Exp $
 
 inherit eutils
 
@@ -154,19 +154,20 @@ src_install () {
 	chmod 4755 ${D}/usr/bin/dspam
 
 	# documentation
-	dodoc CHANGELOG LICENSE README* RELEASE.NOTES
-	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
 	if use mysql; then
-		dodoc src/tools.mysql_drv/README
+		cp src/tools.mysql_drv/README README.mysql_drv
 	elif use postgres ; then
-		dodoc src/tools.pgsql_drv/README
+		cp src/tools.pgsql_drv/README README.pgsql_drv
 	elif use oci8 ; then
-		dodoc src/tools.ora_drv/README
+		cp src/tools.ora_drv/README README.ora_drv
 	elif use sqlite ; then
-		dodoc src/tools.sqlite_drv/README
+		cp src/tools.sqlite_drv/README README.sqlite_drv
 	fi
-	doman man/dspam*
+	dodoc CHANGELOG LICENSE README* RELEASE.NOTES UPGRADING
 	dodoc ${DISTDIR}/dspam_sa_trainer.tar.gz
+	docinto gentoo
+	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
+	doman man/dspam*
 
 	# build some initial configuration data
 	# Copy existing dspam.conf
