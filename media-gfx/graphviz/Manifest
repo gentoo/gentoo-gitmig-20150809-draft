@@ -1,6 +1,6 @@
 MD5 297beb1f832c3775da0c59f630a4bc00 graphviz-1.10.ebuild 1280
 MD5 0341eb79a10f50cfcc34ac0da57d70c7 graphviz-1.12-r1.ebuild 2014
-MD5 092309309f0b23094f4028827b9fd47b ChangeLog 4489
+MD5 c5bef5489036d6a3783c62248e65991e ChangeLog 4549
 MD5 e98595ce89ff0da26058b1e6e0ce3d31 metadata.xml 1540
 MD5 e784856bcb9a9a11b1adaec31eab51d0 graphviz-1.12.ebuild 1375
 MD5 6700ac8c3ea388f54326ca2a57784a1c files/graphviz-1.12-build.patch 1514
