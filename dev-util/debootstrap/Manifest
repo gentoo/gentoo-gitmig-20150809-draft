@@ -1,4 +1,4 @@
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 9c328ad25654ae2c0e08cc68e558190e debootstrap-0.1.17.30.ebuild 595
-MD5 c3ac4ffdf8dd3750ed328545547a42ef ChangeLog 362
+MD5 a08a747c2420e420d3245f719d711dfb debootstrap-0.1.17.30.ebuild 594
+MD5 e0f6fd5fc2699012c2c8e718c3461610 ChangeLog 440
 MD5 7f9d7642fe3326c95b9c1c79ecc50dc4 files/digest-debootstrap-0.1.17.30 72
