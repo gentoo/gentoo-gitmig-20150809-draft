@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/info/info-1.7-r1.ebuild,v 1.1 2003/08/21 02:37:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/info/info-1.7-r1.ebuild,v 1.2 2003/09/03 22:38:22 weeve Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: GNU info documentation browser"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=21"
 LICENSE="BSD"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~sparc"
 DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 src_unpack() {
