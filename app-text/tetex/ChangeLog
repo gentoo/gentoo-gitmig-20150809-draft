@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.49 2003/10/07 20:46:40 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.50 2003/11/04 08:33:52 obz Exp $
+
+*tetex-2.0.2-r2 (04 Nov 2003)
+
+  04 Nov 2003; Mike Gardiner <obz@gentoo.org> tetex-2.0.2-r2.ebuild:
+  Added fix for hyperref, see bug #31967. A few small ebuild changes
 
   07 Oct 2003; John Mylchreest <johnm@gentoo.org>; tetex-2.0.2-r1.ebuild:
   fixing POSIX 1003.1-2001 chown change. '.' now ':'
