@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed54c5ac3631d11a9a550f86cc871af4 ChangeLog 1715
 MD5 4e0cb31a69a0eca3e73cb9e3a6231c9a Error-0.15-r1.ebuild 511
-MD5 f4a4fab3ae6d9aca31f2eb4e28878d77 ChangeLog 1633
-MD5 be15cee3d02fe28506c0a72f1136d739 Error-0.15-r2.ebuild 544
+MD5 f5fa3d2051c99cbe8ecdea016dfd89fd Error-0.15-r2.ebuild 554
 MD5 0244db9cf7e9fe5fc16acb7229198a43 files/digest-Error-0.15-r1 60
 MD5 0244db9cf7e9fe5fc16acb7229198a43 files/digest-Error-0.15-r2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBypBH60LfUIagIAkRAj2IAJ41cdQ+iUuGei3fmSb8h32WmmqWSACfTclh
+f3SHJzctoXIcmyrAeTAUdps=
+=32HZ
+-----END PGP SIGNATURE-----
