@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-alltraxclock/gkrellm-alltraxclock-0.3.ebuild,v 1.5 2004/04/30 21:06:54 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-alltraxclock/gkrellm-alltraxclock-0.3.ebuild,v 1.6 2004/06/19 04:01:45 kloeri Exp $
 
 IUSE=""
 MY_P=${P/gkrellm-}
@@ -15,10 +15,6 @@ KEYWORDS="x86 sparc ppc"
 DEPEND="=app-admin/gkrellm-1.2*
 	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1"
-
-src_compile() {
-	emake || die
-}
 
 src_install () {
 	exeinto /usr/lib/gkrellm/plugins
