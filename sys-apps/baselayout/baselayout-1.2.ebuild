@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.2.ebuild,v 1.3 2000/08/25 04:04:47 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.2.ebuild,v 1.4 2000/08/26 20:48:28 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -13,6 +13,7 @@ src_install()
 	dodir /usr/include
 	dosym /var/log /usr/adm
 	dosym ../X11R6/include/X11 /usr/include/X11
+	dosym ../X11R6/lib/X11	   /usr/lib/X11
 	dosym ../src/linux/include/linux /usr/include/linux
 	dosym ../src/linux/include/asm-i386 /usr/include/asm
 	local foo
