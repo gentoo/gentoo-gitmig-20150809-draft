@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/e2fsprogs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.6 2002/09/25 11:49:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.7 2002/10/26 10:29:20 azarah Exp $
+
+*e2fsprogs-1.29-r1 (26 Oct 2002)
+
+  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Install linker scripts to fix bug #4411.
 
 *e2fsprogs-1.29 (25 Sep 2002)
 
