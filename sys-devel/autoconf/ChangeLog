@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.55 2004/09/03 19:37:35 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.56 2004/10/09 22:38:53 vapier Exp $
+
+*autoconf-2.59-r5 (09 Oct 2004)
+
+  09 Oct 2004; Mike Frysinger <vapier@gentoo.org> files/ac-wrapper.pl,
+  -autoconf-2.59-r4.ebuild, +autoconf-2.59-r5.ebuild:
+  Version bump to push out fixed ac-wrapper.pl that cvs missed from before
+  #66854.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   autoconf-2.59-r3.ebuild:
