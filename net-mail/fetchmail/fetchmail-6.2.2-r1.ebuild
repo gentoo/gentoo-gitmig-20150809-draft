@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.2-r1.ebuild,v 1.1 2003/03/31 02:43:10 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.2-r1.ebuild,v 1.2 2003/03/31 19:56:18 avenj Exp $
 
 inherit eutils
 
@@ -49,6 +49,9 @@ src_install() {
 	
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/fetchmail
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/conf.d-fetchmail fetchmail
 	
 	docinto contrib
 	local f
@@ -70,4 +73,7 @@ pkg_postinst() {
 		einfo "  2.  (Re-)merge Python."
 		einfo
 	fi
+
+	einfo "Please see /etc/conf.d/fetchmail if you want to adjust"
+	einfo "the polling delay used by the fetchmail init script."
 }
