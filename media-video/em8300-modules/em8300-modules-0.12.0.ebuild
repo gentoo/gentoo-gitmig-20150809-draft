@@ -1,15 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Brandon Low <lostlogic@lostlogicx.com>
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.3 2002/04/29 04:22:44 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.4 2002/05/03 07:13:05 agenkin Exp $
 
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
 HOMEPAGE="http://dxr3.sourceforge.net"
 
 DEPEND="virtual/linux-sources"
 
-S="${WORKDIR}/${P}"
 SRC_URI="http://prdownloads.sourceforge.net/dxr3/${P/-modules/}.tar.gz"
+S="${WORKDIR}/${P}"
 
 
 src_unpack () {
@@ -18,19 +18,27 @@ src_unpack () {
 	cd ${WORKDIR}
 	mv ${A/.tar.gz/} ${P}
 
+	# Portage should determine the version of the kernel sources
+	if [ x"${KV}" = x ]
+	then
+		eerror ""
+		eerror "Could not determine you kernel version."
+		eerror "Make sure that you have /usr/src/linux symlink."
+		eerror ""
+		die
+	fi
+
+	cd ${S}/modules
+	#Make the em8300 makefile cooperate with our kernel version
+	sed 	-e 's/PAL/NTSC/g' \
+		-e "s/..shell.uname.-r./${KV}/" \
+		Makefile > Makefile.hacked
+	mv Makefile.hacked Makefile
+
 }
 
 src_compile ()  {
 
-	cd ${S}/modules
-	sed -e s/PAL/NTSC/g Makefile > makefile
-	mv makefile Makefile
-
-	[ "x${KV}" = x ] && die "You need to upgrade your portage."
-
-	#Make the em8300 makefile cooperate with our kernel version
-	sed -e s/..shell.uname.-r./${KV}/ Makefile > makefile
-	mv makefile Makefile
 	make clean all || die
 
 }
@@ -54,7 +62,7 @@ src_install () {
 
 }
 
-pkg_postinst() {
+pkg_postinst () {
 
 	if [ "${ROOT}" = "/" ]
 	then
