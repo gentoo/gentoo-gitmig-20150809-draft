@@ -297,10 +297,6 @@ sys-devel/spython
 #>=x11-themes/gtk-engines-crux-1.9.5-r1
 #>=x11-themes/gtk-engines-lighthouseblue-0.7.0
 
-# <liquidx@gentoo.org> (19 Jun 2003)
-# double protection for alpha quality gpdf
-app-text/gpdf
-
 # <robh@gentoo.org> (18 Jun 2003)
 # due to ardour approaching a release and sourceforge breaking
 # this ebuild is not going to work for quite a while
