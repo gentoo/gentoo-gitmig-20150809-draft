@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.6.3.ebuild,v 1.1 2003/04/16 16:57:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.6.3.ebuild,v 1.2 2003/04/28 07:19:49 aliz Exp $
 
 MY_P="${PN/d}-${PV}"
 DESCRIPTION="fast, efficient, (REALLY) small, and easy to configure web server"
 SRC_URI="http://monkeyd.sourceforge.net/versions/${MY_P}.tar.gz"
 HOMEPAGE="http://monkeyd.sourceforge.net/"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
