@@ -1,11 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc1-r1.ebuild,v 1.1 2004/10/26 20:49:46 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc3.ebuild,v 1.1 2004/11/30 13:34:24 iggy Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
-# removed ptune*.pl, need to make a seperate package for it
-# check for other msp3400 modules
 # add a few notes to the postinst output about what's needed (bttv/tuner, etc.)
 
 inherit eutils
@@ -14,11 +12,12 @@ DESCRIPTION="ivtv driver for Hauppauge PVR[23]50 cards"
 HOMEPAGE="http://ivtv.sourceforge.net"
 
 # stupidly named tarballs
-MY_P="${P/_/-}c"
+MY_P="${P/_/-}"
+FW_VER="pvr_1.18.21.22168_inf.zip"
 
-
-SRC_URI="http://67.18.1.101/~ckennedy/ivtv/${MY_P/1c/}/${MY_P}.tgz
-	http://hauppauge.lightpath.net/software/pvr250/pvr250_18a_inf.zip"
+SRC_URI="http://67.18.1.101/~ckennedy/ivtv/${MY_P}.tgz
+	http://67.18.1.101/~ckennedy/ivtv/ivtv-0.2.0-rc/${MY_P}.tgz
+	ftp://ftp.shspvr.com/download/wintv-pvr_250-350/inf/${FW_VER}"
 
 RESTRICT="nomirror"
 SLOT="0"
@@ -52,10 +51,10 @@ src_compile() {
 
 src_install() {
 	cd ${WORKDIR}/${MY_P}/utils
-	cp ${DISTDIR}/pvr250_18a_inf.zip .
+	cp ${DISTDIR}/${FW_VER} .
 	dodir /lib/modules
 	touch ${D}/lib/modules/ivtv-fw-{enc,dec}.bin
-	./ivtvfwextract.pl pvr250_18a_inf.zip \
+	./ivtvfwextract.pl ${FW_VER} \
 		${D}/lib/modules/ivtv-fw-enc.bin \
 		${D}/lib/modules/ivtv-fw-dec.bin
 

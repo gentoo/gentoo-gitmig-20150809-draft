@@ -1,20 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 99a63aa5c268690eb893ed50eb8cecf8 ivtv-0.2.0_rc2.ebuild 3634
-MD5 9da8b81328dd2fba10b93b1d2c6b14ae ivtv-0.2.0_rc1-r1.ebuild 3710
-MD5 9ae322027f63420b0508cae24306924c ivtv-0.1.9-r4.ebuild 3493
-MD5 68c5303bfb74087e97261a843f7da938 ivtv-0.2.0_rc1.ebuild 3707
-MD5 8b7158e7ba985a6d24cdfcb6e497c767 ChangeLog 2210
+MD5 1358ecdad682b1d5c0e5f5b5f9fd30b9 ivtv-0.2.0_rc3.ebuild 3673
+MD5 d3382f95f70c6bd0a0596244ed72c5a6 ChangeLog 2422
 MD5 212f198236ed9fef7b10b46f8cb80c63 metadata.xml 446
-MD5 706947f1027708969a61f7b5dcfb3727 files/digest-ivtv-0.2.0_rc1 127
 MD5 f58ee9b309859204cc863b08568d4e24 files/digest-ivtv-0.2.0_rc2 127
-MD5 c30318ac79a607f6ad308208a5987c3b files/digest-ivtv-0.1.9-r4 129
-MD5 706947f1027708969a61f7b5dcfb3727 files/digest-ivtv-0.2.0_rc1-r1 127
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBgbR7MSkoRwEucGERAiQVAJ9NYP7u/nDRlr+gIJL+b9Qw/LqT5gCg8OiJ
-75pNWQmsTZuwrQaETQzn3CQ=
-=BHhC
------END PGP SIGNATURE-----
+MD5 8af31e29d594effa9af1bf2f135b7536 files/digest-ivtv-0.2.0_rc3 133
