@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd-svn
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.3 2004/12/07 17:36:20 ticho Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.4 2005/01/30 23:45:18 ticho Exp $
+
+*mpd-svn-20050131 (31 Jan 2005)
+
+  31 Jan 2005; Andrej Kacian <ticho@gentoo.org> -mpd-svn-20041129-r1.ebuild,
+  +mpd-svn-20050131.ebuild:
+  Version bump. Fixes memory leak on db update. Closes #80126, reported by
+  Avuton Olrich <avuton@gmail.com>. Removed old ebuild.
 
 *mpd-svn-20041207 (07 Dec 2004)
 

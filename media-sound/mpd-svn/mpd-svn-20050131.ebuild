@@ -1,14 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20041129-r1.ebuild,v 1.3 2004/12/07 17:36:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050131.ebuild,v 1.1 2005/01/30 23:45:18 ticho Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode"
 
 inherit eutils
 
-DESCRIPTION="Music Player Daemon (mpd)"
+DESCRIPTION="A development version of Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
-SRC_URI="http://dev.gentoo.org/~ticho/portage/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~ticho/portage/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -89,7 +89,8 @@ pkg_postinst() {
 	einfo "please refer to the FAQ"
 	einfo "http://www.musicpd.org/wiki/moin.cgi/MpdFAQ if you are having problems."
 	einfo
-	einfo "The default config now binds the daemon strictly to localhost, rather then all available IPs."
+	einfo "The default config now binds the daemon strictly to localhost, rather than"
+	einfo "to all available IPs."
 	echo
 	ewarn "Note that this is just a development version of Music Player Daemon,"
 	ewarn "so if you want to report any bug, please state this fact in your"
