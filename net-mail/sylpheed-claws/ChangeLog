@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.66 2004/03/12 02:42:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.67 2004/03/25 07:47:02 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sylpheed-claws-0.9.5-r1.ebuild:
+  don't use deprecated ? : use syntax
 
   11 Mar 2004; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.9.9.ebuild:
   Stable on sparc.
