@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>, Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.33-r3.ebuild,v 1.1 2002/03/28 14:54:29 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.33-r3.ebuild,v 1.2 2002/03/31 00:31:34 drobbins Exp $
 
 # This ebuild installs ${FILESDIR}/hermes.conf, which you can get from
 # http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/hermes.conf
@@ -11,8 +11,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="http://prdownloads.sourceforge.net/pcmcia-cs/${P}.tar.gz"
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
-DEPEND="sys-kernel/linux-headers X? ( virtual/x11 x11-libs/xforms )"
-RDEPEND="X? ( virtual/x11 x11-libs/xforms )"
+DEPEND="sys-kernel/linux-headers"
 
 # Note: To use this ebuild, you should have the usr/src/linux symlink to 
 # the kernel directory that pcmcia-cs should use for configuration.
@@ -75,10 +74,10 @@ src_install () {
 	make PREFIX=${D} install || die "failed installing"
 	cd ${D}
 	rm -rf etc/rc*.d
-	# remove X util if USE X isn't set
+	# remove X
 	# this is simply much easier than patching configure or the makefiles
 	# not to build them in the first place
-	use X || rm -rf usr/X11R6
+	rm -rf usr/X11R6
 	# todo: if they are nstalled, move them to /usr
 		
 	insinto /etc/conf.d

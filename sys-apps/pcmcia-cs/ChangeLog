@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.9 2002/03/28 15:04:07 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.10 2002/03/31 00:31:34 drobbins Exp $
+
+  30 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : removed X support --
+  a much-requested change.  No rev bump.
 
 *pcmcia-cs-3.1.33-r3,pcmcia-cs-3.1.31-r7 (28 Mar 2002)
   28 Mar 2002; Chad Huneycutt <chadh@gentoo.org>
