@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.10 2004/07/01 12:03:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.11 2004/08/10 04:13:05 vapier Exp $
 
-inherit flag-o-matic base eutils gcc
+inherit flag-o-matic eutils gcc
 
-DESCRIPTION="Convert files between various character sets."
+DESCRIPTION="Convert files between various character sets"
 HOMEPAGE="http://www.gnu.org/software/recode/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}-debian.diff.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc amd64 alpha ia64 mips"
+KEYWORDS="x86 ppc sparc mips alpha amd64 ia64"
 IUSE="nls"
 
 DEPEND="virtual/libc
@@ -24,31 +24,16 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
-	use nls || myconf="--disable-nls"
-
 	# gcc-3.2 crashes if we don't remove any -O?
-	if [ "`gcc-version`" == "3.2" ] && [ ${ARCH} == "x86" ] ; then
-		filter-flags -O?
-	fi
+	[ "`gcc-version`" == "3.2" ] && [ ${ARCH} == "x86" ] \
+		&& filter-flags -O?
+	replace-cpu-flags pentium3 pentium4
 
-	replace-flags "-march=pentium4" "-march=pentium3"
-
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		$myconf || die
-
+	econf `use_enable nls` || die
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
-
-	dodoc AUTHORS BACKLOG COPYING* ChangeLog INSTALL
-	dodoc NEWS README THANKS TODO
+	make install DESTDIR=${D} || die
+	dodoc AUTHORS BACKLOG ChangeLog INSTALL NEWS README THANKS TODO
 }
