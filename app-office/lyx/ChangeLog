@@ -1,6 +1,14 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.3 2002/06/07 11:08:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.4 2002/07/05 16:50:46 danarmak Exp $
+
+*lyx-1.2.0.20020705 (05 Jul 2002)
+
+  05 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  This is a 20020705 snapshot of the lyx cvs 1.2.x branch - i.e. 1.2.0 plus
+  all the bugfixes made
+  so far, working towards a 1.2.1 release. It fixes fex. #3538.
 
   7 Jun 2002; Dan Armak <danarmak@gentoo.org> changelog:
   
