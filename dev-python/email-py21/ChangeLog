@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/email-py21
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/email-py21/ChangeLog,v 1.1 2003/04/08 08:11:19 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/email-py21/ChangeLog,v 1.2 2003/06/23 02:40:38 kutsuya Exp $
+
+  22 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> email-py21-2.5.ebuild:
+  ~x86 ~ppc -> x86 ppc
 
 *email-py21-2.5 (08 Apr 2003)
 
