@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.10 2004/01/17 04:56:53 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.11 2004/01/19 11:42:12 lanius Exp $
 
 inherit eutils kernel-mod
 
@@ -66,6 +66,7 @@ src_unpack() {
 	cd ${S}
 	sed	-i "s:-O2 -g:${CFLAGS}:" configure
 	sed -i "s:-O2 -g:${CFLAGS}:" configure.in
+	epatch ${FILESDIR}/lirc-${PV}-i2c.patch.gz
 }
 
 src_compile() {
