@@ -61,3 +61,4 @@ move app-office/mrproject app-office/planner
 move app-misc/magicpoint app-office/magicpoint
 move app-misc/glpk app-sci/glpk
 move net-misc/x3270 net-misc/suite3270
+move net-libs/lcrzo net-libs/netwib
