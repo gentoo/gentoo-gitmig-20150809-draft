@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-RawIP
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.6 2004/06/25 00:49:43 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.7 2005/01/29 21:16:16 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> Net-RawIP-0.09d.ebuild,
+  Net-RawIP-0.1.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
 *Net-RawIP-0.1 (16 Jun 2003)
 
