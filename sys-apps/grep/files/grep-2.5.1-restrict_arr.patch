@@ -1,10 +1,12 @@
---- lib/posix/regex.h.mps	2004-06-09 22:00:00.000000000 +0200
-+++ lib/posix/regex.h	2004-06-09 22:00:40.000000000 +0200
-@@ -533,7 +533,10 @@ extern int re_exec _RE_ARGS ((const char
+--- lib/posix/regex.h
++++ lib/posix/regex.h
+@@ -533,7 +533,12 @@ extern int re_exec _RE_ARGS ((const char
  /* For now unconditionally define __restrict_arr to expand to nothing.
     Ideally we would have a test for the compiler which allows defining
     it to restrict.  */
-+#include <features.h>
++#if !defined(sun)
++# include <features.h>
++#endif
 +#if !defined(__UCLIBC__) || !defined(__restrict_arr)
  #define __restrict_arr
 +#endif
