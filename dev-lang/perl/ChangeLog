@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.54 2004/02/19 22:31:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.55 2004/02/21 11:15:21 mcummings Exp $
+
+  21 Feb 2004; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r11.ebuild,
+  perl-5.8.0-r12.ebuild, perl-5.8.0-r9.ebuild, perl-5.8.2.ebuild,
+  files/libperl-5.8.0-create-libperl-soname.patch,
+  files/perl-5.8.0-perldoc-emptydirs.patch,
+  files/perl-5.8.0-prelink-lpthread.patch, files/perl-5.8.0-reorder-INC.patch,
+  files/perl-5.8.0-sockatmark-should-__THROW.patch:
+  Massive clean up. With 5.8.2 now marked stable on all platforms, we are
+    removing the older 5.8.0 ebuilds, which are no longer available upstream
+    anymore. I also cleaned out the files dir of any patches that were being
+    specifically used by 5.8.0 and not the other versions.
 
   19 Feb 2004; Aron Griffis <agriffis@gentoo.org> perl-5.8.2-r1.ebuild:
   stable on alpha and ia64
