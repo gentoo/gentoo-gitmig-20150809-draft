@@ -1,7 +1,11 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.1 2003/08/02 16:05:20 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.2 2003/10/10 15:34:53 mholzer Exp $
 
+*libcdio-0.63 (11 Oct 2003)
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> libcdio-0.63.ebuild:
+  Version bumped.
 
 *libcdio-0.62 (02 Aug 2003)
 
