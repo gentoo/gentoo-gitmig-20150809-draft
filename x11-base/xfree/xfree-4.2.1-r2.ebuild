@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.21 2003/02/16 21:57:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.22 2003/02/17 19:44:25 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -104,7 +104,8 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=media-libs/freetype-${FT2_VER}-r2
 	>=x11-base/opengl-update-1.4
 	>=x11-misc/ttmkfdir-2.0
-	truetype? ( app-arch/cabextract )"
+	truetype? ( app-arch/cabextract )
+	app-arch/unzip" # needed for savage driver (version 1.1.27t)
 	
 RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
