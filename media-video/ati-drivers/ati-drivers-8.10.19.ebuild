@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.10.19.ebuild,v 1.1 2005/02/16 22:21:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.10.19.ebuild,v 1.2 2005/02/24 04:34:09 lu_zero Exp $
 
 IUSE=""
 
@@ -131,7 +131,8 @@ src_install() {
 	doexe usr/X11R6/bin/*
 
 	#ati custom stuff
-	cp -a ${WORKDIR}/usr/include ${D}/usr/include
+	insinto /usr
+	doins -r ${WORKDIR}/usr/include 
 }
 
 src_install-libs() {
