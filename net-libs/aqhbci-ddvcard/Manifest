@@ -1,4 +1,14 @@
-MD5 79a533407b21249cb1336cb807de600c ChangeLog 502
-MD5 e916f7766ed86322922b6f9a48814870 aqhbci-ddvcard-0.9.4_beta.ebuild 678
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e4b2ebaa8b6a3248354e0856bfe58d8 ChangeLog 611
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+MD5 71d6b1e96e9f4f90c013ac280c87c678 aqhbci-ddvcard-0.9.4_beta.ebuild 686
 MD5 63af4c68607028121457eda080c9a69f files/digest-aqhbci-ddvcard-0.9.4_beta 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBz2b8ugEuf3OQ0akRAltRAJ0eR8C8qfX6O78hdFk8zHis0v0r2QCeM/N5
+BO/euSRKxNe8YGLEU2lzrS8=
+=XBKo
+-----END PGP SIGNATURE-----
