@@ -60,5 +60,8 @@ afs
 gcj
 objc
 
+kerberos
+smartcard
+
 # get to this later
 doc
