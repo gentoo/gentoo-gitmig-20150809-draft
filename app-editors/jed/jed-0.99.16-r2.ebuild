@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r2.ebuild,v 1.10 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r2.ebuild,v 1.11 2004/10/31 04:59:25 vapier Exp $
 
 inherit eutils
 
@@ -16,11 +16,12 @@ KEYWORDS="x86 ppc sparc amd64 ~ppc64"
 IUSE="X gpm truetype"
 
 DEPEND=">=sys-libs/slang-1.4.5
-	>=sys-apps/sed-4
 	X? ( virtual/x11 )
 	gpm? ( sys-libs/gpm )
 	X? ( truetype? ( virtual/xft
 		>=media-libs/freetype-2.0 ) )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 PROVIDE="virtual/editor"
 
 src_unpack() {

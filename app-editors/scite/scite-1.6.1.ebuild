@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.1.ebuild,v 1.8 2004/10/27 05:00:36 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.1.ebuild,v 1.9 2004/10/31 05:02:03 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -8,14 +8,18 @@ MY_PV=${PV//./}
 DESCRIPTION="A very powerful editor for programmers"
 HOMEPAGE="http://www.scintilla.org"
 SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
+
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="ppc sparc x86"
 IUSE="gtk2 lua"
-DEPEND="gtk2? ( >=x11-libs/gtk+-2 )
+
+RDEPEND="gtk2? ( >=x11-libs/gtk+-2 )
 	!gtk2? ( =x11-libs/gtk+-1.2* )
-	>=sys-apps/sed-4
 	lua? ( >=dev-lang/lua-5 )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
 S=${WORKDIR}/${PN}/gtk
 
 src_unpack() {
@@ -48,7 +52,7 @@ src_compile() {
 	emake ${makeopts} || die "make failed"
 }
 
-src_install () {
+src_install() {
 	dodir /usr
 	dodir /usr/bin
 	dodir /usr/share
@@ -67,7 +71,5 @@ src_install () {
 	doins ${FILESDIR}/scite.desktop
 
 	doman ../doc/scite.1
-	dodoc ../License.txt ../README
-
+	dodoc ../README
 }
-

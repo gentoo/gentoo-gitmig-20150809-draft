@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.16 2004/09/27 09:09:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.17 2004/10/31 04:59:25 vapier Exp $
 
 P0=${PN}-0.99-16
 S=${WORKDIR}/${P0}
@@ -13,12 +13,13 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE="X gpm truetype"
 
-DEPEND=">=sys-libs/slang-1.4.5
-	>=sys-apps/sed-4
+RDEPEND=">=sys-libs/slang-1.4.5
 	X? ( virtual/x11 )
 	gpm? ( sys-libs/gpm )
 	X? ( truetype? ( virtual/xft
 		>=media-libs/freetype-2.0 ) )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 PROVIDE="virtual/editor"
 
 src_compile() {
