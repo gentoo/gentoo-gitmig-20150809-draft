@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.ebuild,v 1.15 2004/08/23 18:43:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.ebuild,v 1.16 2004/09/12 10:12:50 hansmi Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vorbis.com/files/1.0.1/unix/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 mips ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 mips ~ia64 ppc64 ~macos"
 IUSE=""
 
 DEPEND="virtual/libc"
