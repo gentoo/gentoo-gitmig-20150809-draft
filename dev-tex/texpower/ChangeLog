@@ -1,0 +1,11 @@
+# ChangeLog for app-text/latex-texpower
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.1 2003/06/09 13:11:26 satai Exp $
+
+*latex-texpower-0.0.8h (02 Feb 03)
+
+  02 Apr 2003; Lars Weiler <pylon@gentoo.org> latex-texpower-0.0.8h.ebuild:
+  Set ppc in KEYWORDS
+
+  02 FEB 2003; Matthew Turk <satai@gentoo.org> :
+  Initial import.  Ebuild submitted by Lars Weiler <lars.weiler@chaosdorf.de>

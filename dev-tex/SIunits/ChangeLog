@@ -1,0 +1,12 @@
+# ChangeLog for app-text/latex-SIunits
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/ChangeLog,v 1.1 2003/06/09 13:11:26 satai Exp $
+
+*latex-SIunits (19 January 2002)
+
+  19 January 2003; Felix Kurth <felix@fkurth.de> :
+  
+  Initial release
+
+
+

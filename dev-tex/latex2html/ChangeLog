@@ -1,0 +1,61 @@
+# ChangeLog for app-text/latex2html
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.1 2003/06/09 13:11:26 satai Exp $
+
+*latex2html-2002.2 (08 Nov 2002)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> latex2html-2002.2.ebuild:
+  Mark stable on alpha
+
+  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> latex2html-2002.2.ebuild :
+
+  Removed dependency on supersed and employed dosed instead (thanks jrray!).
+  Closes bug #13899 by vapier@gentoo.org (SpanKY)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  08 Nov 2002; Seemant Kulleen <seemant@gentoo.org> latex2html-2002.2.ebuild
+  files/digest-latex2html-2002.2.ebuild :
+
+  Version bump, and fixed the problem in bug #10446 reported by:
+  twanger@bluetwanger.de (Markus Bertheau)
+
+*latex2html-2002.1 (18 Jun 2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> latex2html-2002.1.ebuild:
+  Change supersed dependencies
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> latex2html-2002.ebuild :
+  Added LICENSE, SLOT.
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> latex2html-2002.1.ebuild :
+  Added LICENSE, SLOT.
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
+
+  18 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version (2002-1). Also fixes #3437 (fail on missing /usr/share/latex2html
+  dir). Thanks a lot to Ben Cornett for the submission.
+
+*latex2html-2002 (27 Apr 2002)
+
+  27 Apr 2002; Seemant Kulleen <seemant@gentoo.org> latex2html-2002.ebuild
+  files/digest-latex2html-2002 :
+
+  Version bump.
+
+*latex2html-2000.1b (1 Feb 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> latex2html-2000.1b.ebuild :
+  Added LICENSE, SLOT.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

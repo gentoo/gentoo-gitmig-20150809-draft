@@ -1,0 +1,14 @@
+# ChangeLog for app-text/latex-calendar
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/ChangeLog,v 1.1 2003/06/09 13:11:26 satai Exp $
+
+  08 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Marked as stable.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*latex-calendar-3.1 (04 Nov 2002)
+
+  04 Nov 2002; Matthew Turk <satai@gentoo.org> latex-calendar-3.1.ebuild :
+  Initial import.  A very useful and beautiful calendar creator package for
+  LaTeX.  Very flexible.
