@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.85 2003/12/06 17:31:03 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.86 2003/12/11 15:51:51 pyrania Exp $
+
+  11 Dec 2003; Markus Nigbur <pyrania@gentoo.org> files/2.11.1p/distcc-config:
+  Fixed distcc-config. See bug #27432 for details.
 
   06 Dec 2003; Lisa Seelye <lisa@gentoo.org> files/2.11/distcc-config,
   files/2.11.1p/distcc-config:
