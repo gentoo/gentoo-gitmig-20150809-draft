@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r8.ebuild,v 1.5 2005/01/02 22:16:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r8.ebuild,v 1.6 2005/01/27 19:19:29 hansmi Exp $
 
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
 HOMEPAGE="http://www.qmail.org/
@@ -24,14 +24,15 @@ RDEPEND="!virtual/mta
 	>=sys-apps/ucspi-tcp-0.88
 	>=sys-apps/daemontools-0.76-r1
 	>=net-mail/checkpassword-0.90
-	>=net-mail/dot-forward-0.71"
+	>=net-mail/dot-forward-0.71
+	selinux? ( sec-policy/selinux-qmail )"
 
 PROVIDE="virtual/mta"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha"
-IUSE=""
+IUSE="selinux"
 
 src_unpack() {
 

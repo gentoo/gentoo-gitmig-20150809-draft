@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r11.ebuild,v 1.7 2005/01/02 22:16:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r11.ebuild,v 1.8 2005/01/27 19:19:29 hansmi Exp $
 
 inherit toolchain-funcs eutils
 
-IUSE="ssl"
+IUSE="ssl selinux"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
 HOMEPAGE="http://www.qmail.org/
 	http://members.elysium.pl/brush/qmail-smtpd-auth/
@@ -35,7 +35,8 @@ RDEPEND="!virtual/mta
 	>=sys-apps/daemontools-0.76-r1
 	>=net-mail/checkpassword-0.90
 	>=net-mail/cmd5checkpw-0.22
-	>=net-mail/dot-forward-0.71"
+	>=net-mail/dot-forward-0.71
+	selinux? ( sec-policy/selinux-qmail )"
 
 PROVIDE="virtual/mta
 	 virtual/mda"
