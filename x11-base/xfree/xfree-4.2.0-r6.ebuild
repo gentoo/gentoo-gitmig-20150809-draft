@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r6.ebuild,v 1.2 2002/01/29 08:49:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r6.ebuild,v 1.3 2002/02/17 18:30:19 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -15,17 +15,15 @@ SRC_URI="$SRC_PATH0/X${MY_V}src-1.tgz
 	 $SRC_PATH1/X${MY_V}src-1.tgz
 	 $SRC_PATH1/X${MY_V}src-2.tgz
 	 $SRC_PATH1/X${MY_V}src-3.tgz
-       	 http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz"
+	 http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz"
 
 HOMEPAGE="http://www.xfree.org"
 
 DEPEND=">=sys-libs/ncurses-5.1
-        >=sys-libs/zlib-1.1.3-r2
-        sys-devel/flex
-        sys-devel/perl
-	voodoo3? ( >=media-libs/glide-v3-3.10 )
-	voodoo4? ( >=media-libs/glide-v3-3.10 )
-	voodoo5? ( >=media-libs/glide-v3-3.10 )"
+	>=sys-libs/zlib-1.1.3-r2
+	sys-devel/flex
+	sys-devel/perl
+	glide? ( >=media-libs/glide-v3-3.10 )"
 	
 RDEPEND=">=sys-libs/ncurses-5.1"
 
@@ -52,9 +50,7 @@ src_unpack () {
 	fi
 
 	# build with glide3 support? (build the tdfx_dri.o module)
-	if [ -n "`use voodoo3`" ] || \
-	   [ -n "`use voodoo4`" ] || \
-	   [ -n "`use voodoo5`" ]
+	if [ -n "`use glide`" ]
 	then
 		echo "#define HasGlide3 YES" >> config/cf/host.def
 	fi
