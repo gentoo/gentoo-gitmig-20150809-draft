@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.0-r1.ebuild,v 1.8 2002/11/02 11:30:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.0-r1.ebuild,v 1.9 2002/11/02 11:32:04 seemant Exp $
 
 IUSE="truetype nls esd imlib"
 
@@ -62,12 +62,9 @@ src_compile(){
 		|| myconf="${myconf} --disable-xfreetype"
 
 	# until the new sexy use style arch code is implemented...
-	if [ ${ARCH} != "x86" ]
-	then
-		myconf="${myconf} --disable-x86-asm"
-	else
-		myconf="${myconf} --enable-x86-asm"
-	fi
+	use x86 \
+		&& myconf="${myconf} --enable-x86-asm" \
+		|| myconf="${myconf} --disable-x86-asm"
 
 	econf \
 		--with-libdir=/usr/lib/icewm \
