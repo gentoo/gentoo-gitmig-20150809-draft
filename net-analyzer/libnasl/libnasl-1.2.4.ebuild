@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-1.2.4.ebuild,v 1.3 2002/10/20 18:50:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-1.2.4.ebuild,v 1.4 2002/11/12 15:08:42 aliz Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -15,23 +15,26 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc -sparc -sparc64"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	patch -p1 < ${FILESDIR}/nasl.diff
-
 }
 
 src_compile() {
-
-	econf || die "configuration failed"
+	if [ ! -z ${DEBUG} ]; then
+		OLD_DEBUG=${DEBUG}
+		unset DEBUG
+		econf || die "configuration failed"
+		DEBUG=${OLD_DEBUG}
+		unset OLD_DEBUG
+	else
+		econf || die "configuration failed"
+	fi
 
 	emake || die "emake failed"
-
 }
 
 src_install() {
-
 	make \
 		prefix=${D}/usr \
 		sysconfdir=${D}/etc \
@@ -42,5 +45,4 @@ src_install() {
 	cd ${S}
 	docinto libnasl
 	dodoc COPYING TODO
-
 }
