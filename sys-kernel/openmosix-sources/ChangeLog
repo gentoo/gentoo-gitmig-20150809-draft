@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.67 2004/11/10 09:29:52 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.68 2004/11/12 07:30:29 voxus Exp $
+
+  12 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org>:
+  -openmosix-sources-2.4.24-r4.ebuild:
+  Unmasked .24-r5 due to recent security patch, old version removed.
+  QA fixes (sed in global scope).
 
 *openmosix-sources-2.4.24-r5 (10 Nov 2004)
 *openmosix-sources-2.4.27-r3 (10 Nov 2004)
