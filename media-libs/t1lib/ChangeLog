@@ -4,6 +4,12 @@
 
 *t1lib-5.0.0-r1 (03 Aug 2003)
 
+  05 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> t1lib-5.0.0-r1.ebuild,
+  t1lib-5.0.0.ebuild:
+  Added warnings to make sure users rebuild packages depending on it.
+  Removed t1lib-5.0.0.ebuild in order to encourage people to upgrade to
+  t1lib-5.0.0-r1.ebuild.  See #25863
+
   03 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> t1lib-5.0.0-r1.ebuild:
   Fixed hardcoded t1lib library filename (which referred to 1.3.1
   and therefore failed to install).  Changed DEPEND to virtual/tetex.
