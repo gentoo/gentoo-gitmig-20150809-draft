@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.237 2004/08/15 22:47:17 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.238 2004/08/16 00:19:11 agriffis Exp $
+
+  15 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  glibc-2.3.3_pre20040207.ebuild:
+  Remove ~alpha and ~ia64 from glibc-2.3.3_pre20040207. We'll stick with stable
+  on those arches until we get new livecds released.
 
   15 Aug 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.4.20040605-r1.ebuild,
   -glibc-2.3.4.20040619.ebuild:
