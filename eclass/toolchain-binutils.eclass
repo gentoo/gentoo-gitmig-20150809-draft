@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.14 2004/12/09 02:42:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.15 2004/12/16 01:03:11 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -39,7 +39,7 @@ fi
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
-	>=sys-devel/binutils-config-1.1
+	>=sys-devel/binutils-config-1.2
 	!build? ( !bootstrap? ( dev-lang/perl ) )"
 
 LIBPATH="/usr/lib/binutils/${CTARGET}/${PV}"
