@@ -15,7 +15,7 @@ CONFIG_FILE=${PROFILE_PATH}/current
 
 usage() {
 cat << "USAGE_END"
-Usage: motif-config [options] [Profile]
+Usage: motif-config [option] [profile]
 Change the current motif profile, or give info about profiles.
 
 Options:
@@ -38,24 +38,36 @@ Options:
 
       --install              Install the given profile.
 
-	  --uninstall            Uninstall the given profile.
+      --uninstall            Uninstall the given profile.
 
 USAGE_END
     exit $1
 }
 [[ $# -lt 1 ]] && usage 1
-
-
-get_current_profile() {
-	exit 0
-}
+[[ $# -gt 2 ]] && usage 1
 
 switch_profile() {
 	exit 0
 }
 
+get_current_profile() {
+	cat ${CONFIG_FILE} 2> /dev/null
+}
+
 list_profiles() {
-	exit 0
+	i=1
+	for x in `ls ${PROFILE_PATH}`; do
+		current=`ls -l --full-time ${CONFIG_FILE} 2> /dev/null | awk '{ print $11 }' | sed -e "s:${PROFILE_PATH}/::"`
+		if [ "${x}" != "current" ]; then
+			output=`cat ${PROFILE_PATH}/${x}`;
+			output="[${i}] $output";
+			if [ "${x}" = "${current}" ]; then
+				output="${output} *"
+			fi
+			echo "$output"
+			i=$((i + 1))
+		fi
+	done
 }
 
 get_lib_path() {
@@ -66,9 +78,50 @@ get_inc_path() {
 	exit 0
 }
 
+get_cflags() {
+	exit 0
+}
+
+get_ldflags() {
+	exit 0
+}
+
+install_profile() {
+	if [[ "$(id -u)" -ne 0 ]] ; then
+		eerror "$0: Must be root."
+		exit 1
+	fi
+
+	# create profile
+	echo ${1} > ${PROFILE_PATH}/${1}
+
+	# make it default if no profile is activated
+	switch_profile
+}
+
+uninstall_profile() {
+	if [[ "$(id -u)" -ne 0 ]] ; then
+		eerror "$0: Must be root."
+		exit 1
+	fi
+
+	# remove profile
+	rm -f ${PROFILE_PATH}/${1} 2> /dev/null
+
+	# activate next profile if non is activated
+	switch_profile
+}
+
 for x in "$@"; do
 	case "${x}" in
+		-c|--get-current-profile)
+			[[ $# -ne 1 ]] && usage 1
+			get_current_profile
+		;;
+
 		-l|--list-profiles)
+			[[ $# -ne 1 ]] && usage 1
+			list_profiles
 		;;
 
 		-L|--get-lib-path)
@@ -78,16 +131,20 @@ for x in "$@"; do
 		;;
 
 		--clfags)
-        ;;
+		;;
 
-        --ldflags)
-        ;;
+		--ldflags)
+		;;
 
 		--install)
-        ;;
+			[[ $# -ne 2 ]] && usage 1
+			install_profile $2
+		;;
 
-        --uninstall)
-        ;;
+		--uninstall)
+			[[ $# -ne 2 ]] && usage 1
+			uninstall_profile $2
+		;;
 
 		-h|--help)
 			usage 0
@@ -95,7 +152,7 @@ for x in "$@"; do
 		;;
 
 		-v|--version)
-			echo "motif-config-1.0"
+			echo "motif-config-0.1"
 			exit 0
 		;;
 
