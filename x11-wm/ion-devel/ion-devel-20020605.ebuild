@@ -10,7 +10,7 @@ RDEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~ppc"
 
 pkg_setup() {
 	ewarn "This package will overwrite your stable ion installation."
