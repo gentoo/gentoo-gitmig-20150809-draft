@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/root-tail
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.23 2004/12/16 10:34:16 ka0ttic Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.24 2005/01/31 11:07:53 ka0ttic Exp $
+
+  31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> -root-tail-0.2.ebuild,
+  -root-tail-0.9.ebuild:
+  Tidy old crusty ebuilds.
 
   16 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Added metadata.xml.
