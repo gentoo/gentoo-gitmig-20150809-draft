@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r4.ebuild,v 1.6 2005/02/09 18:21:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r4.ebuild,v 1.7 2005/03/19 13:57:29 luckyduck Exp $
 
 inherit eutils
 
@@ -47,6 +47,9 @@ src_install() {
 	diropts -m750
 	dodir ${TOMCAT_HOME} /var/log/${TOMCAT_NAME} /etc/${TOMCAT_NAME}
 	keepdir /var/log/${TOMCAT_NAME}
+
+	# we don't want DOS related things
+	rm -f bin/*.{bat,exe}
 
 	mv conf/* ${D}/etc/${TOMCAT_NAME}
 	mv bin common server shared temp work ${D}${TOMCAT_HOME}

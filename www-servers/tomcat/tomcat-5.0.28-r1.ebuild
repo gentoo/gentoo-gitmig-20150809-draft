@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r1.ebuild,v 1.1 2005/03/07 10:23:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r1.ebuild,v 1.2 2005/03/19 13:57:29 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -131,8 +131,8 @@ src_install() {
 	fi
 
 	# create dir structure
-	diropts -m750
 	dodir /usr/share/${TOMCAT_NAME}
+	diropts -m750
 
 	dodir /var/log/${TOMCAT_NAME}/default
 	dodir /etc/${TOMCAT_NAME}/default/

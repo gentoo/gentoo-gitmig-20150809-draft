@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.18 2005/03/07 10:23:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.19 2005/03/19 13:57:29 luckyduck Exp $
+
+  19 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> tomcat-5.0.27-r4.ebuild,
+  tomcat-5.0.28-r1.ebuild:
+  now normal users can access all jars of tomcat-5.0.28-r1 via java-config -p.
+  also fixed #83113, dos related files are not getting installed any longer.
 
 *tomcat-5.0.28-r1 (07 Mar 2005)
 
