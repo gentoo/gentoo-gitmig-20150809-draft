@@ -1,0 +1,112 @@
+--- linux/MeterMaker.cc.orig    Sun Feb 24 17:00:47 2002
++++ linux/MeterMaker.cc Wed Jul 24 11:22:55 2002
+@@ -57,7 +57,7 @@
+       push(new DiskMeter(_xos, atof(_xos->getResource("diskBandwidth"))));
+
+   // check for the serial meters.
+-#ifndef __mc68000__
++#if !defined(__mc68000__) && !defined(__powerpc__)
+   for (int i = 0 ; i < SerialMeter::numDevices() ; i++)
+     if (_xos->isResourceTrue(SerialMeter::getResourceName(
+       (SerialMeter::Device)i)))
+
+--- config/Makefile.linux.in.orig       Sun Feb 24 17:00:47 2002
++++ config/Makefile.linux.in    Wed Jul 24 11:27:23 2002
+@@ -25,7 +25,15 @@
+
+ FAIL_ARCHS =3D m68k sparc
+ ifneq (,$(findstring @host_cpu@, $(FAIL_ARCHS)))
+-# nothing else for m68k
++  addserial = no
++endif
++
++ifeq (@host_cpu@, powerpc)
++  addserial = yes
++endif
++
++ifdef addserial
++# nothing else for m68k, powerpc
+ else
+ OBJS += serialmeter.o
+ endif
+
+--- ./linux/serialmeter.cc.orig	Fri Mar 31 11:23:59 2000
++++ ./linux/serialmeter.cc	Fri Mar 31 11:24:44 2000
+@@ -32,7 +32,7 @@
+ 
+ #include <unistd.h>
+ #if defined(GNULIBC) || defined(__GLIBC__)
+-#include <sys/io.h>
++#include "io_patched.h"
+ #ifndef __alpha__
+ #include <sys/perm.h>
+ #endif
++++ ./linux/io_patched.h	Fri Mar 31 11:22:59 2000
+@@ -0,0 +1,46 @@
++/* Copyright (C) 1996 Free Software Foundation, Inc.
++   This file is part of the GNU C Library.
++
++   The GNU C Library is free software; you can redistribute it and/or
++   modify it under the terms of the GNU Library General Public License as
++   published by the Free Software Foundation; either version 2 of the
++   License, or (at your option) any later version.
++
++   The GNU C Library is distributed in the hope that it will be useful,
++   but WITHOUT ANY WARRANTY; without even the implied warranty of
++   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++   Library General Public License for more details.
++
++   You should have received a copy of the GNU Library General Public
++   License along with the GNU C Library; see the file COPYING.LIB.  If not,
++   write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
++   Boston, MA 02111-1307, USA.  */
++
++#ifndef	_SYS_IO_H
++
++#define	_SYS_IO_H	1
++#include <features.h>
++
++__BEGIN_DECLS
++
++/* Get constants from kernel header files. */
++#include <asm/io.h>
++
++/* If TURN_ON is TRUE, request for permission to do direct i/o on the
++   port numbers in the range [FROM,FROM+NUM-1].  Otherwise, turn I/O
++   permission off for that range.  This call requires root privileges.
++
++   Portability note: not all Linux platforms support this call.  Most
++   platforms based on the PC I/O architecture probably will, however.
++   E.g., Linux/Alpha for Alpha PCs supports this.  */
++extern int ioperm __P ((unsigned long int __from, unsigned long int __num,
++			int __turn_on));
++
++/* Set the I/O privilege level to LEVEL.  If LEVEL>3, permission to
++   access any I/O port is granted.  This call requires root
++   privileges. */
++extern int iopl __P ((int __level));
++
++__END_DECLS
++
++#endif /* _SYS_IO_H */
+
+--- linux/cpumeter.cc.orig      Wed Feb 24 17:16:20 1999
++++ linux/cpumeter.cc   Wed Jul 24 18:34:47 2002
+@@ -113,14 +113,11 @@
+
+   int cpuCount = 0;
+   char buf[1024];
+-  while (!stats.eof()){
+-    stats.getline(buf, 1024);
+-    if (!stats.eof()){
+-      if (!strncmp(buf, "cpu", 3) && buf[3] != ' ')
++  while (stats.getline(buf,1024)){
++      if (!strncmp(buf, "cpu", 3) && buf[3] != ' '){
+           cpuCount++;
+-    }
++       }
+   }
+-
+   return cpuCount;
+ }
+
