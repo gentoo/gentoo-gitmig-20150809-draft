@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5.ebuild,v 1.4 2003/07/12 09:22:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5.ebuild,v 1.5 2003/07/22 12:56:02 aliz Exp $
 
 inherit flag-o-matic
 
@@ -19,11 +19,11 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 #this one is reported to cause trouble on pentium4 m series
-filter-flags "-mfpmath=sse"
+filter-mfpmath "sse"
 
 #here I need (surprise) to increase optimization:
 #--enable-i386-hacks requires -fomit-frame-pointer to work properly
-export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -fomit-frame-pointer"
+is-flag "-fomit-frame-pointer" || append-flags "-fomit-frame-pointer"
 
 pkg_setup() {
 	einfo ""
