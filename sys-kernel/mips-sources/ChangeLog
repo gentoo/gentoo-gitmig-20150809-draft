@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.24 2004/02/10 06:44:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.25 2004/02/18 21:41:17 kumba Exp $
+
+*mips-sources-2.4.23-r6 (18 Feb 2004)
+
+  18 Feb 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.21-r4.ebuild,
+  mips-sources-2.4.21-r6.ebuild, mips-sources-2.4.21-r7.ebuild,
+  mips-sources-2.4.22-r10.ebuild, mips-sources-2.4.22-r7.ebuild,
+  mips-sources-2.4.22-r9.ebuild, mips-sources-2.4.23-r3.ebuild,
+  mips-sources-2.4.23-r5.ebuild, mips-sources-2.4.23-r6.ebuild,
+  files/do_munmap-fix.patch:
+  Added a patch to fix a possible kernel vulnerability in do_munmap. Due to this
+  requiring an ebuild bump, the old sources were all removed and the sources
+  containing the cobalt patches were bumped up.
 
 *mips-sources-2.4.23-r5 (10 Feb 2004)
 
