@@ -1,29 +1,32 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.7-r1.ebuild,v 1.2 2004/01/03 18:22:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r3.ebuild,v 1.1 2004/02/04 15:32:45 usata Exp $
 
-inherit eutils
-
-IUSE="maildir ncurses static"
+IUSE="maildir ncurses static doc cjk"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 
-MYPATCH="${P/-/_}-18.diff"
-SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz
-	mirror://debian/pool/main/z/${PN}/${MYPATCH}.gz"
+MYDATE="20040204"
+
+SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
+	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )
+	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )"
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="x86 alpha ~ppc ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 
-DEPEND="${RDEPEND}
-	sys-apps/groff"
+DEPEND="virtual/glibc
+	sys-apps/groff
+	${RDEPEND}"
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${MYPATCH}
+	cd ${S}
+	use cjk && epatch ../${P}-euc-0.2.patch
+	epatch ${FILESDIR}/${PN}-strncmp.diff
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
@@ -70,7 +73,17 @@ src_install() {
 	insinto /etc/zsh
 	doins ${FILESDIR}/zprofile
 
+	keepdir /usr/share/zsh/site-functions
+	insinto /usr/share/zsh/site-functions
+	newins ${FILESDIR}/_portage-${MYDATE} _portage
+
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
+
+	if [ "`use doc`" ] ; then
+		dohtml Doc/*
+		insinto /usr/share/doc/${PF}
+		doins Doc/zsh{.dvi,_us.ps,_a4.ps}
+	fi
 
 	docinto StartupFiles
 	dodoc StartupFiles/z*

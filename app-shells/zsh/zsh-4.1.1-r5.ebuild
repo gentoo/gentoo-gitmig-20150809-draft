@@ -1,11 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r4.ebuild,v 1.3 2004/02/04 15:32:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r5.ebuild,v 1.1 2004/02/04 15:32:45 usata Exp $
 
 IUSE="cjk maildir ncurses static doc"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
+
+MYDATE="20040204"
 
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )
@@ -13,7 +15,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="x86 alpha ppc sparc amd64 hppa"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~hppa"
 
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
@@ -71,7 +73,7 @@ src_compile() {
 	fi
 
 	# emake still b0rks
-	make || die "make failed"
+	emake -j1 || die "make failed"
 	#make check || die "make check failed"
 }
 
@@ -89,7 +91,7 @@ src_install() {
 
 	keepdir /usr/share/zsh/site-functions
 	insinto /usr/share/zsh/site-functions
-	doins ${FILESDIR}/_portage
+	newins ${FILESDIR}/_portage-${MYDATE} _portage
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
