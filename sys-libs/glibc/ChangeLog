@@ -1,9 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.170 2004/06/04 15:15:51 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.171 2004/06/04 18:15:25 iluxa Exp $
 
   04 Jun 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.3_pre20040529.ebuild:
   stable on amd64
+
+  04 Jun 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  glibc-2.3.3_pre20040420-r1.ebuild, glibc-2.3.4.20040602.ebuild:
+  glibc is not using n32/n64 use flags (yet)
 
   04 Jun 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
   glibc-2.3.4.20040602.ebuild:

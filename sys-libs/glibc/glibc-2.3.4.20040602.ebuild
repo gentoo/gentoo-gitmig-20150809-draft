@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.9 2004/06/04 14:30:44 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.10 2004/06/04 18:15:25 iluxa Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -227,7 +227,7 @@ src_unpack() {
 	# __guard_setup__stack_smash_handler
 	#
 	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" ]
+	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a "${ARCH}" != "mips" ]
 	then
 		cd ${S}
 		epatch ${FILESDIR}/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch
@@ -236,7 +236,7 @@ src_unpack() {
 	fi
 
 	# patch this regardless of architecture, although it's ssp-related
-	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-frandom-detect.patch
+	use mips || epatch ${FILESDIR}/2.3.3/glibc-2.3.3-frandom-detect.patch
 
 	#
 	# *** PaX related patches starts here ***
@@ -245,7 +245,7 @@ src_unpack() {
 	# localedef contains nested function trampolines, which trigger
 	# segfaults under PaX -solar
 	# Debian Bug (#231438, #198099)
-	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch
+	use mips || epatch ${FILESDIR}/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch
 
 
 	# With latest versions of glibc, a lot of apps failed on a PaX enabled
@@ -256,14 +256,14 @@ src_unpack() {
 	# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
 	# to make the stack executable due to some libraries not containing the
 	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
-	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch
+	use mips || ( cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch )
 
 	# Program header support for PaX.
-	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff
+	use mips || ( cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff )
 
 	# Suppress unresolvable relocation against symbol `main' in Scrt1.o
 	# can be reproduced with compiling net-dns/bind-9.2.2-r3 using -pie
-	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-got-fix.diff
+	use mips || epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-got-fix.diff
 
 	#
 	# *** PaX related patches ends here ***
@@ -281,14 +281,15 @@ src_unpack() {
 	if [ "${ARCH}" = "mips" ]
 	then
 		cd ${S}
-		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
-		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
+		#epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
+		#epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-dl-machine-calls.diff
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-incl-sgidefs.diff
 		epatch ${FILESDIR}/2.3.3/mips-addabi.diff
 		epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
 		epatch ${FILESDIR}/2.3.3/semtimedop.diff
 		epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+		epatch ${FILESDIR}/2.3.4/mips-sysdep-cancel.diff
 		# Need to install into /lib for n32-only userland for now.
 		# Propper solution is to make all userland /lib{32|64}-aware.
 		use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040420-r1.ebuild,v 1.5 2004/06/04 07:30:53 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040420-r1.ebuild,v 1.6 2004/06/04 18:15:25 iluxa Exp $
 
-IUSE="nls pic build nptl erandom n32 n64"
+IUSE="nls pic build nptl erandom"
 
 inherit eutils flag-o-matic gcc
 
