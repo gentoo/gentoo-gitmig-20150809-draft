@@ -1,10 +1,18 @@
 # ChangeLog for app-arch/dar
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.11 2004/06/24 21:29:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.12 2004/06/29 03:29:41 matsuu Exp $
+
+*dar-2.1.3 (29 Jun 2004)
+
+  29 Jun 2004; MATSUU Takuto <matsuu@gentoo.org> +dar-2.1.3.ebuild:
+  Version bumped.
+  Added filter-flags. Bugs #55243.
+  Fixed amd64 build issue.
 
 *dar-2.1.2-r1 (23 Apr 2004)
 
-  23 Apr 2004; <matsuu@gentoo.org> -dar-2.1.0-r1.ebuild, dar-2.1.2-r1.ebuild:
+  23 Apr 2004; MATSUU Takuto <matsuu@gentoo.org> -dar-2.1.0-r1.ebuild,
+  dar-2.1.2-r1.ebuild:
   Added --disable-upx. Bug 46745.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> dar-2.1.0-r1.ebuild:
@@ -12,7 +20,8 @@
 
 *dar-2.1.2 (02 Apr 2004)
 
-  02 Apr 2004; <matsuu@gentoo.org> dar-2.1.0.ebuild, dar-2.1.2.ebuild:
+  02 Apr 2004; MATSUU Takuto <matsuu@gentoo.org> dar-2.1.0.ebuild,
+  dar-2.1.2.ebuild:
   Version bumped. Bug#46428.
 
   21 Feb 2004; <matsuu@gentoo.org> dar-2.1.0.ebuild:
