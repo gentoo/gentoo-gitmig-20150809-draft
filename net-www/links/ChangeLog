@@ -1,6 +1,28 @@
 # ChangeLog for net-www/links
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.13 2002/08/29 22:42:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.14 2002/09/11 15:57:45 seemant Exp $
+
+*links-2.1_pre2 (11 Sep 2002)
+
+  11 Sep 2002; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre2-r2.ebuild
+  files/digest-links-2.1_pre2-r2 :
+
+  From: kevin@aptbasilicata.it (Maurizio Disimino) in bug # 7809
+
+  at the moment, links will be compiled with --enable-graphics only if
+  USE="png". If --enable-graphics is not supplied, fb WILL NOT WORK.
+  Moreover, --enable-graphis should be enabled for 'X' or 'fbcon'.
+
+  Note: if X or fbcon usegflag are enabled, links will be built in 
+  graphic mode. libpng is required to compile links in graphic mode 
+  not required in textmode),so let's add libpng for X? and fbcon?
+
+     X? ( virtual/x11 >=media-libs/libpng-1.2.1 )
+	    fbcon? ( >=media-libs/libpng-1.2.1 )"
+
+		- Fixed DEPEND and src_compile().
+		- Some cosmetic changes.
+
 
   29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> links-0.96-r2.ebuild
   links-2.1_pre2-r1.ebuild :
