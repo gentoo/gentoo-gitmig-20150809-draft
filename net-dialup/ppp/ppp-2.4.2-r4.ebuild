@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.7 2004/09/27 10:57:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r4.ebuild,v 1.1 2004/09/27 11:08:14 lanius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="Point-to-point protocol - patched for PPPOE"
 HOMEPAGE="http://www.samba.org/ppp"
-SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz"
+SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
+	http://www.polbox.com/h/hs001/ppp-2.4.2-mppe-mppc-1.1.patch.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="ipv6 activefilter pam atm"
+IUSE="ipv6 activefilter pam atm mppe-mppc"
 
 RDEPEND="virtual/libc
 	>=net-libs/libpcap-0.8
@@ -28,7 +29,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/cflags.patch
 	epatch ${FILESDIR}/${PV}/pcap.patch
 	epatch ${FILESDIR}/${PV}/control_c.patch
-	epatch ${FILESDIR}/${PV}/stdopt-mppe-mppc-0.82.patch.gz
+
+	use mppe-mppc && {
+		einfo "Enabling mppe-mppc support"
+		epatch ${DISTDIR}/ppp-2.4.2-mppe-mppc-1.1.patch.gz
+	}
 
 	if use atm; then
 		einfo "Enabling PPPoATM support"
@@ -116,6 +121,9 @@ src_install() {
 	insinto /etc/modules.d
 	insopts -m0644
 	newins ${FILESDIR}/${PV}/modules.ppp ppp
+	if use mppe-mppc; then
+		echo 'alias ppp-compress-18 ppp_mppe_mppc' >> ${D}/etc/modules.d/ppp
+	fi
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
 	dodoc ${FILESDIR}/${PV}/README.mpls
@@ -137,7 +145,7 @@ src_install() {
 	doins scripts/*
 
 	# install radiusclient
-	cd radiusclient
+	cd pppd/plugins/radius/radiusclient
 	make DESTDIR=${D} install || die
 }
 

@@ -7,4 +7,3 @@ alias ppp-compress-21	bsd_comp
 alias ppp-compress-24	ppp_deflate
 alias ppp-compress-26	ppp_deflate
 alias net-pf-24		pppoe
-alias ppp-compress-18 ppp_mppe_mppc
