@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.3 2005/01/01 16:30:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.4 2005/01/10 20:14:30 luckyduck Exp $
 
 DESCRIPTION="A tool for manipulating PDF documents"
 HOMEPAGE="http://www.accesspdf.com/pdftk"
 SRC_URI="http://www.pdfhacks.com/pdftk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 DEPEND="virtual/libc
 	>=sys-devel/gcc-3.3"
