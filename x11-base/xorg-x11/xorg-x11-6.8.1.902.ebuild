@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.22 2005/01/25 18:35:04 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.23 2005/01/25 21:05:12 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1169,8 +1169,7 @@ setup_dynamic_libgl() {
 		local x=""
 		for x in ${D}/usr/$(get_libdir)/libGL.so* \
 			${D}/usr/$(get_libdir)/libGL.la \
-			${D}/usr/$(get_libdir)/libGL.a \
-			${D}/usr/$(get_libdir)/libMesaGL.so; do
+			${D}/usr/$(get_libdir)/libGL.a; do
 			if [ -f ${x} -o -L ${x} ]; then
 				# libGL.a cause problems with tuxracer, etc
 				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${PN}/lib
@@ -1278,7 +1277,6 @@ fix_opengl_symlinks() {
 	# Create required symlinks
 	dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so
 	dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so.1
-	dosym libGL.so.1.2 /usr/$(get_libdir)/libMesaGL.so
 }
 
 #################
