@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ksambaplugin-0.4.2.ebuild,v 1.2 2003/08/03 03:56:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ksambaplugin-0.4.2.ebuild,v 1.3 2003/08/19 22:19:45 vapier Exp $
 
 inherit kde-base
 need-kde 3
@@ -16,4 +16,5 @@ IUSE="debug"
 newdepend ">=kde-base/kdebase-3"
 RDEPEND="${RDEPEND} >=net-fs/samba-2.2.7"
 
-myconf="$myconf --enable-sso `use_enable debug debugging` `use_enable debug profiling`"
+use debug && myconf="$myconf --enable-debugging --enable-porfiling"
+myconf="$myconf --enable-sso"
