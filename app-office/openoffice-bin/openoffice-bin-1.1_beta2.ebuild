@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_beta2.ebuild,v 1.1 2003/06/19 20:50:18 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_beta2.ebuild,v 1.2 2003/06/19 21:24:10 pauldv Exp $
 
 IUSE="kde gnome"
 
@@ -29,7 +29,16 @@ SRC_URI="x86? ( http://vlaai.snt.utwente.nl/pub/software/openoffice/stable/${MY_
  	 ppc? ( ftp://ftp.yellowdoglinux.com/pub/yellowdog/software/openoffice/OOo_${MY_PV}_LinuxPowerPC_installer.tar.gz )"
 HOMEPAGE="http://www.openoffice.org"
 
-DEPEND="virtual/glibc
+DEPEND="sys-apps/findutils
+	virtual/glibc
+	>=dev-lang/perl-5.0
+	virtual/x11
+	app-arch/zip
+	app-arch/unzip
+	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
+	!app-office/openoffice"
+
+RDEPEND="virtual/glibc
 	>=dev-lang/perl-5.0
 	virtual/x11
 	app-arch/zip
@@ -162,7 +171,7 @@ src_install() {
 		doins ${kdeloc}/.order
 		dodir /usr/share
 		# Install the icons and mime info
-		cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
+		cp -r ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
 		
 		for x in ${kdeloc}/*.desktop
 		do
@@ -187,6 +196,9 @@ src_install() {
 	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
 	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
 	keepdir ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
+
+	#touch files to make portage uninstalling happy (#22593)
+	find ${D} -type f -exec touch {} \;
 }
 
 pkg_preinst() {
