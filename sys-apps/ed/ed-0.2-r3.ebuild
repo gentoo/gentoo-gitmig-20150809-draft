@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.24 2004/02/23 00:41:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.25 2004/03/02 16:54:21 iggy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your basic line editor"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/ed/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ed/"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa mips ia64 ppc64"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa mips ia64 ppc64 s390"
 SLOT="0"
 LICENSE="GPL-2"
 
