@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.88 2004/08/20 20:36:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.89 2004/08/24 18:47:05 spock Exp $
+
+*gentoo-dev-sources-2.6.8-r2 (24 Aug 2004)
+
+  24 Aug 2004; Michal Januszewski <spock@gentoo.org>
+  +gentoo-dev-sources-2.6.8-r2.ebuild:
+  New release featuring fbsplash and vesafb-tng fixes. It also includes a patch
+  that will allow non-privileged users to use cdrecord (bug #60756). Note that
+  this will be dropped once 2.6.9 is out. Prepare you suid'ed cdrecord before
+  this time comes :)
 
   20 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gentoo-dev-sources-2.6.8(-r1).ebuild:
