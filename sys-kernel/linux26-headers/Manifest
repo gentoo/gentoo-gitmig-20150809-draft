@@ -1,41 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 226bd8a4361c56c948c862c99bdc6453 ChangeLog 4901
-MD5 870218f86efb44e8c56ecb360c7af9b4 linux26-headers-2.6.1.ebuild 4111
-MD5 b751725e8dcac2ef109557ec4826812e linux26-headers-2.6.3-r1.ebuild 4028
-MD5 26b9fb030b07a5a83e25ea025c17e8b3 linux26-headers-2.6.4.ebuild 4176
-MD5 35eda8dd7aa6785dae7c32d95f7fc47c linux26-headers-2.6.5.ebuild 4187
 MD5 ab5655820a71561f697cf30229948a7f linux26-headers-2.6.6-r1.ebuild 4217
-MD5 e545ff6a66853894c5fcbc60f199f262 linux26-headers-2.6.6.ebuild 4062
+MD5 b751725e8dcac2ef109557ec4826812e linux26-headers-2.6.3-r1.ebuild 4028
+MD5 5ebec26c4f80566b068140d82cc7a709 ChangeLog 5096
+MD5 26b9fb030b07a5a83e25ea025c17e8b3 linux26-headers-2.6.4.ebuild 4176
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
 MD5 4e5f704e93509c4aed468fe1a61355a6 linux26-headers-2.6.7-r3.ebuild 3903
-MD5 6396a553f9cc42a737e239676690a256 linux26-headers-2.6.7-r4.ebuild 3907
-MD5 1f7aaa49614b3055b6110518b1ed23ee files/digest-linux26-headers-2.6.1 66
-MD5 1a3b49dce5bc80827496967e767a4a04 files/digest-linux26-headers-2.6.3-r1 66
-MD5 53405777e395f5520722f9fb2398ddd8 files/digest-linux26-headers-2.6.4 66
+MD5 35eda8dd7aa6785dae7c32d95f7fc47c linux26-headers-2.6.5.ebuild 4187
+MD5 0eb12541b0f0cf4db1a128a9460db63a linux26-headers-2.6.7-r4.ebuild 4028
+MD5 870218f86efb44e8c56ecb360c7af9b4 linux26-headers-2.6.1.ebuild 4111
+MD5 e545ff6a66853894c5fcbc60f199f262 linux26-headers-2.6.6.ebuild 4062
 MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-linux26-headers-2.6.5 66
-MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux26-headers-2.6.6 66
-MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux26-headers-2.6.6-r1 66
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux26-headers-2.6.7-r3 66
-MD5 b3e4e51616a061327b46cbd31132c8c8 files/generate-asm-sparc 1654
-MD5 7f5b6765680735a897bb2fb9e227f6b6 files/linux26-headers-2.6.0-appCompat.patch 17983
-MD5 8a065c0dc3b8fac8747de35f1af75a2c files/linux26-headers-2.6.0-fb.patch 386
-MD5 537c756a05fe1a6819277938d570b70a files/linux26-headers-2.6.0-strict-ansi-fix.patch 1484
+MD5 7c487aa645f5d88e86c3252ab44ef5ae files/linux26-headers-2.6.7-appCompat.patch 42608
 MD5 a73786f0b9dda7e9ebacb91a192384f9 files/linux26-headers-2.6.0-sysctl_h-compat.patch 352
-MD5 c33f70f0dc30a6fce5cfea06233defd4 files/linux26-headers-2.6.3-appCompat.patch 17484
-MD5 598136365858338b26557b7587c6725f files/linux26-headers-2.6.3-strict-ansi-fix.patch 4166
-MD5 ec3d195f7d40d599802d5c0c5ad8f502 files/linux26-headers-2.6.4-appCompat.patch 17240
-MD5 aa9ba92e8479bdb5f69b03b5c72be866 files/linux26-headers-2.6.4-unistd-nptl-fix.patch 362
-MD5 8fbc202526e4c1b1672c5274bbff4e5f files/linux26-headers-2.6.6-appCompat.patch 26689
 MD5 830c6d1dcb1b22b9095e6f16f3ebdf85 files/linux26-headers-2.6.6-tcp_info-DRS-backport.patch 288
-MD5 0adbe01816401151780a13bbe1c708f6 files/linux26-headers-2.6.7-appCompat.patch 43136
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux26-headers-2.6.7-r4 66
+MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux26-headers-2.6.6-r1 66
+MD5 c33f70f0dc30a6fce5cfea06233defd4 files/linux26-headers-2.6.3-appCompat.patch 17484
+MD5 8fbc202526e4c1b1672c5274bbff4e5f files/linux26-headers-2.6.6-appCompat.patch 26689
+MD5 d78e0d94873de4518bca401d5688401c files/linux26-headers-2.6.7-prefetch.patch 528
+MD5 598136365858338b26557b7587c6725f files/linux26-headers-2.6.3-strict-ansi-fix.patch 4166
+MD5 7f5b6765680735a897bb2fb9e227f6b6 files/linux26-headers-2.6.0-appCompat.patch 17983
+MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux26-headers-2.6.6 66
+MD5 1a3b49dce5bc80827496967e767a4a04 files/digest-linux26-headers-2.6.3-r1 66
+MD5 aa9ba92e8479bdb5f69b03b5c72be866 files/linux26-headers-2.6.4-unistd-nptl-fix.patch 362
+MD5 ec3d195f7d40d599802d5c0c5ad8f502 files/linux26-headers-2.6.4-appCompat.patch 17240
+MD5 537c756a05fe1a6819277938d570b70a files/linux26-headers-2.6.0-strict-ansi-fix.patch 1484
+MD5 53405777e395f5520722f9fb2398ddd8 files/digest-linux26-headers-2.6.4 66
+MD5 1f7aaa49614b3055b6110518b1ed23ee files/digest-linux26-headers-2.6.1 66
+MD5 b3e4e51616a061327b46cbd31132c8c8 files/generate-asm-sparc 1654
+MD5 8a065c0dc3b8fac8747de35f1af75a2c files/linux26-headers-2.6.0-fb.patch 386
 MD5 6dd79a655f006aebb7206203f3654976 files/linux26-headers-2.6.7-generic-arm-prepare.patch 978
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBDiwWHTu7gpaalycRAhh5AJ9F9GJlETGN8nBzMNCTg2MF0SNAYQCfbBD4
-K9J+U53uZYWohKypIDnP9Qw=
-=bJtK
------END PGP SIGNATURE-----

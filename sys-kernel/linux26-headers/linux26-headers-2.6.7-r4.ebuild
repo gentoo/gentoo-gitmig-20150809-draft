@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.7-r4.ebuild,v 1.2 2004/08/02 11:56:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.7-r4.ebuild,v 1.3 2004/08/03 14:30:06 lu_zero Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -52,6 +52,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.6.0-fb.patch
 	epatch ${FILESDIR}/${PN}-2.6.7-generic-arm-prepare.patch
 	epatch ${FILESDIR}/${PN}-2.6.7-appCompat.patch
+	use x86 	&& epatch ${FILESDIR}/${PN}-2.6.7-prefetch.patch
+	use amd64 	&& epatch ${FILESDIR}/${PN}-2.6.7-prefetch.patch
 }
 
 src_compile() {
