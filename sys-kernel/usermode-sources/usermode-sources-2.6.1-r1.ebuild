@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.1-r1.ebuild,v 1.1 2004/01/28 09:21:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.1-r1.ebuild,v 1.2 2004/01/30 23:27:20 spock Exp $
 
+K_NOUSENAME="yes"
 ETYPE="sources"
-inherit kernel
+inherit kernel-2
 
 UML_PATCH="uml-patch-2.6.1-1"
 
@@ -33,7 +34,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${DISTDIR}/${UML_PATCH}.bz2
 
-	kernel_universal_unpack
+	universal_unpack
 }
 
 src_compile() {
