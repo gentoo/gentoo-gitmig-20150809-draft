@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/aqhbci-qt-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-qt-tools/ChangeLog,v 1.1 2005/01/23 01:52:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-qt-tools/ChangeLog,v 1.2 2005/01/30 21:50:36 weeve Exp $
+
+  30 Jan 2005; Jason Wever <weeve@gentoo.org>
+  aqhbci-qt-tools-0.9.17_beta.ebuild:
+  Added ~sparc keyword wrt bug #73702.
 
 *aqhbci-qt-tools-0.9.17_beta (23 Jan 2005)
 

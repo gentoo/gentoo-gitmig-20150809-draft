@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/aqhbci
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci/ChangeLog,v 1.6 2005/01/23 01:48:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci/ChangeLog,v 1.7 2005/01/30 21:47:36 weeve Exp $
+
+  30 Jan 2005; Jason Wever <weeve@gentoo.org> aqhbci-0.9.19_beta.ebuild:
+  Added ~sparc keyword wrt bug #73702.
 
 *aqhbci-0.9.19_beta (23 Jan 2005)
 
