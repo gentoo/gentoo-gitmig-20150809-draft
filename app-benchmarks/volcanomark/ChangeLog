@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/volcanomark
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volcanomark/ChangeLog,v 1.1 2004/02/09 02:50:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volcanomark/ChangeLog,v 1.2 2004/02/09 03:32:47 dragonheart Exp $
+
+  09 Feb 2004; Daniel Black <dragonheart@gentoo.org>
+  volcanomark-2.5.0.9.ebuild:
+  Fixed a few things. Should be able to run from any dir now.
 
 *volcanomark-2.5.0.9 (09 Feb 2004)
 
