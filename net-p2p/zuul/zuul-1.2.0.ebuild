@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Don Seiler <rizzo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/zuul/zuul-1.2.0.ebuild,v 1.6 2004/06/25 00:37:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/zuul/zuul-1.2.0.ebuild,v 1.7 2004/10/03 21:51:55 swegener Exp $
 
 inherit webapp-apache
 

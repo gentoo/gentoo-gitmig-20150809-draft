@@ -5,14 +5,14 @@ MD5 03ebda4ae856ac4df43be3417e2a6322 ChangeLog 1154
 MD5 b55e7bc8fa0de44dffb6301e159ff8fc metadata.xml 534
 MD5 75c3d3cc6af995406880f49e65c7dbf6 zuul-1.0.0.ebuild 1216
 MD5 1396f9737cadf4e7a14fbb9cc385dd77 zuul-1.1.2.ebuild 1216
-MD5 2a1c8f41fa98eeacf6612dae6544a4db zuul-1.2.0.ebuild 1136
+MD5 0bf140d4447b6d21d62fa43a2e231c92 zuul-1.2.0.ebuild 1092
 MD5 79aebd3adca669a7baa793ff03748417 files/digest-zuul-1.0.0 61
 MD5 cd4f98be101a25b70d78c04ce72d6981 files/digest-zuul-1.1.2 61
 MD5 2837a795228b1fb9c93ff14fb82191f7 files/digest-zuul-1.2.0 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBXsoPI1lqEGTUzyQRAvv4AJ0QU+qBHmy5hk9TTid4lNAjKxhQcACgnMHP
-7f2iL69wvdJRR+u8VI28T0s=
-=izEO
+iD8DBQFBYHSBI1lqEGTUzyQRAjobAJ9+rnFLOviSGiaQdA9KONwiFd8IWwCcDX4t
+B+13DsIdPUEP1GNJ+X1kq84=
+=uxL8
 -----END PGP SIGNATURE-----
