@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/kdirstat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.13 2004/06/30 13:12:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.14 2004/10/19 21:32:13 motaboy Exp $
+
+  19 Oct 2004; <motaboy@gentoo.org> +files/kdirstat-2.4.0-configure.patch,
+  kdirstat-2.4.0.ebuild:
+  Added a patch for the configure script to honor the "arts" USE flag. Now it
+  should compile also with USE=-arts.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> kdirstat-2.4.0.ebuild:
   inherit eutils, trim trailing whitespace
