@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/at-poke-0.2.2.ebuild,v 1.2 2004/04/18 17:41:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/at-poke-0.2.2.ebuild,v 1.3 2004/04/28 21:36:51 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 IUSE=""
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 SLOT="0"
 
 RDEPEND=">=gnome-extra/at-spi-1.3.12
