@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.77 2004/11/13 07:07:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.78 2004/12/22 21:18:35 eradicator Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -85,6 +85,7 @@ setup-allowed-flags() {
 			x86)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32" ;;
 			alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
 			ia64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+			sparc)  ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32 -m64" ;;
 		esac
 	fi
 	# allow a bunch of flags that negate features / control ABI
