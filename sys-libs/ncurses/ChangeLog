@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.5 2002/05/18 05:13:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.6 2002/05/26 10:18:51 prez Exp $
+
+*ncurses-5.2.20020511-r1 (26 May 2002)
+
+  26 May 2002; Preston A. Elder <prez@gentoo.org> :
+
+  Added patch to make it work with gcc 3.1
 
 *ncurses-5.2.20020511 (18 May 2002)
 
