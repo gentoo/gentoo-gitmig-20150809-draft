@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r16.ebuild,v 1.6 2003/11/12 02:03:27 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r16.ebuild,v 1.7 2003/11/19 21:49:38 carpaski Exp $
 
 IUSE="build"
 
@@ -15,8 +15,8 @@ SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.ta
 HOMEPAGE="http://www.gentoo.org"
 
 # Contact carpaski a reason before you modify any of these.
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) selinux? ( dev-python/python-selinux )"
@@ -270,7 +270,7 @@ pkg_postinst() {
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/emergehelp.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/dispatch_conf.py[co]
 
-	# Old place of install
+	# New old place of install
 	rm -f ${ROOT}usr/lib/portage/pym/portage.py[co]
 	rm -f ${ROOT}usr/lib/portage/pym/output.py[co]
 	rm -f ${ROOT}usr/lib/portage/pym/cvstree.py[co]
@@ -282,18 +282,18 @@ pkg_postinst() {
 	chown -R root:portage ${ROOT}var/cache/edb/dep
 
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/emergehelp.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/emergehelp.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')"
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')"
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')"
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')"
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')"
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/emergehelp.py')"
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/emergehelp.py')"
 
 	if has ccache $FEATURES && has userpriv $FEATURES; then
 		chown -R portage:portage /var/tmp/ccache &> /dev/null
