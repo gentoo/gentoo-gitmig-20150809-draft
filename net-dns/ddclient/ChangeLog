@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.15 2005/04/04 13:44:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.16 2005/04/05 12:28:43 seemant Exp $
+
+  05 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.6.ebuild:
+  remove the -1 argument from enewgroup, fixing bug #87940 by Dmitri
+  Vassilenko <troworld@rogers.com>
 
   04 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.6.ebuild:
   more fixes (this time from flameeyes) for running ddclient daemon as
