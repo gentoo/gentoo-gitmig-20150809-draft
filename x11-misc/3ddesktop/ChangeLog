@@ -2,6 +2,11 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*3ddesktop-0.2.5 (19 Jun 2003)
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> 3ddesktop-0.2.5.ebuild:
+  bumping to latest stable
+
   17 Jun 2003; Seemant Kulleen <seemant@gentoo.org> 3ddesktop-0.2.4.ebuild:
   added freetype-1 to DEPEND. Thanks to: Jeremy Huddleston
   <jeremyhu@cory.eecs.berkeley.edu> in bug #21878
