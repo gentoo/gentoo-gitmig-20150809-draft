@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75dc14473812174a224c5fc0e43f59a6 mecab-skkserv-0.02.ebuild 822
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 f0327d380a8dc03e918fb10fd1369868 ChangeLog 437
+MD5 3e27d70c68921ddebfca1134f4af6976 files/mecab-skkserv 288
+MD5 22994defa7839b0884ccb2c98db48f46 files/digest-mecab-skkserv-0.02 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTj5fVWNWqTUmv+0RAtKIAKCNvDz6lyzs8PTOw3DckQsbmlaTugCgqEPp
+M5/euq8QJfhd6P7/pMQ5I0g=
+=Xu25
+-----END PGP SIGNATURE-----

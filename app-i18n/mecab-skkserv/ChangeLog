@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/mecab-skkserv
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/ChangeLog,v 1.1 2005/04/02 06:50:40 usata Exp $
+
+*mecab-skkserv-0.02 (02 Apr 2005)
+
+  02 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +files/mecab-skkserv,
+  +metadata.xml, +mecab-skkserv-0.02.ebuild:
+  Initial import. Thanks to bashi <bashi@dream.ie.ariake-nct.ac.jp>.
+
