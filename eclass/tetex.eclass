@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.27 2004/11/03 05:29:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.28 2004/11/05 07:15:18 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -79,7 +79,9 @@ tetex_src_unpack() {
 
 			mkdir ${S}/texmf; cd ${S}/texmf
 			umask 022
-			unpack ${TETEX_TEXMF_SRC}
+			if [ "${TETEX_PV}" == "2.0.2" ] ; then
+				unpack ${TETEX_TEXMF_SRC}
+			fi
 			unpack ${TETEX_TEXMF}
 			;;
 		patch)
@@ -157,11 +159,7 @@ tetex_src_compile() {
 		done
 	fi
 
-	if [ "${TETEX_PV}" == "2.0.2" ] ; then
-		emake -j1 texmf=/usr/share/texmf || die "make teTeX failed"
-	else
-		emake -j1 texmf=/var/lib/texmf || die "make teTeX failed"
-	fi
+	emake -j1 texmf=${TEXMF_PATH:-/usr/share/texmf} || die "make teTeX failed"
 }
 
 tetex_src_install() {
@@ -183,15 +181,11 @@ tetex_src_install() {
 				insinto /usr/share/texmf/tex/latex/a0poster
 				doins ${S}/texmf/source/latex/a0poster/a0poster.cls || die
 				doins ${S}/texmf/source/latex/a0poster/a0size.sty || die
-				# Install teTeX files
-				einfo "Installing teTeX ..."
-				einstall bindir=${D}/usr/bin texmf=${D}/usr/share/texmf || die
-			else
-				# Install teTeX files
-				einfo "Installing teTeX ..."
-				dodir /var/lib/texmf
-				einstall bindir=${D}/usr/bin texmf=${D}/var/lib/texmf || die
 			fi
+			# Install teTeX files
+			einfo "Installing teTeX ..."
+			dodir ${TEXMF_PATH:-/usr/share/texmf}/web2c
+			einstall bindir=${D}/usr/bin texmf=${D}${TEXMF_PATH:-/usr/share/texmf} || die
 			;;
 		doc)
 			dodoc PROBLEMS README
@@ -254,34 +248,33 @@ tetex_src_install() {
 			chown -R 0:0 ${D}/usr/share/texmf
 			;;
 		link)	# link is for tetex-beta
-			dodir /etc/env.d
-			echo 'CONFIG_PROTECT="/var/lib/texmf"' > ${D}/etc/env.d/98tetex
+			#dodir /etc/env.d
+			#echo 'CONFIG_PROTECT="/var/lib/texmf"' > ${D}/etc/env.d/98tetex
 			# populate /etc/texmf
 			dodir /etc/texmf
-			pushd ${D}/usr/share
-			for d in $(find texmf -name config -type d) ; do
-				dodir /etc/${d}
-				for f in ${D}/usr/share/$d/* ; do
-					mv $f ${D}/etc/$d || die "mv $f failed"
-					dosym /etc/$d/$(basename $f) /usr/share/$d/$(basename $f)
+			pushd ${D}${TEXMF_PATH}
+			for d in $(find . -name config -type d | sed -e "s:\./::g") ; do
+				dodir /etc/texmf/${d}
+				for f in $(find ${D}${TEXMF_PATH}/$d -maxdepth 1 -mindepth 1); do
+					mv $f ${D}/etc/texmf/$d || die "mv $f failed"
+					dosym /etc/texmf/$d/$(basename $f) ${TEXMF_PATH}/$d/$(basename $f)
 				done
 			done
-			for f in $(find texmf -name '*.cnf' -o -name '*.cfg' -type f) ; do
+			for f in $(find . -name '*.cnf' -o -name '*.cfg' -type f | sed -e "s:\./::g") ; do
 				if [ "${f/source/}" != "${f}" -o "${f/config/}" != "${f}" ] ; then
 					continue
 				fi
-				dodir /etc/$(dirname $f)
-				mv ${D}/usr/share/$f ${D}/etc/$(dirname $f) || die "mv $f failed."
-				dosym /etc/$f /usr/share/$f
+				dodir /etc/texmf/$(dirname $f)
+				mv ${D}${TEXMF_PATH}/$f ${D}/etc/texmf/$(dirname $f) || die "mv $f failed."
+				dosym /etc/texmf/$f ${TEXMF_PATH}/$f
 			done
 			if useq X ; then
 				dodir /etc/X11/app-defaults /etc/texmf/xdvi
-				mv ${D}/var/lib/texmf/xdvi/XDvi ${D}/etc/X11/app-defaults || die "mv XDvi failed"
-				dosym /etc/X11/app-defaults/XDvi /var/lib/texmf/xdvi/XDvi
-				mv ${D}{/var/lib,/etc}/texmf/xdvi/xdvi.cfg || die "mv xdvi.cfg failed"
-				dosym {/etc,/var/lib}/texmf/xdvi/xdvi.cfg
+				mv ${D}${TEXMF_PATH}/xdvi/XDvi ${D}/etc/X11/app-defaults || die "mv XDvi failed"
+				dosym /etc/X11/app-defaults/XDvi ${TEXMF_PATH}/xdvi/XDvi
+				#mv ${D}${TEXMF_PATH}/xdvi/xdvi.cfg ${D}/etc/texmf/xdvi/xdvi.cfg || die "mv xdvi.cfg failed"
+				#dosym /etc/texmf/xdvi.cfg ${TEXMF_PATH}/xdvi/xdvi.cfg
 			fi
-			dodir /var/lib/texmf/web2c
 			popd
 			;;
 		cnf)	# cnf is for tetex-2.0.2
