@@ -1,5 +1,5 @@
-MD5 0326928a9f8c529460c65f1c2e781586 tenebrae-1.04.ebuild 1487
-MD5 51ddf916e86b5fc28ff6097324aed0c5 ChangeLog 551
+MD5 972d5c712303ec2c8584410c46bdf601 tenebrae-1.04.ebuild 1479
+MD5 fa4dbf1a205bda179c04495734731ddf ChangeLog 543
 MD5 b251632170bb367c509d598998524a4b metadata.xml 625
 MD5 af27eea7293c16e6182d5d0099bf0ba6 files/1.04-nvidia-opengl.patch 2587
 MD5 101db2b4d5a51dc6f63c6c5433dee3c0 files/digest-tenebrae-1.04 125

@@ -1,5 +1,5 @@
-MD5 8f71b1f6417bf54b85a4b43a7fb8fa9f quake3-alternatefire-2.0.ebuild 483
-MD5 b33a99a2e88530d361635f73f7cffbdf ChangeLog 505
+MD5 1f835c99a0da4f44b4db30fba04c16a0 quake3-alternatefire-2.0.ebuild 473
+MD5 dde2e2110848cca1c278f38bcb60b23e ChangeLog 498
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 f67ccc41ebbe19157830bc66a1663111 files/digest-quake3-alternatefire-2.0 67
 MD5 87a816d75194c4ba4504efa98f9b6a2b files/server.cfg 3645
