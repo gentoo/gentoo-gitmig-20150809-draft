@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.23_rc1.ebuild,v 1.3 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.24_pre1.ebuild,v 1.1 2003/12/10 16:53:57 iggy Exp $
 
 IUSE="build"
 
@@ -22,6 +22,9 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="${KV}"
+
+# We'll see how not mirroring kernels goes over with the mirrors
+restrict="nomirror"
 
 src_unpack() {
 	unpack linux-${OKV}.tar.bz2

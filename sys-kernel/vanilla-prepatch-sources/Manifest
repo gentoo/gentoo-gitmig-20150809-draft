@@ -1,4 +1,14 @@
-MD5 fe4316873da7aca21048cd94d9a0674f vanilla-prepatch-sources-2.4.24_pre1.ebuild 1532
-MD5 0494f1bf9c499872f07c3d323914a971 ChangeLog 3719
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7602c46ff1f957ebf3b8ad961e915086 vanilla-prepatch-sources-2.4.24_pre1.ebuild 1533
+MD5 c485b5138171f399cc748b67e6fb39d7 ChangeLog 4073
 MD5 17ded3e049cc5ea4571a590f031fd463 metadata.xml 449
 MD5 00ab83123aa542d729367d6c00a69ec2 files/digest-vanilla-prepatch-sources-2.4.24_pre1 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.3 (GNU/Linux)
+
+iD8DBQE/10/N+cPN+Z7qK9cRAoqQAKClUmAu0pKPA3taeaRrLsRqRbkf0gCgxHsx
+qpvquzDe+YiWIebdTgaYtAg=
+=HQaP
+-----END PGP SIGNATURE-----
