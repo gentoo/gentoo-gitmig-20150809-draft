@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/gai-0.5.5.ebuild,v 1.4 2004/08/08 00:50:25 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/gai-0.5.5.ebuild,v 1.5 2004/09/02 18:11:24 pvdabeel Exp $
 
 IUSE="opengl gnome"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gai/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 DEPEND=">=x11-libs/gtk+-2.0.0
 	opengl? ( >=x11-libs/gtkglext-1.0.5 )
