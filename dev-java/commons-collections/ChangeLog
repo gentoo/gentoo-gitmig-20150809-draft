@@ -1,9 +1,14 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.3 2002/11/02 22:04:57 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.4 2002/11/05 03:00:49 strider Exp $
 
 *commons-collections-2.1-r1 (02 Nov 2002)
 
+  04 Nov 2002; Adrian Almenar <strider@gentoo.org> commons-collections-2.1-r1.ebuild:
+  Changed KEYWORDS, removed other arch's cause i have not tested it
+  leaving only ~x86. UnMasking it from packages.mask. 
+  Removed commons-collections-2.0.ebuild commons-collections-2.1.ebuild 
+  files/digest-commons-collections-2.0 files/digest-commons-collections-2.1      
   02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> commons-collections-2.1-r1.ebuild files/digest-commons-collections-2.1-r1 :
   Adds jikes compilation support. Ebuild submitted by the 
   ever-so-overproductive Adrian Almenar <aalmenar@conectium.com>.
