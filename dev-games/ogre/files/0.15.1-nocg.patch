@@ -1,0 +1,30 @@
+--- configure.in.orig	2004-04-14 12:04:49.000000000 +0200
++++ configure.in	2004-04-14 12:05:43.000000000 +0200
+@@ -44,12 +44,6 @@
+ ****************************************************************]))
+ AC_CHECK_LIB(ILU, iluFlipImage)
+ AC_CHECK_LIB(pthread, pthread_create)
+-AC_CHECK_LIB(Cg, cgCreateProgram,,AC_MSG_ERROR([
+-****************************************************************
+-* You do not have the nVidia Cg libraries installed.           *
+-* Go to http://developer.nvidia.com/object/cg_toolkit.html     *
+-* (Click on Cg_Linux.tar.gz).                                  *
+-****************************************************************]))
+ AC_CHECK_FUNC(snprintf, AC_DEFINE(HAVE_SNPRINTF,,snprintf))
+ AC_CHECK_FUNC(vsnprintf, AC_DEFINE(HAVE_VSNPRINTF,,vsnprintf))
+ 
+@@ -94,9 +88,6 @@
+     PlugIns/BSPSceneManager/Makefile \
+     PlugIns/BSPSceneManager/src/Makefile \
+     PlugIns/BSPSceneManager/include/Makefile \
+-    PlugIns/CgProgramManager/Makefile \
+-    PlugIns/CgProgramManager/src/Makefile \
+-    PlugIns/CgProgramManager/include/Makefile \
+     PlugIns/FileSystem/Makefile \
+     PlugIns/FileSystem/src/Makefile \
+     PlugIns/FileSystem/include/Makefile \
+--- PlugIns/Makefile.am.orig	2004-04-14 12:05:54.000000000 +0200
++++ PlugIns/Makefile.am	2004-04-14 12:06:03.000000000 +0200
+@@ -1 +1 @@
+-SUBDIRS = BSPSceneManager CgProgramManager FileSystem ParticleFX OctreeSceneManager GuiElements NatureSceneManager
++SUBDIRS = BSPSceneManager FileSystem ParticleFX OctreeSceneManager GuiElements NatureSceneManager
