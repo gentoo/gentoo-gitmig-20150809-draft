@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/skyutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.7 2004/04/18 01:35:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.8 2004/06/06 09:08:21 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> -skyutils-2.1.ebuild,
+  -skyutils-2.4.ebuild, skyutils-2.6.ebuild:
+  x86 keyword. Clean out old versions
 
 *skyutils-2.6 (18 Apr 2004)
 
