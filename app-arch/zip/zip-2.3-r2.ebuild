@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.16 2004/01/29 07:28:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.17 2004/01/29 13:23:36 vapier Exp $
 
 inherit gcc
 
@@ -30,8 +30,8 @@ src_compile() {
 	emake \
 		-f unix/Makefile \
 		CC="$(gcc-getCC)" \
-		CPP="$(gcc-getCXX)" \
-		generic_gcc || die
+		CPP="$(gcc-getCC) -E" \
+		generic || die
 }
 
 src_install() {
