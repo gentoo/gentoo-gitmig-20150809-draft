@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-nas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/ChangeLog,v 1.12 2004/11/17 06:35:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/ChangeLog,v 1.13 2004/11/23 03:34:51 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-nas-0.2-r1.ebuild:
+  -sparc because it produces static noise.
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-nas-0.2-r1.ebuild:
+  -sparc as it's producing static sound
 
   16 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-nas-0.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.14 2004/11/17 06:35:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.15 2004/11/23 03:34:51 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.xmms.org/plugins_input.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc -sparc x86"
 
 DEPEND="media-sound/xmms
 	media-libs/nas"

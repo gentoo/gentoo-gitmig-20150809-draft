@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 45c25cdb3a8708deb84d77db50b1bf91 ChangeLog 1787
+MD5 c9f2eaf3a4284649ce98856acb02905e ChangeLog 2038
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 8f7711159186c3642460a0386b3e48a2 xmms-nas-0.2-r1.ebuild 782
+MD5 e7e4fbe1a2aa45397cb8785700f0b522 xmms-nas-0.2-r1.ebuild 783
 MD5 341b06cedc7d0e0bbdb4d606611ce5c2 files/digest-xmms-nas-0.2-r1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBmvEhArHZZzCEUG0RAlmUAJ9ywdu3EffeDMQIJwIkPB+gIE4lEACfXn8L
-ENSz3RxcbWsX2/bPLjyNOeA=
-=BOz5
+iD8DBQFBoq/mArHZZzCEUG0RAq2sAJ0f2sveLMs+2ugQ/raQQfoBmQYzmQCfTiEJ
+Lwgd+GsYyKOlmGl54Gomkug=
+=zwQK
 -----END PGP SIGNATURE-----
