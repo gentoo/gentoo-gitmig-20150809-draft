@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/kde-i18n-sr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-sr/ChangeLog,v 1.6 2002/11/22 23:19:22 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-sr/ChangeLog,v 1.7 2002/12/09 21:58:11 hannes Exp $
+
+*kde-i18n-sr-3.1_rc5 (09 Dec 2002)
+
+  09 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kde-i18n-sr-3.1_rc5.ebuild:
+  version bump
 
 *kde-i18n-sr-3.1 (23 Nov 2002)
 
