@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.14 2002/05/11 08:42:57 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.15 2002/05/15 12:47:18 verwilst Exp $
+
+*qt-3.0.4.1 (14 May 2002)
+
+  14 May 2002; Bart Verwilst <verwilst@gentoo.org> changelog:
+  QT-copy of QT 3.0.5, fixes some quite nasty bugs, because qt 3.0.4 seems  
+  to add more bugs than it fixes..
 
   11 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
   Fix bug #2483 (missing lcms dep)
