@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.6 2003/05/21 15:09:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.7 2003/06/10 12:05:34 seemant Exp $
 
 inherit eutils
 
+S=${WORKDIR}/${P}
 DESCRIPTION="A library for configuring and customizing font access."
-SRC_URI="http://fontconfig.org/release/${P}.tar.gz"
 HOMEPAGE="http://fontconfig.org/"
+SRC_URI="http://fontconfig.org/release/${P}.tar.gz
+	mirror://gentoo/${PF}-gentoo.tar.bz2"
 
 IUSE="doc"
 LICENSE="fontconfig"
@@ -19,7 +21,8 @@ SLOT="1.0"
 # -- danarmak@gentoo.org
 KEYWORDS="x86 ~alpha ~ppc ~sparc ~mips ~hppa ~arm"
 
-DEPEND=">=media-libs/freetype-2.1.4
+DEPEND=">=sys-apps/sed-4
+	>=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3
 	>=sys-apps/ed-0.2"
 
@@ -27,9 +30,10 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-
+	unpack ${PF}-gentoo.tar.bz2
 	cd ${S}
-	local PPREFIX="${FILESDIR}/patch/${PN}"
+
+	local PPREFIX="${WORKDIR}/patch/${PN}"
 
 	# Some patches from Redhat
 	epatch ${PPREFIX}-2.1-slighthint.patch
@@ -43,9 +47,7 @@ src_unpack() {
 	epatch ${PPREFIX}-2.2.0-cvs_bugfixes.patch
 
 	# The date can be troublesome 
-	mv configure configure.old
-	sed -e "s:\`date\`::" configure.old > configure
-	chmod +x configure
+	sed -i "s:\`date\`::" configure
 }
 
 src_compile() {
@@ -61,14 +63,12 @@ src_compile() {
 		--with-default-fonts=/usr/X11R6/lib/X11/fonts/Type1 || die
 
 	# this triggers sandbox, we do this ourselves 
-	mv Makefile Makefile.old
-	sed -e "s:fc-cache/fc-cache -f -v:sleep 0:" Makefile.old > Makefile
+	sed -i "s:fc-cache/fc-cache -f -v:sleep 0:" Makefile
 	
 	emake || die
 
 	# remove Luxi TTF fonts from the list, the Type1 are much better
-	mv fonts.conf fonts.conf.old 
-	sed -e "s:<dir>/usr/X11R6/lib/X11/fonts/TTF</dir>::" fonts.conf.old > fonts.conf
+	sed -i "s:<dir>/usr/X11R6/lib/X11/fonts/TTF</dir>::" fonts.conf
 }
 
 src_install() {
@@ -109,4 +109,3 @@ pkg_postinst() {
 		HOME="/root" /usr/bin/fc-cache -f
 	fi
 }
-

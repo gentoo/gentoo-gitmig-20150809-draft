@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.12 2003/05/21 15:09:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.13 2003/06/10 12:05:34 seemant Exp $
 
 inherit debug eutils
 
 S="${WORKDIR}/fcpackage.${PV/\./_}/fontconfig"
 DESCRIPTION="A library for configuring and customizing font access."
-SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\./_}.tar.gz"
 HOMEPAGE="http://fontconfig.org/"
+SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\./_}.tar.gz
+	mirror://gentoo/${PF}-gentoo.tar.bz2"
 
 LICENSE="fontconfig"
 SLOT="1.0"
@@ -25,10 +26,10 @@ fc_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} ; unpack ${PF}-gentoo.tar.bz2
 
 	cd ${S}
-	local PPREFIX="${FILESDIR}/patch/${PN}"
+	local PPREFIX="${WORKDIR}/patch/${PN}"
 
 	# Cvs update from XFree86 tree
 	epatch ${PPREFIX}-${PV}-cvs-update-20021221.patch
@@ -96,4 +97,3 @@ pkg_postinst() {
 		HOME="/root" /usr/bin/fc-cache -f
 	fi
 }
-
