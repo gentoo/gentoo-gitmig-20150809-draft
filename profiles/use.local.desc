@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1027 2005/03/21 21:31:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1028 2005/03/22 07:13:06 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -438,6 +438,7 @@ media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/motiontrack:multiprocess - Enables multi-proccess support (SMP/cluster) for motiontrack programs
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support
 media-video/mplayer:3dnowex - Enables 3dnow extensions in mplayer
+media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:dga - Enables the dga xfree extension video output support
 media-video/mplayer:dts	- Enables libdts (5.1 surround sound audio) support
 media-video/mplayer:edl - Enables usage of Edit Decision Lists
