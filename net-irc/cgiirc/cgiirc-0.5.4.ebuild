@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.4.ebuild,v 1.2 2004/06/24 23:02:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.4.ebuild,v 1.3 2004/12/18 11:18:35 blubb Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ DESCRIPTION="A perl/CGI program to use IRC from a web browser"
 HOMEPAGE="http://cgiirc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 src_unpack() {
 	unpack ${A}
