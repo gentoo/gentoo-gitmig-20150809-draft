@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.314 2005/01/11 02:11:34 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.315 2005/01/22 05:25:15 trapni Exp $
+
+  22 Jan 2005; Christian Parpart <trapni@gentoo.org> :
+  apache now DEPENDs on new net-www/gentoo-webroot-default
 
   10 Jan 2005; Michael Stewart <vericgar@gentoo.org> apache-2.0.52-r3.ebuild:
   Updating keywords on 2.0.52-r3 to match -r2, not sure how I missed this before

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.3 2005/01/09 14:32:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.4 2005/01/22 05:25:16 trapni Exp $
 
 inherit eutils fixheadtails
 
@@ -31,6 +31,7 @@ DEPEND="dev-lang/perl
 		>=sys-libs/gdbm-1.8
 		>=dev-libs/expat-1.95.2
 		>=sys-apps/sed-4
+		net-www/gentoo-webroot-default
 		app-misc/mime-types
 		selinux? ( sec-policy/selinux-apache )
 		lingerd? ( =net-www/lingerd-${lingerd_ver} )"
@@ -179,11 +180,9 @@ src_install() {
 	rm -f etc/apache/*.default
 	rm -f etc/apache/*.conf
 	rm -f etc/apache/mime.types
-	rm -rf var/www/localhost/htdocs/*
 
-	keepdir /var/www/localhost/htdocs
-	insinto /var/www/localhost/htdocs
-	doins ${GENTOO_PATCHDIR}/docs/index.html
+	# we DEPEND on net-www/gentoo-webroot-default for sharing this by now
+	rm -rf var/www/localhost
 
 	# config files
 	insinto /etc/conf.d

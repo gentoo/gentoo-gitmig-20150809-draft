@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.2 2005/01/11 02:11:35 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.3 2005/01/22 05:25:16 trapni Exp $
 
 inherit eutils gnuconfig
 
@@ -21,6 +21,7 @@ IUSE="doc ldap mpm-leader mpm-metux mpm-peruser mpm-prefork mpm-threadpool mpm-w
 DEPEND="dev-lang/perl
 		=dev-libs/apr-0.9.5
 		=dev-libs/apr-util-0.9.5
+		net-www/gentoo-webroot-default
 		app-misc/mime-types
 		sys-libs/zlib
 		>=sys-apps/sed-4
@@ -228,13 +229,9 @@ src_install () {
 	dodoc etc/apache2/*-std.conf
 	rm -f etc/apache2/*.conf
 	rm -rf var/run var/log
-	rm -rf var/www/localhost/htdocs/*
 
-	keepdir /var/www/localhost/htdocs
-	insinto /var/www/localhost/htdocs
-	doins ${GENTOO_PATCHDIR}/docs/index.html
-	doins ${GENTOO_PATCHDIR}/docs/gentoo.jpg
-
+	# we DEPEND on net-www/gentoo-webroot-default for sharing this by now
+	rm -rf var/www/localhost
 
 	# config files
 	insinto /etc/conf.d
