@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.9 2004/06/24 22:07:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.10 2004/10/09 20:17:50 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -color-theme-6.5.0.ebuild,
+  color-theme-6.5.4.ebuild:
+  Stable on x86.
 
   10 May 2004; Jason Wever <weeve@gentoo.org> color-theme-6.5.4.ebuild:
   Added ~sparc keyword to help resolve bug #50695.
