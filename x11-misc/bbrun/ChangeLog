@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbrun
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.9 2003/10/30 15:37:20 tseng Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.10 2004/04/14 09:09:01 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> bbrun-1.3.ebuild,
+  bbrun-1.4.ebuild:
+  Removed S=, added IUSE=
 
   30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Added metadata.xml

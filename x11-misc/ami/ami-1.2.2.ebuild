@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ami-1.2.2.ebuild,v 1.3 2004/01/24 11:44:41 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ami-1.2.2.ebuild,v 1.4 2004/04/14 09:09:01 aliz Exp $
+
+inherit eutils
 
 IUSE="gtk2"
-S=${WORKDIR}/${P}
 DESCRIPTION="Korean IMS Ami"
 SRC_URI="http://download.kldp.net/ami/${P}.tar.gz
 	http://ami.kldp.net/hanja.dic.gz

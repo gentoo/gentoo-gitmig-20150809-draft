@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bblaunch
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> bblaunch-0.0.3.ebuild:
+  Removed S=, added IUSE=
 
   30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Added metadata.xml

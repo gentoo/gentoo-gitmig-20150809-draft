@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/commonbox-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/ChangeLog,v 1.17 2004/02/17 23:02:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/ChangeLog,v 1.18 2004/04/14 09:09:01 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> commonbox-utils-0.4.ebuild,
+  commonbox-utils-0.5.ebuild:
+  Added IUSE=
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> commonbox-utils-0.3.ebuild,
   commonbox-utils-0.4.ebuild, commonbox-utils-0.5.ebuild:

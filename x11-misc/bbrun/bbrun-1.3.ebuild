@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.3.ebuild,v 1.11 2003/02/13 17:09:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.3.ebuild,v 1.12 2004/04/14 09:09:01 aliz Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="blackbox program execution dialog box"
 SRC_URI="http://www.dwave.net/~jking/bbrun/${P}.tar.gz"
 HOMEPAGE="http://www.dwave.net/~jking/bbrun/"

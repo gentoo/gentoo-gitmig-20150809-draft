@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/bbapm-0.0.1-r3.ebuild,v 1.7 2003/09/05 23:18:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/bbapm-0.0.1-r3.ebuild,v 1.8 2004/04/14 09:09:01 aliz Exp $
 
 inherit eutils flag-o-matic
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="blackbox advanced power management tool"
 SRC_URI="http://bbtools.thelinuxcommunity.org/sources/${P}.tar.gz"
 HOMEPAGE="http://bbtools.thelinuxcommunity.org/contrib.phtml"

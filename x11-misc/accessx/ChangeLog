@@ -1,7 +1,10 @@
 # ChangeLog for x11-misc/accessx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.10 2004/04/11 14:59:56 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.11 2004/04/14 09:09:01 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> accessx-0950-r1.ebuild:
+  Added eutils, added IUSE=.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> accessx-0950-r1.ebuild:
   epatch fixup.

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/eosd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/eosd/ChangeLog,v 1.1 2003/10/14 03:09:22 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/eosd/ChangeLog,v 1.2 2004/04/14 09:09:01 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> eosd-0.1.0.ebuild:
+  Added IUSE=
 
 *eosd-0.1.0 (13 Oct 2003)
 

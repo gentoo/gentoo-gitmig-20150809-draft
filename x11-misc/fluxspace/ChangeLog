@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fluxspace
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/ChangeLog,v 1.4 2004/04/12 03:33:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/ChangeLog,v 1.5 2004/04/14 09:09:01 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> fluxspace-0.0.3-r1.ebuild,
+  fluxspace-0.0.3.ebuild:
+  Removed S=
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> fluxspace-0.0.3-r1.ebuild:
   Added ~sparc keyword.

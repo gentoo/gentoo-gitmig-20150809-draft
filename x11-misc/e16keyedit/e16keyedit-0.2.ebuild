@@ -1,10 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.2.ebuild,v 1.15 2004/02/29 21:32:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.2.ebuild,v 1.16 2004/04/14 09:09:01 aliz Exp $
+
+inherit eutils
 
 DESCRIPTION="Key binding editor for enlightenment 16"
 HOMEPAGE="http://www.enlightenment.org/"
 SRC_URI="mirror://sourceforge/enlightenment/e16utils/${P}.tar.gz"
+IUSE=""
 
 LICENSE="as-is"
 SLOT="0"

@@ -1,8 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbcd/bbcd-0.3.1-r1.ebuild,v 1.2 2003/12/07 14:01:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbcd/bbcd-0.3.1-r1.ebuild,v 1.3 2004/04/14 09:09:01 aliz Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="Basic CD Player for blackbox wm"
 HOMEPAGE="http://tranber1.free.fr/bbcd.html"
 SRC_URI="http://tranber1.free.fr/${P}.tar.gz"

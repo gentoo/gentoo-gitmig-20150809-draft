@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbdesk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.7 2003/10/28 13:29:05 tseng Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.8 2004/04/14 09:09:01 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> fbdesk-1.1.5.ebuild:
+  Added IUSE=
 
   28 Oct 2003; Brandon Hale <tseng@gentoo.org> fbdesk-1.1.5.ebuild:
   marking 1.1.5 stable on ppc

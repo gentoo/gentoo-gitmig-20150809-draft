@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author David Chamberlain <daybird@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.15.ebuild,v 1.12 2004/04/11 14:58:49 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.15.ebuild,v 1.13 2004/04/14 09:09:01 aliz Exp $
+
+inherit eutils
 
 DESCRIPTION="Xautoconfig is a PPC only config file generator for xfree86"
 SRC_URI="http://ftp.penguinppc.org/projects/xautocfg/${P}.tar.gz"
@@ -9,6 +11,7 @@ HOMEPAGE="http://ftp.penguinppc.org/projects/xautocfg/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc -x86 -sparc "
+IUSE=""
 
 DEPEND="sys-apps/pciutils"
 

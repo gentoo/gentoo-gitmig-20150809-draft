@@ -6,7 +6,7 @@ DESCRIPTION="Common utilities for fluxbox, blackbox, and openbox"
 HOMEPAGE="http://mkeadle.org/"
 #SRC_URI="mirror://gentoo/${P}.tar.bz2"
 SRC_URI="http://mkeadle.org/distfiles/${P}.tar.bz2"
-
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa ~amd64 mips ia64"
