@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.8 2004/07/02 04:20:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.9 2004/07/14 02:06:26 agriffis Exp $
 
 inherit java nsplugins
 
@@ -11,7 +11,7 @@ SRC_URI="ppc?(mirror://IBMJava2-JRE-141.ppc.tgz)
 	x86?(mirror://IBMJava2-JRE-141.tgz)"
 PROVIDE="virtual/jre-1.4.1
 	virtual/java-scheme-2"
-IUSE="doc"
+IUSE=""
 SLOT="1.4"
 LICENSE="IBM-J1.4"
 KEYWORDS="ppc ~x86 ppc64"
