@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.8 2004/06/06 20:17:30 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.9 2004/06/10 03:47:34 battousai Exp $
+
+  09 Jun 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.0.ebuild,
+  linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
+  Added support for USE=sdk flag. When enabled, it will build the X drivers as
+  it normally did before. When disabled, it will build only the userland tools.
+  This makes the package more flexible for those who wish to keep the stock X
+  driver. Thanks to Scott W. Taylor <swtaylor@gentoo.org> for this concept and
+  related code. Furthermore, linuxwacom-0.6.0 has been clean out.
 
 *linuxwacom-0.6.3 (06 Jun 2004)
 
