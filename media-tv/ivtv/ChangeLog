@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.22 2005/03/04 03:19:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.23 2005/03/06 08:02:12 cardoe Exp $
+
+*ivtv-0.2.0_rc3-r3 (06 Mar 2005)
+
+  06 Mar 2005; Doug Goldstein <cardoe@gentoo.org> +ivtv-0.2.0_rc3-r3.ebuild:
+  fix bug #84249
 
   03 Mar 2005; Doug Goldstein <cardoe@gentoo.org> ivtv-0.2.0_rc3-r2.ebuild:
   BUILD_PARAMS="KDIR=${KERNEL_DIR}"
