@@ -1,9 +1,20 @@
 # ChangeLog for dev-ruby/ruby-panel-applet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ChangeLog,v 1.1 2002/07/07 01:38:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ChangeLog,v 1.2 2002/07/08 02:18:25 agriffis Exp $
 
 *ruby-panel-applet-0.29 (06 Jul 2002)
 
 	06 Jul 2002: Aron Griffis <agriffis@gentoo.org> ruby-panel-applet-0.29.ebuild:
 
 	Updated to version 0.29 and added the ChangeLog.
+
+	07 Jul 2002: Aron Griffis <agriffis@gentoo.org> ruby-panel-applet-0.29.ebuild:
+
+	Added KEYWORDS.
+
+*ruby-panel-applet-0.27 (07 Jul 2002)
+
+	07 Jul 2002: Aron Griffis <agriffis@gentoo.org> ruby-panel-applet-0.27.ebuild:
+
+	Added LICENSE, KEYWORDS, SLOT.  I don't know why there wasn't a ChangeLog
+	entry for version 0.27 prior to this entry.
