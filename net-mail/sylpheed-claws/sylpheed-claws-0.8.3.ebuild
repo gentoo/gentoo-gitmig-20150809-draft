@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.1-r1.ebuild,v 1.2 2002/09/06 21:43:18 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.3.ebuild,v 1.1 2002/09/24 16:34:47 seemant Exp $
 
 
 MY_P="sylpheed-${PV}claws"
@@ -39,16 +39,8 @@ src_unpack() {
 	if use gtkhtml
 	then
 		cd ${S}
-		patch -p1 < ${S2}/${P}-gentoo.patch || die
+		patch -p1 < ${S2}/${PN}-0.8.1-gentoo.patch || die
 	fi
-
-	use spell && ( \
-		cd ${S}/src
-
-		case $(pspell-config version) in 0.50*)
-			patch < ${S2}/gtkspell.diff ;;
-		esac
-	)
 }
 
 src_compile() {
@@ -68,7 +60,9 @@ src_compile() {
 	
 	use ldap && myconf="${myconf} --enable-ldap"
 	
-	use spell && myconf="${myconf} --enable-pspell"
+	use spell \
+		&& myconf="${myconf} --enable-aspell" \
+		|| myconf="${myconf} --disable-aspell"
 	
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
