@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r15.ebuild,v 1.1 2004/01/20 09:35:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r15.ebuild,v 1.2 2004/01/22 20:58:28 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -443,7 +443,7 @@ pkg_preinst() {
 			old="/etc/tcp.${proto}${ext}"
 			new="${TCPRULES_DIR}/tcp.qmail-${proto}${ext}"
 			fail=0
-			if [ -f "$old" -a ! -f "$new"]; then
+			if [ -f "$old" -a ! -f "$new" ]; then
 				einfo "Moving $old to $new"
 				cp $old $new || fail=1
 			else

@@ -2,11 +2,11 @@ MD5 3858784d3e5483e9a472726c730a2bdb qmail-1.03-r14.ebuild 15819
 MD5 ded2ff2bdb5763a3cca002f79425be66 qmail-1.03-r11.ebuild 11395
 MD5 bc20b8ab3977f5ae84b74e3c6eec2f3b qmail-1.03-r9.ebuild 9963
 MD5 0bff42dc7525662e4df321c69fbc83cc qmail-1.03-r13.ebuild 14085
-MD5 ccf472a072cbdec3180b1e35bae38a88 qmail-1.03-r15.ebuild 16677
+MD5 6794d1eed52d1ac325c642e0b99f9f85 qmail-1.03-r15.ebuild 16678
 MD5 4ec9b420e902b04f70b810720a5d5bd7 qmail-1.03-r10.ebuild 11151
 MD5 42789d45c1d7895767ef8d7007ac5caf qmail-1.03-r8.ebuild 8114
 MD5 0a96bc3cc02a2fd9d408d134efcf6801 qmail-1.03-r12.ebuild 13689
-MD5 81140b6212ed64b7708193dec77fb63c ChangeLog 15825
+MD5 2e9945683217ead22d469f89a5e5fad9 ChangeLog 16019
 MD5 ff596e74b015e067a180fc78855aa87a metadata.xml 360
 MD5 f376490154b9fce6c3d79640a7aed64e files/rc 280
 MD5 b7e7c96254dabacdec5bf5904957c7b2 files/tcp.qmqp.sample 399
@@ -43,7 +43,7 @@ MD5 5ddcb673977385f4bfdc93a2d4e65162 files/run-qmailsendlog 143
 MD5 d0847a866b79499bb21311a49ae0a0b6 files/mkservercert 1425
 MD5 2d3271eba444e0c0ad2bd39626ba9156 files/tcp.qmtp.sample 821
 MD5 c22e9634af5b10b1168889a2216d77c1 files/conf-common 2327
-MD5 f52cd62754b76cb8bc178c02d78c6618 files/config-sanity-check 1193
+MD5 e21afa3a603cd269050257241df8d8d1 files/config-sanity-check 1219
 MD5 a72db0af2fb1e4784c0faae4e0c08b7b files/run-qmailsend 164
 MD5 16a9a02133fa49ec4bce592221ddf304 files/run-qmailpop3dlog 315
 MD5 f42a779e5c708c2d7bf38de66dfb93f5 files/1.03-r8/rc 108

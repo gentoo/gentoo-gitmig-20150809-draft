@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.56 2004/01/20 21:02:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.57 2004/01/22 20:58:28 robbat2 Exp $
+
+*qmail-1.03-r15 (22 Jan 2004)
+
+  22 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r15.ebuild,
+  files/config-sanity-check:
+  fix sanity-checker more, and minor typo in -r15 ebuild
 
   20 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
   files/1.03-r15/qmail-pop3d-top-outputfix.patch:
