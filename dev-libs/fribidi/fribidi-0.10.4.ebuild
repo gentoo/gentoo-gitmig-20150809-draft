@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.4.ebuild,v 1.18 2005/02/13 15:01:09 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.4.ebuild,v 1.19 2005/03/24 04:04:28 j4rg0n Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/fribidi/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64 ppc64 ~mips ~ppc-macos"
+KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64 ppc64 ~mips ppc-macos"
 IUSE=""
 
 DEPEND="virtual/libc"
