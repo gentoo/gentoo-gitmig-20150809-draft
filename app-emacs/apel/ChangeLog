@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/apel
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.12 2004/10/13 23:29:11 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.13 2005/01/01 13:38:46 eradicator Exp $
 
   13 Oct 2004; <agriffis@gentoo.org> apel-10.6.ebuild:
   add ia64

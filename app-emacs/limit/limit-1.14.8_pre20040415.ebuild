@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.8_pre20040415.ebuild,v 1.6 2004/10/23 07:48:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.8_pre20040415.ebuild,v 1.7 2005/01/01 13:52:13 eradicator Exp $
 
 inherit elisp
 

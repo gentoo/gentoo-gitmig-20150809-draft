@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-4.63-r1.ebuild,v 1.2 2004/12/08 17:03:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-4.63-r1.ebuild,v 1.3 2005/01/01 13:57:55 eradicator Exp $
 
 inherit distutils elisp
 

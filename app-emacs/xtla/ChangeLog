@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/xtla
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/ChangeLog,v 1.4 2004/10/21 12:07:55 blubb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/ChangeLog,v 1.5 2005/01/01 14:07:09 eradicator Exp $
 
   21 Oct 2004; Simon Stelling <blubb@gentoo.org> xtla-0.1_p525.ebuild,
   xtla-0.1_p82.ebuild:

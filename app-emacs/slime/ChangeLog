@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/slime
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.7 2004/10/11 05:55:07 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.8 2005/01/01 14:01:15 eradicator Exp $
 
 *slime-1.0.20041010 (10 Oct 2004)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/emacs-wget
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.7 2004/10/19 14:29:17 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.8 2005/01/01 13:44:17 eradicator Exp $
 
 *emacs-wget-0.5.0 (19 Oct 2004)
 

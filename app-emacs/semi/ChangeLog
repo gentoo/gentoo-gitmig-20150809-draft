@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/semi
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.15 2004/08/29 19:31:23 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.16 2005/01/01 14:00:06 eradicator Exp $
 
   30 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> files/comp.el:
   Fixed coding system selection bug during info creation.

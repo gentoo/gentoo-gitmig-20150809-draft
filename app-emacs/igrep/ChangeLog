@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/igrep
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/igrep/ChangeLog,v 1.3 2004/06/24 22:15:07 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/igrep/ChangeLog,v 1.4 2005/01/01 13:49:23 eradicator Exp $
 
 *igrep-2.93 (31 Oct 2002)
 

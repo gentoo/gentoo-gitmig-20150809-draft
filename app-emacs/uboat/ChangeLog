@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/uboat
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.4 2004/06/24 22:26:36 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.5 2005/01/01 14:04:16 eradicator Exp $
 
   25 Apr 2004; David Holm <dholm@gentoo.org> uboat-1.2.ebuild:
   Added to ~ppc.

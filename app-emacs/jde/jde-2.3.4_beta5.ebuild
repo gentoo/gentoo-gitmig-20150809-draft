@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.4_beta5.ebuild,v 1.2 2004/09/11 10:23:45 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.4_beta5.ebuild,v 1.3 2005/01/01 13:51:21 eradicator Exp $
 
 inherit elisp
 

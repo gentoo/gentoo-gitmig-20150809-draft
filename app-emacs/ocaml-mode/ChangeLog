@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/ocaml-mode
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.4 2004/09/10 19:19:40 mattam Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.5 2005/01/01 13:55:42 eradicator Exp $
 
 *ocaml-mode-3.08.1 (10 Sep 2004)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/yatex
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.12 2004/12/12 17:44:08 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.13 2005/01/01 14:07:23 eradicator Exp $
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> yatex-1.72.ebuild:
   Stable on sparc.

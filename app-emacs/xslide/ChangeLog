@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/xslide
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.6 2004/11/03 04:49:01 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.7 2005/01/01 14:06:54 eradicator Exp $
 
   03 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> xslide-0.2.2.ebuild,
   xslide-0.2.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/bbdb
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.13 2004/11/01 03:21:33 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.14 2005/01/01 13:39:28 eradicator Exp $
 
   31 Oct 2004; Jason Wever <weeve@gentoo.org> bbdb-2.35_pre20040323.ebuild:
   Stable on sparc.

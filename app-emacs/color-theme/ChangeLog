@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/color-theme
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.12 2004/11/11 08:33:20 mkennedy Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.13 2005/01/01 13:41:26 eradicator Exp $
 
   11 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org>
   +files/6.5.4-easy-menu-gentoo.patch, color-theme-6.5.4.ebuild:

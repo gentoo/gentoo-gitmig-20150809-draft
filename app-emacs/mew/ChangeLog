@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/mew
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.30 2004/12/08 02:56:17 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.31 2005/01/01 13:53:58 eradicator Exp $
 
   07 Dec 2004; Jason Wever <weeve@gentoo.org> mew-4.1.ebuild:
   Added ~sparc keyword.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ognus/ognus-0.24.ebuild,v 1.7 2004/06/24 22:20:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ognus/ognus-0.24.ebuild,v 1.8 2005/01/01 13:55:55 eradicator Exp $
 
 inherit elisp
 

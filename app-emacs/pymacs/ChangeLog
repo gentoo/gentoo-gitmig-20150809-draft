@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/pymacs
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.3 2004/12/08 17:03:24 blubb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.4 2005/01/01 13:57:41 eradicator Exp $
 
   08 Dec 2004; Simon Stelling <blubb@gentoo.org> pymacs-0.22.ebuild:
   added ~amd64

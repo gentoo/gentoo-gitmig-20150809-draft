@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/lua-mode
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.6 2004/12/12 14:25:30 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.7 2005/01/01 13:52:39 eradicator Exp $
 
   13 Dec 2004; Joseph Jezak <josejx@gentoo.org> lua-mode-1.26-r1.ebuild:
   Marked ~ppc for bug #74120.

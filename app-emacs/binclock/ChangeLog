@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/binclock
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.6 2004/11/14 09:59:29 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.7 2005/01/01 13:39:40 eradicator Exp $
 
   14 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> binclock-1.7.ebuild:
   Stable on ppc.

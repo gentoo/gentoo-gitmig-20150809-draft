@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.9 2004/11/03 07:50:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.10 2005/01/01 13:49:51 eradicator Exp $
 
 inherit elisp
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/highline
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.7 2004/10/21 12:21:37 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.8 2005/01/01 13:47:55 eradicator Exp $
 
   21 Oct 2004; Simon Stelling <blubb@gentoo.org> highline-4.2.ebuild:
   added ~amd64

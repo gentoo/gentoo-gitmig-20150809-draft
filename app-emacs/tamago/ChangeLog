@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/tamago
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/ChangeLog,v 1.12 2004/07/30 18:46:22 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/ChangeLog,v 1.13 2005/01/01 14:02:32 eradicator Exp $
 
   31 Jul 2004; Mamoru KOMACHI <usata@gentoo.org>
   -files/tamago-4.0.6-canna-gentoo.patch, tamago-4.0.6-r1.ebuild,
