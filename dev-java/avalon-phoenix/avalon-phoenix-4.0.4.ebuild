@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/avalon-phoenix-4.0.4.ebuild,v 1.6 2003/07/11 21:41:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/avalon-phoenix-4.0.4.ebuild,v 1.7 2004/03/06 23:27:48 zx Exp $
 
 MY_P=phoenix-${PV}
 DESCRIPTION="Avalon Phoenix is a API for java-based servers"
@@ -8,7 +8,7 @@ HOMEPAGE="http://avalon.apache.org"
 SRC_URI="mirror://apache/avalon/phoenix/v${PV}/${MY_P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.5.2"
 RDEPEND=">=virtual/jre-1.3"
