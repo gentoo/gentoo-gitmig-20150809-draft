@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/emboss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/ChangeLog,v 1.14 2004/08/11 00:53:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/ChangeLog,v 1.15 2004/11/01 01:28:06 ribosome Exp $
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> emboss-2.9.0.ebuild,
+  -emboss-2.8.0-r3.ebuild:
+  Removed old version. Added 2.9.0 to x86.
 
   10 Aug 2004; Olivier Fisette <ribosome@gentoo.org>
   emboss-2.8.0-r3.ebuild:
