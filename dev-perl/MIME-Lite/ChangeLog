@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/MIME-Lite
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.1 2002/12/22 02:18:51 mcummings Exp $
+
+*MIME-Lite-2.117 (21 Dec 2002)
+
+  21 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  MIME-Lite-2.117.ebuild:
+
+  Initial import. Ebuild a dep for bioperl, bug 11498
