@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (07 Aug 2002)
+# new package, masked for testing
+net-misc/fmirror
+
 # Dan Armak <danarmak@gentoo.org> (06 aug 2002)
 # mask kvim (committing now); the ebuild is ok but conflicts with generic vim
 app-editors/kvim
