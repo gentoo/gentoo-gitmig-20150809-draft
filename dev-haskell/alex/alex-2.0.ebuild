@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.9 2005/02/23 19:31:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.10 2005/03/23 14:08:15 kosmikus Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -20,6 +20,7 @@ KEYWORDS="~x86"
 LICENSE="as-is"
 
 DEPEND=">=virtual/ghc-5.04
+	!>=virtual/ghc-6.4
 	doc? ( >=app-text/openjade-1.3.1
 		>=app-text/sgml-common-0.6.3
 		~app-text/docbook-sgml-dtd-3.1
