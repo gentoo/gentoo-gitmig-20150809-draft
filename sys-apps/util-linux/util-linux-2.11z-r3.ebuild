@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r3.ebuild,v 1.5 2003/05/25 15:26:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r3.ebuild,v 1.6 2003/05/26 11:14:13 phosphan Exp $
 
 IUSE="crypt nls selinux static pam"
 
@@ -20,7 +20,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
-	>=sed-4.0.5
+	>=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2-r2
 	!selinux? ( sys-apps/pam-login )
 	selinux? ( sys-apps/shadow )

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.34 2003/05/25 15:26:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.35 2003/05/26 11:14:13 phosphan Exp $
+
+  26 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  util-linux-2.11z-r3.ebuild:
+  category was missing with sed dependency
 
   25 May 2003; Martin Holzer <mholzer@gentoo.org> util-linux-2.11o-r3.ebuild,
   util-linux-2.11y.ebuild, util-linux-2.11z-r1.ebuild,
