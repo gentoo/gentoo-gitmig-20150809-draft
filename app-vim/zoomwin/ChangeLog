@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/zoomwin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.16 2004/09/06 22:54:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.17 2004/09/19 19:48:19 kloeri Exp $
+
+  19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> zoomwin-19.ebuild:
+  Stable on alpha.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> zoomwin-19.ebuild:
   Stable on x86, sparc, mips

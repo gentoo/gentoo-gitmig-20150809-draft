@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20040821.ebuild,v 1.5 2004/09/09 20:47:42 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20040821.ebuild,v 1.6 2004/09/19 19:51:40 kloeri Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: a collection of color schemes from vim.sf.net"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=625"
 LICENSE="vim GPL-2 public-domain"
-KEYWORDS="~alpha sparc x86 ~ppc ~ia64 mips amd64"
+KEYWORDS="alpha sparc x86 ~ppc ~ia64 mips amd64"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
