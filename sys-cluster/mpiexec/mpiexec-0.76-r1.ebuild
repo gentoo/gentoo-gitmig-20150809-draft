@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/mpiexec-0.76.ebuild,v 1.4 2004/07/01 21:48:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/mpiexec-0.76-r1.ebuild,v 1.1 2004/08/30 13:27:11 tantive Exp $
 
 #S=${WORKDIR}/mpiexec-${PV}
 DESCRIPTION="replacement for mpirun, integrates MPI with PBS."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.osc.edu/~pw/mpiexec/"
 IUSE=""
 
 DEPEND="virtual/libc
-	sys-cluster/openpbs
+	|| (sys-cluster/torque sys-cluster/openpbs)
 	sys-cluster/mpich"
 RDEPEND="net-misc/openssh"
 
