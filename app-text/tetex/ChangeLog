@@ -1,11 +1,17 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.13 2002/09/19 17:34:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.14 2002/09/21 10:19:33 azarah Exp $
+
+  21 Sep 2002; Martin Schlemmer <azarah@gentoo.org> tetex-1.0.7-r10.ebuild :
+
+    Backport all the fixes in tetex-20020901-r1.ebuild.  Only problem now is
+    that it seems that portage do not change permissions on a directory if
+    it already exists ...
 
   19 Sep 2002; Martin Schlemmer <azarah@gentoo.org> tetex-20020901-r1.ebuild :
 
     Ok, this stupid thing still had problems with ownership and unpacking
-	on one of my boxes.  Should be fixed now.
+    on one of my boxes.  Should be fixed now.
 
   16 Sep 2002; Martin Schlemmer <azarah@gentoo.org> tetex-20020901-r1.ebuild :
 

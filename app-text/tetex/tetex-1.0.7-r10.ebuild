@@ -1,16 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r10.ebuild,v 1.6 2002/09/05 21:15:03 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r10.ebuild,v 1.7 2002/09/21 10:19:33 azarah Exp $
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 
 S=${WORKDIR}/teTeX-1.0
 DESCRIPTION="teTeX is a complete TeX distribution"
-SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-1.0.7.tar.gz
+SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-${PV}.tar.gz
 	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
 	 http://www.ibiblio.org/gentoo/distfiles/ec-ready-mf-tfm.tar.gz
 	 http://www.ibiblio.org/gentoo/distfiles/teTeX-french.tar.gz"
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
+
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -24,7 +26,6 @@ DEPEND="sys-apps/ed
 RDEPEND=">=sys-devel/perl-5.2
 	dev-util/dialog"
 
-KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 
@@ -32,18 +33,23 @@ src_unpack() {
 	
 	mkdir ${S}/texmf
 	cd ${S}/texmf
+	umask 022
 	echo ">>> Unpacking ${TEXMFSRC}"
-	tar xjf ${DISTDIR}/${TEXMFSRC}
+	tar --no-same-owner -xjf ${DISTDIR}/${TEXMFSRC} || die
 	echo ">>> Unpacking ec-ready-mf-tfm.tar.gz"
-	tar xzf ${DISTDIR}/ec-ready-mf-tfm.tar.gz -C ..
+	tar --no-same-owner -xzf ${DISTDIR}/ec-ready-mf-tfm.tar.gz -C .. || die
 	echo ">>> Unpacking teTeX-french.tar.gz"
-	tar xzf ${DISTDIR}/teTeX-french.tar.gz
+	tar --no-same-owner -xzf ${DISTDIR}/teTeX-french.tar.gz || die
 
+	# Fixes from way back ... not sure even Achim will
+	# still know why :/
 	cd ${WORKDIR}
 	patch -p0 < ${FILESDIR}/teTeX-1.0-gentoo.diff || die
-
 	cd ${S}
 	patch -p0 < ${FILESDIR}/teTeX-1.0.dif || die
+
+	# Do not run config stuff
+	patch -p1 < ${FILESDIR}/${P}-dont-run-config.diff || die
 
 	# Fix problem where the *.fmt files are not generated due to the LaTeX
 	# source being older than a year.
@@ -59,15 +65,14 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf
+	local myconf=""
 	use X \
 		&& myconf="--with-x" \
 		|| myconf="--without-x"
 
-	use libwww && ( \
-		myconf="${myconf} --with-system-wwwlib"
-		myconf="${myconf} --with-libwww-include=/usr/include"
-	)
+	use libwww \
+		&& myconf="${myconf} --with-system-wwwlib \
+		                     --with-libwww-include=/usr/include"
 
 	use png \
 		&& myconf="${myconf} --with-system-pnglib"
@@ -105,19 +110,17 @@ src_compile() {
 
 src_install() {
 
-	cd ${S}
 	dodir /usr/share/
-	cp -af texmf ${D}/usr/share
-	sed -e 's:    \$(scriptdir)/mktexlsr:    echo:' \
-		-e 's:\$(scriptdir)/texconfig init:echo:' \
-		Makefile > Makefile.install
+    # Install texmf files
+	einfo "Installing texmf..."
+    mv -f texmf ${D}/usr/share
+		
 	make prefix=${D}/usr \
 		bindir=${D}/usr/bin \
 		datadir=${D}/usr/share \
 		mandir=${D}/usr/share/man/man1 \
 		infodir=${D}/usr/share/info \
 		texmf=${D}/usr/share/texmf \
-		-f Makefile.install \
 		install || die
 
 	dodoc PROBLEMS README
@@ -146,24 +149,31 @@ src_install() {
 	dodoc BUGS FAQ README* 
 
 	#fix for conflicting readlink binary:
-	rm ${D}/bin/readlink
+	rm -f ${D}/bin/readlink
+	rm -f ${D}/usr/bin/readlink
 	#add /var/cache/fonts directory
 	dodir /var/cache/fonts
 
 	#fix for lousy upstream permisssions on /usr/share/texmf files
-	fowners root.root /usr/share/texmf/*
+	#NOTE: do not use fowners, as its not recursive ...
+	einfo "Fixing permissions..."
+	chown -R root.root ${D}/usr/share/texmf
 }
 
 pkg_postinst() {
 
 	if [ $ROOT = "/" ]
 	then
-		echo ">>> Configuring teTeX..."
-		mktexlsr >/dev/null 2>&1 
-		texlinks >/dev/null 2>&1
-		texconfig init >/dev/null 2>&1
-		texconfig confall >/dev/null 2>&1
-		texconfig font vardir /var/cache/fonts >/dev/null 2>&1
-		echo "*** use 'texconfig font rw' to allow all users to generate fonts ***"
+		einfo "Configuring teTeX..."
+		mktexlsr &>/dev/null
+		texlinks &>/dev/null
+		texconfig init &>/dev/null
+		texconfig confall &>/dev/null
+		texconfig font vardir /var/cache/fonts &>/dev/null
+		
+		echo
+		einfo "*** use 'texconfig font rw' to allow all users to generate fonts ***"
+		echo
 	fi
 }
+
