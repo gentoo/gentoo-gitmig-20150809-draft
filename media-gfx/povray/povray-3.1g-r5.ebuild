@@ -1,11 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.11 2003/02/13 12:37:16 vapier Exp $
-
-IUSE="icc X svga"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.12 2003/04/25 15:41:23 vapier Exp $
 
 S=${WORKDIR}/povray31
-DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
+DESCRIPTION="The Persistance Of Vision Ray Tracer"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/povuni_s_3.1.tgz
 	http://www.ibiblio.org/gentoo/distfiles/povuni_d_3.1.tgz"
 HOMEPAGE="http://www.povray.org/"
@@ -13,16 +11,17 @@ HOMEPAGE="http://www.povray.org/"
 SLOT="0"
 LICENSE="povlegal-3.1g"
 KEYWORDS="x86 ppc alpha"
+IUSE="icc X svga"
 
 DEPEND="media-libs/libpng
 	sys-libs/zlib
-	X?	  ( virtual/x11 )
-	icc?	( dev-lang/icc )
-	svga?   ( media-libs/svgalib )"
+	X? ( virtual/x11 )
+	icc? ( dev-lang/icc )
+	svga? ( media-libs/svgalib )"
 
 src_compile() {
 	patch -p1 < ${FILESDIR}/gentoo.patch
-	
+
 	# fix system default povray.ini to point to install directory
 	cp povray.ini povray.ini.orig
 	sed -e "s:\(/usr/\)local/\(lib\):\1\2:" povray.ini.orig > povray.ini
@@ -105,7 +104,6 @@ src_compile() {
 }
 
 src_install() {
-	pwd
 	cd source/unix
 	dodir usr/bin
 	dodir usr/lib

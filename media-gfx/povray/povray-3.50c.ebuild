@@ -1,38 +1,34 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.6 2003/04/18 13:30:25 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.7 2003/04/25 15:41:23 vapier Exp $
 
-IUSE="icc X svga"
+inherit gcc eutils
 
-S=${WORKDIR}/${P}
-DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
+DESCRIPTION="The Persistance Of Vision Ray Tracer"
 SRC_URI="ftp://ftp.povray.org/pub/povray/Official/Unix/povuni_s.tgz"
 HOMEPAGE="http://www.povray.org/"
 
 SLOT="0"
 LICENSE="povlegal-3.5"
 KEYWORDS="x86 ppc alpha"
-inherit gcc
+IUSE="icc X svga"
 
 DEPEND="media-libs/libpng
 	media-libs/tiff
 	media-libs/jpeg
 	sys-libs/zlib
-	X?	  ( virtual/x11 )
-	icc?	( dev-lang/icc )
-	svga?   ( media-libs/svgalib )"
+	X? ( virtual/x11 )
+	icc? ( dev-lang/icc )
+	svga? ( media-libs/svgalib )"
 
 pkg_setup() {
-
-	if [ "$(gcc-version)" != "3.2" ]
-		then
-			eerror "This build needs gcc-3.2 or later"
-			die
-		fi
+	if [ "$(gcc-version)" != "3.2" ] ; then
+		eerror "This build needs gcc-3.2 or later"
+		die "This build needs gcc-3.2 or later"
+	fi
 }
 
 src_compile() {
-
 	econf || die
 
 	# fix system default povray.ini to point to install directory
@@ -108,8 +104,7 @@ src_compile() {
 	emake || die
 }
 
-src_install ()
-{
+src_install() {
 	emake DESTDIR=${D} install || die
 	mv ${D}/etc/povray.ini ${D}/usr/share/povray-3.5/
 
@@ -117,12 +112,10 @@ src_install ()
 	dosym /usr/share/povray-3.5/povray.ini /etc/povray.ini
 }
 
-pkg_postinst ()
-{
+pkg_postinst() {
 	einfo "Installing configuration files"
 	einfo "*Warning* I/O Security disabled by default"
 	einfo "          Check /etc/povray.conf to enable"
 
 	echo -e "[File I/O Security]\nnone" > /etc/povray.conf
-	
 }
