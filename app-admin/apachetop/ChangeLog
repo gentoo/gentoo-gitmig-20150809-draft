@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.16 2004/07/09 19:42:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.17 2004/07/15 20:32:50 tigger Exp $
+
+  15 Jul 2004; Rob Holland <tigger@ereet.co.uk> apachetop-0.12.ebuild:
+  Fix DEPEND/RDEPENDs. Should close #56756. Thanks to wood-worker@gmx.net for
+  reporting the issue.
 
   09 Jul 2004; Stuart Herbert <stuart@gentoo.org> apachetop-0.11.ebuild,
   apachetop-0.12.ebuild:
