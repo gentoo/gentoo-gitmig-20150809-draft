@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.1 2004/10/19 23:02:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.2 2004/10/19 23:23:05 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -47,6 +47,8 @@ INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE} xmms bmp"
 
 DEPEND="bmp? ( >=media-sound/beep-media-player-0.9.7_rc2-r2 )
+	xmms? ( media-sound/xmms )"
+RDEPEND="bmp? ( >=media-sound/beep-media-player-0.9.7_rc2-r2 )
 	xmms? ( media-sound/xmms )"
 
 XMMS_WORKDIR="${WORKDIR}/xmms"
@@ -154,12 +156,12 @@ xmms-plugin_src_compile() {
 xmms-plugin_src_install() {
 	if use xmms; then
 		cd ${XMMS_S}
-		make DESTDIR="${D}" install || die
+		make DESTDIR="${D}" ${myins_xmms} install || die
 	fi
 
 	if use bmp; then
 		cd ${BMP_S}
-		make DESTDIR="${D}" install || die
+		make DESTDIR="${D}" ${myins_bmp} install || die
 	fi
 
 	if [ -n "${DOCS}" ]; then
