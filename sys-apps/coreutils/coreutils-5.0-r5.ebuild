@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r5.ebuild,v 1.2 2003/12/10 02:56:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r5.ebuild,v 1.3 2003/12/10 09:20:06 seemant Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE="nls build static"
 
@@ -55,6 +55,9 @@ src_unpack() {
 }
 
 src_compile() {
+	
+	filter-flags "-malign-double"
+	
 	aclocal -I ${S}/m4 || die
 	autoconf || die
 	automake || die

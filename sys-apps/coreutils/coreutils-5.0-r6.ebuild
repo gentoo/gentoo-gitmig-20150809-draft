@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.2 2003/12/10 02:56:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.3 2003/12/10 09:20:06 seemant Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE="nls build acl static"
 
@@ -61,6 +61,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	filter-flags "-malign-double"
+
 	if use acl
 	then
 		if [ -z "`which cvs 2>/dev/null`" ]
