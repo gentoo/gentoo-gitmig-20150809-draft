@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.16 2005/01/18 13:15:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.17 2005/02/06 22:48:20 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
@@ -21,13 +21,14 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	# Fix a cosmetic error in mk_cmds's help output.
-	cd ${S}; epatch ${FILESDIR}/e2fsprogs-1.32-mk_cmds-cosmetic.patch
-	# Userpriv fix. Closes #27348
-	chmod u+w po/*.po
+	epatch ${FILESDIR}/e2fsprogs-1.32-mk_cmds-cosmetic.patch
 	# Patch to make the configure and sed scripts more friendly to, 
 	# for example, the Estonian locale
 	epatch ${FILESDIR}/${PN}-sed-locale.patch
+	# Userpriv fix. Closes #27348
+	chmod u+w po/*.po
 
 	gnuconfig_update
 
