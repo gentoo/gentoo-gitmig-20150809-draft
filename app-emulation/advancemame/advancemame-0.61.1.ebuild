@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/advancemame-0.61.1.ebuild,v 1.1 2002/08/24 17:00:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/advancemame-0.61.1.ebuild,v 1.2 2002/08/26 18:28:46 azarah Exp $
 
 # This build we configure to explicitly use SDL, as it is very
 # difficult to get it working with fb or svgalib support.  Anyway,
@@ -32,7 +32,8 @@ KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	app-arch/unzip
-	media-libs/libsdl"
+	>=dev-lang/nasm-0.98
+	>=media-libs/libsdl-1.2.3"
 
 
 src_unpack() {
