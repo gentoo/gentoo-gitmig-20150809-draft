@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/monafont
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.5 2003/08/20 14:58:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.6 2003/09/10 10:20:36 usata Exp $
+
+*monafont-2.90 (10 Sep 2003)
+
+  10 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> monafont-2.90.ebuild:
+  Version bump.  Added TrueType font and changed DESCRIPTION accordingly.
 
 *monafont-2.30_pre2 (20 Aug 2003)
 
