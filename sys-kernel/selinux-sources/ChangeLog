@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/selinux-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.33 2004/04/14 07:14:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.34 2004/04/15 06:44:07 plasmaroo Exp $
+
+*selinux-sources-2.4.25-r1 (15 Apr 2004)
+
+  15 Apr 2004; <plasmaroo@gentoo.org> selinux-sources-2.4.25-r1.ebuild:
+  Version bump for the CAN-2004-0109 issue; bug #47881.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> selinux-sources-2.4.25.ebuild:
   Added IUSE=.
