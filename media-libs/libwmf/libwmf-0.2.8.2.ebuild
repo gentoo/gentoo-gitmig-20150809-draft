@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.2.ebuild,v 1.1 2003/11/30 07:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.2.ebuild,v 1.2 2003/12/09 17:51:56 lanius Exp $
 
 inherit libtool
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ppc alpha amd64 hppa"
 IUSE="jpeg X"
 
-DEPEND=">=app-text/ghostscript-6.50
+DEPEND="virtual/ghostscript
 	dev-libs/expat
 	dev-libs/libxml2
 	>=media-libs/freetype-2.0.1

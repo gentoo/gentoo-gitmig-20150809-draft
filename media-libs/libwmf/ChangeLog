@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.18 2003/11/30 07:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.19 2003/12/09 17:51:56 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> libwmf-0.2.8.2.ebuild,
+  libwmf-0.2.8.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
 *libwmf-0.2.8.2 (30 Nov 2003)
 
