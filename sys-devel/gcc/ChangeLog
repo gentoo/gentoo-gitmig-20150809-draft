@@ -1,9 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.121 2003/09/08 22:31:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.122 2003/09/08 22:39:07 george Exp $
 
-  09 Sep 2003; George Shapovalov <george@gentoo.org> gcc-3.3.1.ebuild, gcc-3.3.1-r1.ebuild :
+  09 Sep 2003; George Shapovalov <george@gentoo.org> gcc-3.3.1.ebuild, gcc-3.3.1-r1.ebuild, gcc-3.2.1-r7.ebuild, gcc-3.2.2.ebuild, gcc-3.2.2-r2.ebuild: :
   Removed "ada" from gcc_lang as month ago for previous versions.
+  Also removed gcc32-ada-make.patch and corresponding epatch invocations
 
 *gcc-3.3.1-r1 (07 Sep 2003)
 

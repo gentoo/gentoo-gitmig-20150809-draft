@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.19 2003/09/05 02:01:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.20 2003/09/08 22:39:07 george Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -171,7 +171,7 @@ src_unpack() {
 	fi
 
 	# Patches from Redhat ...
-	epatch ${FILESDIR}/3.2.1/gcc32-ada-make.patch
+	#epatch ${FILESDIR}/3.2.1/gcc32-ada-make.patch
 	epatch ${FILESDIR}/3.2.1/gcc32-shared-pthread.patch
 	use sparc && epatch ${FILESDIR}/3.2.1/gcc32-sparc32-hack.patch
 
@@ -238,7 +238,7 @@ src_compile() {
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
-		gcc_lang="c,c++,ada,f77,objc"
+		gcc_lang="c,c++,f77,objc"
 	else
 		gcc_lang="c"
 	fi
