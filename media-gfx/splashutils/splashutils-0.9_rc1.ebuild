@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_rc1.ebuild,v 1.3 2005/01/12 00:02:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_rc1.ebuild,v 1.4 2005/01/16 13:57:27 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.2"
 GENTOOSPLASH="splashutils-gentoo-0.1.3"
+KLIBC_VERSION="0.179"
 
 DESCRIPTION="Framebuffer splash utilities."
 HOMEPAGE="http://dev.gentoo.org/~spock/"
@@ -16,7 +17,7 @@ SRC_URI="mirror://gentoo/${P/_/-}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
-IUSE=""
+IUSE="hardened"
 RDEPEND=">=media-libs/freetype-2
 	media-libs/libpng
 	media-libs/jpeg
@@ -28,6 +29,15 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P/_/-}"
 SM="${WORKDIR}/${MISCSPLASH}"
 SG="${WORKDIR}/${GENTOOSPLASH}"
+
+pkg_setup() {
+	if use hardened; then
+		ewarn "Due to problems with klibc, it is currently impossible to compile splashutils"
+		ewarn "with 'hardened' GCC flags. As a workaround, the package will be compiled with"
+		ewarn "-fno-stack-protector. Hardened GCC features will not be used while building"
+		ewarn "the fbsplash kernel helper."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -52,8 +62,14 @@ src_unpack() {
 		else
 			t2=$(readlink ${KBUILD_OUTPUT_PREFIX}/${t/linux-}/include/asm)
 			ln -s /usr/src/linux/include/${t2} ${T}/asm
-			sed -e "s@#CHANGEME#@${T}/@" -i ${S}/libs/klibc-0.179/klibc/makeerrlist.pl
+			sed -e "s@#CHANGEME#@${T}/@" -i ${S}/libs/klibc-${KLIBC_VERSION}/klibc/makeerrlist.pl
 		fi
+	fi
+
+	# this should make this version of splashutils compile with hardened systems
+	if use hardened; then
+		sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
+		sed -e 's@CFLAGS  =@CFLAGS  = -fno-stack-protector@' -i ${S}/libs/klibc-${KLIBC_VERSION}/klibc/MCONFIG
 	fi
 }
 
