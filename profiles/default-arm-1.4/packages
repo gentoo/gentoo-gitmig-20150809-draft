@@ -57,7 +57,7 @@
 *sys-apps/cpio
 *sys-apps/debianutils
 *sys-apps/diffutils
-*sys-apps/e2fsprogs
+*sys-fs/e2fsprogs
 *sys-apps/ed
 *sys-apps/fbset
 *sys-apps/file
@@ -106,4 +106,4 @@
 *sys-libs/slang
 *sys-libs/zlib
 *net-misc/openssh
-*sys-apps/devfsd
+*sys-fs/devfsd

@@ -1,7 +1,7 @@
-sys-apps/devfsd
+sys-fs/devfsd
 sys-apps/lvm-user
-sys-apps/e2fsprogs
-sys-apps/reiserfsprogs
+sys-fs/e2fsprogs
+sys-fs/reiserfsprogs
 sys-apps/util-linux
 app-shells/bash
 sys-apps/fileutils

@@ -18,7 +18,7 @@ virtual/x11-web-browser  net-www/mozilla
 sys-apps/console-tools   sys-apps/kbd
 virtual/blackbox         x11-wm/blackbox
 virtual/emacs            app-editors/emacs
-sys-apps/reiserfs-utils  sys-apps/reiserfsprogs
+sys-apps/reiserfs-utils  sys-fs/reiserfsprogs
 virtual/sylpheed         net-mail/sylpheed
 virtual/php              dev-php/mod_php
 virtual/textbrowser		 net-www/links

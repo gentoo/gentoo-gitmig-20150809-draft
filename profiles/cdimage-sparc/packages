@@ -12,9 +12,9 @@ sys-apps/bzip2
 sys-apps/kbd
 sys-apps/cpio
 sys-apps/debianutils
-sys-apps/devfsd
+sys-fs/devfsd
 sys-apps/diffutils
-sys-apps/e2fsprogs
+sys-fs/e2fsprogs
 sys-apps/ed
 sys-apps/fileutils
 sys-apps/findutils
@@ -32,7 +32,7 @@ sys-apps/portage
 sys-apps/procps
 sys-apps/psmisc
 sys-apps/raidtools
-sys-apps/reiserfsprogs
+sys-fs/reiserfsprogs
 sys-apps/sed
 sys-apps/setserial
 sys-apps/sh-utils

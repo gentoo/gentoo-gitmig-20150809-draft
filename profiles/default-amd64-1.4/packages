@@ -24,7 +24,7 @@
 *sys-apps/cpio
 *sys-apps/debianutils
 *sys-apps/diffutils
-*sys-apps/e2fsprogs
+*sys-fs/e2fsprogs
 *sys-apps/ed
 *sys-apps/file
 *sys-apps/findutils
@@ -67,5 +67,5 @@
 *sys-libs/readline  
 *sys-libs/zlib
 *net-misc/openssh
-*sys-apps/devfsd
+*sys-fs/devfsd
 *sys-apps/linux32

@@ -4,7 +4,7 @@ virtual/bash			app-shells/bash
 virtual/kernel			sys-apps/baselayout
 virtual/glibc 			sys-libs/glibc
 
-sys-apps/reiserfs-utils sys-apps/reiserfsprogs
+sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/os-headers	sys-kernel/linux-headers
 virtual/modutils sys-apps/modutils
 virtual/aspell-dict           app-dicts/aspell-en

@@ -16,7 +16,7 @@ virtual/jre             dev-java/blackdown-jre
 virtual/imapd           net-mail/courier-imap
 virtual/x11-web-browser	net-www/mozilla
 sys-apps/console-tools  sys-apps/kbd
-sys-apps/reiserfs-utils sys-apps/reiserfsprogs
+sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/sylpheed        net-mail/sylpheed
 virtual/php             dev-php/mod_php
 virtual/textbrowser		net-www/links
