@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/crossover-office-bin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/ChangeLog,v 1.1 2004/10/31 02:39:02 vapier Exp $
+
+*crossover-office-bin-3.0.1 (30 Oct 2004)
+
+  30 Oct 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #66843.
