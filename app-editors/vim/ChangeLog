@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.3 2002/03/27 00:20:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.4 2002/03/31 07:28:53 seemant Exp $
+
+*vim-6.1 (30 Mar 2002)
+
+	30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> vim-6.1.ebuild
+
+	Resolved bug 1426: SRC_URI points primarily to ftp.vim.org instead
+	of ftp.us.vim.org which no longer contains the tar ball for 6.1
+	Thanks to jnelson@jamponi.net
 
 *vim-6.1 (26 Mar 2002)
 

@@ -1,7 +1,7 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1.ebuild,v 1.1 2002/03/27 00:17:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1.ebuild,v 1.2 2002/03/31 07:28:53 seemant Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -33,22 +33,22 @@ if [ "$vim_version" = "$vim_pre" ]; then
 	fi
 	vim_letters=
 	A="vim-$vim_version.tar.bz2"
-	SRC_URI="ftp://ftp.us.vim.org/pub/vim/unix/$A
-			 ftp://ftp.vim.org/pub/vim/unix/$A"
+	SRC_URI="ftp://ftp.vim.org/pub/vim/unix/$A
+			 ftp://ftp.us.vim.org/pub/vim/unix/$A"
 elif [ "$vim_pre" -lt 27 ]; then
 	# Handle (prerelease) versions with one trailing letter
 	vim_letters=`echo $vim_pre | awk '{printf "%c", $0+96}'`
 	S="$WORKDIR/vim${vim_version//.}$vim_letters"
 	A="vim-$vim_version$vim_letters.tar.bz2"
-	SRC_URI="ftp://ftp.us.vim.org/pub/vim/unreleased/unix/$A
-			 ftp://ftp.vim.org/pub/vim/unreleased/unix/$A"
+	SRC_URI="ftp://ftp.vim.org/pub/vim/unreleased/unix/$A
+			 ftp://ftp.us.vim.org/pub/vim/unreleased/unix/$A"
 elif [ "$vim_pre" -lt 703 ]; then
 	# Handle (prerelease) versions with two trailing letters
 	vim_letters=`echo $vim_pre | awk '{printf "%c%c", $0/26+96, $0%26+96}'`
 	S="$WORKDIR/vim${vim_version//.}$vim_letters"
 	A="vim-$vim_version$vim_letters.tar.bz2"
-	SRC_URI="ftp://ftp.us.vim.org/pub/vim/unreleased/unix/$A
-			 ftp://ftp.vim.org/pub/vim/unreleased/unix/$A"
+	SRC_URI="ftp://ftp.vim.org/pub/vim/unreleased/unix/$A
+			 ftp://ftp.us.vim.org/pub/vim/unreleased/unix/$A"
 else
 	die "Eek!  I don't know how to interpret the version!"
 fi
