@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1.ebuild,v 1.7 2004/03/29 23:23:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1.ebuild,v 1.8 2004/03/29 23:57:50 dholm Exp $
 
 MY_P=spcxmms-${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://www.self-core.org/~kaoru-k/pub/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86"
 
 DEPEND="media-sound/xmms"
 
