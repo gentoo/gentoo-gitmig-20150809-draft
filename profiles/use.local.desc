@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.641 2004/09/24 23:30:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.642 2004/09/25 05:44:42 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -227,6 +227,7 @@ dev-util/xmingw-gcc:gcj - Build gcj (java compiler included with gcc package)
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
+games-emulation/advancemame:expat - Enable the use of dev-libs/expat
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
