@@ -1,8 +1,14 @@
 # ChangeLog for app-misc/xlockmore
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.5 2002/03/27 21:32:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.6 2002/04/14 08:40:31 seemant Exp $
 
-*xlockmore-5.03-r2 (27 Mar 2002)
+*xlockmore-5.03-r4 (14 Apr 2002)
+
+  14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> xlockmore-5.03-r4.ebuild :
+
+  If PAM is not in USE, cause it to use shadow instead for password locking.
+
+*xlockmore-5.03-r3 (27 Mar 2002)
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xlockmore-5.03-r3.ebuild :
 
