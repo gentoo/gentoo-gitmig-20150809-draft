@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/klogview
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.1 2005/02/24 17:38:46 greg_g Exp $
+
+*klogview-0.6 (24 Feb 2005)
+
+  24 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +metadata.xml,
+  +klogview-0.6.ebuild:
+  Initial import. Ebuild submitted by Konstantin Sobolev <k_o_s@mail.ru>.
+
