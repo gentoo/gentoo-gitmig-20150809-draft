@@ -11,7 +11,8 @@ KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 RDEPEND=">=dev-perl/Mon-0.9
-		>=dev-perl/Time-HiRes-01.20"
+		>=dev-perl/Time-HiRes-01.20
+		>=dev-perl/Period-1.20-r2"
 
 src_compile() {
 

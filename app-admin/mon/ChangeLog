@@ -1,7 +1,19 @@
 # ChangeLog for app-admin/mon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.3 2002/07/08 14:36:07 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.4 2002/07/08 21:27:48 sunflare Exp $
 
+*mon-0.99.2-r1 (08 Jul 2002)
+
+  08 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mon-0.99.2-r1.ebuild :
+
+  Added a missing dependency.
+
+*mon-0.38.20-r7 (08 Jul 2002)
+
+  08 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mon-0.38.20-r7.ebuild :
+
+  Added a missing dependency.  Cleaned the ebuild up a bit more as well.
+  
 *mon-0.99.2 (08 Jul 2002)
 
   08 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mon-0.38.20-r1.ebuild mon-0.38.20-r6.ebuild mon-0.99.2.ebuild :
