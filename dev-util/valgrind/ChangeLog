@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.14 2003/08/15 16:25:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.15 2003/10/17 07:05:55 solar Exp $
+
+*valgrind-2.0_pre20031012 (17 Oct 2003)
+
+  17 Oct 2003; <solar@gentoo.org> valgrind-2.0_pre20031012.ebuild:
+  version bump, thank markgilbert@hotpop.com for reporting this via bugzilla.
+  Somebody running kernel 2.6 will need to test and see if we still need to add
+  the files/valgrind-configure.in-2.6.diff
 
   15 Aug 2003; <solar@gentoo.org> valgrind-2.0_pre20030725.ebuild:
   Added a configure.in patch for 2.6

@@ -5,9 +5,11 @@ MD5 59c3e0872295287330bed6de333c2d5f valgrind-1.9.3.ebuild 845
 MD5 cd1613c1ff225b323035e9d05913379d valgrind-1.9.6.ebuild 831
 MD5 7f46f1a79789f953723402a18da20df5 metadata.xml 992
 MD5 516616357b548f0b68b568e5a176bd64 valgrind-2.0_pre20030725.ebuild 1130
+MD5 5335fabb7a4ed61b94a24e0a3e87e0f4 valgrind-2.0_pre20031012.ebuild 1170
 MD5 824cef2ebde486eaf99304942ea0c359 files/digest-valgrind-1.0.4 152
 MD5 e352ba09353c1e5ac64df40cacba5a22 files/digest-valgrind-1.0.4-r1 139
 MD5 999f7f389aacb30a3fe81c3975a6a963 files/digest-valgrind-1.9.3 67
 MD5 a258c6db234e8988b74c98c2a9ffbdef files/digest-valgrind-1.9.6 67
 MD5 05ef5d98ff26c82d2f168f5117ef612f files/digest-valgrind-2.0_pre20030725 70
 MD5 95845f5c26fd00027163547288c17e54 files/valgrind-configure.in-2.6.diff 336
+MD5 268a5e37ab4135f5004ebe9e87b8b851 files/digest-valgrind-2.0_pre20031012 70
