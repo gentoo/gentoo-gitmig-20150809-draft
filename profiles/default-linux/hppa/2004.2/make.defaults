@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.2/make.defaults,v 1.2 2004/08/25 13:58:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.2/make.defaults,v 1.3 2004/09/17 19:33:49 seemant Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -9,6 +9,7 @@
 
 USE="
 berkdb
+bitmap-fonts
 crypt
 cups
 encode
@@ -48,6 +49,7 @@ truetype
 X
 xml2
 xmms
+xprint
 xv
 zlib
 "

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2004.0/make.defaults,v 1.4 2004/08/25 13:58:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2004.0/make.defaults,v 1.5 2004/09/17 19:33:49 seemant Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -17,6 +17,7 @@ alpha
 arts
 avi
 berkdb
+bitmap-fonts
 crypt
 cups
 encode
@@ -57,6 +58,7 @@ truetype
 X
 xml2
 xmms
+xprint
 xv
 zlib
 "
