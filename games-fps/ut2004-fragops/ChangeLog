@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/ut2004-fragops
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.1 2004/11/25 00:17:40 wolf31o2 Exp $
+
+*ut2004-fragops-2.1 (24 Nov 2004)
+
+  24 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +ut2004-fragops-2.1.ebuild:
+  Initial import.  Ebuild by me.  Closing bug #54529.
+
