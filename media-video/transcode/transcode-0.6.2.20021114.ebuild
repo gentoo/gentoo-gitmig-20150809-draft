@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.2.20021114.ebuild,v 1.2 2003/01/19 00:44:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.2.20021114.ebuild,v 1.3 2003/02/13 06:49:07 gerk Exp $
 
 IUSE="sdl mmx mpeg sse dvd encode X quicktime avi"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 -ppc"
 
 DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-libs/libdv-0.9.5
