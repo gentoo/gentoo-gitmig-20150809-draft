@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-4.2.0.ebuild,v 1.3 2003/09/08 07:38:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-4.3.0.ebuild,v 1.1 2003/10/05 17:42:59 hanno Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${PN}
 DESCRIPTION="Frisk Software's f-prot virus scanner"
 HOMEPAGE="http://www.f-prot.com/"
 SRC_URI="ftp://ftp.f-prot.com/pub/linux/${MY_P}.tar.gz"
-
+DEPEND=""
 # unzip and perl are needed for the check-updates.pl script
 RDEPEND=">=app-arch/unzip-5.42-r1
 	dev-lang/perl
