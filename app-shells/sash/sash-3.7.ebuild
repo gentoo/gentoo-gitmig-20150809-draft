@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.1 2004/02/14 22:23:05 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.2 2004/03/02 16:43:31 iggy Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.canb.auug.org.au/~dbell/programs/${P}.tar.gz"
 LICENSE="freedist"
 SLOT="0"
 IUSE="readline"
-KEYWORDS="~x86"
+KEYWORDS="~x86 s390"
 
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4
