@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.8 2004/01/04 15:07:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.9 2004/01/04 17:25:06 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${MY_PV}.tar.bz2"
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
 KEYWORDS="~x86"
-IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite oci8"
+IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite"
 
 DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng media-libs/jpeg media-libs/libmng
@@ -73,7 +73,7 @@ src_compile() {
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
 	use firebird    && myconf="${myconf} -plugin-sql-ibase"
-	use oci8	&& myconf="${myconf} -plugin-sql-oci"
+#	use oci8	&& myconf="${myconf} -plugin-sql-oci"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use cups	&& myconf="${myconf} -cups" || myconf="${myconf} -no-cups"
