@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.58 2004/02/17 01:54:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.59 2004/02/29 01:35:16 agriffis Exp $
+
+*gvim-6.2-r7 (28 Feb 2004)
+
+  28 Feb 2004; Aron Griffis <agriffis@gentoo.org> gvim-6.2-r6.ebuild,
+  gvim-6.2-r7.ebuild:
+  Mark 6.2-r6 stable on x86, alpha, ia64. Add 6.2-r7 which bumps the patchlevel
+  from 214 to 294. In particular patch 233 enables support of threaded perl.
 
   16 Feb 2004; Aron Griffis <agriffis@gentoo.org> gvim-6.2-r1.ebuild,
   gvim-6.2-r2.ebuild, gvim-6.2-r3.ebuild, gvim-6.2-r5.ebuild,
