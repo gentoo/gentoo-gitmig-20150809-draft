@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_rc2.ebuild,v 1.1 2004/03/22 23:55:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.ebuild,v 1.1 2004/04/03 01:40:29 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -11,7 +11,7 @@ SLOT="2.0"
 IUSE="cdr dvdr doc accessibility"
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop,
@@ -32,93 +32,93 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=x11-libs/libxklavier-1
 	>=media-libs/audiofile-0.2.5
-	>=media-sound/esound-0.2.33
+	>=media-sound/esound-0.2.34
 	>=gnome-base/gnome-mime-data-2.4.0
-	>=media-libs/libart_lgpl-2.3.15
+	>=media-libs/libart_lgpl-2.3.16
 
 	>=dev-libs/libIDL-0.8.3
 	>=gnome-base/ORBit2-2.10
 
-	>=gnome-base/gconf-2.5.90
+	>=gnome-base/gconf-2.6
 	>=gnome-base/gnome-keyring-0.2
 	>=gnome-base/gnome-vfs-2.6
 
 	>=gnome-base/libbonobo-2.6
-	>=gnome-base/libbonoboui-2.5.4
+	>=gnome-base/libbonoboui-2.6
 	>=gnome-base/libgnome-2.6
 	>=gnome-base/libgnomeui-2.6
 	>=gnome-base/libgnomecanvas-2.6
 	>=gnome-base/libglade-2.3.6
 
-	>=gnome-extra/bug-buddy-2.5.92
-	>=gnome-base/control-center-2.5.4
+	>=gnome-extra/bug-buddy-2.6
+	>=gnome-base/control-center-2.6.0.3
 
 	>=gnome-base/eel-2.6
 	>=gnome-base/nautilus-2.6
 
 	>=media-libs/gstreamer-0.8
-	>=media-libs/gst-plugins-0.8
-	>=gnome-extra/gnome-media-2.5.5
+	>=media-libs/gst-plugins-0.8-r1
+	>=gnome-extra/gnome-media-2.6
+	>=gnome-extra/nautilus-media-0.8
 
-	>=media-gfx/eog-2.5.91
-	>=net-www/epiphany-1.2.1
-	>=app-arch/file-roller-2.5.7
-	>=gnome-extra/gcalctool-4.3.2
-	>=gnome-extra/gconf-editor-2.5.92
-	>=gnome-base/gdm-2.4.4.7
-	>=app-editors/gedit-2.5.92
+	>=media-gfx/eog-2.6
+	>=net-www/epiphany-1.2.2
+	>=app-arch/file-roller-2.6
+	>=gnome-extra/gcalctool-4.3.51
+	>=gnome-extra/gconf-editor-2.6
+	>=gnome-base/gdm-2.4.4.7-r1
+	>=app-editors/gedit-2.6
 
 	>=app-text/ggv-2.6
-	>=app-text/gpdf-0.125
+	>=app-text/gpdf-0.131
 
 	>=gnome-base/gnome-session-2.6
-	>=gnome-base/gnome-desktop-2.6
+	>=gnome-base/gnome-desktop-2.6.0.1
 	>=gnome-base/gnome-applets-2.6
 	>=gnome-base/gnome-panel-2.6
 
 	>=x11-themes/gnome-icon-theme-1.2
 	>=x11-themes/gnome-themes-2.6
 
-	>=x11-terms/gnome-terminal-2.5.90
-	>=gnome-extra/gnome2-user-docs-2.5.90
+	>=x11-terms/gnome-terminal-2.6
+	>=gnome-extra/gnome2-user-docs-2.6.0.1
 
-	>=x11-libs/gtksourceview-0.9.2
-	>=gnome-extra/gucharmap-1.3.2
-	>=gnome-base/libgnomeprint-2.5.4
-	>=gnome-base/libgnomeprintui-2.5.4
+	>=x11-libs/gtksourceview-1
+	>=gnome-extra/gucharmap-1.4.1
+	>=gnome-base/libgnomeprint-2.6
+	>=gnome-base/libgnomeprintui-2.6
 	=gnome-extra/libgtkhtml-2.6*
 
-	>=gnome-extra/gnome-utils-2.5.90
-	>=gnome-extra/gnome-games-2.5.8
+	>=gnome-extra/gnome-utils-2.6
+	>=gnome-extra/gnome-games-2.6.0.1
 
 	>=gnome-base/libgtop-2.5.2
 	>=gnome-extra/gnome-system-monitor-2.6
 
-	>=gnome-base/librsvg-2.6.3
-	>=x11-libs/libwnck-2.6
-	>=x11-wm/metacity-2.7.1
+	>=gnome-base/librsvg-2.6.4
+	>=x11-libs/libwnck-2.6.0.1
+	>=x11-wm/metacity-2.8
 
 	>=x11-libs/startup-notification-0.5
 
-	>=gnome-extra/yelp-2.5.91
+	>=gnome-extra/yelp-2.6
 	>=x11-libs/vte-0.11.10
-	>=gnome-extra/zenity-2.5.91
-	>=net-analyzer/gnome-netstatus-2.5.92
+	>=gnome-extra/zenity-2.6.0
+	>=net-analyzer/gnome-netstatus-2.6.0.1
 
-	cdr? ( >=gnome-extra/nautilus-cd-burner-0.6.7 )
-	dvdr? ( >=gnome-extra/nautilus-cd-burner-0.6.7 )"
+	cdr? ( >=gnome-extra/nautilus-cd-burner-2.6.0 )
+	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.6.0 )
 
-#	accessibility? (
-#		>=gnome-extra/libgail-gnome-1.0.3
-#		>=gnome-base/gail-1.5.8
-#		at-spi
-#		gnome-speech
-#		gnome-mag
-#		gok
-#		gnopernicus )"
+	accessibility? (
+		>=gnome-extra/libgail-gnome-1.0.3
+		>=gnome-base/gail-1.6.0
+		>=gnome-extra/at-spi-1.4.0
+		>=app-accessibility/gnome-speech-0.3.2-r1
+		>=app-accessibility/gnome-mag-0.10.10
+		>=app-accessibility/gok-0.10.0
+		>=app-accessibility/gnopernicus-0.8.0 )"
 
 # gst stuff
-#	>=gnome-extra/nautilus-media-0.7
 #	applets
 
 # unrelated
