@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.37 2004/09/19 15:54:23 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.38 2004/09/21 13:48:46 usata Exp $
+
+*scim-1.0.1 (21 Sep 2004)
+
+  21 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +scim-1.0.1.ebuild:
+  Version bumped.
 
   19 Sept 2004; Tom Gall <tgall@gentoo.org> scim-0.99.8.ebuild:
   stable on ppc64 bug #63375
