@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ices
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.17 2004/11/02 21:02:54 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.18 2005/02/03 19:48:27 luckyduck Exp $
+
+  03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> :
+  new upstream release. fixes #80374
 
   02 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> -files/docdir.diff,
   -ices-0.2.3.ebuild, -ices-0.3.ebuild, -ices-0.4.ebuild:
