@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.4.ebuild,v 1.4 2002/11/17 09:12:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.4.ebuild,v 1.5 2002/11/30 01:31:40 vapier Exp $
 
 MY_P="${PN}-x11-gpl-${PV}"
 DESCRIPTION="SIP is a tool for generating bindings for C++ classes so that they can be used by Python."
@@ -18,8 +18,8 @@ S=${WORKDIR}/${MY_P}
 
 src_compile(){
 	chmod +x build.py
-	mkdir -p ${D}/usr/bin
-	mkdir -p ${D}/usr/lib/python2.2/site-packages
+	dodir /usr/bin
+	dodir /usr/lib/python2.2/site-packages
 	python build.py -l qt-mt -b ${D}/usr/bin -d ${D}/usr/lib/python2.2/site-packages \
 			-e ${D}/usr/include/python2.2
 	make || die
