@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
 
-A=${P}-pr1.tar.bz2
+A=${PN}-2.0-pr2.tar.bz2
 S=${WORKDIR}/quanta
 DESCRIPTION="HTML editor for KDE2"
-SRC_URI="http://ftp1.sourceforge.net/quanta/${A}"
+SRC_URI="http://prdownloads.sourceforge.net/quanta/${A}"
 HOMEPAGE="http://quanta.sourceforge.net"
-
 DEPEND=">=kde-base/kdelibs-2.1.1"
 
 RDEPEND=$DEPEND
