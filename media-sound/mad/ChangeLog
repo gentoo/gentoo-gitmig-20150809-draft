@@ -1,23 +1,23 @@
 # ChangeLog for media-sound/mad
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.3 2002/07/07 19:22:51 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.4 2002/09/14 03:12:44 woodchip Exp $
 
 *mad-0.14.2b-r2 (7 July 2002)
 
-  7 Jul 2002; Mark Guertin <gerk@gentoo.org> Changelog :
+  13 Sep 2002; Donny Davies <woodchip@gentoo.org> mad-0.14.2b-r2.ebuild :
+  sys-devel/ld.so is deprecated; #6476.
 
+  7 Jul 2002; Mark Guertin <gerk@gentoo.org> Changelog :
   Added case ARCH to set proper ARCH in configure options
 
 *mad-0.14.2b (12 Mar 2002)
 
   12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
-
-   Added USE dependent nls compilation
+  Added USE dependent nls compilation
 
 *mad-0.14.2b (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

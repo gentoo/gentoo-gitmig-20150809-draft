@@ -1,28 +1,28 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.4 2002/07/16 11:36:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.5 2002/09/14 03:12:44 woodchip Exp $
 
 *xsane-0.86-r1 (16 Jul 2002)
 
-  16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> xsane-0.86-r1.ebuild
-  files/digest-xsane-0.86-r1 :
+  13 Sep 2002; Donny Davies <woodchip@gentoo.org> xsane-0.86-r1.ebuild :
+  Needs gtk+-1, fix #6476.
 
-  Added ppc to KEYWORDS, because it works, and USE dependent nls, jpeg,
-  tiff, png supports.
+  16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> xsane-0.86-r1.ebuild
+  files/digest-xsane-0.86-r1 : Added ppc to KEYWORDS, because it works,
+  and USE dependent nls, jpeg, tiff, png supports.
 
 *xsane-0.86 (11 June 2002)
+
   07 July 2002; Owen Stampflee <owen@gentoo.org> xsane-0.86.ebuild :
   Removed the depend on The GIMP. It doesn't actually need it.
 
   11 June 2002; Ryan Phillips <rphillips@gentoo.org> xsane-0.86.ebuild :
-  
   Thanks to Bret the ebuild will install the plugin link into the correct
   location.  Updated Revision.
   
 *xsane-0.77-r1 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

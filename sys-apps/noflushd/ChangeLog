@@ -1,24 +1,24 @@
 # ChangeLog for sys-apps/noflushd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/ChangeLog,v 1.4 2002/07/21 20:28:58 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/ChangeLog,v 1.5 2002/09/14 03:12:44 woodchip Exp $
 
 *noflushd-2.6.3 (15 Jul 2002)
 
-  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  13 Sep 2002; Donny Davies <woodchip@gentoo.org> noflushd-2.6.3.ebuild :
+  sys-devel/ld.so is deprecated; #6476.
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   updated keywords (-ppc)
 
   15 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
-
   New version, closes bug #4577.
 
 *noflushd-2.4-r3.ebuild (14 July 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> noflushd-2.4-r3.ebuild :
-
   Added LICENSE, KEYWORDS, SLOT.
 
 *noflushd-2.4-r6 (1 Feb 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> noflushd-2.4-r6.ebuild :
-
   Added LICENSE, KEYWORDS, SLOT.
