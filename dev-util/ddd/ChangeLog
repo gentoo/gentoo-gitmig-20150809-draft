@@ -1,7 +1,9 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.9 2003/10/02 08:07:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.10 2003/10/12 17:06:36 mholzer Exp $
 
+  13 Oct 2003; Martin Holzer <mholzer@gentoo.org> ddd-3.3.7.ebuild:
+  added gcc3 depend. Closes #30844.
 
 *ddd-3.3.7 (02 Oct 2003)
 
