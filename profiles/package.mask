@@ -585,10 +585,6 @@ x11-themes/gtk-xfce-engine
 # Testing...
 =net-ftp/kbear-2.0_beta1
 
-# George Shapovalov <george@gentoo.org> (01 Aug 2002)
-# sandbox violation
-=dev-lang/stratego-0.7.ebuild
-
 # Chad Huneycutt <chadh@gentoo.org> (31 Jul 2002)
 # new package. needs testing
 app-office/ical
