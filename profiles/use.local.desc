@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.565 2004/08/17 18:11:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.566 2004/08/17 18:13:06 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -437,7 +437,6 @@ net-www/apache:distcache - Enable SSL distcache support
 net-www/apache:threads - Enable thread support
 net-www/drupal:minimal - Disables installing the additional plugins
 net-www/elinks:lua - enable lua support
-net-www/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 net-www/kazehakase:estraier - enable estraier support for full-text search in history.
 net-www/kazehakase:migemo - enable migemo support for Japanese incremental search.
 net-www/links:javascript - enable javascript support
@@ -509,6 +508,7 @@ sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and prevents it from installing unless all the tests pass
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
+www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
 www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
