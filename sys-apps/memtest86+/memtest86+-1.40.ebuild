@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.40.ebuild,v 1.3 2005/01/24 10:37:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.40.ebuild,v 1.4 2005/03/19 19:36:48 spock Exp $
 
 inherit mount-boot eutils
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="serial"
 DEPEND="virtual/libc"
+RESTRICT="maketest"
 
 src_unpack() {
 	unpack ${A}
