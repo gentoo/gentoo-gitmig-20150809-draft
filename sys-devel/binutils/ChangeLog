@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.8 2002/07/06 08:24:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.9 2002/07/28 07:44:13 azarah Exp $
+
+*binutils-2.12.90.0.14 (28 Jul 2002)
+
+  28 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Version update.
 
 *binutils-2.12.90.0.14 (6 Jul 2002)
 
