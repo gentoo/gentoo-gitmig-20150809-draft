@@ -1,0 +1,11 @@
+--- Geramik-0.24/qtpixmap2/qtpixbuf-rc-style.c	2003-03-28 07:13:47.000000000 -0500
++++ ../qtpixbuf-rc-style.c	2003-05-02 11:59:31.000000000 -0400
+@@ -232,7 +232,7 @@
+   pixmap = gtk_rc_find_pixmap_in_path(settings, scanner, scanner->value.v_string);
+   if (pixmap)
+     {
+-      //      printf( "%s\n", pixmap );
++      /*      printf( "%s\n", pixmap ); */
+       qt_theme_pixbuf_set_filename (*qt_theme_pb, pixmap);
+       g_free (pixmap);
+     }

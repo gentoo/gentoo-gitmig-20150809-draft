@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines-geramik
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.8 2003/02/12 09:46:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.9 2003/05/02 17:00:44 foser Exp $
+
+*gtk-engines-geramik-0.24 (02 May 2003)
+
+  02 May 2003; foser <foser@gentoo.org> gtk-engines-geramik-0.24* :
+  Version bump (#19312)
 
 *gtk-engines-geramik-0.18 (31 Jan 2003)
 
@@ -22,6 +27,9 @@
   reported by Jeremy Johnson on bug #11636.
   
 *gtk-engines-geramik-0.08 (28 Nov 2002)
+
+  02 May 2003; foser <foser@gentoo.org> gtk-enigenes-geramik-0.08* :
+  Added KEYWORDS (!)
 
   28 Nov 2002; L. Boshell <leonardop@gentoo.org> : New version. Created
   two revisions of this package, since the same tarball provides GTK-1 and
