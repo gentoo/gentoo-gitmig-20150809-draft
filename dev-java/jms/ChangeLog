@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jms
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/ChangeLog,v 1.1 2004/10/30 18:52:14 axxo Exp $
+
+*jms-1.1 (30 Oct 2004)
+
+  30 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +jms-1.1.ebuild:
+  inital import, ebuild contributed by Dan <dan@intuitivelyobvious.net>
+

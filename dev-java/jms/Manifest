@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac06ffec9517120dd153a1097d092ebd jms-1.1.ebuild 1403
+MD5 431dc051bbd15dec523e499c5242edb9 ChangeLog 375
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 6ca22a64031fe5cba54a958c6c4769b7 files/digest-jms-1.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBg+Mg/rLF9B432nYRArhHAJ9KdPQlTEPfWD3M4gKe7lc8/iUyCwCfUMbQ
+npJ04ibjS7N2VLezakpsptU=
+=9VNl
+-----END PGP SIGNATURE-----
