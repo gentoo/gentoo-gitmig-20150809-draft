@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/neti
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.1 2004/06/21 09:43:59 dragonheart Exp $
+
+*neti-1.01 (21 Jun 2004)
+
+  21 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +files/neti-init, +neti-1.01.ebuild:
+  Initial import thanks to Ben Thomasmail <ben@smallercircle.com> Dylan
+  Vanderhoof <llarian@llarian.net> in bug #49220
+

@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/files/neti-init,v 1.1 2004/06/21 09:43:59 dragonheart Exp $
+
+depend() {
+    need net
+}
+
+start() {
+	ebegin "Starting netiathome"
+	start-stop-daemon --start --quiet --exec \
+		/usr/bin/tethereal -iany -l -p -tad -V -R"udp||tcp||icmp||igmp" | neti
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping netiathome"
+	start-stop-daemon --stop --quiet --exec /usr/bin/tethereal
+	eend $?
+}
