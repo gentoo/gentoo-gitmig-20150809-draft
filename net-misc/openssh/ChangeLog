@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.14 2002/07/09 10:25:07 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.15 2002/07/09 14:36:49 lostlogic Exp $
+
+*openssh-3.4_p1-r3 (04 July 2002)
+
+  09 Jul 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r3.ebuild :
+
+  New revision enables md5 passwords, please test and let me know how it
+  goes so I can unmask.  Thanks.
 
 *openssh-3.4_p1-r2 (04 July 2002)
 
