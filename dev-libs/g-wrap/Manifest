@@ -1,11 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1d345068e61e85081c015b5a3a39563a ChangeLog 2753
-MD5 52ac8affa4e49326b5fbd07eb4af3c12 g-wrap-1.2.1-r2.ebuild 1069
-MD5 f9ec544df3e75d8517c53ff5e9e1d7f4 g-wrap-1.3.1-r1.ebuild 907
 MD5 26712009a9dca9b76c6ec30a760d6552 g-wrap-1.3.4-r1.ebuild 851
-MD5 b0a94d16c6f0a268e946878953efe25d g-wrap-1.3.4.ebuild 762
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
-MD5 e8dd680595425a60c9a82eed7c227e4d files/digest-g-wrap-1.2.1-r2 64
-MD5 89d7f0500866fe4fde1df5715006c859 files/digest-g-wrap-1.3.1-r1 64
-MD5 0fddc83a9af8d261128fa62b47fad1ab files/digest-g-wrap-1.3.4 64
 MD5 0fddc83a9af8d261128fa62b47fad1ab files/digest-g-wrap-1.3.4-r1 64
 MD5 05abd740e0c2fe308fd53514de5442e0 files/g-wrap-1.3.4-direntry.patch 2202
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8Om/Rkyva5PS18kRAhJiAJ4iN3EcuddUnV8Ov3wo/SseSa4wUgCgl5Kb
+zAoEL8qrGDvVsu/XMtdC3Vk=
+=Sqdk
+-----END PGP SIGNATURE-----
