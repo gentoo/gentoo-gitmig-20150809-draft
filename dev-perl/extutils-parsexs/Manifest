@@ -1,5 +1,5 @@
-MD5 90ae7bb8289f0a8037578cb9740de6ab extutils-parsexs-2.02.ebuild 612
-MD5 744ab4290c4912101064782fe1844151 extutils-parsexs-2.08.ebuild 664
+MD5 f888248e6fa888698fc3622f8a4c7203 extutils-parsexs-2.02.ebuild 619
+MD5 b8065e829208d7024ef1fdc4b80cb51e extutils-parsexs-2.08.ebuild 672
 MD5 eba9d117b094c3e11e9af83bd1ca89d6 ChangeLog 857
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 6c9767ee18391dc0389ebe2ea51e468f files/digest-extutils-parsexs-2.02 72
