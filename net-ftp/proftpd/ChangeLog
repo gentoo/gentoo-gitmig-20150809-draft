@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.75 2004/11/23 00:05:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.76 2004/11/26 15:34:56 humpback Exp $
+
+*proftpd-1.2.10-r1 (26 Nov 2004)
+
+  26 Nov 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  +proftpd-1.2.10-r1.ebuild:
+  Adding version 1.2.10-r1 with fix for time attack bug
+  #http://bugs.gentoo.org/show_bug.cgi?id=67648
 
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
