@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r5.ebuild,v 1.5 2004/07/01 20:02:16 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r5.ebuild,v 1.6 2004/08/20 04:29:46 vapier Exp $
 
 inherit eutils gcc
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.atstake.com/research/tools/network_utilities/${MY_P}.tgz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha arm hppa amd64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 IUSE="ipv6 static GAPING_SECURITY_HOLE"
 
 DEPEND="virtual/libc"
