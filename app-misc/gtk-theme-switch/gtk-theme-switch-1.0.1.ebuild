@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.2 2002/05/31 21:00:12 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.3 2002/06/01 00:04:31 bass Exp $
 S=${WORKDIR}/${P}
 
 # Short one-line description of this package.
@@ -28,4 +28,6 @@ src_install () {
 	mv ${D}usr/man/* ${D}usr/share/man/man1 || die
 	rm -rf ${D}usr/man
 }
-
+pkg_postinstall () {
+	echo "If don't works try with -02 flag in make.conf"
+}
