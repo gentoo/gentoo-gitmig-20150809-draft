@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r8.ebuild,v 1.1 2003/11/09 22:48:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r8.ebuild,v 1.2 2003/11/10 02:08:08 mr_bones_ Exp $
 
 IUSE=""
 
@@ -25,12 +25,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/${P}-redhat.patch
 	epatch ${FILESDIR}/${P}-gentoo-new.diff
 	epatch ${FILESDIR}/${P}-static-lib.patch
-	
+
 	[ "${ARCH}" = "alpha" -a "${CC}" = "ccc" ] && \
 		sed -i -e 's:CFLAGS += -g :CFLAGS += -g3 :' ${S}/cracklib/Makefile
 
