@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.5 2002/06/19 15:31:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.6 2002/06/20 18:57:59 bangert Exp $
+
+  20 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020619.ebuild :
+
+  added support for /etc/profile.d/bash-completion
+  
 
 *bash-completion-20020619 (19 Jun 2002)
 
