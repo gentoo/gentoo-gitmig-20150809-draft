@@ -640,13 +640,13 @@ Index: gcc/libgcc2.c
 ===================================================================
 RCS file: /home/cvsroot/gcc/gcc/libgcc2.c,v
 retrieving revision 1.1.1.7
-retrieving revision 1.1.1.7.4.1
-diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.1
+retrieving revision 1.1.1.7.4.2
+diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.2
 *** gcc/libgcc2.c	2002/12/18 00:55:44	1.1.1.7
---- gcc/libgcc2.c	2003/02/26 08:01:02	1.1.1.7.4.1
+--- gcc/libgcc2.c	2003/03/17 13:22:49	1.1.1.7.4.2
 *************** atexit (func_ptr func)
 *** 2050,2052 ****
---- 2050,2138 ----
+--- 2050,2151 ----
   #endif /* NEED_ATEXIT */
   
   #endif /* L_exit */
@@ -694,20 +694,28 @@ diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.1
 + #if defined (__GNU_LIBRARY__)
 +   extern char * __progname;
 + #endif
-+   char message[] = ": stack smashing attack in function ";
++   const char message[] = ": stack smashing attack in function ";
 +   int bufsz = 256, len;
 +   char buf[bufsz];
 + #if defined(HAVE_SYSLOG)
 +   int LogFile;
 +   struct sockaddr_un SyslogAddr;  /* AF_UNIX address of local logger */
 + #endif
++ #ifdef _POSIX_SOURCE
++   {
++     sigset_t mask;
++     sigfillset(&mask);
++     sigdelset(&mask, SIGABRT);	/* Block all signal handlers */
++     sigprocmask(SIG_BLOCK, &mask, NULL); /* except SIGABRT */
++   }
++ #endif
 + 
 +   strcpy(buf, "<2>"); len=3;	/* send LOG_CRIT */
 + #if defined (__GNU_LIBRARY__)
 +   strncat(buf, __progname, bufsz-len-1); len = strlen(buf);
 + #endif
-+   if (bufsz>len) strncat(buf, message, bufsz-len-1); len = strlen(buf);
-+   if (bufsz>len) strncat(buf, func, bufsz-len-1); len = strlen(buf);
++   if (bufsz>len) {strncat(buf, message, bufsz-len-1); len = strlen(buf);}
++   if (bufsz>len) strncat(buf, func, bufsz-len-1);
 + 
 +   /* print error message */
 +   write (STDERR_FILENO, buf+3, len-3);
@@ -721,15 +729,20 @@ diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.1
 +     (void)strncpy(SyslogAddr.sun_path, _PATH_LOG,
 + 		  sizeof(SyslogAddr.sun_path) - 1);
 +     SyslogAddr.sun_path[sizeof(SyslogAddr.sun_path) - 1] = '\0';
-+     sendto(LogFile, buf, strlen(buf), 0, (struct sockaddr *)&SyslogAddr, sizeof(SyslogAddr));
++     sendto(LogFile, buf, strlen(buf), 0, (struct sockaddr *)&SyslogAddr,
++ 	   sizeof(SyslogAddr));
 +   }
 + #endif
 + 
 + #ifdef _POSIX_SOURCE
-+   {
-+     sigset_t mask;
-+     sigfillset(&mask);
-+     sigdelset(&mask, SIGABRT);
++   { /* Make sure the default handler is associated with SIGABRT */
++     struct sigaction sa;
++     
++     memset(&sa, 0, sizeof(struct sigaction));
++     sigfillset(&sa.sa_mask);	/* Block all signals */
++     sa.sa_flags = 0;
++     sa.sa_handler = SIG_DFL;
++     sigaction(SIGABRT, &sa, NULL);
 +     (void)kill(getpid(), SIGABRT);
 +   }
 + #endif
