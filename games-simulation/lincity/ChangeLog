@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/lincity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.9 2004/10/20 03:20:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.10 2004/12/28 23:36:34 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *lincity-1.12.1 (19 Oct 2004)
 
@@ -41,7 +44,7 @@
   01 Oct 2002; Mike Frysinger <vapier@gentoo.org> lincity-1.11a-r1.ebuild lincity-1.11a-gcc3.patch lincity-1.11a-Makefile.diff :
   Deleted old patch and made a new one to address same issues and more ... #8448
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> lincity-1.11a-r1.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> lincity-1.11a-r1.ebuild :
   Added LICENSE, KEYWORDS.
 
   5 May 2002; B.Verwilst <verwilst@gentoo.org> ChangeLog :

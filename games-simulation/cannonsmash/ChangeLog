@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/cannonsmash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.9 2004/12/16 15:55:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.10 2004/12/28 23:35:13 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Joseph Jezak <josejx@gentoo.org> cannonsmash-0.6.6.ebuild:
   Marked ppc stable.
@@ -41,7 +44,7 @@
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> cannonsmash-0.6.4.2-r1.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> cannonsmash-0.6.4.2-r1.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> cannonsmash-0.6.4.2-r1.ebuild :
   Added LICENSE, KEYWORDS.
   Added sdl-mixer to deps, so sound finally works, and made ebuild  
   nls-aware.
