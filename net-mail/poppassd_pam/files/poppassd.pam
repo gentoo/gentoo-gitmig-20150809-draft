@@ -1,2 +1,0 @@
-password   required	/lib/security/pam_permit.so
-

@@ -1,7 +1,11 @@
-MD5 cd70dd45e70788064c5c2969f266af2f ChangeLog 587
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 1a4ee378854394eac4a53f5978eef5fb poppassd_pam-1.0.ebuild 1103
-MD5 fb7a5db7b32710ee7d94bf2b1aa23f75 files/digest-poppassd_pam-1.0 66
-MD5 a80f1af33dba641a792b3d019daf81eb files/missing-stdio.patch 248
-MD5 ffc0f22b1a86f7cc587ca8587bade97a files/poppassd.pam 49
-MD5 581738ebcd2ba79e6782c60c59f6508f files/poppassd.xinetd 169
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB48WxntT9W3vfTuoRAlSSAKCT74ZeCMxztOJ5VDoTgiKkecz+7gCfQd9x
+NG95xwl7ybxuyiR8/N1GKqw=
+=DPj9
+-----END PGP SIGNATURE-----
