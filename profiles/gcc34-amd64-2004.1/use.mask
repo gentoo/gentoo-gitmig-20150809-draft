@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.4 2004/07/01 00:22:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.5 2004/07/22 07:48:08 mr_bones_ Exp $
 
 # Anything that relies on vm86.h will not built on amd64
 # SVGAlib doesnt build
@@ -41,3 +41,5 @@ uclibc
 
 # altivec is a ppc instruction set.
 altivec
+
+ifc
