@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-4.3.0-r7.ebuild,v 1.1 2004/08/29 08:11:06 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-4.3.0-r7.ebuild,v 1.2 2004/09/02 01:28:22 battousai Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -109,6 +109,7 @@ src_unpack() {
 
 	# Change the install location for the modules.d stuff
 	sed -ie "s:/kernel/drivers/char/drm:/${PN}:g" Makefile.linux
+	sed -ie "s:xfree-drm:${PN}:g" Makefile
 }
 
 src_compile() {

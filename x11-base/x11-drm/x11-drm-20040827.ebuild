@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.2 2004/08/31 05:23:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.3 2004/09/02 01:28:22 battousai Exp $
 
 inherit eutils xfree kmod
 
@@ -87,6 +87,7 @@ src_unpack() {
 
 	# Substitute new directory under /lib/modules/${KV}
 	sed -ie "s:/kernel/drivers/char/drm:/${PN}:g" Makefile
+	sed -ie "s:xfree-drm:${PN}:g" Makefile
 }
 
 src_compile() {
