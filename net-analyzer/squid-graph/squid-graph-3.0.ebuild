@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/squid-graph-3.0.ebuild,v 1.4 2003/02/13 13:51:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/squid-graph-3.0.ebuild,v 1.5 2004/05/01 01:00:30 port001 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Squid logfile analyzer and traffic grapher"
-HOMEPAGE="http://www.squid-graph.dhs.org"
-SRC_URI="http://www.squid-graph.dhs.org/files/stable/${P}.tar"
+HOMEPAGE="http://squid-graph.securlogic.com/"
+SRC_URI="http://squid-graph.securlogic.com/files/stable/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"

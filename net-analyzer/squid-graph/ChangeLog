@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/squid-graph
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.9 2004/03/05 15:15:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.10 2004/05/01 01:00:30 port001 Exp $
+
+  01 May 2004; Ian Leitch <port001@gentoo.org> squid-graph-3.0.ebuild,
+  squid-graph-3.1.ebuild:
+  Non trivial HOMEPAGE and SRC_URI fixes
 
   05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> squid-graph-3.1.ebuild:
   stable on sparc, thanks weeve
