@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.5.ebuild,v 1.3 2002/12/16 18:43:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.5.ebuild,v 1.4 2002/12/18 10:54:23 azarah Exp $
 
 IUSE="bootstrap build"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="sys-kernel/linux-headers
 	>=sys-apps/portage-2.0.23"
