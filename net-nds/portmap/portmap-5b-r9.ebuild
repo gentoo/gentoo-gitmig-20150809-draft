@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.10 2005/01/22 23:51:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.11 2005/02/02 23:54:22 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ~ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc64 s390 sh sparc x86"
 IUSE="selinux tcpd"
 
 DEPEND="virtual/libc
@@ -27,7 +27,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
 	epatch ${FILESDIR}/${PN}_5beta.dif
 
@@ -42,11 +41,10 @@ src_unpack() {
 	# <azarah@gentoo.org> (31 Dec 2002).
 	epatch ${FILESDIR}/${P}-include-errno_h.patch
 
-	# Path to listen on loopback only #65199
+	# Patch to listen on loopback only #65199
 	epatch ${FILESDIR}/${P}-loopback-only.patch
 
 	# Make tcp wrapper checks easier
-	cp Makefile Makefile.orig
 	epatch ${FILESDIR}/${P}-optional-tcpd.patch
 }
 

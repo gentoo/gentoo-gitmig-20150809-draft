@@ -41,7 +41,8 @@ diff -u portmap_5beta/portmap.c portmap_5beta_elros/portmap.c
 +			break;
 +
  		default:
- 			(void) fprintf(stderr, "usage: %s [-dv]\n", argv[0]);
+-			(void) fprintf(stderr, "usage: %s [-dv]\n", argv[0]);
++			(void) fprintf(stderr, "usage: %s [-dvl]\n", argv[0]);
  			(void) fprintf(stderr, "-d: debugging mode\n");
  			(void) fprintf(stderr, "-v: verbose logging\n");
 +			(void) fprintf(stderr, "-l: listen only on loopback address (not on external address)\n");
