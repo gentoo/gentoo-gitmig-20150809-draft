@@ -1,10 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.372 2005/01/19 12:59:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.373 2005/01/19 19:12:43 tseng Exp $
 
   19 Jan 2005; Joshua Kinard <kumba@gentoo.org> gcc-3.4.3-r1.ebuild,
   gcc-3.4.3.20050110.ebuild:
   Typo tweaks in some comments in src_unpack.
+
+  19 Jan 2005; Brandon Hale <tseng@gentoo.org> gcc-3.4.3.20050110.ebuild:
+  Re-masking by request, see bug #78666. This GCC is failing with ICE, and 
+  some users report that it cannot even build itself. Hopefully the 
+  SSE2/3 fixes can be sanely backported to a released toolchain instead of 
+  unleashing a random, busted CVS checkout on ~arch.
 
   16 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gcc-3.4.3.20050110.ebuild:
