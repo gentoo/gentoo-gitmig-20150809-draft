@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.110.ebuild,v 1.1 2003/09/10 23:48:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.110.ebuild,v 1.2 2003/10/05 14:11:14 obz Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 
 RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/libbonobo-2.2.1
