@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/fortune-mod-it
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-it/ChangeLog,v 1.1 2004/09/25 11:23:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-it/ChangeLog,v 1.2 2004/12/28 02:46:04 vapier Exp $
+
+*fortune-mod-it-1.99 (27 Dec 2004)
+
+  27 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +fortune-mod-it-1.99.ebuild:
+  Version bump #73461 by Silian Della Ragione.
 
 *fortune-mod-it-1.51 (25 Sep 2004)
 
