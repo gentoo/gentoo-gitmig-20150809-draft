@@ -1,4 +1,14 @@
-MD5 c4c3888186f99f0fa8141f2c7133393b pngrewrite-1.2.1.ebuild 647
-MD5 5387f8598a30fb6af7f5582952d39804 ChangeLog 456
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f806223b2cecfabc4edbbef49eae537b ChangeLog 549
 MD5 dc120a7f743858956bef211725cd02a0 metadata.xml 254
+MD5 87f8370c93a9d0f3c253ede551840187 pngrewrite-1.2.1.ebuild 645
 MD5 4356f785519b6fe9ba7c306a9e4bb4a4 files/digest-pngrewrite-1.2.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBK1ZBLLFUmVNQ7rkRAtEmAKCy2p/rgzoBcSdSFU8K4FrBN4fuQACgz3SY
+tWgq9jZfRSp1DDohzYtRFrk=
+=AZhJ
+-----END PGP SIGNATURE-----
