@@ -1,29 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.4 2004/06/24 22:52:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.5 2004/08/18 17:17:46 squinky86 Exp $
 
 DESCRIPTION="a collection of modules for the sword project"
 HOMEPAGE="http://www.crosswire.org/sword/"
-SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/KJV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/StrongsGreek.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/StrongsHebrew.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/ASV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/RSV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/AKJV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/ISBE.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/ISV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/WebstersDict.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/KJVD.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/SME.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/Robinson.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/WEB.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/Packard.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/Vulgate.zip
-http://www.crosswire.org/ftpmirror/pub/sword/modules/raw/Josephus.zip
-offensive? (http://www.crosswire.org/ftpmirror/pub/sword/betamodules/raw/BoM.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/raw/Jasher.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/Quran.zip
-	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/QuranShakir.zip)"
+SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJV.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/StrongsGreek.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/StrongsHebrew.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ASV.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/RSV.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/AKJV.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ISBE.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ISV.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/WebstersDict.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJVD.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/SME.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Robinson.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/WEB.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Packard.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Vulgate.zip
+http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Josephus.zip
+offensive? (mirror://gentoo/BoM.zip
+	mirror://gentoo/Jasher.zip
+	mirror://gentoo/Quran.zip)"
+#	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/QuranShakir.zip)"
 RESTRICT="nomirror"
 LICENSE="freedist"
 SLOT="0"
@@ -61,8 +61,8 @@ src_unpack() {
 		# uh oh, the quran is only availabe for windows; extract the data
 		unpack Quran.zip > /dev/null
 		unzip ${S}/data.zip > /dev/null
-		unpack QuranShakir.zip > /dev/null
-		unzip ${S}/data.zip > /dev/null
+#		unpack QuranShakir.zip > /dev/null
+#		unzip ${S}/data.zip > /dev/null
 	fi
 }
 

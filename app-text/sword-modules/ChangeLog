@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword-modules
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.7 2004/06/24 22:52:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.8 2004/08/18 17:17:46 squinky86 Exp $
+
+  18 Aug 2004; Jon Hood <squinky86@gentoo.org> sword-modules-20040503.ebuild:
+  Fix SRC_URI irt #60279.
 
   15 Jun 2004; Jon Hood <squinky86@gentoo.org> -sword-modules-20040406.ebuild,
   sword-modules-20040503.ebuild:
