@@ -1,5 +1,8 @@
 
 
+  12 Feb 2004; Sven Blumenstein <bazik@gentoo.org> mozilla-firefox-0.8.ebuild:
+  Here you got a sparc-cookie, Mr. Firefox.
+
   12 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-0.8.ebuild:
   Move mozilla-firefox to stable on x86. This is the first step is moving its
   predecessor, mozilla-firebird, out of the tree entirely. 
