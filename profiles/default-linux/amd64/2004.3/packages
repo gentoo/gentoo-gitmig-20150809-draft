@@ -3,6 +3,3 @@
 *>=sys-devel/binutils-2.15.90.0.1.1-r1
 *>=sys-devel/gcc-3.3.4
 *>=sys-libs/glibc-2.3.4.20040619-r1
-
->=sys-apps/sysklogd-1.4.1
->dev-lang/gpc-2.1
