@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer-plugins
 
-gst-plugins-0.3.4 (29 Jun  2002)
+* gst-plugins-0.3.4 (03 Jul  2002)
+  03 Jul 2002; phoen][x <phoenix@gentoo.org> gst-plugins-0.3.4.ebuild : 
+  added --disable-dv and --disable-avifile (Bug 4400)
+
+* gst-plugins-0.3.4 (29 Jun  2002)
   29 Jun 2002; Spider <spider@gentoo.org> 
   Updated with some more deps (optional) 
 

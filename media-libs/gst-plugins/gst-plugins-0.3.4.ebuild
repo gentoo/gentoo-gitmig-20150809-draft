@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Artem Baguinski <artm@v2.nl>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.3.4.ebuild,v 1.4 2002/06/29 08:32:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.3.4.ebuild,v 1.5 2002/07/03 16:25:02 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
@@ -25,6 +25,8 @@ RDEPEND="${DEPEND}"
 src_compile() {
 	libtoolize --copy --force
 	./configure \
+		--disable-avifile \
+		--disable-dv \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
