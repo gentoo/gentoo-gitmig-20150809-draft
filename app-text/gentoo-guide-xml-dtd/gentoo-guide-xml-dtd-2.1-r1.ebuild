@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gentoo-guide-xml-dtd/gentoo-guide-xml-dtd-2.1-r1.ebuild,v 1.5 2004/03/12 09:18:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gentoo-guide-xml-dtd/gentoo-guide-xml-dtd-2.1-r1.ebuild,v 1.6 2004/05/12 12:25:08 randy Exp $
 
 inherit sgml-catalog
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc s390"
 
 DEPEND=">=app-text/sgml-common-0.6.1"
 
