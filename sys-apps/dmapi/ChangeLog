@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.23 2004/10/08 13:24:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.24 2004/12/20 12:59:04 absinthe Exp $
+
+  20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> dmapi-2.2.1.ebuild:
+  Stable on amd64.
 
 *dmapi-2.2.1 (08 Oct 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mdadm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.22 2004/12/05 20:20:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.23 2004/12/20 13:03:15 absinthe Exp $
+
+  20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> mdadm-1.7.0.ebuild:
+  Stable on amd64.
 
 *mdadm-1.8.1 (05 Dec 2004)
 
