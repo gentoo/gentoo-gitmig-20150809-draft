@@ -152,6 +152,13 @@ gnome-libs/medusa
 gnome-apps/nautilus
 gnome-base/scrollkeeper
 gnome-office/guppi
+gnome-apps/gnome-pilot-conduits
+gnome-apps/gnome-pilot
+gnome-apps/gnome-audio
+gnome-apps/gnome-games
+gnome-apps/gnome-media
+gnome-apps/gnome-utils
+gnome-apps/bug-buddy
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
@@ -160,7 +167,6 @@ gnome-office/guppi
 dev-util/anjuta
 gnome-extra/battstat
 gnome-extra/bonobo-conf
-gnome-extra/bug-buddy
 media-gfx/ee
 app-office/evolution
 net-im/gabber
@@ -171,13 +177,7 @@ dev-util/glade
 dev-util/glademm
 dev-util/glimmer
 app-office/gnofin
-gnome-extra/gnome-audio
-gnome-extra/gnome-games
 media-gfx/gnome-iconedit
-gnome-extra/gnome-media
-gnome-extra/gnome-pilot-conduits
-gnome-extra/gnome-utils
-gnome-extra/gnome-pilot
 app-arch/gnorpm
 app-office/gnucash
 media-gfx/gthumb
