@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/szip/szip-1.1-r1.ebuild,v 1.1 2004/03/16 06:49:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/szip/szip-1.1-r1.ebuild,v 1.2 2004/03/30 14:39:40 aliz Exp $
+
+inherit eutils
 
 MY_P="${P/-}"
 
@@ -17,6 +19,12 @@ IUSE=""
 DEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-fPIC.patch
+}
 
 src_compile() {
 	./configure -s --prefix="/usr" || die

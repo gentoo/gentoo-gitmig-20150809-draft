@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/szip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/szip/ChangeLog,v 1.5 2004/03/16 06:49:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/szip/ChangeLog,v 1.6 2004/03/30 14:39:40 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> szip-1.1-r1.ebuild:
+  Fix -fPIC issues, closing #46222.
 
 *szip-1.1-r1 (16 Mar 2004)
 
