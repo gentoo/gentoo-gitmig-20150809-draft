@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.44 2004/08/08 01:04:47 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.45 2004/08/08 21:36:44 spider Exp $
+
+*vte-0.11.11-r1 (08 Aug 2004)
+
+  08 Aug 2004; <spider@gentoo.org> +files/vte-0.11.11-spaces.patch,
+  +vte-0.11.11-r1.ebuild:
+  Added upstream patch from http://bugs.gnome.org/show_bug.cgi?id=143914 Closes
+  http://bugs.gentoo.org/show_bug.cgi?id=56406 estimates more than 10fold
+  improvement
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> vte-0.11.11.ebuild:
   stable on amd64
