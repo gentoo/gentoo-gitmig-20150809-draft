@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mikmod
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.10 2004/06/25 00:10:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.11 2004/07/06 08:02:06 eradicator Exp $
+
+  06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mikmod-3.2.1.ebuild:
+  ~sparc
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> mikmod-3.1.6a.ebuild,
   mikmod-3.2.1.ebuild:
