@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6185e7ec8d5fdcfe9ae3e734ac2c9895 flow-tools-0.67.ebuild 2066
+MD5 7341bf13461ffc37a01200d21487f2e1 flow-tools-0.67.ebuild 2066
 MD5 f59e2f2024f65a2a4f7eed1e324b373d flow-tools-0.66.ebuild 915
 MD5 7b149ef6a2eecfa993d8fcc573d3b7de ChangeLog 1796
 MD5 657939d746987d289ffa06516ae69d46 metadata.xml 261
@@ -13,9 +13,9 @@ MD5 16e9d55df0b78a82c236db3bcad399a5 files/flow-tools-0.67-fix-a-zillion-warning
 MD5 f16f4ba51648f2b7f0e3830bc7670f6e files/flow-tools-0.67-nodebug.patch 933
 MD5 eddbfc9694d3f0b00a46f84a0e58a651 files/flow-tools-0.67-memleak.patch 465
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCHx/REZCkKN40op4RArOCAJwPkvDSix65xNUzdkoNrR5PJ7JW1QCffzFh
-tBxR+7VopzTuGg5dWgbtATQ=
-=vwUx
+iD8DBQFCO3zII1lqEGTUzyQRAjicAKCW6N0UPMXIhopUBsgs78lcgmryAwCg1m8/
+zX9MeOV3618EMcfzjVa0L1c=
+=S+O0
 -----END PGP SIGNATURE-----
