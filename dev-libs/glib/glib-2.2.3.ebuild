@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.3.ebuild,v 1.4 2003/10/05 12:19:01 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.3.ebuild,v 1.5 2003/10/13 06:51:05 obz Exp $
 
 inherit libtool
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha ~arm ~hppa ~mips ~amd64 ia64"
 IUSE="doc debug"
 
 DEPEND=">=dev-util/pkgconfig-0.14
+	>=sys-devel/gettext-0.11
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
 RDEPEND="virtual/glibc"
