@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.7 2003/10/12 19:07:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.8 2003/10/12 21:22:48 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -9,7 +9,7 @@
 
 ECLASS=ruby
 INHERITED="${INHERITED} ${ECLASS}"
-EXPORT_FUNCTIONS erubyconf erubymake erubyinstall \
+EXPORT_FUNCTIONS erubyconf erubymake erubyinstall erubydoc \
 	src_unpack src_compile src_install
 
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
@@ -66,7 +66,7 @@ erubyconf() {
 
 erubymake() {
 	if [ -f Makefile ] ; then
-		emake || die "emake failed"
+		emake $@ || die "emake failed"
 	fi
 }
 
@@ -77,17 +77,17 @@ ruby_src_compile() {
 		einfo "src_compiling for ruby 1.6 ;)"
 		cd 1.6/${S#${WORKDIR}}
 		erubyconf ruby16 || die
-		erubymake || die
+		erubymake $@ || die
 		cd -
 		einfo "src_compiling for ruby 1.8 ;)"
 		cd 1.8/${S#${WORKDIR}}
 		erubyconf ruby18 || die
-		erubymake || die
+		erubymake $@ || die
 		cd -
 	else
 		einfo "src_compiling ;)"
 		erubyconf || die
-		erubymake || die
+		erubymake $@ || die
 	fi
 }
 
