@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.14 2001/06/21 11:06:25 hallski Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.15 2001/06/27 03:56:47 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -117,8 +117,8 @@ src_install()
 	dodir /dev-state
 	#dodir /dev/pts /dev/shm
 	#dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
-	#cd ${D}/dev
-	#MAKEDEV generic-i386
+	cd ${D}/dev
+	MAKEDEV generic-i386
     #MAKEDEV sg
     #MAKEDEV scd
     #MAKEDEV rtc 
