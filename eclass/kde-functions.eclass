@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.61 2003/08/07 03:47:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.62 2003/09/12 02:02:53 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -268,8 +268,9 @@ qtver-from-kdever() {
 	case $1 in
 		2*)	ver=2.3.1;;
 		3.1*)	ver=3.1;;
+		3.2*)	ver=3.2;;
 		3*)	ver=3.0.5;;
-		5)	ver=3.1;; # cvs version
+		5)	ver=3.2;; # cvs version
 		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
