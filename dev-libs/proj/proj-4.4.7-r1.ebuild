@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.4 2004/04/15 15:04:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.5 2004/04/19 13:20:37 phosphan Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 N=${S}/nad
 DESCRIPTION="Proj.4 cartographic projection software with extra NAD27 grids"
 HOMEPAGE="http://proj.maptools.org/"
