@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.2 2004/04/23 15:32:30 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.3 2004/05/12 22:30:19 george Exp $
 
 Name="blas"
 DESCRIPTION="FORTRAN reference implementation of the BLAS (linear algebra lib)"
@@ -37,6 +37,15 @@ ifc_info() {
 		einfo "significantly worse performance."
 		einfo
 		sleep 5
+	fi
+}
+
+pkg_setup() {
+	use ifc || if [ -z `which g77` ]; then
+		#if ifc is defined then the dep was already checked
+		eerror "No fortran compiler found on the system!"
+		eerror "Please add g77 to your USE flags and reemerge gcc!"
+		die
 	fi
 }
 
