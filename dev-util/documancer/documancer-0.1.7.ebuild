@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.1.7.ebuild,v 1.6 2004/08/16 17:45:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.1.7.ebuild,v 1.7 2005/03/23 16:16:34 seemant Exp $
 
 DESCRIPTION="Programmer's documentation reader with very fast fulltext searching"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -10,7 +10,7 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=net-www/mozilla-1.0
+DEPEND=">=www-client/mozilla-1.0
 	>=x11-libs/gtk+-2.0
 	>=dev-lang/python-2.1
 	>=www-apps/swish-e-2.2.2
