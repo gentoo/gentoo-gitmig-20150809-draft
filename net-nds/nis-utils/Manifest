@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9b8405e96856719d2064ce1ebd61ac74 nis-utils-1.4.1.ebuild 701
-MD5 ffdb7cf39bdbf69a79b1eeca55a3ff07 ChangeLog 625
-MD5 e5d3948a2b92ccb470aebc52e25d8c57 nis-utils-1.4.1-r1.ebuild 765
-MD5 93f9a0d1b967514d38052529dcf071ad files/digest-nis-utils-1.4.1 68
+MD5 c3503d27452858d890106f57cafcca24 nis-utils-1.4.1.ebuild 695
+MD5 e20bcda1f969a20a9c6d02a0ae461b8e nis-utils-1.4.1-r1.ebuild 759
+MD5 0791c17e9a25686742f56db61dae9aba ChangeLog 619
 MD5 93f9a0d1b967514d38052529dcf071ad files/digest-nis-utils-1.4.1-r1 68
 MD5 012d904c119843d5368792434d172eec files/keyserv.rc 478
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA16mFHTu7gpaalycRAq5/AJ9O0hJfhR77UvY+rfoE25v3klJM5QCg47BT
-yMiZU6xG+5+5vv97YvA4YMs=
-=PStK
------END PGP SIGNATURE-----
+MD5 93f9a0d1b967514d38052529dcf071ad files/digest-nis-utils-1.4.1 68
