@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/Parse-RecDescent-1.94.ebuild,v 1.6 2004/01/08 01:43:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/Parse-RecDescent-1.94.ebuild,v 1.7 2004/03/07 05:15:46 geoman Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/Parse/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~ppc sparc alpha hppa"
+KEYWORDS="x86 amd64 ~ppc sparc alpha hppa ~mips"
 
 DEPEND="dev-perl/Text-Balanced"
 
