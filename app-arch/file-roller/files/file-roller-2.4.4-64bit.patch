@@ -1,0 +1,88 @@
+--- file-roller-2.4.4/src/fr-command-arj.c.64bit	2004-02-07 17:59:56.000000000 -0500
++++ file-roller-2.4.4/src/fr-command-arj.c	2004-02-07 18:00:25.000000000 -0500
+@@ -374,7 +374,7 @@
+ GType
+ fr_command_arj_get_type ()
+ {
+-        static guint type = 0;
++        static GType type = 0;
+ 
+         if (! type) {
+                 GTypeInfo type_info = {
+--- file-roller-2.4.4/src/fr-command.c.64bit	2004-02-07 17:59:56.000000000 -0500
++++ file-roller-2.4.4/src/fr-command.c	2004-02-07 18:00:25.000000000 -0500
+@@ -49,7 +49,7 @@
+ GType
+ fr_command_get_type ()
+ {
+-        static guint type = 0;
++        static GType type = 0;
+ 
+         if (! type) {
+                 GTypeInfo type_info = {
+--- file-roller-2.4.4/src/fr-command-cfile.c.64bit	2004-02-07 17:59:56.000000000 -0500
++++ file-roller-2.4.4/src/fr-command-cfile.c	2004-02-07 18:00:25.000000000 -0500
+@@ -326,7 +326,7 @@
+ GType
+ fr_command_cfile_get_type ()
+ {
+-        static guint type = 0;
++        static GType type = 0;
+ 
+         if (! type) {
+                 GTypeInfo type_info = {
+--- file-roller-2.4.4/src/fr-command-lha.c.64bit	2004-02-07 17:59:56.000000000 -0500
++++ file-roller-2.4.4/src/fr-command-lha.c	2004-02-07 18:00:25.000000000 -0500
+@@ -337,7 +337,7 @@
+ GType
+ fr_command_lha_get_type ()
+ {
+-        static guint type = 0;
++        static GType type = 0;
+ 
+         if (! type) {
+                 GTypeInfo type_info = {
+--- file-roller-2.4.4/src/fr-command-rar.c.64bit	2004-02-07 17:59:56.000000000 -0500
++++ file-roller-2.4.4/src/fr-command-rar.c	2004-02-07 18:00:25.000000000 -0500
+@@ -357,7 +357,7 @@
+ GType
+ fr_command_rar_get_type ()
+ {
+-        static guint type = 0;
++        static GType type = 0;
+ 
+         if (! type) {
+                 GTypeInfo type_info = {
+--- file-roller-2.4.4/src/fr-command-tar.c.64bit	2004-02-07 17:59:56.000000000 -0500
++++ file-roller-2.4.4/src/fr-command-tar.c	2004-02-07 18:00:25.000000000 -0500
+@@ -670,7 +670,7 @@
+ GType
+ fr_command_tar_get_type ()
+ {
+-        static guint type = 0;
++        static GType type = 0;
+ 
+         if (! type) {
+                 GTypeInfo type_info = {
+--- file-roller-2.4.4/src/fr-command-zip.c.64bit	2004-02-07 17:59:56.000000000 -0500
++++ file-roller-2.4.4/src/fr-command-zip.c	2004-02-07 18:00:25.000000000 -0500
+@@ -444,7 +444,7 @@
+ GType
+ fr_command_zip_get_type ()
+ {
+-        static guint type = 0;
++        static GType type = 0;
+ 
+         if (! type) {
+                 GTypeInfo type_info = {
+--- file-roller-2.4.4/src/fr-command-zoo.c.64bit	2004-02-07 17:59:56.000000000 -0500
++++ file-roller-2.4.4/src/fr-command-zoo.c	2004-02-07 18:00:25.000000000 -0500
+@@ -370,7 +370,7 @@
+ GType
+ fr_command_zoo_get_type ()
+ {
+-        static guint type = 0;
++        static GType type = 0;
+ 
+         if (! type) {
+                 GTypeInfo type_info = {
