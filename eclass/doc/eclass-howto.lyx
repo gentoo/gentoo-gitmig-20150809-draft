@@ -30,7 +30,14 @@ eclass howto
 Dan Armak
 \layout Date
 
-Updated for 20020125
+Updated for 20020206
+\layout Section
+
+Warning
+\layout Standard
+
+The eclasses have been modified and the documentation isn't up to date,
+ to be fixed shortly.
 \layout Section
 
 Introduction
@@ -53,7 +60,7 @@ This inheritance is implemented via simple bash sourcing.
  set (more on this later).
 \layout Standard
 
-The most similar group of ebuilds is the kde apps.
+The most uniform group of ebuilds is the kde apps.
  These were accordingly selected to be the test case for eclasses, and I
  believe I can now say the test has been successful.
  Eclasses for non-kde ebuilds may follow, but there are no concrete plans

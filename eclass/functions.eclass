@@ -1,9 +1,42 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dirs.eclass,v 1.4 2002/02/01 11:47:16 danarmak Exp $
-# The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
-ECLASS=kde-dirs
+# $Header: /var/cvsroot/gentoo-x86/eclass/functions.eclass,v 1.1 2002/02/06 20:38:10 danarmak Exp $
+# This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
+ECLASS=functions
+
+# ---------------------
+# misc helper functions
+# ---------------------
+
+# adds all parameters to DEPEND and RDEPEND
+newdepend() {
+
+	debug-print-function newdepend $*
+	debug-print "newdepend: DEPEND=$DEPEND RDEPEND=$RDEPEND"
+
+	while [ -n "$1" ]; do
+		case $1 in
+		    "/autotools")
+			    DEPEND="${DEPEND} sys-devel/autoconf sys-devel/automake sys-devel/make"
+			    ;;
+		    "/c")
+			    DEPEND="${DEPEND} sys-devel/gcc virtual/glibc sys-devel/ld.so"
+			    RDEPEND="${RDEPEND} virtual/glibc sys-devel/ld.so"
+			    ;;
+		    *)
+			    DEPEND="$DEPEND $1"
+			    RDEPEND="$RDEPEND $1"
+			    ;;
+		esac
+		shift
+	done
+
+}
+
+# ---------------------------------------------------------------
+# kde/qt directory management etc. functions, was kde-dirs.ebuild
+# ---------------------------------------------------------------
 
 need-kde() {
 
@@ -93,7 +126,7 @@ qtver-from-kdever() {
 	case $1 in
 		2*)	ver=2.3.1;;
 		3*)	ver=3.0.1;;
-		*)		echo "!!! error: $FUNCNAME() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
+		*)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
 	selected_version="$ver"
@@ -115,7 +148,7 @@ min-kde-ver() {
 	case $1 in
 	    2*)	selected_version="2.2.2-r2";;
 	    3*)	selected_version="3.0";;
-	    *)	echo "!!! error: $FUNCNAME() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
+	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 	
 }
@@ -127,14 +160,8 @@ min-qt-ver() {
 	case $1 in
 	    2*)	selected_version="2.3";;
 	    3*)	selected_version="3";;
-	    *)	echo "!!! error: $FUNCNAME() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
+	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
 }
-
-
-
-
-
-
 

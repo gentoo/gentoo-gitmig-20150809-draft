@@ -4,9 +4,14 @@ eclass howto
 
 Dan Armak
 
-Updated for 20020125
+Updated for 20020206
 
-1 Introduction
+1 Warning
+
+The eclasses have been modified and the documentation isn't
+up to date, to be fixed shortly.
+
+2 Introduction
 
 eclasses are parts of ebuilds; that is, they have the same
 syntax ebuilds do, but do not define all the required variables
@@ -20,7 +25,7 @@ functions and variables override your own. For this reason,
 variables and functions are usually extended and not just
 set (more on this later).
 
-The most similar group of ebuilds is the kde apps. These
+The most uniform group of ebuilds is the kde apps. These
 were accordingly selected to be the test case for eclasses,
 and I believe I can now say the test has been successful.
 Eclasses for non-kde ebuilds may follow, but there are no
@@ -35,12 +40,12 @@ Section two explains how eclasses work; section three gives
 an example of a typical inheriting ebuild, and another of
 an ebuild for an app with optional kde functionality.
 
-2 The eclasses
+3 The eclasses
 
 The best way of becoming familiar with the current eclass
 structure is an explanation of what each eclass does.
 
-2.1 inherit.eclass
+3.1 inherit.eclass
 
 This is the basic eclass. It should always be present (i.e.
 inherited). No other eclass inherits from it, however: an
@@ -78,7 +83,7 @@ If, in the future, we will decide to move eclasses to a
 different location, any name-to-file resolution code will
 go in here.
 
-2.2 virtual.eclass
+3.2 virtual.eclass
 
 This is sourced from inherit.eclass, and thus should always
 be present before all other eclasses. It defines EXPORT_FUNCTIONS().
@@ -133,7 +138,7 @@ src_compile, src_install, src_preinst, src_postinst, src_prerm,
 src_postrm) as empty functions that do nothing (except call
 debug_print_function, see debug.eclass).
 
-2.3 Function sections
+3.3 Function sections
 
 Although this is not an integral part of eclasses, this is
 a good place to introduce function sections. 
@@ -241,7 +246,7 @@ when called with all or without parameters. Some sections
 may be non-standard and must be called explicitly. The only
 such section right now is base_src_compile patch.
 
-2.4 debug.eclass
+3.4 debug.eclass
 
 Adds verbose output debugging functions. Is inherited by
 virtual.eclass. All eclasses call these functions a lot,
@@ -304,7 +309,7 @@ there is no $RESULT in this sample function
 
 }
 
-2.5 base.eclass
+3.5 base.eclass
 
 This eclass defines some default variables and functions,
 similar to those you'd get by default in a non-inheriting
@@ -326,15 +331,15 @@ called newdepend(). It simply adds all parameters to both
 DEPEND and RDEPEND, saving you the trouble of writing and
 maintaining two lists of dependencies.
 
-2.6 c.eclass
+3.6 c.eclass
 
 Adds gcc and glibc to DEPEND and RDEPEND.
 
-2.7 autoconf.eclass
+3.7 autoconf.eclass
 
 Adds make/automake/autoconf to DEPEND.
 
-2.8 autotools.eclass
+3.8 autotools.eclass
 
 This is made and maintained by Azarah. To quote his comments:
 
@@ -350,7 +355,7 @@ Read the eclass for more info. AFAIK it has no relationship
 whatsoever to an of the other eclasses. Contact Azarah for
 any further info. (Azarah, you're welcome to feel in here).
 
-2.9 kde.eclass
+3.9 kde.eclass
 
 Used by all kde apps, whether directly or indirectly. (Not
 by apps with optional kde functionality though.) This is
@@ -376,7 +381,7 @@ not inherit c. These packages can then inherit straight
 from here. All other packages, which need to compile c code,
 should inherit from kde-base.eclass.
 
-2.10 kde-dirs.eclass
+3.10 kde-dirs.eclass
 
 A short explanation about the current multi-kdedir scheme:
 
@@ -426,12 +431,12 @@ need-* and set-* yourself.
 kde-dirs.eclass also contains several helper functions you
 shouldn't need to use directly.
 
-2.11 kde-base.eclass
+3.11 kde-base.eclass
 
 Meant for standard kde apps; nearly all ebuilds use it. Inherits
 c, kde. Sets HOMEPAGE=apps.kde.com.
 
-2.12 kde-i18n.eclass
+3.12 kde-i18n.eclass
 
 Meant for the kde-i18n-* packages. Niche use.
 
@@ -442,7 +447,7 @@ ${P} does the rest.
 Inherits kde, kde.org. Makes a few differences, such as PROVIDE
 virtual/kde-i18n, correct $S, HOMEPAGE and DESCRIPTION.
 
-2.13 koffice-i18n.eclass
+3.13 koffice-i18n.eclass
 
 Meant for the koffice-i18n-* packages. Niche use. Very similar
 to kde-i18n.eclass.
@@ -450,7 +455,7 @@ to kde-i18n.eclass.
 All kde-i18n ebuilds are completely identical and so all
 they have to do is inherit from this eclass.
 
-2.14 kde-dist.eclass
+3.14 kde-dist.eclass
 
 Meant for the base kde distribution packages in kde-base/*.
 Inherits kde-base, kde.org. Adds the correct DESCRIPTION
@@ -458,7 +463,7 @@ and HOMEPAGE and kdelibs-${PV} deps. The simpler/smaller
 kde-base/ packages (e.g. kdetoys) make no changes at all;
 most of those that do only add deps.
 
-2.15 kde-cvs
+3.15 kde-cvs
 
 This is only included with the kde3-pre ebuilds, and doesn't
 live in portage. See [http://www.gentoo.org/~danarmak/kde3-pre.html||http://www.gentoo.org/~danarmak/kde3-pre.html].
@@ -467,7 +472,7 @@ It provides a new src_unpack which sets SRC_URI=""
 and copies the sources from a location hardcoded in the
 eclass. Useful if you have a local copy of the kde cvs modules.
 
-2.16 kde-pre
+3.16 kde-pre
 
 This is only included with the kde3-pre ebuilds, and doesn't
 live in portage. See [http://www.gentoo.org/~danarmak/kde3-pre.html||http://www.gentoo.org/~danarmak/kde3-pre.html].
@@ -480,11 +485,11 @@ and $S.
 I'll probably add this to portage if there'll be a reason
 to do it (i.e. a pre-release kde ebuild in portage).
 
-3 The inheriting ebuilds
+4 The inheriting ebuilds
 
 When in doubt, look at other inheriting ebuilds, or ask.
 
-3.1 A typical kde app ebuild
+4.1 A typical kde app ebuild
 
 <header lines>
 
@@ -523,7 +528,7 @@ src_unpack() {
 
 }
 
-3.2 A typical optional-kde-functionality app ebuild
+4.2 A typical optional-kde-functionality app ebuild
 
 To your normal ebuild, add the following lines. Prefix each
 line with "use kde &&", or

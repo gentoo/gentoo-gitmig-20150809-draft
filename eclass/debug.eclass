@@ -1,28 +1,32 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.7 2001/12/23 14:25:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.8 2002/02/06 20:38:10 danarmak Exp $
 # This provides functions for verbose output for debugging
 
-# Note: we check whether these settings are set by "if [ "$FOO" ]; then".
-# Therefore set them to true/false only - not yes/no or whatever.
-
-# redirect output, unset to disable
-# use e.g. /dev/stdout.
-# todo: add support for logging into a file.
+# redirect output, unset to disable. use e.g. /dev/stdout to write into a file/device.
+# use special setting "on" to echo the output - unlike above, doesn't violate sandbox.
 # the test here is to enable people to export DEBUG_OUTPUT before running ebuild/emerge
 # so that they won't have to edit debug.eclass anymore
-[ -n "$ECLASS_DEBUG_OUTPUT" ] || ECLASS_DEBUG_OUTPUT=""
+#[ -n "$ECLASS_DEBUG_OUTPUT" ] || ECLASS_DEBUG_OUTPUT="on"
 
 # used internally for output
 # redirects output wherever's needed
 # in the future might use e* from /etc/init.d/functions.sh if i feel like it
 debug-print() {
 
-	[ -n "$ECLASS_DEBUG_OUTPUT" ] || return 0
-
 	while [ "$1" ]; do
-		echo "debug: $1" > $ECLASS_DEBUG_OUTPUT
+	
+		# extra user-configurable targets
+		if [ "$ECLASS_DEBUG_OUTPUT" == "on" ]; then
+			echo "debug: $1"
+		elif [ -n "$ECLASS_DEBUG_OUTPUT" ]; then
+	    	        echo "debug: $1" >> $ECLASS_DEBUG_OUTPUT
+		fi
+		
+		# default target
+		echo $1 >> ${BUILD_PREFIX}/${P}/temp/eclass-debug.log
+		
 		shift
 	done
 

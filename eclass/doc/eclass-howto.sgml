@@ -10,8 +10,16 @@
    Dan Armak
   </author>
   <date>
-   Updated for 20020125
+   Updated for 20020206
   </date>
+  <sect1>
+   <title>
+   Warning
+  </title>
+  <para>
+   The eclasses have been modified and the documentation isn't up to date, to be fixed shortly.
+  </para>
+  </sect1>
   <sect1>
    <title>
    Introduction
@@ -23,7 +31,7 @@
    This inheritance is implemented via simple bash sourcing. So, when you 'inherit&rdquo; something its functions and variables override your own. For this reason, variables and functions are usually extended and not just set (more on this later).
   </para>
   <para>
-   The most similar group of ebuilds is the kde apps. These were accordingly selected to be the test case for eclasses, and I believe I can now say the test has been successful. Eclasses for non-kde ebuilds may follow, but there are no concrete plans as of this time.
+   The most uniform group of ebuilds is the kde apps. These were accordingly selected to be the test case for eclasses, and I believe I can now say the test has been successful. Eclasses for non-kde ebuilds may follow, but there are no concrete plans as of this time.
   </para>
   <para>
    Because of the current customisable KDEDIR (KDE?DIR, KDE?LIBSDIR) scheme, all kde ebuilds (including ebuilds for apps with optional kde support) <emphasis>must </emphasis>use the eclasses. As a minimum, inherit kde-dirs to get the set-qtdir(), set-kdedir() functions.
