@@ -1,10 +1,20 @@
-MD5 2d1bee99af4545c43a871dbf864aa3b1 grip-3.2.0-r1.ebuild 1200
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 8ec41e5393ed4bc01d03c6e3b2fb8c16 ChangeLog 7872
-MD5 4168479519f5137b6ba091b46640685b grip-3.3.0.ebuild 1232
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c0a47aca14159ac0ace864b9d5a3eadf grip-3.2.0.ebuild 1149
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 b8204a865d413e40420fa8ea6c97fe21 grip-3.3.0.ebuild 1233
+MD5 8fa8340bf14b3b62ca291b13e8f9ee28 ChangeLog 7977
+MD5 2d1bee99af4545c43a871dbf864aa3b1 grip-3.2.0-r1.ebuild 1200
+MD5 2ec6b15aa9b163f9c0a79e80038f987e files/digest-grip-3.3.0 62
+MD5 a96f76d77127d40bf0b43ba550a6f441 files/digest-grip-3.2.0-r1 62
 MD5 c130fa68ebab7bcfec283e3daa759b65 files/3.3.0-crashfix.patch 845
 MD5 a96f76d77127d40bf0b43ba550a6f441 files/digest-grip-3.2.0 62
-MD5 2ec6b15aa9b163f9c0a79e80038f987e files/digest-grip-3.3.0 62
 MD5 994c1c45aa0d6d352db1b5dbd94b9248 files/grip-3.2.0-proxy.patch 1291
-MD5 a96f76d77127d40bf0b43ba550a6f441 files/digest-grip-3.2.0-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCNefaKRy60XGEcJIRAs0GAKCWNaba95jqAvDjCG48yyTvwFihzACgrlIZ
+LhxCPiO9t2RVR4h36uQzh4g=
+=BGZp
+-----END PGP SIGNATURE-----
