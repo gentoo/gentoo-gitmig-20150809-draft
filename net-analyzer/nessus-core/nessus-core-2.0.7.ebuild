@@ -1,24 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.7.ebuild,v 1.2 2003/07/17 08:38:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.7.ebuild,v 1.3 2003/08/03 03:23:17 vapier Exp $
 
-IUSE="tcpd X gtk gtk2"
-S=${WORKDIR}/${PN}
 DESCRIPTION="A remote security scanner for Linux (nessus-core)"
 HOMEPAGE="http://www.nessus.org/"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc -sparc ~alpha"
+IUSE="tcpd X gtk gtk2 debug"
+
 DEPEND="=net-analyzer/libnasl-${PV}
 	tcpd? ( sys-apps/tcp-wrappers )
 	X? ( x11-base/xfree )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	gtk2? ( =x11-libs/gtk+-2* )"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc -sparc ~alpha"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	patch -p0 < ${FILESDIR}/${PN}-${PV}.patch || die "patch failed"
+	epatch ${FILESDIR}/${PN}-${PV}.patch
 }
 
 src_compile() {
@@ -32,7 +35,7 @@ src_compile() {
 		myconf="${myconf} --disable-gtk"
 	fi
 	myconf="${myconf} `use_enable tcpd tcpwrappers`"
-	if [ ! -z $DEBUGBUILD ]; then
+	if [ `use debug` ]; then
 		myconf="${myconf} --enable-debug"
 	else
 		myconf="${myconf} --disable-debug"
