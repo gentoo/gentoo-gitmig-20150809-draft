@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/xpm-3.4k.ebuild,v 1.8 2003/02/13 12:57:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/xpm-3.4k.ebuild,v 1.9 2003/05/06 23:47:36 wwoods Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XPM image library"
@@ -9,7 +9,7 @@ HOMEPAGE="http://koala.ilog.fr/lehors/xpm.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc alpha"
 
 DEPEND="virtual/x11"
 

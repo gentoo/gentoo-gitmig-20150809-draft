@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/ChangeLog,v 1.8 2003/02/12 07:18:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/ChangeLog,v 1.9 2003/05/06 23:47:36 wwoods Exp $
+
+  06 May 2003; Will Woods <wwoods@gentoo.org> xpm-3.4k-r1.ebuild,
+  xpm-3.4k.ebuild:
+  Added alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
