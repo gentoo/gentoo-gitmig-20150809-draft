@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.30 2003/10/09 19:39:25 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.31 2003/10/10 18:44:08 pappy Exp $
 
 IUSE="nls pic build nptl"
 
@@ -397,21 +397,7 @@ src_compile() {
 		fi
 	fi
 
-    # http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
-    if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ] && has_version "sys-devel/hardened-gcc"
-    then
-        append-flags "-yet_exec -fstack-protector"
-    fi
-
-    if [ "${ARCH}" == "hppa" ] && has_version 'sys-devel/hardened-gcc'
-    then
-        append-flags "-yet_exec"
-    fi
-
-    if [ "${ARCH}" == "hppa64" ] && has_version 'sys-devel/hardened-gcc'
-    then
-        append-flags "-yet_exec"
-    fi
+	has_version "sys-devel/hardened-gcc" && CC="${CC} -yet_exec"
 
 	einfo "Configuring GLIBC..."
 	rm -rf ${S}/buildhere
