@@ -1,5 +1,6 @@
 MD5 337542fb9ea27ba1bcec3483dc0c5de8 privoxy-3.0.2.ebuild 1971
 MD5 f9451a62665ebd57ed72f8cdc45321df privoxy-2.9.14_beta.ebuild 1857
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 2e62dbd91c1bb74e97791bf0b431fec7 ChangeLog 2025
 MD5 a0be004362422bbf19e3cadf3cba42bd files/digest-privoxy-2.9.14_beta 75
 MD5 3633255c0f7643530768ad4edbc48b82 files/privoxy-gentoo.diff 2374
