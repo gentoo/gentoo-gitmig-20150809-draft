@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.9 2004/06/07 16:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.10 2004/06/11 12:25:07 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -95,7 +95,7 @@ src_install() {
 	cp -r scripts/* ${D}/usr/share/ntp/
 	chmod -R go-w ${D}/usr/share/ntp
 
-	[ ! -e /etc/ntp.conf ] && insinto /etc && doins ${FILESDIR}/ntp.conf
+	[ ! -e ${ROOT}/etc/ntp.conf ] && insinto /etc && doins ${FILESDIR}/ntp.conf
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ntpd.rc ntpd
 	newexe ${FILESDIR}/ntp-client.rc ntp-client
