@@ -1,4 +1,14 @@
-MD5 df35fbd41b940aa1e0c9b3aa4c066bed xcut-0.2.ebuild 701
-MD5 ba4e99a1fb0a15bb6a706e2a802582c5 ChangeLog 374
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e3c1d53ffb8ded5c862a01214e26d7c ChangeLog 468
+MD5 a50a03045f3846cfe2880d9d1c80d771 xcut-0.2.ebuild 721
 MD5 2f72d6a574ba626da358f1df8759faa3 metadata.xml 260
 MD5 644495c2510758999994e47464c3b54b files/digest-xcut-0.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSHk3BXaUFmZvwyMRAjW7AJ4vIqfMRupktXuJrq20zYQv8JVnoQCgyOFg
+OsHKfeuErreObPfeJ9L/d40=
+=v+eR
+-----END PGP SIGNATURE-----
