@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-0.9.10.ebuild,v 1.2 2003/09/15 08:16:10 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="High quality television application for use with video capture cards."
@@ -17,7 +17,7 @@ DEPEND="virtual/x11
 	sys-libs/zlib
 	media-libs/libpng
 	dev-libs/libxml2"
-		
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -47,7 +47,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo 
+	einfo
 	einfo "A default setup for ${PN} has been saved as"
 	einfo "/etc/tvtime/tvtime.xml. You may need to modify it"
 	einfo "for your needs."
