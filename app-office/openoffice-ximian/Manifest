@@ -1,7 +1,7 @@
 MD5 db0937049060bf2f60caff12204099e7 openoffice-ximian-1.3.6.ebuild 16968
 MD5 4f30b05359128c7f30fc4e3c58c9b324 openoffice-ximian-1.3.8.ebuild 17826
 MD5 9fdc8c3794927565d0c6465f91631120 openoffice-ximian-1.3.7.ebuild 17908
-MD5 90b10ce4b354bcb5a72c5b332654b834 ChangeLog 28880
+MD5 8cc77d2963d4bcef79def6749e584203 ChangeLog 29024
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
 MD5 2595967ac130a541e50bffc75e105041 files/digest-openoffice-ximian-1.3.6 502
 MD5 0b59100689dae352eeac675e31a4cdec files/digest-openoffice-ximian-1.3.7 502
@@ -20,6 +20,7 @@ MD5 61dc69767eddbb5ab3ac02822fff6c13 files/1.1.3/gentoo-1.3.7.patch 1449
 MD5 e08721c60cf0f7bc7ea0a714baeac120 files/1.1.3/getcompver.awk.patch 418
 MD5 476f1f342d8321113a27e098630a6003 files/1.1.3/xooffice-wrapper-1.3 6091
 MD5 6984d0675ce2c9de20b0939a2f0b5dcb files/1.1.3/gcc34-nojava-fix.patch 455
+MD5 bf7df7ebe1373f6e2e5bd1e0425657bd files/1.1.3/gcc34-nptl-fix.patch 618
 MD5 e93f28c8afacb22bf9ac351ebd8195d2 files/1.1.3/gcc34-gnome.patch 598
 MD5 3d3555a66a2d8a66613d4e4471701eb8 files/1.1.3/pthreadlink-fix.patch 1163
 MD5 8c58ee1fa6e9199546bca43730d2400c files/1.1.3/nptl.patch 785

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.115 2005/03/28 08:37:55 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.116 2005/03/31 13:03:50 suka Exp $
+
+  31 Mar 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.1.3/gcc34-nptl-fix.patch:
+  Re-adding a patch which is necessary for oox-1.3.6
 
   28 Mar 2005; Andreas Proschofsky <suka@gentoo.org>
   +files/1.1.3/getcompver.awk.patch, openoffice-ximian-1.3.6.ebuild,
