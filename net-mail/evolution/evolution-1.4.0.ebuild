@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.2 2003/06/10 22:55:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.3 2003/06/12 01:07:01 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -67,6 +67,11 @@ src_unpack() {
 	cd ${S}; sed -i -e "s/-ldb1//" configure
 	# fix desktop link
 	epatch ${FILESDIR}/evolution-1.4.0-bad-1.3.patch
+
+	# we need the omf fix, or else we get access violation
+	# errors related to sandbox
+	gnome2_omf_fix ${S}/help/C/Makefile.in
+	
 }
 
 ##### compile evolution specific db3 for static linking #####
