@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r3.ebuild,v 1.4 2004/04/26 22:21:42 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r3.ebuild,v 1.5 2004/05/31 08:10:51 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ia64 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="x86 ~ia64 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 
 RDEPEND="virtual/glibc
 	 esd? ( media-sound/esound )
@@ -72,7 +72,7 @@ src_compile() {
 			use esd && styles="${styles} -ppc-esd"
 			use oss && styles="${styles} -ppc"
 
-			[ -z "${styles}" ] && die "You need atleast one of these USE flags set: esd nas oss."
+			[ -z "${styles}" ] && styles="-ppc"
 			;;
 		x86)
 			use esd && styles="${styles} -esd"
@@ -83,7 +83,7 @@ src_compile() {
 			# use alsa && styles="${styles} -alsa"
 			# use alsa && use 3dnow && styles="${styles} -3dnow-alsa"
 
-			[ -z "${styles}" ] && die "You need atleast one of these USE flags set: esd nas oss."
+			[ -z "${styles}" ] && styles="-i486"
 			;;
 		sparc*)
 			use esd && styles="${styles} -sparc-esd"
@@ -94,24 +94,25 @@ src_compile() {
 			use oss && styles="${styles} -x86_64"
 			# use alsa && styles="${styles} -x86_64-alsa"
 
-			[ -z "${styles}" ] && die "You need atleast one of these USE flags set: esd nas oss."
+			[ -z "${styles}" ] && styles="-x86_64"
 			;;
 		alpha)
 			use esd && styles="${styles} -alpha-esd"
 			use oss && styles="${styles} -alpha"
 			# use alsa && styles="${styles} -alpha-alsa"
 
-			[ -z "${styles}" ] && die "You need atleast one of these USE flags set: esd nas oss alsa."
+			[ -z "${styles}" ] && styles="-alpha"
 			;;
 #		mips)
 #			use alsa && styles="${styles} -mips-alsa"
 #
 #			[ -z "${styles}" ] && die "You need atleast one of these USE flags set: esd nas oss alsa."
 #			;;		
+		*)
+			eerror "No support has been added for your architecture."
+			exit 1
+			;;
 	esac
-
-	[ -z "${styles}" ] && die "You need atleast one of these USE flags set: nas oss."
-
 
 	for style in ${styles};
 	do
