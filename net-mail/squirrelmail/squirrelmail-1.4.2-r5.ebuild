@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r5.ebuild,v 1.3 2004/05/02 19:40:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r5.ebuild,v 1.4 2004/05/02 19:51:39 eradicator Exp $
 
 inherit webapp eutils
 
@@ -32,7 +32,6 @@ HOMEPAGE="http://www.squirrelmail.org/"
 IUSE="crypt virus-scan ldap ssl"
 
 LICENSE="GPL-2"
-SLOT="1"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64" # ~alpha doesn't have webapp-config
 
 DEPEND="virtual/php
@@ -80,6 +79,8 @@ src_compile() {
 }
 
 src_install() {
+	webapp_src_preinst
+
 	# handle documentation files
 	#
 	# NOTE that doc files go into /usr/share/doc as normal; they do NOT
@@ -149,7 +150,6 @@ src_install() {
 
 	# Copy the app's main files
 	einfo "Installing squirrelmail files."
-	mkdir -p ${D}${MY_HTDOCSDIR}
 	cp -r . ${D}${MY_HTDOCSDIR}
 
 	# Identify the configuration files that this app uses
@@ -188,8 +188,4 @@ src_install() {
 	# now we let the eclass strut its stuff ;-)
 
 	webapp_src_install
-}
-
-pkg_postinst() {
-	einfo "squirrelmail now supports webapp-config."
 }
