@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fragroute
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.4 2004/07/01 19:47:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.5 2004/07/09 12:00:22 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> fragroute-1.2.ebuild:
+  Tidy up.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> fragroute-1.2.ebuild:
   change virtual/glibc to virtual/libc
