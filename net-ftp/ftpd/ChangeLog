@@ -1,8 +1,11 @@
 # ChangeLog for net-ftp/ftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.7 2003/04/18 23:56:09 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.8 2003/04/29 13:02:05 weeve Exp $
 
 *ftpd-0.17 (25 Nov 2002)
+
+  29 Apr 2003; Jason Wever <weeve@gentoo.org> ftpd-0.17.ebuild:
+  Added ~sparc to keywords.
 
   19 Apr 2003; Martin Holzer <mholzer@gentoo.org> ftpd-0.17.ebuild:
   Changed to virtual/inetd depend.
