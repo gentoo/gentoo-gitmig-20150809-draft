@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/angband
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.5 2004/03/10 23:16:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.6 2004/03/31 06:39:02 mr_bones_ Exp $
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> angband-3.0.3.ebuild:
+  don't RDEPEND on sed; error check sed; virtual/x11; tidy
 
   10 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> angband-3.0.4.ebuild:
   chown foo.bar -> chown foo:bar (bug #44294)
