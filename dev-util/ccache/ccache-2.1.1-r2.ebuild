@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.1.1-r2.ebuild,v 1.1 2003/02/25 04:36:22 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.1.1-r2.ebuild,v 1.2 2003/02/25 04:40:04 zwelch Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
@@ -30,6 +30,7 @@ src_install () {
 
 	diropts -m0755
 	dodir /usr/lib/ccache/bin
+	keepdir /usr/lib/ccache/bin
 
 	exeinto /usr/bin
 	doexe ${FILESDIR}/ccache-config

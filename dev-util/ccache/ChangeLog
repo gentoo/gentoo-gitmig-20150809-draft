@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.15 2003/02/25 04:36:22 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.16 2003/02/25 04:40:04 zwelch Exp $
 
 *ccache-2.1.1-r2 (24 Feb 2003)
+
+  24 Feb 2003; Zach Welch <zwelch@gentoo.org> ccache-2.1.1-r2.ebuild :
+  Add missing keepdir; no bump since found fast
 
   24 Feb 2003; Zach Welch <zwelch@gentoo.org> ccache-2.1.1-r2.ebuild files/ccache-config files/digest-ccache-2.1.1-r2 :
   Add changes from bug 15100, with enhancements from distcc
