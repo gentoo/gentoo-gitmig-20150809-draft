@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.54 2004/02/22 16:13:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.55 2004/03/10 12:42:49 aliz Exp $
+
+  10 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> courier-imap-2.1.2-r1.ebuild,
+  files/courier-imap-2.1.2-res_query.patch:
+  Add patch for res_query to allow courier-imap to compile on amd64. Should close #41160.
 
   22 Feb 2004; Aron Griffis <agriffis@gentoo.org>
   courier-imap-1.7.3-r1.ebuild, courier-imap-2.1.2-r1.ebuild:

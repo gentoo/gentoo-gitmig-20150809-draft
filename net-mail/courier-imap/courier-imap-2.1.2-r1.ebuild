@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r1.ebuild,v 1.12 2004/02/22 16:13:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r1.ebuild,v 1.13 2004/03/10 12:42:49 aliz Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -54,6 +54,10 @@ src_unpack() {
 	sed -i -e 's,--with-authchangepwdir=/var/tmp/dev/null,--with-authchangepwdir=$libexecdir/authlib,' configure
 
 	epatch ${FILESDIR}/${PN}-2.1.2-removerpm.patch
+	epatch ${FILESDIR}/${P}-res_query.patch
+	cd ${S}/authlib
+	aclocal
+	autoconf
 }
 
 src_compile() {
