@@ -1,17 +1,19 @@
-MD5 64fc4b9c721739ca630358505e3b2aa0 udev-027.ebuild 3516
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cebda9af01d1d18fc5bd8cb2adce0dd2 ChangeLog 13640
 MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
-MD5 43108b1317adc4dabce5dc33766006a3 udev-029.ebuild 3517
+MD5 c7a089cfa585cc48d2570f1350c17dc6 udev-024-r1.ebuild 3720
+MD5 54343e889ed8e1685908d27c9633dbb3 udev-025-r1.ebuild 3811
 MD5 61627f421ee2c1603a7feda4a6a31787 udev-026-r1.ebuild 3518
+MD5 64fc4b9c721739ca630358505e3b2aa0 udev-027.ebuild 3516
 MD5 1ed5a700a2b2209de427b7449633f330 udev-028.ebuild 3516
+MD5 43108b1317adc4dabce5dc33766006a3 udev-029.ebuild 3517
 MD5 751f5c228c885f44ca1a55e29e274acc udev-030.ebuild 3522
 MD5 23765c0c973e9614c100ecae43f22295 udev-031.ebuild 3617
 MD5 c30b5735565abaafb2229dbee61cca8b udev-032.ebuild 3621
 MD5 43f06a13e6e46c4ca41491ded1369593 udev-033.ebuild 3598
-MD5 3df22613fb2062675a5e9d470bae15f5 udev-034.ebuild 3587
-MD5 c7a089cfa585cc48d2570f1350c17dc6 udev-024-r1.ebuild 3720
-MD5 54343e889ed8e1685908d27c9633dbb3 udev-025-r1.ebuild 3811
-MD5 3f3fd84a95d1fabbf66be0cba8057a29 files/digest-udev-032 61
+MD5 fe7b1f0fe65a9241ddab0e48bf107e7f udev-034.ebuild 3588
 MD5 882b525738c554bce2449356cd1fb9c5 files/digest-udev-024-r1 61
 MD5 63c1b792a1470ccaa74195f5debacd2f files/digest-udev-025-r1 61
 MD5 a691746515d05e3574c0a26b4cc6f0cc files/digest-udev-026-r1 61
@@ -20,6 +22,9 @@ MD5 05b440530066098b69f77ae477fbc74d files/digest-udev-028 61
 MD5 6d7c7441686712fb1845375857306560 files/digest-udev-029 61
 MD5 511c376c4c6346bcbf51531ef811f00c files/digest-udev-030 61
 MD5 cd92c9e177215e4622cfb5b4d4534b72 files/digest-udev-031 61
+MD5 71df3b63d0e1d8e660f4dccd286fe3b4 files/digest-udev-033 61
+MD5 06f3915555a7c2524b0638337cfaccff files/digest-udev-034 61
+MD5 77692161d3e1d624773ff10aec89b318 files/udev.hotplug.empty 106
 MD5 f00e3e0d3382e93cbd0c64fcef99f826 files/udev-021-udev_add_c-gcc295-compat.patch 493
 MD5 233bf645719657d9b8265f34a66d20e2 files/udev.conf 1183
 MD5 bbacca394d27aae427e503317b4bebfe files/udev.conf.post_024 1188
@@ -27,6 +32,11 @@ MD5 f558b841afc8ac6381903fc371331507 files/udev.permissions 3549
 MD5 d8da5df6f7d3c8a80bde23618ae8a797 files/udev.rules 3553
 MD5 6df9e08cd088f74720689640de2ffcd6 files/udev.rules-018 4365
 MD5 7f23fbfcba51c7c4b8c29a8c08429996 files/udev.rules.post_012 4184
-MD5 71df3b63d0e1d8e660f4dccd286fe3b4 files/digest-udev-033 61
-MD5 06f3915555a7c2524b0638337cfaccff files/digest-udev-034 61
-MD5 77692161d3e1d624773ff10aec89b318 files/udev.hotplug.empty 106
+MD5 3f3fd84a95d1fabbf66be0cba8057a29 files/digest-udev-032 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBZfIsHTu7gpaalycRAs5TAKCBCYTupwdcUKvbi3uBxpTYaI5qZgCgtK+m
+xF/tR8k9iK2KCRkshWL320g=
+=o0Nq
+-----END PGP SIGNATURE-----
