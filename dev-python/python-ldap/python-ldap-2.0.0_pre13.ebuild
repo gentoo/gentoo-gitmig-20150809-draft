@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre13.ebuild,v 1.4 2003/11/13 11:26:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre13.ebuild,v 1.5 2003/11/23 02:23:13 liquidx Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ DEPEND="virtual/python
 	sasl? ( dev-libs/cyrus-sasl )"
 
 SLOT="0"
-LICENSE="public-domain" # NOTE: win32 section is under questionable license
+LICENSE="PYTHON"
 KEYWORDS="x86 ~sparc ~alpha"
 
 PYTHON_MODNAME="ldap"

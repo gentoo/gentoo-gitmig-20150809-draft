@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.13 2003/11/13 11:26:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.14 2003/11/23 02:23:13 liquidx Exp $
+
+  23 Nov 2003; Alastair Tse <liquidx@gentoo.org>
+  python-ldap-2.0.0_pre05-r1.ebuild, python-ldap-2.0.0_pre06.ebuild,
+  python-ldap-2.0.0_pre13.ebuild, python-ldap-2.0.0_pre15.ebuild:
+  fix license. it isn't public-domain
 
 *python-ldap-2.0.0_pre15 (13 Nov 2003)
 

@@ -15,7 +15,7 @@ HOMEPAGE="http://python-ldap.sourceforge.net/"
 DEPEND="${DEPEND}
 	>=net-nds/openldap-2.0.11"
 SLOT="0"
-LICENSE="public-domain" # NOTE: win32 section is under questionable license
+LICENSE="PYTHON"
 KEYWORDS="x86 ppc"
 IUSE=""
 
