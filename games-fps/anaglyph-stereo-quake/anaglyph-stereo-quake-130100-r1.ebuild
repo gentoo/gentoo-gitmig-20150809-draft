@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.8 2004/11/03 00:19:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.9 2005/01/21 14:22:24 vapier Exp $
 
-inherit games gcc eutils
+inherit games eutils
 
 DESCRIPTION="play Quake in 3D with red - blue glasses"
 HOMEPAGE="http://home.iprimus.com.au/crbean/"
@@ -20,7 +20,7 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S="${WORKDIR}/WinQuake"
+S=${WORKDIR}/WinQuake
 
 src_unpack() {
 	unpack ${A}
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch ${FILESDIR}/fix-sys_printf.patch
 	epatch ${FILESDIR}/makefile-cflags.patch
 	epatch ${FILESDIR}/gentoo-paths.patch
+	edos2unix console.c ${WORKDIR}/${P}-SDL.patch
 	epatch ${WORKDIR}/${P}-SDL.patch
 	epatch ${FILESDIR}/${P}-amd64.patch
 }
