@@ -1,5 +1,18 @@
 HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
 
+You can trust/test eradicator's script to do it or just run through it
+yourself.  If you can, please test the script.
+
+Scripted method:
+ 1) mkdir /usr/tmp/profile-update
+ 2) cd /usr/tmp/profile-update
+ 3) wget http://dev.gentoo.org/~eradicator/amd64/Makefile-profile_update-2005.0
+ 4) lynx -source http://dev.gentoo.org/~eradicator/Makefile-profile_update-2005.0.md5sum | md5sum -c -
+ 5) make -f Makefile-profile_update-2005.0
+
+Do it yourself:
+ 0) If you currently have USE=-multilib, you need to set multilib in USE and
+    re-emerge gcc.
  1) emerge -v '>=sys-apps/portage-2.0.51-r9'
  2) emerge -v '>=sys-devel/gcc-config-1.3.9'
  3) emerge -v '>=sys-devel/distcc-2.18.3-r1'
