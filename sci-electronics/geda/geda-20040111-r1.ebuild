@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20040111-r1.ebuild,v 1.6 2004/12/27 19:53:00 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20040111-r1.ebuild,v 1.7 2004/12/27 20:11:33 ribosome Exp $
 
 S=${WORKDIR}
 
@@ -40,7 +40,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=sci-electronics/iverilog-0.7
 	>=app-sci/tclspice-0.2.15
 	>=app-sci/vbs-1.4.0
-	>=app-sci/ng-spice-rework-15"
+	>=sci-electronics/ng-spice-rework-15"
 
 src_unpack() {
 
