@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.68-r4.ebuild,v 1.1 2003/03/14 23:16:16 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.68-r4.ebuild,v 1.2 2003/03/15 03:58:32 lu_zero Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.maconlinux.net/"
 
 DEPEND=""
 RDEPEND="net-misc/dhcp
-	sys-apps/iptables
+	net-firewall/iptables
 	>=sys-apps/sed-4.0.5"
 SLOT="0"
 LICENSE="GPL-2"

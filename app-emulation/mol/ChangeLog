@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.17 2003/03/14 23:16:16 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.18 2003/03/15 03:58:32 lu_zero Exp $
+
+  15 Mar 2003; Luca Barbato <lu_zero@gentoo.org> mol-0.9.68-r4.ebuild:
+  changed the ipchains dep from sys-apps/ipchains to net-firewall/ipchains
 
 *mol-0.9.68-r4 (14 Mar 2003)
 
