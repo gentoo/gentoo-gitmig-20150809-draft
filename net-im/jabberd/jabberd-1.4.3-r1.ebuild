@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.7 2004/02/17 21:33:47 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.8 2004/02/17 22:14:32 rizzo Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -150,6 +150,15 @@ pkg_postinst() {
 		einfo "The xdb_ldap backend expects your ldap server to handle"
 		einfo "StartTLS or run in ldaps mode."
 	fi
+	einfo
+	einfo "The various IM transports for jabber are now separate packages,"
+	einfo "which you will need to install separately if you want them:"
+	einfo "net-im/jit - ICQ transport (You can use aim-transport for icq but JIT is better)"
+	einfo "net-im/msn-transport - MSN transport"
+	einfo "net-im/jud - Jabber User Directory"
+	einfo "net-im/yahoo-transport - Yahoo IM system"
+	einfo "net-im/aim-transport - AOL transport"
+	einfo "net-im/mu-conference - Jabber multi user conference"
 	einfo
 	einfo "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
 	einfo
