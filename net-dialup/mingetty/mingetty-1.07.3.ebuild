@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.07.3.ebuild,v 1.5 2005/03/19 15:27:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.07.3.ebuild,v 1.6 2005/03/28 03:05:26 eradicator Exp $
 
-inherit rpm eutils
+inherit rpm eutils toolchain-funcs
 
 MY_WORK=${PN}-${PV%.*}
 S=${WORKDIR}/${MY_WORK}
@@ -25,7 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake RPM_OPTS="${CFLAGS}" || die "compile failed"
+	emake RPM_OPTS="${CFLAGS}" CC="$(tc-getCC)" || die "compile failed"
 }
 
 src_install () {

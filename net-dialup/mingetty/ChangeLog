@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.23 2005/03/19 15:27:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.24 2005/03/28 03:05:26 eradicator Exp $
+
+  28 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  mingetty-1.07.3.ebuild:
+  Use correct toolchain compiler.
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> mingetty-1.07.3.ebuild:
   Stable on alpha.
