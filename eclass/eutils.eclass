@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.124 2004/11/13 11:15:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.125 2004/12/07 01:32:01 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1514,4 +1514,24 @@ preserve_old_lib_notify() {
 		einfo "After doing that, you can safely remove ${LIB}"
 		einfo "Note: 'emerge gentoolkit' to get revdep-rebuild"
         fi
+}
+
+# Hack for people to figure out if a package was built with 
+# certain USE flags
+#
+# Usage: built_with_use <DEPEND ATOM> <List of USE flags>
+#    ex: built_with_use xchat gtk2
+built_with_use() {
+	local PKG=$(portageq best_version ${ROOT} $1)
+	local USEFILE="${ROOT}/var/db/pkg/${PKG}/USE"
+	[[ ! -e ${USEFILE} ]] && return 1
+
+	local USE_BUILT=$(<${USEFILE})
+
+	shift
+	while [ $# -gt 0 ] ; do
+		has $1 ${USE_BUILT} || return 1
+		shift
+	done
+	return 0
 }
