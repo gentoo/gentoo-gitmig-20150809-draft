@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.77 2003/08/30 09:58:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.78 2003/08/30 10:17:44 liquidx Exp $
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild,
+  evolution-1.2.4.ebuild, evolution-1.4.0.ebuild, evolution-1.4.3.ebuild,
+  evolution-1.4.4.ebuild:
+  moved dev-libs/pilot-link to app-pda/pilot-link
 
   30 Aug 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild,
   evolution-1.2.4.ebuild, evolution-1.4.0.ebuild, evolution-1.4.3.ebuild,

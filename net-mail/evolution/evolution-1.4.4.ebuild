@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.4.ebuild,v 1.6 2003/08/30 09:58:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.4.ebuild,v 1.7 2003/08/30 10:17:44 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -23,7 +23,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.8
 	>=net-libs/libsoup-1.99.23
 	>=gnome-extra/yelp-2.2
 	pda? ( >=app-pda/gnome-pilot-2.0.9
-	       >=dev-libs/pilot-link-0.11.7
+	       >=app-pda/pilot-link-0.11.7
 	       >=app-pda/gnome-pilot-conduits-2.0.9 )
 	spell? ( >=app-text/gnome-spell-1.0.4 )
 	>=gnome-base/ORBit2-2.6.0
