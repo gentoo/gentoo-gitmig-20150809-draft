@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg
 # Maintainer: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/files/blackdown-jdk-1.3.1,v 1.3 2002/04/09 22:06:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/files/blackdown-jdk-1.3.1,v 1.4 2002/04/17 04:15:44 rphillips Exp $
 
 VERSION="Blackdown JDK @PV@"
 JAVA_HOME=/opt/@P@
@@ -11,5 +11,4 @@ JDK_HOME=/opt/@P@
 JAVAC=${JAVA_HOME}/bin/javac
 ADDPATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin"
 ADDLDPATH="/opt/@P@/jre/lib/"
-
-ENV_VARS="JAVA_HOME CLASSPATH JDK_HOME JAVAC ADDPATH ADDLDPATH ROOTPATH"
+ENV_VARS="JAVA_HOME CLASSPATH JDK_HOME JAVAC ADDPATH ADDLDPATH"
