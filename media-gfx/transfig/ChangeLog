@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.2 2002/04/13 00:29:37 seemant Exp $
+
+*transfig-3.2.3d-r1 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> transfig-3.2.3d-r1.ebuild :
+
+  Added Description, and compile against newer libpng
 
 *transfig-3.2.3d (1 Feb 2002)
 
