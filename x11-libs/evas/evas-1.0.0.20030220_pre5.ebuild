@@ -1,9 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20030220_pre5.ebuild,v 1.3 2003/03/11 17:23:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20030220_pre5.ebuild,v 1.4 2003/03/20 13:01:51 seemant Exp $
 
 inherit flag-o-matic
 
+IUSE="X mmx opengl jpeg png directfb fbcon"
+
+S=${WORKDIR}/${PN}
 DESCRIPTION="hardware-accelerated canvas API"
 HOMEPAGE="http://www.enlightenment.org/pages/evas.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -12,7 +15,6 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha"
-IUSE="X mmx opengl jpeg png pic directfb fbcon"
 
 DEPEND="virtual/x11
 	>=media-libs/imlib2-1.0.6.2003*
@@ -21,8 +23,6 @@ DEPEND="virtual/x11
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )"
-
-S=${WORKDIR}/${PN}
 
 src_compile() {
 	env NOCONFIGURE=yes ./autogen.sh || die "could not autogen"
@@ -68,12 +68,10 @@ src_compile() {
 		--enable-convert-32-bgr-8888 \
 		--enable-convert-32-bgrx-8888 \
 		--enable-convert-32-rgb-rot-0 \
-		--with-gnu-ld \
-		`use_with pic` \
 		`use_enable png image-loader-png` \
 		`use_enable jpeg image-loader-jpeg` \
-		${myconf} \
-		|| die
+		${myconf} || die
+
 	emake || die
 }
 

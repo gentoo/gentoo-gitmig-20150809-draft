@@ -1,29 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-0.0.2.20030310.ebuild,v 1.2 2003/03/14 19:21:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-0.0.2.20030310.ebuild,v 1.3 2003/03/20 12:59:58 seemant Exp $
+
+IUSE=""
 
 inherit flag-o-matic
 
+S=${WORKDIR}/${PN}
 DESCRIPTION="simple-to-use general purpose widget library"
 HOMEPAGE="http://www.enlightenment.org/pages/ewl.html"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://wh0rd.tk/gentoo/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
-IUSE="pic"
+LICENSE="as-is"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
-DEPEND="virtual/glibc
-	sys-devel/gcc
-	>=x11-libs/evas-1.0.0.2003*
+DEPEND=">=x11-libs/evas-1.0.0.2003*
 	>=media-libs/ebits-1.0.1.2003*
 	>=dev-db/edb-1.0.3.2003*
 	>=x11-libs/ecore-0.0.2.2003*
 	>=dev-libs/ewd-0.0.1.2003*
 	>=media-libs/etox-0.0.1.2003*"
-
-S=${WORKDIR}/${PN}
 
 src_compile() {
 	cp autogen.sh{,.old}
@@ -32,7 +29,7 @@ src_compile() {
 
 	use alpha && append-flags -fPIC
 
-	econf `use_with pic` --with-gnu-ld || die
+	econf || die
 	emake || die
 }
 
