@@ -1,6 +1,10 @@
 # ChangeLog for net-www/gplflash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.8 2003/03/18 03:25:23 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.9 2003/06/12 22:07:00 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> gplflash-0.4.10-r1.ebuild,
+  gplflash-0.4.10-r2.ebuild, gplflash-0.4.10.ebuild:
+  fix Header
 
 *gplflash-0.4.10-r2 (17 Mar 2003)
 

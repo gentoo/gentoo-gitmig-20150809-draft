@@ -1,6 +1,10 @@
 # ChangeLog for net-www/tinyproxy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tinyproxy/ChangeLog,v 1.3 2003/03/10 21:10:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tinyproxy/ChangeLog,v 1.4 2003/06/12 22:07:38 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> tinyproxy-1.5.1.ebuild,
+  tinyproxy-1.5.2.ebuild:
+  fix Header
 
 *tinyproxy-1.5.2 (10 Mar 2003)
 

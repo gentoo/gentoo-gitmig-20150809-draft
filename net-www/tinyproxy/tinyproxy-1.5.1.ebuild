@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.5 2002/04/29 22:56:53 sandymac Exp
+# $Header: /var/cvsroot/gentoo-x86/net-www/tinyproxy/tinyproxy-1.5.1.ebuild,v 1.3 2003/06/12 22:07:38 msterret Exp $
 
 DESCRIPTION="lightweight HTTP/SSL proxy"
 SRC_URI="mirror://sourceforge/tinyproxy/${P}.tar.gz"
