@@ -1,0 +1,23 @@
+#!/bin/sh
+
+
+mysed="s:${D}::"
+
+for x in "$@"
+do
+    if [ -a "${x}" ]
+    then
+        echo ${x}
+	if [ -f "${x}" ]
+	then
+	    mysrc=${T}/`/usr/bin/basename ${x}`
+	    cp ${x} ${mysrc}
+	    sed -e "${mysed}" ${mysrc} > ${x}
+	else
+	    echo "${x} is not a regular file!"
+	    return
+	fi
+    else
+	mysed=${x}
+    fi
+done
