@@ -1,3 +1,5 @@
-MD5 6ff54a1cc1473bd876055353454f58f1 ChangeLog 2427
 MD5 95f7575fb693377dd70847da3da2cff8 libexif-0.5.12-r1.ebuild 1002
+MD5 e99562faa03ccf1f41a4fd6535e05534 libexif-0.6.10.ebuild 886
+MD5 6b5bdfd4fbee62209ed4ad2fb4b3a697 ChangeLog 2616
+MD5 5356148028342869b259b39e10195fd5 files/digest-libexif-0.6.10 66
 MD5 c6e7ee4006cd2b5bd7cb0367f816fc8a files/digest-libexif-0.5.12-r1 66
