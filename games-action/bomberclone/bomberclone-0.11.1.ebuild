@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.1.ebuild,v 1.1 2004/02/02 04:47:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.1.ebuild,v 1.2 2004/02/03 14:37:09 vapier Exp $
 
 inherit games
 
@@ -14,6 +14,7 @@ KEYWORDS="x86"
 
 RDEPEND="virtual/x11
 	>=media-libs/libsdl-1.1.0
+	media-libs/sdl-image
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
