@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.15 2003/12/22 15:16:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.16 2004/01/01 18:24:07 tuxus Exp $
 
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}-pppoe4.tgz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa amd64 ia64 alpha"
+KEYWORDS="x86 ppc sparc hppa amd64 ia64 alpha mips"
 IUSE="crypt ipv6 activefilter"
 
 DEPEND="virtual/glibc
