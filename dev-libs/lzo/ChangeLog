@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.23 2004/12/29 22:38:45 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.24 2005/04/01 20:59:44 hansmi Exp $
+
+  01 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> lzo-1.08-r1.ebuild:
+  Stable on ppc.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
