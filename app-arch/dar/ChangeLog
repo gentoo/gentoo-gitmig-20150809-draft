@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dar
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.13 2004/07/15 09:21:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.14 2004/07/18 16:00:43 matsuu Exp $
+
+*dar-2.1.4 (19 Jul 2004)
+
+  19 Jul 2004; <matsuu@gentoo.org> +dar-2.1.4.ebuild:
+  Version bumped.
 
   15 Jul 2004; Travis Tilley <lv@gentoo.org> dar-2.1.3.ebuild:
   add -fno-unit-at-a-time if using gcc 3.4. fixes bug 51838
