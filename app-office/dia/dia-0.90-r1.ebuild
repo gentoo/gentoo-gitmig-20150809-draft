@@ -1,14 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r1.ebuild,v 1.3 2002/08/06 17:40:50 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r1.ebuild,v 1.4 2002/08/30 12:22:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/gnome-office/dia.shtml"
-KEYWORDS="x86 ppc"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 RDEPEND=">=dev-libs/libxml-1.8.15
 	>=media-libs/gdk-pixbuf-0.18.0
@@ -25,28 +26,17 @@ DEPEND="${RDEPEND}
 src_compile() {
 	local myconf
 
-	if [ "`use gnome`" ] ; then
-		myconf="--enable-gnome"
-	fi
+	use gnome && myconf="--enable-gnome"
 
-	if [ "`use bonobo`" ]; then
-		myconf="--enable-gnome --enable-bonobo"
-	fi
+	use bonobo myconf="--enable-gnome --enable-bonobo"
 
-#	if [ "`use python`" ] ; then
-#		myconf="${myconf} --with-python"
-#	fi
+#	use python && myconf="${myconf} --with-python"
 
-	if [ -z "`use nls`" ] ; then
-		myconf="${myconf} --disable-nls"
-	fi
+	use nls || myconf="${myconf} --disable-nls"
  
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-		    ${myconf} || die
+    # enable-gnome-print not recoomended
 
-        # enable-gnome-print not recoomended
-
+	econf ${myconf} || die
 	emake || die
 }
 
