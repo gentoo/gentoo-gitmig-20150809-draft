@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.rc6,v 1.1 2004/09/24 00:01:57 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.rc6,v 1.2 2005/03/22 15:51:16 stkn Exp $
 
 depend() {
 	need net logger
+	after zaptel
 }
 
 start() {
