@@ -28,3 +28,4 @@ virtual/krb5		app-crypt/heimdal
 virtual/motif           x11-libs/openmotif
 virtual/bootloader		sys-apps/silo
 virtual/editor			app-editors/nano
+virtual/os-headers	sys-kernel/linux-headers

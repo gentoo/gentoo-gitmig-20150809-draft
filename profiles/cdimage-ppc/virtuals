@@ -5,3 +5,4 @@ virtual/kernel			sys-apps/baselayout
 virtual/glibc 			sys-libs/glibc
 
 sys-apps/reiserfs-utils sys-apps/reiserfsprogs
+virtual/os-headers	sys-kernel/linux-headers

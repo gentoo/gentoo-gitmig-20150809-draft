@@ -26,3 +26,4 @@ virtual/xft		x11-libs/xft
 virtual/krb5			app-crypt/heimdal
 virtual/motif           x11-libs/openmotif
 virtual/editor			app-editors/nano
+virtual/os-headers	sys-kernel/linux-headers

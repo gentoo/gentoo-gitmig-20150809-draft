@@ -22,3 +22,4 @@ virtual/krb5			app-crypt/heimdal
 virtual/motif		x11-libs/lesstif
 virtual/bootloader		sys-apps/grub
 virtual/editor			app-editors/nano
+virtual/os-headers	sys-kernel/linux-headers

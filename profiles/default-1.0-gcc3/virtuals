@@ -31,3 +31,4 @@ virtual/xft		x11-libs/xft
 virtual/bootloader		sys-apps/grub
 virtual/editor			app-editors/nano
 virtual/jack			media-sound/jack-audio-connection-kit
+virtual/os-headers	sys-kernel/linux-headers

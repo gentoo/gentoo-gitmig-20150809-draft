@@ -4,3 +4,4 @@ virtual/bash			sys-apps/bash
 virtual/kernel			sys-apps/baselayout
 virtual/glibc 			sys-libs/glibc
 
+virtual/os-headers	sys-kernel/linux-headers
