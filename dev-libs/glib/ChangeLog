@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.29 2002/12/25 18:00:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.30 2003/01/01 18:58:23 agriffis Exp $
+
+  01 Jan 2003; Aron Griffis <agriffis@gentoo.org> glib-2.2.0.ebuild :
+  Add ~alpha to KEYWORDS
 
 *glib-2.2.0 (22 Dec 2002)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.12 2002/12/23 00:16:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.13 2003/01/01 18:58:23 agriffis Exp $
+
+  01 Jan 2003; Aron Griffis <agriffis@gentoo.org> atk-1.2.0.ebuild :
+  Add ~alpha to KEYWORDS
 
 *atk-1.2.0 (22 Dec 2002)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.27 2002/12/23 02:05:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.28 2003/01/01 18:58:23 agriffis Exp $
+
+  01 Jan 2003; Aron Griffis <agriffis@gentoo.org> pango-1.2.0.ebuild :
+  Added ~alpha to KEYWORDS
 
 *pango-1.2.0.ebuild (22 Dec 2002)
 

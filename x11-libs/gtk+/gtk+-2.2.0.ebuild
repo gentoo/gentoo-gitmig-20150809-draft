@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.0.ebuild,v 1.3 2002/12/24 20:21:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.0.ebuild,v 1.4 2003/01/01 18:58:23 agriffis Exp $
 
 inherit eutils libtool flag-o-matic
 
 IUSE="tiff doc jpeg"
 SLOT="2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Gimp ToolKit + "
