@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rdiff-backup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.17 2003/10/05 11:09:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.18 2003/10/16 20:43:54 mholzer Exp $
+
+  17 Oct 2003; Martin Holzer <mholzer@gentoo.org> rdiff-backup-0.12.4.ebuild,
+  rdiff-backup-0.12.5-r1.ebuild:
+  moving inherit on top of ebuild. Closes #30998.
 
 *rdiff-backup-0.12.5-r1 (06 Oct 2003)
 
