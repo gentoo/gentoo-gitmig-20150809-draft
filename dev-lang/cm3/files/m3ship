@@ -1,0 +1,2 @@
+#!/bin/bash
+cm3 -ship $@

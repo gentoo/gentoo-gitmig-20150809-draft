@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.4.ebuild,v 1.1 2003/04/17 16:10:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.4.ebuild,v 1.2 2003/04/30 02:23:00 vapier Exp $
 
 M3_TARGET="LINUXLIBC6"
 MY_P="${PN}-src-all-${PV}"
@@ -20,7 +20,7 @@ DEPEND="tcltk? ( dev-lang/tcl )
 S=${WORKDIR}
 
 export cm3base=${T}/cm3base/
-export PATH="${PATH}:${cm3base}/bin"
+export PATH="${cm3base}/bin:${PATH}"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH} ${cm3base}/lib"
 
 src_unpack() {
@@ -61,11 +61,26 @@ src_compile() {
 }
 
 src_install() {
-	# i know this is wrong but hey, thats why this is in package.mask ;)
-	for d in ${cm3base}/pkg/* ; do
-		rm -rf ${d}/src/*
-		mv ${d}/${M3_TARGET}/* ${d}/
-	done
 	dodir /usr/lib/cm3
 	mv ${cm3base}/pkg ${D}/usr/lib/cm3/
+	dobin ${FILESDIR}/m3{build,ship}
+	dosym /usr/lib/cm3/pkg/cm3/${M3_TARGET}/cm3 /usr/bin/cm3
+	into /usr/lib/cm3/
+	dobin ${cm3base}/bin/cm3cg
+
+	insinto /usr/bin
+	echo "ROOT=\"/usr/lib/cm3/pkg/\"" >> ${cm3base}/bin/cm3.cfg
+	doins ${cm3base}/bin/cm3.cfg
+
+	for lib in `find ${D}/usr/lib/cm3/ -name 'libm3*.so*'` ; do
+		lib=${lib:${#D}}
+		dosym ${lib} /usr/lib/`basename ${lib}`
+	done
+
+	for f in `grep -lIR ${PORTAGE_TMPDIR}/portage/${PF} ${D}` ; do
+		f=${f:${#D}}
+		dosed "s:${cm3base}:/usr/lib/cm3/:" ${f}
+		dosed "s:${S}/m3-libs:/usr/lib/cm3/pkg/:" ${f}
+		dosed "s:${S}/m3-sys:/usr/lib/cm3/pkg/:" ${f}
+	done
 }
