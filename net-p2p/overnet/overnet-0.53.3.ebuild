@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.53.3.ebuild,v 1.4 2004/07/01 09:38:57 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.53.3.ebuild,v 1.5 2004/09/11 16:20:33 lanius Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.overnet.com"
 SRC_URI="http://download.overnet.com/${PN}-${MY_PV}.tar.gz"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64 -ppc"
+KEYWORDS="x86 ~amd64 -ppc"
 
 DEPEND="virtual/libc"
 

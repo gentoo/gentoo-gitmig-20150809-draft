@@ -1,26 +1,24 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.51.2.ebuild,v 1.7 2004/07/01 09:38:57 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-1.0.2.ebuild,v 1.1 2004/09/11 16:20:33 lanius Exp $
 
 IUSE=""
 
-MY_P="${P/-/}"
-S="${WORKDIR}"
+S=${WORKDIR}
+
 DESCRIPTION="Overnet is the successor of eDonkey2000 that allows you to share files with millions of other people across the globe."
 HOMEPAGE="http://www.overnet.com"
-SRC_URI="http://download.overnet.com/${MY_P}.tar.gz"
+SRC_URI="http://www.zen18864.zen.co.uk/edonkey/${PV}/edonkeyclc-${PV}_i386.tgz"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64 -ppc"
 
-DEPEND="virtual/libc"
+DEPEND="virtual/glibc"
 
 src_compile() {
 	einfo "Distributed in binary.  No compilation required."
 }
 
 src_install () {
-	exeinto /usr/bin
-	newexe ${MY_P} ${PN}
-	dodoc README
+	mv usr ${D}
 }
