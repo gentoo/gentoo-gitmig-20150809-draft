@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.7 2004/03/28 02:20:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.8 2004/03/28 02:38:13 mr_bones_ Exp $
 
 inherit eutils
 
