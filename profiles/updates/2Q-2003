@@ -36,3 +36,4 @@ move app-text/latex-foiltex dev-tex/foiltex
 move app-text/latex-leaflet dev-tex/leaflet
 move app-text/latex-texpower dev-tex/texpower
 move app-text/latex2html dev-tex/latex2html
+move app-text/chktex dev-tex/chktex
