@@ -4,6 +4,7 @@ MD5 40f531621b0972dd54c0ddbbdde37513 HTML-Parser-3.26-r2.ebuild 774
 MD5 9e13bd0da24971cd971dff09f877ce95 HTML-Parser-3.28.ebuild 785
 MD5 829e5ae3e30212168424c375be07e7a0 HTML-Parser-3.30.ebuild 790
 MD5 4f46e595945e9028854cdab1adac257e HTML-Parser-3.31.ebuild 790
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 bed11523f206f26f483b74ae5070fd1f files/digest-HTML-Parser-3.26-r1 67
 MD5 4971342f8924d21de4c8fdf4b9f654f7 files/digest-HTML-Parser-3.26-r2 136
 MD5 efe35730ae75ad200be2482606e13068 files/digest-HTML-Parser-3.28 67

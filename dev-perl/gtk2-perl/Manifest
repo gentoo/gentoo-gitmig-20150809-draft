@@ -5,6 +5,7 @@ MD5 798f112463b69c125af9e47cddd4ef24 gtk2-perl-0.90.ebuild 606
 MD5 a57164262d0c9257b2097fb35144584d gtk2-perl-0.92.ebuild 606
 MD5 356424ee3b97cb7278fd0d4dab25861d gtk2-perl-0.96.ebuild 606
 MD5 3f8fbf3b311e6b8f2767ce7e78525e33 gtk2-perl-0.97.ebuild 584
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 1c1f460714e9f7eedd497abe98296fe1 files/digest-gtk2-perl-0.12 66
 MD5 c181322aca133c56f29be11a7fd33591 files/digest-gtk2-perl-0.26 61
 MD5 7fd280b55513565e77d5dec1b4176f0d files/digest-gtk2-perl-0.90 61

@@ -1,5 +1,6 @@
 MD5 4cc0ff57ff42dd9336286c9c9401b026 ChangeLog 1590
 MD5 fed94223aeb4db8b30bb2bdbe1a9e340 libapreq-1.0-r3.ebuild 684
 MD5 41facf26aac19db99417f361c1b463aa libapreq-1.2.ebuild 706
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 6b94213da4a46d8ecdc031e39dfd9233 files/digest-libapreq-1.0-r3 64
 MD5 4527276b891721c635158cd57532a64c files/digest-libapreq-1.2 64
