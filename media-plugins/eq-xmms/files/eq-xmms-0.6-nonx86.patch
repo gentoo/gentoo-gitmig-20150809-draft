@@ -1,0 +1,11 @@
+--- eq-xmms-0.6.orig/configure.in	2004-05-15 18:55:08.000000000 -0700
++++ eq-xmms-0.6/configure.in	2004-06-28 11:52:02.034771660 -0700
+@@ -115,7 +115,7 @@
+ [  --enable-sse2           force SSE2 instruction generation [[default=auto]]],
+ 	sse2=$enableval, sse2=no)
+ 
+-ARCH_DEFINES_DEFAULT="-DARCH_X86"
++ARCH_DEFINES_DEFAULT=""
+ if test "x$debug" = xyes; then
+ 	XF_CFLAGS="-Wall -g -O2 -DDEBUG $XF_CFLAGS"
+ else

@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/eq-xmms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.4 2004/06/24 23:27:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.5 2004/06/28 19:09:52 eradicator Exp $
+
+*eq-xmms-0.6 (28 Jun 2004)
+
+  28 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/eq-xmms-0.6-nonx86.patch, -eq-xmms-0.5.ebuild, +eq-xmms-0.6.ebuild:
+  Version bump. Tested on amd64, x86, and sparc. Removing old version which
+  causes segfaults on newer xmms versions. Closes bug #54969.
 
   17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> eq-xmms-0.5.ebuild:
   Added to ~amd64.
