@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.2 2003/05/14 08:28:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.3 2003/05/15 22:27:29 msterret Exp $
 
 IUSE="selinux"
 
@@ -19,14 +19,18 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4
 	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
 
-src_compile() {
+src_unpack() {
+	unpack ${PN}_${PV}.orig.tar.gz
+
 	use selinux && epatch ${DISTDIR}/${P}-2003011510.patch.gz
 
 	sed -i \
 		-e "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" \
 		-e "/CVSROOT =/d" \
-		Makefile || die "sed failed"
+		${S}/Makefile || die "sed failed"
+}
 
+src_compile() {
 	emake || die "emake failed"
 }
 
@@ -49,7 +53,7 @@ pkg_postinst() {
 	einfo "If you wish to have logrotate e-mail you updates, please"
 	einfo "emerge net-mail/mailx and configure logrotate in"
 	einfo "/etc/logrotate.conf appropriately"
-	einfo ""
+	einfo
 	einfo "Additionally, /etc/logrotate.conf may need to be modified"
 	einfo "for your particular needs.  See man logrotate for details."
 }
