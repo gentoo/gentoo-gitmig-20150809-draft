@@ -1,16 +1,19 @@
 # ChangeLog for net-im/jabber-server
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.4 2003/02/12 08:01:49 vapier Exp $
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.5 2003/04/25 20:56:36 mholzer Exp $
 
-*jabber-server-1.4.2-r2 (3 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
+*jabber-server-1.4.2-r2 (03 Dec 2002)
 
+  25 Apr 2003; Martin Holzer <mholzer@gentoo.org>
+  jabber-server-1.4.2-r2.ebuild:
+  Updated md5sum
+
+  03 Dec 2003; B.Verwilst <verwilst@gentoo.org> ChangeLog :
   Totally overhauled ebuild.. Enjoy :o)
-
 
 *jabber-server-1.4.2-r1 (11 May 2002)
 
   11 May 2002; B.Verwilst <verwilst@gentoo.org> ChangeLog :
-
   Totally reworked ebuild, with the latest snapshots of the transports, 
   this should work virtually out of the box now. Included ssl script as 
   well.
@@ -18,7 +21,6 @@
 *jabber-server-1.4.1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
