@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cgi-Simple
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.7 2004/12/05 03:16:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.8 2004/12/24 14:11:04 nigoro Exp $
+
+  24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Cgi-Simple-0.077.ebuild:
+  added ~ppc64
 
 *Cgi-Simple-0.077 (04 Dec 2004)
 
