@@ -1,5 +1,5 @@
 MD5 e23252239ffa30644727a70ca8abfc4f files/digest-ganglia-monitor-core-2.5.3 78
-MD5 a9bd493b3ee873b7e60b48e42128fe6c files/gmetad.rc 327
-MD5 cf0edabdb493febbca959d2a946b5878 files/gmond.rc 321
+MD5 6ea88507b7ec6a23c51a280c9cfe5da4 files/gmetad.rc 328
+MD5 bdc9561d6348490789845f386576d97b files/gmond.rc 322
 MD5 e3b247c4c6f2d6d51ed18340e0158128 ganglia-monitor-core-2.5.3.ebuild 1211
 MD5 9b6b443fe4f4e95248445dfab015cee0 ChangeLog 445
