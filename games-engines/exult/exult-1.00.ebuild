@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.00.ebuild,v 1.2 2003/12/26 23:41:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.00.ebuild,v 1.3 2004/02/03 01:08:57 mr_bones_ Exp $
 
 inherit games
 
@@ -31,7 +31,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS ChangeLog COPYING NEWS FAQ README README.1ST
+	dodoc AUTHORS ChangeLog NEWS FAQ README README.1ST
 	prepgamesdirs
 }
 
