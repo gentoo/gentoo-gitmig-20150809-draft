@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.7.ebuild,v 1.10 2004/11/11 23:03:43 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.7.ebuild,v 1.11 2004/12/14 09:16:28 dsd Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,7 @@ pkg_setup() {
 	eerror "42 any other i2c drivers (e.g. bttv) in the kernel."
 	eerror "43 Do NOT use lm-sensors 2.8.0 or i2c-2.8.0 if you require bttv."
 	echo
-	eerror "Please try out http://khai.linux-fr.org/devel/i2c/ for a kernel"
+	eerror "Please try out http://khali.linux-fr.org/devel/i2c/ for a kernel"
 	eerror "patch which will fix this problem. Please note that nor the"
 	eerror "lm_sensors team nor the package maintainers will be able to"
 	eerror "support you if you encounter problems with I2C when using"
