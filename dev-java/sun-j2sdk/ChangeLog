@@ -1,10 +1,13 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.14 2003/02/12 05:54:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.15 2003/04/15 13:51:16 cretin Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *sun-j2sdk-1.4.1 (12 Jan 2003)
+  15 Apr 2003; Stefan Jones <cretin@gentoo.org>:
+  Added patch so it compiles with nptl
+
   13 Jan 2003; Stefan Jones <cretin@gentoo.org>:
   Changed motif patch so it doesn't block motif and upped the CFLAGS
 

@@ -1,0 +1,36 @@
+--- j2sdk.orig/hotspot/src/os/linux/vm/os_linux.cpp.jj	2003-01-17 12:00:05.000000000 +0000
++++ j2sdk.orig/hotspot/src/os/linux/vm/os_linux.cpp	2003-01-17 14:06:00.000000000 +0000
+@@ -1012,9 +1012,6 @@
+   if (dump_core) {
+     NOT_PRODUCT(tty->print("Current thread is %p\n", pthread_self()));
+     NOT_PRODUCT(tty->print("Dumping core ...\n"));
+-    // 4450681 : kill all other threads before abort to make sure the 
+-    // calling thread is the one that gets dumped in core file. 
+-    pthread_kill_other_threads_np();
+     ::abort(); // dump core
+   }
+   ::exit(1);
+@@ -1716,12 +1713,7 @@
+   act.sa_flags = SA_RESTART|SA_SIGINFO;
+   act.sa_handler = (void (*)(int)) SR_handler;
+   // SR_signum is blocked by default. 
+-  // 4528190 - We also need to block pthread restart signal (32 on all
+-  // supported Linux platforms). Note that LinuxThreads need to block
+-  // this signal for all threads to work properly. So we don't have
+-  // to use hard-coded signal number when setting up the mask.
+   pthread_sigmask(SIG_BLOCK, NULL, &act.sa_mask);
+-  assert(sigismember(&act.sa_mask, 32), "incompatible pthread library");
+   if (sigaction(SR_signum, &act, 0) == -1) {
+     return -1;
+   }
+--- j2sdk.orig/j2se/src/solaris/native/sun/nio/ch/NativeThread.c.jj	2003-01-17 17:00:47.000000000 +0000
++++ j2sdk.orig/j2se/src/solaris/native/sun/nio/ch/NativeThread.c	2003-01-17 17:01:54.000000000 +0000
+@@ -66,7 +66,7 @@
+ Java_sun_nio_ch_NativeThread_signal(JNIEnv *env, jclass cl, jlong thread)
+ {
+ #ifdef __linux__
+-    if (pthread_kill((pthread_t)thread, INTERRUPT_SIGNAL))
++    if (pthread_kill((pthread_t)(unsigned long int)thread, INTERRUPT_SIGNAL))
+ 	JNU_ThrowIOExceptionWithLastError(env, "Thread signal failed");
+ #endif
+ }
