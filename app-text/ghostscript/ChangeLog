@@ -1,9 +1,14 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.21 2003/01/19 14:42:53 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.22 2003/01/28 06:26:17 lordvan Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
+*ghostscript-7.05.5-r2 (28 Jan 2003)
+  28 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org> ghostscript-7.05.5-r2.ebuild:
+  files/ghostscript-7.05.5.man.patch, patch for 'man gs' from
+  Dylan Carlson (absinthe@pobox.com) bug #14150
+
 *ghostscript-7.05.5-r1 (13 Jan 2003)
 
   13 Jan 2003; Jungmin Seo <seo@gentoo.org> ghostscript-7.05.5-r1.ebuild, 
