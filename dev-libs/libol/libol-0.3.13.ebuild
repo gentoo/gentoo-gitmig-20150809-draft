@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.13.ebuild,v 1.2 2004/03/14 12:22:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.13.ebuild,v 1.3 2004/03/17 19:30:36 mr_bones_ Exp $
 
 DESCRIPTION="Support library for syslog-ng"
-SRC_URI="http://www.balabit.hu/downloads/libol/0.3/${P}.tar.gz"
 HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
+SRC_URI="http://www.balabit.hu/downloads/libol/0.3/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -15,14 +15,12 @@ DEPEND="virtual/glibc"
 RDEPEND=""
 
 src_compile() {
-	econf \
-		--enable-shared \
-		--enable-static \
-		--disable-libtool-lock || die
-	emake CFLAGS="${CFLAGS}" all || die
+	econf || die
+	# why must people hard-code CFLAGS into configure?
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	einstall || die
-	dodoc ChangeLog
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc ChangeLog || die "dodoc failed"
 }
