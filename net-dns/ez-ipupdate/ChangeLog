@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.10 2004/08/15 11:06:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.11 2004/11/09 16:17:23 solar Exp $
+
+*ez-ipupdate-3.0.11_beta8-r1 (09 Nov 2004)
+
+  09 Nov 2004; <solar@gentoo.org>
+  +files/ez-ipupdate-3.0.11_beta8-syslog.patch,
+  +ez-ipupdate-3.0.11_beta8-r1.ebuild, -ez-ipupdate-3.0.11_beta8.ebuild:
+  security bump. - Format string vulnerability in syslog handling. - bug #69658
 
   15 Aug 2004; Daniel Ahlberg <aliz@gentoo.org>
   ez-ipupdate-3.0.11_beta8.ebuild, files/ez-ipupdate.rc6:

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8.ebuild,v 1.7 2004/08/15 11:06:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r1.ebuild,v 1.1 2004/11/09 16:17:23 solar Exp $
+
+inherit eutils
 
 MY_PV=${PV/_beta/b}
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -15,6 +17,12 @@ KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch $FILESDIR/${PN}-3.0.11_beta8-syslog.patch
+}
 
 src_install() {
 	make DESTDIR=${D} install || die
