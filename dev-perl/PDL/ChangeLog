@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.16 2003/07/26 19:31:25 rac Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.17 2004/01/09 19:17:26 gustavoz Exp $
+
+  09 Jan 2004; <gustavoz@gentoo.org> PDL-2.4.0-r1.ebuild:
+  marked stable on sparc
 
 *PDL-2.4.0-r1 (26 Jul 2003)
 
