@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sparc-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.11 2003/08/16 13:48:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.12 2003/11/01 12:01:36 weeve Exp $
+
+*sparc-utils-1.9-r2 (01 Nov 2003)
+
+  01 Nov 2003; Jason Wever <weeve@gentoo.org> sparc-utils-1.9-r2.ebuild:
+  another rev bump, more ebuild cleanups from Matsuu Takuto <matsuu@gentoo.org>.
+  closes bug #30744.
 
   16 Aug 2003; Jason Wever <weeve@gentoo.org> metadata.xml,
   sparc-utils-1.9-r1.ebuild, sparc-utils-1.9.ebuild:
