@@ -1,0 +1,5 @@
+MD5 0a225320340157ce509a1645988f1a10 files/digest-tclxml-expat-2.4 62
+MD5 2770e7494e3f147c5a80579ff7334250 files/digest-tclxml-expat-2.5 62
+MD5 e6d43feb4e82d032c9788f37601ff062 tclxml-expat-2.4.ebuild 713
+MD5 c218757b74e00a25bb5534ecd7037f69 tclxml-expat-2.5.ebuild 706
+MD5 02017b60ac9936f7f34794950e97a6ec ChangeLog 448
