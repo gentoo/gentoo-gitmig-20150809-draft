@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.18 2004/06/28 19:55:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.19 2004/06/30 15:35:11 latexer Exp $
+
+*monodoc-1.0 (30 Jun 2004)
+
+  30 Jun 2004; Peter Johanson <latexer@gentoo.org> +monodoc-1.0.ebuild:
+  1.0. Nuff said.
 
   28 Jun 2004; Peter Johanson <latexer@gentoo.org> :
   Digest fix.
