@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7e4f75b6cb6c899cfe9c8ce865f8f189 ChangeLog 2309
+MD5 e5c5142d7e80549b68ad35cbf69e3926 ChangeLog 2410
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 10b6e22227645308b980a46e0ee4f8b4 libticalcs-4.5.5.ebuild 892
+MD5 2a95cc865bfbaea14f8162a8c37ea2d4 libticalcs-4.5.5.ebuild 900
 MD5 51b29a3c1267b7beb34a4e88a7ddddc7 files/digest-libticalcs-4.5.5 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB4RjII1lqEGTUzyQRAgCnAJ4yi+Iok7YtC3m2do0KIVkBPvNhxACdElf3
-2yqzNEXC04bap58m1HImYnY=
-=3VB4
+iD8DBQFCMZNrZ/iYVBmujdURAuu1AKCfYoJuPFVxh5b5os7cenWFmZUEZACeIjf8
+bnc61+Zo753T/f0c+xo4YhU=
+=dWDg
 -----END PGP SIGNATURE-----
