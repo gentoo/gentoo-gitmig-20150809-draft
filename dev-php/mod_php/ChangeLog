@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.117 2004/01/10 18:24:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.118 2004/01/10 20:58:12 brad_mssw Exp $
+
+  10 Jan 2004; Brad House <brad_mssw@gentoo.org> mod_php-4.3.4-r2.ebuild:
+  reverse change made by robbat2, as it messed up stable x86
 
   10 Jan 2004; Aron Griffis <agriffis@gentoo.org> mod_php-4.3.3-r3.ebuild,
   mod_php-4.3.4-r2.ebuild:
