@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.4.11.ebuild,v 1.7 2004/04/27 20:48:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.4.11.ebuild,v 1.8 2004/06/01 19:25:48 tseng Exp $
 
 inherit debug eutils
 
@@ -11,7 +11,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-IUSE="gnome"
+#IUSE="gnome"
+IUSE=""
 
 # Build-time dependencies, such as
 #    ssl? ( >=openssl-0.9.6b )
