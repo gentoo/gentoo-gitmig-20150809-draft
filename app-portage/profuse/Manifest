@@ -1,4 +1,6 @@
 MD5 1bed1475740a1487b4a3c665c3ed4306 profuse-0.1.ebuild 676
 MD5 5f1c3b9a62f513d6a4802b57677c23bf metadata.xml 284
-MD5 a65d517c7de9ff9d3c4b53919dbf61a2 ChangeLog 306
+MD5 fb0c0356529288e306578782e277761b profuse-0.11.ebuild 662
+MD5 5d65b927e48f0ed9cba6e150b4537a4d ChangeLog 406
+MD5 6382a08f07553fe4ffe9297e2ab85632 files/digest-profuse-0.11 64
 MD5 6ea98f01c28703bf36ccf141519518d2 files/digest-profuse-0.1 62
