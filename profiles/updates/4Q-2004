@@ -3,3 +3,4 @@ move app-i18n/imhangul_status_applet app-i18n/imhangul-status-applet
 move dev-java/jump-bin dev-java/jump
 move dev-java/qat-bin dev-java/qat
 move sys-apps/epbb app-laptop/epbb
+move sys-libs/commonc++2 sys-cpp/commoncpp2
