@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.15.ebuild,v 1.2 2003/09/24 20:04:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.15.ebuild,v 1.3 2003/10/07 20:57:09 johnm Exp $
 
 inherit eutils
 #to accomodate -laadeedah releases
@@ -197,7 +197,7 @@ pkg_config() {
 		if [ -z "${DATADIR}" ]; then
 			DATADIR="/var/lib/mysql/"
 		fi
-		chown -R mysql.mysql ${DATADIR}
+		chown -R mysql:mysql ${DATADIR}
 	else
 		einfo "Hmm, it appears as though you already have the mysql"
 		einfo "database in place.  If you are having problems trying"
@@ -226,7 +226,7 @@ pkg_postinst() {
 
 	#secure the logfiles... does this bother anybody?
 	touch ${ROOT}/var/log/mysql/mysql.{log,err}
-	chown mysql.mysql ${ROOT}/var/log/mysql/mysql.{log,err}
+	chown mysql:mysql ${ROOT}/var/log/mysql/mysql.{log,err}
 	chmod 0660 ${ROOT}/var/log/mysql/mysql.{log,err}
 
 	#your friendly public service announcement...
