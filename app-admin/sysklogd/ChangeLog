@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.32 2004/06/24 21:39:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.33 2004/07/24 21:38:37 azarah Exp $
+
+*sysklogd-1.4.1-r11 (24 Jul 2004)
+
+  24 Jul 2004; Martin Schlemmer <azarah@gentoo.org> files/sysklogd.rc6,
+  +sysklogd-1.4.1-r11.ebuild:
+  Update rc-script to have output similar to samba, and improve daemon return
+  handling. Also retry on syslogd, as its stubborn in some cases ...
 
   21 Jun 2004; <plasmaroo@gentoo.org> files/sysklogd-1.4.1-2.6.headers.patch:
   Updated the 2.6 headers patch to check that the <linux/list.h> header is not

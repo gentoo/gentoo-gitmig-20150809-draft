@@ -1,35 +1,81 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.8 2004/07/14 21:18:50 agriffis Exp $
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.9 2004/07/24 21:38:37 azarah Exp $
 
 # NB: Config is in /etc/conf.d/sysklogd
+
 
 depend() {
 	need clock hostname
 	provide logger
 }
 
-start() {
-	ebegin "Starting syslogd, klogd"
-	start-stop-daemon --start --quiet --background --exec /usr/sbin/syslogd \
-		-- ${SYSLOGD}
+start_daemon() {
+	local retval=0
+	local daemon="$1"
+	local options="$2"
+
+	[ -z "${daemon}" ] && return 1
+
+	[ -n "${options}" ] && options="-- ${options}"
+
+	ebegin "sysklogd -> start: ${daemon}"
+	start-stop-daemon --start --quiet --background \
+		--exec /usr/sbin/${daemon} ${options}
 	retval=$?
+	eend ${retval} "Failed to start ${daemon}"
+
+	return ${retval}
+}
+
+stop_daemon() {
+	local retval=0
+	local daemon="$1"
+
+	[ -z "${daemon}" ] && return 1
+
+	ebegin "sysklogd -> stop: ${daemon}"
+	# syslogd can be stubborn some times (--retry 15)...
+	start-stop-daemon --stop --oknodo --retry 15 \
+		--quiet --pidfile /var/run/${daemon}.pid
+	retval=$?
+	eend ${retval} "Failed to stop ${daemon}"
+
+	return ${retval}
+}
+
+start() {
+	start_daemon "syslogd" "${SYSLOGD}" || return 1
 	
 	# klogd do not always start proper if started too early
 	sleep 1
 	
-	start-stop-daemon --start --quiet --exec /usr/sbin/klogd \
-		-- ${KLOGD}
-	retval=$(( ${retval} + $? ))
-	eend ${retval} "Failed to start syslogd, klogd"
+	start_daemon "klogd" "${KLOGD}" || {
+		if [ -n "`pidof syslogd`" ]; then
+			stop_daemon "syslogd"
+		fi
+		return 1
+	}
+
+	return 0
 }
 
 stop() {
-	ebegin "Stopping syslogd, klogd"
-	start-stop-daemon --stop --retry 1 --quiet --pidfile /var/run/syslogd.pid
-	retval=$?
-	start-stop-daemon --stop --retry 1 --quiet --pidfile /var/run/klogd.pid
-	retval=$(( ${retval} + $? ))
-	eend ${retval} "Failed to stop klogd, syslogd"
+	stop_daemon "klogd" || return 1
+
+	# Give klogd time to stop
+	sleep 1
+	
+	stop_daemon "syslogd" || {
+		if [ -n "`pidof syslogd`" ]; then
+			# Not sure if we should really try to start
+			# klogd again ...
+			start_daemon "klogd" "${KLOGD}"
+		fi
+		return 1
+	}
+
+	return 0
 }
+
