@@ -1,6 +1,6 @@
 MD5 61e1a8b7391d4d241d9dbc8cb54a0b80 kdevelop-3.0.0_beta1.ebuild 3037
 MD5 d5f5a5a0a6253f352123365a201f3918 kdevelop-2.1.5.ebuild 1763
-MD5 c757e332a7f1088434cca398018ebf8b kdevelop-3.0.0_beta2.ebuild 2921
+MD5 0ee2349f7c750d533379d2b6da09f170 kdevelop-3.0.0_beta2.ebuild 2963
 MD5 8a725d3c2a0188168907929c74093083 ChangeLog 7249
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 9bacd530b8e15f85ea1610a106fa9829 files/digest-kdevelop-3.0.0_beta1 70
@@ -8,4 +8,5 @@ MD5 665f29214568862e2f77aadd007ed80f files/digest-kdevelop-3.0.0_beta2 70
 MD5 4744796501d8e6a5b4f31978482a8a5a files/kdevelop-3.0.0_beta1-compat.patch 372
 MD5 5844083f843db38cd01fa7a77d677e51 files/digest-kdevelop-2.1.5 245
 MD5 04f506126fcc3a76e72f9c5adba3a2f5 files/kdevelop-2.1.5-gentoo.diff 4198
+MD5 94d687e3f472dfba1723a04974f36556 files/kdevelop-3.0.0_beta2-mainwindow.patch 385
 MD5 5dbe87ca31912cf4eeba60fb16082225 files/htdig.conf 8248
