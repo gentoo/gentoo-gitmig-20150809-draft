@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/xbattbar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/ChangeLog,v 1.1 2003/06/19 19:58:29 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/ChangeLog,v 1.2 2003/08/16 00:54:02 usata Exp $
 
 *xbattbar-1.4.2 (19 Jun 2003)
+
+  16 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> xbattbar-1.4.2.ebuild:
+  Marked as stable
 
   19 Jun 2003; mkeadle <mkeadle@gentoo.org> xbattbar-1.4.2.ebuild:
   Initial import of xbattbar. thanks to Mamoru Komachi
