@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.42 2005/02/06 22:57:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.43 2005/04/02 21:38:12 hansmi Exp $
+
+  02 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> URI-1.35.ebuild:
+  Stable on ppc.
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> URI-1.35.ebuild:
   Marked stable on mips.

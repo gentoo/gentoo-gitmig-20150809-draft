@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TimeDate
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.19 2004/12/30 00:46:28 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.20 2005/04/02 21:37:23 hansmi Exp $
+
+  02 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> TimeDate-1.16.ebuild:
+  Stable on ppc.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
