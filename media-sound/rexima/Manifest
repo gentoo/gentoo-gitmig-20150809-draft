@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a9ee7a408b8552b228fd4309a5888465 ChangeLog 1124
+MD5 9a80d0f4c8203605c13404f3a18439f3 ChangeLog 1217
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3631d1ab8d5977c3544cdcdb14ccdcfc rexima-1.4.ebuild 807
+MD5 4649b1cd0387b9a5bc54030d105a4929 rexima-1.4.ebuild 806
 MD5 3515b3d720d665d6e3df47ac7f173429 files/digest-rexima-1.4 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBotEcArHZZzCEUG0RAuK1AJ4zSs/BJln18K4rtuFMRpZaukyuUQCffADZ
-sBReDBLsMq008nZMfr9+mdY=
-=liDa
+iD8DBQFBxR6IArHZZzCEUG0RAmAgAKCAZ/z8iWQxw0Wmawug348HZ8uviACff1of
+ghsEx1XJn3VOFth4kg+tPuw=
+=zvg8
 -----END PGP SIGNATURE-----
