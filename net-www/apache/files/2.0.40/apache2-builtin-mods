@@ -1,0 +1,89 @@
+# /space/gentoo/cvsroot/gentoo-x86/net-www/apache/files/apache-builtin-mods,v 1.2 2002/05/04 23:23:00 woodchip Exp
+#
+# This is a config file for choosing which Apache built-in modules you
+# want and how they should be compiled.  You have the option of either
+# compiling them statically into the apache binary, or building them
+# as DSO's (Dynamic Shared Object).  Please consult some documentation
+# for reasons why you'd want one versus the other.  This file simply
+# helps to make your life easier when customizing and upgrading your
+# Apache server.  The defaults are _fine_ for most users, and it is
+# assumed you _know_ what you're doing if you change things in here.
+#
+# This file will be installed into /etc/apache when you first emerge
+# Apache.  If/when you upgrade by installing a newer version, it will
+# be consulted for your options.  In this way, your previous
+# configuration is preserved without the need to edit the actual
+# ebuild.  The default configuration in the Apache ebuild's files/
+# directory is used as a fallback if the one in /etc/apache is not
+# available.
+#
+# To compile a module statically into the apache binary, simply put
+# static beside it.  To compile a module as a DSO, put shared beside
+# it.  To disable a module, simply put a - as the first character on
+# the line.
+#
+# Examples:
+# mod_access shared    ( this would build a DSO )
+# mod_actions static   ( this would get compiled statically )
+# - mod_alias shared   ( this module would not be built at all )
+#
+# Please be aware that if you _do_ customize these then you'll need
+# to manually adjust your apache.conf file, tweaking the LoadModule
+# and AddModule lines accordingly or else your server will fail to
+# start!  You've been warned ;)
+#
+# // woodchip
+
+mod_access shared
+mod_actions shared
+mod_alias shared
+mod_asis shared
+mod_auth shared
+mod_auth_anon shared
+mod_auth_dbm shared
+mod_auth_digest shared
+mod_autoindex shared
+mod_bucketeer shared
+mod_cache shared
+mod_case_filter shared
+mod_case_filter_in shared
+mod_cern_meta shared
+mod_cgi shared
+mod_cgid shared
+mod_charset_lite shared
+mod_dav shared
+mod_dav_fs shared
+mod_deflate shared
+mod_dir shared
+mod_disk_cache shared
+mod_echo shared
+mod_env shared
+mod_example shared
+mod_expires shared
+mod_ext_filter shared
+mod_file_cache shared
+mod_headers shared
+mod_imap shared
+mod_include shared
+mod_info shared
+mod_log_config shared
+mod_mem_cache shared
+mod_mime shared
+mod_mime_magic shared
+mod_negotiation shared
+mod_optional_fn_export shared
+mod_optional_fn_import shared
+mod_optional_hook_export shared
+mod_optional_hook_import shared
+mod_proxy shared
+mod_rewrite shared
+mod_setenvif shared
+mod_so static
+mod_speling shared
+mod_ssl shared
+mod_status shared
+mod_suexec shared
+mod_unique_id shared
+mod_userdir shared
+mod_usertrack shared
+mod_vhost_alias shared
