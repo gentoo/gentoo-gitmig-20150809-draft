@@ -1,0 +1,19 @@
+--- ./znew.in~	2004-11-11 19:40:30.000000000 +0100
++++ ./znew.in	2004-11-11 19:51:20.100650392 +0100
+@@ -14,10 +14,15 @@
+ # block is the disk block size (best guess, need not be exact)
+ 
+ warn="(does not preserve modes and timestamp)"
+-tmp=/tmp/zfoo.$$
++tmp=`tempfile -d /tmp -p zfoo` || {
++        echo 'cannot create a temporary file' >&2
++        exit 1
++}
+ set -C
+ echo hi > $tmp.1 || exit 1
+ echo hi > $tmp.2 || exit 1
++trap 'rm -f $tmp.1; exit 2' HUP INT PIPE TERM 0
++trap 'rm -f $tmp.2; exit 2' HUP INT PIPE TERM 0
+ if test -z "`(${CPMOD-cpmod} $tmp.1 $tmp.2) 2>&1`"; then
+   cpmod=${CPMOD-cpmod}
+   warn=""
