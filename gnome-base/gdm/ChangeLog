@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.43 2003/11/15 02:53:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.44 2003/11/17 11:37:40 spider Exp $
+
+*gdm-2.4.1.7-r1 (17 Nov 2003)
+
+  17 Nov 2003; <spider@gentoo.org> gdm-2.4.1.7-r1.ebuild:
+  Added runtime dependency on virtual/x11, 
+  moved tcp-wrappers from hard dep to use tcpd? ()
+  added xinerama USE flag
+  added X USE flag for xdmcp. 
+  Removed static dependency on xfree (new freedesktop.org x11 works too)
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gdm-2.4.1.6.ebuild:
   Stable on ia64
