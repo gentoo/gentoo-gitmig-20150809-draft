@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.102 2004/09/03 05:19:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.103 2004/09/04 04:25:02 seemant Exp $
+
+  03 Sep 2004; Seemant Kulleen <seemant@gentoo.org>
+  xorg-x11-6.7.99.904.ebuild:
+  ok this is still -*'d -- please don't file bugs about segfaults and fonts
+  errors. Those are known issues and we're working on them.
 
 *xorg-x11-6.7.99.904 (02 Sep 2004)
 

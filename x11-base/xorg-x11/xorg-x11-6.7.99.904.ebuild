@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.904.ebuild,v 1.3 2004/09/03 20:37:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.904.ebuild,v 1.4 2004/09/04 04:25:02 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -22,11 +22,11 @@ inherit eutils flag-o-matic gcc xfree
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc insecure-drivers ipv6 mmx nls pam sdk sse static"
+IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc insecure-drivers ipv6 mmx nls pam sdk sse static xprint"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.1"
-PATCH_VER="0.2"
+PATCH_VER="0.1"
 XCUR_VER="0.3.1"
 #MGADRV_VER="1_3_0beta"
 #VIADRV_VER="0.1"
@@ -72,7 +72,7 @@ LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
 	MIT SGI-B BSD FTL | GPL-2"
 SLOT="0"
-KEYWORDS="-x86 -ppc -hppa -mips -ia64 -amd64 -ppc64"
+KEYWORDS="-x86 -ppc64 -amd64 -ppc -mips"
 
 # Need portage-2.0.50_pre9 for `use !foo`
 DEPEND=">=sys-apps/baselayout-1.8.3
@@ -91,7 +91,8 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-apps/portage-2.0.50_pre9
 	!x11-base/xfree
 	!virtual/xft
-	!virtual/x11"
+	!virtual/x11
+	dmx? ( app-text/sgmltools-lite )"
 # x11-libs/xft -- blocked because of interference with xorg's
 
 PDEPEND="x86? (
@@ -110,6 +111,8 @@ PROVIDE="virtual/x11
 	virtual/xft"
 
 DESCRIPTION="An X11 implementation maintained by the X.Org Foundation"
+
+HOSTCONF="config/cf/host.def"
 
 cflag_setup() {
 	# Set up CFLAGS
@@ -193,10 +196,12 @@ pkg_setup() {
 }
 
 host_def_setup() {
-	ebegin "Setting up config/cf/host.def"
-		cd ${S}; cp ${FILES_DIR}/site.def config/cf/host.def || die
+	HOSTCONF=config/cf/host.def
+
+	ebegin "Setting up ${HOSTCONF}"
+		cd ${S}; cp ${FILES_DIR}/site.def ${HOSTCONF} || die
 		echo "#define XVendorString \"Gentoo Linux (The X.Org Foundation ${PV}, revision ${PR}-${PATCH_VER})\"" \
-			>> config/cf/host.def
+			>> ${HOSTCONF}
 
 		# Pending http://bugs.gentoo.org/show_bug.cgi?id=49038 and
 		# http://freedesktop.org/cgi-bin/bugzilla/show_bug.cgi?id=600
@@ -204,43 +209,43 @@ host_def_setup() {
 		# Makes ld bail at link time on undefined symbols
 		# Suggested by Mike Harris <mharris@redhat.com>
 		#echo "#define SharedLibraryLoadFlags  -shared -Wl,-z,defs" \
-		#	>> config/cf/host.def
+		#	>> ${HOSTCONF}
 
 		# Enable i810 on x86_64 (RH #126687)
-		echo "#define XF86ExtraCardDrivers i810" >> config/cf/host.def
+		echo "#define XF86ExtraCardDrivers i810" >> ${HOSTCONF}
 
 		# FHS install locations for docs
-		echo "#define ManDirectoryRoot /usr/share/man" >> config/cf/host.def
-		echo "#define DocDir /usr/share/doc/${PF}" >> config/cf/host.def
-		echo "#define FontDir /usr/share/fonts" >> config/cf/host.def
+		echo "#define ManDirectoryRoot /usr/share/man" >> ${HOSTCONF}
+		echo "#define DocDir /usr/share/doc/${PF}" >> ${HOSTCONF}
+		echo "#define FontDir /usr/share/fonts" >> ${HOSTCONF}
 
 		# Make man4 and man7 stuff get 'x' suffix like everything else
 		# Necessary so we can install to /usr/share/man without overwriting
-		echo "#define DriverManDir \$(MANSOURCEPATH)4" >> config/cf/host.def
+		echo "#define DriverManDir \$(MANSOURCEPATH)4" >> ${HOSTCONF}
 		echo "#define DriverManSuffix 4x /* use just one tab or cpp will die */" \
-			>> config/cf/host.def
-		echo "#define MiscManDir \$(MANSOURCEPATH)7" >> config/cf/host.def
+			>> ${HOSTCONF}
+		echo "#define MiscManDir \$(MANSOURCEPATH)7" >> ${HOSTCONF}
 		echo "#define MiscManSuffix 7x /* use just one tab or cpp will die */" \
-			>> config/cf/host.def
+			>> ${HOSTCONF}
 
 		# Don't build xterm -- use external (#54051)
-		echo "#define BuildXterm NO" >> config/cf/host.def
+		echo "#define BuildXterm NO" >> ${HOSTCONF}
 
 		# Xwrapper has been removed so we now need to use the set uid server
 		# again, this mustve happened somewhere after 4.3.0 in the development.
-		echo "#define InstallXserverSetUID YES" >> config/cf/host.def
-		echo "#define BuildServersOnly NO" >> config/cf/host.def
+		echo "#define InstallXserverSetUID YES" >> ${HOSTCONF}
+		echo "#define BuildServersOnly NO" >> ${HOSTCONF}
 
 		# Don't use /lib64 if $(get_libdir) != lib64
 		# Replaces 0181_all_4.3.0-amd64-nolib64.patch
 		if [ "$(get_libdir)" == "lib64" ] ; then
-			echo "#define HaveLib64 YES" >> config/cf/host.def
+			echo "#define HaveLib64 YES" >> ${HOSTCONF}
 		else
-			echo "#define HaveLib64 NO" >> config/cf/host.def
+			echo "#define HaveLib64 NO" >> ${HOSTCONF}
 		fi
 
 		# Set location of DRM source to be installed
-		echo "#define InstSrcDir ${ROOT}/usr/src/${PF}" >> config/cf/host.def
+		echo "#define InstSrcDir ${ROOT}/usr/src/${PF}" >> ${HOSTCONF}
 
 		# Bug #12775 .. fails with -Os.
 		replace-flags "-Os" "-O2"
@@ -275,45 +280,59 @@ host_def_setup() {
 			[ ! `is_kernel "2" "2"` ] ) || \
 			[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 		then
-			echo "#define HasLinuxInput YES" >> config/cf/host.def
+			echo "#define HasLinuxInput YES" >> ${HOSTCONF}
 		fi
 
-		echo "#define CcCmd ${CC}" >> config/cf/host.def
-		echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> config/cf/host.def
-		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> config/cf/host.def
+		echo "#define CcCmd ${CC}" >> ${HOSTCONF}
+		echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> ${HOSTCONF}
+		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> ${HOSTCONF}
 
 		if use static
 		then
-			echo "#define DoLoadableServer	NO" >>config/cf/host.def
+			echo "#define DoLoadableServer	NO" >>${HOSTCONF}
 		else
 			if use dlloader ; then
 				einfo "Setting DoLoadableServer/MakeDllModules to YES."
-				echo "#define DoLoadableServer  YES" >> config/cf/host.def
-				echo "#define MakeDllModules    YES" >> config/cf/host.def
+				echo "#define DoLoadableServer  YES" >> ${HOSTCONF}
+				echo "#define MakeDllModules    YES" >> ${HOSTCONF}
 			fi
+#			use_build dlloader DoLoadableServer && \
+#				einfo "Setting DoLoadable Server to YES."
+#			use_build dlloader MakeDllModules && \
+#				einfo "Setting MakeDllModules to YES."
+				
 		fi
 
-		if use debug
+#		if use debug
+#		then
+#			echo "#define XFree86Devel	YES" >> ${HOSTCONF}
+#		else
+		use_build debug XFree86Devel
+		use_build debug BuildDebug
+		use_build debug DebuggableLibraries
+
+		if use !debug
 		then
-			echo "#define XFree86Devel	YES" >> config/cf/host.def
-		else
-			echo "#define ExtraXInputDrivers acecad" >> config/cf/host.def
+			echo "#define ExtraXInputDrivers acecad" >> ${HOSTCONF}
 
 			# use less ram .. got this from Spider's makeedit.eclass :)
 			echo "#define GccWarningOptions -Wno-return-type -w" \
-				>> config/cf/host.def
+				>> ${HOSTCONF}
 		fi
 
 		# Remove circular dep between pam and X11, bug #35468
 		# If pam is in USE and we have X11, then we can enable PAM
-		if use pam && [ "`best_version x11-base/xorg-x11`" ]
+#		if use pam && [ "`best_version x11-base/xorg-x11`" ]
+		if [ "`best_version x11-base/xorg-x11`" ]
 		then
 			# If you want to have optional pam support, do it properly ...
-			echo "#define HasPam YES" >> config/cf/host.def
-			echo "#define HasPamMisc YES" >> config/cf/host.def
-		else
-			echo "#define HasPam NO" >> config/cf/host.def
-			echo "#define HasPamMisc NO" >> config/cf/host.def
+#			echo "#define HasPam YES" >> ${HOSTCONF}
+#			echo "#define HasPamMisc YES" >> ${HOSTCONF}
+			use_build pam HasPam
+			use_build pam HasPamMisc
+#		else
+#			echo "#define HasPam NO" >> ${HOSTCONF}
+#			echo "#define HasPamMisc NO" >> ${HOSTCONF}
 		fi
 
 		if use x86 || use alpha
@@ -321,79 +340,84 @@ host_def_setup() {
 			# build with glide3 support? (build the tdfx_dri.o module)
 			if use 3dfx
 			then
-				echo "#define HasGlide3 YES" >> config/cf/host.def
+				echo "#define HasGlide3 YES" >> ${HOSTCONF}
 			fi
+# 			This won't work unless we can disable building the tdfx stuff
+# 			entirely :/
+#			use_build 3dfx HasGlide3
 		fi
 
 		if use x86
 		then
 			# optimize Mesa for architecture
-			if use mmx
-			then
-				echo "#define HasMMXSupport	YES" >> config/cf/host.def
-				echo "#define MesaUseMMX YES" >> config/cf/host.def
-			else
-				echo "#define HasMMXSupport	NO" >> config/cf/host.def
-				echo "#define MesaUseMMX NO" >> config/cf/host.def
-			fi
+#			if use mmx
+#			then
+#				echo "#define HasMMXSupport	YES" >> ${HOSTCONF}
+#				echo "#define MesaUseMMX YES" >> ${HOSTCONF}
+#			else
+#				echo "#define HasMMXSupport	NO" >> ${HOSTCONF}
+#				echo "#define MesaUseMMX NO" >> ${HOSTCONF}
+#			fi
+			use_build mmx HasMMXSupport
+			use_build mmx MesaUseMMX
 
-			if use 3dnow
-			then
-				echo "#define Has3DNowSupport YES" >> config/cf/host.def
-				echo "#define MesaUse3DNow YES" >> config/cf/host.def
-			else
-				echo "#define Has3DNowSupport NO" >> config/cf/host.def
-				echo "#define MesaUse3DNow NO" >> config/cf/host.def
-			fi
+#			if use 3dnow
+#			then
+#				echo "#define Has3DNowSupport YES" >> ${HOSTCONF}
+#				echo "#define MesaUse3DNow YES" >> ${HOSTCONF}
+#			else
+#				echo "#define Has3DNowSupport NO" >> ${HOSTCONF}
+#				echo "#define MesaUse3DNow NO" >> ${HOSTCONF}
+#			fi
+			use_build 3dnow Has3DNowSupport
+			use_build 3dnow MesaUse3DNow
 
-			if use sse
-			then
-				echo "#define HasKatmaiSupport YES" >> config/cf/host.def
-				echo "#define MesaUseKatmai YES" >> config/cf/host.def
-				echo "#define HasSSESupport YES" >> config/cf/host.def
-				echo "#define MesaUseSSE YES" >> config/cf/host.def
-			else
-				echo "#define HasKatmaiSupport NO" >> config/cf/host.def
-				echo "#define MesaUseKatmai NO" >> config/cf/host.def
-				echo "#define HasSSESupport NO" >> config/cf/host.def
-				echo "#define MesaUseSSE NO" >> config/cf/host.def
-			fi
-
-			# build with glide3 support? (build the tdfx_dri.o module)
-			if use 3dfx
-			then
-				echo "#define HasGlide3 YES" >> config/cf/host.def
-			fi
+#			if use sse
+#			then
+#				echo "#define HasKatmaiSupport YES" >> ${HOSTCONF}
+#				echo "#define MesaUseKatmai YES" >> ${HOSTCONF}
+#				echo "#define HasSSESupport YES" >> ${HOSTCONF}
+#				echo "#define MesaUseSSE YES" >> ${HOSTCONF}
+#			else
+#				echo "#define HasKatmaiSupport NO" >> ${HOSTCONF}
+#				echo "#define MesaUseKatmai NO" >> ${HOSTCONF}
+#				echo "#define HasSSESupport NO" >> ${HOSTCONF}
+#				echo "#define MesaUseSSE NO" >> ${HOSTCONF}
+#			fi
+			use_build sse HasKatmaiSupport
+			use_build sse MesaUseKatmai
+			use_build sse HasSSESupport
+			use_build sse MesaUseSSE
 
 			# Compile the VIA driver
-			# echo "#define XF86ExtraCardDrivers via" >> config/cf/host.def
+			# echo "#define XF86ExtraCardDrivers via" >> ${HOSTCONF}
 		fi
 
 		if use hppa
 		then
-			echo "#define DoLoadableServer NO" >> config/cf/host.def
+			echo "#define DoLoadableServer NO" >> ${HOSTCONF}
 		fi
 
 		if use alpha
 		then
 			echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \
 				i740 tdfx cirrus tseng fbdev \
-				ati vga v4l glint" >> config/cf/host.def
+				ati vga v4l glint" >> ${HOSTCONF}
 		fi
 
 		if use ppc
 		then
 			echo "#define XF86CardDrivers mga glint s3virge sis savage trident \
 				chips tdfx fbdev ati DevelDrivers vga nv imstt \
-				XF86OSCardDrivers XF86ExtraCardDrivers" >> config/cf/host.def
+				XF86OSCardDrivers XF86ExtraCardDrivers" >> ${HOSTCONF}
 		fi
 
 		if use ppc64
 		then
-			echo "#define MakeDllModules YES" >> config/cf/host.def
-			echo "#define XF86VgaHw YES" >> config/cf/host.def
-			echo "#define XF86FBDevHw YES" >> config/cf/host.def
-			echo "#define XF86CardDrivers fbdev v4l ati vga nv" >> config/cf/host.def
+			echo "#define MakeDllModules YES" >> ${HOSTCONF}
+			echo "#define XF86VgaHw YES" >> ${HOSTCONF}
+			echo "#define XF86FBDevHw YES" >> ${HOSTCONF}
+			echo "#define XF86CardDrivers fbdev v4l ati vga nv" >> ${HOSTCONF}
 		fi
 
 		if use sparc
@@ -401,15 +425,15 @@ host_def_setup() {
 			echo "#define XF86CardDrivers sunffb sunleo suncg6 suncg3 suncg14 \
 			suntcx sunbw2 glint mga tdfx ati savage vesa vga fbdev \
 			XF86OSCardDrivers XF86ExtraCardDrivers \
-			DevelDrivers" >> config/cf/host.def
+			DevelDrivers" >> ${HOSTCONF}
 		fi
 
 		# The definitions for fontconfig
-		echo "#define UseFontconfig YES" >> config/cf/host.def
-		echo "#define HasFontconfig YES" >> config/cf/host.def
+		echo "#define UseFontconfig YES" >> ${HOSTCONF}
+		echo "#define HasFontconfig YES" >> ${HOSTCONF}
 
 		# Use the xorg Xft2 lib
-		echo "#define SharedLibXft YES" >> config/cf/host.def
+		echo "#define SharedLibXft YES" >> ${HOSTCONF}
 
 		# Set up docs building
 		if use doc
@@ -420,74 +444,87 @@ host_def_setup() {
 		fi
 
 		# with USE="X doc' circular dep w/ virtual/ghostscript
-		# echo "#define HasGhostScript ${DOC}" >> config/cf/host.def
+		# echo "#define HasGhostScript ${DOC}" >> ${HOSTCONF}
 		# Caused issues, basic docs aren't installed
-		#echo "#define BuildLinuxDocText ${DOC}" >> config/cf/host.def
-		echo "#define BuildLinuxDocHtml ${DOC}" >> config/cf/host.def
-		echo "#define BuildLinuxDocPS ${DOC}" >> config/cf/host.def
-		echo "#define BuildSpecsDocs ${DOC}" >> config/cf/host.def
-		echo "#define BuildHtmlManPages ${DOC}" >> config/cf/host.def
+		#echo "#define BuildLinuxDocText ${DOC}" >> ${HOSTCONF}
+#		echo "#define BuildLinuxDocHtml ${DOC}" >> ${HOSTCONF}
+#		echo "#define BuildLinuxDocPS ${DOC}" >> ${HOSTCONF}
+#		echo "#define BuildSpecsDocs ${DOC}" >> ${HOSTCONF}
+#		echo "#define BuildHtmlManPages ${DOC}" >> ${HOSTCONF}
+		use_build doc BuildLinuxDocText
+		use_build doc BuildLinuxDocPS
+		use_build doc BuildSpecsDocs
+		use_build doc BuildHtmlManPages
 
 		# enable Japanese docs, optionally
-		if use cjk
-		then
-			echo "#define InstallJapaneseDocs ${DOC}" >> config/cf/host.def
-		fi
+#		if use cjk
+#		then
+#			echo "#define InstallJapaneseDocs ${DOC}" >> ${HOSTCONF}
+#		fi
+		use doc && use_build cjk InstallJapaneseDocs
 
 		# Native Language Support Fonts
 		if use !nls
 		then
-			echo "#define BuildCyrillicFonts NO" >> config/cf/host.def
-			echo "#define BuildArabicFonts NO" >> config/cf/host.def
-			echo "#define BuildGreekFonts NO" >> config/cf/host.def
-			echo "#define BuildHebrewFonts NO" >> config/cf/host.def
-			echo "#define BuildThaiFonts NO" >> config/cf/host.def
+			echo "#define BuildCyrillicFonts NO" >> ${HOSTCONF}
+			echo "#define BuildArabicFonts NO" >> ${HOSTCONF}
+			echo "#define BuildGreekFonts NO" >> ${HOSTCONF}
+			echo "#define BuildHebrewFonts NO" >> ${HOSTCONF}
+			echo "#define BuildThaiFonts NO" >> ${HOSTCONF}
 
 			if use !cjk
 			then
-				echo "#define BuildCIDFonts NO" >> config/cf/host.def
-				echo "#define BuildJapaneseFonts NO" >> config/cf/host.def
-				echo "#define BuildKoreanFonts NO" >> config/cf/host.def
-				echo "#define BuildChineseFonts NO" >> config/cf/host.def
+				echo "#define BuildCIDFonts NO" >> ${HOSTCONF}
+				echo "#define BuildJapaneseFonts NO" >> ${HOSTCONF}
+				echo "#define BuildKoreanFonts NO" >> ${HOSTCONF}
+				echo "#define BuildChineseFonts NO" >> ${HOSTCONF}
 			fi
 		fi
 
 		# Crappy bitmap fonts
-		if use bitmap-fonts
-		then
-			echo "#define Build75DpiFonts YES" >> config/cf/host.def
-			echo "#define Build100DpiFonts YES" >> config/cf/host.def
-		else
-			echo "#define Build75DpiFonts NO" >> config/cf/host.def
-			echo "#define Build100DpiFonts NO" >> config/cf/host.def
-		fi
+#		if use bitmap-fonts
+#		then
+#			echo "#define Build75DpiFonts YES" >> ${HOSTCONF}
+#			echo "#define Build100DpiFonts YES" >> ${HOSTCONF}
+#		else
+#			echo "#define Build75DpiFonts NO" >> ${HOSTCONF}
+#			echo "#define Build100DpiFonts NO" >> ${HOSTCONF}
+#		fi
+		use_build bitmap-fonts Build75DpiFonts
+		use_build bitmap-fonts Build100DpiFonts
 
-		if use dmx
-		then
-			echo "#define BuildDmx YES" >> config/cf/host.def
-		else
-			echo "#define BuildDmx NO" >> config/cf/host.def
-		fi
+#		if use dmx
+#		then
+#			echo "#define BuildDmx YES" >> ${HOSTCONF}
+#		else
+#			echo "#define BuildDmx NO" >> ${HOSTCONF}
+#		fi
+		use_build dmx BuildDmx
 
-		if use insecure-drivers
-		then
-			echo "#define BuildDevelDRIDrivers YES" >> config/cf/host.def
-		else
-			echo "#define BuildDevelDRIDrivers NO" >> config/cf/host.def
-		fi
+#		if use insecure-drivers
+#		then
+#			echo "#define BuildDevelDRIDrivers YES" >> ${HOSTCONF}
+#		else
+#			echo "#define BuildDevelDRIDrivers NO" >> ${HOSTCONF}
+#		fi
+		use_build insecure-drivers BuildDevelDRIDrivers
 
 		if use ipv6
 		then
-			echo "#define BuildIPv6 YES" >> config/cf/host.def
+#			echo "#define BuildIPv6 YES" >> ${HOSTCONF}
 			# In case Gentoo ever works on a system with IPv6 sockets that don't
 			# also listen on IPv4 (see config/cf/X11.tmpl)
-			echo "#define PreferXdmcpIPv6 YES" >> config/cf/host.def
-		else
-			echo "#define BuildIPv6 NO" >> config/cf/host.def
+			echo "#define PreferXdmcpIPv6 YES" >> ${HOSTCONF}
+#		else
+#			echo "#define BuildIPv6 NO" >> ${HOSTCONF}
 		fi
+		use_build ipv6 BuildIPv6
 
 		# Ajax is the man for getting this going for us
-		echo "#define ProPoliceSupport YES" >> config/cf/host.def
+		echo "#define ProPoliceSupport YES" >> ${HOSTCONF}
+
+		# Make xprint optional
+		use_build xprint BuildXprint
 
 	# End the host.def definitions here
 	eend 0
@@ -611,7 +648,12 @@ src_compile() {
 	unset MAKE_OPTS
 
 	einfo "Building xorg-x11..."
-	FAST=1 emake World WORLDOPTS="" || die
+	if use debug
+	then
+		FAST=1 makeg World WORLDOPTS="" || die
+	else
+		FAST=1 emake World WORLDOPTS="" || die
+	fi
 
 	if use nls
 	then
@@ -1006,7 +1048,7 @@ src_install() {
 	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
 
 	# Remove xterm app-defaults, since we don't install xterm
-	rm ${D}/etc/X11/app-defaults/{UXTerm,XTerm,XTerm-color}
+#	rm ${D}/etc/X11/app-defaults/{UXTerm,XTerm,XTerm-color}
 
 	# For Battoussai's gatos stuffs:
 	if use sdk
@@ -1014,6 +1056,9 @@ src_install() {
 		insinto /usr/X11R6/$(get_libdir)/Server/include
 		doins ${S}/extras/drm/shared/drm.h
 	fi
+
+	# Remove the /etc/rc.d nonsense -- not everyone is RedHat
+	rm -rf ${D}/etc/rc.d
 
 	setup_config_files
 
@@ -1108,10 +1153,10 @@ font_setup() {
 	# These cause ttmkfdir to segfault :/
 	rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.8x.enc.gz
 	rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.16.enc.gz
-	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-1.enc
-	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-2.enc
-	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-3.enc
-	rm -f ${ROOT}/usr/share/fonts/encodings/suneu-greek.enc
+#	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-1.enc
+#	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-2.enc
+#	rm -f ${ROOT}/usr/share/fonts/encodings/large/cns11643-3.enc
+#	rm -f ${ROOT}/usr/share/fonts/encodings/suneu-greek.enc
 
 	# ********************************************************************
 	#  A note about fonts and needed files:
