@@ -2,12 +2,12 @@ MD5 f7c5bdbb8f508230ac40069dd8f8f517 freetype-2.1.3-r2.ebuild 1896
 MD5 1fb7aac08d9115fcde8475ee9f013f50 freetype-2.1.4.ebuild 1431
 MD5 38819d7c997b6d20809c0e669a5c2657 freetype-2.1.4-r1.ebuild 1434
 MD5 36bf6b3a7d80d9b04e36d31557a60530 freetype-1.3.1-r3.ebuild 2728
-MD5 7144207c5ca466351b5bb26a17b0bbe4 ChangeLog 7272
+MD5 73bb7a491246e33ac1894cf101a3f5d1 ChangeLog 7399
 MD5 95e300a237cc9a05b7b15defcf49092f freetype-2.1.5.ebuild 1260
 MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
 MD5 31c46acfe9a163fae3b50345bddf1d0a freetype-2.1.5-r1.ebuild 1365
 MD5 2836289f82f929669705966482bb82cf freetype-2.1.7.ebuild 1421
-MD5 992699a88b6867ae23ceb0e6ddfbb375 freetype-1.3.1-r4.ebuild 3008
+MD5 d8972b456f06e737c04767994e99be23 freetype-1.3.1-r4.ebuild 3002
 MD5 10bd432787c1a182edece351dbf82809 files/config.mk 1240
 MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r3 136
 MD5 fbb764a61074365c9253108c9af49348 files/digest-freetype-2.1.4 132
