@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.11 2004/08/28 14:29:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.12 2004/09/01 03:40:04 tgall Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.sra.co.jp/pub/x11/${PN}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="x86 ppc sparc ~amd64 ppc64"
 IUSE="canna freewnn"
 
 DEPEND="virtual/libc
