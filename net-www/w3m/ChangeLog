@@ -1,10 +1,18 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.8 2002/08/02 18:09:09 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.9 2002/08/18 06:56:25 naz Exp $
+
+w3m-0.3-r6 (18 Aug 2002)
+
+  18 Aug 2002; Michael Nazaroff <naz@gentoo.org> w3m-0.3-r6.ebuild:
+
+  Removed the r5 ebuild, Added some fix's to ebuild to take care of bug 5905.
+  YAMAKURA Makoto sent in the patch to fix the ebuild and take care of
+  the problem <makoto@dsb.club.ne.jp>.
 
 w3m-0.3-r5 (28 Jul 2002)
 
-  28 Jul 2002; Michael Nazaroff <naz@gentoo.org.com> w3m-0.3-r5.ebuild:
+  28 Jul 2002; Michael Nazaroff <naz@gentoo.org.org> w3m-0.3-r5.ebuild:
 
   Removed some of the old dirty ebuilds since it was getting cluttered around
   here.  Keeping one old one for future reference since I still need to work on
@@ -13,7 +21,7 @@ w3m-0.3-r5 (28 Jul 2002)
 
 w3m-0.3-r5 (20 Jul 2002)
 
-  20 Jul 2002; Michael Nazaroff <naz@gentoo.org.com> w3m-0.3-r5.ebuild:
+  20 Jul 2002; Michael Nazaroff <naz@gentoo.org.org> w3m-0.3-r5.ebuild:
 
   Updated the build to allow w3m to use ANSI color escapes during
   the compile, making it inifinitely more useable.  Thanx to CJ 
