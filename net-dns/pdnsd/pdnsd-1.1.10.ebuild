@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.17 2004/07/27 13:30:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.18 2004/09/23 12:17:08 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Proxy DNS server with permanent caching"
-
 MY_P=${PN}-${PV}-par
-
+DESCRIPTION="Proxy DNS server with permanent caching"
+HOMEPAGE="http://www.phys.uu.nl/%7Erombouts/pdnsd.html http://home.t-online.de/home/Moestl"
 SRC_URI="http://www.phys.uu.nl/%7Erombouts/pdnsd/${MY_P}.tar.gz"
 
-HOMEPAGE="http://www.phys.uu.nl/%7Erombouts/pdnsd.html http://home.t-online.de/home/Moestl"
-
+LICENSE="BSD | GPL-2"
+SLOT="0"
+KEYWORDS="alpha amd64 arm ppc s390 sparc x86"
 IUSE="ipv6 debug isdn"
 
 DEPEND="virtual/libc
@@ -21,22 +21,9 @@ DEPEND="virtual/libc
 	sys-devel/gcc
 	sys-devel/automake
 	sys-devel/autoconf"
-
 RDEPEND="virtual/libc"
 
-SLOT="0"
-LICENSE="BSD | GPL-2"
-
-# Should work on  alpha arm hppa i386 ia64 m68k mips mipsel powerpc s390 sparc
-# REF http://packages.debian.org/cgi-bin/search_packages.pl?searchon=names&version=all&exact=1&keywords=pdnsd
-
-KEYWORDS="x86 ppc sparc alpha ~s390 ~amd64"
-
 S=${WORKDIR}/${PN}-${PV}
-
-
-# for debugging use
-use debug && RESTRICT="${RESTRICT} nostrip"
 
 pkg_setup() {
 	enewgroup pdnsd

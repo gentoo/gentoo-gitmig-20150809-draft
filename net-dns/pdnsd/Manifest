@@ -3,18 +3,18 @@ Hash: SHA1
 
 MD5 806a773dc85e3ab73e7ff6d6c2b0033c ChangeLog 5186
 MD5 3f2d308116c7f37afe0a9a65df2f7e6f metadata.xml 436
-MD5 f8fec9b4d1ec33e36c86d0802153638c pdnsd-1.1.11.ebuild 3634
 MD5 03528813daa0cc69b62c1195cb29b91f pdnsd-1.1.9.ebuild 2677
-MD5 e636c6c3906abc787cf15631da4566f7 pdnsd-1.1.10.ebuild 3588
+MD5 02081c8fddc1a29e756f864e85752b3b pdnsd-1.1.10.ebuild 3323
+MD5 c71b4c9da2cfbcd6ff251a912f1f8ce1 pdnsd-1.1.11.ebuild 3372
 MD5 1baae3c9299a34f6e8bebe43ca5b8883 files/digest-pdnsd-1.1.11 68
+MD5 65809ab9f525565a98ebe800edea45ab files/pdnsd.rc6 755
 MD5 2f4f436df1064eb21409e1ef613be068 files/digest-pdnsd-1.1.9 67
 MD5 27071ebe71d4f810d57d7cfbd4099788 files/pdnsd.online 452
-MD5 65809ab9f525565a98ebe800edea45ab files/pdnsd.rc6 755
 MD5 104a9136d4e55e47186ebcc1511b9f93 files/digest-pdnsd-1.1.10 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBBliImdTrptrqvGERAnCyAJ9MTQq7YoADu2f4RAEaIc2gUyXfnQCdH4Dx
-GJCmhosMrb0T/AYjpU9218g=
-=jqA6
+iD8DBQFBUr7PHTu7gpaalycRAi2NAJ4oU4vL9wRvg3m8RkCYryHnA5uHLQCfWSn0
+MS81b6tdmKyrzYtj2DYIuI4=
+=9uba
 -----END PGP SIGNATURE-----
