@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/entropy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/entropy/ChangeLog,v 1.1 2003/11/21 04:35:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/entropy/ChangeLog,v 1.2 2003/12/12 00:16:51 vapier Exp $
+
+*entropy-0.7.1.384 (11 Dec 2003)
+
+  11 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage #35052.
 
 *entropy-0.7.0.370 (20 Nov 2003)
 

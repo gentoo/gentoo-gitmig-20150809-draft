@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/entropy/entropy-0.7.0.370.ebuild,v 1.1 2003/11/21 04:35:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/entropy/entropy-0.7.1.384.ebuild,v 1.1 2003/12/12 00:16:51 vapier Exp $
 
-MY_PV=0.7.0
-MY_PV_BUILD=370
+MY_PV_BUILD=${PV/*.}
+MY_PV=${PV/.${MY_PV_BUILD}}
 DESCRIPTION="Emerging Network To Reduce Orwellian Potency Yield"
 HOMEPAGE="http://entropy.stop1984.com/"
 SRC_URI="http://entropy.stop1984.com/files/entropy-${MY_PV}-${MY_PV_BUILD}.tgz"
