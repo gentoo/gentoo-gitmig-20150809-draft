@@ -1,3 +1,7 @@
 MD5 96bacdb0285193e787921e62df59e17f ChangeLog 320
 MD5 c5afd0f8c4ae92085c4c35ea31170166 cl-jpeg-1.032.1.ebuild 713
+MD5 a851cfbd723825b43eb96dabc2db551b cl-jpeg-1.032.1-r1.ebuild 792
+MD5 c5afd0f8c4ae92085c4c35ea31170166 cl-jpeg-1.032.1-r1.ebuild~ 713
 MD5 c44d18e475cd4d25708511003e925e75 files/digest-cl-jpeg-1.032.1 71
+MD5 ac71016a17ef6e04efa9b2b06d17ca62 files/cl-jpeg-1.032.1-jpeg.lisp-gentoo.patch 491
+MD5 c44d18e475cd4d25708511003e925e75 files/digest-cl-jpeg-1.032.1-r1 71
