@@ -192,6 +192,18 @@ digest_check() {
     return 0
 }
 
+dyn_touch() {
+	echo ">>> Touching ${PF} archives..."
+	local y
+	for y in ${A}
+	do
+		if [ -e ${DISTDIR}/${y} ]
+		then
+			touch ${DISTDIR}/${y}
+		fi
+	done
+	echo
+}
 
 dyn_fetch() {
 	local y
@@ -1074,6 +1086,10 @@ dyn_help() {
 	echo "                (auto-fetch/unpack/compile if needed)"
 	echo "  unmerge     : remove package from live filesystem"
 	echo "  clean       : clean up all source and temporary files"
+	echo "  install     : install sources to temporary directory"
+	echo "              : (for testing purposes only)"
+	echo "  touch       : update all source archives\' mtime"
+	echo "                (for distfiles maintenance)"
 	echo
 	echo "The following settings will be used for the ebuild process:"
 	echo
@@ -1129,7 +1145,7 @@ src_menu() {
 	prerm|postrm|preinst|postinst)
 	    pkg_${MYfoo}
 	    ;;
-	help|clean|fetch|digest|pkginfo|pkgloc|unmerge|install)
+	help|clean|fetch|digest|pkginfo|pkgloc|unmerge|install|touch)
 	    dyn_${MYfoo}
 	    ;;
 	package)
@@ -1193,7 +1209,7 @@ fi
 setp() {
 	if [ $# -ne 3 ]
 	then
-		echo '!!!' ${P} is not a valid package name.  Exiting.
+		echo '!!!' ${EBUILDPREFIX} is not a valid package name.  Exiting.
 		exit 1
 	fi
 	if [ "${3}" = "0" ]
@@ -1221,8 +1237,8 @@ export EBUILD=${1}
 export PEBUILD=${O}/files/${PLATFORM}.ebuild
 export FILESDIR=${O}/files
 
-tmpfoo=`/usr/bin/basename ${1%.*}`
-setp `/usr/sbin/pkgname ${tmpfoo}`
+EBUILDPREFIX=`/usr/bin/basename ${1%.*}`
+setp `/usr/sbin/pkgname ${EBUILDPREFIX}`
 
 source ${1}
 if [ -e ${PEBUILD} ]
