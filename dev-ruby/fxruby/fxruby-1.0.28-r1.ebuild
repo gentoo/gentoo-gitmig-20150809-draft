@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.28.ebuild,v 1.2 2004/04/10 10:31:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.28-r1.ebuild,v 1.1 2004/04/10 10:31:27 usata Exp $
+
+inherit ruby
 
 MY_P=FXRuby-${PV}
 DESCRIPTION="Ruby language binding to the FOX GUI toolkit"
@@ -13,6 +15,7 @@ IUSE=""
 DEPEND="virtual/ruby
 	>=x11-libs/fox-1.0
 	x11-libs/fxscintilla"
+USE_RUBY="ruby16 ruby18 ruby19"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
