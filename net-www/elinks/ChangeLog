@@ -1,0 +1,9 @@
+# ChangeLog for net-www/elinks
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.1 2003/01/08 19:45:05 blizzy Exp $
+
+*elinks-0.4.1 (08 Dec 2003)
+
+  08 Dec 2003; Maik Schreiber <blizzy@gentoo.org> : Initial import (bug #13302).
+  Thanks to Maurizio Disimino <maurizio@iridium.aetheric.org> and mmc in
+  #gentoo-dev.
