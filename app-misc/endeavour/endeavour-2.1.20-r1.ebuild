@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20-r1.ebuild,v 1.5 2003/03/01 01:06:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20-r1.ebuild,v 1.6 2003/11/14 20:04:51 seemant Exp $
 
 M=endeavour2-mimetypes
 DESCRIPTION="powerful file and image browser"
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-DEPEND="sys-apps/bzip2
+DEPEND="app-arch/bzip2
 	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.14"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.3.ebuild,v 1.1 2003/10/01 09:49:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.3.ebuild,v 1.2 2003/11/14 20:04:51 seemant Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="sys-apps/bzip2
+DEPEND="app-arch/bzip2
 	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.14"
 
