@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3113 2004/08/27 22:33:27 ciaranm Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3114 2004/08/28 00:50:28 rac Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -128,12 +128,6 @@ net-misc/vino
 # PostgreSQL-8* are still beta versions for testing purposes, 
 # probably very unstable.
 =dev-db/postgresql-8*
-
-# <rac@gentoo.org> (6 Aug 2004)
-# safe instead of sorry, as i won't be around in case something
-# catches fire
->=sys-devel/libperl-5.8.5
->=dev-lang/perl-5.8.5
 
 # <mkennedy@gentoo.org> (8 Aug 2004)
 # won't build for now
