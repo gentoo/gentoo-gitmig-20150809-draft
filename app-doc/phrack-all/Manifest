@@ -1,4 +1,14 @@
-MD5 8bb6e65bd1ea8643731ccd4c49987559 ChangeLog 366
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 85651eefa354448d905866ba4f02b0b2 ChangeLog 334
 MD5 d214fc2699e860d2fe3cb2d4976374b8 metadata.xml 579
-MD5 b422d53de5e4662d90c0c926bd434341 phrack-all-61.ebuild 1690
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-phrack-all-61 0
+MD5 2123cbd475a1efb630d45cb7a3022a7c phrack-all-62.ebuild 1708
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-phrack-all-62 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA9JFsHTu7gpaalycRArc0AJ9hUisfqIpSqHjbRsNv9A+QNsMLRgCdEIx+
+9a+AjhSEyG4saN2niInpo94=
+=MSSJ
+-----END PGP SIGNATURE-----
