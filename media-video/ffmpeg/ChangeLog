@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.22 2003/10/18 19:30:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.23 2003/11/22 03:30:10 lu_zero Exp $
+
+  22 Nov 2003; Luca Barbato <lu_zero@gentoo.org> ffmpeg-0.4.8.ebuild:
+  altivec related fix, thanks to Olivier <ocastan@noos.fr> for the report
+  and the patch
 
 *ffmpeg-0.4.8 (18 Oct 2003)
 

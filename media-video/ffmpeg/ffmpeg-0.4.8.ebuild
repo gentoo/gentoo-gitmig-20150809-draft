@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.1 2003/10/18 19:30:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.2 2003/11/22 03:30:10 lu_zero Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Complete solution to record, convert and stream audio and video. In
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://ffmpeg.sourceforge.net/"
 
-IUSE="mmx encode oggvorbis doc faad dvd static sdl imlib truetype"
+IUSE="mmx altivec encode oggvorbis doc faad dvd static sdl imlib truetype"
 
 inherit flag-o-matic
 filter-flags "-fforce-addr -fPIC"
@@ -51,6 +51,7 @@ src_compile() {
 	use static || myconf="${myconf} --enable-shared"
 	use sdl || myconf="${myconf} --disable-ffplay"
 	use debug || myconf="${myconf} --disable-debug"
+	use altivec || myconf="${myconf} --disable-altivec"
 
 	./configure ${myconf} \
 		--prefix=/usr || die "./configure failed."
