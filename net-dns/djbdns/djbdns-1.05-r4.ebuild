@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r4.ebuild,v 1.1 2002/10/18 07:54:16 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r4.ebuild,v 1.2 2002/10/19 19:38:39 jhhudso Exp $
 
 IUSE="ipv6"
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz ipv6? http://www.fefe.de/dns/djbdns-
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="~x86 ~sparc ~sparc64"
 SLOT="0"
 
 DEPEND="virtual/glibc"
