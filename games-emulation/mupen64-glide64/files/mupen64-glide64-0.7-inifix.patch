@@ -1,0 +1,71 @@
+--- glide64_0_7_ME/Ini.cpp.old	2005-01-07 15:50:22.232410116 -0800
++++ glide64_0_7_ME/Ini.cpp	2005-01-07 15:58:03.491450616 -0800
+@@ -49,37 +49,42 @@
+ #include <stdlib.h>
+ #endif // _WIN32
+ 
++#include <features.h>
++#include <dlfcn.h>
++#include <errno.h>
++#include <limits.h>
++
+ BOOL INI_Open ()
+ {
+ 	// Get the path of the dll, ex: C:\Games\Project64\Plugin\Glide64.dll
+-	char path[256];
+-#ifdef _WIN32
+-	GetModuleFileName (hInstance, path, 256);
+-#else // _WIN32
+-   int n = readlink("/proc/self/exe", path, 256);
+-   if (n == -1) strcpy(path, "./");
+-#endif // _WIN32
+-
+-	// Find the previous backslash
+-	int i;
+-	for (i=strlen(path)-1; i>0; i--)
++	char path[PATH_MAX];
++   
++	
++#ifdef __USE_GNU
++	Dl_info info;
++	void *addr = (void *)INI_Open;
++	//__asm__( "movl %%eip, %%eax" : "=a"(addr) );
++	if (dladdr( addr, &info ) != 0)
+ 	{
+-#ifdef _WIN32
+-		if (path[i] == '\\')
+-#else // _WIN32
+-	        if (path[i] == '/')
+-#endif // _WIN32
+-			break;
++		strncpy( path, info.dli_fname, PATH_MAX );
++		*(strrchr( path, '/' )) = '\0';
+ 	}
+-	if (path == 0) return FALSE;
+-	path[i+1] = 0;
+-
+-#ifndef _WIN32
+-   strcat(path, "plugins/");
+-#endif // _WIN32
+-   
+-	strcat (path, "Glide64.ini");
+-   
++	else
++	{
++		fprintf( stderr, "(WW) Couldn't get path of .so, trying to get emulator's path\n" );
++#endif // __USE_GNU
++		if (readlink( "/proc/self/exe", path, PATH_MAX ) == -1)
++		{
++			fprintf( stderr, "(WW) readlink() /proc/self/exe failed: %s\n", strerror( errno ) );
++			path[0] = '.';
++			path[1] = '\0';
++		}
++		*(strrchr( path, '/' )) = '\0';
++		strncat( path, "/plugins", PATH_MAX );
++#ifdef __USE_GNU
++	}
++#endif
++	strncat( path, "/Glide64.ini", PATH_MAX );
+ 	// Open the file
+         ini = fopen (path, "r+b");
+ 	if (ini == NULL)
