@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.36.0.ebuild,v 1.3 2005/01/01 10:55:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.36.0.ebuild,v 1.4 2005/03/15 19:49:12 ciaranm Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="readline tcpd gnome mysql sqlite X static postgres wxwindows"
 #mysql is the reccomended choice ...
 #may need sys-libs/libtermcap-compat but try without first
 DEPEND=">=sys-libs/zlib-1.1.4
-	sys-apps/mtx
+	sys-block/mtx
 	readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	gnome? ( gnome-base/libgnome )
@@ -30,7 +30,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	virtual/mta
 	dev-libs/gmp"
 RDEPEND="${DEPEND}
-	sys-apps/mtx
+	sys-block/mtx
 	app-arch/mt-st"
 
 src_compile() {

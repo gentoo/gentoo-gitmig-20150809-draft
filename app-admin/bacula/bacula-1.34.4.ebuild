@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.4.ebuild,v 1.10 2005/01/01 10:55:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.4.ebuild,v 1.11 2005/03/15 19:49:12 ciaranm Exp $
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
@@ -24,7 +24,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	virtual/mta
 	dev-libs/gmp"
 RDEPEND="${DEPEND}
-	sys-apps/mtx
+	sys-block/mtx
 	app-arch/mt-st"
 
 src_compile() {

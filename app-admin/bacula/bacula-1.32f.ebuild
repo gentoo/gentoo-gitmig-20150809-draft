@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.15 2005/01/09 10:39:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.16 2005/03/15 19:49:12 ciaranm Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	virtual/mta
 	dev-libs/gmp"
 RDEPEND="${DEPEND}
-	sys-apps/mtx
+	sys-block/mtx
 	app-arch/mt-st"
 
 src_unpack() {
