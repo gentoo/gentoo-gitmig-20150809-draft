@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.5 2003/09/06 22:04:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.6 2003/11/03 05:49:32 stkn Exp $
+
+inherit eutils
 
 IUSE="ssl"
 
@@ -41,6 +43,10 @@ src_unpack() {
 	unpack ${A}
 	# enabling ffmpeg/h263 support
 	cd ${S}; sed -i -e "s:/usr/local/include/ffmpeg:/usr/include/ffmpeg:" configure
+
+	# change search order of include files
+	# fixes bug #32522
+	epatch ${FILESDIR}/openh323-${PV}-include-order.diff
 }
 
 src_compile() {
