@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r3.ebuild,v 1.6 2001/11/24 18:40:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r3.ebuild,v 1.7 2001/12/09 00:03:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux console display libarary"
@@ -34,8 +34,6 @@ src_install() {
 	mv libform* libmenu* libpanel* ../usr/lib
 	mv *.a ../usr/lib
 
-	# A link required for openafs to build
-	dosym /lib/libncurses.so.5.2 /usr/lib/libncurses.so
 	#with this fix, the default xterm has color as it should
 	cd ${D}/usr/share/terminfo/x
 	mv xterm xterm.orig
@@ -53,7 +51,10 @@ src_install() {
 		cp -a ${T}/nxterm x/xterm
 		cp -a ${T}/vt100 v
 		cd ${D}/usr/lib
-		rm *.a
+		#bash compilation requires static libncurses libraries, so
+		#this breaks the "build a new build image" system.  We now
+		#need to remove libncurses.a from the build image manually.	
+		#rm *.a
 	else
 		cd ${S}
 		dodoc ANNOUNCE MANIFEST NEWS README* TO-DO
