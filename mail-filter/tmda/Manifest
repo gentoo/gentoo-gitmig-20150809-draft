@@ -1,6 +1,18 @@
-MD5 363eeefd3e58cb5bc0af091fff6c7ffa tmda-0.92.ebuild 1561
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 620ce6d22e12cf661cd8e99cffe21b3a ChangeLog 6586
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 82b75fa42b425907f9bff0c1715f7cd1 tmda-1.0.ebuild 1565
-MD5 cbcc9bfd3e9e00298f2cd22a265893a9 ChangeLog 6303
-MD5 4ba4a6d08c451e52eeb86ac25ac0cb6d metadata.xml 253
-MD5 7bb9e7641e04129bd8f857fb7feb59e3 files/digest-tmda-0.92 58
+MD5 363eeefd3e58cb5bc0af091fff6c7ffa tmda-0.92.ebuild 1561
+MD5 83f22c2f82bb5aae49826aec91e28dc8 tmda-1.0.3.ebuild 1597
 MD5 5953212bfef29b28dc63d4602b7fb9fc files/digest-tmda-1.0 57
+MD5 7bb9e7641e04129bd8f857fb7feb59e3 files/digest-tmda-0.92 58
+MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBN7E710xuJSrg3/sRAsDqAJ9ENQZCZIBoqcL1W/dddpX1CneKfwCdGwfo
+KrAuCkbVMbr1u2YdFbVWMJ0=
+=gKDU
+-----END PGP SIGNATURE-----

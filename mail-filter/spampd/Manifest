@@ -1,7 +1,18 @@
-MD5 f3ad4878a12fd76b683f49a0dbf9e779 spampd-2.11-r1.ebuild 830
-MD5 c5d2ad96f00d051690ae3a7d262efc3b ChangeLog 1143
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a37082dafc8c980d307a73551197a641 spampd-2.11.ebuild 822
+MD5 5e29310b34becc4f38e2cba468636230 ChangeLog 1241
+MD5 f3ad4878a12fd76b683f49a0dbf9e779 spampd-2.11-r1.ebuild 830
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 8dc3caf9e82a80473c41b5d1e64bbbd5 files/conf 665
-MD5 317746bcb3bec06d91831725b77ab0c9 files/init 632
 MD5 17b3ddc9a6650576cdaddbc62052fe0b files/digest-spampd-2.11 62
+MD5 317746bcb3bec06d91831725b77ab0c9 files/init 632
 MD5 17b3ddc9a6650576cdaddbc62052fe0b files/digest-spampd-2.11-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBN7It10xuJSrg3/sRAi0nAJ9lDHT+hDQ/MHvpvhWCd0wXkxu0SACePfZx
+auR8YJLJcLIf1VaWFRbKPoY=
+=z1Ej
+-----END PGP SIGNATURE-----
