@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.18 2003/05/17 02:33:34 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.19 2003/06/16 18:37:01 solar Exp $
+
+*gradm-1.9.10 (16 Jun 2003)
+
+  16 Jun 2003; <solar@gentoo.org> Manifest, gradm-1.5a.ebuild,
+  gradm-1.5a.ebuild, gradm-1.6.ebuild, gradm-1.6.ebuild, gradm-1.7b.ebuild,
+  gradm-1.7b.ebuild, gradm-1.9.10.ebuild, files/gradm-1.5a-chpax.c,
+  files/gradm-1.6-chpax.c, files/gradm-1.7b-chpax.c, files/gradm-chpax.c,
+  files/grsecurity, files/grsecurity.rc:
+  version bump, removed old versions of gradm from portage and old chpax stuff
+  in files, started the proccess of unmasking gradm for other arches added ~ppc
+  ~sparc as these are known to work
 
 *gradm-1.9.9h-r1 (16 May 2003)
 
