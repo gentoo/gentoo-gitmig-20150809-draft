@@ -1,0 +1,9 @@
+USE="mips berkdb ncurses python readline zlib uclibc"
+GRP_STAGE23_USE="mips berkdb ncurses python readline zlib uclibc"
+
+ARCH="mips"
+COMPILER="gcc3"
+ACCEPT_KEYWORDS="mips"
+
+FEATURES="sandbox sfperms strict"
+#FEATURES="sandbox sfperms strict userpriv usersandbox"
