@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.12 2004/06/24 22:05:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.13 2004/06/25 09:06:17 mr_bones_ Exp $
 
 inherit perl-module games
 
@@ -27,13 +27,15 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e 's:INSTALLDIRS=.*:PREFIX=${D}/usr:' \
 		c_stuff/Makefile \
 		|| die 'sed c_stuff/Makefile failed'
-	cd ${WORKDIR}/${NET_SERVER_P}
-	sed -i '/^dnl AM_CONFIG_HEADER/s:dnl ::' configure.in
+	cd "${WORKDIR}/${NET_SERVER_P}"
+	sed -i \
+		-e '/^dnl AM_CONFIG_HEADER/s:dnl ::' configure.in \
+		|| die "sed configure.in failed"
 	env WANT_AUTOCONF=2.5 ./bootstrap.sh || die "bootstrap failed"
 	echo '#include "config.h"' >> fb_serv.h
 }
@@ -42,40 +44,40 @@ src_compile() {
 	make \
 		OPTIMIZE="${CFLAGS}" \
 		PREFIX=/usr \
-		BINDIR=${GAMES_BINDIR} \
-		DATADIR=${GAMES_DATADIR} \
+		BINDIR="${GAMES_BINDIR}" \
+		DATADIR="${GAMES_DATADIR}" \
 		MANDIR=/usr/share/man \
 		|| die "make game failed"
 
-	cd ${WORKDIR}/${NET_SERVER_P}
+	cd "${WORKDIR}/${NET_SERVER_P}"
 	egamesconf || die
 	make || die "make server failed"
 }
 
 src_install() {
 	make \
-		PREFIX=${D}/usr \
-		BINDIR=${D}/${GAMES_BINDIR} \
-		DATADIR=${D}/${GAMES_DATADIR} \
-		MANDIR=${D}/usr/share/man \
+		PREFIX="${D}/usr" \
+		BINDIR="${D}/${GAMES_BINDIR}" \
+		DATADIR="${D}/${GAMES_DATADIR}" \
+		MANDIR="${D}/usr/share/man" \
 		install \
 		|| die "make install failed"
 	dosed /usr/games/bin/frozen-bubble
 	dodoc AUTHORS CHANGES README
 
-	cd ${WORKDIR}/${NET_CLIENT_P}
+	cd "${WORKDIR}/${NET_CLIENT_P}"
 	make \
-		PREFIX=${D}/usr \
-		BINDIR=${D}/${GAMES_BINDIR} \
-		DATADIR=${D}/${GAMES_DATADIR} \
-		MANDIR=${D}/usr/share/man \
+		PREFIX="${D}/usr" \
+		BINDIR="${D}/${GAMES_BINDIR}" \
+		DATADIR="${D}/${GAMES_DATADIR}" \
+		MANDIR="${D}/usr/share/man" \
 		install \
 		|| die "make install client failed"
 
-	cd ${WORKDIR}/${NET_SERVER_P}
+	cd "${WORKDIR}/${NET_SERVER_P}"
 	make \
-		DESTDIR=${D} \
-		sbindir=${GAMES_BINDIR} \
+		DESTDIR="${D}" \
+		sbindir="${GAMES_BINDIR}" \
 		install \
 		|| die "make install server failed"
 	dodoc TODO
