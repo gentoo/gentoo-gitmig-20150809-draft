@@ -1,2 +1,5 @@
 ARCH="sh"
 ACCEPT_KEYWORDS="sh"
+
+GRP_STAGE23_USE="berkdb ncurses readline zlib uclibc"
+STAGE1_USE="uclibc"

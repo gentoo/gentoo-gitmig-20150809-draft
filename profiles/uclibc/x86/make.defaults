@@ -1,2 +1,5 @@
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
+
+GRP_STAGE23_USE="berkdb ncurses readline zlib uclibc"
+STAGE1_USE="uclibc"
