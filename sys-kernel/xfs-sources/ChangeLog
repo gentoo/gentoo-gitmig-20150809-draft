@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.12 2003/01/06 04:20:16 viz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.13 2003/01/12 06:43:06 lostlogic Exp $
+
+*xfs-sources-2.4.20_pre4 (10 Jan 2003)
+
+  10 Jan 2003; Bob Johnson <livewire_@ameritech.net>:
+  This is the first patchset under new management.  Thanks to viz
+  for getting us up to _pre3.
+
+  Committed by lostlogic ;-)
+
+  Changes from _pre3
+  * Move to new IDE core.
+  * 3c509 Fix
+  * ext3-data-journal-fix
+  * aic7xx drivers fix
+  * Drop supermount incompatible with new IDE
+
+  Ebuild changes:
+  * Snag bits from lolo-sources to talk about what goes on
+    in the unpack stage.
 
 *xfs-sources-2.4.20_pre3 (6 Jan 2003)
 
