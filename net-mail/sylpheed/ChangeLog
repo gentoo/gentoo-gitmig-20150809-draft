@@ -1,11 +1,15 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.31 2003/03/28 14:41:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.32 2003/05/16 19:13:54 bcowan Exp $
+
+*sylpheed-0.9.0 (16 May 2003)
+
+  16 May 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-0.9.0.ebuild,
+  files/digest-sylpheed-0.9.0 :
+  
+  Version bump.
 
 *sylpheed-0.8.11 (12 Mar 2003)
-
-  28 Mar 2003; Jason Wever <weeve@gentoo.org> sylpheed-0.8.11.ebuild:
-  Added ~sparc to keywords.
 
   12 Mar 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-0.8.11.ebuild,
   files/digest-sylpheed-0.8.11 :
