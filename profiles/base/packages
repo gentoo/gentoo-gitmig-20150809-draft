@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.24 2004/11/24 04:07:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.25 2004/11/24 04:37:27 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -50,7 +50,6 @@
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/net-tools
-*sys-apps/pam-login
 *>=sys-apps/portage-2.0.51
 *sys-apps/procps
 *sys-apps/psmisc
@@ -75,7 +74,6 @@
 *sys-libs/cracklib
 *sys-libs/db
 *sys-libs/ncurses
-*sys-libs/pam
 *sys-libs/readline
 *sys-libs/zlib
 *virtual/dev-manager
