@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31.ebuild,v 1.2 2004/06/05 14:23:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31.ebuild,v 1.3 2004/06/15 23:15:15 eradicator Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
