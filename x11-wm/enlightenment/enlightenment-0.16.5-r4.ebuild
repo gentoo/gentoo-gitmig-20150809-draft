@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.1 2002/03/20 02:34:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.2 2002/03/20 02:38:54 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enlightenment Window Manager"
@@ -32,6 +32,9 @@ src_compile() {
 src_install() {
 	mv man/Makefile man/Makefile_orig
 	sed -e "s:\(DESTDIR\ =\):\1\ ${D}:" man/Makefile_orig > man/Makefile
+
+	# this fixes an issue where enlightenment.install has an incomplete
+	# path to the englightenment binary
 	mv scripts/${PN}.install scripts/${PN}.install.orig
 	sed 's:\(EBIN=\).*:\1\"/usr/bin\":' \
 		scripts/${PN}.install.orig > scripts/${PN}.install
