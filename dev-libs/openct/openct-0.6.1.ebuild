@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.1.ebuild,v 1.1 2004/08/31 22:08:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.1.ebuild,v 1.2 2004/10/12 01:34:53 vapier Exp $
 
 inherit eutils
 
@@ -20,13 +20,13 @@ RDEPEND="virtual/libc
 
 S=${WORKDIR}/${MY_P}
 
+pkg_setup() {
+	enewgroup openct
+}
+
 src_compile() {
 	econf --localstatedir=/var || die
 	emake || die
-}
-
-pkg_preinst() {
-	enewgroup openct
 }
 
 src_install() {
