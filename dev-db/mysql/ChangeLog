@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.87 2004/02/24 20:10:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.88 2004/02/25 22:16:49 gmsoft Exp $
+
+  25 Feb 2004; root <root@gentoo.org> mysql-4.0.17.ebuild:
+  Marked stable on hppa.
 
   24 Feb 2004; Martin Holzer <mholzer@gentoo.org> mysql-4.0.17.ebuild:
   x86 stable

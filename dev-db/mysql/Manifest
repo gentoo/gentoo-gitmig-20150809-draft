@@ -1,4 +1,4 @@
-MD5 f3710d9b68cead92e6586b12ab26e1df ChangeLog 14235
+MD5 de08728b86d3d87024a63a8fe1f7dc8e ChangeLog 14319
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
 MD5 c8b57d37000785a37441b27fefd03c35 mysql-3.23.52-r1.ebuild 5876
 MD5 96dc01f2dcf5a185e20eb506f667f672 mysql-3.23.56.ebuild 6551
@@ -12,7 +12,7 @@ MD5 9d6dd8be0b427c6b1aa9837f48317e8d mysql-4.0.14.ebuild 6929
 MD5 bceb9095986ccbb43ed062edeaa17e38 mysql-4.0.15-r1.ebuild 7704
 MD5 03a12ed95cc30f9ec11848510c036237 mysql-4.0.15.ebuild 7586
 MD5 2c115b20f3b17de258d922df05e3a86e mysql-4.0.16.ebuild 7528
-MD5 f74db2312d7b49c1448fa468d8542b7b mysql-4.0.17.ebuild 7981
+MD5 a2a24fa6be223cb2d7af33175d383879 mysql-4.0.17.ebuild 7979
 MD5 015a823e06d7181373b0601e4a17c284 files/digest-mysql-3.23.52-r1 67
 MD5 296a01da527263926d20aca0446bc87d files/digest-mysql-3.23.56 67
 MD5 dcd899fe185459da4cb9e71c75c3bda3 files/digest-mysql-3.23.57 67
@@ -50,6 +50,6 @@ MD5 fc80f877fa97f0f3a52ee684ce7f54b2 files/mysql-4.0.16-mysqld-safe-sh.diff 1562
 MD5 9b5ad94f6e99e65bc3373c9dd15dff08 files/mysql-4.0.17-thrssl.patch 637
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
 MD5 707d18c98dd9d86533b53330a2daadd2 files/mysql-4.0.rc6 951
+MD5 6f8de46485ea7dcf886e1747fb117427 files/mysql-gentoo-nptl.diff 654
 MD5 b959fc15281a858c87b587033a432334 files/mysql.init 893
 MD5 7d92ba9c74a73bf3c852a5c078c16d29 files/rebuilder.sh 1557
-MD5 6f8de46485ea7dcf886e1747fb117427 files/mysql-gentoo-nptl.diff 654
