@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimxcf/iiimxcf-11.4.1467.ebuild,v 1.1 2003/09/14 00:41:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimxcf/iiimxcf-11.4.1467.ebuild,v 1.2 2003/09/14 01:53:51 usata Exp $
 
 inherit iiimf
 
 DESCRIPTION="IIIMXCF is an X client framework for IIIMF"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 -alpha"
 
 DEPEND="dev-libs/libiiimp
 	dev-libs/libiiimcf"
