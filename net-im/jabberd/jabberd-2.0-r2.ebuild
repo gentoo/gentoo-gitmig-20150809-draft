@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.8 2004/07/03 18:54:29 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0-r2.ebuild,v 1.1 2004/11/24 10:33:23 humpback Exp $
 
 inherit eutils
 
-MY_PV="2.0s2"
+MY_PV="2.0s4"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="Open Source Jabber Server"
@@ -13,11 +13,12 @@ SRC_URI="http://www.jabberstudio.org/files/jabberd2/${PN}-${MY_PV}.tar.gz"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="ldap ipv6 mysql postgres pam berkdb ssl"
 
 DEPEND="!net-im/jabber-server
 	>=dev-libs/openssl-0.9.6i
+	>=net-dns/libidn-0.3.5
 	ldap? ( >=net-nds/openldap-2.1 )
 	berkdb? ( >=sys-libs/db-4.1.25 )
 	mysql? ( dev-db/mysql )
@@ -36,31 +37,27 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${PN}-${MY_PV}.tar.gz
-	cd ${S}/sx
-	epatch ${FILESDIR}/xml-stream-patch-00
+	cd ${WORKDIR}/${PN}-${MY_PV}
+	epatch ${FILESDIR}/patch-c2s-buffers
 }
 
 src_compile() {
-	storage="fs"
-	authreg="anon"
+	enables="--enable-fs"
 
 	if use berkdb; then
-		storage="${storage} db"
-		authreg="${authreg} db"
+		enables="${enables} --enable-db"
 	fi
 	if use mysql; then
-		storage="${storage} mysql"
-		authreg="${authreg} mysql"
+		enables="${enables} --enable-mysql"
 	fi
 	if use postgres; then
-		storage="${myconf} pgsql"
-		authreg="${authreg} pgsql"
+		enables="${enables} --enable-pgsql"
 	fi
 	if use pam; then
-		authreg="${authreg} pam"
+		enables="${enables} --enable-pam"
 	fi
 	if use ldap; then
-		authreg="${authreg} ldap"
+		enables="${enables} --enable-ldap"
 	fi
 
 	if use ipv6; then
@@ -76,8 +73,6 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--enable-debug \
-		--enable-storage="${storage}" \
-		--enable-authreg="${authreg}" \
 		${enables} || die
 	make || die
 
@@ -104,6 +99,7 @@ src_install() {
 
 	docinto tools ; dodoc tools/db-setup.mysql tools/db-setup.pgsql tools/migrate.pl tools/pipe-auth.pl
 
+	#Must change this, enewgroup/enewuser are supposed to do chek stuff
 	local test_group=`grep ^jabber: /etc/group | cut -d: -f1`
 	if [ -z $test_group ]
 	then
