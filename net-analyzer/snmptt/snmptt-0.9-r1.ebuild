@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/snmptt-0.9-r1.ebuild,v 1.4 2005/01/13 03:03:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/snmptt-0.9-r1.ebuild,v 1.5 2005/01/31 14:35:26 ka0ttic Exp $
 
 MY_P=${P/-/_}
 
