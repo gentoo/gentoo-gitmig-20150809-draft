@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.9.ebuild,v 1.1 2004/08/30 16:28:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.0.0.ebuild,v 1.1 2004/09/07 13:42:41 usata Exp $
 
 inherit gnome2 eutils
 
@@ -11,17 +11,16 @@ SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~amd64"
-IUSE="gnome"
-#IUSE="gnome gtk"
+IUSE="gnome gtk"
 
 RDEPEND="virtual/x11
 	gnome? ( >=gnome-base/gconf-1.2
 		>=dev-libs/libxml2-2.5
 		>=gnome-base/orbit-2.8 )
-	>=x11-libs/gtk+-2
-	>=dev-libs/atk-1
-	>=x11-libs/pango-1
-	>=dev-libs/glib-2
+	gtk? ( >=x11-libs/gtk+-2
+		>=dev-libs/atk-1
+		>=x11-libs/pango-1
+		>=dev-libs/glib-2 )
 	!app-i18n/scim-cvs
 	!<app-i18n/scim-chinese-0.4.0"
 DEPEND="${RDEPEND}
@@ -36,15 +35,18 @@ ELTCONF="--reverse-deps"
 SCROLLKEEPER_UPDATE="0"
 USE_DESTDIR="1"
 
+has_gtk() {
+	if has_version '>=x11-libs/gtk-2' ; then
+		true
+	else
+		false
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	# use scim gtk2 IM module only for chinese/japanese/korean
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-0.6.1-gtk2immodule.patch
-
-	# gtk USE flag
-	cd ${S}
-	#epatch ${FILESDIR}/${PN}-gtk-utils-gentoo.diff
-	./bootstrap || die "bootstrap failed"
 
 	# workaround for problematic makefile
 	sed -i -e "s:^\(scim.*LDFLAGS.*\):\1 -ldl:g" \
@@ -60,7 +62,8 @@ src_unpack() {
 
 src_compile() {
 	use gnome || G2CONF="${G2CONF} --disable-config-gconf"
-	#use gtk || G2CONF="${G2CONF} --disable-gtk2-immodule --disable-frontend-x11 --disable-setup-ui"
+	use gtk || G2CONF="${G2CONF} --disable-panel-gtk --disable-setup-ui"
+	has_gtk || G2CONF="${G2CONF} --disable-gtk2-immodule"
 	gnome2_src_compile
 }
 
@@ -93,12 +96,10 @@ pkg_postinst() {
 	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
 
-	#use gtk && gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
-	gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
+	has_gtk && gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
 }
 
 pkg_postrm() {
 
-	#use gtk && gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
-	gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
+	has_gtk && gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
 }
