@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.rc6,v 1.10 2003/06/01 05:22:40 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.rc6,v 1.11 2003/06/29 18:03:00 mholzer Exp $
 
 opts="start stop reload restart"
 
@@ -22,10 +22,10 @@ checkconfig() {
 	fi
 
 	if [ $CHROOT -a -d $CHROOT ] ; then
-		PIDFILE="${CHROOT}/var/run/named.pid"
+		PIDFILE="${CHROOT}/var/run/named/named.pid"
 		KEY="${CHROOT}/etc/bind/rndc.key"
 	else
-		PIDFILE="/var/run/named.pid"
+		PIDFILE="/var/run/named/named.pid"
 		KEY="/etc/bind/rndc.key"
 	fi
 }
