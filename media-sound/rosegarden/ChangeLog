@@ -1,12 +1,14 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.3 2003/05/13 11:29:33 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.4 2003/05/16 13:20:58 lordvan Exp $
 
 *rosegarden-4.0.9 (13 May 2003)
 
   13 May 2003; jje <jje@gentoo.org> rosegarden-4.0.9.ebuild:
   Version bump. Updated depends. Fixed ${P}.
-
+  16 May 2003; Thomas Raschbacher <lordvan@gentoo.org> rosegarden-4.0.9.ebuild:
+  just added IUSE=""
+	
 *rosegarden-4.0.8.5 (01 Mar 2003)
 
   26 Mar 2003; Graham Forest <vladimir@gentoo.org> rosegarden-4.0.8.5.ebuild:
