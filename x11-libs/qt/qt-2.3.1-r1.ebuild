@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.1.ebuild,v 1.4 2002/02/10 17:52:41 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.1-r1.ebuild,v 1.1 2002/03/24 22:48:37 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="QT ${PV}, an X11 widget set and general library used by KDE et al"
@@ -83,7 +83,7 @@ src_install() {
 
     # misc
     insinto /etc/env.d
-    doins ${FILESDIR}/50qt2
+    doins ${FILESDIR}/{50qt2,45qtdir2}
 
 }
 
