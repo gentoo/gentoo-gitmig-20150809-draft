@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65.ebuild,v 1.3 2004/12/30 22:35:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65-r1.ebuild,v 1.1 2005/01/03 02:48:48 vapier Exp $
 
 inherit games eutils
 
@@ -52,7 +52,7 @@ src_unpack() {
 	cd ${S}
 	rm -rf override/*
 	# the following is so ugly, please pretend it doesnt exist
-	local Aarray=(${A})
+	declare -a Aarray=(${A})
 	unpack ${Aarray[1]}
 	unpack ${Aarray[2]}
 }
