@@ -10,6 +10,7 @@ SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${P}.tar.gz"
 HOMEPAGE="http://www.latex2html.org"
 
 DEPEND="virtual/glibc"
+KEYWORDS="x86 ppc"
 
 RDEPEND="app-text/ghostscript
 	app-text/tetex

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.3 2002/07/16 04:01:26 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Revision Control System"
@@ -10,7 +10,8 @@ HOMEPAGE="http://www.gnu.org/software/rcs/"
 DEPEND="virtual/glibc"
 
 RDEPEND="sys-apps/diffutils"
-	
+
+KEYWORDS="x86 ppc"
 
 src_compile() {
 

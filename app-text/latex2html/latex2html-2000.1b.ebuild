@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2000.1b.ebuild,v 1.4 2002/04/27 09:22:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2000.1b.ebuild,v 1.5 2002/07/16 03:57:21 owen Exp $
 
 #darn weird naming...
 MY_P=${PN}-2K.1beta
@@ -11,7 +11,7 @@ SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${MY_P}.tar.gz"
 HOMEPAGE="http://www.latex2html.org"
 
 DEPEND="virtual/glibc"
-
+KEYWORDS="x86 ppc"
 RDEPEND="sys-devel/perl
 	app-text/ghostscript
 	media-libs/netpbm
