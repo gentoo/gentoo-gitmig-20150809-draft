@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.7-r1.ebuild,v 1.5 2005/03/13 00:32:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.7-r1.ebuild,v 1.6 2005/03/20 18:29:36 weeve Exp $
+
+inherit eutils
 
 DESCRIPTION="Desktop Organizer Software for the Palm Pilot"
 HOMEPAGE="http://jpilot.org/"
@@ -8,7 +10,7 @@ SRC_URI="http://jpilot.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
 IUSE="nls gtk2"
 
 RDEPEND="gtk2? ( >=x11-libs/gtk+-2 )
