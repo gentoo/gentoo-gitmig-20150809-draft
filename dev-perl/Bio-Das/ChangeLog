@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Bio-Das
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.1 2004/01/09 21:27:06 sediener Exp $
+
+*Bio-Das-0.93 (09 Jan 2004)
+
+  09 Jan 2004; Stephen Diener <sediener@gentoo.org> Bio-Das-0.93.ebuild:
+  initial commit -- required by generic-genome-browser
+
