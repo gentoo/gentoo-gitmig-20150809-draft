@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.16 2002/09/28 14:54:07 karltk Exp $
-ID='$Id: qpkg,v 1.16 2002/09/28 14:54:07 karltk Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.17 2002/10/31 22:26:34 lostlogic Exp $
+ID='$Id: qpkg,v 1.17 2002/10/31 22:26:34 lostlogic Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -195,7 +195,11 @@ ${YL}*${NO} The operation of some flags has been changed by the
 ${YL}*${NO} When using${BL} -f${NO} with ${BL}-l${NO} or ${BL}--check.. -v${NO} options, only
   matching files will be displayed, unless ${BL}-v${NO} is doubled, 
   (yet more verbose) or ${BL}-vv${NO} is used.
-
+${YL}*${NO} When using${BL} -q${NO}, it is important to note that the querying of deps is NOT
+  a complete check, because qpkg is not advanced enough (nor can it reasonably
+  made so) to check complete deps with versions.  Please use ${GR}depclean${NO} or
+  ${GR}emerge --dep-clean${NO} to more completely check the dependency sanity of your
+  system.
 
 ${YL}Examples${NO}:
   ${PROG} --dups		print duplicates oldest first
