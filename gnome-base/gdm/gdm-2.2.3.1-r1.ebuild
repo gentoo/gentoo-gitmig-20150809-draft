@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.3.1.ebuild,v 1.5 2001/07/30 17:13:20 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.3.1-r1.ebuild,v 1.1 2001/07/30 17:13:20 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -28,7 +28,7 @@ src_unpack() {
 
 src_compile() {                           
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--sysconfdir=/etc/X11 --localstatedir=/var/lib --with-pam-prefix=/usr
+	--sysconfdir=/etc/X11 --localstatedir=/var/lib --with-pam-prefix=/etc
 
   try pmake
 }

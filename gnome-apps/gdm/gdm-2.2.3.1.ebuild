@@ -1,6 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Joerg Krause <joerg@epost.de>
+# Author Mikael Hallendal <hallski@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gdm/gdm-2.2.3.1.ebuild,v 1.5 2001/07/30 17:13:20 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
