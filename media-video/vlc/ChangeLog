@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.26 2003/07/19 18:13:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.27 2003/07/20 07:45:01 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0-r1.ebuild:
+  Added the dvb USE variable.  Added a comment re: truetype for 0.6.1
+  Now showing the whole list of IUSE variables.  Updated
+  wxwindows dependancy to >=wxGTK-2.4.1 as 2.4.0 has problems.
+  Added -i to kde-related sed statements.  Re-worded some comments.
+  General ebuild beautification.
 
   19 Jul 2003; Nick Hadaway <raker@gentoo.org>:
   Removed unneeded vlc-0.6.0-r2.ebuild.
