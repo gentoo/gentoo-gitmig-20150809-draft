@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/turck-mmcache
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.9 2003/09/09 08:31:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.10 2003/10/01 08:38:54 stuart Exp $
+
+*turck-mmcache-2.4.1 (01 Oct 2003)
+
+  01 Oct 2003; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  turck-mmcache-2.4.1.ebuild:
+  Updated to turck-mmcache-2.4.1; thanks to Klavs Klavsen once more ;-)
+  Closes bug #29728
 
 *turck-mmcache-2.3.23 (09 Sep 2003)
 
