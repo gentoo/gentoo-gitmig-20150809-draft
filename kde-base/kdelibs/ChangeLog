@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.19 2002/09/06 12:00:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.20 2002/09/10 18:53:52 danarmak Exp $
+
+*kdelibs-3.0.3a (10 Sep 2002)
+
+  10 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  A bugfix and security patch release. Fixes the cross side scripting
+  vulnerability in khtml. Note: there are no 3.0.3a versions of other packages,
+  only of kdelibs!
 
 *kdelibs-3.0.3-r1 (04 Sep 2002)
 
