@@ -1,4 +1,4 @@
-# this is an idea for maintaining trivial config file stubs
+# config-svc-smbd+nmbd
 config_install() {
 
 for x in smbd nmbd

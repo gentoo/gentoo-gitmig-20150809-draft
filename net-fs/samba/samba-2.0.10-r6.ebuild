@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.10.ebuild,v 1.3 2001/09/02 09:31:59 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.10-r6.ebuild,v 1.1 2001/09/02 09:31:59 woodchip Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -81,15 +81,15 @@ src_install() {
   dodoc textdocs/*
 
   # install a standard, standalone-type init script
-  exeinto /etc/rc.d/init.d
-  newexe ${FILESDIR}/samba.rc5 samba
+  exeinto /etc/init.d
+  newexe ${FILESDIR}/samba.rc6 samba
 }
 
 
 pkg_preinst() {
 
-  if [ "$ROOT" = "/" ] 	&& [ -e /etc/rc.d/init.d/samba ] ; then
-	/etc/rc.d/init.d/samba stop
+  if [ "$ROOT" = "/" ] 	&& [ -e /etc/init.d/samba ] ; then
+	/etc/init.d/samba stop
   fi
 }
 
@@ -103,9 +103,6 @@ pkg_postinst() {
   fi
 
   echo " #"
-  echo " To configure samba (the server) to start on boot, type:"
-  echo " % rc-update add samba     [ for normal standalone samba ]"
-  echo
   echo " If you had samba running earlier, you'll need to start it again. Also, please note"
   echo " that you must configure /etc/smb/smb.conf before samba (the server) will work properly."
   echo " Mounting smb shares and the smbclient program should work immediately.  To accomplish"
