@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.66 2005/02/21 02:33:10 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.67 2005/03/07 23:31:21 kloeri Exp $
+
+  08 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  freetype-2.1.9-r1.ebuild:
+  Stable on alpha, bug 83598.
 
   20 Feb 2005; Hardave Riar <hardave@gentoo.org> freetype-1.3.1-r4.ebuild:
   Stable on mips
