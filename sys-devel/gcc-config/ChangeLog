@@ -1,11 +1,17 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.42 2004/05/06 23:04:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.43 2004/05/07 00:45:06 vapier Exp $
+
+*gcc-config-1.3.5-r1 (06 May 2004)
 
   06 May 2004; Mike Frysinger <vapier@gentoo.org> files/gcc-config-1.3.5,
-  files/gcc-config-1.3.5-multi-ldpath, gcc-config-1.3.5.ebuild:
-  clean up the help output, add support for -v|--version and -h|--help options,
-  and then add the version to the gcc-config after installing
+  files/gcc-config-1.3.5-multi-ldpath, gcc-config-1.3.5.ebuild,
+  +gcc-config-1.3.5-r1.ebuild:
+  Clean up the help output, add support for -v|--version and -h|--help options,
+  and then add the version to the gcc-config after installing.
+  Unify the multi-ldpath crap since there are no real differences between
+  the two to fix #29950 by Brad House.
+  Add environment printing fix #48492 by splite.
 
 *gcc-config-1.3.5 (08 Feb 2004)
 
