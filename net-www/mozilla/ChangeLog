@@ -1,6 +1,20 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.129 2003/11/16 18:02:50 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.130 2003/11/18 15:40:08 brad Exp $
+
+  18 Nov 2003; Brad Laue <brad@gentoo.org> mozilla-1.5-r1.ebuild:
+  At long last, move 1.5 into stable.
+  
+  There are a number of upstream QA issues, such as the non-default extension
+  access-builtin failing to build properly. Please read all the ebuild messages
+  before proceeding with your build, as you may need to alter your moz* USE
+  flags slightly.
+  
+  mozsvg support has been removed from this release, as the code in the mozilla 
+  trunk is  old. Discussion of merging the new branch SVG code into the
+  mozilla ebuilds is taking place with the Mozilla SVG project people, and will
+  result in far better SVG support than has been available in previous Mozilla
+  builds.
 
 *mozilla-1.5-r1 (16 Nov 2003)
 
