@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.7 2002/07/01 10:47:52 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.8 2002/07/06 23:56:15 azarah Exp $
+
+*glibc-2.2.5-r5 (6 Jul 2002)
+
+  6 Jul 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r5.ebuild :
+
+  Seems gcc-3.1.1 is even more strict than 3.1 .. patch glibc for gcc-3.1.1.
+  This is also correct for previous gcc versions.
 
 *glibc-2.2.5-r4 (5 June 2002)
 
