@@ -26,6 +26,8 @@ kde-apps/kuickshow
 kde-apps/kvirc
 kde-apps/quanta
 kde-apps/webconfig
+gnome-base/gdk-pixbuf
+gnome-base/glibwww
 
 #this is an RC6-only ebuild (no supervise support)
 =sys-apps/dcron-2.7-r5
