@@ -14,9 +14,10 @@ src_compile() {
 
     if [ "`use qt`" ] ; then
       cd ${S}/bbkeysconf-1.3
-      try make "QTDIR=${QTDIR} MOC=${QTDIR}/bin/moc CXXFLAGS='${CXXFLAGS} -I/usr/lib -I/usr/X11R6/include -I${QTDIR}/include'"
-      cd ${S}
+      local qtdir=${QTDIR}
+      try make MOC=${qtdir}/bin/moc CXXFLAGS="-I${qtdir}/include" LIBS="-L${qtdir}/lib -L/usr/X11R6/lib -lqt -lX11"
     fi
+    cd ${S}
     try ./configure --prefix=/usr/X11R6 --host=${CHOST}
     try emake
 
@@ -26,9 +27,10 @@ src_install () {
 
     if [ "`use qt`" ] ; then
       cd ${S}/bbkeysconf-1.3
-      try make DESTDIR=${D} PREFIX=${D}/usr/X11R6/bin install
-      cd ${S}
+      into /usr/X11R6
+      dobin bbkeysconf
     fi
+    cd ${S}
     try make DESTDIR=${D} install
     cd /usr/X11R6/bin/wm
     cp blackbox blackbox.bak
