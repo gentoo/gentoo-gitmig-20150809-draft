@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.8 2005/01/28 23:56:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.9 2005/01/31 23:50:46 fserb Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
 
-inherit eutils distutils virtualx
+inherit eutils distutils
 
 DESCRIPTION="Python OpenGL bindings"
 HOMEPAGE="http://pyopengl.sourceforge.net/"
@@ -23,18 +23,27 @@ DEPEND="virtual/python
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/config.diff
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-disable_togl.patch
-}
+	cd ${S}
+	epatch ${FILESDIR}/config.diff
+	epatch ${FILESDIR}/${P}-fix_togl.patch
 
-src_compile() {
-	export maketype="python"
-	export python="virtualmake"
-	distutils_src_compile
-}
-
-src_install() {
-	export maketype="python"
-	export python="virtualmake"
-	distutils_src_install
+	if built_with_use dev-lang/python tcltk; then
+		tkv=$(grep TK_VER /usr/include/tk.h | sed 's/^.*"\(.*\)".*/\1/')
+		TKLIBRARY="'\/usr\/$(get_libdir)\/tk${tkv}'"
+		tclv=$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*\)".*/\1/')
+		TCLLIBRARY="'\/usr\/$(get_libdir)\/tcl${tclv}'"
+		TKEQ="True"
+	else
+		TKLIBRARY="/usr/lib/"
+		TCLLIBRARY="/usr/lib/"
+		TKEQ="None"
+	fi
+	SEDED="""
+s/tk = Tkinter.Tk()/tk = ${TKEQ}/;
+s/tk.getvar('tk_version')/str(Tkinter.TkVersion)/g;
+s/tk.getvar( 'tk_version' )/str(Tkinter.TkVersion)/g;
+s/tk.getvar('tcl_version')/str(Tkinter.TclVersion)/g;
+s/tk.getvar('tk_library')/${TKLIBRARY}/g;
+s/tk.getvar('tcl_library')/${TCLLIBRARY}/g;"""
+	sed -i -e "${SEDED}" setup/togl_setup.py
 }
