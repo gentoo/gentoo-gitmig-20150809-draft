@@ -1,6 +1,10 @@
 # ChangeLog for media-video/acidrip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.14 2004/10/18 21:27:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.15 2004/11/25 20:55:50 chriswhite Exp $
+
+  26 Nov 2004; Chris White <chriswhite@gentoo.org> -acidrip-0.10.ebuild,
+  -acidrip-0.11.ebuild, -acidrip-0.12.ebuild:
+  old ebuild cleanup.
 
 *acidrip-0.14 (18 Oct 2004)
 

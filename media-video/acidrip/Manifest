@@ -1,10 +1,14 @@
-MD5 70a2900fefae6b631161e5d151e773dd acidrip-0.10.ebuild 923
-MD5 f6cd15b91f86e0260c05fcc02a418feb acidrip-0.12.ebuild 927
-MD5 844f83be2237b38a93b91be3e90c4306 ChangeLog 1788
-MD5 f4f9dfe26613dc5175d5481aa537776c acidrip-0.11.ebuild 924
-MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 09d23678a07e6191d35bbc35394b09f8 ChangeLog 1933
 MD5 470c1487155c2799ab87d148ffb27d3b acidrip-0.14.ebuild 930
-MD5 709d0a237266e02e7bcff8374d329f13 files/digest-acidrip-0.12 63
-MD5 8e4ac761424d3012be5f6bfd33d0911a files/digest-acidrip-0.11 63
+MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 8975d2ef7a7d50d426d4273702df56ea files/digest-acidrip-0.14 63
-MD5 5a80aa78f0fd5a80536acc5418ba6179 files/digest-acidrip-0.10 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpkblFdQwWVoAgN4RAiMkAJ95IFvuln1Q83lWIux++6N55QCgwACgjhNF
+5lzR8Rp162/08eXigiiQ0hE=
+=HSQd
+-----END PGP SIGNATURE-----
