@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p4.ebuild,v 1.5 2003/11/12 21:48:39 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p4.ebuild,v 1.6 2003/11/14 20:09:21 seemant Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-apps/sed-4"
 RDEPEND="${DEPEND}
 	>=sys-apps/coreutils-5.0-r3
 	sys-apps/gzip
-	sys-apps/bzip2
+	app-arch/bzip2
 	app-arch/arc
 	app-arch/lha
 	app-arch/unarj

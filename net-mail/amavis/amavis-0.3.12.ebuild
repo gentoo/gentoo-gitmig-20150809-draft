@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12.ebuild,v 1.6 2003/10/27 09:58:43 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12.ebuild,v 1.7 2003/11/14 20:08:41 seemant Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 DEPEND="dev-lang/perl
 	sys-apps/file
 	app-arch/arc
-	sys-apps/bzip2
+	app-arch/bzip2
 	app-arch/lha
 	app-arch/unarj
 	sys-apps/sharutils
