@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r7.ebuild,v 1.6 2005/02/14 19:28:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r7.ebuild,v 1.7 2005/02/15 15:40:07 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -160,6 +160,6 @@ pkg_postinst() {
 	motif-config --install openmotif-2.1
 }
 
-pkg_postrm() {
+pkg_prerm() {
 	motif-config --uninstall openmotif-2.1
 }
