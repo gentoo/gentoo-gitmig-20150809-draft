@@ -1,14 +1,20 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.41 2003/03/30 21:27:33 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.42 2003/05/29 07:39:52 utx Exp $
+
+*glib-2.2.1-r1 (29 May 2003)
+
+  29 May 2003; Stanislav Brabec <utx@gentoo.org> glib-2.2.1-r1.ebuild:
+  Added env.d file setting G_BROKEN_FILENAMES (improves behavior with non UTF-8
+  filenames).
+
+*glib-2.2.1 (04 Feb 2003)
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> glib-2.2.1.ebuild :
   Marked ppc stable
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> glib-1.2.10-r5.ebuild glib-2.2.1.ebuild :
   Added arm to keywords.
-
-*glib-2.2.1 (04 Feb 2003)
 
   30 Mar 2003; Christian Birchinger <joker@gentoo.org> glib-2.2.1.ebuild:
   Added sparc stable keyword
