@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.903.ebuild,v 1.5 2005/02/03 00:51:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.903.ebuild,v 1.6 2005/02/05 08:57:25 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -104,6 +104,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	sys-apps/util-linux
 	dev-lang/perl
 	media-libs/libpng
+	!<=app-emulation/emul-linux-x86-xlibs-1.2-r3
 	!virtual/xft
 	!virtual/x11"
 # x11-libs/xft -- blocked because of interference with xorg's
@@ -118,6 +119,7 @@ RDEPEND="
 		>=x11-misc/ttmkfdir-3.0.9-r2
 		media-libs/libpng
 		>=sys-libs/ncurses-5.1
+		!<=app-emulation/emul-linux-x86-xlibs-1.2-r3
 		!virtual/xft
 		!virtual/x11"
 

@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.323 2005/02/05 07:53:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.324 2005/02/05 08:57:25 spyderous Exp $
+
+  05 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.903.ebuild, xorg-x11-6.8.1.904.ebuild:
+  (#80740) Block <=app-emulation/emul-linux-x86-xlibs-1.2-r3 at eradicator's
+  request until problem with lib32 is fixed, which should be in 1.2-r4.
 
   04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.904.ebuild:
