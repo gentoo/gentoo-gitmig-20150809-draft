@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.13 2003/09/29 18:44:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.14 2003/09/29 19:13:09 lanius Exp $
+
+*usermode-sources-2.4.22 (29 Sep 2003)
+
+  29 Sep 2003; Heinrich Wendel <lanius@gentoo.org>
+  usermode-sources-2.4.22.ebuild:
+  version bump
 
 *usermode-sources-2.4.20-r1 (29 Sep 2003)
 
