@@ -1,6 +1,10 @@
 # ChangeLog for net-mailfetchmailChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.6 2002/09/30 06:39:35 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.7 2002/10/01 09:11:50 aliz Exp $
+
+*fetchmail-6.1.0 (01 Oct 2002)
+  01 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *fetchmail-5.9.14 (11 Sep 2002)
 
