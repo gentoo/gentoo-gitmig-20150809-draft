@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.1 2003/12/15 17:47:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.2 2004/01/13 05:28:32 genone Exp $
 
 inherit elisp-common eutils
 
@@ -59,7 +59,7 @@ src_install() {
 
 	make \
 		DESTDIR=${D} \
-		DOCHTMLDIR=/usr/share/doc/${P} \
+		DOCHTMLDIR=/usr/share/doc/${PF} \
 		MANPATH=/usr/share/man \
 		MANSUFFIX=1 \
 		install.man || die
