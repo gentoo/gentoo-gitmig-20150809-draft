@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.2.2.ebuild,v 1.3 2001/07/10 02:23:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.2.2.ebuild,v 1.4 2001/09/17 16:04:44 drobbins Exp $
 
 A="jakarta-tomcat-3.2.2-src.tar.gz jakarta-servletapi-3.2.2-src.tar.gz jakarta-ant-1.3-src.tar.gz"
 S=${WORKDIR}
@@ -16,7 +16,7 @@ DEPEND=">=sys-apps/bash-2.04
 	>=dev-lang/jdk-1.2
 	>=dev-java/jaxp-1.0.1
 	>=dev-java/jsse-1.0.2
-	>=net-www/apache-ssl-1.3"
+	>=net-www/apache-1.3"
 
 src_unpack() {
   unpack ${A}
