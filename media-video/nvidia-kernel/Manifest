@@ -1,7 +1,7 @@
-MD5 4e160082f611aa14e2d345a72d05128b ChangeLog 24644
+MD5 5c11d35d862864839730a2bcaa1016ce ChangeLog 24828
 MD5 c84a79e7d9b69a204003fb8c2dbaad01 metadata.xml 297
 MD5 b5275c8797b4ec75716a04c8c9273fa7 nvidia-kernel-1.0.4499.ebuild 4026
-MD5 312ed1f99296160f4e638346d4f807d5 nvidia-kernel-1.0.6629.ebuild 4352
+MD5 7afb4b205ba15649fa70ba69bb6f107d nvidia-kernel-1.0.6629.ebuild 4461
 MD5 4e1d103a4e151f53d4bd38b12de4a592 nvidia-kernel-1.0.4363-r3.ebuild 4069
 MD5 3bf6bcd6581fce2df5e410cfc2acba3f nvidia-kernel-1.0.4496-r3.ebuild 4284
 MD5 629e2c50f2d8d26979decb9e58030ae2 nvidia-kernel-1.0.5328-r1.ebuild 4463
@@ -48,5 +48,6 @@ MD5 0009ccc8f3896f22bad06fd549639072 files/1.0.6629/nv-pgprot-speedup.patch 1518
 MD5 dbf80a2cbaf69a10521429e1b2a7e10c files/1.0.6629/conftest_koutput_includes.patch 1082
 MD5 5aef5c6a394896bbb8392816f6795147 files/1.0.6629/nv-amd64-shutup-warnings.patch 902
 MD5 c3d0a0f59fa6b06a5ee139fb01858287 files/1.0.6629/nv-disable-preempt-on-smp_processor_id.patch 542
+MD5 ddeae194df6bb2112d7de723df8d84c2 files/1.0.6629/nv-fix-memory-limit.patch 18398
 MD5 64d76075a90dedc83f1dc971389c910e files/1.0.6629/nv-shutup-warnings.patch 712
 MD5 7c9db721d244f6ca709e2b8003ce4e0d files/1.0.6629/nv-vm_flags-no-VM_LOCKED.patch 677

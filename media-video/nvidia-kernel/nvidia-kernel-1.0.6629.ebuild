@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.6 2004/11/25 23:14:26 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.7 2004/11/26 01:47:14 cyfred Exp $
 
 inherit eutils linux-mod
 
@@ -98,6 +98,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/nv-vm_flags-no-VM_LOCKED.patch
 	# Fix calling of smp_processor_id() when preempt is enabled
 	epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id.patch
+	# Fix a limitation on available video memory bug #71684
+	epatch ${FILESDIR}/${PV}/nv-fix-memory-limit.patch
 
 	# Shutup pointer arith warnings
 	use x86 && epatch ${FILESDIR}/${PV}/nv-shutup-warnings.patch
