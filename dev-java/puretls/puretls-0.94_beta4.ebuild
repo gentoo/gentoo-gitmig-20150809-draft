@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/puretls-0.94_beta4.ebuild,v 1.5 2005/01/03 21:34:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/puretls-0.94_beta4.ebuild,v 1.6 2005/01/20 17:03:59 luckyduck Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	=dev-java/cryptix-asn1-bin-20011119
-	=dev-java/cryptix-3.2.0"
+	=dev-java/cryptix-3.2.0
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${PN}-0.9b4
@@ -31,12 +32,8 @@ src_unpack() {
 
 src_compile() {
 	local antflags="compile"
-	if use doc; then
-		antflags="${antflags} javadoc"
-	fi
-	if use jikes; then
-		antflags="${antflags} -Dbuild.compiler=jikes"
-	fi
+	use doc && antflags="${antflags} javadoc"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "Unable to compile"
 }
 

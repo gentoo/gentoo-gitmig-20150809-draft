@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.25 2005/01/01 18:15:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.26 2005/01/20 17:05:26 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  commons-collections-3.1.ebuild:
+  added missing jikes dependency.
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org>
   commons-collections-3.1.ebuild:

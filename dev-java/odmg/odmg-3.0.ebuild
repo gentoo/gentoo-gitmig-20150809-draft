@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/odmg/odmg-3.0.ebuild,v 1.1 2004/10/30 20:39:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odmg/odmg-3.0.ebuild,v 1.2 2005/01/20 17:02:11 luckyduck Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 RDEPEND=">=virtual/jre-1.3"
 DEPEND=">=virtual/jdk-1.3
-		>=dev-java/ant-core-1.5	"
+		>=dev-java/ant-core-1.5
+		jikes? ( dev-java/jikes )"
 IUSE="doc jikes"
 
 S=${WORKDIR}/${SRC_P}
