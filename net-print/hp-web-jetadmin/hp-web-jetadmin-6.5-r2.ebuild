@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5-r2.ebuild,v 1.2 2002/07/14 20:41:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5-r2.ebuild,v 1.3 2002/08/17 23:09:56 aliz Exp $
 
 # This package, in its most basic form (no optional components) will install
 # some 4300 files, totalling some 45MB. According to HP the minimum system
@@ -20,6 +20,7 @@ SRC_URI="http://ftp.hp.com/pub/networking/software/hpwebjet_linux.selfx
 DEPEND="virtual/glibc"
 LICENSE="HP"
 SLOT="0"
+SANDBOX_DISABLED="1"
 
 src_unpack() { :; } ; src_compile() { :; }
 
