@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins et al <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.20.ebuild,v 1.3 2001/12/02 08:01:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.20.ebuild,v 1.4 2001/12/06 22:06:30 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Daemon for the Linux Device Filesystem"
@@ -12,7 +12,6 @@ DEPEND="virtual/glibc"
 
 
 src_unpack() {
-
   	unpack ${A}
 	
 	cd ${S}
@@ -25,22 +24,10 @@ src_unpack() {
 }
 
 src_compile() {
-
 	make || die
 }
 
 src_install() {
-
   	dodir /sbin /usr/share/man /etc
 	make PREFIX=${D} install || die
-
-# It gets started by /sbin/init now (rc6), and there is
-# support via older versions and the profiles for rc5 .....
-# 	exeinto /etc/rc.d/init.d
-#	doexe ${FILESDIR}/devfsd
-
-	dodir /dev-state
-	
-	insinto /etc
-	doins ${FILESDIR}/devfsd.conf
 }
