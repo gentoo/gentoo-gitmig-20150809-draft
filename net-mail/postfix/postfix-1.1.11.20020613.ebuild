@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020613.ebuild,v 1.3 2002/07/23 16:36:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020613.ebuild,v 1.4 2002/07/24 19:40:29 raker Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -33,7 +33,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	if [ "`use ipv6`" ]
+	if [ "`use ipv6`" || "`use ssl`" ]
 	then
 		cd ${S}
 		patch -p1 < ${FILESDIR}/tls+ipv6.diff || die
