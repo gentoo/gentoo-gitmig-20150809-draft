@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r1.ebuild,v 1.2 2004/04/06 04:08:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r1.ebuild,v 1.3 2004/05/04 16:57:01 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://jsautret.free.fr/BINS/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~alpha ~ppc amd64"
+KEYWORDS="x86 ~sparc alpha ~ppc amd64"
 
 DEPEND=">=dev-lang/perl-5.6.1-r6
 	>=media-gfx/imagemagick-5.5.5.3

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23.ebuild,v 1.2 2003/10/06 14:34:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23.ebuild,v 1.3 2004/05/04 16:57:01 kloeri Exp $
 
 DESCRIPTION="Static HTML photo album generator"
 HOMEPAGE="http://bins.sautret.org/"
