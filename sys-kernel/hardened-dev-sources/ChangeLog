@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.49 2005/01/11 21:15:57 tocharian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.50 2005/01/12 04:43:06 tocharian Exp $
+
+*hardened-dev-sources-2.6.10-r1 (11 Jan 2005)
+
+  11 Jan 2005; Adam Mondl <tocharian@gentoo.org>
+  +hardened-dev-sources-2.6.10-r1.ebuild:
+  Rework uselib() exploit patch to allow building under certain .config's.
 
 *hardened-dev-sources-2.6.10 (11 Jan 2005)
 
