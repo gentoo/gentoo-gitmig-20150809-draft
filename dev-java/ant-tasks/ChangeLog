@@ -1,6 +1,9 @@
-# ChangeLog for dev-java/ant-optional
+# ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.6 2004/09/04 12:58:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.7 2004/09/05 06:03:15 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> ant-tasks-1.6.2-r4.ebuild:
   move jython-bin -> jython, regexp-bin -> regexp-bin

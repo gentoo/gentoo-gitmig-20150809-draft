@@ -1,6 +1,9 @@
-# ChangeLog for dev-java/avalon-logkit
+# ChangeLog for dev-java/avalon-logkit-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit-bin/ChangeLog,v 1.2 2004/07/31 11:48:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit-bin/ChangeLog,v 1.3 2004/09/05 06:04:13 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   31 Jul 2004; Thomas Matthijs <axxo@gentoo.org>
   avalon-logkit-bin-1.2.2.ebuild, avalon-logkit-bin-1.2.ebuild:
