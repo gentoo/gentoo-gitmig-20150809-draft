@@ -8,23 +8,22 @@ opts="start stop restart"
 
 PIDFILE=/var/spool/postfix/pid/master.pid
 EXE=/usr/sbin/postfix
-#ARGS="-bd -q15m"
 
 start() {
-		ebegin "Starting $SERVICE..."
-     	$EXE start >/dev/null 2>&1
-		eend $? "Started $SERVICE." "Error Starting $SERVICE."
+        ebegin "Starting $SERVICE..."
+        $EXE start >/dev/null 2>&1
+        eend $? "Started $SERVICE." "Error Starting $SERVICE."
 }
 
 stop() {
-		ebegin "Stopping $SERVICE..."
-     	$EXE stop >/dev/null 2>&1
-		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+        ebegin "Stopping $SERVICE..."
+        $EXE stop >/dev/null 2>&1
+        eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
 }
 
 restart() {
-		stop
-		start
+        stop
+        start
 }
 
 doservice ${@}
