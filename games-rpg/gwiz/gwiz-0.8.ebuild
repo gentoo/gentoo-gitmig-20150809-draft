@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/gwiz/gwiz-0.8.ebuild,v 1.3 2004/04/29 19:59:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/gwiz/gwiz-0.8.ebuild,v 1.4 2004/05/06 20:08:14 mr_bones_ Exp $
 
 DESCRIPTION="clone of old-school Wizardry(tm) games by SirTech"
-SRC_URI="http://icculus.org/gwiz/${P}.tar.bz2"
 HOMEPAGE="http://icculus.org/gwiz/"
+SRC_URI="http://icculus.org/gwiz/${P}.tar.bz2"
 
 KEYWORDS="x86 ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE=""
 
-RDEPEND=">=media-libs/libsdl-1.2.3
+DEPEND=">=media-libs/libsdl-1.2.3
 	>=media-libs/sdl-image-1.2.1-r1
 	>=media-libs/sdl-ttf-2.0.4"
 
