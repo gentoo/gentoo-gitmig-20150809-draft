@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.0.ebuild,v 1.4 2003/12/16 23:31:08 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.0.ebuild,v 1.5 2004/02/14 18:34:28 foser Exp $
 
 inherit eutils gnome2
 
@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 # Future versions will work with 64-bit archs, but 1.2.0 doesn't
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=dev-libs/glib-2.0.6
 	>=x11-libs/gtk+-2.0.8
