@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.6 2004/06/01 08:15:50 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.7 2004/06/07 16:41:24 lv Exp $
 
 inherit eutils libtool
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/ogle-configure-alsa-fix.patch || die "applying alsa-fix failed"
+	epatch ${FILESDIR}/ogle-gcc34-fix.patch
 }
 
 src_compile() {
