@@ -1,5 +1,7 @@
 MD5 fe47efd5a82c28b259a8adce6eaa62d8 ChangeLog 800
 MD5 e9f0ac962a3e1d1b14c5df87302d6d85 lshw-01.00.ebuild 571
+MD5 049c42b1e2ebec69b39a1c1d8e077116 lshw-01.04.ebuild 696
 MD5 461b8291c7047c479dd2785dd50cd95f lshw-01.03.ebuild 789
 MD5 f85a623707b313b0bde6003e7a2f608c files/digest-lshw-01.00 63
+MD5 304310fc299278d4a54f3dea626ad245 files/digest-lshw-01.04 63
 MD5 3d92a2d793681247d8469f267a3a1781 files/digest-lshw-01.03 63
