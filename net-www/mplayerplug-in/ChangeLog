@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.29 2004/12/02 15:23:32 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.30 2004/12/20 04:48:50 chriswhite Exp $
+
+  20 Dec 2004; Chris White <chriswhite@gentoo.org> mplayerplug-in-2.66.ebuild:
+  Updating x86 stable for mplayerplug-in.  This fixes bug #67694.
 
   03 Dec 2004; Chris White <chriswhite@gentoo.org> mplayerplug-in-2.70.ebuild:
   Marked 2.70 ~x86.
