@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.5 2003/08/31 01:55:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.6 2004/02/01 13:11:08 liquidx Exp $
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 # 
@@ -56,7 +56,7 @@ fi
 
 if has_version ">=x11-libs/gtk+-2" || use gtk2; then
 	HAS_GTK2=1
-	GTK2_FULL_VER=$(pkg-config gtk+-2.0 --modversion)
+	GTK2_FULL_VER=$(pkg-config gtk+-2.0 --modversion 2>/dev/null)
 	GTK2_MAJOR_VER=${GTK2_FULL_VER%.*}.0
 	GTK2_ENGINES_DIR=/usr/lib/gtk-2.0/${GTK2_MAJOR_VER}/engines
 fi
