@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.4.0/linux-sources-2.4.0_rc9.ebuild,v 1.1 2000/11/02 15:58:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.4.0/linux-sources-2.4.0_rc9.ebuild,v 1.2 2000/11/02 16:31:56 drobbins Exp $
 
 A="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test8-reiserfs-3.6.16-patch.gz
 	ide.2.4.0-t9-6.task.0923.patch.gz test9-pre7.gz
@@ -27,7 +27,7 @@ HOMEPAGE="http://www.kernel.org/
 
 	
 src_compile() {
-	echo
+	try make dep
 }
 
 src_unpack() {
@@ -66,21 +66,23 @@ src_unpack() {
     patch -p1 < sensors.patch
 
 	echo "Applying IBM JFS patch..."
-	unpack jfs-0.0.16-patch.tar.gz
+	cd ${WORKDIR}
+	tar xzvf ${DISTDIR}/jfs-0.0.16-patch.tar.gz
 	cd ${S}
-	patch -p1 < jfs-common-v0.0.16-patch 
-	patch -p1 < jfs-2.4.0-test9-v0.0.16-patch 
+	patch -p1 < ../jfs-common-v0.0.16-patch 
+	patch -p1 < ../jfs-2.4.0-test9-v0.0.16-patch 
 	#fix fs/Makefile problem
 	cp ${FILESDIR}/fs/Makefile ${S}/fs/Makefile
 
     echo "Prepare for compilation..."
-    cd ${S}/arch/i386
+#    cd ${S}/arch/i386
 #    cp Makefile Makefile.orig
 ##    sed -e "s/-DCPU=686/-DCPU=586/" -e "s/\-m486 -malign-loops=2 -malign-jumps=2 -malign-functions=2 -DCPU=586/${CFLAGS}/" Makefile.orig > Makefile
     cd ${S}
 #    cp Makefile Makefile.orig
 ##    sed -e 's:-O2:${CFLAGS}:g' Makefile.orig > Makefile
-    try make include/linux/version.h
+	cd ${S}
+	try make include/linux/version.h
     try make symlinks
 	cd ${S}
 
