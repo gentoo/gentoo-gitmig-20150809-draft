@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.5.ebuild,v 1.2 2004/02/19 05:56:55 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.5.ebuild,v 1.3 2004/02/19 07:40:57 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -25,7 +25,7 @@ SRC_URI="mirror://gentoo/thunderbird-${PV}-source.tar.bz2
 	 crypt? ( mirror://gentoo/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="gtk2 ipv6 crypt"
