@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.14 2004/11/22 20:47:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.15 2004/11/22 23:48:46 eldad Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 sparc ~ppc ~amd64"
+KEYWORDS="x86 sparc ~ppc ~amd64"
 IUSE="ldap mysql postgres ssl samba snmp nagios-dns nagios-ntp nagios-ping nagios-ssh"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
