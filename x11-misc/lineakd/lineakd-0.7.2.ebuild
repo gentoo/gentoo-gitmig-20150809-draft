@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.2.ebuild,v 1.2 2004/04/11 15:17:30 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.2.ebuild,v 1.3 2004/04/24 18:36:46 port001 Exp $
 
 IUSE="xosd"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="x11-base/xfree
+DEPEND="virtual/x11
 	xosd? ( x11-libs/xosd )"
 
 src_compile() {
