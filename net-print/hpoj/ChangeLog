@@ -1,0 +1,9 @@
+# ChangeLog for net-print/hpoj
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.1 2003/05/29 19:13:47 lordvan Exp $
+
+
+*hpoj-0.90 (25 Apr 2003)
+  25 Apr 2003; Thomas Raschbacher <lordvan@gentoo.org> hpoj-0.90.ebuild
+  initial import (bug #11527 )
+	

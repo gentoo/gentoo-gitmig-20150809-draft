@@ -1,0 +1,11 @@
+--- mlcd/Makefile	2003-01-21 19:51:03.000000000 +0000
++++ mlcd/Makefile_patch	2003-01-21 19:53:09.000000000 +0000
+@@ -30,7 +30,7 @@
+ %.o :		%.c $(INCLUDES)
+ 		$(CC) $(CFLAGS) -c -o $@ $<
+ 
+-all:		$(LINKS) $(GOAL)
++all:		$(GOAL)
+ 
+ $(LINKS):
+ 		for link in $(LINKS) ; do ln -s . $$link ; done

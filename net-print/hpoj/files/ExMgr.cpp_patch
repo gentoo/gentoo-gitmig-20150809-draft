@@ -1,0 +1,11 @@
+--- ExMgr.cpp	2003-01-21 20:04:01.000000000 +0000
++++ ExMgr.cpp.patch	2003-01-21 20:03:44.000000000 +0000
+@@ -32,8 +32,6 @@
+ #undef LOG_SYSLOG
+ #include <bp/ex/transport/ExMlcTransport.h>
+ 
++#include "ExMgr.h"
++
+ #define SAFE_STRING(s) ((s)?((char *)(s)):"")
+ 
+ static ExMgr *gpMgr=0;	/* Needed by the ExWatchdogTimer class. */
