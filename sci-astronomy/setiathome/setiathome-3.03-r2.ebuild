@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-3.03-r2.ebuild,v 1.1 2004/12/24 04:05:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-3.03-r2.ebuild,v 1.2 2005/03/17 08:59:30 hansmi Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)

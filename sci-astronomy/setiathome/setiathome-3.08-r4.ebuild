@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-3.08-r4.ebuild,v 1.1 2004/12/24 04:05:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-3.08-r4.ebuild,v 1.2 2005/03/17 08:59:30 hansmi Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -17,7 +17,7 @@ SRC_URI="x86? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.i686-pc-linux-
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 -ppc"
 IUSE="X"
 # Don't know if this is necessary, will have to check the license
 RESTRICT="nomirror"
