@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vim-nogui/vim-nogui-5.7-r3.ebuild,v 1.1 2001/02/07 15:51:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vim-nogui/vim-nogui-5.7-r3.ebuild,v 1.2 2001/04/24 01:27:25 aj Exp $
 
 A="vim-5.7-src.tar.gz vim-5.7-rt.tar.gz"
 S=${WORKDIR}/vim-5.7
@@ -22,7 +22,7 @@ src_compile() {
       myconf="--disable-gpm"
     fi
     try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
-	 --enable-gui=no --without-x $myconf
+	 --enable-gui=no --with-cscope --without-x $myconf
     # Parallel make does not work
     try make
 }
