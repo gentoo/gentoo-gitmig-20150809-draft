@@ -1,6 +1,7 @@
-MD5 6813f5423b7852cee81af91f6c9f2499 gnome-icon-theme-1.0.7.ebuild 482
+MD5 2aedbca3b5a98c835ce72e917fd8d61a gnome-icon-theme-1.0.7.ebuild 481
 MD5 f17061cfe523475e43b6b07d18fd199c gnome-icon-theme-1.0.4.ebuild 463
 MD5 f0c5452a6300ff46173763c19af09408 gnome-icon-theme-1.0.6.ebuild 471
+MD5 6813f5423b7852cee81af91f6c9f2499 gnome-icon-theme-1.0.8.ebuild 482
 MD5 11793413b5caae00def5f852228100ea gnome-icon-theme-1.0.5.ebuild 471
 MD5 3af4fc5ae8b0c40cc5a2c2bc24ac2058 ChangeLog 2627
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -8,3 +9,4 @@ MD5 207eb4902efe5bf8fc3006ab939d77a8 files/digest-gnome-icon-theme-1.0.4 75
 MD5 d90a7757a6d70adecb2c706848614d28 files/digest-gnome-icon-theme-1.0.5 75
 MD5 6accccb7d4598381de426b4324e7ccdc files/digest-gnome-icon-theme-1.0.6 76
 MD5 e1829aac2782b6dd84afa95c12fcc2bc files/digest-gnome-icon-theme-1.0.7 76
+MD5 521a93f59d8576f9a1cdb70397e7b034 files/digest-gnome-icon-theme-1.0.8 76
