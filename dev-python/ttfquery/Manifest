@@ -1,4 +1,4 @@
-MD5 84a28f245eab5c8af9c2e39606d32d7d ttfquery-1.0.0.ebuild 627
-MD5 ce4646c9d4a69033796359bcaf7373a5 metadata.xml 178
 MD5 ee9b11d5222d04008ec4f7c9840f3a9d ChangeLog 431
+MD5 ce4646c9d4a69033796359bcaf7373a5 metadata.xml 178
+MD5 d0b53e13333d2b2542f88393e8880c5e ttfquery-1.0.0.ebuild 620
 MD5 4f827d6e0d7cec0cfc98fc20f07b0a99 files/digest-ttfquery-1.0.0 65
