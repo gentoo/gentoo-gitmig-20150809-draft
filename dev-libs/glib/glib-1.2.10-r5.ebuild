@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.16 2004/04/05 21:17:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.17 2004/04/08 09:32:51 kumba Exp $
 
 inherit libtool
 
@@ -14,6 +14,14 @@ SLOT="1"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64 ppc64 s390"
 
 DEPEND="virtual/glibc"
+
+src_unpack() {
+	unpack ${A}
+
+	# Allow glib to build with gcc-3.4.x
+	# Closes Bug #47047
+	epatch ${FILESDIR}/${P}-gcc34-fix.patch
+}
 
 src_compile() {
 #	elibtoolize
