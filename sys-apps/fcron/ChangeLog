@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.9 2002/11/20 18:33:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.10 2002/12/09 04:37:24 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *fcron-2.0.0-r2 (20 Nov 2002)
 
   20 Nov 2002; Donny Davies <woodchip@gentoo.org> : Added the fcron.allow

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.5.ebuild,v 1.1 2002/11/19 18:31:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.5.ebuild,v 1.2 2002/12/09 04:37:24 manson Exp $
 
 DESCRIPTION="A file archival tool which can also read and write tar files"
 SRC_URI="mirror://gnu/cpio/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/cpio/cpio.html"
 
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 

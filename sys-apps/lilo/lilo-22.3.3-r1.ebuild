@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.3.3-r1.ebuild,v 1.3 2002/10/04 06:26:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.3.3-r1.ebuild,v 1.4 2002/12/09 04:37:25 manson Exp $
 
 inherit mount-boot
 
@@ -11,7 +11,7 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
 HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 DEPEND="virtual/glibc dev-lang/nasm >=sys-devel/bin86-0.15.5"
 RDEPEND="virtual/glibc"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 LICENSE="BSD"
 SLOT="0"
 

@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.5 2002/10/05 08:25:36 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.6 2002/12/09 04:37:24 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *attr-2.0.9 (27 Sep 2002)
 
   27 Sep 2002; Brad Cowan <bcowan@gentoo.org> attr-2.0.9.ebuild

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.9 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.10 2002/12/09 04:37:25 manson Exp $
 
 # source maintainers named it hotplug-YYYY_MM_DD instead of hotplug-YYYYMMDD
 S=${WORKDIR}/${P}
 DESCRIPTION="USB hotplug utilities"
 SRC_URI="mirror://sourceforge/linux-hotplug/hotplug-2002_01_14.tar.gz"
 HOMEPAGE="http://linux-hotplug.sourceforge.net"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 SLOT="0"
 LICENSE="GPL-2"
 

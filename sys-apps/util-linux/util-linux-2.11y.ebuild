@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.1 2002/11/30 02:42:18 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.2 2002/12/09 04:37:27 manson Exp $
 
 IUSE="crypt nls"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
 # Patched for 2.11y -- NJ <carpaski@gentoo.org)
 #	crypt? ( http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${CRYPT_PATCH_P}.patch.gz )"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc

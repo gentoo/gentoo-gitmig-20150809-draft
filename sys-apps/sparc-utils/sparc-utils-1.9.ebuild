@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9.ebuild,v 1.10 2002/11/30 21:44:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9.ebuild,v 1.11 2002/12/09 04:37:26 manson Exp $
 
 S=${WORKDIR}/${P}.orig
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
 SRC_URI=" http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://www.debian.org/"
 
-KEYWORDS="sparc sparc64 -x86 -ppc"
+KEYWORDS="sparc  -x86 -ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -38,7 +38,7 @@ src_install() {
 
 	install -s prtconf-1.3/prtconf ${D}/usr/sbin/prtconf
 	install -s prtconf-1.3/eeprom ${D}/usr/sbin/eeprom
-	#ln -sf sparc32 ${D}/usr/bin/sparc64
+	#ln -sf sparc32 ${D}/usr/bin/
 	install -s audioctl-1.3/audioctl ${D}/usr/bin
 	# install /etc/init.d script & /etc/default scripts
 	install -d -m 755 ${D}/etc ${D}/etc/init.d ${D}/etc/default

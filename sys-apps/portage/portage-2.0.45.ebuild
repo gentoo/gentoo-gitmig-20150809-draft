@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.45.ebuild,v 1.1 2002/12/03 09:58:31 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.45.ebuild,v 1.2 2002/12/09 04:37:26 manson Exp $
 
 IUSE="build"
 
@@ -13,7 +13,7 @@ SLOT="0"
 DESCRIPTION="Portage ports system"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=sys-apps/bash-2.05a )"
 
@@ -105,9 +105,6 @@ pkg_postinst() {
 			;;
 		sparc )
 			ln -sf ../usr/portage/profiles/default-sparc-1.0 make.profile
-			;;
-		sparc64 )
-			ln -sf ../usr/portage/profiles/default-sparc64-1.0 make.profile
 			;;
 		x86 )
 			ln -sf ../usr/portage/profiles/default-1.0 make.profile

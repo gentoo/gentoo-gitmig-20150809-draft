@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.6-r2.ebuild,v 1.10 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.6-r2.ebuild,v 1.11 2002/12/09 04:37:26 manson Exp $
 
 MY_PN="${PN/pam-/pam_}"
 S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Based on the sources from util-linux, with added pam and shadow features"
 SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/pam/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 HOMEPAGE="http://www.thkukuk.de/pam/pam_login/"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc

@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/console-data
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-data/ChangeLog,v 1.5 2002/11/04 15:41:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-data/ChangeLog,v 1.6 2002/12/09 04:37:24 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *console-data-1999.08.29-r2 (1 Feb 2002)
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:

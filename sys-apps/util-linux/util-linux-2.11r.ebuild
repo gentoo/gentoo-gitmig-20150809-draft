@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11r.ebuild,v 1.10 2002/10/19 04:06:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11r.ebuild,v 1.11 2002/12/09 04:37:27 manson Exp $
 
 IUSE="nls"
 
@@ -9,7 +9,7 @@ DESCRIPTION="Various useful Linux utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
 	http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${P}.patch.gz"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc

@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/e2fsprogs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.9 2002/11/11 21:47:20 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.10 2002/12/09 04:37:24 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *e2fsprogs-1.32 (11 Nov 2002)
 
   11 Nov 2002; Brandon Low <lostlogic@gentoo.org> e2fsprogs-1.32.ebuild :

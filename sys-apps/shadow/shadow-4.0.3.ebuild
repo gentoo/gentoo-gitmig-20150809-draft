@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.14 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.15 2002/12/09 04:37:26 manson Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64 alpha"
+KEYWORDS="x86 sparc  alpha"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
@@ -113,7 +113,7 @@ src_install() {
 	dodoc HOWTO LSM README.* *.txt
 
 	# Fix sparc serial console
-	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "sparc64" ]; then
+	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "" ]; then
 		cd ${D}/etc
 		cp securetty securetty.orig
 		# ttyS0 and its devfsd counterpart (Sparc serial port "A")

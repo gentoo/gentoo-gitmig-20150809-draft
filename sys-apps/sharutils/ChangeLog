@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/sharutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.4 2002/10/30 13:14:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.5 2002/12/09 04:37:26 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sharutuls-4.2.1-r6 (30 Oct 2002)
 
   30 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :

@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.45 2002/11/25 23:22:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.46 2002/12/09 04:37:24 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *baselayout-1.8.5.4 (26 Nov 2002)
 
   26 Nov 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.4.ebuild :

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.6.3-r1.ebuild,v 1.5 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.6.3-r1.ebuild,v 1.6 2002/12/09 04:37:25 manson Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Hardware Sensors Monitoring by lm_sensors"
 SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 LICENSE="GPL-2"
 
 SLOT="0"

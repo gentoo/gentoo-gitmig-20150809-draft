@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.6.ebuild,v 1.1 2002/11/07 14:48:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.6.ebuild,v 1.2 2002/12/09 04:37:25 manson Exp $
 
 IUSE="static"
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/LVM/${PV}
 DESCRIPTION="User-land utilities for LVM (Logical Volume Manager) software"
 SRC_URI="ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${PV}.tar.gz"
 HOMEPAGE="http://www.sistina.com/products_lvm.htm"
-KEYWORDS="~x86 -ppc ~sparc ~sparc64"
+KEYWORDS="~x86 -ppc ~sparc "
 
 DEPEND="virtual/linux-sources"
 RDEPEND="${DEPEND} >=sys-apps/sed-4.0"

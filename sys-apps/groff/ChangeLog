@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.5 2002/10/19 17:40:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.6 2002/12/09 04:37:25 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *grpff-1.17.2-r3 (19 Oct 2002)
 
   19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :

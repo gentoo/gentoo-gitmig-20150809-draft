@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/mac-fdisk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.1 2002/07/09 10:39:42 seemant Exp $
+# $Id: ChangeLog,v 1.2 2002/12/09 04:37:25 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *mac-fdisk-0.1 (17 Mar 2002)
 
 17 Mar 2002;  Kain <kain@kain.org> all:

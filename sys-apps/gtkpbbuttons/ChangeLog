@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/gtkpbbuttons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.3 2002/10/17 08:08:57 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.4 2002/12/09 04:37:25 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *gtkpbbuttons-0.5.2 (17 Oct 2002)
 
   17 Oct 2002; Kain <kain@kain.org> gtkpbbuttons-0.5.2.ebuild :

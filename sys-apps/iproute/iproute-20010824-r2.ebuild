@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r2.ebuild,v 1.2 2002/10/24 05:27:32 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r2.ebuild,v 1.3 2002/12/09 04:37:25 manson Exp $
 
 S=${WORKDIR}/iproute2
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/iproute2-2.4.7-now-ss010824.tar.gz"
 HOMEPAGE="http://www.worldbank.ro/ip-routing/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ~ppc ~sparc "
 DEPEND="virtual/linux-sources"
 
 LICENSE="GPL-2"

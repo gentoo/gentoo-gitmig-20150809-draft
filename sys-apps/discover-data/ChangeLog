@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/discover-data
 # Copyright 2002 TelemetryBox Corporation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/ChangeLog,v 1.2 2002/07/31 16:49:01 christoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/ChangeLog,v 1.3 2002/12/09 04:37:24 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *discover-data--1.2002.05.23 (30 July 2002)
 
   30 July 2002; Christoph Lameter <christoph@gentoo.org> discover-data--1.2002.05.23-r1.ebuild

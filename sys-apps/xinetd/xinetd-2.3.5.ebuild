@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.5.ebuild,v 1.7 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.5.ebuild,v 1.8 2002/12/09 04:37:27 manson Exp $
 
 IUSE="tcpd"
 
@@ -13,7 +13,7 @@ IUSE="tcpd"
 S=${WORKDIR}/${P}
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
 HOMEPAGE="http://www.xinetd.org"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 SLOT="0"
 LICENSE="BSD"
 SRC_URI="http://www.xinetd.org/${P}.tar.gz"

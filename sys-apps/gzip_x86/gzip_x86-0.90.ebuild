@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip_x86/gzip_x86-0.90.ebuild,v 1.2 2002/10/19 22:04:02 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip_x86/gzip_x86-0.90.ebuild,v 1.3 2002/12/09 04:37:25 manson Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -50,7 +50,7 @@ SLOT="0"
 # applications) specify all keywords.
 # DO NOT USE KEYWORDS="*". This is deprecated and only for backward
 # compatibility reasons.
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 # Comprehensive list of any and all USE flags leveraged in the ebuild,
 # with the exception of any ARCH specific flags, i.e. "ppc", "sparc",

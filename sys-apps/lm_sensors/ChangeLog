@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.9 2002/10/31 05:33:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.10 2002/12/09 04:37:25 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *lm_sensors-2.6.5 (30 Oct 2002)
 
   30 Oct 2002; Kevyn Shortell <kevyn@gentoo.org> lm_sensors-2.6.5.ebuild :

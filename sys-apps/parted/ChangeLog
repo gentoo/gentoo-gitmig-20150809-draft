@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.7 2002/09/14 04:30:27 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.8 2002/12/09 04:37:26 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *parted-1.6.3 (14 Sep 2002)
 
   14 Sep 2002; Donny Davies <woodchip@gentoo.org> :

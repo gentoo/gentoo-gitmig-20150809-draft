@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11.ebuild,v 1.1 2002/11/02 22:21:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11.ebuild,v 1.2 2002/12/09 04:37:27 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="USB enumeration utilities"
 SRC_URI="http://usb.cs.tum.edu/download/usbutils/${P}.tar.gz"
 HOMEPAGE="http://usb.cs.tum.edu/"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc "
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"

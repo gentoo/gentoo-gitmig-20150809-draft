@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.15 2002/11/30 02:42:18 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.16 2002/12/09 04:37:27 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *util-linux-2.11y (27 Oct 2002)
 
   29 Nov 2002; Nicholas Jones <carpaski@gentoo.org> :

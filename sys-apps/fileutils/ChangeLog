@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.7 2002/09/25 14:29:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.8 2002/12/09 04:37:24 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *fileutils-4.1.11 (25 Sep 2002)
 
   25 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
