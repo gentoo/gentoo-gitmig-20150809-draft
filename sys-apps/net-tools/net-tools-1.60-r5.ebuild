@@ -1,31 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r5.ebuild,v 1.15 2003/02/24 22:34:59 dragon Exp $
-
-IUSE="nls build"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r5.ebuild,v 1.16 2003/02/28 09:34:50 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="standard Linux network tools"
 SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
-	mirror://gentoo/${P}-gentoo-extra.tar.bz2
-	http://cvs.gentoo.org/~seemant/${P}-gentoo-extra.tar.bz2"
+	mirror://gentoo/${P}-gentoo-extra.tar.bz2"
 HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha hppa arm mips"
+KEYWORDS="x86 ppc sparc alpha hppa arm mips"
+IUSE="nls build"
 
 DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
-
 	PATCHDIR=${WORKDIR}/${P}-gentoo
 
 	unpack ${A}
-	
 	cd ${S}
+
 	# some redhat patches
 	epatch ${PATCHDIR}/net-tools-1.57-bug22040.patch
 	epatch ${PATCHDIR}/net-tools-1.60-manydevs.patch
@@ -33,20 +29,17 @@ src_unpack() {
 	
 	cp ${PATCHDIR}/net-tools-1.60-config.h config.h
 	cp ${PATCHDIR}/net-tools-1.60-config.make config.make
-	
-	touch config.{h,make}		# sync timestamps
-	
+
 	cp Makefile Makefile.orig
 	sed -e "s:-O2 -Wall -g:${CFLAGS}:" Makefile.orig > Makefile
-	
+
 	cd man
 	cp Makefile Makefile.orig
 	sed -e "s:/usr/man:/usr/share/man:" Makefile.orig > Makefile
-	
+
 	cp -f ${PATCHDIR}/ether-wake.c ${S}
 
-	if [ -z "`use nls`" ]
-	then
+	if [ -z "`use nls`" ] ; then
 		cd ${S}
 		mv config.h config.h.orig
 		sed 's:\(#define I18N\) 1:\1 0:' config.h.orig > config.h
@@ -54,6 +47,8 @@ src_unpack() {
 		mv config.make config.make.orig
 		sed 's:I18N=1:I18N=0:' config.make.orig > config.make
 	fi
+
+	touch config.{h,make}		# sync timestamps
 }
 
 src_compile() {
@@ -62,13 +57,13 @@ src_compile() {
 	# breaking parallel makes (if ./configure doesn't finish first) 
 	make || die	
 
-	if [ "`use nls`" ]
-	then
+	if [ "`use nls`" ] ; then
 		cd po
 		make || die
+		cd ${S}
 	fi
-	
-	cd ${S}; gcc ${CFLAGS} -o ether-wake ether-wake.c || die
+
+	gcc ${CFLAGS} -o ether-wake ether-wake.c || die
 }
 
 src_install() {
