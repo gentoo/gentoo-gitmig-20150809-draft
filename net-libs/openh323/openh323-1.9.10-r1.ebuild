@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.2 2002/11/10 09:17:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.3 2002/11/10 09:18:06 raker Exp $
 
 S="${WORKDIR}/${PN}"
 
@@ -14,7 +14,7 @@ DEPEND="media-libs/Speex
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc -sparc -sparc64"
 
 src_compile() {
 
