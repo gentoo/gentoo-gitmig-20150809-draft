@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kbarcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/ChangeLog,v 1.2 2003/05/13 16:24:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/ChangeLog,v 1.3 2003/09/09 14:13:28 caleb Exp $
+
+*kbarcode-1.5.0 (09 Sep 2003)
+
+  09 Sep 2003; Caleb Tennis <caleb@gentoo.org> : kbarcode-1.5.0.ebuild
+  New version
 
 *kbarcode-1.2.1 (13 May 2003)
 
