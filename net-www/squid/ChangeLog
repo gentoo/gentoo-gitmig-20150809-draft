@@ -1,6 +1,9 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.56 2004/07/15 05:28:29 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.57 2004/07/15 18:32:33 tgall Exp $
+
+  15 Jul 2004; Tom Gall <tgall@gentoo.org> squid-2.5.5-r2.ebuild:
+  stable on ppc64, bug #55406
 
   15 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; -squid-2.5.3.ebuild,
   -squid-2.5.4.ebuild, -squid-2.5.5-r1.ebuild, squid-2.5.5-r2.ebuild,
