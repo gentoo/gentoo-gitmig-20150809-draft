@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.24 2003/11/29 05:06:55 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.25 2003/12/16 22:03:01 azarah Exp $
+
+*cdrdao-1.1.7-r3 (16 Dec 2003)
+
+  16 Dec 2003; Martin Schlemmer <azarah@gentoo.org> cdrdao-1.1.7-r3.ebuild,
+  files/cdrdao-1.1.7-gentoo-version.patch:
+  Add '-gentoo' to version, so that k3b, etc can detect that we have a special
+  version that includes scglib support.
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> cdrdao-1.1.7-r2.ebuild:
   mark stable on amd64
