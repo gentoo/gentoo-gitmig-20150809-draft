@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-frontends
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.19 2004/08/18 07:40:59 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.20 2004/08/26 03:46:03 weeve Exp $
+
+  25 Aug 2004; Jason Wever <weeve@gentoo.org> sane-frontends-1.0.12.ebuild:
+  Stable on sparc.
 
   18 Aug 2004; Patrick Kursawe <phosphan@gentoo.org>
   sane-frontends-1.0.12.ebuild, -sane-frontends-1.0.9.ebuild:
