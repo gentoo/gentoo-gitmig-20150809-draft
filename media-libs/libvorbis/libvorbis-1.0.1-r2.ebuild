@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.14 2004/11/11 09:44:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.15 2005/01/12 03:54:35 vapier Exp $
 
 inherit libtool flag-o-matic gcc
 
