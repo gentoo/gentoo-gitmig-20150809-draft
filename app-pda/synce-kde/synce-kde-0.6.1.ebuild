@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Kevin Koltzau <kevin@plop.org>
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/synce-kde-0.6.1.ebuild,v 1.2 2004/03/14 13:29:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/synce-kde-0.6.1.ebuild,v 1.3 2004/03/14 17:22:21 mr_bones_ Exp $
 
-inherit kde-base
+inherit kde
 
 need-kde 3.1
 

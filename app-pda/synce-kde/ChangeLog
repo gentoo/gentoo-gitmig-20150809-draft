@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/synce-kde
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/ChangeLog,v 1.1 2003/11/11 14:26:48 tad Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/ChangeLog,v 1.2 2004/03/14 17:22:21 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> synce-kde-0.6.1.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *synce-kde-0.6.1 (12 Nov 2003)
 
