@@ -150,9 +150,7 @@ sys-apps/utempter
 # <bcowan@gentoo.org> (25 Nov 2002)
 # masking until db-4* are unmasked
 # that way emerge -pu world works
-
-=net-nds/openldap-2.0.27
-=net-nds/openldap-2.1.8
+=net-nds/openldap-2.1.9
 
 # <phoenix@gentoo.org> (21 Nov 2002)
 # The huge nsplugins mask. These plugins use
