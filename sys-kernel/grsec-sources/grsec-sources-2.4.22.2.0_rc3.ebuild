@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.22.2.0_rc3.ebuild,v 1.1 2003/09/04 06:33:49 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.22.2.0_rc3.ebuild,v 1.2 2003/11/05 17:29:40 solar Exp $
 
 # Documentation on the patch contained in this kernel will be installed someday
 
@@ -22,7 +22,7 @@ DESCRIPTION="Vanilla sources of the linux kernel with the grsecurity ${PATCH_BAS
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 \
 	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
 	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign"
-HOMEPAGE="http://www.kernel.org/ http://www.grsecuirty.net"
+HOMEPAGE="http://www.kernel.org/ http://grsecurity.net"
 [ ${PATCH_BASE/.*/} == 1 ] && KEYWORDS="x86" || KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 SLOT="${OKV}"
 S=${WORKDIR}/linux-${KV}

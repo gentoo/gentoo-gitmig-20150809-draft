@@ -6,5 +6,9 @@
 		<email>solar@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
+	<maintainer>
+		<email>pappy@gentoo.org</email>
+		<description>Secondary Maintainer</description>
+	</maintainer>
 	<longdescription>Vanilla sources of the linux kernel with the grsecurity patch</longdescription>
 </pkgmetadata>
