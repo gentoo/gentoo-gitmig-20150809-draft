@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.58 2004/10/22 02:21:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.59 2004/10/22 04:32:09 wolf31o2 Exp $
+
+  22 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  genkernel-3.1.0.ebuild:
+  Added missing ppc64 KEYWORD.
 
 *genkernel-3.1.0 (21 Oct 2004)
 
