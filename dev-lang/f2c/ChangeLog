@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/f2c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.5 2004/07/01 16:51:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.6 2004/08/06 09:56:47 kugelfang Exp $
+
+  06 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> f2c-20030320.ebuild:
+  Marked stable on amd64 and ppc.
 
   01 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> +metadata.xml,
   f2c-20030320.ebuild:
