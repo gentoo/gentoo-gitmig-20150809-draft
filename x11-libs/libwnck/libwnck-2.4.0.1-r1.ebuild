@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.4.0.1-r1.ebuild,v 1.2 2003/10/14 06:16:03 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.4.0.1-r1.ebuild,v 1.3 2003/10/14 06:18:41 obz Exp $
 
 inherit gnome2
 
@@ -25,6 +25,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# Patch for pager issues, see bug #30264
-	epatch ${FILESDIR}/${P}-pager.patch
+	epatch ${FILESDIR}/${PN}-2.4.0.1-pager.patch
 
 }
