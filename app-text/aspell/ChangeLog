@@ -1,6 +1,11 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.63 2004/10/23 01:55:54 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.64 2004/11/21 19:20:39 arj Exp $
+
+*aspell-0.60.1.1 (21 Nov 2004)
+
+  21 Nov 2004; Anders Rune Jensen <arj@gentoo.org> +aspell-0.60.1.1.ebuild:
+  new version. Closes #71793.
 
   22 Oct 2004; Nick Dimiduk <ndimiduk@gentoo.org> aspell-0.50.5-r4.ebuild:
   Added ~ppc-macos keyword.
