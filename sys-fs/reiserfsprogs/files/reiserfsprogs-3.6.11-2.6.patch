@@ -1,0 +1,23 @@
+--- reiserfsprogs-3.6.11/lib/misc.c	2003-07-31 15:58:24.000000000 +0100
++++ reiserfsprogs-3.6.11/lib/misc.c.plasmaroo	2003-12-29 20:33:55.000000000 +0000
+@@ -21,6 +21,7 @@
+ #include <utime.h>
+ #include <ctype.h>
+ #include <linux/hdreg.h>
++#include <linux/version.h>
+ #include <dirent.h>
+ 
+ #include <asm/ioctl.h>
+@@ -36,7 +37,11 @@
+ #include "misc.h"
+ 
+ /* Debian modifications by Ed Boraas <ed@debian.org> */
+-#include <sys/mount.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++	#include <linux/fs.h>
++#else
++	#include <sys/mount.h>
++#endif
+ /* End Debian mods */
+ 
+ 
