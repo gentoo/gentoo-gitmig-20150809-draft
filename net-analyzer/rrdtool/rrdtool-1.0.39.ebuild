@@ -1,25 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.39.ebuild,v 1.7 2002/12/09 04:33:09 manson Exp $
-
-IUSE="tcltk perl"
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.39.ebuild,v 1.8 2002/12/13 19:55:41 vapier Exp $
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A system to store and display time-series data"
 SRC_URI="http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/pub/${P}.tar.gz"
 HOMEPAGE="http://ee-staff.ethz.ca/~oetiker/webtools/rrdtool/"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 sparc"
+IUSE="tcltk perl"
+
 DEPEND="perl? ( sys-devel/perl )
 	sys-apps/gawk
 	>=media-libs/libgd-1.8.3"
-
 RDEPEND="tcltk? ( dev-lang/tcl )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
 
 TCLVER=""
 
