@@ -1,11 +1,18 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.147 2004/04/15 08:18:11 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.148 2004/04/16 17:23:35 spock Exp $
 
 *mm-sources-2.6.5-r6 (15 Apr 2004)
 
   15 Apr 2004; Brandon Low <lostlogic@gentoo.org> mm-sources-2.6.5-r6.ebuild:
   Bump
+
+  16 Apr 2004; Michal Januszewski <spock@gentoo.org>
+  mm-sources-2.6.5_rc1-r1.ebuild, mm-sources-2.6.5_rc2-r2.ebuild,
+  mm-sources-2.6.5_rc2-r3.ebuild, mm-sources-2.6.5_rc2-r5.ebuild,
+  mm-sources-2.6.5_rc3-r1.ebuild, mm-sources-2.6.5_rc3-r4.ebuild:
+  Masked all rc ebuilds as ~x86. These versions are far from what should be
+  considered stable. Closes bug #47406.
 
   07 Apr 2004; <coxj@gentoo.org> mm-sources-2.6.5-r1.ebuild:
   Fix the ebuild to unpack properly
