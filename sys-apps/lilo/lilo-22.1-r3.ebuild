@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.2 2002/04/06 07:30:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.3 2002/04/06 07:52:30 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
@@ -12,6 +12,7 @@ DEPEND="virtual/glibc >=sys-devel/bin86-0.15.5"
 RDEPEND="virtual/glibc"
 
 pkg_setup() {
+	[ "${ROOT}" != "/" ] && return 0
 	. ${ROOT}/etc/init.d/functions.sh
 	local fstabstate="$(cat /etc/fstab |grep -v -e '#' |awk '{print $2}')"
 	local procstate="$(cat /proc/mounts |awk '{print $2}')"
