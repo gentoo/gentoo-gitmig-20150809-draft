@@ -1,6 +1,37 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.74 2004/07/16 06:11:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.75 2004/07/16 07:53:51 spyderous Exp $
+
+*xorg-x11-6.7.0-r2 (16 Jul 2004)
+
+  16 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.7.0-r2.ebuild:
+  PATCH_VER 1.2. Add
+  9395_all_6.7.0-savage-disable-xrandr-for-shadowfb-rotate.patch, given to Tim
+  Roberts by anonymous user, posted to devel@xfree86.org mailing list. Without
+  this patch, an attempt to use Xrandr with shadowFB-based rotation will result
+  in an unusable display. Add
+  9390_all_6.7.0-add-french-belgian-azerty-ppc-keyboard.patch, which adds a
+  keymap new in G4/G5 macs (#49155). Add
+  9385_all_6.7.0-motif-allow-fhs-and-default-off.patch, which looks outside of
+  /usr/X11R6 for motif and defaults it to OFF on Linux and BSD. Add
+  9375_all_6.7.0-radeon-resume-from-S3-suspend.patch (#48095), which allows the
+  ACPI S3 suspend state to work for at least some Radeons. Add
+  9000_all_4.3.0-lnx-evdev-core.patch, 9001_all_4.3.0-lnx-evdev-keyboard.patch
+  and 9002_all_6.7.0-lnx-evdev-mouse.patch from xfree-4.3.0-r7 to add event
+  interface device support (#29953, #56159). Add
+  9010_all_4.3.0-logitech-ps2-plusplus.patch from xfree-4.3.0-r7 to add support
+  for the PS/2++ protocol used by some of the newer Logitech mice (#29953,
+  #56159). Add 9365_all_6.7.0-fix-render-cplastbit-def.patch to correct the
+  definition of CPLastBit to account for ComponentAlpha, which may fix behavior
+  of the server's SetPictureToDefaults. Add
+  9370_all_6.7.0-install-xrender-pkgconfig-file.patch to install xrender.pc in a
+  cleaner way than former manual hack. OTHER CHANGES: Install glext.h to
+  /usr/lib/opengl/xorg-x11 like the other GL includes (#54984) and set up a
+  symlink manually to avoid an opengl-update circular dependency. Pull out the
+  external drop-in driver code entirely to clean up the ebuild. Enable the i810
+  driver on x86_64 (RH #126687). Set HasMotif to YES in the ebuild to counteract
+  9385_all_6.7.0-motif-allow-fhs-and-default-off.patch.
 
   16 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r1.ebuild:
