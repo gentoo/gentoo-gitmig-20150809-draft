@@ -1,15 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/xprint-008-r2.ebuild,v 1.1 2003/11/15 10:46:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/xprint-008-r2.ebuild,v 1.2 2003/12/08 11:22:11 lanius Exp $
 
 DESCRIPTION="An advanced printing system which enables X11 applications to use devices like printers in formats like PostScript, PDF, PCL, etc."
 HOMEPAGE="http://xprint.mozdev.org"
 SRC_URI="http://puck.informatik.med.uni-giessen.de/download/xprint_mozdev_org_source-2003-05-08-release_${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
-DEPEND="x11-base/xfree"
-RDEPEND="virtual/lpr"
+KEYWORDS="x86"
+DEPEND="x11-base/xfree
+	!app-arch/star"
+RDEPEND="x11-base/xfree
+	virtual/lpr"
 IUSE=""
 
 S=${WORKDIR}/xprint/src/xprint_main/xc/
