@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc1.ebuild,v 1.2 2003/10/17 18:16:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc1.ebuild,v 1.3 2003/10/21 15:07:29 mholzer Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ MY_PKG_SUFFIX=""
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -49,8 +50,7 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	media-libs/speex"
 
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
-	>=sys-devel/gcc-3.2"
+	nls? ( sys-devel/gettext )"
 
 #sys-devel/gcc-3.2 fixes -march=pentium4 compile issue
 
@@ -100,8 +100,6 @@ src_compile() {
 		|| myconf="${myconf} --disable-asf"
 	use sdl \
 		|| myconf="${myconf} --with-sdl-prefix=/null" # disable sdl check
-
-	einfo "myconf: ${myconf}"
 
 	econf ${myconf} || die "Configure failed"
 
