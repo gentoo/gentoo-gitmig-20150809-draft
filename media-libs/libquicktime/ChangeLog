@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.13 2003/10/03 12:07:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.14 2003/10/05 11:41:12 mholzer Exp $
+
+  06 Oct 2003; Martin Holzer <mholzer@gentoo.org> libquicktime-0.9.2.ebuild,
+  libquicktime-0.9.2_pre1.ebuild:
+  adding gtk IUSE. Closes #29068.
 
   03 Oct 2003; Heinrich Wendel <lanius@gentoo.org> libquicktime-0.9.2.ebuild:
   Made it block on virtual/quicktime, see bug 27851

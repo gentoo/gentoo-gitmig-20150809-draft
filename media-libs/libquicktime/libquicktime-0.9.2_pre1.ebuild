@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.14 2003/10/02 21:38:05 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.15 2003/10/05 11:41:12 mholzer Exp $
 
 inherit libtool eutils
 
@@ -8,13 +8,13 @@ MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A library based on quicktime4linux with extensions"
 HOMEPAGE="http://libquicktime.sourceforge.net/"
-SRC_URI="mirror://sourceforge/libquicktime/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~alpha ~ppc"
 
-IUSE="oggvorbis png jpeg"
+IUSE="oggvorbis png jpeg gtk"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	media-libs/libdv
@@ -28,8 +28,7 @@ PROVIDE="virtual/quicktime"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i "s:\(have_libavcodec=\)true:\1false:g" \
-		configure.ac
+	sed -i "s:\(have_libavcodec=\)true:\1false:g" configure.ac
 
 	# Fix bug 10966 by replacing the x86-centric OPTIMIZE_CFLAGS with
 	# our $CFLAGS
@@ -52,8 +51,11 @@ src_compile() {
 	use mmx \
 		&& myconf="${myconf} --enable-mmx" \
 		|| myconf="${myconf} --disable-mmx"
+	use gtk \
+		&& myconf="${myconf} --enable-gtktest" \
+		|| myconf="${myconf} --disable-gtktest"
 
-	econf ${myconf}
+	econf ${myconf} || die
 	emake -j1 || die
 }
 
