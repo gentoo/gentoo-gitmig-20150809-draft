@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5.ebuild,v 1.1 2004/06/30 15:36:27 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5.ebuild,v 1.2 2004/07/04 17:14:16 latexer Exp $
 
 inherit mono
 
@@ -18,7 +18,16 @@ DEPEND=">=dev-dotnet/mono-1.0
 		>=x11-libs/gtk-sharp-1.0
 		>=x11-libs/gtksourceview-1.0.0"
 
+
 src_unpack() {
+	if [ ! -f ${ROOT}/usr/share/gapi/gnome-api.xml ]
+	then
+		eerror "Support for gnome libraries missing from gtk-sharp!"
+		eerror "Please re-emerge gtk-sharp with 'gnome' in USE,"
+		eerror "then emerge gtksourceview-sharp."
+		die "Gnome support not found in gtk-sharp."
+	fi
+
 	unpack ${A}
 	sed -i "s:\`monodoc:${D}\`monodoc:" ${S}/doc/Makefile.in
 }
