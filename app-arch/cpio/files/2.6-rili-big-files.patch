@@ -1,3 +1,7 @@
+cpio normally can't cope with huge files on 32bit systems (2gig), 
+so why don't we fix that eh ?
+http://bugs.gentoo.org/show_bug.cgi?id=68520
+
 Index: src/extern.h
 ===================================================================
 RCS file: /cvsroot/cpio/cpio/src/extern.h,v

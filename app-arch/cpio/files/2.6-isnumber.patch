@@ -1,3 +1,7 @@
+On systems which define a macro 'isnumber()', cpio goes kaboom!
+OS X is on example of where this happens.
+http://bugs.gentoo.org/show_bug.cgi?id=74929
+
 diff -uNr cpio-2.5.90.orig/src/userspec.c cpio-2.5.90/src/userspec.c
 --- cpio-2.5.90.orig/src/userspec.c	Wed Dec 29 13:51:30 2004
 +++ cpio-2.5.90/src/userspec.c	Wed Dec 29 13:52:13 2004

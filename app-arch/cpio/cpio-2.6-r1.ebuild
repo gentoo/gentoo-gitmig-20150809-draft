@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6.ebuild,v 1.3 2005/01/20 14:09:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6-r1.ebuild,v 1.1 2005/01/29 04:51:42 vapier Exp $
 
 inherit eutils
 
@@ -18,8 +18,9 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-rili-big-files.patch
-	epatch ${FILESDIR}/${PV}-isnumber.patch
+	epatch ${FILESDIR}/${PV}-rili-big-files.patch #68520
+	epatch ${FILESDIR}/${PV}-isnumber.patch #74929
+	epatch ${FILESDIR}/${PV}-umask.patch #79844
 }
 
 src_compile() {
