@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/closetag
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/closetag/ChangeLog,v 1.1 2003/09/07 01:24:57 agriffis Exp $
+
+*closetag-0.9 (06 Sep 2003)
+
+  06 Sep 2003; Aron Griffis <agriffis@gentoo.org> closetag-0.9.ebuild:
+  Initial import of closetag vim plugin, submitted by Ciaran McCreesh in bug
+  27998
+
