@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.16 2005/01/02 19:45:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.17 2005/01/05 00:15:31 eradicator Exp $
+
+*speech-tools-1.2.3-r1 (03 Jan 2005)
+
+  03 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +speech-tools-1.2.3-r1.ebuild, -speech-tools-1.2.3.ebuild:
+  Revision bump without resetting KEYWORDS. This is forcing a re-emerge of the
+  package on systems which had a broken version of cpio installed. See bug
+  #74882. Also better multilib support.
 
   02 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   speech-tools-1.2.3.ebuild:

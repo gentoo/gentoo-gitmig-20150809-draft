@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.16 2005/01/02 19:45:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r1.ebuild,v 1.1 2005/01/05 00:15:31 eradicator Exp $
 
 IUSE="doc"
 
@@ -19,6 +19,8 @@ KEYWORDS="amd64 ppc sparc x86"
 
 RDEPEND="|| ( sys-libs/ncurses sys-libs/libtermcap-compat )"
 DEPEND="${RDEPEND}
+	app-arch/cpio
+	sys-apps/findutils
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}/speech_tools"
@@ -51,39 +53,41 @@ src_compile() {
 }
 
 src_install() {
-	into /usr/lib/speech-tools
-
-	cd ${S}/bin
-	rm -f Makefile
-
-	dodir /usr/lib/speech-tools/share/testsuite
-	for file in * ; do
-		dobin ${file}
-		dosed "s:${S}/testsuite/data:/usr/lib/speech-tools/share/testsuite:g" /usr/lib/speech-tools/bin/${file} testsuite/data
-		dosed "s:${S}/bin:/usr/lib/speech-tools/bin:g" /usr/lib/speech-tools/bin/${file}
-		dosed "s:${S}/main:/usr/lib/speech-tools/bin:g" /usr/lib/speech-tools/bin/${file}
-		dosed "s:${S}/lib:/usr/lib/speech-tools/lib:g" /usr/lib/speech-tools/bin/${file}
-	done
-
 	cd ${S}/lib
 	dolib.so libestbase.so.1.2.3.1
-	dosym /usr/lib/speech-tools/lib/libestbase.so.1.2.3.1 /usr/lib/speech-tools/lib/libestbase.so
+	dosym /usr/$(get_libdir)/libestbase.so.1.2.3.1 /usr/$(get_libdir)/libestbase.so
 	dolib.so libeststring.so.1.2
-	dosym /usr/lib/speech-tools/lib/libeststring.so.1.2 /usr/lib/speech-tools/lib/libeststring.so
+	dosym /usr/$(get_libdir)/libeststring.so.1.2 /usr/$(get_libdir)/libeststring.so
 	dolib.a libestbase.a
 	dolib.a libestools.a
 	dolib.a libeststring.a
 
+	into /usr/lib/speech-tools
+	cd ${S}/bin
+
+	dodir /usr/lib/speech-tools/share/testsuite
+	for file in * ; do
+		[ "${file}" = "Makefile" ] && continue
+		dobin ${file}
+		dosed "s:${S}/testsuite/data:/usr/lib/speech-tools/share/testsuite:g" /usr/lib/speech-tools/bin/${file} testsuite/data
+		dosed "s:${S}/bin:/usr/lib/speech-tools/bin:g" /usr/lib/speech-tools/bin/${file}
+		dosed "s:${S}/main:/usr/lib/speech-tools/bin:g" /usr/lib/speech-tools/bin/${file}
+		dosed "s:${S}/lib:/usr/$(get_libdir):g" /usr/lib/speech-tools/bin/${file}
+	done
+
 	insinto /usr/lib/speech-tools/lib/siod
 	cd ${S}/lib/siod
 	doins *
+
 	insinto /usr/share/doc/${PF}/example_data
 	cd ${S}/lib/example_data
 	doins *
 
 	cd ${S}
-	find config -print | cpio -pmd ${D}/usr/lib/speech-tools
-	find include -print | cpio -pmd ${D}/usr/lib/speech-tools
+	find config -print | cpio -pmd ${D}/usr/lib/speech-tools || die "Unable to install config files"
+	find include -print | cpio -pmd ${D}/usr/lib/speech-tools || die "Unable to install include files"
+
+	chown -R root:root ${D}/usr/lib/speech-tools
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/58speech-tools
@@ -95,6 +99,6 @@ src_install() {
 
 	if use doc ; then
 		cd ${S}/festdoc/speech_tools/doc
-		dohtml *
+		dohtml -r *
 	fi
 }
