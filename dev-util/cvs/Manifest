@@ -1,5 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0e4e9492c23527d97793e9edc052bc14 cvs-1.11.17.ebuild 1745
-MD5 55595b9846c071d908e3969ffdbbafc0 ChangeLog 6977
+MD5 dd5eaf130d1214128c29c56601f9b921 ChangeLog 7312
 MD5 7164d2a546785fee1e77dac8839fdeaa metadata.xml 224
+MD5 aea350aec0391f5fc675f200a3ce31b4 cvs-1.12.9.ebuild 1999
+MD5 2d50778e9aededb1c08b84c8e8b62ad3 files/cvs.pam 124
+MD5 cc3afaf974475188ce0d80b0b919f611 files/digest-cvs-1.12.9 272
 MD5 a156ed2cb03477a919f3a5faa80cb2a4 files/cvspserver.xinetd.d 282
 MD5 0c0c93104720c2efffe1046ec8db290f files/digest-cvs-1.11.17 276
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBVd6bPgS8WLD64cERAsr6AJ9W+7r/IneUcKRSXavW6zQU9sVHqwCfYgGw
+FJy8s02HzJGHDg56TAfZthg=
+=2PlR
+-----END PGP SIGNATURE-----
