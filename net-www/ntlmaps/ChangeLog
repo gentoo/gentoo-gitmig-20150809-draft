@@ -1,0 +1,7 @@
+# ChangeLog for net-www/ntlmaps
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/ntlmaps/ChangeLog,v 1.1 2004/06/11 08:43:55 satya Exp $
+
+  10 Jun 2004; satya@gentoo.org :
+  New ebuild, as per bug #49958. Initscripts.
+
