@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-local
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.4 2004/04/09 04:50:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.5 2004/04/09 05:25:45 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  streamtuner-local-0.4.0.ebuild:
+  Added libogg-1.1 dep.
 
 *streamtuner-local-0.4.0 (08 Apr 2004)
 
