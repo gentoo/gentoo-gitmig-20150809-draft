@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.9 2004/06/10 03:47:34 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.10 2004/06/11 08:45:57 spyderous Exp $
+
+  11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
+  xfree -r6 became -r7.
 
   09 Jun 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.0.ebuild,
   linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:

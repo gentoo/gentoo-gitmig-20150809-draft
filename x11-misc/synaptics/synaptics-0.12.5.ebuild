@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.12.5.ebuild,v 1.3 2004/04/07 21:02:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.12.5.ebuild,v 1.4 2004/06/11 08:48:00 spyderous Exp $
 
-# This ebuild overwrites synaptics files installed by <= xfree-4.3.0-r3
+# This ebuild overwrites synaptics files installed by <= xfree-4.3.0-r6
 # and xfree-4.3.99.14 >= X >= xfree-4.3.99.8.
 
 DESCRIPTION="Driver for Synaptics touchpads"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RDEPEND="|| ( >=x11-base/xfree-4.3.0-r6 x11-base/xorg-x11 )"
+RDEPEND="|| ( >=x11-base/xfree-4.3.0-r7 x11-base/xorg-x11 )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.3.ebuild,v 1.2 2004/06/10 03:47:34 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.3.ebuild,v 1.3 2004/06/11 08:45:57 spyderous Exp $
 
 DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="gtk gtk2 tcltk sdk"
 
-RDEPEND="|| ( >=x11-base/xfree-4.3.0-r6 x11-base/xorg-x11 )
+RDEPEND="|| ( >=x11-base/xfree-4.3.0-r7 x11-base/xorg-x11 )
 		gtk? (
 			gtk2? ( >=x11-libs/gtk+-2 )
 			!gtk2? ( =x11-libs/gtk+-1.2* )
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use sdk; then
-		if has_version ">=x11-base/xfree-4.3.0-r6"
+		if has_version ">=x11-base/xfree-4.3.0-r7"
 		then
 			if [ ! "`grep sdk /var/db/pkg/x11-base/xfree-[0-9]*/USE`" ]
 			then
