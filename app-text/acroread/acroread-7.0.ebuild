@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.6 2005/03/25 17:13:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.7 2005/03/28 15:54:53 usata Exp $
 
 inherit nsplugins eutils
 
@@ -11,12 +11,13 @@ SRC_URI="ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/${PV}/enu/AdbeRdr${PV/.}_l
 LICENSE="Adobe"
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
-IUSE="noplugin ldap"
+IUSE="noplugin ldap cjk"
 RESTRICT="nostrip"
 
 RDEPEND="virtual/libc
 	!amd64? ( ldap? ( net-nds/openldap ))
 	amd64? ( >=app-emulation/emul-linux-x86-gtklibs-1.2-r1 )"
+PDEPEND="cjk? ( =media-fonts/acroread-asianfonts-${PV}* )"
 PROVIDE="virtual/pdfviewer"
 
 INSTALLDIR=/opt/Acrobat7
@@ -78,10 +79,6 @@ pkg_postinst () {
 	# fix wrong directory permissions (bug #25931)
 	find ${INSTALLDIR} -type d | xargs chmod 755 || die
 
-	einfo "Asianfonts are not available separately for version 7 (yet)"
-	einfo "The workaround for the time being is to copy the 'Resource' directory from"
-	einfo "a windows machine with acrobat reader 7 and asian font support installed."
-	einfo
 	einfo "The Acrobat(TM) Security Plugin will be enabled with USE=ldap, it"
 	einfo "does not work with amd64 because there is no x86 ldap-emulation"
 	einfo "package available in portage."

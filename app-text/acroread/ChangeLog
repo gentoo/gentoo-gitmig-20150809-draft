@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.49 2005/03/25 17:13:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.50 2005/03/28 15:54:53 usata Exp $
+
+  28 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> acroread-5.10.ebuild,
+  acroread-7.0.ebuild:
+  Added cjk USE flag back; bug #85343.
 
   25 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> acroread-5.10.ebuild,
   acroread-7.0.ebuild:
