@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.4.0.ebuild,v 1.2 2004/06/24 22:00:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.4.0.ebuild,v 1.3 2004/10/31 05:06:58 vapier Exp $
 
 inherit games
 
 DESCRIPTION="A racing game starring Tux, the linux penguin"
-HOMEPAGE="http://tuxkart.sourceforge.net"
+HOMEPAGE="http://tuxkart.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tuxkart/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64"
+KEYWORDS="alpha amd64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/plib-1.8.0
