@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.40 2004/08/21 10:58:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.41 2004/08/26 14:53:57 cyfred Exp $
+
+  27 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; -files/glext.h-20040714.bz2,
+  opengl-update-1.8.1.ebuild:
+  Moving glext.h to distfiles
 
   21 Aug 2004; Seemant Kulleen <seemant@gentoo.org> -files/glext.h-20040714,
   +files/glext.h-20040714.bz2, opengl-update-1.8.1.ebuild:

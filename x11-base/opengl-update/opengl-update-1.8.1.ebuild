@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.8.1.ebuild,v 1.4 2004/08/21 10:58:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.8.1.ebuild,v 1.5 2004/08/26 14:53:57 cyfred Exp $
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI=""
+SRC_URI="http://dev.gentoo.org/~cyfred/distfiles/glext.h-20040714.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,7 +41,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	bzcat ${FILESDIR}/glext.h-${GLEXT}.bz2 > ${WORKDIR}/glext.h || die
+	bzcat ${DISTDIR}/glext.h-${GLEXT}.bz2 > ${WORKDIR}/glext.h || die
 }
 
 src_install() {
