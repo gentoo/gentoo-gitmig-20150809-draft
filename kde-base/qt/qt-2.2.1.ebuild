@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-2.2.1.ebuild,v 1.1 2000/12/09 06:26:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-2.2.1.ebuild,v 1.2 2000/12/09 14:33:49 drobbins Exp $
 
 QP=${PN}-x11-${PV}
 A=${QP}.tar.gz
@@ -59,7 +59,7 @@ src_install() {
 	cd ${D}/usr/lib
  	ln -sf  ${QP} qt
 	cd ${S}
-	dodir /usr/lib/${P}/include
+	dodir /usr/lib/${QP}/include
 	cp include/* ${D}/usr/lib/${QP}/include/
 #	cp -a extensions ${D}/usr/lib/${QP}/
 #	cd src
