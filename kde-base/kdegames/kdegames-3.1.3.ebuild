@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/kdegames-3.1.3.ebuild,v 1.3 2003/08/07 02:53:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/kdegames-3.1.3.ebuild,v 1.4 2003/08/13 12:21:27 weeve Exp $
 inherit kde-dist eutils
 
 DESCRIPTION="KDE games (solitaire :-)"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 	
 #13 Jul 2003: drobbins: building kdegames-3.1.2 fails on dual Xeon; disabling parallel mode :/
 MAKEOPTS="$MAKEOPTS -j1"
