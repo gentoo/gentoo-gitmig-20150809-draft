@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.9.ebuild,v 1.1 2004/07/25 18:41:11 aether Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.9.ebuild,v 1.2 2004/08/07 21:45:28 slarti Exp $
 
 inherit distutils
 
-DESCRIPTION=" Java enviroment configuration tool"
+DESCRIPTION=" Java environment configuration tool"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/java-config-${PV}.tar.bz2"
 LICENSE="GPL-2"
