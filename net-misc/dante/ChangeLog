@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.21 2004/02/21 20:37:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.22 2004/03/03 02:46:52 weeve Exp $
+
+  02 Mar 2004; Jason Wever <weeve@gentoo.org> dante-1.1.14-r2.ebuild:
+  Marked stable on sparc.
 
   21 Feb 2004; Seemant Kulleen <seemant@gentoo.org> dante-1.1.13.ebuild,
   dante-1.1.14-r1.ebuild, dante-1.1.14-r2.ebuild:
