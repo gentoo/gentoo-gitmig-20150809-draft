@@ -47,8 +47,8 @@ src_install() {
 		dodir ${D}/usr/share/applnk
 		cp ${FILESDIR}/amsn.desktop ${D}/usr/share/applnk/
 		einfo "Installing KDE Icons in default theme"
-		mkdir -p ${KDEDIR}/share/icons/default.kde 
-		cp -a ${S}/icons/* ${KDEDIR}/share/icons/default.kde
+		mkdir -p ${D}/${KDEDIR}/share/icons/default.kde 
+		cp -a ${S}/icons/* ${D}/${KDEDIR}/share/icons/default.kde
 	fi
 
 	if [ -n "`use imlib`" ]
