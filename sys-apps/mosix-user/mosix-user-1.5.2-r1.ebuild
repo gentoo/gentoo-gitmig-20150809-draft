@@ -24,14 +24,14 @@ src_compile() {
 	for x in lib/moslib sbin/setpe sbin/tune bin/mosrun usr.bin/mon usr.bin/migrate usr.bin/mosctl
 	do
 		cd $x
-		make
+		make || die
 		cd ../..
 	done
 }
 
 src_install () {
 	cd ${S}
-	make PREFIX=${D}/usr install
+	make ROOT=${D} PREFIX=${D}/usr install
 	dodir /usr/share	
 	cd ${D}/usr
 	mv man share	
