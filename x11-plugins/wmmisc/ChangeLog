@@ -1,0 +1,8 @@
+# ChangeLog for x11-plugins/wmmisc
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmisc/ChangeLog,v 1.1 2004/11/28 18:49:18 s4t4n Exp $
+
+*wmmisc-0.9 (28 Nov 2004)
+
+  28 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> wmmisc-0.9.ebuild:
+  Initial import.
