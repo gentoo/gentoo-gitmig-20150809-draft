@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.68 2004/04/20 01:47:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.69 2004/04/21 01:40:23 caleb Exp $
+
+  20 Apr 2004; Caleb Tennis <caleb@gentoo.org> -kdeedu-3.0.5b.ebuild:
+  Remove old version
 
 *kdeedu-3.2.2 (19 Apr 2004)
 

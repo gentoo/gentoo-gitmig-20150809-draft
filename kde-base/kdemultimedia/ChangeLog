@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.99 2004/04/21 01:26:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.100 2004/04/21 01:37:56 caleb Exp $
+
+  20 Apr 2004; Caleb Tennis <caleb@gentoo.org>
+  -files/kdemultimedia-3.0.5b-gentoo-timidity.diff,
+  -kdemultimedia-3.0.5b.ebuild:
+  Remove old version
 
   20 Apr 2004; Caleb Tennis <caleb@gentoo.org> : kdemultimedia-3.2.2-r1.ebuild
   Radical changes to the ebuild - see bug #48484
