@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-squid
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.7 2004/11/23 17:19:57 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.8 2004/12/12 12:49:54 kaiowas Exp $
+
+  12 Dec 2004; petre rodan <kaiowas@gentoo.org>
+  -selinux-squid-20040106.ebuild, -selinux-squid-20041109.ebuild:
+  removed old builds
 
   23 Nov 2004; petre rodan <kaiowas@gentoo.org>
   selinux-squid-20041120.ebuild:
