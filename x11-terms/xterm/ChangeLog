@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.67 2005/03/10 18:47:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.68 2005/04/01 19:27:18 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> xterm-199.ebuild:
+  stable on ia64
 
   10 Mar 2005; Seemant Kulleen <seemant@gentoo.org> xterm-200.ebuild:
   sorry, utempter stays -- I would rather *not* have xterm be sgid

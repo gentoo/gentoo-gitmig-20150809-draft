@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.8.2.ebuild,v 1.7 2005/03/21 19:19:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.8.2.ebuild,v 1.8 2005/04/01 19:26:14 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64 ~mips"
 IUSE=""
 
 RDEPEND="virtual/xft
