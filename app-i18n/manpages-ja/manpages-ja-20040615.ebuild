@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040615.ebuild,v 1.9 2004/10/19 09:35:18 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040615.ebuild,v 1.10 2004/11/04 04:00:49 usata Exp $
 
 MY_P="man-pages-ja-${PV}"
 GENTOO_MAN_P="portage-${P}"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ~ia64"
 IUSE=""
 
-DEPEND=">=sys-apps/groff-1.18.1-r2
+DEPEND="!>=sys-apps/groff-1.19
 	=sys-apps/groff-1.18*
 	sys-apps/man"
 
