@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9-r1.ebuild,v 1.5 2004/06/24 22:42:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9-r1.ebuild,v 1.6 2004/07/01 22:15:20 eradicator Exp $
 
 IUSE="ldap"
 
@@ -9,7 +9,7 @@ DESCRIPTION="amd automounter and utilities"
 HOMEPAGE="http://www.am-utils.org"
 SRC_URI="ftp://ftp.am-utils.org/pub/am-utils/${P}.tar.gz"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ldap? ( >=net-nds/openldap-1.2 )"
 
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/sfs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.8 2004/06/24 22:44:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.9 2004/07/01 22:15:33 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> sfs-0.7.2.ebuild:
+  virtual/glibc -> virtual/libc
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> sfs-0.7.2.ebuild:
   Fix use invocation
