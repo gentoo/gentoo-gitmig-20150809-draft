@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.4.ebuild,v 1.6 2003/02/13 16:54:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.4.ebuild,v 1.7 2003/02/15 18:49:15 hannes Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -41,7 +41,7 @@ USE_SNAPSHOT="yes"
 PATCH_VER="1.1"
 FT2_VER="2.1.3"
 SISDRV_VER="141202-1"
-SAVDRV_VER="1.1.26t"
+SAVDRV_VER="1.1.27t"
 
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
@@ -57,7 +57,7 @@ HOMEPAGE="http://www.xfree.org"
 X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
-	http://www.probo.com/timr/savage-${SAVDRV_VER}.tgz
+	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
 	http://www.webit.at/~twinny/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
 #	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
 # Updated Wacom driver:  http://people.mandrakesoft.com/~flepied/projects/wacom/
@@ -111,7 +111,8 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=x11-base/opengl-update-1.4
 	>=x11-misc/ttmkfdir-3.0.4
 	pam? ( >=sys-libs/pam-0.75 )
-	truetype? ( app-arch/cabextract )"
+	truetype? ( app-arch/cabextract )
+	app-arch/unzip" # needed for savage driver (version 1.1.27t)
 	
 RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -164,9 +165,11 @@ src_unpack() {
 	unset EPATCH_EXCLUDE
 
 	# Update the Savage Driver
+	# savage driver 1.1.27t is a .zip and contains a savage directory
+	# (that's why we have to be in drivers, not in savage subdir).
 	ebegin "Updating Savage driver"
-	cd ${S}/programs/Xserver/hw/xfree86/drivers/savage
-	tar -zxf ${DISTDIR}/savage-${SAVDRV_VER}.tgz || die
+	cd ${S}/programs/Xserver/hw/xfree86/drivers
+	unzip -oqq ${DISTDIR}/savage-${SAVDRV_VER}.zip || die
 	eend 0
     
 	# Update the SIS Driver

@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.92 2003/02/12 09:21:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.93 2003/02/15 18:49:15 hannes Exp $
+
+  15 Feb 2003; Hannes Mehnert <hannes@gentoo.org> xfree-4.2.99.4.ebuild:
+
+  bumped savage driver to 1.1.27t (prior versions do not work). also added
+  dep on app-arch/unzip (because 1.1.27t is a .zip)
 
   09 Feb 2003; Luca Barbato <lu_zero@gentoo.org> :
 
