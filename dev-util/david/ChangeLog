@@ -1,7 +1,0 @@
-# ChangeLog for dev-util/david
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/david/ChangeLog,v 1.1 2002/04/24 21:32:42 spider Exp $
-
-*david-0.99.2 ( 24 Apr 2002)
-  24 Apr 2002; Spider <spider@gentoo.org> david-0.99.2.ebuild ChangeLog: 
-  Initial release 
