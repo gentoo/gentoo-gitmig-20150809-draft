@@ -1,6 +1,6 @@
 # Copyright 2003-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0.ebuild,v 1.1 2004/07/04 20:36:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0.ebuild,v 1.2 2004/07/04 20:57:58 karltk Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="|| ( >=virtual/jdk-1.4.2 =dev-java/blackdown-jdk-1.4.2* )
 		)
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )
 	jikes? ( >=dev-java/jikes-1.19 )
-	"
+	!media-fonts/unifont"
 
 DEPEND="${RDEPEND}
 	>=dev-java/ant-1.5.3

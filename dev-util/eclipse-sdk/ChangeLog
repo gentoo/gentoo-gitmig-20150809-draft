@@ -1,9 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.46 2004/07/04 20:36:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.47 2004/07/04 20:57:58 karltk Exp $
 
   04 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
-  eclipse-sdk-3.0.0.ebuild: New upstream version.
+  eclipse-sdk-3.0.0.ebuild: New upstream version. Added block
+  against media-fonts/unifont, at the request of Billy Biggs
+  from Eclipse.
 
   29 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0_rc3.ebuild: Added temporary check that at least
