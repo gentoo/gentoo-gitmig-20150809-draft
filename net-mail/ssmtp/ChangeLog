@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.4 2002/12/13 11:00:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.5 2003/02/03 01:29:50 raker Exp $
+
+*ssmtp-2.48 (02 Feb 2003)
+
+  02 Feb 2003; Nick Hadaway <raker@gentoo.org> ssmtp-2.48.ebuild,
+  files/digest-ssmtp-2.48 :
+  Version bump.  Thanks to Matsuu Takuto on bug #14726 for the heads up.
+  Added a doc which explains a little bit about the new TLS support
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
