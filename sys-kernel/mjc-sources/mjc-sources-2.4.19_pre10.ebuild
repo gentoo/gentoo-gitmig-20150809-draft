@@ -56,7 +56,7 @@ src_unpack() {
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
-	chown -R 0.0 *O
+	chown -R 0.0 *
 	chmod -R a+r-w+X,u+w *
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
