@@ -1,0 +1,55 @@
+#! /bin/sh -e
+
+# DP: Description: Minimum required kernel bump. 
+# DP: Author: Carlos O'Donell <carlos@baldric.uwo.ca>
+# DP: Upstream status: Submitted
+# DP: Status Details: Awaiting upstream approval
+# DP: Date: November 16, 2002
+
+#
+#2002-11-11  Carlos O'Donell  <carlos@baldric.uwo.ca>
+#
+#	* sysdeps/unix/sysv/linux/configure.in:
+#	Make 2.4.19 minimum linux kernel for hppa, and add unwind symbols
+#	from gcc-3.0 era for backwards compatibility.
+#	* sysdeps/unix/sysv/linux/configure: Regenerate.
+#			
+
+if [ $# -ne 2 ]; then
+    echo >&2 "`basename $0`: script expects -patch|-unpatch as argument"
+    exit 1
+fi
+case "$1" in
+    -patch) patch -d "$2" -f --no-backup-if-mismatch -p1 < $0;;
+    -unpatch) patch -d "$2" -f --no-backup-if-mismatch -R -p1 < $0;;
+    *)
+	echo >&2 "`basename $0`: script expects -patch|-unpatch as argument"
+	exit 1
+esac
+exit 0
+
+# append the patch here and adjust the -p? flag in the patch calls.
+--- glibc-2.3.1.orig/sysdeps/unix/sysv/linux/configure.in	2002-10-25 21:06:29.000000000 -0400
++++ glibc-2.3.1/sysdeps/unix/sysv/linux/configure.in	2002-11-17 22:09:57.000000000 -0500
+@@ -64,7 +64,8 @@
+     arch_minimum_kernel=2.4.0
+     ;;
+   hppa*)
+-    arch_minimum_kernel=2.3.99
++    libc_cv_gcc_unwind_find_fde=yes  
++    arch_minimum_kernel=2.4.19
+     ;;
+   m68k*)
+     arch_minimum_kernel=2.0.10
+--- glibc-2.3.1.orig/sysdeps/unix/sysv/linux/configure	2002-10-25 21:06:29.000000000 -0400
++++ glibc-2.3.1/sysdeps/unix/sysv/linux/configure	2002-11-17 22:10:17.000000000 -0500
+@@ -101,7 +101,8 @@
+     arch_minimum_kernel=2.4.0
+     ;;
+   hppa*)
+-    arch_minimum_kernel=2.3.99
++    libc_cv_gcc_unwind_find_fde=yes  
++    arch_minimum_kernel=2.4.19
+     ;;
+   m68k*)
+     arch_minimum_kernel=2.0.10

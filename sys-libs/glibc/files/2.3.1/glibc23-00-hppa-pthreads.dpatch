@@ -1,0 +1,857 @@
+#! /bin/sh -e
+
+# DP: Description: HPPA Linuxthreads implementation 
+# DP: Author: Carlos O'Donell <carlos@baldric.uwo.ca> (original work by Matthew Wilcox <willy@debian.org>)
+# DP: Upstream status: Submitted 
+# DP: Status Details:  Awaiting upstream approval
+# DP: Date: November 16, 2002
+
+#
+#2002-11-11  Carlos O'Donell  <carlos@baldric.uwo.ca>
+#
+#        * linuxthreads/descr.h: Change spinlock type to __atomic_lock_t.
+#        * linuxthreads/pt-machine.c: Change extern definition of testandset
+#        so it uses __atomic_lock_t instead of int.
+#        * linuxthreads/pthread.c:
+#        (__pthread_initialize_minimal): Replace the use of __LT_SPINLOCK_INIT
+#        with __LT_INITIALIZER_NOT_ZERO in cases where it is used to check
+#        wether the initialization should occur or not.
+#        (__pthread_initialize_manager): Likewise.
+#        * linuxthreads/spinlock.h: Add default define for lock_held if it has
+#        not already been defined. Create the __pthread_lock_define_initialized
+#        macro to wrap up the use of an alternate initializer. Change
+#        __pthread_compare_and_swap to use __atomic_lock_t,
+#        (compare_and_swap): Change function definitions to use __atomic_lock_t
+#        (compare_and_swap_with_release_semantics): Likewise.
+#        (__pthread_compare_and_swap): Likewise.
+#        * linuxthreads/spinlock.c: Change definition of __pthread_acquire to
+#        use __atomic_lock_t. Modify struct wait_node to use __atomic_lock_t
+#        as lock. Wrap definition and init of wait_node_free_list_spinlock in
+#        macro.
+#        (__pthread_release): Change function definition to use __atomic_lock_t
+#        (__pthread_alt_lock): Change instances of abandoned = 0 to
+#        abandoned = __LT_SPINLOCK_INIT.
+#        (__pthread_alt_timedlock): Likewise.
+#        (__pthread_alt_unlock): Use lock_held instead of just checking
+#        abandoned == 0. Typo fix in comment from "canno6" to "cannot"
+#        (__pthread_compare_and_swap): Change function definition to use
+#        __atomic_lock_t.
+#        (__pthread_acquire): Likewise.
+#        * linuxthreads/sysdeps/hppa/pspinlock.c: Define __ldcw macro for PA's
+#        single atomic operation.
+#        (__pthread_spin_lock): Modified to use __ldcw macro.
+#        (__pthread_spin_trylock): Likewise.
+#        * linuxthreads/sysdeps/hppa/pt-machine.h: Add sys/types.h to pull in
+#        __atomic_long_t definition. Remove extern testandset define. Add
+#        defines for FLOATING_STACKS and ARACH_STACK_MAX_SIZE. Add lock_held
+#        macro.
+#        (__get_cr27): New.
+#        (__set_cr27): New.
+#        (__load_and_clear): New.
+#        (testandset): Modified to emulate testandset using __load_and_clear.
+#        * linuxthreads/sysdeps/pthread/bits/libc-lock.h: Replace the use of
+#        __LT_SPINLOCK_INIT with that of __LT_INITIALIZER_NOT_ZERO.
+#        * linuxthreads/sysdeps/pthread/bits/pthreadtypes.h:
+#        Define default __atomic_lock_t to be an int. Change struct
+#        _pthread_fastlock to reflect name change.
+#        * linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/initspin.h:
+#        Change macro's to reflect that lock is actually struct.
+#        * linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/pthreadtypes.h: New.
+#        * linuxthreads/sysdeps/unix/sysv/linux/hppa/pt-initfini.c:
+#        Avoid unterminated string literals.
+#        * sysdeps/hppa/dl-fptr.c: Change global lock to use
+#        __LT_SPINLOCK_ALT_INIT.
+#        (__hppa_make_fptr): Use __LT_SPINLOCK_INIT to clear locks.
+#        (_dl_unmap): Likewise.
+#        (_dl_lookup_address): Likewise, and clear bottom two bits of address
+#        to fix function pointer calculation, see make_ftpr for the reasoning.
+#
+
+if [ $# -ne 2 ]; then
+    echo >&2 "`basename $0`: script expects -patch|-unpatch as argument"
+    exit 1
+fi
+case "$1" in
+    -patch) patch -d "$2" -f --no-backup-if-mismatch -p1 < $0;;
+    -unpatch) patch -d "$2" -f --no-backup-if-mismatch -R -p1 < $0;;
+    *)
+	echo >&2 "`basename $0`: script expects -patch|-unpatch as argument"
+	exit 1
+esac
+exit 0
+
+# append the patch here and adjust the -p? flag in the patch calls.
+diff -urN glibc-2.3.1.orig/linuxthreads/descr.h glibc-2.3.1/linuxthreads/descr.h
+--- glibc-2.3.1.orig/linuxthreads/descr.h	2002-10-09 05:10:55.000000000 -0400
++++ glibc-2.3.1/linuxthreads/descr.h	2002-11-03 16:57:02.000000000 -0500
+@@ -61,7 +61,7 @@
+ /* Atomic counter made possible by compare_and_swap */
+ struct pthread_atomic {
+   long p_count;
+-  int p_spinlock;
++  __atomic_lock_t p_spinlock;
+ };
+ 
+ 
+diff -urN glibc-2.3.1.orig/linuxthreads/pt-machine.c glibc-2.3.1/linuxthreads/pt-machine.c
+--- glibc-2.3.1.orig/linuxthreads/pt-machine.c	2002-08-26 18:39:45.000000000 -0400
++++ glibc-2.3.1/linuxthreads/pt-machine.c	2002-11-09 19:03:50.000000000 -0500
+@@ -19,7 +19,9 @@
+ 
+ #define PT_EI
+ 
+-extern long int testandset (int *spinlock);
++#include <pthread.h>
++
++extern long int testandset (__atomic_lock_t *spinlock);
+ extern int __compare_and_swap (long int *p, long int oldval, long int newval);
+ 
+ #include <pt-machine.h>
+diff -urN glibc-2.3.1.orig/linuxthreads/pthread.c glibc-2.3.1/linuxthreads/pthread.c
+--- glibc-2.3.1.orig/linuxthreads/pthread.c	2002-10-11 06:53:15.000000000 -0400
++++ glibc-2.3.1/linuxthreads/pthread.c	2002-11-07 09:39:12.000000000 -0500
+@@ -309,9 +309,9 @@
+   pthread_descr self;
+ 
+   /* First of all init __pthread_handles[0] and [1] if needed.  */
+-# if __LT_SPINLOCK_INIT != 0
+-  __pthread_handles[0].h_lock = __LOCK_INITIALIZER;
+-  __pthread_handles[1].h_lock = __LOCK_INITIALIZER;
++# ifdef __LT_INITIALIZER_NOT_ZERO
++  __pthread_handles[0].h_lock = __LOCK_ALT_INITIALIZER;
++  __pthread_handles[1].h_lock = __LOCK_ALT_INITIALIZER;
+ # endif
+ # ifndef SHARED
+   /* Unlike in the dynamically linked case the dynamic linker has not
+@@ -334,7 +334,7 @@
+ # endif
+   /* self->p_start_args need not be initialized, it's all zero.  */
+   self->p_userstack = 1;
+-# if __LT_SPINLOCK_INIT != 0
++# ifdef __LT_INITIALIZER_NOT_ZERO 
+   self->p_resume_count = (struct pthread_atomic) __ATOMIC_INITIALIZER;
+ # endif
+   self->p_alloca_cutoff = __MAX_ALLOCA_CUTOFF;
+@@ -346,9 +346,9 @@
+   __pthread_handles[0].h_descr = self;
+ #else
+   /* First of all init __pthread_handles[0] and [1].  */
+-# if __LT_SPINLOCK_INIT != 0
+-  __pthread_handles[0].h_lock = __LOCK_INITIALIZER;
+-  __pthread_handles[1].h_lock = __LOCK_INITIALIZER;
++# ifdef __LT_INITIALIZER_NOT_ZERO
++  __pthread_handles[0].h_lock = __LOCK_ALT_INITIALIZER;
++  __pthread_handles[1].h_lock = __LOCK_ALT_INITIALIZER;
+ # endif
+   __pthread_handles[0].h_descr = &__pthread_initial_thread;
+   __pthread_handles[1].h_descr = &__pthread_manager_thread;
+@@ -572,7 +572,7 @@
+ # endif
+   tcb->p_start_args = (struct pthread_start_args) PTHREAD_START_ARGS_INITIALIZER(__pthread_manager);
+   tcb->p_nr = 1;
+-# if __LT_SPINLOCK_INIT != 0
++# ifdef __LT_INITIALIZER_NOT_ZERO 
+   self->p_resume_count = (struct pthread_atomic) __ATOMIC_INITIALIZER;
+ # endif
+   tcb->p_alloca_cutoff = PTHREAD_STACK_MIN / 4;
+diff -urN glibc-2.3.1.orig/linuxthreads/spinlock.c glibc-2.3.1/linuxthreads/spinlock.c
+--- glibc-2.3.1.orig/linuxthreads/spinlock.c	2002-08-29 06:32:19.000000000 -0400
++++ glibc-2.3.1/linuxthreads/spinlock.c	2002-11-09 14:51:45.000000000 -0500
+@@ -24,9 +24,9 @@
+ #include "spinlock.h"
+ #include "restart.h"
+ 
+-static void __pthread_acquire(int * spinlock);
++static void __pthread_acquire(__atomic_lock_t * spinlock);
+ 
+-static inline void __pthread_release(int * spinlock)
++static inline void __pthread_release(__atomic_lock_t * spinlock)
+ {
+   WRITE_MEMORY_BARRIER();
+   *spinlock = __LT_SPINLOCK_INIT;
+@@ -269,11 +269,11 @@
+ struct wait_node {
+   struct wait_node *next;	/* Next node in null terminated linked list */
+   pthread_descr thr;		/* The thread waiting with this node */
+-  int abandoned;		/* Atomic flag */
++  __atomic_lock_t abandoned;	/* Atomic flag */
+ };
+ 
+ static long wait_node_free_list;
+-static int wait_node_free_list_spinlock;
++__pthread_lock_define_initialized(static, wait_node_free_list_spinlock);
+ 
+ /* Allocate a new node from the head of the free list using an atomic
+    operation, or else using malloc if that list is empty.  A fundamental
+@@ -376,7 +376,7 @@
+       if (self == NULL)
+ 	self = thread_self();
+ 
+-      wait_node.abandoned = 0;
++      wait_node.abandoned = __LT_SPINLOCK_INIT;
+       wait_node.next = (struct wait_node *) lock->__status;
+       wait_node.thr = self;
+       lock->__status = (long) &wait_node;
+@@ -402,7 +402,7 @@
+       wait_node.thr = self;
+       newstatus = (long) &wait_node;
+     }
+-    wait_node.abandoned = 0;
++    wait_node.abandoned = __LT_SPINLOCK_INIT;
+     wait_node.next = (struct wait_node *) oldstatus;
+     /* Make sure the store in wait_node.next completes before performing
+        the compare-and-swap */
+@@ -451,7 +451,7 @@
+       if (self == NULL)
+ 	self = thread_self();
+ 
+-      p_wait_node->abandoned = 0;
++      p_wait_node->abandoned = __LT_SPINLOCK_INIT;
+       p_wait_node->next = (struct wait_node *) lock->__status;
+       p_wait_node->thr = self;
+       lock->__status = (long) p_wait_node;
+@@ -474,7 +474,7 @@
+       p_wait_node->thr = self;
+       newstatus = (long) p_wait_node;
+     }
+-    p_wait_node->abandoned = 0;
++    p_wait_node->abandoned = __LT_SPINLOCK_INIT;
+     p_wait_node->next = (struct wait_node *) oldstatus;
+     /* Make sure the store in wait_node.next completes before performing
+        the compare-and-swap */
+@@ -574,7 +574,7 @@
+     while (p_node != (struct wait_node *) 1) {
+       int prio;
+ 
+-      if (p_node->abandoned) {
++      if (lock_held(&p_node->abandoned)) {
+ 	/* Remove abandoned node. */
+ #if defined TEST_FOR_COMPARE_AND_SWAP
+ 	if (!__pthread_has_cas)
+@@ -605,7 +605,7 @@
+ 	p_max_prio = p_node;
+       }
+ 
+-      /* This canno6 jump backward in the list, so no further read
++      /* This cannot jump backward in the list, so no further read
+          barrier is needed. */
+       pp_node = &p_node->next;
+       p_node = *pp_node;
+@@ -662,7 +662,7 @@
+ #if !defined HAS_COMPARE_AND_SWAP || defined TEST_FOR_COMPARE_AND_SWAP
+ 
+ int __pthread_compare_and_swap(long * ptr, long oldval, long newval,
+-                               int * spinlock)
++                               __atomic_lock_t * spinlock)
+ {
+   int res;
+ 
+@@ -699,7 +699,7 @@
+    - When nanosleep() returns, we try again, doing MAX_SPIN_COUNT
+      sched_yield(), then sleeping again if needed. */
+ 
+-static void __pthread_acquire(int * spinlock)
++static void __pthread_acquire(__atomic_lock_t * spinlock)	
+ {
+   int cnt = 0;
+   struct timespec tm;
+diff -urN glibc-2.3.1.orig/linuxthreads/spinlock.h glibc-2.3.1/linuxthreads/spinlock.h
+--- glibc-2.3.1.orig/linuxthreads/spinlock.h	2001-05-24 19:36:35.000000000 -0400
++++ glibc-2.3.1/linuxthreads/spinlock.h	2002-11-10 13:33:43.000000000 -0500
+@@ -33,14 +33,28 @@
+ #endif
+ #endif
+ 
++/* Define lock_held for all arches that don't need a modified copy. */
++#ifndef __LT_INITIALIZER_NOT_ZERO
++# define lock_held(p) *(p)
++#endif
++
++/* Initliazers for possibly complex structures */
++#ifdef __LT_INITIALIZER_NOT_ZERO
++# define __pthread_lock_define_initialized(CLASS,NAME) \
++	CLASS __atomic_lock_t NAME = __LT_SPINLOCK_ALT_INIT
++#else
++# define __pthread_lock_define_initialized(CLASS,NAME) \
++	CLASS __atomic_lock_t NAME
++#endif
++
+ #if defined(TEST_FOR_COMPARE_AND_SWAP)
+ 
+ extern int __pthread_has_cas;
+ extern int __pthread_compare_and_swap(long * ptr, long oldval, long newval,
+-                                      int * spinlock);
++                                      __atomic_lock_t * spinlock);
+ 
+ static inline int compare_and_swap(long * ptr, long oldval, long newval,
+-                                   int * spinlock)
++                                   __atomic_lock_t * spinlock)
+ {
+   if (__builtin_expect (__pthread_has_cas, 1))
+     return __compare_and_swap(ptr, oldval, newval);
+@@ -58,7 +72,7 @@
+ 
+ static inline int
+ compare_and_swap_with_release_semantics (long * ptr, long oldval,
+-					 long newval, int * spinlock)
++					 long newval, __atomic_lock_t * spinlock)
+ {
+   return __compare_and_swap_with_release_semantics (ptr, oldval,
+ 						    newval);
+@@ -67,7 +81,7 @@
+ #endif
+ 
+ static inline int compare_and_swap(long * ptr, long oldval, long newval,
+-                                   int * spinlock)
++                                   __atomic_lock_t * spinlock)
+ {
+   return __compare_and_swap(ptr, oldval, newval);
+ }
+@@ -75,10 +89,10 @@
+ #else
+ 
+ extern int __pthread_compare_and_swap(long * ptr, long oldval, long newval,
+-                                      int * spinlock);
++                                      __atomic_lock_t * spinlock);
+ 
+ static inline int compare_and_swap(long * ptr, long oldval, long newval,
+-                                   int * spinlock)
++                                   __atomic_lock_t * spinlock)
+ {
+   return __pthread_compare_and_swap(ptr, oldval, newval, spinlock);
+ }
+diff -urN glibc-2.3.1.orig/linuxthreads/sysdeps/hppa/pspinlock.c glibc-2.3.1/linuxthreads/sysdeps/hppa/pspinlock.c
+--- glibc-2.3.1.orig/linuxthreads/sysdeps/hppa/pspinlock.c	2002-08-26 18:39:51.000000000 -0400
++++ glibc-2.3.1/linuxthreads/sysdeps/hppa/pspinlock.c	2002-11-03 16:57:02.000000000 -0500
+@@ -21,18 +21,20 @@
+ #include <pthread.h>
+ #include "internals.h"
+ 
++/* LDCW, the only atomic read-write operation PA-RISC has. *sigh*.  */
++#define __ldcw(a) ({ \
++	unsigned __ret; \
++	__asm__ __volatile__("ldcw 0(%1),%0" : "=r" (__ret) : "r" (a)); \
++	__ret; \
++})
++
+ int
+ __pthread_spin_lock (pthread_spinlock_t *lock)
+ {
+-  unsigned int val;
+-
+-  do
+-    asm volatile ("ldcw %1,%0"
+-		  : "=r" (val), "=m" (*lock)
+-		  : "m" (*lock));
+-  while (!val);
++	while (__ldcw (*lock) == 0)
++		while (*lock == 0) ;
+ 
+-  return 0;
++	return 0;
+ }
+ weak_alias (__pthread_spin_lock, pthread_spin_lock)
+ 
+@@ -40,11 +42,7 @@
+ int
+ __pthread_spin_trylock (pthread_spinlock_t *lock)
+ {
+-  unsigned int val;
+-
+-  asm volatile ("ldcw %1,%0"
+-		: "=r" (val), "=m" (*lock)
+-		: "m" (*lock));
++  unsigned int val = __ldcw(*lock);
+ 
+   return val ? 0 : EBUSY;
+ }
+diff -urN glibc-2.3.1.orig/linuxthreads/sysdeps/hppa/pt-machine.h glibc-2.3.1/linuxthreads/sysdeps/hppa/pt-machine.h
+--- glibc-2.3.1.orig/linuxthreads/sysdeps/hppa/pt-machine.h	2002-08-26 18:39:51.000000000 -0400
++++ glibc-2.3.1/linuxthreads/sysdeps/hppa/pt-machine.h	2002-11-11 13:45:29.000000000 -0500
+@@ -22,13 +22,13 @@
+ #ifndef _PT_MACHINE_H
+ #define _PT_MACHINE_H   1
+ 
++#include <sys/types.h>
+ #include <bits/initspin.h>
+ 
+ #ifndef PT_EI
+ # define PT_EI extern inline
+ #endif
+ 
+-extern long int testandset (int *spinlock);
+ extern int __compare_and_swap (long int *p, long int oldval, long int newval);
+ 
+ /* Get some notion of the current stack.  Need not be exactly the top
+@@ -36,16 +36,39 @@
+ #define CURRENT_STACK_FRAME  stack_pointer
+ register char * stack_pointer __asm__ ("%r30");
+ 
++/* Get/Set thread-specific pointer.  We have to call into the kernel to
++ * modify it, but we can read it in user mode.  */
++
++#define THREAD_SELF __get_cr27()
++
++static inline struct _pthread_descr_struct * __get_cr27(void)
++{
++	long cr27;
++	asm("mfctl %%cr27, %0" : "=r" (cr27) : );
++	return (struct _pthread_descr_struct *) cr27;
++}
++
++#define INIT_THREAD_SELF(descr, nr) __set_cr27(descr)
++
++static inline void __set_cr27(struct _pthread_descr_struct * cr27)
++{
++	asm(
++		"ble	0xe0(%%sr2, %%r0)\n\t"
++		"copy	%0, %%r26"
++	 : : "r" (cr27) : "r26" );
++}
++
++/* We want the OS to assign stack addresses.  */
++#define FLOATING_STACKS	1
++#define ARCH_STACK_MAX_SIZE	8*1024*1024
+ 
+ /* The hppa only has one atomic read and modify memory operation,
+    load and clear, so hppa spinlocks must use zero to signify that
+    someone is holding the lock.  */
+ 
+-#define xstr(s) str(s)
+-#define str(s) #s
+ /* Spinlock implementation; required.  */
+-PT_EI long int
+-testandset (int *spinlock)
++PT_EI int
++__load_and_clear(__atomic_lock_t *spinlock)
+ {
+   int ret;
+ 
+@@ -54,9 +77,16 @@
+        : "=r"(ret), "=m"(*spinlock)
+        : "r"(spinlock));
+ 
+-  return ret == 0;
++  return ret;
++}
++
++/* Emulate testandset */
++PT_EI long int
++testandset(__atomic_lock_t *spinlock)
++{
++	return (__load_and_clear(spinlock) == 0);
+ }
+-#undef str
+-#undef xstr
+ 
++#define lock_held(spinlock) ((spinlock)->lock==0)
++		
+ #endif /* pt-machine.h */
+diff -urN glibc-2.3.1.orig/linuxthreads/sysdeps/pthread/bits/libc-lock.h glibc-2.3.1/linuxthreads/sysdeps/pthread/bits/libc-lock.h
+--- glibc-2.3.1.orig/linuxthreads/sysdeps/pthread/bits/libc-lock.h	2002-10-11 06:53:17.000000000 -0400
++++ glibc-2.3.1/linuxthreads/sysdeps/pthread/bits/libc-lock.h	2002-11-06 21:44:40.000000000 -0500
+@@ -64,12 +64,12 @@
+    initialized locks must be set to one due to the lack of normal
+    atomic operations.) */
+ 
+-#if __LT_SPINLOCK_INIT == 0
++#ifdef __LT_INITIALIZER_NOT_ZERO
+ #  define __libc_lock_define_initialized(CLASS,NAME) \
+-  CLASS __libc_lock_t NAME;
++  CLASS __libc_lock_t NAME = PTHREAD_MUTEX_INITIALIZER;
+ #else
+ #  define __libc_lock_define_initialized(CLASS,NAME) \
+-  CLASS __libc_lock_t NAME = PTHREAD_MUTEX_INITIALIZER;
++  CLASS __libc_lock_t NAME;
+ #endif
+ 
+ #define __libc_rwlock_define_initialized(CLASS,NAME) \
+diff -urN glibc-2.3.1.orig/linuxthreads/sysdeps/pthread/bits/pthreadtypes.h glibc-2.3.1/linuxthreads/sysdeps/pthread/bits/pthreadtypes.h
+--- glibc-2.3.1.orig/linuxthreads/sysdeps/pthread/bits/pthreadtypes.h	2001-01-27 01:26:13.000000000 -0500
++++ glibc-2.3.1/linuxthreads/sysdeps/pthread/bits/pthreadtypes.h	2002-11-03 16:57:02.000000000 -0500
+@@ -22,12 +22,14 @@
+ #define __need_schedparam
+ #include <bits/sched.h>
+ 
++typedef int __atomic_lock_t;
++
+ /* Fast locks (not abstract because mutexes and conditions aren't abstract). */
+ struct _pthread_fastlock
+ {
+-  long int __status;   /* "Free" or "taken" or head of waiting list */
+-  int __spinlock;      /* Used by compare_and_swap emulation. Also,
+-			  adaptive SMP lock stores spin count here. */
++  long int __status;		/* "Free" or "taken" or head of waiting list */
++  __atomic_lock_t __spinlock;	/* Used by compare_and_swap emulation. Also,
++				   adaptive SMP lock stores spin count here. */
+ };
+ 
+ #ifndef _PTHREAD_DESCR_DEFINED
+diff -urN glibc-2.3.1.orig/linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/initspin.h glibc-2.3.1/linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/initspin.h
+--- glibc-2.3.1.orig/linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/initspin.h	2002-08-26 18:39:55.000000000 -0400
++++ glibc-2.3.1/linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/initspin.h	2002-11-09 12:47:16.000000000 -0500
+@@ -19,9 +19,21 @@
+ 
+ /* Initial value of a spinlock.  PA-RISC only implements atomic load
+    and clear so this must be non-zero. */
+-#define __LT_SPINLOCK_INIT 1
++#define __LT_SPINLOCK_INIT ((__atomic_lock_t){ 1 })
++
++/* Initillize global spinlocks without cast, generally macro wrapped */
++#define __LT_SPINLOCK_ALT_INIT { 1 }
++
++/* Macros for lock initializers, not using the above definition.
++   The above definition is not used in the case that static initializers
++   use this value. */
++#define __LOCK_INITIALIZER { { 1 }, 0 }
++#define __ATOMIC_INITIALIZER { 0, { 1 } }
++
++/* Used to initialize _pthread_fastlock's in non-static case */
++#define __LOCK_ALT_INITIALIZER ((struct _pthread_fastlock){ __LT_SPINLOCK_INIT, 0 })
++
++/* Tell the rest of the code that the initializer is non-zero without
++   explaining it's internal structure */
++#define __LT_INITIALIZER_NOT_ZERO
+ 
+-/* Macros for lock initializers, using the above definition. */
+-#define __LOCK_INITIALIZER { 0, __LT_SPINLOCK_INIT }
+-#define __ALT_LOCK_INITIALIZER { 0, __LT_SPINLOCK_INIT }
+-#define __ATOMIC_INITIALIZER { 0, __LT_SPINLOCK_INIT }
+diff -urN glibc-2.3.1.orig/linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/pthreadtypes.h glibc-2.3.1/linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/pthreadtypes.h
+--- glibc-2.3.1.orig/linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/pthreadtypes.h	1969-12-31 19:00:00.000000000 -0500
++++ glibc-2.3.1/linuxthreads/sysdeps/unix/sysv/linux/hppa/bits/pthreadtypes.h	2002-11-03 16:57:02.000000000 -0500
+@@ -0,0 +1,146 @@
++/* Linuxthreads - a simple clone()-based implementation of Posix        */
++/* threads for Linux.                                                   */
++/* Copyright (C) 1996 Xavier Leroy (Xavier.Leroy@inria.fr)              */
++/*                                                                      */
++/* This program is free software; you can redistribute it and/or        */
++/* modify it under the terms of the GNU Library General Public License  */
++/* as published by the Free Software Foundation; either version 2       */
++/* of the License, or (at your option) any later version.               */
++/*                                                                      */
++/* This program is distributed in the hope that it will be useful,      */
++/* but WITHOUT ANY WARRANTY; without even the implied warranty of       */
++/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        */
++/* GNU Library General Public License for more details.                 */
++
++#if !defined _BITS_TYPES_H && !defined _PTHREAD_H
++# error "Never include <bits/pthreadtypes.h> directly; use <sys/types.h> instead."
++#endif
++
++#ifndef _BITS_PTHREADTYPES_H
++#define _BITS_PTHREADTYPES_H	1
++
++#define __need_schedparam
++#include <bits/sched.h>
++
++typedef struct {
++	int lock;
++} __attribute__((aligned (16))) __atomic_lock_t;
++
++/* Fast locks (not abstract because mutexes and conditions aren't abstract). */
++struct _pthread_fastlock
++{
++  __atomic_lock_t __spinlock;  /* Used by compare_and_swap emulation. Also,
++				   adaptive SMP lock stores spin count here. */
++  long int __status;   /* "Free" or "taken" or head of waiting list */
++};
++
++#ifndef _PTHREAD_DESCR_DEFINED
++/* Thread descriptors */
++typedef struct _pthread_descr_struct *_pthread_descr;
++# define _PTHREAD_DESCR_DEFINED
++#endif
++
++
++/* Attributes for threads.  */
++typedef struct __pthread_attr_s
++{
++  int __detachstate;
++  int __schedpolicy;
++  struct __sched_param __schedparam;
++  int __inheritsched;
++  int __scope;
++  size_t __guardsize;
++  int __stackaddr_set;
++  void *__stackaddr;
++  size_t __stacksize;
++} pthread_attr_t;
++
++
++/* Conditions (not abstract because of PTHREAD_COND_INITIALIZER */
++typedef struct
++{
++  struct _pthread_fastlock __c_lock; /* Protect against concurrent access */
++  _pthread_descr __c_waiting;        /* Threads waiting on this condition */
++} pthread_cond_t;
++
++
++/* Attribute for conditionally variables.  */
++typedef struct
++{
++  int __dummy;
++} pthread_condattr_t;
++
++/* Keys for thread-specific data */
++typedef unsigned int pthread_key_t;
++
++
++/* Mutexes (not abstract because of PTHREAD_MUTEX_INITIALIZER).  */
++/* (The layout is unnatural to maintain binary compatibility
++    with earlier releases of LinuxThreads.) */
++typedef struct
++{
++  int __m_reserved;               /* Reserved for future use */
++  int __m_count;                  /* Depth of recursive locking */
++  _pthread_descr __m_owner;       /* Owner thread (if recursive or errcheck) */
++  int __m_kind;                   /* Mutex kind: fast, recursive or errcheck */
++  struct _pthread_fastlock __m_lock; /* Underlying fast lock */
++} pthread_mutex_t;
++
++
++/* Attribute for mutex.  */
++typedef struct
++{
++  int __mutexkind;
++} pthread_mutexattr_t;
++
++
++/* Once-only execution */
++typedef int pthread_once_t;
++
++
++#ifdef __USE_UNIX98
++/* Read-write locks.  */
++typedef struct _pthread_rwlock_t
++{
++  struct _pthread_fastlock __rw_lock; /* Lock to guarantee mutual exclusion */
++  int __rw_readers;                   /* Number of readers */
++  _pthread_descr __rw_writer;         /* Identity of writer, or NULL if none */
++  _pthread_descr __rw_read_waiting;   /* Threads waiting for reading */
++  _pthread_descr __rw_write_waiting;  /* Threads waiting for writing */
++  int __rw_kind;                      /* Reader/Writer preference selection */
++  int __rw_pshared;                   /* Shared between processes or not */
++} pthread_rwlock_t;
++
++
++/* Attribute for read-write locks.  */
++typedef struct
++{
++  int __lockkind;
++  int __pshared;
++} pthread_rwlockattr_t;
++#endif
++
++#ifdef __USE_XOPEN2K
++/* POSIX spinlock data type.  */
++typedef volatile int pthread_spinlock_t __attribute__((aligned (16)));
++
++/* POSIX barrier. */
++typedef struct {
++  struct _pthread_fastlock __ba_lock; /* Lock to guarantee mutual exclusion */
++  int __ba_required;                  /* Threads needed for completion */
++  int __ba_present;                   /* Threads waiting */
++  _pthread_descr __ba_waiting;        /* Queue of waiting threads */
++} pthread_barrier_t;
++
++/* barrier attribute */
++typedef struct {
++  int __pshared;
++} pthread_barrierattr_t;
++
++#endif
++
++
++/* Thread identifiers */
++typedef unsigned long int pthread_t;
++
++#endif	/* bits/pthreadtypes.h */
+diff -urN glibc-2.3.1.orig/linuxthreads/sysdeps/unix/sysv/linux/hppa/pt-initfini.c glibc-2.3.1/linuxthreads/sysdeps/unix/sysv/linux/hppa/pt-initfini.c
+--- glibc-2.3.1.orig/linuxthreads/sysdeps/unix/sysv/linux/hppa/pt-initfini.c	2002-08-26 18:39:29.000000000 -0400
++++ glibc-2.3.1/linuxthreads/sysdeps/unix/sysv/linux/hppa/pt-initfini.c	2002-11-11 13:36:31.000000000 -0500
+@@ -41,70 +41,70 @@
+    and epilogues.  Therefore we write these in assembly to make sure
+    they do the right thing.  */
+ 
+-__asm__ ("
+-
+-#include \"defs.h\"
+-
+-/*@HEADER_ENDS*/
+-
+-/*@_init_PROLOG_BEGINS*/
+-	.section .init
+-	.align 4
+-	.globl _init
+-	.type _init,@function
+-_init:
+-	stw	%rp,-20(%sp)
+-	stwm	%r4,64(%sp)
+-	stw	%r19,-32(%sp)
+-	bl	__pthread_initialize_minimal,%rp
+-	copy	%r19,%r4	/* delay slot */
+-	copy	%r4,%r19
+-/*@_init_PROLOG_ENDS*/
+-
+-/*@_init_EPILOG_BEGINS*/
+-/* Here is the tail end of _init.  */
+-	.section .init
+-	ldw	-84(%sp),%rp
+-	copy	%r4,%r19
+-	bv	%r0(%rp)
+-_end_init:
+-	ldwm	-64(%sp),%r4
+-
+-/* Our very own unwind info, because the assembler can't handle
+-   functions split into two or more pieces.  */
+-	.section .PARISC.unwind,\"a\",@progbits
+-	.extern _init
+-	.word	_init, _end_init
+-	.byte	0x08, 0x01, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08
+-
+-/*@_init_EPILOG_ENDS*/
+-
+-/*@_fini_PROLOG_BEGINS*/
+-	.section .fini
+-	.align 4
+-	.globl _fini
+-	.type _fini,@function
+-_fini:
+-	stw	%rp,-20(%sp)
+-	stwm	%r4,64(%sp)
+-	stw	%r19,-32(%sp)
+-	copy	%r19,%r4
+-/*@_fini_PROLOG_ENDS*/
+-
+-/*@_fini_EPILOG_BEGINS*/
+-	.section .fini
+-	ldw	-84(%sp),%rp
+-	copy	%r4,%r19
+-	bv	%r0(%rp)
+-_end_fini:
+-	ldwm	-64(%sp),%r4
+-
+-	.section .PARISC.unwind,\"a\",@progbits
+-	.extern _fini
+-	.word	_fini, _end_fini
+-	.byte	0x08, 0x01, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08
+-
+-/*@_fini_EPILOG_ENDS*/
+-
+-/*@TRAILER_BEGINS*/
++__asm__ ("								\n\
++									\n\
++#include \"defs.h\"							\n\
++									\n\
++/*@HEADER_ENDS*/							\n\
++									\n\
++/*@_init_PROLOG_BEGINS*/						\n\
++	.section .init							\n\
++	.align 4							\n\
++	.globl _init							\n\
++	.type _init,@function						\n\
++_init:									\n\
++	stw	%rp,-20(%sp)						\n\
++	stwm	%r4,64(%sp)						\n\
++	stw	%r19,-32(%sp)						\n\
++	bl	__pthread_initialize_minimal,%rp			\n\
++	copy	%r19,%r4	/* delay slot */			\n\
++	copy	%r4,%r19						\n\
++/*@_init_PROLOG_ENDS*/							\n\
++									\n\
++/*@_init_EPILOG_BEGINS*/						\n\
++/* Here is the tail end of _init.  */					\n\
++	.section .init							\n\
++	ldw	-84(%sp),%rp						\n\
++	copy	%r4,%r19						\n\
++	bv	%r0(%rp)						\n\
++_end_init:								\n\
++	ldwm	-64(%sp),%r4						\n\
++									\n\
++/* Our very own unwind info, because the assembler can't handle		\n\
++   functions split into two or more pieces.  */				\n\
++	.section .PARISC.unwind,\"a\",@progbits				\n\
++	.extern _init							\n\
++	.word	_init, _end_init					\n\
++	.byte	0x08, 0x01, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08		\n\
++									\n\
++/*@_init_EPILOG_ENDS*/							\n\
++									\n\
++/*@_fini_PROLOG_BEGINS*/						\n\
++	.section .fini							\n\
++	.align 4							\n\
++	.globl _fini							\n\
++	.type _fini,@function						\n\
++_fini:									\n\
++	stw	%rp,-20(%sp)						\n\
++	stwm	%r4,64(%sp)						\n\
++	stw	%r19,-32(%sp)						\n\
++	copy	%r19,%r4						\n\
++/*@_fini_PROLOG_ENDS*/							\n\
++									\n\
++/*@_fini_EPILOG_BEGINS*/						\n\
++	.section .fini							\n\
++	ldw	-84(%sp),%rp						\n\
++	copy	%r4,%r19						\n\
++	bv	%r0(%rp)						\n\
++_end_fini:								\n\
++	ldwm	-64(%sp),%r4						\n\
++									\n\
++	.section .PARISC.unwind,\"a\",@progbits				\n\
++	.extern _fini							\n\
++	.word	_fini, _end_fini					\n\
++	.byte	0x08, 0x01, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08		\n\
++									\n\
++/*@_fini_EPILOG_ENDS*/							\n\
++									\n\
++/*@TRAILER_BEGINS*/							\n\
+ ");
+diff -urN glibc-2.3.1.orig/sysdeps/hppa/dl-fptr.c glibc-2.3.1/sysdeps/hppa/dl-fptr.c
+--- glibc-2.3.1.orig/sysdeps/hppa/dl-fptr.c	2002-01-31 20:31:51.000000000 -0500
++++ glibc-2.3.1/sysdeps/hppa/dl-fptr.c	2002-11-11 13:39:11.000000000 -0500
+@@ -30,7 +30,7 @@
+ # include <pt-machine.h>
+ 
+ /* Remember, we use 0 to mean that a lock is taken on PA-RISC. */
+-static int __hppa_fptr_lock = 1;
++static __atomic_lock_t __hppa_fptr_lock = __LT_SPINLOCK_ALT_INIT;
+ #endif
+ 
+ /* Because ld.so is now versioned, these functions can be in their own
+@@ -127,7 +127,7 @@
+ #ifdef _LIBC_REENTRANT
+   /* Release the lock.  Again, remember, zero means the lock is taken!  */
+   if (mem == NULL)
+-    __hppa_fptr_lock = 1;
++    __hppa_fptr_lock = __LT_SPINLOCK_INIT;
+ #endif
+ 
+   /* Set bit 30 to indicate to $$dyncall that this is a PLABEL. */
+@@ -180,7 +180,7 @@
+ 
+ #ifdef _LIBC_REENTRANT
+   /* Release the lock. */
+-  __hppa_fptr_lock = 1;
++  __hppa_fptr_lock = __LT_SPINLOCK_INIT;
+ #endif
+ }
+ 
+@@ -190,6 +190,8 @@
+   Elf32_Addr addr = (Elf32_Addr) address;
+   struct hppa_fptr *f;
+ 
++  address = (void *)((unsigned long)address &~ 3); /* Clear the bottom two bits.  See make_fptr. */
++  
+ #ifdef _LIBC_REENTRANT
+   /* Make sure we are alone.  */
+   while (testandset (&__hppa_fptr_lock));
+@@ -204,7 +206,7 @@
+ 
+ #ifdef _LIBC_REENTRANT
+   /* Release the lock.   */
+-  __hppa_fptr_lock = 1;
++  __hppa_fptr_lock = __LT_SPINLOCK_INIT;
+ #endif
+ 
+   return addr;

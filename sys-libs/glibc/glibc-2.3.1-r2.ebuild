@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.16 2003/01/15 01:41:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.17 2003/02/09 20:22:48 gmsoft Exp $
 
 IUSE="nls pic build"
 
@@ -44,7 +44,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${PV}.tar.gz
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="GPL-2"
@@ -136,6 +136,22 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/${P}-librt-mips.patch
 		epatch ${FILESDIR}/${PV}/${P}-tst-rndseek-mips.patch
 		epatch ${FILESDIR}/${PV}/${P}-ulps-mips.patch
+	fi
+	# Some patches for hppa.
+	# <gmsoft@gentoo.org> (27 Jan 2003)
+	if [ "${ARCH}" = "hppa" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/${PV}/glibc23-00-hppa-pthreads.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-01-hppa-dl-machine.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-02-hppa-min-kern-unwind-fde.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-03-hppa-mcontext.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-04-hppa-fcntl64.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-05-hppa-buildhack.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-06-hppa-tests.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-07-hppa-atomicity.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-08-hppa-configure.dpatch
+		epatch ${FILESDIR}/${PV}/glibc23-hppa-shmlba.dpatch
 	fi
 
 }

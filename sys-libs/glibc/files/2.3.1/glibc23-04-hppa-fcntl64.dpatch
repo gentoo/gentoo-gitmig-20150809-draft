@@ -1,0 +1,53 @@
+#! /bin/sh -e
+
+# DP: Description: Fixes fcntl64 on HPPA 
+# DP: Author: Randolph Chung <tausq@debian.org>
+# DP: Upstream status: Submitted by Carlos O'Donell <carlos@baldric.uwo.ca>
+# DP: Status Details: Awaiting upstream approval
+# DP: Date: November 16, 2002
+
+#
+#2002-10-01  Randolph Chung  <tausq@debian.org>
+#
+#        * sysdeps/unix/sysv/linux/hppa/fcntl.c:
+#        Include sysdeps/unix/sysv/linux/i386/fcntl.c
+#        * sysdeps/unix/sysv/linux/hppa/bits/fcntl.h:
+#        Change defines when using __USE_FILE_OFFSET64
+#
+
+if [ $# -ne 2 ]; then
+    echo >&2 "`basename $0`: script expects -patch|-unpatch as argument"
+    exit 1
+fi
+case "$1" in
+    -patch) patch -d "$2" -f --no-backup-if-mismatch -p1 < $0;;
+    -unpatch) patch -d "$2" -f --no-backup-if-mismatch -R -p1 < $0;;
+    *)
+	echo >&2 "`basename $0`: script expects -patch|-unpatch as argument"
+	exit 1
+esac
+exit 0
+
+# append the patch here and adjust the -p? flag in the patch calls.
+--- glibc/sysdeps/unix/sysv/linux/hppa/fcntl.c	2002-09-10 20:58:07.000000000 -0700
++++ glibc/sysdeps/unix/sysv/linux/hppa/fcntl.c	2002-09-10 20:58:07.000000000 -0700
+@@ -0,0 +1 @@
++#include <sysdeps/unix/sysv/linux/i386/fcntl.c>
+--- glibc/sysdeps/unix/sysv/linux/hppa/bits/fcntl.h	2002-09-12 10:31:56.000000000 -0700
++++ glibc/sysdeps/unix/sysv/linux/hppa/bits/fcntl.h	2002-09-12 23:43:14.000000000 -0700
+@@ -63,9 +63,15 @@
+ #define F_SETFD		2	/* Set file descriptor flags.  */
+ #define F_GETFL		3	/* Get file status flags.  */
+ #define F_SETFL		4	/* Set file status flags.  */
++#ifndef __USE_FILE_OFFSET64
+ #define F_GETLK		5	/* Get record locking info.  */
+ #define F_SETLK		6	/* Set record locking info (non-blocking).  */
+ #define F_SETLKW	7	/* Set record locking info (blocking).  */
++#else
++#define F_GETLK		F_GETLK64  /* Get record locking info.  */
++#define F_SETLK		F_SETLK64  /* Set record locking info (non-blocking).  */
++#define F_SETLKW	F_SETLKW64 /* Set record locking info (blocking).  */
++#endif
+ 
+ #define F_GETLK64	8	/* Get record locking info.  */
+ #define F_SETLK64	9	/* Set record locking info (non-blocking).  */
