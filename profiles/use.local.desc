@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.421 2004/06/07 06:21:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.422 2004/06/07 06:24:55 kloeri Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -191,9 +191,9 @@ media-gfx/gimageview:mng - Enable mng format support
 media-gfx/gimageview:mplayer - Enable mplayer support
 media-gfx/gimageview:xine - Enable xine support
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
-media-gfx/graphicsmagick/graphicsmagick-1.0.6.ebuild:gs - enable ghostscript support
-media-gfx/graphicsmagick/graphicsmagick-1.0.6.ebuild:jp2 - enable jpeg v2 support
-media-gfx/graphicsmagick/graphicsmagick-1.0.6.ebuild:lzw - enable LZW support
+media-gfx/graphicsmagick:gs - enable ghostscript support
+media-gfx/graphicsmagick:jp2 - enable jpeg v2 support
+media-gfx/graphicsmagick:lzw - enable LZW support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
