@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.2 2004/02/08 00:22:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.3 2004/02/08 19:32:16 latexer Exp $
 
 inherit pcmcia
 
@@ -19,7 +19,7 @@ DEPEND="sys-kernel/linux-headers
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 # Note: To use this ebuild, you should have the usr/src/linux symlink to
 # the kernel directory that linux-wlan-ng should use for configuration.
