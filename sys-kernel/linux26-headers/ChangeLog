@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.11 2004/07/20 15:12:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.12 2004/07/21 11:31:25 lv Exp $
+
+  21 Jul 2004; Travis Tilley <lv@gentoo.org> linux26-headers-2.6.7-r3.ebuild:
+  adding ~amd64 keyword
 
   20 Jul 2004; Mike Frysinger <vapier@gentoo.org>
   +files/linux26-headers-2.6.7-generic-arm-prepare.patch,
