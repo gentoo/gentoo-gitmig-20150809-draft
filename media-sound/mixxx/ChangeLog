@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.9 2003/09/30 12:21:44 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.10 2003/10/23 14:10:59 aliz Exp $
 
   30 Sep 2003; jje <jje@gentoo.org> mixxx-1.0.ebuild:
   Fixed fftw depend - needs 2.1.5.
@@ -26,7 +26,7 @@
   12 Apr 2003; jje <jje@gentoo.org> mixxx-0.9.2.ebuild:
   Version bump to fix #18081.
 
-*mixxx-0.9.1 (14 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
+*mixxx-0.9.1 (14 Oct 2002) 
 
   Initial import. Ebuild by Tue Haste Andersen <haste@diku.dk>. 
  
