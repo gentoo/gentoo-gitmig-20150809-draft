@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f5130bb2411bc8bc89afb230c9188d52 dstat-0.5.2.ebuild 640
+MD5 974a233a637ca866c2f225bfa5b90312 metadata.xml 701
+MD5 d9eaca41ecb6e0163abfffe89ebe12d9 ChangeLog 360
+MD5 612731a09013c28e27503e23d80213dc files/digest-dstat-0.5.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBlmFXI1lqEGTUzyQRAlLOAJ9GHfC2s6Wm21T2PnYrXpg2kfWrjwCdFKJu
+Zrlmvvs2pdZmmZRvuuciamA=
+=QMgD
+-----END PGP SIGNATURE-----
