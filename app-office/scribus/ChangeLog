@@ -1,8 +1,11 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# Author: Francisco Gimeno <kikov@fco-gimeno.com>
-# Maintainer: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.2 2002/08/06 18:05:52 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.3 2002/08/15 22:45:10 danarmak Exp $
+
+  16 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Make kde .desktop file installation routine use eclasses to find out kde's
+  path instead of hardcoding it.
 
 *scribus-0.7.4-r1 (09 Jun 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.7.4-r1.ebuild,v 1.3 2002/08/06 18:05:52 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.7.4-r1.ebuild,v 1.4 2002/08/15 22:45:10 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scribus is a Layout program"
@@ -30,10 +30,12 @@ src_install () {
 	# Fixing desktop.scribus
 	use kde &&
 	(
+		inherit kde-functions
+		set-kdedir 3
 		sed -e 's/local\///' desktop.scribus > desktop.scribus.2
 		echo "Name=Scribus" >> desktop.scribus.2
 		cp -f desktop.scribus.2 scribus.desktop
-		insinto /usr/kde/3/share/applnk/Graphics
+		insinto ${PREFIX}/share/applnk/Graphics
 		doins scribus.desktop
 	)
 	# Copy the pixmaps to the generic place
