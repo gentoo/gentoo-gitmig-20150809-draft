@@ -1,13 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.8.ebuild,v 1.3 2002/10/05 05:39:09 drobbins Exp $
-
-IUSE="nls libgda gb evo python guile perl"
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.8.ebuild,v 1.4 2002/11/30 23:25:23 vapier Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 SRC_URI="ftp://ftp.gnome.org/pub/gnome/unstable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
@@ -15,6 +12,7 @@ HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE="nls libgda gb evo python guile perl"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
 RDEPEND="=x11-libs/gtk+-2.0*
@@ -35,11 +33,9 @@ RDEPEND="=x11-libs/gtk+-2.0*
 	libgda? ( >=gnome-extra/libgda-0.2.91
 	          >=gnome-base/bonobo-1.0.17 )
 	evo?    ( >=net-mail/evolution-1.0.8 )"
-
 DEPEND="${RDEPEND}
 	 nls? ( sys-devel/gettext
 	 >=dev-util/intltool-0.11 )"
-
 
 src_unpack() {
 	unpack ${A}
@@ -69,7 +65,7 @@ src_compile() {
 		&& myconf="${myconf} --with-python" \
 		|| myconf="${myconf} --without-python"
 
-  	econf ${myconf} || die
+  	econf ${myconf}
 
 	#'gnumeric --dump-func-defs' needs to write to ${HOME}/.gnome/, or
 	#else the build fails.
@@ -77,7 +73,7 @@ src_compile() {
 
 	#the build process have to be able to connect to X
 	Xemake || Xmake || die
-}	
+}
 
 src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
@@ -92,7 +88,7 @@ pkg_postinst() {
 	echo ">>> updating GConf2 (modemlights)"
 	for SCHEMA in gnumeric-dialogs.schemas gnumeric-general.schemas ; do
 		echo $SCHEMA
-	    /usr/bin/gconftool-2  --makefile-install-rule \
+		/usr/bin/gconftool-2  --makefile-install-rule \
 			/etc/gconf/schemas/${SCHEMA}
 	done
 }
