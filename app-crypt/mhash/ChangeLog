@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mhash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.7 2002/12/13 10:56:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.8 2003/02/07 00:03:27 wwoods Exp $
+
+  06 Feb 2003; Will Woods <wwoods@gentoo.org> : 
+  added ~alpha keyword (tested by peter@icebear.net)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
