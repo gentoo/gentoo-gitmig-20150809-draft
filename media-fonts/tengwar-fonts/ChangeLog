@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/tengwar-fonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/tengwar-fonts/ChangeLog,v 1.1 2004/09/29 08:55:16 usata Exp $
+
+*tengwar-fonts-1.9d (29 Sep 2004)
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +tengwar-fonts-1.9d.ebuild:
+  Initial import. Ebuild submitted by Nicolai Lissner
+  <nlissne@linux01.gwdg.de>, closing bug #41314.
+
