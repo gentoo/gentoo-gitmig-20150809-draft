@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Temp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Temp/ChangeLog,v 1.8 2004/12/29 23:39:38 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Temp/ChangeLog,v 1.9 2005/03/09 18:05:38 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org> File-Temp-0.14.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #84525
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
