@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.44 2005/01/01 22:17:07 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.45 2005/01/10 18:21:47 luckyduck Exp $
+
+  10 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> lm-sensors-2.9.0.ebuild:
+  added ~amd64 to KEYWORDS. fixes bug #77276.
 
 *lm-sensors-2.9.0 (01 Jan 2005)
 
