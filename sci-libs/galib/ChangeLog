@@ -1,0 +1,20 @@
+# ChangeLog for dev-libs/galib
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.1 2004/12/28 20:22:26 ribosome Exp $
+
+*galib-2.4.5 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/galib-2.4.5-gcc3.3.patch, +galib-2.4.5.ebuild:
+  Moved from dev-libs/galib to sci-libs/galib.
+
+  27 May 2004; Patrick Kursawe <phosphan@gentoo.org> galib-2.4.5.ebuild,
+  files/galib-2.4.5-gcc3.3.patch:
+  Fixing bug #51821 (gcc 3.3 compilation problems)
+
+*galib-2.4.5 (16 Oct 2003)
+
+  16 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> galib-2.4.5.ebuild,
+  metadata.xml:
+  Initial import, suggested in bug 26493
+
