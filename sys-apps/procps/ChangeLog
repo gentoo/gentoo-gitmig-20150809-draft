@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.11 2002/12/09 04:37:26 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.12 2002/12/09 04:51:20 lostlogic Exp $
+
+*procps-3.1.2 (08 Dec 2002)
+
+  08 Dec 2002; Brandon Low <lostlogic@gentoo.org> procps-3.1.2.ebuild :
+
+  Bump, still unstable, but this one adds back in the sorting quick keys
+  to top, apparently we weren't the only ones annoyed about it.  
+  Keep me updated on quirkiness in this version! :)
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
