@@ -5,6 +5,7 @@ afs
 avi
 icc
 icc-pgo
+ifc
 mmx
 svga
 sse 
