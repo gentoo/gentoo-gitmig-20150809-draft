@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.4 2004/04/06 23:19:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.5 2004/04/07 22:41:05 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -15,7 +15,8 @@
 # This variable is just simply used to track whether the user is 
 # using a cvs version of a horde ebulid.
 
-inherit cvs webapp-apache
+inherit webapp-apache
+[ "${PN}" != "${PN/-cvs}" ] && inherit cvs
 
 ECLASS=horde
 INHERITED="$INHERITED $ECLASS"
