@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/opmixer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/ChangeLog,v 1.5 2003/02/12 07:32:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/ChangeLog,v 1.6 2003/04/04 13:20:51 weeve Exp $
 
 *opmixer-0.75 (11 Jul 2002)
+
+  04 Apr 2003; Jason Wever <weeve@gentoo.org> opmixer-0.75.ebuild:
+  Added ~sparc to keywords.
 
   27 Jan 2003; foser <foser@gentoo.org> opmixer-0.75.ebuild :
   Fixed gtkmm dep (#14151)
