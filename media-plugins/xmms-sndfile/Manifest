@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 f3cf82616332ccfa710b62be4d2c21e1 xmms-sndfile-1.1.ebuild 705
-MD5 26bf87e406b2cf22e9dce97b69886e26 xmms-sndfile-1.2.ebuild 718
-MD5 107445df471b2420cd83f871001766cd xmms-sndfile-1.2-r1.ebuild 844
 MD5 44ff143560b4fc2ef3a953237ea37dd4 ChangeLog 1205
+MD5 f3cf82616332ccfa710b62be4d2c21e1 xmms-sndfile-1.1.ebuild 705
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 52841fcf547f0c19e485dcb5ac619df2 xmms-sndfile-1.2.ebuild 727
+MD5 69c238d5b1eafd54fc135f2f02b813bc xmms-sndfile-1.2-r1.ebuild 855
 MD5 4d95bad03ac0d3e7994d1b8382efb273 files/digest-xmms-sndfile-1.1 68
 MD5 bc4fa27c4ae0ab1d8845eeab3fbc1e32 files/digest-xmms-sndfile-1.2 68
 MD5 bc4fa27c4ae0ab1d8845eeab3fbc1e32 files/digest-xmms-sndfile-1.2-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBeNnyArHZZzCEUG0RAhx/AJ47nMmQ9b/kmSs4RAD128mQ/FkLIQCfYOiM
-CawS7CymFjAh9A1ZtqzjKsY=
-=iDTQ
------END PGP SIGNATURE-----
