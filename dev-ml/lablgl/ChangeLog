@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.28 2004/08/25 21:41:38 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.29 2004/08/25 21:44:53 mattam Exp $
+
+  25 Aug 2004; Matthieu Sozeau <mattam@gentoo.org>
+  -files/LablGL-0.97-Makefile-destdir.patch,
+  -files/LablGL-0.97-Makefile.config,
+  -files/LablGL-0.98-Makefile-destdir.patch,
+  -files/LablGL-0.98-Makefile.config:
+  Remove old, unused files.
 
   25 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> -lablgl-0.97.ebuild,
   -lablgl-0.98.ebuild, -lablgl-0.99-r1.ebuild, -lablgl-0.99.ebuild,
