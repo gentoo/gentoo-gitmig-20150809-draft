@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.8 2004/08/25 11:26:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.9 2004/08/26 19:02:48 mr_bones_ Exp $
+
+*fish-fillets-0.5.0-r1 (26 Aug 2004)
+
+  26 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +fish-fillets-0.5.0-r1.ebuild:
+  new data file and separate source version with data versions (bug #61659)
 
   25 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> :
   Add support for Czech language (via nls USE) in the game (bug #61489)
