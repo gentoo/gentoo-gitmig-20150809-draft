@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.12 2002/12/13 10:56:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.13 2003/01/07 03:29:53 spider Exp $
+
+*intltool-0.25 (07 Jan 2002)
+  
+  07 Jan 2002; Spider <spider@gentoo.org> intltool-0.25.ebuild :
+  hacked up the new 0.25 release, some doc changes but thats all
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
