@@ -2,7 +2,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/1.5/bin/ebuild,v 1.5 2001/02/20 02:14:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/1.5/bin/ebuild,v 1.6 2001/02/22 22:03:34 drobbins Exp $
 
 if [ "`whoami`" != "root" ]
 then
@@ -818,6 +818,12 @@ setp() {
 	export PN="${1}"
 	export PV="${2}"
 	export PR="${3}"
+	if [ "${3}" = "0" ]
+	then
+		export PVR=${2}
+	else
+		export PVR=${2}-${3}
+	fi
 }
 
 export STARTDIR=`pwd`
