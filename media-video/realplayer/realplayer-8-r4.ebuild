@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r4.ebuild,v 1.4 2003/01/13 04:11:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r4.ebuild,v 1.5 2003/01/14 21:51:13 mholzer Exp $
 
 inherit nsplugins
 
@@ -48,6 +48,11 @@ pkg_setup() {
 		eerror "for this architecture: ${ARCH}"
 		use x86 && \
 		eerror "Please note, do NOT download the rpm.  Just the .bin file"
+		eerror "Named Linux 2.x (libc6 i386)"
+		eerror ""
+		eerror "Download ${A} and place it in ${DISTDIR}"
+		eerror "Then emerge this package again"
+
 		exit 1
 	fi
 }
@@ -55,10 +60,10 @@ pkg_setup() {
 src_unpack() {
 	if use x86 ; then 
 		BYTECOUNT=4799691
-		RP8_BIN=`echo ${MY_P} | awk '{ print $1 }'`
-		RV9_X86=`echo ${MY_P} | awk '{ print $2 }'`
+		RP8_BIN=`echo ${A} | awk '{ print $1 }'`
+		RV9_X86=`echo ${A} | awk '{ print $2 }'`
 	else
-		RP8_BIN=${MY_P}
+		RP8_BIN=${A}
 		if use ppc ; then BYTECOUNT=7260910
 		elif use alpha ; then BYTECOUNT=7130860
 		elif use sparc ; then BYTECOUNT=6375000
