@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/iripdb-0.1.1.ebuild,v 1.3 2004/10/17 09:47:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/iripdb-0.1.1.ebuild,v 1.4 2004/10/31 17:16:47 fafhrd Exp $
 
 S=${WORKDIR}/iRipDB-${PV}
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="iRipDB allows generating the DB files necessary for the iRiver iHP-1xx series of MP3/Ogg HD Player on Linux and Windows."
 HOMEPAGE="http://www.marevalo.net/iRipDB"
@@ -38,12 +38,12 @@ pkg_setup() {
 }
 
 src_compile() {
-	echo "${CC} ${CFLAGS} -c -o main.o main.c"
-	${CC} ${CFLAGS} -c -o main.o main.c
-	echo "${CC} ${CFLAGS} -c -o vcedit.o vcedit.c"
-	${CC} ${CFLAGS} -c -o vcedit.o vcedit.c
-	echo "${CC} ${CFLAGS} -o iripdb main.o vcedit.o -lz -lm -lid3 -lvorbis -logg -lstdc++"
-	${CC} ${CFLAGS} -o iripdb main.o vcedit.o -lz -lm -lid3 -lvorbis -logg -lstdc++
+	echo "$(tc-getCC) ${CFLAGS} -c -o main.o main.c"
+	$(tc-getCC) ${CFLAGS} -c -o main.o main.c
+	echo "$(tc-getCC) ${CFLAGS} -c -o vcedit.o vcedit.c"
+	$(tc-getCC) ${CFLAGS} -c -o vcedit.o vcedit.c
+	echo "$(tc-getCC) ${CFLAGS} -o iripdb main.o vcedit.o -lz -lm -lid3 -lvorbis -logg -lstdc++"
+	$(tc-getCC) ${CFLAGS} -o iripdb main.o vcedit.o -lz -lm -lid3 -lvorbis -logg -lstdc++
 }
 
 src_install() {
