@@ -1,16 +1,21 @@
-MD5 810c36ae9c4a07c11cffb9b81d19b97b ChangeLog 8918
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 67b0678d12e59763652547524a921290 ChangeLog 9028
+MD5 7614a42e470672d6b54f8b7ab9d82f45 tar-1.15.1.ebuild 1349
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8225082dd117d92a599d4b01e9d2ee74 tar-1.14.ebuild 1344
 MD5 e3ae7c0cd3dad23afa5880a6264b4bfd tar-1.13.92-r3.ebuild 1628
-MD5 a80e22124dc7b63be1e879c313caedf7 tar-1.14.90-r1.ebuild 1947
-MD5 404c6b2a90334fe682029e5d5771620d files/1.14.90-gnulib.patch 3403
-MD5 afe4f707a5851659a448c05a5bb6868e files/1.14.90-remote-shell.patch 594
-MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
-MD5 4cdef5c71729b03a10fb5e066b358398 files/1.14.90-tests.patch 879
+MD5 1ce0c7df0ad9ec0c279340132692d7d4 files/digest-tar-1.15.1 64
 MD5 e4017a705a2d9950c025b458ead9ac79 files/digest-tar-1.13.92-r3 65
-MD5 8adb291e1142c213ed26260319bef9f4 files/tar-1.13.92-dont-strip-dot_slash.patch 893
 MD5 23ab0e636547af36f83f3d7db78c9776 files/tar.1 12155
+MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
+MD5 8adb291e1142c213ed26260319bef9f4 files/tar-1.13.92-dont-strip-dot_slash.patch 893
 MD5 e05d36a6f2aeb7f6374d04d61872bd53 files/tar-1.13.92-fix-one_file_system.patch 547
-MD5 6e38cbcf3c8dddd5c1e3e00d18f0d378 files/1.14.90-scripts.patch 1829
-MD5 a19a156b33f2b725bccc907941208c92 files/digest-tar-1.14.90-r1 65
-MD5 08149db3d06186298b1c60683aa65740 files/1.14.90-optimize.patch 381
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB3AXlroRuSHgZdywRAsEDAJ4z9QIilYPy8B5jBP2tRkSWXEETPACeNWBa
+2mb7GUspECQkMD/ywNdlUfM=
+=dO0/
+-----END PGP SIGNATURE-----
