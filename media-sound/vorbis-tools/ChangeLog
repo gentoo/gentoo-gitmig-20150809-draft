@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.12 2003/11/15 03:03:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.13 2003/11/17 00:20:08 spider Exp $
+
+*vorbis-tools-1.0-r2 (17 Nov 2003)
+
+  17 Nov 2003; <spider@gentoo.org> vorbis-tools-1.0-r2.ebuild:
+  Fixed broken DEPEND/RDEPEND behaviour
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> vorbis-tools-1.0-r1.ebuild:
   Stable on ia64
