@@ -1,6 +1,10 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.49 2004/08/19 14:30:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.50 2004/08/30 22:31:37 slarti Exp $
+
+  30 Aug 2004; Tom Martin <slarti@gentoo.org> dillo-0.8.0-r5.ebuild:
+  Stable on amd64. Thanks to Dirk Salewski <mail@dslinux.net> for the reminder
+  in bug 61687.
 
   19 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> dillo-0.8.0-r5.ebuild:
   Stable on sparc
