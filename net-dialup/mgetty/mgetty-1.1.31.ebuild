@@ -1,26 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30-r1.ebuild,v 1.5 2004/08/03 07:38:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.31.ebuild,v 1.1 2004/11/19 23:09:17 mrness Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Fax and Voice modem programs."
-SRC_URI="ftp://alpha.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Dec16.tar.gz"
+SRC_URI="ftp://alpha.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Jul24.tar.gz"
 HOMEPAGE="http://alpha.greenie.net/mgetty/"
 
-DEPEND=">=sys-apps/portage-2.0.47-r10
-	>=sys-apps/sed-4.0.5
+DEPEND="sys-apps/sed
 	doc? ( virtual/tetex )
 	sys-apps/gawk
 	dev-lang/perl"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~ia64 ~hppa ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~alpha ~ia64 ~hppa ~ppc ~amd64 ~mips"
 IUSE="doc"
 
-pkg_preinst() {
+pkg_setup() {
 	enewgroup fax
+	enewgroup modem
 	enewuser fax -1 /bin/false /dev/null fax
 }
 
@@ -42,6 +42,11 @@ src_unpack() {
 
 src_compile() {
 	append-flags "-DAUTO_PPP"
+
+	#Avoid "is setXid, dynamically linked and using lazy bindings" QA notices 
+	append-ldflags "-Wl,-z,now"
+	sed -i "s:^LDFLAGS=.*:#&:" Makefile
+	sed -i 's: \$(CFLAGS) -o faxq-helper faxq-helper.o: $(LDLAGS) -Wl,-z,now -o faxq-helper faxq-helper.o:' fax/Makefile
 
 	emake prefix=/usr \
 		CONFDIR=/etc/mgetty+sendfax \
@@ -70,6 +75,7 @@ src_compile() {
 
 src_install () {
 	dodir /var/spool
+	dodir /var/log/mgetty
 	dodir /usr/share/info
 	make prefix=${D}/usr \
 		INFODIR=${D}/usr/share/info \
@@ -111,11 +117,18 @@ src_install () {
 	dodoc BUGS ChangeLog FTP README.1st Recommend THANKS TODO
 	cd doc
 	dodoc *.txt modems.db
-	use doc && dodoc mgetty.ps
+	cd ${S}/samples/
+	docinto samples
+	dodoc *
+	if use doc; then
+		dodoc mgetty.ps
+		cd ${S}/voice/doc/
+		docinto voice
+		dodoc *
+	fi
 
 	#generate missing fonts if any.
-	if [ -f ${S}/doc/missfont.log ]
-	then
+	if [ -f ${S}/doc/missfont.log ] ; then
 		echo '#!/bin/bash' >genfonts.sh
 		cat missfont.log >>genfonts.sh
 		chmod +x genfonts.sh
@@ -125,17 +138,14 @@ src_install () {
 
 pkg_postinst() {
 	#generate missing fonts if any.
-	if [ -x {$ROOT}/usr/share/doc/${PF}/genfonts.sh ]
-	then
+	if [ -x {$ROOT}/usr/share/doc/${PF}/genfonts.sh ] ; then
 		{$ROOT}/usr/share/doc/${PF}/genfonts.sh
 	fi
 
-	if [ ! -d ${ROOT}/var/spool/fax/incoming ]
-	then
+	if [ ! -d ${ROOT}/var/spool/fax/incoming ] ;	then
 		mkdir -p ${ROOT}/var/spool/fax/incoming
 	fi
-	if [ ! -d ${ROOT}/var/spool/fax/outgoing/locks ]
-	then
+	if [ ! -d ${ROOT}/var/spool/fax/outgoing/locks ] ;	then
 		mkdir -p ${ROOT}/var/spool/fax/outgoing/locks
 	fi
 }

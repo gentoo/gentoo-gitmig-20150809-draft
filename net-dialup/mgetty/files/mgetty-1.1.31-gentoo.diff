@@ -1,0 +1,75 @@
+diff -Nru mgetty-1.1.31.orig/Makefile mgetty-1.1.31/Makefile
+--- mgetty-1.1.31.orig/Makefile	2004-07-24 21:53:47.000000000 +0300
++++ mgetty-1.1.31/Makefile	2004-11-20 00:54:13.998653696 +0200
+@@ -102,7 +102,7 @@
+ #	    USTAT	  - ustat(), no statfs etc.
+ #
+ #CFLAGS=-Wall -O2 -pipe -DSECUREWARE -DUSE_POLL
+-CFLAGS=-O2 -Wall -pipe
++#CFLAGS=-O2 -Wall -pipe
+ #CFLAGS=-O -DSVR4
+ #CFLAGS=-O -DSVR4 -DSVR42
+ #CFLAGS=-O -DUSE_POLL
+diff -Nru mgetty-1.1.31.orig/doc/mgetty.texi-in mgetty-1.1.31/doc/mgetty.texi-in
+--- mgetty-1.1.31.orig/doc/mgetty.texi-in	2004-07-24 17:54:40.000000000 +0300
++++ mgetty-1.1.31/doc/mgetty.texi-in	2004-11-20 00:54:14.001653240 +0200
+@@ -13,6 +13,11 @@
+ Copyright @copyright{} 1993-2000 Gert Doering
+ @end ifinfo
+ 
++@dircategory User
++@direntry
++* MGETTY: (mgetty).    Modem+Voice+Fax utilities
++@end direntry
++
+ @titlepage
+ @sp 6
+ @center @titlefont{mgetty+sendfax}
+diff -Nru mgetty-1.1.31.orig/voice/Makefile mgetty-1.1.31/voice/Makefile
+--- mgetty-1.1.31.orig/voice/Makefile	2001-12-23 17:08:13.000000000 +0200
++++ mgetty-1.1.31/voice/Makefile	2004-11-20 00:54:14.002653088 +0200
+@@ -85,6 +85,7 @@
+ 	@echo ""
+ 	$(INSTALL) -m 700 vgetty/vgetty $(SBINDIR)
+ 	$(INSTALL) -m 755 vm/vm $(BINDIR)
++	$(INSTALL) -m 755 voice.conf-dist $(CONFDIR)/voice.conf
+ 	for i in $(PVFTOOLS); \
+ 	do \
+ 	     $(INSTALL) -m 755 pvftools/$$i $(BINDIR); \
+@@ -97,21 +98,21 @@
+ 	do \
+ 	     $(RM) -f $$i.1; $(LN) -s pvf.1 $$i.1; \
+ 	done
+-#	[ -d $(VOICE_DIR) ] || mkdir $(VOICE_DIR)
+-#	[ -d $(VOICE_DIR)/incoming ] || mkdir $(VOICE_DIR)/incoming
+-#	chown 0 $(VOICE_DIR)/incoming
+-#	chgrp $(PHONE_GROUP) $(VOICE_DIR)/incoming
+-#	chmod $(PHONE_PERMS) $(VOICE_DIR)/incoming
+-#	[ -d $(VOICE_DIR)/messages ] || mkdir $(VOICE_DIR)/messages
+-#	for i in $(SHELLSCRIPTS); do \
+-#		$(INSTALL) -m 755 $$i $(VOICE_DIR) ;\
+-#	done
+-#	[ -f $(VOICE_DIR)/.code ] || echo '12345' >$(VOICE_DIR)/.code
+-#	chgrp $(PHONE_GROUP) $(VOICE_DIR)/.code
+-#	chmod $(PHONE_PERMS) $(VOICE_DIR)/.code
+-#	chmod 660 $(VOICE_DIR)/.code
+-#	[ -f $(VOICE_DIR)/messages/Index ] || \
+-#	 echo 'put_filename_here' >$(VOICE_DIR)/messages/Index
++	[ -d $(VOICE_DIR) ] || mkdir $(VOICE_DIR)
++	[ -d $(VOICE_DIR)/incoming ] || mkdir $(VOICE_DIR)/incoming
++	chown 0 $(VOICE_DIR)/incoming
++	chgrp $(PHONE_GROUP) $(VOICE_DIR)/incoming
++	chmod $(PHONE_PERMS) $(VOICE_DIR)/incoming
++	[ -d $(VOICE_DIR)/messages ] || mkdir $(VOICE_DIR)/messages
++	for i in $(SHELLSCRIPTS); do \
++		$(INSTALL) -m 755 $$i $(VOICE_DIR) ;\
++	done
++	[ -f $(VOICE_DIR)/.code ] || echo '12345' >$(VOICE_DIR)/.code
++	chgrp $(PHONE_GROUP) $(VOICE_DIR)/.code
++	chmod $(PHONE_PERMS) $(VOICE_DIR)/.code
++	chmod 660 $(VOICE_DIR)/.code
++	[ -f $(VOICE_DIR)/messages/Index ] || \
++	 echo 'put_filename_here' >$(VOICE_DIR)/messages/Index
+ 
+ clean:
+ 	@echo "Cleaning..."

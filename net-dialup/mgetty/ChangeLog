@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.40 2004/11/13 22:11:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.41 2004/11/19 23:09:17 mrness Exp $
+
+*mgetty-1.1.31 (20 Nov 2004)
+
+  20 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  +files/mgetty-1.1.31-gentoo.diff, -mgetty-1.1.30-r1.ebuild,
+  +mgetty-1.1.31.ebuild:
+  Version bump.
 
 *mgetty-1.1.30-r3 (14 Nov 2004)
 
