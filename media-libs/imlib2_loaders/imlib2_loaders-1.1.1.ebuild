@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/imlib2_loaders-1.1.1.ebuild,v 1.1 2004/08/10 03:44:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/imlib2_loaders-1.1.1.ebuild,v 1.2 2004/08/30 23:36:15 vapier Exp $
 
 EHACKAUTOGEN=YES
 EAUTOMAKE=1.6
@@ -8,6 +8,8 @@ inherit enlightenment
 
 DESCRIPTION="image loader plugins for Imlib 2"
 HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
+
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64 ppc64"
 
 RDEPEND=">=media-libs/imlib2-1.1.1
 	>=dev-db/edb-1.0.5

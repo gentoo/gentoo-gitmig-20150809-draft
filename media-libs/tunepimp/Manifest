@@ -1,5 +1,5 @@
-MD5 55cb0f9b744c6a4499a4d597663bfe84 ChangeLog 713
+MD5 7b9283bd484500406466c6d2deda0117 ChangeLog 799
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 04ad7c9cebf1904fbf7a8e9f3b8fbe80 tunepimp-0.3.0.ebuild 1041
+MD5 f83040424a8bb065676ce82ec5069f80 tunepimp-0.3.0.ebuild 1039
 MD5 f79074eba8191dbaded3e898a9e6faf9 files/digest-tunepimp-0.3.0 69
 MD5 9df04c3c157b652e3e895eeabb7015e6 files/thread.patch 393
