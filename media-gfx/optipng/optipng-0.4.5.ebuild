@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.5.ebuild,v 1.2 2004/06/03 08:25:00 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.5.ebuild,v 1.3 2004/06/03 08:33:40 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,7 +46,7 @@ src_compile() {
 		usemmx=0
 	fi
 
-	# only defined in bundled zlib?
+	# only defined in bundled zlib
 	if use ext-zlib || use ext-png; then
 		append-flags -DZ_RLE=3
 	fi
@@ -84,4 +84,18 @@ src_install() {
 	dobin ${S}/src/optipng
 	dodoc ${S}/doc/{CAVEAT,DESIGN,FEATURES,HISTORY,LICENSE,README,TODO,USAGE}
 	dohtml ${S}/doc/index.html
+}
+
+pkg_postinst() {
+	if use ext-zlib || use ext-png; then
+		ewarn "the ext-zlib and ext-png USE flags are designed for users"
+		ewarn "that require special modifications to libpng or zlib."
+		ewarn
+		ewarn "the bundled libraries are highly optimised specifically"
+		ewarn "for use with compressing png files, and should be used if"
+		ewarn "possible."
+		ewarn
+		ewarn "if you set these flags in error, please unset them and"
+		ewarn "re-merge ${PN}."
+	fi
 }
