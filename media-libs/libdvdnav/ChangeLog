@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdnav
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.14 2003/06/10 23:27:47 agenkin Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.15 2004/04/14 22:02:38 weeve Exp $
+
+  14 Apr 2004; Jason Wever <weeve@gentoo.org> libdvdnav-0.1.9.ebuild:
+  Stable on sparc.
 
 *libdvdnav-0.1.9 (10 Jun 2003)
 
