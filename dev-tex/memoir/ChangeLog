@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/memoir
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/ChangeLog,v 1.2 2004/12/28 21:14:07 absinthe Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/ChangeLog,v 1.3 2005/02/21 17:44:19 luckyduck Exp $
+
+  21 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> memoir-20040524.ebuild:
+  stable on amd64. fixes #82641
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> memoir-20040524.ebuild:
   Keywords ~amd64.
