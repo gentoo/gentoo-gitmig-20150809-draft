@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.6 2005/02/19 20:12:34 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.7 2005/03/26 00:53:55 radek Exp $
+
+  26 Mar 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  +files/zodb-3.3_umaskbug.patch, zodb-3.3.ebuild:
+  Fixed bug 85798, using information from Henk Spaaij <zaai@spaaij.net>.
 
   19 Feb 2005; Radoslaw Stachowiak <radek@gentoo.org> zodb-3.2.5.ebuild,
   -zodb-3.2.ebuild:
