@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/manpages-ru
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/ChangeLog,v 1.2 2003/02/12 04:55:34 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/ChangeLog,v 1.3 2004/04/05 11:02:35 gmsoft Exp $
+
+  05 Apr 2004; Guy Martin <gmsoft@gentoo.org> manpages-ru-0.7.ebuild:
+  Marked stable on hppa.
 
 *manpages-ru-0.7 (02 Nov 2002)
 

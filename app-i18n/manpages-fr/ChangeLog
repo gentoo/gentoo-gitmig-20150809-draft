@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/manpages-fr
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/ChangeLog,v 1.4 2003/02/12 04:55:29 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/ChangeLog,v 1.5 2004/04/05 10:57:05 gmsoft Exp $
+
+  05 Apr 2004; Guy Martin <gmsoft@gentoo.org> manpages-fr-0.9.5.ebuild:
+  Marked stable on hppa.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
