@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.16 2004/03/23 04:09:33 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.17 2004/03/28 04:25:52 zx Exp $
+
+*antlr-2.7.3 (31 Mar 2004)
+
+  31 Mar 2004; Chris Aniszczyk <zx@gentoo.org> antlr-2.7.3.ebuild:
+  Marking stable on x86.
 
   22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> antlr-2.7.2.ebuild:
   Clean up + Version bump. Fixes #45281
