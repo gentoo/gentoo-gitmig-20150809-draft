@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/groupoffice
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.5 2004/12/29 01:49:17 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.6 2005/03/28 13:54:54 mholzer Exp $
+
+*groupoffice-2.11a (28 Mar 2005)
+
+  28 Mar 2005; Martin Holzer <mholzer@gentoo.org> +groupoffice-2.11a.ebuild:
+  Version bumped. Closes 81653
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -39,7 +44,7 @@
   groupoffice-2.05.ebuild:
   Typo in DESCRIPTION: powerfull -> powerful. Bug 59717.
 
-  31 May 2004; Bryan Østergaard <kloeri@gentoo.org> groupoffice-2.04.ebuild:
+  31 May 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> groupoffice-2.04.ebuild:
   Stable on alpha.
 
 *groupoffice-2.05 (23 May 2004)
