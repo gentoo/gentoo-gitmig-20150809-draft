@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.3 2004/04/27 21:57:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.4 2004/06/03 15:31:12 humpback Exp $
 
 inherit flag-o-matic eutils
 
-DESCRIPTION="ICQ transport for WPjabber/Jabberd"
+DESCRIPTION="ICQ transport for wpjabber / jabberd"
 HOMEPAGE="http://jit.jabberstudio.org/"
 SRC_URI="http://www.jabberstudio.org/files/jit/${P}.tar.gz"
 
@@ -46,7 +46,7 @@ src_install() {
 pkg_postinst() {
 
 	einfo
-	einfo "Please read /usr/share/doc/${P}/README.Gentoo.gz"
+	einfo "Please read /usr/share/doc/${PN}-${PVR}/README.Gentoo.gz"
 	einfo "And please notice that now jit-transport comes with a init.d script"
 	einfo "dont forget to add it to your runlevel."
 	einfo
