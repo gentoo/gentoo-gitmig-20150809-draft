@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxPython
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.35 2003/12/29 15:56:28 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.36 2004/01/16 21:29:46 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> wxPython-2.4.2.4.ebuild:
+  set ppc in keywords
 
   29 Dec 2003; Guy Martin <gmsoft@gentoo.org> wxPython-2.4.1.2.ebuild:
   Marked stable on hppa.
