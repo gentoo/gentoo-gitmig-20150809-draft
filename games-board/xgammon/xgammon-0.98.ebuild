@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.4 2004/04/13 09:32:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.5 2004/05/07 23:01:39 mr_bones_ Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}a
+S="${WORKDIR}/${P}a"
 DESCRIPTION="very nice backgammon game for X"
 HOMEPAGE="http://fawn.unibw-hamburg.de/steuer/xgammon/xgammon.html"
 SRC_URI="http://fawn.unibw-hamburg.de/steuer/xgammon/Downloads/${P}a.tar.gz"
@@ -20,8 +20,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/xgammon-0.98-broken.patch
-	epatch ${FILESDIR}/xgammon-0.98-config.patch
+	epatch "${FILESDIR}/${P}-broken.patch"
+	epatch "${FILESDIR}/${P}-config.patch"
+	epatch "${FILESDIR}/gcc33.patch"
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xgammon
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $ Header: $
+
+  07 May 2004; Michael Sterrett <mr_bones_@gentoo.org> xgammon-0.98.ebuild,
+  files/gcc33.patch:
+  fix compile for >=gcc3.3 (bug #50364)
 
   04 Nov 2003; Jason Wever <weeve@gentoo.org> xgammon-0.98.ebuild:
   Added ~sparc keyword.
