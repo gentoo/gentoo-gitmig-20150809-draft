@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.7 2004/07/25 22:26:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.8 2004/10/17 11:54:55 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  kletterwizard-0.9.6.ebuild:
+  Stable on amd64 and x86.
 
   26 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kletterwizard-0.9.6.ebuild:
   QA: place need-kde after R/DEPEND (again!)
