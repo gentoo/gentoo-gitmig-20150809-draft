@@ -240,3 +240,4 @@ move net-www/kazehakase www-client/kazehakase
 move net-www/mozilla-firefox www-client/mozilla-firefox
 slotmove =dev-java/batik-1.5.1* 0 1.5.1 
 move net-misc/gtk-imonc net-dialup/gtk-imonc
+move www-client/w3m-m17n www-client/w3m
