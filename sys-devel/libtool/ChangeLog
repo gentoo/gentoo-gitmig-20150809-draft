@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.26 2003/11/17 00:12:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.27 2003/11/17 04:21:52 brad_mssw Exp $
+
+  16 Nov 2003; Brad House <brad_mssw@gentoo.org> libtool-1.4.3-r3.ebuild:
+  the amd64 _required_ patch was reverted between -r2 and -r3 
+  without reason. Putting it back. Basically when it compiles libtool-1.3.5, that
+  package needs to be re-libtoolized b/c it doesn't know what x86_64 is.
 
 *libtool-1.4.3-r3 (17 Nov 2003)
 

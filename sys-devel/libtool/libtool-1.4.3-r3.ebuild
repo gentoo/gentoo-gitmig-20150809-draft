@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r3.ebuild,v 1.1 2003/11/17 00:12:03 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r3.ebuild,v 1.2 2003/11/17 04:21:52 brad_mssw Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
@@ -67,6 +67,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/${PN}-1.3.5-mktemp.patch
 
 	use hppa && S="${OLD_S}" gnuconfig_update
+	use amd64 && S="${OLD_S}" gnuconfig_update
 
 	cd ${S}
 	echo
