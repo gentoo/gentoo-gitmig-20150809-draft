@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/calltree
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.9 2003/11/09 09:02:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.10 2003/11/14 18:55:04 caleb Exp $
+
+  14 Nov 2003; Caleb Tennis <caleb@gentoo.org> :
+  New version, for valgrind 2.0.0
 
   09 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> calltree-0.9.4.ebuild:
   clean calltree-0.9.4.ebuild since it doesn't seem to work as well as 0.9.5
