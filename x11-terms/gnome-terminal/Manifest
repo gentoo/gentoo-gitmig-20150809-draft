@@ -1,8 +1,8 @@
 MD5 61f1ed4c5adec0486113818e1f1e5954 gnome-terminal-2.2.0.ebuild 861
 MD5 88997c73a698196a21f2b4572e72494c gnome-terminal-2.2.2.ebuild 1173
 MD5 507f219d22c5b4a807f5885ebd7d27b5 gnome-terminal-2.2.1-r1.ebuild 1172
-MD5 393fa37db9982acd38365868139bb7ec gnome-terminal-2.3.2.ebuild 1330
-MD5 1d5a7207f81a2cc4ececdf32cb4123a8 ChangeLog 4339
+MD5 a37dac893ea2b05a2c58e0fb68b45268 gnome-terminal-2.3.2.ebuild 1327
+MD5 9e9a9a27bc13cef6ac62b3ebf20cf4e8 ChangeLog 4466
 MD5 e2d30038422f89012ed1c785436ff16f gnome-terminal-2.2.1.ebuild 1014
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f29df8dd0bbc7d89b4eeada7ab337e5c files/digest-gnome-terminal-2.2.0 73
@@ -11,5 +11,4 @@ MD5 1a505906f62f50ab4495b966126639cf files/digest-gnome-terminal-2.2.2 74
 MD5 e5fad4021ef10b03842a46119ae5e2b8 files/digest-gnome-terminal-2.3.2 74
 MD5 1c5aaf13eb2a8bd0b2b03c529d5c8740 files/gnome-terminal-2-default_shell.patch 490
 MD5 4513cc772232b6e41dc1d057fa07d3a7 files/digest-gnome-terminal-2.2.1-r1 73
-MD5 ba1ef15df1fd540e4e72c109b31a8ab5 files/gnome-terminal-2-always_show_tabs_border.patch 527
 MD5 206e36d5520f43272f029d6411af6332 files/gnome-terminal-2-dnd_url_add_space.patch 1000
