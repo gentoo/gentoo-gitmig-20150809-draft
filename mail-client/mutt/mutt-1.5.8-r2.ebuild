@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r2.ebuild,v 1.1 2005/03/17 22:36:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r2.ebuild,v 1.2 2005/03/24 21:23:40 agriffis Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp sasl buffysize vanilla"
@@ -135,7 +135,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install failed"
+	make DESTDIR=${D} install || die "install failed"
 	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt
