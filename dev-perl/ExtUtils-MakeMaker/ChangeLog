@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.21 2003/06/07 06:53:48 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.22 2003/06/25 07:46:50 rac Exp $
+
+*ExtUtils-MakeMaker-6.05-r6 (25 Jun 2003)
+
+  25 Jun 2003; <rac@gentoo.org> ExtUtils-MakeMaker-6.05-r6.ebuild:
+  Install into vendor directory instead of overwriting files in core. Requires
+  >=perl-5.8.0-r12, which is still highly experimental
 
   06 Jun 2003; <rac@gentoo.org> ExtUtils-MakeMaker-6.05-r4.ebuild,
   ExtUtils-MakeMaker-6.05-r5.ebuild:
