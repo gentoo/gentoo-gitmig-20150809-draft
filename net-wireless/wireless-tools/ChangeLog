@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.20 2003/11/02 18:56:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.21 2003/11/10 15:40:41 latexer Exp $
+
+  10 Nov 2003; Peter Johanson <latexer@gentoo.org> :
+  Added 27_pre2-r1 which now creates /usr/lib/libiw.so symlink (bug #32802) and
+  added 27_pre3 (bug #33043) which also creates /usr/lib/libiw.so
 
   02 Nov 2003; Luca Barbato <lu_zero@gentoo.org> wireless-tools-26.ebuild:
   Added to ppc.
