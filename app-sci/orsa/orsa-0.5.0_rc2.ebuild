@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.5.0_rc2.ebuild,v 1.1 2004/03/10 07:03:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.5.0_rc2.ebuild,v 1.2 2004/03/10 09:00:27 phosphan Exp $
 
 inherit base flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc
 	qt? ( >=x11-libs/qt-3.2 )
 	>=sys-libs/readline-4.2
 	mpi? ( sys-cluster/lam-mpi )
-	ginac? ( app-sci/ginac )
+	ginac? ( >=app-sci/ginac-1.1.1 )
 	gsl? ( dev-libs/gsl )
 	cln? ( dev-libs/cln )"
 
