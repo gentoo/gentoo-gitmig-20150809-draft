@@ -1,0 +1,9 @@
+# ChangeLog for dev-lisp/cl-terminfo
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-terminfo/ChangeLog,v 1.1 2004/02/15 10:13:22 mkennedy Exp $
+
+*cl-terminfo-1.2 (15 Feb 2004)
+
+  15 Feb 2004; <mkennedy@gentoo.org> cl-terminfo-1.2.ebuild, metadata.xml:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
