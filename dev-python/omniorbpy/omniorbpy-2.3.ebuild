@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.3.ebuild,v 1.2 2004/07/17 09:50:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.3.ebuild,v 1.3 2004/11/17 13:23:34 liquidx Exp $
 
 MY_P=${P/omniorb/omniORB}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/omniorb/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="ssl"
 
 DEPEND=">=net-misc/omniORB-4.0.3
@@ -22,7 +22,8 @@ src_compile() {
 
 	use ssl && MY_CONF="${MY_CONF} --with-openssl=/usr"
 
-	MY_PY=/usr/bin/python`python -c "import sys; print sys.version[:3]"`
+	#MY_PY=/usr/bin/python`python -c "import sys; print sys.version[:3]"`
+	MY_PY=/usr/bin/python2.2
 	# install modules for python which is default python interpreter in
 	# the system
 
