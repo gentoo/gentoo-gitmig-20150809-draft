@@ -1,18 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.2.1.ebuild,v 1.9 2004/11/28 16:57:35 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.2.1.ebuild,v 1.10 2005/03/07 10:43:53 ka0ttic Exp $
 
 DESCRIPTION="a powerful perl script that summarizes snort logs"
-SRC_URI="http://jeremy.chartier.free.fr/${PN}/${PN}_v${PV}.tgz"
 HOMEPAGE="http://jeremy.chartier.free.fr/snortalog/"
+SRC_URI="http://jeremy.chartier.free.fr/${PN}/${PN}_v${PV}.tgz"
 
-# Missing dep: dev-perl/HTML-HTMLDoc. Do not move to stable. see bug 72090. (2004 Nov 22 eldad)
-KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-S=${WORKDIR}/${PN}_v${PV%.?}
+S="${WORKDIR}/${PN}_v${PV%.?}"
 
 RDEPEND="dev-lang/perl
 	dev-perl/GDGraph
@@ -21,14 +20,9 @@ RDEPEND="dev-lang/perl
 	dev-perl/HTML-HTMLDoc
 	dev-perl/perl-tk"
 
-src_compile() {
-	einfo "Nothing to compile."
-}
-
 src_install () {
-
-	dodir /usr/bin
-	cp ${S}/snortalog.pl ${D}/usr/bin
-
-	dodoc CHANGES README domains hw rules snortalog_v2.2.0.pdf
+	dobin snortalog.pl || die "dobin failed"
+	insinto /etc/${PN}
+	doins domains hw rules
+	dodoc CHANGES README snortalog_v2.2.0.pdf
 }

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/snortalog
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.8 2004/11/28 16:57:35 eldad Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.9 2005/03/07 10:43:53 ka0ttic Exp $
+
+*snortalog-2.3.0 (07 Mar 2005)
+
+  07 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/snortalog-notcltk.diff, snortalog-2.2.1.ebuild,
+  +snortalog-2.3.0.ebuild:
+  Version bump; also added patch that makes Tcl/tk support optional (via
+  USE=tcltk). Thanks to Marco Morales for the ebuild and patch in bug 83987.
 
   28 Nov 2004; Eldad Zack <eldad@gentoo.org> snortalog-2.2.1.ebuild:
   Completed dependencies. Closes Bug 72090.

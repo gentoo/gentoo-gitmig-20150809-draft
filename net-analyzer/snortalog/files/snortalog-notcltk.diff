@@ -1,0 +1,26 @@
+--- snortalog.pl.orig	2005-03-03 17:13:06.792360520 +0000
++++ snortalog.pl	2005-03-03 17:41:45.146131040 +0000
+@@ -45,17 +45,17 @@
+ # Graphical Tool Kit Librairies
+ #
+ $TK = 0 ;
+-$TK = eval "use Tk;1;" ;
+-$TK = eval "use Tk::NoteBook;2;" if ($TK == 1);
++#$TK = eval "use Tk;1;" ;
++#$TK = eval "use Tk::NoteBook;2;" if ($TK == 1);
+ 
+ #
+ # GD Librairies for charts
+ #
+ $GD = 0 ;
+-$GD = eval "use GD::Graph::pie;1;";
+-$GD = eval "use GD::Graph::bars;2;" if ($GD == 1);
+-$GD = eval "use GD::Graph::lines;3;" if ($GD == 2);
+-$GD = eval "use GD::Graph::area;4;" if ($GD == 3);
++#$GD = eval "use GD::Graph::pie;1;";
++#$GD = eval "use GD::Graph::bars;2;" if ($GD == 1);
++#$GD = eval "use GD::Graph::lines;3;" if ($GD == 2);
++#$GD = eval "use GD::Graph::area;4;" if ($GD == 3);
+ 
+ #
+ # HTML and PDF manipulation libraries
