@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.2.0-r1.ebuild,v 1.5 2004/01/08 02:35:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.2.0-r1.ebuild,v 1.6 2004/03/30 22:04:29 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,9 +18,8 @@ DEPEND="pam? ( >=sys-libs/pam-0.75 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 RDEPEND="${DEPEND} || ( sys-apps/xinetd >=sys-apps/ucspi-tcp-0.88-r3 )"
 
-filter-flags "-fPIC"
-
 src_unpack() {
+	filter-flags "-fPIC"
 	unpack ${A} || die
 	cd ${S} || die
 	epatch ${FILESDIR}/${P}-gentoo.diff.bz2 || die
