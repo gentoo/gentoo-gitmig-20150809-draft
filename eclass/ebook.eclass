@@ -10,7 +10,7 @@ HOMEPAGE="http://lidn.sourceforge.net"
 
 SLOT="0"
 LICENSE="OPL"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 # ebook eclass user guide:
 # -vars
