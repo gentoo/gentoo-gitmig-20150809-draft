@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0.ebuild,v 1.4 2003/03/25 14:50:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0.ebuild,v 1.5 2003/03/25 21:12:35 seemant Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
 #              update DRM if there are fixes not already in XFree86 tarballs ...
 
-IUSE="3dfx gamma ibm matrox rage128 radeon sis"
+IUSE="3dfx gamma i8x0 matrox rage128 radeon sis"
 
 inherit eutils
 
@@ -52,7 +52,7 @@ then
 elif [ "`use sis`" ]
 then
 	VIDCARDS="${VIDCARDS} sis.o"
-elif [ "`use ibm`" ]
+elif [ "`use i8x0`" ]
 then
 	VIDCARDS="${VIDCARDS} i810.o i830.o"
 elif [ "`use gamma`" ]
