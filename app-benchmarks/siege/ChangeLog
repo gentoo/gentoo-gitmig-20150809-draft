@@ -1,12 +1,15 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.13 2004/09/18 13:25:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.14 2004/09/18 13:30:13 sejo Exp $
 
   18 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> siege-2.60.ebuild:
   Versions <2.60 are pretty buggy (segfault often), so marking 2.60 stable on x86
 
   17 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Added metadata.xml
+
+  18 Sep 2004; <SeJo@gentoo.org> siege-2.60.ebuild:
+  marked stable ppc for KaOTTiC
 
 *siege-2.60 (21 Aug 2004)
 

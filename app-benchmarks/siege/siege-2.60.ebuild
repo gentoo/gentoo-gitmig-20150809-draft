@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.2 2004/09/18 13:25:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.3 2004/09/18 13:30:13 sejo Exp $
 
 DESCRIPTION="An http regression testing and benchmarking utility"
 HOMEPAGE="http://www.joedog.org/siege/"
 SRC_URI="ftp://sid.joedog.org/pub/siege/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="ssl"
