@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r3.ebuild,v 1.7 2004/12/17 06:38:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r3.ebuild,v 1.8 2004/12/28 20:19:57 ribosome Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -15,7 +15,7 @@ IUSE="oss static djbfft"
 
 DEPEND=">=sys-devel/autoconf-2.5
 	>=sys-devel/automake-1.8
-	djbfft? ( dev-libs/djbfft )"
+	djbfft? ( sci-libs/djbfft )"
 RDEPEND="virtual/libc"
 
 src_unpack() {
