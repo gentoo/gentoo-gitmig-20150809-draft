@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.4.ebuild,v 1.5 2004/02/24 09:34:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.0.ebuild,v 1.1 2004/03/20 23:16:26 foser Exp $
 
 inherit gnome2
 
@@ -9,30 +9,34 @@ HOMEPAGE="http://epiphany.mozdev.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~amd64 ia64"
-IUSE="gnome"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
+IUSE="gnome doc"
 
-RDEPEND=">=gnome-base/gconf-1.2
-	>=x11-libs/gtk+-2
-	>=dev-libs/libxml2-2.5.9
+RDEPEND=">=dev-libs/glib-2.3.5
+	>=x11-libs/gtk+-2.3.5
+	>=gnome-base/gconf-1.2
+	>=dev-libs/libxml2-2.6.6
 	>=gnome-base/libgnomeui-2
-	>=gnome-base/libglade-2
+	>=gnome-base/libglade-2.3.1
 	>=gnome-base/libbonoboui-2.2
 	>=gnome-base/ORBit2-2
-	>=gnome-base/gnome-vfs-2
+	>=gnome-base/gnome-vfs-2.3.1
 	>=net-www/mozilla-1.4
-	gnome? ( >=gnome-base/nautilus-2.2 )"
+	gnome? ( >=gnome-base/nautilus-2.5 )"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig
-	dev-util/intltool"
+	>=dev-util/intltool-0.29
+	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
 
 use gnome \
 	&& G2CONF="${G2CONF} --enable-nautilus-view=yes" \
 	|| G2CONF="${G2CONF} --enable-nautilus-view=no"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup () {
 
@@ -42,5 +46,5 @@ pkg_setup () {
 		eerror "export USE=\"gtk2\" ;emerge mozilla -p "
 		die "Need Mozilla compiled with gtk+-2.0!"
 	fi
-}
 
+}
