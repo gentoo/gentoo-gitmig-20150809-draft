@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.2.ebuild,v 1.3 2003/02/13 10:25:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.2.ebuild,v 1.4 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="opengl"
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 -ppc ~sparc -alpha"
 SLOT="0"
 
 DEPEND="virtual/glibc"
-RDEPEND=">=sys-devel/perl-5.6.1
+RDEPEND=">=dev-lang/perl-5.6.1
 	>=sys-devel/gcc-2.95.3
 	>=dev-libs/gmp-4.1
 	opengl? ( virtual/opengl

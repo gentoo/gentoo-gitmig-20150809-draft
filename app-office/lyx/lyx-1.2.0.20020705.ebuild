@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.20020705.ebuild,v 1.12 2003/03/01 01:13:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.20020705.ebuild,v 1.13 2003/03/11 21:11:44 seemant Exp $
 
 S=${WORKDIR}/lyx-devel
 DESCRIPTION="WYSIWYM frontend for LaTeX"
@@ -18,7 +18,7 @@ IUSE="nls cups"
 DEPEND="virtual/x11
 	>=x11-libs/xforms-1.0_rc4
 	app-text/tetex 
-	>=sys-devel/perl-5
+	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus"
 RDEPEND="${DEPEND}

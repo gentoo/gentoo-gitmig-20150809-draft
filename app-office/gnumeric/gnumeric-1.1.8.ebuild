@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.8.ebuild,v 1.7 2003/02/13 09:16:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.8.ebuild,v 1.8 2003/03/11 21:11:44 seemant Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	=gnome-extra/libgsf-1.3.0
 	>=gnome-base/libglade-2.0.0
 	dev-libs/libxml2
-	perl?   ( >=sys-devel/perl-5.6 )
+	perl?   ( >=dev-lang/perl-5.6 )
 	python? ( >=dev-lang/python-2.0 )
 	gb?     ( ~gnome-extra/gb-0.0.17 )
 	libgda? ( >=gnome-extra/libgda-0.2.91

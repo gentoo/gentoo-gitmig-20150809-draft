@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.8 2003/02/28 18:18:47 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.9 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="kde gnome"
 
@@ -30,7 +30,7 @@ SRC_URI="x86? ( http://ny1.mirror.openoffice.org/stable/${PV}/OOo_${MY_PV}_Linux
 HOMEPAGE="http://www.openoffice.org"
 
 DEPEND="virtual/glibc
-	>=sys-devel/perl-5.0
+	>=dev-lang/perl-5.0
 	virtual/x11
 	app-arch/zip
 	app-arch/unzip

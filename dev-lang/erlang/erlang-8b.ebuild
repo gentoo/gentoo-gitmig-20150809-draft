@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-8b.ebuild,v 1.4 2003/02/13 10:24:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-8b.ebuild,v 1.5 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="X ssl"
 
@@ -13,7 +13,7 @@ LICENSE="EPL"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc "
 
-DEPEND=">=sys-devel/perl-5.6.1
+DEPEND=">=dev-lang/perl-5.6.1
 	X?	( >=x11-base/xfree-4.2.0-r12 )
 	ssl?	( >=dev-libs/openssl-0.9.6d )"
 

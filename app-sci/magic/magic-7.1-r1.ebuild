@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r1.ebuild,v 1.5 2003/02/13 09:23:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r1.ebuild,v 1.6 2003/03/11 21:11:45 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The VLSI design CAD tool"
@@ -9,7 +9,7 @@ HOMEPAGE="http://vlsi.cornell.edu/magic/"
 KEYWORDS="x86"
 LICENSE="as-is"
 DEPEND="sys-apps/findutils
-	sys-devel/perl	
+	dev-lang/perl	
 	>=app-shells/tcsh-6.10-r3 
 	sys-libs/libtermcap-compat"
 RDEPEND="sys-libs/libtermcap-compat"

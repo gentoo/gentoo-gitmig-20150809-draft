@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nlcvt/nlcvt-19990309.ebuild,v 1.2 2003/02/13 09:42:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nlcvt/nlcvt-19990309.ebuild,v 1.3 2003/03/11 21:11:45 seemant Exp $
 
 DESCRIPTION="A perl script to convert between various line terminators"
 HOMEPAGE="http://www.perl.com/language/ppt/src/nlcvt/"
@@ -11,7 +11,7 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="sys-devel/perl"
+DEPEND="dev-lang/perl"
 
 src_install() {
 	dobin ${DISTDIR}/nlcvt

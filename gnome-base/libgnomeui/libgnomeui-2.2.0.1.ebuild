@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.2.0.1.ebuild,v 1.6 2003/03/01 14:45:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.2.0.1.ebuild,v 1.7 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="doc"
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc alpha ~sparc"
 LICENSE="GPL-2 LGPL-2" 
 
 RDEPEND=">=x11-libs/pango-1.1.2
-	>=sys-devel/perl-5.002
+	>=dev-lang/perl-5.002
 	>=sys-apps/gawk-3.1.0
 	>=dev-libs/popt-1.5
 	>=sys-devel/bison-1.28

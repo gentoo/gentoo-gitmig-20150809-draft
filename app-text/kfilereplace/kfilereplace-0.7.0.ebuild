@@ -13,6 +13,6 @@ KEYWORDS="x86 sparc  ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="$DEPEND sys-devel/perl"
+DEPEND="$DEPEND dev-lang/perl"
 
 

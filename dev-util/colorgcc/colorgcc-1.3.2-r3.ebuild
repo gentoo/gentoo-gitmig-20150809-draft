@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r3.ebuild,v 1.2 2003/02/13 11:48:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r3.ebuild,v 1.3 2003/03/11 21:11:45 seemant Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 
-DEPEND="sys-devel/perl"
+DEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${PN}_${PV}.orig.tar.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.8.ebuild,v 1.6 2003/03/04 00:38:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.8.ebuild,v 1.7 2003/03/11 21:11:44 seemant Exp $
 
 inherit flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	 >=gnome-base/gnome-print-0.21
 	 postgres? ( dev-db/postgresql )"
 DEPEND="${RDEPEND}
-	>=sys-devel/perl-5
+	>=dev-lang/perl-5
 	>=dev-libs/slib-2.3.8
 	>=dev-lang/swig-1.3_alpha4
 	>=dev-libs/g-wrap-1.1.5

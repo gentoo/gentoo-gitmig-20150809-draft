@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.2.ebuild,v 1.6 2003/03/10 22:42:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.2.ebuild,v 1.7 2003/03/11 21:11:45 seemant Exp $
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,7 @@ IUSE="gif png"
 DEPEND="app-text/ghostscript
 	app-text/tetex
 	media-libs/netpbm
-	sys-devel/perl
+	dev-lang/perl
 	gif? ( media-libs/giflib
 		media-libs/libungif )
 	png? ( media-libs/libpng )"

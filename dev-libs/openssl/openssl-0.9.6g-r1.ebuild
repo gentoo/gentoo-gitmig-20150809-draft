@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6g-r1.ebuild,v 1.8 2003/02/21 14:34:04 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6g-r1.ebuild,v 1.9 2003/03/11 21:11:45 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -8,7 +8,7 @@ SRC_URI="http://www.openssl.org/source/${P}.tar.gz"
 HOMEPAGE="http://www.openssl.org/"
 
 RDEPEND="virtual/glibc"
-DEPEND="${RDEPEND} >=sys-devel/perl-5"
+DEPEND="${RDEPEND} >=dev-lang/perl-5"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~mips"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.3.ebuild,v 1.7 2003/02/13 09:14:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.3.ebuild,v 1.8 2003/03/11 21:11:44 seemant Exp $
 
 IUSE="perl nls gnome build spell jpeg xml2"
 
@@ -16,7 +16,7 @@ DEPEND="virtual/x11
 	>=dev-libs/libunicode-0.4-r1
 	=x11-libs/gtk+-1.2*
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
-	perl?  ( >=sys-devel/perl-5.6 )
+	perl?  ( >=dev-lang/perl-5.6 )
 	xml2?  ( >=dev-libs/libxml2-2.4.10 )
 	spell? ( >=app-text/aspell-0.50 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1

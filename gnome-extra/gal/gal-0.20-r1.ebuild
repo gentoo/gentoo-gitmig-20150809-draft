@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.20-r1.ebuild,v 1.5 2003/03/08 18:58:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.20-r1.ebuild,v 1.6 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="nls alsa"
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ppc sparc "
 DEPEND="virtual/python
 	nls? ( sys-devel/gettext )
 	>=dev-util/intltool-0.11
-	sys-devel/perl
+	dev-lang/perl
     <gnome-base/gnome-vfs-1.9.0
 	>=dev-libs/libunicode-0.4-r1
 	alsa? ( >=media-libs/alsa-lib-0.5.10 )

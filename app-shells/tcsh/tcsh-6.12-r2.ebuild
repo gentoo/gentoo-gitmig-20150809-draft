@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r2.ebuild,v 1.1 2003/03/08 01:03:58 alain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r2.ebuild,v 1.2 2003/03/11 21:11:45 seemant Exp $
 
 MY_P="${PN}-${PV}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -14,7 +14,7 @@ IUSE="cjk perl"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
-	perl? ( sys-devel/perl )"
+	perl? ( dev-lang/perl )"
 
 S="${WORKDIR}/${MY_P}"
 

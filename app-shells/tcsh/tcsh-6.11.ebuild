@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.11.ebuild,v 1.8 2003/02/13 09:31:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.11.ebuild,v 1.9 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="perl"
 			
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gw.com/pub/unix/tcsh/${P}.tar.gz
 HOMEPAGE="http://www.tcsh.org/"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
-	perl? ( sys-devel/perl )"
+	perl? ( dev-lang/perl )"
 
 HOMEPAGE="http://www.tcsh.org/"
 

@@ -1,0 +1,11 @@
+--- t/op/stat.t.orig	2003-02-14 18:38:23.000000000 +0000
++++ t/op/stat.t	2003-02-14 18:39:34.000000000 +0000
+@@ -180,7 +180,7 @@
+ die "Can't run op/stat.t test 35 without pwd working" unless $cwd;
+ my @bin = grep {-d} ($^O eq 'machten' ?
+ 		     qw(/usr/bin /bin) :
+-		     qw(/sbin /usr/sbin /bin /usr/bin));
++		     qw(/sbin /usr/sbin /bin /usr/bin /usr/lib/misc));
+ unless (@bin) { print ("not ok 35\n"), goto tty_test; }
+ for my $bin (@bin) {
+     opendir BIN, $bin or die "Can't opendir $bin: $!";

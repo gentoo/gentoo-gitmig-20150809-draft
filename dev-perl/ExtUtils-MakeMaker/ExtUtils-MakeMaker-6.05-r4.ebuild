@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.05-r4.ebuild,v 1.6 2003/02/22 07:47:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.05-r4.ebuild,v 1.7 2003/03/11 21:11:45 seemant Exp $
 
 inherit perl-post
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 sparc ppc alpha mips hppa arm"
 
-DEPEND=">=sys-devel/perl-5.6.1-r10"
+DEPEND=">=dev-lang/perl-5.6.1-r10"
 
 src_compile() {
 	perl Makefile.PL ${myconf} PREFIX=${D}/usr || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.17 2003/02/13 11:57:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.18 2003/03/11 21:11:45 seemant Exp $
 
 inherit kde-base
 need-kde 3
@@ -20,7 +20,7 @@ KEYWORDS="x86 sparc "
 
 DEPEND="$DEPEND
 	sys-devel/flex
-	sys-devel/perl"
+	dev-lang/perl"
 
 newdepend ">=kde-base/kdebase-3
 	>=dev-util/kdoc-2.0_alpha24

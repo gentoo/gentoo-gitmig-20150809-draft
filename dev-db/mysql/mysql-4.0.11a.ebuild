@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.11a.ebuild,v 1.1 2003/03/01 23:32:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.11a.ebuild,v 1.2 2003/03/11 21:11:45 seemant Exp $
 
 #cuckoo, cuckoo
 NEWP=${P}-gamma
@@ -34,7 +34,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	>=sys-libs/zlib-1.1.3
-	sys-devel/perl
+	dev-lang/perl
 	sys-apps/procps"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.17.ebuild,v 1.1 2003/03/05 19:22:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.17.ebuild,v 1.2 2003/03/11 21:11:45 seemant Exp $
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
 SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
@@ -11,7 +11,7 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE="jpeg gif png truetype mpeg mmx sse"
 
-DEPEND="sys-devel/perl
+DEPEND="dev-lang/perl
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )

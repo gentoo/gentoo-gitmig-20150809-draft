@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/Crypt-DES-2.03-r1.ebuild,v 1.4 2003/02/13 11:01:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/Crypt-DES-2.03-r1.ebuild,v 1.5 2003/03/11 21:11:45 seemant Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 ppc alpha sparc "
 
-DEPEND="virtual/glibc >=sys-devel/perl-5"
+DEPEND="virtual/glibc >=dev-lang/perl-5"
 
 export OPTIMIZE="${CFLAGS}"

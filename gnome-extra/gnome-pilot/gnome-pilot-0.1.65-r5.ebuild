@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.65-r5.ebuild,v 1.7 2003/02/13 12:18:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.65-r5.ebuild,v 1.8 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Gnome Pilot apps"
 SRC_URI="ftp://ftp.gnome.org/pub/gnome/unstable/sources/gnome-pilot/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-pilot/"
 
-DEPEND="sys-devel/perl
+DEPEND="dev-lang/perl
 	>=gnome-base/control-center-1.4.0.1-r1
 	>=gnome-base/gnome-libs-1.4.1.7
 	=gnome-base/gnome-panel-1.4*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.13 2003/02/13 10:02:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.14 2003/03/11 21:11:45 seemant Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -21,7 +21,7 @@ KEYWORDS="ppc x86 sparc ~alpha"
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	>=sys-libs/zlib-1.1.3
-	sys-devel/perl
+	dev-lang/perl
 	sys-apps/procps"
 RDEPEND=""
 

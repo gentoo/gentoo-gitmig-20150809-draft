@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.31.ebuild,v 1.10 2003/02/13 10:27:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.31.ebuild,v 1.11 2003/03/11 21:11:45 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="groovy little assembler"
@@ -10,7 +10,7 @@ HOMEPAGE="http://nasm.sourceforge.net/"
 DEPEND="virtual/glibc sys-apps/texinfo"
 
 if [ -z "`use build`" ]; then
-	DEPEND="${DEPEND} sys-devel/perl"
+	DEPEND="${DEPEND} dev-lang/perl"
 fi
 
 SLOT="0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5_pre-r1.ebuild,v 1.4 2003/02/13 11:59:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5_pre-r1.ebuild,v 1.5 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="X"
 
@@ -36,7 +36,7 @@ DEPEND="virtual/glibc
 	>=sys-apps/bzip2-1.0.1
 	>=sys-apps/texinfo-4.1
 	>=sys-devel/gettext-0.11.0
-	>=sys-devel/perl-5.6
+	>=dev-lang/perl-5.6
 	>=sys-libs/zlib-1.1.4
 	>=sys-libs/gpm-1.20.0
 	>=sys-libs/ncurses-5.2

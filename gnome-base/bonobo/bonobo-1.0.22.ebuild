@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.7 2003/03/09 19:53:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.8 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="nls"
 
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/oaf-0.6.8
 	>=media-libs/gdk-pixbuf-0.6"
 
 DEPEND="${RDEPEND}
-	sys-devel/perl
+	dev-lang/perl
 	nls? ( sys-devel/gettext 
 	>=dev-util/intltool-0.11 )"
 

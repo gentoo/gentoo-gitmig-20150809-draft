@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.ebuild,v 1.7 2003/02/13 10:25:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.ebuild,v 1.8 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="opengl"
 
@@ -42,7 +42,7 @@ KEYWORDS="x86 sparc "
 # FIXME: Add USE support for parallel haskell (requires PVM)
 #        Get PVM from ftp://ftp.netlib.org/pvm3/
 DEPEND="virtual/glibc
-		>=sys-devel/perl-5.6.1
+		>=dev-lang/perl-5.6.1
 		>=sys-devel/gcc-2.95.3
 		>=sys-devel/make-3.79.1
 		>=sys-apps/sed-3.02.80
@@ -54,7 +54,7 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
 		>=sys-devel/gcc-2.95.3
-		>=sys-devel/perl-5.6.1
+		>=dev-lang/perl-5.6.1
 		opengl? ( virtual/opengl virtual/glu virtual/glut )"
 
 

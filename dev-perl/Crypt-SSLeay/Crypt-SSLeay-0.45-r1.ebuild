@@ -13,7 +13,7 @@ LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 alpha"
 
 DEPEND="virtual/glibc 
-	>=sys-devel/perl-5
+	>=dev-lang/perl-5
 	dev-perl/libwww-perl
 	>=dev-libs/openssl-0.9.6g"
 

@@ -13,7 +13,7 @@ LICENSE="as-is"
 
 RDEPEND="virtual/glibc
         >=media-libs/freetype-2.0"
-DEPEND="$RDEPEND sys-devel/perl"
+DEPEND="$RDEPEND dev-lang/perl"
 
 src_unpack() {
     unpack ${A}

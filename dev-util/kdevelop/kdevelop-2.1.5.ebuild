@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.3 2003/02/16 19:12:16 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.4 2003/03/11 21:11:45 seemant Exp $
 
 inherit kde-base eutils
 need-kde 3.1
@@ -28,7 +28,7 @@ newdepend ">=kde-base/kdebase-3
 	>=app-doc/qt-docs-${QTVER}
 	app-doc/kdelibs-apidocs
 	=sys-devel/flex-2.5.4*
-	sys-devel/perl"
+	dev-lang/perl"
 
 # -j2 and greater fails - see bug #6199
 export MAKEOPTS="$MAKEOPTS -j1"

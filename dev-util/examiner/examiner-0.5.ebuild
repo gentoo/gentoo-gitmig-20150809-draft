@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/examiner/examiner-0.5.ebuild,v 1.3 2003/02/13 11:51:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/examiner/examiner-0.5.ebuild,v 1.4 2003/03/11 21:11:45 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Examiner is an application that utilizes the objdump command to disassemble and comment foreign executable binaries"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="sys-devel/perl"
+DEPEND="dev-lang/perl"
 
 src_install() {
 

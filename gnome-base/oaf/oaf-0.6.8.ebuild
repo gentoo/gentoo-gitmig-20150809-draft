@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.8.ebuild,v 1.10 2003/02/13 12:15:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.8.ebuild,v 1.11 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="nls"
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/glibc
 	>=dev-libs/libxml-1.8.15"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/perl-5
+	>=dev-lang/perl-5
 	dev-util/indent
 	nls? ( sys-devel/gettext )"
 

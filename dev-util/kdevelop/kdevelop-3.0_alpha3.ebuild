@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha3.ebuild,v 1.3 2003/02/22 19:13:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha3.ebuild,v 1.4 2003/03/11 21:11:45 seemant Exp $
 
 inherit kde-base
 need-kde 3
@@ -17,7 +17,7 @@ SLOT=3
 # -j2 and greater fails - see bug #6199
 export MAKEOPTS="$MAKEOPTS -j1"
 
-newdepend ">=sys-devel/perl-5.0.4
+newdepend ">=dev-lang/perl-5.0.4
 	sys-devel/flex
 	app-text/sgmltools-lite
 	app-misc/glimpse

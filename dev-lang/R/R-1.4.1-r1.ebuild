@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.4.1-r1.ebuild,v 1.9 2003/02/13 10:24:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.4.1-r1.ebuild,v 1.10 2003/03/11 21:11:45 seemant Exp $
 
 IUSE="atlas X tcltk gnome"
 
@@ -16,7 +16,7 @@ SRC_URI="http://cran.r-project.org/src/base/${P}.tgz"
 HOMEPAGE="http://www.r-project.org/"
 
 DEPEND="virtual/glibc
-		>=sys-devel/perl-5.6.1-r3
+		>=dev-lang/perl-5.6.1-r3
 		>=sys-libs/readline-4.1-r3
 		>=sys-libs/zlib-1.1.3-r2
 		>=media-libs/jpeg-6b-r2

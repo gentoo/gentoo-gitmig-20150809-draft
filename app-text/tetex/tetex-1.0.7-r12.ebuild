@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.6 2003/03/01 04:34:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.7 2003/03/11 21:11:45 seemant Exp $
 
 inherit flag-o-matic
 
@@ -25,7 +25,7 @@ DEPEND="sys-apps/ed
 	ncurses? ( sys-libs/ncurses )
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )
 	zlib? ( sys-libs/zlib )"
-RDEPEND=">=sys-devel/perl-5.2
+RDEPEND=">=dev-lang/perl-5.2
 	dev-util/dialog"
 
 src_unpack() {

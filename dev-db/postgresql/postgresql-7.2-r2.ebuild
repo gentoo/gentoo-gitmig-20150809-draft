@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r2.ebuild,v 1.12 2003/03/05 20:20:49 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r2.ebuild,v 1.13 2003/03/11 21:11:45 seemant Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.easynet.be/postgresql/v${PV}/${P}.tar.gz"
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	>=sys-libs/zlib-1.1.3
 	tcltk? ( >=dev-lang/tcl-8 )
-	perl? ( >=sys-devel/perl-5.6.1-r2 )
+	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
 	java? ( =virtual/jdk-1.3* >=dev-java/ant-1.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
@@ -25,7 +25,7 @@ DEPEND="virtual/glibc
 RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
 	tcltk? ( >=dev-lang/tcl-8 )
-	perl? ( >=sys-devel/perl-5.6.1-r2 )
+	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
 	java? ( =virtual/jdk-1.3* )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.11.7.ebuild,v 1.3 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.11.7.ebuild,v 1.4 2003/03/11 21:11:45 seemant Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ IUSE="perl java tcltk python pic png readline"
 
 DEPEND="virtual/glibc
 	sys-libs/ncurses
-	perl? ( sys-devel/perl )
+	perl? ( dev-lang/perl )
 	java? ( virtual/jre )
 	tcltk? ( dev-lang/tcl dev-tcltk/itcl dev-lang/tk )
 	python? ( dev-lang/python )
