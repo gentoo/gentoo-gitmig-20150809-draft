@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20040208.ebuild,v 1.2 2004/02/08 19:29:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20040208.ebuild,v 1.3 2004/02/09 06:58:20 latexer Exp $
 
 MY_P=${P/prism54-/prism54-cvs}
 DESCRIPTION="Driver for Intersil Prism GT / Prism Duette wireless chipsets"
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	make KDIR=/usr/src/linux KVER=${KV} \
-		KMISC=${D}/lib/modules/${KV}/kernel/drivers/net/wireless/ \
+		KMISC=${D}/lib/modules/${KV}/kernel/drivers/net/wireless/prism54/ \
 		install || die
 
 	# Install the firmware image
