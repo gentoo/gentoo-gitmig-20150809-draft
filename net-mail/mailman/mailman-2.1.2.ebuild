@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.6 2003/09/05 02:55:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.7 2003/11/20 16:34:42 mholzer Exp $
 
 IUSE="apache2"
 
@@ -45,8 +45,12 @@ src_compile() {
 src_install () {
 	ID=${D}${INSTALLDIR}
 	cd ${S}
-	mkdir -p ${ID}/logs
-	touch ${ID}/logs/.keep
+
+	dodir ${ID}/logs
+	keepdir ${ID}/logs
+	dodir ${ID}/spam
+	keepdir ${ID}/spam
+
 	chown -R mailman.mailman ${ID}
 	chmod 2775 ${ID}
 	make prefix=${ID} var_prefix=${ID} doinstall || die
