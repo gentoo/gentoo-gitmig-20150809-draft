@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.5.ebuild,v 1.2 2004/07/20 20:23:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.5.ebuild,v 1.3 2004/07/23 06:05:16 mkennedy Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.jboss.org"
 LICENSE="LGPL-2"
 IUSE="doc"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
@@ -87,6 +87,10 @@ EOF
 	keepdir /var/log/jboss
 	keepdir /var/tmp/jboss
 	keepdir /var/cache/jboss
+
+	# the following hack is included until we determine how to make
+	# Catalina believe it lives in /var/lib/jboss/$JBOSS_CONF.
+	dosym /var/lib/jboss /usr/share/jboss/server
 }
 
 without_error() {

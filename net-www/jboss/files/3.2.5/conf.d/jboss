@@ -1,5 +1,15 @@
 # -*- mode: shell-script; mode: outline-minor; outline-regexp: "##+"; indent-tabs-mode: nil -*-
 
+## NOTES
+
+# This configuration file is based on the options enumerated in the
+# JBoss source code at:
+#
+# jboss-x.y.z-src/system/src/main/org/jboss/system/server/ServerConfig
+#
+# You may chose to add additional settings from there to this file.
+# We present a basic subset by default.
+
 ## GENERAL SETTINGS
 
 # You can choose which configuration you want to run JBoss with.  The
@@ -44,21 +54,19 @@ SERVER_SETTINGS="${SERVER_SETTINGS} -Djboss.server.data.dir=/var/cache/jboss"
 SERVER_HOME="/var/lib/jboss"
 SERVER_SETTINGS="${SERVER_SETTINGS} -Djboss.server.base.url=file://${SERVER_HOME}"
 
-# Whether or not the server should exit the JVM on shutdown (comment
-# out to disable)
+# Whether or not the server should exit the JVM on shutdown
 
-# SERVER_SETTINGS="${SERVER_SETTINGS} -Djboss.server.exitonshutdown"
+SERVER_SETTINGS="${SERVER_SETTINGS} -Djboss.server.exitonshutdown=true"
 
 # Whether or not the server should shutdown synchronously (true) or
 # asynchronously (false).
 
-SERVER_SETTINGS="${SERVER_SETTINGS} -Djboss.server.exitonshutdown=false"
+SERVER_SETTINGS="${SERVER_SETTINGS} -Djboss.server.blockingshutdown=true"
 
 # The address JBoss will bind services to.  (Note: JBoss 3.2.3 ignores
 # the JVM environment parameter in favour of the command line switch.)
 
 JBOSS_BIND_ADDRESS="0.0.0.0"
-
 
 ## STARTUP/SHUTDOWN CONFIGURATION
 
