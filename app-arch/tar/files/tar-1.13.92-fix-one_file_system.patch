@@ -1,0 +1,21 @@
+===================================================================
+RCS file: /cvsroot/tar/cvsroot/tar/tar/src/create.c,v
+retrieving revision 1.73
+retrieving revision 1.74
+diff -u -r1.73 -r1.74
+--- tar/tar/src/create.c	2003/12/25 10:18:37	1.73
++++ tar/tar/src/create.c	2004/01/03 11:45:31	1.74
+@@ -981,9 +981,11 @@
+ 	  return;
+ 	}
+     }
+-  else if (!recursion_option)
++
++  if (!recursion_option)
+     return;
+-  else if (one_file_system_option
++
++  if (one_file_system_option
+ 	   && !top_level
+ 	   && parent_device != stat->stat.st_dev)
+     {
