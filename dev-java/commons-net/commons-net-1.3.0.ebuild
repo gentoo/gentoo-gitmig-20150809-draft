@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.1 2004/12/15 17:49:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.2 2004/12/18 09:36:16 corsair Exp $
 
 inherit eutils java-pkg
 
@@ -13,7 +13,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
 IUSE="jikes doc"
 
 S=${WORKDIR}/${P}-src

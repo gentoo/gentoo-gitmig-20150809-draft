@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.22 2004/10/16 17:07:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.23 2004/12/18 09:38:24 corsair Exp $
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org> commons-lang-2.0-r1.ebuild:
+  added ~ppc64 to KEYWORDS
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> commons-lang-2.0-r1.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

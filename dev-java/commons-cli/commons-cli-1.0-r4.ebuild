@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r4.ebuild,v 1.4 2004/10/16 17:04:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r4.ebuild,v 1.5 2004/12/18 09:39:23 corsair Exp $
 
 inherit java-pkg eutils
 
@@ -15,7 +15,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="x86 sparc ppc amd64"
+KEYWORDS="x86 sparc ppc amd64 ~ppc64"
 IUSE="doc jikes junit"
 
 src_unpack() {

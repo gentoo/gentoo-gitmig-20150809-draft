@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.23 2004/10/16 17:04:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.24 2004/12/18 09:33:00 corsair Exp $
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org>
+  commons-collections-3.1.ebuild:
+  added ~ppc64 to KEYWORDS
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   commons-collections-3.1.ebuild:
