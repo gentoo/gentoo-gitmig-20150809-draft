@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-selinux
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.14 2003/12/07 00:59:49 pebenito Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.15 2004/03/16 03:39:36 pebenito Exp $
+
+*python-selinux-2.12 (15 Mar 2004)
+
+  15 Mar 2004; Chris PeBenito <pebenito@gentoo.org>
+  python-selinux-2.12.ebuild, files/python-selinux-2.12.c.bz2:
+  New release.  Fixes for newer is_selinux_enabled() behavior.
 
   06 Dec 2003; Chris PeBenito <pebenito@gentoo.org>
   python-selinux-2.10.ebuild:
