@@ -1,6 +1,20 @@
 # ChangeLog for app-office/openoffice-ximian
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.8 2003/12/26 04:18:29 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.9 2004/01/11 13:40:46 pauldv Exp $
+
+*openoffice-ximian-1.1.48 (11 Jan 2004)
+
+  11 Jan 2004; Paul de Vrieze <pauldv@gentoo.org> openoffice-ximian-1.1.48.ebuild:
+  Committing for suka@t0.or.at: 
+  *) The desktop files are now provided in the Files-Dir, as Ximian 
+     creates them now in their own build process (which we dont use) 
+  *) There are two new patches, which I had to add, because one of the Ximian-patches breaks the build. 
+  *) KDE menu entries are now created 
+  *) The ebuild is now depending on <app-arch/tar-1.13.92 to bypass the 
+     tar-problems 
+  *) Installed Freetype is now used 
+  *) ATM I have not optionalized to use the system-db, as it seemed to 
+     break things for me
 
 *openoffice-ximian-1.1.47.3 (25 Dec 2003)
 
