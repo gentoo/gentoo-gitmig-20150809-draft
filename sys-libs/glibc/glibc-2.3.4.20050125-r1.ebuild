@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.8 2005/03/04 15:47:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.9 2005/03/04 17:34:16 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -310,14 +310,14 @@ toolchain-glibc_src_install() {
 	if want_linuxthreads ; then
 		cd ${WORKDIR}/build-${ABI}-${CTARGET}-linuxthreads
 		einfo "Installing GLIBC with linuxthreads..."
-		make PARALLELMFLAGS="${MAKEOPTS}" \
+		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 			install_root=${D} \
 			install || die
 	fi
 	if want_nptl ; then
 		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
 		einfo "Installing GLIBC with NPTL..."
-		make PARALLELMFLAGS="${MAKEOPTS}" \
+		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 			install_root=${D} \
 			install || die
 	fi
@@ -385,7 +385,7 @@ toolchain-glibc_src_install() {
 
 		# last but not least... headers.
 		mkdir -p ${D}/nptl ${D}$(alt_headers)/nptl
-		make install_root=${D}/nptl install-headers PARALLELMFLAGS="${MAKEOPTS}"
+		make install_root=${D}/nptl install-headers PARALLELMFLAGS="${MAKEOPTS} -j1"
 		pushd ${D}/nptl/$(alt_headers) > /dev/null
 			for i in `find . -type f`; do
 				if ! [ -f ${D}$(alt_headers)/$i ] \
