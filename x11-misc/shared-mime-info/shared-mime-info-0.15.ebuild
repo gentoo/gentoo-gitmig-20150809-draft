@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.15.ebuild,v 1.1 2004/09/26 09:20:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.15.ebuild,v 1.2 2005/01/17 13:05:13 gustavoz Exp $
 
 inherit eutils fdo-mime
 
