@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.43 2004/10/26 15:14:22 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.44 2004/10/26 16:29:15 brix Exp $
+
+  26 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> kismet-2004.10.1.ebuild:
+  Fix building with USE=-ethereal. Thanks to Hans-Werner Hilse <hilse at web dot
+  de> in bug #69030.
 
   26 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> -kismet-2.6.2-r1.ebuild,
   -kismet-2.8.0.ebuild, -kismet-2.8.0a.ebuild, -kismet-2.8.0b-r1.ebuild,

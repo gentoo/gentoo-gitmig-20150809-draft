@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.10.1.ebuild,v 1.2 2004/10/26 14:40:11 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.10.1.ebuild,v 1.3 2004/10/26 16:29:15 brix Exp $
 
 inherit gnuconfig
 
@@ -48,16 +48,20 @@ src_unpack() {
 }
 
 src_compile() {
+	local ETHEREAL_APPEND=""
+
 	if use ethereal
 	then
 		cd ${WORKDIR}/ethereal-${ETHEREAL_VERSION}/wiretap
 		econf || die "wiretap econf failed"
 		emake || die "wiretap emake failed"
 		cd ${S}
+
+		ETHEREAL_APPEND="=${WORKDIR}/ethereal-${ETHEREAL_VERSION}"
 	fi
 
 	econf \
-		`use_with ethereal ethereal=${WORKDIR}/ethereal-${ETHEREAL_VERSION}` \
+		`use_with ethereal ethereal${ETHEREAL_APPEND}` \
 		|| die "econf failed"
 
 	emake dep || die "emake dep failed"
