@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/fastdb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-db/fastdb/ChangeLog,v 1.1 2003/01/05 06:52:56 george Exp $
+
+*fastdb-2.55.ebuild (04 Jan 2003)
+
+  04 Jan 2003; George Shapovalov <george@gentoo.org> ChangeLog, fastdb-2.55.ebuild, files/digest-fastdb-2.55 :
+  initial release (#11774)
+  OO-DBMS that holds all data in memory; interfaces for C/C++/Kylix
+  ebuild submitted by Clemens Oertel <gentoo-bugzilla@kriegste.net>
