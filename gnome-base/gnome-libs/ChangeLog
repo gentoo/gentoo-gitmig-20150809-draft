@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-libs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.10 2002/05/21 22:23:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.11 2002/08/18 22:55:49 spider Exp $
+
+*gnome-libs-1.4.2 (19 Aug 2002)
+  19 Aug 2002; Spider <spider@gentoo.org> gnome-libs-1.4.2.ebuild
+  Bugfixes in this version, changed the ebuild to inherit libtool
 
 *gnome-libs-1.4.1.7 (21 May 2002)
 
