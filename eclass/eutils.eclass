@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.93 2004/08/10 01:11:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.94 2004/08/13 15:39:40 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -146,8 +146,12 @@ epatch() {
 
 	if [ "$#" -gt 1 ]
 	then
-		eerror "Invalid arguments to epatch()"
-		die "Invalid arguments to epatch()"
+		local m=""
+		einfo "${#} patches to apply..."
+		for m in "$@" ; do
+			epatch "${m}"
+		done
+		return 0
 	fi
 
 	if [ -n "$1" -a -f "$1" ]
