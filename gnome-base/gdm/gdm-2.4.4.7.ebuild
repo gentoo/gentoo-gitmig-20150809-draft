@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.4.7.ebuild,v 1.1 2004/02/17 23:10:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.4.7.ebuild,v 1.2 2004/02/17 23:21:06 foser Exp $
 
 inherit gnome2 eutils
 
@@ -28,6 +28,7 @@ RDEPEND=">=sys-libs/pam-0.72
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	>=dev-util/intltool-0.29
 	>=app-text/scrollkeeper-0.3.11
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
