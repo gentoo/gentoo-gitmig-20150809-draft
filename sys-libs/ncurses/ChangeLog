@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.82 2004/09/25 06:47:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.83 2004/10/02 12:27:21 kloeri Exp $
+
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> ncurses-5.4-r5.ebuild:
+  Stable on alpha.
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> ncurses-5.4-r5.ebuild:
   Marked stable on mips.
