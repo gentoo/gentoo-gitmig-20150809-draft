@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.6.ebuild,v 1.5 2004/03/14 15:55:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.6.ebuild,v 1.6 2004/03/27 16:18:17 lanius Exp $
 inherit kde
 need-kde 3.1
 
@@ -29,17 +29,19 @@ RDEPEND="${DEPEND}
 		  media-video/transcode
 		  media-video/vcdimager )"
 
-LANGS="ar bg ca bs da de cs el es et fi fo fr gl hu ja it nb nl pl \
-pt ro ru sk sl ta sr sv tr xh xx zu nso ven en_GB pt_BR zh_CN zh_TW"
+# These are the languages supported by k3b as of version 0.11.6.
+# If you are using this ebuild as a model for another ebuild for
+# another version of K3b, DO check whether these values are different.
+# Check the {po,doc}/Makefile.am files in k3b-i18n package.
+LANGS="ar bg ca bs da de cs el es et fi fo fr gl hu ja it nb \
+nl pl pt ro ru sk sl ta sr sv tr xh xx zu nso ven en_GB pt_BR \
+zh_CN zh_TW"
 
 # Documentation packages are less (in general they may contain
 # other packages too,  not in this case)
-LANGS_DOC="da de es et fr it pt ru sv pt_BR"
+LANGS_DOC="da de es et fr pt ru sv"
 
-# The package is unpacked as k3b-i18n-0.11.6, even though its name
-# is k3b.i18n-0.11.tar.bz2.
 I18N="${PN}-i18n-${PV%.*}"
-SI18N="${WORKDIR}/${PN}-i18n-${PV}"
 
 for pkg in ${LANGS}
 do
@@ -58,7 +60,7 @@ src_compile() {
 	kde_src_compile
 
 	# Build process of K3B-i18n, select LINGUAS elements
-	S=${SI18N}
+	S=${WORKDIR}/${I18N}
 	if [ -n "${LINGUAS}" -a -d "${S}" ]; then
 		MAKE_PO="SUBDIRS = "
 		for lang in ${LANGS}
@@ -84,8 +86,8 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog FAQ README TODO
 
-	if [ -n "${LINGUAS}" -a -d "${SI18N}" ]; then
-		cd ${SI18N}
+	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
+		cd ${WORKDIR}/${I18N}
 		make DESTDIR=${D} install || die
 	fi
 }
