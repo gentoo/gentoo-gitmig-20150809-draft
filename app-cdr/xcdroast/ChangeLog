@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.40 2005/01/01 12:22:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.41 2005/03/30 01:05:15 pylon Exp $
+
+  30 Mar 2005; Lars Weiler <pylon@gentoo.org>
+  xcdroast-0.98_alpha15-r3.ebuild:
+  ebuild cleanup -> bug #81865
 
   31 Oct 2004; Lars Weiler <pylon@gentoo.org> metadata.xml,
   -xcdroast-0.98_alpha15-r2.ebuild, xcdroast-0.98_alpha15-r3.ebuild:

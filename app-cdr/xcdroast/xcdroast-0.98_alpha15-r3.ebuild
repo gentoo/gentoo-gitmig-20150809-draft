@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.11 2005/01/01 12:22:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.12 2005/03/30 01:05:15 pylon Exp $
 
 inherit eutils
 
@@ -13,10 +13,9 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc amd64"
-IUSE="nls dvdr gtk2 gnome"
+IUSE="nls dvdr gtk2"
 
-DEPEND="
-	gtk2? ( >=x11-libs/gtk+-2.0.3 )
+DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.3 )
 	!gtk2? ( >=media-libs/gdk-pixbuf-0.16.0 )"
 
 RDEPEND="
@@ -36,20 +35,19 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	use nls || myconf="${myconf} --disable-nls"
-	use gtk2 && myconf="${myconf} --enable-gtk2"
-
-	econf ${myconf} || die
+	econf \
+		$(use_enable nls) \
+		$(use_enable gtk2) \
+		--disable-dependency-tracking || die
+	
 	make PREFIX=/usr || die
 }
 
 src_install() {
 	make PREFIX=/usr DESTDIR=${D} install || die
 
-	cd doc
+	cd ${S}/doc
 	dodoc DOCUMENTATION FAQ README* TRANSLATION.HOWTO
-	cd ..
 
 	# move man pages to /usr/share/man to be LFH compliant
 	mv ${D}/usr/man ${D}/usr/share
@@ -62,36 +60,10 @@ src_install() {
 		dosym /usr/bin/cdrecord-ProDVD /usr/lib/xcdroast-0.98/bin/cdrecord.prodvd
 	fi
 
-	if use gnome; then
-		#create a symlink to the pixmap directory
-		dodir /usr/share/pixmaps
-		dosym /usr/lib/xcdroast-0.98/icons/xcdricon.png /usr/share/pixmaps/xcdricon.png
-		#add a menu entry to the gnome menu
-		cat <<EOF >xcdroast.desktop
-[Desktop Entry]
-Version=1.0
-Encoding=UTF-8
-Exec=/usr/bin/xcdroast
-Icon=/usr/share/pixmaps/xcdricon.png
-StartupNotify=true
-Terminal=false
-Type=Application
-Categories=GNOME;Application;AudioVideo;
-TryExec=
-X-GNOME-DocPath=
-Name[de]=X-CD-Roast
-GenericName[de]=
-Comment[de]=CDs brennen
-Name[sv]=Cd-grill
-GenericName[sv]=
-Comment[sv]=Rosta en CD
-Name[fr]=Grilleur CD
-GenericName[fr]=
-Comment[fr]=Grillez des CDs
-EOF
-		insinto /usr/share/applications
-		doins xcdroast.desktop
-	fi
+	insinto /usr/share/icons/hicolor/48x48/apps
+	newins ${S}/xpms/xcdricon.xpm xcdroast.xpm
+	
+	make_desktop_entry xcdroast "X-CD-Roast" xcdroast "AudioVideo;DiscBurning"
 }
 
 pkg_postinst() {
