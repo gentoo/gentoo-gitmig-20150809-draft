@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.4-r2.ebuild,v 1.9 2005/03/06 20:47:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.4-r2.ebuild,v 1.10 2005/04/05 17:10:57 usata Exp $
 
 PTEX_TEXMF_PV=2.2
 TETEX_PV=2.0.2
 
-inherit tetex eutils
+inherit tetex-2
 
 DESCRIPTION="The ASCII publishing TeX distribution"
 HOMEPAGE="http://www.ascii.co.jp/pb/ptex/"
@@ -32,7 +32,7 @@ DEPEND="X? ( >=media-libs/freetype-2
 	!app-text/xdvik"
 
 src_unpack() {
-	tetex_src_unpack
+	tetex-2_src_unpack
 
 	einfo "Unpacking pTeX sources..."
 	cd ${S}/texmf
@@ -98,7 +98,7 @@ src_compile() {
 }
 
 src_install() {
-	tetex_src_install
+	tetex-2_src_install
 
 	einfo "Installing pTeX..."
 	cd ${S}/texk/web2c/${PN}-src-${PV} || die

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050325.ebuild,v 1.2 2005/04/02 06:44:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050325.ebuild,v 1.3 2005/04/05 17:10:57 usata Exp $
 
 TETEX_PV=3.0
 TEXMF_PATH=/var/lib/texmf
 
-inherit tetex eutils
+inherit tetex-3 flag-o-matic
 
 DESCRIPTION="The ASCII publishing TeX distribution"
 HOMEPAGE="http://www.ascii.co.jp/pb/ptex/
@@ -53,7 +53,7 @@ DEPEND="X? ( >=media-libs/freetype-2
 
 src_unpack() {
 	unpack ${PTETEX}.tar.gz
-	tetex_src_unpack
+	tetex-3_src_unpack
 
 	einfo "Unpacking pTeX sources ..."
 	cd ${S}/texmf
@@ -131,7 +131,7 @@ src_install() {
 	addwrite /var/cache/fonts
 	addwrite /var/lib/texmf
 	addwrite /usr/share/texmf
-	tetex_src_install base doc fixup
+	tetex-3_src_install base doc fixup
 
 	einfo "Installing pTeX ..."
 	dodir ${TEXMF_PATH}/web2c
