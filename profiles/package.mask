@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3666 2005/02/27 11:16:22 pauldv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3667 2005/02/27 14:39:44 pauldv Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # Paul de Vrieze <pauldv@gentoo.org> (27 Feb 2005)
 # This whole module should be deleted. It overlaps subversion
-<=www-apache/mod_dav_svn-1000
+www-apache/mod_dav_svn
 
 # Masatomo Nakano <nakano@gentoo.org> (27 Feb 2005)
 # Tihs package is conflict with postgresql at the moment.
@@ -211,10 +211,6 @@ media-video/spca50x
 #Masked for user testing
 net-im/mercury-bin
 
-# Christian Parpart <trapni@gentoo.org> (22 Jan 2005)
-# Masked for user testing. Meta bug #76457
-=www-apache/mod_dav_svn-1.1.3-r1
-
 # Brad Cowan <bcowan@gentoo.org> (04 Feb 2005)
 # masking until upstream fixes .so problem
 >dev-libs/dbh-1.0.20
@@ -303,7 +299,6 @@ mail-client/sylpheed-claws-vcalendar
 # Christian Parpart <trapni@gentoo.org> (22 Jan 2005)
 # Masked for user testing. Meta bug #76457
 =dev-util/subversion-1.1.3-r1
-=www-apache/mod_dav_svn-1.1.3
 =net-www/mod_auth_mysql-2.8.1
 =net-www/gentoo-webroot-default-0.1
 =net-www/mod_xslt-2.0.4
@@ -715,11 +710,6 @@ media-video/cinelerra
 # New, seemingly broken version. See bug #77369
 =net-firewall/ipsec-tools-0.5_rc1
 
-# <trapni@gentoo.org> (Jan 11 2005)
-# Apache herd package refresh
-# Masked for user testing. Meta-bug #76457
-=www-apache/mod_dav_svn-1.1.2
-
 # <fafhrd@gentoo.org> (10 Jan 2005)
 # Masking version that needs to be removed soon;
 # Newer version was released soon after to correct major bugs.
@@ -778,7 +768,6 @@ media-video/cinelerra
 =net-www/mod_watch-4.03-r1
 =net-www/mod_xslt-1.0.5a-r1
 =www-apache/mod_csv-0.0.1
-=www-apache/mod_dav_svn-1.1.1
 =www-apache/mod_diagnostics-0.0.1
 =www-apache/mod_lisp-2.33-r1
 =www-apache/mod_macro-1.1.6
