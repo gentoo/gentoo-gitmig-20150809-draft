@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.3 2002/03/15 23:20:04 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.4 2002/06/08 21:48:42 seemant Exp $
+
+*ispell-allversions (8 Jun 2002)
+
+  8 Jun 2002; Seemant Kulleen <seemant@gentoo.org> ispell-*.ebuild :
+
+  Added bison to DEPEND. Thanks to Francisco in bug #3520
 
 *ispell-3.2.06 (14 Mar 2002)
 
