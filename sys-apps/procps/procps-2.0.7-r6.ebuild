@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.7-r6.ebuild,v 1.8 2002/09/21 03:16:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.7-r6.ebuild,v 1.9 2002/09/26 18:41:12 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
@@ -33,9 +33,10 @@ src_unpack() {
 	sed -e "s/-O3/${CFLAGS}/" -e 's/all: config/all: /' \
 	    -e "s:--strip::" Makefile.orig > Makefile
 
+	# WARNING! In case of a version bump, check the line below that removes a line from the Makefile file.
 	cd ${S}/ps
 	mv Makefile Makefile.orig
-	sed -e "s/-O2/${CFLAGS}/" -e "s:--strip::" Makefile.orig > Makefile
+	sed -e "s/-O2/${CFLAGS}/" -e "s:--strip::" -e "33d" Makefile.orig > Makefile
 
 	cd ${S}/proc
 	mv Makefile Makefile.orig
