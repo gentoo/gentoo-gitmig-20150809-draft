@@ -1,16 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0_beta2.ebuild,v 1.2 2004/08/03 13:06:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0.ebuild,v 1.1 2004/08/19 13:48:17 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
 
-MY_PV=1.2.92
-S=${WORKDIR}/${PN}-${MY_PV}
-
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
 HOMEPAGE="http://multimedia.kde.org/"
-SRC_URI="mirror://kde/unstable/${MY_PV/1/3}/src/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV/1.3.0/3.3}/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
@@ -44,6 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
+
 	#fix bug 13453
 	filter-flags -foptimize-sibling-calls
 
@@ -67,7 +65,7 @@ src_install() {
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
-CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/47kdepaths-3.3.0 # number goes down with version upgrade
+CONFIG_PROTECT=${PREFIX}/share/config:${PREFIX}/env:${PREFIX}/shutdown" > ${D}/etc/env.d/47kdepaths-3.3.0 # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/58kdedir-3.3.0 # number goes up with version upgrade
 
