@@ -1,11 +1,15 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.4 2003/08/24 02:52:26 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.5 2003/08/27 06:10:52 cretin Exp $
 
   23 Aug 2003; <rac@gentoo.org> libcap-1.10-r2.ebuild:
   Add amd64 support
 
 *libcap-1.10-r2 (17 Aug 2003)
+
+  27 Aug 2003; Stefan Jones <cretin@gentoo.org> :
+  Add patch which removes the wrapping of the syscall, glibc wraps all syscalls
+  for you. Now the library can be built with -fPIC on all platforms.
 
   17 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> libcap-1.10-r2.ebuild:
   remove -ansi from WARNINGS in the Make system as it seems to break non-x86
