@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.9.2_rc4.ebuild,v 1.7 2005/01/05 13:09:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.9.2_rc4.ebuild,v 1.8 2005/02/11 18:58:20 spock Exp $
 
 IUSE="gpm zlib ssl ipv6 X lua guile"
 
@@ -51,6 +51,11 @@ src_compile() {
 		`use_with guile`	|| die
 
 	emake || die "compile problem"
+}
+
+# disable it, as the only test available is interactive..
+src_test() {
+	return 0
 }
 
 src_install() {

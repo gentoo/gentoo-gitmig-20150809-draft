@@ -1,6 +1,11 @@
 # ChangeLog for net-www/elinks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.44 2005/02/03 19:15:41 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.45 2005/02/11 18:58:20 spock Exp $
+
+  11 Feb 2005; Michał Januszewski <spock@gentoo.org> elinks-0.10.1.ebuild,
+  elinks-0.10.2.ebuild, elinks-0.9.1-r1.ebuild, elinks-0.9.2.ebuild,
+  elinks-0.9.2_rc4.ebuild:
+  Disabled src_test() as a fix for bug #81541.
 
 *elinks-0.10.2 (03 Feb 2005)
 
