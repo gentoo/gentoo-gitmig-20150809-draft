@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/zgv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/ChangeLog,v 1.5 2003/10/03 09:19:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/ChangeLog,v 1.6 2003/10/07 06:49:29 brandy Exp $
+
+  07 Oct 2003; Brandy Westcott brandy@gentoo.org zgv-5.7.ebuild:
+  Added sys-apps/gawk as a dependency
 
 *zgv-5.7 (03 Oct 2003)
 

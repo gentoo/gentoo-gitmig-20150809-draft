@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.7.ebuild,v 1.1 2003/10/03 09:19:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.7.ebuild,v 1.2 2003/10/07 06:49:29 brandy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A svgalib console image viewer."
@@ -15,7 +15,8 @@ DEPEND=">=media-libs/svgalib-1.4.2
 	>=media-libs/jpeg-6b-r2
 	media-libs/libpng
 	>=media-libs/tiff-3.5.5
-	>=sys-libs/zlib-1.1.4"
+	>=sys-libs/zlib-1.1.4
+	sys-apps/gawk"
 
 src_unpack() {
 	unpack ${A}
