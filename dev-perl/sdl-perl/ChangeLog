@@ -1,7 +1,12 @@
 # ChangeLog for dev-perlsdl-perlChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.5 2002/10/30 07:20:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.6 2002/12/02 18:15:59 mcummings Exp $
 
+*sdl-perl-1.19 (02 Dec 2002)
+
+  02 Dec 2002; Michael Cummings <mcummings@gentoo.org> sdl-perl-1.19.ebuild :
+  new version, leaving masked until tested against sdl-perl apps
+  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
   forced version bump to install into correct locations
