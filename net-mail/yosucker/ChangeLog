@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.16 2004/09/23 09:43:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.17 2004/09/23 09:44:59 ticho Exp $
+
+  23 Sep 2004; Andrej Kacian <ticho@gentoo.org>
+  -files/yosucker-53-no-redirect.patch:
+  Removed unused patch from files/
 
   23 Sep 2004; Andrej Kacian <ticho@gentoo.org> yosucker-59.ebuild:
   Stable on x86.
