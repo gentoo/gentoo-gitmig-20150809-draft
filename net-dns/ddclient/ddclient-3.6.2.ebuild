@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.2.ebuild,v 1.7 2002/12/09 04:33:09 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.2.ebuild,v 1.8 2002/12/28 14:54:09 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A perl based client for dyndns"
@@ -11,7 +11,7 @@ RDEPEND="sys-devel/perl"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~ppc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
