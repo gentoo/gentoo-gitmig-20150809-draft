@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_beta3.ebuild,v 1.6 2005/01/01 13:37:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.0.0.ebuild,v 1.1 2005/02/11 13:05:52 usata Exp $
+
+inherit eutils
 
 MY_P="${P/_beta/-b}"
 DESCRIPTION="tiny emacs clone"
@@ -9,13 +11,12 @@ SRC_URI="mirror://sourceforge/zile/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 DEPEND=">=dev-util/gperf-2.7.2
-	>=sys-apps/texinfo-4.3
-	virtual/tetex"
+	>=sys-apps/texinfo-4.3"
 
 S="${WORKDIR}/${MY_P}"
 
