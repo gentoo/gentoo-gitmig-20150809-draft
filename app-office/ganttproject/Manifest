@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 36b969b557b930da4d1abc625fe26036 ganttproject-1.10.1.ebuild 1363
-MD5 89044604b1aea034fd16cbbbd519b9c7 ganttproject-1.9.11.ebuild 1317
-MD5 3577968995e32985b7e86afe47f5dd2b ChangeLog 1528
+MD5 e1ad593d8d840e174b43f79214182dfe ChangeLog 1534
+MD5 fa7bcf4a0a136a6d1a9d776fc06be8f9 ganttproject-1.9.11.ebuild 1323
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 9e4a7fa310c5c5371edb0d1079b373f6 ganttproject-1.9.11-r1.ebuild 1287
+MD5 78ebc3a150a26075225ebe2981a40b89 ganttproject-1.9.11-r1.ebuild 1293
+MD5 a93c9e4c29cd27844157edeb560512e2 ganttproject-1.10.1.ebuild 1369
+MD5 1a7ebb9c3b242f9ad9360f9c1c3c3098 files/digest-ganttproject-1.9.11 73
 MD5 4a2e2fa0e3d18c41b5e92a279a829bdb files/ganttproject.desktop 278
+MD5 1a7ebb9c3b242f9ad9360f9c1c3c3098 files/digest-ganttproject-1.9.11-r1 73
 MD5 5c2ec6536e5bed6ae4717925d584daed files/1.10.1-ganttproject.desktop 275
 MD5 952bd1a0f6f47c5cf4a99785b7d700f8 files/digest-ganttproject-1.10.1 73
-MD5 1a7ebb9c3b242f9ad9360f9c1c3c3098 files/digest-ganttproject-1.9.11 73
-MD5 1a7ebb9c3b242f9ad9360f9c1c3c3098 files/digest-ganttproject-1.9.11-r1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBq03B/rLF9B432nYRArlHAKCMnd9VkFJDabk/UAHidEEcFEs7UACfQGV/
-B3akBdON2c+fuj8IlRwJ+X8=
-=N7Ta
------END PGP SIGNATURE-----
