@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 dedf4aac707d55ee7b7f6e623685f702 libmonetra-4.1.ebuild 715
 MD5 be221f3278ed971b1c845f1aca7bfde2 libmonetra-4.0.ebuild 960
 MD5 9c0691df327624ffc735a33ca921494e libmonetra-4.2.ebuild 719
-MD5 d915a821dce6c6b924ed24e9de8b1e19 libmonetra-4.2.2.ebuild 777
-MD5 286849ee8c34be75528d2f21807305d1 ChangeLog 1485
+MD5 2a31e742504ee006ba9d046f21d11c3e libmonetra-4.2.2.ebuild 777
+MD5 4ddd4a5a86d313262575135c061c3db6 ChangeLog 1581
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 216bca1622db024e6224bc0a9a4e2f09 files/digest-libmonetra-4.0 151
 MD5 712e09b1b696c860918a9f094c669cc2 files/digest-libmonetra-4.1 66
 MD5 1daa2406cd02e4d97c7a5ad0ce3a73ae files/digest-libmonetra-4.2 66
 MD5 c53147f9a93b9a99e18baac2111dd7c6 files/digest-libmonetra-4.2.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCA2guntT9W3vfTuoRAsNHAJ9JvHxhtqNkbickVu+BWjY83bFreQCfaJ1L
-/F3Q9Us9WIfv/zQwyhyol9Q=
-=f7C8
------END PGP SIGNATURE-----

@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 513504e4fc2a42852c626adf6c349ecd libesmtp-1.0-r1.ebuild 1359
-MD5 2487437544c0a2e0e0d93885a451121f ChangeLog 2943
 MD5 f67e3e16b709a41d1f42869646108185 libesmtp-1.0.1.ebuild 1301
-MD5 67a278d04cde19f40434dbaf48da5e91 libesmtp-0.8.12.ebuild 920
+MD5 513504e4fc2a42852c626adf6c349ecd libesmtp-1.0-r1.ebuild 1359
+MD5 0f96821b26b60f488ff625e61f4a6df6 ChangeLog 3034
+MD5 0fae2bf63af276466d8fa76c45df0a2e libesmtp-1.0.3.ebuild 1348
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 a9f70e1963ac6a749ef58158f6c49e61 libesmtp-1.0.3.ebuild 1349
-MD5 e7fb7627dfe48ba908ddc22564eead57 files/digest-libesmtp-1.0.3 69
+MD5 67a278d04cde19f40434dbaf48da5e91 libesmtp-0.8.12.ebuild 920
 MD5 395e602b515d970eab3a9d7ef8a2016f files/digest-libesmtp-0.8.12 68
-MD5 43822a1b725899b2ad3fbc20f58ee840 files/libesmtp-1.0-openssl.patch 405
 MD5 d3159044f52697e5328eed2b789f0f8d files/digest-libesmtp-1.0.1 67
+MD5 e7fb7627dfe48ba908ddc22564eead57 files/digest-libesmtp-1.0.3 69
 MD5 b6be4562678d38b5d76400ddc254e37a files/digest-libesmtp-1.0-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOdsFBXaUFmZvwyMRApPoAKCiIvV88Tewysfx800ru/JLHVtEhgCeLhna
-Le81UpiOt7/aJjkZFXBoJRA=
-=n7Bp
------END PGP SIGNATURE-----
+MD5 43822a1b725899b2ad3fbc20f58ee840 files/libesmtp-1.0-openssl.patch 405

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8845701173d09f65d81426180a91efe1 ChangeLog 1939
-MD5 2625c39ec223d488438a88ced19c913f liblockfile-1.03-r1.ebuild 931
+MD5 0ebe6ccb94570432c4043992f79bea62 liblockfile-1.03-r2.ebuild 965
 MD5 f4989b5d2d79e75f22b47c72ea5e6a1a liblockfile-1.03.ebuild 675
-MD5 a343ff3a27e50428330d2b009d6a1156 liblockfile-1.03-r2.ebuild 968
+MD5 2625c39ec223d488438a88ced19c913f liblockfile-1.03-r1.ebuild 931
+MD5 2a48290a594d5b48d326d87d41f66a6d ChangeLog 2033
+MD5 eb56831a475db5996c2f12368b641474 files/liblockfile-1.03-gcc33.patch 286
 MD5 53fe311231e84eff7e3f0464085f91bc files/digest-liblockfile-1.03 67
 MD5 53fe311231e84eff7e3f0464085f91bc files/digest-liblockfile-1.03-r1 67
-MD5 eb56831a475db5996c2f12368b641474 files/liblockfile-1.03-gcc33.patch 286
 MD5 53fe311231e84eff7e3f0464085f91bc files/digest-liblockfile-1.03-r2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCF+EJArHZZzCEUG0RAn2XAJ0fbAFd5vQjqOxyyVot2Sr3sGLcfQCeIWMv
-FaPQ1i11icadcpqpChkHOs0=
-=9sK7
------END PGP SIGNATURE-----

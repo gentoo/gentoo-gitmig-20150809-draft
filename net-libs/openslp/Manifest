@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1337629b42037e3548e0d02321a5766f openslp-1.2.1.ebuild 942
+MD5 9311bf4989c68bbd04fffa917def634b openslp-1.2.1.ebuild 941
 MD5 fb07378e184212e79f4c4008b0e69239 openslp-1.0.11.ebuild 855
 MD5 16d4985dc3bbc616a5d8c0f08d9878fa openslp-1.0.9a.ebuild 705
-MD5 5ad9ea3b2499446760b1aa59368bc4cd ChangeLog 3719
+MD5 cb5603b7936292f77bd88149e67d706e ChangeLog 3808
 MD5 d7f79cffa0ae6dc390e87781e51f4248 metadata.xml 220
 MD5 97a5b3202b42cbb36942b17299b2701d files/digest-openslp-1.2.1 65
 MD5 f87ab978aa65541b72c9aef6e1e5677e files/slpd-init 2294
 MD5 570fc57cfed48b272c0d000a21927d26 files/digest-openslp-1.0.11 66
 MD5 67fd195194d45cffe4a08f4d0d0c5c2f files/digest-openslp-1.0.9a 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPZT406ebR+OMO78RAnjkAJ9RQDhkLscBD2GkvuSv9AVeNsgpUgCfSk6U
-4Qher/XOiQD0K3O/HFBJ++M=
-=/yCt
------END PGP SIGNATURE-----
