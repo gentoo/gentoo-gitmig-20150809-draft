@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.7_rc2-r2.ebuild,v 1.2 2004/06/24 22:59:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.7_rc2-r2.ebuild,v 1.3 2004/07/15 03:54:10 agriffis Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
@@ -15,6 +15,7 @@ DESCRIPTION="Andrew Morton's kernel, mostly fixes for 2.6 vanilla, some vm stuff
 SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/people/akpm/patches/2.6/${KV/-mm*/}/${KV}/${KV}.bz2"
 
 KEYWORDS="~x86 ~amd64 ~ia64 -* ~ppc"
+IUSE=""
 
 K_EXTRAEINFO="If there are issues with this kernel, search http://bugs.gentoo.org/ for an
 existing bug. Only create a new bug if you have not found one that matches
