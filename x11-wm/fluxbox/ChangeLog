@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.4 2002/03/09 00:03:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.5 2002/03/09 02:39:37 karltk Exp $
+
+*fluxbox-0.1.7-r1 (9 Mar 2002)
+
+  9 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> fluxbox-0.1.7-r2.ebuild :
+
+  Added upstream patch.
+
+  Removed old revisions.
 
 *fluxbox-0.1.7-r1 (9 Mar 2002)
 

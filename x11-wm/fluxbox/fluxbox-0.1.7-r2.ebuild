@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r1.ebuild,v 1.1 2002/03/09 00:03:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r2.ebuild,v 1.1 2002/03/09 02:39:37 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
-SRC_URI="http://download.sourceforge.net/fluxbox/fluxbox-${PV}.tar.gz"
+SRC_URI="http://download.sourceforge.net/fluxbox/fluxbox-${PV}.tar.gz http://fluxbox.sourceforge.net/download/patches/${P}-bugfix1.patch"
 HOMEPAGE="http://fluxbox.sf.net"
 
 DEPEND="virtual/x11
@@ -15,6 +15,12 @@ DEPEND="virtual/x11
 	nls? ( >=sys-devel/gettext-0.10.38 ) "
 	
 RDEPEND="$DEPEND"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	cd ${S}
+	patch -p1 < ${DISTDIR}/${P}-bugfix1.patch
+}
 
 src_compile() {
 	local myconf
