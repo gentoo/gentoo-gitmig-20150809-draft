@@ -26,7 +26,6 @@ virtual/textbrowser		net-www/links
 virtual/mda				net-mail/procmail
 virtual/xft				x11-base/xfree
 virtual/krb5			app-crypt/heimdal
-virtual/motif           x11-libs/openmotif
 virtual/editor			app-editors/nano
 virtual/bootloader      sys-boot/dvhtool
 virtual/os-headers		sys-kernel/mips-headers

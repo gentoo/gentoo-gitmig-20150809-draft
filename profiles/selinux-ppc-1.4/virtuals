@@ -27,7 +27,6 @@ virtual/logger		app-admin/syslog-ng
 virtual/lpr	     net-print/cups
 virtual/mda		net-mail/procmail
 virtual/modutils 	sys-apps/module-init-tools
-virtual/motif	   x11-libs/openmotif
 virtual/mta	     net-mail/ssmtp
 virtual/opengl	  x11-base/xfree
 virtual/os-headers	sys-kernel/linux-headers
