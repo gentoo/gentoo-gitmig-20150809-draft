@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1_rc1.ebuild,v 1.2 2004/01/04 18:57:49 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1_rc1.ebuild,v 1.3 2004/01/04 22:40:52 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -27,7 +27,7 @@ fi
 
 #version of gentoo patchset
 # set to 0 for no patchset
-GPV=2.6.1-0.11
+GPV=1.11
 
 [ ${PR} == "r0" ] && EXTRAVERSION="-gentoo" || EXTRAVERSION="-gentoo-${PR}"
 KV=${OKV}${EXTRAVERSION}
@@ -39,8 +39,8 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 
 if [ "${GPV}" != "0" ]
 then
-	GPV_SRC="http://dev.gentoo.org/~brad_mssw/kernel_patches/genpatches-${GPV}.tar.bz2"
-#	GPV_SRC="mirror://gentoo/genpatches-${GPV}.tar.bz2"
+	GPV_SRC="http://dev.gentoo.org/~brad_mssw/kernel_patches/genpatches-2.6-${GPV}.tar.bz2"
+#	GPV_SRC="mirror://gentoo/genpatches-2.6-${GPV}.tar.bz2"
 fi
 if [ "${KEXT}" != "" ]
 then
@@ -83,7 +83,7 @@ src_unpack() {
 
 	if [ "${GPV}" != "0" ]
 	then
-		unpack genpatches-${GPV}.tar.bz2
+		unpack genpatches-2.6-${GPV}.tar.bz2
 	fi
 	unpack linux-${OFFICIAL_KV}.tar.bz2
 	mv linux-${OFFICIAL_KV} linux-${KV} || die "Unable to move source tree to ${KV}."
@@ -97,8 +97,8 @@ src_unpack() {
 	if [ "${GPV}" != "0" ]
 	then
 		# apply gentoo patches
-		# epatch ${DISTDIR}/genpatches-${GPV}.tar.bz2
-		PATCHES=`find ${WORKDIR}/genpatches-${GPV} -type f -name *.patch | sort`
+		# epatch ${DISTDIR}/genpatches-2.6-${GPV}.tar.bz2
+		PATCHES=`find ${WORKDIR}/genpatches-2.6-${GPV} -type f -name *.patch | sort`
 		for file in ${PATCHES}
 		do
 			epatch $file
