@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/quanta-docs-20030405.ebuild,v 1.6 2004/09/02 03:50:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/quanta-docs-20030405.ebuild,v 1.7 2004/10/04 14:55:34 gmsoft Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Lots of docs for quanta"
@@ -16,7 +16,7 @@ HOMEPAGE="http://quanta.sourceforge.net"
 SLOT="0"
 IUSE="mysql"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc amd64 ppc64"
+KEYWORDS="x86 ppc sparc amd64 ppc64 hppa"
 
 src_install() {
 	dodir /usr/share/apps/quanta/doc
