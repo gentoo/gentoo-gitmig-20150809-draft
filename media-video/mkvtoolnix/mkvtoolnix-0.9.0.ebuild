@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-0.9.0.ebuild,v 1.2 2004/06/25 00:44:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-0.9.0.ebuild,v 1.3 2004/07/14 22:00:38 agriffis Exp $
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -9,7 +9,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="oggvorbis wxwindows X"
+IUSE="X oggvorbis"
 
 DEPEND=">=dev-libs/libebml-0.7.0
 	>=media-libs/libmatroska-0.7.0
