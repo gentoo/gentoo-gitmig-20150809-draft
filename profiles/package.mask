@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3101 2004/08/25 19:27:01 mattam Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3102 2004/08/25 19:29:38 mattam Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -56,15 +56,11 @@ dev-lang/fpc-source
 # Mask the release candidate
 =dev-util/subversion-1.1.0_rc2
 
-# <mattam@gentoo.org> (21 Aug 2004)
 # <agriffis@gentoo.org> (19 Aug 2004)
 # Masking because this package is not ready for prime, but want it in
 # portage for better observation (and users are clamoring)
-# mattam: Masking pcre-ocaml because of libpcre dependency
 app-office/mozilla-sunbird-bin
 app-office/mozilla-sunbird
->=dev-libs/libpcre-4.5
->=dev-ml/pcre-ocaml-5.08.1
 
 # <agriffis@gentoo.org> (18 Aug 2004)
 # Masking due to security issues that will never be solved since there
