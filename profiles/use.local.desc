@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.523 2004/08/04 10:19:10 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.524 2004/08/04 19:12:34 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -100,6 +100,7 @@ app-sci/transfac:no-rawdb - Do not install the original database files (keep onl
 app-sci/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 app-sci/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
+app-text/a2ps:vanilla - Do not add extra patches which change default behaviour
 app-text/estraier:chasen - Enable chasen support for Estraier
 app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/namazu:chasen - Enable chasen support for namazu
