@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/arch-1.0_pre15.ebuild,v 1.7 2003/02/13 11:46:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/arch-1.0_pre15.ebuild,v 1.8 2003/10/06 11:00:19 lanius Exp $
 
 MY_P="${P//_/}"
 S="${WORKDIR}/${MY_P}/src/=build"
@@ -13,12 +13,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
 DEPEND="sys-apps/diffutils
-	sys-apps/fileutils
 	sys-apps/findutils
 	sys-apps/gawk
-	sys-apps/sh-utils
 	sys-apps/tar
-	sys-apps/textutils
 	sys-apps/util-linux
 	sys-apps/debianutils
 	sys-devel/make
