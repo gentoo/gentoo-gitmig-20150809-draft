@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r5.ebuild,v 1.8 2005/01/29 21:29:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r5.ebuild,v 1.9 2005/02/03 20:57:18 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -36,6 +36,14 @@ DEPEND="=dev-java/ant-core-${PV}*
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/apache-ant-${PV}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# also see #77365
+	epatch ${FILESDIR}/${PV}-scp.patch
+}
 
 src_compile() {
 	addwrite "/proc/self/maps"
