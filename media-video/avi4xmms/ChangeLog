@@ -1,0 +1,10 @@
+# ChangeLog for media-video/avi4xmms
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-video/avi4xmms/ChangeLog,v 1.1 2002/03/28 11:53:02 seemant Exp $
+
+*avi4xmms-0.1 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> avi4xmms-0.1.ebuild :
+
+  New package, which will replace avi-xmms until such time as 4Front releases
+  avi-xmms that can link with avifile-0.6 series of libraries.
