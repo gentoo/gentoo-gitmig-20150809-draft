@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r1.ebuild,v 1.2 2004/12/19 18:10:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r1.ebuild,v 1.3 2004/12/21 00:59:42 cyfred Exp $
 
 inherit eutils linux-mod
 
@@ -108,7 +108,7 @@ src_unpack() {
 		# Fix the /usr/src/linux/include/asm not existing on koutput issue #58294
 		epatch ${FILESDIR}/${PV}/conftest_koutput_includes.patch
 		# Fix calling of smp_processor_id() when preempt is enabled
-		epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id-2.patch
+		epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id.patch
 	fi
 
 	# if you set this then it's your own fault when stuff breaks :)
