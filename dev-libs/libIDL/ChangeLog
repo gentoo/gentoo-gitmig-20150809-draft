@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libIDL
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.33 2005/01/22 21:39:33 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.34 2005/02/16 09:35:15 obz Exp $
+
+*libIDL-0.8.5 (16 Feb 2005)
+
+  16 Feb 2005; Mike Gardiner <obz@gentoo.org> +libIDL-0.8.5.ebuild:
+  New version
 
   22 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> libIDL-0.8.4.ebuild:
   Unstable ppc-macos
