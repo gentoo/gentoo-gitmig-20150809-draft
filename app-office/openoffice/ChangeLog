@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.49 2003/11/09 16:18:26 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.50 2003/11/14 16:25:11 bazik Exp $
+
+*openoffice-1.1.0-r3 (14 Nov 2003)
+
+  14 Nov 2003; Sven Blumenstein <bazik@gentoo.org> openoffice-1.1.0-r3.ebuild,
+  files/1.1.0/openoffice-1.1.0-sparc64-fix.patch:
+  New revision. Added a patch which lets it build on sparc64.
+  This is no offical patch but it works for me. Please test 
+  and report back directly to me - thanks!
 
 *openoffice-1.1.0-r2 (09 Nov 2003)
 
