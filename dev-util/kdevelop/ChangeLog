@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.36 2003/11/08 12:40:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.37 2003/11/17 13:45:30 caleb Exp $
+
+  17 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdevelop-3.0.0_beta1.ebuild:
+  Add ant and doxygen as deps for the ebuild
 
   08 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdevelop-3.0.0_beta1.ebuild:
   Remove doc based deps as they're not needed anymore
