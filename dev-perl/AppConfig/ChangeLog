@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AppConfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.14 2004/06/25 00:06:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.15 2004/12/29 22:48:52 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *AppConfig-1.56-r2 (29 May 2004)
 
@@ -20,7 +23,7 @@
   26 May 2004; Robert Coie <rac@gentoo.org> AppConfig-1.56.ebuild:
   Upstream version bump
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> AppConfig-1.55.ebuild:
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> AppConfig-1.55.ebuild:
   Stable on alpha.
 
   21 Jan 2004; <gustavoz@gentoo.org> AppConfig-1.55.ebuild:
