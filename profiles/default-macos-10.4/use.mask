@@ -1,5 +1,7 @@
 # Add USE flags that don't work on Mac OS X here
 
+selinux
+
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
 # all of these are binary-only, and not presently available on this
