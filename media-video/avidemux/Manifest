@@ -1,26 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8767fdb11a12b1cb5fa3c1f50d2ecbb7 ChangeLog 10742
-MD5 4c24428398acd26c384e724f5e2cd71a avidemux-2.0.24.ebuild 2482
-MD5 5846b93f88b88de1c06950c94bf09e21 avidemux-2.0.34_rc1.ebuild 2417
+MD5 a23d4b5cf385a650d0436327d2b7c19e ChangeLog 10941
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 c235b3c2a9d464d8729ec6698895866e files/alsa.patch 607
+MD5 ab3162ca7bbd22cd158aac547a2a1754 avidemux-2.0.34_rc1-r1.ebuild 3117
+MD5 5846b93f88b88de1c06950c94bf09e21 avidemux-2.0.34_rc1.ebuild 2417
+MD5 4c24428398acd26c384e724f5e2cd71a avidemux-2.0.24.ebuild 2482
+MD5 634a8594c2fead1220505d3071037788 files/avidemux-2.0.32_mpeg_ps_fix.patch 519
+MD5 c850494d08353a205ed94f81f6005aa4 files/digest-avidemux-2.0.34_rc1-r1 74
+MD5 c850494d08353a205ed94f81f6005aa4 files/digest-avidemux-2.0.34_rc1 74
 MD5 09aa754d6dec1bcd2694695ed63b45a4 files/avidemux-0.9-libxml2.5.7.patch 717
+MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
+MD5 c235b3c2a9d464d8729ec6698895866e files/alsa.patch 607
+MD5 7b49ecad9a48d74f4e99127f434ce29b files/avidemux-2.0.34-test1_faac.patch 631
+MD5 17fbb9e32a12d47d86a3f135c74da118 files/patch_jpeg.diff 1819
+MD5 bc99c120921cdbc84402a1ac014f0786 files/gcc2.patch 1044
+MD5 a425235d45d2628fb39a2d5e336585be files/xvid.patch 672
 MD5 04305efde8b8b115e0a0c8e1885cf194 files/avidemux-2.0.30_amd64_cpuutil.patch 1539
 MD5 277683ec9bcbe17a0b7fea610eba9cfb files/avidemux-2.0.30_fixes.patch 1713
-MD5 634a8594c2fead1220505d3071037788 files/avidemux-2.0.32_mpeg_ps_fix.patch 519
-MD5 7b49ecad9a48d74f4e99127f434ce29b files/avidemux-2.0.34-test1_faac.patch 631
-MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
-MD5 c850494d08353a205ed94f81f6005aa4 files/digest-avidemux-2.0.34_rc1 74
-MD5 bc99c120921cdbc84402a1ac014f0786 files/gcc2.patch 1044
-MD5 17fbb9e32a12d47d86a3f135c74da118 files/patch_jpeg.diff 1819
 MD5 c8b0002f8b446ffe1d4ae7e2440caf7f files/resize_crash.patch 618
-MD5 a425235d45d2628fb39a2d5e336585be files/xvid.patch 672
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFBpk2TFdQwWVoAgN4RAnhoAKDsoNqLgCBpzo9pRiR77rEj1gFrdACYiZzG
-IhIdEsghsKCpnvGld2ixAA==
-=/UE+
+iD8DBQFBrBqbRPjscZbntocRAvZpAJ0XMDKBjkpQFdMlunTaWyS5Mj7BogCdFHwx
+nZq7LPvuSNdPUsw/49fDlAg=
+=M7oE
 -----END PGP SIGNATURE-----
