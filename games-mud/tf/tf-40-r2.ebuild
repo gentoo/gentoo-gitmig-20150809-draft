@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.5 2004/04/21 23:19:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.6 2004/05/12 01:13:12 mr_bones_ Exp $
 
 inherit eutils
 
 MY_P=${P}s1
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="A small full-featured MUD client"
 HOMEPAGE="http://tf.tcp.com/~hawkeye/tf/"
 SRC_URI="mirror://tinyfugue/${MY_P}.tar.gz
@@ -14,6 +14,7 @@ SRC_URI="mirror://tinyfugue/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ~sparc"
+IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
 

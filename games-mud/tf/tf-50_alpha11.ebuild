@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_alpha11.ebuild,v 1.3 2004/04/12 15:02:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_alpha11.ebuild,v 1.4 2004/05/12 01:13:12 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,6 @@ SRC_URI="http://ftp.tcp.com/pub/mud/Clients/tinyfugue/${MY_P}.tar.gz"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
 SLOT="0"
-
 IUSE="ipv6 doc debug"
 
 DEPEND="sys-libs/zlib
