@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2-r1.ebuild,v 1.5 2003/10/12 19:41:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2-r1.ebuild,v 1.6 2003/10/14 14:37:13 mholzer Exp $
 
 inherit libtool
 
@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/libusb-0.1.6
 	jpeg? ( >=media-libs/libexif-0.5.9 )"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/patch-2.5.9
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
