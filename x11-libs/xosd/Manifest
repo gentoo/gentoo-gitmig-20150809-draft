@@ -6,7 +6,7 @@ MD5 e1abef9f1716e947218324bf6d4ece88 xosd-2.0.1-r1.ebuild 978
 MD5 0165153aea09caf5ceef253a439e5fdf xosd-2.0.1.ebuild 818
 MD5 f07e62efdf3bfbf86aacb608f191f317 xosd-2.1.0.ebuild 878
 MD5 051a434ae962e563b1451594cafa2c05 xosd-2.1.3.ebuild 879
-MD5 5568fff3209082d994fdbd43de8606b7 xosd-2.2.2.ebuild 861
+MD5 051a434ae962e563b1451594cafa2c05 xosd-2.2.2.ebuild 879
 MD5 a93f4efac348d5c8cf0a11c90c3c39ab files/Makefile-gentoo.diff 2520
 MD5 ae50dd581ed3dc5423041b14add0bdb2 files/configure-gentoo.diff 5691
 MD5 be48f6ac6f0e7f0d90e50d34146c5e5b files/digest-xosd-0.7.0 61
