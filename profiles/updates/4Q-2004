@@ -117,3 +117,4 @@ move app-sci/galculator sci-calculators/galculator
 move app-sci/hcalc sci-calculators/hcalc
 move app-sci/kconvert sci-calculators/kconvert
 move app-sci/kunit sci-calculators/kunit
+move app-sci/pgcalc2 sci-calculators/pgcalc2
