@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.8.1-r5.ebuild,v 1.1 2004/08/31 11:01:40 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.8.1-r5.ebuild,v 1.2 2004/09/03 18:54:23 pvdabeel Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2
 	${FILESDIR}/${PN}-2.6.7.cmdlineLeak.patch"
@@ -17,7 +17,7 @@ DESCRIPTION="Full sources for the Stock Linux kernel and Con Kolivas's high perf
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
 SRC_URI="${KERNEL_URI} http://ck.kolivas.org/patches/2.6/${KV/-ck*/}/${KV}/patch-${KV}.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 pkg_postinst() {
 	postinst_sources
