@@ -8,6 +8,7 @@
 	<property name="dist.dir" value="dist" />
 	<property name="lib.dir" value="lib" />
 	<property name="resources.dir" value="resources" />
+	<property name="htmls.dir" value="htmls" />
 	<property name="jarfile" value="${dist.dir}/${ant.project.name}.jar" />
 	<property name="target.jdk" value="1.4" />
 
@@ -36,6 +37,11 @@
 		
 		<copy todir="${build.dir}">
 			<fileset dir="${resources.dir}" />
+			<fileset file="${htmls.dir}" />
+		</copy>
+
+		<copy todir="${build.dir}/${htmls.dir}">
+			<fileset dir="${htmls.dir}" />
 		</copy>
 	</target>
 
