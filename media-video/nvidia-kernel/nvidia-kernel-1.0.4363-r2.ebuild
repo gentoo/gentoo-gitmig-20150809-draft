@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r2.ebuild,v 1.3 2003/06/23 04:17:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r2.ebuild,v 1.4 2003/07/08 07:04:06 azarah Exp $
 
 inherit eutils
 
@@ -39,6 +39,10 @@ pkg_setup() {
 		die "MTRR support not detected!"
 	fi
 
+	check_version_h
+}
+
+check_version_h() {
 	if [ ! -f "${ROOT}/usr/src/linux/include/linux/version.h" ]
 	then
 		eerror "Please verify that your /usr/src/linux symlink is pointing"
@@ -50,6 +54,8 @@ pkg_setup() {
 }
 
 get_KV_info() {
+	check_version_h
+	
 	# Get the kernel version of sources in /usr/src/linux ...
 	export KV_full="$(awk '/UTS_RELEASE/ { gsub("\"", "", $3); print $3 }' \
 		"${ROOT}/usr/src/linux/include/linux/version.h")"
@@ -89,6 +95,9 @@ src_unpack() {
 	then
 		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
 		epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-2.5-20030614.diff
+
+		EPATCH_SINGLE_MSG="Applying highpmd patch (2.5.74-mm2+)..." \
+		epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-highpmd.diff
 
 		# Kbuild have issues currently (sandbox related).
 		ln -snf Makefile.nvidia Makefile
