@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_layout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/ChangeLog,v 1.5 2004/05/07 12:41:09 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/ChangeLog,v 1.6 2004/06/20 14:37:01 zul Exp $
+
+  20 Jun 2004; Chuck Short <zul@gentoo.org> mod_layout-3.2.1.ebuild:
+  Stable on x86. Changed category to net-www.
 
 *mod_layout-3.2.1 (08 May 2004)
 

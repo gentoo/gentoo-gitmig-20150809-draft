@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-3.2.1.ebuild,v 1.1 2004/05/07 12:41:09 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-3.2.1.ebuild,v 1.2 2004/06/20 14:37:01 zul Exp $
 
 
 DESCRIPTION="An Apache DSO module for adding custom headers and/or footers"
@@ -11,7 +11,7 @@ DEPEND="=net-www/apache-1*
 RDEPEND=""
 
 LICENSE="Apache-1.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 
@@ -32,7 +32,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Execute \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+	einfo "Execute \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with this module."
 	einfo "You should then edit your /etc/conf.d/apache file to suit."
 	einfo
