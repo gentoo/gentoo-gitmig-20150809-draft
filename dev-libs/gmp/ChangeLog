@@ -1,15 +1,20 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.5 2002/08/01 16:03:56 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.6 2002/08/04 09:21:12 cardoe Exp $
 
-*gmp-4.1-r1 (01 Aug 2002)
+*gmp-4.1-r1 (06 Jul 2002)
+
+  04 Aug 2002; Doug Goldstein <cardoe@gentoo.org> gmp-4.1-r1.ebuild :
+  
+  Stuart changed more then just make to emake.. He changed ./configure to econf
+  and forgot to remove the params which are automatically defined by econf so
+  the package failed to compile on all systems.. (*cough* test your ebuilds
+  before commiting *cough*)
 
   01 Aug 2002; Stuart Bouyer <stubear@gentoo.org> gmp-4.1-r1.ebuild :
 
   Changed emake to make - fixed bug #5857. Also added LICENSE, SLOT and
   KEYWORDS for QA.
-
-*gmp-4.1-r1 (06 Jul 2002)
 
   06 Jul 2002; Aron Griffis <agriffis@gentoo.org> gmp-4.1-r1.ebuild:
 
