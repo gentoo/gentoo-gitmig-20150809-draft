@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/wmbinclock-0.3.ebuild,v 1.1 2004/07/22 00:11:43 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/wmbinclock-0.3.ebuild,v 1.2 2004/09/01 02:13:48 tgall Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.inxsoft.net/wmbinclock/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc ppc64"
 
 DEPEND="virtual/x11"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbinclock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/ChangeLog,v 1.4 2004/07/22 00:11:43 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/ChangeLog,v 1.5 2004/09/01 02:13:48 tgall Exp $
+
+  31 Aug 2004; Tom Gall <tgall@gentoo.org> wmbinclock-0.3.ebuild:
+  stable on ppc64, bug #61759
 
 *wmbinclock-0.3 (22 Jul 2004)
 
