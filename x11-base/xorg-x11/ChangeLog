@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.295 2005/01/22 16:11:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.296 2005/01/24 05:23:08 spyderous Exp $
+
+  23 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.902.ebuild:
+  Pull a bunch of implied Mesa optimizations.
 
   22 Jan 2005; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.1.902.ebuild:
   removed ppc64 specific functions pkg_prerm() and relink_dlloader_files() as

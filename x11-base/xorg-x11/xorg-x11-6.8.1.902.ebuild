@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.19 2005/01/22 16:11:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.20 2005/01/24 05:23:08 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -726,15 +726,8 @@ host_def_setup() {
 		if use x86; then
 			# optimize Mesa for architecture
 			use_build mmx HasMMXSupport
-			use_build mmx MesaUseMMX
-
 			use_build 3dnow Has3DNowSupport
-			use_build 3dnow MesaUse3DNow
-
-			use_build sse HasKatmaiSupport
-			use_build sse MesaUseKatmai
 			use_build sse HasSSESupport
-			use_build sse MesaUseSSE
 
 			# Compile the VIA driver
 			# echo "#define XF86ExtraCardDrivers via" >> ${HOSTCONF}
@@ -743,15 +736,8 @@ host_def_setup() {
 		# optimize Mesa for architecture
 		if use amd64; then
 			use_build amd64 HasMMXSupport
-			use_build amd64 MesaUseMMX
-
 			use_build amd64 Has3DNowSupport
-			use_build amd64 MesaUse3DNow
-
-			use_build amd64 HasKatmaiSupport
-			use_build amd64 MesaUseKatmai
 			use_build amd64 HasSSESupport
-			use_build amd64 MesaUseSSE
 		fi
 
 		# Do we want the glx extension? This will turn off XF86DRI if it's off.
