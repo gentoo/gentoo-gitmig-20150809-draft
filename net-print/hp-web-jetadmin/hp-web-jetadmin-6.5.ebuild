@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5.ebuild,v 1.2 2001/09/28 07:05:23 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5.ebuild,v 1.3 2001/09/28 07:15:22 woodchip Exp $
 
 # *** README ***
 #
@@ -19,8 +19,7 @@
 # it.
 #
 # I probably need to tweak the depends a little; I couldn't make it install
-# on an rc5 box with no X. If you can help, or make any other suggestions
-# for this package, feel free.
+# on an rc5 box with no X. Suggestions/help welcomed/appreciated =)
 #
 # *** README ***
 
@@ -76,8 +75,7 @@ src_install() {
 	# /etc/init.d/hpwebjetd (not in $D) is getting installed by
 	# this wonderful self-extracting program. I'd rather remove
 	# it now, so a better one can be dropped in without forcing
-	# the admin to do the ._cfg tango unconditionally. Man this
-	# whole thing is turning out to be a pretty ugly affair.
+	# people to do the ._cfg tango unconditionally.
 	#
 	rm -f /etc/init.d/hpwebjetd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/hpwebjetd-6.5.rc6 hpwebjetd
@@ -85,7 +83,7 @@ src_install() {
 	#
 	# This adds an LDPATH entry, which allows you to use the
 	# initscript to start the daemon from anywhere. You need
-	# not cd /opt/hp-web-jetadmin first.
+	# not cd into /opt/hp-web-jetadmin first, which is nice.
 	#
 	insinto /etc/env.d ; doins ${FILESDIR}/20hpwebjetadmin
 
