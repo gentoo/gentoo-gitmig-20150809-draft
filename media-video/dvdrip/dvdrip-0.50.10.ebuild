@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.10.ebuild,v 1.1 2003/04/17 18:28:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.10.ebuild,v 1.2 2003/04/17 20:04:30 mholzer Exp $
 
 IUSE="cdr gnome"
 
@@ -42,4 +42,9 @@ src_install () {
 pkg_postinst () {
 	einfo "If you want to use the cluster-mode, you need to SUID fping"
 	einfo "chmod u+s /usr/sbin/fping"
+	einfo
+	einfo "for Perl 5.8.x you have to set PERLIO to read TOC properly"
+	einfo "for bash: export PERLIO=stdio"
+	einfo "for csh:  setenv PERLIO stdio"
+	einfo "into your /.${shell}rc"
 }
