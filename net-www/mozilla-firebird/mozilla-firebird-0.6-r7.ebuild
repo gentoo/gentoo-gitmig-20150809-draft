@@ -1,14 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r4.ebuild,v 1.1 2003/06/08 06:25:40 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r7.ebuild,v 1.1 2003/07/25 16:25:06 brad Exp $
 
-inherit makeedit flag-o-matic gcc nsplugins
+inherit makeedit flag-o-matic gcc nsplugins eutils
 
 # Added to get MozillaFirebird to compile on sparc.
 replace-sparc64-flags
-
-EMVER="0.65.2"
-IPCVER="1.0.0.1"
 
 S=${WORKDIR}/mozilla
 
@@ -16,10 +13,10 @@ DESCRIPTION="The Mozilla Firebird Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firebird/"
 SRC_URI="http://komodo.mozilla.org/pub/firebird/releases/${PV}/MozillaFirebird-${PV}-source.tar.bz2"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="java gtk2 ipv6"
+IUSE="java gtk2 ipv6 moznoxft"
 
 RDEPEND="virtual/x11
    >=dev-libs/libIDL-0.8.0
@@ -48,6 +45,18 @@ export MOZ_PHOENIX=1
 export MOZ_CALENDAR=0
 export MOZ_ENABLE_XFT=1
 
+src_unpack() {
+	unpack MozillaFirebird-${PV}-source.tar.bz2
+	
+	# alpha stubs patch from lfs project.
+	# <taviso@gentoo.org> (26 Jun 2003)
+	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
+
+	# Fix build with Linux 2.6
+	cp ${S}/security/coreconf/Linux2.5.mk ${S}/security/coreconf/Linux2.6.mk
+	
+}
+
 src_compile() {
    local myconf="--disable-composer \
       --with-x \
@@ -57,7 +66,6 @@ src_compile() {
       --with-system-mng \
       --disable-mailnews \
       --disable-calendar \
-      --enable-xft \
       --disable-pedantic \
       --disable-svg \
       --enable-mathml \
@@ -81,10 +89,11 @@ src_compile() {
       --enable-strip-libs \
       --enable-cpp-rtti \
       --enable-xterm-updates \
-	  --enable-optimize=-O2 \
+      --enable-optimize=-O2 \
       --disable-ldap \
       --disable-toolkit-qt \
-      --disable-toolkit-xlib"
+      --disable-toolkit-xlib \
+      --enable-extensions=default,-inspector,-irc,-venkman,-content-packs,-help"
 
     if [ -n "`use gtk2`" ] ; then
         myconf="${myconf} --enable-toolkit-gtk2 \
@@ -96,12 +105,50 @@ src_compile() {
                           --disable-toolkit-gtk2"
     fi
 
+	# Check if we should enable Xft support ...
+	if [ -z "`use moznoxft`" ]
+	then
+		if [ -n "`use gtk2`" ]
+		then
+			local pango_version=""
+
+			# We need Xft2.0 localy installed
+			if (test -x /usr/bin/pkg-config) && (pkg-config xft)
+			then
+				pango_version="`pkg-config --modversion pango | cut -d. -f1,2`"
+				pango_version="`echo ${pango_version} | sed -e 's:\.::g'`"
+
+				# We also need pango-1.1, else Mozilla links to both
+				# Xft1.1 *and* Xft2.0, and segfault...
+				if [ "${pango_version}" -gt "10" ]
+				then
+					einfo "Building with Xft2.0 (Gtk+-2.0) support!"
+					myconf="${myconf} --enable-xft --disable-freetype2"
+					touch ${WORKDIR}/.xft
+				else
+					ewarn "Building without Xft2.0 support!"
+					myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
+				fi
+			else
+				ewarn "Building without Xft2.0 support!"
+				myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
+			fi
+		else
+			einfo "Building with Xft2.0 (Gtk+-1.0) support!"
+			myconf="${myconf} --enable-xft --disable-freetype2"
+			touch ${WORKDIR}/.xft
+		fi
+	else
+		myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
+	fi
+
     if [ -n "`use ipv6`" ] ; then
         myconf="${myconf} --enable-ipv6"
     fi
 
    # Crashes on start when compiled with -fomit-frame-pointer
    filter-flags -fomit-frame-pointer
+   filter-flags -ffast-math
    append-flags -s -fforce-addr
 
    if [ "$(gcc-major-version)" -eq "3" ]; then
@@ -109,6 +156,7 @@ src_compile() {
       # and other optimizations for pentium4.
       if [ "$(gcc-minor-version)" -lt "3" ]; then
           replace-flags -march=pentium4 -march=pentium3
+		  filter-flags -msse2
       fi
 
 	  # Enable us to use flash, etc plugins compiled with gcc-2.95.3

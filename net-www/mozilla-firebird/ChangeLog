@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.12 2003/07/20 03:37:51 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.13 2003/07/25 16:25:06 brad Exp $
+
+*mozilla-firebird-0.6-r7 (25 Jul 2003)
+
+  25 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.6-r7.ebuild:
+  By popular request, implement the moznoxft USE flag.
 
   19 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.6-r6.ebuild:
   Mark stable on x86. Bugs fixed:
