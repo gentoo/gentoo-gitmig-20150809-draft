@@ -380,7 +380,7 @@ if "rsync" in mymode:
 	if "--clean" in myopts:
 			#we'll --delete files when we rsync
 			rclean=1
-	mycommand="/usr/bin/rsync -av --stats --progress "
+	mycommand="/usr/bin/rsync -rlptDv --stats --progress "
 	if rclean:
 		mycommand=mycommand+"--delete --exclude='distfiles/*' --exclude='packages/*' "
 	mycommand=mycommand+"rsync://cvs.gentoo.org/gentoo-x86-portage/* "+myportdir
