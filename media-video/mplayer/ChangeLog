@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.2 2002/02/17 15:30:23 azarah Exp $
+
+  17 Feb 2002; M.Schlemmer <azarah@gentoo.org> mplayer-0.60-r2.ebuild :
+
+  Make DVD support default.  Changed the USE flag for DVD decription from
+  'decss' to 'css'.  Added 3DFX support with the '3dfx' use variable. Fixed
+  a problem where if 'sse' or '3dnow' was in USE, but now MMX, sound would be
+  distorted .. this should resolve bug #536.
 
 *mplayer-0.60-r1 (1 Feb 2002)
 

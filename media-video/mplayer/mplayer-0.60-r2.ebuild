@@ -1,51 +1,41 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
-# Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.50-r2.ebuild,v 1.3 2001/11/18 21:45:59 azarah Exp
+# Maintainer: Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r2.ebuild,v 1.1 2002/02/17 15:30:23 azarah Exp $
 
 # Handle PREversions as well
-MY_PV="`echo ${PV} |sed -e 's/_//'`"
+MY_PV=${PV/_/}
 S="${WORKDIR}/MPlayer-${MY_PV}"
 # Only install Skin if GUI should be build (gtk as USE flag)
 SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
+	 gtk? ( http://www.ibiblio.org/gentoo/distfiles/default-skin-0.1.tar.bz2 )"
+#	 This is to get the digest problem fixed.
+#	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
 DESCRIPTION="Media Player for Linux"
-HOMEPAGE="http://www.mplayerhq.hu"
+HOMEPAGE="http://www.mplayerhq.hu/"
 
+# 'encode' in USE for MEncoder
 # Experimental USE flags dvd and decss
-DEPEND="virtual/glibc
-        dev-lang/nasm
-	app-arch/unzip
-        media-libs/win32codecs
-	>=media-libs/divx4linux-20011010
-        dvd? ( media-libs/libdvdread )
-        decss? ( media-libs/libdvdcss )
-	opengl? ( virtual/opengl )
-        sdl? ( media-libs/libsdl )
-        ggi? ( media-libs/libggi )
-        svga? ( media-libs/svgalib )
-        X? ( virtual/x11 )
-	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
-        esd? ( media-sound/esound )
-        alsa? ( media-libs/alsa-lib )
-	ogg? ( media-libs/libogg )"
-
 RDEPEND="virtual/glibc
-        media-libs/win32codecs
-        >=media-libs/divx4linux-20011010
-        dvd? ( media-libs/libdvdread )
-        decss? ( media-libs/libdvdcss )
+	>=media-libs/win32codecs-${PV}
+	>=media-libs/divx4linux-20011025
+	media-libs/libdvdread
+	css?    ( media-libs/libdvdcss )
 	opengl? ( virtual/opengl )
-        sdl? ( media-libs/libsdl )
-        ggi? ( media-libs/libggi )
-        svga? ( media-libs/svgalib )
-        X? ( virtual/x11 )
-        gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
-	esd? ( media-sound/esound )
-        alsa? ( media-libs/alsa-lib )
-	ogg? ( media-libs/libogg )"
+	sdl?    ( media-libs/libsdl )
+	ggi?    ( media-libs/libggi )
+	svga?   ( media-libs/svgalib )
+	X?      ( virtual/x11 )
+	gtk?    ( >=x11-libs/gtk+-1.2.10-r4 )
+	esd?    ( media-sound/esound )
+	alsa?   ( media-libs/alsa-lib )
+	ogg?    ( media-libs/libogg )
+	encode? ( media-sound/lame )"
+
+DEPEND="${RDEPEND}
+	dev-lang/nasm
+	app-arch/unzip"
 
 
 src_unpack() {
@@ -53,44 +43,67 @@ src_unpack() {
 	unpack ${A}
 
 	# Fix bug with the default Skin
-	cd ${WORKDIR}/default
-	patch <${FILESDIR}/default-skin.diff
+	if [ "`use gtk`" ] ; then
+		cd ${WORKDIR}/default
+		patch < ${FILESDIR}/default-skin.diff || die "skin patch failed"
+	fi
 
 	if [ "`use mga`" ] ; then
 		cd ${S}/drivers;
-		cp mga_vid.c mga_vid.c.orig
-		sed -e "s://#define MGA_ALLOW_IRQ:#define MGA_ALLOW_IRQ:" mga_vid.c.orig > mga_vid.c 
+		patch < ${FILESDIR}/mga_vid_devfs.patch || die "mga patch failed"
 	fi
 }
 
 src_compile() {
 
-	local myconf
-	use 3dnow  || myconf="${myconf} --disable-3dnow --disable-3dnowex"
-	use mmx    || myconf="${myconf} --disable-mmx --disable-mmx2"
-	use X      || myconf="${myconf} --disable-x11 --disable-xv"
-	# Try to fix bug where build will fail with gtk in USE, but not X
-	# NB: hope opengl, sdl, ggi build fine ... i will test later.
-	use gtk    && myconf="${myconf} --enable-gui --enable-x11 --enable-xv"
-	use oss    || myconf="${myconf} --disable-ossaudio"
-	use nls    || myconf="${myconf} --disable-nls"
-	use opengl || myconf="${myconf} --disable-gl"
-	use sdl    || myconf="${myconf} --disable-sdl"
-	use ggi    || myconf="${myconf} --disable-ggi"
-	use sse    || myconf="${myconf} --disable-sse"
-	use svga   || myconf="${myconf} --disable-svga"
-	use alsa   || myconf="${myconf} --disable-alsa"
-	use esd    || myconf="${myconf} --disable-esd"
-	use ogg    || myconf="${myconf} --disable-oggvorbis"
-	use decss  && myconf="${myconf} --enable-css"
-	use mga    && myconf="${myconf} --enable-mga"
+	local myconf=""
 
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-		    --mandir=/usr/share/man				\
-		    ${myconf} || die
+	use 3dnow         || myconf="${myconf} --disable-3dnow --disable-3dnowex"
+	use sse           || myconf="${myconf} --disable-sse --disable-sse2"
+	# Only disable MMX if 3DNOW or SSE is not in USE
+	use mmx           || { \
+	    use 3dnow     || { \
+	        use sse   || myconf="${myconf} --disable-mmx --disable-mmx2"
+	    }
+	    use sse       || { \
+	        use 3dnow || myconf="${myconf} --disable-mmx --disable-mmx2"
+	    }
+	}
+	# Only disable X if gtk is not in USE
+	use X             || { \
+	    use gtk       || myconf="${myconf} --disable-x11 --disable-xv --disable-xmga"
+	}
+	use gtk           && myconf="${myconf} --enable-gui --enable-x11 --enable-xv"
+	use oss           || myconf="${myconf} --disable-ossaudio"
+	use opengl        || myconf="${myconf} --disable-gl"
+	use sdl           || myconf="${myconf} --disable-sdl"
+	use ggi           || myconf="${myconf} --disable-ggi"
+	use svga          || myconf="${myconf} --disable-svga"
+	use alsa          || myconf="${myconf} --disable-alsa"
+	use ogg           || myconf="${myconf} --disable-vorbis"
+	use encode        && myconf="${myconf} --enable-mencoder --enable-tv"
+	use encode        || myconf="${myconf} --disable-mencoder"
+	use css           && myconf="${myconf} --enable-dvdread --enable-css"
+	use mga           && myconf="${myconf} --enable-mga"
+	use mga           && \
+	use X             && myconf="${myconf} --enable-xmga"
+	use 3dfx          && myconf="${myconf} --enable-3dfx --enable-tdfxfb"
+
+	# Crashes on start when compiled with most optimizations.
+	# The code have CPU detection code now, with CPU specific
+	# optimizations, so extra should not be needed and is not
+	# recommended by the authors
+	CFLAGS="-O2 -pipe"
+	CXXFLAGS="-O2 -pipe"
+	
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--enable-dvdread \
+		${myconf} || die
 		    
 	emake OPTFLAGS="${CFLAGS}" all || die
+	
 	if [ "`use mga`" ] ; then
 		cd drivers
 		emake all
@@ -99,9 +112,11 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr/share					\
-	     BINDIR=${D}/usr/bin					\
-	     mandir=${D}/usr/share/man					\
+	make prefix=${D}/usr/share \
+	     BINDIR=${D}/usr/bin \
+	     CONFDIR=${D}/usr/share/mplayer \
+	     DATADIR=${D}/usr/share/mplayer \
+	     mandir=${D}/usr/share/man \
 	     install || die
 	
 	# MAN pages are already installed ...
@@ -111,20 +126,31 @@ src_install() {
 	cp -a DOCS/* ${D}/usr/share/doc/${PF}
 	doalldocs
 
-	# Install the default Skin
+	# Install the default Skin and Gnome menu entry
 	if [ "`use gtk`" ] ; then
 	
 		insinto /usr/share/mplayer/Skin/default
 		doins ${WORKDIR}/default/*
-		
 		# Permissions is fried by default
 		chmod a+rx ${D}/usr/share/mplayer/Skin/default/
 		chmod a+r ${D}/usr/share/mplayer/Skin/default/*
+
+		# Fix the symlink
+		rm -rf ${D}/usr/bin/gmplayer
+		dosym /usr/bin/mplayer /usr/bin/gmplayer
+	fi
+	if [ "`use gnome`" ] ; then
+
+		insinto /usr/share/pixmaps
+		newins ${S}/Gui/mplayer/pixmaps/icon.xpm mplayer.xpm
+		insinto /usr/share/gnome/apps/Multimedia
+		doins ${FILESDIR}/mplayer.desktop
 	fi
 
 	# Install the font used by OSD and the GUI
 	dodir /usr/share/mplayer/fonts
 	cp -a ${WORKDIR}/iso-8859-1/ ${D}/usr/share/mplayer/fonts
+	rm -rf ${D}/usr/share/mplayer/font
 	dosym /usr/share/mplayer/fonts/iso-8859-1/arial-14/ /usr/share/mplayer/font
 
 	# This tries setting up mplayer.conf automagically
@@ -157,7 +183,7 @@ src_install() {
 	if [ "`use sdl`" ] ; then
 		audio="sdl"
 	elif [ "`use alsa`" ] ; then
-		audio="alsa"
+		audio="alsa5"
 	elif [ "`use oss`" ] ; then
 		audio="oss"
 	fi
@@ -171,12 +197,12 @@ src_install() {
 	insinto /etc
 	doins ${T}/mplayer.conf 
 	
-	# Thanks goes to Mog for this one!
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf
 
-	if ["`use mga`" ] ; then
-		cp drivers/mga_vid.o ${D}/lib/modules/`uname -r`/kernel/drivers/char/
+	if [ "`use mga`" ] ; then
+		dodir /lib/modules/${KVERS}/kernel/drivers/char
+		cp ${S}/drivers/mga_vid.o ${D}/lib/modules/${KVERS}/kernel/drivers/char
 	fi
 }
 
