@@ -1,3 +1,18 @@
-MD5 5d4247511a84e5cc285764b8257b0fea ChangeLog 456
-MD5 d669fc70ee7284a5de7916085acb2892 matrixssl-1.0.2.ebuild 823
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1a3388f4e1bb253da6b2fafcec7cba26 matrixssl-1.2.4.ebuild 824
+MD5 a50ba1b1817afdce07718a84fbb89858 matrixssl-1.0.2.ebuild 818
+MD5 ccf6a59f5e76f8da2032d5c97a3d82c3 ChangeLog 610
+MD5 c5b5abb3be81bb53cfee6c21c8ee3645 metadata.xml 222
 MD5 3557203dfacbdb7addd52ce0c9c86566 files/digest-matrixssl-1.0.2 67
+MD5 9d5cac00857bb69eee434733dcf182e9 files/digest-matrixssl-1.2.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iQCVAwUBQjrwjZ4WFLgrx1GWAQLAHAQAlSYBNSQPfvV+ew0HO7EQet58vGIu7ljp
+WVGPGAT8A2xCLqUk1z9vccd1teBrHF7kcAQCokNkFPhlP95MlHufRtW7Dc5A7L0q
+YuKWF6Axvg9t/A+TSoDP8eWBeNvWESLc9R7YPPAsdItOxeWBRzcooSKzLvnUqeh2
+d5iZ/WmFw2M=
+=NLvf
+-----END PGP SIGNATURE-----

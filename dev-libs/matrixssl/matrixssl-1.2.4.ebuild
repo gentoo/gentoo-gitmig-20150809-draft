@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/matrixssl/matrixssl-1.0.2.ebuild,v 1.4 2005/03/18 15:15:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/matrixssl/matrixssl-1.2.4.ebuild,v 1.1 2005/03/18 15:15:19 solar Exp $
 
 DESCRIPTION="embedded SSL implementation"
 HOMEPAGE="http://www.matrixssl.org/"
@@ -22,7 +22,7 @@ pkg_nofetch() {
 }
 
 src_compile() {
-	emake DFLAGS="${CFLAGS}" || die
+	emake DFLAGS="${CFLAGS} -fPIC" || die
 }
 
 src_install() {
