@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/mondo-rescue
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.1 2002/07/25 03:27:22 lostlogic Exp $
+
+*mondo-rescue-1.43 (24 Jul 2002)
+
+  24 Jul 2002; Brandon Low <lostlogic@gentoo.org> mondo-rescue-1.43:
+
+  Thanks to Andreas Kotowicz <koto@mynetix.de> for this initial ebuild.
