@@ -1,11 +1,14 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.8 2003/02/12 07:50:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.9 2003/04/28 05:46:48 zwelch Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *traceroute-1.4_p12 (1 Feb 2002)
+
+  27 Apr 2003; Zach Welch <zwelch@gentoo.org> traceroute-1.4_p12.ebuild:
+  add arm keyword
 
   26 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> traceroute-1.4_p12.ebuild:
   Moved binary from /usr/sbin to /usr/bin. Closes #6526. Found by
