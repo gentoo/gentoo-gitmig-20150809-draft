@@ -1,4 +1,16 @@
-MD5 2ba05768978d94a2f0e1c7bcceaf79f5 ChangeLog 993
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6f8f0864d67382cc59babcc5205cc6ef ChangeLog 1142
 MD5 ee806afffb73be4ae7dc749081a3fded albumart-1.3.1.ebuild 651
 MD5 e680c5e2ccb91369a26a8603f6e4606d metadata.xml 222
+MD5 0ab0505065cf603661bfeebb978c6062 albumart-1.4.0.ebuild 655
 MD5 fdc51f934be51b668279394b8c8f5e68 files/digest-albumart-1.3.1 66
+MD5 5984f5790131a2a32ea91c49b641e40d files/digest-albumart-1.4.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBqlb7ArHZZzCEUG0RAnylAJ9zyPCPmQS3ST4R9pZO1idKvQLWMgCdFl7q
+lITHEYfyHalK40HkPTra4WA=
+=uU34
+-----END PGP SIGNATURE-----
