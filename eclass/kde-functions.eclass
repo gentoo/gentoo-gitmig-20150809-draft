@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.54 2003/04/08 17:48:12 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.55 2003/04/27 13:49:00 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -59,7 +59,7 @@ need-kde() {
 
 	# ask for autotools
 	case "$KDEVER" in
-		2*)	
+		2*)
 			need-autoconf 2.1
 			need-automake 1.4
 			;;
@@ -83,7 +83,7 @@ need-kde() {
 		# do nothing
 		debug-print "$FUNCNAME: NEED_KDE_DONT_ADD_KDELIBS_DEP set, complying with request"
 	elif [ "${INHERITED//kde-dist}" != "$INHERITED" ]; then
-    		# if we're a kde-base package, we need an exact version of kdelibs
+		# if we're a kde-base package, we need an exact version of kdelibs
 		# to compile correctly.
 		# all kinds of special cases live here.
 		# goes to show this code is awfully inflexible, i guess.
@@ -98,7 +98,7 @@ need-kde() {
 			newdepend "~kde-base/kdelibs-${KDEVER}"
 		fi
 	else
-		# everything else only needs a minimum version	
+		# everything else only needs a minimum version
 		if [ "$KDEMAJORVER" == "2" ]; then
 			newdepend "=kde-base/kdelibs-2.2*"
 		else
