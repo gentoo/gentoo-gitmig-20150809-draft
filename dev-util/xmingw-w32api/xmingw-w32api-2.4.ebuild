@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/xmingw-w32api-2.4.ebuild,v 1.1 2003/10/02 10:22:06 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/xmingw-w32api-2.4.ebuild,v 1.2 2003/10/28 19:51:29 cretin Exp $
 
 DESCRIPTION="Free headers and libraries for the Win32 API"
 
 HOMEPAGE="http://www.mingw.org"
 
 P=${P/xmingw-}
-RUNTIME=mingw-runtime-3.1
+RUNTIME=mingw-runtime-3.2
 
 SRC_URI="mirror://sourceforge/mingw/${RUNTIME}-src.tar.gz
 		mirror://sourceforge/mingw/${P}-src.tar.gz"
