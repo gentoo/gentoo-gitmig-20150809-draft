@@ -1,6 +1,12 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.12 2003/02/12 08:54:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.13 2003/03/22 20:08:54 danarmak Exp $
+
+  22 Mar 2003; Dan Armak <danarmak@gentoo.org> files/wwwoffled-online:
+  
+  Fix bug #16293 - tell wwwoffle to read the /etc/wwwoffle.conf config file
+  so that it knows over which cnotrol port to communicate with the wwwoffled
+  server.
 
 *wwwoffle-2.7h (14 Jan 2003)
 
