@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/pcf2bdf
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/ChangeLog,v 1.1 2004/05/15 17:53:47 usata Exp $
+
+*pcf2bdf-1.04 (16 May 2004)
+
+  16 May 2004; Mamoru KOMACHI <usata@gentoo.org> pcf2bdf-1.04.ebuild:
+  Initial import. Ebuild submitted by Eivind Tagseth
+  <eivindt-gentoo@multinet.no>, closing bug #50925
+
