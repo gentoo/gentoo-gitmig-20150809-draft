@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r2.ebuild,v 1.5 2002/07/27 02:46:21 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r3.ebuild,v 1.1 2002/07/27 02:46:21 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -8,13 +8,13 @@ SRC_URI="http://www.procmail.org/${P}.tar.gz"
 HOMEPAGE="http://www.procmail.org/"
 
 DEPEND="virtual/glibc
-        virtual/mta"
+		virtual/mta"
 
 RDEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="Artistic | GPL"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 
@@ -30,8 +30,14 @@ src_compile() {
 
 	if [ -z "`use mbox`" ];
 	then
-		echo "# Use maildir-style mailbox in user's home directory" > ${S}/procmailrc
-		echo 'DEFAULT=$HOME/.maildir/' >> ${S}/procmailrc
+#		echo "# Use maildir-style mailbox in user's home directory" > ${S}/procmailrc
+#		echo 'DEFAULT=$HOME/.maildir/' >> ${S}/procmailrc
+		
+		# the above doesn't seem to work as MAILSPOOLDIR is still defined .. so
+
+	cd ${S}
+	patch -p1 <${FILESDIR}/gentoo-maildir.patch
+
 	else
 		echo '# Use mbox-style mailbox in /var/spool/mail' > ${S}/procmail
 		echo 'DEFAULT=/var/spool/mail/$LOGNAME' >> ${S}/procmailrc

@@ -1,9 +1,28 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.4 2002/07/16 14:12:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.5 2002/07/27 02:46:21 cselkirk Exp $
 
+*procmail-3.22-r3 (26 Jul 2002)
+
+  26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> procmail-3.22-r3.ebuild 
+  files/gentoo-maildir.patch digest-procmail-3.22-r3 :
+
+  Added patch to remove MAILSPOOLDIR and define MAILSPOOLHOME when
+  we are delivering to Maildir style mailboxes (USE="maildir"). The 
+  /etc/procmailrc soultion (below) doesn't seem to work, procmail still
+  attempts to deliver to /var/spool/mail (see bug #5630).
+  Added ppc to KEYWORDS
+  Added RDEPEND 
+  
 *procmail-3.22-r2 (16 Jul 2002)
 
+  26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> procmail-3.22-r2.ebuild :
+  
+  Added ppc to KEYWORDS
+  Added RDEPEND
+  Fixed Copyright year .. s/2000/2002
+  Fixed illegal space characters
+  
   16 Jul 2002; Nick Hadaway <raker@gentoo.org> procmail-3.22-r2.ebuild :
 
   Updated sed statement to include a "-O2" so procmail doesn't barf
