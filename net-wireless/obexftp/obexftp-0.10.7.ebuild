@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/obexftp/obexftp-0.10.7.ebuild,v 1.1 2005/01/08 00:41:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/obexftp/obexftp-0.10.7.ebuild,v 1.2 2005/02/07 06:45:35 ticho Exp $
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
 SRC_URI="http://triq.net/obexftp/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://triq.net/obex"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="bluetooth"
 
 RDEPEND=">=dev-libs/openobex-1.0.0"
