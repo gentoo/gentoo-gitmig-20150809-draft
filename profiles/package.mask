@@ -586,11 +586,6 @@ dev-lang/tcl-tk
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
 =medusa-0.5.1-r4
 
-#spider@gentoo.org 21 Mar 2002
-# if you want it, you'll have to remerge all that link to the old version.
-# imlib, gdk-pixbuf and imlib2 are known.
-#=media-libs/libpng-1.2.1
-
 #karltk@gentoo.org 23 Mar 2002
 # has a defect build system that doesn't honor --prefix=${D}
 # see #1279
@@ -807,10 +802,6 @@ sys-apps/texinfo
 # This one doesn't build, looks abandondware
 app-arch/gnorpm
 
-
-# seemant@gentoo.org 26 May 2002
-# Masked while testing
-=media-libs/libpng-1.2.3
 
 # seemant@gentoo.org 26 May 2002
 #   Masked for testing
