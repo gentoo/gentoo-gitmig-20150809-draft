@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r3.ebuild,v 1.8 2004/04/29 12:55:53 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r3.ebuild,v 1.9 2004/04/30 15:00:15 cyfred Exp $
 
 inherit eutils
 
@@ -87,7 +87,7 @@ src_unpack() {
 	cd ${S}
 	einfo "Linux kernel ${KV_major}.${KV_minor}.${KV_micro}"
 
-	if is_kernel 2.5 || is_kernel 2.6
+	if is_kernel 2 5 || is_kernel 2 6
 	then
 		EPATCH_SINGLE_MSG="Applying tasklet patch ..." \
 		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-2.6-20030905.diff
@@ -138,7 +138,7 @@ pkg_postinst() {
 	then
 		# Update module dependency
 		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
-		if [ ! -e /dev/.devfsd ] && [ -x /sbin/NVmakedevices.sh ]
+		if [ ! -e /dev/.devfsd ] && [ ! -e /dev/.udev ] && [ -x /sbin/NVmakedevices.sh ]
 		then
 			/sbin/NVmakedevices.sh >/dev/null 2>&1
 		fi
