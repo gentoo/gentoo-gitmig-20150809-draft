@@ -1,6 +1,6 @@
 # Copyright 1999-20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/biopython-1.10.ebuild,v 1.1 2003/02/18 21:08:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/biopython-1.10.ebuild,v 1.2 2003/07/04 12:19:06 liquidx Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.biopython.org"
 DEPEND=">=dev-lang/python-2.0
 		>=dev-python/egenix-mx-base-2.0.3
 		>=dev-python/Numeric-19.0
-		>=dev-python/ReportLab-1.11"
+		>=dev-python/reportlab-1.11"
 
 SLOT="0"
 LICENSE="as-is"

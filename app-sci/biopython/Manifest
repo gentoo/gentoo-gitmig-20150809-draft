@@ -1,3 +1,4 @@
-MD5 5a8baab83e1f5160f281f068fc5ac1ad ChangeLog 512
-MD5 b547a900240af4159bb5ee6f887a55a1 biopython-1.10.ebuild 838
+MD5 9f8677f140b084471371023376c24a50 ChangeLog 610
+MD5 542d55c11f796a538a37bd7f39c23ede biopython-1.10.ebuild 839
+MD5 e52ec7d225835cda2c95c5317cdccfb4 metadata.xml 217
 MD5 8e719491da5d9664fddedbffc6af8f06 files/digest-biopython-1.10 67

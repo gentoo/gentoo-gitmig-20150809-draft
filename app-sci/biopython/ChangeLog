@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/biopython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/ChangeLog,v 1.1 2003/02/18 21:08:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/ChangeLog,v 1.2 2003/07/04 12:19:06 liquidx Exp $
+
+  04 Jul 2003; Alastair Tse <liquidx@gentoo.org> biopython-1.10.ebuild:
+  renamed reportlab dep
 
 *biopython-1.10.ebuild (18 Feb 2003)
 
