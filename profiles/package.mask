@@ -100,14 +100,6 @@
 # a rewrite and it's in alpha stages atm. I've a cs ebuild for it btw.
 =media-video/kwintv-0.8.11
 
-# <karltk@gentoo.org> (01 Nov 2002)
-# Masked, need to ratify junit useflag first
-=dev-java/commons-collections-2.1
-
-# <karltk@gentoo.org> (01 Nov 2002)
-# Masked, need to ratify junit useflag first
-=dev-java/commons-pool-1.0.1-r1
-
 # <mkennedy@gentoo.org> (31 Oct 2002)
 # Masked (incomplete)
 app-emacs/monk
