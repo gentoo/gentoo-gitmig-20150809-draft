@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sazanami
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/ChangeLog,v 1.6 2004/07/05 03:50:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/ChangeLog,v 1.7 2004/07/17 15:41:00 tgall Exp $
+
+  17 Jul 2004; Tom Gall <tgall@gentoo.org> sazanami-20040621.ebuild:
+  stable on ppc64, bug #55517
 
   05 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> sazanami-20040629.ebuild:
   Added ~sparc to KEYWORDS.
