@@ -2,7 +2,9 @@ MD5 0463943089db6dbdb5374e5cdd0aa11a gnome-cups-manager-0.18.ebuild 774
 MD5 b9df51065584c842989a4c1f779ae328 gnome-cups-manager-0.17.ebuild 813
 MD5 f60171e1b663385f869aa724b27fef0f ChangeLog 2894
 MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
+MD5 91673cdcc87e9512b9a1064707f9b4f5 gnome-cups-manager-0.23.ebuild 775
 MD5 6dae95b443777de3b98de444d36134ec files/digest-gnome-cups-manager-0.17 76
 MD5 f48ff0335a5163f1094f5cafb0ad3c78 files/digest-gnome-cups-manager-0.18 76
+MD5 badc909dc73f068eb167ec0a7e24c096 files/digest-gnome-cups-manager-0.23 76
 MD5 38ef34fd59e1c024d719000653111039 files/gnome-cups-manager-0.17-fix_gtk24_deprecation.patch 3301
 MD5 1772dd481b0fa6e38d67b284f73df4bf files/gnome-cups-manager-0.18-paren.patch 486
