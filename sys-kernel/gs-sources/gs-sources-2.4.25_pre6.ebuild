@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre6.ebuild,v 1.1 2004/01/20 02:49:49 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre6.ebuild,v 1.2 2004/01/26 12:09:23 livewire Exp $
 
 IUSE="build crypt"
 
@@ -32,7 +32,7 @@ DESCRIPTION="This kernel stays up to date with current kernel -pres,
 	superfreeswan,preempt/ll, and various hw fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 mirror://gentoo/patches-${KV}.tar.bz2"
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc "
 SLOT="${KV}"
 
 src_unpack() {
