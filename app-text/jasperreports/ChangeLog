@@ -1,0 +1,11 @@
+# ChangeLog for app-text/jasperreports
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/ChangeLog,v 1.1 2004/03/12 01:26:52 zx Exp $
+
+*jasperreports-0.5.2 (11 Mar 2004)
+
+  11 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jasperreports-0.5.2.ebuild,
+  metadata.xml:
+  Initial Import. Thanks to Matthew Gregory Sr. <matt.gregory@skyleach.com> for
+  the initial ebuild. Closes #41262
+
