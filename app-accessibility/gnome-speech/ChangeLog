@@ -1,6 +1,16 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.14 2004/06/24 21:22:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.15 2004/09/18 17:58:43 leonardop Exp $
+
+*gnome-speech-0.3.5 (18 Sep 2004)
+
+  18 Jun 2004; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-speech-0.3.5.ebuild:
+  New release.
+
+  18 Jun 2004; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-speech-0.3.3.ebuild:
+  Removed 0.3.3.
 
   16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   gnome-speech-0.3.2-r1.ebuild:
