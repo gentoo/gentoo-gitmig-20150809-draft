@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-1.2.0.ebuild,v 1.3 2003/12/24 22:49:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-1.3.2.ebuild,v 1.1 2004/02/29 18:26:36 usata Exp $
 
 inherit ruby elisp-common
 
@@ -8,10 +8,10 @@ IUSE="emacs"
 
 DESCRIPTION="Romaji Hiragana conversion library"
 HOMEPAGE="http://taiyaki.org/suikyo/"
-SRC_URI="http://taiyaki.org/suikyo/src/${P}.tar.gz"
+SRC_URI="http://prime.sourceforge.jp/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="0"
 S="${WORKDIR}/${P}"
 
