@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lfpfonts-fix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lfpfonts-fix/ChangeLog,v 1.4 2002/12/13 11:00:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lfpfonts-fix/ChangeLog,v 1.5 2003/01/14 16:30:03 agriffis Exp $
+
+  14 Jan 2003; Aron Griffis <agriffis@gentoo.org> lfpfonts-fix-0.82-r1.ebuild :
+  Build from bdf sources so we can add -C- (char-cell) to the FONT line.  This
+  enables the fonts to be used in gnome-terminal.  Also add alpha to KEYWORDS.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
