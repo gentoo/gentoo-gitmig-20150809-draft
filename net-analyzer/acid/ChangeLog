@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/acid
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.1 2004/07/24 13:20:24 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.2 2004/07/25 08:58:32 eldad Exp $
+
+  25 Jul 2004; Eldad Zack <eldad@gentoo.org> acid-0.9.6_beta23.ebuild:
+  Updated DBlib_path in acid_conf. Closes #58206.
 
 *acid-0.9.6_beta23 (24 Jul 2004)
 
