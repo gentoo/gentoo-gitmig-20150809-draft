@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.17 2005/03/04 20:54:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.18 2005/03/28 08:09:41 suka Exp $
 
 # Notes:
 #
@@ -241,6 +241,9 @@ src_unpack() {
 
 	#Another java problem
 	epatch ${FILESDIR}/${PV}/javafix.patch
+
+	# fix for bug #84548
+	epatch ${FILESDIR}/${PV}/getcompver.awk.patch
 
 	# Workaround for bug #73940, may break debug use flag on ppc
 	if use ppc; then

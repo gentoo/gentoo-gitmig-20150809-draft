@@ -1,34 +1,25 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fa817a31aaa4625f8338a480f745c1ac ChangeLog 24841
-MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
+MD5 4125a4a28f1627f25bfcb3bb83179d74 openoffice-1.1.4.ebuild 17021
 MD5 b9f4c245c8b1197f11106923e64a50a3 openoffice-1.1.3.ebuild 15710
-MD5 a5617046c823472c0a7ac29047406462 openoffice-1.1.4.ebuild 16955
-MD5 b2cb01ba0d5824f2892c150dce1d8771 files/digest-openoffice-1.1.4 325
+MD5 0cba54813117cded1223d7942fe8b8d7 ChangeLog 25008
+MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
 MD5 fd065af92828cda546d797e6c86d102b files/digest-openoffice-1.1.3 73
-MD5 cd0429c945d4f2e1fbbb9fd5322a6c2b files/1.1.4/freetype-217.patch 766
-MD5 ffcbf659ca6f54e8e15401cced99af77 files/1.1.4/gcc-instlib.patch 393
-MD5 a9cbc34e9462f6b64ca9e564c3b3a084 files/1.1.4/gcc34-nojava-fix.patch 329
-MD5 8c58ee1fa6e9199546bca43730d2400c files/1.1.4/nptl.patch 785
+MD5 b2cb01ba0d5824f2892c150dce1d8771 files/digest-openoffice-1.1.4 325
+MD5 43cbfca8df057d634675ef000fae82fc files/1.1.3/ooffice-wrapper-1.3 9471
+MD5 ffcbf659ca6f54e8e15401cced99af77 files/1.1.3/gcc-instlib.patch 393
+MD5 35601b7efe487b346f78d43c23e2f8f3 files/1.1.3/openoffice-java.patch 2092
+MD5 d08ea5bce1e9a925cbd712607f89f920 files/1.1.3/newstlportfix.patch 10032
 MD5 f0c4c412675085f96c20d0b5ac753694 files/1.1.4/gcc34.patch.bz2 34342
-MD5 a9233bc0091b925de38145108267b949 files/1.1.4/newstlportfix.patch 3638
+MD5 aa01d8f68b27d3df4af58ed02c080df5 files/1.1.4/pyunolink-fix.patch 475
 MD5 be03894367eaac9b6c0ba579fb92674c files/1.1.4/ooffice-wrapper-1.3 6659
+MD5 ffcbf659ca6f54e8e15401cced99af77 files/1.1.4/gcc-instlib.patch 393
 MD5 35601b7efe487b346f78d43c23e2f8f3 files/1.1.4/openoffice-java.patch 2092
-MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 24035033f41d743378e16582c2e51469 files/1.1.4/javafix.patch 1382
 MD5 ddb36dfd1d142b8a03850e3bee62a8c3 files/1.1.4/hardened-link.patch 576
+MD5 e08721c60cf0f7bc7ea0a714baeac120 files/1.1.4/getcompver.awk.patch 418
+MD5 a9cbc34e9462f6b64ca9e564c3b3a084 files/1.1.4/gcc34-nojava-fix.patch 329
 MD5 fd1c64677627b46e5528f72564bcc8fd files/1.1.4/pthreadlink-fix.patch 1133
+MD5 cd0429c945d4f2e1fbbb9fd5322a6c2b files/1.1.4/freetype-217.patch 766
+MD5 8c58ee1fa6e9199546bca43730d2400c files/1.1.4/nptl.patch 785
 MD5 f43ca2544f6cd797bed8e5aad1e50a29 files/1.1.4/gcc34-sal-link-to-libsupc++.diff 405
-MD5 aa01d8f68b27d3df4af58ed02c080df5 files/1.1.4/pyunolink-fix.patch 475
-MD5 ffcbf659ca6f54e8e15401cced99af77 files/1.1.3/gcc-instlib.patch 393
-MD5 d08ea5bce1e9a925cbd712607f89f920 files/1.1.3/newstlportfix.patch 10032
-MD5 43cbfca8df057d634675ef000fae82fc files/1.1.3/ooffice-wrapper-1.3 9471
-MD5 35601b7efe487b346f78d43c23e2f8f3 files/1.1.3/openoffice-java.patch 2092
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCKMsQKRy60XGEcJIRAhjSAKCi8XfUxRaChsAG+SbcS6q8QhCHGQCfZnx2
-ViOqBW5yuL8F9PcZrT3VKhw=
-=fD/b
------END PGP SIGNATURE-----
+MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
+MD5 a9233bc0091b925de38145108267b949 files/1.1.4/newstlportfix.patch 3638

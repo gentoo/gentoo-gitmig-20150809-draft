@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.111 2005/03/04 20:54:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.112 2005/03/28 08:09:41 suka Exp $
+
+  28 Mar 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.1.4/getcompver.awk.patch, openoffice-1.1.4.ebuild:
+  Build fix for recent gcc-versions, closes bug #84548
 
   04 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> openoffice-1.1.4.ebuild:
   Stable on sparc
