@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/pgasync
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgasync/ChangeLog,v 1.1 2005/03/01 17:39:16 nakano Exp $
+
+*pgasync-1.15b (01 Mar 2005)
+
+  01 Mar 2005; Masatomo Nakano <nakano@gentoo.org> +metadata.xml,
+  +pgasync-1.15b.ebuild:
+  Initial import. Ebuild submitted by Marien Zwart <m_zwart@123mail.org>.
+  (#83183)
+
