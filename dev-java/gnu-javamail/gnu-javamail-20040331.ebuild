@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.8 2004/10/20 07:14:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.9 2005/01/09 12:13:16 swegener Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/gnu-classpath-inetlib-1.0"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
-	jikes? >=dev-java/jikes-1.19"
+	jikes? ( >=dev-java/jikes-1.19 )"
 S=${WORKDIR}/javamail-${PV}
 
 src_compile() {
