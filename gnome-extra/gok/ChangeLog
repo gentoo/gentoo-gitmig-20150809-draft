@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gok
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/ChangeLog,v 1.16 2004/03/16 10:17:51 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/ChangeLog,v 1.17 2004/03/17 17:56:31 gustavoz Exp $
+
+  17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> gok-0.9.3.ebuild:
+  -sparc, it segfaults horribly
 
   16 Mar 2004; L. Boshell <leonardop@gentoo.org> gok-0.9.3.ebuild:
   Stable on x86. Inherit from eutils.
