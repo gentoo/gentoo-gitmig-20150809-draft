@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.34 2004/04/14 06:18:53 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.35 2004/04/18 06:44:04 lisa Exp $
+
+*anjuta-1.2.2 (18 Apr 2004)
+
+  18 Apr 2004; Lisa Seelye <lisa@gentoo.org> anjuta-1.2.2.ebuild:
+  bump to 1.2.2 to close email requests and some bugs (bug #48162). anyone want
+  to test this on 64bit port?
 
   14 Apr 2004; Lisa Seelye <lisa@gentoo.org> anjuta-1.2.1-r1.ebuild:
   add the generate tag patch to 1.2.1 too
