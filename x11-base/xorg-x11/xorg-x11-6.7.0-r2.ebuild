@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.15 2004/09/06 20:59:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.16 2004/09/15 21:07:41 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -23,7 +23,7 @@ IUSE="3dfx 3dnow cjk debug dlloader doc ipv6 mmx nls pam sdk sse static"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.3"
-PATCH_VER="1.2"
+PATCH_VER="1.3"
 XCUR_VER="0.3.1"
 #MGADRV_VER="1_3_0beta"
 #VIADRV_VER="0.1"

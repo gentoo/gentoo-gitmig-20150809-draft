@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.116 2004/09/15 17:54:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.117 2004/09/15 21:07:41 spyderous Exp $
+
+  15 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r2.ebuild:
+  PATCH_VER 1.3. Security release. Add
+  9925_all_6.7.0-libXpm-CAN-2004-0687-CAN-2004-0688.patch to fix stack and
+  integer overflows in libXpm (Chris Evans, Alan Coopersmith, Matthiew Herrb)
+  (#64152). Also add 5170_all_6.7.0-xvideo-allocation.patch (#64092, fd.o #474),
+  which made it into 6.8.0. 5170 should fix those annoying xvideo memory
+  problems.
 
   15 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.8.0.ebuild:
   Fix SRC_URI inconsistency issues (#64117).
