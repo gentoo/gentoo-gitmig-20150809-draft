@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.46 2004/09/09 18:42:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.47 2004/09/22 17:40:02 rac Exp $
+
+*libperl-5.8.5-r1 (22 Sep 2004)
+
+  22 Sep 2004; Robert Coie <rac@gentoo.org>
+  +files/libperl-5.8.5-reorder-INC.patch, +libperl-5.8.5-r1.ebuild:
+  Change USE from threads to ithreads, reorder @INC
 
   09 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> libperl-5.8.4-r1.ebuild:
   Stable on sparc to finally solve #36478
