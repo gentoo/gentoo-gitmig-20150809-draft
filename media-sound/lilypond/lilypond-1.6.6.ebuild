@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.6.ebuild,v 1.3 2003/02/13 13:15:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.6.ebuild,v 1.4 2003/02/21 23:02:00 agriffis Exp $
 
 IUSE="doc"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.lilypond.org/ftp/${MY_PV}/${P}.tar.gz"
 HOMEPAGE="http://lilypond.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~alpha"
 
 DEPEND=">=dev-lang/python-2.2.1-r2
 	>=sys-devel/perl-5.6.1-r6
