@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.27 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.28 2004/07/23 05:34:13 obz Exp $
 #
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
@@ -132,17 +132,16 @@ then
 	
 elif [ "X${ENGINE}" = "Xcrux" ]
 then
- 	PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+	PVP="${PV//[-\._]/ }"
 	SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 	
 elif [ "X${MY_PN}" = "Xgtk-engines" ] && [ "$SLOT" -eq "2" ]
 then
-	PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+	PVP="${PV//[-\._]/ }"
 	SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 else
-	SRC_PATH=`echo ${MY_PN} | awk '{print substr($0,1,1);}'`
-	SRC_PATH="${SRC_PATH}/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz"
+	SRC_PATH="${MY_PN:0:1}/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz"
 	SRC_URI="http://ftp.debian.org/debian/pool/main/$SRC_PATH"
 fi
 
