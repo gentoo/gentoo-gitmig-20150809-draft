@@ -15,7 +15,7 @@
 	$leaders = explode( ',', $leader );
 	$leader = 0;
 	while ( $each = each($leaders) ) {
-		if ( $each['value'] == $uid ) {
+		if ( $each['value'] == $uid && $uid ) {
 			$leader = 1;
 			break;
 		}
