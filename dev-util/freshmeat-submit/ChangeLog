@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/freshmeat-submit
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.1 2004/06/12 12:44:09 jmglov Exp $
+
+*freshmeat-submit-1.4 (12 Jun 2004)
+
+  12 Jun 2004; Josh Glover <jmglov@gentoo.org> freshmeat-submit-1.4.ebuild,
+  metadata.xml:
+  This package was submitted by Lukasz Strzygowski in bug #35943
+
