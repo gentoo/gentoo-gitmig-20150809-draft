@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.2.ebuild,v 1.3 2004/07/06 08:08:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.2.ebuild,v 1.4 2004/10/08 07:14:12 eradicator Exp $
 
 IUSE="libsamplerate"
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"
@@ -26,6 +26,9 @@ src_unpack() {
 	rm -f doc/Makefile || die "could not remove doc Makefile"
 	rm -f modules/Makefile || die "could not remove modules Makefile"
 	sed -i "s:docrootdir:datadir:" doc/Makefile.in
+
+	# Bug #54980
+	epatch ${FILESDIR}/${P}-gtkdep.patch
 
 	gnuconfig_update
 }
