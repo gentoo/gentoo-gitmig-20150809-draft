@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.6.ebuild,v 1.10 2002/10/12 15:11:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.6.ebuild,v 1.11 2002/12/09 04:22:39 manson Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.eskil.org/gnome-pilot/download/tarballs/${P}.tar.gz
 HOMEPAGE="http://www.gnome.org/gnome-office/gnome-pim.shtml"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 

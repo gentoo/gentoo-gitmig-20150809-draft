@@ -1,7 +1,10 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.5 2002/12/06 01:02:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.6 2002/12/09 04:22:40 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *libgsf-1.5.0 (05 Dev 2002)
 
   05 Dev 2002; foser <foser@gentoo.org> libgsf-1.5.0.ebuild :

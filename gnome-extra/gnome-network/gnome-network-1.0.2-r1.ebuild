@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-network/gnome-network-1.0.2-r1.ebuild,v 1.4 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-network/gnome-network-1.0.2-r1.ebuild,v 1.5 2002/12/09 04:22:39 manson Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 RDEPEND="=gnome-base/gnome-panel-1.4*
 	=dev-util/guile-1.4*

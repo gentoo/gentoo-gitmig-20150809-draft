@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.10 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.11 2002/12/09 04:22:40 manson Exp $
 
 IUSE="python nls readline"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sou
 HOMEPAGE="http://www.gnome.org/guppi/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 
 RDEPEND="=x11-libs/gtk+-1.2*

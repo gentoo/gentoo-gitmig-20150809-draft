@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r7.ebuild,v 1.1 2002/12/06 14:05:17 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r7.ebuild,v 1.2 2002/12/09 04:22:40 manson Exp $
 
 IUSE="gpm nls samba ncurses X pam slang"
 
@@ -23,7 +23,7 @@ DEPEND=">=sys-apps/e2fsprogs-1.19
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_compile() {                           
 	

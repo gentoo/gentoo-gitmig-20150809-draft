@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-1.0.6.ebuild,v 1.5 2002/10/04 05:40:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-1.0.6.ebuild,v 1.6 2002/12/09 04:22:40 manson Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64 ppc alpha"
+KEYWORDS="x86 sparc  ppc alpha"
 
 RDEPEND=">=gnome-base/ORBit2-2.4.1
 	>=gnome-base/libgnomeui-2.0.5

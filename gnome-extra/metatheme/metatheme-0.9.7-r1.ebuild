@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/metatheme/metatheme-0.9.7-r1.ebuild,v 1.5 2002/10/04 05:39:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/metatheme/metatheme-0.9.7-r1.ebuild,v 1.6 2002/12/09 04:22:40 manson Exp $
 
 
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 
 RDEPEND=">=dev-libs/glib-2.0.0

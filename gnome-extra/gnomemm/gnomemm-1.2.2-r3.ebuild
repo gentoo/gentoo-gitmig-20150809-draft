@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnomemm/gnomemm-1.2.2-r3.ebuild,v 1.6 2002/10/04 05:38:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnomemm/gnomemm-1.2.2-r3.ebuild,v 1.7 2002/12/09 04:22:39 manson Exp $
 
 
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/gtkmm/${P}.tar.gz"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 RDEPEND="=x11-libs/gtkmm-1.2*
 	>=gnome-base/ORBit-0.5.11

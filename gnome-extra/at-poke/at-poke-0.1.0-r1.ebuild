@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-poke/at-poke-0.1.0-r1.ebuild,v 1.3 2002/09/05 21:27:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-poke/at-poke-0.1.0-r1.ebuild,v 1.4 2002/12/09 04:22:39 manson Exp $
 
 inherit gnome2
 
 DESCRIPTION="the accessibility poking tool"
 HOMEPAGE="http://bugzilla.gnome.org"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 RDEPEND=">=gnome-extra/at-spi-0.12.1
 	>=x11-libs/gtk+-2.0.0

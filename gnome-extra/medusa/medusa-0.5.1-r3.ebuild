@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/medusa/medusa-0.5.1-r3.ebuild,v 1.6 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/medusa/medusa-0.5.1-r3.ebuild,v 1.7 2002/12/09 04:22:40 manson Exp $
 
 IUSE="nls"
 
@@ -9,7 +9,7 @@ DESCRIPTION="Medusa search system for GNOME"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 SLOT="0"
 
 
