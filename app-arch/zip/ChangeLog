@@ -1,6 +1,16 @@
 # ChangeLog for app-arch/zip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.24 2004/07/20 20:03:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.25 2004/09/28 19:23:31 solar Exp $
+
+*zip-2.3-r3 (28 Sep 2004)
+
+  28 Sep 2004; <solar@gentoo.org> +files/zip-2.3-unix_configure-pic.patch,
+  +zip-2.3-r3.ebuild:
+  pie executables will have runtime text relocations in them with zip unless we
+  disable the inline asm. This is done by adding a patch(tests via the pre
+  compiler to see if we are generating pic code) to zips homegrown configure
+  script. A better long term solution would be to fix said asm so pic users can
+  get any speed advantages that may come from using inline asm.
 
   20 Jul 2004; Tom Gall <tgall@gentoo.org> zip-2.3-r2.ebuild:
   stable on ppc64, bug #57660
