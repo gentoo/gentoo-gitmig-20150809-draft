@@ -1,10 +1,18 @@
-MD5 3ae85a3258e2dfae707f7adf02bc4128 ChangeLog 3974
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 489e37c9a8d14f059119b40f14df9897 ChangeLog 4101
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 da0d2fdb80c12fdc4ef6d8db65286d20 xmms-arts-0.7.1-r1.ebuild 753
-MD5 6b86bc386a0f06001eb16d05e6d15171 xmms-arts-0.7.1-r2.ebuild 792
+MD5 475058064d33d78786e90467e46e41ab xmms-arts-0.7.1-r1.ebuild 759
+MD5 30e324a6c8a02ad73d4b2c1d1603c96e files/digest-xmms-arts-0.7.1-r1 69
 MD5 8a92137732cf9165d7dc23ee3f0bb4df files/xmms-arts-0.4-gentoo-endian.patch 6410
 MD5 4fde6a522e3bccd70269561fc287102d files/xmms-arts-0.4-gentoo.patch 372
 MD5 94aaa450cb287a73ebdb918f26d0db23 files/xmms-arts-0.4-gentoo2.patch 754
 MD5 53dae4973af0651df719de36647891ae files/xmmsarts-0.4-nocmallocc.patch 1078
-MD5 30e324a6c8a02ad73d4b2c1d1603c96e files/digest-xmms-arts-0.7.1-r1 69
-MD5 30e324a6c8a02ad73d4b2c1d1603c96e files/digest-xmms-arts-0.7.1-r2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBkW18ArHZZzCEUG0RAjxkAJsERA33WXz5lUA0J7G/s6BrD/jrMQCfWKjP
+ijnj8S+PiQE/w7TPufiPBFI=
+=tGsT
+-----END PGP SIGNATURE-----
