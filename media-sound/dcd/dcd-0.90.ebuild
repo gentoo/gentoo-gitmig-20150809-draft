@@ -17,8 +17,9 @@ src_unpack() {
     unpack ${A}
     cd ${S}
     cp Makefile Makefile.orig
-    cat Makefile.orig | sed "s:PREFIX = .*$:PREFIX = \"${D}/usr\":" |\
-    sed "s:# CDROM = /dev/cdroms/cdrom0:CDROM = \"/dev/cdroms/cdrom0\":"\
+    cat Makefile.orig | sed -e "s:PREFIX = .*$:PREFIX = \"${D}/usr\":" \
+    -e "s:/man/:/share/man/:" \
+    -e "s:# CDROM = /dev/cdroms/cdrom0:CDROM = \"/dev/cdroms/cdrom0\":"\
     > Makefile
    
 }
