@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <spider@gentoo.org> (01 Oct 2002)
+# Masking since its a versionbump as well as fix.
+# hopefully this fixes the "cannot find gdk-poxbuf bugs
+=media-libs/gdk-pixbuf-0.20.0
+
 # <mkeadle@gentoo.org> (30 Sep 2002)
 # Masking pending BRRRR disfreeze
 media-video/SDLcam
@@ -44,6 +49,7 @@ media-video/SDLcam
 # <azarah@gentoo.org> (28 Sep 2002)
 # Test please, as this is going to be the next stable
 # moz (also for galeon-1.2.6)
+# worksforme // Spider
 =net-www/mozilla-1.0.1
 
 # <raker@gentoo.org> (28 Sep 2002)
