@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.3 2004/06/04 23:35:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.4 2004/06/15 14:51:24 lordvan Exp $
 
 inherit eutils
 
@@ -92,9 +92,9 @@ src_install() {
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/amavisd.rc6" amavisd
 
-	keepdir /var/spool/amavis /var/run/amavis
-	fowners amavis:amavis /var/spool/amavis /var/run/amavis
-	fperms 0750 /var/spool/amavis /var/run/amavis
+	keepdir /var/spool/amavis /var/run/amavis /var/virusmails
+	fowners amavis:amavis /var/spool/amavis /var/run/amavis /var/virusmails
+	fperms 0750 /var/spool/amavis /var/run/amavis /var/virusmails
 
 	newdoc test-messages/README README.samples
 	dodoc AAAREADME.first INSTALL LDAP.schema LICENSE MANIFEST RELEASE_NOTES \
