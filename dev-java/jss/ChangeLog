@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jss
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.1 2004/12/18 16:37:30 karltk Exp $
+
+*jss-3.4 (18 Dec 2004)
+
+  18 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jss-3.4.ebuild:
+  Initial import. Ebuild submitted by the talented Jan Brinkmann 
+  <lucky@the-luckyduck.de>, fixes #70244.
