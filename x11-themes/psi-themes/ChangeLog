@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/psi-themes
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.5 2003/11/11 21:09:27 luke-jr Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.6 2004/03/01 14:00:45 humpback Exp $
+
+*psi-themes-0.9.1 (01 Mar 2004)
+
+  01 Mar 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  psi-themes-0.8.7.ebuild, psi-themes-0.8.8.ebuild, psi-themes-0.9.1.ebuild:
+  Adding 0.9.1 for psi 0.9.1 and making older versions of themes DEPEND on psi
+  <= 0.9.0. This closes bugs 37051 and 43352. Thanks to all involved.
 
 *psi-themes-0.8.8 (7 Nov 2003) 
 

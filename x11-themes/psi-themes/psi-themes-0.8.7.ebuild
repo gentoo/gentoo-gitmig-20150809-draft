@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.8.7.ebuild,v 1.3 2003/02/13 17:44:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.8.7.ebuild,v 1.4 2004/03/01 14:00:45 humpback Exp $
 
 SRC_URI="http://psi.sourceforge.net/files/common/iconsets/beos/beos.zip
 	http://psi.sourceforge.net/files/common/iconsets/cosmic/cosmic.zip
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-DEPEND=">=net-im/psi-0.8.7
+DEPEND="<=net-im/psi-0.9.0
 	app-arch/unzip"
 
 S=${WORKDIR}
