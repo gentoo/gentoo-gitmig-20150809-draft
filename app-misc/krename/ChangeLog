@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/krename
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.36 2004/10/05 13:34:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.37 2004/10/17 12:34:49 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> krename-3.0.2.ebuild:
+  stable on amd64.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   krename-3.0.2.ebuild:
