@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.8 2004/02/24 11:01:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.9 2004/02/27 20:48:59 lanius Exp $
+
+  27 Feb 2004; Heinrich Wendel <lanius@gentoo.org>
+  ghostscript-afpl-8.13.ebuild, ghostscript-afpl-8.14.ebuild:
+  added gtk to IUSE (bug #43098)
 
   24 Feb 2004; Heinrich Wendel <lanius@gentoo.org> 
   ghostscript-afpl-8.14.ebuild:
