@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10.ebuild,v 1.3 2002/10/30 01:27:57 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10-r1.ebuild,v 1.1 2002/10/31 13:38:34 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
@@ -55,8 +55,8 @@ src_install() {
 	dodir /bin
 
 	exeinto /lib
-	doexe proc/libproc.so.2.0.8
-	dosym /lib/libproc.so.2.0.8 /lib/libproc.so
+	doexe proc/libproc.so.2.0.10
+	dosym /lib/libproc.so.2.0.10 /lib/libproc.so
 
 	einstall DESTDIR="${D}" || die
 
