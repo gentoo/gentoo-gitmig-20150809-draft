@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/egroupware
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.6 2004/08/30 19:15:01 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.7 2004/09/03 09:29:31 rl03 Exp $
+
+  03 Sep 2004; Renat Lumpau <rl03@gentoo.org> -egroupware-0.9.99.008.ebuild,
+  -egroupware-0.9.99.015.ebuild, -egroupware-1.0.00.003.ebuild:
+  Obsolete version; removed by eversionrm tool
 
   30 Aug 2004; Renat Lumpau <rl03@gentoo.org> egroupware-1.0.00.003.ebuild,
   egroupware-1.0.00.004.ebuild:
