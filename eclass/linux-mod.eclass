@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.22 2005/01/16 22:54:56 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.23 2005/01/16 23:53:00 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -243,6 +243,7 @@ display_postinst() {
 		einfo "please type the following as root:"
 		for i in ${MODULE_NAMES}
 		do
+			unset libdir srcdir objdir
 			for n in $(find_module_params ${i})
 			do
 				eval ${n/:*}=${n/*:/}
@@ -316,6 +317,7 @@ linux-mod_src_compile() {
 
 	for i in ${MODULE_NAMES}
 	do
+		unset libdir srcdir objdir
 		for n in $(find_module_params ${i})
 		do
 			eval ${n/:*}=${n/*:/}
@@ -355,6 +357,7 @@ linux-mod_src_install() {
 
 	for i in ${MODULE_NAMES}
 	do
+		unset libdir srcdir objdir
 		for n in $(find_module_params ${i})
 		do
 			eval ${n/:*}=${n/*:/}
