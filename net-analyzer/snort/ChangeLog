@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.34 2004/03/09 00:55:52 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.35 2004/03/16 01:51:07 mboman Exp $
+
+  16 Mar 2004; Michael Boman <mboman@gentoo.org> snort-2.0.0.ebuild,
+  snort-2.0.1-r1.ebuild, snort-2.0.2.ebuild, snort-2.0.5-r1.ebuild,
+  snort-2.0.5.ebuild, snort-2.1.0.ebuild, snort-2.1.1.ebuild:
+  Changed ebuilds to use 'sed -i ...' instead of 'sed ... < file > file.new'
+  syntax.
 
 *snort-2.1.1 (09 Mar 2004)
 

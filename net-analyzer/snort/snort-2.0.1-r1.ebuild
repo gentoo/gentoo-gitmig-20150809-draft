@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.1-r1.ebuild,v 1.4 2003/11/24 15:40:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.1-r1.ebuild,v 1.5 2004/03/16 01:51:07 mboman Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_unpack() {
 	#is this needed in 2.0? -Method
 	#use alpha && epatch ${FILESDIR}/${P}-alpha.patch
 
-	sed "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" < etc/snort.conf > etc/snort.conf.distrib
+	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" etc/snort.conf
 
 	use prelude && epatch ../${P}+prelude.patch
 }
@@ -81,7 +81,7 @@ src_install() {
 
 	insinto /etc/snort
 	doins etc/reference.config etc/classification.config rules/*.rules etc/*.map
-	doins etc/snort.conf.distrib
+	newins etc/snort.conf snort.conf.distrib
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/snort.rc6 snort
 	insinto /etc/conf.d ; newins ${FILESDIR}/snort.confd snort

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.0.ebuild,v 1.2 2004/01/07 08:23:54 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.0.ebuild,v 1.3 2004/03/16 01:51:07 mboman Exp $
 
 inherit eutils
 
@@ -53,7 +53,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/snort-drop-calculation.diff
 
-	sed "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" < etc/snort.conf > etc/snort.conf.distrib
+	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" etc/snort.conf
 
 	# Prelude patch currently not compatible with 2.1.0
 	#use prelude && (
@@ -97,7 +97,7 @@ src_install() {
 	insinto /etc/snort
 	doins etc/reference.config etc/classification.config rules/*.rules etc/*.map etc/threshold.conf
 	#use prelude && doins etc/prelude-classification.config
-	doins etc/snort.conf.distrib
+	newins etc/snort.conf snort.conf.distrib
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/snort.rc6 snort
 	insinto /etc/conf.d ; newins ${FILESDIR}/snort.confd snort
