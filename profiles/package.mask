@@ -292,3 +292,4 @@ net-misc/gkrellmwireless
 #Should be tested
 >=dev-lang/python-2.2
 =net-mail/teapop-0.3.3
+media-gfx/pixieplus
