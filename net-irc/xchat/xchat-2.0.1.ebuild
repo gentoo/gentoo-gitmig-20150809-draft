@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.1.ebuild,v 1.3 2003/03/23 07:45:22 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.1.ebuild,v 1.4 2003/04/17 22:16:24 sethbc Exp $
 
 IUSE="perl tcltk python ssl gtk mmx ipv6" 
 
@@ -62,6 +62,9 @@ src_install() {
 	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=XChat IRC:Name=XChat 2 IRC:" xchat.desktop.old > xchat.desktop
 
 	einstall install || die "Install failed"
+
+	! has_version "<xchat-2" \
+		&& dosym /usr/bin/xchat-2 /usr/bin/xchat
 
 	dodoc AUTHORS COPYING ChangeLog README*
 }
