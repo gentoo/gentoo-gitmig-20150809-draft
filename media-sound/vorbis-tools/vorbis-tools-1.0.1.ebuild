@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.1 2003/11/22 19:13:41 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.2 2003/11/23 15:03:09 mholzer Exp $
 
 IUSE="nls"
 
@@ -37,4 +37,3 @@ src_install () {
 	docinto ogg123
 	dodoc ogg123/ogg123rc-example
 }
-
