@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.1.6.ebuild,v 1.5 2004/04/06 03:03:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.1.6.ebuild,v 1.6 2004/06/21 22:38:21 mr_bones_ Exp $
 
 inherit games flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/librsvg-2.0
 	>=gnome-base/gconf-2.0
-	>=media-libs/gstreamer-0.6*"
+	=media-libs/gstreamer-0.6*"
 
 src_unpack() {
 	filter-flags -fomit-frame-pointer
