@@ -1,0 +1,10 @@
+--- dclib/core/cthread.cpp.orig	2002-12-19 19:01:57.000000000 -0500
++++ dclib/core/cthread.cpp	2002-12-19 19:02:09.000000000 -0500
+@@ -16,6 +16,7 @@
+  ***************************************************************************/
+ 
+ #include <stdio.h>
++#define __USE_POSIX199309
+ #include <time.h>
+ #include <errno.h>
+ 
