@@ -1,8 +1,11 @@
 # ChangeLog for app-crypt/cryptplug
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.3 2003/02/12 03:07:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.4 2003/03/28 12:17:01 pvdabeel Exp $
 
 *cryptplug-0.3.15 (30 Jan 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Added ~ppc keyword
 
   30 Jan 2003; J Robert Ray <jrray@gentoo.org> : New ebuild, provides the
   functionality of "gpgmeplug" from earlier versions of gpgme, now separated
