@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 inherit kde-base
-#export KDEBASE="true" # needs to install into kde's share/apps/ heirarchy
 
 need-kde 3
 
