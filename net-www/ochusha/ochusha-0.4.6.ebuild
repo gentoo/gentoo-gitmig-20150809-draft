@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.4.6.ebuild,v 1.2 2003/12/23 09:23:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.4.6.ebuild,v 1.3 2003/12/30 09:25:31 usata Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ DEPEND="virtual/xft
 	>=gnome-base/libghttp-1.0.9
 	sys-libs/zlib
 	sys-devel/gettext
-	dev-libs/oniguruma"
+	=dev-libs/oniguruma-1.9.5"
 #RDEPEND=""
 
 S=${WORKDIR}/${P}

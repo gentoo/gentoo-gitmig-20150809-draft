@@ -1,17 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.4.4.8.ebuild,v 1.3 2003/12/30 09:25:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.4.7.1.ebuild,v 1.1 2003/12/30 09:25:31 usata Exp $
 
 IUSE=""
 
 DESCRIPTION="Ochusha - 2ch viewer for GTK+"
 HOMEPAGE="http://ochusha.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/6968/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge.jp/${PN}/7418/${P}.tar.bz2
+	http://ochusha.sourceforge.jp/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
+# ochusha failed to build with oniguruma-2.0.0
 DEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
 	>=dev-libs/glib-2.2.3
@@ -25,6 +27,9 @@ DEPEND="virtual/xft
 S=${WORKDIR}/${P}
 
 src_compile() {
+
+	# onigposix.h resides in /usr/include
+	export ONIG_POSIX_H=1
 
 	econf --enable-regex || die
 	emake || die
