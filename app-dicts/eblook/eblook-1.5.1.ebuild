@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.5.1.ebuild,v 1.8 2004/11/18 09:23:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.5.1.ebuild,v 1.9 2004/11/22 12:45:39 usata Exp $
 
 inherit eutils
 
@@ -33,6 +33,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README VERSION
 }

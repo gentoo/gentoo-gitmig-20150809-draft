@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.6.ebuild,v 1.7 2004/11/18 09:23:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/eblook-1.6.ebuild,v 1.8 2004/11/22 12:45:39 usata Exp $
 
 IUSE=""
 
@@ -12,10 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
-RDEPEND="!>=dev-libs/eb-4.1
+DEPEND="!>=dev-libs/eb-4.1
 	>=dev-libs/eb-3.3.4"
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.53"
 
 S="${WORKDIR}/${P%_*}"
 
@@ -25,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README VERSION
 }
