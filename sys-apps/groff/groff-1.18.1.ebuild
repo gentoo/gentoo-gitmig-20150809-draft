@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1.ebuild,v 1.10 2003/09/07 00:43:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1.ebuild,v 1.11 2003/09/27 22:35:01 mholzer Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ inherit eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Text formatter used for man pages"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/groff/${P}.tar.gz"
+SRC_URI="ftp://groff.ffii.org/pub/groff/old/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 
 KEYWORDS="x86 amd64 ppc ~sparc alpha ~mips hppa"
