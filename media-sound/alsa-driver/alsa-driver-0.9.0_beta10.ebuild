@@ -11,6 +11,7 @@
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}
 MYP="${PN}-${MYPV}"
+KV=""
 
 S=${WORKDIR}/${MYP}
 
@@ -24,17 +25,18 @@ HOMEPAGE="http://www.alsa-project.org"
 DEPEND="sys-devel/autoconf virtual/glibc"
 PROVIDE="virtual/alsa"
 
-#might be good to roll this into Portage at some point.
-KV=`readlink /usr/src/linux`
-if [ $? -ne 0 ]
-then
-	echo 
-	echo "/usr/src/linux symlink does not exist; cannot continue."
-	echo
-	exit 1
-fi
-#alsa-driver will compile modules for the kernel pointed to by /usr/src/linux
-KV=${KV/linux-/}
+pkg_setup() {
+	KV=`readlink /usr/src/linux`
+	if [ $? -ne 0 ] ; then
+		echo 
+		echo "/usr/src/linux symlink does not exist; cannot continue."
+		echo
+		die
+	else
+		#alsa-driver will compile modules for the kernel pointed to by /usr/src/linux
+		KV=${KV/linux-/}
+	fi
+}
 
 src_compile() {
 
@@ -69,10 +71,5 @@ src_install () {
 }
 
 pkg_postinst () {
-
-	if [ -e /sbin/update-modules ]
-	then
-		/sbin/update-modules
-	fi
-
+	/usr/sbin/update-modules || return 0
 }

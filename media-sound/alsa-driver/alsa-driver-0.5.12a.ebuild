@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.2 2002/01/02 22:00:27 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.3 2002/02/09 01:44:32 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture modules"
@@ -11,18 +11,20 @@ HOMEPAGE="http://www.alsa-project.org"
 #virtual/glibc should depend on specific kernel headers
 DEPEND="sys-devel/autoconf virtual/glibc"
 PROVIDE="virtual/alsa"
+KV=""
 
-#might be good to roll this into Portage at some point.
-KV=`readlink /usr/src/linux`
-if [ $? -ne 0 ]
-then
-	echo 
-	echo "/usr/src/linux symlink does not exist; cannot continue."
-	echo
-	exit 1
-fi
-#alsa-driver will compile modules for the kernel pointed to by /usr/src/linux
-KV=${KV/linux-/}
+pkg_setup() {
+	KV=`readlink /usr/src/linux`
+	if [ $? -ne 0 ] ; then
+		echo
+		echo "/usr/src/linux symlink does not exist; cannot continue."
+		echo
+		die
+	else
+		#alsa-driver will compile modules for the kernel pointed to by /usr/src/linux
+		KV=${KV/linux-/}
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -51,8 +53,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ -e /sbin/update-modules ]
-	then
-		/sbin/update-modules
-	fi
+	/usr/sbin/update-modules || return 0
 }
