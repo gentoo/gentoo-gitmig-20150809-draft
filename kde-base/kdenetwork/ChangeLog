@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.88 2004/06/10 12:18:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.89 2004/06/16 15:33:42 caleb Exp $
+
+  16 Jun 2004; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.2.3.ebuild,
+  kdenetwork-3.3.0_alpha1.ebuild:
+  Add jabber and ssl use flags with deps
 
 *kdenetwork-3.2.3 (10 Jun 2004)
 
