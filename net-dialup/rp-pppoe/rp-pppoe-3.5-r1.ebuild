@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r1.ebuild,v 1.4 2004/09/27 10:24:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r1.ebuild,v 1.5 2004/09/27 12:49:23 dragonheart Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="X"
 DEPEND=">=net-dialup/ppp-2.4.1
 	X? ( tcltk? ( 	virtual/x11
 			dev-lang/tcl
-			dev-lang/tk ))"
+			dev-lang/tk ) )"
 
 src_unpack() {
 	unpack ${A} || die
