@@ -2,16 +2,15 @@
 Hash: SHA1
 
 MD5 312b17851410dfca402fd4acf8a9d760 tnef-1.2.1.ebuild 646
-MD5 688c8313e9d53528f3fc1a4650faa14e ChangeLog 1424
+MD5 1ca10bf51796915a6627920d30edfbd7 ChangeLog 1508
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 b9e63c1210e39766ecebf4fb3267cd9e tnef-1.2.3.1.ebuild 652
+MD5 eda49b1e433ca6b58abfa5c4ef9bbf47 tnef-1.2.3.1.ebuild 649
 MD5 e35c50eaad08ac295871f3112bbd0183 files/digest-tnef-1.2.3.1 65
 MD5 6d72ccda9c473db15ba7428d4055dc17 files/digest-tnef-1.2.1 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-Comment: .//Manifest 1094511964
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBPO1qPpIsIjIzwiwRApxoAKD5cn9z6okQGgMG+2KC3QfBNqGXQwCghxFk
-gjSllkgNYReSt9bS3xqBDaQ=
-=Qkcb
+iD8DBQFBhquL10xuJSrg3/sRAg/zAJ42DDq4TwCuFWH1Tuj0z4IJu6fl2ACfZOs7
+k16dJZyYIbQNixFnHZeiv/M=
+=HYzc
 -----END PGP SIGNATURE-----
