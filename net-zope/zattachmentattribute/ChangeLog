@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zattachmentattribute
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zattachmentattribute/ChangeLog,v 1.1 2004/09/26 21:06:17 radek Exp $
+
+*zattachmentattribute-2.13 (26 Sep 2004)
+
+  26 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org>
+  +zattachmentattribute-2.13.ebuild:
+  initial release based on Ernst <ernst@cypres.demon.nl> work.
+
