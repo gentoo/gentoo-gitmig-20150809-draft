@@ -51,3 +51,4 @@ move net-mail/nmh mail-client/nmh
 move net-mail/pine mail-client/pine
 move net-mail/pine-maildir mail-client/pine-maildir
 move net-mail/pinepgp mail-client/pinepgp
+move net-mail/smtpclient mail-client/smtpclient
