@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.37 2003/06/19 19:10:15 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.38 2003/06/22 11:33:37 liquidx Exp $
+
+*openldap-2.0.25-r2 (22 Jun 2003)
+
+  22 Jun 2003; Alastair Tse <liquidx@gentoo.org> openldap-2.0.25-r1.ebuild,
+  openldap-2.0.25-r2.ebuild:
+  add openldap-2.0.25 back because it will break 1.0 profiles
 
 *openldap-2.1.21 (14 Jun 2003)
 
