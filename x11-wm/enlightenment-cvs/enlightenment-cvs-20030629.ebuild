@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030629.ebuild,v 1.6 2004/01/14 19:49:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030629.ebuild,v 1.7 2004/02/01 19:20:28 vapier Exp $
 
 inherit enlightenment
 
@@ -26,14 +26,14 @@ RDEPEND="media-gfx/etcher
 	dev-lang/esmall
 	media-gfx/imlib2_tools
 	sys-fs/efsd
-	x11-wm/e
 	x11-misc/entrance
 	app-misc/evidence
 	media-gfx/elicit"
 
-#x11-misc/enotes
+#	x11-misc/enotes
 #	x11-libs/eprog
 #	x11-misc/med
+#	x11-wm/e
 
 src_unpack() { :;}
 src_compile() { :;}
