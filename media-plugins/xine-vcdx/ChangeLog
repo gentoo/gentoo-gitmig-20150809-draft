@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xine-vcdx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/ChangeLog,v 1.2 2003/10/20 22:08:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/ChangeLog,v 1.3 2003/10/21 15:29:48 mholzer Exp $
+
+  22 Oct 2003; Martin Holzer <mholzer@gentoo.org> xine-vcdx-1_rc0.ebuild,
+  xine-vcdx-1_rc1.ebuild:
+  adding RESTRICT="nomirror"
 
 *xine-vcdx-1_rc1 (22 Oct 2003)
 
