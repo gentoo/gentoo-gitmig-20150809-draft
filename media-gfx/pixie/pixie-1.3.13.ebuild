@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.5-r1.ebuild,v 1.5 2004/07/19 19:10:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.13.ebuild,v 1.1 2004/07/19 19:10:39 eradicator Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-src-${PV}.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc -amd64"
 
 RDEPEND="media-libs/jpeg
 	 sys-libs/zlib
@@ -24,15 +24,23 @@ RDEPEND="media-libs/jpeg
 	 X? ( virtual/x11 )"
 
 DEPEND="${RDEPEND}
-	sys-devel/automake"
+	>=sys-devel/automake-1.8"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-math.patch
-	epatch ${FILESDIR}/${P}-Makefile.patch
-	WANT_AUTOMAKE=1.4 automake
+	# These have been sent upstream
+	epatch ${FILESDIR}/${PN}-1.3.11-math.patch
+
+	# Gentoo-specific stuff
+	epatch ${FILESDIR}/${PN}-1.3.11-gentoo.patch
+
+	# redirecting aclocal to /dev/null because there are alot of warnings
+	# output for deprecated stuff in 1.8.5
+	WANT_AUTOMAKE=1.8 aclocal >& /dev/null
+	WANT_AUTOMAKE=1.8 automake
+	WANT_AUTOCONF=2.5 autoconf
 }
 
 src_compile() {
