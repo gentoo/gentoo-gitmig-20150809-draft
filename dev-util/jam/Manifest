@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f8da25347a16c1f616c6d1555cd6ab4b ChangeLog 1240
-MD5 0a2fb634b4a14cf117fa1be07baf8094 jam-2.5.ebuild 752
+MD5 1ff4ca6fa52b937683dc3a22815e53aa jam-2.5.ebuild 752
 MD5 7301e635c156f9b803a27cf6aee186de files/digest-jam-2.5 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD4DBQFB2h4EroRuSHgZdywRAhC7AJMHCQwMqg5nViA0StFojyEi0ZPFAJ4k6eOX
+7rlpbWQ4rMZB98foVOuRVA==
+=+u34
+-----END PGP SIGNATURE-----
