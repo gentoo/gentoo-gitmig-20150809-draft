@@ -1,0 +1,9 @@
+# ChangeLog for app-text/mecab
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.1 2003/08/17 06:47:27 matsuu Exp $
+
+*mecab-0.76 (17 Aug 2003)
+
+  17 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> mecab-0.76.ebuild:
+  initial import.
+
