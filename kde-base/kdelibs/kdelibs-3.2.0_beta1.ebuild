@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta1.ebuild,v 1.3 2003/11/08 22:09:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta1.ebuild,v 1.4 2003/11/13 20:53:43 caleb Exp $
 inherit kde
 
 MY_PV=3.1.93
@@ -17,15 +17,15 @@ SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
 DEPEND="dev-lang/perl
-	>=media-libs/audiofile-0.1.9
-	>=sys-apps/bzip2-1.0.1
-	>=dev-libs/libxslt-1.0.7
-	>=dev-libs/libpcre-3.5
-	>=dev-libs/libxml2-2.4.10
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	alsa? ( >=media-libs/alsa-lib-0.5.9 virtual/alsa )
-	cups? ( >=net-print/cups-1.1.14 )
-	>=media-libs/tiff-3.5.5
+	media-libs/audiofile
+	sys-apps/bzip2
+	dev-libs/libxslt
+	dev-libs/libpcre
+	dev-libs/libxml2
+	ssl? ( dev-libs/openssl )
+	alsa? ( media-libs/alsa-lib virtual/alsa )
+	cups? ( net-print/cups )
+	media-libs/tiff
 	app-admin/fam-oss
 	app-text/ghostscript
 	media-libs/libart_lgpl
