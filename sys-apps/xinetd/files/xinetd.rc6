@@ -8,13 +8,15 @@ autoconfig() {
 	if [ ! -e /etc/xinetd.conf ] ; then
 		if [ ! -e /etc/inetd.conf ] ; then
 			eerror "You need an /etc/xinetd.conf file to run xinetd"
+			eerror "There are samples in docs/xinetd, docs/netkit-base"
 			return 1
 		else
 			einfo "Auto-creating xinetd.conf from your inetd.conf.."
 			/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
+
 		fi
 	fi
-	return
+	return # sneaky?
 }
 
 start() {

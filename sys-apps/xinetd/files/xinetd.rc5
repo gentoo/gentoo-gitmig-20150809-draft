@@ -10,7 +10,8 @@ opts="start stop"
 autoconfig() {
 	if [ ! -e /etc/xinetd.conf ] ; then
 		if [ ! -e /etc/inetd.conf ] ; then
-			eerror "You need an /etc/xinetd.conf file to run xinetd!"
+			eerror "You need an /etc/xinetd.conf file to run xinetd"
+			eerror "There are samples in docs/xinetd, docs/netkit-base"
 			exit 1
 		else
 			einfo "Auto-creating xinetd.conf from your inetd.conf.."
