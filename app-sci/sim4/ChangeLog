@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/sim4
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/sim4/ChangeLog,v 1.1 2004/06/22 16:36:47 ribosome Exp $
+
+*sim4-20030921 (22 Jun 2004)
+
+  22 Jun 2004; Olivier Fisette <ribosome@gentoo.org>
+  sim4-20030921.ebuild, metadata.xml :
+  Initial import.  Ebuild submitted by Olivier Fisette <ribosome@gentoo.org>.
+  Reference: Gentoo Bugzilla, bug #54041
+
