@@ -2,6 +2,10 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  17 Jun 2003; Seemant Kulleen <seemant@gentoo.org> 3ddesktop-0.2.4.ebuild:
+  added freetype-1 to DEPEND. Thanks to: Jeremy Huddleston
+  <jeremyhu@cory.eecs.berkeley.edu> in bug #21878
+
   12 Jun 2003; <msterret@gentoo.org> 3ddesktop-0.2.4.ebuild:
   fix Header
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.4.ebuild,v 1.5 2003/06/12 22:17:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.4.ebuild,v 1.6 2003/06/17 12:23:50 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="OpenGL virtual desktop switching"
@@ -12,8 +12,8 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=x11-base/xfree-4.2.0
-		media-libs/imlib2
-		x11-base/opengl-update"
+	=media-libs/freetype-1
+	media-libs/imlib2"
 
 src_compile() {
 	econf || die
