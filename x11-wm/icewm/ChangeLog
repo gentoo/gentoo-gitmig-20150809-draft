@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.48 2004/07/09 07:05:01 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.49 2004/07/22 03:54:37 morfic Exp $
+
+*icewm-1.2.15_pre2 (21 Jul 2004)
+
+  21 Jul 2004; Daniel Goller <morfic@gentoo.org> icewm-1.2.15_pre2.ebuild:
+  Bumped Version, closing bug #57866
 
   09 Jul 2004; Daniel Goller <morfic@gentoo.org> :
   this version has varios bug fixes and upstream merged our gcc 3.4 patches

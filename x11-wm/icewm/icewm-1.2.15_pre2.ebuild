@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.15_pre1.ebuild,v 1.2 2004/07/22 03:54:37 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.15_pre2.ebuild,v 1.1 2004/07/22 03:54:37 morfic Exp $
 
 inherit eutils
 
