@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20031010.ebuild,v 1.1 2003/10/10 20:31:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20031010.ebuild,v 1.2 2003/10/10 20:34:22 pebenito Exp $
 
 IUSE=""
 
@@ -17,15 +17,6 @@ RDEPEND="sys-devel/m4
 S=${WORKDIR}/base-policy
 
 [ -z ${POLICYDIR} ] && POLICYDIR="/etc/security/selinux/src/policy"
-
-pkg_setup() {
-	if [ -z "`use selinux`" ]; then
-		eerror "selinux is missing from your USE.  You seem to be using the"
-		eerror "incorrect profile.  SELinux has a different profile than"
-		eerror "mainline Gentoo.  Make sure the /etc/make.profile symbolic"
-		eend 1 "link is pointing to /usr/portage/profiles/selinux-${ARCH}-1.4/"
-	fi
-}
 
 src_install() {
 	dodir /etc/security/selinux/src
