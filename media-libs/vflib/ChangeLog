@@ -1,0 +1,12 @@
+# ChangeLog for media-libs/vflib
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/ChangeLog,v 1.1 2003/07/25 19:07:13 usata Exp $
+
+*vflib-2.25.6 (26 Jul 2003)
+
+  26 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> vflib-2.25.6.ebuild,
+  files/vflib-2.25.6-gentoo.diff:
+  Initial import, based on the ebuild submitted by Shinya Ando
+  <shinya@systemlinks.com> at GentooJP BugTrack
+  Great thanks to Timmy Douglas <timmy+gentoo@cc.gatech.edu> for
+  his continual help with testing the ebuild, closing bug #23131
