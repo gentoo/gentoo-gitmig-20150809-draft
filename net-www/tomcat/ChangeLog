@@ -1,8 +1,11 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.15 2003/03/25 16:35:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.16 2003/03/28 07:39:03 absinthe Exp $
 
 *tomcat-4.1.24 (25 Mar 2003)
+
+  28 Mar 2003; Dylan Carlson <absinthe@gentoo.org> files/4.1.24/tomcat.conf:
+  Fixed sed path in conf.d/tomcat.
 
   25 Mar 2003; Dylan Carlson <absinthe@gentoo.org> omcat-4.1.24.ebuild, 
   files/4.1.24/21tomcat, tomcat-4.1.24.ebuild, files/4.1.24/21tomcat,
