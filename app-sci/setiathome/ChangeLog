@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.16 2004/02/26 22:44:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.17 2004/03/01 11:23:40 phosphan Exp $
+
+*setiathome-3.08-r2 (01 Mar 2004)
+
+  01 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
+  setiathome-3.08-r2.ebuild, files/seti-init.d-r1:
+  Adding wrapper to 3.08 aswell. Will not try to login any more if run for the
+  first time, but give an error message.
 
   26 Feb 2004; Aron Griffis <agriffis@gentoo.org> setiathome-3.03-r1.ebuild:
   Remove alpha from the SRC_URI to keep from cluttering digest and causing

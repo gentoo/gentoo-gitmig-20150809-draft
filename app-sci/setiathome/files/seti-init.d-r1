@@ -9,15 +9,17 @@ depend() {
 }
 
 checkconfig() {
+	SETIBINDIR="/opt/setiathome"
 	if [ ! -e "${SETIATHOME_DIR}" ] ; then
 		einfo "Creating ${SETIATHOME_DIR}"
 		mkdir "${SETIATHOME_DIR}"
 	fi
 
 	if [ ! -e "${SETIATHOME_DIR}/user_info.sah" ] ; then
-		einfo "Setting up SETI@home for the first time"
-		cd "${SETIATHOME_DIR}"
-		${SETIATHOME_DIR}/setiathome -login ${SETIATHOME_OPTIONS}
+		eerror "Please setup SETI@home first by running the following commands:"
+		eerror cd "${SETIATHOME_DIR}"
+		eerror ${SETIATHOME_DIR}/setiathome -login ${SETIATHOME_OPTIONS}
+		return 1
 	fi
 
 	if [ "${SETIATHOME_THREADS}" != '1' ] ; then
@@ -29,10 +31,11 @@ checkconfig() {
 			fi
 		done
 	fi
+	return 0
 }
 
 start() {
-	checkconfig
+	checkconfig || return 1;
 
 	if [ "${SETIATHOME_THREADS}" = '1' ] ; then
 		ebegin "Starting SETI@home"
