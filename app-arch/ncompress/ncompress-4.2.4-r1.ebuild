@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ncompress-4.2.4-r1.ebuild,v 1.8 2004/10/08 01:31:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ncompress-4.2.4-r1.ebuild,v 1.9 2004/10/10 02:28:47 tgall Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.leo.org/pub/comp/os/unix/linux/sunsite/utils/compress/${P}.ta
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="build"
 
 src_unpack() {
