@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.11 2003/12/26 10:17:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.12 2004/01/25 23:15:20 plasmaroo Exp $
+
+  25 Jan 2004; <plasmaroo@gentoo.org> i2c-2.8.1.ebuild, i2c-2.8.2.ebuild:
+  Added "CC" variable support to the ebuild to enable distcc
+  support. Closes bug #39374.
 
   26 Dec 2003; <plasmaroo@gentoo.org> i2c-2.8.0.ebuild, i2c-2.8.1.ebuild:
   Marked stable on 'x86'.

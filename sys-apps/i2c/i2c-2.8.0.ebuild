@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.10 2003/12/26 10:17:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.11 2004/01/25 23:15:20 plasmaroo Exp $
 
 DESCRIPTION="I2C Bus support for 2.4.x kernels"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
 SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="${KV}"
+LICENSE="GPL-2"
 KEYWORDS="x86 ~alpha ~amd64 ~ppc"
 
 DEPEND=""
