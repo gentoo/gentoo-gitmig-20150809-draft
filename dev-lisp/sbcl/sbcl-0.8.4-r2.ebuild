@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.4-r2.ebuild,v 1.3 2003/10/12 04:53:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.4-r2.ebuild,v 1.4 2003/10/13 06:10:56 mkennedy Exp $
+
+inherit common-lisp-common
 
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is a Open Source development system for ANSI Common Lisp. It provides an interactive environment including an integrated native compiler, interpreter, and debugger. (And it, and its generated code, can also play nicely with Unix when running noninteractively.)"
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -70,6 +72,7 @@ src_install() {
 	doexe ${FILESDIR}/sbcl.sh
 
 	INSTALL_ROOT=${D}/usr sh install.sh
+	dosym /usr/lib/sbcl/asdf-install/asdf-install /usr/bin/sbcl-asdf-install
 	mv ${D}/usr/lib/sbcl/sbcl.core ${D}/usr/lib/sbcl/sbcl-dist.core
 
 	insinto /usr/lib/sbcl
@@ -80,24 +83,25 @@ src_install() {
 	doman debian/sbcl-asdf-install.1
 
 	use doc && dohtml doc/html/*
-	dodoc BUGS COPYING CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README STYLE TLA TODO \
-		debian/README.Debian debian/changelog debian/copyright
+	dodoc BUGS COPYING CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README STYLE TLA TODO
 
-	find ${D} -type f -name .cvsignore |xargs rm -f
+	do-debian-credits
+
+	find ${D} -type f -name .cvsignore -exec rm -f '{}' \;
+	find ${D} -type f -name \*.c -exec chmod 644 '{}' \;
+
+	# Since the Portage emerge step kills file timestamp information,
+	# we need to compensate by ensuring all .fasl files are more recent
+	# than their .lisp source.
+
+	dodir /usr/share/sbcl
+	tar cpvzf ${D}/usr/share/sbcl/portage-timestamp-compensate -C ${D}/usr/lib/sbcl .
 }
 
 pkg_postinst() {
-	einfo ">>> Fixing permissions for executables and directories..."
-	find /usr/share/common-lisp/source -type d -o \( -type f -perm +111 \) |xargs chmod 755
-	einfo ">>> fix permissions for non-executable files..."
-	find /usr/share/common-lisp/source -type f ! -perm -111 |xargs chmod 644
-	# force recompile
-	rm -rf /usr/lib/common-lisp/sbcl/
-	# since the Portage emerge step kills file timestamp information,
-	# we need to compensate by ensuring all fasl files are more recent
-	# than their source.
-	sleep 5 && \
-		find /usr/lib/sbcl -type f -name \*.fasl |xargs touch
+	tar xvpzf /usr/share/sbcl/portage-timestamp-compensate -C /usr/lib/sbcl
+	rm -rf /usr/lib/common-lisp/sbcl/*
+	/usr/bin/clc-autobuild-impl sbcl yes
 	/usr/sbin/register-common-lisp-implementation sbcl
 }
 
@@ -106,8 +110,8 @@ pkg_prerm() {
 }
 
 pkg_postrm() {
-	# since we modified the .fasl files in postinst, we must manually
-	# remove them here
+	# Since we keep our own time stamps we must manually remove them
+	# here.
 	if [ ! -x /usr/bin/sbcl ]; then
 		rm -rf /usr/lib/sbcl
 	fi
