@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 72c438b3abce7b4050a3b4a273d24185 ChangeLog 477
-MD5 4bd940bbc5596d38e479ef5bb1d159f5 esmart-0.9.0.20040710.ebuild 524
+MD5 a572bb922c8b38f594c7d0b28be5be38 esmart-0.9.0.20040828.ebuild 524
 MD5 03e193e953748331a7a613ed5973379c metadata.xml 322
-MD5 9d68d2dbbb8f1814b0bf74ffa83235b6 files/digest-esmart-0.9.0.20040710 73
+MD5 ea91c2e98f2e808c46a30ea3fcf46ec9 files/digest-esmart-0.9.0.20040828 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBH5+dHTu7gpaalycRAjV/AKC0UduTrsyw0iJfaP5rsJh0e7UWSwCgnUgX
-5KgoNAnfQEpr/fLf45VObpE=
-=f4kD
+iD8DBQFBNRLPHTu7gpaalycRAqSbAKDYHsmugzhC6tuw50Flo1z2EFbaSgCdEJP+
+xIl1gAudmeTHRN9/peZ5J1M=
+=ux5B
 -----END PGP SIGNATURE-----
