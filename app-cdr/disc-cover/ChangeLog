@@ -1,8 +1,11 @@
 # ChangeLog for app-cdr/disc-cover
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.6 2003/02/12 03:05:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.7 2003/05/08 14:36:35 agenkin Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*disc-cover-1.4 (05 May 2003)
+
+  05 May 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump, thanks to Felix Kurth <felix@fkurth.de>.
  
 *disc-cover-1.3.1 (18 Jun 2002)
 
