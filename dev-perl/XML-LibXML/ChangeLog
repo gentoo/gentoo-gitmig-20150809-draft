@@ -1,11 +1,12 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.13 2003/01/03 01:49:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.14 2003/01/03 02:59:57 mcummings Exp $
 
 *XML-LibXML-1.54 (02 Jan 2003)
 
   02 Jan 2003; Michael Cummings <mcummings@gentoo.org> XML-LibXML-1.54.ebuild:
-  Added version bump of ebuild, mod'd ebuild, for bug 12148 dep
+  Added version bump of ebuild, mod'd ebuild, for bug 12148 dep. Fixed a bunch
+  of missing deps
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
