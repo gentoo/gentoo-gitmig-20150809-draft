@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9-r2.ebuild,v 1.1 2002/11/26 08:07:50 raker Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9-r2.ebuild,v 1.2 2002/11/30 19:51:44 vapier Exp $
 
 DESCRIPTION="The Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -25,7 +23,6 @@ DEPEND="virtual/glibc
 	net-mail/mailbase"
 
 pkg_setup() {
-	
 	if ! grep -q ^cyrus: /etc/passwd ; then
 		useradd -c cyrus -d /usr/cyrus -g mail -s /bin/false -u 96 cyrus \
 			|| die "problem adding user cyrus"
@@ -33,7 +30,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	patch < ${FILESDIR}/config.diff || die "patch failed"
@@ -41,11 +37,9 @@ src_unpack() {
 	cp configure configure.orig
 	sed -e "s:-ldes:-ldes425:" \
 		< configure.orig > configure || die "patch failed"
-
 }
 
 src_compile() {
-
 	local myconf
 	
 	use afs && myconf="--with-afs" \
@@ -67,18 +61,15 @@ src_compile() {
 		--with-com_err=yes \
 		--without-perl \
 		--disable-cyradm \
-		${myconf} || die "bad ./configure"
+		${myconf}
 
 	# make depends break with -f... in CFLAGS
 	make depend CFLAGS="" || die "make depend problem"
 
 	make || die "compile problem"
-
 }
 
-src_install () {
-
-	# Install!
+src_install() {
 	make DESTDIR=${D} install || die
 
 	# Remove the developer stuff (-> dev-libs/cyrus-imap-devel)
@@ -99,30 +90,32 @@ src_install () {
 	# remove man-pages from packet net-mail/cyrus-imapd-admin
 	rm ${D}usr/share/man/man1/installsieve.1.gz ${D}usr/share/man/man1/sieveshell.1.gz
 
-	mkdir ${D}etc 
+	dodir /etc 
 	cp ${FILESDIR}/imapd_2.conf ${D}etc/imapd.conf
 	cp ${FILESDIR}/cyrus_2.conf ${D}etc/cyrus.conf
-	mkdir ${D}etc/pam.d
+	dodir /etc/pam.d
 	cp ${FILESDIR}/pam.d-imap ${D}etc/pam.d/imap
 
-	mkdir ${D}var
-   	mkdir -m 0750 ${D}var/imap
-   	chown -R cyrus.mail ${D}var/imap 
-   	mkdir -m 0755 ${D}var/imap/db
-        chown -R cyrus.mail ${D}var/imap/db
-   	mkdir -m 0755 ${D}var/imap/log
-        chown -R cyrus.mail ${D}var/imap/log
-   	mkdir -m 0755 ${D}var/imap/msg
-        chown -R cyrus.mail ${D}var/imap/msg
-   	mkdir -m 0755 ${D}var/imap/user
-        chown -R cyrus.mail ${D}var/imap/user
+	dodir /var
+	mkdir -m 0750 ${D}var/imap
+	chown -R cyrus.mail ${D}var/imap 
+	mkdir -m 0755 ${D}var/imap/db
+	chown -R cyrus.mail ${D}var/imap/db
+	mkdir -m 0755 ${D}var/imap/log
+	chown -R cyrus.mail ${D}var/imap/log
+	mkdir -m 0755 ${D}var/imap/msg
+	chown -R cyrus.mail ${D}var/imap/msg
+	mkdir -m 0755 ${D}var/imap/user
+	chown -R cyrus.mail ${D}var/imap/user
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/imap/user/$i ; \
-	    chown -R cyrus.mail ${D}var/imap/user/$i ; done
-   	mkdir -m 0755 ${D}var/imap/proc
-        chown -R cyrus.mail ${D}var/imap/proc
-   	mkdir -m 0755 ${D}var/imap/quota
+		chown -R cyrus.mail ${D}var/imap/user/$i
+	done
+	mkdir -m 0755 ${D}var/imap/proc
+	chown -R cyrus.mail ${D}var/imap/proc
+	mkdir -m 0755 ${D}var/imap/quota
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/imap/quota/$i ; \
-	    chown -R cyrus.mail ${D}var/imap/quota/$i ; done
+		chown -R cyrus.mail ${D}var/imap/quota/$i
+	done
 	mkdir -m 0755 ${D}var/imap/sieve
         chown -R cyrus.mail ${D}var/imap/sieve
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/imap/sieve/$i ; \
@@ -162,7 +155,6 @@ src_install () {
 		chown cyrus.root ${D}etc/cyrusimapd/server.crt ${D}etc/cyrusimapd/server.key
 		chmod 0400 ${D}etc/cyrusimapd/server.crt ${D}etc/cyrusimapd/server.key
 	fi
-
 }
 
 pkg_postinst() {

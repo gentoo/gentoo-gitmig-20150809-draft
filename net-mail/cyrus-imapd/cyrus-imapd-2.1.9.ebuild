@@ -1,12 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.7 2002/10/24 23:23:45 blizzy Exp $
-
-IUSE="ssl kerberos perl snmp afs"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.8 2002/11/30 19:52:32 vapier Exp $
 
 inherit perl-module
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="The Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -15,6 +11,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc -sparc64"
+IUSE="ssl kerberos perl snmp afs"
 
 PROVIDE="virtual/imapd"
 DEPEND="virtual/glibc
@@ -32,7 +29,6 @@ DEPEND="virtual/glibc
 # recommended: flex, maybe: net-snmp, postfix, perl?, afs, inn, tcl (cyradm)
 	
 pkg_setup() {
-	
 	if ! grep -q ^cyrus: /etc/passwd ; then
 		useradd -c cyrus -d /usr/cyrus -g mail -s /bin/false -u 96 cyrus \
 			|| die "problem adding user cyrus"
@@ -40,15 +36,12 @@ pkg_setup() {
 }
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	patch < ${FILESDIR}/config.diff || die "patch failed"
-
 }
 
 src_compile() {
-
 	local myconf
 	
 	use afs && myconf="--with-afs" \
@@ -71,16 +64,15 @@ src_compile() {
 		--with-cyrus-group=mail \
 		--enable-netscapehack \
 		--with-com_err=yes \
-		${myconf} || die "bad ./configure"
+		${myconf}
 
 	# make depends break with -f... in CFLAGS
 	make depend CFLAGS="" || die "make depend problem"
 
 	make || die "compile problem"
-
 }
 
-src_install () {
+src_install() {
 	# remove perl subdirs from beeing installed
 	sed "s:SUBDIRS = imap sieve:SUBDIRS =:" ${S}/perl/Makefile > ${S}/perl/Makefile.install
 	mv ${S}/perl/Makefile ${S}/perl/Makefile.orig
@@ -93,13 +85,13 @@ src_install () {
 	rm -rf ${D}usr/man
 	doman man/*.?
 
-	mkdir ${D}etc
+	dodir /etc
 	cp ${FILESDIR}/imapd.conf ${D}etc/imapd.conf
 	cp ${FILESDIR}/cyrus.conf ${D}etc/cyrus.conf
-	mkdir ${D}etc/pam.d
+	dodir /etc/pam.d
 	cp ${FILESDIR}/pam.d-imap ${D}etc/pam.d/imap
 
-	mkdir ${D}var ${D}var/log
+	dodir /var ${D}var/log
 	touch ${D}var/log/imapd.log
 	touch ${D}var/log/auth.log
 
@@ -127,7 +119,7 @@ src_install () {
    	mkdir -m 0755 ${D}var/imap/socket
         chown -R cyrus.mail ${D}var/imap/socket
 
-	mkdir ${D}var/spool
+	dodir /var/spool
 	mkdir -m 0750 ${D}var/spool/imap
         chown -R cyrus.mail ${D}var/spool/imap
 	mkdir -m 0755 ${D}var/spool/imap/stage.
