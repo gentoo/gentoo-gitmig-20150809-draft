@@ -1,0 +1,17 @@
+# ChangeLog for net-www/curator
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.1 2004/08/15 09:54:49 stuart Exp $
+
+*curator-2.0 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +curator-2.0.ebuild:
+  Moved from net-www/curator to www-apps/curator.
+
+  08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> curator-2.0.ebuild:
+  Stable on alpha.
+
+*curator-2.0 (02 Apr 2003)
+
+  02 Apr 2003; Seth Chandler <sethbc@gentoo.org>; curator-2.0.ebuild:
+  added curator to portage
+
