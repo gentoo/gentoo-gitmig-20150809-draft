@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.15 2004/02/14 12:56:07 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.16 2004/06/16 18:41:43 kugelfang Exp $
+
+  16 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> ghex-2.2.1.ebuild:
+  Marked ~amd64.
 
 *ghex-2.4.1 (14 Feb 2004)
 
