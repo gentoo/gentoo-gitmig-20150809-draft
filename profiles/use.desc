@@ -45,7 +45,7 @@ fbcon - Adds framebuffer support for the console, via the kernel
 flash - Adds support for creating flash files using Ming
 freewnn - Adds support for FreeWnn kana to kanji conversion engine
 gb - Adds support for Gnome Basic to gnumeric
-gd - Adds support for media-libs/gd (A graphics library)
+gd - Adds support for media-libs/gd (to generate graphics on the fly)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 ggz - Adds support for the Gnu Gaming Zone - http://ggz.sf.net
