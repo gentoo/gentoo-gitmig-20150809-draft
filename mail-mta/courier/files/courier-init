@@ -15,11 +15,10 @@ sysconfdir="/etc/courier"
 sbindir="/usr/sbin"
 libexecdir="/usr/lib/courier"
 datadir="/usr/share/courier"
-#authlib="/usr/lib/courier/authlib"
-
 
 depend() {
 	need net
+	[ -d /etc/courier/authlib ] && need courier-authlib
 }
 
 checkconfig() {

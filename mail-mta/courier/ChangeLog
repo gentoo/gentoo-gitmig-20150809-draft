@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.28 2004/11/21 22:35:48 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.29 2004/11/27 04:14:01 swtaylor Exp $
+
+  26 Nov 2004; Scott W Taylor <swtaylor@gentoo.org> files/courier-init:
+  will need courier-authlib in near future. init script updated to reflect this.
 
 *courier-0.47.20041120 (21 Nov 2004)
 
