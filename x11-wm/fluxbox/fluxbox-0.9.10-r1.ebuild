@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.10-r1.ebuild,v 1.1 2004/09/03 20:12:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.10-r1.ebuild,v 1.2 2004/09/04 23:37:25 ciaranm Exp $
 
 inherit eutils
 
@@ -29,7 +29,9 @@ KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~hppa ~ia64 ~mips ~ppc64 ~macos"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use amd64 && epatch ${FILESDIR}/${PN}-${PV}.amd64_fix.patch
+	# Fix crashy badness on amd64. Upstream sanctioned this, so we'll
+	# apply it to everyone...
+	epatch ${FILESDIR}/${PN}-${PV}.amd64_fix.patch
 }
 
 src_compile() {
