@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3-r1.ebuild,v 1.11 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3-r1.ebuild,v 1.12 2003/09/24 23:55:59 azarah Exp $
 
+PYVER="$(/usr/bin/python -V 2>&1 | cut -d ' ' -f 2 | cut -d '.' -f 1,2)"
 DESCRIPTION="A library for generating PDF on the fly"
 HOMEPAGE="http://www.pdflib.com/"
 SRC_URI="http://www.pdflib.com/pdflib/download/${P}.tar.gz
@@ -35,13 +36,13 @@ src_compile() {
 		-e "s/install: \$(SWIG_LIB) pdflib.jar/install: \$(SWIG_LIB)/" \
 		${S}/bind/java/Makefile.in.orig > ${S}/bind/java/Makefile.in
 
-	local myconf
+	local myconf=
 	use tcltk || myconf="--with-tcl=no"
 
 	use perl || myconf="${myconf} --with-perl=no"
 
 	use python \
-		&& myconf="${myconf} --with-py=/usr --with-pyincl=/usr/include/python2.2" \
+		&& myconf="${myconf} --with-py=/usr --with-pyincl=/usr/include/python${PYVER}" \
 		|| myconf="${myconf} --with-py=no"
 
 	use java \
@@ -91,9 +92,7 @@ src_install() {
 		dodir /usr/lib/perl${perlmajver/v/}/site_perl/${perlver/v/}/${perlarch}
 	fi
 	if [ ! -z "`use python`" ] && [ -x /usr/bin/python ] ; then
-		local pyver="`/usr/bin/python -V 2>&1 \
-			|cut -d ' ' -f 2 |cut -d '.' -f 1,2`"
-		dodir /usr/lib/python${pyver}/lib-dynload
+		dodir /usr/lib/python${PYVER}/lib-dynload
 	fi
 	#next line required for proper install
 	dodir /usr/bin
