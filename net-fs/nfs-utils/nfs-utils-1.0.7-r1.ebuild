@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.2 2005/03/15 12:30:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.3 2005/04/01 22:55:16 vapier Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -13,20 +13,20 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="nonfsv4 tcpd kerberos"
 
+# kth-krb doesn't provide the right include
+# files, and nfs-utils doesn't build against heimdal either, 
+# so don't depend on virtual/krb.
+# (04 Feb 2005 agriffis)
 RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	>=net-nds/portmap-5b-r6
-	>=sys-apps/util-linux-2.11f"
-DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51
+	>=sys-apps/util-linux-2.11f
 	!nonfsv4? (
 		>=dev-libs/libevent-1.0b
 		>=net-libs/nfsidmap-0.9
 	)
 	kerberos? ( app-crypt/mit-krb5 )"
-	# kth-krb doesn't provide the right include
-	# files, and nfs-utils doesn't build against heimdal either, 
-	# so don't depend on virtual/krb.
-	# (04 Feb 2005 agriffis)
+DEPEND="${RDEPEND}
+	>=sys-apps/portage-2.0.51"
 
 src_unpack() {
 	unpack ${A}
