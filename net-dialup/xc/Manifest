@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d976d1661446f67495abea0907e8c997 xc-4.3.2-r1.ebuild 1127
 MD5 e3a15a0c6259767a3ce284077adcb983 ChangeLog 1801
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 0a7e1ae13413dc5e0f1b8a2de73d0b9d xc-4.3.2-r1.ebuild 1137
-MD5 a19ff63623f36ba8624bf50f382e210c files/digest-xc-4.3.2-r1 60
 MD5 d6b646fa4989aba362ce50ae2b1907e5 files/xc-4.3.2-add-115200.patch 246
 MD5 80e981efed033a8eaaa0c0e632eee1ae files/xc-4.3.2-gentoo.diff 1905
+MD5 a19ff63623f36ba8624bf50f382e210c files/digest-xc-4.3.2-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCDdfWjiC39V7gKu0RAk/+AKCoQb+sJ3SR4JDIeNVHxGxeXuJbRACgh1nm
+oQsSfxdS/EdRAhC4UPYX4FY=
+=TNVu
+-----END PGP SIGNATURE-----
