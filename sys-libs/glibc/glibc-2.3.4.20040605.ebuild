@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.3 2004/06/05 21:31:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.4 2004/06/07 06:58:14 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -8,6 +8,9 @@ inherit eutils flag-o-matic gcc
 
 filter-flags "-fomit-frame-pointer -malign-double"
 filter-ldflags "-pie"
+
+# make check will fail if sandbox is enabled
+use makecheck && export SANDBOX_DISABLED="1"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -157,9 +160,7 @@ setup_locales() {
 	then
 		einfo "nls or makecheck in USE, installing -ALL- locales..."
 		install_locales
-	fi
-
-	if [ -e /etc/locales.build ]
+	elif [ -e /etc/locales.build ]
 	then
 		einfo "Installing locales in /etc/locales.build..."
 		echo 'SUPPORTED-LOCALES=\' > SUPPORTED.locales
@@ -265,9 +266,7 @@ src_unpack() {
 	# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
 	# to make the stack executable due to some libraries not containing the
 	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
-	#use mips || ( cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch )
-
-	epatch ${FILESDIR}/2.3.4/glibc-execstack-disable.patch
+	use mips || ( cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch )
 
 	# Program header support for PaX.
 	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff
@@ -341,9 +340,9 @@ src_unpack() {
 	chmod u+x ${S}/scripts/*.sh
 
 	# disable -z relro
-	use hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
+	#use hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
 	# disables building nscd as pie
-	use hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
+	#use hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
 	# disable binutils -as-needed, useful, if glibc should not depend on libgcc_s.so
 	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
 	# disable execstack (the patch is used by rh for gcc < 3.3.3)
