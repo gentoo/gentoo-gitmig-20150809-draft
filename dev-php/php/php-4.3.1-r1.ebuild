@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r1.ebuild,v 1.9 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r1.ebuild,v 1.10 2003/04/24 18:16:09 robbat2 Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
 
@@ -28,7 +28,7 @@ DEPEND="
 	xml? ( >=net-libs/libwww-5.3.2
 		>=app-text/sablotron-0.95-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
-	curl? ( >=net-ftp/curl-7.8.1 )
+	curl? ( >=net-ftp/curl-7.9.0 )
 	java? ( virtual/jdk )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	imap? ( >=net-mail/uw-imap-2001a-r1 )
