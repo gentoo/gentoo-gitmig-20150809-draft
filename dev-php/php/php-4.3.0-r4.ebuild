@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r4.ebuild,v 1.2 2003/02/13 20:14:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r4.ebuild,v 1.3 2003/02/14 21:40:22 rphillips Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -189,7 +189,7 @@ src_compile() {
 src_install() {
 	addwrite /usr/share/snmp/mibs/.index
 
-	make INSTALL_ROOT=${D} install-cli install-pear install-headers install-modules || die
+	make INSTALL_ROOT=${D} install-cli install-pear install-headers install-programs install-modules || die
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
 	dodoc RELEASE_PROCESS README.* TODO NEWS

@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.32 2003/02/13 19:03:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.33 2003/02/14 21:40:22 rphillips Exp $
 
   13 Jan 2003; Daniel Ahlberg <aliz@genoto.org> php-4.3.0-r2.ebuild :
   Added ppc and sparc keyword becuse this is a security update.
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *php-4.3.0-r4 (13 Feb 2003)
+
+  14 Feb 2003; Ryan Phillips <rphillips@gentoo.org> php-4.3.0-r4.ebuild :
+  Added install-programs to the ebuild
 
   13 Feb 2003; Ryan Phillips <rphillips@gentoo.org> php-4.3.0-r4.ebuild :
   Added Stuart Herbert's ebuild.
