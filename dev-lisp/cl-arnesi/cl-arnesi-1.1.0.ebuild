@@ -1,23 +1,25 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/cl-arnesi-1.1.0.ebuild,v 1.1 2003/11/30 12:14:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/cl-arnesi-1.1.0.ebuild,v 1.2 2004/04/21 16:51:00 vapier Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="arnesi is a collection of small bits and pieces of common lisp code."
 HOMEPAGE="http://www.common-lisp.net/project/bese/#arnesi"
 SRC_URI="ftp://ftp.common-lisp.net/pub/project/bese/arnesi_${PV}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
-# IUSE="doc"
+IUSE=""
+
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
 # 	doc? ( app-text/tetex )"
 
-CLPACKAGE=arnesi
-
 S=${WORKDIR}/arnesi_${PV}
+
+CLPACKAGE=arnesi
 
 src_unpack() {
 	unpack ${A}
@@ -44,9 +46,9 @@ src_install() {
 }
 
 pkg_preinst() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+	rm -rf ${ROOT}/usr/lib/common-lisp/*/${CLPACKAGE}
 }
 
 pkg_postrm() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+	rm -rf ${ROOT}/usr/lib/common-lisp/*/${CLPACKAGE}
 }

@@ -1,22 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.5.ebuild,v 1.1 2004/02/12 09:13:14 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.5.ebuild,v 1.2 2004/04/21 17:01:31 vapier Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="A Commmon Lisp library of utility functions."
 HOMEPAGE="http://alpha.onshored.com/lisp-software/#odcl"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-odcl/${PN}_${PV}.orig.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
 
 CLPACKAGE=odcl
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}

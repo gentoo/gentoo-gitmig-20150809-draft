@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.ebuild,v 1.2 2004/03/08 22:40:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.ebuild,v 1.3 2004/04/21 17:00:31 vapier Exp $
 
-inherit common-lisp elisp
+inherit common-lisp elisp eutils
 
 DESCRIPTION="McCLIM is a free software implementation of CLIM."
-HOMEPAGE="http://clim.mikemac.com/
-	http://clim.mikemac.com/spec/clim.html"
+HOMEPAGE="http://clim.mikemac.com/ http://clim.mikemac.com/spec/clim.html"
 SRC_URI="http://clim.mikemac.com/downloads/snapshots/src/McCLIM-${PV}.tgz"
+
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE="emacs"
+
 DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cmucl-source
 	dev-lisp/cl-clx-sbcl
@@ -18,7 +20,7 @@ DEPEND="dev-lisp/common-lisp-controller
 		media-libs/netpbm
 		virtual/tetex )
 	emacs? ( virtual/emacs )"
-IUSE="emacs"
+
 CLPACKAGE="clim clim-clx clim-examples"
 SITEFILE=${FILESDIR}/50mcclim-gentoo.el
 
@@ -76,7 +78,7 @@ src_install() {
 		dosym /usr/share/common-lisp/source/${i}/system.lisp  /usr/share/common-lisp/systems/${i}.asd
 	done
 
-	dodoc README Copyright TODO INSTALL*
+	dodoc README TODO INSTALL*
 
 	if use doc; then
 		dodoc Doc/manual.ps

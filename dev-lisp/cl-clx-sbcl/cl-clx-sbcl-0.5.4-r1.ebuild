@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx-sbcl/cl-clx-sbcl-0.5.4-r1.ebuild,v 1.1 2004/02/12 09:13:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx-sbcl/cl-clx-sbcl-0.5.4-r1.ebuild,v 1.2 2004/04/21 16:57:54 vapier Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="CLX for SBCL"
-HOMEPAGE="http://ftp.linux.org.uk/pub/lisp/sbcl/
-	http://www.cliki.net/CLX"
+HOMEPAGE="http://ftp.linux.org.uk/pub/lisp/sbcl/ http://www.cliki.net/CLX"
 SRC_URI="http://ftp.linux.org.uk/pub/lisp/sbcl/clx_${PV}.tar.gz"
+
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
+
 DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/sbcl"
 

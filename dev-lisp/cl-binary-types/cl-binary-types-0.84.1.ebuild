@@ -1,20 +1,21 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/cl-binary-types-0.84.1.ebuild,v 1.1 2003/10/15 20:47:28 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/cl-binary-types-0.84.1.ebuild,v 1.2 2004/04/21 16:55:37 vapier Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DEB_PV=1
 
 DESCRIPTION="Binary-types is a Library for accessing binary files with fixed bit-length code-words. Binary-types provides macros that are used to declare the mapping between Common Lisp objects and some binary (i.e. octet-based) representation."
-HOMEPAGE="http://www.cliki.net/Binary-types
-	http://www.cs.uit.no/~frodef/sw/binary-types/"
+HOMEPAGE="http://www.cliki.net/Binary-types http://www.cs.uit.no/~frodef/sw/binary-types/"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-binary-types/cl-binary-types_${PV}.orig.tar.gz
 	http://ftp.debian.org/debian/pool/main/c/cl-binary-types/cl-binary-types_${PV}-${DEB_PV}.diff.gz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
 
