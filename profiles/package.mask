@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (12 Oct 2002)
+# Masked for testing.
+=sys-apps/portage-2.0.39
+
 # <hannes@gentoo.org> (12 Oct 2002)
 # Masking kvim-6.1.141 (configure called twice, bug #8985)
 =app-editors/kvim-6.1.141
@@ -399,16 +403,6 @@ dev-perl/CDDB-File
 =net-www/lynx-2.8.4a-r4
 
 # <azarah@gentoo.org> (25 Aug 2002)
-# Contains the hacked sandbox.  Needs testing.
-=sys-apps/portage-2.0.30_alpha
-=sys-apps/portage-2.0.30_alpha2
-=sys-apps/portage-2.0.30_alpha3
-# <drobbins@gentoo.org> (28 Aug 2002)
-# New release version; still should be tested some.
-=sys-apps/portage-2.0.30
-=sys-apps/portage-2.0.31
-
-# <azarah@gentoo.org> (25 Aug 2002)
 # This one *STILL* activate the atexit() bug in some
 # binary packages (Win4Lin and Realplayer to name a few)
 =sys-libs/glibc-2.2.5-r8
@@ -698,10 +692,6 @@ sys-apps/mkisofs
 # initscript needs testing, I don't run a system wide fetchmail so can't
 # verify.
 =net-mail/fetchmail-5.9.11-r1
-
-# drobbins@gentoo.org (18 Aug 2002)
-#testing
-=sys-apps/portage-2.0.29
 
 # lamer@gentoo.org (15 Jul 2002)
 # Needs socks testing
