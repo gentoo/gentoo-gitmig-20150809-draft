@@ -1,13 +1,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/sylpheed-iconset-0.8.3.ebuild,v 1.2 2002/10/22 15:45:01 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/sylpheed-iconset-0.8.3.ebuild,v 1.3 2002/10/25 01:52:43 bcowan Exp $
 
 DESCRIPTION="Iconset for sylpheed-claws"
 
 HOMEPAGE="http://sylpheed-claws.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 alpha"
+KEYWORDS="x86 alpha"
 
 DEPEND="${RDEPEND}"
 RDEPEND="virtual/sylpheed"
