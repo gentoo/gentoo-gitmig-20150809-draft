@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.1.ebuild,v 1.2 2002/10/31 21:12:28 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.1.ebuild,v 1.3 2002/10/31 22:10:25 rphillips Exp $
 
 IUSE="X zlib ldap nls"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 DEPEND="sys-devel/perl
 	X? ( x11-misc/xloadimage )
