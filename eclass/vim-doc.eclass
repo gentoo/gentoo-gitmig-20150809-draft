@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.5 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.6 2005/02/03 21:12:41 agriffis Exp $
 #
 # This eclass is used by vim.eclass and vim-plugin.eclass to update
 # the documentation tags.  This is necessary since vim doesn't look in
@@ -20,12 +20,19 @@ update_vim_helptags() {
 	# This is where vim plugins are installed
 	vimfiles=/usr/share/vim/vimfiles
 
-	# Find a suitable vim binary
-	local vim=`which vim 2>/dev/null`
-	[[ -z "$vim" ]] && vim=`which gvim 2>/dev/null`
-	[[ -z "$vim" ]] && vim=`which kvim 2>/dev/null`
-	if [[ -z "$vim" && $PN != vim-core ]]; then
-		ewarn "No suitable vim binary to rebuild documentation tags"
+	if [[ $PN != vim-core ]]; then
+		# Find a suitable vim binary for updating tags; try the graphical vims
+		# before stock vim because the system vim on macos doesn't support
+		# :helptags
+		vim=$(which gvim 2>/dev/null)
+		[[ -z "$vim" ]] && vim=$(which kvim 2>/dev/null)
+		[[ -z "$vim" ]] && vim=$(which vim 2>/dev/null)
+		if [[ -z "$vim" ]]; then
+			ewarn "No suitable vim binary to rebuild documentation tags"
+		fi
+		if use ppc-macos && [[ "$vim" == vim ]]; then
+			ewarn "Sorry, the MacOS system-installed vim can't rebuild documentation tags"
+		fi
 	fi
 
 	# Install the documentation symlinks into the versioned vim
@@ -35,7 +42,7 @@ update_vim_helptags() {
 
 		# Remove links, and possibly remove stale dirs
 		find $d/doc -name \*.txt -type l | while read s; do
-			[[ `readlink "$s"` = $vimfiles/* ]] && rm -f "$s"
+			[[ $(readlink "$s") = $vimfiles/* ]] && rm -f "$s"
 		done
 		if [[ -f "$d/doc/tags" && $(find "$d" | wc -l | tr -d ' ') = 3 ]]; then
 			# /usr/share/vim/vim61
