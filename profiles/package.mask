@@ -201,12 +201,13 @@ gnome-apps/gwcc
 gnome-apps/netleds_applet
 gnome-apps/gnapster
 
-
-# Not tested properly - Azarah
-=gnome-base/gdm-2.2.4.2
-
 # Breaks Evolution (gonna test to rebuild evo, just don't have time just now).
 >=gnome-base/gconf-1.0.5
 
 # Needs newer evo
 >=gnome-extra/gal-0.14
+
+# Untested
+>=gnome-base/ORBit-0.5.11
+>=gnome-base/bonobo-1.0.11
+>=gnome-extra/bonobo-conf-0.13
