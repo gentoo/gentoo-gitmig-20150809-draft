@@ -1,0 +1,7 @@
+# ChangeLog for sys-kernel/alpha-sources
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+*aboot-0.9-r1 (21 Sep 2002)
+  21 Sep 2002; Bjoern Brauel <bjb@gentoo.org>
+  Added initial ebuild
+
