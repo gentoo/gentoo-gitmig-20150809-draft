@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/snortsnarf-021111.1-r2.ebuild,v 1.1 2004/07/17 15:05:29 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/snortsnarf-021111.1-r2.ebuild,v 1.2 2005/01/31 14:33:42 ka0ttic Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.silicondefense.com/software/snortsnarf/${MY_P}.tar.gz"
 S=${WORKDIR}/${MY_P}
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="dev-lang/perl
 	dev-perl/Time-modules
