@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/libxfce4mcs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.38 2004/10/19 09:11:37 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.39 2004/11/01 02:45:46 bcowan Exp $
+
+*libxfce4mcs-4.1.91 (31 Oct 2004)
+
+  31 Oct 2004; Brad Cowan <bcowan@gentoo.org> +libxfce4mcs-4.1.91.ebuild:
+  Version bump of beta version of 4.2 release.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> libxfce4mcs-4.0.6.ebuild:
   Stable on amd64.
