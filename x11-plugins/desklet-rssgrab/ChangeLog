@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/desklet-rssgrab
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rssgrab/ChangeLog,v 1.1 2004/07/18 04:16:25 obz Exp $
+
+*desklet-rssgrab-0.6.2 (18 Jul 2004)
+
+  18 Jul 2004; Mike Gardiner <obz@gentoo.org> +desklet-rssgrab-0.6.2.ebuild:
+  First version in portage, as requested (some time ago) in bug #29588
+
