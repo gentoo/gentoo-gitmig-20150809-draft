@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.1-r3.ebuild,v 1.1 2003/05/14 02:18:22 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.1-r3.ebuild,v 1.2 2003/05/14 02:34:29 tberman Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Mailman, the mailing list server with webinterface"
@@ -57,16 +57,15 @@ src_install () {
 	dodoc contrib/virtusertable contrib/mailman.mc
 
 	cp contrib/*.py contrib/majordomo2mailman.pl contrib/auto \
-		contrib/mm-handler* ${D}/var/mailman/bin
+		contrib/mm-handler* ${D}/home/mailman/bin
 
 	# Save the old config into the new package as CONFIG_PROTECT
 	# doesn't work for this package.
 	if [ -f ${ROOT}/var/mailman/Mailman/mm_cfg.py ]; then
-		rm ${D}/var/mailman/Mailman/mm_cfg.py
-		cp ${ROOT}/var/mailman/Mailman/mm_cfg.py \
-			${D}/var/mailman/Mailman/mm_cfg.py
-		einfo "Your old config has been saved."
-		einfo "A new config has been installed as mm_cfg.py.dist"
+		cp ${ROOT}/home/mailman/Mailman/mm_cfg.py \
+			${D}/home/mailman/Mailman/mm_cfg.py.old
+		einfo "Your old config has been saved as mm_cfg.py.old."
+		einfo "A new config has been installed as mm_cfg.py"
 	fi
 
 	exeinto /etc/init.d
@@ -81,7 +80,10 @@ pkg_postinst() {
 	einfo "Please read /usr/share/doc/${PF}/README.gentoo.gz for additional"
 	einfo "Setup information, mailman will NOT run unless you follow"
 	einfo "those instructions!"
-}
+	ewarn "The home directory for mailman has been moved from /var/mailman"
+	ewarn "to /home/mailman. (Any existing config has been saved in the"
+	ewarn "new home directory.)"
+}	
 
 pkg_config() {
 	einfo "Updating apache config"
