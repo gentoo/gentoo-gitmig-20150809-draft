@@ -2,13 +2,12 @@ MD5 015b2e12e5a3e82f5bae40fe87dd5205 ChangeLog 11767
 MD5 1388f8c8e8516b9fa9888072abb566d8 xine-lib-0.9.13-r3.ebuild 3704
 MD5 137ed0cb800cf366b513991a8d27d8d1 xine-lib-1_beta10.ebuild 3480
 MD5 e93db40a55158be22d797a9935c34b89 xine-lib-1_beta11.ebuild 3661
-MD5 f9e6714f7a048da29b0bbbd2ffe49f8c xine-lib-1_beta12-r1.ebuild 4175
+MD5 f0a905c865ea30879faf8a89af78373a xine-lib-1_beta12-r1.ebuild 4178
 MD5 27c0a5795a6668bfb63e109a03028cdb xine-lib-1_beta12.ebuild 3760
 MD5 f1570a69c99207f65b5cdf1d154bbcd4 files/digest-xine-lib-0.9.13-r3 68
 MD5 af33e921f7041fafac652c324d3984c1 files/digest-xine-lib-1_beta10 70
 MD5 5903fa4c80658b8265910c8745913dae files/digest-xine-lib-1_beta11 70
 MD5 8a96afc4d37712253fc7bb3472efbdc4 files/digest-xine-lib-1_beta12 70
-MD5 8a96afc4d37712253fc7bb3472efbdc4 files/digest-xine-lib-1_beta12-r1 70
 MD5 beea8b4dacbd153e4c6b06e57ee711d2 files/xine-lib-0.9.12-r2-directfb.patch 746
 MD5 279ee4d06acc78adef09fe7ae4a64980 files/xine-lib-0.9.13-kxine.patch 9041
 MD5 0cf698a9ff87a3595140d92df7b900b6 files/xine-lib-configure.patch 342
@@ -16,3 +15,4 @@ MD5 aa54582a91933533008c1211dcbcfb35 files/xine-lib-disable-directfb.patch 4169
 MD5 6e79367c32da81354d36e68fd1a24ae2 files/xineconfig.patch 699
 MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.12 601
 MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
+MD5 8a96afc4d37712253fc7bb3472efbdc4 files/digest-xine-lib-1_beta12-r1 70
