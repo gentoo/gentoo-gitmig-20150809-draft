@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-2.2.1.ebuild,v 1.4 2003/03/25 10:49:59 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-3.0_pre1.ebuild,v 1.1 2003/03/25 10:49:59 phoenix Exp $
 
 IUSE="cups opengl"
 
-MY_P="winex-${PV}"
+MY_P="winex3-${PV/pre/pre-}"
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
 HOMEPAGE="http://www.transgaming.com/"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 LICENSE="Aladdin"
 
 RDEPEND="virtual/x11
@@ -38,7 +38,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Run /usr/bin/winex to start winex as any non-root user."
+	einfo "Run /usr/bin/winex3 to start winex as any non-root user."
 	einfo "This is a wrapper-script which will take care of creating"
 	einfo "an initial environment and do everything else."
 	einfo ""
