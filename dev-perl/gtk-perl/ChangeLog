@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.25 2004/03/13 23:41:41 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.26 2004/04/15 03:24:52 geoman Exp $
+
+  14 Apr 2004; Stephen P. Becker <geoman@gentoo.org>
+  gtk-perl-0.7008-r10.ebuild:
+  Marked stable on mips.
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
   gtk-perl-0.7008-r10.ebuild:
