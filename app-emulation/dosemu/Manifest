@@ -9,3 +9,4 @@ MD5 a6ff6e1d128581d10035bc7d7bc781a5 files/digest-dosemu-1.1.4 129
 MD5 5e4f5c1cb8a157071502e110dbb13e15 files/digest-dosemu-1.1.4.15 195
 MD5 1111d8e64602844f871f5c0f2deb839b files/digest-dosemu-1.1.5 133
 MD5 1111d8e64602844f871f5c0f2deb839b files/digest-dosemu-1.1.5-r1 133
+MD5 11e355fbc16d4a8c49fbd93df36e1350 files/dosemu-broken-links.diff 521

@@ -1,0 +1,11 @@
+--- dosemu-1.1.5/src/arch/linux/Makefile.main~	2003-06-06 23:32:21.000000000 +0100
++++ dosemu-1.1.5/src/arch/linux/Makefile.main	2003-06-20 15:22:19.000000000 +0100
+@@ -158,7 +158,7 @@
+ 	cd $(SYS); for i in `find * -type l`; do \
+ 	  ln -sf generic.com $(TMP)/dosemu/freedos/dosemu/$$i; \
+ 	done
+-	cp -a $(TMP)/dosemu/freedos $(DESTDIR)$(dosemudir)
++	cp -aL $(TMP)/dosemu/freedos $(DESTDIR)$(dosemudir)
+ 	rm -f $(DESTDIR)$(dosemudir)/commands
+ 	ln -sf freedos/dosemu $(DESTDIR)$(dosemudir)/commands
+ 	cd $(TMP)/dosemu; \
