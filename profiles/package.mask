@@ -576,8 +576,6 @@ app-misc/mwavem
 # standard library does not compile
 =dev-lang/clean-2.0.1
 
-app-emulation/zinc
-
 # phoenix@gentoo.org (17 Jul 2002)
 # Masking mkisofs - this package is obsolete (cdrtools took its place)
 # and nothing depends on this package
