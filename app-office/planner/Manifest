@@ -1,6 +1,16 @@
-MD5 b864c63ffa1aaef5cdb3cc04766f3945 ChangeLog 4783
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 98e72741f4d6f5d9ef7a6e41bc72f9fb ChangeLog 4943
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 8fdbd1402d3152e74cbdc3d8c7f81363 planner-0.11.ebuild 1451
-MD5 3bfd55eef4529326f14c58ee60e83e57 planner-0.12-r1.ebuild 1552
+MD5 ac6e99d0ff474f062e52696b40443b34 planner-0.11.ebuild 1492
+MD5 5f62a234456d4f2fd724904919fcf424 planner-0.12-r1.ebuild 1602
 MD5 a21f93754b9f061f7db90951d5d9a660 files/digest-planner-0.11 66
 MD5 946aa436833d3f9ce476523b48dc9165 files/digest-planner-0.12-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBeZYDRkyva5PS18kRAqa0AJ9Hc0OJgJJ+UhJfb50fa/BFlESfJgCdH0Is
+7cxu7hWZv0RnIQrMMmrPQXE=
+=tqp/
+-----END PGP SIGNATURE-----

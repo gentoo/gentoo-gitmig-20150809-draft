@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12-r1.ebuild,v 1.2 2004/07/14 12:38:31 foser Exp $
-
-
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12-r1.ebuild,v 1.3 2004/10/22 23:20:15 liquidx Exp $
 
 inherit gnome2
+
 DESCRIPTION="Project manager for Gnome2"
 HOMEPAGE="http://planner.imendio.org/"
 
@@ -44,7 +43,8 @@ src_unpack () {
 	unpack ${A}
 	cd ${S}
 	# Upstream has a newer intltool, doing this will fix some dependency problems
-	intltoolize --force
+	elibtoolize
+	intltoolize --force && aclocal && autoconf && automake 
 }
 
 pkg_postinst () {

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.11 2004/10/05 14:04:06 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.12 2004/10/22 23:20:15 liquidx Exp $
+
+  23 Oct 2004; Alastair Tse <liquidx@gentoo.org> planner-0.11.ebuild,
+  planner-0.12-r1.ebuild:
+  add aclocal/automake/autoconf if calling intltoolize (#68514)
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   planner-0.11.ebuild:
