@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9.ebuild,v 1.1 2003/09/10 06:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.1 2003/09/14 03:53:28 vapier Exp $
 
 inherit games
 
@@ -19,6 +19,12 @@ DEPEND="virtual/x11
 	>=media-libs/libsdl-1.2.0
 	>=media-libs/libmikmod-3.1.10"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i "/FBGDATADIR=/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" configure
+}
+
 src_compile() {
 	egamesconf --disable-fbglaunch || die
 	emake || die
@@ -27,6 +33,12 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README TODO AUTHORS
+
+	# now clean up the install
+	cd ${D}/${GAMES_PREFIX}
+	rm -rf doc
+	mv games ../share/
+
 	prepgamesdirs
 }
 
