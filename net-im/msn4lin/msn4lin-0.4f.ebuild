@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/msn4lin-0.4f.ebuild,v 1.5 2004/06/24 22:57:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/msn4lin-0.4f.ebuild,v 1.6 2004/07/15 00:17:35 agriffis Exp $
 
 S=${WORKDIR}/${MY_P}
 MY_P=${PN}-tcl
@@ -14,6 +14,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
