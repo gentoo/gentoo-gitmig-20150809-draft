@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.ebuild,v 1.1 2001/09/18 05:12:22 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.ebuild,v 1.2 2001/10/01 22:35:24 drobbins Exp $
 
 A=iproute2-2.4.7-now-ss010824.tar.gz
 S=${WORKDIR}/iproute2
@@ -39,6 +39,10 @@ src_unpack() {
     # this next thing is required to enable diffserv (ATM support doesn't compile right now)
     # cp Config Config.orig
     # sed -e 's/DIFFSERV=n/DIFFSERV=y/g' Config.orig > Config
+
+	#this fix optionally disables the IEEE1394 definition if it is not in the kernel headers
+	#This allows this pkg to work with earlier 2.4 kernel headers.
+	cp ${FILESDIR}/ll_types.c ${S}/lib
 }
 
 src_compile() {
