@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9.ebuild,v 1.12 2004/06/24 21:57:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9.ebuild,v 1.13 2004/06/29 16:35:24 agriffis Exp $
 
 inherit gcc eutils
 
@@ -16,6 +16,7 @@ SRC_URI="http://mysql.he.net/Downloads/${PN}/${P}.tar.gz
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 # Depends on MySQL being installed, duh! :-)
 DEPEND="<dev-db/mysql-4.0.0
