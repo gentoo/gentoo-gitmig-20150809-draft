@@ -1,0 +1,18 @@
+Index: SDL_keyboard.c
+===================================================================
+RCS file: /home/sdlweb/libsdl.org/cvs/SDL12/src/events/SDL_keyboard.c,v
+retrieving revision 1.9
+retrieving revision 1.10
+diff -u -r1.9 -r1.10
+--- src/events/SDL_keyboard.c	4 Jan 2004 16:49:17 -0000	1.9
++++ src/events/SDL_keyboard.c	3 Jan 2005 00:24:44 -0000	1.10
+@@ -491,7 +491,8 @@
+ 			/*
+ 			 * jk 991215 - Added
+ 			 */
+-			if ( SDL_KeyRepeat.timestamp ) {
++			if ( SDL_KeyRepeat.timestamp &&
++			     SDL_KeyRepeat.evt.key.keysym.sym == keysym->sym ) {
+ 				SDL_KeyRepeat.timestamp = 0;
+ 			}
+ 			break;

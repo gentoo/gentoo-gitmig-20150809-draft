@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.70 2005/01/01 01:20:29 kingtaco Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.71 2005/01/03 02:19:12 vapier Exp $
+
+  02 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/1.2.8-keyrepeat.patch, libsdl-1.2.7-r3.ebuild, libsdl-1.2.8.ebuild:
+  Add patch from upstream to fix keyrepeating #76448 by Jon Daniel.
 
   31 Dec 2004; Mike Doty <kingtaco@gentoo.org> libsdl-1.2.8.ebuild:
   strip-flags -funroll-all-loops & -fpeel-loops bug #74608

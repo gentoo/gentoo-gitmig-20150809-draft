@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.7 2004/11/16 06:34:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.8 2005/01/03 02:19:12 vapier Exp $
 
 inherit toolchain-funcs fixheadtails eutils gnuconfig
 
@@ -51,6 +51,7 @@ src_unpack() {
 		&& epatch "${FILESDIR}/${PV}-gcc34.patch" #48947
 	epatch "${FILESDIR}/${PV}-joystick2.patch" #52833
 	epatch "${FILESDIR}/${PV}-26headers.patch" #58192
+	epatch "${FILESDIR}"/1.2.8-keyrepeat.patch #76448
 
 	ht_fix_file configure.in
 
