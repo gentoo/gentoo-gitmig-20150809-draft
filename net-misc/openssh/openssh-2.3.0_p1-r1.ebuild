@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.3.0_p1-r1.ebuild,v 1.1 2000/12/10 04:21:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.3.0_p1-r1.ebuild,v 1.2 2000/12/10 05:35:55 drobbins Exp $
 
 P=openssh-2.3.0p1
 A=${P}.tar.gz
@@ -33,21 +33,40 @@ src_unpack() {
 src_install() {                               
     try make manpages install-files DESTDIR=${D} 
     dodoc ChangeLog COPYING.* CREDITS OVERVIEW README* TODO UPGRADING
-    cd ${O}/files
     insinto /etc/pam.d
-    donewins sshd.pam sshd
+    donewins ${FILESDIR}/sshd.pam sshd
     exeinto /etc/rc.d/init.d
-    doins sshd
+    doexe ${FILESDIR}/sshd
 	exeinto /etc/svc.d/services/sshd
 	touch ${D}/etc/svc.d/services/sshd/down
 	newexe ${FILESDIR}/sshd-run run
+	dodir /etc/svc.d/control
+	dosym ../services/sshd /etc/svc.d/control/sshd
+}
+
+pkg_preinst() {
+	[ "$ROOT" = "/" ] && [ -e /etc/rc.d/init.d/sshd ] && /etc/rc.d/init.d/sshd stop
+	${ROOT}/etc/rc.d/init.d/rc-update del sshd
 }
 
 pkg_postinst() {
-  # Make ssh start at boot
-  echo ">>> Generating symlinks"
-  ${ROOT}/usr/sbin/rc-update add sshd
+	# Make ssh start at boot
+	. ${ROOT}/etc/rc.d/config/functions
+	einfo ">>> Generating symlinks"
+	${ROOT}/usr/sbin/rc-update add sshd
+	if [ ! -e ${ROOT}/etc/ssh/ssh_host_key ] ; then
+		einfo "Generating system RSA key..."
+		${ROOT}/usr/bin/ssh-keygen -b 1024 -f ${ROOT}/etc/ssh/ssh_host_key -N ''
+	else
+		einfo "System RSA key already exists, skipping..."
+	fi
+
+	if [ ! -e ${ROOT}/etc/ssh/ssh_host_dsa_key ] ; then
+		einfo "Generating system DSA key..."
+		${ROOT}/usr/bin/ssh-keygen -d -f ${ROOT}/etc/ssh/ssh_host_dsa_key -N ''
+	else
+		einfo "System DSA key already exists, skipping..."
+	fi
+	[ "$ROOT" = "/" ] && /etc/rc.d/init.d/sshd start
 }
-
-
 

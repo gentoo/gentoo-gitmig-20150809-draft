@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0.ebuild,v 1.1 2000/12/10 04:21:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0.ebuild,v 1.2 2000/12/10 05:35:55 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Pipe and socket fittings for the system and kernel logs"
@@ -39,14 +39,11 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ -e ${ROOT}/etc/rc.d/init.d/sysklogd ]
-	then
-		${ROOT}/etc/rc.d/init.d/sysklogd stop
-	fi
+	[ "$ROOT" = "/" ] && [ -e /etc/rc.d/init.d/sysklogd ] && /etc/rc.d/init.d/sysklogd stop
 	${ROOT}/usr/sbin/rc-update del sysklogd
 }
 
 pkg_postinst() {
 	${ROOT}/usr/sbin/rc-update add sysklogd
-	${ROOT}/etc/rc.d/init.d/sysklogd start
+	[ "$ROOT" = "/" ] && /etc/rc.d/init.d/sysklogd start
 }
