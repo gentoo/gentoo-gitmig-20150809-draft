@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r3.ebuild,v 1.2 2003/08/01 22:53:26 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r4.ebuild,v 1.1 2003/08/01 22:53:26 zhen Exp $
 
 MY_PV=${PV//./_}
 
@@ -29,11 +29,6 @@ src_install () {
 	export XERCESCROOT=${S}
 	cd ${S}/src/xercesc
 	make DESTDIR=${D} install || die
-	#make PREFIX="${D}/usr" install
-	#cd ${XERCESCROOT}/lib
-	#dosym libxerces-c.so.23.0 libxerces-c.so
-	#dosym libxerces-c.so.23.0 libxerces-c.so.23	
-	#dolib.so libxerces-c.so.23.0
 
 	if [ "`use doc`" ]; then
 		dodir /usr/share/doc/${P}
