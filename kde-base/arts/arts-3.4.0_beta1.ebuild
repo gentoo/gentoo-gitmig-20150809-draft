@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.0_beta1.ebuild,v 1.2 2005/01/14 13:19:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.0_beta1.ebuild,v 1.3 2005/01/15 12:54:34 danarmak Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.4
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/arts-1.3.2-alsa-bigendian.patch
 
 	if (is-flag -fstack-protector || is-flag -fstack-protector-all || use hardened); then
-		epatch ${FILESDIR}/arts-1.3.2-mcopidl.patch
+		epatch ${FILESDIR}/arts-1.4-mcopidl.patch
 	fi
 
 	# for the configure.in.in patch

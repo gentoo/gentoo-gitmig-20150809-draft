@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.3.ebuild,v 1.13 2004/10/19 17:43:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.3.ebuild,v 1.14 2005/01/15 12:54:34 danarmak Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.2
