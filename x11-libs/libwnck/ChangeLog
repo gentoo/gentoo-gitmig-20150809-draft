@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.28 2003/10/05 14:48:41 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.29 2003/10/08 09:25:00 obz Exp $
+
+  08 Oct 2003; Mike Gardiner <obz@gentoo.org> libwnck-2.4.0.1.ebuild,
+  files/libwnck-2.4.0.1-pager.patch:
+  Added patch for pager/desktop switcher behaviour. See bug #30264 and links to
+  gnome bugzilla from there
 
   05 Oct 2003; Mike Gardiner <obz@gentoo.org> libwnck-2.4.0.1.ebuild:
   Marked stable on x86
