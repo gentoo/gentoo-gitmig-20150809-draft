@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shtool/shtool-1.5.1-1.ebuild,v 1.1 2000/07/30 00:42:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shtool/shtool-1.5.1-r1.ebuild,v 1.1 2000/08/01 05:05:20 drobbins Exp $
 
-P=shtool-1.5.1-1
 A=shtool-1.5.1.tar.gz
 S=${WORKDIR}/shtool-1.5.1
 CATEGORY="sys-apps"

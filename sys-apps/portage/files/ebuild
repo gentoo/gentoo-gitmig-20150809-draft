@@ -37,7 +37,7 @@ initvars() {
 		EXEOPTIONS="-m0755 -s"
 	fi
 	LIBOPTIONS="-m0644"
-	MOPREFIX=${P%-*}
+	MOPREFIX=${PN}
 	KVERS=`uname -r`
 }
 
@@ -325,9 +325,9 @@ docinto() {
 	DOCDESTTREE=""
     else
 	DOCDESTTREE=$1
-	if [ ! -d ${D}usr/doc/${P}/${DOCDESTTREE} ]
+	if [ ! -d ${D}usr/doc/${PF}/${DOCDESTTREE} ]
 	then
-	    install -d ${D}usr/doc/${P}/${DOCDESTTREE} 
+	    install -d ${D}usr/doc/${PF}/${DOCDESTTREE} 
 	fi
     fi
 }
@@ -337,17 +337,17 @@ dodoc() {
     do
 	if [ -e ${x} ]
 	then
-	    if [ ! -d ${D}/usr/doc/${P} ]
+	    if [ ! -d ${D}/usr/doc/${PF} ]
 	    then
-		install -d ${D}/usr/doc/${P}
+		install -d ${D}/usr/doc/${PF}
 	    fi
 	    if [ -z ${DOCDESTTREE} ]
 	    then
-		install -m0644 ${x} ${D}/usr/doc/${P}
-		gzip -9 ${D}/usr/doc/${P}/${x##*/}
+		install -m0644 ${x} ${D}/usr/doc/${PF}
+		gzip -9 ${D}/usr/doc/${PF}/${x##*/}
 	    else
-		install -m0644 ${x} ${D}usr/doc/${P}/${DOCDESTTREE}
-		gzip -9 ${D}usr/doc/${P}/${DOCDESTTREE}/${x##*/}
+		install -m0644 ${x} ${D}usr/doc/${PF}/${DOCDESTTREE}
+		gzip -9 ${D}usr/doc/${PF}/${DOCDESTTREE}/${x##*/}
 	    fi
 	else
 	    echo "${0}: ${x} does not exist."
@@ -864,7 +864,7 @@ abort_package() {
     echo
     cd ${BUILDDIR} #original dir
     rm -f .packaged
-    rm -f ${PKGDIR}/All/${P}.t*
+    rm -f ${PKGDIR}/All/${PF}.t*
     trap SIGINT SIGQUIT
     exit 1
 }
@@ -884,7 +884,7 @@ dyn_compile() {
     export CFLAGS CXXFLAGS LIBCFLAGS LIBCXXFLAGS
     if [ ${BUILDDIR}/.compiled -nt ${WORKDIR} ]
     then
-	echo ">>> It appears that ${P} is already compiled.  skipping."
+	echo ">>> It appears that ${PN} is already compiled.  skipping."
 	echo ">>> (clean to force compilation)"
 	trap SIGINT SIGQUIT
 	return
@@ -896,15 +896,10 @@ dyn_compile() {
     trap SIGINT SIGQUIT
 }
 
-dyn_pkginfo() {
-    local PNAME=${P}.${PACKAGE}
-    echo ${P} ${PKGDIR}/All ${PKGDIR}/All/${PNAME}
-}
-
 dyn_package() {
     trap "abort_package" SIGINT SIGQUIT
     cd ${BUILDDIR}/image
-    local PNAME=${P}.${PACKAGE}
+    local PNAME=${PF}.${PACKAGE}
     echo ">>> Creating ${PNAME} in ${PKGDIR}/All..."
     if [ ! -e ${PKGDIR} ]
     then
@@ -916,9 +911,9 @@ dyn_package() {
     fi    
     if [ "$PACKAGE" = "tbz2" ]
     then
-	tar cvf ${PKGDIR}/All/${P}.tar *
-	bzip2 ${PKGDIR}/All/${P}.tar
-	mv ${PKGDIR}/All/${P}.tar.bz2 ${PKGDIR}/All/${PNAME}	
+	tar cvf ${PKGDIR}/All/${PF}.tar *
+	bzip2 ${PKGDIR}/All/${PF}.tar
+	mv ${PKGDIR}/All/${PF}.tar.bz2 ${PKGDIR}/All/${PNAME}	
     elif [ "$PACKAGE" = "tgz" ]
     then
  	tar czvf ${PKGDIR}/All/${PNAME} *
@@ -943,10 +938,10 @@ dyn_install() {
     mkdir ${BUILDDIR}/image
     cd ${S}
     echo
-    echo ">>> Install ${P} into ${D}"
+    echo ">>> Install ${PF} into ${D}"
     src_install
-    install -d -m0700 ${D}/var/db/pkg/${P}
-    cp ${STARTDIR}/${EBUILD} ${D}/var/db/pkg/${P}
+    install -d -m0700 ${D}/var/db/pkg/${PF}
+    cp ${STARTDIR}/${EBUILD} ${D}/var/db/pkg/${PF}
     echo ">>> Completed installing into ${D}"
     echo
     cd ${BUILDDIR}
@@ -956,16 +951,16 @@ dyn_install() {
 dyn_merge() {
     trap "" SIGINT SIGQUIT
     #not interruptible, so that the db doesn't get garbled
-    if [ -d ${ROOT}/var/db/pkg/${P} ]
+    if [ -d ${ROOT}/var/db/pkg/${PF} ]
     then
 	echo 
-	echo '!!!' "${P} already merged -- unmerge first" 
+	echo '!!!' "${PF} already merged -- unmerge first" 
 	echo
 	exit 1
     fi
     echo
     pkg_preinst
-    /usr/sbin/merge.py
+    /usr/sbin/merge
     cd ${BUILDDIR}
     #zap it so that people don't look at a bad image and get confused
     rm -rf image
@@ -977,7 +972,7 @@ dyn_unmerge() {
     trap "" SIGINT SIGQUIT
     #stub unmerge function for now
     cd ${BUILDDIR}
-    /usr/sbin/unmerge.py ${P}
+    /usr/sbin/unmerge ${PF}
     if [ $? -ne 0 ]
     then
 	exit
@@ -1037,7 +1032,7 @@ dyn_rpm () {
 
 dyn_help() {
 	echo
-	echo "Portage v1.1"
+	echo "Portage v1.0"
 	echo "Copyright 2000 Gentoo Technologies, Inc."
 	echo 
 	echo "How to use the ebuild command:"
@@ -1057,7 +1052,7 @@ dyn_help() {
 	echo
 	echo "The following settings will be used for the ebuild process:"
 	echo
-	echo "  package     : ${P}" "( \${P} )"
+	echo "  package     : ${PF}" "( \${PF} )"
 	echo "  description : ${DESCRIPTION}"
 	echo "  system      : ${CHOST}" "( \${CHOST} )"
 	echo "  c flags     : ${CFLAGS}" "( \${CFLAGS} )"
@@ -1086,7 +1081,7 @@ src_menu() {
     MYDIR=${BUILDDIR}
     if [ "$1" = "p" ]
     then
-	echo ${P}
+	echo ${PF}
 	exit 0
     fi
 
@@ -1160,6 +1155,32 @@ then
 	exit 1
 fi
 
+# this function sets various environment variables that are used by 
+# portage.  For a package called "foo-1.2-r1", they would be set as
+# follows:
+# P=foo-1.2
+# PF=foo-1.2-r1 (r1 is the rev, or release of the ebuild script)
+# PN=foo
+# PV=1.2
+# PR=1 (rev is zero if unspecified)
+
+setp() {
+	if [ $# -ne 3 ]
+	then
+		echo '!!!' ${P} is not a valid package name.  Exiting.
+		exit 1
+	fi
+	if [ "${3}" = "0" ]
+	then
+		export PF="${1}-${2}"
+	else
+		export PF="${1}-${2}-r${3}"
+	fi
+	export PN="${1}"
+	export PV="${2}"
+	export PR="${3}"
+}
+
 export STARTDIR=`pwd`
 export O=`dirname ${STARTDIR}/${1}`
 export EBUILD=${1}
@@ -1167,6 +1188,8 @@ export PEBUILD=${O}/files/${PLATFORM}.ebuild
 export FILESDIR=${O}/files
 
 export P=${1%.*}
+setp `/usr/sbin/pkgname ${P}`
+
 source ${1}
 if [ -e ${PEBUILD} ]
 then
@@ -1180,7 +1203,7 @@ fi
 
 if [ ! -z ${BUILD_PREFIX} ]
 then
-    export BUILDDIR=${BUILD_PREFIX}/${P}
+    export BUILDDIR=${BUILD_PREFIX}/${PF}
 else
     export BUILDDIR=${O}
 fi

@@ -4,4 +4,8 @@ from portage import *
 import sys
 
 a=pkgsplit(sys.argv[1])
-print a[0],a[1],a[2]
+if a:
+	print a[0],a[1],a[2]
+	sys.exit(0)
+else:
+	sys.exit(1)

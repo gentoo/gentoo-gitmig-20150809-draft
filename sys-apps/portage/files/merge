@@ -5,7 +5,7 @@ from commands import *
 import string
 
 mystart=os.path.normpath(os.environ["D"])
-mypackage=os.path.normpath(os.environ["P"])
+mypackage=os.path.normpath(os.environ["PF"])
 myroot=os.environ["ROOT"]
 
 os.chdir(mystart)
