@@ -1,63 +1,57 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.2 2003/10/01 23:11:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.3 2004/01/08 11:13:13 mr_bones_ Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic games
 
-N=egoboo
-S=${WORKDIR}/${N}
-DESCRIPTION="egoboo: a 3d dungeon crawling adventure in the spirit of NetHack"
-SRC_URI="mirror://sourceforge/${PN}/ego${PV/./}.tar.gz"
+S="${WORKDIR}/${PN}"
+DESCRIPTION="A 3d dungeon crawling adventure in the spirit of NetHack"
 HOMEPAGE="http://egoboo.sourceforge.net/"
-KEYWORDS="x86 -ppc"
+SRC_URI="mirror://sourceforge/${PN}/ego${PV/./}.tar.gz"
+
+KEYWORDS="-* x86"
+LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
 DEPEND="virtual/x11
 	virtual/opengl
 	virtual/glu
-	media-libs/libsdl"
-LICENSE="GPL-2"
+	media-libs/libsdl
+	>=sys-apps/sed-4"
 
 src_unpack() {
-	SDLLIBS=`sdl-config --libs`
-	SDLFLAGS=`sdl-config --cflags`
-
-	unpack ${A}
-	cd ${S}/code
-	patch < ${FILESDIR}/${P}-makefile-gentoo.patch || die "Patch Failed"
-	mv Makefile Makefile.bak
-	echo SDLLIBS=${SDLLIBS} > /tmp/sdllibs.tmp || die "file already exists"
-	echo SDLFLAGS=${SDLFLAGS} > /tmp/sdlflags.tmp || die "file already exists"a
-	cat /tmp/sdllibs.tmp /tmp/sdlflags.tmp Makefile.bak > Makefile
-	rm -f /tmp/sdllibs.tmp
-	rm -f /tmp/sdlflags.tmp
-}
-
-src_compile() {
 	replace-flags "-march=athlon*" "-march=i686"
 	replace-flags "-march=pentium4" "-march=i686"
 
+	unpack ${A}
+	cd ${S}
+
+	sed -i \
+		-e "/^CC=/ s:=.*:=${CC}:" \
+		-e "s:-ffast-math -funroll-loops -O3 -g:${CFLAGS}:" code/Makefile \
+			|| die "sed code/Makefile failed"
+	sed \
+		-e "s:GENTOODIR:${GAMES_DATADIR}:" "${FILESDIR}/${P}.sh" \
+			> "${T}/egoboo" || die "sed wrapper failed"
+}
+
+src_compile() {
 	cd code
-	make clean || die "failed build"
-	make egoboo || die "failed build"
-	}
+	make clean || die "make clean failed"
+	emake egoboo || die "emake failed"
+}
 
 src_install () {
-	dodir /usr/share/egoboo
-	dodir /usr/bin
-	dodoc egoboo.txt gpl.txt
-	cp -r basicdat ${D}/usr/share/egoboo
-	cp code/egoboo ${D}/usr/share/egoboo
-	cp -r import ${D}/usr/share/egoboo
-	cp -r modules ${D}/usr/share/egoboo
-	cp -r players ${D}/usr/share/egoboo
-	cp -r text ${D}/usr/share/egoboo
-	cp controls.txt ${D}/usr/share/egoboo
-	cp setup.txt ${D}/usr/share/egoboo
-	cp ${FILESDIR}/${P}.sh ${D}/usr/bin/egoboo
+	dogamesbin "${T}/egoboo" || die "dogamesbin failed"
+	dodoc egoboo.txt || die "dodoc failed"
+	dodir "${GAMES_DATADIR}/${PN}" "${GAMES_BINDIR}" || die "dodir failed"
+	cp -R basicdat/ import/ modules/ players/ text/ \
+		code/egoboo controls.txt setup.txt \
+		"${D}${GAMES_DATADIR}/${PN}" || die "cp failed"
 
-	#chown to root:users and chmod g+w to let regular users run the app
-	cd ${D}/usr/share/egoboo
-	chown -R root:users *
-	chmod -R g+w setup.txt basicdat players
+	prepgamesdirs
+	# ugly, but the game needs write here.
+	cd "${D}${GAMES_DATADIR}/${PN}"
+	chmod -R g+w setup.txt basicdat players import
 }
