@@ -1,6 +1,10 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.49 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.50 2004/09/21 18:01:51 lanius Exp $
+
+  21 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  +files/links-2.1pre15-utf8.diff.bz2, links-2.1_pre15.ebuild:
+  enhance unicode support, bug #61682
 
   04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   links-2.1_pre11.ebuild, links-2.1_pre13.ebuild, links-2.1_pre14.ebuild,

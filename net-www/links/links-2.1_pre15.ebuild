@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.10 2004/09/16 02:18:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.11 2004/09/21 18:01:51 lanius Exp $
 
-IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg"
+inherit eutils
+
+IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode"
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -51,6 +53,16 @@ pkg_setup (){
 		einfo
 	fi
 
+}
+
+src_unpack (){
+	unpack ${A}
+
+	if use unicode ; then
+		epatch ${FILESDIR}/${MYP}-utf8.diff.bz2
+		export LANG=C
+		cd ${S}/intl && ./gen-intl && cd .. || die "gen-intl filed"
+	fi
 }
 
 src_compile (){
