@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.6.ebuild,v 1.2 2004/05/10 14:27:33 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.6.ebuild,v 1.3 2004/05/11 16:02:55 lu_zero Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
@@ -16,7 +16,7 @@ UNIPATCH_LIST="${ARCH_PATCH}"
 
 use ultra1 || UNIPATCH_EXCLUDE="99_U1-hme-lockup"
 
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~sparc ~x86 ~ppc"
 
 pkg_postinst() {
 	postinst_sources
