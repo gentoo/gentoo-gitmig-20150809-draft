@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20050115.ebuild,v 1.2 2005/01/16 11:56:21 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20050115.ebuild,v 1.3 2005/01/17 00:47:29 wschlich Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,7 +27,7 @@ src_install() {
 	doins pattern
 	dobin gwhois
 	doman gwhois.1
-	dodoc TODO gwhois.xinetd
+	dodoc TODO "${FILESDIR}/gwhois.xinetd"
 	einfo ""
 	einfo "See included gwhois.xinetd for an example on how to"
 	einfo "use gwhois as a whois proxy using xinetd."
