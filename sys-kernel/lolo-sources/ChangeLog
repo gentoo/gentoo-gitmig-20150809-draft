@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.3 2002/09/02 01:48:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.4 2002/09/03 02:14:33 lostlogic Exp $
+
+*lolo-sources-2.4.19.9_rc2 (02 Sep 2002)
+
+  02 Sep 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.19.9_rc2.ebuild:
+
+  Removed lock-break, contains known races against 2.4.19.
+
+  Fix grsecurity/Config.in for badness.
+
+  Add some things from iptables-patch-o-matic thanks to Azarah.
+
+  Put back missing IDE Taskfile IO option in config.
 
 *lolo-sources-2.4.19.9_rc1 (01 Sep 2002)
 
