@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.9 2002/05/22 19:32:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.10 2002/05/22 21:49:44 azarah Exp $
+
+automake-1.6.1-r4 (22 May 2002)
+
+  22 May 2002; M.Schlemmer <azarah@gentoo.org> automake-1.6.1-r4.ebuild :
+
+  Remove duplicate macros in /usr/share/aclocal/ (old stale ones that is
+  now in /usr/share/aclocal-1.4/.
 
 automake-1.6.1-r3 (22 May 2002)
 

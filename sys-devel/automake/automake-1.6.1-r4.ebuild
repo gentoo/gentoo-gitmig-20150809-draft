@@ -220,7 +220,7 @@ src_install() {
 	# ************ misc stuff ****************
 	
 	# Some packages needs a /usr/share/automake directory
-	dosym /usr/share/automake-1.4 /usr/share/automake
+	dosym automake-1.4 /usr/share/automake
 
 	# This is the default macro directory that apps use ..
 	dodir /usr/share/aclocal
@@ -244,5 +244,17 @@ pkg_preinst() {
 	then
 		rm -rf /usr/share/automake
 	fi
+}
+
+pkg_postinst() {
+
+	# nuke duplicate macros
+	for x in /usr/share/aclocal-1.4/*.m4
+	do
+		if [ -f /usr/share/aclocal/${x##*/} ]
+		then
+			rm -f /usr/share/aclocal/${x##*/}
+		fi
+	done
 }
 
