@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.10 2004/09/28 15:59:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.11 2004/10/04 10:40:10 ka0ttic Exp $
+
+  04 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> -chkrootkit-0.43-r2.ebuild,
+  chkrootkit-0.43-r4.ebuild, -chkrootkit-0.43.ebuild:
+  Marked 0.43-r4 stable on x86; clean up old versions.
 
   28 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> chkrootkit-0.44.ebuild:
   Updated ebuild & diff to respect user CFLAGS/LDFLAGS as well as
