@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/flexplaylist
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/flexplaylist/ChangeLog,v 1.4 2004/06/24 23:28:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/flexplaylist/ChangeLog,v 1.5 2004/06/29 00:33:10 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> flexplaylist-0.4.8.ebuild:
+  QA: kde-base -> kde, newdepend -> DEPEND, need-kde after R/DEPEND
 
   23 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   flexplaylist-0.4.8.ebuild:
