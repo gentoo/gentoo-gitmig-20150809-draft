@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8892458019a3c612c1f6a2fb6d4b67be PEAR-Text_Wiki-0.20.1.ebuild 433
-MD5 85785f9c0bcd3b4261d6ce4bd7a85f94 PEAR-Text_Wiki-0.8.2.ebuild 408
-MD5 bb1aaecb2805ef7cd652c7723ff5fa12 ChangeLog 1702
+MD5 c6eb67b0b7fd19c14ae5ad5910f4898b ChangeLog 1804
 MD5 4a29b43e532479b4704760dbb2aebae7 metadata.xml 247
+MD5 e1f89b52bd25c0ee5783e719dc52a4ef PEAR-Text_Wiki-0.20.1.ebuild 429
+MD5 85785f9c0bcd3b4261d6ce4bd7a85f94 PEAR-Text_Wiki-0.8.2.ebuild 408
 MD5 7b7f6dc88fd079649e1bcaa41f7693a2 files/digest-PEAR-Text_Wiki-0.20.1 64
 MD5 9ef2b31e4dd52d63c067094d1e7534ce files/digest-PEAR-Text_Wiki-0.8.2 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMt8eaGfFFLhbXWkRAlHnAJ9WVjJgVqpQ0HMg9vznkt2bkIb34QCfXQk7
-3GR3ad67r68PYoCuvKQdQMA=
-=INRE
+iD8DBQFCRuBougEuf3OQ0akRAgKWAJ9pW/B4N93DPCIkvECw3LhfezajqQCffRdd
+RDBVxipBL88swqhPnhd5dBc=
+=WlJQ
 -----END PGP SIGNATURE-----
