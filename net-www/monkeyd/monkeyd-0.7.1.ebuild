@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.6.1.ebuild,v 1.1 2003/03/04 08:43:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.7.1.ebuild,v 1.1 2003/06/13 18:40:54 vapier Exp $
 
 MY_P="${PN/d}-${PV}"
 DESCRIPTION="fast, efficient, (REALLY) small, and easy to configure web server"
@@ -39,5 +39,8 @@ src_install() {
 		LOGDIR=${D}/var/log/${PN} \
 		install \
 		|| die
-	dodoc CREDITOS HowItWorks.txt README ChangeLog NEWS
+	dosed "s:/var/log/monkeyd/monkey.pid:/var/run/monkey.pid:" /etc/monkeyd/monkey.conf
+	exeinto /etc/init.d ; newexe ${FILESDIR}/monkeyd.init.d monkeyd
+	insinto /etc/conf.d ; newins ${FILESDIR}/monkeyd.conf.d monkeyd
+	dodoc MODULES HowItWorks.txt README ChangeLog
 }
