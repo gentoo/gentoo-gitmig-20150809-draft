@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.51.ebuild,v 1.4 2002/07/16 05:51:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.51.ebuild,v 1.5 2002/07/16 11:56:05 seemant Exp $
 
 MY_PN=${PN/-/}
 S=${WORKDIR}/${P}
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc"
 
 RDEPEND="sys-apps/man"
 LICENSE="GPL-2"
-SLOT=""
+SLOT="0"
 
 src_unpack() {
 
