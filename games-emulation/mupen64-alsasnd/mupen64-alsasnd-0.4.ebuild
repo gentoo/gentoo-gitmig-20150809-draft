@@ -11,6 +11,7 @@ SRC_URI="alsa-plugin-${PV}fix.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE="qt gtk"
 RESTRICT="fetch"
 
 DEPEND=">=media-libs/alsa-lib-0.9.0
