@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/apg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.10 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.11 2004/12/30 21:37:17 seemant Exp $
+
+*apg-2.3.0b-r1 (30 Dec 2004)
+
+  30 Dec 2004; Seemant Kulleen <seemant@gentoo.org>
+  +files/apg-2.3.0b-cracklib.patch, -apg-2.1.0.ebuild, -apg-2.2.3.ebuild,
+  +apg-2.3.0b-r1.ebuild, apg-2.3.0b.ebuild:
+  move 2.3.0b to stable x86, remove crufty versions, and add -r1 which has
+  support for cracklib, thanks to: Conway S. Smith <beolach@comcast.net> in
+  bug #67564
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> apg-2.3.0b.ebuild:
   Masked apg-2.3.0b.ebuild stable for ppc
