@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-selinux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.21 2004/09/21 23:15:02 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.22 2004/10/21 07:56:52 kaiowas Exp $
+
+  21 Oct 2004; petre rodan <kaiowas@gentoo.org> python-selinux-2.15.ebuild:
+  Mark stable.
 
 *python-selinux-2.15 (21 Sep 2004)
 
