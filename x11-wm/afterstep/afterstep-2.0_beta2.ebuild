@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta2.ebuild,v 1.1 2003/10/18 19:59:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta2.ebuild,v 1.2 2003/10/21 09:59:04 raker Exp $
 
 IUSE="png jpeg gif tiff truetype xinerama debug mmx"
 
@@ -23,6 +23,13 @@ RDEPEND="${DEPEND}
 	>=media-sound/sox-12.17.3"
 
 S="${WORKDIR}/AfterStep-2.00.beta2"
+
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+	# see bug #31541
+	epatch ${FILESDIR}/as2-gnome.diff
+}
 
 src_compile() {
 	local myconf
@@ -75,6 +82,9 @@ src_compile() {
 }
 
 src_install() {
+	# see bug #31541
+	dodir /usr/share/gnome/wm-properties
+
 	make DESTDIR=${D} install || die "make install failed"
 
 	# This fixes a bug with shared libraries
