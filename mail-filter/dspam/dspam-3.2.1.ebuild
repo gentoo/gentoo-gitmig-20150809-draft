@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.1.ebuild,v 1.3 2004/11/09 23:18:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.1.ebuild,v 1.4 2004/11/11 15:31:54 st_lim Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nuclearelephant.com/projects/dspam/sources/${PN}-${PV}.tar.g
 HOMEPAGE="http://www.nuclearelephant.com/projects/dspam/index.html"
 LICENSE="GPL-2"
 
-IUSE="cyrus debug exim mysql mysql41 maildrop neural oci8 postgres procmail sqlite"
+IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite"
 DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
 		sqlite? ( >=dev-db/sqlite-3.0.6 )
@@ -78,7 +78,7 @@ src_compile() {
 	myconf="${myconf} --with-dspam-owner=dspam"
 	myconf="${myconf} --with-dspam-group=dspam"
 	myconf="${myconf} --enable-homedir --with-dspam-home=${HOMEDIR} --sysconfdir=${HOMEDIR}"
-	myconf="${myconf} --with-logdir=/var/log/dspam"
+	myconf="${myconf} --with-logdir=$LOGDIR"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
 	# optional: even MORE debugging output, use with extreme caution!

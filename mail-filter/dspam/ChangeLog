@@ -1,9 +1,16 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.25 2004/11/09 23:18:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.26 2004/11/11 15:31:54 st_lim Exp $
+
+  11 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.0.ebuild,
+  dspam-3.2.1.ebuild:
+  Removed the mysql41 use flag
 
   09 Nov 2004; Aron Griffis <agriffis@gentoo.org> dspam-3.2.1.ebuild:
   Add ~alpha and ~ia64
+
+  09 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.1.ebuild:
+  Fixed the problem in Bug #70388
 
 *dspam-3.2.1 (05 Nov 2004)
 
