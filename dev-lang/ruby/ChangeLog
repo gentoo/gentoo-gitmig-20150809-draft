@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.19 2003/05/26 17:59:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.20 2003/05/28 13:07:05 twp Exp $
+
+  28 May 2003; Tom Payne <twp@gentoo.org> ruby-1.8.0_pre2-r2.ebuild ruby-1.6.8-r1.ebuild :
+  Build shared library. Bug # 21723.
 
 *ruby-1.8.0_pre2-r1 (26 May 2003)
 
@@ -11,7 +14,6 @@
 
   14 May 2003; Luca Barbato <lu_zero@gentoo.org> ruby-1.6.8.ebuild :
   Added ppc to keywords.
-
 
 *ruby-1.8.0_pre2 (10 Apr 2003)
 
