@@ -2,6 +2,11 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.4 2002/05/30 01:54:49 sandymac Exp
 
+  10 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  fdutils-5.4.20020222-r1.ebuild:
+  no more installing the fd.4 manpage, since the man-pages package provides a
+  better version
+
   16 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
   fdutils-5.4.20020222-r1.ebuild:
   changed dependency to sys-fs/mtools instead of app-admin/mtools

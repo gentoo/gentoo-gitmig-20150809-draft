@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.9 2003/09/17 03:45:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.10 2003/12/10 08:27:44 seemant Exp $
 
 inherit eutils
 
@@ -20,6 +20,10 @@ DEPEND=">=sys-fs/mtools-3
 src_unpack() {
 	unpack ${A}
 	epatch ${WORKDIR}/${PN}-5.4-20020222.diff
+
+	# the man 4 fd manpage is better in the man-pages package, so stop it
+	# from installing
+	epatch ${FILESDIR}/${PN}-no-fd.4-manpage.diff
 }
 
 src_compile() {
@@ -36,7 +40,6 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
-	dodir /usr/share/man/man4
 
 	einstall || die
 
