@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.211 2004/07/21 21:09:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.212 2004/07/22 00:10:31 mr_bones_ Exp $
+
+  21 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  glibc-2.3.3.20040420.ebuild:
+  use fewer shells
 
   21 Jul 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20040619:
   Added patches for hppa.
