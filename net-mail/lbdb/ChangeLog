@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/lbdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.8 2003/09/13 08:23:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.9 2003/12/14 03:43:08 pylon Exp $
+
+*lbdb-0.28 (14 Dec 2003)
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> lbdb-0.28.ebuild:
+  Make stable on ppc
 
   13 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> :
   version bump
