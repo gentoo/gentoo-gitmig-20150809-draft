@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.32 2004/10/07 22:06:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.33 2004/10/07 23:16:22 kloeri Exp $
+
+  08 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> rp-pppoe-3.5-r2.ebuild:
+  Stable on alpha, bug 66296.
 
   07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> files/rp-pppoe.rc:
   provide net -> use net to clear up 'Cannot add provide 'net', as a service
