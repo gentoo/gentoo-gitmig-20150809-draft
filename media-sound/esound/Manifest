@@ -1,20 +1,30 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d57671f17acab9a388ff10d657240d37 ChangeLog 6137
-MD5 db2a5a236c57479520328b1067c2d239 esound-0.2.32-r1.ebuild 1415
+MD5 417715c0edef2f8ace79cb428f518a8c esound-0.2.34.ebuild 1297
+MD5 7fec2214715bbc47190cd12a02c705e5 esound-0.2.35.ebuild 1382
 MD5 0995cc9450d2b0b893e604121f586603 esound-0.2.32.ebuild 1381
-MD5 60d8cb57f63e0edc494f5d5feae0a199 esound-0.2.33.ebuild 1331
-MD5 f6089c2ff513456a10455a86c19a326a esound-0.2.34.ebuild 1291
-MD5 32b366f12be8862771d0a05277fdad55 esound-0.2.35.ebuild 1374
 MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
-MD5 35f489331d7924542abbe9842c58c59c files/digest-esound-0.2.32 66
-MD5 35f489331d7924542abbe9842c58c59c files/digest-esound-0.2.32-r1 66
-MD5 5b001531455e0ff356512be131dc32cb files/digest-esound-0.2.33 66
+MD5 db2a5a236c57479520328b1067c2d239 esound-0.2.32-r1.ebuild 1415
+MD5 60d8cb57f63e0edc494f5d5feae0a199 esound-0.2.33.ebuild 1331
 MD5 e2bd989e15dcb9b15096d1a9cd29edf0 files/digest-esound-0.2.34 66
 MD5 b2f099ec9bcaa69a919e28a72c36d548 files/digest-esound-0.2.35 66
+MD5 5b001531455e0ff356512be131dc32cb files/digest-esound-0.2.33 66
+MD5 35f489331d7924542abbe9842c58c59c files/digest-esound-0.2.32 66
 MD5 340b8af9191cda014c7963617ede9b77 files/esound-0.2.29-alsa-period.diff 473
 MD5 75aca7b483f56968b69b28ce2fa2389e files/esound-0.2.29-local-vs-remote.diff 474
-MD5 abf9fa5dcfe799ee75cb17808b389739 files/esound-0.2.32-amd64.patch 686
-MD5 675f9471a8062d3365ba0748546ade17 files/esound-0.2.32-new-alsa.patch 2831
-MD5 f14e22dbd99b25a4b76dcfe42cfb2099 files/esound-0.2.33-gcc2_fix.patch 1097
-MD5 949eca433956076ac441c57787eedcc0 files/esound-0.2.35-ppc-macos.patch 4422
 MD5 6a04ae174ae4b2bb4ad9734fe09d32e2 files/esound.conf.d 737
 MD5 0af490e6c9b79db177214d01027e800e files/esound.init.d 862
+MD5 35f489331d7924542abbe9842c58c59c files/digest-esound-0.2.32-r1 66
+MD5 675f9471a8062d3365ba0748546ade17 files/esound-0.2.32-new-alsa.patch 2831
+MD5 abf9fa5dcfe799ee75cb17808b389739 files/esound-0.2.32-amd64.patch 686
+MD5 f14e22dbd99b25a4b76dcfe42cfb2099 files/esound-0.2.33-gcc2_fix.patch 1097
+MD5 949eca433956076ac441c57787eedcc0 files/esound-0.2.35-ppc-macos.patch 4422
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiqgoHTu7gpaalycRAib5AKCNM5Q5vFF3tlNqJ/47zor9GUCu5ACglfcS
+gVWfrQ0ZfzagelClf30TfHI=
+=8ZWo
+-----END PGP SIGNATURE-----
