@@ -1,0 +1,86 @@
+# ChangeLog for net-p2p/bittorrent 
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/ChangeLog,v 1.1 2003/12/17 18:28:43 luke-jr Exp $
+
+*bittorrent-stats-3.2.1b-r4 (17 Dec 2003)
+
+  17 Dec 2003; Luke-Jr <luke-jr@gentoo.org> bittorrent-stats-3.2.1b-r4.ebuild,
+  metadata.xml, files/bittorrent-stats-3.2.1b.patch:
+  formerly net-p2p/bittorrent
+
+  02 Oct 2003; Luke-Jr <luke-jr@gentoo.org> metadata.xml:
+  Now maintaining bittorrent
+
+*bittorrent-3.3 (25 Sep 2003)
+
+  25 Sep 2003; Patrick Kursawe <phosphan@gentoo.org> bittorrent-3.3.ebuild,
+  metadata.xml:
+  Version bump as requested in bug 29556
+
+*bittorrent-3.2.1b-r4 (10 Aug 2003)
+
+  10 Aug 2003; Luke-Jr <luke-jr@gentoo.org> bittorrent-3.2.1b-r4.ebuild:
+  Now uses virtual/bittorrent; revision bump since it's not compiling anything
+  anyway
+
+  01 Aug 2003; Tavis Ormandy <taviso@gentoo.org> bittorrent-3.2.1b-r3.ebuild:
+  stable on alpha
+
+  24 Jun 2003; Patrick Kursawe <phosphan@gentoo.org>
+  bittorrent-3.2.1b-r3.ebuild:
+  Considered stable for x86
+
+*bittorrent-3.2.1b-r3 (10 Jun 2003)
+
+  10 Jun 2003; Patrick Kursawe <phosphan@gentoo.org>
+  bittorrent-3.2.1b-r3.ebuild, files/bittorrent-stats-3.2.1b.patch:
+  Added stats patch (bug 22214) and hopefully closed bug 22264.
+  Kept ~sparc and ~ppc because the changes are quite minor.
+
+  30 May 2003; Jack Morgan <jmorgan@gentoo.org> bittorrent-3.2.1b-r2.ebuild:
+  Added ~sparc keyword
+
+  29 May 2003; root <pvdabeel@gentoo.org> bittorrent-3.2.1b-r2.ebuild:
+  Added ~ppc keyword
+
+  15 May 2003; Tavis Ormandy <taviso@gentoo.org> bittorrent-3.2.1b-r2.ebuild:
+  marking ~alpha
+
+*bittorrent-3.2.1b-r2 (08 May 2003)
+
+  08 May 2003; Patrick Kursawe <phosphan@gentoo.org> 
+  bittorrent-3.2.1b-r2.ebuild :
+  X support now optional as proposed in bug 20608 by Wayne Davison <gentoo@blorf.net>
+  and removed unnecessary patch
+
+*bittorrent-3.2.1b-r1 (07 May 2003)
+
+  07 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  bittorrent-3.2.1b-r1.ebuild, files/bittorrent-3.2.1b.patch:
+  Patch supplied in bug #20524 - should fix some overflows and
+  problems with progress bar. Thanks to Denis Braekhus
+  <denis@startsiden.no> for finding it.
+
+*bittorrent-3.2.1b (01 Apr 2003)
+
+  01 Apr 2003; Alastair Tse <liquidx@gentoo.org> bittorrent-3.2.1b.ebuild:
+  version bump
+
+*bittorrent-3.2.1 (31 Mar 2003)
+
+  01 Apr 2003; Alastair Tse <liquidx@gentoo.org> bittorrent-3.2.1.ebuild:
+  fixed mailcap entry to something more robust. also fixes #18569.
+
+  31 Mar 2003; Alastair Tse <liquidx@gentoo.org> bittorrent-3.2.1.ebuild:
+  version bump
+
+*bittorrent-3.1 (30 Jan 2003)
+
+  30 Jan 2003; Jon Portnoy <avenj@gentoo.org> bittorrent-3.1.ebuild :
+  Version bump.
+
+*bittorrent-3.0.1 (04 Nov 2002)
+
+  04 Nov 2002; Bruce A. Locke <blocke@shivan.org> bittorrent-3.0.1.ebuild:
+  Initial version.
+
