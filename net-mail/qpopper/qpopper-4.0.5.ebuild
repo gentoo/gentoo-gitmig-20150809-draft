@@ -9,12 +9,11 @@ SRC_URI="ftp://ftp.qualcomm.com/eudora/servers/unix/popper/${PN}${PV}.tar.gz
 		http://www.ibiblio.org/gentoo/distfiles/qpopper-files.tar.bz2"
 HOMEPAGE="http://www.qpopper.org/qpopper/"
 
-DEPEND="virtual/glibc \
-      virtual/mta \
-	  sys-libs/gdbm \
-	  sys-apps/xinetd \
-	  pam? ( >=sys-libs/pam-0.72 ) \
-	  ssl? ( dev-libs/openssl )"
+DEPEND="virtual/mta
+	virtual/inetd
+	sys-libs/gdbm
+	pam? ( >=sys-libs/pam-0.72 )
+	ssl? ( dev-libs/openssl )"
 
 SLOT="0"
 LICENSE="qpopper | GPL-2"
