@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.2.0.ebuild,v 1.4 2003/01/31 19:49:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.2.0.ebuild,v 1.5 2003/02/02 00:02:21 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the gnome2 Desktop configuration tool"
@@ -31,3 +31,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0" 
 
 DOCS="AUTHORS ChangeLog COPYING README TODO INSTALL NEWS"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-gcc2.patch
+}
