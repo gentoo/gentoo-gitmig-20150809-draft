@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.0.ebuild,v 1.5 2003/10/18 22:54:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.0.ebuild,v 1.6 2003/10/22 12:01:39 darkspecter Exp $
 
 inherit gnome2 eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Libraries for the gnome desktop that is not part of the UI"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ~sparc ~hppa amd64"
+KEYWORDS="x86 ppc alpha ~sparc ~hppa amd64"
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 
 RDEPEND=">=x11-libs/gtk+-2.1.2

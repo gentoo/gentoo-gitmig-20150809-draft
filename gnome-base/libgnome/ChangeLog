@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.38 2003/10/21 03:03:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.39 2003/10/22 12:01:39 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> libgnome-2.4.0.ebuild:
+  set ppc in keywords
 
   20 Oct 2003; Aron Griffis <agriffis@gentoo.org> libgnome-2.4.0.ebuild:
   Stable on alpha
