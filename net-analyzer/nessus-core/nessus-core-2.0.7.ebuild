@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.7.ebuild,v 1.5 2004/04/27 21:10:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.7.ebuild,v 1.6 2004/06/09 18:13:36 agriffis Exp $
 
 inherit eutils
 
@@ -29,15 +29,15 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use X && myconf="--with-x" || myconf="--without-x"
-	if [ `use gtk` ]; then
+	if use gtk; then
 		myconf="${myconf} --enable-gtk"
-	elif [ `use gtk2` ]; then
+	elif use gtk2; then
 		myconf="${myconf} --enable-gtk"
 	else
 		myconf="${myconf} --disable-gtk"
 	fi
 	myconf="${myconf} `use_enable tcpd tcpwrappers`"
-	if [ `use debug` ]; then
+	if use debug; then
 		myconf="${myconf} --enable-debug"
 	else
 		myconf="${myconf} --disable-debug"

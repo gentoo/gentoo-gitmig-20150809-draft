@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.8a.ebuild,v 1.5 2004/04/27 21:10:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.8a.ebuild,v 1.6 2004/06/09 18:13:36 agriffis Exp $
 
 inherit eutils
 
@@ -26,35 +26,35 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	use prelude && (
+	if use prelude; then
 		epatch ${DISTDIR}/patch_0.nessus-core.2.0.7
 		epatch ${FILESDIR}/patch_1.nessus-core.2.0.7
-	)
+	fi
 }
 
 src_compile() {
 	local myconf
 	use X && myconf="--with-x" || myconf="--without-x"
-	if [ `use gtk` ]; then
+	if use gtk; then
 		myconf="${myconf} --enable-gtk"
-	elif [ `use gtk2` ]; then
+	elif use gtk2; then
 		myconf="${myconf} --enable-gtk"
 	else
 		myconf="${myconf} --disable-gtk"
 	fi
 	# no use_enable because of bug 31670
-	if [ `use tcpd` ]; then
+	if use tcpd; then
 		myconf="${myconf} --enable-tcpwrappers"
 	fi
-	if [ `use debug` ]; then
+	if use debug; then
 		myconf="${myconf} --enable-debug"
 	else
 		myconf="${myconf} --disable-debug"
 	fi
-	if [ `use prelude` ]; then
+	if use prelude; then
 		export LIBPRELUDE_CONFIG=/usr/bin/libprelude-config
 	fi
-	if [ `use prelude` ]; then
+	if use prelude; then
 		export LIBPRELUDE_CONFIG=/usr/bin/libprelude-config
 	fi
 	econf ${myconf} || die "configure failed"
