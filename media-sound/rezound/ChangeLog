@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.17 2004/08/15 21:14:07 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.18 2004/09/22 22:41:06 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rezound-0.10.0_beta.ebuild:
+  Added to ~amd64.
 
 *rezound-0.10.0_beta (15 Aug 2004)
 

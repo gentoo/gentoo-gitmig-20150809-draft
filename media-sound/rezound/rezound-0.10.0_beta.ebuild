@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.10.0_beta.ebuild,v 1.1 2004/08/15 21:14:07 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.10.0_beta.ebuild,v 1.2 2004/09/22 22:41:06 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 IUSE="oggvorbis jack nls oss portaudio flac soundtouch"
 
