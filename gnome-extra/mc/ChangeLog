@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/mc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/ChangeLog,v 1.2 2002/03/10 09:41:05 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/ChangeLog,v 1.3 2002/03/23 12:20:09 seemant Exp $
+
+*mc-4.5.55-r2 (22 Mar 2002)
+
+  22 Mar 2002; Seemant Kulleen <seemant@gentoo.org> mc-4.5.55-r2.ebuild :
+
+  LFH compliance: Matthew Kennedy submitted us this fix, which places the man
+  pages into the /usr/share/man tree, instead of /usr/man.  This turns out to
+  be more LFH compliant, in addition to placin the manpages where man knows to
+  look for them (/usr/man is not in MANPATH).
 
 *mc-4.5.55-r1 (10 Mar 2002)
 
