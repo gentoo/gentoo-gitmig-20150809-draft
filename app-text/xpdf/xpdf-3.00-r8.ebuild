@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r8.ebuild,v 1.9 2005/02/07 11:48:53 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r8.ebuild,v 1.10 2005/03/14 19:16:24 lanius Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND="!nomotif? ( virtual/x11
 	x11-libs/openmotif )
 	>=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
-	>=virtual/ghostscript-7.07.1-r5"
+	virtual/ghostscript"
 
 RDEPEND="${DEPEND}
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
