@@ -1,9 +1,11 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.37 2003/09/30 17:50:01 kumba Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.38 2003/10/02 07:00:49 vapier Exp $
 
 *nano-1.2.2 (18 Aug 2003)
+
+  02 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to fix run away nano's #17878.
 
   30 Sep 2003; Joshua Kinard <kumba@gentoo.org> nano-1.2.2.ebuild:
   Changed ~mips to mips in KEYWORDS
