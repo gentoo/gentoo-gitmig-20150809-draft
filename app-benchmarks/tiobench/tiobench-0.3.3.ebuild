@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/tiobench-0.3.3.ebuild,v 1.2 2004/01/14 03:55:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/tiobench-0.3.3.ebuild,v 1.3 2004/03/04 00:23:57 mr_bones_ Exp $
 
 DESCRIPTION="Portable, robust, fully-threaded I/O benchmark program"
 HOMEPAGE="http://tiobench.sourceforge.net/"
@@ -22,6 +22,7 @@ src_unpack() {
 		-e 's:/usr/local/bin:/usr/sbin:' tiobench.pl || \
 			die "sed tiobench.pl failed"
 	sed -i \
+		-e '/DLARGEFILES/ s/^#//' \
 		-e "/^CFLAGS/ s:=.*:= ${CFLAGS}:" Makefile || \
 			die "sed Makefile failed"
 }
