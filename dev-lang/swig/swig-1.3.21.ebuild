@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.24 2004/08/18 09:39:56 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.25 2004/09/28 04:17:34 vapier Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -47,7 +47,7 @@ src_compile() {
 		`use_with guile` \
 		`use_with tcltk tcl` \
 		`use_with perl perl5 /usr/bin/perl` \
-		`use_with php` \
+		`use_with php php4` \
 		|| die
 
 	# fix the broken configure script
