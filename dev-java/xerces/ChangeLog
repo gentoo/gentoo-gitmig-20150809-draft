@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.5 2002/11/25 03:38:47 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.6 2002/12/03 18:55:06 strider Exp $
 
 *xerces-2.2.0-r1 (24 Nov 2002)
+
+  03 Dec 2002; Adrian Almenar <strider@gentoo.org> xerces-2.2.0-r1.ebuild
+  Changed keywords. (Removing ~).
+  Removed pkg_postinst(), cause there no need for the info displayed there.
 
   24 Nov 2002; Adrian Almenar <strider@gentoo.org> xerces-2.2.0-r1.ebuild files/digest-xalan-2.2.0-r1 :
   Fixes bug #10351. Needed Version Bump.
