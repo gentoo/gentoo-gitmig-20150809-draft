@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r3.ebuild,v 1.7 2002/09/14 15:51:26 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r3.ebuild,v 1.8 2002/09/21 03:59:49 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"
 SRC_URI="ftp://arcana.linux.it/pub/gpm/gpm-1.20.0.tar.bz2
 	http://www.ibiblio.org/gentoo/distfiles/gpm-1.20.1-patch.tar.bz2"
+HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	sys-devel/autoconf"
