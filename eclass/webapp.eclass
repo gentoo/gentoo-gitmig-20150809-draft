@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.1 2003/10/07 21:54:46 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.2 2003/12/22 23:15:46 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -27,8 +27,8 @@ INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
 
-if [ -f /usr/share/webapp-config/settings.sh ] ; then
-	. /usr/share/webapp-config/settings.sh
+if [ -f /etc/conf.d/webapp-config ] ; then
+	. /etc/conf.d/webapp-config
 fi
 
 EXPORT_FUNCTIONS pkg_setup src_install
@@ -132,3 +132,4 @@ function webapp_src_install ()
 function webapp_pkg_setup ()
 {
 	use vhosts || webapp-config -u root -d /var/www/localhost/htdocs/${PN}/ ${PN}
+}
