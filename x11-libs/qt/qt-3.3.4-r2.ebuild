@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r2.ebuild,v 1.5 2005/02/21 13:12:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r2.ebuild,v 1.6 2005/02/23 13:24:41 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="3"
-KEYWORDS="~x86 ~amd64 ~hppa ~mips ~ppc64 ~sparc ~ia64"
+KEYWORDS="x86 ~amd64 ~hppa ~mips ~ppc64 ~sparc ~ia64"
 IUSE="cups debug doc firebird gif ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
 
 DEPEND="virtual/x11 virtual/xft
@@ -170,7 +170,7 @@ src_install() {
 			ln -s $x.1 $x
 		done
 
-		# version symlinks - 3.3.3->3.3->3->.so
+		# version symlinks - 3.3.4->3.3->3->.so
 		ln -s libqt-mt.so.3.3.4 libqt-mt.so.3.3
 		ln -s libqt-mt.so.3.3 libqt-mt.so.3
 		ln -s libqt-mt.so.3 libqt-mt.so
