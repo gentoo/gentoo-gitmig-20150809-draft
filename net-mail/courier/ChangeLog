@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.10 2002/12/21 19:30:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.11 2002/12/31 09:00:08 raker Exp $
+
+*courier-0.40.2 (31 Dec 2002)
+
+  31 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-0.40.2.ebuild,
+  files/digest-courier-0.40.2, files/courier-0.40.2-gentoo.diff.bz2 :
+  Version bump.  New unicode functionality.  Added support for the spell
+  use variable.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
