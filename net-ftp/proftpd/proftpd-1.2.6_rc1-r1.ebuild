@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.6_rc1-r1.ebuild,v 1.6 2002/11/02 16:35:16 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.6_rc1-r1.ebuild,v 1.7 2002/11/02 17:09:07 blizzy Exp $
 
 IUSE="ldap pam postgres mysql"
 
@@ -97,4 +97,10 @@ src_install() {
 	newins ${FILESDIR}/proftpd.xinetd proftpd
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/proftpd.rc6 proftpd
+}
+
+pkg_postinst() {
+        groupadd proftpd &>/dev/null
+        id proftpd &>/dev/null || \
+                useradd -g proftpd -d /home/ftp -s /bin/false proftpd
 }
