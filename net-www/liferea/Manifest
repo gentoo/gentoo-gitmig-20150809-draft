@@ -1,4 +1,6 @@
-MD5 0fc426e7dc2f2a74f18bd76cf3433576 ChangeLog 392
+MD5 e9b18be1ed021bddb1ca6977d72727d7 ChangeLog 520
 MD5 2166830d643c49a541762126f7ae44ea liferea-0.4.5.ebuild 643
+MD5 c49c125e71d177d9c9dd44b795bb6afd liferea-0.4.6b.ebuild 644
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 84b21aeeebf05d2703b3184be7c3862c files/digest-liferea-0.4.5 65
+MD5 ee23292fe0a0697a7bfc1cb7289d7621 files/digest-liferea-0.4.6b 66
