@@ -1,7 +1,15 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.4 2002/04/21 23:34:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.5 2002/05/04 03:44:57 jhhudso Exp $
 
+*transcode-0.6.0_pre4-r2 (3 May 2002)
+
+  3 May 2002; J.Hudson <jhhudso@gentoo.org>
+  transcode-0.6.0_pre4-r2.ebuild,
+  files/digest-transcode-0.6.0_pre4-r1, Changelog :
+
+  Added a patch that fixes gcc3 compiles with this package.
+	
 *transcode-0.6.0_pre4-r1 (21 Apr 2002)
 
   21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
