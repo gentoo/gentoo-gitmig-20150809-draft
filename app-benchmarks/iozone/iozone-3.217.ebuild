@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.217.ebuild,v 1.1 2004/05/13 04:56:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.217.ebuild,v 1.2 2004/05/13 08:20:50 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.iozone.org/"
 SRC_URI="http://www.iozone.org/src/current/${PN}${PV/./_}.tar"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="sys-devel/gcc"
