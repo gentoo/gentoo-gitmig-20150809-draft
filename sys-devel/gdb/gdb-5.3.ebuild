@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.7 2003/02/28 10:40:45 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.8 2003/03/24 13:53:56 gmsoft Exp $
 
 IUSE="nls objc"
 
@@ -12,7 +12,7 @@ SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc -sparc alpha"
+KEYWORDS="x86 ppc -sparc alpha hppa"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
@@ -22,6 +22,14 @@ replace-flags -O? -O2
 
 src_unpack() {
 	unpack gdb-${PV}.tar.bz2
+
+	if [ "${ARCH}" = "hppa" ]; then
+		cd ${S}
+		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-01.patch
+		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-02.patch
+		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-03.patch
+		fi
+
 
 	if [ -n "`use objc`" ] ; then
 		unpack gdb-5_3-objc-patch.tgz 
