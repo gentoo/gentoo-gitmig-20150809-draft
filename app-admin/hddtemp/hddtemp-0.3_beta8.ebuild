@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta8.ebuild,v 1.4 2003/10/24 09:24:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta8.ebuild,v 1.5 2003/10/24 13:10:18 aliz Exp $
 
 MY_P=${P/_beta/-beta}
 
@@ -30,7 +30,6 @@ src_compile() {
 	myconf="--with-db-path=/usr/share/hddtemp/hddtemp.db"
 # disabling nls breaks compiling
 #	use nls || myconf="--disable-nls ${myconf}"
-	echo $myconf
 	econf $myconf || die
 	emake || die
 }
