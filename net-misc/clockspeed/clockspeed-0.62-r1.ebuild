@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.1 2001/05/01 17:20:56 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.2 2001/05/01 22:24:04 pete Exp $
 
 #P=
 A=${P}.tar.gz
@@ -25,7 +25,7 @@ src_compile() {
 }
 
 src_install () {
-    dodir /etc /usr/bin /usr/share/man/man1
+    dodir /etc /usr/bin /usr/sbin /usr/share/man/man1
     insinto /etc
     doins leapsecs.dat
     

@@ -415,7 +415,7 @@ use GRUB to boot a bootable Windows partition.</p>
 
 <note>Above, <path>(hd0,0)</path> should point to your "boot" partition
 (<path>/dev/hda1</path> in my case) and <path>/dev/hda3</path> should point to
-your "root filesystem.  <path>(hd0,2)</path> contains the NT boot
+your root filesystem.  <path>(hd0,2)</path> contains the NT boot
 loader.</note> <p>Also, if you need to pass any options to the kernel, simply
 add them to the end of the <c>kernel</c> command.  We're already passing one option
 (<c>root=/dev/hda3</c>), but you can pass others as well.  There's one in particular

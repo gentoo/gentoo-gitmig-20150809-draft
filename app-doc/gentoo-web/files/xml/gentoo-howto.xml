@@ -200,9 +200,17 @@ variable settings. The variables you can set are:</p>
 <tr><ti><c>HOMEPAGE</c></ti><ti>your package's homepage</ti></tr>
 <tr><ti><c>DEPEND</c></ti><ti>build dependencies; see the section <uri link="#dependencies">Package Dependencies</uri></ti></tr>
 <tr><ti><c>RDEPEND</c></ti><ti>runtime dependencies; see the section <uri link="#dependencies">Package Dependencies</uri></ti></tr>
+</table>
 <p>2. ebuild Functions</p>
 <p>There are a number of different functions that you can define in ebuild files that control the building and installation process of your package.</p>
 <table>
+<tr><ti><c>src_unpack</c></ti><ti>Use this function to unpack your sources and apply patches, and run autoconf/automake/etc. if necessary. By default, unpacks the packages in <c>${A}</c> and applies <c>${PF}-gentoo.diff</c>. The default starting directory is <c>${BUILDDIR}</c>.</ti></tr>
+<tr><ti><c>src_compile</c></ti><ti>Use this function to configure and build the package. Default starting directory is <c>${S}</c>.</ti></tr>
+<tr><ti><c>src_install</c></ti><ti>Use this function install the package to an image in <c>${D}</c>. If your package uses automake, you can do this simply with <c>make DESTDIR=${D} install</c>. <emph>Make sure your package installs all its files using <c>${D}</c> as the root!</emph></ti></tr>
+<tr><ti><c>pkg_preinst</c></ti><ti>The commands in this function are run just prior to merging a package image into the filesystem.</ti></tr>
+<tr><ti><c>pkg_postinst</c></ti><ti>The commands in this function are run just following merging a package image into the filesystem.</ti></tr>
+<tr><ti><c>pkg_prerm</c></ti><ti>The commands in this function are run just prior to unmerging a package image from the filesystem.</ti></tr>
+<tr><ti><c>pkg_postrm</c></ti><ti>The commands in this function are run just following unmerging a package image from the filesystem.</ti></tr>
 </table>
 </body>
 </section>
@@ -210,9 +218,9 @@ variable settings. The variables you can set are:</p>
 <section>
 <title>Rules for writing an ebuild File</title>
 <body><p>Since ebuild files are really just shell scripts, you should use your editor's
-shell-script mode for editing them. You should use proper indentation, using only tab characters &emd;
-no spaces. Make sure you set up your editor to put tabstops at 4 spaces. Always make sure you use braces around your environment variables; e.g. <c>${P}</c> instead of just <c>$P</c>.
-TODO: add stuff about emacs & vi.</p></body>
+shell-script mode for editing them. You should use proper indentation, using only tab characters --
+no spaces. Make sure you set up your editor to put tabstops at 4 spaces. Always make sure you use braces around your environment variables; e.g. <c>${P}</c> instead of just <c>$P</c>.</p>
+<p>TODO: add stuff about emacs &amp; vi.</p></body>
 </section>
 </chapter>
 
@@ -250,67 +258,66 @@ default installation destinations are fine, with a few exceptions:</p>
 <body><p>These are scripts used by the system-administrator to install and remove packages, and maintain the package database.</p>
 <ul>
 <li>ebuild - the main engine of the Portage system; performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages</li>
-<li>emerge - recursively merges a package and all of its dependencies
-<li>pkgmerge - merges a pre-packaged .tbz2 file for a package
-</li></ul>
+<li>emerge - recursively merges a package and all of its dependencies</li>
+<li>pkgmerge - merges a pre-packaged .tbz2 file for a package</li>
+</ul>
 </body>
 </section>
 
 <section>
-<title>Private Scripts</title>
+<title>Private Scripts and Commands</title>
 <body><p>These are scripts you can use in your ebuild files to perform common tasks.</p>
-<ul>
-<li>dobin
-</li><li>dodeps
-</li><li>dodir
-</li><li>dodoc
-</li><li>doexe
-</li><li>dohard
-</li><li>doinfo
-</li><li>doins
-</li><li>dolib
-</li><li>dolib.a
-</li><li>dolib.so
-</li><li>doman
-</li><li>domo
-</li><li>donewins
-</li><li>dopython
-</li><li>dosbin
-</li><li>dosed
-</li><li>dosym
-</li><li>find-packages
-</li><li>find-requires
-</li><li>fowners
-</li><li>fperms
-</li><li>import-configsettings
-</li><li>import-settings
-</li><li>megadigest
-</li><li>megadownload
-</li><li>megatouch
-</li><li>newbin
-</li><li>newdoc
-</li><li>newexe
-</li><li>newins
-</li><li>newlib.a
-</li><li>newlib.so
-</li><li>newman
-</li><li>newsbin
-</li><li>pkgname - splits up a package name into its individual parts, i.e. its name, version, and release number
-</li><li>pmake
-</li><li>portage-maintain
-</li><li>prepall
-</li><li>prepalldocs
-</li><li>prepallinfo
-</li><li>prepallman
-</li><li>prepallstrip
-</li><li>prepinfo
-</li><li>preplib
-</li><li>preplib.so
-</li><li>prepman
-</li><li>prepstrip
-</li><li>unpack
-</li><li>use
-</li></ul></body>
+<table>
+<tr><ti>dobin</ti><ti></ti></tr>
+<tr><ti>dodir</ti><ti></ti></tr>
+<tr><ti>dodoc</ti><ti></ti></tr>
+<tr><ti>doexe</ti><ti></ti></tr>
+<tr><ti>dohard</ti><ti></ti></tr>
+<tr><ti>doinfo</ti><ti></ti></tr>
+<tr><ti>doins</ti><ti></ti></tr>
+<tr><ti>dolib</ti><ti></ti></tr>
+<tr><ti>dolib.a</ti><ti></ti></tr>
+<tr><ti>dolib.so</ti><ti></ti></tr>
+<tr><ti>doman</ti><ti></ti></tr>
+<tr><ti>domo</ti><ti></ti></tr>
+<tr><ti>donewins</ti><ti></ti></tr>
+<tr><ti>dopython</ti><ti></ti></tr>
+<tr><ti>dosbin</ti><ti></ti></tr>
+<tr><ti>dosed</ti><ti></ti></tr>
+<tr><ti>dosym</ti><ti></ti></tr>
+<tr><ti>ebuild</ti><ti></ti></tr>
+<tr><ti>ebuild.sh</ti><ti></ti></tr>
+<tr><ti>emerge</ti><ti></ti></tr>
+<tr><ti>env-update</ti><ti></ti></tr>
+<tr><ti>find-packages</ti><ti></ti></tr>
+<tr><ti>find-requires</ti><ti></ti></tr>
+<tr><ti>fowners</ti><ti></ti></tr>
+<tr><ti>fperms</ti><ti></ti></tr>
+<tr><ti>import-configsettings</ti><ti></ti></tr>
+<tr><ti>import-settings</ti><ti></ti></tr>
+<tr><ti>megadigest</ti><ti></ti></tr>
+<tr><ti>megadownload</ti><ti></ti></tr>
+<tr><ti>megatouch</ti><ti></ti></tr>
+<tr><ti>newbin</ti><ti></ti></tr>
+<tr><ti>newdoc</ti><ti></ti></tr>
+<tr><ti>newexe</ti><ti></ti></tr>
+<tr><ti>newins</ti><ti></ti></tr>
+<tr><ti>newlib.a</ti><ti></ti></tr>
+<tr><ti>newlib.so</ti><ti></ti></tr>
+<tr><ti>newman</ti><ti></ti></tr>
+<tr><ti>newsbin</ti><ti></ti></tr>
+<tr><ti>pkgmerge</ti><ti></ti></tr>
+<tr><ti>pkgmerge.new</ti><ti></ti></tr>
+<tr><ti>pkgname</ti><ti></ti></tr>
+<tr><ti>pmake</ti><ti></ti></tr>
+<tr><ti>portage-maintain</ti><ti></ti></tr>
+<tr><ti>prepall</ti><ti></ti></tr>
+<tr><ti>prepalldocs</ti><ti></ti></tr>
+<tr><ti>prepallinfo</ti><ti></ti></tr>
+<tr><ti>prepallman</ti><ti></ti></tr>
+<tr><ti>try</ti><ti></ti></tr>
+</table>
+</body>
 </section>
 </chapter>
 
