@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.17 2004/03/07 10:02:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.18 2004/03/21 07:18:02 kumba Exp $
 
 IUSE="tcltk java doc"
 
@@ -60,7 +60,7 @@ src_compile() {
 	if use mips; then
 		einfo "Updating config.{guess,sub} for mips"
 		local OLDS="${S}"
-		S="${S}/dist"
+		S="${S}/../dist"
 		gnuconfig_update
 		S="${OLDS}"
 	fi
