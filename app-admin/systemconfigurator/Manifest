@@ -1,4 +1,5 @@
-MD5 9c03a79058c61587b88d32fc985731c6 systemconfigurator-2.0.9.ebuild 548
-MD5 1466536af5e7d1f9734c3122dc22b592 ChangeLog 575
+MD5 de8689530d028d97f7294ea4e12066ea systemconfigurator-2.0.9.ebuild 643
+MD5 7e4cd8c9932b2b3e7a2b11194c6eed3b ChangeLog 756
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 e621a96771a3aad71cc73aeeb24d99e5 files/systemconfigurator-2.0.9-Makefile.PL.patch 474
 MD5 183b022e7fc1e6c4d804dbf84beb97ac files/digest-systemconfigurator-2.0.9 75

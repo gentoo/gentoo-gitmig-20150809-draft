@@ -1,0 +1,13 @@
+--- Makefile.PL	2004-08-01 20:24:50.277291504 +0200
++++ Makefile.PL	2004-08-01 20:40:53.883801048 +0200
+@@ -46,8 +46,8 @@
+ 
+ manext_install ::
+ \tcd docs && \\
+-\tinstall -d \$(INSTALLMAN1DIR)/../man5 && \\
+-\t\$(POD2MAN5_EXE) systemconfig.conf.pod \$(INSTALLMAN1DIR)/../man5/systemconfig.conf.5 && \\
++\tinstall -d \$(DESTINSTALLMAN1DIR)/../man5 && \\
++\t\$(POD2MAN5_EXE) systemconfig.conf.pod \$(DESTINSTALLMAN1DIR)/../man5/systemconfig.conf.5 && \\
+ \tcd ..
+ 
+ set_ver::
