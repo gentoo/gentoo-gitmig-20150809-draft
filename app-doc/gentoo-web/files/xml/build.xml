@@ -168,11 +168,6 @@ ready.  Here are our recommended filesystem sizes and types:</p>
 	<th>Type</th>
   </tr>
   <tr>
-  	<ti>swap partition (no longer a 128 Megabyte limit)</ti>
-	<ti>&gt;=128 Megabytes</ti>
-	<ti>Linux swap</ti>
-  </tr>
-  <tr>
   	<ti>boot partition, containing kernel(s) and boot information</ti>
 	<ti>~100 Megabytes</ti>
 	<ti>ext2 or reiserfs, if reiserfs then mount with <c>-o notail</c></ti>
@@ -182,15 +177,20 @@ ready.  Here are our recommended filesystem sizes and types:</p>
 	<ti>&gt;=1.5 Gigabytes</ti>
 	<ti>ReiserFS recommended, ext2 ok</ti>
   </tr>
+  <tr>
+  	<ti>swap partition (no longer a 128 Megabyte limit)</ti>
+	<ti>&gt;=128 Megabytes</ti>
+	<ti>Linux swap</ti>
+  </tr>
   </table>
 
 <pre caption="Creating the above filesystems">
-# <i>mkswap /dev/hda1</i>
+# <i>mkswap /dev/hda3</i>
+# <i>mkreiserfs /dev/hda1</i>
 # <i>mkreiserfs /dev/hda2</i>
-# <i>mkreiserfs /dev/hda3</i>
 </pre>
 <p>Once you've created your partitions using <c>fdisk</c> or <c>cfdisk</c>, be sure
-to <c>mkswap /dev/hda1</c> (replace <c>hda1</c> with the device set aside for swap).
+to <c>mkswap /dev/hda3</c> (replace <c>hda3</c> with the device set aside for swap).
 We'll need to activate this swap next.</p>
 
 </body>
@@ -201,11 +201,11 @@ We'll need to activate this swap next.</p>
 <section>
 <body>
 <pre>
-# <i>swapon /dev/hda1</i>
+# <i>swapon /dev/hda3</i>
 # <i>mkdir /mnt/gentoo</i>
 # <i>mount /dev/hda3 /mnt/gentoo</i>
 # <i>mkdir /mnt/gentoo/boot</i>
-# <i>mount -o notail /dev/hda2 /mnt/gentoo/boot</i>
+# <i>mount -o notail /dev/hda1 /mnt/gentoo/boot</i>
 </pre>
 <p>Now, mount your root partition to <path>/mnt/gentoo</path> and your boot partition to 
    <path>/mnt/gentoo/boot</path> (create these <path>/mnt</path> dirs first).  If you are setting up Gentoo
