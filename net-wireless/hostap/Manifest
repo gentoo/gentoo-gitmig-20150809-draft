@@ -2,8 +2,10 @@ MD5 0cccc8dc56ab904fd60590fd9a5066ac hostap-0.0.2-r1.ebuild 4289
 MD5 1792c1d78c928fa0e303eb5c36860bf3 hostap-0.0.1.ebuild 4295
 MD5 e39e12c78112afb3d4dd0dfa135ae609 hostap-0.0.3.ebuild 4285
 MD5 9a707000b69439cec58c9bee73c84583 hostap-0.0.2.ebuild 4295
-MD5 57abd427c724ad967a72c74cd7c17b10 ChangeLog 2569
+MD5 f809c07b593ba4c09680c008118eb330 ChangeLog 2745
+MD5 ed1b95e5835e935d540fecdf39ecc371 hostap-0.0.3-r1.ebuild 4275
 MD5 f4a8c5996d013e8a161bf699bb7a2f83 files/digest-hostap-0.0.2-r1 64
+MD5 a524f036540821632837b56cc92ba5db files/digest-hostap-0.0.3-r1 64
 MD5 423cd360c12fa0a6530fb01f334a0bd6 files/digest-hostap-0.0.1 354
 MD5 f4a8c5996d013e8a161bf699bb7a2f83 files/digest-hostap-0.0.2 64
 MD5 cc10a98c98d5848f509dd21eb0828004 files/digest-hostap-0.0.3 354
