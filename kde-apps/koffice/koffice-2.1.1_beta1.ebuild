@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1_beta1.ebuild,v 1.4 2001/04/30 11:15:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/koffice/koffice-2.1.1_beta1.ebuild,v 1.1 2001/05/10 04:37:18 achim Exp $
 
 P=${PN}-1.1-beta1
 A=${P}.tar.bz2
