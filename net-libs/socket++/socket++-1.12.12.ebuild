@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.10.ebuild,v 1.3 2004/12/16 04:03:48 swegener Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12.ebuild,v 1.1 2004/12/16 09:30:28 swegener Exp $
 
 DESCRIPTION="C++ Socket Library"
-HOMEPAGE="http://members.aon.at/hstraub/linux/socket++/"
-SRC_URI="http://www.hstraub.at/linux/downloads/src/${P}.tar.gz"
+HOMEPAGE="http://www.linuxhacker.at/socketxx/"
+SRC_URI="http://www.linuxhacker.at/linux/downloads/src/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
@@ -22,17 +20,15 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PV}-gcc34.patch
+	WANT_AUTOMAKE=1.7 WANT_AUTOCONF=2.5  ./autogen || die "./autogen failed"
 }
 
 src_compile() {
-	WANT_AUTOMAKE=1.7 WANT_AUTOCONF=2.5  ./autogen || die "./autogen failed"
 	econf $(use_enable debug) || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
-
 	dodoc AUTHORS ChangeLog NEWS README* THANKS || die "dodoc failed"
 }
