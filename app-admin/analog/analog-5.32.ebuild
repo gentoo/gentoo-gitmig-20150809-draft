@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.14 2004/07/17 17:05:23 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.15 2004/09/23 12:19:58 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.analog.cx/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64 ppc64"
+KEYWORDS="alpha amd64 arm ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libpcre-3.4
