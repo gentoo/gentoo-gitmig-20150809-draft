@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.69 2005/01/10 21:51:14 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.70 2005/01/17 08:47:43 cyfred Exp $
+
+  17 Jan 2005; Andrew Bevitt <cyfred@gentoo.org>
+  nvidia-glx-1.0.6629-r1.ebuild, -nvidia-glx-1.0.6629.ebuild:
+  Marking 6629 stable across archs
 
   10 Jan 2005; Jason Huebel <jhuebel@gentoo.org>
   nvidia-glx-1.0.6629-r1.ebuild:

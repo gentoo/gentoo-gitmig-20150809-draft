@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r1.ebuild,v 1.2 2005/01/10 21:51:14 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r1.ebuild,v 1.3 2005/01/17 08:47:43 cyfred Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~x86 amd64"
+KEYWORDS="-* x86 amd64"
 RESTRICT="nostrip"
 IUSE="multilib"
 

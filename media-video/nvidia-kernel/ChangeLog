@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-kernel
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.106 2004/12/27 00:46:54 cyfred Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.107 2005/01/17 08:45:26 cyfred Exp $
+
+*nvidia-kernel-1.0.6629-r2 (17 Jan 2005)
+
+  17 Jan 2005; Andrew Bevitt <cyfred@gentoo.org>
+  +files/1.0.6629/NVIDIA_kernel-1.0-6629-1189413.patch,
+  nvidia-kernel-1.0.6629-r1.ebuild, +nvidia-kernel-1.0.6629-r2.ebuild:
+  Marking 6629 stable across archs
 
   27 Dec 2004; Andrew Bevitt <cyfred@gentoo.org>
   files/1.0.6629/NVIDIA_kernel-1.0-6629-1175225.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r1.ebuild,v 1.6 2005/01/17 08:45:26 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r2.ebuild,v 1.1 2005/01/17 08:45:26 cyfred Exp $
 
 inherit eutils linux-mod
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}/usr/src/nv"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* ~x86 ~amd64"
 RESTRICT="nostrip"
 IUSE=""
 
@@ -61,16 +61,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-	# 2.6.10_rc1-mm{1,2,3} all EXPORT_SYMBOL_GPL the udev functions, this breaks loading
-	CS="$(grep -c EXPORT_SYMBOL\(class_simple_create\)\; ${KV_DIR}/drivers/base/class_simple.c)"
-	if [ "${CS}" == "0" ]
-	then
-		ewarn "Your current kernel uses EXPORT_SYMBOL_GPL() on some methods required by nvidia-kernel."
-		ewarn "This probably means you are using 2.6.10_rc1-mm*. Please change away from mm-sources until this is"
-		ewarn "revised and a solution released into the mm branch, development-sources will work."
-		die "Incompatible kernel export."
-	fi
-
 	if [ ${KV_MINOR} -ge 6 -a ${KV_PATCH} -lt 7 ]
 	then
 		echo
@@ -94,11 +84,12 @@ src_unpack() {
 
 	# Patches from Zander (http://www.minion.de/files/1.0-6629/)
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1155389.patch
-	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1162524.patch
+	#epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1162524.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1165235.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1171869.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1175225.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1182399.patch
+	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1189413.patch
 
 	# Now any patches specific to the 2.6 kernel should go here
 	if kernel_is 2 6
