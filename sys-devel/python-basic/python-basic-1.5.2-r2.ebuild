@@ -1,19 +1,23 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/python-basic/python-basic-1.5.2-r1.ebuild,v 1.3 2000/09/15 20:09:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/python-basic/python-basic-1.5.2-r2.ebuild,v 1.1 2000/10/19 20:17:33 drobbins Exp $
 
 P=python-basic-1.5.2      
-A=py152.tgz
+A="py152.tgz python-fchksum-1.1.tar.gz"
 S=${WORKDIR}/Python-1.5.2
+S2=${WORKDIR}/python-fchksum-1.1
 DESCRIPTION="A really great language"
-SRC_URI="http://www.python.org/ftp/python/src/${A}"
+SRC_URI="http://www.python.org/ftp/python/src/${A} http://www.azstarnet.com/~donut/programs/fchksum/python-fchksum-1.1.tar.gz"
 
 src_compile() {                           
     try ./configure --prefix=/usr --with-threads
     cp Makefile Makefile.orig
     sed -e "s/-g -O2/${CFLAGS}/" Makefile.orig > Makefile
     try make
+	cd ${S2}
+	./configure
+	try make
 }
 
 src_unpack() {
@@ -32,6 +36,9 @@ Setup.in > Setup
 src_install() {                 
     dodir /usr              
     try make install prefix=${D}/usr
+	cd ${S2}
+	try make prefix=${D}/usr install
+	cd ${S}
     prepman
     strip ${D}/usr/bin/python
 
