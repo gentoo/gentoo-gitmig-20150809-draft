@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.5.2.ebuild,v 1.1 2004/01/24 19:29:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.5.2.ebuild,v 1.2 2004/01/25 11:30:51 usata Exp $
 
 IUSE="gtk nls debug"
 
@@ -63,8 +63,9 @@ pkg_postinst() {
 
 	einfo
 	einfo "To use uim-anthy you should emerge app-i18n/anthy or app-i18n/anthy-ss."
-	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo."
-	einfo "To use uim-prime you should emerge app-i18n/prime."
+	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo (uim doesn't support skkserv)."
+	einfo "To use uim-prime you should emerge app-i18n/prime and make sure you have"
+	einfo ">=dev-libs/suikyo-1.3.0."
 	einfo
 }
 
