@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.14 2004/08/05 01:20:22 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.15 2004/08/10 09:37:58 kang Exp $
+
+*rsbac-sources-2.4.26-r5 (10 Aug 2004)
+
+  10 Aug 2004; Guillaume Destuynder <kang@gentoo.org>
+  +files/2.4.26-CAN-2004-685.patch, +files/2.4.26-cmdline-race.patch,
+  -rsbac-sources-2.4.26-r4.ebuild, +rsbac-sources-2.4.26-r5.ebuild:
+  Fixes CAN 0685 and cmdline, bug #59769, #59905
 
 *rsbac-sources-2.4.26-r4 (05 Aug 2004)
 
