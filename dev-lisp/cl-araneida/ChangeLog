@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-araneida
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/ChangeLog,v 1.1 2005/02/10 09:18:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/ChangeLog,v 1.2 2005/02/25 20:10:17 mkennedy Exp $
+
+  25 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +files/README.Gentoo,
+  cl-araneida-0.9.ebuild:
+  Correct documentation; Correct documentation installation paths; Add
+  README.Gentoo describing proxy options and departure from documentation
+  standards
 
 *cl-araneida-0.9 (08 Feb 2005)
 
