@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.1-r1.ebuild,v 1.4 2004/02/27 07:35:17 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.1-r1.ebuild,v 1.5 2004/04/03 09:57:33 eradicator Exp $
 
 DESCRIPTION="Linux Drum Machine"
 HOMEPAGE="http://hydrogen.sourceforge.net/"
@@ -58,6 +58,8 @@ src_unpack() {
 }
 
 src_compile() {
+	addwrite ${QTDIR}/etc/settings
+
 	einfo "Reconfiguring..."
 	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.6

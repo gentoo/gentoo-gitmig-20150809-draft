@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.1.ebuild,v 1.2 2004/02/27 07:35:17 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.1.ebuild,v 1.3 2004/04/03 09:57:33 eradicator Exp $
 
 
 DESCRIPTION="Linux Drum Machine"
@@ -13,8 +13,6 @@ KEYWORDS="x86"
 
 IUSE="alsa jack"
 
-S="${WORKDIR}/${P}"
-
 DEPEND="virtual/x11
 	>=media-libs/audiofile-0.2.3 \
 	alsa? ( media-libs/alsa-lib ) \
@@ -22,7 +20,8 @@ DEPEND="virtual/x11
 	>=x11-libs/qt-3"
 
 src_compile() {
-	econf
+	addwrite ${QTDIR}/etc/settings
+	econf || die
 	emake || die
 }
 
