@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.1.ebuild,v 1.1 2003/10/30 16:30:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.1.ebuild,v 1.2 2003/11/17 21:14:45 spider Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.abisource.com"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	mirror://sourceforge/${PN}/${PN}-plugins-${PV}.tar.bz2"
 
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 ~sparc ~alpha ~ppc"
 LICENSE="GPL-2"
 SLOT="2"
 
