@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.20 2005/03/29 08:36:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.21 2005/04/06 20:53:31 hansmi Exp $
+
+  06 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  speech-tools-1.2.3-r2.ebuild:
+  Stable on ppc.
 
   27 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/1.2.3-gcc3.4.patch, speech-tools-1.2.3-r1.ebuild,
