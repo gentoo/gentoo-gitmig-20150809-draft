@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.65 2004/08/29 17:08:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.66 2004/08/30 03:29:39 pyrania Exp $
+
+  30 Aug 2004; <pyrania@gentoo.org> files/alsasound:
+  Fixing typo in init.d script. Closing bug #62152.
 
   29 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound,
   +files/alsasound.confd:
