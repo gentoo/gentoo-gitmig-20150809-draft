@@ -2,7 +2,7 @@
 #explanation of why something is getting masked
 
 #-mjc unstable
->=sys-kernel/linux-sources-2.4.18-pre3
+>=sys-kernel/linux-sources-2.4.18_pre3
 
 # We are masking out the 4.x series shadow until we remove dependencies
 # on libshadow from other ebuilds.  (drobbins, 19 Jan 2002)
