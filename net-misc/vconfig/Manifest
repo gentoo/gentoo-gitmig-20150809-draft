@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 f8d2237cdcf14210125ea6a78d018b2c vconfig-1.8.ebuild 1509
 MD5 d705800bd97c6d604ab02b7dd2205ab7 ChangeLog 2107
-MD5 da7c34aae19ef948be141f51591982e0 metadata.xml 497
+MD5 5a9b16815d29150da06fa36dba3535f2 metadata.xml 500
 MD5 4522407c3158529f4f2c56dce0c498b5 files/digest-vconfig-1.8 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iQCVAwUBQgU4oJ4WFLgrx1GWAQLLvAP8CaahXat0JH+tkDKZyFjzqqeFudiFNVAH
-qYs3W317KZnBY+2PuX7IKsINxB/wIgWW9feCqx2sdn/923zkcunDmwSwlbqNuY6Q
-yQ6tA8/Yi9Ox7pFepcDsrdrJIrRdHjrefG1fGbUUOA68gdrAEwrTgXUip7jBax04
-Beiov1cB5sY=
-=jhi2
+iQCVAwUBQgU46p4WFLgrx1GWAQLpswP+P5aJ1vjcDgjJ/U/kkVuYpnRy5uu+5pM6
+LHWcBdFzzJzXOxU0/TGihqrgkhxZN0ntWdkgZGv/TEYhdYxoEmkcS8rOZN72BAsB
+CQVUsuFu0lmby34uxq23VPLT7e3XZVlzgRYRWVkOnN3KgS2/INZS4TkmMkTCvPrA
+uB7H6qBMCwg=
+=bZCY
 -----END PGP SIGNATURE-----
