@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gentoolkit/lintool/scripts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/ChangeLog,v 1.13 2003/04/27 19:39:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/ChangeLog,v 1.14 2003/05/25 17:36:37 agriffis Exp $
+
+25 May 2003 Aron Griffis <agriffis@gentoo.org>
+	* fix double-reporting of removed ebuilds in echangelog
 
 27 Apr 2003 Aron Griffis <agriffis@gentoo.org>
 	* use older but sanctioned ChangeLog format

@@ -53,7 +53,7 @@ while (<C>) {
 		push @files, $1;
 		$versions{$2} = 0;	# existing ebuild that was removed
 	}
-    if (/^cvs.*?: (\S+) was removed/) {
+    elsif (/^cvs.*?: (\S+) was removed/) {
 		push @files, $1;
 		# existing file that has been removed
 	}
