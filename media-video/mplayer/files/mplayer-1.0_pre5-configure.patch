@@ -1,0 +1,40 @@
+--- configure.old	2004-07-15 07:04:42.000000000 +0900
++++ configure	2004-08-22 15:19:34.513649456 +0900
+@@ -5900,36 +5900,8 @@
+ #############################################################################
+ 
+ # Checking for CFLAGS
+-_stripbinaries=yes
+-if test "$_profile" != "" || test "$_debug" != "" ; then
+-  CFLAGS="-W -Wall -O2 $_march $_mcpu $_debug $_profile"
+-  if test "$_cc_major" -ge "3" ; then
+-    CFLAGS=`echo "$CFLAGS" | sed -e 's/\(-Wall\)/\1 -Wno-unused-parameter/'`
+-  fi
+-  _stripbinaries=no
+-elif test -z "$CFLAGS" ; then
+-  if test "$host_arch" != "mips" ; then
+-    CFLAGS="-O4 $_march $_mcpu -pipe -ffast-math -fomit-frame-pointer"
+-  else
+-    CFLAGS="-O4 $_march $_mcpu -ffast-math -fomit-frame-pointer"
+-  fi
+-  # always compile with '-g' if .developer:
+-  if test -f ".developer" ; then
+-    CFLAGS="-g $CFLAGS"
+-    _stripbinaries=no
+-  fi
+-else
+-  cat <<EOF
++CFLAGS="custom"
+ 
+-MPlayer compilation will use the CFLAGS set by you, but:
+-
+-    *** ***  DO NOT REPORT BUGS IF IT DOES NOT COMPILE/WORK!  *** ***
+-
+-It is strongly recommended to let MPlayer choose the correct CFLAGS!
+-To do so, execute 'CFLAGS= ./configure <options>'
+-
+-EOF
+-fi
+ if darwin ; then
+   CFLAGS="$CFLAGS -DSYS_DARWIN"
+   if [ "$_cc_major" = 3 ] && [ "$_cc_minor" -lt 1 ]; then
