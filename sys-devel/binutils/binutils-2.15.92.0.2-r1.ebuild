@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.2 2004/10/18 14:30:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.3 2004/10/20 15:11:49 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
-PATCHVER="1.1"
+PATCHVER="1.2"
+UCLIBC_PATCHVER="1.0"
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
+	mirror://gentoo/${PN}-${PV:0:4}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2
 	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
 
 LICENSE="GPL-2 | LGPL-2"
@@ -32,6 +34,7 @@ src_unpack() {
 		|| mv ${WORKDIR}/patch/*no_rel_ro* ${WORKDIR}/patch/20_* ${WORKDIR}/patch/skip/
 
 	epatch ${WORKDIR}/patch
+	epatch ${WORKDIR}/uclibc-patches
 
 	# Libtool is broken (Redhat).
 	for x in ${S}/opcodes/Makefile.{am,in}
@@ -65,7 +68,7 @@ src_compile() {
 	use multitarget && myconf="${myconf} --enable-targets=all"
 
 	# Fix /usr/lib/libbfd.la
-	elibtoolize --portage
+	elibtoolize --portage --no-uclibc
 
 	./configure \
 		--enable-shared \
