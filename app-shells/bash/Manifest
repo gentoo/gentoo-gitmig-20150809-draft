@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 2676178d6b452f03e0419c171f445526 ChangeLog 10684
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 06e6648b87899355b6cf922edcc341ba bash-2.05b-r10.ebuild 3245
-MD5 acad1d96dee65bf901e8b40749fa59f1 bash-3.0-r5.ebuild 4589
-MD5 3884cc47eb591634cf1e05c198ef3fc8 bash-2.05b-r9.ebuild 3113
+MD5 233f94e48276bed9796f6eb6bc67a850 bash-2.05b-r10.ebuild 3253
+MD5 4487dc865f34e0af309d79500ff99eb8 bash-3.0-r5.ebuild 4597
+MD5 2e73f0a1cf28e2f07ca9ada361b8e250 bash-2.05b-r9.ebuild 3121
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
 MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
@@ -23,7 +23,7 @@ MD5 96238e7d942d091ca71574ba7392e847 files/bash-3.0-array-stripping.patch 294
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBPx2THTu7gpaalycRAsYBAJ98WZD2cQB1s+5WDcAtMSwDLTtJyQCfaojx
-evocVZSLQ3q4xeB5hNo/sOw=
-=mDBX
+iD8DBQFBP7p2HTu7gpaalycRAot7AJ9IPVt1PaaZ1kw3Z11YwtFL7uB8GACgt8Ba
+TVna3VJ5m6jINaMCBBcP8HQ=
+=fP1X
 -----END PGP SIGNATURE-----
