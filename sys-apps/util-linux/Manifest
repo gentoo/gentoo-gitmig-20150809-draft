@@ -5,8 +5,6 @@ MD5 0df0c65fbb00a9153c30046cd435bb47 ChangeLog 15902
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 956fda46dcf04bbb717ec282840edada util-linux-2.12-r4.ebuild 4101
 MD5 b1770169fdbfa0b28480dbebf67d3222 util-linux-2.12-r5.ebuild 4196
-MD5 4bb184b87ec90bdc579a71f53214f21a util-linux-2.12b-r1.ebuild 4983
-MD5 46b84caf300acc762451ca3631a2bb14 util-linux-2.12b.ebuild 4874
 MD5 eeb64f7c42637a4750b79aadbfa7120c util-linux-2.12i-r1.ebuild 3682
 MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
 MD5 0f2f1ddaeaf52622fa80f4f08bb25a6b files/util-linux-2.11z-01-nfsv4-crypt.dif 13460
@@ -25,13 +23,11 @@ MD5 5a1bf3d383850b6c8ca05cc4fe76c813 files/digest-util-linux-2.12-r5 154
 MD5 4460875a6ebcf24a7ca5b41ed12f9fe5 files/util-linux-2.12-gcloop.patch 3806
 MD5 11fdaf3d68904b318fbffd7243e719b7 files/util-linux-2.12-amd64_rdev_installation.patch 737
 MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
-MD5 87912a793169fad4258077f2f6957616 files/digest-util-linux-2.12b 156
 MD5 e9d23ba9f2e86d57084dce2b34d76c10 files/util-linux-2.12b-fat-LABEL-support.patch 11672
 MD5 58cfa6f70a144bbe55e6aa1b85f72a96 files/util-linux-2.12b-gcloop-with-crypt.patch 3846
 MD5 a0217db1b99dfa1f137c22c36343a623 files/util-linux-2.12b-gcloop.patch 3844
 MD5 07a3dfffc55bcc7ef2868e025beb853e files/util-linux-2.12b-pic.patch 2874
 MD5 712184d7725a7aeb17cb0ef0e7549e72 files/util-linux-swapon-check-symlinks.patch 968
-MD5 87912a793169fad4258077f2f6957616 files/digest-util-linux-2.12b-r1 156
 MD5 61beee95fb4696a6af11ffb84ddb055c files/util-linux-2.12i-ignore-managed.patch 506
 MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
 MD5 0be8df03dae23c81a0e929e58a4114e0 files/util-linux-2.11z-01-nfsv4.dif 13442
@@ -41,7 +37,7 @@ MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4dC/roRuSHgZdywRAldgAJ9x5QDf6UpaqefQSJ9VMtyuIaxKZACfayJT
-ONbnkBOfRKMbRGJ5V/Ti/EE=
-=gGNC
+iD8DBQFB4dGdroRuSHgZdywRAqqqAJ0clkqYtWZ942KI2drxHhQnXWDGDACcCIvQ
+xhh+7SuOpeijwxoYEpZu2Pg=
+=Lbi5
 -----END PGP SIGNATURE-----
