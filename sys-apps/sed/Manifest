@@ -1,12 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a0e235e7665e07cd98a0bc6359bfd64 ChangeLog 7774
-MD5 6a956e3342c5e63efa3521477bc3fee1 sed-4.0.5.ebuild 916
-MD5 770227e33780e037620fa66fe40ac076 sed-4.0.8.ebuild 1228
-MD5 7c32f7da2670bc5c309a958dd45788d4 sed-4.0.7.ebuild 1214
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ab565dcfe5d32f51650242da28a2feba sed-4.0.9.ebuild 1401
+MD5 6a956e3342c5e63efa3521477bc3fee1 sed-4.0.5.ebuild 916
+MD5 7c32f7da2670bc5c309a958dd45788d4 sed-4.0.7.ebuild 1214
+MD5 770227e33780e037620fa66fe40ac076 sed-4.0.8.ebuild 1228
+MD5 b4976b3741cd00774a4f470aaa8bdbed sed-4.0.9.ebuild 1397
 MD5 9b3e86e395686a7671a545d114aa2dd2 files/digest-sed-4.0.5 61
-MD5 123861b697ac9119b4d3887608fa0fa1 files/digest-sed-4.0.8 61
-MD5 a244109e1adcbd40a02446fb23df33c1 files/digest-sed-4.0.9 61
 MD5 907f3c9e854e4367dffb4b9074c08056 files/digest-sed-4.0.7 61
+MD5 123861b697ac9119b4d3887608fa0fa1 files/digest-sed-4.0.8 61
 MD5 1f789b81b2d7992345e1490c68ad5477 files/dos2unix 59
 MD5 2502535e2cc93fa49d1c2fdc31eff1b2 files/unix2dos 56
+MD5 a244109e1adcbd40a02446fb23df33c1 files/digest-sed-4.0.9 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBUPBOHTu7gpaalycRAsEOAJ9h8cH0ixTvqcX/mKN2A5ed8dWW3gCgoXlh
+D9hHzVTr0MhM/5AXoMoE4S4=
+=k5qO
+-----END PGP SIGNATURE-----
