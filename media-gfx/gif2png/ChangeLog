@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gif2png
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.7 2004/07/19 02:42:45 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.8 2004/09/09 10:55:59 blubb Exp $
+
+  09 Sep 2004; <blubb@gentoo.org> gif2png-2.5.1.ebuild:
+  added ~amd64 keyword
 
   18 Jul 2004; Tom Gall <tgall@gentoo.org> gif2png-2.5.1.ebuild:
   stable on ppc64, bug #57128
