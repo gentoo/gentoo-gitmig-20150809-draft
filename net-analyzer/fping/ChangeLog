@@ -1,7 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.12 2004/07/31 21:56:36 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.13 2004/08/05 17:40:56 alexander Exp $
 
+  05 Aug 2004; Alexander Plank <alexander@gentoo.org> fping-2.4_beta2.ebuild:
+  add macos keyword
   31 Jul 2004; Tom Gall <tgall@gentoo.org> fping-2.4_beta2-r1.ebuild:
   stable on ppc64, bug #57454
 
