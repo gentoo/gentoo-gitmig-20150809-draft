@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.60.8.ebuild,v 1.3 2004/12/12 16:44:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.60.8.ebuild,v 1.4 2004/12/12 16:48:40 eradicator Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	# Force package to use system libmad
 	rm -rf libmad-0.15.1b
 
-	export WANT_AUTOMAKE=1.8 
+	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
 
 	libtoolize --copy --force
