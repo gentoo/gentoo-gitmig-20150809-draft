@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1_rc1.ebuild,v 1.1 2004/01/03 00:43:55 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1_rc1.ebuild,v 1.2 2004/01/04 18:57:49 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -55,6 +55,19 @@ SLOT="${KV}"
 KEYWORDS="-*"
 #KEYWORDS="-* ~x86 ~amd64 ~mips ~hppa ~sparc ~alpha"
 PROVIDE="virtual/linux-sources virtual/alsa"
+
+if [ "${KEYWORDS}" = "-*" ]
+then
+	ewarn "------------------READ THIS BEFORE CONTINUING!!!!!---------------------"
+	ewarn "This ebuild is KEYWORDED -*.  This usually means it is in developement,"
+	ewarn "and may be missing important files, patches, etc.  It is NOT for general"
+	ewarn "use and you MUST NOT report bugs on this because you should not be using"
+	ewarn "ebuilds KEYWORDED -*.  I strongly suggest you reconsider testing this"
+	ewarn "ebuild.  brad_mssw will kill you if you report bugs on errors with this"
+	ewarn "ebuild.  YOU HAVE BEEN WARNED!"
+	ewarn "-----------------------------------------------------------------------"
+	sleep 10
+fi
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then

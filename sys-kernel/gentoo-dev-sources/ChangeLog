@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.15 2004/01/03 00:43:55 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.16 2004/01/04 18:57:49 brad_mssw Exp $
+
+  04 Jan 2004; Brad House <brad_mssw@gentoo.org>
+  gentoo-dev-sources-2.6.1_rc1.ebuild:
+  add idiot check to this ebuild. Too many people are reporting errors because
+  they're not thinking. When an ebuild is KEYWORDed -*, don't report errors on
+  it
 
 *gentoo-dev-sources-2.6.1_rc1 (02 Jan 2004)
 
