@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gxmame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.8 2004/11/11 01:47:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.9 2004/11/16 11:53:09 mr_bones_ Exp $
+
+  16 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/0.33-newxmame.patch, -gxmame-0.33-r1.ebuild, gxmame-0.34b.ebuild:
+  clamp the version of xmame to the latest one that works; removed old version
 
   11 Nov 2004; Joseph Jezak <josejx@gentoo.org> gxmame-0.34b.ebuild:
   Marked ppc stable.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.34b.ebuild,v 1.7 2004/11/11 01:47:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.34b.ebuild,v 1.8 2004/11/16 11:53:09 mr_bones_ Exp $
 
 DESCRIPTION="frontend for XMame using the GTK library"
 HOMEPAGE="http://gxmame.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="virtual/x11
 	=dev-libs/glib-2*
 	sys-libs/zlib"
 RDEPEND="nls? ( sys-devel/gettext )
-	games-emulation/xmame"
+	<games-emulation/xmame-0.84"
 
 src_unpack() {
 	unpack ${A}
