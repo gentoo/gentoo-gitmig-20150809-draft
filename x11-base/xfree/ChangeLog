@@ -1,8 +1,15 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.18 2002/05/29 00:21:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.19 2002/05/29 01:13:41 azarah Exp $
+
+
 
 *xfree-4.2.0-r11 (28 May 2002)
+
+  29 May 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild :
+
+  Too much coffee, and too little sleep :P  Moved libGLU.* to /usr/lib where
+  it should be.
 
   28 May 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild :
 

@@ -46,7 +46,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	3dfx? ( >=media-libs/glide-v3-3.10 )"
 	
 RDEPEND=">=sys-libs/ncurses-5.1
-	>=x11-base/opengl-update-1.1"
+	>=x11-base/opengl-update-1.2"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -220,13 +220,15 @@ src_install() {
 	newexe ${FILESDIR}/${PVR}/xdm.start xdm
 	newexe ${FILESDIR}/${PVR}/xfs.start xfs
 
-	#next section is to setup the dinamic libGL stuff
+	# we want libGLU.so* in /usr/lib
+	mv ${D}/usr/X11R6/lib/libGLU.* ${D}/usr/lib
+
+	# next section is to setup the dinamic libGL stuff
 	dodir /usr/lib/opengl/xfree/{lib,extensions,include}
 	mv ${D}/usr/X11R6/lib/libGL.so* ${D}/usr/lib/opengl/xfree/lib
 	mv ${D}/usr/X11R6/lib/libGL.la ${D}/usr/lib/opengl/xfree/lib
 	# libGL.a cause problems with tuxracer, etc
 	mv ${D}/usr/X11R6/lib/libGL.a ${D}/usr/lib/opengl/xfree/lib
-	mv ${D}/usr/X11R6/lib/libGLU.* ${D}/usr/lib/opengl/xfree/lib
 	mv ${D}/usr/X11R6/lib/libMesaGL.so ${D}/usr/lib/opengl/xfree/lib
 	mv ${D}/usr/X11R6/lib/modules/extensions/libglx* \
 		${D}/usr/lib/opengl/xfree/extensions
