@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.123 2004/09/17 20:07:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.124 2004/09/18 05:27:22 geoman Exp $
+
+  18 Sep 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.7.0-r2.ebuild,
+  xorg-x11-6.8.0-r1.ebuild:
+  6.7.0-r2 stable, 6.8.0-r1 testing on mips - bug 64152
 
   17 Sep 2004; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.7.0-r2.ebuild:
   Add ~sparc keyword, partially addressing bug 64152.  Testing needed before
