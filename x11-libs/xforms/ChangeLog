@@ -5,6 +5,9 @@
 
 *xforms-089-r2 (19 June 2002)
 
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added ppc to keywords
+
   15 July 2002; Owen Stampflee <owen@gentoo.org>
   Added missing digests for the PPC variant of the xforms digest.
   

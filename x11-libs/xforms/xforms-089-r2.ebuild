@@ -20,7 +20,7 @@ SLOT="0"
 DEPEND="virtual/x11"
 RDEPEND=""
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	make || die

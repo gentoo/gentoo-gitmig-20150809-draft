@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-089-r1.ebuild,v 1.5 2002/07/09 10:53:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-089-r1.ebuild,v 1.6 2002/07/16 03:08:09 gerk Exp $
 
 MY_P="bxform-${PV}-glibc2.1"
 MY_D="linux-i386/elf"
@@ -20,7 +20,7 @@ SLOT="0"
 DEPEND="virtual/x11"
 RDEPEND=""
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	make || die
