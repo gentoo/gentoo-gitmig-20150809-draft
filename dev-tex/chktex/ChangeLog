@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.2 2003/06/20 04:15:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.3 2003/10/03 17:44:33 usata Exp $
+
+  04 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> chktex-1.5-r2.ebuild:
+  Changed app-text/tetex to virtual/tetex
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
