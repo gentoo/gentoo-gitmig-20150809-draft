@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.8 2004/09/29 03:42:17 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.9 2004/10/23 05:43:10 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/readline/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="macos ppc-macos" # Only changed Darwin specific part, should work just fine on other archs.
+KEYWORDS="ppc-macos" # Only changed Darwin specific part, should work just fine on other archs.
 IUSE=""
 
 # We must be certain that we have a bash that is linked
