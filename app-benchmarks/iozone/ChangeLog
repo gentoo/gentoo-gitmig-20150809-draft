@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.8 2004/07/21 00:26:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.9 2004/09/07 16:15:14 blubb Exp $
+
+  07 Sep 2004; <blubb@gentoo.org> iozone-3.221.ebuild:
+  added ~amd64 keyword
 
 *iozone-3.221 (21 Jul 2004)
 
