@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.90.ebuild,v 1.2 2004/02/21 13:38:20 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.90.ebuild,v 1.3 2004/02/22 23:12:23 humpback Exp $
 
 S="${WORKDIR}/msn"
 DESCRIPTION="Alvaro's Messenger client for MSN"
@@ -16,7 +16,6 @@ KEYWORDS="~x86"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
-	dev-tcltk/tls
 	imlib? ( media-libs/imlib )
 	imagemagick? ( media-gfx/imagemagick )
 	ssl? ( dev-tcltk/tls )
