@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.26.1a-r1.ebuild,v 1.1 2003/10/08 00:57:51 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.26.1a-r1.ebuild,v 1.2 2003/10/08 02:22:09 woodchip Exp $
 
 DESCRIPTION="Apache module which acts as an Internet Content Accelerator"
 HOMEPAGE="http://sourceforge.net/projects/mod-gzip/"
-KEYWORDS="x86 ~sparc ~alpha"
+KEYWORDS="~x86 ~sparc ~alpha"
 
 S=${WORKDIR}/${P}
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/mod-gzip/mod_gzip-${PV}.tgz"
