@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cddb-py
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cddb-py/ChangeLog,v 1.6 2004/07/04 17:05:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cddb-py/ChangeLog,v 1.7 2004/08/29 11:05:12 lv Exp $
+
+  29 Aug 2004; Travis Tilley <lv@gentoo.org> cddb-py-1.4.ebuild:
+  stable on amd64
 
   04 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cddb-py-1.4.ebuild:
   ~amd64.
