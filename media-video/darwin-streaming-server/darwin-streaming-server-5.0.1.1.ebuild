@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/darwin-streaming-server/darwin-streaming-server-5.0.1.1.ebuild,v 1.3 2004/07/01 08:39:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/darwin-streaming-server/darwin-streaming-server-5.0.1.1.ebuild,v 1.4 2004/11/03 06:49:22 eradicator Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ssl"
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
+DEPEND="app-arch/unzip"
 
 RDEPEND="${DEPEND}
 	 dev-lang/perl
