@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.4 2005/02/04 18:28:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.5 2005/02/10 16:00:38 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -78,7 +78,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.4 2005/02/04 18:28:47 wolf31o2 Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.5 2005/02/10 16:00:38 wolf31o2 Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -194,7 +194,9 @@ fi
 # gettext should only be needed when used with nls
 for opt in ${ORIGUSE} ; do
 	case "${opt}" in
-		nls) myGETTEXT="gettext";;
+		nls) myGETTEXT="gettext"
+			STAGE1_USE="${STAGE1_USE} nls"
+			;;
 		nptl)
 			if [[ -z $(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0') ]] ; then
 				eerror "You need to have >=sys-kernel/linux-headers-2.6.0 unmasked!"
@@ -205,7 +207,10 @@ for opt in ${ORIGUSE} ; do
 				cleanup 1
 			fi
 			USE_NPTL=1
-		;;
+			;;
+		multilib)
+			STAGE1_USE="${STAGE1_USE} multilib"
+			;;
 	esac
 done
 
@@ -233,6 +238,7 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 if [[ ${USE_NPTL} = "1" ]] ; then
 	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0')"
 	[[ -n ${myOS_HEADERS} ]] && myOS_HEADERS=">=${myOS_HEADERS}"
+	STAGE1_USE="${STAGE1_USE} nptl"
 fi
 [[ -z ${myOS_HEADERS} ]] && myOS_HEADERS="virtual/os-headers"
 
@@ -283,7 +289,7 @@ if [ ${BOOTSTRAP_STAGE} -le 1 ] ; then
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 2
 fi
-export USE="${ORIGUSE} bootstrap ${STAGE1_USE}"
+export USE="-* bootstrap ${STAGE1_USE}"
 
 # We can't unmerge headers which may or may not exist yet. If your
 # trying to use nptl, it may be needed to flush out any old headers
