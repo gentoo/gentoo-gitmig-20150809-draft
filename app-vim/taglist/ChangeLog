@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/taglist
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.14 2004/04/16 23:55:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.15 2004/04/29 00:04:43 ciaranm Exp $
+
+*taglist-3.2 (29 Apr 2004)
+
+  29 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> +taglist-3.2.ebuild:
+  Version bump
 
   17 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> -taglist-2.6-r1.ebuild,
   -taglist-2.6.ebuild, -taglist-2.8.ebuild:
