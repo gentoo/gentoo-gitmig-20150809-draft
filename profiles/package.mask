@@ -372,9 +372,6 @@ app-doc/tkinfo
 # Not sure what to do with this:
 dev-libs/libiconv
 
-# Gamma branch
->=app-editors/xemacs-21.4.5
-
 # Fails with new Java scheme (karltk) 
 =net-www/tomcat-3.2.2
 
