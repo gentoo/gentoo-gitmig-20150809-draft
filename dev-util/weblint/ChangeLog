@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weblint
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weblint/ChangeLog,v 1.4 2003/02/12 06:47:34 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weblint/ChangeLog,v 1.5 2004/03/30 09:50:45 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> weblint-1.020.ebuild:
+  Adding amd64 keyword. Closing #44958.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
