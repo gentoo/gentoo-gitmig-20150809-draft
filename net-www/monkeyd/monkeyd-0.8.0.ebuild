@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.8.0.ebuild,v 1.1 2003/12/25 19:39:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.8.0.ebuild,v 1.2 2003/12/26 06:06:41 vapier Exp $
 
 WEBROOT=/var/www/localhost
 
@@ -11,7 +11,7 @@ SRC_URI="http://monkeyd.sourceforge.net/versions/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc"
