@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.88 2004/12/31 13:20:06 taviso Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.89 2005/01/03 15:41:46 gustavoz Exp $
+
+  03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> fvwm-2.5.12.ebuild:
+  Stable on sparc
 
   31 Dec 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.12.ebuild:
   2.5.12 stable on x86
