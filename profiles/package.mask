@@ -26,10 +26,6 @@
 # masked for testing
 =net-dialup/speedtouch-1.1
 
-# <seemant@gentoo.org> (30 Aug 2002)
-# masked for testing
-=sys-libs/readline-4.3
-
 # <tantive@gentoo.org> (30 Aug 2002)
 # masked for further testing
 =sys-apps/openmosix-user-0.2.4-r1
@@ -463,14 +459,6 @@ net-misc/radvd
 # PLEASE make sure that this works for most people, or
 # that you have a definate fix!!!!
 >=sys-apps/groff-1.18
-
-# <seemant@gentoo.org> (23 Jul 2002)
-# Masked while the system people put this through the test
-# (25 Jul 2002)  Discovered bugs in file completion, and error messaging
-# Best to leave this masked until we get either a patch or 2.05c or
-# something.  the -r1 patches the file completion. error messaging is just a
-# new format. so this can be tested (30 Aug 2002)
->=sys-apps/bash-2.05b
 
 # <seemant@gentoo.org> (23 Jul 2002)
 # Masked while g2boojum approves
