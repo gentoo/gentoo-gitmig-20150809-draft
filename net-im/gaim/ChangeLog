@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.102 2003/11/27 05:56:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.103 2003/12/02 19:59:47 lostlogic Exp $
+
+*gaim-0.74-r1 (02 Dec 2003)
+
+  02 Dec 2003; Brandon Low <lostlogic@gentoo.org> gaim-0.74-r1.ebuild,
+  files/gaim-0.74-log_free.patch:
+  Fix an ebuild doing extra work issue
+  Add a patch to stop logging from leaking memory
 
   27 Nov 2003; Luca Barbato <lu_zero@gentoo.org> gaim-0.74.ebuild:
   Marked ~ppc
