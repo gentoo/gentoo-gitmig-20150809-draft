@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.26 2005/01/28 19:09:12 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.27 2005/02/01 22:47:22 stkn Exp $
+
+  01 Feb 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/zaptel-1.0.4-gcc34.patch, zaptel-1.0.3.ebuild, zaptel-1.0.4.ebuild:
+  New gcc34 patch, provided by Ray Russell Reese III <anti@gentoo.org>,
+  ebuild stops now if required PPP support is missing in kernel config.
+  Fixed check for DEVFS_FS and moved the UDEV message to pkg_postinst.
+  Fixed SRC_URI for 1.0.3.
 
 *zaptel-1.0.4 (28 Jan 2005)
 

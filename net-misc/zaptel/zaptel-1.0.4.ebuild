@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4.ebuild,v 1.1 2005/01/28 19:09:12 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4.ebuild,v 1.2 2005/02/01 22:47:22 stkn Exp $
 
 IUSE="devfs26"
 
@@ -14,30 +14,19 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
+CONFIG_CHECK="PPP"
+ERROR_PPP="PPP support isn't enabled or available as a module! Please reconfigure your kernel to include CONFIG_PPP,
+	CONFIG_PPP_ASYNC CONFIG_PPP_DEFLATE and CONFIG_PPPOE."
+
 DEPEND="virtual/libc
 	virtual/linux-sources
 	>=dev-libs/newt-0.50.0"
 
 pkg_setup() {
-	get_version || die "Unable to calculate Linux Kernel version"
-
-	if ! linux_chkconfig_present CONFIG_PPP
-	then
-		einfo "If you want to use PPP over your hardware:"
-		einfo ""
-		einfo "   Please make sure that your kernel has the appropriate"
-		einfo "   PPP support enabled or present as modules before merging:"
-		einfo ""
-		einfo "   CONFIG_PPP=m"
-		einfo "   CONFIG_PPP_ASYNC=m"
-		einfo "   CONFIG_PPP_DEFLATE=m"
-		einfo "   CONFIG_PPPOE=m"
-		einfo ""
-		einfo "   Quit now, recompile your kernel, and reboot."
-	fi
+	linux-info_pkg_setup
 
 	# show an nice warning message about zaptel not supporting devfs on 2.6
-	if [ "${KV_MAJOR}.${KV_MINOR}" == "2.6" ] && linux_chkconfig_present CONFIG_DEVFS_FS ; then
+	if kernel_is 2 6 && linux_chkconfig_present DEVFS_FS ; then
 		echo
 		einfo "You're using a 2.6 kernel with DEVFS."
 		einfo "The Zaptel drivers won't work unless you either:"
@@ -57,10 +46,6 @@ pkg_setup() {
 		echo
 		einfo "Sleeping 20 Seconds..."
 		epause 20
-	else
-		echo
-		einfo "Sleeping 10 Seconds..."
-		epause 10
 	fi
 }
 
@@ -110,16 +95,6 @@ src_install() {
 	newexe ${FILESDIR}/zaptel.rc6 zaptel
 	insinto /etc/conf.d
 	newins ${FILESDIR}/zaptel.confd zaptel
-
-# FIXME!! Can we (we should) do this automatically
-	einfo "If you're using udev add the following to"
-	einfo "/etc/udev/rules.d/50-udev.rules (as in README.udev):"
-	einfo "# Section for zaptel device"
-	einfo "KERNEL=\"zapctl\",     NAME=\"zap/ctl\""
-	einfo "KERNEL=\"zaptimer\",   NAME=\"zap/timer\""
-	einfo "KERNEL=\"zapchannel\", NAME=\"zap/channel\""
-	einfo "KERNEL=\"zappseudo\",  NAME=\"zap/pseudo\""
-	einfo "KERNEL=\"zap[0-9]*\",  NAME=\"zap/%n\""
 }
 
 pkg_postinst() {
@@ -133,4 +108,14 @@ pkg_postinst() {
 
 	echo
 	einfo "Use the /etc/init.d/zaptel script to load zaptel.conf settings on startup!"
+	echo
+# FIXME!! Can we (we should) do this automatically
+	einfo "If you're using udev add the following to"
+	einfo "/etc/udev/rules.d/50-udev.rules (as in README.udev):"
+	einfo "# Section for zaptel device"
+	einfo "KERNEL=\"zapctl\",     NAME=\"zap/ctl\""
+	einfo "KERNEL=\"zaptimer\",   NAME=\"zap/timer\""
+	einfo "KERNEL=\"zapchannel\", NAME=\"zap/channel\""
+	einfo "KERNEL=\"zappseudo\",  NAME=\"zap/pseudo\""
+	einfo "KERNEL=\"zap[0-9]*\",  NAME=\"zap/%n\""
 }
