@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.27 2004/07/19 22:21:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.28 2004/07/23 23:41:38 mr_bones_ Exp $
+
+  23 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> amule-2.0.0_rc5.ebuild:
+  don't use deprecated ? : syntax
 
 *amule-2.0.0_rc5 (19 Jul 2004)
 
