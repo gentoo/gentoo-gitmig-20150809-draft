@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.6 2004/02/21 19:50:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.7 2004/04/24 00:38:49 vapier Exp $
 
-IUSE="static nls bootstrap java build X multilib nogcj"
+IUSE="static nls bootstrap java build X multilib gcj"
 
 inherit eutils flag-o-matic libtool
 
@@ -360,7 +360,7 @@ src_compile() {
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
-	if [ -n "`use java`" -a -z "`use nogcj`" -a -z "`use build`" ]
+	if [ -n "`use java`" -a "`use gcj`" -a -z "`use build`" ]
 	then
 		gcc_lang="${gcc_lang},java"
 	fi
@@ -370,7 +370,7 @@ src_compile() {
 	# X11 support is still very experimental but enabling it is
 	# quite innocuous...  [No, gcc is *not* linked to X11...]
 	# <dragon@gentoo.org> (15 May 2003)
-	if [ -n "`use java`" -a -z "`use nogcj`" -a \
+	if [ -n "`use java`" -a "`use gcj`" -a \
 	     -n "`use X`" -a -z "`use build`" -a \
 	     -f /usr/X11R6/include/X11/Xlib.h ]
 	then
@@ -642,7 +642,7 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 
-		if [ -n "`use java`" -a -z "`use nogcj`" ]
+		if [ -n "`use java`" -a "`use gcj`" ]
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
