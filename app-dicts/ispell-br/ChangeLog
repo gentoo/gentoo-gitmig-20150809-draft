@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/ispell-br
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ChangeLog,v 1.5 2003/02/12 13:22:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ChangeLog,v 1.6 2003/03/08 01:07:44 vladimir Exp $
 
 *ispell-br-2.4-r1 (18 Jan 2003)
 
@@ -17,6 +17,10 @@
   remove duplicate words, add new words and fix an error in br.aff.
 
 *ispell-br-2.4 (11 Jul 2002)
+
+  07 Mar 2003; Graham Forest <vladimir@gentoo.org> ispell-br-2.4-r1.ebuild,
+  ispell-br-2.4.ebuild:
+  Added all KEYWORDS
 
   02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> * :
 

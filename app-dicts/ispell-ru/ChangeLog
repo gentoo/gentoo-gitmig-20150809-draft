@@ -1,8 +1,12 @@
 # ChangeLog for app-dicts/ispell-ru
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ChangeLog,v 1.3 2003/02/12 03:34:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ChangeLog,v 1.4 2003/03/08 01:07:44 vladimir Exp $
 
 *ispell-ru-0.99.6.1 (11 Jul 2002)
+
+  07 Mar 2003; Graham Forest <vladimir@gentoo.org> ispell-ru-0.99.5.9.ebuild,
+  ispell-ru-0.99.6.1.ebuild:
+  Added all KEYWORDS
 
   02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> * :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sv/ispell-sv-1.3.8.ebuild,v 1.2 2003/02/12 13:29:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sv/ispell-sv-1.3.8.ebuild,v 1.3 2003/03/08 01:07:44 vladimir Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Swedish dictionary for ispell"
@@ -9,7 +9,7 @@ HOMEPAGE="http://sv.speling.org"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="ppc x86 sparc alpha mips hppa arm"
 
 DEPEND="app-text/ispell"
 
