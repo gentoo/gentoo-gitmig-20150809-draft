@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.6 2002/11/12 02:34:40 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.7 2002/11/12 02:49:32 nall Exp $
 
 *endeavour-2.1.20-r1 (10 Nov 2002)
 
@@ -8,6 +8,12 @@
   
   added patch to fix "negative" images in the iBrowser on big endian
   systems. fixes bug #10564.
+
+  11 Nov 2002; Jon Nall <nall@gentoo.org> endeavour-2.1.20-r1.ebuild :
+
+  added sparc and sparc64 to list of ARCHs that the bigendian patch
+  should be applied against. since those ARCHs aren't KEYWORDSed yet
+  no users should be affected. fixed cd in src_compile
   
 *endeavour-2.1.20 (07 Nov 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20-r1.ebuild,v 1.1 2002/11/12 02:34:40 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20-r1.ebuild,v 1.2 2002/11/12 02:49:32 nall Exp $
 
 IUSE=""
 
@@ -28,7 +28,7 @@ src_unpack() {
 	mv fio.cpp fio.cpp-orig
 	sed -e "s:#include <ctype.h>://#include <ctype.h>:" fio.cpp-orig >fio.cpp
 
-	if [ "${ARCH}" = "ppc" ]; then
+	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]; then
 		# This patch fixes inverted color on big endian machines
 		einfo "Applying big endian patch..."
 		cd ${S}; patch -p0 < ${FILESDIR}/${P}-bigendian.diff > /dev/null || die
@@ -36,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${P}
+	cd ${S}
 	./configure Linux \
 		--prefix=/usr
 	emake || die "Parallel make failed"
