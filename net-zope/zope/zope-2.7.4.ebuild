@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.4.ebuild,v 1.3 2005/02/22 19:56:08 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.4.ebuild,v 1.4 2005/02/25 01:10:49 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-0.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
-KEYWORDS="x86 ~sparc ~ppc ~alpha ~amd64"
+KEYWORDS="x86 sparc ~ppc ~alpha ~amd64"
 IUSE="unicode"
 
 RDEPEND="=dev-lang/python-2.3*"

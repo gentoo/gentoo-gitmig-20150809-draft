@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.62 2005/02/22 19:56:08 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.63 2005/02/25 01:10:49 weeve Exp $
+
+  24 Feb 2005; Jason Wever <weeve@gentoo.org> zope-2.7.4.ebuild:
+  Stable on sparc.
 
   22 Feb 2005; Radoslaw Stachowiak <radek@gentoo.org> zope-2.7.4.ebuild:
   fixed bug #82707 regarding python-2.3.5 and zope-2.7.4.
