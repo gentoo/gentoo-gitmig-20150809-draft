@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.3 2003/02/07 13:37:54 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.4 2003/02/07 15:13:59 lordvan Exp $
 
 IUSE="ssl socks5 qt kde ncurses"
 
@@ -27,10 +27,6 @@ src_compile() {
 	use ssl		|| first_conf="${first_conf} --disable-openssl"
 	use socks5	&& first_conf="${first_conf} --enable-socks5"
 
-	# check for other plugins than qt or kde by default too
-	patch -p0 ${S}/src/licq.cpp < ${FILESDIR}/licq.cpp-plugins.patch
-	einfo "Patched licq.cpp"
-		
 	econf ${first_conf} || die
 	emake || die
 
