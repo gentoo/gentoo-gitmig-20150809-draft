@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.52 2003/02/12 17:17:12 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.53 2003/02/13 12:43:07 hannes Exp $
+
+  13 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1-r2.ebuild:
+  added KDEDIRS=${PREFIX} again to fix bug #15593
 
   12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-2.2.2-r4.ebuild,
   kdelibs-2.2.2a.ebuild, kdelibs-3.0.2-r1.ebuild, kdelibs-3.0.3.ebuild,
