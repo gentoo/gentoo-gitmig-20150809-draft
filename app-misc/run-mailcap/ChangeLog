@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.19 2004/08/09 21:28:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.20 2004/09/05 19:20:06 gmsoft Exp $
+
+  05 Sep 2004; Guy Martin <gmsoft@gentoo.org> run-mailcap-3.26_p1.ebuild:
+  Stable on hppa.
 
   09 Aug 2004; Tom Martin <slarti@gentoo.org> run-mailcap-3.26_p1.ebuild:
   No longer installs /etc/mime.types - RDEPENDs on app-misc/mime-types now.
