@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r1.ebuild,v 1.6 2004/07/05 22:20:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r1.ebuild,v 1.7 2004/10/16 23:08:50 axxo Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic java-pkg
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 
@@ -131,7 +131,7 @@ src_install() {
 	dodoc contrib/adddepend/*
 
 	if use java; then
-		dojar ${D}/usr/share/postgresql/java/postgresql.jar
+		java-pkg_dojar ${D}/usr/share/postgresql/java/postgresql.jar
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
 

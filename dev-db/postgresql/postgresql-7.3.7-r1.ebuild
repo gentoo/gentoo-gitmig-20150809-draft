@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.7-r1.ebuild,v 1.1 2004/10/02 23:57:49 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.7-r1.ebuild,v 1.2 2004/10/16 23:08:50 axxo Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils gnuconfig flag-o-matic java-pkg
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 
@@ -133,7 +133,7 @@ src_install() {
 	if use java; then
 		# we need to remove jar file after dojar; otherwise two same jar
 		# file are installed.
-		dojar ${D}/usr/share/postgresql/java/postgresql.jar
+		java-pkg_dojar ${D}/usr/share/postgresql/java/postgresql.jar
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
 
