@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7-r1.ebuild,v 1.2 2004/05/30 22:26:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7-r1.ebuild,v 1.3 2004/05/30 22:46:58 g2boojum Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE="ssl ipv6 md5sum mailwrapper"
 DEPEND="virtual/glibc
 	ssl? ( dev-libs/openssl )"
 RDEPEND="mailwrapper? ( =net-mail/mailwrapper-0.1 )
+	!mailwrapper? ( !virtual/mta )
 	net-mail/mailbase
 	ssl? ( dev-libs/openssl )"
 PROVIDE="virtual/mta"
@@ -83,4 +84,14 @@ src_install() {
 	#else
 	#        mv ${conffile}.pre ${conffile}
 	#fi
+}
+
+pkg_postinst() {
+	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
+	then
+		einfo
+		einfo "Since you emerged ssmtp w/o mailwrapper in USE,"
+		einfo "you probably want to 'emerge -C mailwrapper' now."
+		einfo
+	fi
 }
