@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.27.ebuild,v 1.1 2004/07/15 00:36:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.27.ebuild,v 1.2 2004/07/17 09:48:39 dholm Exp $
 
 DESCRIPTION="Network utility to retrieve files from an NNTP news server"
 HOMEPAGE="http://nget.sourceforge.net/"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~arm"
+KEYWORDS="~x86 ~arm ~ppc"
 IUSE="static debug ipv6 pcre zlib"
 
 RDEPEND="virtual/libc
