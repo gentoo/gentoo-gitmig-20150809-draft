@@ -57,7 +57,8 @@ packages
 sys-apps 
 sys-cluster
 sys-devel
-sys-kernel 
+sys-kernel
+sys-kmods
 sys-libs 
 x11-base 
 x11-libs
@@ -67,3 +68,4 @@ x11-terms
 x11-themes
 x11-wm 
 virtual 
+
