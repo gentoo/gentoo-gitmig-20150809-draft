@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.60 2003/09/17 03:08:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.61 2003/10/01 21:05:33 robbat2 Exp $
+
+*php-4.3.3-r2 (01 Oct 2003)
+
+  01 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.3-r2.ebuild:
+  bump rev on ebuild for eclass changes, and move to stable
 
   16 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.3-r1.ebuild:
   ncurses cleanup
