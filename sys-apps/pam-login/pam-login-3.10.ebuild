@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.10.ebuild,v 1.9 2003/09/07 00:57:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.10.ebuild,v 1.10 2004/02/17 08:25:15 mr_bones_ Exp $
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -12,7 +12,7 @@ DESCRIPTION="Based on the sources from util-linux, with added pam and shadow fea
 SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/pam/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 HOMEPAGE="http://www.thkukuk.de/pam/pam_login/"
 
-KEYWORDS="x86 amd64 ppc sparc ~alpha ~mips ~hppa arm"
+KEYWORDS="x86 amd64 ppc sparc ~alpha ~mips ~hppa"
 SLOT="0"
 LICENSE="GPL-2"
 
