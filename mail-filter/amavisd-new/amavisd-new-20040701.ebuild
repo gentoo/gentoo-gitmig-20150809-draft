@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20040701.ebuild,v 1.1 2004/07/28 17:25:36 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20040701.ebuild,v 1.2 2004/07/29 11:51:01 merlin Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${PV/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc"
 IUSE="ldap mysql postgres milter"
 
 DEPEND=">=sys-apps/sed-4
@@ -86,7 +86,7 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/amavisd.rc6" amavisd
-	dosed "s:/var/spool/amavis/:$AMAVIS_ROOT/:g" /etc/init.d/amavisd
+	dosed "s:/var/run/amavis/:$AMAVIS_ROOT/:g" /etc/init.d/amavisd
 
 	keepdir ${AMAVIS_ROOT}
 	fowners amavis:amavis ${AMAVIS_ROOT}

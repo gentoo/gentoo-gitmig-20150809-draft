@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.7 2004/07/28 17:25:36 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.8 2004/07/29 11:51:01 merlin Exp $
+
+  29 Jul 2004; Cory Visi <merlin@gentoo.org> amavisd-new-20040701.ebuild:
+  Fix sed logic on init script, closing Bug 58727
 
 *amavisd-new-20040701 (28 Jul 2004)
 
