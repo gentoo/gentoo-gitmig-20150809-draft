@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.9 2004/06/24 23:22:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.10 2004/06/28 22:09:32 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc alpha sparc"
 IUSE="motif cjk xgetdefault"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	motif? ( x11-libs/openmotif )"
 
