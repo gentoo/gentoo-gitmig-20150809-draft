@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/Numeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/ChangeLog,v 1.3 2002/07/27 05:40:14 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/ChangeLog,v 1.4 2002/09/07 18:13:32 owen Exp $
 
 *Numeric-21.0 (14 Mar 2002)
+
+  7 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   26 Jul 2002; George Shapovalov <george@gentoo.org> Numeric-19.0.0.ebuild, Numeric-20.3.ebuild, Numeric-21.0.ebuild :
   added KEYWORDS,SLOT,LICENSE; corrected the header
