@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.92.ebuild,v 1.1 2004/05/31 06:08:37 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.92.ebuild,v 1.2 2004/06/24 22:24:03 agriffis Exp $
 
 DESCRIPTION="The No-Brainer SMTP"
 SRC_URI="http://www.gentoo-es.org/~ferdy/${P}.tar.bz2"
