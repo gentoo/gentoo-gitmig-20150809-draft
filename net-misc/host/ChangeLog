@@ -1,13 +1,16 @@
 # ChangeLog for net-misc/host
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.9 2003/02/27 12:02:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.10 2003/03/01 22:11:29 lostlogic Exp $
 
  21 Jan 2003; Will Woods <wwoods@gentoo.org> : added ~alpha keyword 
 
  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *host-991529 (10 May 2002)
+
+  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> host-991529.ebuild:
+  Switch to emake and make use CC/CXX environment variables
 
   27 Feb 2003; Guy Martin <gmsoft@gentoo.org> host-991529.ebuild :
   Added hppa to keywords.

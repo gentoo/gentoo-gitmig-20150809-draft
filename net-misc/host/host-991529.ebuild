@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.13 2003/02/27 12:02:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.14 2003/03/01 22:11:29 lostlogic Exp $
 
 S="${WORKDIR}"
 
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make || die
+	emake CC="${CC}" CXX="${CXX}" || die
 }
 
 src_install () {
