@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.2 2004/01/26 01:00:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.3 2004/01/30 07:02:03 drobbins Exp $
 
 inherit gnuconfig ssl-cert
 
@@ -13,19 +13,20 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="kerberos ldap ssl"
 
-DEPEND="virtual/glibc
-	sys-devel/gnuconfig
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool
-	>=sys-libs/db-3.2
+RDEPEND=">=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.3
 	>=dev-libs/cyrus-imap-dev-2.1.14
-	>=sys-apps/sed-4
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-2.0 )
 	ssl? ( >=net-misc/stunnel-4 )"
 
+DEPEND="$RDEPEND
+	sys-devel/gnuconfig
+	>=sys-devel/autoconf-2.58
+	sys-devel/automake
+	sys-devel/libtool
+	>=sys-apps/sed-4"
+	
 S="${WORKDIR}/${PN}-v${PV}"
 
 src_unpack() {
