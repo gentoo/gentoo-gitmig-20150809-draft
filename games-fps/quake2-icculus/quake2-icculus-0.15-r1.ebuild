@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.8 2004/06/28 22:19:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.9 2004/07/02 01:50:42 mr_bones_ Exp $
 
 inherit eutils gcc games
 
 MY_P="quake2-r${PV}"
-S="${WORKDIR}/${MY_P}"
-
 DESCRIPTION="The icculus.org linux port of iD's quake2 engine"
 HOMEPAGE="http://icculus.org/quake2/"
 SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
@@ -32,19 +30,21 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	app-arch/sharutils"
 
+S="${WORKDIR}/${MY_P}"
+
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-Makefile-noopts.patch
-	epatch ${FILESDIR}/${PV}-Makefile-optflags.patch
-	epatch ${FILESDIR}/${PV}-gentoo-path.patch
+	epatch "${FILESDIR}/${PV}-Makefile-noopts.patch"
+	epatch "${FILESDIR}/${PV}-Makefile-optflags.patch"
+	epatch "${FILESDIR}/${PV}-gentoo-path.patch"
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake2-data:" \
 		src/qcommon/files.c \
 		|| die "sed src/qcommon/files.c failed"
 
-	ln -s `which echo` ${T}/more
-	for g in $(useq rogue && echo rogue) $(useq xatrix && echo matrix); do
+	ln -s $(which echo) ${T}/more
+	for g in $(useq rogue && echo rogue) $(useq xatrix && echo xatrix); do
 		mkdir -p ${S}/src/${g}
 		cd ${S}/src/${g}
 		unpack ${g}src320.shar.Z
@@ -63,14 +63,17 @@ src_unpack() {
 
 yesno() {
 	for f in $@ ; do
-		useq $f || { echo NO ; return 1 ; }
+		if ! useq $f ; then
+			echo NO
+			return 1
+		fi
 	done
 	echo YES
 	return 0
 }
 
 src_compile() {
-	BUILD_X11=`yesno X`
+	BUILD_X11=$(yesno X)
 	use sdl || use X || use svga || use aalib || BUILD_X11=YES
 
 	# xatrix fails to build
@@ -82,26 +85,26 @@ src_compile() {
 			|| echo "#define GENTOO_LIBDIR \"${GAMES_LIBDIR}/${PN}\"" > src/linux/gentoo-libdir.h
 		make clean || die "cleaning failed"
 		make build_release \
-			BUILD_SDLQUAKE2=`yesno sdl` \
-			BUILD_SVGA=`yesno svga` \
+			BUILD_SDLQUAKE2=$(yesno sdl) \
+			BUILD_SVGA=$(yesno svga) \
 			BUILD_X11=${BUILD_X11} \
-			BUILD_GLX=`yesno opengl X` \
-			BUILD_SDL=`yesno sdl` \
-			BUILD_SDLGL=`yesno sdl opengl` \
+			BUILD_GLX=$(yesno opengl X) \
+			BUILD_SDL=$(yesno sdl) \
+			BUILD_SDLGL=$(yesno sdl opengl) \
 			BUILD_CTFDLL=YES \
-			BUILD_XATRIX=`yesno xatrix` \
-			BUILD_ROGUE=`yesno rogue` \
-			BUILD_JOYSTICK=`yesno joystick` \
+			BUILD_XATRIX=$(yesno xatrix) \
+			BUILD_ROGUE=$(yesno rogue) \
+			BUILD_JOYSTICK=$(yesno joystick) \
 			BUILD_DEDICATED=YES \
-			BUILD_AA=`yesno aalib` \
+			BUILD_AA=$(yesno aalib) \
 			BUILD_QMAX=${BUILD_QMAX} \
 			HAVE_IPV6=NO \
 			BUILD_ARTS=NO \
 			SDLDIR=/usr/lib \
-			BUILD_ARTS=`yesno arts` \
+			BUILD_ARTS=$(yesno arts) \
 			OPTCFLAGS="${CFLAGS}" \
 			|| die "make failed"
-			#HAVE_IPV6=`yesno ipv6` \
+			#HAVE_IPV6=$(yesno ipv6) \
 		# now we save the build dir ... except for the object files ...
 		rm release*/*/*.o
 		mv release* my-rel-${BUILD_QMAX}
