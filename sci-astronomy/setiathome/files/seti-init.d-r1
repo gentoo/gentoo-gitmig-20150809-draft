@@ -1,0 +1,63 @@
+#!/sbin/runscript
+
+if [ -z "${SETIATHOME_THREADS}" ]; then
+	SETIATHOME_THREADS=$( egrep -c "^bogomips" /proc/cpuinfo )
+fi
+
+depend() { 
+	use net
+}
+
+checkconfig() {
+	SETIBINDIR="/opt/setiathome"
+	if [ ! -e "${SETIATHOME_DIR}" ] ; then
+		einfo "Creating ${SETIATHOME_DIR}"
+		mkdir "${SETIATHOME_DIR}"
+	fi
+
+	if [ ! -e "${SETIATHOME_DIR}/user_info.sah" ] ; then
+		eerror "Please setup SETI@home first by running the following commands:"
+		eerror cd "${SETIATHOME_DIR}"
+		eerror ${SETIBINDIR}/setiathome -login ${SETIATHOME_OPTIONS}
+		return 1
+	fi
+
+	if [ "${SETIATHOME_THREADS}" != '1' ] ; then
+		cd ${SETIATHOME_DIR}
+		for thread in `seq 2 "${SETIATHOME_THREADS}"`; do
+			if [ ! -e "${SETIATHOME_DIR}/thread${thread}" ]; then
+				mkdir "${SETIATHOME_DIR}/thread${thread}"
+				cp "${SETIATHOME_DIR}/user_info.sah" "${SETIATHOME_DIR}/thread${thread}"
+			fi
+		done
+	fi
+	return 0
+}
+
+start() {
+	checkconfig || return 1;
+
+	if [ "${SETIATHOME_THREADS}" = '1' ] ; then
+		ebegin "Starting SETI@home"
+	else
+		ebegin "Starting SETI@home (${SETIATHOME_THREADS} threads)"
+	fi
+
+	for thread in `seq 1 "${SETIATHOME_THREADS}"`; do
+		cd "${SETIATHOME_DIR}"
+		if [ "${thread}" != '1' ]; then
+			cd "thread${thread}"
+		fi
+
+		${SETIATHOME_DIR}/setiwrapper ${SETIBINDIR} ${SETIATHOME_OPTIONS} >& setiathome.log &
+	done
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping SETI@home"
+	killall setiwrapper
+	killall setiathome
+	eend $?
+}
