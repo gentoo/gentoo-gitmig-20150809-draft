@@ -1,6 +1,12 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.49 2004/08/19 10:43:17 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.50 2004/08/19 21:33:00 stuart Exp $
+
+*webapp-config-1.10-r10 (19 Aug 2004)
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +webapp-config-1.10-r10.ebuild:
+  Fix for permissions problem due to typo in -r8
 
 *webapp-config-1.10-r9 (19 Aug 2004)
 
