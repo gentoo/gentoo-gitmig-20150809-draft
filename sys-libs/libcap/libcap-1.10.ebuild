@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.11 2003/10/10 18:45:14 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.12 2003/10/10 23:05:20 mr_bones_ Exp $
 
 inherit base flag-o-matic
 
@@ -36,7 +36,7 @@ src_compile() {
 		CFLAGS="${CFLAGS} -I/usr/include/python${PYTHONVER}"
 	fi
 
-    # http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
 	has_version "sys-devel/hardened-gcc" && append-flags "-yet_exec"
 
 	emake COPTFLAG="${CFLAGS}" DEBUG="" ${myflags} || die
