@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/g-brief
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.2 2003/09/26 10:15:02 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.3 2003/10/09 12:40:53 pylon Exp $
+
+  09 Oct 2003; Lars Weiler <pylon@gentoo.org> g-brief-4.0.1.ebuild,
+  metadata.xml:
+  Changed Homepage URL.
+  Masked stable for x86 and ppc.
 
   26 Sep 2003; Mike Gardiner <obz@gentoo.org> g-brief-4.0.1.ebuild,
   metadata.xml:
