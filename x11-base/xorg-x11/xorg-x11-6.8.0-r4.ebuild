@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.21 2004/12/06 23:27:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.22 2004/12/06 23:43:36 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -597,9 +597,9 @@ host_def_setup() {
 		echo "#define FontDir /usr/share/fonts" >> ${HOSTCONF}
 		# Saving this for a later revision
 		# echo "#define BinDir /usr/bin" >> ${HOSTCONF}
-		# /usr/X11R6/lib with exception of /usr/X11R6/lib/X11
-		echo "#define LibDir /usr/$(get_libdir)" >> ${HOSTCONF}
 		# /usr/X11R6/lib/X11
+		echo "#define LibDir /usr/$(get_libdir)" >> ${HOSTCONF}
+		# /usr/X11R6/lib with exception of /usr/X11R6/lib/X11
 		echo "#define UsrLibDir /usr/$(get_libdir)" >> ${HOSTCONF}
 
 		# Make man4 and man7 stuff get 'x' suffix like everything else
