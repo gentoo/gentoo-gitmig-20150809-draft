@@ -1,0 +1,45 @@
+diff -urpN nv/Makefile.kbuild nv.tail/Makefile.kbuild
+--- nv/Makefile.kbuild	2003-07-28 23:44:10.000000000 +0200
++++ nv.tail/Makefile.kbuild	2003-07-28 23:46:19.000000000 +0200
+@@ -148,7 +148,7 @@ $(obj)/nv-kernel.o:
+ 	cp $(src)/$(RESMAN_CORE_OBJS) $(obj)/$(RESMAN_CORE_OBJS)
+ 
+ $(obj)/$(VERSION_HEADER):
+-	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
++	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -n 1`\" > $@
+ 
+ $(obj)/nv.o: $(obj)/$(VERSION_HEADER)
+ 
+diff -urpN nv/Makefile.nvidia nv.tail/Makefile.nvidia
+--- nv/Makefile.nvidia	2003-07-28 23:44:10.000000000 +0200
++++ nv.tail/Makefile.nvidia	2003-07-28 23:46:19.000000000 +0200
+@@ -48,7 +48,7 @@ BROKENDIR=$(KERNDIR)/kernel/video
+ INSTALL=$(shell which install)
+ 
+ # determine gcc versions used (kernel, nvidia.o)
+-module_cc:=$(shell $(CC) -v 2>&1 | tail -1)
++module_cc:=$(shell $(CC) -v 2>&1 | tail -n 1)
+ version="^Linux version [^(]* (.*@.*) (\(.*\)) .*"
+ kernel_cc:=$(shell cat /proc/version | sed "s/"$(version)"/\1/")
+ 
+@@ -146,7 +146,7 @@ nvidia.o: gcc-check $(LINUX_MODULE) $(RE
+ 	ld -r -o $@ $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE)
+ 
+ $(VERSION_HDR): 
+-	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
++	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -n 1`\" > $@
+ 
+ $(LINUX_MODULE): $(OBJECTS)
+ 	ld -r -o $@ $(OBJECTS)
+diff -urpN nv/conftest.sh nv.tail/conftest.sh
+--- nv/conftest.sh	2003-07-28 23:44:10.000000000 +0200
++++ nv.tail/conftest.sh	2003-07-28 23:46:19.000000000 +0200
+@@ -54,7 +54,7 @@ case "$1" in
+ 
+         VERSION="^Linux version [^(]* (.*@.*) (\(.*\)) .*"
+         KERNEL=$(cat /proc/version | sed "s/$VERSION/\1/" | cut -d ' ' -f 3)
+-        MODULE=$($* -v 2>&1 | tail -1 | cut -d ' ' -f 3)
++        MODULE=$($* -v 2>&1 | tail -n 1 | cut -d ' ' -f 3)
+ 
+         if test "$KERNEL" != "$MODULE"; then
+           #

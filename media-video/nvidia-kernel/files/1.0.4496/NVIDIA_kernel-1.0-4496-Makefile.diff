@@ -1,0 +1,162 @@
+diff -urpN nv/Makefile.nvidia nv-2.6/Makefile.nvidia
+--- nv/Makefile.nvidia	2003-07-29 00:30:38.000000000 +0200
++++ nv-2.6/Makefile.nvidia	2003-07-29 00:31:12.000000000 +0200
+@@ -1,14 +1,14 @@
+ # This Makefile is automatically generated; do not edit
+-#   Generated on 'builder3.nvidia.com' on Thu Jun 19 04:05:35 PDT 2003
++#   Generated on 'builder3.nvidia.com' on Mon Mar 24 16:36:51 PST 2003
+ 
+ LINUX_MODULE=nv-linux.o
+-DEFINES=-D__KERNEL__ -DMODULE -D_LOOSE_KERNEL_NAMES -DNTRM -D_GNU_SOURCE -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=4480     -DNV_UNIX   -DNV_LINUX   -DNV_INT64_OK   -DNVCPU_X86  
++DEFINES=-D__KERNEL__ -DMODULE -D_LOOSE_KERNEL_NAMES -DKBUILD_MODNAME="nvidia" -DNTRM -D_GNU_SOURCE -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=4348  -DNV_UNIX   -DNV_LINUX   -DNV_INT64_OK   -DNVCPU_X86     
+ INCLUDES=-I.
+ 
+ OBJECTS=nv.o os-agp.o os-interface.o os-registry.o 
+-HEADERS=os-agp.h os-interface.h nv-linux.h nv-misc.h nv-memdbg.h nv.h  rmretval.h nvtypes.h  $(VERSION_HDR)
++HEADERS=os-agp.h os-interface.h nv-linux.h nv-misc.h nv.h  rmretval.h nvtypes.h  $(VERSION_HDR)
+ 
+-CFLAGS=-Wall -Wimplicit -Wreturn-type -Wswitch -Wformat -Wchar-subscripts -Wparentheses -Wpointer-arith -Wcast-qual -Wno-multichar  -O -MD $(DEFINES) $(INCLUDES) -Wno-cast-qual
++CFLAGS=-Wall -Wimplicit -Wreturn-type -Wswitch -Wformat -Wchar-subscripts -Wparentheses -Wcast-qual -Wno-multichar  -O -MD $(DEFINES) $(INCLUDES) -Wno-cast-qual
+ 
+ RESMAN_KERNEL_MODULE=nv-kernel.o
+ 
+@@ -47,19 +47,13 @@ BROKENDIR=$(KERNDIR)/kernel/video
+ 
+ INSTALL=$(shell which install)
+ 
+-# determine gcc versions used (kernel, nvidia.o)
+-module_cc:=$(shell $(CC) -v 2>&1 | tail -n 1)
+-version="^Linux version [^(]* (.*@.*) (\(.*\)) .*"
+-kernel_cc:=$(shell cat /proc/version | sed "s/"$(version)"/\1/")
+-
+-module_cc:=$(shell echo "$(module_cc)" | cut -d ' ' -f 3)
+-kernel_cc:=$(shell echo "$(kernel_cc)" | cut -d ' ' -f 3)
+-
+ # allow specification of alternate include file tree on command line and extra defines
+ ifdef SYSINCLUDE
+ INCLUDES += -I$(SYSINCLUDE)
++INCLUDES += -I$(SYSINCLUDE)/asm/mach-default
+ else
+ INCLUDES += -I$(KERNINC)
++INCLUDES += -I$(KERNINC)/asm/mach-default
+ endif
+ 
+ ifeq ($(shell sh conftest.sh remap_page_range $(INCLUDES)), 5)
+@@ -83,70 +77,61 @@ all: install
+ 
+ install: package-install
+ 
+-package-install: nvidia.o rmmod-check
+-	@if [ `id -ur` != 0 ]; then \
+-		echo Please run \"make install\" as root.; \
+-	else \
+-		if [ -d $(BROKENDIR) ]; then \
+-			rm -f $(BROKENDIR)/NVdriver; \
+-			rmdir --ignore-fail-on-non-empty $(BROKENDIR); \
+-		fi && \
+-		mkdir -p $(INSTALLDIR) && \
+-		rm -f $(INSTALLDIR)/NVdriver && \
+-		$(INSTALL) -m 0664 -o root -g root nvidia.o $(INSTALLDIR)/nvidia.o$(O) && \
+-		/sbin/depmod -a && \
+-		/sbin/modprobe nvidia && \
+-		sh makedevices.sh && \
+-		echo "nvidia.o installed successfully."; \
++suser-sanity-check:
++	@if ! sh conftest.sh suser_sanity_check; then \
++	  echo; \
++	  echo "You have insufficient privileges for this operation. Please "; \
++	  echo "run \"make install\" as root!                               "; \
++	  echo; \
++	  exit 1; \
+ 	fi
+ 
+-RMMOD_ERROR=\
+-	echo ""; \
+-	echo "Unable to remove existing NVIDIA kernel module."; \
+-	echo "Please be sure you have exited X before attempting"; \
+-	echo "to install the NVIDIA kernel module."; \
+-	echo ""; \
+-	echo -en "\033[1;31m"; \
+-	echo -e  "*** Failed rmmod sanity check. Bailing out! ***"; \
+-	echo -en "\033[0m"; \
+-	exit 1;
+-
+-rmmod-check:
+-	@if /sbin/lsmod | grep nvidia > /dev/null; then \
+-		if ! /sbin/rmmod nvidia > /dev/null; then $(RMMOD_ERROR) fi \
+-	fi; \
+-	if /sbin/lsmod | grep NVdriver > /dev/null; then \
+-		if ! /sbin/rmmod NVdriver > /dev/null; then $(RMMOD_ERROR) fi \
++rmmod-sanity-check:
++	@if ! sh conftest.sh rmmod_sanity_check nvidia; then \
++	  echo; \
++	  echo "Unable to unload the currently loaded NVIDIA kernel module! "; \
++	  echo "Please be certain that you have exited X before attempting  "; \
++	  echo "to install this version.                                    "; \
++	  echo; \
++	  exit 1; \
+ 	fi
+ 
+-gcc-check:
+-	@if [ -z $(IGNORE_CC_MISMATCH) ]; then \
+-	 if [ $(kernel_cc) != $(module_cc) ]; then \
+-	echo "                                                           "; \
+-	echo "You appear to be compiling the NVIDIA kernel module with   "; \
+-	echo "a compiler different from the one that was used to compile "; \
+-	echo "the running kernel. This may be perfectly fine, but there  "; \
+-	echo "are cases where this can lead to unexpected behaviour and  "; \
+-	echo "system crashes.                                            "; \
+-	echo "                                                           "; \
+-	echo "If you know what you are doing and want to override this   "; \
+-	echo "check, you can do so by setting IGNORE_CC_MISMATCH.        "; \
+-	echo "                                                           "; \
+-	echo "In any other case, set the CC environment variable to the  "; \
+-	echo "name of the compiler that was used to compile the kernel.  "; \
+-	echo "                                                           "; \
+-	echo -en "\033[1;31m"; \
+-	echo -e  "*** Failed cc sanity check. Bailing out! ***"; \
+-	echo -en "\033[0m"; \
+-	exit 1; \
+-	 fi \
++cc-sanity-check:
++	@if ! sh conftest.sh cc_sanity_check $(CC); then \
++	  echo; \
++	  echo "You appear to be building the NVIDIA kernel module with a  "; \
++	  echo "compiler different from the one that was used to build the "; \
++	  echo "running kernel. This may be perfectly fine, but there are  "; \
++	  echo "cases where this can lead to unexpected behaviour and      "; \
++	  echo "system crashes.                                            "; \
++	  echo; \
++	  echo "If you know what you are doing and want to override this   "; \
++	  echo "check, you can do so by setting IGNORE_CC_MISMATCH.        "; \
++	  echo; \
++	  echo "In any other case, set the CC environment variable to the  "; \
++	  echo "name of the compiler that was used to build the kernel.    "; \
++	  echo; \
++	  exit 1; \
+ 	fi
+ 
+-nvidia.o: gcc-check $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE) 
+-	ld -r -o $@ $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE)
++package-install: suser-sanity-check nvidia.o rmmod-sanity-check
++	if [ -d $(BROKENDIR) ]; then \
++		rm -f $(BROKENDIR)/NVdriver; \
++		rmdir --ignore-fail-on-non-empty $(BROKENDIR); \
++	fi && \
++	mkdir -p $(INSTALLDIR) && \
++	rm -f $(INSTALLDIR)/NVdriver && \
++	$(INSTALL) -m 0664 -o root -g root nvidia.o $(INSTALLDIR)/nvidia.o$(O) && \
++	/sbin/depmod -a && \
++	/sbin/modprobe nvidia && \
++	sh makedevices.sh && \
++	echo "nvidia.o installed successfully."; \
++
++nvidia.o: cc-sanity-check $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE) 
++	ld -d -r -o $@ $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE)
+ 
+ $(VERSION_HDR): 
+-	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -n 1`\" > $@
++	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
+ 
+ $(LINUX_MODULE): $(OBJECTS)
+ 	ld -r -o $@ $(OBJECTS)
