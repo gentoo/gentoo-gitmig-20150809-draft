@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a99f71fe6361b8014890417c544e995 ChangeLog 2653
+MD5 cc3837aa721cfb96024df58e5366162e ChangeLog 2757
 MD5 d3c3dabaff2f1d8f6f8f37c7e52fff08 commonbox-utils-0.3.ebuild 844
-MD5 c4de87f20c4dc1dbddbe74367ccf82e0 commonbox-utils-0.4.ebuild 908
+MD5 2d6017103ea4dd33ebec752d4f1b1fd1 commonbox-utils-0.4.ebuild 914
 MD5 061445aebf21588eb97fed5b84e7e811 commonbox-utils-0.5.ebuild 777
 MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
 MD5 bb574f724e4107fa13a594b802c86bb6 files/digest-commonbox-utils-0.3 72
 MD5 03f2762a64fe90b5ab9be75bfd099169 files/digest-commonbox-utils-0.4 72
 MD5 8d6dd5509f38f650eeec33bc6ebb5069 files/digest-commonbox-utils-0.5 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYHaKI1lqEGTUzyQRAteBAJ4pW51VsISgog1YS7PN37YmP4dNPgCeNN49
-/U5DBMN5Bm/hQAzT0DCcox0=
-=nAIK
------END PGP SIGNATURE-----
