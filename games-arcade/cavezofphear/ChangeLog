@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/cavezofphear
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.1 2003/11/08 09:57:40 mr_bones_ Exp $
+
+*cavezofphear-0.1 (08 Nov 2003)
+
+  08 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  cavezofphear-0.1.ebuild:
+  initial commit (bug 32507)
+
