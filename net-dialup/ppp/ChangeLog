@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.18 2003/03/02 01:39:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.19 2003/03/28 17:27:21 gmsoft Exp $
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> ppp-2.4.1-r12.ebuild :
+  Added hppa to KEYWORDS.
 
   02 Mar 2003; Seemant Kulleen <seemant@gentoo.org> ppp-2.4.1-r12.ebuild :
 
