@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.77 2004/02/10 06:38:21 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.78 2004/02/10 14:16:31 caleb Exp $
+
+  10 Feb 2004; Caleb Tennis <caleb@gentoo.org> arts-1.2.0.ebuild:
+  x86 stable
 
   10 Feb 2004; Lars Weiler <pylon@gentoo.org> arts-1.2.0.ebuild:
   Stable on ppc.

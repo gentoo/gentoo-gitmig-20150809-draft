@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0.ebuild,v 1.8 2004/02/10 06:38:21 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0.ebuild,v 1.9 2004/02/10 14:16:31 caleb Exp $
 
 inherit kde flag-o-matic
 set-kdedir 3.2
@@ -11,7 +11,7 @@ SRC_URI="mirror://kde/stable/${PV/1.2.0/3.2}/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
-KEYWORDS="~x86 ppc ~sparc ~hppa ~amd64"
+KEYWORDS="x86 ppc ~sparc ~hppa ~amd64"
 IUSE="alsa oggvorbis esd artswrappersuid mad"
 
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
@@ -36,11 +36,11 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "${COMPILER}" == "gcc3" ]; then
-		# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
-		# these.. Even starting a compile shuts down the arts server
-		filter-flags -fomit-frame-pointer -fstrength-reduce
-	fi
+#	if [ "${COMPILER}" == "gcc3" ]; then
+#		# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
+#		# these.. Even starting a compile shuts down the arts server
+#		filter-flags -fomit-frame-pointer -fstrength-reduce
+#	fi
 
 	#fix bug 13453
 	filter-flags -foptimize-sibling-calls
