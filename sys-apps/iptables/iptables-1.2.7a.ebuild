@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7a.ebuild,v 1.4 2002/09/09 14:04:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7a.ebuild,v 1.5 2002/09/21 12:09:35 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Kernel 2.4 firewall, NAT and packet mangling tools"
 SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 HOMEPAGE="http://www.iptables.org"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 SLOT="0"
 # iptables is dependent on kernel sources.  Strange but true.
 DEPEND="virtual/glibc"

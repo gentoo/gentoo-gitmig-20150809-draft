@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.7.ebuild,v 1.2 2002/09/13 15:24:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.7.ebuild,v 1.3 2002/09/21 12:09:35 bjb Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
 
 RDEPEND=">=dev-libs/glib-2.0.6-r1
