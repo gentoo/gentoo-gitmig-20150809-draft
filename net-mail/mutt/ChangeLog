@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.23 2003/03/26 01:01:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.24 2003/03/26 23:40:22 latexer Exp $
+
+  26 Mar 2003; Peter Johanson <latexer@gentoo.org> :
+  Changed 'use_enable ssl' to 'use_with ssl'. bug #18253
 
 *mutt-1.5.4 (25 Mar 2003)
 
