@@ -3,7 +3,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author  Martin Schlemmer <azarah@gentoo.org>
 # Credits  To all those I got ideas from :)
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.1-r6/net.ppp0,v 1.1 2001/11/11 19:47:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.1-r6/net.ppp0,v 1.2 2001/11/11 20:10:21 azarah Exp $
 
 PEER="isp"			# Define peer (aka ISP)
 DEBUG="no"			# Turn on debugging
@@ -172,9 +172,9 @@ setup_cfg_files() {
 			>/etc/ppp/peers/${PEER}
 
 		# Setup the secrets files
-		echo "${USERNAME} ${PEER} ${PASSWORD}" >/etc/ppp/chap-secrets
+		echo "${USERNAME} ${PEER} \"${PASSWORD}\"" >/etc/ppp/chap-secrets
 		chmod 660 /etc/ppp/chap-secrets
-		echo "${USERNAME} ${PEER} ${PASSWORD}" >/etc/ppp/pap-secrets
+		echo "${USERNAME} ${PEER} \"${PASSWORD}\"" >/etc/ppp/pap-secrets
 		chmod 660 /etc/ppp/pap-secrets
 
 		# Setup the chat file
