@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i8kutils/i8kutils-1.17.ebuild,v 1.1 2002/11/08 15:39:10 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i8kutils/i8kutils-1.17.ebuild,v 1.2 2002/11/09 05:14:16 seemant Exp $
 
 S=${WORKDIR}/${P}/
-DESCRIPTION="Dell Inspiron and Latitute utilities"
+DESCRIPTION="Dell Inspiron and Latitude utilities"
 SRC_URI="http://people.debian.org/~dz/i8k/${P}.tar.bz2"
 HOMEPAGE="http://people.debian.org/~dz/i8k/"
 DEPEND="dev-lang/tcl"
