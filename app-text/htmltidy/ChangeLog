@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.16 2004/02/20 19:25:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.17 2004/02/27 21:19:42 usata Exp $
+
+  28 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> htmltidy-3.10.29.ebuild:
+  Added WANT_AUTO{MAKE,CONF} to fix configure error, closing bug #42796
 
   21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> htmltidy-3.10.29.ebuild:
   Added WANT_AUTOMAKE=1.5 and WANT_AUTOCONF=2.5 to make sure it updates

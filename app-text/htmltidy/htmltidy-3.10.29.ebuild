@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.6 2004/02/20 19:25:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.7 2004/02/27 21:19:42 usata Exp $
 
 # Convert gentoo version number x.y.z to date xyz for
 # tidy's source numbering by date
@@ -51,6 +51,7 @@ src_unpack() {
 
 src_compile() {
 
+	export WANT_AUTOMAKE=1.5 WANT_AUTOCONF=2.5
 	econf `use_enable debug` || die
 	emake || die
 
