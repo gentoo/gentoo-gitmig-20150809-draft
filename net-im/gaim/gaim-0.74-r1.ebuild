@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.1 2003/12/02 19:59:47 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.2 2003/12/09 02:36:09 rizzo Exp $
 
-IUSE="nls perl spell nas ssl mozilla cjk"
+IUSE="nls perl spell nas ssl mozilla cjk debug"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -47,6 +47,7 @@ src_compile() {
 	use spell || myconf="${myconf} --disable-gtkspell"
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
+	use debug  && myconf="${myconf} --enable-debug"
 
 	if [ `use mozilla` ]; then
 		NSS_LIB=/usr/lib/mozilla
