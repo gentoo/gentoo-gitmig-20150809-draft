@@ -1,15 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.8 2003/05/28 11:02:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.9 2003/06/16 17:59:09 taviso Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
 #
 # functions to make ebuilds more ccc friendly.
 # 
+# 16/6/2003 - Added otsify()
+#
 
 ECLASS=ccc
-INHERITED="$INHERITED $ECLASS"
+INHERITED="${INHERITED} ${ECLASS}"
 
 DEPEND="${DEPEND}
 	sys-apps/findutils
@@ -88,6 +90,16 @@ DEPEND="${DEPEND}
 # mimic the flag-o-matic equivalents, look in there for
 # documentation.
 #
+#### otsify <archive> ####
+# Add the functions from libots to <archive>, this means
+# that if you use gcc to build an application that links with
+# <archive>, you wont need -lots.
+# Use this on libraries that you want maximum performance from,
+# but might not be using ccc when linking against it (eg zlib, openssl, etc)
+#
+# example:
+# 	is-ccc && otsify ${S}/libz.a
+#
 ####
 #
 
@@ -165,7 +177,7 @@ replace-ccc-g()
 	# replacing it with -g3 will let them co-exist.
 	find ${WORKDIR} -iname Makefile | \
 		xargs | ccc-fixup \
-		"s#\(^\CX\{,2\}FLAGS[[:space:]]*=.*[\'\"\x20\t]\)-g\([\'\"\x20\t]\|$\)#\1-g3\2#g"
+		"s#\(^\CX\{,2\}FLAGS[[:space:]]*=.*[\'\"\x20\t]*\)-g\([\'\"\x20\t]\|$\)#\1-g3\2#g"
 	# FIXME: my eyes! it burns!
 }
 
@@ -253,3 +265,43 @@ filter-ldflags()
 		LDFLAGS="${LDFLAGS/${x}}"
 	done
 }
+
+otsify()
+{
+	[ "$DEBUG_CCC_ECLASS" ] && local ar_args="v"
+	
+	# confirm argument exists, and is an archive (eg *.a)
+	# if it is, extract libots members into tempdir, then 
+	# append them to argument, regenerate index and then return.
+	
+	if [ "${1##*.}" == "a" ] && [ -f "${1}" ]; then
+		einfo "otsifying `basename ${1}`..."
+		
+		mkdir ${T}/ccc-otsify-${$}
+		cd ${T}/ccc-otsify-${$}
+		
+		einfo "	extracting archive members from libots..."
+		ar ${ar_args}x /usr/lib/libots.a || {
+			eerror "	unable to extract libots members."
+			return 1
+		}
+		
+		einfo "	appending libots members to `basename ${1}`..."
+		ar ${ar_args}q ${1} ${T}/ccc-otsify-${$}/*.o || {
+			eerror "	failed to append libots members to ${1}."
+			return 1
+		}
+		
+		einfo  "	regenerating `basename ${1}` archive index..."
+		ranlib ${1} || ewarn "	ranlib returned an error, probably not important."
+		einfo "otsification completed succesfully."
+		cd ${OLDPWD:-.}
+		return 0
+	else
+		ewarn "called otsify() with bad argument..."
+		cd ${OLDPWD:-.}
+		return 1
+	fi
+}
+
+
