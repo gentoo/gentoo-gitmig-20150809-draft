@@ -1,11 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.50 2004/01/06 15:17:52 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.51 2004/01/06 20:55:12 plasmaroo Exp $
 
+*gentoo-sources-2.4.22-r3 (06 Jan 2004)
 *gentoo-sources-2.4.20-r10 (06 Jan 2004)
 
-  06 Jan 2004; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r10.ebuild,
-  gentoo-sources-2.4.22-r2.ebuild, gentoo-sources-2.4.22.ebuild, 
+  06 Jan 2004; <plasmaroo@gentoo.org> gentoo-sources-2.4.22-r3.ebuild:
+  gentoo-sources-2.4.20-r10.ebuild, gentoo-sources-2.4.22-r2.ebuild,
   files/gentoo-sources-2.4.20-hpt372.patch,
   files/gentoo-sources-2.4.20-rtc_fix.patch,
   files/gentoo-sources-2.4.22-rtc_fix.patch,
