@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r2.ebuild,v 1.3 2002/05/31 05:20:12 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r3.ebuild,v 1.1 2002/06/24 23:20:51 karltk Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -45,6 +45,7 @@ src_install() {
 	    -e "s,^TCL_SRC_DIR='${S}',TCL_SRC_DIR='/usr/lib/tcl${v1}/include'," \
 	    -e "s,^TCL_BUILD_STUB_LIB_SPEC='-L${S}/unix,TCL_BUILD_STUB_LIB_SPEC='-L/usr/lib," \
 	    -e "s,^TCL_BUILD_STUB_LIB_PATH='${S}/unix,TCL_BUILD_STUB_LIB_PATH='/usr/lib," \
+	    -e "s,^TCL_LIB_FILE='libtcl8.3..TCL_DBGX..so',TCL_LIB_FILE=\"libtcl8.3\$\{TCL_DBGX\}.so\"," \
 	    ${D}/usr/lib/tclConfig.sh > ${D}/usr/lib/tclConfig.sh.new
 	mv ${D}/usr/lib/tclConfig.sh.new ${D}/usr/lib/tclConfig.sh
 	
