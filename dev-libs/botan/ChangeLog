@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.1 2004/11/08 23:05:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.2 2004/12/04 05:26:22 dragonheart Exp $
+
+*botan-1.4.4 (04 Dec 2004)
+
+  04 Dec 2004; Daniel Black <dragonheart@gentoo.org> botan-1.4.3.ebuild,
+  +botan-1.4.4.ebuild:
+  Version bump. Added --dumb-gcc to configure.pl as per bug #71760
+  (botan-1.4.3). Thanks to Jack Lloyd <lloyd@randombit.net> and Stefan
+  Schweizer <genstef@gentoo.org>
 
 *botan-1.4.3 (09 Nov 2004)
 

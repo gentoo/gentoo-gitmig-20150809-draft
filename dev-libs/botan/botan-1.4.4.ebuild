@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.3.ebuild,v 1.2 2004/12/04 05:26:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.1 2004/12/04 05:26:22 dragonheart Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -8,7 +8,7 @@ DESCRIPTION="A C++ crypto library"
 HOMEPAGE="http://botan.randombit.net/"
 SRC_URI="http://botan.randombit.net/files/Botan-${PV}.tgz"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="0"
 LICENSE="BSD"
 IUSE="bzlib zlib gmp ssl debug"
@@ -56,7 +56,7 @@ src_compile() {
 	einfo "Enabling modules: " $(echo $modules | sed 's/,/ /g')
 
 	# FIXME: We might actually be on *BSD or OS X...
-	./configure.pl --noauto gcc-linux-$CHOSTARCH --modules=$modules --dumb-gcc ||
+	./configure.pl --noauto gcc-linux-$CHOSTARCH --modules=$modules ||
 		die "configure.pl failed"
 	emake "LIB_OPT=${CXXFLAGS}" "MACH_OPT=" || die "emake failed"
 }
