@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/meld
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.11 2003/11/25 10:00:42 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.12 2004/02/14 15:13:23 liquidx Exp $
+
+*meld-0.9.2 (14 Feb 2004)
+
+  14 Feb 2004; Alastair Tse <liquidx@gentoo.org> meld-0.9.2.ebuild:
+  version bump. changes thanks to suka <suka@gentoo.org> (#41367)
 
   25 Nov 2003; Jason Wever <weeve@gentoo.org> meld-0.9.1.ebuild:
   Added ~sparc keyword.
