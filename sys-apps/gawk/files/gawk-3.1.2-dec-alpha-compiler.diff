@@ -5,7 +5,7 @@
  extern int regexec _RE_ARGS ((const regex_t *__restrict __preg,
  			      const char *__restrict __string, size_t __nmatch,
 -			      regmatch_t __pmatch[__restrict_arr],
-+			      regmatch_t __pmatch[],
++			      regmatch_t __pmatch[__restrict],
  			      int __eflags));
  
  extern size_t regerror _RE_ARGS ((int __errcode, const regex_t *__preg,
