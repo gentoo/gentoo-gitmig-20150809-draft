@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7.ebuild,v 1.3 2005/03/15 05:23:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.1 2005/03/15 05:43:49 vapier Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
