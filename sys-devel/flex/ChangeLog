@@ -1,10 +1,16 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.2 2002/10/13 02:34:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.3 2002/10/21 00:11:21 azarah Exp $
+
+*flex-2.5.22 (21 Oct 2002)
+
+  21 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Update version thanks to new URL from Nicholas Wourms <nwourms@netscape.net>.
 
 *flex-2.5.4a-r5 (13 Oct 2002)
 
-  13 Oct 2002; Martin Schlemmer <azarah@gentoo.org> ;
+  13 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
 
   Add various Redhat patches to make it more gcc3 friendly.  Fix
   form in a few places.
