@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-cdt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/ChangeLog,v 1.5 2004/09/28 00:43:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/ChangeLog,v 1.6 2004/11/25 13:51:32 karltk Exp $
+
+  25 Nov 2004; <karltk@gentoo.org> eclipse-cdt-2.0-r2.ebuild:
+  Changed dep to 3.0.0, so that it at least compiles again.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation
