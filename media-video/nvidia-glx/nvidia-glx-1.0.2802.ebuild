@@ -14,7 +14,7 @@ NV_PACKAGE=NVIDIA_GLX-${NV_V}
 NV_ARCHIVE="${NV_PACKAGE}.tar.gz"
 SRC_URI="http://205.158.109.140/XFree86_40/${NV_V}/${NV_ARCHIVE}"
 HOMEPAGE="http://www.nvidia.com/"
-DEPEND="virtual/glibc >=x11-base/xfree-4.0.2 >=media-video/nvidia-kernel-${NV_V}"
+DEPEND="virtual/glibc >=x11-base/xfree-4.0.2 >=media-video/nvidia-kernel-${PV}"
 PROVIDE="virtual/opengl"
 
 src_unpack() {
