@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# pebenito@gentoo.org (03 Aug 2003)
+# new api/userland for selinux
+sys-libs/libselinux
+sys-apps/checkpolicy
+sys-apps/policycoreutils
+
 # seemant@gentoo.org (02 Aug 2003)
 # masking openafs-1.3 series as it is really unstable and useless
 =net-fs/openafs-1.3*
