@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-trayicon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.8 2004/07/01 19:24:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.9 2004/09/25 17:57:06 liquidx Exp $
+
+*synce-trayicon-0.9.0 (25 Sep 2004)
+
+  25 Sep 2004; Alastair Tse <liquidx@gentoo.org> +synce-trayicon-0.9.0.ebuild:
+  version bump (#61952)
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   synce-trayicon-0.1.ebuild, synce-trayicon-0.7.ebuild,

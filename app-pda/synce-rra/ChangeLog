@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-rra
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.8 2004/07/01 19:23:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.9 2004/09/25 17:54:11 liquidx Exp $
+
+*synce-rra-0.9.0 (25 Sep 2004)
+
+  25 Sep 2004; Alastair Tse <liquidx@gentoo.org> +synce-rra-0.9.0.ebuild:
+  version bump (#61952)
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   synce-rra-0.8.4.ebuild:
