@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.45 2003/06/28 11:00:14 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.46 2003/07/04 18:45:18 coronalvr Exp $
+
+*wine-20030618-r1 (04 Jul 2003)
+
+  04 Jul 2003; Alex Veber <coronalvr@gentoo.org> wine-20030618-r1.ebuild,
+  files/kpp-fix.patch:
+  added a patch to fix a bug with kazaa kpp 2.1, thanks to cretin
+  (cretin@gentoo.org)
 
   28 Jun 2003; Alex Veber <coronalvr@gentoo.org> wine-20030508.ebuild,
   wine-20030618.ebuild:
