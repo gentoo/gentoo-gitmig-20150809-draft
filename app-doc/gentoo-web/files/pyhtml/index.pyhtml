@@ -54,6 +54,20 @@
 			<table border=0 cellpadding="8" width="100%">
 				<tr>
 					<td class="tab" valign="top"><br>
+						<p><font color="#ff0000"><b>Important News:</b><br>
+						We are working hard on a new release of Gentoo Linux, 
+						but right now, the 1.0_rc4_pre2 release on ibiblio.org
+						and its mirrors is a bit out of date.  If you're interested in installing Gentoo Linux,
+						we recommend you wait until the 1.0_rc5 release (a week or two away) or join the gentoo-dev
+						mailing list and visit us on the #gentoo IRC channel to find out how to install a <a
+						href="http://www.ibiblio.org/gentoo/gentoo-x86-distro/gentoo-1.0_rc4/packages/snapshots/">
+						system snapshot</a> rather than using the official 1.0_rc4_pre2 version.  Also, until
+						version 1.0 is released, Gentoo Linux is geared for developers only.  The distro is quite
+						refined at this point, but installing it requires some skill.</font></p>
+						<br><br>	
+
+
+						
 						<font size=+1><b>What is Gentoo Linux?</b></font><br>
 						<br>
 						<b>Gentoo Linux</b> is designed for the developer,
