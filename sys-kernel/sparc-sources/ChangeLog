@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.68 2004/11/25 16:55:02 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.69 2004/11/27 15:34:58 joker Exp $
+
+  27 Nov 2004; Christian Birchinger <joker@gentoo.org>
+  -files/gentoo-sources-2.4.27-binfmt_elf.patch,
+  -files/use-pte_alloc_one_fast-r1.patch, -sparc-sources-2.4.27-r1.ebuild,
+  -sparc-sources-2.4.27-r2.ebuild, -sparc-sources-2.4.27-r3.ebuild,
+  -sparc-sources-2.4.27.ebuild:
+  Removed old version
 
   25 Nov 2004; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.28.ebuild:
