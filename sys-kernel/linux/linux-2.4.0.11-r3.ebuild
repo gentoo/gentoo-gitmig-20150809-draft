@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.10 2001/02/07 03:02:57 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.11 2001/02/07 04:02:32 pete Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -220,30 +220,13 @@ src_install() {
 	fi
 }
 
-pkg_preinst() {
-    if [ "${ROOT}" = "/" ]
-    then
-	# mount only if /boot is on a separate partition and is not
-	# commented out in /etc/fstab
-	if grep -qs "[^#].*/boot" /etc/fstab
-	then
-	    echo "Mounting /boot..."
-	    mount /boot
-	fi
-    fi
-}
-
 pkg_postinst() {
     
     if [  "${ROOT}" = "/" ]
     then
-	# unmount only if /boot is on a separate partition and is not
-	# commented out in /etc/fstab
-	if grep -qs "[^#].*/boot" /etc/fstab
-	then
-	    echo "Unmounting /boot..."
-	    mount /boot
-	fi
+	echo "*** I hope you remembered to mount /boot!"
+	echo "*** If not, mv /boot/boot/bzImage somewhere safe, then mount /boot,"
+        echo "*** and mv bzImage /boot/boot."
 	if [ "${PN}" = "linux" ] ; then
 	    echo "Creating sounddevices..."
 	    /usr/sbin/snddevices
