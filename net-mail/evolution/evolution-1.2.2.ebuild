@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.2.ebuild,v 1.6 2003/03/04 20:51:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.2.ebuild,v 1.7 2003/03/09 14:58:21 foser Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
@@ -27,8 +27,7 @@ RDEPEND="app-text/scrollkeeper
 	>=gnome-extra/gtkhtml-1.1.7
 	>=gnome-base/oaf-0.6.10
 	>=gnome-base/ORBit-0.5.12
-	( >=gnome-base/libglade-0.17-r1
-	  <gnome-base/libglade-2.0 )		
+	<gnome-base/libglade-2.0		
 	>=media-libs/gdk-pixbuf-0.18.0
 	>=dev-libs/libxml-1.8.17
 	=gnome-base/gnome-vfs-1.0*		
