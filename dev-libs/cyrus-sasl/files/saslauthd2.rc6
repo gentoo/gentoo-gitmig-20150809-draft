@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/files/saslauthd.rc6,v 1.1 2002/02/19 00:36:20 woodchip Exp
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting saslauthd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/saslauthd \
+		-- ${SASLAUTHD_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping saslauthd"
+	start-stop-daemon --stop --quiet --pidfile /var/lib/sasl2/mux.pid
+	eend $?
+}
