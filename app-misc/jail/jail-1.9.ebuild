@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Pau Oliva <pau@eSlack.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9.ebuild,v 1.2 2002/10/04 04:55:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9.ebuild,v 1.3 2002/10/17 00:32:43 vapier Exp $
 
 S="${WORKDIR}/${PN}_1-9_stable"
 DESCRIPTION="Jail Chroot Project is a tool that builds a chrooted environment and automagically configures and builds all the required files, directories and libraries"
@@ -15,14 +15,12 @@ DEPEND="virtual/glibc"
 RDEPEND="sys-devel/perl"
 
 src_unpack() {
-
-    unpack ${PN}_${PV}.tar.gz
-    cd ${S}
-    patch -p0 < ${FILESDIR}/${PN}-gentoo.diff
+	unpack ${PN}_${PV}.tar.gz
+	cd ${S}
+	patch -p0 < ${FILESDIR}/${PN}-gentoo.diff
 }
 
 src_compile() {
-
 	# configuration files should be installed in /etc not /usr/etc
 	cd ${S}
 	cp install.sh install.sh.orig
