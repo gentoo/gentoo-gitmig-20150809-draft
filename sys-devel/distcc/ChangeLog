@@ -1,8 +1,17 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.27 2003/02/21 21:35:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.28 2003/02/24 01:05:02 zwelch Exp $
+
+*distcc-1.2 (21 Feb 2003)
+
+  21 Feb 2003; Zach Welch <zwelch@gentoo.org> distcc-1.2.ebuild :
+  Add new version, cleanup patch from 1.1-r11
+  Add initial distcc-config script
 
 *distcc-1.1-r11 (17 Feb 2003)
+
+  21 Feb 2003; Zach Welch <zwelch@gentoo.org> distcc-1.1-r11.ebuild :
+  Remove extra cp of $S
 
   19 Feb 2003; Zach Welch <zwelch@gentoo.org> distcc-1.1-r11.ebuild :
   Added arm to keywords.

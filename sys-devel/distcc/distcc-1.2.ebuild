@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.1-r11.ebuild,v 1.5 2003/02/24 01:05:02 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.2.ebuild,v 1.1 2003/02/24 01:05:02 zwelch Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ DESCRIPTION="a program to distribute compilation of C code across several machin
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
 
 DEPEND=">=sys-apps/portage-2.0.46-r11
 	>=sys-devel/gcc-config-1.3.1
@@ -21,7 +21,7 @@ DEPEND=">=sys-apps/portage-2.0.46-r11
 src_unpack() {
 	unpack distcc-${PV}.tar.bz2
 #	cp -a distcc-${PV} distcc-${PV}.orig
-	epatch "${FILESDIR}/wrapper-${PV}.patch"
+	epatch "${FILESDIR}/${PV}/wrapper.patch"
 }
 
 src_compile() {
@@ -37,48 +37,61 @@ src_install() {
 	docinto "../${PN}"
 	dodoc "${S}/survey.txt"
 
+	exeinto /usr/bin
+	doexe "${FILESDIR}/${PV}/distcc-config"
+
+	insinto /etc/conf.d
+	newins "${FILESDIR}/${PV}/conf" distccd
+
 	exeinto /etc/init.d
-	newexe "${FILESDIR}/distccd.4" distccd
+	newexe "${FILESDIR}/${PV}/init" distccd
 
-	# Search the PATH now that gcc doesn't live in /usr/bin
-	#   ztw - this needs to be moved into an installed script so
-	#    users/portage can re-run it after installing new compilers
-	einfo "Scanning for compiler front-ends"
+	# create and keep the symlink dir
 	dodir /usr/lib/distcc/bin
-	diropts -m0755 -o distcc -g daemon
 	keepdir /usr/lib/distcc/bin
-	for a in gcc cc c++ g++ ${CHOST}-gcc ${CHOST}-c++ ${CHOST}-g++; do
-		if [ -n "$(type -p ${a})" ]; then
-			dosym /usr/bin/distcc /usr/lib/distcc/bin/${a}
-		fi
-	done
 
+	# create the distccd pid directory
 	dodir /var/run/distccd
-	diropts -m0755 -o distcc -g daemon
 	keepdir /var/run/distccd
 }
 
 pkg_preinst() {
-	local USERFIX
-	# update or create, depending on whether user already exists
-	einfo "Updating or creating distcc user..."
-	id distcc 2> /dev/null && USERFIX=usermod || USERFIX=useradd
-	${USERFIX} -g daemon -s /bin/false -d /dev/null -c "distccd" distcc || \
-		die "Failed to \`${USERFIX} distcc\` user"
-
 	# stop daemon since script is being updated
 	einfo "Stopping distccd..."
 	[ -x /etc/init.d/distccd ] && \
 		/etc/init.d/distccd stop > /dev/null 2>&1
+
+	# update or create, depending on whether user already exists
+	einfo "Updating or creating distcc user..."
+	local USERFIX
+	id distcc >/dev/null 2>&1 && USERFIX=usermod || USERFIX=useradd
+	${USERFIX} -g daemon -s /bin/false -d /dev/null -c "distccd" distcc || die
 }
 
 pkg_postinst() {
+	local d
+	for d in /usr/lib/distcc/bin /var/run/distccd ; do
+		einfo "Configuring $d..."
+		chown distcc:daemon $d
+		chmod 0755 $d
+	done
+
+	einfo "Installing links to installed compilers..."
+	/usr/bin/distcc-config --install-links
+	/usr/bin/distcc-config --install-links "${CHOST}"
+
 	einfo "To use distcc with **non-Portage** C compiling, add"
 	einfo "/usr/lib/distcc/bin to your path before /usr/bin.  If you're"
 	einfo "combining this with ccache, put the distcc dir AFTER ccache."
 	einfo "Portage 2.0.46-r11+ will take advantage of distcc if you put"
 	einfo "distcc into the FEATURES setting in make.conf (and define"
 	einfo "DISTCC_HOSTS as well). Do NOT set CC=distcc or similar."
-	einfo "See http://cvs.gentoo.org/~zwelch/distcc.html for information."
+	ewarn "See http://cvs.gentoo.org/~zwelch/distcc.html for information."
 }
+
+#pkg_prerm() {
+#   # ztw - not sure if this is the right place
+#	distcc-config --remove-links "${CHOST}"
+#	distcc-config --remove-links
+#}
 

@@ -1,24 +1,27 @@
 #!/sbin/runscript
 
+# get our configuration options
+source /etc/conf.d/distccd
+
 depend() {
 	need net
 }
 
 start() {
-	rm -rf /var/run/distccd.pid
+	rm -f ${DISTCCD_PIDFILE}
 	ebegin "Starting distccd"
 	PATH="$(gcc-config --get-bin-path):${PATH}" \
 	    /sbin/start-stop-daemon --start --quiet \
-	        --startas /usr/bin/distccd \
-		-c nobody --pidfile /var/run/distccd.pid \
-		-- --pid-file /var/run/distccd.pid
+	        --startas ${DISTCCD_EXEC} \
+		-c distcc --pidfile ${DISTCCD_PIDFILE} \
+		-- --pid-file ${DISTCCD_PIDFILE} ${DISTCCD_OPTS}
 	eend $? "Failed to Start distccd"
 }
 
 stop() {
 	ebegin "Stopping distccd"
-	start-stop-daemon --stop --quiet --pidfile /var/run/distccd.pid
-	rm -rf /var/run/distccd.pid
+	start-stop-daemon --stop --quiet --pidfile "${DISTCCD_PIDFILE}"
+	rm -f "${DISTCCD_PIDFILE}"
 	eend $? "Failed to Stop distccd"
 }
 
