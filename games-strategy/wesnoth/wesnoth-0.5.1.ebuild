@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.5.1.ebuild,v 1.1 2003/11/10 21:34:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.5.1.ebuild,v 1.2 2003/11/29 22:10:43 brad_mssw Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.wesnoth.org/"
 SRC_URI="http://www.wesnoth.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 SLOT="0"
 
 DEPEND=">=media-libs/libsdl-1.2
