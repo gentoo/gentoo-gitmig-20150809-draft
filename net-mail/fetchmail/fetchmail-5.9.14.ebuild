@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.14.ebuild,v 1.4 2002/09/30 06:39:35 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.14.ebuild,v 1.5 2002/09/30 08:55:10 bcowan Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -55,7 +55,7 @@ src_install() {
 		README.NTLM README.SSL TODO COPYING MANIFEST
 	
 	doman /usr/share/man/*.1
-	dosym /usr/share/man/fetchmailconf fetchmail.1
+	dosym /usr/share/man/man1/fetchmailconf* /usr/share/man/man1/fetchmail.1.gz
 	
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/fetchmail
