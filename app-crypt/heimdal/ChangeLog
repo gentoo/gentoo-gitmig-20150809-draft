@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.18 2004/02/24 04:28:26 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.19 2004/02/26 00:09:54 gmsoft Exp $
+
+  25 Feb 2004; Guy Martin <gmsoft@gentoo.org> heimdal-0.6.ebuild:
+  Marked stable on hppa.
 
   24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> heimdal-0.6.ebuild:
   Stable on sparc. (If `whoami` != "weeve")
