@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/i8086emu
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/i8086emu/ChangeLog,v 1.1 2004/03/29 08:16:51 dragonheart Exp $
+
+*i8086emu-0.9.1 (29 Mar 2004)
+
+  29 Mar 2004; Daniel Black <dragonheart@gentoo.org> i8086emu-0.9.1.ebuild,
+  metadata.xml, files/i8086emu-0.9.1.patch:
+  Initial commit. Based loosely off Christian Steineck <memphis@machzwo.de> bug
+  #45656. Thanks for the submission
+

@@ -1,0 +1,113 @@
+--- i8086emu-src-0.9.1/src/Makefile.in.orig	2004-03-29 16:30:34.966349856 +0930
++++ i8086emu-src-0.9.1/src/Makefile.in	2004-03-29 16:30:27.184532872 +0930
+@@ -7,13 +7,14 @@
+ srcdir = @srcdir@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+-bindir = $(prefix)/bin
+-datadir = $(prefix)/share/i8086emu
+-pixdir = $(prefix)/share/pixmaps
+-examplesdir = $(datadir)/examples
+-infodir = $(prefix)/doc/i8086emu
+-libdir = $(prefix)/lib/i8086emu
+-mandir = $(prefix)/man/man1
++bindir = @bindir@
++datadir = @datadir@/@PACKAGE@
++pixdir = @prefix@/share/pixmaps
++examplesdir = @datadir@/examples
++infodir = @infodir@
++libdir = @libdir@/@PACKAGE@
++mandir = @mandir@
++sysconfdir= @sysconfdir@/@PACKAGE@
+ INSTALL=cp
+ 
+ WIN32=`if [ "$(TERM)" = "cygwin" ]; then echo "-D _WIN32"; fi;`
+@@ -108,7 +109,7 @@
+ 	gcc ${CFLAGS} -c disasm/sync.c -o disasm/sync.o
+ 
+ i8086config.o: i8086config.c i8086config.h
+-	gcc ${CFLAGS} ${WIN32} -DDATADIR=\"$(datadir)\" -c i8086config.c
++	gcc ${CFLAGS} ${WIN32} -DDATADIR=\"$(sysconfdir)\" -c i8086config.c
+ 
+ i8086devices.o: i8086devices.c i8086devices.h
+ 	gcc ${CFLAGS} -c -DVERSION_NUMBER=\"$(VERS)\" i8086devices.c
+@@ -156,39 +157,45 @@
+ 
+ 
+ install:all
+-	$(top_srcdir)/mkinstalldirs $(bindir)
+-	$(top_srcdir)/mkinstalldirs $(devicesdir)
+-	$(top_srcdir)/mkinstalldirs $(examplesdir)
+-	$(top_srcdir)/mkinstalldirs $(pixdir)
+-	$(top_srcdir)/mkinstalldirs $(infodir)
+-	$(top_srcdir)/mkinstalldirs $(libdir)
+-	$(INSTALL) i8086text $(bindir)
+-	$(INSTALL) i8086gui $(bindir)
+-	$(INSTALL) emu.cfg $(datadir)
+-	$(INSTALL) rom.bin $(datadir)
+-	$(INSTALL) core.dmp $(datadir)
+-	$(INSTALL) i8086icon.png $(pixdir)
+-	$(INSTALL) devices/*.so $(libdir)
+-	$(INSTALL) $(EMUEX) $(examplesdir)
+-	$(INSTALL) $(EMUDOCS) $(infodir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(devicesdir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(examplesdir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(pixdir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(infodir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(libdir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(datadir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir)
++	$(INSTALL) i8086text $(DESTDIR)$(bindir)
++	$(INSTALL) i8086gui $(DESTDIR)$(bindir)
++	$(INSTALL) emu.cfg $(DESTDIR)$(sysconfdir)
++	$(INSTALL) rom.bin $(DESTDIR)$(datadir)
++	$(INSTALL) core.dmp $(DESTDIR)$(datadir)
++	$(INSTALL) i8086icon.png $(DESTDIR)$(pixdir)
++	$(INSTALL) devices/*.so $(DESTDIR)$(libdir)
++	$(INSTALL) $(EMUEX) $(DESTDIR)$(examplesdir)
++	$(INSTALL) $(EMUDOCS) $(DESTDIR)$(infodir)
+ 
+ uninstall:
+-	-/bin/rm -f $(bindir)/i8086gui
+-	-/bin/rm -f $(bindir)/i8086text
+-	-/bin/rm -f $(datadir)/emu.cfg
+-	-/bin/rm -f $(datadir)/emu.log
+-	-/bin/rm -f $(datadir)/rom.bin
+-	-/bin/rm -f $(datadir)/core.dmp
+-	-/bin/rm -f $(pixdir)/i8086icon.png
+-	-/bin/rm -f $(libdir)/i8086*.so
+-	-/bin/rm -f $(examplesdir)/*
+-	-/bin/rm -f $(infodir)/README
+-	-/bin/rm -f $(infodir)/AUTHORS
+-	-/bin/rm -f $(infodir)/ChangeLog
+-	-/bin/rm -f $(infodir)/NEWS
+-	-/bin/rm -f $(infodir)/COPYING
+-	-/bin/rmdir $(examplesdir)
+-	-/bin/rmdir $(datadir)
+-	-/bin/rmdir $(libdir)
+-	-/bin/rmdir $(infodir)
+-	-/bin/rmdir $(bindir)
++	-/bin/rm -f $(DESTDIR)$(bindir)/i8086gui
++	-/bin/rm -f $(DESTDIR)$(bindir)/i8086text
++	-/bin/rm -f $(DESTDIR)$(sysconfdir)/emu.cfg
++	-/bin/rm -f $(DESTDIR)$(datadir)/emu.log
++	-/bin/rm -f $(DESTDIR)$(datadir)/rom.bin
++	-/bin/rm -f $(DESTDIR)$(datadir)/core.dmp
++	-/bin/rm -f $(DESTDIR)$(pixdir)/i8086icon.png
++	-/bin/rm -f $(DESTDIR)$(libdir)/i8086*.so
++	-/bin/rm -f $(DESTDIR)$(examplesdir)/*
++	-/bin/rm -f $(DESTDIR)$(infodir)/README
++	-/bin/rm -f $(DESTDIR)$(infodir)/AUTHORS
++	-/bin/rm -f $(DESTDIR)$(infodir)/ChangeLog
++	-/bin/rm -f $(DESTDIR)$(infodir)/NEWS
++	-/bin/rm -f $(DESTDIR)$(infodir)/COPYING
++	-/bin/rmdir $(DESTDIR)$(bindir)
++	-/bin/rmdir $(DESTDIR)$(devicesdir)
++	-/bin/rmdir $(DESTDIR)$(examplesdir)
++	-/bin/rmdir $(DESTDIR)$(pixdir)
++	-/bin/rmdir $(DESTDIR)$(infodir)
++	-/bin/rmdir $(DESTDIR)$(datadir)
++	-/bin/rmdir $(DESTDIR)$(sysconfdir)
++	-/bin/rmdir $(DESTDIR)$(libdir)
++
