@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.196 2004/03/24 00:04:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.197 2004/03/25 08:12:54 mr_bones_ Exp $
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gcc-3.2.2-r2.ebuild,
+  gcc-3.2.2.ebuild, gcc-3.2.3-r2.ebuild, gcc-3.2.3-r3.ebuild,
+  gcc-3.2.3-r4.ebuild, gcc-3.3.ebuild:
+  don't use deprecated ? : use syntax
 
   24 Mar 2004; Luca Barbato <lu_zero@gentoo.org> gcc-3.3.3_pre20040322.ebuild:
   Fixed SRC_URI

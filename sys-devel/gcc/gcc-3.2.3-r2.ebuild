@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r2.ebuild,v 1.9 2004/03/02 15:29:32 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r2.ebuild,v 1.10 2004/03/25 08:12:54 mr_bones_ Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -107,7 +107,8 @@ else
 fi
 
 DEPEND="virtual/glibc
-	mips? >=sys-devel/binutils-2.13.90.0.16 : >=sys-devel/binutils-2.13.90.0.18
+	mips? ( >=sys-devel/binutils-2.13.90.0.16 )
+	!mips? ( >=sys-devel/binutils-2.13.90.0.18 )
 	>=sys-devel/gcc-config-1.3.1
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
