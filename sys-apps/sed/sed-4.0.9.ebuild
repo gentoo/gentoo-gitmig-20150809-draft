@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.15 2004/08/05 18:40:55 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.16 2004/08/19 21:57:54 vapier Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~ppc64 sparc mips alpha arm hppa amd64 ia64 s390 macos"
 IUSE="nls static build"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
