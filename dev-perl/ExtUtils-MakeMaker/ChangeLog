@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.24 2003/07/25 18:08:02 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.25 2003/07/25 21:14:18 gmsoft Exp $
 
   25 Jul 2003; <rac@gentoo.org> ExtUtils-MakeMaker-6.05-r6.ebuild:
   Remove ~arch protection on all but hppa and arm
 
 *ExtUtils-MakeMaker-6.05-r6 (25 Jun 2003)
+
+  25 Jul 2003; Guy Martin <gmsoft@gentoo.org> ExtUtils-MakeMaker-6.05-r6.ebuild :
+  Marked stable on hppa.
 
   25 Jun 2003; <rac@gentoo.org> ExtUtils-MakeMaker-6.05-r6.ebuild:
   Install into vendor directory instead of overwriting files in core. Requires
