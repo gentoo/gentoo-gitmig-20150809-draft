@@ -1,0 +1,92 @@
+? changes
+? foo.c
+? hal-0.4.0-clean-on-startup.patch
+? hal-0.4.0.tar.gz
+? hal-storage.pc
+? intltool-extract
+? intltool-extract.in
+? intltool-merge
+? intltool-merge.in
+? intltool-update
+? intltool-update.in
+? mkinstalldirs
+? doc/api/Doxyfile
+? doc/api/Makefile
+? doc/api/Makefile.in
+? doc/api/html
+? doc/conf/Makefile
+? doc/conf/Makefile.in
+? doc/spec/Makefile
+? doc/spec/Makefile.in
+? doc/spec/hal-spec.xml
+? doc/spec/spec.tar
+? fdi/30osvendor/Makefile
+? fdi/30osvendor/Makefile.in
+? fdi/40oem/Makefile
+? fdi/40oem/Makefile.in
+? fdi/50user/Makefile
+? fdi/50user/Makefile.in
+? fdi/90defaultpolicy/Makefile
+? fdi/90defaultpolicy/Makefile.in
+? fdi/95userpolicy/Makefile
+? fdi/95userpolicy/Makefile.in
+? hald/foo
+? libhal-storage/.deps
+? libhal-storage/.libs
+? libhal-storage/Makefile
+? libhal-storage/Makefile.in
+? libhal-storage/libhal-storage.la
+? libhal-storage/libhal-storage.lo
+? po/Makefile
+? po/Makefile.in
+? po/Makefile.in.in
+? po/POTFILES
+? po/da.gmo
+? po/de.gmo
+? po/fr.gmo
+? po/hal.pot
+? po/nl.gmo
+? tools/foo
+? tools/fstab-sync
+? tools/fstab-sync.8
+? tools/linux/hal-hotplug-map
+Index: tools/fstab-sync.c
+===================================================================
+RCS file: /cvs/hal/hal/tools/fstab-sync.c,v
+retrieving revision 1.23
+diff -u -p -r1.23 fstab-sync.c
+--- tools/fstab-sync.c	14 Oct 2004 18:37:28 -0000	1.23
++++ tools/fstab-sync.c	15 Oct 2004 00:33:54 -0000
+@@ -74,11 +74,6 @@ static boolean verbose = FALSE;
+ #define TEMP_FSTAB_PREFIX ".fstab.hal."
+ #define TEMP_FSTAB_MAX_LENGTH 64
+ 
+-#undef FSTAB_SYNC_MOUNT_ROOT
+-#undef FSTAB_SYNC_MOUNT_MANAGED_KEYWORD
+-#undef FSTAB_SYNC_MOUNT_MANAGED_KEYWORD_SEC
+-#undef FSTAB_SYNC_MOUNT_ACCESS
+-
+ #ifndef TRUE
+ #define TRUE 1
+ #endif
+@@ -1657,10 +1652,8 @@ main (int argc, const char *argv[])
+         N_("add an entry to fstab"), N_("UDI")},
+       {"remove", 'r', POPT_ARG_STRING, &udi_to_remove, 0,
+         N_("remove an entry from fstab"), N_("UDI")},
+-#ifdef FSTAB_SYNC_USE_NOOP_MOUNT_OPTION
+       {"clean", 'c', POPT_ARG_NONE, &should_clean, 0,
+         N_("Remove all generated entries from fstab")},
+-#endif
+       {"verbose", 'v', POPT_ARG_NONE, &verbose, 0,
+         N_("Report detailed information about operation progress")},
+ 
+@@ -1694,9 +1687,7 @@ main (int argc, const char *argv[])
+       
+       /* when invoked for the /org/freedesktop/Hal/devices/computer UDI we clean the fstab */
+       if (getenv ("HALD_STARTUP") != NULL && strcmp (hal_device_udi, "/org/freedesktop/Hal/devices/computer") == 0) {
+-#ifdef FSTAB_SYNC_USE_NOOP_MOUNT_OPTION
+ 	should_clean = TRUE;
+-#endif
+       } else {
+       
+ 	/* when we are invoked by hald, make some early tests using the

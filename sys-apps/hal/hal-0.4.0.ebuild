@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.2.98.ebuild,v 1.2 2004/09/21 14:35:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.0.ebuild,v 1.1 2004/10/28 22:22:37 foser Exp $
 
 inherit eutils debug python
 
@@ -8,7 +8,7 @@ DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
 
 SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
-LICENSE="GPL-2 | AFL-2.0"
+LICENSE="|| ( GPL-2 AFL-2.0 )"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
@@ -24,6 +24,22 @@ RDEPEND=">=dev-libs/glib-2.2.2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# remove RH only stuff
+	epatch ${FILESDIR}/${P}-old_storage_policy.patch
+	# fix floppy drives be shown
+	epatch ${FILESDIR}/${P}-allow-floppy-drives.patch
+	# fix default drivenames fallback & other RH goodies
+	epatch ${FILESDIR}/${P}-storage-policy-never-use-uuid.patch
+	epatch ${FILESDIR}/${P}-clean-on-startup.patch
+	epatch ${FILESDIR}/${P}-fix-fstab-sync-crasher.patch
+
+}
 
 src_compile() {
 
@@ -43,6 +59,9 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
+
+	# We install this in a seperate package to avoid gnome-python dep
+	rm ${D}/usr/bin/hal-device-manager
 
 	# initscript
 	exeinto /etc/init.d/

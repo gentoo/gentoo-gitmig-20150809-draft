@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.7 2004/10/02 15:49:13 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.8 2004/10/28 22:22:37 foser Exp $
+
+*hal-0.4.0 (29 Oct 2004)
+
+  29 Oct 2004; foser <foser@gentoo.org> hal-0.4.0.ebuild :
+  New release (#68243)
+  Fix LICENSE
+  Add a few patches from RH & some fixes to counter them
 
 *hal-0.2.98-r1 (02 Oct 2004)
 
