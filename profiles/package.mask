@@ -36,6 +36,7 @@ net-mail/pinepgp
 # <seemant@gentoo.org> (13 Aug 2002)
 # masked for testing.  PLEASE TEST
 >=app-text/aspell-0.50_pre20020730
+app-i18n/aspell-en
 
 # <styx@gentoo.org> (13 Aug 2002)
 # masked for b0rkage, removing them soon
