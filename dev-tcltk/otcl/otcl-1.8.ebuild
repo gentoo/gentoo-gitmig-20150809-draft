@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.8.ebuild,v 1.2 2004/01/11 04:07:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.8.ebuild,v 1.3 2004/01/11 09:29:49 mr_bones_ Exp $
 
 DESCRIPTION="MIT Object extention to Tcl"
 SF_PN="otcl-tclcl"
@@ -19,7 +19,7 @@ src_compile() {
 	local myconf="--enable-shared"
 	CFLAGS="${CFLAGS} -I`ls /usr/lib/tcl8.*/include/generic/tclInt.h | tail -n1 | xargs dirname`"
 	econf ${myconf}
-	emake all || die 
+	emake all || die
 	emake libotcl.so || die
 }
 
@@ -33,7 +33,7 @@ src_install() {
 
 	# docs
 	dodoc VERSION
-	dohtml README.html CHANGES.html	
+	dohtml README.html CHANGES.html
 	docinto doc
 	dodoc doc/*
 }
