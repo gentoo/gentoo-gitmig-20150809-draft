@@ -1,8 +1,9 @@
-MD5 4b5c12ce740ce946504831a4b460440d ChangeLog 5275
+MD5 7a54d1abf13a8c74dd9b1ea82677cde4 ChangeLog 5622
 MD5 c5ffe35a66d39b4841685f6c4ca02c99 automake-1.6.1-r6.ebuild 7965
 MD5 ae7c1196fb46db020f145b8110e5b20d automake-1.6.3.ebuild 8699
 MD5 66c287772751854cb77fb2b82760e69a automake-1.7.2.ebuild 10607
-MD5 b444c2683e20a79463dc3733bcd2f50c automake-1.7.5.ebuild 10615
+MD5 9323c9cf8dcf2a83b7e51d3cbc656882 automake-1.7.5.ebuild 10603
+MD5 9323c9cf8dcf2a83b7e51d3cbc656882 automake-1.7.5-r1.ebuild 10603
 MD5 0aceb83a953ea5fb93e7dfbca4055e07 files/am-wrapper.pl-1.5 1599
 MD5 50b9b3413db5942659f7ec0bf5fc1cb5 files/am-wrapper.pl-1.6 2735
 MD5 d17e61bff6e2fcbcc019892df9504afd files/am-wrapper.pl-1.7 5233
@@ -13,3 +14,5 @@ MD5 7fc3b6eb6f1aebe0440f362113b1bad1 files/digest-automake-1.6.1-r6 197
 MD5 88752524f8e48812f58753eb56cc940c files/digest-automake-1.6.3 197
 MD5 dbfac3387cbcce79714003142e95c629 files/digest-automake-1.7.2 263
 MD5 6192ee1a794197a3a1eb0ae87438fe69 files/digest-automake-1.7.5 263
+MD5 d004bf5b9d8902b68e87440f8d5598ee files/automake-1.7.5-infopage-namechange.patch 592
+MD5 6192ee1a794197a3a1eb0ae87438fe69 files/digest-automake-1.7.5-r1 263
