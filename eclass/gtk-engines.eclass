@@ -41,6 +41,10 @@ case "${ENGINE}" in
 	"eazel" )
 		MY_PN="eazel-engine"
 		newdepend media-libs/gdk-pixbuf
+		# This one needs the capplet stuff from gnomecc-1.4.  Some
+		# tests also need libglade, but it is a heavy dep, so dont
+		# know if we should rather disabled the tests...
+		[ "${SLOT}" -eq 1 ] && newdepend "=gnome-base/control-center-1.4*"
 		;;
 	"gtkstep" )
 		LICENSE="LGPL-2" ;;
