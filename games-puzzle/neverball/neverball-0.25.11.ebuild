@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-0.25.11.ebuild,v 1.2 2003/11/03 01:31:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-0.25.11.ebuild,v 1.3 2003/11/11 14:57:31 vapier Exp $
 
 inherit games
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc2.patch
 	sed -i "/CONFIG_PATH/s:\"./data\":\"${DATA}\":g" config.h || \
 		die "sed config.h failed"
 	sed -i \
