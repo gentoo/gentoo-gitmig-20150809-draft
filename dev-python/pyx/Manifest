@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 be6ecaf2f5330c26f9e3b2998a73e40d pyx-0.5.1.ebuild 670
-MD5 1dbcd7e312f0d9ff957a93ca66f04557 pyx-0.6.1.ebuild 675
+MD5 a23b8aa105c39cce69c30724f89445b8 pyx-0.5.1.ebuild 667
+MD5 c3b3bba4d2a4191bec9eef885bbf4151 pyx-0.6.1.ebuild 672
 MD5 6e8b67bf966b7d105ab24d117c99db8f pyx-0.3.1.ebuild 676
-MD5 e78a9901c56e08593a30892dcbfc841d ChangeLog 1185
+MD5 2f1378d8710e2b777332ba1a4f4bc44f ChangeLog 1270
 MD5 efb565b5394bcf6412b0389c86261a92 metadata.xml 445
 MD5 9be0a9b000a254e04f1e54f4f173e294 pyx-0.6.3.ebuild 686
 MD5 46a94096ae827068a9488dbb0a2e4197 files/digest-pyx-0.3.1 61
@@ -14,7 +14,7 @@ MD5 38b4424ad0a10c8e987231286f2edcaa files/digest-pyx-0.6.3 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBQ3uG2jLqHNfbg2URAgkzAJ42f+7IsglUjcvLnw7oxTbfeIBQpwCcCR76
-xOmC6VKS5f4QXSZGHWuYgl0=
-=SFqM
+iD8DBQFBQ32/2jLqHNfbg2URAvjnAJ0TFOpqIoZc7vwBA8zHZWhf75gLgQCfV0os
+mPw806JVKf+eEN0J1cDChOw=
+=Eb3F
 -----END PGP SIGNATURE-----

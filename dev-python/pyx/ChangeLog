@@ -1,13 +1,14 @@
 # ChangeLog for dev-python/pyx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.8 2004/09/11 22:21:27 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.9 2004/09/11 22:30:56 lucass Exp $
 
 *pyx-0.6.3 (12 Sep 2004)
 
   12 Sep 2004; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
-  +pyx-0.6.3.ebuild:
+  pyx-0.5.1.ebuild, pyx-0.6.1.ebuild, +pyx-0.6.3.ebuild:
   Version bump, thanks for information to Christopher Knox in bug #63604.
   Some minor changes in the ebuild. Added description to metadata.xml.
+  Versions 0.5.1 and 0.6.1 marked stable on x86.
 
   18 May 2004; Mamoru KOMACHI <usata@gentoo.org> pyx-0.3.1.ebuild,
   pyx-0.5.1.ebuild, pyx-0.6.1.ebuild:
