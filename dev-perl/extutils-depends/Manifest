@@ -1,10 +1,20 @@
-MD5 c7e065980960e994d3d9383684691e0b ChangeLog 1992
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c7cdd23d6a7824b306fae8d5d9d82aab ChangeLog 2112
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 d179b40f0640239b9fb97035427fd9a9 extutils-depends-0.102.ebuild 574
 MD5 f53df0b095aa4350c9f807a6890d6668 extutils-depends-0.202.ebuild 587
 MD5 912695c070592b1feffcb67368d8eb19 extutils-depends-0.204.ebuild 597
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 22396d7cef7106c40d49f1fed0995f46 extutils-depends-0.205.ebuild 603
+MD5 77e54d7d28f04e2ae296af0b165deccd extutils-depends-0.205.ebuild 602
 MD5 295c867201bbbb32557d81f2e63a6391 files/digest-extutils-depends-0.102 72
 MD5 4b25737c7a333f41cd4b84aa03520349 files/digest-extutils-depends-0.202 72
 MD5 87ed838af7809f8fd25e5992a4b713ab files/digest-extutils-depends-0.204 72
 MD5 9803e09f7deac894fbccf22e9a527c6f files/digest-extutils-depends-0.205 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCMEUztG5z4I8BtQoRAqYkAJ4tpZ2wqibbbZ3ET8R9nJRAGHoTfQCeLcUU
+vIpIMHrWtGcngxg58Gh39M8=
+=9HO1
+-----END PGP SIGNATURE-----
