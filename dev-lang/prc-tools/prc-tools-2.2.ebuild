@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc. and Tim Yamin [plasmaroo@gentoo.org]
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.2.ebuild,v 1.3 2003/11/16 12:01:56 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.2.ebuild,v 1.4 2004/03/11 16:58:44 plasmaroo Exp $
 
 DESCRIPTION="GNU-Based Palm C++ Development Suite"
 
