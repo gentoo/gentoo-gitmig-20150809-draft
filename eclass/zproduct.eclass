@@ -1,14 +1,17 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.5 2003/03/04 04:58:44 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.6 2003/04/04 00:53:12 kutsuya Exp $
 
 # This eclass is designed to streamline the construction of
 # ebuilds for new zope products
 
+# 2003/04/03 - Added DOTTXT_PROTEXT variable..
+#            - Removed from EXPORT_FUNCTIONS: dottxt_protect, dottxt_unprotect
+
 ECLASS=zproduct
 INHERITED="${INHERITED} ${ECLASS}"
-EXPORT_FUNCTIONS src_install pkg_prerm pkg_postinst dottxt_protect dottxt_unprotect pkg_config
+EXPORT_FUNCTIONS src_install pkg_prerm pkg_postinst pkg_config
 
 DESCRIPTION="This is a zope product"
 HOMEPAGE=""
@@ -24,6 +27,8 @@ S=${WORKDIR}
 ZI_DIR="${ROOT}/var/lib/zope/"
 ZP_DIR="${ROOT}/usr/share/zproduct"
 DOT_ZFOLDER_FPATH="${ZP_DIR}/${PF}/.zfolder.lst"
+DOTTXT_PROTECT="refresh.txt version.txt"
+
 
 # Temporarily rename .txt files that we don't want ripped out by do_doc.
 # Parameters:
@@ -85,7 +90,7 @@ zproduct_src_install()
 			do_docs)
 				#*Moves txt docs 
 				debug-print-section do_docs 
-				LIST_OUTER="$(dottxt_protect "refresh.txt $DOTTXT_PROTECT" ${S})"
+				LIST_OUTER="$(dottxt_protect "$DOTTXT_PROTECT" ${S})"
 				docinto / 
 				dodoc *.txt >/dev/null
 				rm -f *.txt
@@ -93,7 +98,7 @@ zproduct_src_install()
 				rm -f *.txt.*
 				dottxt_unprotect "$LIST_OUTER"
 				for N in ${ZPROD_LIST} ; do
-					LIST_INNER="$(dottxt_protect "refresh.txt $DOTTXT_PROTECT" ${S}/${N})"
+					LIST_INNER="$(dottxt_protect "$DOTTXT_PROTECT" ${S}/${N})"
 					docinto ${N}
 					dodoc ${N}/*.txt >/dev/null
 					rm -f ${N}/*.txt
