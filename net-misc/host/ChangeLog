@@ -1,12 +1,15 @@
 # ChangeLog for net-misc/host
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.10 2003/03/01 22:11:29 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.11 2003/06/28 22:17:36 taviso Exp $
 
  21 Jan 2003; Will Woods <wwoods@gentoo.org> : added ~alpha keyword 
 
  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
+  28 Jun 2003; Tavis Ormandy <taviso@gentoo.org> host-991529.ebuild:
+  stable on alpha
+
 *host-991529 (10 May 2002)
 
   01 Mar 2003; Brandon Low <lostlogic@gentoo.org> host-991529.ebuild:
