@@ -1,0 +1,7 @@
+# Config file for /etc/init.d/arpwatch
+# see arpwatch.8 for more information
+
+#IFACES="eth0 eth1"
+IFACES="eth0"
+
+OPTIONS=""

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11.ebuild,v 1.4 2003/07/13 11:30:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.1 2003/08/06 14:15:35 lanius Exp $
 
-P=arpwatch-2.1a11
-S=${WORKDIR}/$P
+MY_P=arpwatch-2.1a11
+S=${WORKDIR}/$MY_P
 DESCRIPTION="An ethernet monitor program that keeps track of ethernet/ip address pairings"
-SRC_URI="ftp://ftp.ee.lbl.gov/${P}.tar.gz"
+SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz"
 HOMEPAGE="http://www-nrg.ee.lbl.gov/"
 LICENSE="BSD"
 SLOT="0"
@@ -18,7 +18,8 @@ DEPEND="net-libs/libpcap
 src_unpack() {
 	unpack $A
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	einfo "Patching arpwatch with debian and redhat patches"
+	patch -s < ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
@@ -32,15 +33,30 @@ src_compile() {
 }
 
 src_install () {
-	dodir /usr/sbin /etc /var /var/arpwatch /etc /etc/init.d
+	dodir /var/arpwatch /usr/sbin
 	keepdir /var/arpwatch
+
 	make DESTDIR=${D} install || die
+
+	doman *.8
+
+	exeinto /var/arpwatch
+	doexe arp2ethers arpfetch bihourly massagevendor massagevendor-old
+	
+	insinto /var/arpwatch
+	doins d.awk duplicates.awk e.awk euppertolower.awk p.awk
+
+	insinto /usr/share/arpwatch
+	doins ethercodes.dat
+	
+	dodoc README CHANGES
     exeinto /etc/init.d ; newexe ${FILESDIR}/arpwatch.init arpwatch
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/arpwatch.confd arpwatch
 	
 }
 pkg_postinst() {
 	ewarn "NOTE: if you want to run arpwatch on boot then execute"
 	ewarn "      rc-update add arpwatch default                  "
 }
-
-

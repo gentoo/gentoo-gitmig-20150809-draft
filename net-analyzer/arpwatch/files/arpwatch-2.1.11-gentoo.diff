@@ -1,204 +1,1270 @@
---- Makefile.in.orig	Wed Jul 29 06:16:45 1998
-+++ Makefile.in	Fri Aug 21 10:57:51 1998
-@@ -109,8 +109,8 @@
- 	$(CC) $(CFLAGS) -o $@ zap.o intoa.o -lutil
+Index: arpwatch/Makefile.in
+diff -u arpwatch/Makefile.in:1.1.1.1 arpwatch/Makefile.in:1.1.1.1.10.1
+--- Makefile.in:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ Makefile.in	Tue Apr 17 13:53:29 2001
+@@ -31,7 +31,8 @@
+ # Pathname of directory to install the man page
+ MANDEST = @mandir@
+ # Pathname of directory to install database file
+-ARPDIR = $(prefix)/arpwatch
++ARPDIR = /var/lib/arpwatch
++ETHERCODES = /usr/share/arpwatch/ethercodes.dat
  
- install: force
--	$(INSTALL) -m 555 -o bin -g bin arpwatch $(DESTDIR)$(BINDEST)
--	$(INSTALL) -m 555 -o bin -g bin arpsnmp $(DESTDIR)$(BINDEST)
-+	$(INSTALL) -s -m 555 -o bin -g bin arpwatch $(DESTDIR)$(BINDEST)
-+	$(INSTALL) -s -m 555 -o bin -g bin arpsnmp $(DESTDIR)$(BINDEST)
+ # VPATH
+ srcdir = @srcdir@
+@@ -45,7 +46,8 @@
+ PROG = arpwatch
+ CCOPT = @V_CCOPT@
+ INCLS = -I. @V_INCLS@
+-DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" -DPATH_SENDMAIL=\"$(SENDMAIL)\"
++DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" -DPATH_SENDMAIL=\"$(SENDMAIL)\" \
++	-DETHERCODES=\"$(ETHERCODES)\"
  
- install-man: force
- 	$(INSTALL) -m 444 -o bin -g bin $(srcdir)/arpwatch.8 \
---- ethercodes.dat.orig	Tue Mar 21 02:37:05 2000
-+++ ethercodes.dat	Thu Sep 14 11:18:09 2000
-@@ -897,3 +897,5 @@
- c0:0:0	Western Digital (may be reversed 00 00 C0?)
- e2:c:f	Kingston Technologies
- ec:10:0	Enance Source Co., Ltd.	PC clones(?)
-+0:bd:11	VMWare Inc
-+0:bd:fb	VMWare Inc
---- arpwatch.c.orig	Thu Feb 22 22:47:29 2001
-+++ arpwatch.c	Thu Feb 22 22:47:29 2001
-@@ -107,6 +107,8 @@
+ # Standard CFLAGS
+ CFLAGS = $(CCOPT) $(DEFS) $(INCLS)
+Index: arpwatch/arpsnmp.8
+diff -u arpwatch/arpsnmp.8:1.1.1.1 arpwatch/arpsnmp.8:1.1.1.1.10.1
+--- arpsnmp.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpsnmp.8	Tue Apr 17 13:53:29 2001
+@@ -1,4 +1,4 @@
+-.\" @(#) $Id: arpwatch-2.1.11-gentoo.diff,v 1.2 2003/08/06 14:15:35 lanius Exp $ (LBL)
++.\" @(#) $Id: arpwatch-2.1.11-gentoo.diff,v 1.2 2003/08/06 14:15:35 lanius Exp $ (LBL)
+ .\"
+ .\" Copyright (c) 1996, 1997, 1999, 2000
+ .\"	The Regents of the University of California.  All rights reserved.
+@@ -69,9 +69,9 @@
+ .na
+ .nh
+ .nf
+-/usr/operator/arpwatch - default directory
++/var/lib/arpwatch - default directory
+ arp.dat - ethernet/ip address database
+-ethercodes.dat - vendor ethernet block list
++/usr/share/arpwatch/ethercodes.dat - vendor ethernet block list
+ .ad
+ .hy
+ .fi
+Index: arpwatch/arpwatch.8
+diff -u arpwatch/arpwatch.8:1.1.1.1 arpwatch/arpwatch.8:1.1.1.1.10.1
+--- arpwatch.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpwatch.8	Tue Apr 17 13:53:29 2001
+@@ -1,4 +1,4 @@
+-.\" @(#) $Id: arpwatch-2.1.11-gentoo.diff,v 1.2 2003/08/06 14:15:35 lanius Exp $ (LBL)
++.\" @(#) $Id: arpwatch-2.1.11-gentoo.diff,v 1.2 2003/08/06 14:15:35 lanius Exp $ (LBL)
+ .\"
+ .\" Copyright (c) 1992, 1994, 1996, 1997, 2000
+ .\"	The Regents of the University of California.  All rights reserved.
+@@ -152,9 +152,9 @@
+ .na
+ .nh
+ .nf
+-/usr/operator/arpwatch - default directory
++/var/lib/arpwatch - default directory
+ arp.dat - ethernet/ip address database
+-ethercodes.dat - vendor ethernet block list
++/usr/share/arpwatch/ethercodes.dat - vendor ethernet block list
+ .ad
+ .hy
+ .fi
+Index: arpwatch/arpwatch.h
+diff -u arpwatch/arpwatch.h:1.1.1.1 arpwatch/arpwatch.h:1.1.1.1.10.1
+--- arpwatch.h:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpwatch.h	Tue Apr 17 13:53:29 2001
+@@ -1,7 +1,7 @@
+ /* @(#) $Id: arpwatch-2.1.11-gentoo.diff,v 1.2 2003/08/06 14:15:35 lanius Exp $ (LBL) */
  
- char *prog;
+ #define ARPFILE "arp.dat"
+-#define ETHERCODES "ethercodes.dat"
++/* #define ETHERCODES "ethercodes.dat" */
+ #define CHECKPOINT (15*60)		/* Checkpoint time in seconds */
  
-+char *Watcher = NULL;
+ #define MEMCMP(a, b, n) memcmp((char *)a, (char *)b, n)
+Index: arpwatch/bihourly
+diff -u arpwatch/bihourly:1.1.1.1 arpwatch/bihourly:1.1.1.1.10.1
+--- bihourly:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ bihourly	Tue Apr 17 13:53:29 2001
+@@ -6,7 +6,7 @@
+ PATH=$PATH:/usr/local/sbin
+ export PATH
+ #
+-cd /usr/operator/arpwatch
++cd /var/lib/arpwatch
+ #
+ list=`cat list`
+ cname=`cat cname`
+@@ -14,7 +14,7 @@
+ #
+ alist=""
+ for r in $list; do \
+-	./arpfetch $r $cname > $r 2> $errs
++	arpfetch $r $cname > $r 2> $errs
+ 	if test -s $errs; then
+ 		echo "arpfetch $r failed:"
+ 		sed -e 's/^/    /' $errs
+Index: arpwatch/arp2ethers.8
+diff -u /dev/null arpwatch/arp2ethers.8:1.1.2.2
+--- /dev/null	Fri Oct 26 17:37:30 2001
++++ arp2ethers.8	Tue Apr 17 14:12:51 2001
+@@ -0,0 +1,56 @@
++.TH ARP2ETHERS 8
++.SH NAME
++arp2ethers \- convert arpwatch address database to ethers file format
++.SH SYNOPSIS
++.na
++.B arp2ethers
++.ad
++.SH "DESCRIPTION"
++.B arp2ethers
++converts a file named
++.IR arp.dat
++in the current working directory into
++.BR ethers(5)
++format on
++.IR stdout .
++Usually
++.IR arp.dat
++is an ethernet/ip database file generated by
++.BR arpwatch(8) .
++.SH FILES
++.na
++.nh
++.nf
++/var/lib/arpwatch - default directory for arp.dat
++arp.dat - ethernet/ip address database
++.ad
++.hy
++.fi
++.SH "SEE ALSO"
++.na
++.nh
++.BR arpwatch (8),
++.BR ethers (5),
++.BR rarp (8),
++.BR arp (8),
++.ad
++.hy
++.SH BUGS
++Please send bug reports to arpwatch@ee.lbl.gov.
++.SH AUTHORS
++.LP
++Original version by Craig Leres of the Lawrence Berkeley
++National Laboratory Network Research Group, University of
++California, Berkeley, CA.
++.LP
++Modified for the Debian Project by Peter Kelemen, with
++additions from Erik Warmelink.
++.LP
++The current version is available via anonymous ftp:
++.LP
++.RS
++.I ftp://ftp.ee.lbl.gov/arpwatch.tar.gz
++.RE
++.LP
++This manual page was contributed by Hugo Graumann.
 +
- int can_checkpoint;
- int swapped;
- int nobogons;
-@@ -170,7 +172,7 @@
- 	interface = NULL;
- 	rfilename = NULL;
- 	pd = NULL;
--	while ((op = getopt(argc, argv, "df:i:n:Nr:")) != EOF)
-+	while ((op = getopt(argc, argv, "df:i:m:n:Nr:")) != EOF)
- 		switch (op) {
+Index: arpwatch/arpfetch.8
+diff -u /dev/null arpwatch/arpfetch.8:1.1.2.2
+--- /dev/null	Fri Oct 26 17:37:30 2001
++++ arpfetch.8	Tue Apr 17 14:12:51 2001
+@@ -0,0 +1,63 @@
++.TH ARPFETCH 8
++.SH NAME
++arpfetch \- obtain ethernet/ip address pairings via snmp
++.SH SYNOPSIS
++.na
++arpfetch
++.I host
++.I cname
++.SH "DESCRIPTION"
++.B arpfetch
++gets pairings between ip addresses and the ethernet address of the
++corresponding network card. These pairings are retrieved from other
++network entities, like routers, by the SNMP protocol using
++.BR snmpwalk(1) .
++Mostly, this program is an agent that
++is used to get data for
++.BR arpsnmp(8) .
++This fetching of address mappings can be further automated by use of
++.BR bihourly(8) .
++.LP
++Both command arguments must be present for proper operation.
++The
++.IR host
++argument is the hostname of the network entity being queried and the
++.IR cname
++argument is the SNMP community name of the network entity.
++.LP
++The information is presented on
++.IR stdout
++in a format compatible with
++.BR arpsnmp(8)
++and
++.BR arpwatch(8) .
++.LP
++Further information about SNMP can be found in
++.BR snmpcmd(1)
++and
++.BR variables(5) .
++.SH "SEE ALSO"
++.na
++.nh
++.BR arpsnmp (8),
++.BR arpwatch(8),
++.BR bihourly (8),
++.BR snmpwalk (1),
++.BR snmpcmd (1),
++.BR variables (5)
++.ad
++.hy
++.SH BUGS
++Please send bug reports to arpwatch@ee.lbl.gov.
++.SH AUTHORS
++Craig Leres of the
++Lawrence Berkeley National Laboratory Network Research Group,
++University of California, Berkeley, CA.
++.LP
++The current version is available via anonymous ftp:
++.LP
++.RS
++.I ftp://ftp.ee.lbl.gov/arpwatch.tar.gz
++.RE
++.LP
++This manual page was contributed by Hugo Graumann.
+Index: arpwatch/arpsnmp.8
+diff -u arpwatch/arpsnmp.8:1.1.1.1 arpwatch/arpsnmp.8:1.1.1.1.16.2
+--- arpsnmp.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpsnmp.8	Tue Apr 17 14:53:57 2001
+@@ -22,7 +22,7 @@
+ .TH ARPSNMP 8 "17 September 2000"
+ .UC 4
+ .SH NAME
+-arpsnmp - keep track of ethernet/ip address pairings
++arpsnmp \- keep track of ethernet/ip address pairings
+ .SH SYNOPSIS
+ .B arpsnmp
+ [
+Index: arpwatch/arpwatch.8
+diff -u arpwatch/arpwatch.8:1.1.1.1 arpwatch/arpwatch.8:1.1.1.1.16.2
+--- arpwatch.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpwatch.8	Tue Apr 17 14:53:57 2001
+@@ -22,7 +22,7 @@
+ .TH ARPWATCH 8 "8 October 2000"
+ .UC 4
+ .SH NAME
+-arpwatch - keep track of ethernet/ip address pairings
++arpwatch \- keep track of ethernet/ip address pairings
+ .SH SYNOPSIS
+ .na
+ .B arpwatch
+Index: arpwatch/bihourly.8
+diff -u /dev/null arpwatch/bihourly.8:1.1.2.2
+--- /dev/null	Fri Oct 26 17:37:30 2001
++++ bihourly.8	Tue Apr 17 14:12:51 2001
+@@ -0,0 +1,73 @@
++.TH BIHOURLY 8
++.SH NAME
++bihourly \- track ethernet/ip address pairs
++.SH SYNOPSIS
++.na
++bihourly
++.SH "DESCRIPTION"
++.B bihourly
++is a script that automates the operation of
++.B arpsnmp(8)
++by executing
++.B arpfetch(8)
++on a series of hostnames and then
++sending the results to
++.B arpsnmp(8)
++for analysis.
++.LP
++The result is a report of the current pairings
++between ip addresses and the corresponding ethernet address
++of the network hardware as reported by
++.B snmpwalk(8).
++Activity
++is logged and noted changes are reported by email.
++.LP
++In its working directory
++.B bihourly
++expects a file named
++.IR list
++which contains a space separated list of hostnames to be queried
++and a file named
++.IR cname
++which holds the SNMP community name by which to query these hosts.
++.LP
++Contrary to the name,
++.B bihourly
++does not run twice every hour. It
++runs once each time it is invoked. For repeated operation
++.B bihourly
++must be invoked on a periodic basis by a program like
++.B cron(1).
++.SH FILES
++.na
++.nh
++.nf
++/var/lib/arpwatch - default working directory
++list - file containing names of hosts to query
++cname - file containing the SNMP community name by which to query
++.ad
++.hy
++.fi
++.SH "SEE ALSO"
++.na
++.nh
++.BR arpsnmp (8),
++.BR arpfetch(8),
++.BR snmpwalk (8),
++.BR cron (8)
++.ad
++.hy
++.SH BUGS
++Please send bug reports to arpwatch@ee.lbl.gov.
++.SH AUTHORS
++Craig Leres of the
++Lawrence Berkeley National Laboratory Network Research Group,
++University of California, Berkeley, CA.
++.LP
++The current version is available via anonymous ftp:
++.LP
++.RS
++.I ftp://ftp.ee.lbl.gov/arpwatch.tar.gz
++.RE
++.LP
++This manual page was contributed by Hugo Graumann.
+Index: arpwatch/massagevendor.8
+diff -u /dev/null arpwatch/massagevendor.8:1.1.2.2
+--- /dev/null	Fri Oct 26 17:37:30 2001
++++ massagevendor.8	Tue Apr 17 14:12:51 2001
+@@ -0,0 +1,91 @@
++.TH MASSAGEVENDOR 8
++.SH NAME
++massagevendor \- convert the ethernet vendor codes master list to arpwatch format
++.SH SYNOPSIS
++.na
++massagevendor
++.I vendorfile
++.SH "DESCRIPTION"
++.B massagevendor
++is a program that converts a text file containing ethernet vendor codes
++into a format suitable for use by
++.B arpwatch(8)
++and
++.B arpsnmp(8).
++The input
++.I vendorfile
++is a master text file containing vendor codes. The output
++is sent to
++.I stdout.
++Each line of the
++.I vendorfile
++is expected to have a six digit hexadecimal vendor code
++followed by spaces followed by the name of the manufacturer.
++.LP
++All ethernet devices have a unique identifier which
++includes a vendor code specifying the manufacturer of the
++device. In normal operation
++.B arpwatch(8)
++and
++.B arpsnmp(8)
++use the file
++.I ethercodes.dat
++to report this vendor code.
++.B massagevendor
++is used to generate the
++.I ethercodes.dat
++file from text files containing these vendor codes.
++.LP
++Locations where an ethernet vendor codes master text file
++can be obtained are given below.
++.SH FILES
++.na
++.nh
++.nf
++/usr/share/arpwatch - default location of the ethernet vendor list
++ethercodes.dat - file containing the list of ethernet vendor codes
++.ad
++.hy
++.fi
++.SH "SEE ALSO"
++.na
++.nh
++.BR arpwatch(8),
++.BR arpsnmp(8)
++.ad
++.hy
++.SH NOTES
++Sources for ethernet vendor codes seen in the wild are
++.LP
++.na
++.nh
++.nf
++.RS
++.I http://map-ne.com/Ethernet/vendor.html
++.I ftp://ftp.cavebear.com/pub/Ethernet.txt
++.I http://www.cavebear.com/CaveBear/Ethernet/vendor.html
++.RE
++.ad
++.hy
++.LP
++Useful for comparison or completeness are the
++ethernet vendor codes as assigned
++by the IEEE which can be found at
++.LP
++.RS
++.I http://standards.ieee.org/regauth/oui/oui.txt
++.RE
++.SH BUGS
++Please send bug reports to arpwatch@ee.lbl.gov.
++.SH AUTHORS
++Craig Leres of the
++Lawrence Berkeley National Laboratory Network Research Group,
++University of California, Berkeley, CA.
++.LP
++The current version is available via anonymous ftp:
++.LP
++.RS
++.I ftp://ftp.ee.lbl.gov/arpwatch.tar.gz
++.RE
++.LP
++This manual page was contributed by Hugo Graumann.
+Index: arpwatch/arpsnmp.c
+diff -u arpwatch/arpsnmp.c:1.1.1.1 arpwatch/arpsnmp.c:1.1.1.1.2.1
+--- arpsnmp.c:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpsnmp.c	Tue Apr 17 13:47:57 2001
+@@ -78,6 +78,10 @@
+ 	register char *cp;
+ 	register int op, i;
+ 	char errbuf[256];
++	char options[] =
++		"d"
++		"f:"
++	;
  
- 		case 'd':
-@@ -202,6 +204,10 @@
- 			rfilename = optarg;
- 			break;
- 
-+		case 'm':
-+			Watcher = optarg;
-+			break;
-+
- 		default:
- 			usage();
- 		}
-@@ -751,6 +757,6 @@
- 
- 	(void)fprintf(stderr, "Version %s\n", version);
- 	(void)fprintf(stderr, "usage: %s [-dN] [-f datafile] [-i interface]"
--	    " [-n net[/width]] [-r file]\n", prog);
-+	    " [-m email] [-n net[/width]] [-r file]\n", prog);
- 	exit(1);
- }
---- report.c.orig	Sun Oct  1 00:41:10 2000
-+++ report.c	Thu May 16 11:34:33 2002
-@@ -45,6 +45,8 @@
- 
- #include <ctype.h>
- #include <errno.h>
-+#include <fcntl.h>
-+#include <paths.h>
- #include <signal.h>
- #include <stdio.h>
- #include <stdlib.h>
-@@ -70,6 +72,8 @@
- 
- #define PLURAL(n) ((n) == 1 || (n) == -1 ? "" : "s")
- 
-+extern char *Watcher;
-+
- static int cdepth;	/* number of outstanding children */
- 
- static char *fmtdate(time_t);
-@@ -240,7 +244,7 @@
- 	register FILE *f;
- 	char tempfile[64], cpu[64], os[64];
- 	char *fmt = "%20s: %s\n";
--	char *watcher = WATCHER;
-+	char *watcher = Watcher ? Watcher : WATCHER;
- 	char *watchee = WATCHEE;
- 	char *sendmail = PATH_SENDMAIL;
- 	char *unknown = "<unknown>";
-@@ -344,6 +348,25 @@
- 		exit(1);
- 	}
- 	/* XXX Need to freopen()? */
-+
-+	/*
-+	 * Open /dev/null as stdout and stderr so that sendmail 8.12.1 (and
-+	 * above ?) won't complain about missing file descriptors.
-+	 */
-+	if ((fd = open(_PATH_DEVNULL, O_RDWR)) == -1) {
-+		syslog(LOG_ERR, "Cannot open %s: %m", _PATH_DEVNULL);
-+		exit(1);
-+	}
-+	if (dup2(fd, STDOUT_FILENO) == -1) {
-+		syslog(LOG_ERR, "Cannot dup2 %s to stdout: %m", _PATH_DEVNULL);
-+		exit(1);
-+	}
-+	if (dup2(fd, STDERR_FILENO) == -1) {
-+		syslog(LOG_ERR, "Cannot dup2 %s to stderr: %m", _PATH_DEVNULL);
-+		exit(1);
-+	}
-+	close(fd);
-+
- 	/* Always Deliver interactively (pause when child depth gets large) */
- 	execl(sendmail, "sendmail", "-odi", watcher, NULL);
- 	syslog(LOG_ERR, "execl: %s: %m", sendmail);
---- arpsnmp.c.orig	Mon Jan 18 01:47:40 1999
-+++ arpsnmp.c	Thu Feb 22 22:47:29 2001
-@@ -68,6 +68,8 @@
- 
- char *prog;
- 
-+char *Watcher;
-+
- extern int optind;
- extern int opterr;
- extern char *optarg;
-@@ -90,7 +92,7 @@
+ 	if ((cp = strrchr(argv[0], '/')) != NULL)
+ 		prog = cp + 1;
+@@ -90,7 +94,7 @@
  	}
  
  	opterr = 0;
 -	while ((op = getopt(argc, argv, "df:")) != EOF)
-+	while ((op = getopt(argc, argv, "df:m:")) != EOF)
++	while ((op = getopt(argc, argv, options)) != EOF)
  		switch (op) {
  
  		case 'd':
-@@ -105,6 +107,10 @@
+@@ -181,9 +185,14 @@
+ usage(void)
+ {
+ 	extern char version[];
++	char usage[] =
++		"[-d] "
++		"[-f datafile] "
++		"file [...]\n"
++	;
+ 
+ 	(void)fprintf(stderr, "Version %s\n", version);
+ 	(void)fprintf(stderr,
+-	    "usage: %s [-d] [-f datafile] file [...]\n", prog);
++	    "usage: %s %s", prog, usage);
+ 	exit(1);
+ }
+Index: arpwatch/arpwatch.c
+diff -u arpwatch/arpwatch.c:1.1.1.1 arpwatch/arpwatch.c:1.1.1.1.2.1
+--- arpwatch.c:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpwatch.c	Tue Apr 17 13:47:57 2001
+@@ -153,6 +153,14 @@
+ 	register char *interface, *rfilename;
+ 	struct bpf_program code;
+ 	char errbuf[PCAP_ERRBUF_SIZE];
++	char options[] =
++		"d"
++		"f:"
++		"i:"
++		"n:"
++		"N"
++		"r:"
++	;
+ 
+ 	if (argv[0] == NULL)
+ 		prog = "arpwatch";
+@@ -170,7 +178,7 @@
+ 	interface = NULL;
+ 	rfilename = NULL;
+ 	pd = NULL;
+-	while ((op = getopt(argc, argv, "df:i:n:Nr:")) != EOF)
++	while ((op = getopt(argc, argv, options)) != EOF)
+ 		switch (op) {
+ 
+ 		case 'd':
+@@ -748,9 +756,16 @@
+ usage(void)
+ {
+ 	extern char version[];
++	char usage[] =
++		"[-dN] "
++		"[-f datafile] "
++		"[-i interface] "
++		"[-n net[/width]] "
++		"[-r file] "
++		"\n"
++	;
+ 
+ 	(void)fprintf(stderr, "Version %s\n", version);
+-	(void)fprintf(stderr, "usage: %s [-dN] [-f datafile] [-i interface]"
+-	    " [-n net[/width]] [-r file]\n", prog);
++	(void)fprintf(stderr, "usage: %s %s", prog, usage);
+ 	exit(1);
+ }
+Index: arpwatch/arpsnmp.8
+diff -u arpwatch/arpsnmp.8:1.1.1.1 arpwatch/arpsnmp.8:1.1.1.1.4.1
+--- arpsnmp.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpsnmp.8	Tue Apr 17 13:49:16 2001
+@@ -30,7 +30,12 @@
+ ] [
+ .B -f
+ .I datafile
++] [
++.B -s
++.I sendmail_path
+ ]
++.br
++.ti +8
+ .I file
+ [
+ .I ...
+@@ -54,6 +59,13 @@
+ flag is used to set the ethernet/ip address database filename.
+ The default is
+ .IR arp.dat .
++.LP
++The
++.B -s
++flag is used to specify the path to the sendmail program.
++Any program that takes the option -odi and then text from stdin
++can be substituted. This is useful for redirecting reports
++to log files instead of mail. (Debian specific)
+ .LP
+ Note that an empty
+ .I arp.dat
+Index: arpwatch/arpsnmp.c
+diff -u arpwatch/arpsnmp.c:1.1.1.1.2.1 arpwatch/arpsnmp.c:1.1.1.1.2.1.2.1
+--- arpsnmp.c:1.1.1.1.2.1	Tue Apr 17 13:47:57 2001
++++ arpsnmp.c	Tue Apr 17 13:49:16 2001
+@@ -67,6 +67,7 @@
+ __dead	void usage(void) __attribute__((volatile));
+ 
+ char *prog;
++char *path_sendmail = PATH_SENDMAIL;
+ 
+ extern int optind;
+ extern int opterr;
+@@ -81,6 +82,7 @@
+ 	char options[] =
+ 		"d"
+ 		"f:"
++		"s:"
+ 	;
+ 
+ 	if ((cp = strrchr(argv[0], '/')) != NULL)
+@@ -109,6 +111,10 @@
  			arpfile = optarg;
  			break;
  
-+		case 'm':
-+			Watcher = optarg;
++		case 's':
++			path_sendmail = optarg;
 +			break;
 +
  		default:
  			usage();
  		}
-@@ -184,6 +190,6 @@
+@@ -188,6 +194,7 @@
+ 	char usage[] =
+ 		"[-d] "
+ 		"[-f datafile] "
++		"[-s sendmail_path] "
+ 		"file [...]\n"
+ 	;
  
- 	(void)fprintf(stderr, "Version %s\n", version);
- 	(void)fprintf(stderr,
--	    "usage: %s [-d] [-f datafile] file [...]\n", prog);
-+	    "usage: %s [-d] [-f datafile] [-m email] file [...]\n", prog);
- 	exit(1);
- }
---- arpwatch.8.orig	Sun Oct  8 21:31:28 2000
-+++ arpwatch.8	Thu Feb 22 22:47:29 2001
-@@ -38,6 +38,9 @@
+Index: arpwatch/arpwatch.8
+diff -u arpwatch/arpwatch.8:1.1.1.1 arpwatch/arpwatch.8:1.1.1.1.4.1
+--- arpwatch.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpwatch.8	Tue Apr 17 13:49:16 2001
+@@ -44,6 +44,12 @@
+ .B -r
+ .I file
+ ]
++.br
++.ti +8
++[
++.B -s
++.I sendmail_path
++]
+ .ad
+ .SH DESCRIPTION
+ .B Arpwatch
+@@ -93,6 +99,13 @@
+ of reading from the network. In this case,
+ .B arpwatch
+ does not fork.
++.LP
++The
++.B -s
++flag is used to specify the path to the sendmail program.
++Any program that takes the option -odi and then text from stdin
++can be substituted. This is useful for redirecting reports
++to log files instead of mail. (Debian specific)
+ .LP
+ Note that an empty
+ .I arp.dat
+Index: arpwatch/arpwatch.c
+diff -u arpwatch/arpwatch.c:1.1.1.1.2.1 arpwatch/arpwatch.c:1.1.1.1.2.1.2.1
+--- arpwatch.c:1.1.1.1.2.1	Tue Apr 17 13:47:57 2001
++++ arpwatch.c	Tue Apr 17 13:49:16 2001
+@@ -106,6 +106,7 @@
+ #endif
+ 
+ char *prog;
++char *path_sendmail = PATH_SENDMAIL;
+ 
+ int can_checkpoint;
+ int swapped;
+@@ -160,6 +161,7 @@
+ 		"n:"
+ 		"N"
+ 		"r:"
++		"s:"
+ 	;
+ 
+ 	if (argv[0] == NULL)
+@@ -210,6 +212,10 @@
+ 			rfilename = optarg;
+ 			break;
+ 
++		case 's':
++			path_sendmail = optarg;
++			break;
++
+ 		default:
+ 			usage();
+ 		}
+@@ -761,7 +767,8 @@
+ 		"[-f datafile] "
+ 		"[-i interface] "
+ 		"[-n net[/width]] "
+-		"[-r file] "
++		"[-r file]\n\t"
++		"[-s sendmail_path] "
+ 		"\n"
+ 	;
+ 
+Index: arpwatch/report.c
+diff -u arpwatch/report.c:1.1.1.1 arpwatch/report.c:1.1.1.1.4.1
+--- report.c:1.1.1.1	Tue Apr 17 13:31:37 2001
++++ report.c	Tue Apr 17 13:49:16 2001
+@@ -235,6 +235,7 @@
+ report(register char *title, register u_int32_t a, register u_char *e1,
+     register u_char *e2, register time_t *t1p, register time_t *t2p)
+ {
++        extern char *path_sendmail;
+ 	register char *cp, *hn;
+ 	register int fd, pid;
+ 	register FILE *f;
+@@ -242,7 +243,7 @@
+ 	char *fmt = "%20s: %s\n";
+ 	char *watcher = WATCHER;
+ 	char *watchee = WATCHEE;
+-	char *sendmail = PATH_SENDMAIL;
++	char *sendmail = path_sendmail;
+ 	char *unknown = "<unknown>";
+ 	char buf[132];
+ 	static int init = 0;
+Index: arpwatch/arpwatch.8
+diff -u arpwatch/arpwatch.8:1.1.1.1 arpwatch/arpwatch.8:1.1.1.1.6.1
+--- arpwatch.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpwatch.8	Tue Apr 17 13:50:23 2001
+@@ -29,6 +29,8 @@
+ [
+ .B -dN
+ ] [
++.B -p
++] [
+ .B -f
+ .I datafile
+ ] [
+@@ -81,6 +83,15 @@
+ The
+ .B -N
+ flag disables reporting any bogons.
++.LP
++The
++.B -p
++flag disables promiscuous operation.  ARP broadcasts get through hubs without
++having the interface in promiscuous mode, while saving considerable resources
++that would be wasted on processing gigabytes of non-broadcast traffic.  OTOH,
++setting promiscuous mode does not mean getting 100% traffic that would concern
++.B arpwatch .
++YMMV. (Debian specific)
+ .LP
+ The
+ .B -r
+Index: arpwatch/arpwatch.c
+diff -u arpwatch/arpwatch.c:1.1.1.1.2.1 arpwatch/arpwatch.c:1.1.1.1.2.1.4.1
+--- arpwatch.c:1.1.1.1.2.1	Tue Apr 17 13:47:57 2001
++++ arpwatch.c	Tue Apr 17 13:50:23 2001
+@@ -159,6 +159,7 @@
+ 		"i:"
+ 		"n:"
+ 		"N"
++		"p"
+ 		"r:"
+ 	;
+ 
+@@ -206,6 +207,10 @@
+ 			++nobogons;
+ 			break;
+ 
++		case 'p':
++			++nopromisc;
++			break;
++
+ 		case 'r':
+ 			rfilename = optarg;
+ 			break;
+@@ -277,7 +282,7 @@
+ 		snaplen = max(sizeof(struct ether_header),
+ 		    sizeof(struct fddi_header)) + sizeof(struct ether_arp);
+ 		timeout = 1000;
+-		pd = pcap_open_live(interface, snaplen, 1, timeout, errbuf);
++		pd = pcap_open_live(interface, snaplen, !nopromisc, timeout, errbuf);
+ 		if (pd == NULL) {
+ 			syslog(LOG_ERR, "pcap open %s: %s", interface, errbuf);
+ 			exit(1);
+@@ -758,6 +763,7 @@
+ 	extern char version[];
+ 	char usage[] =
+ 		"[-dN] "
++		"[-p] "
+ 		"[-f datafile] "
+ 		"[-i interface] "
+ 		"[-n net[/width]] "
+Index: arpwatch/util.c
+diff -u arpwatch/util.c:1.1.1.1 arpwatch/util.c:1.1.1.1.6.1
+--- util.c:1.1.1.1	Tue Apr 17 13:31:37 2001
++++ util.c	Tue Apr 17 13:50:23 2001
+@@ -61,6 +61,7 @@
+ 
+ int debug = 0;
+ int initializing = 1;			/* true if initializing */
++int nopromisc = 0;			/* don't activate promisc mode */
+ 
+ /* syslog() helper routine */
+ void
+Index: arpwatch/util.h
+diff -u arpwatch/util.h:1.1.1.1 arpwatch/util.h:1.1.1.1.6.1
+--- util.h:1.1.1.1	Tue Apr 17 13:31:37 2001
++++ util.h	Tue Apr 17 13:50:23 2001
+@@ -17,3 +17,4 @@
+ 
+ extern int debug;
+ extern int initializing;
++extern int nopromisc;
+Index: arpwatch/arpwatch.8
+diff -u arpwatch/arpwatch.8:1.1.1.1 arpwatch/arpwatch.8:1.1.1.1.8.1
+--- arpwatch.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpwatch.8	Tue Apr 17 13:51:23 2001
+@@ -27,6 +27,8 @@
+ .na
+ .B arpwatch
+ [
++.B -a
++] [
+ .B -dN
+ ] [
+ .B -f
+@@ -53,6 +55,17 @@
+ uses
+ .BR pcap (3)
+ to listen for arp packets on a local ethernet interface.
++.LP
++.B -a
++By default,
++.B arpwatch
++reports bogons (unless
++.B -N
++is given) for IP addresses that are in the same subnet than the
++first IP address of the default interface.  If this option is
++specified,
++.B arpwatch
++will report bogons about every IP addresses. (Debian specific)
+ .LP
+ The
+ .B -d
+Index: arpwatch/arpwatch.c
+diff -u arpwatch/arpwatch.c:1.1.1.1.2.1 arpwatch/arpwatch.c:1.1.1.1.2.1.6.1
+--- arpwatch.c:1.1.1.1.2.1	Tue Apr 17 13:47:57 2001
++++ arpwatch.c	Tue Apr 17 13:51:23 2001
+@@ -154,6 +154,7 @@
+ 	struct bpf_program code;
+ 	char errbuf[PCAP_ERRBUF_SIZE];
+ 	char options[] =
++		"a"
+ 		"d"
+ 		"f:"
+ 		"i:"
+@@ -181,6 +182,10 @@
+ 	while ((op = getopt(argc, argv, options)) != EOF)
+ 		switch (op) {
+ 
++		case 'a':
++			++allsubnets;
++			break;
++
+ 		case 'd':
+ 			++debug;
+ #ifndef DEBUG
+@@ -389,7 +394,7 @@
+ 	/* Watch for bogons */
+ 	if (isbogon(sia)) {
+ 		dosyslog(LOG_INFO, "bogon", sia, sea, sha);
+-		return;
++		if (!allsubnets) return;
+ 	}
+ 
+ 	/* Watch for ethernet broadcast */
+@@ -538,7 +543,7 @@
+ 	/* Watch for bogons */
+ 	if (isbogon(sia)) {
+ 		dosyslog(LOG_INFO, "bogon", sia, sea, sha);
+-		return;
++		if (!allsubnets) return;
+ 	}
+ 
+ 	/* Watch for ethernet broadcast */
+@@ -757,6 +762,7 @@
+ {
+ 	extern char version[];
+ 	char usage[] =
++		"[-a] "
+ 		"[-dN] "
+ 		"[-f datafile] "
+ 		"[-i interface] "
+Index: arpwatch/util.c
+diff -u arpwatch/util.c:1.1.1.1 arpwatch/util.c:1.1.1.1.8.1
+--- util.c:1.1.1.1	Tue Apr 17 13:31:37 2001
++++ util.c	Tue Apr 17 13:51:24 2001
+@@ -59,6 +59,7 @@
+ u_char zero[6] = { 0, 0, 0, 0, 0, 0 };
+ u_char allones[6] = { 0xff, 0xff, 0xff, 0xff, 0xff, 0xff };
+ 
++int allsubnets = 0;			/* watch all attached subnets */
+ int debug = 0;
+ int initializing = 1;			/* true if initializing */
+ 
+Index: arpwatch/util.h
+diff -u arpwatch/util.h:1.1.1.1 arpwatch/util.h:1.1.1.1.8.1
+--- util.h:1.1.1.1	Tue Apr 17 13:31:37 2001
++++ util.h	Tue Apr 17 13:51:24 2001
+@@ -15,5 +15,6 @@
+ extern u_char zero[6];
+ extern u_char allones[6];
+ 
++extern int allsubnets;
+ extern int debug;
+ extern int initializing;
+Index: arpwatch/arpsnmp.8
+diff -u arpwatch/arpsnmp.8:1.1.1.1 arpwatch/arpsnmp.8:1.1.1.1.12.1
+--- arpsnmp.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpsnmp.8	Tue Apr 17 13:54:38 2001
+@@ -28,6 +28,9 @@
+ [
+ .B -d
+ ] [
++.B -m
++.I addr
++] [
+ .B -f
+ .I datafile
+ ]
+@@ -48,6 +51,13 @@
+ flag is used enable debugging. This also inhibits mailing the reports.
+ Instead, they are sent to
+ .IR stderr .
++.LP
++The
++.B -m
++option is used to specify the e-mail address to which reports will be
++sent.  By default, reports are sent to
++.I root
++on the local machine. (Debian specific)
+ .LP
+ The
+ .B -f
+Index: arpwatch/arpsnmp.c
+diff -u arpwatch/arpsnmp.c:1.1.1.1.2.1 arpwatch/arpsnmp.c:1.1.1.1.2.1.8.1
+--- arpsnmp.c:1.1.1.1.2.1	Tue Apr 17 13:47:57 2001
++++ arpsnmp.c	Tue Apr 17 13:54:38 2001
+@@ -80,6 +80,7 @@
+ 	char errbuf[256];
+ 	char options[] =
+ 		"d"
++		"m:"
+ 		"f:"
+ 	;
+ 
+@@ -105,6 +106,10 @@
+ #endif
+ 			break;
+ 
++		case 'm':
++			mailaddress = optarg;
++			break;
++
+ 		case 'f':
+ 			arpfile = optarg;
+ 			break;
+@@ -187,6 +192,7 @@
+ 	extern char version[];
+ 	char usage[] =
+ 		"[-d] "
++		"[-m addr ] "
+ 		"[-f datafile] "
+ 		"file [...]\n"
+ 	;
+Index: arpwatch/arpwatch.8
+diff -u arpwatch/arpwatch.8:1.1.1.1 arpwatch/arpwatch.8:1.1.1.1.12.1
+--- arpwatch.8:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arpwatch.8	Tue Apr 17 13:54:38 2001
+@@ -38,6 +38,10 @@
  .br
  .ti +8
  [
 +.B -m
-+.I email
-+] [
++.I addr
++]
++[
  .B -n
  .IR net [/ width
  ]] [
-@@ -69,6 +72,12 @@
+@@ -69,6 +73,13 @@
  The
  .B -i
  flag is used to override the default interface.
 +.LP
 +The
 +.B -m
-+flag specifies the address that will receive the emails.
-+The default is
-+.IR root .
++option is used to specify the e-mail address to which reports will be
++sent.  By default, reports are sent to
++.I root
++on the local machine. (Debian specific)
  .LP
  The
  .B -n
---- arpsnmp.8.orig	Sun Sep 17 21:34:48 2000
-+++ arpsnmp.8	Thu Feb 22 22:47:29 2001
-@@ -30,6 +30,9 @@
- ] [
- .B -f
- .I datafile
-+] [
-+.B -m
-+.I email
+Index: arpwatch/arpwatch.c
+diff -u arpwatch/arpwatch.c:1.1.1.1.2.1 arpwatch/arpwatch.c:1.1.1.1.2.1.8.1
+--- arpwatch.c:1.1.1.1.2.1	Tue Apr 17 13:47:57 2001
++++ arpwatch.c	Tue Apr 17 13:54:38 2001
+@@ -157,6 +157,7 @@
+ 		"d"
+ 		"f:"
+ 		"i:"
++		"m:"
+ 		"n:"
+ 		"N"
+ 		"r:"
+@@ -197,6 +198,10 @@
+ 			interface = optarg;
+ 			break;
+ 
++		case 'm':
++			mailaddress = optarg;
++			break;
++
+ 		case 'n':
+ 			if (!addnet(optarg))
+ 				usage();
+@@ -760,6 +765,7 @@
+ 		"[-dN] "
+ 		"[-f datafile] "
+ 		"[-i interface] "
++		"[-m addr] "
+ 		"[-n net[/width]] "
+ 		"[-r file] "
+ 		"\n"
+Index: arpwatch/report.c
+diff -u arpwatch/report.c:1.1.1.1 arpwatch/report.c:1.1.1.1.12.1
+--- report.c:1.1.1.1	Tue Apr 17 13:31:37 2001
++++ report.c	Tue Apr 17 13:54:38 2001
+@@ -240,7 +240,7 @@
+ 	register FILE *f;
+ 	char tempfile[64], cpu[64], os[64];
+ 	char *fmt = "%20s: %s\n";
+-	char *watcher = WATCHER;
++	char *watcher = mailaddress;
+ 	char *watchee = WATCHEE;
+ 	char *sendmail = PATH_SENDMAIL;
+ 	char *unknown = "<unknown>";
+Index: arpwatch/util.c
+diff -u arpwatch/util.c:1.1.1.1 arpwatch/util.c:1.1.1.1.12.1
+--- util.c:1.1.1.1	Tue Apr 17 13:31:37 2001
++++ util.c	Tue Apr 17 13:54:38 2001
+@@ -50,10 +50,12 @@
+ #include "ec.h"
+ #include "file.h"
+ #include "util.h"
++#include "addresses.h"
+ 
+ char *arpdir = ARPDIR;
+ char *arpfile = ARPFILE;
+ char *ethercodes = ETHERCODES;
++char *mailaddress = WATCHER;
+ 
+ /* Broadcast ethernet addresses */
+ u_char zero[6] = { 0, 0, 0, 0, 0, 0 };
+Index: arpwatch/util.h
+diff -u arpwatch/util.h:1.1.1.1 arpwatch/util.h:1.1.1.1.12.1
+--- util.h:1.1.1.1	Tue Apr 17 13:31:37 2001
++++ util.h	Tue Apr 17 13:54:38 2001
+@@ -11,6 +11,7 @@
+ extern char *arpfile;
+ extern char *oldarpfile;
+ extern char *ethercodes;
++extern char *mailaddress;
+ 
+ extern u_char zero[6];
+ extern u_char allones[6];
+Index: arpwatch/arp2ethers
+diff -u arpwatch/arp2ethers:1.1.1.1 arpwatch/arp2ethers:1.1.1.1.14.1
+--- arp2ethers:1.1.1.1	Tue Apr 17 13:31:36 2001
++++ arp2ethers	Tue Apr 17 13:56:38 2001
+@@ -1,5 +1,5 @@
+-#!/bin/csh -f
+-# @(#) $Id: arpwatch-2.1.11-gentoo.diff,v 1.2 2003/08/06 14:15:35 lanius Exp $ (LBL)
++#!/bin/sh
++# @(#) $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/files/arpwatch-2.1.11-gentoo.diff,v 1.2 2003/08/06 14:15:35 lanius Exp $ (LBL)
+ #
+ # Convert arp.dat to ethers format
+ #
+@@ -12,12 +12,74 @@
+ #	- append "-old", "-old1", etc. as necessary
+ #	- sort
+ #
++# 1999-04-12	KELEMEN Peter <fuji@debian.org>
++#	Use sh(1) instead of csh(1).
++#
++# 2000-03-21	Erik Warmelink <erik@selwerd.nl>
++#	Use next instead of continue in included p.awk.
+ 
+ sort +2rn arp.dat | \
+     awk 'NF == 4 { print }' | \
+-    awk -f p.awk | \
++# 1999-04-12	KELEMEN Peter <fuji@debian.org>
++#    awk -f p.awk | \
++    awk '
++# Only print the first ethernet address seen
++
++{
++	e = $1
++	if (seen[e])
++		next
++	seen[e] = 1
++	print $0
++}
++    ' | \
+     egrep -v '\.[0-9][0-9]*$' | \
+     sed -e 's/	.*	/	/' | \
+-    awk -f d.awk | \
+-    awk -f e.awk | \
++# 1999-04-12	KELEMEN Peter <fuji@debian.org>
++#    awk -f d.awk | \
++    awk '
++# DECnet hacking
++
++BEGIN {
++	n = 0
++	sdecnet = "aa:0:4:"
++	ldecnet = length(sdecnet)
++}
++
++{
++	++n
++	e[n] = $1
++	h[n] = $2
++	if (sdecnet == substr($1, 1, ldecnet))
++		decnet[$2] = 1
++}
++
++END {
++	for (i = 1; i <= n; ++i) {
++		if (decnet[h[i]] && sdecnet != substr(e[i], 1, ldecnet))
++			h[i] = h[i] "-ip"
++		print e[i] "\t" h[i]
++	}
++}
++    ' | \
++# 1999-04-12	KELEMEN Peter <fuji@debian.org>
++#    awk -f e.awk | \
++    awk '
++# Add -old suffix to ethers file, as required. Assumed sorted input
++
++{
++	if (!seen[$2]) {
++		seen[$2] = 1
++		print
++		next
++	}
++	h = $2 "-old"
++	s = h
++	for (n = 1; seen[h]; ++n)
++		h = s n
++	seen[h] = 1
++	print $1 "\t" h
++	next
++}
++    ' | \
+     sort
+--- arpwatch.8.orig	Sun Oct  8 23:31:28 2000
++++ arpwatch.8	Mon Oct 16 16:46:19 2000
+@@ -40,17 +40,20 @@
+ .I interface
  ]
- .I file
+ .br
+-.ti +8
++.ti +9
  [
-@@ -54,6 +57,12 @@
- flag is used to set the ethernet/ip address database filename.
- The default is
- .IR arp.dat .
-+.LP
-+The
-+.B -m
-+flag specifies the address that will receive the emails.
-+The default is
-+.IR root .
+ .B -m
+ .I addr
+ ]
+ [
+ .B -n
+ .IR net [/ width
+ ]] [
+ .B -r
+ .I file
++] [
++.B -u
++.I username
+ ]
+ .br
+ .ti +8
+@@ -94,10 +97,26 @@
+ .B arpwatch
+ does not fork.
  .LP
++If 
++.B -u 
++flag is used, 
++.B arpwatch
++drops root privileges and changes user ID to
++.I username
++and group ID to that of the primary group of 
++.IR username .
++This is recommended for security reasons.
++.LP
  Note that an empty
  .I arp.dat
+ file must be created before the first time you run
+-.BR arpwatch .
++.BR arpwatch . 
++Also, the default directory (where arp.dat is stored) must be owned
++by 
++.I username
++if 
++.BR -u
++flag is used.
+ .LP
+ .SH "REPORT MESSAGES"
+ Here's a quick list of the report messages generated by
+--- arpwatch.c	Sat Oct 14 05:07:35 2000
++++ arpwatch.c	Sun Jun 10 16:22:57 2001
+@@ -62,7 +62,7 @@
+ #include <string.h>
+ #include <syslog.h>
+ #include <unistd.h>
+-
++#include <pwd.h>
+ #include <pcap.h>
+ 
+ #include "gnuc.h"
+@@ -141,6 +141,25 @@
+ int	sanity_fddi(struct fddi_header *, struct ether_arp *, int);
+ __dead	void usage(void) __attribute__((volatile));
+ 
++void dropprivileges(const char* user)
++{
++	struct passwd* pw;
++	pw = getpwnam( user );
++	if ( pw ) {
++		if ( initgroups(pw->pw_name, NULL) != 0 || setgid(pw->pw_gid) != 0 ||
++				 setuid(pw->pw_uid) != 0 ) {
++			syslog(LOG_ERR, "Couldn't change to '%.32s' uid=%d gid=%d", user,
++						 pw->pw_uid, pw->pw_gid);
++			exit(1);
++		}
++	}
++	else {
++		syslog(LOG_ERR, "Couldn't find user '%.32s' in /etc/passwd", user);
++		exit(1);
++	}
++	syslog(LOG_DEBUG, "Running as uid=%d gid=%d", getuid(), getgid());
++}
++
+ int
+ main(int argc, char **argv)
+ {
+@@ -153,6 +172,7 @@
+ 	register char *interface, *rfilename;
+ 	struct bpf_program code;
+ 	char errbuf[PCAP_ERRBUF_SIZE];
++	char* serveruser = NULL;
+	char options[] =
+		"a"
+		"d"
+@@ -184,6 +184,7 @@
+		"p"
+		"r:"
+		"s:"
++       "u:"
+	;
+
+	if (argv[0] == NULL)
+@@ -202,6 +222,16 @@
+ 			rfilename = optarg;
+ 			break;
+ 
++		case 'u':
++			if ( optarg ) {
++				serveruser = strdup(optarg);
++			}
++			else {
++				fprintf(stderr, "%s: Need username after -u\n", prog);
++				usage();
++			}
++			break;
++
+ 		default:
+ 			usage();
+ 		}
+@@ -283,8 +313,11 @@
+ 	 * Revert to non-privileged user after opening sockets
+ 	 * (not needed on most systems).
+ 	 */
+-	setgid(getgid());
+-	setuid(getuid());
++	/*setgid(getgid());*/
++	/*setuid(getuid());*/
++	if ( serveruser ) {
++		dropprivileges( serveruser );
++	}
+ 
+ 	/* Must be ethernet or fddi */
+ 	linktype = pcap_datalink(pd);
+@@ -817,6 +817,7 @@
+		"[-i interface] "
+		"[-m addr] "
+		"[-n net[/width]] "
++	    "[-u username] "
+		"[-r file]\n\t"
+		"[-s sendmail_path] "
+		"\n"

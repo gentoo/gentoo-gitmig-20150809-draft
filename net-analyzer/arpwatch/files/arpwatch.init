@@ -8,13 +8,17 @@ depend() {
 }
 
 start() {
-	ebegin "Starting arpwatch"
-	if [ ! -e /var/arpwatch/arp.dat ]; then
-		touch /var/arpwatch/arp.dat 
-	fi
-	/usr/sbin/arpwatch -i eth0 -f /var/arpwatch/arp.dat
-	result=$?
-	eend $result
+	for IFACE in ${IFACES}
+	do
+		ebegin "Starting arpwatch on ${IFACE}"
+		DATAFILE=/var/arpwatch/${IFACE}.dat
+		if [ ! -f ${DATAFILE} ]; then
+			touch ${DATAFILE}
+		fi
+		/usr/sbin/arpwatch -i $IFACE -f /var/arpwatch/$IFACE.dat ${OPTIONS}
+		result=$?
+		eend $result
+	done
 }
 
 stop() {
