@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/javolution
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.1 2004/11/14 13:48:21 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.2 2005/01/05 20:13:00 zx Exp $
+
+*javolution-2.1.0 (05 Jan 2005)
+
+  05 Jan 2005; Chris Aniszczyk <zx@gentoo.org> +javolution-2.1.0.ebuild:
+  Version bump. Closes #75950
 
 *javolution-1.1.0 (14 Nov 2004)
 
