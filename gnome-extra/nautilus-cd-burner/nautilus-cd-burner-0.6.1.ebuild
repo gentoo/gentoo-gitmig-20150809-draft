@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-0.6.1.ebuild,v 1.5 2004/02/10 06:39:59 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-0.6.1.ebuild,v 1.6 2004/02/10 14:21:01 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE="dvdr"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~amd64 ~alpha ~ia64"
+KEYWORDS="x86 ppc sparc ~amd64 ~alpha ~ia64"
 # Should work on alpha, hppa, ia64 too, but can't add those because of
 # KEYWORDS borkage with dvd+rw-tools. 
 
