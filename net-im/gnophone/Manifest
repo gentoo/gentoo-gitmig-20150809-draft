@@ -1,4 +1,5 @@
-MD5 631ef61202881901415697cd4903d536 ChangeLog 882
+MD5 1c3e9641b79caf979de0b8f8e341ab93 metadata.xml 373
+MD5 d37c485dad5904ca1442212cf75a37e5 ChangeLog 975
 MD5 b85fd85eb87683a61f228ac649704e01 gnophone-0.2.4-r1.ebuild 1348
 MD5 f461817b42d92b8bfccef271ab249ddb gnophone-0.2.4.ebuild 1461
 MD5 4491f5ada043c04c52d153a8ca3e3e1a files/gnophone-0.2.4-raw2h.c.patch 1109
