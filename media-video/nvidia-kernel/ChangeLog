@@ -1,6 +1,15 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.15 2002/12/14 15:55:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.16 2002/12/18 21:15:07 styx Exp $
+
+*nvidia-kernel-1.0.4191-1 (18 Dec 2002)
+
+  18 Dec 2002; Joachim Blaabjerg <styx@gentoo.org>
+  nvidia-kernel-1.0.4191-1.ebuild :
+
+  Adding ${FILESDIR}/${NV_PACKAGE}-rmap.diff, so it works with rmap kernels as
+  well. It's all #ifdef'ed, so it shouldn't interfere with other AA kernels.
+  Bumping anyway, per vapier's instructions ;)
 
   14 Dec 2002; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4191.ebuild:
   As it seems this version need MTRR support for most chipsets, die if its not
