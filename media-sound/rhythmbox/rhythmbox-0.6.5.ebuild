@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.5.ebuild,v 1.1 2004/01/22 19:21:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.5.ebuild,v 1.2 2004/02/12 17:01:22 leonardop Exp $
 
 inherit gnome2
 
@@ -61,6 +61,7 @@ src_unpack( ) {
 	# sandbox errors work around
 	gnome2_omf_fix ${S}/help/C/Makefile.in
 
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 
 DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
