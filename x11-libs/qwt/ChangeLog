@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.5 2003/09/09 15:16:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.6 2003/10/29 07:43:37 phosphan Exp $
+
+*qwt-4.2.0_rc0 (29 Oct 2003)
+
+  29 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> qwt-0.4.1-r1.ebuild,
+  qwt-0.4.1.ebuild, qwt-4.2.0_rc0.ebuild:
+  New version numbers, release candidate. Examples should be installed correctly
+  now. Cleanup.
 
   09 Sep 2003; Caleb Tennis <caleb@gentoo.org> qwt-0.4.2_pre2030129.ebuild:
   Marking x86 stable
