@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0e0750a6a020b4230799bd9d6d144945 ChangeLog 3924
+MD5 c629eedc94324c5be64f578bb4dfb6f4 ChangeLog 4046
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 bb51680de9b0086ef999df241226afa9 xfsdump-2.2.24.ebuild 1226
 MD5 2429f1475c073efad5637729bebd5c4a xfsdump-2.2.21.ebuild 1506
+MD5 633cdd27c186636041fc2977d9f10a82 xfsdump-2.2.25.ebuild 1175
 MD5 25733daf03da99c1ad0003aff792ae09 files/digest-xfsdump-2.2.24 70
 MD5 40ad6b6e0a2b464bc7838b4364deed7f files/digest-xfsdump-2.2.21 70
+MD5 bd977825057d1743222d22dfc80b873c files/digest-xfsdump-2.2.25 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBsQ0droRuSHgZdywRAnDIAJ0fd/soqI4JS6D9qvEMT0z5ihNWewCfVIuD
-mbpyOyERQ+nK3CXILQ5MTNU=
-=Ze0X
+iD8DBQFBsRCkroRuSHgZdywRAhDZAJoDoZpsCaWup6yrLwo0pBqaaxzc4gCfZQiD
+GCKN+A5rphm2X9FbKUh/Bzo=
+=Nxb2
 -----END PGP SIGNATURE-----
