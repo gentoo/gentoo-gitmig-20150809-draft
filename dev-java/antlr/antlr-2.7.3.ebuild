@@ -1,34 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2.ebuild,v 1.10 2004/03/19 01:11:29 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.3.ebuild,v 1.1 2004/03/23 04:09:33 zx Exp $
+
+inherit java-pkg
 
 DESCRIPTION="A parser generator for Java and C++, written in Java"
 SRC_URI="http://www.antlr.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.antlr.org"
-DEPEND=">=virtual/jdk-1.2
-		jikes? ( >=dev-java/jikes-1.13 )"
-SLOT="2"
+DEPEND=">=virtual/jdk-1.2"
+SLOT="0"
 LICENSE="ANTLR"
-KEYWORDS="x86 ~ppc sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="jikes"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S} && patch -p1 <${FILESDIR}/${P}-gcc3-gentoo.patch || die
-}
-
 src_compile() {
-	if [ -n "`use jikes`" ] ; then
-		export JAVAC=jikes
-	fi
-	echo $CLASSPATH
 	econf || die
-	make antlr.jar antlr.debug.jar antlrall.jar all || die
+	make all || die
 }
 
 src_install () {
 	insinto /usr/share/antlr
-	dojar antlr.debug.jar antlr.jar antlrall.jar
+	java-pkg_dojar *.jar
 	doins extras/antlr-mode.el
 	dohtml -r doc/*
 	cp -R examples ${D}/usr/share/doc/${P}/
