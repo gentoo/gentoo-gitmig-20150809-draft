@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.12 2004/01/29 04:15:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.13 2004/01/30 06:37:22 drobbins Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -18,8 +18,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc alpha hppa ia64"
 
-DEPEND="app-arch/unzip
-	=x11-libs/gtk+-1.2*
+DEPEND="=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.6 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	xml? ( >=dev-libs/libxml-1.8.15 )
@@ -29,7 +28,13 @@ DEPEND="app-arch/unzip
 
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
-	nls? ( dev-util/intltool )"
+	nls? ( dev-util/intltool )
+	app-arch/unzip"
+	
+#We want these things in DEPEND only
+DEPEND="$DEPEND 
+	>=sys-devel/automake-1.7.7 
+	>=sys-devel/autoconf-2.58"
 
 PATCHDIR=${WORKDIR}/patches
 
