@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/madwifi-driver
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.1 2003/07/18 19:37:01 latexer Exp $
+
+*madwifi-driver-0.1_pre20030702 (18 Jul 2003)
+
+  18 Jul 2003; Peter Johanson <latexer@gentoo.org>
+  madwifi-driver-0.1_pre20030702.ebuild:
+  Initial import. Drivers for the Atheros chipset (a/b/g)
+
