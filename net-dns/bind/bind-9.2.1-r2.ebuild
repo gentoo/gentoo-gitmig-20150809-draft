@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.14 2002/12/09 04:33:09 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.15 2003/02/10 19:48:14 edolnx Exp $
 
 IUSE="ssl ipv6"
 
@@ -9,7 +9,7 @@ DESCRIPTION="BIND - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND"
 
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~alpha"
 LICENSE="as-is"
 SLOT="0"
 
