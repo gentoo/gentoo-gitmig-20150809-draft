@@ -1,6 +1,5 @@
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/files/portfwd.init,v 1.1 2003/10/17 20:42:05 avenj Exp $
-
 #!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/files/portfwd.init,v 1.2 2003/11/20 19:20:06 avenj Exp $
 
 depend() {
 	need net
