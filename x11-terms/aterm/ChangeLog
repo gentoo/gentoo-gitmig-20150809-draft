@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.46 2004/09/04 20:59:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.47 2004/10/13 13:31:31 hattya Exp $
+
+  13 Oct 2004; Akinori Hattori <hattya@gentoo.org> aterm-0.4.2-r9.ebuild:
+  add ~ia64, bug #66906.
 
   04 Sep 2004; Michal Januszewski <spock@gentoo.org> -aterm-0.4.2-r10.ebuild,
   -aterm-0.4.2-r4.ebuild, -aterm-0.4.2-r8.ebuild:
