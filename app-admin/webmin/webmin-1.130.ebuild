@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.130.ebuild,v 1.1 2004/01/30 15:55:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.130.ebuild,v 1.2 2004/03/11 19:26:43 eradicator Exp $
 
 IUSE="ssl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.webmin.com/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
 DEPEND="dev-lang/perl
 	ssl? ( dev-perl/Net-SSLeay )"
@@ -38,7 +38,7 @@ src_install() {
 
 	exeinto /etc/webmin
 	doexe ${FILESDIR}/uninstall.sh
-	use ssl sed -i 's:ssl=$ssl:ssl=1:' setup.sh
+	use ssl && sed -i 's:ssl=$ssl:ssl=1:' setup.sh
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.121.ebuild,v 1.4 2004/02/15 00:11:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.121.ebuild,v 1.5 2004/03/11 19:26:43 eradicator Exp $
 
 IUSE="ssl"
 
@@ -38,7 +38,7 @@ src_install() {
 
 	exeinto /etc/webmin
 	doexe ${FILESDIR}/uninstall.sh
-	use ssl sed -i 's:ssl=$ssl:ssl=1:' setup.sh
+	use ssl && sed -i 's:ssl=$ssl:ssl=1:' setup.sh
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.34 2004/02/15 00:11:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.35 2004/03/11 19:26:43 eradicator Exp $
+
+  11 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> webmin-1.110.ebuild,
+  webmin-1.121.ebuild, webmin-1.130.ebuild:
+  Fixed ssl bug (#37365) and marked 1.130 stable on x86.
 
   14 Feb 2004; Jason Wever <weeve@gentoo.org> webmin-1.121.ebuild:
   Marked stable on sparc.
