@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/lpairs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/ChangeLog,v 1.5 2004/10/08 21:30:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/ChangeLog,v 1.6 2004/11/22 12:47:42 josejx Exp $
+
+  22 Nov 2004; Joseph Jezak <josejx@gentoo.org> lpairs-1.0.1.ebuild:
+  Marked ppc stable.
 
   08 Oct 2004; Tom Martin <slarti@gentoo.org> lpairs-1.0.1.ebuild:
   Stable on amd64, thanks to Erik Nelson <erik_lee_nelson@yahoo.com> for

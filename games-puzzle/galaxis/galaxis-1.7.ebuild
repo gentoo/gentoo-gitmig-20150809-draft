@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/galaxis-1.7.ebuild,v 1.4 2004/11/11 12:19:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/galaxis-1.7.ebuild,v 1.5 2004/11/22 12:43:38 josejx Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.catb.org/~esr/galaxis/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.3"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.1.ebuild,v 1.7 2004/10/08 21:30:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.1.ebuild,v 1.8 2004/11/22 12:47:42 josejx Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://lgames.sourceforge.net/index.php?project=LPairs"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 DEPEND="virtual/x11
