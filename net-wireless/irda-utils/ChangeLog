@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/irda-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.1 2004/10/04 18:53:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.2 2004/10/04 19:12:48 brix Exp $
+
+*irda-utils-0.9.16 (04 Oct 2004)
+
+  04 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +files/irda-utils-gcc3.4-fix.patch, +files/irda-utils-rh1.patch,
+  +irda-utils-0.9.16.ebuild:
+  Version bump. Fixes bug #63475
 
 *irda-utils-0.9.13 (04 Oct 2004)
 

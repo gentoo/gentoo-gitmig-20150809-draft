@@ -1,0 +1,11 @@
+--- irda-utils-0.9.16/tekram/irkbd.c.gcc3.4	2000-11-06 22:13:52.000000000 +0100
++++ irda-utils-0.9.16/tekram/irkbd.c	2004-06-10 08:31:33.412633390 +0200
+@@ -286,7 +286,7 @@ static inline void irkbd_handle_response
+ 	case IRKBD_RSP_KBDSPEEDOK:
+ 		break;
+ 	default:
+-		printf(__FUNCTION__ "(), unknown response %02x\n", rsp);
++		printf("%s(), unknown response %02x\n", __func__, rsp);
+ 		break;
+ 	}
+ }
