@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.56 2004/10/13 20:49:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.57 2004/11/04 01:58:35 kumba Exp $
+
+  03 Nov 2004; Joshua Kinard <kumba@gentoo.org> gdb-6.2.1.ebuild,
+  gdb-6.2.ebuild:
+  Marked stable on mips.
 
   13 Oct 2004; Travis Tilley <lv@gentoo.org> gdb-6.0-r1.ebuild:
   another sandbox fix
