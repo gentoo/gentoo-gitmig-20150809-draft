@@ -1,7 +1,9 @@
 # ChangeLog for dev-perl/Tk-TableMatrix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.2 2003/02/12 02:56:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.3 2003/09/10 01:38:09 rac Exp $
 
+  09 Sep 2003; <rac@gentoo.org> Tk-TableMatrix-1.01.ebuild:
+  Block new MakeMaker, see bug 28282
 
 *Tk-TableMatrix-1.01 (11 Feb 2003)
 
