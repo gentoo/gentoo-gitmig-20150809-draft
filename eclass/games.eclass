@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.20 2002/12/01 04:16:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.21 2003/01/21 03:49:35 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -87,8 +87,21 @@ gamesenv() {
 
 games_pkg_postinst() {
 	gamesenv
-	echo
-	ewarn "Remember, in order to play games, you have to"
-	ewarn "be in the 'games' group."
-	echo
+	touch ${T}/test
+	if [ ! `chown ${GAMES_USER}:${GAMES_GROUP} ${T}/test` ] ; then
+		echo
+		eerror "In order to function correctly, this package"
+		eerror "requires that you have the user '${GAMES_USER}'"
+		eerror "and the group '${GAMES_GROUP}' on your system."
+		eerror "Since you are missing at least one of the above,"
+		eerror "the package is currently only playable by root."
+		echo
+		eerror "Please add the above user/group to your system"
+		echo
+	else
+		echo
+		ewarn "Remember, in order to play games, you have to"
+		ewarn "be in the '${GAMES_GROUP}' group."
+		echo
+	fi
 }
