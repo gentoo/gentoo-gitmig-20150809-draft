@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.15 2004/09/17 18:16:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.16 2004/10/29 01:56:27 weeve Exp $
+
+  28 Oct 2004; Jason Wever <weeve@gentoo.org> bsh-2.0_beta1-r1.ebuild:
+  Added ~sparc keyword.
 
 *bsh-2.0_beta1-r1 (17 Sep 2004)
 
