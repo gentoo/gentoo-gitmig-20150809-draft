@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76.ebuild,v 1.5 2004/04/04 02:04:43 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76.ebuild,v 1.6 2004/04/06 19:22:07 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -10,7 +10,6 @@ IUSE="nls perl spell nas debug crypt"
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
-RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
