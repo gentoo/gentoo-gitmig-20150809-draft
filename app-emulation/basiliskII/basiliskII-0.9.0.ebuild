@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.8 2002/10/20 18:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.9 2002/11/17 22:33:11 hanno Exp $
 
 IUSE="X gtk xv esd dga"
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/BasiliskII-0.9/src/Unix
 ### use variables here and set ./configure options accordingly
 
 DEPEND="gtk? ( x11-libs/gtk+ )
-	esd? ( media-sound/esound )" 
+	esd? ( media-sound/esound )"
 
 
 SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/BasiliskII_src_31052001.tar.gz"
@@ -36,14 +36,14 @@ src_compile() {
 
 	local myflags
 
-### Default ./configure options are all =yes by default. we'll check for 
+### Default ./configure options are all =yes by default. we'll check for
 ### and use -values and switch them accordingly
 
 	use X || myflags="${myflags} --with-x=no"
 	use esd || myflags="${myflags} --with-esd=no"
 	use gtk || myflags="${myflags} --with-gtk=no"
 	use dga || myflags="${myflags} --with-dga=no"
-	use xv || myflags="${myflags} --enable-xf86-vidmode=no"	
+	use xv || myflags="${myflags} --enable-xf86-vidmode=no"
 
 	./configure \
 		--host=${CHOST} \
@@ -71,7 +71,7 @@ src_install () {
 ### resolve the permissions issue / linux src compilation problem
 ### that prevents it's inclusion
 
-### Uncomment the following, and read the manual _carefully_ if you really 
+### Uncomment the following, and read the manual _carefully_ if you really
 ### need networking, this will create a sheep_net.o kernel module that
 ### provides (effectivly) an ethernet bridge between basliskII and the kernel
 

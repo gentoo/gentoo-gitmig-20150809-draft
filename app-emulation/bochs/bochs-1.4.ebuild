@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-1.4.ebuild,v 1.10 2002/10/20 18:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-1.4.ebuild,v 1.11 2002/11/17 22:33:11 hanno Exp $
 
 PN=${P/_/.}
 S=${WORKDIR}/${PN}
@@ -13,6 +13,7 @@ SRC_URI="mirror://sourceforge/bochs/${PN}.tar.gz
 HOMEPAGE="http://bochs.sourceforge.net"
 LICENSE="LGPL-2.1"
 SLOT="0"
+IUSE=""
 
 #build-time dependencies
 DEPEND=">=sys-libs/glibc-2.1.3
@@ -22,14 +23,14 @@ KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${PN}.tar.gz
-	
+
 	cd $S
 	cp Makefile.in Makefile.in.orig
 	sed -e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
 	-e 's: $(prefix): $(DESTDIR)$(prefix):g' \
 	-e 's: $(bindir): $(DESTDIR)$(bindir):g' \
 	-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in.orig > Makefile.in
-	
+
 }
 
 src_compile() {
