@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1.ebuild,v 1.1 2002/07/02 11:44:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1.ebuild,v 1.2 2002/07/02 11:47:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -109,6 +109,12 @@ src_install() {
 	     install || die
 	
 	newdoc README README.extra
+
+	echo "#!/bin/bash" > wmaker
+	echo "/usr/bin/wmaker" >> wmaker
+
+	exeino /etc/X11/Sessions/
+	doexe wmaker
 }
 
 pkg_postinst() {
