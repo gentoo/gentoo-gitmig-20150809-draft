@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/flabels
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/flabels/ChangeLog,v 1.1 2004/11/07 14:09:13 usata Exp $
+
+*flabels-1.0 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +flabels-1.0.ebuild:
+  Initial import. Thanks to Andreas Volz <linux@brachttal.net>; bug #39019.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 09e76303123965af7e9d6a3730ae22d7 flabels-1.0.ebuild 707
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 9240f9637aab56730a5e5b06ba24e2bd ChangeLog 394
+MD5 2474513c998349b700e499523415b4c4 files/digest-flabels-1.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjisPVWNWqTUmv+0RAtkUAJ9uTP9N+nhkGZdUXAh5QW473oxyxACghpqP
+HRiL5Gy8l8JoJM4FPH2WEZo=
+=qim1
+-----END PGP SIGNATURE-----
