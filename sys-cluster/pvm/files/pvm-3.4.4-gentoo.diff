@@ -1,0 +1,18 @@
+diff -ur test/pvm3/src/lpvmgen.c pvm3/src/lpvmgen.c
+--- pvm3/src/lpvmgen.c	2001-09-27 01:35:43.000000000 +0200
++++ pvm3/src/lpvmgen.c	2003-07-05 20:16:49.000000000 +0200
+@@ -1,4 +1,4 @@
+-
++#define USESTRERROR
+ static char rcsid[] =
+ 	"$Id: pvm-3.4.4-gentoo.diff,v 1.1 2003/07/10 11:13:17 tantive Exp $";
+ 
+diff -ur test/pvm3/src/pvmlog.c pvm3/src/pvmlog.c
+--- pvm3/src/pvmlog.c	2001-09-26 23:23:56.000000000 +0200
++++ pvm3/src/pvmlog.c	2003-07-05 20:28:21.000000000 +0200
+@@ -1,4 +1,4 @@
+-
++#define USESTRERROR
+ static char rcsid[] =
+ 	"$Id: pvm-3.4.4-gentoo.diff,v 1.1 2003/07/10 11:13:17 tantive Exp $";
+ 
