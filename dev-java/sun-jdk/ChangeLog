@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.69 2004/03/11 01:32:12 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.70 2004/03/18 09:47:06 st_lim Exp $
+
+*sun-jdk-1.4.2.04-r1 (18 Mar 2004)
+
+  18 Mar 2004; Lim Swee Tat,,+65-9763-4381,+65-6314-3146 <st_lim@gentoo.org>
+  sun-jdk-1.4.2.04-r1.ebuild:
+  Bug #44339 - Added jce-1_4_2 requirement so that users can get unlimited
+  strength JCE
 
 *sun-jdk-1.4.2.04 (10 Mar 2004)
 
