@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.40 2004/09/21 22:22:55 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.41 2004/10/27 09:41:03 slarti Exp $
+
+  27 Oct 2004; Tom Martin <slarti@gentoo.org> jabberd-1.4.3-r4.ebuild,
+  jabberd-2.0-r1.ebuild:
+  Marked ~amd64 for bug 59436.
 
   21 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
   jabberd-1.4.3-r4.ebuild:
