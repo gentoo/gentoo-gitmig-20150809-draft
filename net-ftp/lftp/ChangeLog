@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.29 2003/08/03 18:59:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.30 2003/09/20 03:59:00 iggy Exp $
+
+*lftp-2.6.7 (19 Sep 2003)
+
+  19 Sep 2003; <iggy@gentoo.org> lftp-2.6.7.ebuild:
+  version bump thanks to hillster
 
 *lftp-2.6.6 (25 Jul 2003)
 
