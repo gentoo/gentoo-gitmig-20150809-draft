@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.110 2005/01/24 07:38:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.111 2005/03/04 20:54:27 gustavoz Exp $
+
+  04 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> openoffice-1.1.4.ebuild:
+  Stable on sparc
 
   24 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   files/1.1.4/ooffice-wrapper-1.3:
