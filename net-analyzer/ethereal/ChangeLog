@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.50 2004/02/24 20:58:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.51 2004/03/20 06:53:06 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  ethereal-0.10.0a.ebuild, ethereal-0.9.13.ebuild, ethereal-0.9.15.ebuild:
+  thin ebuilds
 
 *ethereal-0.10.2 (24 Feb 2004)
 
