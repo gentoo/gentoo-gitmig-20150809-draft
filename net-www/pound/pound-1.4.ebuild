@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pound/pound-1.4.ebuild,v 1.1 2003/08/01 22:59:20 tantive Exp $
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/pound-1.4.ebuild,v 1.2 2003/09/06 02:05:10 msterret Exp $
 
 MY_P=${P/p/P}
 

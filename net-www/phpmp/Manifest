@@ -1,5 +1,5 @@
-MD5 cbbd88451bc819182040236f8e9c5615 phpmp-0.8.2.ebuild 1019
-MD5 b2058213ed679e42e61af91d6c84ca87 phpmp-0.8.3.ebuild 1036
 MD5 30cd2af45fac5e07006aba29fcecbc98 ChangeLog 803
+MD5 c470ee8ac21731e8d2c37b7679533a0a phpmp-0.8.2.ebuild 1011
+MD5 cf5420e77a736201257bcc73338e24a9 phpmp-0.8.3.ebuild 1026
 MD5 c9efbeb52491c607d60c8788f2aaefb8 files/digest-phpmp-0.8.2 62
 MD5 9e9a77f5cbd1164d65617d806c54b2d5 files/digest-phpmp-0.8.3 62

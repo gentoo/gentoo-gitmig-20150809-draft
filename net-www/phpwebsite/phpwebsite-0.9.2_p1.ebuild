@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Maintainer: Don Seiler <rizzo@gentoo.org>
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.2_p1.ebuild,v 1.3 2003/09/06 02:05:10 msterret Exp $
 
 
 HOSTNAME=`hostname`

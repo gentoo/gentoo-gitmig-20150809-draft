@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24-r1.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24-r1.ebuild,v 1.3 2003/09/06 02:05:10 msterret Exp $
 
 S=${WORKDIR}/jakarta-${P}
 At="jakarta-tomcat-${PV}.tar.gz"
