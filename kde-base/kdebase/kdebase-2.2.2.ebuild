@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2.ebuild,v 1.1 2001/11/22 17:32:27 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2.ebuild,v 1.2 2001/12/08 12:09:35 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -12,9 +12,13 @@ NEWDEPEND=">=media-sound/cdparanoia-3.9.8
 	pam? ( >=sys-libs/pam-0.73 ) 
 	motif? ( >=x11-libs/openmotif-2.1.30 ) 
 	lame? ( >=media-sound/lame-3.89b ) 
-	vorbis? ( >=media-libs/libvorbis-1.0_beta1 ) 
-	cups? ( net-print/cups ) 
-	ssl? ( >=dev-libs/openssl-0.9.6b )"
+	vorbis? ( >=media-libs/libvorbis-1.0_beta1 )
+	cups? ( net-print/cups )
+	ssl? ( >=dev-libs/openssl-0.9.6b )
+	media-sound/cdparanoia
+	opengl? ( virtual/opengl )" #this last for opengl screensavers
+#	samba? ( net-fs/samba ) #use flag doesn't exist yet and we don't want such a heavy dep by deafult
+#	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
 DEPEND="$DEPEND $NEWDEPEND"
 RDEPEND="$RDEPEND $NEWDEPEND"

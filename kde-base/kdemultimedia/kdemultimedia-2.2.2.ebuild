@@ -1,15 +1,15 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.3 2001/11/24 10:47:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.4 2001/12/08 12:09:35 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
 DESCRIPTION="${DESCRIPTION}Multimedia"
 
 NEWDEPEND=">=sys-libs/ncurses-5.2
-        >=media-sound/cdparanoia-3.9.8
-        >=media-libs/libvorbis-1.0_beta4
+    >=media-sound/cdparanoia-3.9.8
+    >=media-libs/libvorbis-1.0_beta4
 	>=media-video/xanim-2.80.1
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	nas? ( >=media-libs/nas-1.4.1 )
