@@ -282,76 +282,6 @@ sys-devel/prelink
 # not compadible with 1.0, or at least not out of the box
 =gnome-extra/gtkhtml-1.1.2
 
-
-# <hannes@gentoo.org> (04 Nov 2002)
-# kde 3.1 rc2: masked permanently
-~x11-libs/qt-3.1.0_pre20021104
-~kde-base/arts-1.1.0.2
-~kde-base/kde-3.1_rc2
-~kde-base/kdeaddons-3.1_rc2
-~kde-base/kdeadmin-3.1_rc2
-~kde-base/kdeartwork-3.1_rc2
-~kde-base/kdebase-3.1_rc2
-~kde-base/kdebindings-3.1_rc2
-~kde-base/kdeedu-3.1_rc2
-~kde-base/kdegames-3.1_rc2
-~kde-base/kdegraphics-3.1_rc2
-~kde-base/kdelibs-3.1_rc2
-~kde-base/kdemultimedia-3.1_rc2
-~kde-base/kdenetwork-3.1_rc2
-~kde-base/kdepim-3.1_rc2
-~kde-base/kdesdk-3.1_rc2
-~kde-base/kdetoys-3.1_rc2
-~kde-base/kdeutils-3.1_rc2
-#kde-i18n ebuilds
-~app-i18n/kde-i18n-3.1_rc2
-~app-i18n/kde-i18n-af-3.1_rc2
-~app-i18n/kde-i18n-ar-3.1_rc2
-~app-i18n/kde-i18n-bg-3.1_rc2
-~app-i18n/kde-i18n-bs-3.1_rc2
-~app-i18n/kde-i18n-ca-3.1_rc2
-~app-i18n/kde-i18n-cs-3.1_rc2
-~app-i18n/kde-i18n-da-3.1_rc2
-~app-i18n/kde-i18n-de-3.1_rc2
-~app-i18n/kde-i18n-el-3.1_rc2
-~app-i18n/kde-i18n-en_GB-3.1_rc2
-~app-i18n/kde-i18n-eo-3.1_rc2
-~app-i18n/kde-i18n-es-3.1_rc2
-~app-i18n/kde-i18n-et-3.1_rc2
-~app-i18n/kde-i18n-eu-3.1_rc2
-~app-i18n/kde-i18n-fa-3.1_rc2
-~app-i18n/kde-i18n-fi-3.1_rc2
-~app-i18n/kde-i18n-fr-3.1_rc2
-~app-i18n/kde-i18n-he-3.1_rc2
-~app-i18n/kde-i18n-hu-3.1_rc2
-~app-i18n/kde-i18n-it-3.1_rc2
-~app-i18n/kde-i18n-ja-3.1_rc2
-~app-i18n/kde-i18n-lt-3.1_rc2
-~app-i18n/kde-i18n-mt-3.1_rc2
-~app-i18n/kde-i18n-nb-3.1_rc2
-~app-i18n/kde-i18n-nl-3.1_rc2
-~app-i18n/kde-i18n-nn-3.1_rc2
-~app-i18n/kde-i18n-nso-3.1_rc2
-~app-i18n/kde-i18n-pl-3.1_rc2
-~app-i18n/kde-i18n-pt-3.1_rc2
-~app-i18n/kde-i18n-pt_BR-3.1_rc2
-~app-i18n/kde-i18n-ro-3.1_rc2
-~app-i18n/kde-i18n-ru-3.1_rc2
-~app-i18n/kde-i18n-sk-3.1_rc2
-~app-i18n/kde-i18n-sl-3.1_rc2
-~app-i18n/kde-i18n-sr-3.1_rc2
-~app-i18n/kde-i18n-sv-3.1_rc2
-~app-i18n/kde-i18n-ta-3.1_rc2
-~app-i18n/kde-i18n-th-3.1_rc2
-~app-i18n/kde-i18n-tr-3.1_rc2
-~app-i18n/kde-i18n-uk-3.1_rc2
-~app-i18n/kde-i18n-ven-3.1_rc2
-~app-i18n/kde-i18n-vi-3.1_rc2
-~app-i18n/kde-i18n-xh-3.1_rc2
-~app-i18n/kde-i18n-zh_CN-3.1_rc2
-~app-i18n/kde-i18n-zh_TW-3.1_rc2
-~app-i18n/kde-i18n-zu-3.1_rc2
-
 # <danarmak@gentoo.org> (1 Nov 2002)
 # old and broken. I hope there'll be a new release soon - there's a kwintv3 project that's basically
 # a rewrite and it's in alpha stages atm. I've a cs ebuild for it btw.
@@ -360,74 +290,6 @@ sys-devel/prelink
 # <mkennedy@gentoo.org> (31 Oct 2002)
 # Masked (incomplete)
 app-emacs/monk
-
-# <danarmak@gentoo.org> (31 Oct 2002)
-# kde 3.1 rc1: masked permanently
-~x11-libs/qt-3.1.0_pre20021024
-~kde-base/arts-1.1.0.1
-~kde-base/kde-3.1_rc1
-~kde-base/kdeaddons-3.1_rc1
-~kde-base/kdeadmin-3.1_rc1
-~kde-base/kdeartwork-3.1_rc1
-~kde-base/kdebase-3.1_rc1
-~kde-base/kdebindings-3.1_rc1
-~kde-base/kdeedu-3.1_rc1
-~kde-base/kdegames-3.1_rc1
-~kde-base/kdegraphics-3.1_rc1
-~kde-base/kdelibs-3.1_rc1
-~kde-base/kdemultimedia-3.1_rc1
-~kde-base/kdenetwork-3.1_rc1
-~kde-base/kdepim-3.1_rc1
-~kde-base/kdesdk-3.1_rc1
-~kde-base/kdetoys-3.1_rc1
-~kde-base/kdeutils-3.1_rc1
-# kde i18n packages for 3.1 rc1
-=app-i18n/kde-i18n-3.1_rc1
-=app-i18n/kde-i18n-af-3.1_rc1
-=app-i18n/kde-i18n-ar-3.1_rc1
-=app-i18n/kde-i18n-bg-3.1_rc1
-=app-i18n/kde-i18n-bs-3.1_rc1
-=app-i18n/kde-i18n-ca-3.1_rc1
-=app-i18n/kde-i18n-cs-3.1_rc1
-=app-i18n/kde-i18n-da-3.1_rc1
-=app-i18n/kde-i18n-de-3.1_rc1
-=app-i18n/kde-i18n-el-3.1_rc1
-=app-i18n/kde-i18n-en_GB-3.1_rc1
-=app-i18n/kde-i18n-eo-3.1_rc1
-=app-i18n/kde-i18n-es-3.1_rc1
-=app-i18n/kde-i18n-et-3.1_rc1
-=app-i18n/kde-i18n-eu-3.1_rc1
-=app-i18n/kde-i18n-fa-3.1_rc1
-=app-i18n/kde-i18n-fi-3.1_rc1
-=app-i18n/kde-i18n-fr-3.1_rc1
-=app-i18n/kde-i18n-he-3.1_rc1
-=app-i18n/kde-i18n-hu-3.1_rc1
-=app-i18n/kde-i18n-it-3.1_rc1
-=app-i18n/kde-i18n-ja-3.1_rc1
-=app-i18n/kde-i18n-lt-3.1_rc1
-=app-i18n/kde-i18n-mt-3.1_rc1
-=app-i18n/kde-i18n-nb-3.1_rc1
-=app-i18n/kde-i18n-nl-3.1_rc1
-=app-i18n/kde-i18n-nn-3.1_rc1
-=app-i18n/kde-i18n-nso-3.1_rc1
-=app-i18n/kde-i18n-pl-3.1_rc1
-=app-i18n/kde-i18n-pt-3.1_rc1
-=app-i18n/kde-i18n-pt_BR-3.1_rc1
-=app-i18n/kde-i18n-ro-3.1_rc1
-=app-i18n/kde-i18n-ru-3.1_rc1
-=app-i18n/kde-i18n-sk-3.1_rc1
-=app-i18n/kde-i18n-sl-3.1_rc1
-=app-i18n/kde-i18n-sv-3.1_rc1
-=app-i18n/kde-i18n-ta-3.1_rc1
-=app-i18n/kde-i18n-th-3.1_rc1
-=app-i18n/kde-i18n-tr-3.1_rc1
-=app-i18n/kde-i18n-uk-3.1_rc1
-=app-i18n/kde-i18n-ven-3.1_rc1
-=app-i18n/kde-i18n-vi-3.1_rc1
-=app-i18n/kde-i18n-xh-3.1_rc1
-=app-i18n/kde-i18n-zh_CN-3.1_rc1
-=app-i18n/kde-i18n-zh_TW-3.1_rc1
-=app-i18n/kde-i18n-zu-3.1_rc1
 
 # things that need kde 3.1 or qt 3.1
 >=x11-themes/mosfet-liquid-widgets-0.9.6_pre1
@@ -509,78 +371,6 @@ x11-libs/gtkmm-addons
 # <kain@gentoo.org> (10 Oct 2002)
 # Newer ppc kernel; wants more testing.
 =sys-kernel/ppc-sources-2.4.20-r1
-
-# <danarmak@gentoo.org> (2 Oct 2002)
-# kde 3.1 beta2: masked permanently
-=kde-base/arts-1.1.0
-=kde-base/kde-3.1_beta2
-=kde-base/kdeaddons-3.1_beta2
-=kde-base/kdeadmin-3.1_beta2
-=kde-base/kdeartwork-3.1_beta2
-=kde-base/kdebase-3.1_beta2
-=kde-base/kdebindings-3.1_beta2
-=kde-base/kdeedu-3.1_beta2
-=kde-base/kdegames-3.1_beta2
-=kde-base/kdegraphics-3.1_beta2
-=kde-base/kdelibs-3.1_beta2
-=kde-base/kdemultimedia-3.1_beta2
-=kde-base/kdenetwork-3.1_beta2
-=kde-base/kdepim-3.1_beta2
-=kde-base/kdesdk-3.1_beta2
-=kde-base/kdetoys-3.1_beta2
-=kde-base/kdeutils-3.1_beta2
-# <hannes@gentoo.org> (18 Oct 2002)
-# masked kde-i18n-*-3.1_beta2 permanently
-=app-i18n/kde-i18n-3.1_beta2
-=app-i18n/kde-i18n-af-3.1_beta2
-=app-i18n/kde-i18n-ar-3.1_beta2
-=app-i18n/kde-i18n-az-3.1_beta2
-=app-i18n/kde-i18n-bg-3.1_beta2
-=app-i18n/kde-i18n-bs-3.1_beta2
-=app-i18n/kde-i18n-ca-3.1_beta2
-=app-i18n/kde-i18n-cs-3.1_beta2
-=app-i18n/kde-i18n-da-3.1_beta2
-=app-i18n/kde-i18n-de-3.1_beta2
-=app-i18n/kde-i18n-el-3.1_beta2
-=app-i18n/kde-i18n-en_GB-3.1_beta2
-=app-i18n/kde-i18n-eo-3.1_beta2
-=app-i18n/kde-i18n-es-3.1_beta2
-=app-i18n/kde-i18n-et-3.1_beta2
-=app-i18n/kde-i18n-fa-3.1_beta2
-=app-i18n/kde-i18n-fi-3.1_beta2
-=app-i18n/kde-i18n-fr-3.1_beta2
-=app-i18n/kde-i18n-ga-3.1_beta2
-=app-i18n/kde-i18n-he-3.1_beta2
-=app-i18n/kde-i18n-hr-3.1_beta2
-=app-i18n/kde-i18n-hu-3.1_beta2
-=app-i18n/kde-i18n-is-3.1_beta2
-=app-i18n/kde-i18n-it-3.1_beta2
-=app-i18n/kde-i18n-ja-3.1_beta2
-=app-i18n/kde-i18n-ko-3.1_beta2
-=app-i18n/kde-i18n-lt-3.1_beta2
-=app-i18n/kde-i18n-lv-3.1_beta2
-=app-i18n/kde-i18n-mt-3.1_beta2
-=app-i18n/kde-i18n-nb-3.1_beta2
-=app-i18n/kde-i18n-nl-3.1_beta2
-=app-i18n/kde-i18n-nn-3.1_beta2
-=app-i18n/kde-i18n-pl-3.1_beta2
-=app-i18n/kde-i18n-pt-3.1_beta2
-=app-i18n/kde-i18n-pt_BR-3.1_beta2
-=app-i18n/kde-i18n-ro-3.1_beta2
-=app-i18n/kde-i18n-ru-3.1_beta2
-=app-i18n/kde-i18n-sk-3.1_beta2
-=app-i18n/kde-i18n-sl-3.1_beta2
-=app-i18n/kde-i18n-sv-3.1_beta2
-=app-i18n/kde-i18n-ta-3.1_beta2
-=app-i18n/kde-i18n-th-3.1_beta2
-=app-i18n/kde-i18n-tr-3.1_beta2
-=app-i18n/kde-i18n-uk-3.1_beta2
-=app-i18n/kde-i18n-ven-3.1_beta2
-=app-i18n/kde-i18n-vi-3.1_beta2
-=app-i18n/kde-i18n-xh-3.1_beta2
-=app-i18n/kde-i18n-zh_CN-3.1_beta2
-=app-i18n/kde-i18n-zh_TW-3.1_beta2
-=app-i18n/kde-i18n-zu-3.1_beta2
 
 # <satai@gentoo.org> (29 Sep 2002)
 # Waiting for freeze to end.
@@ -706,27 +496,6 @@ net-misc/nt
 # This one *STILL* activate the atexit() bug in some
 # binary packages (Win4Lin and Realplayer to name a few)
 =sys-libs/glibc-2.2.5-r8
-
-
-# <danarmak@gentoo.org> (22 Aug 2002)
-# kde 3.1 beta1: masked permanently; some people like prereleases
-=kde-base/arts-1.0.7
-=kde-base/kde-3.1_beta1
-=kde-base/kdeaddons-3.1_beta1
-=kde-base/kdeadmin-3.1_beta1
-=kde-base/kdeartwork-3.1_beta1
-=kde-base/kdebase-3.1_beta1
-=kde-base/kdebindings-3.1_beta1
-=kde-base/kdeedu-3.1_beta1
-=kde-base/kdegames-3.1_beta1
-=kde-base/kdegraphics-3.1_beta1
-=kde-base/kdelibs-3.1_beta1
-=kde-base/kdemultimedia-3.1_beta1
-=kde-base/kdenetwork-3.1_beta1
-=kde-base/kdepim-3.1_beta1
-=kde-base/kdesdk-3.1_beta1
-=kde-base/kdetoys-3.1_beta1
-=kde-base/kdeutils-3.1_beta1
 
 # <danarmak@gentoo.org> (20 Aug 2002)
 # masked for extensive testing
