@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.78.1.ebuild,v 1.4 2004/02/12 15:28:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.78.1.ebuild,v 1.5 2004/02/15 11:56:08 dholm Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -56,16 +56,19 @@ src_unpack() {
 		sed -i \
 			-e '/^MY_CPU/s:i386:risc:' Makefile \
 			|| die "sed Makefile (ppc|sparc) failed"
+		epatch ${FILESDIR}/${PV}-big_endian.patch
 		;;
 	alpha)
 		sed -i \
 			-e '/^MY_CPU/s:i386:alpha:' Makefile \
 			|| die "sed Makefile (alpha) failed"
+		epatch ${FILESDIR}/${PV}-big_endian.patch
 		;;
 	mips)
 		sed -i \
 			-e '/^MY_CPU/s:i386:mips:' Makefile \
 			|| die "sed Makefile (mips) failed"
+		epatch ${FILESDIR}/${PV}-big_endian.patch
 		;;
 	esac
 
