@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.93 2005/02/05 18:13:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.94 2005/02/05 18:41:56 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -104,6 +104,7 @@ kde-base/kdeadmin kde-base/ksysv
 kde-base/kdeadmin kde-base/kuser
 kde-base/kdeadmin kde-base/lilo-config
 kde-base/kdeadmin kde-base/secpolicy
+kde-base/kdeartwork kde-base/kdeartwork-emoticons
 kde-base/kdeartwork kde-base/kdeartwork-icewm-themes
 kde-base/kdeartwork kde-base/kdeartwork-iconthemes
 kde-base/kdeartwork kde-base/kdeartwork-kscreensaver
