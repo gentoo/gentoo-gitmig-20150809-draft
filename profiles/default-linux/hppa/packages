@@ -1,9 +1,7 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/packages,v 1.1 2004/08/06 05:24:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/packages,v 1.2 2004/09/15 05:14:42 vapier Exp $
 
->=sys-apps/baselayout-1.8.5.8
->=sys-apps/portage-2.0.36
 >=sys-devel/binutils-2.13.90.0.16-r1
 >=sys-devel/gcc-3.2.2
 >=sys-libs/glibc-2.3.1-r2
