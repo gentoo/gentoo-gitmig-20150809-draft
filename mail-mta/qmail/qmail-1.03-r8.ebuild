@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r8.ebuild,v 1.2 2004/06/24 22:24:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r8.ebuild,v 1.3 2004/07/01 19:53:52 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
@@ -14,13 +14,13 @@ SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	http://www.qmail.org/big-concurrency.patch
 	http://www.ckdhr.com/ckd/qmail-103.patch"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	>=net-mail/checkpassword-0.90"
 
 RDEPEND="!virtual/mta
-	virtual/glibc
+	virtual/libc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	>=sys-apps/daemontools-0.76-r1

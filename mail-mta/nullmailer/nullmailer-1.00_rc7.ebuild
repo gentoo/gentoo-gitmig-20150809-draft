@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7.ebuild,v 1.2 2004/06/24 22:24:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7.ebuild,v 1.3 2004/07/01 19:53:31 eradicator Exp $
 
 inherit eutils
 
@@ -14,10 +14,10 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		sys-apps/groff"
 RDEPEND="!virtual/mta
-		virtual/glibc
+		virtual/libc
 		>=sys-apps/supervise-scripts-3.2
 		>=sys-apps/daemontools-0.76-r1
 		sys-apps/shadow"

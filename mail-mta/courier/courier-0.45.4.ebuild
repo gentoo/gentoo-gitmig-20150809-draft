@@ -18,7 +18,7 @@ PROVIDE="virtual/mta
 	 virtual/mda
 	 virtual/imapd"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
 	>=dev-tcltk/expect-5.33.0

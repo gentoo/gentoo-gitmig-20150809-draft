@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.2 2004/06/24 22:24:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.3 2004/07/01 19:54:07 eradicator Exp $
 
 IUSE="ssl"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://qmail/qmail-${PV}.tar.gz
 	http://www.nrg4u.com/qmail/qmail-ldap-1.03-20040401.patch.gz
 	mirror://gentoo/${P}-r2-tls.patch.bz2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/zlib
 	sys-apps/groff
 	>=net-nds/openldap-2.1.23

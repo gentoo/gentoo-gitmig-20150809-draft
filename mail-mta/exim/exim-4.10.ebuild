@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.10.ebuild,v 1.3 2004/06/24 22:23:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.10.ebuild,v 1.4 2004/07/01 19:52:50 eradicator Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.gz
 	http://duncanthrax.net/exiscan/exiscan-${EXISCAN_VER}.tar.gz"
 HOMEPAGE="http://www.exim.org/"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/db-3.2
 	>=dev-lang/perl-5.6.0
 	>=dev-libs/libpcre-3.4

@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.4 2004/06/24 22:24:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.5 2004/07/01 19:53:52 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  qmail-1.03-r10.ebuild, qmail-1.03-r11.ebuild, qmail-1.03-r12.ebuild,
+  qmail-1.03-r13.ebuild, qmail-1.03-r14.ebuild, qmail-1.03-r15.ebuild,
+  qmail-1.03-r8.ebuild, qmail-1.03-r9.ebuild:
+  virtual/glibc -> virtual/libc
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> qmail-1.03-r10.ebuild,
   qmail-1.03-r11.ebuild, qmail-1.03-r9.ebuild:

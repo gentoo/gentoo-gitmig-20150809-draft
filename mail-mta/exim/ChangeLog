@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.4 2004/06/24 22:23:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.5 2004/07/01 19:52:50 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> exim-4.10.ebuild:
+  virtual/glibc -> virtual/libc
 
   11 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> exim-4.34-r1.ebuild:
   Marking stable on all arch's to fix the raft of 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.48.ebuild,v 1.2 2004/06/24 22:25:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.48.ebuild,v 1.3 2004/07/01 19:54:39 eradicator Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/system/mail/mta/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa mips amd64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="!virtual/mta
 	net-mail/mailbase"
 PROVIDE="virtual/mta"

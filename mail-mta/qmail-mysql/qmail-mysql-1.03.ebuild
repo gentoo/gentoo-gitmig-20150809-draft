@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.2 2004/06/24 22:25:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.3 2004/07/01 19:54:22 eradicator Exp $
 
 inherit eutils
 
@@ -21,12 +21,12 @@ KEYWORDS="x86 ~ppc ~sparc"
 PROVIDE="virtual/mta
 	 virtual/mda"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	>=net-mail/checkpassword-0.90"
 RDEPEND="!virtual/mta
-	virtual/glibc
+	virtual/libc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	>=sys-apps/daemontools-0.76-r1

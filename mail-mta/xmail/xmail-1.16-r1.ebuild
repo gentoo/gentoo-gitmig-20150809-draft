@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.16-r1.ebuild,v 1.1 2004/06/28 20:57:20 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.16-r1.ebuild,v 1.2 2004/07/01 19:54:52 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 PROVIDE="virtual/mta"
 

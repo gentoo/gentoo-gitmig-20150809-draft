@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.6 2004/06/24 22:25:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.7 2004/07/01 19:54:39 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ssmtp-2.38.14-r1.ebuild, ssmtp-2.48.ebuild, ssmtp-2.60.4-r2.ebuild,
+  ssmtp-2.60.4.ebuild, ssmtp-2.60.7-r1.ebuild, ssmtp-2.60.7.ebuild,
+  ssmtp-2.60.9.ebuild:
+  virtual/glibc -> virtual/libc
 
   11 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> ssmtp-2.60.7-r1.ebuild:
   Marking stable on all arch's to fix the 
