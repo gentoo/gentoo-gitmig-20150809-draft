@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r6.ebuild,v 1.1 2004/06/28 23:55:44 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r6.ebuild,v 1.2 2004/06/29 02:45:25 squinky86 Exp $
 
 inherit eutils
 
@@ -15,12 +15,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64"
 
-DEPEND="gtk? ( =dev-ml/lablgtk-1* )
+RDEPEND="gtk? ( =dev-ml/lablgtk-1* )
 	>=dev-lang/ocaml-3.06
-	dev-lang/perl"
+	dev-lang/perl
+	net-misc/wget"
 
-RDEPEND="${DEPEND}
-	 net-misc/wget"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58"
 
 MLUSER="p2p"
 
@@ -28,16 +29,16 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-configure.patch
 	#Don't change this, unless you know what you are doing
 	patch -p0 < ${DISTDIR}/patch_pack16q || die
+	export WANT_AUTOCONF=2.5
+	cd config; autoconf; cd ..
 }
 
 
 src_compile() {
 	use gtk || export GTK_CONFIG="no"
 
-	make depend
 	# the dirs are not (yet) used, but it doesn't hurt to specify them anyway
 	econf \
 		--sysconfdir=/etc/mldonkey \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.21-r2.ebuild,v 1.4 2004/06/29 00:30:31 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.21-r2.ebuild,v 1.5 2004/06/29 02:45:25 squinky86 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~hppa"
 
-RDEPEND="gtk? ( =dev-ml/lablgtk-1* )
+RDEPEND="gtk? ( >=dev-ml/lablgtk-1.2.6 <dev-ml/lablgtk-2 )
 	>=dev-lang/ocaml-3.07
 	dev-lang/perl
 	net-misc/wget"
@@ -29,7 +29,6 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-configure.patch
 	#Don't change this, unless you know what you are doing
 	patch -p0 < ${DISTDIR}/patch_pack21g || die
 	export WANT_AUTOCONF=2.5
@@ -49,7 +48,6 @@ src_compile() {
 		--enable-checks \
 		--enable-pthread || die
 	export OCAMLRUNPARAM="l=256M"
-	make depend || die
 	emake || die
 }
 
