@@ -12,7 +12,7 @@ HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
 10) mkdir /usr/tmp/All
 11) cd /usr/tmp/All
 12) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
-13) PKGDIR=/usr/tmp emerge -vK glibc
+13) PKGDIR=/usr/tmp emerge -vk glibc
 14) (OPTIONAL) emerge -uv glibc
 15) emerge -upv system
 16) emerge -uv system
