@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.29 2005/03/11 03:00:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.30 2005/03/12 22:45:20 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -107,8 +107,11 @@ toolchain-binutils_src_compile() {
 	echo ./configure ${myconf}
 	"${S}"/configure ${myconf} || die "configure failed"
 
-	make configure-bfd || die "make configure-bfd failed"
-	make headers -C bfd || die "make headers-bfd failed"
+	# binutils' build system is a bit broken with internal
+	# dependencies, so we manually run these first two bfd
+	# targets so that we can than use -j# and have it work
+	emake -j1 configure-bfd || die "make configure-bfd failed"
+	emake -j1 headers -C bfd || die "make headers-bfd failed"
 	emake all || die "emake failed"
 
 	# only build info pages if we user wants them, and if 
