@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r4.ebuild,v 1.5 2004/02/22 15:59:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r4.ebuild,v 1.6 2004/04/18 18:52:20 rphillips Exp $
 
 IUSE=""
 
 MY_P=ex-020403
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The original VI package"
-SRC_URI="http://download.berlios.de/ex-vi/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/ex-vi/${MY_P}.tar.gz"
 HOMEPAGE="http://ex-vi.berlios.de/"
 LICENSE="Caldera"
 SLOT="0"
