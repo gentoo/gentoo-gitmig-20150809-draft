@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.1.17-r2.ebuild,v 1.3 2002/07/25 13:17:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.1.17-r2.ebuild,v 1.4 2002/08/06 16:09:20 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Powertweak"
@@ -9,7 +9,7 @@ HOMEPAGE="http://powertweak.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-libs/libxml-1.8.10"
