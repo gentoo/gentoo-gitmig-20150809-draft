@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.6 2004/06/25 00:14:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.7 2004/07/01 07:27:35 pfeifer Exp $
+
+*strongswan-2.1.3-r1 (01 Jul 2004)
+
+  01 Jul 2004; Jay Pfeifer <pfeifer@gentoo.org> : strongswan-2.1.3-r1.ebuild
+  Added use flags for curl, ldap, & smartcard.
 
   19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/strongswan-2.1.3-gcc34.patch, strongswan-2.1.3.ebuild:
