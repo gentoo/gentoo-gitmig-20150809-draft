@@ -1,5 +1,0 @@
-#!/bin/sh
-export KDEDIR=/opt/kde2.1-beta2
-export PATH=${KDEDIR}/bin:${PATH}
-export LD_LIBRARY_PATH=${KDEDIR}/lib
-${KDEDIR}/bin/startkde
