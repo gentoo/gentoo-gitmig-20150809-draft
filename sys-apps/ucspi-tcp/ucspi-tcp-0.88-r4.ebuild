@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r4.ebuild,v 1.7 2002/12/31 20:32:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r4.ebuild,v 1.8 2003/01/01 20:23:33 raker Exp $
 
 IUSE="ssl ipv6"
 
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 sparc "
 LICENSE="as-is"
 
 inherit eutils

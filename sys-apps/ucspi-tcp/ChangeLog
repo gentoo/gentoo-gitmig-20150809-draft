@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.10 2002/12/31 20:32:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.11 2003/01/01 20:23:33 raker Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *ucspi-tcp-0.88-r4 (25 Sep 2002)
+
+  01 Jan 2002; Nick Hadaway <raker@gentoo.org> ucspi-tcp-0.88-r4.ebuild :
+  Marked stable.
 
   31 Dec 2002; Nick Hadaway <raker@gentoo.org> ucspi-tcp-0.88-r4.ebuild :
   Now using epatch. Put in logic so you can install either the ipv6
