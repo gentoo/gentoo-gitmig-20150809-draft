@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.3 2005/02/27 20:21:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.4 2005/02/28 14:13:34 greg_g Exp $
+
+*kig-3.4.0_rc1 (28 Feb 2005)
+
+  28 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> kig-3.4.0_rc1.ebuild:
+  Add optional support for python scripting.
 
   27 Feb 2005; Dan Armak <danarmak@gentoo.org> :
   Ebuild for 3.4.0 RC1.
