@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.4 2002/06/30 13:07:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.5 2002/07/01 22:21:56 azarah Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -19,7 +19,7 @@ if [ -z "`use build`" ]
 then
 	DEPEND="${DEPEND} nls? ( sys-devel/gettext )
 		>=sys-libs/ncurses-5.2-r2
-		>=sys-apps/texinfo-4.2-r1"
+		>=sys-apps/texinfo-4.2-r4"
 	
 	RDEPEND="${RDEPEND} >=sys-libs/ncurses-5.2-r2"
 fi
