@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.57 2003/07/17 22:12:20 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.58 2003/07/21 18:58:27 lisa Exp $
+
+*distcc-2.9 (21 Jul 2003)
+  21 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  New version released and committed (Still with the patch to fix tmpdir)
+  Updated distcc-config to reflect bug #24972  I'll make this change in
+   all versions in the repository.
 
 *distcc-2.8 (09 Jul 2003)
   10 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
@@ -21,6 +27,8 @@
 
 
 *distcc-2.7.1 (01 Jul 2003)
+  21 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  Updated distcc-config to reflect bug #24972
 
   17 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
   Changed gnome stuff to gtk. How on earth did this get missed??
