@@ -2,6 +2,21 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $Header
 
+*fluxbox-0.1.13-r2 (24 Nov 2002)
+
+  24 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r1.ebuild
+  files/digest-fluxbox-0.1.13-r2 files/fluxbox-0.1.13-*.patch
+
+  This is a somewhat major collection of updates. Fluxbox initialy had some
+  issues with menu/taskbar fonts being screwy when a session was first
+  started. OpenOffice was crashing, which was previously being solved by
+  configuring with --disable-newwmspec. NLS files were not getting installed.
+  All of the above have been patched/fixed.
+
+  The menukey patch is still applied. The remember patch has also been
+  applied to this release. Unlike the previous remember patch, this one
+  builds fine if -nls is in your USE.
+
 *fluxbox-0.1.13-r1 (21 Nov 2002)
 
   21 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r1.ebuild
