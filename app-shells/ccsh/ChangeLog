@@ -1,8 +1,13 @@
 # ChangeLog for app-shells/ccsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ChangeLog,v 1.2 2002/07/25 15:39:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ChangeLog,v 1.3 2002/07/29 02:49:46 cselkirk Exp $
 
 *ccsh-0.0.4-r2 (1 Feb 2002)
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> ccsh-0.0.4-r2.ebuild :
+
+  Added ppc to KEYWORDS.
+  Fixed date in header.
+  ADDED REDPEND.
 
   25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ccsh-0.0.4-r2.ebuild :
   Added KEYWORDS, SLOT.
