@@ -1,0 +1,20 @@
+14c14
+< main: $(DVB_LIBS) $(TEST_PROGS) $(DVB-MPEGTOOLS)
+---
+> main: $(DVB_LIBS) $(DVB-MPEGTOOLS)
+17,20c17,20
+< 	[ ! -d "$(PREFIX)/lib" ] && mkdir -p $(PREFIX)/lib
+< 	install -m 644 $(DVB_LIBS) $(PREFIX)/lib/
+< 	[ ! -d "$(PREFIX)/include" ] && mkdir -p $(PREFIX)/include
+< 	install -m 644 $(HEADERS) $(PREFIX)/include/
+---
+> 	[ ! -d "$(DESTDIR)/$(PREFIX)/lib" ] && mkdir -p $(DESTDIR)/$(PREFIX)/lib
+> 	install -m 644 $(DVB_LIBS) $(DESTDIR)/$(PREFIX)/lib/
+> 	[ ! -d "$(DESTDIR)/$(PREFIX)/include" ] && mkdir -p $(DESTDIR)/$(PREFIX)/include
+> 	install -m 644 $(HEADERS) $(DESTDIR)/$(PREFIX)/include/
+24,25c24,25
+< 	for i in $(DVB_LIBS); do rm -f $(PREFIX)/lib/$$i;done
+< 	for i in $(HEADERS); do rm -f $(PREFIX)/$$i;done
+---
+> 	for i in $(DVB_LIBS); do rm -f $(DESTDIR)/$(PREFIX)/lib/$$i;done
+> 	for i in $(HEADERS); do rm -f $(DESTDIR)/$(PREFIX)/$$i;done

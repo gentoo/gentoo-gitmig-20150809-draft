@@ -1,0 +1,26 @@
+60,63c60,63
+< 	install -D -m 755 dvb-mplex $(PREFIX)/bin/dvb-mplex
+< 	install -m 755 audiofilter $(PREFIX)/bin/
+< 	install -m 755 dvb-mpegtools_main $(PREFIX)/bin/
+< 	install -m 755 dvbaudio $(PREFIX)/bin/
+---
+> 	install -D -m 755 dvb-mplex $(DESTDIR)/$(PREFIX)/bin/dvb-mplex
+> 	install -m 755 audiofilter $(DESTDIR)/$(PREFIX)/bin/
+> 	install -m 755 dvb-mpegtools_main $(DESTDIR)/$(PREFIX)/bin/
+> 	install -m 755 dvbaudio $(DESTDIR)/$(PREFIX)/bin/
+65c65
+< 		ln -sf $(PREFIX)/bin/dvb-mpegtools_main $(PREFIX)/bin/$$f ;\
+---
+> 		ln -sf $(PREFIX)/bin/dvb-mpegtools_main $(DESTDIR)/$(PREFIX)/bin/$$f ;\
+69,73c69,73
+< 	for f in $(LINKS); do rm -f $(PREFIX)/bin/$$f;done
+< 	rm -f $(PREFIX)/bin/dvb-mpegtools_main
+< 	rm -f $(PREFIX)/bin/dvbaudio
+< 	rm -f $(PREFIX)/bin/audiofilter
+< 	rm -f $(PREFIX)/lib/libdvbmpegtools
+---
+> 	for f in $(LINKS); do rm -f $(DESTDIR)/$(PREFIX)/bin/$$f;done
+> 	rm -f $(DESTDIR)/$(PREFIX)/bin/dvb-mpegtools_main
+> 	rm -f $(DESTDIR)/$(PREFIX)/bin/dvbaudio
+> 	rm -f $(DESTDIR)/$(PREFIX)/bin/audiofilter
+> 	rm -f $(DESTDIR)/$(PREFIX)/lib/libdvbmpegtools
