@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.20 2005/03/05 23:56:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.21 2005/04/04 05:38:35 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -20,7 +20,8 @@ RDEPEND="virtual/libc
 	wxwindows? ( =x11-libs/wxGTK-2.4* )
 	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	>=app-text/opensp-1.5"
 
 src_unpack() {
 #	unpack ${A}

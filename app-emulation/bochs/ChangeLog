@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.39 2005/03/05 23:56:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.40 2005/04/04 05:38:35 lu_zero Exp $
+
+  04 Apr 2005; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
+  Added opensp dependency as pointed out in bug #85789, thanks to Marius
+  <inkredibl@gmail.com>
 
   06 Mar 2005; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
   Dep change to be ready to the wxGTK update
