@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2.ebuild,v 1.4 2003/09/09 17:18:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.1 2003/11/08 18:33:54 stkn Exp $
+
+inherit eutils
 
 IUSE="ssl"
 
@@ -11,11 +13,11 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc -sparc "
+KEYWORDS="~x86 ~ppc -sparc"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.5.2
-	>=media-video/ffmpeg-0.4.7_pre20030624
+	>=media-video/ffmpeg-0.4.7
 	ssl? ( dev-libs/openssl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -39,8 +41,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	# enabling ffmpeg/h263 support
-	cd ${S}; sed -i -e "s:/usr/local/include/ffmpeg:/usr/include/ffmpeg:" configure
+
+	cd ${S}
+	# fix and enable ffmpeg/h263 support (bug #32754)
+	epatch ${FILESDIR}/openh323-${PV}-ffmpeg.diff
+
+	# fix include order (bug #32522)
+	epatch ${FILESDIR}/openh323-${PV}-include-order.diff
 }
 
 src_compile() {
@@ -52,7 +59,6 @@ src_compile() {
 
 	# NOTRACE avoid compilation problems, we disable PTRACING using NOTRACE=1
 	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser NOTRACE=1"
-
 
 	if [ "`use ssl`" ]; then
 		export OPENSSLFLAG=1
@@ -79,6 +85,8 @@ src_install() {
 	# mod to keep gnugk happy
 	insinto /usr/share/openh323/src
 	newins ${FILESDIR}/openh323-1.11.7-emptyMakefile Makefile
+
+	# install version.h into $OPENH323DIR
 	insinto /usr/share/openh323
 	doins version.h
 
@@ -93,6 +101,10 @@ src_install() {
 	done
 	dosym /usr/lib/libh323_${OPENH323_ARCH}.so.${PV} /usr/lib/libh323_${ALT_ARCH}.so
 
+	# these should point to the right directories,
+	# openh323.org and other applications need this
+	dosed "s:^OH323_LIBDIR = \$(OPENH323DIR).*:OH323_LIBDIR = /usr/lib:" \
+		/usr/share/openh323/openh323u.mak
+	dosed "s:^OH323_INCDIR = \$(OPENH323DIR).*:OH323_INCDIR = /usr/include/openh323:" \
+		/usr/share/openh323/openh323u.mak
 }
-
-
