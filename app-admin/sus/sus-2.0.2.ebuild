@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/sus-2.0.1.ebuild,v 1.2 2003/08/10 07:56:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/sus-2.0.2.ebuild,v 1.1 2003/08/10 07:56:31 kumba Exp $
 
 DESCRIPTION="allows certain users to run commands as root or other users"
 SRC_URI="http://pdg.uow.edu.au/sus/${P}.tar.Z"
@@ -8,7 +8,7 @@ HOMEPAGE="http://pdg.uow.edu.au/sus/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~mips"
+KEYWORDS="~x86 ~sparc ~mips"
 IUSE="pam"
 
 DEPEND="virtual/glibc
