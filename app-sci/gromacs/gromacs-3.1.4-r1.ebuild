@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.4-r1.ebuild,v 1.3 2003/07/08 05:44:22 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.4-r1.ebuild,v 1.4 2003/10/04 23:29:38 spyderous Exp $
 
 IUSE="mpi"
 
-DESCRIPTION="The ultimate Molecular Dynamics simulation package"
-SRC_URI="ftp://ftp.gromacs.org/pub/gromacs/${P}.tar.gz"
+DESCRIPTION="The ultimate molecular dynamics simulation package"
+SRC_URI="ftp://ftp.gromacs.org/pub/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gromacs.org/"
 
 LICENSE="GPL-2"
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 
 #mpi is a local USE flag now
 #May become official when situation with mpich is cleared (now the only mpi implementation awailable is lam-mpi)
-DEPEND=">=dev-libs/fftw-2.1.3
+DEPEND="=dev-libs/fftw-2.1*
 	mpi? ( >=sys-cluster/lam-mpi-6.5.6 )
 	>=sys-devel/binutils-2.10.91.0.2"
 
@@ -25,11 +25,11 @@ src_compile() {
 #Unfortunately portage cannot trace optional dependencies of dependencies at present.
 #Until this (planned) feature is completed, please try to do corresponding check yourself.
 	local myconf=""
-	use mpi && myconf="${myconf} --enable-mpi"
+	myconf="${myconf} `use_enable mpi`"
 
 	econf \
 		--enable-fortran \
-		--datadir=/usr/share/${P} ${myconf} || die "./configure failed"
+		--datadir=/usr/share/${P} ${myconf} || die "configure failed"
 	emake || die
 }
 

@@ -2,6 +2,12 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header $
 
+  04 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  gromacs-3.1.4-r1.ebuild:
+  Fixing fftw dep. Won't compile against fftw-3 yet, in part because it looks
+  for fftw3.h instead of fftw.h, and in part because MPI doesn't work in fftw-3
+  yet.
+
 *gromacs-3.1.4-r1 (23 Mar 2003)
 
   23 Mar 2003; George Shapovalov <george@gentoo.org> gromacs-3.1.4-r1.ebuild :
