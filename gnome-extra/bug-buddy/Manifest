@@ -8,7 +8,7 @@ MD5 258c27eaa75b9890efe2ccfaf7a62aa5 bug-buddy-2.6.0.ebuild 907
 MD5 8ecb0e87c2c9edbad22604deb1f42537 bug-buddy-2.6.1.ebuild 907
 MD5 66cb0ffa5d566a6e2baa2347b48d199b bug-buddy-2.8.0.ebuild 899
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 5ed2b0a9ace3ab9fea3a8cf802786e4d bug-buddy-2.10.0.ebuild 1022
+MD5 1ba3f412976728446fafe9d8f7fd65b6 bug-buddy-2.10.0.ebuild 1056
 MD5 4d7a28f47d32104e184c44c5f00b9e50 files/digest-bug-buddy-2.0.8 67
 MD5 5ff5b1cd644e2fdbfe7d4162e09da84e files/digest-bug-buddy-2.4.2 68
 MD5 bb4fc864ea6a7c9fc9c17ad8ddc05c53 files/digest-bug-buddy-2.6.0 68
@@ -18,7 +18,7 @@ MD5 b49fb0e31813c4682de1a44013d0beab files/digest-bug-buddy-2.10.0 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLnRgXjcVihsel0ERAgCXAJ9Pd93fYMUv4UOK5YKQrO3R+qCvTgCbB6hh
-kLOHQM70i3DGlXoMTJWGrQo=
-=iR19
+iD8DBQFCL5GYXjcVihsel0ERAoXUAKD0AbLiBtuoYUkfCI/DRlc1WnohugCfRApf
+Fs+EIx5Ra049xhJU6Fb8m4E=
+=GS8R
 -----END PGP SIGNATURE-----
