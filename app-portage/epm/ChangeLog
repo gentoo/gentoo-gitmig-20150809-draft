@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/epm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.6 2004/04/05 04:41:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.7 2004/04/28 13:38:24 agriffis Exp $
+
+*epm-0.8.8 (28 Apr 2004)
+
+  28 Apr 2004; Aron Griffis <agriffis@gentoo.org> -epm-0.7.ebuild,
+  -epm-0.8.1.ebuild, -epm-0.8.2.ebuild, -epm-0.8.3.ebuild, -epm-0.8.4.ebuild,
+  -epm-0.8.5.ebuild, -epm-0.8.6.ebuild, +epm-0.8.8.ebuild, -epm-0.8.ebuild:
+  Refrain from listing symlink target with -ql, problem introduced in
+  0.8.6/0.8.7. Trim old versions of epm.
 
 *epm-0.8.7 (05 Apr 2004)
 
