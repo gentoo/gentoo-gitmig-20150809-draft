@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.96.ebuild,v 1.5 2003/01/08 16:53:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.96.ebuild,v 1.6 2003/01/21 19:59:57 rajiv Exp $
 
 MY_P="Sablot-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~ppc"
 
 DEPEND=">=dev-libs/expat-1.95.1" 
 
