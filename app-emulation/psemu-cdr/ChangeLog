@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/psemu-cdr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-cdr/ChangeLog,v 1.1 2002/06/03 02:53:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-cdr/ChangeLog,v 1.2 2002/07/27 14:23:49 stubear Exp $
+
+*psemu-cdr (27 Jul 2002)
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> psemu-cdr.ebuild :
+
+  Added KEYWORDS="x86" and SLOT.
 
 *psemu-cdr (2 June 2002)
 
