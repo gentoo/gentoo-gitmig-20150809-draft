@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.6 2003/08/24 22:21:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.7 2003/09/23 06:50:35 vapier Exp $
 
 inherit cvs
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/crystal"
@@ -29,7 +29,7 @@ DEPEND=">=media-libs/libpng-1.2.1
 	x86? ( dev-lang/nasm )
 	dev-games/ode
 	>=dev-lang/perl-5.6.1
-	!dev-libs/crystalspace"
+	!dev-games/crystalspace"
 
 CRYSTAL_PREFIX=/opt/crystal
 
