@@ -1,0 +1,14 @@
+# ChangeLog for net-www/zoneminder
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/zoneminder/ChangeLog,v 1.1 2003/06/20 20:14:08 mkeadle Exp $
+
+*zoneminder-0.9.12 (20 Jun 2003)
+
+  20 Jun 2003; mkeadle <mkeadle@gentoo.org> zoneminder-0.9.12.ebuild:
+  initial import. very impressive program. much thanks go to MAL
+  <mal@komcept.com> for putting this all together very well in bug #22665. MALs
+  ebuild used its own internal vars to track where to install the web content. I
+  switched this over to the datadir format used by the apache ebuilds. This lets
+  zoneminder install to the same location apache was installed to without user
+  interaction, but still leaves the door open for customization.
+
