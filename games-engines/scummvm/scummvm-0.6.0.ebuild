@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.6.0.ebuild,v 1.4 2004/05/10 02:29:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.6.0.ebuild,v 1.5 2004/06/01 04:25:34 vapier Exp $
 
 inherit games
 
@@ -8,10 +8,9 @@ DESCRIPTION="Reimplementation of the SCUMM game engine used in Lucasarts adventu
 HOMEPAGE="http://scummvm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 
-use debug && RESTRICT="nostrip"
-KEYWORDS="x86 ppc ~amd64 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ppc ~amd64 ~sparc"
 IUSE="alsa debug mad oggvorbis sdl zlib"
 
 DEPEND="virtual/glibc
@@ -26,6 +25,12 @@ DEPEND="virtual/glibc
 	mad? ( media-libs/libmad )
 	zlib? ( sys-libs/zlib )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
+}
+
 src_compile() {
 	local myconf=
 
@@ -35,21 +40,21 @@ src_compile() {
 	use debug \
 		|| myconf="${myconf} --disable-debug"
 
-	# not an autoconf script.
+	# not an autoconf script so dont call econf
 	./configure \
 		`use_enable alsa` \
 		`use_enable mad` \
 		`use_enable oggvorbis vorbis` \
 		`use_enable zlib` \
 		${myconf} \
-			|| die "configure failed"
+		|| die "configure failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	dogamesbin scummvm     || die "dobin failed"
-	doman scummvm.6        || die "doman failed"
-	dodoc NEWS README TODO || die "dodoc failed"
+	dogamesbin scummvm || die "dobin failed"
+	doman scummvm.6
+	dodoc NEWS README TODO
 	insinto /usr/share/pixmaps
 	doins scummvm.xpm      || die "doins failed"
 	make_desktop_entry scummvm ScummVM
