@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.32 2004/07/23 01:24:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.33 2004/08/16 03:19:29 squinky86 Exp $
+
+  15 Aug 2004; Jon Hood <squinky86@gentoo.org> -bittorrent-3.3.0.ebuild,
+  -bittorrent-3.4.1.ebuild, bittorrent-3.4.2-r1.ebuild:
+  Stable on x86, cleanups.
 
   22 Jul 2004; Jason Wever <weeve@gentoo.org> bittorrent-3.4.2.ebuild:
   Stable on sparc.
