@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.95 2004/12/01 22:50:49 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.96 2004/12/04 20:14:30 rac Exp $
+
+*perl-5.8.5-r2 (04 Dec 2004)
+
+  04 Dec 2004; Robert Coie <rac@gentoo.org>
+  +files/perl-5.8.5-tempfiles.patch, +files/perl-5.8.6-tempfiles.patch,
+  -perl-5.8.4.ebuild, +perl-5.8.5-r2.ebuild, +perl-5.8.6-r1.ebuild:
+  Add the few relevant bits from bug 66360, keyword 5.8.5-r2 x86, amd64 and ppc
 
   01 Dec 2004; Robert Coie <rac@gentoo.org> perl-5.8.6.ebuild:
   back makemaker block to 6.17

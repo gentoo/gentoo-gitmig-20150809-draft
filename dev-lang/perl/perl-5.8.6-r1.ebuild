@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.27 2004/10/25 11:41:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r1.ebuild,v 1.1 2004/12/04 20:14:30 rac Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -11,25 +11,27 @@ SHORT_PV="${PV%.*}"
 MY_P="perl-${PV/_rc/-RC}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 S="${WORKDIR}/${MY_P}"
-SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.perl.org/"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
+
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm hppa amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~sh"
 IUSE="berkdb debug doc gdbm ithreads perlsuid uclibc"
+PERL_OLDVERSEN="5.8.2 5.8.4 5.8.5"
 
 DEPEND="!uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	gdbm? ( >=sys-libs/gdbm-1.8.3 )
 	>=sys-apps/portage-2.0.48-r4
 	>=sys-devel/libperl-${PV}
 	!<dev-perl/ExtUtils-MakeMaker-6.17
-	!<dev-perl/File-Spec-0.84-r1
+	!<dev-perl/File-Spec-0.87
 	!<dev-perl/Test-Simple-0.47-r1"
 RDEPEND=">=sys-devel/libperl-${PV}
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
@@ -102,9 +104,26 @@ src_unpack() {
 	# uclibc support
 	epatch ${FILESDIR}/perl-5.8.2-uclibc.patch
 
+	# this one only affects sparc64, as best weeve and rac can tell,
+	# but seems sane for all linux.  we don't have to worry about
+	# drifting into obscure SysV non-posix semantics, and the current
+	# code in IO.xs that checks for this sort of thing dies in LDAP on
+	# sparc64.
+
+	#epatch ${FILESDIR}/${P}-nonblock.patch
+
+	# since we build in non-world-writeable portage directories, none
+	# of the .t sections of the original version of this patch matter
+	# much.  the PPPort section is apparently obsolete, because i see
+	# no /tmp in there now.  ditto on perlbug.SH, which has secure
+	# tempfile handling if resources are present.  originally from bug
+	# 66360.
+
+	epatch ${FILESDIR}/${P}-tempfiles.patch
 }
 
-src_compile() {
+src_configure() {
+
 	# some arches and -O do not mix :)
 	use arm && replace-flags -O? -O1
 	use ppc && replace-flags -O? -O1
@@ -127,28 +146,27 @@ src_compile() {
 		myarch="${CHOST%%-*}-linux"
 	fi
 
+	local inclist=$(for v in $PERL_OLDVERSEN; do echo -n "$v $v/$myarch "; done)
+
+	# allow either gdbm to provide ndbm (in <gdbm/ndbm.h>) or db1
+
+	myndbm='U'
+	mygdbm='U'
+	mydb='U'
+
 	if use gdbm
 	then
-		myconf="${myconf} -Di_gdbm"
+		mygdbm='D'
+		myndbm='D'
 	fi
 	if use berkdb
 	then
-		myconf="${myconf} -Di_db"
-
-		# ndbm.h is only provided by db1 (and perhaps by gdbm in
-		# error). an alternate approach here would be to check for the
-		# presence (or some string therein) of /usr/include/ndbm.h
-		# itself.
-
-		if has_version '=sys-libs/db-1*'
-		then
-			myconf="${myconf} -Di_ndbm"
-		else
-			myconf="${myconf} -Ui_ndbm"
-		fi
-	else
-		myconf="${myconf} -Ui_db -Ui_ndbm"
+		mydb='D'
+		has_version '=sys-libs/db-1*' && myndbm='D'
 	fi
+
+	myconf="${myconf} -${myndbm}i_ndbm -${mygdbm}i_gdbm -${mydb}i_db"
+
 	if use mips
 	then
 		# this is needed because gcc 3.3-compiled kernels will hang
@@ -181,13 +199,6 @@ src_compile() {
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
 
-	# These are temporary fixes. Need to edit the build so that that libraries created
-	# only get compiled with -fPIC, since they get linked into shared objects, they
-	# must be compiled with -fPIC.  Don't have time to parse through the build system
-	# at this time.
-#	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
-#	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
-
 	sh Configure -des \
 		-Darchname="${myarch}" \
 		-Dcccdlflags='-fPIC' \
@@ -201,17 +212,31 @@ src_compile() {
 		-Duselargefiles \
 		-Dd_semctl_semun \
 		-Dscriptdir=/usr/bin \
+		-Dman1dir=/usr/share/man/man1 \
+		-Dman3dir=/usr/share/man/man3 \
+		-Dinstallman1dir=${D}/usr/share/man/man1 \
+		-Dinstallman3dir=${D}/usr/share/man/man3 \
+		-Dman1ext='1' \
 		-Dman3ext='3pm' \
+		-Dinc_version_list="$inclist" \
 		-Dcf_by='Gentoo' \
 		-Ud_csh \
 		${myconf} || die "Unable to configure"
+}
 
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die "Unable to make"
+src_compile() {
 
-	if ! hasq maketest $RESTRICT; then
-		use uclibc && export MAKEOPTS="${MAKEOPTS} -j1"
-		emake -i test CCDLFLAGS=
-	fi
+	# would like to bracket this with a test for the existence of a
+	# dotfile, but can't clean it automatically now.
+
+	src_configure
+
+	emake -j1 || die "Unable to make"
+}
+
+src_test() {
+	use uclibc && export MAKEOPTS="${MAKEOPTS} -j1"
+	emake -i test CCDLFLAGS= || die "test failed"
 }
 
 src_install() {
@@ -229,10 +254,23 @@ src_install() {
 	# Fix for "stupid" modules and programs
 	dodir /usr/lib/perl5/site_perl/${PV}/${myarch}${mythreading}
 
-	make DESTDIR="${D}" \
-		INSTALLMAN1DIR="${D}/usr/share/man/man1" \
-		INSTALLMAN3DIR="${D}/usr/share/man/man3" \
-		install || die "Unable to make install"
+	make DESTDIR="${D}" install || die "Unable to make install"
+
+	# 2004.07.28 rac
+
+	# suidperl has had a history of security trouble, and the
+	# perldelta has recommended against using it for a while.  genone
+	# alerted me to the fact that the hardlinks aren't carrying
+	# through the staging directory, and we end up with four copies of
+	# perl, basically.  two normal, two suid.  fix this up here, and
+	# delete suidperl entirely.  if this causes outrage, here's where
+	# to fix.
+
+	# Moved to a use flag enablement - bug 64823 - mcummings
+	#rm ${D}/usr/bin/sperl${PV}
+	#rm ${D}/usr/bin/suidperl
+	rm ${D}/usr/bin/perl
+	ln -s perl${PV} ${D}/usr/bin/perl
 
 	cp -f utils/h2ph utils/h2ph_patched
 	epatch ${FILESDIR}/perl-5.8.0-RC2-special-h2ph-not-failing-on-machine_ansi_header.patch
@@ -262,13 +300,6 @@ EOF
 	fperms 0444 /usr/lib/perl5/${PV}/ExtUtils/xsubpp
 	dosed 's:./miniperl:/usr/bin/perl:' /usr/bin/xsubpp
 	fperms 0755 /usr/bin/xsubpp
-
-	if ! hasq noman $FEATURES; then
-		# executing a binary we just built is not very cross
-		# compiler friendly.
-		./perl installman \
-			--destdir="${D}" --man1ext='1' --man3ext='3'
-	fi
 
 	# This removes ${D} from Config.pm and .packlist
 	for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do
