@@ -1,6 +1,13 @@
 # ChangeLog for net-www/skipstone
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/ChangeLog,v 1.7 2002/04/18 14:14:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/ChangeLog,v 1.8 2002/05/20 02:11:07 seemant Exp $
+
+*skipstone-0.8.2 (19 May 2002)
+
+  19 May 2002; Seemant Kulleen <seemant@gentoo.org> skipstone-0.8.2.ebuild
+  files/digest-skipstone-0.8.2 :
+
+  Finally, a long-awaited upstream release to work with the latest mozilla.
 
 *skipstone-0.8.1-r2 (18 Apr 2002)
 
