@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.5 2004/08/01 20:36:17 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.6 2004/08/17 20:41:50 centic Exp $
+
+*knemo-0.2.2 (17 Aug 2004)
+
+  17 Aug 2004; Dominik Stadler <centic@gentoo.org> +knemo-0.2.2.ebuild:
+  Add version 0.2.2, requested in Bug 60637
 
 *knemo-0.2.0 (01 Aug 2004)
 
