@@ -1,22 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5-r1.ebuild,v 1.4 2005/01/12 18:38:57 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5.1.ebuild,v 1.1 2005/02/20 14:04:27 usata Exp $
 
 inherit eutils flag-o-matic
 
-MY_P="${PN}-rev1650"
-PRIME_SCM="prime_2004-12-13.scm"
+MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="a simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
-#SRC_URI="http://freedesktop.org/Software/UimDownload/${MY_P}.tar.gz"
-SRC_URI="http://freedesktop.org/~tkng/${MY_P}.tar.gz
-	http://prime.sourceforge.jp/src/${PRIME_SCM}"
+SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~ppc64 ~sparc hppa"
+KEYWORDS="x86 ~alpha ~ppc ~amd64 ~ppc64 ~sparc"
 IUSE="gtk nls debug X m17n-lib"
 
 RDEPEND="X? ( virtual/x11 )
@@ -30,20 +27,11 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )"
 
-get_gtk_confdir() {
-	if useq amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && useq x86 ) ; then
-		echo "/etc/gtk-2.0/${CHOST}"
-	else
-		echo "/etc/gtk-2.0"
-	fi
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gtk-query-immodules-gentoo.diff
 	use X || sed -i -e '/^SUBDIRS/s/xim//' Makefile.in || die
-	cp ${DISTDIR}/${PRIME_SCM} scm/prime.scm || die
 }
 
 src_compile() {
@@ -85,9 +73,9 @@ pkg_postinst() {
 	ewarn "Available input methods can be found by running uim-im-switcher."
 	ewarn
 
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
 }
 
 pkg_postrm() {
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
 }
