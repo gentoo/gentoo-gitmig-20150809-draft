@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.74 2002/12/23 04:52:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.75 2002/12/23 05:08:39 azarah Exp $
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Fix bug #12599 (type o in Xsession).
 
 *xfree-4.2.99.3-r1 (23 Dec 2002)
 

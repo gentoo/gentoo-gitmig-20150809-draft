@@ -65,7 +65,7 @@ elif [ -s "$startup" ]; then
 	fi
 # Lastly, xsm as failsafe
 else
-	if [ -r "$resources" ]; then
+	if [ -r "$userresources" ]; then
 		xrdb -load "$userresources"
 	fi
 	exec xsm
