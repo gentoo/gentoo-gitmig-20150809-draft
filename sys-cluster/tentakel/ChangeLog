@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/tentakel
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/tentakel/ChangeLog,v 1.1 2004/11/03 12:57:24 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/tentakel/ChangeLog,v 1.2 2004/11/03 19:13:41 swegener Exp $
+
+  03 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest.
 
 *tentakel-2.1.3 (03 Nov 2004)
 
