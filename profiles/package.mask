@@ -770,11 +770,6 @@ dev-lang/tcl-tk
 <media-video/avifile-0.6
 >=media-video/avi-xmms-1.2.2-r2
 
-#seemant@gentoo.org 19 Mar 2002
-# Masking gkrellm-seti, because it does not compile with the new gkrellm,
-# have contacted the author for a patch
-=x11-misc/gkrellm-seti-0.7.0
-
 
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
