@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/units
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.6 2003/08/15 13:03:48 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.7 2003/11/12 09:37:25 phosphan Exp $
+
+*units-1.80 (12 Nov 2003)
+
+  12 Nov 2003; Patrick Kursawe <phosphan@gentoo.org> units-1.80.ebuild:
+  Version bump.
 
 *units-1.74-r1 (15 Aug 2003)
 
