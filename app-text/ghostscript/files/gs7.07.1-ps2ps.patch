@@ -1,0 +1,11 @@
+--- lib/ps2ps.org	2005-03-16 13:22:27.000000000 +0100
++++ lib/ps2ps	2005-03-16 13:22:44.000000000 +0100
+@@ -6,7 +6,7 @@
+ while true
+ do
+ 	case "$1" in
+-	-*) OPTIONS="$OPTIONS $1" ;;
++	-?*) OPTIONS="$OPTIONS $1" ;;
+ 	*)  break ;;
+ 	esac
+ 	shift

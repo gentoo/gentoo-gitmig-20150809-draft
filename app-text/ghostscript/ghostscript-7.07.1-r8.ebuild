@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.9 2005/03/12 19:26:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.10 2005/03/16 12:28:51 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -80,6 +80,9 @@ src_unpack() {
 
 	# Fix the garbage collector on ia64 and ppc
 	epatch ${FILESDIR}/gs-fix-gc.patch
+
+	# bug #63435
+	epatch ${FILESDIR}/gs${PV}-ps2ps.patch
 
 	# fix dynamic build
 	echo '#include "png.h"' >> src/png_.h

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.99 2005/03/07 20:13:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.100 2005/03/16 12:28:51 lanius Exp $
+
+  16 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  -files/gs7.07.1-ps2epsi.patch, +files/gs7.07.1-ps2ps.patch,
+  ghostscript-7.07.1-r8.ebuild:
+  add ps2ps patch, bug #63435
 
   07 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
   ghostscript-7.07.1-r8.ebuild:
