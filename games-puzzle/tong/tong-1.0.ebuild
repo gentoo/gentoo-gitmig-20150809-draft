@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/tong-1.0.ebuild,v 1.1 2005/02/01 18:59:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/tong-1.0.ebuild,v 1.2 2005/02/22 12:18:39 dholm Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nongnu.org/tong/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="media-libs/libsdl

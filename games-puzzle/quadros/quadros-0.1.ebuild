@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/quadros-0.1.ebuild,v 1.1 2005/01/24 19:10:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/quadros-0.1.ebuild,v 1.2 2005/02/22 12:16:12 dholm Exp $
 
 inherit kde games
 need-qt 3
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/quadros/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 src_unpack() {
