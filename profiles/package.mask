@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2866 2004/05/24 11:34:25 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2867 2004/05/24 12:37:57 wolf31o2 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <wolf31o2@gentoo.org> (24 May 2004)
+# Doing this to keep users from breaking their systems
+>=app-misc/livecd-tools-1.0.3
 
 # <humpback@gentoo.org> (24 May 2004)
 # Beta release just here so people can test new features
