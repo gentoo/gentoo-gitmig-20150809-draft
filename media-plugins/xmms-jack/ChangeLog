@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.18 2004/12/10 01:28:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.19 2004/12/31 09:10:55 corsair Exp $
+
+  31 Dec 2004; Markus Rothe <corsair@gentoo.org> xmms-jack-0.11.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   09 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-jack-0.11.ebuild:
