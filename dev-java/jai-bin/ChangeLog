@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jai-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/ChangeLog,v 1.9 2004/12/29 21:58:15 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/ChangeLog,v 1.10 2005/02/03 19:21:15 luckyduck Exp $
+
+  03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> jai-bin-1.1.2.01.ebuild:
+  added a direct link to the download page of 1.1.2_01 to fix #80572
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
