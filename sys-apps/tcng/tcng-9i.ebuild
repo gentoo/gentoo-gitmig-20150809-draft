@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.6 2004/06/24 22:29:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.7 2004/07/15 02:39:30 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://tcng.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc tcsim"
+IUSE="debug doc tcsim"
 
 # perl because stuff is written in it
 # iproute,linux-atm as the output needs that

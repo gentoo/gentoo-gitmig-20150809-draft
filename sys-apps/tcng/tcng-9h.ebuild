@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.8 2004/06/24 22:29:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.9 2004/07/15 02:39:30 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # block this to phase it out very shortly
 KEYWORDS="-*"
-IUSE=""
+IUSE="doc tcsim"
 DEPEND="doc? ( virtual/ghostscript virtual/tetex media-gfx/transfig )
 	dev-lang/perl
 	virtual/os-headers
