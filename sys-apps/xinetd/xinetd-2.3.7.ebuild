@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.7.ebuild,v 1.6 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.7.ebuild,v 1.7 2002/10/14 11:19:08 aliz Exp $
 
 IUSE="ipv6 tcpd"
 
@@ -18,7 +18,8 @@ SLOT="0"
 LICENSE="BSD"
 SRC_URI="http://www.xinetd.org/${P}.tar.gz"
 
-DEPEND="virtual/glibc tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )"
+DEPEND="virtual/glibc 
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
 RDEPEND="${DEPEND} sys-devel/perl"
 
 src_compile() {
