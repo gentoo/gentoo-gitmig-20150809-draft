@@ -1,4 +1,14 @@
-MD5 70916778bf50ccc406e36e0883a338a4 GnuPG-Interface-0.34.ebuild 623
-MD5 07af97d102834d2d7c801f8801af8b65 ChangeLog 676
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca1c85df2ffa577e88bb336ed9ab8e97 ChangeLog 785
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 92a3260dda538ac454517837b22cd1f0 GnuPG-Interface-0.34.ebuild 636
 MD5 566bf44b35550c47f1551a01e0b21644 files/digest-GnuPG-Interface-0.34 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB8W9ZtG5z4I8BtQoRAgJyAJkBu/3yFAL9TmxvqDtpt2v4s6Gb4QCfVphZ
+q0ds4H2YaBzHQGf+TZUgE+0=
+=cv/8
+-----END PGP SIGNATURE-----
