@@ -1,0 +1,4 @@
+MD5 fa810b12cdf52e64821a573f875ec584 ChangeLog 365
+MD5 a6716fdf308e2ee9c17783693c9a3e1f mdbtools-0.4.ebuild 1480
+MD5 48d861b456922a79e1c3ddf47137ced9 files/digest-mdbtools-0.4 64
+MD5 d056516aee83f6794540f87e15521059 files/mdbtools-0.4-termcap.diff 412
