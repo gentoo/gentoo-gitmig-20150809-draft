@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/mikachan-font-8.9-r1.ebuild,v 1.6 2004/09/29 17:28:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/mikachan-font-8.9-r1.ebuild,v 1.7 2004/10/06 14:19:12 usata Exp $
 
 inherit font
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge.jp/mikachan/5513/${MY_PN}-${PV}.tar.bz2
 	mirror://sourceforge.jp/mikachan/5516/${MY_PN}PS-${PV}.tar.bz2"
 HOMEPAGE="http://mikachan-font.com/"
 
-KEYWORDS="x86 alpha sparc ppc ~amd64 ppc64"
+KEYWORDS="x86 alpha sparc ppc ~amd64 ppc64 ~ppc-macos"
 IUSE=""
 LICENSE="free-noncomm"
 SLOT="0"
