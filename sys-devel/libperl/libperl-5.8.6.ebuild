@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.6 2005/03/08 23:53:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.7 2005/03/14 23:46:11 vapier Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,14 +52,9 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-IUSE="berkdb debug gdbm ithreads uclibc"
+IUSE="berkdb debug gdbm ithreads nocxx uclibc"
 
 inherit eutils flag-o-matic toolchain-funcs
-
-# Perl has problems compiling with -Os in your flags
-use uclibc || replace-flags "-Os" "-O2"
-# This flag makes compiling crash in interesting ways
-filter-flags "-malign-double"
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -73,7 +68,7 @@ HOMEPAGE="http://www.perl.org"
 SLOT="${PERLSLOT}"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~sh"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 # rac 2004.08.06
 
@@ -85,7 +80,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~sh
 
 RESTRICT="maketest"
 
-DEPEND="!uclibc? ( sys-apps/groff )
+DEPEND="!nocxx? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
@@ -147,6 +142,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# Perl has problems compiling with -Os in your flags
+	use uclibc || replace-flags "-Os" "-O2"
+	# This flag makes compiling crash in interesting ways
+	filter-flags "-malign-double"
 
 	export LC_ALL="C"
 	local myconf=""
