@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r5.ebuild,v 1.3 2004/01/19 14:36:25 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r5.ebuild,v 1.4 2004/01/19 22:26:47 rizzo Exp $
 
 inherit flag-o-matic
 
@@ -33,7 +33,6 @@ src_unpack() {
 	unpack ${P}.tar.bz2 || die
 	cd ${S}
 	epatch ${FILESDIR}/gaim-0.75-static-prpls.patch
-	#epatch ${FILESDIR}/gaim-0.76cvs-varargs.diff
 	epatch ${FILESDIR}/gaim-0.76cvs-signals-varargs.diff
 	use cjk && epatch ${FILESDIR}/gaim-0.74_cjk_gtkconv.patch
 }

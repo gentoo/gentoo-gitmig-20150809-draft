@@ -20,7 +20,7 @@ diff -u -u -r1.13 -r1.14
  
 +		/* This is necessary because a va_list may only be
 +		 * evaluated once */
-+		va_copy(tmp, args);
++		G_VA_COPY(tmp, args);
 +
  		if (handler_data->use_vargs)
  		{
@@ -51,7 +51,7 @@ diff -u -u -r1.13 -r1.14
  
  		handler_data = (GaimSignalHandlerData *)l->data;
  
-+		va_copy(tmp,args);
++		G_VA_COPY(tmp,args);
 +
  		if (handler_data->use_vargs)
  		{
