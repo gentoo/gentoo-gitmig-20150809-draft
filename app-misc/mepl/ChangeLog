@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mepl 
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/ChangeLog,v 1.1 2003/03/17 14:26:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/ChangeLog,v 1.2 2003/03/28 14:19:47 phosphan Exp $
+
+  28 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> mepl-0.45.ebuild :
+  marked as stable for x86
 
 *mepl-0.45 (17 Mar 2003)
 
