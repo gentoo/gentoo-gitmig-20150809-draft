@@ -1,7 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r3.ebuild,v 1.2 2002/04/12 17:00:31 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r5.ebuild,v 1.1 2002/06/20 20:26:24 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Midnight Commander"
@@ -16,9 +15,13 @@ DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.72 )
 	slang? ( >=sys-libs/slang-1.4.2 )
 	nls? ( sys-devel/gettext )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	samba? ( >=net-fs/samba-2.2.3a-r1 )
 	X? ( virtual/x11 )"
+#currently broken
+#	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+
+SLOT=""
+LICENSE="GPL-2"
 
 
 src_compile() {                           
@@ -30,8 +33,10 @@ src_compile() {
 	use slang && myconf="${myconf} --with-slang"
 	use slang || myconf="${myconf} --with-included-slang"
 
-	use gnome && myconf="${myconf} --with-gnome"
-	use gnome || myconf="${myconf} --without-gnome"
+#currently broken
+#	use gnome && myconf="${myconf} --with-gnome"
+#	use gnome || myconf="${myconf} --without-gnome"
+	myconf="${myconf} --without-gnome"
 
 	use gpm && myconf="${myconf} --with-gpm-mouse=/usr"
 	use gpm || myconf="${myconf} --without-gpm-mouse"
@@ -41,12 +46,16 @@ src_compile() {
 	use X && myconf="${myconf} --with-tm-x-support"
 	use X || myconf="${myconf} --without-tm-x-support"
 
-	if [ "`use samba`" ] ; then
+	use samba && ( \
 		cd ${S}/vfs
 		cp smbfs.c smbfs.c.orig
-		sed -e "s:/etc/smb\.conf:/etc/smb/smb\.conf:" smbfs.c.orig > smbfs.c
+		sed -e "s:/etc/smb\.conf:/etc/samba/smb\.conf:" smbfs.c.orig > smbfs.c
+		cd samba
+		cp Makefile.in Makefile.in.orig
+		sed -e 's:$(LIBDIR)\(/codepages\):/var/lib/samba\1:' \
+			Makefile.in.orig > Makefile.in
 		myconf="${myconf} --with-samba"
-	fi
+	)
 
 	cd ${S}
 #	export WANT_AUTOMAKE_1_5=1
