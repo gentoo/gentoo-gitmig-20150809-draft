@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/aspell-es
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-es/ChangeLog,v 1.3 2002/08/15 08:42:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-es/ChangeLog,v 1.4 2002/09/03 10:48:03 seemant Exp $
+
+*aspell-0.50.2 (03 Sep 2002)
+
+  03 Sep 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.2.ebuild
+  files/digest-aspell-0.50.2 :
+
+  Bad me forgot the ChangeLog entry for 0.50.1.  This is the bugfix update
+  to that.
 
 *aspell-0.0.0.10 (15 Aug 2002)
 

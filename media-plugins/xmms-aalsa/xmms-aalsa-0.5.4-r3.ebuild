@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-aalsa/xmms-aalsa-0.5.4-r3.ebuild,v 1.1 2002/08/30 08:35:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-aalsa/xmms-aalsa-0.5.4-r3.ebuild,v 1.2 2002/09/03 10:48:03 seemant Exp $
+
+#inherit alsa-check
 
 MY_P=${PN}_${PV}
 S=${WORKDIR}/${MY_P}
@@ -13,6 +15,16 @@ KEYWORDS="x86"
 
 DEPEND=">=media-sound/xmms-1.2.5-r1 \
 	=media-libs/alsa-lib-0.5*"
+
+ALSA_REQD=0.5
+
+pkg_preinst() {
+	einfo "blah"
+}
+
+pkg_setup() {
+	einfo "hello"
+}
 
 src_unpack() {
 	unpack ${A}

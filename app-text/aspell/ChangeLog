@@ -1,6 +1,14 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.11 2002/08/23 12:51:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.12 2002/09/03 10:48:03 seemant Exp $
+
+*aspell-0.50.1 (03 Sep 2002)
+
+  03 Sep 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.1.ebuild
+  files/digest-aspell-0.50.1 :
+
+  Version bump to newest bugfix release which, among other things, allows
+  for user's custom optimisation flags again.
 
 *aspell-0.50 (23 Aug 2002)
 

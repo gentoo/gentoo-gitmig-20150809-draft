@@ -276,19 +276,6 @@ net-www/apache2
 # new package, masked for testing
 net-mail/pinepgp
 
-# <seemant@gentoo.org> (13 Aug 2002)
-# masked for testing.  PLEASE TEST
->=app-text/aspell-0.50_pre20020730
-=app-text/gnome-spell-0.4.1-r3
-app-i18n/aspell-en
-=app-i18n/aspell-es-0.50.1
-=app-i18n/aspell-fr-0.50.1
-=app-i18n/aspell-nl-0.50.1
-=app-text/pspell-0.12.2-r4
-=app-office/abiword-1.0.2-r1
-=app-text/gtkspell-2.0.0-r1
-
-
 # <styx@gentoo.org> (13 Aug 2002)
 # masked for b0rkage, removing them soon
 <dev-util/glimmer-1.2.1-r3

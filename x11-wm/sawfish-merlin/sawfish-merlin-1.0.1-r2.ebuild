@@ -1,5 +1,8 @@
 # Copyright 2001 theLeaf sprl/bvba
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.5 2002/08/14 15:45:39 murphy Exp $
+# Distributed under the terms of the GNU General Public License, v2.
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.6 2002/09/03 10:48:03 seemant Exp $
+
+inherit libtool
 
 MY_P=${P/-merlin/}
 S=${WORKDIR}/${MY_P}
@@ -35,9 +38,7 @@ src_unpack() {
 	cd ${S}/src
 	patch -p1 < ${FILESDIR}/x.c.patch-merlin-1.0.2 || die
 
-	#update libtool for "relink" bug fix
-	libtoolize --copy --force
-	aclocal
+	elibtoolize
 }
 
 
@@ -45,24 +46,21 @@ src_compile() {
 
   	local myconf
 	
-	use esd	\
-		&& myconf="--with-esd"	\
+	use esd \
+		&& myconf="--with-esd" \
 		|| myconf="--without-esd"
 	
-	use gnome	\
-		&& myconf="${myconf} --with-gnome-prefix=/usr --enable-gnome-widgets --enable-capplet"	\
+	use gnome \
+		&& myconf="${myconf} --with-gnome-prefix=/usr --enable-gnome-widgets --enable-capplet" \
 		|| myconf="${myconf} --disable-gnome-widgets --disable-capplet"
 	
 	use nls || myconf="${myconf} --disable-linguas"
 
-	use gtk || use gnome 	\
-		&& myconf="${myconf} --with-gdk-pixbuf"	\
+	use gtk || use gnome \
+		&& myconf="${myconf} --with-gdk-pixbuf" \
 		|| myconf="${myconf} --without-gdk-pixbuf"
 
-	./configure	\
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
+	econf \
 		--libexecdir=/usr/lib \
 		--with-audiofile \
 		${myconf} || die
