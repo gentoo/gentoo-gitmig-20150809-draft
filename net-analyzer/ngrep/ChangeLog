@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.15 2004/07/03 05:29:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.16 2004/07/05 10:03:38 eldad Exp $
+
+*ngrep-1.42 (05 Jul 2004)
+
+  05 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  +files/ngrep-1.42-libpcap-include.patch, +ngrep-1.42.ebuild:
+  Version bump. Patch to autoconf contributed by lo0ol@eyou.com. Closes #52000.
+  added metadata.
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ngrep-1.41.ebuild:
   Stable amd64.

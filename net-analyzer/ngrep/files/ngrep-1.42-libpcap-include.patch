@@ -1,0 +1,255 @@
+diff -Nru ngrep-1.42/config.h.in ngrep-1.42-libpcap-include-patched/config.h.in
+--- ngrep-1.42/config.h.in	2003-12-29 06:25:07.000000000 +0800
++++ ngrep-1.42-libpcap-include-patched/config.h.in	2004-05-23 19:22:46.178903608 +0800
+@@ -18,3 +18,4 @@
+ #define DROPPRIVS_USER         @DROPPRIVS_USER@
+ #define DROPPRIVS_ONLY_ROOT    @DROPPRIVS_ONLY_ROOT@
+ 
++#define USE_PCAP_BPF           @USE_PCAP_BPF@
+diff -Nru ngrep-1.42/configure.in ngrep-1.42-libpcap-include-patched/configure.in
+--- ngrep-1.42/configure.in	2004-01-05 05:03:27.000000000 +0800
++++ ngrep-1.42-libpcap-include-patched/configure.in	2004-05-23 19:22:47.125759664 +0800
+@@ -162,56 +162,6 @@
+ echo 'Configuring Network Grep (ngrep) ...'
+ echo 
+ 
+-dnl
+-dnl Check for DLT_* types that might not have existed in older
+-dnl libpcap's
+-dnl
+-
+-present=""
+-AC_MSG_CHECKING(for DLT_LINUX_SLL in bpf.h)
+-AC_EGREP_CPP(yes,
+-[
+-#include <net/bpf.h>
+-#ifdef DLT_LINUX_SLL
+-yes
+-#endif
+-],
+-[HAVE_DLT_LINUX_SLL="1" && echo yes], [HAVE_DLT_LINUX_SLL="0" && echo no])
+-
+-present=""
+-AC_MSG_CHECKING(for DLT_LOOP in bpf.h)
+-AC_EGREP_CPP(yes,
+-[
+-#include <net/bpf.h>
+-#ifdef DLT_LOOP
+-yes
+-#endif
+-],
+-[HAVE_DLT_LOOP="1" && echo yes], [HAVE_DLT_LOOP="0" && echo no])
+-
+-
+-present=""
+-AC_MSG_CHECKING(for DLT_IEEE802_11 in bpf.h)
+-AC_EGREP_CPP(yes,
+-[
+-#include <net/bpf.h>
+-#ifdef DLT_IEEE802_11
+-yes
+-#endif
+-],
+-[HAVE_DLT_IEEE802_11="1" && echo yes], [HAVE_DLT_IEEE802_11="0" && echo no])
+-
+-
+-present=""
+-AC_MSG_CHECKING(for DLT_RAW in bpf.h)
+-AC_EGREP_CPP(yes,
+-[
+-#include <net/bpf.h>
+-#ifdef DLT_RAW
+-yes
+-#endif
+-],
+-[HAVE_DLT_RAW="1" && echo yes], [HAVE_DLT_RAW="0" && echo no])
+ 
+ 
+ dnl
+@@ -315,26 +265,6 @@
+ EXTRA_DEFINES="$EXTRA_DEFINES -D_BSD_SOURCE=1 -D__FAVOR_BSD=1"
+ 
+ 
+-dnl
+-dnl Now that we're past the OS-specific stuff, which could have
+-dnl modified our USE_* and other defines, define them all now.
+-dnl 
+-
+-AC_DEFINE_UNQUOTED(USE_PCAP_RESTART,    $USE_PCAP_RESTART)
+-
+-AC_DEFINE_UNQUOTED(USE_PCRE,            $USE_PCRE)
+-
+-AC_DEFINE_UNQUOTED(USE_DROPPRIVS,       $USE_DROPPRIVS)
+-AC_DEFINE_UNQUOTED(DROPPRIVS_USER,     "$DROPPRIVS_USER")
+-AC_DEFINE_UNQUOTED(DROPPRIVS_ONLY_ROOT, $DROPPRIVS_ONLY_ROOT)
+-
+-AC_DEFINE_UNQUOTED(HAVE_DUMB_UDPHDR,    $HAVE_DUMB_UDPHDR)
+-
+-AC_DEFINE_UNQUOTED(HAVE_DLT_RAW,        $HAVE_DLT_RAW) 
+-AC_DEFINE_UNQUOTED(HAVE_DLT_IEEE802_11, $HAVE_DLT_IEEE802_11) 
+-AC_DEFINE_UNQUOTED(HAVE_DLT_LOOP,       $HAVE_DLT_LOOP) 
+-AC_DEFINE_UNQUOTED(HAVE_DLT_LINUX_SLL,  $HAVE_DLT_LINUX_SLL) 
+-
+ 
+ dnl
+ dnl Find ourselves some usable PCAP headers.
+@@ -353,22 +283,33 @@
+ [PCAP_DIR=$possible_dirs])
+ 
+ pcap_dir=""
+-for dir in $PCAP_DIR ; do 
+-    if test -d $dir -a -r "$dir/pcap.h" -a \
+-                       -r "$dir/net/bpf.h" ; then 
+-       if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
+-          echo 
+-          echo; echo more than one set found in:
+-          echo  $pcap_dir 
+-          echo  $dir
+-          echo; echo please wipe out all unused pcap installations
+-          exit
+-       else 
+-          pcap_dir="$dir"
+-       fi
++for dir in $PCAP_DIR ; do
++    if test -d $dir ; then
++        if test -r "$dir/pcap.h" ; then
++            if test -r "$dir/net/$bpf_h" -o -r "$dir/pcap-$bpf_h" ; then
++                if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
++                  echo 
++                  echo; echo more than one set found in:
++                  echo  $pcap_dir 
++                  echo  $dir
++                  echo; echo please wipe out all unused pcap installations
++                  exit
++                else 
++                  pcap_dir="$dir"
++                fi
++            fi
++        fi
+     fi
+ done
+ 
++if test -r "$pcap_dir/pcap-bpf.h" ; then
++  bpf_h="pcap-bpf.h"
++  USE_PCAP_BPF="1"&&echo "bpf: use <pcap-bpf.h>"
++else
++  bpf_h="net/bpf.h"
++  USE_PCAP_BPF="0"&&echo "bpf: use <net/bpf.h>"
++fi
++
+ if test -z "$pcap_dir" ; then
+    echo no; echo couldn\'t find a complete set of pcap headers
+    exit
+@@ -384,6 +325,56 @@
+ fi
+ 
+ dnl
++dnl Check for DLT_* types that might not have existed in older
++dnl libpcap's
++dnl
++
++present=""
++AC_MSG_CHECKING(for DLT_LINUX_SLL in $bpf_h)
++AC_EGREP_CPP(yes,
++[
++#include <$bpf_h>
++#ifdef DLT_LINUX_SLL
++yes
++#endif
++],
++[HAVE_DLT_LINUX_SLL="1" && echo yes], [HAVE_DLT_LINUX_SLL="0" && echo no])
++
++present=""
++AC_MSG_CHECKING(for DLT_LOOP in $bpf_h)
++AC_EGREP_CPP(yes,
++[
++#include <$bpf_h>
++#ifdef DLT_LOOP
++yes
++#endif
++],
++[HAVE_DLT_LOOP="1" && echo yes], [HAVE_DLT_LOOP="0" && echo no])
++
++
++present=""
++AC_MSG_CHECKING(for DLT_IEEE802_11 in $bpf_h)
++AC_EGREP_CPP(yes,
++[
++#include <$bpf_h>
++#ifdef DLT_IEEE802_11
++yes
++#endif
++],
++[HAVE_DLT_IEEE802_11="1" && echo yes], [HAVE_DLT_IEEE802_11="0" && echo no])
++
++
++present=""
++AC_MSG_CHECKING(for DLT_RAW in $bpf_h)
++AC_EGREP_CPP(yes,
++[
++#include <$bpf_h>
++#ifdef DLT_RAW
++yes
++#endif
++],
++[HAVE_DLT_RAW="1" && echo yes], [HAVE_DLT_RAW="0" && echo no])
++dnl
+ dnl And the library..
+ dnl
+ 
+@@ -410,6 +401,29 @@
+ AC_DEFINE_UNQUOTED(PCAP_RESTART_FUNC, $pcap_restart_func)
+ 
+ dnl
++dnl Now that we're past the OS-specific stuff, which could have
++dnl modified our USE_* and other defines, define them all now.
++dnl 
++
++AC_DEFINE_UNQUOTED(USE_PCAP_RESTART,    $USE_PCAP_RESTART)
++
++AC_DEFINE_UNQUOTED(USE_PCRE,            $USE_PCRE)
++
++AC_DEFINE_UNQUOTED(USE_DROPPRIVS,       $USE_DROPPRIVS)
++AC_DEFINE_UNQUOTED(DROPPRIVS_USER,     "$DROPPRIVS_USER")
++AC_DEFINE_UNQUOTED(DROPPRIVS_ONLY_ROOT, $DROPPRIVS_ONLY_ROOT)
++
++AC_DEFINE_UNQUOTED(HAVE_DUMB_UDPHDR,    $HAVE_DUMB_UDPHDR)
++
++AC_DEFINE_UNQUOTED(HAVE_DLT_RAW,        $HAVE_DLT_RAW) 
++AC_DEFINE_UNQUOTED(HAVE_DLT_IEEE802_11, $HAVE_DLT_IEEE802_11) 
++AC_DEFINE_UNQUOTED(HAVE_DLT_LOOP,       $HAVE_DLT_LOOP) 
++AC_DEFINE_UNQUOTED(HAVE_DLT_LINUX_SLL,  $HAVE_DLT_LINUX_SLL) 
++AC_DEFINE_UNQUOTED(USE_PCAP_BPF,        $USE_PCAP_BPF) 
++
++
++
++dnl
+ dnl AC_SUBST in the tack-on globals..
+ dnl
+ 
+diff -Nru ngrep-1.42/ngrep.c ngrep-1.42-libpcap-include-patched/ngrep.c
+--- ngrep-1.42/ngrep.c	2004-03-29 10:15:59.000000000 +0800
++++ ngrep-1.42-libpcap-include-patched/ngrep.c	2004-05-23 19:22:47.705671504 +0800
+@@ -55,7 +55,7 @@
+ #include <netinet/ip_icmp.h>
+ 
+ #include <pcap.h>
+-#include <net/bpf.h>
++
+ 
+ #include <stdlib.h>
+ #include <string.h>
+@@ -68,6 +68,13 @@
+ #include "config.h"
+ #endif
+ 
++#if USE_PCAP_BPF
++#include <pcap-bpf.h>
++#else
++#include <net/bpf.h>
++#endif
++
++
+ #if USE_PCRE
+ #include "pcre-3.4/pcre.h"
+ #else
