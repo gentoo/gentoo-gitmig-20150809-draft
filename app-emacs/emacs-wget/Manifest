@@ -1,5 +1,5 @@
-MD5 ab4487220cb406b80110cbdcc3515d4a ChangeLog 766
-MD5 2c04c1a27d2e2ad95a3cee0b7d53036f emacs-wget-0.4.2.ebuild 750
+MD5 b53753f05dee69bdddeebe933d4a26da ChangeLog 868
+MD5 bc11fbad4b05b0917d8dd321875d6921 emacs-wget-0.4.2.ebuild 748
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 ce2ee7bdaf6370ded9a6dc9461df7c86 files/65emacs-wget-gentoo.el 252
 MD5 9a1d38708f862c5907ba70f12e3e65ca files/digest-emacs-wget-0.4.2 67
