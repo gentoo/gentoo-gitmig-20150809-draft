@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.14 2005/02/17 00:16:25 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.15 2005/03/11 04:26:41 st_lim Exp $
+
+*dspam-web-3.4_beta3 (11 Mar 2005)
+
+  11 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> -dspam-web-3.2.4.ebuild,
+  +dspam-web-3.2.7.ebuild, -dspam-web-3.3.11.ebuild,
+  -dspam-web-3.3.8.ebuild, -dspam-web-3.4_beta1.ebuild,
+  -dspam-web-3.4_beta2.ebuild, -dspam-web-3.4_beta3.ebuild,
+  +dspam-web-3.4_rc3.ebuild:
+  Upgraded to 3.2.7 and 3.4_rc3
+  Removed old stuff
 
   17 Feb 2005; Lim Swee Tat <st_lim@gentoo.org> :
   Version bump

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4_beta3.ebuild,v 1.1 2005/02/17 00:16:25 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4_rc3.ebuild,v 1.1 2005/03/11 04:26:41 st_lim Exp $
 
 inherit webapp eutils
 
 MY_PN=${PN/-web/}
-MY_PV=${PV/_beta/.beta.}
+MY_PV=${PV/_rc3/.pr1}
 MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="Web based administration and user controls for dspam"
