@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/jmode
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmode/ChangeLog,v 1.1 2003/09/02 01:56:25 usata Exp $
+
+*jmode-0.6.7 (02 Sep 2003)
+
+  02 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> jmode-0.6.7.ebuild:
+  Initial import.  Thanks to Satoshi Fuktommy
+  <fuktommy@phaeton.cs.uec.ac.jp> and MATSUU Takuto <matsuu@gentoo.org>
+
