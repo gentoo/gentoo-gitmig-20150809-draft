@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/curphoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curphoo/ChangeLog,v 1.2 2002/09/06 15:06:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curphoo/ChangeLog,v 1.3 2002/10/01 06:58:14 bcowan Exp $
+
+*curphoo-0.3.7 (01 Oct 2002)
+
+  01 Oct 2002; Brad Cowan <bcowan@gentoo.org> curphoo-0.3.7.ebuild,
+  ChangeLog, files/digest-curphoo-0.3.7 :
+  
+  Version bump.
 
 *curphoo-0.3.5 (6 Sep 2002)
 
