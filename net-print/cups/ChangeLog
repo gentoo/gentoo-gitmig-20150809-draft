@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.65 2004/03/31 15:57:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.66 2004/04/08 10:49:46 lanius Exp $
+
+  08 Apr 2004; Heinrich Wendel <lanius@gentoo.org>
+  files/cups-1.1.20-str633.patch, cups-1.1.20-r1.ebuild:
+  pdftops doesn't print pdf form elements properly, bug #46529
 
   31 Mar 2004; Tom Gall <tgall@gentoo.org> cups-1.1.20.ebuild:
   remove ppc64, we're not ready

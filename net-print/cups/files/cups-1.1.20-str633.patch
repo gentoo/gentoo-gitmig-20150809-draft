@@ -1,0 +1,11 @@
+--- pdftops/Gfx.cxx	2003-11-21 14:18:07.000000000 -0500
++++ pdftops/Gfx.cxx.jev	2004-04-01 16:58:36.447825968 -0500
+@@ -2490,7 +2490,7 @@
+   if (flagsObj.isInt()) {
+     flags = flagsObj.getInt();
+   } else {
+-    flags = 0;
++    flags = 4;
+   }
+   flagsObj.free();
+ 
