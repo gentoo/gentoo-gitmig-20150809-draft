@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/init-es/init-es-0.2-r1.ebuild,v 1.3 2003/09/08 00:48:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/init-es/init-es-0.2-r1.ebuild,v 1.4 2004/03/14 02:17:45 mr_bones_ Exp $
 
 DESCRIPTION="Traductor de mensajes de inicio (init)"
 HOMEPAGE="http://projects.frikis.org/"
