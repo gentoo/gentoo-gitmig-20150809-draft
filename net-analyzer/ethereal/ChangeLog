@@ -1,9 +1,12 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.19 2003/01/08 19:53:06 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.20 2003/01/11 14:32:40 weeve Exp $
 
 *ethereal-0.9.8-r1 (29 Dec 2002)
     
+  11 Jan 2003: Jason Wever <weeve@gentoo.org ethereal-0.9.8-r1.ebuild:
+  Added ~sparc to keywords.
+
   08 Jan 2003; Brad Cowan <bcowan@gentoo.org>:
   Removed gtk+-2 support again as it is broken with our now marked stable version.
   Fixes bug# 12926.
