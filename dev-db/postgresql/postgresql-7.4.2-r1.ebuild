@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.8 2004/06/29 17:28:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.9 2004/07/05 22:20:02 mholzer Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
-RESTRICT="nomirror"
 P_HIERPG="hier-Pg7.4-0.5.1"
 SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 	mirror://postgresql/source/v${PV}/${PN}-opt-${PV}.tar.bz2
