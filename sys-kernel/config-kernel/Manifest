@@ -1,4 +1,6 @@
 MD5 e8016fca07f777eab5d0d17825f05c6e config-kernel-0.2.7.ebuild 709
-MD5 ca605406a4417a4091c09d5957d05267 ChangeLog 457
+MD5 05e049638d098e351297f9a4e1cbb26a ChangeLog 640
+MD5 63da25763fcb98e1897ac1eedcab8d79 config-kernel-0.2.8.ebuild 709
 MD5 a148ca82393e92d07a3fd740ad28d825 metadata.xml 393
 MD5 adcf1ea7d29a6a72a470b9b1c4211b39 files/digest-config-kernel-0.2.7 70
+MD5 306d3cbc31ef91617c711da2d89e0c8c files/digest-config-kernel-0.2.8 70
