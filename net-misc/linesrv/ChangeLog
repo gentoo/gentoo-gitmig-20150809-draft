@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/linesrv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/ChangeLog,v 1.8 2004/06/24 23:53:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/ChangeLog,v 1.9 2004/07/01 21:24:26 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> linesrv-2.1.6-r1.ebuild,
+  linesrv-2.1.8.ebuild:
+  change virtual/glibc to virtual/libc
 
 *linesrv-2.1.8 (01 Apr 2004)
 

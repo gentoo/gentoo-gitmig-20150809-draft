@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.8.ebuild,v 1.2 2004/06/24 23:53:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.8.ebuild,v 1.3 2004/07/01 21:24:26 squinky86 Exp $
 
 IUSE="pam"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/linecontrol/${P}.src.tar.bz2"
 RESTRICT="nomirror"
 #windows client: http://people.ee.ethz.ch/~sfuchs/LineControl/down/wlc-122.zip
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )"
 LICENSE="GPL-2"
 SLOT="0"

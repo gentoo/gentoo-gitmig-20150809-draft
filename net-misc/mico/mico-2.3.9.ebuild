@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.9.ebuild,v 1.5 2004/06/24 23:55:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.9.ebuild,v 1.6 2004/07/01 21:28:39 squinky86 Exp $
 
 IUSE="ssl tcltk"
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ~alpha ~amd64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/flex
 	sys-devel/bison
 	ssl? ( dev-libs/openssl )

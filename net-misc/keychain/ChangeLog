@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.27 2004/07/01 04:17:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.28 2004/07/01 21:23:41 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> keychain-2.3.2.ebuild,
+  keychain-2.3.3.ebuild:
+  change virtual/glibc to virtual/libc
 
 *keychain-2.3.3 (01 Jul 2004)
 

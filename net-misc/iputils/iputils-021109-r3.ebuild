@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.5 2004/06/28 04:45:25 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.6 2004/07/01 21:18:28 squinky86 Exp $
 
 inherit flag-o-matic gcc gnuconfig eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 ppc64 s390"
 IUSE="static ipv6 uclibc" #doc
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/os-headers
 	dev-util/yacc
 	sys-devel/flex
@@ -25,7 +25,7 @@ DEPEND="virtual/glibc
 #		dev-perl/SGMLSpm
 #		app-text/docbook-sgml-dtd
 #		app-text/docbook-sgml-utils )
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}
 
