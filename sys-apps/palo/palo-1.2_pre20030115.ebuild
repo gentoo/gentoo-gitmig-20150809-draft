@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/palo-1.2_pre20030115.ebuild,v 1.3 2003/02/09 01:31:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/palo-1.2_pre20030115.ebuild,v 1.4 2003/02/19 20:23:39 gmsoft Exp $
 
 DESCRIPTION="PALO : PArisc Linux Loader"
 HOMEPAGE="http://parisc-linux.org/"
@@ -24,6 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	cp ${FILESDIR}/palo.conf ${D}/etc/
+	einstall || die
+	install -o root -g root -m644 -D  ${FILESDIR}/palo.conf ${D}/etc/palo.conf
 }
