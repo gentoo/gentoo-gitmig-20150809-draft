@@ -1,9 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-0.ebuild,v 1.1 2003/12/12 05:46:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-0.ebuild,v 1.2 2003/12/31 03:56:43 vapier Exp $
 
 DESCRIPTION="Meta package for all fortune-mod packages"
 
+LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
 
 RDEPEND="games-misc/fortune-mod
