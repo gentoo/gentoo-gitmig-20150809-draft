@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.15 2003/08/05 05:48:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.16 2003/09/02 06:57:15 phosphan Exp $
+
+  02 Sep 2003; Patrick Kursawe <phosphan@gentoo.org>
+  nessus-plugins-2.0.7.ebuild:
+  Changing DEPEND from = to >= because of bug 27544
 
   05 Aug 2003; Patrick Kursawe <phosphan@gentoo.org>
   nessus-plugins-2.0.6a.ebuild:
