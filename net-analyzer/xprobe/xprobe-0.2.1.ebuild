@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.2.1.ebuild,v 1.1 2004/12/27 20:45:58 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.2.1.ebuild,v 1.2 2005/01/01 15:37:46 weeve Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="Active OS fingerprinting tool - this is Xprobe2"
 SRC_URI="mirror://sourceforge/${PN}/${PN}2-${PV}.tar.gz"
 HOMEPAGE="http://www.sys-security.com/html/projects/X.html"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/xprobe
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.7 2004/12/27 20:45:58 radek Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.8 2005/01/01 15:37:46 weeve Exp $
+
+*xprobe-0.2.1 (01 Jan 2005)
+
+  01 Jan 2005; Jason Wever <weeve@gentoo.org> xprobe-0.2.1.ebuild:
+  Added ~sparc keyword as it went missing in the version bump.
 
   27 Dec 2004; Radoslaw Stachowiak <radek@gentoo.org> :
   New version of xprobe xprobe, so called xprobe2, due to xprobe1 being
