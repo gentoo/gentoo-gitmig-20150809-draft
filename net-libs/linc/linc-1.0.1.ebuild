@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-1.0.1.ebuild,v 1.5 2003/04/09 02:58:04 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-1.0.1.ebuild,v 1.6 2003/05/30 00:55:55 lu_zero Exp $
 
 IUSE="doc ssl"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 RDEPEND=">=dev-libs/glib-2
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
