@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-1.1.ebuild,v 1.1 2002/12/05 14:07:37 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-1.1.ebuild,v 1.2 2003/02/13 11:34:02 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION=" Epydoc is a tool for generating API documentation for Python modules, based on their docstrings."

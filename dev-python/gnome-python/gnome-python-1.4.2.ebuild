@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.8 2002/12/15 10:44:18 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.9 2003/02/13 11:34:22 vapier Exp $
 
 IUSE="gnome opengl"
 

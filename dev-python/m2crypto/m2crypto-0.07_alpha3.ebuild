@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.07_alpha3.ebuild,v 1.2 2003/01/08 05:24:19 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.07_alpha3.ebuild,v 1.3 2003/02/13 11:35:05 vapier Exp $
 
 DESCRIPTION="A python wrapper for the OpenSSL crypto library"
 HOMEPAGE="http://www.post1.com/home/ngps/m2/"

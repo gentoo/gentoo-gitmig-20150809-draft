@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/pychecker-0.8.3.ebuild,v 1.12 2002/12/15 10:44:18 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/pychecker-0.8.3.ebuild,v 1.13 2003/02/13 11:36:50 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PyChecker is a tool for finding common bugs in python source code."

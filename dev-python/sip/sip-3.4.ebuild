@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.4.ebuild,v 1.7 2002/12/15 10:44:19 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.4.ebuild,v 1.8 2003/02/13 11:39:23 vapier Exp $
 
 MY_P="${PN}-x11-gpl-${PV}"
 DESCRIPTION="SIP is a tool for generating bindings for C++ classes so that they can be used by Python."

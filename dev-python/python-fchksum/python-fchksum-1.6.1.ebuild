@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.6.1.ebuild,v 1.14 2003/02/07 20:37:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.6.1.ebuild,v 1.15 2003/02/13 11:38:41 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="fchksum is a Python module to find the checksum of files."

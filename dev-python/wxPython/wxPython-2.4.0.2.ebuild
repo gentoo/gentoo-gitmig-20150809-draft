@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.2.ebuild,v 1.1 2003/02/01 19:47:10 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.2.ebuild,v 1.2 2003/02/13 11:40:05 vapier Exp $
 
 MY_P="${P/-/Src-}"
 S="${WORKDIR}/${MY_P}/${PN}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/pythoncard-0.6.9.ebuild,v 1.1 2002/12/11 23:55:41 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/pythoncard-0.6.9.ebuild,v 1.2 2003/02/13 11:38:58 vapier Exp $
 
 DESCRIPTION="Cross-platform GUI construction kit for python"
 SRC_URI="mirror://sourceforge/pythoncard/PythonCardPrototype-${PV}.tar.gz"
