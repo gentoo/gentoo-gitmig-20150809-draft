@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Tagset
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.16 2004/07/22 02:32:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.17 2004/11/23 00:11:00 swegener Exp $
+
+  23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed digest.
 
   21 Jul 2004; Tom Gall <tgall@gentoo.org> HTML-Tagset-3.03-r2.ebuild:
   stable on ppc64, bug #57585
