@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r1.ebuild,v 1.1 2005/01/24 18:39:42 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r1.ebuild,v 1.2 2005/01/26 01:36:12 humpback Exp $
 
 inherit eutils
 
@@ -207,7 +207,7 @@ src_compile() {
 src_install() {
 	dodoc README TODO
 	make INSTALL_ROOT="${D}" install
-	#this away the docs will also be installed in the standard gentoo dir
+	#this way the docs will also be installed in the standard gentoo dir
 	for i in roster system emoticons; do
 		newdoc ${S}/iconsets/${i}/README README.${i}
 	done;
