@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r1.ebuild,v 1.6 2004/12/08 01:54:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r1.ebuild,v 1.7 2005/01/03 00:26:02 ciaranm Exp $
 
 inherit eutils gnuconfig
 

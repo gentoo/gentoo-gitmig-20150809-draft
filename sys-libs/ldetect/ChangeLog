@@ -1,11 +1,14 @@
 # ChangeLog for sys-libs/ldetect
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ChangeLog,v 1.8 2004/08/24 04:19:03 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ChangeLog,v 1.9 2005/01/03 00:18:48 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> ldetect-0.4.7.ebuild:
   Added missing IUSE.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ldetect-0.4.7.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ldetect-0.4.7.ebuild:
   Stable on alpha.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/libavc1394-0.3.1.ebuild,v 1.10 2004/10/02 15:42:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/libavc1394-0.3.1.ebuild,v 1.11 2005/01/03 00:20:23 ciaranm Exp $
 
 DESCRIPTION="libavc1394 is a programming interface for the 1394 Trade Association AV/C (Audio/Video Control) Digital Interface Command Set."
 HOMEPAGE="http://sourceforge.net/projects/libavc1394/"

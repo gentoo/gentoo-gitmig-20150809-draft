@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.40 2004/11/24 15:25:27 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.41 2005/01/03 00:26:02 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Nov 2004; Mike Frysinger <vapier@gentoo.org> readline-5.0-r1.ebuild:
   Force ncurses linking #71420.
@@ -50,7 +53,7 @@
   readline-4.1-r5.ebuild, readline-4.2a-r1.ebuild, readline-4.2a-r2.ebuild:
   virtual/glibc -> virtual/libc
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> readline-4.3-r5.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> readline-4.3-r5.ebuild:
   Stable on alpha.
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> readline-4.3-r5.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.39 2004/11/04 00:27:54 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.40 2005/01/03 00:30:33 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *zlib-1.2.2 (03 Nov 2004)
 
@@ -26,7 +29,7 @@
   still use lib when CONF_LIBDIR is set, but the current version of portage
   doesnt have CONF_LIBDIR support
 
-  27 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> zlib-1.2.1-r3.ebuild:
+  27 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> zlib-1.2.1-r3.ebuild:
   Stable on alpha, bug 61749.
 
   26 Aug 2004; Tom Gall <tgall@gentoo.org> zlib-1.2.1-r3.ebuild:
@@ -68,7 +71,7 @@
   28 Jun 2004; Brandon Hale <tseng@gentoo.org> zlib-1.2.1-r2.ebuild:
   Stable on x86.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> zlib-1.2.1-r2.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> zlib-1.2.1-r2.ebuild:
   Stable on alpha.
 
 *zlib-1.2.1-r2 (23 Dec 2003)

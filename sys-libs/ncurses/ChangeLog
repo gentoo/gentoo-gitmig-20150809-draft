@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.87 2004/12/07 14:11:07 solar Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.88 2005/01/03 00:24:18 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   07 Dec 2004; <solar@gentoo.org> ncurses-5.4-r5.ebuild:
   - Stopped abusing uclibc for cxx handling, the ebuild now uses nocxx bug
@@ -15,7 +18,7 @@
   ncurses-5.4-r5.ebuild:
   PPC stable
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> ncurses-5.4-r5.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ncurses-5.4-r5.ebuild:
   Stable on alpha.
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> ncurses-5.4-r5.ebuild:

@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/nss-mysql
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/ChangeLog,v 1.12 2004/10/03 21:02:08 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/ChangeLog,v 1.13 2005/01/03 00:25:23 ciaranm Exp $
 
-  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> nss-mysql-0.43-r1.ebuild:
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  03 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> nss-mysql-0.43-r1.ebuild:
   Stable on alpha.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
