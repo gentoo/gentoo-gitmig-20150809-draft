@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/juk
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/juk/ChangeLog,v 1.5 2003/09/20 13:10:52 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/juk/ChangeLog,v 1.6 2003/10/31 18:15:20 caleb Exp $
+
+  31 Oct 2003; Caleb Tennis <caleb@gentoo.org> juk-1.0_p1.ebuild,
+  juk-2.0_beta1-r1.ebuild, juk-2.0_beta1.ebuild:
+  Remove stale versions, and set the SRC_URI to the proper file
+  (should be 1.95a instead of 1.95).  Fixes bug #30325 without a patch.
 
 *juk-2.0_beta1-r1 (20 Sep 2003)
 
