@@ -49,9 +49,22 @@ do
   ln -s initrd/$i $i
 done
 
+echo "Creating devices"
 cd ${ROOT}/dev
 ln -s ../initrd/pts pts
+ln -sf ../initrd/dev/initctl .
+ln -sf ../initrd/dev/tty1 .
+ln -sf ../initrd/dev/tty2 .
 
+for i in console fd0 fd0u1440 hd[abcd]* kmem loop[012] \
+         mem null ptmx ram[01234] scd* sd[abcd]* ttyp[01] ttys[01] \
+	 urandom zero
+do
+    cp -af /dev/$i .
+done
+
+ln -s ram0 ram
+mknod initrd b 1 250
 
 echo "Creating /mnt dirs"
 cd ${ROOT}/mnt
