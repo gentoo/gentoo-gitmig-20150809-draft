@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.9 2004/07/25 17:42:18 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.10 2004/11/15 18:24:00 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -45,5 +45,3 @@
 
 *virtual/bootloader
 -*virtual/dev-manager
-# masking gcc-3.4
-<sys-devel/gcc-3.4
