@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bubblemon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.10 2004/06/24 22:14:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.11 2004/06/28 19:50:53 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> bubblemon-1.4-r1.ebuild,
+  bubblemon-1.41.ebuild:
+  glibc -> libc, add sed-4 dep
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> bubblemon-1.41.ebuild:
   Added IUSE=
