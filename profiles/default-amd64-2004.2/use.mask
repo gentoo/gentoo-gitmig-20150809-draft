@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.4 2004/07/01 00:22:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.5 2004/07/22 10:49:47 kugelfang Exp $
 
 # WON'T BUILD - SECTION
 
@@ -29,6 +29,11 @@ ifc
 # 2004/06/22 - Taken from 2004.0 profile
 # masked
 3dfx
+
+# 2004/07/22 - Danny van Dyk <kugelfang@gentoo.org>
+# libcaca part of libSDL causes breakage due to missing shared object.
+# BUG #53857
+libcaca
 
 # NOT NECESSARY - SECTION
 
