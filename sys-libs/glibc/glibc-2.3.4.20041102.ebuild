@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.15 2004/12/13 10:10:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.16 2004/12/23 20:16:59 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -50,7 +50,9 @@ LICENSE="LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}-2.2" \
 	|| SLOT="2.2"
-KEYWORDS="~amd64 ppc64 -hppa ~ia64 ~ppc ~x86 ~mips"
+#-sparc: Compiled fine with 3.4.1-r1, but tar would consistantly bus error when untarring the
+#        samba-1.0.9 tarball.
+KEYWORDS="~amd64 ppc64 -hppa ~ia64 ~ppc ~x86 ~mips -sparc"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -128,30 +130,39 @@ setup_flags() {
 			# Setup the CHOST properly to insure "sparcv9"
 			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
 			if [ "${CHOST}" = "sparc-unknown-linux-gnu" ]; then
-				export CHOST="sparcv9-unknown-linux-gnu"
-				export CTARGET="sparcv9-unknown-linux-gnu"
+				CTARGET="sparcv9-unknown-linux-gnu"
+				CHOST="${CTARGET}"
 			fi
 		fi
 
-		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
+		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then        
+			CFLAGS_ABI="$(get_abi_var CFLAGS)"
+
 			# glibc isn't too smart about guessing our flags.  It
-			# also will default to -xarch=v9, but assembly in glibc
-			# needs to be v9a or greater...
+			# will default to -xarch=v9, but assembly in sparc64 glibc
+			# requires v9a or greater...                 
 			if is-flag "-mcpu=ultrasparc3"; then
-				append-flags "-Wa,-xarch=v9b"
-				export ASFLAGS="${ASFLAGS} -Wa,-xarch=v9b"
-
 				# Change CHOST to include us3 assembly
-				export CHOST="sparc64b-unknown-linux-gnu"
+				if [ "${ABI}" = "sparc32" ]; then         
+					CTARGET="sparcv9b-unknown-linux-gnu"
+				else
+					CTARGET="sparc64b-unknown-linux-gnu"
+					CFLAGS_ABI="${CFLAGS_ABI} -Wa,-xarch=v9b"
+				fi
 			else
-				append-flags "-Wa,-xarch=v9a"
-				export ASFLAGS="${ASFLAGS} -Wa,-xarch=v9a"
+                                if [ "${ABI}" = "sparc32" ]; then
+					CTARGET="sparcv9-unknown-linux-gnu"
+				else
+					CTARGET="sparc64-unknown-linux-gnu"
+					CFLAGS_ABI="${CFLAGS_ABI} -Wa,-xarch=v9a"
+				fi
 			fi
 
-			# Get rid of flags known to fail
-			replace-flags "-mvis" ""
+			CHOST="${CTARGET}"                
+			filter-flags -mvis -m32 -m64 -Wa,-xarch -Wa,-A
+			export CC="${ORIG_CC} ${CFLAGS_ABI}"
 		fi
-	fi
+ 	fi
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
 		# broken in 3.4.x
@@ -578,6 +589,17 @@ src_unpack() {
 	use arm		&& do_arch_arm_patches
 	use hppa	&& do_arch_hppa_patches
 	use ia64	&& do_arch_ia64_patches
+	if [ "${PROFILE_ARCH}" = "sparc64-multilib" -a -z "${ABI}" ]; then
+		export ORIG_CC="$(tc-getCC)"
+		for ABI in ${MULTILIB_ABIS}; do
+			export ABI
+			einfo "Compiling ${ABI} glibc"
+			src_compile && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
+		done
+		unset ABI
+		return 0
+	fi
+
 	use mips	&& do_arch_mips_patches
 	use ppc		&& do_arch_ppc_patches
 	use ppc64	&& do_arch_ppc64_patches
@@ -678,6 +700,16 @@ src_compile() {
 }
 
 src_install() {
+	if [ "${PROFILE_ARCH}" = "sparc64-multilib" -a -z "${ABI}" ]; then
+		for ABI in ${MULTILIB_ABIS}; do
+			export ABI
+			mv ${WORKDIR}/build.${ABI} ${WORKDIR}/build
+			src_install && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
+		done
+		unset ABI
+		return 0
+	fi
+
 	setup_flags
 
 	# These should not be set, else the
