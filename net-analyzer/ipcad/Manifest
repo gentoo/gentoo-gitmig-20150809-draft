@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b9c09b0886633b98b016c97aab549766 ChangeLog 824
 MD5 b4ed9f11e0cd83a4fe74ada5c9874977 ipcad-3.6.2.ebuild 1189
-MD5 e2c85f9ce6c4bb14a13edd0df5381ee8 ipcad-3.6.4.ebuild 1220
-MD5 57fb4babf43e2587555d690a5d073433 ChangeLog 745
 MD5 1194f6f46d7b10dcd54903168f1ac522 metadata.xml 221
-MD5 148698890032310e527de90805367134 files/ipcad.init 514
+MD5 af94c1e48840c32aed74dde0b1e3152d ipcad-3.6.4.ebuild 1221
 MD5 3cffc04840194f2a426970366bce31c6 files/digest-ipcad-3.6.2 63
-MD5 4895760098b999dcb3abdd30152dc6ed files/digest-ipcad-3.6.4 63
 MD5 ccd08900a3bd7420d99b2c4acff3b457 files/ipcad.conf.d 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBQxIvcAgAdbxYsnERAo6JAJ4rd4LuKLuT+JtB17P+EohvIH0omACgm/Nw
-hgga+ssEGmvO5+/nGLVKDOQ=
-=qQv+
------END PGP SIGNATURE-----
+MD5 148698890032310e527de90805367134 files/ipcad.init 514
+MD5 4895760098b999dcb3abdd30152dc6ed files/digest-ipcad-3.6.4 63
