@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-1.0-r1.ebuild,v 1.1 2004/12/08 13:56:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-1.0-r1.ebuild,v 1.2 2004/12/08 14:35:39 eradicator Exp $
 
 DESCRIPTION="Sound libraries for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
@@ -19,4 +19,6 @@ S=${WORKDIR}
 src_install() {
 	cp -aRpvf ${WORKDIR}/* ${D}/
 	dobin ${FILESDIR}/aoss32
+	# This was just a backwards compat lib, but it breaks stuff now
+	rm ${D}/emul/linux/x86/usr/lib/libasound.so.1
 }
