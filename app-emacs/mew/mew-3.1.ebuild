@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-3.1.ebuild,v 1.11 2004/06/24 22:18:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-3.1.ebuild,v 1.12 2004/06/30 02:41:21 agriffis Exp $
 
 inherit elisp
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.mew.org/pub/Mew/release/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="virtual/emacs"
 
@@ -48,4 +49,3 @@ pkg_postinst() {
 pkg_postrm() {
 	elisp-site-regen
 }
-
