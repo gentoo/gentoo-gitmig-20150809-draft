@@ -1,3 +1,5 @@
-MD5 376b83d813fca2963bfefdd666e5b009 cl-zebu-3.5.5.ebuild 685
+MD5 da5de342354888278e99fcea7618004d cl-zebu-3.5.5.ebuild 1142
+MD5 f17521fd622dd2c463d2a25516bcd385 ChangeLog 449
 MD5 7f9d39dc3bb7911772366096336332e3 metadata.xml 304
 MD5 fec076f0b90e4802a051d5f378a77649 files/digest-cl-zebu-3.5.5 64
+MD5 7aa7dd37abe42ef69ea5c5d9bdf7e404 files/3.5.5-zebu-compiler-gentoo.patch 3962
