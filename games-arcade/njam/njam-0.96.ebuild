@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-0.96.ebuild,v 1.4 2004/06/24 22:09:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-0.96.ebuild,v 1.5 2004/07/14 14:23:36 agriffis Exp $
 
 inherit games eutils
 
@@ -14,6 +14,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=media-libs/sdl-mixer-1.2.5
 	>=media-libs/sdl-image-1.2.2

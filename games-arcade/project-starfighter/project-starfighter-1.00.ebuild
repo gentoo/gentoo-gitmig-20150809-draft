@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.00.ebuild,v 1.4 2004/07/01 03:08:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.00.ebuild,v 1.5 2004/07/14 14:25:11 agriffis Exp $
 
 inherit games
 
 DESCRIPTION="A space themed shooter"
 HOMEPAGE="http://www.parallelrealities.co.uk/starfighter.php"
 KEYWORDS="x86"
+IUSE=""
 LICENSE="as-is"
 
 S="${WORKDIR}/Starfighter"
