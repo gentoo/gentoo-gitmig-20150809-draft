@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.29 2004/06/24 22:08:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.30 2004/07/19 13:44:28 aliz Exp $
+
+  19 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9008.490.ebuild:
+  Unmasked on x86.
 
   19 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> dnetc-2.9008.490.ebuild:
   Sparc stable, support for ogr-p2
