@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.43 2004/03/18 22:02:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.44 2004/04/09 23:10:15 liquidx Exp $
+
+  10 Apr 2004; Alastair Tse <liquidx@gentoo.org> pygtk-2.0.0-r1.ebuild,
+  pygtk-2.2.0.ebuild:
+  restrict parallel builds (#45776)
 
   16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> pygtk-2.0.0-r1.ebuild:
   Added ~mips keyword.
