@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.52.ebuild,v 1.4 2004/04/03 23:32:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.52.ebuild,v 1.5 2004/04/05 14:00:09 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -496,6 +496,12 @@ pkg_postinst() {
 	einfo " Also, for individual components, you can use any of:"
 	einfo
 	einfo "   xoocalc, xoodraw, xooimpress, xoomath, xooweb or xoowriter"
+	einfo
+	einfo "******************************************************************"
+	einfo
+	einfo "******************************************************************"
+	einfo " If you are upgrading from an older Ximian-OpenOffice.org"
+	einfo " you will have to redo your settings."
 	einfo
 	einfo "******************************************************************"
 }
