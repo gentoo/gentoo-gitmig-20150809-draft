@@ -22,7 +22,7 @@ else
 	olduse="$USE"
 	unset=no
 fi
-export USE="build bootstrap"
+export USE="build"
 export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
 cd /usr/portage
@@ -36,7 +36,8 @@ then
 else
 	export USE="$olduse"
 fi
-export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
+# This line should no longer be required
+#export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
 emerge $myGLIBC || exit
 emerge $myGETTEXT || exit
 emerge $myBINUTILS || exit
