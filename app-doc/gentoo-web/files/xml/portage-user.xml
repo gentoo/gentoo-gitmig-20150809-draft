@@ -35,12 +35,12 @@ directory:
 <p>Periodically, you'll want to run this next form of the rsync command, which will delete
 any old ebuild scripts:</p>
 
-<warn>Please note that <c>emerge rsync clean</c> will delete any of your
+<warn>Please note that <c>emerge --clean rsync </c> will delete any of your
 personal changes or additions to the <path>/usr/portage tree</path>, so use
 this command with caution.</warn>
 
 <pre>
-# <i>emerge rsync clean</i>
+# <i>emerge --clean rsync </i>
 </pre>
 
 <p>If you are making regular changes to your <path>/usr/portage</path> tree,
