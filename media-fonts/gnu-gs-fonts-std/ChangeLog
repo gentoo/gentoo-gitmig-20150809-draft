@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/gnu-gs-fonts-std
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-std/ChangeLog,v 1.5 2004/06/24 22:28:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-std/ChangeLog,v 1.6 2004/09/29 09:59:50 lanius Exp $
+
+*gnu-gs-fonts-std-8.11 (29 Sep 2004)
+
+  29 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  +gnu-gs-fonts-std-8.11.ebuild:
+  version bump and mark stable because it's needed in ghostscript and there are
+  only fonts
 
   03 Feb 2004; <augustus@gentoo.org> gnu-gs-fonts-std-6.0.ebuild:
   Added ~amd64 keyword.
