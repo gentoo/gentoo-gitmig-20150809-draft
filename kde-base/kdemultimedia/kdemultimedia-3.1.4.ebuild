@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.4.ebuild,v 1.1 2003/09/17 02:18:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.4.ebuild,v 1.2 2003/09/17 03:13:16 caleb Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas esd motif slang tcltk oggvorbis cdr"
@@ -28,6 +28,7 @@ RDEPEND="$RDEPEND
 	>=app-cdr/cdrdao-1.1.5 )"
 
 replace-flags "-O3" "-O2"
+filter-flags "-fno-default-inline"
 
 myaudio="--enable-audio=oss"
 myinterface="--enable-interface=xaw,ncurses"
