@@ -1,8 +1,18 @@
-MD5 4b55127f1cf2267ca0746ae24ef83834 gtm-0.4.11-r2.ebuild 1576
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43c502396b3b80fdb4d11d182bc8bd51 gtm-0.4.11-r2.ebuild 1615
 MD5 b310817689db9c8d5fdc39af7d0b67cd gtm-0.4.12.ebuild 1438
 MD5 95dd4d3df4660256d51085cf6b3c4652 gtm-0.4.11.ebuild 1494
-MD5 4ec9df3395ada2b4f7637be37e3db347 ChangeLog 1645
+MD5 635f8834aa0320db5b15da70dc4fb6ed ChangeLog 1737
 MD5 2dd8ed956bb1eac7203e6506674db146 files/wget-log.c.patch 910
 MD5 4659d59d9d2514161c37eac39675c7de files/digest-gtm-0.4.11-r2 62
 MD5 4659d59d9d2514161c37eac39675c7de files/digest-gtm-0.4.11 62
 MD5 6f6c2e437c995a0a947df5ca097ca8a4 files/digest-gtm-0.4.12 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXeUAI7fK2cqeyXkRAo/RAKCPc3RKOQTm7+Mv5c1ina9yResergCfWJjB
+LEdSJ2LGcuNEcQiS4taR2nI=
+=9FDD
+-----END PGP SIGNATURE-----

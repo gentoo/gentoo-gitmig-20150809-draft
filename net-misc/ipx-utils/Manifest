@@ -1,6 +1,16 @@
-MD5 0e85056c49817e263412c177e6e7a1f4 ChangeLog 671
-MD5 56f933bfcc3645c31c237cb4c5636305 ipx-utils-1.1.ebuild 997
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f242669fc717a16637600fcfc6b14dc4 ipx-utils-1.1.ebuild 1027
+MD5 2814ab237f8592b585490971998ff081 ChangeLog 763
+MD5 09ac2581b478d6ca4fb33002ecd34a2a files/ipx.confd 663
 MD5 78845a00cf7ab6edd46bd2e705fd55ea files/digest-ipx-utils-1.1 57
 MD5 639484e03a0f107b4dbdfedea00ca006 files/ipx-utils-1.1-gentoo.diff 830
-MD5 09ac2581b478d6ca4fb33002ecd34a2a files/ipx.confd 663
 MD5 12d5c69423f199bf025dfc6be9233d7a files/ipx.init 950
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXeVZI7fK2cqeyXkRAuJnAJ9pdDD22zXSUwwWPLwH4u8Cj69ibwCgxdVR
+8NrUd8jgf3ORiq6V1D+QpOY=
+=MG9V
+-----END PGP SIGNATURE-----
