@@ -56,8 +56,13 @@ src_unpack() {
 	chmod -R a+r-w+X,u+w *
 
 	cd ${S}
-	# Tiny patch for symbol generation
-	patch -p1 < ${FILESDIR}/gentoo-sources-2.4.19-r9-quickfix.patch || die
+	# Quick Fixes
+	patch -p1 < ${FILESDIR}/gentoo-sources-2.4.19-r9-quickfix.patch \
+		|| die "Ksyms patch failed"
+	# Crypt only quickfix
+	[ `use crypt` ] && \
+		( patch -p1<${FILESDIR}/gentoo-sources-2.4.19-r9-crypt.patch \
+		  || die "crypt patch failed" )
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
 	mv Makefile Makefile.orig
