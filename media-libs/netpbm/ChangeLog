@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.14 2003/02/14 17:14:39 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.15 2003/02/23 02:53:29 agriffis Exp $
+
+*netpbm-10.11.5 (13 Feb 2003)
+
+  22 Feb 2003; Aron Griffis <agriffis@gentoo.org> netpbm-10.11.5.ebuild :
+  Add ~alpha to KEYWORDS
 
   14 Feb 2003; Brandon Low <lostlogic@lostlogicx.com> *.ebuild:
   assert ebuild.workswith(newdistcc);
@@ -9,8 +14,6 @@
   with -j1 so distcc could only distribute all or none of
   the processes, but that might be of use, and at least
   it doesn't break.)
-
-*netpbm-10.11.5 (13 Feb 2003)
 
   13 Feb 2003; Nick Hadaway <raker@gentoo.org> netpbm-10.11.5.ebuild,
   files/digest-netpbm-10.11.5 :
