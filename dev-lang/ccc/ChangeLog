@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ccc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.4 2003/06/23 17:08:25 taviso Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.5 2004/02/07 02:27:36 agriffis Exp $
+
+*ccc-6.5.9.001-r1 (06 Feb 2004)
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org> ccc-6.5.9.001-r1.ebuild:
+  Fix config script to work with gcc-3
 
   23 Jun 2003; Tavis Ormandy <taviso@gentoo.org> ccc-6.5.9.001.ebuild:
   stable on alpha
