@@ -1,6 +1,6 @@
 MD5 276589ae00a676a7a87bdf0454470e23 ChangeLog 1703
+MD5 a76ee357a6ff512bf3f45477be81f571 lincity-1.12.0.ebuild 1048
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 ca194f3ed2f77dd6e1482ced2840940c lincity-1.12.0.ebuild 1027
 MD5 2ca559d6d6ae5aa9f78379d18f2f6bd4 lincity-1.12_pre53.ebuild 918
 MD5 e26860a82f7b2aaa40ebff37d2ba5bfa files/digest-lincity-1.12_pre53 69
 MD5 f0c7afe8a3ed9c700239695a0388abf7 files/lincity-1.11a-gcc3.patch 1863

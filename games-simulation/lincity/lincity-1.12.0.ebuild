@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12.0.ebuild,v 1.1 2004/01/23 00:47:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12.0.ebuild,v 1.2 2004/02/06 09:42:13 mr_bones_ Exp $
 
 inherit games
 
@@ -33,8 +33,10 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc Acknowledgements CHANGES FAQ README* TODO || die "dodoc failed"
-	cd "${D}/${GAMES_DATADIR}"
-	mv locale "${D}/usr/share/"
+	dodoc Acknowledgements CHANGES README* TODO || die "dodoc failed"
+	if use nls ; then
+		cd "${D}/${GAMES_DATADIR}"
+		mv locale "${D}/usr/share/"
+	fi
 	prepgamesdirs
 }
