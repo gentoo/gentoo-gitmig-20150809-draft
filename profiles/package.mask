@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lu_zero@gentoo.org> (31 Mar 2003)
+# Waiting for comments from Bioware.
+app-games/nwn
+
 # <azarah@gentoo.org> (25 Mar 2003)
 # <lostlogic@gentoo.org> (26 Mar 2003)
 # Tempory mask gawk versions that do not have filefuncs.so module, as it
