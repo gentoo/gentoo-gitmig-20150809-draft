@@ -1,6 +1,10 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.4 2003/07/23 18:54:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.5 2003/09/13 22:00:35 dholm Exp $
+
+  13 Sep 2003; David Holm <david@realityrift.com> <avatar@gentoo.org>
+  opensp-1.5-r1.ebuild:
+  Added to ~ppc, tested by Chris Lyttle <chris@wilddev.net>.
 
   02 Jun 2003; Alastair Tse <liquidx@gentoo.org> opensp-1.5-r1.ebuild,
   files/opensp-1.5-gcc33.patch:
