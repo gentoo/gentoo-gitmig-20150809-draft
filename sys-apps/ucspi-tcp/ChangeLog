@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.14 2003/03/16 23:12:15 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.15 2003/08/13 03:17:11 robbat2 Exp $
+
+*ucspi-tcp-0.88-r6 (12 Aug 2003)
+
+  12 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> ucspi-tcp-0.88-r6.ebuild:
+  Add support for newer RBL zones and custom error responses, also increase max
+  response size
 
 *ucspi-tcp-0.88-r5 (05 Mar 2003)
 
