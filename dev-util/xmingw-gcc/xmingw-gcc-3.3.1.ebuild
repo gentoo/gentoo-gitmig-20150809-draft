@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.3.1.ebuild,v 1.1 2003/10/02 10:19:39 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.3.1.ebuild,v 1.2 2003/10/28 19:52:23 cretin Exp $
 
 DESCRIPTION="The GNU Compiler Collection - i386-mingw32msvc-gcc only"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 P=${P/xmingw-/}
 
 MINGW_PATCH=gcc-3.3.1-20030804-1-src.diff.gz
-RUNTIME=mingw-runtime-3.1
+RUNTIME=mingw-runtime-3.2
 W32API=w32api-2.4
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
