@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/kmuddy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.7 2004/09/08 23:58:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.8 2004/12/01 03:53:47 mr_bones_ Exp $
+
+*kmuddy-0.7 (30 Nov 2004)
+
+  30 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +kmuddy-0.7.ebuild:
+  version bump
 
   08 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   +files/0.6.1-gcc34.patch, kmuddy-0.6.1.ebuild:
