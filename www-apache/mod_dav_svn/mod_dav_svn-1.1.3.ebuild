@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dav_svn/mod_dav_svn-1.1.3.ebuild,v 1.2 2005/01/23 07:42:18 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dav_svn/mod_dav_svn-1.1.3.ebuild,v 1.3 2005/01/24 02:59:02 trapni Exp $
 
 # FIXME this ebuild acutally installes mod_dav_svn *and* mod_authz_svn... 
 # what about this? shall it be splitted up, too?
@@ -34,10 +34,10 @@ DEPEND=">=dev-util/subversion-1.1.0-r1"
 need_apache2
 
 src_unpack() {
-	cd ${WORKDIR}
-	unpack ${MY_P}.tar.bz2 || die "unpacking failed for some strange reason"
+	cd "${WORKDIR}"
+	unpack "${MY_P}.tar.bz2" || die "unpacking failed for some strange reason"
 
-	cd ${S}
+	cd "${S}"
 	export WANT_AUTOCONF_2_5=1
 	autoconf
 	(cd apr; autoconf)
@@ -46,14 +46,12 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
-
 	econf \
 		`use_with ssl` \
-		--with-apxs=${APXS2} \
-		--with-apr=/usr \
-		--with-apr-util=/usr \
-		--with-neon=/usr \
+		--with-apxs="${APXS2}" \
+		--with-apr="/usr" \
+		--with-apr-util="/usr" \
+		--with-neon="/usr" \
 		--without-swig \
 		--without-python \
 		--disable-experimental-libtool \
@@ -68,26 +66,22 @@ src_compile() {
 
 src_install() {
 	# however, it shall only install the mod_dav_svn (FIXME: what about  mod_authz_svn?)
-	make DESTDIR=${D} install-mods-shared || die "Installation of subversion failed"
+	make DESTDIR="${D}" install-mods-shared || die "Installation of subversion failed"
 
-	if [ -e ${D}/usr/lib/apache2 ]; then
-		if has_version '>=net-www/apache-2.0.48-r2'; then
-			mv ${D}/usr/lib/apache2/modules ${D}/${APACHE2_MODULESDIR}
-			rmdir ${D}/usr/lib/apache2
-		else
-			mv ${D}/usr/lib/apache2 ${D}/${APACHE2_MODULESDIR}
-		fi
-	fi
+	# do some apache2 dir voodoo
+	mv ${D}/usr/lib/apache2/modules ${D}/${APACHE2_MODULESDIR}
+	rmdir ${D}/usr/lib/apache2
 
 	# do we need them? well, I guess they may be helpful for the enduser anyway
 	dodoc tools/xslt/svnindex.css tools/xslt/svnindex.xsl
 
 	# install apache module config
-	sed -e "s:@SVN_REPOS_LOC@:${SVN_REPOS_LOC}:" ${FILESDIR}/${APACHE2_MOD_CONF}.conf \
-		> ${APACHE2_MOD_CONF}.conf
+	sed -e "s:@SVN_REPOS_LOC@:${SVN_REPOS_LOC}:" \
+		"${FILESDIR}/${APACHE2_MOD_CONF}.conf" \
+		> "${APACHE2_MOD_CONF}.conf"
 
-	insinto ${APACHE2_MODULES_CONFDIR}
-	doins ${APACHE2_MOD_CONF}.conf
+	insinto "${APACHE2_MODULES_CONFDIR}"
+	doins "${APACHE2_MOD_CONF}.conf"
 
 	einfo
 	einfo "Configuration file installed as ${APACHE2_MODULES_CONFDIR}/${APACHE2_MOD_CONF}.conf"
