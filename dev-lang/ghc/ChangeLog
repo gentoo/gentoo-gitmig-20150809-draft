@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.16 2003/07/02 11:01:11 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.17 2003/07/29 11:45:10 kosmikus Exp $
+
+  29 Jul 2003; Andres Loeh <kosmikus@gentoo.org> ghc-5.04.3-r1.ebuild:
+  Marked 5.04.3-r1 stable. It fixes a couple of problems that keep appearing
+  with 5.04.3.
 
   02 Jul 2003; Andres Loeh <kosmikus@gentoo.org> ghc-5.04.3-r1.ebuild:
   Removed implicit X11 dependency (bug 23708). Thanks to Aaron Son
