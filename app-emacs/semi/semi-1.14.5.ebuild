@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.5.ebuild,v 1.3 2003/09/06 22:01:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.5.ebuild,v 1.4 2003/09/09 08:41:38 msterret Exp $
 
 inherit elisp
 
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/emacs
-         >=app-emacs/apel-10.3
-         >=app-emacs/flim-1.14.4";
+	>=app-emacs/apel-10.3
+	>=app-emacs/flim-1.14.4";
 #        >=virtual/flim-1.14
 
 PROVIDE="virtual/semi-1.14.5"
@@ -32,7 +32,7 @@ src_install() {
 		LISPDIR=${D}/${SITELISP} \
 		VERSION_SPECIFIC_LISPDIR=${D}/${SITELISP} install || die
 
- 	elisp-site-file-install ${FILESDIR}/65semi-gentoo.el
+	elisp-site-file-install ${FILESDIR}/65semi-gentoo.el
 
 	dodoc README* Changelog VERSION NEWS
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.5-r1.ebuild,v 1.4 2003/08/13 07:28:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.5-r1.ebuild,v 1.5 2003/09/09 08:41:38 msterret Exp $
 
 inherit elisp eutils
 
@@ -38,7 +38,7 @@ src_install() {
 		LISPDIR=${D}/${SITELISP} \
 		VERSION_SPECIFIC_LISPDIR=${D}/${SITELISP} install || die
 
- 	elisp-site-file-install ${FILESDIR}/65semi-gentoo.el
+	elisp-site-file-install ${FILESDIR}/65semi-gentoo.el
 
 	dodoc README* ChangeLog VERSION NEWS
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/wl-2.11.9.20030823.ebuild,v 1.1 2003/08/24 18:44:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/wl-2.11.9.20030823.ebuild,v 1.2 2003/09/09 08:40:03 msterret Exp $
 
 inherit elisp
 
@@ -16,9 +16,9 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha ~sparc ~ppc"
 
 DEPEND="virtual/emacs
-         >=app-emacs/apel-10.6
-         virtual/flim
-         virtual/semi"
+	>=app-emacs/apel-10.6
+	virtual/flim
+	virtual/semi"
 
 S="${WORKDIR}/${P%.*}"
 
@@ -41,7 +41,7 @@ src_install() {
 		PIXMAPDIR=${D}/usr/share/${PN}/icons \
 		install || die
 
- 	elisp-site-file-install ${FILESDIR}/70wl-gentoo.el || die
+	elisp-site-file-install ${FILESDIR}/70wl-gentoo.el || die
 
 	dodir /usr/share/${PN}/samples
 
