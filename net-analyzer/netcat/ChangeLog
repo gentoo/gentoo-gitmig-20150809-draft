@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.13 2003/04/08 08:53:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.14 2003/04/23 00:00:18 lostlogic Exp $
 
 *netcat-110-r3 (08 Arp 2003)
 
@@ -22,6 +22,9 @@
   (Olivier Crete)
 
 *netcat-110-r1 (22 Oct 2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> netcat-110-r1.ebuild:
+  Change supersed dependencies
 
   22 Oct 2002; Seemant Kulleen <seemant@gentoo.org> netcat-110-r1.ebuild
   files/digest-netcat-110-r1 :

@@ -1,10 +1,13 @@
 # ChangeLog for net-analyzer/portsentry
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.8 2003/02/12 07:49:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.9 2003/04/23 00:02:57 lostlogic Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *portsentry-1.1-r7 (27 Sept.  2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> portsentry-1.1-r7.ebuild:
+  Change supersed dependencies
 
   27 Sept. 2002; Grant Goodyear <g2boojum@gentoo.org> portsentry-1.1-r7.ebuild :
 
