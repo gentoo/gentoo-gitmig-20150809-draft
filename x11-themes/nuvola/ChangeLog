@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/nuvola
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.5 2005/02/05 15:53:43 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.6 2005/02/23 17:09:38 greg_g Exp $
+
+*nuvola-1.0-r1 (23 Feb 2005)
+
+  23 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +nuvola-1.0-r1.ebuild:
+  Make the ebuild independent of kde.
 
   05 Feb 2005; Dominik Stadler <centic@gentoo.org> nuvola-1.0.ebuild,
   -nuvola-1.0_beta.ebuild, -nuvola-1.0_rc1.ebuild:
