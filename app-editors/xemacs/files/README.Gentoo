@@ -20,7 +20,9 @@ First, start XEmacs and load the package-ui elisp module.
 The first thing to set is the download site (package-ui installs via
 network).
 
-  M-x package-get-remote RET
+  M-x customize-variable RET package-get-remote RET
+
+Insert a new value, then:
 
   Choice: Remote
   Host: ibiblio.org
