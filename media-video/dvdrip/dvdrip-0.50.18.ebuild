@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.18.ebuild,v 1.8 2005/03/03 17:11:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.18.ebuild,v 1.9 2005/03/28 07:10:00 chriswhite Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 MY_P=${P/dvdr/Video-DVDR}
 # Next three lines are to handle PRE versions
@@ -35,6 +35,10 @@ RDEPEND="${DEPEND}
 	>=media-sound/ogmtools-0.972
 	>=media-video/mjpegtools-1.6.0
 	sys-apps/eject"
+
+pkg_setup() {
+	built_with_use transcode dvdread || die "transcode requires dvdread support builtin.  Re-emerge transcode with the dvdread USE flag."
+}
 
 src_unpack() {
 	unpack ${A}
