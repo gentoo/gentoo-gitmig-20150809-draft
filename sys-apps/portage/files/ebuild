@@ -941,8 +941,8 @@ dyn_compile() {
 
 dyn_package() {
     trap "abort_package" SIGINT SIGQUIT
-    cd ${BUILDDIR}/image
     local PNAME=${PF}.${PACKAGE}
+    cd ${BUILDDIR}/image
     echo ">>> Creating ${PNAME} in ${PKGDIR}/All..."
     if [ ! -e ${PKGDIR} ]
     then
@@ -964,11 +964,11 @@ dyn_package() {
 	echo '!!! Package format '${PACKAGE}' not recognized.  Please correct /etc/make.conf'
 	exit 1
     fi
-#    if [ ! -e ${PKGDIR}/${CATEGORY} ]
-#    then
-#        mkdir ${PKGDIR}/${CATEGORY}
-#    fi
-#    ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
+    if [ ! -e ${PKGDIR}/${CATEGORY} ]
+    then
+        mkdir ${PKGDIR}/${CATEGORY}
+    fi
+    ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
     echo ">>> Done."
     cd ${BUILDDIR}
     touch .packaged
@@ -1158,12 +1158,35 @@ src_menu() {
 	    dyn_${MYfoo}
 	    ;;
 	package)
-            dyn_fetch
-	    dyn_unpack
-            dyn_compile
-            dyn_install
-	    dyn_package
-	    ;;
+	dyn_fetch
+	local PNAME=${PF}.${PACKAGE}
+    	if [ -e ${PKGDIR}/All/${PNAME} ]
+    	then
+    		local x
+    		local dopackage
+    		dopackage="no"
+    		for x in ${A} ${EBUILD}
+    		do
+			if [ ${x} -nt ${PKGDIR}/All/${PNAME} ]
+			then
+				dopackage="yes"
+				break
+			fi
+    		done
+		if [ "$dopackage" = "no" ]
+		then
+			echo
+			echo ">>> Package ${PNAME} appears to be up-to-date."
+			echo ">>> To force rebuild, touch ${EBUILD}."
+			echo
+			continue
+		fi
+    	fi
+        dyn_unpack
+	dyn_compile
+	dyn_install
+	dyn_package
+	;;
  	merge)
             dyn_fetch
 	    dyn_unpack
