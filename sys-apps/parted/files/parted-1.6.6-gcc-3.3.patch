@@ -1,0 +1,36 @@
+diff -ruN parted-1.6.5.orig/libparted/disk_gpt.c parted-1.6.5/libparted/disk_gpt.c
+--- parted-1.6.5.orig/libparted/disk_gpt.c	2003-06-27 18:11:23.000000000 +0200
++++ parted-1.6.5/libparted/disk_gpt.c	2003-06-27 17:15:53.000000000 +0200
+@@ -51,9 +51,9 @@
+ #define EFI_PMBR_OSTYPE_EFI 0xEE
+ #define MSDOS_MBR_SIGNATURE 0xaa55
+ 
+ #define GPT_HEADER_SIGNATURE 0x5452415020494645LL
+-#define GPT_HEADER_REVISION_V1_00 0x00010000
+-#define GPT_HEADER_REVISION_V0_99 0x00009900
++#define GPT_HEADER_REVISION_V1_00 0x00010000LL
++#define GPT_HEADER_REVISION_V0_99 0x00009900LL
+ 
+ typedef uint16_t efi_char16_t;	/* UNICODE character */
+ 
+diff -ruN parted-1.6.5.orig/libparted/disk_sun.c parted-1.6.5/libparted/disk_sun.c
+--- parted-1.6.5.orig/libparted/disk_sun.c	2003-06-27 18:11:23.000000000 +0200
++++ parted-1.6.5/libparted/disk_sun.c	2003-06-27 17:28:14.000000000 +0200
+@@ -38,7 +38,7 @@
+ /* Most of this came from util-linux's sun support, which was mostly done
+    by Jakub Jelinek.  */
+ 
+-#define SUN_DISK_MAGIC		0xDABE	/* Disk magic number */
++#define SUN_DISK_MAGIC		0xDABE /* Disk magic number */
+ #define SUN_DISK_MAXPARTITIONS	8
+ 
+ #define WHOLE_DISK_ID		0x05
+@@ -354,7 +354,7 @@
+ 	if (!ped_device_read (disk->dev, &old_label, 0, 1))
+ 		return;
+ 	if (old_label.info [0]
+-	    && old_label.magic == PED_CPU_TO_LE32 (SUN_DISK_MAGIC))
++	    && old_label.magic == PED_CPU_TO_LE16 (SUN_DISK_MAGIC))
+ 		memcpy (&sun_specific->raw_label, &old_label, 512);
+ }
+ 
