@@ -22,7 +22,7 @@ CXXFLAGS=${CFLAGS}
 
 USE="xv slang readline gpm berkdb gdbm tcpd pam libwww ssl
 nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde
-motif opengl mozilla"
+motif opengl mozilla ppc"
 
 ACCEPT_KEYWORDS="ppc"
 
