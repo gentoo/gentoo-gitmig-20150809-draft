@@ -1,15 +1,15 @@
 diff -ur qmail-1.03.orig/qmail-smtpd.c qmail-1.03/qmail-smtpd.c
---- qmail-1.03.orig/qmail-smtpd.c	2003-08-12 19:54:02.000000000 -0700
-+++ qmail-1.03/qmail-smtpd.c	2003-08-12 20:00:30.000000000 -0700
-@@ -81,6 +81,7 @@
- }
+--- qmail-1.03.orig/qmail-smtpd.c	2003-09-01 21:47:32.000000000 -0700
++++ qmail-1.03/qmail-smtpd.c	2003-09-01 21:48:36.000000000 -0700
+@@ -117,6 +117,7 @@
+ void err_nogwcert() { out("553 no valid cert for gatewaying (#5.7.1)\r\n"); }
  #endif
  void err_unimpl() { out("502 unimplemented (#5.5.1)\r\n"); }
 +void err_size() { out("552 sorry, that message size exceeds my databytes limit (#5.3.4)\r\n"); }
  void err_syntax() { out("555 syntax error (#5.5.4)\r\n"); }
- void err_relay() { out("553 we don't relay (#5.7.1)\r\n"); }
  void err_wantmail() { out("503 MAIL first (#5.5.1)\r\n"); }
-@@ -241,6 +242,40 @@
+ void err_wantrcpt() { out("503 RCPT first (#5.5.1)\r\n"); }
+@@ -296,6 +297,40 @@
    return 1;
  }
  
@@ -47,10 +47,10 @@ diff -ur qmail-1.03.orig/qmail-smtpd.c qmail-1.03/qmail-smtpd.c
 +  return 1;
 +}
 +
- int bmfcheck()
+ int bmcheck(which) int which;
  {
-   int j;
-@@ -289,6 +324,12 @@
+   int i = 0;
+@@ -351,6 +386,12 @@
    smtp_greet("250 "); out("\r\n");
    seenmail = 0; dohelo(arg);
  }
@@ -58,24 +58,24 @@ diff -ur qmail-1.03.orig/qmail-smtpd.c qmail-1.03/qmail-smtpd.c
 +void smtp_size()
 +{
 +  size_buf[fmt_ulong(size_buf,(unsigned long) databytes)] = 0;
-+  out("250 SIZE "); out(size_buf); out("\r\n");
++  out("\r\n250-SIZE "); out(size_buf); 
 +}
- /* ESMTP extensions are published here */
  void smtp_ehlo(arg) char *arg;
  {
-@@ -304,6 +345,7 @@
-   out("\r\n250-AUTH=LOGIN PLAIN");
+   smtp_greet("250-");
+@@ -364,6 +405,7 @@
+ #ifdef TLS
+   if (!ssl) out("\r\n250-STARTTLS");
  #endif
-   out("\r\n250-PIPELINING\r\n250 8BITMIME\r\n");
 +  smtp_size();
+   out("\r\n250-PIPELINING\r\n250 8BITMIME\r\n");
    seenmail = 0; dohelo(arg);
  }
- void smtp_rset()
-@@ -314,6 +356,7 @@
+@@ -375,6 +417,7 @@
  void smtp_mail(arg) char *arg;
  {
    if (!addrparse(arg)) { err_syntax(); return; }
 +  if (databytes && !sizelimit(arg)) { err_size(); return; }
-   flagbarf = bmfcheck();
+   if (bmfok) flagbarfbmf = bmcheck(BMCHECK_BMF);
    seenmail = 1;
    if (!stralloc_copys(&rcptto,"")) die_nomem();

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.39 2003/09/01 19:38:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.40 2003/09/02 09:02:01 robbat2 Exp $
+
+  02 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/1.03-r12/qmail-smtpd-esmtp-size-gentoo.patch,
+  files/1.03-r12/qmail-smtpd-relay-reject.gentoo.patch:
+  more work in progres on -r12, nearly completed, ready for limited testing now
 
   01 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
   more tweaks to r12

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.7 2003/09/01 19:38:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.8 2003/09/02 09:02:01 robbat2 Exp $
 
 inherit eutils
 
@@ -24,8 +24,7 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
   	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt
 	http://www.ckdhr.com/ckd/qmail-103.patch
 	http://www.arda.homeunix.net/store/qmail/qregex-starttls-2way-auth.patch
-	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt
-	"
+	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt"
 
 SLOT="0"
 LICENSE="as-is"
@@ -79,7 +78,7 @@ src_unpack() {
 	epatch ${DISTDIR}/qmail-1.03-qmtpc.patch
 
 	# Large TCP DNS replies confuse it sometimes
-	#EPATCH_SINGLE_MSG="Adding support for oversize DNS" \
+	EPATCH_SINGLE_MSG="Adding support for oversize DNS" \
 	epatch ${DISTDIR}/qmail-103.patch
 
 	# Fix for tabs in .qmail bug noted at
@@ -102,11 +101,6 @@ src_unpack() {
 	# make the qmail 'sendmail' binary behave like sendmail's for -f
 	epatch ${DISTDIR}/sendmail-flagf.patch
 
-	#TODO REDIFF
-	# Reject some bad relaying attempts
-	# gentoo bug #18064 
-	#epatch ${DISTDIR}/qmail-smtpd-relay-reject
-	
 	# Apply patch to make qmail-local and qmail-pop3d compatible with the
 	# maildir++ quota system that is used by vpopmail and courier-imap
 	epatch ${DISTDIR}/qmail-maildir++.patch
@@ -117,19 +111,23 @@ src_unpack() {
 	# This will make the emails headers be written in localtime rather than GMT
 	# If you really want, uncomment it yourself, as mail really should be in GMT
 	epatch ${DISTDIR}/qmail-date-localtime.patch.txt
-
-	#TODO REDIFF
-	# Apply patch to add ESMTP SIZE support to qmail-smtpd
-	# This helps your server to be able to reject excessively large messages
-	# "up front", rather than waiting the whole message to arrive and then
-	# bouncing it because it exceeded your databytes setting
-	#epatch ${DISTDIR}/qmail-smtpd-esmtp-size.diff.txt
-	#epatch ${FILESDIR}/${PV}-${PR}/qmail-smtpd-esmtp-size-gentoo.patch
 	
 	# Apply patch to trim large bouncing messages down greatly reduces traffic
 	# when multiple bounces occur (As in with spam)
 	epatch ${DISTDIR}/qmail-limit-bounce-size.patch.txt
 	
+	#TODO TEST
+	# Apply patch to add ESMTP SIZE support to qmail-smtpd
+	# This helps your server to be able to reject excessively large messages
+	# "up front", rather than waiting the whole message to arrive and then
+	# bouncing it because it exceeded your databytes setting
+	epatch ${FILESDIR}/${PV}-${PR}/qmail-smtpd-esmtp-size-gentoo.patch
+	
+	#TODO TEST
+	# Reject some bad relaying attempts
+	# gentoo bug #18064 
+	epatch ${FILESDIR}/${PV}-${PR}/qmail-smtpd-relay-reject.gentoo.patch
+
 	#TODO REDIFF
 	# provide badrcptto support
 	# as per bug #17283
@@ -138,7 +136,6 @@ src_unpack() {
 	#epatch ${FILESDIR}/${PV}-${PR}/badrcptto-morebadrcptto-accdias-gentoo
 
 	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc	
-	#ewarn "TLS support is disabled due to a bug in the patch presently"
 	use ssl && echo -n ' -DTLS' >>${S}/conf-cc
 	echo -n "${CC} ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
