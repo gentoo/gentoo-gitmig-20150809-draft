@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/canna-cannadic
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.1 2003/05/17 19:27:13 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.2 2003/07/14 15:46:58 usata Exp $
+
+*canna-cannadic-0.95 (15 Jul 2003)
+
+  15 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> canna-cannadic-0.95.ebuild,
+  files/05cannadic.dics.dir:
+  Version bump. gcannaf file extension was changed from t to ctd
+  so that new 05cannadic.dics.dir was included.
 
 *canna-cannadic-0.94h (18 May 2003)
 
