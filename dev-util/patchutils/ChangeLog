@@ -1,11 +1,19 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.4 2002/12/13 10:56:50 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.5 2002/12/17 05:54:24 seemant Exp $
+
+
+*patchutils-0.2.18 (16 Dec 2002)
+
+  16 Dec 2002; Seemant Kulleen <seemant@gentoo.org> patchutils-0.2.18.ebuild
+  files/digest-patchutils-0.2.18 :
+
+  Version bump to newest stable
+
+*patchutils-0.2.17 (23 Oct 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*patchutils-0.2.17 (23 Oct 2002)
-
   23 Oct 2002; Zach Welch <zwelch@gentoo.org> : 
 	Initial import from bug 9475, contributed by jani@iv.ro
 
