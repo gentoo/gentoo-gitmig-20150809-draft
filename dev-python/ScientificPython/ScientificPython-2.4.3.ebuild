@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.4.3.ebuild,v 1.4 2003/07/12 12:49:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.4.3.ebuild,v 1.5 2003/09/02 22:29:12 liquidx Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 KEYWORDS="x86 ~sparc ~alpha"
 
 DEPEND="virtual/python
-	>=dev-python/Numeric-19.0
+	>=dev-python/numeric-19.0
 	>=app-sci/netcdf-3.0"
 
 

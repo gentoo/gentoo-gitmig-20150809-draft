@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-biggles
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.1 2003/04/20 02:32:19 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.2 2003/09/02 22:32:41 liquidx Exp $
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> python-biggles-1.6.3.ebuild:
+  moved dev-python/Numeric to dev-python/numeric
 
 *python-biggles-1.6.3 (20 Apr 2003)
 
