@@ -1,0 +1,9 @@
+# ChangeLog for net-zope/silva
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silva/ChangeLog,v 1.1 2003/03/25 12:22:52 kutsuya Exp $
+
+*silva-0.9.1 (25 Mar 2003)
+
+  25 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> silva-0.9.1.ebuild:
+  Initial import. #14051
+
