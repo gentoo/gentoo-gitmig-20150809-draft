@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/lwp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.2 2003/02/12 09:20:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.3 2003/11/15 10:24:49 seemant Exp $
+
+  15 Nov 2003; Seemant Kulleen <seemant@gentoo.org> :
+  version bump, as part of a coda version bump -- thanks to: Michael C. Ferguson
+  <mcf@augustmail.com> in bug #26132
 
 *lwp-1.9 (30 Jun 2002)
 
