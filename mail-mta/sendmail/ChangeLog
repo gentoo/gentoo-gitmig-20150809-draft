@@ -1,0 +1,202 @@
+# ChangeLog for net-mail/sendmail
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.1 2004/05/30 09:20:40 robbat2 Exp $
+
+*sendmail-8.12.11-r2 (30 May 2004)
+
+  30 May 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  sendmail-8.12.10.ebuild, sendmail-8.12.11-r1.ebuild,
+  sendmail-8.12.11-r2.ebuild, sendmail-8.12.11.ebuild, files/mailer.conf,
+  files/sendmail, files/sendmail-8.12.2-makemapman.patch,
+  files/sendmail-8.12.2-smrsh-paths.patch, files/sendmail-8.12.2-unix.patch,
+  files/sendmail-8.12.6-r1-gentoo.diff, files/sendmail-procmail.cf,
+  files/sendmail-procmail.mc, files/sendmail.cf, files/sendmail.mc,
+  files/site.config.m4:
+  Moved from net-mail/sendmail to mail-mta/sendmail.
+
+  12 May 2004; Michael McCabe <randy@gentoo.org> sendmail-8.12.11-r2.ebuild:
+  Added s390 keywords
+
+*sendmail-8.12.11-r2 (21 Apr 2004)
+
+  21 Apr 2004; Grant Goodyear <g2boojum@gentoo.org>
+  sendmail-8.12.11-r2.ebuild, files/site.config.m4:
+  New version thanks to lcars!
+
+*sendmail-8.12.11-r1 (24 Mar 2004)
+
+  24 Mar 2004; Grant Goodyear <g2boojum@gentoo.org>
+  sendmail-8.12.11-r1.ebuild, files/mailer.conf:
+  New revision that adds mailwrapper support 
+
+  19 Mar 2004; Aron Griffis <agriffis@gentoo.org> sendmail-8.12.10.ebuild,
+  sendmail-8.12.11.ebuild:
+  add alpha/ia64 keywords
+
+*sendmail-8.12.11 (06 Feb 2004)
+
+  06 Feb 2004; Greg Fitzgerald <gregf@gentoo.org> sendmail-8.12.11.ebuild:
+  Version Bump.
+
+*sendmail-8.12.10 (17 Sep 2003)
+
+  17 Sep 2003; Greg Fitzgerald <gregf@gentoo.org> sendmail-8.12.10.ebuild:
+  Version bump / fixes security issue.
+
+  13 Jul 2003; Christian Birchinger <joker@gentoo.org>
+  sendmail-8.12.9-r2.ebuild:
+  Added sparc stable keyword
+
+  24 May 2003; Todd Berman <tberman@gentoo.org> sendmail-8.12.9-r2.ebuild:
+  closed bug #21354
+
+  23 May 2003; Todd Berman <tberman@gentoo.org> sendmail-8.12.9-r1.ebuild,
+  sendmail-8.12.9-r2.ebuild:
+  Closed bug 21521.
+
+  12 May 2003; Todd Berman <tberman@gentoo.org> files/sendmail-r5:
+  Fixed up the sendmail init file some.
+
+  11 May 2003; <tberman@gentoo.org> sendmail-8.12.8.ebuild,
+  sendmail-8.12.9-r1.ebuild, sendmail-8.12.9-r2.ebuild,
+  sendmail-8.12.9.ebuild:
+  Fixed bug #20792
+
+*sendmail-8.12.9-r2 (26 Apr 2003)
+
+  15 Jun 2003; Guy Martin <gmsoft@gentoo.org> sendmail-8.12.9-r2.ebuild:
+  Added hppa to KEYWORDS.
+
+  26 Apr 2003; <tberman@gentoo.org> sendmail-8.12.9-r2.ebuild:
+  Added NIS database support. Closes bug #18578.
+
+*sendmail-8.12.9-r1 (24 Apr 2003)
+
+  24 Apr 2003; Jon Portnoy <avenj@gentoo.org> sendmail-8.12.9-r1.ebuild :
+  Incorporates Todd Berman's work on integrating procmail for
+  people who aren't using mbox. Fixes bug #19893. Thanks, Todd!
+
+*sendmail-8.12.9 (30 Mar 2003)
+
+  30 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> sendmail-8.12.9.ebuild :
+  Security update.
+
+*sendmail-8.12.8 (03 Mar 2003)
+
+  03 Mar 2003; Grant Goodyear <g2boojum@gentoo.org> sendmail-8.12.8.ebuild:
+  security update to 8.12.8.  Closes bugs 16755 and 16766.
+
+*sendmail-8.12.7-r5 (03 Feb 20003)
+
+  03 Feb 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7-r5.ebuild,
+  files/digest-sendmail-8.12.7-r5, files/sendmail-r5 :
+  Changed /usr/sbin/sendmail to sendmail in the stop portion of the
+  script and added some changes for proper SASL2 usage as suggested
+  by Alessandro Pisani on bug #14411.
+
+*sendmail-8.12.7-r4 (26 Jan 2003)
+
+  26 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7-r4.ebuild,
+  files/digest-sendmail-8.12.7-r4, files/sendmail-r4 :
+  Now the init script sends 'killall ${KILL_OPTS} /usr/sbin/sendmail'
+  This should stop all running instances?
+
+*sendmail-8.12.7-r3 (23 Jan 2003)
+
+  23 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7-r3.ebuild,
+  files/digest-sendmail-8.12.7-r3, files/sendmail-r3 :
+  Changed init to incorporate KILL_OPTS so people can choose their level
+  of daemon shutdown forcefulness.
+
+*sendmail-8.12.7-r2 (23 Jan 2003)
+
+  23 Jan 2003; Nick Hadaway <raker@gentoo.org> files/sendmail-r2,
+  files/digest-sendmail-8.12.7-r2, sendmail-8.12.7-r2.ebuild :
+  Version bump to catch new init.d file
+
+  23 Jan 2003; Nick Hadaway <raker@gentoo.org> files/sendmail-r1 :
+  Added -9 to the kill statement as suggested on bug #14411
+
+*sendmail-8.12.7-r1 (20 Jan 2003)
+
+  20 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7-r1.ebuild,
+  files/digest-sendmail-8.12.7-r1 files/sendmail-r1 :
+  Updated init.d script and conf file so the clientmqueue flushing
+  daemon shuts down as well as the main mta daemon.
+
+*sendmail-8.12.7 (02 Jan 2003)
+
+  19 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7.ebuild :
+  Marked stable for x86.  Many important fixes in the source and in 
+  the ebuild.
+
+  19 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7.ebuild,
+  files/sendmail :
+  Added the clientmqueue daemon as suggested by Andrea Barisani on
+  bug #13836.  Log files are now tagged by sm-mta or sm-cm.  Added
+  an extra check to clear xf* from /var/spool/mqueue on start.
+
+  02 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7.ebuild,
+  files/digest-sendmail-8.12.7 :
+  Version bump.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*sendmail-8.12.6-r1 (13 Oct 2002)
+
+  13 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update. Added patch from sendmail to fix smrsh.
+
+*sendmail-8.12.6 (03 Sep 2002)
+
+  03 Sep 2002; Nick Hadaway <raker@gentoo.org> sendmail-8.12.6.ebuild,
+  files/digest-sendmail-8.12.6.ebuild :
+  Version bump.
+
+*sendmail-8.12.5 (19 Jul 2002)
+
+  19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+  new version; fixes buffer overflow; thanks to raker!
+
+*sendmail-8.12.4-r5 (13 Jul 2002)
+
+  13 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+  sasl fixes; thanks to Jay 'Eraserhead' Felice
+
+*sendmail-8.12.4-r4 (12 Jul 2002)
+
+  12 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+  fixed permissions (thanks to Harald Kubota for catching the problem),
+  moved group/passwd stuff to pkg_preinst
+
+*sendmail-8.12.4-r3 (04 Jul 2002)
+
+  04 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+  Some useful fixes; thanks to Alessandro Pisani
+
+  29 Jun 2002; Seemant Kulleen <seemant@gentoo.org> sendmail-8.12.4-r2.ebuild:
+  Changed net-misc/hesiod to net-dns/hesiod per bug #4321 by 
+  simons+gentoo@cryp.to (Peter Simons)
+
+  27 Jun 2002; Grant Goodyear <g2boojum@gentoo.org> sendmail-8.12.4-r2.ebuild:
+    Make sure that queue directories don't get cleaned away.
+
+  24 Jun 2002; Thilo Bangert <bangert@gentoo.org> sendmail-8.12.4-r1.ebuild:
+    added symlink /usr/sbin/sendmail -> /usr/lib/sendmail
+
+  22 Jun 2002; William McArthur <sandymac@gentoo.org> sendmail-8.12.4-r1.ebuild:
+  Fixed a type in the use ssl section, "-ssl" should have been "-lssl"
+
+*sendmail-8.12.4-r1 (12 June 2002)
+
+  12 June 2002; Grant Goodyear <g2boojum@gentoo.org> : 
+  Added an init script and fixed permissions.  It now
+  works out-of-the-box, at least for sending mail and
+  locally receiving mail.  Currently set up to use it's
+  own local mailer.
+ 
+*sendmail-8.12.4 (10 June 2002)
+
+  10 June 2002; Grant Goodyear <g2boojum@gentoo.org> : 
+  New package.
+ 
