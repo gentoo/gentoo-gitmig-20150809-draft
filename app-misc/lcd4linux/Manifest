@@ -2,6 +2,8 @@ MD5 ca3322ac494f4366f2d5957c5d58b9f0 ChangeLog 1511
 MD5 9e90630643d2ab6b2256e7396e657c09 lcd4linux-0.98-r1.ebuild 1283
 MD5 035bb29691bc43d233b598b4e7f3d0db lcd4linux-0.98-r2.ebuild 1291
 MD5 bb360d51e0486eafd1bf8c04f76a0a0e lcd4linux-0.9.9.ebuild 1372
+MD5 e7869203fcf47c51945636c932e89f69 lcd4linux-0.9.10.ebuild 1507
 MD5 260b6e2b8e6a0375fc2546d8401cd4ac files/digest-lcd4linux-0.98-r1 66
 MD5 260b6e2b8e6a0375fc2546d8401cd4ac files/digest-lcd4linux-0.98-r2 66
+MD5 f197056607042f185af2a6d50a35d996 files/digest-lcd4linux-0.9.10 137
 MD5 5ed6638feaed61ef4b7f35f2c7c7f5c8 files/digest-lcd4linux-0.9.9 67
