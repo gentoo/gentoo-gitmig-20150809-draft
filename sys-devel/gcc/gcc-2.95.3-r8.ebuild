@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.11 2003/01/09 00:38:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.12 2003/01/09 08:56:08 seemant Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -82,14 +82,6 @@ RDEPEND="virtual/glibc
 
 # Hack used to patch Makefiles to install into the build dir
 FAKE_ROOT=""
-
-pkg_setup() {
-	echo
-	eerror "This is a very alpha ebuild and changes in here"
-	eerror "are not yet set in stone!  Please do NOT merge"
-	eerror "this if you are not a developer!"
-#	die
-}
 
 src_unpack() {
 	unpack ${P}.tar.gz
