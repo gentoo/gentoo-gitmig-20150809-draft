@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim-encryption
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/ChangeLog,v 1.12 2004/03/15 01:52:10 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/ChangeLog,v 1.13 2004/04/06 19:28:35 rizzo Exp $
+
+  06 Apr 2004; Don Seiler <rizzo@gentoo.org>; gaim-encryption-2.22.ebuild:
+  Marking stable x86
 
   14 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-encryption-2.20.ebuild:
   Removing obsolete ebuild
