@@ -1,0 +1,101 @@
+BODY { 
+	background: white; 
+	color: black; 
+	font-size: 0.9em; 
+	font-family: Georgia, Verdana, Arial, Helvetica; 
+}
+
+P,H2,H3,UL,OL { 
+	margin: 0.5em 14% 0.5em 5%; 
+}
+
+TABLE {
+	margin: 0.5em 0% 0.5em 5%;
+}
+
+PRE { 
+	margin: 0.5em 14% 0.5em 5%; 
+	background: #e0e0e0;
+}
+
+/*
+H1 { 
+	margin: 4.0em 10% 0em 8%; 
+	font-size: 1.8em; 
+	font-weight: bold; 
+}
+*/
+.dochead { 
+	margin: 1.5em 0% 0em 0%; 
+	font-size: 1.6em; 
+	font-weight: bold; 
+}
+
+.chaphead { 
+	margin: 1.2em 14% 0.5em 3%; 
+	font-size: 1.6em; 
+	font-weight: bold; 
+}
+
+.secthead {
+	margin: 0.4em 14% 0.2em 4%;
+	font-size: 1.0em; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
+	text-decoration: underline;
+}
+
+
+
+/*.secthead { 
+	font-family: Verdana,Arial,Helvetica; 
+	margin: 0.5em 10% 0.2em 8%; 
+	font-size: 1.1em; 
+	font-weight: bold; 
+}
+*/
+.toptable { 
+	margin: 0em 0% 0em 0%; 
+}
+
+.secondtable { 
+	margin: 4.0em 0% 0.1em 3%; 
+}
+
+.doclink { 
+	padding: 0.5em; 
+	background: black; 
+	color: #33ff00; 
+	font-weight: bold; 
+	font-size: 0.75em; 
+	font-family: Verdana, Arial, Helvetica; 
+}
+
+.tochead {
+	margin: 0em 0% 0.2em 0%;
+	font-size: 0.7em; 
+	background:#7a5ada; 
+	color: white; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
+}
+
+.tocitem { 
+	margin: 0em 0% 0em 2%;
+	font-size: 0.7em; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica; 
+}
+
+.abstract { 
+	color: #7a5ada; 
+	margin: 0em 0% 0em 0%; 
+	font-size: 0.7em; 
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
+}
+.info {
+	margin: 0em 0% 1em 0%; 
+	font-size: 0.8em; 
+}
+ 
