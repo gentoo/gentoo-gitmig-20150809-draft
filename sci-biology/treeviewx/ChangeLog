@@ -1,0 +1,19 @@
+# ChangeLog for app-sci/treeviewx
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.1 2004/12/23 18:11:05 ribosome Exp $
+
+*treeviewx-0.4 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +treeviewx-0.4.ebuild:
+  Moved from app-sci/treeviewx to sci-biology/treeviewx.
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> treeviewx-0.4.ebuild:
+  Added to x86.
+
+*treeviewx-0.4 (8 Aug 2004)
+
+  8 Aug 2004; Olivier Fisette <ribosome@gentoo.org>
+  treeviewx-0.4.ebuild, ChangeLog, metadata.xml:
+  Initial import (suggested by Koen Deforche <koen.deforche@uz.kuleuven.ac.be>
+  in bug #51990).
