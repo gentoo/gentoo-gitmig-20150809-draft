@@ -1,23 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jon Nelson <jnelson@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/bk2site-1.1.8.ebuild,v 1.2 2002/04/06 06:55:32 jnelson Exp $
 
 S=${WORKDIR}/${P}
 
-# Short one-line description of this package.
 DESCRIPTION="bk2site will transform your Netscape bookmarks file into a yahoo-like website with slashdot-like news."
-
-# Point to any required sources; these will be automatically
-# downloaded by Portage.
 SRC_URI="http://prdownloads.sourceforge.net/bk2site/${P}.tar.gz"
-
-# Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="http://bk2site.sourceforge.net/"
 
 DEPEND=""
-
-# Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 #RDEPEND=""
 
 src_compile() {
