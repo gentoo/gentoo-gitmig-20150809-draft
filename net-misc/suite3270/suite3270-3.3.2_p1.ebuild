@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.4 2004/06/25 00:14:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.5 2004/07/13 21:14:47 mr_bones_ Exp $
 
-IUSE="tcltk X cjk ssl"
+IUSE="tcltk X cjk ssl debug"
 
 S="${WORKDIR}"
 DESCRIPTION="Complete 3270 access package"
