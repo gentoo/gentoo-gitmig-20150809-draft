@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/vstgl/vstgl-0.6.1.ebuild,v 1.3 2003/02/13 09:26:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/vstgl/vstgl-0.6.1.ebuild,v 1.4 2004/04/19 12:47:51 phosphan Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -20,7 +22,7 @@ DEPEND="x11-libs/qt
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-qt3-gcc32.patch
+	epatch ${FILESDIR}/${P}-qt3-gcc32.patch
 	rm -rf CVS */CVS */*/CVS */*/*/CVS;
 }
 

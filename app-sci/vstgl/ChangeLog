@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/vstgl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/vstgl/ChangeLog,v 1.4 2003/10/23 13:47:24 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/vstgl/ChangeLog,v 1.5 2004/04/19 12:47:51 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> vstgl-0.6.1.ebuild:
+  Moving from patch to epatch
 
   11 Dec 2002; George Shapovalov <georges@its.caltech.edu> files/vstgl-0.6.1-qt3-gcc32.patch :
 
