@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.16 2004/06/27 19:34:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.17 2004/06/28 13:07:58 gmsoft Exp $
+
+  28 Jun 2004; Guy Martin <gmsoft@gentoo.org> sylpheed-0.9.10-r1.ebuild:
+  Marked stable on hppa.
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/sylpheed-0.9.12-64bit.patch, sylpheed-0.9.12.ebuild,
