@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 970dd252a9e153c998f98c22c136a3fa calamaris-2.59.ebuild 579
-MD5 3905f3619dd4ada7fa2a41a3b312b038 calamaris-2.51.ebuild 601
-MD5 79c05f5c1f13e316d16959b20969eedf ChangeLog 1016
+MD5 7c858d1522b0a8e65a68e3d4ff61f476 calamaris-2.59.ebuild 584
+MD5 2634bc3dc2497b5d72827762e99a5c25 ChangeLog 1175
 MD5 e0407ed1cf5f670e1cb0b92ff677ab87 metadata.xml 285
-MD5 4f92674df492c1c0c1673d2eef0c521c calamaris-2.57.ebuild 604
-MD5 f7cf3540b8ca4b0baa1b728b7d2622b6 files/digest-calamaris-2.51 65
+MD5 6c65015fa1d8bb754cece6c97cebcc01 calamaris-2.57.ebuild 606
 MD5 33cdcd613db9c453c4bfec820753e3a4 files/digest-calamaris-2.57 65
 MD5 560ba0df8a31604d365899566009c309 files/digest-calamaris-2.59 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjNqpT+MN7JbqCpMRAvzVAJwNHW0e4m0X5tAd22Wp/UcWAx3/JwCeJe7J
-s4MJv8I/Bnt5x+Ldt1owg5M=
-=MPdu
------END PGP SIGNATURE-----
