@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.8.6.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.8.6.ebuild,v 1.3 2002/07/18 14:50:22 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 SRC_URI="http://www.snort.org/releases/${P}.tar.gz"
 HOMEPAGE="http://www.snort.org"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1
