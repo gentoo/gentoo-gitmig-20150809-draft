@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20020729.ebuild,v 1.3 2002/12/09 04:17:43 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20020729.ebuild,v 1.4 2003/01/08 01:40:54 george Exp $
+
+IUSE=""
 
 Name="balsa"
 
@@ -15,17 +17,17 @@ SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
-DEPEND="virtual/glibc 
-	sys-devel/binutils 
-	app-sci/lard 
-	dev-libs/gmp 
-	sys-devel/perl 
+DEPEND="virtual/glibc
+	sys-devel/binutils
+	app-sci/lard
+	dev-libs/gmp
+	sys-devel/perl
 	x11-libs/gtk+"
 
-RDEPEND="${DEPEND} 
-	dev-util/guile 
+RDEPEND="${DEPEND}
+	dev-util/guile
 	media-gfx/graphviz"
 
 S=${WORKDIR}/${Name}-${PV}
@@ -37,7 +39,7 @@ src_unpack() {
 src_compile() {
 	# compile balsa
 	econf
-	
+
 	cd bin
 	sed -e "s: \$(bindir): \$(DESTDIR)\$(bindir):g" Makefile > Makefile.1
 	cp Makefile.1 Makefile
@@ -66,7 +68,7 @@ src_install() {
 	dodoc ${DISTDIR}/balsa-manual.pdf
 
 	# install tech
-        cd ${WORKDIR}/balsa-tech-ams-1.0
+	cd ${WORKDIR}/balsa-tech-ams-1.0
 	make DESTDIR=${D} install || die "make install failed"
 
 	cd ${WORKDIR}/balsa-tech-verilog-1.0

@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/tbass
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.3 2002/12/13 10:56:16 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.4 2003/01/08 01:40:54 george Exp $
+
+  07 Jan 2003; George Shapovalov <george@gentoo.org> tbass-20020729.ebuild :
+  added IUSE
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
