@@ -1,4 +1,4 @@
-MD5 5412791b1305bd3819eb15b78d2a8a6f files/kigb 217
-MD5 6ac5bccf9131a9a661b9a9c66f6dc4a9 files/digest-kigb-1.5.6 60
-MD5 f7bf7237485fcfdf1dd6391639ddd915 kigb-1.5.6.ebuild 525
 MD5 64686507395d72a187af2d8e81bc59cc ChangeLog 486
+MD5 f7bf7237485fcfdf1dd6391639ddd915 kigb-1.5.6.ebuild 525
+MD5 6ac5bccf9131a9a661b9a9c66f6dc4a9 files/digest-kigb-1.5.6 60
+MD5 5412791b1305bd3819eb15b78d2a8a6f files/kigb 217
