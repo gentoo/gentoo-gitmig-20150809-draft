@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/gtk-engines-thinice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.6 2003/06/19 09:51:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.7 2003/07/02 18:03:30 gmsoft Exp $
 
 *gtk-engines-thinice-2.0.2-r1 (19 Jun 2003)
 
@@ -9,6 +9,9 @@
   porting gtk theme engine to new eclass format
 
 *gtk-engines-thinice-2.0.2 (4 Feb 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> gtk-engines-thinice-2.0.2.ebuild :
+  Added hppa to KEYWORDS.
 
   09 Apr 2003; Todd Sunderlin <todd@gentoo.org>
   gtk-engines-thinice-2.0.2.ebuild:

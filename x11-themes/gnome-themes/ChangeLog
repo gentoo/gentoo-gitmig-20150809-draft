@@ -1,8 +1,11 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.15 2003/06/19 09:55:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.16 2003/07/02 18:03:59 gmsoft Exp $
 
 *gnome-themes-2.2.2-r1 (19 Jun 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnome-themes-2.2.2-r1.ebuild :
+  Added ~hppa to KEYWORDS.
 
   19 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnome-themes-2.2.2-r1.ebuild:
   porting gtk theme engine to new eclass format
@@ -13,6 +16,9 @@
   New version
 
 *gnome-themes-2.2.1 (13 Mar 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnome-themes-2.2.1.ebuild :
+  Added hppa to KEYWORDS.
 
   09 Apr 2003; Todd Sunderlin <todd@gentoo.org> gnome-themes-2.2.1.ebuild:
   Marked stable for sparc.
