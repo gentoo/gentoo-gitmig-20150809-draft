@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0.ebuild,v 1.1 2003/02/28 04:28:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0.ebuild,v 1.2 2003/02/28 04:57:39 gerk Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -174,7 +174,7 @@ src_unpack() {
 	
 	# enable the nv driver on ppc
 	if use ppc; then
-		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-enable-nv-on-ppc.patch || die
+		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-enable-nv-on-ppc.patch 
 	fi
 
 	# Fix HOME and END keys to work in xterm, bug #15254
