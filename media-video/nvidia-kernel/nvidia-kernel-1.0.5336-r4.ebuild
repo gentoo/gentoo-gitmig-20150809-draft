@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r4.ebuild,v 1.2 2004/06/25 00:47:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r4.ebuild,v 1.3 2004/06/30 07:58:17 cyfred Exp $
 
 inherit eutils kmod
 
@@ -11,6 +11,7 @@ S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}/usr/src/nv"
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-${PKG_V}.run"
+IUSE=""
 
 # The slot needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
@@ -92,6 +93,8 @@ src_unpack() {
 	then
 		# Add sysfs support
 		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-basic-sysfs-support-v2.patch
+		# Add koutput support to kbuild (this is the BIGGEST hack)
+		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-kbuild-koutput-support.patch
 	fi
 
 	# if you set this then it's your own fault when stuff breaks :)
@@ -114,7 +117,7 @@ src_compile() {
 
 		unset ARCH
 	fi
-	make IGNORE_CC_MISMATCH="yes" SYSSRC="${KERNEL_DIR}" \
+	make IGNORE_CC_MISMATCH="yes" SYSSRC="${KERNEL_DIR}" KV_OUT="${KV_OUTPUT}" \
 		clean module V=1 || die "Failed to build module"
 }
 
