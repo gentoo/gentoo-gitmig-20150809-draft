@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.1-r1.ebuild,v 1.4 2004/08/27 03:13:55 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0.1-r1.ebuild,v 1.5 2004/09/03 21:04:57 eradicator Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.icecast.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ppc64"
+KEYWORDS="x86 ~ppc sparc ~alpha amd64 ppc64"
 IUSE="curl"
 
 DEPEND="virtual/libc
