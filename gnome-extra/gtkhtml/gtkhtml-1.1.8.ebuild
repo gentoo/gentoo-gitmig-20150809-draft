@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.8.ebuild,v 1.8 2003/09/08 05:22:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.8.ebuild,v 1.9 2003/09/28 08:31:52 liquidx Exp $
 
 IUSE="nls gnome"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha"
 
 # peg gtkhtml at gal-0.23 because it might get confused with gal-1.99
-RDEPEND="=gnome-extra/gal-0.23*
+RDEPEND="<gnome-extra/gal-1.99
 	<gnome-base/control-center-1.99.0
 	>=gnome-base/libghttp-1.0.9-r1
 	>=dev-libs/libunicode-0.4-r1
