@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.5.1.ebuild,v 1.1 2004/04/14 02:44:42 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.5.1.ebuild,v 1.2 2004/05/19 04:22:36 khai Exp $
 
 inherit gnome2
 
@@ -21,3 +21,10 @@ RDEPEND=">=app-text/scrollkeeper-0.3.11
 DEPEND="${RDEPEND}
 	sys-boot/grub
 	>=dev-util/pkgconfig-0.12.0"
+
+src_unpack()
+{
+	unpack ${A}
+	cd ${S}/po
+	epatch ${FILESDIR}/Makefile.in.in.patch
+}
