@@ -1,4 +1,5 @@
-MD5 e834b311469395afe35ce9a33c0ba6e6 ChangeLog 418
-MD5 b4498ded29512a74f5ffe108e2e60774 gtk-qt-engine-0.5.ebuild 649
+MD5 d2777b52ac237f0dc7a2455ea9f58286 gtk-qt-engine-0.5.ebuild 799
+MD5 a7566fbc498b5d34db9f38dcb6a18b3b ChangeLog 618
 MD5 5d0c50012374761745d511ea0ff0fbb5 metadata.xml 195
+MD5 e196ce1ba2450ad5143189c23599dea7 files/scrollbars.patch 590
 MD5 c14fd0a50b68b19f5a9ad65022681cb1 files/digest-gtk-qt-engine-0.5 70

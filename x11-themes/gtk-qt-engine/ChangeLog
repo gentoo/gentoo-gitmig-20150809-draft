@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-qt-engine
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/ChangeLog,v 1.1 2004/08/23 05:38:55 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/ChangeLog,v 1.2 2004/09/03 13:23:16 brad Exp $
+
+  03 Sep 2004; Brad Laue <brad@gentoo.org> +files/scrollbars.patch,
+  gtk-qt-engine-0.5.ebuild:
+  Add a small fix for GTK+ scrollbars, remove spurious dependency on qtpixmap,
+  and add arts support.
 
 *gtk-qt-engine-0.5 (23 Aug 2004)
 
