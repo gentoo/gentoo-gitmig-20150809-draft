@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.21.ebuild,v 1.4 2003/09/29 18:44:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.21.ebuild,v 1.5 2003/12/02 00:29:01 iggy Exp $
 
 UML_VERSION="${PV}"
 UML_PATCH="uml-patch-2.4.21-1"
@@ -31,6 +31,9 @@ src_unpack() {
 	fi
 	cd ${S}
 	bzcat ${DISTDIR}/${UML_PATCH}.bz2 | patch -p1
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+
 	echo "Preparing for compilation..."
 
 	#fix silly permissions in tarball
