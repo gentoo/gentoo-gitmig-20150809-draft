@@ -25,3 +25,4 @@ move sys-apps/tpctl app-laptop/tpctl
 move sys-apps/configure-thinkpad app-laptop/configure-thinkpad
 move sys-apps/tpb app-laptop/tpb
 move sys-apps/acpi4asus app-laptop/acpi4asus
+move sys-apps/i8kutils app-laptop/i8kutils
