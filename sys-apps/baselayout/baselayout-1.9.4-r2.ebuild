@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r2.ebuild,v 1.2 2004/06/06 23:23:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r2.ebuild,v 1.3 2004/06/13 05:04:21 tgall Exp $
 
 inherit flag-o-matic eutils
 
@@ -238,6 +238,8 @@ src_install() {
 	kdir /var/spool
 	kdir /var/state
 	kdir -m 1777 /var/tmp
+
+	use ppc64 && kdir /sys
 
 	dodir /etc/init.d		# .keep file might mess up init.d stuff
 	dodir /var/db/pkg		# .keep file messes up Portage when looking in /var/db/pkg
