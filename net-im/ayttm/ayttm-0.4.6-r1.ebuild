@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.6-r1.ebuild,v 1.1 2004/07/01 11:37:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.6-r1.ebuild,v 1.2 2004/07/03 11:27:13 dholm Exp $
 
 # arts causes segfault
 IUSE="truetype esd gnome nls"
@@ -11,7 +11,7 @@ HOMEPAGE="http://ayttm.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc -alpha"
+KEYWORDS="x86 ~sparc -alpha ~ppc"
 
 DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*

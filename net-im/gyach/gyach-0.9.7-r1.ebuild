@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/gyach-0.9.7-r1.ebuild,v 1.2 2004/07/02 07:44:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/gyach-0.9.7-r1.ebuild,v 1.3 2004/07/03 11:21:16 dholm Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based Yahoo! chat client"
 SRC_URI="http://www4.infi.net/~cpinkham/gyach/code/${P}.tar.gz"
 HOMEPAGE="http://www4.infi.net/~cpinkham/gyach/"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
