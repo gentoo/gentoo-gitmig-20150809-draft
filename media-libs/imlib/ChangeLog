@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/imlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.5 2002/04/12 18:47:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.6 2002/05/04 14:53:29 seemant Exp $
+
+*imlib-1.9.14 (4 May 2002)
+
+  4 May 2002; Seemant Kulleen <seemant@gentoo.org> imlib-1.9.14.ebuild
+  files/digest-imlib-1.9.14 :
+
+  Version bump, and now tiff, libpng, libungif, giflib and jpeg-6 are all
+  REQUIRED.  Go figure.   Thanks to TMB- in #gentoo for the upgrade notice.
 
 *imlib-1.9.13-r1 (12 Apr 2002)
 
