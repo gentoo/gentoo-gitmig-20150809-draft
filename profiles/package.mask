@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <usata@gentoo.org> (1 Nov 2003)
+# Ruby 1.8.1 Preview release.
+=dev-lang/ruby-1.8.1_pre*
+
 # <max@gentoo.org> (30 Oct 2003)
 # Cyrus-imapd beta. Version 2.2.2_beta is planned to be the last release
 # before going final/stable.
@@ -64,11 +68,6 @@ x11-misc/med
 # <spyderous@gentoo.org> (13 Oct 2003)
 # Masked until xfree stops installing the same files
 x11-misc/synaptics
-
-# <usata@gentoo.org> (11 Oct 2003)
-# SLOT support, testing.
-=dev-lang/ruby-1.6.8-r2
-=dev-lang/ruby-1.8.0-r1
 
 # <tseng@gentoo.org> (11 Oct 2003)
 # Mask pending a solution to bsetroot
