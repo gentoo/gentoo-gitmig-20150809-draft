@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-1.0.ebuild,v 1.1 2004/05/24 02:14:35 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-1.0.ebuild,v 1.2 2004/05/24 02:19:30 mboman Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://oinkmaster.sf.net/"
 IUSE="X"
 
 DEPEND=""
-RDEPEND="dev-lang/perl
+RDEPEND=">=dev-lang/perl-5.6.1
 	X? ( dev-perl/perl-tk )
 	net-misc/wget
 	app-arch/tar
