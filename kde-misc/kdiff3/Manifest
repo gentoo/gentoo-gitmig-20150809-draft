@@ -1,8 +1,18 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 44da3454b6857d6c2fe09f0c0ac17a4d kdiff3-0.9.86.ebuild 478
-MD5 52207ab9ad3c4713d44180bf463c48b4 ChangeLog 2932
-MD5 baf8a8178c109ead9eea730157d9ad7a kdiff3-0.9.88.ebuild 484
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1ad18e2e4c960249d9be81d84e446068 kdiff3-0.9.87.ebuild 483
-MD5 a733b0724ffb1c8b34a8416a1ebfab2f files/digest-kdiff3-0.9.88 66
-MD5 1dbd541a17c6fb2301c4f6a5c5d35d10 files/digest-kdiff3-0.9.87 66
+MD5 44da3454b6857d6c2fe09f0c0ac17a4d kdiff3-0.9.86.ebuild 478
+MD5 40a387ccce883ce6cac34b964977fc9c ChangeLog 3030
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 b768d12c32bb2f573767e467957f4c3c kdiff3-0.9.88.ebuild 480
 MD5 802d1d72d68f79e1d1506cfe88ed3802 files/digest-kdiff3-0.9.86 66
+MD5 1dbd541a17c6fb2301c4f6a5c5d35d10 files/digest-kdiff3-0.9.87 66
+MD5 a733b0724ffb1c8b34a8416a1ebfab2f files/digest-kdiff3-0.9.88 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUvWQntT9W3vfTuoRAjN0AJ9d0balJAdpV8EBpdbq9OMyBwM3owCgkZOU
+nz7BmLaDcQ8d3YWsVJsfXIU=
+=F/6O
+-----END PGP SIGNATURE-----
