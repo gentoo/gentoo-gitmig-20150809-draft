@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.60 2005/01/08 23:40:16 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.61 2005/01/16 22:28:36 foser Exp $
+
+*vte-0.11.11-r2.ebuild (16 Jan 2005)
+
+  16 Jan 2005; foser <foser@gentoo.org> vte-0.11.11-r2.ebuild :
+  Add row patch to fix a scroll corruption problem (#73443)
 
   08 Jan 2005; Tom Martin <slarti@gentoo.org> vte-0.11.11-r2.ebuild:
   Stable on amd64.

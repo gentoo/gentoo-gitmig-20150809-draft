@@ -1,0 +1,24 @@
+? .vte.c.swp
+? diff
+? diff2
+Index: vte.c
+===================================================================
+RCS file: /cvs/gnome/vte/src/vte.c,v
+retrieving revision 1.404
+diff -u -3 -p -r1.404 vte.c
+--- vte.c	2 May 2004 06:43:01 -0000	1.404
++++ vte.c	17 Aug 2004 21:08:50 -0000
+@@ -705,11 +705,11 @@ vte_terminal_scroll_region(VteTerminal *
+ 		if (delta > 0) {
+ 			vte_invalidate_cells(terminal,
+ 					     0, terminal->column_count,
+-					     0, delta);
++					     row, delta);
+ 		} else {
+ 			vte_invalidate_cells(terminal,
+ 					     0, terminal->column_count,
+-					     terminal->row_count + delta,
++					     row + terminal->row_count + delta,
+ 					     -delta);
+ 		}
+ 		repaint = FALSE;
