@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.5 2003/11/18 14:25:01 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.6 2004/01/21 19:14:48 mboman Exp $
+
+  17 Jan 2004; Michael Boman <mboman@gentoo.org> files/gentoo.init:
+  Made init script less verbose
 
 *prelude-lml-0.8.6 (17 Nov 2003)
 
