@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 511c3c6e14c31b5b29c0f61d75ce21c0 ruby-bsearch-1.5-r1.ebuild 575
 MD5 1b8329268a8b04b3d1609317b6a5081e ChangeLog 1551
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 4fe0d4212fea102927b164803a5b5f29 ruby-bsearch-1.5-r1.ebuild 587
 MD5 2c85065a5f86d5ba9e2892aa4bb31da5 files/digest-ruby-bsearch-1.5-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBQyuICHk4+ZoBpvsRAhdwAKCv6JI9oQknUH26UrXCEmirI/gn4QCbBNtW
-Gsg4/jBuUTvEVfjYNnxnsZ8=
-=pkLL
------END PGP SIGNATURE-----

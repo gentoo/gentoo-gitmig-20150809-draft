@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5248ee0a2761cdb78f6652cdb3bd7aac ruby-romkan-0.4-r1.ebuild 593
 MD5 9f14adeccaefb2f4de5a47cedb60d602 ChangeLog 1628
 MD5 3631f5ce1eb4c65b8c4e6fe120e44d02 metadata.xml 174
+MD5 58e7641bea49a10bae66d367ab6e5a12 ruby-romkan-0.4-r1.ebuild 605
 MD5 7039f2cfd63e3236949cdf34a80bc5d5 files/digest-ruby-romkan-0.4-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBQyxdCHk4+ZoBpvsRAiaQAKCdMdREaJW1PmNp2yY0FVs43CzS5wCgiDm5
-eCVauXoB3oTeuKswZ+bIDR0=
-=LfEM
------END PGP SIGNATURE-----
