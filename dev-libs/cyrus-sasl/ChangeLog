@@ -1,17 +1,22 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.16 2002/09/07 09:18:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.17 2002/09/10 14:47:03 raker Exp $
 
 *cyrus-sasl-2.1.7-r1 (23 Aug 2002)
 
+  09 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  cyrus-sasl-2.1.7-r1.ebuild :
+  Removed undocumented and unneeded use flags.  Added kerberos flag.
+  All default enabled authenticators which don't require external
+  programs or libraries are compiled in.
+
   07 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
   cyrus-sasl-2.1.7-r1.ebuild :
-
   USE flag adjustments, as discovered by jap1@ionet.net (Jacob Perkins) and
   kevin@aptbasilicata.it (j2ee) in bug #7598.
 
-  23 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> files/digest-cyrus-sasl-2.1.7-r1 :
-
+  23 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org>
+  files/digest-cyrus-sasl-2.1.7-r1 :
   Added digest file..
 
 *cyrus-sasl-2.1.7-r1 (22 Aug 2002)

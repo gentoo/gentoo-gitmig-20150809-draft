@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7-r1.ebuild,v 1.2 2002/09/07 09:18:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7-r1.ebuild,v 1.3 2002/09/10 14:47:03 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -18,7 +18,10 @@ DEPEND=">=sys-libs/db-3.2
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	berkdb? ( >=sys-libs/db-3.2.9 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
-	mysql? ( >=dev-db/mysql-3.23.51 )"
+	mysql? ( >=dev-db/mysql-3.23.51 )
+	kerberos? ( >=app-crypt/krb5-1.2.5 )"
+	
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 
@@ -47,29 +50,11 @@ src_compile() {
 		myconf="${myconf} --with-dblib=berkeley"
 	fi
 
-	use sasl-anon && myconf="${myconf} --enable-anon" \
-		|| myconf="${myconf} --disable-anon"
-
-	use sasl-login && myconf="${myconf} --enable-login" \
-		|| myconf="${myconf} --disable-login"
-
-	use sasl-scram && myconf="${myconf} --enable-scram" \
-		|| myconf="${myconf} --disable-scram"
-
-	use sasl-plain && myconf="${myconf} --enable-plain" \
-		|| myconf="${myconf} --disable-plain"
-
-	use sasl-krb4 && myconf="${myconf} --enable-krb4" \
-		|| myconf="${myconf} --disable-krb4"
-
-	use sasl-gssapi && myconf="${myconf} --enable-gssapi" \
-		|| myconf="${myconf} --disable-gssapi"
-
-	use sasl-opie && myconf="${myconf} --enable-opie" \
-		|| myconf="${myconf} --disable-opie"
-
 	use static && myconf="${myconf} --enable-static --with-staticsasl" \
 		|| myconf="${myconf} --disable-static --without-staticsasl"
+
+	use kerberos && myconf="${myconf} --enable-krb4" \
+		|| myconf="${myconf} --disable-krb4"	
 
 	econf \
 		--with-saslauthd=/var/lib/sasl2 \
@@ -80,13 +65,9 @@ src_compile() {
 		--with-dbpath=/etc/sasl2/sasldb2 \
 		--with-des \
 		--with-rc4 \
-		--enable-pam \
-		--enable-login \
 		--with-gnu-ld \
 		--enable-shared \
 		--disable-sample \
-		--enable-cram \
-		--enable-digest \
 		${myconf} || die "bad ./configure"
 
 	make || die "compile problem"
