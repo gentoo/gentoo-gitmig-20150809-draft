@@ -1,0 +1,36 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.1 2004/05/26 16:24:33 lv Exp $
+
+# Anything that relies on vm86.h will not built on amd64
+# SVGAlib doesnt build
+svga
+
+# There is no JDK for x86_64 yet
+#java
+#jikes
+#junit
+
+# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
+# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
+# not be many flag dependant in this case
+mmx
+sse
+sse2
+3dnow
+
+# x86 binary only for now
+icc
+
+# Firebird doesnt build on amd64
+firebird
+
+# Updated 03/21/2004, Jason Huebel <jhuebel@gentoo.org>
+# DirectFB works now
+# DirectFB doesnt build on amd64
+# directfb
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
+
+# x86 binary only, used by php
+fdftk
