@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.20 2004/12/30 12:22:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.21 2005/01/03 22:29:25 vapier Exp $
 
 # What's in this kernel?
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 	mirror://gentoo/linux-2.6.8.1-sh-headers.patch.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="-* amd64 arm hppa ia64 ~ppc ppc64 ~sparc sh x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 ~sparc sh x86"
 IUSE=""
 
 if [[ ${CTARGET} = ${CHOST} ]]
