@@ -1,26 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/wmbatppc/wmbatppc-1.0-r1.ebuild,v 1.3 2004/06/24 22:00:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/wmbatppc/wmbatppc-1.0-r1.ebuild,v 1.4 2004/06/28 02:38:16 vapier Exp $
 
-S=${WORKDIR}/wmbatppc
-DESCRIPTION="wmbatppc is a small battery-monitoring dockapp. It works on G3/G4 Powerbooks and iBooks."
-SRC_URI="http://titelou.free.fr/wmbatppc/${P}.tar.gz"
+DESCRIPTION="small battery-monitoring dockapp for G3/G4 laptops"
 HOMEPAGE="http://titelou.free.fr/wmbatppc/"
+SRC_URI="http://titelou.free.fr/wmbatppc/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="1"
+KEYWORDS="-* ppc"
+IUSE=""
 
 DEPEND="virtual/x11
 	app-laptop/pmud"
 
-SLOT="1"
-LICENSE="GPL-2"
-IUSE=""
-KEYWORDS="ppc -amd64"
+S=${WORKDIR}/wmbatppc
 
 src_compile() {
 	make || die
 }
 
-src_install () {
-	dodir /usr/bin/
-	dobin wmbatppc
+src_install() {
+	dobin wmbatppc || die
 	doman wmbatppc.1
 }

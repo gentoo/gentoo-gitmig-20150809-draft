@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-4.8.ebuild,v 1.3 2004/06/24 22:00:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-4.8.ebuild,v 1.4 2004/06/28 02:37:18 vapier Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc AUTHORS COPYING ChangeLog README SUPPORTED-MODELS TECHNOTES
+	dodoc AUTHORS ChangeLog README SUPPORTED-MODELS TECHNOTES
 	dodir /lib/modules/${KV}/thinkpad
 	cp ${S}/drivers/{thinkpad,smapi,superio,rtcmosram,thinkpadpm}.o \
 		${D}/lib/modules/${KV}/thinkpad
@@ -59,7 +59,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	/usr/sbin/update-modules || return 0
+	[ "${ROOT}" == "/" ] && /usr/sbin/update-modules
 	if ! grep -q '^ *INCLUDE.*devfs\.d' /etc/devfsd.conf; then
 		ewarn 'Your /etc/devfsd.conf is missing the include for'
 		ewarn '/etc/devfs.d/! Please fix this by adding'
@@ -71,8 +71,4 @@ pkg_postinst() {
 		ewarn '/etc/devfs.d/thinkpad, so you can remove it from'
 		ewarn '/etc/devfsd.conf if you like.'
 	fi
-}
-
-pkg_prerm() {
-	/sbin/modprobe -r smapi superion rtcmosram thinkpadpm thinkpad
 }
