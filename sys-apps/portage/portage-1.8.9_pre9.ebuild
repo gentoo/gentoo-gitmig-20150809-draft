@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre9.ebuild,v 1.2 2002/02/22 06:25:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre9.ebuild,v 1.3 2002/02/22 17:21:44 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"
@@ -43,11 +43,8 @@ src_install() {
 
 	#python modules
 	cd ${S}/pym
-	insinto /usr/lib/portage/pym
-	doins xpak.py portage.py
-	dodir /usr/lib/python2.2/site-packages
-	dosym ../../portage/pym/xpak.py /usr/lib/python2.2/site-packages/xpak.py
-	dosym ../../portage/pym/portage.py /usr/lib/python2.2/site-packages/portage.py
+	insinto /usr/lib/python2.2/site-packages
+	doins xpak.py portage.py output.py
 
 	# we gotta compile these modules
 	spython -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
