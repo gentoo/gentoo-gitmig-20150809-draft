@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.14.ebuild,v 1.1 2005/01/02 07:05:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.14.ebuild,v 1.2 2005/01/02 13:16:03 johnm Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,10 +14,11 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${GPG_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 # ~arm ~ia64 ~mips ~s390 ~sparce missing until libassuan gets the keywords
+# ~alpha missing for dev-libs/libksba-0.9.7
 
-IUSE="nls caps"
+IUSE="nls caps threads"
 
 RDEPEND="<app-crypt/gnupg-1.9
 	nls? ( sys-devel/gettext )
@@ -25,7 +26,9 @@ RDEPEND="<app-crypt/gnupg-1.9
 	>=dev-libs/libassuan-0.6.9
 	caps? ( sys-libs/libcap )
 	>=dev-libs/libgpg-error-0.7
-	>=dev-libs/libgcrypt-1.1.94"
+	>=dev-libs/libgcrypt-1.1.94
+	>=dev-libs/libksba-0.9.7
+	threads? ( dev-libs/pth )"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
@@ -43,6 +46,7 @@ src_compile() {
 		--libexecdir=/usr/lib \
 		--enable-agent-only \
 		`use_with caps capabilities` \
+		`use_enable threads` \
 		|| die
 
 	emake || die

@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpg-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.1 2005/01/02 07:05:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.2 2005/01/02 13:16:03 johnm Exp $
+
+  02 Jan 2005; John Mylchreest <johnm@gentoo.org> gpg-agent-1.9.14.ebuild:
+  fixing up libksba dep which was missing. Adding threads fix (libpth). Now
+  compiles properly on all systems?
 
 *gpg-agent-1.9.14 (02 Jan 2005)
 
