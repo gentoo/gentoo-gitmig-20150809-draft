@@ -1,4 +1,6 @@
+MD5 5d26f0b8bf347230122fd72e0a5670bb xfce4-taskbar-0.2.2.ebuild 724
 MD5 efb0b8386f6618697191e0954069ba18 xfce4-taskbar-0.1.0.ebuild 733
-MD5 092b3c194faf1ffb4fd5b12162e10680 ChangeLog 368
+MD5 b57c2f1ea2723e139ee452cf040221bc ChangeLog 496
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 a8cfc3025b979736815bd89d43f815e0 files/digest-xfce4-taskbar-0.1.0 78
+MD5 78a9b99c33be4401990751c6d16d70db files/digest-xfce4-taskbar-0.2.2 78
