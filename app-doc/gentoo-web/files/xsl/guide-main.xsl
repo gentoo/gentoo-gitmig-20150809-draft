@@ -8,7 +8,7 @@
 <html>
 <head>
     <link title="new" rel="stylesheet" href="/main-new.css" type="text/css"></link>
-<title>Gentoo Linux 
+	<title>Gentoo Linux 
 	<xsl:choose>
 	<xsl:when test="/guide/@type='project'">
 		Projects
@@ -32,13 +32,15 @@
 	<!--<table border="0" width="100%" cellspacing="0" cellpadding="0">-->
 	<table border="0" cellspacing="0" cellpadding="0">
 		<tr>
-			<td valign="top" height="168" width="30%" bgcolor="#45347b">
+			<td valign="top" height="125" width="1%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
-					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img border="0" src="/images/gtop-new.jpg"/></a></td></tr>
-					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img border="0" src="/images/gbot-new.gif"/></a></td></tr>
+<!--					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img border="0" src="/images/gtop-new.jpg"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img border="0" src="/images/gbot-new.gif"/></a></td></tr> -->
+					<tr><td class="logobg" valign="top" align="center" height="88"><a href="/index.html"><img border="0" src="/images/gtop-s.jpg"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="36"><a href="/index.html"><img border="0" src="/images/gbot-s.gif"/></a></td></tr>
 				</table>
 			</td>
-			<td valign="bottom" height="168" width="70%" bgcolor="#000000">
+			<td valign="bottom" height="168" bgcolor="#000000">
 				<!--Netscape 4.7 table hack-->
 				<table class="menu" border="0" cellpadding="10" cellspacing="0" width="100%">
 				<tr>
@@ -91,7 +93,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2" valign="top" height="96" align="right" width="30%" bgcolor="#ffffff">
+			<td colspan="2" valign="top" align="right" bgcolor="#ffffff">
 		
 <!--content begin-->
 
@@ -144,25 +146,25 @@
 	<!--<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">-->
 	<table border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tr>
-			<td rowspan="2" valign="top" height="168" width="30%" bgcolor="#45347b">
+			<td rowspan="2" valign="top" height="125" width="1%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
-					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img border="0" src="/images/gtop-new.jpg"/></a></td></tr>
-					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img border="0" src="/images/gbot-new.gif"/></a></td></tr>
-				</table>
+					<tr><td class="logobg" valign="top" align="center" height="88"><a href="/index.html"><img border="0" src="/images/gtop-s.jpg"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="36"><a href="/index.html"><img border="0" src="/images/gbot-s.gif"/></a></td></tr>
+	</table>
 			</td>
 			
-			<td valign="middle" align="center" width="70%" bgcolor="#000000">
+			<td valign="middle" align="center" bgcolor="#000000">
 				<table border="0" cellpadding="0" cellspacing="0">
 				<tr>
 					<td align="center">
-						<p class="infotext"><font color="#00ff00"><br/><a href="http://www.qksrv.net/click-477620-5032686" target="_top" ><img src="http://www.qksrv.net/image-477620-5032686" width="468" height="60" alt="DDR Memory at Crucial.com" border="0"/></a><br/><b>inventor</b> and <b>cvs.gentoo.org</b> use Crucial RAM; click above, buy some... and support <i>us</i>!</font></p>
-					</td>
+<!--						<p class="infotext"><font color="#00ff00"><br/><a href="http://www.qksrv.net/click-477620-5032686" target="_top" ><img src="http://www.qksrv.net/image-477620-5032686" width="468" height="60" alt="DDR Memory at Crucial.com" border="0"/></a><br/><b>inventor</b> and <b>cvs.gentoo.org</b> use Crucial RAM; click above, buy some... and support <i>us</i>!</font></p> -->
+</td>
 				</tr>
 				</table>
 			</td>
 		</tr>
 		<tr>
-			<td valign="bottom" align="left" width="70%" bgcolor="#000000">
+			<td valign="bottom" align="left" bgcolor="#000000">
 			<p class="menu">
 				<xsl:choose>
 					<xsl:when test="/mainpage/@id='about'">
@@ -200,26 +202,25 @@
 			</td>
 		</tr>
 		<tr>
-			<td valign="top" height="96" align="right" width="30%" bgcolor="#dddaec">
+			<td valign="top" align="right" width="1%" bgcolor="#dddaec">
 				<!--<table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">-->
 				<table width="100%" cellspacing="0" cellpadding="0" border="0">
 					<tr><td height="1%" valign="top" align="right">
-						<table border="0" cellpadding="0" cellspacing="0">
-						<tr><td align="center" valign="middle">
-							<p bgcolor="#eeebfd" class="altmenu">Download Mirrors:<br/>
-							<a class="altlink" href="http://www.ibiblio.org/gentoo">ibiblio.org (USA)</a><br/>
-							<a class="altlink" href="http://download.sourceforge.net/pub/mirrors/metalab/Linux/distributions/gentoo/">SourceForge (USA)</a></p>
-						</td><td>
 							<img src="/images/gridtest.gif"/>
-						</td></tr>
-						</table>
 					</td></tr>
-					<tr><td height="99%" valign="top" align="center">
+					<tr><td height="99%" valign="top" align="right">
 						<!--info goes here-->			
-						<table width="90%" cellspacing="0" cellpadding="5" border="0">
+						<table cellspacing="0" cellpadding="5" border="0">
 						<!--<table width="90%" height="100%" cellspacing="0" cellpadding="5" border="0">-->
 						<tr><td valign="top">
-						<p class="altmenu">User Docs:<br/>
+						<p class="altmenu">
+						Download Mirrors:<br/>
+							<a class="altlink" href="http://www.ibiblio.org/gentoo">ibiblio.org (USA)</a><br/>
+							<a class="altlink" href="http://download.sourceforge.net/pub/mirrors/metalab/Linux/distributions/gentoo/">SourceForge (USA)</a><br/>
+							<a class="altlink" href="http://cfx5.tgv.net/gentoo/www.ibiblio.org/pub/linux/distributions/gentoo/">tgv.net (France, high speed)</a><br/><br/>
+<a href="http://www.qksrv.net/click-477620-5033206" target="_top" >
+<img src="http://www.qksrv.net/image-477620-5033206" width="88" height="31" alt="Factory-direct memory upgrades" border="0"/></a><br/><br/>
+User Docs:<br/>
 						<a class="altlink" href="/doc/faq.html">FAQ</a><br/>
 						<a class="altlink" href="/doc/desktop.html">Desktop Guide</a><br/>
 						<a class="altlink" href="/doc/portage-user.html">Portage User Guide</a><br/>
@@ -227,7 +228,8 @@
 						<a class="altlink" href="/index-download.html">Binary CD Install Guide</a><br/>
 						<a class="altlink" href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a><br/>
 						<br/>
-						
+										<a href="http://www.qksrv.net/click-477620-57886" target="_top" >
+					<img src="http://www.qksrv.net/image-477620-57886" width="88" height="31" alt="Online Auto Loans" border="0"/></a><br/><br/>	
 						Developer Docs:<br/>
 						<a class="altlink" href="/doc/gentoo-howto.html">Development HOWTO</a><br/>
 						<a class="altlink" href="/doc/xml-guide.html">XML Documentation Guide</a><br/>
@@ -243,11 +245,11 @@
 						Other Resources:<br/>
 						<a class="altlink" href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
 						IRC: #gentoo on <a class="altlink" href="http://www.openprojects.net/">OPN</a><br/>
-						</p></td></tr></table>
+						<br/><br/></p></td></tr></table>
 					</td></tr>
 				</table>
 			</td>
-			<td valign="top" height="96" align="right" width="30%" bgcolor="#ffffff">
+			<td valign="top" align="right" bgcolor="#ffffff">
 		
 <!--content begin-->
 
