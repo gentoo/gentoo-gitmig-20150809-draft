@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.27 2004/06/24 23:00:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.28 2004/07/14 19:40:16 agriffis Exp $
 
 inherit gnuconfig
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_with x` || die
+	econf `use_with X x` || die
 	emake || die "emake failed"
 }
 
