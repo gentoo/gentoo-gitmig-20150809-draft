@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030508.ebuild,v 1.2 2003/05/13 20:23:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030508.ebuild,v 1.3 2003/05/14 20:14:29 mholzer Exp $
 
 inherit eutils base
 
@@ -18,6 +18,7 @@ IUSE="nas arts cups opengl alsa tcltk nptl"
 
 DEPEND="sys-devel/gcc
 	!media-sound/jack-audio-connection-kit
+	!media-sound/jack-cvs
 	sys-devel/flex
 	dev-util/yacc
 	>=sys-libs/ncurses-5.2
