@@ -1,6 +1,16 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.10 2003/02/12 07:56:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.11 2003/03/04 03:38:00 agriffis Exp $
+
+*nfs-utils-1.0.1-r1 (03 Mar 2003)
+
+  03 Mar 2003; Aron Griffis <agriffis@gentoo.org> nfs-utils-1.0.1-r1.ebuild,
+  files/nfs-1:
+  Fix bug 16075 by installing server binaries into /usr/sbin (thanks Tero
+  Pelander for the clue and the updated ebuild). Fix bug 13838 by using
+  rpc.rquotad from the quota package instead of the nfs-utils version (thanks
+  Andrea Barisani for the heads-up). Finally, mark stable on x86 and alpha
+  where I can test as part of the package upgrade phase.
 
 *nfs-utils-1.0.1 (12 Dec 2002)
 
