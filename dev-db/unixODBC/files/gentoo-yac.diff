@@ -1,0 +1,10 @@
+--- sqp/yac.y.orig	2003-06-27 20:34:17.000000000 +0200
++++ sqp/yac.y	2003-06-27 20:34:40.000000000 +0200
+@@ -214,6 +214,7 @@
+ y_escape:
+ 		/* optional */				{ $$ = NULL; }
+ 	|	ESCAPE STRING				{ $$ = $2;   }
++;
+ 
+ y_comparisons:
+ 		y_comparisons OR y_comparisons		{ $$ = sqpStoreCond( sqpor,   $1,   $3,   NULL ); }

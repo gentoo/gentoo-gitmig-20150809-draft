@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.10 2003/07/22 19:35:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.11 2003/07/31 19:36:23 rphillips Exp $
 
 IUSE="qt"
 
@@ -23,6 +23,7 @@ src_unpack() {
 	# need to edit the file to make it DESTDIR sensitive.
 	cp Makefile.in Makefile.orig
 	sed -e "s:touch :touch \${DESTDIR}/:" -e "s:mkdir -p :mkdir -p \${DESTDIR}/:" Makefile.orig > Makefile.in
+	epatch ${FILESDIR}/gentoo-yac.diff
 }
 
 src_compile() {
