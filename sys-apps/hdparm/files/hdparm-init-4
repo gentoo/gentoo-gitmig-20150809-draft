@@ -20,20 +20,20 @@
 # for each device considered, if no args are found in the config file, do not
 # run hdparm.
 
-
 depend() {
     before bootmisc
 }
 
-
 do_hdparm() {
     if [[ ${args:=$all_args} ]]
     then
-        ebegin "Running hdparm on $device"
-        hdparm -q $args $device || ewarn "Failed to run hdparm on $device"
+		orgdevice=`readlink -f $device`
+		if [ -b $orgdevice ]; then
+	        ebegin "Running hdparm on $device"
+		    hdparm -q $args $device || ewarn "Failed to run hdparm on $device"
+		fi
     fi
 }
-
 
 start() {
 
@@ -46,7 +46,7 @@ start() {
     then
 
 		# devfs and udev system
-        for device in $(find /dev/ide -type b -name disc)
+        for device in $(find /dev/ide -name disc)
         do
 
             args=''
@@ -75,7 +75,7 @@ start() {
 
         done
 
-        for device in $(find /dev/ide -type b -name cd)
+        for device in $(find /dev/ide -name cd)
         do
 
             args=''
@@ -107,7 +107,7 @@ start() {
         let count=0
         # of course, the sort approach would fail here if any of the
         # host/bus/target/lun numbers reached 2 digits..
-        for device in $(find /dev/ide -type b -name generic | sort)
+        for device in $(find /dev/ide -name generic | sort)
         do
             eval args=\${generic${count}_args}
             do_hdparm

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.5-r1.ebuild,v 1.1 2004/08/01 14:43:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.5-r2.ebuild,v 1.1 2004/08/03 08:38:19 lanius Exp $
 
 inherit gcc eutils
 
@@ -34,7 +34,7 @@ src_install() {
 	dosbin hdparm contrib/idectl || die
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/hdparm-init-3 hdparm
+	newexe ${FILESDIR}/hdparm-init-4 hdparm
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/hdparm-conf.d.2 hdparm
