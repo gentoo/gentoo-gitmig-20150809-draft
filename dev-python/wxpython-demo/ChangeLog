@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython-demo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.5 2004/07/03 12:30:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.6 2004/07/16 00:27:55 pythonhead Exp $
+
+  15 Jul 2004; Rob Cakebread <pythonhead@gentoo.org>
+  wxpython-demo-2.4.2.4.ebuild:
+  Fixed DOCDIR. Closes bug# 57237
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   wxpython-demo-2.4.0.7.ebuild, wxpython-demo-2.4.1.2.ebuild,
