@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sci</herd>
+<maintainer>
+  <email>kugelfang@gentoo.org</email>
+</maintainer>
+<longdescription>
+AMD Core Math Library provides an implementation of the BLAS,
+LAPACK and FFT libraries highly optimized for AMD x86 and amd64 CPUs.
+</longdescription>
+</pkgmetadata>
