@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3150 2004/09/14 20:05:19 lv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3151 2004/09/15 01:36:57 ribosome Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# Olivier Fisette <ribosome@gentoo.org> (14 Sep 2004)
+# Insufficient testing and many issues. In Portage for testing.
+app-sci/staden
 
 # <lv@gentoo.org> (14 Sep 2004)
 # This release has so many issues it's not even funny. With the insanity
