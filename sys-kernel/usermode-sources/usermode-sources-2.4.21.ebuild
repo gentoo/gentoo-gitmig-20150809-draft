@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.21.ebuild,v 1.3 2003/09/10 16:09:03 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.21.ebuild,v 1.4 2003/09/29 18:44:07 mholzer Exp $
 
 UML_VERSION="${PV}"
 UML_PATCH="uml-patch-2.4.21-1"
@@ -10,7 +10,7 @@ S=${WORKDIR}/linux-${PV}
 # we patch against vanilla-sources only
 
 DESCRIPTION="Full (vanilla) sources for the User Mode Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${PV}.tar.bz2
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${PV}.tar.bz2
 mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2"
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
