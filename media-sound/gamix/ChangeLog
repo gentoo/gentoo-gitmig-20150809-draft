@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gamix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.11 2004/03/25 07:03:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.12 2004/03/27 03:08:11 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gamix-1.99_p14-r1.ebuild:
+  Stable x86.
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   gamix-1.99_p14-r1.ebuild:
