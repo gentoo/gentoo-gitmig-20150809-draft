@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.12 2004/12/28 20:05:45 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.13 2004/12/28 21:00:10 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -185,7 +185,7 @@ kernel_is() {
 	local RESULT operator value test
 	RESULT=0
 	
-	operator="-eq"
+	operator="="
 	if [ "${1}" == "lt" ]
 	then
 		operator="-lt"
