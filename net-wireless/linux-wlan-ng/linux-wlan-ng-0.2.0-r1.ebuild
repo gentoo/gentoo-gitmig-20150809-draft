@@ -1,16 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r1.ebuild,v 1.1 2003/04/03 21:55:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r1.ebuild,v 1.2 2003/04/07 00:08:32 latexer Exp $
 
+
+inherit eutils
 
 IUSE="apm build nocardbus pcmcia pnp trusted usb"
 
-PCMCIA_CS=`best_version sys-apps/pcmcia-cs | sed -e "s:sys-apps/::"`
+PCMCIA_CS="pcmcia-cs-3.2.1"
+PATCH_3_2_2="pcmcia-cs-3.2.1-3.2.2.diff.gz"
+PATCH_3_2_3="pcmcia-cs-3.2.1-3.2.3.diff.gz"
+PATCH_3_2_4="pcmcia-cs-3.2.1-3.2.4.diff.gz"
 PCMCIA_DIR="${WORKDIR}/${PCMCIA_CS}"
 
 DESCRIPTION="The linux-wlan Project"
 SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${P}.tar.gz 
-		pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )"
+		pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_2} )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_3} )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_4} )"
 
 HOMEPAGE="http://linux-wlan.org"
 DEPEND="sys-kernel/linux-headers
@@ -36,12 +44,24 @@ fi
 
 src_unpack() {
 
-	unpack ${A}
-	cd ${S}
+	unpack ${P}.tar.gz
+	if [ -n "`use pcmcia`" ]; then
+		unpack ${PCMCIA_CS}.tar.gz
+		cd ${PCMCIA_DIR}
+		if [ -z "`has_version =sys-apps/pcmcia-cs-3.2.4*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_4}
+		elif [ -z "`has_version =sys-apps/pcmcia-cs-3.2.3*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_3}
+		elif [ -z "`has_version =sys-apps/pcmcia-cs-3.2.2*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_2}
+		fi
+	fi
+
 
 	# Lots of sedding to do to get the man pages and a few other
 	# things to end up in the right place.
 
+	cd ${S}
 	mv man/Makefile man/Makefile.orig
 	sed -e "s:mkdir:#mkdir:" \
 		-e "s:cp nwepgen.man:#cp nwepgen.man:" \
