@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.60 2003/12/30 18:56:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.61 2003/12/30 23:56:41 seemant Exp $
+
+  30 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  coreutils-5.0.91-r3.ebuild:
+  the lsw patch from mandrake has issues for us on amd64 and ia64, so we don't
+  use it. Thanks to Brad House <brad_mssw@gentoo.org> for noticing
 
   30 Dec 2003; Brad House <brad_mssw@gentoo.org> coreutils-5.0.91-r3.ebuild:
   coreutils -r3 is broken bad! See note above KEYWORDS=, marking -*

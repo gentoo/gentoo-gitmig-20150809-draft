@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r3.ebuild,v 1.3 2003/12/30 18:56:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r3.ebuild,v 1.4 2003/12/30 23:56:41 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,15 +22,7 @@ SRC_URI="mirror://gnu/coreutils/${P}.tar.bz2
 SLOT="0"
 LICENSE="GPL-2"
 
-# Error!!!
-# Doing an ls /usr/bin  or  ls /usr/lib causes ls to segfault
-# with this version of coreutils.  Reverting back to coreutils -r2
-# solves it.  ls works on _most_ directories, but not /usr/bin and /usr/lib
-# I expect more problems with it and other utils too, marking -* !!!
-# Brad House <brad_mssw@gentoo.org> 12/30/03
-KEYWORDS="-*"
-
-#KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ~ia64 ~amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ~ia64 ~amd64 ~ppc64"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.49
@@ -55,6 +47,10 @@ src_unpack() {
 		ewarn "Both ACL and SELINUX are not supported together!"
 		ewarn "Will Select SELINUX instead"
 	fi
+
+	# Mandrake's lsw patch caused issues on ia64 and amd64 with ls
+	# Reported upstream, but we don't apply it for now
+	mv ${PATCHDIR}/mandrake/019* ${PATCHDIR}/excluded
 
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/mandrake
 	epatch ${WORKDIR}/${P}-${I18N_PATCH}.patch
