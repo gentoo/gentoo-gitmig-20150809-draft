@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.72 2004/10/03 19:07:58 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.73 2004/10/03 20:57:34 swegener Exp $
+
+  03 Oct 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digest.
 
   03 Oct 2004; <SeJo@gentoo.org> mozilla-firefox-1.0_pre-r2.ebuild:
   stable on ppc gsla: 66084
