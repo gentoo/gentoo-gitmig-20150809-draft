@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.06-r2.ebuild,v 1.1 2002/10/26 17:03:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.06-r2.ebuild,v 1.2 2002/10/26 17:31:16 azarah Exp $
 
 IUSE="pam kerberos gtk motif gnome opengl jpeg xml"
 
@@ -12,21 +12,25 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 SLOT="0"
 
-# Enable gtk+ by default if 'motif' not in USE
+# Enable gtk+ by default if 'motif' not in USE, or if
+# both 'motif' and 'gtk' is in USE.  ONLY enable motif
+# if 'motif', but not 'gtk' is in USE.
 DEPEND="sys-devel/bc
 	dev-util/pkgconfig
+	gtk? ( x11-libs/gtk+
+	       gnome-base/libglade
+	       dev-libs/libxml2 )
+	gnome? ( gnome-base/libglade
+	         dev-libs/libxml2
+	         gnome-base/control-center )
+	motif? ( >=x11-libs/openmotif-2.1.30 )
 	!motif? ( x11-libs/gtk+
-		gnome-base/libglade
-		dev-libs/libxml2 )
-	gnome? ( x11-libs/gtk+
-		gnome-base/libglade
-		dev-libs/libxml2
-		gnome-base/control-center )
-	motif? ( !gnome? ( >=x11-libs/openmotif-2.1.30 ) )
+	          gnome-base/libglade
+	          dev-libs/libxml2 )
 	pam? ( sys-libs/pam )
 	jpeg? ( media-libs/jpeg )
 	opengl? ( virtual/opengl
-		>=media-libs/gle-3.0.1 )
+	          >=media-libs/gle-3.0.1 )
 	xml? ( dev-libs/libxml2 )"
 
 RDEPEND="${DEPEND}
