@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <usata@gentoo.org> (11 Oct 2003)
+# SLOT support, testing.
+=dev-lang/ruby-1.6.8-r2
+=dev-lang/ruby-1.8.0-r1
+
 # <lanius@gentoo.org> (10 Oct 2003)
 # motif cleanups
 =openmotif-2.2.2-r3
