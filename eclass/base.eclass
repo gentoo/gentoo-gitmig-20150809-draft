@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.16 2002/07/12 15:24:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.17 2002/10/24 18:38:32 danarmak Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
 ECLASS=base
@@ -19,32 +19,32 @@ base_src_unpack() {
 	while [ "$1" ]; do
 
 	case $1 in
-	    unpack)
+		unpack)
 			debug-print-section unpack
 			# rather ugly fix - check for usage of kde-patch.eclass
 			[ -n "$PATCH" -a -n "$ORIGPV" -a -n "$DATE" -a -n "$OLDIFS" ] && \
-			    A="`echo $A | sed -e s:${PATCH}::g --`"
+				A="`echo $A | sed -e s:${PATCH}::g --`"
 			unpack ${A}
 			;;
-	    patch)
+		patch)
 			debug-print-section patch
 			cd ${S}
 			patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 			;;
-	    autopatch)
+		autopatch)
 			debug-print-section autopatch
 			debug-print "$FUNCNAME: autopatch: PATCHES=$PATCHES"
 			cd ${S}
 			for x in $PATCHES; do
-			    debug-print "$FUNCNAME: autopatch: patching from ${x}"
-			    patch -p0 < ${x}
+				debug-print "$FUNCNAME: autopatch: patching from ${x}"
+				patch -p0 < ${x}
 			done
 			;;
 	    all)
 			debug-print-section all
 			base_src_unpack unpack autopatch
 			;;
-	    esac
+		esac
 
 	shift
 	done
@@ -53,30 +53,30 @@ base_src_unpack() {
 
 base_src_compile() {
 
-    debug-print-function $FUNCNAME $*
-    [ -z "$1" ] && base_src_compile all
+	debug-print-function $FUNCNAME $*
+	[ -z "$1" ] && base_src_compile all
 
-    cd ${S}
+	cd ${S}
 
-    while [ "$1" ]; do
+	while [ "$1" ]; do
 
 	case $1 in
-	    configure)
+		configure)
 		debug-print-section configure
 		econf || die "died running econf, $FUNCNAME:configure"
 		;;
-	    make)
+		make)
 		debug-print-section make
 		emake || die "died running emake, $FUNCNAME:make"
 		;;
-	    all)
+		all)
 		debug-print-section all
 		base_src_compile configure make
 		;;
 	esac
 	
-    shift
-    done
+	shift
+	done
     
 }
 
@@ -90,11 +90,11 @@ base_src_install() {
 	while [ "$1" ]; do
 
 	case $1 in
-	    make)
+		make)
 			debug-print-section make
 			make DESTDIR=${D} install || die "died running make install, $FUNCNAME:make"
 			;;
-	    all)
+		all)
 			debug-print-section all
 			base_src_install make
 			;;

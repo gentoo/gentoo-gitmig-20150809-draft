@@ -1,40 +1,40 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.32 2002/09/24 17:54:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.33 2002/10/24 18:38:34 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
 # convinience functions for requesting autotools versions
 need-automake() {
 
-    debug-print-function $FUNCNAME $*
+	debug-print-function $FUNCNAME $*
 
-    unset WANT_AUTOMAKE_1_4
-    unset WANT_AUTOMAKE_1_5
-    unset WANT_AUTOMAKE_1_6
+	unset WANT_AUTOMAKE_1_4
+	unset WANT_AUTOMAKE_1_5
+	unset WANT_AUTOMAKE_1_6
     
-    case $1 in
-	1.4)	export WANT_AUTOMAKE_1_4=1;;
-	1.5)	export WANT_AUTOMAKE_1_5=1;;
-	1.6)	export WANT_AUTOMAKE_1_6=1;;
-	*)	echo "!!! $FUNCNAME: Error: unrecognized automake version $1 requested";;
-    esac
+	case $1 in
+		1.4)	export WANT_AUTOMAKE_1_4=1;;
+		1.5)	export WANT_AUTOMAKE_1_5=1;;
+		1.6)	export WANT_AUTOMAKE_1_6=1;;
+		*)		echo "!!! $FUNCNAME: Error: unrecognized automake version $1 requested";;
+	esac
 
 }
 
 need-autoconf() {
 
-    debug-print-function $FUNCNAME $*
+	debug-print-function $FUNCNAME $*
 
-    unset WANT_AUTOCONF_2_1
-    unset WANT_AUTOCONF_2_5
+	unset WANT_AUTOCONF_2_1
+	unset WANT_AUTOCONF_2_5
     
-    case $1 in
-	2.1)	export WANT_AUTOCONF_2_1=1;;
-	2.5)	export WANT_AUTOCONF_2_5=1;;
-	*)	echo "!!! $FUNCNAME: Error: unrecognized autoconf version $1 requested";;
-    esac
+	case $1 in
+		2.1)	export WANT_AUTOCONF_2_1=1;;
+		2.5)	export WANT_AUTOCONF_2_5=1;;
+		*)		echo "!!! $FUNCNAME: Error: unrecognized autoconf version $1 requested";;
+	esac
 
 }
 
@@ -54,15 +54,15 @@ need-kde() {
 	# if we're a kde-base package, we need an exact version of kdelibs
 	# to compile correctly.
 	if [ "${INHERITED//kde-dist}" != "$INHERITED" ]; then
-	    # kde 3.0.3 and 2.2.2 are special cases, because 3.0.3a and 2.2.2a exist.
-	    # goes to show this code is awfully inflexible, i guess.
-	    if [ "$PV" == "3.0.3" ]; then
-		newdepend "=kde-base/kdelibs-3.0.3*"
-	    elif [ "$PV" == "2.2.2" ]; then
-		newdepend "=kde-base/kdelibs-2.2.2*"
-	    else
-		newdepend "~kde-base/kdelibs-${KDEVER}"
-	    fi
+		# kde 3.0.3 and 2.2.2 are special cases, because 3.0.3a and 2.2.2a exist.
+		# goes to show this code is awfully inflexible, i guess.
+		if [ "$PV" == "3.0.3" ]; then
+			newdepend "=kde-base/kdelibs-3.0.3*"
+		elif [ "$PV" == "2.2.2" ]; then
+			newdepend "=kde-base/kdelibs-2.2.2*"
+		else
+			newdepend "~kde-base/kdelibs-${KDEVER}"
+		fi
 	elif [ -n "$KDEAPPENDAGE" ]; then
 		# special status - installs into $KDEDIR not $PREFIX
 		# and needs an exact minor version of kde.
@@ -79,16 +79,16 @@ need-kde() {
 		else
 			min-kde-ver $KDEVER
 			newdepend ">=kde-base/kdelibs-${selected_version}"
-	    fi
+		fi
 	fi
 
 	qtver-from-kdever $KDEVER
 	need-qt $selected_version
 	
 	if [ -n "$KDEBASE" ]; then
-	    SLOT="$KDEMAJORVER.$KDEMINORVER"
+		SLOT="$KDEMAJORVER.$KDEMINORVER"
 	else
-	    SLOT="0"
+		SLOT="0"
 	fi
 
 }
@@ -103,27 +103,27 @@ set-kdedir() {
 	fi
 
 	case "$1" in
-	    2*)	
-		need-autoconf 2.1
-		need-automake 1.4
-		;;
-	    3.0*)
-		if [ -n "$KDEBASE" ]; then
-		    # used by 3.0.x kdebase stuff, not by 3rd party apps
-		    need-autoconf 2.1
-		else
-		    need-autoconf 2.5
-		fi
-		need-automake 1.4
-		;;
-	    3*)	
-		need-autoconf 2.5
-		need-automake 1.4
-		;;
-	    5*)
-		need-autoconf 2.5
-		need-automake 1.4
-		;;
+		2*)	
+			need-autoconf 2.1
+			need-automake 1.4
+			;;
+		3.0*)
+			if [ -n "$KDEBASE" ]; then
+				# used by 3.0.x kdebase stuff, not by 3rd party apps
+				need-autoconf 2.1
+			else
+				need-autoconf 2.5
+			fi
+			need-automake 1.4
+			;;
+		3*)	
+			need-autoconf 2.5
+			need-automake 1.4
+			;;
+		5*)
+			need-autoconf 2.5
+			need-automake 1.4
+			;;
 	esac
 	
 	# set install location:
@@ -158,7 +158,7 @@ set-kdedir() {
 	[ -z "$KDEREVISION" ] && KDEREVISION="0"
 	IFS="$IFSBACKUP"
 	debug-print "$FUNCNAME: version breakup: KDEMAJORVER=$KDEMAJORVER KDEMINORVER=$KDEMINORVER KDEREVISION=$KDEREVISION"
-		
+	
 	
 
 	# install prefix
@@ -262,8 +262,8 @@ qtver-from-kdever() {
 	case $1 in
 		2*)	ver=2.3.1;;
 		3*)	ver=3.0.4;;
-		5)	ver=3.0.4;; # cvs version
-		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
+		5)		ver=3.0.4;; # cvs version
+		*)		echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
 	selected_version="$ver"
@@ -272,9 +272,9 @@ qtver-from-kdever() {
 
 # compat
 need-kdelibs() {
-    echo "WARNING: need-kdelibs() called, where need-kde() is correct.
+	echo "WARNING: need-kdelibs() called, where need-kde() is correct.
 If this happens at the unmerging of an old ebuild, disregard; otherwise report."
-    need-kde $*
+	need-kde $*
 }
 
 min-kde-ver() {
@@ -282,21 +282,21 @@ min-kde-ver() {
 	debug-print-function $FUNCNAME $*
 
 	case $1 in
-	    2*)		selected_version="2.2.2";;
-	    3.0_beta1)	selected_version="3.0_beta1";;
-	    3.0_beta2)	selected_version="3.0_beta2";;
-	    3.0_rc1)	selected_version="3.0_rc1";;
-	    3.0_rc2)	selected_version="3.0_rc2";;
-	    3.0_rc3)	selected_version="3.0_rc3";;
-	    3.0)	selected_version="3.0";;
-	    3.0.*)	selected_version="3.0";;
-	    3.1_alpha1)	selected_version="3.1_alpha1";;
-	    3.1_beta1)	selected_version="3.1_alpha1";;
-	    3.1_beta2)	selected_version="3.1_alpha1";;
-	    3.1.*)	selected_version="3.1";;
-	    3*)		selected_version="3.0";;
-	    5)		selected_version="5";;
-	    *)		echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
+		2*)				selected_version="2.2.2";;
+		3.0_beta1)		selected_version="3.0_beta1";;
+		3.0_beta2)		selected_version="3.0_beta2";;
+		3.0_rc1)			selected_version="3.0_rc1";;
+		3.0_rc2)			selected_version="3.0_rc2";;
+		3.0_rc3)			selected_version="3.0_rc3";;
+		3.0)				selected_version="3.0";;
+		3.0.*)			selected_version="3.0";;
+		3.1_alpha1)		selected_version="3.1_alpha1";;
+		3.1_beta1)		selected_version="3.1_alpha1";;
+		3.1_beta2)		selected_version="3.1_alpha1";;
+		3.1.*)			selected_version="3.1";;
+		3*)				selected_version="3.0";;
+		5)					selected_version="5";;
+		*)					echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 	
 }
@@ -309,22 +309,22 @@ min-kde-ver() {
 # This should be harmless if the makefile doesn't need fixing.
 kde_sandbox_patch() {
 
-    debug-print-function $FUNCNAME $*
+	debug-print-function $FUNCNAME $*
     
-    while [ -n "$1" ]; do
+	while [ -n "$1" ]; do
 	# can't use dosed, because it only works for things in ${D}, not ${S}
 	cd $1
 	for x in Makefile.am Makefile.in Makefile
 	do
-	    if [ -f "$x" ]; then
-		echo Running sed on $x
-		cp $x ${x}.orig
-		sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' -e 's: $(kde_datadir): $(DESTDIR)/$(kde_datadir):g' -e 's: $(TIMID_DIR): $(DESTDIR)/$(TIMID_DIR):g' ${x}.orig > ${x}
-		rm ${x}.orig
-	    fi
+		if [ -f "$x" ]; then
+			echo Running sed on $x
+			cp $x ${x}.orig
+			sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' -e 's: $(kde_datadir): $(DESTDIR)/$(kde_datadir):g' -e 's: $(TIMID_DIR): $(DESTDIR)/$(TIMID_DIR):g' ${x}.orig > ${x}
+			rm ${x}.orig
+		fi
 	done
 	shift
-    done
+	done
 
 }
 
@@ -337,16 +337,16 @@ kde_sandbox_patch() {
 # $2: flag to remove
 kde_remove_flag() {
     
-    debug-print-function $FUNCNAME $*
+	debug-print-function $FUNCNAME $*
 
-    cd ${S}/${1} || die
-    [ -n "$2" ] || die
+	cd ${S}/${1} || die
+	[ -n "$2" ] || die
     
-    cp Makefile Makefile.orig
-    sed -e "/CFLAGS/ s/${2}//g
+	cp Makefile Makefile.orig
+	sed -e "/CFLAGS/ s/${2}//g
 /CXXFLAGS/ s/${2}//g" Makefile.orig > Makefile
 
-    cd $OLDPWD
+	cd $OLDPWD
     
 }
 
@@ -356,29 +356,29 @@ kde_remove_flag() {
 # $KDE_REMOVE_DIR is then passed as parameter
 kde_remove_dir(){
 
-    debug-print-function $FUNCNAME $*
+	debug-print-function $FUNCNAME $*
     
-    cd ${S}
+	cd ${S}
     
-    while [ -n "$1" ]; do
-	for dir in $1; do
+	while [ -n "$1" ]; do
+		for dir in $1; do
 	
-	    debug-print "$FUNCNAME: removing subdirectory $dir"
+			debug-print "$FUNCNAME: removing subdirectory $dir"
 	
-	    rm -rf $dir
+			rm -rf $dir
 	    
-	    if [ -f subdirs ]; then
-		mv subdirs subdirs.orig
-		grep -v $dir subdirs.orig > subdirs
-	    fi
+			if [ -f subdirs ]; then
+				mv subdirs subdirs.orig
+				grep -v $dir subdirs.orig > subdirs
+			fi
 	    
-	    rm -f configure configure.in
+			rm -f configure configure.in
 	    
-	    export DO_NOT_COMPILE="$DO_NOT_COMPILE $dir"
+			export DO_NOT_COMPILE="$DO_NOT_COMPILE $dir"
 	
-	done
+		done
 	shift
-    done
+	done
 
 }
 

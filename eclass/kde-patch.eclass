@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-patch.eclass,v 1.2 2002/07/12 15:24:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-patch.eclass,v 1.3 2002/10/24 18:38:39 danarmak Exp $
 # This applies homemade patches from the tarball to the date specified.
 ECLASS=kde-patch
 INHERITED="$INHERITED $ECLASS"
@@ -15,14 +15,14 @@ debug-print "Entering eclass $ECLASS"
 # I'm not that good at regexps etc., so I emulate std coding practices
 
 OLDIFS="$IFS" # backup so that we don't distort future loops
-IFS="."	# separator string that determines the breakup of a string by bash's "for x in; do; done"
+IFS="." # separator string that determines the breakup of a string by bash's "for x in; do; done"
 
 for DATE in $PV
 do
-    # if not last component of separated $PV
-    if [ ! "${ORIGPV}.${DATE}" == "${PV}" ]; then
+	# if not last component of separated $PV
+	if [ ! "${ORIGPV}.${DATE}" == "${PV}" ]; then
 	[ -n "$ORIGPV" ] && ORIGPV="${ORIGPV}.${DATE}" || ORIGPV="$DATE" # don't add a leading dot
-    fi
+	fi
 done
 
 IFS="$OLDIFS" #restore

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.20 2002/09/22 18:43:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.21 2002/10/24 18:38:32 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -84,14 +84,14 @@ DIR=$DIR"
 
 	if [ "$ECVS_SERVER" == "offline" ]; then
 		# we're not required to fetch anything, the module already exists and shouldn't be updated
-	    if [ -d "$DIR" ]; then
+		if [ -d "$DIR" ]; then
 			debug-print "$FUNCNAME: offline mode, exiting"
 			return 0
-	    else
+		else
 			einfo "ERROR: Offline mode specified, but module/subdir not found. Aborting."
 			debug-print "$FUNCNAME: offline mode specified but module/subdir not found, exiting with error"
 			return 1
-	    fi
+		fi
 	fi
 
 	# create target directory as needed
@@ -125,7 +125,7 @@ DIR=$DIR"
 	echo ":pserver:${ECVS_SERVER} A" > ${T}/cvspass
 	export CVS_PASSFILE="${T}/cvspass"
 	#export CVSROOT=:pserver:${ECVS_USER}@${ECVS_SERVER}
-		
+	
 	# Note: cvs update and checkout commands are unified.
 	# we make sure a CVS/ dir exists in our module subdir with the right
 	# Root and Repository entries in it and cvs update.
@@ -203,27 +203,27 @@ DIR=$DIR"
 
 cvs_src_unpack() {
 
-    debug-print-function $FUNCNAME $*
+	debug-print-function $FUNCNAME $*
 	cvs_fetch || die "died running cvs_fetch"
 
-    einfo "Copying $ECVS_MODULE/$ECVS_SUBDIR from $ECVS_TOP_DIR..."
+	einfo "Copying $ECVS_MODULE/$ECVS_SUBDIR from $ECVS_TOP_DIR..."
 	debug-print "Copying module $ECVS_MODULE subdir $ECVS_SUBDIR local_mode=$ECVS_LOCAL from $ECVS_TOP_DIR..."
 	
 	# probably redundant, but best to make sure
 	mkdir -p $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
 	
 	if [ -n "$ECVS_SUBDIR" ]; then
-	    if [ -n "$ECVS_LOCAL" ]; then
-		cp -f $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR/* $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
-	    else
-		cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR/..
-	    fi    
+		if [ -n "$ECVS_LOCAL" ]; then
+			cp -f $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR/* $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
+		else
+			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR/..
+		fi    
 	else
-	    if [ -n "$ECVS_LOCAL" ]; then
-		cp -f $ECVS_TOP_DIR/$ECVS_MODULE/* $WORKDIR/$ECVS_MODULE
-	    else
-		cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
-	    fi
+		if [ -n "$ECVS_LOCAL" ]; then
+			cp -f $ECVS_TOP_DIR/$ECVS_MODULE/* $WORKDIR/$ECVS_MODULE
+		else
+			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
+		fi
 	fi
 	
 	# if the directory is empty, remove it; empty directories cannot exist in cvs.
@@ -234,22 +234,20 @@ cvs_src_unpack() {
 		rm -rf $DIR
 	fi
 	    
-    # implement some of base_src_unpack's functionality;
-    # note however that base.eclass may not have been inherited!
-    if [ -n "$PATCHES" ]; then
-	debug-print "$FUNCNAME: PATCHES=$PATCHES, S=$S, autopatching"
-	cd $S
-	for x in $PATCHES; do
-	    debug-print "patching from $x"
-	    patch -p0 < $x
-	done
-	# make sure we don't try to apply patches more than once, since
-	# cvs_src_unpack is usually called several times from e.g. kde-source_src_unpack
-	export PATCHES=""
-    fi
+	# implement some of base_src_unpack's functionality;
+	# note however that base.eclass may not have been inherited!
+	if [ -n "$PATCHES" ]; then
+		debug-print "$FUNCNAME: PATCHES=$PATCHES, S=$S, autopatching"
+		cd $S
+		for x in $PATCHES; do
+			debug-print "patching from $x"
+			patch -p0 < $x
+		done
+		# make sure we don't try to apply patches more than once, since
+		# cvs_src_unpack is usually called several times from e.g. kde-source_src_unpack
+		export PATCHES=""
+	fi
 
 }
 
 EXPORT_FUNCTIONS src_unpack
-
-

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.59 2002/09/24 17:54:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.60 2002/10/24 18:38:39 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -22,7 +22,6 @@ case $PN in
 		#	3.1_beta1)	export S="$WORKDIR/$PN-3.0.7" ;;
 		#	3.1_beta2)	export S="$WORKDIR/$PN-3.0.8" ;;
 		#esac
-
 	    ;;
 esac
 
@@ -37,13 +36,13 @@ SLOT="0"
 
 kde_src_compile() {
 
-    debug-print-function $FUNCNAME $*
-    [ -z "$1" ] && kde_src_compile all
+	debug-print-function $FUNCNAME $*
+	[ -z "$1" ] && kde_src_compile all
     
-    cd ${S}
-    export kde_widgetdir="$KDEDIR/lib/kde3/plugins/designer"
+	cd ${S}
+	export kde_widgetdir="$KDEDIR/lib/kde3/plugins/designer"
 
-    while [ "$1" ]; do
+	while [ "$1" ]; do
 
 	case $1 in
 		myconf)
@@ -64,12 +63,12 @@ kde_src_compile() {
 			# rebuild configure script, etc
 			# This can happen with e.g. a cvs snapshot			
 			if [ ! -f "./configure" ]; then
-			    for x in Makefile.cvs admin/Makefile.common; do
+				for x in Makefile.cvs admin/Makefile.common; do
 				if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
-			    done
-			    debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
-			    make -f $makefile
-			    [ -f "./configure" ] || die "no configure script found, generation unsuccessful"
+				done
+				debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
+				make -f $makefile
+				[ -f "./configure" ] || die "no configure script found, generation unsuccessful"
 			fi
 
 			export PATH="${KDEDIR}/bin:${PATH}"
@@ -88,8 +87,8 @@ kde_src_compile() {
 			;;
 	esac
 
-    shift
-    done
+	shift
+	done
 
 }
 
@@ -110,7 +109,7 @@ kde_src_install() {
 	    	dodoc)
 				debug-print-section dodoc
 				for doc in AUTHORS ChangeLog* README* COPYING NEWS TODO; do
-				    [ -f "$doc" ] && dodoc $doc
+					[ -f "$doc" ] && dodoc $doc
 				done
 				;;
 	    	all)
