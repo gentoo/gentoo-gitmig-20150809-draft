@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.563 2004/08/16 23:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.564 2004/08/17 02:42:15 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -211,6 +211,7 @@ games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'The Reckoning' Mission Pack (xatrix)
 games-fps/quake2-icculus:xatrix - Build support for the 'Ground Zero' Mission Pack (rogue)
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
+games-kids/gcompris:editor - Build the optional editor program.
 games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 games-server/halflife-metamod:src - use the source, not the binary install
 games-server/halflife-statsme:nocstrike - no counterstrike
