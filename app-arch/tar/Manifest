@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6e7604924f71e544153959a04085b641 ChangeLog 7214
+MD5 50e2c9d7f982158f2d94ffa26e94ed14 ChangeLog 7328
+MD5 0e7b682f9fbb6f8690cef5b86ed1517d tar-1.14.90.ebuild 1193
 MD5 d0b3e45115a461b08fc996e4036fa171 tar-1.14.ebuild 1337
+MD5 a19a156b33f2b725bccc907941208c92 files/digest-tar-1.14.90 65
 MD5 5fbfc1df8f8641b9b99de73d8be1a4dc files/tar.1 7956
 MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBaOWkHTu7gpaalycRAm5GAKDAn7JExolrUdmekYsiobkMPG/BuQCdFIFA
-Nb01jNm4FiYluKd4YFxbWVU=
-=rp5a
+iD8DBQFBaOucHTu7gpaalycRAnCMAKCAS9ZFaR+e61C/pffQs5+CeBEO0gCglXbT
+zbU++LTpwK9dciYe/bvomkU=
+=nGs9
 -----END PGP SIGNATURE-----
