@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.10 2004/06/11 18:48:37 kloeri Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.11 2004/06/24 07:40:58 solar Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ppc64 sparc ~mips alpha arm ~hppa amd64 ~ia64 s390"
-IUSE=""
+IUSE="uclibc"
 
 DEPEND="virtual/glibc
 	>=sys-devel/autoconf-2.58
@@ -67,10 +67,12 @@ src_unpack() {
 	epatch ${FILESDIR}/1.4.3/${PN}-1.2f-cache.patch
 	epatch ${FILESDIR}/1.4.3/${PN}-1.3.5-nonneg.patch
 	epatch ${FILESDIR}/1.4.3/${PN}-1.3.5-mktemp.patch
+	epatch ${FILESDIR}/ltconfig-uclibc.patch
 
 	use hppa && S="${OLD_S}" gnuconfig_update
 	use amd64 && S="${OLD_S}" gnuconfig_update
 	use ppc64 && S="${OLD_S}" gnuconfig_update
+	use uclibc && S="${OLD_S}" gnuconfig_update
 
 	cd ${S}
 	echo
@@ -93,7 +95,7 @@ src_unpack() {
 	# included in 'libtool-1.4.3-gentoo.patch' for this ebuild.
 	#
 	# NOTE: all affected apps should get a 'libtoolize --copy --force'
-	#      added to upate libtool
+	#      added to update libtool
 	#
 # Seems to be included in shipped tarball ...
 #	epatch ${FILESDIR}/1.4.3/${PN}-1.4.2-relink-58664.patch
@@ -150,6 +152,9 @@ src_compile() {
 	# regen to allow for build,host,target ppc64
 	use ppc64 && gnuconfig_update
 
+	# detect uclibc
+	use uclibc && gnuconfig_update
+
 	einfo "Configuring ${OLD_S##*/} ..."
 	./configure --host=${CHOST} \
 			--prefix=/usr \
@@ -166,6 +171,8 @@ src_compile() {
 
 	# Detect mips/mips64
 	use mips && gnuconfig_update
+
+	use uclibc && gnuconfig_update
 
 	einfo "Configuring ${S##*/} ..."
 	./configure --host=${CHOST} \
@@ -197,6 +204,17 @@ src_install() {
 
 	einfo "Installing ${S##*/} ..."
 	cd ${S}; make DESTDIR=${D} install || die
+
+	if use uclibc ; then
+		for x in $(find ${D} -name config.guess -o -name config.sub) ; do
+			rm -f ${x}; ln -sf ../gnuconfig/$(basename ${x}) ${x}
+		done
+		cd ${D}/usr/share/libtool/libltdl
+		for x in config.guess config.sub ; do
+			rm -f ${x} ; ln -sfn ../${x} ${x}
+		done
+		cd ${S}
+	fi
 
 	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO doc/PLATFORMS
 }

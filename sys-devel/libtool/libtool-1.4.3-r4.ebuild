@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r4.ebuild,v 1.2 2004/03/01 21:02:39 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
-
-IUSE=
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r4.ebuild,v 1.3 2004/06/24 07:40:58 solar Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 inherit eutils gnuconfig
+
+IUSE="uclibc"
 
 # NOTE:  We install libltdl of libtool-1.3x for compat reasons ...
 
@@ -21,7 +21,6 @@ SLOT="0"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64"
 
 DEPEND="virtual/glibc"
-
 
 lt_setup() {
 	export WANT_AUTOCONF_2_5=1
@@ -65,9 +64,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/${PN}-1.2f-cache.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.3.5-nonneg.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.3.5-mktemp.patch
+	epatch ${FILESDIR}/ltconfig-uclibc.patch
 
 	use hppa && S="${OLD_S}" gnuconfig_update
 	use amd64 && S="${OLD_S}" gnuconfig_update
+	use uclibc && S="${OLD_S}" gnuconfig_update
 
 	cd ${S}
 	echo
@@ -115,6 +116,9 @@ src_unpack() {
 	# Azarah - 07 April 2002
 	epatch ${FILESDIR}/${PV}/${PN}-1.4.2-portage.patch
 
+	epatch ${FILESDIR}/${PV}/libtool-1.4.3-uclibc.patch
+	epatch ${FILESDIR}/libltdl-uclibc.patch
+
 	einfo "Generate ltmain.sh ..."
 	gen_ltmain_sh || die "Failed to generate ltmain.sh!"
 }
@@ -128,8 +132,8 @@ src_compile() {
 
 	cd ${OLD_S}
 
-	# Detect mips/mips64
-	use mips && gnuconfig_update
+	# Detect mips/mips64 and uclibc
+	( use mips || use uclibc ) && gnuconfig_update
 
 	einfo "Configuring ${OLD_S##*/} ..."
 	./configure --host=${CHOST} \
@@ -145,8 +149,8 @@ src_compile() {
 
 	cd ${S}
 
-	# Detect mips/mips64
-	use mips && gnuconfig_update
+	# Detect mips/mips64 and uclibc
+	( use mips || use uclibc ) && gnuconfig_update
 
 	einfo "Configuring ${S##*/} ..."
 	./configure --host=${CHOST} \
@@ -178,6 +182,12 @@ src_install() {
 
 	einfo "Installing ${S##*/} ..."
 	cd ${S}; make DESTDIR=${D} install || die
+
+	if use uclibc ; then
+		for x in $(find ${D} -name config.guess -o -name config.sub) ; do
+			rm -f ${x}; ln -sf ../gnuconfig/$(basename ${x}) ${x}
+		done
+	fi
 
 	dodoc AUTHORS COPYING ChangeLog* NEWS \
 	      README THANKS TODO doc/PLATFORMS
