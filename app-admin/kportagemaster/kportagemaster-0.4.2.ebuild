@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kportagemaster/kportagemaster-0.4.2.ebuild,v 1.3 2002/08/13 21:44:13 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kportagemaster/kportagemaster-0.4.2.ebuild,v 1.4 2002/08/16 02:21:27 murphy Exp $
 inherit kde-base
 
 need-kde 3
@@ -11,7 +11,7 @@ HOMEPAGE="http://user.cs.tu-berlin.de/~mehnert/"
 
 LICENSE="GPL-2"
 #not heard anything about running on other platforms
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 
 RDEPEND="$RDEPEND >=kde-base/kdebase-3

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.7-r1.ebuild,v 1.7 2002/08/02 04:47:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.7-r1.ebuild,v 1.8 2002/08/16 02:21:27 murphy Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://oss.sgi.com/projects/fam/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=sys-devel/perl-5.6.1"
 RDEPEND=">=net-nds/portmap-5b-r6"

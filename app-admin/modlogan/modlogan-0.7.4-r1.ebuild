@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.8 2002/08/02 04:47:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.9 2002/08/16 02:21:27 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
@@ -9,7 +9,7 @@ SRC_URI="http://www.kneschke.de/projekte/modlogan/download/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/x11
 	dev-libs/libxml
