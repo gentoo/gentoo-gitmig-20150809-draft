@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.7 2004/07/21 12:20:00 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.8 2004/07/28 17:14:15 st_lim Exp $
+
+*dspam-3.1.0_beta20 (29 Jul 2004)
+
+  29 Jul 2004; Lim Swee Tat <st_lim@gentoo.org> +dspam-3.1.0_beta20.ebuild:
+  Fixed bug #57838.
+  Added dspam-3.1.0.beta.2 as beta20.
+  Added support for postgres, but lacking the postgres database/user creation
+  script.
 
   21 Jul 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.0.0.ebuild,
   dspam-3.1.0_beta11.ebuild:
