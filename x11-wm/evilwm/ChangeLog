@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.12 2003/09/19 00:39:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.13 2003/11/04 14:48:16 tseng Exp $
+
+*evilwm-0.99.17 (04 Nov 2003)
+
+  04 Nov 2003; Brandon Hale <tseng@gentoo.org> evilwm-0.99.17.ebuild,
+  metadata.xml:
+  Version bump, adding metadata.xml
 
 *evilwm-0.99.16 (18 Sep 2003)
 
