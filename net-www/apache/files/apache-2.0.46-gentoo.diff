@@ -1,0 +1,120 @@
+diff -uNr httpd-2.0.46/acinclude.m4 httpd-2.0.46-woodchip/acinclude.m4
+--- httpd-2.0.46/acinclude.m4	2002-11-29 06:05:57.000000000 -0500
++++ httpd-2.0.46-woodchip/acinclude.m4	2003-05-28 19:43:56.000000000 -0400
+@@ -60,6 +60,7 @@
+   APACHE_SUBST(HTTPD_LDFLAGS)
+   APACHE_SUBST(UTIL_LDFLAGS)
+   APACHE_SUBST(LIBS)
++  APACHE_SUBST(SSL_LIBS)
+   APACHE_SUBST(DEFS)
+   APACHE_SUBST(INCLUDES)
+   APACHE_SUBST(NOTEST_CPPFLAGS)
+@@ -190,7 +191,7 @@
+ ])dnl
+ 
+ dnl
+-dnl APACHE_MODULE(name, helptext[, objects[, structname[, default[, config]]]])
++dnl APACHE_MODULE(name, helptext[, objects[, structname[, default[, config[, libs]]]]])
+ dnl
+ dnl default is one of:
+ dnl   yes    -- enabled by default. user must explicitly disable.
+@@ -266,7 +267,7 @@
+       fi
+       shared="";;
+     esac
+-    APACHE_MODPATH_ADD($1, $shared, $3)
++    APACHE_MODPATH_ADD($1, $shared, $3,, $7)
+   fi
+ ])dnl
+ 
+@@ -488,7 +489,7 @@
+       APR_ADDTO(LDFLAGS, [$ap_platform_runtime_link_flag$ap_ssltk_libdir])
+     fi
+   fi
+-  APR_ADDTO(LIBS, [-lssl -lcrypto])
++  APR_ADDTO(SSL_LIBS, [-lssl -lcrypto])
+   ap_cv_ssltk="$ap_ssltk_base"
+ fi
+ ])
+diff -uNr httpd-2.0.46/modules/ssl/config.m4 httpd-2.0.46-woodchip/modules/ssl/config.m4
+--- httpd-2.0.46/modules/ssl/config.m4	2002-03-29 02:36:01.000000000 -0500
++++ httpd-2.0.46-woodchip/modules/ssl/config.m4	2003-05-28 19:43:56.000000000 -0400
+@@ -79,7 +79,7 @@
+     APACHE_CHECK_SSL_TOOLKIT
+     AC_CHECK_FUNCS(SSL_set_state)
+     AC_CHECK_FUNCS(SSL_set_cert_store)
+-])
++], [\$(SSL_LIBS)])
+ 
+ dnl #  end of module specific part
+ APACHE_MODPATH_FINISH
+diff -uNr httpd-2.0.46/os/unix/unixd.c httpd-2.0.46-woodchip/os/unix/unixd.c
+--- httpd-2.0.46/os/unix/unixd.c	2003-05-15 16:28:18.000000000 -0400
++++ httpd-2.0.46-woodchip/os/unix/unixd.c	2003-05-28 19:43:56.000000000 -0400
+@@ -243,23 +243,20 @@
+ 
+ AP_DECLARE(void) unixd_pre_config(apr_pool_t *ptemp)
+ {
+-    apr_finfo_t wrapper;
++    struct stat wrapper;
+ 
+     unixd_config.user_name = DEFAULT_USER;
+     unixd_config.user_id = ap_uname2id(DEFAULT_USER);
+     unixd_config.group_id = ap_gname2id(DEFAULT_GROUP);
+ 
+     /* Check for suexec */
+-    unixd_config.suexec_enabled = 0;
+-    if ((apr_stat(&wrapper, SUEXEC_BIN, 
+-                  APR_FINFO_NORM, ptemp)) != APR_SUCCESS) {
+-        return;
+-    }
+-
+-    /* XXX - apr_stat is incapable of checking suid bits (grumble) */
+-    /* if ((wrapper.filetype & S_ISUID) && wrapper.user == 0) { */
++    if (stat(SUEXEC_BIN, &wrapper) == 0 && 
++	(wrapper.st_mode & S_ISUID) && wrapper.st_uid == 0) {
+         unixd_config.suexec_enabled = 1;
+-    /* } */
++    } else {
++	unixd_config.suexec_enabled = 0;
++    }
++    
+ }
+ 
+ 
+diff -uNr httpd-2.0.46/support/apachectl.in httpd-2.0.46-woodchip/support/apachectl.in
+--- httpd-2.0.46/support/apachectl.in	2003-02-03 12:32:08.000000000 -0500
++++ httpd-2.0.46-woodchip/support/apachectl.in	2003-05-28 19:43:56.000000000 -0400
+@@ -28,7 +28,8 @@
+ # --------------------                              --------------------
+ # 
+ # the path to your httpd binary, including options if necessary
+-HTTPD='@exp_sbindir@/@progname@'
++. /etc/conf.d/apache2
++HTTPD="@exp_sbindir@/@progname@ ${APACHE2_OPTS}"
+ #
+ # pick up any necessary environment variables
+ if test -f @exp_bindir@/envvars; then
+diff -uNr httpd-2.0.46/support/apxs.in httpd-2.0.46-woodchip/support/apxs.in
+--- httpd-2.0.46/support/apxs.in	2003-05-21 07:39:52.000000000 -0400
++++ httpd-2.0.46-woodchip/support/apxs.in	2003-05-28 19:43:56.000000000 -0400
+@@ -237,19 +237,6 @@
+     ($httpd = $0) =~ s:support/apxs$::;
+ }
+ 
+-unless (-x "$httpd") {
+-	error("$httpd not found or not executable");
+-	exit 1;
+-}
+-
+-unless (grep /mod_so/, `. $envvars && $httpd -l`) {
+-    error("Sorry, no shared object support for Apache");
+-    error("available under your platform. Make sure");
+-    error("the Apache module mod_so is compiled into");
+-    error("your server binary `$httpd'.");
+-    exit 1;
+-}
+-
+ sub get_config_vars{
+     my ($file, $rh_config) = @_;
+ 
