@@ -1,0 +1,23 @@
+# ChangeLog for app-games/ltris
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+*ltris-1.0.4 (06 Jun 2003)
+
+  06 Jun 2003; Martin Holzer <mholzer@gentoo.org> ltris-1.0.4.ebuild:
+  Version bumped. Closes #20249.
+
+  01 May 2003; Jason Wever <weeve@gentoo.org> ltris-1.0.1.ebuild:
+  Added ~sparc to keywords.
+
+*ltris-1.0.1
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> ltris-1.0.1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> ltris-1.0.1.ebuild :
+  Added LICENSE, KEYWORDS.
+
+	19 Feb 2002; Aron Griffis <agriffis@gentoo.org> ltris-1.0.1.ebuild:
+
+	Added ebuild for ltris

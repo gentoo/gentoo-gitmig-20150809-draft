@@ -1,0 +1,14 @@
+# ChangeLog for app-games/quintalign
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quintalign/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+  31 Aug 2003; Michael Sterrett <msterret@gentoo.org> quintalign-1.0.ebuild:
+  inherit kde-base -> inherit kde; DESCRIPTION change
+
+  12 Jun 2003; <msterret@gentoo.org> quintalign-1.0.ebuild:
+  fix Header
+
+*quintalign-1.0 (03 Jan 2003)
+
+  03 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Rigo Ketelings <rigo@home.nl>.

@@ -1,0 +1,5 @@
+MD5 0042001873ffd1ee94e39a06a6ba3baf files/4stattack 80
+MD5 a38f167d6d78ba1c79320f6c2f4f9754 files/4stattack-2.1.4-gentoo.diff 1316
+MD5 12ea5a9c56c11d99d09e20829d830263 files/digest-4stattack-2.1.4 68
+MD5 fdb70429805cabd30efe93d5d8935f09 4stattack-2.1.4.ebuild 1101
+MD5 4f9913e300558b5fa291c22dc0abb9a8 ChangeLog 432

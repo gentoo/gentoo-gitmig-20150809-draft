@@ -1,0 +1,10 @@
+# ChangeLog for app-games/4stattack
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/ChangeLog,v 1.1 2003/09/10 06:35:59 vapier Exp $
+
+*4stattack-2.1.4 (30 Jul 2003)
+
+  30 Jul 2003; Michael Sterrett <msterret@gentoo.org> 4stattack-2.1.4.ebuild:
+  initial commit.  ebuild and patch supplied by Rob Cakebread via bug 25229 then
+  modified a bit.
+

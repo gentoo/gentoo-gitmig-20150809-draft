@@ -1,0 +1,110 @@
+diff -ur -x '*Po' pingus-0.6.0.orig/src/blitter.cxx pingus-0.6.0/src/blitter.cxx
+--- pingus-0.6.0.orig/src/blitter.cxx	2003-09-10 01:01:17.022128512 -0400
++++ pingus-0.6.0/src/blitter.cxx	2003-09-10 01:09:43.097193408 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include <config.h>
+ #include <stdio.h>
+ #include "pingus_error.hxx"
+diff -ur -x '*Po' pingus-0.6.0.orig/src/col_map.cxx pingus-0.6.0/src/col_map.cxx
+--- pingus-0.6.0.orig/src/col_map.cxx	2003-09-10 01:01:17.054123648 -0400
++++ pingus-0.6.0/src/col_map.cxx	2003-09-10 01:10:52.076706928 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include <iostream>
+ #include <ClanLib/Display/SurfaceProviders/canvas.h>
+ #include "gui/graphic_context.hxx"
+diff -ur -x '*Po' pingus-0.6.0.orig/src/console.cxx pingus-0.6.0/src/console.cxx
+--- pingus-0.6.0.orig/src/console.cxx	2003-09-10 01:01:17.025128056 -0400
++++ pingus-0.6.0/src/console.cxx	2003-09-10 01:11:17.323868776 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include <config.h>
+ #include <ClanLib/Display/Display/display.h>
+ #include <ClanLib/Display/Font/font.h>
+diff -ur -x '*Po' pingus-0.6.0.orig/src/demo_recorder.cxx pingus-0.6.0/src/demo_recorder.cxx
+--- pingus-0.6.0.orig/src/demo_recorder.cxx	2003-09-10 01:01:17.049124408 -0400
++++ pingus-0.6.0/src/demo_recorder.cxx	2003-09-10 01:11:50.095886672 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include <time.h>
+ #include <iostream>
+ #include "system.hxx"
+diff -ur -x '*Po' pingus-0.6.0.orig/src/editor/generic_property_frame.cxx pingus-0.6.0/src/editor/generic_property_frame.cxx
+--- pingus-0.6.0.orig/src/editor/generic_property_frame.cxx	2003-09-10 01:01:17.028127600 -0400
++++ pingus-0.6.0/src/editor/generic_property_frame.cxx	2003-09-10 01:01:47.907433232 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include <iostream>
+ #include <ClanLib/GUI/label.h>
+ #include <ClanLib/GUI/inputbox.h>
+diff -ur -x '*Po' pingus-0.6.0.orig/src/gui/root_gui_manager.cxx pingus-0.6.0/src/gui/root_gui_manager.cxx
+--- pingus-0.6.0.orig/src/gui/root_gui_manager.cxx	2003-09-10 01:01:17.002131552 -0400
++++ pingus-0.6.0/src/gui/root_gui_manager.cxx	2003-09-10 01:04:11.164654824 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include "root_gui_manager.hxx"
+ #include "../input/controller.hxx"
+ 
+diff -ur -x '*Po' pingus-0.6.0.orig/src/pingu_holder.cxx pingus-0.6.0/src/pingu_holder.cxx
+--- pingus-0.6.0.orig/src/pingu_holder.cxx	2003-09-10 01:01:17.054123648 -0400
++++ pingus-0.6.0/src/pingu_holder.cxx	2003-09-10 01:13:48.283919360 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include <iostream>
+ #include "pingu_holder.hxx"
+ #include "pingu.hxx"
+diff -ur -x '*Po' pingus-0.6.0.orig/src/savegame_manager.cxx pingus-0.6.0/src/savegame_manager.cxx
+--- pingus-0.6.0.orig/src/savegame_manager.cxx	2003-09-10 01:01:17.035126536 -0400
++++ pingus-0.6.0/src/savegame_manager.cxx	2003-09-10 01:15:43.254441184 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include <iostream>
+ #include <fstream>
+ #include "system.hxx"
+diff -ur -x '*Po' pingus-0.6.0.orig/src/worldmap/dot.cxx pingus-0.6.0/src/worldmap/dot.cxx
+--- pingus-0.6.0.orig/src/worldmap/dot.cxx	2003-09-10 01:01:17.036126384 -0400
++++ pingus-0.6.0/src/worldmap/dot.cxx	2003-09-10 01:06:29.392640976 -0400
+@@ -17,6 +17,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
++#include <assert.h>
+ #include <iostream>
+ #include "../xml_file_reader.hxx"
+ #include "dot.hxx"
+diff -ur -x '*Po' pingus-0.6.0.orig/src/worldmap/graph.hxx pingus-0.6.0/src/worldmap/graph.hxx
+--- pingus-0.6.0.orig/src/worldmap/graph.hxx	2003-09-10 01:01:17.037126232 -0400
++++ pingus-0.6.0/src/worldmap/graph.hxx	2003-09-10 01:07:31.004274584 -0400
+@@ -20,6 +20,7 @@
+ #ifndef HEADER_GRAPH_HXX
+ #define HEADER_GRAPH_HXX
+ 
++#include <assert.h>
+ #include <algorithm>
+ #include <vector>
+ 

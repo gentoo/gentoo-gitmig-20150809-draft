@@ -1,0 +1,13 @@
+# ChangeLog for app-games/xbomb
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+*xbomb-2.1-r1 (28 Jun 2003)
+
+  28 Jun 2003; <msterret@gentoo.org> xbomb-2.1-r1.ebuild:
+  fixed hiscore support (into /var/games); use sed -i
+
+*xbomb-2.1 (17 Dec 2002)
+
+  17 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Clemens Oertel <gentoo-bugzilla@kriegste.net>.

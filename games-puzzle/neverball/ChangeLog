@@ -1,0 +1,26 @@
+# ChangeLog for app-games/neverball
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+*neverball-0.25.3 (08 Sep 2003)
+
+  08 Sep 2003; Michael Sterrett <msterret@gentoo.org> neverball-0.25.3.ebuild:
+  version bump (bug 28197)
+
+*neverball-0.21.0 (21 Aug 2003)
+
+  21 Aug 2003; Michael Sterrett <msterret@gentoo.org> neverball-0.21.0.ebuild:
+  version bump
+
+*neverball-0805a (05 Aug 2003)
+
+  05 Aug 2003; Michael Sterrett <msterret@gentoo.org> neverball-0805a.ebuild:
+  version bump
+
+*neverball-0805 (05 Aug 2003)
+
+  05 Aug 2003; Michael Sterrett <msterret@gentoo.org> neverball-0805.ebuild:
+  initial commit of neverball. package was renamed upstream from Super Empty
+  Ball which was in portage as seb (which will be removed). (bug 25955) ebuild
+  from Brent Kelly via bug report and then modified.
+

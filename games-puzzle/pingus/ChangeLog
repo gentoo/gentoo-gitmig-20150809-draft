@@ -1,0 +1,29 @@
+# ChangeLog for app-games/pingus
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+*pingus-0.6.0-r1 (16 Jul 2003)
+
+  10 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  gcc3 patch (add assert.h to a lot of files) #28281.
+
+  16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Update to use ClanLib SLOT-ing.
+
+*pingus-0.6.0 (22 Apr 2003)
+
+  10 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  gcc3 patch (add assert.h to a lot of files) #28281.
+
+  05 May 2003; Paul de Vrieze <pauldv@gentoo.org> pingus-0.6.0.ebuild:
+  pingus does not configure well with the 0.7 release of clanlib
+
+  27 Apr 2003; Paul de Vrieze <pauldv@gentoo.org> pingus-0.6.0.ebuild:
+  Marked the ebuild testing as clanlib-0.6.5 is not yet stable. Also fixed the
+  header.
+
+  22 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> ChangeLog,
+  files/digest-pingus-0.6.0,  pingus-0.6.0.ebuild :
+  Initial import. Based on an ebuild submitted by
+  Stuart Bouyer <stuart_bouyer@ybb.ne.jp> after quite some discussion
+  about bug #19454.

@@ -1,0 +1,71 @@
+diff -urN quadra-1.1.8/skelton/include/array.h quadra-1.1.8-kacsa/skelton/include/array.h
+--- quadra-1.1.8/skelton/include/array.h	Sat Mar 10 17:17:54 2001
++++ quadra-1.1.8-kacsa/skelton/include/array.h	Fri May 17 17:12:12 2002
+@@ -37,7 +37,7 @@
+ 		v.push_back(t);
+ 	}
+ 	void add_before(const T& t, int i) {
+-		v.insert(&v[i], t);
++		v.insert(v.begin() + i, t);
+ 	}
+ 	bool remove_item(const T& t) {
+ 		for(int i=0; i<size(); i++)
+@@ -51,7 +51,7 @@
+ 		v.pop_back();
+ 	}
+ 	void remove(int i) {
+-		v.erase(&v[i]);
++		v.erase(v.begin() + i);
+ 	}
+ 	int size() const {
+ 		return v.size();
+diff -urN quadra-1.1.8/skelton/tools/wadder/wadder.cpp quadra-1.1.8-kacsa/skelton/tools/wadder/wadder.cpp
+--- quadra-1.1.8/skelton/tools/wadder/wadder.cpp	Fri Oct 19 23:19:30 2001
++++ quadra-1.1.8-kacsa/skelton/tools/wadder/wadder.cpp	Fri May 17 17:21:19 2002
+@@ -109,12 +109,12 @@
+ char *usage = "usage: wadder <working directory> <output res> <input text>\n";
+ Resfile *wad;
+ 
+-char *basename(const char* f) {
++/*char *basename(const char* f) {
+ 	char* p=(char*)(f+strlen(f));
+ 	while(*p != '/' && *p != '\\' && p>=f)
+ 		p--;
+ 	return p+1;
+-}
++}*/
+ 
+ void addfile(const char* fname) {
+ 	Res_dos *res;
+diff -urN quadra-1.1.8/source/net_stuff.cpp quadra-1.1.8-kacsa/source/net_stuff.cpp
+--- quadra-1.1.8/source/net_stuff.cpp	Thu Oct 11 22:35:14 2001
++++ quadra-1.1.8-kacsa/source/net_stuff.cpp	Fri May 17 17:15:05 2002
+@@ -18,6 +18,7 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ 
++#include <stdarg.h>
+ #include "error.h"
+ #include "packets.h"
+ #include "config.h"
+diff -urN quadra-1.1.8/source/quadra.cpp quadra-1.1.8-kacsa/source/quadra.cpp
+--- quadra-1.1.8/source/quadra.cpp	Fri Oct 19 23:19:31 2001
++++ quadra-1.1.8-kacsa/source/quadra.cpp	Fri May 17 17:17:02 2002
+@@ -2387,7 +2387,7 @@
+ 				try {
+ 					overmind.step();
+ 				}
+-				catch(exception *e) {
++				catch(std::exception *e) {
+ 					msgbox("Exception caught from overmind.step(): %s\n", e->what());
+ 				}
+ 				#ifdef PAINTDETECTOR2000
+@@ -2406,7 +2406,7 @@
+ 			try {
+ 				ecran->draw_zone();
+ 			}
+-			catch(exception *e) {
++			catch(std::exception *e) {
+ 				msgbox("Exception caught from ecran->draw_zone(): %s\n", e->what());
+ 			}
+ 

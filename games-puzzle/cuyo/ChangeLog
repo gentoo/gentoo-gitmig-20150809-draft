@@ -1,0 +1,27 @@
+# ChangeLog for app-games/cuyo
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+*cuyo-1.6.1 (27 Dec 2002)
+
+  27 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Dropped qt ver back to 2 while qt3 issues are worked out.
+  Added games eclass support.
+
+*cuyo-1.6.0_beta2 (28 Nov 2002)
+
+  28 Nov 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+  New version for qt3. Marked as testing initially.
+
+*cuyo-1.05 (23 Oct 2002)
+
+  23 Oct 2002; Spider <spider@gentoo.org> cuyo-1.05.ebuild :
+  updated version with bugfixes
+
+*cuyo-1.03 (01 Apr 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> cuyo-1.03.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  1 Apr 2002; Spider <spide@gentoo.org>:
+  Adding this highly addictive game to portage.

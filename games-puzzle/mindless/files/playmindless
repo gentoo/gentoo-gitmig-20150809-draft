@@ -1,0 +1,18 @@
+#!/bin/bash
+
+SEARCHDIRS="
+${HOME}/.mindless/
+/usr/share/games/mindless/
+"
+
+CARDINFO_DAT=""
+for d in ${SEARCHDIRS} ; do
+	export CARDINFO_DAT="${d}/CardInfo.dat"
+	if [ -f ${CARDINFO_DAT} ] ; then
+		mindless
+		exit 0
+	fi
+done
+
+echo "No CardInfo.dat found in:"
+echo "${SEARCHDIRS}"

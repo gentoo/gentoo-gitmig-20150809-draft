@@ -1,0 +1,22 @@
+# ChangeLog for app-games/greedy
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+*greedy-0.2.0-r1 (27 Aug 2003)
+
+  27 Aug 2003; Michael Sterrett <msterret@gentoo.org> greedy-0.2.0-r1.ebuild:
+  inherit games; use CFLAGS; error messages
+
+*greedy-0.2.0 (22 May 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> greedy-0.2.0.ebuild :
+  Added KEYWORDS, SLOT.
+
+   5 May 2002; Mike Jones <ashmodai@gentoo.org> ChangeLog, greedy-0.2.0.ebuild
+   
+   Added initial ChangeLog which should be updated whenever the package is
+   updated in any way. This changelog is targetted to users. This means that the
+   comments should well explained and written in clean English. The details about
+   writing correct changelogs are explained in the skel.ChangeLog file which you
+   can find in the root directory of the portage repository.
+	   

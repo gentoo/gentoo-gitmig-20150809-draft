@@ -1,0 +1,3 @@
+#!/bin/sh
+cd GENTOO_DIR
+exec /usr/bin/env python GENTOO_DIR/4stattack.py "${@}"

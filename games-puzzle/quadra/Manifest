@@ -1,0 +1,5 @@
+MD5 bdff1f4721aa26a2dc4ac7f4f38e7194 files/digest-quadra-1.1.8 65
+MD5 bba09cc9f175516cb6eeadcc7cb5f20b files/libpng-1.2.5.patch 319
+MD5 dd2bece3bae29cd09110d33fb3f80d0d files/quadra-1.1.8-gcc3.patch 2226
+MD5 995b0337c9f5962c941104cbd6dbf551 quadra-1.1.8.ebuild 892
+MD5 f6ecf2813abd3783a466728f00f2ba99 ChangeLog 775

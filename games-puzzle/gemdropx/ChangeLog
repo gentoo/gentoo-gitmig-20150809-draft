@@ -1,0 +1,15 @@
+# ChangeLog for app-games/gemdropx
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# AUTHOR: José Alberto Suárez López <bass@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemdropx/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org> gemdropx-0.9.ebuild:
+  fix DESCRIPTION
+
+*gemdropx-0.9 (10 Jul 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gemdropx-0.9.ebuild :
+  Added KEYWORDS.
+ 
+  10 Jul 2002; J.Alberto S.L. <bass@gentoo.org> gemdropx0.9.ebuild:
+  First relase.

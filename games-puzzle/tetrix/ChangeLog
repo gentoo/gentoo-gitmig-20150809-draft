@@ -1,0 +1,13 @@
+# ChangeLog for app-games/tetrix
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrix/ChangeLog,v 1.1 2003/09/10 06:36:00 vapier Exp $
+
+  02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  tetrix-1.13.16.1.40c.ebuild:
+  Fixed to use mirror://sourceforge
+
+*tetrix-1.13.16.1.40c (24 May 2002)
+  
+  31 Mar 2003; Philip Walls <malverian@gentoo.org>
+  tetrix-1.13.16.1.40c.ebuild, files/tetrix, files/launch_tetrix :
+  Initial import.
