@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.4 2004/03/04 04:56:38 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.5 2004/03/15 01:23:47 usata Exp $
 
 inherit elisp
 
@@ -15,14 +15,12 @@ KEYWORDS="x86 amd64"
 
 DEPEND="virtual/emacs"
 
-S="${WORKDIR}/${P}"
-
 SITEFILE=50elib-gentoo.el
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	D=${S}/ dosed 's:--infodir:--info-dir:g' Makefile
+	sed -i 's:--infodir:--info-dir:g' Makefile
 }
 
 src_compile() {
