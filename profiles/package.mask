@@ -93,7 +93,6 @@ app-admin/va-systemimager-client
 # untested
 >=sys-devel/libtool-1.4
 >=net-fs/netatalk-1.5
->=media-libs/freetype-2.0.4
 >=dev-db/unixODBC-2.0.8
 =app-editors/fte-20010819
 =sys-apps/grub-0.90
