@@ -4,11 +4,11 @@ MD5 dd90615b75423d375e1877c3c65a9c3b gyach-0.9.1-r1.ebuild 1062
 MD5 d54af35120d34b4613aee88f601b0055 gyach-0.7.6.ebuild 949
 MD5 d0a741910d9f84e8d9091be936a85cad gyach-0.8.4.ebuild 949
 MD5 45c2f64028d3e6cd45e4849d352bc384 gyach-0.9.2.ebuild 956
-MD5 45c2f64028d3e6cd45e4849d352bc384 gyach-0.9.4.ebuild 956
+MD5 fdf88660bdf8d816e983a17fd2ec5616 gyach-0.9.4.ebuild 951
 MD5 9cb0082e1f87612504d4ccd9b4812898 gyach-0.7.5.ebuild 674
 MD5 21e632c296f7a3dbd34fadf2e611214b gyach-0.7.5-r1.ebuild 912
 MD5 addaaeeb3056d8360a2ecb8be658a52c gyach-0.9.1.ebuild 947
-MD5 b3c75908fbd5147a6d14def561b18790 ChangeLog 2856
+MD5 eb4fa7c2c622aaf9b305264901becfd8 ChangeLog 2856
 MD5 40903b7171d4da429bee5658c0906d79 gyach-0.8.5.ebuild 949
 MD5 a728009e663a9684ea4704a2a772d47c files/gyach.desktop 113
 MD5 45a03eda3de876f8b00dc37e54042924 files/gyach-0.9.1-gtk2.2-gentoo.patch 413
