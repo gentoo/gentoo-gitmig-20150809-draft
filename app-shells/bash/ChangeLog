@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.47 2004/08/08 01:42:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.48 2004/08/14 03:10:00 agriffis Exp $
+
+  13 Aug 2004; Aron Griffis <agriffis@gentoo.org> files/bashrc:
+  Don't export PS1.  Continuation of bug 26951, comments 60-62
 
   07 Aug 2004; Aron Griffis <agriffis@gentoo.org> files/bashrc:
   Restore red prompt for root #59678

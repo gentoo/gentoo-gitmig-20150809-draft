@@ -1,5 +1,5 @@
 # /etc/bash.bashrc:
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/files/bashrc,v 1.2 2004/08/08 01:42:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/files/bashrc,v 1.3 2004/08/14 03:10:00 agriffis Exp $
 # 
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
@@ -29,4 +29,3 @@ else
 		PS1='\u@\h \w \$ '
 	fi
 fi
-export PS1
