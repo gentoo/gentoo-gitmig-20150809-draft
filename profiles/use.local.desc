@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.20 2003/05/12 16:47:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.21 2003/05/13 22:19:30 vladimir Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -42,3 +42,4 @@ x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
 x11-base/xfree-drm:sis - If you have an SiS video card
 x11-misc/lineakd:xosd - Sends display using the X On Screen Display library
+net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
