@@ -18,6 +18,6 @@ MD5 f829d2ebaab2e3e020a6b25522734331 files/digest-openldap-2.1.27 65
 MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30 65
 MD5 27d2ee25b32bf4a429ae80149508ff34 files/digest-openldap-2.2.14 65
 MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
-MD5 314c39ec746740230bddc9e52df9a806 files/2.0/slapd 581
+MD5 31d3482f03cf8661b7b6c870641d66fa files/2.0/slapd 574
 MD5 50257f7d6b63c8e9778b6407c7d2dddb files/2.0/slapd.conf 277
-MD5 aa6cf67c281ef70b1d6f08449ffd4f2f files/2.0/slurpd 502
+MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495

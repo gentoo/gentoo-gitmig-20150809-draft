@@ -7,4 +7,4 @@ MD5 07fdb01e99c0cb8ab5b3e770d83d7449 files/digest-ypbind-1.11-r1 67
 MD5 254697d0a1a3eda6978996e737ba3f42 files/digest-ypbind-1.12 67
 MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2 69
 MD5 7d2ecfb4fe17b37926695395e98a2444 files/ypbind.rc5 1039
-MD5 8c0815c5eb29318c7540cc8377b94972 files/ypbind.rc6 973
+MD5 ae54c44d17c3d62194a106e5600313fd files/ypbind.rc6 963
