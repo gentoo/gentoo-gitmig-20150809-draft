@@ -1915,7 +1915,7 @@ def depgrab(myfilename,depmark):
 	return string.join(string.split(depstring)," ")
 
 def cleanup_pkgmerge(mypkg,origdir):
-	shutil.rmtree(getsetting("PKG_TMPDIR")+"/"+mypkg)
+	shutil.rmtree(settings["PKG_TMPDIR"]+"/"+mypkg)
 	os.chdir(origdir)
 
 def pkgmerge(mytbz2):
@@ -1935,7 +1935,7 @@ def pkgmerge(mytbz2):
 	mycat=string.strip(mycat)
 	mycatpkg=mycat+"/"+mypkg
 
-	tmploc=getsetting("PKG_TMPDIR")
+	tmploc=settings["PKG_TMPDIR"]
 	pkgloc=tmploc+"/"+mypkg+"/bin"
 	infloc=tmploc+"/"+mypkg+"/inf"
 	if os.path.exists(tmploc+"/"+mypkg):
