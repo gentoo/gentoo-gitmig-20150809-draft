@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.6.6_pre20040928-r3.ebuild,v 1.1 2004/10/22 05:18:29 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.6.6_pre20040928-r3.ebuild,v 1.2 2004/10/22 19:51:02 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="A workspace manager for GNUstep."
 HOMEPAGE="http://www.gnustep.it/enrico/gworkspace/"
 
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
