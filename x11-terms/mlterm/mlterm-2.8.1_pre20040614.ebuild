@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.1_pre20040310.ebuild,v 1.1 2004/03/10 18:31:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.1_pre20040614.ebuild,v 1.1 2004/06/16 04:12:14 usata Exp $
 
-IUSE="truetype gtk imlib bidi nls"
+IUSE="truetype gtk imlib bidi nls uim"
 
 S="${WORKDIR}/${PN}"
 
@@ -18,7 +18,8 @@ DEPEND="gtk? ( >=x11-libs/gtk+-2 )
 	!gtk? ( imlib? ( >=media-libs/imlib-1.9.14 ) )
 	truetype? ( =media-libs/freetype-2* )
 	bidi? ( >=dev-libs/fribidi-0.10.4 )
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	uim? ( >=app-i18n/uim-0.3.4.2 )"
 
 src_compile() {
 	local myconf imagelib
@@ -35,6 +36,7 @@ src_compile() {
 		`use_enable truetype anti-alias` \
 		`use_enable bidi fribidi` \
 		`use_enable nls` \
+		`use_enable uim` \
 		--with-imagelib=${imagelib} \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
