@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74.ebuild,v 1.2 2003/11/27 05:56:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74.ebuild,v 1.3 2003/11/28 14:57:33 rizzo Exp $
 
 IUSE="nls perl spell nas ssl mozilla cjk"
 
@@ -87,6 +87,15 @@ src_install() {
 }
 
 pkg_postinst() {
+	if [ `use cjk` ]; then
+		ewarn
+		ewarn "You have chosen (by selecting 'USE=cjk') to compile with"
+		ewarn "a patch for CJK support.  Please be aware that this patch"
+		ewarn "causes problems with skkinput.  kinput2 works fine.  Details"
+		ewarn "can be found at http://bugs.gentoo.org/show_bug.cgi?id=24657#c23"
+		ewarn
+	fi
+
 	if [ `use ssl` ]; then
 		ewarn
 		ewarn "You have chosen (by selecting 'USE=ssl') to install"
