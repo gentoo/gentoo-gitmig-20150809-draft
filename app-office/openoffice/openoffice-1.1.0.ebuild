@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.2 2003/10/07 11:02:16 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.3 2003/10/08 12:52:32 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -335,10 +335,9 @@ src_compile() {
 		# we take the easy way out. (Az)
 		export CC="/usr/bin/ccache/ccache ${CC}"
 		export CXX="/usr/bin/ccache/ccache ${CXX}"
-	fi
 
 	# Enable new ccache for this build
-	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
+	elif [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
 	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
 	     -x /usr/bin/ccache ]
 	then
