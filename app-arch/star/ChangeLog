@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.9 2004/07/30 17:02:04 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.10 2004/08/31 08:27:12 solar Exp $
+
+*star-1.5_alpha46 (31 Aug 2004)
+
+  31 Aug 2004; <solar@gentoo.org> +star-1.5_alpha46.ebuild:
+  Version bump. security bug #61797
 
 *star-1.5_alpha43 (30 Jul 2004)
 
