@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.10 2003/09/19 16:18:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.11 2003/10/01 12:17:58 aliz Exp $
 
   20 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> muttprint-0.62b.ebuild,
   muttprint-0.63a.ebuild, muttprint-0.64.ebuild, muttprint-0.71.ebuild:
@@ -31,7 +31,7 @@
   05 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
 
-*muttprint-0.62b.ebuild (28 Jul 2002)
+*muttprint-0.62b (28 Jul 2002)
 
   14 Sep 2002; Seemant Kulleen <seemant@gentoo.org> muttprint-0.62b.ebuild :
 

@@ -1,8 +1,8 @@
 # ChangeLog for app-misc/mouseremote
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/ChangeLog,v 1.2 2003/02/12 05:04:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/ChangeLog,v 1.3 2003/10/01 12:17:58 aliz Exp $
 
-*mouseremote-0.90-r0 (9 May 2002)
+*mouseremote-0.90 (9 May 2002)
 
   9 May 2002; B.Lauwers <blauwers@gentoo.org> ChangeLog, mouseremote-0.90.ebuild :
   
