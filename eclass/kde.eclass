@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.72 2003/02/18 09:00:45 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.73 2003/02/27 17:27:37 hannes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -80,10 +80,9 @@ kde_src_compile() {
 		case $1 in
 			myconf)
 				debug-print-section myconf
-				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
+				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR} --enable-mt"
 				# calculate dependencies separately from compiling, enables ccache to work on kde compiles
 				myconf="$myconf --disable-dependency-tracking"
-				use qtmt 	&& myconf="$myconf --enable-mt"
 				[ -n "$DEBUG" ] && myconf="$myconf --enable-debug=full --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
