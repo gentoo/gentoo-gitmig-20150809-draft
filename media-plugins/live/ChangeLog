@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.31 2004/10/01 10:22:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.32 2004/10/01 10:31:33 phosphan Exp $
+
+  01 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> -live-2003.01.28.ebuild,
+  -live-2003.04.11.ebuild, -live-2003.06.26.ebuild, -live-2003.09.01.ebuild,
+  -live-2004.03.05.ebuild, -live-2004.03.17.ebuild, -live-2004.03.23.ebuild:
+  Big cleanup
 
 *live-2004.09.30 (01 Oct 2004)
 
