@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/igal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.5 2003/02/12 07:02:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.6 2003/03/16 05:53:46 absinthe Exp $
+
+*igal-1.4 (16 Mar 2003)
+
+  16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> igal-1.4.ebuild,
+  files/igal-1.4-gentoo.diff:
+  Version bump. Manpage fixed; tile.gif was replaced with tile.png; igal.css
+  added; "THANKS" added to docs.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
