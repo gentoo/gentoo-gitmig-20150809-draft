@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.3.3.1.ebuild,v 1.2 2003/09/12 19:17:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.3.3.1.ebuild,v 1.3 2003/09/14 02:22:55 leonardop Exp $
 
 inherit gnome2
 
@@ -33,5 +33,7 @@ DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README TODO"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}; epatch ${FILESDIR}/${PN}-0.2.2-fix_DATADIR.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.2.2-fix_DATADIR.patch
+	epatch ${FILESDIR}/${PN}-0.3.3.1.patch
 }
