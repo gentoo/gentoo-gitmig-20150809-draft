@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r7.ebuild,v 1.13 2005/01/01 16:35:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r7.ebuild,v 1.14 2005/03/15 14:28:09 seemant Exp $
 
 inherit sgml-catalog
 
@@ -19,7 +19,7 @@ DEPEND="virtual/python
 	~app-text/docbook-sgml-dtd-3.1
 	app-text/docbook-dsssl-stylesheets
 	app-text/openjade
-	net-www/lynx
+	www-client/lynx
 	tetex? ( app-text/jadetex )"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.14.ebuild,v 1.3 2005/02/28 09:36:57 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.14.ebuild,v 1.4 2005/03/15 14:25:16 seemant Exp $
 
 IUSE="chasen cjk emacs kakasi nls tcltk"
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-perl/File-MMagic-1.20
 	nls? ( sys-devel/gettext )
 	chasen? ( dev-perl/Text-ChaSen )
 	kakasi? ( dev-perl/Text-Kakasi )
-	tcltk?  ( dev-lang/tk net-www/lynx )"
+	tcltk?  ( dev-lang/tk www-client/lynx )"
 
 src_compile() {
 

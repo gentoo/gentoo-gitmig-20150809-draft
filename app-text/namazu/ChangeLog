@@ -1,6 +1,9 @@
 # ChangeLog for app-text/namazu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.11 2005/02/28 09:36:57 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.12 2005/03/15 14:25:16 seemant Exp $
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> namazu-2.0.14.ebuild:
+  Dependency update: net-www/lynx -> www-client/lynx.
 
   28 Feb 2005; <dams@gentoo.org> namazu-2.0.14.ebuild:
   added ~ppc (bug #83185)

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.35 2005/03/14 17:21:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.36 2005/03/15 14:22:29 seemant Exp $
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  docbook-sgml-utils-0.6.12.ebuild, docbook-sgml-utils-0.6.12-r2.ebuild:
+  Dependency update: net-www/lynx -> www-client/lynx.
 
   14 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   docbook-sgml-utils-0.6.12.ebuild, docbook-sgml-utils-0.6.12-r2.ebuild:

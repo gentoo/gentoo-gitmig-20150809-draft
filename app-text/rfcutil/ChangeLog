@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rfcutil
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.17 2005/03/15 14:15:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.18 2005/03/15 14:21:13 seemant Exp $
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> :
+  Dependency update: net-www/lynx -> www-client/lynx.
 
   15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> rfcutil-3.2.3.ebuild:
   Dependency update: net-www/lynx -> www-client/lynx.
