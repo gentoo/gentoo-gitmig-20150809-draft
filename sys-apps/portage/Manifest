@@ -4,8 +4,10 @@ MD5 80eac5391656a5233fdc1aae4ce000df portage-2.0.50-r8.ebuild 11539
 MD5 fc2ed915c993d7b653261dd43616e33a portage-2.0.51_pre16.ebuild 14282
 MD5 a2de9bfe0669dbb23ee6aa22d8664e1f ChangeLog 897
 MD5 4ec0f0ae9676b9d2d227d737d508306b metadata.xml 165
+MD5 ed06b59ae03c481dc1b9cd600f8443dc portage-2.0.51_pre18.ebuild 11909
 MD5 b3080f4752c0b62c9eabcf932dd4e11d files/digest-portage-2.0.50-r8 70
 MD5 dcf8810357598886efe75871afe2eb64 files/digest-portage-2.0.50-r9 70
 MD5 125a39b2f217bd78858cd24e28ca8cb2 files/digest-portage-2.0.51_pre16 73
 MD5 3035dbfbd5633142b2245940e48c62b0 files/digest-portage-2.0.51_pre17 73
+MD5 5d6fa1c3e7947c400250767148384914 files/digest-portage-2.0.51_pre18 73
 MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
