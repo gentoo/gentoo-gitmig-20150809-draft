@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.10 2004/07/03 19:02:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.11 2004/07/03 22:31:20 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc mips alpha arm ~hppa amd64 ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ~ppc ~sparc mips alpha arm hppa amd64 ia64 ~ppc64 ~s390"
 IUSE="nls build acl selinux static uclibc"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
