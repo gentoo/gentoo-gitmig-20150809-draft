@@ -1,13 +1,19 @@
 # ChangeLog for net-misc/ices
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.4 2003/02/12 08:24:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.5 2003/08/15 09:49:52 g2boojum Exp $
+
+*ices-0.3 (15 Aug 2003)
+
+  15 Aug 2003; Nick Hadaway <raker@gentoo.org> ices-0.3.ebuild:
+  Version bump.  Should now support bigendian platforms.  Finally added
+  the python module support.  Removed the dependancy on icecast and 
+  added depends on libxml2 and >=libshout-2.0.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *ices-0.2.3 (25 Jul 2002)
 
   25 Jul 2002; Nick Hadaway <raker@gentoo.org>
-  ices-0.2.3.ebuild, files/digset-ices-0.2.3, files/docdir.diff :
-
+  ices-0.2.3.ebuild, files/digest-ices-0.2.3, files/docdir.diff:
   Initial adding of ebuild to portage.  Leaving masked until I know the
   status of the shared python library.
