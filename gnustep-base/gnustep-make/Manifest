@@ -1,12 +1,22 @@
-MD5 20eb245e49127067d684ec076f77c812 ChangeLog 8008
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 caff14909da7fa8353f7858cc2879ce9 ChangeLog 8116
 MD5 cf7a6d8c538b43e8f6dd06f1b65c23a9 gnustep-make-1.10.0-r1.ebuild 6433
-MD5 ca04d409726e17e7151b832de9989a48 metadata.xml 530
 MD5 b5de2cf03c31af019f8402df91f50371 gnustep-make-1.10.1_pre20050312.ebuild 6552
+MD5 fdc8b2198f715e6fb7ff7745cb2c2cdf gnustep-make-1.10.0-r2.ebuild 6434
 MD5 7ff96a4d2e509400b3d8c8fdcb3cafbe gnustep-make-1.10.1_pre20050312-r1.ebuild 6555
-MD5 bba72da5a916d833a43f93d728a5810d gnustep-make-1.10.0-r2.ebuild 6433
+MD5 ca04d409726e17e7151b832de9989a48 metadata.xml 530
 MD5 ff55be8ebf757b97d823bb3cf08b8bc4 files/GNUstep-reset.sh.patch 2121
-MD5 fdb13360dfc78ccdc3c75a5da84b46ab files/make-user-defaults.patch-1.10.0 1282
 MD5 020f6b825d80a9769c36a39877f13f44 files/digest-gnustep-make-1.10.0-r1 71
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-make-1.10.1_pre20050312 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-make-1.10.1_pre20050312-r1 0
 MD5 020f6b825d80a9769c36a39877f13f44 files/digest-gnustep-make-1.10.0-r2 71
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-make-1.10.1_pre20050312-r1 0
+MD5 fdb13360dfc78ccdc3c75a5da84b46ab files/make-user-defaults.patch-1.10.0 1282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCUaQfKRy60XGEcJIRAvk4AJ40C9FdEc9ty7gvHpfC7eXKs/kf3QCeKeex
+mmLV40WTPbtPBfhHv0DvxVk=
+=SC5b
+-----END PGP SIGNATURE-----

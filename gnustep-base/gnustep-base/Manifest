@@ -1,9 +1,19 @@
-MD5 5a7cb159a3e4446f557b16d6b7e0d76f ChangeLog 7734
-MD5 783c7f94f8e2cd3a1925ce5e93d7afc3 gnustep-base-1.10.1-r1.ebuild 2979
-MD5 6054f8e4a94313852ff8e1294c8abd88 metadata.xml 670
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 591bd9ba0a0f7ec28010f9e25461374f ChangeLog 7842
+MD5 7ed5343ad46462095179bcd75fb9b23f gnustep-base-1.10.1-r1.ebuild 2980
 MD5 b0817074d5c7b4ccfd32c617971f9b7e gnustep-base-1.10.2_pre20050312.ebuild 3363
+MD5 6054f8e4a94313852ff8e1294c8abd88 metadata.xml 670
 MD5 1e1e21f737b0d25c8faabb89bd286988 files/base-user-defaults.patch-1.10.0 1069
 MD5 efda24cf74398ac3ddce6cba6071561a files/config-gnustep-base.sh 559
-MD5 3a635544722f08220cbdfe346c41c125 files/base-user-defaults.patch-1.10.2_pre20050312 1096
-MD5 deded00aa5a335854582a82255ddc2f3 files/digest-gnustep-base-1.10.1-r1 72
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-base-1.10.2_pre20050312 0
+MD5 deded00aa5a335854582a82255ddc2f3 files/digest-gnustep-base-1.10.1-r1 72
+MD5 3a635544722f08220cbdfe346c41c125 files/base-user-defaults.patch-1.10.2_pre20050312 1096
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCUaTXKRy60XGEcJIRAvr9AJ9TPbzEL6b77uOHhzRUX+G2rlrQCgCgsK8V
+/W7uwmNlQA8SWYMmEizU0dA=
+=KUfo
+-----END PGP SIGNATURE-----
