@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.108 2004/02/19 16:44:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.109 2004/02/24 05:10:32 weeve Exp $
+
+  23 Feb 2004; Jason Wever <weeve@gentoo.org> postfix-2.0.16-r1.ebuild:
+  Stable on sparc.
 
   19 Feb 2004; Aron Griffis <agriffis@gentoo.org> postfix-2.0.16-r1.ebuild,
   postfix-2.0.18.ebuild:
