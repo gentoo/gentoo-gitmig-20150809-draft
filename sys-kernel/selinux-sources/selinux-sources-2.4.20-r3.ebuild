@@ -24,13 +24,13 @@ S=${WORKDIR}/linux-${KV}
 OKV=2.4.20
 DESCRIPTION="LSM patched kernel with SELinux archive"
 
-SEPATCH=2003011510
+SEPATCH=cvs-20030328
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 
-	 http://www.nsa.gov/selinux/patches/lsm-2.4-${SEPATCH}.patch.gz
-	 http://www.nsa.gov/selinux/patches/selinux-2.4-${SEPATCH}.patch.gz"
+	 http://linux.pebenito.dhs.org/selinux-sources/lsm-2.4-${SEPATCH}.patch
+	 http://linux.pebenito.dhs.org/selinux-sources/selinux-2.4-${SEPATCH}.patch"
 
 HOMEPAGE="http://www.kernel.org/ http://www.nsa.gov/selinux"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="${KV}"
 
 src_unpack() {
