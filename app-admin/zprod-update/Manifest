@@ -1,4 +1,4 @@
-MD5 0523fbe705dd423d89bbb8c23107ff5b files/0.1/zprod-update 6854
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zprod-update-0.1 0
 MD5 53f6566b9bd1ba158213e2cfb3bffd21 ChangeLog 466
-MD5 1290bb9ecefc5992907fa65895f37774 zprod-update-0.1.ebuild 523
+MD5 9d571ebdbb80ae30fd584265a8780d49 zprod-update-0.1.ebuild 507
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zprod-update-0.1 0
+MD5 0523fbe705dd423d89bbb8c23107ff5b files/0.1/zprod-update 6854
