@@ -1,6 +1,8 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.1 2004/02/18 07:58:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.2 2004/03/01 19:59:51 aliz Exp $
+
+*paxctl-0.2 (18 Feb 2004)
 
   18 Feb 2004; <solar@gentoo.org> :
   This is paxctl for controlling PaX flags on a per binary basis. PaX

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.12 2004/01/25 23:15:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.13 2004/03/01 19:59:51 aliz Exp $
 
   25 Jan 2004; <plasmaroo@gentoo.org> i2c-2.8.1.ebuild, i2c-2.8.2.ebuild:
   Added "CC" variable support to the ebuild to enable distcc
@@ -8,6 +8,8 @@
 
   26 Dec 2003; <plasmaroo@gentoo.org> i2c-2.8.0.ebuild, i2c-2.8.1.ebuild:
   Marked stable on 'x86'.
+
+*i2c-2.8.2 (13 Dec 2003)
 
   13 Dec 2003; <plasmaroo@gentoo.org> i2c-2.8.2.ebuild:
   Version bump; closes bug #35709
@@ -53,7 +55,7 @@
   Update to latest version, unstable marked for a few days, although
   this code is well tested in the lolo and gentoo-sources.
 
-*i2c-2.6.5 (08 Dec 2002)
+*i2c-2.6.5-r1 (08 Dec 2002)
   08 Dec 2002; Seth Chandler <sethbc@gentoo.org>: i2c-2.6.5-r1.ebuild
   added to portage, originally contributed by Jonathan Kelly
   <j0n@tpg.com.au>

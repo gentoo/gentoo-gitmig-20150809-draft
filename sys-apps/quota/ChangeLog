@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/quota
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.22 2004/01/29 19:58:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.23 2004/03/01 19:59:51 aliz Exp $
 
   29 Jan 2004; <gustavoz@gentoo.org> quota-3.06-r2.ebuild:
   stable on sparc
@@ -50,7 +50,7 @@
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> quota-3.06.ebuild:
   Mark stable on alpha
 
-*quota-3.06 (9 Dec 2002)
+*quota-3.06-r1 (9 Dec 2002)
 
   05 Jan 2003; Seemant Kulleen <seemant@gentoo.org> quota-3.06-r1.ebuild :
 

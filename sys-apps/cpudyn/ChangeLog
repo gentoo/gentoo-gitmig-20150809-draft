@@ -1,11 +1,12 @@
 # ChangeLog for sys-apps/cpudyn
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/ChangeLog,v 1.5 2004/02/02 03:00:34 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/ChangeLog,v 1.6 2004/03/01 19:59:51 aliz Exp $
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> cpudyn-0.6.1.ebuild :
   AMD64 keywords.
 
 *cpudyn-0.5.0 (19 Jan 2004)
+*cpudyn-0.6.1 (19 Jan 2004)
 
   19 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> cpudyn-0.5.0.ebuild,
   cpudyn-0.6.1.ebuild, files/cpudyn-0.5.0-init_conf_updates.patch:

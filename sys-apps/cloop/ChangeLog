@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/cloop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/ChangeLog,v 1.6 2003/12/29 11:11:07 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/ChangeLog,v 1.7 2004/03/01 19:59:51 aliz Exp $
 
   29 Dec 2003; Stuart Herbert <stuart@gentoo.org> cloop-0.68.ebuild:
   New digest (original tarball no longer available; made a new one from source
@@ -33,6 +33,7 @@
   Added test to abort if Linux kernel != 2.4.x
 
 *cloop-1.0 (25 Aug 2003)
+*cloop-0.68 (25 Aug 2003)
 
   25 Aug 2003; stuart <stuart@gentoo.org> cloop-0.68.ebuild, cloop-1.0.ebuild:
   Initial import

@@ -1,6 +1,8 @@
 # ChangeLog for sys-apps/discover-data
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/ChangeLog,v 1.8 2004/02/25 01:24:44 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/ChangeLog,v 1.9 2004/03/01 19:59:51 aliz Exp $
+
+*discover-data-1.2002.05.23-r1 (25 Feb 2004)
 
   25 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   discover-data-1.2002.05.23-r1.ebuild, discover-data-2.2003.02.05.ebuild:

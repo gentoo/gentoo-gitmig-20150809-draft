@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.30 2003/12/29 03:34:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.31 2004/03/01 19:59:51 aliz Exp $
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> diffutils-2.8.4-r4.ebuild:
   Move to mips stable (~mips -> mips)
@@ -20,6 +20,8 @@
 
   07 Nov 2003; Tavis Ormandy <taviso@gentoo.org> diffutils-2.8.4-r4.ebuild:
   stable.
+
+*diffutils-2.8.4-r4 (01 Aug 2003)
 
   01 Aug 2003; Tavis Ormandy <taviso@gentoo.org> diffutils-2.8.4-r4.ebuild::
   typo in diff.c causes core dump with the --tabsize option.

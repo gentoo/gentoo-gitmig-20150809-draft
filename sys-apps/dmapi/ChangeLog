@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.17 2004/01/17 07:30:09 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.18 2004/03/01 19:59:51 aliz Exp $
 
   17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
   manifest fix
@@ -14,6 +14,8 @@
   28 Sep 2003; David Holm <dholm@gentoo.org>
   dmapi-2.0.5-r1.ebuild:
   Added to ~ppc.
+
+*dmapi-2.0.5-r1 (16 Apr 2003)
 
   16 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> dmapi-2.05-r1.ebuild :
   Fixed sandbox issues.

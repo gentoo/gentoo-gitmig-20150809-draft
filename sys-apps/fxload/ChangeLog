@@ -1,10 +1,10 @@
 # ChangeLog for sys-apps/fxload
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.8 2003/03/25 12:53:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.9 2004/03/01 19:59:51 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*fxload-20020411.ebuild (14 July 2002)
+*fxload-20020411 (14 July 2002)
 
   25 Mar 2003; Guy Martin <gmsoft@gentoo.org> fxload-20020411.ebuild :
   Fixed build using MY_P instead of modifying P. Added ~hppa to KEYWORDS.

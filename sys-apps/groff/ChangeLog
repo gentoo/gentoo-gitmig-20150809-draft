@@ -1,11 +1,13 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.34 2004/02/29 19:50:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.35 2004/03/01 19:59:51 aliz Exp $
 
 *groff-1.19 (29 Feb 2004)
 
   29 Feb 2004; Martin Schlemmer <azarah@gentoo.org> groff-1.19.ebuild:
   Update version.
+
+*groff-1.18.1-r4 (06 Jan 2004)
 
   06 Jan 2004; Aron Griffis <agriffis@gentoo.org> groff-1.18.1-r4.ebuild:
   Fix bug 36008 by replacing -Os with -O on alpha. Additionally make the build

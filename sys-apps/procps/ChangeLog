@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.59 2004/02/24 15:37:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.60 2004/03/01 19:59:51 aliz Exp $
 
   24 Feb 2004; Chris PeBenito <pebenito@gentoo.org> procps-3.2.0.ebuild,
   files/procps-3.2.0-selinux-Z.diff:
@@ -47,6 +47,8 @@
   Added sparc stable keyword
 
 *procps-3.1.14-r1 (08 Dec 2003)
+*procps-3.1.13-r1 (08 Dec 2003)
+*procps-3.1.12-r1 (08 Dec 2003)
 
   08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> procps-2.0.16-r1.ebuild,
   procps-2.0.16.ebuild, procps-3.1.12-r1.ebuild, procps-3.1.12.ebuild,

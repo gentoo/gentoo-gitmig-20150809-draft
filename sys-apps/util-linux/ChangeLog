@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.70 2004/02/27 19:28:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.71 2004/03/01 19:59:51 aliz Exp $
 
   27 Feb 2004; Seemant Kulleen <seemant@gentoo.org>
   util-linux-2.11z-r8.ebuild:
@@ -35,6 +35,9 @@
   Add patch to compile against 2.6.x headers #31286.
 
 *util-linux-2.11z-r9 (06 Dec 2003)
+*util-linux-2.11z-r8 (08 Dec 2003)
+*util-linux-2.12-r2 (08 Dec 2003)
+*util-linux-2.12-r3 (08 Dec 2003)
 
   06 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
   util-linux-2.11z-r6.ebuild, util-linux-2.11z-r7.ebuild,

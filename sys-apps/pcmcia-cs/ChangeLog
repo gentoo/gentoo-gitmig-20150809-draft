@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.63 2004/02/18 16:14:56 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.64 2004/03/01 19:59:51 aliz Exp $
 
   18 Feb 2004; Brad House <brad_mssw@gentoo.org> pcmcia-cs-3.2.7.ebuild:
   amd64 stable
@@ -199,7 +199,7 @@
   14 Jul 2002; phoen][x <phoenix@gentoo.org> pcmcia-cs-3.1.34-r3.ebuild :
   Added KEYWORDS.
 
-*pcmcia-cs-3.1.34 (13 July 2002)
+*pcmcia-cs-3.1.34-r8 (13 July 2002)
   
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
   updated keywords (ppc)

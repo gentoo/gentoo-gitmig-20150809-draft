@@ -1,6 +1,8 @@
 # ChangeLog for sys-apps/tmpreaper
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.7 2004/02/13 00:44:23 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.8 2004/03/01 19:59:51 aliz Exp $
+
+*tmpreaper-1.5.1 (12 Feb 2004)
 
   12 Feb 2004; Brian Harring <ferringb@gentoo.org> tmpreaper-1.5.1.ebuild :
   Version bump to 1.5.1.  Marking ~arch.
