@@ -1,10 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1210.ebuild,v 1.1 2004/10/07 10:04:49 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1211.ebuild,v 1.1 2004/10/07 18:48:49 trapni Exp $
 
 DESCRIPTION="A client and server for Peercast P2P-radio network"
 HOMEPAGE="http://www.peercast.org"
-SRC_URI="http://www.peercast.org/${PN}-linux.tgz"
+
+# as the official peercast download site does *NOT* provide
+# versioned URLs we must provide a seperated download URL where
+# we can downlaod this (versioned).
+SRC_URI="http://dev.gentoo.org/~trapni/dist/${PN}-linux-${PV}.tgz"
+
 LICENSE="freedist"
 
 SLOT="0"
@@ -12,8 +17,9 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=""
+
 RDEPEND="
-	amd64?	( app-emulation/emul-linux-x86-baselibs )
+	amd64? ( app-emulation/emul-linux-x86-baselibs )
 "
 
 S=${WORKDIR}
