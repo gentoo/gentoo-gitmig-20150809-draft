@@ -6,12 +6,12 @@ diff -urN uim-0.2.1.ORIG/gtk/Makefile.in uim-0.2.1/gtk/Makefile.in
  @GTK2_TRUE@install-data-hook:
  @GTK2_TRUE@	if test -f $(GTK_IMMODULES); then \
 -@GTK2_TRUE@	gtk-query-immodules-2.0 > $(GTK_IMMODULES); \
-+@GTK2_TRUE@	gtk-query-immodules-2.0 > ${DESTDIR}/$(GTK_IMMODULES); \
++@GTK2_TRUE@	#gtk-query-immodules-2.0 > ${DESTDIR}/$(GTK_IMMODULES); \
  @GTK2_TRUE@	fi
  @GTK2_TRUE@uninstall-hook:
  @GTK2_TRUE@	if test -f $(GTK_IMMODULES); then \
 -@GTK2_TRUE@	gtk-query-immodules-2.0 > $(GTK_IMMODULES); \
-+@GTK2_TRUE@	gtk-query-immodules-2.0 > ${DESTDIR}/$(GTK_IMMODULES); \
++@GTK2_TRUE@	#gtk-query-immodules-2.0 > ${DESTDIR}/$(GTK_IMMODULES); \
  @GTK2_TRUE@	fi
  @GTK2_FALSE@install-data-hook:
  

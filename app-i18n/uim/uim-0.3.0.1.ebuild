@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.0.1.ebuild,v 1.3 2004/03/14 19:32:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.0.1.ebuild,v 1.4 2004/03/20 17:55:12 usata Exp $
 
 IUSE="gtk nls debug"
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )"
-RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
+RDEPEND="gtk? ( =x11-libs/gtk+-2.2* )
 	!app-i18n/uim-svn"
 
 # for debugging use
@@ -50,10 +50,6 @@ src_compile() {
 }
 
 src_install () {
-
-	if [ "`use gtk`" ] ; then
-		dodir /etc/gtk-2.0
-	fi
 
 	make DESTDIR=${D} install || die
 

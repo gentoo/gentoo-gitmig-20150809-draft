@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.40 2004/03/14 19:32:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.41 2004/03/20 17:55:12 usata Exp $
+
+  21 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> uim-0.2.4.ebuild,
+  uim-0.2.8.ebuild, uim-0.3.0.1.ebuild, uim-0.3.1.ebuild, uim-0.3.2.ebuild,
+  files/uim-gtk-query-immodules-gentoo.diff:
+  Force gtk+-2.2 for <=app-i18n/uim-0.3.1 and added a patch to fix compile on
+  >=x11-libs/gtk+-2.4 for uim-0.3.2. See bug #45086
 
 *uim-0.3.2 (08 Mar 2004)
 

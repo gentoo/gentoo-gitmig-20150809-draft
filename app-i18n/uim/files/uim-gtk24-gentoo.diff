@@ -1,0 +1,25 @@
+Index: gtk/Makefile.am
+===================================================================
+--- gtk/Makefile.am	(revision 612)
++++ gtk/Makefile.am	(revision 613)
+@@ -1,6 +1,6 @@
+ 
+ 
+-moduledir = $(libdir)/gtk-2.0/2.2.0/immodules
++moduledir = $(libdir)/gtk-2.0/@GTK_BINARY_VERSION@/immodules
+ GTK_IMMODULES= $(DESTDIR)$(sysconfdir)/gtk-2.0/gtk.immodules
+ 
+ INCLUDES = -I$(top_srcdir)
+Index: configure.ac
+===================================================================
+--- configure.ac	(revision 612)
++++ configure.ac	(revision 613)
+@@ -179,6 +179,8 @@
+ XFCE4_PANEL_PLUGINSDIR=`pkg-config xfce4-panel-1.0 --variable=pluginsdir`
+ AC_SUBST(XFCE4_PANEL_PLUGINSDIR)
+ 
++GTK_BINARY_VERSION=`pkg-config gtk+-2.0 --variable=gtk_binary_version`
++AC_SUBST(GTK_BINARY_VERSION)
+ 
+ if test x$use_gtk2 = xyes ; then
+ AC_DEFINE(USE_GTK2, 1, [use gtk2])
