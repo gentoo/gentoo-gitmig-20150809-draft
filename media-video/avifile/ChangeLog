@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.30 2003/01/23 11:25:17 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.31 2003/01/23 18:55:52 raker Exp $
+
+*avifile-0.7.27.20030122 (23 jan 2003)
+
+  23 Jan 2003; Nick Hadaway <raker@gentoo.org> avifile-0.7.27.20030122.ebuild,
+  files/digest-/avifile-0.7.27.20030122 :
+  Version bump.  Removed automake dependancy.  This has a fix for avi
+  movies over ~4200 seconds.
 
 *avifile-0.7.26.20030117 (23 Jan 2003)
 
