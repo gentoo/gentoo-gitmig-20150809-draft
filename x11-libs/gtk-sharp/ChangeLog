@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk-sharp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.21 2004/06/02 16:05:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.22 2004/06/02 16:51:46 latexer Exp $
+
+  02 Jun 2004; Peter Johanson <latexer@gentoo.org> gtk-sharp-0.16.ebuild,
+  gtk-sharp-0.17.ebuild, gtk-sharp-0.18.ebuild:
+  Removing all pre-Beta1 mono stuff.
 
 *gtk-sharp-0.93 (02 Jun 2004)
 
