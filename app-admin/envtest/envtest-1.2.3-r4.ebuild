@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/envtest/envtest-1.2.3-r4.ebuild,v 1.7 2003/04/05 02:09:04 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/envtest/envtest-1.2.3-r4.ebuild,v 1.8 2003/04/05 02:13:27 carpaski Exp $
 
 DESCRIPTION="This ebuild display the environment for an ebuild. It's for portage-testing purposes only and will _always_ fail."
 HOMEPAGE="http://foo.bar.com/"
@@ -14,6 +14,7 @@ S=${WORKDIR}/${P}
 
 src_compile() {
 	set
+
 	die "Died on purpose. You aren't supposed to merge this. Have a nice day. :)"
 }
 
