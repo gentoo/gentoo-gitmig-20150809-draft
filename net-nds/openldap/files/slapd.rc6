@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/slapd.rc6,v 1.4 2002/07/29 19:17:28 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/slapd.rc6,v 1.5 2002/07/29 19:27:05 raker Exp $
 
 depend() {
 	need net
@@ -9,12 +9,12 @@ depend() {
 
 start() {
 	ebegin "Starting ldap-server"
-	start-stop-daemon --start --quiet --exec --pidfile /var/state/openldap/slapd.pid /usr/lib/openldap/slapd
+	start-stop-daemon --start --quiet --pidfile /var/state/openldap/slapd.pid --exec /usr/lib/openldap/slapd
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping ldap-server"
-	start-stop-daemon --stop --quiet --pidfile /var/state/openldap/slapd.pid -exec /usr/lib/openldap/slapd
+	start-stop-daemon --stop --quiet --pidfile /var/state/openldap/slapd.pid --exec /usr/lib/openldap/slapd
 	eend $?
 }
