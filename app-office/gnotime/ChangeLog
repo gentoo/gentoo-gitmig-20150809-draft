@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnotime
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.4 2003/11/18 05:43:59 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.5 2004/02/14 14:43:41 liquidx Exp $
+
+*gnotime-2.1.7 (14 Feb 2004)
+
+  14 Feb 2004; Alastair Tse <liquidx@gentoo.org> gnotime-2.1.7.ebuild:
+  version bump
 
   18 Nov 2003; Mike Gardiner <obz@gentoo.org> gnotime-2.1.6.ebuild:
   Corrected libgtkhtml dep to be =version-2* to emerge the correct version.

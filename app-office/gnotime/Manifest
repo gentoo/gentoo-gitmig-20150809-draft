@@ -1,4 +1,6 @@
+MD5 b2fe8132f650ccdae5d5232236456178 ChangeLog 830
 MD5 ae587bb87cf11e896fa38cd9f88957de gnotime-2.1.6.ebuild 911
-MD5 4fd91eb87a44641fc9e3f2dcc27f1af0 ChangeLog 709
+MD5 7f5abaa0981d5800c27ff2c1676aa157 gnotime-2.1.7.ebuild 916
 MD5 f6e0b8b6bfa8838d3ed9b157f2af7c77 metadata.xml 220
 MD5 18a75209188e9df91af0dd0569bf2634 files/digest-gnotime-2.1.6 65
+MD5 e16e9c282906881d9c0c8796358d7bda files/digest-gnotime-2.1.7 65
