@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.71 2004/10/12 00:00:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.72 2004/10/19 13:03:37 ka0ttic Exp $
+
+*bash-completion-20041017 (19 Oct 2004)
+
+  19 Oct 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +bash-completion-20041017.ebuild:
+  Version bump; includes new version of gentoo-bashcomp as well (new equery
+  completion available which closes #55687).
 
 *bash-completion-20040711 (11 Oct 2004)
 
