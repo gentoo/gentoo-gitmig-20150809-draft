@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sound</herd>
+<maintainer>
+  <email>eradicator@gentoo.org</email>
+  <name>Jeremy Huddleston</name>
+</maintainer>
 </pkgmetadata>

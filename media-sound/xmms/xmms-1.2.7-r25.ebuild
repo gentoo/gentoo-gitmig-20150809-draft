@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r25.ebuild,v 1.14 2004/02/04 07:50:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r25.ebuild,v 1.15 2004/02/16 11:51:23 eradicator Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk gtk2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~ia64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.6 )
