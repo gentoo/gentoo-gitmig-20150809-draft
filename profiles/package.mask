@@ -292,7 +292,7 @@ dev-perl/CDDB-File
 
 # <cardoe@gentoo.org> (24 Aug 2002)
 # masked for testing...
-=sys-apps/pcmcia-cs-3.2.1
+>=sys-apps/pcmcia-cs-3.2.1
 
 # <satai@gentoo.org> (23 Aug 2002)
 # problems with tetex/pdftex.
