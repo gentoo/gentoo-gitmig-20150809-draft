@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.1_rc4.ebuild,v 1.1 2001/11/24 02:13:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.1_rc4.ebuild,v 1.2 2001/11/24 02:53:00 azarah Exp $
 
 #our version, but with "eh" formatting
 NV=1.0.1-rc4
 S=${WORKDIR}/LVM/${NV}
-DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"
+DESCRIPTION="User-land utilities for LVM (Logical Volume Manager) software"
 SRC_URI="ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${NV}.tar.gz"
 HOMEPAGE="http://www.mosix.org"
 DEPEND="virtual/glibc"
