@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.21 2004/05/11 15:14:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.22 2004/05/23 08:59:44 usata Exp $
+
+  23 May 2004; Mamoru KOMACHI <usata@gentoo.org> im-ja-1.0-r2.ebuild:
+  Disabled debug IUSE flag completely (the last commit was not enough
+  because gnome2.eclass pulls in debug). Thanks to Mark Purtill
+  <xe6xjhk02@sneakemail.com>. Stable on alpha and ppc.
 
   12 May 2004; Mamoru KOMACHI <usata@gentoo.org> im-ja-0.9-r1.ebuild,
   im-ja-1.0-r2.ebuild:
