@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/teco
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.4 2003/06/18 07:52:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.5 2003/06/18 08:28:02 taviso Exp $
+
+  18 Jun 2003; Tavis Ormandy <taviso@gentoo.org> teco-1.00-r1.ebuild:
+  removing gcc hardcode
 
   18 Jun 2003; Tavis Ormandy <taviso@gentoo.org> teco-1.00-r1.ebuild:
   Marking stable on alpha and x86, added a doc USE flag.
