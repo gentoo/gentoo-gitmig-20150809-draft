@@ -1,6 +1,18 @@
-MD5 776197cc074e30c694fcb91461627734 i18n-langtags-0.28.ebuild 666
-MD5 bf3a80fcfd136db8d0d24c62edcc33c6 ChangeLog 1691
-MD5 1b4f5497b84c6b4476434d84bfac5d14 i18n-langtags-0.30.ebuild 695
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26de35c166abeaf2ec397c8f97bbd600 ChangeLog 1836
+MD5 9103801994c57c1b87964c722f6240e2 i18n-langtags-0.28.ebuild 672
+MD5 1c24d6c8b0142be54a23d5ac53c6a0ef i18n-langtags-0.30.ebuild 698
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 bae6d864d9a53eaebdbfc33ab32269f3 i18n-langtags-0.35.ebuild 605
 MD5 44b10439560c951ef0f91f7afbdf1607 files/digest-i18n-langtags-0.28 69
 MD5 f47e1446864e6d734ce097235c45d6dd files/digest-i18n-langtags-0.30 69
+MD5 bea0042056964503f6c79cf18ddaf666 files/digest-i18n-langtags-0.35 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQa/ttG5z4I8BtQoRAowAAKCQhY/fE7Z+OhUOR/f3KkKfSp/xBQCgjFCZ
+k209mJJak/P495ku4O9Qdsg=
+=6kIQ
+-----END PGP SIGNATURE-----
