@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/speedfreq
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/speedfreq/ChangeLog,v 1.2 2005/03/15 16:39:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/speedfreq/ChangeLog,v 1.3 2005/03/15 19:18:43 ciaranm Exp $
+
+  15 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> speedfreq-0.5.ebuild,
+  speedfreq-0.7.2.ebuild, speedfreq-0.7.2-r1.ebuild,
+  speedfreq-0.7.2-r2.ebuild:
+  Dependency update: sys-apps/acpid -> sys-power/acpid.
 
 *speedfreq-0.7.2-r2 (14 Mar 2005)
 *speedfreq-0.7.2-r1 (14 Mar 2005)

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/speedfreq/speedfreq-0.7.2-r2.ebuild,v 1.1 2005/03/14 21:57:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/speedfreq/speedfreq-0.7.2-r2.ebuild,v 1.2 2005/03/15 19:18:43 ciaranm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="acpi"
 
-DEPEND="!ppc? ( acpi? ( sys-apps/acpid ) )"
+DEPEND="!ppc? ( acpi? ( sys-power/acpid ) )"
 
 is_2_6_kernel() {
 	local KV_major="$(echo "${KV}" | cut -d. -f1)"
