@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r3.ebuild,v 1.2 2004/06/24 22:16:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r3.ebuild,v 1.3 2004/07/12 22:02:34 langthang Exp $
 
 inherit ccc eutils
 
@@ -8,8 +8,7 @@ MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
 
 DESCRIPTION="The /bin/mail program, which is used to send mail via shell scripts."
-SRC_URI="ftp://ftp.debian.org/debian/pool/main/m/mailx/mailx_${MX_VER}.orig.tar.gz
-	mirror://gentoo/multifix.diff.gz
+SRC_URI="mirror://gentoo/multifix.diff.gz
 	mirror://gentoo/20021129-cvs.diff.bz2"
 HOMEPAGE="http://www.debian.org"
 
@@ -20,7 +19,7 @@ DEPEND=">=net-libs/liblockfile-1.03
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64"
 
 src_unpack() {
 
