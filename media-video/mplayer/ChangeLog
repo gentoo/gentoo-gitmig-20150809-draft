@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.278 2005/03/18 21:23:54 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.279 2005/03/18 21:39:46 chriswhite Exp $
+
+  19 Mar 2005; Chris White <chriswhite@gentoo.org>
+  mplayer-1.0_pre6-r1.ebuild:
+  Forgot the mmxext params in ecpu_check for pre6-r1.
 
 *mplayer-1.0_pre6-r1 (19 Mar 2005)
 
