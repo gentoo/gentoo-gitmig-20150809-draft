@@ -1,16 +1,20 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.4 2002/04/01 21:53:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.5 2002/05/01 03:56:05 woodchip Exp $
+
+*courier-imap-1.4.3-r1 (30 Apr 2002)
+
+  30 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Added tcltk? ( >=dev-tcltk/expect-5.33.0 ) to RDEPEND, closing #2282.
 
 *courier-imap-1.4.3 (1 Apr 2002)
 
   1 Apr 2002; Donny Davies <woodchip@gentoo.org> :
 
-  Updated to latest release.  Made some cosmetic/beautification fixes.
-  It's real purdy now :)  Added --enable-workarounds-for-imap-client-bugs
-  to the ./configure flags, which helps some clients -- notable Netscape
-  Messenger.  Commented out the pam.d/ stuff since it already comes with
-  pam_stack aware pam config files.  Gentoo now has pam_stack.. Hooray!
+  Updated to latest release.  Added --enable-workarounds-for-imap-client-bugs
+  to ./configure which helps some clients; notably Netscape Messenger.  Now
+  installs a pam_stack aware pam.d/ file.
 
 *courier-imap-1.4.1-r4 (14 Mar 2002)
 
