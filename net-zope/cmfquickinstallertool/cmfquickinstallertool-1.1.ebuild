@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/cmfquickinstallertool-1.1.ebuild,v 1.3 2003/09/08 06:53:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/cmfquickinstallertool-1.1.ebuild,v 1.4 2003/09/10 04:46:11 msterret Exp $
 
 inherit zproduct
 
@@ -18,5 +18,5 @@ pkg_postinst()
 {
 	zproduct_pkg_postinst
 	ewarn "Please read README.txt.gz for this product. This product needs to"
-    ewarn "be manually added to a CMF/Plone site."
+	ewarn "be manually added to a CMF/Plone site."
 }
