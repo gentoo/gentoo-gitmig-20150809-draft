@@ -114,10 +114,9 @@ dyn_digest() {
 	if [ -n ${MAINTAINER} ]
 	then
 		echo ">>> adding ${FILESDIR} to CVS (just in case it isn't there)"
-		( cd `/usr/bin/dirname ${FILESDIR}`; cvs add `/usr/bin/basename ${FILESDIR}` )
+		( echo; cd `/usr/bin/dirname ${FILESDIR}`; cvs add `/usr/bin/basename ${FILESDIR}`; echo)
 	fi
     fi
-    rm -f ${FILESDIR}/digest-${PF}
     for x in ${A}
     do
 	if [ ! -e ${DISTDIR}/${x} ]
@@ -127,13 +126,14 @@ dyn_digest() {
 	    exit 1
 	else
 	    mymd5=`md5sum ${DISTDIR}/${x} | cut -f1 -d" "`
-	    echo "MD5 $mymd5 $x" >> ${FILESDIR}/digest-${PF}
+	    echo "MD5 $mymd5 $x" >> ${FILESDIR}/.digest-${PF}
 	fi
     done
+    mv ${FILESDIR}/.digest-${PF} ${FILESDIR}/digest-${PF}
     if [ -n "${MAINTAINER}" ]
     then
 	echo ">>> adding digest-${PF} to CVS (just in case it isn't there)"
-	( cd ${FILESDIR}; cvs add digest-${PF} )
+	( echo; cd ${FILESDIR}; cvs add digest-${PF}; echo )
     fi
     echo ">>> Computed message digests."
 }
@@ -1201,6 +1201,7 @@ setp() {
 	else
 		export PF="${1}-${2}-r${3}"
 	fi
+	export P="${1}-${2}"
 	export PN="${1}"
 	export PV="${2}"
 	export PR="${3}"
@@ -1208,13 +1209,19 @@ setp() {
 
 export STARTDIR=`pwd`
 export CATEGORY=`/usr/bin/basename ${STARTDIR}/..`
-export O=`dirname ${STARTDIR}/${1}`
+if [ "${1:0:1}" = "/" ]
+then
+	export O=`dirname ${1}`
+else
+	tmpfoo=`dirname ${1}`
+	export O=`( cd ${STARTDIR}/${tmpfoo}; pwd )`
+fi
 export EBUILD=${1}
 export PEBUILD=${O}/files/${PLATFORM}.ebuild
 export FILESDIR=${O}/files
 
-export P=`/usr/bin/basename ${1%.*}`
-setp `/usr/sbin/pkgname ${P}`
+tmpfoo=`/usr/bin/basename ${1%.*}`
+setp `/usr/sbin/pkgname ${tmpfoo}`
 
 source ${1}
 if [ -e ${PEBUILD} ]
