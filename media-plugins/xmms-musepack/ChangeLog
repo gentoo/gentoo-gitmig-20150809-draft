@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.30 2005/02/20 16:25:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.31 2005/03/28 23:15:43 luckyduck Exp $
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  xmms-musepack-1.1.2.ebuild:
+  added libtoolize call, fixes #87035
 
   20 Feb 2005; Tony Vroon <chainsaw@gentoo.org> xmms-musepack-1.1-r1.ebuild,
   xmms-musepack-1.1.ebuild:

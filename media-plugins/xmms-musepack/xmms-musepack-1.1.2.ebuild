@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.1.2.ebuild,v 1.1 2005/01/29 22:22:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.1.2.ebuild,v 1.2 2005/03/28 23:15:43 luckyduck Exp $
 
 IUSE=""
 
@@ -17,6 +17,7 @@ DEPEND="media-sound/xmms
 
 src_compile() {
 	WANT_AUTOMAKE=1.7 ./autogen.sh > /dev/null
+	libtoolize --copy --force
 	econf || die
 }
 

@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 0f661a29eaac5a901721b7797e235e05 xmms-musepack-1.1.2.ebuild 669
+MD5 594f2638ad9133ddbfddd446b6116a0e xmms-musepack-1.00.ebuild 1593
+MD5 3c20ceb186c8880603226db0c5a79376 xmms-musepack-1.1-r1.ebuild 765
+MD5 f5b409cca16934947bea9f4b2b0af990 ChangeLog 5814
 MD5 f10d1889571cf72c8d428d3464cf0c41 xmms-musepack-1.1.ebuild 662
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 7a8efc7b1f1f98217d7afb69c35baa33 ChangeLog 5692
-MD5 3c20ceb186c8880603226db0c5a79376 xmms-musepack-1.1-r1.ebuild 765
-MD5 594f2638ad9133ddbfddd446b6116a0e xmms-musepack-1.00.ebuild 1593
-MD5 56a2557af56928a07a6be07127f42527 xmms-musepack-1.1.2.ebuild 642
+MD5 4e97b5144a2c0a49cb7e1ef0ef9e33c3 files/digest-xmms-musepack-1.00 70
+MD5 0278897d38e13c0ab23fb09ac67f4270 files/xmms-musepack-1.1-glib.patch 1379
+MD5 15869ff792a8fcc6f89e2968d7049ab3 files/digest-xmms-musepack-1.1 70
+MD5 15869ff792a8fcc6f89e2968d7049ab3 files/digest-xmms-musepack-1.1-r1 70
 MD5 b1b6b0f98a41c785c87182d4565122d7 files/digest-xmms-musepack-1.1.2 72
 MD5 9fd390603c336d139e7a8a2ec1ffb183 files/xmms-musepack-1.00-bad-makefile.patch 1796
-MD5 15869ff792a8fcc6f89e2968d7049ab3 files/digest-xmms-musepack-1.1-r1 70
-MD5 4e97b5144a2c0a49cb7e1ef0ef9e33c3 files/digest-xmms-musepack-1.00 70
-MD5 15869ff792a8fcc6f89e2968d7049ab3 files/digest-xmms-musepack-1.1 70
-MD5 0278897d38e13c0ab23fb09ac67f4270 files/xmms-musepack-1.1-glib.patch 1379
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCGLp+p5vW4rUFj5oRAq6rAJ9C5XvR96LyV0cm7gvfLy/Vp4xkJgCfQCKn
-nQZoVnOo5M4hc09kUkDgCl4=
-=vw5d
+iD8DBQFCSJAp06ebR+OMO78RAhVtAKCKiq7XRNlL7Y75IAiVjKrDqm4xbACePQTT
+9dERxTspxl2yMUPwxK70BLE=
+=goDO
 -----END PGP SIGNATURE-----
