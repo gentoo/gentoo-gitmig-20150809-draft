@@ -1,11 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.58 2003/07/13 16:48:27 liquidx Exp $
-
-  13 Jul 2003; Alastair Tse <liquidx@gentoo.org> xchat-1.8.11.ebuild:
-  use econf and DESTDIR to prevent installing stuff in /usr/etc
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.59 2003/07/14 05:54:40 vapier Exp $
 
 *xchat-2.0.3-r1 (08 Jul 2003)
+
+  14 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Update myopts setting to use_enable and add nls support.
 
   08 Jul 2003; foser <foser@gentoo.org> xchat-2.0.3-r1.ebuild :
   Added dcc patch, should fix possible dcc problems
@@ -78,6 +78,9 @@
   new version
 
 *xchat-1.8.11 (23 Jan 2003)
+
+  13 Jul 2003; Alastair Tse <liquidx@gentoo.org> xchat-1.8.11.ebuild:
+  use econf and DESTDIR to prevent installing stuff in /usr/etc
 
   25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xchat-1.8.10-r1.ebuild,
   xchat-1.8.10.ebuild, xchat-1.8.10.ebuild, xchat-1.8.11.ebuild:
