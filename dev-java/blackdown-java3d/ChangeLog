@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-java3d
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d/ChangeLog,v 1.2 2004/02/21 18:22:34 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d/ChangeLog,v 1.3 2004/04/04 04:46:29 zx Exp $
+
+  03 Apr 2004; Chris Aniszczyk <zx@gentoo.org> blackdown-java3d-1.3.1.ebuild:
+  Added java-config as a dep. Closes #46710
 
 *blackdown-java3d-1.3.1 (23 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d/blackdown-java3d-1.3.1.ebuild,v 1.1 2004/02/21 18:22:34 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d/blackdown-java3d-1.3.1.ebuild,v 1.2 2004/04/04 04:46:29 zx Exp $
 
 DESCRIPTION="Java 3D Software Development Kit"
 SRC_URI="mirror://blackdown.org/java3d/1.3.1/i386/fcs/java3d-sdk-${PV}-linux-i386.bin"
@@ -9,6 +9,7 @@ LICENSE="sun-bcla-java-vm"
 KEYWORDS="~x86 ~sparc ~amd64"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.4.1"
+RDEPEND=">=dev-java/java-config-1.2.6"
 IUSE="doc"
 
 S=${WORKDIR}
