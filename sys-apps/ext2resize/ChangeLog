@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/ext2resize
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ext2resize/ChangeLog,v 1.1 2002/06/01 12:01:54 blauwers Exp $
+
+*ext2resize-1.1.17 (29 May 2002)
+
+  29 May 2002; B.Lauwers <blauwers@gentoo.org> ChangeLog :
+  
+  Added initial changelog for ext2resize a tool which allows LVM users to 
+  grow and shrink filesystem both online as offline.
