@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.3.9.ebuild,v 1.11 2004/08/21 15:05:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.3.9.ebuild,v 1.12 2004/10/17 21:28:10 liquidx Exp $
 
 inherit gnome2
 
+RESTRICT="maketest"
 DESCRIPTION="The Gnome Accessibility Toolkit"
 HOMEPAGE="http://www.gnome.org/"
 
