@@ -9,7 +9,7 @@ depend() {
 
 start() {
         ebegin "Starting mailman"
-        su - mailman -c 'bin/mailmanctl start' >/dev/null 2>&1
+        su - mailman -c 'bin/mailmanctl -s start' >/dev/null 2>&1
         eend $?
 }
 
