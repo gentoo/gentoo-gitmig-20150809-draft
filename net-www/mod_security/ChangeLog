@@ -1,0 +1,11 @@
+# ChangeLog for net-www/mod_security
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/ChangeLog,v 1.1 2004/06/04 01:30:14 zul Exp $
+
+*mod_security-1.7.6 (03 Jun 2004)
+
+  03 Jun 2004; Chuck Short <zul@gentoo.org> metadata.xml, mod_security-1.7.6.ebuild,
+  files/99_mod_security.conf, files/mod_security.conf:
+  Initial version,e build written by dju` <dju @ elegiac.net>.
+  Closes #32190.
+
