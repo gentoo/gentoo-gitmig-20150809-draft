@@ -9,7 +9,7 @@ HOMEPAGE="http://gift.sourceforge.net"
 SLOT="0"
 
 DEPENDS="virtual/glibc
-	>=sys-libs/zlib-1.1.4"
+	zlib? ( >=sys-libs/zlib-1.1.4 )"
 
 src_compile() {
 
