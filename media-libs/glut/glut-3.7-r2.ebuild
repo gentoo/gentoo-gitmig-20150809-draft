@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.8 2002/10/17 12:43:50 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.9 2002/12/01 22:42:38 azarah Exp $
 
 MESA_VER="4.0.1"
 S=${WORKDIR}/Mesa-${MESA_VER}
@@ -37,6 +37,7 @@ src_install() {
 	
 	dolib.so ${S}/src-glut/.libs/libglut.so.${PV}.0
 	dosym libglut.so.${PV}.0 /usr/lib/libglut.so
+	preplib
 	
 	insinto /usr/include/GL
 	doins ${S}/include/GL/glut*
