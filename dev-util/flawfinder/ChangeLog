@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/flawfinder
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.3 2004/06/25 02:32:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.4 2004/06/28 05:26:16 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> flawfinder-1.24.ebuild:
+  Added ~sparc, ~mips
 
 *flawfinder-1.24 (01 Nov 2003)
 
