@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/xfce
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/ChangeLog,v 1.18 2004/03/14 17:04:19 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/ChangeLog,v 1.19 2004/03/30 09:42:28 mr_bones_ Exp $
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> xfce-3.8.16.ebuild,
+  xfce-3.8.18-r1.ebuild, xfce-3.8.18-r2.ebuild:
+  don't assign default to S
 
   14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> xfce-3.8.18-r2.ebuild:
   Added ~mips keyword.
