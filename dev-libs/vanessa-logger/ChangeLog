@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vanessa-logger
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.10 2004/08/25 14:26:27 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.11 2004/08/28 05:48:19 mr_bones_ Exp $
+
+  27 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  vanessa-logger-0.0.6.ebuild:
+  dep fix; tidy
 
 *vanessa-logger-0.0.6 (25 Aug 2004)
 
