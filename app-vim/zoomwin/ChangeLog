@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/zoomwin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.7 2004/02/06 08:56:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.8 2004/04/11 22:18:55 ciaranm Exp $
+
+*zoomwin-17 (11 Apr 2004)
+
+  11 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> zoomwin-17.ebuild:
+  Version bump
 
   06 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> zoomwin-16.ebuild:
   Stable on x86, sparc ; added ~mips
