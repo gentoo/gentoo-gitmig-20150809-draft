@@ -1,7 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4753a74e9959d7771d1743b43e9fa4cc dircproxy-1.0.5.ebuild 604
-MD5 ca094938b7abfcb2354e47b1072fb842 dircproxy-1.1.0-r1.ebuild 712
-MD5 e0eeaac10fb71cc447a39d321c3af9f8 ChangeLog 2197
+MD5 e3d18c06e1dc57e3236d7748aebec2f5 dircproxy-1.1.0-r1.ebuild 762
+MD5 6abcdc05538c623935e0e33f16cc9227 ChangeLog 2484
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 8735716fa2ac751e4b10e7f38cd1bd38 files/digest-dircproxy-1.0.5 67
 MD5 a7c7b1ea76afc3f604758a6448fd1b96 files/1.1.0-005-numeric.patch 708
 MD5 3305b6d2321a112b03180bef0a02b0d6 files/digest-dircproxy-1.1.0-r1 67
+MD5 d020302a46b1d425abe235ba16582a03 files/1.1.0-less-lag-on-attach.patch 1506
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB9BRsI1lqEGTUzyQRAh23AJ92aqFG4H59pA1lqIVWAP+c8V/s1QCbBl72
+DuNC/GVf6GDzex2MLq3Mbok=
+=4VC/
+-----END PGP SIGNATURE-----
