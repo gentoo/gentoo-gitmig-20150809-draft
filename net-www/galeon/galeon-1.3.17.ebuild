@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.17.ebuild,v 1.6 2004/09/07 23:22:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.17.ebuild,v 1.7 2004/10/22 01:46:19 spider Exp $
 
 inherit gnome2 debug libtool eutils
 
@@ -43,12 +43,6 @@ pkg_setup () {
 }
 
 src_compile() {
-	# even when we have the XML-Parser module there may be a version mismatch
-	# this line will force the use of local intltool when compiling, avoiding mismatch
-	# remove this when we have all users at the same version as upstream.
-	intltoolize --force
-
-
 	elibtoolize
 
 	local moz_ver="`pkg-config --modversion mozilla-xpcom | cut -d. -f1,2 2>/dev/null`"
