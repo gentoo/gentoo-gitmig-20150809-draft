@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.4 2002/06/12 01:24:30 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.5 2002/06/24 01:50:36 azarah Exp $
+
+*rep-gtk-0.16 (24 Jun 2002)
+  24 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Latest gtk-2.0 version.  Slotified all the ebuilds, as 0.15 is gtk-1.2, where
+  0.16 is gtk-2.0.
                           
 *rep-gtk-20020612 (12 Jun 2002)                 
   12 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> rep-gtk-20020612.ebuild :
