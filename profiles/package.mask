@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lu_zero@gentoo.org> (16 Mar 2003)
+# to be tested, seems instable
+net-dialup/hcfusbmodem
+
 # <azarah@gentoo.org> (09 Mar 2003)
 # Beta versions of m4 we have been using up to date borks
 # autoconf-2.13, bug #15573
