@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.28 2003/09/17 02:10:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.29 2003/09/25 15:33:27 caleb Exp $
+
+  25 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdesdk-3.1.4.ebuild:
+  marking x86 stable
 
 *kdesdk-3.1.4 (16 Sep 2003)
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1.4.ebuild,v 1.1 2003/09/17 02:19:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1.4.ebuild,v 1.2 2003/09/25 15:34:31 caleb Exp $
 inherit kde-dist
 
 IUSE="gphoto2 tetex scanner"
 DESCRIPTION="KDE graphics-related apps"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 )
 	dev-lang/perl

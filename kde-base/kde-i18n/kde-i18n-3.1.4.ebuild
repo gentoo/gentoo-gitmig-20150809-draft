@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.4 2003/09/25 14:42:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.5 2003/09/25 15:41:15 caleb Exp $
 
 inherit kde
 need-kde ${PV}
@@ -8,7 +8,7 @@ need-kde ${PV}
 DESCRIPTION="KDE ${PV} - i18n: ${PN}"
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="$KDEMAJORVER.$KDEMINORVER"
 RESTRICT="nomirror"
 
@@ -39,7 +39,7 @@ else
 	for pkg in $LANGS
 	do
 		if [ `use ${pkg}` ] ; then
-			SRC_URI="$SRC_URI $BASEDIR/kde-i18n/kde-i18n-$pkg-${PV}.tar.bz2"
+			SRC_URI="$SRC_URI $BASEDIR/kde-i18n/kde-i18n-${pkg}-${PV}.tar.bz2"
 			echo "using package ${pkg}"
 		fi
 	done
