@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.4.6.ebuild,v 1.2 2004/12/19 06:23:48 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.4.6.ebuild,v 1.3 2004/12/20 08:34:26 obz Exp $
 
 inherit eutils gnome2
 
@@ -52,5 +52,8 @@ src_unpack() {
 
 	# Fix include paths for our mozilla
 	epatch ${FILESDIR}/${P}-fix_includes.patch
+	# Fix compilation/API breakage with mozilla 1.7.5.
+	# See bug #74972 ,<obz@gentoo.org>
+	epatch ${FILESDIR}/${P}-moz-nsiurip.patch
 
 }
