@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.198 2004/11/06 04:00:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.199 2004/11/09 14:23:53 lostlogic Exp $
+
+  09 Nov 2004; Brandon Low <lostlogic@gentoo.org>
+  mm-sources-2.6.10_rc1-r3.ebuild:
+  Remove a warning which applied only to -mm2
 
 *mm-sources-2.6.10_rc1-r3 (05 Nov 2004)
 

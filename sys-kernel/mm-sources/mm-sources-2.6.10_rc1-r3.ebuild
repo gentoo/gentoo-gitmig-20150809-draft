@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.10_rc1-r3.ebuild,v 1.1 2004/11/06 04:00:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.10_rc1-r3.ebuild,v 1.2 2004/11/09 14:23:53 lostlogic Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
@@ -21,6 +21,4 @@ K_EXTRAEINFO="If there are issues with this kernel, search http://bugs.gentoo.or
 existing bug. Only create a new bug if you have not found one that matches
 your issue. It is best to do an advanced search as the initial search has a
 very low yield. Please assign your bugs to x86-kernel@gentoo.org.
-Please read the ChangeLog and associated docs for more information.
-Warning, Andrew Morton said of this particular version:
-\"This kernel is probably pretty crappy\""
+Please read the ChangeLog and associated docs for more information."
