@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.3 2003/12/20 16:14:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.4 2004/01/25 23:57:12 vapier Exp $
 
 IUSE="X nls motif leim gnome Xaw3d"
 
@@ -40,8 +40,7 @@ src_compile() {
 	epatch ${FILESDIR}/${P}-amd64.patch
 	epatch ${FILESDIR}/${P}-hppa.patch
 
-	unset WANT_AUTOCONF_2_5
-	export WANT_AUTOCONF_2_1=1
+	export WANT_AUTOCONF=2.1
 	autoconf
 
 	local myconf
