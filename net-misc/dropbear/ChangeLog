@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.11 2004/08/15 17:43:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.12 2004/09/22 19:00:28 vapier Exp $
+
+*dropbear-0.44_alpha4 (22 Sep 2004)
+
+  22 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/0.44_alpha4-install.patch, +dropbear-0.44_alpha4.ebuild:
+  Version bump to test-release.
 
 *dropbear-0.43 (15 Aug 2004)
 
