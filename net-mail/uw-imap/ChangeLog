@@ -1,8 +1,14 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.3 2002/06/07 02:01:38 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.4 2002/08/17 02:34:05 raker Exp $
 
 *uw-imap-2001a-r2 (6 Jun 2002)
+  
+  16 Aug 2002; Nick Hadaway <raker@gentoo.org> uw-imap-2001a-r2.ebuild :
+  Added support for the default mailsubdir to be ~/mail.  Almost
+  added in support for the Y4K leap year bug fix, just in case the
+  maintainer of uw-imap disappears for a millenia or two.
+
   6 Jun 2002; Donny Davies <woodchip@gentoo.org> uw-imap-2001a-r2.ebuild,
   uw-imap.pam, uw-imap.pam-system-auth, uw-imap.xinetd, uw-imaps.xinetd,
   uw-ipop2.xinetd, uw-ipop3.xinetd :

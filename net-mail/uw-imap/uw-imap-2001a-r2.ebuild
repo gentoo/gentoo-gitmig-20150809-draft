@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a-r2.ebuild,v 1.3 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a-r2.ebuild,v 1.4 2002/08/17 02:34:05 raker Exp $
 
 PN0=imap
 S=${WORKDIR}/${PN0}-${PV}
@@ -24,8 +24,13 @@ src_unpack() {
 
 src_compile() {                           
 	if use ssl; then
-		make lnp SPECIALAUTHENTICATORS=ssl SSLTYPE=unix SSLDIR=/usr/ssl \
-			 SSLINCLUDE=/usr/include/openssl || die
+		make lnp SPECIALAUTHENTICATORS=ssl \
+			SSLTYPE=unix SSLDIR=/usr/ssl \
+			SSLINCLUDE=/usr/include/openssl \
+			EXTRACFLAGS=-DMAILSUBDIR="mail" || die
+	# I was SO tempted to add -DY4KBUGFIX to the EXTRACFLAGS... 
+	# but I didn't.  S0meday s00n.
+
 		local i
 		for i in imapd ipop3d; do
 			umask 077
