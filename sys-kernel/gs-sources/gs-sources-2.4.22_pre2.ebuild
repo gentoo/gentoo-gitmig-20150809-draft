@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.22_pre2.ebuild,v 1.5 2003/09/10 04:29:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.22_pre2.ebuild,v 1.6 2003/12/01 22:51:34 iggy Exp $
 
 IUSE="build crypt"
 
@@ -53,4 +53,7 @@ src_unpack() {
 	fi
 
 	kernel_src_unpack
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+
 }

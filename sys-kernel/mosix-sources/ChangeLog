@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mosix-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mosix-sources/ChangeLog,v 1.7 2003/02/12 09:17:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mosix-sources/ChangeLog,v 1.8 2003/12/01 22:54:22 iggy Exp $
+
+  01 Dec 2003; Brian Jackson <iggy@gentoo.org> mosix-sources-2.4.19.ebuild,
+  mosix-sources-2.4.20.ebuild, files/do_brk_fix.patch:
+  fix do_brk vuln
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
