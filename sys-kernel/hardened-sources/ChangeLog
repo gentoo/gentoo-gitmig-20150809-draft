@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.24 2004/04/15 22:28:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.25 2004/04/17 11:31:19 plasmaroo Exp $
+
+*hardened-sources-2.4.24-r3 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org>
+  +files/hardened-sources-2.4.24.CAN-2004-0010.patch,
+  +files/hardened-sources-2.4.24.CAN-2004-0177.patch,
+  +files/hardened-sources-2.4.24.CAN-2004-0178.patch,
+  +hardened-sources-2.4.24-r3.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities. Old revisions removed.
 
 *hardened-sources-2.4.24-r2 (15 Apr 2004)
 
