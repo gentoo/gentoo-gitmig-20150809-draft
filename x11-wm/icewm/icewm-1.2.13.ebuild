@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.13.ebuild,v 1.9 2004/06/24 23:41:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.13.ebuild,v 1.10 2004/06/28 23:49:38 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ DEPEND="virtual/x11
 	gnome? ( gnome-base/gnome-libs gnome-base/gnome-desktop )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
-	truetype? ( >=media-libs/freetype-2.0.9 )"
+	truetype? ( >=media-libs/freetype-2.0.9 )
+	>=sys-apps/sed-4"
 
 RDEPEND="${DEPEND}
 	media-fonts/artwiz-fonts"

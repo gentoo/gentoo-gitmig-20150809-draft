@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211-r3.ebuild,v 1.4 2004/06/28 02:26:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211-r3.ebuild,v 1.5 2004/06/28 23:51:47 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ DEPEND="virtual/x11
 	app-misc/run-mailcap
 	>=dev-lang/lua-5.0.2
 	>=sys-devel/libtool-1.4.3
-	!<=x11-wm/ion2-20040211-r2"
+	!<=x11-wm/ion2-20040211-r2
+	>=sys-apps/sed-4"
 S=${WORKDIR}/ion-2-20040207
 
 src_unpack() {
