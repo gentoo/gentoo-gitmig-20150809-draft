@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.3 2004/10/15 23:00:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.4 2005/03/29 00:18:16 luckyduck Exp $
 
 S="${WORKDIR}/Regina-${PV}"
 HOMEPAGE="http://regina-rexx.sourceforge.net"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/regina-rexx/Regina-REXX-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~sparc ~ppc hppa"
+KEYWORDS="~x86 ~sparc ~ppc hppa ~amd64"
 IUSE=""
 
 DEPEND=""

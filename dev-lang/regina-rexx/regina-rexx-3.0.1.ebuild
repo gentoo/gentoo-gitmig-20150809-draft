@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.11 2004/07/14 13:49:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.12 2005/03/29 00:18:16 luckyduck Exp $
 
 S=${WORKDIR}
 HOMEPAGE="http://regina-rexx.sourceforge.net"
