@@ -2,6 +2,7 @@ MD5 e03812df3f3f38a6519d7aa929f742e2 ChangeLog 607
 MD5 8e7d5be335c66fb5232c2620c5012b0a drivel-0.8.0.ebuild 603
 MD5 52cd62e2a30199db878ee773857f9c94 drivel-0.9.0.ebuild 668
 MD5 c923b19b244fc8f0cabf3102badb51e6 drivel-0.9.1.ebuild 684
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 8a74a73919b3fee285f33ba9e0fc6df8 files/digest-drivel-0.8.0 64
 MD5 fad70558081e99ee41a1936e060630c6 files/digest-drivel-0.9.0 64
 MD5 e7e4f9689c5dd0fe79e8bff906f80b71 files/digest-drivel-0.9.1 64
