@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.27 2005/03/10 13:38:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.28 2005/03/22 22:00:29 carlo Exp $
+
+*knoda-0.7.3 (22 Mar 2005)
+
+  22 Mar 2005; Carsten Lohrke <carlo@gentoo.org> +knoda-0.7.3.ebuild:
+  version bump
 
   10 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> knoda-0.7.2.ebuild:
   added ~amd64 KEYWORD, fixes #70460
