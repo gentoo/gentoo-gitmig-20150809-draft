@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.3.2.ebuild,v 1.2 2002/07/23 13:28:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.3.2.ebuild,v 1.3 2002/08/02 23:07:49 george Exp $
 
 MY_P=NetBeansIDE-release332
 S=${WORKDIR}/${PN}
@@ -63,5 +63,7 @@ src_install() {
 		doins ${FILESDIR}/netbeans.png
 		insinto /usr/share/gnome/apps/Development
 		doins ${FILESDIR}/netbeans.desktop
+		echo "Exec=/opt/${P}/bin/runide.sh" >> ${D}/usr/share/gnome/apps/Development/netbeans.desktop
+		echo >> ${D}/usr/share/gnome/apps/Development/netbeans.desktop
 	fi
 }
