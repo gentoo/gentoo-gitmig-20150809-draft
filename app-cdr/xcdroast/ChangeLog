@@ -2,6 +2,12 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+*xcdroast-0.98_alpha15-r2 (15 Nov 2003)
+
+  15 Nov 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r2.ebuild:
+  Added two patches from xcdroast.org that fixes problems with gtk2 and the
+  not-needed pcre-lib.
+
 *xcdroast-0.98_alpha15-r1 (02 Nov 2003)
 
   02 Nov 2003; Luca Barbato <lu_zero@gentoo.org> 
