@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.9.ebuild,v 1.1 2002/06/10 19:43:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.9.ebuild,v 1.2 2002/06/11 15:49:05 azarah Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -21,6 +21,14 @@ DEPEND="virtual/glibc
 [ -z "`use build`" ] && [ -z "`use bootstrap`" ] && \
 	DEPEND="${DEPEND} sys-devel/perl"
 
+pkg_setup() {
+
+	eerror
+	eerror "Please do not use this release of binutils, as it"
+	eerror "is very buggy (cannot even compile glibc)!!!"
+	eerror
+	die
+}
 
 src_compile() {
 	
