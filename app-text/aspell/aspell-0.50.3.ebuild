@@ -1,35 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.9 2003/07/19 22:55:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.10 2003/08/05 15:56:04 vapier Exp $
 
 inherit libtool
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A spell checker replacement for ispell"
-SRC_URI="ftp://ftp.gnu.org/gnu/aspell/${P}.tar.gz"
 HOMEPAGE="http://aspell.net/"
-
-DEPEND=">=sys-libs/ncurses-5.2"
+SRC_URI="ftp://ftp.gnu.org/gnu/aspell/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="x86 ppc sparc alpha ~mips hppa amd64"
 
-#
-# These flags a reset here because too much optimisation can cause aspell's
-# compilation process to break.  Moreover, these must be set before ./configure
-# otherwise it breaks again.  A very fragile build process, really.
-#
-#CXXFLAGS="-O2"
-#CFLAGS=${CXXFLAGS}
-
-# humm .. why are they comented? cselkirk
+DEPEND=">=sys-libs/ncurses-5.2"
 
 pkg_setup() {
-		if [ ${ARCH} = "ppc" ] ; then
-			CXXFLAGS="-O2 -fsigned-char"
-			CFLAGS=${CXXFLAGS}
-		fi
+	if [ ${ARCH} = "ppc" ] ; then
+		CXXFLAGS="-O2 -fsigned-char"
+		CFLAGS=${CXXFLAGS}
+	fi
 }
 
 src_compile() {
@@ -44,11 +33,9 @@ src_compile() {
 		--enable-docdir=/usr/share/doc/${PF} || die
 	
 	emake || die
-
 }
 
-src_install () {
-
+src_install() {
 	make DESTDIR=${D} install || die
 	cd ${D}/usr/share/doc/${P}
 	dohtml -r man-html
@@ -66,11 +53,9 @@ src_install () {
 	
 	docinto examples
 	dodoc examples/*
-
 }
 
 pkg_postinst() {
-
 	einfo "You will need to install a dictionary now.  Please choose an"
 	einfo "aspell-<LANG> dictionary from the app-dicts category"
 	einfo "After installing an aspell dictionary for your language(s),"

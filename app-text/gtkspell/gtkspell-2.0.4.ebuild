@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.8 2003/07/06 12:48:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.9 2003/08/05 15:56:04 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="spell library for GTK2"
-SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
+SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ppc ~alpha hppa"
 SLOT="0"
+KEYWORDS="~x86 ~sparc ppc ~alpha hppa"
 IUSE="doc"
 
 DEPEND=">=x11-libs/gtk+-2
@@ -20,13 +22,10 @@ src_unpack() {
 
 	# fix the config script's gtkdoc check (bug #16997)
 	cd ${S}
-	mv configure configure.old
-	sed -e "s:GTKDOC=true::" configure.old > configure
-	chmod +x configure
+	sed -i "s:GTKDOC=true::" configure
 	
 	# workaround missing docbook 4.2 xml dtd in /etc/xml/docbook
 	epatch ${FILESDIR}/${P}-docbookx.patch
-	
 }
 
 src_compile() {

@@ -1,18 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.3 2003/07/11 20:35:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.4 2003/08/05 15:56:04 vapier Exp $
 
-DESCRIPTION="A set of tools for counting physical Source Lines of Code (SLOC) in a large number of languages of a potentially large set of programs."
+inherit eutils
 
+DESCRIPTION="tools for counting Source Lines of Code (SLOC) for a large number of languages"
 HOMEPAGE="http://www.dwheeler.com/sloccount/"
 SRC_URI="http://www.dwheeler.com/sloccount/${P}.tar.gz"
+
 LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
 
 DEPEND="dev-lang/perl
-		>=sys-apps/sed-4
+	>=sys-apps/sed-4
         app-shells/bash"
 
 src_unpack() {
@@ -26,8 +27,8 @@ src_unpack() {
 	sed -i \
 		-e "/^CC/ { s/$/ ${CFLAGS}/g }" \
 		-e "/^DOC_DIR/ { s/-\$(RPM_VERSION)//g }" \
-		-e "/^MYDOCS/ { s/[^ 	=]\+\.html//g }" makefile ||
-			die "sed makefile failed"
+		-e "/^MYDOCS/ { s/[^ 	=]\+\.html//g }" \
+		makefile || die "sed makefile failed"
 }
 
 src_compile() {

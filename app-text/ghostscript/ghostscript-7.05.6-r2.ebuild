@@ -1,19 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r2.ebuild,v 1.5 2003/08/03 21:55:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r2.ebuild,v 1.6 2003/08/05 15:56:04 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
+HOMEPAGE="http://www.cups.org/ghostscript.php"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
 	ftp://ftp.easysw.com/pub/ghostscript/gnu-gs-fonts-std-6.0.tar.gz
 	ftp://ftp.easysw.com/pub/ghostscript/gnu-gs-fonts-other-6.0.tar.gz
 	cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200204.tar.gz
 		ftp://ftp.gyve.org/pub/gs-cjk/acro5-cmaps-2001.tar.gz)"
-HOMEPAGE="http://www.cups.org/ghostscript.php"
 
-SLOT="0"
 LICENSE="GPL-2 LGPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="X cups cjk"
 
