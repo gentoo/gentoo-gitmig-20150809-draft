@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/sonic-rainbow
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.1 2004/04/06 18:26:27 eradicator Exp $
+
+*sonic-rainbow-0.5.1 (06 Apr 2004)
+
+  06 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  sonic-rainbow-0.5.1.ebuild, files/sonic-rainbow-Makefile.patch:
+  Initial ebuild submitted by Josh Glover <josh.glover@tfcci.com> in bug #35871.
+

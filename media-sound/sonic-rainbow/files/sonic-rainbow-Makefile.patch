@@ -1,0 +1,18 @@
+--- Makefile.in.orig	2004-04-06 11:12:16.000000000 -0700
++++ Makefile.in	2004-04-06 11:14:38.000000000 -0700
+@@ -365,13 +365,9 @@
+ 	    fi \
+ 	  done \
+ 	fi
+-	if test -d $(srcdir)/doc; then \
+-	$(mkinstalldirs) /usr/share/Sonic-Rainbow/doc; \
+-	$(INSTALL_DATA)  $(srcdir)/doc/Sonic-Rainbow.html /usr/share/Sonic-Rainbow/doc/Sonic-Rainbow.html; \
+-	fi
+ 	if test -d $(srcdir)/icons; then \
+- 	$(mkinstalldirs) /usr/share/icons; \
++ 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/icons; \
+-	$(INSTALL_DATA)  $(srcdir)/icons/sonic-rainbow_drag.xpm /usr/share/icons/sonic-rainbow_drag.xpm; \
++	$(INSTALL_DATA)  $(srcdir)/icons/sonic-rainbow_drag.xpm $(DESTDIR)$(pkgdatadir)/icons/sonic-rainbow_drag.xpm; \
+ 	fi
+ dist-hook:
+ 	if test -d pixmaps; then \
