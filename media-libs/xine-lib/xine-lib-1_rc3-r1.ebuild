@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r1.ebuild,v 1.4 2003/12/30 12:02:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r1.ebuild,v 1.5 2003/12/30 12:09:56 mholzer Exp $
 
 inherit eutils flag-o-matic
 
@@ -82,8 +82,11 @@ src_unpack() {
 	# preserve CFLAGS added by drobbins, -O3 isn't as good as -O2 most of the time
 	epatch ${FILESDIR}/protect-CFLAGS.patch-${PV} || die
 	# plasmaroo: Kernel 2.6 headers patch
-	epatch ${FILESDIR}/xine-lib-2.6.patch || die
-	epatch ${FILESDIR}/xine-lib-1_rc3-configure-sparc.patch || die "sparc configure patch failed."
+	epatch ${FILESDIR}/${PN}-2.6.patch || die
+	if [ ${ARCH} = "sparc" ]
+		then
+		epatch ${FILESDIR}/${P}-configure-sparc.patch || die "sparc configure patch failed."
+	fi
 }
 
 src_compile() {
