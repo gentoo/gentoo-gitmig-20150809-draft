@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.1.0.ebuild,v 1.5 2004/02/10 07:36:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.1.0.ebuild,v 1.6 2004/03/26 12:24:59 phosphan Exp $
 
-inherit kde-functions
+inherit kde-functions eutils
 
 MY_P=${P}-1.src
 S=${WORKDIR}/${MY_P}
@@ -11,8 +11,9 @@ SRC_URI="http://www.ribbonsoft.com/archives/qcad/${MY_P}.tar.gz"
 HOMEPAGE="http://www.ribbonsoft.com/qcad.html"
 
 LICENSE="GPL-2"
+IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 need-qt 3
 
