@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a577cbb2fd710dd1e3eee0a4e14efb38 scsign-0.0.4.ebuild 799
+MD5 9979c4e501313f0e6346ec660ba7e698 metadata.xml 373
+MD5 114e30620984928c73a5b5527ef46bee ChangeLog 432
+MD5 217fea83a8ef8ad72f02e1c2acfbbab4 files/digest-scsign-0.0.4 63
+MD5 b414df7baf1e76821f5f09d4777e6420 files/scsign-0.0.4-printid.patch 555
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB18RSmdTrptrqvGERArAQAKCSoYLAY3oWwxQISQvpUxQthzItygCfQhV9
+m0Qb78I58OEobYQ76yMjfdE=
+=rs2b
+-----END PGP SIGNATURE-----

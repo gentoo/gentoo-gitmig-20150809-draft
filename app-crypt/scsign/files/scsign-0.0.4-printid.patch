@@ -1,0 +1,16 @@
+--- scsign.c.orig	2005-01-02 18:55:24.492531880 +0930
++++ scsign.c	2005-01-02 18:59:27.489590712 +0930
+@@ -642,9 +642,11 @@
+ 	int ii;
+         struct sc_pkcs15_cert_info *cert = (struct sc_pkcs15_cert_info *) objs[i]->data;
+ 	
+-        printf("ID: %s - ", sc_pkcs15_print_id(&cert->id));
++        printf("ID: ");
+ 
+-        printf("%s - Path: ", objs[i]->label);
++	sc_pkcs15_print_id(&cert->id);
++
++        printf(" - %s - Path: ", objs[i]->label);
+ 
+         for (ii = 0; ii < cert->path.len; ii++)
+                 printf("%02X", cert->path.value[ii]);
