@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.42 2003/04/28 05:51:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.43 2003/05/16 21:08:31 pylon Exp $
+
+  16 Mai 2003; Lars Weiler <pylon@gentoo.org> kdegraphics-3.1.1a-r1.ebuild:
+  Set ppc in KEYWORDS
 
   28 Apr 2003; Lars Weiler <pylon@gentoo.org> kdegraphics-3.1.1.ebuild:
   Set ppc in KEYWORDS
