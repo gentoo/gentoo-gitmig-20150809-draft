@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.69 2005/01/06 13:58:15 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.70 2005/01/06 14:07:27 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -63,45 +63,63 @@ kernel_is() {
 	# And lets add a sanity check
 	[ -z "${KV_FULL}" ] && return 1	
 
-	local RESULT operator test value
-	RESULT=0
+        local RESULT operator test value i len
+        RESULT=0
 
-	operator="="
-	if [ "${1}" == "lt" ]
-	then
-		operator="-lt"
-		shift
-	elif [ "${1}" == "gt" ]
-	then
-		operator="-gt"
-		shift
-	elif [ "${1}" == "le" ]
-	then
-	operator="-le"
-		shift
-	elif [ "${1}" == "ge" ]
-	then
-		operator="-ge"
-		shift
-	fi
+        operator="="
+        if [ "${1}" == "lt" ]
+        then
+                operator="-lt"
+                shift
+        elif [ "${1}" == "gt" ]
+        then
+                operator="-gt"
+                shift
+        elif [ "${1}" == "le" ]
+        then
+                operator="-le"
+                shift
+        elif [ "${1}" == "ge" ]
+        then
+                operator="-ge"
+                shift
+        fi
 
-	if [ -n "${1}" ]
-	then
-		value="${value}${1}"
-		test="${test}${KV_MAJOR}"
-	fi
-	if [ -n "${2}" ]
-	then
-		value="${value}${2}"
-		test="${test}${KV_MINOR}"
-	fi
-	if [ -n "${3}" ]
-	then
-		value="${value}${3}"
-		test="${test}${KV_PATCH}"
-	fi
+        if [ -n "${1}" ]
+        then
+                value="${value}${1}"
+                test="${test}${KV_MAJOR}"
+        fi
+        if [ -n "${2}" ]
+        then
+                len=$[ 3 - ${#2} ]
+                for((i=0; i<$len; i++)); do
+                        value="${value}0"
+                done
+                value="${value}${2}"
 
-	[ ${test} ${operator} ${value} ] && return 0 || return 1
+                len=$[ 3 - ${#KV_MINOR} ]
+                for((i=0; i<$len; i++)); do
+                        test="${test}0"
+                done
+                test="${test}${KV_MINOR}"
+        fi
+        if [ -n "${3}" ]
+        then
+                len=$[ 3 - ${#3} ]
+                for((i=0; i<$len; i++)); do
+                        value="${value}0"
+                done
+                value="${value}${3}"
+
+                len=$[ 3 - ${#KV_PATCH} ]
+                for((i=0; i<$len; i++)); do
+                        test="${test}0"
+                done
+                test="${test}${KV_PATCH}"
+        fi
+
+        [ ${test} ${operator} ${value} ] && return 0 || return 1
 }
 
 
