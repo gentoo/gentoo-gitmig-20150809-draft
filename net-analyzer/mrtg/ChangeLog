@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.21 2004/06/24 22:07:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.22 2004/07/03 03:29:25 squinky86 Exp $
+
+  02 Jul 2004; Jon Hood <squinky86@gentoo.org> +files/mrtg.rc,
+  mrtg-2.10.14.ebuild:
+  add init script from Matthew Smith <matthewsmith@iinet.net.au> closing #13839
 
 *mrtg-2.10.14 (08 Jun 2004)
 

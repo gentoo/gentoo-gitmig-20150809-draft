@@ -1,0 +1,47 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/files/mrtg.rc,v 1.1 2004/07/03 03:29:25 squinky86 Exp $
+
+# This runscript is for those who want to use the RunAsDaemon:Yes 
+# option for MRTG instead of launching it from a cron job.
+
+
+# Set the following variables for your setup
+
+MRTGPREFIX=/usr/bin
+MRTGCONF=/etc/mrtg.conf
+# pid file defaults to same dir as config file (edit $MRTGPREFIX/mrtg)
+# if you don't like it.
+MRTGPID=/etc/mrtg.pid
+ 
+
+depend() {
+    need net
+    
+    # if monitoring snmp variables on this machine:
+    # use net-snmpd
+}
+ 
+checkconfig() {
+    if [ ! -f $MRTGCONF ] ; then
+	eerror "Please create $MRTGCONF (try man cfgmaker)"
+	eerror "Make sure you use RunAsDaemon:Yes"
+	return 1
+    fi
+    return 0
+}
+
+start() {
+    checkconfig || return $?
+    ebegin "Starting mrtg"
+    start-stop-daemon --start --quiet --pidfile $MRTGPID \
+                --startas $MRTGPREFIX/mrtg $MRTGCONF
+    eend $? "Failed to start mrtg"
+}
+ 
+stop() {
+    ebegin "Stopping mrtg"
+    start-stop-daemon --stop --quiet --pidfile $MRTGPID
+    eend $? "Failed to stop mrtg"
+}
