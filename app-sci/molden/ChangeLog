@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/molden
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.1 2003/11/10 05:49:47 spyderous Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.2 2004/02/28 23:29:39 spyderous Exp $
+
+  28 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-3.9.ebuild:
+  Add missing glut dep for opengl USE.
 
 *molden-3.9 (10 Nov 2003)
 

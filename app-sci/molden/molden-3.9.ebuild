@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-3.9.ebuild,v 1.1 2003/11/10 05:49:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-3.9.ebuild,v 1.2 2004/02/28 23:29:40 spyderous Exp $
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="opengl"
 DEPEND=""
-RDEPEND="virtual/x11"
+RDEPEND="virtual/x11
+	opengl? ( media-libs/glut )"
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
