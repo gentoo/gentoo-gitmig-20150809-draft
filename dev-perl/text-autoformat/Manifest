@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7dcef7529e049663d80e1f081fc1f6d0 ChangeLog 871
+MD5 250cba56aaed4153a74acfbc550de31f ChangeLog 967
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 5b5ec617f801dc7200b09d6e54f4660e text-autoformat-1.12.ebuild 644
+MD5 ae136a3d8ee059745c66940d1ae25252 text-autoformat-1.12.ebuild 642
 MD5 9a16b26a7299426d60b908fa3007e0c9 files/digest-text-autoformat-1.12 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB5oIcKRy60XGEcJIRAiPCAJ4nmx+IuTDOw9yy3MRjz22GMWioWACdFsj7
-P7ka9jsQ50MmB17IY4F4a2E=
-=kXh5
------END PGP SIGNATURE-----
