@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/xmms-dflowers-1.2.1.ebuild,v 1.6 2004/04/22 06:19:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/xmms-dflowers-1.2.1.ebuild,v 1.7 2004/06/07 21:23:31 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,7 +38,6 @@ src_install() {
 	dodoc README COPYING Changes
 }
 
-
-src_postinst() {
+pkg_postinst() {
 	einfo "Don't forget to set the skin, plugin might look weird otherwise!"
 }
