@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.45 2003/01/06 09:06:56 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.46 2003/01/06 10:50:10 hannes Exp $
+
+  06 Jan 2003; Hannes Mehnert <hannes@gentoo.org> qt-2.3.2-r1.ebuild:
+  added !x11-libs/xft to DEPEND. this closes bug #11839 and probably
+  #13109.
 
   06 Jan 2003; Hannes Mehnert <hannes@gentoo.org> qt-3.1.1.ebuild,
   qt-3.1.0.ebuild, qt-3.1.0-r1.ebuild: added -xrender to configure, thanks
