@@ -1,6 +1,19 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.4 2002/08/04 00:11:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.5 2002/08/07 07:42:34 george Exp $
+
+*ocaml-3.05 (07 Aug 2002)
+
+  06 Aug 2002; George Shapovalov <george@gentoo.org> ocaml-3.04-r2.ebuild, files/digest-ocaml-3.05 :
+
+  new version
+  removed ppc patch as it was supposed to be unnecessary
+  ebuild is masked now, please test, especially ppc people.
+  tk dependency is optional, should build now without tcltk or X
+
+  related ebuild submissions:
+  Bardur Arantsson <bardur-gta@odense.kollegienet.dk>, bug#5786
+  ?Larry Cow <larrycow@free.fr>, bug# 5799
 
 *ocaml-3.04-r2 (01 Aug 2002)
 
