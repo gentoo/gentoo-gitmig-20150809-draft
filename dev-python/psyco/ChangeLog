@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psyco
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.8 2004/08/20 21:01:00 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.9 2004/12/01 00:22:26 pythonhead Exp $
+
+  30 Nov 2004; Rob Cakebread <pythonhead@gentoo.org>
+  psyco-1.0.0_beta1.ebuild, psyco-1.0.ebuild, psyco-1.1.1.ebuild,
+  psyco-1.2.ebuild:
+  Changed DEPEND to <python2.4
 
   20 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> psyco-1.2.ebuild:
   Marked stable x86

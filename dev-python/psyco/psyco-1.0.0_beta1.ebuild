@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.0.0_beta1.ebuild,v 1.6 2004/06/25 01:36:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.0.0_beta1.ebuild,v 1.7 2004/12/01 00:22:26 pythonhead Exp $
 
 inherit distutils
 
@@ -15,5 +15,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
-
+DEPEND="<dev-lang/python-2.4
+	!dev-python/psyco-cvs"
 S=${WORKDIR}/${PSYCO}
