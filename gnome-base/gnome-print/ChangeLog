@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.8 2002/04/12 16:59:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.9 2002/04/13 08:26:31 spider Exp $
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gnome-print-0.35-r3.ebuild :
 
@@ -18,7 +18,7 @@
   libxml is a compile time dependency.
 
 *gnome-print-0.35-r3 (01 Apr 2002)
-  01 Apr 2002; Spider <spider@gentoo.org>
+  01 Apr 2002; Spider <spider@gentoo.org> gnome-print-0.35-r3.ebuild: 
     updated to have libxml as dependency
 
 *gnome-print-0.35-r3 (29 Mar 2002)
