@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.101 2005/02/11 02:16:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.102 2005/02/11 15:07:21 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -238,6 +238,7 @@ kde-base/kdegraphics kde-base/kpovmodeler
 kde-base/kdegraphics kde-base/kruler
 kde-base/kdegraphics kde-base/ksnapshot
 kde-base/kdegraphics kde-base/ksvgplugin
+kde-base/kdegraphics kde-base/ksvg
 kde-base/kdegraphics kde-base/kuickshow
 kde-base/kdegraphics kde-base/kview
 kde-base/kdegraphics kde-base/kviewshell
