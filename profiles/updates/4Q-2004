@@ -8,3 +8,4 @@ move x11-libs/gtk-sharp dev-dotnet/gtk-sharp
 move x11-themes/ksmoothdock kde-misc/ksmoothdock
 move app-misc/kaptain kde-misc/kaptain
 move app-misc/kbeam kde-misc/kbeam
+move app-misc/kleds kde-misc/kleds
