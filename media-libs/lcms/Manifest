@@ -3,5 +3,6 @@ MD5 0a9cc2d4099bbdbe458172162b824e55 lcms-1.11.1.ebuild 1131
 MD5 92e337a2c53b85714e97b372b83a1cbd lcms-1.11.ebuild 1122
 MD5 ef25fc9c7f8f09964056d82c5d5d9d97 ChangeLog 2212
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 23e0936e0959383e6925b18983b7f445 files/digest-lcms-1.11.1 63
 MD5 1146ce39fd2134ce3378c4ec350912c2 files/digest-lcms-1.09 61
 MD5 ec46b226970ad1597b5be73ec187ef6e files/digest-lcms-1.11 61
