@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.18 2004/04/19 19:26:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.19 2004/04/22 05:50:34 leonardop Exp $
+
+*libgail-gnome-1.0.4 (22 Apr 2004)
+
+  22 Apr 2004; L. Boshell <leonardop@gentoo.org> libgail-gnome-1.0.4.ebuild:
+  New release.
 
   19 Apr 2004; L. Boshell <leonardop@gentoo.org> libgail-gnome-1.0.3.ebuild:
   Marked stable on x86.
