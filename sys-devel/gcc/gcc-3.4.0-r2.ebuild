@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r2.ebuild,v 1.2 2004/05/13 07:52:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r2.ebuild,v 1.3 2004/05/13 11:46:36 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -301,7 +301,6 @@ src_unpack() {
 	# known to be broken are going to be compiled.
 	# Travis Tilley <lv@gentoo.org>
 	use amd64 && use multilib && die "multilib support will not compile yet with gcc 3.4.0. re-emerge with USE=-multilib"
-	die "SSP is screwed up at the moment, gimme a few to fix it"
 
 	local release_version="Gentoo Linux ${PVR}"
 
@@ -398,6 +397,7 @@ src_unpack() {
 		cp ${WORKDIR}/gcc/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/gcc/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 		cp -R ${WORKDIR}/gcc/testsuite/* ${WORKDIR}/${P}/gcc/testsuite/ || die "testsuite not found"
+		epatch ${FILESDIR}/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch
 
 		#use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
 
