@@ -1,6 +1,6 @@
-# Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
+# Copyright 2002-2003 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.6.1.ebuild,v 1.1 2002/12/03 07:15:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.6.1.ebuild,v 1.2 2003/02/12 13:29:28 seemant Exp $
 
 MY_PV=${PV/.6./f}
 S="${WORKDIR}"
@@ -10,7 +10,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/rus-isp
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="app-text/ispell"
 
@@ -22,8 +22,5 @@ src_install () {
 	insinto /usr/lib/ispell
 	doins russian.hash russian.aff
 
-	#what do these do??
-#	exeinto /usr/lib/ispell-ru
-#	doexe sortkoi8 trans
 	dodoc README README.koi LICENSE
 }

@@ -1,16 +1,16 @@
-# Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
+# Copyright 2002-2003 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.5.9.ebuild,v 1.1 2002/12/03 07:15:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.5.9.ebuild,v 1.2 2003/02/12 13:29:28 seemant Exp $
 
 MY_PV=${PV/.5./e}
-S="${WORKDIR}"
+S=${WORKDIR}
 DESCRIPTION="Alexander I. Lebedev's Russian dictionary for ispell."
 HOMEPAGE="http://fmg-www.cs.ucla.edu/geoff/ispell-dictionaries.html#Russian-dicts"
 SRC_URI="ftp://scon155.phys.msu.su/pub/russian/ispell/rus-ispell-${MY_PV}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="app-text/ispell"
 
