@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.5 2005/01/18 06:15:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.6 2005/01/19 12:59:17 kumba Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -102,7 +102,7 @@ src_unpack() {
 	# Fix cross-compiling
 	epatch ${FILESDIR}/3.4.3/gcc-3.4.3-cross-compile.patch
 
-	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
+	# Arch stuff
 	case $(tc-arch ${CTARGET}) in
 		mips)
 			# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64

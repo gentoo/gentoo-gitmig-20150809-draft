@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.371 2005/01/17 04:33:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.372 2005/01/19 12:59:17 kumba Exp $
+
+  19 Jan 2005; Joshua Kinard <kumba@gentoo.org> gcc-3.4.3-r1.ebuild,
+  gcc-3.4.3.20050110.ebuild:
+  Typo tweaks in some comments in src_unpack.
 
   16 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gcc-3.4.3.20050110.ebuild:
