@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.37 2003/10/15 19:45:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.38 2003/11/02 19:17:40 joker Exp $
+
+  02 Nov 2003; Christian Birchinger <joker@gentoo.org>
+  screen-3.9.15-r1.ebuild:
+  Added sparc stable keyword
 
   15 Oct 2003; Jason Wever <weeve@gentoo.org> screen-4.0.1.ebuild:
   Fixed multi-user instructions so screen will launch correctly now.
