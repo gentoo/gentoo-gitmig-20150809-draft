@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.24 2004/07/07 18:33:17 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.25 2004/07/29 09:11:21 chriswhite Exp $
+
+*sox-12.17.4-r2 (29 Jul 2004)
+
+  29 Jul 2004; Chris White <chriswhite@gentoo.org>
+  +files/sox-wave-overflow.patch, +sox-12.17.4-r2.ebuild:
+  Bumped to -r2 and added buffer overflow patch to address bug #57962.
 
   07 Jul 2004; Hardave Riar <hardave@gentoo.org> sox-12.17.4-r1.ebuild:
   Added ~mips KEYWORD and gnuconfig_update
