@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lsof
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.12 2003/06/24 14:30:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.13 2003/06/30 17:13:58 solar Exp $
+
+*lsof-4.68 (30 Jun 2003)
+
+  30 Jun 2003; Ned Ludd <solar@gentoo.org> lsof-4.68.ebuild:
+  bump to latest version
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> lsof-4.67.ebuild:
   Mark stable on alpha
