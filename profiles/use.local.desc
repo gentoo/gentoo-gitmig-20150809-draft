@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.105 2003/09/08 08:54:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.106 2003/09/08 09:30:59 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -47,8 +47,11 @@ dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-libs/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-libs/crystalspace:mng - Enables mng support in CrystalSpace
 dev-libs/crystalspace:openal - Enables Open Audio Library support in CrystalSpace
+dev-lips/bigloo-lib:ipcs - enable ipcs support
+dev-lips/bigloo-lib:expat - enable expat support
 dev-php/mod_php:gd-external - Use the external version of libgd rather than the bundled one
 dev-php/php:gd-external - Use the external version of libgd rather than the bundled one
+dev-python/anygui:wxwin - enable wxwin support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnome-extra/libgda:sqlite - Enable sqlite support for GnomeDB.
@@ -56,6 +59,7 @@ kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 media-gfx/autotrace:imagemagick - Enables Imagemagick
+media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libgd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
@@ -72,6 +76,8 @@ media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
 media-video/vlc:xvid - Enables xvid codec support
 net-analyzer/slurm:altcolors - Use alternative color set
+net-analyzer/nstat:pcap - enable pcap support
+net-dialup/ppp:activefilter - enable activefilter support
 net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
@@ -82,6 +88,8 @@ net-im/jabber-server:j-nomuconf - If you do NOT want the mu-conference addon bui
 net-im/jabber-server:j-noyahoo - If you do NOT want the Yahoo transport built with jabber-server (removes glib dependency)
 net-irc/xchat:xchattext - Enables the text/console front end to XChat.
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
+net-libs/libnvcserver:nobackchannel - disable backchannel support
+net-libs/libnvcserver:no24bpp - disable 24bpp support
 net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
@@ -100,6 +108,7 @@ net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
 net-p2p/nicotine:geoip - Enable GeoIP support
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
+net-www/elinks:lua - enable lua support
 net-www/memcached:php - Include the PHP API for memcached
 net-www/mozilla:mozaccess - blank
 net-www/mozilla:mozcalendar - blank
@@ -116,10 +125,12 @@ sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:uclibc - Compile with uclibc :)
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tinylogin:uclibc - Compile with uclibc :)
+sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
 sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
+sys-devel/oskit:oskit-profiling - enable profiling support
 sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
 sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
 sys-kernel/gentoo-sources:evms2 - adds EVMS 2.0 support drop EVMS 1.2.1
