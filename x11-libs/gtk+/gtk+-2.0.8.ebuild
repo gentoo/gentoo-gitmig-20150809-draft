@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.8.ebuild,v 1.2 2002/11/12 00:24:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.8.ebuild,v 1.3 2002/11/12 12:28:31 leonardop Exp $
 
 IUSE="tiff doc jpeg"
 
@@ -21,8 +21,7 @@ RDEPEND="virtual/x11
 	>=x11-libs/pango-1.0.4-r1
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
-	tiff? ( >=media-libs/tiff-3.5.7 )
-	directfb? ( >=dev-libs/DirectFB-0.9.13 )"
+	tiff? ( >=media-libs/tiff-3.5.7 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
