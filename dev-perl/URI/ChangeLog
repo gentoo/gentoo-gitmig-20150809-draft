@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.27 2004/09/21 14:31:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.28 2004/09/21 14:39:44 gustavoz Exp $
+
+  21 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> URI-1.31.ebuild:
+  Stable on sparc
 
   21 Sep 2004; Michael Cummings <mcummings@gentoo.org> :
   This note is for future devs. At this time URI will fail tests - and they
