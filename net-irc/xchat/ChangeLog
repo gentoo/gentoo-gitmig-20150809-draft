@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.75 2003/12/15 13:48:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.76 2004/01/04 01:34:07 pyrania Exp $
+
+*xchat-2.0.7 (04 Jan 2004)
+
+  04 Jan 2004; Markus Nigbur<pyrania@gentoo.org> xchat-1.8.11.ebuild, xchat-2.0.1.ebuild,
+  xchat-2.0.3-r1.ebuild, xchat-2.0.4.ebuild, xchat-2.0.5-r1.ebuild,
+  xchat-2.0.6-r1.ebuild:
+  Header update.
+
+  04 Jan 2004; Markus Nigbur <pyrania@gentoo.org> xchat-2.0.7.ebuild:
+  Version Bump.
 
   15 Dec 2003; Guy Martin <gmsoft@gentoo.org> xchat-2.0.6-r1.ebuild:
   Marked stable on hppa.
