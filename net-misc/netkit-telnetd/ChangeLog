@@ -1,7 +1,15 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.2 2002/04/05 07:48:02 gbevin Exp $
 
+*netkit-telnetd-0.17-r2 (05 Apr 2002)
+
+  05 Apr 2002; G.Bevin <gbevin@gentoo.org> netkit-telnetd-0.17-r2.ebuil,
+  files/netkit-telnetd-0.17-gentoo.patch files/digest-netkit-telnetd-0.17-r2 :
+  
+  Global fixes to makefile inclusion and library linkage to make it compile
+  with gcc3.
+  
 *netkit-telnetd-0.17-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
