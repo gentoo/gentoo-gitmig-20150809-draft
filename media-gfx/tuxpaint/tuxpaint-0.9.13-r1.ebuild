@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.13-r1.ebuild,v 1.1 2004/11/24 01:48:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.13-r1.ebuild,v 1.2 2005/02/12 17:15:20 greg_g Exp $
 
 inherit eutils
 
@@ -47,9 +47,9 @@ src_install () {
 	use gnome && myopts="${myopts} GNOME_PREFIX=/usr"
 
 	if use kde && which kde-config ; then
-		myopts="${myopts} KDE_PREFIX=\
-$(kde-config --install apps --expandvars) KDE_ICON_PREFIX=\
-$(kde-config --install icon --expandvars)"
+		myopts="${myopts} \
+			KDE_PREFIX=/usr/share/applnk \
+			KDE_ICON_PREFIX=/usr/share/icons"
 	fi
 
 	use nls && myopts="${myopts} ENABLE_GETTEXT=1"
