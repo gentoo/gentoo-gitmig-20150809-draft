@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/tmda
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.5 2004/09/02 23:47:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.6 2004/09/22 08:56:24 ticho Exp $
+
+*tmda-1.0.3-r1 (22 Sep 2004)
+
+  22 Sep 2004; Andrej Kacian <ticho@gentoo.org> +tmda-1.0.3-r1.ebuild:
+  Apply patch to fix multipart message handling. Closes #60367, reported by Chet
+  McNeill <chet@somedec.com>, who also submitted a patch.
 
 *tmda-1.0.3 (03 Sep 2004)
 
