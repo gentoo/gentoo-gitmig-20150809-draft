@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.14 2004/10/08 19:09:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.15 2004/10/16 16:54:42 axxo Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -256,3 +256,6 @@ java-pkg_jar-from()
 	fi
 }
 
+java-pkg_dohtml() {
+	dohtml -f package-list $@
+}
