@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/eject
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.17 2004/02/19 19:51:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.18 2004/02/23 10:48:19 seemant Exp $
+
+  23 Feb 2004; Seemant Kulleen <seemant@gentoo.org> eject-2.0.13.ebuild:
+  moved 13 to stable, 12 is causing issues all over the place it seems
 
   19 Feb 2004; Martin Schlemmer <azarah@gentoo.org> eject-2.0.13.ebuild:
   Fix silly includes based on a patch by Ronald Hummelink
