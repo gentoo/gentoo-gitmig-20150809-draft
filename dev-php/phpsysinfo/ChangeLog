@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.3 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.4 2003/10/14 02:53:01 robbat2 Exp $
+
+*phpsysinfo-2.1-r1 (13 Oct 2003)
+
+  13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> phpsysinfo-2.1-r1.ebuild:
+  added debian patch for security, moved to new docroot
 
 *phpsysinfo-2.1 (25 Mar 2003)
 
