@@ -16,6 +16,7 @@ if [ -e /etc/isapnp.conf ]; then
 	fi
 else
 	eerror "You need an /etc/isapnp.conf file first"
+	eerror "There is an example in docs/isapnptools/txt/isapnp.conf.gz"
 	return 1
 fi
 }
