@@ -2,6 +2,20 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $Header
 
+*fluxbox-0.1.13-r3 (26 Nov 2002)
+
+  26 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r3.ebuild
+  files/digest-fluxbox-0.1.13-r3
+
+  Cleaned up. Remember patch is applied to this latest testing release.      
+
+*fluxbox-0.1.13-r3 (26 Nov 2002)
+
+  26 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r3.ebuild
+  files/digest-fluxbox-0.1.13-r3
+
+  Cleaned up and removed remember patch for a stable release.
+
 *fluxbox-0.1.13-r2 (24 Nov 2002)
 
   24 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r1.ebuild
