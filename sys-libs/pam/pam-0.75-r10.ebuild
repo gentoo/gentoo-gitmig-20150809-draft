@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.5 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.6 2002/12/16 21:39:32 azarah Exp $
 
 IUSE="berkdb"
 
@@ -25,8 +25,7 @@ DEPEND=">=sys-libs/cracklib-2.7-r3
 	>=sys-devel/autoconf-2.5
 	>=sys-devel/automake-1.6
 	>=sys-devel/flex-2.5.4a-r5
-	berkdb? ( ~sys-libs/db-1.85
-	          >=sys-libs/db-3.2.9 )"
+	berkdb? ( >=sys-libs/db-3.2.9 )"
 
 src_unpack() {
 	unpack ${A}
