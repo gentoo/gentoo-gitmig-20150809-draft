@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ci/ci-1.0.0.ebuild,v 1.1 2003/11/05 17:12:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ci/ci-1.0.0.ebuild,v 1.2 2003/11/14 21:26:53 seemant Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ DEPEND="dev-lang/ruby
 	=x11-libs/gtk+-1.2*
 	>=dev-ruby/ruby-gtk-0.28
 	media-fonts/monafont
-	sys-apps/gzip"
+	app-arch/gzip"
 
 S=${WORKDIR}/Ci
 
