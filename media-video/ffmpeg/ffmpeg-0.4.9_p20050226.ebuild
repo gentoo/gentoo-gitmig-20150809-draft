@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226.ebuild,v 1.3 2005/03/03 09:44:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226.ebuild,v 1.4 2005/03/07 05:45:55 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/ffmpeg/${MY_P}.tbz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64 ~ppc64 ~arm ~mips ~hppa"
-IUSE="aac altivec debug doc dv dvd encode imlib mmx oggvorbis oss truetype v4l"
+IUSE="aac altivec debug doc dv dvd encode imlib mmx oggvorbis oss threads truetype v4l"
 
 DEPEND="imlib? (media-libs/imlib2)
 		truetype? (>=media-libs/freetype-2)
@@ -78,6 +78,7 @@ src_compile() {
 	$(use_enable oss audio-oss) \
 	$(use_enable v4l) \
 	$(use_enable dv dv1394) \
+	$(use_enable threads pthreads) \
 	--enable-gpl \
 	--enable-shared-pp \
 	--enable-shared \
