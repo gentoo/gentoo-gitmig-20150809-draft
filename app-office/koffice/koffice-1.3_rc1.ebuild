@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3_rc1.ebuild,v 1.1 2003/10/31 19:34:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3_rc1.ebuild,v 1.2 2003/11/29 20:10:24 brad_mssw Exp $
 inherit kde flag-o-matic
 
 # TODO : mysql support
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 SRC_URI="mirror://kde/unstable/${MY_P}/src/${MY_P}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 amd64"
 RESTRICT="nomirror"
 
 DEPEND="$DEPEND
