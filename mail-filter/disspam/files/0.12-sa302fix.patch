@@ -1,0 +1,12 @@
+diff -bur disspam-orig/disspam.pl disspam/disspam.pl
+--- disspam-orig/disspam.pl	2003-05-07 00:46:14.000000000 +0200
++++ disspam/disspam.pl	2004-12-31 17:46:38.353945152 +0100
+@@ -766,7 +766,7 @@
+ 
+ 			#give email SpamAssassin headers
+ 			$status->rewrite_mail();
+-			$$messageref = $status->get_full_message_as_text();
++			$$messageref = $status->get_message();
+ 		}
+ 	}
+ 	else {
