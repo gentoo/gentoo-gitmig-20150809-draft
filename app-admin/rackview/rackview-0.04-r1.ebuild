@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.04-r1.ebuild,v 1.2 2003/06/11 20:51:32 msterret Exp $
 
 inherit perl-module
 
