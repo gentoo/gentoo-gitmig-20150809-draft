@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/outguess/ChangeLog,v 1.1 2003/12/10 01:23:37 zhen Exp $
+# ChangeLog for app-crypt/outguess
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/outguess/ChangeLog,v 1.2 2004/01/28 16:52:18 vapier Exp $
 
 *outguess-0.2 (09 Dec 2003)
 
