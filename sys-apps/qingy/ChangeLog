@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.16 2004/08/18 11:41:45 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.17 2004/08/19 06:50:11 s4t4n Exp $
+
+*qingy-0.5.2 (19 August 2004)
+
+  19 August 2004; Michele Noberasco <s4t4n@gentoo.org> qingy-0.5.2.ebuild:
+  Got too much feedback ;-)
+  Version bump. This fixes bug introduced in 0.5.1 that didn't allow to
+  run qingy anymore due to incorrect handling of command line arguments!
+  qingy-0.5.1.ebuild, files/digest-qingy-0.5.1:
+  Remove older ebuild...
 
 *qingy-0.5.1 (18 August 2004)
 
