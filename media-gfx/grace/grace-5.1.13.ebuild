@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.13.ebuild,v 1.17 2005/03/23 15:13:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.13.ebuild,v 1.18 2005/03/23 16:17:44 seemant Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 		|| has_version 'net-www/mozilla-firebird-bin' \
 		|| has_version 'net-www/mozilla-firebird-cvs' ; then
 		gracehelpviewer="MozillaFirebird"
-	elif has_version 'net-www/mozilla' ; then
+	elif has_version 'www-client/mozilla' ; then
 		gracehelpviewer="mozilla"
 	elif has_version 'kde-base/kdebase' ; then
 		gracehelpviewer="konqueror"
