@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nicotine
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.7 2003/12/05 21:22:28 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.8 2003/12/20 10:14:36 dholm Exp $
+
+  20 Dec 2003; David Holm <dholm@gentoo.org> nicotine-1.0.6.ebuild:
+  Added to ~ppc
 
 *nicotine-1.0.6 (05 Dec 2003)
 
