@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.13.ebuild,v 1.6 2004/12/16 05:23:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.13.ebuild,v 1.7 2004/12/19 21:21:22 carlo Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc -alpha amd64 ~ppc64"
-IUSE="doc"
+IUSE="debug doc"
 
 RDEPEND="virtual/libc
 	x11-libs/qt
@@ -26,20 +26,31 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 
+src_unpack() {
+	unpack ${A}
+	sed -i -e "s/  check_license()/# check_license()/" ${S}/configure.py
+}
+
 src_compile() {
 	distutils_python_version
 	addpredict ${QTDIR}/etc/settings
-	sed -i -e "s/  check_license()/# check_license()/" configure.py
-	python configure.py \
-		-d /usr/lib/python${PYVER}/site-packages \
-		-b /usr/bin \
-		-v /usr/share/sip \
-		-c
-	emake || die
+
+	local myconf="-d /usr/lib/python${PYVER}/site-packages -b /usr/bin -v /usr/share/sip"
+	use debug && myconf="${myconf} -u"
+	has distcc ${FEATURES} || myconf="${myconf} -c"
+
+	if [ "$(echo $(free -m | grep Mem) | cut -d' ' -f2)" -lt "257" ] ; then
+		echo ""
+		einfo "Low on memory?! Use distcc or get a coffee. :)"
+		echo ""
+	fi
+
+	python configure.py ${myconf}
+	emake || die "emake failed"
 }
 
 src_install() {
-	einstall DESTDIR=${D} || die
+	make DESTDIR=${D} install || die "install failed"
 	dodoc ChangeLog LICENSE NEWS README README.Linux THANKS
 	if use doc ; then
 		dohtml doc/PyQt.html
