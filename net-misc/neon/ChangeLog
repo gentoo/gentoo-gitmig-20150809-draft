@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.14 2003/02/12 08:28:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.15 2003/03/15 23:47:30 alain Exp $
+
+*neon-0.23.8 (15 Mar 2003)
+
+  15 Mar 2003; Alain Penders <alain@gentoo.org> neon-0.23.8.ebuild: Version bump, needed for subversion.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
