@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.64 2004/03/01 19:59:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.65 2004/03/19 03:21:25 latexer Exp $
+
+  18 Mar 2004; Peter Johanson <latexer@gentoo.org> files/pcmcia.rc:
+  Added a slightly smarter check for pcmcia present in the kernel before
+  attempting to modprobe things. Thanks to Scott Taylor <swtaylor@gentoo.org>
+  for the suggestion.
 
   18 Feb 2004; Brad House <brad_mssw@gentoo.org> pcmcia-cs-3.2.7.ebuild:
   amd64 stable

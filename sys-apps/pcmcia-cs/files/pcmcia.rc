@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia.rc,v 1.5 2004/02/04 22:35:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia.rc,v 1.6 2004/03/19 03:21:25 latexer Exp $
 
 RUN=/var/run
 SC=${RUN}/pcmcia-scheme
@@ -43,9 +43,11 @@ start() {
 		rm -rf /var/lib/pcmcia
 	fi
 
-	if [ -z `fgrep "ds " /proc/modules | head -n1 | cut -c1` ] ; then
+	if [ -e /proc/bus/pccard ]; then
+		einfo "PCMCIA support detected."
+	else
 		pcmcia_probe pcmcia_core $CORE_OPTS
-		if [ -n "$PCIC" ]; then
+		if [ -n "${PCIC}" ]; then
 			pcmcia_probe $PCIC $PCIC_OPTS || {
 				ewarn "'modprobe ${PCIC}' failed"
 				ewarn "Trying alternative PCIC driver: ${PCIC_ALT}"
