@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.16.ebuild,v 1.2 2003/09/16 15:46:27 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.16.ebuild,v 1.3 2003/11/03 16:47:05 max Exp $
 
 inherit perl-module
 
@@ -124,7 +124,7 @@ make_config() {
 	# Enable Hungary
 	[ "`has tv_grab_hu ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable Denmark
-	[ "`has tv_grab_nl ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
+	[ "`has tv_grab_dk ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable GUI checking.
 	[ "`has tv_check ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable CGI support
