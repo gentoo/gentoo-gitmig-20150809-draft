@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.48 2003/09/17 01:35:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.49 2003/09/17 02:32:22 caleb Exp $
+
+*kdeaddons-3.1.4 (16 Sep 2003)
+
+  16 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdeaddons-3.1.4.ebuild,
+  files/kdeaddons-3.1.4-enable-crashes.diff:
+  new version
 
   16 Sep 2003; Jason Wever <weeve@gentoo.org> kdeaddons-3.1.3.ebuild:
   Marked stable for sparc.
