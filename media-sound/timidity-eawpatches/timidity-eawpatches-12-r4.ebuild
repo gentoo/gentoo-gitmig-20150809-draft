@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r4.ebuild,v 1.2 2004/11/23 11:13:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r4.ebuild,v 1.3 2004/12/21 13:27:22 josejx Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://5hdumat.samizdat.net/music/eawpats${PV}_full.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND=">=media-sound/timidity++-2.13.0-r2"
 
