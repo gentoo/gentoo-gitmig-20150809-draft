@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.2.ebuild,v 1.2 2004/03/28 06:55:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.2.ebuild,v 1.3 2004/06/25 03:21:32 agriffis Exp $
 
 inherit games
 
