@@ -2,7 +2,7 @@
 
 from sys import *
 import portage
-
+import types
 mycommand=argv[1]+"("
 x=2
 while (x<len(argv)):
@@ -12,4 +12,6 @@ while (x<len(argv)):
 		mycommand=mycommand+'"'+argv[x]+'",'
 	x=x+1
 mycommand=mycommand+")"
-exec(mycommand)
+exec("myresult="+mycommand)
+if type(myresult)==types.IntType:
+	exit(myresult)

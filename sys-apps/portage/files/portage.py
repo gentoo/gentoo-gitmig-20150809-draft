@@ -706,6 +706,15 @@ def pkgsplit(mypkg):
 		ERRPKG=myparts[-1]+" doesn't appear to be a version or rev string."
 		return None
 
+def catpkgsplit(mycatpkg):
+	mysplit=string.split(mycatpkg,"/")
+	if len(mysplit)!=2:
+		return None
+	mysplit2=pkgsplit(mysplit[1])
+	if mysplit2==None:
+		return None
+	return [mysplit[0],mysplit2[0],mysplit2[1],mysplit2[2]]
+
 # vercmp:
 # This takes two version strings and returns an integer to tell you whether
 # the versions are the same, val1>val2 or val2>val1.
@@ -758,6 +767,14 @@ def pkgcmp(pkg1,pkg2):
 		return -1
 	return 0
 
+def getgeneral(mycatpkg):
+	"""Takes a specific catpkg and returns the general version.  getgeneral("foo/bar-1.0") returns "foo/bar"""
+	mysplit=catpkgsplit(mycatpkg)
+	if not mysplit:
+		return None
+	else:
+		return string.join([mysplit[0],mysplit[1]],"/")
+
 def dep_depreduce(mypkgdep):
 	if mypkgdep[0]=="!":
 		if isinstalled(mypkgdep[1:]):
@@ -775,31 +792,31 @@ def dep_depreduce(mypkgdep):
 	elif mypkgdep[0:2]==">=":
 		if not isspecific(mypkgdep[2:]):
 			return None
-		if installedcmp(mypkgdep[2:])<=0:
-			return 1
-		else:
-			return 0
+		if isinstalled(getgeneral(mypkgdep[2:])):
+			if installedcmp(mypkgdep[2:])<=0:
+				return 1
+		return 0
 	elif mypkgdep[0:2]=="<=":
 		if not isspecific(mypkgdep[2:]):
 			return None
-		if installedcmp(mypkgdep[2:])>=0:
-			return 1
-		else:
-			return 0
+		if isinstalled(getgeneral(mypkgdep[2:])):
+			if installedcmp(mypkgdep[2:])>=0:
+				return 1
+		return 0
 	elif mypkgdep[0]=="<":
 		if not isspecific(mypkgdep[1:]):
 			return None
-		if installedcmp(mypkgdep[1:])>0:
-			return 1
-		else:
-			return 0
+		if isinstalled(getgeneral(mypkgdep[1:])):
+			if installedcmp(mypkgdep[1:])>0:
+				return 1
+		return 0
 	elif mypkgdep[0]==">":
 		if not isspecific(mypkgdep[1:]):
 			return None
-		if installedcmp(mypkgdep[1:])<0:
-			return 1
-		else:
-			return 0
+		if isinstalled(getgeneral(mypkgdep[1:])):
+			if installedcmp(mypkgdep[1:])<0:
+				return 1
+		return 0
 	if not isspecific(mypkgdep):
 		if isinstalled(mypkgdep):
 			return 1
@@ -808,7 +825,7 @@ def dep_depreduce(mypkgdep):
 	else:
 		return None
 		
-def dep_parenreduce(mysplit,mypos):
+def dep_parenreduce(mysplit,mypos=0):
 	"Accepts a list of strings, and converts '(' and ')' surrounded items to sub-lists"
 	while (mypos<len(mysplit)): 
 		if (mysplit[mypos]=="("):
@@ -860,9 +877,10 @@ def dep_opconvert(mysplit,myuse):
 		mypos=mypos+1
 	return mysplit
 
-def dep_wordreduce(deplist):
+def dep_wordreduce(mydeplist):
 	"""Calls dep_depreduce() on all the items in the deplist"""
 	mypos=0
+	deplist=mydeplist[:]
 	while mypos<len(deplist):
 		if type(deplist[mypos])==types.ListType:
 			#recurse
@@ -899,42 +917,168 @@ def dep_eval(deplist):
 				return 0
 		return 1
 
-def dep_print(deplist):
-	"Prints out a deplist in a human-understandable format"
-	if deplist[0]=="||":
-		for x in deplist[1:-1]:
-			print x,"OR",
-		print deplist[-1]
+def dep_catpkgstring(mypkgdep):
+	if mypkgdep[0]=="!":
+		if not pkgsplit(mypkgdep[1:]):
+			return "(invalid dependency)"
+		else:
+			return "unmerge "+mypkgdep[1:]
+	elif mypkgdep[0]=="=":
+		if not pkgsplit(mypkgdep[1:]):
+			return "(invalid dependency)"
+		else:
+			return "merge "+mypkgdep[1:]
+	elif mypkgdep[0:2]==">=":
+		if not pkgsplit(mypkgdep[2:]):
+			return "(invalid dependency)"
+		else:
+			return "merge "+mypkgdep[2:]+" or newer"
+	elif mypkgdep[0:2]=="<=":
+		if not pkgsplit(mypkgdep[2:]):
+			return "(invalid dependency)"
+		else:
+			return "merge "+mypkgdep[2:]+" or older"
+	elif mypkgdep[0]=="<":
+		mysplit=catpkgsplit(mypkgdep[1:])
+		if mysplit==None:
+			return "(invalid dependency)"
+		else:
+			myret="merge "+string.join([mysplit[0],mysplit[1]],"/")+" older than version"
+			if mysplit[3]=="r0":
+				return myret+" "+mysplit[2]
+			else:
+				return myret+" "+mysplit[2]+"-"+mysplit[3]
+	elif mypkgdep[0]==">":
+		mysplit=catpkgsplit(mypkgdep[1:])
+		if mysplit==None:
+			return "(invalid dependency)"
+		else:
+			myret="merge "+string.join([mysplit[0],mysplit[1]],"/")+" newer than version"
+			if mysplit[3]=="r0":
+				return myret+" "+mysplit[2]
+			else:
+				return myret+" "+mysplit[2]+"-"+mysplit[3]
+	elif not isspecific(mypkgdep):
+		mysplit=string.split(mypkgdep,"/")
+		if len(mysplit)!=2:
+			return "(invalid dependency)"
+		else:
+			return "merge any version of "+mypkgdep
 	else:
-		for x in deplist[:-1]:
-			print x,"AND",
-		print deplist[-1]
+		return "(invalid dependency)"
 
-def dep_parse(depstring,myuse):
+def dep_print(deplist,mylevel=0):
+	"Prints out a deplist in a human-understandable format"
+	if (deplist==None) or (len(deplist)==0):
+		return
+	if deplist[0]=="||":
+		for x in deplist[1:]:
+			if type(x)==types.ListType:
+				dep_print(x,mylevel+1)
+			else:
+				print "  "*(mylevel)+"|| "+dep_catpkgstring(x)
+	else:
+		for x in deplist:
+			if type(x)==types.ListType:
+				dep_print(x,mylevel+1)
+			else:
+				print "  "*(mylevel)+"&& "+dep_catpkgstring(x)
+
+def dep_zapdeps(unreduced,reduced):
+	"""Takes an unreduced and reduced deplist and removes satisfied dependencies.
+	Returned deplist contains steps that must be taken to satisfy dependencies."""
+	if unreduced[0]=="||":
+		if dep_eval(reduced):
+			#deps satisfied, return None
+			return None
+		else:
+			return unreduced
+	else:
+		if dep_eval(reduced):
+			#deps satisfied, return None
+			return None
+		else:
+			returnme=[]
+			x=0
+			while x<len(reduced):
+				if type(reduced[x])==types.ListType:
+					myresult=dep_zapdeps(unreduced[x],reduced[x])
+					if myresult:
+						returnme.append(myresult)
+				else:
+					if reduced[x]==0:
+						returnme.append(unreduced[x])
+				x=x+1
+			return returnme
+
+def dep_listcleanup(deplist):
+	"remove unnecessary clutter from deplists.  Remove multiple list levels, empty lists"
+	newlist=[]
+	if (len(deplist)==1):
+		#remove multiple-depth lists
+		if (type(deplist[0])==types.ListType):
+			for x in deplist[0]:
+				if type(x)==types.ListType:
+					if len(x)!=0:
+						newlist.append(dep_listcleanup(x))
+				else:
+					newlist.append(x)
+		else:
+			#unembed single nodes
+			newlist.append(deplist[0])
+	else:
+		for x in deplist:
+			if type(x)==types.ListType:
+				if len(x)==1:
+					newlist.append(x[0])
+				elif len(x)!=0:
+					newlist.append(dep_listcleanup(x))
+			else:
+				newlist.append(x)
+	return newlist
+	
+def dep_parse(depstring):
 	"Evaluates a dependency string"
-	myusesplit=string.split(myuse)
+	myusesplit=string.split(getsetting("USE"))
 	mysplit=string.split(depstring)
 	#convert parenthesis to sublists
-	mysplit=dep_parenreduce(mysplit,0)
+	mysplit=dep_parenreduce(mysplit)
 	#mysplit can't be None here, so we don't need to check
 	mysplit=dep_opconvert(mysplit,myusesplit)
 	#if mysplit==None, then we have a parse error (paren mismatch or misplaced ||)
 	if mysplit==None:
 		return [0,"Parse Error (parenthesis mismatch or || abuse?)"]
-	dep_print(mysplit)
-	mysplit2=dep_wordreduce(mysplit)
+	mysplit2=mysplit[:]
+	mysplit2=dep_wordreduce(mysplit2)
 	if mysplit2==None:
 		return [0,"Invalid token"]
 	myeval=dep_eval(mysplit2)
 	if myeval:
 		return [1,None]
 	else:
-		#create list of failed dependencies
-		myreturn=[]
+		return [1,dep_listcleanup(dep_zapdeps(mysplit,mysplit2))]
+
+def dep_frontend():
+	"""shell frontend for dependency system"""
+	depstring=getenv("DEPEND")
+	if depstring=="":
+		return 0
+	myparse=dep_parse(depstring)
+	if myparse[0]==0:
+		#error
+		print '!!! Dependency error:',myparse[1]
+		return 1
+	elif myparse[1]==None:
+		print '>>> Dependencies OK ;)'
+		return 0
+	else:
+		print '!!! Some dependencies must be satisfied.'
+		print '!!! Please follow these steps:'
+		print
+		dep_print(myparse[1])
+		return 1
 
 configdefaults=getconfig("/etc/make.defaults")
 configsettings=getconfig("/etc/make.conf")
-"""print "first"
-dep_parse(">=net-misc/openssh-2.2.0 >=sys-libs/slang-1.4.2","foo")
-print "second"
-dep_print("=sys-libs/pam-0.72-r1 bar/foo || ( sys-libs/zlib foo/bar )")"""
+#dep_print( dep_parse(">=net-misc/openssh-2.2.0 >=sys-libs/slang-1.4.2")[1])
+#dep_print( dep_parse("=sys-libs/pam-0.72-r1 bar/foo || ( sys-libs/zlib foo/bar )")[1])
