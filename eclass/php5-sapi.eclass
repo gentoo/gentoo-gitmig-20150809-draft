@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.19 2004/08/09 00:13:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.20 2004/08/09 04:35:44 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -81,6 +81,7 @@ DEPEND="$DEPEND
 
 PHP_BUILDTARGETS="${PHP_BUILDTARGETS} build-modules"
 PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install"
+PEAR_CACHE="/var/tmp/pear-cache"
 
 # ========================================================================
 
@@ -97,7 +98,7 @@ PHP_INI_FILE="php.ini"
 
 # ========================================================================
 
-EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack
+EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 
 # ========================================================================
 # INTERNAL FUNCTIONS
@@ -413,6 +414,9 @@ php5-sapi_src_compile () {
 	enable_extension_with		"readline"		"readline"		0
 	enable_extension_with		"libedit"		"libedit"		1
 
+	# optimization/setting stuff
+	myconf="${myconf} --enable-versioning"
+
 	# all done
 
 	echo "${my_conf}"
@@ -460,8 +464,19 @@ php5-sapi_src_install () {
 	insinto ${PHP_INI_DIR}
 	newins ${phpinisrc} ${PHP_INI_FILE}
 
-	# we only install the following for the PHP_PROVIDER_PKG ebuild
+	# Fix PEAR stuff
+	if php5-sapi_is_providerbuild ; then
+		einfo "Fixing PEAR cache location"
+		local oldloc="${T}/pear/cache"
+		local old="s:${#oldloc}:\"${oldloc}\""
+		local newloc="${PEAR_CACHE}"
+		local new="s:${#newloc}:\"${newloc}\""
+		sed "s|${old}|${new}|" -i ${D}/etc/pear.conf
+		keepdir ${PEAR_CACHE}
+		fperms 1777 ${PEAR_CACHE}
+	fi
 
+	# we only install the following for the PHP_PROVIDER_PKG ebuild
 	if ! php5-sapi_is_providerbuild ; then
 		rm ${D}/usr/bin/php-config
 		rm ${D}/usr/bin/phpize
@@ -470,4 +485,11 @@ php5-sapi_src_install () {
 		rm -rf ${D}/usr/include/php
 		rm -rf ${D}/usr/share/man/man1/php.1*
 	fi
+}
+
+php5-sapi_pkg_postinst() {
+	# make sure the directory exists
+	# and is usable
+	mkdir -p ${PEAR_CACHE}
+	chmod 1777 ${PEAR_CACHE}
 }
