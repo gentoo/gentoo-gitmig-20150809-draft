@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rootstrap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.8 2004/09/03 15:02:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.9 2004/11/10 21:53:38 mr_bones_ Exp $
+
+  10 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  rootstrap-0.3.21.ebuild:
+  ppc needs sys-kernel/usermode-sources first
 
   03 Sep 2004; David Holm <dholm@gentoo.org> rootstrap-0.3.21.ebuild:
   Added to ~ppc.
