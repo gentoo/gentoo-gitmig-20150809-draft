@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.1 2003/06/27 09:44:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.2 2003/08/05 15:39:31 vapier Exp $
 
 [ -n "`use kde`" ] && inherit kde
 
@@ -24,11 +24,9 @@ src_unpack() {
 	cd ${S}
 	einfo "Patching ./configure to respect CFLAGS .."
 	sed -i -e "s/\(CFLAGS.*\)-O2/\1${CFLAGS}/" configure
-	
 }
 
 src_compile() {
-
 	local myconf
 
 	use kde \
@@ -38,12 +36,12 @@ src_compile() {
 	emake xsim_etcp=/etc || die "make failed"
 }
 
-src_install () {
+src_install() {
 	einstall xsim_datp=${D}/usr/lib/xsim/dat \
-			 xsim_libp=${D}/usr/lib/xsim/plugins \
-			 xsim_binp=${D}/usr/bin \
-			 xsim_etcp=${D}/etc \
-			 install-data install || die "install failed"
+			xsim_libp=${D}/usr/lib/xsim/plugins \
+			xsim_binp=${D}/usr/bin \
+			xsim_etcp=${D}/etc \
+			install-data install || die "install failed"
 	
 	sed -i -e "s#DICT_LOCAL\(.*\)/usr/dat#DICT_LOCAL\1/usr/lib/xsim/dat#" \
 		-e "s#PLUGIN_LOCAL\(.*\)/usr/plugins#PLUGIN_LOCAL\1/usr/lib/xsim/plugins#" \

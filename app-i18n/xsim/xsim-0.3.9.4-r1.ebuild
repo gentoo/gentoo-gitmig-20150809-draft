@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r1.ebuild,v 1.3 2003/06/29 22:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r1.ebuild,v 1.4 2003/08/05 15:39:31 vapier Exp $
 
+inherit eutils
 [ -n "`use kde`" ] && inherit kde
 
 DESCRIPTION="A simple and fast GB and BIG5 Chinese XIM server."
@@ -26,11 +27,9 @@ src_unpack() {
 	cd ${S}
 	einfo "Patching ./configure to respect CFLAGS .."
 	sed -i -e "s/\(CFLAGS.*\)-O2/\1${CFLAGS}/" configure
-	
 }
 
 src_compile() {
-
 	local myconf
 
 	myconf="${myconf} --with-bdb-includes=/usr/include/db3 --with-bdb-libs=/usr/lib"
@@ -42,12 +41,12 @@ src_compile() {
 	emake xsim_etcp=/etc || die "make failed"
 }
 
-src_install () {
+src_install() {
 	einstall xsim_datp=${D}/usr/lib/xsim/dat \
-			 xsim_libp=${D}/usr/lib/xsim/plugins \
-			 xsim_binp=${D}/usr/bin \
-			 xsim_etcp=${D}/etc \
-			 install-data install || die "install failed"
+			xsim_libp=${D}/usr/lib/xsim/plugins \
+			xsim_binp=${D}/usr/bin \
+			xsim_etcp=${D}/etc \
+			install-data install || die "install failed"
 	
 	sed -i -e "s#DICT_LOCAL\(.*\)/usr/dat#DICT_LOCAL\1/usr/lib/xsim/dat#" \
 		-e "s#PLUGIN_LOCAL\(.*\)/usr/plugins#PLUGIN_LOCAL\1/usr/lib/xsim/plugins#" \

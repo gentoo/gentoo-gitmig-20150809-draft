@@ -1,21 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p3-r1.ebuild,v 1.2 2003/05/19 22:11:54 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p3-r1.ebuild,v 1.3 2003/08/05 15:39:29 vapier Exp $
+
+inherit eutils
 
 MY_P="Canna36p3"
-S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A client-server based Kana-Kanji conversion system"
 HOMEPAGE="http://canna.sourceforge.jp/"
-KEYWORDS="x86 ppc sparc alpha"
+SRC_URI="http://downloads.sourceforge.jp/canna/2181/${MY_P}.tar.gz"
+
 LICENSE="as-is"
 SLOT="0"
-IUSE=""
-SRC_URI="http://downloads.sourceforge.jp/canna/2181/${MY_P}.tar.gz"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/glibc
 	x11-base/xfree"
 RDEPEND="virtual/glibc"
+
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +33,7 @@ src_compile() {
 	make canna || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	make DESTDIR=${D} install.man || die
 	dodoc CHANGES.jp ChangeLog INSTALL* README* WHATIS*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.4.1.ebuild,v 1.4 2003/07/07 10:59:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.4.1.ebuild,v 1.5 2003/08/05 15:39:31 vapier Exp $
 
 inherit gnome2
 
@@ -21,19 +21,14 @@ RDEPEND="virtual/x11
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
 	>=dev-libs/glib-2"
-	
-PDEPEND=">=app-i18n/scim-tables-0.2.1"
-
 DEPEND="${RDEPEND}
 	dev-lang/perl"
-	
-
-S=${WORKDIR}/${P}
+PDEPEND=">=app-i18n/scim-tables-0.2.1"
 
 src_compile() {
 	local myconf
 	use gnome ||  myconf="--disable-config-gconf"
-	econf ${myconf}
+	econf ${myconf} || die
 	emake || "make failed"
 }
 

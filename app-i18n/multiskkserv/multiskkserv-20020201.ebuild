@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.2 2003/08/05 09:39:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.3 2003/08/05 15:39:29 vapier Exp $
 
-IUSE=""
+inherit eutils
 
 CDB_PV=0.75
 CDB_PN=cdb
@@ -21,16 +21,12 @@ DEPEND="virtual/glibc
 	app-i18n/skk-jisyo-cdb"
 PROVIDE="virtual/skkserv"
 
-S=${WORKDIR}/${P}
-
 pkg_setup() {
-
 	einfo "If you want to add some extra SKK dictionaries,"
 	einfo "please emerge app-i18n/skk-jisyo-extra first."
 }
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${WORKDIR}/${CDB_P}
@@ -40,7 +36,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	cd ${WORKDIR}/${CDB_P}
 	make || die
 	cd -
@@ -57,7 +52,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall || die
 
 	insinto /etc/conf.d
@@ -70,7 +64,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo "By default, multiskkserv will look up only SKK-JISYO.L."
 	einfo "If you want to use more dictionaries,"
 	einfo "edit /etc/conf.d/multiskkserv manually."

@@ -1,22 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4.ebuild,v 1.3 2003/06/29 22:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4.ebuild,v 1.4 2003/08/05 15:39:31 vapier Exp $
 
-KEYWORDS="x86"
 DESCRIPTION="A simple and fast GBK Chinese XIM server."
 HOMEPAGE="http://developer.berlios.de/projects/xsim/"
 SRC_URI="http://download.berlios.de/xsim/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.0.0"
-IUSE=""
-
-SLOT="0"
 
 src_compile() {
-
 	cd ${S}
 	for file in `find . -iname Makefile.in`
 	do
@@ -25,9 +22,9 @@ src_compile() {
 	done
 
 	./configure \
-	--prefix=/usr/lib/xsim \
-	--mandir=/usr/share/man \
-	|| die
+		--prefix=/usr/lib/xsim \
+		--mandir=/usr/share/man \
+		|| die
 
 	for file in `find . -iname Makefile`
 	do
@@ -40,14 +37,11 @@ src_compile() {
 	make || die
 }
 
-src_install () {
-	make DESTDIR=${D} \
-	install || die
-	make DESTDIR=${D} \
-	install-data || die
+src_install() {
+	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install-data || die
 	dodir /usr/bin
 	dosym /usr/lib/xsim/bin/xsim /usr/bin/xsim
 	# install docs
 	dodoc ChangeLog COPYING INSTALL README* TODO
 }
-
