@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r1.ebuild,v 1.3 2004/02/07 04:49:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r1.ebuild,v 1.4 2004/05/26 04:02:54 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips arm"
 IUSE="pie"
 
 DEPEND="sys-devel/gcc"
@@ -33,15 +33,34 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/uClibc-${PV}-Makefile.patch
 	fi
 
+	# support archs which dont implement all syscalls
+	epatch ${FILESDIR}/${PV}/arm-fix-missing-syscalls.patch
+
 	# fixup for install perms
 	sed -i -e "s:-fa:-dRf:g" Makefile
+
+	local target=""
+	if [ "${ARCH}" == "x86" ] ; then
+		target="i386"
+	elif [ "${ARCH}" == "ppc" ] ; then
+		target="powerpc"
+	else
+		# sparc|mips|alpha|arm|sh
+		target="${ARCH}"
+	fi
+	sed -i \
+		-e "s:default TARGET_i386:default TARGET_${target}:" \
+		extra/Configs/Config.in
+	sed -i \
+		-e "s:default CONFIG_GENERIC_386:default CONFIG_${UCLIBC_CPU:-GENERIC_386}:" \
+		extra/Configs/Config.${target}
 
 	make defconfig >/dev/null || die "could not config"
 	for def in UCLIBC_{HAS_LOCALE,PROFILING} DO{DEBUG,ASSERTS} SUPPORT_LD_DEBUG{,_EARLY} ; do
 		sed -i "s:${def}=y:# ${def} is not set:" .config
 	done
 
-	if [ `use x86` ] ; then
+	if use x86 ; then
 		use pie && PIC=1
 		[ "`is-flag -fPIC`" == "true" ] && PIC=1
 	fi
