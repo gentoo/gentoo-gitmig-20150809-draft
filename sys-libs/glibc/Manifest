@@ -3,19 +3,13 @@ Hash: SHA1
 
 MD5 b2013d991c28310b8cc1ee0fffb3b147 ChangeLog 50483
 MD5 f3cfb768f888ac432bddfa481c2febce glibc-2.2.5-r9.ebuild 10877
-MD5 9a7d1e93fab43ab1d8907a745e417455 glibc-2.3.2-r10.ebuild 20220
 MD5 4b47e58e600eebddddb96287bdcc42da glibc-2.3.2-r11.ebuild 20306
-MD5 b7f41b64d13ebb13463afe77a0fab815 glibc-2.3.2-r2.ebuild 18863
-MD5 a286fb7deff9b927e5bb9e6e69f98663 glibc-2.3.2-r9.ebuild 19572
 MD5 81bf9a9ef6acade533daed4761400cee glibc-2.3.4.20040619-r1.ebuild 20686
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 230961b75f3fbc3baed1837f5f842bdf glibc-2.3.4.20040808.ebuild 21051
 MD5 cdff0e2d789aa0bda20dbe3771c107c3 glibc-2.3.3.20040420-r1.ebuild 21481
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
-MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r10 312
 MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r11 312
-MD5 de6744f3ba45c52573febfa91a3d1d1d files/digest-glibc-2.3.2-r2 296
-MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r9 312
 MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r1 307
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
@@ -122,7 +116,7 @@ MD5 16f18501efd56811e724231470dc5d00 files/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBMAPHHTu7gpaalycRAqQ8AJ4s2GA8kvpYk0OmwTT7zCBI7jmp1ACdGkQ4
-xTIjYpghPnQypIMau97yaSM=
-=kUUH
+iD8DBQFBMAURHTu7gpaalycRAtADAJ443SimzIw5u4KsJoYTHxOA7hNbZACfbegA
+kHhQsczYloIcRHzfl4fej2w=
+=ThpQ
 -----END PGP SIGNATURE-----
