@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.2.ebuild,v 1.14 2002/12/15 10:44:21 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.2.ebuild,v 1.15 2003/01/18 19:21:23 tuxus Exp $
 
 IUSE="nls build"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU compressor"
 SRC_URI="ftp://alpha.gnu.org/gnu/gzip/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gzip/gzip.html"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 SLOT="0"
 LICENSE="GPL-2"
 

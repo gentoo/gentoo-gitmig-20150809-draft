@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/tar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.12 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.13 2003/01/18 19:08:18 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *tar-1-13-25-r3 (01 Oct 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   01 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Security update. Added patch developed by Redhat to fix directory traversals.

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.13 2002/12/22 19:20:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.14 2003/01/18 19:19:26 tuxus Exp $
 
 *sed-4.0.5.ebuild (22 Dec 2002)
 
@@ -36,6 +36,9 @@
   details.
 
 *sed-4.0.1.ebuild (06 Nov 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   06 Nov 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.1.ebuild :
 

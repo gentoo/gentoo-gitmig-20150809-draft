@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.14 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.15 2003/01/18 19:17:24 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *sh-utils-2.0.15 (24 Aug 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   04 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
   files/sh-utils-2.0.15-gentoo.diff :

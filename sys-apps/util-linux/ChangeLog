@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.20 2003/01/11 23:45:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.21 2003/01/18 19:12:38 tuxus Exp $
 
 *util-linux-2.11y (27 Oct 2002)
 
@@ -62,6 +62,9 @@
   Version update.
 
 *util-linux-2.11o-r3 (28 Apr 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.11o-r3.ebuild :
   Added LICENSE, KEYWORDS.
