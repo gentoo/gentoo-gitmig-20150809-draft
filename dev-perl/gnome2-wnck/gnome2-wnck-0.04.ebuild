@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.04.ebuild,v 1.4 2004/08/14 11:36:47 slarti Exp $
 
 IUSE=""
-inherit perl-module
+inherit perl-module eutils
 
 MY_P=Gnome2-Wnck-${PV}
 S=${WORKDIR}/${MY_P}
@@ -19,3 +19,9 @@ DEPEND=">=dev-perl/glib-perl-1.042
 	>=x11-libs/libwnck-2
 	dev-perl/extutils-pkgconfig
 	>=dev-perl/extutils-depends-0.2*"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-window-close.patch
+}
