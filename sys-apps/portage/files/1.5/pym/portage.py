@@ -149,7 +149,9 @@ endversion={"pre":-2,"p":0,"alpha":-4,"beta":-3,"rc":-1}
 def env_update():
 	global root
 	if not os.path.exists(root+"etc/env.d"):
-		os.makedirs(root+"etc/env.d")
+		prevmask=os.umask(0)
+		os.makedirs(root+"etc/env.d",0755)
+		os.umask(prevmask)
 	fns=os.listdir(root+"etc/env.d")
 	fns.sort()
 	pos=0
@@ -1382,12 +1384,14 @@ class vartree(packagetree):
 		packagetree.__init__(self,virtual)
 	def populate(self):
 		"populates the local tree (/var/db/pkg)"
+		prevmask=os.umask(0)
 		if not os.path.isdir(self.root+"var"):
 			os.mkdir(self.root+"var",0755)
 		if not os.path.isdir(self.root+"var/db"):
 			os.mkdir(self.root+"var/db",0755)
 		if not os.path.isdir(self.root+"var/db/pkg"):
 			os.mkdir(self.root+"var/db/pkg",0755)
+		os.umask(prevmask)
 		dbdir=self.root+"var/db/pkg"
 		origdir=os.getcwd()
 		os.chdir(dbdir)
@@ -2146,9 +2150,16 @@ if root != "/":
 		print "!!! Exiting."
 		print
 		sys.exit(1)
+
+#create tmp and var/tmp if they don't exist; read config
+os.umask(0)
 if not os.path.exists(root+"tmp"):
 	print ">>> "+root+"tmp doesn't exist, creating it..."
 	os.mkdir(root+"tmp",01777)
+if not os.path.exists(root+"var/tmp"):
+	print ">>> "+root+"var/tmp doesn't exist, creating it..."
+	os.mkdir(root+"var",0755)
+	os.mkdir(root+"var/tmp",01777)
 os.umask(022)
 settings=config()
 ebuild_initialized=0
