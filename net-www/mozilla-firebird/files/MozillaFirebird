@@ -2,14 +2,13 @@
 #
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/files/MozillaFirebird,v 1.4 2004/02/02 15:23:54 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/files/MozillaFirebird,v 1.5 2004/02/06 18:37:46 brad Exp $
 
 # Set to "window" if you prefer new Firebird windows instead of new tabs
 newtype=${MOZILLA_NEWTYPE:-"tab"}
 
 # Point this to your Firebird installation if not using the default
 export MOZILLA_FIVE_HOME="/usr/lib/MozillaFirebird"
-LDPATH=${MOZILLA_FIVE_HOME}
 fbpath=${MOZILLA_FIVE_HOME}
 
 # Sanity check
