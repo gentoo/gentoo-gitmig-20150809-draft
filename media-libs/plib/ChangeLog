@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.10 2004/03/28 05:23:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.11 2004/04/12 18:19:48 weeve Exp $
+
+  12 Apr 2004; Jason Wever <weeve@gentoo.org> plib-1.6.0.ebuild:
+  Stable on sparc.
 
 *plib-1.8.2 (27 Mar 2004)
 
