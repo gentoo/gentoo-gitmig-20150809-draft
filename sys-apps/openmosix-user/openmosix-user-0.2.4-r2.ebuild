@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.4-r2.ebuild,v 1.1 2002/10/10 12:13:18 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.4-r2.ebuild,v 1.2 2002/10/13 22:27:01 tantive Exp $
 
 S=${WORKDIR}/openMosixUserland-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
@@ -41,6 +41,8 @@ INSTALLDIR=/usr
 CFLAGS=-I/m/include -I./ -I/usr/include -I\$(OPENMOSIX)/include ${CFLAGS}
 INSTALL=/usr/bin/install
 EOF
+
+
 }
 
 src_compile() {
@@ -78,8 +80,8 @@ src_install () {
 
 pkg_postinst() {
 	einfo
-	einfo " To complete openMosix installation, edit /etc/mosix.map and then type:
-	einfo "# rc-update add openmosix default
+	einfo " To complete openMosix installation, edit /etc/mosix.map and then type:"
+	einfo " # rc-update add openmosix default"
 	einfo " ...to add openMosix to the default runlevel.  This particular version of"
 	einfo " openmosix-user has been designed to work with the linux-2.4.18-openmosix-r1"
 	einfo " or later kernel (>=sys-kernel/openmosix-sources-2.4.18)"
