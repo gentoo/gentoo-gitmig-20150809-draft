@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.7.ebuild,v 1.2 2001/08/29 05:57:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.7.ebuild,v 1.3 2001/09/08 18:52:24 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
@@ -22,7 +22,32 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr mandir=${D}/usr/share/man install || die
-    if [ -z "`use build`" ]
+    #c++filt is included with gcc -- what are these GNU people thinking?
+	rm ${D}/usr/bin/c++filt ${D}/usr/share/man/man1/c++filt*
+	
+	#strip has a symlink going from /usr/${CHOST}/bin/strip to /usr/bin/strip; we should reverse
+	#it:
+
+	rm ${D}/usr/${CHOST}/bin/strip; mv ${D}/usr/bin/strip ${D}/usr/${CHOST}/bin/strip
+	#the strip symlink gets created in the loop below
+	
+	#ar, as, ld, nm, ranlib and strip are in two places; create symlinks.  This will reduce the 
+	#size of the tbz2 significantly.  We also move all the stuff in /usr/bin to /usr/${CHOST}/bin
+	#and create the appropriate symlinks.  Things are cleaner that way.
+	cd ${D}/usr/bin
+	local x
+	for x in *
+	do
+		if [ ! -e ../${CHOST}/bin/${x} ]
+		then
+			mv $x ../${CHOST}/bin/${x}
+		else	
+			rm -f $x
+		fi
+		ln -s ../${CHOST}/bin/${x} ${x}
+	done
+	cd ${S}
+	if [ -z "`use build`" ]
     then
 	    dodoc COPYING* README
 	    docinto bfd
@@ -32,7 +57,7 @@ src_install() {
 	    docinto gas
 	    dodoc gas/ChangeLog* gas/CONTRIBUTORS gas/COPYING gas/NEWS gas/README*
 	    docinto gprof
-	    dodoc gprof/ChangeLog* gprof/NOTES gprof/TEST gprof/TODO
+	    dodoc gprof/ChangeLog* gprof/TEST gprof/TODO
 	    docinto ld
 	    dodoc ld/ChangeLog* ld/README ld/NEWS ld/TODO
 	    docinto libiberty
