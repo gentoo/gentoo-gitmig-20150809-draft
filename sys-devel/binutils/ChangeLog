@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.90 2003/11/09 01:44:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.91 2003/11/09 15:43:16 azarah Exp $
+
+*binutils-2.14.90.0.7-r3 (09 Nov 2003)
+
+  09 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.1-r1.ebuild,
+  binutils-2.14.90.0.6-r7.ebuild, binutils-2.14.90.0.7-r1.ebuild,
+  binutils-2.14.90.0.7-r2.ebuild, binutils-2.14.90.0.7-r3.ebuild,
+  binutils-2.14.90.0.7.ebuild:
+  Fix sparc64/mips64 symlinks to point to /usr/sparc-*/bin/*. Do not apply
+  -ppc-reloc.patch to sparc as ld quits with SIGBUS.
 
   08 Nov 2003; Jason Wever <weeve@gentoo.org> binutils-2.14.90.0.7-r2.ebuild:
   Masked on sparc until ld issue is fixed.
