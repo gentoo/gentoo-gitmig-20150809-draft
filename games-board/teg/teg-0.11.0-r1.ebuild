@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.0-r1.ebuild,v 1.1 2003/10/02 05:18:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.0-r1.ebuild,v 1.2 2004/02/29 10:26:47 vapier Exp $
 
 inherit games gnome2
 
@@ -33,7 +33,7 @@ src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	make \
 		DESTDIR=${D} install \
-		" sScrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}"\
+		" sScrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}" \
 		|| die
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 	prepgamesdirs

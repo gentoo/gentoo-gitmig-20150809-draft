@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.13.0-r1.ebuild,v 1.2 2003/09/30 07:23:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.13.0-r1.ebuild,v 1.3 2004/02/29 10:22:52 vapier Exp $
 
 inherit games
 
@@ -19,9 +19,8 @@ IUSE="gtk gtk2 readline guile X gdbm truetype nls png esd arts nas"
 # FIXME does this need to DEPEND on netpbm?
 RDEPEND="guile? ( dev-util/guile )
 	truetype? ( =media-libs/freetype-1* )
-	|| (
-		gtk2? ( =x11-libs/gtk+-2* =dev-libs/glib-2* )
-		gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1* )
+	gtk? (
+		gtk2? ( =x11-libs/gtk+-2* =dev-libs/glib-2* ) : ( =x11-libs/gtk+-1.2* =dev-libs/glib-1* )
 	)
 	readline? ( sys-libs/readline )
 	X? ( virtual/x11 )
@@ -48,15 +47,15 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if [ -n "`use gtk`" -o -n "`use gtk2`" ] ; then
+	if use gtk ; then
 		# doesn't make any sense to add this without gtk or gtk2
-		if [ -n "`best_version x11-libs/gtk+extra`" ] ; then
+		if has_version x11-libs/gtk+extra ; then
 			myconf="--with-gtkextra"
 		else
 			myconf="--without-gtkextra"
 		fi
 		# --with-gtk doesn't mean what you think it means for configuring gnubg.
-		if [ `use gtk2` ] ; then
+		if use gtk2 ; then
 			myconf="${myconf} --with-gtk --with-gtk2"
 		else
 			myconf="${myconf} --with-gtk --without-gtk2"
@@ -64,7 +63,7 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-gtktest"
 	fi
-	if [ -n "`use esd`" -o -n "`use arts`" -o -n "`use nas`" ] ; then
+	if use esd || use arts ; then
 		myconf="${myconf} --with-sound"
 	else
 		myconf="${myconf} --without-sound --disable-esdtest --disable-artsc-test"

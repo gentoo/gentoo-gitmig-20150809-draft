@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_ncurses_client/mt_ncurses_client-0.1.98.ebuild,v 1.1 2003/09/10 17:46:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_ncurses_client/mt_ncurses_client-0.1.98.ebuild,v 1.2 2004/02/29 10:25:43 vapier Exp $
 
 inherit games
 
@@ -17,11 +17,6 @@ DEPEND="=dev-libs/glib-2*
 	dev-games/libmaitretarot
 	dev-games/libmt_client
 	sys-libs/ncurses"
-
-src_compile() {
-	egamesconf || die
-	emake || die
-}
 
 src_install() {
 	make install DESTDIR=${D} || die

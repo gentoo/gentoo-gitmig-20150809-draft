@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-19.1.ebuild,v 1.2 2003/12/13 18:02:04 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-19.1.ebuild,v 1.3 2004/02/29 10:10:38 vapier Exp $
 
 DESCRIPTION="chess engine"
-SRC_URI="ftp://ftp.cis.uab.edu/pub/hyatt/v19/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.cis.uab.edu/pub/hyatt/"
+SRC_URI="ftp://ftp.cis.uab.edu/pub/hyatt/v19/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	icc? ( >=dev-lang/icc-5.0 )"
 RDEPEND="virtual/glibc"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_compile() {
 	local makeopts opt
@@ -71,7 +71,7 @@ src_install() {
 	dobin crafty
 }
 
-pkg_postinstall() {
+pkg_postinst() {
 	einfo
 	einfo "Note: No books or tablebases have been installed. If you want them, just"
 	einfo "      download them from ${HOMEPAGE}."
