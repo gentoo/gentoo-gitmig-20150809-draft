@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.6 2002/07/10 00:14:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.7 2002/07/13 19:14:42 raker Exp $
+
+*vlc-0.4.2 (13 Jul 2002)
+
+  13 Jul 2002; Nick Hadaway <raker@gentoo.org> 
+  vlc-0.4.2.ebuild files/digest-vlc-0.4.2:
+
+  Version bump.
 
 *vlc-0.4.1 (09 Jul 2002)
 
