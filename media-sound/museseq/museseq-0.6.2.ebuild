@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.4 2004/02/01 23:38:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.5 2004/02/19 18:39:37 eradicator Exp $
 
 inherit virtualx
 
@@ -19,7 +19,7 @@ IUSE="jack fluidsynth ladcca"
 DEPEND="media-libs/alsa-lib \
 	>=media-libs/libsndfile-1.0.4 \
 	>=x11-libs/qt-3.1.0
-	ladcca? ( media-libs/ladcca ) \
+	ladcca? ( >=media-libs/ladcca-0.4.0 ) \
 	jack? ( virtual/jack ) \
 	fluidsynth? ( media-sound/fluidsynth )"
 
@@ -60,6 +60,12 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc COPYING INSTALL README README.softsynth SECURITY TODO
+
+	# Name conflict with media-sound/muse.  See bug #34973
+	mv ${D}/usr/bin/muse ${D}/usr/bin/lmuse
+	if [ ! -f /usr/bin/muse -o -L /usr/bin/muse ]; then
+		dosym /usr/bin/lmuse /usr/bin/muse
+	fi
 }
 
 pkg_postinst() {
@@ -67,7 +73,7 @@ pkg_postinst() {
 	einfo "Muse has been installed normally. If,"
 	einfo "you would like to use muse with real time"
 	einfo "time capabilities for the sequencer then do"
-	einfo "chmod 4755 /usr/bin/muse"
+	einfo "chmod 4755 /usr/bin/lmuse"
 	einfo ""
 	einfo "Muse can use /dev/rtc if it is compiled in"
 	einfo "to your kernel, or available as a module."
