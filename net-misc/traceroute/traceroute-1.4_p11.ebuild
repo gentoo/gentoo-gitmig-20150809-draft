@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/traceroute/traceroute-1.4_p7.ebuild,v 1.1 2000/11/22 09:09:16 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/traceroute/traceroute-1.4_p11.ebuild,v 1.1 2000/12/23 09:25:48 drobbins Exp $
 
-P=traceroute-1.4a7
+P=traceroute-1.4a11
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility to trace the route of ip packets"
