@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3.ebuild,v 1.6 2005/02/28 21:54:13 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3.ebuild,v 1.7 2005/03/11 12:47:56 sekretarz Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.linux-ha.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -mips ~ppc"
+KEYWORDS="x86 -mips ~ppc ~amd64"
 IUSE="ldirectord"
 
 DEPEND="dev-libs/popt
