@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/di
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/ChangeLog,v 1.5 2003/05/25 22:56:17 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/ChangeLog,v 1.6 2003/08/11 16:21:26 iggy Exp $
+
+  11 Aug 2003; <iggy@gentoo.org> di-3.9.ebuild:
+  the configure script is not all there, use the Build script to configure and
+  compile everything, and install everythign manually (there's only 4 things),
+  fixes 25006, thanks to kloeri
 
 *di-3.9 (25 May 2003)
 
