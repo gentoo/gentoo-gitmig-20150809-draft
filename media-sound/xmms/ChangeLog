@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.71 2003/09/15 17:09:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.72 2003/09/20 07:43:36 jje Exp $
+
+  20 Sep 2003; jje <jje@gentoo.org> files/xmms-1.2.8-dtd.patch:
+  Removed chunk from the dtd patch that overrides the config. Closes #29029.
 
   15 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
   files/xmms-1.2.8-mpg123j.patch:

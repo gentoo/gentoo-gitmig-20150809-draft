@@ -800,14 +800,6 @@ diff -ruN dtd-old/xmms/main.c dtd-new/xmms/main.c
  	gtk_exit(0);
  }
  
-@@ -3130,6 +3135,7 @@
- 		GDK_THREADS_LEAVE();
- 	}
- 
-+        cfg.dynamic_taste_detection = TRUE;
- 
- 	GDK_THREADS_ENTER();
- 	check_ctrlsocket();
 @@ -3608,6 +3614,10 @@
  	mainwin_timeout_tag = gtk_timeout_add(10, idle_func, NULL); 
  	playlist_start_get_info_thread();
