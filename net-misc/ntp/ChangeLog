@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.37 2003/10/15 12:33:01 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.38 2003/10/18 03:11:08 pebenito Exp $
+
+  17 Oct 2003; Chris PeBenito <pebenito@gentoo.org> ntp-4.1.1b-r6.ebuild,
+  ntp-4.1.2.ebuild:
+  Add SELinux policy dependancy
 
   15 Oct 2003; Markus Nigbur <pyrania@gentoo.org> ntp-4.1.2.ebuild:
   Fixed bug 31190. Thanks to James Slater.
