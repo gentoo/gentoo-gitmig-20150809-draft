@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.2 2005/01/06 20:26:42 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.3 2005/01/06 22:16:50 bcowan Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -14,14 +14,12 @@ INHERITED="$INHERITED $ECLASS"
     && COMPRESS=".tar.bz2" \
     || COMPRESS=".tar.gz"
 
-if [[ ${GOODIES_PLUGIN} = "1" ]]; then
-    [[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"
-    SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"    
-    XFCE_RDEPEND=">=xfce4-panel-${PV}"
-fi
-
 if [[ ${XFCE_META} = "1" ]]; then
     SRC_URI=""
+elif [[ ${GOODIES_PLUGIN} = "1" ]]; then
+    [[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"    
+    SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"    
+    XFCE_RDEPEND=">=xfce4-panel-${PV}"
 else
     SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}${COMPRESS}"
 fi
