@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/rp-l2tp-0.4.ebuild,v 1.1 2004/09/15 14:07:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/rp-l2tp-0.4.ebuild,v 1.2 2004/10/17 10:02:45 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/rp-l2tp/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DEPEND="virtual/libc"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 SLOT="0"
 IUSE=""
 

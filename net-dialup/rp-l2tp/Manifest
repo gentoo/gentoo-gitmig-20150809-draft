@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a1e2b2df2ba10122fe8931acecf84599 ChangeLog 1144
+MD5 daff66081a2aacd77b0303e8eee39141 ChangeLog 1224
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 8ae8edd5fcd5b218e7e9552f9a3e8672 rp-l2tp-0.3-r1.ebuild 909
-MD5 77c9b0a380be7329d73195dead91d319 rp-l2tp-0.4.ebuild 879
+MD5 bcfd9af872b4de2ae2b219bea0126dd8 rp-l2tp-0.4.ebuild 883
 MD5 bf2a5a28edcc6ffeccae338ebc4b62b2 files/digest-rp-l2tp-0.3-r1 133
 MD5 253968a2351a4312da37ef20131502a5 files/rp-l2tpd-init 484
 MD5 0ce9c1cb5b3c8e769e422f4f6d43ba51 files/digest-rp-l2tp-0.4 63
 MD5 d7f971bbe089f293d34cbde72fd5482c files/rp-l2tp-0.4-gentoo.diff.bz2 2922
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsjcI1lqEGTUzyQRAmgRAJ4qmtIsRU9ACsDs2q0EHmkImL8wFgCgsmdM
-7jbnZKvnw0zL1vwcxdHaeyo=
-=Kgz/
------END PGP SIGNATURE-----
