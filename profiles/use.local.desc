@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.12 2003/04/09 03:19:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.13 2003/04/15 21:01:36 pfeifer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -24,8 +24,10 @@ sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
 sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
-sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
+sys-kernel/gentoo-sources:aavm - If you want aavm support
 sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
+sys-kernel/gentoo-sources:evms2 - If you want evms 2.0 support
+sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/glibc:pic - If you want prelink support built into glibc
