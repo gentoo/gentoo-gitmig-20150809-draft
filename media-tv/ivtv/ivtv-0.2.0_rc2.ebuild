@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc2.ebuild,v 1.2 2004/12/05 02:01:11 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc2.ebuild,v 1.3 2005/02/03 09:50:16 eradicator Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
 # check for other msp3400 modules
 # add a few notes to the postinst output about what's needed (bttv/tuner, etc.)
 
-inherit eutils
+inherit eutils linux-info
 
 DESCRIPTION="ivtv driver for Hauppauge PVR[23]50 cards"
 HOMEPAGE="http://ivtv.sourceforge.net"
