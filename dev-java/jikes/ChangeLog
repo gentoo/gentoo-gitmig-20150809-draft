@@ -1,11 +1,14 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.9 2002/12/24 17:31:12 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.10 2003/01/01 00:58:48 method Exp $
 
   24 Dec 2002; Mark Guertin <gerk@gentoo.org> jikes-1.17.ebuild:
   Added ~ppc to keywords
 
 *jikes-1.18 (22 Nov 2002)
+
+  31 Dec 2002; Joshua Brindle <method@gentoo.org> jikes-1.18.ebuild:
+  added ~sparc
 
   22 Nov 2002; Maik Schreiber <blizzy@gentoo.org> jikes-1.18.ebuild:
   New version.
@@ -14,6 +17,9 @@
   jikes-1.16.ebuild, jikes-1.17.ebuild: Fixed SRC_URI again.
 
 *jikes-1.17 (12 Oct 2002)
+
+  31 Dec 2002; Joshua Brindle <method@gentoo.org> jikes-1.17.ebuild:
+  added ~sparc
 
   12 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
 
