@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.8 2003/02/28 09:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.9 2003/03/01 19:11:04 lostlogic Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -12,7 +12,7 @@ INHERITED="$INHERITED $ECLASS"
 S=${WORKDIR}/${P}
 DESCRIPTION="Based on the $ECLASS eclass"
 
-SRC_URI="http://ibiblio.org/gentoo/distfiles/${P}.patch.bz2"
+SRC_URI="mirrof://gentoo/${P}.patch.bz2"
 
 kmod_src_unpack() {
 
