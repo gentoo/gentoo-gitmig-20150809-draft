@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r1.ebuild,v 1.6 2004/02/16 13:49:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r1.ebuild,v 1.7 2004/02/18 15:38:38 plasmaroo Exp $
 
 IUSE="build"
 
@@ -64,6 +64,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch || die "Failed to apply mremap() patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0001.patch || die "Failed to apply AMD64 ptrace patch!"
 	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to apply RTC patch!"
+	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
 
 	kernel_universal_unpack
 }
