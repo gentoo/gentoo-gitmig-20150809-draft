@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.2 2002/06/08 02:21:53 gerk Exp $
+
+*xforms-089-r1 (7 June 2002)
+
+  7 June 2002; Mark Guertin <gerk@gentoo.org>
+  
+  Updated to -r1 for ppc compatability.  Vendor supplies speperate ppc sources
+  with the exact same filename as x86 sources.  Strange workarounds needed.
 
 *xforms-089 (1 Feb 2002)
 
