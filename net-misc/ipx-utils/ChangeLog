@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ipx-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ChangeLog,v 1.9 2004/10/01 23:16:23 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ChangeLog,v 1.10 2004/10/16 17:19:20 vapier Exp $
+
+*ipx-utils-1.1-r1 (16 Oct 2004)
+
+  16 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/ipx-utils-1.1-gentoo.diff, +files/ipx-utils-1.1-makefile.patch,
+  +files/ipx-utils-1.1-proc.patch, +ipx-utils-1.1-r1.ebuild,
+  -ipx-utils-1.1.ebuild:
+  Clean up and fix /proc updates #67642 by Josef Kovacs.
 
   02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> ipx-utils-1.1.ebuild:
   hooray for epatch!

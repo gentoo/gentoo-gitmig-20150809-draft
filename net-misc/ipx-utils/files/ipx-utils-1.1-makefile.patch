@@ -6,7 +6,7 @@
  	do \
 -		install --strip $$i /sbin; \
 -		install $$i.8 /usr/man/man8; \
-+		install --strip $$i ${DESTDIR}/sbin; \
++		install $$i ${DESTDIR}/sbin; \
 +		install $$i.8 ${DESTDIR}/usr/share/man/man8; \
  	done
 -	install init.ipx /etc/rc.d/init.d/ipx
