@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/verynice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.4 2004/06/24 21:42:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.5 2004/10/25 23:15:08 slarti Exp $
+
+  25 Oct 2004; Tom Martin <slarti@gentoo.org> verynice-1.1.ebuild:
+  Marked ~amd64, see bug 64772.
 
   01 Mar 2004; Markus Nigbur <pyrania@gentoo.org> verynice-1.1.ebuild:
   Stable on x86.

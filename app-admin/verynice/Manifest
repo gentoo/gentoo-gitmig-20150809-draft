@@ -1,4 +1,14 @@
-MD5 2ddfbeb1718a9eadb1dd8ca8f254bb1f ChangeLog 590
-MD5 03813c12b144e50e1bbbd040b16a55fa verynice-1.1.ebuild 1060
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 97640ac92d681ae663c2d50cff865a80 ChangeLog 688
+MD5 2f3682931bf974f9f06f03e576423fe6 verynice-1.1.ebuild 1065
 MD5 1e2909678a8e60cf88cac61906c66a63 files/digest-verynice-1.1 63
 MD5 cd1f7882ae3686a180c77208475c2484 files/verynice 445
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfXsICHk4+ZoBpvsRAgJvAKCDO6qmCcSXPS+1M9v/QyY0R4MoTACdEXwL
+HHQSHK6xcwUgNBcSNQNUR9o=
+=YcYN
+-----END PGP SIGNATURE-----
