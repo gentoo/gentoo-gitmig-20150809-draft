@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.5.ebuild,v 1.1 2001/06/21 19:45:54 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.5.ebuild,v 1.2 2001/06/21 19:47:01 lamer Exp $
 
 #P=
 A=${P}.tar.gz
@@ -22,6 +22,6 @@ src_compile() {
 src_install () {
 
     try make DESTDIR=${D} install
-
+	 dodoc CHANGES COPYING README
 }
 
