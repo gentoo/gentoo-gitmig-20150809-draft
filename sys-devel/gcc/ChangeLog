@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.249 2004/05/21 12:19:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.250 2004/05/26 16:30:01 lv Exp $
+
+  26 May 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r4.ebuild:
+  adding ~amd64 keyword. this shouldnt have an effect on most users, as gcc 3.4
+  is profile masked. please switch to the gcc34-amd64-2004.1 profile if you want
+  to install this package on amd64.
 
   21 May 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r4.ebuild:
   updated piepatches from Peter Mazinger to 8.7.6.2. the 3.4.0 version should
