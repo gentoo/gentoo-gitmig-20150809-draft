@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-File_Find
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Find/ChangeLog,v 1.1 2005/02/16 06:55:28 sebastian Exp $
+
+*PEAR-File_Find-0.2.0 (16 Feb 2005)
+
+  16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-File_Find-0.2.0.ebuild:
+  Initial ebuild for the File_Find PEAR package.
+
