@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.21 2004/02/26 20:36:49 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.22 2004/04/22 02:27:56 vapier Exp $
 
 IUSE="nls static build"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 TV="4.0"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -85,9 +85,7 @@ src_compile() {
 	fi
 
 	# gcc does not like optimization
-
-	export CFLAGS="${CFLAGS/-O?/}"
-	export CXXFLAGS="${CXXFLAGS/-O?/}"
+	filter-flags -O?
 
 	${S}/configure --prefix=${LOC} \
 		--mandir=${LOC}/share/man \

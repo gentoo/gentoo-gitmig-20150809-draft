@@ -1,13 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.23 2004/02/26 20:36:49 pappy Exp $
-
-IUSE="static nls bootstrap java build"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.24 2004/04/22 02:27:56 vapier Exp $
 
 inherit eutils flag-o-matic gcc
-
-# Compile problems with these (bug #6641 among others)...
-filter-flags "-fno-exceptions -fomit-frame-pointer -ggdb"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -49,13 +44,13 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 # We will handle /usr/include/g++/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Modern C/C++ compiler written by the GNU people"
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc ~alpha "
+KEYWORDS="x86 ppc sparc alpha"
+IUSE="static nls bootstrap java build"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -78,7 +73,6 @@ RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
-
 
 # Hack used to patch Makefiles to install into the build dir
 FAKE_ROOT=""
@@ -153,8 +147,9 @@ src_compile() {
 
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.
-	export CFLAGS="${CFLAGS//-O?}"
-	export CXXFLAGS="${CXXFLAGS//-O?}"
+	filter-flags -O?
+	# Compile problems with these (bug #6641 among others)...
+	filter-flags -fno-exceptions -fomit-frame-pointer -ggdb
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -324,4 +319,3 @@ pkg_postinst() {
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
 	fi
 }
-
