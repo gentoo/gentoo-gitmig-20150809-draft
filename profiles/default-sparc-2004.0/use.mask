@@ -8,6 +8,7 @@ alsa
 altivec
 apm
 directfb
+divx4linux
 fdftk
 icc
 icc-pgo
