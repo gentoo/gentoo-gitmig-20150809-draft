@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcpuload
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.16 2004/09/04 00:34:00 s4t4n Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.17 2005/02/05 16:37:03 kloeri Exp $
+
+  05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> wmcpuload-1.0.1.ebuild:
+  ~alpha keyword, bug 78658.
 
   04 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> wmpcuload-1.0.0.ebuild:
   Remove older ebuild.

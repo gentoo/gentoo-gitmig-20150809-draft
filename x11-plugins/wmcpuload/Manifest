@@ -1,4 +1,14 @@
-MD5 4ad430f04977868cf847a8fda29b8f42 wmcpuload-1.0.1.ebuild 621
-MD5 a7b64244f49e269fc298ad3f8a79eb2e ChangeLog 2227
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 253f33fd9fac14200a1f0b3514eb2a32 ChangeLog 2335
 MD5 338abf782d9eddae3d0633df0aacc673 metadata.xml 671
+MD5 90948ea5c2e7fce257031f1f0303dc40 wmcpuload-1.0.1.ebuild 629
 MD5 4b40548905ea5d3b7412d308399ff826 files/digest-wmcpuload-1.0.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCBPY8ugEuf3OQ0akRArHlAKCfLy9IeuoND3Q7rXseGdR6TH8MkwCeMQgH
+i9zaL8nx1XwjnM4BrDtFT1I=
+=tgMv
+-----END PGP SIGNATURE-----
