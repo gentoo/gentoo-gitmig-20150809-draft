@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.10.ebuild,v 1.1 2005/01/07 14:17:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.15.ebuild,v 1.1 2005/01/23 05:24:06 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,13 +10,15 @@ S=${WORKDIR}/${GPG_P}
 
 DESCRIPTION="The GNU Privacy Guard Agent"
 HOMEPAGE="http://www.gnupg.org/"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${GPG_P}.tar.gz"
+SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${GPG_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-# ~arm ~ia64 ~mips ~s390 ~sparce missing until libassuan gets the keywords
-# ~alpha missing for dev-libs/libksba-0.9.7
+KEYWORDS="~amd64 ~ppc ~x86"
+# KEYWORDS missing due to below packages
+# ~hppa ~sparc ~s390 ~ppc64 - opensc - bug #79171 #79172 79173
+# ~sparc ~s390 ~alpha - libksba bug #79171 #79172 
+# ~arm ~ia64 ~mips missing until libassuan gets the keywords bug #76381
 
 IUSE="nls caps threads"
 
@@ -25,25 +27,21 @@ RDEPEND="app-crypt/gnupg
 	virtual/libc
 	>=dev-libs/libassuan-0.6.9
 	caps? ( sys-libs/libcap )
-	>=dev-libs/libgpg-error-0.7
+	>=dev-libs/libgpg-error-1.0
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libksba-0.9.7
-	threads? ( dev-libs/pth )"
+	smartcard?  ( >=dev-libs/opensc-0.8.0 )
+	threads? ( >=dev-libs/pth-1.3.7 )"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-apps/sed"
 
-src_unpack() {
-	unpack ${A}
-	sed -e 's:GNUPG_LIBEXECDIR:"/usr/lib/gnupg":' -i ${S}/g10/keyserver.c
-}
-
 src_compile() {
 
 	append-ldflags -Wl,-z,now
+
 	econf \
-		--libexecdir=/usr/lib \
 		--enable-agent-only \
 		`use_with caps capabilities` \
 		`use_enable threads` \
@@ -58,7 +56,7 @@ src_test() {
 
 src_install() {
 	cd ${S}
-	emake DESTDIR=${D} libexecdir="/usr/lib/gnupg" install || die
+	emake DESTDIR=${D} install || die
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"

@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gpg-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.4 2005/01/07 14:17:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.5 2005/01/23 05:24:06 dragonheart Exp $
+
+*gpg-agent-1.9.15 (23 Jan 2005)
+
+  23 Jan 2005; Daniel Black <dragonheart@gentoo.org> -gpg-agent-1.9.10.ebuild,
+  +gpg-agent-1.9.15.ebuild:
+  version bump and old version removal
 
 *gpg-agent-1.9.10 (07 Jan 2005)
 
