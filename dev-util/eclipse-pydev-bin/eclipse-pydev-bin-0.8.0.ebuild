@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/eclipse-pydev-bin-0.8.0.ebuild,v 1.2 2004/12/16 16:15:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/eclipse-pydev-bin-0.8.0.ebuild,v 1.3 2004/12/29 08:39:04 mr_bones_ Exp $
 
 inherit eclipse-ext
 
 MY_PV=${PV//\./_}
 
 DESCRIPTION="Python Development Tools for Eclipse"
-HOMEPAGE="http://http://pydev.sourceforge.net"
+HOMEPAGE="http://pydev.sourceforge.net"
 SRC_URI="mirror://sourceforge/pydev/pydev_${MY_PV}.zip"
 SLOT="1"
 LICENSE="CPL-1.0"
