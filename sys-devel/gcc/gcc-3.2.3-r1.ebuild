@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.7 2003/07/02 12:51:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.8 2003/07/09 16:45:56 frogger Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -48,7 +48,7 @@ STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # ProPolice version
 PP_VER1="3_2_2"
-PP_VER2="3.2.2-7"
+PP_VER2="3.2.2-8"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
