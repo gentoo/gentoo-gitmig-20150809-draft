@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0-r1.ebuild,v 1.4 2003/05/12 20:52:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0-r1.ebuild,v 1.5 2003/06/18 19:21:18 pauldv Exp $
 
 inherit libtool
 
@@ -94,10 +94,11 @@ EOF
 	LDFLAGS=${LDFLAGS} econf ${myconf} \
 		--with-neon=/usr \
 		--disable-mod-activation \
+		--disable-expermimental-libtool \
 		--with-python=/usr/bin/python \
 		--with-swig ||die "configuration failed"
 	# build subversion
-	emake || die "make of subversion failed"
+	emake LT_LDFLAGS="-L${D}/usr/lib" || die "make of subversion failed"
 
 	#building fails without the apache apr-util as includes are wrong.
 	if use apache2; then

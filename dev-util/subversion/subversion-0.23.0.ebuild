@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.23.0.ebuild,v 1.2 2003/05/31 09:05:19 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.23.0.ebuild,v 1.3 2003/06/18 19:21:18 pauldv Exp $
 
 inherit libtool
 
@@ -103,9 +103,10 @@ EOF
 	echo "myconf=${myconf}"
 	LDFLAGS=${LDFLAGS} econf ${myconf} \
 		--with-neon=/usr \
+		--disable-experimental-libtool \
 		--disable-mod-activation ||die "configuration failed"
 	# build subversion, but do it in a way that is safe for paralel builds
-	( emake external-all && emake local-all ) || die "make of subversion failed"
+	( emake LT_LDFLAGS="-L${D}/usr/lib" external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
 
 	#building fails without the apache apr-util as includes are wrong.
 	#Also the python bindings do not work without db installed

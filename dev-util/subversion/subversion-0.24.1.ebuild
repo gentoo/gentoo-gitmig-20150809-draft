@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.22.2.ebuild,v 1.3 2003/06/18 19:21:18 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.1.ebuild,v 1.1 2003/06/18 19:21:18 pauldv Exp $
 
 inherit libtool
 
 DESCRIPTION="A compelling replacement for CVS"
 SRC_URI="http://www.sleepycat.com/update/snapshot/db-4.0.14.tar.gz
-	http://subversion.tigris.org/files/documents/15/4097/${P}.tar.gz"
+	http://subversion.tigris.org/files/documents/15/4761/${P}.tar.gz"
 HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
@@ -50,11 +50,11 @@ src_unpack() {
 		unpack db-4.0.14.tar.gz
 	) )
 	cd ${S}
+	elibtoolize ${S}
 }
 
 src_compile() {
 	local myconf
-	elibtoolize
 	use berkdb && ( has_version =db-4* || (
 		cd ${S_DB}
 		../dist/configure \
@@ -101,7 +101,7 @@ EOF
 	use python || myconf="${myconf} --without-python --without-swig"
 
 	echo "myconf=${myconf}"
-	LDFLAGS=${LDFLAGS} econf ${myconf} \
+	econf ${myconf} \
 		--with-neon=/usr \
 		--disable-experimental-libtool \
 		--disable-mod-activation ||die "configuration failed"
@@ -153,13 +153,14 @@ src_install () {
 	fi
 
 	dodoc BUGS COMMITTERS COPYING HACKING IDEAS INSTALL PORTING README
+	dodoc CHANGES
 	dodoc tools/xslt/svnindex.css tools/xslt/svnindex.xsl
 
 	# install documentation
-	cd notes
-	for f in *.txt
+	docinto notes
+	for f in notes/*
 	do
-		dodoc ${f}
+		[ -f ${f} ] && dodoc ${f}
 	done
 	cd ${S}
 	echo "installing html book"
