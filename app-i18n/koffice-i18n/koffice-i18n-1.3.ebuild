@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.3.ebuild,v 1.4 2004/04/01 02:30:24 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.3.ebuild,v 1.5 2004/05/03 22:32:55 centic Exp $
 
 inherit kde
 need-kde 3
@@ -11,6 +11,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~amd64"
 RESTRICT="nomirror"
 newdepend "~app-office/koffice-${PV} >=sys-apps/portage-2.0.49-r8"
+
+IUSE=""
+SLOT="0"
 
 LANGS="af bg ca cs da de el en_GB eo es et fa fi fr he hu it ja lo
 mt nb nl nn pl pt pt_BR ru se sk sl sr sv th tr ven xh zh_CN zh_TW zu"
