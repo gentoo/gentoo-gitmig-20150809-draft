@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_rc3.ebuild,v 1.1 2003/01/08 00:15:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_rc3.ebuild,v 1.2 2003/01/08 02:04:35 lostlogic Exp $
 
 IUSE="build crypt xfs"
 
@@ -36,13 +36,41 @@ src_unpack() {
 	# Kill patches we aren't suppposed to use, don't worry about 
 	# failures, if they aren't there that is a good thing!
 
+	# If the compiler isn't gcc3 drop the gcc3 patches
+	if [[ "${COMPILER}" == "gcc3" ]];then
+		einfo "You are using gcc3, check out the special"
+		einfo "processor types just for you"
+	else
+		einfo "Your compiler is not gcc3, dropping patches..."
+		for file in *gcc3*;do
+			einfo "Dropping ${file}..."
+			rm -f ${file}
+		done
+	fi		
+
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
-	[ `use crypt` ] || rm 8*
+	if [ -z "`use crypt`" ]; then
+		einfo "No Cryptographic support, dropping patches..."
+		for file in 8*;do
+			einfo "Dropping ${file}..."
+			rm -f ${file}
+		done
+	else
+		einfo "Cryptographic support enabled..."
+	fi
 
 	# This is the non-ratified xfs USE flag, enables XFS which is not
 	# patched by default because it can cause problems with JFS's
 	# journals.
-	[ `use xfs` ] || rm 79*
+	if [ -z "`use xfs`" ]; then
+		einfo "No XFS support, is this on purpose?"
+		for file in 79*;do
+			einfo "Dropping ${file}..."
+			rm -f ${file}
+		done
+	else
+		einfo "Enabling XFS patch, are you sure you want this?"
+	fi
 
 	kernel_src_unpack
 }

@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.35 2003/01/08 01:38:06 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.36 2003/01/08 02:04:35 lostlogic Exp $
 
   TODO before gentoo-sources-2.4.20-r1:
   * Documentation
@@ -11,6 +11,8 @@
 *lolo-sources-2.4.20.1_rc3 (07 Jan 2003)
 
   Changes from _rc2:
+  * Late breaking ebuild changes, drop gcc-3.1 patch if not on
+    gcc3... also make prettier output for the USE var stuff.
   * Drop scheduler-hints it might have caused some instability
     so I added this and smptimers hoping for performance help
     and I got instability instead...
