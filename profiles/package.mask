@@ -1,6 +1,25 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+#not yet oficially released: kde 3.0.2
+>=kde-base/arts-1.0.2
+>=kde-base/kde-3.0.2
+>=kde-base/kdeaddons-3.0.2
+>=kde-base/kdeadmin-3.0.2
+>=kde-base/kdeartwork-3.0.2
+>=kde-base/kdebase-3.0.2
+>=kde-base/kdebindings-3.0.2
+>=kde-base/kdeedu-3.0.2
+>=kde-base/kdegames-3.0.2
+>=kde-base/kdegraphics-3.0.2
+>=kde-base/kdelibs-3.0.2
+>=kde-base/kdemultimedia-3.0.2
+>=kde-base/kdenetwork-3.0.2
+>=kde-base/kdepim-3.0.2
+>=kde-base/kdesdk-3.0.2
+>=kde-base/kdetoys-3.0.2
+>=kde-base/kdeutils-3.0.2
+
 #testing only (drobbins, 25 Jun 2002)
 =sys-apps/portage-2.0.8
 =sys-apps/portage-2.0.6
