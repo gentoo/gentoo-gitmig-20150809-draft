@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmustux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.15 2004/07/13 05:26:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.16 2004/07/13 05:35:27 eradicator Exp $
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libmustux-0.20.2.ebuild:
+  ~amd64 added.  Do auto* in unpack to make it work on amd64.
 
   12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libmustux-0.16.0.ebuild, libmustux-0.17.5.ebuild, libmustux-0.20.0.ebuild,
