@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/blinkperl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/ChangeLog,v 1.1 2003/05/09 00:31:37 rac Exp $
+
+*blinkperl-20030301 (08 May 2003)
+
+  08 May 2003; <rac@gentoo.org> blinkperl-20030301.ebuild,
+  files/blinkperl.confd, files/blinkperl.rc:
+  initial import, based on ebuild submitted by Thomas Arnhold <mail@slysoft.de>
+  in bug 15330
+
