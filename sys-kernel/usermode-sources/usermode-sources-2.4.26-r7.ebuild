@@ -1,21 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r6.ebuild,v 1.1 2004/08/10 00:38:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r7.ebuild,v 1.1 2004/11/09 20:14:23 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
 
 OKV='2.4.26'
-UML_PATCH='uml-patch-2.4.26-1'
+UML_PATCH='uml-patch-2.4.26-3'
 
 DESCRIPTION="Full (vanilla) sources for the User Mode Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${PV}.tar.bz2
 	mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="${PV}-${PR}"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 IUSE=""
 EXTRAVERSION="-uml1-${PR}"
 RESTRICT="nomirror"
@@ -39,8 +40,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
+	epatch ${DISTDIR}/${P}-CAN-2004-0814.patch || die "Failed to add the CAN-2004-0814 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	epatch ${FILESDIR}/${PN}-2.4.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
+	epatch ${FILESDIR}/${PN}-2.4.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
 	kernel_universal_unpack
 }
 
