@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.18 2004/06/10 19:39:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.19 2004/06/15 21:28:12 dragonheart Exp $
+
+  16 Jun 2004; Daniel Black <dragonheart@gentoo.org> gnutls-0.8.12.ebuild,
+  gnutls-1.0.4.ebuild:
+  marked x86 stable to solve bug #53775. Thanks to Susie Edgeworth
+  <arienadean@yahoo.com>.
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> gnutls-0.8.10.ebuild,
   gnutls-0.8.12.ebuild, gnutls-1.0.4.ebuild:
