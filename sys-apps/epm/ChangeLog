@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/epm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.8 2002/12/15 01:44:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.9 2003/02/24 22:34:59 dragon Exp $
 
-*epm-1.7 (22 Oct 2002)
+*epm-0.8 (22 Oct 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> epm-0.8.ebuild :
+  Mark as stable for mips.  Fixed version number in ChangeLog.
 
   15 Dec 2002; Aron Griffis <agriffis@gentoo.org> epm-0.8.ebuild :
   Added alpha to KEYWORDS

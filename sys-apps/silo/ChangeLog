@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/silo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.8 2003/02/12 09:07:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.9 2003/02/24 22:34:59 dragon Exp $
 
 *silo-1.2.5 (15 Feb 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> silo-1.2.5.ebuild silo-1.2.6.ebuild :
+  This is definitely not for mips.
 
   06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 

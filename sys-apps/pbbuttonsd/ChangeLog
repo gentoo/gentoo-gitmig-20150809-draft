@@ -1,16 +1,22 @@
 # ChangeLog for sys-apps/pbbuttonsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.9 2003/02/12 15:44:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.10 2003/02/24 22:34:59 dragon Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*pbbuttonsd-0.5.2-r1.ebuild (17 Dec 2002)
+*pbbuttonsd-0.5.2-r1 (17 Dec 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> pbbuttonsd-0.5.2-r1.ebuild :
+  This is definitely not for mips. Fixed changelog to work with echangelog.
 
   17 Dec 2002; Jon Nall <nall@gentoo.org> pbbuttonsd-0.5.2-r1.ebuild,
   files/pbbuttons-0.5.2-replace_pmud.patch :
   patched to actually use the pmud replacement code.
 
-*pbbuttonsd-0.5.2.ebuild (17 0ct 2002)
+*pbbuttonsd-0.5.2 (17 0ct 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org>  pbbuttonsd-0.5.2.ebuild :
+  This is definitely not for mips.
 
   17 Oct 2002; Kain <kain@kain.org> pbbuttonsd-0.5.2.ebuild :
 
@@ -19,23 +25,29 @@
   This is an important update to pbbuttonsd, as its functionality is enhanced
   on PPC platforms, and is made more predictable.
 
-*pbbuttonsd-0.4.10a.ebuild (28 Jul 2002)
+*pbbuttonsd-0.4.10a (28 Jul 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org>  pbbuttonsd-0.4.10a.ebuild :
+  This is definitely not for mips.
 
   28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> pbbuttonsd-0.4.10a.ebuild :
 
   New ebuild due to bugfixes upstream.
 
-*pbbuttonsd-0.4.9-r2.ebuild (14 July 2002)
+*pbbuttonsd-0.4.9-r2 (14 July 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.9-r2.ebuild :
   Added KEYWORDS.
 
-*pbbuttonsd-0.4.9-r1.ebuild (14 July 2002)
+*pbbuttonsd-0.4.9-r1 (14 July 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.9-r1.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
-*pbbuttonsd-0.4.10.ebuild (14 July 2002)
+*pbbuttonsd-0.4.10 (14 July 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org>  pbbuttonsd-0.4.10.ebuild :
+  This is definitely not for mips.
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.10.ebuild :
   Added KEYWORDS.

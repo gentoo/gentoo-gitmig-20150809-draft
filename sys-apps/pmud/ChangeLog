@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/pmud 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.11 2003/02/12 09:05:48 vapier Exp $
+# $Id: ChangeLog,v 1.12 2003/02/24 22:34:59 dragon Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *pmud-0.10.1-r2.ebuild (14 July 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> pmud-0.10.1-r1.ebuild pmud-0.10.1-r2.ebuild :
+  This is definitely not for mips.
 
   1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> pmud-0.10.1-r2.ebuild :
 

@@ -1,12 +1,15 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.15 2003/02/23 02:25:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.16 2003/02/24 22:34:59 dragon Exp $
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> man-pages-1.54.ebuild 
   man-pages-1.55.ebuild :
   Added arm to keywords.
 
 *man-pages-1.55 (09 Feb 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> man-pages-1.55.ebuild :
+  Mark as stable for mips.  Can man-pages really break?
 
   22 Feb 2003; Aron Griffis <agriffis@gentoo.org> man-pages-1.55.ebuild :
   Mark stable on alpha

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.1 2003/02/07 03:51:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.2 2003/02/24 22:34:59 dragon Exp $
 
 IUSE="nls static"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://queen.rett.polimi.it/~paolob/seders/ssed/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 mips"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.45-r3

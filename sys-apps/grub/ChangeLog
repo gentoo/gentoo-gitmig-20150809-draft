@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/grub
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.18 2003/02/12 08:59:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.19 2003/02/24 22:34:59 dragon Exp $
 
   24 Jan 2002; <woodchip@gentoo.org> *.ebuild : Reorder mount-boot.eclass
   function, clean some fluff.
 
 *grub-0.93.20030118 (18 Jan 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> grub-0.93.20030118.ebuild :
+  This is definitely not for mips.  Maybe sometime in the future...
 
   18 Jan 2003; Donny Davies <woodchip@gentoo.org> grub-0.93.20030118.ebuild :
   New testing release; closing #11821, #13242, #9180.  See the ebuild
@@ -13,6 +16,9 @@
 
 *grub-0.92-r1 (02 Oct 2002)
  
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> grub-0.92-r1.ebuild :
+  This is definitely not for mips.  Maybe sometime in the future...
+
   06 Jan 2002; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
   PROVIDE virtual/bootloader
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r1.ebuild,v 1.4 2003/02/24 17:58:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r1.ebuild,v 1.5 2003/02/24 22:34:59 dragon Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ DESCRIPTION="Text formatter used for man pages"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/groff/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 
-KEYWORDS="x86 ~ppc ~sparc alpha ~mips hppa arm"
+KEYWORDS="x86 ~ppc ~sparc alpha mips hppa arm"
 SLOT="0"
 LICENSE="GPL-2"
 

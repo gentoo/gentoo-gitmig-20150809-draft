@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/silo-1.2.6.ebuild,v 1.9 2003/02/13 16:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/silo-1.2.6.ebuild,v 1.10 2003/02/24 22:34:59 dragon Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
@@ -9,7 +9,7 @@ HOMEPAGE="http://freshmeat.net/projects/silo/index.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="sparc  -x86 -ppc -alpha"
+KEYWORDS="sparc -x86 -ppc -alpha -mips"
 
 PROVIDE="virtual/bootloader"
 

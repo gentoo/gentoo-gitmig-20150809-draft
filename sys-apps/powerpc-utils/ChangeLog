@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/powerpc-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.7 2003/02/12 09:06:06 vapier Exp $
+# $Id: ChangeLog,v 1.8 2003/02/24 22:34:59 dragon Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *powerpc-utils-1.1.3 (21 June 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> powerpc-utils-1.1.3.ebuild :
+  This is definitely not for mips.
 
   20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
   Removed pkg_setup() check for ARCH due to the fact that portage masks

@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.17 2003/02/24 17:58:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.18 2003/02/24 22:34:59 dragon Exp $
 
 *groff-1.18.1-r1 (08 Feb 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> groff-1.18.1-r1.ebuild :
+  Mark as stable for mips.
 
   24 Feb 2003; Martin Schlemmer <azarah@gentoo.org> groff-1.18.1-r1.ebuild :
   Add =sys-apps/texinfo-4.0 to DEPEND, closing bug #16186.

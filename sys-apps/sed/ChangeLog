@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.18 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.19 2003/02/24 22:34:59 dragon Exp $
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> sed-4.0.5.ebuild :
   Added arm to keywords.
@@ -12,7 +12,10 @@
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> sed-4.0.5.ebuild :
   Added hppa to keywords.
 
-*sed-4.0.5.ebuild (22 Dec 2002)
+*sed-4.0.5 (22 Dec 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> sed-4.0.5.ebuild :
+  Mark as stable for mips.  Tidy up Changelog for echangelog support.
 
   22 Dec 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.5.ebuild :
   Stable
@@ -20,7 +23,7 @@
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.5.ebuild :
   Another upstream bump.
 
-*sed-4.0.4.ebuild (13 Dec 2002)
+*sed-4.0.4 (13 Dec 2002)
 
   13 Dec 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.4.ebuild :
 
@@ -28,13 +31,13 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*sed-4.0.3.ebuild (20 Nov 2002)
+*sed-4.0.3 (20 Nov 2002)
 
   20 Nov 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.3.ebuild :
 
   Minor bug fix release over 4.0.2
 
-*sed-4.0.2.ebuild (20 Nov 2002)
+*sed-4.0.2 (20 Nov 2002)
 
   20 Nov 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.2.ebuild :
 
@@ -45,7 +48,7 @@
   There are problems with this version of sed on ppc, see bug #10325 for
   details.
 
-*sed-4.0.1.ebuild (06 Nov 2002)
+*sed-4.0.1 (06 Nov 2002)
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
@@ -54,21 +57,21 @@
 
   Minor bug fix release over 4.0.
 
-*sed-4.0.ebuild (27 Oct 2002)
+*sed-4.0 (27 Oct 2002)
 
   27 Oct 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.ebuild :
 
   The lovely people at gnu.org have blessed us with 4.0, so far I like
   it.
 
-*sed-3.02.80-r3.ebuild (23 Aug 2002)
+*sed-3.02.80-r3 (23 Aug 2002)
 
   23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> sed-3.02.80-r3.ebuild :
 
   Forced upgrade, so that people who got clobbered by supersed, will now
   install this again.
 
-*sed-3.02.80-r2.ebuild (14 July 2002)
+*sed-3.02.80-r2 (14 July 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> sed-3.02.80-r2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.

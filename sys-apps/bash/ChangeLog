@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.22 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.23 2003/02/24 22:34:58 dragon Exp $
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> bash-2.05b-r3.ebuild :
   Added arm to keywords.
@@ -31,6 +31,9 @@
   Changed sparc ~sparc keywords
  
 *bash-2.05b-r3 (25 Sep 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> bash-2.05b-r3.ebuild :
+  Marked as stable for mips.
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added ~mips to keywords
