@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.12.ebuild,v 1.9 2004/03/07 04:20:41 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.12.ebuild,v 1.10 2004/04/07 15:54:30 jhuebel Exp $
 
 inherit libtool
 
@@ -8,7 +8,7 @@ DESCRIPTION="A lightweight, speed optimized color management engine"
 HOMEPAGE="http://www.littlecms.com/"
 SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64 ia64 ppc64 ~mips"
+KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64 ppc64 ~mips"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
