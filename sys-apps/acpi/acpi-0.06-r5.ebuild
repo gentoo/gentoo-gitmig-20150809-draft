@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpi/acpi-0.06-r5.ebuild,v 1.3 2004/04/27 20:58:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpi/acpi-0.06-r5.ebuild,v 1.4 2004/05/30 13:02:07 kugelfang Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI_PATCH="${PN}_${PV}-${PR/r}.diff.gz"
 SRC_URI="${SRC_URI_BASE}/${SRC_URI_TGZ} ${SRC_URI_BASE}/${SRC_URI_PATCH}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-alpha -hppa -mips -sparc x86"
+KEYWORDS="-alpha -hppa -mips -sparc x86 ~amd64"
 IUSE=""
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND} sys-apps/help2man sys-devel/gcc"
