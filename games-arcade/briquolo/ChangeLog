@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/briquolo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/ChangeLog,v 1.4 2004/06/24 22:02:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/ChangeLog,v 1.5 2004/12/13 02:09:02 mr_bones_ Exp $
+
+*briquolo-0.5 (12 Dec 2004)
+
+  12 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +briquolo-0.5.ebuild:
+  version bump
 
   08 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> briquolo-0.4.1.ebuild:
   clean older ebuild
