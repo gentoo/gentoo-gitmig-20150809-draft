@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.2 2004/06/24 23:46:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.3 2004/07/15 01:26:38 agriffis Exp $
 
 inherit eutils flag-o-matic
 filter-mfpmath "sse" "387"
 
-IUSE="gif nls png kde oss jpeg gnome xinerama"
+IUSE="alsa esd gif gnome jpeg kde nls oss png xinerama"
 
 MY_P=${P/windowm/WindowM}
 S=${WORKDIR}/${MY_P}
