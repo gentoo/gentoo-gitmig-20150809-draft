@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.12.ebuild,v 1.5 2002/08/17 12:14:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.12.ebuild,v 1.6 2002/09/23 19:56:18 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU VCDimager"
 SRC_URI="http://www.vcdimager.org/pub/${PN}/${PN}-0.7_UNSTABLE/${P}.tar.gz"
-HOMEPAGE="http://www.vcdimager.org"
+HOMEPAGE="http://www.vcdimager.org/"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86"
 
 # Ideally this would also include help2man, but it's not yet in portage.

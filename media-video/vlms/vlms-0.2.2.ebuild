@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlms/vlms-0.2.2.ebuild,v 1.1 2002/08/02 19:29:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlms/vlms-0.2.2.ebuild,v 1.2 2002/09/23 19:57:23 vapier Exp $
 
 DESCRIPTION="The VideoLAN mini-server"
-HOMEPAGE="http://www.videolan.org/vlms"
+HOMEPAGE="http://www.videolan.org/vlms/"
 SRC_URI="http://www.videolan.org/pub/videolan/vlms/0.2.2/${P}.tar.bz2"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
