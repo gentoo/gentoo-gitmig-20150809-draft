@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.26 2002/05/19 23:53:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.27 2002/05/21 15:45:15 rphillips Exp $
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
@@ -18,6 +18,13 @@
 
   Hmm, and I did not edit the ChangeLog for some reason to say that the mhash
   and mcrypt flags are encapsulated by the crypt flag now.
+
+*php-4.2.1-r1 (21 May 2002)
+
+  21 May 2002; Roman Weber <gentoo@gonzo.ch> php-4.2.1-r1.ebuild :
+    
+  Added XSLT sablotron to XML USE variable. Bug #2863 
+  Fixed symlink to extensions directory. Bug #2886
 
 *php-4.2.1 (17 May 2002)
 
