@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2792 2004/04/02 01:58:28 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2793 2004/04/02 03:56:38 wolf31o2 Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -37,11 +37,6 @@ games-fps/unreal-tournament-goty
 games-fps/unreal-tournament-infiltration
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
-games-fps/ut2003-bonuspack-epic
-games-fps/ut2003
-games-fps/ut2003-demo
-games-server/ut2003-ded
-games-fps/americas-army
 games-fps/aaut
 
 # <pauldv@gentoo.org> (1 Apr 2004)
