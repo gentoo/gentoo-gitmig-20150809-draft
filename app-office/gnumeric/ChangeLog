@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.21 2003/01/05 12:25:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.22 2003/01/05 16:40:23 foser Exp $
+
+*gnumeric-1.1.15 (05 Jan 2003)
+
+  05 Jan 2003; foser <foser@gentoo.org> gnumeric-1.1.15.ebuild :
+  New development gnome2 version
 
 *gnumeric-1.0.12 (05 Jan 2003)
 
