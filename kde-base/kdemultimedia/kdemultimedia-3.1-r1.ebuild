@@ -1,8 +1,9 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1-r1.ebuild,v 1.1 2003/02/11 20:21:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1-r1.ebuild,v 1.2 2003/02/12 17:27:42 hannes Exp $
 inherit kde-dist flag-o-matic 
 
+IUSE="nas esd motif slang tcltk oggvorbis cdr"
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
 KEYWORDS="~x86 ~ppc ~sparc"
 
@@ -60,12 +61,9 @@ KDE_REMOVE_DIR="xine_artsplugin"
 myconf="$myconf $myaudio $myinterface"
 
 pkg_postinst() {
-
-    if [ -n "`use alsa`" ]; then
+	if [ -n "`use alsa`" ]; then
 	einfo "WARNING: alsa support has been removed becuase of a bug in kdemm sources.
 For further information see bug #2324 on bugs.gentoo.org and bug #39574 on bugs.kde.org.
 Meanwhile, you can use the alsa oss emulation."
-    fi
-    return 0
-
+	fi
 }

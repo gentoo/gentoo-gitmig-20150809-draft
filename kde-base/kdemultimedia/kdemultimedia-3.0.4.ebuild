@@ -1,8 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.4.ebuild,v 1.6 2003/01/30 19:40:19 danarmak Exp $
-inherit kde-dist flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.4.ebuild,v 1.7 2003/02/12 17:27:42 hannes Exp $
+inherit kde-dist flag-o-matic eutils
 
+IUSE="nas esd motif gtk slang tcltk"
 DESCRIPTION="KDE $PV - multimedia apps"
 KEYWORDS="x86 ppc alpha"
 
@@ -45,29 +46,24 @@ myconf="$myconf $myaudio $myinterface"
 #use cdr		|| KDE_REMOVE_DIR="koncd"
 
 src_unpack() {
-    
     kde_src_unpack
-    cd ${S}
-    patch -p0 < ${FILESDIR}/${P}-gentoo-timidity.diff || die
-#    use alsa && patch -p0 < ${FILESDIR}/${P}-gentoo-alsa.diff
-	
-    kde_sandbox_patch ${S}/kmidi/config
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo-timidity.diff
+	#use alsa && patch -p0 < ${FILESDIR}/${P}-gentoo-alsa.diff
+
+	kde_sandbox_patch ${S}/kmidi/config
 
 	cd ${S}/kmidi/config
 	for x in Makefile.am Makefile.in; do
 		mv $x $x.orig
 		sed -e 's:TIMID_DIR = $(DESTDIR)/$(kde_datadir):TIMID_DIR = $(kde_datadir):g' $x.orig > $x
 	done
-    
 }
 
 pkg_postinst() {
-
-    if [ -n "`use alsa`" ]; then
+	if [ -n "`use alsa`" ]; then
 	einfo "WARNING: alsa support has been removed becuase of a bug in kdemm sources.
 For further information see bug #2324 on bugs.gentoo.org and bug #39574 on bugs.kde.org.
 Meanwhile, you can use the alsa oss emulation."
-    fi
-    return 0
-
+	fi
 }

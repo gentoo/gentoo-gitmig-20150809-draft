@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2-r1.ebuild,v 1.2 2003/02/01 20:07:51 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2-r1.ebuild,v 1.3 2003/02/12 17:27:42 hannes Exp $
 
 IUSE="nas esd motif gtk slang alsa"
-inherit kde-dist
+inherit kde-dist eutils
 
 SRC_URI="${SRC_URI}
 	mirror://kde/security_patches/post-${PV}-${PN}.diff"
@@ -25,12 +25,11 @@ newdepend ">=sys-libs/ncurses-5.2
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
-	patch -p1 < ${DISTDIR}/post-${PV}-${PN}.diff
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+	epatch ${DISTDIR}/post-${PV}-${PN}.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
-
 	kde_src_compile myconf
 
 	local myaudio
@@ -49,7 +48,4 @@ src_compile() {
 	myconf="$myconf $myaudio $myinterface"
 
 	kde_src_compile configure make
-
 }
-
-
