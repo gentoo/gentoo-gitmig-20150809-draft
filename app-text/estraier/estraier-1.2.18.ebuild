@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.18.ebuild,v 1.1 2004/08/06 13:27:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.18.ebuild,v 1.2 2004/08/07 21:28:46 slarti Exp $
 
 IUSE="debug kakasi chasen"
 
-DESCRIPTION="a personal full-text serach system"
+DESCRIPTION="a personal full-text search system"
 HOMEPAGE="http://estraier.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.28 2004/06/24 22:38:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.29 2004/08/07 21:32:24 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> gtkspell-2.0.4-r1.ebuild:
+  Typo in DESCRIPTION: chechking -> checking. Bug 59717.
 
   04 May 2004; foser <foser@gentoo.org> gtkspell-2.0.4-r1.ebuild :
   Add autoconf step to remove aspell checks (#41019 comment #9 & #10)

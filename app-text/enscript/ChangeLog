@@ -1,6 +1,10 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.17 2004/08/05 22:17:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.18 2004/08/07 21:27:01 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> enscript-1.6.3-r1.ebuild,
+  enscript-1.6.3.ebuild:
+  Typo in DESCRIPTION: postsript -> postscript. Bug 59717.
 
   05 Aug 2004; Aron Griffis <agriffis@gentoo.org> enscript-1.6.3-r1.ebuild:
   stable on alpha

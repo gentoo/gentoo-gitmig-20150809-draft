@@ -1,6 +1,10 @@
 # ChangeLog for app-text/estraier
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/ChangeLog,v 1.3 2004/08/06 13:27:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/ChangeLog,v 1.4 2004/08/07 21:28:46 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> estraier-1.2.16.ebuild,
+  estraier-1.2.18.ebuild:
+  Typo in DESCRIPTION: serach -> search. Bug 59717.
 
 *estraier-1.2.18 (06 Aug 2004)
 
