@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ttyrec-1.0.6.ebuild,v 1.4 2004/06/24 22:36:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ttyrec-1.0.6.ebuild,v 1.5 2004/06/28 04:16:26 vapier Exp $
 
 DESCRIPTION="tty recorder"
 HOMEPAGE="http://namazu.org/~satoru/ttyrec/"
@@ -8,17 +8,17 @@ SRC_URI="http://namazu.org/~satoru/ttyrec/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE=""
 KEYWORDS="x86"
+IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
-src_compile () {
+src_compile() {
 	make CFLAGS="${CFLAGS}" || die
 }
 
-src_install () {
-	dobin ttyrec ttyplay ttytime
+src_install() {
+	dobin ttyrec ttyplay ttytime || die
 	dodoc README
 	doman *.1
 }

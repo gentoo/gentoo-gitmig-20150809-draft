@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/lhinv-1.1-r3.ebuild,v 1.4 2004/06/24 22:22:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/lhinv-1.1-r3.ebuild,v 1.5 2004/06/28 03:54:01 vapier Exp $
 
 DESCRIPTION="Linux Hardware Inventory"
+HOMEPAGE="http://lhinv.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lhinv/${P}.tar.gz"
-HOMEPAGE="http://lhinv.sourceforge.net"
-RESTRICT="nomirror"
-SLOT="0"
+
 LICENSE="GPL-2"
-IUSE=""
+SLOT="0"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="dev-lang/perl"
@@ -23,11 +23,9 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
-	into /usr
-	dobin lhinv
+	dobin lhinv || die
 	doman lhinv.1
-	dodoc AUTHORS BUGS CHANGELOG COPYING README TODO
+	dodoc AUTHORS BUGS CHANGELOG README TODO
 	newdoc cgi/README README.cgi
 	insinto /var/www/localhost/cgi-bin
 	insopts -m 755

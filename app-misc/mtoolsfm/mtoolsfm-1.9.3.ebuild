@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtoolsfm/mtoolsfm-1.9.3.ebuild,v 1.10 2004/06/24 22:25:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtoolsfm/mtoolsfm-1.9.3.ebuild,v 1.11 2004/06/28 04:02:45 vapier Exp $
 
 inherit eutils
 
@@ -27,5 +27,5 @@ src_unpack() {
 
 src_install() {
 	einstall install_prefix=${D}
-	dodoc AUTHORS COPYING ChangeLog NEWS README THANKS
+	dodoc AUTHORS ChangeLog NEWS README THANKS
 }

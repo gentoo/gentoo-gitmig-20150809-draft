@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/rl-0.2.2.ebuild,v 1.5 2004/06/28 02:00:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/rl-0.2.2.ebuild,v 1.6 2004/06/28 04:11:03 vapier Exp $
 
 DESCRIPTION="Randomize lines from text files or stdin"
 HOMEPAGE="http://tiefighter.et.tudelft.nl/~arthur/rl/"
@@ -8,10 +8,10 @@ SRC_URI="http://tiefighter.et.tudelft.nl/~arthur/rl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 s390 ~sparc ~mips"
-
+KEYWORDS="~x86 ~sparc ~mips s390"
 IUSE="debug"
-DEPEND="virtual/glibc"
+
+DEPEND="virtual/libc"
 
 src_compile() {
 	local myconf=""
@@ -24,6 +24,5 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "install failed"
-
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }

@@ -1,28 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/regex-markup-0.9.0.ebuild,v 1.3 2004/06/24 22:29:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/regex-markup-0.9.0.ebuild,v 1.4 2004/06/28 04:09:21 vapier Exp $
 
 DESCRIPTION="A tool to color syslog files as well"
-SRC_URI="http://www.student.lu.se/~nbi98oli/src/${P}.tar.gz"
 HOMEPAGE="http://www.student.lu.se/~nbi98oli"
+SRC_URI="http://www.student.lu.se/~nbi98oli/src/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-LICENSE="GPL-2"
-
-DEPEND="virtual/glibc"
-RDEPEND=""
 IUSE=""
 
-S="${WORKDIR}/${P}"
+DEPEND="virtual/libc"
+RDEPEND=""
 
-src_compile()
-{
-	econf || die
-	emake || die
-}
-
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }

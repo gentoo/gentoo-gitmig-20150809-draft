@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mwavem/mwavem-1.0.4.ebuild,v 1.3 2004/06/24 22:26:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mwavem/mwavem-1.0.4.ebuild,v 1.4 2004/06/28 04:04:24 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	X? ( virtual/x11 )"
 
 src_compile() {
@@ -36,8 +36,7 @@ src_install() {
 	insinto /etc/modules.d
 	newins ${FILESDIR}/mwave.modules mwave
 
-	dodoc AUTHORS COPYING ChangeLog FAQ INSTALL NEWS README \
-		 README.devfs THANKS
+	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README README.devfs THANKS
 	docinto doc
 	dodoc doc/mwave.sgml doc/mwave.txt
 	dohtml doc/mwave.html

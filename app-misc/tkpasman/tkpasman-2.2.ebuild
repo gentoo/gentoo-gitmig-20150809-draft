@@ -1,23 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2.ebuild,v 1.6 2004/06/24 22:35:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2.ebuild,v 1.7 2004/06/28 04:15:45 vapier Exp $
 
 MY_P="TkPasMan-${PV}"
 
-SRC_URI="http://www.xs4all.nl/~wbsoft/linux/projects/${MY_P}.tar.gz"
-LICENSE="GPL-2"
-KEYWORDS="x86"
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="A useful and reliable personal password manager, written in Tcl/Tk"
+HOMEPAGE="http://www.xs4all.nl/~wbsoft/linux/projects/"
+SRC_URI="http://www.xs4all.nl/~wbsoft/linux/projects/${MY_P}.tar.gz"
+
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 IUSE="ssl"
 
 DEPEND=">=dev-lang/tcl-8.3"
-
 RDEPEND="ssl? ( dev-libs/openssl )
 	virtual/x11
 	>=dev-lang/tk-8.3
 	>=dev-lang/tcl-8.3"
+
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
@@ -32,7 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin tkpasman
-	dodoc README ChangeLog TODO WARNING INSTALL COPYING
+	dobin tkpasman || die
+	dodoc README ChangeLog TODO WARNING INSTALL
 }
-

@@ -1,24 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.11 2004/06/24 22:38:18 agriffis Exp $
-
-inherit eutils
-
-# Internal USE flags: noexercises noexperimental distribution
-IUSE="debug gnome nls xml2 noexercises noexperimental distribution"
-
-DESCRIPTION="Helpful utility to attack Repetitive Strain Injury (RSI)"
-HOMEPAGE="http://workrave.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.12 2004/06/28 04:18:34 vapier Exp $
 
 # This is the first workrave ebuild with gnome support,
 # which should be considered experimental. The next
 # step should be converting to the gnome2 eclass.
 # <obz@gentoo.org>
 
+inherit eutils
+
+DESCRIPTION="Helpful utility to attack Repetitive Strain Injury (RSI)"
+HOMEPAGE="http://workrave.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
+# Internal USE flags: noexercises noexperimental distribution
+IUSE="debug gnome nls xml2 noexercises noexperimental distribution"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
@@ -33,7 +32,6 @@ RDEPEND=">=dev-libs/glib-2
 	nls? ( sys-devel/gettext )
 	xml2? ( dev-libs/gdome2 )
 	!xml2? ( !gnome? ( >=gnome-base/gconf-2 ) )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -82,7 +80,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-
-	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
-

@@ -1,14 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.0-r1.ebuild,v 1.7 2004/06/24 22:37:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.0-r1.ebuild,v 1.8 2004/06/28 04:16:55 vapier Exp $
 
 DESCRIPTION="Standard informational utilities and process-handling tools"
-SRC_URI="mirror://sourceforge/uptimed/${P}.tar.bz2"
-RESTRICT="nomirror"
 HOMEPAGE="http://unixcode.org/uptimed/"
+SRC_URI="mirror://sourceforge/uptimed/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
@@ -27,7 +26,7 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
-	dodoc README NEWS TODO AUTHORS COPYING CREDITS
+	dodoc README NEWS TODO AUTHORS CREDITS
 	exeinto /etc/init.d ; newexe ${FILESDIR}/uptimed uptimed
 }
 

@@ -1,35 +1,33 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mwavem/mwavem-1.0.2.ebuild,v 1.8 2004/06/24 22:26:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mwavem/mwavem-1.0.2.ebuild,v 1.9 2004/06/28 04:04:24 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="User level application for IBM Mwave modem"
 HOMEPAGE="http://oss.software.ibm.com/acpmodem/"
 SRC_URI="ftp://www-126.ibm.com/pub/acpmodem/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 IUSE="X"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86"
-
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	X? ( virtual/x11 )"
 
 src_compile() {
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
-
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	./configure \
 		--disable-mwavedd \
-		--host=${CHOST} || die "./configure failed"
-
+		--host=${CHOST} \
+		|| die "./configure failed"
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install ||die
-
-	exeinto /usr/sbin
-	doexe ${FILESDIR}/mwave-dev-handler
+	dosbin ${FILESDIR}/mwave-dev-handler
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre4.ebuild,v 1.6 2004/06/26 00:00:12 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre4.ebuild,v 1.7 2004/06/28 03:56:00 vapier Exp $
 
 inherit eutils kernel-mod
 
@@ -155,7 +155,7 @@ src_install() {
 	dohtml doc/html/*.html
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	if kernel-mod_is_2_4_kernel; then
 		/usr/sbin/update-modules
 	fi

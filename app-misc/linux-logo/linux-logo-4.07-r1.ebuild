@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07-r1.ebuild,v 1.7 2004/06/24 22:22:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07-r1.ebuild,v 1.8 2004/06/28 03:55:17 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc hppa sparc"
 IUSE="nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 RDEPEND="nls? ( sys-devel/gettext )"
 
@@ -41,8 +41,7 @@ src_install() {
 	dobin linux_logo
 	doman linux_logo.1.gz
 
-	dodoc BUGS CHANGES COPYING README README.CUSTOM_LOGOS TODO USAGE
-	dodoc LINUX_LOGO.FAQ
+	dodoc BUGS CHANGES README README.CUSTOM_LOGOS TODO USAGE LINUX_LOGO.FAQ
 
 	if use nls
 	then

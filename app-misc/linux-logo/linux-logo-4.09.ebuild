@@ -1,21 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.09.ebuild,v 1.10 2004/06/28 01:35:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.09.ebuild,v 1.11 2004/06/28 03:55:17 vapier Exp $
 
 inherit eutils
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="Displays an ansi or an ascii logo and some system information."
+DESCRIPTION="Displays an ansi or an ascii logo and some system information"
 HOMEPAGE="http://www.deater.net/weave/vmwprod/linux_logo/"
 SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64 hppa ~mips"
+KEYWORDS="x86 sparc ~mips hppa ~amd64"
 IUSE="nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 RDEPEND="nls? ( sys-devel/gettext )"
 
@@ -38,11 +38,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin linux_logo
+	dobin linux_logo || die
 	doman linux_logo.1.gz
 
-	dodoc BUGS CHANGES COPYING README README.CUSTOM_LOGOS TODO USAGE
-	dodoc LINUX_LOGO.FAQ
+	dodoc BUGS CHANGES README README.CUSTOM_LOGOS TODO USAGE LINUX_LOGO.FAQ
 
 	if use nls
 	then

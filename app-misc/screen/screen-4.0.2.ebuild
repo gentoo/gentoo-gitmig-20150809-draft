@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.8 2004/06/24 22:32:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.9 2004/06/28 04:12:34 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -83,7 +83,7 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	dobin screen || die "dobin failed"
 	keepdir /var/run/screen
 	fowners root:utmp /{usr/bin,var/run}/screen

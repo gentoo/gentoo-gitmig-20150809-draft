@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.1.ebuild,v 1.4 2004/06/24 22:38:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.1.ebuild,v 1.5 2004/06/28 04:18:34 vapier Exp $
 
 inherit eutils gnome2
-
-# Internal USE flags: noexercises noexperimental distribution
-IUSE="gnome nls xml2 noexercises noexperimental distribution"
 
 DESCRIPTION="Helpful utility to attack Repetitive Strain Injury (RSI)"
 HOMEPAGE="http://workrave.sourceforge.net/"
@@ -14,6 +11,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
+# Internal USE flags: noexercises noexperimental distribution
+IUSE="gnome nls xml2 noexercises noexperimental distribution"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
@@ -28,12 +27,11 @@ RDEPEND=">=dev-libs/glib-2
 	nls? ( sys-devel/gettext )
 	xml2? ( dev-libs/gdome2 )
 	!xml2? ( !gnome? ( >=gnome-base/gconf-2 ) )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 MAKEOPTS="${MAKEOPTS} -j1"
-DOCS="ABOUT-NLS AUTHORS ChangeLog COPYING NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 G2CONF="${G2CONF} $(use_enable distribution)"
 G2CONF="${G2CONF} $(use_enable nls)"

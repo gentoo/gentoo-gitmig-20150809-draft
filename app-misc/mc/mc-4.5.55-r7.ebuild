@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r7.ebuild,v 1.9 2004/06/24 22:23:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r7.ebuild,v 1.10 2004/06/28 03:59:06 vapier Exp $
 
 inherit flag-o-matic
-
-IUSE="gpm nls samba ncurses X pam slang"
 
 DESCRIPTION="GNU Midnight Commander"
 HOMEPAGE="http://www.ibiblio.org/mc/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa"
+IUSE="gpm nls samba ncurses X pam slang"
 
 DEPEND=">=sys-fs/e2fsprogs-1.19
 	=dev-libs/glib-1.2*
@@ -25,15 +24,12 @@ DEPEND=">=sys-fs/e2fsprogs-1.19
 	samba? ( >=net-fs/samba-2.2.3a-r1 )
 	X? ( virtual/x11 )"
 
-filter-flags -malign-double
-
 src_compile() {
+	filter-flags -malign-double
 
 	local myconf=""
 
-	use pam \
-		&& myconf="${myconf} --with-pam" \
-		|| myconf="${myconf} --without-pam"
+	myconf="${myconf} `use_with pam`"
 
 	use ncurses \
 		&& myconf="${myconf} --with-ncurses" \
@@ -44,9 +40,7 @@ src_compile() {
 		&& myconf="${myconf} --with-gpm-mouse=/usr" \
 		|| myconf="${myconf} --without-gpm-mouse"
 
-	use X \
-		&& myconf="${myconf} --with-tm-x-support" \
-		|| myconf="${myconf} --without-tm-x-support"
+	myconf="${myconf} `use_with X tm-x-support`"
 
 	use samba \
 		&& myconf="${myconf} --with-samba" \
@@ -76,9 +70,6 @@ src_compile() {
 }
 
 src_install() {
-
-	einstall
-
-	dodoc ABOUT-NLS COPYING* FAQ INSTALL* NEWS README*
+	einstall || die
+	dodoc FAQ INSTALL* NEWS README*
 }
-

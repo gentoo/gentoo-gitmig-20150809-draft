@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07.ebuild,v 1.6 2004/06/24 22:22:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07.ebuild,v 1.7 2004/06/28 03:55:17 vapier Exp $
 
-IUSE=""
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="Displays an ansi or an ascii logo and some system information."
+DESCRIPTION="Displays an ansi or an ascii logo and some system information"
 HOMEPAGE="http://www.deater.net/weave/vmwprod/linux_logo/"
 SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
+IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -29,10 +29,9 @@ src_compile() {
 }
 
 src_install() {
-	dobin linux_logo
+	dobin linux_logo || die
 	doman linux_logo.1
-	dodoc BUGS CHANGES COPYING README README.CUSTOM_LOGOS TODO USAGE
-	dodoc LINUX_LOGO.FAQ
+	dodoc BUGS CHANGES README README.CUSTOM_LOGOS TODO USAGE LINUX_LOGO.FAQ
 }
 
 pkg_postinst() {

@@ -1,21 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.4 2004/06/24 22:25:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.5 2004/06/28 04:01:59 vapier Exp $
 
-DESCRIPTION="A gtk2 frontend and drivers for mpman f50/55/60 mp3 players."
-HOMEPAGE="http://mplinuxman.sourceforge.net"
+DESCRIPTION="A gtk2 frontend and drivers for mpman f50/55/60 mp3 players"
+HOMEPAGE="http://mplinuxman.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.gz"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
-
 KEYWORDS="x86"
 IUSE="nls"
+
 DEPEND=">=x11-libs/gtk+-2.2.4-r1
 	>=sys-apps/sed-4
 	nls? ( >=sys-devel/gettext-0.12.1 )"
 
 S=${WORKDIR}/${PN}
+
 src_unpack() {
 	unpack ${A} && cd ${S} || die "unpack failed"
 	sed -i -e "s,^CFLAGS = ,CFLAGS = ${CFLAGS} ," makefile
@@ -39,5 +40,5 @@ src_install() {
 		dodir /usr/share/locale/de/LC_MESSAGES
 		DESTDIR="${D}" make install-po
 	fi
-	dodoc CHANGES COPYING README
+	dodoc CHANGES README
 }

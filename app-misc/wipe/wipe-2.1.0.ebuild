@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.1.0.ebuild,v 1.9 2004/06/24 22:37:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.1.0.ebuild,v 1.10 2004/06/28 04:17:54 vapier Exp $
 
 DESCRIPTION="Secure file wiping utility based on Peter Gutman's patterns"
-SRC_URI="mirror://sourceforge/wipe/${P}.tar.bz2"
 HOMEPAGE="http://wipe.sourceforge.net/"
+SRC_URI="mirror://sourceforge/wipe/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 KEYWORDS="x86"
+IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 
 src_unpack() {
@@ -19,13 +19,8 @@ src_unpack() {
 	sed -i -e '28 i\#include <errno.h>' ${S}/rand.c || die "sed rand.c failed"
 }
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die "compile problem"
-}
-
 src_install() {
-	dobin wipe
+	dobin wipe || die
 	doman wipe.1
 	dodoc copyright CHANGES README TODO TESTING
 }

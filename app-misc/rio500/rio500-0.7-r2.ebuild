@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7-r2.ebuild,v 1.5 2004/06/24 22:30:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7-r2.ebuild,v 1.6 2004/06/28 04:10:27 vapier Exp $
 
 DESCRIPTION="Command line tools for transfering mp3s to and from a Rio500"
+HOMEPAGE="http://rio500.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rio500/${P}.tar.gz"
-HOMEPAGE="http://rio500.sourceforge.net"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
@@ -22,7 +22,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	einstall \
 		datadir=${D}/usr/share/rio500 || die
 
@@ -30,6 +30,6 @@ src_install () {
 	#installed with rio500
 	rm ${D}/usr/include/getopt.h 2>/dev/null
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 	dodoc fonts/Readme.txt
 }

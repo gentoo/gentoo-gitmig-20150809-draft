@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.7 2004/06/24 22:37:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.8 2004/06/28 04:17:37 vapier Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ SRC_URI="http://www.chez.com/littleigloo/files/${MY_P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64 ~sparc"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -31,7 +31,7 @@ src_compile() {
 src_install() {
 	dobin ${MY_PN}
 	doman ${MY_PN}.1
-	dodoc AUTHORS README INSTALL COPYING ChangeLog BUGS TODO
+	dodoc AUTHORS README INSTALL ChangeLog BUGS TODO
 	exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}.initscript ${MY_PN}
 }
 

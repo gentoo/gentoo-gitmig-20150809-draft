@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.6 2004/06/24 22:35:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.7 2004/06/28 04:15:45 vapier Exp $
 
 MY_P="TkPasMan-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -33,7 +33,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin tkpasman
-	dodoc README ChangeLog TODO WARNING INSTALL COPYING
+	dobin tkpasman || die
+	dodoc README ChangeLog TODO WARNING INSTALL
 }
-
