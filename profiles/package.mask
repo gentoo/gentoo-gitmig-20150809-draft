@@ -28,7 +28,8 @@ app-admin/webconfig
 
 #apparently has an fs unmount corruption bug
 =sys-kernel/linux-sources-2.4.15
-=>sys-kernel/linux-sources-2.4.17
+#this is to mask out 2.4.18_pre4 which is ok but doesn't compile if preempt disabled
+>=sys-kernel/linux-sources-2.4.17
 
 #buggy < Danarmak, Verwilst >
 =x11-libs/qt-x11-2.3.2
