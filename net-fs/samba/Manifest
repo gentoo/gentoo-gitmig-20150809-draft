@@ -8,7 +8,7 @@ MD5 4505c7b9cd715168b75a4dfb5c4ac294 samba-3.0.5.ebuild 11142
 MD5 b8ef78eeab7e9982b8c3459e1792747f samba-3.0.6-r1.ebuild 13867
 MD5 55c08f2d48b50d7af452664decd8793a samba-3.0.6-r2.ebuild 13989
 MD5 fb357b885ebd5c7e7c6093156812efb1 samba-3.0.6-r3.ebuild 14194
-MD5 4f5acd2f909cd0cfeefde55a96304b5a samba-3.0.6-r4.ebuild 14238
+MD5 b476c01afa3961b5a0c594d6d297b91b samba-3.0.6-r4.ebuild 14239
 MD5 045d2504d92e3846f34e35c094721c44 samba-3.0.6.ebuild 13730
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
 MD5 81931e1d9764390841dec0d0f327a114 files/digest-samba-3.0.2a-r2 204

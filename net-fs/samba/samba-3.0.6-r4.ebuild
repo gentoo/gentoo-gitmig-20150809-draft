@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r4.ebuild,v 1.9 2004/09/09 20:35:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r4.ebuild,v 1.10 2004/09/09 21:57:55 kugelfang Exp $
 
 inherit eutils flag-o-matic
 
@@ -88,7 +88,7 @@ src_unpack() {
 	cp -a ${S}/examples ${S}/examples.ORIG
 	# Prep samba-vscan source.
 	use oav && cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER} ${S}/examples/VFS
-	use amd64 && epatch ${WORKDIR}/${P}-libdirsymlink.patch
+	use amd64 && epatch ${FILEDIR}/${P}-libdirsymlink.patch
 	#-----------------------------------------------------------------------
 	cd ${S}/source
 	echo "Running autoconf ..."
