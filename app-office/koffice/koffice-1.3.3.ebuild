@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.3.ebuild,v 1.3 2004/10/17 10:07:37 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.3.ebuild,v 1.4 2004/11/02 20:37:34 eradicator Exp $
 
 inherit kde eutils
 
@@ -26,5 +26,6 @@ need-kde 3.1
 
 src_compile() {
 	export LIBPYTHON="`python-config --libs`"
+	use arts || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kpresenter"
 	kde_src_compile
 }
