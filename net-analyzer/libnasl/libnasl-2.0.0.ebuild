@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.0.0.ebuild,v 1.1 2003/02/26 08:09:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.0.0.ebuild,v 1.2 2003/03/05 17:06:59 liquidx Exp $
 
 inherit eutils
 
@@ -32,7 +32,10 @@ src_compile() {
         else
                 econf || die "configuration failed"
         fi
-        emake || die "emake failed"
+	
+	make || die "make failed"
+	# fails for >= -j2. bug #16471.
+	# emake || die "emake failed"
 }
 
 src_install() {
