@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bc538e03f402ebb32a5896801053e461 ChangeLog 1471
-MD5 805ecd7c73e1a163a9f20c34c6eef6df dictd-foldoc-2001.03.13-r1.ebuild 617
+MD5 9bea0224bd84e0a4a3499428aeaa048c ChangeLog 1573
+MD5 a0a67ce602a3ba0658d0c53d830bc676 dictd-foldoc-2001.03.13-r1.ebuild 616
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 2d49a1fcc9f762b21ea294a9468cde1f files/digest-dictd-foldoc-2001.03.13-r1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCIayc60LfUIagIAkRAjDUAKCyln8ugZM47aQa0CVcYZc7Z9ECsgCfYu0+
-DrWzDqRikR9Qji5phnSrrCw=
-=eix5
+iD8DBQFCTWZo60LfUIagIAkRAo+9AJ0R7xusW43AgjZWg0JlZ28CvZFHPwCgp84F
+rA1XY99GoeUrI0vM58mcsIA=
+=aB2B
 -----END PGP SIGNATURE-----
