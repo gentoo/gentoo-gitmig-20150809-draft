@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.98 2005/01/11 23:22:07 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.99 2005/01/14 13:49:48 eradicator Exp $
+
+  14 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  util-linux-2.12i-r1.ebuild, util-linux-2.12p.ebuild:
+  Added virtual/os-headers to DEPEND. It was missing and as such util-linux
+  was trying to update before linux-headers... thus missing the fix I placed
+  in 2.6.8.1-r4 for 2.12p.
 
   11 Jan 2005; Stephen P. Becker <geoman@gentoo.org>
   util-linux-2.12i-r1.ebuild:
