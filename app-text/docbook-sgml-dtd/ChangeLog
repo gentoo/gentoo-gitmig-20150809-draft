@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-sgml-dtd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.8 2002/12/31 04:36:55 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.9 2003/02/09 09:13:08 satai Exp $
+
+*docbook-sgml-dtd-4.2 (09 Feb 2003)
+
+  09 Feb 2003; Matthew Turk <satai@gentoo.org> : 
+  Version bump, slotted properly.
 
 *docbook-sgml-dtd-4.1-r1 (30 Dec 2002)
 
