@@ -4,6 +4,9 @@
 
 *boost-1.29.0 (21 Oct 2002)
 
+  26 Jan 2003; Jon Nall <nall@gentoo.org> boost-1.29.0.ebuild :
+  added ~ppc and fixed to be non-x86 specific
+
   21 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version, closes bug
   #9461.
 

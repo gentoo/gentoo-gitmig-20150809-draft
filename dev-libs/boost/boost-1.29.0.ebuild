@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.29.0.ebuild,v 1.1 2002/10/22 04:03:30 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.29.0.ebuild,v 1.2 2003/01/27 01:29:49 nall Exp $
 
 MY_V="${PV//\./_}"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Boost provides free peer-reviewed portable C++ source libraries."
 HOMEPAGE="http://www.boost.org"
 SRC_URI="http://boost.sourceforge.net/release/boost_${MY_V}.tar.gz"
 LICENSE="freedist"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="1"
 IUSE=""
 
@@ -24,7 +24,7 @@ src_compile() {
 
 	# now build boost libraries
 	cd ${S}
-	./tools/build/jam_src/bin.linuxx86/bjam -j2 \
+	./tools/build/jam_src/bin.linux${ARCH}/bjam -j2 \
 		-sBOOST_ROOT=${S} \
 		-sPYTHON_ROOT=/usr \
 		-sPYTHON_VERSION=2.2 \
