@@ -1051,3 +1051,6 @@ app-cdr/eroaster
 # masked for testing
 =net-misc/udhcp-0.9.7
 
+# naz@gentoo.org 4 Aug 2002
+# masked for testing
+>=media-sound/ecasound-2.0.4
