@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libid3tag
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.10 2004/01/16 18:51:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.11 2004/02/18 09:32:26 mholzer Exp $
+
+*libid3tag-0.15.1b (18 Feb 2004)
+
+  18 Feb 2004; Martin Holzer <mholzer@gentoo.org> libid3tag-0.15.1b.ebuild:
+  Version bumped.
 
   16 Jan 2004; Martin Guy <gmsoft@gentoo.org> libid3tag-0.15.0b.ebuild:
   Marked stable on hppa.
