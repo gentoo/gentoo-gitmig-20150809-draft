@@ -1,0 +1,9 @@
+# ChangeLog for dev-embedded/ponyprog
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.1 2004/03/16 11:38:09 dragonheart Exp $
+
+*ponyprog-2.06c (16 Mar 2004)
+
+  16 Mar 2004; Daniel Black <dragonheart@gentoo.org> ponyprog-2.06c.ebuild:
+  Initial ebuild by Marco Testarmata <testarmata.marco@tiscali.it> in bug #43289
+
