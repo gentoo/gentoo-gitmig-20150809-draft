@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.54 2005/01/20 17:36:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.55 2005/01/20 18:36:04 spyderous Exp $
+
+  20 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  opengl-update-2.0_pre4-r1.ebuild:
+  (#75628) Change warning message from >=6.8.0-r2 to >=6.8.0-r4.
 
   20 Jan 2005; Ferris McCormick <fmccor@gentoo.org>
   opengl-update-2.0_pre4-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.0_pre4-r1.ebuild,v 1.2 2005/01/20 17:36:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.0_pre4-r1.ebuild,v 1.3 2005/01/20 18:36:04 spyderous Exp $
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
@@ -55,7 +55,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	ewarn "This version will only work with >=x11-base/xorg-x11-6.8.0-r2."
+	ewarn "This version will only work with >=x11-base/xorg-x11-6.8.0-r4."
 	ewarn "Upgrade before running ${PN}."
 	echo
 }
