@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.4 2002/04/12 20:19:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.5 2002/05/21 02:53:48 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enlightenment Window Manager"
@@ -20,12 +20,12 @@ src_compile() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
   
-	./configure 	\
-		--host=${CHOST} 			\
-		--enable-fsstd					\
-		--prefix=/usr					\
-		--mandir=/usr/share/man			\
-		--infodir=/usr/share/info		\
+	./configure \
+		--host=${CHOST} \
+		--enable-fsstd \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
 		${myconf} || die
 	emake || die
 }
@@ -40,11 +40,11 @@ src_install() {
 	sed 's:\(^EBIN=\).*:\1@prefix@/bin:' \
 		scripts/${PN}.install.in.orig > scripts/${PN}.install.in
 	
-	make prefix=${D}/usr 					\
-		localedir=${D}/usr/share/locale		\
-		gnulocaledir=${D}/usr/share/locale	\
-		mandir=${D}/usr/share/man			\
-		infodir=${D}/usr/share/info			\
+	make prefix=${D}/usr \
+		localedir=${D}/usr/share/locale \
+		gnulocaledir=${D}/usr/share/locale \
+		mandir=${D}/usr/share/man \
+		infodir=${D}/usr/share/info \
 		install || die
   
 	doman man/enlightenment.1
