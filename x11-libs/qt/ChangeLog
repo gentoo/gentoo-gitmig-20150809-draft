@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.61 2003/04/13 10:52:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.62 2003/04/15 10:51:51 danarmak Exp $
+
+*qt-3.1.2-r2 (15 Apr 2003)
+
+  15 Apr 2003; Dan Armak <danarmak@gentoo.org> Manifest, qt-3.1.2-r2.ebuild:
+  An experimental new revision that uses make.conf's CXXFLAGS. Could cause
+  trouble, so masked at first - test with care.
+  Original patch by Robert, bug #12235.
 
   13 Apr 2003; Dan Armak <danarmak@gentoo.org> files/qsocket-3.1.2.diff:
   Fix the patch - make it apply by removing the hunk that refers to the cvs
