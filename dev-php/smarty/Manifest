@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b785b8c192def57eecd7066a11bb691e smarty-2.6.7.ebuild 1030
-MD5 88f170d36458ec5b1f2afeb53166471f smarty-2.6.2.ebuild 1019
-MD5 aa6cfae4eeae3c6b1e01fe7bc52e2a3d smarty-2.6.0-r2.ebuild 990
-MD5 d94693bef5279cb3898fa85d3bf54767 smarty-2.6.8.ebuild 1035
-MD5 9af9c469493b7b2da1be83b405d6ba20 ChangeLog 3697
-MD5 44f6a36bcf65bcbaf853625d6aba3ed9 smarty-2.6.5.ebuild 1028
+MD5 8e0f723fa1eb926cff74127a1335d55e ChangeLog 3804
 MD5 00c298073008a95e52d037980076f290 metadata.xml 242
-MD5 e4efdb7a0ff70439c7314f0f570ea9aa files/digest-smarty-2.6.2 64
+MD5 44f6a36bcf65bcbaf853625d6aba3ed9 smarty-2.6.5.ebuild 1028
+MD5 aa6cfae4eeae3c6b1e01fe7bc52e2a3d smarty-2.6.0-r2.ebuild 990
+MD5 88f170d36458ec5b1f2afeb53166471f smarty-2.6.2.ebuild 1019
+MD5 b785b8c192def57eecd7066a11bb691e smarty-2.6.7.ebuild 1030
+MD5 104fffc4ceb31651ef3dbb428d54a0fe smarty-2.6.8.ebuild 1030
 MD5 3724d102d85b8d2f110e277db301709e files/digest-smarty-2.6.5 64
+MD5 cc746919357bf3d40185fb16d4e2be1c files/digest-smarty-2.6.0-r2 64
+MD5 e4efdb7a0ff70439c7314f0f570ea9aa files/digest-smarty-2.6.2 64
 MD5 b845522a9eb880ee9852fb8be4a6cb98 files/digest-smarty-2.6.7 64
 MD5 7086f4ebff0ab3d5ae35409f705666cd files/digest-smarty-2.6.8 64
-MD5 cc746919357bf3d40185fb16d4e2be1c files/digest-smarty-2.6.0-r2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQutwaGfFFLhbXWkRAjlQAJ9u+e2/FewwOMJcTDxCGj6lzKJfLgCeJQNA
-Yg5FMtpOrxC7KC/ETHg4E5Q=
-=5dKw
------END PGP SIGNATURE-----
