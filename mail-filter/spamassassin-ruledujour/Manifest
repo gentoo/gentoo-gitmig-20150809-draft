@@ -3,12 +3,13 @@ Hash: SHA1
 
 MD5 eedb2fbc1622278d4d282eb63f29f515 spamassassin-ruledujour-20040701.ebuild 1392
 MD5 5271ee9dd97e9195eb2cebe2c4ef1666 ChangeLog 670
-MD5 2f5d2faaf988e9e5fdad1e48c66f6fc4 metadata.xml 224
+MD5 5e658b705b2985d36d82b2a5d218ec78 metadata.xml 224
 MD5 998db9369c998907270da8bc9ac54da6 files/digest-spamassassin-ruledujour-20040701 85
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: .//Manifest 1096320642
 
-iD8DBQFBVeMmCHk4+ZoBpvsRAixYAJ4/eHixQCjath21XVBfnKukR4ffegCgu2mK
-8D55hHc6ew2oWS09hvAdXXw=
-=zgXQ
+iD8DBQFBWIaIPpIsIjIzwiwRAoC0AJsHjqg4MRWnc9g6veYxY8CeIs8kmACfW42U
+o9BRFrak+Wg437tYZ6Lr/oo=
+=4ZsI
 -----END PGP SIGNATURE-----
