@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2858 2004/05/12 12:48:07 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2859 2004/05/13 12:01:08 phosphan Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <phosphan@gentoo.org> (13 May 2004)
+# the change to the last version was no good idea, see bug #50856
+=media-gfx/sane-backends-1.0.14-r3
 
 # <foser@gentoo.org> (12 May 2004)
 # masking out for now, because of their unstable nature
