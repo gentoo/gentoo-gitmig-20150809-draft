@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.11 2004/10/25 03:05:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.12 2004/11/21 11:08:39 eldad Exp $
 
 inherit eutils
 
@@ -52,6 +52,13 @@ src_compile() {
 }
 
 src_install() {
+	# bring contribs into shape... (21 Nov 2004 eldad)
+	mv ${S}/contrib/check_compaq_insight.pl ${S}/contrib/check_compaq_insight.pl.msg
+	chmod +x ${S}/contrib/*.pl
+
+	sed -i -e '1s;#!.*;#!/usr/bin/perl -w;' ${S}/contrib/*.pl
+	sed -i -e '30s/use lib utils.pm;/use utils;/' ${S}/contrib/check_file_age.pl
+
 	dodoc AUTHORS CODING COPYING ChangeLog FAQ INSTALL LEGALNEWS README REQUIREMENTS ROADMAP Requirements
 	make DESTDIR=${D} install || die
 
