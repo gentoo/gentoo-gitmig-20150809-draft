@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.10 2004/10/13 20:14:27 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.11 2004/10/16 19:30:08 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,8 +14,7 @@ KEYWORDS="x86 alpha ppc ~amd64"
 IUSE="readline ncurses doc"
 
 RDEPEND=">=sys-libs/readline-4.3
-	ncurses? ( sys-libs/ncurses )
-	!ncurses? ( sys-libs/libtermcap-compat )"
+	sys-libs/ncurses"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	>=sys-apps/sed-4
@@ -27,18 +26,9 @@ src_compile() {
 	if ! use readline; then
 		myconf="${myconf} --without-readline"
 
-		if use ncurses; then
-			sed -i 's#\($(LIB_READLINE)\)#\1 -lncurses##g' ${S}/Makefile.in
-		else
-			sed -i 's#\($(LIB_READLINE)\)#\1 -ltermcap##g' ${S}/Makefile.in
-		fi
+		sed -i 's#\($(LIB_READLINE)\)#\1 -lncurses##g' ${S}/Makefile.in
 	fi
-
-	if use ncurses; then
-		sed -i 's#-ltermcap#-lncurses#g' ${S}/configure
-	else
-		sed -i 's#-lncurses##g' ${S}/configure
-	fi
+	sed -i 's#-ltermcap#-lncurses#g' ${S}/configure
 
 	# XXX: do not replace with econf.
 	${S}/configure ${myconf} || die "configure failed, sorry!"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.10 2004/10/05 13:34:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.11 2004/10/16 19:30:08 vapier Exp $
 
 DESCRIPTION="Command line To Do List manager"
 HOMEPAGE="http://www.rc0.org.uk/tdl/"
@@ -14,8 +14,7 @@ IUSE="readline ncurses doc"
 RDEPEND="
 	readline? (
 		>=sys-libs/readline-4.3
-		ncurses? ( sys-libs/ncurses )
-		!ncurses? ( sys-libs/libtermcap-compat )
+		sys-libs/ncurses
 	)"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
@@ -28,11 +27,7 @@ src_compile() {
 	if ! use readline; then
 		myconf="${myconf} --without-readline"
 	else
-		if use ncurses; then
-			sed -i 's#-ltermcap#-lncurses#g' ${S}/configure
-		else
-			sed -i 's#-lncurses##g' ${S}/configure
-		fi
+		sed -i 's#-ltermcap#-lncurses#g' ${S}/configure
 	fi
 
 	./configure ${myconf} || die "configure failed, sorry!"
