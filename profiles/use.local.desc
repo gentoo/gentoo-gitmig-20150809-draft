@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.353 2004/05/06 05:22:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.354 2004/05/06 05:41:22 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -104,6 +104,8 @@ dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-lisp/bigloo-lib:expat - enable expat support
 dev-lisp/bigloo-lib:ipcs - enable ipcs support
 dev-lisp/clisp:pcre - enable PCRE support
+dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
+dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-lisp/gauche-gtk:glgd - enable GL graph draw
 dev-ml/lablgl:glut - Enable glut support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
