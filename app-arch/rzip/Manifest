@@ -1,4 +1,14 @@
-MD5 43d83463bbacde82f16c4524ff32730f ChangeLog 1159
-MD5 e68317dfe7132258c4d6eab9c4ee3806 rzip-2.0-r1.ebuild 559
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4965a5fd7250a5633461bd5e83e785de ChangeLog 1272
+MD5 a0144542ea49afb9facdecc626340c72 rzip-2.0-r1.ebuild 557
 MD5 b393401425399e54ef398b1f43fe10d2 metadata.xml 403
 MD5 08798457dd084bc7a3c20f9fe4c5e398 files/digest-rzip-2.0-r1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+slwLLFUmVNQ7rkRAhZ0AKCBgTgH0qVJZSvyfM4aXu4xSmK8pgCgzrvS
+M6KgOjnVPl+18IP4BAoxB/Y=
+=BnXZ
+-----END PGP SIGNATURE-----
