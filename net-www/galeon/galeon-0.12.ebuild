@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.ebuild,v 1.2 2001/08/20 20:13:46 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.ebuild,v 1.3 2001/09/24 15:11:15 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ DESCRIPTION="A small webbrowser for gnome that uses mozillas render engine"
 SRC_URI="http://prdownloads.sourceforge.net/galeon/${A}"
 HOMEPAGE="http://galeon.sourceforge.net"
 
-DEPEND=">=net-www/mozilla-0.9.3
+DEPEND="~net-www/mozilla-0.9.3
 	>=gnome-base/libglade-0.13
 	>=gnome-base/gnome-core-1.4.0
 	>=gnome-base/libxml-1.8.13
