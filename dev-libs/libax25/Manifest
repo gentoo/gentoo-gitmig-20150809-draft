@@ -1,5 +1,5 @@
-MD5 c24d9da635f6d8bb07e85c41f0a7ca92 ChangeLog 636
-MD5 0531ccb906d58feda7b50d6065c02538 libax25-0.0.11-r1.ebuild 565
+MD5 3112c392f02f31dab394c7a24ee12e3a ChangeLog 720
+MD5 ef01d47512907877aa54c720aa4bf0ba libax25-0.0.11-r1.ebuild 565
 MD5 1ff53a47b204ca32ad82078c69c7146f libax25-0.0.11.ebuild 622
 MD5 a07abccd45fcd08e9bd94d8d690494d0 files/axports.gentoo 291
 MD5 04b7da1d6eab8c06f2e0c7e286d970fc files/digest-libax25-0.0.11 66
