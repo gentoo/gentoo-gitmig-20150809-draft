@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.126 2003/09/20 20:23:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.127 2003/09/25 02:14:37 azarah Exp $
+
+  25 Sep 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.1-r3.ebuild:
+  Add gcc-unsharing_lhs.patch resolving bug #29467.  Also marked this ~x86.
+  More info on this bug can be found at:
+  
+    http://gcc.gnu.org/ml/gcc-patches/2003-09/msg00853.html
 
 *gcc-3.3.1-r3 (20 Sep 2003)
 
