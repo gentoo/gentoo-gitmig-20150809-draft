@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.346 2004/05/05 02:13:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.347 2004/05/05 03:24:25 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -27,6 +27,7 @@ app-emulation/wine:nptl - support for the Native POSIX Threading Library built i
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
+app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/grass:nviz - support GLw functionality
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-misc/workrave:no-exercises - Disable exercises support
@@ -149,7 +150,7 @@ media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
-media-libs/libao:mmap - (experimental) Enable memory-mapped I/O 
+media-libs/libao:mmap - (experimental) Enable memory-mapped I/O
 media-libs/libgd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
 media-libs/libsdl:libcaca - Add support for colored ASCII-art graphics
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
@@ -262,10 +263,10 @@ net-p2p/bittorrent-theshadow:nopsyco - Disable PSYCO usage even if psyco is inst
 net-p2p/bittorrent-theshadow:psyco - Depend on PSYCO
 net-p2p/mldonkey:mldonkeypango - enable pango patches for mldonkey
 net-p2p/nicotine:geoip - Enable GeoIP support
-net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
-net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/hostap-driver:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap-driver:hostap-noplx - Set to not install hostap_plx driver
+net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
+net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-www/apache:threads - Enable thread support
 net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
@@ -311,7 +312,6 @@ sys-apps/partmage:nologin - Do not include login support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:uclibc - Compile with uclibc
-sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-devel/gcc-config:debug - activate verbose commandline output of the wrapper in gcc-config
 sys-devel/gcc-config:hardened - enable environment aware wrapper for comfortable PIE and SSP building
@@ -321,7 +321,6 @@ sys-devel/gcc:hardened - improve PIE (position independent executables) and SSP 
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
-ys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/hardened-gcc:debug - activate verbose commandline output of the default PIE SSP hardened-gcc wrapper
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
@@ -378,3 +377,4 @@ x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
+ys-devel/gdb:objc - Build support for the Objective C code language
