@@ -1,11 +1,13 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.10 2002/09/09 14:04:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.11 2002/09/23 11:36:54 jmorgan Exp $
 
 *iptables-1.2.7a (27 Aug 2002)
 
-  09 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : 
+  23 Sep 2002; Jack Morgan <jmorgan@gentoo.org> iptables-1.2.7a.ebuild : 
+  Added sparc/sparc64 keywords
 
+  09 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : 
   Cleaned up configurationfiles and ebuild, added blocke's changes to -r1 into this version.
 
   08 Sep 2002; Bruce A. Locke <blocke@shivan.org> iptables-1.2.6a-r3.ebuild, iptables-1.2.7a-r2, files/iptables.confd-2, files/iptables.init-2
