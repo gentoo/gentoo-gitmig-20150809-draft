@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.91.ebuild,v 1.2 2003/11/26 14:10:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.91.ebuild,v 1.3 2004/01/02 20:55:43 aliz Exp $
 
 inherit flag-o-matic
 
@@ -17,10 +17,11 @@ IUSE="gtk avi dv quicktime sdl X 3dnow mmx sse"
 DEPEND="media-libs/jpeg
 	>=sys-apps/sed-4
 	=dev-libs/glib-1.2*
-	x86? ( media-libs/libmovtar )
-	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 dev-lang/nasm )
-	3dnow? ( dev-lang/nasm )
-	sse? ( dev-lang/nasm )
+	x86? ( media-libs/libmovtar
+		mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 dev-lang/nasm )
+		3dnow? ( dev-lang/nasm )
+		sse? ( dev-lang/nasm )
+	)
 	gtk? ( =x11-libs/gtk+-1.2* )
 	avi? ( >=media-video/avifile-0.7.38 )
 	dv? ( >=media-libs/libdv-0.99 )
@@ -29,7 +30,9 @@ DEPEND="media-libs/jpeg
 	X? ( x11-base/xfree )"
 
 src_unpack() {
-	unpack ${A} && cd "${S}"
+	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-fPIC.patch
 #	epatch "${FILESDIR}/no-x11-lib.patch"
 }
 
@@ -45,11 +48,14 @@ src_compile() {
 	if [ "`use dv`" ] ; then
 		myconf="${myconf} --with-dv=/usr"
 	fi
-	if [ "`use mmx`" -o "`use 3dnow`" -o "`use sse`" ] ; then
-		myconf="${myconf} --enable-simd-accel"
-	fi
-	if [ "`use mmx`" ] ; then
-		myconf="${myconf} --with-jpeg-mmx=/usr/include/jpeg-mmx"
+
+	if [ "`use x86`" ]; then
+		if [ "`use mmx`" -o "`use 3dnow`" -o "`use sse`" ] ; then
+			myconf="${myconf} --enable-simd-accel"
+		fi
+		if [ "`use mmx`" ] ; then
+			myconf="${myconf} --with-jpeg-mmx=/usr/include/jpeg-mmx"
+		fi
 	fi
 
 	econf ${myconf}
