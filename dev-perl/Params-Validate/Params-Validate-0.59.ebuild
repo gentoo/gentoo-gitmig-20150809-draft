@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-0.59.ebuild,v 1.7 2004/07/14 19:59:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-0.59.ebuild,v 1.8 2005/03/12 11:03:50 corsair Exp $
 
 inherit perl-module
 
