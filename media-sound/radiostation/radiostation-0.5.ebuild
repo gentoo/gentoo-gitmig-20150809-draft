@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.8 2004/07/13 07:46:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.9 2004/09/15 17:20:52 eradicator Exp $
 
 IUSE="debug kde"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mindx.dyndns.org/kde/radio/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="x86 amd64 sparc"
 
 # We don't inherit kde because we might not need to install the kde
 # related components, and if that's the case, we don't want to accidently

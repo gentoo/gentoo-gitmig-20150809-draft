@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/noxmms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/ChangeLog,v 1.5 2004/06/25 00:15:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/ChangeLog,v 1.6 2004/09/15 17:17:35 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> noxmms-1.2.7.ebuild:
+  Stable amd64, sparc.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> noxmms-1.2.7.ebuild:
   Stable x86.

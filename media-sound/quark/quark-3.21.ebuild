@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.6 2004/07/20 06:09:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.7 2004/09/15 17:20:21 eradicator Exp $
+
+IUSE=""
 
 inherit gnome2
 
@@ -8,9 +10,8 @@ DESCRIPTION="Quark is the Anti-GUI Music Player with a cool Docklet!"
 SRC_URI="http://quark.nerdnest.org/${P}.tar.gz"
 HOMEPAGE="http://quark.nerdnest.org/"
 SLOT="0"
-IUSE=""
 
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~alpha sparc amd64"
 
 LICENSE="GPL-2"
 
