@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.6.ebuild,v 1.2 2004/09/02 16:47:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.6.ebuild,v 1.3 2004/09/28 22:10:47 latexer Exp $
 
 IUSE="xgetdefault"
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~sparc ~mips ~amd64 ppc"
 
 DEPEND="virtual/libc
 	virtual/x11
-	app-text/yodl"
+	dev-lang/perl"
 
 src_compile() {
 	local term
