@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0_rc2.ebuild,v 1.2 2004/10/18 12:33:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.1 2004/11/08 09:31:28 radek Exp $
 
 inherit eutils
 
-MYPV="${PV/_r/}"
 MYPN="ZopeX3"
 
 DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
 HOMEPAGE="http://www.zope.org"
-SRC_URI="http://www.zope.org/Products/${MYPN}/${MYPV}/${MYPN}-${MYPV}.tgz"
+SRC_URI="http://www.zope.org/Products/${MYPN}/${PV}final/${MYPN}-${PV}.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 IUSE=""
@@ -23,7 +22,7 @@ DEPEND="${RDEPEND}
 virtual/libc
 >=sys-apps/sed-4.0.5"
 
-S="${WORKDIR}/${MYPN}-${MYPV}"
+S="${WORKDIR}/${MYPN}-${PV}"
 ZS_DIR=${ROOT%/}/usr/lib
 ZSERVDIR=${ZS_DIR}/${PN}-${PV}
 ZSKELDIR=${ZSERVDIR}/zopeskel
@@ -64,8 +63,8 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "Be warned that this release is able to create default instance for You."
-	einfo "Please use 'ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config' for instance creation"
+	einfo "This release ($PN) can create default instance. Please use command shown below:"
+	einfo "  ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 }
 
 pkg_prerm() {
