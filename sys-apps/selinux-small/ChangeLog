@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.9 2003/04/23 21:42:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.10 2003/05/06 14:03:33 pebenito Exp $
+
+*selinux-small-2003011510-r4 (06 May 2003)
+
+  06 May 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003011510-r4.ebuild:
+  New rev to close #20325. Moved devfsd-se.so to /lib/devfsd. Adjusted devfs.d
+  conf file appropriately.
 
 *selinux-small-2003011510-r3 (11 Apr 2003)
 
