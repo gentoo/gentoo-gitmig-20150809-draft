@@ -1,7 +1,21 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.8 2003/10/02 08:51:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.9 2003/12/29 09:18:56 seemant Exp $
 
+*dictd-1.9.7 (29 Dec 2003)
+
+  29 Dec 2003; Seemant Kulleen <seemant@gentoo.org> dictd-1.5.5-r6.ebuild,
+  dictd-1.8.0.ebuild, dictd-1.9.7.ebuild, files/1.5.5-r2/dict.conf,
+  files/1.5.5-r2/dictd-run, files/1.5.5-r2/dictd.conf,
+  files/1.5.5-r2/site.info, files/1.5.5-r2/svc-dictd,
+  files/1.5.5-r3/dict.conf, files/1.5.5-r3/dictd.conf,
+  files/1.5.5-r3/rc.dictd, files/1.5.5-r3/site.info, files/1.5.5-r6/dict.conf,
+  files/1.5.5-r6/dictd.conf, files/1.5.5-r6/dictd.confd,
+  files/1.5.5-r6/dictd.rc6, files/1.5.5-r6/site.info, files/1.9.7/dict.conf,
+  files/1.9.7/dictd, files/1.9.7/dictd.conf, files/1.9.7/dictd.confd,
+  files/1.9.7/site.info:
+  version bump, thanks to: José Romildo Malaquias <romildo@uber.com.br> in bug
+  #36638
 
 *dictd-1.8.0 (14 Dec 2002)
 
