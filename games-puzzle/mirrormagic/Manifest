@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3d26411147ef3c39390d1c746d7829d7 ChangeLog 718
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 0676a526ba500d95b4f9af683daf7eeb mirrormagic-2.0.2.ebuild 1314
+MD5 28065bdba88b9bfea641e27e63ccd156 mirrormagic-2.0.2.ebuild 1291
 MD5 e164643d1c4780689578a96706b24b50 files/digest-mirrormagic-2.0.2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB4Z7DroRuSHgZdywRAmykAJ9ZpuWCW5X/CC/htwJQ6M/bFIVsSACfWwg+
+G8sng6IMQ0vtZhNCswJIZ9c=
+=DHFk
+-----END PGP SIGNATURE-----
