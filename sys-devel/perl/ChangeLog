@@ -1,12 +1,23 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.7 2002/07/28 15:15:28 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.8 2002/08/05 09:57:05 pvdabeel Exp $
 
 *perl-5.8.0 (28 Jul 2002)
 
+  05 Aug 2002; pvdabeel <pvdabeel@gentoo.org> : fix header
+
   28 Jul 2002; Maik Schreiber <blizzy@gentoo.org> : version bump
 
+*perl-5.6.1-r6 (04 Aug 2002)
+
+  05 Aug 2002; pvdabeel <pvdabee@gentoo.org> : Added ppc keyword
+  
+  05 Aug 2002; pvdabeel <pvdabee@gentoo.org> : changelog entry
+
 *perl-5.6.1-r5 (25 Jul 2002)
+
+  05 Aug 2002; pvdabeel <pvdabeel@gentoo.org> :
+  fix header
 
   26 Jul 2002; Spider <spider@gentoo.org> :
   fix SRC_URI to become pub/CPAN instead of pub/perl/CPAN
@@ -15,6 +26,9 @@
   minor patch to make it build on my gcc 3.1-r8 system
   
 *perl-5.6.1-r4 (20 May 2002)
+
+  05 Aug 2002; pvdabeel <pvdabeel@gentoo.org> : 
+  fix header
 
   26 Jul 2002; Spider <spider@gentoo.org> :
   fix SRC_URI to become pub/CPAN instead of pub/perl/CPAN
