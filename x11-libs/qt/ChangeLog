@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.123 2004/02/14 15:44:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.124 2004/02/16 18:24:46 caleb Exp $
+
+*qt-3.3.0-r1 (16 Feb 2004)
+
+  16 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0-r1.ebuild:
+  Ok, I'm reverting the behavior back to -prefix $QTBASE from $D$QTBASE.
+  It causes less breakage, at the expense of some linking problems during
+  the emerge.  We'll have to figure out how to work around those when
+  the time comes.
+  
+  Also, disable icc compilation as it seems to be totally broken.
 
   14 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0.ebuild:
   Change back to the way it was with -libdir settings. I'll figure out a way
