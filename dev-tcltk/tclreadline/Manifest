@@ -1,3 +1,3 @@
-MD5 b007ea7aaece083152af195758328c97 ChangeLog 864
-MD5 c6394cc2b9e861798bbfdf55f1e486f4 tclreadline-2.1.0.ebuild 699
 MD5 5cbb8072ea7afd2e7abd0d33b724cb87 files/digest-tclreadline-2.1.0 69
+MD5 755f7c6ba1e3c48951585dab7b81b734 tclreadline-2.1.0.ebuild 699
+MD5 b007ea7aaece083152af195758328c97 ChangeLog 864
