@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.1.24.ebuild,v 1.2 2004/03/14 10:30:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.1.24.ebuild,v 1.3 2004/05/11 04:10:37 weeve Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.analytics.washington.edu/downloads/ess/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="virtual/emacs
 	app-text/texi2html
