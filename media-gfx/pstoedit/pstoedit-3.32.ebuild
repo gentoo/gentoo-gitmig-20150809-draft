@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.32.ebuild,v 1.8 2004/01/31 09:58:47 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.32.ebuild,v 1.9 2004/01/31 10:01:27 obz Exp $
 
 inherit libtool
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 src_unpack() {
 
 	unpack ${A}; cd ${S}
-	# remove the -pedantic flag, see bug #39575
+	# remove the -pedantic flag, see bug #39557
 	sed -i -e "s/\-pedantic//" configure
 
 }
