@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.39 2003/06/14 03:21:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.40 2003/07/01 17:10:21 todd Exp $
 
 *openssl-0.9.6j (23 May 2003)
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> openssl-0.9.6j.ebuild :
+  set stable on sparc
 
   14 Jun 2003; Guy Martin <gmsoft@gentoo.org> openssl-0.9.6j.ebuild :
   Added a build fix for people running a 64bit kernel.
