@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/vtwm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/ChangeLog,v 1.4 2004/05/05 09:19:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/ChangeLog,v 1.5 2004/06/19 02:43:36 weeve Exp $
+
+  18 Jun 2004; Jason Wever <weeve@gentoo.org> vtwm-5.4.6a.ebuild:
+  Stable on sparc.
 
   05 May 2004; Mamoru KOMACHI <usata@gentoo.org> vtwm-5.4.6a.ebuild:
   Stable on alpha. Don't assign default to S
