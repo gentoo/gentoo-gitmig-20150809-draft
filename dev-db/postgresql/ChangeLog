@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.19 2002/07/24 17:13:06 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.20 2002/07/28 13:20:11 stubear Exp $
 
 * postgresql-7.2.1-r2.ebuild (24 Jul 2002)
 
@@ -8,6 +8,7 @@
 
   Added cjk flag to enable multibyte characters. Changed If [ "`use foo`" ] 
   statement to use foo && ...
+  (CJK support suggested by Masamoto Nakano <nakano@mail.club.ne.jp>)
 
 *postgresql-7.2-r3 (02 Jul 2002)
 
