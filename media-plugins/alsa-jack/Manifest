@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b2645f85c84631b9b9e19c39162552e ChangeLog 2764
-MD5 59676d1c31b03134495e2abef0d45f14 alsa-jack-1.0.6.ebuild 867
-MD5 5fd1e02c772ba92e40d096aa766a8e37 alsa-jack-1.0.7.ebuild 868
+MD5 ddcbdbcb5736c4643589e42319da2c71 ChangeLog 2853
 MD5 cd3e3675041ca85df2ac4c385f12e599 alsa-jack-1.0.5.ebuild 883
+MD5 9b9057052687bb90d72d02b59fa79d21 alsa-jack-1.0.6.ebuild 863
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 5fd1e02c772ba92e40d096aa766a8e37 alsa-jack-1.0.7.ebuild 868
+MD5 446ddecdcb2f56eec8683f1294749061 files/digest-alsa-jack-1.0.5 67
 MD5 5d0f60405a57450fdd98ceb5d4398056 files/digest-alsa-jack-1.0.6 67
 MD5 86565eb0601b611f39adb8f5ad47b622 files/digest-alsa-jack-1.0.7 67
-MD5 446ddecdcb2f56eec8683f1294749061 files/digest-alsa-jack-1.0.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBojYdArHZZzCEUG0RAnzJAJ9erfq/mSOEg2kOYU1dCXF49CUgSQCfR1F3
-uKdZuYKcYrrEQ/fBapueng0=
-=ccGH
------END PGP SIGNATURE-----
