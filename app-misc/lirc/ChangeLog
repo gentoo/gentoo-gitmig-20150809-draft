@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/lirc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.1 2002/07/14 14:34:10 lostlogic Exp $
+
+*lirc-0.6.5 (11 Jul 2002)
+
+  09 JuL 2002; Georg Sauthoff <g_sauthoff@web.de> lirc-0.6.5.ebuild, files/lircd,
+  files/lirc-0.6.5-gentoo.diff: Initial ebuild.
