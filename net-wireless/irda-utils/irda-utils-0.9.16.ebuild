@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.16.ebuild,v 1.4 2005/02/08 12:41:22 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.16.ebuild,v 1.5 2005/02/08 14:42:45 brix Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/irda-utils-rh1.patch
 	epatch ${FILESDIR}/irda-utils-gcc3.4-fix.patch
+	epatch ${FILESDIR}/${P}-irkbd.patch
 }
 
 src_compile() {
