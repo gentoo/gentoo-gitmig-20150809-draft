@@ -1,4 +1,5 @@
-MD5 b0879467842149fda0eb7ccea27b6a64 files/digest-springgraph-79 61
-MD5 a3597db256479e3273047d2e9c994b9e springgraph-79.ebuild 708
-MD5 42c2fb7f91d8ce9cda257039eb93c1cd ChangeLog 396
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/Manifest,v 1.4 2004/01/05 01:59:34 robbat2 Exp $
+MD5 d9d9533124b7ade429a33656750968f2 springgraph-79.ebuild 718
+MD5 2a2153e21e77d8516ab93af7a754562c ChangeLog 490
 MD5 33972e24d3f8c3621bd32c36ba6e8b6c metadata.xml 716
+MD5 b0879467842149fda0eb7ccea27b6a64 files/digest-springgraph-79 61
