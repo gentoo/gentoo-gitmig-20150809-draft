@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.0.ebuild,v 1.1 2003/10/12 23:21:24 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.0.ebuild,v 1.2 2003/11/05 21:33:39 usata Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ceres.dti.ne.jp/~knak/yc.html"
 SRC_URI="http://www.ceres.dti.ne.jp/~knak/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/emacs
 	>=app-i18n/canna-3.6"
@@ -32,6 +32,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	elisp-site-regen
 	einfo "See /usr/share/doc/${P}/sample.dot.emacs.gz."
 	einfo ""
 	einfo "And If you use unix domain socket for connecting the canna server, "
@@ -43,7 +44,6 @@ pkg_postinst() {
 	einfo "  CANNASERVER_OPTS=\"-inet\""
 	einfo "  And create /etc/hosts.canna."
 	einfo "  (sample is /usr/share/doc/${P}/sample.hosts.canna.gz)"
-	elisp-site-regen
 }
 
 pkg_postrm() {
