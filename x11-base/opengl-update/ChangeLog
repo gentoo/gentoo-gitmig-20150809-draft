@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.48 2004/11/12 18:08:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.49 2004/11/30 02:10:00 cyfred Exp $
+
+*opengl-update-2.0_pre3 (30 Nov 2004)
+
+  30 Nov 2004; Andrew Bevitt <cyfred@gentoo.org> +files/opengl-update-1.8.2,
+  +files/opengl-update-2.0_pre3, +opengl-update-1.8.2.ebuild,
+  +opengl-update-2.0_pre3.ebuild:
+  Changes to the NPTL detection mechanism.
 
   12 Nov 2004; Ferris McCormick <fmccor@gentoo.org>
   opengl-update-1.8.1-r1.ebuild:
