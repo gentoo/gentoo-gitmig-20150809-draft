@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.42 2004/02/17 18:36:27 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.43 2004/02/18 18:09:35 johnm Exp $
+
+*gentoo-dev-sources-2.6.3 (18 Feb 2004)
+
+  18 Feb 2004; John Mylchreest <johnm@gentoo.org>
+  gentoo-dev-sources-2.6.3.ebuild, gentoo-dev-sources-2.6.3_rc3.ebuild,
+  gentoo-dev-sources-2.6.3_rc4.ebuild:
+  bump to 2.6.3 stable and fix for munmap vulnerability
 
 *gentoo-dev-sources-2.6.3_rc4 (17 Feb 2004)
 
