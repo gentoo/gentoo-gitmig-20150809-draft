@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/tdb-1.0.6.ebuild,v 1.11 2003/10/04 14:17:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/tdb-1.0.6.ebuild,v 1.12 2003/10/04 14:53:34 agriffis Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="A Trivial Database"
 SRC_URI="mirror://sourceforge/tdb/${P}.tar.gz"
@@ -17,6 +19,10 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S}
 	epatch ${FILESDIR}/tdb-1.0.6-gcc3.patch || die
+
+	if use alpha; then
+		gnuconfig_update || die "gnuconfig_update failed"
+	fi
 }
 
 src_install() {
