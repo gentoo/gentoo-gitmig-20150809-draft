@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/beaver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.5 2003/02/12 03:45:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.6 2003/03/10 09:21:53 aliz Exp $
+
+*beaver-0.2.6 (10 Mar 2003)
+
+  10 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump. Found by Matt Rinsch <gfunkmonk@mochamail.com> in #15794.
 
 *beaver-0.2.4 (13 Aug 2002)
 
