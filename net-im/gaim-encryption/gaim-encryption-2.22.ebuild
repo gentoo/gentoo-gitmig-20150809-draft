@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.22.ebuild,v 1.1 2004/03/15 01:48:19 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.22.ebuild,v 1.2 2004/04/06 03:10:34 vapier Exp $
 
-IUSE=""
+inherit flag-o-matic
 
 DESCRIPTION="GAIM Encryption PlugIn"
 HOMEPAGE="http://gaim-encryption.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~alpha ~ia64 ~hppa ~mips"
 
 DEPEND=">=net-im/gaim-0.75-r8
-		|| ( dev-libs/nss net-www/mozilla )"
+	|| ( dev-libs/nss net-www/mozilla )"
 
 src_compile() {
-
 	local myconf
 	myconf="--with-gaim=/usr/include/gaim"
 
@@ -40,5 +38,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "Install failed"
-	dodoc CHANGELOG COPYING INSTALL NOTES README TODO VERSION WISHLIST
+	dodoc CHANGELOG INSTALL NOTES README TODO VERSION WISHLIST
 }
