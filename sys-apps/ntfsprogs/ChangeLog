@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/linux-ntfs
+# ChangeLog for sys-apps/ntfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ntfsprogs/ChangeLog,v 1.2 2003/06/01 04:41:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ntfsprogs/ChangeLog,v 1.3 2003/06/01 04:46:04 lostlogic Exp $
 
 *ntfsprogs-1.7.1 (31 May 2003)
 
