@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.36 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.37 2004/06/28 00:06:09 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -86,7 +86,7 @@ RDEPEND="${RDEPEND}
                   >=media-libs/libpng-1.2.5 )
    gd? ( >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
    gdbm? ( >=sys-libs/gdbm-1.8.0 )
-   !alpha? ( java? ( =virtual/jdk-1.4* dev-java/java-config ) )
+   !alpha? ( !amd64 ( java? ( =virtual/jdk-1.4* dev-java/java-config ) )
    jpeg? ( >=media-libs/jpeg-6b )
    ldap? ( >=net-nds/openldap-1.2.11 )
    mysql? ( >=dev-db/mysql-3.23.26 )
@@ -157,6 +157,7 @@ DEPEND="${DEPEND} !dev-libs/libiconv"
 # this is because dev-php/php provides all of the PEAR stuff and some other
 # required odds and ends, and only as of this version number.
 PHP_PROVIDER_PKG="dev-php/php"
+PHP_PROVIDER_PKG_MINPVR="4.3.4-r2"
 php-sapi_is_providerbuild() {
 	if [ "${CATEGORY}/${PN}" == "${PHP_PROVIDER_PKG}" ]; then
 		return 0
@@ -164,7 +165,7 @@ php-sapi_is_providerbuild() {
 		return 1
 	fi
 }
-php-sapi_is_providerbuild || PDEPEND="${PDEPEND} >=${PHP_PROVIDER_PKG}-4.3.4-r2"
+php-sapi_is_providerbuild || PDEPEND="${PDEPEND} >=${PHP_PROVIDER_PKG}-${PHP_PROVIDER_PKG_MINPVR}"
 
 #export this here so we can use it
 myconf="${myconf}"
@@ -275,7 +276,7 @@ php-sapi_src_compile() {
 
 	[ -f "/proc/self/stat" ] || die "You need /proc mounted for configure to complete correctly!"
 
-	use java && use !alpha && php-sapi_check_java_config
+	use java && use !alpha && use !amd64 && php-sapi_check_java_config
 
 	if use berkdb; then
 		einfo "Enabling NBDM"
@@ -305,6 +306,8 @@ php-sapi_src_compile() {
 	use x86 && myconf="${myconf} `use_with fdftk fdftk /opt/fdftk-6.0`"
 	use !alpha && myconf="${myconf} `use_with java java ${JAVA_HOME}`"
 	myconf="${myconf} `use_with mcal mcal /usr`"
+	# fix bug 55150, our mcal is PAM-enabled
+	use mcal && use pam && !use imap && LDFLAGS="${LDFLAGS} -lpam"
 	[ -n "${INFORMIXDIR}" ] && myconf="${myconf} `use_with informix informix ${INFORMIXDIR}`"
 	[ -n "${ORACLE_HOME}" ] && myconf="${myconf} `use_with oci8 oci8 ${ORACLE_HOME}`"
 	myconf="${myconf} `use_with odbc unixODBC /usr`"
@@ -522,7 +525,7 @@ php-sapi_src_install() {
 	mv ${D}/usr/bin/php-config ${D}/usr/bin/php-config.${PN}
 	# these files are provided solely by the PHP provider ebuild
 	php-sapi_is_providerbuild && dosym /usr/bin/php-config.${PN} /usr/bin/php-config
-	php-sapi_is_providerbuild || rm ${D}/usr/bin/{phpize,phpextdist}
+	php-sapi_is_providerbuild || rm -rf ${D}/usr/bin/{phpize,phpextdist} ${D}/usr/lib/php/build
 
 	# get the extension dir
 	PHPEXTDIR="`${D}/usr/bin/php-config.${PN} --extension-dir`"
@@ -580,15 +583,18 @@ php-sapi_src_install() {
 	#
 	# This is where we install header files that PHP itself doesn't install,
 	# but which PECL packages depend on
-
-	for x in ext/mbstring/libmbfl/mbfl/mbfilter.h ext/mbstring/libmbfl/mbfl/mbfl_defs.h ext/mbstring/libmbfl/mbfl/mbfl_consts.h ext/mbstring/libmbfl/mbfl/mbfl_allocators.h ext/mbstring/libmbfl/mbfl/mbfl_encoding.h ext/mbstring/libmbfl/mbfl/mbfl_language.h ext/mbstring/libmbfl/mbfl/mbfl_string.h ext/mbstring/libmbfl/mbfl/mbfl_convert.h ext/mbstring/libmbfl/mbfl/mbfl_ident.h ext/mbstring/libmbfl/mbfl/mbfl_memory_device.h; do
-		my_headerdir="/usr/include/php/`dirname $x`"
-		echo "$my_headerdir"
-		if [ ! -d "${D}$my_headerdir" ]; then
-			mkdir -p ${D}$my_headerdir
-		fi
-		cp $x ${D}/usr/include/php/$x
-	done
+	if php-sapi_is_providerbuild; then
+		for x in ext/mbstring/libmbfl/mbfl/mbfilter.h ext/mbstring/libmbfl/mbfl/mbfl_defs.h ext/mbstring/libmbfl/mbfl/mbfl_consts.h ext/mbstring/libmbfl/mbfl/mbfl_allocators.h ext/mbstring/libmbfl/mbfl/mbfl_encoding.h ext/mbstring/libmbfl/mbfl/mbfl_language.h ext/mbstring/libmbfl/mbfl/mbfl_string.h ext/mbstring/libmbfl/mbfl/mbfl_convert.h ext/mbstring/libmbfl/mbfl/mbfl_ident.h ext/mbstring/libmbfl/mbfl/mbfl_memory_device.h; do
+			my_headerdir="/usr/include/php/`dirname $x`"
+			#echo "$my_headerdir"
+			if [ ! -d "${D}$my_headerdir" ]; then
+				mkdir -p ${D}$my_headerdir
+			fi
+			cp $x ${D}/usr/include/php/$x
+		done
+	else
+		rm -rf ${D}/usr/include/php/
+	fi
 
 	if php-sapi_is_providerbuild; then
 		einfo "Fixing PEAR cache location"
@@ -602,6 +608,9 @@ php-sapi_src_install() {
 		einfo "Removing duplicate PEAR conf file"
 		rm -f ${D}/etc/pear.conf 2>/dev/null
 	fi
+
+	# clean up documentation
+	php-sapi_is_providerbuild || rm -rf ${D}/usr/share/man/man1/php.1*
 }
 
 php-sapi_pkg_preinst() {
