@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r2.ebuild,v 1.5 2004/08/08 18:07:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r2.ebuild,v 1.6 2004/11/12 00:43:07 langthang Exp $
 
 inherit eutils
 IUSE="apache2"
@@ -111,9 +111,7 @@ pkg_postinst() {
 	enewuser mailman 280 /bin/false ${INSTALLDIR} mailman -G cron -c "mailman"
 	cd ${INSTALLDIR}
 	bin/update
-	einfo "*********************************************** *"
 	einfo "Running \`${INSTALLDIR}/bin/check_perms -f\` *"
-	einfo "*********************************************** *"
 	bin/check_perms -f
 	einfo ""
 	einfo "Please read /usr/share/doc/${PF}/README.gentoo.gz for additional"

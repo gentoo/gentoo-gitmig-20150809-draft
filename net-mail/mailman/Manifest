@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9fb9cb7efd215fcca4ed096e27391255 mailman-2.1.5-r2.ebuild 4161
-MD5 71a1612183cbbf31d44f267338547d34 ChangeLog 6443
+MD5 e50164714c283b3cd5581049887094c3 mailman-2.1.5-r2.ebuild 4047
+MD5 d9472f6d29cde4c60797693c25abb487 ChangeLog 6559
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 ea0c850a55a563d90a520ab52809112f files/README.gentoo 4963
 MD5 1c839f4abbbe57c6ffc915fc8dc3018c files/mailman-2.1.5-directory-check.patch 641
@@ -10,9 +10,9 @@ MD5 3089c1f0f8d91abdd612997b085959eb files/mailman.conf 385
 MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r2 63
 MD5 ce6d06f51e3da34e92048369e9fe14d2 files/mailman.rc 597
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBFvYC5FrxP71izLARAqpmAJ9YRcL2ZCAVCAK1kSIb9r9jS+pfgACfaCt+
-S5q6NcMqZEtS9HE4klq74b4=
-=XYKn
+iD8DBQFBlAcS5FrxP71izLARAgpJAKClMdc5NQkP3ZYOB6y7B82WPdJycQCgilXr
+W7OGzxV5v/3H1S7aXw9nx8w=
+=5Sju
 -----END PGP SIGNATURE-----
