@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.5.1.ebuild,v 1.4 2005/01/10 06:50:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.5.1.ebuild,v 1.5 2005/03/04 23:29:29 ciaranm Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND="virtual/editor
 	selinux? ( sys-libs/libselinux )
 	pam? ( >=sys-libs/pam-0.77 )"
 RDEPEND="!virtual/cron
-	>=sys-apps/cronbase-0.2.1-r3
+	>=sys-process/cronbase-0.2.1-r3
 	virtual/mta"
 PROVIDE="virtual/cron"
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.41 2005/02/19 20:45:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.42 2005/03/04 23:30:41 ciaranm Exp $
+
+  04 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> dcron-2.9-r2.ebuild:
+  Move sys-apps/cronbase -> sys-process/cronbase
 
 *dcron-2.9-r4 (19 Feb 2005)
 

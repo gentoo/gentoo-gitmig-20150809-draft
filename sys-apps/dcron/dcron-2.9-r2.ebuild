@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.21 2005/01/10 06:49:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.22 2005/03/04 23:30:41 ciaranm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	>=sys-apps/portage-2.0.51"
 RDEPEND="!virtual/cron
-	>=sys-apps/cronbase-0.2.1-r3
+	>=sys-process/cronbase-0.2.1-r3
 	virtual/mta"
 PROVIDE="virtual/cron"
 

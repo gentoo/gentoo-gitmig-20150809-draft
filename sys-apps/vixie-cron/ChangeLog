@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.56 2005/02/23 11:17:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.57 2005/03/04 23:28:11 ciaranm Exp $
+
+  04 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  vixie-cron-3.0.1-r4.ebuild, vixie-cron-3.0.1-r5.ebuild,
+  vixie-cron-4.1-r4.ebuild:
+  Move sys-apps/cronbase -> sys-process/cronbase
 
 *vixie-cron-4.1-r6 (23 Feb 2005)
 

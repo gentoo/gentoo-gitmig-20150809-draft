@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5p.ebuild,v 1.2 2005/01/29 06:36:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5p.ebuild,v 1.3 2005/03/04 23:31:53 ciaranm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE="nls"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
-RDEPEND="sys-apps/cronbase
+RDEPEND="sys-process/cronbase
 	>=sys-apps/groff-1.18
 	nls? ( sys-devel/gettext )"
 
