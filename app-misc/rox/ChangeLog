@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.34 2004/09/25 15:27:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.35 2004/09/26 16:11:39 pyrania Exp $
+
+*rox-2.1.3 (26 Sep 2004)
+
+  26 Sep 2004; <pyrania@gentoo.org> +rox-2.1.3.ebuild:
+  Version bump.
 
   25 Sep 2004; Jason Wever <weeve@gentoo.org> rox-2.1.1.ebuild,
   rox-2.1.2-r1.ebuild, rox-2.1.2.ebuild:
