@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <stubear@gentoo.org> (16 Aug 2002)
+# masked for testing
+=app-text/xpdf-japanese-1
+
 # <mjc@gentoo.org> (15 Aug 2002)
 # new ebuild, thanks to carpaski =)
 net-www/apache2
