@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r10.ebuild,v 1.4 2002/09/13 09:19:01 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r11.ebuild,v 1.1 2002/09/13 09:19:01 hannes Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -65,12 +65,10 @@ SLOT="0"
 LICENSE="vim"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND="dev-util/cscope
+DEPEND="=app-editors/vim-core-6.1
+	dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2
 	gpm?	( >=sys-libs/gpm-1.19.3 )
-	gnome?	( gnome-base/gnome-libs )
-	gtk?	( =x11-libs/gtk+-1.2* )
-	X?		( x11-base/xfree )
 	perl?	( sys-devel/perl )
 	python? ( dev-lang/python )
 	ruby?	( >=dev-lang/ruby-1.6.4 )"
@@ -119,14 +117,10 @@ src_unpack() {
 			done
 			;;
 	esac
-	
-	# Also apply the ebuild syntax patch, until this is in Vim proper
-	cd $S/runtime
-	patch -f -p0 < ${FILESDIR}/ebuild.patch
-
 }
 
 src_compile() {
+
 	local myconf
 	use nls    && myconf="--enable-multibyte" || myconf="--disable-nls"
 	use perl   && myconf="$myconf --enable-perlinterp"
@@ -140,35 +134,11 @@ src_compile() {
 # fixed most of gpm so it should be fine.
 	use gpm    || myconf="$myconf --disable-gpm"
 
-	#
-	# First, build a gui version, this will install as /usr/bin/gvim
-	#
-	if use gnome; then
-		guiconf="--enable-gui=gnome --with-x"
-	elif use gtk; then
-		guiconf="--enable-gui=gtk --with-x"
-	elif use X; then
-		guiconf="--enable-gui=athena --with-x"
-	else
-		# No gui version will be built
-		guiconf=""
-	fi
-	
 	# This should fix a sandbox violation. 
 	addwrite /dev/pty/*
 	
-	if [ -n "$guiconf" ]; then
-		./configure \
-			--prefix=/usr --mandir=/usr/share/man --host=$CHOST \
-			--with-features=huge --enable-cscope $myconf $guiconf \
-			|| die "gvim configure failed"
-		# Parallel make does not work
-		make || die "gvim make failed"
-		mv src/vim src/gvim
-	fi
-
 	#
-	# Second, build a nogui version, this will install as /usr/bin/vim
+	# Build a nogui version, this will install as /usr/bin/vim
 	#
 	./configure \
 		--prefix=/usr --mandir=/usr/share/man --host=$CHOST \
@@ -180,25 +150,14 @@ src_compile() {
 }
 
 src_install() {
-	# Install the nogui version
-	mkdir -p $D/usr/{bin,share/man/man1,share/vim}
-	make install STRIP=true DESTDIR=$D \
-		BINDIR=/usr/bin MANDIR=/usr/share/man DATADIR=/usr/share
-	# Install the gui version, if it was built
-	if [ -f src/gvim ]; then
-		install -m755 src/gvim $D/usr/bin/gvim
-		ln -s gvim $D/usr/bin/gvimdiff
-	fi
-	# Docs
-	dodoc README*
-	cd $D/usr/share/doc/$PF
-	ln -s ../../vim/*/doc $P
-	# Default vimrc and gvimrc (who cares if gvim wasn't built)
+	dobin src/vim
+	ln -s vimdiff ${D}/usr/bin/vimdiff
+	# Default vimrc
 	insinto /usr/share/vim
-	doins ${FILESDIR}/vimrc ${FILESDIR}/gvimrc
+	doins ${FILESDIR}/vimrc
+}
 
-	#fix problems with vim not finding its data files.
-	dodir /etc/env.d
-	echo "VIMRUNTIME=/usr/share/vim/vim${vim_version/.}" \
-		>${D}/etc/env.d/40vim
+pkg_postinst() {
+	einfo ""
+	einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
 }

@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.17 2002/08/16 17:49:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.18 2002/09/13 09:19:01 hannes Exp $
+
+*vim-6.1-r11.ebuild (12 Sep 2002)
+
+  12 Sep 2002; Hannes Mehnert <hannes@gentoo.org> vim-6.1-r11.ebuild:
+  splitted vim into gvim, vim and vim-core
 
 vim-6.1-r10.ebuild (4 Aug 2002)
 
