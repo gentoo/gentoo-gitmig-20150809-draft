@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81.ebuild,v 1.10 2004/07/01 11:46:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81.ebuild,v 1.11 2004/07/13 18:20:47 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/multisync/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="evo irmc opie ldap"
+IUSE="evo gtk2 irmc ldap opie"
 # evo   - evolution plugin
 # irmc  - bluetooth/irmc/irda plugin ( local )
 # opie  - opie plugin                ( local )
