@@ -1,6 +1,6 @@
-# ChangeLog for media-gfx/scrot
+# ChangeLog for dev-perl/Crypt-OpenSSL-Random
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.5 2002/12/13 10:56:34 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.6 2002/12/17 19:20:40 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
