@@ -1,5 +1,4 @@
-#! /usr/bin/perl
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/files/cupsomatic,v 1.2 2002/05/04 22:45:53 woodchip Exp $
+#!/usr/bin/perl
 
 # The above Perl path may vary on your system; fix it!!!
 
@@ -62,8 +61,8 @@ my $logfile = "/tmp/prnlog";
 #
 # cupsomatic Perl Foomatic filter script for CUPS
 #
-# Copyright 2000-2001 Grant Taylor <gtaylor@picante.com>
-#                   & Till Kamppeter <till.kamppeter@gmx.net>
+# Copyright 2000-2001 Grant Taylor <gtaylor at picante dot com>
+#                   & Till Kamppeter <till dot kamppeter at gmx dot net>
 #
 #  This program is free software; you can redistribute it and/or modify it
 #  under the terms of the GNU General Public License as published by the Free
@@ -116,27 +115,84 @@ if ($debug) {
     $logh=*STDERR;
 }
 
-# This piece of PostScript code (created 2001 by Michael Allerhand
-# (michael.allerhand@ed.ac.uk) lets GhostScript output the page
-# accounting information which CUPS needs on standard error.
+# This piece of PostScript code (initial idea 2001 by Michael Allerhand
+# (michael.allerhand at ed dot ac dot uk, vastly improved by Till Kamppeter
+# in 2002) lets GhostScript output the page accounting information which
+# CUPS needs on standard error.
 
 $ps_accounting = $conf{ps_accounting} 
 	if defined(%conf) and defined $conf{ps_accounting};
 my $accounting_prolog = $ps_accounting ? "[{
 %% Code for writing CUPS accounting tags on standard error
-/cupsWrite {
+
+/cupsPSLevel2 % Determine whether we can do PostScript level 2 or newer
+    systemdict/languagelevel 2 copy
+    known{get exec}{pop pop 1}ifelse 2 ge
+def
+
+/cupsGetNumCopies { % Read the number of Copies requested for the current
+		    % page
+    cupsPSLevel2
+    {
+	% PS Level 2+: Get number of copies from Page Device dictionary
+	currentpagedevice /NumCopies get
+    }
+    {
+	% PS Level 1: Number of copies not in Page Device dictionary
+	null
+    }
+    ifelse
+    % Check whether the number is defined, if it is \"null\" use #copies 
+    % instead
+    dup null eq {
+	pop #copies
+    }
+    if
+    % Check whether the number is defined now, if it is still \"null\" use 1
+    % instead
+    dup null eq {
+	pop 1
+    } if
+} bind def
+
+/cupsWrite { % write a string onto standard error
     (%stderr) (w) file
     exch writestring
 } bind def
-/cupsEndPage {
-    (PAGE: ) cupsWrite
-    pop % ignore reason code
-    1 add 40 string cvs cupsWrite
-    ( ) cupsWrite
-    #copies 40 string cvs cupsWrite
-    (\\n) cupsWrite
-    true
+
+/cupsEndPage { % write page log info when we were invoked by \"showpage\"
+	       % or \"copypage\" return \"true\" or \"false\" as we had no
+	       % redefinition of \"EndPage\"
+
+    2 ne % If the reason code is 0 or 1, we have finshed a page
+	 % (we were invoked by \"showpage\" or \"copypage\"), 
+         % write log info and exit with \"true\" to push out the page.
+	 % In case of reason code 2, we are invoked during device
+	 % deactivation (happens also at a \"setpagedevice\" call),
+	 % here we should not log and return \"false\"
+    {
+	% write \"Page <# of page> <# of copies><LF>\" to stderr
+	(PAGE: ) cupsWrite
+	% we must add 1 here, the number on the stack is the number
+	% of \"showpage\" already executed during this job
+	1 add 40 string cvs cupsWrite
+	% space
+	( ) cupsWrite
+	% get the number of copies for this page
+	cupsGetNumCopies 40 string cvs cupsWrite
+	% line feed
+	(\\n) cupsWrite
+	% page should be ejected
+	true
+    }
+    {
+	pop % ignore the number of pages already printed
+	% do not eject paper
+	false
+    }
+    ifelse
 } bind def
+
 <</EndPage{cupsEndPage}>>setpagedevice
 } stopped cleartomark
 " : "";
@@ -145,10 +201,16 @@ my $accounting_prolog = $ps_accounting ? "[{
 # Flush everything immediately.
 $|=1;
 
-my $comversion='$Revision: 1.2 $';
+my $comversion='$Revision: 1.3 $';
 #'# Fix emacs syntax highlighting
 print $logh "Cupsomatic backend version $comversion running...\n";
-print $logh "called with arguments: '",join("','",@ARGV),"'\n";
+# print the command line only in debug mode, Mac OS X adds very many
+# options so that CUPS cannot handle the output of the command line
+# in its log files. If CUPS encounters a line with more than 1024 characters
+# sent into its log files, it aborts the job with an error.
+if ($debug) {
+    print $logh "called with arguments: '",join("','",@ARGV),"'\n";
+}
 my $jobtitle = $ARGV[2];
 # Check for and handle inputfile vs stdin
 my $inputfile = $ARGV[5];
@@ -189,12 +251,6 @@ eval join('',@datablob) || do {
 };
 
 $dat = $VAR1;
-
-# Accounting does not work with the "Postscript" driver, there one would
-# get an extra blank page with every job.
-if ($dat->{'driver'} eq "Postscript") {
-    $accounting_prolog = "";
-}
 
 # Determine with which command non-PostScript files are converted to PostScript
 if ($enscriptcommand eq "") {
@@ -266,144 +322,17 @@ if ($debug) {
     }
 }
 
-## Next, examine the postscript job itself for traces of command-line
-## and pjl options.  Sometimes these don't show up in the CUPS filter
-## 'options' argument!
-
-# Examination strategy: read some lines from STDIN.  Put those lines
-# onto the stack @examined_stuff, which will be stuffed into
-# Ghostscript/whatever later on.
-
-print $logh "Seaerching job for option settings ...\n";
-my $maxlines = 1000;            # how many lines to examine?
-my $more_stuff = 1;             # there is more stuff in stdin.
-my $linect = 0;                 # how many lines have we examined?
-my $last_setpagedevice = 0;     # Find the last line with "setpagedevice"
-                                # and insert the accounting code afterwards.
-                                # If there is a "setpagedevice" after the
-                                # accounting code, an empty page would be 
-                                # printed (and even accounted).
-my $insertprepend = 1;          # number of the line where the PostScript
-                                # commands of numerical options should be
-                                # inserted. This must be after the option
-                                # settings inserted by CUPS, because when one
-                                # uses a PPD-O-Matic PPD file and sets a
-                                # numerical option to a value which is not
-                                # under the choices of the PPD representation
-                                # of the option CUPS inserts the PostScript
-                                # code for the default setting.
-my $inheader = 1;               # Are we still in the header formed by the
-                                # option PostScript code inserted by CUPS?
-my $infeature = 0;              # Are we in a "[{ %%BeginFeature ... } stopped
-                                # cleartomark" structure?
-
-do {
-    my $line;
-    if ($line=<STDIN>) {
-        if ($linect == 0) {
-            # Line zero should be postscript leader
-            die 'job does not start with Postscript %! thing'
-                if $line !~ m/^.?%!/; # There can be a Windows control char
-	                              # before "%!"
-
-        } else {
-            if (($line =~ m/\%\%BeginFeature:\s+\*?([^\s=]+)\s+(\S.*)$/) ||
-		($line =~ m/\%\%\s*FoomaticOpt:\s*([^\s=]+)\s*=\s*(\S.*)$/)) {
-                my ($option, $value) = ($1, $2);
-
-                # OK, we have an option.  If it's not a
-                # *ostscript-style option (ie, it's command-line or
-                # PJL) then we should note that fact, since the
-                # attribute-to-filteroption passing in CUPS is kind of
-                # funky, especially wrt boolean options.  
-
-		print $logh "Found: $line";
-                if ($arg=argbyname($option)) {
-		    print $logh "   Option: $option=$value";
-                    if ($arg->{'style'} ne 'G') {
-			print $logh " --> Setting option\n";
-                        if ($arg->{'type'} eq 'bool') {
-                            # Boolean options are 1 or 0
-                            if ($value eq 'True') {
-                                $arg->{'userval'} = 1;
-                            } elsif ($value eq 'False') {
-                                $arg->{'userval'} = 0;
-                            } else {
-                                warn "job contained boolean option",
-                                " with neither True nor False value!?";
-                            }
-                        } elsif (($arg->{'type'} eq 'enum') ||
-				 ($arg->{'type'} eq 'int') ||
-				 ($arg->{'type'} eq 'float')) {
-                            # enum options go as the value, unless 
-                            # they were Unknown...
-			    # Same with numerical options, they can appear
-			    # here when the client has used the Adobe-
-			    # compliant PPD-O-MATIC PPD file.
-
-                            if (lc($value) eq 'unknown') {
-                                $arg->{'userval'} = undef;
-                            } else {
-                                $arg->{'userval'} = $value;
-                            }
-                        }
-                    } else {
-                        # it is a postscript style option, presuemably
-                        # all applied for us and such...
-			print $logh " --> Option will be set by PostScript interpreter\n";
-                    }
-                } else {
-                    # This option is unknown to us.  WTF?
-                    warn "unknown option $option=$value found in the job";
-                }
-
-	    } elsif ($line =~ /^[^\%]*setpagedevice/) {
-		# When "setpagedevice" is in the line, update the line number
-		# of the last "setpagedevice"
-		$last_setpagedevice = $linect;
-	    } elsif ($line =~ /^\s*\[\{/) {
-		# Initial line ("[{") of an option setting inserted by CUPS
-		$infeature ++;
-	    } elsif ($line =~ /\}\s*stopped\s+cleartomark\s*$/) {
-		# Final line ("} stopped cleartomark") of an option setting
-		# inserted by CUPS
-		$infeature --;
-	    } elsif (($inheader) && (!$infeature) && ($line !~ /^\s*$/)) {
-		# Found end of option settings inserted by CUPS
-		$inheader = 0;
-		$insertprepend = $linect;
-	    }
-	}
-
-        # Push the line onto the stack for later spitting up...
-        push (@examined_stuff, $line);
-        $linect++;
-
-    } else {
-        # EOF!
-        $more_stuff = 0;
-    }
-    # CUPS has inserted more than 1000 ($maxlines) lines with option
-    # settings, so increase $maxlines.
-    if (($linect >= $maxlines) && ($inheader)) {
-	$maxlines += 200;
-    }
-} while (($linect < $maxlines) and ($more_stuff != 0));
-
-# Insert accounting code after the line with the last "setpagedevice" and
-# after the point where the PostScript code for the numerical options will
-# be inserted
-splice(@examined_stuff, 
-       $last_setpagedevice >= $insertprepend ? 
-       $last_setpagedevice + 1 : $insertprepend,
-       0, 
-       $accounting_prolog);
-
 ## We get various options as argument 5.  Parse these out.  User-set
 ## values get stored as 'userval' in the argument's structure
 my $optstr = $ARGV[4];
 
-print $logh "options: ->$optstr<-\n";
+# print the options string only in debug mode, Mac OS X adds very many
+# options so that CUPS cannot handle the output of the option string
+# in its log files. If CUPS encounters a line with more than 1024 characters
+# sent into its log files, it aborts the job with an error.
+if ($debug) {
+    print $logh "options: ->$optstr<-\n";
+}
 
 # Parse them.  They're foo='bar nut', or foo, or 'bar nut', or
 # foo:'bar nut' (when GPR was used) all with spaces between...
@@ -434,7 +363,10 @@ push(@opts, split(/ /,$optstr));
 for (@opts) {
     print $logh "Pondering option `$_'\n";
 
-    if (lc($_) eq 'docs') {
+    if ((lc($_) =~ /^\s*docs\s*$/) ||
+	(lc($_) =~ /^\s*docs\s*=\s*true\s*$/)) {
+	# The second one is necessary becuase CUPS 1.1.15 or newer sees
+	# "docs" as boolean option and modifies it to "docs=true"
         $do_docs = 1;
         last;
     }
@@ -565,6 +497,125 @@ for (@opts) {
     }
 }
 
+
+## Next, examine the postscript job itself for traces of command-line
+## and pjl options.  Sometimes these don't show up in the CUPS filter
+## 'options' argument!
+
+# Examination strategy: read some lines from STDIN.  Put those lines
+# onto the stack @examined_stuff, which will be stuffed into
+# Ghostscript/whatever later on.
+
+print $logh "Seaerching job for option settings ...\n";
+my $maxlines = 1000;            # how many lines to examine?
+my $more_stuff = 1;             # there is more stuff in stdin.
+my $linect = 0;                 # how many lines have we examined?
+my $insertprepend = 1;          # number of the line where the PostScript
+                                # commands of numerical options should be
+                                # inserted. This must be after the option
+                                # settings inserted by CUPS, because when one
+                                # uses a PPD-O-Matic PPD file and sets a
+                                # numerical option to a value which is not
+                                # under the choices of the PPD representation
+                                # of the option CUPS inserts the PostScript
+                                # code for the default setting.
+my $inheader = 1;               # Are we still in the header formed by the
+                                # option PostScript code inserted by CUPS?
+my $infeature = 0;              # Are we in a "[{ %%BeginFeature ... } stopped
+                                # cleartomark" structure?
+
+do {
+    my $line;
+    if ($line=<STDIN>) {
+        if ($linect == 0) {
+            # Line zero should be postscript leader
+            die 'job does not start with Postscript %! thing'
+                if $line !~ m/^.?%!/; # There can be a Windows control char
+	                              # before "%!"
+	    # Insert page accounting code in the beginning of the
+	    # PostScript data stream
+	    $line .= $accounting_prolog;
+        } else {
+            if (($line =~ m/\%\%BeginFeature:\s+\*?([^\s=]+)\s+(\S.*)$/) ||
+		($line =~ m/\%\%\s*FoomaticOpt:\s*([^\s=]+)\s*=\s*(\S.*)$/)) {
+                my ($option, $value) = ($1, $2);
+
+                # OK, we have an option.  If it's not a
+                # *ostscript-style option (ie, it's command-line or
+                # PJL) then we should note that fact, since the
+                # attribute-to-filteroption passing in CUPS is kind of
+                # funky, especially wrt boolean options.  
+
+		print $logh "Found: $line";
+                if ($arg=argbyname($option)) {
+		    print $logh "   Option: $option=$value";
+                    if ($arg->{'style'} ne 'G') {
+			print $logh " --> Setting option\n";
+                        if ($arg->{'type'} eq 'bool') {
+                            # Boolean options are 1 or 0
+                            if ($value eq 'True') {
+                                $arg->{'userval'} = 1;
+                            } elsif ($value eq 'False') {
+                                $arg->{'userval'} = 0;
+                            } else {
+                                warn "job contained boolean option",
+                                " with neither True nor False value!?";
+                            }
+                        } elsif (($arg->{'type'} eq 'enum') ||
+				 ($arg->{'type'} eq 'int') ||
+				 ($arg->{'type'} eq 'float')) {
+                            # enum options go as the value, unless 
+                            # they were Unknown...
+			    # Same with numerical options, they can appear
+			    # here when the client has used the Adobe-
+			    # compliant PPD-O-MATIC PPD file.
+
+                            if (lc($value) eq 'unknown') {
+                                $arg->{'userval'} = undef;
+                            } else {
+                                $arg->{'userval'} = $value;
+                            }
+                        }
+                    } else {
+                        # it is a postscript style option, presuemably
+                        # all applied for us and such...
+			print $logh " --> Option will be set by PostScript interpreter\n";
+                    }
+                } else {
+                    # This option is unknown to us.  WTF?
+                    warn "unknown option $option=$value found in the job";
+                }
+
+	    } elsif ($line =~ /^\s*\[\{/) {
+		# Initial line ("[{") of an option setting inserted by CUPS
+		$infeature ++;
+	    } elsif ($line =~ /\}\s*stopped\s+cleartomark\s*$/) {
+		# Final line ("} stopped cleartomark") of an option setting
+		# inserted by CUPS
+		$infeature --;
+	    } elsif (($inheader) && (!$infeature) &&
+		     ($line !~ /^\s*$/) && ($line =~ /ESPrc/)) {
+		# Found end of option settings inserted by CUPS
+		# (CUPS defines the "ESPrc" function then)
+		$inheader = 0;
+		$insertprepend = $linect;
+	    }
+	}
+
+        # Push the line onto the stack for later spitting up...
+        push (@examined_stuff, $line);
+        $linect++;
+
+    } else {
+        # EOF!
+        $more_stuff = 0;
+    }
+    # CUPS has inserted more than 1000 ($maxlines) lines with option
+    # settings, so increase $maxlines.
+    if (($linect >= $maxlines) && ($inheader)) {
+	$maxlines += 200;
+    }
+} while (($linect < $maxlines) and ($more_stuff != 0));
 
 #### Everything below here ought to be generic for any printing
 #### system?  It just uses the $dat structure, with user values filled
@@ -755,13 +806,26 @@ print $logh "$0: inserted option PS code:\n", @prepend;
 
 if (defined($dat->{'pjl'})) {
 
+    # PJL "frame" with "JOB" and "EOJ" commands
+
     # Stick beginning of job cruft on the front of the pjl stuff...
-    unshift (@pjlprepend,
-             "\033%-12345X\@PJL JOB NAME=\"CUPSOMATIC\"\n");
+    #unshift (@pjlprepend,
+    #         "\033%-12345X\@PJL JOB NAME=\"CUPSOMATIC\"\n");
 
     # Arrange for PJL EOJ command at end of job
+    #push (@pjlappend,
+    #      "\33%-12345X\@PJL RESET\n\@PJL EOJ\n");
+
+    # PJL "frame" without "JOB" and "EOJ" commands. We use this because
+    # some printers do not support these commands
+
+    # Stick beginning of job cruft on the front of the pjl stuff...
+    unshift (@pjlprepend,
+             "\033%-12345X\@PJL\n");
+
+    # Arrange for PJL RESET command at end of job
     push (@pjlappend,
-          "\33%-12345X\@PJL RESET\n\@PJL EOJ\n");
+          "\33%-12345X\@PJL RESET\n");
 
     print $logh "PJL: ", @pjlprepend, "<job data>\n", @pjlappend;
 }

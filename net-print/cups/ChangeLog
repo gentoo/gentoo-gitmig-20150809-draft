@@ -1,8 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.19 2002/10/10 19:29:21 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.20 2002/10/12 06:22:47 woodchip Exp $
 
 *cups-1.1.16 (10 Oct 2002)
+
+  12 Oct 2002; Donny Davies <woodchip@gentoo.org> cupsomatic :
+  Update to latest http://www.linuxprinting.org/cupsomatic; close #7350.
 
   10 Oct 2002; Nick Hadaway <raker@gentoo.org> cups-1.1.16.ebuild :
   Thanks to g2boojum for jumping right on this.  This version bump is
@@ -20,7 +23,6 @@
   Added ppc to keywords
 
   19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
   added ghostscript as an rdepend
 
 *cups-1.1.15 (17 Jun 2002)
@@ -29,7 +31,6 @@
   Added KEYWORDS.
 
   17 Jun 2002; mjc <mjc@gentoo.org> :
-
   New CUPS.
 
 *cups-1.1.14-r4 (4 May 2002)
@@ -38,38 +39,32 @@
   Added KEYWORDS.
 
   4 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Added LICENSE, SLOT, $Headers, pam_stack aware pam.d/ file.
 
 *cups-1.1.14-r3 (1 May 2002)
 
   1 May 2002; Jon Nelson <jnelson@gentoo.org> :
-
   Added patch to allow for unstripped builds.
 
 *cups-1.1.14-r3 (30 Apr 2002)
 
   30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> :
-
   Unzip html doc.
 
 *cups-1.1.14-r3 (12 Apr 2002)
 
   12 Apr 2002; Spider <spider@gentoo.org>:
-
   New revision with updated libpng dependency forces a rebuild.
 
 *cups-1.1.14-r2 (29 Mar 2002)
 
   29 Mar 2002; Donny Davies <woodchip@gentoo.org> :
-
   Add link to the html docs.  Cleaned syntax of several statements.  No need to
   recompile/reinstall unless you enjoy that sort of thing ;)
 
 *cups-1.1.14-r1 (7 Mar 2002)
 
   7 Mar 2002; Geert Bevin <gbevin@gentoo.org>:
-  
   Added support for the foomagic printer filters.
 
 *cups-1.1.14 (16 Feb 2002)
@@ -95,7 +90,6 @@
 *cups-1.1.13 (1 Feb 2002)
 
   1 Feb 2002; Donny Davies <woodchip@gentoo.org> /etc/cupsd.conf:
-
   Updated to the latest release, cups-1.1.13.  Now installing the html docs
   into /usr/share/cups/docs, which will let people upgrade cups in the
   future without having to change /etc/cupsd.conf to point to a new
@@ -103,8 +97,7 @@
 
 *cups-1.1.12 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
