@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/kdirstat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.5 2003/02/12 05:01:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.6 2003/08/12 03:04:24 caleb Exp $
+
+*kdirstat-2.3.7 (11 Aug 2003)
+
+  11 Aug 2003; Caleb Tennis <caleb@gentoo.org>:
+  New version.
 
 *kdirstat-2.2.0 (1 Jun 2002)
 
