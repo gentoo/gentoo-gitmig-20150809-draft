@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/clvm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.1 2005/03/25 02:32:08 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.2 2005/03/25 11:51:20 swegener Exp $
+
+  25 Mar 2005; Sven Wegener <swegener@gentoo.org> clvm-2.00.33.ebuild:
+  Fixed invalid atoms in *DEPEND. Use MY_P. Install initscript in correct
+  location.
 
 *clvm-2.00.33 (25 Mar 2005)
 
