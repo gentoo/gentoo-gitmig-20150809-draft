@@ -1,5 +1,5 @@
 ####################################################################
-#         Copyright 1999-2003 Gentoo Technologies, Inc.            #
+#            Copyright 1999-2004 Gentoo Foundation                 #
 # Distributed under the terms of the GNU General Public License v2 #
 ####################################################################
 # chpax	prefix	description
@@ -26,32 +26,36 @@ CHPAX="/sbin/chpax /sbin/paxctl"
 VERBOSE="no"
 
 PSE_wine=/usr/lib/wine/bin/{wine{,build,clipsrv,dump,gcc,server,wrap,-{k,p}thread},w{mc,rc,idl}}
-PSE_blkdwn_java=/opt/blackdown-{jdk-*/{,jre/},jre-*/}bin/{java{,_vm,c},keytool,kinit,klist,ktab,orbd,policytool,rmi{d,registry},servertool,tnameserv}
+# Shotgun java, because stuff breaks
+#PSE_java=/opt/blackdown-{jdk-*/{,jre/},jre-*/}bin/{java{,_vm,c},keytool,kinit,klist,ktab,orbd,policytool,rmi{d,registry},servertool,tnameserv,*}
+PSE_java=/opt/*-{jdk-*/{,jre/},jre-*/}bin/*
 PSE_openoffice=/opt/OpenOffice.org*/program/soffice.bin
-PSE_misc="/usr/X11R6/bin/XFree86 /usr/bin/{,g}mplayer \
- /usr/bin/blender /usr/bin/gxine /usr/bin/xine /usr/bin/totem /usr/bin/acme \
- /usr/bin/gnome-sound-recorder /usr/games/bin/bzflag /usr/bin/xfce4-panel"
+PSE_misc="/usr/X11R6/bin/XFree86 /usr/bin/blender /usr/bin/gxine \
+ /usr/bin/xine /usr/bin/totem /usr/bin/acme /usr/bin/gnome-sound-recorder \
+ /usr/games/bin/bzflag /usr/bin/xfce4-panel /usr/bin/{g,}xine"
 
-RE_blkdwn_java="${SPE_blkdwn_java} /usr/X11R6/bin/XFree86"
+RE_java="${PSE_java}"
+RE_misc="/usr/X11R6/bin/XFree86"
 
-ME_blkdwn_java="${PSE_blkdwn_java}"
+ME_java="${PSE_java}"
 # or plug-ins don't work
 ME_misc="/usr/lib/MozillaFirefox/firefox{,-bin} /usr/bin/xmms"
 
-XE_blkdwn_java="${PSE_blkdwn_java} /usr/X11R6/bin/XFree86"
+XE_java="${PSE_java} /usr/X11R6/bin/XFree86"
 
 
 ####################################
 # Settings are really applied here #
 ####################################
 
-PS_EXEC_EXEMPT="${PSE_misc} ${PSE_wine} ${PSE_blkdwn_java} ${PSE_openoffice}"
+PS_EXEC_EXEMPT="${PSE_misc} ${PSE_wine} ${PSE_java} ${PSE_openoffice}"
 PAGEEXEC_EXEMPT=""
 TRAMPOLINE_EXEMPT=""
-MPROTECT_EXEMPT="${ME_blkdwn_java} ${ME_misc}"
-RANDMMAP_EXEMPT="${RE_blkdwn_java}"
+MPROTECT_EXEMPT="${ME_java} ${ME_misc}"
+RANDMMAP_EXEMPT="${RE_java} ${RE_misc}"
 SEGMEXEC_EXEMPT="${PAGEEXEC_EXEMPT}"
-RANDEXEC_EXEMPT="${XE_blkdwn_java}"
+RANDEXEC_EXEMPT="${XE_java}"
 
 # when zero flag mask is set to "yes" it will remove all pax flags from all files on reboot/stop
-ZERO_FLAG_MASK="yes"
+#ZERO_FLAG_MASK="yes"
+
