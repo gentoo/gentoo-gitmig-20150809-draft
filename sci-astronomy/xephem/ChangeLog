@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/xephem
+# ChangeLog for sci-astronomy/xephem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.1 2004/12/24 04:27:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.2 2004/12/24 20:01:08 swegener Exp $
 
 *xephem-3.6.2 (23 Dec 2004)
 
