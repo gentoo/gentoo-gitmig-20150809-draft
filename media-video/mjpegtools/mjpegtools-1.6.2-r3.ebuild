@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.13 2005/01/11 12:16:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.14 2005/02/06 17:27:56 corsair Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="x86 ppc amd64 ~sparc ~ppc64"
+KEYWORDS="x86 ppc amd64 ~sparc ppc64"
 IUSE="gtk avi dv quicktime sdl X yv12 3dnow mmx sse"
 
 DEPEND="media-libs/jpeg
