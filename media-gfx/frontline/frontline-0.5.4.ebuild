@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/frontline/frontline-0.5.4.ebuild,v 1.2 2003/04/06 07:37:16 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/frontline/frontline-0.5.4.ebuild,v 1.3 2004/04/26 02:13:40 agriffis Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND=">=media-gfx/autotrace-0.31.1
 	>=media-libs/imlib-1.8.2"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake -j 1 || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/gimp-freetype-0.2-r3.ebuild,v 1.6 2004/04/18 19:41:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/gimp-freetype-0.2-r3.ebuild,v 1.7 2004/04/26 02:14:18 agriffis Exp $
 
 IUSE="nls"
 
@@ -26,7 +26,7 @@ src_compile() {
 	econf \
 		--sysconfdir=/etc/gimp/1.2/ \
 		--with-gimp-exec-prefix=/usr \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die
 }
