@@ -1,5 +1,15 @@
-MD5 cec4c312093948a0943f829f20861267 ChangeLog 518
-MD5 7eef24b8ecaf5bbc19d749be1f804d3d libclthreads-1.0.0.ebuild 740
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5167f0a1046031bde257e24c9132f8e9 ChangeLog 645
+MD5 e9f8175d4c52946ecbb0c9be247e6554 libclthreads-1.0.0.ebuild 755
 MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
 MD5 d2fd270bc43b10320feef7399cfb76c5 files/digest-libclthreads-1.0.0 66
 MD5 15457e6804d7144803490194460b485d files/libclthreads-1.0.0-makefile.patch 863
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm9IoArHZZzCEUG0RAixAAJ489rrU1UkadwFHUHZ+TwHlTMeDxACeInxq
+0n9EcA0n42cMfcpl/GtVcVM=
+=3X7T
+-----END PGP SIGNATURE-----
