@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.148 2004/11/13 00:41:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.149 2004/11/17 22:25:22 robbat2 Exp $
+
+*mysql-4.1.7 (17 Nov 2004)
+
+  17 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> +mysql-4.1.7.ebuild:
+  bug #62582, new major version, package.masked.
 
   12 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> -mysql-4.0.12.ebuild,
   -mysql-4.0.13-r4.ebuild, -mysql-4.0.14-r1.ebuild, -mysql-4.0.14-r2.ebuild,
