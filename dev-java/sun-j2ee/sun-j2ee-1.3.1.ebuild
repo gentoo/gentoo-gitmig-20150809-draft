@@ -12,7 +12,7 @@ RDEPEND=">=virtual/jre-1.3.1"
 PROVIDE="virtual/j2ee-1.3.1"
 LICENSE="sun-bcla"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
