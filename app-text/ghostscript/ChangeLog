@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.6 2002/04/28 18:40:09 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.7 2002/05/26 14:15:40 verwilst Exp $
+
+*ghostscript-7.05 (26 May 2002
+  26 May: Bart Verwilst: Upgraded to 7.05, added lexmark 3200 driver.. 
+  Closes bugs #2614 and #2698 
 
 *ghostscript-6.53-r2 (28 Apr 2002)
   28 Apr 2002; Jon Nelson <jnelson@gentoo.org>: ghostscript-6.53-r2.ebuild
