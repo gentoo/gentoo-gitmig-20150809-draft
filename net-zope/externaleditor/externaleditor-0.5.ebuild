@@ -9,7 +9,7 @@ HOMEPAGE="http://www.zope.org/Members/Caseman/ExternalEditor/"
 SRC_URI="${HOMEPAGE}/ExternalEditor-${PV}.tgz
 	${HOMEPAGE}/zopeedit-${PV}-src.tgz"
 LICENSE="ZPL"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 ZPROD_LIST="ExternalEditor"
 
