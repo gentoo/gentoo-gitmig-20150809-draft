@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.33.ebuild,v 1.9 2003/02/13 14:35:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.33.ebuild,v 1.10 2003/04/21 23:33:53 mholzer Exp $
 
-S=${WORKDIR}/pine4.33
+S=${WORKDIR}/pine${PV}
 DESCRIPTION="Pine, Pico, Pilot, imapd"
-SRC_URI="ftp://ftp.cac.washington.edu/pine/pine4.33.tar.gz
-	 http://qmail.lightwerk.com/pine-maildir-4.33"
+SRC_URI="ftp://ftp.cac.washington.edu/pine/pine${PV}.tar.gz
+	 http://qmail.nac.net/${P}"
 HOMEPAGE="http://www.washington.edu/pine/"
 
 DEPEND="virtual/glibc
@@ -20,8 +20,8 @@ if [ "`use imap`" ] ; then
 	PROVIDE="virtual/imap"
 fi
 src_unpack() {
-	unpack pine4.33.tar.gz
-	patch -p0 < ${DISTDIR}/pine-maildir-4.33 
+	unpack pine${PV}.tar.gz
+	patch -p0 < ${DISTDIR}/${P}
 	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 	cd ${S}/pine
 	cp makefile.lnx makefile.orig

@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.50.ebuild,v 1.3 2003/02/14 21:32:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.50.ebuild,v 1.4 2003/04/21 23:33:57 mholzer Exp $
 
 inherit eutils
 
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
-SRC_URI="ftp://ftp.cac.washington.edu/pine/pine${PV}.tar.gz"
+SRC_URI="ftp://ftp.cac.washington.edu/pine/pine${PV}.tar.gz
+	mirror://gentoo/${P}"
 HOMEPAGE="http://www.washington.edu/pine/"
 
 SLOT="0"
@@ -27,7 +28,7 @@ src_unpack() {
 	unpack pine${PV}.tar.gz
 	cd ${S}
 
-	epatch ${FILESDIR}/pine-4.50-maildir.patch || die
+	epatch ${DISTDIR}/${P}
 	epatch ${FILESDIR}/imap-4.7c2-flock+maildir.patch || die
 
 	# fix for Home and End keys
@@ -132,4 +133,3 @@ src_install() {
 	docinto html/tech-notes
 	dodoc doc/tech-notes/*.html
 }
-
