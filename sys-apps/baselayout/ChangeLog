@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.57 2003/01/15 01:19:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.58 2003/01/16 03:49:24 weeve Exp $
 
   15 Jan 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.2.ebuild :
 
@@ -24,6 +24,10 @@
   things might break ....  See ChangeLog in /usr/share/doc/$PF for more info.
 
 *baselayout-1.8.5.8 (07 Jan 2003)
+
+  15 Jan 2003; Jason Wever <weeve@gentoo.org> baselayout-1.8.5.8.ebuild :
+
+  Changed ~sparc keyword to sparc.
 
   07 Jan 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.8.ebuild :
 
