@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.26 2003/05/30 01:52:40 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.27 2003/06/24 22:42:42 lu_zero Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -18,13 +18,15 @@ KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
-
+IUSE="${IUSE} doc"
 if [ "${ETYPE}" = "sources" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
 			  >=sys-devel/binutils-2.11.90.0.31 )
-		app-admin/addpatches"
+			doc? ( app-text/docbook-sgml-utils
+				media-gfx/transfig )
+			app-admin/addpatches"
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
 			   tcltk? dev-lang/tk
@@ -65,6 +67,11 @@ kernel_universal_unpack() {
 	    -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
+	
+	cd  ${S}/Documentation/DocBook
+	sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
+			&& mv Makefile.new Makefile
+	cd ${S}
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make distclean || die
