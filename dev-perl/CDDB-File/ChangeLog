@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/CDDB-File
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/ChangeLog,v 1.3 2002/12/17 19:20:24 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/ChangeLog,v 1.4 2003/02/12 06:14:05 vapier Exp $
 
 
 *CDDB-File-1.03 (28 Aug 2002)

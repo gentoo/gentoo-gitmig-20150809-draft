@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Mail-SpamAssassin
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.16 2003/02/02 12:30:26 aliz Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.17 2003/02/12 06:21:15 vapier Exp $
 
 *Mail-SpamAssasin-2.44 (02 Feb 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Heap
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.2 2003/01/03 02:56:40 mcummings Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.3 2003/02/12 06:24:31 vapier Exp $
 
 *Term-ReadLine-Perl-1.0203 (02 Jan 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Locale-gettext
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.5 2002/12/17 19:25:46 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.6 2003/02/12 06:20:25 vapier Exp $
 
 *Locale-gettext-1.01-r1 (24 Oct 2002)
                                                                                                    

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-Twig
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.1 2002/12/22 02:34:13 mcummings Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.2 2003/02/12 06:27:06 vapier Exp $
 
 *XML-Twig-3.09 (21 Dec 2002)
 
