@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/nrg2iso
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.10 2004/12/25 15:56:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.11 2004/12/25 16:00:54 ticho Exp $
+
+  25 Dec 2004; Andrej Kacian <ticho@gentoo.org> nrg2iso-0.4-r1.ebuild:
+  Install some docs.
 
 *nrg2iso-0.1 (25 Dec 2004)
 
