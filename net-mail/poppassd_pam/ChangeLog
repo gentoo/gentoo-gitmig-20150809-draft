@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/poppassd_pam
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_pam/ChangeLog,v 1.1 2003/02/18 19:19:52 raker Exp $
+
+*poppassd_pam-1.0 (18 Feb 2003)
+
+  18 Feb 2003; Nick Hadaway <raker@gentoo.org> poppassd_pam-1.0.ebuild,
+  files/digest-poppassd_pam-1.0, files/poppassd.pam,
+  files/poppassd.xinetd, files/missing-stdio.patch :
+  New ebuild as requested on bug #10283
