@@ -1,0 +1,228 @@
+diff -ru ardour-0.9beta18.3.orig/gtk_ardour/aclocal.m4 ardour-0.9beta18.3/gtk_ardour/aclocal.m4
+--- ardour-0.9beta18.3.orig/gtk_ardour/aclocal.m4	2004-07-22 11:15:43.000000000 +0000
++++ ardour-0.9beta18.3/gtk_ardour/aclocal.m4	2004-07-23 18:44:28.878403696 +0000
+@@ -2756,6 +2756,8 @@
+ dnl figure out how best to optimize
+ dnl 
+ 
++gcc_major_version=$($CC -dumpversion | sed -e 's/\..*//')
++
+ if test "$target_cpu" = "powerpc"; then
+   AC_DEFINE(POWERPC, 1, "Are we running a ppc CPU?")
+   altivecLinux=
+@@ -2770,7 +2772,7 @@
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -mcpu=750 -mmultiple"
+   fi
+-  OPT_FLAGS="$OPTIM_FLAGS -mhard-float -mpowerpc-gfxopt"
++  OPT_FLAGS="$OPT_FLAGS -mhard-float -mpowerpc-gfxopt"
+ elif echo $target_cpu | grep "i*86" >/dev/null; then
+   cat /proc/cpuinfo | grep mmx >/dev/null
+   if test $? = 0; then
+@@ -2790,13 +2792,15 @@
+   elif test "$target_cpu" = "i686"; then
+     OPT_FLAGS="-D_REENTRANT -O3 -march=i686 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+     if test "$gcc_major_version" = "3"; then
+-      OPT_FLAGS="$OPTIM_FLAGS $mmx $sse $dreidnow"
++      OPT_FLAGS="$OPT_FLAGS $mmx $sse $dreidnow"
+     fi
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+   fi
+ fi
+ 
++OPT_FLAGS="$OPT_FLAGS -pipe"
++
+ # LARGEFILE_FLAGS="`getconf LFS_CFLAGS`"
+ LARGEFILE_FLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
+ 
+diff -ru ardour-0.9beta18.3.orig/libs/ardour/aclocal.m4 ardour-0.9beta18.3/libs/ardour/aclocal.m4
+--- ardour-0.9beta18.3.orig/libs/ardour/aclocal.m4	2004-07-22 11:15:18.000000000 +0000
++++ ardour-0.9beta18.3/libs/ardour/aclocal.m4	2004-07-23 18:59:16.276498680 +0000
+@@ -2756,6 +2756,8 @@
+ dnl figure out how best to optimize
+ dnl 
+ 
++gcc_major_version=$($CC -dumpversion | sed -e 's/\..*//')
++
+ if test "$target_cpu" = "powerpc"; then
+   AC_DEFINE(POWERPC, 1, "Are we running a ppc CPU?")
+   altivecLinux=
+@@ -2770,7 +2772,7 @@
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -mcpu=750 -mmultiple"
+   fi
+-  OPT_FLAGS="$OPTIM_FLAGS -mhard-float -mpowerpc-gfxopt"
++  OPT_FLAGS="$OPT_FLAGS -mhard-float -mpowerpc-gfxopt"
+ elif echo $target_cpu | grep "i*86" >/dev/null; then
+   cat /proc/cpuinfo | grep mmx >/dev/null
+   if test $? = 0; then
+@@ -2790,13 +2792,15 @@
+   elif test "$target_cpu" = "i686"; then
+     OPT_FLAGS="-D_REENTRANT -O3 -march=i686 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+     if test "$gcc_major_version" = "3"; then
+-      OPT_FLAGS="$OPTIM_FLAGS $mmx $sse $dreidnow"
++      OPT_FLAGS="$OPT_FLAGS $mmx $sse $dreidnow"
+     fi
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+   fi
+ fi
+ 
++OPT_FLAGS="$OPT_FLAGS -pipe"
++
+ # LARGEFILE_FLAGS="`getconf LFS_CFLAGS`"
+ LARGEFILE_FLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
+ 
+diff -ru ardour-0.9beta18.3.orig/libs/gtkmmext/aclocal.m4 ardour-0.9beta18.3/libs/gtkmmext/aclocal.m4
+--- ardour-0.9beta18.3.orig/libs/gtkmmext/aclocal.m4	2004-07-22 11:15:32.000000000 +0000
++++ ardour-0.9beta18.3/libs/gtkmmext/aclocal.m4	2004-07-23 18:59:35.627556872 +0000
+@@ -2756,6 +2756,8 @@
+ dnl figure out how best to optimize
+ dnl 
+ 
++gcc_major_version=$($CC -dumpversion | sed -e 's/\..*//')
++
+ if test "$target_cpu" = "powerpc"; then
+   AC_DEFINE(POWERPC, 1, "Are we running a ppc CPU?")
+   altivecLinux=
+@@ -2770,7 +2772,7 @@
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -mcpu=750 -mmultiple"
+   fi
+-  OPT_FLAGS="$OPTIM_FLAGS -mhard-float -mpowerpc-gfxopt"
++  OPT_FLAGS="$OPT_FLAGS -mhard-float -mpowerpc-gfxopt"
+ elif echo $target_cpu | grep "i*86" >/dev/null; then
+   cat /proc/cpuinfo | grep mmx >/dev/null
+   if test $? = 0; then
+@@ -2790,13 +2792,15 @@
+   elif test "$target_cpu" = "i686"; then
+     OPT_FLAGS="-D_REENTRANT -O3 -march=i686 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+     if test "$gcc_major_version" = "3"; then
+-      OPT_FLAGS="$OPTIM_FLAGS $mmx $sse $dreidnow"
++      OPT_FLAGS="$OPT_FLAGS $mmx $sse $dreidnow"
+     fi
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+   fi
+ fi
+ 
++OPT_FLAGS="$OPT_FLAGS -pipe"
++
+ # LARGEFILE_FLAGS="`getconf LFS_CFLAGS`"
+ LARGEFILE_FLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
+ 
+diff -ru ardour-0.9beta18.3.orig/libs/midi++/aclocal.m4 ardour-0.9beta18.3/libs/midi++/aclocal.m4
+--- ardour-0.9beta18.3.orig/libs/midi++/aclocal.m4	2004-07-22 11:15:13.000000000 +0000
++++ ardour-0.9beta18.3/libs/midi++/aclocal.m4	2004-07-23 18:59:49.517445288 +0000
+@@ -951,6 +951,8 @@
+ dnl figure out how best to optimize
+ dnl 
+ 
++gcc_major_version=$($CC -dumpversion | sed -e 's/\..*//')
++
+ if test "$target_cpu" = "powerpc"; then
+   AC_DEFINE(POWERPC, 1, "Are we running a ppc CPU?")
+   altivecLinux=
+@@ -965,7 +967,7 @@
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -mcpu=750 -mmultiple"
+   fi
+-  OPT_FLAGS="$OPTIM_FLAGS -mhard-float -mpowerpc-gfxopt"
++  OPT_FLAGS="$OPT_FLAGS -mhard-float -mpowerpc-gfxopt"
+ elif echo $target_cpu | grep "i*86" >/dev/null; then
+   cat /proc/cpuinfo | grep mmx >/dev/null
+   if test $? = 0; then
+@@ -985,13 +987,15 @@
+   elif test "$target_cpu" = "i686"; then
+     OPT_FLAGS="-D_REENTRANT -O3 -march=i686 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+     if test "$gcc_major_version" = "3"; then
+-      OPT_FLAGS="$OPTIM_FLAGS $mmx $sse $dreidnow"
++      OPT_FLAGS="$OPT_FLAGS $mmx $sse $dreidnow"
+     fi
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+   fi
+ fi
+ 
++OPT_FLAGS="$OPT_FLAGS -pipe"
++
+ # LARGEFILE_FLAGS="`getconf LFS_CFLAGS`"
+ LARGEFILE_FLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
+ 
+diff -ru ardour-0.9beta18.3.orig/libs/pbd/aclocal.m4 ardour-0.9beta18.3/libs/pbd/aclocal.m4
+--- ardour-0.9beta18.3.orig/libs/pbd/aclocal.m4	2004-07-22 11:15:06.000000000 +0000
++++ ardour-0.9beta18.3/libs/pbd/aclocal.m4	2004-07-23 18:21:14.026453424 +0000
+@@ -839,6 +839,8 @@
+ dnl figure out how best to optimize
+ dnl 
+ 
++gcc_major_version=$($CC -dumpversion | sed -e 's/\..*//')
++
+ if test "$target_cpu" = "powerpc"; then
+   AC_DEFINE(POWERPC, 1, "Are we running a ppc CPU?")
+   altivecLinux=
+@@ -853,7 +855,7 @@
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -mcpu=750 -mmultiple"
+   fi
+-  OPT_FLAGS="$OPTIM_FLAGS -mhard-float -mpowerpc-gfxopt"
++  OPT_FLAGS="$OPT_FLAGS -mhard-float -mpowerpc-gfxopt"
+ elif echo $target_cpu | grep "i*86" >/dev/null; then
+   cat /proc/cpuinfo | grep mmx >/dev/null
+   if test $? = 0; then
+@@ -873,13 +875,15 @@
+   elif test "$target_cpu" = "i686"; then
+     OPT_FLAGS="-D_REENTRANT -O3 -march=i686 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+     if test "$gcc_major_version" = "3"; then
+-      OPT_FLAGS="$OPTIM_FLAGS $mmx $sse $dreidnow"
++      OPT_FLAGS="$OPT_FLAGS $mmx $sse $dreidnow"
+     fi
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+   fi
+ fi
+ 
++OPT_FLAGS="$OPT_FLAGS -pipe"
++
+ # LARGEFILE_FLAGS="`getconf LFS_CFLAGS`"
+ LARGEFILE_FLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
+ 
+diff -ru ardour-0.9beta18.3.orig/libs/soundtouch/aclocal.m4 ardour-0.9beta18.3/libs/soundtouch/aclocal.m4
+--- ardour-0.9beta18.3.orig/libs/soundtouch/aclocal.m4	2004-07-22 11:15:10.000000000 +0000
++++ ardour-0.9beta18.3/libs/soundtouch/aclocal.m4	2004-07-23 19:00:52.502870048 +0000
+@@ -839,6 +839,8 @@
+ dnl figure out how best to optimize
+ dnl 
+ 
++gcc_major_version=$($CC -dumpversion | sed -e 's/\..*//')
++
+ if test "$target_cpu" = "powerpc"; then
+   AC_DEFINE(POWERPC, 1, "Are we running a ppc CPU?")
+   altivecLinux=
+@@ -853,7 +855,7 @@
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -mcpu=750 -mmultiple"
+   fi
+-  OPT_FLAGS="$OPTIM_FLAGS -mhard-float -mpowerpc-gfxopt"
++  OPT_FLAGS="$OPT_FLAGS -mhard-float -mpowerpc-gfxopt"
+ elif echo $target_cpu | grep "i*86" >/dev/null; then
+   cat /proc/cpuinfo | grep mmx >/dev/null
+   if test $? = 0; then
+@@ -873,13 +875,15 @@
+   elif test "$target_cpu" = "i686"; then
+     OPT_FLAGS="-D_REENTRANT -O3 -march=i686 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+     if test "$gcc_major_version" = "3"; then
+-      OPT_FLAGS="$OPTIM_FLAGS $mmx $sse $dreidnow"
++      OPT_FLAGS="$OPT_FLAGS $mmx $sse $dreidnow"
+     fi
+   else
+     OPT_FLAGS="-D_REENTRANT -O3 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables"
+   fi
+ fi
+ 
++OPT_FLAGS="$OPT_FLAGS -pipe"
++
+ # LARGEFILE_FLAGS="`getconf LFS_CFLAGS`"
+ LARGEFILE_FLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
+ 
