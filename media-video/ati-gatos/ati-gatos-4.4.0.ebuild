@@ -1,28 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.4.0.ebuild,v 1.2 2004/10/04 06:20:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.4.0.ebuild,v 1.3 2004/12/24 04:27:00 vapier Exp $
 
 inherit eutils
-
-IUSE=""
 
 SNAPSHOT=20040930
 MYP=${P}-${SNAPSHOT}
 
 DESCRIPTION="ATI Multimedia-capable drivers for Xorg"
-SRC_URI="mirror://gentoo/${MYP}.tar.bz2"
 HOMEPAGE="http://gatos.sourceforge.net/"
+SRC_URI="mirror://gentoo/${MYP}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
-DEPEND="${DEPEND}
-	>=x11-base/xorg-x11-6.7.0-r1"
+DEPEND=">=x11-base/xorg-x11-6.7.0-r1"
 
 pkg_setup() {
-	if [ ! "`grep sdk /var/db/pkg/x11-base/xorg-x11-[0-9]*/USE`" ]
-	then
+	if ! built_with_use x11-base/xorg-x11 sdk ; then
 		ewarn "This package requires that xorg-x11 was merged with the sdk USE flag enabled."
 		die "Please merge xorg-x11 with the sdk USE flag enabled."
 	fi
@@ -32,11 +29,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if has_version '>=x11-base/xorg-x11-6.7.99*'
-	then
+	if has_version '>=x11-base/xorg-x11-6.7.99*' ; then
 		einfo "Patching ati-gatos for use with >=x11-base/xorg-x11-6.7.99"
 		epatch ${FILESDIR}/${P}-new-xorg.patch
 	fi
+
+	epatch ${FILESDIR}/${P}-prototypes.patch
 
 	# Build makefiles against Xorg SDK
 	imake -I/usr/X11R6/lib/Server/config/cf -DUseInstalled -DXF86DriverSDK
