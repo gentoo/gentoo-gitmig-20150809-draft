@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/ipadic
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.1 2003/06/20 16:44:06 yakina Exp $
+
+*ipadic-2.6.0 (21 Jun 2003)
+
+  21 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> ipadic-2.6.0.ebuild,
+  ChangeLog,Manifest,files/digest-ipadic-2.6.0:
+
+  Initial import. Ebuild submitted by MATSUU Takuto <matsuu@7501.net>
+
