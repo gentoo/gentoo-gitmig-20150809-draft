@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.23 2004/10/14 06:40:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.24 2004/10/14 12:10:33 gmsoft Exp $
+
+  14 Oct 2004; Guy Martin <gmsoft@gentoo.org> boehm-gc-6.3-r1.ebuild:
+  Stable on hppa.
 
   14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> boehm-gc-6.3-r1.ebuild,
   boehm-gc-6.3.ebuild, -boehm-gc-6.3_alpha6.ebuild:
