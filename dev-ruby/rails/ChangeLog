@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.10 2005/03/26 05:05:51 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.11 2005/03/28 17:41:16 pythonhead Exp $
+
+*rails-0.11.1 (28 Mar 2005)
+
+  28 Mar 2005; Rob Cakebread <pythonhead@gentoo.org> +rails-0.11.1.ebuild:
+  Version bump.
 
   26 Mar 2005; Rob Cakebread <pythonhead@gentoo.org> rails-0.11.0-r1.ebuild:
   Added fastcgi support/USE flag
