@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.3 2003/12/16 00:16:57 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.4 2004/01/12 20:38:05 vapier Exp $
 
 inherit games flag-o-matic gcc
 
@@ -25,17 +25,17 @@ S=${WORKDIR}/${PN}_${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	ebegin "Checking if glx patch is needed"
-	$(gcc-getCXX) ${FILESDIR}/glx-test.c
-	local ret=$?
-	[ ${ret} -eq 0 ] || epatch ${FILESDIR}/${PV}-glx.patch
-	eend ${ret}
+	$(gcc-getCXX) ${FILESDIR}/glx-test.c >& /dev/null
+	if [ $? -ne 0 ] ; then
+		epatch ${FILESDIR}/${PV}-glx.patch
+		append-flags -DGL_GLEXT_LEGACY
+	fi
+	has_version '~media-video/nvidia-glx-1.0.5328' && epatch ${FILESDIR}/${PV}-another-glx.patch
 }
 
 src_compile() {
-	append-flags -DGL_GLEXT_LEGACY
 	egamesconf --datadir=${GAMES_DATADIR_BASE} || die
-	make || die
+	emake || die
 }
 
 src_install() {

@@ -1,0 +1,25 @@
+--- myship.cpp.orig	2004-01-12 15:22:58.893377848 -0500
++++ myship.cpp	2004-01-12 15:23:07.262105608 -0500
+@@ -39,9 +39,7 @@
+ extern PFNGLCOMBINERINPUTNVPROC glCombinerInputNV;
+ extern PFNGLCOMBINEROUTPUTNVPROC glCombinerOutputNV;
+ extern PFNGLFINALCOMBINERINPUTNVPROC glFinalCombinerInputNV;
+-#ifdef WIN32
+ extern PFNGLACTIVETEXTUREARBPROC glActiveTextureARB;
+-#endif
+ int MyShip::list_;
+ 
+ 
+--- scene.cpp.orig	2004-01-12 15:23:17.217592144 -0500
++++ scene.cpp	2004-01-12 15:23:25.009407608 -0500
+@@ -63,10 +63,8 @@
+ PFNGLTRACKMATRIXNVPROC glTrackMatrixNV;
+ PFNGLPROGRAMPARAMETER4FNVPROC glProgramParameter4fNV;
+ 
+-#ifdef WIN32
+ PFNGLACTIVETEXTUREARBPROC glActiveTextureARB;
+ PFNGLMULTITEXCOORD2FARBPROC glMultiTexCoord2fARB; 
+-#endif
+ 
+ GLenum glError;
+ 
