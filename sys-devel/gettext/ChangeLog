@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.21 2003/09/17 00:36:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.22 2003/09/17 18:52:43 avenj Exp $
 
   16 Sep 2003; Daniel Robbins <drobbins@gentoo> gettext-0.12.1.ebuild:
   KEYWORDS="-*" since it needs C++ to compile and breaks bootstrap.
@@ -17,6 +17,10 @@
   Version bump.
 
 *gettext-0.11.5-r1 (24 Nov 2002)
+
+  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> gettext-0.11.5-r1.ebuild :
+  ia64 keywords.
+
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> gettext-0.11.5-r1.ebuild:
   set stable on sparc
 
