@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.4 2005/03/30 17:49:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.5 2005/03/31 00:45:49 pythonhead Exp $
+
+  31 Mar 2005; Rob Cakebread <pythonhead@gentoo.org> redcloth-3.0.3.ebuild:
+  Reverted to using MY_P after fixing eclass to recognize MY_P. Closes bug# 87304
 
 *redcloth-3.0.3 (30 Mar 2005)
 
