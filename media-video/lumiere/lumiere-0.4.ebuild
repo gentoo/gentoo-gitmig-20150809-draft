@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/lumiere/lumiere-0.4.0.ebuild,v 1.2 2003/03/20 20:05:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lumiere/lumiere-0.4.ebuild,v 1.1 2003/03/21 17:58:40 mholzer Exp $
 
 inherit gnome2 debug
 
@@ -19,6 +19,8 @@ RDEPEND="media-video/mplayer
 
 DEPEND=">=dev-util/intltool-0.18
 	>=dev-util/pkgconfig-0.12.0
+	>=media-libs/xine-lib-1_beta2
+	>=x11-libs/gtkglarea-1.99.0
 	${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README"
