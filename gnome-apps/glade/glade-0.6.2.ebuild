@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/glade/glade-0.6.2.ebuild,v 1.1 2001/05/05 15:55:56 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/glade/glade-0.6.2.ebuild,v 1.2 2001/05/11 13:07:05 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,7 +11,8 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=x11-libs/gtk+-1.2.8
 	gnome? ( >=gnome-base/gnome-libs-1.2.8
-		 >=gnome-office/gnome-db-0.2.0 )"
+		 >=gnome-office/gnome-db-0.2.0 
+		 >=gnome-base/scrollkeeper-0.2 )"
 
 src_compile() {                           
   cd ${S}
