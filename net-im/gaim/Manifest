@@ -1,6 +1,7 @@
 MD5 bed467c3e7077888cf4fd615c5f47678 gaim-0.67.ebuild 2185
 MD5 3dc9c94c6beb41d2314814297ff004ea gaim-0.72-r2.ebuild 3331
 MD5 fab79b2ce10b79dec1849c7e899ee07f gaim-0.73.ebuild 2968
+MD5 f3bf10a4b97594b8366ba678de0ff557 gaim-0.73-r1.ebuild 2968
 MD5 7f89f602fb6fe4954a39c6909cbf3333 gaim-0.71-r2.ebuild 2658
 MD5 00da5062575561e913be722ee23a1982 gaim-0.72-r1.ebuild 2890
 MD5 9319539d29d9fb3908789ccf6026d7db gaim-0.66-r3.ebuild 1991
@@ -19,6 +20,7 @@ MD5 964ed187fa4d6e26816bf39aeb5cd8f1 files/digest-gaim-0.70-r2 135
 MD5 7b98aff453d6189397e4a822c69389f0 files/digest-gaim-0.71-r2 135
 MD5 58f03af2ad906ca7194b3a57c7648cf9 files/digest-gaim-0.72-r1 135
 MD5 58f03af2ad906ca7194b3a57c7648cf9 files/digest-gaim-0.72-r2 135
+MD5 7ad79542886f9c53682956d6ff2d4c75 files/digest-gaim-0.73-r1 135
 MD5 3eb868476154d28a1123ee91e41fef95 files/gaim-0.72-msn-fixes.patch 1671
 MD5 0b625a0ccaa6c9ec3b7cde1b806fa87d files/gaim-0.71-icq-crash-hack.patch 1584
 MD5 97fa7a76f6bc96c363844ccc57b2bec4 files/gaim_gtkimcontext_patch.diff 1106
