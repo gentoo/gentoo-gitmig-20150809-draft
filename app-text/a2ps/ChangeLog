@@ -1,6 +1,14 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.8 2003/05/23 23:18:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.9 2003/07/15 21:21:22 usata Exp $
+
+*a2ps-4.13b-r5 (16 Jul 2003)
+
+  16 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> a2ps-4.13b-r5.ebuild,
+  files/a2ps-4.13-stdout.diff:
+  Added Japanese support and a patch which makes a2ps print
+  to stdout by default. Ebuild provied by Georgi Georgiev
+  <chutz@chubaka.net> in bug 24264
 
   23 May 2003; Aron Griffis <agriffis@gentoo.org> a2ps-4.13b-r4.ebuild:
   Mark stable on alpha
