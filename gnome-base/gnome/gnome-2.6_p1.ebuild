@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.1 2004/04/20 16:18:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.2 2004/04/20 23:14:41 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -41,7 +41,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=dev-libs/libIDL-0.8.3
 	>=gnome-base/ORBit2-2.10
 
-	>=gnome-base/gconf-2.6
+	>=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-keyring-0.2.1
 	>=gnome-base/gnome-vfs-2.6.1.1
 
@@ -55,8 +55,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/bug-buddy-2.6
 	>=gnome-base/control-center-2.6.1
 
-	>=gnome-base/eel-2.6
-	>=gnome-base/nautilus-2.6
+	>=gnome-base/eel-2.6.1
+	>=gnome-base/nautilus-2.6.1
 
 	>=media-libs/gstreamer-0.8
 	>=media-libs/gst-plugins-0.8-r1
