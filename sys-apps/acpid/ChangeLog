@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/acpid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.5 2002/07/21 18:18:45 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.6 2002/10/16 09:25:24 hanno Exp $
+
+*acpid-1.0.1-r1 (16 Oct 2002)
+
+  16 Oct 2002; Hanno Boeck <hanno@gmx.de> acpid-1.0.1-r1.ebuild :
+  Added use of CFLAGS. Must be tested.
+  Resolves bug #8976.
+
+*acpid-1.0.1 (21 May 2002)
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added -ppc to keywords
@@ -8,8 +16,6 @@
   11 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
 
   Fix kernel virtual .. should not be versioned.
-
-*acpid-1.0.1 (21 May 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> acpid-1.0.1.ebuild :
   Added KEYWORDS, SLOT.
