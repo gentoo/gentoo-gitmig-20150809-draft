@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unrtf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.10 2004/06/24 22:54:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.11 2004/09/24 21:06:14 batlogg Exp $
+
+  24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; unrtf-0.19.3.ebuild:
+  marked as stable on ppc
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> unrtf-0.19.3.ebuild:
   adding s390 keywords
