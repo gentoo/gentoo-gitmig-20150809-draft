@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/dev-db/postgresql/files/postgresql.rc6,v 1.1 2002/01/06 00:53:24 woodchip Exp
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/postgresql.init-7.3.5,v 1.2 2004/02/13 19:26:32 vapier Exp $
 
 depend() {
 	need net
@@ -15,7 +15,7 @@ checkconfig() {
 	fi
 }
 
-start()	{
+start() {
 	checkconfig || return 1
 
 	ebegin "Starting postgres"
@@ -42,13 +42,13 @@ start()	{
 	eend $ret
 }
 
-stop ()	{
+stop() {
 	ebegin "Stopping postgres"
 	su - $PGUSER -c "/usr/bin/pg_ctl stop -D '$PGDATA' -s -m fast"
 	eend $?
 }
 
-svc_restart () {
+svc_restart() {
 	ebegin "Restarting postgres"
 	su - $PGUSER -c "/usr/bin/pg_ctl restart -D '$PGDATA' -s -m fast -l '$PGLOG' -o '$PGOPTS'"
 	eend $?
