@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.5.0.ebuild,v 1.6 2004/06/25 02:44:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.5.0.ebuild,v 1.7 2004/07/15 00:02:07 agriffis Exp $
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
@@ -13,8 +13,6 @@ IUSE="doc"
 DEPEND="=dev-util/subversion-1.0*
 	>=x11-libs/wxGTK-2.4.0
 	doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	# if you compiled subversion without (the) apache2 (flag) and with the berkdb flag
@@ -35,4 +33,3 @@ src_compile() {
 src_install() {
 	einstall || die
 }
-
