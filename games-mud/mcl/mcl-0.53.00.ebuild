@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.4 2004/03/30 11:34:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.5 2004/04/14 20:24:44 mr_bones_ Exp $
 
-inherit games gnuconfig
+inherit eutils gnuconfig games
 
 DESCRIPTION="A console MUD client scriptable in Perl and Python"
 SRC_URI="http://www.andreasen.org/mcl/dist/${P}-src.tar.gz"
