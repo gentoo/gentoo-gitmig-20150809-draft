@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.78.ebuild,v 1.2 2002/11/05 21:21:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.81.ebuild,v 1.1 2002/12/13 01:00:00 seemant Exp $
 
-IUSE="aalib motif alsa opengl"
+IUSE="aalib motif alsa opengl nls"
 
 S=${WORKDIR}/${P}
 MY_FONT=tv-fonts-1.0
@@ -14,7 +14,7 @@ HOMEPAGE="http://bytesex.org/xawtv/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-x86"
+KEYWORDS="~x86"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
@@ -26,8 +26,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 	motif? ( x11-libs/openmotif )
 	opengl? ( virtual/opengl )
 	quicktime? ( media-libs/libquicktime )"
-
-fontdir=/usr/X11R6/lib/X11/fonts/misc
 
 src_unpack() {
 	unpack ${PN}_${PV}.tar.gz
@@ -69,10 +67,10 @@ src_compile() {
 		--enable-zvbi \
 		${myconf} || die
 
-	emake || die
+	emake || make || die
 
 	cd ${MY_FONT}
-	emake || die
+	make || die
 }
 
 src_install() {
@@ -86,21 +84,26 @@ src_install() {
 	doexe scripts/webcam.cgi
 	dodoc ${FILESDIR}/webcamrc
 
+	if [ -z "`use nls`" ]
+	then
+		rm -f ${D}/usr/share/man/fr
+		rm -f ${D}/usr/share/man/es
+	fi
+
+	# The makefile seems to be fubar'd for some data
+	dodir /usr/share/${PN}
+	mv ${D}/usr/share/*.list ${D}/usr/share/${PN}
+	mv ${D}/usr/share/Index* ${D}/usr/share/${PN}
+
 	cd ${MY_FONT}
-	insinto ${fontdir}
+	insinto /usr/X11R6/lib/X11/fonts/xawtv
 	doins *.gz fonts.alias
 }
 
-src_postinst() {
-	mkfontdir ${fontdir}
-	xset fp- "${fontdir} :unscaled"
-	xset fp+ "${fontdir} :unscaled"
-	xset fp rehash
-}
+pkg_postinst() {
 
-src_postrm() {
-	mkfontdir ${fontdir}
-	xset fp- "${fontdir} :unscaled"
-	xset fp+ "${fontdir} :unscaled"
-	xset fp rehash
+	ebegin "installing teletype fonts into /usr/X11R6/lib/X11/fonts/xawtv"
+	cd /usr/X11R6/lib/X11/fonts/xawtv
+	mkfontdir
+	eend
 }
