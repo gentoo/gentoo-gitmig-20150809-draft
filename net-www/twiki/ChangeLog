@@ -1,6 +1,9 @@
 # ChangeLog for net-www/twiki
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/ChangeLog,v 1.3 2004/03/10 20:02:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/ChangeLog,v 1.4 2004/06/01 21:48:11 mholzer Exp $
+
+  02 Jun 2004; Martin Holzer <mholzer@gentoo.org> twiki-20030201.ebuild:
+  adding S
 
   10 Mar 2004; Martin Holzer <mholzer@gentoo.org> twiki-20030201.ebuild:
   fixing verbose. closes 44083

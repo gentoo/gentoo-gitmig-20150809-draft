@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/twiki-20030201.ebuild,v 1.4 2004/03/10 20:02:33 mholzer Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/twiki-20030201.ebuild,v 1.5 2004/06/01 21:48:11 mholzer Exp $ 
 
 inherit webapp-apache
 
@@ -11,6 +11,8 @@ SRC_URI="http://twiki.org/swd/TWiki${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+
+S=${WORKDIR}
 
 RDEPEND="virtual/php
 	media-gfx/graphviz
@@ -51,9 +53,9 @@ src_install() {
 	fi
 
 	dodoc readme.txt license.txt
-	chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${destdir}
-	chmod 0775 -R ${destdir}/pub ${destdir}/data
-	chown nobody -R ${destdir}/pub ${destdir}/data
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${D}${destdir}
+	chmod 0775 -R ${D}${destdir}/pub  ${D}${destdir}/data
+	chown nobody -R ${D}${destdir}/pub ${D}${destdir}/data
 	#find ${D}/${HTTPD_ROOT}/${PN}/templates -type d -exec chmod 0440 {} \;
 #	chmod 0444 -R ${PN}/templates
 }
