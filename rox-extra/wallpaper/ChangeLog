@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/wallpaper
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/wallpaper/ChangeLog,v 1.1 2004/12/18 12:15:53 sergey Exp $
+
+*wallpaper-1.9.2 (18 Dec 2004)
+
+  18 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +wallpaper-1.9.2.ebuild:
+  Just added. (Bug #51996)
+
