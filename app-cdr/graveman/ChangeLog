@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.6 2005/03/30 00:13:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.7 2005/04/05 02:46:54 pylon Exp $
+
+*graveman-0.3.10 (05 Apr 2005)
+
+  05 Apr 2005; Lars Weiler <pylon@gentoo.org> +graveman-0.3.10.ebuild:
+  Version bump.  Thanks to Martin Wienold for bug #87760.
 
   30 Mar 2005; Lars Weiler <pylon@gentoo.org> graveman-0.3.7.ebuild,
   graveman-0.3.8.ebuild:
