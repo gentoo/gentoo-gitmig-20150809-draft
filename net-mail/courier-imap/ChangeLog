@@ -1,12 +1,17 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.13 2002/08/30 11:35:17 cybersystem Exp $
-
-  30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
-
-  Added ppc to keywords.
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.14 2002/09/11 15:45:46 raker Exp $
 
 *courier-imap-1.5.1 (03 Aug 2002)
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  courier-imap-1.5.1.ebuild, files/authdaemond.conf,
+  files/authdaemond.rc6 :
+  Updated authenticator choosing mechanism.  Removed pgsql authenticator
+  as it is not a supported backend.
+
+  30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
+  Added ppc to keywords.
 
   03 Aug 2002; Nick Hadaway <raker@gentoo.org>
   courier-imap-1.5.1.ebuild, files/digest-courier-imap-1.5.1 :

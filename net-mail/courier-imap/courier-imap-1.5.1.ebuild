@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.5.1.ebuild,v 1.3 2002/08/30 11:35:17 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.5.1.ebuild,v 1.4 2002/09/11 15:45:46 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
@@ -102,6 +102,9 @@ src_install () {
 	do
 		mv ${x}.dist ${x}
 	done
+	
+	insinto /etc/courier-imap
+	doins ${FILESDIR}/authdaemond.conf
 
 	# add a value for ${MAILDIR} to /etc/courier-imap/imapd
 	for service in imapd pop3d
@@ -142,8 +145,6 @@ src_install () {
 	dodir /usr/bin
 	mv ${D}/usr/sbin/maildirmake ${D}/usr/bin/maildirmake
 
-	# courier-imap comes with pam_stack aware pam.d/ files already
-	#insinto /etc/pam.d ; doins ${FILEDIR}/pam.d-imap
 }
 
 pkg_postinst() {
@@ -156,4 +157,9 @@ pkg_postinst() {
 	einfo "If you choose not to switch your init files, you server will "
 	einfo "continue to function as it currently does."
 	echo
+	einfo "Make sure to change /etc/courier-imap/authdaemond.conf if"
+	einfo "you would like to use something other than the"
+	einfo "authdaemond.plain authenticator"
+	echo
+
 }
