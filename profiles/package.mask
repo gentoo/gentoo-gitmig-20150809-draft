@@ -49,10 +49,6 @@
 ~kde-base/kdetoys-3.1_rc3
 ~kde-base/kdeutils-3.1_rc3
 
-# <seemant@gentoo.org> (11 Nov 2002)
-# Masked because we're not sure how legal this is yet.
-media-video/realone
-
 # <chadh@gentoo.org> (11 Nov 2002)
 # masking b/c it won't compile
 =sys-apps/pcmcia-cs-3.2.2
