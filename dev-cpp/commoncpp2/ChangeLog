@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.7 2004/08/14 13:31:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.8 2004/10/23 21:58:26 lanius Exp $
+
+*commoncpp2-1.2.5 (23 Oct 2004)
+
+  23 Oct 2004; Heinrich Wendel <lanius@gentoo.org> +commoncpp2-1.2.5.ebuild:
+  version bump
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed CVS Header.

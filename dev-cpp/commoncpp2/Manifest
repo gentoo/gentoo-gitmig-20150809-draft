@@ -1,3 +1,5 @@
-MD5 804f5d65db65bb0d59fbaeccc38bb938 ChangeLog 1694
 MD5 966b78db74847d778550fbde3376265f commoncpp2-1.0.13.ebuild 1115
+MD5 b40ad23bd2f422a5492f07bcdabcae00 ChangeLog 1818
+MD5 62c1d9bef60f545da774856e0578e8df commoncpp2-1.2.5.ebuild 1004
+MD5 6990ef52b125e72e39312b276bb91b15 files/digest-commoncpp2-1.2.5 68
 MD5 781ce9f97c4496dcb0ec078a74cba8d2 files/digest-commoncpp2-1.0.13 69
