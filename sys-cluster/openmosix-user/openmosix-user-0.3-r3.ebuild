@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3-r3.ebuild,v 1.1 2003/05/07 21:26:31 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3-r3.ebuild,v 1.2 2003/05/08 22:42:20 tantive Exp $
 
 S=${WORKDIR}/openmosix-tools-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}
 	dev-lang/perl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 
 pkg_setup() {
 	if [ -z "`readlink /usr/src/linux|grep openmosix`" ]; then 
@@ -62,10 +62,8 @@ src_install() {
 
 	dodoc COPYING README
 	rm ${D}/etc/init.d/openmosix
-	rm ${D}/etc/init.d/openmosixcollector
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/openmosix.init openmosix
-	newexe ${FILESDIR}/openmosixcollector.init openmosixcollector
 	insinto /etc
 	rm ${D}/etc/openmosix.map
 	#Test if mosix.map is present, stub appropriate openmosix.map
