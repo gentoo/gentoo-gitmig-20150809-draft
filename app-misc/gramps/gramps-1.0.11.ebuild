@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.10.ebuild,v 1.2 2005/04/04 18:54:32 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.11.ebuild,v 1.1 2005/04/04 18:54:32 joem Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2
@@ -41,10 +41,7 @@ pkg_setup() {
 
 src_install() {
 	gnome2_src_install
-
-	# fix menu entry location
-	dodir /usr/share/applications
-	mv ${D}/usr/share/gnome/apps/Applications/gramps.desktop \
-		${D}/usr/share/applications
-	rm -rf ${D}/usr/share/gnome
+	rm -rf ${D}/usr/share/gramps.desktop
 }
+
+USE_DESTDIR="1"

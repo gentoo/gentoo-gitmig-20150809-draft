@@ -1,12 +1,24 @@
-MD5 16c89cc58b7563c3d91f909edd7e1571 ChangeLog 3223
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 63e75a6957f20a89f894e30f68a0f63d ChangeLog 3349
 MD5 513742ce123e37c9911e110375ec2424 gramps-0.99.ebuild 1244
 MD5 6dbf1b28c34f5363c136586dfc28a11c gramps-1.0.0.ebuild 1252
 MD5 624141840a7be0d47707f43e7b9ab13d gramps-1.0.1.ebuild 1290
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e3c81ba587480f2d446b7a68ebf11413 gramps-1.0.8.ebuild 1284
-MD5 3268a3bcb915b71b06ce51f06f393128 gramps-1.0.10.ebuild 1254
+MD5 413d5793132c784ff925dac73c980391 gramps-1.0.11.ebuild 1131
+MD5 dad953d6f455d934226b289678caef1a gramps-1.0.10.ebuild 1253
 MD5 99894091b508fb1a9c634de93b4cfbba files/digest-gramps-0.99 64
 MD5 f0c53191c89c972fd5d35a4b20b16db0 files/digest-gramps-1.0.0 65
 MD5 bc4c99bf6ecc5a77aa2a8a1921b3b100 files/digest-gramps-1.0.1 65
 MD5 d7d7162ad0fff78460a61530aeee4301 files/digest-gramps-1.0.8 65
 MD5 15bb28371128e3b3dab37b46c19f7343 files/digest-gramps-1.0.10 66
+MD5 969d0501710f715708c3e5b886212dde files/digest-gramps-1.0.11 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCUY0tXjcVihsel0ERAk/GAJ9+V4p4Gzmh1odKdrSWhEXVXVRzgwCfUQLe
+ARWwbEx+49+MMkopzZyx3gI=
+=yuNy
+-----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.23 2005/02/28 00:12:41 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.24 2005/04/04 18:54:32 joem Exp $
+
+*gramps-1.0.11 (04 Apr 2005)
+
+  04 Apr 2005; Joe McCann <joem@gentoo.org> +gramps-1.0.11.ebuild:
+  New version, closes 86992
 
 *gramps-1.0.8 (27 Feb 2005)
 
