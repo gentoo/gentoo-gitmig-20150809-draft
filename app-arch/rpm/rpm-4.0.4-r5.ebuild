@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.8 2003/11/29 23:23:21 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.9 2004/01/25 23:50:12 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,10 +21,6 @@ RDEPEND="=sys-libs/db-3.2*
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-filter-flags -fPIC
-
-export WANT_AUTOCONF_2_1=1
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -36,6 +32,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fPIC
+	export WANT_AUTOCONF=2.1
 	econf `use_enable nls` || die
 	make || die
 }

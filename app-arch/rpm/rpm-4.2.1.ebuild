@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.10 2004/01/25 12:38:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.11 2004/01/25 23:50:12 vapier Exp $
 
 inherit python flag-o-matic libtool eutils
 
 DESCRIPTION="Red Hat Package Management Utils"
-SRC_URI="mirror://gentoo/rpm-4.2.1.tar.gz"
 HOMEPAGE="http://www.rpm.org/"
-SLOT="0"
+SRC_URI="mirror://gentoo/rpm-4.2.1.tar.gz"
+
 LICENSE="GPL-2 LGPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~amd64 ia64"
 IUSE="nls python doc"
+
 RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
 	>=app-arch/bzip2-1.0.1
@@ -22,20 +24,19 @@ RDEPEND="=sys-libs/db-3.2*
 	python? ( >=dev-lang/python-2.2 )
 	!ia64? ( doc? ( app-doc/doxygen ) )"
 
-strip-flags
-
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/rpm-4.2-python2.3.diff
 }
 
 src_compile() {
+	strip-flags
 	elibtoolize
 
 	unset LD_ASSUME_KERNEL
 	local myconf
 	myconf="--enable-posixmutexes --without-javaglue"
-	
+
 	python_version
 	use python \
 		&& myconf="${myconf} --with-python=${PYVER}" \
@@ -83,7 +84,7 @@ pkg_postinst() {
 		einfo "No RPM database found... Creating database..."
 		${ROOT}/usr/bin/rpm --initdb --root=${ROOT}
 	fi
-	
+
 	python_version
 	python_mod_optimize /usr/lib/python${PYVER}/site-packages/rpmdb
 }
