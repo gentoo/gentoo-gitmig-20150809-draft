@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.14 2004/03/31 15:51:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.15 2004/04/05 02:29:45 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org> yp-tools-2.7-r1.ebuild,
+  yp-tools-2.8.ebuild:
+  Add ia64 keywords to support ypbind for bug 46557
 
   31 Mar 2004; Tom Gall <tgall@gentoo.org> yp-tools-2.8.ebuild:
   mark stable for ppc64
