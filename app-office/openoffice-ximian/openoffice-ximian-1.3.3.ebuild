@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.3.ebuild,v 1.1 2004/09/04 14:32:20 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.3.ebuild,v 1.2 2004/09/04 15:17:44 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -28,7 +28,7 @@
 
 inherit flag-o-matic eutils gcc
 
-IUSE="gnome kde"
+IUSE="gnome kde ooo-kde"
 
 OO_VER=1.1.2
 PATCHLEVEL=OOO_1_1_2
@@ -43,8 +43,8 @@ SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}_source.tar.gz
 	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
 	http://ooo.ximian.com/packages/libwpd-snap-20040823.tar.gz
 	mirror://gentoo/OOo-gentoo-splash-1.1.tar.bz2
-	gnome? ( http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz )
-	!gnome? ( http://kde.openoffice.org/files/${KDE_ICON_PATH}/ooo-KDE_icons-${KDE_ICON_VER}.tar.gz )"
+	ooo-kde? ( http://kde.openoffice.org/files/${KDE_ICON_PATH}/ooo-KDE_icons-${KDE_ICON_VER}.tar.gz )
+	!ooo-kde? ( http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz )"
 
 HOMEPAGE="http://ooo.ximian.com"
 
@@ -55,7 +55,7 @@ KEYWORDS="~x86 ~ppc"
 RDEPEND="virtual/libc
 	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
-	gnome? ( >=x11-libs/gtk+-2.0
+	!ooo-kde? ( >=x11-libs/gtk+-2.0
 		>=gnome-base/libgnome-2.2
 		>=gnome-base/gnome-vfs-2.0
 		>=net-print/libgnomecups-0.1.4
@@ -78,7 +78,7 @@ RDEPEND="virtual/libc
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2.1 )
 	>=media-libs/freetype-2.1.4
-	kde? ( kde-base/kdelibs )"
+	ooo-kde? ( kde-base/kdelibs )"
 
 DEPEND="${RDEPEND}
 	app-shells/tcsh
@@ -92,6 +92,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 
 	ewarn "****************************************************************"
+	ewarn " This ebuild now also includes optional support for kde "
+	ewarn " integration. If you want to use it you will have to put "
+	ewarn " 'ooo-kde' into your USE FLAGS. "
+	ewarn
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
@@ -236,18 +240,14 @@ src_unpack() {
 	#Add our own splash screen
 	epatch ${FILESDIR}/${OO_VER}/gentoo-splash.diff
 
-	export DISTRO="Gentoo"
-	export EXTRACONF="--enable-gtk"
-	export ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
-
-	if use kde; then
-		export EXTRACONF="${EXTRACONF} --enable-kde"
-	fi
-
-	if use !gnome; then
-		export DISTRO="GentooKDE"
-		export EXTRACONF="--enable-kde"
-		export ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
+	if use ooo-kde; then
+		DISTRO=GentooKDE
+		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
+		WIDGETSET=kde
+	else
+		DISTRO=Gentoo
+		ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
+		WIDGETSET=gtk
 	fi
 
 	einfo "Applying Ximian OO.org Patches"
@@ -318,6 +318,7 @@ src_compile() {
 	# get linker errors due to the ABI being different (STLport will be
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
 	einfo "Configuring OpenOffice.org with language support for ${LFULLNAME}..."
+	einfo "Using Native widgest set for ${WIDGETSET}"
 	cd ${S}/config_office
 	rm -f config.cache
 	autoconf
@@ -334,8 +335,8 @@ src_compile() {
 		--with-system-curl \
 		--with-system-xrender \
 		--disable-java \
-		--disable-mozilla"
-	myconf="${myconf} ${EXTRACONF}"
+		--disable-mozilla \
+		--enable-${WIDGETSET}"
 	./configure ${myconf} || die
 
 	cd ${S}
