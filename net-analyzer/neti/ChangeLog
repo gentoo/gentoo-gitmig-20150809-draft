@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/neti
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.6 2004/07/28 05:54:33 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.7 2005/01/29 19:26:00 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> neti-1.01.ebuild:
+  Change to virtual/libpcap dependancy
 
   28 Jul 2004; Daniel Black <dragonheart@gentoo.org> neti-1.01.ebuild:
   Marked x86 stable

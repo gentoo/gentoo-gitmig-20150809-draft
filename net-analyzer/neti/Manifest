@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1b2b44b06932d6ebf69d04fc7853caac neti-1.01.ebuild 1358
+MD5 b13ac9785b89b3056a3beb6076dd77b9 ChangeLog 943
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 1b4efbfa9625b86b92ab625355ead84d ChangeLog 832
-MD5 5001057dcb956df8106836a6bddccd45 files/neti-init 542
+MD5 2babe3d6e57bc0447b3b47953fe9996d neti-1.01.ebuild 1336
 MD5 68d7769784d731fd49d9283179d49dc6 files/digest-neti-1.01 61
+MD5 5001057dcb956df8106836a6bddccd45 files/neti-init 542
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBBz38mdTrptrqvGERAuf/AJ987KRTBD5AmL/C5qwmHS1ts3LTegCfSlIE
-g1XAWV5aFD9KXqAV46mituQ=
-=rH3o
+iD8DBQFB++NOmdTrptrqvGERArqqAJ0UGIJOD3xOMbVT3EPiS4cd6mJCAwCcC0UI
+MMQVCGDi6NViuNA76XnOh2o=
+=qcXu
 -----END PGP SIGNATURE-----

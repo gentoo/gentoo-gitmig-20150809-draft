@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-1.01.ebuild,v 1.6 2004/07/28 05:54:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-1.01.ebuild,v 1.7 2005/01/29 19:26:00 dragonheart Exp $
 
 DESCRIPTION="NETI@Home research project from GATech"
 HOMEPAGE="http://www.neti.gatech.edu"
@@ -8,17 +8,16 @@ SRC_URI="mirror://sourceforge/neti/${P}.tar.gz"
 KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
-RESTRICT="nomirror"
 
 IUSE="zlib java"
 
 RDEPEND="java? ( || ( >=virtual/jdk-1.2 >=virtual/jre-1.2 ) )
-	net-libs/libpcap
+	virtual/libpcap
 	net-analyzer/ethereal
 	virtual/libc"
 
 DEPEND="java? ( >=virtual/jdk-1.2 )
-	net-libs/libpcap
+	virtual/libpcap
 	virtual/libc
 	sys-devel/autoconf
 	sys-devel/automake
