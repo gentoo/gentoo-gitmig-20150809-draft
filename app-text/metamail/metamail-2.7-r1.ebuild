@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/metamail/metamail-2.7-r1.ebuild,v 1.2 2000/08/16 04:37:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/metamail/metamail-2.7-r1.ebuild,v 1.3 2000/08/25 15:49:06 achim Exp $
 
 P=metamail-2.7
 A=mm2.7.tar.Z
 S=${WORKDIR}/mm2.7/src
 DESCRIPTION="Metamail"
-SRC_URI="ftp://thumper.bellcore.com/pub/nsb/"${A}
+SRC_URI="ftp://thumper.bellcore.com/pub/nsb/${A}
+	 ftp://ftp.bora.net/pub/free_servers/mail/metamail/${A}"
 
 src_unpack() {
   unpack ${A}

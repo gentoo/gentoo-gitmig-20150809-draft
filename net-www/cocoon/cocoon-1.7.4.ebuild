@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.7.4.ebuild,v 1.1 2000/08/25 15:10:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.7.4.ebuild,v 1.2 2000/08/25 15:49:06 achim Exp $
 
 P=cocoon-1.7.4
 A=Cocoon-1.7.4.tar.gz
@@ -30,7 +30,8 @@ src_compile() {
 src_install() {                               
   cd ${S}
   insinto /opt/java/lib
-  for i in xerces_1_0_1 xalan_0_19_4 fop_0_12_1
+  for i in xerces_1_0_3 xalan_1_0_1 fop_0_12_1 \
+	   servlet_2_2 stylebook-1.0-b2
   do
      doins  lib/$i.jar
   done
