@@ -90,20 +90,20 @@ diff -ur linux-2.6.0/include/linux/ext2_fs_sb.h linux-2.6.0/include/linux.gentoo
  	struct percpu_counter s_freeblocks_counter;
  	struct percpu_counter s_freeinodes_counter;
  	struct percpu_counter s_dirs_counter;
-diff -ur linux-2.6.0/include/linux/mod_devicetable.h linux-2.6.0/include/linux.gentoo/mod_devicetable.h
---- linux-2.6.0/include/linux/mod_devicetable.h	2003-12-27 19:22:38.000000000 +0000
-+++ linux-2.6.0/include/linux.gentoo/mod_devicetable.h	2003-12-27 19:19:31.000000000 +0000
-@@ -10,7 +10,6 @@
+diff -ur linux-2.6.7/include/linux/mod_devicetable.h linux-2.6.7/include/linux.gentoo/mod_devicetable.h
+--- linux-2.6.7/include/linux/mod_devicetable.h.orig	2004-06-16 01:20:19.000000000 -0400
++++ linux-2.6.7/include/linux/mod_devicetable.h	2004-07-22 14:12:34.707621864 -0400
+@@ -8,6 +8,7 @@
+ #define LINUX_MOD_DEVICETABLE_H
+ 
  #ifdef __KERNEL__
++#ifndef __KERNEL_ULONG_T__
  #include <linux/types.h>
  typedef unsigned long kernel_ulong_t;
--#endif
- 
- #define PCI_ANY_ID (~0)
- 
-@@ -147,5 +146,5 @@
- #define CCW_DEVICE_ID_MATCH_DEVICE_TYPE		0x04
- #define CCW_DEVICE_ID_MATCH_DEVICE_MODEL	0x08
+ #endif
+@@ -164,5 +165,5 @@
+ 	} devs[PNP_MAX_DEVICES];
+ };
  
 -
 +#endif /* __KERNEL__ */
@@ -1288,3 +1288,15 @@ diff -ur linux-2.6.7/include/asm-i386/processor.h linux-2.6.7-gentoo/include/asm
  
  unsigned long get_wchan(struct task_struct *p);
  
+diff -ur linux-2.6.7/scripts/file2alias.c linux-2.6.7-gentoo/scripts/file2alias.c
+--- linux-2.6.7/scripts/file2alias.c.orig	2004-07-22 14:10:33.644026328 -0400
++++ linux-2.6.7/scripts/file2alias.c	2004-07-22 14:10:53.613990432 -0400
+@@ -10,6 +10,8 @@
+  * of the GNU General Public License, incorporated herein by reference.
+  */
+ 
++#define __KERNEL__
++#define __KERNEL_ULONG_T__
+ #include "modpost.h"
+ 
+ /* We use the ELF typedefs, since we can't rely on stdint.h being present. */
