@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.5 2003/04/06 02:26:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.6 2003/04/23 01:35:57 lu_zero Exp $
+
+  23 Apr 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.6.ebuild,
+    ati-drivers-2.5.1-r1,ChangeLog :
+    Fix some stuff
 
 *ati-drivers-2.9.6 (3 Feb 2003)
   3 Feb 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.6.ebuild,

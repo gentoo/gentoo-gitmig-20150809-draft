@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.9 2003/03/27 02:12:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.10 2003/04/23 01:35:57 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -35,11 +35,11 @@ pkg_setup(){
 src_compile() {
 
 	einfo "building the glx module"
-
+	check_KV
     cd ${WORKDIR}/lib/modules/fglrx/build_mod
     #that is the dirty way to avoid the id -u check
     sed -e 's:`id -u`:0:' make.sh >make.sh.new
-    mv make.sh.new make.sh
+    sed -e 's:`uname -r`:${KV}:' make.sh.new >make.sh
     chmod +x make.sh
     ./make.sh || ewarn "glx module not built" 
 	
