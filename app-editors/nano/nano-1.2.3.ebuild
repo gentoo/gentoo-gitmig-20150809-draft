@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.1.ebuild,v 1.8 2004/03/17 02:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.3.ebuild,v 1.1 2004/03/17 02:02:24 vapier Exp $
 
 inherit eutils
 
 MY_P=${PN}-${PV/_}
 DESCRIPTION="GNU GPL'd Pico clone with more functionality"
 HOMEPAGE="http://www.nano-editor.org/"
-SRC_URI="http://www.nano-editor.org/dist/v1.3/${MY_P}.tar.gz"
+SRC_URI="http://www.nano-editor.org/dist/v1.2/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64 ppc64 s390"
-IUSE="nls build spell justify debug slang nomac wsconvert"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
+IUSE="nls build spell justify debug slang"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	nls? ( sys-devel/gettext )
@@ -20,13 +20,6 @@ DEPEND=">=sys-libs/ncurses-5.2
 PROVIDE="virtual/editor"
 
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	use nomac && epatch ${FILESDIR}/${PV}-nomac.patch
-	use wsconvert && epatch ${FILESDIR}/${PV}-wsconvert.patch
-}
 
 src_compile() {
 	local myconf=""
