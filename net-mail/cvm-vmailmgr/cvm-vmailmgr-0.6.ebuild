@@ -1,25 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/cvm-vmailmgr-0.6.ebuild,v 1.1 2004/01/06 00:16:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/cvm-vmailmgr-0.6.ebuild,v 1.2 2004/06/19 05:58:26 vapier Exp $
 
-inherit fixheadtails
-S=${WORKDIR}/${P}
+inherit fixheadtails gcc
+
 DESCRIPTION="CVM modules for use with vmailmgr"
-SRC_URI="http://untroubled.org/cvm-vmailmgr/${P}.tar.gz"
 HOMEPAGE="http://untroubled.org/cvm-vmailmgr/"
+SRC_URI="http://untroubled.org/cvm-vmailmgr/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~sparc"
+IUSE=""
 
 DEPEND="virtual/glibc
-		net-libs/cvm
-		>=dev-libs/bglibs-1.009"
+	net-libs/cvm
+	>=dev-libs/bglibs-1.009"
 
 RDEPEND=">=net-mail/vmailmgr-0.96.9-r1
-		 >=sys-apps/ucspi-unix-0.34
-		 net-libs/cvm
-		 virtual/glibc"
+	>=sys-apps/ucspi-unix-0.34
+	net-libs/cvm
+	virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
@@ -30,17 +31,15 @@ src_unpack() {
 
 
 src_compile() {
-	cd ${S}
 	echo "/usr/lib/bglibs/include" > conf-bgincs
 	echo "/usr/lib/bglibs/lib" > conf-bglibs
-	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC} -s" > conf-ld
+	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(gcc-getCC) -s" > conf-ld
 	make || die
 }
 
-src_install () {
-	exeinto /usr/bin
-	doexe cvm-vmailmgr cvm-vmailmgr-local cvm-vmailmgr-udp cvm-vmlookup
+src_install() {
+	dobin cvm-vmailmgr cvm-vmailmgr-local cvm-vmailmgr-udp cvm-vmlookup || die
 
 	exeinto /var/lib/supervise/cvm-vmailmgr
 	newexe ${FILESDIR}/run-cvm-vmailmgr run
@@ -51,7 +50,7 @@ src_install () {
 	insinto /etc/vmailmgr
 	doins ${FILESDIR}/cvm-vmailmgr-socket
 
-	dodoc ANNOUNCEMENT COPYING FILES NEWS README TARGETS TODO VERSION
+	dodoc ANNOUNCEMENT FILES NEWS README TARGETS TODO VERSION
 }
 
 pkg_postinst() {
