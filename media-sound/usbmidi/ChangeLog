@@ -1,10 +1,15 @@
 # ChangeLog for media-sound/usbmidi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/ChangeLog,v 1.1 2003/05/22 11:30:15 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/ChangeLog,v 1.2 2003/05/24 11:43:39 jje Exp $
+
+  24 May 2003; jje <jje@gentoo.org> usbmidi-1.0.ebuild:
+  Fixed install.
+  
+  For details see: http://bugs.gentoo.org/show_bug.cgi?id=21561
 
 *usbmidi-1.0 (22 May 2003)
 
-  22 May 2003; root <root@gentoo.org> usbmidi-1.0.ebuild, files/ezusbmidi,
+  22 May 2003; jje <jje@gentoo.org> usbmidi-1.0.ebuild, files/ezusbmidi,
   files/ezusbmidi.usermap:
   Initial revision.
   

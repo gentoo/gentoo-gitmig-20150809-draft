@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.1 2003/05/22 11:30:15 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.2 2003/05/24 11:43:39 jje Exp $
 
 DESCRIPTION="Sets up hotplugging support for MidiMan midisport 1x1/2x2 usb devices"
 HOMEPAGE="http:///"
@@ -18,7 +18,7 @@ RDEPEND="sys-apps/hotplug
 
 S="${WORKDIR}/usbmidi-20030126"
 src_install() {
-	insinto ${D}/usr/share/usb/ezusbmidi
+	insinto /usr/share/usb/ezusbmidi
 	doins ${S}/testing/MidiSport/ezusbmidi*.ihx
 
 	insinto /etc/hotplug/usb
