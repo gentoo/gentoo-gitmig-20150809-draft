@@ -7,7 +7,7 @@ SRC_URI="mirror://sourceforge/bacula/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="readline tcpd gnome mysql sqlite X static postgres wxwindows"
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.
