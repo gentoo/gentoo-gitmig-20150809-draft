@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7acc6cc24451812f0870c7d5958c46d5 ChangeLog 3639
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 173d08beb593f79c8ebaf478984993cb xfsdump-2.2.21.ebuild 1503
 MD5 cebf35ca2d9c19bfc858b9307896fe2a xfsdump-2.2.16.ebuild 1141
+MD5 82baf21695adfe11b72154ad636c06d1 ChangeLog 3803
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 37f44e5343b1280989c23f1f11112a93 files/digest-xfsdump-2.2.16 70
+MD5 40ad6b6e0a2b464bc7838b4364deed7f files/digest-xfsdump-2.2.21 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFBJtRTHTu7gpaalycRAhDEAJ9aJQ7AWEybcH9XjXjBrq8u9D+OTQCg0bGy
-avjiGdQxwDViY7sxuGwUCrY=
-=nZme
+iD8DBQFBNFWLPpIsIjIzwiwRAoGrAJ940gH62i++yUqzrkkFIypTAleNiwCfejDH
+TN96Qol3weuJthH00ykNkP8=
+=uDC7
 -----END PGP SIGNATURE-----
