@@ -1,6 +1,14 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.262 2004/10/21 15:24:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.263 2004/10/21 15:52:44 rizzo Exp $
+
+  21 Oct 2004; Don Seiler <rizzo@gentoo.org>
+  -files/gaim-0.81-security2.diff,
+  -files/gaim-0.83cvs-gtkcellrendererprogress.diff,
+  -files/gaim-1.0.1cvs-jabber-roomlist.diff, -files/syslog_fd_leak.diff,
+  -gaim-0.81-r5.ebuild, -gaim-0.82.1.ebuild, -gaim-1.0.0.ebuild,
+  -gaim-1.0.1.ebuild:
+  Pruning old versions
 
   21 Oct 2004; Bryan Østergaard,,, <kloeri@gentoo.org> gaim-1.0.2.ebuild:
   Stable on alpha, bug 68271.
