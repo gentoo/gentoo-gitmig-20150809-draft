@@ -1,8 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/linux-ntfs/linux-ntfs-1.6.0.ebuild,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/linux-ntfs/linux-ntfs-1.6.0.ebuild,v 1.2 2003/10/30 02:19:31 seemant Exp $
 
-DESCRIPTION="Utilities and library for accessing NTFS filesystems"
+inherit eutils
+
+DESCRIPTION="Old userland utilities for NTFS filesystems.  Better to use
+ntfsprogs instead"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.tar.gz"
 
@@ -14,7 +17,7 @@ KEYWORDS="x86 amd64"
 src_unpack() {
 	unpack ${A}
 	cd ${S} || die
-	patch -p0 <${FILESDIR}/${P}-gcc3.2.patch || die
+	epatch ${FILESDIR}/${P}-gcc3.2.patch
 }
 
 src_compile() {
