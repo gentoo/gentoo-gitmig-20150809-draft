@@ -1,3 +1,13 @@
-MD5 c9bef063d77707082621810243f03f5c gifsicle-1.40.ebuild 817
-MD5 8c89040da5ece81cab490d823f8e8ca0 ChangeLog 348
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 637c428842c199d7d0bb50804b17bb2c gifsicle-1.40.ebuild 825
+MD5 8b3834cdd208769f592ff05a5127d3a3 ChangeLog 445
 MD5 54496137da5e5b09b0581c45f84406fe files/digest-gifsicle-1.40 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnSXGZ/iYVBmujdURAlwOAKDmYiaKiEa4ikIKcEyTpnEjNXYVRQCfUsQy
+to2SKtGmvJ5FF6OcMvfsqSU=
+=F/hj
+-----END PGP SIGNATURE-----
