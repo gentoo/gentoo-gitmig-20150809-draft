@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-server/chipcard-server-1.9.6_beta.ebuild,v 1.2 2005/01/05 12:08:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-server/chipcard-server-1.9.7_beta.ebuild,v 1.1 2005/01/05 12:08:01 hanno Exp $
 
 MY_P="chipcard2_server-${PV/_/}"
 DESCRIPTION="2nd generation of the chipcard-reader-utility"
@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 
 IUSE="debug ssl usb"
 
-DEPEND=">=sys-libs/gwenhywfar-1.2.1
+DEPEND=">=sys-libs/gwenhywfar-1.4
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	usb? ( dev-libs/libusb )"
 
