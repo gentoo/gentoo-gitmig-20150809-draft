@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.14 2002/09/11 15:45:46 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.15 2002/09/25 15:08:37 raker Exp $
+
+*courier-imap-1.5.3 (25 Sep 2002)
+
+  25 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  courier-imap-1.5.3.ebuild, files/digest-courier-imap-1.5.3 :
+  Version bump.  Lots of SSL fixes.
 
 *courier-imap-1.5.1 (03 Aug 2002)
 
