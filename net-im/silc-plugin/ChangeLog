@@ -1,6 +1,15 @@
 # ChangeLog for net-im/silc-plugin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.7 2004/10/12 19:42:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.8 2004/10/17 19:11:23 ticho Exp $
+
+*silc-plugin-1.0.1-r1 (17 Oct 2004)
+
+  17 Oct 2004; Andrej Kacian <ticho@gentoo.org>
+  +silc-plugin-1.0.1-r1.ebuild, +files/1.0.1-branch-update.patch:
+  Removing MAKEOPTS for silc-client's lib compilation, as parallel build (-jX)
+  breaks it. Thanks to viq <viq@go2.pl> for reporting this, and to Jochen
+  Eisinger <jochen@penguin-breeder.org> for finding the solution. Closes
+  #67390.
 
   12 Oct 2004; Andrej Kacian <ticho@gentoo.org> +files/1.0.1-gcc34.patch,
   silc-plugin-1.0.1.ebuild:
