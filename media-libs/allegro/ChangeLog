@@ -1,11 +1,19 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.2 2002/04/14 17:43:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.3 2002/04/30 09:09:06 seemant Exp $
+
+*allegro-4.0.1 (30 Apr 2002)
+
+  30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.1-r1.ebuild
+  files/digest-allegro-4.0.1-r1 :
+
+  Added tetex USE flag dependent dvi documentation compilation.  This fixes 
+  bug # 2266 by rparker@ntlworld.com (Robin Parker)
 
 *allegro-4.0.1 (14 Apr 2002)
 
   14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.1.ebuild
-  files/digest-allegro-4.0.1.ebuild :
+  files/digest-allegro-4.0.1 :
 
   Version bump, and changed the fbcon USE flag to just fb
 
