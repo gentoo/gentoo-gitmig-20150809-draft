@@ -1,26 +1,26 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.6 2004/02/08 20:41:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.7 2004/02/08 20:47:54 vapier Exp $
 
-IUSE="nls"
 
 inherit eutils
 
 NV="1.5m2"
-S="${WORKDIR}/${PN}-${NV}"
 DESCRIPTION="Standard commands to read man pages"
 SRC_URI="mirror://kernel/linux/utils/man/man-${NV}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/man/"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~alpha hppa ia64"
+IUSE="nls"
+
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
-
 RDEPEND="sys-apps/cronbase
 	>=sys-apps/groff-1.18"
 
-SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha hppa ia64"
-LICENSE="GPL-2"
+S=${WORKDIR}/${PN}-${NV}
 
 src_unpack() {
 	unpack ${A}
