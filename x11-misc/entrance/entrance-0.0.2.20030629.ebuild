@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.0.2.20030629.ebuild,v 1.1 2003/06/29 19:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.0.2.20030629.ebuild,v 1.2 2003/08/07 01:56:01 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -39,6 +39,8 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die
+	insinto /etc/pam.d
+	doins config/pam.d/entrance
 	find ${D} -name CVS -type d -exec rm -rf '{}' \;
 	insinto /usr/share/entrance/data/images/sessions
 	doins ${WORKDIR}/extraicons/*
