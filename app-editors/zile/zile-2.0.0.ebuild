@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.0.0.ebuild,v 1.1 2005/02/11 13:05:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.0.0.ebuild,v 1.2 2005/03/05 14:38:18 usata Exp $
 
 inherit eutils
 
@@ -14,8 +14,9 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~amd64"
 IUSE=""
 
-RDEPEND=">=sys-libs/ncurses-5.2"
-DEPEND=">=dev-util/gperf-2.7.2
+RDEPEND="sys-libs/libtermcap-compat"
+DEPEND="${RDEPEND}
+	>=dev-util/gperf-2.7.2
 	>=sys-apps/texinfo-4.3"
 
 S="${WORKDIR}/${MY_P}"
