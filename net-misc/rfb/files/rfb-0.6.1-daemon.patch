@@ -166,7 +166,7 @@
      << "       x0rfbserver -stdio" << endl
      << "       x0rfbserver -about" << endl
      << "       x0rfbserver -help" << endl
-+    << "       x0rfbserver -daemon (default)" << endl
++    << "       x0rfbserver -daemon" << endl
      << endl
      << "<options>" << endl
      << "       -shared" << endl
