@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.37 2005/01/11 14:10:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.38 2005/03/23 00:54:50 vapier Exp $
+
+*libnet-1.1.2.1-r1 (23 Mar 2005)
+
+  23 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libnet-1.1.2.1-autotools.patch,
+  +files/libnet-1.1.2.1-fix-chksum.patch, +libnet-1.1.2.1-r1.ebuild:
+  Add patches from debian to generate a libnet.so for linking #82926.
 
   11 Jan 2005; Daniel Black <dragonheart@gentoo.org> files/1.0.2a-slot.patch:
   expanded patch to fix selftest routine.
