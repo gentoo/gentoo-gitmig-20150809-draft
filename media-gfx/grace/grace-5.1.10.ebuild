@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10.ebuild,v 1.4 2003/04/24 11:26:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10.ebuild,v 1.5 2003/08/09 08:34:56 usata Exp $
+
+inherit eutils
 
 DESCRIPTION="WYSIWYG 2D plotting tool for the X Window System"
 SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/${P}.tar.gz"
@@ -14,8 +16,17 @@ IUSE="pdflib"
 DEPEND="virtual/x11
 	virtual/motif
 	media-libs/libpng
+	media-libs/t1lib
 	>=media-libs/tiff-3.5
 	pdflib? ( >=media-libs/pdflib-3.0.2 )"
+
+src_unpack() {
+	unpack ${A}
+
+	if has_version '>=media-libs/t1lib-5.0.0' ; then
+		epatch ${FILESDIR}/${P}-t1lib-fix-gentoo.patch
+	fi
+}
 
 src_compile() {
 	econf \
@@ -63,7 +74,7 @@ src_install() {
 	#mv ${D}/usr/share/doc/${PF}/html/*.1 ${D}/usr/share/man/man1
 	doman ${D}/usr/share/doc/${PF}/html/*.1
 	rm -f ${D}/usr/share/doc/${PF}/html/*.1
-    
+
 	insinto /etc/env.d
 	doins ${FILESDIR}/10grace
 }
