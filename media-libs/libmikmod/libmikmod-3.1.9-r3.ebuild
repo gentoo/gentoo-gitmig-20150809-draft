@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.9-r3.ebuild,v 1.1 2001/04/20 02:16:03 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.9-r3.ebuild,v 1.2 2001/04/20 02:19:10 achim Exp $
 
 P=libmikmod-3.1.9
 A=${P}.tar.gz
@@ -25,15 +25,15 @@ src_compile() {
   fi
   if [ "`use alsa`" ]
   then
-    myconf="--enable-alsa"
+    myconf="$myconf --enable-alsa"
   else
-    myconf="--disable-alsa"
+    myconf="$myconf --disable-alsa"
   fi
   if [ "`use oss`" ]
   then
-    myconf="--enable-oss"
+    myconf="$myconf --enable-oss"
   else
-    myconf="--disable-oss"
+    myconf="$myconf --disable-oss"
   fi
 
   try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info \
