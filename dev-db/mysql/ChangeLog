@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.155 2005/01/07 03:30:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.156 2005/01/18 22:05:22 rac Exp $
+
+*mysql-4.1.8-r1 (18 Jan 2005)
+
+  18 Jan 2005; Robert Coie <rac@gentoo.org> +files/mysql-accesstmp.patch,
+  +mysql-4.0.23-r1.ebuild, +mysql-4.1.8-r1.ebuild:
+  Fix tempfile handling in mysqlaccess, bug 77805
 
   06 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> files/logrotate.mysql:
   Bug #76909, logrotate missingok.
