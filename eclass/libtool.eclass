@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.2 2002/06/05 23:11:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.3 2002/06/05 23:41:36 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -16,8 +16,13 @@ elibtoolize() {
 	local x=""
 	local y=""
 	local dopatch="no"
+	local dotest="yes"
+	local dorelink="yes"
+	local doportage="yes"
 	local portage="no"
 
+	# Only apply portage patch, and dont "libtoolize --copy --force"
+	# if all patches fail.
 	if [ "${1}" = "--portage" ]
 	then
 		portage="yes"
@@ -29,23 +34,36 @@ elibtoolize() {
 		einfo "Working directory: ${x}..."
 		dopatch="yes"
 
-		if [ "${portage}" = "yes" ] || \
-		   [ -n "$(grep -e "inst_prefix_dir" ltmain.sh)" ]
-		then
-			if eval portage_patch --test $>${T}/libtool.foo
-			then
-				einfo "Applying libtool-portage.patch..."
-				portage_patch $>${T}/libtool.foo
-			fi
-			continue
-		fi
-		
 		for y in test_patch relink_patch portage_patch
 		do
 			if ! eval ${y} --test $>${T}/libtool.foo
 			then
-				dopatch="no"
-				break
+				case ${y} in
+					test_patch)
+						# non critical patch
+						dotest="no"
+						;;
+					relink_patch)
+						# critical patch, but could be applied
+						if [ -z "$(grep -e "inst_prefix_dir" ltmain.sh)" ] && \
+						   [ "${portage}" = "no" ]
+						then
+							dopatch="no"
+						fi
+						dorelink="no"
+						;;
+					portage_patch)
+						# critical patch
+						if [ "${portage}" = "yes" ]
+						then
+							echo
+							eerror "Portage patch requested, but failed to apply!"
+							die
+						fi
+						dopatch="no"
+						doportage="no"
+						;;
+				esac
 			fi
 		done
 
@@ -53,9 +71,31 @@ elibtoolize() {
 		do
 			if [ "${dopatch}" = "yes" ]
 			then
+				case ${y} in
+					test_patch)
+						if [ "${dotest}" = "no" ]
+						then
+							continue
+						fi
+						;;
+					relink_patch)
+						if [ "${dorelink}" = "no" ]
+						then
+							continue
+						fi
+						;;
+					portage_patch)
+						if [ "${doportage}" = "no" ]
+						then
+							continue
+						fi
+						;;
+				esac
+				
 				einfo "Applying libtool-${y/_patch/}.patch..."
 				eval ${y} $>${T}/libtool.foo
-			else
+			elif [ "${portage}" = "no" ]
+			then
 				libtoolize --copy --force
 				break
 			fi
