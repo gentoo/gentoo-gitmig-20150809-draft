@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.2.ebuild,v 1.4 2003/06/08 21:30:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.2.ebuild,v 1.5 2003/06/14 08:44:38 kumba Exp $
 
 IUSE="nls bootstrap build"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="~x86 ppc -alpha ~sparc ~mips -hppa -arm"
+KEYWORDS="~x86 ppc -alpha ~sparc mips -hppa -arm"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
