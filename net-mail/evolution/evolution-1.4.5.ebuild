@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.17 2004/04/27 20:53:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.18 2004/04/28 13:10:29 foser Exp $
 
 # kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde
@@ -85,6 +85,10 @@ src_unpack() {
 	# Patch backported from CVS. Fixes NZDT (UTC+13) timezone on emails
 	# http://bugzilla.ximian.com/show_bug.cgi?id=49357
 	cd ${S}/camel; epatch ${FILESDIR}/${P}-nztimezone.patch
+
+	cd ${S}
+	# fix gtk+-2.4 build (#49265)
+	epatch ${FILESDIR}/${P}-gtk-2.4.patch
 
 }
 

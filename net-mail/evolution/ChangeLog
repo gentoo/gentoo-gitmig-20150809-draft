@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.96 2004/04/27 20:53:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.97 2004/04/28 13:10:29 foser Exp $
+
+  28 Apr 2004; foser <foser@gentoo.org> evolution-1.4.5.ebuild :
+  Add gtk-2.4 build patch, provided by gmsoft in #49265
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> evolution-1.4.5.ebuild,
   evolution-1.4.6.ebuild:
