@@ -1,0 +1,7 @@
+# ChangeLog for net-zope/annotations
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/annotations/ChangeLog,v 1.1 2004/09/28 15:30:09 radek Exp $
+
+  28 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org> :
+  Initial release, needed for silva-1.0.2
+
