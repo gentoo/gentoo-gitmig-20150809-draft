@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.7.0.ebuild,v 1.2 2004/08/05 20:22:20 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.7.0.ebuild,v 1.3 2004/08/06 12:51:04 tomk Exp $
 
 IUSE="mysql ldap gdbm berkdb"
 
@@ -85,7 +85,7 @@ src_install() {
 	doins ${FILESDIR}/maildroprc
 
 	insinto /etc/maildrop
-	if [ -n "`use mysql`" ]
+	if use mysql
 	then
 		sed -e "s:/var/lib/mysql/mysql.sock:/var/run/mysqld/mysqld.sock:" \
 		 	${S}/maildropmysql.config > ${S}/maildropmysql.cf
