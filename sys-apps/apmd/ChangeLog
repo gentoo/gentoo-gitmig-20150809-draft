@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.12 2004/03/01 19:59:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.13 2004/03/31 16:02:21 tgall Exp $
+
+  31 Mar 2004; Tom Gall <tgall@gentoo.org> apmd-3.2.0.ebuild, apmd-3.0.2-r3.ebuild
+  apmd-3.2.1_p4.ebuild:
+  remove ppc64, we're not ready
 
 *apmd-3.2.1_p4 (29 Feb 2004)
 
