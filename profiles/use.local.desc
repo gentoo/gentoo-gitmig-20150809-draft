@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.436 2004/06/14 19:13:18 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.437 2004/06/14 19:15:30 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -127,7 +127,7 @@ dev-libs/redland:php - Enable the PHP interface
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
 dev-lisp/gauche-gtk:glgd - enable GL graph draw
 dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
-dev-lisp/sbcl:source - include source code for SBCL in the installation
+dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
 dev-ml/lablgl:glut - Enable glut support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript package
