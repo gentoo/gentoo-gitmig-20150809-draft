@@ -1,5 +1,5 @@
-MD5 593c33d7a6ba39c613f25b137de1089e ChangeLog 457
+MD5 06ba99e313509ff878ec91804d2fc051 wmhdplop-0.9.6.ebuild 1153
+MD5 d46bb2ecab547eb444dc5245598fc2ef ChangeLog 551
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 9a01f13c9d122c5d5e6181376eb9c8a2 wmhdplop-0.9.6.ebuild 1154
 MD5 eabbbed5a08e73895174ecb540e074ea files/digest-wmhdplop-0.9.6 66
 MD5 2745de508ae424a95df9b4ec8cbd8a1a files/wmhdplop-cflags.patch 313

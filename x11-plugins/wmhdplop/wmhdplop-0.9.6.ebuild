@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.6.ebuild,v 1.2 2004/09/03 15:33:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.6.ebuild,v 1.3 2004/09/04 01:15:13 s4t4n Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://hules.free.fr/wmhdplop/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/x11
 	>=media-libs/imlib2-1.1.0
