@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdftohtml
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.2 2004/03/10 20:10:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.3 2004/03/12 08:48:13 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> pdftohtml-0.36.ebuild:
+  Don't assign default to S; header fix
 
   10 Mar 2004; Jason Wever <weeve@gentoo.org> pdftohtml-0.36.ebuild:
   Added ~sparc keyword.

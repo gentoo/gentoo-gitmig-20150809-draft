@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mecab
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.1 2003/08/17 06:47:27 matsuu Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.2 2004/03/12 08:47:42 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> mecab-0.76.ebuild:
+  Don't assign default to S; header fix
 
 *mecab-0.76 (17 Aug 2003)
 
