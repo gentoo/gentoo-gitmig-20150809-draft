@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.57 2005/02/03 18:10:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.58 2005/02/24 16:06:42 j4rg0n Exp $
+
+  24 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> lame-3.96.1.ebuild,
+  lame-3.96.ebuild:
+  Stable ppc-macos
 
   03 Feb 2005; <solar@gentoo.org> lame-3.96.1.ebuild, lame-3.96.ebuild:
   - epunt_cxx embedded bug #74498
