@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.30 2003/06/04 02:17:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.31 2003/07/15 01:41:09 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -127,8 +127,8 @@ src_compile() {
 	grep -q ^autoconf: src/Makefile && confrule=autoconf
 	make -C src $confrule || die "make $confrule failed"
 
-	# This should fix a sandbox violation.
-	for file in /dev/pty/s*; do
+	# This should fix a sandbox violation (see bug 24447)
+	for file in /dev/pty/s* /dev/console; do
 		addwrite $file
 	done
 
