@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_alpha1.ebuild,v 1.1 2002/07/12 22:07:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_alpha1.ebuild,v 1.2 2002/07/12 22:29:14 danarmak Exp $
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="${DESCRIPTION}Multimedia"
@@ -20,7 +20,7 @@ newdepend ">=sys-libs/ncurses-5.2
 	tcltk? ( >=dev-lang/tk-8.0.5-r2 )
 	>=dev-libs/glib-1.3.3
 	>=media-libs/xine-lib-0.9.9
-	oggvorbis? ( media-ilbs/libvorbis )"
+	oggvorbis? ( media-libs/libvorbis )"
 #	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
 
 replace-flags "-O3" "-O2"
