@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.43 2003/11/15 03:02:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.44 2003/11/20 16:17:05 foser Exp $
+
+  20 Nov 2003; foser <foser@gentoo.org> ggv-2.4.0.2.ebuild :
+  Add gnome-vfs dep (#28716)
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> ggv-2.4.0.2.ebuild:
   Stable on ia64
