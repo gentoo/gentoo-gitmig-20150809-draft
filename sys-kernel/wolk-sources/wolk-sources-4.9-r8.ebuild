@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r8.ebuild,v 1.1 2004/06/15 19:57:02 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r8.ebuild,v 1.2 2004/06/23 23:24:19 agriffis Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -56,16 +56,16 @@ src_unpack() {
 	einfo "Applying other needed patches..."
 	epatch ${FILESDIR}/wolk-4.9s-speedstep.c.patch || die
 
-	if [ "`use wolk-supermount`" ]; then
+	if use wolk-supermount; then
 		ewinfo "Applying Supermount patch..."
 		epatch ${DISTDIR}/1008_supermount-1.2.9-2.4.20-OLDIDE.patch  || die
 	fi
-	if [ "`use ipv6`" ]; then
+	if use ipv6; then
 		einfo "Applying MIPv6 patch..."
 		epatch ${DISTDIR}/1009_mipv6-0.9.5.1-v2.4.20-wolk4.0s.patch  || die
 	fi
 
-	if [ "`use wolk-bootsplash`" ]; then
+	if use wolk-bootsplash; then
 		einfo "Applying Bootsplash patches..."
 		epatch ${DISTDIR}/1007_bootsplash-v3.0.7-2.4.20-0.patch  || die
 		epatch ${DISTDIR}/1007_bootsplash-v3.0.7-2.4.20-1-aty128.patch  || die
