@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.25.ebuild,v 1.1 2003/12/11 21:22:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.25.ebuild,v 1.2 2003/12/12 07:10:42 max Exp $
 
 inherit perl-module
 
 DESCRIPTION="Set of utilities to manage TV listings stored in the XMLTV format."
 HOMEPAGE="http://membled.com/work/apps/xmltv/"
-SRC_URI="mirror://sourceforge/xmltv/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,12 +19,12 @@ KEYWORDS="~x86"
 #       empty value, everything will be *enabled*.
 #
 #  none:            Don't enable any of the features below
-#  tv_grab_de:      Germany and Austria listing grabbers
+#  tv_grab_de:      Germany and Austria listing grabbers (disabled)
 #  tv_grab_uk:      Britain listings grabber
 #  tv_grab_uk_rt:   Alternate Britain listings grabber
 #  tv_grab_it:      Italy listings grabber
 #  tv_grab_na:      North America listings grabber
-#  tv_grab_sn:      Sweden and Norway listings grabber
+#  tv_grab_sn:      Sweden and Norway listings grabber (disabled)
 #  tv_grab_nz:      New Zealand listings grabber
 #  tv_grab_fi:      Finland listings grabber
 #  tv_grab_es:      Spain listings grabber
@@ -60,8 +60,8 @@ DEPEND=">=sys-apps/sed-4
 DEPEND="${DEPEND} dev-perl/perl-tk dev-perl/Tk-TableMatrix dev-perl/XML-Simple"
 # for tv_grab_na
 DEPEND="${DEPEND} >=dev-perl/HTML-Parser-3.34"
-# for tv_grab_sn
-DEPEND="${DEPEND} >=dev-perl/HTML-TableExtract-1.08"
+# for tv_grab_sn (disabled)
+#DEPEND="${DEPEND} >=dev-perl/HTML-TableExtract-1.08"
 # for tv_grab_nz
 DEPEND="${DEPEND} >=dev-lang/python-1.5.2"
 # for tv_grab_fi tv_grab_es tv_grab_nl tv_grab_nl_wolf tv_grab_hu tv_grab_dk
@@ -101,7 +101,7 @@ make_config() {
 		echo "no"
 	fi
 
-	# Enable Germany and Austria (disabled currently)
+	# Enable Germany and Austria (disabled)
 	#[ "`has tv_grab_de ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable Brittain
 	[ "`has tv_grab_uk ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
@@ -111,8 +111,8 @@ make_config() {
 	[ "`has tv_grab_it ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable North America
 	[ "`has tv_grab_na ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-	# Enable Sweden and Norway
-	[ "`has tv_grab_sn ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
+	# Enable Sweden and Norway (disabled)
+	#[ "`has tv_grab_sn ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable New Zealand
 	[ "`has tv_grab_nz ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable Finland
