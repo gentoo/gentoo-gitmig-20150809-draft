@@ -1,24 +1,41 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.26 2003/02/13 20:34:04 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.27 2003/02/14 04:25:53 raker Exp $
+
+*transcode-0.6.3.20030116-r1 (13 Feb 2003)
+
+  13 Feb 2003; Nick Hadaway <raker@gentoo.org>
+  transcode-0.6.3.20030116-r1.ebuild,
+  files/digest-transcode-0.6.3.20030116-r1 :
+  Completed library support.  Please note that libpostproc
+  doesn't appear to be detected with mplayer-0.90_rc2 but is
+  with _rc3...
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> transcode-0.6.0.ebuild transcode-0.6.1-r1.ebuild
   transcode-0.6.2.20021114.ebuild transcode-0.6.2.ebuild transcode-0.6.3.20021205-r1.ebuild
   transcode-0.6.3.20021219.ebuild transcode-0.6.3.20030116.ebuild :
   Set -ppc in keywords, very x86 specific code.
 
-transcode-0.6.3.20030116 (13 Feb 2003)
+*transcode-0.6.3.20030116 (13 Feb 2003)
 
   13 Feb 2003; phoen][x <phoenix@gentoo.org> transcode-0.6.3.20030116.ebuild :
   Removed "-mfpmath=sse" and "-fPic" from C(XX)FLAGS - these setting caused a 
   break in the compilation. See bug #14920 for more information.
 
-transcode-0.6.3.20030116 (19 Jan 2003)
+*transcode-0.6.3.20030116-r1 (13 Feb 2003)
+
+  13 Feb 2003; Nick Hadaway <raker@gentoo.org>
+  transcode-0.6.3.20030116-r1.ebuild,
+  files/digest-transcode-0.6.3.20030116-re :
+  Library support appears now to complete. :)  Depending on the
+  hopefully soon to be marked stable series 10 of netpbm.
+
+*transcode-0.6.3.20030116 (19 Jan 2003)
 
   19 Jan 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.20030116.ebuild files/digest-transcode-0.6.3.20030116 ChangeLog :
   Version bumped. Closes #14066.
 
-transcode-0.6.3.20021219 (19 Jan 2003)
+*transcode-0.6.3.20021219 (19 Jan 2003)
 
   19 Jan 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.20021219.ebuild files/digest-transcode-0.6.3.20021219 ChangeLog :
   Version bumped. Now works without avifile !!!. Closes #12471.
