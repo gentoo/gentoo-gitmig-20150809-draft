@@ -1,11 +1,11 @@
 # ChangeLog for app-arch/unace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.5 2002/10/29 04:17:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.6 2002/11/29 18:15:52 vapier Exp $
 
-*unace-1.2b (28 Oct 2002)
+*unace-2.2 (29 Nov 2002)
 
-  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
-  Added per #9818 from Cory Visi <cory@visi.name>.
+  29 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #11348
 
 *unace-2.0.4 (04 Jun 2002)
 
@@ -21,3 +21,8 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+*unace-1.2b (28 Oct 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added per #9818 from Cory Visi <cory@visi.name>.
