@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.6.0.ebuild,v 1.8 2004/06/24 22:35:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.6.0.ebuild,v 1.9 2004/07/04 18:50:57 kloeri Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="1"
 IUSE="jpeg"
-KEYWORDS="x86 ppc ~alpha ~sparc hppa amd64 ~ia64 mips"
+KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ~ia64 mips"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/gconf-2.5.90
