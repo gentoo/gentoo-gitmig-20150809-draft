@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.5.1.ebuild,v 1.2 2003/09/26 18:56:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.5.1.ebuild,v 1.3 2003/11/28 01:12:36 mr_bones_ Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ DEPEND="media-libs/libsdl
 	>=sys-apps/sed-4
 	oggvorbis? ( media-libs/libvorbis )
 	alsa? ( media-libs/alsa-lib )
-	mad? ( media-sound/mad )"
+	mad? ( media-libs/libmad )"
 
 src_compile() {
 	egamesconf \
@@ -47,8 +47,8 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin scummvm
-	doman scummvm.6
-	dodoc NEWS README
+	dogamesbin scummvm || die "dogamesbin failed"
+	doman scummvm.6    || die "doman failed"
+	dodoc NEWS README  || die "dodoc failed"
 	prepgamesdirs
 }
