@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.4.ebuild,v 1.3 2002/10/26 20:38:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.4.ebuild,v 1.4 2002/10/30 16:11:03 raker Exp $
 
 DESCRIPTION="library for bible reading software"
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -12,7 +12,8 @@ KEYWORDS="x86"
 
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	sys-libs/zlib"
 
 S="${WORKDIR}/${P}"
 
@@ -30,6 +31,8 @@ src_install() {
 
 	dodoc AUTHORS CODINGSTYLE INSTALL ChangeLog README
 
+	cp -R samples examples ${D}/usr/share/doc/${PF}
+
 	dohtml doc/api-documentation/html/*
 
 }
@@ -39,8 +42,9 @@ pkg_postinst() {
 	einfo ""
 	einfo "Check out http://www.crosswire.org/sword/modules/"
 	einfo "to download modules that you would like to enhance"
-	einfo "the library with.  unzip the files you download"
-	einfo "while you are in the /usr/share/sword directory"
+	einfo "the library with.  Follow module installation"
+	einfo "instructions found on the web or in INSTALL.gz found"
+	einfo "in /usr/share/doc/${PF}"
 	einfo ""
 
 }

@@ -1,8 +1,11 @@
 # ChangeLog for app-text
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.2 2002/10/26 20:38:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.3 2002/10/30 16:11:03 raker Exp $
 
 *sword-1.5.4 (23 Oct 2002)
+
+  30 Oct 2002; Nick Hadaway <raker@gentoo.org> sword-1.5.4.ebuild :
+  Added final set of missing documentation.
 
   26 Oct 2002; Nick Hadaway <raker@gentoo.org> sword-1.5.4.ebuild :
   Added docs and the html api documentation
