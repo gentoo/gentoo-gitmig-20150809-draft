@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2.ebuild,v 1.4 2004/03/06 14:46:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.1 2004/03/06 14:46:39 lanius Exp $
 
 DESCRIPTION="Point-to-point protocol - patched for PPPOE"
 HOMEPAGE="http://www.samba.org/ppp"
@@ -12,7 +12,8 @@ KEYWORDS="~x86 ~ppc ~sparc ~hppa -amd64 ~ia64"
 IUSE="ipv6 activefilter pam"
 
 RDEPEND="virtual/glibc
-	net-libs/libpcap"
+	>=net-libs/libpcap-0.8
+	atm? ( x86? ( net-dialup/linux-atm ) )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -24,6 +25,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/killaddr-smarter.patch.gz
 	epatch ${FILESDIR}/${PV}/cflags.patch
 	epatch ${FILESDIR}/${PV}/pcap.patch
+	epatch ${FILESDIR}/${PV}/stdopt-mppe-mppc-0.82.patch.gz
+
+	if [ "`use atm`" -a "`use x86`" ]; then
+		einfo "Enabling PPPoATM support"
+		epatch ${FILESDIR}/${PV}/pppoatm.diff.gz
+	fi
 
 	use activefilter && {
 		einfo "Enabling active-filter"

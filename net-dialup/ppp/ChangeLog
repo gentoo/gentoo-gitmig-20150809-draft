@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.49 2004/02/22 01:36:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.50 2004/03/06 14:46:39 lanius Exp $
+
+  06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2.ebuild,
+  files/2.4.2/killaddr-smarter.patch, files/2.4.2/killaddr-smarter.patch.gz,
+  files/2.4.2/mpls.patch, files/2.4.2/mpls.patch.gz,
+  files/2.4.2/pppoatm.diff.gz, files/2.4.2/stdopt-mppe-mppc-0.82.patch.gz:
+  add atm support (bug #41607) and mppc support (bug #42212)
 
   22 Feb 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2.ebuild:
   bug #41914
