@@ -9,13 +9,14 @@ SRC_URI="http://www.ex-parrot.com/~chris/tpop3d/${P}.tar.gz
 HOMEPAGE="http://www.ex-parrot.com/~chris/tpop3d/"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc
-	ssl?	( >=dev-libs/openssl-0.9.6)
-        ldap? 	( >=net-nds/openldap-2.0.7)
-	mysql? 	( >=dev-db/mysql-3.23.28)
-	perl?	( >=sys-devel/perl-5.6.1)
-	pam?	( >=sys-libs/pam-0.75)
-	tcpd?	( >=sys-apps/tcp-wrappers-7.6)"
+	ssl?	( >=dev-libs/openssl-0.9.6 )
+        ldap? 	( >=net-nds/openldap-2.0.7 )
+	mysql? 	( >=dev-db/mysql-3.23.28 )
+	perl?	( >=sys-devel/perl-5.6.1 )
+	pam?	( >=sys-libs/pam-0.75 )
+	tcpd?	( >=sys-apps/tcp-wrappers-7.6 )"
 IUSE="ssl ldap mysql perl pam tcpd maildir"
+KEYWORDS="x86"
 
 inherit eutils
 
