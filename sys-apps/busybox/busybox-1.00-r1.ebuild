@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.10 2005/02/15 13:14:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.11 2005/02/23 03:27:03 vapier Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc sparc x86"
-IUSE="debug uclibc static savedconfig netboot floppyboot make-busybox-symlinks"
+IUSE="debug uclibc static savedconfig netboot floppyboot make-symlinks"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
@@ -136,10 +136,10 @@ src_install() {
 
 	into /
 	dobin busybox
-	if use make-busybox-symlinks ; then
+	if use make-symlinks ; then
 		if [ ! "${VERY_BRAVE_OR_VERY_DUMB}" = "yes" ] && [ "${ROOT}" = "/" ];
 		then
-			ewarn "setting USE=make-busybox-symlinks and emerging to / is very dangerous."
+			ewarn "setting USE=make-symlinks and emerging to / is very dangerous."
 			ewarn "it WILL overwrite lots of system programs like: ls bash awk grep (bug 60805 for full list)."
 			ewarn "If you are creating a binary only and not merging this is probably ok."
 			ewarn "set env VERY_BRAVE_OR_VERY_DUMB=yes if this is realy what you want."
@@ -187,7 +187,7 @@ src_install() {
 		# this should install to the ./_install/ dir by default.
 		# we make a micro pkg of busybox that can be used for
 		# embedded systems -solar
-		if ! use make-busybox-symlinks ; then
+		if ! use make-symlinks ; then
 			make CROSS="${CROSS}" install || die
 		fi
 		cd ./_install/ \
