@@ -1,14 +1,20 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.7 2002/12/06 13:24:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.8 2002/12/12 16:46:29 phoenix Exp $
 
-  6 Dec 2002; Michael Cummings <mcummings@gentoo.org>; dvdrip deps
+*dvdrip-0.48.5 (16 Nov 2002) 
 
-  There are deps that are not needed by dvdrip for gnome. Returned those
-  to an optional status instead of a mandatory. See bug 5887, thanks to
-  Dylan Carlson for point this out.
+   12 Dec 2002; phoen][x <phoenix@gentoo.org> dvdrip-0.48.5.ebuild,
+   files/digest-dvdrip-0.48.5:
+   Version bump submitted by Tobias Sager <moixa@gmx.ch>. This closes bug
+   11958. 
 
 *dvdrip-0.47_12 (16 Nov 2002) 
+
+   6 Dec 2002; Michael Cummings <mcummings@gentoo.org>; dvdrip deps
+   There are deps that are not needed by dvdrip for gnome. Returned those
+   to an optional status instead of a mandatory. See bug 5887, thanks to
+   Dylan Carlson for point this out.
    
    16 Nov 2002; phoen][x <phoenix@gentoo.org>; dvdrip-0.47_12.ebuild,
    files/digest-dvdrip-0.47_12 :
