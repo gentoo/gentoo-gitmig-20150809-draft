@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/curl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.32 2004/03/14 00:05:53 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.33 2004/03/14 20:33:55 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> curl-7.11.0.ebuild:
+  Added ~mips keyword.
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> curl-7.10.8-r1.ebuild:
   Added ~mips keyword.
