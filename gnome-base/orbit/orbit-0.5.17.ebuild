@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17.ebuild,v 1.3 2004/11/04 08:22:19 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17.ebuild,v 1.4 2004/11/08 14:17:18 vapier Exp $
 
 inherit gnome.org libtool gnuconfig
-
-IUSE=""
 
 MY_P="ORBit-${PV}"
 PVP=(${PV//[-\._]/ })
@@ -14,15 +12,15 @@ DESCRIPTION="A high-performance, lightweight CORBA ORB aiming for CORBA 2.2 comp
 HOMEPAGE="http://www.labs.redhat.com/orbit/"
 SRC_URI="mirror://gnome/sources/ORBit/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
+LICENSE="GPL-2"
+SLOT="1"
+KEYWORDS="x86 sparc alpha mips hppa amd64 ppc ia64 ppc64 arm"
+IUSE=""
+
 DEPEND="sys-devel/gettext
 	>=sys-apps/tcp-wrappers-7.6
 	=dev-libs/glib-1.2*"
-
 RDEPEND="=dev-libs/glib-1.2*"
-
-SLOT="1"
-LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha mips hppa amd64 ppc ia64 ppc64"
 
 src_compile() {
 	# Detect mips systems properly
