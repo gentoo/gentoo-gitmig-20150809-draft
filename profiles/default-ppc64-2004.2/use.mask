@@ -31,5 +31,5 @@ java
 jikes
 junit
 
-media-sound/alsa-driver
 uclibc
+caps

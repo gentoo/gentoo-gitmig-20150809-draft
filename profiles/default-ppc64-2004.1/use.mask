@@ -41,3 +41,4 @@ ldap
 nptl
 
 uclibc
+caps
