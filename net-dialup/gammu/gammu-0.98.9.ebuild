@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.98.9.ebuild,v 1.3 2004/11/19 18:52:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.98.9.ebuild,v 1.4 2005/01/17 05:46:46 st_lim Exp $
 
 inherit eutils
 
