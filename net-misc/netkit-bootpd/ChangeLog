@@ -1,11 +1,11 @@
 # ChangeLog for net-misc/netkit-bootpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.2 2002/07/09 09:26:59 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.3 2002/07/09 09:37:21 phoenix Exp $
 
 *netkit-bootpd-0.17-r1 (1 Feb 2002)
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> netkit-bootpd-0.17-r1.ebuild:
-  Added KEYWORDS, SLOT.
+  Added KEYWORDS, LICENSE, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
