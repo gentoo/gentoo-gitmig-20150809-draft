@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.35 2004/01/02 21:14:44 aether Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.36 2004/01/04 07:56:12 aether Exp $
+
+*java-config-1.2.1 (03 Jan 2004)
+
+  03 Jan 2004; Jason A Mobarak <aether@gentoo.org> java-config-1.2.0.ebuild,
+  java-config-1.2.1.ebuild:
+  All errors message are now printed to stderr.
 
 *java-config-1.2.0 (02 Jan 2004)
 
