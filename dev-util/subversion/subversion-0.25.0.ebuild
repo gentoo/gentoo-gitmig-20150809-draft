@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.25.0.ebuild,v 1.4 2003/09/06 20:28:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.25.0.ebuild,v 1.5 2003/09/25 17:06:17 mholzer Exp $
 
 inherit libtool
 
@@ -193,17 +193,17 @@ src_install () {
 		mkdir -p ${D}/etc/apache2/conf/modules.d
 		cat <<EOF >${D}/etc/apache2/conf/modules.d/47_mod_dav_svn.conf
 <IfDefine SVN>
-  <IfModule !mod_dav_svn.c>
-    LoadModule dav_svn_module	extramodules/mod_dav_svn.so
-  </IfModule>
-  <Location /svn/repos>
-    DAV svn
-    SVNPath ${SVN_REPOS_LOC}/repos
-    AuthType Basic
-    AuthName "Subversion repository"
-    AuthUserFile ${SVN_REPOS_LOC}/conf/svnusers
-    Require valid-user
-  </Location>
+	<IfModule !mod_dav_svn.c>
+		LoadModule dav_svn_module	extramodules/mod_dav_svn.so
+	</IfModule>
+	<Location /svn/repos>
+		DAV svn
+		SVNPath ${SVN_REPOS_LOC}/repos
+		AuthType Basic
+		AuthName "Subversion repository"
+		AuthUserFile ${SVN_REPOS_LOC}/conf/svnusers
+		Require valid-user
+	</Location>
 </IfDefine>
 EOF
 	fi
