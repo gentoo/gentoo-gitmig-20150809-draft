@@ -1,0 +1,25 @@
+# ChangeLog for net-misc/smb4k
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.1 2003/08/12 03:16:32 caleb Exp $
+
+*smb4k 0.2.1 (14 Jul 2003)
+
+01 Aug 2003; Henrik <Spock2000@gmx.de> smb4k-0.2.1.ebuild :
+
+- Fixed hanging of Smb4K when exiting via File->Quit.
+- Fixed wrong master entry for hosts, that were added by a network search.
+- Fixed duplicate workgroup entries.
+- Fixed several problems in the browse code.
+- Fixed a crash in the "Logins" config tab.
+- Improved the "Network" and "Share" tab.
+- Improved the share view's popup menu.
+- Redesigned the configuartion dialog. Now it complies with KDE standards.
+- Added catalan translation. Many thanks go to Leopold Palomo Avellaneda for
+  providing it.
+- Added swedish translation.
+- Added experimental WINS server support.
+- Separated KProcess stuff from the widget classes.
+- Login information is stored in a separate file with strict permissions.
+- Many more improvements, bug fixes and code clean-ups.
+
+
