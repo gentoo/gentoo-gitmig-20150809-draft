@@ -281,3 +281,11 @@ global $uid, $dbusername, $show_privates, $list; ?>
 	elseif ( $num == 3 ) $branch = 'unstable';
 	return $branch;
 } ?>
+
+<?php function branch_name_num ( $num ) {
+	if     ( $num == 'none' )     $branch = 0;
+	elseif ( $num == 'all' )      $branch = 1;
+	elseif ( $num == 'stable' )   $branch = 2;
+	elseif ( $num == 'unstable' ) $branch = 3;
+	return $branch;
+} ?>
