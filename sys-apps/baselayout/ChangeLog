@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.212 2005/03/01 22:01:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.213 2005/03/10 15:33:27 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.10 (10 Mar 2005)
+
+  10 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  +baselayout-1.11.10.ebuild:
+  Bump to 1.11.10 ... might this be golden for stabilization? I guess we will
+  soon know
 
   01 Mar 2005; <solar@gentoo.org> baselayout-1.11.8-r3.ebuild,
   baselayout-1.11.9-r1.ebuild, baselayout-1.9.4-r6.ebuild,
