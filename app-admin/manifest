@@ -117,7 +117,7 @@ MD5 cbe6a227fe05b5e3c2e7504996aec1fe modlogan/modlogan-0.7.18.ebuild 2351
 MD5 ef92509af50965d8d8ebc2ff42b46b04 modlogan/ChangeLog 1449
 MD5 68b329da9893e34099c7d8ad5cb9c940 envtest/ChangeLog.spork 1
 MD5 c8673cbcdc240451600c16e032e762b8 envtest/manifest 241
-MD5 139e9e77c65b8248593bb151c6de70f8 envtest/envtest-1.2.3-r4.ebuild 750
+MD5 2f9893a00ef87cd70726d9cf99800927 envtest/envtest-1.2.3-r4.ebuild 751
 MD5 801435d73d51c525cfa207ac4bc0e047 envtest/ChangeLog 370
 MD5 5caddaa7c1195a6f096aa162eac70f6a watchfolder/watchfolder-0.3.1.1.ebuild 794
 MD5 84bd063b7cb98ade914d5b183ca69323 watchfolder/ChangeLog 393
