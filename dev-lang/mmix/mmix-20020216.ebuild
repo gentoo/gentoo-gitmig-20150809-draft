@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20020216.ebuild,v 1.8 2003/12/18 18:14:53 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20020216.ebuild,v 1.9 2004/02/22 19:55:30 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Donald Knuth's MMIX Assembler and Simulator"
@@ -14,7 +14,7 @@ RDEPEND="$DEPEND"
 
 SLOT="0"
 LICENSE="mmix"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 src_compile() {
 	make basic CFLAGS="${CFLAGS}" || die

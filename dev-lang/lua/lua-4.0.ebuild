@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-4.0.ebuild,v 1.11 2004/01/03 10:22:10 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-4.0.ebuild,v 1.12 2004/02/22 19:55:13 agriffis Exp $
 
 S=${WORKDIR}/lua
 DESCRIPTION="A powerful light-weight programming language designed for extending applications."
@@ -8,7 +8,7 @@ SRC_URI="http://www.lua.org/ftp/${PN}.tar.gz"
 HOMEPAGE="http://www.lua.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 LICENSE="lua"
 
 

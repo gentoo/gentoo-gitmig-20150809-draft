@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.4.ebuild,v 1.7 2004/01/03 18:29:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.4.ebuild,v 1.8 2004/02/22 19:58:17 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_3/${PN}${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa arm ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa ~ia64"
 
 DEPEND="virtual/glibc
 	virtual/x11
