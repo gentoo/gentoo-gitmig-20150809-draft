@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dnotify
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.13 2004/11/01 10:49:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.14 2004/11/03 03:23:40 gustavoz Exp $
+
+  03 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> dnotify-0.16.0.ebuild,
+  dnotify-0.17.1.ebuild, dnotify-0.5.0.ebuild:
+  Keyworded -sparc, they're b0rked
 
   01 Nov 2004; Joshua Kinard <kumba@gentoo.org> dnotify-0.17.1.ebuild:
   Marked stable on mips.
