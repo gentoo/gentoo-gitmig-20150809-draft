@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.4.1.ebuild,v 1.2 2001/10/07 11:11:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.4.1.ebuild,v 1.3 2001/10/07 20:37:31 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
-	 >=gnome-base/libgtop-1.0.13
+	 >=gnome-base/libgtop-1.0.12-r1
 	 >=gnome-base/libglade-0.17-r1
          >=sys-apps/e2fsprogs-1.19-r2"
 
