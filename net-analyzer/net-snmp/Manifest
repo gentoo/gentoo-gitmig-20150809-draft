@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 277963b5cf3dd0a4fca2658df153e9f7 net-snmp-5.1.1.ebuild 2413
-MD5 f597261fb689d5987bd724f686d8bd8c net-snmp-5.0.9-r1.ebuild 1659
-MD5 469a9d0b2d836a307178f2fa26042d51 net-snmp-5.1.ebuild 2142
-MD5 c9cad6967c195fe67becfed53488a95b net-snmp-5.0.9-r3.ebuild 2253
-MD5 24aa42e9701c11e97147ff1b0d66ab8b net-snmp-5.1.1-r1.ebuild 3582
-MD5 5471b6ead0630c88fb8233a56256774a ChangeLog 9565
+MD5 452f9e426feebe14498d98f3c7e5e3c3 ChangeLog 9676
 MD5 feec9ceb3ba9f6a8b860a4a130998500 metadata.xml 214
+MD5 f597261fb689d5987bd724f686d8bd8c net-snmp-5.0.9-r1.ebuild 1659
+MD5 c9cad6967c195fe67becfed53488a95b net-snmp-5.0.9-r3.ebuild 2253
+MD5 b85541a40d78edc40083996b0f28462d net-snmp-5.1.1-r1.ebuild 3581
+MD5 277963b5cf3dd0a4fca2658df153e9f7 net-snmp-5.1.1.ebuild 2413
+MD5 469a9d0b2d836a307178f2fa26042d51 net-snmp-5.1.ebuild 2142
 MD5 8cadda02e3a8f7279f531b660164c310 files/digest-net-snmp-5.0.9-r1 67
 MD5 8cadda02e3a8f7279f531b660164c310 files/digest-net-snmp-5.0.9-r3 67
-MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1-r1 67
-MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1 67
 MD5 d37d58ebf8d67438ae7a607ffe281b0a files/digest-net-snmp-5.1 65
-MD5 00ce9b4fa6d597e08af7ce82d3a5c246 files/snmpd.conf 599
+MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1 67
+MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1-r1 67
+MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
 MD5 1cc5b20de8fc9e7c807195c320ab2f4b files/net-snmp-proc.patch 2448
 MD5 ed2e953a9a923caec45eeca95bec2efc files/snmpd-5.1.conf 606
-MD5 662833e61042a47d4bd8aaae404f4245 files/snmpd.rc6 710
-MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
 MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBf1aET+MN7JbqCpMRAuNqAJ0e3B0vh+WQ4zbZX9F0fvsqmll/JACfVy1N
-FvFMP+DLodizXH55oYaesYk=
-=DDbs
------END PGP SIGNATURE-----
+MD5 00ce9b4fa6d597e08af7ce82d3a5c246 files/snmpd.conf 599
+MD5 662833e61042a47d4bd8aaae404f4245 files/snmpd.rc6 710

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.63 2004/10/27 08:05:36 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.64 2004/11/01 17:51:05 pylon Exp $
+
+  01 Nov 2004; Lars Weiler <pylon@gentoo.org> net-snmp-5.1.1-r1.ebuild:
+  Stable on ppc for PHP5, Bug #60442.
 
   27 Oct 2004; Eldad Zack <eldad@gentoo.org> net-snmp-5.1.1-r1.ebuild:
   Fixed sed typo. Closes #69069.
