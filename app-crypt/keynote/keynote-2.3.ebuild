@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.2 2004/03/13 21:50:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.3 2004/06/01 23:14:59 agriffis Exp $
 
 DESCRIPTION="The KeyNote Trust-Management System"
 HOMEPAGE="http://www1.cs.columbia.edu/~angelos/keynote.html"
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 src_compile() {
 
 	econf || die
-	if [ -n "`use ssl`" ]; then
+	if use ssl; then
 		make || die
 	else
 		make nocrypto || die

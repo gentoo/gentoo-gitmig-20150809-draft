@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.1.ebuild,v 1.9 2004/04/06 03:30:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.1.ebuild,v 1.10 2004/06/01 23:11:55 agriffis Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_install() {
 		install || die
 
 	# Doesn't get install otherwise (for some reason, look into this).
-	if [ "`use ssl`" ] ; then
+	if use ssl ; then
 		cd ${S}/lib/des
 
 		make prefix=${D}/usr/athena \
