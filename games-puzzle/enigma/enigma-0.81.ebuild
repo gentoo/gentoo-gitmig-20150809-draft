@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.81.ebuild,v 1.5 2004/02/10 06:11:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.81.ebuild,v 1.6 2004/02/27 01:31:07 vapier Exp $
 
 inherit games
 
@@ -8,10 +8,9 @@ DESCRIPTION="puzzle game similar to Oxyd"
 HOMEPAGE="http://www.freesoftware.fsf.org/enigma/"
 SRC_URI="http://savannah.nongnu.org/download/enigma/${P}.tar.gz"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+KEYWORDS="x86"
 
 RDEPEND="virtual/glibc
 	sys-libs/zlib
@@ -28,19 +27,23 @@ src_unpack() {
 	cd ${S}
 	sed -i \
 		-e 's:$(pkgdatadir):$(DESTDIR)$(pkgdatadir):' \
-			data/levels/Makefile.am \
-			data/levels/Sokoban/Makefile.am || \
-				die "sed data/levels/{Sokoban/}?Makefile.am failed"
+		data/levels/Makefile.am \
+		data/levels/Sokoban/Makefile.am \
+		|| die "sed data/levels/{Sokoban/}?Makefile.am failed"
+	aclocal || die "aclocal failed"
+	automake || die "automake failed"
+	autoconf || die "autoconf failed"
 }
 
 src_compile() {
-	automake
 	egamesconf --enable-optimize || die
 	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc NEWS README AUTHORS INSTALL ChangeLog || die "dodoc failed"
+	mv ${D}/${GAMES_PREFIX}/share/* ${D}/usr/share/
+	rm -r ${D}/${GAMES_PREFIX}/share
+	dodoc NEWS README AUTHORS INSTALL ChangeLog
 	prepgamesdirs
 }
