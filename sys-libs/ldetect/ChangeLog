@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldetect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ChangeLog,v 1.7 2004/06/24 23:04:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ChangeLog,v 1.8 2004/08/24 04:19:03 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> ldetect-0.4.7.ebuild:
+  Added missing IUSE.
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ldetect-0.4.7.ebuild:
   Stable on alpha.
