@@ -1,28 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r2.ebuild,v 1.11 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.37.ebuild,v 1.1 2003/06/29 16:13:36 foser Exp $
 
-IUSE="nls tetex"
+inherit gnome.org libtool
 
-S=${WORKDIR}/${P}
+IUSE="nls"
+
 DESCRIPTION="GNOME printing library"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/0.35/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 sparc "
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
 RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
 	>=gnome-base/gnome-libs-1.4.1.4
-	>=gnome-base/libglade-0.17-r1
+	>=dev-libs/libxml-1.8.8
 	>=media-libs/freetype-2.0.1"
 
 DEPEND="${RDEPEND}
-		sys-devel/gettext
-		dev-lang/perl
-		tetex? ( app-text/tetex )
-     	>=app-text/ghostscript-6.50-r2
-		nls? ( sys-devel/gettext )"
+	dev-lang/perl
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
@@ -35,34 +32,28 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf
+	elibtoolize
 
-	use nls || myconf="${myconf} --disable-nls"
-
-	./configure --host=${CHOST} \
-		    --prefix=/usr \
-		    --sysconfdir=/etc \
-		    --localstatedir=/var/lib \
-			${myconf} || die
+	econf `use_enable nls` || die
 
 	emake || die
+
 }
 
 src_install() {
-	make DESTDIR=${D} 						\
-		gnulocaledir=${D}/usr/share/locale	\
-		sysconfdir=${D}/etc					\
-		install || die
+
+	einstall || die
 
 	insinto /usr/share/fonts
 	doins ${S}/run-gnome-font-install
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README
+
 }
 
 pkg_postinst() {
 	ldconfig >/dev/null 2>/dev/null
-	echo ">>> Installing fonts..."
+	einfo ">>> Installing fonts..."
 	perl /usr/share/fonts/run-gnome-font-install \
 		/usr/bin/gnome-font-install \
 		/usr/share/fonts /usr/share/fonts /etc >/dev/null 2>/dev/null
