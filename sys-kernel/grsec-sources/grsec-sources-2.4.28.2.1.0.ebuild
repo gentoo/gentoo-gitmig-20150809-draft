@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.1.0.ebuild,v 1.2 2005/01/08 19:26:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.1.0.ebuild,v 1.3 2005/01/09 13:22:12 solar Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="yes"
@@ -20,11 +20,10 @@ SRC_URI="http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}-${PATCH_STAMP}.pa
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-2.4.28-CAN-2004-0814.patch"
 
 HOMEPAGE="http://www.kernel.org/ http://www.grsecurity.net"
-KEYWORDS="x86 sparc ppc alpha amd64 -hppa"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 -hppa"
 RESTRICT="buildpkg"
 IUSE=""
-
+RDEPEND=""
 UNIPATCH_LIST="${DISTDIR}/${PATCH_SRC_BASE} \
 	${FILESDIR}/2.4.28-binfmt_a.out.patch \
 	${FILESDIR}/CAN-2004-1016.patch \
@@ -33,7 +32,7 @@ UNIPATCH_LIST="${DISTDIR}/${PATCH_SRC_BASE} \
 	${DISTDIR}/linux-2.4.28-CAN-2004-0814.patch \
 	${FILESDIR}/linux-2.4.28-random-poolsize.patch \
 	${FILESDIR}/2.4.27-cmdline-race.patch \
-	${FILESDIR}/2.4.28-uselib4pax.patch
+	${FILESDIR}/2.4.28-uselib4pax.patch \
 	${FILESDIR}/gentoo-sources-2.4.CAN-2004-1137.patch"
 
 src_unpack() {
