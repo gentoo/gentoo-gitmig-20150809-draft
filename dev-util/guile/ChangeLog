@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.16 2003/07/24 18:35:48 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.17 2003/08/20 03:55:04 agriffis Exp $
+
+  19 Aug 2003; Aron Griffis <agriffis@gentoo.org> guile-1.6.4.ebuild:
+  Fix bug 26484 by filtering out -g3
 
   24 Jul 2003; Tavis Ormandy <taviso@gentoo.org> guile-1.6.4.ebuild:
   ~alpha

@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4.ebuild,v 1.3 2003/07/24 18:35:48 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4.ebuild,v 1.4 2003/08/20 03:55:04 agriffis Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Scheme interpreter"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
@@ -22,6 +24,10 @@ DEPEND=">=sys-libs/ncurses-5.1
 SLOT="12"
 
 src_compile() {
+	# Fix for bug 26484: This package fails to build when built with
+	# -g3, at least on some architectures.  (19 Aug 2003 agriffis)
+	filter-flags -g3
+
 	econf \
 		--with-threads \
 		--with-modules || die
