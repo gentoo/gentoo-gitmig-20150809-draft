@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.63 2003/03/08 12:23:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.64 2003/03/14 19:14:08 hannes Exp $
+
+*kdebase-3.1.1 (14 Mar 2003)
+
+  14 Mar 2003; Hannes Mehnert <hannes@gentoo.org> kdebase-3.1.1.ebuild,
+  files/3.1.1/backgroundrc, files/3.1.1/kdmrc,
+  files/3.1.1/startkde-3.1.1-gentoo.diff:
+  version bump
 
   08 Mar 2003; Jason Wever <weeve@gentoo.org> kdebase-3.0.5a-r2.ebuild,kdebase-3.1-r1.ebuild:
   Changed ~sparc keywords to sparc.

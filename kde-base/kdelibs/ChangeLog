@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.62 2003/03/11 13:32:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.63 2003/03/14 19:14:09 hannes Exp $
+
+*kdelibs-3.1.1 (14 Mar 2003)
+
+  14 Mar 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1.1.ebuild,
+  files/kdelibs-3.1.1-kjs-alphaev6-gcc3-workaround.patch,
+  files/kdelibs-3.1.1-zip.diff:
+  version bump
 
 *kdelibs-3.1-r3 (11 Mar 2003)
 
