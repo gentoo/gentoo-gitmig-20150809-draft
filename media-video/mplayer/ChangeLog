@@ -1,6 +1,22 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.175 2004/07/24 07:58:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.176 2004/07/24 08:28:13 ferringb Exp $
+
+*mplayer-1.0_pre5-r2 mplayer-1.0_pre4-r7 (24 Jul 2004)
+
+  24 Jul 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r6.ebuild,
+  mplayer-1.0_pre4-r7.ebuild, mplayer-1.0_pre5-r2.ebuild:
+  As it stands, the stable ebuilds should now be just that, _stable_. Mplayer
+  1.0_pre4-r7 and 1.0_pre5-r2 are *not* to be fooled with, compilation fixes
+  are the only thing that should be added to these ebuilds- anything else
+  belongs in a unstable revbump. This fixes compilation issues w/
+  USE="-gtk png", USE="-gtk" and any of xv X xinerama, 
+  USE="gif" (compilation failure), USE="-gif" (unconditionally linking in 
+  libgif broken in previous fix for #58086), DOCS/TOOLS not being installed, 
+  removed dep on X for gif (it was caused by said fix), USE="dvdread -dvd" 
+  bring in dvdread and not using it, etc.  Pretty large amount of fixes.  
+  Versions 1.0_pre4-r6 and 1.0_pre5-r1 are removed from the tree, no user 
+  should be using them (borked badly).
 
   24 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/cachefill.patch:

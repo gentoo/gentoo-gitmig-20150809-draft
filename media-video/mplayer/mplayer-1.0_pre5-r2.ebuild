@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.8 2004/07/24 05:25:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.1 2004/07/24 08:28:13 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -17,14 +17,17 @@ SRC_URI="mirror://mplayer/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )"
+
 # Only install Skin if GUI should be build (gtk as USE flag)
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
-	x86? ( divx4linux? (  >=media-libs/divx4linux-20030428 )
-		 >=media-libs/win32codecs-0.60 )
+	x86? (
+		divx4linux? (  >=media-libs/divx4linux-20030428 )
+		>=media-libs/win32codecs-0.60
+		)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
@@ -32,16 +35,20 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	cdparanoia? ( media-sound/cdparanoia )
 	directfb? ( dev-libs/DirectFB )
 	dvd? ( dvdread? ( media-libs/libdvdread ) )
-	encode? ( media-sound/lame
-			>=media-libs/libdv-0.9.5 )
+	encode? (
+		media-sound/lame
+		>=media-libs/libdv-0.9.5
+		)
 	esd? ( media-sound/esound )
 	gif? ( media-libs/giflib
 		media-libs/libungif )
 	ggi? ( media-libs/libggi )
-	gtk? ( media-libs/libpng
+	gtk? (
+		media-libs/libpng
 		virtual/x11
 		=x11-libs/gtk+-1.2*
-		=dev-libs/glib-1.2* )
+		=dev-libs/glib-1.2*
+		)
 	jpeg? ( media-libs/jpeg )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
@@ -159,11 +166,28 @@ src_compile() {
 	###############
 	myconf="${myconf} $(use_enable bidi fribidi)"
 	myconf="${myconf} $(use_enable cdparanoia)"
-	myconf="${myconf} $(use_enable dvd mpdvdkit)"
+	if use dvd; then
+		myconf="${myconf} $(use_enable dvdread) $(use_enable !dvdread mpdvdkit)"
+	else
+		myconf="${myconf} --disable-dvdread --disable-mpdvdkit"
+	fi
 	myconf="${myconf} $(use_enable edl)"
 	myconf="${myconf} $(use_enable encode mencoder)"
 	myconf="${myconf} $(use_enable gtk gui)"
-	myconf="${myconf} $(use_enable X x11) $(use_enable X xv) $(use_enable X vm)"
+
+	if use !gtk && use !X && use !xv && use !xinerama; then
+		myconf="${myconf} --disable-gui --disable-x11 --disable-xv --disable-xmga --disable-xinerama --disable-vm --disable-xvmc"
+	else
+		#note we ain't touching --enable-vm.  That should be locked down in the future.
+		myconf="${myconf} --enable-x11 $(use_enable xinerama) $(use_enable xv) $(use_enable gtk gui)"
+	fi
+
+	# disable png *only* if gtk && png aren't on
+	if use png || use gtk; then
+		myconf="${myconf} --enable-png"
+	else
+		myconf="${myconf} --disable-png"
+	fi
 	myconf="${myconf} $(use_enable ipv6 inet6)"
 	myconf="${myconf} $(use_enable joystick)"
 	myconf="${myconf} $(use_enable lirc)"
@@ -183,12 +207,7 @@ src_compile() {
 	# Codecs #
 	########
 	myconf="${myconf} $(use_enable divx4linux)"
-	# gif support needs X11 libs, don't build it if there is no X support
-	if use X && use gif ; then
-		myconf="${myconf} --enable-gif"
-	else
-		myconf="${myconf} --disable-gif"
-	fi
+	myconf="${myconf} $(use_enable gif)"
 	myconf="${myconf} $(use_enable jpeg)"
 	myconf="${myconf} $(use_enable lzo liblzo)"
 	myconf="${myconf} $(use_enable matroska external-matroska) $(use_enable !matroska internal-matroska)"
@@ -224,7 +243,6 @@ src_compile() {
 	myconf="${myconf} $(use_enable sdl)"
 	myconf="${myconf} $(use_enable svga)"
 	myconf="${myconf} $(use_enable tga)"
-	myconf="${myconf} $(use_enable xinerama)"
 
 	#############
 	# Audio Output #
@@ -239,12 +257,19 @@ src_compile() {
 	#################
 	# Advanced Options #
 	#################
+	if ! use 3dnow; then
+		myconf="${myconf} --disable-3dnow --disable-3dnowex";
+	fi
+	if ! use sse; then
+		myconf="${myconf} --disable-sse --disable-sse2";
+	fi
+	if use !mmx && use !3dnow && use !sse; then
+		myconf="${myconf} --disable-mmx --disable-mmx2"
+	fi
 	myconf="${myconf} $(use_enable 3dnow) $(use_enable 3dnow 3dnowex)"
 	myconf="${myconf} $(use_enable altivec)"
 	myconf="${myconf} $(use_enable debug)"
-	myconf="${myconf} $(use_enable mmx) --disable-mmx2"
 	myconf="${myconf} $(use_enable nls i18n)"
-	myconf="${myconf} $(use_enable sse) --disable-sse2"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -279,6 +304,12 @@ src_compile() {
 			einfo "Not building matrox driver.  It doesn't seem to like other archs.  Please let me know at chriswhite@gentoo.org if you find out otherwise."
 		fi
 	fi
+
+	# leave this in place till the configure/compilation borkage is completely corrected back to pre4-r4 levels.
+	# it's intended for debugging so we can get the options we configure mplayer w/, rather then hunt about.
+	# it *will* be removed asap; in the meantime, doesn't hurt anything.
+	echo "${myconf}" > ${T}/configure-options
+
 	unset CFLAGS CXXFLAGS
 	./configure --prefix=/usr \
 		--confdir=/usr/share/mplayer \
@@ -291,15 +322,11 @@ src_compile() {
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die
 
-		# config.mak doesn't set GIF_LIB so gif related source files fail
-		if use gif && use X
-		then
-			if use gif; then
-				sed -e "s:GIF_LIB =:GIF_LIB = -lgif:" -i config.mak
-			else
-				sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
-			fi
-		fi
+	# when gif is autodetected, GIF_LIB is set correctly.  We're explicitly controlling it, and it doesn't behave correctly.
+	# so... we have to help it along.
+	if use gif; then
+		sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
+	fi
 
 	einfo "Make"
 	make all || die "Failed to build MPlayer!"
@@ -332,15 +359,18 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
-	docinto /usr/share/doc/${PF} ; dodoc -r ${S}/DOCS
+	find "${S}/DOCS" -type d | xargs -- chmod 0755
+	find "${S}/DOCS" -type f | xargs -- chmod 0644
+	cp -r "${S}/DOCS" "${D}/usr/share/doc/${PF}/" || die
 
-	# Copy misc tools to documentation path, as they're not installed
-	# directly
-	docinto /usr/share/doc/${PF} ; dodoc -r ${S}/TOOLS
+	# Copy misc tools to documentation path, as they're not installed directly
+	# and yes, we are nuking the +x bit.
+	find "${S}/TOOLS" -type d | xargs -- chmod 0755
+	find "${S}/TOOLS" -type f | xargs -- chmod 0644
+	cp -r "${S}/TOOLS" "${D}/usr/share/doc/${PF}/" || die
 
 	# Install the default Skin and Gnome menu entry
-	if use gtk
-	then
+	if use gtk; then
 		dodir /usr/share/mplayer/Skin
 		cp -r ${WORKDIR}/Blue ${D}/usr/share/mplayer/Skin/default || die
 
@@ -349,8 +379,7 @@ src_install() {
 		dosym mplayer /usr/bin/gmplayer
 	fi
 
-	if use gnome
-	then
+	if use gnome; then
 		insinto /usr/share/pixmaps
 		newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
 		insinto /usr/share/gnome/apps/Multimedia
