@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.25 2003/08/11 20:22:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.26 2003/11/22 02:15:03 agriffis Exp $
+
+  21 Nov 2003; Aron Griffis <agriffis@gentoo.org> whois-4.6.6-r2.ebuild:
+  Stable on alpha
 
 *whois-4.6.6-r2 (11 Aug 2003)
 
