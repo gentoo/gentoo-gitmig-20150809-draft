@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.7 2004/03/16 19:21:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.8 2004/03/16 19:22:13 seemant Exp $
 
 inherit rpm
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_install() {
-	
+
 	cp -a ${WORKDIR}/* ${D}
 
 	dosym libcpqci.so.1.0 /opt/compaq/hpasm/addon/libcpqci.so.1
