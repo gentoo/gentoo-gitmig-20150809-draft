@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.11 2004/07/30 13:26:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.12 2004/07/30 20:48:05 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -79,7 +79,7 @@ horde_src_unpack() {
 horde_src_install() {
 	webapp_src_preinst
 
-	local destdir=${MY_HTDOCSDIR}/horde
+	local destdir=${MY_HTDOCSDIR}
 	[ "${HORDE_PN}" != "horde" ] && destdir=${destdir}/${HORDE_PN}
 
 	# Work-around when dealing with CVS sources
