@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9-r2.ebuild,v 1.5 2004/02/23 00:17:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9-r2.ebuild,v 1.6 2004/03/18 21:51:01 seemant Exp $
 
 inherit gnuconfig
 
@@ -8,7 +8,7 @@ IUSE="ssl nls static ipv6 debug socks5"
 
 PATCHVER=0.1
 DESCRIPTION="Network utility to retrieve files from the WWW"
-HOMEPAGE="http://www.cg.tuwien.ac.at/~prikryl/wget.html"
+HOMEPAGE="http://wget.sunsite.dk/"
 SRC_URI="mirror://gnu/wget/${P}.tar.gz
 	mirror://gentoo/${P}+ipvmisc-${PATCHVER}.patch"
 
