@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/sdl-sopwith
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.1 2003/11/29 22:51:50 mr_bones_ Exp $
+
+*sdl-sopwith-1.7.1 (29 Nov 2003)
+
+  29 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  sdl-sopwith-1.7.1.ebuild:
+  initial commit; ebulid supplied by Jonathan Hitchcock via bug 34723 (modified)
+
