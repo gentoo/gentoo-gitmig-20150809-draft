@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.19 2005/01/22 19:27:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.20 2005/01/24 21:22:37 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -16,6 +16,7 @@ fdftk
 glitz
 gnustep
 hal
+i8x0
 icc
 icc-pgo
 ifc
@@ -25,6 +26,7 @@ lirc
 lm_sensors
 oci8
 pic
+real
 svga
 tcc
 trusted
@@ -32,10 +34,9 @@ uml
 voodoo3
 wavelan
 wifi
-
+xvmc
 
 # And arch keyword flags that don't work
-
 alpha
 amd64
 arm
@@ -75,11 +76,9 @@ esoob
 filepro
 frontbase
 hyperwave-api
-informix
 ingres
 libedit
 oracle7
-oci8
 pfpro
 solid
 sybase
