@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.9.4.ebuild,v 1.5 2005/01/30 21:02:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.9.4.ebuild,v 1.6 2005/01/31 03:33:36 vapier Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc.org/"
@@ -25,6 +25,8 @@ src_unpack() {
 	cd ${S}
 	use X || echo 'all:'$'\n''install:' > src/signer/Makefile.in
 	epatch ${FILESDIR}/0.8.1-64bit.patch
+	EPATCH_SINGLE_MSG="Applying libtool reverse deps patch ..." \
+		epatch ${ELT_PATCH_DIR}/fix-relink/1.5.0
 }
 
 src_compile() {
