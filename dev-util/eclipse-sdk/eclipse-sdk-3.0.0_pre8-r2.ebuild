@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8.ebuild,v 1.4 2004/05/10 16:30:09 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8-r2.ebuild,v 1.1 2004/05/18 00:15:17 karltk Exp $
+
+inherit eutils
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -24,7 +26,7 @@ DEPEND="${RDEPEND}
 	>=dev-java/ant-1.5.3
 	>=sys-apps/findutils-4.1.7
 	>=app-shells/tcsh-6.11
-	net-www/mozilla
+	mozilla? ( >=net-www/mozilla-1.5 )
 	app-arch/unzip"
 
 pkg_setup() {
@@ -65,7 +67,13 @@ src_unpack() {
 	cd ${S}
 	unpack ${A}
 
-	# karltk: Is this really needed?
+	epatch ${FILESDIR}/01-distribute_ant_target-3.0.patch
+
+	if use kde ; then
+		epatch ${FILESDIR}/02-konqueror_help_browser-3.0.patch
+	fi
+
+	# Needed for the IBM JDK
 	addwrite "/proc/self/maps"
 
 	# Clean up all pre-built code
@@ -105,6 +113,7 @@ src_unpack() {
 		-e "s:-I\$(JAVA_HOME)/include:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
 		-e "s:-I\$(JAVA_HOME)\t:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
 		-e "s:-L\$(MOZILLA_HOME)/lib -lembed_base_s:-L\$(MOZILLA_HOME):" \
+		-e "s:MOZILLACFLAGS = -O:MOZILLACFLAGS = -O -fPIC:" \
 		-e "s:\$(JAVA_HOME)/jre/bin:\$(JAVA_HOME)/jre/lib/i386:" \
 		-i make_gtk.mak
 
@@ -133,7 +142,7 @@ src_unpack() {
 		-i make_linux.mak
 
 	cd ${S}
-	find -type f -name about.mappings -exec sed -e "s/@build@/Gentoo Linux ${PV}/" -i \{\} \;
+	find -type f -name about.mappings -exec sed -e "s/@build@/Gentoo Linux ${PF}/" -i \{\} \;
 }
 
 build_gtk_frontend() {
@@ -147,10 +156,12 @@ build_gtk_frontend() {
 	cd ${S}/"${gtk_swt_src_dir}"
 	make -f make_gtk.mak make_swt || die "Failed to build platform-independent SWT support"
 	make -f make_gtk.mak make_atk || die "Failed to build atk support"
+
 	if use gnome ; then
 		einfo "Building GNOME VFS support"
 		make -f make_gtk.mak make_gnome || die "Failed to build GNOME VFS support"
 	fi
+
 	if use mozilla ; then
 		einfo "Building Mozilla component"
 		make -f make_gtk.mak make_mozilla || die "Failed to build Mozilla support"
@@ -170,9 +181,6 @@ build_motif_frontend() {
 	cd ${S}/"${motif_swt_src_dir}"
 
 	make -f make_linux.mak make_swt || die "Failed to build Motif support"
-	if use gnome ; then
-		make -f make_linux.mak make_gnome || die "Failed to build GNOME VFS support"
-	fi
 	if use kde ; then
 		make -f make_linux.mak make_kde || die "Failed to build KDE support"
 	fi
@@ -203,99 +211,87 @@ src_compile() {
 
 	set_dirs
 
-	# First build all java code
-
-
-	if ( use gtk || ! ( use gtk || use motif || use kde ) ); then
-		einfo "Building GTK+ frontend"
-		ant -q \
-			-buildfile build.xml \
-			-DinstallOs=linux \
-			-DinstallWs=gtk \
-			-DinstallArch=$ARCH \
-			${ant_extra_opts} compile || die "Failed to compile java code (gtk+)"
-	fi
-	if use motif ; then
-		einfo "Building Motif frontend"
-		ant -q \
-			-buildfile build.xml \
-			-DinstallOs=linux \
-			-DinstallWs=motif \
-			-DinstallArch=$ARCH \
-			${ant_extra_opts} compile || die "Failed to compile java code (Motif)"
-	fi
+	# Build selected frontends
+	use gtk && build_gtk_frontend
+	use motif && build_motif_frontend
 
 	einfo "Building resources.core plugin"
-	cd ${core_src_dir}
+	cd ${S}/${core_src_dir}
 	make JDK_INCLUDE="`java-config -O`/include -I`java-config -O`/include/linux" || die "Failed to build resource.core plugin"
 	mkdir -p ${S}/"${core_dest_dir}"
 	mv *.so ${S}/"${core_dest_dir}"
 
 	cd ${S}
 
-	# Build selected frontends
-	use gtk && build_gtk_frontend
-	use motif && build_motif_frontend
-
-}
-
-generate_filelist() {
-	local findopts
-	if [ "$1" == "dirs" ] ; then
-		findopts="-type d"
-	elif [ "$1" == "files" ] ; then
-		findopts="-type f"
-	else
-		die "Incorrect param to generate_filelist"
+	# Build all java code -- default to gtk if neither of gtk, motif, 
+	# kde are set
+	if ( use gtk || ! ( use gtk || use motif || use kde ) ); then
+		einfo "Building GTK+ frontend -- see compilelog.txt for details"
+		ant -q -q \
+			-buildfile build.xml \
+			-DinstallOs=linux \
+			-DinstallWs=gtk \
+			-DinstallArch=$ARCH \
+			${ant_extra_opts} compile install \
+			|| die "Failed to compile java code (gtk+)"
 	fi
-	find plugins ${findopts} | \
-		egrep -v ".*\.(java|c|h|o|mak)$" | \
-		egrep -v "(/|\.)(carbon|solaris|win32|hpux|aix|photon|macosx|gtk64)" | \
-		egrep -v ".*src.zip$" | \
-		egrep -v "/src(-|_|new)" | \
-		egrep -v "/src/" | \
-		grep -v "build.xml"
+	if use motif ; then
+		einfo "Building Motif frontend -- see compilelog.txt for details"
+		ant -q -q \
+			-buildfile build.xml \
+			-DcollPlace="eclipse-${SLOT}" \
+			-DinstallOs=linux \
+			-DinstallWs=motif \
+			-DinstallArch=$ARCH \
+			${ant_extra_opts} compile install \
+			|| die "Failed to compile java code (Motif)"
+	fi
+
+	cat ${FILESDIR}/eclipse-${SLOT}.desktop | \
+		sed -e "s/@PV@/${PV}/" \
+		> eclipse-${SLOT}.desktop
 }
 
 src_install() {
-	eclipse_dir="/usr/lib/eclipse-3"
+	eclipse_dir="/usr/lib/eclipse-${SLOT}"
 
 	# Create basic directories
 	dodir ${eclipse_dir}
 	insinto ${eclipse_dir}
-	doins plugins/org.eclipse.platform/.eclipseproduct
 
-	# Install features
-	dodir ${eclipse_dir}/features
-	einfo "Copying features"
-	cp -dpR features/org.eclipse.{sdk,jdt,pde,platform} ${D}/${eclipse_dir}/features/
-
-	# Install plugins
-	einfo "Creating directory structure"
-	generate_filelist dirs | xargs -n 1 -i@ dodir ${eclipse_dir}/@ || die "Failed to create plugin directory structure"
-	einfo "Copying plugins"
-	generate_filelist files | xargs -n 1 -i@ cp @ ${D}/${eclipse_dir}/@ || die "Failed to copy plugins"
+	einfo "Installing features and plugins"
+	unzip -q result/linux-*-x86-sdk.zip -d ${D}/usr/lib
 
 	# Install launchers and native code
+	exeinto ${eclipse_dir}
 	if use gtk ; then
-		exeinto ${eclipse_dir}
-		doexe ./plugins/platform-launcher/library/gtk/eclipse-gtk || die "Failed to install eclipse-gtk"
+		einfo "Installing eclipse-gtk binary"
+		doexe plugins/platform-launcher/library/gtk/eclipse-gtk \
+			|| die "Failed to install eclipse-gtk"
 	fi
 	if use motif ; then
-		exeinto ${eclipse_dir}
-		doexe ./plugins/platform-launcher/library/motif/eclipse-motif || die "Failed to install eclipse-motif"
+		einfo "Installing eclipse-motif binary"
+		doexe plugins/platform-launcher/library/motif/eclipse-motif \
+			|| die "Failed to install eclipse-motif"
 	fi
 
 	doins plugins/org.eclipse.platform/{startup.jar,splash.bmp}
-	doins plugins/platform-launcher/bin/linux/gtk/icon.xpm
 
 	# Install startup script
 	exeinto /usr/bin
-	doexe ${FILESDIR}/eclipse-3
+	doexe ${FILESDIR}/eclipse-${SLOT}
 
 	# Install GNOME .desktop file
 	if use gnome ; then
 		insinto /usr/share/gnome/apps/Development
-		doins ${FILESDIR}/eclipse.desktop
+		doins eclipse-${SLOT}.desktop
 	fi
+
+	# Install KDE .desktop file
+	if use kde ; then
+		# karltk: should check for available kde version(s)
+		insinto /usr/kde/3.2/share/applnk/Applications/
+		doins eclipse-${SLOT}.desktop
+	fi
+
 }
