@@ -1,6 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.26 2003/10/14 08:14:57 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.27 2003/10/17 14:31:50 spider Exp $
+
+*epiphany-1.0.3 (17 Oct 2003)
+
+  17 Oct 2003; <spider@gentoo.org> epiphany-1.0.3.ebuild:
+  Versionbump to make it work with moz 1.5
 
 *epiphany-1.0.2 (14 Oct 2003)
 
