@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 af1f63aeed6850f3835b209f3359b3b7 jrexx-1.1.1.ebuild 1032
+MD5 6e2db6db2bc56e95cdc95eaf9f9e8590 ChangeLog 387
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 9cf333bb6babb9b15b1579bfaedf42e1 files/digest-jrexx-1.1.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBg/p5/rLF9B432nYRAifxAJ0QI9nhhJIVJjsxSTbCLmX7wA7BdACfYgn5
+iW4C9Cw659wEhaV9Mi6m3/k=
+=k2Kl
+-----END PGP SIGNATURE-----
