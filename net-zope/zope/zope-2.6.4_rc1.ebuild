@@ -1,18 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.3.ebuild,v 1.2 2004/01/21 21:21:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4_rc1.ebuild,v 1.1 2004/01/21 21:21:49 lanius Exp $
 
 inherit eutils
 
-S="${WORKDIR}/Zope-${PV}-src"
+MY_PV=${PV/_/-}
+
+S="${WORKDIR}/Zope-${MY_PV}-src"
 
 DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
 HOMEPAGE="http://www.zope.org"
-SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
+SRC_URI="http://www.zope.org/Products/Zope/2.6.4rc1/Zope-${MY_PV}-src.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc"
 
 # This is for developers that wish to test Zope with virtual/python.
 # If this is a problem, let me know right away. --kutsuya@gentoo.org
@@ -90,6 +92,13 @@ pkg_setup() {
 	enewuser ${ZUID} 261 /bin/bash ${ZS_DIR} ${ZGID}
 }
 
+src_unpack() {
+	unpack ${A}
+	einfo "Patching structured text"
+	cd ${S}/lib/python/StructuredText/
+	epatch ${FILESDIR}/i18n-1.0.0.patch
+}
+
 src_compile() {
 	$python wo_pcgi.py || die "Failed to compile."
 }
@@ -112,11 +121,12 @@ src_install() {
 
 	# Add conf.d script.
 	dodir /etc/conf.d
-	echo "ZOPE_OPTS=\"-u zope\"" | \
-	cat - ${FILESDIR}/2.6.1/zope.envd > .templates/zope.confd
+	cp ${FILESDIR}/2.6.1/zope.envd .templates/zope.confd
 
 	# Fill in environmental variables
-	sed -i -e "/ZOPE_HOME=/ c\\ZOPE_HOME=${ZSERVDIR}\\ " \
+	sed -i \
+	    -e "/ZOPE_OPTS=/ c\\ZOPE_OPTS=${ZOPEOPTS}\\ " \
+	    -e "/ZOPE_HOME=/ c\\ZOPE_HOME=${ZSERVDIR}\\ " \
 		-e "/SOFTWARE_HOME=/ c\\SOFTWARE_HOME=${ZSERVDIR}/lib/python\\ " \
 		.templates/zope.confd
 
