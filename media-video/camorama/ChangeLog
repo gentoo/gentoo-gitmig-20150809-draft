@@ -1,0 +1,10 @@
+# ChangeLog for media-video/camorama
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.1 2003/04/13 17:56:13 liquidx Exp $
+
+*camorama-0.16 (13 Apr 2003)
+
+  13 Apr 2003; Alastair Tse <liquidx@gentoo.org> Manifest,
+  camorama-0.16.ebuild:
+  initial ebuild. solves #18712
+
