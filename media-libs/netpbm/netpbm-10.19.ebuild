@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.19.ebuild,v 1.3 2004/02/20 10:42:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.19.ebuild,v 1.4 2004/06/07 23:33:27 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd ${S}
 	cp Makefile.config.in Makefile.config
 
-	if [ `use svga` ] ; then
+	if use svga ; then
 		echo "LINUXSVGAHDR_DIR = /usr/include" >> Makefile.config
 		echo "LINUXSVGALIB = /usr/lib/libvga.so" >> Makefile.config
 	fi

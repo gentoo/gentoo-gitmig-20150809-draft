@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.17 2004/06/03 13:35:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.18 2004/06/07 23:37:43 agriffis Exp $
 
 MY_PN="${PN/pdf/PDF}-Lite"
 MY_P="${MY_PN}-${PV}-Unix-src"
@@ -58,7 +58,7 @@ src_install() {
 	# ok, this should create the correct lib dirs for perl and python.
 	# yes, i know it is messy, but as i see it, a ebuild should be generic
 	# ... ie. you should be able to just use cp to update it
-	if [ ! -z "`use perl`" ] && [ -x /usr/bin/perl ] ; then
+	if use perl && [ -x /usr/bin/perl ] ; then
 		local perlmajver="`/usr/bin/perl -v |grep 'This is perl' \
 			|cut -d ' ' -f 4 |cut -d '.' -f 1`"
 		local perlver="`/usr/bin/perl -v |grep 'This is perl' \
@@ -67,7 +67,7 @@ src_install() {
 			|cut -d ' ' -f 7`"
 		dodir /usr/lib/perl${perlmajver/v/}/site_perl/${perlver/v/}/${perlarch}
 	fi
-	if [ ! -z "`use python`" ] && [ -x /usr/bin/python ] ; then
+	if use python && [ -x /usr/bin/python ] ; then
 		dodir /usr/lib/python${PYVER}/lib-dynload
 	fi
 	#next line required for proper install
@@ -83,7 +83,7 @@ src_install() {
 	# karltk: This is definitely NOT how it should be done!
 	# we need this to create pdflib.jar (we will not have the source when
 	# this is a binary package ...)
-#	if [ "`use java`" ]
+#	if use java
 #	then
 #		insinto /usr/share/pdflib
 #		doins ${S}/bind/pdflib/java/pdflib.java
