@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/glpk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/ChangeLog,v 1.5 2004/10/16 23:07:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/ChangeLog,v 1.6 2004/11/22 02:43:28 robbat2 Exp $
+
+*glpk-4.7 (21 Nov 2004)
+
+  21 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> +glpk-4.7.ebuild:
+  New version, Java support removed by upstream due to license issues.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> glpk-4.2.ebuild:
   dojar --> java-pkg_dojar

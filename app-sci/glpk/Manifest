@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 c05f4a3e0f65494cd75d1368191d085c glpk-4.7.ebuild 1039
 MD5 e0c7435f781d0ab5995459c90e3d274a glpk-4.2.ebuild 1510
-MD5 1dde330e6774a02c9242cd9e1c5177f4 ChangeLog 694
+MD5 7a1b31239e53eaa904d24a2f39fab5ae ChangeLog 865
 MD5 f9b985eff5cf629c334273be8fbdee5c metadata.xml 219
 MD5 19c5df347fc8cf8bcfec4351c072bdcf files/digest-glpk-4.2 61
+MD5 8b0aabaae9e61d7aa12c4bb982b2a996 files/digest-glpk-4.7 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFBcam7/rLF9B432nYRAhPIAKC6j12K40UJpaZciRG54miQ5584GwCeKSI0
-vJQ3znd0rqk2iB903ZZo1wY=
-=g60f
+iD8DBQFBoVJlPpIsIjIzwiwRAv+OAKCmoUConVnKaWOI6vf9sU7s5735lwCgn7li
+1W0iy1foX7H892rs643b0xc=
+=hfQ6
 -----END PGP SIGNATURE-----
