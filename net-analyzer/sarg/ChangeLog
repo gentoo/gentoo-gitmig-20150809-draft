@@ -1,7 +1,10 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.11 2004/10/02 15:24:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.12 2004/12/18 19:11:26 jhhudso Exp $
 
+  18 Dec 2004; Jared Hudson <jhhudso@gentoo.org> sarg-1.4.1-r2.ebuild :
+  Added amd64 keyword.
+	
   16 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; sarg-1.2.2.ebuild,
   sarg-1.4.1-r2.ebuild, sarg-1.4.1.ebuild:
   Changing net-www/squid to www-proxy/squid in depends
