@@ -18,9 +18,8 @@ DEPEND="virtual/glibc
 RDEPENR=${DEPEND}
 
 src_install () {
-	dodir /etc/init.d /var/state
-	sed -i 's:ln -s ${DEST}/${FIREWALL} /usr/share/shorewall/init::' install.sh
-	PREFIX=${D} ./install.sh || die
+	dodir /var/state
+	PREFIX=${D} ./install.sh /etc/init.d || die
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/shorewall shorewall
