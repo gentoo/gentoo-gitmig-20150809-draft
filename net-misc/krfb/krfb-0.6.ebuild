@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/krfb/krfb-0.6.ebuild,v 1.3 2002/05/21 18:14:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/krfb/krfb-0.6.ebuild,v 1.4 2002/07/01 21:33:31 danarmak Exp $
 
 inherit kde-base || die
 
+LICENSE="GPL-2"
 need-kde 3
 DESCRIPTION="KDE Desktop Sharing Application"
 SRC_URI="http://www.tjansen.de/krfb/${P}.tar.bz2"

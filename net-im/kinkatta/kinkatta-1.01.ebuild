@@ -8,6 +8,7 @@ inherit kde-base || die
 need-kde 2.2
 DESCRIPTION="KDE AIM Messenger"
 SRC_URI="http://ftp1.sourceforge.net/kinkatta/${P}.tar.gz"
+LICENSE="GPL-2 LGPL-2"
 
 HOMEPAGE="http://kinkatta.sourceforge.org"
 

@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-print/kups/kups-1.0-r1.ebuild,v 1.5 2002/05/21 18:14:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/kups/kups-1.0-r1.ebuild,v 1.6 2002/07/01 21:33:31 danarmak Exp $
 
 inherit kde-base || die
 
 need-kde 2.1.1
 
+LICENSE="GPL-2"
 DESCRIPTION="A CUPS front-end for KDE"
 SRC_URI="ftp://cups.sourceforge.net/pub/cups/kups/${P}.tar.gz"
 HOMEPAGE="http://cups.sourceforge.net/kups/"
