@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.13 2004/12/07 01:44:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.14 2004/12/07 15:17:38 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -546,7 +546,7 @@ src_unpack() {
 	# http://sources.redhat.com/ml/libc-alpha/2003-09/msg00100.html
 	echo 'int main(){}' > ${T}/gcc_eh_test.c
 	if ! $(tc-getCC) ${T}/gcc_eh_test.c -lgcc_eh 2>/dev/null ; then
-		sed -i -e '/static-gnulib := /s:-lgcc -lgcc_eh:-lgcc:' Makeconfig
+		sed -i -e 's:-lgcc_eh::' Makeconfig || die "sed gcc_eh"
 	fi
 
 	# hardened toolchain/relro/nptl/security/etc fixes

@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 65b2608084c75baef2abf5848ff78f3b ChangeLog 62420
 MD5 7cf88dee2671dcc30659d07241b8d918 glibc-2.2.5-r9.ebuild 10915
-MD5 e4f211c5762191a6fce67b15caf38c31 glibc-2.3.2-r12.ebuild 20537
+MD5 7ac20d9072665431e9f5cdc3c14f9737 glibc-2.3.2-r12.ebuild 20817
 MD5 d59fdfb3aca88476d792b71922c765a5 glibc-2.3.3.20040420-r2.ebuild 21630
 MD5 48dcbf88afd15efb62b4313337261968 glibc-2.3.4.20040619-r2.ebuild 21077
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 3628073e660979062c2b09010a36d5d1 glibc-2.3.4.20040808-r1.ebuild 23515
-MD5 43263ca5f0742351fbb0c8aaf3723897 glibc-2.3.4.20041102.ebuild 28281
+MD5 f71fb8ef664fba9e755c7610974cd8f1 glibc-2.3.4.20040808-r1.ebuild 23505
+MD5 ce2fa7fca461bd7e0a41e9132f7b0022 glibc-2.3.4.20041102.ebuild 28271
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
 MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
@@ -134,10 +131,3 @@ MD5 03b2b9cfe46d287c2a28df70e7a9e9a1 files/2.3.4/glibc-2.3.4-mips-prot_grows-und
 MD5 8d43dc97fe220048ade220f23e84f006 files/2.3.4/glibc-2.3.4-mips-rtld_deepbind-undefined.patch 1425
 MD5 1185022e9a50560d1bf9116a0461e011 files/2.3.4/glibc-2.3.4-mips-sysdep-cancel.diff 2402
 MD5 039f62650037a4a15cef3066b26d27c9 files/2.3.4/glibc-2.3.4-mips-update-__throw.patch 1975
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBtQr0roRuSHgZdywRAtURAJ9lDdSKC+e2PJ9n+J1YH+90nQs4bACfUUHS
-JjdxstfVi5Cb+hUhUTXm/gs=
-=O6bc
------END PGP SIGNATURE-----

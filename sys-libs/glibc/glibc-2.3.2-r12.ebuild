@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.2 2004/11/12 16:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.3 2004/12/07 15:17:38 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -16,6 +16,14 @@ export MIN_KV="2.4.1"
 #       you are doing !
 export MIN_NPTL_KV="2.6.0"
 
+# (very) Theoretical cross-compiler support
+export CTARGET="${CTARGET:-${CHOST}}"
+if [[ ${CTARGET} = ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET="${CATEGORY/cross-}"
+	fi
+fi
+
 MY_PV="${PV/_}"
 S="${WORKDIR}/${P%_*}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -28,7 +36,9 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	hppa? ( mirror://gentoo/${P}-hppa-patches-p1.tar.bz2 )"
 
 LICENSE="LGPL-2"
-SLOT="2.2"
+[[ ${CTARGET} != ${CHOST} ]] \
+	&& SLOT="${CTARGET}-2.2" \
+	|| SLOT="2.2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86"
 IUSE="nls pic build nptl debug"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
