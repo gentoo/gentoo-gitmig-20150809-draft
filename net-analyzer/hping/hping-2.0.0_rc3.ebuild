@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3.ebuild,v 1.3 2004/06/24 22:03:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3.ebuild,v 1.4 2004/06/30 22:47:13 eldad Exp $
 
 inherit eutils
 
 MY_P="${PN}${PV//_/-}"
 S="${WORKDIR}/${MY_P//\.[0-9]}"
-DESCRIPTION="A ping-like TCP/IP packet assembler/analyzer."
+DESCRIPTION="A ping-like TCP/IP packet assembler/analyzer"
 SRC_URI="http://www.hping.org/${MY_P}.tar.gz"
 HOMEPAGE="http://www.hping.org"
 
@@ -19,7 +19,7 @@ DEPEND="net-libs/libpcap"
 src_compile() {
 	./configure || die
 
-	if use debug
+	if [ `use debug` ]
 	then
 		make CCOPT="${CFLAGS}" || die
 	else
@@ -33,5 +33,5 @@ src_install () {
 	dosym /usr/sbin/hping2 /usr/sbin/hping
 
 	doman docs/hping2.8
-	dodoc INSTALL KNOWN-BUGS NEWS README TODO AUTHORS BUGS CHANGES COPYING
+	dodoc INSTALL KNOWN-BUGS NEWS README TODO AUTHORS BUGS CHANGES COPYING docs/AS-BACKDOOR docs/HPING2-IS-OPEN docs/MORE-FUN-WITH-IPID docs/*.txt
 }
