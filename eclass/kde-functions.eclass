@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.68 2004/04/19 14:54:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.69 2004/04/19 20:54:26 mr_bones_ Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -94,12 +94,13 @@ need-kde() {
 		# maybe i should look at relocating it...
 
 		RDEPEND="${RDEPEND} ~kde-base/kdelibs-${KDEVER}"
+		DEPEND="${DEPEND} ~kde-base/kdelibs-${KDEVER}"
 
 	else
 		# everything else only needs a minimum version
 		min-kde-ver $KDEVER
 		RDEPEND="${RDEPEND} >=kde-base/kdelibs-${selected_version}"
-
+		DEPEND="${DEPEND} >=kde-base/kdelibs-${selected_version}"
 	fi
 
 	qtver-from-kdever $KDEVER
@@ -211,8 +212,14 @@ need-qt() {
 	QT=qt
 
 	case $QTVER in
-	    2*)	RDEPEND="${RDEPEND} =x11-libs/${QT}-2.3*" ;;
-	    3*)	RDEPEND="${RDEPEND} >=x11-libs/${QT}-${QTVER}" ;;
+	    2*)
+			RDEPEND="${RDEPEND} =x11-libs/${QT}-2.3*"
+			DEPEND="${DEPEND} =x11-libs/${QT}-2.3*"
+			;;
+	    3*)
+			RDEPEND="${RDEPEND} >=x11-libs/${QT}-${QTVER}"
+			DEPEND="${DEPEND} >=x11-libs/${QT}-${QTVER}"
+			;;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
 
