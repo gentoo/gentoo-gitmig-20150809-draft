@@ -1,97 +1,59 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r1.ebuild,v 1.2 2004/10/13 01:06:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r1.ebuild,v 1.3 2005/01/25 17:42:24 genstef Exp $
 
-inherit eutils kernel-mod
-
-IUSE=""
+inherit linux-mod
 
 DESCRIPTION="Submount is a new attempt to solve the removable media problem for Linux."
 HOMEPAGE="http://submount.sourceforge.net/"
-
-DEPEND="virtual/linux-sources"
-
-SLOT="${KV}"
-
+SRC_URI="mirror://sourceforge/${PN}/${PN}-2.4-${PV}.tar.gz
+		mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
+IUSE=""
 
-if [ "${KV_MINOR}" == "4" ]
-then
-	EXTRA_V="-2.4"
-else
-	EXTRA_V=""
-	RESTRICT=nouserpriv
-fi
+MODULE_NAMES="subfs(fs:${S}/subfs-${MY_PV})"
+BUILD_PARAMS="KDIR=${KV_DIR}"
+BUILD_TARGETS="default"
 
-MY_P="${PN}${EXTRA_V}-${PV}"
-S="${WORKDIR}/${MY_P}"
-KMOD_SOURCES="${MY_P}.tar.gz"
+pkg_setup() {
+	linux-mod_pkg_setup
+	if kernel_is 2 4
+	then
+		MY_PV="2.4-${PV}"
+	elif ! use_m
+	then
+		eerror "This version of submount requires a kernel of 2.6.6 or greater"
+		die "Kernel is too old."
+	else
+		MY_PV="${PV}"
+	fi
 
-SRC_URI="mirror://sourceforge/${PN}/${KMOD_SOURCES}"
+	MY_P="${PN}-${MY_PV}"
+	S="${WORKDIR}/${MY_P}"
+}
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
 	cd ${S}
-	kernel-mod_getversion
-
-	if [ "${KV_MINOR}" -gt 5 ]
-	then
-		if [ "${KV_PATCH}" -gt 5 ]
-		then
-			sed -i "s:SUBDIRS=:M=:" \
-				${S}/subfs${EXTRA_V}-${PV}/Makefile
-		else
-			eerror "This version of submount requires a kernel of 2.6.6 or greater"
-			die "Too old of a kernel found."
-		fi
-	fi
+	convert_to_m ${S}/subfs-${MY_PV}/Makefile
 }
 
-src_compile ()
-{
-	cd ${S}/subfs${EXTRA_V}-${PV}
-	set_arch_to_kernel
-	emake KDIR=${ROOT}/usr/src/linux || die
-	set_arch_to_portage
+src_compile() {
+	cd ${S}/submountd-${MY_PV}
+	econf || die "econf failed"
+	emake || die "emake failed"
 
-	cd ${S}/submountd${EXTRA_V}-${PV}
-	econf \
-	--sbindir=/sbin \
-	|| die "Confugure error"
-
-	make || die "Make error"
+	linux-mod_src_compile
 }
 
-src_install ()
-{
-	local KV_OBJ
-	if [ "${KV_MINOR}" -gt 4 ]
-	then
-		KV_OBJ=ko
-	else
-		KV_OBJ=o
-	fi
+src_install() {
+	cd ${S}/submountd-${MY_PV}
+	make install DESTDIR=${D} mandir=/usr/share/man || die "make install failed"
 
-	cd ${S}/submountd${EXTRA_V}-${PV}
-	make install DESTDIR=${D} mandir=/usr/share/man
-
-	cd ${S}/subfs${EXTRA_V}-${PV}
-
-	insinto /lib/modules/${KV}/fs/subfs
-
-	doins subfs.$KV_OBJ
+	linux-mod_src_install
 
 	cd ${S}
 	./rename-docs ${PV}
 	dodoc README* COPYING INSTALL*
-}
-
-pkg_postinst ()
-{
-	if [ "${ROOT}" = / ]
-	then
-	[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
-	fi
 }

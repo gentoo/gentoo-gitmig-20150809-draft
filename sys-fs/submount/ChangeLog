@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/submount
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.8 2004/10/13 01:06:10 latexer Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.9 2005/01/25 17:42:24 genstef Exp $
+
+  25 Jan 2005; Stefan Schweizer <genstef@gentoo.org> submount-0.9-r1.ebuild:
+  Conversion to linux-mod
 
   12 Oct 2004; <peter@gentoo.org> submount-0.9-r1.ebuild:
   Small logic fix to not fail if using a 2.4 kernel.
