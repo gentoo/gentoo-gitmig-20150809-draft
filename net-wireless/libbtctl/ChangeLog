@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.5 2004/06/25 00:46:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.6 2004/06/27 03:57:00 liquidx Exp $
+
+*libbtctl-0.4.1 (26 Jun 2004)
+
+  26 Jun 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/libbtctl-0.4.1-enable_python.patch, +libbtctl-0.4.1.ebuild:
+  adding new version. now has python and optional mono bindings. added unused
+  disable/enable python patch. we don't use it right now because its not
+  complete yet and the only thing that needs libbtctl right now requires the
+  python bindings
 
   12 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> libbtctl-0.3.ebuild:
   Adding ~sparc (works with some kernels, see bug #39710)
