@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e0f8633f3c069e40e53d2fd60237cae tirc-0.54_alpha.ebuild 833
+MD5 ed77c4cbf5dd63dde2590fc92444afea ChangeLog 448
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 da0a4c17fad5cfb5d072031ecf858bef ChangeLog 364
+MD5 a2e7369ed7ec540500b6be1c2a55a84b tirc-0.54_alpha.ebuild 835
 MD5 cc590714f6d205652bdefd4263666731 files/digest-tirc-0.54_alpha 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA98KUAXomK8S72HoRAsFcAJ4yBtfyMi+LL/5mUmQAUfbwwBGJLwCfapDe
-mu7rI069gtIi0/r69kPEh6E=
-=WUy3
------END PGP SIGNATURE-----
