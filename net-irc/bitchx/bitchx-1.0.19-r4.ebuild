@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r4.ebuild,v 1.3 2003/03/13 22:46:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r4.ebuild,v 1.4 2003/03/23 22:09:50 seo Exp $
 
 IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk"
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX
 DESCRIPTION="An IRC Client"
-SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz
-		cjk? (http://www.gentoo.org/~seo/distfiles/bitchx-1.0.19-cjk.patch)"
+SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
 HOMEPAGE="http://www.bitchx.com/"
 
 SLOT="0"
