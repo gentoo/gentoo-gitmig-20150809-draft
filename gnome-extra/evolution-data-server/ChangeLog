@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.5 2004/09/17 11:43:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.6 2004/09/21 10:37:57 lv Exp $
+
+  21 Sep 2004; Travis Tilley <lv@gentoo.org>
+  evolution-data-server-1.0.0.ebuild:
+  added ~amd64 keyword
 
 *evolution-data-server-1.0.0 (17 Sep 2004)
 
