@@ -1,8 +1,15 @@
 # ChangeLog for dev-libs/libwmf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.6 2002/12/05 21:37:46 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.7 2002/12/06 07:26:59 george Exp $
 
 *libwmf-0.2.7 (27 Nov 2002)
+
+  05 Dec 2002; George Shapovalov <george@gentoo.org> libwmf-0.2.7.ebuild :
+
+  Incorporated changes by Lapo Calamandrei <l_calamandrei@neri-group.com> (bug #9080).
+  Basically made jpeg and X headers support optional, depending on jped and X use falgs.
+  *Not* upping the revision number - there is no new functionality/interface changes, no need to force 
+  rebuild on users.
 
   05 Dec 2002; Jon Nall <nall@gentoo.org> libwmf-0.2.7.ebuild :
   keyworded ~ppc
