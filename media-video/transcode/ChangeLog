@@ -1,8 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.13 2002/08/30 16:14:01 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.14 2002/09/11 20:54:14 gerk Exp $
 
 *transcode-0.6.0 (28 Aug 2002)
+
+  11 Sep 2002; Mark Guertin <gerk@gentoo.org> :
+  set nasm as x86 only dependancy
 
   28 Aug 2002; phoen][x <phoenix@gentoo.org> transcode-0.6.0.ebuild :
 
