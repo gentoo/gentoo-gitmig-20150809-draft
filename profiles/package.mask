@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <humpback@gentoo.org> (26 Jan 2004)
+# Needs testing
+=net-im/jabber-server-1.4.3-r2
+
 # <pebenito@gentoo.org> (24 Jan 2004)
 # badly broken
 =sys-boot/grub-0.93.20040125
