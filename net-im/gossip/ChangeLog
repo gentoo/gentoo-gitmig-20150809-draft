@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.18 2004/09/02 22:55:24 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.19 2004/09/03 21:39:17 slarti Exp $
+
+  03 Sep 2004; Tom Martin <slarti@gentoo.org> gossip-0.7.8.ebuild:
+  Marked ~amd64, resolves bug 58323. Thanks to Joe Seeder <seeder@pf.pl> for
+  reporting.
 
 *gossip-0.7.8 (03 Sep 2004)
 
@@ -15,6 +19,12 @@
 
   02 Sep 2004; Spider <spider@gentoo.org> 
   # INSERT ENTRY HERE
+
+*gossip-0.7.6 (12 Aug 2004)
+
+  12 Aug 2004; Tom Martin <slarti@gentoo.org> gossip-0.7.6.ebuild:
+  Marked ~amd64. Resolves bug 58273. Thanks to Joe Seeder <seeder@pf.lj> for
+  reporting.
 
 *gossip-0.7.5 (21 May 2004)
 
