@@ -1,0 +1,48 @@
+--- player-gst.c	2004-04-20 20:25:44.000000000 +0100
++++ /home/zaheer/player-gst.c	2005-03-15 14:14:10.312438632 +0000
+@@ -144,6 +144,7 @@
+ player_construct (Player *player, char **error)
+ {
+ 	PlayerPriv *priv;
++	GstElement* tempsink;
+ 
+ 	gst_init (NULL, NULL);
+ 
+@@ -168,22 +169,33 @@
+ 
+ 	gst_play_set_data_src (priv->play, priv->source);
+ 
+-	priv->sink = gst_gconf_get_default_audio_sink ();
+-	if (!priv->sink) {
++	tempsink = gst_gconf_get_default_audio_sink ();
++	if (!tempsink) {
+ 		*error = g_strdup (_("Could not render default GStreamer audio output sink"));
+ 
+ 		return;
+ 	}
+ 
+-	gst_play_set_audio_sink (priv->play, priv->sink);
++	
++
++	/* gst_play_set_audio_sink (priv->play, priv->sink); */
+ 
+-	priv->volume = gst_bin_get_by_name (GST_BIN (priv->play), "volume");
++	priv->volume = gst_element_factory_make ("volume", "muinevol");
+ 	if (!priv->volume) {
+ 		*error = g_strdup (_("Could not find the volume element in the GstPlay pipeline"));
+ 
+ 		return;
+ 	}
+ 
++	priv->sink = gst_bin_new ("muineaudiosink");
++	gst_bin_add_many (GST_BIN(priv->sink), priv->volume, tempsink, NULL);
++	gst_element_link (priv->volume, tempsink);
++	gst_element_add_ghost_pad (priv->sink, 
++		gst_element_get_pad (priv->volume, "sink"),
++		"sink");
++	gst_play_set_audio_sink (priv->play, priv->sink);
++
++	//gst_bin_add (GST_BIN(priv->sink), tempsink);
+ 	g_signal_connect (priv->play,
+ 			  "error",
+ 			  G_CALLBACK (error_cb),

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.11 2005/03/15 01:51:49 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.12 2005/03/16 15:36:09 zaheerm Exp $
+
+*muine-0.6.3-r3 (16 Mar 2005)
+
+  16 Mar 2005; <zaheerm@gentoo.org> +files/muine-0.6.3-libgstplay.diff,
+  +muine-0.6.3-r3.ebuild:
+  Fix bug in muine's gst engine that causes it not to work with recent 
+  gst-plugins (#85017)
 
   14 Mar 2005; Peter Johanson <latexer@gentoo.org>
   +files/muine-0.6.3-gnome-2.10-compat.diff, -muine-0.6.3-r1.ebuild,
