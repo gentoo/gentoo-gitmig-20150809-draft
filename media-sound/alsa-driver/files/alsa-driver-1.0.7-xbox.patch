@@ -1,0 +1,11 @@
+--- alsa-driver-1.0.7.orig/alsa-kernel/pci/ac97/ac97_codec.c	2004-10-13 10:26:12.000000000 +0100
++++ alsa-driver-1.0.7/alsa-kernel/pci/ac97/ac97_codec.c	2004-12-08 10:31:24.785816848 +0000
+@@ -1968,7 +1968,7 @@
+       __access_ok:
+ 	ac97->id = snd_ac97_read(ac97, AC97_VENDOR_ID1) << 16;
+ 	ac97->id |= snd_ac97_read(ac97, AC97_VENDOR_ID2);
+-	if (ac97->id == 0x00000000 || ac97->id == 0xffffffff) {
++	((ac97->scaps&AC97_SCAP_DETECT_BY_VENDOR)==0 && (ac97->id == 0x00000000 || ac97->id == 0xffffffff)) {
+ 		snd_printk(KERN_ERR "AC'97 %d access is not valid [0x%x], removing mixer.\n", ac97->num, ac97->id);
+ 		snd_ac97_free(ac97);
+ 		return -EIO;
