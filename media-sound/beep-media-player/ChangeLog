@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.30 2004/12/17 17:29:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.31 2004/12/19 15:05:02 chainsaw Exp $
+
+*beep-media-player-0.9.7-r1 (19 Dec 2004)
+
+  19 Dec 2004; Tony Vroon <chainsaw@gentoo.org> metadata.xml,
+  +files/0.9.7-noclick-resize.patch, +beep-media-player-0.9.7-r1.ebuild:
+  Added upstream patch for playlist doubleclick segfault, closes bug #73297.
+  MP3 support now a USE-flag. Took maintainership.
 
   17 Dec 2004; Tony Vroon <chainsaw@gentoo.org>
   beep-media-player-0.9.7.ebuild:

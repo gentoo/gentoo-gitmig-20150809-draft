@@ -1,0 +1,22 @@
+--- beep/playlistwin.c.bak	Sat Dec 18 22:32:23 2004
++++ beep/playlistwin.c	Sun Dec 19 13:31:39 2004
+@@ -1039,13 +1039,16 @@
+          (cfg.playlist_shaded &&
+           event->x >= playlistwin_get_width() - 31 &&
+           event->x < playlistwin_get_width() - 22))) {
+-        /* resize area */
+-        playlistwin_resizing = TRUE;
+-        gtk_window_begin_resize_drag(GTK_WINDOW(widget),
++
++        if (event->type != GDK_2BUTTON_PRESS && event->type != GDK_3BUTTON_PRESS) {
++                /* resize area */
++                playlistwin_resizing = TRUE;
++                gtk_window_begin_resize_drag(GTK_WINDOW(widget),
+                                      GDK_WINDOW_EDGE_SOUTH_EAST,
+                                      event->button,
+                                      event->x + xpos, event->y + ypos,
+                                      event->time);
++        }
+         grab = FALSE;
+     }
+     else if (event->button == 1 && REGION_L(12, 37, 29, 11)) {
