@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.13 2002/09/17 22:47:39 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.14 2002/12/02 18:49:05 spider Exp $
+
+
+*lftp-2.6.3 (02 Dec 2002)
+  
+  02 Dec 2002; Spider <spider@gentoo.org> lftp-2.6.3.ebuild :
+  in my quest to get my suddenly broken ftp-ssl to work I'm updating this 
+  ebuild to the latest version avaiable. KEWORDS set to ~ where not -
+
 
 *lftp-2.6.2 (11 Sep 2002)
 
