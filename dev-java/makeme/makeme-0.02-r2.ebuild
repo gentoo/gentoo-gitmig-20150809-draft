@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r2.ebuild,v 1.8 2004/07/14 02:44:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r2.ebuild,v 1.9 2004/10/17 19:25:45 axxo Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
 DESCRIPTION="Make utility written in Java"
 SRC_URI="mirror://sourceforge/makeme/makeme-0.02.tar.gz"
@@ -19,7 +19,7 @@ IUSE="jikes"
 src_unpack() {
 	unpack makeme-0.02.tar.gz
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {

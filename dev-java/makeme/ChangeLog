@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/makeme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.9 2004/06/24 22:38:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.10 2004/10/17 19:25:45 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> makeme-0.02-r2.ebuild:
+  use epatch
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> makeme-0.02-r2.ebuild:
   Fix use invocation
