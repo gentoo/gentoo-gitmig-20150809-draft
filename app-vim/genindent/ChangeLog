@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/genindent
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.1 2004/09/09 17:57:52 ciaranm Exp $
+
+*genindent-1.0 (09 Sep 2004)
+
+  09 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +genindent-1.0.ebuild:
+  New package. Needed as a dep for some other new app-vim things.
+
