@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.24.ebuild,v 1.2 2000/09/15 20:08:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.26.ebuild,v 1.1 2000/10/19 16:21:36 achim Exp $
 
-P=mysql-3.23.24-beta
+P=mysql-3.23.26-beta
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The MySQL Database"
-SRC_URI="http://www.mysql.com/Downloads/MySQL-3.23/${A}"
+SRC_URI="ftp://mysql.valueclick.com/mysql/Downloads/MySQL-3.23/${A}
+	 http://www.mysql.com/Downloads/MySQL-3.23/${A}"
 HOMEPAGE="http://www.mysql.com/"
 
 
@@ -27,6 +28,11 @@ src_compile() {
 	--enable-shared \
 	--enable-static \
 	--enable-assembler \
+	--enable-thread-safe-client \
+	--with-raid \
+	--with-low-memory \
+	--with-libwrap \
+	--with-berkley-db \
 	--libdir=/usr/lib \
 	--libexecdir=/usr/sbin \
 	--sysconfdir=/etc/mysql \
