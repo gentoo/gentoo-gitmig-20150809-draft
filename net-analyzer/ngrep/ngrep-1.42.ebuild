@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.42.ebuild,v 1.13 2005/01/31 14:15:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.42.ebuild,v 1.14 2005/02/20 20:09:24 ka0ttic Exp $
 
 inherit eutils
 
@@ -13,28 +13,25 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ppc-macos s390 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/libpcap
-	sys-devel/autoconf"
-RDEPEND="virtual/libc"
+RDEPEND="virtual/libc
+	virtual/libpcap"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
 	epatch ${FILESDIR}/${P}-libpcap-include.patch
 }
 
 src_compile() {
-	WANT_AUTOCONF=2.5 autoconf
+	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 
-	econf || die
-	make || die
+	econf || die "econf failed"
+	make || die "make failed"
 }
 
 src_install() {
-	into /usr
 	dobin ngrep
 	doman ngrep.8
-	dodoc BUGS CHANGES CREDITS README TODO USAGE
+	dodoc BUGS CHANGES CREDITS INSTALL LICENSE README README.pcre TODO
 }

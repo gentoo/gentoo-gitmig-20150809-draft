@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.26 2005/01/31 14:15:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.27 2005/02/20 20:09:24 ka0ttic Exp $
+
+  20 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> ngrep-1.42.ebuild:
+  Fix docs that are installed; Thanks to vanquirius in bug 82719.
 
   31 Jan 2005; Daniel Black <dragonheart@gentoo.org> ngrep-1.40.ebuild,
   ngrep-1.41.ebuild, ngrep-1.42.ebuild:
