@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.13 2004/04/13 15:42:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.14 2004/04/14 10:53:53 plasmaroo Exp $
+
+*lcdproc-0.4.5 (14 Apr 2004)
+
+  14 Apr 2004; <plasmaroo@gentoo.org> lcdproc-0.4.5.ebuild:
+  Version bump in reference to bug #47340 which addresses a security flaw in
+  LCDproc.
 
   13 Apr 2004; Jon Portnoy <avenj@gentoo.org> lcdproc-0.4.4-r1.ebuild :
   Stable on x86
