@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.42 2004/08/24 23:37:47 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.43 2004/09/02 13:20:56 vapier Exp $
+
+  02 Sep 2004; Mike Frysinger <vapier@gentoo.org> modutils-2.4.23.ebuild,
+  modutils-2.4.24.ebuild, modutils-2.4.25.ebuild, modutils-2.4.26.ebuild,
+  modutils-2.4.27.ebuild:
+  Start blocking module-init-tools.
 
 *modutils-2.4.27 (25 Aug 2004)
 
