@@ -1,8 +1,13 @@
 # ChangeLog for media-plugins/xmms-mad
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.4 2002/12/02 07:23:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.5 2002/12/15 12:08:24 seemant Exp $
 
 *xmms-mad-0.5.1 (01 Dec 2002)
+
+  15 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xmms-mad-0.5.1.ebuild :
+
+  SRC_URI and HOMEPAGE moved.  Thanks to: cpulsifer@sympatico.ca (C
+  Pulsifer) in bug #12180 for informing us.
 
   01 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xmms-mad-0.5.1.ebuild :
 
