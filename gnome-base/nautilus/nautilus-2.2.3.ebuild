@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.3.ebuild,v 1.1 2003/03/31 17:52:14 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.3.ebuild,v 1.2 2003/04/23 12:51:34 foser Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="A filemanager for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 IUSE="oggvorbis"
 
 RDEPEND="app-admin/fam-oss
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=gnome-base/gconf-1.2.1"
 
-G2CONF="${G2CONF} --enable-gdialog=yes"
+G2CONF="${G2CONF} --enable-gdialog=yes --enable-hardware"
 
 DOCS="AUTHORS COPYIN* ChangeLo* HACKING INSTALL MAINTAINERS NEWS README THANKS TODO"
 
