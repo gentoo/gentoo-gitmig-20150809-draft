@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.2b.ebuild,v 1.4 2004/06/25 22:03:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.2b.ebuild,v 1.5 2004/07/08 22:22:46 plasmaroo Exp $
 
 IUSE=""
 
@@ -23,7 +23,7 @@ src_install() {
 	cp -Rp ${S}/* ${D}/usr/share/genkernel
 
 	dodir /usr/bin
-	dosym ${D}/usr/share/genkernel/genkernel /usr/bin/genkernel
+	dosym /usr/share/genkernel/genkernel /usr/bin/genkernel
 
 	rm ${D}/usr/share/genkernel/genkernel.conf
 }
