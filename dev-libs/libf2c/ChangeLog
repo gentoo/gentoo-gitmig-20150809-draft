@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libf2c
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.5 2004/03/18 20:52:46 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.6 2004/04/07 22:37:44 lv Exp $
+
+  07 Apr 2004; Travis Tilley <lv@gentoo.org> libf2c-20021004.ebuild:
+  added ~amd64 to keywords
 
   07 Jul 2003; Michael Sterrett <msterret@gentoo.org> libf2c-20021004.ebuild:
   more error checking
