@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r5.ebuild,v 1.1 2004/02/16 12:25:22 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r5.ebuild,v 1.2 2004/02/17 17:26:41 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -98,6 +98,9 @@ src_unpack() {
 
 	# expand variables $[w.iconfile] and $[w.miniiconfile]
 	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-iconfile.diff
+
+	# FlickeringMoveWorkaround is always ignored, this fix from cvs.
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-flickeringmoveworkaround.diff
 
 	# build fails on alpha with certain options without this.
 	use alpha && append-flags -fPIC

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.56 2004/02/16 12:25:22 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.57 2004/02/17 17:26:41 taviso Exp $
+
+  17 Feb 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8-r5.ebuild,
+  files/fvwm-2.5.8-flickeringmoveworkaround.diff:
+  patch from cvs.
 
 *fvwm-2.5.8-r5 (16 Feb 2004)
 
