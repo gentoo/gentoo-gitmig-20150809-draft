@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-coverviewer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/ChangeLog,v 1.1 2003/07/28 03:34:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/ChangeLog,v 1.2 2003/08/10 06:34:49 jje Exp $
+
+*xmms-coverviewer-0.1.10_pre3 (10 Aug 2003)
+
+  10 Aug 2003; jje <jje@gentoo.org> xmms-coverviewer-0.1.10_pre3.ebuild:
+  Version bump.
 
 *xmms-coverviewer-0.1.9 (28 Jul 2003)
 
