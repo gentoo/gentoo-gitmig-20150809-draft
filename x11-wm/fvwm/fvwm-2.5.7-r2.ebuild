@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.4 2003/09/01 22:33:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.5 2003/09/02 09:17:57 taviso Exp $
 
 inherit gnuconfig
 
@@ -61,10 +61,9 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm:/usr/share/icons/wm-icons"
+	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm"
 
 	# ImagePath should include /usr/share/icons/fvwm (x11-themes/fvwm_icons) 
-	# and /usr/share/icons/wm-icons (x11-themes/wm-icons) by default.
 
 	# use readline in FvwmConsole.
 	if ! use readline; then
@@ -259,7 +258,7 @@ pkg_postinst() {
 	einfo "	$ emerge -pv fvwm"
 	echo
 	einfo "If you would like a configurable, themed, well made iconset for use"
-	einfo "with your fvwm configuration, try x11-themes/wm-icons."
+	einfo "with your FVWM configuration, try x11-themes/wm-icons."
 	echo
 	use perl && use tcltk && {
 		einfo "By setting the perl and tcltk USE flags, you have elected to"
