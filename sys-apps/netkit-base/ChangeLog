@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.23 2004/06/27 17:32:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.24 2004/06/30 22:11:03 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> netkit-base-0.17-r8.ebuild:
+  sync IUSE (+build)
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> netkit-base-0.17-r6.ebuild,
   netkit-base-0.17-r7.ebuild, netkit-base-0.17-r8.ebuild:

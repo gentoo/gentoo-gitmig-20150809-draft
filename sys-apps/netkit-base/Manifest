@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7eeb6913909e4e7914f3fcdb28c82b53 ChangeLog 3882
+MD5 78b4a52fe7b95083158d43229bcbd70b netkit-base-0.17-r8.ebuild 1719
+MD5 b1f0c4dba54a7f9d25442b92c8a4589b ChangeLog 3982
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7d8abf4c76032dc6f38d575b767d6c74 netkit-base-0.17-r8.ebuild 1712
-MD5 a6d426736cbb3c0534504a6e2d041b36 files/001_alpha_netkit-base-0.17-ping-fix.patch.bz2 686
 MD5 93d4bc3300be01ea835abfc46863d005 files/002_all_netkit-base-0.17-wrong-byte-fix.patch.bz2 425
 MD5 a770366b91d1b0e666ed61ccfff827bc files/digest-netkit-base-0.17-r8 67
-MD5 0e8b74a351ac07699ff08d440dbb5102 files/inetd.rc6 590
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4iv2HTu7gpaalycRAhFdAKDf2DaQ2RWnC9ISoauWhp8k38UnawCg9gTT
-qc26GwSrx4FhpoyPrCC6aEE=
-=VPRh
------END PGP SIGNATURE-----
+MD5 a6d426736cbb3c0534504a6e2d041b36 files/001_alpha_netkit-base-0.17-ping-fix.patch.bz2 686
+MD5 d7a4851b0ff0d2b5ef50dea8ff0449cf files/inetd.rc6 589
