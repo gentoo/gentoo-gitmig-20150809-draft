@@ -1,9 +1,21 @@
-MD5 fae14ed92c589f5eac0b8029fba8ac27 ChangeLog 7136
-MD5 9e195dfcd52e4642d54392d40d18a040 clamav-0.75.1.ebuild 1528
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 992248b42dbe15cedd6e6e5480804df4 ChangeLog 7300
+MD5 c94d0ead8f433912c6d65a93c8aed059 clamav-0.80.ebuild 1494
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 MD5 834b1547fb820fa331c01a04e1328701 clamav-0.80_rc3.ebuild 1501
-MD5 ad7d45b1be51c06986cb42c53e733d19 files/clamav-milter.README.gentoo 1311
-MD5 e8dcbdecd955708ddc7c79399ffa6276 files/clamd.conf 166
-MD5 51f0c4f6ae446ca5834911b75b1a74a3 files/clamd.rc 1431
-MD5 f0090a77dc10ba3899900622336b8610 files/digest-clamav-0.75.1 66
+MD5 9e195dfcd52e4642d54392d40d18a040 clamav-0.75.1.ebuild 1528
 MD5 d410856feb644268883b8beeaaacc4a1 files/digest-clamav-0.80_rc3 67
+MD5 51f0c4f6ae446ca5834911b75b1a74a3 files/clamd.rc 1431
+MD5 e8dcbdecd955708ddc7c79399ffa6276 files/clamd.conf 166
+MD5 f0090a77dc10ba3899900622336b8610 files/digest-clamav-0.75.1 66
+MD5 a42aa0e5135bd2ad22288e4150ec89e2 files/digest-clamav-0.80 64
+MD5 ad7d45b1be51c06986cb42c53e733d19 files/clamav-milter.README.gentoo 1311
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcsiX10xuJSrg3/sRAj0NAJoDrToOvmD7abbKeL4d/7Y58stQ4ACdH0Tf
+utX8BpEB7fxm/hxJ+M71kIM=
+=WBpf
+-----END PGP SIGNATURE-----
