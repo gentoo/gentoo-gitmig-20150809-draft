@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hfsutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/ChangeLog,v 1.7 2003/03/31 15:51:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/ChangeLog,v 1.8 2003/04/11 04:58:57 pvdabeel Exp $
+
+*hfsutils-3.2.6-r3 (11 Apr 2003)
+
+  11 Apr 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> hfsutils-3.2.6-r3.ebuild:
+  Now also makes and installs hfsck
 
 *hfsutils-3.2.6-r2 (31 Mar 2003)
 
