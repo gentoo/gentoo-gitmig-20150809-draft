@@ -1,0 +1,27 @@
+#
+# This is the config snippet for gentoo-distfiles-mirror
+#
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-distfiles-mirror/files/0.1/apache.addon-module,v 1.1 2003/11/18 01:27:39 tantive Exp $
+
+  RewriteEngine on
+
+  # If the file exists locally, serve it and stop rewriting.
+  RewriteCond /var/www/distfiles/%{REQUEST_FILENAME} -f
+  RewriteRule ^/distfiles/(.+) /distfiles/$1 [L]
+
+  # If the file doesn't exist locally, pass through to a
+  # ScriptAliasMatch that sends the request to a script that
+  # schedules it for downloading from a real mirror, and stop rewriting.
+  RewriteCond /var/www/distfiles/%{REQUEST_FILENAME} !-f
+  RewriteRule ^/distfiles/(.+) - [E=REQ_FILENAME:$1,E=REQ_REMOTEADDR:%{REMOTE_ADDR},PT]
+  ScriptAliasMatch ^/distfiles/(.+) /var/www/distfiles/portage-incremirror
+
+
+<Directory "/var/www/distfiles">
+  Options None
+#  AllowOverride None
+  Order allow,deny
+  Allow from all
+</Directory>
+
+
