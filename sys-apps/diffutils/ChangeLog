@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/diffutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.31 2004/03/01 19:59:51 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.32 2004/05/10 14:42:04 lu_zero Exp $
+
+*diffutils-2.8.7 (10 May 2004)
+
+  10 May 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/diffutils-2.8.7-no-manpage.patch, +diffutils-2.8.7.ebuild:
+  New version, solves many problems with sdiff on ppc.
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> diffutils-2.8.4-r4.ebuild:
   Move to mips stable (~mips -> mips)
