@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>no-herd</herd>
-	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>Package has no primary maintainer</description>
-	</maintainer>
 	<longdescription>The diet libc is a libc that is optimized for small size. It can be used to create small statically linked binaries for Linux on alpha, arm, hppa, ia64, i386, mips, s390, sparc, sparc64, ppc and x86_64.</longdescription>
 </pkgmetadata>
