@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 785fa1226f654152d7880ac2be3ddf02 ChangeLog 48928
+MD5 cf0cb675ebe66c46df65149340b6aa36 ChangeLog 49178
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 e59af451f7a05b0044a687f413bf4720 mplayer-1.0_pre4-r7.ebuild 12225
 MD5 c098282cf0148b2caac4682eceec5258 mplayer-1.0_pre5-r2.ebuild 14050
 MD5 101520d159844f194c02877d2c7e30d4 mplayer-1.0_pre5-r3.ebuild 14870
 MD5 db18f76ee40620f5142febc063834345 mplayer-1.0_pre5-r4.ebuild 16471
-MD5 56e73a4c7dfea23749473a881b6d1325 mplayer-1.0_pre5-r5.ebuild 16469
-MD5 c9b4e8f146431b587b50f92faafed28a mplayer-1.0_pre6.ebuild 15917
+MD5 9ac4685a5c1286ff88e3efe228336cdd mplayer-1.0_pre5-r5.ebuild 16464
+MD5 5aadff5faf5a2ac8879f9dab71427c6d mplayer-1.0_pre6.ebuild 15912
 MD5 484c45fb52a157c6b056b4298f787f3d files/cachefill.patch 6053
 MD5 e4581f6934f66ccecc8c1682664623d0 files/digest-mplayer-1.0_pre4-r7 358
 MD5 0c3c71bf461e94d4dcffabab341ddeec files/digest-mplayer-1.0_pre5-r2 440
@@ -47,7 +47,7 @@ MD5 d58a5b4657be0c3010eff827e6970371 files/mplayer-gif.patch 1694
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCA+4CFdQwWVoAgN4RAnvzAJ4qk+hv7pLl7pm/Tcrxn7Bdo3JIDQCgw6oj
-ZGbcV+uj48JE6RyTOuNogvU=
-=YFQq
+iD8DBQFCBOugFdQwWVoAgN4RAiLZAKD842jswQknBCTqY6WjAxss8+YDngCfVVF1
+GLJbPZcGMoloJ6P/+5G/LqM=
+=l4XS
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.266 2005/02/04 21:49:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.267 2005/02/05 15:51:40 chriswhite Exp $
+
+  06 Feb 2005; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r5.ebuild,
+  mplayer-1.0_pre6.ebuild:
+  Apparently mmx2 shows up in /proc/cpuinfo as mmxext, so disabling mmx2 cpu
+  checking until I can rework ecpu_check to handle this properly.
 
   05 Feb 2005; Chris White <chriswhite@gentoo.org> +files/mplayer-gif.patch,
   mplayer-1.0_pre5-r5.ebuild:

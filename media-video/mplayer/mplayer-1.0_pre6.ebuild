@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.22 2005/02/03 22:19:24 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.23 2005/02/05 15:51:41 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -203,7 +203,7 @@ src_compile() {
 	# check cpu flags
 	if use x86
 	then
-		CPU_FLAGS=(mmx mmx2 sse sse2)
+		CPU_FLAGS=(mmx sse sse2)
 		ecpu_check CPU_FLAGS
 	fi
 
