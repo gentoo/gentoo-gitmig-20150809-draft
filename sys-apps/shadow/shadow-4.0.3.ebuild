@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.12 2002/10/12 19:43:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.13 2002/10/20 15:16:51 azarah Exp $
+
+IUSE=""
 
 inherit libtool
 

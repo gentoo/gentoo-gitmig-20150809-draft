@@ -1,14 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2-r4.ebuild,v 1.6 2002/10/04 06:30:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r2.ebuild,v 1.1 2002/10/20 15:16:51 azarah Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
+
+inherit libtool
+
+FORCE_SYSTEMAUTH_UPDATE="no"
+
+S="${WORKDIR}/${P}"
+HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
-HOMEPAGE="http://shadow.pld.org.pl/"
-KEYWORDS="x86 ppc sparc sparc64"
-SLOT="0"
+
 LICENSE="BSD"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
 	sys-devel/gettext"
@@ -16,12 +24,24 @@ DEPEND=">=sys-libs/pam-0.75-r4
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
 
+
 pkg_preinst() { 
 	rm -f ${ROOT}/etc/pam.d/system-auth.new
 }
 
+src_unpack() {
+	unpack ${A}
+
+	# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
+	# else the session entries in /etc/pam.d/su never get executed, and
+	# pam_xauth for one, is then never used.  This should close bug #8831.
+	#
+	# <azarah@gentoo.org> (19 Oct 2002)
+	cd ${S}; patch -p1 < ${FILESDIR}/${P}-su-pam_open_session.patch-v2 || die
+}
+
 src_compile() {
-	libtoolize --copy --force
+	elibtoolize
 
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
@@ -36,8 +56,7 @@ src_compile() {
 		${myconf} || die "bad configure"
 		
 	# Parallel make fails sometimes
-	make LDFLAGS="-lcrack -lcrypt" \
-		LIBS="../libmisc/nscd.o" || die "compile problem"
+	make || die "compile problem"
 }
 
 src_install() {
@@ -49,7 +68,7 @@ src_install() {
 		install || die "install problem"
 
 	#do not install this login, but rather the one from
-	#util-linux, as this one have a serious root exploit
+	#pam-login, as this one have a serious root exploit
 	#with pam_limits in use.
 	rm ${D}/bin/login
 
@@ -70,10 +89,18 @@ src_install() {
 	insopts -m0600 ; doins ${FILESDIR}/securetty
 	insopts -m0600 ; doins ${S}/etc/login.access
 	insopts -m0644 ; doins ${S}/etc/limits
-	insopts -m0644 ; doins ${FILESDIR}/login.defs
+
+	# needed for 'adduser -D'
+	keepdir /etc/default
+
+# From sys-apps/pam-login now
+#	insopts -m0644 ; doins ${FILESDIR}/login.defs
 	insinto /etc/pam.d ; insopts -m0644
 	cd ${FILESDIR}/pam.d
-	doins *
+	for x in *
+	do
+		[ -f ${x} ] && doins ${x}
+	done
 	newins system-auth system-auth.new
 	newins shadow chage
 	newins shadow chsh
@@ -85,11 +112,12 @@ src_install() {
 	# the manpage install is beyond my comprehension, and also broken.
 	# just do it over.
 	rm -rf ${D}/usr/share/man/*
-	for q in man/*.[0-9]
+	for x in man/*.[0-9]
 	do
-		local dir="${D}/usr/share/man/man${q##*.}"
-		mkdir -p $dir
-		cp $q $dir
+		[ -f ${x} ] || continue
+		local dir="${D}/usr/share/man/man${x##*.}"
+		mkdir -p ${dir}
+		cp ${x} ${dir}
 	done
 	
 	#dont install the manpage, since we dont use
@@ -100,9 +128,19 @@ src_install() {
 	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
+
+	# Fix sparc serial console
+	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]
+	then
+		# ttyS0 and its devfsd counterpart (Sparc serial port "A")
+		dosed 's:\(vc/1\)$:tts/0\n\1:' /etc/securetty
+		dosed 's:\(tty1\)$:ttyS0\n\1:' /etc/securetty
+	fi
 }
 
 pkg_postinst() {
+	[ "${FORCE_SYSTEMAUTH_UPDATE}" != "yes" ] && return 0
+	
 	echo
 	echo "****************************************************"
 	echo "   Due to a security issue, ${ROOT}etc/pam.d/system-auth "
@@ -111,10 +149,10 @@ pkg_postinst() {
 	echo "   ${ROOT}etc/pam.d/system-auth.bak"
 	echo "****************************************************"
 	echo
-	local CHECK1=`md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1`
-	local CHECK2=`md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1`
+	local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
+	local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
 
-	if [ "$CHECK1" != "$CHECK2" ];
+	if [ "${CHECK1}" != "${CHECK2}" ];
 	then
 		cp -a ${ROOT}/etc/pam.d/system-auth \
 	              ${ROOT}/etc/pam.d/system-auth.bak;

@@ -1,14 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2-r5.ebuild,v 1.7 2002/10/04 06:30:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2-r5.ebuild,v 1.8 2002/10/20 15:16:51 azarah Exp $
+
+IUSE=""
 
 inherit libtool
-KEYWORDS="x86 ppc sparc sparc64"
-HOMEPAGE="http://shadow.pld.org.pl/"
-S=${WORKDIR}/${P}
+
+S="${WORKDIR}/${P}"
 DESCRIPTION="Utilities to deal with user accounts"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
+HOMEPAGE="http://shadow.pld.org.pl/"
+
 LICENSE="BSD"
+SLOT="0"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
@@ -17,7 +22,6 @@ DEPEND=">=sys-libs/pam-0.75-r4
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
 
-SLOT="0"
 
 pkg_preinst() { 
 	rm -f ${ROOT}/etc/pam.d/system-auth.new

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.16 2002/10/19 09:31:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.17 2002/10/20 15:16:50 azarah Exp $
+
+*shadow-4.0.3-r1 (20 Oct 2002)
+
+  20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r2.ebuild :
+
+  Update the su-pam_open_session.patch, as the old one did not export
+  XAUTHORITY, or call pam_close_session().
 
 *shadow-4.0.3-r1 (19 Oct 2002)
 
