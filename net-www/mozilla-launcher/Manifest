@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8cb11b9bb7824c22d47c048fda261fb4 ChangeLog 7061
+MD5 33e337d82ee0cd89a81efe09b389aeec ChangeLog 7184
 MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
+MD5 7e918093812ac77ae13473c9ce7cc333 mozilla-launcher-1.21.ebuild 856
 MD5 9c16b915d384f19d89066d33daa5d3c3 mozilla-launcher-1.19.ebuild 848
-MD5 d66444c05e067909f3771d93c50cb32a mozilla-launcher-1.21.ebuild 858
-MD5 3e99ba63028cc7445be383fc1848088d files/digest-mozilla-launcher-1.19 68
 MD5 6358ad1cf6a5cd8c8da9e439ab89eef5 files/digest-mozilla-launcher-1.21 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBX4NMHTu7gpaalycRAt0TAJ0f/tMKg1NxbC7uyravhv131Hi8KQCgtn9S
-tF6RXejOF0woS8x8z5LG+Ds=
-=vFVl
------END PGP SIGNATURE-----
+MD5 3e99ba63028cc7445be383fc1848088d files/digest-mozilla-launcher-1.19 68
