@@ -1,6 +1,10 @@
 # ChangeLog for net-www/horde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.8 2003/04/10 22:19:00 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.9 2003/05/12 18:49:05 alron Exp $
+
+*horde-2.2.3 (12 May 2003)
+  12 May 2003; Dean Bailey <alron@gentoo.org> horde-2.2.3 :
+  Version bump to 2.2.3 final. Has the vfs stuff so no patch is needed any more.
 
 *horde-2.2.1-r2 (10 Apr 2003)
   10 Apr 2003;Dean Bailey <alron@gentoo.org> horde-2.2.1-r2 :
