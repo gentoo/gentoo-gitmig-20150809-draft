@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.3.ebuild,v 1.1 2003/05/07 11:22:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.3.ebuild,v 1.2 2003/05/09 22:52:03 foser Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
-inherit eutils flag-o-matic gnome.org libtool virtualx gnome2
+inherit eutils flag-o-matic gnome.org libtool virtualx debug gnome2
 
 DB3="db-3.1.17"
 S="${WORKDIR}/${P}"
