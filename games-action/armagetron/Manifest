@@ -1,5 +1,5 @@
 MD5 7319929b270048fefa1724e44e3a78cc armagetron-0.2.5.1.ebuild 2043
-MD5 ca3b5d517557bec4a2223ec4673efe46 files/armagetron-0.2.4-r1.sh 353
+MD5 c3f60ccaa75a462e14fa0bca9633a2e3 files/armagetron-0.2.4-r1.sh 358
 MD5 778ff6fa5181b49c27da527ddf9a246f files/armagetron-0.1.4.9-configure.patch 422
 MD5 5a17e2313a153a714e221e7ec45c2f16 files/digest-armagetron-0.1.4.9 251
 MD5 e7055626980e8eacf3366ee86039d7a0 files/digest-armagetron-0.2.5.1 249
