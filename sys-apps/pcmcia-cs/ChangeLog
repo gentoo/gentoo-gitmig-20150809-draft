@@ -1,20 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.30 2003/02/12 09:05:17 vapier Exp $
-
-  27 Jan 2003; Chad Huneycutt <chadh@gentoo.org> : pcmcia-cs-3.2.3-r1.ebuild
-  One ebuild to rule them all ;-).  Added the local USE var "monitor" to choose
-  whether to install the 0.11b orinoco driver with shmoo patch or the newer
-  0.13a orinoco drivers and no monitor patch.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.31 2003/02/22 17:35:01 latexer Exp $
 
   27 Jan 2003; Chad Huneycutt <chadh@gentoo.org> : old ebuilds
   Removed old ebuilds.  If you really need something, let me know, and I will
   rescue it.
-
-  27 Jan 2003; Chad Huneycutt <chadh@gentoo.org> : pcmcia-cs-3.2.1-r3.ebuild
-  Fixes to apply the orinoco shmoo patch properly.  wavelan is no longer needed
-  in your USE.  Also downgraded orinoco version to latest that there is shmoo
-  patch for (0.11b).  For later orinoco drivers, try the pcmcia-cs-3.2.3 ebuilds
 
   23 Jan 2003; Chad Huneycutt <chadh@gentoo.org> : files/pcmcia.rc
   fixed bugs in init script as reported in bug #13017
@@ -27,6 +17,18 @@
   /etc/conf.d/pcmcia) and changed filename to pcmcia.rc.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*pcmcia-cs-3.2.3-r2 (22 Feb 2003)
+
+  22 Feb 2003; Peter Johanson <latexer@gentoo.org> pcmcia-cs-3.2.3-r2.ebuild files/digest-pcmcia-cs-3.2.3-r2 :
+  Version bump to include the latest orinoco driver with monitor mode patch (0.13b)
+
+*pcmcia-cs-3.2.3-r1 (27 Jan 2003)
+
+  27 Jan 2003; Chad Huneycutt <chadh@gentoo.org> : pcmcia-cs-3.2.3-r1.ebuild
+  One ebuild to rule them all ;-).  Added the local USE var "monitor" to choose
+  whether to install the 0.11b orinoco driver with shmoo patch or the newer
+  0.13a orinoco drivers and no monitor patch.
  
 *pcmcia-cs-3.2.3 (17 Nov 2002)
 
@@ -42,6 +44,13 @@
 
   11 Nov 2002; Chad Huneycutt <chadh@gentoo.org> pcmcia-cs-3.2.2.ebuild:
   Revision bump.
+
+*pcmcia-cs-3.2.1-r3 (27 Jan 2003)
+
+  27 Jan 2003; Chad Huneycutt <chadh@gentoo.org> : pcmcia-cs-3.2.1-r3.ebuild
+  Fixes to apply the orinoco shmoo patch properly.  wavelan is no longer needed
+  in your USE.  Also downgraded orinoco version to latest that there is shmoo
+  patch for (0.11b).  For later orinoco drivers, try the pcmcia-cs-3.2.3 ebuilds
 
 *pcmcia-cs-3.2.1-r2 (28 Oct 2002)
 
