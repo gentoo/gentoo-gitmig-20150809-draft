@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.8 2003/11/04 09:48:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.9 2003/11/20 17:13:50 mholzer Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -14,7 +14,7 @@ DEPEND=">=media-libs/libogg-1.0"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 amd64 ~mips"
+KEYWORDS="x86 amd64 ~mips"
 
 src_unpack() {
 	unpack ${A}
@@ -32,9 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-m4.patch || die "Patching failed"
 	# Fix a gcc crash.  With the new atexit patch to gcc, it
 	# seems it do not handle -mno-ieee-fp too well.
-	cp configure configure.orig
-	sed -e "s:-mno-ieee-fp::g" \
-		configure.orig >configure
+	sed -i -e "s:-mno-ieee-fp::g" configure
 }
 
 src_compile() {
@@ -79,4 +77,3 @@ pkg_postinst() {
 	einfo "recompilation is needed for these things."
 	einfo
 }
-
