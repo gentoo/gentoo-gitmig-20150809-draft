@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qe
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qe/ChangeLog,v 1.2 2003/02/12 03:48:51 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qe/ChangeLog,v 1.3 2004/06/07 04:04:39 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  qe-0.1.1.ebuild:
+  QA - IUSE fix
 
 *qe-0.1.1 (07 Nov 2002)
 
