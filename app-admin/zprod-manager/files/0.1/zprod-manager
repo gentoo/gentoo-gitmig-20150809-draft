@@ -2,7 +2,7 @@
 # Gentoo Zope Product selection tool.
 # Copyright 2003 Jason Shoemaker <kutsuya@gentoo.org>
 # Distributed under GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/files/0.1/zprod-manager,v 1.1 2003/02/26 06:57:46 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/files/0.1/zprod-manager,v 1.2 2004/07/18 02:27:01 dragonheart Exp $
 
 VERSION="0.1"
 COMMAND_LIST="add del"
