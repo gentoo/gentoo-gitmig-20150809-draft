@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r1.ebuild,v 1.4 2002/08/20 15:18:08 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r1.ebuild,v 1.5 2002/08/28 19:34:28 azarah Exp $
 
 #provide Xmake and Xemake
 
@@ -18,7 +18,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
-RDEPEND=">=gnome-extra/bonobo-conf-0.14
+RDEPEND="app-text/scrollkeeper
+	>=gnome-extra/bonobo-conf-0.14
 	>=gnome-base/bonobo-1.0.18
 	>=gnome-extra/gal-0.19.2
 	=gnome-base/gconf-1.0*
@@ -26,7 +27,7 @@ RDEPEND=">=gnome-extra/bonobo-conf-0.14
 	>=gnome-base/oaf-0.6.7
 	>=gnome-base/ORBit-0.5.12
 	( >=gnome-base/libglade-0.17-r1
-	 <gnome-base/libglade-2.0 )		
+	  <gnome-base/libglade-2.0 )		
 	>=media-libs/gdk-pixbuf-0.14.0
 	>=dev-libs/libxml-1.8.16
 	=gnome-base/gnome-vfs-1.0*		
