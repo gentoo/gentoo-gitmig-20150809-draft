@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r1.ebuild,v 1.3 2004/07/22 18:42:18 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r1.ebuild,v 1.4 2004/07/27 21:19:13 langthang Exp $
 
 inherit eutils
 IUSE="apache2"
@@ -22,13 +22,11 @@ APACHEGID="81"
 MAILGID="280"
 
 pkg_setup() {
-	if ! grep -q ^mailman: /etc/group ; then
-		groupadd -g 280 mailman || die "problem adding group mailman"
-	fi
-	if ! grep -q ^mailman: /etc/passwd ; then
-		useradd -u 280 -g mailman -G cron -s /bin/bash \
-			-d ${INSTALLDIR} -c "mailman" mailman
-	fi
+	# Bug #58526: switch to enew{group,user}.
+	# need to add mailman here for compile process.
+	# Duplicated at pkg_postinst() for binary install.
+	enewgroup mailman 280
+	enewuser mailman 280 /bin/bash ${INSTALLDIR} mailman -G cron -c mailman
 	mkdir -p ${INSTALLDIR}
 	chown mailman:mailman ${INSTALLDIR}
 	chmod 2775 ${INSTALLDIR}
@@ -109,10 +107,12 @@ src_install () {
 	}
 
 pkg_postinst() {
+	enewgroup mailman 280
+	enewuser mailman 280 /bin/false ${INSTALLDIR} mailman -G cron -c "mailman"
 	cd ${INSTALLDIR}
 	bin/update
 	bin/check_perms -f
-	bin/check_perms_grsecurity.py -f
+	python bin/check_perms_grsecurity.py -f
 	einfo ""
 	einfo "Please read /usr/share/doc/${PF}/README.gentoo.gz for additional"
 	einfo "Setup information, mailman will NOT run unless you follow"
