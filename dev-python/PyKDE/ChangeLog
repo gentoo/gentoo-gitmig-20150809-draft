@@ -1,9 +1,9 @@
 # ChangeLog for dev-python/PyKDE
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyKDE/ChangeLog,v 1.1 2003/04/14 14:01:56 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyKDE/ChangeLog,v 1.2 2003/04/14 14:05:58 brain Exp $
 
 *PyKDE-3.5.2 (14 apr 2003)
 
   14 apr 2003; <brain@gentoo.org> PyKDE-3.5.2.ebuild:
-  Initial import. Ebuild submitted by Hubert Faulhaber <hubsif@gmx.de>
+  Initial import. Ebuild submitted by Paul Pacheco <paul.pacheco@wavecode.com>
 
