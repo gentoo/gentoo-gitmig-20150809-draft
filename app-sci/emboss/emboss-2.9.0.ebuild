@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.9.0.ebuild,v 1.1 2004/07/20 00:34:01 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.9.0.ebuild,v 1.2 2004/07/20 20:36:30 ribosome Exp $
 
 DESCRIPTION="The European Molecular Biology Open Software Suite: a sequence analysis package."
 HOMEPAGE="http://emboss.sourceforge.net/"
@@ -9,9 +9,9 @@ LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="X png icc no-biodata"
+IUSE="X png no-biodata"
 
-RDEPEND="X? ( virtual/x11 )
+DEPEND="X? ( virtual/x11 )
 	png? (
 		sys-libs/zlib
 		media-libs/libpng
@@ -29,16 +29,9 @@ PDEPEND="!no-biodata? (
 		app-sci/transfac
 	)"
 
-DEPEND="icc? ( dev-lang/icc )
-	${RDEPEND}"
-
 S=${WORKDIR}/EMBOSS-${PV}
 
 src_compile() {
-	if use icc; then
-		CC=/opt/intel/compiler80/bin/icc
-		CXX=/opt/intel/compiler80/bin/icc
-	fi
 	EXTRA_CONF="--includedir=${D}/usr/include/emboss"
 	! use X && EXTRA_CONF="${EXTRA_CONF} --without-x"
 	! use png && EXTRA_CONF="${EXTRA_CONF} --without-pngdriver"
