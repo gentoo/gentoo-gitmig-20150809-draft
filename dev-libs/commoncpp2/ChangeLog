@@ -2,6 +2,11 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header: 
 
+*commoncpp2-1.0.9 (10 May 2003)
+
+  10 May 2003; foser <foser@gentoo.org> commoncpp2-1.0.9.ebuild :
+  New version, now install html docs correctly
+
 *commoncpp2-1.0.3 (27 Oct 2002)
  
   27 Oct 2002; foser <foser@gentoo.org> commoncpp2-1.0.3.ebuild :
