@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.11 2003/08/03 05:28:39 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.12 2003/08/04 20:38:03 gmsoft Exp $
 
 MY_P=${PN}_v${PV}
 S=${WORKDIR}/mpeg2
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc ~alpha ~sparc amd64"
+KEYWORDS="x86 ppc ~alpha ~sparc amd64 hppa"
 
 src_unpack () {
 
