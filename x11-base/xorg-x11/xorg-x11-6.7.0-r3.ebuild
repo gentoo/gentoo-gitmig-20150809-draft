@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r3.ebuild,v 1.7 2005/01/11 23:24:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r3.ebuild,v 1.8 2005/01/21 17:31:49 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -82,7 +82,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 	dev-lang/perl
 	media-libs/libpng
 	>=sys-apps/portage-2.0.50_pre9
-	!x11-base/xfree
 	!virtual/xft
 	!virtual/x11"
 # x11-libs/xft -- blocked because of interference with xorg's
