@@ -1,15 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1.ebuild,v 1.2 2003/11/23 16:23:27 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1.ebuild,v 1.3 2004/03/15 16:15:33 taviso Exp $
 
-inherit ccc
+inherit ccc eutils
 
 DESCRIPTION="A tiny vt100 terminal emulator for X"
 HOMEPAGE="ftp://ftp.x.org/R5contrib/xvt-1.0.README"
 SRC_URI="ftp://ftp.x.org/R5contrib/xvt-1.0.tar.Z"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 ~alpha"
 IUSE=""
 DEPEND="virtual/x11"
 S=${WORKDIR}/${PN}-1.0
