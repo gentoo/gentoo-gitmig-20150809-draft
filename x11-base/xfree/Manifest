@@ -2,15 +2,13 @@ MD5 4479f33bec1ab794d261e99de09bb74a xfree-4.3.0-r5.ebuild 34693
 MD5 00179dfeed2fd3f82ffabb1a73098664 xfree-4.2.1-r3.ebuild 23612
 MD5 057c21e098cd9b99dd9ece53a7172058 xfree-4.3.99.902-r2.ebuild 31185
 MD5 5f2dba65da45823dfb09f1da350ed6c8 xfree-4.3.0-r4.ebuild 34711
-MD5 d43a587eccc98eb79a11c7f2b707bf02 xfree-4.3.99.902-r1.ebuild 31188
-MD5 6e36c1bea847fd902901804e443eb333 ChangeLog 64148
+MD5 9b6f9e652159e5992e75cd1ddae12f2b ChangeLog 64274
 MD5 e6ee387a2de6b2fea8e5a3573c48b667 metadata.xml 228
 MD5 cf01caf1276d8965ab9f75acbef89e6a xfree-4.2.1-r4.ebuild 23718
 MD5 1dab1996678f325cc30eacff0f2f475f files/digest-xfree-4.2.1-r3 1342
 MD5 cc52e1577d984cd2a2bbb05148291095 files/digest-xfree-4.2.1-r4 1342
 MD5 11eab8d28c7a35e8265a7cc7245f246b files/digest-xfree-4.3.0-r4 2002
 MD5 a80dd36e88ff79e9019049017fee8cd6 files/digest-xfree-4.3.0-r5 2002
-MD5 6b12a8aff58278c2b6e3cafd12ffb3b2 files/digest-xfree-4.3.99.902-r1 1254
 MD5 2308a80167b398e266fc7a711c8014c6 files/digest-xfree-4.3.99.902-r2 1254
 MD5 4485c7fa46907db803d219218f62a5df files/4.3.0/xinitrc 918
 MD5 9cb44182ea92068b22973bcb0afda322 files/4.3.0/xserver.pamd 284
