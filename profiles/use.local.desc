@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.733 2004/11/12 03:46:33 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.734 2004/11/12 06:07:59 leonardop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -21,6 +21,7 @@ app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gnupg:smartcard - Enables smartcard support
 app-crypt/gpgme:smime - Add smime support
+app-crypt/gringotts:suid - Install the binary suid, acknowledging the usual risks
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
 app-crypt/johntheripper:skey - Enable S/Key (Single use password) authentication cracking support
 app-editors/emacs:aqua - Build Carbon Emacs
