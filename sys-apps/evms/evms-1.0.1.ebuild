@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.0.1.ebuild,v 1.3 2002/07/21 18:52:23 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.0.1.ebuild,v 1.4 2002/08/01 00:46:33 drobbins Exp $
 
 # You need to have an evms-patched kernel source tree in /usr/src/linux
 # to build this.  Either take care of that yourself or do these steps :
@@ -55,8 +55,8 @@ src_compile() {
 		--with-kernel=/usr/src/linux \
 		--with-interfaces=${interfaces} \
 		--host=${CHOST} || die "bad ./configure"
-
-	emake || die "compile problem"
+	#1.0.1 doesn't support parallel make
+	make || die "compile problem"
 }
 
 src_install() {
