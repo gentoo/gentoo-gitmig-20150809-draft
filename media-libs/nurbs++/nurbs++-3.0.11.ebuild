@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nurbs++/nurbs++-3.0.11.ebuild,v 1.7 2003/08/03 02:47:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nurbs++/nurbs++-3.0.11.ebuild,v 1.8 2004/03/19 07:56:04 mr_bones_ Exp $
 
 DESCRIPTION="NURBS surfaces manipulation library"
 HOMEPAGE="http://libnurbs.sourceforge.net/"

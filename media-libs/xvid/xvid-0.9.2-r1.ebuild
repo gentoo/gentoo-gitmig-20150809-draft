@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.2-r1.ebuild,v 1.3 2004/01/29 04:17:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.2-r1.ebuild,v 1.4 2004/03/19 07:56:05 mr_bones_ Exp $
 
 MY_P=${PN}core-${PV}
 S="${WORKDIR}/${MY_P}/build/generic"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.11.ebuild,v 1.6 2003/12/01 13:20:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.11.ebuild,v 1.7 2004/03/19 07:56:04 mr_bones_ Exp $
 
 DESCRIPTION="A lightweight, speed optimized color management engine"
 HOMEPAGE="http://www.littlecms.com/"

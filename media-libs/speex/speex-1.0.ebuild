@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.0.ebuild,v 1.7 2003/11/09 23:41:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.0.ebuild,v 1.8 2004/03/19 07:56:05 mr_bones_ Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}

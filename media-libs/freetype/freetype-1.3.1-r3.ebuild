@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.20 2003/09/21 18:42:24 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.21 2004/03/19 07:56:03 mr_bones_ Exp $
 
 IUSE="nls"
 

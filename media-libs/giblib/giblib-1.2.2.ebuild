@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.2.ebuild,v 1.11 2003/10/19 14:11:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.2.ebuild,v 1.12 2004/03/19 07:56:03 mr_bones_ Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Giblib, graphics library"

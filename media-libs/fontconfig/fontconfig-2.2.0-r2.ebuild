@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.14 2004/02/22 21:20:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.15 2004/03/19 07:56:03 mr_bones_ Exp $
 
 inherit eutils
 

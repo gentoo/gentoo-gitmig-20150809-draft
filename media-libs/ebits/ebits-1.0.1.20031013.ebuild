@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ebits/ebits-1.0.1.20031013.ebuild,v 1.2 2003/10/14 02:34:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ebits/ebits-1.0.1.20031013.ebuild,v 1.3 2004/03/19 07:56:03 mr_bones_ Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-0.1.3.ebuild,v 1.11 2003/03/10 22:36:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-0.1.3.ebuild,v 1.12 2004/03/19 07:56:04 mr_bones_ Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for DVD navigation tools."
