@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.9 2003/07/09 06:26:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.10 2003/07/12 17:17:22 liquidx Exp $
 
 IUSE="doc nls kde"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 alpha hppa"
 #  ppc sparc sparc64"
 
-DEPEND=">=media-libs/imlib-1.9.10
+RDEPEND=">=media-libs/imlib-1.9.10
 		>=media-sound/esound-0.2.23
 		>=gnome-base/ORBit-0.5.12
 		=x11-libs/gtk+-1.2*
@@ -23,13 +23,9 @@ DEPEND=">=media-libs/imlib-1.9.10
 		doc? ( app-text/docbook-sgml 
 		       dev-util/gtk-doc )"
 
-RDEPEND=">=media-libs/imlib-1.9.10
-		>=media-sound/esound-0.2.23
-		>=gnome-base/ORBit-0.5.12
-		=x11-libs/gtk+-1.2*
-		<sys-libs/db-2
-		nls? ( >=sys-devel/gettext-0.10.40 >=dev-util/intltool-0.11 )"
-
+DEPEND="nls? ( >=sys-devel/gettext-0.10.40 
+				>=dev-util/intltool-0.11 )
+		${RDEPEND}"
 SLOT="1"
 
 src_compile() {                           

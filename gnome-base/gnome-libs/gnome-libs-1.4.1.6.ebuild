@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.6.ebuild,v 1.11 2003/02/13 12:08:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.6.ebuild,v 1.12 2003/07/12 17:17:22 liquidx Exp $
 
 IUSE="doc nls kde"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 KEYWORDS="x86 ppc sparc "
 LICENSE="GPL-2"
 
-DEPEND=">=media-libs/imlib-1.9.10
+RDEPEND=">=media-libs/imlib-1.9.10
 		>=media-sound/esound-0.2.23
 		>=gnome-base/ORBit-0.5.12
 		=x11-libs/gtk+-1.2*
@@ -19,7 +19,9 @@ DEPEND=">=media-libs/imlib-1.9.10
 		doc? ( app-text/docbook-sgml 
 		       dev-util/gtk-doc )"
 
-RDEPEND="nls? ( >=sys-devel/gettext-0.10.40 >=dev-util/intltool-0.11 )"
+DEPEND="nls? ( >=sys-devel/gettext-0.10.40 
+	>=dev-util/intltool-0.11 )
+	${RDEPEND}"
 
 SLOT="1"
 
