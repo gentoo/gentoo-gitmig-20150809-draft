@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.13 2003/06/17 21:23:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.14 2003/07/30 19:18:33 taviso Exp $
+
+  30 Jul 2003; Tavis Ormandy <taviso@gentoo.org> mtr-0.54.ebuild:
+  marking ~alpha
 
   10 Jun 2003; Christian Birchinger <joker@gentoo.org> mtr-0.54.ebuild:
   Added sparc stable keyword
