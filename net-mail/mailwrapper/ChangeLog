@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.6 2004/03/18 18:39:54 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.7 2004/03/19 02:23:28 avenj Exp $
+
+  18 Mar 2004; Jon Portnoy <avenj@gentoo.org> mailwrapper-0.1.ebuild :
+  AMD64 keywords.
 
   18 Mar 2004; Grant Goodyear <g2boojum@hotmail.com> mailwrapper-0.1.ebuild:
   Added ~alpha.  My sincere apologies for all of the archs I broke yesterday!
