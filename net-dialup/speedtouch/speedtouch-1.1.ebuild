@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.1.ebuild,v 1.1 2002/08/30 16:01:52 phoenix Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.1.ebuild,v 1.2 2002/10/04 06:02:22 vapier Exp $
 
 DESCRIPTION="GPL Driver for the Alcatel Speedtouch USB under *nix"
 SRC_URI="mirror://sourceforge/speedtouch/${P}.tar.bz2"
