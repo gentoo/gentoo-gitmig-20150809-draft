@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.5_p4.ebuild,v 1.4 2004/05/05 16:33:47 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.6.ebuild,v 1.1 2004/06/01 14:40:06 rizzo Exp $
 
 MY_PV="${PV/./}"
-MY_PV="${MY_PV/_/}"
 S="${WORKDIR}/${PN}-std-${MY_PV}"
 DESCRIPTION="The XMLmind XML Editor"
 SRC_URI="http://www.xmlmind.net/xmleditor/_download/${PN}-std-${MY_PV}.tar.gz"

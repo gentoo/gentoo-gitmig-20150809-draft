@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.11 2004/05/05 16:33:47 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.12 2004/06/01 14:40:06 rizzo Exp $
+
+*xxe-2.6 (01 Jun 2004)
+
+  01 Jun 2004; Don Seiler <rizzo@gentoo.org>; -xxe-2.5_p4.ebuild,
+  +xxe-2.6.ebuild:
+  Version bump, old version no longer available.
 
   05 May 2004; <SeJo@gentoo.org> xxe-2.5_p4.ebuild:
   added ~ppc keyword
