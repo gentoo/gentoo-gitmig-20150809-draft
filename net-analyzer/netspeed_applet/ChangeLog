@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netspeed_applet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.12 2004/04/06 11:01:58 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.13 2004/05/21 00:20:11 foser Exp $
+
+  21 May 2004; foser <foser@gentoo.org> netspeed_applet-0.{8,9.2}.ebuild :
+  Fix libgtop deps for the new release (#50427)
 
 *netspeed_applet-0.9.2 (06 Apr 2004)
 
