@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.20-r4.ebuild,v 1.6 2004/01/05 18:28:54 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.22-r2.ebuild,v 1.1 2004/01/05 18:28:54 scox Exp $
 
 IUSE="build selinux"
 
@@ -8,19 +8,19 @@ IUSE="build selinux"
 
 ETYPE="sources"
 
-inherit kernel
+inherit kernel || die
 
-OKV=2.4.20
-EXTRAVERSION=-hardened-r4
+OKV=2.4.22
+EXTRAVERSION=-hardened
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Special Security Hardened Gentoo Linux Kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	mirror://gentoo/patches-${KV}.tar.bz2"
+		mirror://gentoo/patches-${KV}.tar.bz2"
 
 
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/hardened/"
-KEYWORDS="~x86"
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/proj/en/hardened/"
+KEYWORDS="~x86 ~ppc"
 SLOT="${KV}"
 
 src_unpack() {
@@ -44,24 +44,11 @@ src_unpack() {
 		done
 	fi
 
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
-
 	kernel_src_unpack
-}
 
-src_install() {
-	if [ "`use selinux`" ]; then
-		insinto /usr/flask
-		doins ${S}/security/selinux/flask/access_vectors
-		doins ${S}/security/selinux/flask/security_classes
-		doins ${S}/security/selinux/flask/initial_sids
-		insinto /usr/include/linux/flask
-		doins ${S}/security/selinux/include/linux/flask/*.h
-		insinto /usr/include/asm/flask
-		doins ${S}/security/selinux/include/asm/flask/uninstd.h
-	fi
-
-	kernel_src_install
+	cd ${S}
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+	epatch ${FILESDIR}/mremap-CAN-2003-0985.patch || die "failed to patch for mremap vuln"
 }
 
 pkg_postinst() {
@@ -69,4 +56,15 @@ pkg_postinst() {
 	einfo "Also included are various other performance and security related patches"
 	einfo "If you experience problems with this kernel please report them by"
 	einfo "assigning bugs on bugs.gentoo.org to frogger@gentoo.org"
+	if [ "`use selinux`" ]; then
+		einfo ""
+		einfo "Warning!  This kernel contains the new SELinux API and currently"
+		einfo "does not support ReiserFS.  If you need ReiserFS support, and are"
+		einfo "using SELinux, then do not use this kernel."
+		einfo ""
+		einfo "The new SELinux API contains many changes from the previous API,"
+		einfo "including new userspace utilities.  Please see "
+		einfo "http://www.gentoo.org/proj/en/hardened/selinux for more info."
+	fi
 }
+
