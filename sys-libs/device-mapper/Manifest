@@ -14,7 +14,7 @@ MD5 4d88d6f3c209606108a397be140cc6a7 device-mapper-1.00.19-r2.ebuild 1465
 MD5 72b46f8a5544fa166e22dd6297071eda files/digest-device-mapper-1.00.08 70
 MD5 b6ee13a8f0d0d9a8600559f997c8ba9d files/digest-device-mapper-1.00.07 70
 MD5 3722791187466d3005f5b7f129c3ed7a files/digest-device-mapper-1.00.17 70
-MD5 66a1d5bed9b6fa521d9d9b238826e0db files/dm-start.sh 1914
+MD5 e10f3c3c44762c3de6b04ba046ab72e7 files/dm-start.sh 1943
 MD5 bd2d95d83990e96a2e3a0f48b53d5abd files/digest-device-mapper-1.00.18 70
 MD5 b5dd92354fb75caa4956a92d5aa2e0ea files/digest-device-mapper-1.00.19 70
 MD5 b6ee13a8f0d0d9a8600559f997c8ba9d files/digest-device-mapper-1.00.07-r1 70
