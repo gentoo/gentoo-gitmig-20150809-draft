@@ -1,6 +1,9 @@
-# ChangeLog for net-www/log-toolkit
+# ChangeLog for www-misc/log-toolkit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/log-toolkit/ChangeLog,v 1.3 2004/09/03 16:15:14 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/log-toolkit/ChangeLog,v 1.4 2004/09/05 09:13:40 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   log-toolkit-0.9.6.ebuild:
