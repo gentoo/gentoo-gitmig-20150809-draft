@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q.ebuild,v 1.1 2005/02/21 16:30:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q.ebuild,v 1.2 2005/03/17 02:51:28 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -117,6 +117,9 @@ src_install() {
 	dosym ../man8/agetty.8 /usr/share/man/man1/getty.1
 	dosbin partx/{addpart,delpart,partx} || die "dosbin"
 	use perl || rm -f "${D}"/usr/bin/chkdupexe
+
+	# man-pages installs renice(1p) but util-linux does renice(8)
+	dosym ../man8/renice.8 /usr/share/man/man1/renice.1
 
 	dodoc HISTORY MAINTAINER README VERSION
 	docinto examples
