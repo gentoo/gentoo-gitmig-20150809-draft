@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.26 2004/06/24 22:05:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.27 2004/08/27 05:04:38 vapier Exp $
+
+  27 Aug 2004; Mike Frysinger <vapier@gentoo.org> files/fcron.rc6:
+  Dont need logger, use logger #57787 by Paul Varner.
 
   25 May 2004; Chris PeBenito <pebenito@gentoo.org>
   +files/fcron-2.9.4-selinuxupdate.diff, fcron-2.9.4.ebuild:

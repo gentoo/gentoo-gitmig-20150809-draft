@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/files/dcron.rc6,v 1.9 2004/07/15 00:40:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/files/dcron.rc6,v 1.10 2004/08/27 05:04:37 vapier Exp $
 
 depend() {
-	need clock hostname logger
+	use logger
+	need clock hostname
 	provide cron
 }
 

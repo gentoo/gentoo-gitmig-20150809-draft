@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.20 2004/08/18 02:28:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.21 2004/08/27 05:05:01 vapier Exp $
+
+  27 Aug 2004; Mike Frysinger <vapier@gentoo.org> files/vixie-cron.rc6:
+  Dont need logger, use logger #57787 by Paul Varner.
 
   17 Aug 2004; Chris PeBenito <pebenito@gentoo.org>
   files/vixie-cron-3.0.1-selinux.diff.bz2:

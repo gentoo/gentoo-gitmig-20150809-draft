@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/files/vixie-cron.rc6,v 1.4 2004/07/15 00:53:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/files/vixie-cron.rc6,v 1.5 2004/08/27 05:05:01 vapier Exp $
 
 depend() {
-	need clock localmount logger
+	use logger
+	need clock localmount
 	provide cron	
 }
 
