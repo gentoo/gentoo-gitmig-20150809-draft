@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gcloop/gcloop-0.99.20040118.ebuild,v 1.1 2004/01/23 22:43:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gcloop/gcloop-0.99.20040118.ebuild,v 1.2 2004/02/14 20:35:19 brad_mssw Exp $
 
 DESCRIPTION="Compressed loopback userspace tools and kernel patches"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc64 ~hppa ~ppc ~sparc ~x86"
 
 IUSE=""
 
