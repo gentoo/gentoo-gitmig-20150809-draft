@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.81.7.ebuild,v 1.4 2004/09/07 16:11:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.81.7.ebuild,v 1.5 2004/10/16 18:18:13 axxo Exp $
 
 inherit java-pkg
 
@@ -42,7 +42,7 @@ src_install() {
 
 	dodoc Copying *.txt
 
-	dohtml -r htmls/
+	java-pkg_dohtml -r htmls/
 	dobin ${MY_PN}
 }
 
