@@ -1,4 +1,6 @@
-MD5 9ffec9c445795eaba2040d671cf5e06a ChangeLog 520
+MD5 93d89d505d79ba44a9fa07cee2b89555 ChangeLog 635
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 b95bb54d3a087ef3a3a3a44f40601102 uptime-1.1.ebuild 395
+MD5 e12d757979c37fd68f33cfc4a6af0d2f uptime-1.2.ebuild 397
+MD5 dac7617f393cfa28635c2b35d88aa07e files/digest-uptime-1.2 61
 MD5 d955ec606adea7de3f17ec26670b21ea files/digest-uptime-1.1 60
