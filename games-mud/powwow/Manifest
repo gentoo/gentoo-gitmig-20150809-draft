@@ -1,5 +1,5 @@
-MD5 c0702c2acce7c53eb1386284593ae9ad ChangeLog 537
+MD5 27926062cfd7842ccca318ec22cdd1bd ChangeLog 632
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 b0019c798cd74f8182ab6064d57444c7 powwow-1.2.5.ebuild 1101
+MD5 4e7210a0671973e23f91d5ddf23ee366 powwow-1.2.5.ebuild 1111
 MD5 97c900dc7518e77f09a461ebfa5f1a6e files/1.2.5-copyfile.patch 413
 MD5 3145e5cf5500ecfc98d055016cd605f4 files/digest-powwow-1.2.5 64
