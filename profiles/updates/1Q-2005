@@ -78,4 +78,22 @@ move kde-base/kicker-kolourpicker kde-base/kicker-applets
 move kde-base/kicker-ktimemon kde-base/kicker-applets
 move kde-base/kicker-math kde-base/kicker-applets
 move kde-base/kicker-mediacontrol kde-base/kicker-applets
+move kde-base/kate-cppsymbolviewer kde-base/kate-plugins
+move kde-base/kate-filelistloader kde-base/kate-plugins
+move kde-base/kate-filetemplates kde-base/kate-plugins
+move kde-base/kate-helloworld kde-base/kate-plugins
+move kde-base/kate-htmltools kde-base/kate-plugins
+move kde-base/kate-insertcommand kde-base/kate-plugins
+move kde-base/kate-kjswrapper kde-base/kate-plugins
+move kde-base/kate-kpybrowser kde-base/kate-plugins
+move kde-base/kate-make kde-base/kate-plugins
+move kde-base/kate-modeline kde-base/kate-plugins
+move kde-base/kate-openheader kde-base/kate-plugins
+move kde-base/kate-plugins kde-base/kate-plugins
+move kde-base/kate-scripts kde-base/kate-plugins
+move kde-base/kate-snippets kde-base/kate-plugins
+move kde-base/kate-tabbarextension kde-base/kate-plugins
+move kde-base/kate-textfilter kde-base/kate-plugins
+move kde-base/kate-xmlcheck kde-base/kate-plugins
+move kde-base/kate-xmltools kde-base/kate-plugins
 
