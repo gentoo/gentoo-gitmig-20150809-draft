@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libhoard
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhoard/ChangeLog,v 1.5 2003/07/31 20:12:12 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhoard/ChangeLog,v 1.6 2004/03/26 11:52:45 mr_bones_ Exp $
+
+  26 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> libhoard-2.1.0.ebuild,
+  libhoard-2.1.2d.ebuild:
+  fix SRC_URI; IUSE
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

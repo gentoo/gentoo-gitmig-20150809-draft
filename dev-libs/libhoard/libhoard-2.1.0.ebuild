@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhoard/libhoard-2.1.0.ebuild,v 1.7 2004/03/14 12:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhoard/libhoard-2.1.0.ebuild,v 1.8 2004/03/26 11:52:45 mr_bones_ Exp $
 
 inherit libtool
 
 DESCRIPTION="A fast, scalable and memory-efficient allocator for multiprocessors"
 HOMEPAGE="http://www.hoard.org/"
-SRC_URI="${HOMEPAGE}/${P}.tar.gz"
+SRC_URI="http://www.hoard.org/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
