@@ -1,0 +1,29 @@
+# ChangeLog for dev-java/avalon-logkit
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit-bin/ChangeLog,v 1.1 2004/07/30 18:39:42 axxo Exp $
+
+*avalon-logkit-bin-1.2 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +avalon-logkit-bin-1.2.2.ebuild, +avalon-logkit-bin-1.2.ebuild:
+  move avalon-logkit -> avalon-logkit-bin
+
+*avalon-logkit-1.2.2 (06 Mar 2004)
+
+*avalon-logkit-1.2 (16 Mar 2003)
+
+  27 Apr 2003; Todd Berman <tberman@gentoo.org> avalon-logkit-1.2.ebuild:
+  Internal ebuild changes. no longer resetting P, now using MY_P.
+
+  26 Apr 2003; Adrian Almenar <strider@gentoo.org> avalon-logkit-1.2.ebuild:
+  Updated SRC_URI so this ebuild uses apache mirrors.
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> avalon-logkit-1.2.ebuild:
+  added keywords ppc sparc.
+
+  16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> avalon-logkit-1.2.ebuild:
+  Initial import.
+  
+  LogKit is an easy to use logging toolkit designed for secure performance
+  oriented logging.
+
