@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/buffer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/ChangeLog,v 1.6 2004/08/21 05:53:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/ChangeLog,v 1.7 2004/08/22 02:50:38 swegener Exp $
+
+  22 Aug 2004; Sven Wegener <swegener@gentoo.org> files/1.19-deb-gentoo.patch:
+  Modified patch to not include CVS keyword replacements. Closes bug #61118.
 
 *buffer-1.19-r2 (21 Aug 2004)
 

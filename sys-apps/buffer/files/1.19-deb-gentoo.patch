@@ -11,7 +11,7 @@ diff -ur buffer-1.19.orig/buffer.c buffer-1.19/buffer.c
  #include <unistd.h>
  #include <stdio.h>
  #include <signal.h>
-@@ -120,15 +123,16 @@
+@@ -120,6 +123,7 @@
  #include <sys/shm.h>
  #include <sys/sem.h>
  #include <sys/wait.h>
@@ -19,7 +19,7 @@ diff -ur buffer-1.19.orig/buffer.c buffer-1.19/buffer.c
  #include "sem.h"
  
  #ifndef lint
- static char *rcsid = "$Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/files/1.19-deb-gentoo.patch,v 1.1 2004/08/21 05:53:45 vapier Exp $";
+@@ -127,8 +131,8 @@
  #endif
  
 -#ifndef __alpha
