@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.9.99.ebuild,v 1.5 2002/11/06 21:08:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.0.ebuild,v 1.1 2002/11/06 21:08:09 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
@@ -9,16 +9,16 @@ HOMEPAGE="http://anjuta.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-x86 -ppc"
+KEYWORDS="~x86 ~ppc"
 
-DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
-	=x11-libs/gtk+-1.2*
-	media-libs/audiofile
-	dev-libs/libxml
+DEPEND="|| ( gnome-base/ORBit2 >=gnome-base/ORBit-0.5.0 )
+	media-libs/gdk-pixbuf
+	>=gnome-base/gnome-libs-1.4.1.2-r1
+	>=dev-libs/libxml-1.4.0
 	dev-util/pkgconfig
-	gnome-extra/libglademm
-	app-text/scrollkeeper
-	gnome-base/gnome-print"
+	|| ( gnome-extra/libglademm dev-util/glademm )
+	>=app-text/scrollkeeper-0.1.4
+	>=gnome-base/gnome-print-0.35"
 	
 RDEPEND="dev-util/glade
 	 media-gfx/gnome-iconedit
