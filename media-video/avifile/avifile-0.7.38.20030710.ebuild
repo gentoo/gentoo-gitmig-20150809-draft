@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.18 2004/06/25 00:36:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.19 2004/07/14 21:30:10 agriffis Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0.7"
 KEYWORDS="x86 ~sparc amd64 alpha ia64"
-IUSE="static truetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd debug"
+IUSE="3dnow X alsa avi debug dvd esd mmx oggvorbis qt sdl sse static truetype xv zlib"
 
 DEPEND=">=media-libs/jpeg-6b
 	x86? ( >=media-libs/divx4linux-20030428
