@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p1-r1.ebuild,v 1.2 2003/09/19 13:27:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p1-r1.ebuild,v 1.3 2003/09/20 01:02:37 pebenito Exp $
 
 inherit eutils flag-o-matic ccc
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -10,13 +10,14 @@ inherit eutils flag-o-matic ccc
 PARCH=${P/_/}
 
 X509_PATCH=${PARCH}+x509g2.diff.gz
+SELINUX_PATCH=openssh-3.7.1_p1-selinux.diff.bz2
 
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 IUSE="ipv6 static pam tcpd kerberos skey selinux X509"
 SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz
-	selinux? ( http://lostlogicx.com/gentoo/openssh_3.6p1-5.se1.diff.bz2 )
+	selinux? ( http://dev.gentoo.org/~pebenito/${SELINUX_PATCH} )
 	X509? ( http://roumenpetrov.info/openssh/x509g2/${X509_PATCH} )"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
@@ -43,7 +44,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64"
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
 
-#	use selinux && epatch ${DISTDIR}/openssh_3.6p1-5.se1.diff.bz2
+	use selinux && epatch ${DISTDIR}/${SELINUX_PATCH}
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
 	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 

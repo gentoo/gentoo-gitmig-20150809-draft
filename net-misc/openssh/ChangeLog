@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.50 2003/09/19 13:27:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.51 2003/09/20 01:02:37 pebenito Exp $
+
+  19 Sep 2003; Chris PeBenito <pebenito@gentoo.org>
+  openssh-3.7.1_p1-r1.ebuild, openssh-3.7.1_p1.ebuild:
+  Fix SELinux patch for 3.7.1_p1
 
   19 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p1-r1.ebuild :
   Disabled selinux patch until a new can be made.
