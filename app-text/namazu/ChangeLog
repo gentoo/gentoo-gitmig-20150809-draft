@@ -1,6 +1,12 @@
 # ChangeLog for app-text/namazu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.8 2004/12/07 09:21:06 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.9 2004/12/16 11:49:32 nakano Exp $
+
+*namazu-2.0.14 (16 Dec 2004)
+
+  16 Dec 2004; Masatomo Nakano <nakano@gentoo.org> -namazu-2.0.12.ebuild,
+  -namazu-2.0.13.ebuild, +namazu-2.0.14.ebuild:
+  Fixed Cross-Site Scripting Vulnerability. (#74612)
 
   07 Dec 2004; Akinori Hattori <hattya@gentoo.org> namazu-2.0.13.ebuild:
   fixes bug #73330
