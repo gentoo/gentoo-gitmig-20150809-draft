@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.6_beta2.ebuild,v 1.6 2003/09/06 22:23:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.6_beta2.ebuild,v 1.7 2003/09/21 12:41:01 aliz Exp $
 
 DESCRIPTION="Free program which displays molecular structure."
 HOMEPAGE="http://www.umass.edu/microbio/rasmol/index2.htm"
@@ -11,8 +11,8 @@ LICENSE="public-domain"
 DEPEND="virtual/x11"
 
 P0=rasmol_2.6b2
-SRC_URI="ftp://ftp.debian.org/debian/pool/main/r/${PN}/${P0}.orig.tar.gz
-		ftp://ftp.debian.org/debian/pool/main/r/${PN}/${P0}-6.diff.gz"
+SRC_URI="mirror://debian/pool/main/r/rasmol/${P0}.orig.tar.gz
+	mirror://debian/pool/main/r/rasmol/${P0}-6.diff.gz"
 
 S="${WORKDIR}/RasMol2"
 
