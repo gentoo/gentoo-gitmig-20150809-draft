@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.198 2004/06/28 02:03:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.199 2004/07/05 01:24:31 genone Exp $
+
+  05 Jul 2004; Marius Mauch <genone@gentoo.org> glibc-2.2.5-r9.ebuild,
+  glibc-2.3.1-r5.ebuild, glibc-2.3.2-r10.ebuild, glibc-2.3.2-r2.ebuild,
+  glibc-2.3.2-r9.ebuild, glibc-2.3.3.20040420.ebuild,
+  glibc-2.3.3_pre20031210.ebuild, glibc-2.3.3_pre20040117-r1.ebuild,
+  glibc-2.3.3_pre20040117.ebuild, glibc-2.3.3_pre20040207.ebuild,
+  glibc-2.3.3_pre20040420.ebuild, glibc-2.3.3_pre20040529.ebuild,
+  glibc-2.3.4.20040605-r1.ebuild, glibc-2.3.4.20040605.ebuild,
+  glibc-2.3.4.20040619.ebuild:
+  added a downgrade check to pkg_setup for bug #25230.
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> glibc-2.3.1-r5.ebuild,
   glibc-2.3.2-r10.ebuild, glibc-2.3.2-r2.ebuild, glibc-2.3.2-r9.ebuild,

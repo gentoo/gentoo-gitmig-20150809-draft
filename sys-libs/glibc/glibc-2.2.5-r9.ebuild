@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r9.ebuild,v 1.6 2004/06/25 15:27:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r9.ebuild,v 1.7 2004/07/05 01:24:31 genone Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -57,6 +57,31 @@ RDEPEND="virtual/os-headers
 	nls? ( sys-devel/gettext )
 	build? ( >=sys-apps/portage-1.9.0 )"
 PROVIDE="virtual/glibc virtual/libc"
+
+pkg_setup() {
+	# Check if we are going to downgrade, we don't like that
+	local old_version
+
+	old_version="`best_version glibc`"
+	old_version="${old_version/sys-libs\/glibc-/}"
+
+	if [ `python -c "import portage; print int(portage.vercmp(\"${PV}\",\"$old_version\"))"` -lt 0 ]; then
+		if [ "${FORCE_DOWNGRADE}" ]; then
+			ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
+			return 0
+		else
+			eerror "Dowgrading glibc is not supported and we strongly recommend that"
+			eerror "you don't do it as it WILL break all applications compiled against"
+			eerror "the new version (most likely including python and portage)."
+			eerror "If you are REALLY sure that you want to do it set "
+			eerror "     FORCE_DOWNGRADE=1"
+			eerror "when you try it again."
+			die "glibc downgrade"
+		fi
+	fi
+
+	return 0
+}
 
 src_unpack() {
 	unpack glibc-${PV}.tar.bz2 || die
