@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/files/unrealircd.rc,v 1.4 2004/07/24 00:17:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/files/unrealircd.rc,v 1.5 2004/07/24 20:24:31 swegener Exp $
 
 depend() {
 	need net
@@ -11,7 +11,7 @@ depend() {
 start() {
 	ebegin "Starting unrealircd"
 	start-stop-daemon --start --quiet --exec /usr/bin/unrealircd \
-		--chuid ${UNREALIRCD_USER} -- ${UNREALIRCD_OPTS} &>&1
+		--chuid ${UNREALIRCD_USER} -- ${UNREALIRCD_OPTS} &>/dev/null
 	eend $?
 }
 

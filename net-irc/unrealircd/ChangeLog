@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.15 2004/07/24 00:17:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.16 2004/07/24 20:24:31 swegener Exp $
+
+  24 Jul 2004; Sven Wegener <swegener@gentoo.org> files/unrealircd.rc,
+  unrealircd-3.2.1.ebuild:
+  Fixed typo in init script and modified ebuild to install cron example scripts.
 
 *unrealircd-3.2.1 (24 Jul 2004)
 

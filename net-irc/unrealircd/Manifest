@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a05ad20ada0614f14e7f338cc14cec5a ChangeLog 2221
+MD5 12dc52e1f0d05a88f6734328ce31e310 ChangeLog 2401
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 bd2b20e66682f4a143eb7279be88c70d unrealircd-3.1.5.1.ebuild 1962
 MD5 f9a856e5a3fd5dee5a9b7fe176de34e1 unrealircd-3.1.6.ebuild 1966
-MD5 812e71a0f7f80cbdea799e74a75037cb unrealircd-3.2.1.ebuild 2707
+MD5 6ff7d41d55ca72f16556480ba47930c1 unrealircd-3.2.1.ebuild 2742
 MD5 5470c8e18506b99b25d63039b6b37f3a files/3.1.5.1-Config.patch 554
 MD5 5470c8e18506b99b25d63039b6b37f3a files/3.1.6-Config.patch 554
 MD5 4aacbe2a257a52f6adf3628142d5fa22 files/digest-unrealircd-3.1.5.1 71
 MD5 0e5e4e0c025911074b2673b9a040aa57 files/digest-unrealircd-3.1.6 68
 MD5 d9a803f03c66dbd732f2ffb356cb589a files/unrealircd.confd 499
-MD5 1825f098dcda02ddb83f9b460c4de0c1 files/unrealircd.rc 521
+MD5 2115655eef643d81fccd91cc549faab4 files/unrealircd.rc 528
 MD5 973bf222cdc1696d8ff91b30c1198fba files/digest-unrealircd-3.2.1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBAartAXomK8S72HoRAjp4AJ4mFiiEnHwbxsaTsTMt0uqWxMk+fQCfd95l
-hgU+9UOn60L0Kh4id5l/ILA=
-=MV7h
+iD8DBQFBAsXJAXomK8S72HoRAknoAJ0QXPzvx5YZp7NJtKyzdBPi/bywtwCeKh/w
+MOjEVN0M1qnNw2Xlb/dOXqI=
+=RgNV
 -----END PGP SIGNATURE-----
