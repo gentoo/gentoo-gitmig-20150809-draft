@@ -1,10 +1,11 @@
 # ChangeLog for dev-lang/ferite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.5 2002/12/13 10:56:25 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.6 2003/01/09 15:38:42 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *ferite-0.99.5 (17 Aug 2002)
+
+  09 Jan 2003; Martin Holzer <mholzer@gentoo.org> ferrite-0.99.5.ebuild :
+  Changed SRC_URI to mirror://sf
 
   17 Nov 2002; Jon Nall <nall@gentoo.org> ferrite-0.99.5.ebuild :
   added ~ppc to KEYWORDS

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-0.99.4.ebuild,v 1.8 2002/12/09 04:20:57 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-0.99.4.ebuild,v 1.9 2003/01/09 15:38:42 mholzer Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="ferite is a scripting engine and language written in c for complete portability."
 
-SRC_URI="http://telia.dl.sourceforge.net/sourceforge/ferite/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.ferite.org/"
 
 DEPEND="virtual/glibc
