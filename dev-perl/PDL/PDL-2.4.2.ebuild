@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.1.ebuild,v 1.4 2005/03/07 17:20:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2.ebuild,v 1.1 2005/03/07 17:20:36 mcummings Exp $
 
 IUSE="opengl"
 
 inherit perl-module eutils
 
 DESCRIPTION="PDL Perl Module"
-SRC_URI="http://search.cpan.org/CPAN/authors/id/C/CS/CSOE/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/C/CS/CSOE/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~csoe/${P}/"
 SLOT="0"
 LICENSE="Artistic as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	dev-perl/Filter
@@ -53,7 +53,6 @@ src_unpack() {
 
 src_install () {
 
-	make doctest
 	perl-module_src_install
 	dodir /usr/share/doc/${PF}/html
 	eval `perl '-V:version'`
@@ -63,15 +62,21 @@ src_install () {
 
 	mydir=${D}/usr/share/doc/${PF}/html/PDL
 
-	for i in `find ./${mydir} -type f `;
+	for i in ${mydir}/* ${mydir}/IO/* ${mydir}/Fit/* ${mydir}/Pod/* ${mydir}/Graphics/*
 	do
 		dosed ${i/${D}}
 	done
+	cp ${S}/Doc/scantree.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/Doc/
+	cp ${S}/Doc/mkhtmldoc.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/Doc/
 
-	dosed /usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/pdldoc.db
 }
 
 pkg_postinst() {
+	einfo "Building perldl.db. You can recreate this at any time"
+	einfo "by running"
+	einfo "perl /usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/Doc/scantree.pl"
+	sleep 3
+	perl /usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/Doc/scantree.pl
 	einfo "PDL requires that glx and dri support be enabled in"
 	einfo "your X configuration for certain parts of the graphics"
 	einfo "engine to work. See your X's documentation for futher"
