@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/pcsx-1.4.ebuild,v 1.1 2002/12/11 23:23:24 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/pcsx-1.4.ebuild,v 1.2 2002/12/13 19:57:34 vapier Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Playstation emulator"
-HOMEPAGE="http://www.pcsx.net"
-LICENSE="GPL"
-KEYWORDS="~x86"
+HOMEPAGE="http://www.pcsx.net/"
+SRC_URI="http://www.pcsx.net/downloads/PcsxSrc-${PV}.zip"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 IUSE="opengl"
 
 use opengl && GLDEPEND="app-emulation/psemu-gpupetemesagl"
@@ -25,13 +28,6 @@ DEPEND="sys-libs/zlib
 #         app-emulation/psemu-peopsspu
 #         ${GLDEPEND}"
 
-SRC_URI="http://www.pcsx.net/downloads/PcsxSrc-${PV}.zip"
-
-src_unpack() {
-	cd ${WORKDIR}
-	unzip -a ${DISTDIR}/$(echo ${A} | cut -f1 -d\ )
-}
-
 src_compile() {
 	cd PcsxSrc/Linux
 
@@ -46,7 +42,7 @@ src_compile() {
 	mv pcsx pcsx.bin
 }
 
-src_install () {
+src_install() {
 	dobin PcsxSrc/Linux/pcsx.bin
 	dobin ${FILESDIR}/pcsx
 	dodoc PcsxSrc/Docs/*
