@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Imaging
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/ChangeLog,v 1.12 2003/07/15 22:22:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/ChangeLog,v 1.13 2004/02/26 19:00:38 bazik Exp $
+
+  26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> Imaging-1.1.4.ebuild:
+  Stable on sparc.
 
   15 Jul 2003; Alastair Tse <liquidx@gentoo.org> Imaging-1.1.4.ebuild,
   files/Imaging-1.1.4-setup.py.patch:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pmw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.9 2003/10/23 14:04:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.10 2004/02/26 19:10:48 bazik Exp $
+
+  26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> pmw-1.2.ebuild:
+  Stable on sparc.
 
 *pmw-1.2 (12 Oct 2003)
 

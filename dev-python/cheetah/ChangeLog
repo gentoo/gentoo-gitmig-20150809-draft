@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.1 2004/01/18 12:18:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.2 2004/02/26 19:02:06 bazik Exp $
+
+  26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> cheetah-0.9.15.ebuild:
+  Stable on sparc.
 
   18 Jan 2004; Alastair Tse <liquidx@gentoo.org> cheetah-0.9.14.ebuild,
   cheetah-0.9.15.ebuild, metadata.xml:

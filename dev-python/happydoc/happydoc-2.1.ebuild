@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.1.ebuild,v 1.6 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.1.ebuild,v 1.7 2004/02/26 19:02:51 bazik Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://happydoc.sourceforge.net/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~sparc ~alpha"
+KEYWORDS="x86 sparc ~alpha"
 
 DEPEND="virtual/python"
 

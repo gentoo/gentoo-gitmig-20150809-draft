@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/optik
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.9 2003/06/12 20:37:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.10 2004/02/26 19:08:15 bazik Exp $
+
+  26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> optik-1.4.ebuild:
+  Stable on sparc.
 
   12 Jun 2003; <msterret@gentoo.org> optik-1.2.ebuild:
   fix Header
