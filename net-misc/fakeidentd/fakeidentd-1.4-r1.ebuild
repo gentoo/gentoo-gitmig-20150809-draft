@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-1.4-r1.ebuild,v 1.1 2001/09/14 15:26:10 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-1.4-r1.ebuild,v 1.2 2001/09/14 21:51:53 woodchip Exp $
 
 # This identd is nearly perfect for a NAT box. It runs in one
 # process (doesn't fork()) and isnt very susceptible to DOS attack.
@@ -30,6 +30,6 @@ src_install () {
 	# Changelog in source is more current. Its only ~13kB anyway.
 	dodoc identd.c
 	
-	exeinto /etc/init.d
+	exeinto /etc/rc.d/init.d
 	newexe ${FILESDIR}/fakeidentd.rc5 fakeidentd
 }
