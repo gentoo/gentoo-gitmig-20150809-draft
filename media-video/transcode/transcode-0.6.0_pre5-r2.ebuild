@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre5-r2.ebuild,v 1.2 2002/07/11 06:30:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre5-r2.ebuild,v 1.3 2002/07/19 11:28:21 seemant Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -11,6 +11,10 @@ HOMEPAGE="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode"
 # Note: transcode can use pretty much any media-related package ever written as
 # a plugin. An exhaustive dep list would make me add about 20-30 packages to 
 # portage. perhaps another time :-)
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=media-libs/a52dec-0.7.3
 	media-libs/libdv
@@ -91,5 +95,7 @@ src_install () {
 	make \
 		DESTDIR=${D} \
 		install || die
+	
+	dodoc AUTHORS COPYING ChangeLog README TODO
 }
 

@@ -19,9 +19,9 @@ KEYWORDS="x86"
 src_compile() {
 	local myconf
 	use gtk && myconf="--enable-gtk"
-	use qt && myconf="$myconf --enable-qt"
+	use qt && myconf="${myconf} --enable-qt"
 	autoconf
-	./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man ${myconf} || die
+	econf ${myconf} || die
 	emake || die
 }
 
@@ -29,4 +29,3 @@ src_install() {
 	make prefix=${D} install	
 	dodoc AUTHORS COPYING README	
 }
-

@@ -6,12 +6,14 @@ S=${WORKDIR}/${P/_/-}
 DESCRIPTION="kernel driver for nVidia based cards with video-in"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/rivatv/${P/_/-}.tar.gz"
 HOMEPAGE="http://rivatv.sourceforge.net/"
-LICENSE="GPL-2"
 DEPEND="virtual/x11
 	>=virtual/linux-sources-2.4.17"
 
 RDEPEND="${DEPEND}"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	#cd rivatv/linux/drivers/media/video
