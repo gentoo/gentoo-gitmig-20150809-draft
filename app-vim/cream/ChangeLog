@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.11 2004/07/12 17:51:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.12 2004/07/18 23:23:28 aliz Exp $
+
+  18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> cream-0.30.ebuild:
+  Added amd64 keyword, closing #56808.
 
   12 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> cream-0.30.ebuild:
   Stable on sparc, mips
