@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r2.ebuild,v 1.1 2004/05/12 18:14:22 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r2.ebuild,v 1.2 2004/05/13 07:52:25 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -301,6 +301,7 @@ src_unpack() {
 	# known to be broken are going to be compiled.
 	# Travis Tilley <lv@gentoo.org>
 	use amd64 && use multilib && die "multilib support will not compile yet with gcc 3.4.0. re-emerge with USE=-multilib"
+	die "SSP is screwed up at the moment, gimme a few to fix it"
 
 	local release_version="Gentoo Linux ${PVR}"
 
