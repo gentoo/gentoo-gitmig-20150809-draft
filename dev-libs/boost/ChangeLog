@@ -1,7 +1,9 @@
 # ChangeLog for dev-libs/boost
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.14 2004/03/17 07:50:47 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.15 2004/03/25 06:22:55 weeve Exp $
 
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> boost-1.31.0.ebuild:
+  Added ~sparc keyword.
 
   16 Mar 2004; George Shapovalov <george@gentoo.org> boost-1.31.0_alpha*.ebuild :
   removed alphas from portage, as the release is out for a while and is already marked stable
