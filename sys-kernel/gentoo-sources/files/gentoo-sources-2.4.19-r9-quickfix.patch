@@ -20,3 +20,13 @@
  	/* Can be used for communication between hooks. */
          unsigned long	nfmark;
  	/* Cache info */
+--- linux-2.4.19-gentoo-r9/include/linux/netfilter_ipv4/ip_conntrack_core.h.o	Thu Sep 19 16:51:11 2002
++++ linux-2.4.19-gentoo-r9/include/linux/netfilter_ipv4/ip_conntrack_core.h	Thu Sep 19 16:51:19 2002
+@@ -1,5 +1,7 @@
+ #ifndef _IP_CONNTRACK_CORE_H
+ #define _IP_CONNTRACK_CORE_H
++
++#include <linux/netfilter.h>
+ #include <linux/netfilter_ipv4/lockhelp.h>
+ 
+ /* This header is used to share core functionality between the

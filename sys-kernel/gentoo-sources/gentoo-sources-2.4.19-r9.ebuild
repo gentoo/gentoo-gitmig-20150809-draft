@@ -55,7 +55,7 @@ src_unpack() {
 
 	cd ${S}
 	# Tiny patch for symbol generation
-	patch -p1 < ${FILESDIR}/gentoo-sources-2.4.19-r9-ksyms.patch || die
+	patch -p1 < ${FILESDIR}/gentoo-sources-2.4.19-r9-quickfix.patch || die
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
 	mv Makefile Makefile.orig
