@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.7 2004/02/29 18:10:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.8 2004/03/10 20:18:42 weeve Exp $
 
 DESCRIPTION="unix2dos - UNIX to DOS text file format converter"
 HOMEPAGE=""
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.src.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~amd64"
+KEYWORDS="x86 ppc alpha ~amd64 ~sparc"
 
 DEPEND=""
 RDEPEND=""
