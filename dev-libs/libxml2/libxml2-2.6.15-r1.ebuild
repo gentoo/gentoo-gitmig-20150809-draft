@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.15-r1.ebuild,v 1.4 2004/10/30 18:00:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.15-r1.ebuild,v 1.5 2004/10/30 23:16:25 vapier Exp $
 
 inherit libtool gnome.org flag-o-matic gnuconfig eutils
 
@@ -9,11 +9,12 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm -hppa amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390"
 IUSE="python readline ipv6"
 
 DEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
+	hppa? ( >=sys-devel/binutils-2.15.92.0.2 )
 	readline? ( sys-libs/readline )"
 
 src_unpack() {
@@ -41,9 +42,9 @@ src_compile() {
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
 
 	econf --with-zlib \
-		`use_with python` \
-		`use_with readline` \
-		`use_enable ipv6` || die
+		$(use_with python) \
+		$(use_with readline) \
+		$(use_enable ipv6) || die
 
 	emake || die
 
@@ -53,7 +54,7 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS Copyright ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 
 }
 
