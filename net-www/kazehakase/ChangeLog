@@ -1,6 +1,9 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.5 2004/04/07 04:13:52 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.6 2004/04/27 20:08:01 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kazehakase-0.1.4.ebuild:
+  Add inherit eutils
 
   07 Apr 2004; Brad Laue <brad@gentoo.org> kazehakase-0.1.4.ebuild,
   files/kz-scrap-bookmark-action.gcc2.patch, files/kz-tab-label.gcc2.patch:
