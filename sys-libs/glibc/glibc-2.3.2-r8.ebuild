@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r8.ebuild,v 1.2 2003/10/26 15:54:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r8.ebuild,v 1.3 2003/10/26 16:38:50 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -346,10 +346,6 @@ src_unpack() {
 		#
 		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-ia64-LOAD_ARGS-fixup.patch
 	fi
-
-	# Quick fix for borkage with sys-libs/pwdb, xfree, etc.
-	cp -f ${FILESDIR}/2.3.2/sysmacros.h \
-		${S}/sysdeps/unix/sysv/linux/sys/sysmacros.h
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
