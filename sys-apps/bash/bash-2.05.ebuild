@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05.ebuild,v 1.1 2001/04/12 09:48:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05.ebuild,v 1.2 2001/09/15 19:29:14 danarmak Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,9 +12,9 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/bash/${A}
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-        readline? ( >=sys-libs/readline-4.2 )
-        tex? ( app-text/tetex )
-	"
+        readline? ( >=sys-libs/readline-4.2 )"
+#        tex? ( app-text/tetex )
+
 RDEPEND="virtual/glibc"
 
 src_compile() {
