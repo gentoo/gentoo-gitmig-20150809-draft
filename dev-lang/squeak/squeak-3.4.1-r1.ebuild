@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r1.ebuild,v 1.1 2003/10/11 09:32:56 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r1.ebuild,v 1.2 2003/10/30 22:26:04 kumba Exp $
 
 inherit libtool flag-o-matic eutils
 strip-flags
@@ -28,6 +28,13 @@ RDEPEND="dev-lang/squeak-vm
 		X? ( x11-base/xfree )"
 
 S="${WORKDIR}/Squeak-${NV}"
+
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc33-string-fix.patch
+}
 
 src_compile() {
 	local myconf=""
