@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.37 2003/04/08 17:48:12 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.38 2003/04/08 18:14:19 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -25,7 +25,7 @@ need-kde $PV
 
 # these use incrememntal patches so as to avoid downloadnig a lot of stuff all over
 if [ "$PV" == "3.1.1a" ]; then
-    PATCHES1="$PATCHES1 ${WORKDIR}/${P}.diff"
+    PATCHES1="${WORKDIR}/${P}.diff"
     export S="${WORKDIR}/${PN}-3.1.1"
 fi
 
