@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.1.ebuild,v 1.1 2000/09/10 16:16:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.1.ebuild,v 1.2 2000/09/15 20:09:15 drobbins Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -11,18 +11,18 @@ HOMEPAGE="http://www.OpenLDAP.org/"
 
 src_compile() { 
   cd ${S}
-  ./configure --host=${CHOST} --enable-wrappers --enable-passwd \
+  try ./configure --host=${CHOST} --enable-wrappers --enable-passwd \
 	      --enable-shell --enable-shared --enable-static \
 	      --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
-  make depend
-  make
+  try make depend
+  try make
   cd tests
-  make
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/usr sysconfdir=${D}/etc/openldap localstatedir=${D}/var/state install
+  try make prefix=${D}/usr sysconfdir=${D}/etc/openldap localstatedir=${D}/var/state install
   prepman
 
   dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE

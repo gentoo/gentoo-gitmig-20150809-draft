@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.4-r1.ebuild,v 1.2 2000/08/16 04:38:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.4-r1.ebuild,v 1.3 2000/09/15 20:09:15 drobbins Exp $
 
 P=yp-tools-2.4
 A=${P}.tar.gz
@@ -18,13 +18,13 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/yp
-  make
+  try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/yp
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make DESTDIR=${D} install
+  try make DESTDIR=${D} install
   prepman
   dodoc AUTHORS ChangeLog COPYING NEWS README THANKS TODO
   insinto /etc/yp
