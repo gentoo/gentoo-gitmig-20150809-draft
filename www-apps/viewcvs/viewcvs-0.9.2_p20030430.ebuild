@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20030430.ebuild,v 1.2 2004/08/26 08:00:05 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20030430.ebuild,v 1.3 2004/10/04 21:14:50 pvdabeel Exp $
 
 PDATE=${PV/0.9.2_p/}
 DESCRIPTION="Viewcvs, a web interface to cvs and subversion"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${PN}-${PDATE}.tar.bz2"
 
 LICENSE="viewcvs"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND=""
