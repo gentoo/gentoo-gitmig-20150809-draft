@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.17 2004/06/19 18:46:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.18 2004/06/23 11:33:03 fmccor Exp $
+
+  23 Jun 2004; Ferris McCormick <fmccor@gentoo.org> fox-1.0.49.ebuild:
+  Marked stable for sparc.
 
   19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> fox-1.2.4.ebuild:
   Marked ~amd64.
