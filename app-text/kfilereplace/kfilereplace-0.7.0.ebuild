@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/kfilereplace-0.7.0.ebuild,v 1.10 2003/06/12 20:27:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/kfilereplace-0.7.0.ebuild,v 1.11 2003/07/22 20:10:59 vapier Exp $
 
-inherit kde-base || die
+inherit kde-base
 
 need-kde 3.0.1
 
