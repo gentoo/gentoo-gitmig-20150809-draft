@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.1.5.ebuild,v 1.1 2004/02/11 05:52:30 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.1.5.ebuild,v 1.2 2004/02/11 07:39:31 iggy Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -21,12 +21,23 @@ DEPEND="dev-libs/popt
 
 # need to add dev-perl/Mail-IMAPClient inside ldirectord above
 
+fix_makefiles() {
+	einfo "fixing up the Makefiles"
+	sed -i -e 's:mkdir -p $(ckptvarlibdir):mkdir -p $(DESTDIR)$(ckptvarlibdir):' ${S}/telecom/checkpointd/Makefile* || die "failed to sed Makefiles"
+	aclocal
+	autoheader
+	libtoolize --ltdl --force --copy
+	automake --add-missing --include-deps
+	autoconf
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	mv ltmain.sh ltmain.orig
 	echo "export _POSIX2_VERSION=199209" > ltmain.sh
 	cat ltmain.orig >> ltmain.sh
+	fix_makefiles
 }
 
 src_compile() {
