@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/kde-i18n-zh_CN
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-zh_CN/ChangeLog,v 1.10 2003/02/12 04:50:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-zh_CN/ChangeLog,v 1.11 2003/03/09 00:07:03 hannes Exp $
+
+*kde-i18n-zh_CN-2.2.2 (09 Mar 2003)
+
+  09 Mar 2003; Hannes Mehnert <hannes@gentoo.org> kde-i18n-zh_CN-2.2.2.ebuild:
+  moved kde-i18n-zh_CN.GB2312-2.2.2 to kde-i18n-zh_CN-2.2.2
 
 *kde-i18n-zh_CN-3.1_rc6 (11 Jan 2003)
 
