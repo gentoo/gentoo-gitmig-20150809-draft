@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.33 2004/10/24 16:42:46 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.34 2004/10/26 03:33:10 weeve Exp $
+
+  25 Oct 2004; Jason Wever <weeve@gentoo.org> cacti-0.8.5a-r2.ebuild:
+  Stable on sparc.
 
   24 Oct 2004; Eldad Zack <eldad@gentoo.org> cacti-0.8.5a-r2.ebuild:
   Marked x86 stable
