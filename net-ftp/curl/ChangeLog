@@ -1,8 +1,11 @@
 # ChangeLog for net-ftp/curl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.15 2003/06/13 22:07:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.16 2003/06/14 12:06:54 gmsoft Exp $
 
 *curl-7.10.5-r1 (13 Jun 2003)
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.5-r1.ebuild :
+  Added ~hppa to KEYWORDS.
 
   13 Jun 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.5-r1.ebuild,
   files/curl-7.10.5-badssl.patch:
@@ -34,6 +37,9 @@
   Version Bump. Fixes #14015.
 
 *curl-7.10.2 (19 Nov 2002)
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.2.ebuild :
+  Added hppa to KEYWORDS.
 
   23 Dec 2002; Martin Holzer <mholzer@gentoo.org> curl-7.9.7.ebuild files/digest-curl-7.10.2 Changelog :
   Changed SRC_URI from .tar.gz to .tar.bz2
