@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/shed-1.10.ebuild,v 1.1 2004/02/17 16:31:34 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/shed-1.10.ebuild,v 1.2 2004/03/03 10:22:59 hattya Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 DEPEND=">=sys-libs/ncurses-5.3"
