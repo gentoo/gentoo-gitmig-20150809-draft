@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre1.ebuild,v 1.1 2001/11/16 21:59:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre1.ebuild,v 1.2 2001/11/16 23:10:14 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -127,7 +127,8 @@ src_unpack() {
 	cp filemap.c ${S}/mm || die 
 	cp sched.h ${S}/include/linux || die
 	cp fs.h ${S}/include/linux || die
-
+	cp low-latency.h ${S}/include/linux || die
+	
 	echo "Preparing for compilation..."
 	cd ${S}
 	
