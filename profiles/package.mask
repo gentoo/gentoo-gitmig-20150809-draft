@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mkennedy@gentoo.org> (31 Oct 2002)
+# Masked (incomplete)
+app-emacs/monk
+
 # <agenkin@gentoo.org> (31 Oct 2002)
 # Masked pending some testing.
 >=net-www/opera-static-6.1
