@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.10 2004/12/18 09:01:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.11 2004/12/20 17:40:18 karltk Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
 DESCRIPTION="Java Management Extensions for managing and monitoring devices, applications, and services."
 HOMEPAGE="http://java.sun.com/products/JavaManagement/index.jsp"
@@ -25,7 +25,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i.orig -r -e 's/="src"/="src\/jmxri"/g' build.xml
+	epatch ${FILESDIR}/build.xml-jdk1.5.patch
 }
+
 pkg_nofetch() {
 	einfo
 	einfo " Due to license restrictions, we cannot fetch the"
