@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.15.ebuild,v 1.8 2002/10/12 17:49:52 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.15.ebuild,v 1.9 2002/10/13 13:38:54 blizzy Exp $
 
 DESCRIPTION="IBM's open source, high performance Java compiler"
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/jikes/"
-SRC_URI="ftp://www-126.ibm.com/pub/jikes/${P}.tar.gz"
+SRC_URI="ftp://www-126.ibm.com/pub/jikes/${PV}/${P}.tar.gz"
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="x86"

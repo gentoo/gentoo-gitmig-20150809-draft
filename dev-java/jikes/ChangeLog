@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.6 2002/10/12 18:15:17 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.7 2002/10/13 13:38:54 blizzy Exp $
+
+  13 Oct 2002; Maik Schreiber <blizzy@gentoo.org> jikes-1.15.ebuild,
+  jikes-1.16.ebuild, jikes-1.17.ebuild: Fixed SRC_URI again.
 
 *jikes-1.17 (12 Oct 2002)
 
