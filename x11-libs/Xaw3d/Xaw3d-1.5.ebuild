@@ -67,28 +67,14 @@ src_install () {
     # Note: I don't understand dodoc, dobin, dodir... 
     # What happens if I just copy things?
     
-    cd ${S}
-
-    # library
-    mkdir -p ${D}/usr/X11R6/lib
-    cp libXaw3d.so.6.1 ${D}/usr/X11R6/lib/libXaw3d.so.6.1
-    # library version links
-    cd ${D}/usr/X11R6/lib/
-    ln -sf libXaw3d.so.6.1 libXaw3d.so.6
-    ln -sf libXaw3d.so.6 libXaw3d.so
-    cd ${S}
-
-    # docs
-    mkdir -p ${D}/usr/doc/Xaw3d
-    cp -a README.XAW3D ${D}/usr/doc/Xaw3d
-    chown root.root ${D}/usr/doc/Xaw3d/README.XAW3D
-    chmod 644 ${D}/usr/doc/Xaw3d/README.XAW3D
+    into /usr/X11R6
+    dolib.so libXaw3d.so.[0-9].[0-9]
+    preplib /usr/X11R6
 
     # headers
-    mkdir -p ${D}/usr/X11R6/include/X11/Xaw3d
-    cp -a *.h ${D}/usr/X11R6/include/X11/Xaw3d/
-    chown root.root ${D}/usr/X11R6/include/X11/Xaw3d/*
-    chmod 644 ${D}/usr/X11R6/include/X11/Xaw3d/*
+    insinto /usr/X11R6/include/X11/Xaw3d
+    doins *.h
 
+    dodoc README.XAW3D
 }
 
