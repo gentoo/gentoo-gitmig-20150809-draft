@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/madplay
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.15 2004/04/22 06:39:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.16 2004/04/26 22:15:52 geoman Exp $
+
+  26 Apr 2004; Stephen P. Becker <geoman@gentoo.org>
+  madplay-0.15.0b-r1.ebuild:
+  Marked stable on mips.
 
 *madplay-0.15.2b (21 Apr 2004)
 
