@@ -1,9 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.9 2003/09/06 07:28:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.10 2004/03/30 10:29:00 mr_bones_ Exp $
 
 DESCRIPTION="Some nice themes for Sawfish"
-S=${WORKDIR}
+HOMEPAGE="http://themes.freshmeat.net/"
 THEME_URI="http://download.freshmeat.net/themes/"
 SRC_URI="${THEME_URI}/absolutedarkness/absolutedarkness-0.30.tar.gz
 	${THEME_URI}/adaptblue/adaptblue-0.30.tar.gz
@@ -58,23 +58,19 @@ SRC_URI="${THEME_URI}/absolutedarkness/absolutedarkness-0.30.tar.gz
 	${THEME_URI}/whistlerk_/whistlerk_-0.30.tar.gz
 	${THEME_URI}/win98/win98-0.30.tar.gz"
 
-HOMEPAGE="http://themes.freshmeat.net/"
-
-RDEPEND="=x11-wm/sawfish-1*"
-
 SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc alpha"
+IUSE=""
+
+RDEPEND="=x11-wm/sawfish-1*"
+S=${WORKDIR}
 
 src_compile() {
-
 	einfo "Nothing to compile"
 }
 
 src_install() {
-
 	dodir /usr/share/sawfish/themes
-
 	cp -a * ${D}/usr/share/sawfish/themes
-
 }
