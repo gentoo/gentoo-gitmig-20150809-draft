@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2.ebuild,v 1.6 2004/06/24 22:08:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2.ebuild,v 1.7 2004/06/30 17:44:26 vapier Exp $
 
 inherit eutils
 
@@ -8,18 +8,17 @@ MY_P=${P/-core}
 DESCRIPTION="Nagios  core - Host and service monitor cgi, docs etc..."
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="noweb mysql postgres perl debug apache2"
 
 DEPEND=">=mail-client/mailx-8.1
 	!noweb? (
 		>=media-libs/jpeg-6b-r3
 		>=media-libs/libpng-1.2.5-r4
-		>=media-libs/libgd-1.8.3-r5
+		>=media-libs/gd-1.8.3-r5
 
 		apache2? ( >=net-www/apache-2.0.43-r1 )
 		!apache2? ( <net-www/apache-2 )
