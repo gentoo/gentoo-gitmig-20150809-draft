@@ -120,8 +120,8 @@ src_compile() {
 		|| myopts="${myopts} --disable-opengl"
 	
 	use oggvorbis \
-		&& myopts="${myopts} --enable-vorbis --enable-oggtest --enable-vorbistest --with-ogg-prefix" \
-		|| myopts="${myopts} --disable-vorbis --disable-oggtest --disable-vorbistest --without-ogg-prefix"
+		&& myopts="${myopts} --enable-vorbis --enable-oggtest --enable-vorbistest --with-ogg" \
+		|| myopts="${myopts} --disable-vorbis --disable-oggtest --disable-vorbistest --without-ogg"
 
 	use xml \
 		|| myopts="${myopts} --disable-cdindex"

@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.22 2002/07/18 20:03:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.23 2002/07/19 01:28:36 aliz Exp $
 
 xmms-1.2.7-r12 (18 Jul 2002)
+
+  19 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xmms-1.2.7-r12.ebuild :
+  Closes #5208.
 
   18 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xmms-1.2.7-r12.ebuild :
   Cleaned up ebuild. Made mikmod optional through USE setting.
