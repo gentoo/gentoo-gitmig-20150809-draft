@@ -1,6 +1,6 @@
 MD5 49cb6f1f586af93951dc72dc4b1789bc ChangeLog 8581
 MD5 9cc585c615bb29fe4b4468735dcac812 gentoo-sources-2.4.19-r10.ebuild 2122
-MD5 fd4722afd6439f260d3fe421bce5a45e gentoo-sources-2.4.20-r6.ebuild 4737
+MD5 edc8d7c61def8d6b84c6fd5caf764e3c gentoo-sources-2.4.20-r6.ebuild 4736
 MD5 c5f2073c7cc7a957decdccff135e5a5d gentoo-sources-2.4.20-r5.ebuild 4580
 MD5 8c31359a134b927f7038539e7dd896d4 files/digest-gentoo-sources-2.4.19-r10 146
 MD5 2ac4fd77e067652901ccf234c9687bb1 files/i810_drm.patch 1247
