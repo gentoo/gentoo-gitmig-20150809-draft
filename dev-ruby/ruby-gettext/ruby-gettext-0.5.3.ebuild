@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-0.5.3.ebuild,v 1.3 2004/04/10 16:31:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-0.5.3.ebuild,v 1.4 2004/06/23 17:43:51 usata Exp $
 
 inherit ruby
 
@@ -17,6 +17,7 @@ DEPEND="virtual/ruby
 	sys-devel/gettext
 	dev-ruby/rdtool
 	>=dev-ruby/racc-1.4.4"
+USE_RUBY="ruby16 ruby18 ruby19"
 
 S="${WORKDIR}/${PN}-package-${PV}"
 
@@ -26,6 +27,7 @@ src_compile() {
 }
 
 src_install() {
+	export LC_ALL=C
 	ruby install.rb install || die "install.rb install failed"
 	cd docs
 	ruby makehtml.rb
