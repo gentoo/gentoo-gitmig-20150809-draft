@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.1-r1.ebuild,v 1.2 2005/02/09 12:57:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.1-r1.ebuild,v 1.3 2005/03/08 17:41:14 vapier Exp $
 
 MY_P=${P/xmingw-/}
 S=${WORKDIR}/${MY_P}
@@ -18,7 +18,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${MY_P}/${MY_P}.tar.bz2
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="f77 gcj debug"
+IUSE="fortran gcj debug"
 
 DEPEND="dev-util/xmingw-binutils"
 
@@ -42,7 +42,7 @@ src_compile() {
 	&& has_version dev-util/xmingw-w32api
 	then
 		lang=c,c++
-		use f77 && lang="${lang},f77"
+		use fortran && lang="${lang},f77"
 
 		if use gcj; then
 			lang=${lang},java
