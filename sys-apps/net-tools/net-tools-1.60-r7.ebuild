@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r7.ebuild,v 1.9 2003/09/29 17:01:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r7.ebuild,v 1.10 2003/10/19 11:39:59 plasmaroo Exp $
 
 inherit eutils
 
@@ -28,6 +28,9 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
+
+	# Compile fix for 2.6 kernels
+	epatch ${FILESDIR}/net-tools-1.60-2.6-compilefix.patch
 
 	# some redhat patches
 	epatch ${PATCHDIR}/net-tools-1.54-ipvs.patch
