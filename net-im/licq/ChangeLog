@@ -1,6 +1,11 @@
 # ChangeLog for net-im/licq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.9 2003/01/10 13:34:03 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.10 2003/01/29 19:09:43 hannes Exp $
+
+*licq-1.2.4 (29 Jan 2003)
+
+  29 Jan 2003; Hannes Mehnert <hannes@gentoo.org> licq-1.2.4.ebuild:
+  version bump
 
 *licq-1.2.3 (10 Jan 2003)
 
