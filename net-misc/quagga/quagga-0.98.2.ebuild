@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.2 2005/03/25 06:56:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.3 2005/03/25 06:58:37 mrness Exp $
 
 inherit eutils
 
@@ -47,8 +47,6 @@ CONNECTED_PATCH="amir-connected-route.patch"
 pkg_preinst() {
 	enewgroup ${QUAGGA_GROUP_NAME} ${QUAGGA_GROUP_GID}
 	enewuser ${QUAGGA_USER_NAME} ${QUAGGA_USER_UID} ${QUAGGA_USER_SH} ${QUAGGA_USER_HOMEDIR} ${QUAGGA_USER_GROUPS}
-	fperms 770 /etc/quagga || die
-	fowners root:${QUAGGA_GROUP_NAME} /etc/quagga || die
 }
 
 src_unpack() {
