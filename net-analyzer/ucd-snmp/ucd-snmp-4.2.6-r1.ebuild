@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r1.ebuild,v 1.3 2003/09/19 21:53:46 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r1.ebuild,v 1.4 2003/09/24 04:40:17 max Exp $
 
 IUSE="ssl ipv6 tcpd"
 PROVIDE="virtual/snmp"
@@ -51,6 +51,8 @@ src_install () {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/snmpd.rc6 snmpd
+	exeinto /etc/conf.d
+	newexe ${FILESDIR}/snmpd.conf snmpd
 
 	dodir /etc/ucd-snmp
 	insinto /etc/ucd-snmp

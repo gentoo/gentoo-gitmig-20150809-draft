@@ -1,29 +1,27 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/files/snmpd.rc6,v 1.6 2003/02/19 05:24:42 raker Exp $
 
 depend() {
+	use logger
 	need net
 }
 
 checkconfig() {
-	if [ ! -e /etc/ucd-snmp/snmpd.conf ] ; then
-		eerror "You need an /etc/ucd-snmp/snmpd.conf to run ucd-snmpd"
-		eerror "There is an example config in /etc/ucd-snmp/snmpd.conf.dist"
+	if [ ! -e /etc/snmp/snmpd.conf ] ; then
+		eerror "You need an /etc/snmp/snmpd.conf config file to run snmpd"
 		return 1
 	fi
 }
 
 start() {
 	checkconfig || return 1
-	ebegin "Starting snmpd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/snmpd
+	ebegin "Starting ucd-snmpd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/snmpd \
+		-- -C -c /etc/snmp/snmpd.conf ${SNMPD_FLAGS}
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping snmpd"
+	ebegin "Stopping ucd-snmpd"
 	start-stop-daemon --stop --quiet --exec /usr/sbin/snmpd
 	eend $?
 }
