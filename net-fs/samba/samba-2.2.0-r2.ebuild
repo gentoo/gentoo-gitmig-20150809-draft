@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.0-r2.ebuild,v 1.2 2001/06/09 05:25:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.0-r2.ebuild,v 1.3 2001/06/23 16:46:36 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"
@@ -18,7 +18,9 @@ src_compile() {
   local myconf
   if [ "`use pam`" ]
   then
-    myconf="--with-pam"
+    echo "pam support does not work atm!"
+    myconf="--without-pam"
+    #myconf="--with-pam"
   else
     myconf="--without-pam"
   fi
