@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jpeginfo
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.1 2003/02/12 11:23:40 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.2 2004/04/20 20:08:01 kugelfang Exp $
+
+  20 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> jpeginfo-1.6.0.ebuild:
+  marked ~amd64
 
 *jpeginfo-1.6.0 (12 Feb 2003)
 
