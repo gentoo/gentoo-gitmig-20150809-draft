@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tux
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.6 2004/09/26 06:28:19 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.7 2005/03/20 18:47:35 tigger Exp $
+
+  20 Mar 2005; Rob Holland <tigger@gentoo.org> tux-3.2.16-r1.ebuild:
+  fix glib dep
 
 *tux-3.2.16-r1 (26 Sep 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/tux-3.2.16-r1.ebuild,v 1.2 2004/11/29 04:23:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/tux-3.2.16-r1.ebuild,v 1.3 2005/03/20 18:47:35 tigger Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="doc"
 
-RDEPEND="dev-libs/glib
+RDEPEND=">=dev-libs/glib-2
 	dev-libs/popt"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
