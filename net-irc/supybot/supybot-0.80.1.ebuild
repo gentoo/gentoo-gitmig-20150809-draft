@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.80.0_pre2.ebuild,v 1.2 2005/02/04 05:09:27 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.80.1.ebuild,v 1.1 2005/02/04 05:09:27 fserb Exp $
 
 inherit distutils eutils
 
@@ -22,19 +22,16 @@ DEPEND=">=dev-lang/python-2.3
 S=${WORKDIR}/${MY_P}
 
 PYTHON_MODNAME="supybot"
-DOCS="ACKS BUGS LICENSE TODO"
+DOCS="ACKS BUGS DEVS README RELNOTES TODO"
 
 src_install() {
 	distutils_src_install
-	dodoc examples/Random.py
-	docinto developers
+	doman docs/man/*
 	dodoc docs/*
-	docinto plugins
-	dodoc docs/plugins/*
 }
 
 pkg_postinst() {
 	einfo "Use supybot-wizard to create a configuration file"
 	use sqlite || \
-		einfo "Some plugins require may dev-python/pysqlite to function."
+		einfo "Some plugins may require emerge with USE=\"sqlite\" to work."
 }
