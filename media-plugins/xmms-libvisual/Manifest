@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 a849635a66905744a19fa5eb11bea973 ChangeLog 859
+MD5 39abeeb8d56816e623672dad59e9e95a ChangeLog 979
 MD5 3a45f9248af15f47259888e635e19356 xmms-libvisual-0.1.6.ebuild 881
-MD5 3582430a60e1236dd5d8d373790411c8 xmms-libvisual-0.1.7.ebuild 1062
+MD5 aef51b7343371767151de41c44661188 xmms-libvisual-0.1.7.ebuild 886
 MD5 7f95651f72fe0436146f0adc0b7dc925 files/digest-xmms-libvisual-0.1.6 72
-MD5 c7a5830aec268d139d5094b53b353a59 files/digest-xmms-libvisual-0.1.7 143
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdz4LArHZZzCEUG0RAtdAAJ4zhXuXdaQm3pVNfUmibB2AiZ3jZgCeLLum
-QZ2m8ede+/5I5lLNKeFouyc=
-=uroN
------END PGP SIGNATURE-----
+MD5 88cbb59cd691d25082458849684d86a3 files/digest-xmms-libvisual-0.1.7 72
