@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r1.ebuild,v 1.4 2004/10/16 17:40:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r1.ebuild,v 1.5 2004/10/24 18:05:22 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -9,7 +9,7 @@ MY_P=${PN}-j_${PV//./_}
 DESCRIPTION="XSLT processor"
 HOMEPAGE="http://xml.apache.org/xalan-j/index.html"
 SRC_URI="mirror://apache/xml/xalan-j/source/${MY_P}-src.tar.gz
-		doc? ( http://dev.gentoo.org/~axxo/distfiles/${P}-docs.tar.bz2 )"
+		doc? ( mirror://gentoo/${P}-docs.tar.bz2 )"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86"
