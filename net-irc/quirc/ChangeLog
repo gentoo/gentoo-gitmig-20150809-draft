@@ -1,10 +1,16 @@
 # ChangeLog for net-irc/quirc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/ChangeLog,v 1.1 2002/04/25 20:40:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/ChangeLog,v 1.2 2002/10/22 05:01:11 raker Exp $
+
+*quirc-0.9.83 (21 Oct 2002)
+
+  21 Oct 20002; Nick Hadaway <raker@gentoo.org> quirc-0.9.83.ebuild,
+  files/digest-quirc-0.9.83, files/0.9.83-gentoo.diff :
+  Version bump to fix some minor bugs.  Added a diff to fix c++ code.
+  Currently marked unstable.  See bug #9303
 
 *quirc-0.9.82 (25 Apr 2002)
 
   25 Apr 2002; Semant Kulleen <seemant@gentoo.org> quirc-0.9.82.ebuild
   files/digest-quirc-0.9.82
-
   New package added to portage.
