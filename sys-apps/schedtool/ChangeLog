@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/schedtool
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedtool/ChangeLog,v 1.5 2004/08/09 01:46:42 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedtool/ChangeLog,v 1.6 2004/12/23 12:31:25 dsd Exp $
+
+*schedtool-1.2.3 (23 Dec 2004)
+
+  23 Dec 2004; Daniel Drake <dsd@gentoo.org> +schedtool-1.2.3.ebuild:
+  Version bump thanks to Ben Schwartz <bens@mit.edu> in bug 72565
 
   08 Aug 2004; Travis Tilley <lv@gentoo.org> schedtool-0.99.ebuild:
   added ~amd64 keyword
