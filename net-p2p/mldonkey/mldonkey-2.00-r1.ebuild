@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.00-r1.ebuild,v 1.2 2002/12/09 23:48:32 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.00-r1.ebuild,v 1.3 2002/12/12 15:53:12 hannes Exp $
 
 IUSE="gtk"
 DESCRIPTION="edonkey, opennap,... client written in ocaml"
@@ -63,13 +63,13 @@ src_install() {
 
 	dohtml FAQ.html
 
-	insinto scripts
+	insinto /usr/share/doc/${PF}/scripts
 	for i in kill_mldonkey mldonkey_command mldonkey_previewer;
 	do
 		doins distrib/${i}
 	done
 
-	insinto scripts/ed2k_submit
+	insinto /usr/share/doc/${PF}/scripts/ed2k_submit
 	echo "Ignore CVS error:"
 	doins distrib/ed2k_submit/*
 
