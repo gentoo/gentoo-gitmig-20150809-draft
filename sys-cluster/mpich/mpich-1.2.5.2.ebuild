@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.1 2003/11/10 09:26:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.2 2004/03/17 08:16:42 mr_bones_ Exp $
 
 DESCRIPTION="MPICH - A portable MPI implementation"
 HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich"
@@ -13,7 +13,7 @@ RDEPEND="${DEPEND}
 	virtual/glibc"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 	#looks like P is one of used vars, need to wrap around build...
