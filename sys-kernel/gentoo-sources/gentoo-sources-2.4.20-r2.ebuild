@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r2.ebuild,v 1.3 2003/03/21 20:08:48 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r2.ebuild,v 1.4 2003/03/21 20:32:45 pfeifer Exp $
 
 IUSE="build"
 
@@ -50,6 +50,17 @@ src_unpack() {
 			einfo "Dropping ${file}..."
 			rm -f ${file}
 		done
+	fi
+
+	# This is the ratified crypt USE flag, enables IPSEC & USAGI
+	if [ -z "`use crypt`" ]; then
+		einfo "No Cryptographic support, dropping patches..."
+		for file in 6* 7* 8* ;do
+			einfo "Dropping ${file}..."
+			rm -f ${file}
+		done
+	else
+		einfo "Cryptographic support enabled..."
 	fi
 
 	kernel_src_unpack
