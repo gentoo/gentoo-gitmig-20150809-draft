@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.20 2004/01/10 14:37:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.21 2004/04/30 13:25:43 foser Exp $
+
+  30 Apr 2004; foser <foser@gentoo.org> gnome-print-0.37.ebuild :
+  Add patch to fix build with >=freetype-2.1.7, patch provided by Benoit <b.boissinot@ifrance.com> in #44114
 
   10 Jan 2004; <agriffis@gentoo.org> gnome-print-0.37.ebuild:
   stable on alpha and ia64
