@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/files/rlpkg,v 1.2 2003/05/27 00:57:59 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/files/rlpkg,v 1.3 2003/07/04 01:41:04 pebenito Exp $
 
 # Author: Chris PeBenito <pebenito@gentoo.org>
 #	this probably isnt the cleanest script, but it works.
@@ -16,13 +16,23 @@ PROG=`basename ${0}`
 if [ -z ${1} ]; then
 	echo "The Gentoo Linux package relabeler"
 	echo
-	eerror "Usage: ${PROG} <pkg1> [<pkg2> ...]"
+	echo "Usage: ${PROG} <pkg1> [<pkg2> ...]"
 	echo
 	echo "${PROG} relabels gentoo packages based on their CONTENTS file."
 	echo "Any files associated with a package, but not in the contents"
 	echo "will not be relabeled, so be careful!  When in doubt, a full"
 	echo "relabel should be done."
 	exit 1;
+fi
+
+while [ ${#} -gt 0 ]; do
+	build="${build} `find /var/db/pkg -iname CONTENTS | cut -d/ -f5,6 | grep ${1} | sort`"
+	shift
+done
+
+if [ "${build}" == " " ]; then
+	echo "No matching packages found."
+	exit 1
 fi
 
 [ -z ${POLICYDIR} ] && POLICYDIR="/etc/security/selinux/src/policy"
@@ -36,23 +46,22 @@ if [ ! -d ${POLICYDIR} ]; then
 	exit 1
 fi
 
-ewarn "Using file contexts from the policy in ${POLICYDIR}"
+einfo "Using file contexts from the policy in ${POLICYDIR}."
 
 # generate file_contexts as needed
 ebegin "Regenerating file contexts"
 [ -f ${POLICYDIR}/file_contexts/file_contexts ] && rm -f ${POLICYDIR}/file_contexts/file_contexts
 make -C ${POLICYDIR} file_contexts/file_contexts &> /dev/null
-eend $?
 
-while [ ${#} -gt 0 ]; do
-	build=`find /var/db/pkg -iname CONTENTS | grep ${1} | sort`
+# do a test relabel to make sure file contexts work (doesnt change any labels)
+echo "/etc/passwd" | setfiles ${POLICYDIR}/file_contexts/file_contexts -sqn
+ret=$?
+eend $ret
 
-	for i in ${build}; do
-		pkgcat=`echo ${i} | cut -d/ -f5`
-		pkgnam=`echo ${i} | cut -d/ -f6`
-		ebegin "Relabeling: ${pkgcat}/${pkgnam}"
-		awk '{ print $2 }' < ${i} | setfiles ${POLICYDIR}/file_contexts/file_contexts -sq &> /dev/null
-		eend $?
-	done
-	shift
+[ $ret == "0" ] || exit $ret
+
+for i in ${build}; do
+	ebegin "Relabeling: ${i}"
+	awk '{ print $2 }' < /var/db/pkg/${i}/CONTENTS | setfiles ${POLICYDIR}/file_contexts/file_contexts -sq &> /dev/null
+	eend $?
 done

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.23 2003/06/29 04:17:45 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.24 2003/07/04 01:41:04 pebenito Exp $
+
+  03 Jul 2003; Chris PeBenito <pebenito@gentoo.org> files/rlpkg:
+  Improve rlpkg package matching
 
   28 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-small-2003040709-r4.ebuild:
