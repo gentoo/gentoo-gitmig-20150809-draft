@@ -1,6 +1,8 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.3 2002/03/12 21:20:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.4 2002/03/22 17:19:46 danarmak Exp $
+
+  22 Mar 2002; Dan Armak <danarmak@gentoo.org> Add missing /etc/wine/winedefault.reg file.
 
 *wine-20020310 (12 Mar 2002)
 
