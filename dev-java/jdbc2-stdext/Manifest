@@ -1,6 +1,6 @@
 MD5 3ad832d48656eff49cadd50ecda60fe1 ChangeLog 916
 MD5 bc9d15043398b2d40c32e5afbfe079b5 jdbc2-stdext-2.0.ebuild 1009
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 597e38dc714269390780fec256a2c901 jdbc2-stdext-2.0-r1.ebuild 1417
+MD5 ad68df4e2347fd338f338b0abe4b4c31 jdbc2-stdext-2.0-r1.ebuild 1417
 MD5 1cf846798557bc9abba0fbab0786354d files/digest-jdbc2-stdext-2.0 61
 MD5 73087680fc277d629f6a9acdcf03eda6 files/digest-jdbc2-stdext-2.0-r1 133

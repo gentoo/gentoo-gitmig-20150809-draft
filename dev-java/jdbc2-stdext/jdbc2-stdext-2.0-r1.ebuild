@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/jdbc2-stdext-2.0-r1.ebuild,v 1.1 2004/10/20 11:32:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/jdbc2-stdext-2.0-r1.ebuild,v 1.2 2004/11/03 11:28:37 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -37,7 +37,7 @@ pkg_nofetch() {
 	einfo
 }
 
-src_unpack() { 
+src_unpack() {
 	if use doc; then
 		cd ${S}
 		unzip ${DISTDIR}/${stdext_doc}
