@@ -1,0 +1,8 @@
+# ChangeLog for dev-tcltk/tix
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.1 2002/10/31 22:31:16 karltk Exp $
+
+*tix-8.2.0b1 (11 Oct 2002)
+
+  11 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> tix-8.2.0b1.ebuild files/digest-tix-8.2.0b1 :
+  Initial import. Ebuild submitted by Pete Gale <pete@SoulCoffee.org>.
