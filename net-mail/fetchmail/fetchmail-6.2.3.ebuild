@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.3.ebuild,v 1.3 2003/09/03 20:44:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.3.ebuild,v 1.4 2003/09/05 08:48:47 msterret Exp $
 
 IUSE="ssl nls ipv6"
 
@@ -41,22 +41,22 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die	
-	
+	einstall || die
+
 	dohtml *.html
 
 	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README \
 		README.NTLM README.SSL TODO COPYING MANIFEST
-	
+
 	doman ${D}/usr/share/man/*.1
 	rm -f ${D}/usr/share/man/*.1
-	
+
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/fetchmail
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/conf.d-fetchmail fetchmail
-	
+
 	docinto contrib
 	local f
 	for f in contrib/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.56.ebuild,v 1.5 2003/08/03 03:40:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.56.ebuild,v 1.6 2003/09/05 08:52:38 msterret Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ src_unpack() {
 	epatch ${FILESDIR}/transparency.patch
 
 	if [ `use debug` ]; then
- 		cd ${S}/pine
+		cd ${S}/pine
 		sed -i \
 			-e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
 			makefile.lnx || die "sed pine/makefile.lnx failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.8 2003/08/30 10:17:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.9 2003/09/05 08:46:39 msterret Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -19,30 +19,30 @@ KEYWORDS="x86 ~ppc ~sparc"
 
 # top stanza are ximian deps
 RDEPEND=">=gnome-extra/libgtkhtml-3.0.5
-    >=gnome-extra/gal-1.99.7
-    >=net-libs/libsoup-1.99.23
+	>=gnome-extra/gal-1.99.7
+	>=net-libs/libsoup-1.99.23
 	pda?     ( >=app-pda/gnome-pilot-2.0.9
 		>=app-pda/pilot-link-0.11.7
 		>=app-pda/gnome-pilot-conduits-2.0.9 )
 	spell?   ( >=app-text/gnome-spell-1.0.4 )
-	
+
 	>=gnome-base/ORBit2-2.6.0
-    >=gnome-base/libbonoboui-2.0
-    >=gnome-base/gnome-vfs-2.0
-    >=gnome-base/libgnomeui-2.0
-    >=gnome-base/libglade-2.0
-    >=gnome-base/libgnome-2.0
-    >=gnome-base/bonobo-activation-2.2.1
-    >=dev-libs/libxml2-2.5
-    >=gnome-base/gconf-2.0
-    >=gnome-base/libgnomecanvas-2.2.0.2
-    >=gnome-base/libgnomeprintui-2.2
-    >=gnome-base/libgnomeprint-2.2
+	>=gnome-base/libbonoboui-2.0
+	>=gnome-base/gnome-vfs-2.0
+	>=gnome-base/libgnomeui-2.0
+	>=gnome-base/libglade-2.0
+	>=gnome-base/libgnome-2.0
+	>=gnome-base/bonobo-activation-2.2.1
+	>=dev-libs/libxml2-2.5
+	>=gnome-base/gconf-2.0
+	>=gnome-base/libgnomecanvas-2.2.0.2
+	>=gnome-base/libgnomeprintui-2.2
+	>=gnome-base/libgnomeprint-2.2
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl? ( mozilla? ( || ( >=net-www/mozilla-0.9.9 >=net-www/mozilla-firebird-0.6 ) ) )
 	ssl? ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
-    kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
+	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
 	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
@@ -74,7 +74,7 @@ src_unpack() {
 	# we need the omf fix, or else we get access violation
 	# errors related to sandbox
 	gnome2_omf_fix ${S}/help/C/Makefile.in
-	
+
 }
 
 ##### compile evolution specific db3 for static linking #####
@@ -100,7 +100,7 @@ src_compile() {
 
 	einfo "Compiling Evolution..."
 	cd ${S}
-  
+
 	local myconf=""
 	if [ -n "${MOZILLA_FIVE_HOME}" -o -f "/usr/lib/mozilla/include/nspr/nspr.h" ]; then
 		local MOZILLA="${MOZILLA_FIVE_HOME}"
@@ -110,7 +110,7 @@ src_compile() {
 		eerror "unable to find mozilla or mozilla-firebird installed"
 		eerror "please emerge with USE='-mozilla'"
 		die "unable to find mozilla/mozilla-firebird"
-	fi		
+	fi
 
 	use pda \
 		&& myconf="${myconf} --with-pisock=/usr --enable-pilot-conduits=yes" \
@@ -119,7 +119,7 @@ src_compile() {
 	use ldap \
 		&&	myconf="${myconf} --with-openldap=yes --with-static-ldap=no" \
 		|| myconf="${myconf} --with-openldap=no"
-    
+
 	use kerberos \
 		&& myconf="${myconf} --with-krb5=/usr" \
 		|| myconf="${myconf} --without-krb5"
@@ -131,7 +131,7 @@ src_compile() {
 	use ipv6 \
 		&& myconf="${myconf} --enable-ipv6=yes" \
 		|| myconf="${myconf} --enable-ipv6=no"
-		
+
 	use kde && [ -n "${KDEDIR}" ] \
 		&& myconf="${myconf} --with-kde-applnk-path=${KDEDIR}/share/applnk"
 

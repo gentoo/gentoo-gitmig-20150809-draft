@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.3.ebuild,v 1.2 2003/05/04 01:17:18 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.3.ebuild,v 1.3 2003/09/05 09:11:17 msterret Exp $
 
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
 HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
@@ -19,7 +19,7 @@ DEPEND="!net-mail/mailx
 S=${WORKDIR}/${P}
 
 src_compile() {
-	
+
 	use nls || myconf="${myconf} --disable-nls"
 
 	use pam || myconf="${myconf} --disable-pam"

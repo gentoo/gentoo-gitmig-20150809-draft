@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_pam/poppassd_pam-1.0.ebuild,v 1.1 2003/02/18 19:19:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_pam/poppassd_pam-1.0.ebuild,v 1.2 2003/09/05 09:10:14 msterret Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}	
+	cd ${S}
 	epatch ${FILESDIR}/missing-stdio.patch
 }
 
@@ -39,7 +39,7 @@ src_install() {
 	newins ${FILESDIR}/poppassd.pam poppassd
 
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/poppassd.xinetd poppassd	
+	newins ${FILESDIR}/poppassd.xinetd poppassd
 }
 
 pkg_postinst() {

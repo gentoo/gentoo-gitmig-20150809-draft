@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.95.ebuild,v 1.9 2003/03/23 09:57:41 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.95.ebuild,v 1.10 2003/09/05 09:06:05 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rate-limited autoresponder for qmail."
@@ -31,14 +31,14 @@ src_install () {
 
 pkg_postinst() {
 
-	echo 
+	echo
 	einfo "Using qmail-autoresponder ..."
-	echo 
+	echo
 	einfo "Put \"|qmail-autoresponder MESSAGE_FILE DIRECTORY\" into your \".qmail\""
 	einfo "file before other delivery instructions.  MESSAGE_FILE is a"
 	einfo "pre-formatted response, including headers, and DIRECTORY is the"
 	einfo "directory into which rate-limiting information will be stored.  Any"
 	einfo "instance of "%S" in MESSAGE_FILE will be replaced with the original"
 	einfo "subject."
-	echo 
+	echo
 }

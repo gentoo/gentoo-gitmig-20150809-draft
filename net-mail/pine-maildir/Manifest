@@ -1,3 +1,7 @@
+MD5 83c7a62a56a6c9def2d0b6e681b3226e ChangeLog 1911
+MD5 8be6037f4f0fba0759cfb48edbc49459 pine-maildir-4.33.ebuild 1510
+MD5 1b0c0453d14d3df5e6f88b80f00dfe3a pine-maildir-4.56.ebuild 3306
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 3b2ee5f522f0b54e02a945855b41771c files/digest-pine-maildir-4.33 122
 MD5 e2791bad5a20d4429dcd4a928714558f files/flock.c 1182
 MD5 c0d53400c157de12da7e429dd0f21185 files/imap-2000-time.patch 1646
@@ -11,7 +15,3 @@ MD5 e11e8fb4fba9fc54b7c0f302d79458bf files/pine-4.40-boguswarning.patch 512
 MD5 6fca405df4fd22a5708ddf83e8081716 files/pine-4.40-lockfile-perm.patch 932
 MD5 7da3d2e0510c7a7d07859e1bf389710c files/pine-maildir-4.33-gentoo.diff 2108
 MD5 807a9808173bd97a65dbf329858497d2 files/digest-pine-maildir-4.56 123
-MD5 658413477556f9431995c30d73f8c6d7 pine-maildir-4.33.ebuild 1538
-MD5 83c7a62a56a6c9def2d0b6e681b3226e ChangeLog 1911
-MD5 1b0c0453d14d3df5e6f88b80f00dfe3a pine-maildir-4.56.ebuild 3306
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161

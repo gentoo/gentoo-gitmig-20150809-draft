@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20-r2.ebuild,v 1.1 2003/08/16 19:58:04 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20-r2.ebuild,v 1.2 2003/09/05 09:16:18 msterret Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan exiscan-acl maildir lmtp"
 
@@ -43,7 +43,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/exim-4.14-tail.patch
-	
+
 	if use maildir; then
 		einfo "Patching maildir support into exim.conf"
 		epatch ${FILESDIR}/exim-${PV}-maildir.patch

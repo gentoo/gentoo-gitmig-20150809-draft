@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002d-r1.ebuild,v 1.1 2003/08/11 09:05:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002d-r1.ebuild,v 1.2 2003/09/05 08:55:26 msterret Exp $
 
 MY_P=imap-${PV}
 S=${WORKDIR}/${MY_P}
@@ -25,10 +25,10 @@ DEPEND="!net-mail/vimap
 src_unpack() {
 	unpack ${A}
 	# Tarball packed with bad file perms
-	chmod -R ug+w ${S} 
+	chmod -R ug+w ${S}
 
 	use pic || use alpha && append-flags -fPIC
-	
+
 	cd ${S}/src/osdep/unix/
 	cp Makefile Makefile.orig
 	sed \
@@ -46,7 +46,7 @@ src_unpack() {
 	cd ${S}
 }
 
-src_compile() {                           
+src_compile() {
 	if use ssl; then
 		cd ${S}
 		yes | make lnp SSLTYPE=unix || die
@@ -78,10 +78,10 @@ EOF
 	fi
 }
 
-src_install() {                               
+src_install() {
 	into /usr
 	dosbin imapd/imapd ipopd/ipop?d dmail/dmail tmail/tmail
-	dobin mailutil/mailutil mlock/mlock mtest/mtest 
+	dobin mailutil/mailutil mlock/mlock mtest/mtest
 
 	if use ssl; then
 		dodir /etc/ssl/certs

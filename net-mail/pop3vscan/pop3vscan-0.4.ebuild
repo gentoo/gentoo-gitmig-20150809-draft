@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.9 2003/03/11 22:14:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.10 2003/09/05 09:10:56 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A transparent POP3-Proxy with virus-scanning capabilities."
@@ -23,7 +23,7 @@ src_install () {
 	dosbin pop3vscan
 	dodir /etc
 	insinto /etc
-	doins pop3vscan.conf pop3vscan.mail 
+	doins pop3vscan.conf pop3vscan.mail
 
 	insinto /etc/init.d
 	doins ${FILESDIR}/pop3vscan

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.5.ebuild,v 1.6 2003/08/10 18:33:26 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.5.ebuild,v 1.7 2003/09/05 08:57:36 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tiny POP3 server"
@@ -16,7 +16,7 @@ LICENSE="as-is"
 KEYWORDS="x86 ~sparc "
 
 src_compile() {
-	local myconf 
+	local myconf
 	use mysql && myconf="${myconf} --with-mysql=/usr"
 	use postgres && myconf="${myconf} --with-pgsql=/usr"
 	use ldap && myconf="${myconf} --with-ldap=openldap"
@@ -34,13 +34,13 @@ src_install () {
 
 	dodir /usr/sbin
 	mv ${D}/usr/libexec/teapop ${D}/usr/sbin/
-	
+
 	dodoc doc/{CREDITS,ChangeLog,INSTALL,TODO}
-	
+
 	docinto contrib
 	dodoc contrib/{README,popauther3.pl,teapop+exim.txt}
 	dohtml contrib/*.html
-	
+
 	docinto rfc
 	dodoc rfc/rfc*.txt
 
@@ -49,5 +49,4 @@ src_install () {
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/teapop-confd teapop
-
 }

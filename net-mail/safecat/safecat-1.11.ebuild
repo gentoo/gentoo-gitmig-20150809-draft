@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.1 2003/08/11 10:11:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.2 2003/09/05 09:13:50 msterret Exp $
 
 IUSE=""
 
@@ -40,7 +40,7 @@ src_install() {
 	dodir /usr
 	echo "${D}/usr" > conf-root
 	make man setup check || die
-	dodoc CHANGES COPYING INSTALL README 
+	dodoc CHANGES COPYING INSTALL README
 	doman maildir.1 safecat.1
 }
 

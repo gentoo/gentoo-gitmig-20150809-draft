@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6.ebuild,v 1.8 2003/08/03 03:45:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6.ebuild,v 1.9 2003/09/05 08:49:33 msterret Exp $
 
 DESCRIPTION="POP3 server"
 HOMEPAGE="http://www.reedmedia.net/software/virtualmail-pop3d/"
@@ -33,8 +33,8 @@ src_install() {
 
 	dodoc AUTHORS CHANGES COPYING FAQ INSTALL README TODO
 
-        exeinto /etc/init.d
-        newexe ${FILESDIR}/vm-pop3d.rc3 vm-pop3d
-        insinto /etc/conf.d
-        newins ${FILESDIR}/vm-pop3d.confd vm-pop3d
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/vm-pop3d.rc3 vm-pop3d
+	insinto /etc/conf.d
+	newins ${FILESDIR}/vm-pop3d.confd vm-pop3d
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p5.ebuild,v 1.1 2003/08/26 18:41:15 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p5.ebuild,v 1.2 2003/09/05 09:12:38 msterret Exp $
 
 inherit eutils
 
@@ -61,7 +61,7 @@ src_compile() {
 }
 
 src_install() {
-	enewgroup amavis 
+	enewgroup amavis
 	enewuser amavis -1 /bin/false /var/lib/amavis amavis
 
 	dosbin amavisd

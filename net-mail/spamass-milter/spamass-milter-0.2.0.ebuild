@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamass-milter/spamass-milter-0.2.0.ebuild,v 1.1 2003/07/16 22:03:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamass-milter/spamass-milter-0.2.0.ebuild,v 1.2 2003/09/05 09:07:00 msterret Exp $
 
 IUSE=""
 
@@ -20,17 +20,17 @@ RDEPEND=">=net-mail/sendmail-8.12.9
 S=${WORKDIR}/${P}
 
 src_compile() {
-    econf || die
-    emake || die
+	econf || die
+	emake || die
 }
 
 src_install() {
-    make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 
-    dodoc AUTHORS NEWS README ChangeLog ${FILESDIR}/README.gentoo
+	dodoc AUTHORS NEWS README ChangeLog ${FILESDIR}/README.gentoo
 
-    exeinto /etc/init.d ; newexe ${FILESDIR}/spamass-milter.rc spamass-milter
-    insinto /etc/conf.d ; newins ${FILESDIR}/spamass-milter.conf spamass-milter
+	exeinto /etc/init.d ; newexe ${FILESDIR}/spamass-milter.rc spamass-milter
+	insinto /etc/conf.d ; newins ${FILESDIR}/spamass-milter.conf spamass-milter
 }
 
 pkg_postinst() {

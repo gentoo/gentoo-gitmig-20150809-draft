@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r1.ebuild,v 1.5 2003/09/03 16:09:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r1.ebuild,v 1.6 2003/09/05 09:11:37 msterret Exp $
 
 inherit eutils gcc
 
@@ -20,7 +20,7 @@ src_unpack() {
 
 	# the -s is from the original build
 	LDFLAGS="${LDFLAGS} -s"
-	use pic && CFLAGS="${CFLAGS} -fPIC" 
+	use pic && CFLAGS="${CFLAGS} -fPIC"
 	use static && LDFLAGS="${LDFLAGS} -static"
 	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld

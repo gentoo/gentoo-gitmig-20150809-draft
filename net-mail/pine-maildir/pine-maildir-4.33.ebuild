@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.33.ebuild,v 1.11 2003/08/03 03:42:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.33.ebuild,v 1.12 2003/09/05 09:09:47 msterret Exp $
 
 DESCRIPTION="Pine, Pico, Pilot, imapd"
 HOMEPAGE="http://www.washington.edu/pine/"
@@ -32,11 +32,11 @@ src_unpack() {
 	sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
 }
 
-src_compile() {													 
+src_compile() {
 	./build slx || die
 }
 
-src_install() {															 
+src_install() {
 	into /usr
 	dobin bin/pine bin/pico bin/pilot bin/mtest
 	dosbin bin/imapd

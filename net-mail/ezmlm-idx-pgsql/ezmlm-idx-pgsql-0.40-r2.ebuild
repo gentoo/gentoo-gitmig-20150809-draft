@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ezmlm-idx-pgsql-0.40-r2.ebuild,v 1.2 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ezmlm-idx-pgsql-0.40-r2.ebuild,v 1.3 2003/09/05 08:58:31 msterret Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -36,7 +36,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S2}
 	mv ${S2}/* ${S} || die
-	
+
 	cd ${S}
 	patch < idx.patch || die
 	#remove cat-man pages
@@ -50,9 +50,9 @@ src_unpack() {
 	cp Makefile Makefile.orig
 	sed -e "s:/install.*conf-bin\`\":/install ${D}usr/bin:" \
 	-e "s:/install.*conf-man\`\":/install ${D}usr/share/man:" Makefile.orig > Makefile
-	#apply patch from Ed Korthof (edk@collab.net) that allows ezmlm-issub  and ezmlm-gate 
-	#to check against the From: header as well as qmail's SENDER variable, which is set 
-	#from the envelope sender and often reflects the local MTA rather than the user's 
+	#apply patch from Ed Korthof (edk@collab.net) that allows ezmlm-issub  and ezmlm-gate
+	#to check against the From: header as well as qmail's SENDER variable, which is set
+	#from the envelope sender and often reflects the local MTA rather than the user's
 	#"official" email address... enable this option by using "-f" with ezmlm-issub and/or
 	#ezmlm-gate.
 	cp ${FILESDIR}/get_header.[ch] . || die

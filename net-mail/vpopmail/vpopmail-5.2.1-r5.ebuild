@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.3 2003/05/23 00:50:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.4 2003/09/05 08:50:18 msterret Exp $
 
 IUSE="mysql ipalias"
 
@@ -43,7 +43,7 @@ vpopmail_set_homedir() {
 pkg_setup() {
 	if [ -z `getent group vpopmail` ]; then
 		(groupadd -g 89 vpopmail 2>/dev/null || groupadd vpopmail ) || die "problem adding vpopmail group"
-	fi    
+	fi
 	if [ -z `getent passwd vpopmail` ]; then
 		useradd -g vpopmail -u 89 -d ${VPOP_DEFAULT_HOME} -c "vpopmail_directory" -s /bin/false -m vpopmail || \
 		useradd -g vpopmail -u `getent group vpopmail | awk -F":" '{ print $3 }'` -d ${VPOP_DEFAULT_HOME} -c "vpopmail_directory" \
@@ -81,7 +81,7 @@ src_compile() {
 			--enable-valias=y \
 			--enable-mysql-replication=n" \
 		|| myopts="${myopts} --enable-mysql=n"
-	
+
 	# the configure script tries to force root and make directories not using ${D}
 	sed -e '1282,1289d' -e '1560,1567d' -e '2349d' -e '2107d' -e '2342d' configure > configure.new
 	mv --force configure.new configure

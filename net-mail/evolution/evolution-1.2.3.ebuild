@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.3.ebuild,v 1.6 2003/08/30 10:17:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.3.ebuild,v 1.7 2003/09/05 08:46:39 msterret Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
@@ -27,10 +27,10 @@ RDEPEND="app-text/scrollkeeper
 	>=gnome-extra/gtkhtml-1.1.8
 	>=gnome-base/oaf-0.6.10
 	>=gnome-base/ORBit-0.5.12
-	<gnome-base/libglade-2.0		
+	<gnome-base/libglade-2.0
 	>=media-libs/gdk-pixbuf-0.18.0
 	>=dev-libs/libxml-1.8.17
-	=gnome-base/gnome-vfs-1.0*		
+	=gnome-base/gnome-vfs-1.0*
 	>=gnome-base/gnome-print-0.35
 	=dev-util/gob-1*
 	>=net-libs/soup-0.7.10
@@ -54,13 +54,13 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S};
 	# Mandrake patches
 	epatch ${FILESDIR}/${PN}-1.1.90-kde.patch
 	epatch ${FILESDIR}/${PN}-1.1.90-subversion.patch
 	epatch ${FILESDIR}/${PN}-1.1.90-sharedldap.patch
-	
+
 	# libtoolize to fix not all libs installing, and buggy .la files.
 	# also add the gnome-pilot.m4 to the macros directory to fix
 	# problems with the pilot conduct
@@ -69,7 +69,7 @@ src_unpack() {
 	aclocal -I macros -I /usr/share/aclocal/gnome-macros
 	autoconf
 	automake --add-missing
-	
+
 	(cd libical ; aclocal -I /usr/share/aclocal/gnome-macros ; autoconf)
 
 	# Fix sandbox errors
@@ -92,7 +92,7 @@ src_compile() {
 #	cp configure configure.orig
 #	awk '!/MUTEX.*THREADS/ { sub("mut_pthread", "mut_fcntl"); print }' \
 #		configure.orig > configure
-	
+
 	einfo "Compiling DB3..."
 	cd ${WORKDIR}/${DB3}/build_unix
 	../dist/configure --prefix=${WORKDIR}/db3 || die
@@ -113,7 +113,7 @@ src_compile() {
 
 	einfo "Compiling Evolution..."
 	cd ${S}
-  
+
 	local myconf=""
 	local MOZILLA="${MOZILLA_FIVE_HOME}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r6.ebuild,v 1.2 2003/07/21 14:59:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r6.ebuild,v 1.3 2003/09/05 09:05:26 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -23,14 +23,14 @@ KEYWORDS="x86 ppc sparc alpha arm hppa amd64"
 src_compile() {
 
 	cp Makefile Makefile.orig
-# Added a -O2 at the end of CFLAGS to overcome what seems to be a 
+# Added a -O2 at the end of CFLAGS to overcome what seems to be a
 # gcc-3.1 strstr() bug with more aggressive optimization flags
 # The order of the flags matters as the last flag passed clobbers
 # the first flag.  i.e. if -O2 was placed before ${CFLAGS},
-# whatever optimization that is in ${CFLAGS} would clobber -O2    
+# whatever optimization that is in ${CFLAGS} would clobber -O2
 	sed -e "s:CFLAGS0 = -O:CFLAGS0 = ${CFLAGS} -O2:" \
-        -e "s:LOCKINGTEST=__defaults__:#LOCKINGTEST=__defaults__:" \
-        -e "s:#LOCKINGTEST=/tmp:LOCKINGTEST=/tmp:" Makefile.orig > Makefile
+		-e "s:LOCKINGTEST=__defaults__:#LOCKINGTEST=__defaults__:" \
+		-e "s:#LOCKINGTEST=/tmp:LOCKINGTEST=/tmp:" Makefile.orig > Makefile
 
 	if [ -z "`use mbox`" ];
 	then

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93.ebuild,v 1.7 2003/02/13 14:37:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93.ebuild,v 1.8 2003/09/05 08:56:53 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Delayed delivery notification for qmail."
@@ -33,13 +33,9 @@ src_install () {
 	dodoc README ANNOUNCEMENT TODO cron.hourly
 }
 
-
 pkg_postinst() {
-
-    echo
-    einfo "Edit qmail-notify.cron in /etc/cron.hourly"
-    einfo "to activate qmail-notify!"
-    echo
-
-
+	echo
+	einfo "Edit qmail-notify.cron in /etc/cron.hourly"
+	einfo "to activate qmail-notify!"
+	echo
 }

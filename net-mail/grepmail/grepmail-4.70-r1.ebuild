@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70-r1.ebuild,v 1.8 2003/02/13 14:32:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70-r1.ebuild,v 1.9 2003/09/05 09:04:06 msterret Exp $
 
 inherit perl-module
 
@@ -21,7 +21,7 @@ DEPEND="${DEPEND}
 	dev-perl/Parse-RecDescent"
 
 RDEPEND=""
-	
+
 src_compile () {
 
 	echo "" | perl-module_src_compile

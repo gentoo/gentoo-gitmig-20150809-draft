@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.4.ebuild,v 1.7 2003/08/30 10:17:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.4.ebuild,v 1.8 2003/09/05 08:46:39 msterret Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -38,8 +38,8 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.8
 	>=gnome-base/libgnomecanvas-2.2.0.2
 	>=gnome-base/libgnomeprintui-2.2
 	>=gnome-base/libgnomeprint-2.2
-	ssl? ( mozilla? ( || ( ( >=dev-libs/nspr-4.3 >=dev-libs/nss-3.8 ) 
-	                       net-www/mozilla 
+	ssl? ( mozilla? ( || ( ( >=dev-libs/nspr-4.3 >=dev-libs/nss-3.8 )
+	                       net-www/mozilla
 	                     )
 	                ) )
 	ssl? ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
@@ -68,13 +68,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	
+
 	# Remove dependency on libdb1.so (its deprecated)
 	cd ${S}; sed -i -e "s/-ldb1//" configure
-	
+
 	# We need the omf fix, or else we get access violation
 	# errors related to sandbox
-	gnome2_omf_fix ${S}/help/C/Makefile.in	
+	gnome2_omf_fix ${S}/help/C/Makefile.in
 
 	# Patches for 64-bit
 	if use alpha; then
@@ -101,7 +101,7 @@ src_compile_db3() {
 src_compile() {
 	elibtoolize
 
-    if [ "${ARCH}" = "hppa" ]; then
+	if [ "${ARCH}" = "hppa" ]; then
 		append-flags "-fPIC -ffunction-sections"
 		export LDFLAGS="-ffunction-sections -Wl,--stub-group-size=25000"
 	fi
@@ -111,7 +111,7 @@ src_compile() {
 
 	einfo "Compiling Evolution..."
 	cd ${S}
-  
+
 	local myconf=
 
 	use pda \
@@ -121,7 +121,7 @@ src_compile() {
 	use ldap \
 		&&	myconf="${myconf} --with-openldap=yes --with-static-ldap=no" \
 		|| myconf="${myconf} --with-openldap=no"
-    
+
 	use kerberos \
 		&& myconf="${myconf} --with-krb5=/usr" \
 		|| myconf="${myconf} --without-krb5"
@@ -133,13 +133,13 @@ src_compile() {
 	use ipv6 \
 		&& myconf="${myconf} --enable-ipv6=yes" \
 		|| myconf="${myconf} --enable-ipv6=no"
-		
+
 	use kde && [ -n "${KDEDIR}" ] \
 		&& myconf="${myconf} --with-kde-applnk-path=${KDEDIR}/share/applnk"
 
 	# Use Mozilla NSS/NSPR libs if 'mozilla' *and* 'ssl' in USE
 	if [ -n "`use ssl`" -a -n "`use mozilla`" ] ; then
-		if has_version "dev-libs/nspr"; then			
+		if has_version "dev-libs/nspr"; then
 			NSS_LIB=/usr/lib
 			NSS_INC=/usr/include
 		elif has_version "net-www/mozilla"; then
@@ -149,7 +149,7 @@ src_compile() {
 			eerror "Neither net-www/mozilla nor dev-libs/nspr found."
 			die "unexpected error. unable to find nss/nspr"
 		fi
-		
+
 		myconf="${myconf} --enable-nss=yes \
 			--with-nspr-includes=${NSS_INC}/nspr \
 			--with-nspr-libs=${NSS_LIB} \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.13 2003/08/30 10:17:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.14 2003/09/05 08:46:39 msterret Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -27,10 +27,10 @@ RDEPEND="app-text/scrollkeeper
 	>=gnome-extra/gtkhtml-1.1.10
 	>=gnome-base/oaf-0.6.10
 	>=gnome-base/ORBit-0.5.12
-	<gnome-base/libglade-2.0		
+	<gnome-base/libglade-2.0
 	>=media-libs/gdk-pixbuf-0.18.0
 	>=dev-libs/libxml-1.8.17
-	=gnome-base/gnome-vfs-1.0*		
+	=gnome-base/gnome-vfs-1.0*
 	>=gnome-base/gnome-print-0.35
 	=dev-util/gob-1*
 	>=net-libs/soup-0.7.11
@@ -56,13 +56,13 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S};
 	# Mandrake patches
 	epatch ${FILESDIR}/${PN}-1.1.90-kde.patch
 	epatch ${FILESDIR}/${PN}-1.1.90-subversion.patch
 	epatch ${FILESDIR}/${PN}-1.1.90-sharedldap.patch
-	
+
 	# libtoolize to fix not all libs installing, and buggy .la files.
 	# also add the gnome-pilot.m4 to the macros directory to fix
 	# problems with the pilot conduct
@@ -71,7 +71,7 @@ src_unpack() {
 	aclocal -I macros -I /usr/share/aclocal/gnome-macros
 	autoconf
 	automake --add-missing
-	
+
 	(cd libical ; aclocal -I /usr/share/aclocal/gnome-macros ; autoconf)
 
 	# Fix sandbox errors
@@ -79,7 +79,7 @@ src_unpack() {
 	cp Makefile.in Makefile.in.orig
 	sed -e 's:-mkdir $(defaultdir:-mkdir $(DESTDIR)$(defaultdir:g' \
 		Makefile.in.orig > Makefile.in
-		
+
 	# Remove unneeded db1 linking for nss/mozilla
 	cd ${S}; sed -i -e "s/-ldb1//" configure.in
 }
@@ -97,7 +97,7 @@ src_compile() {
 #	cp configure configure.orig
 #	awk '!/MUTEX.*THREADS/ { sub("mut_pthread", "mut_fcntl"); print }' \
 #		configure.orig > configure
-	
+
 	einfo "Compiling DB3..."
 	cd ${WORKDIR}/${DB3}/build_unix
 	../dist/configure --prefix=${WORKDIR}/db3 || die
@@ -118,7 +118,7 @@ src_compile() {
 
 	einfo "Compiling Evolution..."
 	cd ${S}
-  
+
 	local myconf=""
 	local MOZILLA="${MOZILLA_FIVE_HOME}"
 
@@ -133,7 +133,7 @@ src_compile() {
 	else
 		myconf="${myconf} --with-openldap=no"
 	fi
-	
+
 	if [ -n "`use kerberos`" ]; then
 		myconf="${myconf} --with-krb5=/usr --with-krb4=/usr"
 	else
@@ -187,7 +187,7 @@ src_compile() {
 
 	# fix xml-i18n-merge UTF-8 problems
 	export LANG="C"
-    
+
 	#needs to be able to connect to X display to build.
 	Xemake || Xmake || die
 }

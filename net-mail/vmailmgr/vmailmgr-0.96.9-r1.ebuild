@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.13 2003/02/14 21:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.14 2003/09/05 09:08:32 msterret Exp $
 
 inherit gcc
 
@@ -54,7 +54,7 @@ src_install() {
 	newexe ${S}/scripts/autoresponder.sh vdeliver-postdeliver
 
 	doexe ${FILESDIR}/checkvpw-loginfail
-	
+
 	insinto /etc/vmailmgr
 	doins ${FILESDIR}/socket-file
 	doins ${FILESDIR}/separators

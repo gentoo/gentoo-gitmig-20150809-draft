@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.1 2003/03/07 16:42:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.2 2003/09/05 08:58:03 msterret Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_compile() {
 	emake it || die
 }
 
-src_install() {                 
+src_install() {
 	dodoc ALIASES BLURB CHANGES FILES INSTALL README SYSDEPS TARGETS
 	dodoc THANKS TODO VERSION
 	doman *.1
@@ -35,5 +35,5 @@ src_install() {
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/bin
 	doins fastforward newaliases newinclude printforward printmaillist \
-		setforward setmaillist 
+		setforward setmaillist
 }

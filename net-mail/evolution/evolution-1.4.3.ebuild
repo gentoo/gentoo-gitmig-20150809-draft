@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.3.ebuild,v 1.5 2003/08/30 10:17:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.3.ebuild,v 1.6 2003/09/05 08:46:39 msterret Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -19,32 +19,32 @@ KEYWORDS="x86 ~ppc ~sparc hppa"
 
 # top stanza are ximian deps
 RDEPEND=">=gnome-extra/libgtkhtml-3.0.7
-    >=gnome-extra/gal-1.99.8
-    >=net-libs/libsoup-1.99.23
+	>=gnome-extra/gal-1.99.8
+	>=net-libs/libsoup-1.99.23
 	pda?     ( >=app-pda/gnome-pilot-2.0.9
 		>=app-pda/pilot-link-0.11.7
 		>=app-pda/gnome-pilot-conduits-2.0.9 )
 	spell?   ( >=app-text/gnome-spell-1.0.4 )
-	
+
 	>=gnome-base/ORBit2-2.6.0
-    >=gnome-base/libbonoboui-2.0
-    >=gnome-base/gnome-vfs-2.0
-    >=gnome-base/libgnomeui-2.0
-    >=gnome-base/libglade-2.0
-    >=gnome-base/libgnome-2.0
-    >=gnome-base/bonobo-activation-2.2.1
-    >=dev-libs/libxml2-2.5
-    >=gnome-base/gconf-2.0
-    >=gnome-base/libgnomecanvas-2.2.0.2
-    >=gnome-base/libgnomeprintui-2.2
-    >=gnome-base/libgnomeprint-2.2
-	ssl? ( mozilla? ( || ( ( >=dev-libs/nspr-4.3 >=dev-libs/nss-3.8 ) 
-							net-www/mozilla 
-						 )
-					 ) )
+	>=gnome-base/libbonoboui-2.0
+	>=gnome-base/gnome-vfs-2.0
+	>=gnome-base/libgnomeui-2.0
+	>=gnome-base/libglade-2.0
+	>=gnome-base/libgnome-2.0
+	>=gnome-base/bonobo-activation-2.2.1
+	>=dev-libs/libxml2-2.5
+	>=gnome-base/gconf-2.0
+	>=gnome-base/libgnomecanvas-2.2.0.2
+	>=gnome-base/libgnomeprintui-2.2
+	>=gnome-base/libgnomeprint-2.2
+	ssl? ( mozilla? ( || ( ( >=dev-libs/nspr-4.3 >=dev-libs/nss-3.8 )
+			net-www/mozilla
+			)
+		) )
 	ssl? ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
-    kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
+	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )"
 
 DEPEND="${RDEPEND}
@@ -70,10 +70,10 @@ src_unpack() {
 	unpack ${A}
 	# remove dependency on libdb1.so (its deprecated)
 	cd ${S}; sed -i -e "s/-ldb1//" configure
-	
+
 	# we need the omf fix, or else we get access violation
 	# errors related to sandbox
-	gnome2_omf_fix ${S}/help/C/Makefile.in	
+	gnome2_omf_fix ${S}/help/C/Makefile.in
 }
 
 ##### compile evolution specific db3 for static linking #####
@@ -95,7 +95,7 @@ src_compile_db3() {
 src_compile() {
 	elibtoolize
 
-    if [ "${ARCH}" = "hppa" ]; then
+	if [ "${ARCH}" = "hppa" ]; then
 		append-flags "-fPIC -ffunction-sections"
 		export LDFLAGS="-ffunction-sections -Wl,--stub-group-size=25000"
 	fi
@@ -105,7 +105,7 @@ src_compile() {
 
 	einfo "Compiling Evolution..."
 	cd ${S}
-  
+
 	local myconf=""
 
 	use pda \
@@ -115,7 +115,7 @@ src_compile() {
 	use ldap \
 		&&	myconf="${myconf} --with-openldap=yes --with-static-ldap=no" \
 		|| myconf="${myconf} --with-openldap=no"
-    
+
 	use kerberos \
 		&& myconf="${myconf} --with-krb5=/usr" \
 		|| myconf="${myconf} --without-krb5"
@@ -127,13 +127,13 @@ src_compile() {
 	use ipv6 \
 		&& myconf="${myconf} --enable-ipv6=yes" \
 		|| myconf="${myconf} --enable-ipv6=no"
-		
+
 	use kde && [ -n "${KDEDIR}" ] \
 		&& myconf="${myconf} --with-kde-applnk-path=${KDEDIR}/share/applnk"
 
 	# Use Mozilla NSS/NSPR libs if 'mozilla' *and* 'ssl' in USE
 	if [ -n "`use ssl`" -a -n "`use mozilla`" ] ; then
-		if has_version "dev-libs/nspr"; then			
+		if has_version "dev-libs/nspr"; then
 			NSS_LIB=/usr/lib
 			NSS_INC=/usr/include
 		elif has_version "net-www/mozilla"; then
@@ -143,7 +143,7 @@ src_compile() {
 			eerror "Neither net-www/mozilla nor dev-libs/nspr found."
 			die "unexpected error. unable to find nss/nspr"
 		fi
-		
+
 		myconf="${myconf} --enable-nss=yes \
 			--with-nspr-includes=${NSS_INC}/nspr \
 			--with-nspr-libs=${NSS_LIB} \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r4.ebuild,v 1.7 2003/08/03 03:40:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r4.ebuild,v 1.8 2003/09/05 08:52:38 msterret Exp $
 
 inherit eutils
 
@@ -87,9 +87,9 @@ src_unpack() {
 
 }
 
-src_compile() {                           
+src_compile() {
 	BUILDOPTS=""
-	if [ "`use ssl`" ] 
+	if [ "`use ssl`" ]
 	then
 		BUILDOPTS="${BUILDOPTS} SSLDIR=/usr SSLTYPE=unix SSLCERTS=/etc/ssl/certs"
 		cd ${S}/imap/src/osdep/unix
@@ -110,11 +110,11 @@ src_compile() {
 	else
 		BUILDOPTS="${BUILDOPTS} NOLDAP"
 	fi
-		
+
 	./build ${BUILDOPTS} lnp || die
 }
 
-src_install() {                               
+src_install() {
 	into /usr
 	dobin bin/pine bin/pico bin/pilot bin/mtest bin/rpdump bin/rpload
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.9 2003/07/08 23:07:30 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.10 2003/09/05 09:16:18 msterret Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam"
 
@@ -39,7 +39,7 @@ src_unpack() {
 	cd ${S}
 	einfo "Patching exiscan support into exim ${PV}.."
 	epatch ${WORKDIR}/exiscan-${EXISCAN_VER}/exiscan-${EXISCAN_VER}.patch
-	
+
 	sed -e "48i\CFLAGS=${CFLAGS}" \
 		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
 		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
@@ -152,7 +152,7 @@ src_install () {
 	done
 
 	dodir /etc/exim
-	
+
 	cd ${S}/src
 	cp configure.default ${D}/etc/exim/exim.conf.dist
 

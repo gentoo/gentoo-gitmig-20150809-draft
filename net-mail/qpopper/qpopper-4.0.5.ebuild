@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5.ebuild,v 1.6 2003/06/14 20:46:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5.ebuild,v 1.7 2003/09/05 08:55:55 msterret Exp $
 
 IUSE="ssl pam"
 
@@ -20,7 +20,7 @@ SLOT="0"
 LICENSE="qpopper | GPL-2"
 KEYWORDS="x86 sparc"
 
-src_compile() {                           
+src_compile() {
 
 	local myconf
 
@@ -69,9 +69,9 @@ EOF
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	into /usr
-	dosbin popper/popper  popper/popauth 
+	dosbin popper/popper  popper/popauth
 
 	if use ssl; then
 		dodir /etc/mail/certs
@@ -120,8 +120,8 @@ pkg_postinst () {
 	einfo "   # popauth -user <user> <password>"
 	einfo ""
 	einfo "to enable qpopper in netkit-inetd just add this in one line"
-	einfo "pop-3 stream tcp nowait root	/usr/sbin/tcpd 
+	einfo "pop-3 stream tcp nowait root	/usr/sbin/tcpd
 		/usr/sbin/in.qpopper -f /etc/qpopper.conf"
 	einfo "into your /etc/inetd.conf"
-	
+
 }

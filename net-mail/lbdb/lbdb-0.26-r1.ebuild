@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.26-r1.ebuild,v 1.7 2003/02/13 14:32:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.26-r1.ebuild,v 1.8 2003/09/05 09:12:12 msterret Exp $
 
 IUSE="pda"
 
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install () {
-	
-    make install_prefix=${D} install || die
-	 dodoc README INSTALL COPYING NEWS TODO
+
+	make install_prefix=${D} install || die
+	dodoc README INSTALL COPYING NEWS TODO
 }

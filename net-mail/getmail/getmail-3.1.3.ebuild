@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-3.1.3.ebuild,v 1.2 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-3.1.3.ebuild,v 1.3 2003/09/05 09:03:07 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A POP3 mail retriever with reliable Maildir and mbox delivery"
@@ -29,7 +29,7 @@ src_install () {
 	doins getmail_defaults.py
 	doins getmail_mbox.py
 	doins getmail_utilities.py
-		
+
 	dodoc BUGS CHANGELOG COPYING THANKS TODO *.txt getmailrc-example
 	dohtml *.html
 }

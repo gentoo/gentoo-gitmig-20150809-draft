@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.4.0.0.6.2.ebuild,v 1.2 2003/07/14 08:33:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.4.0.0.6.2.ebuild,v 1.3 2003/09/05 08:48:01 msterret Exp $
 
 inherit rpm gnome2
 
@@ -18,7 +18,7 @@ XIMIAN_DIST="redhat-90-i386"
 XIMIAN_ARCH="i386"
 
 # make the ximian rev from the package version
-# bash magic to extract last 2 versions as XIMIAN_V, 
+# bash magic to extract last 2 versions as XIMIAN_V,
 # third last version as RPM_V and the rest as MY_PV
 MY_PV=${PV%.[0-9]*.[0-9]*.[0-9]*}
 END_V=${PV/${MY_PV}./}
@@ -29,7 +29,7 @@ SRC_URI="${PN}-${MY_PV}-${RPM_V}.ximian.${XIMIAN_V}.${XIMIAN_ARCH}.rpm"
 
 RDEPEND=">=net-mail/evolution-1.4.0
 	>=app-crypt/mit-krb5-1.2"
-DEPEND=""	
+DEPEND=""
 
 S=${WORKDIR}
 

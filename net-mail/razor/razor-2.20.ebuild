@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/razor-2.20.ebuild,v 1.4 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/razor-2.20.ebuild,v 1.5 2003/09/05 08:51:46 msterret Exp $
 
 inherit perl-module
 
@@ -26,7 +26,7 @@ src_install() {
 
 	perl-module_src_install
 }
-		
+
 pkg_postinst() {
 
 # insures appropriate symlinks have been created
@@ -52,7 +52,7 @@ einfo ""
 einfo "To have both (random) username and password assgined: "
 einfo ""
 einfo "razor-admin -register "
-einfo ""      
+einfo ""
 einfo "razor-admin -register negotiates a registration with the Nomination Server"
 einfo "and writes the identity information in"
 einfo "/home/user/.razor/identity-username, or /etc/razor/identity-username"
@@ -60,7 +60,7 @@ einfo "when invoked as root."
 einfo ""
 einfo "You can edit razor-agent.conf to change the defaults. Config options"
 einfo "and their values are defined in the razor-agent.conf(5) manpage."
-       
+
 einfo "The next step is to integrate razor-check, razor-report and"
 einfo "razor-revoke in your mail system. If you are running Razor v1, the"
 einfo "change will be transparent, new versions of razor agents will overwrite"
