@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/xephem
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.1 2003/02/10 21:55:16 tantive Exp $
+
+
+*gentoo-rsync-mirror-1.0 (10 Feb 2003)
+
+  10 Feb 2003; Michael Imhof <tantive@gentoo.org> :
+  Initial release.
