@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.6 2004/07/06 23:00:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.7 2004/07/25 02:45:49 pfeifer Exp $
+
+*adodb-4.5.0 (24 Jul 2004)
+
+  24 Jul 2004; Jay Pfeifer <pfeifer@gentoo.org> adodb-4.5.0.ebuild:
+  Version bump reflecting new website URL and download from sourceforge.
 
   06 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> adodb-4.0.5.ebuild:
   Stable on ppc.

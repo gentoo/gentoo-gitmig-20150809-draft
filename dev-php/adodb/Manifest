@@ -1,4 +1,6 @@
+MD5 67069505620ccebaf077d7fd2f546335 adodb-4.5.0.ebuild 876
 MD5 f17928b6ba09e7b9b2e98a4fbe55c898 adodb-4.0.5.ebuild 1151
+MD5 3f3d1fd4ea9763362bcee0ca14dd685f ChangeLog 966
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 e548ff0d69a3434cbb1468fc85833aa9 ChangeLog 795
 MD5 b3889d694fc56bbfa1112b4bfbcd5598 files/digest-adodb-4.0.5 57
+MD5 aa687f3b025cddd6f42bdb9f6b12989d files/digest-adodb-4.5.0 57
