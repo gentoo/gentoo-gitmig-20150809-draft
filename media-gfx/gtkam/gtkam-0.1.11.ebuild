@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.11.ebuild,v 1.1 2004/03/28 18:11:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.11.ebuild,v 1.2 2004/04/11 10:32:06 liquidx Exp $
 
 IUSE="nls gnome jpeg"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND=">=x11-libs/gtk+-2
-	>=media-libs/libgphoto2-2.1.1-r2
+	>=media-libs/libgphoto2-2.1.4
 	gnome? ( >=gnome-base/libbonobo-2
 		>=gnome-base/libgnomeui-2 )
 	jpeg? ( media-libs/libexif-gtk
