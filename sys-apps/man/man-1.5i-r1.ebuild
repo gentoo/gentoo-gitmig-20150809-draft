@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r1.ebuild,v 1.2 2001/09/08 19:02:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r1.ebuild,v 1.3 2001/09/09 20:20:17 drobbins Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
@@ -13,10 +13,10 @@ DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc sys-apps/groff"
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
-    cp configure configure.orig
-    sed -e 's/confdir=.*$/confdir=\/etc/' -e 's:/usr/lib/locale:$prefix/usr/lib/locale:g' -e 's!/bin:/usr/bin:/usr/ucb:/usr/local/bin:$PATH!/bin /usr/bin /usr/ucb /usr/local/bin $PATH!' configure.orig > configure
+	unpack ${A}
+	cd ${S}
+	cp configure configure.orig
+	sed -e 's/confdir=.*$/confdir=\/etc/' -e 's:/usr/lib/locale:$prefix/usr/lib/locale:g' -e 's!/bin:/usr/bin:/usr/ucb:/usr/local/bin:$PATH!/bin:/usr/bin:/usr/local/bin:$PATH!' configure.orig > configure
 	local x
 	for x in / src/ man2html/ msgs/
 	do
