@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.17 2003/08/06 09:33:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.18 2003/09/25 23:58:52 solar Exp $
+
+  25 Sep 2003; <solar@gentoo.org> vpopmail-5.2.1-r6.ebuild:
+  new local use flag clearpasswd that enables clear text passwd storage of
+  vpasswd files. This changes the default behavior to now not store cleartext by
+  default. closes bug 20127
 
   06 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> vpopmail-5.2.1-r6.ebuild,
   files/vpopmail-5.2.1-showall.patch:

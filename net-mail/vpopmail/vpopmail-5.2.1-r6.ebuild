@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.5 2003/09/05 08:50:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.6 2003/09/25 23:58:52 solar Exp $
 
-IUSE="mysql ipalias"
+IUSE="mysql ipalias clearpasswd"
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 DEPEND_COMMON="net-mail/qmail
-			   mysql? ( >=dev-db/mysql-3.23* )"
+	mysql? ( >=dev-db/mysql-3.23* )"
 DEPEND="sys-apps/sed
 		sys-apps/ucspi-tcp
 		${DEPEND_COMMON}"
@@ -90,6 +90,11 @@ src_compile() {
 	mv --force configure.new configure
 	chmod u+x configure
 
+	# Bug 20127
+	use clearpasswd &&
+		myopts="${myconf} --enable-clear-passwd=y" || 
+		myopts="${myconf} --enable-clear-passwd=n"
+
 	econf ${myopts} --sbindir=/usr/sbin \
 		--bindir=/usr/bin \
 		--sysconfdir=${VPOP_HOME}/etc \
@@ -103,7 +108,6 @@ src_compile() {
 		--enable-file-locking=y \
 		--enable-file-sync=y \
 		--enable-md5-passwords=y \
-		--enable-clear-passwd=y \
 		--enable-defaultquota=30000000,1000C \
 		--enable-roaming-users=y --enable-relay-clear-minutes=60 \
 		--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
