@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.13 2004/09/22 14:18:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.14 2004/09/24 16:22:47 mcummings Exp $
+
+*spamassassin-3.0.0-r1 (24 Sep 2004)
+
+  24 Sep 2004; Michael Cummings <mcummings@gentoo.org>
+  +spamassassin-3.0.0-r1.ebuild, spamassassin-3.0.0.ebuild:
+  Mistake on my part with importing the DATADIR that was used in the pre-release
+  ebuild. Corrected in both 3 and 3-r1 just to be safe. Addresses bug 65102.
 
   22 Sep 2004; Michael Cummings <mcummings@gentoo.org>
   spamassassin-3.0.0.ebuild:

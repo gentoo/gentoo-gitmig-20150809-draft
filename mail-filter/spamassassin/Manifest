@@ -1,9 +1,10 @@
-MD5 684f1802322f8bbfd5a90ff33074f7b4 ChangeLog 9484
+MD5 6223097d8d6d6bc2465eaca8be1adb37 ChangeLog 9796
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 07be834b0dbedbb5f91170c18dd22c1f spamassassin-2.63-r1.ebuild 2401
 MD5 977dc4b389deafd70daf9fd67c796b06 spamassassin-2.63.ebuild 2293
 MD5 2657d9c6ecc65a8b2fe87046b5d05ebf spamassassin-2.64.ebuild 2508
-MD5 6507a2d58651d40d1742c14e5b813e0c spamassassin-3.0.0.ebuild 5919
+MD5 c607c46288451f185dc1c3a769e10fa8 spamassassin-3.0.0.ebuild 5799
+MD5 3d39b0472eceda3ce11c073f0082e3d9 spamassassin-3.0.0-r1.ebuild 5802
 MD5 4b17c303c2a11eab455003b92cd1851a files/3.0.0-spamd.conf 596
 MD5 2bc962fe7cbd5fc24b6ca7703a498e83 files/digest-spamassassin-2.63 75
 MD5 2bc962fe7cbd5fc24b6ca7703a498e83 files/digest-spamassassin-2.63-r1 75
@@ -12,3 +13,4 @@ MD5 1ed9c6ddcb224ed5d2ad37aab7c0cce9 files/spamd.conf 265
 MD5 90925e8f6521add45f8a727ed982e61a files/spamd.init 645
 MD5 7d4ce834279c9e36320d114a7118c127 files/digest-spamassassin-3.0.0 76
 MD5 c59cb3e2d51ddebc58ae4fb3b2b167a1 files/3.0.0-spamd.init 676
+MD5 7d4ce834279c9e36320d114a7118c127 files/digest-spamassassin-3.0.0-r1 76
