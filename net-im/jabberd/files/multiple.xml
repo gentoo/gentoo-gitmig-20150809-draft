@@ -64,8 +64,11 @@
       <!--<update><jabberd:cmdline flag="h">localhost</jabberd:cmdline></update>-->
 
       <vcard2jud/>
+<browse>
+<!-- Place to "advertise" your transports -->
 
 
+</browse>
     </jsm>
 
     <load main="jsm">
