@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.14.ebuild,v 1.2 2004/08/22 20:23:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r3.ebuild,v 1.1 2004/08/22 20:23:49 robbat2 Exp $
 
 inherit eutils
 
@@ -10,10 +10,8 @@ SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
 
 LICENSE="OPENLDAP"
 SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~amd64 ~s390 ~hppa ~ppc64"
 IUSE="berkdb crypt debug gdbm ipv6 odbc perl readline samba sasl slp ssl tcpd"
-KEYWORDS="-*"
-#In portage for testing only
-#KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~amd64 s390 hppa ppc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-apps/sed-4
@@ -37,13 +35,11 @@ DEPEND=">=sys-libs/ncurses-5.1
 #	pull in sys-libs/gdbm
 # else
 #	pull in sys-libs/db
-DEPEND_BERKDB=">=sys-libs/db-4.2.52_p1"
-DEPEND_GDBM=">=sys-libs/gdbm-1.8.0"
 DEPEND="${DEPEND}
-	berkdb? ( ${DEPEND_BERKDB} )
+	berkdb? ( >=sys-libs/db-4.1.25_p1-r3 )
 	!berkdb? (
-		gdbm? ( ${DEPEND_GDBM} )
-		!gdbm? ( ${DEPEND_BERKDB} )
+		gdbm? ( >=sys-libs/gdbm-1.8.0 )
+		!gdbm? ( >=sys-libs/db-4.1.25_p1-r3 )
 	)"
 
 pkg_preinst() {
@@ -64,17 +60,21 @@ src_unpack() {
 	# Fix up DB-4.0 linking problem
 	# remember to autoconf! this expands configure by 500 lines (4 lines to m4
 	# stuff).
-	epatch ${FILESDIR}/${PN}-2.2.14-db40.patch
+	epatch ${FILESDIR}/${PN}-2.1.30-db40.patch
 
 	# supersedes old fix for bug #31202
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.2.14-perlthreadsfix.patch
+	epatch ${FILESDIR}/${PN}-2.1.27-perlthreadsfix.patch
 
 	# fix up stuff for newer autoconf that simulates autoconf-2.13, but doesn't
 	# do it perfectly.
 	cd ${S}/build
 	ln -s shtool install
 	ln -s shtool install.sh
+
+	# ximian connector 1.4.7 ntlm patch
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-2.1.30-ximian_connector.patch
 
 	# reconf for db40 fixes.
 	cd ${S}
@@ -127,9 +127,6 @@ src_compile() {
 	myconf="${myconf} --enable-meta --enable-monitor"
 	myconf="${myconf} --enable-null --enable-shell"
 	myconf="${myconf} --enable-local --enable-proctitle"
-	myconf="${myconf} --enable-hdb --enable-dyngroup"
-	myconf="${myconf} --enable-aci --enable-proxycache"
-	myconf="${myconf} --enable-cleartext --enable-slapi"
 
 	# disabled options
 	# --with-bdb-module=dynamic
@@ -212,8 +209,10 @@ pkg_postinst() {
 	# Let's make sure these permissions are correct.
 	chown ldap:ldap /var/run/openldap
 	chmod 0755 /var/run/openldap
-	chown root:ldap /etc/openldap/slapd.conf{,.default}
-	chmod 0640 /etc/openldap/slapd.conf{,.default}
+	chown root:ldap /etc/openldap/slapd.conf
+	chmod 0640 /etc/openldap/slapd.conf
+	chown root:ldap /etc/openldap/slapd.conf.default
+	chmod 0640 /etc/openldap/slapd.conf.default
 	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
 
 	# notes from bug #41297, bug #41039
