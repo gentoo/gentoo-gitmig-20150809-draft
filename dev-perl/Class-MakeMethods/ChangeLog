@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MakeMethods
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/ChangeLog,v 1.14 2004/12/29 23:14:22 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/ChangeLog,v 1.15 2005/01/21 21:00:01 mcummings Exp $
+
+  21 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  Class-MakeMethods-1.009.ebuild:
+  Unmasking for x86
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

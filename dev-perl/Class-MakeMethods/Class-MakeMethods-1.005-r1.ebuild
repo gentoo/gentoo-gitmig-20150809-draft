@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/Class-MakeMethods-1.005-r1.ebuild,v 1.9 2004/10/16 23:57:20 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/Class-MakeMethods-1.005-r1.ebuild,v 1.10 2005/01/21 21:00:01 mcummings Exp $
 
 inherit perl-module
 

@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/Class-Inspector-1.06.ebuild,v 1.3 2005/01/13 02:03:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/Class-Inspector-1.06.ebuild,v 1.4 2005/01/21 20:56:19 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Provides information about Classes"
 HOMEPAGE="http://search.cpan.org/author/ADAMK/${P}/"
-SRC_URI="http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 IUSE=""
 
 SRC_TEST="do"
