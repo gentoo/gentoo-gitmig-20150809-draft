@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.845 2005/01/08 00:36:39 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.846 2005/01/08 03:15:55 vericgar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -591,12 +591,15 @@ net-wireless/wireless-tools:multicall - Build the most commonly used tools as on
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-wireless/wpa_supplicant:pcap - Use external libpcap and libdnet for layer2 packet processing
 net-www/apache:distcache - Enable SSL distcache support
+net-www/apache:lingerd - Enable support for lingerd
 net-www/apache:mpm-worker - Adds support for the worker Apache MPM
 net-www/apache:mpm-prefork - Adds support for the prefork Apache MPM
 net-www/apache:mpm-leader - Adds support for the leader Apache MPM
 net-www/apache:mpm-threadpool - Adds support for the threadpool Apache MPM
 net-www/apache:mpm-metux - Adds support for the metux Apache MPM
 net-www/apache:mpm-peruser - Adds support for the peruser Apache MPM
+net-www/apache:no-suexec - Don't install suexec with apache
+net-www/apache:static-modules - Build modules into apache instead of having them load at run time
 net-www/apache:threads - Enable thread support
 net-www/elinks:lua - enable lua support
 net-www/kazehakase:estraier - enable estraier support for full-text search in history.
