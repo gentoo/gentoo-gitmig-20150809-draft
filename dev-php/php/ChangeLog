@@ -1,0 +1,28 @@
+# ChangeLog for dev-lang/phpcgi
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.1 2002/07/03 17:38:45 rphillips Exp $
+
+*php-4.2.1-r1 (26 June 2002)
+
+  26 June 2002; Roman Weber <gentoo@gonzo.ch> php-4.2.1-r1.ebuild :
+  
+  Added 'use' variables: freetype, jpeg, tiff, png and gd (Bug #3900)
+    
+*php-4.2.1 (17 June 2002)
+
+  17 June 2002; Roman Weber <gentoo@gonzo.ch> ChangeLog:
+  
+  Update to actual 4.2.1 release.
+
+*phpcgi-4.2.0 (23 Apr 2002)
+
+  23 Apr 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  
+  Please don't use this package on a webserver.
+  There is no security compiled in.
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
