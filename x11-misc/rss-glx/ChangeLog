@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.1 2003/05/29 09:06:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.2 2003/05/30 14:20:37 seemant Exp $
+
+*rss-glx-0.7.4 (30 May 2003)
+
+  30 May 2003; Seemant Kulleen <seemant@gentoo.org> rss-glx-0.7.4.ebuild:
+  version bump, thanks to: Alex <alex.fore@verizon.net> in bug #20351
 
 *rss_glx-0.7.3 (29 May 2003)
 

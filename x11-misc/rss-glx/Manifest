@@ -1,5 +1,7 @@
+MD5 a83fafcd3c5f5643c4f934ad456ecd33 rss-glx-0.7.4.ebuild 912
 MD5 3097eb4ef5aba9394457045b5ca6aecf rss-glx-0.6.8.ebuild 909
 MD5 698f0749cec37bb3d324eea18a2b4130 rss-glx-0.7.3.ebuild 911
 MD5 fa84a82f431b1b6112fdbc84dc3b037f ChangeLog 1105
 MD5 770314fd1bc3c265dfb526582bba9832 files/digest-rss-glx-0.6.8 67
 MD5 2093b2ad927fd582daa01c6f8843ff70 files/digest-rss-glx-0.7.3 67
+MD5 55ae7a0c63825a631b147a3c34f1131b files/digest-rss-glx-0.7.4 67
