@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1-r2.ebuild,v 1.1 2005/03/22 16:00:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1-r2.ebuild,v 1.2 2005/03/22 16:01:51 seemant Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_install () {
 	dodir usr/share/man/man1
 	make PREFIX=${D}usr install || die
 	mv ${D}usr/man/switch.1* ${D}usr/share/man/man1/
+	# fix for 63012
 	mv ${D}/usr/share/man/man1/{,gtk-theme-}switch.1*
 	dodoc ChangeLog readme*
 }
