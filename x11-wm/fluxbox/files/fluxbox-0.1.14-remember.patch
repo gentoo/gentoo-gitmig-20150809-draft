@@ -621,7 +621,19 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  	configure(frame.x, frame.y, frame.width, frame.height);
  
  	if (shaded) {
-@@ -337,6 +334,61 @@
+@@ -325,18 +322,77 @@
+ 		maximize(m);
+ 	}	
+ 
+-	if (stuck) {
+-		stuck = false;
+-		stick();
+-		deiconify(); //omnipresent, so show it
+-	}
+-
+ 	setFocusFlag(false);
+ 
+ #ifdef DEBUG
  	fprintf(stderr, "%s(%d): FluxboxWindow(this=%p)\n", __FILE__, __LINE__, this);
  #endif // DEBUG
  
@@ -664,8 +676,12 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
 +                               setDecoration(a->decostate);
 +                       }
 +                       if (a->stuckstate_remember) {
-+                               if (a->stuckstate)
++                               if (a->stuckstate) {
++                                       screen->getCurrentWorkspace()->addWindow(
++                                           this, place_window);
++                                       workspace_set = true;
 +                                       stick();
++						}
 +                               // FIXME: unstick() has been defined in
 +                               // Window.hh but not implemented !!!
 +                               // else
@@ -680,10 +696,35 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
 +                       screen->getWorkspace(workspace_number)->addWindow(this, place_window);
 +       }
 +
++	if (stuck) {
++		stuck = false;
++		stick();
++		deiconify(); //omnipresent, so show it
++	}
++
  	fluxbox->ungrab();
  }
  
-@@ -1068,6 +1120,17 @@
+@@ -982,7 +1038,17 @@
+ void FluxboxWindow::reconfigure() {
+ 	upsize();
+ 	
+-	if (Fluxbox::instance()->useTabs()) {
++	bool tab_enabled = true;
++	char* app_name = getWMClass();
++	if(app_name && (!checkTransient2()))
++	{
++		Application* a =  Fluxbox::instance()->getApplications()->find(app_name);
++		if(a)
++			if(a->tabstate_remember && !a->tabstate)
++				tab_enabled = false;
++	}
++	
++	if (Fluxbox::instance()->useTabs() && tab_enabled) {
+ 		//no tab and we allowed to use tab? then create it 
+ 		if (!tab && isGroupable()) {
+ 			tab = new Tab(this, 0, 0);		
+@@ -1068,6 +1134,17 @@
  		tab->setPosition();
  }
  
@@ -701,7 +742,7 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  
  void FluxboxWindow::getWMName() {
  
-@@ -1641,8 +1704,35 @@
+@@ -1641,8 +1718,35 @@
  	}
  }
  
@@ -737,7 +778,7 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  	Fluxbox *fluxbox = Fluxbox::instance();
  	XEvent ce;
  	ce.xclient.type = ClientMessage;
-@@ -2357,7 +2447,8 @@
+@@ -2357,7 +2461,8 @@
  	m_windowmenu->show();		
  	m_windowmenu->raise();
  	m_windowmenu->getSendToMenu().raise();
@@ -747,7 +788,7 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  }
  				
  void FluxboxWindow::restoreGravity() {
-@@ -3170,6 +3261,7 @@
+@@ -3170,6 +3275,7 @@
  }
  
  void FluxboxWindow::toggleDecoration() {
@@ -755,12 +796,10 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  	//don't toggle decor if the window is shaded
  	if (isShaded())
  		return;
-@@ -3480,6 +3572,17 @@
- 		frame.handle = 0;
- 	}
+@@ -3482,6 +3588,17 @@
  
-+}
-+
+ }
+ 
 +bool FluxboxWindow::checkTransient2() {
 +	Window win;
 +	if (XGetTransientForHint(display, client.window, &win)) 
@@ -770,13 +809,26 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
 +			return false;
 +	else
 +		return false;
- }
- 
++}
++
  void FluxboxWindow::checkTransient() {
+ 	// remove us from parent
+ 	if (client.transient_for != 0) {
 diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess -x config.sub -x ltmain.sh -x ltconfig -x Entries.Log -x config.h.in -x Translation.m -x configure fluxbox-0.1.14/src/Window.hh fluxbox-0.1.14-remember/src/Window.hh
 --- fluxbox-0.1.14/src/Window.hh	Sat Dec  7 15:15:26 2002
 +++ fluxbox-0.1.14-remember/src/Window.hh	Mon Dec  9 15:46:12 2002
-@@ -55,6 +55,8 @@
+@@ -43,6 +43,10 @@
+ #include <string>
+ #include <memory>
+ 
++#ifdef DEBUG
++#include <iostream>
++#endif // DEBUG
++
+ #define PropMwmHintsElements	3
+ 
+ class Tab;
+@@ -55,6 +59,8 @@
  class FluxboxWindow : public TimeoutHandler {
  public:
  	
@@ -785,7 +837,7 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  	enum WinLayer {
  		LAYER_BOTTOM = 0x01, 
  		LAYER_BELOW  = 0x02,
-@@ -204,6 +206,16 @@
+@@ -204,6 +210,16 @@
  	//@}
  
  	void setDecoration(Decoration decoration);
@@ -793,7 +845,7 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
 +		if (!decor) {
 +			#ifdef DEBUG
 +			if ((old_decoration!=DECOR_NONE) && (old_decoration!=DECOR_NORMAL) && (old_decoration!=DECOR_TINY) && (old_decoration!=DECOR_TOOL))
-+				cerr<<__FILE__<<"("<<__LINE__<< "DEBUG: old_decoration fucked up" << endl;
++				std::cerr<<__FILE__<<"("<<__LINE__<< "DEBUG: old_decoration fucked up" << std::endl;
 +			#endif //DEBUG
 +			return old_decoration;
 +		} else
@@ -802,7 +854,7 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  	void toggleDecoration();
  	
  #ifdef SHAPE
-@@ -276,6 +288,8 @@
+@@ -276,6 +292,8 @@
  		
  	} client;
  
@@ -811,7 +863,7 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  	struct _decorations {
  		bool titlebar, handle, border, iconify,
  			maximize, close, menu, sticky, shade, tab, enabled;
-@@ -333,12 +347,15 @@
+@@ -333,12 +351,15 @@
  	void stopResizing(Window win=0);
  	void updateIcon();
  	
@@ -860,8 +912,56 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  	 
  	insert(i18n->getMessage(
  		WindowmenuSet, WindowmenuShade,
-@@ -199,7 +206,8 @@
- 	setItemEnabled(10, window.isResizable()); // tab option only enabled if resizable
+@@ -103,11 +110,11 @@
+ 
+ 	update();
+ 
+-	setItemEnabled(2, window.hasTitlebar());
+-	setItemEnabled(3, window.isIconifiable());
+-	setItemEnabled(4, window.isMaximizable());
+-	setItemEnabled(9, window.isClosable());
+-	setItemEnabled(10, window.isGroupable()); // tab option
++	setItemEnabled(3, window.hasTitlebar());
++	setItemEnabled(4, window.isIconifiable());
++	setItemEnabled(5, window.isMaximizable());
++	setItemEnabled(10, window.isClosable());
++	setItemEnabled(11, window.isGroupable()); // tab option
+ 
+ }
+ 
+@@ -118,12 +125,12 @@
+ 
+ 
+ void Windowmenu::show() {
+-	if (isItemEnabled(2)) 
+-		setItemSelected(2, window.isShaded());
+-	if (isItemEnabled(4)) 
+-		setItemSelected(4, window.isMaximized());
+-	if (isItemEnabled(7)) 
+-		setItemSelected(7, window.isStuck());
++	if (isItemEnabled(3)) 
++		setItemSelected(3, window.isShaded());
++	if (isItemEnabled(5)) 
++		setItemSelected(5, window.isMaximized());
++	if (isItemEnabled(8)) 
++		setItemSelected(8, window.isStuck());
+ 
+ 	Basemenu::show();
+ }
+@@ -192,14 +199,15 @@
+ 
+ 
+ void Windowmenu::reconfigure() {
+-	setItemEnabled(1, window.hasTitlebar());
+-	setItemEnabled(2, window.isIconifiable());
+-	setItemEnabled(3, window.isMaximizable());
+-	setItemEnabled(8, window.isClosable());
+-	setItemEnabled(10, window.isResizable()); // tab option only enabled if resizable
++	setItemEnabled(3, window.hasTitlebar());
++	setItemEnabled(4, window.isIconifiable());
++	setItemEnabled(5, window.isMaximizable());
++	setItemEnabled(10, window.isClosable());
++	setItemEnabled(12, window.isResizable()); // tab option only enabled if resizable
  	
  	sendToMenu.reconfigure();
 -	sendGroupToMenu.reconfigure();
@@ -1060,11 +1160,10 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  // X event scanner for enter/leave notifies - adapted from twm
  typedef struct scanargs {
  	Window w;
-@@ -2586,4 +2582,38 @@
- 	if (old_screen && old_screen != screen)
+@@ -2587,3 +2583,37 @@
  		old_screen->updateNetizenWindowFocus();
  
-+}
+ }
 +
 +void Fluxbox::launchStartupProgs(void) {
 +	ScreenList::iterator it = screenList.begin();
@@ -1098,7 +1197,7 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
 +			}
 +		}
 +	}
- }
++}
 diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess -x config.sub -x ltmain.sh -x ltconfig -x Entries.Log -x config.h.in -x Translation.m -x configure fluxbox-0.1.14/src/fluxbox.hh fluxbox-0.1.14-remember/src/fluxbox.hh
 --- fluxbox-0.1.14/src/fluxbox.hh	Sat Dec  7 15:15:26 2002
 +++ fluxbox-0.1.14-remember/src/fluxbox.hh	Mon Dec  9 15:46:12 2002
@@ -1130,15 +1229,15 @@ diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess
  private:
  	struct cursor {
  		Cursor session, move, ll_angle, lr_angle;
-@@ -204,6 +211,8 @@
- 		timeval auto_raise_delay;
+@@ -205,6 +212,8 @@
  	} resource;
  		
-+
+
 +	Applications applications;
- 
++ 
  	std::string getRcFilename();
  	void getDefaultDataFilename(char *, std::string &);
+ 	void load_rc();
 diff -u -r -N -x depcomp -x Entries -x aclocal.m4 -x Makefile.in -x config.guess -x config.sub -x ltmain.sh -x ltconfig -x Entries.Log -x config.h.in -x Translation.m -x configure fluxbox-0.1.14/src/main.cc fluxbox-0.1.14-remember/src/main.cc
 --- fluxbox-0.1.14/src/main.cc	Sun Dec  8 16:46:41 2002
 +++ fluxbox-0.1.14-remember/src/main.cc	Mon Dec  9 15:46:12 2002
