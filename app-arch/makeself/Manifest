@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce578aeb5c52cdbb5379224589f4bc03 ChangeLog 877
-MD5 50771e15f9caf86c7c313e2c7a341ccb makeself-2.1.2.ebuild 624
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 b2f470ee3e82e78f907d945a829f7634 ChangeLog 1010
+MD5 fa4df22979b9b1c9c7dd23665ceb81ab makeself-2.1.2.ebuild 623
 MD5 95b8e97dbfcbc1e596eb3973ef6cd6e3 makeself-2.1.3.ebuild 646
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 02ad1f6cfe5fb0b1e51ed48028993ee4 files/digest-makeself-2.1.2 62
 MD5 8633b3736fecdb3eabd98ff85a564f9c files/digest-makeself-2.1.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBGCFrHTu7gpaalycRAgrvAJ9HweD7rNIMVvYPz/1+b6jGVOCqbQCdGHwu
-1LSAe4+W90MmdeAW/ZMZ50c=
-=QcCx
------END PGP SIGNATURE-----
