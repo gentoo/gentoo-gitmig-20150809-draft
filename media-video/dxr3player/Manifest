@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71aec43b381afc8673cac3bd71ee6b9a dxr3player-0.9.4.ebuild 1378
-MD5 c42017ef5f1b9c88c36eb5c1939d7557 dxr3player-0.9.ebuild 1345
-MD5 e483492cbcfed3cf623a744376ff4b6f ChangeLog 794
+MD5 fa84bcfaf4997828637530b410b25a42 dxr3player-0.9.ebuild 1358
 MD5 5bf3ce68ed1923dc3a3996a58987a360 metadata.xml 247
-MD5 57cd59eb28a1dc86a9c1cb14fa1428fb files/digest-dxr3player-0.9 66
+MD5 16a1dbc73970aa25ec471bf0425a130f dxr3player-0.9.4.ebuild 1370
+MD5 b7dcc40397f898b89cdce9e0decbf637 ChangeLog 913
 MD5 3ab54ab305847ceb514d48f1a8d75a8b files/digest-dxr3player-0.9.4 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPu3v06ebR+OMO78RAhBBAJ0W4nG3sLMc0mYjkrZeXY5hirmqYQCgj70m
-t/rMNXozXFg39xTCe9rZqrs=
-=qkJG
------END PGP SIGNATURE-----
+MD5 57cd59eb28a1dc86a9c1cb14fa1428fb files/digest-dxr3player-0.9 66

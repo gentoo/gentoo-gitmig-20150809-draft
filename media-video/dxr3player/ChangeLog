@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dxr3player
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.5 2005/03/21 15:53:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.6 2005/03/21 16:57:02 arj Exp $
+
+  21 Mar 2005; Anders Rune Jensen <arj@gentoo.org>
+  dxr3player-0.9.4.ebuild, dxr3player-0.9.ebuild:
+  Correctly fix #86073
 
   21 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> dxr3player-0.9.4.ebuild:
   added missing libmpeg2 dependency, fixes #86073
