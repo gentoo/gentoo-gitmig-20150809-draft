@@ -1,13 +1,11 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/XML-DOM-1.25.ebuild,v 1.7 2001/04/09 05:08:37 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/XML-DOM-1.25.ebuild,v 1.8 2002/04/27 10:46:29 seemant Exp $
 
-P=XML-DOM-1.25
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Perl module for an DOM Level 1 compliant interface"
-SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${A}"
+SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.tar.gz"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.readme"
 
 DEPEND=">=sys-devel/perl-5
@@ -22,23 +20,18 @@ src_unpack() {
 
 src_compile() {
 
-    perl Makefile.PL 
-    try make 
-    make test
+	perl Makefile.PL 
+	make || die
+	make test || die
 }
 
 src_install () {
 
-    try make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install
-    dodoc Changes MANIFEST README 
+	make \
+		PREFIX=${D}/usr \
+		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+		install || die
+
+	dodoc Changes MANIFEST README 
 
 }
-
-
-
-
-
-
-
-
-
