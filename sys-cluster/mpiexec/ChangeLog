@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/mpiexec
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/ChangeLog,v 1.2 2003/10/18 07:17:32 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/ChangeLog,v 1.3 2004/03/25 13:02:41 tantive Exp $
+
+*mpiexec-0.74-r1 (25 Mar 2004)
+
+  25 Mar 2004; Michael Imhof <tantive@gentoo.org> mpiexec-0.74-r1.ebuild,
+  mpiexec-0.74.ebuild, mpiexec-0.75.ebuild:
+  Version bumped. Cleaned out old version. Cleaned up ebuild. New ebuilds
+  submitted by Thomas Eckert <eckert.thomas@gmx.net>. Closes #44565.
 
 *mpiexec-0.74 (18 Oct 2003)
 
