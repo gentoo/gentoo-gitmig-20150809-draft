@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r8.ebuild,v 1.9 2004/04/06 10:49:55 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r8.ebuild,v 1.10 2004/04/26 03:44:17 vapier Exp $
 
 inherit eutils
 
-IUSE="selinux"
 MY_P="${PN}_${PV}eta"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Netkit - portmapper"
-SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
+SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc sparc mips alpha hppa ~amd64 ia64 ~ppc64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa ~amd64 ia64 ~ppc64"
+IUSE="selinux"
 
 DEPEND="virtual/glibc
 	>=sys-apps/tcp-wrappers-7.6-r7"
-
 RDEPEND="selinux? ( sec-policy/selinux-portmap )"
 
 src_unpack() {
@@ -66,4 +65,3 @@ src_install() {
 
 	dodoc BLURB CHANGES README
 }
-
