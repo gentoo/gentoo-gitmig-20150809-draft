@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.35 2004/02/11 19:39:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.36 2004/02/19 22:49:48 tgall Exp $
+
+  18 Feb 2004; Tom Gall <tgall@gentoo.org> libtool-1.5.2-r3.ebuild
+  Fix for ppc64, older 1.3.x libtool needs to have configs etc regenerated
+  so they are aware that ppc64 is a valid build,host,target, follow in amd64
+  footsteps
 
 *libtool-1.5.2-r3 (11 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r3.ebuild,v 1.1 2004/02/11 19:39:44 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r3.ebuild,v 1.2 2004/02/19 22:49:48 tgall Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
@@ -68,6 +68,7 @@ src_unpack() {
 
 	use hppa && S="${OLD_S}" gnuconfig_update
 	use amd64 && S="${OLD_S}" gnuconfig_update
+	use ppc64 && S="${OLD_S}" gnuconfig_update
 
 	cd ${S}
 	echo
@@ -142,6 +143,9 @@ src_compile() {
 
 	# Detect mips/mips64
 	use mips && gnuconfig_update
+
+	# regen to allow for build,host,target ppc64
+	use ppc64 && gnuconfig_update
 
 	einfo "Configuring ${OLD_S##*/} ..."
 	./configure --host=${CHOST} \
