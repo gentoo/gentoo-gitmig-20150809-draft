@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.93 2003/04/28 02:40:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.94 2003/04/28 03:06:00 lu_zero Exp $
 
 *gcc-3.2.3 (28 Apr 2003)
 
@@ -24,6 +24,9 @@
 
   28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2-r5.ebuild :
   Remove message and 'die' in pkg_setup().
+
+  28 Apr 2003; Luca Barbato <lu_zero@gentoo.org> gcc-3.2.2-r2.ebuild :
+  Unmasked on ppc
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> :
   - Fix latest ebuild to only build static if we are just building the C
