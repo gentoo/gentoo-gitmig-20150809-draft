@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.1.ebuild,v 1.1 2003/07/24 17:04:18 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.1.ebuild,v 1.2 2003/08/28 02:53:35 caleb Exp $
 
 MDK_EXTRAVERSION="1mdk"
 
@@ -18,7 +18,7 @@ DEPEND="app-arch/rpm2targz
    		>=x11-libs/gtk+-2.0
 		>=media-libs/gdk-pixbuf-0.2.5
 		=x11-libs/gtk+-1.2*
-		>=kde-base/kdelibs-3.1*"
+		>=kde-base/kdebase-3.1*"
 
 src_unpack() {
 		cd ${WORKDIR}
