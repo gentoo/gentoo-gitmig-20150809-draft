@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.7.ebuild,v 1.7 2002/12/11 17:39:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.7.ebuild,v 1.8 2003/01/08 20:38:56 azarah Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda"
 
@@ -20,7 +20,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
-RDEPEND=">=gnome-extra/bonobo-conf-0.14
+RDEPEND="!>=app-text/gnome-spell-0.5
+	!>=gnome-extra/gtkhtml-1.1
+	>=gnome-extra/bonobo-conf-0.14
 	>=gnome-base/bonobo-1.0.18
 	>=gnome-extra/gal-0.19.2
 	( >=gnome-base/gconf-1.0.7 

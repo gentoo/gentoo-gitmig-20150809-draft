@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.1.ebuild,v 1.1 2002/12/17 09:13:07 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.1.ebuild,v 1.2 2003/01/08 20:38:56 azarah Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
 #provide Xmake and Xemake
 
-inherit eutils gnome.org virtualx libtool
+inherit eutils flag-o-matic gnome.org libtool virtualx
 
 DB3="db-3.1.17"
 S="${WORKDIR}/${P}"
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.ximian.com"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 RDEPEND="app-text/scrollkeeper
 	>=gnome-extra/bonobo-conf-0.16
@@ -94,9 +94,20 @@ src_compile() {
 	#
 	# *************************************************************
 
+	# Rather ugly hack to make sure pthread mutex support are not enabled ...
+	cd ${WORKDIR}/${DB3}/dist
+#	cp configure configure.orig
+#	awk '!/MUTEX.*THREADS/ { sub("mut_pthread", "mut_fcntl"); print }' \
+#		configure.orig > configure
+	
 	einfo "Compiling DB3..."
 	cd ${WORKDIR}/${DB3}/build_unix
 	../dist/configure --prefix=${WORKDIR}/db3 || die
+
+	if [ "`egrep "^LIBS=[[:space:]]*-lpthread" Makefile`" ]
+	then
+		append-flags "-pthread"
+	fi
 
 	make || die
 	make prefix=${WORKDIR}/db3 install || die
