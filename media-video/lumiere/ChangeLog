@@ -1,6 +1,13 @@
 # ChangeLog for media-video/lumiere
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lumiere/ChangeLog,v 1.5 2003/02/14 23:35:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lumiere/ChangeLog,v 1.6 2003/03/20 20:03:55 mholzer Exp $
+
+*lumiere-0.4.0 (19 Mar 2003)
+
+  19 Mar 2003; Martin Holzer <mholzer@gentoo.org> lumiere-0.3.0.ebuild,
+  lumiere-0.4.0.ebuild:
+  changed homagepage, src_uri, version bumped
+
 *lumiere-0.3.0 (20 Jan 2003)
 
   20 Jan 2003; Luca Barbato <lu_zero@gentoo.org> lumiere-0.3.0.ebuild :
