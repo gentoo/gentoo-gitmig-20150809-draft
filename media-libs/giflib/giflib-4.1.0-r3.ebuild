@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.2 2002/04/14 16:51:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.3 2002/04/14 16:55:21 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="giflib"
@@ -46,4 +46,18 @@ src_install() {
 	dodoc doc/*.txt
 	dohtml -r doc
 
+}
+
+pkg_postinst() {
+
+	use gif 2>/dev/null && (
+		einfo "You had the gif USE flag set, so the binary from this library"
+		einfo "is your gif binary.  If you would prefer to use the binary from"
+		einfo "the ungif library, please unset the gif USE toggle, and remerge"
+		einfo "both this and libungif"
+	) || (
+		einfo "You did not have the gif USE toggle set, so the binary from"
+		einfo "the libungif package is assumed to be your gif binary. Please"
+		einfo "make sure that you have libungif emerged."
+	)
 }
