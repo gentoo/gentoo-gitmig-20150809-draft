@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6_pre20021105-r1.ebuild,v 1.5 2003/02/24 00:58:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6_pre20021105-r1.ebuild,v 1.6 2003/07/16 14:29:39 pvdabeel Exp $
 
 DESCRIPTION="File transfer program to keep remote files into sync"
 # remove -r1 from SRC_URI since it's the same source
 SRC_URI="http://cvs.gentoo.org/~blizzy/${PF/-r1/}.tar.bz2"
 HOMEPAGE="http://rsync.samba.org"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa"
+KEYWORDS="x86 ppc ~sparc alpha hppa"
 LICENSE="GPL-2"
 SLOT="0"
 

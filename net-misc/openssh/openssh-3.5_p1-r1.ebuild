@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.13 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.14 2003/07/16 14:28:46 pvdabeel Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc alpha mips ~hppa arm"
+KEYWORDS="x86 ppc ~sparc alpha mips ~hppa arm"
 
 src_unpack() {
 	unpack ${A}
