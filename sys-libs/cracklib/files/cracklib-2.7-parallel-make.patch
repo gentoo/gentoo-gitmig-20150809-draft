@@ -1,0 +1,30 @@
+--- Makefile.orig	2004-12-07 01:17:53.000000000 -0800
++++ Makefile	2004-12-07 01:34:09.000000000 -0800
+@@ -31,21 +31,17 @@
+ 	@echo "you evidently don't know what you're doing. go read the README"
+ 
+ all:
+-	( cd cracklib && make && exit $$? )
+-	( cd util && make DICTPATH=$(DICTPATH) && exit $$? )
+-###	( cd passwd && make DICTPATH=$(DICTPATH) passwd && exit $$? )
+-###	touch all
++	$(MAKE) -C cracklib
++	$(MAKE) DICTPATH=$(DICTPATH) -C util
+ 
+ clean:
+-	-( cd cracklib && make clean && exit $$? )
+-	-( cd util && make clean && exit $$? )
+-###	-( cd passwd && make clean && exit $$? )
++	$(MAKE) -C cracklib clean
++	$(MAKE) -C util clean
+ 	-rm -f all installed Part* *.BAK *.bak *~
+ 
+ install: all
+-	( cd cracklib && make install && exit $$? )
+-	( cd util && make install && exit $$? )
++	$(MAKE) -C cracklib install
++	$(MAKE) -C util install
+ 	@echo 'if "sort" dies from lack of space, see "util/mkdict"'
+ 	util/mkdict $(SRCDICTS) | LD_LIBRARY_PATH=cracklib util/packer $(DESTDIR)$(DICTPATH)
+ 	touch installed
+-###	@echo 'now go install passwd/passwd where you want it'
