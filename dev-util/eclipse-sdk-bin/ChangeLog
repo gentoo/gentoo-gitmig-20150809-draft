@@ -1,10 +1,15 @@
 # ChangeLog for dev-util/eclipse-sdk-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/ChangeLog,v 1.2 2003/07/11 15:52:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/ChangeLog,v 1.3 2003/09/06 17:30:55 karltk Exp $
+
+  06 Sep 2003; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  eclipse-sdk-bin-2.1.ebuild:
+  Improved DESCRIPTION.
 
 *eclipse-sdk-bin-2.1 (30 Jun 2003)
 
-  30 Jun 2003; <karltk@gentoo.org> eclipse-sdk-bin-2.1.ebuild,
+  30 Jun 2003; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  eclipse-sdk-bin-2.1.ebuild,
   files/eclipse.desktop:
   Renamed from eclipse-SDK, as this package does not build all of Eclipse
   from sources (it only builds SWT on PPC, as the rest if provided
@@ -12,7 +17,7 @@
 
 *eclipse-SDK-2.1 (12 Apr 2003)
 
-  27 Apr 2003; <tberman@gentoo.org> eclipse-SDK-2.1.ebuild,
+  27 Apr 2003; Todd Berman <tberman@gentoo.org> eclipse-SDK-2.1.ebuild,
   files/eclipse.desktop:
   Added an eclipse.desktop file to show eclipse in gnome applications menu.
   Closed bug #17141

@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/eclipse-cdt-bin-20030501.ebuild,v 1.1 2003/05/02 19:24:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/eclipse-cdt-bin-20030501.ebuild,v 1.2 2003/09/06 17:28:13 karltk Exp $
 
 S=${WORKDIR}/eclipse
-DESCRIPTION="Eclipse Tools Platform"
+DESCRIPTION="C/C++ Development Tools for Eclipse"
 HOMEPAGE="http://www.eclipse.org"
 SRC_URI="http://download.eclipse.org/tools/cdt/downloads/cdt/cdt1_1/org.eclipse.cdt-200305011510.linux.gtk_1.1.0.bin.dist.zip"
 
