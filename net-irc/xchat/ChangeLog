@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.146 2005/02/20 01:38:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.147 2005/02/23 04:57:50 kingtaco Exp $
+
+  22 Feb 2005; Mike Doty <kingtaco@gentoo.org> xchat-2.4.1.ebuild:
+  stable on amd64. bug 71997
 
   20 Feb 2005; Joseph Jezak <josejx@gentoo.org> xchat-2.4.1.ebuild:
   Marked ppc stable for bug #71997
