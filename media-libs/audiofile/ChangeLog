@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.6 2003/02/12 07:06:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.7 2003/07/01 20:16:47 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -9,6 +9,9 @@
   Remove unneeded auto* tools.
 
 *audiofile-0.2.3-r1 (21 March 2002)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> audiofile-0.2.3-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   21 March 2002; M.Schlemmer <azarah@gentoo.org> :
 
