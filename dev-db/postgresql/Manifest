@@ -2,11 +2,12 @@ MD5 52a786d752a82349212155903662c276 postgresql-7.3.6-r1.ebuild 7488
 MD5 a26d22bfba7c68e923e84ccdf2621cd5 postgresql-7.4.3-r1.ebuild 10027
 MD5 db5aa17dc6c6dd103ce916d1a00ad031 postgresql-7.4.5-r2.ebuild 10092
 MD5 afd64dedb8ded9a9cf95cbb85caec6af postgresql-8.0.0_beta3.ebuild 6846
+MD5 e9956ae85399e18387ce6e9dc883dfe1 postgresql-7.3.7-r2.ebuild 7938
 MD5 c63f96b86d295d4e2e74c7bbeae78f02 postgresql-7.4.3.ebuild 9735
 MD5 df89aeb5146dfcadb9a70955622f2813 postgresql-7.4.5-r1.ebuild 10058
 MD5 6a4e08d7e6868cd77fc1819a6f1d0f5d postgresql-7.3.7.ebuild 7867
 MD5 9d0536b8ef181c50026048c1c0c89036 postgresql-7.4.5.ebuild 10045
-MD5 297fe22d8205077679224f9c4ea9e914 ChangeLog 24849
+MD5 e4ee4501c5242fb0c6843551751deddb ChangeLog 25035
 MD5 757144ac9d71c3a6e22f21da4149c937 postgresql-7.3.7-r1.ebuild 7899
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 cd9e32f5a21def1a4e2d1ac0e042aa47 files/postgresql-7.3.7-gentoo.patch 529
@@ -21,6 +22,7 @@ MD5 2d09c23680cd7d8f706a2fe8cc41b8fa files/postgresql.init-8.0.0 1279
 MD5 9787933dfca9cc3858468186231a9df1 files/postgresql.conf-7.4.3 390
 MD5 9787933dfca9cc3858468186231a9df1 files/postgresql.conf-7.4.5 390
 MD5 9787933dfca9cc3858468186231a9df1 files/postgresql.conf-8.0.0 390
+MD5 a12e2f4ae7117b664e78b9966db14096 files/postgresql-7.3.7-tempfile.patch 1453
 MD5 b22b4de6c3cc06beed0ed3e1f8df257f files/digest-postgresql-7.3.7 223
 MD5 a0c1913ae5fcdc67eccdc1ed2e8360f2 files/digest-postgresql-7.4.3 290
 MD5 edd1ce8d03bdce473718f1c3036e68cd files/digest-postgresql-7.4.5 290
@@ -34,6 +36,7 @@ MD5 f866bf017df6501dfe4918e0d4744f61 files/digest-postgresql-8.0.0_beta3 238
 MD5 bd8092be6ccc6918973d9654caacbfab files/postgresql-7.4.5-hppa-testandset.patch 1596
 MD5 3b4cbf59561d655b882ab335b892909d files/digest-postgresql-7.3.6-r1 223
 MD5 b22b4de6c3cc06beed0ed3e1f8df257f files/digest-postgresql-7.3.7-r1 223
+MD5 b22b4de6c3cc06beed0ed3e1f8df257f files/digest-postgresql-7.3.7-r2 223
 MD5 a0c1913ae5fcdc67eccdc1ed2e8360f2 files/digest-postgresql-7.4.3-r1 290
 MD5 edd1ce8d03bdce473718f1c3036e68cd files/digest-postgresql-7.4.5-r1 290
 MD5 edd1ce8d03bdce473718f1c3036e68cd files/digest-postgresql-7.4.5-r2 290
