@@ -3,16 +3,18 @@ Hash: SHA1
 
 MD5 696dfc587a0a017ea59b97b4049021d9 jsch-0.1.17.ebuild 973
 MD5 2e8eab63b6ab634cb74d764c3a4fce23 jsch-0.1.16.ebuild 973
-MD5 ad08c2c5537bbc6685acc3beecb4386a ChangeLog 2528
+MD5 0a579fcb3f35cf8ca02f2a168e6dfc3d jsch-0.1.18.ebuild 973
+MD5 cbcf5601671b4e6dd2a2a99adbaafd10 ChangeLog 2642
 MD5 9e8672759e129a93aa74db7aaf174163 jsch-0.1.15.ebuild 969
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d5f449a0c2ef9fa25fce49d1258916d1 files/digest-jsch-0.1.15 60
 MD5 d08475096e782d87daa3748aa6ed4ebe files/digest-jsch-0.1.16 60
 MD5 53d260d9dbe97b01d9c72f8d71748f1b files/digest-jsch-0.1.17 60
+MD5 3ea4f3d468b864097aa05187c1c750ba files/digest-jsch-0.1.18 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcVnH/rLF9B432nYRAqBTAKCZKsQGLLDySi4XDFgExbgxtH/OCgCgqYjK
-xBWxzSuGSHHcwfhKqjgyebs=
-=32UV
+iD8DBQFBgUrP/rLF9B432nYRAnBSAJ9DyMVAI1Dpw7lIu61SKtbriMSYQwCdEyAC
+xyKa0oMDa1ylP6tVpNAIPpQ=
+=odbU
 -----END PGP SIGNATURE-----
