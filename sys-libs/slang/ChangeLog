@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.14 2003/05/19 00:43:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.15 2003/06/10 15:13:30 yakina Exp $
+
+*slang-1.4.9 (10 Jun 2003)
+
+  10 Jun 2003; YAMAKURA Makot <yakina@gentoo.org> slang-1.4.5-r3.ebuild,
+  slang-1.4.9.ebuild, files/digest-slang-1.4.5-r3, files/digest-slang-1.4.9 :
+  New version 1.4.9. Added cjk USE flag to 1.4.9 and 1.4.5-r3.
 
   18 May 2003; Tavis Ormandy <taviso@gentoo.org> slang-1.4.5-r2.ebuild:
   removing hardcoded compiler.
