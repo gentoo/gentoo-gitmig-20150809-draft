@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.7.ebuild,v 1.3 2005/01/31 18:04:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.7.ebuild,v 1.4 2005/02/07 22:20:22 kloeri Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.libsdl.org/projects/SDL_ttf/release/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc ~ppc64 sparc x86"
 IUSE="X"
 
 DEPEND="X? ( virtual/x11 )
