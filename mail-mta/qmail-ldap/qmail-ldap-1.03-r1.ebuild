@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.4 2004/07/01 19:54:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.5 2004/07/20 14:35:16 tomk Exp $
 
 IUSE="ssl"
 
@@ -14,8 +14,8 @@ HOMEPAGE="http://www.qmail.org/
 	http://iain.cx/unix/qmail/mysql.php
 	http://www.nrg4u.com/"
 SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
-	http://www.qmail.org/big-todo.103.patch
-	http://www.qmail.org/big-concurrency.patch
+	mirror://qmail/big-todo.103.patch
+	mirror://qmail/big-concurrency.patch
 	http://www.ckdhr.com/ckd/qmail-103.patch
 	http://www.lifewithqmail.org/ldap/patches/smtp-auth/smtp-auth-20030301.patch
 	http://www.suspectclass.com/~sgifford/qmail/qmail-0.0.0.0.patch
