@@ -42,7 +42,8 @@
 
 # <satai@gentoo.org> (16 Aug 2002)
 # Masked for testing
-=app-text/docbook-xml-dtd-4.1.2-r3
+# tested, unmasking.  Hoping.
+#=app-text/docbook-xml-dtd-4.1.2-r3
 
 # <aliz@gentoo.org> (16 Aug 2002)
 # Masked for testing
@@ -230,7 +231,7 @@ app-editors/kvim
 
 # Seemant Kulleen <seemant@gentoo.org> (04 Aug 2002)
 # Maksed for testing
-=sys-libs/libieee1284-0.2.0
+#=sys-libs/libieee1284-0.2.0
 
 # Leonardo Boshell <leonardop@gentoo.org> (04 Aug 2002)
 # These packages have been replaced with the new gtk-engines-* form
