@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libopendaap
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.1 2004/08/11 17:46:57 squinky86 Exp $
+
+*libopendaap-0.2.3 (11 Aug 2004)
+
+  11 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +libopendaap-0.2.3.ebuild:
+  Initial import, #59870, thanks to jon <jmoses@vtsportbike.net> for the ebuild.
+
