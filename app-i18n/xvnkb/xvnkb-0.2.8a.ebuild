@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: xvnkb-0.2.8a.ebuild,v 1.1 2004/04/29 17:06:34 usata Exp $
+# Header: $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://xvnkb.sourceforge.net/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND="virtual/x11
 	truetype? ( virtual/xft )"
 
