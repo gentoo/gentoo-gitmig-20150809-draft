@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/gnut-0.4.28.ebuild,v 1.9 2003/02/13 15:19:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/gnut-0.4.28.ebuild,v 1.10 2003/09/08 20:32:41 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text-mode gnutella client"
 SRC_URI="http://alge.anart.no/ftp/pub/gnutella/${P}.tar.gz"
-HOMEPAGE="http://http://www.gnutelliums.com/linux_unix/gnut/"
+HOMEPAGE="http://www.gnutelliums.com/linux_unix/gnut/"
 
 SLOT="0"
 LICENSE="GPL-2"
