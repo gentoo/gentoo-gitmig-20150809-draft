@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.21.ebuild,v 1.3 2004/05/21 18:00:30 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.21-r2.ebuild,v 1.1 2004/06/18 14:17:46 squinky86 Exp $
 
 inherit eutils
 
@@ -8,26 +8,32 @@ IUSE="gtk"
 
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
-SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz
+	http://www.8ung.at/spiralvoice/patches/patch_pack21g"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 hppa"
 
-DEPEND="gtk? ( =dev-ml/lablgtk-1* )
+RDEPEND="gtk? ( =dev-ml/lablgtk-1* )
 	>=dev-lang/ocaml-3.06
-	dev-lang/perl"
+	dev-lang/perl
+	net-misc/wget"
 
-RDEPEND="${DEPEND}
-	 net-misc/wget"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58"
 
 MLUSER="p2p"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-configure.patch
+	#Don't change this, unless you know what you are doing
+	patch -p0 < ${DISTDIR}/patch_pack21g || die
+	export WANT_AUTOCONF=2.5
+	cd config; autoconf; cd ..
 }
 
 
@@ -42,8 +48,8 @@ src_compile() {
 		--enable-batch \
 		--enable-checks \
 		--enable-pthread || die
+	export OCAMLRUNPARAM="l=256M"
 	make depend || die
-
 	emake || die
 }
 
