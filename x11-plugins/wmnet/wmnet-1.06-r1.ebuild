@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06-r1.ebuild,v 1.1 2004/12/05 11:47:59 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06-r1.ebuild,v 1.2 2005/01/26 13:40:22 s4t4n Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc ~alpha ~amd64 ~ppc"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
