@@ -1,6 +1,18 @@
-MD5 1c10481d5a4a9dd2d641bb38220542de ChangeLog 895
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb21c010fe13cf146c24294448da4d63 ChangeLog 1061
 MD5 6299292cb9170b629d5a35ca12c667a4 Template-Toolkit-2.09.ebuild 850
 MD5 199c1b591414fd8623df4936454d0f34 Template-Toolkit-2.13.ebuild 853
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 b5b9f1df42c1d1ef7b5aeeff5a0235f5 Template-Toolkit-2.14.ebuild 1848
 MD5 761763128c07a5edb55acee00b1f30f6 files/digest-Template-Toolkit-2.09 73
 MD5 75805cc0fe8d7e3b72a326b38c3834aa files/digest-Template-Toolkit-2.13 73
+MD5 8d24caf78d2b06b995b4d60d030a36a3 files/digest-Template-Toolkit-2.14 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBdR9ftG5z4I8BtQoRAhAqAJwIxRqqs4wnuTUHJ3tnPPgzRBayswCfWY26
+7eri9mBurDk/c8+mvx4IC44=
+=zQax
+-----END PGP SIGNATURE-----
