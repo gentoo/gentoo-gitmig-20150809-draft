@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/qcad
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.26 2004/09/30 10:56:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.27 2004/10/17 10:41:56 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> qcad-2.0.4.0.ebuild:
+  keywords ~amd64.
 
 *qcad-2.0.4.0 (30 Sep 2004)
 

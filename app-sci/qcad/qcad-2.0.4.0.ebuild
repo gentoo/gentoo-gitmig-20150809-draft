@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.4.0.ebuild,v 1.2 2004/10/10 13:06:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.4.0.ebuild,v 1.3 2004/10/17 10:41:56 absinthe Exp $
 
 inherit kde-functions eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.ribbonsoft.com/qcad.html"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 need-qt 3.3
 
