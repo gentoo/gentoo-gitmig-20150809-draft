@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r3.ebuild,v 1.2 2001/09/23 03:17:51 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r3.ebuild,v 1.3 2001/09/23 22:37:46 blocke Exp $
 
 A=ircii-pana-1.0c18.tar.gz
 S=${WORKDIR}/BitchX
@@ -14,9 +14,9 @@ DEPEND="virtual/glibc
         ssl? ( >=dev-libs/openssl-0.9.6 )
 	gnome? ( >=x11-libs/gtk+-1.2.0
 	         >=media-libs/imlib-1.9.4
- 	         >=gnome-base/gnome-libs-1.2 )"
-#	esd? ( >=media-sound/esound-0.2.5
-#	       >=media-libs/audiofile-0.1.5 )
+ 	         >=gnome-base/gnome-libs-1.2 )
+	esd? ( >=media-sound/esound-0.2.5
+	       >=media-libs/audiofile-0.1.5 )"
 
 src_unpack() {
 	unpack ${A}
@@ -37,12 +37,10 @@ src_compile() {
 		myopts="$myopts --with-gtk"
 	fi
 
-#	if [ -n "`use esd`" ]
-#	then
-#		myopts="$myopts --enable-sound"
-#	fi
-
-	myopts="$myopts --disable-sound"
+	if [ -n "`use esd`" ]
+	then
+		myopts="$myopts --enable-sound"
+	fi
 
 	./configure --prefix=/usr --host=${CHOST} --build=${CHOST}	\
 		    --enable-cdrom --enable-ipv6 --with-plugins 	\
