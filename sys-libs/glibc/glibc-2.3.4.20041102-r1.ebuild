@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.1 2005/03/16 10:34:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.2 2005/03/21 16:20:26 agriffis Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -50,7 +50,7 @@ LICENSE="LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}-2.2" \
 	|| SLOT="2.2"
-KEYWORDS="amd64 ppc64 -hppa ia64 ppc x86 ~mips ~sparc"
+KEYWORDS="~alpha amd64 -hppa ia64 ~mips ppc ppc64 ~sparc x86"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck"
 RESTRICT="nostrip multilib-pkg-force" # we'll handle stripping ourself #46186
 
