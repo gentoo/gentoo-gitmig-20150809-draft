@@ -1,9 +1,19 @@
-MD5 ba7b47ebee04564a6bc49bd611ded8f9 ChangeLog 2075
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d597910034080d6111eb2bf8fb5674b8 ChangeLog 2173
 MD5 4c1c1e710ea77d8d7db9906084c4228d metadata.xml 215
-MD5 b453fb95980849522de3a5bd196734fb openhbci-0.9.13.ebuild 722
 MD5 5da5f289055434d64091541412c4a1de openhbci-0.9.14.ebuild 729
-MD5 666a4d6ed9a352725e39b7fcd86a5ab2 openhbci-0.9.16.ebuild 822
+MD5 ce52208367248120caa57d4fb24a00d3 openhbci-0.9.16.ebuild 819
+MD5 b453fb95980849522de3a5bd196734fb openhbci-0.9.13.ebuild 722
+MD5 e3f327c9b6672bdf75575aed1d6326a1 files/digest-openhbci-0.9.16 67
 MD5 99b5dac01ae8c373aaccf17c8159f605 files/digest-openhbci-0.9.13 67
 MD5 ed13c8694653abf0b31b22f093d63742 files/digest-openhbci-0.9.14 67
-MD5 e3f327c9b6672bdf75575aed1d6326a1 files/digest-openhbci-0.9.16 67
 MD5 5f290d906a9ad365e70e6eedd850db85 files/openhbci_gcc34.gz 315
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhUxDugEuf3OQ0akRAhBQAJ9RPXX9p0gr3BG9O9zOVqY5j3bkGwCbBpqd
+KVuhJhkJE4vsul/uaXvVVro=
+=My+T
+-----END PGP SIGNATURE-----
