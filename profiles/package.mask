@@ -8,3 +8,4 @@ app-admin/va-systemimager-client
 app-editors/gtk-xemacs
 >=app-text/pspell-0.12
 >=app-text/aspell-0.33
+app-text/sgml2x

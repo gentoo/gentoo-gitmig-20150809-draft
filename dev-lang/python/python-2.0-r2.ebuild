@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r2.ebuild,v 1.1 2001/04/28 09:51:03 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r2.ebuild,v 1.2 2001/04/28 12:48:27 achim Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -25,6 +25,7 @@ src_unpack() {
     then
       sed -e 's/#readline/readline/' -e 's/-lreadline -ltermcap/-lreadline/' \
 	  -e 's/#_curses _cursesmodule.c -lcurses -ltermcap/_curses _cursesmodule.c -lncurses/' \
+	  -e 's/#crypt/crypt/' -e 's/# -lcrypt/-lcrypt/' \
 	Setup.in > Setup.new
         mv Setup.new Setup.in
     fi
@@ -36,7 +37,7 @@ src_unpack() {
         mv Setup.new Setup.in
     fi
    
-    sed	-e 's/#_locale/_locale/' -e 's/#crypt/crypt/' -e 's/# -lcrypt/-lcrypt/' \
+    sed	-e 's/#_locale/_locale/'  \
 	-e 's/#syslog/syslog/'  \
 	-e 's:#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz:zlib zlibmodule.c -lz:' \
 	-e 's:^TKPATH=\:lib-tk:#TKPATH:' \
