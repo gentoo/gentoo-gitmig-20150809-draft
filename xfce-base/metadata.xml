@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The xfce-base category contains base XFCE packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie XFCE enthält die Basispakete des XFCE-Desktops.
+	</longdescription>
 </catmetadata>
 
