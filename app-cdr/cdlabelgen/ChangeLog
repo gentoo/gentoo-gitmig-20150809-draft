@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdlabelgen
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.15 2004/03/21 13:38:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.16 2004/05/04 21:20:33 kugelfang Exp $
+
+  04 May 2004; Danny van Dyk <kugelfang@gentoo.org> cdlabelgen-3.0.0.ebuild:
+  Marked ~amd64.
 
   21 Mar 2004; Martin Holzer <mholzer@gentoo.org> cdlabelgen-2.3.0.ebuild,
   cdlabelgen-2.4.0.ebuild, cdlabelgen-2.6.0.ebuild, cdlabelgen-2.6.1.ebuild,
