@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0.ebuild,v 1.3 2004/09/05 02:17:10 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.1 2004/09/16 16:19:00 eradicator Exp $
+
+IUSE=""
 
 inherit eutils
 
@@ -11,14 +13,13 @@ HOMEPAGE="http://www.shoutcast.com"
 SRC_URI="http://www.shoutcast.com/downloads/sc_trans_posix_${SVER}.tgz"
 LICENSE="shoutcast"
 SLOT="0"
-KEYWORDS="x86"
-IUSE=""
-DEPEND="virtual/libc
-media-sound/shoutcast-server-bin"
+KEYWORDS="-* x86 ~amd64"
+DEPEND="amd64? ( emul-linux-x86-glibc )
+	media-sound/shoutcast-server-bin"
 S="${WORKDIR}/sc_trans_${SVER}"
 
-src_unpack() {
-	unpack "sc_trans_posix_${SVER}.tgz"
+src_compile() {
+	einfo "Nothing to compile."
 }
 
 src_install() {
@@ -45,6 +46,9 @@ src_install() {
 
 	# create a directory for playlists to be put
 	keepdir /opt/shoutcast/playlists
+
+	# Fix permissions - security bug #63551
+	fperms 600 /etc/shoutcast/sc_trans.conf
 }
 
 pkg_postinst() {
