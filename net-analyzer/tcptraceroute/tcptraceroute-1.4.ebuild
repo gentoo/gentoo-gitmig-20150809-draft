@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.2.ebuild,v 1.5 2002/08/14 12:12:29 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4.ebuild,v 1.1 2002/08/19 02:25:23 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="tcptraceroute is a traceroute implementation using TCP packets"
