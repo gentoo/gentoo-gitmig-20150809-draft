@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.38 2003/09/23 22:25:18 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.39 2003/10/05 11:30:16 mholzer Exp $
+
+  06 Oct 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r7.ebuild,
+  files/mjpegtools-1.6.0-gcc3.patch:
+  Added gcc3 fix. Closes #25163.
 
   23 Sep 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.1.90-r1.ebuild:
   Forward-port the hardened-gcc fixes.

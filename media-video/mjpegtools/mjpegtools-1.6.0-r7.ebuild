@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.16 2003/08/26 00:56:47 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.17 2003/10/05 11:30:16 mholzer Exp $
 
 inherit eutils gcc libtool flag-o-matic base
 
@@ -46,10 +46,8 @@ src_unpack() {
 
 	if use quicktime && ! use alpha; then
 		cd ${WORKDIR}/quicktime4linux-1.4-patch
-		cp libmjpeg.h libmjpeg.h.orig
-		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h.orig > libmjpeg.h
-		cp jpeg_old.h jpeg_old.h.orig
-		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h.orig > jpeg_old.h
+		sed -i "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h
+		sed -i "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h
 
 		if [ "`gcc-major-version`" -eq "3" ] ; then
 		# Don't remove this - contact phoen][x <phoenix@gentoo.org> if you have problems with it.
@@ -63,6 +61,9 @@ src_unpack() {
 		cd ${S}
 		epatch ${FILESDIR}/1.6.0-r7-ppc.patch || die "epatch failed"
 	fi
+	
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc3.patch
 }
 
 src_compile() {
