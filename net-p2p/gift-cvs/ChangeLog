@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/gift-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/ChangeLog,v 1.9 2003/06/01 03:39:56 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/ChangeLog,v 1.10 2003/06/01 04:02:52 lostlogic Exp $
+
+*gift-cvs-0.11.0 (31 May 2003)
+
+  31 May 2003; Brandon Low <lostlogic@gentoo.org> gift-cvs-0.11.0.ebuild:
+  New ebuild thanks to Frank Straetz from bug 21123 adds support for Gnutella
+  and FastTrack networks.
 
   31 May 2003; Brandon Low <lostlogic@gentoo.org> gift-cvs-0.10.0.ebuild:
   Add fix for sandbox violations from bug 21701
