@@ -1,6 +1,11 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.9 2004/07/01 19:28:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.10 2004/07/21 17:47:36 avenj Exp $
+
+  21 Jul 2004; Jon Portnoy <avenj@gentoo.org> multitail-3.2.3.ebuild :
+  Version bump, DEPEND fix, and addition of debug USE flag.
+  Bump courtesy of Daniel Webert, ebuild fixes from Aaron Walker,
+  bug #57488.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   multitail-3.0.6.ebuild:
