@@ -1,4 +1,14 @@
-MD5 430122f73a75d626a387fb7dadbfb963 dlm-1.0_pre6.ebuild 749
-MD5 1c56dc0277f3a04c31b6ecef26fa1f55 ChangeLog 278
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8873d5690fcbecf8bc755fa56c6bcee5 dlm-1.0_pre6.ebuild 749
+MD5 f57ab052feee99f0a51f3f4e656f9ec8 ChangeLog 426
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 1c4db8e258838bc60b994ca483cc195e files/digest-dlm-1.0_pre6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+V1qgMUyd/cdjWsRAoRkAKCPYLMiq9dS84s28fkdyhHVC8Y2wgCfbw/p
+ySrtGKdcbuYk+ltbjYBuN4g=
+=Xo8F
+-----END PGP SIGNATURE-----
