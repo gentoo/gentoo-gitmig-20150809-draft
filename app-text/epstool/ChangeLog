@@ -1,6 +1,11 @@
 # ChangeLog for app-text/epstool
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.3 2003/12/09 17:42:12 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.4 2004/03/09 07:02:50 phosphan Exp $
+
+*epstool-3.04 (09 Mar 2004)
+
+  09 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> epstool-3.04.ebuild:
+  Version bump
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> epstool-3.02.ebuild:
   changed app-text/ghostscript to virtual/ghostscript
