@@ -1,4 +1,5 @@
 MD5 ee85fc80d1fff82c4685bec57769b9fe gaim-0.67.ebuild 2166
+MD5 10df9272923691f1aafbd3f6a36c6bbc gaim-0.68-r3.ebuild 2451
 MD5 c8d30850b6d67308ab0ebc7b38985bb1 gaim-0.67-r1.ebuild 2160
 MD5 3871c1360a32f544c1c5ee62a6be2e58 gaim-0.63-r1.ebuild 1809
 MD5 732ec4a141392279f7984b5e2dc73fc3 gaim-0.66-r4.ebuild 1971
@@ -17,5 +18,7 @@ MD5 33402ae3eb7e61ffae5ab976f90121b2 files/digest-gaim-0.66-r4 126
 MD5 6850f68d67c0633c22c07fb1ecf8ed07 files/digest-gaim-0.67-r1 135
 MD5 a2573960c3aaad5d08dddcc3ad9b5f23 files/digest-gaim-0.68-r1 135
 MD5 a2573960c3aaad5d08dddcc3ad9b5f23 files/digest-gaim-0.68-r2 135
+MD5 a2573960c3aaad5d08dddcc3ad9b5f23 files/digest-gaim-0.68-r3 135
+MD5 57559d5956390a9a453b7d38bffa1bd5 files/gaim-0.68-yahoo.newserver.patch 349
 MD5 97fa7a76f6bc96c363844ccc57b2bec4 files/gaim_gtkimcontext_patch.diff 1106
 MD5 8a38e88937de7dd9b0bd1cd18afd8164 files/gaim-encryption-2.10-keys.patch 476
