@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-base64
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/ChangeLog,v 1.1 2003/06/10 04:53:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/ChangeLog,v 1.2 2003/08/28 17:16:44 mkennedy Exp $
+
+*cl-base64-3.2.1 (28 Aug 2003)
+
+  28 Aug 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-base64-3.2.1.ebuild:
+  minor version update
 
 *cl-base64-3.2 (07 Jul 2003)
 
