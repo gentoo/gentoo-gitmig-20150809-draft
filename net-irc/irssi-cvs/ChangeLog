@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi-cvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/ChangeLog,v 1.7 2004/07/07 22:42:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/ChangeLog,v 1.8 2004/09/27 21:36:07 swegener Exp $
+
+  27 Sep 2004; Sven Wegener <swegener@gentoo.org> irssi-cvs-0.2.ebuild:
+  Added net-www/lynx to build-time dependencies since irssi uses lynx to
+  create plain text docs from html files.
 
   08 Jul 2004; Sven Wegener <swegener@gentoo.org> irssi-cvs-0.2.ebuild:
   Updated dependencies.
