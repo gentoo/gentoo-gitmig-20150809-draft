@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/hx
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/ChangeLog,v 1.1 2004/07/28 12:25:11 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/ChangeLog,v 1.2 2004/08/29 19:35:07 kang Exp $
+
+  29 Aug 2004; Guillaume Destuynder <kang@gentoo.org> hx-0.4.10.ebuild:
+  Marked stable on x86 and ppc
 
 *hx-0.4.10 (28 Jul 2004)
 
