@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.7.1.ebuild,v 1.11 2003/02/13 10:10:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.7.1.ebuild,v 1.12 2003/05/03 19:51:59 tberman Exp $
 
 IUSE="gnome"
 
@@ -16,12 +16,12 @@ DEPEND="virtual/glibc
 RDEPEND="$DEPEND"
 SLOT="0.7"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 src_compile() {
 	local myconf
 	
-	JAVAC="`which jikes` -classpath $CLASSPATH:." \
+	#JAVAC="`which jikes` -classpath $CLASSPATH:." \
 		./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
@@ -33,15 +33,15 @@ src_compile() {
 	myclasspath=`java-config --full-classpath=java-gtk | sed "s/\:/\\\\\:/g"`
 
 	cp src/Makefile src/Makefile.orig
-	sed -e "s:CLASSPATH = tools\:.:CLASSPATH = ${myclasspath}\:tools\:.:" \
+	sed -e "s|CLASSPATH = tools\:.|CLASSPATH = ${myclasspath}\:tools\:.|" \
 		< src/Makefile.orig > src/Makefile
 
 	cp src/tools/Makefile src/tools/Makefile.orig
-	sed -e "s:CLASSPATH = .:CLASSPATH = ${myclasspath}\:.:" \
+	sed -e "s|CLASSPATH = .|CLASSPATH = ${myclasspath}\:.|" \
 		< src/tools/Makefile.orig > src/tools/Makefile
 	
 	cp test/Makefile test/Makefile.orig
-	sed -e "s:CLASSPATH = ../lib/gtk.jar\:../lib/gnome.jar:CLASSPATH = ${myclasspath}\:.\:../lib/gtk.jar\:../lib/gnome.jar:" \
+	sed -e "s|CLASSPATH = ../lib/gtk.jar\:../lib/gnome.jar|CLASSPATH = ${myclasspath}\:.\:../lib/gtk.jar\:../lib/gnome.jar|" \
 		< test/Makefile.orig > test/Makefile
 
 	cp src/other/{Base*.java,GStringArray.java,GListString.java} src/gnu/gdk/
@@ -62,7 +62,7 @@ src_install () {
 	rm ${D}/usr/lib/libGNOMEJava.so
 	dosym /usr/lib/libGNOMEJava.so.${PV} /usr/lib/libGNOMEJava.so
 
-	rm /usr/share/java-gnome/gtk*.jar
+	rm ${D}/usr/share/java-gnome/gtk*.jar
 		
 	echo "/usr/share/java-gnome/gnome-${PV}.jar:" \
 		> ${D}/usr/share/java-gnome/classpath.env
