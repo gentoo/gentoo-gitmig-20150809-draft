@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.65 2004/11/08 22:17:11 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.66 2004/11/12 18:57:37 plasmaroo Exp $
+
+*ck-sources-2.4.27-r2 (12 Nov 2004)
+
+  12 Nov 2004; <plasmaroo@gentoo.org> -ck-sources-2.4.27-r1.ebuild,
+  +ck-sources-2.4.27-r2.ebuild, ck-sources-2.6.9-r3.ebuild,
+  +files/ck-sources-2.4.27.binfmt_elf.patch,
+  +files/ck-sources-2.6.9.binfmt_elf.patch:
+  Version bump for the binfmt_elf security vulnerability, bug #70681.
 
 *ck-sources-2.6.9-r3 (08 Nov 2004)
 
