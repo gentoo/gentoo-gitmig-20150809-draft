@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.106 2003/11/19 02:56:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.107 2003/11/19 04:39:08 gmsoft Exp $
 
 *glibc-2.3.2-r9 (18 Nov 2003)
+
+  19 Nov 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r9.ebuild :
+  Added clean hppa patches. Seems not to suffer of the -r8 problems.
 
   18 Nov 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r9.ebuild :
   Removed hppa stuff. New patching method should come shortly.
