@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 799f0b61a3a686b4074bd61acc572c5c metadata.xml 1003
 MD5 4871b943d694b8d009f993c244356257 valgrind-2.2.0-r1.ebuild 1428
 MD5 46281e9050feb774ded81bb7f2d3a4c1 ChangeLog 2915
@@ -11,6 +8,7 @@ MD5 07f48be25380e77aa5a44fec2b408998 valgrind-2.1.1.ebuild 925
 MD5 b99a507d5351da63d87c61f3fe0072ad valgrind-2.1.2.ebuild 1101
 MD5 2371f70b5ed5e88767cade219fd7cc65 valgrind-2.2.0.ebuild 1388
 MD5 8884d8b887013cbc4f5a865135b5f24b valgrind-2.2.0-r2.ebuild 1717
+MD5 fa091a239b89497336bafcdc34cd162f valgrind-2.4.0.ebuild 1267
 MD5 286d10f4514e8a85360ce6ba5654ae93 files/digest-valgrind-2.0.0 67
 MD5 a69fe5652a8ca5fb1d04521fe0c56850 files/digest-valgrind-2.1.0 138
 MD5 f50184c09d0376e66b1b79d0b45e94c2 files/digest-valgrind-2.1.1 67
@@ -24,10 +22,4 @@ MD5 26192577445b467e528408118f7ee6ec files/digest-valgrind-2.2.0-r1 139
 MD5 fc1dda2b6f2603a4244ad25f555f2034 files/valgrind-2.2.0-no-exec-stack.patch 1711
 MD5 26192577445b467e528408118f7ee6ec files/digest-valgrind-2.2.0-r2 139
 MD5 d10a593e8cb1c5074c438adc226d1c81 files/valgrind-2.2.0-current-macro-clash.patch 1871
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCG5TzMGnpIbeahxwRAgn8AJ0UTOFAlccIu8Hv2c2iwf7uggALewCgqDaP
-1UGF1tb9coTdFlybrLO/tfA=
-=n3e7
------END PGP SIGNATURE-----
+MD5 e2dec812b00ae7d80e570dc0922ed676 files/digest-valgrind-2.4.0 68

@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.42 2005/02/22 20:24:09 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.43 2005/03/24 20:32:32 griffon26 Exp $
+
+*valgrind-2.4.0 (24 Mar 2005)
+
+  24 Mar 2005; Maurice van der Pot <griffon26@gentoo.org>
+  valgrind-2.2.0-r2.ebuild, +valgrind-2.4.0.ebuild:
+  Added ebuild for new version 2.4.0. Temporarily dropped ~ppc until 
+  a ppc version is released.
+  Marked 2.2.0-r2 stable on x86
 
   22 Feb 2005; Maurice van der Pot <griffon26@gentoo.org>
   +files/valgrind-2.2.0-current-macro-clash.patch, valgrind-2.2.0-r2.ebuild:
