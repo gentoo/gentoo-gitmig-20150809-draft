@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.2.ebuild,v 1.3 2003/11/04 19:41:25 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.2.ebuild,v 1.4 2004/02/04 13:24:03 hattya Exp $
 
 inherit flag-o-matic
 
@@ -54,8 +54,7 @@ src_compile() {
 
 src_install () {
 
-	make install DESTDIR=${D}
+	make install DESTDIR=${D} || die
 
 	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL INSTALL.eucjp README
 }
-

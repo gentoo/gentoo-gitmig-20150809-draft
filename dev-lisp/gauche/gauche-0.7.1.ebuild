@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.1.ebuild,v 1.4 2003/09/08 07:18:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.1.ebuild,v 1.5 2004/02/04 13:24:03 hattya Exp $
 
 inherit flag-o-matic
 
@@ -15,8 +15,7 @@ KEYWORDS="x86 ~sparc"
 SLOT="0"
 S="${WORKDIR}/Gauche-${PV}"
 
-DEPEND="virtual/glibc
-	>=sys-libs/gdbm-1.8.0-r5"
+DEPEND=">=sys-libs/gdbm-1.8.0-r5"
 
 src_compile() {
 	local myconf
@@ -37,15 +36,14 @@ src_compile() {
 	filter-flags -fforce-addr
 
 	CFLAGS="" CXXFLAGS="" econf $myconf --enable-threads=pthreads
-	emake OPTFLAGS="$CFLAGS"
+	emake OPTFLAGS="$CFLAGS" || die
 
-	make check
+	make check || die
 }
 
 src_install () {
 #	einstall
-	make install DESTDIR=${D}
+	make install DESTDIR=${D} || die
 
-	dodoc AUTORS COPYING ChangeLog HACKING INSTALL INSTALL.eucjp README
+	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL INSTALL.eucjp README
 }
-
