@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.12 2004/03/18 15:50:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.13 2004/03/24 23:54:53 mholzer Exp $
+
+  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> hk_classes-0.6.1.ebuild,
+  hk_classes-0.6.2a.ebuild, hk_classes-0.6.3_alpha1.ebuild,
+  hk_classes-0.6.3_alpha3.ebuild:
+  fixing src_uri. closes 45630
 
   18 Mar 2004; David Holm <dholm@gentoo.org> hk_classes-0.6.3_alpha3.ebuild:
   Added to ~ppc.

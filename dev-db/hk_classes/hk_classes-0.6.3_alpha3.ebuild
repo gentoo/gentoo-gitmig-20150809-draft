@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.3_alpha3.ebuild,v 1.2 2004/03/18 15:50:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.3_alpha3.ebuild,v 1.3 2004/03/24 23:54:53 mholzer Exp $
 
 DESCRIPTION="GUI-independent C++ libraries for database applications, including API documentation and tutorials."
 HOMEPAGE="http://hk-classes.sourceforge.net/"
 
 MY_P=${P/_alpha3/-test3}
 
-SRC_URI="mirror://sourceforge/sourceforge/hk-classes/${MY_P}.tar.bz2
-		 mirror://sourceforge/sourceforge/knoda/knodapython.tar.bz2
-		 mirror://sourceforge/sourceforge/knoda/hk_docs-0.6.tar.gz"
+SRC_URI="mirror://sourceforge/hk-classes/${MY_P}.tar.bz2
+		 mirror://sourceforge/knoda/knodapython.tar.bz2
+		 mirror://sourceforge/knoda/hk_docs-0.6.tar.gz"
+RESTRICT="nomirror"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
