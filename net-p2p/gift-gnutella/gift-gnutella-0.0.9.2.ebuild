@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.9.2.ebuild,v 1.14 2004/09/01 19:49:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.9.2.ebuild,v 1.15 2004/09/12 04:26:26 squinky86 Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gcc35.patch
-	epatch ${FILESDIR}/${PV}-nodes.patch.bz2
 }
 
 src_compile() {
@@ -48,4 +47,8 @@ pkg_postinst() {
 	einfo "Alternatively you can add the following line to"
 	einfo "your ~/.giFT/giftd.conf configuration file:"
 	einfo "plugins = Gnutella"
+	echo
+	ewarn "This version of gift-gnutella does not install proper gwebcaches."
+	ewarn "To update your caches, run:"
+	ewarn "\tsh /usr/portage/net-p2p/${PN}/files/cacheupdate.sh"
 }
