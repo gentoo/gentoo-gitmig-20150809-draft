@@ -4,13 +4,15 @@ Hash: SHA1
 MD5 6be0ef3c25fcbb0692a4ee8e6a31a8f1 iozone-3.217.ebuild 978
 MD5 2b2c3a01ee8352824750d4123c0388f9 iozone-3.218.ebuild 1878
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 4a6943e7d2f2b9dc436a78f076171de3 ChangeLog 961
+MD5 13d6963a781e68e4b12373d820bc4b6c ChangeLog 1138
+MD5 045dee11332d61e68218a5405f8f3e7c iozone-3.221.ebuild 1927
 MD5 e656883c1b06fd737e3f145ee18fb5b5 files/digest-iozone-3.217 61
 MD5 d8d6924bd76a53cd2df1c261ae63b02f files/digest-iozone-3.218 61
+MD5 2f97f7c83ee517e3716bfe9273022e21 files/digest-iozone-3.221 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA+hLSmdTrptrqvGERAs6xAJ4kAiVqXRKVpN1QK25t2Uwxjy9dFwCfWuW4
-mXcirg7uc7gUqi/7/I1R0l8=
-=dFM1
+iD8DBQFA/boPmdTrptrqvGERAhmuAJsG0nZXwP+NZ6TMqm8QB/t4iNDG2gCfR3Kz
+tFL+ovZZANUz9vb1xsDbtp8=
+=4R4H
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.7 2004/07/18 05:56:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.8 2004/07/21 00:26:40 dragonheart Exp $
+
+*iozone-3.221 (21 Jul 2004)
+
+  21 Jul 2004; Daniel Black <dragonheart@gentoo.org> +iozone-3.221.ebuild:
+  version bump as per bug #57729. Thanks to rockoo@rockoo.homelinux.org
 
   18 Jul 2004; Daniel Black <dragonheart@gentoo.org> iozone-3.218.ebuild:
   x86 stable
