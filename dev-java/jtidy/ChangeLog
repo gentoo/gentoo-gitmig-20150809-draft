@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jtidy
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.1 2004/09/12 19:33:15 axxo Exp $
+
+*jtidy-0_pre20010801 (12 Sep 2004)
+
+  12 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +jtidy-0_pre20010801.ebuild:
+  new ebuild, added as dependency of dev-java/jmeter, created by me
+
