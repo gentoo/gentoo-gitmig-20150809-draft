@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.19 2004/04/16 16:51:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.20 2004/04/29 09:12:02 eradicator Exp $
+
+  29 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  vorbis-tools-1.0.1.ebuild:
+  USE=speex support.  Closes bug #48949.
 
   16 Apr 2004; Guy Martin <gmsoft@gentoo.org> vorbis-tools-1.0.1.ebuild:
   Marked stable on hppa.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.9 2004/04/16 16:51:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.10 2004/04/29 09:12:02 eradicator Exp $
 
 inherit gcc flag-o-matic
 
@@ -11,18 +11,21 @@ SRC_URI="http://www.vorbis.com/files/${PV}/unix/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha hppa ~amd64 ~mips"
-IUSE="nls flac"
+IUSE="nls flac speex"
 
 RDEPEND=">=media-libs/libvorbis-1.0
 	>=media-libs/libao-0.8.2
 	>=net-misc/curl-7.9
+	!mips? ( speex? ( media-libs/speex ) )
 	flac? ( media-libs/flac )"
+
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	use hppa && [ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
 	econf \
+		`if ! use mips; then use_with speex; fi` \
 		`use_enable nls` \
 		`use_with flac` \
 		|| die
