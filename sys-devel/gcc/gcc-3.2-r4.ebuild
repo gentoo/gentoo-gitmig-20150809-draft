@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r4.ebuild,v 1.1 2002/11/10 15:19:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r4.ebuild,v 1.2 2002/11/20 13:26:30 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
 
-inherit flag-o-matic libtool
+inherit eutils flag-o-matic libtool
 
 # Compile problems with these (bug #6641 among others)...
 filter-flags "-fno-exceptions -fomit-frame-pointer"
@@ -58,7 +58,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="${MY_PV}"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2
@@ -106,36 +106,7 @@ src_unpack() {
 	elibtoolize --portage --shallow
 	
 	# Various patches from all over
-	cd ${S}; einfo "Applying various patches (bugfixes/updates)..."
-	for x in ${WORKDIR}/patch/*.patch.bz2
-	do
-		# New ARCH dependant patch naming scheme...
-		#
-		#   ???_arch_foo.patch
-		#
-		if [ -f ${x} ] && \
-		   [ "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
-		then
-			local count=0
-			local popts="-l"
-
-			einfo "  ${x##*/}..."
-                
-			# Most -p differ for these patches ... im lazy, so shoot me :/
-			while [ "${count}" -lt 5 ]
-			do
-				if bzip2 -dc ${x} | patch ${popts} --dry-run -f -p${count} > /dev/null
-				then
-					bzip2 -dc ${x} | patch ${popts} -p${count} > /dev/null
-					break
-				fi
-                                
-				count=$((count + 1))
-			done
-
-			[ "${count}" -eq 5 ] && die "Failed Patch: ${x##*/}!"
-		fi
-	done
+	epatch ${WORKDIR}/patch
 
 	# Fixes a bug in gcc-3.1 and above ... -maccumulate-outgoing-args flag (added
 	# in gcc-3.1) causes gcc to misconstruct the function call frame in many cases.
@@ -152,16 +123,13 @@ src_unpack() {
 	#
 	#   http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0588.html
 	#
-	einfo "Applying fix-copy and fix-var patches..."
-	patch -p1 < ${FILESDIR}/${PV}/${P}.fix-copy.patch > /dev/null || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}.fix-var.patch > /dev/null || die
+	epatch ${FILESDIR}/${PV}/${P}.fix-copy.patch
+	epatch ${FILESDIR}/${PV}/${P}.fix-var.patch
 
 	# Fixes to get gcc to compile under glibc-2.3*
-	einfo "Applying glibc-2.3-compat patch..."
-	patch -p1 < ${FILESDIR}/${PV}/${P}-glibc-2.3-compat.diff > /dev/null || die
+	epatch ${FILESDIR}/${PV}/${P}-glibc-2.3-compat.diff
 	# This one is thanks to cretin@gentoo.org
-	einfo "Applying gcc-3.2-ctype patch..."
-	patch -p1 < ${FILESDIR}/${PV}/${P}.ctype.patch > /dev/null || die
+	epatch ${FILESDIR}/${PV}/${P}.ctype.patch
 
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
@@ -300,19 +268,21 @@ src_install() {
 		dosym gcc /usr/bin/cc
 	fi
 
-	# gcc-3.1 have a problem with the ordering of Search Directories.  For
-	# instance, if you have libreadline.so in /lib, and libreadline.a in
-	# /usr/lib, then it will link with libreadline.a instead of .so.  As far
-	# as I can see from the source, /lib should be searched before /usr/lib,
-	# and this also differs from gcc-2.95.3 and possibly 3.0.4, but ill have
-	# to check on 3.0.4.  Thanks to Daniel Robbins for noticing this oddity,
-	# bugzilla bug #4411
-	#
-	# Azarah - 3 Jul 2002
-	#
-	cd ${FULLPATH_D}
-	dosed -e "s:%{L\*} %(link_libgcc):%{L\*} -L/lib %(link_libgcc):" \
-		${FULLPATH}/specs
+# This is fixed via the linker scripts (bug #4411) ....
+#
+#	# gcc-3.1 have a problem with the ordering of Search Directories.  For
+#	# instance, if you have libreadline.so in /lib, and libreadline.a in
+#	# /usr/lib, then it will link with libreadline.a instead of .so.  As far
+#	# as I can see from the source, /lib should be searched before /usr/lib,
+#	# and this also differs from gcc-2.95.3 and possibly 3.0.4, but ill have
+#	# to check on 3.0.4.  Thanks to Daniel Robbins for noticing this oddity,
+#	# bugzilla bug #4411
+#	#
+#	# Azarah - 3 Jul 2002
+#	#
+#	cd ${FULLPATH_D}
+#	dosed -e "s:%{L\*} %(link_libgcc):%{L\*} -L/lib %(link_libgcc):" \
+#		${FULLPATH}/specs
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
