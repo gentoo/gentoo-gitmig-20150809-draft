@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/files/epos,v 1.1 2004/04/02 22:43:00 dmwaters Exp $
+
+depend() {
+	use alsasound esound
+}
+
+start() {
+	ebegin "Starting epos"
+	start-stop-daemon --start --quiet --background --make-pidfile --pidfile /var/run/epos.pid \
+		--exec /usr/bin/epos -- -f
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping epos"
+	start-stop-daemon --stop --quiet --pidfile /var/run/epos.pid
+	eend $?
+}
