@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.989 2005/03/05 05:17:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.990 2005/03/06 10:14:24 tove Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -308,7 +308,6 @@ mail-client/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with
 mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 mail-filter/ask:procmail - Adds support for procmail
 mail-filter/bogofilter:gsl - Use the GNU scientific library for calculations
-mail-filter/bogofilter:notransactions - Disables the Berkeley DB Transactional Data Store (same as in pre 0.93 versions)
 mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting.
 mail-filter/dspam:cyrus - Build delivery options for cyrus-imapd
