@@ -109,3 +109,4 @@ move net-mail/mozilla-thunderbird mail-client/mozilla-thunderbird
 move net-mail/mozilla-thunderbird-bin mail-client/mozilla-thunderbird-bin
 move net-misc/super-freeswan net-misc/openswan
 move media-libs/libgd media-libs/gd
+move games-simulation/stoned games-simulation/stoned-bin
