@@ -1,34 +1,37 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-20010601-r1.ebuild,v 1.2 2002/07/11 06:30:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-20010601-r1.ebuild,v 1.3 2002/07/22 14:37:05 seemant Exp $
 
 
-A=Coin-${PV}.tar.gz
+MY_P=${P/c/C}
 S=${WORKDIR}/Coin
 DESCRIPTION="An OpenSource implementation of SGI's OpenInventor"
-SRC_URI="ftp://ftp.coin3d.org/pub/snapshots/${A}"
+SRC_URI="ftp://ftp.coin3d.org/pub/snapshots/${MY_P}.tar.gz"
 HOMEPAGE="http://www.coin3d.org"
 
-DEPEND="virtual/x11 virtual/opengl"
+SLOT="0"
+LICENSE="LGPL-2.1"
+KEYWORDS="x86"
+
+DEPEND="virtual/x11
+	virtual/opengl"
 
 src_compile() {
 
-    local myconf
-    if [ -z "`use X`" ]
-    then
-      myconf="--without-x"
-    fi
-    try ./configure --prefix=/usr --host=${CHOST} --build=${CHOST} $myconf
-    try make
+	local myconf
+	use X || myconf="--without-x"
+
+	econf ${myconf} || die
+	make || die
 
 }
 
 src_install () {
 
-    try make prefix=${D}/usr install
-    dodoc AUTHORS COPYING ChangeLog* HACKING LICENSE* NEWS README*
-    docinto txt
-    dodoc docs/*.txt docs/coin.doxygen docs/whitepapers/*.txt
+	einstall || die
+
+	dodoc AUTHORS COPYING ChangeLog* HACKING LICENSE* NEWS README*
+	docinto txt
+	dodoc docs/*.txt docs/coin.doxygen docs/whitepapers/*.txt
 
 }
-

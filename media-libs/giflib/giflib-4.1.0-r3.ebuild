@@ -1,19 +1,17 @@
-## Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Updated by AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.6 2002/07/16 11:36:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.7 2002/07/22 14:37:06 seemant Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="giflib"
+DESCRIPTION="Library to handle, display and manipulate GIF images"
+HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/libs/giflib/${P}.tar.gz
 	 ftp://prtr-13.ucsc.edu/pub/libungif/${P}.tar.gz"
-
-HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 
 DEPEND="X? ( virtual/x11 )"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="as-is|BSD"
 KEYWORDS="x86 ppc"
 
 src_compile() {
@@ -24,11 +22,7 @@ src_compile() {
 		&& myconf="--with-x" \
 		|| myconf="--without-x"
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		${myconf} || die
-
+	econf ${myconf} || die
 	emake || die
 
 }

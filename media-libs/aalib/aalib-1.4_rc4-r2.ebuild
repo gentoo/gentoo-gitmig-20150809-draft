@@ -1,6 +1,6 @@
 ## Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.2 2002/07/16 11:36:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.3 2002/07/22 14:37:05 seemant Exp $
 
 inherit libtool
 
@@ -11,9 +11,9 @@ SRC_URI="mirror://sourceforge/aa-project/${MY_P}.tar.gz"
 HOMEPAGE="http://aa-project.sourceforge.net/aalib/"
 
 DEPEND=">=sys-libs/ncurses-5.1
-	slang? ( >=sys-libs/slang-1.4.2 )
 	X?	 ( virtual/x11 )
-	gpm?   ( sys-libs/gpm )"
+	gpm?   ( sys-libs/gpm )
+	slang? ( >=sys-libs/slang-1.4.2 )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -42,22 +42,12 @@ src_compile() {
 
 	elibtoolize
 
-	./configure --prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=${D}/usr/share/man \
-		--host=${CHOST} \
-		${myconf} || die
-		
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
 
-	make prefix=${D}/usr \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		install || die
-
+	einstall || die
 	dodoc ANNOUNCE AUTHORS ChangeLog COPYING NEWS README*
 }
-

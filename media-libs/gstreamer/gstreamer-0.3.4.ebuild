@@ -1,14 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.3.4.ebuild,v 1.6 2002/07/18 20:09:31 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.3.4.ebuild,v 1.7 2002/07/22 14:37:06 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Streaming media framework"
 SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.gz"
 HOMEPAGE="http://gstreamer.sourceforge.net"
+
+SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="x86"
-SLOT="0"
 
 # required packages
 # there are many many optional libraries. features are compiled if the libraries
@@ -22,6 +23,7 @@ DEPEND=">=dev-libs/glib-2.0
 		app-text/xmltex
 		app-text/xpdf
 		app-text/ghostscript )"
+
 RDEPEND=">=dev-libs/glib-2.0
 	>=dev-libs/libxml2-2.4
 	>=dev-libs/popt-1.5"
@@ -29,21 +31,18 @@ RDEPEND=">=dev-libs/glib-2.0
 
 src_compile() {
 	local myconf
-	use doc && myconf="${myconf} --enable-docs-build" || myconf="${myconf} --disable-docs-build"
+	use doc \
+		&& myconf="${myconf} --enable-docs-build" \
+		|| myconf="${myconf} --disable-docs-build"
 
 	# gtkdoc-fixxref should do its stuff in DESTDIR
 	pushd docs/libs
-	cat Makefile.am | sed 's/\(gtkdoc-fixxref.*html-dir=\)/\1$(DESTDIR)/' > Makefile.am.new
+	sed 's/\(gtkdoc-fixxref.*html-dir=\)/\1$(DESTDIR)/' \
+		Makefile.am > Makefile.am.new
 	mv Makefile.am.new Makefile.am
 	popd
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--sysconfdir=/etc \
-		${myconf} \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf ${myconf} || die "./configure failed"
 	emake || die
 }
 
@@ -59,9 +58,7 @@ src_install () {
 	# docs/random/*
 	# examples/*
 	# get all those html manuals and stuff like that.
-	dohtml -r docs/fwg/gts-plugin-writers-guide
-	dohtml -r docs/gst/html
-	dohtml -r docs/manual/gstreamer-manual
+	dohtml -r docs
 }
 
 pkg_postinst () {

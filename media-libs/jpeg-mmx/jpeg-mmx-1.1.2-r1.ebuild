@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.3 2002/07/08 14:22:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.4 2002/07/22 14:37:06 seemant Exp $
 
 inherit libtool
 
@@ -8,12 +8,12 @@ S=${WORKDIR}/jpeg-mmx
 DESCRIPTION="JPEG library with mmx enhancements"
 SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
+
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc"
 
 src_compile() {
 	elibtoolize

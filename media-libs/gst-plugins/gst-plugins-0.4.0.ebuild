@@ -1,15 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.0.ebuild,v 1.1 2002/07/08 06:49:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.0.ebuild,v 1.2 2002/07/22 14:37:06 seemant Exp $
 
 inherit libtool
-#-Maintainer: Artem Baguinski <artm@v2.nl>
-# heavy modification by Spider <spider@gentoo.org> 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
 SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.gz"
 HOMEPAGE="http://gstreamer.sourceforge.net"
+
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86"

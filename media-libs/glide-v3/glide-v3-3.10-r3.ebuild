@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.2 2002/07/11 06:30:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.3 2002/07/22 14:37:06 seemant Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -12,6 +12,10 @@ SRC_URI="http://www.ibiblio.org/gentoo/distfiles/glide3x-${PV}.tar.gz
 # check for future updates here
 # http://telia.dl.sourceforge.net/mirrors/slackware/slackware-8.0/contrib/contrib-sources/3dfx/voodoo4_voodoo5/
 HOMEPAGE="http://glide.sourceforge.net/"
+
+SLOT="0"
+LICENSE="3DFX"
+KEYWORDS="x86"
 
 DEPEND=">=sys-devel/automake-1.4
 	>=sys-devel/autoconf-2.13
@@ -56,4 +60,3 @@ src_install() {
 	dodir /usr/X11R6/lib
 	dosym /usr/lib/libglide3.so.${PV}.0 /usr/X11R6/lib/libglide3.so
 }
-
