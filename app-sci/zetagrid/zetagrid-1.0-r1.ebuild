@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.0-r1.ebuild,v 1.3 2003/01/12 23:52:14 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.0-r1.ebuild,v 1.4 2003/01/13 00:11:38 tantive Exp $
 
 S=${WORKDIR}/zetagrid-${PV}
 DESCRIPTION="An open source and platform independent grid system"
@@ -39,5 +39,9 @@ pkg_postinst() {
 	einfo "Zetagrid can be started using zeta.sh"
 	einfo "Progress information is displayed by zeta_progress.sh or"
 	einfo "by "java -cp zeta_progress.jar zeta.JShowProgress"."
+	einfo
+	ewarn "If you're getting an error at first execution"
+	ewarn "please run it a second time, this issue is known"
+	ewarn "and only happens at the very first start."
 }
 
