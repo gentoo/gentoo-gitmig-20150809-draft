@@ -78,3 +78,4 @@ move app-misc/bonnie++ app-benchmarks/bonnie++
 move media-fonts/kochi-fonts media-fonts/kochi-substitute
 move dev-utils/eclipse-SDK dev-utils/eclipse-sdk-bin
 move dev-libs/lam-mpi sys-cluster/lam-mpi
+move dev-lang/yacas app-sci/yacas
