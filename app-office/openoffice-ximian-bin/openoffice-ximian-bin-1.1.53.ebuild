@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.53.ebuild,v 1.2 2004/08/20 20:42:23 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.53.ebuild,v 1.3 2004/11/07 09:01:44 mr_bones_ Exp $
 
 inherit rpm
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.ximian.com/pub/xd-unstable/suse-90-i586/ooo-1.1.1-0.ximian.8.
 	ftp://ftp.ximian.com/pub/xd-unstable/suse-90-i586/ooo-fonts-1.1.3-0.ximian.8.2.noarch.rpm
 	mirror://openoffice/contrib/dictionaries/dicooo/DicOOo.sxw"
 
-LICENSE="LGPL-2 | SISSL-1.1"
+LICENSE="|| ( LGPL-2 SISSL-1.1 )"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="gnome kde"
