@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-yaclml
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/ChangeLog,v 1.1 2005/01/11 18:49:29 mkennedy Exp $
+
+*cl-yaclml-0.5.2 (11 Jan 2005)
+
+  11 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-yaclml-0.5.2.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
