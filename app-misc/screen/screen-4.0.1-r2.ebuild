@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r2.ebuild,v 1.1 2004/01/13 18:39:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r2.ebuild,v 1.2 2004/01/30 05:19:42 drobbins Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 sparc ppc hppa amd64 mips alpha"
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-apps/sed-4
 	pam? ( >=sys-libs/pam-0.75 )
-	>=sys-devel/autoconf-2.57"
+	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A} && cd ${S} || die
