@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.7-r2.ebuild,v 1.1 2004/07/09 17:45:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.7-r3.ebuild,v 1.1 2004/07/21 10:46:14 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -11,6 +11,7 @@ UNIPATCH_LIST="
 	${DISTDIR}/mki-adapter26_${MKI_VERSION}.patch
 	${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch
 	${FILESDIR}/${PN}.CAN-2004-0497.patch
+	${FILESDIR}/${PN}-2.6.CAN-2004-0596.patch
 	${FILESDIR}/${PN}-2.6.IPTables-RDoS.patch
 	${FILESDIR}/${PN}-2.6.ProcPerms.patch"
 
