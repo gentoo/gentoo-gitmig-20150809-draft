@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.11 2004/06/24 22:26:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.12 2004/06/28 16:52:22 tgall Exp $
 
 IUSE="X truetype"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://kldp.net/projects/baekmuk/"
 
 SLOT="0"
 LICENSE="BAEKMUK"
-KEYWORDS="ia64 x86 alpha ppc sparc hppa amd64 mips"
+KEYWORDS="ia64 x86 alpha ppc sparc hppa amd64 mips ~ppc64"
 
 DEPEND="virtual/x11
 	truetype? ( virtual/xft )"
