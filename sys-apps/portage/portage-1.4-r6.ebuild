@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.4-r5.ebuild,v 1.1 2001/01/20 18:24:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.4-r6.ebuild,v 1.1 2001/01/22 16:00:42 drobbins Exp $
  
 A=""
 S=${WORKDIR}/${P}
@@ -39,6 +39,8 @@ src_install() {
 	dosym /usr/lib/portage/bin/pkgmerge /usr/sbin/pkgmerge
 	dosym /usr/lib/portage/bin/portage-maintain /usr/sbin/portage-maintain
 	dosym newins /usr/lib/portage/bin/donewins
+	exeinto /usr/sbin
+	doexe env-update
 }
 
 pkg_postinst() {
