@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.25 2002/11/22 13:35:29 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.26 2002/11/23 21:37:40 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -111,29 +111,29 @@ DIR=$DIR"
 		#export SANDBOX_WRITE="$SANDBOX_WRITE:/foobar:/"
 		addwrite /foobar
 		addwrite /
-		mkdir -p /$DIR
-		export SANDBOX_WRITE=${SANDBOX_WRITE//:\/foobar:\/}
+		mkdir -p "/$DIR"
+		export SANDBOX_WRITE="${SANDBOX_WRITE//:\/foobar:\/}"
 	fi
 
 	# in case ECVS_TOP_DIR is a symlink to a dir, get the real dir's path,
 	# otherwise addwrite() doesn't work.
-	cd -P $ECVS_TOP_DIR > /dev/null
+	cd -P "$ECVS_TOP_DIR" > /dev/null
 	ECVS_TOP_DIR="`/bin/pwd`"
 	DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}/${ECVS_SUBDIR}"
-	cd $OLDPWD
+	cd "$OLDPWD"
 	
 	debug-print "$FUNCNAME: now DIR=$DIR"
 	
 	# disable the sandbox for this dir
 	# not just $DIR because we want to create moduletopdir/CVS too
-	addwrite $ECVS_TOP_DIR/$ECVS_MODULE
+	addwrite "$ECVS_TOP_DIR/$ECVS_MODULE"
 
 	# add option for local (non-recursive) fetching
 	[ -n "$ECVS_LOCAL" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -l"
 	
 	# prepare a cvspass file just for this session so that cvs thinks we're logged
 	# in at the cvs server. we don't want to mess with ~/.cvspass.
-	echo ":pserver:${ECVS_SERVER} A" > ${T}/cvspass
+	echo ":pserver:${ECVS_SERVER} A" > "${T}/cvspass"
 	export CVS_PASSFILE="${T}/cvspass"
 	chown $ECVS_RUNAS "${T}/cvspass"
 	#export CVSROOT=:pserver:${ECVS_USER}@${ECVS_SERVER}
@@ -156,7 +156,7 @@ DIR=$DIR"
 	
 	debug-print "$FUNCNAME: Root<-$newserver, Repository<-$repository"
 	debug-print "$FUNCNAME: entering directory $DIR"
-	cd /$DIR
+	cd "/$DIR"
 	
 	if [ ! -d "CVS" ]; then
 		# create a new CVS/ directory (checkout)
@@ -172,8 +172,8 @@ DIR=$DIR"
 		# from there to get the full module.
 		if [ ! -d "$ECVS_TOP_DIR/$ECVS_MODULE/CVS" ]; then
 			debug-print "$FUNCNAME: Copying CVS/ directory to module top-level dir"
-			cp -r CVS $ECVS_TOP_DIR/$ECVS_MODULE/
-			echo $ECVS_MODULE > $ECVS_TOP_DIR/$ECVS_MODULE/CVS/Repository
+			cp -r CVS "$ECVS_TOP_DIR/$ECVS_MODULE/"
+			echo $ECVS_MODULE > "$ECVS_TOP_DIR/$ECVS_MODULE/CVS/Repository"
 		fi
 		
 	else
@@ -197,7 +197,7 @@ DIR=$DIR"
 			einfo "Modifying CVS dirs..."
 			for x in $cvsdirs; do
 				debug-print "In $x"
-				echo $newserver > $x/Root
+				echo $newserver > "$x/Root"
 			done
 
 		fi
@@ -210,7 +210,7 @@ DIR=$DIR"
 
 	# Chowning the directory
 	if [ "${ECVS_RUNAS}" != "root" ]; then
-		chown -R "$ECVS_RUNAS" /$DIR
+		chown -R "$ECVS_RUNAS" "/$DIR"
 	fi
 
 	# finally run the cvs update command
@@ -269,7 +269,7 @@ EndOfFile
 
 	# log out and restore ownership
 	su $ECVS_RUNAS -c "cvs logout" &> /dev/null
-	chown `whoami` ${T}/cvspass
+	chown `whoami` "${T}/cvspass"
 }
 
 cvs_src_unpack() {
@@ -281,19 +281,19 @@ cvs_src_unpack() {
 	debug-print "Copying module $ECVS_MODULE subdir $ECVS_SUBDIR local_mode=$ECVS_LOCAL from $ECVS_TOP_DIR..."
 	
 	# probably redundant, but best to make sure
-	mkdir -p $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
+	mkdir -p "$WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR"
 	
 	if [ -n "$ECVS_SUBDIR" ]; then
 		if [ -n "$ECVS_LOCAL" ]; then
-			cp -f $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR/* $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
+			cp -f "$ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR/*" "$WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR"
 		else
-			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR/..
+			cp -Rf "$ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR" "$WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR/.."
 		fi    
 	else
 		if [ -n "$ECVS_LOCAL" ]; then
-			cp -f $ECVS_TOP_DIR/$ECVS_MODULE/* $WORKDIR/$ECVS_MODULE
+			cp -f "$ECVS_TOP_DIR/$ECVS_MODULE/*" "$WORKDIR/$ECVS_MODULE"
 		else
-			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
+			cp -Rf "$ECVS_TOP_DIR/$ECVS_MODULE" "$WORKDIR"
 		fi
 	fi
 	
@@ -302,17 +302,17 @@ cvs_src_unpack() {
 	# still create the empty directory in workdir though.
 	if [ "`ls -A $DIR`" == "CVS" ]; then
 		debug-print "$FUNCNAME: removing cvs-empty directory $ECVS_MODULE/$ECVS_SUBDIR"
-		rm -rf $DIR
+		rm -rf "$DIR"
 	fi
 	    
 	# implement some of base_src_unpack's functionality;
 	# note however that base.eclass may not have been inherited!
 	if [ -n "$PATCHES" ]; then
 		debug-print "$FUNCNAME: PATCHES=$PATCHES, S=$S, autopatching"
-		cd $S
+		cd "$S"
 		for x in $PATCHES; do
 			debug-print "patching from $x"
-			patch -p0 < $x
+			patch -p0 < "$x"
 		done
 		# make sure we don't try to apply patches more than once, since
 		# cvs_src_unpack is usually called several times from e.g. kde-source_src_unpack
