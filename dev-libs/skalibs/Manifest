@@ -1,4 +1,4 @@
-MD5 9699c78d7378e73d07b933481570b056 ChangeLog 314
+MD5 c2a0f7ee78e05eafa8b20918560ed434 ChangeLog 341
 MD5 0c6f835bfe384c62eb361f0b3dc83982 skalibs-0.30.ebuild 1343
-MD5 4c3a4fb9cc708490449379d29c61f4b5 files/digest-skalibs-0.30 64
 MD5 fc2b9cf2c3db0a0fb6ae394f94756664 files/skalibs-0.30-gccattributes.h.patch 1542
+MD5 4c3a4fb9cc708490449379d29c61f4b5 files/digest-skalibs-0.30 64
