@@ -1,5 +1,5 @@
 MD5 8ca88b2e34fad88f0042f1cb0b0d8180 ChangeLog 4665
-MD5 bf0a0d5699973cb0650ab9107bdb58d4 less-382-r2.ebuild 788
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382-r2 60
+MD5 8c711e294161b00f479ef0a125af7dfb less-382-r2.ebuild 789
 MD5 db1319ec9421763e5fb32eb282fa10b7 files/lesspipe.sh 1325
+MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382-r2 60

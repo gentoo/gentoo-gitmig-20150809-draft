@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e1d5db80fe1ed9680665c50c11ec3fbe ChangeLog 5761
-MD5 6a7fa65ab1a6a0b17f9b5ba3b807cc21 findutils-4.1.20-r1.ebuild 2042
+MD5 b107d98b8c4f05cedcb6894fb3552fc2 findutils-4.1.20-r1.ebuild 2031
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 43e3e3c15b66b30de4be62db3b7674ea files/findutils-4.1.20-selinux.diff 10392
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
 MD5 0315b5033cf65d15f24b1c252070db45 files/findutils-env-size.patch 672
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBbJ9bHTu7gpaalycRAieDAJ9H6VL2MB9XaqMWVhTpEbL3um24zACeKllO
-RZjqUm8HmPpN6c6syT8n0Sk=
-=NRIb
------END PGP SIGNATURE-----
