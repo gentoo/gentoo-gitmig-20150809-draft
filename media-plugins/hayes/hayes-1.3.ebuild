@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/hayes/hayes-1.3.ebuild,v 1.7 2004/06/29 12:05:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/hayes/hayes-1.3.ebuild,v 1.8 2005/01/14 23:49:27 danarmak Exp $
 
 inherit kde
 
@@ -13,5 +13,5 @@ LICENSE="MIT"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=kde-base/kdemultimedia-3.0"
+DEPEND="|| ( kde-base/noatun >=kde-base/kdemultimedia-3.0 )"
 need-kde 3

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/jefferson
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/jefferson/ChangeLog,v 1.7 2004/06/29 00:30:17 carlo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/jefferson/ChangeLog,v 1.8 2005/01/14 23:50:49 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> jefferson-3.1.ebuild,
+  jefferson-3.2.ebuild:
+  Changed dep on kdemultimedia to accept noatun, the new split ebuild.
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> jefferson-3.1.ebuild,
   jefferson-3.2.ebuild:

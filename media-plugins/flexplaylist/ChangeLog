@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/flexplaylist
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/flexplaylist/ChangeLog,v 1.7 2004/10/15 09:03:36 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/flexplaylist/ChangeLog,v 1.8 2005/01/14 23:48:21 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> flexplaylist-0.4.8.ebuild:
+  Changed dep on kdemultimedia to accept noatun, the new split ebuild.
 
   15 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   flexplaylist-0.4.8.ebuild:

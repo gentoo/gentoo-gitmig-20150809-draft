@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/flexplaylist/flexplaylist-0.4.8.ebuild,v 1.7 2004/10/15 09:03:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/flexplaylist/flexplaylist-0.4.8.ebuild,v 1.8 2005/01/14 23:48:21 danarmak Exp $
 
 inherit kde
 
@@ -17,6 +17,6 @@ IUSE=""
 # noatun, so depend on arts to make sure we have noatun... it's a hack, but
 # it's as good as we can do for now...
 
-DEPEND=">=kde-base/kdemultimedia-3.0
+DEPEND="|| ( kde-base/noatun >=kde-base/kdemultimedia-3.0 )
 	kde-base/arts"
 need-kde 3

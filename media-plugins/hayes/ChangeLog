@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/hayes
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/hayes/ChangeLog,v 1.11 2004/06/29 12:05:44 carlo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/hayes/ChangeLog,v 1.12 2005/01/14 23:49:27 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> hayes-1.3.ebuild,
+  hayes-1.4.ebuild:
+  Changed dep on kdemultimedia to accept noatun, the new split ebuild.
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
   -hayes-1.1.5.ebuild, hayes-1.3.ebuild, hayes-1.4.ebuild:
