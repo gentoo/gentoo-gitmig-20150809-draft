@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/prosper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.12 2004/10/30 19:51:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.13 2004/11/14 16:42:41 weeve Exp $
+
+  14 Nov 2004; Jason Wever <weeve@gentoo.org> prosper-1.5-r1.ebuild:
+  Stable on sparc.
 
   30 Oct 2004; Jason Wever <weeve@gentoo.org> :
   Stable on sparc.
