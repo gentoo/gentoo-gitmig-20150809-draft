@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.6 2004/11/22 21:19:08 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.7 2004/12/01 05:55:55 mr_bones_ Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
@@ -61,8 +61,9 @@ src_compile() {
 	WANT_AUTOMAKE=1.7 automake || die "automake failed"
 
 	# build the net-bootable grub first, but only if "netboot" is set
-	if [ -n "$(use netboot)" ]
-		then CFLAGS="" \
+	if use netboot
+	then
+		CFLAGS="" \
 		econf \
 		--datadir=/usr/lib/grub \
 		--exec-prefix=/ \
