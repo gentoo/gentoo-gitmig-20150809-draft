@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec $(java-config --java) -classpath $(java-config --classpath=aspectj):${CLASSPATH} \
+    -Xmx64M org.aspectj.tools.ajbrowser.Main "$@"

@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/aspectj
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.1 2004/04/12 21:12:20 mkennedy Exp $
+
+*aspectj-1.1.1 (12 Apr 2004)
+
+  12 Apr 2004; <mkennedy@gentoo.org> aspectj-1.1.1.ebuild, metadata.xml,
+  files/ajbrowser, files/ajc, files/aspectj-1.1.1-version-gentoo.patch:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

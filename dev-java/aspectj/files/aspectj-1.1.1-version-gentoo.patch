@@ -1,0 +1,20 @@
+diff -ur org.aspectj.orig/modules/org.aspectj.ajdt.core/src/org/aspectj/ajdt/ajc/messages.properties org.aspectj/modules/org.aspectj.ajdt.core/src/org/aspectj/ajdt/ajc/messages.properties
+--- org.aspectj.orig/modules/org.aspectj.ajdt.core/src/org/aspectj/ajdt/ajc/messages.properties	2003-06-06 06:54:56.000000000 -0500
++++ org.aspectj/modules/org.aspectj.ajdt.core/src/org/aspectj/ajdt/ajc/messages.properties	2004-04-12 11:33:30.193430889 -0500
+@@ -4,11 +4,13 @@
+      The -Xlintfile:lint.properties allows fine-grained control. In tools.jar, see
+      org/aspectj/weaver/XlintDefault.properties for the default behavior and a template to copy. 
+ ### AspectJ-specific messages
+-configure.version = AspectJ Compiler 1.1
++configure.version = AspectJ Compiler @PV_LONG@
+ configure.directoryNotExist = invalid option: {0}
+ ## 3456789012345678901234567890123456789012345678901234567890123456789012345
+ ### miscellaneous
+-misc.usage = AspectJ Compiler 1.1\n\
++misc.usage = AspectJ Compiler @PV@\n\
++Built by Portage in Gentoo Linux http://www.gentoo.org\n\
++Send bug reports to http://bugs.gentoo.org\n\
+ \n\
+ \tUsage: <options> <source file | @argfile>..\n\
+ \n\
+Only in org.aspectj/modules/org.aspectj.ajdt.core/src/org/aspectj/ajdt/ajc: messages.properties.~1.9.~
