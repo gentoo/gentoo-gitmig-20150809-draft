@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cymbaline/cymbaline-0.9r.ebuild,v 1.4 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cymbaline/cymbaline-0.9r.ebuild,v 1.5 2004/02/23 23:45:45 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="mikmod oggvorbis"
 RESTRICT="nostrip"
 
 DEPEND="dev-lang/python
-	media-sound/mpg123
+	virtual/mpg123
 	media-sound/aumix
 	mikmod? ( media-sound/mikmod )
 	oggvorbis? ( media-sound/vorbis-tools ) "
