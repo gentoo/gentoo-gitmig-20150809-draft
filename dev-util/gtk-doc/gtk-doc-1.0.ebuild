@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.0.ebuild,v 1.1 2003/01/21 23:20:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.0.ebuild,v 1.2 2003/01/21 23:23:12 foser Exp $
 
 inherit gnome.org
 
@@ -15,7 +15,6 @@ KEYWORDS="~x86 ~ppc ~sparc "
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=app-text/openjade-1.3.1
 	>=app-text/docbook-xml-dtd-4.1
-	>=app-text/docbook-sgml-dtd-3.1
 	>=app-text/docbook-dsssl-stylesheets-1.40
 	>=sys-devel/perl-5
 	dev-libs/libxslt
