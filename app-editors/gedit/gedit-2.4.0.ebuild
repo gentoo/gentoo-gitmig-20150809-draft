@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.4.0.ebuild,v 1.9 2003/12/13 01:16:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.4.0.ebuild,v 1.10 2004/04/06 03:35:48 vapier Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 IUSE="spell"
 DESCRIPTION="A text editor for the Gnome2 desktop"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.15 2004/01/22 22:07:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.16 2004/04/06 03:43:33 vapier Exp $
+
+inherit eutils
 
 IUSE="gpm postgres xface tiff gtk jpeg mule nas esd X png gnome"
 

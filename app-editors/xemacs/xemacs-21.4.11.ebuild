@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.11.ebuild,v 1.7 2004/01/05 23:35:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.11.ebuild,v 1.8 2004/04/06 03:44:10 vapier Exp $
+
+inherit eutils
 
 IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna lucid athena neXt Xaw3d"
 

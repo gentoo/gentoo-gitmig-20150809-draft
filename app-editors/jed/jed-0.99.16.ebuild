@@ -1,34 +1,35 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16.ebuild,v 1.7 2004/01/18 20:14:46 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16.ebuild,v 1.8 2004/04/06 03:37:20 vapier Exp $
 
-IUSE="X gpm"
+inherit eutils
 
 P0=${PN}-0.99-16
 S=${WORKDIR}/${P0}
 DESCRIPTION="Console S-Lang-based editor"
-SRC_URI="ftp://ftp.jedsoft.org/pub/davis/jed/v0.99/${PN}-0.99-16.tar.bz2"
 HOMEPAGE="http://www.jedsoft.org/jed/"
+SRC_URI="ftp://ftp.jedsoft.org/pub/davis/jed/v0.99/${PN}-0.99-16.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE="X gpm"
 
 DEPEND=">=sys-libs/slang-1.4.5
 	X? ( virtual/x11 )
 	gpm? ( sys-libs/gpm )"
-
 PROVIDE="virtual/editor"
-
-SLOT="0"
-KEYWORDS="x86 ppc sparc "
-LICENSE="GPL-2"
 
 src_compile() {
 	export JED_ROOT=/usr/share/jed
 
-	./configure	--host=${CHOST} \
-		--prefix=$JED_ROOT \
+	./configure	\
+		--host=${CHOST} \
+		--prefix=$PJED_ROOT} \
 		--bindir=/usr/bin \
 		--mandir=/usr/share/man || die
 
-	if [ -n "`use gpm`" ] ; then
+	if use gpm ; then
 		cd src
 		sed -i 	-e 's/#MOUSEFLAGS/MOUSEFLAGS/' \
 			-e 's/#MOUSELIB/MOUSELIB/' \
@@ -42,20 +43,19 @@ src_compile() {
 
 	emake || die
 
-	if [ -n "`use X`" ] ; then
+	if use X ; then
 		emake xjed || die
 	fi
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 
 	cd doc
 	cp README AUTHORS
 
 	cd ${S}
-	dodoc 	COPYING COPYRIGHT INSTALL INSTALL.unx README \
-		doc/AUTHORS doc/manual/jed.tex
+	dodoc INSTALL INSTALL.unx README doc/AUTHORS doc/manual/jed.tex
 
 	cd ${S}/info
 	rm info.info
@@ -72,5 +72,3 @@ src_install () {
 	rm -rf usr/share/jed/info
 	# can't rm usr/share/jed/doc -- used internally by jed/xjed
 }
-
-

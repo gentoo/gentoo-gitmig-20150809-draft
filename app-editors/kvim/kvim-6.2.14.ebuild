@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.8 2004/04/04 20:49:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.9 2004/04/06 03:38:43 vapier Exp $
 
-IUSE="python gpm nls ruby perl"
-
-inherit kde-base
+inherit kde-base eutils
 need-kde 3
 
-S="${WORKDIR}/${P//_}"
 DESCRIPTION="KDE editor based on vim"
-SRC_URI="http://freenux.org/${PN}/${P//_}.tar.bz2"
 HOMEPAGE="http://www.freehackers.org/${PN}"
+SRC_URI="http://freenux.org/${PN}/${P//_}.tar.bz2"
+
 LICENSE="GPL-2"
 KEYWORDS="alpha x86 sparc ~ppc ~amd64"
-newdepend ">=app-editors/vim-core-6.2
+IUSE="python gpm nls ruby perl"
+
+DEPEND=">=app-editors/vim-core-6.2
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
 	!ncurses? ( sys-libs/libtermcap-compat )
 	cscope? ( dev-util/cscope )
@@ -21,6 +21,8 @@ newdepend ">=app-editors/vim-core-6.2
 	perl?   ( dev-lang/perl )
 	python? ( dev-lang/python )
 	ruby?   ( dev-lang/ruby )"
+
+S="${WORKDIR}/${P//_}"
 
 src_unpack() {
 	unpack ${A}

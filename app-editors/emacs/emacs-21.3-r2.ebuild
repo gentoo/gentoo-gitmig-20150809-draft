@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.10 2004/03/16 18:46:57 usata Exp $
-
-IUSE="X nls motif leim gnome Xaw3d"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.11 2004/04/06 03:35:12 vapier Exp $
 
 inherit flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An incredibly powerful, extensible text editor"
+HOMEPAGE="http://www.gnu.org/software/emacs"
 SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 	leim? ( mirror://gnu/emacs/leim-${PV}.tar.gz )"
-HOMEPAGE="http://www.gnu.org/software/emacs"
-SLOT="0"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha amd64 hppa ia64"
+IUSE="X nls motif leim gnome Xaw3d"
 
 RDEPEND="sys-libs/ncurses
 	sys-libs/gdbm
@@ -48,7 +47,7 @@ src_compile() {
 
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
-	if [ "`use X`" ] ; then
+	if use X ; then
 		myconf="${myconf}
 			--with-x
 			--with-xpm
@@ -71,7 +70,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	einstall || die
 	einfo "Fixing info documentation..."
 	rm -f ${D}/usr/share/info/dir
@@ -88,7 +87,7 @@ src_install () {
 
 	keepdir /usr/share/emacs/${PV}/leim
 
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		insinto /usr/share/gnome/apps/Application
 		doins ${FILESDIR}/${DFILE}
 	fi
