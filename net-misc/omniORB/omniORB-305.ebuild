@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.5 2002/08/09 20:31:42 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.6 2002/08/29 01:28:46 george Exp $
 
 S="${WORKDIR}/omni"
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
@@ -90,6 +90,11 @@ src_install () {
 #	doins src/services/omniNotify/channel.cfg
 #	doins src/services/omniNotify/standard.cfg
 
+	#mkomnistubs has to be run in pkg_postinst
+	#however we cannot use FILESDIR there, thus:
+	exeinto /usr/share/doc/${PF}
+	doexe ${FILESDIR}/mkomnistubs.py
+
 	dodoc CHANGES* COPYING* CREDITS PORTING README* ReleaseNote_omniORB_304 \
 		THIS_IS_omniORB_3_0_4
 
@@ -116,5 +121,5 @@ pkg_postinst() {
 		echo "ORBInitialPort 2809" >> ${ROOT}etc/omniorb/omniORB.cfg
 	fi
 
-	/usr/bin/python ${FILESDIR}/mkomnistubs.py
+	/usr/bin/python ${ROOT}usr/share/doc/${PF}/mkomnistubs.py
 }
