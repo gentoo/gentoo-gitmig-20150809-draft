@@ -1,18 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3-r1.ebuild,v 1.4 2003/09/17 22:42:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3-r1.ebuild,v 1.5 2003/12/30 06:35:33 seemant Exp $
 
 inherit eutils
 
-MY_PN="termcap-compat"
-S="${WORKDIR}/${MY_PN}-${PV}"
+MY_PN=${PN/lib/}
+MY_P=${MY_PN}-${PV}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Compatibility package for old termcap-based programs"
-SRC_URI="http://ftp.debian.org/debian/dists/potato/main/source/oldlibs/${MY_PN}_${PV}.tar.gz"
 HOMEPAGE="http://packages.debian.org/stable/oldlibs/termcap-compat.html"
+SRC_URI="http://ftp.debian.org/debian/dists/potato/main/source/oldlibs/${MY_PN}_${PV}.tar.gz"
 
-LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha sparc ppc hppa mips arm ia64"
+LICENSE="LGPL-2"
+KEYWORDS="x86 alpha sparc ppc hppa mips arm ia64 ~amd64 ~ppc64"
 
 DEPEND="virtual/glibc"
 
