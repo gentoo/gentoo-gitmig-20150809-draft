@@ -1,7 +1,13 @@
 # ChangeLog for dev-perl/Log-TraceMessages
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.1 2003/02/12 04:20:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.2 2003/06/08 08:47:27 rac Exp $
 
+*Log-TraceMessages-1.3 (08 Jun 2003)
+
+  08 Jun 2003; <rac@gentoo.org> Log-TraceMessages-1.2.ebuild,
+  Log-TraceMessages-1.3.ebuild:
+  Fix header, upstream version bump, fix URL, add IUSE, add dependency on
+  HTML-FromText
 
 *Log-TraceMessages-1.2 (11 Feb 2003)
 
