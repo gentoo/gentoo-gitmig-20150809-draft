@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The gnome-base category contains core GNOME packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie gnome-base enthält die GNOME Basispakete.
+	</longdescription>
 </catmetadata>
 
