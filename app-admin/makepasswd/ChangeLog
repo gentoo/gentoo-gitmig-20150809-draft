@@ -1,8 +1,13 @@
 # ChangeLog for app-admin/makepasswd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.1 2002/06/12 12:26:06 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.2 2002/07/29 05:22:18 cselkirk Exp $
 
 *makepasswd-1.10 (12 Jun 2002)
+
+  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> makepasswd-1.10.ebuild :
+
+  Added S=${WORKDIR}/${P}
+  Added ppc to KEYWORDS.
 
   12 Jun 2002; N.Jones <carpaski@gentoo.org> makepasswd-1.10.ebuild:
     Initial ChangeLog. Ebuild submitted by Robert Coie <rac@intrigue.com>.
