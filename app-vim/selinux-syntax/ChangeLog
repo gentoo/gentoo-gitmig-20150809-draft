@@ -1,0 +1,8 @@
+# ChangeLog for app-vim/selinux-syntax
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/selinux-syntax/ChangeLog,v 1.1 2004/07/06 23:57:59 ciaranm Exp $
+
+  07 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +selinux-syntax-20040707.ebuild:
+  New package for bug #56275
+
