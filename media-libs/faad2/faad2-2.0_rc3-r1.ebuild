@@ -1,0 +1,67 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3-r1.ebuild,v 1.1 2004/02/01 05:16:09 eradicator Exp $
+
+inherit eutils libtool flag-o-matic
+
+DESCRIPTION="The fastest ISO AAC audio decoder available, correctly decodes all MPEG-4 and MPEG-2 MAIN, LOW, LTP, LD and ER object type AAC files"
+HOMEPAGE="http://faac.sourceforge.net/"
+SRC_URI="mirror://sourceforge/faac/${PN}-${PV/_/-}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE="xmms"
+
+RDEPEND="xmms? ( >=media-sound/xmms-1.2.7
+	media-libs/id3lib )"
+
+DEPEND="${RDEPEND}
+	sys-devel/automake
+	sys-devel/autoconf"
+
+S=${WORKDIR}/${PN}
+
+src_compile() {
+	# see #34392
+	filter-flags -mfpmath=sse
+
+	WANT_AUTOCONF=2.5 WANT_AUTOMAKE=1.7 sh ./bootstrap
+
+	# mp4v2 needed for rhythmbox
+	# drm needed for nothing but doesn't hurt
+
+	econf \
+		--with-mp4v2 \
+		--with-drm \
+		`use_with xmms` \
+		|| die
+
+	#######################################################################
+	# BEGIN PATCH to fix Makefile so that it doesn't violate the sandbox.
+	OLD_XMMS_MAKEFILE=${S}/plugins/xmms/src/Makefile.old
+	NEW_XMMS_MAKEFILE=${S}/plugins/xmms/src/Makefile
+	cp ${NEW_XMMS_MAKEFILE} ${OLD_XMMS_MAKEFILE}
+	sed 's/^libdir = `xmms\-config \-\-input\-plugin\-dir`/xmmslibdir = `xmms\-config \-\-input\-plugin\-dir`/' ${OLD_XMMS_MAKEFILE} > ${NEW_XMMS_MAKEFILE}
+	echo "libdir = \${D}\${xmmslibdir}" >> ${NEW_XMMS_MAKEFILE}
+
+	OLD_XMMSMP4_MAKEFILE=${S}/plugins/xmmsmp4/src/Makefile.old
+	NEW_XMMSMP4_MAKEFILE=${S}/plugins/xmmsmp4/src/Makefile
+	cp ${NEW_XMMSMP4_MAKEFILE} ${OLD_XMMSMP4_MAKEFILE}
+	sed 's/^libdir = `xmms\-config \-\-input\-plugin\-dir`/xmmslibdir = `xmms\-config \-\-input\-plugin\-dir`/' ${OLD_XMMSMP4_MAKEFILE} > ${NEW_XMMSMP4_MAKEFILE}
+	echo "libdir = \${D}\${xmmslibdir}" >> ${NEW_XMMSMP4_MAKEFILE}
+	# END PATCH
+	#######################################################################
+
+	emake || die
+}
+
+src_install() {
+	einstall || die
+
+	# unneeded include, breaks building of apps
+	# <foser@gentoo.org>
+	dosed "s:#include <systems.h>::" /usr/include/mpeg4ip.h
+
+	dodoc AUTHORS ChangeLog INSTALL NEWS README README.linux TODO
+}
