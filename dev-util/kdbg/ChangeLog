@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.15 2003/11/16 18:39:04 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.16 2003/12/28 04:12:40 caleb Exp $
+
+  27 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdbg-1.2.6.ebuild,
+  kdbg-1.2.7.ebuild, kdbg-1.2.9.ebuild:
+  old version cleanup, dep fixes
 
   16 Nov 2003; Brad House <brad_mssw@gentoo.org> kdbg-1.2.9.ebuild:
   mark stable on amd64
