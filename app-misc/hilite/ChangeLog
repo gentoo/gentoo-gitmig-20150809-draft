@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hilite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hilite/ChangeLog,v 1.8 2004/10/15 23:47:06 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hilite/ChangeLog,v 1.9 2004/10/26 20:59:08 ciaranm Exp $
+
+  26 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> hilite-1.5.ebuild:
+  Don't use CC, bug #68981
 
   16 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
   Added to the shell-tools herd for ciaranm.

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0844f88375e873a1d97197894f724102 ChangeLog 921
+MD5 fa78524bd5ecb98fd92d84caf3df3d68 ChangeLog 1021
+MD5 59a430e3e1eb6078df6f9639ca163bad hilite-1.5.ebuild 683
 MD5 cc91d79e8dc6f0d1b9727eb83de5f98a metadata.xml 258
-MD5 9dd620c7f5beaa7c8433ba872331d1a2 hilite-1.5.ebuild 657
 MD5 cc917381e52b9b4031849b400b4235ca files/digest-hilite-1.5 55
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcGGNCHk4+ZoBpvsRAuvBAJwNc6jtlyGGV4F+zapACgoTt8zdTACgjlHu
-vRdMWkKQgUsdfPFhWg1WRV0=
-=Ipcx
+iD8DBQFBfrpvLLFUmVNQ7rkRAg1eAJ4pF02LjLR5xDmOjf+FCumnGh5bTgCg1qXc
+e8QvzmTi9OUFMVQPM0sa4+s=
+=bOUO
 -----END PGP SIGNATURE-----
