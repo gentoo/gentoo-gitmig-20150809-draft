@@ -1,5 +1,6 @@
 MD5 bcf8b9c8bc2b34e71c0c31db240ef2f2 patch-2.5.4-r4.ebuild 1033
-MD5 d8479625d2caeff66bcf438ff0adcd93 patch-2.5.4-r5.ebuild 950
+MD5 d84b02ffa019eca3531ce0801862488b patch-2.5.9.ebuild 955
 MD5 9831ecbee0faa83c851e037374dea160 ChangeLog 1785
+MD5 7113f2413944cb06cecdd0c57ab54078 files/digest-patch-2.5.9 63
 MD5 d8308835b63cc0644a67523856ef2df8 files/digest-patch-2.5.4-r4 63
 MD5 d8308835b63cc0644a67523856ef2df8 files/digest-patch-2.5.4-r5 63
