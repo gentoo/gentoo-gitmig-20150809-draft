@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3421 2004/12/27 13:17:03 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3422 2004/12/27 14:21:31 gmsoft Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <gmsoft@gentoo.org> (27 Dec 2004)
+# Masking 2.4 kernel sources on hppa.
+# 2.4 is no more supported upstream.
+<sys-kernel/hppa-sources-2.6
 
 # <humpback@gentoo.org> (27 Dec 2004)
 # Masked until final release
@@ -142,7 +147,6 @@ app-shells/rssh
 # mass upgrade.
 >=sys-kernel/gentoo-sources-2.6
 >=sys-kernel/hardened-sources-2.6
->=sys-kernel/hppa-sources-2.6
 >=sys-kernel/pegasos-sources-2.6
 >=sys-kernel/ppc-sources-2.6
 >=sys-kernel/rsbac-sources-2.6
