@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam-oss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.32 2003/12/07 19:30:26 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.33 2003/12/07 23:01:33 weeve Exp $
+
+  07 Dec 2003; Jason Wever <weeve@gentoo.org> fam-oss-2.6.10-r1.ebuild:
+  Marked stable on sparc.
 
   07 Dec 2003; <spider@gentoo.org> fam-oss-2.6.10-r1.ebuild:
   added a notice about rc-update
