@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.36 2002/01/17 18:59:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.37 2002/01/23 13:45:35 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base kde-dirs
 ECLASS=kde
@@ -108,8 +108,9 @@ kde_sandbox_patch() {
 	cd $1
 	for x in Makefile.{am,in}
 	do
-	    cp $x ${x}.orig
-	    sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' ${x}.orig > ${x}
+	    [ -f "$x" ] && \
+	    cp $x ${x}.orig && \
+	    sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' ${x}.orig > ${x} && \
 	    rm ${x}.orig
 	done
 	shift
