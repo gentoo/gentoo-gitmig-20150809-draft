@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 545b15d33528b6cf79a8a4f9ec4e5015 aap-1.070.ebuild 1014
-MD5 db2ad97b1c073f51036343d2196ed19b ChangeLog 1980
-MD5 c15dcc7caab10bb1b7f631a63e6386f8 aap-1.072.ebuild 1013
 MD5 82a290343ccae7e2393e17c606a2fc48 aap-1.055.ebuild 925
+MD5 545b15d33528b6cf79a8a4f9ec4e5015 aap-1.070.ebuild 1014
+MD5 d3c15241dc5c630dd98cf3bc88863da2 aap-1.072.ebuild 1014
+MD5 d2badd97c43f0b96e5bfaeb17ec50db7 ChangeLog 2068
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 c9846cf10f1922d756e981928866a69d files/digest-aap-1.055 59
-MD5 1af821073e552639ccebd80f2cc26fed files/digest-aap-1.072 59
 MD5 c8821df8212d8fda85c8d1a9a3ac290e files/digest-aap-1.070 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCByxIugEuf3OQ0akRAgx0AJ48ay6z0qHs+cqcd3rclr0iRrRv1wCgoasq
-d7W2R18qXJkPd9BYJFc6veo=
-=f8rj
------END PGP SIGNATURE-----
+MD5 1af821073e552639ccebd80f2cc26fed files/digest-aap-1.072 59
