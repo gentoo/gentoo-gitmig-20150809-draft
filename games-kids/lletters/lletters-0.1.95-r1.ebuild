@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.8 2004/11/05 04:53:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.9 2004/12/27 23:05:30 mr_bones_ Exp $
 
 inherit games
 
@@ -41,7 +41,7 @@ src_compile() {
 		libtoolize -c -f
 	fi
 
-	egamesconf `use_enable nls` || die
+	egamesconf $(use_enable nls) || die
 	# Work around the po/Makefile (bug #43762)
 	# Why don't people honor DESTDIR?
 	sed -i \
