@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r1.ebuild,v 1.4 2003/09/25 18:05:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r1.ebuild,v 1.5 2003/09/26 05:42:39 msterret Exp $
 
 IUSE="nls"
 
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	patch -p0 < ${FILESDIR}/blackbox-0.65.0-mousewheel_focus-workspace.patch
 	cd ${S}/data
-	mv README README.data	
+	mv README README.data
 }
 
 pkg_postinst() {
