@@ -1,0 +1,10 @@
+--- loudmouth/lm-ssl.c.old	2004-02-06 01:50:08.231324136 +0000
++++ loudmouth/lm-ssl.c	2004-02-06 01:50:17.034985776 +0000
+@@ -72,7 +72,6 @@
+ 	
+ 	if (status & GNUTLS_CERT_INVALID
+ 	    || status & GNUTLS_CERT_NOT_TRUSTED
+-	    || status & GNUTLS_CERT_CORRUPTED
+ 	    || status & GNUTLS_CERT_REVOKED) {
+ 		if (ssl->func (ssl, LM_SSL_STATUS_UNTRUSTED_CERT,
+ 			       ssl->func_data) != LM_SSL_RESPONSE_CONTINUE) {
