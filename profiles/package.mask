@@ -22,15 +22,6 @@
 ##   End example
 ##
 
-# drobbins@gentoo.org (11 Jul 2002)
-# for testing
-=sys-apps/portage-2.0.13
-
-
-# seemant@gentoo.org (11 Jul 2002)
-# b0rked on gcc-2.95.3 systems
-=sys-apps/portage-2.0.12
-
 # seemant@gentoo.org (09 Jul 2002)
 # masked for gcc-3.1 breakages with galeon, per blocke and mkennedy's
 # request:
