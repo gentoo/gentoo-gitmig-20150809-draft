@@ -1,15 +1,25 @@
-MD5 d95b181548b58a56c26fe37d246f7406 ChangeLog 4400
-MD5 fa18a351efc482c247d8b0ae972b43bf mysql++-1.7.9-r3.ebuild 3695
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f92e8e076fd1844ee6b793213af40b56 ChangeLog 4508
 MD5 b18b162d91eb52060678dddf1f1a92af mysql++-1.7.9-r4.ebuild 3845
-MD5 db2972906da5c3b4e774499a81627403 mysql++-1.7.26.ebuild 1727
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
-MD5 13b4cad28b5dfaa0f580276962effada files/digest-mysql++-1.7.9-r3 397
+MD5 fa18a351efc482c247d8b0ae972b43bf mysql++-1.7.9-r3.ebuild 3695
+MD5 ab377b819c1f2aa355fcc5d80e6bd678 mysql++-1.7.26.ebuild 1727
 MD5 027947f703cc541c6b056955cf5606be files/mysql++-1.7.9-gcc_throw.patch 7310
-MD5 5ac32002d3e432c050e274928b7a1d78 files/mysql++-1.7.9-missing.patch 2922
 MD5 54b8d3ba432ce4cad6c23fa32ac17042 files/mysql++-1.7.9-mysql4-gcc295.patch 421
+MD5 12c5b600d90bb67d1be6d702152e7d9f files/mysql++-1.7.9-r5_gcc333.patch 1047
+MD5 13b4cad28b5dfaa0f580276962effada files/digest-mysql++-1.7.9-r4 397
 MD5 229dd0f10e6cee31e2f93df59b5f6742 files/mysql++-1.7.9-mysql4-gcc3.patch 426
 MD5 29dd283bdc19e7542a9f50501d4eda70 files/mysql++-1.7.9_example.patch 1203
-MD5 13b4cad28b5dfaa0f580276962effada files/digest-mysql++-1.7.9-r4 397
+MD5 5ac32002d3e432c050e274928b7a1d78 files/mysql++-1.7.9-missing.patch 2922
 MD5 526598f80750489676ac49881bba7a69 files/mysql++-1.7.9_gcc333.patch 1047
-MD5 12c5b600d90bb67d1be6d702152e7d9f files/mysql++-1.7.9-r5_gcc333.patch 1047
 MD5 65084d7d1a78fed8de0e81c773c9eeab files/digest-mysql++-1.7.26 66
+MD5 13b4cad28b5dfaa0f580276962effada files/digest-mysql++-1.7.9-r3 397
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB7EMNugEuf3OQ0akRAmcmAJ9h5blJW2+wtvZyzRIZ0GZY1sxz3gCfYwUN
+9Fsyj0eW282ilUKIcGd/0rY=
+=yhpc
+-----END PGP SIGNATURE-----
