@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-2.0.0.ebuild,v 1.4 2002/10/26 03:39:43 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-2.0.0.ebuild,v 1.5 2002/10/31 03:18:35 nall Exp $
 
 inherit perl-module
 
@@ -13,7 +13,6 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc
-	virtual/x11
 	dev-libs/libxml2
 	net-misc/wget
 	net-ftp/curl
