@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91.ebuild,v 1.1 2003/11/07 12:54:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91.ebuild,v 1.2 2003/11/09 13:24:51 lanius Exp $
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
@@ -89,5 +89,9 @@ pkg_postinst() {
 	einfo "You might want to emerge net-print/hpijs for better printing quality."
 	echo
 	einfo "Before starting hpoj you have to set it up with 'ptal-init setup'"
+	echo
+	einfo "If you are upgrading from a previous version, re-run ptal-init setup"
+	einfo "as the format of	the connection has changed again and your previously"
+	einfo "installed hpoj-device will not be recognized."
 	echo
 }
