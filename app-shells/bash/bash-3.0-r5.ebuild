@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r5.ebuild,v 1.4 2004/09/09 02:05:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r5.ebuild,v 1.5 2004/09/22 05:03:18 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic gnuconfig gcc
 
 # Official patches
 PLEVEL=""
@@ -92,6 +92,8 @@ src_unpack() {
 	echo '#define PGRP_PIPE 1' >> config-bot.h
 
 	gnuconfig_update
+
+	sed -i 's:-lcurses:-lncurses:' configure || die "sed configure"
 }
 
 src_compile() {
@@ -112,13 +114,19 @@ src_compile() {
 	#use static && export LDFLAGS="${LDFLAGS} -static"
 	use nls || myconf="${myconf} --disable-nls"
 
+	echo 'int main(){}' > ${T}/term-test.c
+	if ! $(gcc-getCC) -static -lncurses ${T}/term-test.c 2> /dev/null ; then
+		export bash_cv_termcap_lib=gnutermcap
+	else
+		export bash_cv_termcap_lib=libcurses
+	fi
+
 	econf \
 		--disable-profiling \
-		--with-curses \
 		--without-gnu-malloc \
 		${myconf} || die
 	# Make sure we always link statically with ncurses
-	sed -i "/^TERMCAP_LIB/s:-lcurses:-Wl,-Bstatic -lcurses -Wl,-Bdynamic:" Makefile || die "sed failed"
+	sed -i "/^TERMCAP_LIB/s:-lncurses:-Wl,-Bstatic -lncurses -Wl,-Bdynamic:" Makefile || die "sed failed"
 	emake || die "make failed"
 }
 
