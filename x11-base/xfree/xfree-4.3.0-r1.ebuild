@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.16 2003/05/29 18:07:22 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.17 2003/05/31 23:45:34 gmsoft Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -104,7 +104,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa arm"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1

@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.135 2003/05/30 12:47:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.136 2003/05/31 23:45:34 gmsoft Exp $
 
   30 May 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r2.ebuild:
   Updated to patch 1.1.5 which contains a patch for libXi when using
@@ -11,6 +11,9 @@
   <gentoo@derived-software.ltd.uk>
 
 *xfree-4.3.0-r1 (29 May 2003)
+
+  31 May 2003; Guy Martin <gmsoft@gentoo.org> xfree-4.3.0-r1.ebuild:
+  Unmasked for hppa.
 
   29 May 2003; Grant Goodyear <g2boojum@gentoo.org> xfree-4.3.0-r1.ebuild:
   Added 4.3.0-r1 back in, since it's required for hppa (by request of GMsoft).
