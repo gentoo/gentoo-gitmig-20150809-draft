@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.23 2005/02/19 18:31:02 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.24 2005/03/04 01:48:24 kito Exp $
 
 inherit eutils gnuconfig toolchain-funcs mono libtool
 
@@ -77,8 +77,8 @@ src_install() {
 	if use ppc-macos; then
 		rm -f ${D}/usr/lib/charset.alias
 		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.2.dylib ] ; then
-			cp -a ${ROOT}/usr/$(get_libdir)/libintl.2* ${D}/usr/$(get_libdir)/
-			touch ${D}/usr/$(get_libdir)/libintl.2*
+			cp -a ${ROOT}/usr/$(get_libdir)/libintl.2.dylib ${D}/usr/$(get_libdir)/
+			touch ${D}/usr/$(get_libdir)/libintl.2.dylib
 		fi
 	else
 		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.so.2 ] ; then
