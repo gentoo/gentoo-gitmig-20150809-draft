@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/borg/borg-1.3.2.ebuild,v 1.1 2004/10/05 19:22:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/borg/borg-1.3.2.ebuild,v 1.2 2004/10/05 20:30:56 axxo Exp $
 
 inherit java-pkg
 
@@ -28,7 +28,7 @@ src_install() {
 
 	echo "#!/bin/sh" > ${PN}
 	echo "cd /usr/share/${PN}" >> ${PN}
-	echo "\${JAVA_HOME}/bin/java -jar \$(java-config -p borg) '\$*'" >> ${PN}
+	echo "\${JAVA_HOME}/bin/java -jar \$(java-config -p borg) \$*" >> ${PN}
 
 	dobin ${PN}
 }
