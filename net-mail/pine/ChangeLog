@@ -1,10 +1,10 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.13 2002/12/05 20:03:17 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.14 2002/12/05 22:06:39 raker Exp $
 
-*pine-4.50-r4 (06 Dec 2002)
+*pine-4.50-r4 (05 Dec 2002)
 
-  06 Dec 2002; Nick Hadaway <raker@gentoo.org> pine-4.50-r4.ebuild,
+  05 Dec 2002; Nick Hadaway <raker@gentoo.org> pine-4.50-r4.ebuild,
   files/digest-pine-4.50-r4 :
   Fixed ssl certs directory as noted on bug #11638 and fixed some
   compile-time warnings.
