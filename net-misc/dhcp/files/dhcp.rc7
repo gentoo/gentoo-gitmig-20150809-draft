@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.rc7,v 1.1 2002/06/17 04:07:11 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.rc7,v 1.2 2002/09/03 07:40:14 lostlogic Exp $
 
 #configuration is done in /etc/conf.d/dhcp
 
@@ -20,7 +20,7 @@ checkconfig() {
 start() {
     checkconfig || return 1
     ebegin "Starting dhcpd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/dhcpd -- ${IFACE}
+    start-stop-daemon --start --quiet --exec /usr/sbin/dhcpd -- ${DHCPD_OPTS} ${IFACE}
     eend $?
 }
 
