@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/aklabeth
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/aklabeth/ChangeLog,v 1.1 2004/08/13 11:35:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/aklabeth/ChangeLog,v 1.2 2004/08/28 16:28:22 dholm Exp $
+
+  28 Aug 2004; David Holm <dholm@gentoo.org> aklabeth-1.0.ebuild:
+  Added to ~ppc.
 
 *aklabeth-1.0 (13 Aug 2004)
 
