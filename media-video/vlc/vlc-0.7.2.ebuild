@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.9 2004/12/14 12:27:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.10 2005/01/08 03:58:40 chriswhite Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental

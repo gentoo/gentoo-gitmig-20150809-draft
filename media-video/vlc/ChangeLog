@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.61 2004/12/14 12:27:42 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.62 2005/01/08 03:58:40 chriswhite Exp $
+
+*vlc-0.8.1 (08 Jan 2005)
+
+  08 Jan 2005; Chris White <chriswhite@gentoo.org> +vlc-0.8.1.ebuild:
+  Bump to version 0.8.1. This is a nice cleanup of the ebuild for deps and
+  all. Should run alot better than previous versions. Fixes bug #72338.
 
   14 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> vlc-0.6.1.ebuild,
   vlc-0.6.2-r1.ebuild, vlc-0.6.2.ebuild, vlc-0.7.1-r1.ebuild,
