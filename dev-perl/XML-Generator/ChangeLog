@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Generator
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.8 2004/06/12 09:13:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.9 2004/06/13 16:51:59 lu_zero Exp $
+
+  13 Jun 2004; Luca Barbato <lu_zero@gentoo.org> XML-Generator-0.99.ebuild:
+  Marked ppc
 
   12 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   XML-Generator-0.99.ebuild:
