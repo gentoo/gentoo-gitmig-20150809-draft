@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.19 2004/11/07 09:06:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.20 2004/11/07 09:19:54 usata Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -71,7 +71,7 @@ latex-package_src_doinstall() {
 					dobin $i
 				done
 				;;
-			"sty" | "cls" | "fd" | "clo" | "def")
+			"sty" | "cls" | "fd" | "clo" | "def" | "cfg")
 				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 				do
 					insinto ${TEXMF}/tex/latex/${PN}
@@ -115,7 +115,7 @@ latex-package_src_doinstall() {
 				done
 				;;
 			"styles")
-				latex-package_src_doinstall sty cls fd clo def bst
+				latex-package_src_doinstall sty cls fd clo def cfg bst
 				;;
 			"doc")
 				latex-package_src_doinstall tex dtx dvi ps pdf
@@ -127,7 +127,7 @@ latex-package_src_doinstall() {
 				latex-package_src_doinstall sh
 				;;
 			"all")
-				latex-package_src_doinstall styles fonts bin doc 
+				latex-package_src_doinstall styles fonts bin doc
 				;;
 		esac
 	shift
