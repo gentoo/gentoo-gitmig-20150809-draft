@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20041020.ebuild,v 1.4 2005/03/02 23:28:35 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20041020-r1.ebuild,v 1.1 2005/03/06 14:44:42 ribosome Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -165,7 +165,5 @@ src_install() {
 	newins ${FILESDIR}/ncbirc .ncbirc
 
 	# Env file to set the location of the config file and BLAST databases.
-	dodir /etc/env.d
-	insinto /etc/env.d
-	doins ${FILESDIR}/21ncbi
+	newenvd ${FILESDIR}/21ncbi-r1 21ncbi
 }
