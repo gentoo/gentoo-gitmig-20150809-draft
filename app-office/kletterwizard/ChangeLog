@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.10 2005/01/01 15:35:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.11 2005/01/14 23:35:16 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> kletterwizard-0.9.2.ebuild,
+  kletterwizard-0.9.4.ebuild, kletterwizard-0.9.6.ebuild:
+  Changed dep on kdegraphics to accept kdegraphics-meta, the split 'meta'
+  package. This dep will be narrowed down in the future to the precise split
+  packages required.
 
   30 Dec 2004; Jason Wever <weeve@gentoo.org> kletterwizard-0.9.6.ebuild:
   Added ~sparc keyword.
