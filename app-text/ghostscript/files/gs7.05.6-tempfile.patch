@@ -1,0 +1,99 @@
+--- espgs-7.05.6/lib/pj-gs.sh.orig	2004-10-08 18:48:15.125586200 -0400
++++ espgs-7.05.6/lib/pj-gs.sh	2004-10-08 18:51:29.086099720 -0400
+@@ -241,6 +241,7 @@
+ 			then
+ 				/usr/lib/lprcat $Nofilter $Nolabel $file PCL1 $user $dev
+ 			else
++				TEMPFILE=`mktemp -t pjXXXXXX` || exit 1
+ 				type=`file $file | sed 's/^[^:]*..//'`
+ 				case "$type" in
+ 				postscript*)
+@@ -251,22 +252,22 @@
+ #
+ #					gs -q -sDEVICE=paintjet -r180 -sOutputFile=- -dDISKFONTS -dNOPAUSE - < $file 2>/tmp/sh$$
+ 
+-					gs -q -sDEVICE=paintjet -r180 -sOutputFile=/tmp/pj$$ -dDISKFONTS -dNOPAUSE - < $file 1>2
+-					cat /tmp/pj$$
+-					rm /tmp/pj$$
++					gs -q -sDEVICE=paintjet -r180 -sOutputFile=$TEMPFILE -dDISKFONTS -dNOPAUSE - < $file 1>2
++					cat $TEMPFILE
++					rm $TEMPFILE
+ 					needff=
+ 					;;
+-				*)	cat "$file" 2>/tmp/sh$$
++				*)	cat "$file" 2>$TEMPFILE
+ 					needff=1
+ 					;;
+ 				esac
+ 
+-				if [ -s /tmp/sh$$ ]
++				if [ -s $TEMPFILE ]
+ 				then
+ #				    cat /tmp/sh$$	# output any errors
+-				    cat /tmp/sh$$ 1>2	# output any errors
++				    cat $TEMPFILE 1>2	# output any errors
+ 				fi
+-				rm -f /tmp/sh$$
++				rm -f $TEMPFILE
+ 				if [ $needff ]; then echo "\014\r\c"; fi
+ 			fi
+ 
+--- espgs-7.05.6/lib/ps2epsi.orig	2004-10-08 22:16:37.194982760 -0400
++++ espgs-7.05.6/lib/ps2epsi	2004-10-08 23:03:25.320082856 -0400
+@@ -1,7 +1,8 @@
+ #!/bin/sh
+ # $Id: gs7.05.6-tempfile.patch,v 1.1 2004/10/18 18:11:06 lanius Exp $
+ 
+-tmpfile=/tmp/ps2epsi$$
++tmpfile=`mktemp -t ps2epsiXXXXXX` || exit 1
++trap "rm -rf $tmpfile" 0 1 2 3 7 13 15
+ 
+ export outfile
+ 
+--- espgs-7.05.6/lib/pv.sh.orig	2004-10-08 18:52:13.227389224 -0400
++++ espgs-7.05.6/lib/pv.sh	2004-10-08 18:53:05.459448744 -0400
+@@ -27,11 +27,12 @@
+ #
+ TEMPDIR=.
+ PAGE=$1
++TEMPFILE=`mktemp -t ${FILE}XXXXXX` || exit 1
+ shift
+ FILE=$1
+ shift
+-trap "rm -rf $TEMPDIR/$FILE.$$.pv" 0 1 2 15
++trap "rm -rf $TEMPFILE" 0 1 2 15
+ #dvips -D$RESOLUTION -p $PAGE -n 1 $FILE $* -o $FILE.$$.pv
+-dvips -p $PAGE -n 1 $FILE $* -o $FILE.$$.pv
+-gs $FILE.$$.pv
++dvips -p $PAGE -n 1 $FILE $* -o $TEMPFILE
++gs $TEMPFILE
+ exit 0
+--- espgs-7.05.6/lib/sysvlp.sh.orig	2004-10-08 18:53:10.521679168 -0400
++++ espgs-7.05.6/lib/sysvlp.sh	2004-10-08 18:54:10.512559168 -0400
+@@ -27,20 +27,23 @@
+ # Brother HL-4: switch to HP laserjet II+ emulation
+ # echo "\033\015H\c"
+ 
++TEMPDIR=`mktemp -td sysvlp.XXXXXX` || exit 1
++
+ i=1
+ while [ $i -le $copies ]
+ do
+ 	for file in $files
+ 	do
+ 		$GSHOME/gs \
+-			-sOUTPUTFILE=/tmp/psp$$.%02d \
++			-sOUTPUTFILE=$TEMPDIR/psp$$.%02d \
+ 			-sDEVICE=$DEVICE \
+ 			$EHANDLER $file \
+ 			< /dev/null >> /usr/tmp/ps_log 2>&1
+ 
+-		cat /tmp/psp$$.* 2>> /usr/tmp/ps_log
+-		rm -f /tmp/psp$$.*
++		cat $TEMPDIR/psp$$.* 2>> /usr/tmp/ps_log
++		rm -f $TEMPDIR/psp$$.*
+ 	done
+ 	i=`expr $i + 1`
+ done
++rmdir $TEMPDIR
+ exit 0
