@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.28 2004/10/01 22:25:10 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.29 2004/11/16 08:36:24 phosphan Exp $
+
+  16 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -fftw-2.1.3-r1.ebuild,
+  fftw-2.1.5-r1.ebuild, -fftw-2.1.5.ebuild:
+  Cleanup.
+  Fixing bug #70817 (missing fortran include file).
 
   01 Oct 2004; kito@gentoo.org +files/fftw-ppc-macos.patch,
   fftw-3.0.1-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.5 2004/06/24 23:10:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.6 2004/11/16 08:36:24 phosphan Exp $
 
 inherit flag-o-matic
 
@@ -134,4 +134,8 @@ src_install () {
 		dosym libdfftw_threads.so /usr/lib/libfftw_threads.so
 		dosym libdrfftw_threads.so /usr/lib/librfftw_threads.so
 	fi
+
+	cd "${S}-single/fortran"
+	insinto "${D}usr/include"
+	doins fftw_f77.i
 }
