@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.11 2005/01/01 14:12:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.12 2005/01/03 22:11:18 dragonheart Exp $
+
+*fuse-0.7.0 (04 Jan 2005)
+
+  04 Jan 2005; Daniel Black <dragonheart@gentoo.org> fuse-0.6.1.1.ebuild,
+  fuse-0.6.2.1.ebuild, +fuse-0.7.0.ebuild:
+  Version bump as per bug #76488 by Ooblick <txe_stc@yahoo.com>. Previous
+  versions QA fix due to deprecated empty target in string (fuse use flag).
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> fuse-0.6.2.1.ebuild,
   +metadata.xml:
