@@ -1,18 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.7.ebuild,v 1.7 2003/09/08 05:13:41 msterret Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.10.ebuild,v 1.1 2003/09/24 14:34:56 liquidx Exp $
 
 inherit gnome2 gnome.org libtool
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="The Gnome Application Libraries"
 HOMEPAGE="http://www.gnome.org/"
 
+IUSE="doc"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha"
 
 RDEPEND=">=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeprintui-2.2.1
@@ -27,24 +25,15 @@ DEPEND="sys-devel/gettext
 	doc? ( dev-util/gtk-doc )
 	${RDEPEND}"
 
-MAKEOPTS="-j1"
+MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR="1"
+ELTCONF="--reverse-deps"
 
 src_unpack() {
 	unpack ${A}
+
 	gnome2_omf_fix
 
-	# remove gtkdoc-fixxref
-	cd ${S}; patch -p1 < ${FILESDIR}/gal-1.99.3-docfix.patch
-}
-
-src_install() {
-	gnome2_src_install
-
-	# HACK HACK HACK !!
-	# See libgtkhtml-3.x for more info. but basically this is here
-	# for exactly the same reason. We should NOT release this until
-	# we get those libtool problems fixed! However, this is the
-	# temporary workaround. - <liquidx@gentoo.org>
-	dosym /usr/lib/libgal-2.0.so.3 /usr/lib/libgal-2.0.so.2
+	# Remove gtkdoc-fixxref
+	cd ${S}; epatch ${FILESDIR}/gal-1.99.3-docfix.patch
 }
