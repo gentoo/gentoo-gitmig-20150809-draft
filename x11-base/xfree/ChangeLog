@@ -1,6 +1,17 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.17 2002/05/20 17:52:54 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.18 2002/05/29 00:21:58 azarah Exp $
+
+*xfree-4.2.0-r11 (28 May 2002)
+
+  28 May 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild :
+
+  New ebuild that adds lots of fixes and patches.  Should fix the Wacom
+  issues (bug #1632).  Added patch for i810 DRI (bug #1870).  Add libGLU.so.
+  Update Xsession to load resources (bug #2731).  Update freetype2 used;
+  didnt make it use the system freetype2, as this could make things
+  unstable (bug #3082).  Fix problems with PPC and mouse scrolling, thanks
+  to Mark Guertin.
 
 *xfree-4.2.0-r10 (10 Apr 2002)
 
