@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.198 2004/11/10 00:15:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.199 2004/11/11 23:32:00 agriffis Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -289,6 +289,7 @@ xmlrpc - Support for xml-rpc library
 xmms - Check/Support for XMMS (X MultiMedia System) player.
 xosd - Sends display using the X On Screen Display library
 xpm - Support for XPM graphics format.
+xprint - Support for xprint, http://www.mozilla.org/projects/xprint/
 xsl - Check/Support flag for XSL library (version 1)
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
 xvid - Adds support for xvid.org's open-source mpeg-4 codec
