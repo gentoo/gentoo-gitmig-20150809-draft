@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speechd/speechd-0.56.ebuild,v 1.7 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speechd/speechd-0.56.ebuild,v 1.8 2003/12/08 06:22:40 mr_bones_ Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Implements /dev/speech (any text written to /dev/speech will be spoken aloud)"
@@ -37,7 +37,7 @@ pkg_postinst () {
 
 pkg_config () {
 	mkfifo --mode=0660 /dev/speech
-	chown root.speech /dev/speech
+	chown root:speech /dev/speech
 
 	einfo "FIFO has been created on /dev/speech"
 	einfo ""

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.17 2003/09/11 02:26:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.18 2003/12/08 06:21:54 mr_bones_ Exp $
 
 IUSE="arts esd gnome X gtk oggvorbis alsa"
 
@@ -76,6 +76,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog CHANGES COPYING NEWS README README.linux
 
 	cd ${D}/usr/share/freeamp ; tar zxf ${S}/help/unix/freeamphelp.tar.gz
-	chown -R root.root help ; chmod 644 help/*
+	chown -R root:root help ; chmod 644 help/*
 	dosym /usr/share/freeamp/help /usr/share/doc/${PF}/html
 }

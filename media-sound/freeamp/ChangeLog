@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/freeamp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/ChangeLog,v 1.6 2003/02/12 07:28:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/ChangeLog,v 1.7 2003/12/08 06:21:54 mr_bones_ Exp $
+
+  07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  freeamp-2.1.1-r1.ebuild:
+  chown x.y -> chown x:y (bug 35127)
 
 *freeamp-2.2.1 (30 Dec 2002)
   30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org>:
