@@ -15,7 +15,7 @@ MD5 a9991d6324d7404ed99e79be6e44e9de files/uclinux-sources-2.6.binfmt_elf.patch 
 MD5 915e8d7a0618736caa44d96968015467 files/uclinux-sources-2.4.26_p0.binfmt_elf.patch 2346
 MD5 0f66013f643c79c97fda489618a4e2fd files/uclinux-sources-2.4.26_p0.CAN-2004-0535.patch 476
 MD5 95708646470a95668e8789cd415844ed files/uclinux-sources.CAN-2004-0497.patch 846
-MD5 fbc1a3d0533be56ed675107b76fb8b14 files/digest-uclinux-sources-2.6.7_p0-r10 287
+MD5 3f6f370e8be93508e492315860e508ac files/digest-uclinux-sources-2.6.7_p0-r10 287
 MD5 c9da1bc82b906f6abc648c056e7bf662 files/uclinux-sources-2.4.26_p0.FPULockup-53804.patch 354
 MD5 39361f8d16b1fe5891aab62e92f8cd30 files/uclinux-sources-2.6.IPTables-RDoS.patch 390
 MD5 aa595005721b58929ee55e2e8f4b6ba0 files/uclinux-sources-2.6.CAN-2004-0816.patch 1693
