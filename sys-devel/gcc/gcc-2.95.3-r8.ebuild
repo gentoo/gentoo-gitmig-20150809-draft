@@ -1,11 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r3.ebuild,v 1.1 2002/10/27 22:55:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.1 2002/11/10 15:19:55 azarah Exp $
 
 IUSE="static nls bootstrap java build"
-
-# NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
-#                      Ill fix it later if i get a chance.
 
 inherit flag-o-matic libtool
 
@@ -34,6 +31,10 @@ filter-flags "-fno-exceptions -fomit-frame-pointer"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
+# Are we trying to compile with gcc3 ?  CFLAGS and CXXFLAGS needs to be
+# valid for gcc-2.95.3 ...
+gcc2_flags
+
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
 
@@ -44,37 +45,36 @@ MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
 LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
 BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
 DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
-# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
-# We will handle /usr/include/g++-v3/ with gcc-config ...
-STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
+# Dont install in /usr/include/g++/, but in gcc internal directory.
+# We will handle /usr/include/g++/ with gcc-config ...
+STDCXX_INCDIR="${LIBPATH}/include/g++"
 
-# Snapshot support ...
-#SNAPSHOT="2002-08-12"
-SNAPSHOT=""
-
-if [ -z "${SNAPSHOT}" ]
-then
-	S="${WORKDIR}/${P}"
-	SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2"
-else
-	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
-	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
-fi
-
+S="${WORKDIR}/${P}"
 DESCRIPTION="Modern C/C++ compiler written by the GNU people"
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-SLOT="${CCHOST}-${MY_PV}"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
+# Ok, this is a hairy one again, but lets assume that we
+# are not cross compiling, than we want SLOT to only contain
+# $PV, as people upgrading to new gcc layout will not have
+# their old gcc unmerged ...
+if [ "${CHOST}" = "${CCHOST}" ]
+then
+	SLOT="${MY_PV}"
+else
+	SLOT="${CCHOST}-${MY_PV}"
+fi
+
 DEPEND="virtual/glibc
-	sys-devel/gcc-config
+	>=sys-devel/gcc-config-1.2
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 			  
 RDEPEND="virtual/glibc
-	sys-devel/gcc-config
+	>=sys-devel/gcc-config-1.2
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -92,39 +92,29 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if [ -z "${SNAPSHOT}" ]
-	then
-		unpack ${P}.tar.bz2
-	else
-		unpack gcc-${SNAPSHOT//-}.tar.bz2
-	fi
+	unpack ${P}.tar.gz
 
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
-	elibtoolize --portage --shallow
-	
-	# Fixes a bug in gcc-3.1 and above ... -maccumulate-outgoing-args flag (added
-	# in gcc-3.1) causes gcc to misconstruct the function call frame in many cases.
-	# Thanks to Ronald Hummelink <ronald@hummelink.xs4all.nl> for bringing it to
-	# our attention.
-	#
-	#   http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/
-	#   http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0319.html
-	#   http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0350.html
-	#   http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0410.html
-	#   http://gcc.gnu.org/ml/gcc/2002-08/msg00731.html
-	#
-	# Also for the updated patches, see:
-	#
-	#   http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0588.html
-	#
-	patch -p1 < ${FILESDIR}/${PV}/${P}.fix-copy.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}.fix-var.patch || die
+	libtoolize --copy --force &> /dev/null
 
-	# Fixes to get gcc to compile under glibc-2.3*
-	patch -p1 < ${FILESDIR}/${PV}/${P}-glibc-2.3-compat.diff || die
-	# This one is thanks to cretin@gentoo.org
-	patch -p1 < ${FILESDIR}/${PV}/${P}.ctype.patch || die
+	# This new patch for the atexit problem occured with glibc-2.2.3 should
+	# work with glibc-2.2.4.  This closes bug #3987 and #4004.
+	#
+	# Azarah - 29 Jun 2002
+	#
+	# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0476.html
+	# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0589.html
+	#
+	#
+	# Something to note, is that this patch makes gcc crash if its given
+	# the "-mno-ieee-fp" flag ... libvorbis is an good example of this.
+	# This however is on of those which one we want fixed most cases :/
+	#
+	# Azarah - 30 Jun 2002
+	#
+	einfo "Applying new-atexit patch..."
+	patch -l -p1 < ${FILESDIR}/${P}-new-atexit.diff > /dev/null || die
 
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
@@ -145,13 +135,7 @@ src_unpack() {
 		
 		# Fix --with-gxx-include-dir=
 		cp ${x} ${x}.orig
-		sed -e 's:gxx_include_dir = @gxx_:gxx_include_dir = $(FAKE_ROOT)@gxx_:' \
-			-e 's:glibcppinstalldir = @gxx_:glibcppinstalldir = $(FAKE_ROOT)@gxx_:' \
-			${x}.orig > ${x}
-		
-		# Where java security stuff should be installed
-		cp ${x} ${x}.orig
-		sed -e 's:secdir = $(libdir)/security:secdir = $(FAKE_ROOT)$(LIBPATH)/security:' \
+		sed -e 's:gxx_include_dir=${includedir}:gxx_include_dir=$(FAKE_ROOT)${includedir}:' \
 			${x}.orig > ${x}
 		
 		rm -f ${x}.orig
@@ -160,23 +144,17 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	local gcc_lang=""
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
-		gcc_lang="c,c++,ada,f77,objc"
 	else
-		gcc_lang="c"
+		myconf="${myconf} --enable-languages=c"
 	fi
 	if [ -z "`use nls`" ] || [ "`use build`" ]
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
-	fi
-	if [ -n "`use java`" ] && [ -z "`use build`" ]
-	then
-		gcc_lang="${gcc_lang},java"
 	fi
 
 	# In general gcc does not like optimization, and add -O2 where
@@ -188,6 +166,7 @@ src_compile() {
 	mkdir -p ${WORKDIR}/build
 	cd ${WORKDIR}/build
 
+	einfo "Configuring GCC..."
 	addwrite "/dev/zero"
 	${S}/configure --prefix=${LOC} \
 		--bindir=${BINPATH} \
@@ -198,34 +177,27 @@ src_compile() {
 		--host=${CHOST} \
 		--target=${CCHOST} \
 		--with-system-zlib \
-		--enable-languages=${gcc_lang} \
 		--enable-threads=posix \
 		--enable-long-long \
-		--disable-checking \
-		--enable-cstdio=stdio \
-		--enable-clocale=generic \
-		--enable-__cxa_atexit \
 		--enable-version-specific-runtime-libs \
-		--with-gxx-include-dir=${STDCXX_INCDIR} \
 		--with-local-prefix=${LOC}/local \
 		${myconf} || die
 
 	touch ${S}/gcc/c-gperf.h
 
+	einfo "Building GCC..."
 	if [ -z "`use static`" ]
 	then
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
 		emake bootstrap-lean \
-			LIBPATH="${LIBPATH}" \
-			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
+			LIBPATH="${LIBPATH}" STAGE1_CFLAGS="-O" || die
 		# Above FLAGS optimize and speedup build, thanks
 		# to Jeff Garzik <jgarzik@mandrakesoft.com>
 	else
 		S="${WORKDIR}/build" \
 		emake LDFLAGS=-static bootstrap \
-			LIBPATH="${LIBPATH}" \
-			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
+			LIBPATH="${LIBPATH}" STAGE1_CFLAGS="-O" || die
 	fi
 }
 
@@ -240,6 +212,7 @@ src_install() {
 		fi
 	done
 
+	einfo "Installing GCC..."
 	# Do the 'make install' from the build directory
 	cd ${WORKDIR}/build
 	S="${WORKDIR}/build" \
@@ -267,23 +240,6 @@ src_install() {
 	touch ${D}/lib/cpp
 	touch ${D}/usr/bin/cc
 	
-# This should be invalidated by the linker scripts we have as the latest
-# fix for bug #4411
-#
-#	# gcc-3.1 have a problem with the ordering of Search Directories.  For
-#	# instance, if you have libreadline.so in /lib, and libreadline.a in
-#	# /usr/lib, then it will link with libreadline.a instead of .so.  As far
-#	# as I can see from the source, /lib should be searched before /usr/lib,
-#	# and this also differs from gcc-2.95.3 and possibly 3.0.4, but ill have
-#	# to check on 3.0.4.  Thanks to Daniel Robbins for noticing this oddity,
-#	# bugzilla bug #4411
-#	#
-#	# Azarah - 3 Jul 2002
-#	#
-#	cd ${D}${LIBPATH}
-#	dosed -e "s:%{L\*} %(link_libgcc):%{L\*} -L/lib %(link_libgcc):" \
-#		${LIBPATH}/specs
-
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
 	if [ -z "`use build`" ]
@@ -307,34 +263,6 @@ src_install() {
 			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}
 		done
 
-		# Move Java headers to compiler-specific dir
-		for x in ${D}${LOC}/include/gc*.h ${D}${LOC}/include/j*.h
-		do
-			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}/include/
-		done
-		for x in gcj gnu java javax org
-		do
-			if [ -d ${D}${LOC}/include/${x} ]
-			then
-				mkdir -p ${D}${LIBPATH}/include/${x}
-				mv -f ${D}${LOC}/include/${x}/* ${D}${LIBPATH}/include/${x}/
-				rm -rf ${D}${LOC}/include/${x}
-			fi
-		done
-
-		# Move libgcj.spec to compiler-specific directories
-		[ -f ${D}${LOC}/lib/libgcj.spec ] && \
-			mv -f ${D}${LOC}/lib/libgcj.spec ${D}${LIBPATH}/libgcj.spec
-
-		# Rename jar because it could clash with Kaffe's jar if this gcc is
-		# primary compiler (aka don't have the -<version> extension)
-		cd ${D}${LOC}/${CCHOST}/gcc-bin/${MY_PV}
-		[ -f jar ] && mv -f jar gcj-jar
-
-		# Move <cxxabi.h> to compiler-specific directories
-		[ -f ${D}${STDCXX_INCDIR}/cxxabi.h ] && \
-			mv -f ${D}${STDCXX_INCDIR}/cxxabi.h ${D}${LIBPATH}/include/
-
 		# These should be symlinks
 		cd ${D}${BINPATH}
 		rm -f ${CCHOST}-{gcc,g++,c++,g77}
@@ -354,63 +282,44 @@ src_install() {
     if [ -z "`use build`" ]
     then
 		cd ${S}
-		docinto /${CCHOST}
-		dodoc COPYING COPYING.LIB ChangeLog FAQ GNATS MAINTAINERS README
-		docinto ${CCHOST}/html
-		dohtml *.html
-		cd ${S}/boehm-gc
-		docinto ${CCHOST}/boehm-gc
-		dodoc ChangeLog doc/{README*,barrett_diagram}
-		docinto ${CCHOST}/boehm-gc/html
-		dohtml doc/*.html
+		docinto /       
+		dodoc COPYING COPYING.LIB README* FAQ MAINTAINERS
+		docinto html
+		dodoc faq.html
+		docinto gcc
 		cd ${S}/gcc
-		docinto ${CCHOST}/gcc
-		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
+		dodoc BUGS ChangeLog* COPYING* FSFChangeLog* LANGUAGES NEWS PROBLEMS README* SERVICE TESTS.FLUNK
+		cd ${S}/libchill
+		docinto libchill
+		dodoc ChangeLog
 		cd ${S}/libf2c
-	    docinto ${CCHOST}/libf2c
-	    dodoc ChangeLog README TODO *.netlib
-		cd ${S}/libffi
-	    docinto ${CCHOST}/libffi
-	    dodoc ChangeLog* LICENSE README
-	    cd ${S}/libiberty
-	    docinto ${CCHOST}/libiberty
-	    dodoc ChangeLog COPYING.LIB README
-	    cd ${S}/libobjc
-	    docinto ${CCHOST}/libobjc
-	    dodoc ChangeLog README* THREADS*
-		cd ${S}/libstdc++-v3
-		docinto ${CCHOST}/libstdc++-v3
-		dodoc ChangeLog* README
-		docinto ${CCHOST}/libstdc++-v3/html
-		dohtml -r -a css,diff,html,txt,xml docs/html/*
-		cp -f docs/html/17_intro/[A-Z]* \
-			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
-		
-        if [ -n "`use java`" ]
-        then
-			cd ${S}/fastjar
-			docinto ${CCHOST}/fastjar
-			dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
-			cd ${S}/libjava
-			docinto ${CCHOST}/libjava
-			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
-        fi
+		docinto libf2c
+		dodoc ChangeLog changes.netlib README TODO
+		cd ${S}/libio
+		docinto libio
+		dodoc ChangeLog NEWS README
+		cd dbz
+		docinto libio/dbz
+		dodoc README
+		cd ../stdio
+		docinto libio/stdio
+		dodoc ChangeLog*
+		cd ${S}/libobjc
+		docinto libobjc
+		dodoc ChangeLog README* THREADS*
+		cd ${S}/libstdc++
+		docinto libstdc++
+		dodoc ChangeLog NEWS
     else
         rm -rf ${D}/usr/share/{man,info}
 	fi
-
-    # Fix ncurses b0rking
-    find ${D}/ -name '*curses.h' -exec rm -f {} \;
 }
 
 pkg_postinst() {
 
-	if [ "${ROOT}" = "/" ]
+	if [ "${ROOT}" = "/" -a "${COMPILER}" != "gcc3" ]
 	then
-		gcc-config ${CCHOST}-${MY_PV_FULL}
+		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
 	fi
-	
-	# Fix ncurses b0rking (if r5 isn't unmerged)
-	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }
 
