@@ -1,0 +1,17 @@
+# ChangeLog for app-i18n/ispell-it
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ChangeLog,v 1.1 2002/12/03 07:15:39 seemant Exp $
+
+*ispell-it-2001 (30 Oct 2002)
+
+  09 Nov 2002; Seemant Kulleen <seemant@gentoo.org> ispell-it-2001.ebuild :
+
+  Adjusted SRC_URI to fetch the tarball properly.  Seems like upstream
+  screwed things around.  Thanks to: alor@blackhats.it (Alberto Ornaghi) for
+  bug #10476
+
+  30 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ispell-it-2001.ebuild
+  files/digest-ispell-it-2001 ChangeLog :
+
+  New dictionary by: stefano.scipioni@euronia.it (Stefano Scipioni) in bug
+  #8890.

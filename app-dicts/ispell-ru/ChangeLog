@@ -1,0 +1,16 @@
+# ChangeLog for app-i18n/ispell-ru
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ChangeLog,v 1.1 2002/12/03 07:15:39 seemant Exp $
+
+*ispell-ru-0.99.6.1 (11 Jul 2002)
+
+  11 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  ispell-ru-0.99.6.1.ebuild files/digest-ispell-ru-0.99.6.1 :
+
+  Version bump and repoman fixes.
+
+*ispell-ru-0.99.5.9 (Apr 26, 2002)
+
+  26 Apr, 2002; Arcady Genkin <agenkin@thpoon.com> ispell-ru-0.99.5.9.ebuild:
+  
+  Initial version.

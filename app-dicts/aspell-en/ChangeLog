@@ -1,0 +1,39 @@
+# ChangeLog for app-i18n/aspell-en
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.1 2002/12/03 07:15:39 seemant Exp $
+
+*aspell-en-0.50.2 (03 Sep 2002)
+
+  03 Sep 2002; Seemant Kulleen <seemant@gentoo.org> aspell-en-0.50.2.ebuild
+  files/digest-aspell-en-0.50.2 :
+
+  Version bump to bugfix release.
+
+*aspell-en-0.50.1 (23 Aug 2002)
+
+  23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> aspell-en-0.50.1.ebuild
+  files/digest-aspell-en-0.50.1 :
+
+  Newest english languages dictionaries for aspell-0.50
+
+*aspell-en-0.1.0.11 (15 Aug 2002)
+
+  15 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  aspell-en-0.1.0.11.ebuild :
+
+  Version bump already.  Thanks to bradleyatc
+
+*aspell-en-0.0.0.10 (15 Aug 2002)
+
+  15 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  aspell-en-0.0_pre10.ebuild aspell-0.0.0.10.ebuild :
+
+  removed the pre nonsense, as it is not a good versioning scheme. this new
+  ebuild is more accurate for that.  And also, eclassed
+
+*aspell-en-0.0_pre10 (14 Aug 2002)
+
+  14 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  aspell-en-0.0_pre10.ebuild :
+
+  New english language dictionaries for use with aspell-0.50
