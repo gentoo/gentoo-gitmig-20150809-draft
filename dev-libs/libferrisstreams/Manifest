@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 06af7cb62c4659dcd028f7666ea26d02 libferrisstreams-0.3.6.ebuild 706
-MD5 e278aab9096d59677b60b477be54fec4 metadata.xml 287
+MD5 a1cd8bdd5f53fd5734ddbc2acf077a7f libferrisstreams-0.3.6.ebuild 716
 MD5 df96f6d31efc40abcc86165759b94676 ChangeLog 522
+MD5 e278aab9096d59677b60b477be54fec4 metadata.xml 287
 MD5 523b8a2931d8c5df4471b50dde49a61c files/digest-libferrisstreams-0.3.6 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA9JVTHTu7gpaalycRAin3AKCAPLFWIi5ZYtRQJR2hTjGcMD3cIACg3Gwx
-fxHpf0QC9dN+MwqfV5lVJXk=
-=FBEP
------END PGP SIGNATURE-----
