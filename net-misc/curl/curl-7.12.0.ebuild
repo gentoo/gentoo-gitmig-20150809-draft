@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.12.0.ebuild,v 1.1 2004/07/24 17:56:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.12.0.ebuild,v 1.2 2004/07/25 19:33:34 liquidx Exp $
 
 DESCRIPTION="A Client that groks URLs"
 HOMEPAGE="http://curl.haxx.se/"
@@ -32,4 +32,7 @@ src_install() {
 	dodoc LEGAL CHANGES README
 	dodoc docs/FEATURES docs/INSTALL docs/INTERNALS docs/LIBCURL
 	dodoc docs/MANUAL docs/FAQ docs/BUGS docs/CONTRIBUTE
+
+	# backwards compat link
+	dosym /usr/lib/libcurl.so.3 libcurl.so.2
 }
