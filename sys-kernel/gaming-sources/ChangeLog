@@ -1,13 +1,12 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.11 2003/12/01 22:40:53 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.12 2003/12/04 22:45:21 plasmaroo Exp $
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   gaming-sources-2.4.20-r1.ebuild, gaming-sources-2.4.20-r2.ebuild,
   gaming-sources-2.4.20-r3.ebuild, gaming-sources-2.4.20-r4.ebuild,
   gaming-sources-2.4.20-r5.ebuild, gaming-sources-2.4.20-r6.ebuild,
-  files/do_brk_fix.patch:
-  fix do_brk vuln
+  files/do_brk_fix.patch: Fix the 'do_brk' vulnerability.
 
 *gaming-sources-2.4.20-r6 (28 Oct 2003)
 
@@ -22,11 +21,11 @@ gaming-sources-2.4.20-r5 (11 June 2003)
 
   07 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   gaming-sources-2.4.20-r3.ebuild, gaming-sources-2.4.20-r5.ebuild:
-  Fixing security issue with /tmp/KV
+  Fixing security issue with /tmp/KV.
 
   11 June 2003; Bob Johnson <livewire@gentoo.org>: new 2.4.20-r5
   	
-	- fixed via agpgart compile
+	- Fixed via agpgart compile.
 
 gaming-sources-2.4.20-r4 (08 June 2003)
 
@@ -38,25 +37,25 @@ gaming-sources-2.4.20-r4 (08 June 2003)
 gaming-sources-2.4.20-r3 (30 April 2003)
 
   30 April 2003; Bob Johnson <livewire@gentoo.org> -gcc31 default optimizations
-  changed to -O2 (pfeifer@gentoo.org)
+  have been changed to -O2 (pfeifer@gentoo.org)
 
 *gaming-sources-2.4.20-r2 (20 April 2003)
 
   16 April 2003; Bob Johnson <livewire@gentoo.org>
 
-	-new bootsplash patches
-	-bumped back down to ck4 for performance
+	- New bootsplash patches
+	- Bumped back down to -ck4 for performance
 
 *gaming-sources-2.4.20-r1 (11 Mar 2003)
   
   30 Mar 2003; Bob Johnson <livewire@gentoo.org>
 	
-	-added bootsplash patch
-	-add vmware framebuffer patch
-	-add kernel hacks for extra quiet kernel messages (append = quiet) for livecd
+	- Added bootsplash patch
+	- Add vmware framebuffer patch
+	- Add kernel hacks for extra quiet kernel messages (append = quiet)
+          for LiveCD.
   
   11 Mar 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
 
   Added ChangeLog to gaming-sources.
-	
-  
+
