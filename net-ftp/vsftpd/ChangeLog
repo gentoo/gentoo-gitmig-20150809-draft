@@ -1,9 +1,12 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.2 2002/05/04 03:42:50 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.3 2002/09/21 02:26:29 vapier Exp $
 
 *vsftpd-1.0.1-r1 (3 May 2002)
-  
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added HOMEPAGE variable and set SRC_URI to the homepage download location  
+
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
   
   Added LICENSE, SLOT.

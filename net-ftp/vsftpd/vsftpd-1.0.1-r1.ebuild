@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.0.1-r1.ebuild,v 1.3 2002/08/16 14:24:50 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.0.1-r1.ebuild,v 1.4 2002/09/21 02:26:29 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Very Secure FTP Daemon written with speed, size and security in mind"
-SRC_URI="ftp://ferret.lmh.ox.ac.uk/pub/linux/${P}.tar.gz"
+SRC_URI="ftp://vsftpd.beasts.org/users/cevans/${P}.tar.gz"
+HOMEPAGE="http://vsftpd.beasts.org/"
 
 DEPEND=">=sys-libs/pam-0.75"
 RDEPEND="sys-apps/xinetd"
