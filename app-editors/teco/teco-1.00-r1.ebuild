@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r1.ebuild,v 1.2 2003/06/18 08:28:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r1.ebuild,v 1.3 2003/07/07 16:33:08 taviso Exp $
 
 DESCRIPTION="Classic TECO editor, Predecessor to EMACS."
 HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/editors/tty/"
 SRC_URI="http://www.ibiblio.org/pub/linux/apps/editors/tty/teco.tar.gz
-	doc? ( http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tecolore.txt )
-	doc? ( http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tech.txt )
-	doc? ( http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/teco.doc )
-	doc? ( http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tecoprog.doc )"
+	doc? ( http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tecolore.txt
+		http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tech.txt
+		http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/teco.doc
+		http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco/doc/tecoprog.doc )"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="alpha x86"
