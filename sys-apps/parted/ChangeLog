@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.33 2004/04/05 04:39:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.34 2004/04/06 16:27:10 seemant Exp $
+
+  06 Apr 2004; Seemant Kulleen <seemant@gentoo.org> parted-1.6.8.ebuild:
+  added ~x86 to KEYWORDS
 
 *parted-1.6.8 (05 Apr 2004)
 
