@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/Cheetah-0.9.14.ebuild,v 1.10 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/Cheetah-0.9.14.ebuild,v 1.11 2003/09/11 01:14:04 msterret Exp $
 
 VERSION="0.9.14"
 S=${WORKDIR}/${P}
@@ -23,27 +23,27 @@ src_compile() {
 
 src_install() {
 
-    python setup.py install --prefix=${D}/usr || die
+	python setup.py install --prefix=${D}/usr || die
 
-    dodoc README docs/devel_guide.txt docs/users_guide.txt docs/users_guide.ps \
-          docs/users_guide.pdf docs/devel_guide.pdf docs/devel_guide.ps
+	dodoc README docs/devel_guide.txt docs/users_guide.txt docs/users_guide.ps \
+		docs/users_guide.pdf docs/devel_guide.pdf docs/devel_guide.ps
 
-    docinto beginners_guide_src
+	docinto beginners_guide_src
 	dodoc docs/beginners_guide_src/*
 
 	docinto devel_guide_src
 	dodoc docs/devel_guide_src/*
 
 	docinto users_guide_src
-    dodoc docs/users_guide_src/*
+	dodoc docs/users_guide_src/*
 
 	#dodoc compresses everything
 	#changed to ininto/doins so that html files are not compressed
-    insinto usr/share/doc/${PF}/html/devel_guide_html
+	insinto usr/share/doc/${PF}/html/devel_guide_html
 	doins docs/devel_guide_html/*
 
 	insinto usr/share/doc/${PF}/html/devel_guide_html_multipage
-    doins docs/devel_guide_html_multipage/*
+	doins docs/devel_guide_html_multipage/*
 
 	insinto usr/share/doc/${PF}/html/users_guide_html
 	doins docs/users_guide_html/*

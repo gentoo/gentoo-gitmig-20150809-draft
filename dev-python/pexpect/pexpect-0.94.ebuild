@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-0.94.ebuild,v 1.9 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-0.94.ebuild,v 1.10 2003/09/11 01:14:04 msterret Exp $
 
 IUSE=""
 
@@ -13,13 +13,13 @@ KEYWORDS="x86 ppc ~alpha sparc"
 DEPEND="dev-lang/python"
 
 src_compile() {
-    python -c 'import compileall; compileall.compile_dir(".",force=1)'
+	python -c 'import compileall; compileall.compile_dir(".",force=1)'
 }
 
 src_install () {
-    local pv=`python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:'`
-    insinto "/usr/lib/python${pv}/site-packages"
+	local pv=`python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:'`
+	insinto "/usr/lib/python${pv}/site-packages"
 
-    doins pexpect.py*
-    dodoc README.txt
+	doins pexpect.py*
+	dodoc README.txt
 }

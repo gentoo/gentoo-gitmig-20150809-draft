@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.10.4.ebuild,v 1.4 2003/07/12 12:49:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.10.4.ebuild,v 1.5 2003/09/11 01:14:04 msterret Exp $
 
 inherit distutils
 
@@ -23,5 +23,5 @@ src_install(){
 	mv ${D}/usr/share/doc/pycurl/examples ${D}/usr/share/doc/${P}
 	mv ${D}/usr/share/doc/pycurl/html ${D}/usr/share/doc/${P}
 	mv ${D}/usr/share/doc/pycurl/tests ${D}/usr/share/doc/${P}
-    rm -fr ${D}/usr/share/doc/pycurl
+	rm -fr ${D}/usr/share/doc/pycurl
 }

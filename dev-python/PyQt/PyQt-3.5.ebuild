@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.5.ebuild,v 1.7 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.5.ebuild,v 1.8 2003/09/11 01:14:04 msterret Exp $
 
 inherit eutils
 
@@ -16,12 +16,12 @@ KEYWORDS="x86 ppc sparc alpha"
 DEPEND="virtual/glibc
 	sys-devel/libtool
 	>=x11-libs/qt-3.0.4.1
-    	>=dev-lang/python-2.2.1
-    	=dev-python/sip-${PV}"
+	>=dev-lang/python-2.2.1
+	=dev-python/sip-${PV}"
 
 src_unpack() {
-        unpack PyQt-x11-gpl-${PV}.tar.gz
-        cd ${S}
+	unpack PyQt-x11-gpl-${PV}.tar.gz
+	cd ${S}
 	epatch ${FILESDIR}/license-3.5.diff
 }
 
