@@ -1,0 +1,11 @@
+--- karchiver/karchiveurpart.cpp	2004-01-23 00:22:46.000000000 +0100
++++ karchiver/karchiveurpart.cpp.new	2004-07-06 01:22:42.511494808 +0200
+@@ -41,7 +41,7 @@
+     {
+         return new KarchiverFactory;
+     }
+-};
++}
+ 
+ KInstance *KarchiverFactory::s_instance = 0L;
+ 
