@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gaby
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/ChangeLog,v 1.5 2003/03/29 04:08:24 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/ChangeLog,v 1.6 2004/06/02 02:19:55 agriffis Exp $
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org> gaby-2.0.2-r2.ebuild:
+  Fix use invocation
 
 *gaby-2.0.2-r2 (11 Oct 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r2.ebuild,v 1.6 2004/03/14 01:47:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r2.ebuild,v 1.7 2004/06/02 02:19:55 agriffis Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	local myopts="`use_enable gnome`"
 
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myopts="${myopts} --disable-nls"
 	fi

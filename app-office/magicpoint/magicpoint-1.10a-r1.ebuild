@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.4 2004/04/15 15:34:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.5 2004/06/02 02:22:05 agriffis Exp $
 
 inherit elisp-common eutils
 
@@ -62,7 +62,7 @@ src_install() {
 	exeinto /usr/bin
 	doexe contrib/{mgp2html.pl,mgp2latex.pl}
 
-	if [ -n "`use emacs`" ] ; then
+	if use emacs ; then
 		insinto ${SITELISP}
 		doins contrib/mgp-mode.el ${FILESDIR}/${SITEFILE}
 	fi

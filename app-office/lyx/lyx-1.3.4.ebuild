@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.5 2004/05/11 06:52:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.6 2004/06/02 02:18:49 agriffis Exp $
 
 inherit kde-functions eutils libtool
 
@@ -83,7 +83,7 @@ src_install() {
 	doins ${DISTDIR}/hebrew.bind
 
 	# gnome menu entry
-	if [ -n "`use gnome`" ]; then
+	if use gnome; then
 		insinto /usr/share/applications
 		doins ${FILESDIR}/lyx.desktop
 	fi
@@ -112,7 +112,7 @@ pkg_postinst() {
 	einfo "3. use lyx's qt interface (compile with USE=qt) for maximum effect."
 	einfo ""
 
-	if [ ! -n "`use qt`" ] ; then
+	if ! use qt ; then
 	einfo "================"
 	einfo ""
 	einfo "If you have a multi-head setup not using xinerama you can only use lyx"

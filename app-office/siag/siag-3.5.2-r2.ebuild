@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.5.2-r2.ebuild,v 1.10 2004/03/12 06:10:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.5.2-r2.ebuild,v 1.11 2004/06/02 02:21:14 agriffis Exp $
 
 DESCRIPTION="A free Office package for Linux"
 SRC_URI="ftp://siag.nu/pub/siag/${P}.tar.gz"
@@ -20,14 +20,14 @@ DEPEND="virtual/x11
 RDEPEND="virtual/x11"
 #	>=media-libs/t1lib-1.0.1"
 
-if [ -n "`use kde`" ]; then inherit kde-functions; set-kdedir 3; fi
+if use kde; then inherit kde-functions; set-kdedir 3; fi
 
 src_unpack() {
 
 	unpack ${A}
 	cd ${S}
 
-	if [ -z "`use kde`" ]; then
+	if ! use kde; then
 		einfo "Not using KDE"
 		for file in `find . -iname "Makefile.*"`; do
 			grep -v "kdeinst" ${file} >${file}.hacked && \
@@ -45,7 +45,7 @@ src_compile() {
 
 	local myconf
 #Causes segfaults in 3.5.2 on my system...
-#    if [ "`use guile`" ]
+#    if use guile
 #    then
 #      myconf="${myconf} --with-guile"
 #    else
@@ -66,7 +66,7 @@ src_compile() {
 
 src_install () {
 
-	if [ -n "`use kde`" ]; then
+	if use kde; then
 		dodir ${PREFIX}
 	fi
 
