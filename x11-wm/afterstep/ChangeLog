@@ -1,17 +1,22 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.5 2002/04/12 19:36:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.6 2002/04/18 13:05:21 spider Exp $
+
+*afterstep-1.8.11-r2 (18 Apr 2002)
+  18 Apr 2002; Spider <spider@gentoo.org> ChangeLog afterstep-1.8.11-r2.ebuild :
+  Fix changelog syntax
+  remove dependency on xpm, that version is in XFree
 
 *afterstep-1.8.11-r2 (12 Apr 2002)
-
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> afterstep-1.8.11-r2.ebuild :
   Recompile against libpng-1.2.1 and optional USE dependent tiff support
 
 *afterstep-1.8.11-r1 (16 Mar 2002)
-
+  16 Mar 2002; Seemant Kulleen <seemant@gentoo.org> afterstep-1.8.11-r1.ebuild :
   Added libXPM support to AfterStep.
 
 *afterstep-1.8.11 (15 Mar 2002)
-
+  15 Mar 2002; Seemant Kulleen <seemant@gentoo.org> afterstep-1.8.11.ebuild :
   Version upgrade -- recycled patch from the previous release. This was 
   basically copying the old ebuild to the new filename and the old patch
   to correspond.
@@ -33,3 +38,4 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+

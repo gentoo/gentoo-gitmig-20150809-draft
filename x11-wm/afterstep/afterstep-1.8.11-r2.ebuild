@@ -10,8 +10,8 @@ HOMEPAGE="http://www.afterstep.org/"
 DEPEND="virtual/glibc virtual/x11
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
-	>=media-libs/xpm-3.4k
 	x11-wm/gnustep-env"
+## >=media-libs/xpm-3.4k
 
 RDEPEND="${DEPEND}
 	 >=media-sound/sox-12.17.1"
