@@ -1,0 +1,3 @@
+GRACE_HOME=/opt/grace
+PATH=/opt/grace/bin
+ROOTPATH=/opt/grace/bin
