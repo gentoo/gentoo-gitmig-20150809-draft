@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.13 2004/07/06 20:27:00 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.14 2004/07/16 10:15:53 kloeri Exp $
+
+  16 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> postfix-2.0.19-r4.ebuild:
+  Stable on alpha, requested in bug #56088.
 
 *postfix-2.0.20 (04 Jul 2004)
 
