@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.25-r1.ebuild,v 1.1 2004/03/14 12:00:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.25-r1.ebuild,v 1.2 2004/04/15 08:09:07 plasmaroo Exp $
 
 IUSE="build"
 
@@ -58,5 +58,6 @@ src_unpack() {
 	fi
 
 	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-lck patch failed!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 	kernel_universal_unpack
 }
