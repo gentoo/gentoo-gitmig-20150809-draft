@@ -1,8 +1,18 @@
-MD5 aa26500cba438d33b96db2301533c946 ChangeLog 1928
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 902c6c4750f2f0f96272ea218939bcd6 ChangeLog 2039
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 c4c055ad5ce3ec13796a2aebb4457d5a xmms-cdread-0.14a-r1.ebuild 1020
+MD5 7f2adedfb2ab00677155e46b4e321bc2 xmms-cdread-0.14a-r1.ebuild 1053
 MD5 fc40581327e096b6bac2128169d60f59 xmms-cdread-0.14a.ebuild 592
 MD5 41770b01760e5e215a7649781e3645ce files/digest-xmms-cdread-0.14a 69
 MD5 41770b01760e5e215a7649781e3645ce files/digest-xmms-cdread-0.14a-r1 69
 MD5 ec795dadb3aa7147e8cb97de01fc67b1 files/endian.patch 962
 MD5 cb6038b1520b8423427d76ee312cff3a files/xmms-cdread-0.14a-xmms-1.2.8.patch 486
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBi/3EArHZZzCEUG0RApzgAJ9rv0gmhNWUKloYFkUbqjiKesYTwACeKLUy
+DjJfV+7fzHWYrprIEwcd5qI=
+=anMj
+-----END PGP SIGNATURE-----
