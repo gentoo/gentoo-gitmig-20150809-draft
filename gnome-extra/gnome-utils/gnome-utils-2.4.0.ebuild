@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.4.0.ebuild,v 1.1 2003/09/08 15:53:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.4.0.ebuild,v 1.2 2003/09/15 17:53:09 seemant Exp $
 
 inherit gnome2
 
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/libgnome-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/gnome-panel-2
 	>=gnome-base/gconf-1.2.1
-	sys-apps/e2fsprogs
+	sys-fs/e2fsprogs
 	app-text/scrollkeeper
 	dev-libs/popt"
 
