@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.21 2004/08/15 18:31:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.22 2004/10/04 15:58:16 zhen Exp $
+
+  04 Oct 2004; John Davis <zhen@gentoo.org> :
+  security bump bug #66303
 
 *xerces-c-2.5.0 (15 Aug 2004)
 
