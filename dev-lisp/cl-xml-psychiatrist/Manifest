@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4013ab71ce84b5500f2c34766cdb8d6e cl-xml-psychiatrist-0.4.ebuild 1022
-MD5 d41d8cd98f00b204e9800998ecf8427e ChangeLog 0
 MD5 725efb9d31b4661e1ea29b6daebab984 metadata.xml 306
+MD5 0dce34e83cc12a86ec0033a2827519a8 ChangeLog 311
 MD5 1087312bede2c4b0ad908262bdba2ae7 files/digest-cl-xml-psychiatrist-0.4 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBjqjPI1lqEGTUzyQRAqdrAJ0exA50Yech2e1dJyHHqg2GJb7JnQCeNJbc
+bAnItP0MxT2uMgx/OwGCvZw=
+=U2KY
+-----END PGP SIGNATURE-----
