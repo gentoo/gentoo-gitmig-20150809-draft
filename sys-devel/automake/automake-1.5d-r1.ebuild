@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d-r1.ebuild,v 1.1 2002/03/26 00:46:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d-r1.ebuild,v 1.2 2002/03/26 01:20:27 azarah Exp $
 
 OLD_PV=1.4-p5
 OLD_P=${PN}-${OLD_PV}
@@ -34,7 +34,6 @@ src_compile() {
 		automake.texi.orig >automake.texi
 	
 	./configure --prefix=/usr \
-		--datadir=/usr/share/${P} \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
@@ -48,7 +47,6 @@ src_compile() {
 	#
 	cd ${OLD_S}
 	./configure --prefix=/usr \
-		--datadir=/usr/share/${OLD_P} \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
@@ -69,7 +67,6 @@ src_install() {
 
 	cd ${S}
 	make DESTDIR=${D} \
-		datadir=/usr/share/${P} \
 		install || die
 
 	for x in automake aclocal
@@ -89,7 +86,6 @@ src_install() {
 
     cd ${OLD_S}
 	make prefix=${D}/usr \
-		datadir=${D}/usr/share/${OLD_P} \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
