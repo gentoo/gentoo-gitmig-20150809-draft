@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-winbind/samba-winbind-20010329.ebuild,v 1.1 2001/03/29 17:03:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-winbind/samba-winbind-20010329.ebuild,v 1.2 2001/04/21 03:09:30 drobbins Exp $
 
 A=samba-tng-cvs-${PV}.tbz2
 S=${WORKDIR}/tng
 DESCRIPTION="Enhanced NT User management for unix"
-SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/distributions/gentoo/gentoo-sources/"
+SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/distributions/gentoo/gentoo-sources/${A}"
 HOMEPAGE="http://www.samba-tng.org"
 
 DEPEND="virtual/glibc
