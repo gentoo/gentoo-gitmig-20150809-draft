@@ -1,8 +1,20 @@
-MD5 8373ef45f9a8dee9dc41209aad7ab044 eb-4.1.ebuild 821
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1ba6568f9eaf8d78bf0a69f5856fe888 eb-4.1.ebuild 819
 MD5 19359a124e764f979e2805c16933e093 eb-3.3.4.ebuild 661
 MD5 5b1c8ed5b87f3949361c6bcdf5b10bfe eb-4.0-r1.ebuild 791
-MD5 d056876134436e96ec78e94af77b0ae4 ChangeLog 1318
+MD5 c76e5e3efe1611c877089657cc46c570 ChangeLog 1465
 MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
+MD5 dc4009b1fd897e7a79fb945a62d7bdd7 eb-4.1.1.ebuild 819
 MD5 bff96f70264f743dde8afa794416de66 files/digest-eb-4.0-r1 113
 MD5 d9fa22091f42ccde516f2e599515b90e files/digest-eb-3.3.4 61
 MD5 7262d4b62fde4df186a04f403038ba72 files/digest-eb-4.1 59
+MD5 85d59460f38e7b85b9ed05c0e32e9479 files/digest-eb-4.1.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBmsQ0VWNWqTUmv+0RAk2DAKCMPFgGn5GWuFn6nrhK6AyreQzhjACeJKyO
+ZIppqXbW3P+hE1ue0RuVMo8=
+=NGm7
+-----END PGP SIGNATURE-----

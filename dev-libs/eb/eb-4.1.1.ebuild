@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.1.ebuild,v 1.2 2004/11/17 03:23:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.1.1.ebuild,v 1.1 2004/11/17 03:23:26 usata Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.sra.co.jp/pub/misc/eb/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/libc
 	sys-libs/zlib
@@ -34,7 +34,7 @@ src_install () {
 pkg_postinst() {
 
 	einfo
-	einfo "If you are upgrading from <app-dicts/eb-${PV},"
+	einfo "If you are upgrading from <app-dicts/eb-4,"
 	einfo "you may need to rebuild applications depending on eb."
 	einfo
 }
