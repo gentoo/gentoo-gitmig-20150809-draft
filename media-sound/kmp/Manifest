@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d18259d3de5834db55b09949f0b339d9 kmp-0.01.ebuild 907
+MD5 2b33be22c8d6744131ceaa32b12a012e ChangeLog 319
+MD5 6cee8f8050de2281ccc4d59a5cabd9bf metadata.xml 228
+MD5 6f827d1afc639044d5838cbf0c834d85 files/digest-kmp-0.01 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBFXajE67gNkjlZFIRAtWWAJ97e+fSNqDN/p5RjBgsKQlbU9qqxQCfTOaA
+0BsyW9FKI5fx1DAdID2kENk=
+=8WUA
+-----END PGP SIGNATURE-----
