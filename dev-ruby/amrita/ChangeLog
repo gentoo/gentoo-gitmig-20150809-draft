@@ -1,13 +1,19 @@
 # ChangeLog for dev-ruby/amrita
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.1 2003/05/10 16:09:45 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.2 2003/05/12 20:15:44 twp Exp $
 
 *amrita-1.8.2 (10 May 2003)
+
+  12 May 2003; Tom Payne <twp@gentoo.org> amrita-1.8.2.ebuild :
+  Added all ARCHes to KEYWORDS.
 
   10 May 2003; Tom Payne <twp@gentoo.org> amrita-1.8.2.ebuild :
   Version bump.
 
 *amrita-1.0.2 (10 May 2003)
+
+  12 May 2003; Tom Payne <twp@gentoo.org> amrita-1.0.2.ebuild :
+  Added all ARCHes to KEYWORDS. Marked stable on all ARCHes.
 
   10 May 2003; Tom Payne <twp@gentoo.org> amrita-1.0.2.ebuild :
   Initial version. Ebuild submitted by Jim Marshall. Bug # 14509.
