@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/openmortal
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.5 2004/02/03 19:23:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.6 2004/03/05 08:33:15 mr_bones_ Exp $
+
+*openmortal-0.6 (05 Mar 2004)
+
+  05 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> openmortal-0.6.ebuild:
+  version bump
 
   03 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> openmortal-0.5.ebuild:
   add sdl-net depend (bug 40277)
