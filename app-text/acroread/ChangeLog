@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.34 2004/08/13 10:16:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.35 2004/08/29 23:43:24 kugelfang Exp $
+
+  30 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> acroread-5.09.ebuild:
+  Fixed BUG #62110. Many thx to Evgeny Strambulchik.
 
   13 Aug 2004; <plasmaroo@gentoo.org> acroread-5.09.ebuild:
   Marking 5.09 stable since it was updated for a security issue. Bug #60205.

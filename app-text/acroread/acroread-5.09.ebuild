@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.09.ebuild,v 1.4 2004/08/13 10:16:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.09.ebuild,v 1.5 2004/08/29 23:43:24 kugelfang Exp $
 
 inherit nsplugins eutils
 
@@ -13,12 +13,13 @@ IUSE="cjk"
 
 SLOT="0"
 LICENSE="Adobe"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 
 RESTRICT="nostrip"
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
-RDEPEND="cjk? ( media-fonts/acroread-asianfonts )"
+RDEPEND="cjk? ( media-fonts/acroread-asianfonts )
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2-r1 )"
 
 INSTALLDIR=/opt/Acrobat5
 
@@ -39,6 +40,12 @@ src_compile() {
 		bin/acroread.sh > acroread
 
 	#epatch ${FILESDIR}/acroread-utf8-gentoo.diff
+
+	# Workaround till lib symlinks change from lib64 to lib32
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/08/30
+	if use amd64 ; then
+		sed -i -e "s:^install_dir:export XLOCALEDIR=/usr/X11R6/lib32/X11/locale/\n&:1" acroread
+	fi
 }
 
 src_install() {
