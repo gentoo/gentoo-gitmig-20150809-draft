@@ -1,27 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4-r1.ebuild,v 1.8 2004/03/07 09:28:54 kumba Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4-r1.ebuild,v 1.9 2004/04/24 08:32:33 vapier Exp $
 
 inherit eutils gnuconfig
 
 PVER="17"
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU macro processor"
+HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
 SRC_URI="ftp://ftp.seindal.dk/gnu/${P}.tar.gz
 	mirror://gentoo/m4_1.4-${PVER}.diff.gz
 	http://ftp.debian.org/debian/pool/main/m/m4/m4_1.4-${PVER}.diff.gz"
-HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa ia64 amd64 ppc64 s390"
+SLOT="0"
+KEYWORDS="x86 ppc64 ppc sparc mips alpha arm hppa amd64 ia64 s390"
+IUSE="nls"
 
 DEPEND="virtual/glibc
 	!bootstrap? ( >=sys-devel/libtool-1.3.5-r2 )
 	nls? ( sys-devel/gettext )"
-
 RDEPEND="virtual/glibc"
 
 src_unpack() {
@@ -55,5 +52,5 @@ src_install() {
 
 #	rm -rf ${D}/usr/include
 
-	dodoc BACKLOG ChangeLog COPYING NEWS README* THANKS TODO
+	dodoc BACKLOG ChangeLog NEWS README* THANKS TODO
 }

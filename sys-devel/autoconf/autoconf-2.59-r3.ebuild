@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r3.ebuild,v 1.3 2004/03/02 16:36:49 iggy Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r3.ebuild,v 1.4 2004/04/24 08:31:05 vapier Exp $
 
 inherit eutils
 
@@ -11,21 +9,21 @@ OLD_P="${PN}-${OLD_PV}"
 S="${WORKDIR}/${P}"
 OLD_S="${WORKDIR}/${OLD_P}"
 DESCRIPTION="Used to create autoconfiguration files"
+HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 SRC_URI="http://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2
 	mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gnu/${PN}/${OLD_P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 
 LICENSE="GPL-2"
 SLOT="2.5"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 s390"
+IUSE=""
 
 DEPEND=">=sys-apps/texinfo-4.3
 	=sys-devel/m4-1.4*
 	dev-lang/perl"
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${OLD_S}
@@ -39,7 +37,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	#
 	# ************ autoconf-2.5x ************
 	#
@@ -70,7 +67,6 @@ src_compile() {
 }
 
 src_install() {
-
 	# install wrapper script for autodetecting the proper version
 	# to use.
 	exeinto /usr/lib/${PN}
@@ -96,7 +92,7 @@ src_install() {
 #	mv ${D}/usr/share/info/autoconf.info ${D}/usr/share/info/autoconf-2.5.info
 
 	docinto ${PV}
-	dodoc COPYING AUTHORS BUGS NEWS README TODO THANKS
+	dodoc AUTHORS BUGS NEWS README TODO THANKS
 	dodoc ChangeLog ChangeLog.0 ChangeLog.1 ChangeLog.2
 
 	#
@@ -117,7 +113,7 @@ src_install() {
 	done
 
 	docinto ${OLD_PV}
-	dodoc COPYING AUTHORS NEWS README TODO
+	dodoc AUTHORS NEWS README TODO
 	dodoc ChangeLog ChangeLog.0 ChangeLog.1
 
 	# from binutils
@@ -147,4 +143,3 @@ pkg_postinst() {
 	einfo "For instance:  WANT_AUTOCONF=2.5"
 	echo
 }
-
