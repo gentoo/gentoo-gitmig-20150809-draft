@@ -1,13 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41.ebuild,v 1.17 2004/07/01 11:17:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r1.ebuild,v 1.1 2004/07/13 15:22:19 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D"
 HOMEPAGE="http://games.activision.com/games/wolfenstein/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/wolf/linux/wolf-linux-1.41-3.x86.run
-	ftp://3dgamers.in-span.net/pub/3dgamers4/games/returnwolfenstein/wolf-linux-1.41-3.x86.run"
+SRC_URI="mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/wolf-linux-1.4-full.x86.run
+	mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/wolf-linux-1.4-full.x86.run
+	ftp://ftp.idsoftware.com/idstuff/wolf/linux/wolf-linux-1.41-3.x86.run
+	mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/wolf-linux-1.41-3.x86.run
+	mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/wolf-linux-1.41-3.x86.run"
 
 LICENSE="RTCW"
 SLOT="0"
@@ -28,7 +31,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself ${A}
+	unpack_makeself wolf-linux-1.4-full.x86.run
+	unpack_makeself wolf-linux-1.41-3.x86.run
 }
 
 src_install() {
@@ -39,23 +43,13 @@ src_install() {
 
 	exeinto ${dir}
 	doexe bin/Linux/x86/*.x86 openurl.sh
-	if use dedicated;
-	then
-		doexe ${FILESDIR}/wolf-ded
-		dosed "s:GENTOO_DIR:${dir}:" ${dir}/wolf-ded
-		dogamesbin ${FILESDIR}/wolf-ded
-		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf-ded
-	fi
-	dogamesbin ${FILESDIR}/wolf ${FILESDIR}/wolfsp
-	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf
-	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolfsp
+
+	games_make_wrapper wolf ./wolf.x86 ${dir}
+	games_make_wrapper wolfsp ./wolfsp.x86 ${dir}
 
 	if use dedicated;
 	then
-		doexe ${FILESDIR}/wolf-ded
-		dosed "s:GENTOO_DIR:${dir}:" ${dir}/wolf-ded
-		dogamesbin ${FILESDIR}/wolf-ded
-		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf-ded
+		games_make_wrapper wolf-ded ./wolfded.x86 ${dir}
 		exeinto /etc/init.d
 		newexe ${FILESDIR}/wolf-ded.rc wolf-ded
 		dosed "s:GENTOO_DIR:${dir}:" /etc/init.d/wolf-ded

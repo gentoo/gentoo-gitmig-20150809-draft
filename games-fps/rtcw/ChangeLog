@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/rtcw
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.14 2004/07/01 11:17:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.15 2004/07/13 15:22:19 wolf31o2 Exp $
+
+*rtcw-1.41-r1 (13 Jul 2004)
+
+  13 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org> -files/wolf,
+  -files/wolf-ded, -files/wolfsp, +rtcw-1.41-r1.ebuild, -rtcw-1.41.ebuild:
+  Added SRC_URI for 1.4-full version to pull in the GOTY maps.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> rtcw-1.41.ebuild:
   virtual/glibc -> virtual/libc
