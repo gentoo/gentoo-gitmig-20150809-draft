@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r1.ebuild,v 1.4 2004/03/11 08:33:19 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r1.ebuild,v 1.5 2004/03/24 17:03:12 mholzer Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -22,10 +22,7 @@ KEYWORDS="~x86"
 
 IUSE="lirc"
 
-DEPEND="lirc? app-misc/lirc
-	!virtual/ivtv-driver"
-RDEPEND="${DEPEND}"
-PROVIDE="virtual/ivtv-driver"
+DEPEND="lirc? ( app-misc/lirc )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
