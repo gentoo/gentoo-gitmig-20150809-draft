@@ -1,6 +1,13 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.72 2004/11/02 21:27:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.73 2004/11/03 18:12:26 carlo Exp $
+
+  03 Nov 2004; Carsten Lohrke <carlo@gentoo.org>
+  -files/koffice-1.2.1-kword-crashes.diff, -files/koffice-1.3.1-gcc34.patch,
+  -koffice-1.2.1-r1.ebuild, -koffice-1.3.1-r1.ebuild, -koffice-1.3.1.ebuild,
+  -koffice-1.3.2.ebuild, -koffice-1.3.3-r1.ebuild, -koffice-1.3.3.ebuild,
+  -koffice-1.3.4.ebuild, -koffice-1.3.ebuild:
+  clean up
 
   02 Nov 2004; Markus Rothe <corsair@gentoo.org> koffice-1.3.4-r1.ebuild:
   Stable on ppc64, bug #69624
