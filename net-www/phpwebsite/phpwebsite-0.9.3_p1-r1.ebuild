@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Don Seiler <rizzo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p1-r1.ebuild,v 1.1 2003/11/02 16:16:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p1-r1.ebuild,v 1.2 2003/11/06 20:33:24 mholzer Exp $
 
 inherit webapp-apache
 
@@ -16,7 +16,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
-DEPEND="virtual/php"
+DEPEND="virtual/php
+	>=sys-devel/patch-2.5.9"
 
 webapp-detect || NO_WEBSERVER=1
 
