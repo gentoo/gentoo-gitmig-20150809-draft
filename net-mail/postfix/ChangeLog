@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.32 2002/09/11 19:38:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.33 2002/09/11 20:02:55 raker Exp $
 
 *postfix-1.1.11.20020822 (11 Sep 2002)
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  postfix-1.1.11.20020822.ebuild :
+  provide virtual/mda.  Moved tls+ipv6 patch to ${FILESDIR} and bzipped
+  it.  SASL support is next.
 
   11 Sep 2002; Nick Hadaway <raker@gentoo.org>
   postfix-1.1.11.20020822.ebuild, files/digest-postfix-1.1.11.20020822 :
