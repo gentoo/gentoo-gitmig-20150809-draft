@@ -8,7 +8,7 @@
 # This script developed by Zachary T Welch at Superlucidity Services, LLC
 #  based on ideas from irc discussion and the clear need for this support
 # 
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.7.1/distcc-config,v 1.2 2003/07/21 18:58:27 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.9/distcc-config,v 1.1 2003/07/21 18:58:27 lisa Exp $
 # Changelog
 # 
 # 21 Jul 2003 - Changed install environment to EXCLUDE DISTCC_HOSTS from /etc/env.d/02distcc.
