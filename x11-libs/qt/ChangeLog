@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.6 2002/04/03 13:18:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.7 2002/04/13 00:14:33 seemant Exp $
+
+*qt-2.3.2-r1 and qt-3.0.3-r1 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> qt-2.3.2-r1.ebuild
+  qt-3.0.3-r1.ebuild :
+
+  Compile against newer libpng
 
 *qt-2.3.2 (3 Apr 2002)
 
