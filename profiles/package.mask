@@ -490,10 +490,6 @@ app-misc/nomadii-utils
 # masked while licensing is sorted out
 app-misc/ldapbrowser
 
-# <owen@gentoo.org> (22 Jul 2002)
-# Broken against latest FLTK. Hopefully will be fixed with a new POSE.
-<=app-emulation/pose-3.5
-
 # new ebuild.  probably x86-only as well.
 app-misc/mwavem
 
