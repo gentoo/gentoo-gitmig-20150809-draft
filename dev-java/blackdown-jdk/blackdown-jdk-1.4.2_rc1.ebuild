@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.6 2004/03/07 03:26:53 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.7 2004/03/11 21:03:37 zx Exp $
 
 IUSE="doc"
 
@@ -41,7 +41,7 @@ KEYWORDS="-* amd64"
 
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.6
-	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
+	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 PROVIDE="virtual/jdk-1.4.2
 	virtual/jre-1.4.2

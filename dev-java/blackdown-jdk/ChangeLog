@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.47 2004/03/07 03:26:53 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.48 2004/03/11 21:03:37 zx Exp $
+
+  11 Mar 2004; Chris Aniszczyk <zx@gentoo.org> blackdown-jdk-1.4.2_rc1.ebuild:
+  Updated 1.4.2_rc1 to have an optional depend on 1.4.2 docs, not 1.4.1 :P
 
   09 Mar 2004; Chris Aniszczyk <zx@gentoo.org> blackdown-jdk-1.4.2_rc1.ebuild:
   Fix to close #35702
