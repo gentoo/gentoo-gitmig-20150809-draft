@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.15 2002/06/11 21:24:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.16 2002/06/24 05:37:57 spider Exp $
 
 # Author: Spider
 # A general DEBUG eclass to ease inclusion of debugging information and to remove "bad" flags from CFLAGS
@@ -15,5 +15,5 @@ RESTRICT="nostrip"
 # force debug information
 export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -g"
 export CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer/} -g"
-einfo "CFLAGS and CXXFLAGS redefined"
+# einfo "CFLAGS and CXXFLAGS redefined"
 
