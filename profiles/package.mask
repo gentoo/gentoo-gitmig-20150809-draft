@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <satai@gentoo.org> (03 Sep 2002)
+# catalog installing problems
+=app-text/sgmltools-lite-3.0.3-r5
+
 # <azarah@gentoo.org> (03 Sep 2002)
 # new version. PLEASE test!
 =sys-apps/lilo-22.3.3
