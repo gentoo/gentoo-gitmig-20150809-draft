@@ -159,6 +159,7 @@ dev-lisp/cmucl-bin
 =kde-base/kde-3.2.0_beta1
 =kde-base/kdeaccessibility_3.2.0_beta1
 =kde-base/kdeaddons-3.2.0_beta1
+=kde-base/kdeartwork-3.2.0_beta1
 =kde-base/kdeedu-3.2.0_beta1
 =kde-base/kdelibs-3.2.0_beta1
 =kde-base/kdebase-3.2.0_beta1
