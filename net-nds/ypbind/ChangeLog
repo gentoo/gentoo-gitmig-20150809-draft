@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.4 2002/05/28 00:16:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.5 2002/06/04 11:14:51 seemant Exp $
+
+*ypbind-1.11-r1 (4 Jun 2002)
+
+  4 Jun 2002; Seemant Kulleen <seemant@gentoo.org> ypbind-1.11-r1.ebuild
+  files/digest-ypbind-1.11-r1 :
+
+  fix in the /etc/init.d script from lars.pechan@paradise.net.nz (Lars
+  Pechan) in bug #3103
 
 *ypbind-1.11 (27 May 2002)
 

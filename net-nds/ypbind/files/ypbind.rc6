@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.rc6,v 1.3 2002/05/28 00:09:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.rc6,v 1.4 2002/06/04 11:14:51 seemant Exp $
 
 depend() {
 	need net portmap
@@ -9,7 +9,7 @@ depend() {
 }
 
 checkconfig() {
-	[ -s "$YP_DOMAIN" ] && return 0
+	[ -n "$YP_DOMAIN" ] && return 0
 	eerror "You need to setup YP_DOMAIN in /etc/conf.d/ypbind"
 	return 1
 }
