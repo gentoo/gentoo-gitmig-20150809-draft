@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.4 2003/03/29 12:22:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.5 2003/07/31 13:51:00 taviso Exp $
+
+  31 Jul 2003; Tavis Ormandy <taviso@gentoo.org> cdb-0.75.ebuild:
+  ~alpha
 
 *cdb-0.75 (9 Jul 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.6 2003/03/29 12:22:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.7 2003/07/31 13:51:00 taviso Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A fast, reliable, simple package for creating and reading constant databases"
@@ -9,7 +9,7 @@ HOMEPAGE="http://cr.yp.to/cdb.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ~alpha"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	sys-apps/tar
