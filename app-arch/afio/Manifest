@@ -1,4 +1,4 @@
 MD5 d41869ee204cd60cec8c7d902160c5c1 ChangeLog 634
-MD5 8c54c70af0f4db607b2e04fd1417d935 afio-2.4.7.ebuild 1047
-MD5 f66820d09ee18bc1250763fa4f3cdfd5 files/Makefile.patch 350
+MD5 c3d268b9612d732209d1f752257a41bd afio-2.4.7.ebuild 1045
 MD5 220e2947e5808d60df6546914dee1d07 files/digest-afio-2.4.7 58
+MD5 f66820d09ee18bc1250763fa4f3cdfd5 files/Makefile.patch 350
