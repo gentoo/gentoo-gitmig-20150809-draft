@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.6 2001/08/22 11:29:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.7 2001/08/23 16:59:30 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Base"
@@ -95,32 +95,34 @@ src_compile() {
 
 
 src_install() {
-  try make install DESTDIR=${D}
+
+  make install DESTDIR=${D} || die
+
   insinto /etc/pam.d
   newins ${FILESDIR}/kscreensaver.pam kscreensaver
   newins kde.pamd kde
-  cd ${D}/etc/X11/xdm
-  mv Xsession Xsession.kde
-  insinto /opt/kde${PV}/share/config
-  doins ${FILESDIR}/kdmrc
-  sed -e "s:^kdmdesktop:/opt/kde${PV}/kdmdesktop:" Xsetup_0 > Xsetup
+
+#  cd ${D}/etc/X11/xdm
+#  mv Xsession Xsession.kde
+#  sed -e "s:^kdmdesktop:/opt/kde${PV}/kdmdesktop:" Xsetup_0 > Xsetup
+
   cd ${S}
   dodoc AUTHORS ChangeLog README*
   sed -e "s:^#\!/bin/sh:#\!/bin/sh --login:" ${D}/opt/kde${PV}/bin/startkde > ${D}/opt/kde${PV}/bin/startkde.tmp
   mv ${D}/opt/kde${PV}/bin/startkde.tmp ${D}/opt/kde${PV}/bin/startkde
   chmod a+x ${D}/opt/kde${PV}/bin/startkde
+
+  insinto /opt/kde${PV}/share/config
+  doins ${FILESDIR}/kdmrc
   
+  exeinto /usr/X11R6/bin/wm
+  doexe ${FILESDIR}/{kde22,xsession}
   cd ${D}/usr/X11R6/bin/wm
-  cp ${FILESDIR}/kde22 .
   ln -sf kde22 kde
-  
-  #install xsession session
-  #explanation too long to put in here, mail me for info - danarmak
-  insinto /usr/X11R6/bin/wm
-  doins ${FILESDIR}/xsession
+
   cd ${D}/opt/kde${PV}/share/config/kdm
   mv kdmrc kdmrc.orig
-  sed -e 's/SessionTypes=/SessionTypes=dan,/' kdmrc.orig > kdmrc
+  sed -e 's/SessionTypes=/SessionTypes=xsession,/' kdmrc.orig > kdmrc
   rm kdmrc.orig
   
 }
