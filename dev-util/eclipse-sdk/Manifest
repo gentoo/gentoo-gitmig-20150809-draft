@@ -3,11 +3,11 @@ MD5 7480786a34bdd6f8acbefee06e9baaed eclipse-sdk-3.0.1.ebuild 11876
 MD5 c3e67be2105fef65b25765b0445913f5 eclipse-sdk-3.0.0-r3.ebuild 12071
 MD5 6a9404b66dd0e965c9db1c78a2cad788 eclipse-sdk-3.0.1-r2.ebuild 14279
 MD5 a7b6cf3b32e12134fd88a0df7036f793 eclipse-sdk-3.1_pre2.ebuild 16355
-MD5 a73ce18cd044bfafc83ca8d42ac47e82 eclipse-sdk-3.1_pre4.ebuild 17305
+MD5 3ee21d41c7c2835fa8321ea9daf5f6d9 eclipse-sdk-3.1_pre4.ebuild 17440
 MD5 43165ac5497df2dae28ada11cb8fd6b5 eclipse-sdk-2.1.3-r5.ebuild 9901
 MD5 93c16b545d14fcca583af3bb37a436a8 eclipse-sdk-3.0.1-r1.ebuild 13985
 MD5 21bdfb6980c585a03e758c92552e8842 eclipse-sdk-3.1_pre1.ebuild 12127
-MD5 592ebd4bedaec6bec31d71556ec1b15f ChangeLog 15512
+MD5 881c79bc5657ca1ae8460511bcbc714c ChangeLog 15670
 MD5 8de14dda7d318d8fb514fdbcecd4058b metadata.xml 782
 MD5 ab0f6620b4767e065bd533b06245b0fc files/01-distribute_ant_target-2.1.patch 1103
 MD5 69ee2069b0260e40c6fa93315ff759cc files/eclipse-3.1.desktop 226

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre4.ebuild,v 1.4 2005/02/04 22:54:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre4.ebuild,v 1.5 2005/02/12 23:12:07 karltk Exp $
 
 inherit eutils java-utils
 
@@ -40,6 +40,10 @@ pkg_setup() {
 	java-utils_setup-vm
 
 	java-utils_ensure-vm-version-ge 1 4 2
+
+	if (java-utils_is-vm-version-ge 1 5 0) ; then
+		die "${P} cannot be compiled with a 1.5.x VM, set your system VM to a 1.4.x VM."
+	fi
 
 	${use_gtk} && use mozilla && detect-mozilla
 
