@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.48 2004/07/23 10:49:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.49 2004/07/25 04:42:10 j4rg0n Exp $
+
+  25 Jul 2004; Lina Pezzella <burgundy@gentoo.org> :
+  gettext-0.12.1-r1:
+  Rewrote test for nls use flag.  Forced --enable-nls on macos as per bug #57868.
 
   23 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> gettext-0.12.1-r1.ebuild:
   Stable on macos.
