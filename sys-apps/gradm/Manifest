@@ -1,21 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6a863234df9194498d45e96031138d7a gradm-2.1.0.ebuild 1313
-MD5 1945930231d0dfbb07ee73a7d10bbd2a ChangeLog 6799
+MD5 ebed4cd174e4ea24b652fa9fe7f27ac1 gradm-2.1.2.200503041846.ebuild 1426
+MD5 3abd1a222da91cde9d8f4520a9bdd696 ChangeLog 7046
 MD5 695a3bd3cfb34ea27e7dd493ce9ef398 metadata.xml 221
 MD5 f2401396b01c577f727c2da3b694c779 files/grsecurity.rc 1810
 MD5 36344ecbd7f54bdd4979c2fe6322c9c7 files/grsecurity 2325
+MD5 d1bd989b09e1e558d0bb204d99e79c5d files/digest-gradm-2.1.2.200503041846 75
 MD5 1535781388eb902dfef66f6240f53137 files/digest-gradm-2.1.0 75
 MD5 264e377e7c3221570d3730444e84d792 files/gradm2-cvs-20Jun2004.diff 8251
 MD5 c2618fc7963e008681dfd08db6886058 files/gradm_parse.c-1.9.x.patch 524
 MD5 c016f75a48190153dcb63f9cba78abef files/gradm-2.0.1-install.patch 488
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iQCVAwUBQh92Np4WFLgrx1GWAQJxrwQAyBBj4DBwmGoWus57Ro9D7zRaw/JTdKLq
-olN52URIk6QCUhdkxiUyZtwpIvL/jfymkDQFZ0Y1QD3tMMxp2XM2VAmsB3WsONma
-sptNKMlp84MvydMnS5Wb8rFUkBzLYj1jZ7gkW7NCwEnTtkhc5HMZ2nAgG3BHsl2h
-a3S1yzeZLc8=
-=6Gy+
------END PGP SIGNATURE-----
+MD5 eedac00588cccefadf2f792afdd6e913 files/gradm-2.1.2-non-interactive.patch 584

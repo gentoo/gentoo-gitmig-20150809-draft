@@ -1,0 +1,15 @@
+--- Makefile.orig	2005-03-06 14:45:01.000000000 -0500
++++ Makefile	2005-03-06 15:05:27.000000000 -0500
+@@ -117,9 +117,11 @@
+ 	$(INSTALL) -m 0644 gradm.8 $(DESTDIR)$(MANDIR)/man8/$(GRADM_BIN).8
+ 	@if [ -x /sbin/$(GRADM_BIN) ] ; then \
+ 		$(FIND) $(DESTDIR)$(GRSEC_DIR) -type f -name pw -size 48c -exec rm -f $(DESTDIR)$(GRSEC_DIR)/pw \; ; \
+-		if [ ! -f $(DESTDIR)$(GRSEC_DIR)/pw ] ; then \
++		if [ -z $(DESTDIR) ] && [ ! -f $(DESTDIR)$(GRSEC_DIR)/pw ] ; then \
+ 			/sbin/$(GRADM_BIN) -P ; \
+ 		fi \
+ 	fi
++	@true
++
+ clean:
+ 	rm -f core *.o $(GRADM_BIN) lex.*.c *.tab.c *.tab.h grlearn

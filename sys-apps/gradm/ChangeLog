@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.44 2005/02/25 19:02:35 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.45 2005/03/06 20:18:15 solar Exp $
+
+*gradm-2.1.2.200503041846 (06 Mar 2005)
+
+  06 Mar 2005; <solar@gentoo.org> +files/gradm-2.1.2-non-interactive.patch,
+  +gradm-2.1.2.200503041846.ebuild:
+  - version bump for 2.1.2 series. Temp p.masked till kernels are updated to
+  this version.
 
   25 Feb 2005; <solar@gentoo.org> -gradm-1.9.14.ebuild, -gradm-2.0-r1.ebuild,
   -gradm-2.0.1-r1.ebuild, -gradm-2.0.1.ebuild, -gradm-2.0.2.ebuild,
