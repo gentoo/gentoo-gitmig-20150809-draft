@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.39 2002/11/14 20:31:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.40 2002/11/25 20:50:09 gerk Exp $
+
+  25 Nov 2002; Mark Guertin <gerk@gentoo.org> portgresql-7.2.3.ebuild, 
+  portgresql-7.2.3-r1.ebuild:
+  Set -ppc to all the 7.2.3 builds, none of them even compile on
+  ppc, please please check with devs before upgrading new pkgs
+  that are untested to stable ;)
 
 *postgresql-7.2.3-r1 (27 Oct 2002)
 
