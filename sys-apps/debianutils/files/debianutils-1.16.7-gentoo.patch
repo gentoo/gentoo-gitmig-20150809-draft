@@ -20,8 +20,8 @@ diff -urN debianutils-1.16.7.old/mkboot debianutils-1.16.7/mkboot
 -    [ $(dpkg -s grub | grep -i ^status: | cut -d ' ' -f 4) = "installed" ]
 +    # Right way in Gentoo to check, but grub is in system profile,
 +    # so rather check for lilo first....
-+    if [ -x /usr/bin/qpkg ] ; then
-+        [ "$(qpkg -nc sys-apps/grub)" = "sys-apps/grub *" ]
++    if [ -x /usr/bin/portageq ] ; then
++        portageq has_version / "sys-apps/grub" && return 0 || return 1
 +    else
 +        return 1
 +    fi

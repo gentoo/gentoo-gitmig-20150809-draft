@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.29 2003/09/19 19:48:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.30 2003/09/25 02:45:59 azarah Exp $
+
+  25 Sep 2003; Martin Schlemmer <azarah@gentoo.org>
+  debianutils-1.16.7-r3.ebuild, files/debianutils-1.16.7-gentoo.patch:
+  Fix bug #25216 (use portageq and not qpkg to check if grub is installed), mark
+  stable as otherwise its been working fine for a long time.
 
   19 Sep 2003; Christian Birchinger <joker@gentoo.org>
   debianutils-1.16.7-r3.ebuild:
