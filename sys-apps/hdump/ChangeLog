@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/hdump
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdump/ChangeLog,v 1.1 2005/01/07 23:15:08 stuart Exp $
+
+*hdump-1.12 (07 Jan 2005)
+
+  07 Jan 2005; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +hdump-1.12.ebuild:
+  Initial import; thanks to Georg Sauthoff <g_sauthoff@web.de>; see bug #76549
+
