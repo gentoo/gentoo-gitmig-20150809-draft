@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.20 2004/05/12 00:55:04 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.21 2004/05/28 03:11:34 vapier Exp $
 
 MY_P="docbook-xml-4.2"
 DESCRIPTION="Docbook DTD for XML"
-SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${MY_P}.zip"
 HOMEPAGE="http://www.oasis-open.org/docbook/"
-LICENSE="X11"
+SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${MY_P}.zip"
 
+LICENSE="X11"
 SLOT="4.2"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE=""
-KEYWORDS="x86 ia64 ppc sparc alpha hppa amd64 mips s390"
 
 DEPEND=">=app-arch/unzip-5.41
 	>=dev-libs/libxml2-2.4
@@ -23,7 +23,6 @@ src_unpack() {
 }
 
 src_install() {
-
 	newbin ${FILESDIR}/build-docbook-catalog-${PV} build-docbook-catalog
 
 	keepdir /etc/xml
@@ -38,7 +37,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	# FIXME: this script needs to work with 4.2 as well as 4.1.2
 	build-docbook-catalog
 
@@ -56,11 +54,9 @@ pkg_postinst() {
 		"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" \
 		"/usr/share/sgml/docbook/xml-dtd-4.2/docbookx.dtd" \
 		${CATALOG}
-
 }
 
-pkg_postrm( ) {
-
+pkg_postrm() {
 	# and clean up the docbookx.dtd once we've been removed
 	CATALOG=/etc/xml/catalog
 	/usr/bin/xmlcatalog --noout --del \
@@ -68,4 +64,3 @@ pkg_postrm( ) {
 		${CATALOG}
 
 }
-
