@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 526d4cc7170c4fe9d475941ea9e2c133 ChangeLog 6046
+MD5 f14e7317634cf0dc157a125052256ca1 ChangeLog 6052
 MD5 1dd1a6eda21348216981bfe902aac512 gnustep-make-1.10.1_pre20041116.ebuild 6804
 MD5 ca04d409726e17e7151b832de9989a48 metadata.xml 530
 MD5 ae1aaa05a220a14b3ecc49095a45deb0 gnustep-make-1.10.0.ebuild 2629
@@ -19,7 +19,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-make-1.10.1_pre2004103
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBo56mArHZZzCEUG0RAqyIAJ0VOZUygG4awR2IX0o6+kducycZsQCfY6rc
-lScQxdIbOpICqpMEAQ4xnGE=
-=K3fy
+iD8DBQFBo6BbArHZZzCEUG0RAsHZAJ9qA1GnFBlCXtBc796WHodD1YjgQACfTVw7
+M9pPUwkmuqarBPhgrQMCpus=
+=hr9M
 -----END PGP SIGNATURE-----

@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2a17540d87d1a0f5e3d3dae79979c060 ChangeLog 2536
+MD5 7c8e2bdbb2c42f94c70b00ac9a51a56c ChangeLog 2542
 MD5 1e82c3c29105707ada1b6bce01e6cb0f gnustep-env-0.1.ebuild 563
 MD5 58e3cd99fc17de77785c9c81a83b1192 gnustep-env-0.1.4.ebuild 1202
 MD5 c603ed4d589dc2091e618436e4de9c78 metadata.xml 371
@@ -17,7 +17,7 @@ MD5 8a7d7c75991671d8b36f9f229404edf7 files/gnustep.runscript-0.1.5 944
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBo59kArHZZzCEUG0RAgLkAJ0SLHLHrY3UnWGX6uh/EGhUONF64gCfbef/
-YdMHj3JuliLtzecOirgdgLA=
-=hS/s
+iD8DBQFBo6BSArHZZzCEUG0RAlYZAJ47VPTlzniK0yV0PmSErEiP5fL+SgCfUwaF
+yhgBQnyeMgZbQ+zi9pfIyFw=
+=FlE3
 -----END PGP SIGNATURE-----

@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 12a1ebcf8f05ce05f3b6f51f04335c6c ChangeLog 5612
+MD5 821ad7614889b876ce0572d680eb4bbb ChangeLog 5618
 MD5 08b57ab90ee62e3af9d126a19b080daa gnustep-gui-0.9.5_pre20041030-r1.ebuild 1629
 MD5 607268c9f22de0b8e93c9e4937b9b84b gnustep-gui-0.9.5_pre20041116.ebuild 1631
 MD5 649db105cbe2e9ffcca068143f88926f metadata.xml 1355
@@ -13,7 +13,7 @@ MD5 6f66904f0ad8d980c653d5c0fdf7d81b files/gnustep-gui-0.9.4-camaelon.patch 4029
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBo58vArHZZzCEUG0RAvpAAJwKnjYc4kerUoY2Fv0eraVagWjcowCePTjq
-KSg7guHJ30XYuZyrTsrBMiQ=
-=E+mg
+iD8DBQFBo6BPArHZZzCEUG0RAmAWAJ96+sQE+DYhmKpbskosaJCH1DJLOQCdGW+C
+rMwqioqgGvGvCMEd4lqgTfs=
+=r73n
 -----END PGP SIGNATURE-----
