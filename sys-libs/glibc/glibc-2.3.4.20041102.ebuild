@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.23 2005/01/11 22:25:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.24 2005/01/12 03:00:37 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -728,15 +728,37 @@ src_install() {
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			mv ${WORKDIR}/build.${ABI} ${WORKDIR}/build
+
+			# Handle stupid lib32 BS
+			if use amd64 && [ "${ABI}" = "x86" -a "$(get_libdir)" != "lib" ]; then
+				OLD_LIBDIR="$(get_libdir)"
+				LIBDIR_x86="lib"
+			fi
+
 			src_install && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
 
 			# Handle stupid lib32 BS
-			if use amd64 && [ "${ABI}" = "x86" -a "$(get_abi_LIBDIR x86)" != "lib" ]; then
-				mv ${D}/lib ${D}/$(get_abi_LIBDIR x86)
-				mv ${D}/usr/lib ${D}/usr/$(get_abi_LIBDIR x86)
+			if use amd64 && [ "${ABI}" = "x86" -a -n "${OLD_LIBDIR}" ]; then
+				LIBDIR_x86="${OLD_LIBDIR}"
+				unset OLD_LIBDIR
+
+				mv ${D}/lib ${D}/$(get_libdir)
+				mv ${D}/usr/lib ${D}/usr/$(get_libdir)
 				mkdir ${D}/lib
-				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.2 /lib/ld-linux.so.2
-				dosed "s:/lib/:/$(get_abi_LIBDIR x86)/:g" /usr/$(get_abi_LIBDIR x86)/libc.so /usr/$(get_abi_LIBDIR x86)/libpthread.so
+				dosym ../$(get_libdir)/ld-linux.so.2 /lib/ld-linux.so.2
+				dosed "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/libc.so /usr/$(get_libdir)/libpthread.so
+
+				rm -rf ${D}/usr/$(get_libdir)/misc ${D}/usr/$(get_libdir)/locale
+
+				for f in ${D}/usr/$(get_libdir)/*.so; do
+					local basef=$(basename ${f})
+					if [ -L ${f} ]; then
+						local target=$(readlink ${f})
+						target=${target/\/lib\//\/$(get_libdir)\/}
+						rm ${f}
+						dosym ${target} /usr/$(get_libdir)/${basef}
+					fi
+				done
 			fi
 
 		done
