@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.5.ebuild,v 1.2 2004/02/12 17:01:22 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.5.ebuild,v 1.3 2004/02/25 18:43:14 aliz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://web.rhythmbox.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="oggvorbis mad xine flac faad"
 
 RDEPEND=">=x11-libs/gtk+-2.2.2
@@ -62,6 +62,10 @@ src_unpack( ) {
 	gnome2_omf_fix ${S}/help/C/Makefile.in
 
 	epatch ${FILESDIR}/${P}-gcc2_fix.patch
+
+	if [ "${ARCH}" == "amd64" ]; then
+		epatch ${FILESDIR}/${P}-amd64.patch
+	fi
 }
 
 DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
