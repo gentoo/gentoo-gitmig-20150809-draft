@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.48 2004/02/24 19:40:09 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.49 2004/03/15 12:18:47 phosphan Exp $
+
+*mjpegtools-1.6.2-r1 (15 Mar 2004)
+
+  15 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
+  mjpegtools-1.6.2-r1.ebuild, mjpegtools-1.6.1.90-r2.ebuild:
+  Adding missing info directory entries (bug #38459).
 
   24 Feb 2004; Martin Holzer <mholzer@gentoo.org>
   files/mjpegtools-1.6.1.92-fPIC.patch, files/mjpegtools-1.6.1.93-fPIC.patch:
