@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.4 2004/06/10 17:17:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.5 2004/06/15 22:08:57 solar Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -157,6 +157,8 @@ if [ -z "${myOS_HEADERS}" ]; then
 fi
 
 myGLIBC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-libs/glibc | sed 's:^\*::'`
+# for non-glibc based systems such as uClibc
+[ -z "${myGLIBC}" ] && myGLIBC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep virtual/glibc | awk '{print $2}'` && myGETTEXT=""
 myTEXINFO=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-apps/texinfo |sed 's:^\*::'`
 myZLIB=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-libs/zlib |sed 's:^\*::'`
 myNCURSES=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-libs/ncurses |sed 's:^\*::'`

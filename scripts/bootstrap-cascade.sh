@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.2 2004/04/06 06:43:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.3 2004/06/15 22:08:57 solar Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -133,8 +133,8 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 #myBASELAYOUT=`echo ${myPROFPACKAGES} | grep -v 
 #myPORTAGE=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-apps/portage | sed 's:^\*::'`
 #myGETTEXT=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gettext | sed 's:^\*::'`
-# Not all profiles have gettest in the system profile anymore ...
-[ -z "${myGETTEXT}" ] && myGETTEXT="sys-devel/gettext"
+# Not all profiles have gettext in the system profile anymore ...
+#[ -z "${myGETTEXT}" ] && myGETTEXT="sys-devel/gettext"
 #myBINUTILS=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/binutils | sed 's:^\*::'`
 #myGCC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gcc | sed 's:^\*::'`
 #myGLIBC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-libs/glibc | sed 's:^\*::'`
