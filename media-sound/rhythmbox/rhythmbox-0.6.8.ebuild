@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.8.ebuild,v 1.4 2004/03/28 17:28:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.8.ebuild,v 1.5 2004/04/03 00:54:49 foser Exp $
 
 inherit gnome2
 
@@ -23,12 +23,12 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 		>=media-libs/libid3tag-0.15.0b )
 	oggvorbis? ( >=media-libs/libvorbis-1 )
 	mad? ( >=media-libs/libid3tag-0.15.0b )
-	!xine? ( >=media-libs/gstreamer-0.6.3
-		>=media-libs/gst-plugins-0.6.3
-		>=media-plugins/gst-plugins-gnomevfs-0.6.3
-		flac? ( >=media-plugins/gst-plugins-flac-0.6.3 )
-		mad? ( >=media-plugins/gst-plugins-mad-0.6.3 )
-		oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.6.3 )
+	!xine? ( =media-libs/gstreamer-0.6*
+		=media-libs/gst-plugins-0.6*
+		=media-plugins/gst-plugins-gnomevfs-0.6*
+		flac? ( =media-plugins/gst-plugins-flac-0.6* )
+		mad? ( =media-plugins/gst-plugins-mad-0.6* )
+		oggvorbis? ( =media-plugins/gst-plugins-vorbis-0.6* )
 		)
 	xine? ( >=media-libs/xine-lib-1_rc3 )"
 
