@@ -1,6 +1,22 @@
 # ChangeLog for mail-mta/exim
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.20 2004/12/29 00:23:43 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.21 2005/01/08 19:09:19 peitolm Exp $
+
+  08 Jan 2005; Colin Morey <peitolm@gentoo.org> files/exim.rc6,
+  exim-4.43.ebuild:
+  Added "syslog" USE flag, enables the ability to define syslog as the default
+  log path, rather than /var/log/exim/exim_%s.log
+
+  08 Jan 2005; Colin Morey <peitolm@gentoo.org> files/exim.rc6,
+  exim-4.43.ebuild:
+  Added optional explict perl dependancy see bug #46778
+
+  08 Jan 2005; Colin Morey <peitolm@gentoo.org> files/exim.rc6,
+  exim-4.43.ebuild:
+  Added Security path (host_aton) for bug 76893 Added dlopen patch for sa-exim
+  bug #47106 Removed wildlsearch USE flag, and added nis USE flag, and passwd
+  lookups, bug #51257. Updated exim.rc6 to stop exim using the pidfile, rather
+  than exec.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

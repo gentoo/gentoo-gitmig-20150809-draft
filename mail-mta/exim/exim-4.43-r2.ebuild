@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.43.ebuild,v 1.4 2005/01/08 19:09:19 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.43-r2.ebuild,v 1.1 2005/01/08 19:09:19 peitolm Exp $
 
 inherit eutils
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl wildlsearch dnsdb perl mbox X exiscan"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dnsdb perl mbox X exiscan nis syslog"
 
 EXISCANACL_VER=${PV}-28
 
@@ -15,11 +15,11 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~hppa ~alpha ~amd64 ~ia64"
+KEYWORDS="~x86 ~sparc ~hppa ~alpha ~amd64 ~ia64"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5
-	dev-lang/perl
+	perl? ( sys-devel/libperl )
 	>=sys-libs/db-3.2
 	pam? ( >=sys-libs/pam-0.75 )
 	tcpd? ( sys-apps/tcp-wrappers )
@@ -42,6 +42,8 @@ src_unpack() {
 	local myconf
 
 	epatch ${FILESDIR}/exim-4.14-tail.patch
+	epatch ${FILESDIR}/exim-4.43-r2-host_aton-buff.patch
+	epatch ${FILESDIR}/exim-4.43-r2-localscan_dlopen.patch
 
 	if ! use mbox; then
 		einfo "Patching maildir support into exim.conf"
@@ -73,6 +75,8 @@ src_unpack() {
 		-e "s:# SUPPORT_MAILSTORE=yes:SUPPORT_MAILSTORE=yes:" \
 		-e "s:EXIM_USER=:EXIM_USER=mail:" \
 		-e "s:# AUTH_SPA=yes:AUTH_SPA=yes:" \
+		-e "s:^ZCAT_COMMAND.*$:ZCAT_COMMAND=/bin/zcat:" \
+		-e "s:# LOOKUP_PASSWD=yes:LOOKUP_PASSWD=yes:" \
 		src/EDITME > Local/Makefile
 
 	cd Local
@@ -159,18 +163,20 @@ src_unpack() {
 	cat Makefile | sed -e 's/^buildname=.*/buildname=exim-gentoo/g' > Makefile.gentoo && mv -f Makefile.gentoo Makefile
 
 	sed -i "s:# LOOKUP_DSEARCH=yes:LOOKUP_DSEARCH=yes:" Local/Makefile
-	if use wildlsearch; then
-		sed -i \
-			-e "s:# LOOKUP_WILDLSEARCH=yes:LOOKUP_WILDLSEARCH=yes:" \
-			-e "s:# LOOKUP_NWILDLSEARCH=yes:LOOKUP_NWILDLSEARCH=yes:" Local/Makefile
-	fi
 
 	if use dnsdb; then
 		sed -i "s:# LOOKUP_DNSDB=yes:LOOKUP_DNSDB=yes:" Local/Makefile
 	fi
 	sed -i "s:# LOOKUP_CDB=yes:LOOKUP_CDB=yes:" Local/Makefile
 
-	# Use the "native" interface to the DBM library
+	if use nis; then
+		sed -i "s:# LOOKUP_NIS=yes:LOOKUP_NIS=yes:" Local/Makefile
+		sed -i "s:# LOOKUP_NISPLUS=yes:LOOKUP_NISPLUS=yes:" Local/Makefile
+	fi
+	if use syslog; then
+		sed -i "s:LOG_FILE_PATH=/var/log/exim/exim_%s.log:LOG_FILE_PATH=syslog:" Local/Makefile
+	fi
+# Use the "native" interface to the DBM library
 	echo "USE_DB=yes" >> ${S}/Local/Makefile
 }
 
