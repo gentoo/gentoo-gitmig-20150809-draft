@@ -2,7 +2,7 @@ MD5 61d77cc1c3b95ae1b4ab2896d24f3c05 libart_lgpl-2.3.10.ebuild 555
 MD5 c410772204b78440678f973d44eaa29d libart_lgpl-2.3.12.ebuild 534
 MD5 f5471eb99fdcc91d55774c84c1f6106c libart_lgpl-2.3.14.ebuild 493
 MD5 ed36476f86b0ccfdf1ae89247ded450a ChangeLog 1967
-MD5 0f61d90e21722c1323b8581cace2fb73 libart_lgpl-2.3.16.ebuild 491
+MD5 f9c12fed83e38a15f52d03b762300173 libart_lgpl-2.3.16.ebuild 501
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 2c29e98e8aa572b3ad04c34aeca86234 files/digest-libart_lgpl-2.3.10 71
 MD5 6563d4ac170ed66e690680a7265de935 files/digest-libart_lgpl-2.3.12 71
