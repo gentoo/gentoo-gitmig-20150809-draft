@@ -1,0 +1,11 @@
+--- cscc/c/c_types.c	2003/06/28 05:28:47	1.36
++++ cscc/c/c_types.c	2003/08/11 06:55:04	1.37
+@@ -1164,7 +1164,7 @@
+ 	if(ILType_IsPrimitive(type))
+ 	{
+ 		/* Hash a primitive type */
+-		MD5HashAddChar(md5, ILType_ToElement(md5));
++		MD5HashAddChar(md5, ILType_ToElement(type));
+ 	}
+ 	else if(ILType_IsValueType(type))
+ 	{
