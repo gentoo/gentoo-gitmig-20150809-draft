@@ -237,7 +237,7 @@ media-libs/gst-plugins-cdparanoia
 
 # <caleb@gentoo.org> 29 May 2003
 # Still in testing phases
-=x11-libs/qt-3.2.0*
+=x11-libs/qt-3.2*
 
 # <robbat2@gentoo.org> 29 May 2003
 # ebuild was previously masked only in the ebuild
