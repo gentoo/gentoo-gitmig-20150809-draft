@@ -1,0 +1,29 @@
+# ChangeLog for net-misc/stunnel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.1 2002/03/19 05:40:10 seemant Exp $
+
+*stunnel-3.22-r1 (18 Mar 2002)
+
+  18 Mar 2002; Seemant Kulleen <seemant@gentoo.org> stunnel-3.22-r1.ebuild :
+
+  Unmasked it, and made the dep >= instead of >, and added ChangeLog file.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  This changelog is targetted to users. This means that the comments should be
+  well explained and written in clean English. 
+  
+  Every new version or revision of the package has to be marked by a '*'
+  seperator line as above. Changements since the last revision have to be
+  added to the top of the file, underneath the initial copyright and cvs header
+  comments, in exactly the same format as this comment.
+  
+  This means that you start with header line that has the following format :
+  
+      date; your_name <your_email> changed_file1, changed_file2 :
+	  
+  Below that line your explanation should follow. It has to be indented,
+  paragraphed and wrapped at a linewidth of 80 characters.
+  
+  Any details about what exactly changed in the code should be added as a
+  message when the changes are committed to cvs, not in this file.
