@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.0.17a.ebuild,v 1.1 2004/12/12 17:07:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.0.17a.ebuild,v 1.2 2004/12/17 18:05:49 swegener Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
-RDEPEND=">=dev-db/mysql-4.1
+RDEPEND="dev-db/mysql
 	>=dev-libs/libpcre-4.4
 	>=dev-libs/libxml2-2.6.2
 	>=gnome-base/libglade-2
