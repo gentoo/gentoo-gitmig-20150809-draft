@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.1 2005/03/18 18:58:33 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.2 2005/03/18 23:33:20 swegener Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/kernel-2.6.patch.patch
+	epatch ${FILESDIR}/kernel-2.6.patch
 	epatch ${FILESDIR}/cpu-usage-fix.patch
 }
 

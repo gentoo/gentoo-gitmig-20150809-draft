@@ -1,8 +1,18 @@
-MD5 daa6dd712b175a98c99b7c13951db153 ChangeLog 1303
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 09516fc71dafc2ce027cdb4008a5bfb4 procinfo-18-r1.ebuild 886
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3dffd7e705fb43f6a903d844911ec2b8 procinfo-18.ebuild 759
-MD5 5ba11e57987107c0efbfd99a8cb6bf9a files/cpu-usage-fix.patch 791
+MD5 f05da3b89c16a22b22150e1d6c41b8c8 procinfo-18-r1.ebuild 883
+MD5 39354f734a2c922fc461e11a22a869b8 ChangeLog 1418
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 0659fb612618a1291088cff94cb61e2b files/digest-procinfo-18 62
-MD5 0659fb612618a1291088cff94cb61e2b files/digest-procinfo-18-r1 62
+MD5 5ba11e57987107c0efbfd99a8cb6bf9a files/cpu-usage-fix.patch 791
 MD5 497d7a408c5707532bcd8608e56e9901 files/kernel-2.6.patch 9954
+MD5 0659fb612618a1291088cff94cb61e2b files/digest-procinfo-18-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCO2VII1lqEGTUzyQRAjUNAKC1Og+HwiXlo3abNuO47flL49npXwCg1wSa
+8+lhKXwZdnO8763EStBnw68=
+=XDcZ
+-----END PGP SIGNATURE-----
