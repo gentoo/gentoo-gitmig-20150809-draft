@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 1e445af737490687247c95904ad89f24 pwlib-1.3.11-r1.ebuild 1834
 MD5 8f9d22987901946d9913bbdf13834c7b pwlib-1.6.6.ebuild 4073
-MD5 e14ea505920a045a8c449f2fff319cd0 pwlib-1.6.3-r2.ebuild 3949
+MD5 11fdff875833c3f2d42f94517d1b4774 pwlib-1.6.3-r2.ebuild 3948
 MD5 d269c9360d97e70bb97c3bad3b93f3fc pwlib-1.4.11.ebuild 2159
 MD5 bbcfc0106fe98eae9b5a6327850ea97f pwlib-1.5.0.ebuild 2308
 MD5 0c85c6b3395f056fd849c9ae7eb71ed2 pwlib-1.5.2-r2.ebuild 2955
@@ -14,7 +14,7 @@ MD5 e7e31f6f265883cdf48d812f42a9f856 metadata.xml 235
 MD5 21199978809de871ebcfbedc9bdedca8 pwlib-1.6.3.ebuild 3806
 MD5 36ce467ec9ddfceb3ab08750dde508c2 pwlib-1.5.2-r1.ebuild 2760
 MD5 0b165d3dab2c13782ff4c738cd7f60d9 pwlib-1.5.0-r1.ebuild 2403
-MD5 9af7e8096166bb884cc04158b2a27b18 ChangeLog 9792
+MD5 271826faa24e5b604ac9d79bb93e3691 ChangeLog 9887
 MD5 6702f9a296ccf661275cf6a2284bf6bf files/digest-pwlib-1.6.3-r1 64
 MD5 91035c6391e112595e0003cebda275f6 files/pwlib-1.3.11-r1.diff 2260
 MD5 6702f9a296ccf661275cf6a2284bf6bf files/digest-pwlib-1.6.3-r2 64
@@ -34,7 +34,7 @@ MD5 0a9a8c5a1417127269e2e0f24ded1b2c files/pwlib-1.5.0-r1-gentoo.diff 391
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBbdo9ugEuf3OQ0akRAgesAJ9SVuB4q/Jt807ubmJ1kYav45rHfACdEVQw
-bjhDYC/IUP4zmau7NU1b73I=
-=PHq/
+iD8DBQFBdVX6ugEuf3OQ0akRAppPAJsHQyta6E/uEsIvjp+2QbrLCihWowCfeONq
+3qQ9TWxagSvIDEPMJMOfHx0=
+=Ihps
 -----END PGP SIGNATURE-----

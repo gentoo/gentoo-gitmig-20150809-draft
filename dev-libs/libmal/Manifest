@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cf564b63f1d4f198e0be57eb8ce4f3ef ChangeLog 1334
-MD5 dfb7487c5cedfaab657233da4cef0cc7 libmal-0.31.ebuild 746
-MD5 9898aa5e6e31a2fe9d9144cb38484ad4 libmal-0.40.ebuild 749
+MD5 42abc18d3e29b5b7381bf7f55e7a4e33 libmal-0.31.ebuild 650
 MD5 16b15046bc5a6898d09bee4ca7038211 metadata.xml 213
+MD5 0be289d4f4be02c6a02ebcf04c440d2d libmal-0.40.ebuild 653
 MD5 86806cf347927d4f0c7fc8be3f8360c1 files/digest-libmal-0.31 63
 MD5 66013732b55f2ed2fe85e54c040b636a files/digest-libmal-0.40 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdVcXHTu7gpaalycRAuyzAKCwDYaJjojJrI+O4dyPNue+3lO/1wCfdHK/
+Tw67ZUmOvgx6uNjuSBtEIEA=
+=oSHn
+-----END PGP SIGNATURE-----
