@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17.ebuild,v 1.2 2001/12/25 22:56:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17.ebuild,v 1.3 2001/12/30 22:44:35 azarah Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -16,10 +16,19 @@ S2=${WORKDIR}/linux-${KV}-extras
 # a patch, comment out the patch version and it won't be enabled.  In this ebuild, ACPI, low latency
 # and preempt patches are enabled, but MOSIX is not.
 
+#XFS patch
 XFSV=20011214
+#ACPI patch
 ACPIV=20011205
-LOWLV="${KV}-2"
+#Low latency patch
+#LOWLV=${KV}
+#Preemptive kernel patch
 PREEV="${KV}-1"
+#Lock-break patch
+LBPV="${KV}-2"
+#Bridge/netfilter compatibility patch
+BNFV="0.0.5pre3"
+#MOSIX patch
 #MOSV=1.5.2
 
 DESCRIPTION="Linux kernel version ${KV} - full sources"
@@ -28,11 +37,13 @@ PATCHES=""
 SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 [ "$MOSV"  ] && { SRC_URI="$SRC_URI http://www.mosix.cs.huji.ac.il/ftps/MOSIX-${MOSV}.tar.gz"; PATCHES="$PATCHES ${S2}/MOSIX-${MOSV}/patches.${OKV}"; }
 [ "$ACPIV" ] && { SRC_URI="$SRC_URI http://developer.intel.com/technology/iapc/acpi/downloads/acpi-${ACPIV}.diff.gz"; PATCHES="$PATCHES ${DISTDIR}/acpi-${ACPIV}.diff.gz"; }
+[ "$LOWLV" ] && { SRC_URI="$SRC_URI http://www.zip.com.au/~akpm/linux/${LOWLV}-low-latency.patch.gz"; PATCHES="$PATCHES ${DISTDIR}/${LOWLV}-low-latency.patch.gz"; }
 [ "$PREEV" ] && { SRC_URI="$SRC_URI http://www.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/v2.4/preempt-kernel-rml-${PREEV}.patch"; PATCHES="$PATCHES ${DISTDIR}/preempt-kernel-rml-${PREEV}.patch"; }
-#must be applied *after* Pre-emptive patch
-[ "$LOWLV" ] && { SRC_URI="$SRC_URI http://www.kernel.org/pub/linux/kernel/people/rml/lock-break/v2.4/lock-break-rml-${LOWLV}.patch"; PATCHES="$PATCHES ${DISTDIR}/lock-break-rml-${LOWLV}.patch"; }
+[ "$LBPV" ] && { SRC_URI="$SRC_URI http://www.kernel.org/pub/linux/kernel/people/rml/lock-break/v2.4/lock-break-rml-${LBPV}.patch"; PATCHES="$PATCHES ${DISTDIR}/lock-break-rml-${LBPV}.patch"; }
 [ "$XFSV" ] && { SRC_URI="$SRC_URI http://www.ibiblio.org/gentoo/distfiles/XFS-${XFSV}.patch.bz2"; PATCHES="$PATCHES ${DISTDIR}/XFS-${XFSV}.patch.bz2"; }
-	
+[ "$BNFV" ] && { SRC_URI="$SRC_URI http://bridge.sourceforge.net/devel/bridge-nf/bridge-nf-${BNFV}-against-${KV}.diff"; PATCHES="$PATCHES ${DISTDIR}/bridge-nf-${BNFV}-against-${KV}.diff"; }
+
+
 PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.namesys.com http://www.sistina.com/lvm/ http://developer.intel.com/technology/iapc/acpi/" 
 
