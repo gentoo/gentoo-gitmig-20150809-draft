@@ -259,11 +259,6 @@ dev-perl/CDDB-File
 # Masked for freeze
 =dev-libs/DirectFB-0.9.13
 
-# <raker@gentoo.org> (27 Aug 2002)
-# Masked for the freeze
-# Adding to portage because a rendering bug was fixed from 0.7.14
-=media-video/avifile-0.7.15.20020816
-
 # <spider@gentoo.org> (26 Aug 2002)
 # Masked for testing -- tore out the broken id3lib included and
 # added the final + patches to make it work
