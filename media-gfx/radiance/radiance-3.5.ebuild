@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/radiance/radiance-3.5.ebuild,v 1.2 2003/12/15 04:33:32 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/radiance/radiance-3.5.ebuild,v 1.3 2003/12/15 07:21:10 brandy Exp $
 
 MY_P=${P/./R}
 MY_P=${MY_P/radiance-/rad}
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 RDEPEND="media-libs/tiff
+	app-shells/tcsh
 	X? ( virtual/x11 dev-lang/tk )"
 
 DEPEND="${RDEPEND}"
