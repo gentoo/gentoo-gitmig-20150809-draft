@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.15 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.16 2002/11/10 10:00:01 danarmak Exp $
 
 IUSE="ssl opengl motif ldap encode samba cups oggvorbis pam"
 inherit kde-dist
@@ -35,7 +35,7 @@ use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
 
 # fix for verwilst's gcc 3.1 & antialiasing problem
-PATCHES="$FILESDIR/${P}-fonts.cpp.patch"
+PATCHES="$FILESDIR/${PVR}/${P}-fonts.cpp.patch"
 
 src_compile() {
 
@@ -55,7 +55,7 @@ src_install() {
 
     # startkde script
     cd ${D}/${KDEDIR}/bin
-    patch -p0 < ${FILESDIR}/startkde-${PVR}-gentoo.diff || die
+    patch -p0 < ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff || die
     mv startkde startkde.orig
     sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
     rm startkde.orig

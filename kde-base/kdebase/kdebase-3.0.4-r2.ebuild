@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r2.ebuild,v 1.4 2002/11/04 21:49:19 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r2.ebuild,v 1.5 2002/11/10 10:00:01 danarmak Exp $
 inherit kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -43,10 +43,10 @@ pkg_setup() {
 	# official fix to xfree for this issue as of writing.  See bug #9423
 	# for more info.
 	cd /usr/X11R6/include/X11/Xft
-	if patch --dry-run -p0 < ${FILESDIR}/${P}-xft_h-fix.diff > /dev/null
+	if patch --dry-run -p0 < ${FILESDIR}/${PVR}/${P}-xft_h-fix.diff > /dev/null
 	then
 		einfo "Patching Xft.h to fix missing defines..."
-		patch -p0 < ${FILESDIR}/${P}-xft_h-fix.diff > /dev/null || die
+		patch -p0 < ${FILESDIR}/${PVR}/${P}-xft_h-fix.diff > /dev/null || die
 	fi
 }
 
@@ -66,13 +66,13 @@ src_unpack() {
 	
     #if [ -n "`use qt31patch`" ]; then
 	cd $S
-	/bin/zcat "$FILESDIR/$P-nspluginviewer-qt31.diff.gz" | patch -p0 --
+	/bin/zcat "$FILESDIR/${PVR}/$P-nspluginviewer-qt31.diff.gz" | patch -p0 --
     #fi
 
 	# Apply this only if we are using a hacked Xft-1.1 Xft.h.
 	if [ -n "`grep "End of Gentoo hack" /usr/X11R6/include/X11/Xft/Xft.h`" ]
 	then
-		cd ${S}; patch -p1 < ${FILESDIR}/${P}-xft1.1-fix.diff || die
+		cd ${S}; patch -p1 < ${FILESDIR}/${PVR}/${P}-xft1.1-fix.diff || die
 	fi
 }
 

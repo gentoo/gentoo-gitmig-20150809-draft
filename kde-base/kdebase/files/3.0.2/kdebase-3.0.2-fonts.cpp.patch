@@ -4,8 +4,8 @@
  //
  // Ported to kcontrol2 by Geert Jansen.
  
--/* $Id: kdebase-3.0.2-fonts.cpp.patch,v 1.1 2002/06/28 17:16:12 danarmak Exp $ */
-+/* $Id: kdebase-3.0.2-fonts.cpp.patch,v 1.1 2002/06/28 17:16:12 danarmak Exp $ */
+-/* $Id: kdebase-3.0.2-fonts.cpp.patch,v 1.1 2002/11/10 10:00:01 danarmak Exp $ */
++/* $Id: kdebase-3.0.2-fonts.cpp.patch,v 1.1 2002/11/10 10:00:01 danarmak Exp $ */
  
  #include <qlayout.h>
  #include <qlabel.h>

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r3.ebuild,v 1.8 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r3.ebuild,v 1.9 2002/11/10 10:00:01 danarmak Exp $
 
 IUSE="ssl motif ldap encode cups oggvorbis pam"
 inherit kde-dist
@@ -59,7 +59,7 @@ src_install() {
     
     cd ${D}/${KDEDIR}/bin
     rm -f ./startkde
-    sed -e "s:_KDEDIR_:${KDEDIR}:" ${FILESDIR}/startkde-${PVF} > startkde
+    sed -e "s:_KDEDIR_:${KDEDIR}:" ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo > startkde
     chmod a+x startkde
 
     # x11 session script

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4.ebuild,v 1.4 2002/10/16 19:10:17 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4.ebuild,v 1.5 2002/11/10 10:00:01 danarmak Exp $
 inherit kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba qt31patch"
@@ -48,7 +48,7 @@ src_unpack() {
     # additional patch to work with qt 3.1.
     if [ -n "`use qt31patch`" ]; then
 	cd $S
-	/bin/zcat "$FILESDIR/$P-nspluginviewer-qt31.diff.gz" | patch -p0 --
+	/bin/zcat "$FILESDIR/${PVR}/$P-nspluginviewer-qt31.diff.gz" | patch -p0 --
     fi
 
 }
@@ -72,7 +72,7 @@ src_install() {
 
     # startkde script
     cd ${D}/${KDEDIR}/bin
-    patch -p0 < ${FILESDIR}/startkde-${PVR}-gentoo.diff || die
+    patch -p0 < ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff || die
     mv startkde startkde.orig
     sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
     rm startkde.orig
