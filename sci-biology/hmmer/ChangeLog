@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/hmmer
+# ChangeLog for sci-biology/hmmer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.1 2004/12/23 18:43:28 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.2 2004/12/23 20:18:29 swegener Exp $
 
 *hmmer-2.3.2 (23 Dec 2004)
 

@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/ncbi-tools
+# ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.1 2004/12/23 18:47:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.2 2004/12/23 20:19:06 swegener Exp $
 
 *ncbi-tools-20040616 (23 Dec 2004)
 
