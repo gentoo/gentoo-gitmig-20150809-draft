@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-5.0.ebuild,v 1.4 2004/05/30 07:23:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-5.0.ebuild,v 1.5 2004/06/23 01:18:05 swegener Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org"
@@ -9,12 +9,12 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	virtual/cron
 	virtual/mta
 	dev-lang/perl
 	mail-client/mailx"
-RDEPEND=""
+DEPEND=""
 
 src_install() {
 	dodir /etc/log.d/lib

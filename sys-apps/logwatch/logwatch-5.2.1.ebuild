@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-4.3.2.ebuild,v 1.6 2004/06/23 01:18:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-5.2.1.ebuild,v 1.1 2004/06/23 01:18:05 swegener Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
-HOMEPAGE="http://www.logwatch.org"
+HOMEPAGE="http://www.logwatch.org/"
 SRC_URI="ftp://ftp.kaybee.org/pub/linux/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 RDEPEND="virtual/glibc
 	virtual/cron
@@ -17,6 +17,7 @@ RDEPEND="virtual/glibc
 DEPEND=""
 
 src_install() {
+	dodir /etc/log.d/lib
 	dodir /etc/log.d/conf/logfiles
 	dodir /etc/log.d/conf/services
 	dodir /etc/log.d/scripts/services
@@ -30,6 +31,9 @@ src_install() {
 			doexe $i/*
 		fi
 	done
+
+	exeinto /etc/log.d/lib
+	doexe lib/*.pm
 
 	exeinto /etc/log.d/scripts/services
 	doexe scripts/services/*
@@ -47,7 +51,7 @@ src_install() {
 	doins conf/services/*
 
 	doman logwatch.8
-	dodoc License project/CHANGES project/TODO README HOWTO-Make-Filter
+	dodoc License project/CHANGES README HOWTO-Make-Filter
 }
 
 pkg_postinst() {
