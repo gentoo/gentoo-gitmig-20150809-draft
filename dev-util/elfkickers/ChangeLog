@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.7 2004/07/02 05:07:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.8 2004/11/11 16:45:52 solar Exp $
+
+  11 Nov 2004; <solar@gentoo.org> elfkickers-2.0a.ebuild:
+  added ~mips to the KEYWORDS
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   elfkickers-2.0a.ebuild:
