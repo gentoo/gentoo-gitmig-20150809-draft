@@ -1,6 +1,6 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.33 2003/06/27 13:48:17 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.34 2003/07/04 16:11:26 gmsoft Exp $
 
   27 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> ghostscript-7.05.5-r1.ebuild,
   ghostscript-7.05.5-r2.ebuild, ghostscript-7.05.6-r1.ebuild,
@@ -8,6 +8,9 @@
   kochi-fonts has licensing issue, so we use kochi-substitute instead.
 
 *ghostscript-7.05.6-r2 (14 Jun 2003)
+
+  03 Jul 2003; Guy Martin <gmsoft@gentoo.org> ghostscript-7.05.6-r2.ebuild :
+  Added hppa to KEYWORDS.
 
   14 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update. Added patch from Mandrake for ps2epsi vulnerability.
