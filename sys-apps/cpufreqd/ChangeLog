@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/cpufreqd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.6 2003/11/19 17:46:13 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.7 2003/11/21 01:08:06 tantive Exp $
+
+*cpufreqd-1.1_rc1-r1 (21 Nov 2003)
+
+  21 Nov 2003; Michael Imhof <tantive@gentoo.org> cpufreqd-1.1_rc1-r1.ebuild:
+  Had to correct the included init-script. Closes #33968.
 
 *cpufreqd-1.1_rc1 (19 Nov 2003)
 
