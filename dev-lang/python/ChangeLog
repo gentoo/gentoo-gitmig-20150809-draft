@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.130 2005/02/17 18:19:40 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.131 2005/02/27 00:11:04 kloeri Exp $
+
+  27 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.3.3-r2.ebuild,
+  python-2.3.4-r1.ebuild, python-2.4-r2.ebuild:
+  Disable c++ conditionally.
 
 *python-2.3.5 (17 Feb 2005)
 
