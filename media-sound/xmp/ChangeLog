@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.3 2003/02/12 07:35:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.4 2004/03/11 12:13:27 karltk Exp $
+
+*xmp-2.0.5_pre3-r1 (11 Mar 2004)
+
+  11 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org> xmp-2.0.5_pre3-r1.ebuild:
+  Fixes gcc 3.3 compilation errors.
 
 *xmp-2.0.5_pre3 (17 Jun 2002)
 
