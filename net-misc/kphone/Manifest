@@ -1,25 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 96e959ff115750cec685ca868a6bfab4 ChangeLog 3944
-MD5 e928bb3a16f4c1a9956dfb781e4efa2f kphone-4.0.1.ebuild 692
-MD5 642c9d78045f2ce2b80b2e3f5e60fc9b kphone-4.0.2.ebuild 724
-MD5 072dce8c408d338af4a8a2cbc00d3bd1 kphone-4.0.3.ebuild 782
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 7a4399133ba6ce3d4367ce9e3ed26047 kphone-4.0.5.ebuild 703
+MD5 96e959ff115750cec685ca868a6bfab4 ChangeLog 3944
 MD5 79a9d63d5116f9fd85489f5b0464cfdb kphone-4.1.0.ebuild 933
-MD5 d791e412c07ec88da417b2d5737596c4 files/digest-kphone-4.0.1 61
-MD5 0c17c689085570b5ddd18bce1a01a529 files/digest-kphone-4.0.2 64
-MD5 4ca00b985c3f3563d3abc1423f2b72ff files/digest-kphone-4.0.3 64
-MD5 a21b5892772f1853869967c34b4e06e7 files/kphone-4.0.3-makefile.diff 1010
-MD5 8ec6d67eff2afbdb33e5badedc110610 files/kphone-4.0.4-makefile.diff 1469
-MD5 7fbe0d47e3d51aae62140bc4589ba516 files/digest-kphone-4.0.5 64
-MD5 2ac98b4c3bd182f4d422edead25c56d9 files/digest-kphone-4.1.0 64
 MD5 13744936b73f480a658795a553dd7efe files/kphone-4.1.0-Makefiles.patch 461
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB7V4TKRy60XGEcJIRAlwGAJ4yCBJSqqJxH0Q8FwKTyl3xe9PAiQCgqlzZ
-eMt2qXvEeT6Eg7xRX8VNt5Y=
-=d6R3
------END PGP SIGNATURE-----
+MD5 2ac98b4c3bd182f4d422edead25c56d9 files/digest-kphone-4.1.0 64
