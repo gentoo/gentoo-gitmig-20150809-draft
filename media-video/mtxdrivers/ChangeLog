@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mtxdrivers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/ChangeLog,v 1.10 2004/02/16 01:47:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/ChangeLog,v 1.11 2004/03/21 23:46:35 spyderous Exp $
+
+  21 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  mtxdrivers-0.3.0.ebuild:
+  Pull old version.
 
   15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>;
   mtxdrivers-0.2.1.ebuild:
