@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.4 2003/10/18 10:04:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.5 2003/10/20 06:08:26 kumba Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gnuconfig
 
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
@@ -29,6 +29,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# If running mips64, we need updated configure data
+	use mips && gnuconfig_update
 
 	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
 	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"
