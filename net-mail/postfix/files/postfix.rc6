@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/postfix.rc6,v 1.4 2001/12/06 20:17:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/postfix.rc6,v 1.5 2001/12/29 00:20:25 azarah Exp $
 
 depend() {
     need net
-    use sysklogd metalog syslog-ng
+    use logger
 }
 
 
