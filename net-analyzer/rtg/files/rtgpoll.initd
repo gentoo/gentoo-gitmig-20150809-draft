@@ -1,0 +1,49 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/files/rtgpoll.initd,v 1.1 2004/05/30 00:05:17 anti Exp $
+
+[ -z "${RTGPOLL_TARGETS}" ] && RTGPOLL_TARGETS=/etc/rtg/targets.cfg
+
+opts="${opts} reload"
+
+depend() {
+	need net mysql
+}
+
+checkconfig() {
+	if [ ! -e /etc/rtg/rtg.conf ] ; then
+		eerror "You need an /etc/rtg/rtg.conf config file to run rtgpoll"
+		return 1
+	fi
+	
+	if [ ! -e "${RTGPOLL_TARGETS}" ] ; then
+		eerror "${RTGPOLL_TARGETS} doesn't exist, you must have a targets configuration to run rtgpoll"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting rtgpoll"
+	start-stop-daemon --start --background --quiet --pidfile /var/run/rtgpoll.pid --exec /usr/bin/rtgpoll --  -t ${RTGPOLL_TARGETS}
+	eend $?
+}
+
+reload() {
+        if [ ! -f /var/run/rtgpoll.pid ]; then
+                eerror "rtgpoll isn't running"
+                return 1
+        fi
+        ebegin "Reloading configuration"
+        kill -HUP `cat /var/run/rtgpoll.pid` &>/dev/null
+        eend $?
+}
+
+
+stop() {
+	ebegin "Stopping rtgpoll"
+	start-stop-daemon --stop --quiet --signal 9 --name rtgpoll --pidfile /var/run/rtgpoll.pid
+	eend $?
+}
+

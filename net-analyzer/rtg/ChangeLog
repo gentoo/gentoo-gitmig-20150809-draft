@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/rtg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.2 2004/05/08 14:51:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.3 2004/05/30 00:05:17 anti Exp $
+
+*rtg-0.7.4-r1 (29 May 2004)
+
+  29 May 2004; Ray Russell Reese III <anti@gentoo.org> rtg-0.7.4-r1.ebuild,
+  files/rtgpoll.confd, files/rtgpoll.initd:
+  Added new init.d script for rtgpoll.
 
   08 May 2004; Danny van Dyk <kugelfang@gentoo.org> rtg-0.7.4.ebuild:
   Marked ~amd64.
