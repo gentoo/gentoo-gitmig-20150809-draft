@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.1_p2-r1.ebuild,v 1.3 2000/10/05 18:22:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.3_p1.ebuild,v 1.1 2000/10/18 03:26:17 achim Exp $
 
-P=php-4.0.1pl2
+P=php-4.0.3pl1
 A="${P}.tar.gz number4.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -25,7 +25,7 @@ src_compile() {
 }
 
 src_unpack() {
-    unpack php-4.0.1pl2.tar.gz
+    unpack php-4.0.3pl1.tar.gz
     cd ${S}
     unpack number4.tar.gz
 }
@@ -37,8 +37,8 @@ src_install() {
   dodir /etc/httpd
   cp php.ini-dist ${D}/etc/httpd/php.ini
   into /usr
-  dodoc CODING_STANDARDS FUNCTION_LIST.txt INSTALL LICENSE
-  dodoc MAINTAINERS MODULES_STATUS README.* TODO NEWS
+  dodoc CODING_STANDARDS FUNCTION_LIST.txt LICENSE
+  dodoc README.* TODO NEWS
 }
 
 pkg_config() {
@@ -59,5 +59,6 @@ pkg_config() {
 
   fi
 }
+
 
 
