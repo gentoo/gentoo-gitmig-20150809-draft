@@ -1,17 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.19.3-r1.ebuild,v 1.5 2005/01/08 19:47:19 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.19.3-r1.ebuild,v 1.6 2005/03/12 20:16:41 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Converts RTF files to various formats"
 HOMEPAGE="http://www.gnu.org/software/unrtf/unrtf.html"
 SRC_URI="http://www.gnu.org/software/unrtf/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc ~s390"
+KEYWORDS="~amd64 ppc s390 x86"
 IUSE=""
-DEPEND="virtual/libc"
+
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin unrtf
+	dobin unrtf || die
 	doman unrtf.1
 	dohtml doc/unrtf.html
 	dodoc CHANGES README TODO
