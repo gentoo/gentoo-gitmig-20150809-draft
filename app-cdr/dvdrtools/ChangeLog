@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvdrtools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.14 2005/01/01 12:12:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.15 2005/01/26 20:21:37 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> dvdrtools-0.1.6.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> dvdrtools-0.1.6.ebuild:
   added ~ppc64 to KEYWORDS; bug #74648

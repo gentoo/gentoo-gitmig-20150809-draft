@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/dvdrtools-0.1.6.ebuild,v 1.7 2005/01/01 12:12:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/dvdrtools-0.1.6.ebuild,v 1.8 2005/01/26 20:21:37 corsair Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://files.generaal.net/dvdrtools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64 ~ppc64"
+KEYWORDS="x86 ppc ~amd64 ppc64"
 IUSE=""
 
 DEPEND="virtual/libc
