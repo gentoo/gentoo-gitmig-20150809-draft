@@ -1,6 +1,21 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.158 2004/05/16 14:10:48 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.159 2004/05/19 18:10:17 zul Exp $
+
+*apache-2.0.49-r2 (21 May 2004)
+
+  21 May 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r2.ebuild,
+  files/patches/2.0.49-r2/00_gentoo_base.patch,
+  files/patches/2.0.49-r2/01_gentoo_cgi.patch,
+  files/patches/2.0.49-r2/01_gentoo_cvs_sync.patch,
+  files/patches/2.0.49-r2/01_gentoo_ipv6.patch,
+  files/patches/2.0.49-r2/01_ssl_verify_client.patch,
+  files/patches/2.0.49-r2/03_redhat_xfsz.patch,
+  files/patches/2.0.49-r2/Readme.PATCHES:
+  New version.
+  - Bugfixes from upstream.
+  - Added support for large log files. ( > 2GB ).
+  - Added fedora core patches.
 
   17 May 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r1.ebuild,
   apache-2.0.49.ebuild, files/httpd-2.0.49-cgi.patch:

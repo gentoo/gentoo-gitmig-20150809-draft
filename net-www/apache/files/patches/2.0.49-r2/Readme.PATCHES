@@ -1,0 +1,13 @@
+00_gentoo_base.patch - Our base patch.
+
+01_gentoo_cvs_sync.patch - Features extracted from apache cvs. Ability for 2 GB
+			   log files.
+			   
+01_gentoo_cgi.patch - CGI DoS bug.
+
+01_gentoo_ipv6.patch - Fix for weird ipv6 error message.
+
+01_ssl_verity_client.patch - Fix for SSLVerifyClient - PR 12355
+
+03_redhat_xfs.patch - Set SIGXFSZ to be ignored, so a write() beyond 2gb will fa		      il with E2BIG rather than killing the process
+
