@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 df08c6fd3396e9b91eda4a6f265568ea ChangeLog 4508
-MD5 d2fd998d99e60041fd5faf6cd7e0d234 libxfce4util-4.0.6.ebuild 731
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 48c7ab4e67e873631681e3ed1744b249 libxfce4util-4.0.4.ebuild 655
 MD5 cba90f3c30c20e830f711002a0e4b6e1 libxfce4util-4.0.5.ebuild 675
-MD5 1f757632e7a86f851394a0f0a72998ad libxfce4util-4.1.90.ebuild 719
 MD5 05d53c5f97292449efe59c19581c2420 libxfce4util-4.1.91.ebuild 686
-MD5 71f8db52c0e0da0e1ee4a70c35c0edd6 files/digest-libxfce4util-4.0.6 70
+MD5 48c7ab4e67e873631681e3ed1744b249 libxfce4util-4.0.4.ebuild 655
+MD5 bea03ac31df66874372ec86ab2b86683 libxfce4util-4.1.99.1.ebuild 688
+MD5 d2fd998d99e60041fd5faf6cd7e0d234 libxfce4util-4.0.6.ebuild 731
+MD5 1f757632e7a86f851394a0f0a72998ad libxfce4util-4.1.90.ebuild 719
+MD5 5e9b3e34baf0ea595cf38d9fcd43576d ChangeLog 4672
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 a9a0095668ea7ac3a80b89f9e882e3bc files/digest-libxfce4util-4.1.99.1 73
 MD5 2683788c07ac407cba40e7c1e3a1cf79 files/digest-libxfce4util-4.0.4 70
 MD5 36ea43949511b48226931fd2c0538b5f files/digest-libxfce4util-4.0.5 70
+MD5 71f8db52c0e0da0e1ee4a70c35c0edd6 files/digest-libxfce4util-4.0.6 70
 MD5 cac8ea6622f06547ca44d163ff16d444 files/digest-libxfce4util-4.1.90 71
 MD5 3aa3a6ef330bb46a04c27fbf9ec15d0c files/digest-libxfce4util-4.1.91 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBirWBHTu7gpaalycRAszqAKDp24iLnWM69CUTo4raf7mpZmlVmQCgw4dK
-W9r+HmTOJY/zHZBz+SSfXjU=
-=OBR6
------END PGP SIGNATURE-----
