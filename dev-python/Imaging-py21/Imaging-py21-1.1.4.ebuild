@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.4.ebuild,v 1.3 2003/09/10 22:27:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.4.ebuild,v 1.4 2003/10/30 09:49:10 liquidx Exp $
 
 PYTHON_SLOT_VERSION="2.1"
 
@@ -21,6 +21,11 @@ LICENSE="as-is"
 DEPEND=">=media-libs/jpeg-6a
 	>=sys-libs/zlib-0.95
 	tcltk? ( dev-lang/tk )"
+
+src_unpack() {
+	unpack ${A}
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/Imaging-1.1.4-setup.py.patch
+}
 
 src_compile() {
 	export OPT=${CFLAGS}
