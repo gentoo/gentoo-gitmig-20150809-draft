@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.25 2005/02/06 08:31:05 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.26 2005/04/01 05:40:23 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> scons-0.96.1.ebuild:
+  stable on ia64
 
   06 Feb 2005; Kito <kito@gentoo.org> scons-0.96.1.ebuild:
   keyword ~ppc-macos

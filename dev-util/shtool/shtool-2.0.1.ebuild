@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/shtool-2.0.1.ebuild,v 1.3 2004/11/15 13:27:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/shtool-2.0.1.ebuild,v 1.4 2005/04/01 05:40:55 agriffis Exp $
 
 DESCRIPTION="A compilation of small but very stable and portable shell scripts into a single shell tool"
 SRC_URI="ftp://ftp.gnu.org/gnu/shtool/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gnu.org/software/shtool/shtool.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ia64 ~ppc"
+KEYWORDS="x86 sparc ia64 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffball
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.10 2005/03/31 23:15:06 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.11 2005/04/01 05:35:48 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> diffball-0.6.ebuild:
+  stable on ia64
 
   31 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> diffball-0.6.ebuild:
   Testing ppc-macos
