@@ -107,7 +107,7 @@ media-libs/gst-plugins-cdparanoia
 
 # <liquidx@gentoo.org> 10 Jun 2003
 # Obligatory masking before introducing into portage.
-=net-mail/evolution-1.4.0*
+# =net-mail/evolution-1.4.0*
 
 # <pauldv@gentoo.org> 10 Jun 2003
 # Beta version, and testing needed
