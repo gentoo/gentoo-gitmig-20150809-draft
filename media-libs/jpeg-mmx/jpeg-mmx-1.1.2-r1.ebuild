@@ -1,23 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.2 2002/07/08 07:26:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.3 2002/07/08 14:22:47 seemant Exp $
 
 inherit libtool
 
-#- Author Ryan Tolboom <ryan@gentoo.org>
 S=${WORKDIR}/jpeg-mmx
 DESCRIPTION="JPEG library with mmx enhancements"
-SRC_URI="mirror://sourceforge/mjpeg/${A}"
+SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
-SLOT=""
+SLOT="0"
 LICENSE="as-is"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc"
 
 src_compile() {
 	elibtoolize
-	./configure --enable-shared --prefix=/usr || die "configure failed"
+	econf --enable-shared || die "configure failed"
 	emake || die "make failed"
 
 }
@@ -25,7 +25,11 @@ src_compile() {
 src_install() {
 
 	dodir /usr/{include/jpeg-mmx,lib}
-	make includedir=${D}/usr/include/jpeg-mmx prefix=${D}/usr install || die "install failed"
+	make \
+		includedir=${D}/usr/include/jpeg-mmx \
+		prefix=${D}/usr \
+		install || die "install failed"
+
 	mv ${D}/usr/lib/libjpeg.la ${D}/usr/lib/libjpeg-mmx.la
 	mv ${D}/usr/lib/libjpeg.so.62.0.0 ${D}/usr/lib/libjpeg-mmx.so.62.0.0 
 	rm ${D}/usr/lib/libjpeg.so
