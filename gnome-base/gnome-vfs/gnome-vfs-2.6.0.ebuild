@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.0.ebuild,v 1.3 2004/04/05 20:09:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.0.ebuild,v 1.4 2004/05/20 22:48:52 foser Exp $
 
 # FIXME : can use gnutls
 inherit gnome2 eutils
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/libxml2-2.2.8
 
 	gnome-base/gnome-mime-data
-	x11-misc/shared-mime-info
+	>=x11-misc/shared-mime-info-0.14
 
 	app-admin/fam
 	ssl? ( >=dev-libs/openssl-0.9.5
