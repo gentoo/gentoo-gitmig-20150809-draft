@@ -1,33 +1,30 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.5 2002/07/25 15:19:53 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.6 2002/08/06 12:13:26 blizzy Exp $
+
+*distcc-0.7 (06 Aug 2002)
+
+  06 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : New release.
 
 *distcc-0.6 (12 Jul 2002)
 
-  25 Jul 2002; Mark Guertin <gerk@gentoo.org> :
-  
-  Added ppc to keywords
+  25 Jul 2002; Mark Guertin <gerk@gentoo.org> : Added ppc to
+  keywords
 
-  12 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
-
-  New release.
+  12 Jul 2002; Maik Schreiber <blizzy@gentoo.org> : New release.
 
 *distcc-0.5 (05 Jul 2002)
 
-  05 Jul 2002; Daniel Robbins <drobbins@gentoo.org> :
-
-  new release that includes missing KEYWORDS, SLOT, LICENSE and new man
-  pages, closes bug #4506.
+  05 Jul 2002; Daniel Robbins <drobbins@gentoo.org> : new release
+  that includes missing KEYWORDS, SLOT, LICENSE and new man pages,
+  closes bug #4506.
 
 *distcc-0.4 (21 Jun 2002)
 
-  07 Jun 2002; Ryan Phillips <rphillips@gentoo.org> distcc-0.4.ebuild :
+  07 Jun 2002; Ryan Phillips <rphillips@gentoo.org> : Added popt
+  dep. Fixes # 4466. Thanks to Michael Grigoriev
 
-  Added popt dep. Fixes # 4466. Thanks to Michael Grigoriev
-
-  21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> distcc-0.4.ebuild :
-
-  New release
+  21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> : New release
 
 *distcc-0.3 (21 Jun 2002)
 
