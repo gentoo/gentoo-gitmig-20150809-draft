@@ -2,13 +2,15 @@ MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
 MD5 5ea60b70de1b033e7becabd5ff7f6b9d openmosix-sources-2.4.20-r8.ebuild 2892
 MD5 7460a5485c7876b383732f0ea24fc86d openmosix-sources-2.4.21-r3.ebuild 3827
 MD5 2549dad8e643b5064a1ec54d4b3b842e openmosix-sources-2.4.26-r2.ebuild 1315
-MD5 65ff2c50e9d6cc87503273c7ede8f5ce ChangeLog 8156
-MD5 b3e6c49e521019d5760cb4e6b9481120 openmosix-sources-2.4.24.ebuild 1983
+MD5 fbc10a15fa36f364f6f380189e46a0c4 openmosix-sources-2.4.24.ebuild 1600
+MD5 d719270c38f6acd032baf555185c5da1 ChangeLog 8458
+MD5 eadd212be100ff3ba11815e819e27913 openmosix-sources-2.4.22-r11.ebuild 1962
 MD5 cc7ba57d573a76a12b9b094cd29e0223 openmosix-sources-2.4.22-r9.ebuild 1964
 MD5 9694770f2558acd2952c791c01722745 openmosix-sources-2.4.26-r1.ebuild 1322
 MD5 ef520fc883edac15db383dba3eb2ba73 openmosix-sources-2.4.26.ebuild 1322
-MD5 e91a596696bf4336a0f131dcf3bdb0c8 openmosix-sources-2.4.22-r10.ebuild 1962
-MD5 70f7eddaa49d8b87b5902e83218561f3 openmosix-sources-2.4.26-r3.ebuild 1315
+MD5 eadd212be100ff3ba11815e819e27913 openmosix-sources-2.4.22-r10.ebuild 1962
+MD5 b19b27d1ca7ee38f918397c1f254a59a openmosix-sources-2.4.26-r3.ebuild 1320
+MD5 fbc10a15fa36f364f6f380189e46a0c4 openmosix-sources-2.4.24-r1.ebuild 1600
 MD5 8ea0ebaf9ea87558abecdc1df6145dc5 files/digest-openmosix-sources-2.4.20-r8 133
 MD5 518e0cc8ace05bda990128ccf3d11c32 files/digest-openmosix-sources-2.4.21-r3 192
 MD5 bfe84c6c799577e10c7b09f0036b33c8 files/digest-openmosix-sources-2.4.26 140
@@ -36,3 +38,6 @@ MD5 0f66013f643c79c97fda489618a4e2fd files/openmosix-sources.CAN-2004-0535.patch
 MD5 199264742137ada4477d69f816dc5454 files/digest-openmosix-sources-2.4.22-r10 134
 MD5 236eba6ddb587f8354b7c4a549e8f374 files/digest-openmosix-sources-2.4.26-r3 147
 MD5 b67048d6f05fa573fda67bdf7a264d0d files/digest-openmosix-sources-2.4.24 136
+MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/openmosix-sources.CAN-2004-0497.patch 707
+MD5 199264742137ada4477d69f816dc5454 files/digest-openmosix-sources-2.4.22-r11 134
+MD5 b67048d6f05fa573fda67bdf7a264d0d files/digest-openmosix-sources-2.4.24-r1 136

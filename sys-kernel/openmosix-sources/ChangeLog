@@ -1,6 +1,26 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.54 2004/07/06 13:46:37 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.55 2004/07/10 12:36:20 voxus Exp $
+
+*openmosix-sources-2.4.24-r1 (10 Jul 2004)
+
+  10 Jul 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +openmosix-sources-2.4.24-r1.ebuild,
+  -openmosix-sources-2.4.24.ebuild,
+  -openmosix-sources-2.4.21-r3.ebuild,
+  -openmosix-sources-2.4.20-r8.ebuild:
+  Security update (#56479).
+  Dropped outdated .20 and .21 sources, so migshm
+  exists now only in .26 series.
+
+*openmosix-sources-2.4.22-r11 (10 Jul 2004)
+
+  10 Jul 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +files/openmosix-sources.CAN-2004-0497.patch,
+  -openmosix-sources-2.4.22-r9.ebuild,
+  -openmosix-sources-2.4.22-r10.ebuild,
+  +openmosix-sources-2.4.22-r11.ebuild:
+  Security update, closing #56479 (for cluster herd).
 
 *openmosix-sources-2.4.22-r10 (06 Jul 2004)
 *openmosix-sources-2.4.24 (06 Jul 2004)
