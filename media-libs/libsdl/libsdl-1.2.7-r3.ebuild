@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.9 2005/01/14 00:59:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.10 2005/02/25 21:02:09 chriswhite Exp $
 
-inherit toolchain-funcs fixheadtails eutils gnuconfig
+inherit toolchain-funcs fixheadtails eutils gnuconfig flag-o-matic
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -85,6 +85,9 @@ src_compile() {
 			|| ewarn "Disabling DirectFB since libdirectfb.so is broken"
 	fi
 	myconf="${myconf} ${directfbconf}"
+
+	# filter -fomit-frame-pointer as per bug #82618
+	filter-flags -fomit-frame-pointer
 
 	econf \
 		--enable-events \

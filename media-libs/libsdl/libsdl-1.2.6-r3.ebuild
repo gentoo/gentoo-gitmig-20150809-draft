@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.14 2005/01/14 00:59:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.15 2005/02/25 21:02:09 chriswhite Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -59,6 +59,9 @@ src_compile() {
 		&& myconf="${myconf} --disable-video" \
 		|| myconf="${myconf} --enable-video-dummy"
 	use nojoystick && myconf="${myconf} --disable-joystick"
+
+	# filtering -fomit-frame-pointer as per bug #82618
+	filter-flags -fomit-frame-pointer
 
 	# asm is b0rken in 1.2.6
 	# http://www.libsdl.org/pipermail/sdl/2003-October/057304.html

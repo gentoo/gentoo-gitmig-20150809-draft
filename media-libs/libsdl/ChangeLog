@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.74 2005/01/14 00:59:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.75 2005/02/25 21:02:09 chriswhite Exp $
+
+  26 Feb 2005; Chris White <chriswhite@gentoo.org> libsdl-1.2.6-r3.ebuild,
+  libsdl-1.2.7-r3.ebuild, libsdl-1.2.8-r1.ebuild:
+  Fixing Bug #82618 regarding -fomit-frame-pointer with permission from MrBones.
 
 *libsdl-1.2.8-r1 (13 Jan 2005)
 
