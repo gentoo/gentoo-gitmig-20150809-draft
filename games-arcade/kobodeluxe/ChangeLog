@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/kobodeluxe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.9 2004/11/08 01:40:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.10 2004/12/28 22:56:38 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   08 Nov 2004; Joseph Jezak <josejx@gentoo.org> kobodeluxe-0.4_pre10.ebuild:
   Marked ppc stable.
@@ -47,7 +50,7 @@
 
 *kobodeluxe-0.4_pre6 (03 Jun 2002)
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> kobodeluxe-0.4_pre6.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> kobodeluxe-0.4_pre6.ebuild :
   Added KEYWORDS.
 
   03 Jun 2002; Wout Mertens <wmertens@gentoo.org> :
@@ -60,7 +63,7 @@
 
 *kobodeluxe-0.3-r1 (02 Jun 2002)
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> kobodeluxe-0.3-r1.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> kobodeluxe-0.3-r1.ebuild :
   Added KEYWORDS.
 
   02 Jun 2002; Wout Mertens <wmertens@gentoo.org> :

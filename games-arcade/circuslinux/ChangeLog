@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/circuslinux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.8 2004/11/11 20:44:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.9 2004/12/28 22:54:34 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   circuslinux-1.0.3.ebuild:
@@ -25,7 +28,7 @@
 
 *circuslinux-1.0.3 (1 Feb 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> circuslinux-1.0.3.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> circuslinux-1.0.3.ebuild :
   Added LICENSE, KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :

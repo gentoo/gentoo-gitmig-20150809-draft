@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/tuxpuck
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.4 2004/06/24 22:12:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.5 2004/12/28 22:59:18 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> tuxpuck-0.7.118.ebuild,
   tuxpuck-0.7.91.ebuild, tuxpuck-0.8.0.ebuild, tuxpuck-0.8.1.ebuild:
@@ -50,7 +53,7 @@
   29 Jul 2002; Nicholas Jones <carpaski@gentoo.org> tuxpuck-0.7.91.ebuild :
   Removed the -Werror that breaks the build.
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> tuxpuck-0.7.91.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> tuxpuck-0.7.91.ebuild :
   Added KEYWORDS.
 
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> tuxpuck-0.7.91.ebuild
