@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b34170944af0118a706dd6f1a6f2c759 wnn7sdk-20011017.ebuild 927
+MD5 c2b14423b46986a286e7073f949d6f88 ChangeLog 443
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 584f359090e243b6703b32650fa83675 ChangeLog 348
+MD5 109e9d27b39967ed889d746d3f133d1f wnn7sdk-20011017.ebuild 926
 MD5 1fd4dd7288e0c8d1f42dfd875fe119ec files/digest-wnn7sdk-20011017 56
 MD5 c9df75b0d1aadb453be3069fe5dfa76e files/wnn7sdk-gentoo.patch 2120
 MD5 52d3238ee0990e2aea9cdd862da1ce46 files/wnn7sdk-malloc.patch 366
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8OEUVWNWqTUmv+0RAioxAJ4h7SIz7c9t9/4+bD3fJLcCZvmUSQCfcp2W
-wQ7g4lL0qCCH538jlSw0lxs=
-=D2Y9
------END PGP SIGNATURE-----
