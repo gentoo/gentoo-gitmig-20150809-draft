@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/foldutil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.6 2005/01/21 17:02:51 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.7 2005/02/18 18:55:23 ciaranm Exp $
+
+  18 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> foldutil-1.7.ebuild:
+  x86 sparc mips stable
 
 *foldutil-1.7 (21 Jan 2005)
 
