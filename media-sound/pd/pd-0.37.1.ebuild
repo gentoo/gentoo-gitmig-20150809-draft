@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.5 2004/04/05 01:28:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.6 2004/04/08 07:22:23 eradicator Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 	# Fix install borkage... this errors in sandbox, but it still performs the copy,
 	# so we remove it from the makefile and just do it ourselves ignoring the error
-	sed -i 's:\(cp -pr ../doc ../extra $(INSTDIR)/lib/pd/\):# \1:' ${S}/src/makefile.in
+	sed -i 's:\(cp -pr ../doc ../extra $(INSTDIR)/lib/pd/\):# \1:' ${S}/makefile.in
 }
 
 src_compile() {
