@@ -25,4 +25,4 @@ MD5 830c6d1dcb1b22b9095e6f16f3ebdf85 files/linux26-headers-2.6.6-tcp_info-DRS-ba
 MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-linux26-headers-2.6.5 66
 MD5 53405777e395f5520722f9fb2398ddd8 files/digest-linux26-headers-2.6.4 66
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux26-headers-2.6.7-r1 66
-MD5 7985a1dfc2856b864241d6d462b4d7e4 files/linux26-headers-2.6.7-appCompat.patch 30215
+MD5 d6e1f23d0a090d6c0c0d44af0075359e files/linux26-headers-2.6.7-appCompat.patch 30277

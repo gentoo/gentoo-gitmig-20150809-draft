@@ -700,13 +700,15 @@ diff -ur linux-2.6.6/include/asm-x86_64/processor.h linux-2.6.6-gentoo/include/a
  } __attribute__((aligned(16)));
  
  #define INIT_THREAD  {}
-diff -ur linux-2.6.6/include/asm-x86_64/system.h linux-2.6.6-gentoo/include/asm-x86_64/system.h
---- linux-2.6.6/include/asm-x86_64/system.h	2004-06-02 19:25:27.000000000 +0100
-+++ linux-2.6.6-gentoo/include/asm-x86_64/system.h	2004-06-02 19:25:17.000000000 +0100
-@@ -5,6 +5,30 @@
+diff -ur linux-2.6.7/include/asm-x86_64/system.h linux-2.6.7-gentoo/include/asm-x86_64/system.h
+--- linux-2.6.7/include/asm-x86_64/system.h	2004-06-02 19:25:27.000000000 +0100
++++ linux-2.6.7-gentoo/include/asm-x86_64/system.h	2004-06-02 19:25:17.000000000 +0100
+@@ -4,6 +4,32 @@
+ #include <linux/config.h>
  #include <linux/kernel.h>
  #include <asm/segment.h>
- 
++#include <linux/bitops.h> /* for LOCK_PREFIX... */
++
 +/*
 + * Alternative inline assembly with input.
 + * 
@@ -717,6 +719,7 @@ diff -ur linux-2.6.6/include/asm-x86_64/system.h linux-2.6.6-gentoo/include/asm-
 + * If you use variable sized constraints like "m" or "g" in the 
 + * replacement maake sure to pad to the worst case length.
 + */
++
 +#define alternative_input(oldinstr, newinstr, feature, input)		\
 +	asm volatile ("661:\n\t" oldinstr "\n662:\n"			\
 +		      ".section .altinstructions,\"a\"\n"		\
@@ -730,11 +733,10 @@ diff -ur linux-2.6.6/include/asm-x86_64/system.h linux-2.6.6-gentoo/include/asm-
 +		      ".section .altinstr_replacement,\"ax\"\n"		\
 +		      "663:\n\t" newinstr "\n664:\n"   /* replacement */ \
 +		      ".previous" :: "i" (feature), input)
-+
+ 
  #ifdef __KERNEL__
  
- #ifdef CONFIG_SMP
-@@ -114,30 +138,6 @@
+@@ -114,30 +140,6 @@
  		      ".previous" :: "i" (feature) : "memory")  
  
  /*
