@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cpp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.4 2004/02/22 09:43:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.5 2004/04/03 23:52:14 pylon Exp $
+
+  04 Apr 2004; Lars Weiler <pylon@gentoo.org> log4cpp-0.3.4b.ebuild:
+  stable on ppc
 
   22 Feb 2004; David Holm <dholm@gentoo.org> log4cpp-0.3.4b.ebuild:
   Added to ~ppc.
