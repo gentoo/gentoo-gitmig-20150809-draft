@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.18.ebuild,v 1.4 2004/03/17 23:50:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.19-r2.ebuild,v 1.1 2004/03/17 23:50:32 g2boojum Exp $
 
 inherit eutils ssl-cert
 
+VDA_P="${PN}-2.0.18"
 TLS_P="pfixtls-0.8.16-2.0.18-0.9.7c"
 IPV6="1.21"
 IPV6_P="ipv6-${IPV6}-pf-2.0.18"
@@ -14,6 +15,7 @@ DESCRIPTION="A fast and secure drop-in replacement for sendmail."
 HOMEPAGE="http://www.postfix.org/"
 SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 	ftp://ftp.porcupine.org/mirrors/postfix-release/official/${PN}-2.0-ns-mx-acl-patch.gz
+	vda? ( http://web.onda.com.br/nadal/postfix/VDA/${VDA_P}.patch.gz )
 	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )
 	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_P}.patch.gz )
 	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_TLS_P}.patch.gz )
@@ -22,7 +24,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha"
-IUSE="ipv6 pam ldap mysql postgres ssl sasl maildir mbox"
+IUSE="ipv6 pam ldap mysql postgres ssl sasl vda maildir mbox"
 
 PROVIDE="virtual/mta virtual/mda"
 DEPEND=">=sys-libs/db-3.2
@@ -35,51 +37,26 @@ DEPEND=">=sys-libs/db-3.2
 	sasl? ( >=dev-libs/cyrus-sasl-2 )"
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
-	!virtual/mta"
-
-# Is this still necessary since gentoo sasl looks
-# in /etc/sasl2 for it's config files?
-pkg_setup() {
-	# Prevent mangling the smtpd.conf file.
-	if [ ! -L "${ROOT}/usr/lib/sasl2/smtpd.conf" ] ; then
-		if [ -f "${ROOT}/usr/lib/sasl2/smtpd.conf" ] ; then
-			ebegin "Protecting your smtpd.conf file"
-			if [ ! -d "${ROOT}/etc/sasl2" ] ; then
-				mkdir -p "${ROOT}/etc/sasl2"
-			fi
-
-			# This shouldn't be necessary, but apparently
-			# without it things can still get messy.
-			if [ -L "${ROOT}/etc/sasl2/smtpd.conf" ] ; then
-				rm "${ROOT}/etc/sasl2/smtpd.conf"
-			fi
-
-			# If both files exist, make sure that we preserve
-			# a copy of each with the ._cfg system.
-			if [ -f "${ROOT}/etc/sasl2/smtpd.conf" ] ; then
-				mv "${ROOT}/etc/sasl2/smtpd.conf" \
-					"${ROOT}/etc/sasl2/._cfg0000_smtpd.conf"
-			fi
-			mv "${ROOT}/usr/lib/sasl2/smtpd.conf" "${ROOT}/etc/sasl2"
-			eend
-		fi
-	fi
-}
+	net-mail/mailwrapper"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	if [ "`use ssl`" ] ; then
-		if [ "`use ipv6`" ] ; then
+	if use ssl ; then
+		if use ipv6 ; then
 			epatch "${WORKDIR}/${IPV6_TLS_P}.patch"
 		else
 			epatch "${WORKDIR}/${TLS_P}/pfixtls.diff"
 		fi
-	elif [ "`use ipv6`" ]; then
+	elif use ipv6; then
 		epatch "${WORKDIR}/${IPV6_P}.patch"
 	fi
 
-	if [ "`use postgres`" ] ; then
+	if use vda ; then
+		epatch "${WORKDIR}/${VDA_P}.patch"
+	fi
+
+	if use postgres ; then
 		epatch "${DISTDIR}/${PGSQL_P}.patch"
 	fi
 
@@ -97,30 +74,30 @@ src_unpack() {
 src_compile() {
 	local mycc="-DHAS_PCRE" mylibs="-L/usr/lib -lpcre -ldl -lcrypt -lpthread"
 
-	if [ "`use pam`" ] ; then
+	if use pam ; then
 		mylibs="${mylibs} -lpam"
 	fi
-	if [ "`use ldap`" ] ; then
+	if use ldap ; then
 		mycc="${mycc} -DHAS_LDAP"
 		mylibs="${mylibs} -lldap -llber"
 	fi
-	if [ "`use mysql`" ] ; then
+	if use mysql ; then
 		mycc="${mycc} -DHAS_MYSQL -I/usr/include/mysql"
 		mylibs="${mylibs} -lmysqlclient -lm -lz"
 	fi
-	if [ "`use postgres`" ] ; then
-		if [ "`best_version '=dev-db/postgresql-7.3*'`" ] ; then
+	if use postgres ; then
+		if best_version '=dev-db/postgresql-7.3*' ; then
 			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql"
 		else
 			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql/pgsql"
 		fi
 		mylibs="${mylibs} -lpq"
 	fi
-	if [ "`use ssl`" ] ; then
+	if use ssl ; then
 		mycc="${mycc} -DUSE_SSL"
 		mylibs="${mylibs} -lssl -lcrypto"
 	fi
-	if [ "`use sasl`" ] ; then
+	if use sasl ; then
 		mycc="${mycc} -DUSE_SASL_AUTH -I/usr/include/sasl"
 		mylibs="${mylibs} -lsasl2"
 	fi
@@ -151,8 +128,13 @@ src_install () {
 		mail_owner="postfix" \
 		setgid_group="postdrop" || die "postfix-install failed"
 
+	# Remove the /usr/sbin/sendmail symlink
+	rm ${D}/usr/sbin/sendmail
 	# Provide another link for legacy FSH.
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
+
+	insinto /etc
+	doins ${FILESDIR}/mailer.conf
 
 	# Install an rmail for UUCP, closing bug #19127.
 	dobin auxiliary/rmail/rmail
@@ -163,9 +145,9 @@ src_install () {
 
 	keepdir /etc/postfix
 	mv "${D}/usr/share/doc/${PF}/defaults/"{*.cf,post*-*} "${D}/etc/postfix"
-	if [ "`use maildir`" ] ; then
+	if use maildir ; then
 		mypostconf="home_mailbox=.maildir/"
-	elif [ "`use mbox`" ] ; then
+	elif use mbox ; then
 		mypostconf="mail_spool_directory=/var/spool/mail"
 	fi
 	"${D}/usr/sbin/postconf" -c "${D}/etc/postfix" -e \
@@ -185,17 +167,17 @@ src_install () {
 	dodoc *README COMPATIBILITY HISTORY INSTALL LICENSE PORTING RELEASE_NOTES*
 	dohtml html/*
 
-	if [ "`use pam`" ] ; then
+	if use pam ; then
 		insinto /etc/pam.d
 		newins "${FILESDIR}/smtp.pam" smtp
 	fi
-	if [ "`use ssl`" ] ; then
+	if use ssl ; then
 		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Postfix SMTP Server}"
 		insinto /etc/ssl/postfix
 		docert server
 		fowners postfix:mail /etc/ssl/postfix/server.{key,pem}
 	fi
-	if [ "`use sasl`" ] ; then
+	if use sasl ; then
 		insinto /etc/sasl2
 		newins "${FILESDIR}/smtp.sasl" smtpd.conf
 	fi
