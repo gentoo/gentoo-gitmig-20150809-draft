@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.ebuild,v 1.1 2005/01/03 23:52:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.ebuild,v 1.2 2005/01/05 00:53:42 vapier Exp $
 
 inherit eutils games
 
@@ -60,7 +60,10 @@ EOF
 		env PATH="${T}:${PATH}" unshar ${shar} || die "unpacking ${shar} failed"
 		rm ${shar}
 	done
-	use rogue && epatch ${FILESDIR}/${PV}-rogue-nan.patch
+	if use rogue ; then
+		cd "${S}"/src
+		epatch ${FILESDIR}/${PV}-rogue-nan.patch
+	fi
 }
 
 yesno() {

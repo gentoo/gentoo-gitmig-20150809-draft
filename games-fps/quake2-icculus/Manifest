@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 76f7823250576f7a3162d81e32eb8e9d ChangeLog 2258
 MD5 f288af0e2522875c78b0962df03705b4 quake2-icculus-0.15-r2.ebuild 5332
-MD5 8f6b3287fa0cd22f48ef314aeedd4039 quake2-icculus-0.16.ebuild 4271
+MD5 2147045ec073c4bf6cf64309e8f2de1f quake2-icculus-0.16.ebuild 4300
 MD5 c5a30b68d4f251a28b005d64f9d52482 files/0.16-gentoo-path.patch 3493
 MD5 74cb73011282b923820f35f8450ba583 files/README-postinstall 3083
 MD5 5b009d6ae138bf55ab1d37db69326724 files/digest-quake2-icculus-0.16 248
@@ -20,7 +20,7 @@ MD5 44cf8825897944b4bec1d7169ca0b441 files/0.15-gentoo-path.patch 1708
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2jQQroRuSHgZdywRApI6AJ9N1rfPb1vO9Ahy7MlqJYdhj2S8ywCcCtxC
-8twoQFcSv9qG1GQ1BKQ7mDo=
-=zN1X
+iD8DBQFB2zsBroRuSHgZdywRAvZ4AJ9pN3zDkEC2xFbAC1NEPpklKPskkgCeObkg
+RykuQ04IiT9rH9ITGQAy1Uc=
+=LTf6
 -----END PGP SIGNATURE-----
