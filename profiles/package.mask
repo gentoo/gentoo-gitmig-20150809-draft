@@ -604,7 +604,6 @@ net-mail/pinepgp
 # Leonardo Boshell <leonardop@gentoo.org> (04 Aug 2002)
 # These packages have been replaced with the new gtk-engines-* form
 x11-themes/crux
-x11-themes/gtk-engines
 x11-themes/gtk-flat-theme
 x11-themes/gtk-thinice-engine
 x11-themes/gtk-thinice-theme
