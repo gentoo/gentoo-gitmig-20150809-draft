@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i-r2.ebuild,v 1.1 2003/03/24 10:29:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i-r2.ebuild,v 1.2 2003/04/17 11:22:05 taviso Exp $
 
 inherit eutils
 
@@ -42,6 +42,17 @@ src_unpack() {
 		sed -e \
 		's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
 			Configure > Configure.orig
+	elif [ "${ARCH}" = "alpha" ]; then
+		# ccc users still need shared libraries.
+		sed -e \
+		's!^"linux-alpha-ccc"\(.*\)\${alpha_asm}!"linux-alpha-ccc"\1\${alpha_asm}:dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!
+		s!^"linux-alpha+bwx-ccc"\(.*\)\${alpha_asm}!"linux-alpha+bwx-ccc"\1\${alpha_asm}:dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
+			 Configure > Configure.orig
+		# backward compatability isnt working right now
+		sed -e \
+		's!CC=ccc!CC=gcc!' config > config.orig
+		cp config.orig config
+		
 	else
 		cp Configure Configure.orig
 	fi
@@ -58,6 +69,7 @@ src_compile() {
 	fi
 	# i think parallel make has problems
 	make all || die
+	
 }
 
 src_install() {
