@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.5y.ebuild,v 1.5 2004/07/01 08:39:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/binkplayer-1.5y.ebuild,v 1.6 2004/07/14 21:30:48 agriffis Exp $
 
 DESCRIPTION="Bink Video! Player"
 HOMEPAGE="http://www.radgametools.com/default.htm"
@@ -16,6 +16,7 @@ RDEPEND="virtual/libc
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 
 S="${WORKDIR}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.15 2004/06/25 00:40:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.16 2004/07/14 21:34:00 agriffis Exp $
 
 S="${WORKDIR}/${P}/modules"
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
@@ -14,6 +14,7 @@ RDEPEND="${DEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
 
 src_unpack () {

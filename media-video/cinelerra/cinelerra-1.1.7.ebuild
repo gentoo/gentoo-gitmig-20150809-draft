@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.12 2004/07/01 08:39:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.13 2004/07/14 21:32:13 agriffis Exp $
 
 inherit gcc eutils flag-o-matic
 export WANT_GCC_3="yes"
@@ -16,6 +16,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -ppc"
+IUSE=""
 
 DEPEND="virtual/x11
 	virtual/libc
