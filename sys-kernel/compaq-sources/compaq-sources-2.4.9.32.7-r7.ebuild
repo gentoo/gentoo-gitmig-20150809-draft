@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r7.ebuild,v 1.1 2004/06/24 13:36:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r7.ebuild,v 1.2 2004/06/24 22:55:42 agriffis Exp $
 
 ETYPE="sources"
 inherit kernel eutils

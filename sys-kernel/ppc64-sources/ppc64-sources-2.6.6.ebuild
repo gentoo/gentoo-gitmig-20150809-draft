@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-sources/ppc64-sources-2.6.6.ebuild,v 1.1 2004/05/19 02:53:28 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-sources/ppc64-sources-2.6.6.ebuild,v 1.2 2004/06/24 23:00:36 agriffis Exp $
 
 ETYPE="sources"
 inherit kernel

@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/ksymoops
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.15 2004/04/16 20:41:59 randy Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.16 2004/06/24 22:58:30 agriffis Exp $
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> ksymoops-2.4.9.ebuild:
   adding s390 keywords

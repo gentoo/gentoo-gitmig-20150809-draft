@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r7.ebuild,v 1.3 2004/06/23 23:11:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r7.ebuild,v 1.4 2004/06/24 22:55:21 agriffis Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.24-r5.ebuild,v 1.1 2004/04/17 15:31:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.24-r5.ebuild,v 1.2 2004/06/24 23:02:36 agriffis Exp $
 
 ETYPE="sources"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/config-kernel-0.3.2-r1.ebuild,v 1.1 2004/04/03 15:45:59 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/config-kernel-0.3.2-r1.ebuild,v 1.2 2004/06/24 22:55:53 agriffis Exp $
 
 inherit distutils
 

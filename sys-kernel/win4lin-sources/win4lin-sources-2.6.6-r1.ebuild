@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.6-r1.ebuild,v 1.1 2004/06/15 18:36:02 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.6-r1.ebuild,v 1.2 2004/06/24 23:02:13 agriffis Exp $
 
 ETYPE="sources"
 inherit kernel-2

@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/hardened-sources
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.29 2004/06/23 22:42:05 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.30 2004/06/24 22:57:35 agriffis Exp $
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   hardened-sources-2.4.26-r1.ebuild:
