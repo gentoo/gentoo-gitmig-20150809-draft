@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.576 2004/08/23 18:36:08 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.577 2004/08/24 03:28:25 squinky86 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -437,8 +437,6 @@ net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
 net-news/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
 net-p2p/amule:remote - enable remote controlling of the client
 net-p2p/amule:stats - enable statistic reporting
-net-p2p/bittorrent-theshadow:nopsyco - Disable PSYCO usage even if psyco is installed
-net-p2p/bittorrent-theshadow:psyco - Depend on PSYCO
 net-p2p/nicotine:geoip - Enable GeoIP support
 net-wireless/hostap-driver:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap-driver:hostap-noplx - Set to not install hostap_plx driver
