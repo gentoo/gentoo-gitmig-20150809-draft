@@ -1,0 +1,9 @@
+--- cracklib,2.7/Makefile.orig	2004-12-07 21:39:56.830924520 -0500
++++ cracklib,2.7/Makefile	2004-12-07 21:40:24.097525749 -0500
+@@ -43,5 +43,5 @@
+ 	$(MAKE) -C cracklib install
+ 	$(MAKE) -C util install
+ 	@echo 'if "sort" dies from lack of space, see "util/mkdict"'
+-	util/mkdict $(SRCDICTS) | LD_LIBRARY_PATH=cracklib util/packer $(DESTDIR)$(DICTPATH)
++	PATH="${PATH}:./util" mkdict $(SRCDICTS) | LD_LIBRARY_PATH=cracklib packer $(DESTDIR)$(DICTPATH)
+ 	touch installed

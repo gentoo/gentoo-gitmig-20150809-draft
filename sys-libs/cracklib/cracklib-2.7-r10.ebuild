@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.9 2004/12/07 09:46:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.10 2004/12/08 02:28:33 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -25,15 +25,16 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-redhat.patch"
-	epatch "${FILESDIR}/${P}-gentoo-new.diff"
-	epatch "${FILESDIR}/${P}-static-lib.patch"
-	epatch "${FILESDIR}/${P}-libdir.patch"
+	cd ${S}
+	epatch ${FILESDIR}/${P}-redhat.patch
+	epatch ${FILESDIR}/${P}-gentoo-new.diff
+	epatch ${FILESDIR}/${P}-static-lib.patch
+	epatch ${FILESDIR}/${P}-libdir.patch
+	epatch ${FILESDIR}/${P}-parallel-make.patch
+	epatch ${FILESDIR}/${P}-cross-compile.patch
 
 	# add compressed dict support, taken from shadow-4.0.4.1
 	use uclibc && epatch ${FILESDIR}/${PN}-${PV}-gzip.patch
-	epatch "${FILESDIR}/${P}-parallel-make.patch"
 
 	sed -i \
 		-e 's|/usr/dict/words|/usr/share/dict/words|' \
@@ -42,7 +43,8 @@ src_unpack() {
 
 	if [ "${ARCH}" = "alpha" -a "${CC}" = "ccc" ] ; then
 		sed -i \
-			-e 's:CFLAGS += -g :CFLAGS += -g3 :' ${S}/cracklib/Makefile \
+			-e 's:CFLAGS += -g :CFLAGS += -g3 :' \
+			${S}/cracklib/Makefile \
 			|| die "sed ${S}/cracklib/Makefile failed"
 	fi
 }
