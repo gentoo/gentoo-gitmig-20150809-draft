@@ -1,0 +1,15 @@
+diff -Naurp console-tools-0.3.2.orig/contrib/codepage.c console-tools-0.3.2/contrib/codepage.c
+--- console-tools-0.3.2.orig/contrib/codepage.c	1999-08-25 17:27:40.000000000 -0400
++++ console-tools-0.3.2/contrib/codepage.c	2003-03-07 18:51:22.000000000 -0500
+@@ -228,9 +228,8 @@ codepage=%d\n\t\tres=%6.6s nxt=%ld off_f
+ 	if (optc)
+ 	  return 0;
+ 
+-        fprintf(stderr, "\
+-Warning: CP format is a hack!\n
+-         The files produced may or may not be usable!\n");
++        fprintf(stderr, "Warning: CP format is a hack!\n"
++         "The files produced may or may not be usable!\n");
+ 
+ 	sprintf(outfile, "%d.cp", CPEntryHeader.codepage);
+ 	if ((out = fopen(outfile, "w")) == NULL) {

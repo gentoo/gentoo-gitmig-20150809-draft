@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.2 2003/03/09 05:26:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.3 2003/05/18 19:56:09 dragon Exp $
 
-inherit libtool
+inherit libtool eutils
 
 IUSE="nls"
 
@@ -24,6 +24,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	find ./ -name 'Makefile.*' | xargs sed -i "s:doc ::"
+
+	# GCC-3.3 Compile Fix
+	epatch ${FILESDIR}/${P}-multi-line-string-fix.diff
 }
 
 src_compile() {
