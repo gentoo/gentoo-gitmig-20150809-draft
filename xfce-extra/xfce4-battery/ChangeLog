@@ -1,0 +1,9 @@
+# ChangeLog for xfce-extra/xfce4-battery
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.1 2003/08/15 12:12:24 bcowan Exp $
+
+*xfce4-battery-0.1.2 (15 Aug 2003)
+
+  15 Aug 2003; Brad Cowan <bcowan@gentoo.org> xfce4-battery-0.1.2.ebuild:
+  Initial import.
+
