@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.125 2003/09/17 18:43:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.126 2003/09/20 20:23:47 azarah Exp $
+
+*gcc-3.3.1-r3 (20 Sep 2003)
+
+  20 Sep 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.1-r3.ebuild:
+  Update CVS snapshot to 20030916 - this should fix the static linking problem
+  with some packages without the hack that broke things for a few people ...
 
 *gcc-3.3.1-r2 (15 Sep 2003)
 
