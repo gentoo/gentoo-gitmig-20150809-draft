@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/babel-1.6.ebuild,v 1.16 2004/06/24 21:52:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/babel-1.6.ebuild,v 1.17 2004/07/15 15:43:26 kugelfang Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Babel is a program to interconvert file formats used in molecular m
 SRC_URI="http://smog.com/chem/babel/files/${P}.tar.Z"
 
 HOMEPAGE="http://smog.com/chem/babel/"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~amd64"
 SLOT="0"
 LICENSE="as-is"
 IUSE=""
