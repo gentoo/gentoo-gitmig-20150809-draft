@@ -1,29 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.2 2003/11/10 18:23:13 azarah Exp $
-
-# Note that we link to static versions of glib (pam_console.so)
-# and pwdb (pam_pwdb.so) ...
-
-DESCRIPTION="Pluggable Authentication Modules"
-HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
-
-IUSE="berkdb pwdb"
-
-PATCH_LEVEL="1.0"
-BDB_VER="4.1.25"
-PAM_REDHAT_VER="0.77-4"
-
-S="${WORKDIR}/Linux-PAM-${PV}"
-S2="${WORKDIR}/pam-${PVR}-patches"
-SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
-	mirror://gentoo/${P}-patches-${PATCH_LEVEL}.tar.bz2
-	berkdb? ( http://www.sleepycat.com/update/snapshot/db-${BDB_VER}.tar.gz )"
-
-LICENSE="PAM"
-#KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64"
-KEYWORDS="-*"
-SLOT="0"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.3 2003/11/13 06:18:03 vapier Exp $
 
 DEPEND="dev-lang/perl
 	>=sys-libs/cracklib-2.7-r8
@@ -52,6 +29,28 @@ RDEPEND=">=sys-libs/cracklib-2.7-r8
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
 inherit gcc eutils flag-o-matic
+
+# Note that we link to static versions of glib (pam_console.so)
+# and pwdb (pam_pwdb.so) ...
+
+HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
+DESCRIPTION="Pluggable Authentication Modules"
+
+PATCH_LEVEL="1.0"
+BDB_VER="4.1.25"
+PAM_REDHAT_VER="0.77-4"
+
+S="${WORKDIR}/Linux-PAM-${PV}"
+S2="${WORKDIR}/pam-${PVR}-patches"
+SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
+	mirror://gentoo/${P}-patches-${PATCH_LEVEL}.tar.bz2
+	berkdb? ( http://www.sleepycat.com/update/snapshot/db-${BDB_VER}.tar.gz )"
+
+LICENSE="PAM"
+#KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64"
+KEYWORDS="-*"
+SLOT="0"
+IUSE="berkdb pwdb"
 
 apply_pam_patches() {
 	local x=
@@ -277,4 +276,3 @@ src_install() {
 		fi
 	done
 }
-
