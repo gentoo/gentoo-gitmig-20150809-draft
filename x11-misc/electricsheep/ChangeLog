@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.3 2003/02/12 09:27:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.4 2003/03/10 12:53:01 vapier Exp $
+
+*electricsheep-2.3 (10 Mar 2003)
+
+  10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #17188.
 
 *electricsheep-2.3_beta11 (25 Jan 2002)
 

@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.3_beta11.ebuild,v 1.2 2003/02/13 17:12:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.3.ebuild,v 1.1 2003/03/10 12:53:01 vapier Exp $
 
 inherit eutils
 
-MY_P="${PN}-${PV/_beta/b}"
 DESCRIPTION="realize the collective dream of sleeping computers from all over the internet"
 HOMEPAGE="http://electricsheep.org/"
-SRC_URI="http://electricsheep.org/${MY_P}.tar.gz"
+SRC_URI="http://electricsheep.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,11 +20,7 @@ RDEPEND="virtual/x11
 	net-ftp/curl
 	x11-misc/xloadimage"
 
-S="${WORKDIR}/${MY_P}"
-
 src_compile() {
-	epatch ${FILESDIR}/${P}-paths.patch
-	autoconf || die
 	econf --datadir=/usr/share/${PN} || die
 	emake || die
 }
