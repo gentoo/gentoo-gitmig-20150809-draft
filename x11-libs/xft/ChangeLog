@@ -1,7 +1,10 @@
 # ChangeLog for x11-libs/xft
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.10 2003/01/16 04:03:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.11 2003/01/27 19:34:27 doctomoe Exp $
  
+  27 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> xft-2.0.1-r1.ebuild :
+  Masked -ppc as we had to mask fontconfig dependency.
+
   15 Jan 2003; Jason Wever <weeve@gentoo.org> xft-2.0.1-r1.ebuild :
   Added ~sparc to KEYWORDS.
 
