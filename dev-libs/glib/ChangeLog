@@ -1,7 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.26 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.27 2002/12/17 22:24:35 agriffis Exp $
 
+  17 Dec 2002; Aron Griffis <agriffis@gentoo.org> glib-2.0.7.ebuild :
+  Removed ~alpha because this version is definitely broken on alpha
 
   08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> glib-2.0.7.ebuild :
   Changed ~sparc to sparc

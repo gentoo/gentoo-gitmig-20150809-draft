@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.7.ebuild,v 1.7 2002/12/15 17:15:49 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.7.ebuild,v 1.8 2002/12/17 22:24:39 agriffis Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,9 @@ HOMEPAGE="http://www.gtk.org/"
 
 SLOT="2"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc"
+# 2.0.7 is broken on alpha, so please don't add ~alpha until it
+# becomes patched with a fix.
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
