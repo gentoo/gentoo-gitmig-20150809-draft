@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.4.1.ebuild,v 1.10 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.4.1.ebuild,v 1.11 2003/09/09 04:36:03 strider Exp $
 
 At="j2sdk-1_4_1-doc.zip"
 S="${WORKDIR}/docs"
-SRC_URI=""
+SRC_URI="j2sdk-1_4_1-doc.zip"
 DESCRIPTION="Javadoc for Java SDK version 1.4.1"
 HOMEPAGE="http://java.sun.com/j2se/1.4.1/download.html"
 LICENSE="sun-j2sl"
@@ -13,11 +13,12 @@ KEYWORDS="x86 ~ppc sparc -alpha"
 DEPEND=">=app-arch/unzip-5.50-r1"
 RESTRICT="fetch"
 
+pkg_nofetch() {
+	einfo "Please download ${SRC_URI} from ${HOMEPAGE} and move it to ${DISTDIR}"
+}
+
 src_unpack() {
-	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE} and move it to ${DISTDIR}"
-	fi
-	unpack ${At} || die
+	unpack ${At} || die "Failed Unpacking"
 }
 
 src_install(){
