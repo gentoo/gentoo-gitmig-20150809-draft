@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/mckoi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/ChangeLog,v 1.6 2004/12/21 11:42:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/ChangeLog,v 1.7 2004/12/21 11:51:11 axxo Exp $
+
+*mckoi-1.0.3 (21 Dec 2004)
+
+  21 Dec 2004; Thomas Matthijs <axxo@gentoo.org> +files/build.xml,
+  +files/mckoi-1.0.3-jikes.patch, +mckoi-1.0.3.ebuild:
+  version bump, Ebuild submitted by Edwin Shin <eddie@cs.cornell.edu> and Jan
+  Brinkmann <lucky@the-luckyduck.de>. fixes 75112
 
   21 Dec 2004; Thomas Matthijs <axxo@gentoo.org> mckoi-1.0.2.ebuild:
   fixes 75110
