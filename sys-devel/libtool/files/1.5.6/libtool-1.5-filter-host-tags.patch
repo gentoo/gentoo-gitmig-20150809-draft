@@ -1,6 +1,11 @@
---- libtool-1.5.10/ltmain.in.orig	2004-11-09 13:43:24.290875562 -0500
-+++ libtool-1.5.10/ltmain.in	2004-11-09 13:45:51.250048464 -0500
-@@ -242,7 +242,16 @@
+Make the infer tag logic a bit more magical since a lot of old packages still 
+exist which utilize this functionality.
+
+http://bugs.gentoo.org/show_bug.cgi?id=77921
+
+--- libtool-1.5.10/ltmain.in
++++ libtool-1.5.10/ltmain.in
+@@ -242,7 +242,17 @@
  	    esac
  	    CC_quoted="$CC_quoted $arg"
  	  done
@@ -9,6 +14,7 @@
 +	    # and sometimes libtool has CC=<HOST>-gcc but user does CC=gcc
 +	    extendcc=${host}-${CC}
  	    case "$@ " in
++	      "cc "* | " cc "* | "${host}-cc "* | " ${host}-cc "*|\
 +	      "gcc "* | " gcc "* | "${host}-gcc "* | " ${host}-gcc "*)
 +	      tagname=CC
 +	      break ;;
