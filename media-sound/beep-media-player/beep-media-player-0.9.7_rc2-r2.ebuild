@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r2.ebuild,v 1.1 2004/10/19 21:18:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r2.ebuild,v 1.2 2004/10/20 00:11:11 eradicator Exp $
 
 IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx"
 
@@ -34,6 +34,11 @@ RDEPEND="app-arch/unzip
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
+
+PDEPEND="jack? ( >=media-plugins/xmms-jack-0.10 )
+         lirc? ( >=media-plugins/xmms-lirc-1.4-r1 )
+         sndfile? ( >=media-plugins/xmms-sndfile-1.2-r1 )
+         mad? ( >=media-plugins/xmms-mad-0.5.6-r2 )"
 
 src_unpack() {
 	unpack ${A}
