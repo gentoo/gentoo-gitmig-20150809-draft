@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.15 2002/10/04 03:58:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.16 2002/10/18 20:56:40 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome front end to gnupg"
-SRC_URI="http://download.sourceforge.net/seahorse/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/seahorse/${P}.tar.gz"
 HOMEPAGE="http://seahorse.sourceforge.net/"
 
 SLOT="0"
