@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.3.ebuild,v 1.3 2003/08/21 02:38:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.3.ebuild,v 1.4 2003/08/22 00:42:08 vapier Exp $
 
 inherit flag-o-matic
-filter-flags -fPIC -fprefetch-loop-arrays
+filter-flags -fPIC
 
 DESCRIPTION="cross-platform multimedia library"
 SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
@@ -21,6 +21,11 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	svga? ( media-libs/svgalib )"
 DEPEND="${RDEPEND}
 	tetex? ( app-text/tetex )"
+
+src_unpack() {
+	unpack ${A}
+	sed -i '/TARGET_ARCH=/s:=.*:=:' ${S}/configure || die 'couldnt remove pentium cpu'
+}
 
 src_compile() {
 	econf \
