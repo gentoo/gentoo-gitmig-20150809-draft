@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.5 2003/02/07 20:47:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.6 2003/02/07 22:21:59 lordvan Exp $
 
 IUSE="ssl socks5 qt kde gtk ncurses"
 
@@ -24,21 +24,31 @@ KEYWORDS="x86"
 src_unpack() {
 	unpack ${A}
 	
-	if [ -z "`use qt`" ]
+	if [ "`use kde`" ]
 	then
-		if [ -z "`use gtk`" ]
+		# fix for #12436
+		ebegin "Setting kde plugin as default..."
+		cp ${S}/src/licq.conf.h ${T}
+		sed "s:Plugin1 = qt-gui:Plugin1 = kde-gui:" \
+			${T}/licq.conf.h > ${S}/src/licq.conf.h
+		eend $?
+	else
+		if [ -z "`use qt`" ]
 		then
-			ebegin "Setting console plugin as default..."
-			cp ${S}/src/licq.conf.h ${T}
-			sed "s:Plugin1 = qt-gui:Plugin1 = console:" \
-				${T}/licq.conf.h > ${S}/src/licq.conf.h
-			eend $?
-		else
-			ebegin "Setting GTK plugin as default..."
-			cp ${S}/src/licq.conf.h ${T}
-			sed "s:Plugin1 = qt-gui:Plugin1 = gtk-gui:" \
-				${T}/licq.conf.h > ${S}/src/licq.conf.h
-			eend $?
+			if [ -z "`use gtk`" ]
+			then
+				ebegin "Setting console plugin as default..."
+				cp ${S}/src/licq.conf.h ${T}
+				sed "s:Plugin1 = qt-gui:Plugin1 = console:" \
+					${T}/licq.conf.h > ${S}/src/licq.conf.h
+				eend $?
+			else
+				ebegin "Setting GTK plugin as default..."
+				cp ${S}/src/licq.conf.h ${T}
+				sed "s:Plugin1 = qt-gui:Plugin1 = jons-gtk-gui:" \
+					${T}/licq.conf.h > ${S}/src/licq.conf.h
+				eend $?
+			fi
 		fi
 	fi
 }
@@ -125,11 +135,11 @@ src_install() {
 		dodoc README*
 		
 		# fix bug #12436, see my comment there
-		if [ "`use kde`" ]; then
-			cd $D/usr/lib/licq
-			ln -s licq_kde-gui.la licq_qt-gui.la
-			ln -s licq_kde-gui.so licq_qt-gui.so
-		fi
+##		if [ "`use kde`" ]; then
+##			cd $D/usr/lib/licq
+##			ln -s licq_kde-gui.la licq_qt-gui.la
+##			ln -s licq_kde-gui.so licq_qt-gui.so
+##		fi
 	fi
 
 	if [ "`use gtk`" ]
