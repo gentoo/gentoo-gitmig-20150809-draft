@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.41 2004/02/14 22:58:02 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.42 2004/02/15 17:24:35 weeve Exp $
+
+  15 Feb 2004; Jason Wever <weeve@gentoo.org> ntp-4.1.2.ebuild:
+  Marked stable on sparc, fixes bug #29106.
 
 *ntp-4.2.0 (14 Feb 2004)
 
