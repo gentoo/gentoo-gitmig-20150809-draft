@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49.ebuild,v 1.7 2004/03/24 16:20:20 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49.ebuild,v 1.8 2004/04/02 23:26:52 zul Exp $
 
 inherit flag-o-matic eutils
 
@@ -258,6 +258,12 @@ src_install () {
 
 	#drop in a convenient link to the manual
 	dosym /usr/share/doc/${PF}/manual ${DATADIR}/htdocs/manual
+
+	if [ -d /etc/logrotate.d ]
+	then
+		insinto /etc/logrotate.d
+		doins ${FILESDIR}/apache2
+	fi
 
 	#SLOT=2!!!
 	cd ${D}

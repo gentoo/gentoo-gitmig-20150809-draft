@@ -6,9 +6,9 @@ MD5 19e2b87577db3ad3bfa74c554f3a27a9 apache-2.0.47.ebuild 11473
 MD5 c9b77db193d034968ab8287d4b625a80 apache-1.3.29.ebuild 7382
 MD5 bab1a33028c74eb9d3f71294e8816126 apache-1.3.29-r1.ebuild 7413
 MD5 dcd66758c6c1536d6b0ad001be8d98de apache-2.0.48-r1.ebuild 11663
-MD5 5218e9fb7199f710c8adc77a54fef7a0 apache-2.0.49.ebuild 12448
+MD5 79557839d47a6159bff29bb55a058317 apache-2.0.49.ebuild 12543
 MD5 0c605a3397eed2626b9170fa2d3c0662 apache-2.0.48-r3.ebuild 12061
-MD5 696b940530f52022e5d0da046d7734e1 ChangeLog 21439
+MD5 8d1004eef7de6a196ac389edb65da153 ChangeLog 21566
 MD5 ec841d27e5613d0aae57ddf2083a7597 apache-1.3.28-r1.ebuild 7671
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 b4580094775cde0d53605e4c036ec191 apache-2.0.47-r1.ebuild 10759
@@ -42,6 +42,7 @@ MD5 02db12f0d91e1f89e0b173fea6c5151d files/apacheaddmod 5977
 MD5 b7c4fabdcb3845c4218b770acb792f73 files/apache-2.0.49-gentoo.diff 6316
 MD5 bae4b9d941cd38a32943533e958aa1b3 files/apachedelmod 3185
 MD5 9dc40e1918a2d30a578ebf1653f7182c files/apache-2.0.45-gentoo.diff 5448
+MD5 53491bef84e66a2ae0afb6634da07229 files/apache2 312
 MD5 f11a5046372c128afa033b7fbc787dd9 files/digest-apache-1.3.28 211
 MD5 589e8773eb94f785be510f74b2e39ad0 files/digest-apache-1.3.29 211
 MD5 a90bef6fb0fb6d05f74c36eaf26285d6 files/apachesplitlogfile 4959
