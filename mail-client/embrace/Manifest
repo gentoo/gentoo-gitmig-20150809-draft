@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 b2d96ace4129c016c9878e5f574bb38d ChangeLog 332
 MD5 fea39951bacc77c34d1d1dd65f942577 metadata.xml 250
-MD5 b806cb0ed3bf0f164b0f5ba857a52fa6 embrace-0.0.1.20041016.ebuild 708
+MD5 1a343d6b2b858f8f9f99ca7b24a56233 embrace-0.0.1.20041031.ebuild 708
 MD5 27560891364d1510b22ff7b84304eadf embrace-9999.ebuild 724
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-embrace-9999 0
-MD5 7f8b133fddab01387c391049c007997b files/digest-embrace-0.0.1.20041016 74
+MD5 35c9add20faff7e773941d763fc5d4e5 files/digest-embrace-0.0.1.20041031 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBeQFIHTu7gpaalycRArgOAKCNxK0jwvDVgIl8DBT8q4PnkhHYnQCfY3f8
-L0ID8T6/hXn7yb9Zo6y+KcY=
-=3wJC
+iD8DBQFBhxKdHTu7gpaalycRAuMhAKDr6u/SMfXlnuY+xmcl1K4DbIZF1ACcCP4A
+mDMpcoAot3ObLd+lu/IHXjc=
+=EpRY
 -----END PGP SIGNATURE-----
