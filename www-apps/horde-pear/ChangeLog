@@ -1,0 +1,44 @@
+# ChangeLog for net-www/horde-pear
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/ChangeLog,v 1.1 2004/08/15 12:36:30 stuart Exp $
+
+*horde-pear-1.3-r1 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +horde-pear-1.3-r1.ebuild:
+  Moved from net-www/horde-pear to www-apps/horde-pear.
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> horde-pear-1.3-r1.ebuild:
+  Marking ~hppa
+
+*horde-pear-1.3-r1 (18 Mar 2004)
+
+  18 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Fix pear include paths #45068 by burzmali.
+
+*horde-pear-1.3 (26 Feb 2004)
+
+  26 Feb 2004; Martin Holzer <mholzer@gentoo.org> horde-pear-1.1.ebuild,
+  horde-pear-1.3.ebuild:
+  Version bumped.
+
+*horde-pear-1.1 (12 Sep 2003)
+
+  12 Sep 2003; Martin Holzer <mholzer@gentoo.org> horde-pear-1.0.1.1.ebuild,
+  horde-pear-1.0.1.ebuild, horde-pear-1.1.ebuild:
+  Version bumped.
+
+  07 Jul 2003; Patrick Kursawe <phosphan@gentoo.org>
+  horde-pear-1.0.1.1.ebuild, horde-pear-1.0.1.ebuild:
+  Updated download locations
+
+*horde-pear-1.0.1.1 (11 May 2003)
+
+ 11 May 2003; Dean Bailey <alron@netoptex.com> horde-pear-1.0.1.1 :
+ Version bump to 1.0.1.1.
+
+*horde-pear-1.0.1 (08 Apr 2003)
+
+  08 Apr 2003; Dean Bailey <alron@netoptex.com> horde-pear-1.0.1 :
+  Initial import, submitted by me. This ebuild is the php-pear files
+  needed to run horde properly.
