@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.68 2003/07/21 07:20:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.69 2003/07/26 11:52:11 coredumb Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -449,6 +449,11 @@ php_src_install() {
 
 	#url_fopen
 	patch ${phpinisrc} <${DISTDIR}/${MY_P}-fopen-url-secure.patch
+
+	#prevent bugs with php-ext eclasses
+	mv $phpinisrc $phpinisrc.orig
+	sed 's:extension_dir = "./"::' $phpinisrc.orig > $phpinisrc
+	
 
 	# A lot of ini file funkiness
 	insinto ${PHPINIDIRECTORY}
