@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.4.ebuild,v 1.2 2004/06/14 11:58:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.4.ebuild,v 1.3 2004/06/25 03:06:39 agriffis Exp $
 
 HORDE_PHP_FEATURES="imap"
 inherit horde
