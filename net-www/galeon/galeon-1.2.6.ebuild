@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.6.ebuild,v 1.1 2002/09/16 04:20:16 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.6.ebuild,v 1.2 2002/09/20 12:38:08 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
@@ -13,8 +13,7 @@ SLOT="0"
 
 # This version of galeon supports multiple versions.  We are allowing only
 # mozilla 1.1-r1 and 1.2a at this time.
-DEPEND=">=net-www/mozilla-1.1-r1
-	<=net-www/mozilla-1.2a
+DEPEND=">=net-www/mozilla-1.0.1
 	>=gnome-base/gnome-libs-1.4.1.4
 	<=gnome-base/libglade-0.99.0
 	=gnome-base/gnome-vfs-1.0*
@@ -43,9 +42,16 @@ pkg_setup() {
 	fi
 }
 
+src_unpack () {
+	unpack ${A} 
+	cd ${S}
+	patch -p1 < ${FILESDIR}/galeon-1.2.6-to-printpreview.patch	
+}
+
+
 src_compile() {
 
-	local myconf=""
+	local myconf="--with-mozilla-snapshot=1.0"
 
 	use nls || myconf="${myconf} --disable-nls"
 	# use bonobo && myconf="${myconf} --enable-gnome-file-selector"

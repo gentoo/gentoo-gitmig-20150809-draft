@@ -1,9 +1,14 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.21 2002/09/16 04:20:15 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.22 2002/09/20 12:38:08 spider Exp $
 
 *galeon-1.2.6 (16 Sep 2002)
 
+  20 Sep 2002; Spider <spider@gentoo.org> galeon-1.2.6.ebuild:
+  Added a patch to make it build with mozilla 1.0.1 and not 1.0.  Also changed 
+  the dependencies for this.
+
+  
   16 Sep 2002; Bruce A. Locke <blocke@shivan.org> galeon-1.2.6.ebuild:
   Version bump, recommended gcc 3.2 ./configure fix, and unneeded patch
   removal.  Note: This does not fix the upstream bug involving crashes

@@ -1,0 +1,15 @@
+diff -urw galeon-1.2.6/src/mozilla/GaleonWrapper.cpp galeon-1.2.6-spd/src/mozilla/GaleonWrapper.cpp
+--- galeon-1.2.6/src/mozilla/GaleonWrapper.cpp	Thu Sep  5 01:00:26 2002
++++ galeon-1.2.6-spd/src/mozilla/GaleonWrapper.cpp	Fri Sep 20 14:08:40 2002
+@@ -182,11 +182,7 @@
+ 	}
+ 	else
+ 	{
+-#if MOZILLA_SNAPSHOT > 1
+ 		result = print->PrintPreview(options, nsnull, nsnull);
+-#else
+-		result = print->PrintPreview(options);
+-#endif
+ 	}
+ 
+ 	return result;
