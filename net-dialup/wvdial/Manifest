@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 3491982bf8e51f58d051d9ec7e990e05 ChangeLog 2676
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 6328d631657b5ea6336069365f8abcc3 wvdial-1.53-r1.ebuild 1231
-MD5 c4bca420315eca15f8abc0fd3af3ea35 wvdial-1.54.0.ebuild 1081
+MD5 bb690add7424d423e05513127c1a10f5 wvdial-1.54.0.ebuild 1081
 MD5 dd6d40650ac9dab6a45f71a9cadbc7a9 files/digest-wvdial-1.53-r1 62
-MD5 3827cdddb51c272de82c6ac8b54a862f files/digest-wvdial-1.54.0 64
 MD5 10b5850b5a52a665bc8cb8ffc7b06bd9 files/wvdial-1.53-crypt.patch 381
+MD5 3827cdddb51c272de82c6ac8b54a862f files/digest-wvdial-1.54.0 64
 MD5 1489ec41710bdf170ba0c316d0a8c454 files/wvdial-1.54.0-makefile.patch 960
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBxIBJjtv59x0+BrURApYiAKCV2F+H9hcLmICGCJJF1NOS5qti+gCg9AOt
-5i1APY/Lmsp+g/EmCX05IQg=
-=TdNV
+iD8DBQFBxvyjroRuSHgZdywRAkm4AJ9hLZkIvgxB3LX4Tt4q6FJWnyOPqACfZWGo
+MiuHMSVIHrMyxTvOVo/UvGw=
+=21Mn
 -----END PGP SIGNATURE-----
