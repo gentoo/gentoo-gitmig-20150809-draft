@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/winesetuptk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/ChangeLog,v 1.9 2003/06/21 16:02:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/ChangeLog,v 1.10 2003/11/08 08:43:16 coronalvr Exp $
+
+*winesetuptk-0.7 (08 Nov 2003)
+
+  08 Nov 2003; Alex Veber <coronalvr@gentoo.org> winesetuptk-0.7.ebuild:
+  new version
 
   21 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
   winesetuptk-0.6.0b-r2.ebuild, winesetuptk-0.6.0b-r3.ebuild:
