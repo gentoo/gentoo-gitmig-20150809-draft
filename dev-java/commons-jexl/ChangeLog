@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/commons-jexl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.1 2005/03/22 18:58:40 luckyduck Exp $
+
+*commons-jexl-1.0 (22 Mar 2005)
+
+  22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +commons-jexl-1.0.ebuild:
+  Initial import. Ebuild based on the contribution by Vibhav Garg
+  <vibhavgarg@gmail.com>. Fixes #70671
+

@@ -1,0 +1,38 @@
+*** build.xml.orig	Tue Nov  9 20:43:52 2004
+--- build.xml	Tue Nov  9 20:54:22 2004
+***************
+*** 31,40 ****
+    <target name="init" description="o Initializes some properties">
+      <mkdir dir="${libdir}">
+      </mkdir>
+!     <condition property="noget">
+        <equals arg2="only" arg1="${build.sysclasspath}">
+        </equals>
+!     </condition>
+      <!--Test if JUNIT is present in ANT classpath-->
+  
+      <available property="Junit.present" classname="junit.framework.Test">
+--- 31,41 ----
+    <target name="init" description="o Initializes some properties">
+      <mkdir dir="${libdir}">
+      </mkdir>
+!     <!--<condition property="noget">
+        <equals arg2="only" arg1="${build.sysclasspath}">
+        </equals>
+!     </condition>-->
+!     <property name="noget" value="true"></property>
+      <!--Test if JUNIT is present in ANT classpath-->
+  
+      <available property="Junit.present" classname="junit.framework.Test">
+***************
+*** 157,160 ****
+      <unjar dest="${maven.home}" src="${user.home}/maven-install-latest.jar">
+      </unjar>
+    </target>
+! </project>
+\ No newline at end of file
+--- 158,161 ----
+      <unjar dest="${maven.home}" src="${user.home}/maven-install-latest.jar">
+      </unjar>
+    </target>
+! </project>

@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b02d8610f8f49a45404f17adaf8fa89b commons-jexl-1.0.ebuild 1553
+MD5 f73c08cca2b87ff232b931281a117edf ChangeLog 452
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 fa544f8981d14e8ae9dd3a773efceec9 files/digest-commons-jexl-1.0 71
+MD5 3e457dd4759eb9454f73ffc9dd4e5fb1 files/commons-jexl-1.0-gentoo.diff 1266
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQGrx06ebR+OMO78RAkqzAJ4nDMT3d/ws4eE29cy4hvNy3b0bEQCfZupx
+2IU66yFP/q+oYAF5DAAQlXQ=
+=jXWe
+-----END PGP SIGNATURE-----
