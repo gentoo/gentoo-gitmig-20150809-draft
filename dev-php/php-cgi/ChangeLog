@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.5 2004/04/05 20:56:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.6 2004/04/05 20:59:52 robbat2 Exp $
+
+  05 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> php-cgi-4.3.4-r2.ebuild,
+  php-cgi-4.3.4.ebuild:
+  remove old ebuild using php-2 eclass, and mark 4.3.4r2 as stable.
 
 *php-cgi-4.3.6_rc2 (05 Apr 2004)
 
