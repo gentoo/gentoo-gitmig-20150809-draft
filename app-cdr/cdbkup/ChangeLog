@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdbkup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/ChangeLog,v 1.3 2003/03/28 11:33:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/ChangeLog,v 1.4 2003/11/21 15:15:13 aliz Exp $
+
+  21 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> cdbkup-1.0.ebuild :
+  Block app-misc/cdcat becuse it also install /usr/bin/cdcat. Closing #27502.
 
 *cdbkup-1.0 (18 Aug 2002)
 
