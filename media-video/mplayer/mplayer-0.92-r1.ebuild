@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.17 2004/03/30 04:42:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92-r1.ebuild,v 1.1 2004/03/31 09:24:02 phosphan Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc"
 
 inherit eutils
 
@@ -24,34 +24,32 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
 RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
-	amd64? ( >=media-libs/xvid-0.9.0 )
 	x86? ( >=media-libs/xvid-0.9.0
-	       >=media-libs/divx4linux-20030428
-	       >=media-libs/win32codecs-0.60 )
+			>=media-libs/divx4linux-20020418
+			>=media-libs/win32codecs-0.60 )
 	gtk? ( media-libs/libpng
-	       virtual/x11
+			virtual/x11
 		!gtk2? ( =x11-libs/gtk+-1.2*
-			=dev-libs/glib-1.2* )
+				=dev-libs/glib-1.2* )
 		gtk2? ( >=x11-libs/gtk+-2.0.6
-	        >=dev-libs/glib-2.0.6 )
-	)
+				>=dev-libs/glib-2.0.6 )
+		)
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib
-	       media-libs/libungif )
+		media-libs/libungif )
 	truetype? ( >=media-libs/freetype-2.1 )
 	esd? ( media-sound/esound )
 	ggi? ( media-libs/libggi )
 	sdl? ( media-libs/libsdl )
+	lirc? ( app-misc/lirc )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	nas? ( media-libs/nas )
-	lirc? ( app-misc/lirc )
 	aalib? ( media-libs/aalib )
 	svga? ( media-libs/svgalib )
 	encode? ( media-sound/lame
-	          >=media-libs/libdv-0.9.5 )
+		>=media-libs/libdv-0.9.5 )
 	xmms? ( media-sound/xmms )
-	matroska? ( >=media-libs/libmatroska-0.5.0 )
 	opengl? ( virtual/opengl )
 	directfb? ( dev-libs/DirectFB )
 	oggvorbis? ( media-libs/libvorbis )
@@ -70,7 +68,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc amd64"
+KEYWORDS="x86 ppc sparc"
 
 
 pkg_setup() {
@@ -95,6 +93,9 @@ src_unpack() {
 
 	use gtk && unpack Blue-1.0.tar.bz2
 
+	# security problem, bug #46246
+	cd ${S}/libmpdemux; epatch ${FILESDIR}/vuln02-fix.diff
+
 	# Use gtk-2.x
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.90_rc4-gtk2.patch
 
@@ -104,6 +105,19 @@ src_unpack() {
 	# Fix mencoder segfaulting with bad arguments
 	cd ${S}; epatch ${FILESDIR}/mencoder-segfault.patch
 
+	# Fix mplayer to detect detect/use altivec on benh kernels,
+	# bug #18511.
+	use ppc && \
+		(cd ${S}; epatch ${FILESDIR}/${PN}-0.90-ppc-benh-2.patch)
+
+	#Fixing divx 2003 API
+	if has_version '>=media-libs/divx4linux-20030428'
+	then
+		einfo "DivX 20030428 found"
+		cd ${S}; epatch ${FILESDIR}/${PN}-0.90-divx.patch
+	else
+		einfo "Old DivX Api found"
+	fi
 
 	if [ "`use svga`" ]
 	then
@@ -117,6 +131,8 @@ src_unpack() {
 		cd ${S}/libdha
 		sed -i -e "s/^#CFLAGS/CFLAGS/" Makefile
 	fi
+
+	cp -r ${S}/postproc ${S}/postproc.so
 }
 
 src_compile() {
@@ -204,9 +220,9 @@ src_compile() {
 		|| myconf="${myconf} --disable-mencoder"
 
 	use dvd \
-		&& myconf="${myconf} --enable-mpdvdkit" \
+		&& myconf="${myconf} --enable-mpdvdkit --disable-dvdnav" \
 		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread \
-		                     --disable-css"
+		                     --disable-css --disable-dvdnav"
 	# Disable dvdnav support as its not considered to be
 	# functional anyhow, and will be removed.
 
@@ -227,7 +243,7 @@ src_compile() {
 
 	use dvb \
 		&& myconf="${myconf} --enable-dvb" \
-		|| myconf="${myconf} --disable-dvb --disable-dvbhead"
+		|| myconf="${myconf} --disable-dvb"
 
 	use nls \
 		&& myconf="${myconf} --enable-i18n" \
@@ -240,17 +256,6 @@ src_compile() {
 	use lirc \
 		&& myconf="${myconf} --enable-lirc" \
 		|| myconf="${myconf} --disable-lirc"
-
-	use matroska \
-		&& myconf="${myconf} --enable-matroska" \
-		|| myconf="${myconf} --disable-matroska"
-
-	use debug \
-		&& myconf="${myconf} --enable-debug"
-
-	 use joystick \
-		&& myconf="${myconf} --enable-joystick" \
-		|| myconf="${myconf} --disable-joystick"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -275,7 +280,7 @@ src_compile() {
 		myconf="${myconf} --enable-linux-devfs"
 	fi
 
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}" = "gcc" ]
+	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
 	then
 		CC="${CC} -yet_exec"
 	fi
@@ -294,21 +299,19 @@ src_compile() {
 		--enable-real \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
-		${myconf} || die
+		${myconf} || die "configure failed"
 	# Breaks with gcc-2.95.3, bug #14479:
 	#  --enable-shared-pp \
 	# Enable untested and currently unused code:
 	#  --enable-dynamic-plugins \
 
 	# emake borks on fast boxes - Azarah (07 Aug 2002)
-	einfo "Make"
 	make all || die "Failed to build MPlayer!"
-	einfo "Make completed"
 
 	# We build the shared libpostproc.so here so that our
 	# mplayer binary is not linked to it, ensuring that we
 	# do not run into issues ... (bug #14479)
-	cd ${S}/libavcodec/libpostproc
+	cd ${S}/postproc.so
 	make SHARED_PP="yes" || die "Failed to build libpostproc.so!"
 
 	if [ -n "`use matrox`" ]
@@ -320,7 +323,6 @@ src_compile() {
 
 src_install() {
 
-	einfo "Make install"
 	make prefix=${D}/usr \
 	     BINDIR=${D}/usr/bin \
 		 LIBDIR=${D}/usr/lib \
@@ -328,23 +330,34 @@ src_install() {
 	     DATADIR=${D}/usr/share/mplayer \
 	     MANDIR=${D}/usr/share/man \
 	     install || die "Failed to install MPlayer!"
-	einfo "Make install completed"
 
 	# Install our libpostproc.so ...
-	cd ${S}/libavcodec/libpostproc
+	cd ${S}/postproc.so
 	make prefix=${D}/usr \
 	     SHARED_PP="yes" \
 	     install || die "Failed to install libpostproc.so!"
 	cd ${S}
 
+	# Some stuff like transcode can use this one.
+	if [ -f ${S}/postproc/libpostproc.a ]
+	then
+		dolib ${S}/postproc/libpostproc.a
+
+		if [ ! -f ${D}/usr/include/postproc/postprocess.h ]
+		then
+			insinto /usr/include/postproc
+			doins ${S}/postproc/postprocess.h
+		fi
+	fi
+
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
-	find ${S}/DOCS -type d | xargs -- chmod 0755
+	chmod 0755 ${S}/DOCS -R
 	cp -r ${S}/DOCS ${D}/usr/share/doc/${PF}/ || die
 
 	# Copy misc tools to documentation path, as they're not installed
 	# directly
-	find ${S}/TOOLS -type d | xargs -- chmod 0755
+	chmod 0755 ${S}/TOOLS -R
 	cp -r ${S}/TOOLS ${D}/usr/share/doc/${PF} || die
 
 	# Install the default Skin and Gnome menu entry
@@ -436,4 +449,3 @@ pkg_postrm() {
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r1.ebuild,v 1.3 2004/03/30 04:42:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r4.ebuild,v 1.1 2004/03/31 09:24:02 phosphan Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick"
 
@@ -94,6 +94,9 @@ src_unpack() {
 	use svga && unpack svgalib_helper-1.9.17-mplayer.tar.bz2
 
 	use gtk && unpack Blue-1.0.tar.bz2
+
+	# security problem, bug #46246
+	cd ${S}/libmpdemux; epatch ${FILESDIR}/vuln02-fix.diff
 
 	# Use gtk-2.x
 	cd ${S}; epatch ${FILESDIR}/${PN}-1.0-gtk2.patch

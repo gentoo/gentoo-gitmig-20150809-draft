@@ -1,6 +1,20 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.115 2004/03/30 04:42:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.116 2004/03/31 09:24:02 phosphan Exp $
+
+*mplayer-1.0_pre3-r3 (31 Mar 2004)
+
+  31 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> mplayer-0.92-r1.ebuild,
+  mplayer-0.92.ebuild, mplayer-1.0_pre2-r1.ebuild, mplayer-1.0_pre2.ebuild,
+  mplayer-1.0_pre3-r1.ebuild, mplayer-1.0_pre3-r2.ebuild,
+  mplayer-1.0_pre3-r3.ebuild, mplayer-1.0_pre3-r4.ebuild,
+  mplayer-1.0_pre3-r5.ebuild, mplayer-1.0_pre3.ebuild, files/vuln02-fix.diff:
+  Revision bumped all currently available ebuilds and added a patch for a
+  security problem, see bug #46246.
+  Because of different keywordings for 1.0_pre3 they were bumped like follows:
+  1.0_pre3 -> 1.0_pre3-r3
+  1.0_pre3-r1 -> 1.0_pre3-r4
+  1.0_pre3-r2 -> 1.0_pre3-r5
 
   29 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; mplayer-0.92.ebuild,
   mplayer-1.0_pre2.ebuild, mplayer-1.0_pre3-r1.ebuild,

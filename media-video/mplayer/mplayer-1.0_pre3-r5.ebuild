@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92.ebuild,v 1.13 2004/03/30 04:42:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.1 2004/03/31 09:24:02 phosphan Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick theora"
 
 inherit eutils
 
@@ -24,32 +24,34 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
 RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
+	amd64? ( >=media-libs/xvid-0.9.0 )
 	x86? ( >=media-libs/xvid-0.9.0
-			>=media-libs/divx4linux-20020418
-			>=media-libs/win32codecs-0.60 )
+	       >=media-libs/divx4linux-20030428
+	       >=media-libs/win32codecs-0.60 )
 	gtk? ( media-libs/libpng
-			virtual/x11
+	       virtual/x11
 		!gtk2? ( =x11-libs/gtk+-1.2*
-				=dev-libs/glib-1.2* )
+			=dev-libs/glib-1.2* )
 		gtk2? ( >=x11-libs/gtk+-2.0.6
-				>=dev-libs/glib-2.0.6 )
-		)
+	        >=dev-libs/glib-2.0.6 )
+	)
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib
-		media-libs/libungif )
+	       media-libs/libungif )
 	truetype? ( >=media-libs/freetype-2.1 )
 	esd? ( media-sound/esound )
 	ggi? ( media-libs/libggi )
 	sdl? ( media-libs/libsdl )
-	lirc? ( app-misc/lirc )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	nas? ( media-libs/nas )
+	lirc? ( app-misc/lirc )
 	aalib? ( media-libs/aalib )
 	svga? ( media-libs/svgalib )
 	encode? ( media-sound/lame
-		>=media-libs/libdv-0.9.5 )
+	          >=media-libs/libdv-0.9.5 )
 	xmms? ( media-sound/xmms )
+	matroska? ( >=media-libs/libmatroska-0.6.0 )
 	opengl? ( virtual/opengl )
 	directfb? ( dev-libs/DirectFB )
 	oggvorbis? ( media-libs/libvorbis )
@@ -57,6 +59,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	media-sound/cdparanoia
 	mpeg? ( media-libs/faad2 )
 	samba? ( >=net-fs/samba-2.2.8a )
+	theora? ( media-libs/libtheora )
 	>=sys-apps/portage-2.0.36"
 #	dvd? ( media-libs/libdvdnav )
 # Hardcode paranoia support for now, as there is no
@@ -68,7 +71,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc -alpha ~amd64 -ia64 -hppa ~sparc"
 
 
 pkg_setup() {
@@ -93,8 +96,11 @@ src_unpack() {
 
 	use gtk && unpack Blue-1.0.tar.bz2
 
+	# security problem, bug #46246
+	cd ${S}/libmpdemux; epatch ${FILESDIR}/vuln02-fix.diff
+
 	# Use gtk-2.x
-	cd ${S}; epatch ${FILESDIR}/${PN}-0.90_rc4-gtk2.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-1.0-gtk2.patch
 
 	# Fix head/tail call for new coreutils
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
@@ -102,19 +108,18 @@ src_unpack() {
 	# Fix mencoder segfaulting with bad arguments
 	cd ${S}; epatch ${FILESDIR}/mencoder-segfault.patch
 
-	# Fix mplayer to detect detect/use altivec on benh kernels,
-	# bug #18511.
-	use ppc && \
-		(cd ${S}; epatch ${FILESDIR}/${PN}-0.90-ppc-benh-2.patch)
+	# Fix to diable xmms support. Closes 45356
+	epatch ${FILESDIR}/${P}-xmms.patch
 
-	#Fixing divx 2003 API
-	if has_version '>=media-libs/divx4linux-20030428'
+	#Fix libmatroska 
+	if has_version '>=libmatroska-0.6.3'
 	then
-		einfo "DivX 20030428 found"
-		cd ${S}; epatch ${FILESDIR}/${PN}-0.90-divx.patch
-	else
-		einfo "Old DivX Api found"
+		cd ${S}; epatch ${FILESDIR}/${P}-libmatroska063.diff
 	fi
+
+
+	# Fix hppa detection
+	[ "${ARCH}" = "hppa" ] && sed -i -e "s/9000*/parisc*/" "${S}/configure"
 
 	if [ "`use svga`" ]
 	then
@@ -128,8 +133,6 @@ src_unpack() {
 		cd ${S}/libdha
 		sed -i -e "s/^#CFLAGS/CFLAGS/" Makefile
 	fi
-
-	cp -r ${S}/postproc ${S}/postproc.so
 }
 
 src_compile() {
@@ -151,8 +154,7 @@ src_compile() {
 	# Only disable X if gtk is not in USE
 	use X || use gtk \
 		|| myconf="${myconf} --disable-gui --disable-x11 --disable-xv \
-		                     --disable-xmga --disable-png"
-
+				--disable-xmga --disable-png"
 	use jpeg \
 		|| myconf="${myconf} --disable-jpeg"
 
@@ -170,89 +172,26 @@ src_compile() {
 	( use gtk && use gtk2 ) \
 		&& myconf="${myconf} --enable-gtk2"
 
-	use truetype \
-		&& myconf="${myconf} --enable-freetype" \
-		|| myconf="${myconf} --disable-freetype"
-
-	use aalib && myconf="${myconf} --enable-aa"
-
-	use oss \
-		|| myconf="${myconf} --disable-ossaudio"
-
-	use opengl \
-		|| myconf="${myconf} --disable-gl"
-
-	use sdl \
-		|| myconf="${myconf} --disable-sdl"
-
-	use ggi \
-		|| myconf="${myconf} --disable-ggi"
-
-	use svga \
-		|| myconf="${myconf} --disable-svga"
-
-	use directfb \
-		|| myconf="${myconf} --disable-directfb"
-
-	use fbcon \
-		|| myconf="${myconf} --disable-fbdev"
-
-	use esd \
-		|| myconf="${myconf} --disable-esd"
-
-	use alsa \
-		|| myconf="${myconf} --disable-alsa"
-
-	use arts \
-		|| myconf="${myconf} --disable-arts"
-
-	use nas \
-		|| myconf="${myconf} --disable-nas"
-
-	use oggvorbis \
-		|| myconf="${myconf} --disable-vorbis"
-
 	use encode \
 		&& myconf="${myconf} --enable-mencoder --enable-tv" \
 		|| myconf="${myconf} --disable-mencoder"
 
 	use dvd \
-		&& myconf="${myconf} --enable-mpdvdkit --disable-dvdnav" \
-		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread \
-		                     --disable-css --disable-dvdnav"
+		&& myconf="${myconf} --enable-mpdvdkit" \
+		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread"
 	# Disable dvdnav support as its not considered to be
 	# functional anyhow, and will be removed.
 
-	use xmms \
-		&& myconf="${myconf} --enable-xmms"
-
 	use mpeg \
-		&& myconf="${myconf} --enable-faad" \
-		|| myconf="${myconf} --disable-faad"
-
-	use matrox \
-		&& myconf="${myconf} --enable-mga" \
-		|| myconf="${myconf} --disable-mga"
-
-	use 3dfx \
-		&& myconf="${myconf} --enable-tdfxfb"
-	# --enable-3dfx is broken according to the MPlayer guys.
+		&& myconf="${myconf} --enable-external-faad" \
+		|| myconf="${myconf} --disable-external-faad"
 
 	use dvb \
 		&& myconf="${myconf} --enable-dvb" \
-		|| myconf="${myconf} --disable-dvb"
+		|| myconf="${myconf} --disable-dvb --disable-dvbhead"
 
-	use nls \
-		&& myconf="${myconf} --enable-i18n" \
-		|| myconf="${myconf} --disable-i18n"
-
-	use samba \
-		&& myconf="${myconf} --enable-smb" \
-		|| myconf="${myconf} --disable-smb"
-
-	use lirc \
-		&& myconf="${myconf} --enable-lirc" \
-		|| myconf="${myconf} --disable-lirc"
+	use debug \
+		&& myconf="${myconf} --enable-debug"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -277,7 +216,7 @@ src_compile() {
 		myconf="${myconf} --enable-linux-devfs"
 	fi
 
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
+	if has_version 'sys-devel/hardened-gcc' && [ "${CC}" = "gcc" ]
 	then
 		CC="${CC} -yet_exec"
 	fi
@@ -296,19 +235,45 @@ src_compile() {
 		--enable-real \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
-		${myconf} || die "configure failed"
+		`use_enable xinerama` \
+		`use_enable oggvorbis vorbis` \
+		`use_enable esd` \
+		`use_enable truetype freetype` \
+		`use_enable opengl gl` \
+		`use_enable sdl` \
+		`use_enable nls i18n` \
+		`use_enable samba smb` \
+		`use_enable aalib aa` \
+		`use_enable oss ossaudio` \
+		`use_enable ggi` \
+		`use_enable svga` \
+		`use_enable directfb` \
+		`use_enable fbcon fbdev` \
+		`use_enable alsa` \
+		`use_enable arts` \
+		`use_enable lirc` \
+		`use_enable joystick` \
+		`use_enable matroska` \
+		`use_enable theora` \
+		`use_enable nas` \
+		`use_enable 3dfx tdfxfb` \
+		`use_enable matrox mga` \
+		`use_enable xmms` \
+		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:
 	#  --enable-shared-pp \
 	# Enable untested and currently unused code:
 	#  --enable-dynamic-plugins \
 
 	# emake borks on fast boxes - Azarah (07 Aug 2002)
+	einfo "Make"
 	make all || die "Failed to build MPlayer!"
+	einfo "Make completed"
 
 	# We build the shared libpostproc.so here so that our
 	# mplayer binary is not linked to it, ensuring that we
 	# do not run into issues ... (bug #14479)
-	cd ${S}/postproc.so
+	cd ${S}/libavcodec/libpostproc
 	make SHARED_PP="yes" || die "Failed to build libpostproc.so!"
 
 	if [ -n "`use matrox`" ]
@@ -320,6 +285,7 @@ src_compile() {
 
 src_install() {
 
+	einfo "Make install"
 	make prefix=${D}/usr \
 	     BINDIR=${D}/usr/bin \
 		 LIBDIR=${D}/usr/lib \
@@ -327,34 +293,23 @@ src_install() {
 	     DATADIR=${D}/usr/share/mplayer \
 	     MANDIR=${D}/usr/share/man \
 	     install || die "Failed to install MPlayer!"
+	einfo "Make install completed"
 
-	# Install our libpostproc.so ...
-	cd ${S}/postproc.so
-	make prefix=${D}/usr \
-	     SHARED_PP="yes" \
-	     install || die "Failed to install libpostproc.so!"
-	cd ${S}
-
-	# Some stuff like transcode can use this one.
-	if [ -f ${S}/postproc/libpostproc.a ]
-	then
-		dolib ${S}/postproc/libpostproc.a
-
-		if [ ! -f ${D}/usr/include/postproc/postprocess.h ]
-		then
-			insinto /usr/include/postproc
-			doins ${S}/postproc/postprocess.h
-		fi
-	fi
+	# libpostproc is now installed by >=ffmpeg-0.4.8.20040222
+#	cd ${S}/libavcodec/libpostproc
+#	make prefix=${D}/usr \
+#	     SHARED_PP="yes" \
+#	     install || die "Failed to install libpostproc.so!"
+#	cd ${S}
 
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
-	chmod 0755 ${S}/DOCS -R
+	find ${S}/DOCS -type d | xargs -- chmod 0755
 	cp -r ${S}/DOCS ${D}/usr/share/doc/${PF}/ || die
 
 	# Copy misc tools to documentation path, as they're not installed
 	# directly
-	chmod 0755 ${S}/TOOLS -R
+	find ${S}/TOOLS -type d | xargs -- chmod 0755
 	cp -r ${S}/TOOLS ${D}/usr/share/doc/${PF} || die
 
 	# Install the default Skin and Gnome menu entry
@@ -422,10 +377,13 @@ pkg_postinst() {
 		echo
 		einfo "When you see only GREEN salad on your G4 while playing"
 		einfo "a DivX, you should recompile _without_ altivec enabled."
-		einfo "Furher information: http://bugs.gentoo.org/show_bug.cgi?id=18511"
+		einfo "Further information: http://bugs.gentoo.org/show_bug.cgi?id=18511"
 		echo
 		einfo "If everything functions fine with watching DivX and"
 		einfo "altivec enabled, please drop a comment on the mentioned bug!"
+		echo
+		einfo "libpostproc is no longer installed by mplayer. If you have an"
+		einfo "application that depends on it, install >=ffmpeg-0.4.8.20040222"
 	fi
 
 	depmod -a &>/dev/null || :
@@ -446,3 +404,4 @@ pkg_postrm() {
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
 }
+

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r2.ebuild,v 1.6 2004/03/30 04:42:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2-r1.ebuild,v 1.1 2004/03/31 09:24:02 phosphan Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick theora"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick"
 
 inherit eutils
 
@@ -51,7 +51,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	encode? ( media-sound/lame
 	          >=media-libs/libdv-0.9.5 )
 	xmms? ( media-sound/xmms )
-	matroska? ( >=media-libs/libmatroska-0.6.0 )
+	matroska? ( >=media-libs/libmatroska-0.5.0 )
 	opengl? ( virtual/opengl )
 	directfb? ( dev-libs/DirectFB )
 	oggvorbis? ( media-libs/libvorbis )
@@ -59,7 +59,6 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	media-sound/cdparanoia
 	mpeg? ( media-libs/faad2 )
 	samba? ( >=net-fs/samba-2.2.8a )
-	theora? ( media-libs/libtheora )
 	>=sys-apps/portage-2.0.36"
 #	dvd? ( media-libs/libdvdnav )
 # Hardcode paranoia support for now, as there is no
@@ -71,7 +70,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc -alpha ~amd64 -ia64 -hppa ~sparc"
+KEYWORDS="~x86 ~ppc amd64"
 
 
 pkg_setup() {
@@ -96,8 +95,11 @@ src_unpack() {
 
 	use gtk && unpack Blue-1.0.tar.bz2
 
+	# security problem, bug #46246
+	cd ${S}/libmpdemux; epatch ${FILESDIR}/vuln02-fix.diff
+
 	# Use gtk-2.x
-	cd ${S}; epatch ${FILESDIR}/${PN}-1.0-gtk2.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-0.90_rc4-gtk2.patch
 
 	# Fix head/tail call for new coreutils
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
@@ -105,18 +107,6 @@ src_unpack() {
 	# Fix mencoder segfaulting with bad arguments
 	cd ${S}; epatch ${FILESDIR}/mencoder-segfault.patch
 
-	# Fix to diable xmms support. Closes 45356
-	epatch ${FILESDIR}/${P}-xmms.patch
-
-	#Fix libmatroska 
-	if has_version '>=libmatroska-0.6.3'
-	then
-		cd ${S}; epatch ${FILESDIR}/${P}-libmatroska063.diff
-	fi
-
-
-	# Fix hppa detection
-	[ "${ARCH}" = "hppa" ] && sed -i -e "s/9000*/parisc*/" "${S}/configure"
 
 	if [ "`use svga`" ]
 	then
@@ -151,7 +141,8 @@ src_compile() {
 	# Only disable X if gtk is not in USE
 	use X || use gtk \
 		|| myconf="${myconf} --disable-gui --disable-x11 --disable-xv \
-				--disable-xmga --disable-png"
+		                     --disable-xmga --disable-png"
+
 	use jpeg \
 		|| myconf="${myconf} --disable-jpeg"
 
@@ -169,26 +160,100 @@ src_compile() {
 	( use gtk && use gtk2 ) \
 		&& myconf="${myconf} --enable-gtk2"
 
+	use truetype \
+		&& myconf="${myconf} --enable-freetype" \
+		|| myconf="${myconf} --disable-freetype"
+
+	use aalib && myconf="${myconf} --enable-aa"
+
+	use oss \
+		|| myconf="${myconf} --disable-ossaudio"
+
+	use opengl \
+		|| myconf="${myconf} --disable-gl"
+
+	use sdl \
+		|| myconf="${myconf} --disable-sdl"
+
+	use ggi \
+		|| myconf="${myconf} --disable-ggi"
+
+	use svga \
+		|| myconf="${myconf} --disable-svga"
+
+	use directfb \
+		|| myconf="${myconf} --disable-directfb"
+
+	use fbcon \
+		|| myconf="${myconf} --disable-fbdev"
+
+	use esd \
+		|| myconf="${myconf} --disable-esd"
+
+	use alsa \
+		|| myconf="${myconf} --disable-alsa"
+
+	use arts \
+		|| myconf="${myconf} --disable-arts"
+
+	use nas \
+		|| myconf="${myconf} --disable-nas"
+
+	use oggvorbis \
+		|| myconf="${myconf} --disable-vorbis"
+
 	use encode \
 		&& myconf="${myconf} --enable-mencoder --enable-tv" \
 		|| myconf="${myconf} --disable-mencoder"
 
 	use dvd \
 		&& myconf="${myconf} --enable-mpdvdkit" \
-		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread"
+		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread \
+		                     --disable-css"
 	# Disable dvdnav support as its not considered to be
 	# functional anyhow, and will be removed.
 
+	use xmms \
+		&& myconf="${myconf} --enable-xmms"
+
 	use mpeg \
-		&& myconf="${myconf} --enable-external-faad" \
-		|| myconf="${myconf} --disable-external-faad"
+		&& myconf="${myconf} --enable-faad" \
+		|| myconf="${myconf} --disable-faad"
+
+	use matrox \
+		&& myconf="${myconf} --enable-mga" \
+		|| myconf="${myconf} --disable-mga"
+
+	use 3dfx \
+		&& myconf="${myconf} --enable-tdfxfb"
+	# --enable-3dfx is broken according to the MPlayer guys.
 
 	use dvb \
 		&& myconf="${myconf} --enable-dvb" \
 		|| myconf="${myconf} --disable-dvb --disable-dvbhead"
 
+	use nls \
+		&& myconf="${myconf} --enable-i18n" \
+		|| myconf="${myconf} --disable-i18n"
+
+	use samba \
+		&& myconf="${myconf} --enable-smb" \
+		|| myconf="${myconf} --disable-smb"
+
+	use lirc \
+		&& myconf="${myconf} --enable-lirc" \
+		|| myconf="${myconf} --disable-lirc"
+
+	use matroska \
+		&& myconf="${myconf} --enable-matroska" \
+		|| myconf="${myconf} --disable-matroska"
+
 	use debug \
 		&& myconf="${myconf} --enable-debug"
+
+	 use joystick \
+		&& myconf="${myconf} --enable-joystick" \
+		|| myconf="${myconf} --disable-joystick"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -232,30 +297,6 @@ src_compile() {
 		--enable-real \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
-		`use_enable xinerama` \
-		`use_enable oggvorbis vorbis` \
-		`use_enable esd` \
-		`use_enable truetype freetype` \
-		`use_enable opengl gl` \
-		`use_enable sdl` \
-		`use_enable nls i18n` \
-		`use_enable samba smb` \
-		`use_enable aalib aa` \
-		`use_enable oss ossaudio` \
-		`use_enable ggi` \
-		`use_enable svga` \
-		`use_enable directfb` \
-		`use_enable fbcon fbdev` \
-		`use_enable alsa` \
-		`use_enable arts` \
-		`use_enable lirc` \
-		`use_enable joystick` \
-		`use_enable matroska` \
-		`use_enable theora` \
-		`use_enable nas` \
-		`use_enable 3dfx tdfxfb` \
-		`use_enable matrox mga` \
-		`use_enable xmms` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:
 	#  --enable-shared-pp \
@@ -292,12 +333,12 @@ src_install() {
 	     install || die "Failed to install MPlayer!"
 	einfo "Make install completed"
 
-	# libpostproc is now installed by >=ffmpeg-0.4.8.20040222
-#	cd ${S}/libavcodec/libpostproc
-#	make prefix=${D}/usr \
-#	     SHARED_PP="yes" \
-#	     install || die "Failed to install libpostproc.so!"
-#	cd ${S}
+	# Install our libpostproc.so ...
+	cd ${S}/libavcodec/libpostproc
+	make prefix=${D}/usr \
+	     SHARED_PP="yes" \
+	     install || die "Failed to install libpostproc.so!"
+	cd ${S}
 
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
@@ -374,13 +415,10 @@ pkg_postinst() {
 		echo
 		einfo "When you see only GREEN salad on your G4 while playing"
 		einfo "a DivX, you should recompile _without_ altivec enabled."
-		einfo "Further information: http://bugs.gentoo.org/show_bug.cgi?id=18511"
+		einfo "Furher information: http://bugs.gentoo.org/show_bug.cgi?id=18511"
 		echo
 		einfo "If everything functions fine with watching DivX and"
 		einfo "altivec enabled, please drop a comment on the mentioned bug!"
-		echo
-		einfo "libpostproc is no longer installed by mplayer. If you have an"
-		einfo "application that depends on it, install >=ffmpeg-0.4.8.20040222"
 	fi
 
 	depmod -a &>/dev/null || :
