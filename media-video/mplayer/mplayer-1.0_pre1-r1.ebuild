@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre1-r1.ebuild,v 1.10 2003/10/18 23:00:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre1-r1.ebuild,v 1.11 2003/10/19 16:34:26 mr_bones_ Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska"
 
@@ -241,7 +241,7 @@ src_compile() {
 	use lirc \
 		&& myconf="${myconf} --enable-lirc" \
 		|| myconf="${myconf} --disable-lirc"
-	
+
 	use matroska \
 		&& myconf="${myconf} --enable-matroska" \
 		|| myconf="${myconf} --disable-matroska"
