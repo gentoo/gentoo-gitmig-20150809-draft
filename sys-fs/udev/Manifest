@@ -6,7 +6,7 @@ MD5 22c65e83f63ab0adc0b89c1a54ab479a udev-018-r3.ebuild 3910
 MD5 955749ba7774fe3a10a517e250f4399d udev-017-r1.ebuild 3640
 MD5 d6a005716788def549504def5d79adf7 udev-019-r2.ebuild 3784
 MD5 19a5c2b34b9827e7c914f438cf5f1ea2 udev-018-r5.ebuild 3715
-MD5 4ba089d6ef75b5e14805f8bf589947e7 ChangeLog 8286
+MD5 5a3f1f43c1829de54b70bc7a05909725 ChangeLog 8472
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f00e3e0d3382e93cbd0c64fcef99f826 files/udev-021-udev_add_c-gcc295-compat.patch 493
 MD5 d0a7b64f76b612bef576c02a48e83caf files/udev-017-no-wait-for-sleep.patch 1673
