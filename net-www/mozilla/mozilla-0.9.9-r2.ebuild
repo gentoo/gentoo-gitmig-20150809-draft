@@ -1,14 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r2.ebuild,v 1.4 2002/04/24 22:26:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r2.ebuild,v 1.5 2002/04/26 06:16:57 seemant Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla${PV}/src/${PN}-source-${PV}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
-
-PROVIDE="virtual/x11-web-browser"
 
 RDEPEND=">=gnome-base/ORBit-0.5.10-r1
 	=dev-libs/glib-1.2*

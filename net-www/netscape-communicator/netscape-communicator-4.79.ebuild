@@ -7,7 +7,6 @@ DESCRIPTION="Netscape Communicator 4.79"
 SRC_URI="ftp://ftp.netscape.com/pub/communicator/english/4.79/unix/supported/linux22/complete_install/communicator-v479-us.x86-unknown-linux2.2.tar.gz"
 HOMEPAGE="http://developer.netscape.com/support/index.html"
 RDEPEND=">=sys-libs/lib-compat-1.0"
-PROVIDE="virtual/x11-web-browser"
 
 src_install() {								  
 	cd ${S}
