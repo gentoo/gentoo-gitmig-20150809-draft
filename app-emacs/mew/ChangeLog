@@ -1,8 +1,13 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.12 2003/07/28 22:57:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.13 2003/07/29 02:42:26 usata Exp $
 
 *mew-3.3 (29 Jul 2003)
+
+  29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> mew-3.1.ebuild,
+  mew-3.2-r1.ebuild, mew-3.2.ebuild, files/3.1/50mew-gentoo.el,
+  files/3.2/50mew-gentoo.el:
+  Unified the location of SITEFILE for 3.x version
 
   29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> mew-3.3.ebuild,
   files/3.x/50mew-gentoo.el:
