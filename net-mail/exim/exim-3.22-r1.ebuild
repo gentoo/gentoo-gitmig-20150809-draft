@@ -13,6 +13,8 @@ DEPEND=">=net-mail/mailbase-0.00
         >=sys-libs/glibc-2.1.3
         >=sys-devel/perl-5.6.0"
 
+RDEPEND="!virtual/mta"
+
 TLS_DEP=">=dev-libs/openssl-0.9.6"
 LDAP_DEP=">=net-nds/openldap-2.0.7"
 MYSQL_DEP=">=dev-db/mysql-3.23.28"

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-20010130.ebuild,v 1.1 2001/02/15 20:55:02 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-20010204.ebuild,v 1.1 2001/02/19 22:53:57 jerry Exp $
 
 P=snapshot-${PV}
 A=${P}.tar.gz
@@ -13,6 +13,8 @@ HOMEPAGE="http://www.postfix.org/"
 DEPEND=">=net-mail/mailbase-0.00
         >=dev-libs/libpcre-3.4
         >=sys-libs/glibc-2.1.3"
+
+RDEPEND="!virtual/mta"
 
 TLS_DEP=">=dev-libs/openssl-0.9.6"
 LDAP_DEP=">=net-nds/openldap-2.0.7"
