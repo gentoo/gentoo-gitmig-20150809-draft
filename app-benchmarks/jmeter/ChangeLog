@@ -1,0 +1,21 @@
+# ChangeLog for app-benchmarks/jmeter
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.1 2003/03/16 10:42:10 absinthe Exp $
+
+*jmeter-1.8.1 (16 Mar 2003)
+
+  16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> jmeter-1.8.1.ebuild,
+  files/jmeter-1.8.1-gentoo.diff:
+  Initial import.
+  
+  Apache JMeter may be used to test performance both on static and dynamic
+  resources (files, Servlets, Perl scripts, Java Objects, Data Bases and
+  Queries, FTP Servers and more).  It can be used to simulate a heavy load on
+  a server, network or object to test its strength or to analyze overall
+  performance under different load types.  You can use it to make a graphical
+  analysis of performance or to test your server/script/object behavior under
+  heavy concurrent load.
+  
+  NOTE: This application requires Sun's JDK, and will not work correctly if you
+  currently have your user environment set to use IBM's JDK, or another.
+
