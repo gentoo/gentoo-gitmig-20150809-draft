@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r2.ebuild,v 1.1 2003/04/22 03:48:29 leahcim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r2.ebuild,v 1.2 2003/04/23 02:27:18 lu_zero Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -81,16 +81,16 @@ src_unpack() {
 }
 
 src_compile() {
-
+	check_KV
 	ln -sf Makefile.linux Makefile
 	einfo "Building DRM..."
 	if [ -z "${VIDCARDS}" ]
 	then
 		make \
-			TREE="/usr/src/linux/include" KV="${KVERS}"
+			TREE="/usr/src/linux/include" KV="${KV}"
 	else
 		make ${VIDCARDS} \
-			TREE="/usr/src/linux/include" KV="${KVERS}"
+			TREE="/usr/src/linux/include" KV="${KV}"
 	fi
 }
 
@@ -101,13 +101,13 @@ src_install() {
 	then
 		make \
 			TREE="/usr/src/linux/include" \
-			KV="${KVERS}" \
+			KV="${KV}" \
 			DESTDIR="${D}" \
 			install || die
 	else
 		make \
 			TREE="/usr/src/linux/include" \
-			KV="${KVERS}" \
+			KV="${KV}" \
 			DESTDIR="${D}" \
 			MODS="${VIDCARDS}" \
 			install || die
