@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5b.ebuild,v 1.4 2003/07/16 16:29:38 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5b.ebuild,v 1.5 2003/08/03 02:40:51 vapier Exp $
 inherit eutils flag-o-matic kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -69,21 +69,15 @@ get_xft_setup() {
 		# Yep, we have Xft2 support ...
 		export HAVE_XFT_2="yes"
 
-		[ -n "${BUILDDEBUG}" ] && einfo "We have Xft2.0 support"
-
 	elif [ "${XFT_HDR_VER}" != "${XFT_LIB_VER}" ]
 	then
 		# Xft support are broken (mixed header and lib versions) ...
 		export HAVE_XFT_2="broken"
 
-		[ -n "${BUILDDEBUG}" ] && einfo "We have broken Xft support"
-
 	elif [ "${XFT_HDR_VER}" -eq "1" -a "${XFT_LIB_VER}" -eq "1" ]
 	then
 		# Nope, we only have Xft1 installed ...
 		export HAVE_XFT_2="no"
-
-		[ -n "${BUILDDEBUG}" ] && einfo "We have Xft1 support"
 	fi
 }
 
