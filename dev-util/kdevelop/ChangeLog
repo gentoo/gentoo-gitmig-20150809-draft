@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.25 2003/04/11 20:52:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.26 2003/04/13 16:52:31 danarmak Exp $
+
+*kdevelop-3.0_alpha4 (13 Apr 2003)
+
+  13 Apr 2003; Dan Armak <danarmak@gentoo.org> kdevelop-3.0_alpha4.ebuild:
+  A new release.
 
   11 Apr 2003; Dan Armak <danarmak@gentoo.org> kdevelop-3.0_alpha3.ebuild:
   Trim down list of depndencies. Remove all toptional runtime dependencies from
