@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.102 2004/06/02 20:34:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.103 2004/06/03 02:11:27 tgall Exp $
+
+  02 Jun 2004; Tom Gall <tgall@gentoo.org> postgresql-7.4.2-r2.ebuild:
+  stable on ppc64, bug #52709
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> postgresql-7.3.6-r1.ebuild,
   postgresql-7.3.6.ebuild, postgresql-7.4.2-r1.ebuild,
