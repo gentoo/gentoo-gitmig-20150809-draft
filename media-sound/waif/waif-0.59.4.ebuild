@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.4.ebuild,v 1.1 2003/02/09 08:09:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.4.ebuild,v 1.2 2003/02/09 22:31:43 seemant Exp $
 
 IUSE="X gnome"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${PN}
 S2=${WORKDIR}/wfxmms
 DESCRIPTION="Why Another Infernal Frontend -- console front end for various media-players"
 HOMEPAGE="http://eds.org/~straycat"
-SRC_URI="http://www.eds.org/~straycat/${PN}.tar.gz
+SRC_URI="http://www.eds.org/~straycat/${P}.tar.gz
 	xmms? http://www.eds.org/~straycat/wfxmms-0.6.tgz"
 
 SLOT="0"

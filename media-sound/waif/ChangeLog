@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/waif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.4 2003/02/09 08:09:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.5 2003/02/09 22:31:43 seemant Exp $
 
 *waif-0.59.4 (08 Feb 2003)
+  
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> waif-0.59.4.ebuild :
+
+  The upstream tarball now has a version in it.  Regenerated the digest as
+  well.
 
   08 Feb 2003; Seemant Kulleen <seemant@gentoo.org> waif-0.59.4.ebuild
   files/digest-waif-0.59.4 :
