@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1.ebuild,v 1.4 2004/04/09 12:25:51 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1.ebuild,v 1.5 2004/04/11 11:14:50 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -252,7 +252,7 @@ src_unpack() {
 	oo_setup
 
 	cd ${WORKDIR}
-	unpack OOo_${PV}_source.tar.bz2 gpc231.tar.Z
+	unpack OOo_${PV}p1_source.tar.bz2 gpc231.tar.Z
 
 	# Install gpc
 	cd ${WORKDIR}/gpc231
