@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.14 2004/06/03 12:44:32 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.15 2004/06/16 05:50:59 latexer Exp $
+
+*monodoc-0.17 (16 Jun 2004)
+
+  16 Jun 2004; Peter Johanson,,, <peter@gentoo.org> monodoc-0.17.ebuild:
+  Beta3 loves you.
 
   03 Jun 2004; Peter Johanson <latexer@gentoo.org> monodoc-0.16.ebuild:
   Moved details of upgrading to pkg_setup and a has_version check, as comment #6
