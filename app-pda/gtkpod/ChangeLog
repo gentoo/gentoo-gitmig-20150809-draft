@@ -1,6 +1,10 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.1 2003/05/19 05:24:07 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.2 2003/05/28 04:55:48 jrray Exp $
+
+  27 May 2003; <jrray@gentoo.org> gtkpod-0.51.ebuild:
+  Depend on a newer version of pango to avoid linker errors with old version.
+  Also, install the README file.
 
 *gtkpod-0.51 (18 May 2003)
 
