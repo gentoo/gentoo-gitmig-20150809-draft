@@ -1,14 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r2.ebuild,v 1.8 2004/03/14 10:52:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r6.ebuild,v 1.1 2004/04/13 12:06:16 lanius Exp $
 
-inherit flag-o-matic
-
-IUSE="gpm nls samba ncurses X slang"
+inherit flag-o-matic eutils
 
 DESCRIPTION="GNU Midnight Commander cli-based file manager"
 HOMEPAGE="http://www.ibiblio.org/mc/"
-SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz"
+SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
+	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib-3.0.0.patch.bz2
+	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib.patch.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
+IUSE="gpm nls samba ncurses X slang"
 
 DEPEND=">=sys-fs/e2fsprogs-1.19
 	ncurses? ( >=sys-libs/ncurses-5.2-r5 )
@@ -16,44 +21,47 @@ DEPEND=">=sys-fs/e2fsprogs-1.19
 	>=sys-libs/pam-0.72
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	slang? ( >=sys-libs/slang-1.4.2 )
-	samba? ( >=net-fs/samba-2.2.3a-r1 )
+	samba? ( net-fs/samba )
 	X? ( virtual/x11 )"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+src_unpack() {
+	unpack ${P}.tar.gz
+	cd ${S}
 
-filter-flags -malign-double
+	has_version '>=net-fs/samba-3.0.0' &&
+		epatch ${DISTDIR}/${P}-sambalib-3.0.0.patch.bz2
+	has_version '<net-fs/samba-3.0.0' &&
+		epatch ${DISTDIR}/${P}-sambalib.patch.bz2
+
+	epatch ${FILESDIR}/${P}-find.patch
+	epatch ${FILESDIR}/${P}-cpan-2003-1023.patch
+	epatch ${FILESDIR}/${P}-vfs.patch
+}
 
 src_compile() {
+	filter-flags -malign-double
+
 	local myconf=""
 
-	if ! use slang && ! use ncurses
-	    then
+	if ! use slang && ! use ncurses ; then
 		myconf="${myconf} --with-screen=mcslang"
-	    elif
-		use ncurses && ! use slang
-	    then
+	elif use ncurses && ! use slang ; then
 		myconf="${myconf} --with-screen=ncurses"
-	    else
+	else
 		use slang && myconf="${myconf} --with-screen=slang"
 	fi
 
-	use gpm \
-	    && myconf="${myconf} --with-gpm-mouse" \
-	    || myconf="${myconf} --without-gpm-mouse"
+	myconf="${myconf} `use_with gpm gpm-mouse`"
 
 	use nls \
 	    && myconf="${myconf} --with-included-gettext" \
 	    || myconf="${myconf} --disable-nls"
 
-	use X \
-	    && myconf="${myconf} --with-x" \
-	    || myconf="${myconf} --without-x"
+	myconf="${myconf} `use_with X x`"
 
 	use samba \
 	    && myconf="${myconf} --with-samba --with-configdir=/etc/samba
-				--with-codepagedir=/var/lib/samba/codepages" \
+				--with-codepagedir=/var/lib/samba/codepages --with-privatedir=/etc/samba/private" \
 	    || myconf="${myconf} --without-samba"
 
 	econf \
@@ -64,19 +72,16 @@ src_compile() {
 		--enable-charset \
 	    ${myconf} || die
 
-	# bug 27212
-	sed -i '/#define HAVE_SYS_CAPABILITY_H 1/a#define _LINUX_VFS_H' vfs/samba/include/config.h
-
 	emake || die
 }
 
 src_install() {
 	 cat ${FILESDIR}/chdir-4.6.0.gentoo >>\
-	 ${S}/lib/mc-wrapper.sh
+		 ${S}/lib/mc-wrapper.sh
 
 	einstall || die
 
-	dodoc ABOUT-NLS COPYING* ChangeLog AUTHORS MAINTAINERS FAQ INSTALL* NEWS README*
+	dodoc ChangeLog AUTHORS MAINTAINERS FAQ INSTALL* NEWS README*
 
 	insinto /usr/share/mc
 	doins ${FILESDIR}/mc.gentoo
