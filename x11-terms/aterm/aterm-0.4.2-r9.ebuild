@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.2 2004/03/30 13:24:23 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.3 2004/04/27 21:12:25 agriffis Exp $
+
+inherit eutils
 
 IUSE="cjk"
 S=${WORKDIR}/${P}
