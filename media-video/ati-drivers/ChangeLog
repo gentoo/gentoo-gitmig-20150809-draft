@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.32 2004/04/08 05:11:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.33 2004/04/09 06:19:43 spyderous Exp $
+
+  09 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-3.7.6-r1.ebuild:
+  Fix X11_IMPLEM. Fix from merkaba@quantumfish.com (#47282).
 
 *ati-drivers-3.7.6-r1 (08 Apr 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.6-r1.ebuild,v 1.1 2004/04/08 05:11:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.6-r1.ebuild,v 1.2 2004/04/09 06:19:43 spyderous Exp $
 
 IUSE="qt kde gnome"
 
@@ -37,6 +37,7 @@ pkg_setup(){
 	# Set up X11 implementation
 	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
 	einfo "X11 implementation is ${X11_IMPLEM}."
 }
 
