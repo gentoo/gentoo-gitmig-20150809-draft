@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre5.ebuild,v 1.1 2003/07/29 12:54:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre5.ebuild,v 1.2 2003/07/30 03:08:50 agriffis Exp $
 
 IUSE="socks5 tcltk"
 
@@ -60,4 +60,12 @@ src_install () {
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 	# Fix perms on directories (bug # 22446)
 	find ${D} -type d -print0 | xargs -0 chmod 755
+}
+
+pkg_postinst() {
+	ewarn
+	ewarn "Warning: You might need to remerge vim if it doesn't work"
+	ewarn "with this version of ruby.  If vim starts up okay, then"
+	ewarn "there is no need to remerge it."
+	ewarn
 }

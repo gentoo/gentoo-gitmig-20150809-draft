@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.27 2003/07/29 12:54:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.28 2003/07/30 03:08:50 agriffis Exp $
+
+  29 Jul 2003; Aron Griffis <agriffis@gentoo.org> ruby-1.8.0_pre5.ebuild:
+  Add a warning about possibly needing to remerge vim
 
 *ruby-1.8.0_pre5 (29 Jul 2003)
 
