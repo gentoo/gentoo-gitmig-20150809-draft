@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.6.ebuild,v 1.4 2004/04/08 10:57:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.6.ebuild,v 1.5 2004/04/09 15:09:25 lanius Exp $
 
 inherit libtool
 
@@ -53,7 +53,7 @@ src_compile() {
 		&& myconf="${myconf} --with-foomatic3" \
 		|| myconf="${myconf} --without-foomatic"
 
-	econf \
+	GIMPTOOL=/usr/bin/gimptool-1.2 econf \
 		--enable-test \
 		--with-ghosts \
 		--with-user-guide \
