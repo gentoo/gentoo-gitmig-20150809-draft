@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.42 2004/08/30 11:07:53 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.43 2004/10/28 18:45:56 spyderous Exp $
+
+*opengl-update-2.0_pre1 (28 Oct 2004)
+
+  28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/opengl-update-2.0_pre1, +opengl-update-2.0_pre1.ebuild:
+  Add version compatible with >=xorg-x11-6.8.0-r2. It could use a little
+  testing. It also produces a nicer help message, based on available
+  implementations.
 
 *opengl-update-1.8.1-r1 (30 Aug 2004)
 
