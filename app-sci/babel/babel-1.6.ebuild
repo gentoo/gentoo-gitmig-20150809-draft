@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/babel-1.6.ebuild,v 1.9 2003/09/06 22:23:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/babel-1.6.ebuild,v 1.10 2003/09/24 15:18:47 phosphan Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,10 +14,7 @@ SLOT="0"
 LICENSE="as-is"
 
 #Doesn't really seem to depend on anything (?)
-DEPEND="virtual/glibc"
-RDEPEND=$DEPEND
-
-PROVIDE="app-misc/babel"
+DEPEND="!app-sci/openbabel"
 
 src_unpack() {
 
