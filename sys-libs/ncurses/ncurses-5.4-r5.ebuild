@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.21 2005/03/13 04:52:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.22 2005/03/22 18:48:59 lanius Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,6 +14,16 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="gpm build bootstrap debug doc uclibc unicode nocxx"
 
 DEPEND="gpm? ( sys-libs/gpm )"
+
+pkg_setup() {
+	# check for unicode use flag, see bug #78313
+	if use !unicode && [ -f /usr/lib/libncursesw.so ] && [ "$COMPILE_NCURSES" != "TRUE" ]; then
+		ewarn "Remerging ncurses without unicoe in USE flags will break your system"
+		ewarn "For more information see bug #78313"
+		ewarn "If you still want continue set COMPILE_NCURSES variable to TRUE"
+		die
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
