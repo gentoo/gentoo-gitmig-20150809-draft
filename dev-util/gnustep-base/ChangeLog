@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gnustep-base
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/ChangeLog,v 1.8 2002/12/13 10:56:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/ChangeLog,v 1.9 2003/01/20 02:44:41 raker Exp $
+
+*gnustep-base-1.5.1 (19 Jan 2003)
+
+  19 Jan 2003; Nick Hadaway <raker@gentoo.org> gnustep-base-1.5.1.ebuild,
+  files/digest-gnustep-base-1.5.1 :
+  New "unstable" version.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
