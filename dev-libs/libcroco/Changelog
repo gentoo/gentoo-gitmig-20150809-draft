@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libcroco
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/Changelog,v 1.1 2004/02/09 01:00:09 spider Exp $
+
+*libcroco-0.4.0 (06 Feb 2004)
+
+  06 Feb 2004; Spider <spider@gentoo.org> libcroco-0.4.0.ebuild 
+  files/digest-libcroco-0.4.0 metadata.xml ChangeLog Manifest :
+
+  Initial build , created by me. Couldnt figure a decent place to put it 
+  though.
