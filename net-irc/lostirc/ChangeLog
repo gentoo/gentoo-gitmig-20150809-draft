@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/lostirc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.18 2004/05/12 04:06:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.19 2004/05/29 16:16:27 pvdabeel Exp $
+
+  29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  lostirc-0.2.7.ebuild, lostirc-0.3.2.ebuild:
+  Masked lostirc-0.3.2.ebuild stable for ppc
+
+  29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  lostirc-0.2.7.ebuild:
+  Masked lostirc-0.2.7.ebuild stable for ppc
 
   11 May 2004; Jason Wever <weeve@gentoo.org> lostirc-0.3.3.ebuild:
   Added ~sparc keyword.

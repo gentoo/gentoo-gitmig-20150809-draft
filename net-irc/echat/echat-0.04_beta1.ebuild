@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.3 2004/04/27 22:07:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.4 2004/05/29 16:16:27 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://files.akl.lt/~x11/${P}.tar.gz
 	    http://gsk.vtu.lt:8080/~arturaz/soft/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~s390"
+KEYWORDS="~x86 ~s390 ~ppc"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4

@@ -8,7 +8,7 @@ HOMEPAGE="http://www.ptlink.net/"
 SRC_URI="ftp://ftp.sunsite.dk/projects/ptlink/ircd/${MY_P}.tar.gz"
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="ipv6"
 DEPEND="virtual/glibc"

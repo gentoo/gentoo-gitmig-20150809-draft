@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.2 2004/01/20 22:56:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.3 2004/05/29 16:16:27 pvdabeel Exp $
 
 DESCRIPTION="RFC compliant IRC server"
 HOMEPAGE="http://www.irc.org"
@@ -10,7 +10,7 @@ LICENSE="GPL-1"
 SLOT="0"
 
 # The only architecture I can test
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="zlib ipv6"
 
 DEPEND="sys-libs/glibc

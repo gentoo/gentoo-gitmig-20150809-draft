@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11-r1.ebuild,v 1.1 2004/04/11 12:50:07 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11-r1.ebuild,v 1.2 2004/05/29 16:16:28 pvdabeel Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.xchat.org/"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ppc ~sparc alpha"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 	python? ( >=dev-lang/python-2.2-r7 )

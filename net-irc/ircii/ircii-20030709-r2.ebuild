@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20030709-r2.ebuild,v 1.5 2004/01/30 17:49:45 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20030709-r2.ebuild,v 1.6 2004/05/29 16:16:27 pvdabeel Exp $
 
 IUSE="ipv6"
 
@@ -15,7 +15,7 @@ RDEPEND="sys-libs/ncurses"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~sparc"
+KEYWORDS="x86 amd64 ~sparc ~ppc"
 
 src_compile() {
 
