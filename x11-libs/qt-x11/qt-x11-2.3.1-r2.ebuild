@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1-r1.ebuild,v 1.1 2001/10/07 08:05:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1-r2.ebuild,v 1.1 2001/10/08 23:46:54 danarmak Exp $
 # note: this is the new revision that installs into /usr
 
 S=${WORKDIR}/qt-${PV}
@@ -73,7 +73,7 @@ src_compile() {
 
 src_install() {
 
-        QTBASE=/usr
+        QTBASE=/usr/lib/${P}
 	cd ${S}
 	into $QTBASE
 	dobin bin/*
@@ -92,6 +92,11 @@ src_install() {
 	dodoc ANNOUNCE FAQ LICENSE.QPL MANIFEST PLATFORMS
 	dodoc PORTING README*
         cp -af ${S}/doc/html ${D}/usr/doc/${P}
+	
+	cd ${D}
+	ln -s ${QTBASE} usr/lib/qt2
+	insinto /etc/env.d
+	doins ${FILESDIR}/90qt2
 
 }
 
