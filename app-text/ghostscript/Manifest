@@ -23,4 +23,4 @@ MD5 86e743552ef51cab2ef4c70728ad6954 files/lxm3200-cups.diff 1256
 MD5 f9c4821dac99d593d62405379f6653ec files/png.diff 426
 MD5 54ca592ef6bd375f6fdd214786962efb files/ps2epsi-security.patch 281
 MD5 e065254ba9e798e4177ed687b6b5ee2e files/gs7.05.6-random.patch 478
-MD5 e6464077e601f6f64b405b1547fe1d6f files/digest-ghostscript-7.05.6-r3 220
+MD5 c63f6d71a403dbc72265831386b84eb0 files/digest-ghostscript-7.05.6-r3 359
