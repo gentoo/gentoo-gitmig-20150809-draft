@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2-movie/mpeg2-movie-1.5.ebuild,v 1.4 2001/08/11 03:50:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2-movie/mpeg2-movie-1.5.ebuild,v 1.5 2002/04/12 17:04:31 spider Exp $
 
 P=mpeg2-movie-${PV}
 A=mpeg2_movie-${PV}.tar.gz
@@ -11,7 +11,7 @@ SRC_URI="http://heroinewarrior.com/${A}"
 HOMEPAGE="http://heroinewarrior.com/mpeg2movie.php3"
 
 DEPEND="virtual/glibc
-        >=dev-libs/glib-1.2.10
+	=dev-libs/glib-1.2*
 	>=media-libs/libpng-1.0.7
 	>=dev-lang/nasm-0.98"
 
