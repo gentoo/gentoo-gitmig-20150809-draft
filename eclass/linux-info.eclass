@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.19 2005/01/18 21:38:59 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.20 2005/01/23 20:47:42 eradicator Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -53,6 +53,8 @@ ECLASS=linux-info
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup
 
+inherit toolchain-funcs
+
 # Overwritable environment Var's
 # ---------------------------------------
 KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
@@ -69,19 +71,12 @@ esac
 # Pulled from eutils as it might be more useful only being here since
 # very few ebuilds which dont use this eclass will ever ever use these functions
 set_arch_to_kernel() {
-	export PORTAGE_ARCH="${ARCH}"
-	case ${ARCH} in
-		x86)	export ARCH="i386";;
-		amd64)	export ARCH="x86_64";;
-		hppa)	export ARCH="parisc";;
-		mips)	export ARCH="mips";;
-		*)	export ARCH="${ARCH}";;
-	esac
+	export ARCH="$(tc-arch-kernel)"
 }
 
 # set's ARCH back to what portage expects
 set_arch_to_portage() {
-	export ARCH="${PORTAGE_ARCH}"
+	export ARCH="$(tc-arch)"
 }
 
 

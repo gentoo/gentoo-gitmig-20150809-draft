@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.141 2005/01/12 00:21:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.142 2005/01/23 20:47:42 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1494,6 +1494,7 @@ set_arch_to_kernel() {
 		amd64)	export ARCH="x86_64";;
 		hppa)	export ARCH="parisc";;
 		mips)	export ARCH="mips";;
+		sparc)	export ARCH="$(tc-arch-kernel)";; # Yeah this is ugly, but it's even WORSE if you don't do this.  linux-info.eclass's set_arch_to_kernel is fixed, but won't get used over this one!
 		*)	export ARCH="${ARCH}";;
 	esac
 }
