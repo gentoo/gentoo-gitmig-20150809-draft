@@ -1,21 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.8.ebuild,v 1.8 2005/01/23 11:24:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.8.ebuild,v 1.1 2005/01/23 11:24:46 eradicator Exp $
 
-IUSE=""
+IUSE="X"
+
+inherit gnuconfig eutils
+
+MY_P=${P/_rc/rc}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
 SRC_URI="mirror://alsaproject/tools/${P}.tar.bz2"
 
 SLOT="0.9"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 
-DEPEND=">=media-libs/alsa-lib-0.9.8
+DEPEND=">=media-libs/alsa-lib-1.0.0
 	virtual/alsa
-	=x11-libs/fltk-1.1*
-	=x11-libs/gtk+-1.2*"
+	X? ( =x11-libs/fltk-1.1*
+	     =x11-libs/gtk+-1.2* )"
 
 # This is a list of the tools in the package.
 # Some of the tools don't make proper use of CFLAGS, even though
@@ -26,21 +31,30 @@ DEPEND=">=media-libs/alsa-lib-0.9.8
 # environment to a space-separated list of tools that you want to build.
 # For example:
 #
-#   env ALSA_TOOLS='as10k1 ac3dec' emerge alsa-tools 
+#   env ALSA_TOOLS='as10k1 ac3dec' emerge alsa-tools
 #
-[ x"${ALSA_TOOLS}" = x ] &&
-ALSA_TOOLS="ac3dec as10k1 envy24control hdspmixer mixartloader rmedigicontrol \
-	sb16_csp seq/sbiload vxloader"
-# The below two tools do not compile with linux-headers from 2.4 kernels
-# as of alsa-tools-0.9.7, so I removed them from the list for now.
-# Bug reports have been sent to the alsa-devel mailing list.
-#
-# hdsploader
-# sscape_ctl
+if [ -z "${ALSA_TOOLS}" ]; then
+	if use X; then
+		ALSA_TOOLS="ac3dec as10k1 envy24control hdspconf hdsploader hdspmixer \
+		            mixartloader rmedigicontrol sb16_csp seq/sbiload sscape_ctl \
+		            us428control usx2yloader vxloader"
+	else
+		ALSA_TOOLS="ac3dec as10k1 hdsploader \
+		            mixartloader sb16_csp seq/sbiload sscape_ctl \
+		            us428control usx2yloader vxloader"
+	fi
+fi
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-1.0.6-gcc34.patch
+	gnuconfig_update
+}
 
 src_compile() {
 	# hdspmixer requires fltk
-	export LDFLAGS="-L/usr/lib/fltk-1.1"
+	export LDFLAGS="-L/usr/$(get_libdir)/fltk-1.1"
 	export CPPFLAGS="-I/usr/include/fltk-1.1"
 
 	# hdspmixer is missing depconf - copy from the hdsploader directory
@@ -51,7 +65,7 @@ src_compile() {
 	do
 		cd "${S}/${f}"
 		econf --with-kernel="${KV}" || die "configure failed"
-		emake || die "make failed"
+		make || die "make failed"
 	done
 }
 
@@ -65,7 +79,7 @@ src_install() {
 
 		# Install the text documentation
 		local doc
-		for doc in README TODO ChangeLog COPYING AUTHORS
+		for doc in README TODO ChangeLog AUTHORS
 		do
 			if [ -f "${doc}" ]
 			then
