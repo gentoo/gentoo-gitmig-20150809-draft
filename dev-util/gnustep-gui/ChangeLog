@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/gnustep-gui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/ChangeLog,v 1.15 2004/06/25 02:34:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/ChangeLog,v 1.16 2004/07/22 21:47:01 fafhrd Exp $
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  gnustep-gui-0.8.5-r1.ebuild, gnustep-gui-0.8.7.ebuild,
+  gnustep-gui-0.8.8.ebuild:
+  Changing the eclass to gnustep-old
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  gnustep-gui-0.8.5-r1.ebuild, gnustep-gui-0.8.7.ebuild,
+  gnustep-gui-0.8.8.ebuild:
+  Changing the eclass to gnustep-old
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> gnustep-gui-0.8.8.ebuild:
   Stable on alpha.

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-guile/gnustep-guile-1.1.1.ebuild,v 1.5 2004/07/14 23:37:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-guile/gnustep-guile-1.1.1.ebuild,v 1.6 2004/07/22 21:47:26 fafhrd Exp $
 
-inherit gnustep
+inherit gnustep-old
 
 DESCRIPTION="GNUstep Guile bridge"
 HOMEPAGE="http://www.gnustep.org"
