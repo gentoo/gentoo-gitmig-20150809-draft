@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.15 2004/10/04 22:25:14 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.16 2004/11/30 22:30:40 stkn Exp $
 
 inherit eutils flag-o-matic
 
@@ -57,6 +57,9 @@ src_unpack() {
 
 	# fix to compile on gcc-3.4 (bug #56951)
 	epatch ${FILESDIR}/${P}-gcc34.diff
+
+	# fix for 2.6 headers (bug #72448)
+	epatch ${FILESDIR}/${P}-ixjuser.diff
 }
 
 src_compile() {
