@@ -1,11 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.24 2004/11/15 14:20:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.25 2004/11/15 19:59:24 dragonheart Exp $
 
   15 Nov 2004; Daniel Black <dragonheart@gentoo.org> seahorse-0.7.5.ebuild:
   added app-editors/gedit-2.8.0 dependancy. Thanks to Jerome Poggi
-  <Jerome.Poggi@hsc.fr>. gedit is block due to ppc64 keyword. Remove the 
-  condition once bug 71282 is fixed.
+  <Jerome.Poggi@hsc.fr>.
 
 *seahorse-0.7.5 (14 Nov 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.2 2004/11/15 14:20:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.3 2004/11/15 19:59:24 dragonheart Exp $
 
 inherit gnome2
 
@@ -17,7 +17,7 @@ RDEPEND="virtual/x11
 	>=app-crypt/gpgme-1.0.0
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
-	!ppc64? ( >=app-editors/gedit-2.8.0 )"
+	>=app-editors/gedit-2.8.0"
 
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3
