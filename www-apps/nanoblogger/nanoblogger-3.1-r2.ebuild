@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.1-r1.ebuild,v 1.2 2005/02/01 17:14:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.1-r2.ebuild,v 1.1 2005/02/18 16:17:39 ka0ttic Exp $
 
-inherit bash-completion
+inherit bash-completion eutils
 
 DESCRIPTION="Small and simple weblog engine written in Bash for the command-line"
 HOMEPAGE="http://nanoblogger.sourceforge.net/"
@@ -22,6 +22,7 @@ src_unpack() {
 		-e 's|^\(BASE_DIR=\).*$|\1"/usr/share/nanoblogger"|' \
 		-e 's|"$BASE_DIR"/\(nb\.conf\)|/etc/\1|' \
 			nb || die "sed nb failed"
+	epatch ${FILESDIR}/${P}-fix-rss2.diff
 }
 
 src_install() {
