@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.1.ebuild,v 1.4 2004/10/16 05:47:27 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.1.ebuild,v 1.5 2004/11/17 04:49:46 ndimiduk Exp $
+
+inherit eutils
 
 DESCRIPTION="GNU libsigsegv is a library for handling page faults in user mode."
 HOMEPAGE="ftp://ftp.gnu.org/pub/gnu/libsigsegv/"
@@ -11,8 +13,6 @@ KEYWORDS="x86 ~ppc ~ppc-macos"
 IUSE=""
 
 DEPEND="virtual/libc"
-
-inherit eutils
 
 src_compile() {
 	use ppc-macos && \
