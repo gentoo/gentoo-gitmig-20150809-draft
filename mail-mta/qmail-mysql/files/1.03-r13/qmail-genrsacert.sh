@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/files/1.03-r13/qmail-genrsacert.sh,v 1.1 2004/05/30 10:52:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/files/1.03-r13/qmail-genrsacert.sh,v 1.2 2004/07/18 03:28:23 dragonheart Exp $
 # Robin H. Johnson <robbat2@gentoo.org> - October 17, 2003
 # This file generates the static temporary RSA keys needed for qmail to encrypt messages
 # It should be run from a crontab, once a day is ok on low load machines, but
