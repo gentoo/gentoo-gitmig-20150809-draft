@@ -15,3 +15,5 @@ FETCHCOMMAND="/usr/bin/curl --connect-timeout 15 -# -o \${DISTDIR}/\${FILE} \${U
 RESUMECOMMAND="/usr/bin/curl --connect-timeout 15 -# -C - -o \${DISTDIR}/\${FILE} \${URI}"
 
 FEATURES="-sandbox userpriv"
+
+USE="emboss"
