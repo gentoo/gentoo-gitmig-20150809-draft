@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.20 2003/03/28 23:36:02 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.21 2003/03/31 07:34:44 lostlogic Exp $
+
+*modutils-2.4.25 (31 Mar 2003)
+
+  31 Mar 2003; Brandon Low <lostlogic@gentoo.org> modutils-2.4.25.ebuild:
+  bump
 
 *modutils-2.4.24 (24 Mar 2003)
 
