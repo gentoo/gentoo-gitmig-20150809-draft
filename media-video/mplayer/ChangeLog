@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.70 2003/08/03 22:21:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.71 2003/08/09 23:20:54 azarah Exp $
+
+*mplayer-0.90-r5 (10 Aug 2003)
+
+  10 Aug 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90-r5.ebuild:
+  Some cleanups - do not try to autodetect video/audio settings, as MPlayer does
+  it by itself these days. Change a few things as suggested by Gabucino
+  (--enable-3dfx is broken, and --enable-dynamic-plugins could have issues).
+  Eventually add the new default Skin of MPlayer (Blue).
 
   04 Aug 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90-r4.ebuild,
   files/mplayer-0.90-ppc-benh-2.patch:
