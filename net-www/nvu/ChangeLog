@@ -1,12 +1,15 @@
 # ChangeLog for net-www/nvu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.6 2004/10/18 03:34:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.7 2004/10/21 01:59:57 chriswhite Exp $
 
   17 Oct 2004; Jason Wever <weeve@gentoo.org> nvu-0.50.ebuild:
   Added ~sparc keyword.
 
   18 Oct 2004; Joseph Jezak <josejx@gentoo.org> nvu-0.50.ebuild:
   Added ~ppc.
+
+  21 Oct 2004; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Updated metadata with <longdescription>.
 
   16 Oct 2004; Chris White <chriswhite@gentoo.org> files/mozconfig,
   +files/nvu-0.50-dir.patch, +files/nvu-0.50-nvu.patch, nvu-0.50.ebuild:

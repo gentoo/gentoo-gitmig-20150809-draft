@@ -5,4 +5,7 @@
 <maintainer>
   <email>chriswhite@gentoo.org</email>
 </maintainer>
+<longdescription>
+A WYSIWYG type editor, similiar to Dreamweaver for *nix systems.  It's based on the mozilla layout system Gecko.
+</longdescription>
 </pkgmetadata>
