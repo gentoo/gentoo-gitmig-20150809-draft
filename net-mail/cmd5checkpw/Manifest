@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 17fef3aed370a07dc5a608dd6bd66392 ChangeLog 2225
 MD5 aacd8f2db592426a19a8f21256399c34 cmd5checkpw-0.22-r1.ebuild 1399
-MD5 35bd71163f6ed85cd1a63810a33e66ed cmd5checkpw-0.22-r2.ebuild 1514
+MD5 926d3488f973b3dc13412c011a59b338 ChangeLog 2339
+MD5 bbf6d9fe13c3fe87b3902232143c6112 cmd5checkpw-0.22-r2.ebuild 1513
 MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r2 67
-MD5 970ef1c2abdda72f534516f43e89f20a files/euid.diff 931
-MD5 a3bc1c985b3e114b9e1a4b9a8b7810da files/poppasswd 84
 MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r1 67
+MD5 a3bc1c985b3e114b9e1a4b9a8b7810da files/poppasswd 84
+MD5 970ef1c2abdda72f534516f43e89f20a files/euid.diff 931
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCD9tRugEuf3OQ0akRAtAxAJ99MIJKff7JGh9rYM0A4kMoS3rzfgCfZToL
+j2e458VLQ/w86IwBKWotZa8=
+=8Xie
+-----END PGP SIGNATURE-----
