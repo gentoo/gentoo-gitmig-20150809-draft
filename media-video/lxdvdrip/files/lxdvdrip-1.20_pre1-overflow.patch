@@ -1,5 +1,5 @@
---- lxdvdrip.c_old	2004-09-19 14:49:07.013638160 +0900
-+++ lxdvdrip.c	2004-09-19 14:50:06.330620608 +0900
+--- lxdvdrip.c_old      2004-09-19 14:49:07.013638160 +0900
++++ lxdvdrip.c  2004-09-19 15:21:42.472363248 +0900
 @@ -333,7 +333,7 @@
      char szPfad[4096];
      int i;
@@ -9,3 +9,12 @@
      strcpy (szVerzeichnis, "");
      for (i=0; i<strlen(szPfad); i++)
      {
+@@ -1033,7 +1033,7 @@
+
+         // Auslesen der Parameter aus einer Datei
+         // Zuerst lokal versuchen
+-        strcpy (szBefehl, getenv ("HOME"));
++        strncpy (szBefehl, getenv ("HOME"), 4096);
+         strcat (szBefehl, "/.lxdvdrip.conf");
+         fConf=fopen(szBefehl, "r");
+         if (!fConf)

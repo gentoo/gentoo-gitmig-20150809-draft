@@ -1,6 +1,10 @@
 # ChangeLog for media-video/lxdvdrip
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.6 2004/09/19 15:36:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.7 2004/09/19 16:01:38 chriswhite Exp $
+
+  19 Sep 2004; Chris White <chriswhite@gentoo.org>
+  files/lxdvdrip-1.20_pre1-overflow.patch:
+  Fixed the overflow patch.  Thanks to Florian Schilhabel for input on that.
 
 *lxdvdrip-1.20_pre1-r1 (19 Sep 2004)
 
