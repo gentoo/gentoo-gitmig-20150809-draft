@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.2 2004/07/18 00:43:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.3 2004/08/26 20:33:11 s4t4n Exp $
 
 inherit eutils
 
@@ -15,13 +15,19 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 src_unpack() {
 
 	unpack ${A}
 	cd ${S}
+
+	# Let's honour Gentoo CFLAGS
 	epatch ${FILESDIR}/${PN}-cflags.patch
+
+	# Fix for #61704, cannot compile with gcc 3.4.1:
+	# it's a trivial change and does not affect other compilers...
+	epatch ${FILESDIR}/${PN}-gcc-3.4.patch
 
 }
 
