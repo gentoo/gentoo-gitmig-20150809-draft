@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.3 2003/07/22 04:47:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.4 2003/10/14 03:07:44 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
 # This eclass supports the common-lisp-controller installation of many
 # Common Lisp libraries
 
+inherit common-lisp-common
 ECLASS=common-lisp
 INHERITED="$INHERITED $ECLASS"
 
@@ -38,3 +39,8 @@ common-lisp-system-symlink() {
 		done
 	fi
 }
+
+# Local Variables: ***
+# mode: shell-script ***
+# tab-width: 4 ***
+# End: ***
