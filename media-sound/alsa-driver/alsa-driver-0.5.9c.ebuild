@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.9c.ebuild,v 1.4 2000/10/04 16:04:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.9c.ebuild,v 1.5 2000/10/27 20:43:29 drobbins Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -45,7 +45,7 @@ src_install() {
 pkg_postinst() {
     . /etc/rc.d/config/functions
     if [ "${ROOT}" = "/" ] ; then
-        einfo "Creating sounddevices..."
+        echo "Creating sounddevices..."
         /usr/sbin/snddevices
     fi
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r1.ebuild,v 1.5 2000/10/05 01:32:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r1.ebuild,v 1.6 2000/10/27 20:43:29 drobbins Exp $
 
 P=samba-2.0.7
 A=${P}.tar.gz
@@ -65,7 +65,7 @@ pkg_config() {
 
     source ${ROOT}/etc/rc.d/config/functions
 
-    einfo "Generating symlinks..."
+    echo "Generating symlinks..."
 
     ${ROOT}/usr/sbin/rc-update add samba
 

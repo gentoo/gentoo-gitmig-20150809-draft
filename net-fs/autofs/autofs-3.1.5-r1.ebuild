@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.5-r1.ebuild,v 1.3 2000/09/15 20:09:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.5-r1.ebuild,v 1.4 2000/10/27 20:43:29 drobbins Exp $
 
 P=autofs-3.1.5
 A=${P}.tar.bz2
@@ -37,7 +37,7 @@ src_install() {
 
 pkg_config() {
   . ${ROOT}/etc/rc.d/config/functions
-  einfo "Activating autofs..."
+  echo "Activating autofs..."
   ${ROOT}/usr/sbin/rc-update add autofs
 }
 

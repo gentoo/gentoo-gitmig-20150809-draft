@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.1.9.1-r1.ebuild,v 1.5 2000/09/15 20:09:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.1.9.1-r1.ebuild,v 1.6 2000/10/27 20:43:29 drobbins Exp $
 
 P=nfs-utils-0.1.9.1
 A=${P}.tar.gz
@@ -32,11 +32,11 @@ pkg_config() {
   . ${ROOT}/etc/rc.d/config/functions
   . ${ROOT}/var/db/pkg/install.config
 
-  einfo "Generating symlinks..."
+  echo "Generating symlinks..."
   ${ROOT}/usr/sbin/rc-update add nfsserver
   if [ -n "${nfsserver_home}" ]
   then
-    einfo "Export Homedirs..."
+    echo "Export Homedirs..."
     cp ${ROOT}/etc/exports ${ROOT}/etc/exports.orig
     sed -e "s:^#nfsserver_home:${nfsserver_home}:" \
 	-e "s/eth0_net/${eth0_net}/" \
