@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/files/xindice,v 1.1 2003/04/11 20:10:21 phosphan Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting xindice..."
+	start-stop-daemon --pidfile /var/run/xindice/xindice.pid\
+		--start --background --user xindice --chuid xindice\
+		--exec /opt/xindice/start	
+	eend $?
+}
+
+
+stop() {
+	ebegin "Stopping xindice..."
+	start-stop-daemon --pidfile /var/run/xindice/xindice.pid --stop	--retry 10
+	eend $?
+}
