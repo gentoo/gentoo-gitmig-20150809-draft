@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.13 2003/07/24 20:37:18 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r3.ebuild,v 1.1 2003/07/31 16:19:17 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -42,7 +42,7 @@ strip-flags
 export CFLAGS="${CFLAGS//-O?}"
 export CXXFLAGS="${CFLAGS//-O?}"
 
-EMVER="0.76.1"
+EMVER="0.76.4"
 IPCVER="1.0.3"
 
 PATCH_VER="1.0"
@@ -53,12 +53,12 @@ MY_PV2="${MY_PV1/eta}"
 S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
-	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
-	         http://downloads.mozdev.org/enigmail/ipc-${IPCVER}.tar.gz )"
+	crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
+	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="x86 ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -258,7 +258,7 @@ src_compile() {
 	then
 		myext="${myext},xmlterm"
 	fi
-	if [ -n "`use mozaccess-builtin`" ]
+	if [ -n "`use mozaccess`" ]
 	then
 		myext="${myext},access-builtin"
 	fi
