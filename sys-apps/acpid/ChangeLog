@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/acpid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.16 2004/06/24 21:57:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.17 2004/10/19 08:07:45 brix Exp $
+
+*acpid-1.0.4 (19 Oct 2004)
+
+  19 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +files/acpid-1.0.4-default, +files/acpid-1.0.4-default.sh,
+  +acpid-1.0.4.ebuild:
+  Version bump.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> acpid-1.0.2-r2.ebuild:
   Add inherit eutils
