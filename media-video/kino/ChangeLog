@@ -1,8 +1,11 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.4 2003/02/12 07:38:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.5 2003/03/13 01:32:31 hanno Exp $
 
 *kino-0.60 (06 Dez 2002)
+
+  13 Mar 2003; Hanno Boeck <hanno@gentoo.org> kino-0.6.ebuild :
+  Changed version to avoid conflicts with new version 0.6.4.
 
   06 Dez 2002; Hanno Boeck <hanno@gentoo.org> kino-0.60.ebuild :
   New version.

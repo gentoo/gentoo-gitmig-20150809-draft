@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.60.ebuild,v 1.3 2003/02/13 13:27:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.6.ebuild,v 1.1 2003/03/13 01:32:31 hanno Exp $
 
 # Kino 0.6 is newer than 0.51, but portage cannot handle this
 MY_PV="0.6"
