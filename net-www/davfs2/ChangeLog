@@ -1,6 +1,9 @@
 # ChangeLog for net-www/davfs2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/davfs2/ChangeLog,v 1.1 2003/04/17 21:46:39 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/davfs2/ChangeLog,v 1.2 2003/10/10 17:24:36 mholzer Exp $
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> davfs2-0.2.1.ebuild:
+  Added ssl with IUSE. Closes #25165.
 
 *davfs2-0.2.1 (17 Apr 2003)
 
