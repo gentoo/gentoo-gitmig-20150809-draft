@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 031b653b5285e8204ec72b707deb589c ChangeLog 609
-MD5 eaa41110abccb5861e9d91a74cea6d22 linux-atm-2.4.1.ebuild 856
+MD5 3c36e6c221588f8dcd3881c8b5806b8a linux-atm-2.4.1.ebuild 856
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 6a54ce48b2a9cb74b5b968847fe7a1ea files/digest-linux-atm-2.4.1 67
 MD5 377f9a635f2f11c0d0e8b5c6b83d14d7 files/2.4.1-gcc34.patch 1175
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA16DCHTu7gpaalycRAuVrAJ96ijG/qnzH6njLa14jDfnYWRp8tACfRrae
-PMdCu7LwXPeRoTBkqcAu7aw=
-=C6Y7
+iD8DBQFA16GhHTu7gpaalycRAiE/AJ9MZMSkcMjlJQ5Zx715DNUUDXI2tgCgt7PT
+sn3B/5c+qpTkgXIYMqGJ9g0=
+=WOUN
 -----END PGP SIGNATURE-----
