@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-systray
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.8 2004/07/20 23:44:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.9 2004/07/20 23:54:46 swegener Exp $
+
+*xchat-systray-2.4.5 (21 Jul 2004)
+
+  21 Jul 2004; Sven Wegener <swegener@gentoo.org> +xchat-systray-2.4.5.ebuild:
+  Version bump, closes bug #55610.
 
   21 Jul 2004; Sven Wegener <swegener@gentoo.org> xchat-systray-2.3.1.ebuild,
   xchat-systray-2.4.0.ebuild:
