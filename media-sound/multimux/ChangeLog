@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/multimux
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.1 2004/10/07 08:44:12 trapni Exp $
+
+  07 Oct 2004; Christian Parpart <trapni@gentoo.org> :
+  EBuild submitted by Stefan Briesenick <sbriesen@gmx.de>
+  I just changed foo.
+
