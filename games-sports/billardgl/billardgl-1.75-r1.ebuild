@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc. and Jordan Armstrong
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.1 2003/09/11 12:26:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.2 2003/11/28 23:56:04 mr_bones_ Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="A OpenGL billards game"
 SRC_URI="mirror://sourceforge/billardgl/BillardGL-${PV}.tar.gz"
 HOMEPAGE="http://www.billardgl.de/"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="amd64 x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
