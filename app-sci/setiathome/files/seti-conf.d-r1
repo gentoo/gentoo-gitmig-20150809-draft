@@ -1,0 +1,7 @@
+# Config file for /etc/init.d/setiathome
+
+# set up any options you want for setiathome here
+# for more info, `setiathome -h`
+SETIATHOME_OPTIONS="-nice 19"
+
+# this is the directory where setiathome's data files will be stored

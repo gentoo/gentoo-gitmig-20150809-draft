@@ -1,0 +1,31 @@
+#!/sbin/runscript
+
+checkconfig() {
+	if [ ! -e ${SETIATHOME_DIR} ]
+	then
+		einfo "Creating ${SETIATHOME_DIR}"
+		mkdir ${SETIATHOME_DIR}
+	fi
+
+	if [ ! -e ${SETIATHOME_DIR}/user_info.sah ]
+	then
+		einfo "Setting up SETI@home for the first time"
+		cd ${SETIATHOME_DIR}
+		setiathome -login
+	fi
+}
+
+start() {
+	checkconfig
+
+	ebegin "Starting SETI@home"
+	cd ${SETIATHOME_DIR}
+	./setiathome ${SETIATHOME_OPTIONS} >&/dev/null&
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping SETI@home"
+	killall setiathome
+	eend $?
+}
