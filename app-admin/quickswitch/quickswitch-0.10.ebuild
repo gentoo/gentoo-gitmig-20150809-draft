@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jerry A! <jerry@thehutt.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-0.10.ebuild,v 1.1 2001/12/07 18:00:05 jerrya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-0.10.ebuild,v 1.2 2001/12/07 19:25:53 jerrya Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Utility to switch network profiles on the fly"
@@ -18,7 +18,7 @@ src_install () {
 	dosed "s:/etc/switchto.last:/etc/quickswitch/switchto.last:" /usr/bin/switchto
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/net-switchto.rc6 net-switchto
+	newexe ${FILESDIR}/net.eth0-switchto.rc6 net.eth0-switchto
 
 	dodir /etc/quickswitch
 	insinto /etc/quickswitch
