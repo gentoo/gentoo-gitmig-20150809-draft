@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.5 2003/02/28 01:37:31 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0.ebuild,v 1.6 2003/03/10 21:44:07 mholzer Exp $
+
+inherit flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libfame is a video encoding library. (MPEG-1 and MPEG-4)"
@@ -12,6 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc"
 
 DEPEND="virtual/glibc"
+
+replace-flags "-fprefetch-loop-arrays" " "
 
 src_compile() {
 	local myconf
