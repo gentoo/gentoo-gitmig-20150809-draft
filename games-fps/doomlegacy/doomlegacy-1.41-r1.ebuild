@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.41-r1.ebuild,v 1.3 2003/12/29 15:57:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.41-r1.ebuild,v 1.4 2004/02/12 20:24:38 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -32,15 +32,21 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-makefile.patch
 
 	# disable logfile writing
-	sed -i 's:#define LOGMESSAGES::' doomdef.h || die 'sed doomdef.h failed'
+	sed -i \
+		-e 's:#define LOGMESSAGES::' doomdef.h \
+			|| die 'sed doomdef.h failed'
 
 	# make sure the games can find the wads/data files
 	sed -i \
-		"/#define DEFAULTWADLOCATION1/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" \
-		linux_x/i_system.c
+		-e "/#define DEFAULTWADLOCATION1/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" \
+			linux_x/i_system.c \
+				|| die "sed linux_x/i_system.c failed"
 
 	# move opengl lib file because it's not useful to anyone else
-	sed -i "s:\"r_opengl:\"${GAMES_LIBDIR}/${PN}/r_opengl:" linux_x/i_video_xshm.c
+	sed -i \
+		-e "s:\"r_opengl:\"${GAMES_LIBDIR}/${PN}/r_opengl:" \
+			linux_x/i_video_xshm.c \
+				|| die "sed linux_x/i_video_xshm.c failed"
 
 	cd linux_x/musserv
 	make -f Makefile.linux clean
