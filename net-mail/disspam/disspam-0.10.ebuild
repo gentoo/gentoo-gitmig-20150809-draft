@@ -1,6 +1,6 @@
-# Copyright 2002 Robin Cull
+# Copyright 2002 Robin Cull <robin@digitalevacuation.org>
 # Distributed under the terms of the GNU General Public License v2
-# Author: Robin Cull <robin@digitalevacuation.org>
+# $Header: /var/cvsroot/gentoo-x86/net-mail/disspam/disspam-0.10.ebuild,v 1.2 2002/07/24 02:34:48 agenkin Exp $
 
 DESCRIPTION="A Perl script that removes spam from POP3 mailboxes based on RBLs."
 HOMEPAGE="http://www.topfx.com/"
