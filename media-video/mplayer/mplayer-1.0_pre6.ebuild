@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.25 2005/02/06 15:28:08 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.26 2005/02/06 17:23:53 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	x86? (
 		divx4linux? (  >=media-libs/divx4linux-20030428 )
-		>=media-libs/win32codecs-20040916
+		avi? ( >=media-libs/win32codecs-20040916 )
 		)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -294,6 +294,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 	myconf="${myconf} $(use_enable real)"
+	myconf="${myconf} $(use_enable avi win32)"
 
 	#############
 	# Video Output #
@@ -399,16 +400,31 @@ src_compile() {
 
 	if use real
 	then
-		if [ -d /usr/$(get_libdir)/real ]
+		if use x86 || use amd64 && [ -d /usr/$(get_libdir)/real ]
 		then
-			REALLIBDIR="/usr/$(get_libdir)/real"
+				REALLIBDIR="/usr/$(get_libdir)/real"
 		else
-			eerror "Real libs not found!  Install win32codecs"
-			eerror "And ensure that real USE flag is enabled!"
-			die "Real libs not found"
+				eerror "Real libs not found!  Install win32codecs"
+				eerror "And ensure that real USE flag is enabled!"
+				die "Real libs not found"
+		fi
+		if use ppc || use sparc || use alpha
+		then
+			if [ -d /opt/RealPlayer9/Real/Codecs ]
+			then
+				einfo "Setting REALLIBDIR to /opt/RealPlayer9/Real/Codecs..."
+				REALLIBDIR="/opt/RealPlayer9/Real/Codecs"
+			elif [ -d /opt/RealPlayer8/Codecs ]
+			then
+				einfo "Setting REALLIBDIR to /opt/RealPlayer8/Codecs..."
+				REALLIBDIR="/opt/RealPlayer8/Codces"
+			else
+				eerror "Real libs not found!  Install realplayer"
+				die "Real libs not found"
+			fi
 		fi
 	fi
-
+	
 	if use xanim
 	then
 		myconf="${myconf} --with-xanimlibdir=/usr/lib/xanim/mods"
@@ -433,7 +449,6 @@ src_compile() {
 		--disable-runtime-cpudetection \
 		--enable-largefiles \
 		--enable-menu \
-		--enable-real \
 		--enable-network --enable-ftp \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
@@ -486,12 +501,10 @@ src_install() {
 		dosym mplayer /usr/bin/gmplayer
 	fi
 
-	if use gnome; then
-		insinto /usr/share/pixmaps
-		newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
-		insinto /usr/share/gnome/apps/Multimedia
-		doins ${FILESDIR}/mplayer.desktop
-	fi
+	insinto /usr/share/pixmaps
+	newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
+	insinto /usr/share/applications
+	doins ${FILESDIR}/mplayer.desktop
 
 	dodir /usr/share/mplayer/fonts
 	local x=
