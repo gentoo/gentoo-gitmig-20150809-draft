@@ -1,6 +1,29 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.102 2003/11/10 03:44:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.103 2003/11/16 17:02:51 azarah Exp $
+
+*glibc-2.3.1-r5 (16 Nov 2003)
+
+  16 Nov 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r9.ebuild,
+  glibc-2.3.1-r5.ebuild, glibc-2.3.2-r2.ebuild, glibc-2.3.2-r3.ebuild,
+  files/2.2.5/glibc-2.2.5-getgrouplist.patch,
+  files/2.3.1/glibc-2.3.1-ftw.patch,
+  files/2.3.1/glibc-2.3.1-getgrouplist.patch,
+  files/2.3.2/glibc-2.3.2-dl_execstack-PaX-support.patch,
+  files/2.3.2/glibc-2.3.2-iconvconfig-name_insert.patch,
+  files/2.3.2/glibc-2.3.2-propolice-guard-functions-v2.patch,
+  files/2.3.2/glibc-2.3.2-propolice-guard-functions.patch:
+  - A bug in the getgrouplist function can cause a buffer overflow if the size
+  of the group list is too small to hold all the user's groups.  More info can
+  be found at:  https://rhn.redhat.com/errata/RHSA-2003-325.html
+  - Fix a memory leak in ftw_dir
+  - To circumvent problems with propolice when linking binaries statically among
+  things, __guard and __guard_setup__stack_smash_handler is now in libc.so. More
+  info at: http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+  Thanks for helping in developing these patchsets goes to "moid" from the
+  Openbsd team.
+  - We do not want name_insert() in iconvconfig.c to be defined inside
+  write_output() as it causes issues with PaX.
 
   09 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
   Fix sscanf.c compilation.  This tiny patch can be found in 2.3.2 already.
