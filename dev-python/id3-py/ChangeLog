@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/id3-py
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.4 2004/06/25 01:31:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.5 2004/07/04 17:05:49 eradicator Exp $
+
+  04 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> id3-py-1.2.ebuild:
+  ~amd64.
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> id3-py-1.2.ebuild:
   Add missing IUSE.
