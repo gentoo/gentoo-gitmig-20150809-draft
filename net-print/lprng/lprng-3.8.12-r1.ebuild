@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.12-r1.ebuild,v 1.1 2003/06/14 14:07:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.12-r1.ebuild,v 1.2 2003/12/14 19:30:05 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,8 +15,12 @@ KEYWORDS="x86 ppc sparc alpha"
 SRC_URI="ftp://ftp.lprng.com/pub/${MY_PN}/${MY_PN}/${MY_PN}-${PV}.tgz"
 
 PROVIDE="virtual/lpr"
-DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
-RDEPEND="virtual/glibc !virtual/lpr"
+DEPEND="virtual/glibc
+	nls? ( sys-devel/gettext )
+	sys-apps/procps"
+RDEPEND="virtual/glibc
+	sys-apps/procps
+	!virtual/lpr"
 LICENSE="GPL-2 | Artistic"
 SLOT="0"
 
