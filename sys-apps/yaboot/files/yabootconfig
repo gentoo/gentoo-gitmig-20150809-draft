@@ -264,7 +264,7 @@ dualboot()
 
 	for i in $DRIVELIST
 	do
-		HFS=`mac-fdisk -l "/dev/$i" | grep '\<Apple_HFS\>' | cut -d" " -f1`
+		HFS=`mac-fdisk -l "/dev/$i" | grep '\<Apple_HFS\>' | grep -v "CDROM" | cut -d" " -f1`
 		for h in $HFS
 		do
 			if [ !-x `hpmount -r $h` > /dev/null 2>&1 ] ; then
