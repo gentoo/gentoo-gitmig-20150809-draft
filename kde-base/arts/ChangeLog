@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.124 2004/11/07 23:29:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.125 2004/11/14 18:11:03 lu_zero Exp $
+
+  14 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/arts-1.3.1-alsa-bigendian.patch, arts-1.3.1.ebuild:
+  Make arts use the proper alsa default on bigendian
 
   08 Nov 2004; Joseph Jezak <josejx@gentoo.org> arts-1.3.1.ebuild:
   Marked ppc stable.
