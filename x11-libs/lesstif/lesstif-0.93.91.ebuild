@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
-inherit libtool motif
+inherit libtool
 
 DESCRIPTION="An OSF/Motif(R) clone"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -67,9 +67,6 @@ src_install() {
 	mv ${D}/usr/include/Mrm/*.h ${D}/usr/include/Mrm/1.2/Mrm
 	mv ${D}/usr/include/Xm/*.h ${D}/usr/include/Xm/1.2/Xm
 	mv ${D}/usr/include/uil/*.{h,uil} ${D}/usr/include/uil/1.2/uil
-
-	cd ${D}/usr/include
-	motif_fix_headers 1.2
 
 
 	einfo "Fixing man pages"
