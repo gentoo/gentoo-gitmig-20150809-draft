@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.35 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.36 2004/07/04 12:13:07 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -84,18 +84,19 @@ ruby_econf() {
 	fi
 	if [ -f install.rb ] ; then
 		${RUBY} install.rb config --prefix=/usr "$@" \
-			|| die "install.rb config failed"
+			${EXTRA_ECONF} || die "install.rb config failed"
 		${RUBY} install.rb setup "$@" \
-			|| die "install.rb setup failed"
+			${EXTRA_ECONF} || die "install.rb setup failed"
 	fi
 	if [ -f setup.rb ] ; then
 		${RUBY} setup.rb config --prefix=/usr "$@" \
-			|| die "setup.rb config failed"
+			${EXTRA_ECONF} || die "setup.rb config failed"
 		${RUBY} setup.rb setup "$@" \
-			|| die "setup.rb setup failed"
+			${EXTRA_ECONF} || die "setup.rb setup failed"
 	fi
 	if [ -f extconf.rb ] ; then
-		${RUBY} extconf.rb "$@" || die "extconf.rb failed"
+		${RUBY} extconf.rb "$@" \
+			${EXTRA_ECONF} || die "extconf.rb failed"
 	fi
 }
 
@@ -117,14 +118,14 @@ ruby_einstall() {
 
 	if [ -f install.rb ] ; then
 		${RUBY} install.rb config --prefix=${D}/usr "$@" \
-			|| die "install.rb config failed"
+			${EXTRA_ECONF} || die "install.rb config failed"
 		${RUBY} install.rb install "$@" \
-			|| die "install.rb install failed"
+			${EXTRA_ECONF} || die "install.rb install failed"
 	elif [ -f setup.rb ] ; then
 		${RUBY} setup.rb config --prefix=${D}/usr "$@" \
-			|| die "setup.rb config failed"
+			${EXTRA_ECONF} || die "setup.rb config failed"
 		${RUBY} setup.rb install "$@" \
-			|| die "setup.rb install failed"
+			${EXTRA_ECONF} || die "setup.rb install failed"
 	elif [ -f extconf.rb -o -f Makefile ] ; then
 		make DESTDIR=${D} "$@" install || die "make install failed"
 	else
