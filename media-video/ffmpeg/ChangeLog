@@ -1,10 +1,15 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.8 2002/12/14 19:38:32 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.9 2003/01/04 21:04:13 method Exp $
+
+*ffmpeg-0.4.6 (3 Jan 2003)
+  
+  3 Jan 2003; Joshua Brindle <method@gentoo.org> ffmpeg-0.4.6.ebuild :
+  version bump, this is a release non-snapshot version, recommend upgrade
 
 *ffmpeg-0.4.5.20021212 (13 Dec 2002)
 
-  14 Dec 2002; Joshua Brindle <method@snu.edu> ffmpeg-0.4.5.20021212.ebuild :
+  14 Dec 2002; Joshua Brindle <method@gentoo.org> ffmpeg-0.4.5.20021212.ebuild :
   Changing url to reflect where author moved his.
   
   13 Dec 2002; Bryon Roche <kain@gentoo.org> ffmpeg-0.4.5.20021212.ebuild :
