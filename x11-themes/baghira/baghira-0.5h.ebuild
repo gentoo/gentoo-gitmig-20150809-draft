@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.5f.ebuild,v 1.1 2004/09/07 16:25:30 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.5h.ebuild,v 1.1 2004/09/28 18:50:15 voxus Exp $
 
 inherit kde
 
