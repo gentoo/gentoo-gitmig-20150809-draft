@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.10.ebuild,v 1.4 2005/03/02 19:20:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.10.ebuild,v 1.5 2005/03/10 23:01:41 vapier Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm hppa m68k ia64 ppc ppc64 s390 sh sparc x86"
-inherit kernel-2
+inherit kernel-2 eutils
 detect_version
 
-SRC_URI="${KERNEL_URI}"
+SRC_URI="${KERNEL_URI} mirror://gentoo/linux-2.6.10-m68k-headers.patch.bz2"
 KEYWORDS="-* ~amd64 ~arm ~hppa ~ia64 ~m68k ~sparc ~s390 ~sh ~x86" # Untested, by using this you are agreeing to file bugs to plasmaroo, aren't you? :-)
 
 UNIPATCH_LIST="
@@ -22,6 +22,11 @@ UNIPATCH_LIST="
 src_unpack() {
 	tc-arch-kernel
 	kernel-2_src_unpack
+
+	# This should always be used but it has a bunch of hunks which 
+	# apply to include/linux/ which i'm unsure of so only use with
+	# m68k for now (dont want to break other arches)
+	[[ $(tc-arch) == "m68k" ]] && epatch "${DISTDIR}"/linux-2.6.10-m68k-headers.patch.bz2
 
 	# Fixes ... all the mv magic is to keep sed from dumping 
 	# ugly warnings about how it can't work on a directory.
