@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fdftk
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/ChangeLog,v 1.1 2004/03/10 05:38:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/ChangeLog,v 1.2 2004/03/10 20:39:45 robbat2 Exp $
+
+  10 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  change the perl stuff around.
 
 *fdftk-6.0 (09 Mar 2004)
 
