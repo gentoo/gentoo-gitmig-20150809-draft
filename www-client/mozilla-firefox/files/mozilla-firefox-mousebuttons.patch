@@ -1,0 +1,445 @@
+Index: browser/app/profile/all.js
+===================================================================
+RCS file: /cvsroot/mozilla/browser/app/profile/all.js,v
+retrieving revision 1.84
+diff -u -r1.84 all.js
+--- browser/app/profile/all.js	18 Dec 2003 08:12:58 -0000	1.84
++++ browser/app/profile/all.js	20 Dec 2003 16:11:27 -0000
+@@ -527,6 +527,29 @@
+ pref("mousewheel.withaltkey.numlines",1);
+ pref("mousewheel.withaltkey.sysnumlines",false);
+ 
++pref("mousewheel.horizscroll.withnokey.action",2);
++pref("mousewheel.horizscroll.withnokey.numlines",-1);
++pref("mousewheel.horizscroll.withnokey.sysnumlines",true);
++pref("mousewheel.horizscroll.withcontrolkey.action",0);
++pref("mousewheel.horizscroll.withcontrolkey.numlines",1);
++pref("mousewheel.horizscroll.withcontrolkey.sysnumlines",true);
++pref("mousewheel.horizscroll.withshiftkey.action",0);
++pref("mousewheel.horizscroll.withshiftkey.numlines",1);
++pref("mousewheel.horizscroll.withshiftkey.sysnumlines",false);
++pref("mousewheel.horizscroll.withaltkey.action",2);
++pref("mousewheel.horizscroll.withaltkey.numlines",-1);
++pref("mousewheel.horizscroll.withaltkey.sysnumlines",false);
++
++pref("mousebuttonsextended.buttonlist", "67");
++pref("mousebuttonsextended.buttons.6.action.up", 2);
++pref("mousebuttonsextended.buttons.6.numlines.up", -1);
++pref("mousebuttonsextended.buttons.6.action.down", 2);
++pref("mousebuttonsextended.buttons.6.numlines.down", 1);
++pref("mousebuttonsextended.buttons.7.action.up", 2);
++pref("mousebuttonsextended.buttons.7.numlines.up", 1);
++pref("mousebuttonsextended.buttons.7.action.down", -1);
++pref("mousebuttonsextended.buttons.7.numlines.down", -1);
++
+ pref("profile.confirm_automigration",true);
+ pref("profile.allow_automigration", false);   // setting to false bypasses automigration in the profile code
+ 
+Index: modules/libpref/src/init/all.js
+===================================================================
+RCS file: /cvsroot/mozilla/modules/libpref/src/init/all.js,v
+retrieving revision 3.484
+diff -u -r3.484 all.js
+--- modules/libpref/src/init/all.js	16 Dec 2003 13:58:02 -0000	3.484
++++ modules/libpref/src/init/all.js	20 Dec 2003 16:11:27 -0000
+@@ -755,6 +755,29 @@
+ pref("mousewheel.withaltkey.numlines",1);
+ pref("mousewheel.withaltkey.sysnumlines",false);
+ 
++pref("mousewheel.horizscroll.withnokey.action",2);
++pref("mousewheel.horizscroll.withnokey.numlines",-1);	
++pref("mousewheel.horizscroll.withnokey.sysnumlines",true);
++pref("mousewheel.horizscroll.withcontrolkey.action",0);
++pref("mousewheel.horizscroll.withcontrolkey.numlines",1);
++pref("mousewheel.horizscroll.withcontrolkey.sysnumlines",true);
++pref("mousewheel.horizscroll.withshiftkey.action",0);
++pref("mousewheel.horizscroll.withshiftkey.numlines",1);
++pref("mousewheel.horizscroll.withshiftkey.sysnumlines",false);
++pref("mousewheel.horizscroll.withaltkey.action",2);
++pref("mousewheel.horizscroll.withaltkey.numlines",-1);
++pref("mousewheel.horizscroll.withaltkey.sysnumlines",false);
++
++pref("mousebuttonsextended.buttonlist", "67");
++pref("mousebuttonsextended.buttons.6.action.up", 2);
++pref("mousebuttonsextended.buttons.6.numlines.up", -1);
++pref("mousebuttonsextended.buttons.6.action.down", 2);
++pref("mousebuttonsextended.buttons.6.numlines.down", 1);
++pref("mousebuttonsextended.buttons.7.action.up", 2);
++pref("mousebuttonsextended.buttons.7.numlines.up", 1);
++pref("mousebuttonsextended.buttons.7.action.down", -1);
++pref("mousebuttonsextended.buttons.7.numlines.down", -1);
++
+ pref("profile.confirm_automigration",true);
+ // profile.migration_behavior determines how the profiles root is set
+ // 0 - use NS_APP_USER_PROFILES_ROOT_DIR
+Index: widget/src/gtk/nsWidget.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/widget/src/gtk/nsWidget.cpp,v
+retrieving revision 1.288
+diff -u -r1.288 nsWidget.cpp
+--- widget/src/gtk/nsWidget.cpp	25 Sep 2003 05:34:25 -0000	1.288
++++ widget/src/gtk/nsWidget.cpp	20 Dec 2003 16:11:27 -0000
+@@ -20,6 +20,8 @@
+  * the Initial Developer. All Rights Reserved.
+  *
+  * Contributor(s):
++ *   Andrew Wellington <proton@wiretapped.net>
++ *   Graham Dennis <u3952328@anu.edu.au>
+  *
+  * Alternatively, the contents of this file may be used under the terms of
+  * either the GNU General Public License Version 2 or later (the "GPL"), or 
+@@ -1884,9 +1886,17 @@
+       Release();
+       return;
+ 
+-      // Single-click default.
++      // Single-click default. <-- Perhaps the default should be
++      //                           decided elsewhere?
+     default:
+-      eventType = NS_MOUSE_LEFT_BUTTON_DOWN;
++      // was: eventType = NS_MOUSE_LEFT_BUTTON_DOWN;
++      {
++        nsExtendedMouseEventStatus *eMEStatus;
++        eMEStatus = (nsExtendedMouseEventStatus*) &event.clickCount;
++        eventType = NS_USER_DEFINED_EVENT;
++        eMEStatus->event = nsExtendedMouseEventStatus_down;
++        eMEStatus->button = aGdkButtonEvent->button;
++      }
+       break;
+     }
+     break;
+@@ -1955,8 +1965,17 @@
+     // LEFT_BUTTON_UP to happen
+     return;
+ 
++    // Left-click default. <-- Perhaps the default should be
++    //                         decided elsewhere?
+   default:
+-    eventType = NS_MOUSE_LEFT_BUTTON_UP;
++    // was: eventType = NS_MOUSE_LEFT_BUTTON_UP;
++    {
++      nsExtendedMouseEventStatus *eMEStatus;
++      eMEStatus = (nsExtendedMouseEventStatus*) &event.clickCount;
++      eventType = NS_USER_DEFINED_EVENT;
++      eMEStatus->event = nsExtendedMouseEventStatus_up;
++      eMEStatus->button = aGdkButtonEvent->button;
++    }
+     break;
+ 	}
+ 
+@@ -2082,6 +2101,7 @@
+ 						 nsMouseEvent &anEvent,
+ 						 PRUint32   aEventType)
+ {
++  PRUint16 clickCount;
+   anEvent.message = aEventType;
+   anEvent.widget  = this;
+ 
+@@ -2100,16 +2120,23 @@
+     switch(aGdkButtonEvent->type)
+       {
+       case GDK_BUTTON_PRESS:
+-        anEvent.clickCount = 1;
++        clickCount = 1;
+         break;
+       case GDK_2BUTTON_PRESS:
+-        anEvent.clickCount = 2;
++        clickCount = 2;
+         break;
+       case GDK_3BUTTON_PRESS:
+-        anEvent.clickCount = 3;
++        clickCount = 3;
+         break;
+       default:
+-        anEvent.clickCount = 1;
++        clickCount = 1;
++      }
++    if (aEventType!=NS_USER_DEFINED_EVENT) {
++      anEvent.clickCount = clickCount;
++    } else {
++      nsExtendedMouseEventStatus *eMEStatus;
++      eMEStatus = (nsExtendedMouseEventStatus*) &anEvent.clickCount;
++      eMEStatus->realClickCount = clickCount;
+     }
+ 
+   }
+Index: widget/public/nsGUIEvent.h
+===================================================================
+RCS file: /cvsroot/mozilla/widget/public/nsGUIEvent.h,v
+retrieving revision 3.98
+diff -u -r3.98 nsGUIEvent.h
+--- widget/public/nsGUIEvent.h	1 May 2003 01:01:03 -0000	3.98
++++ widget/public/nsGUIEvent.h	20 Dec 2003 16:11:27 -0000
+@@ -22,6 +22,8 @@
+  * Contributor(s):
+  *   Makoto Kato  <m_kato@ga2.so-net.ne.jp>
+  *   Dean Tessman <dean_tessman@hotmail.com>
++ *   Andrew Wellington <proton@wiretapped.net>
++ *   Graham Dennis <u3952328@anu.edu.au>
+  *
+  * Alternatively, the contents of this file may be used under the terms of
+  * either the GNU General Public License Version 2 or later (the "GPL"), or 
+@@ -416,6 +418,22 @@
+   nsDragDropEventStatus_eDrop  
+ };
+ 
++/**
++ * Event status for an extended mouse button event
++ * The event (called clickCount) is type PRUint32:
++ * hence this struct will be of the same size
++ */
++typedef struct {
++  PRUint16 realClickCount;
++  PRUint8  button;
++  PRUint8  event;  // eg button went up / down
++} nsExtendedMouseEventStatus;
++
++enum {
++  /// different types of events
++  nsExtendedMouseEventStatus_up,
++  nsExtendedMouseEventStatus_down
++};
+ 
+ /**
+  * GUI MESSAGES
+Index: content/events/src/nsEventStateManager.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/content/events/src/nsEventStateManager.cpp,v
+retrieving revision 1.466
+diff -u -r1.466 nsEventStateManager.cpp
+--- content/events/src/nsEventStateManager.cpp	19 Nov 2003 02:23:25 -0000	1.466
++++ content/events/src/nsEventStateManager.cpp	20 Dec 2003 16:11:28 -0000
+@@ -22,6 +22,9 @@
+  * Contributor(s):
+  *   Makoto Kato  <m_kato@ga2.so-net.ne.jp>
+  *   Dean Tessman <dean_tessman@hotmail.com>
++ *   Andrew Wellington <proton@wiretapped.net>
++ *   Graham Dennis <u3952328@anu.edu.au>
++ *   Thomas Kleffel <thomas.kleffel@maintech.de>
+  *
+  * Alternatively, the contents of this file may be used under the terms of
+  * either the GNU General Public License Version 2 or later (the "GPL"), or
+@@ -1911,6 +1914,96 @@
+       }
+     }
+     break;
++  case NS_USER_DEFINED_EVENT: // In reality an extended mouse event
++    {
++      nsExtendedMouseEventStatus *eMEStatus;
++      nsMouseEvent *mEvent = (nsMouseEvent* )aEvent;
++      eMEStatus = (nsExtendedMouseEventStatus *)&mEvent->clickCount;
++      nsresult rv;
++      nsXPIDLCString buttonList;
++      char ourbutton=0;
++      nsCAutoString keyBase, keySuffix;
++      PRInt32 action;
++      PRInt32 numLines;
++
++      rv = getPrefBranch();
++      if (NS_FAILED(rv)) return rv;
++      
++      // adding 2 below so the maximum number of mouse buttons we can
++      // support is 99 but to represent the buttons in buttonlist
++      // we're going to map 10->35 onto 'a'->'z'
++      // the storage actually supports 256
++      if(eMEStatus->button > 35) break;
++      if(eMEStatus->button > 9)
++        ourbutton = 'a' + eMEStatus->button -9;
++      else
++        ourbutton = '0' + eMEStatus->button;
++      rv = mPrefBranch->GetCharPref("mousebuttonsextended.buttonlist", 
++		                    getter_Copies(buttonList));
++      if(NS_FAILED(rv)) break;
++      if(!PL_strchr(buttonList.get(), ourbutton)) break;
++      keyBase = NS_LITERAL_CSTRING("mouseextended.buttons.");
++      keyBase.Append(ourbutton);
++      keySuffix = (eMEStatus->event == nsExtendedMouseEventStatus_up)
++	      ? NS_LITERAL_CSTRING(".up")
++	      : NS_LITERAL_CSTRING(".down");
++      rv = mPrefBranch->GetIntPref(PromiseFlatCString
++		  (keyBase + NS_LITERAL_CSTRING(".action") + keySuffix).get(),
++		  &action);
++      if(NS_FAILED(rv)) break;
++      rv = mPrefBranch->GetIntPref(PromiseFlatCString
++		  (keyBase + NS_LITERAL_CSTRING(".numlines") + keySuffix).get(),
++		  &numLines);
++      if(NS_FAILED(rv)) break;
++      
++      switch (action) {
++
++#if 0   // Because we would have to create a msEvent
++      case MOUSE_SCROLL_N_LINES:
++      case MOUSE_SCROLL_PAGE:
++        {
++          DoWheelScroll(aPresContext, aTargetFrame, msEvent, numLines,
++                        (msEvent->scrollFlags & nsMouseScrollEvent::kIsHorizontal),
++                        (action == MOUSE_SCROLL_PAGE), PR_FALSE);
++
++        }
++        break;
++#endif 
++      case MOUSE_SCROLL_HISTORY:
++        {
++          nsCOMPtr<nsISupports> pcContainer;
++          mPresContext->GetContainer(getter_AddRefs(pcContainer));
++          if (pcContainer) {
++            nsCOMPtr<nsIWebNavigation> webNav(do_QueryInterface(pcContainer));
++            if (webNav) {
++              // negative numLines to go back one step, nonneg to go forward
++              if (numLines < 0)
++                 webNav->GoBack();
++              else
++                 webNav->GoForward();
++            }
++          }
++        }
++        break;
++
++      case MOUSE_SCROLL_TEXTSIZE:
++        {
++          // Exclude form controls and XUL content.
++          nsIContent *content = aTargetFrame->GetContent();
++          if (content &&
++              !content->IsContentOfType(nsIContent::eHTML_FORM_CONTROL) &&
++              !content->IsContentOfType(nsIContent::eXUL))
++            {
++              ChangeTextSize((numLines > 0) ? 1 : -1);
++            }
++        }
++        break;
++
++      default:  // Including -1 (do nothing)
++        break;
++      }          
++    }
++    break;
+   case NS_MOUSE_SCROLL:
+     if (nsEventStatus_eConsumeNoDefault != *aStatus) {
+       nsresult rv;
+@@ -1920,55 +2013,58 @@
+       nsMouseScrollEvent *msEvent = (nsMouseScrollEvent*) aEvent;
+       PRInt32 action = 0;
+       PRInt32 numLines = 0;
+-      PRBool aBool;
+-      if (msEvent->isShift) {
+-        mPrefBranch->GetIntPref("mousewheel.withshiftkey.action", &action);
+-        mPrefBranch->GetBoolPref("mousewheel.withshiftkey.sysnumlines",
+-                                 &aBool);
+-        if (aBool) {
+-          numLines = msEvent->delta;
+-          if (msEvent->scrollFlags & nsMouseScrollEvent::kIsFullPage)
+-            action = MOUSE_SCROLL_PAGE;
+-        }
+-        else
+-          mPrefBranch->GetIntPref("mousewheel.withshiftkey.numlines",
+-                                  &numLines);
+-      } else if (msEvent->isControl) {
+-        mPrefBranch->GetIntPref("mousewheel.withcontrolkey.action", &action);
+-        mPrefBranch->GetBoolPref("mousewheel.withcontrolkey.sysnumlines",
+-                                 &aBool);
+-        if (aBool) {
+-          numLines = msEvent->delta;
+-          if (msEvent->scrollFlags & nsMouseScrollEvent::kIsFullPage)
+-            action = MOUSE_SCROLL_PAGE;          
+-        }
+-        else
+-          mPrefBranch->GetIntPref("mousewheel.withcontrolkey.numlines",
+-                                  &numLines);
+-      } else if (msEvent->isAlt) {
+-        mPrefBranch->GetIntPref("mousewheel.withaltkey.action", &action);
+-        mPrefBranch->GetBoolPref("mousewheel.withaltkey.sysnumlines", &aBool);
+-        if (aBool) {
+-          numLines = msEvent->delta;
+-          if (msEvent->scrollFlags & nsMouseScrollEvent::kIsFullPage)
+-            action = MOUSE_SCROLL_PAGE;
+-        }
+-        else
+-          mPrefBranch->GetIntPref("mousewheel.withaltkey.numlines",
+-                                  &numLines);
+-      } else {
+-        mPrefBranch->GetIntPref("mousewheel.withnokey.action", &action);
+-        mPrefBranch->GetBoolPref("mousewheel.withnokey.sysnumlines", &aBool);
+-        if (aBool) {
+-          numLines = msEvent->delta;
+-          if (msEvent->scrollFlags & nsMouseScrollEvent::kIsFullPage)
+-            action = MOUSE_SCROLL_PAGE;
+-        }
+-        else
+-          mPrefBranch->GetIntPref("mousewheel.withnokey.numlines", &numLines);
+-      }
++      PRBool useSysNumLines;
+ 
+-      if ((msEvent->delta < 0) && (numLines > 0))
++      NS_NAMED_LITERAL_CSTRING(prefmousewheel, "mousewheel");
++      NS_NAMED_LITERAL_CSTRING(prefhoriz, ".horizscroll");
++      NS_NAMED_LITERAL_CSTRING(prefvert, "");
++      NS_NAMED_LITERAL_CSTRING(prefnodir, "");
++      NS_NAMED_LITERAL_CSTRING(prefnokey, ".withnokey");
++      NS_NAMED_LITERAL_CSTRING(prefshiftkey, ".withshiftkey");
++      NS_NAMED_LITERAL_CSTRING(prefctrlkey, ".withcontrolkey");
++      NS_NAMED_LITERAL_CSTRING(prefaltkey, ".withaltkey");
++      NS_NAMED_LITERAL_CSTRING(prefaction, ".action");
++      NS_NAMED_LITERAL_CSTRING(prefsysnumlines, ".sysnumlines");
++      NS_NAMED_LITERAL_CSTRING(prefnumlines, ".numlines");
++
++      nsCString prefDirection;
++      nsCString prefModifier;
++
++      //if delta==0 we have nothing to do!
++      if(msEvent->delta == 0) break;
++
++      prefDirection = prefnodir;
++      switch(msEvent->scrollFlags) {
++        case nsMouseScrollEvent::kIsHorizontal:
++          prefDirection = prefhoriz; break;
++        case nsMouseScrollEvent::kIsVertical:
++          prefDirection = prefvert; break;
++      }
++
++      prefModifier = prefnokey;
++      if(msEvent->isAlt)       prefModifier = prefaltkey;
++      if(msEvent->isControl)   prefModifier = prefctrlkey;
++      if(msEvent->isShift)     prefModifier = prefshiftkey;
++
++      rv = mPrefBranch->GetIntPref(PromiseFlatCString(prefmousewheel + 
++			  prefDirection + prefModifier + prefaction).get(),
++		      &action);
++      if(NS_FAILED(rv)) break;
++
++      rv = mPrefBranch->GetIntPref(PromiseFlatCString(prefmousewheel + 
++			  prefDirection + prefModifier + prefnumlines).get(),
++		      &numLines);
++
++      rv = mPrefBranch->GetBoolPref(PromiseFlatCString(prefmousewheel + 
++			  prefDirection + prefModifier + prefsysnumlines).get(),
++		      &useSysNumLines);
++      if(NS_FAILED(rv)) break;
++
++      // if numlines == 0 take the system value
++      if(numLines == 0 || useSysNumLines) 
++        numLines = msEvent->delta;
++      // invert the given value if the system delta is negative
++      else if(msEvent->delta < 0)
+         numLines = -numLines;
+ 
+       switch (action) {
+@@ -1990,7 +2086,8 @@
+           if (pcContainer) {
+             nsCOMPtr<nsIWebNavigation> webNav(do_QueryInterface(pcContainer));
+             if (webNav) {
+-              if (msEvent->delta > 0)
++              // negative numLines to go back one step, nonneg to go forward
++              if (numLines < 0)
+                  webNav->GoBack();
+               else
+                  webNav->GoForward();
+@@ -2007,7 +2104,8 @@
+               !content->IsContentOfType(nsIContent::eHTML_FORM_CONTROL) &&
+               !content->IsContentOfType(nsIContent::eXUL))
+             {
+-              ChangeTextSize((msEvent->delta > 0) ? 1 : -1);
++              // As before numLines is used to give the sign of the event
++              ChangeTextSize((numLines < 0) ? -1 : 1);
+             }
+         }
+         break;

@@ -1,0 +1,47 @@
+Index: toolkit/components/satchel/src/nsFormHistory.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/toolkit/components/satchel/src/nsFormHistory.cpp,v
+retrieving revision 1.13
+diff -u -9 -p -w -r1.13 nsFormHistory.cpp
+--- toolkit/components/satchel/src/nsFormHistory.cpp	17 Jun 2004 00:13:16 -0000	1.13
++++ toolkit/components/satchel/src/nsFormHistory.cpp	24 Jun 2004 06:56:29 -0000
+@@ -734,35 +734,38 @@ nsFormHistory::AutoCompleteSearch(const 
+       if (RowMatch(row, aInputName, aInputValue, &value)) {
+         matchingRows.AppendElement(row);
+         matchingValues.AppendElement(value);
+       }
+     } while (row);
+ 
+     // Turn auto array into flat array for quick sort, now that we
+     // know how many items there are
+     PRUint32 count = matchingRows.Count();
++
++    if (count > 0) {
+     PRUint32* items = new PRUint32[count];
+     PRUint32 i;
+     for (i = 0; i < count; ++i)
+       items[i] = i;
+ 
+-    NS_QuickSort(items, count, sizeof(nsIMdbRow*),
++      NS_QuickSort(items, count, sizeof(PRUint32),
+                  SortComparison, &matchingValues);
+ 
+     for (i = 0; i < count; ++i) {
+       // Place the sorted result into the autocomplete result
+       result->AddRow((nsIMdbRow *)matchingRows[items[i]]);
+       
+       // Free up these strings we owned.
+       delete (PRUnichar *) matchingValues[i];
+     }
+           
+     delete[] items;
++    }
+     
+     PRUint32 matchCount;
+     result->GetMatchCount(&matchCount);
+     if (matchCount > 0) {
+       result->SetSearchResult(nsIAutoCompleteResult::RESULT_SUCCESS);
+       result->SetDefaultIndex(0);
+     } else {
+       result->SetSearchResult(nsIAutoCompleteResult::RESULT_NOMATCH);
+       result->SetDefaultIndex(-1);

@@ -1,0 +1,141 @@
+#!/bin/bash
+#
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/files/firefox,v 1.1 2005/03/18 19:47:25 seemant Exp $
+
+# Set MOZILLA_NEWTYPE to "window" in your environment if you prefer
+# new Firefox windows instead of new tabs
+newtype=${MOZILLA_NEWTYPE:-"window"}
+
+# Make sure necessary progs are in the PATH
+PATH=/usr/bin:/bin:/usr/X11R6/bin:$PATH
+
+# Support both firefox and mozilla
+case "$0" in
+  *fox*)
+    export MOZILLA_FIVE_HOME="/usr/lib/MozillaFirefox"
+    remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+    mozbin=$MOZILLA_FIVE_HOME/firefox
+    grepfor=firefox-bin
+    ;;
+
+  *mozilla*)
+    export MOZILLA_FIVE_HOME="/usr/lib/mozilla"
+    remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+    # This is the old mozilla.sh which used to be installed as /usr/bin/mozilla.
+    # I have no idea what parts of it should be kept/dropped so I'm just calling
+    # it for now.
+    mozbin=$MOZILLA_FIVE_HOME/mozilla.sh
+    grepfor=mozilla-bin
+    ;;
+esac
+
+# Validate the args and extract the urls
+args=()
+urls=()
+while [[ $# -ne 0 ]] ; do
+  if [[ $1 == -* ]] ; then
+    case "${1#-}" in
+      height|width|CreateProfile|P|UILocale|contentLocale|remote|edit|chrome)
+        args=("${args[@]}" "$1" "$2")
+        shift 2 ;;
+      *)
+        args=("${args[@]}" "$1")
+        shift 1 ;;
+    esac
+  else
+    # check for relative path to a file, transform to absolute path
+    if [[ $1 != *://* && $1 != /* && -e $1 ]]; then
+      urls=("${urls[@]}" "file://$PWD/$1")
+    else
+      urls=("${urls[@]}" $1)
+    fi
+    shift
+  fi
+done
+
+# Try to start in an existing session; check all screens
+declare -a screens=(
+  $(xdpyinfo | awk '
+    /^name of display:/ { 
+      disp = substr($NF, 0, match($NF, /\.[^.]*$/)-1)
+    }
+    /^number of screens:/ {
+      for (i = 0; i < $NF; i++) printf("%s.%d\n", disp, i)
+    }')
+  )
+
+# Attempt to fix bug 39797 by making sure MozillaFirefox is running
+# on the DISPLAY prior to calling mozilla-xremote-client.  The
+# problem here is that mozilla-xremote-client will return a zero
+# exit status if it contacts a Thunderbird-0.3 instance, even though
+# Thunderbird can't handle the openURL request.  :-(
+#
+# Note: This seems to be fixed with Thunderbird-0.4, which rejects the
+# openURL request appropriately.
+declare -a candidates=()
+for s in $DISPLAY "${screens[@]}"; do 
+  if DISPLAY=$s xwininfo -root -tree | grep -q "$grepfor"; then
+    candidates=("${candidates[@]}" $s)
+  fi
+done
+
+# Make sure we'll get at least an empty window/tab
+[[ ${#urls[@]} == 0 ]] && urls=('')
+
+# Handle multiple URLs by looping over the xremote call
+for u in "${urls[@]}"; do
+
+  # Try mozilla-xremote-client on each candidate screen.
+  # Only use mozilla-xremote-client if we have no other args (which
+  # must be passed to the browser binary).
+  if [[ ${#candidates[@]} > 0 && ${#args[*]} == 0 ]]; then
+    for s in "${candidates[@]}"; do 
+      DISPLAY=$s $remote "openURL($u, new-$newtype)" && break
+    done
+    retval=$?
+  else
+    # simulate mozilla-xremote-client's response when it can't find an instance
+    retval=2
+  fi
+
+  # 2 = No running windows found, so start a new instance
+  # 3 = Browser is running, but doesn't handle openURL command
+  #     (or it might be unresponsive)
+  if [[ $retval -eq 2 || $retval -eq 3 ]] ; then
+
+    # Handle case of multiple URLs
+    if [[ ${#urls[@]} > 1 ]]; then
+      $mozbin "${args[@]}" "$u" &
+      if [[ -x /usr/bin/xtoolwait ]]; then
+        xtoolwait sleep 10
+      else
+        sleep 10   # totally arbitrary without xtoolwait! :-(
+      fi
+      candidates=$DISPLAY       # next time through, use $remote
+      args=()                   # and drop the args
+      continue
+    fi
+
+    # Handle case of single URL
+    $mozbin "${args[@]}" "$u" &
+    break
+
+  elif [[ $retval -eq 1 ]]; then
+    echo "Unable to connect to X server" >&2
+  elif [[ $retval -ne 0 ]]; then
+    echo "Unknown error $retval from mozilla-xremote-client" >&2
+  fi
+
+done
+
+# Will only wait here if firefox was started by this script
+if ! wait; then
+  retval=$?
+  echo "${mozbin##*/} exited with non-zero status ($?)" >&2
+fi
+
+exit $retval
+
+# vim:expandtab sw=2:
