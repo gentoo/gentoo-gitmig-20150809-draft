@@ -3,6 +3,7 @@ MD5 9e67b1100b68849d6bac089dc6cd9db4 zlib-1.1.4-r4.ebuild 1336
 MD5 7b50a7e4820f5c74ff1d42a59597d3ad zlib-1.2.1.ebuild 1284
 MD5 a1835c2df00dc4900aa1a9b25059762b zlib-1.1.4-r3.ebuild 1259
 MD5 77f4ef87bd2f79d85a3c093011cfde96 ChangeLog 3190
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 a99957dc7ed74f72f833af10fd786352 files/zlib-1.1.4-build-fPIC.patch 2157
 MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1 63
 MD5 f84d68bd9a614ad5495a369cb258cf8d files/zlib-1.2.1-glibc.patch 395
