@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-dev-sources/vserver-dev-sources-1.9.3.17.ebuild,v 1.1 2005/01/07 12:28:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-dev-sources/vserver-dev-sources-1.9.3.17.ebuild,v 1.2 2005/01/07 14:19:27 hollow Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -12,10 +12,8 @@ KV_FULL="${OKV}${EXTRAVERSION}"
 S="${WORKDIR}/linux-${KV_FULL}"
 
 # workaround, since detect_version in kernel-2.eclass is somewhat broken
-KV_MAJOR=$(echo ${OKV} | cut -d. -f1)
-KV_MINOR=$(echo ${OKV} | cut -d. -f2)
-KV_PATCH=$(echo ${OKV} | cut -d. -f3-)
-KV_PATCH=${KV_PATCH/[-_]*/}
+KV_MAJOR=2
+KV_MINOR=6
 
 DESCRIPTION="vserver patched sources for the ${OKB} kernel branch"
 HOMEPAGE="http://www.linux-vserver.org"

@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 82cfe8a660dfd80e9c763d4f190e76b7 ChangeLog 430
 MD5 aa56cf15a7bbeb714ab4dae1e8c670e5 metadata.xml 546
-MD5 d262b3a0684a2a7ca5fc45cd61fa3a13 vserver-dev-sources-1.9.3.17.ebuild 1094
+MD5 a8c4e879bb4a2c2e3703dad984d0209d vserver-dev-sources-1.9.3.17.ebuild 973
 MD5 975dae5565719e96d9095ea9144b32df files/digest-vserver-dev-sources-1.9.3.17 140
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB3oySmPFBzbX68WERAsU3AJkBBViV8JG5HbCT4DGYco+TByMINgCeKl40
-Nc0gajZEFQtOm6sld/lKGeM=
-=tYFm
+iD8DBQFB3ppgmPFBzbX68WERAs9kAKCVVdBoFtpHPUVCdPthblxi23eKQwCeKMZR
+sNqEymyX0YpwZVbwDXwhMf4=
+=d/IV
 -----END PGP SIGNATURE-----
