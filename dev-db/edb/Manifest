@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 97f3df92b5a6dfa76c6261144a02f628 ChangeLog 1344
-MD5 dc5884f3903e1557abac37f9755781a9 edb-9999.ebuild 657
+MD5 6e390d14d0cea21aa291e8a9b726b178 edb-9999.ebuild 647
 MD5 7b7bb9ff3fff0585393ecc068c14fd1b edb-1.0.5.ebuild 662
 MD5 2d0647a67387b6483b9e24bafb1d794d metadata.xml 602
 MD5 dc5884f3903e1557abac37f9755781a9 edb-1.0.5.20041016.ebuild 657
@@ -12,7 +12,7 @@ MD5 13ecaed0340754c2f29536c347de15f4 files/digest-edb-1.0.5.20041016 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBeBwfHTu7gpaalycRAlA4AKCoYc41ugnKLDgrrur96aG/6hVsTQCeIZyI
-A59zhuwMUZqM9Ps03FzbTTA=
-=RmYo
+iD8DBQFBeBxAHTu7gpaalycRAsqnAJ9WdrO8WNSeKsRIsUEzCCEq2IE8mwCgjbBT
+jUH5jgb2VcZHSkqFR7fpfQk=
+=cbZr
 -----END PGP SIGNATURE-----
