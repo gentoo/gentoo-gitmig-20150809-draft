@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.3 2004/03/25 01:41:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.4 2004/03/29 15:07:24 aliz Exp $
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -40,10 +40,6 @@ src_compile() {
 	local myconf
 	local audios
 	local interfaces
-
-	use amd64 && ( epatch ${FILESDIR}/gnuconfig_update.patch
-		epatch ${FILESDIR}/long-64bit.patch
-		gnuconfig_update )
 
 	interfaces="dynamic,ncurses,emacs,vt100"
 
