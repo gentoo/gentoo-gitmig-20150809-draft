@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.4.ebuild,v 1.17 2005/02/13 02:16:43 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.4.ebuild,v 1.18 2005/02/13 15:01:09 greg_g Exp $
 
 inherit eutils
 
 DESCRIPTION="A free implementation of the unicode bidirectional algorithm"
-HOMEPAGE="http://fribidi.sourceforge.net/"
+HOMEPAGE="http://freedesktop.org/Software/FriBidi"
 SRC_URI="mirror://sourceforge/fribidi/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
