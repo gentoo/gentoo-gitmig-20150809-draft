@@ -1,4 +1,4 @@
-MD5 c450a16ec25d459fd54f649441272de4 libddmpeg-1.5.ebuild 973
-MD5 e12ef99730bd936a053891a6bb61be67 ChangeLog 347
+MD5 f05f60157369261dcabe7cb12d90ed51 ChangeLog 466
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 5354b2013fc8a7e14ed741548c826806 files/digest-libddmpeg-1.5 64
+MD5 d7397ffc102cad11d29d6d3c8dd55797 libddmpeg-1.6.ebuild 973
+MD5 d1788f494a9b92493a3a4662b9516442 files/digest-libddmpeg-1.6 64
