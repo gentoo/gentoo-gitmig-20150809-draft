@@ -1,8 +1,11 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.10 2003/03/30 21:08:16 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.11 2003/04/06 20:21:26 zwelch Exp $
 
 *bind-tools-9.2.2 (04 Mar 2002)
+
+  06 Apr 2003; Zach Welch <zwelch@gentoo.org> bind-tools-9.2.2.ebuild:
+  add arm keyword
 
   30 Mar 2003; Christian Birchinger <joker@gentoo.org>
   bind-tools-9.2.2.ebuild:
