@@ -1,128 +1,77 @@
 <?xml version='1.0'?>
 <guide link="/doc/build.html">
-<title>Gentoo Linux 1.0_rc5 Build CD Installation</title>
+<title>Gentoo Linux 1.0_rc6 "from source" (build) CD Installation</title>
 <author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
-<author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
+<author title="Author">Chris Houser</author>
 <author title="Author"><mail link="jerry@gentoo.org">Jerry Alexandratos</mail></author>
 <author title="Ghost"><mail link="g2boojum@gentoo.org">Grant Goodyear</mail></author>
 <abstract>
-These instructions step you through the process of installing Gentoo Linux 1.0_rc5 using
+These instructions step you through the process of installing Gentoo Linux 1.0_rc6 using
 our minimal build CD.  Using this method, the complete system is built from scratch using
 sources that are automatically downloaded from the Internet.  This build CD install method
 will work with any x86-compatible system.
 </abstract>
 
-<version>1.0</version>
-<date>2 July 2001</date>
+<version>1.1</version>
+<date>31 August 2001</date>
 
 <chapter>
 <title>About the Install</title>
 <section>
 <body>
 
-<p>The Gentoo Linux 1.0_rc5 ISO release is based upon a new <c>isolinux</c>-based
+<p>The Gentoo Linux 1.0_rc6 ISO release is based upon a new <c>isolinux/zdisk</c>-based
 boot process.  This new boot CD will boot from nearly any modern IDE CD-ROM drive,
-as well as almost any modern SCSI CD-ROM.  We've included support for the following
-SCSI controllers: Adaptec (all), Buslogic (all), Initio, ICP Vortex, IBM ServeRAID,
-NCR, Symbios, Tekram and more.  Pretty much any modern SCSI controller should be
-supported.</p>
+as well as almost any modern SCSI CD-ROM.  Included on the CD-ROM is Linux support for
+IDE (built-in to the kernel) as well as support for all SCSI devices (available as 
+modules).  In addition, we provide modules for literally every kind of network card
+that Linux supports.</p>
 
-<p>These instructions step you through the process of installing Gentoo Linux 1.0_rc5 using
-our minimal build CD.  Using this method, the complete system is built from scratch using
-sources that are automatically downloaded from the Internet.  This build CD install method
-will work with any x86-compatible system; to begin the install process, first grab the 42Mb
-build CD ISO image from
-<uri>http://www.ibiblio.org/gentoo/releases/1.0_rc5/isos/gentoo-ix86-build-1.0_rc5-r4.iso</uri>. 
+<p>To install from the build CD, you will need to have a 486+ processor, and ideally at
+least 64 Megabytes of RAM.  To begin the install process, first grab the 15Mb
+build CD ISO image (<path>build-ix86-1.0_rc6-r8.iso</path> is the latest at the time this
+article was written) from
+<uri>http://www.ibiblio.org/gentoo/snapshots/build/ix86-linux-gnu/</uri>.  Then, create
+your own CD-ROM using this image and your preferred CD burning software.
 </p>
 
 </body>
 </section>
 </chapter>
 <chapter>
-<title>Download and burn</title>
+<title>Booting</title>
 <section>
 <body>
-<p>First, download and burn the ISO image (link above) and boot your system with the CD in the drive.  At
-the <c>login:</c> prompt, type <c>root</c> and hit <e>Enter</e>.</p>
+<p>Now go ahead and boot the CD; you'll be greeted with a bunch of text and a <c>boot:</c>
+prompt at the bottom of the screen.  At this prompt, hit enter, and Linux will begin to load
+from the CD.</p>
+<p>Next, you'll be greeted with a small list of commands available on the boot CD, including
+<c>e3pi</c> (a pico editor clone) and the <c>help</c> command.  At this point, you are now in
+the minimal boot CD Linux environment.  You should have a root ("<c>#</c>") prompt on the current
+console, and can also open new consoles by typing alt-f2, alt-f3, 
+etc and then hitting enter.</p>
+
 </body>
 </section>
 </chapter>
+
 <chapter>
-<title>Configure installation networking</title>
+<title>Load kernel modules</title>
 <section>
-<title>Hardware configuration</title>
 <body>
-<p>
-We need to setup just enough networking so that we can download
-sources for the system build.
-</p>
+
+<p>We're almost ready to begin installing Gentoo Linux, but first we need take the necessary steps
+so that the kernel recognizes our network cards, and optionally any SCSI hardware that is in our
+system.  To view a list of all available network card modules, type <c>ls /lib/modules/*/kernel/drivers/net/*</c>.
+To load a particular module, type:</p>
+
 <pre>
-# <i>cd /etc/rc.d/config</i>
-# <i>cp OFF_inet.eth0 inet.eth0</i>
-# <i>vim inet.eth0</i>
-# <i>vim /etc/resolv.conf</i>
-# <i>modprobe 8139too</i> <comment>(replace 8139too with your module)</comment>
-# <i>source inet.eth0</i>
-# <i>netup</i>
-# <i>/sbin/ifconfig</i>
+# <i>insmod /lib/modules/*/kernel/drivers/net/pcnet32.o</i>
+	<comment>(replace pcnet32 with your NIC module)</comment>
 </pre>
-<note>At the moment the only editor installed by default is <c>vim</c>;
-we'll be adding an additional easier-to-use simpler editor for 1.0_rc6.
-</note>
-<p>Look in the <path>/etc/rc.d/config</path> directory; you'll see a file
-called <path>OFF_inet.eth0</path>.  Copy this file to <path>inet.eth0</path>, and edit the top part of it
-so that it contains the IP address settings you want to use on your primary
-ethernet card (the one you will use to connect to the internet).  
-Look in <path>/lib/modules</path> for the ethernet module
-specific to your particular ethernet card, and 
-load it in the kernel using <c>modprobe</c>.
-Source <path>inet.eth0</path> to make the <c>netup</c> and <c>netdown</c>
-functions accessible, and then use <c>netup</c> to bring up the network
-card.
-</p>
-<pre caption="/sbin/ifconfig for a working network card">
-eth0      Link encap:Ethernet  HWaddr 00:50:BA:8F:61:7A
-          inet addr:192.168.0.2  Bcast:192.168.0.255  Mask:255.255.255.0
-          inet6 addr: fe80::50:ba8f:617a/10 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:1498792 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:1284980 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:1984 txqueuelen:100
-          RX bytes:485691215 (463.1 Mb)  TX bytes:123951388 (118.2 Mb)
-          Interrupt:11
-</pre>
-<p>
-The <c>/sbin/ifconfig</c> command should show (hopefully!) 
-that your network card is working
-(look for <e>UP</e> and <e>RUNNING</e> in the output).
-</p>
-<note>
-If you dynamically obtain your IP address from DHCP then instead 
-copy <path>OFF_inet.dhcp_eth0</path>
-to <path>inet.dhcp_eth0</path>.  You might be able to get away
-with no editing whatsoever, unless your ISP requires you to include
-a hostname when using DHCP.  In that case add a <c>-h hostname</c>
-flag to the dhcpcd command line in inet.dhcp_eth0.
-</note>
-<note>
-If you have a static ppp link, you can copy the <path>inet.eth0</path> file to
-<path>inet.ppp0</path>, and insert the appropriate commands in the
-<c>netup()</c> and <c>netdown()</c> functions. 
-</note>
-</body>
-</section>
-<section>
-<title>/etc/resolv.conf</title>
-<body>
-<p>This file contains DNS server and domain information.  Here's a template to follow:
-</p><pre>
-domain mydomain.com
-nameserver 10.0.0.1
-nameserver 10.0.0.2
-</pre>
-<p>Later you're going to copy this file to the system you're about to build, 
-so you may as well get it right now.
-</p>
+
+<p>Now, if you want to be able to access any SCSI hardware, you will need to load the appropriate
+modules from /lib/modules, again using <c>insmod</c>.</p>
 </body>
 </section>
 </chapter>
@@ -130,15 +79,8 @@ so you may as well get it right now.
 <title>Set up partitions</title>
 <section>
 <body>
-
-<note>At this point, you should create your partitions, LVM logical volumes or
-   software RAID volumes, as desired.  LVM is supported, and we will have 
-   instructions on how to create an LVM initrd soon.  Until then, the LVM 
-   option is only for the Sistina guys and those who are really LVM-saavy :)
-   <c>fdisk</c> and <c>cfdisk</c> are at your disposal.  Make sure to format your swap
-   partition using <c>mkswap</c>; we'll use this swap area in a bit.  Now,
-   for a bit more detail about partition setup.
-</note>
+<p>Now that the kernel can see our network card and disk controllers, it's time to set up disk partitions
+for Gentoo Linux.</p>
 
 <p>Here's a quick overview of the standard Gentoo Linux partition layout.  We're going to create at
 least three partitions: a swap partition, a root partition (to hold the bulk of Gentoo Linux), and a special boot
@@ -155,44 +97,52 @@ bring your filesystem back to a consistent state (since you can't boot!)
 <p>Now, on to filesystem types.  We recommend that you install Gentoo Linux on
 a ReiserFS root filesystem because they're much faster and generally more
 reliable than their ext2 counterparts.  We've been using ReiserFS for a long
-time now and we believe that with kernel 2.4.4, it's not only "stable enough",
+time now and we believe that since kernel 2.4.4, it's not only "stable enough",
 but perfect for use in production environments.  However, if you want to use
-ext2 for your root and boot filesystems, we support this as well.  Support will
-likely be added for JFS in the near future, as well as XFS - as soon as it's
-ready.  Here are our recommended filesystem sizes and types:</p>
+ext2 for your root and boot filesystems, we support this as well.  Here are our recommended filesystem sizes and types:</p>
 
   <table>
   <tr>
   	<th>Partition</th>
 	<th>Size</th>
 	<th>Type</th>
+  	<th>example device</th>
   </tr>
   <tr>
   	<ti>boot partition, containing kernel(s) and boot information</ti>
-	<ti>~100 Megabytes</ti>
+	<ti>&gt;10 Megabytes</ti>
 	<ti>ext2 or reiserfs, if reiserfs then mount with <c>-o notail</c></ti>
+  	<ti>/dev/hda1</ti>
+  </tr>
+   <tr>
+  	<ti>swap partition (no longer a 128 Megabyte limit)</ti>
+	<ti>&gt;=2*Amount of RAM in this system</ti>
+	<ti>Linux swap</ti>
+  	<ti>/dev/hda2</ti>
   </tr>
   <tr>
   	<ti>root partition, containing main filesystem (/usr, /home, etc)</ti>
 	<ti>&gt;=1.5 Gigabytes</ti>
 	<ti>ReiserFS recommended, ext2 ok</ti>
+  	<ti>/dev/hda3</ti>
   </tr>
-  <tr>
-  	<ti>swap partition (no longer a 128 Megabyte limit)</ti>
-	<ti>&gt;=128 Megabytes</ti>
-	<ti>Linux swap</ti>
-  </tr>
-  </table>
+ </table>
 
-<pre caption="Creating the above filesystems">
-# <i>mkswap /dev/hda3</i>
+<note>At this point, create your partitions using fdisk.<!--, LVM logical volumes or
+   software RAID volumes, as desired.  LVM and software RAID is not yet supported
+   under 1.0_rc6. and we will have 
+   instructions on how to create an LVM initrd soon.  Until then, the LVM 
+   option is only for the Sistina guys and those who are really LVM-saavy :)
+   Use fdisk to create any partitions you need.-->
+</note>
+
+<p>Once you've created your partitions using <c>fdisk</c>, it's time to initialize
+the filesystems that will be used to house our data, as follows:</p>
+<pre>
 # <i>mkreiserfs /dev/hda1</i>
-# <i>mkreiserfs /dev/hda2</i>
+# <i>mkswap /dev/hda2</i>
+# <i>mkreiserfs /dev/hda3</i>
 </pre>
-<p>Once you've created your partitions using <c>fdisk</c> or <c>cfdisk</c>, be sure
-to <c>mkswap /dev/hda3</c> (replace <c>hda3</c> with the device set aside for swap).
-We'll need to activate this swap next.</p>
-
 </body>
 </section>
 </chapter>
@@ -200,103 +150,197 @@ We'll need to activate this swap next.</p>
 <title>Mount partitions</title>
 <section>
 <body>
+<p>
+Now, we'll activate our new swap, since we may need the additional virtual memory that
+provides later:
+</p>
 <pre>
-# <i>swapon /dev/hda3</i>
-# <i>mkdir /mnt/gentoo</i>
-# <i>mount /dev/hda2 /mnt/gentoo</i>
-# <i>mkdir /mnt/gentoo/boot</i>
+# <i>swapon /dev/hda2</i>
+</pre>
+<p>Next, we'll create the <path>/mnt/gentoo</path> and <path>/mnt/gentoo/boot</path> mountpoints,
+and we'll mount our filesystems to these mountpoints.  Note that we use the special <c>-o notail</c>
+option when we mount our ReiserFS boot partition.</p>
+<pre>
+# <i>mkdir -p /mnt/gentoo/boot</i>
+# <i>mount /dev/hda3 /mnt/gentoo</i>
 # <i>mount -o notail /dev/hda1 /mnt/gentoo/boot</i>
 </pre>
-<p>Now, mount your root partition to <path>/mnt/gentoo</path> and your boot partition to 
-   <path>/mnt/gentoo/boot</path> (create these <path>/mnt</path> dirs first).  If you are setting up Gentoo
+<p>If you are setting up Gentoo
    Linux with a separate <path>/usr</path> or <path>/var</path>, these would get mounted to
    <path>/mnt/gentoo/usr</path> and <path>/mnt/gentoo/var</path>, respectively.
 </p>
-   <impo>If your <e>boot</e> partition (the one holding the kernel) is Reiserfs, be sure to mount it
+   <impo>If your <e>boot</e> partition (the one holding the kernel) is ReiserFS, be sure to mount it
    with the <c>-o notail</c> option so GRUB gets properly installed.  Make sure 
    that <c>notail</c> ends up in your new <path>/etc/fstab</path> boot partition entry, too.
    We'll get to that in a bit.</impo>
 </body>
 </section>
 </chapter>
+
 <chapter>
-<title>Get ready</title>
+<title>Mounting the CD-ROM</title>
 <section>
 <body>
-<p>Now, it's time get everything ready for building the system.  
-Perform the following steps:</p>
-<pre>
-# <i>cd /mnt/cdrom/gentoo</i>
-# <i>tar --numeric-owner -xvjpf build-*.tbz2 -C /mnt/gentoo</i>
-# <i>mount --bind /proc /mnt/gentoo/proc</i>
-# <i>cp /etc/resolv.conf /mnt/gentoo/etc</i>
-</pre>
-<p>
-Above, we unpack the Gentoo build archive in <path>/mnt/gentoo</path>.
-We then make the <path>/proc</path> filesystem accessible inside the 
-soon-to-be-established chroot by binding it to <path>/mnt/gentoo/proc</path>
-(we'll need access to <path>/proc</path> to create the system device nodes).
-We also copy <path>/etc/resolv.conf</path> into our build system so that
-we will be able to perform DNS lookups.
+<p>Even though we've booted from the CD-ROM, the CD-ROM itself is not mounted under our minimal
+Linux boot CD environment.  We'll need to mount it so that we can access the compressed build image
+tarball contained on the CD-ROM.  To mount the CD-ROM, one typically types:
 </p>
+<pre>
+# <i>mount /dev/cdroms/cdrom0 /mnt/cdrom -o ro -t iso9660</i>
+</pre>
+<p>With the CD-ROM mounted, you should be able to see the <c>build-???.tbz2</c> file by typing
+<c>ls /mnt/cdrom</c>.</p>
 </body>
 </section>
 </chapter>
+
 <chapter>
-<title>Do the chroot</title>
+    <title>Unpack the build archive and chroot</title>
 <section>
 <body>
-<p>Now it's time to <c>chroot</c> over to the new Gentoo Linux 
-build installation and initialize
-the new Gentoo Linux environment:</p>
+
+<p>Now it's time to extract the compressed build image tarball to <path>/mnt/gentoo</path>.  Then, we'll <c>chroot</c> over to the new Gentoo Linux build installation. 
+</p>
+
 <pre>
+# <i>cd /mnt/gentoo</i>
+# <i>tar -xvjpf /mnt/cdrom/build-*.tbz2</i>
+# <i>mount -o bind /proc /mnt/gentoo/proc</i>
 # <i>chroot /mnt/gentoo</i>
 # <i>env-update</i>
+Regenerating /etc/ld.so.cache...
 # <i>source /etc/profile</i>
-# <i>cd /dev</i>
-# <i>MAKEDEV generic-i386</i>
-# <i>emerge rsync</i>
+none / # <comment>ooh!  A new prompt!</comment>
 </pre>
+<p>
+We make the <path>/proc</path> filesystem accessible inside the 
+soon-to-be-established chroot by binding it to <path>/mnt/gentoo/proc</path>
+(it's always good to ensure that <path>/proc</path> is available).
+</p>
 <p>After you execute these commands, you'll be "inside" your new Gentoo Linux environment,
-ready to begin the build process.  
-The <c>MAKEDEV</c> command creates the device nodes for the system, and after
-<c>emerge rsync</c>
-the Gentoo Linux Portage tree is made 
-available at <path>/usr/portage</path>.</p>
+and the last step before we can grab the Portage tree and bootstrap is to configure your network settings.
+</p>
+
 </body>
 </section>
 </chapter>
+
+<chapter>
+<title>Configure installation networking</title>
+<section>
+<title>DHCP</title>
+<body>
+<p>
+Network configuration is simple with DHCP; If your ISP is not using
+DHCP, skip down to the static configuration section below.
+</p>
+<pre caption="Network configuration with DHCP">
+# <i>dhcpcd eth0</i> 
+</pre>
+<note>
+Some ISPs require you to provide a hostname.  To do that,
+add a <c>-h myhostname</c> flag to the dhcpcd command line above.
+</note>
+</body>
+</section>
+<section>
+<title>Static configuration</title>
+<body>
+<p>
+We need to setup just enough networking so that we can download
+sources for the system build.  Type in the following commands, replacing
+$IFACE with your network interface (typically <c>eth0</c>), $IPNUM
+with your IP address, $BCAST with your broadcast address, and $NMASK
+with your network mask.  For the <c>route</c> command, replace 
+$GTWAY with your default gateway.
+</p>
+<pre>
+# <i>/sbin/ifconfig $IFACE $IPNUM broadcast $BCAST netmask $NMASK</i>
+# <i>/sbin/route add -net default gw $GTWAY netmask 0.0.0.0 metric 1</i>
+</pre>
+<p>Now, it's time to create the <path>/etc/resolv.conf</path>
+file so that name resolution (finding Web/FTP sites by name, rather than just by IP address) will work.</p>
+
+<note>At the moment the only editor installed by default is <c>e3</c>, a
+small, basic editor, written in Nasm asm.  It has keybindings for vi,
+emacs, pico, nedit, and wordstar.  If you aren't familiar with any
+of those editors, just type <c>e3</c>, and you will get the default
+pico keybindings which are pretty easy to work with.  To get the other
+keybindings, try <c>e3vi</c>, <c>e3em</c>, <c>e3pi</c>, <c>e3ne</c>,
+<c>e3ws</c>, respectively.</note>
+
+<p>Here's a template to follow for creating your /etc/resolv.conf file:
+</p>
+<pre caption="/etc/resolv.conf template">
+domain mydomain.com
+nameserver 10.0.0.1
+nameserver 10.0.0.2
+</pre>
+<p>Replace <c>10.0.0.1</c> and <c>10.0.0.2</c> with the IP addresses of your
+primary and secondary DNS servers respectively.</p>
+<p>Now that your network has been configured, the <c>/sbin/ifconfig -a</c> command should show (hopefully!) 
+that your network card is working
+(look for <e>UP</e> and <e>RUNNING</e> in the output).
+</p>
+<pre caption="/sbin/ifconfig for a working network card">
+eth0      Link encap:Ethernet  HWaddr 00:50:BA:8F:61:7A
+          inet addr:192.168.0.2  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::50:ba8f:617a/10 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1498792 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1284980 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:1984 txqueuelen:100
+          RX bytes:485691215 (463.1 Mb)  TX bytes:123951388 (118.2 Mb)
+          Interrupt:11
+</pre>
+<!--
+<note>
+If you have a static ppp link, you can !!! do this...!!!
+</note>
+-->
+</body>
+</section>
+</chapter>
+
 <chapter>
 <title>Bootstrap</title>
 <section>
 <body>
 <p>Now, it's time to bootstrap the system build tools.
-One of the best features of Gentoo Linux is that <e>everything</e>
-is a package, and the build tools are no different.  Before building
-packages it is important to edit <path>/etc/make.conf</path> and make
-sure that the build variables <c>CHOST</c>, <c>CFLAGS</c>, and <c>CXXFLAGS</c>
-are set correctly for your system's architecture.  Also, you should edit the
-list of <c>USE</c> flags that you wish to use.
+First, you need to edit the file <path>/etc/make.conf</path>.  In this file, you
+should set your <c>USE</c> flags, which specify optional functionality that you
+would like built into packages; the commented-out defaults are recommended.  You also should set appropriate <c>CHOST</c>, <c>
+CFLAGS</c> and <c>CXXFLAGS</c> settings for the kind of system that you are creating:
 </p>
+<pre>
+# <i>e3 /etc/make.conf</i> <comment>(Adjust these settings)</comment>
+</pre>
+<p>Now, it's time to start the "bootstrap" process.  This process will last 1-2 hours depending on 
+how zippy your machine is; it takes about 45 minutes on my 900Mhz AMD Athlon system.  During this
+time, the extracted build image will be prepped for compiling the rest of the system.  The GNU
+compiler suite will be built, as well as the GNU C library.  These are time consuming builds and
+make up the bulk of the bootstrap process:</p>
+<pre>
+# <i>cd /usr/portage</i>
+# <i>scripts/bootstrap.sh files/bootstrap-1.0_rc6.packages</i>
+</pre>
+<p>The "bootstrap" process will now begin.</p>
 <note>
-Portage by default uses <c>${ROOT}/tmp</c> during package building, often using several hundred megabytes of temporary storage. If you would like to change where Portage stores these temporary files, set a new PORTAGE_TMPDIR in your <path>/etc/make.conf</path> pointing it to the directory
-of your choice, or simply set the same variable in your current environment by typing <c>export PORTAGE_TMPDIR="/path/to/new/tmp"</c>.
+Portage by default uses <c>/var/tmp</c> during package building, often
+using several hundred megabytes of temporary storage. If you would like to
+change where Portage stores these temporary files, set a new PORTAGE_TMPDIR <e>before</e>
+starting the bootstrap process, as follows:
 </note>
+<pre>
+# <i>export PORTAGE_TMPDIR="/otherdir/tmp"</i>
+</pre>
 <p>
-To start the bootstrap the <c>bootstrap.sh</c> script requires a list of
-packages to use; it should generally be reasonable to use the most recent
-<path>/usr/portage/files/bootstrap-xxxx.packages</path> file.  The 
+The 
 <c>bootstrap.sh</c> will build <c>binutils</c>, <c>gcc</c>, <c>gettext</c>,
 and <c>glibc</c>, rebuilding <c>binutils</c>, <c>gcc</c>, and <c>gettext</c>
 after <c>glibc</c> is built.  Needless to say, this process takes a while.
 Have a nice nap.
 </p>
-<pre>
-# <i>vim /etc/make.conf</i>
-# <i>cd /usr/portage</i>
-# <i>ls files</i>
-# <i>scripts/bootstrap.sh /files/bootstrap-xxxxxx.packages</i>
-</pre>
 </body>
 </section>
 </chapter>
@@ -309,7 +353,7 @@ optimizations for your system, it's time to build the rest
 of the base system:</p>
 <pre>
 # <i>emerge --pretend system</i>
-  <comment>[list of packages to be installed]</comment>
+	<comment>[lists the packages to be installed]</comment>
 # <i>emerge system</i>
 </pre>
 <p>
@@ -328,27 +372,22 @@ Super Bombad Racing" for the PS2.
 <body>
 <p>
 At the moment the Gentoo Linux default system does not include a kernel;
-you have to install it yourself.  The simplest method is to install the
-default kernel:
+you have to install it yourself.  Here are the steps to compile and configure
+your own custom kernel:
 </p>
 <pre>
-# <i>cd /usr/portage/sys-kernel/linux</i>
-# <i>emerge linux-2.4.4.9.ebuild</i>
-</pre>
-<p>However, you may want to go ahead and compile your own custom kernel
-at this point.  
-Here's how to compile and configure your own:</p>
-<pre>
 # <i>cd /usr/portage/sys-kernel/linux-sources</i>
-# <i>emerge linux-sources-2.4.4.9.ebuild</i>
+# <i>emerge linux-sources-2.4.8.8.ebuild</i>
 # <i>cd /usr/src/linux</i>
 # <i>make menuconfig</i>
 # <i>make dep; make clean; make bzImage; make modules; make modules_install</i>
-# <i>depmod -a</i>
-# <i>cd /boot/boot</i>
 # <i>mv bzImage bzImage.orig</i> <comment>[if bzImage already exists]</comment>
-# <i>cp /usr/src/linux/arch/i386/boot/bzImage .</i>
+# <i>cp /usr/src/linux/arch/i386/boot/bzImage /boot</i>
 </pre>
+<impo>During the <c>make menuconfig</c> process, be sure to enable the "Device File System",
+but do <e>not</e> tell the kernel to automatically mount devfs at boot time.  You'll also
+need to enable the "Virtual Memory Filesystem", as well as "ReiserFS". :)</impo>
+
 <p>
 Your new custom kernel (and modules) are now installed.
 </p>
@@ -366,7 +405,8 @@ like to install, for example:</p>
 It is always a good idea to use the <c>--pretend</c> flag first, just to
 get a feeling for what is going to be installed.  Of course, you have a
 basic Gentoo Linux system installed now, so any additional packages could
-wait until you have the rest of the system configured.
+wait until you have the rest of the system configured.  It's generally best
+to get your base system booting before merging X. :)
 </p>
 </body>
 </section>
@@ -379,7 +419,7 @@ wait until you have the rest of the system configured.
 a few important system files and install the GRUB boot loader. 
 The first file we need to
 configure is <path>/etc/fstab</path>.  Here's an example file; remember that you should use
-the <c>notail</c> option for your boot partition if you created a Reiserfs filesystem on it:</p>
+the <c>notail</c> option for your boot partition if you created a ReiserFS filesystem on it:</p>
 <pre>
 <comment># /etc/fstab: static file system information.
 #
@@ -388,28 +428,19 @@ the <c>notail</c> option for your boot partition if you created a Reiserfs files
 # efficiency).  It's safe to drop the noatime options if you want and to 
 # switch between notail and tail freely.
 #
-# &lt;fs&gt;          &lt;mountpoint&gt;    &lt;type&gt;  	&lt;opts&gt;      		&lt;dump/pass&gt;
+# &lt;fs&gt;          &lt;mountpoint&gt;    &lt;type&gt;  	&lt;opts&gt;    &lt;dump/pass&gt;
 </comment>
-/dev/hda1		/boot		ext2		noauto,noatime		1 1
+/dev/hda1		/boot		reiserfs	notail,noauto,noatime	1 1
+/dev/hda2		none            swap		sw			0 0
 /dev/hda2		/		reiserfs	notail,noatime		0 0
-/dev/hda3		none            swap		sw			0 0
 /dev/hdc		/mnt/cdrom	iso9660		noauto,ro		0 0
 <comment>
 # /proc should always be enabled
-# /proc/bus/usb should be enabled if you need usb support
 # no /dev devfs line is needed; mounting /dev is done by our devfs initscript
+# usbdevfs taken care of automatically by initscripts
 </comment>
 proc			/proc           proc		defaults		0 0
-none			/proc/bus/usb	usbdevfs	defaults		0 0
-<comment>
-# The following are optional; /dev/pts isn't needed for devfs; /dev/shm is
-# an example only (shm is a dynamically expandable/shrinkable ramdisk
-
-#none			/dev/pts	devpts		mode=620		0 0
-#shm			/dev/shm	shm		defaults		0 0
-</comment>
 </pre>
-
 
 </body>
 </section>
@@ -418,7 +449,7 @@ none			/proc/bus/usb	usbdevfs	defaults		0 0
 <body>
 <p>Look for your timezone (or GMT if you using Greenwich Mean Time) in <path>/usr/share/zoneinfo</path>.  Then, make a symbolic link by typing:
 </p><pre>
-# <i>cd /etc; ln -sf /usr/share/zoneinfo/path/to/timezonefile localtime</i>
+# <i>ln -sf /usr/share/zoneinfo/path/to/timezonefile /etc/localtime</i>
 </pre>
 </body>
 </section>
@@ -445,56 +476,47 @@ of any hostnames that may not be in your nameservers.  Here's a template for thi
 </section>
 
 <section>
-<title>Configure ethernet</title>
+<title>Final network configuration</title>
 <body>
-
-<p>Look in the <path>/etc/rc.d/config</path> directory; you'll see a file
-called <path>OFF_inet.eth0</path>.  Copy this file to <path>inet.eth0</path>, and edit the top part of it
-so that it contains the IP address settings you want to use on your first
-ethernet card.  
-(If you dynamically obtain your IP address from DHCP then instead 
-copy <path>OFF_inet.dhcp_eth0</path>
-to <path>inet.dhcp_eth0</path>.  No editing should be required.)
+<p>
 Look in <path>/lib/modules</path> for the ethernet module
 specific to your particular ethernet card, and append it to the
-<path>/etc/rc.d/config/modules</path> file (you can also add any options you
-need to the same line.)  Then, when Gentoo Linux boots, this module will be
-automatically loaded from disk.  If you have multiple network cards, copy
-<path>inet.eth0</path> to <path>inet.eth1</path> and edit this file so that it
-configures your second interface correctly.  Repeat for eth2, etc as necessary.
-If you have a static ppp link, you can copy the <path>inet.eth0</path> file to
-<path>inet.ppp0</path>, and insert the appropriate commands in the
-<c>netup()</c> and <c>netdown()</c> functions.  All
-<path>/etc/rc.d/config/inet.*</path> files will be started automatically at
-boot time by the <path>/etc/rc.d/init.d/inet</path> rc script.  </p>
-
+<path>/etc/modules</path> file (you can also add any options you
+need to the same line.)  This should be the same module as you used with
+insmod earlier.  When Gentoo Linux boots, this module will be automatically
+loaded:
+</p>
+<pre caption="network config">
+# <i>e3 /etc/modules</i>
+</pre>
+<p>If you have a static IP, use the <c>net.eth0</c> script to get your network
+configured for your first boot:</p>
+<pre>
+# <i>e3 /etc/init.d/net.eth0</i>
+# <i>ln -s /etc/init.d/net.eth0 /etc/runlevels/default/net.eth0</i>
+</pre>
+<p>However, if you have a dynamic IP, do the same thing with <c>net.eth0-dhcp</c>:</p>
+<pre>
+# <i>e3 /etc/init.d/net.eth0</i>
+# <i>ln -s /etc/init.d/net.eth0 /etc/runlevels/default/net.eth0</i>
+</pre>
+<p>If you need to set up any additional network interfaces, copy <c>net.eth0</c>
+or <c>net.eth0-dhcp</c> to <c>net.eth1</c> or <c>net.eth1-dhcp</c> and repeat.</p>
+<impo>Once you've set up all your network interfaces, edit <path>/etc/rc.conf</path>
+and take a good look at the <c>INTERFACES</c> environment variable.  Make sure it
+contains the names of all the network interfaces that should be running all the
+time.</impo>
 </body>
 </section>
 
 <section>
 <title>Configure basic settings</title>
 <body>
-
-<p>Take a look at the <path>/etc/rc.d/config/basic</path>, and make sure that it's set up properly.  Important settings are GMT
-(set to <c>yes</c> if your system clock is set to GMT, otherwise <c>no</c> if it's set to your local time) and KEYMAP (look in 
-<path>/usr/share/keymaps/i386</path> for available keymaps.  To specify the keymap, set KEYMAP to the <e>prefix</e>
-of the keymap filename (i.e. drop the <path>.kmap.gz</path> extension from the end.)
-</p>
-
-</body>
-</section>
-
-
-<section>
-<title>Installing init scripts</title>
-<body>
-<pre>
-# /etc/rc.d/init.d/initscripts-install
+<pre caption="basic configuration">
+# <i>e3 /etc/rc.conf</i>
 </pre>
 <p>
-The above command installs all of the basic system's init scripts.
-Additional init scripts can be enabled using the <c>rc-update</c>
-command. (Type "<c>rc-update</c>" by itself to get a list of options.)
+Follow the directions in the file to configure the basic settings.
 </p>
 </body>
 </section>
@@ -521,7 +543,7 @@ grub&gt; <i>setup (hd0)</i>
 </pre>
 
 <p>Here's how the two commands work.  The first <c>root ( )</c> command tells GRUB
-the location of your boot partition (in my case, <path>/dev/hda1</path> or 
+the location of your boot partition (in our example, <path>/dev/hda1</path> or 
 <path>(hd0,0)</path> in GRUB terminology.  Then, the second <c>setup ( )</c> command tells GRUB where to install the
 boot record - it will be configure to look for its special files at the <c>root
 ( )</c> location that you specified.  In my case, I want the boot record on the
@@ -531,39 +553,36 @@ could install GRUB to the boot record of a particular partition.  In that case,
 I'd specify a particular partition rather than the entire disk.  Once the GRUB
 boot record has been 
 successfully installed, you can type <c>quit</c> to quit GRUB.  Gentoo Linux is
-installed, but we need to create the <path>/boot/boot/grub/menu.lst</path> file so that
+installed, but we need to create the <path>/boot/grub/menu.lst</path> file so that
 we get a nice GRUB boot menu when the system reboots.  Here's how to do it.</p>
 
-<p>Now, create the menu.lst file (<c>vi /boot/boot/grub/menu.lst</c>), and add the following to it:</p>
+<p>Now, create the menu.lst file (<c>e3 /boot/grub/menu.lst</c>), and add the following to it:</p>
 <pre>
 default 0
 timeout 30
 
 title=My example Gentoo Linux
 root (hd0,0) 
-kernel /boot/bzImage root=/dev/hda2 
+kernel /boot/bzImage root=/dev/hda3 
 
 title=Windows NT Workstation
-root (hd0,2) 
+root (hd0,5) 
 chainloader +1
 </pre><p>After saving this file, Gentoo Linux installation is complete.  Selecting the first option will
 tell GRUB to boot Gentoo Linux without a fuss.  The second part of the menu.lst file is optional, and shows you how to
 use GRUB to boot a bootable Windows partition.</p>
 
 <note>Above, <path>(hd0,0)</path> should point to your "boot" partition
-(<path>/dev/hda1</path> in my case) and <path>/dev/hda2</path> should point to
-your root filesystem.  <path>(hd0,2)</path> contains the NT boot
+(<path>/dev/hda1</path> in our example config) and <path>/dev/hda3</path> should point to
+your root filesystem.  <path>(hd0,5)</path> contains the NT boot
 loader.</note> <p>Also, if you need to pass any options to the kernel, simply
 add them to the end of the <c>kernel</c> command.  We're already passing one option
-(<c>root=/dev/hda2</c>), but you can pass others as well.  
-<!--
-There's one in particular
-that you may be interested in.  If you want to enable devfs (a special device
-filesystem), you can add the <c>devfs=mount</c> option at the end of the <c>kernel</c>
-line.  
--->
+(<c>root=/dev/hda3</c>), but you can pass others as well.  In particular, you can
+turn off devfs by default (not recommended unless you know what you're doing) by
+adding the <c>gentoo=nodevfs</c> option to the <c>kernel</c> command.
+
 <note>Unlike in earlier versions of Gentoo Linux, you no longer have to add 
-<c>devfs=mount</c> to the end of the <c>kernel</c> line to enable devfs.  In rc5
+<c>devfs=mount</c> to the end of the <c>kernel</c> line to enable devfs.  In rc6
 devfs is enabled by default.
 </note>
 </p>
