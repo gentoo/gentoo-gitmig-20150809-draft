@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.22-r1.ebuild,v 1.3 2003/09/16 02:13:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.22-r1.ebuild,v 1.4 2003/09/21 23:46:00 kumba Exp $
 
 
 ETYPE="headers"
@@ -22,7 +22,7 @@ DESCRIPTION="Linux-Mips CVS headers for MIPS-based machines"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://gentoo/mipscvs-${OKV}-${CVSDATE}.diff.bz2"
 HOMEPAGE="http://www.linux-mips.org/"
-KEYWORDS="-* ~mips"
+KEYWORDS="-*"
 SLOT="${OKV}"
 
 src_unpack() {
