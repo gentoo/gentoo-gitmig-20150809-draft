@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-0.5.0.ebuild,v 1.3 2004/04/12 12:12:29 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-0.5.2.ebuild,v 1.1 2004/06/17 22:42:02 vapier Exp $
 
 DESCRIPTION="libaal library required by reiser4progs"
 HOMEPAGE="http://www.namesys.com/v4/v4.html"
-SRC_URI="http://thebsh.namesys.com/snapshots/LATEST/${P}.tar.gz"
+SRC_URI="http://thebsh.namesys.com/snapshots/2004.06.14-internal.testing/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND=""
 
