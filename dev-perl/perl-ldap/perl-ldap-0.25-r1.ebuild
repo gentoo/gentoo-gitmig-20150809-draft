@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.25-r1.ebuild,v 1.2 2003/02/13 11:28:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.25-r1.ebuild,v 1.3 2003/03/27 23:22:25 rac Exp $
 
 inherit perl-module
 
@@ -13,4 +13,4 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 alpha"
 
-DEPEND="${DEPEND}"
+DEPEND="${DEPEND} dev-perl/Convert-ASN1"
