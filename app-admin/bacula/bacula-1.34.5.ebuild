@@ -53,7 +53,7 @@ src_compile() {
 		myconf="${myconf} --with-postgresql=/usr"
 	elif use sqlite
 	then
-		myconf="${myconf} --with-sqlite=/usr/include"
+		myconf="${myconf} --with-sqlite=/usr"
 	elif  use sqlite && use mysql
 	then
 		myconf="${myconf/--with-sqlite/}"
