@@ -1,7 +1,13 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.2 2002/03/27 04:47:55 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.3 2002/03/28 02:32:42 blocke Exp $
 
+*ogle-0.8.2-r6 (27 Mar 2002)
+
+  27 Mar 2002; Bruce A. Locke <blocke@shivan.org> ogle-0.8.2-r6.ebuild :
+
+  libxml2 version specified in dependency and restored CFLAGS fix
+  
 *ogle-0.8.2-r5 (26 Mar 2002)
 
   26 Mar 2002; Bruce A. Locke <blocke@shivan.org> ogle-0.8.2-r5.ebuild :
