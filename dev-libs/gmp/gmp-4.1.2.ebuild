@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.4 2003/03/09 21:41:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.5 2003/03/15 14:48:09 azarah Exp $
 
 inherit flag-o-matic
+inherit libtool
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
@@ -12,11 +13,13 @@ KEYWORDS="~x86 ~ppc ~sparc alpha"
 SLOT="0"
 LICENSE="LGPL-2"
 
-DEPEND=">=sys-devel/m4-1.4p"
+DEPEND="~sys-devel/m4-1.4"
 
 filter-flags -ffast-math
 
-src_compile() {                           
+src_compile() {
+	elibtoolize
+
 	local myconf=""
 	use sparc || myconf="--enable-mpfr"
 
