@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.6.ebuild,v 1.9 2003/12/29 18:48:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.6.ebuild,v 1.10 2003/12/29 18:52:20 vapier Exp $
 
 MY_P=${P/-/}
 DESCRIPTION="BNC (BouNCe) is used as a gateway to an IRC Server"
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc"
 
-S=${WORKDIR}/${PN}${PV}
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	econf || die
