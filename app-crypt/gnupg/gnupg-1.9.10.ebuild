@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.1 2004/08/15 02:35:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.2 2004/08/15 02:51:32 vapier Exp $
 
 inherit eutils
 
@@ -66,16 +66,18 @@ src_compile() {
 }
 
 src_install() {
-	einstall libexecdir="${D}/usr/lib/gnupg"
+	einstall libexecdir="${D}/usr/lib/gnupg" || die
+
+	dosym gpg2 /usr/bin/gpg
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
-	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO VERSION \
-		doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO VERSION
 
-	if ! use caps; then
-		chmod u+s "${D}/usr/bin/gpg"
+	if ! use caps ; then
+		fperms u+s /usr/bin/gpg2
+		fperms u+s /usr/bin/gpg-agent
 	fi
 }
 
