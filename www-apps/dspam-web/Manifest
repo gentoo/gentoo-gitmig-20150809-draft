@@ -1,8 +1,9 @@
-MD5 19f394f3eeb1971a3560658bd5640dd8 ChangeLog 1681
+MD5 956f517d5b50fbf0de1c9cb6f508598b ChangeLog 1747
 MD5 4692761753a5e1a98e276b526d94012e dspam-web-3.0.0.ebuild 2466
 MD5 15fea5e0579a78f28af532687fef2dfb dspam-web-3.2.0.ebuild 5249
 MD5 627c90d46d2502411088ed40ca694015 dspam-web-3.2.1.ebuild 5249
 MD5 fcb07899c10e8e3662af241f6987bd6d dspam-web-3.2.2.ebuild 5249
+MD5 674e05a7965d9ec8aa276eea006fa863 dspam-web-3.2.3.ebuild 5249
 MD5 f1ea445d6b4ddf81c55a4e886bc04218 metadata.xml 341
 MD5 ffdfc8d816078f4c58b75b9bed07503f files/htaccess 135
 MD5 b4099a94a52af9abd4ade48d82914c3c files/htpasswd 19
@@ -10,3 +11,4 @@ MD5 05dce5dc8cf516655657aa2a4cc5f1da files/digest-dspam-web-3.0.0 63
 MD5 4b7bb6bbede742676e3e7017210104c5 files/digest-dspam-web-3.2.0 63
 MD5 4d666bbdf8092d4bd49428ea31eadbfb files/digest-dspam-web-3.2.1 63
 MD5 5e423ac033f04ebc7dcc1d61e77c34fa files/digest-dspam-web-3.2.2 63
+MD5 e8b69a8c4c9e136977f8b1485a914d18 files/digest-dspam-web-3.2.3 63
