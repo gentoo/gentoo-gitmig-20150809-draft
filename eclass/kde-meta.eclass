@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.3 2004/11/19 11:20:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.4 2004/11/23 19:30:55 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -30,6 +30,13 @@ esac
 if [ "$KDEBASE" = "true" ]; then
 	unset SRC_URI
 	
+	need-kde $PV
+	
+	DESCRIPTION="KDE ${myPV} - "
+	HOMEPAGE="http://www.kde.org/"
+	LICENSE="GPL-2"
+	SLOT="$KDEMAJORVER.$KDEMINORVER"
+	
 	# Main tarball for normal downloading style
 	case "$PV" in
 		3.3.0)		SRC_PATH="stable/3.3/src/${myP}.tar.bz2" ;;
@@ -52,21 +59,34 @@ if [ "$KDEBASE" = "true" ]; then
 		*)			die "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI"
 					;;
 	esac	
-	
-	SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
-	for x in $XDELTA_DELTA; do
-		SRC_URI="$SRC_URI mirror://kde/$x"
-	done
-	SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
-	debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
-	
-	need-kde $PV
-	
-	DESCRIPTION="KDE ${myPV} - "
-	HOMEPAGE="http://www.kde.org/"
-	LICENSE="GPL-2"
-	SLOT="$KDEMAJORVER.$KDEMINORVER"
+
+elif [ "$KMNAME" == "koffice" ]; then
+	SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
+	case $PV in
+		1.3.4)
+			XDELTA_BASE=""
+			XDELTA_DELTA=""
+			;;	
+		1.3.5)
+			XDELTA_BASE="stable/koffice-1.3.4/src/koffice-1.3.4.tar.bz2"
+			XDELTA_DELTA="stable/koffice-1.3.5/src/koffice-1.3.4-1.3.5.tar.xdelta"
+			;;
+	esac
 fi
+
+# Common xdelta code
+
+SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
+for x in $XDELTA_DELTA; do
+	SRC_URI="$SRC_URI mirror://kde/$x"
+done
+SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
+debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
+
+# Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
+# through the sneaky eclass dep mangling portage does.
+DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
+
 # END adapted from kde-dist.eclass
 
 # prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
@@ -74,10 +94,6 @@ fi
 MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
 SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
 
-# Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
-# through the sneaky eclass dep mangling portage does.
-DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
-#RDEPEND=""
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
 
