@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.18 2004/07/01 16:33:29 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.19 2004/07/05 10:32:13 eldad Exp $
+
+  05 Jul 2004; Eldad Zack <eldad@gentoo.org> nagios-1.2.ebuild:
+  x86 marked stable
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> nagios-1.1.ebuild,
   nagios-1.2.ebuild:
