@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2_p6.ebuild,v 1.4 2003/11/12 14:14:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2_p6.ebuild,v 1.5 2003/12/12 22:31:20 aliz Exp $
 
 MY_PN="bcrypt"
 DESCRIPTION="commercially licensed transparent filesystem encryption"
 HOMEPAGE="http://www.jetico.com/"
-SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz
-	http://www.jetico.com/linux/BestCrypt.doc.tgz"
+SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz"
 
 LICENSE="bestcrypt"
 SLOT="0"
@@ -15,6 +14,8 @@ KEYWORDS="x86"
 DEPEND="virtual/linux-sources"
 
 S=${WORKDIR}/${MY_PN}
+
+filter-flags -fforce-addr
 
 src_unpack() {
 	unpack ${A}
