@@ -1,4 +1,14 @@
-MD5 c2df716c2c7e14e5b5ccebf88472c06f yate-0.8.7.ebuild 2010
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b3481ba672dc44b76bbebe91513d4abd yate-0.8.7.ebuild 1412
+MD5 c019596ec69664e15e155da902542ee2 ChangeLog 665
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 faad994e457e96d84254bf549f76c9bf ChangeLog 521
 MD5 9b480e9a4409cd15839e2a7338714ccf files/digest-yate-0.8.7 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQDqyI1lqEGTUzyQRAhgBAJ9qi2lr5cvfBI0R3FAJx5F3ib2WdQCePNza
+CVNmVtvceaHH6C8mhKMosR4=
+=ObPc
+-----END PGP SIGNATURE-----
