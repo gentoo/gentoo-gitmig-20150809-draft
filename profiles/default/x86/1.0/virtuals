@@ -1,4 +1,7 @@
-virtual/linux-sources				sys-kernel/gentoo-sources
-virtual/xemacs						app-editors/xemacs
-virtual/winkernel					sys-kernel/win4lin-sources
-virtual/wine						app-emulation/wine
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/1.0/virtuals,v 1.2 2004/03/18 01:11:32 seemant Exp $
+
+
+# Use this virtuals file to override or add virtuals that are specific ONLY
+# TO THIS PROFILE!

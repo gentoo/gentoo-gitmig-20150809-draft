@@ -1,5 +1,8 @@
-# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
-# System-wide defaults for the Portage system
+# Copyright 2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/1.0/make.defaults,v 1.3 2004/03/18 01:11:32 seemant Exp $
+
+# System-wide defaults for the Portage system (1.0)
 
 USE="x86 oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
 java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls
