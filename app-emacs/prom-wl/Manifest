@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e6e9ace76f97f2686c90e75d067f08e5 prom-wl-2.7.0.ebuild 574
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 b16e050c5eac3a8ee4eaee6c766b24f4 ChangeLog 476
+MD5 7d5d55eaeba0e6852822bc18650e39c4 files/digest-prom-wl-2.7.0 64
+MD5 4baad663dc460b20fe9728f98bb61191 files/70prom-wl-gentoo.el 55
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBeN+QVWNWqTUmv+0RAgKFAJ9eedF/s+VWc5gLN9HFhkhRVen9NQCcC2XQ
+fxaunHspTXgHmEk0otLbUx0=
+=wZ3C
+-----END PGP SIGNATURE-----

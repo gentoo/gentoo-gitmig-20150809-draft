@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/prom-wl
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prom-wl/ChangeLog,v 1.1 2004/10/22 10:23:02 usata Exp $
+
+*prom-wl-2.7.0 (22 Oct 2004)
+
+  22 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/70prom-wl-gentoo.el, +prom-wl-2.7.0.ebuild:
+  Initial import. Thanks to Atzm WATANABE <atzm@gentoo.gr.jp> at
+  GentooJP ebuild uploader, http://ebuild.gentoo.gr.jp/.
+
