@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.0.2.ebuild,v 1.2 2002/07/18 12:22:41 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.0.2.ebuild,v 1.3 2002/07/24 06:19:34 drobbins Exp $
 
 inherit gnome2
 
@@ -41,4 +41,8 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS  README*"
 
-
+src_compile() {
+	gnome2_src_configure
+	#version 2.0.2 doesn't like parallel make (drobbins, 24 Jul 2002)
+	make || die
+}
