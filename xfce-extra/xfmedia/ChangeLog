@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfmedia
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.1 2004/11/01 21:44:51 bcowan Exp $
+
+*xfmedia-0.3.0 (01 Nov 2004)
+
+  01 Nov 2004; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +xfmedia-0.3.0.ebuild:
+  Initial commit.
+
