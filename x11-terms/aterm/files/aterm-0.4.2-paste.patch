@@ -1,0 +1,59 @@
+--- aterm-0.4.2-orig/src/screen.c	2001-09-06 12:38:07.000000000 -0400
++++ aterm-0.4.2/src/screen.c	2003-09-11 02:45:54.000000000 -0400
+@@ -3328,10 +3330,21 @@
+ void
+ selection_send(XSelectionRequestEvent * rq)
+ {
++    /* Changes are from rxvt. This fixes #205040. */
+     XEvent          ev;
+-    Atom32          target_list[2];
++    Atom32          target_list[4];
++    Atom            target;
+     static Atom     xa_targets = None;
+-
++    static Atom     xa_compound_text = None;
++    static Atom     xa_text = None;
++    XTextProperty   ct;
++    XICCEncodingStyle style;
++    char           *cl[4];
++
++    if (xa_text == None)
++	xa_text = XInternAtom(Xdisplay, "TEXT", False);
++    if (xa_compound_text == None)
++	xa_compound_text = XInternAtom(Xdisplay, "COMPOUND_TEXT", False);
+     if (xa_targets == None)
+ 	xa_targets = XInternAtom(Xdisplay, "TARGETS", False);
+ 
+@@ -3346,14 +3359,29 @@
+     if (rq->target == xa_targets) {
+ 	target_list[0] = (Atom32) xa_targets;
+ 	target_list[1] = (Atom32) XA_STRING;
++	target_list[2] = (Atom32) xa_text;
++	target_list[3] = (Atom32) xa_compound_text;
+ 	XChangeProperty(Xdisplay, rq->requestor, rq->property, rq->target,
+ 			(8 * sizeof(target_list[0])), PropModeReplace,
+ 			(unsigned char *)target_list,
+ 			(sizeof(target_list) / sizeof(target_list[0])));
+ 	ev.xselection.property = rq->property;
+-    } else if (rq->target == XA_STRING) {
+-	XChangeProperty(Xdisplay, rq->requestor, rq->property, rq->target,
+-			8, PropModeReplace, selection.text, selection.len);
++    } else if (rq->target == XA_STRING
++	       || rq->target == xa_compound_text
++	       || rq->target == xa_text) {
++	if (rq->target == XA_STRING) {
++	    style = XStringStyle;
++	    target = XA_STRING;
++	} else {
++	    target = xa_compound_text;
++	    style = (rq->target == xa_compound_text) ? XCompoundTextStyle
++		: XStdICCTextStyle;
++	}
++	cl[0] = selection.text;
++	XmbTextListToTextProperty(Xdisplay, cl, 1, style, &ct);
++	XChangeProperty(Xdisplay, rq->requestor, rq->property,
++			target, 8, PropModeReplace,
++			ct.value, ct.nitems);
+ 	ev.xselection.property = rq->property;
+     }
+     XSendEvent(Xdisplay, rq->requestor, False, 0, &ev);

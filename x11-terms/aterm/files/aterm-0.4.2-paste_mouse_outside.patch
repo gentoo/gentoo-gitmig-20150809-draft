@@ -1,0 +1,135 @@
+diff -Naur aterm-0.4.2-orig/doc/aterm.1 aterm-0.4.2/doc/aterm.1
+--- aterm-0.4.2-orig/doc/aterm.1	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/doc/aterm.1	2004-01-17 01:52:18.792629208 +0100
+@@ -227,6 +227,9 @@
+ .IP "\fB-st\fP|\fB+st\fP" 
+ Display scrollbar without/with a trough;
+ resource \fBscrollBar_floating\fP\&.
++.IP "\fB-pmo\fP|\fB+pmo\fP" 
++Enable pasting when mouse pointer is outside the aterm window;
++resource \fBpasteMouseOutside\fP\&.
+ .IP "\fB-iconic\fP" 
+ Start iconified, if the window manager supports that option\&.
+ .IP "\fB-sl\fP \fInumber\fP" 
+@@ -708,6 +711,8 @@
+ option \fB-vb\fP\&.
+ \fBFalse\fP: no visual bell [default];
+ option \fB+vb\fP\&.
++.IP "\fBpasteMouseOutside:\fP \fIboolean\fP" 
++\fBTrue\fP: enable text pasting when mouse pointer is outside the window;
+ .IP "\fBloginShell:\fP \fIboolean\fP" 
+ \fBTrue\fP: start as a login shell by prepending a `-\' to \fBargv[0]\fP
+ of the shell;
+diff -Naur aterm-0.4.2-orig/doc/aterm.html aterm-0.4.2/doc/aterm.html
+--- aterm-0.4.2-orig/doc/aterm.html	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/doc/aterm.html	2004-01-17 01:52:18.828623736 +0100
+@@ -284,6 +284,9 @@
+     <li><strong><strong>-st</strong>|<strong>+st</strong></strong> 
+ 	Display scrollbar without/with a trough;
+ 	resource <strong>scrollBar_floating</strong>.
++    <li><strong><strong>-pmo</strong>|<strong>+pmo</strong></strong> 
++	Enable pasting when mouse pointer is outside the aterm window;
++	resource <strong>pasteMouseOutside</strong>.
+     <li><strong><strong>-iconic</strong></strong> 
+ 	Start iconified, if the window manager supports that option.
+     <li><strong><strong>-sl</strong> <em>number</em></strong>
+@@ -544,6 +547,8 @@
+ 	option <strong>-vb</strong>.
+ 	<strong>False</strong>: no visual bell [default];
+ 	option <strong>+vb</strong>.
++    <li><strong><strong>pasteMouseOutside:</strong> <em>boolean</em></strong>
++	<strong>True</strong>: enable text pasting when mouse pointer is outside the window.
+     <li><strong><strong>loginShell:</strong> <em>boolean</em></strong>
+ 	<strong>True</strong>: start as a login shell by prepending a `-' to <strong>argv[0]</strong>
+ 	of the shell;
+diff -Naur aterm-0.4.2-orig/doc/aterm.html.in aterm-0.4.2/doc/aterm.html.in
+--- aterm-0.4.2-orig/doc/aterm.html.in	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/doc/aterm.html.in	2004-01-17 01:52:18.831623280 +0100
+@@ -284,6 +284,9 @@
+     <li><strong><strong>-st</strong>|<strong>+st</strong></strong> 
+ 	Display scrollbar without/with a trough;
+ 	resource <strong>scrollBar_floating</strong>.
++    <li><strong><strong>-pmo</strong>|<strong>+pmo</strong></strong>
++	Enable pasting when mouse pointer is outside the aterm window;
++	resource <strong>pasteMouseOutside</strong>.
+     <li><strong><strong>-iconic</strong></strong> 
+ 	Start iconified, if the window manager supports that option.
+     <li><strong><strong>-sl</strong> <em>number</em></strong>
+@@ -544,6 +547,8 @@
+ 	option <strong>-vb</strong>.
+ 	<strong>False</strong>: no visual bell [default];
+ 	option <strong>+vb</strong>.
++    <li><strong><strong>pasteMouseOutside:</strong> <em>boolean</em></strong>
++	<strong>True</strong>: enable text pasting when mouse pointer is outside the window.
+     <li><strong><strong>loginShell:</strong> <em>boolean</em></strong>
+ 	<strong>True</strong>: start as a login shell by prepending a `-' to <strong>argv[0]</strong>
+ 	of the shell;
+diff -Naur aterm-0.4.2-orig/doc/aterm.pretbl aterm-0.4.2/doc/aterm.pretbl
+--- aterm-0.4.2-orig/doc/aterm.pretbl	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/doc/aterm.pretbl	2004-01-17 01:52:18.846621000 +0100
+@@ -223,6 +223,9 @@
+ .IP "\fB-st\fP|\fB+st\fP" 
+ Display scrollbar without/with a trough;
+ resource \fBscrollBar_floating\fP\&.
++.IP "\fB-pmo\fP|\fB+pmo\fP" 
++Enable pasting when mouse pointer is outside the aterm window;
++resource \fBpasteMouseOutside\fP\&.
+ .IP "\fB-iconic\fP" 
+ Start iconified, if the window manager supports that option\&.
+ .IP "\fB-sl\fP \fInumber\fP" 
+@@ -472,6 +475,8 @@
+ option \fB-vb\fP\&.
+ \fBFalse\fP: no visual bell [default];
+ option \fB+vb\fP\&.
++.IP "\fBpasteMouseOutside:\fP \fIboolean\fP" 
++\fBTrue\fP: enable text pasting when mouse pointer is outside the window;
+ .IP "\fBloginShell:\fP \fIboolean\fP" 
+ \fBTrue\fP: start as a login shell by prepending a `-\' to \fBargv[0]\fP
+ of the shell;
+diff -Naur aterm-0.4.2-orig/src/rxvt.h aterm-0.4.2/src/rxvt.h
+--- aterm-0.4.2-orig/src/rxvt.h	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/src/rxvt.h	2004-01-17 01:52:28.755114680 +0100
+@@ -689,6 +689,7 @@
+ #define Opt_scrollTtyOutputInh	(1LU<<11)
+ #define Opt_scrollKeypress	(1LU<<12)
+ #define Opt_transparent		(1LU<<13)
++#define Opt_pasteMouseOutside   (1LU<<15)
+ #define Opt_transparent_sb	(1LU<<14)
+ 
+ /* place holder used for parsing command-line options */
+diff -Naur aterm-0.4.2-orig/src/screen.c aterm-0.4.2/src/screen.c
+--- aterm-0.4.2-orig/src/screen.c	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/src/screen.c	2004-01-17 01:52:18.866617960 +0100
+@@ -2788,8 +2788,9 @@
+ {
+     Atom            prop;
+ 
+-    if (x < 0 || x >= TermWin.width || y < 0 || y >= TermWin.height)
+-	return;			/* outside window */
++    if (!(Options & Opt_pasteMouseOutside))
++        if (x < 0 || x >= TermWin.width || y < 0 || y >= TermWin.height)
++	    return;			/* outside window */
+ 
+     if (selection.text != NULL) {
+ 	PasteIt(selection.text, selection.len);		/* internal selection */
+diff -Naur aterm-0.4.2-orig/src/xdefaults.c aterm-0.4.2/src/xdefaults.c
+--- aterm-0.4.2-orig/src/xdefaults.c	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/src/xdefaults.c	2004-01-17 01:52:18.868617656 +0100
+@@ -57,6 +57,8 @@
+ static const char *rs_transparent_sb = NULL;
+ #endif
+ 
++static const char *rs_paste_mouse_outside = NULL;
++
+ #ifdef DONT_TILE_PIXMAP_OPTION
+ static const char *rs_dontTilePixmap = NULL;
+ static const char *rs_dontTilePixmapH = NULL;
+@@ -215,6 +217,8 @@
+     BOOL(rs_transparent_sb, "transpscrollbar", "trsb", Opt_transparent_sb,
+          "transparent scrollbar"),
+ #endif
++    BOOL(rs_paste_mouse_outside, "pasteMouseOutside", "pmo", Opt_pasteMouseOutside,
++         "paste with mouse when pointer is outside the window"),	
+ #endif
+ #if (MENUBAR_MAX)
+     RSTRG(rs_menu, "menu", "name[;tag]"),

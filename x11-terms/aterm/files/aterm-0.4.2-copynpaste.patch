@@ -1,0 +1,120 @@
+diff -Naur aterm-0.4.2-orig/configure aterm-0.4.2/configure
+--- aterm-0.4.2-orig/configure	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/configure	2004-01-17 01:59:10.457046704 +0100
+@@ -2609,7 +2609,7 @@
+     ; \
+ do
+   ac_save_LIBS=$LIBS
+-  LIBS="-L$ac_dir -lXpm $LIBS -lX11"
++  LIBS="-L$ac_dir -lXpm $LIBS -lX11 -lXmu"
+   cat > conftest.$ac_ext <<EOF
+ #line 2615 "configure"
+ #include "confdefs.h"
+diff -Naur aterm-0.4.2-orig/src/command.c aterm-0.4.2/src/command.c
+--- aterm-0.4.2-orig/src/command.c	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/src/command.c	2004-01-17 01:59:10.481043056 +0100
+@@ -2653,7 +2653,7 @@
+ 		switch (ev->xbutton.button) {
+ 		case Button1:
+ 		case Button3:
+-		    selection_make(ev->xbutton.time);
++		    selection_make(ev->xbutton.time, ev->xbutton.state);
+ 		    break;
+ 
+ 		case Button2:
+diff -Naur aterm-0.4.2-orig/src/screen.c aterm-0.4.2/src/screen.c
+--- aterm-0.4.2-orig/src/screen.c	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/src/screen.c	2004-01-17 01:59:36.316115528 +0100
+@@ -44,7 +44,7 @@
+ 
+ #include <X11/Xatom.h>
+ #include <X11/Xmd.h>		/* get the typedef for CARD32 */
+-
++#include <X11/Xmu/Atoms.h>
+ 
+ static screen_t    screen;
+ 
+@@ -2759,21 +2759,34 @@
+     long            nread;
+     unsigned long   bytes_after, nitems;
+     unsigned char  *data;
++    XTextProperty   ct;
+     Atom            actual_type;
+     int             actual_fmt;
++    int             dummy_count;
++    char          **cl;
+ 
+     if (prop == None)
+ 	return;
++
+     for (nread = 0, bytes_after = 1; bytes_after > 0; nread += nitems) {
+ 	if ((XGetWindowProperty(Xdisplay, win, prop, (nread / 4), PROP_SIZE,
+-				Delete, AnyPropertyType, &actual_type,
+-				&actual_fmt, &nitems, &bytes_after,
+-				&data) != Success)) {
+-	    XFree(data);
++				Delete, AnyPropertyType, &ct.encoding, &ct.format,
++				&ct.nitems, &bytes_after, &ct.value) != Success)) {
++	    XFree(ct.value);
+ 	    return;
+ 	}
+-	PasteIt(data, nitems);
+-	XFree(data);
++	
++	if (XmbTextPropertyToTextList(Xdisplay, &ct, &cl, &dummy_count) == Success && cl) {
++            PasteIt(cl[0], strlen(cl[0]));
++	    XFreeStringList(cl);
++	} else {
++	    PasteIt(ct.value, (unsigned int)ct.nitems);
++	}
++
++	nread += ct.nitems;
++
++	if (ct.value)
++	    XFree(ct.value);
+     }
+ }
+ 
+@@ -2787,6 +2800,9 @@
+ selection_request(Time tm, int x, int y)
+ {
+     Atom            prop;
++    Atom            xa;
++
++    xa = XInternAtom(Xdisplay, "COMPOUND_TEXT", False);
+ 
+     if (x < 0 || x >= TermWin.width || y < 0 || y >= TermWin.height)
+ 	return;			/* outside window */
+@@ -2797,7 +2813,7 @@
+ 	selection_paste(Xroot, XA_CUT_BUFFER0, False);
+     } else {
+ 	prop = XInternAtom(Xdisplay, "VT_SELECTION", False);
+-	XConvertSelection(Xdisplay, XA_PRIMARY, XA_STRING, prop, TermWin.vt,
++	XConvertSelection(Xdisplay, XA_PRIMARY, xa, prop, TermWin.vt,
+ 			  tm);
+     }
+ }
+@@ -2827,7 +2843,7 @@
+  */
+ /* PROTO */
+ void
+-selection_make(Time tm)
++selection_make(Time tm, unsigned int key_state)
+ {
+     int             i, col, end_col, row, end_row;
+     unsigned char  *new_selection_text;
+@@ -2894,7 +2910,13 @@
+ 	FREE(selection.text);
+     selection.text = new_selection_text;
+ 
+-    XSetSelectionOwner(Xdisplay, XA_PRIMARY, TermWin.vt, tm);
++    // selecting with ALT will put the text to clipboard
++    if (key_state & Mod1Mask) {
++        XSetSelectionOwner(Xdisplay, XA_CLIPBOARD(Xdisplay), TermWin.vt, tm);
++    } else {
++        XSetSelectionOwner(Xdisplay, XA_PRIMARY, TermWin.vt, tm);
++    }
++	
+     if (XGetSelectionOwner(Xdisplay, XA_PRIMARY) != TermWin.vt)
+ 	print_error("can't get primary selection");
+     XChangeProperty(Xdisplay, Xroot, XA_CUT_BUFFER0, XA_STRING, 8,

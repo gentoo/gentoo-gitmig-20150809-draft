@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.16 2004/01/15 15:41:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.17 2004/01/17 18:09:33 spock Exp $
+
+*aterm-0.4.2-r7 (17 Jan 2004)
+
+  17 Jan 2004; Michal 'Spock' Januszewski <spock@gentoo.org>
+  aterm-0.4.2-r4.ebuild, aterm-0.4.2-r5.ebuild, aterm-0.4.2-r7.ebuild,
+  metadata.xml, files/aterm-0.4.2-copynpaste.patch,
+  files/aterm-0.4.2-paste.patch, files/aterm-0.4.2-paste_mouse_outside.patch:
+  Added metadata.xml, bumped to -r7 (added patches from bugs #30958 and #30298).
 
 *aterm-0.4.2-r6 (15 Jan 2004)
 

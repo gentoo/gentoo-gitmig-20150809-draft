@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.7 2004/01/17 18:09:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r7.ebuild,v 1.1 2004/01/17 18:09:33 spock Exp $
 
 IUSE="cjk"
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/aterm/${P}.tar.bz2
 HOMEPAGE="http://aterm.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND="media-libs/jpeg
 	media-libs/libpng
@@ -24,7 +24,15 @@ src_unpack() {
 		feature.h.orig > feature.h
 
 	cd ${S}
-	use cjk && epatch ${DISTDIR}/aterm-0.4.2-ja.patch
+	epatch ${FILESDIR}/aterm-0.4.2-borderless.patch
+	epatch ${FILESDIR}/aterm-0.4.2-paste.patch
+	epatch ${FILESDIR}/aterm-0.4.2-paste_mouse_outside.patch
+
+	if [ `use cjk` ] ; then
+		epatch ${DISTDIR}/aterm-0.4.2-ja.patch
+	else
+		epatch ${FILESDIR}/aterm-0.4.2-copynpaste.patch
+	fi
 }
 
 src_compile() {
@@ -57,7 +65,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	fperms g+s /usr/bin/aterm
-	fowners root.utmp /usr/bin/aterm
+	fowners root:utmp /usr/bin/aterm
 
 	doman doc/aterm.1
 	dodoc ChangeLog INSTALL doc/BUGS doc/FAQ doc/README.*
