@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.2 2002/06/25 11:12:27 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.3 2002/07/01 15:56:41 seemant Exp $
+
+*lopster-1.0.1.20020701 (01 Jul 2002)
+
+  01 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  lopster-1.0.1.20020701.ebuild files/digest-lopster-1.0.1.20020701 :
+
+  Updated to CVS snapshot which offers WPNP support.
 
   26 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
 
