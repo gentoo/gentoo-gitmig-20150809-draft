@@ -168,7 +168,7 @@ app-editors/kvim
 
 # <woodchip@gentoo.org> (04 Aug 2002)
 # add new package submission #1315
-=dev-db/metakit
+dev-db/metakit
 
 # Michael Cummings <mcummings@gentoo.org> (04 Aug 2002)
 # Found hardcoded refs for i686 in ebuild - please test
