@@ -118,7 +118,7 @@ $ENV{FORCE_AUTOCONF_2_5} = 1 if ("$binary" eq "$binary_new");
 if (! -x "$binary") {
 	# this shouldn't happen
 	errmsg ("$binary is missing or not executable.",
-		"Something is very wrong.");
+		"Please try emerging the correct version of autoconf.");
 }
 
 exec $binary, @ARGV;
