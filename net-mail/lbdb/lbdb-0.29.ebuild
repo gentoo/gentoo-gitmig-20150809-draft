@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.29.ebuild,v 1.2 2005/01/14 20:20:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.29.ebuild,v 1.3 2005/01/18 14:28:03 gustavoz Exp $
 
 IUSE="pda ldap"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.spinnaker.de/debian/${MY_P}.tar.gz"
 HOMEPAGE="http://www.spinnaker.de/lbdb/"
 DEPEND=">=mail-client/mutt-1.2.5"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 LICENSE="GPL-2"
 DEPEND="dev-lang/perl"
 RDEPEND="pda? ( dev-perl/p5-Palm )
