@@ -1,19 +1,6 @@
 # ChangeLog for net-dialuppppChangeLog/net-dialuppppppp-2.4.1-r9.ebuild
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r9.ebuild,v 1.3 2002/07/17 03:11:56 lamer Exp $
-
-  16 Jul 2002; Ben Lutgens <lamer@gentoo.org> ppp-2.4.1-r7.ebuild  :
-
-  16 Jul 2002; Ben Lutgens <lamer@gentoo.org> ppp-2.4.1-r7.ebuild  : :
-
-  16 Jul 2002; Ben Lutgens <lamer@gentoo.org> ppp-2.4.1-r7.ebuild  : : :
-
-  updated homepage
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-
-# modified by Christian Loitsch <gentoo00@loitsch.org>
-# modified by Mike Jones <ashmodai@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r9.ebuild,v 1.4 2002/07/17 10:43:24 seemant Exp $
 
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
@@ -22,6 +9,10 @@ HOMEPAGE="http://www.samba.org/ppp"
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/pppd"
+
+SLOT="0"
+LICENSE="BSD GPL"
+KEYWORDS="x86"
 
 src_compile() {
 

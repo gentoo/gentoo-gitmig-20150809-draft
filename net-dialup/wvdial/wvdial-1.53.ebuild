@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53.ebuild,v 1.3 2002/07/17 10:43:25 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Excellent program which automatically configures your PPP session"
 SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 HOMEPAGE="http://http://open.nit.ca"
 
-DEPEND="virtual/glibc
-	net-libs/wvstreams"
-	
-RDEPEND="$DEPEND net-dialup/ppp"
+DEPEND="net-libs/wvstreams"
+RDEPEND="net-dialup/ppp"
 
+SLOT="0"
+LICENSE="LGPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	
