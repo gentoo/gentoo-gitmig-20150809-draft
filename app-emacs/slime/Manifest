@@ -1,7 +1,7 @@
 MD5 c25320cc54771e316c36cc77f4985d8a slime-1.0.ebuild 1556
 MD5 c0a5f7317eb724d2e79c8a94b4352a7c slime-1.0.20041010.ebuild 1966
-MD5 67cef652d514b72d65140a8de6d0cda3 slime-1.0.20050207.ebuild 1991
-MD5 e8ae7265f7fc7cf43334c9266b4e0df7 ChangeLog 1568
+MD5 ad9db396090a0769f203fe15a3a2289d slime-1.0.20050207.ebuild 2009
+MD5 62650ea833bf0918c947746d6a9868ff ChangeLog 2085
 MD5 185b50ff504c7da6807fffb4e73fc017 metadata.xml 1267
 MD5 b1b578e7c57b253d1fd49eeb57e5a5a1 slime-1.0.20050106.ebuild 2032
 MD5 910993d2e23f61b956f2df6fad49b657 files/70slime-gentoo.el 577
@@ -19,4 +19,4 @@ MD5 7afeaa3a16a2c20000633c9e57dc0a2f files/1.0.20050106/swank.asd 1636
 MD5 910993d2e23f61b956f2df6fad49b657 files/1.0.20050207/70slime-gentoo.el 577
 MD5 cd3eddef773c2bdc1eac336383f13ec6 files/1.0.20050207/swank-loader.lisp 68
 MD5 b3ba0a2b8052abb14c37d64c9c8c0e31 files/1.0.20050207/swank.asd 1637
-MD5 dbd05e3df3b1a437912c3dcd36a2b700 files/1.0.20050207/README.Gentoo 402
+MD5 a6f665debad6ee005b99b5ae3d3aeedb files/1.0.20050207/README.Gentoo 349
