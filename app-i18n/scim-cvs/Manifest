@@ -1,5 +1,5 @@
-MD5 4f781b31c5723331107f15f9f976cbcb scim-cvs-0.99.1.ebuild 2773
 MD5 6e9d1263b162455386a539547bb1ce2b ChangeLog 532
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 59c48b4b1c91324a836b48029df17382 scim-cvs-0.99.1.ebuild 2766
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-scim-cvs-0.99.1 0
 MD5 95e4d06699356649f034690e3c3e870e files/scim-cvs-gtk2immodule.patch 545
