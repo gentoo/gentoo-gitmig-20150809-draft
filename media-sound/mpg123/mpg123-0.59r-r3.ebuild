@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r3.ebuild,v 1.1 2003/09/30 07:42:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r3.ebuild,v 1.2 2003/09/30 09:49:22 aliz Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND=">=sys-apps/sed-4
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 src_unpack () {
 	unpack ${A}
