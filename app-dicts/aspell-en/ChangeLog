@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/aspell-en
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.6 2004/06/24 21:32:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.7 2004/10/03 22:43:15 arj Exp $
+
+*aspell-en-6.0.0 (03 Oct 2004)
+
+  03 Oct 2004; Anders Rune Jensen <arj@gentoo.org> +aspell-en-6.0.0.ebuild:
+  version bump. Aspell-0.60 only.
 
 *aspell-en-0.51.1 (16 May 2004)
 

@@ -1,4 +1,6 @@
 MD5 9e77fda006db663125c8f396060b601b ChangeLog 621
 MD5 7bc6ee12502ec2fbaba06e35167c9c38 aspell-ru-0.50.2.ebuild 288
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
+MD5 32ee07414a2e21722420ce741d16c63f aspell-ru-0.99.1.ebuild 318
 MD5 334afb56384a38dae6eeb217802d5f24 files/digest-aspell-ru-0.50.2 69
+MD5 380255060eeffddd51b3a3b2aed6aa9e files/digest-aspell-ru-0.99.1 72
