@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.0.1-r1.ebuild,v 1.1 2004/03/18 17:54:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.0.1-r1.ebuild,v 1.2 2004/03/20 00:00:13 eradicator Exp $
 
 inherit distutils
 inherit eutils
@@ -33,7 +33,7 @@ src_unpack() {
 	unpack ${A}
 	sed -i "s:os.path.abspath(os.path.dirname(sys.argv\[0\])):\"${PIXMAPLOC}/\":" ${S}/btdownloadgui.py || die "sed failure 1"
 	sed -i "s:BitTorrent\.version:BitTornado.version:g" ${S}/setup.py || die "sed failure 2"
-	sed -i 's:packages = \["BitTornado"\],:packages = \["BitTornado","BitTornado.BT1"\]:g' ${S}/setup.py || die "sed failure 3"
+	sed -i 's:packages = \["BitTornado"\],:packages = \["BitTornado","BitTornado.BT1"\],:g' ${S}/setup.py || die "sed failure 3"
 }
 
 src_install() {
