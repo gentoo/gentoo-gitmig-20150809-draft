@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kopete
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.38 2004/03/27 16:25:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.39 2004/04/24 21:04:58 weeve Exp $
+
+  24 Apr 2004; Jason Wever <weeve@gentoo.org> kopete-0.8.0.ebuild:
+  Adjusted the kdelibs depend in 0.8.0 to correctly pull in the right version of
+  kdelibs and marked stable on sparc.
 
   27 Mar 2004; Heinrich Wendel <lanius@gentoo.org> kopete-0.7.4.ebuild,
   kopete-0.8.0.ebuild:
