@@ -1,0 +1,7 @@
+# ChangeLog for media-sound/mixxx
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.1 2002/10/14 11:32:14 verwilst Exp $
+
+*mixxx-0.9.1 (14 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  Initial import. Ebuild by Tue Haste Andersen <haste@diku.dk>. 
