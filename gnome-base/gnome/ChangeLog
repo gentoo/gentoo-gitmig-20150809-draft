@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.36 2002/09/06 04:23:53 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.37 2002/09/13 15:24:22 spider Exp $
+
+*gnome-2.0.2_rc1 (13 Sep 2002)
+  13 Sep 2002; Spider <spider@gentoo.org> 
+  after an absence, 2.0.2_rc1 is done
+
 
 *gnome-2.0.2_pre1 ( 06 Sep 2002) 
   06 Sep 2002; Spider <spider@gentoo.org> 
