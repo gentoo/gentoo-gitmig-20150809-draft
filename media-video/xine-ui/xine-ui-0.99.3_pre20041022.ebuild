@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3_pre20041022.ebuild,v 1.2 2005/01/04 10:51:50 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3_pre20041022.ebuild,v 1.3 2005/03/29 05:18:32 chriswhite Exp $
 
 inherit eutils
 
@@ -22,8 +22,7 @@ DEPEND="media-libs/libpng
 	X? ( virtual/x11 )
 	aalib? ( media-libs/aalib )
 	gnome? ( =gnome-base/orbit-0* )
-	directfb? ( media-libs/aalib
-		>=dev-libs/DirectFB-0.9.9 )"
+	directfb? ( >=dev-libs/DirectFB-0.9.9 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {

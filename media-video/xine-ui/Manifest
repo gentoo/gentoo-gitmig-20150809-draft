@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5252d2d363047b4b1db736c717110000 ChangeLog 11178
+MD5 9f43d0bc44fc991dee18c09e205a8cee ChangeLog 11340
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 871ab1252b5ad1b44a13cf76b370b3d1 xine-ui-0.9.21-r1.ebuild 1607
 MD5 51e8cc0f16c4ab4718f828bf618b00fe xine-ui-0.9.22-r1.ebuild 1446
 MD5 fa8489b4c41662c5d342f1139f19199a xine-ui-0.9.22-r2.ebuild 1460
 MD5 6b52e9fa34c8e32e831d1bcc585e53ed xine-ui-0.9.23-r1.ebuild 1425
-MD5 292b7ed6e6664f785ef5826fcd8d185b xine-ui-0.9.23-r2.ebuild 1586
+MD5 de6e684a0549e572e36cea492ac2daff xine-ui-0.9.23-r2.ebuild 1570
 MD5 7e1c68a1102e1f87b51f007419a53747 xine-ui-0.99.1.ebuild 1488
 MD5 01994eb77ebdb72cbe431b17d9b64f96 xine-ui-0.99.2.ebuild 1501
 MD5 00b711d4ba64bd1067623be007133d92 xine-ui-0.99.3.ebuild 1600
-MD5 6579db27c45daff2eabda02461bc7efd xine-ui-0.99.3_pre20041022.ebuild 1356
+MD5 484aed56116df5fa32309a33dae2e8f4 xine-ui-0.99.3_pre20041022.ebuild 1340
 MD5 32aa0f3c22f337999efc35a1eff3cd94 files/digest-xine-ui-0.9.21-r1 67
 MD5 a40013de7a4c30965b9adb242f6d9203 files/digest-xine-ui-0.9.22-r1 67
 MD5 a40013de7a4c30965b9adb242f6d9203 files/digest-xine-ui-0.9.22-r2 67
@@ -32,9 +32,9 @@ MD5 f9ec30bd10b5c9d431b5d382310fe87d files/xine-ui-configure.patch 336
 MD5 eae093d61629b0d42b806e9e84814e79 files/xine-ui-gentoo.diff 5216
 MD5 92d5d365d60b97698c865beaede2b594 files/xine.desktop 296
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCRht1ArHZZzCEUG0RAlc1AJ95/mBUi7y7cDoqVO/zCnF/Rz5mywCfessk
-A1zr/wUiU1sbCG+PXCNYVeg=
-=0Mt5
+iD8DBQFCSN2RFdQwWVoAgN4RAk/MAJ451Ui71cASIuAWCLeesDQC56w9eACgnp/P
+HC5Ths3k89DKTpcnECpItZg=
+=0qAW
 -----END PGP SIGNATURE-----

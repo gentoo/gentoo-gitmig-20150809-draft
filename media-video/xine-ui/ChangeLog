@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.70 2005/03/27 02:33:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.71 2005/03/29 05:18:32 chriswhite Exp $
+
+  29 Mar 2005; Chris White <chriswhite@gentoo.org> xine-ui-0.9.23-r2.ebuild,
+  xine-ui-0.99.3_pre20041022.ebuild:
+  Fixed bug #54273 with bad aalib DEPEND atom.
 
   27 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   +files/xine.desktop, xine-ui-0.99.3.ebuild:
