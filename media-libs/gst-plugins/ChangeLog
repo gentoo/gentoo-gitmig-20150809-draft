@@ -1,7 +1,13 @@
 # ChangeLog for media-libs/gstreamer-plugins
 
 
+
+
 *gst-plugins-0.4.1 (22 Sep 2002)
+  26 Sep 2002; Spider <spider@gentoo.org> files/digest-gst-plugins-0.4.1: 
+  corrected digest, the upstream tarballs changed. no trojans here, only
+  configure and configure.ac changing -Werror and -Wall to variables
+
   22 Sep 2002; Spider <spider@gentoo.org> gst-plugins-0.4.1.ebuild :
   a New hope.  crushed ;)  
   aalib is broken
