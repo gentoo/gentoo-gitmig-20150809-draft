@@ -443,11 +443,9 @@ net-p2p/giftcurs
 # blocke, March 7, 2002
 <=dev-lang/php-4.1.2-r1
 
-# 3 Jul 2002, rphillips.
-# masked for testing
-dev-php/php
-dev-php/phpdbg
-dev-php/mod_php
+# 16 Jul 2002, rphillips.
+# unmasked dev-php/ tree; masked old dev-lang/php
+dev-lang/php
 
 # Only use the mesa and mesa-glu provided with x11-base/xfree,
 # as the external ones gives problems in most cases with DRI/DRM.
