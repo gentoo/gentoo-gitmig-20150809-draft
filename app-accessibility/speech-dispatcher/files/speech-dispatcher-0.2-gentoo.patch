@@ -1,0 +1,55 @@
+diff -Naur speechd-0.2.vanilla/config/speechd.conf.in speechd-0.2/config/speechd.conf.in
+--- speechd-0.2.vanilla/config/speechd.conf.in	2003-10-08 16:26:43.000000000 -0500
++++ speechd-0.2/config/speechd.conf.in	2004-03-30 19:09:14.133265136 -0600
+@@ -28,7 +28,7 @@
+ # Specify "stdout" for standard console output
+ # or a full path to some file which the log should be written to.
+ 
+-LogFile  "/var/log/speechd.log"
++LogFile  "/var/log/speech-dispatcher.log"
+ #LogFile  "stdout"
+ 
+ # CustomLogFile allows logging all messages of the given kind, regardless their
+@@ -164,5 +164,5 @@
+ # it should apply this settings (it does glob-style matching, you can use
+ # * to match any number of characters and ? to match one character)
+ 
+-# Include "clients/emacs.conf"
++Include "clients/emacs.conf"
+ 
+diff -Naur speechd-0.2.vanilla/configure.in speechd-0.2/configure.in
+--- speechd-0.2.vanilla/configure.in	2003-10-29 14:50:15.000000000 -0600
++++ speechd-0.2/configure.in	2004-03-30 19:08:00.153511768 -0600
+@@ -46,13 +46,13 @@
+ AC_SUBST(glib_include)
+ glib_libs=`pkg-config --libs glib-2.0`
+ AC_SUBST(glib_libs)
+-spdconfdir="$sysconfdir/speechd" 
++spdconfdir="$sysconfdir/speech-dispatcher" 
+ AC_SUBST(spdconfdir)
+-snddatadir="$datadir/sounds/speechd" 
++snddatadir="$datadir/sounds/speech-dispatcher" 
+ AC_SUBST(snddatadir)
+-modulebindir="$bindir/speechd-modules/" 
++modulebindir="$libdir/speech-dispatcher-modules/" 
+ AC_SUBST(modulebindir)
+-moduleconfdir="$sysconfdir/speechd/modules/" 
++moduleconfdir="$sysconfdir/speech-dispatcher/modules/" 
+ AC_SUBST(moduleconfdir)
+ 
+ AC_ARG_VAR(pidpath, Absolute path to a pid file)
+diff -Naur speechd-0.2.vanilla/src/server/speechd.c speechd-0.2/src/server/speechd.c
+--- speechd-0.2.vanilla/src/server/speechd.c	2003-10-15 16:03:05.000000000 -0500
++++ speechd-0.2/src/server/speechd.c	2004-03-30 19:08:00.155511464 -0600
+@@ -598,9 +598,9 @@
+     options_parse(argc, argv);
+ 
+     if (!strcmp(PIDPATH, ""))
+-        speechd_pid_file = strdup("/var/run/speechd.pid");
++        speechd_pid_file = strdup("/var/run/speech-dispatcher.pid");
+     else
+-        speechd_pid_file = strdup(PIDPATH"speechd.pid");
++        speechd_pid_file = strdup(PIDPATH"speech-dispatcher.pid");
+ 
+     if (create_pid_file() == -1) exit(1);
+ 
