@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.2.ebuild,v 1.5 2004/06/25 01:45:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.2.ebuild,v 1.6 2004/08/07 22:13:10 slarti Exp $
 
 inherit python distutils
 
@@ -8,7 +8,7 @@ MY_PN="pythonG"
 MY_PV=${PV/_/-}
 MY_PV=$(echo $MY_PV | sed -e 's:\.:_:g')
 
-DESCRIPTION="Nice and powerful spanish development enviroment for Python"
+DESCRIPTION="Nice and powerful spanish development environment for Python"
 SRC_URI="http://www3.uji.es/~dllorens/downloads/pythong/linux/old/${MY_PN}-${MY_PV}.tgz
 	doc? ( http://marmota.act.uji.es/MTP/pdf/python.pdf )"
 HOMEPAGE="http://www3.uji.es/~dllorens/PythonG/principal.html"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.7 2004/06/25 01:33:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.8 2004/08/07 22:12:15 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> logilab-common-0.3.4.ebuild,
+  logilab-common-0.4.4.ebuild, logilab-common-0.5.0.ebuild:
+  Typo in DESCRIPTION: developped -> developed; functionnalities ->
+  functionality. Bug 59717.
 
   12 May 2004; David Holm <dholm@gentoo.org> logilab-common-0.5.0.ebuild:
   Added to ~ppc.

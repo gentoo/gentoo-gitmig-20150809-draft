@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythong
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.10 2004/06/25 01:45:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.11 2004/08/07 22:13:10 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> pythong-2.1.2.ebuild,
+  pythong-2.1.4.ebuild, pythong-2.1.5.ebuild:
+  Typo in DESCRIPTION: enviroment -> environment. Bug 59717.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> pythong-2.1.2.ebuild,
   pythong-2.1.4.ebuild, pythong-2.1.5.ebuild:
