@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r1.ebuild,v 1.6 2003/12/08 22:44:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r1.ebuild,v 1.7 2003/12/23 01:01:34 robbat2 Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -63,7 +63,9 @@ src_compile() {
 	myconf="${myconf} `use_with ldap authldap`"
 	myconf="${myconf} `use_with mysql authmysql`"
 	myconf="${myconf} `use_with postgres authpostgresql`"
-	myconf="${myconf} --with-ipv6"
+	# the --with-ipv6 is broken
+	#myconf="${myconf} --with-ipv6"
+	use ipv6 || myconf="${myconf} --without-ipv6"
 	use berkdb \
 		&& myconf="${myconf} --with-db=db" \
 		|| myconf="${myconf} --with-db=gdbm"

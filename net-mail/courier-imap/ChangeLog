@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.49 2003/12/08 22:44:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.50 2003/12/23 01:01:34 robbat2 Exp $
+
+  22 Dec 2003; Robin H. Johnson <robbat2@gentoo.org>
+  courier-imap-2.1.2-r1.ebuild:
+  fix bug #33346
 
   09 Dec 2003; Martin Holzer <mholzer@gentoo.org>
   courier-imap-1.7.3-r1.ebuild, courier-imap-2.1.2-r1.ebuild:
