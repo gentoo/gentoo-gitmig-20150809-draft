@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.3 2004/02/06 02:10:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.4 2004/02/06 19:50:32 mr_bones_ Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -20,11 +20,11 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
 #  This means all components that a user expects in Gnome2 are present
 #  please do not reduce this list further unless
 #  dependencies pull in what you remove.
-#  With "emerge gnome" a user expects the full "standard" distribution 
-#  of Gnome and should be provided with that, consider only 
+#  With "emerge gnome" a user expects the full "standard" distribution
+#  of Gnome and should be provided with that, consider only
 #  installing the parts needed for smaller installations.
 
-	
+
 RDEPEND="!gnome-base/gnome-core
 
 	>=dev-libs/glib-2.2.3
