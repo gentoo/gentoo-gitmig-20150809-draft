@@ -1,19 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/info2html-1.4.ebuild,v 1.1 2003/09/28 01:05:46 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/info2html-1.4.ebuild,v 1.2 2003/11/13 06:16:13 vapier Exp $
+
+inherit eutils webapp-apache
+webapp-detect || NO_HTTPD=1
 
 DESCRIPTION="Converts GNU .info files to HTML"
 HOMEPAGE="http://info2html.sourceforge.net/"
 SRC_URI="mirror://sourceforge/info2html/${P}.tgz"
+
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="alpha arm hppa mips sparc x86"
+
 DEPEND="dev-lang/perl"
-
-inherit eutils
-inherit webapp-apache
-
-webapp-detect || NO_HTTPD=1
 
 src_unpack() {
 	unpack ${A}

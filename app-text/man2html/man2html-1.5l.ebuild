@@ -1,20 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l.ebuild,v 1.2 2003/10/27 08:36:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l.ebuild,v 1.3 2003/11/13 06:15:48 vapier Exp $
+
+inherit eutils webapp-apache
+webapp-detect || NO_HTTPD=1
 
 DESCRIPTION="Convert manual pages to HTML"
 HOMEPAGE="http://freshmeat.net/projects/man/"
 SRC_URI="mirror://kernel/linux/utils/man/man-${PV}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha arm hppa mips sparc x86"
-DEPEND="app-misc/glimpse sys-apps/gawk sys-apps/man"
-S="${WORKDIR}/man-${PV}"
 
-inherit eutils
-inherit webapp-apache
+DEPEND="app-misc/glimpse
+	sys-apps/gawk
+	sys-apps/man"
 
-webapp-detect || NO_HTTPD=1
+S=${WORKDIR}/man-${PV}
 
 pkg_setup() {
 	webapp-pkg_setup "${NO_HTTPD}"
