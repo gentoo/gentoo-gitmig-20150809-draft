@@ -1,6 +1,27 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.110 2004/04/16 03:33:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.111 2004/04/19 04:24:06 solar Exp $
+
+*binutils-2.15.90.0.3-r1 (19 Apr 2004)
+
+  19 Apr 2004; <solar@gentoo.org> binutils-2.15.90.0.3-r1.ebuild:
+  - the patches 03,04,07 were replaced w/ the redhat ones - the patch 01 was
+  moved to apply after the uclibc patches (59) - the 20 patch got a replacement
+  64 for the case relro is used (default in ebuild) - the 90 patch (pt_pax) has
+  also a replacement as 63 to apply after relro - the patches 3x_ are from
+  redhat having the same patch number 3x coresponds in redhat to x, (unmodified
+  patches) - the patches 5x_ are uclibc related coming from buildroot (51 and 52
+  are ports of the buildroot versions to this binutils, 51 is generic, only 52
+  is uclibc specific), the 59 patch is really the 01 one, but the 52 patch is so
+  big, that I didn't want to patch it again, it applies correctly in the reverse
+  order - the patches 6x_ are from me: 61_ I had a situation on cross-compiling
+  where I needed it 62_ is an uclibc addon (missing configure stuff to recognize
+  uclibc) 63_ pt_pax patch to apply after relro 64_ is a 20_ patch replacement
+  for amd64.
+  I have left in all the patches, so that some can build w/ and w/o relro. The
+  ebuild offers this possibility, see comment inside.
+  The uclibc stuff shouldn't disturb normal functionality, mainly the configure
+  stuff is enabled to recognize uclibc systems. Peter S. Mazinger <ps.m@gmx.net>
 
 *binutils-2.15.90.0.3 (15 Apr 2004)
 
