@@ -1,6 +1,20 @@
-MD5 0006127ad81f6d86c56ad648364182b7 ChangeLog 2611
-MD5 d33778de1a12f777117ec283fee79de1 html-xml-utils-2.3-r1.ebuild 1101
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 290f222d74286ba447f12bde876d6989 ChangeLog 3028
+MD5 742f5b8143e30939520147d12762c6b6 html-xml-utils-2.8-r2.ebuild 1269
 MD5 215d470ee4e713bb7687be0a2365b2d9 html-xml-utils-2.8-r1.ebuild 956
+MD5 f02cf11e4c013131d2e7ebd3a540b433 html-xml-utils-3.4.ebuild 1268
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 06599f2b88431de765b00f6457bbcf0c files/digest-html-xml-utils-2.3-r1 70
+MD5 1911d1290459bc65c1319f67fef70e77 files/digest-html-xml-utils-3.4 70
+MD5 171bede4d22a09f2068d6dd6c9c030db files/html-xml-utils-addid-man 2033
 MD5 cc6d3e76dc6a18f3a3bca84b79a0b8f5 files/digest-html-xml-utils-2.8-r1 70
+MD5 cc6d3e76dc6a18f3a3bca84b79a0b8f5 files/digest-html-xml-utils-2.8-r2 70
+MD5 c38f364e7304aad97fc8fe22b6cbcec2 files/html-xml-utils-incl-man-fix.patch 1813
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjzVSVWNWqTUmv+0RArA2AJ9e8b1SPql2n9q0ZlXyFF3GgYZugACgl4GR
+YOBOnFzfQRSpsjTgLgY2S+U=
+=kIEj
+-----END PGP SIGNATURE-----

@@ -1,31 +1,38 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.3-r1.ebuild,v 1.10 2004/07/01 11:58:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.1 2004/11/08 09:05:20 usata Exp $
+
+inherit eutils
 
 DESCRIPTION="A number of simple utilities for manipulating HTML and XML files."
 SRC_URI="http://www.w3.org/Tools/HTML-XML-utils/${P}.tar.gz"
 HOMEPAGE="http://www.w3.org/Tools/HTML-XML-utils/"
 LICENSE="W3C"
 
-KEYWORDS="x86 sparc"
-SLOT="0"
 IUSE=""
+KEYWORDS="x86 ~sparc ppc ~alpha"
+SLOT="0"
 
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp heap.c heap.c.orig
-	sed -e "s/#define FILE.*/#define FILE __FILE__/" \
-		-e "s/#define LINE.*/#define LINE __LINE__/" \
-		< heap.c.orig > heap.c || die
+	epatch ${FILESDIR}/${PN}-incl-man-fix.patch
+
+	# Replace references to normalize with normalize-html, which
+	# has been renamed due to clash described in #27399
+	sed -i "s:normalize:&-html:g" *.1 || die "sed failed"
+
 }
 
 src_install () {
 
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING NEWS README TODO
+	dodoc AUTHORS ChangeLog COPYING INSTALL README TODO
+	newman ${FILESDIR}/${PN}-addid-man addid.1
 
 	# Check bug #27399, the following binary conflicts with
 	# one provided by the 'normalize' package, so we're
