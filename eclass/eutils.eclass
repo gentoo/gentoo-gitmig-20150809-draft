@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.38 2003/06/28 02:50:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.39 2003/07/01 02:03:26 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -639,6 +639,76 @@ edos2unix() {
 		cp ${f} ${T}/edos2unix
 		sed 's/\r$//' ${T}/edos2unix > ${f}
 	done
+}
+
+# Make a desktop file !
+# Great for making those icons in kde/gnome startmenu !
+# Amaze your friends !  Get the women !  Join today !
+# gnome2 /usr/share/applications
+# gnome1 /usr/share/gnome/apps/
+# KDE ${KDEDIR}/share/applnk /usr/share/applnk
+#
+# make_desktop_entry(<binary>, [name], [icon], [type], [path])
+#
+# binary:	what binary does the app run with ?
+# name:		the name that will show up in the menu
+# icon:		give your little like a pretty little icon ...
+#		this can be relative (to /usr/share/pixmaps) or
+#		a full path to an icon
+# type:		what kind of application is this ?  for categories:
+#		http://www.freedesktop.org/standards/menu/draft/menu-spec/menu-spec.html
+# path:		if your app needs to startup in a specific dir
+make_desktop_entry() {
+	[ -z "$1" ] && eerror "You must specify the executable" && return 1
+
+	local exec=${1}
+	local name=${2:-${PN}}
+	local icon=${3:-${PN}.png}
+	local type=${4}
+	local path=${5:-${GAMES_PREFIX}}
+	if [ -z "${type}" ] ; then
+		case ${CATEGORY} in
+			app-emulation)	type=Emulator	;;
+			app-games)	type=Game	;;
+			*)		type=""		;;
+		esac
+	fi
+
+echo "[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.2
+Name=${name}
+Type=Application
+Comment=${DESCRIPTION}
+Exec=${exec}
+Path=${path}
+Icon=${icon}
+Categories=Application;${type};" > ${T}/${name}.desktop
+	name=${T}/${name}.desktop
+
+	if [ -d /usr/share/applications ] ; then
+		insinto /usr/share/applications
+		doins ${name}
+	fi
+
+	if [ -d /usr/share/gnome/apps ] ; then
+		insinto /usr/share/gnome/apps/Games
+		doins ${name}
+	fi
+
+	if [ ! -z "`ls /usr/kde/* 2>/dev/null`" ] ; then
+		for ver in /usr/kde/* ; do
+			insinto ${ver}/share/applnk/Games
+			doins ${name}
+		done
+	fi
+
+	if [ -d /usr/share/applnk ] ; then
+		insinto /usr/share/applnk
+		doins ${name}
+	fi
+
+	return 0
 }
 
 # new convenience patch wrapper function to eventually replace epatch(), 
