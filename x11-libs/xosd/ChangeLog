@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.12 2003/01/08 09:32:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.13 2003/02/03 20:35:00 nall Exp $
 
 *xosd-2.0.1-r1 (07 Jan 2003)
+
+  03 Feb 2003; Jon Nall <nall@gentoo.org> xosd-2.0.1-r1.ebuild :
+  added ~ppc
 
   07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> xosd-2.0.1-r1.ebuild :
   Fix for #12519. Moved installation of xmms plugin to this ebuild instead of media-plugins/xmms-xosd.
