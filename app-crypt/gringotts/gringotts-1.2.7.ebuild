@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.7.ebuild,v 1.5 2004/06/24 21:32:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.7.ebuild,v 1.6 2004/06/28 19:31:11 vapier Exp $
 
 DESCRIPTION="Utility that allows you to jot down sensitive data"
 HOMEPAGE="http://devel.pluto.linux.it/projects/Gringotts/"
@@ -15,7 +15,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=dev-libs/libgringotts-1.2.0
 	dev-libs/popt
 	>=x11-libs/gtk+-2.0.6-r1
-	sys-apps/textutils"
+	sys-apps/coreutils"
 
 src_install() {
 	einstall || die

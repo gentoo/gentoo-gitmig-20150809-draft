@@ -1,8 +1,18 @@
-MD5 c85cf6d1cfd658d7f6de5572bffd3ae2 gringotts-1.2.8.ebuild 1020
-MD5 118f3cadce002f822a5dc9cc25bc73af gringotts-0.6.2.ebuild 754
-MD5 d4eea21434b7275a2022813a650fcfec gringotts-1.2.7.ebuild 852
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4c70ac5b25027f3d7ce37a2111732033 ChangeLog 2115
+MD5 118f3cadce002f822a5dc9cc25bc73af gringotts-0.6.2.ebuild 754
+MD5 2279ce4ccc2e61a6eca5c0f0b7a1a379 gringotts-1.2.7.ebuild 850
 MD5 978ca7de1eb30365afc7555b471468a6 metadata.xml 219
+MD5 c85cf6d1cfd658d7f6de5572bffd3ae2 gringotts-1.2.8.ebuild 1020
 MD5 f5f93f35d5e5ff64be8c75de6bde2964 files/digest-gringotts-0.6.2 68
-MD5 382c31ccfb9cfcf8055a4796357f2ba0 files/digest-gringotts-1.2.7 68
 MD5 238aeb98d1470931a9e60395575595d4 files/digest-gringotts-1.2.8 68
+MD5 382c31ccfb9cfcf8055a4796357f2ba0 files/digest-gringotts-1.2.7 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4HISHTu7gpaalycRAg7oAJ4nEOKkgJvFl5gzzV1uiNYL/IJRNACgxPk3
+PA8EaLGWRdN9zNnWln1xTHY=
+=QlhC
+-----END PGP SIGNATURE-----
