@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.309 2005/02/02 06:19:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.310 2005/02/02 16:05:07 corsair Exp $
+
+  02 Feb 2005; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.1.903.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   01 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.903.ebuild:
