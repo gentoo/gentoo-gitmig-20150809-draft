@@ -1,6 +1,9 @@
 # ChangeLog for net-news/slrnconf
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/ChangeLog,v 1.4 2004/08/05 22:44:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/ChangeLog,v 1.5 2004/08/08 00:28:52 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> slrnconf-0.8.4.ebuild:
+  Typo in DESCRIPTION: configuation -> configuration. Bug 59717.
 
   06 Aug 2004; Sven Wegener <swegener@gentoo.org> slrnconf-0.8.4.ebuild:
   Updated dependencies and marked stable on x86.
