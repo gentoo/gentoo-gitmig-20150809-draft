@@ -12,11 +12,11 @@ MD5 d7008d6229625e357c4168a2b7e63bb1 files/digest-microcode-ctl-1.06-r1 151
 MD5 61018eeebaafae71bedeeef06fcc6725 files/digest-microcode-ctl-1.07-r1 148
 MD5 7fdce1504a1132239d2dbc1fbce08d66 files/microcode_ctl.rc 439
 MD5 640b043c1686437b589af2fe46960383 files/digest-microcode-ctl-1.08 70
-MD5 85f8e6009559afc8ff1d4b73ffa663b7 files/microcode_ctl.conf.d 267
+MD5 cf9bec50cc6330e817b856deb0cf00f5 files/microcode_ctl.conf.d 263
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBNkcVHTu7gpaalycRAmlFAKDCBMlMMdaeLNj5cVLdMrfdHnY9RACeICXL
-hUFpcbCOijbUKjPmFaaEy+Q=
-=Pd34
+iD8DBQFBNkdwHTu7gpaalycRAvyFAKCJroRhvAWSaEwRl6XObx/wsVZIvACfew3z
+j3mpHDyl6gl9Y9J7wUNUJQk=
+=iDVl
 -----END PGP SIGNATURE-----
