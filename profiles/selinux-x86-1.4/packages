@@ -47,7 +47,7 @@
 # SELinux stuff -- Need to make sure that the selinux patches stay in these
 # packages, otherwise we'll need to lock down the ver/rev
 *sys-apps/selinux-small
-*sys-apps/selinux-base-policy
+*sec-policy/selinux-base-policy
 *>=sys-apps/findutils-4.1.7-r3
 *>=sys-apps/procps-3.1.8
 *>=sys-apps/tar-1.13.25-r3
