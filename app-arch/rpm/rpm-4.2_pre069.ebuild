@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.7 2004/01/25 12:38:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.8 2004/03/12 10:49:49 mr_bones_ Exp $
 
 inherit flag-o-matic libtool eutils
 
