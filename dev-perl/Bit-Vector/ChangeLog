@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.1 2002/10/02 10:54:40 mcummings Exp $
+
+*Bit-Vector-6.3 (2 Oct 2002)
+
+  02 Oct 2002; <mcummings@gentoo.org>: Initial import. Fulfills 
+  dependancy for Date-Calc. Addresses bug 8309, brought to our attention 
+  by David.
