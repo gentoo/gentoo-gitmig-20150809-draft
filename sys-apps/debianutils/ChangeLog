@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.32 2003/12/10 03:06:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.33 2003/12/10 21:18:04 seemant Exp $
+
+*debianutils-1.16.7-r4 (10 Dec 2003)
+
+  10 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  debianutils-1.16.7-r3.ebuild, debianutils-1.16.7-r4.ebuild,
+  files/debianutils-1.16.7-gentoo.patch:
+  mkboot queries portage for sys-boot/grub instead of sys-apps/grub, thanks to
+  max@gentoo.org in #gentoo-dev
 
   09 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
   debianutils-1.16.7-r2.ebuild, debianutils-1.16.7-r3.ebuild:
