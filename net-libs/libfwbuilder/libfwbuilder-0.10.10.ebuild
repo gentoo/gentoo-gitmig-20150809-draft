@@ -17,7 +17,6 @@ DEPEND="=dev-libs/libsigc++-1.0*
 	>=dev-libs/libxslt-1.0.7
 	>=net-analyzer/ucd-snmp-4.2.3
 	ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	local myconf

@@ -8,7 +8,6 @@ SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 HOMEPAGE="http://open.nit.ca/wvstreams"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
