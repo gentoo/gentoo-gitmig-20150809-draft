@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.33 2004/06/28 22:12:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.34 2004/06/30 14:39:58 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> xterm-184.ebuild,
+  xterm-191.ebuild:
+  stable on alpha and ia64
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> xterm-184.ebuild:
   add sed-4 dep

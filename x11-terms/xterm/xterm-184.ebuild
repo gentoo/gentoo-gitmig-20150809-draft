@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.27 2004/06/28 22:12:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.28 2004/06/30 14:39:58 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~x86 ppc sparc ~mips alpha arm ~hppa amd64 ~ia64"
+KEYWORDS="~x86 ppc sparc ~mips alpha arm ~hppa amd64 ia64"
 IUSE="truetype Xaw3d"
 
 DEPEND="|| ( x11-base/xorg-x11 >=x11-base/xfree-4.3.0-r6 )
