@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.1.ebuild,v 1.16 2003/10/06 15:38:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.1.ebuild,v 1.17 2003/12/09 18:03:34 lanius Exp $
 
 inherit flag-o-matic
 
@@ -23,7 +23,7 @@ DEPEND="virtual/x11
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus"
 RDEPEND="${DEPEND}
-	app-text/ghostscript
+	virtual/ghostscript
 	app-text/xpdf
 	virtual/aspell-dict
 	app-text/gv

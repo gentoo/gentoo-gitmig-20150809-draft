@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.4 2003/10/10 10:10:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.5 2003/12/09 18:03:34 lanius Exp $
 
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
@@ -26,7 +26,7 @@ DEPEND="virtual/x11
 	qt? ( >=x11-libs/qt-3 ) !qt? ( =x11-libs/xforms-1* )"
 
 RDEPEND="${DEPEND}
-	app-text/ghostscript
+	virtual/ghostscript
 	app-text/xpdf
 	virtual/aspell-dict
 	app-text/gv

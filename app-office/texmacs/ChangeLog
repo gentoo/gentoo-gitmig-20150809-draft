@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.14 2003/10/28 10:41:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.15 2003/12/09 18:04:15 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> texmacs-1.0.1-r1.ebuild,
+  texmacs-1.0.1.23.ebuild, texmacs-1.0.1.ebuild, texmacs-1.0.2.4.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
 *texmacs-1.0.2.4 (28 Oct 2003)
 
