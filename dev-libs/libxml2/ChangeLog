@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.21 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.22 2002/12/22 10:32:10 azarah Exp $
+
+*libxml2-2.4.28-r1 (22 Dec 2002)
+
+  22 Dec 2002; Martin Schlemmer <azarah@gentoo.org> libxml2-2.4.28-r1.ebuild :
+
+  Force compile with zlib support, else gnome2 breaks (libgnomeprint for example
+  fails to compile with fresh or existing system).
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
