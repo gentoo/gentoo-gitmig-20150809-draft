@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20031213_pre4.ebuild,v 1.1 2003/12/13 16:12:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20031225_pre4.ebuild,v 1.1 2003/12/25 05:44:14 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
