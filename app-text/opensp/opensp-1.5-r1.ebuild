@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.15 2004/03/21 07:47:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.16 2004/04/15 23:27:06 randy Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/openjade/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="ia64 x86 amd64 hppa ~ppc alpha sparc mips"
+KEYWORDS="ia64 x86 amd64 hppa ~ppc alpha sparc mips s390"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
