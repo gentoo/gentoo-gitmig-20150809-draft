@@ -1,13 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.3.1.ebuild,v 1.3 2003/02/13 12:49:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.3.1.ebuild,v 1.4 2003/03/31 18:20:40 agriffis Exp $
 
 IUSE="sdl X"
 
 inherit libtool flag-o-matic
-
-# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-filter-flags "-maltivec -mabi=altivec -fPIC"
 
 MY_P="${P/libmpeg2/mpeg2dec}"
 S="${WORKDIR}/${MY_P}"
@@ -17,11 +14,14 @@ HOMEPAGE="http://libmpeg2.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc ~alpha"
 
 DEPEND="sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )"
 
+# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
+filter-flags "-maltivec -mabi=altivec -fPIC"
+[ $ARCH = alpha ] && append-flags -fPIC
 
 src_unpack() {
 	unpack ${A}
