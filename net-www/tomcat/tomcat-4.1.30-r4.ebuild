@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.30-r4.ebuild,v 1.2 2004/08/06 17:12:43 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.30-r4.ebuild,v 1.3 2004/08/06 17:24:26 axxo Exp $
 
 inherit eutils
 
@@ -42,8 +42,7 @@ src_install() {
 	use jikes && sed -e "\cCATALINA_OPTScaCATALINA_OPTS=\"-Dbuild.compiler.emacs=true\"" -i ${D}/etc/conf.d/${TOMCAT_NAME}
 
 	diropts -m750
-	dodir ${TOMCAT_HOME}
-	dodir /var/log/${TOMCAT_NAME}
+	dodir ${TOMCAT_HOME} /var/log/${TOMCAT_NAME} /etc/${TOMCAT_NAME}
 	keepdir /var/log/${TOMCAT_NAME}
 
 	mv conf ${D}/etc/${TOMCAT_NAME}
@@ -70,13 +69,15 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#due to previous ebuild bloopers, make sure everything is correct
-	chown -R root:root /usr/share/doc/${PV}
+	chown -R root:root /usr/share/doc/${PF}
 	chown root:root /etc/init.d/${TOMCAT_NAME}
 	chown root:root /etc/conf.d/${TOMCAT_NAME}
 
 	chown -R tomcat:tomcat /opt/${TOMCAT_NAME}
 	chown -R tomcat:tomcat /etc/${TOMCAT_NAME}
 	chown -R tomcat:tomcat /var/log/${TOMCAT_NAME}
+
+	chmod 750 /etc/${TOMCAT_NAME}
 
 	einfo " "
 	einfo " NOTICE!"
