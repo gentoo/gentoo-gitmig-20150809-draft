@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# # $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.16.ebuild,v 1.1 2002/06/24 01:42:07 azarah Exp $
+# # $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.16.ebuild,v 1.2 2002/06/29 00:07:16 azarah Exp $
 
 inherit libtool
 
@@ -18,8 +18,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/automake-1.6.1-r5"
 
 src_compile() {
-# DO NOT LIBTOOLIZE!!!!
-#	elibtoolize
+	elibtoolize
 
 	local myconf=""
 	use readline && myconf="--with-readline"
