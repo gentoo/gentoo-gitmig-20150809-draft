@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre1.ebuild,v 1.1 2004/01/09 00:27:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre1.ebuild,v 1.2 2004/01/09 11:10:46 foser Exp $
 
 inherit debug flag-o-matic libtool
 
@@ -9,7 +9,7 @@ MY_P=${PN}-${MY_PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="GNU Image Manipulation Program - Development series"
-SRC_URI="mirror://gimp/v${MY_PV}/testing/${MY_P}.tar.bz2"
+SRC_URI="mirror://gimp/v2.0/testing/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
 
 SLOT="2"

@@ -1,9 +1,12 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.62 2004/01/09 00:27:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.63 2004/01/09 11:10:46 foser Exp $
 
 *gimp-2.0_pre1 (09 Jan 2003)
 
+  09 Jan 2003; foser <foser@gentoo.org> gimp-2.0_pre1.ebuild :
+  Fix SRC_URI, duh, i thought i double checked that (#37656)
+  
   09 Jan 2003; foser <foser@gentoo.org> gimp-2.0_pre1.ebuild :
   New release, add fix for intltool 0.28 problems
 
