@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.1 2004/01/03 16:54:38 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.2 2004/01/28 03:47:12 zul Exp $
+
+  28 Jan 2004; <zulk@gentoo.org> qemu-0.5.1.ebuild:
+  Marked stable for x86.
 
 *qemu-0.5.1 (03 Jan 2004)
 
