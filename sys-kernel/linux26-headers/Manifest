@@ -2,13 +2,14 @@ MD5 e4f879084acabd014a43e3c9f1a43459 ChangeLog 7720
 MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
 MD5 89403525f4da5e8458fd7f720d6de6ee linux26-headers-2.6.6-r1.ebuild 4223
 MD5 b3d1c41a74dbe1041b4082288cacd3ca linux26-headers-2.6.7-r4.ebuild 4031
+MD5 926fe2dfdfca6e025dccb8f70be5e19f linux26-headers-2.6.8.1-r1.ebuild 4292
 MD5 58516a09eebcaa2239ea0b70f310484e linux26-headers-2.6.8.1.ebuild 3895
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
-MD5 dd5911fcaab655a422f1ea579ed6e5a4 linux26-headers-2.6.8.1-r1.ebuild 4293
 MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-linux26-headers-2.6.5 66
 MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux26-headers-2.6.6-r1 66
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux26-headers-2.6.7-r4 66
 MD5 18bed04a1b45de515096089cc10913ec files/digest-linux26-headers-2.6.8.1 68
+MD5 18bed04a1b45de515096089cc10913ec files/digest-linux26-headers-2.6.8.1-r1 68
 MD5 b3e4e51616a061327b46cbd31132c8c8 files/generate-asm-sparc 1654
 MD5 8a065c0dc3b8fac8747de35f1af75a2c files/linux26-headers-2.6.0-fb.patch 386
 MD5 a73786f0b9dda7e9ebacb91a192384f9 files/linux26-headers-2.6.0-sysctl_h-compat.patch 352
@@ -22,4 +23,3 @@ MD5 6dd79a655f006aebb7206203f3654976 files/linux26-headers-2.6.7-generic-arm-pre
 MD5 d78e0d94873de4518bca401d5688401c files/linux26-headers-2.6.7-prefetch.patch 528
 MD5 90a25f48309742c72d3f80c62b57495a files/linux26-headers-2.6.8.1-appCompat.patch 52797
 MD5 0501d9fb994e3c9721b2a239e92e30c6 files/linux26-headers-2.6.8.1-strict-ansi-fix.patch 4086
-MD5 18bed04a1b45de515096089cc10913ec files/digest-linux26-headers-2.6.8.1-r1 68
