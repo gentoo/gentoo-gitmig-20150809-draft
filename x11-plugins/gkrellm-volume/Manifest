@@ -1,9 +1,21 @@
-MD5 0814cc15c92dfe6e05aa45d42e9cc688 gkrellm-volume-2.1.4.ebuild 640
-MD5 439bb9d479336bbc32f884646996c031 ChangeLog 2927
-MD5 8cceecdbfeda865ce3cadb2300ce8507 gkrellm-volume-0.8-r1.ebuild 661
-MD5 a2ce0703427837452e595abc088f23d0 gkrellm-volume-2.1.9.ebuild 637
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8c2c2de151c53f0c315e692452a87c95 gkrellm-volume-2.1.8.ebuild 647
-MD5 c4db1e8ff3314d790cd18c87ac342d13 files/digest-gkrellm-volume-0.8-r1 60
+MD5 8cceecdbfeda865ce3cadb2300ce8507 gkrellm-volume-0.8-r1.ebuild 661
+MD5 008c8d7ff9a4dc04e67988e9abfb5926 gkrellm-volume-2.1.13.ebuild 766
+MD5 bee05ac82a9e88be2ed41db57f01f114 ChangeLog 3084
+MD5 a2ce0703427837452e595abc088f23d0 gkrellm-volume-2.1.9.ebuild 637
+MD5 0814cc15c92dfe6e05aa45d42e9cc688 gkrellm-volume-2.1.4.ebuild 640
 MD5 a18cbdcd4b31d7c260d919c06bddf49f files/digest-gkrellm-volume-2.1.4 71
 MD5 f2001f12fbad1f63746f0a6ed1b3d1ca files/digest-gkrellm-volume-2.1.8 71
 MD5 1dcd8db72c24863a757ef7f71d7110da files/digest-gkrellm-volume-2.1.9 71
+MD5 c4db1e8ff3314d790cd18c87ac342d13 files/digest-gkrellm-volume-0.8-r1 60
+MD5 97cc15b2b54ba61a017e7391013319b8 files/digest-gkrellm-volume-2.1.13 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCQGxiZ/iYVBmujdURAksAAKCj+Hypj4jFUyZDQqA6vfd6Pi3ZzACfThBI
+cltO75wyjH1T9h5ASh5g3/U=
+=aWjf
+-----END PGP SIGNATURE-----
