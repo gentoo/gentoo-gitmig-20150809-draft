@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dfb8c6d5ac2d1ac1207624171f3110b9 servletapi-2.2-r1.ebuild 972
-MD5 623f2fde5025fbd311e3f9a2caf5cc15 servletapi-2.4.ebuild 1308
-MD5 6f0da8fc80bbfeff302767eaa9238288 ChangeLog 2425
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 dfb8c6d5ac2d1ac1207624171f3110b9 servletapi-2.2-r1.ebuild 972
 MD5 280b9ac9d8dfc26e59528acd1de7d067 servletapi-2.3-r1.ebuild 929
-MD5 b0c3c4a010bfa47361652ebf6d68ea77 files/digest-servletapi-2.4 78
+MD5 e65e6dbf2bdca4785fdc76164f8043c1 servletapi-2.4.ebuild 1319
+MD5 7d9e4221952bc73f0e2ad53853194dab ChangeLog 2538
 MD5 130423ce821911d5ddc38a30df67574b files/digest-servletapi-2.2-r1 74
 MD5 dcffc47728eefea370d29b3bf0d11158 files/digest-servletapi-2.3-r1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVwM/rLF9B432nYRAlDcAJ9KTqiR5S8vjdqWQbWKH6GYX9PCIwCgrqck
-8E/koEjRO8WKkvX6fR66qpk=
-=wXW9
------END PGP SIGNATURE-----
+MD5 b0c3c4a010bfa47361652ebf6d68ea77 files/digest-servletapi-2.4 78
