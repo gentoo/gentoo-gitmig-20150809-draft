@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ks3switch
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ks3switch/ChangeLog,v 1.2 2003/02/12 07:38:37 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ks3switch/ChangeLog,v 1.3 2004/03/14 17:24:17 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ks3switch-0.1.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *ks3switch-0.1 (06 Aug 2002)
 
