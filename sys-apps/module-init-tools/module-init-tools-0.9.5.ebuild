@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.4.ebuild,v 1.1 2002/12/19 09:40:37 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.5.ebuild,v 1.1 2002/12/19 19:33:28 lostlogic Exp $
 
 # This includes backwards compatability for stable kernels
 
