@@ -1,0 +1,46 @@
+#!/bin/sh
+
+##########################################################################################
+#RCUPDATE:3 4:71:Required for rc-update
+. /etc/rc.d/config/functions
+
+. /etc/rc.d/config/basic
+
+SERVICE=posgres
+EXE="/usr/bin/postmaster"
+opts="start stop restart"
+
+PGUSER="postgres"
+USE_SYSLOG="yes"
+FACILITY="local5"
+PGLOGFILE="/tmp/portgres.log"
+PGOPTS="-D/var/lib/pgsql"
+PGPORT="5433"
+
+start()	{
+		if [ -f ${PGLOGFILE} ]
+		then
+		    my ${PGLOGFILE} ${PGLOGFILE}.old
+		fi
+		einfo "Starting ${SERVICE}.."
+		if [ "${USE_SYSLOG}" = "yes" ]
+		then
+		  su - ${PGUSER} -c "${EXE} ${PGOPTS} -p ${PGPORT} 2>&1" | logger -p ${FACILITY}.notice 1>&2 & 	
+		fi
+		eend $? "Error starting ${SERVICE}."
+}
+
+stop ()	{
+		einfo "Stopping ${SERVICE}..."
+		killall -TERM ${EXE}
+		eend $? "Error stopping ${SERVICE}."
+}
+
+restart() {
+		stop
+		start
+}
+
+doservice ${@}
+
+
