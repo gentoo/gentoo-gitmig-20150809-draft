@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.5 2004/03/05 05:26:49 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.6 2004/04/28 20:22:52 lv Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -40,6 +40,7 @@ DEPEND=">=media-libs/a52dec-0.7.4
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/transcode-gcc34.patch
 
 	if has_version  '>=media-libs/netpbm-9.13'
 	then
