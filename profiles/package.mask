@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3514 2005/01/21 18:40:10 danarmak Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3515 2005/01/21 21:55:00 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jeremy Huddleston <eradicator@gentoo.org> (21 Jan 2005)
+# ICE problems found in this branch update.  See bug #78666
+=sys-devel/gcc-3.4.3.20050110.ebuild
 
 # <ciaranm@gentoo.org> (20 Jan 2005)
 # broken tabs, see bug #78794
