@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcpuload
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.12 2004/01/05 13:13:07 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.13 2004/03/14 00:19:49 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> wmcpuload-1.0.1.ebuild:
+  Added ~mips keyword.
 
   05 Jan 2004; Jason Wever <weeve@gentoo.org> wmcpuload-1.0.0.ebuild,
   wmcpuload-1.0.1.ebuild:
