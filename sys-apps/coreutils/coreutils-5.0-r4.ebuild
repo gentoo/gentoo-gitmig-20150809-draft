@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.1 2003/09/12 11:34:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.2 2003/09/12 11:35:20 seemant Exp $
 
 inherit eutils
 
@@ -35,14 +35,14 @@ src_unpack() {
 		ewarn "Both ACL and SELINUX are not supported together!"
 		ewarn "Will Select SELINUX instead"
 	fi
-	
+
 	# HPPA and ARM platforms do not work well with the uname patch
 	# (see below about it)
 	if use hppa || use arm
 	then
 		mv ${PATCHDIR}/004* ${PATCHDIR}/excluded
 	fi
-	
+
 	# Apply the ACL patches. 
 	# WARNING: These CONFLICT with the SELINUX patches
 	if use acl
@@ -50,7 +50,7 @@ src_unpack() {
 		mv ${PATCHDIR}/001* ${PATCHDIR}/excluded
 		use selinux || EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
 	fi
-	
+
 	# patch to remove Stallman's su/wheel group rant (which doesn't apply,
 	# since Gentoo's su is not GNU/su, but that from shadow.
 	# do not include su infopage, as it is not valid for the su
@@ -66,11 +66,11 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	
+
 	econf \
 		--bindir=/bin \
 		${myconf} || die
-	
+
 	if [ "`use static`" ]
 	then
 		emake LDFLAGS=-static || die
@@ -99,7 +99,7 @@ src_install() {
 	rm -rf usr/lib
 	cd usr/bin
 	ln -s ../../bin/* .
-	
+
 	if [ -z "`use build`" ]
 	then
 		cd ${S}
