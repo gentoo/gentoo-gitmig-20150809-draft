@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.5 2003/07/12 22:34:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.6 2003/09/17 21:19:24 liquidx Exp $
 
 inherit gcc
 
@@ -20,6 +20,13 @@ RDEPEND="=dev-cpp/gtkmm-1.2*
 	=sys-libs/db-1*"
 
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	# http://bugzilla.gnome.org/show_bug.cgi?id=121307 gcc 3.3.x (#27061)
+	einfo "Applying ${FILESDIR}/${P}-gcc33.patch"
+	cd ${S}; patch -p0 < ${FILESDIR}/${P}-gcc33.patch || die "patch failed"
+}
 
 src_compile() {
 	econf
