@@ -1,6 +1,6 @@
-# ChangeLog for sys-cluster/drdb
+# ChangeLog for sys-cluster/drbd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.1 2003/09/02 15:46:16 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.2 2003/09/02 21:28:55 vapier Exp $
 
 *drbd-0.6.6-r2.ebuild (02 Sep 2003)
 
