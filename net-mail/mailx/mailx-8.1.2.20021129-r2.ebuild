@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.6 2003/09/05 02:52:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.7 2003/09/21 18:14:12 avenj Exp $
 
 inherit ccc
 
@@ -20,7 +20,7 @@ DEPEND=">=net-libs/liblockfile-1.03
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~mips hppa"
+KEYWORDS="x86 ~ppc sparc ~alpha ~mips hppa ia64"
 
 src_unpack() {
 
@@ -28,6 +28,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${DISTDIR}/20021129-cvs.diff.bz2 || die "patch failed"
 	epatch ${DISTDIR}/multifix.diff.gz || die "patch failed"
+	use ia64 && epatch ${FILESDIR}/mailx-64bit.diff || die "patch failed"
 }
 
 src_compile() {
