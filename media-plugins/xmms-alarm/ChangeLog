@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/xmms-alarm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alarm/ChangeLog,v 1.5 2003/09/15 15:03:43 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alarm/ChangeLog,v 1.6 2004/03/30 18:56:16 eradicator Exp $
+
+*xmms-alarm-0.3.5 (30 Mar 2004)
+
+  30 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmms-alarm-0.2.2.ebuild, xmms-alarm-0.3.2.ebuild, xmms-alarm-0.3.3.ebuild,
+  xmms-alarm-0.3.5.ebuild:
+  Version bump closes bug #46174.  Removing old ebuilds.  Added metadata.xml.
 
 *xmms-alarm-0.3.3 (15 Sep 2003)
 
