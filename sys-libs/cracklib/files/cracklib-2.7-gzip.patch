@@ -1,0 +1,19 @@
+diff -ur orig/cracklib26_small/util/mkdict cracklib26_small/util/mkdict
+--- orig/cracklib26_small/util/mkdict	Fri Jul  9 22:23:03 1993
++++ cracklib26_small/util/mkdict	Sat Apr  4 22:31:45 1998
+@@ -14,7 +14,14 @@
+ SORT="sort"
+ ###SORT="sort -T /tmp"
+ 
+-cat $* |
++### Use zcat to read compressed (as well as uncompressed) dictionaries.
++### Compressed dictionaries can save quite a lot of disk space.
++
++CAT="gzip -cdf"
++###CAT="zcat"
++###CAT="cat"
++
++$CAT $* |
+ 	tr '[A-Z]' '[a-z]' |
+ 	tr -cd '\012[a-z][0-9]' |
+ 	$SORT |

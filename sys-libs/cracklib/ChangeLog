@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.44 2004/06/02 04:36:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.45 2004/06/22 19:41:32 solar Exp $
+
+  22 Jun 2004; <solar@gentoo.org> cracklib-2.7-r9.ebuild,
+  files/cracklib-2.7-gzip.patch:
+  Added pam & uclibc to IUSE. Removed executable bit from libcrack.a, if pam is
+  in not in USE we remove libcrack.a all together. Fixed long what appears to be
+  long standing bug with libcrack that nobody noticed (it was looking for the
+  words file at /usr/dict/words vs /usr/share/dict/words) If uclibc is set in
+  IUSE we use the compressed dict provided by miscfiles.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> cracklib-2.7-r9.ebuild:
   stable on amd64
