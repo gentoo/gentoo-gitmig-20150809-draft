@@ -1,6 +1,6 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.16 2002/09/15 07:05:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.17 2002/09/20 20:12:22 vapier Exp $
 
 *scrollkeeper-0.3.11-r1 (04 Sep 2002)
 
@@ -53,6 +53,9 @@
   0.3.9 ebuild.
 
 *scrollkeeper-0.2-r4 (13 Jun 2002)
+  20 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE variable
+
   13 Jun 2002; Spider <spider@gentoo.org> scrollkeeper-0.2-r4.ebuild :
   fix the link bug
 
