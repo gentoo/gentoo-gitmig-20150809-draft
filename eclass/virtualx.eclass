@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.1 2002/04/09 06:17:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.2 2002/04/09 14:42:26 azarah Exp $
 # This eclass can be used for packages that needs a working X environment to build
 ECLASS=virtualx
 newdepend virtual/x11
@@ -38,13 +38,13 @@ virtualmake() {
 }
 
 #Same as "make", but setup the Xvfb hack if needed
-xmake() {
+Xmake() {
 	export maketype="make"
 	virtualmake "$*"
 }
 
 #Same as "emake", but setup the Xvfb hack if needed
-xemake() {
+Xemake() {
 	export maketype="emake"
 	virtualmake "$*"
 }
