@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.15 2004/09/23 23:13:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.16 2004/09/25 07:38:00 vapier Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -27,7 +27,7 @@ src_compile() {
 	# gcc-3.2 crashes if we don't remove any -O?
 	[ "$(gcc-version)" == "3.2" ] && [ ${ARCH} == "x86" ] \
 		&& filter-flags -O?
-	replace-cpu-flags pentium3 pentium4
+	replace-cpu-flags pentium4 pentium3
 
 	econf $(use_enable nls) || die
 	emake || die
