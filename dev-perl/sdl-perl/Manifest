@@ -1,6 +1,16 @@
-MD5 45f01bc6f77570405326a98963f5c34c ChangeLog 5034
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 05c0ae391d9b4bceac25c46ab2ed15f5 ChangeLog 5134
 MD5 709cd2696c593abb0a2090e0640315f6 metadata.xml 176
 MD5 6495a8af5c27ab06f2b05952f42d6a31 sdl-perl-1.20.3.ebuild 660
-MD5 45596b84268107dacaa3e20a1a4b7b5b sdl-perl-2.1.2-r1.ebuild 957
+MD5 c30699292bc3948accdfd007e38cab1c sdl-perl-2.1.2-r1.ebuild 925
 MD5 000eb623a9e2ce37c9e3efd665f6e5c2 files/digest-sdl-perl-1.20.3 67
 MD5 8f817948159607a1ed78a8b839f5ce9b files/digest-sdl-perl-2.1.2-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOFnUtG5z4I8BtQoRAmkQAJ0eyixcDbD+TSK8b2P8Cp6CtJ4UqQCfRel+
+QvGjrgFFKVBM6IxkM/1Cv0M=
+=OASd
+-----END PGP SIGNATURE-----
