@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.25 2004/06/25 03:19:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.26 2004/11/14 09:18:26 corsair Exp $
 
 inherit flag-o-matic gcc
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://smurfland.cit.buffalo.edu/xanim/home.html"
 
 LICENSE="XAnim"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64 ~ppc64"
 IUSE=""
 
 RDEPEND="virtual/x11
