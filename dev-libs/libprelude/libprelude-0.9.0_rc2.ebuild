@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0_rc2.ebuild,v 1.1 2005/04/01 16:01:01 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0_rc2.ebuild,v 1.2 2005/04/01 16:12:40 vanquirius Exp $
 
 inherit versionator
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc
 #	doc? ( dev-util/gtk-doc )"
 # Doc disabled as per bug 77575
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	local myconf
