@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.3 2004/03/04 22:37:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.4 2004/04/27 21:39:49 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Library for build EFI Applications"
 SRC_URI="ftp://ftp.hpl.hp.com/pub/linux-ia64/gnu-efi-3.0a.tar.gz"

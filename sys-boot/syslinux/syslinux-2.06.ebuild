@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.06.ebuild,v 1.2 2003/12/30 23:31:52 pauldv Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.06.ebuild,v 1.3 2004/04/27 21:41:20 agriffis Exp $ 
+
+inherit eutils
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"

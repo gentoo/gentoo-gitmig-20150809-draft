@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/syslinux
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.3 2003/12/30 23:31:52 pauldv Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Id: ChangeLog,v 1.4 2004/04/27 21:41:20 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> syslinux-2.05.ebuild,
+  syslinux-2.06.ebuild:
+  Add inherit eutils
 
   31 Dec 2003; <paul@gentoo.org> metadata.xml, syslinux-2.06.ebuild:
   nasm is not available on amd64, and even if it worked (unresearched) it could
