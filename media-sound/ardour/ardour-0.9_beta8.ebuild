@@ -1,12 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta8.ebuild,v 1.2 2003/12/10 08:12:31 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta8.ebuild,v 1.3 2004/02/12 12:57:21 eradicator Exp $
 
 IUSE="nls ardour-ksi"
 
 DESCRIPTION="multi-track hard disk recording software"
-HOMEPAGE="http://ardour.sourceforge.net/"
+HOMEPAGE="http://ardour.org/"
 SRC_URI="mirror://sourceforge/ardour/${P/_/}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,6 +28,12 @@ DEPEND="dev-util/pkgconfig
 	=media-libs/libart_lgpl-2.3*"
 
 RDEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-pthread.patch
+}
 
 src_compile() {
 
