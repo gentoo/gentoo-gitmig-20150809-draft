@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.1.ebuild,v 1.7 2004/07/16 14:00:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.1.ebuild,v 1.8 2004/07/26 13:11:12 axxo Exp $
 
 inherit eutils
 
@@ -19,24 +19,22 @@ DEPEND=">=virtual/jdk-1.3
 IUSE=""
 
 src_unpack() {
-	unzip -q ${DISTDIR}/${At} || die
+	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/${PV}-gentoo.patch
 }
 
-pkg_setup() {
-	if ! groupmod orion ; then
-		groupadd -g 260 orion || die "problem adding group orion"
-	fi
-	if ! id orion; then
-		useradd -u 260 -g orion -s /bin/bash -d /opt/orion -c "orion" orion || die "problem adding user orion"
-	fi
+pkg_preinst() {
+	enewgroup orion
+	enewuser orion -1 /bin/bash /opt/orion orion
+	chown -R orion:orion ${D}/opt/${PN}
+	chown -R orion:orion ${D}/var/log/${PN}
+	fowners orion:orion /etc/conf.d/orion
 }
 
 src_install() {
-
 	# CREATE DIRECTORIES
-	DIROPTIONS="--mode=0775 --owner=orion --group=orion"
+	diropts -m0775
 	dodir /opt/${PN}
 	dodir /opt/${PN}/config
 	dodir /opt/${PN}/sbin
@@ -46,7 +44,7 @@ src_install() {
 
 	# INSTALL STARTUP SCRIPTS
 	insinto /opt/orion/sbin
-	insopts -o orion -g orion -m0750
+	insopts -m0750
 	doins ${FILESDIR}/${PV}/start_orion.sh
 	doins ${FILESDIR}/${PV}/stop_orion.sh
 
@@ -57,22 +55,20 @@ src_install() {
 
 	cp -a ${FILESDIR}/${PV}/orion.conf ${S}/orion
 	insinto /etc/conf.d
-	insopts -m0755
+	insopts -m0750
 	doins ${S}/orion
 
 	# CREATE DUMMY LOG & PERSISTENCE DIR
-	insopts -o orion -g orion -m0750
-	touch ${S}/.keep
-	insinto /var/log/${PN}
-	doins ${S}/.keep
-	insinto /opt/${PN}/persistence
-	doins ${S}/.keep
+	dodir /var/log/${PN}
+	dodir /opt/${PN}/persistence
+
+	keepdir /var/log/${PN}
+	keepdir /opt/${PN}/persistence
 
 	# INSTALL EXTRA FILES
 	local dirs="applications database default-web-app demo lib persistence autoupdate.properties"
 	for i in $dirs ; do
 		cp -a ${i} ${D}/opt/${PN}/
-		chown -R orion:orion ${D}/opt/${PN}/${i}
 	done
 
 	# INSTALL APP CONFIG
@@ -80,7 +76,6 @@ src_install() {
 	local dirs="application.xml data-sources.xml database-schemas default-web-site.xml global-web-application.xml jms.xml mime.types principals.xml rmi.xml server.xml"
 	for i in $dirs ; do
 		cp -a ${i} ${D}/opt/${PN}/config
-		chown -R orion:orion ${D}/opt/${PN}/config/${i}
 	done
 
 	# INSTALL JARS
@@ -90,7 +85,7 @@ src_install() {
 	done
 
 	# LINK IN SDK TOOLS.JAR
-	ln -s ${JAVA_HOME}/lib/tools.jar ${D}/usr/share/${PN}/lib/tools.jar
+	dosym ${JAVA_HOME}/lib/tools.jar /usr/share/${PN}/lib/tools.jar
 
 	# INSTALL DOCS
 	dodoc Readme.txt changes.txt
@@ -137,6 +132,4 @@ pkg_postinst() {
 	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	einfo " may not get seen.  Thank you."
 	einfo " "
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	sleep 10
 }

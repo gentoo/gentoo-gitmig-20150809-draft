@@ -1,33 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 048285ddef131103fc09858332985d9d ChangeLog 2592
-MD5 7eb483f833c6216bae4f687f88a059cc orion-2.0.1.ebuild 3858
-MD5 eccc4a6b9fb42efacf12097c27144513 orion-2.0.ebuild 4107
+MD5 c82c4833e0aaf2ce7aa0ea39edf40d75 orion-2.0.1.ebuild 3521
+MD5 92823ea9ff1d6887d788de8eb50eb81b orion-2.0.2.ebuild 3524
+MD5 e17328f3df2f89a29cde7b21057a3250 ChangeLog 2721
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 56ef147f4b255c182a953ac2ef88d6ac orion-2.0.2.ebuild 3849
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-orion-2.0 0
 MD5 5e78308ed1712b24bcced31b5097e7fc files/digest-orion-2.0.1 60
 MD5 2e8906fc5bfd8955cfbac84d1ce4850c files/digest-orion-2.0.2 60
-MD5 abd7c855a9b9601253916624d6f0e782 files/2.0/2.0-gentoo.patch 5301
+MD5 92b722b21c13158f91088a88491436f6 files/2.0/stop_orion.sh 200
 MD5 da5ec0abfb205b2fd83d533d9117d87c files/2.0/orion.conf 1489
 MD5 6c81f8112e67388a4f915d0bcab02d83 files/2.0/orion.init 622
 MD5 2653ae1733c17843a9388200f90e3148 files/2.0/start_orion.sh 328
-MD5 92b722b21c13158f91088a88491436f6 files/2.0/stop_orion.sh 200
+MD5 abd7c855a9b9601253916624d6f0e782 files/2.0/2.0-gentoo.patch 5301
+MD5 e1663e859471f12fda5a7b99abbe42d8 files/2.0.1/stop_orion.sh 202
 MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.1/2.0.1-gentoo.patch 5301
 MD5 e0ef38d0aa2277036adaaecb6b846277 files/2.0.1/orion.conf 1491
 MD5 74f811add4d32c9802cc4188c67cd6db files/2.0.1/orion.init 624
 MD5 c1ae0565520f43469123f10a46496781 files/2.0.1/start_orion.sh 330
-MD5 e1663e859471f12fda5a7b99abbe42d8 files/2.0.1/stop_orion.sh 202
-MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.2/2.0.2-gentoo.patch 5301
+MD5 66ecfe1ca25c5fcf99feb66a4c059e2b files/2.0.2/stop_orion.sh 195
 MD5 070942d311cf91f786c8ece44a2a8785 files/2.0.2/orion.conf 1484
 MD5 d487529fa9e0b42f2162b1e594f88e68 files/2.0.2/orion.init 620
 MD5 b5f590d7830232217b0512fcb0e3c600 files/2.0.2/start_orion.sh 323
-MD5 66ecfe1ca25c5fcf99feb66a4c059e2b files/2.0.2/stop_orion.sh 195
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+f3VmdTrptrqvGERAngiAKCCzr3DYkIWPXiqJH/7vrNuFDL0/QCgkBCi
-KRocg84EpceuXYGr7/tt3SY=
-=Skew
------END PGP SIGNATURE-----
+MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.2/2.0.2-gentoo.patch 5301
