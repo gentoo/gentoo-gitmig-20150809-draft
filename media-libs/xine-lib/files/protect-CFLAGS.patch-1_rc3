@@ -1,0 +1,22 @@
+--- xine-lib-1-rc3/configure.orig	2003-12-15 11:28:29.000000000 +0100
++++ xine-lib-1-rc3/configure	2003-12-17 23:26:25.000000000 +0100
+@@ -39143,7 +39143,7 @@
+         k7cpu="i686"
+     fi
+ 
+-		CFLAGS="-O3 -pipe -fomit-frame-pointer $f_af $f_al $f_aj $m_wm $m_psb -fexpensive-optimizations $f_si $f_nsa -ffast-math -funroll-loops -finline-functions $CFLAGS"
++		CFLAGS="$CFLAGS"
+ 
+ 	DEBUG_CFLAGS="-O $DEBUG_CFLAGS"
+ 
+@@ -39195,10 +39195,6 @@
+ 		;;
+ 
+ 	    esac
+-	    if test x"$archopt_val" != x; then
+-		CFLAGS="$sarchopt=$archopt_val $CFLAGS"
+-		DEBUG_CFLAGS="$sarchopt=$archopt_val $DEBUG_CFLAGS"
+-	    fi
+ 
+ 	fi
+       else

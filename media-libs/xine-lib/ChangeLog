@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.77 2003/11/29 23:12:13 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.78 2003/12/17 23:13:28 mholzer Exp $
+
+*xine-lib-1_rc3 (18 Dec 2003)
+
+  18 Dec 2003; Martin Holzer <mholzer@gentoo.org> xine-lib-1_rc3.ebuild:
+  Version bumped.
 
   26 Nov 2003; Martin Holzer <mholzer@gentoo.org> xine-lib-1_rc2.ebuild:
   marking x86 stable.
