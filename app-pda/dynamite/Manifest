@@ -1,5 +1,5 @@
-MD5 6bc0a7ff1de3aeecf5e7d41b787d07a0 ChangeLog 880
-MD5 894a2a44d6c1f0b090a115470719c135 dynamite-0.1.ebuild 715
+MD5 2f7f72915faf9dbb915d675a6927a755 ChangeLog 962
+MD5 29abb09f32d080aaf985e08ad73aae2e dynamite-0.1.ebuild 718
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 e66a5fe3e9993dd526447e1008c2d760 files/digest-dynamite-0.1 64
 MD5 6670befad5b16e5b98fb3a72a46426ed files/dynamite-0.1-segv.patch 688

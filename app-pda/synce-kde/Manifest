@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acbcac43060deebc7d5bc87b516bad0b ChangeLog 969
+MD5 3353e8cba1016f4b9ac1ca73e2ec5186 ChangeLog 1054
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 3a6c902b25f91fb3cf8f9c70c7223af6 synce-kde-0.6.1.ebuild 1179
 MD5 93c7ac7f6b8becf6e272ff7a98e795cf synce-kde-0.7.2.ebuild 1178
-MD5 c3c3023565118ab068b3a786bf4b8b62 synce-kde-0.8.0.ebuild 1058
+MD5 2b82096e1d4abebeafbd96d1830548be synce-kde-0.8.0.ebuild 1060
 MD5 79536d5a6c86b20bb2307cc315815423 files/digest-synce-kde-0.6.1 129
 MD5 9c54ff9a25a140c8fa92228da9a38ce7 files/digest-synce-kde-0.7.2 130
 MD5 c7b8c316b6386d225bd93a09fbc14da8 files/digest-synce-kde-0.8.0 129
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYGwcI1lqEGTUzyQRAoZxAJ9jTy3KZ4IU9jk/cNLE0fkKbZcspgCgwwua
-bRbzMWdA++FDvLwcPE5d3Gk=
-=BZyz
------END PGP SIGNATURE-----
