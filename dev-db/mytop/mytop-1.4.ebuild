@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.2 2004/06/24 21:58:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.3 2004/06/26 18:54:00 stuart Exp $
 IUSE=""
 inherit perl-module
 IUSE=""
@@ -12,7 +12,9 @@ LICENSE="Artistic | GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
 DEPEND="dev-perl/DBD-mysql
 		dev-perl/Getopt-Long
-		dev-perl/TermReadKey"
+		dev-perl/TermReadKey
+		dev-perl/Term-ANSIColor
+		dev-perl/Time-HiRes"
 
 src_install() {
 	perl-module_src_install
