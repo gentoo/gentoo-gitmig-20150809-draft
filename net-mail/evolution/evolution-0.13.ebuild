@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.13.ebuild,v 1.3 2001/09/12 04:07:00 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.13.ebuild,v 1.4 2001/09/24 10:07:20 hallski Exp $
 
 DB3=db-3.1.17
 A="${P}.tar.gz ${DB3}.tar.gz"
@@ -24,6 +24,7 @@ DEPEND=">=gnome-base/gal-0.11.2
 	>=gnome-base/libxml-1.8.15
 	>=gnome-base/gnome-vfs-1.0
 	>=gnome-base/gnome-print-0.25
+	>=gnome-base/scrollkeeper-0.2
         >=dev-util/xml-i18n-tools-0.8.4
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )" 
