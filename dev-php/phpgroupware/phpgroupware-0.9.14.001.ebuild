@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.001.ebuild,v 1.1 2002/12/11 23:57:25 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.001.ebuild,v 1.2 2003/02/13 11:31:49 vapier Exp $
 
 S=${WORKDIR}/phpGroupWare-${PV}
 HTTPD_ROOT="/home/httpd/htdocs"
