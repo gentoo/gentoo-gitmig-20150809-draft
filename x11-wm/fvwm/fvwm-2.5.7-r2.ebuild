@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.7 2003/09/02 10:57:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.8 2003/09/03 11:33:04 taviso Exp $
 
 inherit gnuconfig
 
@@ -240,6 +240,11 @@ src_install() {
 		# Remove useless script if perllib isnt required.
 		rm -rf ${D}/usr/bin/fvwm-perllib ${D}/usr/share/man/man1/fvwm-perllib.1
 	fi
+
+	# fvwm-convert-2.6 is just a stub, contains no code - remove it for now.
+	# fvwm-convert-2.2 has a man page, but the script is no longer distributed.
+	rm -f ${D}/usr/bin/fvwm-convert-2.6 ${D}/usr/share/man/man1/fvwm-convert-2.6.1
+	rm -f ${D}/usr/share/man/man1/fvwm-convert-2.2.1
 	
 	# ive included `exec` to save a few bytes of memory.
 	echo "#!/bin/bash" > fvwm2

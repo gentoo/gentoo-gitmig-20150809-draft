@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.28 2003/09/02 10:57:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.29 2003/09/03 11:33:04 taviso Exp $
+
+  03 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r2.ebuild:
+  fvwm-convert-2.6 is a script to updated .fvwm2rc files, but is currently 
+  just a stub, as the format has not yet been finalised. This update
+  removes the script and manpage.
+  fvwm-convert-2.2 was used to update from the old 1.x format, it is no longer
+  distributed, but still has a manpage, ive removed it.
 
   02 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r2.ebuild:
   Packaged FvwmTabs into a tarball with version information, as FvwmTabs author
