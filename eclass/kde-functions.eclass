@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.12 2002/07/09 20:25:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.13 2002/07/10 19:49:50 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 
@@ -48,9 +48,17 @@ need-kde() {
 	debug-print-function $FUNCNAME $*
 	KDEVER="$1"
 	
-	min-kde-ver $KDEVER
-	newdepend ">=kde-base/kdelibs-${selected_version}"
-	set-kdedir $KDEVER
+	# if we're a kde-base package, we need an exact version of kdelibs
+	# to compile correctly.
+	if [ "$ECLASS" == "kde-dist" ]; then
+	    newdepend "~kde-base/kdelibs-$KDEVER"
+	    set-kdedir $KDEVER
+	else
+	    # everyone else only needs a minimum version
+	    min-kde-ver $KDEVER
+	    newdepend ">=kde-base/kdelibs-${selected_version}"
+	    set-kdedir $KDEVER
+	fi
 
 	qtver-from-kdever $KDEVER
 	need-qt $selected_version
