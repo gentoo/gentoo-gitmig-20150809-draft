@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/epsxe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/ChangeLog,v 1.4 2004/06/24 22:26:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/ChangeLog,v 1.5 2004/09/13 04:45:07 mr_bones_ Exp $
+
+  12 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> epsxe-1.6.0-r3.ebuild:
+  fix SRC_URI for bug #63848; tidy
 
   09 Sep 2003; Michael Sterrett <msterret@gentoo.org> epsxe-1.6.0-r3.ebuild:
   moved packages from app-emulation to games-emulation
