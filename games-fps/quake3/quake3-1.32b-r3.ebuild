@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.7 2004/04/19 21:47:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.8 2004/05/10 09:54:25 mr_bones_ Exp $
 
 inherit games
 
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
+	dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
 	insinto ${dir}/baseq3
