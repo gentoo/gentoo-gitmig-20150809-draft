@@ -1,7 +1,12 @@
 # ChangeLog for dev-util/aegis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.7 2003/02/12 06:38:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.8 2003/11/16 02:48:21 karltk Exp $
 
+*aegis-4.11 (16 Nov 2003)
+
+  16 Nov 2003; Karl Trygve Kalleberg <karltk@gentoo.org> aegis-4.11.ebuild:
+  New upstream version. Fixes #28432. Added metadata.xml. 
+  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *aegis-4.9 (05 Nov 2002)
