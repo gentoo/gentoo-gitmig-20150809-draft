@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.18 2004/06/24 22:26:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.19 2004/06/27 21:52:27 agriffis Exp $
 
 IUSE="nls static build"
 
@@ -42,7 +42,7 @@ src_compile() {
 			--without-included-regex \
 			${myconf} || die
 
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		emake || die
 	else
@@ -58,7 +58,7 @@ src_install() {
 	cd ${D}/usr/bin
 	mv date echo false pwd stty su true uname sleep ${D}/bin
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		dodoc AUTHORS COPYING ChangeLog ChangeLog.0 NEWS README THANKS TODO

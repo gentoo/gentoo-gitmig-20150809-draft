@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r2.ebuild,v 1.13 2004/06/24 22:27:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r2.ebuild,v 1.14 2004/06/27 21:58:53 agriffis Exp $
 
 IUSE="nls static build"
 
@@ -47,7 +47,7 @@ src_compile() {
 
 	rm -f ${S}/doc/sed.info*
 
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		emake || die
 	else
@@ -66,7 +66,7 @@ src_install() {
 	dodir /usr/bin
 	dosym ../../bin/${newname} /usr/bin/${newname}
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		localsed="${D}/bin/${newname}"
 
