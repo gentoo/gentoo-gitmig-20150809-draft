@@ -1,22 +1,30 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.13 2004/10/29 17:34:44 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.14 2004/12/01 23:47:00 latexer Exp $
 
-  29 Oct 2004; <peter@gentoo.org> +files/blam-1.6.0-gecko-fix.diff:
+*blam-1.6.0-r1 (01 Dec 2004)
+
+  01 Dec 2004; Peter Johanson <latexer@gentoo.org> +blam-1.6.0-r1.ebuild:
+  Revision bump with new split up gtk-sharp deps.
+
+  29 Oct 2004; Peter Johanson <latexer@gentoo.org>
+  +files/blam-1.6.0-gecko-fix.diff:
   Whoops. Add the gecko patch. Thanks r2d2.
 
 *blam-1.6.0 (28 Oct 2004)
 
-  28 Oct 2004; <peter@gentoo.org> +blam-1.6.0.ebuild:
+  28 Oct 2004; Peter Johanson <latexer@gentoo.org> +blam-1.6.0.ebuild:
   Bump. Now with gecko-sharp lovin'
 
-  26 Oct 2004; <peter@gentoo.org> blam-1.4.0.ebuild, blam-1.4.1.ebuild:
+  26 Oct 2004; Peter Johanson <latexer@gentoo.org> blam-1.4.0.ebuild,
+  blam-1.4.1.ebuild:
   Move gtk-sharp dep from x11-libs -> dev-dotnet
 
 *blam-1.4.1 (23 Sep 2004)
 
-  23 Sep 2004; <peter@gentoo.org> -blam-1.2.0.ebuild, -blam-1.2.1.ebuild,
-  -blam-1.2.3.ebuild, -blam-1.2.4.ebuild, +blam-1.4.1.ebuild:
+  23 Sep 2004; Peter Johanson <latexer@gentoo.org> -blam-1.2.0.ebuild,
+  -blam-1.2.1.ebuild, -blam-1.2.3.ebuild, -blam-1.2.4.ebuild,
+  +blam-1.4.1.ebuild:
   Bump, and remove a bunch of older versions.
 
   10 Sep 2004; Brandon Hale <tseng@gentoo.org> blam-1.4.0.ebuild:
