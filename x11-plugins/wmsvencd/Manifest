@@ -1,5 +1,5 @@
-MD5 a8fbab60a7ba634c4d1b44506a8d5b61 wmsvencd-0.5.0.ebuild 884
-MD5 b566032d96520dd68341dab6d600566e ChangeLog 380
+MD5 e2c8d9492d2cd020a7eb72163d036e28 wmsvencd-0.5.0.ebuild 865
+MD5 222c45d03177475c87112d36ebca6bc2 ChangeLog 409
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 813d128fc4aa6314fb517d9c3d9e5af7 files/wmsvencd-compile.patch 1214
 MD5 106258cb0439850d80bb5bde262f5bce files/digest-wmsvencd-0.5.0 65
