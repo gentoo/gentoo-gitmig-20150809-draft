@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex2html
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.5 2003/12/09 17:30:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.6 2003/12/09 21:18:00 usata Exp $
+
+  10 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> :
+  Fixed digest mismatch (Upstream releases different sources with the
+  same name...)
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> latex2html-2002.1.ebuild,
   latex2html-2002.2.1.ebuild, latex2html-2002.2.ebuild:
