@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.24 2003/12/29 04:08:14 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.25 2004/01/09 22:00:14 weeve Exp $
+
+  09 Jan 2004; Jason Wever <weeve@gentoo.org> gpm-1.20.1.ebuild:
+  Marked stable on sparc.
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> gpm-1.20.1.ebuild:
   Move to mips stable (~mips -> mips)
