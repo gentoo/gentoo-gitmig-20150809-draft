@@ -1,15 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.6-r3.ebuild,v 1.2 2003/02/13 15:32:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.6-r3.ebuild,v 1.3 2003/02/14 21:35:53 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
 S2=${WORKDIR}/gentoo-dillo-extras-patch
+EPATCH_SOURCE="${S2}"
+EPATCH_SUFFIX="patch"
 
 DESCRIPTION="Lean GTK+-based web browser"
-
 SRC_URI="http://dillo.cipsga.org.br/download/${P}.tar.gz
 	mirror://gentoo/gentoo-dillo-extras-patch.tar.bz2"
-HOMEPAGE="http://dillo.cipsga.org.br"
+HOMEPAGE="http://dillo.cipsga.org.br/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -19,10 +20,6 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2.1"
-
-inherit eutils
-EPATCH_SOURCE="${S2}"
-EPATCH_SUFFIX="patch"
 
 src_unpack() {
 	unpack ${A}
@@ -52,7 +49,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dodir /etc
 	einstall
 	dodoc AUTHORS COPYING ChangeLog ChangeLog.old INSTALL README NEWS
