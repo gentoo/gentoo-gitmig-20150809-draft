@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.51 2004/11/17 14:37:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.52 2004/11/18 12:17:01 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -70,7 +70,7 @@ gcc_setup_path_vars() {
 			LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc-lib/${CTARGET}/${MY_PV_FULL}"}"
 		fi
 		INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
-		BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${MY_PV}"}"
+		BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}"}"
 		DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${MY_PV}"}"
 		# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 		# We will handle /usr/include/g++-v3/ with gcc-config ...
