@@ -1,6 +1,9 @@
 # ChangeLog for net-www/bugzilla
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.7 2004/07/17 11:54:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.8 2004/07/17 11:55:34 stuart Exp $
+
+  17 Jul 2004; Stuart Herbert <stuart@gentoo.org> bugzilla-2.18.0_rc1.ebuild:
+  Fix for repoman warnings
 
 *bugzilla-2.18.0_rc1 (17 Jul 2004)
 

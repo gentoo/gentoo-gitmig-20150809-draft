@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/bugzilla-2.18.0_rc1.ebuild,v 1.1 2004/07/17 11:54:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/bugzilla-2.18.0_rc1.ebuild,v 1.2 2004/07/17 11:55:34 stuart Exp $
 
 inherit webapp
 MY_P=${P/.0_/}
@@ -39,7 +39,7 @@ RDEPEND=">=dev-db/mysql-3.22.5
 
 src_install () {
 	webapp_src_preinst
-	
+
 	cd ${S}
 
 	# remove CVS directories
@@ -57,7 +57,7 @@ src_install () {
 		cp ${FILESDIR}/${file} ${D}/${MY_HTDOCSDIR}
 		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
 	done
-	
+
 	# add the reconfigure hook
 	webapp_hook_script ${FILESDIR}/${PVR}/reconfig
 
