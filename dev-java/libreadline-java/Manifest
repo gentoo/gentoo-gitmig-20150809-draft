@@ -1,4 +1,14 @@
-MD5 7320954ee91f19992a918067e190d70b ChangeLog 1007
-MD5 c910c12995e00dcd09d431545172af03 libreadline-java-0.8.0.ebuild 717
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 22d9ece59585778b9a05774319d67e09 libreadline-java-0.8.0.ebuild 718
+MD5 b22dd6559b8cfcdda0f58e664b722717 ChangeLog 1108
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 9e6c8c38a34f297ef3ff5d65648dc214 files/digest-libreadline-java-0.8.0 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBObzU/rLF9B432nYRAnKyAKClsyozMOGOTJX+wWrS4oTqNY44EACfZbv5
+Hyjjue9QplfiaiDtbu29Lac=
+=8XOy
+-----END PGP SIGNATURE-----
