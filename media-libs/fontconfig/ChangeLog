@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.50 2004/06/24 23:00:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.51 2004/07/01 13:15:15 agriffis Exp $
+
+  01 Jul 2004; Aron Griffis <agriffis@gentoo.org> fontconfig-2.2.2.ebuild:
+  stable on alpha and ia64
 
   19 Jun 2004; foser <foser@gentoo.org> fontconfig-2.2.2.ebuild :
   Build with DESTDIR to fix libtool problems (#50076)
