@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f3a9bdc12d3c83feb2479f3febbe995e wcalc-1.7.ebuild 974
-MD5 4ff3e4e42915b0d1bceae3600596c3a0 ChangeLog 512
+MD5 9db8dd705d24abb9b3d6d3d16188c53d ChangeLog 597
 MD5 ab159e23c00e4e2469bb8bd8db426595 metadata.xml 629
+MD5 5b3c53b39673fa3f0fcd00cdce29d1c0 wcalc-1.7.ebuild 983
 MD5 777e13ca09a30ca92f25fa804c24eee9 files/digest-wcalc-1.7 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBn+X9Z/iYVBmujdURArqHAKCcBgKNa8AVlm8s4E+an4Y68cU2ugCdFLCD
-pDWj5iSWyQ0qTbl6y776SWk=
-=SByr
------END PGP SIGNATURE-----
