@@ -1,8 +1,12 @@
 # ChangeLog for dev-util/gst-editor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gst-editor/ChangeLog,v 1.3 2003/03/20 12:49:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gst-editor/ChangeLog,v 1.4 2003/03/31 21:26:33 foser Exp $
 
-*gst-editor-0.2.0 (27 Oct 2002)
+*gst-editor-0.5.0 (27 Oct 2002)
+
+  31 Mar 2003; foser <foser@gentoo.org> gst-editor-0.5.0.ebuild :
+  Fixed the whole ebuild
+
   27 Oct 2002; Luca Barbato <lu_zero@gentoo.org> ChangeLog,
   gst-editor-0.5.0.ebuild : Version bump
 										      
