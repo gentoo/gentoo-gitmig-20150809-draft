@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.82 2004/11/21 01:53:09 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.83 2004/12/25 07:59:03 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -97,7 +97,7 @@ newgamessbin() { gameswrapper ${FUNCNAME/games} "$@"; }
 gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} "$@"; }
 gamesperms() { chmod u+rw,g+r-w,o-rwx "$@"; }
 prepgamesdirs() {
-	local dir=
+	local dir f
 	for dir in "${GAMES_PREFIX}" "${GAMES_PREFIX_OPT}" "${GAMES_DATADIR}" \
 			"${GAMES_SYSCONFDIR}" "${GAMES_STATEDIR}" "${GAMES_LIBDIR}" \
 			"${GAMES_BINDIR}" "$@"
@@ -107,8 +107,13 @@ prepgamesdirs() {
 			find "${D}/${dir}" -type d -print0 | xargs --null chmod 750
 			find "${D}/${dir}" -type f -print0 | xargs --null chmod o-rwx,g+r
 		) &> /dev/null
+		f=$(find "${D}/${dir}" -perm +4000 -a -uid 0)
+		if [[ -n ${f} ]] ; then
+			eerror "A game was detected that is setuid root!"
+			eerror "${f}"
+			die "refusing to merge a setuid root game"
+		fi
 	done
-	local f=
 	for f in $(find "${D}/${GAMES_STATEDIR}" -type f -printf '%P ' 2>/dev/null) ; do
 		if [ -e "${ROOT}/${GAMES_STATEDIR}/${f}" ] ; then
 			cp -p "${ROOT}/${GAMES_STATEDIR}/${f}" "${D}/${GAMES_STATEDIR}/${f}"
