@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/kpictorial
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/kpictorial/ChangeLog,v 1.1 2004/07/04 11:39:25 centic Exp $
+
+*kpictorial-0.9.1 (04 Jul 2004)
+
+  04 Jul 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +kpictorial-0.9.1.ebuild:
+  Add new small game, see Bug 30549
+
