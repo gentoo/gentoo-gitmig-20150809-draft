@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-0.7.ebuild,v 1.3 2005/01/27 15:47:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-0.7.ebuild,v 1.4 2005/03/07 04:33:09 xmerlin Exp $
 
-inherit eutils
+inherit linux-mod
 
 DESCRIPTION="cluster configuration system to manage the cluster config file"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -15,11 +15,18 @@ KEYWORDS="~x86"
 
 DEPEND=">=sys-cluster/magma-1.0_pre3
 	dev-libs/libxml2
+	sys-libs/zlib
+	"
+
+RDEPEND="${DEPEND}
+	>=magma-plugins-1.0_pre5
 	"
 
 src_compile() {
-	./configure --kernel_src=/usr/src/linux || die
-	make || die
+	check_KV
+
+	./configure --kernel_src=${KERNEL_DIR} || die
+	emake || die
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ccs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.4 2005/01/27 15:47:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.5 2005/03/07 04:33:09 xmerlin Exp $
+
+  07 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> ccs-0.7.ebuild:
+  improved ebuild, added magma-plugins in RDEPEND, zlib in DEPEND
 
 *ccs-0.7 (27 Jan 2005)
 
