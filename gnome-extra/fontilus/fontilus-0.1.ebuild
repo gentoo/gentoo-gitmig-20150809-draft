@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fontilus/fontilus-0.1.ebuild,v 1.1 2002/12/07 14:47:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fontilus/fontilus-0.1.ebuild,v 1.2 2002/12/08 00:46:55 foser Exp $
 
 inherit gnome2
 
@@ -13,9 +13,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-RDEPEND=">=gnome-base/gnome-vfs-2
+RDEPEND="virtual/xft
+	>=gnome-base/gnome-vfs-2
 	>=media-libs/fontconfig-2
-	>=x11-libs/xft-2
 	!<gnome-base/gnome-2.0.3-r1"
 
 DEPEND="${RDEPEND}
