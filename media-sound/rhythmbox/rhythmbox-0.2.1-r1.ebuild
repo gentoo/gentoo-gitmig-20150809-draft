@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.2.1-r1.ebuild,v 1.1 2002/06/29 07:36:11 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.2.1-r1.ebuild,v 1.2 2002/07/21 13:50:33 seemant Exp $
 
 inherit gnome2
 
@@ -8,8 +8,10 @@ S=${WORKDIR}/${P}
 DESCRIPTION="RhythmBox - an iTunes clone for GNOME"
 SRC_URI="http://www.rhythmbox.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.rhythmbox.org/"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 RDEPEND=">=x11-libs/gtk+-2.0.0
 	>=gnome-base/libgnomeui-1.117.2
@@ -31,7 +33,5 @@ DEPEND="${RDEPEND}
 
 LIBTOOL_FIX="1"
 
-DOC="ABOUT-NLS AUTHORS COPYING ChangeLog FAQ HACKING INSTALL NEWS README THANKS TODO"
+DOC="AUTHORS COPYING ChangeLog FAQ HACKING INSTALL NEWS README THANKS TODO"
 SCHEMA="rhythmbox.schemas"
-
-

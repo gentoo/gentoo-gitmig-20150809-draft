@@ -1,27 +1,34 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.4 2002/07/13 15:48:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.5 2002/07/21 13:50:35 seemant Exp $
 
 inherit kde-functions 
 
+S=${WORKDIR}/${P}
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.zinf.org/"
-S=${WORKDIR}/${P}
 
-RDEPEND="virtual/glibc
-	=dev-libs/glib-1.2*
+RDEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
-	>=sys-libs/zlib-1.1.3 >=sys-libs/ncurses-5.2
-	~media-libs/freetype-1.3.1 >=media-libs/musicbrainz-1.0.1
-	esd? ( media-sound/esound ) alsa? ( media-libs/alsa-lib )
-	gnome? ( gnome-base/ORBit )
+	sys-libs/zlib
+	>=sys-libs/ncurses-5.2
+	=media-libs/freetype-1* 
+	>=media-libs/musicbrainz-1.0.1
+	X? ( virtual/x11 ) 
+	esd? ( media-sound/esound ) 
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
-	X? ( virtual/x11 ) arts? ( kde-base/arts )
+	alsa? ( media-libs/alsa-lib )
+	arts? ( kde-base/arts )
+	gnome? ( gnome-base/ORBit )
 	oggvorbis? ( media-libs/libvorbis )"
-DEPEND="${RDEPEND} dev-lang/nasm sys-devel/perl"
-LICENSE="GPL-2"
+
+DEPEND="dev-lang/nasm 
+sys-devel/perl"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 # Unfortunately you can't selectively build a lot of the features. Therefore
 # this whole package is essentially a judgement call. However, I've made the

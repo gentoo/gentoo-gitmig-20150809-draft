@@ -1,23 +1,22 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r1.ebuild,v 1.1 2002/07/12 21:24:25 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r1.ebuild,v 1.2 2002/07/21 13:50:34 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
+SRC_URI="http://download.sourceforge.net/sox/${P}.tar.gz"
 
 KEYWORDS="x86"
 SLOT="0"
 LICENSE="LPGL-2.1"
-SRC_URI="http://download.sourceforge.net/sox/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 DEPEND="virtual/glibc"
 
 src_compile () {
-	# Looks like support for alsa09's dsp is broken in sox; disabling it for now.
-	local myconf
-	./configure --prefix=/usr --host=${CHOST} \
-		--enable-fast-ulaw --enable-fast-alaw $myconf || die
+	# Looks like support for alsa09's dsp is broken in sox; 
+	# disabling it for now.
+	econf --enable-fast-ulaw --enable-fast-alaw || die
 	emake || die
 }
 

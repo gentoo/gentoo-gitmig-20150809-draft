@@ -1,19 +1,19 @@
+# Copyright 2002, Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2.
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rmxmms/rmxmms-0.5.1.ebuild,v 1.2 2002/07/21 13:50:33 seemant Exp $
+
 S=${WORKDIR}/rmxmms/${P}
 DESCRIPTION="RealAudio plugin for xmms"
-SRC_URI="ftp://ftp.xmms.org/xmms/plugins/rmxmms/rmxmms-0.5.1.tar.gz"
-HOMEPAGE="http://www.xmms.org"
+SRC_URI="ftp://ftp.xmms.org/xmms/plugins/${PN}/${P}.tar.gz"
+HOMEPAGE="http://www.xmms.org http://forms.real.com/rnforms/resources/server/realsystemsdk/index.html#download""
 REALSDK="rsg2sdk_r4.tar.gz"
-REALSDK_HOMEPAGE="http://forms.real.com/rnforms/resources/server/realsystemsdk/index.html#download"
+
 SLOT="0"
-KEYWORDS="x86"
-LICENSE="GPL-2"
+LICENSE="GPL-2 realsdk"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
-DEPEND=">=media-sound/xmms-1.2.4
-	>=realplayer-8"
-
-RDEPEND="virtual/x11
-	>=media-sound/xmms-1.2.4
-	>=realplayer-8"
+DEPEND="media-sound/xmms
+	media-video/realplayer"
 
 src_unpack () {
 
