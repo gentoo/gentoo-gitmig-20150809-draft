@@ -1,0 +1,15 @@
+# ChangeLog for media-fonts/zh-kcfonts
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.1 2003/06/02 13:48:21 seemant Exp $
+
+*zh-kcfonts-1.05 (02 Jun 2003)
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> zh-kcfonts-1.05.ebuild:
+  moved to media-fonts
+
+*zh-kcfonts-1.05 (10 Oct 2002)
+
+  10 Oct 2002; Stuart Bouyer <stubear@gentoo.org> zh-kcfonts-1.05.ebuild,
+  files/digest-zh-kcfonts-1.05, ChangeLog :
+
+  Initial ebuild submitted by lloyd@coventive.com (Lloyd Huang)

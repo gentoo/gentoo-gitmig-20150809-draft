@@ -1,0 +1,17 @@
+# ChangeLog for media-fonts/twmoefonts
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/ChangeLog,v 1.1 2003/06/02 13:47:47 seemant Exp $
+
+*twmoefonts-0.1 (02 Jun 2003)
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> twmoefonts-0.1.ebuild,
+  files/TW-fonts.scale:
+  moved to media-fonts
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*moefonts-0.1 (12 Oct 2002)
+
+  12 Oct 2002; Lin Zhemin <ljm@ljm.idv.tw> moefonts-0.1.ebuild,
+  files/CN-fonts.scale, files/TW-fonts.scale: copied from arphicsfonts.
+  First ebuild added, modified from arphicfonts-0.1-r1.ebuild.

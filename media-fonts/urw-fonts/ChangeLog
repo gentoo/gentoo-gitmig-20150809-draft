@@ -1,0 +1,24 @@
+# ChangeLog for media-fonts/urw-fonts
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.1 2003/06/02 13:48:00 seemant Exp $
+
+*urw-fonts-2.0-r1 (02 Jun 2003)
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> urw-fonts-2.0-r1.ebuild,
+  urw-fonts-2.0.ebuild, files/fonts.conf:
+  moved to media-fonts
+
+*urw-fonts-2.0-r1 (07 Apr 2003)
+
+  07 Apr 2003; Seth Chandler <sethbc@gentoo.org>; urw-fonts-2.0-r1.ebuild,
+  files/fonts.conf:
+  make the ebuild change fonts.conf
+
+*urw-fonts-2.0 (05 Apr 2003)
+
+  05 Apr 2003; foser <foser@gentoo.org>; urw-fonts-2.0.ebuild :
+  Some love from yours truly
+
+  05 Apr 2003; Seth Chandler <sethbc@gentoo.org>; urw-fonts-2.0.ebuild:
+  added urw-fonts to portage, try em out, they're nice specially for mozilla
+
