@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.128 2004/12/14 21:12:41 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.129 2004/12/14 22:23:59 lisa Exp $
+
+  14 Dec 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.18.3.ebuild:
+  fix dependency on pkgconfig for only gtk/gnome. bug #68168
 
 *distcc-2.18.3 (14 Dec 2004)
 
