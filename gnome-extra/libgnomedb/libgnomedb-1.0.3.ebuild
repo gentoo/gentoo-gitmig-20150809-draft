@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.3.ebuild,v 1.3 2004/02/21 04:03:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.3.ebuild,v 1.4 2004/04/02 07:58:56 leonardop Exp $
 
 inherit gnome2
 
@@ -30,6 +30,8 @@ src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix ${S}/doc/Makefile.in
 	cd ${S}; intltoolize --force || die
+	# Avoid documentation problems. See bug #46275.
+	epatch ${FILESDIR}/${P}-gtkdoc_fix.patch
 }
 
 src_install() {

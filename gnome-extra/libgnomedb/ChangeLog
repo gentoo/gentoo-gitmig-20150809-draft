@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.18 2004/02/17 20:04:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.19 2004/04/02 07:58:56 leonardop Exp $
+
+  02 Apr 2004; L. Boshell <leonardop@gentoo.org> libgnomedb-1.0.3.ebuild,
+  files/libgnomedb-1.0.3-gtkdoc_fix.patch:
+  Added patch to avoid gtk-doc problems. Closes bug #46275.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> libgnomedb-1.0.1.ebuild,
   libgnomedb-1.0.3.ebuild:
