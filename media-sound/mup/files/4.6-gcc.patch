@@ -1,0 +1,9 @@
+--- mupdisp/mupdisp.h.orig	2004-01-14 01:00:11.637757984 -0500
++++ mupdisp/mupdisp.h	2004-01-14 01:00:18.243753720 -0500
+@@ -146,6 +146,3 @@
+ extern void init P((void));
+ extern void do_cmd P((int c));
+ 
+-extern char *getenv();
+-extern long ftell();
+-extern long lseek();
