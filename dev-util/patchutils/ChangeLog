@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.7 2003/02/12 06:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.8 2003/03/27 08:42:02 seemant Exp $
+
+*patchutils-0.2.22 (27 Mar 2003)
+
+  27 Mar 2003; Seemant Kulleen <seemant@gentoo.org> patchutils-0.2.17.ebuild,
+  patchutils-0.2.17.ebuild, patchutils-0.2.18.ebuild,
+  patchutils-0.2.18.ebuild, patchutils-0.2.20.ebuild,
+  patchutils-0.2.22.ebuild:
+  version bump
 
 *patchutils-0.2.20 (03 Feb 2003)
 
