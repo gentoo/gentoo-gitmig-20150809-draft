@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/gtkmm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.17 2002/12/13 11:00:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.18 2003/01/08 11:29:14 foser Exp $
+
+  07 Jan 2003; foser <foser@gentoo.org> gtkmm-2.0.2.ebuild :
+  Fixed deps to depend on gtk+-2.0
+
+*gtkmm-2.2.0 (06 Jan 2003)
+
+  07 Jan 2003; foser <foser@gentoo.org> gtkmm-2.2.0.ebuild :
+  Now use gnome.org eclass for SRC_URI
+
+  06 Jan 2003; foser <foser@gentoo.org> gtkmm-2.2.0.ebuild :
+  New version
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

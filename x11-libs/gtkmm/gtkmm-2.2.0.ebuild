@@ -1,17 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-2.2.0.ebuild,v 1.1 2003/01/07 16:13:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-2.2.0.ebuild,v 1.2 2003/01/08 11:29:14 foser Exp $
 
-# in time enable this for the bz2s 
-#inherit gnome.org
+inherit gnome.org
 
 S=${WORKDIR}/${P}
 IUSE=""
 DESCRIPTION="C++ interface for GTK+2"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
 SLOT="2"
 DEPEND="virtual/glibc
