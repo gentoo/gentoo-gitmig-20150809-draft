@@ -1,14 +1,16 @@
 # ChangeLog for net-nds/portmap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.7 2003/02/16 16:22:47 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.8 2003/03/09 19:56:07 agriffis Exp $
 
 *portmap-5b-r7 (31 Dec 2002)
 
-  16 Feb 2003; Jan Seidel <tuxus@gentoo.org> portmap-5b-r6.ebuild :
+  09 Mar 2003; Aron Griffis <agriffis@gentoo.org> portmap-5b-r7.ebuild:
+  Mark stable on alpha
+
+  16 Feb 2003; Jan Seidel <tuxus@gentoo.org> portmap-5b-r7.ebuild :
   Added mips to keywords
 
   09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
-  
   Sed expression delimiter from / to :, closing bug #15006 by Blu3
   <david+gentoo.org@blue-labs.org>; also use epatch in the r6 ebuild.
 
