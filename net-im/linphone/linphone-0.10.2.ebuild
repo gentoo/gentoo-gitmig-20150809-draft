@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.10.2.ebuild,v 1.7 2003/12/06 23:29:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.10.2.ebuild,v 1.8 2003/12/31 04:21:04 bazik Exp $
 
 IUSE="doc gnome gtk2 gtk nls xv alsa"
 
@@ -10,12 +10,12 @@ SRC_URI="http://simon.morlat.free.fr/download/${PV}/sources/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86"
 
 DEPEND="dev-libs/glib
 	>=net-libs/libosip-0.9.6
 	dev-util/pkgconfig
-	xv? ( dev-lang/nasm )
+	x86? ( xv? ( dev-lang/nasm ) )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	gtk2? ( >=x11-libs/gtk+-2 )
 	gnome? ( gnome-base/gnome-panel
