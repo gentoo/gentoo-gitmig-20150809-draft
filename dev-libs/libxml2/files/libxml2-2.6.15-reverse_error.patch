@@ -1,0 +1,16 @@
+===================================================================
+RCS file: /cvs/gnome/libxml2/error.c,v
+retrieving revision 1.73
+retrieving revision 1.74
+diff -u -r1.73 -r1.74
+--- error.c	2004/10/02 03:54:00	1.73
++++ error.c	2004/10/25 16:23:56	1.74
+@@ -453,7 +453,7 @@
+         return;
+     if ((domain == XML_FROM_PARSER) || (domain == XML_FROM_HTML) ||
+         (domain == XML_FROM_DTD) || (domain == XML_FROM_NAMESPACE) ||
+-	(domain == XML_FROM_IO)) {
++	(domain == XML_FROM_IO) || (domain == XML_FROM_VALID)) {
+ 	ctxt = (xmlParserCtxtPtr) ctx;
+ 	if ((schannel == NULL) && (ctxt != NULL) && (ctxt->sax != NULL) &&
+ 	    (ctxt->sax->initialized == XML_SAX2_MAGIC))

@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.15.ebuild,v 1.1 2004/10/29 22:35:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.15-r1.ebuild,v 1.1 2004/10/30 14:15:21 foser Exp $
 
-inherit libtool gnome.org flag-o-matic gnuconfig
+inherit libtool gnome.org flag-o-matic gnuconfig eutils
 
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm -hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm -hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="python readline ipv6"
 
 DEPEND="sys-libs/zlib
@@ -20,6 +20,10 @@ src_unpack() {
 
 	unpack ${A}
 	gnuconfig_update ${S}
+
+	cd ${S}
+	# Fix scrollkeeper crash
+	EPATCH_OPTS="-R" epatch ${FILESDIR}/${P}-reverse_error.patch
 
 }
 
