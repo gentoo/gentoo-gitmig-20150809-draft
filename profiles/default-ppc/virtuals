@@ -39,3 +39,4 @@ virtual/flim		app-emacs/flim
 virtual/semi		app-emacs/semi
 virtual/tetex		app-text/tetex
 virtual/quicktime	media-libs/libquicktime
+virtual/bittorrent	net-p2p/bittorrent
