@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r10.ebuild,v 1.14 2005/01/01 18:11:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r10.ebuild,v 1.15 2005/03/24 03:19:24 luckyduck Exp $
 
 inherit java gcc
 
@@ -61,7 +61,7 @@ src_install() {
 			PLATFORM="sparc"
 		fi
 
-		install_mozilla_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/libjavaplugin_oji.so
+		install_mozilla_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
 	fi
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
