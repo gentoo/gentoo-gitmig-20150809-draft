@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.39 2004/09/29 03:02:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.40 2004/10/02 19:55:26 kloeri Exp $
+
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> sylpheed-0.9.12-r3.ebuild:
+  Stable on alpha, requested in bug 64485.
 
   28 Sep 2004; Jason Wever <weeve@gentoo.org> sylpheed-0.9.12-r3.ebuild:
   Stable on sparc wrt bug #64485.
