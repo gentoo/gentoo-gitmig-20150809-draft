@@ -52,7 +52,6 @@ ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 ggz - Adds support for the Gnu Gaming Zone - http://ggz.sf.net
 gif - Adds GIF image support
 gnome - Adds GNOME support
-gnome-libs - Enables optional support for gnome-libs (mainly for auto-use)
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
