@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.90 2004/04/15 02:24:36 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.91 2004/04/22 22:56:04 geoman Exp $
+
+  22 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gtk+-2.4.0-r1.ebuild:
+  Breaks GNOME 2.4, so returned to ~mips.
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gtk+-1.2.10-r10.ebuild,
   gtk+-1.2.10-r11.ebuild, gtk+-2.4.0-r1.ebuild:
