@@ -1,8 +1,15 @@
 # ChangeLog for net-mail/vlnx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.2 2002/03/19 05:10:18 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.3 2002/08/28 17:22:44 rphillips Exp $
 
 *vlnx-414e-r1 (1 Feb 2002)
+
+  28 Aug 2002; Ryan Phillips <rphillips@gentoo.org> :
+
+  Changed install directory to /opt.
+  Added an env.d/ file to update the path.
+  Added a nostrip option so it doesn't mess with the executables.
+
   18 Mar 2002; Chad Huneycutt <chadh@gentoo.org>
   uvscan was complaining of missing library, which indeed was not being
   installed.  I updated the ebuild to install the library and also a man page.

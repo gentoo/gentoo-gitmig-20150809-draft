@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r2.ebuild,v 1.5 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r2.ebuild,v 1.6 2002/08/28 17:22:44 rphillips Exp $
 
 MY_P=${PN}${PV}
 
@@ -13,9 +13,10 @@ SRC_URI="http://download.mcafee.com/products/evaluation/virusscan/english/unix/l
 SLOT="0"
 LICENSE="VirusScan"
 KEYWORDS="x86 sparc sparc64"
-
+RESTRICT="nostrip"
 DEPEND=""
 RDEPEND="sys-devel/ld.so"
+
 src_unpack() {
 	cd ${WORKDIR}
 	mkdir ${MY_P}
@@ -26,16 +27,15 @@ src_unpack() {
 
 src_install() {															 
 	dodir /usr/bin
-	insinto /usr/lib
-	insopts -m 555
+	insinto /opt/vlnx
+
 	doins liblnxfv.so
-	insinto /usr/share/vscan
-	insopts -m 755
 	doins uvscan
-	insopts -m 444
 	doins *.dat
 	dodoc *.txt *.pdf
-
-	dosym /usr/share/vscan/uvscan /usr/bin/uvscan
 	doman uvscan.1
+	chmod 755 ${D}/opt/vlnx/uvscan
+	
+	mkdir -p ${D}/etc/env.d
+	cp -f ${FILESDIR}/vlnx-${PV}-envd ${D}/etc/env.d/40vlnx
 }

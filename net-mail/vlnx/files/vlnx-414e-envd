@@ -1,0 +1,2 @@
+PATH=/opt/vlnx
+LD_LIBRARY_PATH=/opt/vlnx
