@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netstat-nat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.12 2005/01/25 08:27:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.13 2005/01/30 21:52:46 weeve Exp $
+
+  30 Jan 2005; Jason Wever <weeve@gentoo.org> netstat-nat-1.4.4.ebuild:
+  Stable on sparc wrt bug #74775.
 
 *netstat-nat-1.4.4 (25 Jan 2005)
 
