@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.13 2004/08/14 15:08:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.14 2004/09/07 18:44:23 gustavoz Exp $
+
+  07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> multitail-3.2.3.ebuild:
+  Keyworded ~sparc, thanks to steven knight #63144
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Corrected metadata.xml to match DTD.
