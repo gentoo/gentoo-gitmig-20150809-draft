@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta2.ebuild,v 1.3 2005/02/15 20:59:19 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta2.ebuild,v 1.4 2005/02/16 01:58:42 weeve Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE="arts cups java ldap ieee1394 lm_sensors logitech-mouse opengl pam samba ssl"
 
 DEPEND="arts? ( ~kde-base/arts-${PV} )

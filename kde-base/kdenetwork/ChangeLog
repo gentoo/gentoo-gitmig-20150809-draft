@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.129 2005/02/09 16:20:12 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.130 2005/02/16 02:02:08 weeve Exp $
+
+  15 Feb 2005; Jason Wever <weeve@gentoo.org> kdenetwork-3.4.0_beta2.ebuild:
+  Added ~sparc keyword.
 
 *kdenetwork-3.4.0_beta2 (09 Feb 2005)
 

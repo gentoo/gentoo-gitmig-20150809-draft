@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.154 2005/02/09 16:18:45 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.155 2005/02/16 02:00:26 weeve Exp $
+
+  15 Feb 2005; Jason Wever <weeve@gentoo.org>
+  kdegraphics-3.4.0_beta2.ebuild:
+  Added ~sparc keyword.
 
 *kdegraphics-3.4.0_beta2 (09 Feb 2005)
 

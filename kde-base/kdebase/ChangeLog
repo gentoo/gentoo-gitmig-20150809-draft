@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.180 2005/02/10 14:15:22 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.181 2005/02/16 01:58:42 weeve Exp $
+
+  15 Feb 2005; Jason Wever <weeve@gentoo.org> kdebase-3.4.0_beta2.ebuild:
+  Added ~sparc keyword.
 
   10 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/kicker-visibility.diff, kdebase-3.4.0_beta2.ebuild:
