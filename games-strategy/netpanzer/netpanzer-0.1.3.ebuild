@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.2.ebuild,v 1.2 2004/01/05 23:17:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.3.ebuild,v 1.1 2004/01/05 23:17:14 mr_bones_ Exp $
 
 inherit games eutils
 
 DESCRIPTION="Fast-action multiplayer strategic network game"
-HOMEPAGE="http://www.nongnu.org/netpanzer/"
-DATAVERSION="0.1.2"
-SRC_URI="http://savannah.nongnu.org/download/netpanzer/netpanzer.pkg/0.1/netpanzer-${PV}.tar.bz2
-	http://savannah.nongnu.org/download/netpanzer/netpanzer.pkg/0.1/netpanzerdata-${DATAVERSION}.tar.bz2"
+HOMEPAGE="http://netpanzer.berlios.de/"
+DATAVERSION="0.1.3"
+SRC_URI="http://download.berlios.de/netpanzer/netpanzer-${PV}.tar.bz2
+	http://download.berlios.de/netpanzer/netpanzerdata-${DATAVERSION}.tar.bz2"
 
 KEYWORDS="x86"
 LICENSE="GPL-2"
