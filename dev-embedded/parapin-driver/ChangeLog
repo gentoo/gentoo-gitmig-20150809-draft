@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/parapin-driver
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/parapin-driver/ChangeLog,v 1.1 2005/01/30 03:46:46 dragonheart Exp $
+
+*parapin-driver-1.0.0 (30 Jan 2005)
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +parapin-driver-1.0.0.ebuild:
+  Initial import as per bug #79554. Thanks to Luke Worth <luke_worth@hotpop.com>
+
