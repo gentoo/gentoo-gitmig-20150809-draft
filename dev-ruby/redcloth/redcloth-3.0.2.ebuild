@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-3.0.2.ebuild,v 1.1 2005/02/03 22:00:12 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-3.0.2.ebuild,v 1.2 2005/03/12 15:33:00 citizen428 Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/2852/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 USE_RUBY="any"
