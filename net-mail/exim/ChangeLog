@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.2 2002/04/01 17:17:35 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.3 2002/04/15 23:58:06 seemant Exp $
+
+*exim-3.34-r2 (15 Apr 2002)
+
+  15 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
+  exim-3.34-r2.ebuild files/digest-exim-3.34-r2 :
+
+  Updated the USE flags from mta-ldap, mta-tls and mta-mysql to the more general
+  and widely used ldap, ssl and mysql flags respectively.
 
 *exim-3.34-r1 (1 Apr 2002)
 
