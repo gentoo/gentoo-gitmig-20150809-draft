@@ -1,6 +1,17 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.13 2004/02/10 14:32:14 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.14 2004/03/12 06:21:50 usata Exp $
+
+*gocr-0.39 (12 Mar 2004)
+
+  12 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> gocr-0.39.ebuild:
+  Version bumped. Closing bug #42743
+
+*gocr-0.3.6-r3 (12 Mar 2004)
+
+  12 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> gocr-0.3.6-r3.ebuild:
+  Fixed manpage directory and changed tetex IUSE flag to doc.
+  Closing bug #43211
 
   10 Feb 2004; Mike Gardiner <obz@gentoo.org> gocr-0.3.6-r2.ebuild,
   gocr-0.37.ebuild:
