@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.10 2004/06/24 22:50:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.11 2004/07/14 18:31:31 agriffis Exp $
 
 MY_P=${P/transfig-/transfig.}
 S=${WORKDIR}/${MY_P}
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.xfig.org"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="virtual/x11
 	>=media-libs/jpeg-6
