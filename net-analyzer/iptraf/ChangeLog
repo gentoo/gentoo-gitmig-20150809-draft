@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.2 2002/06/20 15:24:26 bass Exp $
+
+*iptraf-2.7.0 (20 Jun 2002)
+
+  20 Jun 2002; J.Alberto Suárez L. iptraf-2.7.0.ebuild :
+
+  Version bumped.
 
 *iptraf-2.4.0-r1 (1 Feb 2002)
 
