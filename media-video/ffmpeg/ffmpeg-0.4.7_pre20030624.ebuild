@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7_pre20030624.ebuild,v 1.4 2003/07/14 00:47:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7_pre20030624.ebuild,v 1.5 2003/07/14 13:09:33 liquidx Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ DEPEND="encode? ( >=media-sound/lame-3.92 )
 	faad? ( >=media-libs/faad2-1.1 )
 	dvd? ( >=media-libs/a52dec-0.7.4 )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
-	imlib? ( >=media-libs/imlib2-1.0.7 )
+	imlib? ( >=media-libs/imlib2-1.0.6 )
 	truetype? ( >=media-libs/freetype-2.1.2 )"
 
 S=${WORKDIR}/ffmpeg-cvs-2003-06-24

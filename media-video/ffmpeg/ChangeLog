@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.19 2003/07/14 00:47:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.20 2003/07/14 13:09:33 liquidx Exp $
+
+  14 Jul 2003; Alastair Tse <liquidx@gentoo.org>
+  ffmpeg-0.4.7_pre20030624.ebuild:
+  depend on a non-masked version of imlib2
 
   13 Jul 2003; Nick Hadaway <raker@gentoo.org> ffmpeg-0.4.7_pre20030624.ebuild:
   Adding sdl, imlib, and truetype use flags.
