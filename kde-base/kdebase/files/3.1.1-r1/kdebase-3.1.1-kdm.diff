@@ -159,15 +159,6 @@ retrieving revision 1.23.2.1
 diff -u -p -r1.23 -r1.23.2.1
 --- kdm/kfrontend/kgreeter.h	2002/10/22 03:46:21	1.23
 +++ kdm/kfrontend/kgreeter.h	2003/03/13 19:04:06	1.23.2.1
-@@ -1,7 +1,7 @@
-     /*
- 
-     Greeter module for xdm
--    $Id: kdebase-3.1.1-kdm.diff,v 1.1 2003/03/22 11:51:03 danarmak Exp $
-+    $Id: kdebase-3.1.1-kdm.diff,v 1.1 2003/03/22 11:51:03 danarmak Exp $
- 
-     Copyright (C) 1997, 1998 Steffen Hansen <hansen@kde.org>
-     Copyright (C) 2000-2002 Oswald Buddenhagen <ossi@kde.org>
 @@ -81,6 +81,8 @@ protected:
  };
  
