@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.1.4.ebuild,v 1.2 2004/04/29 16:26:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.1.4.ebuild,v 1.3 2004/06/21 13:48:17 fmccor Exp $
 
 MY_P=${PN}_${PV//./_}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~sparc"
 
 RDEPEND=">=dev-lang/tk-8.3
 	dev-util/cvs
