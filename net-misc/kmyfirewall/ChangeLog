@@ -1,0 +1,22 @@
+# ChangeLog for net-misc/kmyfirewall
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kmyfirewall/ChangeLog,v 1.1 2002/06/04 08:24:57 george Exp $
+
+*kmyfirewall-0.4.4.ebuild (03 Jun 2002)
+
+  03 Jun 2002; George Shapovalov <george@gentoo.org> kmyfirewall-0.4.4.ebuild, files/digest-kmyfirewall-0.4.4 :
+  
+  First submission
+  From the ebuild author:
+
+  KMyFirewall is a GUI interface to the "iptables" netfilter administration  
+  tool written for KDE which now has support for thg Gentoo Linux init system.  
+  It provides an XML - like file format for import/export rulesets to ease the  
+  setup of large networks.   
+  There is also a Wizard which enables you to set up a simple "Personal  
+  Firewall" within a few clicks. 
+  At the moment most filtering options (provided by iptables) are implemented.  
+  The support for Target Ectentions will be added soon.
+ 
+  Ebuild submitted by Christian Hubinger <Christian Hubinger>.
+
