@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 66fe39add83bd5ff00fa078ebb6037ba ChangeLog 2159
-MD5 e885f5254086b75d2928f2fe347108d2 hdf5-1.4.5.ebuild 1431
-MD5 5b772ae4e527fd8f29b5790970dd9132 hdf5-1.6.0.ebuild 1569
-MD5 834abe0988bb4999f50eaa483bc6c7e1 hdf5-1.6.1.ebuild 1589
-MD5 05a18db3638f29e29ebdbc3d81af6a46 hdf5-1.6.2.ebuild 1589
+MD5 6d6c4b59c0caf74ffaad371520fb8cc6 hdf5-1.6.2.ebuild 1588
+MD5 f2f8572199d5a3b64151cb03110b91cd hdf5-1.4.5.ebuild 1431
+MD5 ec2dd26bb05da8031fecafdaea7a8a56 hdf5-1.6.1.ebuild 1589
+MD5 796683f9b63678eecf54ee42b8622eb3 hdf5-1.6.0.ebuild 1569
+MD5 901e76a77031d33e717a715120303672 ChangeLog 2383
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 eb29b80216a0a85ed3dbe10cd7e9cb0f files/digest-hdf5-1.4.5 69
 MD5 65fa18117e012e612d6e02d2964b857a files/digest-hdf5-1.6.0 63
 MD5 325f4b92c8b4cc354a8d21a7d94e4bdd files/digest-hdf5-1.6.1 63
 MD5 e5bd4cad7b0583c6bcb603869b5582e9 files/digest-hdf5-1.6.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW07NI1lqEGTUzyQRAvM2AKCHyegv6A1JKoc+YpLDEb0NXmLldgCdFvOX
-iglnfmXiR/q4qqOJaEnJqTw=
-=fSQW
------END PGP SIGNATURE-----
