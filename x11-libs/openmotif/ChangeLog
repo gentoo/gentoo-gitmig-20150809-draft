@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.31 2004/01/12 11:13:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.32 2004/01/13 14:38:11 lanius Exp $
+
+  13 Jan 2004; Heinrich Wendel <lanius@gentoo.org> openmotif-2.1.30-r3.ebuild:
+  added warning about libXm.so.3
 
   11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> openmotif-2.1.30-r3.ebuild,
   openmotif-2.2.2-r1.ebuild, openmotif-2.2.2-r2.ebuild,

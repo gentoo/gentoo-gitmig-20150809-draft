@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r3.ebuild,v 1.9 2004/01/11 13:54:23 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r3.ebuild,v 1.10 2004/01/13 14:38:11 lanius Exp $
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
@@ -81,4 +81,9 @@ src_install() {
 	einfo "Fixing docs"
 	dodoc README COPYRIGHT.MOTIF RELEASE RELNOTES
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS
+}
+
+pkg_postinst() {
+	ewarn "This might break applications linked against libXm.so.3"
+	ewarn "Just rebuild these applications."
 }
