@@ -4,7 +4,7 @@
 # /home/cvsroot/gentoo-x86/skel.build,v 1.9 2001/10/21 16:17:12 agriffis Exp
 
 S=${WORKDIR}/pcre-${PV}
-DESCRIPTION="Perl-compitable regular expression library"
+DESCRIPTION="Perl-compatible regular expression library"
 SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-${PV}.tar.bz2"
 HOMEPAGE="http://www.pcre.org/"
 
