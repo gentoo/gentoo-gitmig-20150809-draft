@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+  30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
+  Added metadata.xml
+
   28 Sep 2003; Markus Nigbur <pyrania@gentoo.org> commonbox-styles-0.6.ebuild:
   Added ~amd64 keyword. request by brad@mainstreetsoftworks.com in bug #29806.
 
