@@ -1,8 +1,16 @@
-MD5 c69bf265b2474d6b5ff439b55fe8c4d1 files/digest-ezmlm-0.53 193
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c35fd932640d04375e801ef2ac3a89a4 ChangeLog 1514
+MD5 aa349ae71ffb11d42c4dbd087d8acbfa ezmlm-0.53-r1.ebuild 1219
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 d706f0c44e395462f27ad01a507d3aeb files/digest-ezmlm-0.53-r1 125
 MD5 b82b4c09c356dc91fcbe907a24326b52 files/ezmlm-0.53-errno.patch 270
 MD5 25b6c38d841fa24708461776e816f395 files/ezmlm-0.53-gcc33.patch 300
-MD5 c35fd932640d04375e801ef2ac3a89a4 ChangeLog 1514
-MD5 aa349ae71ffb11d42c4dbd087d8acbfa ezmlm-0.53-r1.ebuild 1219
-MD5 4870e5b7a1e3b015824ed842b6db3cef ezmlm-0.53.ebuild 1103
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA09c/HTu7gpaalycRAlb+AJ99uu9kNqo9V/uOJcC18b+PkkTxVwCfXB3W
+C9ASaDjJiSGfrB2QxLiMdE0=
+=S1vJ
+-----END PGP SIGNATURE-----
