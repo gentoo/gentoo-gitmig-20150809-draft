@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/fcron-1.1.1.ebuild,v 1.2 2001/08/11 04:42:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/fcron-1.1.1.ebuild,v 1.3 2001/09/03 20:36:07 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A replacement for vcron"
@@ -67,5 +67,5 @@ src_install() {
 
     insinto /etc/rc.d/init.d
     insopts -m 0755
-    doins ${FILESDIR}/fcron
+    newins ${FILESDIR}/fcron.rc5 fcron
 }
