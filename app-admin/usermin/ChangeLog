@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/usermin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.16 2004/01/05 12:55:44 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.17 2004/03/11 04:27:26 eradicator Exp $
+
+*usermin-1.060 (10 Mar 2004)
+
+  10 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> usermin-1.051.ebuild,
+  usermin-1.060.ebuild:
+  Version bump.  51 stable on x86.  Adding myself as maintainer
 
   05 Jan 2004; Jason Wever <weeve@gentoo.org> usermin-1.000.ebuild,
   usermin-1.030.ebuild, usermin-1.040.ebuild, usermin-1.051.ebuild:
