@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c.ebuild,v 1.2 2004/08/28 23:02:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c.ebuild,v 1.3 2004/10/26 13:56:35 vapier Exp $
 
-inherit gcc games
+inherit games toolchain-funcs
 
 DESCRIPTION="A fast paced action game"
 HOMEPAGE="http://icculus.org/excido/"
@@ -10,7 +10,7 @@ SRC_URI="http://icculus.org/excido/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-games/physfs
@@ -22,7 +22,7 @@ DEPEND="dev-games/physfs
 
 src_compile() {
 	emake \
-		CC="$(gcc-getCXX)" \
+		CC="$(tc-getCXX)" \
 		PREFIX="/usr" \
 		BINDIR="${GAMES_BINDIR}/" \
 		DATADIR="${GAMES_DATADIR}/${PN}/" \
