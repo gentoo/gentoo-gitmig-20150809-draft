@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.13 2004/05/29 13:02:38 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.14 2004/05/30 00:21:25 scandium Exp $
+
+  30 May 2004; Rainer Groesslinger <scandium@gentoo.org> pnet-0.6.6.ebuild,
+  files/verify_branch.c.patch:
+  Patch to fix compilation on 64bit architectures
 
 *pnet-0.6.6 (29 May 2004)
 
