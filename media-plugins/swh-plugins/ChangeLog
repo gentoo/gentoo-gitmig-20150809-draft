@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.10 2003/06/06 13:07:12 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.11 2003/06/07 19:21:17 robh Exp $
+
+  07 Jun 2003; robh <robh@gentoo.org> swh-plugins-0.4.2.ebuild:
+  Added sed version dep due to sed -i
+  Noticed by rac@gentoo.org
 
 *swh-plugins-0.4.2 (06 Jun 2003)
 
