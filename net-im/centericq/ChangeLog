@@ -1,6 +1,12 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.53 2005/01/19 12:29:31 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.54 2005/01/21 19:55:27 luckyduck Exp $
+
+  21 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/centericq-amd64.patch, centericq-4.13.0.ebuild,
+  centericq-4.14.0.ebuild:
+  added a patch for amd64 to fix bug #76967. thanks goes to Julian Rueth
+  <julian.rueth@informatik.uni-ulm.de>
 
   19 Jan 2005; Wolfram Schlich <wschlich@gentoo.org>
   -centericq-4.9.12-r1.ebuild, -centericq-4.9.12.ebuild:

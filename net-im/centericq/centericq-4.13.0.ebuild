@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.13.0.ebuild,v 1.3 2005/01/19 12:14:37 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.13.0.ebuild,v 1.4 2005/01/21 19:55:27 luckyduck Exp $
 
 inherit eutils
 
@@ -25,6 +25,8 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	use amd64 && epatch ${FILESDIR}/${PN}-amd64.patch
 }
 
 src_compile() {
