@@ -1,0 +1,19 @@
+# ChangeLog for app-sci/oww
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/oww/ChangeLog,v 1.1 2004/12/27 21:06:40 ribosome Exp $
+
+*oww-0.71.1 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +oww-0.71.1.ebuild:
+  Moved from app-sci/oww to sci-misc/oww.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> oww-0.71.1.ebuild:
+  Adding IUSE
+
+*oww-0.71.1 (17 Dec 2003)
+
+  17 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
+  oww-0.71.1.ebuild:
+  Initial import based on bug #19974 by Roger Pau Monné <royger@bdftech.com>
+
