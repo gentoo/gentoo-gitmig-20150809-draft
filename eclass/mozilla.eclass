@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.10 2004/08/09 15:43:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.11 2004/08/11 19:41:24 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -10,8 +10,8 @@ IUSE="java gnome gtk2 ldap debug xinerama xprint"
 IUSE="${IUSE} moznoxft"
 [[ ${PN} == mozilla || ${PN} == mozilla-firefox ]] && \
 	IUSE="${IUSE} mozdevelop mozxmlterm"
-[[ ${PN} == mozilla || ${PN} == mozilla-thunderbird ]] && \
-	IUSE="${IUSE} mozplaintext"
+#[[ ${PN} == mozilla || ${PN} == mozilla-thunderbird ]] && \
+#	IUSE="${IUSE} mozplaintext"
 [[ ${PN} == mozilla ]] && \
 	IUSE="${IUSE} mozsvg"
 
@@ -233,12 +233,14 @@ mozilla_conf() {
 	fi
 
 	# Some mailer-only flags
-	if ${MOZ} || ${TB}; then
-		if use mozplaintext; then
-			mozilla_annotate "+mozplaintext" \
-				--enable-plaintext-editor-only
-		fi
-	else
+	# (This doesn't work for moz-1.7.2 or tb-0.7.3 #59971)
+#	if ${MOZ} || ${TB} && use mozplaintext; then
+#		mozilla_annotate "+mozplaintext" \
+#			--enable-plaintext-editor-only
+#	fi
+
+	# Some firefox-only flags
+	if ${FF}; then
 		mozilla_annotate "n/a on ${PN}" \
 			--disable-mailnews
 	fi
@@ -283,7 +285,7 @@ mozilla_conf() {
 		use mozdevelop && myext="${myext},venkman"
 		use gnome && myext="${myext},gnomevfs"
 	else
-		myext="pref,spellcheck,universalchardet"
+		myext="pref,spellcheck,universalchardet,wallet"
 	fi
 	myconf="${myconf} --enable-extensions=${myext}"
 
