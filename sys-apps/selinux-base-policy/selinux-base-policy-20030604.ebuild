@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-base-policy/selinux-base-policy-20030604.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-base-policy/selinux-base-policy-20030604.ebuild,v 1.4 2003/06/29 04:12:36 pebenito Exp $
 
 IUSE="selinux"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86"
 RDEPEND="|| (
 		>=sys-kernel/selinux-sources-2.4.20-r1
 		>=sys-kernel/hardened-sources-2.4.20-r1
