@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.53 2003/01/30 19:40:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.54 2003/01/31 20:00:21 danarmak Exp $
+
+  31 Jan 2003; Dan Armak <danarmak@gentoo.org> kdebase-3.0.5a-r2.ebuild  :
+
+  Fix bug #12705: add missing Xreset, Xstartup, Xsetup files to the kdm
+  config dir.
 
   30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r2.ebuild,v 1.2 2003/01/30 19:40:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r2.ebuild,v 1.3 2003/01/31 20:00:21 danarmak Exp $
 NEED_KDE_DONT_ADD_KDELIBS_DEP=1 # we're a special case, see below
 inherit eutils flag-o-matic kde-dist
 
@@ -8,7 +8,7 @@ IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
 
 DESCRIPTION="KDE ${PV} - base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
 newdepend ">=media-sound/cdparanoia-3.9.8
 	ldap? ( >=net-nds/openldap-1.2 )
@@ -224,8 +224,17 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
 	cd ${D}/${KDEDIR}/share/apps/kdesktop/
 	ln -sf /usr/share/pixmaps/ pics
+	
+	# fix bug #12705: make sure default Xreset, Xsetup, Xwilling files are installed
+	# into the kdm config dir
+	cd ${S}/kdm/frontend
+	./genkdmconf --in . --no-old
+	insinto ${PREFIX}/share/config/kdm
+	doins Xreset Xsetup Xstartup
 
+	# portage has a problem working with empty directories
 	rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
+	
 }
 
 pkg_postinst() {
