@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.1.99.1.ebuild,v 1.1 2004/11/25 05:08:43 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.1.99.1.ebuild,v 1.2 2004/12/01 06:17:03 bcowan Exp $
 
 DESCRIPTION="Libraries for Xfce 4"
 HOMEPAGE="http://www.xfce.org/"
@@ -15,6 +15,7 @@ RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2.2*
 	dev-libs/libxml2
 	x11-libs/startup-notification
+	>=dev-libs/dbh-1.0.20
 	=xfce-base/libxfce4util-${PV}"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
