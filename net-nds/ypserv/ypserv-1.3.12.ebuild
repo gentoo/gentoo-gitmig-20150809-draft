@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.13 2003/05/25 15:08:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.14 2003/06/18 02:19:45 woodchip Exp $
 
 IUSE="tcpd"
 
@@ -17,16 +17,13 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	cp ${FILESDIR}/defs.sed ypmake
 	patch < ${FILESDIR}/${PV}/volatile-fix-gcc-3.2.diff || die
-
 }
 
 src_compile() {
-
 	local myconf
 	use tcpd && myconf="${myconf} --enable-tcp-wrapper"
 
@@ -47,7 +44,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make \
 		ROOT=${D} \
 		installdirs install_progs || die
@@ -76,5 +72,5 @@ src_install() {
 	insinto /etc ; doins etc/ypserv.conf
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/ypserv.rc6 ypserv
+	newexe ${FILESDIR}/ypserv-initd ypserv
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.5.ebuild,v 1.4 2003/05/25 15:08:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.5.ebuild,v 1.5 2003/06/18 02:19:45 woodchip Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.linux-nis.org/nis/"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND=">=sys-libs/gdbm-1.8.0"
 
@@ -30,7 +30,7 @@ src_install() {
 	insinto /var/yp ; doins etc/securenets
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/ypserv.rc6 ypserv
+	newexe ${FILESDIR}/ypserv-initd ypserv
 }
 
 pkg_postinst() {
