@@ -1,0 +1,11 @@
+# ChangeLog for net-mail/imapsync
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.1 2005/01/31 21:12:49 langthang Exp $
+
+*imapsync-1.118 (31 Jan 2005)
+
+  31 Jan 2005; Tuấn Văn <langthang@gentoo.org> +metadata.xml,
+  +imapsync-1.118.ebuild:
+  Initial import. Ebuild submitted by Lee Weisz <lweisz@mindspring.com>. Bug
+  #42838.
+

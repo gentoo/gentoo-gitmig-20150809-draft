@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a6beb341fd60c618ffeb730fe1ba6a4 imapsync-1.118.ebuild 1177
+MD5 1362d9d4768241888598e789232a4ffc ChangeLog 420
+MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
+MD5 3cd0015414e2d6306c52c1cead48581c files/digest-imapsync-1.118 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB/qBm5FrxP71izLARAuxSAKCo8BQvNOh1r6lNjbE9S6V2wlQumgCg0+J3
+wr9dqXXu8ObUfi+wGCJ505I=
+=y521
+-----END PGP SIGNATURE-----
