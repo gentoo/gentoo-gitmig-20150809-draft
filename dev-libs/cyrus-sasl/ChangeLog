@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.4 2002/05/05 19:51:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.5 2002/05/21 21:12:15 azarah Exp $
+
+*cyrus-sasl-1.5.27-r4 (21 May 2002)
+
+  21 May 2002; Martin Schlemmer <azarah@gentoo.org>:
+
+  Update it to use automake-1.5, hopefully finally resolving
+  bug #2319 and co.
 
 *cyrus-sasl-1.5.27-r3 (5 May 2002)
 
