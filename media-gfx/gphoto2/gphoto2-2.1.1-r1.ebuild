@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.1-r1.ebuild,v 1.2 2003/05/21 00:10:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.1-r1.ebuild,v 1.3 2003/06/10 22:35:16 liquidx Exp $
 
 inherit libtool flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gphoto.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 # jpeg useflag -> exif support
 # aalib -> needs libjpeg
