@@ -1,0 +1,18 @@
+# ChangeLog for media-video/cinepaint
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.1 2003/07/31 18:36:55 vapier Exp $
+
+*cinepaint-0.18 (31 Jul 2003)
+
+  31 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + rename from filmgimp.
+
+*cinepaint-0.15 (03 Feb 2003)
+
+  03 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #14977.
+
+*cinepaint-0.13 (15 Jan 2003)
+
+  15 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Rigo Ketelings <rigo@home.nl>.
