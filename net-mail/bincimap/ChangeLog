@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/bincimap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.17 2004/06/10 20:37:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.18 2004/06/11 11:44:17 nakano Exp $
+
+*bincimap-1.2.8 (11 Jun 2004)
+
+  11 Jun 2004; Masatomo Nakano <nakano@gentoo.org>
+  +files/bincimap-1.2.8-gentoo.diff, +bincimap-1.2.8.ebuild:
+  Version bump. see http://www.bincimap.org/dl/ChangeLog for details.
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> bincimap-1.2.6.ebuild,
   bincimap-1.2.7-r1.ebuild:
