@@ -1,7 +1,5 @@
 MD5 23e5eb6187450a9c158b6c3c6a25413d ChangeLog 1611
 MD5 8a9bc06b4a34220f1341f9467121e559 gkrellm-radio-0.3.3.ebuild 678
-MD5 86f208476abccf47ca6297a3f2d27d7c gkrellm-radio-2.0.3.ebuild 697
 MD5 0a4203cf78850fd3056de15be34b5a16 gkrellm-radio-2.0.3-r1.ebuild 778
 MD5 2c2ab358f05df52ec441577e7b4f5e51 files/digest-gkrellm-radio-0.3.3 70
-MD5 13423e2abb2543a60380e7e318340548 files/digest-gkrellm-radio-2.0.3 70
 MD5 13423e2abb2543a60380e7e318340548 files/digest-gkrellm-radio-2.0.3-r1 70
