@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.2 2002/04/28 03:10:17 seemant Exp $
+
+*docbook-sgml-utils-0.6.9 (27 Apr 2002)
+
+  27 Apr 2002; Seemant Kulleen <seemant@gentoo.org> docbook-sgml-utils-0.6.9.ebuild files/digest-docbook-sgml-utils-0.6.9 :
+
+  Version bump, new SRC_URI and new HOMEPAGE
 
 *docbook-sgml-utils-0.6.6 (1 Feb 2002)
 
