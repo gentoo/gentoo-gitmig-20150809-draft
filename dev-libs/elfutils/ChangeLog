@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.20 2003/10/21 00:43:44 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.21 2003/10/27 03:31:54 agriffis Exp $
+
+  26 Oct 2003; Aron Griffis <agriffis@gentoo.org>
+  files/elfutils-0.89-atime.diff:
+  Fix 0.89 compilation on alpha
 
 *elfutils-0.89 (20 Oct 2003)
 
