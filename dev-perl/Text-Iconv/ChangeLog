@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Text-Iconv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Iconv/ChangeLog,v 1.11 2004/06/25 01:04:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Iconv/ChangeLog,v 1.12 2004/07/30 15:56:16 mcummings Exp $
+
+*Text-Iconv-1.4 (30 Jul 2004)
+
+  30 Jul 2004; Michael Cummings <mcummings@gentoo.org> +Text-Iconv-1.4.ebuild:
+  New version on CPAN
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> Text-Iconv-1.2-r1.ebuild:
   Stable on alpha.

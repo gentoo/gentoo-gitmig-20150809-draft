@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Text-Levenshtein
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Levenshtein/ChangeLog,v 1.2 2004/06/25 01:05:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Levenshtein/ChangeLog,v 1.3 2004/07/30 16:00:22 mcummings Exp $
+
+*Text-Levenshtein-0.05 (30 Jul 2004)
+
+  30 Jul 2004; Michael Cummings <mcummings@gentoo.org>
+  +Text-Levenshtein-0.05.ebuild:
+  New version on CPAN
 
 *Text-Levenshtein-0.04 (29 Mar 2004)
 
