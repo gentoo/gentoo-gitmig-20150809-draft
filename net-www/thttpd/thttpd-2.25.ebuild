@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/thttpd/thttpd-2.25.ebuild,v 1.1 2004/04/23 10:12:04 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/thttpd/thttpd-2.25.ebuild,v 1.2 2004/04/26 07:37:25 dholm Exp $
 
 MY_P="${P}b"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.acme.com/software/thttpd/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc"

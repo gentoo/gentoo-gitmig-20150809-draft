@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.1.8.ebuild,v 1.3 2004/04/24 15:53:52 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.1.8.ebuild,v 1.4 2004/04/26 07:34:31 dholm Exp $
 
 DESCRIPTION="lighttpd is intented to be a frontend for ad-servers which have to deliver small files concurrently to many connections."
 HOMEPAGE="http://jan.kneschke.de/projects/lighttpd"
 SRC_URI="http://jan.kneschke.de/projects/lighttpd/download/${P}.tar.gz"
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="mysql ssl"
 DEPEND="virtual/glibc
 		>=dev-libs/libpcre-3.1
