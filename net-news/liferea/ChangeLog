@@ -1,0 +1,132 @@
+# ChangeLog for net-www/liferea
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.1 2005/03/18 14:36:26 seemant Exp $
+
+*liferea-0.9.1 (18 Mar 2005)
+*liferea-0.9.0b (18 Mar 2005)
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +liferea-0.9.0b.ebuild, +liferea-0.9.1.ebuild:
+  Moved from net-www/liferea to net-news/liferea.
+
+  13 Mar 2005; Michael Kohl <citizen428@gentoo.org> :
+  Fixed digest, see bug #85030
+
+*liferea-0.9.1 (13 Mar 2005)
+
+  13 Mar 2005; Michael Kohl <citizen428@gentoo.org> -liferea-0.6.4b.ebuild,
+  -liferea-0.9.0.ebuild, liferea-0.9.0b.ebuild, +liferea-0.9.1.ebuild:
+  Marked 0.9.0b stable on x86, added 0.9.1 and removed older versions.
+
+*liferea-0.9.0b (20 Jan 2005)
+
+  20 Jan 2005; Michael Kohl <citizen428@gentoo.org> +liferea-0.9.0b.ebuild:
+  Version bump; requested by Daniel Webert <rockoo@gmail.com> in bug #78032
+
+*liferea-0.9.0 (14 Jan 2005)
+
+  14 Jan 2005; Michael Kohl <citizen428@gentoo.org> -liferea-0.6.1.ebuild,
+  -liferea-0.6.2.ebuild, liferea-0.6.4b.ebuild, +liferea-0.9.0.ebuild:
+  Version bump; marked 0.6.4b stable on x86; cleaned out older versions.
+
+  03 Dec 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digests. Fixed broken Manifest.
+
+*liferea-0.6.4b (02 Dec 2004)
+
+  02 Dec 2004; Michael Kohl <citizen428@gentoo.org> metadata.xml,
+  -liferea-0.5.3.ebuild, -liferea-0.6.0.ebuild, +liferea-0.6.4b.ebuild:
+  Version bump. Removed some older versions. Added myself as maintainer.
+
+*liferea-0.6.2 (22 Nov 2004)
+
+  22 Nov 2004; Mike Gardiner <obz@gentoo.org> liferea-0.6.1.ebuild,
+  +liferea-0.6.2.ebuild:
+  New version as requested in #71579, and marked 0.6.1 x86
+
+*liferea-0.6.1 (07 Nov 2004)
+
+  07 Nov 2004; Mike Gardiner <obz@gentoo.org> -liferea-0.5.3b.ebuild,
+  -liferea-0.5.3c.ebuild, liferea-0.6.0.ebuild, +liferea-0.6.1.ebuild:
+  Removed unneeded older versions. Marked version 0.6.0 x86. Added new version
+  0.6.1.
+
+*liferea-0.6.0 (30 Oct 2004)
+
+  30 Oct 2004; Travis Tilley <lv@gentoo.org> liferea-0.6.0.ebuild:
+  stable on amd64
+
+  14 Sep 2004; Yi Qiang <khai@gentoo.org> :
+  Version bump
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> liferea-0.5.3.ebuild,
+  liferea-0.5.3b.ebuild:
+  Switch to use epause and ebeep, bug #62950
+
+*liferea-0.5.3c (06 Sep 2004)
+
+  06 Sep 2004; Yi Qiang <khai@gentoo.org> +liferea-0.5.3c.ebuild:
+  Figured out what was wrong with 0.5.3c, back in the tree
+
+*liferea-0.5.3c (05 Sep 2004)
+
+  05 Sep 2004; Yi Qiang <khai@gentoo.org> -liferea-0.5.3c.ebuild:
+  Pulled 0.5.3c, it seems to be broken.
+
+  05 Sep 2004; Yi Qiang <khai@gentoo.org> :
+  Version bump, 0.5.3c fixes a huge memory leak
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  liferea-0.5.3b.ebuild:
+  Masked liferea-0.5.3b.ebuild stable for ppc
+
+  30 Aug 2004; David Holm <dholm@gentoo.org> liferea-0.5.3b.ebuild:
+  Added to ~ppc.
+
+*liferea-0.5.3b (22 Aug 2004)
+
+  22 Aug 2004; Mike Gardiner <obz@gentoo.org> -liferea-0.4.6b.ebuild,
+  -liferea-0.4.8.ebuild, -liferea-0.4.9.ebuild, liferea-0.5.3.ebuild,
+  +liferea-0.5.3b.ebuild:
+  Added new version 0.5.3b, marked 0.5.3 x86, and removed old versions that
+  incorrectly handled the gtkhtml/mozilla USEing
+
+*liferea-0.5.3 (18 Aug 2004)
+
+  18 Aug 2004; Mike Gardiner <obz@gentoo.org> +liferea-0.5.3.ebuild:
+  New version 0.5.3 added, thanks for the help to all in bug #54600, fixed up
+  the mozilla/gtkhtml2 handling - slightly
+
+*liferea-0.4.9 (23 May 2004)
+
+  23 May 2004; Yi Qiang <khai@gentoo.org> :
+  Version bump, added ewarns about losing the feed list
+
+*liferea-0.4.8 (05 May 2004)
+
+  05 May 2004; Yi Qiang <khai@gentoo.org> :
+  Version bump
+
+*liferea-0.4.6e (13 Apr 2004)
+
+  13 Apr 2004; <khai@gentoo.org> liferea-0.4.6e.ebuild:
+  Version bump, closes #45047
+
+*liferea-0.4.6c (06 Mar 2004)
+
+  06 Mar 2004; Alastair Tse <liquidx@gentoo.org> liferea-0.4.6c.ebuild:
+  version bump (#43319)
+
+  02 Mar 2004; <augustus@gentoo.org> liferea-0.4.6b.ebuild:
+  Added ~amd64 keyword.
+
+*liferea-0.4.6b (08 Jan 2004)
+
+  08 Jan 2004; Alastair Tse <liquidx@gentoo.org> liferea-0.4.6b.ebuild:
+  version bump (#37472)
+
+*liferea-0.4.5 (10 Dec 2003)
+
+  10 Dec 2003; Alastair Tse <liquidx@gentoo.org> liferea-0.4.5.ebuild:
+  initial commit. ebuild based on suka's submission <suka@t0.or.at> (#27551)
+
