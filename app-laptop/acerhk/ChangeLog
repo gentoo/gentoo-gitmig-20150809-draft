@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.3 2004/12/06 12:34:50 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.4 2004/12/06 18:59:11 sekretarz Exp $
+
+  06 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org> acerhk-0.5.18.ebuild:
+  Stable on x86
 
 *acerhk-0.5.18-r1 (06 Dec 2004)
 

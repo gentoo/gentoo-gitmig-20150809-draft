@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.18.ebuild,v 1.1 2004/11/25 23:16:23 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.18.ebuild,v 1.2 2004/12/06 18:59:11 sekretarz Exp $
 
 inherit kernel-mod eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.informatik.hu-berlin.de/~tauber/acerhk/archives/acerhk-${PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 DEPEND="virtual/kernel"
