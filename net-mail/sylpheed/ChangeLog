@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.51 2004/03/25 10:07:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.52 2004/04/05 15:17:07 hattya Exp $
+
+*sylpheed-0.9.10 (06 Apr 2004)
+
+  06 Apr 2004; Akinori Hattori <hattya@gentoo.org> sylpheed-0.9.10.ebuild:
+  version bump. closes bug #38012 and #43286.
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> sylpheed-0.9.7.ebuild,
   sylpheed-0.9.8-r1.ebuild, sylpheed-0.9.8-r2.ebuild, sylpheed-0.9.8.ebuild:
