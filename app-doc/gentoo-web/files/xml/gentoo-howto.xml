@@ -7,8 +7,8 @@
 <abstract>This document is a work in progress, and is constantly being
 updated and changed. It is by no means complete.  </abstract><!--  blah, blah, blah... (I'll fill this in later) -->
 
-<version>0.4</version>
-<date>25 Feb 2001</date>
+<version>0.5</version>
+<date>1 Mar 2001</date>
 
 <!--
 
@@ -28,68 +28,13 @@ IV. Filesystem Locations
   B. How to Fit Your Packages into the Filesystem
 V. The Portage Scripts and Utilities
   A. Public Scripts
-    1. ebuild
-    2. portage-merge
-    3. portage-unmerge
-    4. portage-maintain
-    5. pkgmerge
-    6. pkgname
   B. Private Scripts
-    1. dobin
-    2. dodeps
-    3. dodir
-    4. dodoc
-    5. doexe
-    6. dohard
-    7. doinfo
-    8. doins
-    9. dolib
-    10. dolib.a
-    11. dolib.so
-    12. doman
-    13. domo
-    14. donewins
-    15. dopython
-    16. dosbin
-    17. dosed
-    18. dosym
-    19. find-packages
-    20. find-requires
-    21. fowners
-    22. fperms
-    23. import-configsettings
-    24. import-settings
-    25. megadigest
-    26. megadownload
-    27. megatouch
-    28. newbin
-    29. newdoc
-    30. newexe
-    31. newins
-    32. newlib.a
-    33. newlib.so
-    34. newman
-    36. newsbin
-    37. pkgmerge
-    38. pmake
-    39. portage-maintain
-    40. prepall
-    41. prepalldocs
-    42. prepallinfo
-    43. prepallman
-    44. prepallstrip
-    45. prepinfo
-    46. preplib
-    47. preplib.so
-    48. prepman
-    49. prepstrip
-    50. unpack
-    51. use
+VI. Package Dependencies
     
 -->
 
 
-<chapter link="chap1">
+<chapter link="portage_tree">
 <title>The Portage Tree</title>
 
 <section>
@@ -182,22 +127,20 @@ package to build should be called '${PF}-gentoo.diff'. You
 should not compress these diffs, since 1) they should not be big
 enough to require compressing, and 2) cvs does not play well
 with binary files.
-</p><p>Please add a suffix or prefix such as ${PV}-r${PR} (or just
-${PV} if ${PR} is 0) to the tail of every file you put into
+</p><p>Please add a suffix or prefix such as ${PVR} to the tail of every file you put into
 the files directory, so that the files used for each
 individual version of your ebuild scripts are distinguishable
 from one another, and so that the changes between different
 revisions are visible.
 </p><p>If you have many files that should go into the files
-directory, you should create a subdirectory files/${PV}-${PR}
-(or just files/${PV} if ${PR} is 0), and put all these files
+directory, you should create a subdirectory files/${PVR}, and put all these files
 in there. If you use this method, you do not need to suffix
 the names of the files in this directory with the ebuild version.
 </p></body>
 </section>
 </chapter>
 	
-<chapter>
+<chapter link="ebuild_files">
 <title>.ebuild Files</title>
 <section>
 <title>Introduction</title>
@@ -245,8 +188,19 @@ number, e.g. 'package-4.5.3'.
 <title>Contents of an .ebuild File</title>
 <body><p>1. Variable Settings:
 </p><p>The first part of every ebuild file is made up of a number of
-variable settings. The variables you can set are
-</p></body>
+variable settings. The variables you can set are:</p>
+<ul>
+<li>P - the name name and version of the package; you should not need to set this, as it is determined from the name of the ebuild file
+</li><li>A - the name (without the path) of the main archive file for your package
+</li><li>S - the source directory for your package; normally ${WORKDIR}/${P}
+</li><li>DESCRIPTION - a short, one line description of your package
+</li><li>SRC_URI - the URIs for every source file in your package, separated by whitespace; normally the first one is something like "ftp://ftp.company.com/pub/somepackage/${A}"
+</li><li>HOMEPAGE - your package's homepage
+</li><li>DEPEND - build dependencies; see the section "Package Dependencies"
+</li><li>RDEPEND - runtime dependencies; see the section "Package Dependencies"
+</li></ul>
+<p>
+</body>
 </section>
 
 <section>
@@ -256,7 +210,7 @@ variable settings. The variables you can set are
 </section>	
 </chapter>
 
-<chapter>
+<chapter link="fs_locations">
 <title>Filesystem Locations</title>
 
 <section>
@@ -272,26 +226,27 @@ variable settings. The variables you can set are
 </section>
 </chapter>
 
-<chapter>
+<chapter link="scripts_and_utils">
 <title>The Portage Scripts and Utilities</title>
 
 <section>
 <title>Public Scripts</title>
-<body><p><ul>
+<body><p>These are scripts used by the system-administrator to install and remove packages, and maintain the package database.</p>
+<ul>
 <li>ebuild
 </li><li>portage-merge
-</li><li>
 </li><li>portage-unmerge
 </li><li>portage-maintain
 </li><li>pkgmerge
 </li><li>pkgname
 </li></ul>
-</p></body>
+</body>
 </section>
 
 <section>
 <title>Private Scripts</title>
-<body><p><ul>
+<body><p>These are scripts you can use in your ebuild files to perform common tasks.</p>
+<ul>
 <li>dobin
 </li><li>dodeps
 </li><li>dodir
@@ -342,7 +297,24 @@ variable settings. The variables you can set are
 </li><li>prepstrip
 </li><li>unpack
 </li><li>use
-</li></ul></p></body>
+</li></ul></body>
 </section>
 </chapter>
+
+<chapter link="dependencies">
+<title>Package Dependencies</title>
+
+<section>
+<title>Why Dependencies are Important</title>
+<body><p><!-- todo -->
+</p></body>
+</section>
+
+<section>
+<title>How to Specify Dependencies in Your .ebuild Files</title>
+<body><p><!-- todo -->
+</p></body>
+</section>
+</chapter>
+
 </guide>
