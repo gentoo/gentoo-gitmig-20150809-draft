@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.26 2004/04/17 12:56:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.27 2004/04/17 15:47:09 mholzer Exp $
+
+*gkrellmms-2.1.16 (17 Apr 2004)
+
+  17 Apr 2004; Martin Holzer <mholzer@gentoo.org> gkrellmms-2.1.16.ebuild:
+  Version bumped. Closes 45762
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gkrellmms-2.1.15.ebuild:
   Added IUSE, stable on x86 and amd64.
