@@ -1,6 +1,20 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.293 2004/03/10 17:28:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.294 2004/03/14 22:25:22 spyderous Exp $
+
+*xfree-4.3.0-r6 (14 Mar 2004)
+
+  14 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  Adding for testing. Critical change for end-users: fonts now install to
+  /usr/share/fonts. This will require changes in configuration files. Other than
+  that, minor features: updated libXft/libXrender/render; generates xrender.pc;
+  works with media-video/ati-gatos, x11-misc/linuxwacom and x11-misc/synaptics;
+  closes #21417, #21120, #35468, #36923, #42235, #8927, #38232, #23023, #29953,
+  #23957; branch update patch works with ipv6; patches added for hardened build;
+  build autodetects SSE/MMX/3DNOW; docs and man pages install to /usr/share; SiS
+  driver update; FILESDIR stuff moved to tarball so we can get rid of
+  files/4.3.0/ once 4.3.0-r5 is gone; PDEPEND on media-fonts/ttf-bitstream-vera,
+  it was added to newer upstream sources.
 
   10 Mar 2004; Luca Barbato <lu_zero@gentoo.org> xfree-4.3.99.902-r2.ebuild:
   Removed some old warnings
