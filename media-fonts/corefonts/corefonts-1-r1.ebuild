@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r1.ebuild,v 1.1 2004/02/04 00:03:27 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r1.ebuild,v 1.2 2004/02/04 20:33:07 mr_bones_ Exp $
 
 DESCRIPTION="Microsoft's TrueType core fonts"
 HOMEPAGE="http://corefonts.sourceforge.net/"
@@ -44,20 +44,20 @@ src_install() {
 
 pkg_postinst() {
 
-    einfo
-    einfo "You need to add following line into 'Section \"Files\"' in"
-    einfo "XF86Config and reboot X Window System, to use these fonts."
-    einfo
-    einfo "\t FontPath \"${FONTDIR}\""
-    einfo
+	einfo
+	einfo "You need to add following line into 'Section \"Files\"' in"
+	einfo "XF86Config and reboot X Window System, to use these fonts."
+	einfo
+	einfo "\t FontPath \"${FONTDIR}\""
+	einfo
 }
 
 pkg_postrm(){
 
-    einfo
-    einfo "You need to remove following line from 'Section \"Files\"' in"
-    einfo "XF86Config, to unmerge this package completely."
-    einfo
-    einfo "\t FontPath \"${FONTDIR}\""
-    einfo
+	einfo
+	einfo "You need to remove following line from 'Section \"Files\"' in"
+	einfo "XF86Config, to unmerge this package completely."
+	einfo
+	einfo "\t FontPath \"${FONTDIR}\""
+	einfo
 }
