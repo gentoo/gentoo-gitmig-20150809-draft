@@ -18,9 +18,9 @@ KEYWORDS="x86 ppc"
 
 src_install() {
 
-    kde_src_install
+	kde_src_install
     
-    dodir /etc/env.d
-    echo "KSPLASH=${PREFIX}/bin/ksplash" > ${D}/etc/env.d/90ksplash-ml
+	dodir /etc/env.d
+	echo "KSPLASH=${PREFIX}/bin/ksplash" > ${D}/etc/env.d/90ksplash-ml
 
 }

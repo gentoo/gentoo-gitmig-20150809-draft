@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/bbkeys-0.8.4.ebuild,v 1.7 2002/10/04 06:41:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/bbkeys-0.8.4.ebuild,v 1.8 2002/10/17 16:07:39 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Use keyboard shortcuts in the blackbox wm"
@@ -13,15 +13,15 @@ KEYWORDS="x86 ppc"
 DEPEND="virtual/blackbox"
 
 src_compile() {
-	./configure		\
-		--host=${CHOST}	\
+	./configure \
+		--host=${CHOST} \
 		--prefix=/usr || die "./configure failed"
 	emake || die
 }
 
 src_install () {
-	make 	\
-		prefix=${D}/usr	\
+	make \
+		prefix=${D}/usr \
 		install || die
 	rm -rf ${D}/usr/doc
 	dodoc AUTHORS BUGS ChangeLog NEWS README

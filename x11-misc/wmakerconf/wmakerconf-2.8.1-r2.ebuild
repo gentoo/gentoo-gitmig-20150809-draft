@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.8.1-r2.ebuild,v 1.9 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.8.1-r2.ebuild,v 1.10 2002/10/17 16:07:39 aliz Exp $
 
 IUSE="nls gnome imlib perl"
 
@@ -33,11 +33,11 @@ src_compile() {
 	
 	use gnome || myconf="${myconf} --without-gnome"
 
-	./configure	\
-		--prefix=/usr 	\
-		--host=${CHOST}	\
-		--with-wmakerdataprefix=/usr/share	\
-		--sysconfdir=/etc	\
+	./configure \
+		--prefix=/usr \
+		--host=${CHOST} \
+		--with-wmakerdataprefix=/usr/share \
+		--sysconfdir=/etc \
 		${myconf} || die
 	emake || die
 
@@ -45,9 +45,9 @@ src_compile() {
 
 src_install() {
 	
-	make 	\
-			prefix=${D}/usr 	\
-			GNOMEDIR=${D}/usr/share/gnome/apps/Settings	\
+	make \
+			prefix=${D}/usr \
+			GNOMEDIR=${D}/usr/share/gnome/apps/Settings \
 			install || die
 
 	dodoc README MANUAL AUTHORS TODO COPYING ChangeLog
