@@ -1,8 +1,11 @@
 # ChangeLog for x11-terms/wterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.4 2003/01/13 11:13:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.5 2003/01/19 16:52:56 nakano Exp $
 
 *wterm-6.2.9-r2 (13 Jan 2003)
+  19 Jan 2003; Masatomo Nakano <nakano@gentoo.org> wterm-6.2.9-r2.ebuild:
+  added Kanji(Japanese chars) support. 
+  thanks to chutz@chubaka.net (Georgi Georgiev). bugs #13870
 
   13 Jan 2003; Nick Hadaway <raker@gentoo.org> wterm-6.2.9-r2.ebuild,
   files/digest-wterm-6.2.9-r1 :
