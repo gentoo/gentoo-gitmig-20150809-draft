@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/autocutsel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $header$
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.11 2004/10/02 15:44:04 swegener Exp $
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> autocutsel-0.6.2.ebuild:
   glibc -> libc

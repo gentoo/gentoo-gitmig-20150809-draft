@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/bblaunch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bblaunch/ChangeLog,v 1.8 2004/10/02 15:47:11 swegener Exp $
 
   03 Jul 2004; <pyrania@gentoo.org> +files/bblaunch-0.0.3.patch,
   bblaunch-0.0.3.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xmbdfed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.14 2004/10/02 15:43:24 swegener Exp $
 
   29 Sep 2004; <pyrania@gentoo.org> xmbdfed-4.7_p1.ebuild:
   Stable on x86.
