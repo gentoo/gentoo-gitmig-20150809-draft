@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98-r1.ebuild,v 1.2 2004/02/10 12:11:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98-r1.ebuild,v 1.3 2004/02/19 09:44:50 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,20 +19,27 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="esd"
 
-DEPEND="media-sound/xmms
-	media-sound/esound"
+RDEPEND="media-sound/xmms
+	esd? ( media-sound/esound )"
+
+DEPEND="${RDEPEND}
+	sys-apps/sed"
 
 DOCS="ChangeLog README_mpc-plugin_english.txt README_mpc-plugin_finnish.txt README_mpc-plugin_german.txt README_mpc-plugin_korean.txt README_mpc-plugin_spanish.txt"
 
 src_unpack() {
-	mkdir ${WORKDIR}/${P};
-	cd ${WORKDIR}/${P}
+	mkdir ${S}
+	cd ${S}
 
 	unpack ${A}
 	# Fix up the atrocious Makefile.
-	cd ${S}; epatch ${FILESDIR}/${P}-bad-makefile.patch
+	epatch ${FILESDIR}/${P}-bad-makefile.patch
+
+	if ! use esd; then
+		sed -i 's:#define USE_ESD_AUDIO:#undef USE_ESD_AUDIO:' mpp.h
+	fi
 }
 
 src_compile() {
