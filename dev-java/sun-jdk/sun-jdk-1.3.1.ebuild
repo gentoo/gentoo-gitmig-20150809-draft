@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.ebuild,v 1.3 2002/01/24 19:40:11 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.ebuild,v 1.4 2002/01/24 21:39:20 karltk Exp $
 
 At="j2sdk-1_3_1_02-linux-i386.bin"
 S=${WORKDIR}/jdk1.3.1_02
-SRC_URI="$At"
+SRC_URI=""
 DESCRIPTION="Sun's J2EE Development Kit"
 HOMEPAGE="http://java.sun.com/j2se/1.3/download-linux.html"
 
