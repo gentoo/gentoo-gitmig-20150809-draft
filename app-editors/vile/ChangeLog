@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.4 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.5 2002/12/22 18:34:32 mcummings Exp $
+
+*vile-9.3h (22 Dec 2002)
+
+  22 Dec 2002; Michael Cummings <mcummings@gentoo.org> :
+  vile-9.3h.ebuild:
+
+  Many thanks go to jbooth (jbooth@uiuc.edu) in bug 12469 for this
+  ebuild. This version of vile will work with perl 5.8, where the
+  previous versions would not. Will unmask for x86 when perl 5.8 is
+  unmasked.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
