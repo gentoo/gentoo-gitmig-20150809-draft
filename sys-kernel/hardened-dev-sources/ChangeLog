@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.45 2004/11/24 19:42:28 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.46 2004/12/01 14:58:11 tseng Exp $
+
+  01 Dec 2004; Brandon Hale <tseng@gentoo.org> :
+  Version bump for several security fixes, see 0000_README
 
   24 Nov 2004; Joshua Brindle <method@gentoo.org>
   hardened-dev-sources-2.6.7-r10.ebuild,
