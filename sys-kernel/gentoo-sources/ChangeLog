@@ -1,6 +1,37 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.22 2003/04/15 21:00:10 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.23 2003/05/08 21:32:50 pfeifer Exp $
+
+*gentoo-sources-2.4.20-r4 (08 May 2003)
+
+  08 May 2003; Jay Pfeifer <pfeifer@gentoo.org> gentoo-sources-2.4.20-r4.ebuild:
+  Package is currently marked stable (x86).
+  Changes:
+  * Added a few updates for ck6
+  * Updated SuperFreeS/WAN to 1,99,7rc2
+  * Updated to patch-o-matic from 01May2003 lotsa new goodies
+  * Updated USAGI to 28Apr2003 snapshot
+  * Made USAGI installable by a USE flag 'USAGI'
+    - if you use USAGI, you *cannot* use {freeswan/patch-int/loop-jari}
+    - the ebuild will drop either/or depending on your use flags :)
+  * Updated adaptec 79xxx to 01May2003
+  * Updated ntfs to 2.1.4a
+  * Updated grsecurity to 1.99g
+  * Added initial support for systrace v1.2
+  * Updated bluetooth support fro MH to 2.4.20-MH7
+  * Added kraxel patch which is v4l2 & other updates - see the docs
+  * Fixed broken gcc optimizations... the overoptimization was breaking things
+  * Added support for ipvs
+  * Added support for usbvision
+  * Added vesafb fix
+  * Added imq support & the ipv4 & ipv6 imq ipt patches
+  * Updated Wireless Extensions to WE-15
+  * Updated evms2 stuff to version 2.0.1
+  * Fixed another small grsec/rmap issue + added a grsec hardlink fix
+  * Added some jfs 1.1.2 fixes
+  * Added usb scanners update from 16Apr2003
+  * Added some minor grsecurity fixes
+  * Other things I am forgetting to mention :)
 
 *gentoo-sources-2.4.20-r3 (15 Apr 2003)
 
@@ -23,7 +54,6 @@
   * Fixed a number of USAGI issues (but some still remain).
   * Updated adaptec 79xx to 18Mar2003 version (thanks livewire)
   * Added backported bluetooth support from MH
-  * Added bootsplash 3.0.7
   * Other things I am forgetting to mention
 
 *gentoo-sources-2.4.20-r2 (19 Mar 2003)
