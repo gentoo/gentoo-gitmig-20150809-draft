@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.5 2004/09/23 04:33:57 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.6 2004/09/23 04:37:07 morfic Exp $
 
 inherit eutils
 
@@ -72,9 +72,6 @@ src_compile(){
 	else
 		myconf="${myconf} --disable-xfreetype --enable-corefonts"
 	fi
-
-echo ${myconf}
-epause
 
 	CXXFLAGS="${CXXFLAGS}" econf \
 		--with-libdir=/usr/share/icewm \
