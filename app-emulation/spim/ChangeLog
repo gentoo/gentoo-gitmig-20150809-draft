@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.8 2004/04/11 02:03:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.9 2004/04/11 02:06:14 mr_bones_ Exp $
+
+*spim-6.5-r1 (10 Apr 2004)
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> spim-6.5-r1.ebuild:
+  rev bump so the patch goes out
 
   10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> spim-6.5.ebuild,
   files/6.5-parser.patch:
