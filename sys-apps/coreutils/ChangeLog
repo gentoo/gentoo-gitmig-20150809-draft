@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.4 2003/03/11 07:42:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.5 2003/03/11 20:08:58 azarah Exp $
+
+*coreutils-4.5.9-r1 (11 Mar 2003)
+
+  11 Mar 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-4.5.9-r1.ebuild :
+  Fix overwriting /bin/hostname, and causing /bin/domainname (symlink to
+  /bin/hostname) to set the hostname instead of the domainname.  We use
+  hostname from net-tools after all.  Ditto for /bin/uptime.
 
   11 Mar 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-4.5.9.ebuild :
   OK, I am dense.  Seems when I did previous fix, I changed the:
