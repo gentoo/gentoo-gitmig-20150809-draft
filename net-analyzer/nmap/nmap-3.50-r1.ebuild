@@ -1,24 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.50-r1.ebuild,v 1.2 2004/02/14 22:05:07 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.50-r1.ebuild,v 1.3 2004/04/28 09:01:12 vapier Exp $
 
 inherit gcc eutils
 
 DESCRIPTION="utility for network exploration or security auditing"
+HOMEPAGE="http://www.insecure.org/nmap/"
 SRC_URI="http://www.insecure.org/nmap/dist/${P}.tar.bz2
 	http://www.packetstormsecurity.nl/UNIX/nmap/${PN}-3.20_statistics-1.diff"
-HOMEPAGE="http://www.insecure.org/nmap/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha arm hppa ~amd64"
 IUSE="gtk gnome"
 
 DEPEND="virtual/glibc
 	dev-libs/libpcre
 	gtk? ( =x11-libs/gtk+-1.2* )"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
@@ -28,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	econf `use_with gtk nmapfe` || die
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {
