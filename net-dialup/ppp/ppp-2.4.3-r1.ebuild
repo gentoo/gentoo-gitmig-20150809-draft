@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r1.ebuild,v 1.1 2005/01/09 13:54:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r1.ebuild,v 1.2 2005/01/21 00:58:15 xmerlin Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -67,6 +67,7 @@ src_unpack() {
 		tar -xzf ${DISTDIR}/ppp-dhcpc.tgz -C ${S}/pppd/plugins/
 		sed -i 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' ${S}/pppd/plugins/Makefile.linux
 		sed -i "s/-O2/${CFLAGS} -fPIC/" ${S}/pppd/plugins/dhcp/Makefile.linux
+		epatch ${FILESDIR}/ppp-sys_error_to_strerror.patch || die
 	}
 }
 
