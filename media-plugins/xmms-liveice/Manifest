@@ -1,3 +1,4 @@
-MD5 e9ec7e7520ed1846f7ab43ab089007fc files/digest-xmms-liveice-1.0.0 64
-MD5 0a9363d1376ef9f4d87ac03f60b66251 ChangeLog 562
 MD5 16452454c614c1878498c6d29f955d7f xmms-liveice-1.0.0.ebuild 699
+MD5 0a9363d1376ef9f4d87ac03f60b66251 ChangeLog 562
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 e9ec7e7520ed1846f7ab43ab089007fc files/digest-xmms-liveice-1.0.0 64

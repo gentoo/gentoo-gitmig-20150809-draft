@@ -2,6 +2,7 @@ MD5 f74e78571603749b492c1bc327a4a29c xmms-status-plugin-1.0.ebuild 866
 MD5 8b50ea26529fabd84bfac7ef9159d2a1 xmms-status-plugin-1.0_pre1.ebuild 862
 MD5 ddb2f9969da571564c2444c85b23f828 xmms-status-plugin-0.9.ebuild 852
 MD5 c1174c565d7bc57d8030a60901b3d3c8 ChangeLog 1125
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 770f70fa53f74ade9c0d8fcfa0f80642 files/digest-xmms-status-plugin-0.9 74
 MD5 63a80da40a1e22895c0b0267012d10fe files/digest-xmms-status-plugin-1.0 74
 MD5 e53aeda0e474d739e2fa6bcb152c1ee1 files/digest-xmms-status-plugin-1.0_pre1 78
