@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mod_dav/mod_dav-1.0.2.ebuild,v 1.1 2001/11/02 14:05:21 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mod_dav/mod_dav-1.0.2.ebuild,v 1.2 2001/11/07 13:15:36 achim Exp $
 
 S=${WORKDIR}/${P}-1.3.6
 
@@ -36,7 +36,7 @@ src_install () {
 		
 	dodir ${libexecdir}
 
-	insinto ${libexecdir}
+	exeinto ${libexecdir}
 	doexe libdav.so
 	
 	insinto ${includedir}
