@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f0a08b3d036ba12e98e37498d0e417e1 ChangeLog 5939
+MD5 0e8ac8a9b7eeb2b04c36507df6169f5d ChangeLog 5972
 MD5 9e830882f4584351d636b4336ddcd2b4 getmail-4.2.2.ebuild 1457
 MD5 78d65fa7987ea87e9b0e30adb50a1456 getmail-4.2.5.ebuild 1461
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
@@ -18,7 +18,7 @@ MD5 5d6de052ec20bd1c9d1d50ae49bf41a4 files/digest-getmail-4.2.0 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB4WJfQlM6RnzZP+IRAjXQAJ9wCUtcLhvX+xvdhpiKQo8tjQWt4wCgpvsM
-KOtMl2EwMWf6QdRCXiJM6d0=
-=CWku
+iD8DBQFB4WLiQlM6RnzZP+IRAkCAAJ95QMUpQrKEpyG8jpIwhyOFlL7YmwCgrYi7
+BwDf42ifhv7KcRHReTgSX68=
+=1D3S
 -----END PGP SIGNATURE-----
