@@ -1,0 +1,45 @@
+diff -urN w3m.orig/file.c w3m/file.c
+--- w3m.orig/file.c	2004-02-17 19:10:27.055076000 +0900
++++ w3m/file.c	2004-02-17 22:00:49.578016400 +0900
+@@ -652,13 +652,11 @@
+ 		cont = TRUE;
+ #ifdef USE_M17N
+ 	    lineBuf2 = decodeMIME(lineBuf2, &mime_charset);
++#endif
+ 	    lineBuf2 = convertLine(NULL, lineBuf2, RAW_MODE,
+ 				   mime_charset ? &mime_charset : &newBuf->document_charset,
+ 				   mime_charset ? mime_charset
+ 				   : DocumentCharset);
+-#else
+-	    lineBuf2 = convertLine(NULL, lineBuf2, &newBuf->document_code, RAW_MODE);
+-#endif
+ 	    /* separated with line and stored */
+ 	    tmp = Strnew_size(lineBuf2->length);
+ 	    for (p = lineBuf2->ptr; *p; p = q) {
+@@ -6772,13 +6770,11 @@
+ 	}
+ #endif
+ 	if (!newBuf->internal) {
+-#ifdef USE_M17N
+ 	    lineBuf2 = convertLine(f, lineBuf2, HTML_MODE, &newBuf->document_charset, newBuf->document_charset);
++#ifdef USE_M17N
+ #ifdef USE_IMAGE
+ 	    h_env->document_charset = newBuf->document_charset;
+ #endif
+-#else
+-	    lineBuf2 = convertLine(f, lineBuf2, &newBuf->document_code, HTML_MODE);
+ #endif
+ 	}
+ 	HTMLlineproc0(lineBuf2->ptr, h_env, newBuf->internal);
+@@ -7497,11 +7493,7 @@
+ 	buf->nlines++;
+ 	buf->linelen += lineBuf2->length;
+ 	showProgressBuffer(buf);
+-#ifdef USE_M17N
+ 	lineBuf2 = convertLine(uf, lineBuf2, PAGER_MODE, &buf->document_charset, buf->document_charset);
+-#else
+-	lineBuf2 = convertLine(uf, lineBuf2, &buf->document_charset, PAGER_MODE);
+-#endif
+ 	if (squeezeBlankLine) {
+ 	    squeeze_flag = FALSE;
+ 	    if (lineBuf2->ptr[0] == '\n' && buf->pre_lbuf == '\n') {
