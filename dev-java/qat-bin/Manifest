@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bae8dce7f29a591de72f5411f466bf15 qat-bin-2.7.1.ebuild 706
+MD5 cc304a2c16d8d5e86b02ebd1623f0af4 ChangeLog 459
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 4ba292b158c01416fb7584fa77124ce5 files/digest-qat-bin-2.7.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCr2Q/rLF9B432nYRAunVAKCwqKB1vwBarRm3sgX0wlKlX5bY8ACfZoRQ
+VcaEyn8tWdU9m8oiB4ET1Fw=
+=qImH
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/qat-2.7.1.ebuild,v 1.2 2004/06/24 22:40:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qat-bin/qat-bin-2.7.1.ebuild,v 1.1 2004/07/30 21:27:04 axxo Exp $
 
 inherit java-pkg
 
@@ -17,8 +17,8 @@ IUSE="doc"
 src_compile() { :; }
 
 src_install() {
-	mv jar/${P}.jar ${PN}.jar
-	java-pkg_dojar ${PN}.jar
-	use doc && dohtml -r doc/* && dohtml -r specification/* && cp -R examples ${D}/usr/share/doc/${P}/
+	mv jar/${P/-bin}.jar ${PN/-bin}.jar
+	java-pkg_dojar ${PN/-bin}.jar
+	use doc && dohtml -r doc/* && dohtml -r specification/* && cp -R examples ${D}/usr/share/doc/${P/-bin}/
 }
 
