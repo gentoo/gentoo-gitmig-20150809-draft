@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/wmweather+-2.5.ebuild,v 1.2 2004/03/14 00:02:33 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/wmweather+-2.5.ebuild,v 1.3 2004/04/12 03:54:17 weeve Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wmweatherplus/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~mips"
+KEYWORDS="~x86 ~amd64 ~mips ~sparc"
 
 DEPEND="x11-wm/windowmaker
 	dev-libs/libpcre
