@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The app-i18n category contains internationalisation-related packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-i18n enthält Programme im Zusammenhang mit Internationalisierung.
+	</longdescription>
 </catmetadata>
 
