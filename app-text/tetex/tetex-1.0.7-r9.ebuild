@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.1 2002/04/24 18:27:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.2 2002/04/25 07:12:02 blocke Exp $
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 
 DEPEND="sys-apps/ed
-	>=sys-libs/zlib 
+	sys-libs/zlib 
 	X? ( virtual/x11 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	ncurses ( sys-libs/ncurses )
