@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.4 2005/02/27 19:23:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.5 2005/03/04 06:23:03 bcowan Exp $
+
+*exo-0.3.0_pre1 (04 Mar 2005)
+
+  04 Mar 2005; Brad Cowan <bcowan@gentoo.org> +exo-0.3.0_pre1.ebuild:
+  Version bump.
 
   27 Feb 2005; Jason Wever <weeve@gentoo.org> exo-0.2.0-r1.ebuild:
   Added ~sparc keyword.
