@@ -1,3 +1,5 @@
 MD5 199b786403f25841ea8a175aad9013be hdup-1.6.27.ebuild 1092
-MD5 bb2b344ca2bfeda232ca4aba797257cf ChangeLog 385
+MD5 53cf4307bf943bf3c317f346bfc5d131 hdup-1.6.28.ebuild 1092
+MD5 a4d2db4cbef4d0314b452a35c5189da6 ChangeLog 502
 MD5 81f8f075b758bf0b3336aada28ad61e7 files/digest-hdup-1.6.27 62
+MD5 ff6eb587b08ea199099190d563aa0f94 files/digest-hdup-1.6.28 62
