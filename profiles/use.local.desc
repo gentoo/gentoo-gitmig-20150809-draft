@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.177 2003/11/30 11:16:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.178 2003/12/01 08:48:50 phosphan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -59,7 +59,6 @@ dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this 
 dev-lang/ruby:ruby18 - Use ruby-1.8 as default ruby
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
-dev-libs/liboop:adns - enable adns support
 dev-lips/bigloo-lib:expat - enable expat support
 dev-lips/bigloo-lib:ipcs - enable ipcs support
 dev-libs/uclibc:etdyn - enables etdyn support for PaX Address Space Layout Randomization
