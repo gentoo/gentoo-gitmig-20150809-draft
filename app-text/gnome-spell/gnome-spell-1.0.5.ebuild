@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5.ebuild,v 1.8 2004/04/24 17:20:48 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5.ebuild,v 1.9 2004/04/27 03:17:41 mr_bones_ Exp $
 
 IUSE=""
 
@@ -32,10 +32,10 @@ DEPEND="${RDEPEND}
 
 src_unpack(){
 	unpack ${A}
-	
+
 	cd ${S}/gnome-spell
 	sed -e 's:-DGTK_DISABLE_DEPRECATED=1: :g' -i Makefile.in
-    sed -e 's:-DGTK_DISABLE_DEPRECATED=1: :g' -i Makefile.am 
+	sed -e 's:-DGTK_DISABLE_DEPRECATED=1: :g' -i Makefile.am
 }
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README"
