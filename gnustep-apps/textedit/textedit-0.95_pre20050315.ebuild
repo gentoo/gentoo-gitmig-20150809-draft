@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.5_pre20041116.ebuild,v 1.2 2005/01/12 18:25:12 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/textedit-0.95_pre20050315.ebuild,v 1.1 2005/03/17 21:07:04 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/backbone"
@@ -12,10 +12,10 @@ ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-backbone"
 inherit gnustep cvs
 
-S=${WORKDIR}/${ECVS_MODULE}/Applications/${PN/t/T}
+S=${WORKDIR}/${ECVS_MODULE}/Applications/${PN/texte/TextE}
 
-DESCRIPTION="A terminal emulator for GNUstep"
-HOMEPAGE="http://www.nongnu.org/terminal/"
+DESCRIPTION="A text editor with font, color, and style capabilities for GNUstep"
+HOMEPAGE="http://www.nongnu.org/backbone/"
 
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"

@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-apps/preferences
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preferences/ChangeLog,v 1.5 2005/01/12 18:24:56 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preferences/ChangeLog,v 1.6 2005/03/17 21:05:38 fafhrd Exp $
+
+*preferences-1.3.0_pre20050315 (17 Mar 2005)
+
+  17 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -preferences-1.3.0_pre20041116.ebuild,
+  +preferences-1.3.0_pre20050315.ebuild:
+  ebuild updates for GNUstep base, libs, and apps across the board; proper
+  versions (to be stabilized, in due time) added where apropos, cvs-pull
+  versions updated where needed
 
 *preferences-1.3.0_pre20050110 (12 Jan 2005)
 

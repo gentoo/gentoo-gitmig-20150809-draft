@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/gworkspace
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.14 2005/01/10 16:28:20 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.15 2005/03/17 20:58:27 fafhrd Exp $
+
+*gworkspace-0.7.0 (17 Mar 2005)
+
+  17 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -gworkspace-0.6.6_pre20041203.ebuild, +gworkspace-0.7.0.ebuild:
+  ebuild updates for GNUstep base, libs, and apps across the board; proper
+  versions (to be stabilized, in due time) added where apropos, cvs-pull
+  versions updated where needed
 
 *gworkspace-0.6.6_pre20050106 (10 Jan 2005)
 

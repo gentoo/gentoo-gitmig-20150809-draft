@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20050106.ebuild,v 1.1 2005/01/10 16:23:48 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20050312.ebuild,v 1.1 2005/03/17 20:57:35 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="Sophos.ca:/opt/cvsroot"
@@ -33,6 +33,11 @@ RDEPEND="${GS_RDEPEND}
 
 egnustep_install_domain "Local"
 
+src_unpack() {
+	cvs_src_unpack
+	cd ${S}
+	epatch ${FILESDIR}/Emoticon-dont-break-C.patch
+}
 src_compile() {
 	egnustep_env
 	egnustep_make

@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-apps/clipbook
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/ChangeLog,v 1.5 2005/01/10 16:26:46 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/ChangeLog,v 1.6 2005/03/17 20:59:13 fafhrd Exp $
+
+*clipbook-0.6.0.7.0 (17 Mar 2005)
+
+  17 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +clipbook-0.6.0.7.0.ebuild, -clipbook-0.94_pre20041203.ebuild,
+  -clipbook-0.94_pre20050106.ebuild:
+  ebuild updates for GNUstep base, libs, and apps across the board; proper
+  versions (to be stabilized, in due time) added where apropos, cvs-pull
+  versions updated where needed
 
 *clipbook-0.94_pre20050106 (10 Jan 2005)
 
