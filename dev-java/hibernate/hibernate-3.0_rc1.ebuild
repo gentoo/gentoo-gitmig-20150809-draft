@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.2 2005/03/17 01:07:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.3 2005/03/17 06:22:48 st_lim Exp $
 
 inherit java-pkg
 
+MY_PV=${PV/_rc/rc}
 DESCRIPTION="Hibernate is a powerful, ultra-high performance object / relational persistence and query service for Java."
-MY_PV=${PV/_/}
 SRC_URI="mirror://sourceforge/hibernate/${PN}-${MY_PV}.tar.gz"
-HOMEPAGE="http://hibernate.bluemars.net"
+HOMEPAGE="http://www.hibernate.org"
 LICENSE="LGPL-2"
 SLOT="3"
 KEYWORDS="~x86 ~amd64"
@@ -17,6 +17,7 @@ RDEPEND="
 		=dev-java/cglib-2*
 		dev-java/commons-collections
 		dev-java/commons-logging
+		dev-java/concurrent-util
 		=dev-java/dom4j-1*
 		dev-java/ehcache
 		dev-java/jta
@@ -30,12 +31,18 @@ RDEPEND="
 			dev-java/commons-pool
 			dev-java/commons-dbcp
 		)
-		oscache? (
-			dev-java/oscache
-		)
 		jboss? (
 			>=www-servers/jboss-3.2.5
 			dev-java/jmx
+		)
+		jcs? (
+			dev-java/jcs-bin
+		)
+		oscache? (
+			dev-java/oscache
+		)
+		swarmcache? (
+			dev-java/swarmcache
 		)
 
 		"
@@ -47,33 +54,34 @@ DEPEND="${RDEPEND}
 			dev-java/junit
 			dev-db/hsqldb
 		)"
-IUSE="doc jikes jboss oscache proxool dbcp c3p0 junit"
+IUSE="c3p0 dbcp doc jikes jboss jcs junit proxool oscache swarmcache"
 
-#S=${WORKDIR}/${PN}-${PV:0:3}
+S=${WORKDIR}/${PN}-${PV:0:3}
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
-	mv ${PN}-${PV:0:3} ${S}
 	cd ${S}
-	rm -rf src/org/hibernate/secure/JACCConfiguration.java
-
+	mv lib old-lib
+	mkdir lib
 	cd lib
+	mv ../old-lib/connector.jar .
+	mv ../old-lib/jacc-1_0-fr.jar jacc.jar
 
-	rm *.jar
 	java-pkg_jar-from cglib-2
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from commons-logging
+	java-pkg_jar-from concurrent-util
 	java-pkg_jar-from dom4j-1
 	java-pkg_jar-from ehcache
 	java-pkg_jar-from jta
 	java-pkg_jar-from odmg
+	java-pkg_jar-from proxool
 
 	# c3p0 support
 	if use c3p0 ; then
 		java-pkg_jar-from c3p0
 	else
-		find ../src -name "C3P0*" -exec rm {} \;
+		find ${S}/src -name "C3P0*" -exec rm {} \;
 	fi
 
 	# DBCP support
@@ -81,17 +89,7 @@ src_unpack() {
 		java-pkg_jar-from commons-dbcp
 		java-pkg_jar-from commons-pool
 	else
-		find ../src -name "DBCP*" -exec rm {} \;
-	fi
-
-	# Proxool support
-	java-pkg_jar-from proxool
-
-	# OSCache support
-	if use oscache ; then
-		java-pkg_jar-from oscache
-	else
-		find ${S}/src -name "OSCache*" -exec rm {} \;
+		find ${S}/src -name "DBCP*" -exec rm {} \;
 	fi
 
 	# JBoss caching support
@@ -110,15 +108,36 @@ src_unpack() {
 		find ${S}/src -name "Tree*" -exec rm {} \;
 	fi
 
+	# JCS support
+	# JCS is deprecated, so don't compile it
+	if use jcs ; then
+		java-pkg_jar-from jcs-bin
+	else
+		find ${S}/src -name "JCS*" -exec rm {} \;
+	fi
+
+	# JUnit support
 	if use junit ; then
 		java-pkg_jar-from junit
 		java-pkg_jar-from hsqldb
 	fi
 
-	cd ..
 
-	# JCS is deprecated, so don't compile it
-	find src -name "JCS*" -exec rm {} \;
+	# OSCache support
+	if use oscache ; then
+		java-pkg_jar-from oscache
+	else
+		find ${S}/src -name "OSCache*" -exec rm {} \;
+	fi
+
+	# SwarmCache support
+	if use swarmcache ; then
+		java-pkg_jar-from swarmcache
+	else
+		find ${S}/src -name "SwarmCache*" -exec rm {} \;
+	fi
+
+	cd ..
 
 	sed -r -i \
 		-e '/<splash/d' \
@@ -141,8 +160,10 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/hibernate3.jar
+	java-pkg_dojar lib/connector.jar
+	java-pkg_dojar lib/jacc.jar
 	dodoc *.txt
 	use doc && java-pkg_dohtml -r dist/doc/*
 	insinto /usr/share/doc/${P}/sample
-	doins etc/*.xml etc/*.properties src/META-INF/ra.xml
+	doins etc/*.xml etc/*.properties etc/*.ccf src/META-INF/ra.xml
 }
