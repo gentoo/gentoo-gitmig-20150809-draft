@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/geomview
+# ChangeLog for sci-mathematics/geomview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.1 2004/12/28 05:28:11 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.2 2004/12/28 20:07:38 swegener Exp $
 
 *geomview-1.8.1-r3 (28 Dec 2004)
 

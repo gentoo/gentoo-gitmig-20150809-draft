@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/koctave
+# ChangeLog for sci-mathematics/koctave
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.1 2004/12/28 14:26:18 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.2 2004/12/28 20:11:20 swegener Exp $
 
 *koctave-0.65 (28 Dec 2004)
 

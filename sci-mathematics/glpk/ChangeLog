@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/glpk
+# ChangeLog for sci-mathematics/glpk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.1 2004/12/28 05:39:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.2 2004/12/28 20:09:11 swegener Exp $
 
 *glpk-4.7 (28 Dec 2004)
 
