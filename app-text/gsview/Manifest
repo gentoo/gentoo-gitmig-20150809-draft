@@ -1,6 +1,16 @@
-MD5 071bb84c066af2b066be1586774da281 ChangeLog 1075
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fe791d3126ca80fabeb4c135aa50993f gsview-4.5.ebuild 1033
+MD5 ee46adbf399ce81ed51f70f6e211045c ChangeLog 1154
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 e03e58ef9fe093d18c8aed0d9ba6ff7e gsview-4.6.ebuild 1039
-MD5 0b2550f8e3ba26036407ffaa0ff893cb files/digest-gsview-4.5 58
+MD5 e213dd46110923531947995bcb15caba gsview-4.6.ebuild 1042
 MD5 43585e75c85371fbcda163c65204c228 files/digest-gsview-4.6 58
+MD5 0b2550f8e3ba26036407ffaa0ff893cb files/digest-gsview-4.5 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3B2wCHk4+ZoBpvsRAoIoAKDD14Tgxc7FE0GAj1+XEgM6OU48YgCfXmbE
+/B2rrOSJaZf4FuwxZyHe3+4=
+=FR/v
+-----END PGP SIGNATURE-----
