@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.4.ebuild,v 1.2 2004/09/03 17:28:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.4.ebuild,v 1.3 2004/09/03 22:42:01 chriswhite Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_install() {
 
 	# sets up a default content directory for on demand streaming
 	dodir /opt/shoutcast/content
-	sed -e "s:; ContentDir=./content:ContentDir=/opt/shoutcast/content:" -i sc_serv.conf
+	sed -e "s:; ContentDir=./content:ContentDir=/opt/shoutcast/content/:" -i sc_serv.conf
 
 	#install the configuration file
 	dodir /etc/shoutcast
