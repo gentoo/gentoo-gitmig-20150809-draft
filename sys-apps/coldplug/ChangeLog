@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coldplug
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.8 2005/02/05 17:19:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.9 2005/02/10 03:08:01 agriffis Exp $
+
+  09 Feb 2005; Aron Griffis <agriffis@gentoo.org> coldplug-20040920.ebuild:
+  stable on alpha
 
   05 Feb 2005; Markus Rothe <corsair@gentoo.org> coldplug-20040920.ebuild:
   Added ~ppc64 to KEYWORDS
