@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3f9560f83b20d659a9b615ed5052602 ChangeLog 411
+MD5 da4a9e621d3acfc55940a11f63b28628 ChangeLog 490
+MD5 77baf8cd2c3dabfe4429014d11dc7ec3 hap-3.7.ebuild 751
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 cc9386c2343801fd3905a926fe3ad5bf hap-3.7.ebuild 746
 MD5 0b5f7cdf64358d836c97b3546454a8fa files/digest-hap-3.7 56
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBUgGw10xuJSrg3/sRAvemAJ9ETZKYU65snMOGGhDUA7Fei3CSXACfVm1f
-lNYKVvlsKlYrN3sQGVeeH10=
-=fipx
------END PGP SIGNATURE-----
