@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.3-r1.ebuild,v 1.2 2005/02/13 01:51:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.3-r2.ebuild,v 1.1 2005/02/13 19:32:50 ka0ttic Exp $
 
 inherit eutils webapp
 
 DESCRIPTION="AWStats is a short for Advanced Web Statistics."
 HOMEPAGE="http://awstats.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
+	mirror://gentoo/${P}-6.4-bugfixes.diff.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ppc ~mips ~sparc x86 ~amd64"
@@ -22,10 +23,12 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	# security bug 81775
-	epatch ${FILESDIR}/${P}-CAN-2005-0016.diff
+	epatch ${FILESDIR}/${P}-CAN-2005-0363.diff
+	epatch ${WORKDIR}/${P}-6.4-bugfixes.diff
+
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	# change AWStats default installation directory to installation directory of Gentoo
 	for file in tools/* wwwroot/cgi-bin/*; do
