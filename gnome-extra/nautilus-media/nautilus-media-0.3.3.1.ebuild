@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.3.3.1.ebuild,v 1.13 2004/03/17 00:27:55 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.3.3.1.ebuild,v 1.14 2004/03/28 23:03:54 foser Exp $
 
 inherit gnome2
 
@@ -16,12 +16,12 @@ RDEPEND=">=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/eel-2
 	>=gnome-base/nautilus-2.2
-	>=media-libs/gstreamer-0.6.3
-	>=media-libs/gst-plugins-0.6.3
-	>=media-plugins/gst-plugins-gnomevfs-0.6.3
-	>=media-plugins/gst-plugins-libpng-0.6.3
-	oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.6.3 )
-	mad? ( >=media-plugins/gst-plugins-mad-0.6.3 )"
+	=media-libs/gstreamer-0.6*
+	=media-libs/gst-plugins-0.6*
+	=media-plugins/gst-plugins-gnomevfs-0.6*
+	=media-plugins/gst-plugins-libpng-0.6*
+	oggvorbis? ( =media-plugins/gst-plugins-vorbis-0.6* )
+	mad? ( =media-plugins/gst-plugins-mad-0.6* )"
 
 # FIXME : flac support dep (?)
 
