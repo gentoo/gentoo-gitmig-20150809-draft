@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.57.ebuild,v 1.1 2002/04/26 08:43:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.57.ebuild,v 1.2 2002/04/30 11:18:16 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk AOL Instant Messenger client"
@@ -18,54 +18,45 @@ DEPEND=">=x11-libs/gtk+-1.2.10-r4
 		>=media-libs/gdk-pixbuf-0.16.0 )"
 	
 src_compile() {
-    
-    local myopts gnomeopts
+	
+	local myopts gnomeopts
 
-    use esd ||  myopts="--disable-esd"
-    use nas ||  myopts="$myopts --disable-nas"
-    use perl || myopts="$myopts --disable-perl"
+	use esd ||  myopts="--disable-esd"
+	use nas ||  myopts="${myopts} --disable-nas"
+	use perl || myopts="${myopts} --disable-perl"
 
-    use arts || myopts="$myopts --disable-arts"
-    use arts && KDEDIR=/usr/kde/3
+	use arts || myopts="${myopts} --disable-arts"
+	use arts && KDEDIR=/usr/kde/3
 
-    use nls || myopts="$myopts --disable-nls"
+	use nls || myopts="${myopts} --disable-nls"
 
-    gnomeopts="${myopts}"
+	gnomeopts="${myopts}"
+	myopts="${myopts} --disable-gnome"
 
-    # always build standalone gaim program
-    ./configure 	\
-		--host=${CHOST}	\
-		--disable-gnome	\
-		--prefix=/usr	\
-		${myopts} || die
-
-    emake || die
+	# always build standalone gaim program
+	econf ${myopts} || die
+	emake || die
 
 	# if gnome support is enabled, then build gaim_applet
-    if [ "`use gnome`" ]
-	then
+	use gnome && ( \
 		gnomeopts="${gnomeopts} --with-gnome=${GNOME_PATH} --enable-panel"
 
 		# save appletless version and clean up
 		cp src/gaim ${S}/gaim
 		make distclean || die
 
-		./configure 	\
-			--host=${CHOST}	\
-			--prefix=/usr	\
-			${gnomeopts} || die
-    	emake || die
-    fi
+		configure ${gnomeopts} || die
+		emake || die
+	)
 
 }
 
 src_install () {
 
-    make DESTDIR=${D} install
+	einstall || die
 
-    # if gnome enabled, make sure to install standalone version also
-    use gnome && dobin ${S}/gaim
+	# if gnome enabled, make sure to install standalone version also
+	use gnome && dobin ${S}/gaim
 
-    dodoc ChangeLog README README.plugins
+	dodoc ChangeLog README README.plugins
 }
-
