@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.17 2004/12/11 10:51:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.18 2004/12/18 09:49:07 corsair Exp $
+
+  17 Dec 2004; Markus Rothe <corsair@gentoo.org>
+  evolution-data-server-1.0.2.ebuild:
+  Stable on ppc64
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.0.2.ebuild:
