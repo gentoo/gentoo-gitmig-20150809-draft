@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.4.1.ebuild,v 1.1 2003/10/24 09:17:43 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.4.1.ebuild,v 1.2 2003/10/24 09:23:22 obz Exp $
 
 inherit gnome2
 
@@ -31,7 +31,7 @@ src_install() {
 	# Documentation install for each of the games
 	cd ${S}
 	local GAMES=$( find . -type d -maxdepth 1)
-	
+
 	for game in ${GAMES}; do
 		docinto ${game}
 		dodoc ${game}/{AUTHORS,ChangeLog,TODO,NEWS,README,COPYING} > /dev/null
