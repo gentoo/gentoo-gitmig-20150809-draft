@@ -26,6 +26,7 @@ sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/xemacs          app-editors/xemacs
 virtual/sylpheed        mail-client/sylpheed
 virtual/php             dev-php/mod_php
+virtual/httpd-php				dev-php/mod_php
 virtual/textbrowser	net-www/links
 virtual/mda		mail-filter/procmail
 virtual/xft		x11-base/xorg-x11

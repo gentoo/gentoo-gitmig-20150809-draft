@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.21 2004/06/28 19:34:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.22 2004/08/12 10:49:36 robbat2 Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -38,6 +38,7 @@ virtual/mpg123					media-sound/mpg123
 virtual/mta					mail-mta/ssmtp
 virtual/opengl					x11-base/xfree
 virtual/php					dev-php/mod_php
+virtual/httpd-php				dev-php/mod_php
 virtual/python					dev-lang/python
 virtual/quicktime				media-libs/libquicktime
 virtual/semi					app-emacs/semi

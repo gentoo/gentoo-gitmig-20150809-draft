@@ -14,6 +14,7 @@ virtual/lpr	     	net-print/cups
 virtual/mda		mail-filter/procmail
 virtual/mta	     	mail-mta/ssmtp
 virtual/php	     	dev-php/mod_php
+virtual/httpd-php				dev-php/mod_php
 virtual/snmp		net-analyzer/net-snmp
 virtual/ssh		net-misc/openssh
 virtual/tetex		app-text/tetex
