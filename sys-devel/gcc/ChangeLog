@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.321 2004/09/08 21:09:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.322 2004/09/10 14:54:27 lv Exp $
+
+  10 Sep 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.2.ebuild:
+  updated ssp patch to 3.4.1-1. this version includes it's own documentation and
+  will define _SSP_ when stack protection code is being built.
 
   08 Sep 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.2.ebuild:
   made gcc default to using multilib on supported archs. add nomultilib to USE

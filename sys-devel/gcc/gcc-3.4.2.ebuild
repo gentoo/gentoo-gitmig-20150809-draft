@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.4 2004/09/09 23:10:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.5 2004/09/10 14:54:28 lv Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -49,8 +49,8 @@ GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 PATCH_VER="1.0"
 PIE_VER="8.7.6.5"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
-PP_VER="3_4"
-PP_FVER="${PP_VER//_/.}-2"
+PP_VER="3_4_1"
+PP_FVER="${PP_VER//_/.}-1"
 SRC_URI="$(get_gcc_src_uri)"
 
 S="$(gcc_get_s_dir)"
@@ -113,9 +113,9 @@ do_filter_flags() {
 # GCC 3.4 introduces a new version of libstdc++
 if [ "${CHOST}" == "${CCHOST}" ]
 then
-	SLOT="${MY_PV}"
+	SLOT="3.4"
 else
-	SLOT="${CCHOST}-${MY_PV}"
+	SLOT="${CCHOST}-3.4"
 fi
 
 pkg_setup() {
