@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/m2crypto
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.4 2003/11/23 12:01:04 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.5 2004/02/02 21:12:20 liquidx Exp $
+
+  02 Feb 2004; Alastair Tse <liquidx@gentoo.org> m2crypto-0.12.ebuild:
+  stable bump to match python2.3 (#33971)
 
 *m2crypto-0.12 (23 Nov 2003)
 
