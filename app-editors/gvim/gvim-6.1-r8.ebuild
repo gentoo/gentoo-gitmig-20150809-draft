@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r8.ebuild,v 1.3 2003/04/23 22:05:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r8.ebuild,v 1.4 2003/04/24 14:50:52 agriffis Exp $
 
 inherit vim
 
@@ -31,4 +31,7 @@ src_unpack() {
 	use gtk2 \
 		&& EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
 			epatch ${WORKDIR}/gentoo/patches-gvim/*
+
+	echo T=${T}
+	echo TMPDIR=${TMPDIR}
 }

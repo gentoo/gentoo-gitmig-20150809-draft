@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.52 2003/04/23 22:05:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.53 2003/04/24 14:50:51 agriffis Exp $
 
 *vim-6.2_pre1 (23 Apr 2003)
+
+  24 Apr 2003; Aron Griffis <agriffis@gentoo.org> :
+  Update digests
 
   23 Apr 2003; Aron Griffis <agriffis@gentoo.org> vim-6.1-r19.ebuild,
   vim-6.1-r20.ebuild, vim-6.1-r21.ebuild, vim-6.2_pre1.ebuild:
