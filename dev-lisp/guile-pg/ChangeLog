@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/guile-pg
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/guile-pg/ChangeLog,v 1.1 2003/06/18 20:39:46 nakano Exp $
+
+*guile-pg-0.15 (18 Jun 2003)
+
+  18 Jun 2003; Masatomo Nakano <nakano@gentoo.org> guile-pg-0.15.ebuild:
+  Initial import. Thanks to Jay 'Eraserhead' Felice <jfelice@cronosys.com>.
+  #12091
+
