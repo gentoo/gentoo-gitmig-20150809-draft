@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.15 2004/08/16 13:52:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.16 2004/08/20 16:14:51 usata Exp $
 
 inherit eutils
 
@@ -9,16 +9,14 @@ DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
 IMMQT_P="qt-x11-immodule-unified-qt3.3.2-20040814"
-# If you want to build qt-immodule against Qt 3.3.3, you will also need
-# qt-x11-free-3.3.3-complemental-patch-for-immodule-20040814.diff
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
-	cjk? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz )"
+	immqt-bc? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz )"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
 KEYWORDS="x86 alpha ppc amd64 sparc hppa ~mips ppc64"
-IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib cjk"
+IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt-bc"
 
 DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng media-libs/jpeg media-libs/libmng
@@ -54,7 +52,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/qt-no-rpath-uic.patch
 
-	if use cjk ; then
+	if use immqt-bc ; then
 		epatch ../${IMMQT_P}.diff
 		sh make-symlinks.sh || die "make symlinks failed"
 	fi
@@ -89,7 +87,7 @@ src_compile() {
 	use xinerama    && myconf="${myconf} -xinerama" || myconf="${myconf} -no-xinerama"
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
 	use ipv6        && myconf="${myconf} -ipv6" || myconf="${myconf} -no-ipv6"
-	use cjk		&& myconf="${myconf} -im"
+	use immqt-bc	&& myconf="${myconf} -im"
 
 	export YACC='byacc -d'
 
