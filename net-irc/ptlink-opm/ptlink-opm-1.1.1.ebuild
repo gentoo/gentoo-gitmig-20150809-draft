@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ptlink-opm-1.1.1.ebuild,v 1.3 2004/07/17 09:59:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ptlink-opm-1.1.1.ebuild,v 1.4 2004/08/05 23:47:55 swegener Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND=""
+RDEPEND=""
+DEPEND=">=sys-apps/sed-4"
 
 S=${WORKDIR}/${MY_P}
 
