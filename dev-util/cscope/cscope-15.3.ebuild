@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.3.ebuild,v 1.23 2003/09/20 06:25:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.3.ebuild,v 1.24 2003/09/20 06:28:21 seemant Exp $
 
 inherit gnuconfig
 
@@ -23,7 +23,7 @@ src_compile() {
 	gnuconfig_update
 
 	sed -i -e "s:={:{:" src/egrep.y
-	
+
 	econf || die
 	make clean || die
 	emake || die
