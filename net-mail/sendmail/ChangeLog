@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.37 2004/02/07 00:18:00 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.38 2004/03/19 17:05:03 agriffis Exp $
+
+  19 Mar 2004; Aron Griffis <agriffis@gentoo.org> sendmail-8.12.10.ebuild,
+  sendmail-8.12.11.ebuild:
+  add alpha/ia64 keywords
 
 *sendmail-8.12.11 (06 Feb 2004)
 
