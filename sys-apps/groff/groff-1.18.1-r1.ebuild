@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r1.ebuild,v 1.16 2004/06/30 02:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r1.ebuild,v 1.17 2004/06/30 16:29:43 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://groff.ffii.org/pub/groff/old/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
-IUSE=""
+IUSE="X"
 
 DEPEND="virtual/libc
 	>=sys-apps/texinfo-4.0"
@@ -89,4 +89,3 @@ src_install() {
 	dodoc BUG-REPORT COPYING ChangeLog FDL MORE.STUFF NEWS \
 		PROBLEMS PROJECTS README REVISION TODO VERSION
 }
-
