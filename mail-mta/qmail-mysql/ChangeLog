@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qmail-mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/ChangeLog,v 1.4 2004/07/17 21:37:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/ChangeLog,v 1.5 2004/07/20 14:45:24 tomk Exp $
+
+  20 Jul 2004; <tomk@gentoo.org> qmail-mysql-1.03-r13.ebuild:
+  Added third party mirror in SRC_URI for qmail-smtpd-relay-reject
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   qmail-mysql-1.03-r13.ebuild, qmail-mysql-1.03.ebuild:
