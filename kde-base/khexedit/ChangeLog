@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khexedit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khexedit/ChangeLog,v 1.6 2005/03/18 16:41:50 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khexedit/ChangeLog,v 1.7 2005/03/25 04:06:28 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> khexedit-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> khexedit-3.4.0.ebuild:
   Added to ~ppc

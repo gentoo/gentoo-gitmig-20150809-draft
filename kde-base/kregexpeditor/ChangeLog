@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kregexpeditor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kregexpeditor/ChangeLog,v 1.5 2005/03/18 18:04:18 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kregexpeditor/ChangeLog,v 1.6 2005/03/25 03:54:22 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> kregexpeditor-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kregexpeditor-3.4.0.ebuild:
   Added to ~ppc
