@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.1 2003/12/11 23:54:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.2 2003/12/27 09:03:09 vapier Exp $
 
 inherit eutils
 
@@ -39,8 +39,14 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-alsa-1.0.0.patch #35049
 
 	sed -i \
-		-e 's:head -1:head -n 1:' configure || \
-			die "sed configure failed"
+		-e 's:head -1:head -n 1:' configure \
+		|| die "sed configure failed"
+	if [ `use nas` ] && [ ! `use X` ] ; then #32447
+		sed -i \
+			-e 's:-DNAS_SUPPORT:-DNAS_SUPPORT -I/usr/X11R6/include:' \
+			-e 's:-laudio:-laudio -L/usr/X11R6/lib:' \
+			configure || die "nas sed hack failed"
+	fi
 }
 
 src_compile() {
