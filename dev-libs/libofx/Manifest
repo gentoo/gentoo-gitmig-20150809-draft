@@ -1,3 +1,5 @@
+MD5 14cb17f4041de627cdc0f85fee4c07c6 ChangeLog 644
+MD5 e62fc565e0f74ce9a1b942abae818773 libofx-0.6.4-r1.ebuild 1002
 MD5 01e95323fd235e3559b8831adc8d1d34 files/digest-libofx-0.6.4 64
-MD5 d663aa554b781894e50192ea7500cc6f ChangeLog 548
-MD5 513f33cc86de74f7734a12eaf522d173 libofx-0.6.4.ebuild 862
+MD5 49ea3e257d9cc461e444c07e59396177 files/libofx-0.6.4-gcc2.patch 595
+MD5 01e95323fd235e3559b8831adc8d1d34 files/digest-libofx-0.6.4-r1 64
