@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/RPM-0.40-r1.ebuild,v 1.5 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/RPM-0.40-r1.ebuild,v 1.6 2003/10/06 12:38:53 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 
-DEPEND="${DEPEND} app-arch/rpm"
+DEPEND="${DEPEND} =app-arch/rpm-4.0.4-r5"
 
 export OPTIMIZE="${CFLAGS}"
 mydoc="ToDo"
