@@ -1,8 +1,11 @@
 # ChangeLog for dev-embedded/sdcc-cvs
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/ChangeLog,v 1.2 2004/12/16 11:31:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/ChangeLog,v 1.3 2004/12/16 12:06:00 dragonheart Exp $
 
-  16 Dec 2004; Daniel Black <dragonheart@gentoo.org> sdcc-cvs-2.4.0.ebuild:
+*sdcc-cvs-2.4.0-r1 (16 Dec 2004)
+
+  16 Dec 2004; Daniel Black <dragonheart@gentoo.org>
+  +sdcc-cvs-2.4.0-r1.ebuild, -sdcc-cvs-2.4.0.ebuild:
   changed make DESTDIR=${D} to make... install which kinda help. Thanks for bug
   #74611 by Stefan Nickl <snickl@snickl.freaks.de> for bringing it to my
   attention
