@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.62 2004/04/02 02:56:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.63 2004/04/09 21:33:15 wolf31o2 Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -153,6 +153,21 @@ games_ut_unpack() {
 			rm -f ${ut_unpack}/${f} || die "deleting compressed file ${f}"
 		done
 	fi
+}
+
+# Unpacks .umod/.ut2mod/.ut4mod files for UT/UT2003/UT2004
+# Usage: games_umod_unpack $1
+games_umod_unpack() {
+	local umod="$1"
+	mkdir -p ${Ddir}/System ${Ddir}/Maps ${Ddir}/StaticMeshes ${Ddir}/Textures \
+		${Ddir}/Music ${Ddir}/Help ${Ddir}/Animations ${Ddir}/Sounds \
+		${Ddir}/KarmaData
+	cp ${dir}/System/{ucc-bin,{Manifest,Def{ault,User}}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int} ${Ddir}/System
+	export UT_DATA_PATH="${Ddir}/System"
+	cd "${UT_DATA_PATH}"
+	./ucc-bin umodunpack -x ${S}/${umod} -nohomedir >/dev/null 2>&1 \
+		|| die "uncompressing file ${umod}"
+	rm -f ${Ddir}/System/{ucc-bin,{Manifest,Def{ault,User}}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int} >/dev/null 2>&1 || die "Removing temporary files"
 }
 
 # make a wrapper script ...
