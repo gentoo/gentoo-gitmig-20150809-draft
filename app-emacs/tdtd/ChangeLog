@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/tdtd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.1 2003/10/07 17:11:39 usata Exp $
+
+*tdtd-0.7.1 (08 Oct 2003)
+
+  08 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> tdtd-0.7.1.ebuild,
+  files/50tdtd-gentoo.el:
+  Initial import.  Ebuild submitted by Matthieu Sozeau <mattam@altern.org>
+  This closes Bug #30396
+
