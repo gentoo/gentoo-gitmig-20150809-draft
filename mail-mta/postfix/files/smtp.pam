@@ -1,0 +1,4 @@
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/smtp.pam,v 1.1 2004/05/30 09:38:31 robbat2 Exp $
+auth    required        /lib/security/pam_stack.so service=system-auth
+account required        /lib/security/pam_stack.so service=system-auth
+

@@ -1,0 +1,75 @@
+--- ../sample/main.cf	2002-12-23 21:22:16.000000000 +0100
++++ main.cf	2002-12-23 21:48:47.000000000 +0100
+@@ -365,6 +365,7 @@
+ #alias_maps = hash:/etc/aliases
+ #alias_maps = hash:/etc/aliases, nis:mail.aliases
+ #alias_maps = netinfo:/aliases
++alias_maps = hash:/etc/mail/aliases
+ 
+ # The alias_database parameter specifies the alias database(s) that
+ # are built with "newaliases" or "sendmail -bi".  This is a separate
+@@ -375,6 +376,7 @@
+ #alias_database = dbm:/etc/mail/aliases
+ #alias_database = hash:/etc/aliases
+ #alias_database = hash:/etc/aliases, hash:/opt/majordomo/aliases
++alias_database = hash:/etc/mail/aliases
+ 
+ # ADDRESS EXTENSIONS (e.g., user+foo)
+ #
+@@ -396,6 +398,7 @@
+ #
+ #home_mailbox = Mailbox
+ #home_mailbox = Maildir/
++home_mailbox = .maildir/
+  
+ # The mail_spool_directory parameter specifies the directory where
+ # UNIX-style mailboxes are kept. The default setting depends on the
+@@ -548,6 +551,8 @@
+ 
+ #local_destination_concurrency_limit = 2
+ #default_destination_concurrency_limit = 10
++local_destination_concurrency_limit = 2
++default_destination_concurrency_limit = 10
+ 
+ # DEBUGGING CONTROL
+ #
+@@ -590,32 +595,32 @@
+ # sendmail_path: The full pathname of the Postfix sendmail command.
+ # This is the Sendmail-compatible mail posting interface.
+ # 
+-sendmail_path =
++sendmail_path = /usr/sbin/sendmail
+ 
+ # newaliases_path: The full pathname of the Postfix newaliases command.
+ # This is the Sendmail-compatible command to build alias databases.
+ #
+-newaliases_path =
++newaliases_path = /usr/bin/newaliases
+ 
+ # mailq_path: The full pathname of the Postfix mailq command.  This
+ # is the Sendmail-compatible mail queue listing command.
+ # 
+-mailq_path =
++mailq_path = /usr/bin/mailq
+ 
+ # setgid_group: The group for mail submission and queue management
+ # commands.  This must be a group name with a numerical group ID that
+ # is not shared with other accounts, not even with the Postfix account.
+ #
+-setgid_group =
++setgid_group = postdrop
+ 
+ # manpage_directory: The location of the Postfix on-line manual pages.
+ #
+-manpage_directory =
++manpage_directory = /usr/share/man
+ 
+ # sample_directory: The location of the Postfix sample configuration files.
+ #
+-sample_directory =
++sample_directory = /etc/postfix/sample
+ 
+ # readme_directory: The location of the Postfix README files.
+ #
+-readme_directory =
++readme_directory = /usr/share/doc/POSTFIX
