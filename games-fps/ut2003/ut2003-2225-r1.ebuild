@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.2 2004/02/24 20:30:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.3 2004/02/27 16:47:23 wolf31o2 Exp $
 
 inherit games
 
@@ -128,7 +128,7 @@ src_install() {
 	find ${Ddir} -exec touch '{}' \;
 
 	prepgamesdirs
-	make_desktop_entry ut2003 "UT2003" UT2003.xpm
+	make_desktop_entry ut2003 "Unreal Tournament 2003" UT2003.xpm
 }
 
 pkg_postinst() {
