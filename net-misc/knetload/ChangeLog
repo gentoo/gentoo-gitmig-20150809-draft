@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knetload
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.9 2003/11/26 10:24:13 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.10 2004/01/09 21:08:38 weeve Exp $
+
+  09 Jan 2004; Jason Wever <weeve@gentoo.org> knetload-1.99.ebuild:
+  Marked stable on sparc.
 
   26 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> knetload-1.99.ebuild :
   Workaround faulty libsuffix detection. Add amd64 keyword.
