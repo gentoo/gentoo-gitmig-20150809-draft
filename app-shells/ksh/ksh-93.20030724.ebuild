@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.2 2003/09/10 17:57:30 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.3 2003/09/10 19:04:24 taviso Exp $
 
 inherit ccc eutils
 
@@ -74,7 +74,7 @@ src_install() {
 
 	# FIXME: talk to pdksh maintainer about making this nicer,
 	# 		how can we co-exist nicely without blocking?
-	[ ! -f /bin/ksh ] && dosym /bin/ksh93 /bin/ksh
+	dosym /bin/ksh93 /bin/ksh
 
 	newman ${my_arch}/man/man1/sh.1 ksh.1
 	dodoc lib/package/LICENSES/ast lib/package/gen/ast-ksh.txt
