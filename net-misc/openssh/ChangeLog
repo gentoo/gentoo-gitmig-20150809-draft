@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.9 2002/06/23 01:35:06 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.10 2002/06/26 18:09:43 lostlogic Exp $
+
+*openssh-3.4_p1 (26 June 2002)
+
+  26 June 2002; Brandon Low <lostlogic@gentoo.org> :
+
+  New version closes soon to be released security hole, PLEASE upgrade immediately
+  according to the changelogs, this new version closes several possible holes found
+  during a massive audit of the code.
 
 *openssh-3.3_p1 (22 June 2002)
 
