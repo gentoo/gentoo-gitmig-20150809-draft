@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010500-r1.ebuild,v 1.5 2004/02/26 06:04:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010500-r1.ebuild,v 1.6 2004/04/20 05:56:25 phosphan Exp $
 
 inherit perl-module
 
@@ -19,4 +19,4 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64 ~mips"
 # directory to where you build it. It does not need to compile it, but
 # it does need to be the same version as is installed, hence the hard
 # DEPEND below
-DEPEND="=app-sci/pari-2.1.5"
+DEPEND="~app-sci/pari-2.1.5"
