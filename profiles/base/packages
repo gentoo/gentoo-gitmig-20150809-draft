@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.17 2004/06/26 23:29:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.18 2004/06/28 19:34:27 solar Exp $
 
 # Gentoo Base Profile
 
@@ -17,7 +17,7 @@
 # base profile.  Lines without a "*" prefix will be ignored for profile
 # system calculations.
 
-# Please mote that this file is rarely used as a package inclusion mask
+# Please note that this file is rarely used as a package inclusion mask
 # file, because it affects EVERY SINGLE gentoo profile.   As can be seen,
 # we've limited the inclusion mask to a version of portage which supports
 # cascaded profiles, but apart from that, there should be no version
@@ -73,7 +73,7 @@
 *sys-devel/make
 *sys-devel/patch
 *sys-fs/e2fsprogs
-*sys-libs/cracklib  
+*sys-libs/cracklib
 *sys-libs/db
 *sys-libs/ncurses
 *sys-libs/pam
