@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@hotmail.com>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r2.ebuild,v 1.3 2002/01/23 20:06:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.1 2002/04/04 06:04:53 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
@@ -91,7 +91,8 @@ src_install() {
 			|cut -d ' ' -f 2 |cut -d '.' -f 1,2`"
 		dodir /usr/lib/python${pyver}/lib-dynload
 	fi
-
+	#next line required for proper install
+	dodir /usr/bin
 	make prefix=${D}/usr \
 		install || die
 
@@ -100,14 +101,17 @@ src_install() {
 	# karltk: This is definitely NOT how it should be done!
 	# we need this to create pdflib.jar (we will not have the source when
 	# this is a binary package ...)
-	insinto /usr/share/pdflib
-	doins ${S}/bind/java/pdflib.java
+	if [ "`use java`" ]
+	then
+		insinto /usr/share/pdflib
+		doins ${S}/bind/java/pdflib.java
 	
-	mkdir -p com/pdflib
-	mv ${S}/bind/java/pdflib.java com/pdflib
-	javac com/pdflib/pdflib.java
+		mkdir -p com/pdflib
+		mv ${S}/bind/java/pdflib.java com/pdflib
+		javac com/pdflib/pdflib.java
 	
-	jar cf pdflib.jar com/pdflib/*.class
+		jar cf pdflib.jar com/pdflib/*.class
 	
-	dojar pdflib.jar
+		dojar pdflib.jar
+	fi
 }
