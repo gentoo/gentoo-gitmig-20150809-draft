@@ -1,3 +1,13 @@
-MD5 6f2d765c7a6c8e0e701742154f5dd0a1 pen-0.12.1.ebuild 424
-MD5 270924157ecf720eba7416ddb666909d ChangeLog 374
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d5ac51513f2681e083d14856ecc7784b ChangeLog 453
+MD5 e9c7f48bb542f0d1f9a319a67d65ce46 pen-0.12.1.ebuild 422
 MD5 0d7bf5bbb6fc0f9665bc7bbba5ed469e files/digest-pen-0.12.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPcHI7fK2cqeyXkRAhwJAKDIHZn0IZR7GZ1aVcXeiBClvTJEzgCghceT
+KSZZTXiZaZztBJFKTCpZsTc=
+=k4kV
+-----END PGP SIGNATURE-----

@@ -1,9 +1,19 @@
-MD5 88d12fbb26f26f217d25c66a57744706 bk2site-1.1.9.ebuild 1011
-MD5 877df031bf55a37f2eab6e6c1a412fb0 bk2site-1.1.8-r1.ebuild 1320
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c315f8dc7c15ea19243d3e8c86086c4c bk2site-1.1.8.ebuild 971
-MD5 3992e3582dd732e8b323f5aa6958c5f0 ChangeLog 1306
+MD5 9ff0a8ee5e97ce64b4a5180fc676309d ChangeLog 1387
+MD5 877df031bf55a37f2eab6e6c1a412fb0 bk2site-1.1.8-r1.ebuild 1320
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 267da069883201c4acb57a188569be3c bk2site-1.1.9.ebuild 1009
+MD5 4bfe9824de582c62eeabf2492c6e6e4a files/digest-bk2site-1.1.9 65
 MD5 fcb374071ef326226a810c7a343732e1 files/digest-bk2site-1.1.8-r1 65
 MD5 fcb374071ef326226a810c7a343732e1 files/digest-bk2site-1.1.8 65
-MD5 4bfe9824de582c62eeabf2492c6e6e4a files/digest-bk2site-1.1.9 65
 MD5 1156516e33f0132f33b488a314a9e3ee files/ebuild.patch 7128
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPf4I7fK2cqeyXkRAiS5AJwNWruDpESo2WTfdveKFtBwTKX7/wCg4EkC
+EImN5VEwInTlygq+CsEN588=
+=EScl
+-----END PGP SIGNATURE-----

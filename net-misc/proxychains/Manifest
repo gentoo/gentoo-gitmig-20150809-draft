@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fb155642ece70fceb842241ffb16a677 proxychains-1.8.2.ebuild 672
-MD5 f93edfa0617567998da810bf40c4ee5c ChangeLog 510
-MD5 93852e5f789cdfe61d218a1da979acc1 proxychains-2.1.ebuild 668
+MD5 e6873f784ab325a77082f43682a25897 ChangeLog 624
+MD5 ecbe9a4d94ed4006ddf008aacc6d50bb proxychains-1.8.2.ebuild 670
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 96685b8dbf1b08a2fa0e981d1088e130 files/digest-proxychains-1.8.2 69
+MD5 5c463a92d33319bc1b52cbce0d73d888 proxychains-2.1.ebuild 668
 MD5 4cebebd00e1b468ed723ce38470e87e8 files/digest-proxychains-2.1 67
+MD5 96685b8dbf1b08a2fa0e981d1088e130 files/digest-proxychains-1.8.2 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBM9jGHTu7gpaalycRAutjAKC13ICSCwjsSBwQ8qrKkpczCvXBJACghw1H
-iUDFmy/q1/B4jJ5T1s+BDuI=
-=xH84
+iD8DBQFBjPkeI7fK2cqeyXkRAvhGAKD0Z+v+bZgK1a/kyCxfPhP6C6gcGACg5+Br
+AwWrGifBqpFTY56vBlL2vMc=
+=liYN
 -----END PGP SIGNATURE-----

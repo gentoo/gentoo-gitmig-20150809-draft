@@ -1,5 +1,15 @@
-MD5 fc3969b7e7eb0f403801749ab0200c81 ChangeLog 1470
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 021dd35ac984a3f039fab4ed590c49d1 ChangeLog 1554
+MD5 ff0a404bf089b8ea5030a1db714da3ae geekcredit-0.019.ebuild 906
 MD5 df5e2da74d359c296b5c444dd2bc0db3 geekcredit-0.016.ebuild 912
-MD5 6806de0ea0736e702135383b2b39ac83 geekcredit-0.019.ebuild 921
-MD5 c0fb9e1d5c28f53fb7de46b2095ae577 files/digest-geekcredit-0.016 56
 MD5 3df3152b954075ec3f7e2363caef687d files/digest-geekcredit-0.019 56
+MD5 c0fb9e1d5c28f53fb7de46b2095ae577 files/digest-geekcredit-0.016 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPebI7fK2cqeyXkRApf8AKCb4SB9jtnTx6NWs5Rw4k8SEbt2fwCg5UMS
+eAJS+/cedvpp7hakPMx82BM=
+=Bw7r
+-----END PGP SIGNATURE-----

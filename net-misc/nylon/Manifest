@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4710855c39c8f5743ee0d62c68383f80 ChangeLog 904
+MD5 303a0961f164440c19ab8a6a50266956 ChangeLog 1003
+MD5 449bf27f7d97427273fc8ebb13eeb5e5 nylon-1.2-r1.ebuild 618
 MD5 febd1d0a6f95e1209ed2f02c917df43c nylon-1.1.ebuild 548
-MD5 ff4c7505412a77e3efda3524ddb647c0 nylon-1.2-r1.ebuild 616
-MD5 05effbb31793114cfaebca3ed9f39974 nylon-1.2.ebuild 549
-MD5 7c4946514f65ec332edc3e6feba8c981 files/digest-nylon-1.1 60
+MD5 b4a3d183b35263c90b78126356dbb0b5 nylon-1.2.ebuild 547
 MD5 259a9a863cc3aad90a374ea0bc18f864 files/digest-nylon-1.2 60
-MD5 259a9a863cc3aad90a374ea0bc18f864 files/digest-nylon-1.2-r1 60
 MD5 e1b63feed8ceb446c06e3ac7d264665f files/nylon.conf 782
+MD5 7c4946514f65ec332edc3e6feba8c981 files/digest-nylon-1.1 60
 MD5 cd72fdbb9af520eb4f7b32c019124b44 files/nylon.init 509
+MD5 259a9a863cc3aad90a374ea0bc18f864 files/digest-nylon-1.2-r1 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBWL1+I1lqEGTUzyQRAkecAJkBS78CpuShksuFhsxobPQKGRNfeQCfa1PI
-twu1h7TnU7kCsapJ60bMV9s=
-=uMRJ
+iD8DBQFBjPgnI7fK2cqeyXkRAnTuAJ9yP8OIP7NN9K6pQmjAFTA9v0ukbgCdEi/6
+oAyroWB37/Wjiyr6RS6Euy0=
+=luWb
 -----END PGP SIGNATURE-----
