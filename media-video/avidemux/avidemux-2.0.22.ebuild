@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.22.ebuild,v 1.5 2004/06/25 00:36:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.22.ebuild,v 1.6 2004/07/14 21:28:06 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 ~ppc"
-IUSE="debug nls oggvorbis arts truetype alsa"
+IUSE="alsa arts debug nls oggvorbis truetype"
 
 RDEPEND="virtual/x11
 	media-sound/madplay
@@ -75,7 +75,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use pcc ; then
+	if use ppc ; then
 		echo
 		einfo "OSS sound output may not work on ppc"
 		einfo "If your hear only static noise, try"
