@@ -1,14 +1,20 @@
 # ChangeLog for media-libs/vflib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/ChangeLog,v 1.2 2003/08/06 01:29:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/ChangeLog,v 1.3 2003/08/13 13:38:50 usata Exp $
 
 *vflib-2.25.6-r1 (06 Aug 2003)
+
+  13 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> vflib-2.25.6-r1.ebuild:
+  Marked stable on x86
 
   06 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> vflib-2.25.6-r1.ebuild,
   files/vflib-2.25.6-r1-gentoo.diff:
   Added vfontcap for MagicPoint
 
 *vflib-2.25.6 (26 Jul 2003)
+
+  13 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> vflib-2.25.6.ebuild:
+  Marked stable on alpha, sparc and ppc
 
   06 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> vflib-2.25.6.ebuild:
   Marked stable on x86
