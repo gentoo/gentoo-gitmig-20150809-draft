@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.7 2004/02/09 00:25:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.8 2004/02/09 17:58:05 latexer Exp $
+
+  09 Feb 2004; Peter Johanson <latexer@gentoo.org>
+  hostap-driver-0.1.2-r1.ebuild:
+  Fixed version detection for pcmcia-cs versions that have a revision number.
+  (Thanks again to brix@gimp.org)
 
 *hostap-driver-0.1.3 (09 Feb 2004)
 

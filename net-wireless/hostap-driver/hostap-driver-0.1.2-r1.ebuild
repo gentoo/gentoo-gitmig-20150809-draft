@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.2-r1.ebuild,v 1.2 2004/02/07 23:08:59 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.2-r1.ebuild,v 1.3 2004/02/09 17:58:05 latexer Exp $
 
 inherit eutils
 
@@ -44,12 +44,13 @@ src_unpack() {
 			PCMCIA_CS_VER="${PCMCIA_CS_EBUILD##*/}" ## -> pcmcia-cs-VER.ebuild
 			PCMCIA_CS_VER="${PCMCIA_CS_VER/pcmcia-cs-/}" ## strip 'pcmcia-cs-'
 			PCMCIA_CS_VER="${PCMCIA_CS_VER/.ebuild/}" ## strip '.ebuild'
+			PCMCIA_CS_VER="${PCMCIA_CS_VER/-r*/}" ## strip revision numbers
 			PCMCIA_PATH="${WORKDIR}/pcmcia-cs-${PCMCIA_CS_VER}"
 			sed -i -e "s:^PCMCIA_PATH=:PCMCIA_PATH=${PCMCIA_PATH}:" "${S}/Makefile"
 			## unpack external pcmcia-cs sources
 			cd "${WORKDIR}"
 			unpack pcmcia-cs-${PCMCIA_CS_VER}.tar.gz ## unpack the pcmcia-cs sources to PCMCIA_PATH
-			cd pcmcia-cs-${PCMCIA_CS_VER}
+			cd ${PCMCIA_PATH}
 			## when not configured, pcmcia-cs spits out lots of errors (since 3.2.5)
 			if ! ./Configure -n --srctree --kernel=/usr/src/linux >&/dev/null; then
 				eerror "External pcmcia-cs configuration failed"
