@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.10 2004/09/16 02:08:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.11 2004/09/17 01:33:05 mr_bones_ Exp $
 
 inherit libtool flag-o-matic gcc
 
@@ -68,14 +68,14 @@ src_install() {
 		dosym /usr/lib/libvorbisenc.2.0.0.dylib /usr/lib/libvorbisenc.0.dylib
 	elif use ppc-macos; then
 		dosym /usr/lib/libvorbisfile.3.1.0.dylib /usr/lib/libvorbisfile.0.dylib
-		dosym /usr/lib/libvorbisenc.2.0.0.dylib /usr/lib/libvorbisenc.0.dylib	
+		dosym /usr/lib/libvorbisenc.2.0.0.dylib /usr/lib/libvorbisenc.0.dylib
 	else
 		dosym /usr/lib/libvorbisfile.so.3.1.0 /usr/lib/libvorbisfile.so.0
 		dosym /usr/lib/libvorbisenc.so.2.0.0 /usr/lib/libvorbisenc.so.0
 	fi
 
 	rm -rf ${D}/usr/share/doc
-	dodoc AUTHORS COPYING README todo.txt
+	dodoc AUTHORS README todo.txt
 	docinto txt
 	dodoc doc/*.txt
 	dohtml -r doc
