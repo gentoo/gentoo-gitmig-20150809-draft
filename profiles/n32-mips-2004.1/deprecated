@@ -1,0 +1,6 @@
+default-linux/mips/mips64/n32/2004.2
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/mips/mips64/n32/2004.2 make.profile
+
