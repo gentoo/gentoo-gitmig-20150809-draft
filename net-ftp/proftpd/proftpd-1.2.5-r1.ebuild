@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5-r1.ebuild,v 1.13 2003/09/07 00:12:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5-r1.ebuild,v 1.14 2003/09/07 00:13:27 msterret Exp $
 
 IUSE="ldap pam postgres mysql"
 
@@ -24,8 +24,8 @@ src_unpack() {
 #Fix bug #3791
 
 	unpack ${P}.tar.bz2
-    cd ${WORKDIR}/${P}
-    patch contrib/mod_sql_postgres.c < ${FILESDIR}/mod_sql_postgres.c.patch || die "config patch failed"
+	cd ${WORKDIR}/${P}
+	patch contrib/mod_sql_postgres.c < ${FILESDIR}/mod_sql_postgres.c.patch || die "config patch failed"
 }
 
 src_compile() {
@@ -94,7 +94,7 @@ src_install() {
 }
 
 pkg_postinst() {
-        groupadd proftpd &>/dev/null
-        id proftpd &>/dev/null || \
-                useradd -g proftpd -d /home/ftp -s /bin/false proftpd
+	groupadd proftpd &>/dev/null
+	id proftpd &>/dev/null || \
+		useradd -g proftpd -d /home/ftp -s /bin/false proftpd
 }
