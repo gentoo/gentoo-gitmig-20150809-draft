@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.16 2004/11/30 22:30:40 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.17 2005/01/08 20:15:47 stkn Exp $
 
 inherit eutils flag-o-matic
 

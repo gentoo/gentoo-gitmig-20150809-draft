@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.2.ebuild,v 1.2 2004/12/29 03:46:38 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.2.ebuild,v 1.3 2005/01/08 20:15:47 stkn Exp $
 
 IUSE="ssl novideo noaudio debug"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src-tar.gz"
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="-*"
+KEYWORDS="~x86"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.8.3
@@ -40,7 +40,7 @@ src_compile() {
 	export PTLIB_CONFIG=/usr/bin/ptlib-config
 	export OPENH323DIR=${S}
 
-	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser"
+	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser LDFLAGS=-L${S}/lib"
 
 	# NOTRACE avoid compilation problems, we disable PTRACING using NOTRACE=1
 	# compile with PTRACING if the user wants to debug stuff
@@ -61,7 +61,7 @@ src_compile() {
 		&& myconf="${myconf} --disable-audio"
 
 	econf ${myconf} || die "configure failed"
-	emake -j1 ${makeopts} opt apps || die "make failed"
+	emake ${makeopts} opt || die "make failed"
 }
 
 src_install() {
@@ -97,10 +97,17 @@ src_install() {
 		OH323_FILE="libh323_${OPENH323_ARCH}.so.${PV}" \
 		${makeopts} install || die "install failed"
 
-	dobin ${S}/samples/simple/obj_${OPENH323_ARCH}/simph323
+	# workaround: don't install libh323*.so and libh323.so.${PV}
+	if [[ -f ${D}/usr/lib/libh323_${OPENH323_ARCH}.so ]]; then
+		# libh323*.so is a file... replace it w/ a symlink
+		rm -f ${D}/usr/lib/libh323_${OPENH323_ARCH}.so
+
+		dosym  /usr/lib/libh323_${OPENH323_ARCH}.so.${PV} \
+			/usr/lib/libh323_${OPENH323_ARCH}.so
+	fi
 
 	###
-	# Compatibility "hacks" (openh323-config anyone?)
+	# Compatibility "hacks"
 	#
 
 	# mod to keep gnugk happy

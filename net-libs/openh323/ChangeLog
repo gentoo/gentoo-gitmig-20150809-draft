@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/openh323
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.55 2004/12/29 03:46:38 stkn Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.56 2005/01/08 20:15:47 stkn Exp $
+
+  08 Jan 2005; Stefan Knoblich <stkn@gentoo.org> openh323-1.15.2.ebuild:
+  removed sample application (simph323, anyone needs that?), parallel building
+  works, libs are now installed as libh323*.so.${PV} (imho more
+  sane than libh323*.so), testing fun on x86 begins
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
