@@ -1,19 +1,29 @@
-MD5 35f8147492617d33ebb1ba14adff99b8 openafs-1.2.11.ebuild 3371
-MD5 e64009b47b1f1c6f865d623a522bde43 openafs-1.2.10-r2.ebuild 3493
-MD5 8deaa1d4eef2ed85eb39640eb1b8c18c openafs-1.2.10.ebuild 2235
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a26fa271d5573a9ce349363e9c99ebf6 ChangeLog 6399
 MD5 1d3c436cc14252035bf2d97228cd3f58 metadata.xml 224
 MD5 d4638936b32f6e0bd54d0d68de1a990d openafs-1.2.10-r1.ebuild 2425
+MD5 e64009b47b1f1c6f865d623a522bde43 openafs-1.2.10-r2.ebuild 3493
+MD5 8deaa1d4eef2ed85eb39640eb1b8c18c openafs-1.2.10.ebuild 2235
+MD5 35f8147492617d33ebb1ba14adff99b8 openafs-1.2.11.ebuild 3371
 MD5 4584cc6910401787e1ebd81cfa06f060 files/CellServDB 41
-MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10-r1 73
-MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10-r2 73
 MD5 c620f50b47424c46f59dc847eb8c0dd3 files/README 8735
 MD5 1903c6a5e0aeedf794939945536341cd files/ThisCell 7
-MD5 19d17f83fbb3cc6c491476dba77eaad7 files/openafs-1.2.6.patch 822
-MD5 e1b5c42954d435f3f1a95dbff3c658c9 files/openafs-pinstall-execve.patch 1762
-MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10 73
-MD5 b8e545b3b694eccaba3c69029e768987 files/digest-openafs-1.2.11 73
 MD5 4f3ec773401fff6eeeacd14345ba89c1 files/afs.rc.rc6 5429
-MD5 28ae5081e8e323cd402a659ac5e0730c files/openafs-typechange.patch 1371
-MD5 36dc33d8c6e647e8aacf8e69849a28a3 files/openafs-pinstall-execve-env.patch 1242
+MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10 73
+MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10-r1 73
+MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10-r2 73
+MD5 19d17f83fbb3cc6c491476dba77eaad7 files/openafs-1.2.6.patch 822
 MD5 36dc33d8c6e647e8aacf8e69849a28a3 files/openafs-pinstall-execve-1.2.10.patch 1242
+MD5 9554c33f806d3f69d9497d6c56d55b4e files/openafs-pinstall-execve.patch 1766
+MD5 b8e545b3b694eccaba3c69029e768987 files/digest-openafs-1.2.11 73
+MD5 36dc33d8c6e647e8aacf8e69849a28a3 files/openafs-pinstall-execve-env.patch 1242
+MD5 28ae5081e8e323cd402a659ac5e0730c files/openafs-typechange.patch 1371
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fYlmdTrptrqvGERAsuqAJ9pWFmkZOo3CcYESEg5UN9SbjaltQCgjhRh
+FPwuisjbE2M8pYiUUkZVsU8=
+=woIb
+-----END PGP SIGNATURE-----
