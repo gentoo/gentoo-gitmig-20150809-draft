@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.25 2005/01/16 09:28:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.26 2005/01/16 10:31:59 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -111,7 +111,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 		sh64*)		ninj sh64 sh;;
 		sh*)		echo sh;;
 		i?86*)		ninj i386 x86;;
-		*)		echo wtf;;
+		*)			echo wtf;;
 	esac
 }
 tc-arch-kernel() {
