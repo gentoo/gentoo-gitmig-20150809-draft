@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.22.ebuild,v 1.3 2004/11/01 16:01:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.22.ebuild,v 1.4 2004/11/01 18:02:37 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -29,6 +29,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( dev-lang/perl )
 	>=sys-libs/zlib-1.1.3
+	>=sys-apps/texinfo-4.7-r1
 	sys-apps/procps
 	>=sys-apps/sed-4"
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
