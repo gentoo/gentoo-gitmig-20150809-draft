@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <strider@gentoo.org> (21 Sep 2003)
+# ant 1.5.4 the ebuild is ok but ant
+# script its no working too well
+=dev-java/ant-1.5.4
+
 # <aliz@gentoo.org> (19 Sep 2003)
 # 2.60 is still in the rc stage
 =dev-perl/Mail-SpamAssassin-2.60
