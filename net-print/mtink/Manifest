@@ -2,7 +2,9 @@ MD5 63e9df44c0873e2cd3abf17598bfc71e mtink-0.9.57.ebuild 1312
 MD5 56c0aeb5b5cc7c93cc4cd9ecd2ec153e ChangeLog 606
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 94bda9e7c3c0f7dfb8c54f3ff9f15ed5 mtink-0.9.55.ebuild 1363
+MD5 232eb63dce14aa3067923b41c3d50077 mtink-1.0.0.ebuild 1263
 MD5 d634fcba2aac9dc7626141e6ff68e538 files/mtinkd.confd 511
 MD5 8423fb1ca2090ec4069b5a0ecb696183 files/mtinkd.rc 456
+MD5 9d3c5a47eb43633935c69ddf37dea095 files/digest-mtink-1.0.0 63
 MD5 6e4f37da8ada0ed3ec7b695aba334737 files/digest-mtink-0.9.55 64
 MD5 8d16dbbbe87ed060260a6abe05fdf67c files/digest-mtink-0.9.57 64
