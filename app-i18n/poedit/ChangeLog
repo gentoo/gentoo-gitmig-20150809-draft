@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/poedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.14 2005/01/01 14:36:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.15 2005/01/13 17:03:59 pythonhead Exp $
+
+  13 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> poedit-1.2.3.ebuild,
+  poedit-1.2.4.ebuild, poedit-1.2.5.ebuild, poedit-1.3.0.ebuild,
+  poedit-1.3.1.ebuild:
+  removed einstall bug# 72176
 
   09 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> poedit-1.3.1.ebuild:
   Stable on sparc
