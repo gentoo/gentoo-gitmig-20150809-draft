@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-1.3.1.ebuild,v 1.2 2003/12/30 19:09:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-1.3.2.ebuild,v 1.1 2003/12/30 19:09:11 mr_bones_ Exp $
 
 inherit games
 
@@ -19,17 +19,18 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# remove some not-so-interesting ones
+	rm -f DOC/{INSTALL.*,*.in,CHANGES.OLD}
+}
+
 src_compile() {
-	local target
-	target="x11"
+	local target="x11"
 	use sdl && target="sdl"
 
-	local myconf
-	myconf="--enable-crashmenu --enable-break --enable-hints \
-		--enable-asm --enable-cursorblk --enable-led --enable-displayled \
-		--enable-sndclip --enable-linuxjoy --enable-sound"
-
-	cd src
+	cd src && \
 	egamesconf \
 		--enable-crashmenu \
 		--enable-break \
@@ -47,13 +48,13 @@ src_compile() {
 }
 
 src_install () {
-	dogamesbin src/atari800
-	newman src/atari800.man atari800.6
-	dodoc README.1ST DOC/*
+	dogamesbin src/atari800            || die "dogamesbin failed"
+	newman src/atari800.man atari800.6 || die "newman failed"
+	dodoc README.1ST DOC/*             || die "dodoc failed"
 	insinto ${GAMES_DATADIR}/${PN}
-	doins ${WORKDIR}/*.ROM
+	doins ${WORKDIR}/*.ROM             || die "doins failed (ROM)"
 	insinto /etc
-	doins ${FILESDIR}/atari800.cfg
+	doins ${FILESDIR}/atari800.cfg     || die "doins failed (cfg)"
 	prepgamesdirs
 }
 
