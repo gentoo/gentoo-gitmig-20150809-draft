@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.19 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.20 2003/12/06 21:59:49 foser Exp $
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -69,7 +69,7 @@ src_install() {
 
 	# log
 	dodir /var/lib/gdm
-	chown gdm.gdm ${D}/var/lib/gdm
+	chown gdm:gdm ${D}/var/lib/gdm
 	chmod 750 ${D}/var/lib/gdm
 
 	# pam startup
@@ -158,7 +158,7 @@ pkg_postinst() {
 	if [ ! -d ${ROOT}/var/lib/gdm ]
 	then
 		mkdir -p ${ROOT}/var/lib/gdm
-		chown gdm.gdm ${ROOT}/var/lib/gdm
+		chown gdm:gdm ${ROOT}/var/lib/gdm
 		chmod 0750 ${ROOT}/var/lib/gdm
 	fi
 	touch ${ROOT}/var/lib/gdm/.keep

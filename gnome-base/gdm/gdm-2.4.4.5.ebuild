@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.4.5.ebuild,v 1.1 2003/11/23 17:48:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.4.5.ebuild,v 1.2 2003/12/06 21:59:49 foser Exp $
 
 inherit gnome2
 
@@ -46,7 +46,7 @@ src_install() {
 
 	# log, etc.
 	dodir /var/lib/gdm
-	chown gdm.gdm ${D}/var/lib/gdm
+	chown gdm:gdm ${D}/var/lib/gdm
 	chmod 750 ${D}/var/lib/gdm
 
 	# use our own session script

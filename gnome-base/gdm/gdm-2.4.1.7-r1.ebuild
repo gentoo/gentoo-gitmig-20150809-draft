@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.2 2003/11/17 11:42:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.3 2003/12/06 21:59:49 foser Exp $
 
 inherit eutils gnome2
 
@@ -191,7 +191,7 @@ pkg_postinst() {
 	if [ ! -d ${ROOT}/var/lib/gdm ]
 	then
 		mkdir -p ${ROOT}/var/lib/gdm
-		chown gdm.gdm ${ROOT}/var/lib/gdm
+		chown gdm:gdm ${ROOT}/var/lib/gdm
 		chmod 0750 ${ROOT}/var/lib/gdm
 	fi
 	touch ${ROOT}/var/lib/gdm/.keep
