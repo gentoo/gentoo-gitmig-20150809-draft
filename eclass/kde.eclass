@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.15 2001/11/16 12:50:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.16 2001/11/25 09:06:57 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base depend || die
 ECLASS=kde
@@ -17,10 +17,25 @@ RDEPEND="$RDEPEND kde-base/kdelibs"
 kde-objprelink-patch() {
 	debug-print-function kde-objprelink-patch $*
 	if [ "`use objprelink`" ]; then
-	    cd ${S} && \
-	    patch -p0 < /usr/share/objprelink/kde-admin-acinclude.patch && \
-	    make -f Makefile.cvs || die "died in kde-objprelink-patch"
+	    cd ${S} || die
+	    patch -p0 < /usr/share/objprelink/kde-admin-acinclude.patch || die
+	    patched=false
+	    
+	    for x in Makefile.cvs admin/Makefile.common
+	    do
+		if ! $patched
+		then
+		    if [ -f $x ]
+		    then
+			echo "patching file $x (kde-objprelink-patch)" && make -f $x && patched=true || die
+		    fi
+		fi
+	    done
+
+	    $patched || echo "??? Warning: kde-objprelink-patch: patch not applied, makefile not found"
+	
 	fi
+
 }
 
 kde_src_compile() {
@@ -41,6 +56,7 @@ kde_src_compile() {
 			;;
 		configure)
 			debug-print-section configure
+			debug-print "configure: myconf=$myconf"
 			./configure ${myconf} || die
 			;;
 		make)
