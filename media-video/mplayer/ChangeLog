@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.228 2004/11/09 15:07:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.229 2004/11/09 15:17:49 chriswhite Exp $
+
+  10 Nov 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r4.ebuild:
+  Added a message about the alsa -ao format to postinstall.  Closes bug #57256.
 
   10 Nov 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
   mplayer-1.0_pre5-r2.ebuild, mplayer-1.0_pre5-r3.ebuild,

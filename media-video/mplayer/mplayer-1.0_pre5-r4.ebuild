@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.19 2004/11/09 15:07:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.20 2004/11/09 15:17:49 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -481,6 +481,16 @@ pkg_postinst() {
 
 	if use matrox; then
 		depmod -a &>/dev/null || :
+	fi
+
+	if use alsa ; then
+		einfo "For those using alsa, please note the vo driver name is no longer"
+		einfo "alsa9x or alsa1x.  It is now just 'alsa' (omit quotes)."
+		einfo "The syntax for optional drivers has also changed.  For example"
+		einfo "if you use a dmix driver called 'dmixer,' use"
+		einfo "vo=alsa:device=dmixer instead of vo=alsa:dmixer"
+		einfo "Some users may not need to specify the extra driver with the vo="
+		einfo "command."
 	fi
 }
 
