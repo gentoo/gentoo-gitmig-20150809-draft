@@ -9,6 +9,10 @@ set backspace=2         " allow backspacing over everything in insert mode
 set autoindent          " always set autoindenting on
 set ruler               " show the cursor position all the time
 
+" added to default to high security within Gentoo. Fixes #14088
+"  -rphillips
+set modelines=0
+
 " Vim beeps in gnome-terminals when trying to fetch the terminal version.
 " This is really a bug in gnome-terminal (I think), but we can workaround it
 " with the following code.
