@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.57 2005/03/18 17:36:55 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.58 2005/03/19 19:40:23 mr_bones_ Exp $
+
+*ocaml-3.08 (19 Mar 2005)
+*ocaml-3.07-r1 (19 Mar 2005)
+
+  19 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ocaml-3.07-hppa.patch, +ocaml-3.07-r1.ebuild, +ocaml-3.08.ebuild:
+  resurrect versions to fix dep breakage
 
   18 Mar 2005; Matthieu Sozeau <mattam@gentoo.org>
   -files/ocaml-3.07-hppa.patch, files/ocaml-rebuild.sh, -ocaml-3.07-r1.ebuild,
