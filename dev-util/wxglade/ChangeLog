@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.9 2004/08/26 17:36:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.10 2004/08/30 20:14:57 pythonhead Exp $
+
+*wxglade-0.3.4 (30 Aug 2004)
+
+  30 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> wxglade-0.3.3.ebuild,
+  +wxglade-0.3.4.ebuild:
+  Uses python eclass now
+
+*wxglade-0.3.4 (30 Aug 2004)
+
+  30 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> +wxglade-0.3.4.ebuild:
+  Version bump.
 
   26 Aug 2004; Michael Hanselmann <hansmi@gentoo.org> wxglade-0.3.3.ebuild:
   Marked ~amd64.
