@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the term of the GNU General Public License v2
 # Author: Zachary T Welch
-# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.2 2003/04/06 03:39:06 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.3 2003/04/17 22:55:13 zwelch Exp $
 
 ECLASS=crosscompile
 INHERITED="$INHERITED $ECLASS"
@@ -66,6 +66,19 @@ cross-target() {
 }
 
 
+# cross-setslot sets the SLOT for a cross-targetable ebuild
+#  this prevents portage from unmerging the native version
+cross-setslot() {
+	cross-target && SLOT="${CCHOST}-${1}" || SLOT="${1}"
+}
+
+# The compiler will need to be able to find the header files
+# and libs from $ROOT
+cross-setflags() {
+	CFLAGS="${CFLAGS} -I${ROOT}/usr/include -L${ROOT}lib -L${ROOT}usr/lib"
+	CXXFLAGS=${CFLAGS}
+}
+
 # this function should be called by all packages that want
 #  to be cross-compile compatible and safe about it.
 #  Right now, we take away a couple of obvious bullets from the
@@ -92,11 +105,6 @@ cross-check() {
 		# The correct CFLAGS really needs to get set for CHOST.
 		filter-flags "-march= -mcpu="
 		strip-flags
-
-		# The compiler will need to be able to find the header files
-		# and libs from $ROOT
-#		CFLAGS="${CFLAGS} -I${ROOT}/usr/include -L${ROOT}lib -L${ROOT}usr/lib"
-#		CXXFLAGS=${CFLAGS}
 	fi
 }
 
@@ -106,18 +114,24 @@ cross-check() {
 # ebuild just to check a few environment variables.
 #   Aiken 31/03/2003
 cross-diag() {
-	echo CBUILD = ${CBUILD}
-	echo CHOST = ${CHOST}
-	echo CCHOST = ${CCHOST}
-	echo CC = ${CC}
-	echo CXX = ${CXX}
-	echo CFLAGS = ${CFLAGS}
-	echo CXXFLAGS = ${CXXFLAGS}
-	echo CPPFLAGS = ${CPPFLAGS}
-	echo LDPATH = ${LDPATH}
-	echo PV = ${PV}
-	echo ROOT = ${ROOT}
-	die "Diagnostic purposes"
+	cat <<-__EOD__
+		CATEGORY = ${CATEGORY}
+		DEPEND = ${DEPEND}
+		CBUILD = ${CBUILD}
+		CHOST = ${CHOST}
+		CCHOST = ${CCHOST}
+		CC = ${CC}
+		CXX = ${CXX}
+		CFLAGS = ${CFLAGS}
+		CXXFLAGS = ${CXXFLAGS}
+		CPPFLAGS = ${CPPFLAGS}
+		LDPATH = ${LDPATH}
+		PV = ${PV}
+		SLOT = ${SLOT}
+		ROOT = ${ROOT}
+		PATH = ${PATH}
+__EOD__
+	die "Diagnostics complete"
 }
 
 # Create a config.cache that works in the cross compile case.
