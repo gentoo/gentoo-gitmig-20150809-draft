@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/aide
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfontselector/ChangeLog,v 1.1 2002/05/02 18:13:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfontselector/ChangeLog,v 1.2 2002/10/19 22:53:17 cselkirk Exp $
 
 *xfontselector-0.9.2 (2 May 2002)
+
+  20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xfontselector-0.9.2.ebuild :
+
+  Added ppc to KEYWORDS.
 
   2 May 2002; Dan Armak <danarmak@gentoo.org>
   
