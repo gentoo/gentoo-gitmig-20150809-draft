@@ -1,0 +1,11 @@
+--- main.C	2000-09-19 10:02:51.000000000 +0200
++++ main.C.1	2003-06-30 21:27:10.000000000 +0200
+@@ -351,7 +351,7 @@
+ }
+ 
+ int main(int argc, char** argv) {
+-  program_name = filename_name(argv[0]);
++  program_name = fl_filename_name(argv[0]);
+   int i; if (Fl::args(argc, argv, i, arg) < argc) Fl::error(
+ "options are:\n"
+ " -d[isplay] host:#.#\tX display & screen to use\n"
