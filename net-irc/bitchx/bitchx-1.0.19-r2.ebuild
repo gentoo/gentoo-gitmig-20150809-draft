@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.1 2002/06/26 22:30:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.2 2002/07/16 04:54:32 seemant Exp $
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX
@@ -8,8 +8,9 @@ DESCRIPTION="An IRC Client"
 SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
 HOMEPAGE="http://www.bitchx.com/"
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 
 DEPEND=">=sys-libs/ncurses-5.1 
@@ -21,13 +22,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 		>=media-libs/audiofile-0.1.5 )
 	gtk? ( =x11-libs/gtk+-1.2*
 		>=media-libs/imlib-1.9.10-r1 )"
-
-#src_unpack() {
-#	unpack ${A}
-#	cd ${S}
-#	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
-#	patch -p1 < ${FILESDIR}/${P}-dupver.patch || die
-#}
 
 src_compile() {
 

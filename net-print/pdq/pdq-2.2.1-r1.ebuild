@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/pdq/pdq-2.2.1-r1.ebuild,v 1.5 2002/07/14 20:41:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pdq/pdq-2.2.1-r1.ebuild,v 1.6 2002/07/16 04:54:33 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A non-daemon-centric print system which has a built-in, and sensible, driver configuration syntax."
 SRC_URI="http://pdq.sourceforge.net/ftp/${P}.tgz"
 HOMEPAGE="http://pdq.sourceforge.net"
-KEYWORDS="x86"
+
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -16,13 +17,13 @@ src_compile() {
 
 	./configure --prefix=/usr --host=${CHOST} || die
 	cd src
-	if [ -z "`use gtk`" ] ; then
-		echo "Making only pdq (xpdq disabled)"
-		make pdq || die
-	else
+	use gtk && ( \
 		echo "Making pdq and xpdq"
 		make || die
-	fi
+	) || ( \
+		echo "Making only pdq (xpdq disabled)"
+		make pdq || die
+	)
 	cd ..
 	cd lpd
 	make || die
@@ -57,7 +58,9 @@ src_install () {
 	cd ..
 	cd etc
 	mv Makefile Makefile.orig
-	sed -e 's/$$dir/$(DESTDIR)$$dir/' -e 's/$(pdqlibdir)\/$$file/$(DESTDIR)\/$(pdqlibdir)\/$$file/' Makefile.orig > Makefile
+	sed -e 's/$$dir/$(DESTDIR)$$dir/' \
+		-e 's/$(pdqlibdir)\/$$file/$(DESTDIR)\/$(pdqlibdir)\/$$file/' \
+		Makefile.orig > Makefile
 	insinto /etc/pdq
 	newins printrc.example printrc
 	make DESTDIR=${D} install || die
@@ -65,4 +68,3 @@ src_install () {
 	dodoc CHANGELOG INSTALL README LICENSE BUGS
 
 }
-

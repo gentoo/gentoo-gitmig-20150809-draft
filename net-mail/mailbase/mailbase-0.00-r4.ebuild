@@ -1,15 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r4.ebuild,v 1.2 2002/07/16 04:54:33 seemant Exp $
 
 S=${WORKDIR}
-SLOT="0"
 DESCRIPTION="MTA layout package"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
+
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
+
 DEPEND=""
 RDEPEND=""
-
 
 src_install() {
 	dodir /etc/mail

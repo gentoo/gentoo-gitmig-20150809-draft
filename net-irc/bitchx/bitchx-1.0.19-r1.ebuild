@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r1.ebuild,v 1.4 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r1.ebuild,v 1.5 2002/07/16 04:54:32 seemant Exp $
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX
@@ -17,6 +17,10 @@ DEPEND=">=sys-libs/ncurses-5.1
 		>=media-libs/audiofile-0.1.5 )
 	gtk? ( =x11-libs/gtk+-1.2*
 		>=media-libs/imlib-1.9.10-r1 )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 #src_unpack() {
 #	unpack ${A}

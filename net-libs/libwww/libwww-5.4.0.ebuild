@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0.ebuild,v 1.1 2002/06/19 20:37:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0.ebuild,v 1.2 2002/07/16 04:54:33 seemant Exp $
 
 inherit libtool
 
@@ -10,7 +10,10 @@ DESCRIPTION="A general-purpose client side WEB API"
 SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz"
 HOMEPAGE="http://www.w3.org/Library/"
 
-SLOT=""
+SLOT="0"
+LICENSE="W3C"
+KEYWORDS="x86 ppc"
+
 
 DEPEND="sys-devel/perl
 		>=sys-libs/zlib-1.1.4

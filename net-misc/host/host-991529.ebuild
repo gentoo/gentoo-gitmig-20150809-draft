@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.5 2002/07/16 04:54:33 seemant Exp $
 
 S="${WORKDIR}"
 
@@ -21,8 +21,9 @@ DEPEND="net-dns/bind-tools"
 
 RDEPEND="${DEPEND}"
 
-KEYWORDS="x86"
 SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	cd ${S}

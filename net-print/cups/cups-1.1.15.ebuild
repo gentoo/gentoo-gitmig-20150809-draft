@@ -1,12 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.15.ebuild,v 1.3 2002/07/14 20:41:21 aliz Exp $
-
-DESCRIPTION="The Common Unix Printing System"
-HOMEPAGE="http://www.cups.org"
-KEYWORDS="x86"
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.15.ebuild,v 1.4 2002/07/16 04:54:33 seemant Exp $
 
 S=${WORKDIR}/${P}
+DESCRIPTION="The Common Unix Printing System"
+HOMEPAGE="http://www.cups.org"
 SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-1-source.tar.bz2"
 PROVIDE="virtual/lpr"
 
@@ -18,8 +16,10 @@ DEPEND="virtual/glibc
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
 RDEPEND="${DEPEND} !virtual/lpr"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.2.ebuild,v 1.1 2002/07/09 15:32:23 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.2.ebuild,v 1.2 2002/07/16 04:54:33 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
@@ -8,8 +8,8 @@ SRC_URI="http://www.xchat.org/files/source/1.9/${P}.tar.bz2"
 HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="*"
+SLOT="1"
+KEYWORDS="x86 ppc"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/gtk+-2.0.5
@@ -71,9 +71,8 @@ src_compile() {
 		&& myopts="${myopts} --enable-ipv6"
 	
 	
-	./configure \
-		--prefix=/usr \
-		--host=${CHOST} \
+	econf \
+		--program-suffix=-2 \
 		${myopts} || die
 	
 	emake || die
