@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.5 2002/04/06 16:36:06 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.6 2002/04/11 13:52:35 seemant Exp $
+
+*imagemagick-5.4.4-r1 (11 Apr 2002)
+
+  11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> imagemagick-5.4.4-r1.ebuild:
+
+  Changed the tarball to be fetched to tar.gz because the server no longer
+  carries a tar.bz2 for some reason
 
 *imagemagick-5.4.4 (6 Apr 2002)
 
