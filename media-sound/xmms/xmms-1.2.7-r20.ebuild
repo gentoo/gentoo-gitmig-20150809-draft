@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.3 2003/06/26 11:14:13 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.4 2003/07/04 06:53:34 jje Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -37,9 +37,6 @@ src_unpack() {
 	# Save playlist, etc on SIGTERM and SIGINT, bug #13604.
 	epatch ${FILESDIR}/xmms-sigterm.patch
 
-	# Add Russian character set support
-	epatch ${FILESDIR}/xmms-russian-charset.patch
-
 	# The following optimisations are ONLY for x86 platform
 	if [ `use x86` ] ; then
 		# For mmx/3dnow enabled CPUs, this patch adds mmx/3dnow optimisations
@@ -68,8 +65,13 @@ src_unpack() {
 	fi
 
 	# Patch for mpg123 to convert Japanese character code of MP3 tag info
+	# the Japanese patch and the Russian one overlap, so its one of the other
 	if use cjk; then
 		epatch ${FILESDIR}/${P}-mpg123j.patch
+        else
+                # add russian charset support
+                epatch ${FILESDIR}/xmms-russian-charset.patch
+
 	fi
 
 	if [ ! -f ${S}/config.rpath ] ; then
