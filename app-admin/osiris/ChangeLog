@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/osiris
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.1 2003/02/04 02:06:02 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.2 2003/03/28 09:57:42 pvdabeel Exp $
 
 *osiris-1.5.1b (03 Feb 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> osiris-1.5.1b.ebuild:
+  Moved to -ppc by yours truly; nothing but link errors
 
   03 Feb 2003; Peter Johanson <latexer@gentoo.org> osiris-1.5.1b.ebuild:
   Initial import. Ebuild submitted by yours truly. 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-1.5.1b.ebuild,v 1.1 2003/02/04 02:06:02 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-1.5.1b.ebuild,v 1.2 2003/03/28 09:57:42 pvdabeel Exp $
 
 
 DESCRIPTION="File integrity verification system"
@@ -9,7 +9,7 @@ SRC_URI="http://osiris.shmoo.com/data/${P}.tar.gz"
 LICENSE="OSIRIS"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 -ppc"
 
 IUSE="mysql"
 DEPEND="mysql? ( >=mysql-3.23.54a )"
