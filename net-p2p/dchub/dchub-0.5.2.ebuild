@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.5.2.ebuild,v 1.2 2004/08/09 02:56:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.5.2.ebuild,v 1.3 2004/10/04 22:02:16 pvdabeel Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://ac2i.homelinux.com/dctc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 RDEPEND="virtual/libc
 	=dev-libs/glib-1*

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.0.ebuild,v 1.1 2004/08/23 02:04:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.0.ebuild,v 1.2 2004/10/04 21:55:44 pvdabeel Exp $
 
 MY_P=dcgui-qt-${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="http://download.berlios.de/dcgui/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ppc ~alpha hppa amd64 ~ia64"
 IUSE="ssl"
 
 DEPEND=">=dev-libs/libxml2-2.4.22
