@@ -1,0 +1,41 @@
+# ChangeLog for app-office/phprojekt
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.1 2004/08/19 19:04:51 rl03 Exp $
+
+*phprojekt-3.2a (19 Aug 2004)
+
+  19 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +phprojekt-3.2a.ebuild, +phprojekt-4.0-r1.ebuild, +phprojekt-4.1.ebuild:
+  Moved from app-office/phprojekt to www-apps/phprojekt.
+
+  21 Apr 2004; Martin Holzer <mholzer@gentoo.org> phprojekt-4.0-r1.ebuild,
+  phprojekt-4.1.ebuild:
+  moving webapp-detect into pkg_setup. closes 44780 and 48380.
+
+*phprojekt-4.1 (30 Dec 2003)
+
+  30 Dec 2003; Martin Holzer <mholzer@gentoo.org> phprojekt-4.0-r1.ebuild,
+  phprojekt-4.1.ebuild:
+  adding webapps-apache
+
+*phprojekt-4.0-r1 (08 May 2003)
+
+  08 May 2003; Todd Heim <heim@gentoo.org> phprojekt-4.0-r1.ebuild:
+  checks for server root/user/group when using apache2 (bug 20373)
+
+*phprojekt-4.0 (19 Apr 2003)
+
+*phprojekt-3.2a (02 Aug 2002)
+
+  19 Apr 2003; Todd Heim <heim@gentoo.org> :
+  New version.
+  Replaced hardcoding of apache user/group.
+
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
+
+  02 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import.
+  (I wrote the ebuild myself.)
