@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f3b7f5376eb8fedf5ea574c9b9c62bf7 ChangeLog 676
-MD5 d34e214627aec25611da5bd8408298b6 fixdos-1.3.1.ebuild 797
-MD5 fceed13814d4e7434bc866632307d003 files/digest-fixdos-1.3.1 63
+MD5 d720ff1cb42682e1d62dfbc2e17d53d4 fixdos-1.3.1.ebuild 804
+MD5 0c7fc1b16e531b3dd10f5e6de78eb83f ChangeLog 759
 MD5 77e54eaf61a09e56d78d2825eddf682a files/fixdos-1.3.1-gentoo-makefile.diff 328
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35H7HTu7gpaalycRArzjAJ9vKLfMNN/M6FXUQvjDLUJIrQjvZACg2pSs
-+wz3faQc+zeZJXytySmOdGU=
-=dEVx
------END PGP SIGNATURE-----
+MD5 fceed13814d4e7434bc866632307d003 files/digest-fixdos-1.3.1 63
