@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r2.ebuild,v 1.1 2005/01/30 19:13:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r3.ebuild,v 1.1 2005/02/07 01:14:06 vapier Exp $
 
 inherit eutils toolchain-funcs
 
-PATCH_VER="1.1"
+PATCH_VER="1.2"
 DESCRIPTION="Console-based mouse driver"
 HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
 SRC_URI="ftp://arcana.linux.it/pub/gpm/${P}.tar.bz2
@@ -25,7 +25,10 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --sysconfdir=/etc/gpm || die "econf failed"
+	econf \
+		--libdir=/lib \
+		--sysconfdir=/etc/gpm \
+		|| die "econf failed"
 	emake \
 		CC=$(tc-getCC) \
 		AR=$(tc-getAR) \
@@ -36,8 +39,11 @@ src_compile() {
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
 	# fix lib symlinks since the default is missing/bogus
-	dosym libgpm.so.1.19.0 /usr/$(get_libdir)/libgpm.so.1
-	dosym libgpm.so.1 /usr/$(get_libdir)/libgpm.so
+	dosym libgpm.so.1.19.0 /$(get_libdir)/libgpm.so.1
+	dosym libgpm.so.1 /$(get_libdir)/libgpm.so
+	dodir /usr/$(get_libdir)
+	mv "${D}"/$(get_libdir)/*.a "${D}"/usr/$(get_libdir)/
+	gen_usr_ldscript libgpm.so
 
 	insinto /etc/gpm
 	doins conf/gpm-*.conf
