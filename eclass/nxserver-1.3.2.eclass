@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.3.2.eclass,v 1.5 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.3.2.eclass,v 1.6 2004/07/07 12:32:08 stuart Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -18,6 +18,9 @@ KEYWORDS="x86 -ppc -sparc -alpha -mips"
 RESTRICT="nomirror strip"
 
 SRC_URI="nxserver-${MY_PV}.i386.rpm"
+DEPEND="$DEPEND
+		 >=net-misc/nxclient-1.3.2"
+
 RDEPEND="$RDEPEND
 	     >=media-libs/jpeg-6b-r3
          >=sys-libs/glibc-2.3.2-r1
