@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a.ebuild,v 1.8 2003/04/21 20:30:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a.ebuild,v 1.9 2003/05/15 00:19:13 kumba Exp $
 
 #lame upstream conventions...
 #archive:    msyslog-1.09a-src.tar.gz
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc ~ppc hppa"
+KEYWORDS="x86 sparc ~ppc hppa ~mips"
 IUSE="postgres mysql"
 
 DEPEND="virtual/glibc"
