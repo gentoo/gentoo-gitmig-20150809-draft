@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cff5da7b9845250938ec652972ecb53c pygoogle-0.5.2.ebuild 505
-MD5 f79d05c98a5a951cafd320b350bad300 pygoogle-0.5.3.ebuild 470
-MD5 5ec3de12ccb97f6d88c1de0a0293cd69 ChangeLog 998
+MD5 3096590bde50df2e6fd1bd3e1af96186 ChangeLog 1106
 MD5 e85d4ed7b8ca1d5fa2391619f50ea115 metadata.xml 350
+MD5 551da6f5c0d2f9061cd279183e5bd4a5 pygoogle-0.5.2.ebuild 523
+MD5 f79d05c98a5a951cafd320b350bad300 pygoogle-0.5.3.ebuild 470
 MD5 7a3d1d7686c3d8b05a343229353e219f pygoogle-0.6.ebuild 559
 MD5 c50d99d20d45209e9c845ee0e27375d0 files/digest-pygoogle-0.5.2 62
 MD5 aa353cf606bfde1768c1a901945db39a files/digest-pygoogle-0.5.3 65
 MD5 71ede93ad8ae366e1dbf32e8158f7589 files/digest-pygoogle-0.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBg6P22jLqHNfbg2URAnqOAKDSr5CQjxH/jUI+ihqeWu3R/W7FFQCfbG9i
-SAuz9w570yoRTURMdqHLPew=
-=ldYO
------END PGP SIGNATURE-----
