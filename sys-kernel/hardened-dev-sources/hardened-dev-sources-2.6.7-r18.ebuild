@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.7-r18.ebuild,v 1.3 2005/01/12 19:27:19 tocharian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.7-r18.ebuild,v 1.4 2005/01/13 19:27:25 tocharian Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -9,8 +9,8 @@ detect_version
 
 DEPEND="!>=sys-apps/gradm-2.0.2"
 
-HGPV=7.12
-HGPV_SRC="mirror://gentoo/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
+HGPV=7.13
+HGPV_SRC="http://dev.gentoo.org/~tocharian/kernels/${PN}/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
 
 UNIPATCH_STRICTORDER="yes"
 UNIPATCH_LIST="${DISTDIR}/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"

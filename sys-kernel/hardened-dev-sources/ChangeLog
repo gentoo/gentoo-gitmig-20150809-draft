@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.51 2005/01/12 19:27:19 tocharian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.52 2005/01/13 19:27:25 tocharian Exp $
+
+  13 Jan 2005; Adam Mondl <tocharian@gentoo.org>
+  hardened-dev-sources-2.6.7-r18.ebuild:
+  Fix mistakes in CAN-2004-0814 patch.
 
 *hardened-dev-sources-2.6.7-r16 (12 Jan 2005)
 
