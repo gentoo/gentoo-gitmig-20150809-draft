@@ -7,6 +7,7 @@ S=${WORKDIR}/${P}.orig
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
 SRC_URI="http://http.us.debian.org/debian/pool/main/s/sparc-utils/${A}"
 HOMEPAGE="http://www.debian.org"
+DEPEND="sys-kernel/linux-headers"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
@@ -16,14 +17,15 @@ src_unpack() {
 
 src_compile() {
 
-	CFLAGS="-O2"
+	CFLAGS="-O3"
 	cd ${S}
-	emake -C elftoaout-2.3 CFLAGS="$CFLAGS"
-	emake -C src piggyback piggyback64 CFLAGS="$CFLAGS"
-	emake -C prtconf-1.3 all
-	# Not compiling at this time
+	emake -C elftoaout-2.3 CFLAGS="$CFLAGS" || die
+	emake -C src piggyback piggyback64 CFLAGS="$CFLAGS" || die
+	emake -C prtconf-1.3 all || die
+	# TODO: Fix compile issue
+	# Not compiling at this time, commented out
 	#emake -C sparc32-1.1
-	emake -C audioctl-1.3
+	emake -C audioctl-1.3 || die
 
 }
 
@@ -44,4 +46,11 @@ src_install() {
     #install -m 755 debian/audioctl ${D}/etc/init.d
     install -m 755 debian/audioctl.def ${D}/etc/default/audioctl
 
+	# Todo: Somehow set this automatically
+    echo "=============================================================="
+    echo "WARNING - You should make sure /dev/openprom exists. If you're"
+	echo "not using devfs and /dev/openprom does not exist, then issue the"
+	echo "command:"
+	echo "cd /dev; mknod openprom c 10 139"
+	echo "=============================================================="
 }
