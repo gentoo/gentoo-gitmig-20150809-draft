@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/mkinitrd-3.5.7.ebuild,v 1.1 2003/08/07 19:59:33 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/mkinitrd-3.5.7.ebuild,v 1.2 2003/08/07 20:56:02 pebenito Exp $
 
 IUSE="selinux"
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~ppc"
 DEPEND="dev-libs/popt
 	x86? ( dev-libs/dietlibc )"
 
-RDEPEND="app-shells/bash"
+RDEPEND="app-shells/bash
+	selinux? ( sys-apps/policycoreutils )"
 
 S=${WORKDIR}/${P}
 
