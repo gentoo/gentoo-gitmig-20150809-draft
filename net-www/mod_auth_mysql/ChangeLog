@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mod_auth_mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.7 2004/04/22 18:08:40 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.8 2004/06/04 00:01:36 zul Exp $
+
+  03 Jun 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  mod_auth_mysql-20030510-r1.ebuild, mod_auth_mysql-20030510-r2.ebuild,
+  mod_auth_mysql-20030510.ebuild, files/mod_auth_mysql.patch:
+  Added metadata.xml.
+  Added patch closes #52865.
+  -r2 marked stable.
 
   22 Apr 2004; Chuck Short <zul@gentoo.org> mod_auth_mysql-20030510-r2.ebuild:
   Installation of apache1 and apache2 modules. Closes #40265.
