@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0.ebuild,v 1.2 2002/01/20 16:16:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0.ebuild,v 1.3 2002/01/20 16:17:27 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -41,12 +41,6 @@ src_unpack () {
 	echo "#define DefaultGcc2i386Opt ${CFLAGS}" >>  config/cf/host.def
 	echo "#define GccWarningOptions -Wno" >>  config/cf/host.def
 	echo "#define DefaultCCOptions -ansi" >>  config/cf/host.def
-
-	cp ${S}/programs/Xserver/os/Imakefile \
-		${S}/programs/Xserver/os/Imakefile.orig
-	sed -e 's:NormalLibraryTarget(os,$(OBJS)):NormalLibraryTarget(os,$(OBJS) ../../lib/Xau/libXau.a):' \
-		${S}/programs/Xserver/os/Imakefile.orig \
-		> ${S}/programs/Xserver/os/Imakefile
 }
 
 src_compile() {
