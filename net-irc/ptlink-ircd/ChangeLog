@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ptlink-ircd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.5 2004/11/14 15:39:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.6 2004/11/25 20:31:53 swegener Exp $
+
+  25 Nov 2004; Sven Wegener <swegener@gentoo.org> ptlink-ircd-6.18.2.ebuild,
+  ptlink-ircd-6.19.1.ebuild:
+  Disabled ipv6 support as upstream considers it unstable.
 
 *ptlink-ircd-6.19.1 (14 Nov 2004)
 

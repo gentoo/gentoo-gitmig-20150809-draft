@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.1.ebuild,v 1.1 2004/11/14 15:39:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.1.ebuild,v 1.2 2004/11/25 20:31:53 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-IUSE="ipv6"
+IUSE=""
 DEPEND="sys-libs/zlib"
 
 S=${WORKDIR}/${MY_P}
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_enable ipv6) \
+		--disable-ipv6 \
 		|| die "econf failed"
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
