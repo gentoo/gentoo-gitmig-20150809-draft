@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.7 2004/10/21 04:38:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.8 2004/10/27 10:21:23 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -268,4 +268,4 @@ do_bmp() {
 	use bmp && [ "${NOBMP}" != "1" ]
 }
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_compile src_install
