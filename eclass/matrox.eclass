@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.3 2004/04/12 02:06:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.4 2004/04/12 02:09:01 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -24,6 +24,12 @@ RDEPEND="virtual/x11
 matrox_pkg_setup() {
 	# Require correct /usr/src/linux
 	check_KV
+
+	# Set up X11 implementation
+	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+	einfo "X11 implementation is ${X11_IMPLEM}."
 
 	# Force XFree86 4.3.0, 4.2.1 or 4.2.0 to be installed unless FORCE_VERSION
 	# is set. Need FORCE_VERSION for 4.3.99/4.4.0 compatibility until Matrox
