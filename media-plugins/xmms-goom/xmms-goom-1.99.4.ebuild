@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.1 2003/03/15 07:19:27 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.2 2003/07/12 18:40:46 aliz Exp $
 
 DESCRIPTION="Trippy Vis for XMMS using SDL."
 MY_P=${P/xmms-/}
@@ -10,7 +10,7 @@ HOMEPAGE="http://ios.free.fr/?page=projet&quoi=1&lg=AN"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="media-sound/xmms
 	media-libs/libsdl

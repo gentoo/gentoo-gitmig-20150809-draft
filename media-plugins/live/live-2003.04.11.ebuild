@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.04.11.ebuild,v 1.2 2003/06/11 00:31:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.04.11.ebuild,v 1.3 2003/07/12 18:40:39 aliz Exp $
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
 
@@ -9,7 +9,7 @@ MY_P=${P/-/.}
 SRC_URI="http://www.live.com/liveMedia/public/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=">=sys-apps/sed-4"
 S=${WORKDIR}/${PN}

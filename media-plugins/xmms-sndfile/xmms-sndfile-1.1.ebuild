@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.1.ebuild,v 1.1 2003/05/09 11:11:27 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.1.ebuild,v 1.2 2003/07/12 18:40:49 aliz Exp $
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}-${PV}
@@ -11,7 +11,7 @@ SRC_URI="http://www.zipworld.com.au/~erikd/XMMS/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="media-libs/libsndfile"
 RDEPEND="media-sound/xmms"

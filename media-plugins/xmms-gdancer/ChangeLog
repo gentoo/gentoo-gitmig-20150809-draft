@@ -1,8 +1,8 @@
 # ChangeLog for media-plugins/xmms-gdancer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-gdancer/ChangeLog,v 1.3 2003/02/12 07:21:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-gdancer/ChangeLog,v 1.4 2003/07/12 18:40:45 aliz Exp $
 
-* xmms-gdancer-0.4.5 (28 Jun 2002)
+*xmms-gdancer-0.4.5 (28 Jun 2002)
 
   25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xmms-gdancer-0.4.5.ebuild :
 

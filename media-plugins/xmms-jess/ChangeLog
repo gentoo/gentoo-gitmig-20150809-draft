@@ -1,8 +1,8 @@
 # ChangeLog for media-plugins/xmms-jess
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jess/ChangeLog,v 1.3 2003/02/12 07:21:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jess/ChangeLog,v 1.4 2003/07/12 18:40:47 aliz Exp $
 
-*<xmms-jess>-<2.9.1> (03 Jun 2002)
+*xmms-jess-2.9.1 (03 Jun 2002)
 
   25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xmms-jess-2.9.1.ebuild :
 

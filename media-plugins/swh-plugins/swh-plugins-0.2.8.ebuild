@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.2.8.ebuild,v 1.4 2003/02/13 12:59:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.2.8.ebuild,v 1.5 2003/07/12 18:40:40 aliz Exp $
 
 DESCRIPTION="Cool GPL'd audio plugins/effects for use with ALSA and LADSPA"
 HOMEPAGE="http://plugin.org.uk/"
@@ -8,7 +8,7 @@ SRC_URI="http://plugin.org.uk/releases/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="alsa? ( media-sound/alsa-driver )
 	dev-libs/fftw"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/xmms-lirc-1.2.ebuild,v 1.2 2003/02/13 13:03:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/xmms-lirc-1.2.ebuild,v 1.3 2003/07/12 18:40:47 aliz Exp $
 
 MY_P=${P/xmms-lirc/lirc-xmms-plugin}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.xmms.org/plugins_search.html?mode=search&query=lirc"
 SRC_URI="mirror://sourceforge/lirc/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="media-sound/xmms
 	app-misc/lirc

@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/xmms-arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.9 2003/02/12 07:20:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.10 2003/07/12 18:40:41 aliz Exp $
 
 *xmms-arts-0.4-r6 (25 Oct 2002)
 
@@ -42,6 +42,11 @@
   19 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   Fix determination of arts location, hopefully fix #6350.
+
+*xmms-arts-0.4-r3 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *xmms-arts-0.4-r2 (1 Feb 2002)
 

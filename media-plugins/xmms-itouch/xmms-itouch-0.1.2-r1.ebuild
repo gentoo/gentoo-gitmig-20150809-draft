@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/xmms-itouch-0.1.2-r1.ebuild,v 1.2 2003/02/13 13:02:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/xmms-itouch-0.1.2-r1.ebuild,v 1.3 2003/07/12 18:40:46 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XMMS plugin for multimedia keys on Logitech keyboards and others alike"
@@ -10,7 +10,7 @@ SRC_URI="http://www.saunalahti.fi/~syrjala/xmms-itouch/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="media-sound/xmms"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r5.ebuild,v 1.3 2003/02/13 13:01:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r5.ebuild,v 1.4 2003/07/12 18:40:42 aliz Exp $
 inherit kde-base libtool
 
 # Note: we set many vars e.g. DEPEND insteaed of extending them because this isn't a proper KDE app,
@@ -13,7 +13,7 @@ SRC_URI="http://stukach.com/hosted/m.i.a/xmmsarts/xmmsarts-0.4.tar.gz"
 HOMEPAGE="http://www.xmms.org/plugins_output.html"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 
 newdepend ">=media-sound/xmms-1.2.5-r1
 	    kde-base/arts"

@@ -1,6 +1,6 @@
 # Copyright 2002, Jens Schittenhelm
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.1 2002/10/25 07:20:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.2 2003/07/12 18:40:47 aliz Exp $
 
 S=${WORKDIR}/${PN/ofol}
 DESCRIPTION="A xmms remote that allows users to use K-Jofol skins"
@@ -11,7 +11,7 @@ DEPEND="media-sound/xmms"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 	emake || die

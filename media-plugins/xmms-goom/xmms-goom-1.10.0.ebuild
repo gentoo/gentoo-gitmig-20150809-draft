@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.10.0.ebuild,v 1.2 2003/02/13 13:02:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.10.0.ebuild,v 1.3 2003/07/12 18:40:45 aliz Exp $
 
 MY_P=${P/xmms-/}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://ios.free.fr/?page=projet&quoi=1&lg=AN"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="media-sound/xmms
 	media-libs/libsdl
