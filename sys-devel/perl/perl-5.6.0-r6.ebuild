@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r6.ebuild,v 1.2 2001/03/06 05:27:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r6.ebuild,v 1.3 2001/04/09 05:38:55 achim Exp $
 
 
 A=${P}.tar.gz
@@ -25,8 +25,8 @@ installarchlib=\`echo \$installarchlib | sed "s!\$prefix!\$installprefix!"\`
 installbin=\`echo \$installbin | sed "s!\$prefix!\$installprefix!"\`
 installman1dir=\$installprefix/share/man/man1
 installman3dir=\$installprefix/share/man/man3
-installman1ext=1
-installman3ext=3pl
+man1ext=1
+man3ext=3pl
 installprivlib=\`echo \$installprivlib | sed "s!\$prefix!\$installprefix!"\`
 installscript=\`echo \$installscript | sed "s!\$prefix!\$installprefix!"\`
 installsitelib=\`echo \$installsitelib | sed "s!\$prefix!\$installprefix!"\`
@@ -63,7 +63,8 @@ src_install() {
 
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
-    try make man1ext=1 man3ext=3pl  install
+    try make INSTALLMAN1DIR=${D}/usr/share/man/man1 \
+	     INSTALLMAN3DIR=${D}/usr/share/man/man3 install
     install -m 755 utils/pl2pm ${D}/usr/bin/pl2pm
 
 # Generate *.ph files with a trick. Is this sick or what?
