@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.3 2003/05/31 20:45:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.4 2003/06/08 08:00:57 rac Exp $
+
+  08 Jun 2003; <rac@gentoo.org> Graph-0.20101.ebuild:
+  Add IUSE, fix header
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org> Graph-0.20101.ebuild:
   Updated DESCRIPTION
