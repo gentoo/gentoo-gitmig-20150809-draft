@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.18 2004/06/24 22:25:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.19 2004/07/06 00:02:49 malc Exp $
+
+  05 Jul 2004; <malc@gentoo.org> idesk-0.5.6.ebuild:
+  Add ~amd64 closes bug #56053
 
   23 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> -idesk-0.3.5-r2.ebuild,
   -idesk-0.3.5.ebuild, -idesk-0.5.5.ebuild:

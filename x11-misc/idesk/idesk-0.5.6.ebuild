@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.5.6.ebuild,v 1.7 2004/06/24 22:25:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.5.6.ebuild,v 1.8 2004/07/06 00:02:49 malc Exp $
 
 DESCRIPTION="Utility to place icons on the root window"
 HOMEPAGE="http://idesk.timmfin.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/idesk/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND=">media-libs/imlib-1.9.14
