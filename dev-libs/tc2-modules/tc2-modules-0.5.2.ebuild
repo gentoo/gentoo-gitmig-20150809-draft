@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tc2/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="OpenSoftware"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips ~amd64 ~ia64"
 
 DEPEND=">=dev-libs/tc2-0.5.6"
 
