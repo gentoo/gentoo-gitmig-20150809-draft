@@ -34,3 +34,4 @@ move x11-misc/culmus media-fonts/culmus
 move net-mail/clamav app-antivirus/clamav
 move net-mail/f-prot app-antivirus/f-prot 
 move net-mail/vlnx app-antivirus/vlnx
+move net-mail/courier mail-mta/courier
