@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/gnewspost-0.6.ebuild,v 1.1 2002/12/07 06:32:56 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/gnewspost-0.6.ebuild,v 1.2 2003/02/13 15:15:26 vapier Exp $
 
 DESCRIPTION="A graphical frontend for newspost, a binary news poster"
 HOMEPAGE="http://www.vectorstar.net/~ash/gnewspost.html"
