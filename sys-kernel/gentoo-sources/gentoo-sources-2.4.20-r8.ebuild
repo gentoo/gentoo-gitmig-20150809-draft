@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r8.ebuild,v 1.1 2003/10/21 16:44:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r8.ebuild,v 1.2 2003/11/17 16:35:12 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -36,6 +36,9 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 
 	cd ${WORKDIR}/${KV/8/5}
+
+	# Move over new iptables-ROUTE patch
+	cp ${FILESDIR}/gentoo-sources-2.4.20-ipt-route.patch 727_iptables-ROUTE
 
 	# This is the *ratified* aavm USE flag, enables aavm support in this kernel
 	if [ -z "`use aavm`" ]; then
