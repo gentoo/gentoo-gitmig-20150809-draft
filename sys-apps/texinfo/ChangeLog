@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.28 2003/07/06 15:05:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.29 2003/07/16 07:54:43 pvdabeel Exp $
+
+  16 Jul 2003; root <root@gentoo.org> texinfo-4.5.ebuild:
+  Mark stable on ppc
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> texinfo-4.5.ebuild:
   Mark stable on alpha
