@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.197 2004/11/06 17:04:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.198 2004/11/10 00:15:15 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -154,6 +154,7 @@ livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livec
 mad - Adds support for mad (high-quality mp3 decoder library and cli frontend)
 maildir - Adds support for maildir (~/.maildir) style mail spools
 mailwrapper - Adds mailwrapper support to allow multiple MTAs to be installed
+makecheck - Work around to pull in packages needed to run with FEATURES=maketest
 matrox - Adds Matrox MGA support to mplayer
 mbox - Adds support for mbox (/var/spool/mail) style mail spools
 mcal - Adds support for MCAL calender system
