@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-0.5.ebuild,v 1.3 2003/07/12 23:21:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-0.5.ebuild,v 1.4 2004/05/30 19:44:05 khai Exp $
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 # can add lmsensor stuff
 IUSE=""
 
-DEPEND=">=dev-cpp/gtkmm-2.0
+DEPEND="=dev-cpp/gtkmm-2.2.11
 	>=dev-cpp/libgnomemm-1.3.9
 	>=dev-cpp/libgnomeuimm-1.3.11
 	>=dev-cpp/libglademm-2.0.0
