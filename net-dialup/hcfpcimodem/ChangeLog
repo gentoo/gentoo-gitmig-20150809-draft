@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/hcfpcimodem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.2 2003/02/12 07:52:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.3 2003/05/23 06:31:21 killian Exp $
+
+*hcfpcimodem-0.99mbsibeta02123100 (22 May 2003)
+
+  22 May 2003; Chuck Brewer <killian@gentoo.org>:
+  Added manifest.
 
 *hcfpcimodem-0.99mbsibeta02123100 (02 Feb 2003)
 
