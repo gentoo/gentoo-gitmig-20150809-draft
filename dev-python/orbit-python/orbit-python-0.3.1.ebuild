@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/orbit-python-0.3.1.ebuild,v 1.17 2004/06/25 01:35:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/orbit-python-0.3.1.ebuild,v 1.18 2004/08/21 15:59:29 foser Exp $
 
 DESCRIPTION="ORBit bindings for Python"
 SRC_URI="http://orbit-python.sault.org/files/${P}.tar.gz"
 HOMEPAGE="http://orbit-python.sault.org/"
 
 DEPEND="=dev-libs/glib-1.2*
-	>=gnome-base/ORBit-0.5.10-r1
+	=gnome-base/orbit-0*
 	virtual/python"
 
 SLOT="0"
