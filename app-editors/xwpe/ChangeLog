@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/xwpe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xwpe/ChangeLog,v 1.2 2002/07/14 20:42:14 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xwpe/ChangeLog,v 1.3 2002/08/06 17:35:49 gerk Exp $
 
 *xwpe-1.5.29a (14 Jul 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   14 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> xwpe-1.5.29a.ebuild:
   New version
