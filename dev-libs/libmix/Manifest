@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 60f12d145541b271f0b47053d11d8ac0 libmix-2.05.ebuild 876
-MD5 708f943efae4ec6cae6679dd805c6b6e ChangeLog 328
+MD5 23fbdd5861d2baee91a81964842560cf ChangeLog 444
+MD5 95719e4717d410d49b05fc79117d9a33 libmix-2.05.ebuild 880
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 5425a96241f0cf0db47570a6035e4972 files/digest-libmix-2.05 58
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBTiePHTu7gpaalycRAowSAKCPgDEIQXo+htdRowejDaqVIhzJgQCdHNTf
-8K9CzkcpYP7/ZyMMcpJ8iKo=
-=4rhi
+iD8DBQFB+/e8mdTrptrqvGERAkrkAJ4urm4buC/MUV7y9a6mHHz29D7JDQCfe2gI
+X2Wro/Xt5CIQOsKuKGKqQxM=
+=FS9v
 -----END PGP SIGNATURE-----
