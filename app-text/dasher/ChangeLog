@@ -1,6 +1,13 @@
 # ChangeLog for app-text/dasher
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dasher/ChangeLog,v 1.2 2003/04/26 21:27:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dasher/ChangeLog,v 1.3 2003/12/14 03:12:53 obz Exp $
+
+*dasher-3.2.1 (14 Dec 2003)
+
+  14 Dec 2003; Mike Gardiner <obz@gentoo.org> dasher-3.0.0.ebuild,
+  dasher-3.2.1.ebuild:
+  New version, removed keyword ~alpha from old version as its dependency (gtkmm)
+  isnt available for alpha
 
 *dasher-3.0.0 (16 Mar 2003)
 
