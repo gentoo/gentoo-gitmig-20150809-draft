@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-2.2.4.ebuild,v 1.8 2004/06/24 21:54:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-2.2.4.ebuild,v 1.9 2004/08/21 15:26:06 obz Exp $
 
 IUSE="doc"
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ppc ~alpha sparc hppa ~amd64"
 RDEPEND=">=dev-libs/glib-2.0.1
 	>=dev-libs/libxml2-2.4.20
 	>=dev-libs/popt-1.5
-	>=gnome-base/ORBit2-2.4
+	>=gnome-base/orbit-2.4
 	>=net-libs/linc-0.5.1"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.6.0.ebuild,v 1.9 2004/06/24 21:59:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.6.0.ebuild,v 1.10 2004/08/21 15:29:49 obz Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ~ia64 mips"
 LICENSE="LGPL-2.1 GPL-2"
 
 RDEPEND=">=dev-libs/glib-2.3.2
-	>=gnome-base/ORBit2-2.9.2
+	>=gnome-base/orbit-2.9.2
 	>=dev-libs/libxml2-2.4.20
 	dev-libs/popt
 	!gnome-base/bonobo-activation"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.2.ebuild,v 1.12 2004/06/24 21:57:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.2.ebuild,v 1.13 2004/08/21 15:27:57 obz Exp $
 
 inherit gnome2 eutils
 
@@ -17,7 +17,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 RDEPEND=">=x11-libs/gtk+-2.1
 	>=x11-libs/libwnck-2.3
-	>=gnome-base/ORBit2-2.4
+	>=gnome-base/orbit-2.4
 	>=gnome-base/gnome-vfs-2.3
 	>=gnome-base/gnome-desktop-2.3
 	>=gnome-base/libbonoboui-2.1.1

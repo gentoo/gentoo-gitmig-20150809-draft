@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.7.ebuild,v 1.21 2004/07/14 15:09:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.7.ebuild,v 1.22 2004/08/21 15:18:10 obz Exp $
 
 IUSE="doc nls kde"
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc alpha"
 
 RDEPEND=">=media-libs/imlib-1.9.10
 	>=media-sound/esound-0.2.23
-	>=gnome-base/ORBit-0.5.12
+	=gnome-base/orbit-0*
 	=x11-libs/gtk+-1.2*
 	<sys-libs/db-2
 	doc? ( app-text/docbook-sgml

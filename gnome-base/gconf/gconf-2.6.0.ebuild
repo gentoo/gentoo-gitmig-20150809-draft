@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.6.0.ebuild,v 1.9 2004/07/31 06:38:55 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.6.0.ebuild,v 1.10 2004/08/21 15:23:30 obz Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ SLOT="2"
 KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ~ia64 mips"
 
 RDEPEND=">=dev-libs/glib-2.0.1
-	>=gnome-base/ORBit2-2.4
+	>=gnome-base/orbit-2.4
 	>=dev-libs/libxml2-2
 	dev-libs/popt
 	>=x11-libs/gtk+-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.0.ebuild,v 1.11 2004/07/03 19:16:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.0.ebuild,v 1.12 2004/08/21 15:22:42 obz Exp $
 
 # FIXME : can use gnutls
 inherit gnome2 eutils
@@ -17,7 +17,7 @@ LICENSE="GPL-2 LGPL-2"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-1.2
-	>=gnome-base/ORBit2-2.9
+	>=gnome-base/orbit-2.9
 	>=gnome-base/libbonobo-2
 	>=dev-libs/libxml2-2.2.8
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2-r1.ebuild,v 1.5 2004/08/08 00:59:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2-r1.ebuild,v 1.6 2004/08/21 15:25:13 obz Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -43,7 +43,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/libart_lgpl-2.3.16
 
 	>=dev-libs/libIDL-0.8.3
-	>=gnome-base/ORBit2-2.10.3
+	>=gnome-base/orbit-2.10.3
 
 	>=gnome-base/gconf-2.6.2
 	>=gnome-base/gnome-keyring-0.2.1

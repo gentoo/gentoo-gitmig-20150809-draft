@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.4.1.ebuild,v 1.4 2004/07/11 19:59:42 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.4.1.ebuild,v 1.5 2004/08/21 15:26:42 obz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -53,7 +53,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/librsvg-2.4
 	>=gnome-base/libglade-2.0.1
 	>=x11-libs/libwnck-2.4.0.1-r1
-	>=gnome-base/ORBit2-2.8.3
+	>=gnome-base/orbit-2.8.3
 	>=x11-themes/gnome-icon-theme-1.0.9
 	>=x11-themes/gnome-themes-2.4.1"
 

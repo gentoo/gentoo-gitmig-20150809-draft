@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.21.ebuild,v 1.12 2004/08/07 23:02:29 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.21.ebuild,v 1.13 2004/08/21 15:19:33 obz Exp $
 
 IUSE="nls"
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/oaf-0.6.8
-	>=gnome-base/ORBit-0.5.13
+	=gnome-base/orbit-0*
 	>=gnome-base/gnome-print-0.30
 	>=media-libs/gdk-pixbuf-0.6"
 

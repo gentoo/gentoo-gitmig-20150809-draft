@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.4.0.ebuild,v 1.15 2004/06/24 21:59:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.4.0.ebuild,v 1.16 2004/08/21 15:28:51 obz Exp $
 
 inherit gnome2
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	>=gnome-base/gnome-vfs-2.4
 	>=media-sound/esound-0.2.26
 	>=media-libs/audiofile-0.2.3
-	>=gnome-base/ORBit2-2.8"
+	>=gnome-base/orbit-2.8"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21
