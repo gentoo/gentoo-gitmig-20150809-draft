@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.9 2004/07/15 02:26:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.10 2005/03/19 15:25:38 agriffis Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~amd64 ~mips"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~sparc x86"
 
 src_unpack() {
 	unpack ${P}.tar.gz
