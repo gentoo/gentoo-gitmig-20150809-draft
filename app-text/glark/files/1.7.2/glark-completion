@@ -4,7 +4,7 @@
 
 _glark()
 {
-	local cur
+	local cur prev
 
 	COMPREPLY=()
 	cur=${COMP_WORDS[COMP_CWORD]}
