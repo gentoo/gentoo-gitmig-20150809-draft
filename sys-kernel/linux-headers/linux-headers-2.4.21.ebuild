@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.15 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.16 2003/11/25 03:31:35 agriffis Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
-KEYWORDS="-* amd64 ~sparc ~x86 -mips"
+KEYWORDS="-* amd64 ~sparc ~x86 -mips ~alpha"
 
 
 # Figure out what architecture we are, and set ARCH appropriately
