@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.12 2004/11/23 17:35:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.13 2004/11/25 22:37:10 cyfred Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -14,7 +14,7 @@ IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype freetype font-server xv
 
 IUSE_VIDEO_CARDS="savage trident sis530 trio ts300 mach64 i810 igs"
 
-inherit eutils flag-o-matic toolchain-funcs x11 kmod
+inherit eutils flag-o-matic toolchain-funcs x11 linux-info
 
 filter-flags "-funroll-loops"
 
@@ -133,11 +133,11 @@ src_unpack() {
 			fi
 		fi
 
-		get_kernel_info
+		get_version
 		if [ "${KV_MAJOR}" -ge "2" -a "${KV_MINOR}" -ge "4" ] || \
 		     (  [ -e "${ROOT}/usr/src/linux" ] && \
-			      [ ! `is_kernel "2" "2"` ] ) || \
-				  [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
+			      [ ! $(kernel_is "2" "2") ] ) || \
+				  [ "$(uname -r | cut -d. -f1,2)" != "2.2" ]
 		then
 			echo "#define HasLinuxInput YES" >> config/cf/host.def
 		fi
