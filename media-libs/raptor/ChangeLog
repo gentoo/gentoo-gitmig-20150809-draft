@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.11 2004/03/31 17:33:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.12 2004/04/08 07:29:22 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> raptor-1.2.0.ebuild:
+  Stable x86.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> raptor-1.2.0.ebuild:
   Removed explicit S=
