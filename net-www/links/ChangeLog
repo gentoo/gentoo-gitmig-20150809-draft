@@ -1,13 +1,13 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.30 2003/09/09 09:37:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.31 2003/09/09 09:39:23 seemant Exp $
 
   09 Sep 2003; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre11.ebuild,
   links-2.1_pre9.ebuild:
   added gpm to dependency list with fbcon. Thanks to Brandy Westcott
-  <brandy@gentoo.org> for the fix, provided in bug #23703 by Paul Slinski
-  <pauls@globaliqx.com>.  Also added DirectFB support thanks to Florian
-  Löding <flonai@gmx.de> in bug #26464 opened by: Evan Langlois
+  <brandy@gentoo.org> for the providing the fix in bug #23703 opened by 
+  Paul Slinski <pauls@globaliqx.com>.  Also added DirectFB support thanks
+  to Florian Löding <flonai@gmx.de> in bug #26464 opened by: Evan Langlois
   <ekl@crc.homelinux.org>
 
 *links-2.1_pre11 (11 Jun 2003)
