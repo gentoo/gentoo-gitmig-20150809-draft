@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gngb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/ChangeLog,v 1.2 2003/09/10 15:58:15 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/ChangeLog,v 1.3 2004/02/05 11:30:05 mr_bones_ Exp $
+
+*gngb-20040115 (05 Feb 2004)
+
+  05 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> gngb-20040115.ebuild:
+  version bump (bug 40432)
 
 *gngb-20030809 (09 Aug 2003)
 
