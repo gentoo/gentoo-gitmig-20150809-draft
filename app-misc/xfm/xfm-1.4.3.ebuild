@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xfm/xfm-1.4.3.ebuild,v 1.2 2003/09/27 02:32:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xfm/xfm-1.4.3.ebuild,v 1.3 2003/10/08 04:06:51 hillster Exp $
 
 DESCRIPTION="A classic X11 file manager"
 HOMEPAGE="http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/"
 SRC_URI="http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/${P}.tar.gz"
 
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
