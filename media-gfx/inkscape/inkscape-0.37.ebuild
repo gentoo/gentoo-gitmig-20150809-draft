@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.37.ebuild,v 1.2 2004/02/18 19:37:32 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.37.ebuild,v 1.3 2004/02/19 10:14:00 zypher Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.inkscape.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~x86 ~ppc"
 IUSE="gnome mmx"
 
@@ -31,5 +31,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29"
 
 G2CONF="${G2CONF} --with-xft --with-popt"
+use mmx || G2CONF="${G2CONF} --disable-mmx"
+use gnome && G2CONF="${G2CONF} --with-gnome-print"
 
 DOCS="AUTHORS COPYING ChangeLog HACKING NEWS README"
