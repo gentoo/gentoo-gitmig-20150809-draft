@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/nice
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nice/ChangeLog,v 1.1 2004/11/14 13:22:19 axxo Exp $
+
+*nice-0.9.9 (14 Nov 2004)
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +files/nice-0.9.9.patch, +nice-0.9.9.ebuild:
+  initial import, ebuild submitted by Jason R Briggs <jason@lateralnz.co>
+
