@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/oer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/ChangeLog,v 1.4 2004/07/22 01:23:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/ChangeLog,v 1.5 2004/11/13 00:05:28 swegener Exp $
+
+*oer-1.0.65 (13 Nov 2004)
+
+  13 Nov 2004; Sven Wegener <swegener@gentoo.org> +oer-1.0.65.ebuild:
+  Version bump.
 
   22 Jul 2004; Sven Wegener <swegener@gentoo.org> oer-1.0.64.ebuild:
   Marked stable on x86.
