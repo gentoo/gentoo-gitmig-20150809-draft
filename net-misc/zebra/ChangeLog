@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/zebra
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.4 2003/05/31 19:31:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.5 2003/06/01 01:12:14 solar Exp $
 
 *zebra-0.93b-r1 (31 May 2003)
 
-  28 Apr 2003; Ned Ludd <solar@gentoo.org> Manifest,
+  31 May 2003; <solar@gentoo.org> Manifest, zebra-0.93b-r1.ebuild:
+  added snmp,binutils to depend and dodir was not working as expected
+
+  31 May 2003; Ned Ludd <solar@gentoo.org> Manifest,
   zebra-0.93b-r1.ebuild:
   Added support for ospfapi extentions, and better 
   {init,conf}.d scripts
@@ -23,4 +26,3 @@
 
   22 Apr 2003; Joshua Brindle <method@gentoo.org> zebra-0.93a.ebuild:
   Initial commit courtesy of solarx <solar@linbsd.net>
-
