@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.3 2004/12/14 02:13:25 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.4 2005/01/14 01:26:25 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -44,7 +44,7 @@ GTK_SHARP_COMPONENT_BUILD_DEPS=""
 # Actual build dir, is the same as the configure switch name most of the time
 GTK_SHARP_COMPONENT_BUILD_DIR=${PN/-sharp/}
 
-DESCRIPTION="${GTK_SHARP_COMPONENT_BUILD} plugin for gstreamer"
+DESCRIPTION="${GTK_SHARP_COMPONENT_BUILD} component of gtk-sharp"
 SRC_URI="mirror://sourceforge/gtk-sharp/${MY_P}.tar.gz
 		mirror://gentoo/${MY_P}-configurable.diff.gz"
 
