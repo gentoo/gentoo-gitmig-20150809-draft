@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.2.ebuild,v 1.7 2004/01/25 21:25:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.2.ebuild,v 1.8 2004/06/02 08:00:32 mr_bones_ Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc amd64 hppa"
 
 # FIXME : should rethink gda/gnomedb USE stuff
 
-IUSE="libgda gnomedb python bonobo"
+IUSE="libgda python bonobo" # gnomedb
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
