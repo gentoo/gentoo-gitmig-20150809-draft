@@ -1,0 +1,33 @@
+--- xerces-2_3_0/src/org/apache/html/dom/HTMLFrameElementImpl.java	2003-05-09 14:15:04.000000000 +0300
++++ xerces-2_3_0/src/org/apache/html/dom/HTMLFrameElementImpl.java.new	2003-05-09 14:14:56.000000000 +0300
+@@ -67,7 +67,7 @@
+  * @see org.w3c.dom.html.HTMLFrameElement
+  * @see org.apache.xerces.dom.ElementImpl
+  */
+-public class HTMLFrameElementImpl
++public abstract class HTMLFrameElementImpl
+     extends HTMLElementImpl
+     implements HTMLFrameElement
+ {
+--- xerces-2_3_0/src/org/apache/html/dom/HTMLIFrameElementImpl.java	2003-05-09 14:14:45.000000000 +0300
++++ xerces-2_3_0/src/org/apache/html/dom/HTMLIFrameElementImpl.java.new	2003-05-09 14:14:36.000000000 +0300
+@@ -67,7 +67,7 @@
+  * @see org.w3c.dom.html.HTMLIFrameElement
+  * @see org.apache.xerces.dom.ElementImpl
+  */
+-public class HTMLIFrameElementImpl
++public abstract class HTMLIFrameElementImpl
+     extends HTMLElementImpl
+     implements HTMLIFrameElement
+ {
+--- xerces-2_3_0/src/org/apache/html/dom/HTMLObjectElementImpl.java	2003-05-09 14:14:25.000000000 +0300
++++ xerces-2_3_0/src/org/apache/html/dom/HTMLObjectElementImpl.java.new	2003-05-09 14:14:14.000000000 +0300
+@@ -67,7 +67,7 @@
+  * @see org.w3c.dom.html.HTMLObjectElement
+  * @see org.apache.xerces.dom.ElementImpl
+  */
+-public class HTMLObjectElementImpl
++public abstract class HTMLObjectElementImpl
+     extends HTMLElementImpl
+     implements HTMLObjectElement, HTMLFormControl
+ {
