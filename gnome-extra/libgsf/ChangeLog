@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgsf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.42 2004/12/29 02:26:11 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.43 2005/01/17 12:57:58 gustavoz Exp $
+
+  17 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> libgsf-1.10.0.ebuild:
+  Stable on sparc
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
