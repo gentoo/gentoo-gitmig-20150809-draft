@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.12 2004/07/15 00:12:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.13 2004/08/22 05:12:47 obz Exp $
 
 IUSE="sdl ssl"
 
@@ -32,7 +32,7 @@ DEPEND="=dev-libs/pwlib-1.3.11*
 	gnome-base/gnome-vfs
 	gnome-base/gconf
 	gnome-base/libbonobo
-	gnome-base/ORBit2
+	>=gnome-base/orbit-2
 	dev-libs/popt
 	dev-libs/libxml2
 	sys-libs/zlib

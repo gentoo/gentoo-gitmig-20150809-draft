@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.00.ebuild,v 1.9 2004/08/11 21:22:56 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.00.ebuild,v 1.10 2004/08/22 05:12:47 obz Exp $
 
 inherit gnome2
 
@@ -29,7 +29,7 @@ RDEPEND="~dev-libs/pwlib-1.6.3
 	>=gnome-base/gconf-2.0
 	>=dev-libs/libxml2-2.6.1
 	>=media-sound/esound-0.2.28
-	>=gnome-base/ORBit2-2.5.0"
+	>=gnome-base/orbit-2.5.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
