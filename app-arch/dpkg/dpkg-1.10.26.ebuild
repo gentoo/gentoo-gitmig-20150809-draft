@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.18.1.ebuild,v 1.8 2005/01/01 11:43:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.26.ebuild,v 1.1 2005/01/27 13:57:19 lanius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~arm ~amd64"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.0
@@ -23,7 +23,7 @@ src_compile() {
 	cd main
 	ln -s ../archtable
 	cd ..
-	epatch ${FILESDIR}/${PN}-1.10.18.patch
+	epatch ${FILESDIR}/${P}.patch
 	./configure || die
 	make || die
 }
@@ -32,8 +32,6 @@ src_install() {
 	make DESTDIR=${D} install || die
 	rm -f ${D}/usr/sbin/install-info
 	rm -f ${D}/usr/bin/md5sum
-	dodir /etc/alternatives
-	insinto /etc/alternatives
-	doins scripts/README.alternatives
+	mv ${D}/usr/etc ${D}/
 	dodoc ChangeLog INSTALL THANKS TODO
 }
