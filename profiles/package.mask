@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3619 2005/02/13 20:28:40 pylon Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3620 2005/02/14 10:24:37 robbat2 Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# <robbat2@gentoo.org> (14 Feb 2005)
+# progsreiserfs does bad things when modifying reiserfs partitions but is the
+# only API with read operations, so we need to keep it.  the latest rc version
+# is the most stable of the lot, but still don't trust it's write ops!
+<sys-fs/progsreiserfs-0.3.1_rc8
 
 # <pylon@gentoo.org> (13 Feb 2005)
 # From website: "We know that 0.4.x is a bit buggy on trades :), for people who
