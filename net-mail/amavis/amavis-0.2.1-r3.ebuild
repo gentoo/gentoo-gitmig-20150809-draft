@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.1 2002/09/05 12:02:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.2 2002/09/23 20:16:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Virus Scanner"
 SRC_URI="http://www.amavis.org/dist/${P}.tar.gz"
-HOMEPAGE="http://www.amavis.org"
+HOMEPAGE="http://www.amavis.org/"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 DEPEND="net-mail/maildrop
