@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r2.ebuild,v 1.10 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r2.ebuild,v 1.11 2003/09/10 05:00:46 msterret Exp $
 
 S=${WORKDIR}/usr
 DESCRIPTION="Real Player 8 basic"
@@ -21,7 +21,7 @@ dyn_fetch() {
 		digest_check ${y}
 			if [ $? -ne 0 ]; then
 				einfo "Please download this yourself from www.real.com"
-   			einfo "and place it in ${DISTDIR}"
+				einfo "and place it in ${DISTDIR}"
 				exit 1
 			fi
 	done
