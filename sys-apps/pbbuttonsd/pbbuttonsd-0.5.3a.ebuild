@@ -1,43 +1,37 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.3a.ebuild,v 1.4 2003/06/23 00:25:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.3a.ebuild,v 1.5 2003/08/17 21:38:32 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="PBButtons is a program to map special Powerbook/iBook keys in Linux"
-SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
+DESCRIPTION="program to map special Powerbook/iBook keys in Linux"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
+SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~ppc"
+
 DEPEND="virtual/glibc"
 RDEPEND=""
-SLOT=0
-LICENSE="GPL-2"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	einfo "Patching in fix to enable replace_pmud support"
-	patch -p0 < ${FILESDIR}/pbbuttons-0.5.2-replace_pmud.patch || die "Can't apply patch"
-
+	epatch ${FILESDIR}/pbbuttons-0.5.2-replace_pmud.patch
 }
 
 src_compile() {
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc || die "sorry, pbbuttons configure failed"
-	make || die "sorry, failed to compile pbbuttons"
+	econf || die
+	make || die "compile failed"
 }
 
 src_install() {
-
 	dodir /etc/power
 	make sysconfdir=${D}/etc DESTDIR=${D} install || die "failed to install"
 	exeinto /etc/init.d ; newexe ${FILESDIR}/pbbuttonsd.rc5 pbbuttonsd
 	dodoc README COPYING
-
 }
 
-src_postinstall(){
+pkg_postinst(){
 	einfo "This version of pbbuttonsd can replace PMUD functionality."
 	einfo "If you want PMUD installed and running, you should set"
 	einfo "replace_pmud=no in /etc/pbbuttonsd.conf. Otherwise you can"
