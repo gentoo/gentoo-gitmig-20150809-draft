@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.0/make.defaults,v 1.2 2004/06/26 23:29:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.0/make.defaults,v 1.3 2004/08/03 04:39:47 vapier Exp $
 
 # System-wide defaults for the gcc 3.2 Portage system (2004.0)
 
@@ -23,3 +23,5 @@ svga tcpd truetype X xml2 xmms xv zlib"
 ARCH="x86"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
+
+FEATURES="sandbox sfperms"

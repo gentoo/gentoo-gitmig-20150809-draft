@@ -29,3 +29,5 @@ motif opengl mozilla png truetype ppc"
 # 3dfx 3dnow avi icc icc-pgo mmx svga sse nas
 
 ACCEPT_KEYWORDS="ppc"
+
+FEATURES="sandbox sfperms"

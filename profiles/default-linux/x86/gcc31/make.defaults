@@ -16,3 +16,4 @@ ARCH="x86"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
 
+FEATURES="sandbox sfperms"

@@ -34,3 +34,4 @@ ACCEPT_KEYWORDS="ppc"
 
 COMPILER="gcc3"
 
+FEATURES="sandbox sfperms"
