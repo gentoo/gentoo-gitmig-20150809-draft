@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/kahakai
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.12 2004/02/11 05:36:16 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.13 2004/03/25 06:46:40 weeve Exp $
+
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> kahakai-0.6.1.ebuild:
+  Changed -sparc keyword to ~sparc.
 
 *kahakai-0.6.2 (11 Feb 2004)
 
