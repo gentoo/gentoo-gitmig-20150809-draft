@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4.ebuild,v 1.6 2004/01/21 11:03:24 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4.ebuild,v 1.7 2004/01/28 03:11:07 spider Exp $
 
 IUSE="esd"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64 ~mips"
 
 DEPEND="virtual/glibc
-	esd? ( >=media-sound/esound-0.2.22 )"
+	!mips? ( esd? ( >=media-sound/esound-0.2.22 ) )"
 
 src_unpack() {
 	unpack ${A}

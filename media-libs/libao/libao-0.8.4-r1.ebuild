@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.4 2004/01/26 00:35:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.5 2004/01/28 03:11:07 spider Exp $
 
 DESCRIPTION="the audio output library"
 HOMEPAGE="http://www.xiph.org/ao/"
@@ -11,11 +11,13 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 IUSE="alsa arts esd nas"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( >=media-sound/esound-0.2.22 )
 	nas? ( media-libs/nas )"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}
