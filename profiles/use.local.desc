@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.920 2005/01/31 20:52:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.921 2005/02/01 14:48:41 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -247,10 +247,12 @@ gnustep-base/gnustep-make:layout-osx-like - Layout GNUstep FHS like OSX's (viola
 gnustep-base/gnustep-make:non-flattened - do not flatten launch and library paths for GNUstep packages allowing executable within a .app to be launched based on processor type
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kbugbuster:kcal - Add support for kcal (calendar) format
+kde-base/kcontrol:ieee1394 - Enable firewire support in Info Center.
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 kde-base/kdeartwork-kscreensaver:xscreensaver - Builds xscreensavers as compile time
 kde-base/kdeartwork:xscreensaver - Builds xscreensavers as compile time
+kde-base/kdebase:ieee1394 - Enable firewire support in Info Center.
 kde-base/kdebase:logitech-mouse - Builds module for configuring logitech mice.
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
