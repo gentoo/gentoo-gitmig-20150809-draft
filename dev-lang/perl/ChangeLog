@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.92 2004/11/13 01:04:02 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.93 2004/11/14 01:00:27 rac Exp $
+
+  13 Nov 2004; Robert Coie <rac@gentoo.org> perl-5.8.5-r1.ebuild:
+  Go ahead and use the myarch that exists
 
 *perl-5.8.5-r1 (12 Nov 2004)
 

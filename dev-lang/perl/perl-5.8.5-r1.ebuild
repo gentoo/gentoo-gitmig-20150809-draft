@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r1.ebuild,v 1.1 2004/11/13 01:04:02 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r1.ebuild,v 1.2 2004/11/14 01:00:27 rac Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -115,14 +115,6 @@ src_unpack() {
 
 src_configure() {
 
-	# this attempts to mimic (and the code is directly derived from)
-	# Configure's attempt to guess archname.  it will be appended to
-	# the old versions to search.
-
-	local perlarch=$(echo $(arch)-$(uname | sed -e 's/^[^=]*=//' -e 's/\///g' \
-		| tr '[A-Z]' '[a-z]'))
-	local inclist=$(for v in $PERL_OLDVERSEN; do echo -n "$v $v/$perlarch "; done)
-
 	# some arches and -O do not mix :)
 	use arm && replace-flags -O? -O1
 	use ppc && replace-flags -O? -O1
@@ -144,6 +136,8 @@ src_configure() {
 	else
 		myarch="${CHOST%%-*}-linux"
 	fi
+
+	local inclist=$(for v in $PERL_OLDVERSEN; do echo -n "$v $v/$myarch "; done)
 
 	# allow either gdbm to provide ndbm (in <gdbm/ndbm.h>) or db1
 
