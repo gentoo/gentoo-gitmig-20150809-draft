@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.22 2004/06/09 21:04:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.23 2004/06/10 01:56:35 seemant Exp $
+
+  09 Jun 2004; Seemant Kulleen <seemant@gentoo.org> xterm-191.ebuild:
+  any mention of Xaw3d to the configure script, and it assumes you want it. So
+  changed the use condition slightly, to close bug #53455 by Paul Taylor
+  <birder@ozemail.com.au> while I file a bug with Thomas
 
 *xterm-191 (09 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.1 2004/06/09 21:04:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.2 2004/06/10 01:56:35 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,10 +22,12 @@ src_compile() {
 
 	filter-flags "-fstack-protector"
 
+	local myconf
+	use Xaw3d && myconf="--with-Xaw3d"
+
 	econf \
 		`use_enable truetype freetype` \
 		`use_enable unicode luit` \
-		`use_with Xaw3d` \
 		--libdir=/etc \
 		--with-utempter \
 		--enable-ansi-color \
@@ -42,7 +44,7 @@ src_compile() {
 		--enable-warnings \
 		--disable-imake \
 		--disable-toolbar \
-		|| die
+		${myconf} || die
 	emake || die
 }
 
