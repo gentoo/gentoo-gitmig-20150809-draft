@@ -1,16 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.5.ebuild,v 1.5 2004/06/06 14:16:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.6.ebuild,v 1.1 2004/06/06 14:16:30 dragonheart Exp $
 
 DESCRIPTION="Runset Init suite, a replacement for sysv style initd"
 HOMEPAGE="http://www.icewalkers.com/softlib/app/app_00233.html"
-SRC_URI="http://www.ibiblio.org/pub/Linux/system/daemons/init/${P}.tar.gz"
+SRC_URI="ftp://ftp.ocis.net/pub/users/ldeutsch/release/${P}.tar.bz2"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e "s/\(int planned_shutdown;\)/volatile \1/" runset/common.h
+}
 
 src_compile() {
 	econf || die
