@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.7.0.ebuild,v 1.2 2003/06/07 13:25:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.7.0.ebuild,v 1.3 2003/06/09 16:18:03 lu_zero Exp $
 
 inherit gnome2 debug
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://epiphany.mozdev.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 G2CONF="${G2CONF} --with-mozilla-snapshot=1.3"
@@ -30,6 +30,14 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
+
+src_unpack () {
+		unpack ${A}
+		cd ${S}
+		if [ "${ARCH}" = "ppc" ] ; then
+		epatch ${FILESDIR}/ppc_va_list.patch
+		fi
+}
 
 pkg_setup () {
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
