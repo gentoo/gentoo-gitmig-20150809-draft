@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.1.20040501.ebuild,v 1.2 2004/05/06 03:17:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.1.20040508.ebuild,v 1.1 2004/05/12 20:28:02 vapier Exp $
 
 inherit enlightenment flag-o-matic gcc
 
