@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/gtkdialog
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.1 2004/03/20 12:39:12 pyrania Exp $
+
+*gtkdialog-0.58.8 (20 Mar 2004)
+
+  20 Mar 2004; Markus Nigbur <pyrania@gentoo.org> gtkdialog-0.58.8.ebuild,
+  metadata.xml:
+  Initial import. Closing bug #39869.
+
