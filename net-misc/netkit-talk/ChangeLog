@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.8 2003/04/03 18:20:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.9 2003/05/05 15:29:46 mholzer Exp $
 
 *netkit-talk-0.17-r3 (03 Apr 2003)
+
+  05 May 2003; Martin Holzer <mholzer@gentoo.org> files/talk.xinetd:
+  Change service name. closes #18251.
 
   03 Apr 2003; Martin Holzer <mholzer@gentoo.org> netkit-talk-0.17-r3.ebuild,
   files/netkit-talk-0.17-r3-gentoo.diff, files/talk.xinetd:
