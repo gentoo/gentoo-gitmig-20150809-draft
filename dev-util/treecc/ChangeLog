@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/treecc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.4 2003/10/15 12:33:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.5 2003/11/07 16:31:51 scandium Exp $
+
+  07 Nov 2003; Rainer Groesslinger <scandium@gentoo.org> treecc-0.2.6.ebuild:
+  Added ~mips and ~alpha keywords, changed HOMEPAGE
 
   15 Oct 2003; Jason Wever <weeve@gentoo.org> treecc-0.2.6.ebuild:
   Added ~sparc keyword.
