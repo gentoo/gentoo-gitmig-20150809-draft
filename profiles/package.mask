@@ -87,11 +87,6 @@ app-office/openoffice-ximian
 # sinchronously)
 =app-sci/blas-19940131
 
-# <carpaski@@gentoo.org> (8 Oct 2003)
-# python-2.2 python-2.3 integration ebuild
->=sys-apps/portage-2.0.49-r16
-=sys-apps/portage-2.0.49-r14
-
 # <robbat2@gentoo.org> (20 Oct 2003)
 # needs gcc3.3/tcl8.4 fixing
 dev-embedded/picptk
