@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # qpkg - query portage package system for various information
 #
@@ -6,9 +6,11 @@
 # This program is distributed under the terms of GPL version 2.
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
+# Additional code thanks to:
+#	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.21 2003/06/08 13:18:48 mholzer Exp $
-ID='$Id: qpkg,v 1.21 2003/06/08 13:18:48 mholzer Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.22 2003/06/08 20:27:12 lostlogic Exp $
+ID='$Id: qpkg,v 1.22 2003/06/08 20:27:12 lostlogic Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -16,6 +18,7 @@ PROG=`basename ${0}`
 # Parse args
 verb=0
 group="*"
+params=${#}
 while [ ${#} -gt 0 ]
 do
 	a=${1}
@@ -57,14 +60,6 @@ do
 
 	-I|--installed)
 		inst=y
-		;;
-
-	-m|--masked)
-		grepmask="-L"
-		;;
-
-	-n|--non-masked)
-		grepmask="-l"
 		;;
 
 	-U|--uninstalled)
@@ -121,8 +116,7 @@ do
 			usage=y
 			break
 		fi
-		# Kill a trailing slash
-		arg=${a%/}
+		arg=$a
 		;;
 		
 	esac
@@ -176,9 +170,7 @@ ${BR}Package Selection:
   ${BL}-fp, --find-pattern${NO}${T}finds to package that owns file matching *<pattern>*
   ${BL}-I,  --installed${NO}${T}Include${YL} only${NO} installed packages
   ${BL}-U,  --uninstalled${NO}${T}Include${YL} only${NO} uninstalled packages
-  ${BL}-m,  --masked${NO}${T}Include${YL} only${NO} masked packages
-  ${BL}-n,  --non-masked${NO}${T}Include${YL} only${NO} non-masked packages
-  ${BL}-g,  --group${NO}${T}${T}Find by group (can be combined with other searches)
+  ${BL}-g,  --group${NO}${T}${T}Find by goup (can be combined with other searches)
 
 ${BR}Information Selection:
   ${BL}-l,  --list${NO}${T}${T}List package content
@@ -193,7 +185,7 @@ ${T}${T}${T}depending on selected packages
 
 ${BR}Operation Modifiers:
   ${BL}-nc, --no-color${NO}${T}don't use colors
-  ${BL}-v,  --verbose${NO}${T}Be more verbose [ can be repeated twice ]
+  ${BL}-v,  --verbose${NO}${T}Be more verbose [ can be repeated twise ]
   ${BL}-vv${NO}${T}${T}${T}Same as ${BL}-v -v${NO}
 
 ${YL}Notes${NO}: 
@@ -205,16 +197,12 @@ ${YL}*${NO} The operation of some flags has been changed by the
 ${YL}*${NO} When using${BL} -f${NO} with ${BL}-l${NO} or ${BL}--check.. -v${NO} options, only
   matching files will be displayed, unless ${BL}-v${NO} is doubled, 
   (yet more verbose) or ${BL}-vv${NO} is used.
-${YL}*${NO} When using${BL} -q${NO}, it is important to note that the querying of deps is NOT
-  a complete check, because qpkg is not advanced enough (nor can it reasonably
-  made so) to check complete deps with versions.  Please use ${GR}depclean${NO} or
-  ${GR}emerge --dep-clean${NO} to more completely check the dependency sanity of your
-  system.
+
 
 ${YL}Examples${NO}:
   ${PROG} --dups		print duplicates oldest first
   ${PROG} --dups -v	.. with versions
-  ${PROG}			print list of all packages
+  ${PROG}			print list of installed packages
   ${PROG} porta -I		print versions of installed portage
   ${PROG} porta -i		.. + versions in portage tree + descriptions 
 			and homepages
@@ -223,13 +211,6 @@ ${YL}Examples${NO}:
   ${PROG} -f /bin/ls	print package(s) that own /bin/ls
 "
 	exit
-fi
-
-if [ "${grepmask}" ]; then
-	mask=`python -c 'import portage; print portage.settings["ACCEPT_KEYWORDS"];' 2> /dev/null`
-	echo -e "Currently accepted keywords: ${BL}${mask}${NO}"
-	echo -e
-	mask=`echo ${mask} | perl -pe 's/\s+/|/'`
 fi
 
 #For the --dups switch only
@@ -317,10 +298,9 @@ else
 		    ipak=`echo ${ipak}|sed -e "s: :\n:g"|grep ${group}`
 		fi
 		if [ ${arg} ]; then
-		    ipak=`echo ${ipak}|sed -e "s: :\n:g"|grep ${arg}`
-		fi
-		if [ -n "${mask}" ]; then
-		    ipak=`echo ${ipak}|xargs -r egrep ${grepmask} "^KEYWORDS=.*[[:space:]\"\'](${mask})[[:space:]\"\']"`
+			# avoid ${arg}="db" from pulling in every installed package
+			temp="/var/db/pkg/.*${arg}"	
+			ipak=`echo ${ipak}|sed -e "s: :\n:g"|grep ${temp}`
 		fi
 	fi
 	# not installed packages (yet:-)
@@ -332,9 +312,6 @@ else
 		if [ ${arg} ]; then
 		    upak=`echo ${upak}|sed -e "s: :\n:g"|grep ${arg}`
 		fi
-		if [ -n "${mask}" ]; then
-		    upak=`echo ${upak}|xargs -r egrep ${grepmask} "^KEYWORDS=.*[[:space:]\"\'](${mask})[[:space:]\"\']"`
-		fi
 	fi
 fi
 
@@ -345,10 +322,20 @@ for p in ${ipak} ${upak} -;do
 
 	# cut common prefix from ebuild name and mark installed/uninstalled packages
 	# Note: iii/uuu will be replaced by the pipe at the end
-	n=`echo $p | sed -e "s:^/var/db/pkg/${X}/${X}/${X}.ebuild:iii \1/\3:" \
-		-e "s:^/usr/portage/${X}/${X}/${X}\.ebuild:uuu \1/\3:"`
-	d=`dirname ${p}`
+	n=${p%.ebuild}
+	var_db_pkg="/var/db/pkg/"
+	n=${n/${var_db_pkg}/iii }
+	usr_portage="/usr/portage/"
+	n=${n/${usr_portage}/uuu }
+	n=${n/\/*\//\/}
+
+	d=${p%\/*.ebuild} # faster d=`dirname ${p}`
 	echo ${n}
+	
+	# if we have no passed parameters then 
+	# we can skip the extra conditional checks
+	[[ ${params} == 0 ]] && continue;
+	
 	if [ ${verb} -gt 1 ];then
 		echo "vvv    ${p}"
 	fi
@@ -357,11 +344,6 @@ for p in ${ipak} ${upak} -;do
 		home=`grep HOMEPAGE ${p}| cut -d\" -f2`
 		desc=`grep DESCRIPTION ${p}| cut -d\" -f2`
 		echo -e "${T}${BL}${desc}${NO} [ ${YL}${home}${NO} ]"
-	fi
-
-	if [ "${mask}" ]; then
-		keywords=`grep KEYWORDS ${p}| cut -d\" -f2`
-		echo -e "${T}Keywords: ${BL}${keywords}${NO}"
 	fi
 	
 	if [ "${query}" ]; then
@@ -491,9 +473,9 @@ for p in ${ipak} ${upak} -;do
 	fi
 	
 done | (
-	if [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o "${query}" -o "${mask}" -o ${verb} -gt 0 \) ]; then
+	if [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o "${query}" -o ${verb} -gt 0 \) ]; then
 		sed -e "s:-r[0-9]\+$::" -e "s:-[0-9][^-]*$::"|sort -k2|uniq -1
-	elif [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o "${query}" -o "${mask}" -o ${verb} -lt 2 \) ]; then
+	elif [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o "${query}" -o ${verb} -lt 2 \) ]; then
 		sort -k2|uniq -1
 	else
 		cat
