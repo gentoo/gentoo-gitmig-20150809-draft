@@ -1,11 +1,10 @@
 # ChangeLog for app-sci/tbass
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.17 2004/07/26 17:45:36 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.18 2004/07/27 00:49:41 chrb Exp $
 
   26 Jul 2004; Chris Bainbridge <chrb@gentoo.org> -tbass-20030108.ebuild,
   -tbass-20030725.3.3.ebuild:
-  removed unsupported upstream versions, added ebuild pointing to new package
-  balsa-async
+  removed unsupported upstream versions, moved package to app-sci/balsa
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   tbass-20030108.ebuild, tbass-20030725.3.3.ebuild:
