@@ -1,9 +1,13 @@
-MD5 5e49bb03e4bab38f28580e0cfde15bd7 directvnc-0.7.5.ebuild 720
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a60f93eccb09898f04332a5c790b4186 ChangeLog 1739
-MD5 b2673bfa9f78a67afa5fea4ced00bceb directvnc-0.7.ebuild 1051
-MD5 d94778e431e48873e5ae7af682cd9ef1 directvnc-0.6.1.ebuild 1116
-MD5 9e792b9e883ac4e08d9c8b4f2a2fcc65 files/digest-directvnc-0.6.1 66
+MD5 3ce25540f575f9890bc4d01185319396 directvnc-0.7.5.ebuild 729
 MD5 a1b7ab72c34387a69358b4581f994406 files/digest-directvnc-0.7.5 67
-MD5 3b30db3eb3656f29a17db50ccd50b0ea files/directvnc-0.6.1-api-fix.patch 4760
-MD5 d2395089148b22859489047d28472f6f files/directvnc-0.7-api-fix.patch 346
-MD5 13c3317809b0df0689cd4d12b189801f files/digest-directvnc-0.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA/YJxHTu7gpaalycRApZCAKCrramoOPzIeVvWB+KVbgX6vhmLMACfYVPi
+u60F26iLFdXxvr2c9BQQkFw=
+=eatM
+-----END PGP SIGNATURE-----
