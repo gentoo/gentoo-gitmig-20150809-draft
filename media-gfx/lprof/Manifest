@@ -1,0 +1,4 @@
+MD5 455f896034766e72a2d7cf44a3bd744d lprof-1.09.ebuild 772
+MD5 ccd27f9677836e20d828c165ad6d12b4 files/lprof-1.0.9_mrr_patch4.patch 12493
+MD5 c68c921dfc549a38258045190fedf541 files/lprof-1.0.9_fix-include.patch 290
+MD5 d761545bacdfb7a9e189c7c1186ecac6 files/digest-lprof-1.09 63
