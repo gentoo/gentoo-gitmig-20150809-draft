@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.11 2004/01/04 15:35:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.12 2004/01/17 11:14:47 aliz Exp $
 inherit kde
 
 need-autoconf 2.5
@@ -11,7 +11,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 IUSE="alsa cups ipv6 ssl doc ldap"
 DESCRIPTION="KDE libraries needed by all kde programs"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.2"
 LICENSE="GPL-2 LGPL-2"
