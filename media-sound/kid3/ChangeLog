@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.8 2004/10/20 19:34:13 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.9 2004/11/01 20:01:39 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  kid3-0.5.ebuild:
+  Marked ~ppc64; bug #64642
 
 *kid3-0.5 (20 Oct 2004)
 
