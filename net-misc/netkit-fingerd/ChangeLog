@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-fingerd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/ChangeLog,v 1.13 2004/07/23 18:42:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/ChangeLog,v 1.14 2004/08/21 05:16:51 vapier Exp $
+
+  21 Aug 2004; Mike Frysinger <vapier@gentoo.org>
+  netkit-fingerd-0.17-r2.ebuild:
+  Add xinetd entry #43825 by Thomas Eckert.
 
   23 Jul 2004; Tom Gall <tgall@gentoo.org> netkit-fingerd-0.17-r2.ebuild:
   stable on ppc64, bug #57655
