@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/pygoogle
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/ChangeLog,v 1.1 2003/03/02 18:15:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/ChangeLog,v 1.2 2003/04/04 18:41:31 liquidx Exp $
 
 *pygoogle-0.5.2 (02 Mar 2003)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> pygoogle-0.5.2.ebuild:
+  bump to stable
 
   02 Mar 2003; Alastair Tse <liquidx@gentoo.org> pygoogle-0.5.2.ebuild files/digest-pygoogle-0.5.2 :
   Initial Ebuild. Bug #11925.
