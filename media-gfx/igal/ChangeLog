@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/igal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.6 2003/03/16 05:53:46 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.7 2003/04/03 22:17:19 absinthe Exp $
 
 *igal-1.4 (16 Mar 2003)
+
+  03 Apr 2003; Dylan Carlson <absinthe@gentoo.org> igal-1.4.ebuild:
+  x86 moved to stable.
 
   16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> igal-1.4.ebuild,
   files/igal-1.4-gentoo.diff:
