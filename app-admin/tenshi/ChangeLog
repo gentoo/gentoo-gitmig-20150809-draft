@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.5 2005/01/01 11:31:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.6 2005/01/25 11:59:49 tigger Exp $
+
+  25 Jan 2005; Rob Holland <tigger@gentoo.org> tenshi-0.3.2.ebuild:
+  fix binary packages. per #77137. thanks to lars.geiger@gmx.net.
 
 *tenshi-0.3.2 (09 Nov 2004)
 

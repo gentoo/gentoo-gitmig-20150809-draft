@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.3.2.ebuild,v 1.3 2005/01/01 11:31:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.3.2.ebuild,v 1.4 2005/01/25 11:59:49 tigger Exp $
 
 inherit eutils
 
@@ -17,16 +17,16 @@ IUSE=""
 RDEPEND="dev-lang/perl
 	sys-apps/coreutils"
 
-pkg_preinst() {
+pkg_setup() {
 	enewgroup tenshi
 	enewuser tenshi -1 /bin/false /var/lib/tenshi tenshi
-	fowners tenshi:root /etc/tenshi/tenshi.conf
-	fowners tenshi:root /var/lib/tenshi
 }
 
 src_install() {
 	sed -i -e "s:-o tenshi::" Makefile
 	emake DESTDIR=${D} install
+	fowners tenshi:root /etc/tenshi/tenshi.conf
+	fowners tenshi:root /var/lib/tenshi
 	doman tenshi.8
 	exeinto /etc/init.d
 	newexe tenshi.gentoo-init tenshi
