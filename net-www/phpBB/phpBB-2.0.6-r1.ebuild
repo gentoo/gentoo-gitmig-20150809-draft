@@ -1,25 +1,26 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Tim Raedisch <tim.raedisch@udo.edu>
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.6-r1.ebuild,v 1.6 2004/01/04 18:07:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.6-r1.ebuild,v 1.7 2004/02/05 03:56:00 vapier Exp $
 
-S=${WORKDIR}/${PN}2
+inherit webapp-apache
+
 DESCRIPTION="phpBB is a high powered, fully scalable, and highly customisable open-source bulletin board package."
 HOMEPAGE="http://www.phpbb.com/"
 SRC_URI="mirror://sourceforge/phpbb/${P}.tar.bz2"
-RESTRICT="nomirror"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+RESTRICT="nomirror"
 
 DEPEND=">=sys-devel/patch-2.5.9"
 RDEPEND="virtual/php"
 
-inherit webapp-apache
-webapp-detect || NO_WEBSERVER=1
+S=${WORKDIR}/${PN}2
 
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
+
 	webapp-pkg_setup "${NO_WEBSERVER}"
 
 	if [ -d ${HTTPD_ROOT}/phpbb ] ; then
