@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
-MD5 0a59588a8ee3ca2bfb2b45d38c018ee8 ChangeLog 4916
-MD5 4aa9dd899889f7ce00c3b88e38eab8b9 mythfrontend-0.17.ebuild 5764
+MD5 fc6d9193a4a352832bdb84908021f339 ChangeLog 5021
+MD5 497a76c6a7a46f89009fdef2d063e4e9 mythfrontend-0.17.ebuild 5842
 MD5 0a31ca05a47f289619d2b8d77cfbff52 mythfrontend-0.16.ebuild 5726
 MD5 590c9a6a89442b347c3a5f52d1781351 files/digest-mythfrontend-0.17 66
 MD5 fb4505fe7e8b832e115d777bf836d3bc files/digest-mythfrontend-0.16 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCDa3O5+pdB4IBr0URAn+ZAKClZjFwq652dJvAKnhCmvp4Cppi4gCeNbyh
-xIiNYW1ov4tzfNMz75xcuxM=
-=Pagh
+iD8DBQFCDjeP5+pdB4IBr0URAhUeAJ0RJwUfgkc5pkRRDsFsM3RzlZ87KgCfadpM
+QKTDS4Evv19SqJiBQTM4X/4=
+=xfX5
 -----END PGP SIGNATURE-----
