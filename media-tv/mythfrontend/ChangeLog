@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.5 2003/09/17 06:22:30 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.6 2003/10/20 03:07:33 max Exp $
+
+*mythfrontend-0.12 (19 Oct 2003)
+
+  19 Oct 2003; Max Kalika <max@gentoo.org> mythfrontend-0.12.ebuild:
+  Bump to version 0.12. Add support for alsa, lcd, lirc, xvmc. Add Qt mysql
+  support check.
 
   16 Sep 2003; Max Kalika <max@gentoo.org> mythfrontend-0.10.ebuild,
   mythfrontend-0.11.ebuild:
