@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-led/gpsim-led-0.0.3.ebuild,v 1.3 2004/03/05 08:30:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-led/gpsim-led-0.0.3.ebuild,v 1.4 2004/03/23 18:20:26 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SRC_URI="http://www.dattalo.com/gnupic/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=dev-embedded/gpsim-0.20*"
 
