@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.11 2005/01/02 10:41:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.12 2005/01/03 03:26:58 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -35,7 +35,7 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/libfame-0.9.0
 	theora? ( media-libs/libtheora )
 	speex? ( media-libs/speex )
-	libcaca? ( media-libs/libcaca )
+	media-libs/libcaca
 	samba? ( net-fs/samba )
 	png? ( media-libs/libpng )
 	mng? ( media-libs/libmng )"
