@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.1_p2-r1.ebuild,v 1.6 2005/03/03 15:04:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.1_p2-r1.ebuild,v 1.7 2005/03/07 19:47:11 stuart Exp $
 
 inherit eutils webapp
 
@@ -13,9 +13,8 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="alpha ppc ~hppa sparc x86 amd64 ~mips"
 IUSE=""
-DEPEND=">=net-www/apache-1.3
-	>=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
-	virtual/php
+DEPEND=">=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
+	virtual/httpd-php
 	sys-apps/findutils
 	!<=dev-db/phpmyadmin-2.5.6"
 S=${WORKDIR}/${MY_P}
@@ -77,16 +76,6 @@ src_install() {
 	# Identify the configuration files that this app uses
 
 	webapp_configfile ${MY_HTDOCSDIR}/config.inc.php
-
-	# Identify any script files that need #! headers adding to run under
-	# a CGI script (such as PHP/CGI)
-	#
-	# for phpmyadmin, we *assume* that all .php files that don't end in
-	# .inc.php need to have CGI/BIN support added
-
-	for x in `find . -name '*.php' -print | grep -v 'inc.php'` ; do
-		webapp_runbycgibin php ${MY_HTDOCSDIR}/$x
-	done
 
 	# there are no files which need to be owned by the web server
 
