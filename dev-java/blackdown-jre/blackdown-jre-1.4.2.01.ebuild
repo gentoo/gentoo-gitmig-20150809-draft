@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01.ebuild,v 1.1 2004/11/24 20:51:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01.ebuild,v 1.2 2004/11/26 12:48:02 lv Exp $
 
 inherit java versionator
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.blackdown.org"
 
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE="mozilla"
 DEPEND="virtual/libc
 	>=dev-java/java-config-1.2.11
