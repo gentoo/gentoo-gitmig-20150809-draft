@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3.ebuild,v 1.5 2005/01/22 15:39:18 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3.ebuild,v 1.6 2005/02/28 21:54:13 xmerlin Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -22,6 +24,8 @@ DEPEND="dev-libs/popt
 # need to add dev-perl/Mail-IMAPClient inside ldirectord above
 
 src_compile() {
+	append-ldflags -Wl,-z,now
+
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \

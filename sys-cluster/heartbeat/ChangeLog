@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.30 2005/01/22 15:03:21 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.31 2005/02/28 21:54:13 xmerlin Exp $
+
+  28 Feb 2005; Christian Zoffoli <xmerlin@gentoo.org> heartbeat-1.2.2.ebuild,
+  heartbeat-1.2.3.ebuild:
+  fixed lazy binding
 
   22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> heartbeat-1.2.2.ebuild,
   heartbeat-1.2.3.ebuild:
