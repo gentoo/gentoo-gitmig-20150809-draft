@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ioncube_loaders-2.1.ebuild,v 1.2 2003/08/03 23:07:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ioncube_loaders-2.1.ebuild,v 1.3 2003/09/08 04:53:50 msterret Exp $
 
 MY_P="${PN}_${PV}"
 PHP_VER="4.3"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/php
-        !dev-php/turck-mmcache"
+	!dev-php/turck-mmcache"
 S="${WORKDIR}/ioncube"
 RESTRICT="nomirror fetch nostrip"
 

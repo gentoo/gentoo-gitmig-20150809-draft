@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2.ebuild,v 1.5 2003/09/08 04:45:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2.ebuild,v 1.6 2003/09/08 04:49:18 msterret Exp $
 
 PHPSAPI="cli"
 inherit php eutils
@@ -71,7 +71,7 @@ src_install() {
 		mv php.ini-dist php.ini
 	fi
 
-    insinto /etc/php4
+	insinto /etc/php4
 	doins php.ini
 
 	if [ "`use java`" ]; then

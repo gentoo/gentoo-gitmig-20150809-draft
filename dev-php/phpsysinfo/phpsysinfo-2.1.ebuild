@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1.ebuild,v 1.5 2003/07/12 10:57:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1.ebuild,v 1.6 2003/09/08 04:50:13 msterret Exp $
 
 DESCRIPTION="phpSysInfo is a nice package that will display your system stats via PHP."
 HOMEPAGE="http://phpsysinfo.sourceforge.net/"
@@ -16,14 +16,14 @@ src_compile() { :; }
 
 src_install() {
 	insinto /home/httpd/htdocs/phpsysinfo
-        doins *.{php,dtd}
+	doins *.{php,dtd}
 	cp -pR templates ${D}/home/httpd/htdocs/phpsysinfo
 	cp -pR includes ${D}/home/httpd/htdocs/phpsysinfo
 
 }
 pkg_postinst() {
-        einfo
-        einfo "Your stats are now availible at http://yoursever/phpsysinfo"
-        einfo
+	einfo
+	einfo "Your stats are now availible at http://yoursever/phpsysinfo"
+	einfo
 }
 
