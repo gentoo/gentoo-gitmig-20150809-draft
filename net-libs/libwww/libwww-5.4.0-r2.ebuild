@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.23 2004/10/23 07:49:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.24 2005/02/14 21:39:26 mr_bones_ Exp $
 
 inherit eutils
 
@@ -34,9 +34,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-automake-gentoo.diff	# bug #41959
 	epatch ${FILESDIR}/${P}-disable-ndebug-gentoo.diff	# bug #50483
 
-	if use macos; then
-		glibtoolize -c -f || die "libtoolize failed"
-	elif use ppc-macos; then
+	if use ppc-macos; then
 		glibtoolize -c -f || die "libtoolize failed"
 	else
 		libtoolize -c -f || die "libtoolize failed"
@@ -61,7 +59,6 @@ src_compile() {
 
 	emake check-am || die
 
-	use macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
 	use ppc-macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
 
 	emake || die
