@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.7 2002/09/21 04:09:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.8 2002/12/01 08:54:49 mkennedy Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -16,6 +16,8 @@
 # Azarah.
 
 
+IUSE=""
+
 S=${WORKDIR}/xc/lib/Xaw3d
 DESCRIPTION="the Xaw3d is a drop-in 3D replacement of the Xaw widget set
 	     which comes with X. It is used e.g. by gv the ghostcript frontend."
@@ -29,7 +31,6 @@ KEYWORDS="x86 ppc sparc sparc64"
 
 # There _might_ be something else, but I doubt it.
 DEPEND="virtual/x11"
-RDEPEND=$DEPEND
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -39,6 +40,11 @@ src_unpack() {
 	# That's why I manually override the source_unpack function.
 	patch -p0 <${FILESDIR}/Xaw3d-xfree86.diff || die
 	patch -p0 <${FILESDIR}/Xaw3d-out-of-tree.diff || die
+
+	# This adds more familiar scroll-bar look and feel for Emacs and
+	# others <mkennedy@gentoo.org>
+	mv Imakefile Imakefile~ \
+		&& sed -e 's,#.*EXTRA_DEFINES,EXTRA_DEFINES,g' <Imakefile~ >Imakefile || die
 }
 
 src_compile() {
