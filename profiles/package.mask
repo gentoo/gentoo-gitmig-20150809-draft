@@ -62,6 +62,8 @@
 >=media-libs/gst-plugins-0.5
 >=gnome-extra/quick-lounge-applet-1
 gnome-extra/nautilus-media
+>=gnome-base/control-center-2.2.0
+
 
 # <lu_zero@gentoo.org> (28 Jan 2003)
 #not sure that it works now, sorry
