@@ -1,7 +1,15 @@
-MD5 669d693e0f99e82a858904c9c88ee1de gnome-network-1.99.5.ebuild 746
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dae02fbb08e200b0f853b63b28f75c59 ChangeLog 1594
 MD5 4d9e4259b07bfc7801270423ac47859f gnome-network-1.0.2-r1.ebuild 1242
-MD5 00fddddf57f5380849fe5f8e8f4b195a ChangeLog 1485
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 a65af257115997c21e82848c0a4bcb4f files/digest-gnome-network-1.0.2-r1 72
 MD5 23dad5479665e61efae339c1bc116f79 files/gnome-network-1.0.2-db_fix.patch 338
-MD5 203542f6c25b5ffe4d32d55d19770f61 files/digest-gnome-network-1.99.5 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcuaRRkyva5PS18kRAvcXAKCM5nK2Szez/752dUZDPUBd52KyhwCfXGoR
+JadgbBA0tKJWZj4j4hLp6uY=
+=Usq0
+-----END PGP SIGNATURE-----
