@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chasen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.14 2004/10/19 09:56:09 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.15 2004/10/21 21:45:08 mr_bones_ Exp $
+
+  21 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> -chasen-2.3.3.ebuild:
+  clean older buggy ebuild
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> chasen-2.3.3-r3.ebuild:
   Stable on amd64.
