@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.36 2004/10/23 02:39:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.37 2004/10/25 07:49:17 fafhrd Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -24,7 +24,7 @@ virtual/ghc					dev-lang/ghc-bin
 virtual/ghostscript			app-text/ghostscript
 virtual/glu					x11-base/xorg-x11
 virtual/glut				media-libs/glut
-virtual/gnustep-back		gnustep-base/gnustep-back-xlib
+virtual/gnustep-back			gnustep-base/gnustep-back-art
 virtual/gzip				app-arch/gzip
 virtual/httpd-php			dev-php/mod_php
 virtual/imap-c-client		net-libs/c-client
