@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/virt-mail-admin/virt-mail-admin-0.0.1.ebuild,v 1.1 2004/04/09 22:14:50 klasikahl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/virt-mail-admin/virt-mail-admin-0.0.1.ebuild,v 1.2 2004/04/10 01:10:38 klasikahl Exp $
 
 inherit webapp-apache
 
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="PHP frontend to the virtual mail database that is needed in the Virtual/Mailhost Postfix Howto"
 
 HOMEPAGE="http://gentoo.org/proj/en/virt-mail-admin.xml"
 
