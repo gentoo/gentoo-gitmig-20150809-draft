@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for net-misc/howl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.1 2003/12/27 16:25:28 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.2 2004/01/15 05:32:30 vapier Exp $
 
   27 Dec 2003; Lisa Seelye <lisa@gentoo.org> howl-0.8.2.ebuild,
   howl-0.8.3.ebuild, howl-0.9.ebuild, files/mDNSResponder.conf.d,
