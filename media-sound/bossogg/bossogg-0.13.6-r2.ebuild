@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.10 2005/03/02 05:05:55 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.1 2005/03/02 05:05:55 jnc Exp $
 
 inherit eutils
 
@@ -41,6 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
+	libtoolize --copy --force	# per bug number 83003
 	econf --enable-shout \
 	      `use_enable oggvorbis vorbis` \
 	      `use_enable flac` \
