@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.60.ebuild,v 1.3 2003/02/25 21:19:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.64.ebuild,v 1.1 2003/03/05 16:03:08 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV}
@@ -11,10 +11,10 @@ ETYPE="sources"
 # What's in this kernel?
 
 # INCLUDED:
-# beta ${PV} sources
+# beta 2.5.59 kernel sources with the -mm1 patch.
 
-DESCRIPTION="Full sources for the development branch of the linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.5/linux-${OKV}.tar.bz2"
+DESCRIPTION="Full sources for the Gentoo Linux kernel"
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
