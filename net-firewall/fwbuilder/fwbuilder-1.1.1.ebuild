@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.1.ebuild,v 1.5 2004/04/27 18:21:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.1.ebuild,v 1.6 2004/06/09 21:10:21 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -43,7 +43,7 @@ src_compile() {
 
 	sed -i -e "s:#define HAVE_XMLSAVEFORMATFILE 1://:" config.h
 
-	if [ "`use static`" ]
+	if use static
 	then
 		emake LDFLAGS="-static" || die "emake LDFLAGS failed"
 	else
