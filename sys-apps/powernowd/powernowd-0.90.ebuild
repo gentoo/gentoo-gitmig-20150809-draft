@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powernowd/powernowd-0.90.ebuild,v 1.1 2004/04/05 23:50:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powernowd/powernowd-0.90.ebuild,v 1.2 2004/04/06 23:27:45 mr_bones_ Exp $
 
 EV=hun6
 DESCRIPTION="Daemon to control the speed and voltage of CPUs"
@@ -11,8 +11,9 @@ SRC_URI="http://n-dimensional.de/projects/cpufreq/${P}${EV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
-S=${WORKDIR}/${P}${EV}
+S="${WORKDIR}/${P}${EV}"
 
 src_unpack() {
 	unpack ${A}
@@ -21,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-    emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
