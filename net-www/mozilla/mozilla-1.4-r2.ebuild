@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r1.ebuild,v 1.1 2003/07/18 15:51:45 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r2.ebuild,v 1.1 2003/07/24 17:44:04 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -42,7 +42,7 @@ strip-flags
 export CFLAGS="${CFLAGS//-O?}"
 export CXXFLAGS="${CFLAGS//-O?}"
 
-EMVER="0.76.2"
+EMVER="0.76.3"
 IPCVER="1.0.3"
 
 PATCH_VER="1.0"
