@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/cdrtools-dvdr-2.01_alpha04.ebuild,v 1.1 2003/03/05 02:39:32 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/cdrtools-dvdr-2.01_alpha04.ebuild,v 1.2 2003/03/05 02:45:49 agenkin Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc"
+PROVIDE="virtual/cdrecord"
 
 DVDR_PATCH_P=cdrtools-1.11a37-dvd.patch
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${PN/-dvdr/}-${PV/_alpha/a}.tar.gz
