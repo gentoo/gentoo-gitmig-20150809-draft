@@ -1,28 +1,30 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/files/jabber.rc6,v 1.2 2002/02/13 16:04:42 verwilst Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/files/jabber.rc6,v 1.3 2002/05/11 08:13:42 verwilst Exp $
 depend() {
         need net
 }
 
-checkconfig() {
-        if [ ! -e /usr/jabber-1.4.2/jabber.xml ] ; then
-                eerror "You need an  /usr/jabber/jabber.xml file first"
-                return 1
-        fi
-}
-
 start() {
-        checkconfig || return 1
         ebegin "Starting Jabber Server"
-        start-stop-daemon --start --quiet --exec /usr/sbin/jabber-server
+
+        cd /usr/jabber-1.4.2
+
+        ./jabberd/jabberd -c multiple.xml &
+        ./jabberd/jabberd -c aimtrans.xml &
+        ./jabberd/jabberd -c msntrans.xml &
+        ./jabberd/jabberd -c yahootrans.xml &
+        ./jabberd/jabberd -c confserv.xml &
+        ./jabberd/jabberd -c icqtrans.xml &
+	./jabberd/jabberd -c judserv.xml &
+
         eend $?
 }
 
 stop() {
         ebegin "Stopping Jabber Server"
-        start-stop-daemon --stop --quiet --pidfile /usr/jabber-1.4.2/jabber.pid
+        killall jabberd
+        sleep 2
         eend $?
 }

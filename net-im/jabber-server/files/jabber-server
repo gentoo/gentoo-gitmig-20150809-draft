@@ -1,5 +1,0 @@
-#!/bin/sh
-
-cd /usr/jabber-1.4.2
-chown -R jabber.jabber /usr/jabber
-su - jabber -c "./jabberd/jabberd &"
