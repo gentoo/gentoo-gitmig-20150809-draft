@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.32 2003/11/09 03:38:33 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.33 2003/11/17 02:09:18 strider Exp $
+
+  16 Nov 2003; Adrian Almenar <strider@gentoo.org> java-config-1.1.5.ebuild:
+  java-config 1.1.5 moved to stable.
 
 *java-config-1.1.5 (08 Nov 2003)
 
