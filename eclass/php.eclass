@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.7 2003/04/24 10:32:52 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.8 2003/04/24 16:33:41 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -38,7 +38,7 @@ S=${WORKDIR}/${MY_P}
 [ -z "$SRC_URI" ] 	&& SRC_URI="http://us3.php.net/distributions/${MY_P}.tar.bz2"
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
 
-IUSE="${IUSE} berkdb cjk crypt curl exif firebird flash freetds gd gdbm imap java jpeg ldap libwww mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype X xml xml2 zlib"
+IUSE="${IUSE} berkdb cjk crypt curl exif firebird flash freetds gd gdbm imap informix java jpeg ldap libwww mcal mysql nls oci8 odbc pam pdflib pic png postgres qt snmp spell ssl tiff truetype X xml xml2 zlib"
 IUSE="${IUSE} phpbcmath phpbz2 phpcalender phpdbase phpftp phpiconv phpmimemagic phpsafemode phpsockets phpsysv phpwddx"
 
 #removed: gmp
@@ -59,6 +59,7 @@ DEPEND="${DEPEND}
     jpeg? ( >=media-libs/jpeg-6b )
     ldap? ( >=net-nds/openldap-1.2.11 )
     libwww? ( >=net-libs/libwww-5.3.2 )
+	mcal? ( dev-libs/libmcal )
     mysql? ( >=dev-db/mysql-3.23.26 )
     nls? ( sys-devel/gettext )
     odbc? ( >=dev-db/unixODBC-1.8.13 )
@@ -157,6 +158,7 @@ php_src_compile() {
 	use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use pam && myconf="${myconf} --with-pam"
+	use pic && myconf="${myconf} --with-pic"
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
 	#---
 	use png && myconf="${myconf} --with-png-dir=/usr"
@@ -171,10 +173,15 @@ php_src_compile() {
 	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use xml2 && myconf="${myconf} --with-dom"
 	use zlib && myconf="${myconf} --with-zlib --with-zlib-dir=/usr/lib"
+	
 	use exif && myconf="${myconf} --enable-exif"
+	use mcal && myconf="${myconf} --with-mcal=/usr"
 
 	# optional support for oracle oci8
 	use oci8 && [ -n "$ORACLE_HOME" ] && myconf="${myconf} --with-oci8=${ORACLE_HOME}"
+
+	# optional support for informix
+	use informix && [ -n "$INFORMIXDIR" ] && myconf="${myconf} --with-informix=${INFORMIXDIR}"
 
 	use imap && use ssl && \
 	if [ "`strings ${ROOT}/usr/lib/c-client.a \ | grep ssl_onceonlyinit`" ] ; then
