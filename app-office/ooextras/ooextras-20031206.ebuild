@@ -1,0 +1,29 @@
+# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ooextras-20031206.ebuild,v 1.1 2005/01/16 18:28:45 suka Exp $
+
+DESCRIPTION="OOExtras: Extra Templates for OpenOffice.org!"
+HOMEPAGE="http://ooextras.sourceforge.net/"
+SRC_URI="mirror://sourceforge/ooextras/${PN}${PV}.tgz"
+
+INSTDIR="/opt/${PN}"
+S="${WORKDIR}/downloads"
+
+LICENSE="LGPL-2.1"
+SLOT="0"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+IUSE=""
+DEPEND=""
+
+src_compile() {
+	true # nothing to do
+}
+
+src_install() {
+	dodir ${INSTDIR}
+	cp -R -- ${S}/. ${D}/${INSTDIR}/
+}
+
+pkg_postinst() {
+	einfo "please add ${INSTDIR} to your template paths in OpenOffice.org"
+}

@@ -1,0 +1,11 @@
+# ChangeLog for app-office/ooextras
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.1 2005/01/16 18:28:45 suka Exp $
+
+*ooextras-20031206 (16 Jan 2005)
+
+  16 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  +ooextras-20031206.ebuild:
+  Initial commit. Ebuild done by Stefan Briesenick <sbriesen@gmx.de> in bug
+  #44488
+
