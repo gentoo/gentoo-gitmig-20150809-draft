@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/snorticus-1.0.4.ebuild,v 1.4 2004/03/22 12:20:59 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/snorticus-1.0.4.ebuild,v 1.5 2004/06/08 01:46:46 mr_bones_ Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ src_install () {
 	dosym /home/httpd/htdocs/snorticus /usr/lib/snort/addons/snorticus/LOGS
 }
 
-src_postinst() {
+pkg_postinst() {
 	einfo 'Add the following into a cronjob somewhere for a sensor box.'
 	einfo ''
 	einfo '01 * * * * /usr/lib/snort/addons/snorticus/hourly_wrapup.sh > /dev/null 2>&1'
