@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.6 2004/08/17 23:38:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.7 2004/09/21 12:10:03 usata Exp $
+
+*chktex-1.5-r3 (21 Sep 2004)
+
+  21 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +chktex-1.5-r3.ebuild:
+  Moved chktexrc to /etc. This closes bug #64799.
 
 *chktex-1.6.2 (18 Aug 2004)
 
