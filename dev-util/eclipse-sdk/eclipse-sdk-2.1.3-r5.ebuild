@@ -1,16 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.8 2004/08/23 00:19:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.9 2004/11/26 15:30:45 karltk Exp $
 
 inherit eutils
 
+At="eclipse-sourceBuild-srcIncluded-2.1.3.zip"
+
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/eclipse-sourceBuild-srcIncluded-2.1.3.zip"
+SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/${At}
+	http://dev.gentoo.org/~karltk/projects/eclipse/distfiles/eclipse-sdk-2.1.3_00-refactor-rename.patch.gz"
 IUSE="gnome gtk jikes kde motif mozilla"
 SLOT="2"
 LICENSE="CPL-1.0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 RDEPEND=">=virtual/jdk-1.3
 	gtk? ( >=x11-libs/gtk+-2.2.4 )
@@ -81,9 +84,12 @@ set_dirs() {
 src_unpack() {
 	mkdir ${S}
 	cd ${S}
-	unpack ${A}
+	echo "foo: ${AA}"
+	echo "bar: ${A}"
+	unpack ${At}
 
-	epatch ${FILESDIR}/00-refactor_rename.patch
+	epatch ${DISTDIR}/eclipse-sdk-2.1.3_00-refactor-rename.patch.gz
+#	epatch ${FILESDIR}/00-refactor_rename.patch
 	epatch ${FILESDIR}/01-distribute_ant_target-2.1.patch
 
 	if use kde ; then
