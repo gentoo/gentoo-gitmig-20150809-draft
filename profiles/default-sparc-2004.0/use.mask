@@ -19,7 +19,6 @@ firebird
 lirc
 mmx
 mmx2
-oci8
 pic
 sse
 sse2
