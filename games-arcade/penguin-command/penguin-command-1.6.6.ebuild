@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.6.ebuild,v 1.7 2004/05/30 15:44:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.6.ebuild,v 1.8 2004/06/03 19:21:43 agriffis Exp $
 
 inherit games
 
@@ -27,6 +27,6 @@ src_unpack() {
 src_install() {
 	make install DESTDIR=${D} || die
 	dodoc ChangeLog README NEWS AUTHORS
-	[ `use nls` ] || rm ${D}/usr/share/man/man6/*.ja.*
+	use nls || rm ${D}/usr/share/man/man6/*.ja.*
 	prepgamesdirs
 }
