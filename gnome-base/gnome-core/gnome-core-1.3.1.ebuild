@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.3.1.ebuild,v 1.1 2001/03/06 05:21:09 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.3.1.ebuild,v 1.2 2001/03/06 06:05:34 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -31,7 +31,6 @@ src_compile() {
   if [ "`use gtkhtml`" ]
   then
     myconf="${myconf} --enable-gtkhtml-help"
-    myldflags="LDFLAGS=\"-L/opt/gnome/lib -lunicode -lgal\""
   fi
   if [ "`use kde`" ]
   then
