@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.8 2003/07/09 16:45:56 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.9 2003/07/09 17:00:06 frogger Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -13,7 +13,7 @@ inherit eutils flag-o-matic libtool
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
 # still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himeself) yet.
+# combinations (protecting the user maybe from himself) yet.
 #
 # This can clearly be seen in large builds like glibc, where too aggressive
 # CFLAGS cause the tests to fail miserbly.
@@ -23,7 +23,7 @@ inherit eutils flag-o-matic libtool
 #
 #   People really shouldn't force code-specific options on... It's a
 #   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when apropriate).
+#   options that are sensible (and include sse,mmx,3dnow when appropriate).
 #
 # The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
 # you do not like it, comment it, but do not bugreport if you run into
@@ -42,7 +42,7 @@ MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
 LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
 BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
 DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
-# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
+# Don't install in /usr/include/g++-v3/, but in gcc internal directory.
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
@@ -183,7 +183,7 @@ src_unpack() {
 	# Make gcc's version info specific to Gentoo
 	version_patch ${FILESDIR}/3.2.3/gcc323-gentoo-branding.patch
 
-	# ProPolice Stack Smashing protection - protector-3.2.2-7
+	# ProPolice Stack Smashing protection - protector-3.2.2-8
 	epatch ${WORKDIR}/protector.dif
 	cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 	cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
