@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r1.ebuild,v 1.9 2005/01/22 06:14:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r1.ebuild,v 1.10 2005/01/23 20:09:48 j4rg0n Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64 ~ppc-macos"
 IUSE="nls"
 
 DEPEND="dev-util/pkgconfig"

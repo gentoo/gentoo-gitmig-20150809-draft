@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.22 2004/10/07 02:49:21 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.23 2005/01/23 20:09:48 j4rg0n Exp $
+
+  23 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> libexif-0.5.12-r1.ebuild:
+  Unstable ppc-macos. Bug #67029
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> :
   get_libdir fixes.

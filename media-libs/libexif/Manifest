@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2983ee501578b34f43135c76f6f6949 ChangeLog 2996
-MD5 1ce8668a4bb232af2b99262939d56d09 libexif-0.5.12-r1.ebuild 1026
+MD5 607b9dca130d42dc7279683d5b7b9912 ChangeLog 3101
+MD5 0467d3383c88353a48acfb1cd1ea5638 libexif-0.5.12-r1.ebuild 1038
 MD5 4d30eb5c6c5a8374f948fa3f8c5b8d28 libexif-0.6.10.ebuild 1077
 MD5 c6e7ee4006cd2b5bd7cb0367f816fc8a files/digest-libexif-0.5.12-r1 66
 MD5 5356148028342869b259b39e10195fd5 files/digest-libexif-0.6.10 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB8e9nroRuSHgZdywRAjYIAKCRe+QxTKOz1SL8MkIiGgYIJq9mmQCePGEN
-2GMqddodyFhbvkz4UAcFqWk=
-=D2m5
------END PGP SIGNATURE-----
