@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.11 2004/01/14 22:04:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.12 2004/02/11 20:31:17 mholzer Exp $
+
+*amule-1.2.5 (11 Feb 2004)
+
+  11 Feb 2004; Martin Holzer <mholzer@gentoo.org> amule-1.2.5.ebuild:
+  Version bumped. Closes 41102
 
 *amule-1.2.4 (14 Jan 2004)
 
