@@ -1,5 +1,5 @@
-MD5 1cbe36fd5d7caa67fa5e9c02d6341679 ChangeLog 530
-MD5 4b30500f671f2aae659ddcd9f231ac00 dvipost-1.0.ebuild 958
+MD5 bbb06a857ab6a720b1fbc8aa306a9a74 ChangeLog 616
+MD5 2f9068f8fbc6d6aea16cf91cbbd55cb0 dvipost-1.0.ebuild 959
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 9b1b64a73ad6f08e1f18b455fed5e13a files/digest-dvipost-1.0 58
 MD5 20bb45f34f4a35fa7db116cb8d84dc0c files/dvipost-1.0-src_test.diff 377
