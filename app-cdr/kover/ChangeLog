@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kover
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.18 2005/01/01 14:09:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.19 2005/01/02 17:39:31 hansmi Exp $
+
+  02 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> kover-2.9.5.ebuild:
+  Stable on ppc.
 
   01 Jan 2005; Daniel Black <dragonheart@gentoo.org> -kover-2.8.7.ebuild,
   kover-2.9.5.ebuild, +kover-2.9.6.ebuild:
