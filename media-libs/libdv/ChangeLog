@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.20 2003/09/10 19:06:32 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.21 2003/09/20 16:03:00 max Exp $
+
+  20 Sep 2003; Max Kalika <max@gentoo.org> libdv-0.99-r1.ebuild,
+  libdv-0.99.ebuild:
+  Bump 0.99-r1 to stable on x86 and amd64. Clean up broken version.
 
   10 Sep 2003; Max Kalika <max@gentoo.org> libdv-0.99-r1.ebuild,
   files/libdv-0.99-disablegtk.patch:
