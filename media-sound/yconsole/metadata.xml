@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+ <email>vapier@gentoo.org</email>
+ <name>Mike Frysinger</name>
+</maintainer>
+ <longdescription>
+YConsole allows you to monitor and control 
+the Y server in a GUI environment, using the GTK+ toolkit. 
+YConsole also features a set of windows including the YAudio 
+window, YMixer window, and YPlayer window which allow you to 
+control all aspects of the Y server. The YPlayer window allows 
+you to play sound objects and control the audio CD.
+ </longdescription>
+</pkgmetadata>
