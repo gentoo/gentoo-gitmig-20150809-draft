@@ -243,3 +243,4 @@ move net-misc/gtk-imonc net-dialup/gtk-imonc
 move www-client/w3m-m17n www-client/w3m
 move net-www/charm net-news/charm
 move net-www/nvu app-editors/nvu
+move net-www/netrik www-client/netrik
