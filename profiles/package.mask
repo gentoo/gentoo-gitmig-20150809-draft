@@ -802,19 +802,6 @@ dev-libs/libiconv
 # <bangert@gentoo.org> 26 Apr 2oo2
 <app-admin/sudo-1.6.6
 
-# Masked out the koffice pre ebuilds, since beta1 is out
-# <Verwilst, 26 April 2002>
-=koffice-1.2_pre20020411
-=koffice-1.2_pre20020404
-
-# Licq is b0rked beyond usability.. Not only the ebuild, but the protocol
-#they use as well... Trust me, unmasking this has no use at all :o) <Verwilst, 17 April 2002>
-# adding gtk+licq just to make it complete;  26 Jun 2002; <spider@gentoo.org>
-<net-im/licq-1.1.0
-=net-im/gtk+licq-0.51-r2
-# masking licq-console as well due to licq dependency
-=net-im/licq-console-1.0.2
-
 # Fails to compile... <Verwilst, 6 april 2002>
 =dev-libs/pwlib-1.2.13
 
