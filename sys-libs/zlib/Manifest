@@ -12,11 +12,11 @@ MD5 f84d68bd9a614ad5495a369cb258cf8d files/zlib-1.2.1-glibc.patch 395
 MD5 f59140383ca357e19d6d16d79ce78c97 files/zlib-1.2.1-mapfile.patch 2131
 MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r1 63
 MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r2 63
-MD5 dd9772f373bb72f7c97205cf6fc0fb0c ChangeLog 3476
+MD5 7f83be22c7f82e32e51aa1e8bf732416 ChangeLog 3578
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 41628fa08352803abb0e69ed3f91f0c6 zlib-1.1.4-r2.ebuild 1090
 MD5 764aa776c8ae1d5fb731a00c9c842168 zlib-1.1.4-r3.ebuild 1252
 MD5 ffa606f2f35b3ff4b7de3132e0fe2de0 zlib-1.1.4-r4.ebuild 1334
 MD5 21b20431bb02815db862efad12819a82 zlib-1.2.1.ebuild 1287
 MD5 5a3821178a6b21e5302c5a27cb0989ba zlib-1.2.1-r1.ebuild 1332
-MD5 e2dc4826c56dda4f90e3efc5b8f14d65 zlib-1.2.1-r2.ebuild 1573
+MD5 824a9929bb89a34494367767ea0f0625 zlib-1.2.1-r2.ebuild 1608
