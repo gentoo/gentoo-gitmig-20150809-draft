@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.22 2004/03/14 05:37:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.23 2004/03/25 08:26:27 mr_bones_ Exp $
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  gtk-gnutella-0.93-r1.ebuild, gtk-gnutella-0.93.3.ebuild,
+  gtk-gnutella-0.93.ebuild:
+  don't use deprecated ? : use syntax
 
   13 Mar 2004; Jason Wever <weeve@gentoo.org> gtk-gnutella-0.92.ebuild:
   Stable on sparc.
