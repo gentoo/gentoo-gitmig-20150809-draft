@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/libsafe
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.1 2004/03/02 17:03:10 matsuu Exp $
+
+*libsafe-2.0_p16 (03 Mar 2004)
+
+  03 Mar 2004; <matsuu@gentoo.org> libsafe-2.0_p16.ebuild:
+  Initial import. Ebuild submitted by Daniel Black <groover@playful.com>.
+  Bug #14720.
+
