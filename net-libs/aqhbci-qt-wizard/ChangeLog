@@ -1,0 +1,28 @@
+# ChangeLog for net-libs/aqhbci-qt-wizard
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-qt-wizard/ChangeLog,v 1.1 2005/01/13 12:14:45 hanno Exp $
+
+*aqhbci-qt-wizard-0.9.14_beta (13 Jan 2005)
+
+  13 Jan 2005; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +aqhbci-qt-wizard-0.9.14_beta.ebuild:
+  Version bump and name change.
+
+  02 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
+  aqhbci-wizard-kde-0.9.13_beta.ebuild:
+  ~alpha keyword, bug 73702.
+
+  03 Jan 2005; Chris White <chriswhite@gentoo.org>
+  aqhbci-wizard-kde-0.9.13_beta.ebuild:
+  ~ppc towards bug #73702.
+
+  30 Dec 2004; Jason Wever <weeve@gentoo.org>
+  aqhbci-wizard-kde-0.9.13_beta.ebuild:
+  Added ~sparc keyword wrt bug #73702.
+
+*aqhbci-wizard-kde-0.9.13_beta (21 Dec 2004)
+
+  21 Dec 2004; Hanno Boeck <hanno@gentoo.org>
+  +aqhbci-wizard-kde-0.9.13_beta.ebuild:
+  Initial commit.
+
