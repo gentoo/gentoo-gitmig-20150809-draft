@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.0-r1.ebuild,v 1.1 2003/12/08 02:18:44 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.0-r1.ebuild,v 1.2 2003/12/09 23:23:00 lostlogic Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="Openbox is a standards compliant, fast, light-weight, extensible window manager."
@@ -51,5 +51,5 @@ pkg_postinst() {
 	ewarn
 	ewarn "The binary is now moved to /usr/bin/openbox."
 	ewarn "Likewise for the session files."
-	ewan
+	ewarn
 }
