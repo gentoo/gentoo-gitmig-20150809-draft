@@ -1,7 +1,7 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r2.ebuild,v 1.2 2002/05/23 06:50:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r2.ebuild,v 1.3 2002/07/06 18:28:03 naz Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -55,6 +55,7 @@ fi
 
 DESCRIPTION="Vi IMproved!"
 HOMEPAGE="http://www.vim.org/"
+LICENSE="vim"
 
 DEPEND="virtual/glibc 
 		>=sys-libs/ncurses-5.2-r2

@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.12 2002/05/28 00:28:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.13 2002/07/06 18:28:03 naz Exp $
+
+vim-6.1-r8.ebuild (06 Jul 2002)
+	
+	06 Jul 2002; Michael Nazaroff <naz@gentoo.org> vim-6.1-r8.ebuild :
+
+	Added back gpm support, since gpm should now be fixed. I also added a
+	addpredict line to hopefully remove those sandbox violations we where
+	occasionally getting.  Also added a few more misc patch's. I also added
+	LICENSE lines to all of the ebuilds.
 
 *vim-6.1-r7 (27 May 2002)
 

@@ -1,7 +1,7 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r7.ebuild,v 1.2 2002/07/06 18:28:04 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r8.ebuild,v 1.1 2002/07/06 18:28:04 naz Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -84,6 +84,18 @@ src_unpack() {
 	cd $S/runtime/tools
 	mv mve.awk mve.awk.old
 	( read l; echo "#!/usr/bin/awk -f"; cat ) <mve.awk.old >mve.awk
+	# Another set of patch's borrowed from src rpm to fix syntax error's etc.
+	cd ${WORKDIR}
+	tar xvjf  ${FILESDIR}/vimpatch.tar.bz2 
+	cd $S
+	patch -p1 < ${WORKDIR}/vim-4.2-speed_t.patch || die
+	patch -p1 < ${WORKDIR}/vim-5.1-vimnotvi.patch || die
+	patch -p1 < ${WORKDIR}/vim-5.6a-paths.patch || die
+	patch -p1 < ${WORKDIR}/vim-6.0-fixkeys.patch || die
+	patch -p1 < ${WORKDIR}/vim-6.0-gcc31.patch || die
+	patch -p1 < ${WORKDIR}/vim-6.0-specsyntax.patch || die
+	patch -p1 < ${WORKDIR}/vim-6.0r-crv.patch || die
+											  
 	# Apply any patches available for this version
 	local patches=`echo $FILESDIR/$PV.[0-9][0-9][0-9]`
 	case "$patches" in
@@ -112,10 +124,9 @@ src_compile() {
 # tclinterp is BROKEN.  See note above DEPEND=
 #	use tcltk  && myconf="$myconf --enable-tclinterp"
 
-# gpm is broken according to Gentoo bug #1808.  Disabling it for now
-# until somebody complains (how many people actually use vim+gpm?)
-#	use gpm    || myconf="$myconf --disable-gpm"
-    myconf="$myconf --disable-gpm"
+# Added back gpm for temporary will remove if necessary, I think that I have
+# fixed most of gpm so it should be fine.
+	use gpm    || myconf="$myconf --disable-gpm"
 
 	#
 	# First, build a gui version, this will install as /usr/bin/gvim
@@ -130,6 +141,10 @@ src_compile() {
 		# No gui version will be built
 		guiconf=""
 	fi
+	
+	# This should fix a sandbox violation. 
+	addpredict /dev/ptys/*
+	
 	if [ -n "$guiconf" ]; then
 		./configure \
 			--prefix=/usr --mandir=/usr/share/man --host=$CHOST \
