@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0_rc2.ebuild,v 1.2 2005/03/18 17:07:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0_rc2.ebuild,v 1.3 2005/03/19 02:14:54 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,7 +20,7 @@ LED_NOTIFY="0.1"
 
 DESCRIPTION="QT client for popular in Poland Gadu-Gadu IM network"
 HOMEPAGE="http://kadu.net/"
-	
+
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -57,12 +57,12 @@ SRC_URI="http://kadu.net/download/stable/${P/_/-}.tar.bz2
 	    http://www.kadu.net/download/additions/kadu-theme-old_default.tar.bz2
 	    http://www.kadu.net/download/additions/kadu-theme-piolnet.tar.bz2
 	    http://www.kadu.net/download/additions/kadu-theme-real_gg.tar.bz2 )
-	extramodules? ( 
+	extramodules? (
 	    http://pcb45.tech.us.edu.pl/~blysk/weather/weather-${WEATHER}.tar.bz2
-	    http://nkg.republika.pl/files/ext_info-${EXT_INFO}.tar.bz2 
-	    http://pcb45.tech.us.edu.pl/~tomek/kadu/kadu-spy-${SPY}.tar.bz2 
+	    http://nkg.republika.pl/files/ext_info-${EXT_INFO}.tar.bz2
+	    http://pcb45.tech.us.edu.pl/~tomek/kadu/kadu-spy-${SPY}.tar.bz2
 	    http://users.skorpion.wroc.pl/arturmat/firewall/files/firewall-${FIREWALL}.tar.bz2
-	    http://biprowod.wroclaw.pl/kadu/KaduChess-${CHESS}.tar.bz2 
+	    http://biprowod.wroclaw.pl/kadu/KaduChess-${CHESS}.tar.bz2
 	    http://pcb45.tech.us.edu.pl/~blysk/led_notify/led_notify-${LED_NOTIFY}.tar.bz2 )
 	xmms? ( http://scripts.one.pl/xmms/devel/0.4.0/xmms-${XMMS}.tar.gz )
 	xosd? ( http://www.kadu.net/~joi/xosd_notify/xosd_notify-${XOSD_NOTIFY}.tar.bz2 )
@@ -74,7 +74,7 @@ S=${WORKDIR}/${PN}
 
 enable_module() {
 	if use ${1}; then
-	    mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/ 
+	    mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/
 	    module_config ${2} m
 	fi
 }
@@ -84,41 +84,41 @@ module_config() {
 }
 
 spec_config() {
-        sed -i -r "s/(^${2}\\s*=\\s*).*//" modules/${1}/spec
-        echo "${2}=${3}" >> modules/${1}/spec
+	sed -i -r "s/(^${2}\\s*=\\s*).*//" modules/${1}/spec
+	echo "${2}=${3}" >> modules/${1}/spec
 }
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
+	unpack ${A}
+	cd ${S}
 
-    # Disabling autodownload for modules
-    rm -f ${WORKDIR}/kadu/modules/*.web
+	# Disabling autodownload for modules
+	rm -f ${WORKDIR}/kadu/modules/*.web
 
-    # Disabling autodownload for icons
-    rm -f ${WORKDIR}/kadu/varia/themes/icons/*.web
+	# Disabling autodownload for icons
+	rm -f ${WORKDIR}/kadu/varia/themes/icons/*.web
 
-    # Disabling all modules and iconsets for further activation via USE flags 
-    sed .config -i -e 's/=m/=n/g'
-    sed .config -i -e 's/=y/=n/g'
+	# Disabling all modules and iconsets for further activation via USE flags
+	sed .config -i -e 's/=m/=n/g'
+	sed .config -i -e 's/=y/=n/g'
 
-    enable_module amarok amarok
-    enable_module spell spellchecker 
-    enable_module xmms xmms
-    enable_module xosd xosd_notify
-    enable_module mail mail
-    enable_module tcltk "tcl_scripting"
+	enable_module amarok amarok
+	enable_module spell spellchecker
+	enable_module xmms xmms
+	enable_module xosd xosd_notify
+	enable_module mail mail
+	enable_module tcltk "tcl_scripting"
 
-    enable_module extramodules weather
-    enable_module extramodules ext_info
-    enable_module extramodules spy
-    enable_module extramodules led_notify
-    enable_module extramodules tabs
+	enable_module extramodules weather
+	enable_module extramodules ext_info
+	enable_module extramodules spy
+	enable_module extramodules led_notify
+	enable_module extramodules tabs
 
-    # put some patches
-    epatch ${FILESDIR}/${P}-libgsm-amd64.patch
-    use nas && epatch ${FILESDIR}/${P}-nas-gentoo.diff
-    use xosd && epatch ${FILESDIR}/xosd-gentoo.patch
+	# put some patches
+	epatch ${FILESDIR}/${P}-libgsm-amd64.patch
+	use nas && epatch ${FILESDIR}/${P}-nas-gentoo.diff
+	use xosd && epatch ${FILESDIR}/xosd-gentoo.patch
 }
 
 src_compile() {
@@ -148,7 +148,7 @@ src_compile() {
 		fi
 	fi
 
-	# Firewall                                                              
+	# Firewall
 	if use extramodules; then
 		if use !tcltk; then
 			ewarn "script_firewall depends on module_tcl_scripting;"
@@ -169,21 +169,21 @@ src_compile() {
 	use nas && module_config nas_sound m
 	use voice && module_config voice m
 
-	# Some fixes                                                                                    
+	# Some fixes
 	einfo "Fixing arts module spec file"
-    	spec_config arts_sound MODULE_INCLUDES_PATH "\"$(kde-config --prefix)/include $(kde-config --prefix)/include/artsc\""
+	spec_config arts_sound MODULE_INCLUDES_PATH "\"$(kde-config --prefix)/include $(kde-config --prefix)/include/artsc\""
 	spec_config arts_sound MODULE_LIBS_PATH $(kde-config --prefix)/lib
-    	spec_config amarok MODULE_INCLUDES_PATH $(kde-config --prefix)/include
+	spec_config amarok MODULE_INCLUDES_PATH $(kde-config --prefix)/include
 	spec_config amarok MODULE_LIBS_PATH $(kde-config --prefix)/lib
-	
+
 	if use extramodules; then
 	    einfo "Changing default firewall log location to user's homedir/.gg/firewall.log"
 	    sed ${WORKDIR}/firewall.tcl -i -e 's%$module(scriptpath)/firewall.log%$env(HOME)/.gg/firewall.log%g'
 	fi
-	
+
 	local myconf
 	myconf="${myconf} --enable-modules --enable-dist-info=Gentoo"
-	
+
 	use voice && myconf="${myconf} --enable-dependency-tracing"
 	use debug && myconf="${myconf} --enable-debug"
 	use pheaders && myconf="${myconf} --enable-pheaders"
@@ -205,7 +205,7 @@ src_install() {
 		mv ${WORKDIR}/KaduChess/{data,pics,KaduChess.tcl} ${D}/usr/share/kadu/modules/data/tcl_scripting/scripts
 		# small fix form author's site
 		sed ${D}/usr/share/kadu/modules/data/tcl_scripting/scripts/KaduChess.tcl -i -e 's/on chat0 KC_recv KC_recv/on chat0 KC_recv/g'
-	    
+
 		einfo "Installing Firewall module"
 		mv ${WORKDIR}/firewall{.tcl,.png} ${D}/usr/share/kadu/modules/data/tcl_scripting/scripts
 	    fi
