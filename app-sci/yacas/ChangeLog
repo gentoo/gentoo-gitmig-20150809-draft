@@ -1,0 +1,18 @@
+# ChangeLog for dev-lang/yacas
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/yacas/ChangeLog,v 1.1 2003/07/10 01:38:46 george Exp $
+
+*yacas-1.0.55 (09 Jul 2003)
+
+  09 Jul 2003; George Shapovalov <george@gentoo.org> yacas-1.0.55.ebuild :
+  version update, made 1.0.54 stable
+
+  10 Jun 2003; <msterret@gentoo.org> yacas-1.0.54.ebuild:
+  DEPEND on sed >= 4
+
+*yacas-1.0.54.ebuild (17 Apr 2003)
+
+  17 Apr 2003; George Shapovalov <george@gentoo.org> yacas-1.0.54.ebuild, files/digest-yacas-1.0.54 :
+  initial release (#3790)
+  YACAS is a very powerful, general purpose Computer Algebra System.
+  ebuild submitted by Tobias Florek <tflorek@web.de>
