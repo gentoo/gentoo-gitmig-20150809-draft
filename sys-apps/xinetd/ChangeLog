@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.11 2002/10/24 15:03:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.12 2002/12/07 07:20:19 jmorgan Exp $
 
 *xinetd-2.3.9 (24 Oct 2002)
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> xinetd-2.3.7.ebuild, xinetd-2.3.9.ebuild :
+  Changed sparc64 to sparc keyword xinetd-2.3.7.ebuild
+  Changed ~sparc64 to ~sparc keyword xinetd-2.3.9.ebuild
 
   24 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump. Ebuild contributed by Maurizio Disimino <kevin@aptbasilicata.it> in #7792.

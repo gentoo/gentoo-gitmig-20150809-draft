@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.9.ebuild,v 1.1 2002/10/24 15:03:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.9.ebuild,v 1.2 2002/12/07 07:20:19 jmorgan Exp $
 
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
 HOMEPAGE="http://www.xinetd.org"
-KEYWORDS="~x86 ~ppc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 LICENSE="BSD"
 SRC_URI="http://www.xinetd.org/${P}.tar.gz"
