@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ext2resize
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ext2resize/ChangeLog,v 1.6 2003/02/12 08:58:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ext2resize/ChangeLog,v 1.7 2003/04/25 00:36:26 lostlogic Exp $
+
+*ext2resize-1.1.17-r1 (24 Apr 2003)
+
+  24 Apr 2003; Brandon Low <lostlogic@gentoo.org> ext2resize-1.1.17-r1.ebuild:
+  Move executables to /sbin instead of /usr/sbin, enable 'static' use flag,
+  thanks to msterret@gentoo.org
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
