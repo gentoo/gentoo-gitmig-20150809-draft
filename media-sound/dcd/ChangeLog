@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/dcd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/ChangeLog,v 1.7 2004/09/14 07:34:38 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/ChangeLog,v 1.8 2004/09/30 00:51:42 swegener Exp $
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> dcd-0.95.ebuild:
   Stable amd64, sparc.
