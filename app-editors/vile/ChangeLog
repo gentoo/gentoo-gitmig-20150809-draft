@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.14 2004/03/01 18:35:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.15 2004/03/03 02:54:04 agriffis Exp $
+
+  02 Mar 2004; <agriffis@gentoo.org> vile-9.4d.ebuild:
+  stable on alpha, ia64, x86
 
   01 Mar 2004; Ryan Phillips <rphillips@gentoo.org> vile-9.2p.ebuild, vile-9.2r.ebuild,
   vile-9.2z.ebuild:
