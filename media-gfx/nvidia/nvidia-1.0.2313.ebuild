@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia/nvidia-1.0.2313.ebuild,v 1.1 2001/12/01 02:39:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia/nvidia-1.0.2313.ebuild,v 1.2 2001/12/05 17:50:16 azarah Exp $
 
 #NOTE: devfs support is already included, so we dont have to patch the
 #      kernel modules's source anymore !
@@ -9,8 +9,8 @@
 MYV=${PV/0./0-}
 S=${WORKDIR}
 DESCRIPTION="High-performance nvidia graphics drivers for X, along with OpenGL 1.2"
-SRC_URI="http://www.nvidia.com/docs/lo/1005/SUPP/NVIDIA_GLX-${MYV}.tar.gz
-	http://www.nvidia.com/docs/lo/1017/SUPP/NVIDIA_kernel-${MYV}.tar.gz"
+SRC_URI="http://205.158.109.140/XFree86_40/${MYV}/NVIDIA_GLX-${MYV}.tar.gz
+	http://205.158.109.140/XFree86_40/${MYV}/NVIDIA_kernel-${MYV}.tar.gz"
 HOMEPAGE="http://www.nvidia.com/"
 
 DEPEND="virtual/glibc"
