@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.18 2004/04/11 06:06:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.19 2004/05/23 22:53:23 vapier Exp $
+
+*sdl-mixer-1.2.5-r2 (23 May 2004)
+
+  23 May 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.2.5-system-mikmod.patch, +sdl-mixer-1.2.5-r2.ebuild:
+  Version bump to use system version of mikmod instead of bundled #51852 by Paul
+  de Vrieze
 
   10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   sdl-mixer-1.2.5-r1.ebuild:
