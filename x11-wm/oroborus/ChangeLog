@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.9 2003/02/12 09:52:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.10 2003/07/09 18:19:44 mholzer Exp $
+
+*oroborus-2.0.13 (09 Jul 2003)
+
+  09 Jul 2003; Martin Holzer <mholzer@gentoo.org> oroborus-2.0.13.ebuild:
+  Version bumped. ebuild submitted by Soren Harward <soren@byu.edu> in #233780
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
