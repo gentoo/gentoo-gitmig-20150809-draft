@@ -1,7 +1,11 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.4 2002/05/21 03:46:28 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.5 2002/07/25 01:28:46 spider Exp $
 
+*perl-5.6.1-r5 (25 Jul 2002)
+  25 Jul 2002; Spider <spider@gentoo.org> perl-5.6.1-r5.ebuild
+  minor patch to make it build on my gcc 3.1-r8 system
+  
 *perl-5.6.1-r4 (20 May 2002)
 
   20 May 2002; Preston A. Elder <prez@gentoo.org> perl-5.6.1-r4.ebuild
