@@ -1,0 +1,79 @@
+#!/bin/bash
+
+source /etc/init.d/functions.sh || {
+  echo "$0: Could not source /etc/init.d/functions.sh!"
+  exit 1
+}
+
+# Checks to see if user is trying to install eggdrop as root.
+root_check() {
+
+echo "Installing Eggdrop"
+if [ "$HOME" = "/root" ] || [ `whoami` == "root" ];
+then
+   einfo "You should not be installing eggdrop as root."
+   einfo ""
+   einfo "Installing eggdrop as root leaves your computer vulnerable"
+   einfo "to attack from other irc clients. Please use the eggdrop-installer"
+   einfo "script as the user who you wish to run eggdrop with"
+   exit 1
+else
+  install_eggdrop
+fi
+
+}
+
+# Usage information
+usage() {
+cat << "USAGE_END"
+Usage: eggbot-installer [bot-name]
+Install eggdrop for a specific user, creating the directories and files
+needed for eggdrop to run securely and safely.
+USAGE_END
+
+exit 1
+}
+
+install_eggdrop()
+{
+   if [ ! -d $HOME/.eggdrop ]
+   then
+       mkdir -p $HOME/.eggdrop
+   fi
+      einfo "Creating directories for your $bot_name ..."
+      mkdir -p $HOME/.eggdrop/$bot_name 
+      mkdir -p $HOME/.eggdrop/$bot_name/logs 
+      mkdir -p $HOME/.eggdrop/$bot_name/filesys 
+      mkdir -p $HOME/.eggdrop/$bot_name/filesys/incoming 
+      mkdir -p $HOME/.eggdrop/$bot_name/text 
+      mkdir -p $HOME/.eggdrop/$bot_name/scripts
+
+      einfo "Creating symlinks to required files for your bot to run ...."
+      ln -s /opt/eggdrop/help $HOME/.eggdrop/$bot_name/help
+      ln -s /opt/eggdrop/language $HOME/.eggdrop/$bot_name/language
+      ln -s /opt/eggdrop/modules $HOME/.eggdrop/$bot_name/modules
+
+      einfo "Copying motd and banner ... "
+      cp /opt/eggdrop/text/* $HOME/.eggdrop/$bot_name/text
+
+      # I changed this from a symlink to a direct copy because the user
+      # might not have write permissions to /opt/eggdrop/scripts
+      # as well as they might have their own custom scripts. - zul<chuck_short@rogers.com>
+      cp /opt/eggdrop/scripts/* $HOME/.eggdrop/$bot_name/scripts
+
+      einfo "Finished..."
+      
+      einfo "Please edit your $HOME/.eggdrop/$botname/eggdrop.conf "
+      einfo "If you need any help pleaese refer to the man page, or "
+      einfo "eggdrop website at http://www.egghelper.org"
+      
+      cp /opt/eggdrop/eggdrop.conf $HOME/.eggdrop/$bot_name/eggdrop.conf
+}
+
+if [ ! -n "$1" ]
+then
+  usage
+else 
+  bot_name="$1"
+  root_check
+fi
