@@ -20,14 +20,11 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-    export KERNELVERSION=`grep "UTS_RELEASE" /usr/src/linux/include/linux/version.h | awk '{print $3}'`
-    KERNELSHORT="24"
+    export KERNELVERSION=`grep "UTS_RELEASE" /usr/src/linux/include/linux/version.h | awk '{print $3}' | sed "s/\"//g"`
+    KERNELSHORT=`echo $KERNELVERSION | cut -c1-3 | sed "s/\.//"`
     SYSTEM="linux"
     SYSARCH="i386"
     CELLNAME=`cat ${FILESDIR}/ThisCell`
-
-    # should be around 90% of actual free space
-    CACHESIZE=200000
 
     try mkdir ${SYSARCH}_${SYSTEM}${KERNELSHORT}
     try mkdir ${SYSARCH}_${SYSTEM}${KERNELSHORT}/dest
@@ -71,11 +68,11 @@ src_install () {
   exeinto /usr/afsws/bin
   doexe bin/*
 
-  exeinto /etc/afsws
+  exeinto /etc/afs/afsws
   doexe etc/*
 
   cp -a include lib ${D}/usr/afsws
-  dosym  /usr/afswf/lib/afs/libtermlib.a /usr/afsws/lib/afs/libnull.a
+  dosym  /usr/afsws/lib/afs/libtermlib.a /usr/afsws/lib/afs/libnull.a
 
   # Server
   cd ${S}/dest/root.server/usr/afs
@@ -84,7 +81,7 @@ src_install () {
 
   dodir /usr/vice
   dosym /etc/afs /usr/vice/etc
-  dosym /etc/afsws /usr/afsws/etc
+  dosym /etc/afs/afsws /usr/afsws/etc
 
 }
 

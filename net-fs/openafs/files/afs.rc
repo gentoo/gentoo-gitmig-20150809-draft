@@ -17,12 +17,42 @@
 #
 # Note that AFS does not use a pid file in /var/run. It is turned off by
 # unmounting /afs.
-
+#
+# Modified by Holger Brueckner <darks@fet.org> for gentoo-linux 
 
 # Gather up options and post startup script name, if present
 if [ -f /etc/afs/afs.conf ]; then
 	. /etc/afs/afs.conf
 fi
+
+
+# include gentoo functions
+.  /etc/rc.d/config/functions
+opts="start stop"
+
+# check for ext2 partition
+
+check_ext2() {
+  PART=`cat /proc/mounts | grep vice | grep ext2 | awk '{print $1}'`
+  if [ -z $PART ]
+  then
+    echo ">>> PLEASE CREATE A EXT2 (no reiserfs) PARTITION (of aprox. 200M)"
+    echo ">>> AND MOUNT IT TO /USR/VICE/CACHE !!!"
+    exit 1
+  fi
+}
+
+# check if cacheinfo exist, otherwise create it !!
+
+check_cacheinfo(){
+ [ ! -f /usr/vice/etc/cacheinfo ] && {
+    PART=`cat /proc/mounts | grep vice | grep ext2 | awk '{print $1}'`
+    CACHESIZE=`df $PART | grep ^/ | awk '{print $4}'`
+    CACHESIZE=`expr $CACHESIZE \* 9`
+    CACHESIZE=`expr $CACHESIZE / 10`
+    echo "/afs:/usr/vice/cache:$CACHESIZE" > /usr/vice/etc/cacheinfo     
+ }
+}
 
 # is_on returns 1 if value of arg is "on"
 is_on() {
@@ -126,41 +156,47 @@ load_client() {
 	/sbin/insmod ${PREFIX:+-P $PREFIX} -f -m $MODLOADDIR/$LIBAFS > $MODLOADDIR/libafs.map 2>&1
 }
 
-case "$1" in 
-  start)
+start(){
 	# Load kernel extensions
+	
+	check_ext2
+	check_cacheinfo
+
+	ebegin "Starting AFS services"
+	
 	if  load_client  ; then :
 	else
 		echo Failed to load AFS client, not starting AFS services.
-		exit 1
+		eend 1 "Error Starting AFS client"
 	fi
 
-	echo "Starting AFS services..... "
 	# Start bosserver, it if exists
 	if  is_on $AFS_SERVER && test -x /usr/afs/bin/bosserver  ; then
 		/usr/afs/bin/bosserver 
 	fi
 
 	# Start AFS client
-	if  is_on $AFS_CLIENT && test -x /usr/vice/etc/afsd  ; then
-		/usr/vice/etc/afsd ${OPTIONS}
-
+	if  is_on $AFS_CLIENT && test -x /usr/sbin/afsd  ; then
+		/usr/sbin/afsd ${OPTIONS} 1>&2
+                STATUS=$? 
 		# Start AFS version of inetd.conf if present.
 		if  test -f /usr/afsws/etc/inetd.conf -a -x /usr/afsws/etc/inetd.afs ; then
 			/usr/afsws/etc/inetd.afs /usr/afsws/etc/inetd.conf
 		fi
 		$AFS_POST_INIT
 	fi
+	eend $STATUS "Error starting AFS"
 
-	;;
+}
 
-  stop)
+stop() {
 	# Stop AFS
-	echo "Stopping AFS services..... "
+	ebegin "Stopping AFS services"
 
 	if  is_on $AFS_CLIENT  ; then
-		killall inetd.afs
+#		killall inetd.afs
 		umount /afs
+                STATUS=$? 
 	fi
 
 	if  is_on $AFS_SERVER && test -x /usr/afs/bin/bos ; then
@@ -173,12 +209,10 @@ case "$1" in
 	if [ -n "$LIBAFS" ] ; then
 		LIBAFS=`echo $LIBAFS | awk 'BEGIN { FS = " " } { print $1 }'`
 		/sbin/rmmod $LIBAFS
+                STATUS=$? 
 	fi
+       eend $STATUS "Error starting AFS"
 
-	;;
-
-  *)
-	echo Usage: 'afs <start|stop>'
-
-esac
-
+}
+        
+doservice ${@}
