@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0.ebuild,v 1.3 2002/12/31 00:21:48 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0.ebuild,v 1.4 2002/12/31 01:02:13 rphillips Exp $
 
 IUSE="apache2 freetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -69,8 +69,8 @@ src_unpack() {
 
 	# fix PEAR installer
 	cp pear/PEAR/Registry.php pear/PEAR/Registry.old
-	sed "s:\$ds = DIRECTORY_SEPARATOR:\$ds = DIRECTORY_SEPARATOR;\$pear_install_dir = \'$D/\'.\$pear_install_dir:g" pear/PEAR/Registry.old > pear/PEAR/Registry.php
-
+	sed "s:\$pear_install_dir\.:\'$D/usr/lib/php/\' . :g" pear/PEAR/Registry.old > pear/PEAR/Registry.php
+	
 	#if [ "`use java`" ] ; then
 
 	#	cp configure configure.orig
@@ -205,8 +205,7 @@ src_compile() {
 
  
 src_install() {
-	# disable pear for now.
- 	# make INSTALL_ROOT=${D} install-pear || die
+ 	make INSTALL_ROOT=${D} install-pear || die
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
 	dodoc README.* TODO NEWS
