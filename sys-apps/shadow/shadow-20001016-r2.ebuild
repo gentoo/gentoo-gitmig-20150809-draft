@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r2.ebuild,v 1.1 2001/02/07 15:51:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r2.ebuild,v 1.2 2001/04/06 16:08:21 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -65,7 +65,7 @@ src_install() {
 	doins suauth login.access
 	doins ${S}/debian/securetty
 
-        cd pam.d
+        cd ${FILESDIR}
         insinto /etc/pam.d
         insopts -m0644
         doins shadow
