@@ -1,5 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.0.1-r6.ebuild,v 1.4 2004/06/14 01:09:59 spyderous Exp $
 
 S=${WORKDIR}/`echo ${A} | sed -e 's/\.tar\.gz//g'`
 
@@ -13,7 +14,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="X tcltk"
 
 DEPEND="virtual/glibc
-		X? ( x11-base/xfree )
+		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tcl )"
 RDEPEND="net-misc/openssh"
 
