@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/mmucl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mmucl/ChangeLog,v 1.1 2004/08/25 05:59:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mmucl/ChangeLog,v 1.2 2004/08/25 06:04:08 mr_bones_ Exp $
+
+  24 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> mmucl-1.5.2.ebuild:
+  fix pkg_postinst
 
 *mmucl-1.5.2 (25 Aug 2004)
 

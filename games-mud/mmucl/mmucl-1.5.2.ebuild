@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mmucl/mmucl-1.5.2.ebuild,v 1.1 2004/08/25 05:59:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mmucl/mmucl-1.5.2.ebuild,v 1.2 2004/08/25 06:04:08 mr_bones_ Exp $
 
 inherit games
 
@@ -52,6 +52,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "You must be in the 'games' group to run this application."
+	games_pkg_postinst
+	echo
 	einfo "The executable for this is mmucl2."
 }
