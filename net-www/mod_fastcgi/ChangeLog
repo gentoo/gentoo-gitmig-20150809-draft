@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_fastcgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/ChangeLog,v 1.10 2005/01/30 08:13:09 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/ChangeLog,v 1.11 2005/02/13 00:14:41 hollow Exp $
+
+  13 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  mod_fastcgi-2.4.2-r1.ebuild:
+  removed *mod_file, not needed and wrong for apache2
 
 *mod_fastcgi-2.4.2-r1 (30 Jan 2005)
 

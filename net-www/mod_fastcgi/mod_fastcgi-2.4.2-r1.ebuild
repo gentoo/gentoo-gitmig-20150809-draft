@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/mod_fastcgi-2.4.2-r1.ebuild,v 1.1 2005/01/30 08:13:09 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/mod_fastcgi-2.4.2-r1.ebuild,v 1.2 2005/02/13 00:14:41 hollow Exp $
 
 inherit eutils apache-module
 
@@ -13,9 +13,6 @@ LICENSE="Apache-1.1"
 
 APXS1_ARGS="-c mod_fastcgi.c fcgi*.c"
 APXS2_ARGS="${APXS1_ARGS}"
-
-APACHE1_MOD_FILE="${S}/${PN}.so"
-APACHE2_MOD_FILE="${S}/${PN}.so"
 
 APACHE1_MOD_CONF="${PVR}/20_mod_fastcgi"
 APACHE2_MOD_CONF="${PVR}/20_mod_fastcgi"
