@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kompose
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.4 2004/12/22 20:59:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.5 2004/12/31 17:37:54 weeve Exp $
+
+  31 Dec 2004; Jason Wever <weeve@gentoo.org> kompose-0.5.1.ebuild:
+  Added ~sparc keyword.
 
 *kompose-0.5.1 (22 Dec 2004)
 
