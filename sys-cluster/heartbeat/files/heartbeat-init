@@ -9,15 +9,6 @@ depend() {
 	need net
 }
 
-checkconfig() {
-	[ ! -f /etc/ha.d/ha.cf ] && \
-		eerror "You need a heartbeat config file" && return 1
-
-	if [  -f $HA_DIR/ipresources -a ! -f $HA_DIR/haresources ] ; then
-		cat $HA_DIR/ipresources >> $HA_DIR/haresources
-	fi
-}
-
 # Run pre-startup script if it exists
 RunStartStop() {
 
@@ -26,29 +17,29 @@ RunStartStop() {
 }
 
 start() {
-	checkconfig
 	ebegin "Starting Heartbeat"
 
 	RunStartStop pre-start
 
-	/usr/bin/heartbeat 2>&1
-	/usr/bin/ResourceManager verifyallidle
+	/usr/lib/heartbeat/heartbeat 2>&1
+	ret=$?
+	/usr/lib/heartbeat/ResourceManager verifyallidle
 
 	RunStartStop post-start
 
-	eend $?
+	eend ret
 }
 
 stop() {
 	ebegin "Stopping Heartbeat"
-	/usr/bin/heartbeat -k &> /dev/null
+	/usr/lib/heartbeat/heartbeat -k &> /dev/null
 	eend $?
 }
 
 restart() {
-	heartbeat -r
+	/usr/lib/heartbeat/heartbeat -r
 }
 
 status() {
-	heartbeat -s
+	/usr/lib/heartbeat/heartbeat -s
 }
