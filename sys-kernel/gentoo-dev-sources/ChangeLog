@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.79 2004/08/09 23:06:19 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.80 2004/08/10 14:41:02 fmccor Exp $
+
+  10 Aug 2004; Ferris McCormick <fmccor@gentoo.org>
+  gentoo-dev-sources-2.6.7-r12.ebuild:
+  Remove ~sparc keyword.  Will not build on sparc because of a problem compiling
+  flash.c: At line 128, in preparation for an error exit, the code wants
+  to "up(s)", but s is undeclared.  It looks as if what it should be doing is
+  "up(flash_mutex);" but I do not know for sure.
 
 *gentoo-dev-sources-2.6.7-r13 (09 Aug 2004)
 
