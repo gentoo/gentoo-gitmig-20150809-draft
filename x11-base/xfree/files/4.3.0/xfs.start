@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/xfs.start,v 1.4 2004/07/15 01:03:31 agriffis Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/xfs.start,v 1.5 2004/08/02 08:57:41 spyderous Exp $
 
 #NB: Config is in /etc/conf.d/xfs
+
 
 opts="${opts} mkfontdirs"
 
@@ -124,6 +125,9 @@ get_fontdir_list() {
 					# Ok, we got our que, so start
 					if (DO_WRITE) {
 
+						# Strip and suffixes from the directory lists
+						sub(/\:[[:alnum:]]*/, "", xfsconf_data)
+
 						# Strip any leading spaces and tabs
 						sub(/^[[:space:]]*/, "", xfsconf_data)
 						# Strip the 'catalogue=' part
@@ -179,11 +183,18 @@ setup_font_dirs() {
 
 	umask 022
 
-	if [ ! -x /usr/X11R6/bin/mkfontdir -o ! -x /usr/X11R6/bin/ttmkfdir ]
-	then
-		ewarn "Could not find the mkfontdir or ttmkfdir binaries!"
-		return 0
-	fi
+	local NEEDED_BIN
+	local NEEDED_BINS="/usr/X11R6/bin/mkfontdir
+		/usr/X11R6/bin/mkfontscale
+		/usr/X11R6/bin/ttmkfdir"
+	for NEEDED_BIN in ${NEEDED_BINS}
+	do
+		if [ ! -x ${NEEDED_BIN} ]
+		then
+			ewarn "Could not find the `basename ${NEEDED_BIN}` binary!"
+			return 0
+		fi
+	done
 
 	if [ ! -d /usr/X11R6/lib/X11/fonts/encodings ]
 	then
@@ -220,13 +231,27 @@ setup_font_dirs() {
 		do
 			ebegin "  ${x}"
 
-			# Only generate .scale files if there are truetype fonts present ...
+			# Only generate .scale files if truetype, opentype or type1
+			# fonts are present ...
+
+			# First truetype (ttf,ttc)
+			# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
+			# Also, there is no way to regenerate Speedo/CID fonts.scale
+			# <spyderous@gentoo.org> 2 August 2004
 			if [ "${x/encodings}" = "${x}" -a \
-			     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
+			     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]
 			then
 				/usr/X11R6/bin/ttmkfdir -x 2 \
 					-e /usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 					-o ${x}/fonts.scale -d ${x} > /dev/null
+
+			# Next type1 and opentype (pfa,pfb,otf,otc)
+			elif [ "${x/encodings}" = "${x}" -a \
+				-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]
+			then
+				/usr/X11R6/bin/mkfontscale \
+					-a /usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
+					-- ${x}
 			fi
           
 		  	# Now generate fonts.dir files ...

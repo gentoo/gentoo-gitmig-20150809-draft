@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.51 2004/08/02 01:27:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.52 2004/08/02 08:57:41 spyderous Exp $
 
 inherit eutils flag-o-matic gcc xfree
 
@@ -996,7 +996,8 @@ pkg_preinst() {
 	# clean out old fonts.* and encodings.dir files, as we
 	# will regenerate them
 	local G_FONTDIR
-	local G_FONTDIRS="100dpi 75dpi Speedo TTF Type1 encodings local misc util"
+	# Not Speedo or CID, as their fonts.scale files are "real"
+	local G_FONTDIRS="100dpi 75dpi TTF Type1 encodings local misc util"
 	for G_FONTDIR in ${G_FONTDIRS}
 	do
 		find ${ROOT}/usr/X11R6/lib/X11/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
@@ -1087,14 +1088,28 @@ pkg_postinst() {
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
-				# Only generate .scale files if there are truetype
-				# fonts present ...
+				# Only generate .scale files if truetype, opentype or type1
+				# fonts are present ...
+
+				# First truetype (ttf,ttc)
+				# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
+				# Also, there is no way to regenerate Speedo/CID fonts.scale
+				# <spyderous@gentoo.org> 2 August 2004
 				if [ "${x/encodings}" = "${x}" -a \
-				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
+				     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]
 				then
+					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
 						-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
+				# Next type1 and opentype (pfa,pfb,otf,otc)
+				elif [ "${x/encodings}" = "${x}" -a \
+					-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]
+				then
+					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+					${ROOT}/usr/X11R6/bin/mkfontscale \
+						-a ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
+						-- ${x}
 				fi
 			done
 			eend 0
