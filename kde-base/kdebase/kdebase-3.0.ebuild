@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.ebuild,v 1.2 2002/04/03 22:00:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.ebuild,v 1.3 2002/04/04 22:30:00 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -61,6 +61,7 @@ src_install() {
     patch -p0 < ${FILESDIR}/startkde-3.0-gentoo.diff
     mv startkde startkde.orig
     sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
+    rm startkde.orig
     chmod a+x startkde
 
     # x11 session script
