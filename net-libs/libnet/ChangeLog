@@ -1,17 +1,17 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.16 2003/07/24 16:39:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.17 2003/08/16 23:01:32 vapier Exp $
 
-  24 Jul 2003; Hanno Boeck <hanno@gentoo.org> libnet-1.0.2a-r2.ebuild,
-  files/libnet-gcc33-fix:
-  Compile fix for gcc 3.3.
+*libnet-1.1.0-r2 (16 Aug 2003)
+
+  16 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Rather than using ${PV} for file tagging, use ${SLOT} ...
+  Also, move library to /usr/lib/libnet${SLOT}.a
+
+*libnet-1.1.0-r1 (02 Oct 2002)
 
   21 May 2003; Tavis Ormandy <taviso@gentoo.org> libnet-1.1.0-r1.ebuild:
   arking stable on alpha.
-
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
-
-*libnet-1.1.0-r1 (02 Oct 2002)
 
   22 Apr 2003; Brandon Low <lostlogic@gentoo.org> libnet-1.1.0-r1.ebuild:
   Change supersed dependencies
@@ -20,6 +20,12 @@
   Add ~alpha to KEYWORDS
 
 *libnet-1.0.2a-r2 (02 Oct 2002)
+
+  24 Jul 2003; Hanno Boeck <hanno@gentoo.org> libnet-1.0.2a-r2.ebuild,
+  files/libnet-gcc33-fix:
+  Compile fix for gcc 3.3.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   28 Apr 2003; Zach Welch <zwelch@gentoo.org> libnet-1.0.2a-r2.ebuild:
   add arm keyword
