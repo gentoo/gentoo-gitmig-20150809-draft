@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.16.ebuild,v 1.2 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.16.ebuild,v 1.3 2002/12/09 22:07:51 azarah Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -12,7 +12,7 @@ inherit libtool flag-o-matic
 # Generate borked binaries.  Bug #6730
 filter-flags "-fomit-frame-pointer"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2
 	ftp://ftp.kernel.org/pub/linux/devel/binutils/test/${P}.tar.bz2"
@@ -20,7 +20,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2|LGPL-2"
-KEYWORDS="~x86 ~ppc ~alpha  ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
