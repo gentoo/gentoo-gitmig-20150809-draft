@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.1 2004/05/30 05:27:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.2 2004/06/02 07:33:35 mr_bones_ Exp $
 
 inherit games
 
@@ -27,8 +27,8 @@ DEPEND="virtual/x11
 src_compile() {
 	local myconf=""
 	[ "$(ls /usr/include/GL/gl.h -al | awk '{print $NF}' | cut -d/ -f5)" == "nvidia" ] \
-		&& myconf="--enable-nvidia" \
-		|| myconf="--disable-nvidia"
+		&& myconf="--enable-nvidia=yes" \
+		|| myconf="--enable-nvidia=no"
 	myconf="${myconf} $(use_enable sdl SDL)"
 	use sdl \
 		&& myconf="${myconf} --disable-glut" \
