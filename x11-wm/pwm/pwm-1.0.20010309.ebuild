@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.6 2002/10/04 06:48:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.7 2002/10/17 13:14:40 aliz Exp $
 
 NPV=20010309
 S=${WORKDIR}/pwm-${NPV}
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.students.tut.fi/~tuomov/pwm"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64"
+IUSE="gnome"
 
 DEPEND="virtual/x11"
 

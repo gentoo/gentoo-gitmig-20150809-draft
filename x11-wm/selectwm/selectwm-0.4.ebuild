@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.ebuild,v 1.2 2002/10/04 06:48:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.ebuild,v 1.3 2002/10/17 13:14:40 aliz Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="window manager selector tool"
 HOMEPAGE="http://ordiluc.net/selectwm"
 SRC_URI="http://ordiluc.net/selectwm/${P}.tar.bz2"
+IUSE="nls"
 
 LICENSE="GPL-2"
 SLOT="2"

@@ -1,8 +1,12 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.6 2002/04/18 13:05:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.7 2002/10/17 13:14:40 aliz Exp $
 
 *afterstep-1.8.11-r2 (18 Apr 2002)
+
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> afterstep-1.8.11-r2.ebuild :
+  Added IUSE.
+
   18 Apr 2002; Spider <spider@gentoo.org> ChangeLog afterstep-1.8.11-r2.ebuild :
   Fix changelog syntax
   remove dependency on xpm, that version is in XFree
@@ -12,6 +16,10 @@
   Recompile against libpng-1.2.1 and optional USE dependent tiff support
 
 *afterstep-1.8.11-r1 (16 Mar 2002)
+
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> afterstep-1.8.11-r1.ebuild :
+  Added IUSE.
+
   16 Mar 2002; Seemant Kulleen <seemant@gentoo.org> afterstep-1.8.11-r1.ebuild :
   Added libXPM support to AfterStep.
 
