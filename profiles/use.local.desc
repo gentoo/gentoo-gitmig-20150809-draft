@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.371 2004/05/11 15:31:59 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.372 2004/05/11 21:44:25 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -9,8 +9,8 @@ app-accessibility/festival:asterisk - adds a new command named tts_textasterisk 
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
 app-admin/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
-app-admin/webalizer:geoip - Enable support for IP country lookup
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
+app-admin/webalizer:geoip - Enable support for IP country lookup
 app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-editors/nano:justify - Toggle the justify option ...
@@ -105,6 +105,7 @@ dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
+dev-libs/redland:php - Enable the PHP interface
 dev-lisp/clisp:pcre - enable PCRE support
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
 dev-lisp/gauche-gtk:glgd - enable GL graph draw
@@ -194,10 +195,10 @@ media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:matroska - Enables support for the matroska video format
 media-video/mplayer:v4l - Enables video4linux support
 media-video/mplayer:v4l2 - Enables video4linux2 support
+media-video/vlc:faad - Enables faad2 support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
 media-video/vlc:xvid - Enables xvid codec support
-media-video/vlc:faad - Enables faad2 support
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
 net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
@@ -207,10 +208,10 @@ net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs afte
 net-analyzer/nstats:pcap - enable pcap support
 net-analyzer/slurm:altcolors - Use alternative color set
 net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
-net-dialup/gnokii:bluetooth - Enable Bluetooth Support
-net-dialup/gnokii:irda - Enable Infrared Support
 net-dialup/gammu:bluetooth - Enable Bluetooth Support
 net-dialup/gammu:irda - Enable Infrared Support
+net-dialup/gnokii:bluetooth - Enable Bluetooth Support
+net-dialup/gnokii:irda - Enable Infrared Support
 net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
 net-dns/djbdns:fwdzone - enables forward zone patch
@@ -383,8 +384,8 @@ x11-terms/eterm:etwin - enable twin support
 x11-terms/mlterm:uim - Enable uim support
 x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
-x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/enlightenment:nothemes - Don't include the standard E themes
+x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
