@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.4.4a.ebuild,v 1.4 2004/02/22 22:22:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.4.4a.ebuild,v 1.5 2004/04/10 10:37:02 usata Exp $
 
 DESCRIPTION="A Ruby extention library to use MySQL"
 HOMEPAGE="http://www.tmtm.org/en/mysql/ruby/"
@@ -9,7 +9,7 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="alpha hppa mips ppc sparc x86"
 IUSE=""
-DEPEND=">=dev-lang/ruby-1.6.8
+DEPEND="virtual/ruby
 	>=dev-db/mysql-3.23.54"
 
 src_compile() {
