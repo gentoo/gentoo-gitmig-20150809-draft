@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.10.ebuild,v 1.1 2004/03/26 17:20:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.10.ebuild,v 1.2 2004/03/31 13:26:15 aliz Exp $
 
 inherit gnome2
 
@@ -23,7 +23,12 @@ DOCS="AUTHORS CHANGES ChangeLog HACKING PORTING NEWS README TODO"
 
 src_compile() {
 
-	[ "${ARCH}" = "amd64" ] && libtoolize -c -f
+	if [ "${ARCH}" = "amd64" ]; then
+		libtoolize -c -f --automake
+		aclocal -I scripts
+		automake
+		autoconf
+	fi
 
 	gnome2_src_compile
 
