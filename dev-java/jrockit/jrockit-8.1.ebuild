@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/jrockit-8.1.ebuild,v 1.4 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/jrockit-8.1.ebuild,v 1.5 2003/09/11 01:07:22 msterret Exp $
 
 IUSE=""
 
@@ -31,11 +31,11 @@ src_unpack() {
 		eerror "NOTE: This download REQUIRES a fairly extensive registration process."
 		die "Download ${At} and put it into ${DISTDIR}."
 	fi
-        unzip ${DISTDIR}/${At} *.zip
-        for z in *.zip ; do
-          unzip $z
-          rm $z
-        done
+	unzip ${DISTDIR}/${At} *.zip
+	for z in *.zip ; do
+		unzip $z
+		rm $z
+	done
 }
 
 src_install () {
@@ -47,13 +47,13 @@ src_install () {
 	done
 
 	newdoc README.TXT README
-        newdoc "License Agreement.txt" LICENSE
+	newdoc "License Agreement.txt" LICENSE
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
 }
 
 pkg_postinst () {
 	# Set as default VM if none exists
-        einfo "Please review the license agreement in /usr/doc/${P}/LICENSE"
-        einfo "If you do not agree to the terms of this license, please uninstall this package"
+	einfo "Please review the license agreement in /usr/doc/${P}/LICENSE"
+	einfo "If you do not agree to the terms of this license, please uninstall this package"
 }
