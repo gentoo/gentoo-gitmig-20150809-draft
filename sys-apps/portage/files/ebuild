@@ -894,15 +894,6 @@ then
 	source ${PEBUILD}
 fi
 
-# Set Perl-Installation Enviroment
-
-for i in ARCHLIB PRIVLIB BIN MAN1DIR MAN3DIR SCRIPT SITEARCH SITELIB
-do
-  install=`echo $i | awk '{ printf "%s%s","install",tolower($1) }'`
-  install=`perl "-V:$install"  | sed -e "s:.*/image/\(.*\)'\;:\1:"`
-  PERLINSTALL=`echo INSTALL$i=$D$install $PERLINSTALL`
-done
-export PERLINSTALL
 
 if [ $# -eq 1 ]
 then
