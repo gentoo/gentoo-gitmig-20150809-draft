@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.16 2005/01/18 01:37:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.17 2005/01/18 03:03:20 eradicator Exp $
+
+*emul-linux-x86-xlibs-1.2-r3 (17 Jan 2005)
+
+  17 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +emul-linux-x86-xlibs-1.2-r3.ebuild:
+  Properly create opengl-update profile.
 
 *emul-linux-x86-xlibs-1.2-r2 (17 Jan 2005)
 
