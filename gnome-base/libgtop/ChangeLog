@@ -1,12 +1,18 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.4 2002/06/25 18:27:39 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.5 2002/08/02 19:41:53 gerk Exp $
 
 *libgtop-2.0.0-r1 ( 26 Jun 2002)
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
+  Added ppc to keywords
+
   26 Jun 2002; Spider <spider@gentoo.org> libgtop-2.0.0-r1.ebuild :
   fixed a SLOT="" issue. now passess lintool checks
   
 *libgtop-2.0.0 ( 10 Jun 2002)
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
+  Added ppc to keywords
+
   10 Jun 2002; Spider <spider@gentoo.org> libgtop-2.0.0.ebuild :
   new eclassed stable version 
 
@@ -15,6 +21,9 @@
   The gnome2 release branch
 
 *libgtop-1.0.13-r2 (1 Feb 2002)
+
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
+  Added ppc to keywords
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
