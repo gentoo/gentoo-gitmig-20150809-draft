@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.59 2003/07/27 23:09:44 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.60 2003/08/02 13:14:01 lisa Exp $
+
+02 Aug 2003: Lisa Seelye <lisa@gentoo.org> :
+  Added a metadata.xml file. Initially under the `cluster' herd
+  Also normalized this file (distcc-2.8) to have most recent dates at the top of the file
+
 
 *distcc-2.9 (21 Jul 2003)
   21 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
@@ -9,24 +14,20 @@
    all versions in the repository.
 
 *distcc-2.8 (09 Jul 2003)
-  10 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
-  New version released and committed (Still with the patch to fix tmpdir)
-
-  12 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
-  Changed the USE flags from 'gnome' to 'gtk2' since distccmon-gnome was
-  changed to use gtk instead of gnome libraries.
-
-  12 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
-  Oops. :)  `gtk' is preferred over `gtk2'.  Thanks Spider for the 
-  heads up!
+  27 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  Bumped distcc-2.8-r2 to x86
 
   13 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
-  (files/2.8/conf) Added a --port to DISTCC_OPTS (/etc/conf.d/distccd) to 
+  (files/2.8/conf) Added a --port to DISTCC_OPTS (/etc/conf.d/distccd) to
   change the running port.
   (distcc-2.8-r2.ebuild) Added a note to the backup distcc website
 
-  27 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
-  Bumped distcc-2.8-r2 to x86
+  12 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  Oops. :)  `gtk' is preferred over `gtk2'.  Thanks Spider for the
+  heads up!
+                                                                                                                                                             
+  10 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  New version released and committed (Still with the patch to fix tmpdir)
 
 *distcc-2.7.1 (01 Jul 2003)
   21 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
