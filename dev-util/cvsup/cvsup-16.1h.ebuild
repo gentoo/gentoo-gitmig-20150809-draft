@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1e-r1.ebuild,v 1.2 2003/02/13 11:49:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.1 2003/04/17 13:40:29 vapier Exp $
 
 S=${WORKDIR}
 MY_P="${P/-/-snap-}"
-EZM3="ezm3-1.0"
+EZM3="ezm3-1.1"
 EZM3_TARGET="LINUXLIBC6"
 EZM3_INSTALL="${S}/${EZM3}-install"	#// anywhere or having a trailing / makes the compile dies
 
 DESCRIPTION="a faster alternative to cvs"
-SRC_URI="http://people.freebsd.org/~jdp/s1g/${MY_P}.tar.gz
+SRC_URI="ftp://ftp3.freebsd.org/pub/FreeBSD/development/CVSup/sources/${MY_P}.tar.gz
 	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${EZM3}-src.tar.bz2
 	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${EZM3}-${EZM3_TARGET}-boot.tar.bz2"
 HOMEPAGE="http://www.cvsup.org/"
@@ -50,8 +50,10 @@ src_compile() {
 	# we clear the CFLAGS because:
 	#	(1) higher optimizations cause issues
 	#	(2) it doesnt matter ... we arent installing the compiler ...
+	# we clea the P because:
+	#	newer build system uses this variable and having it breaks it
 	cd ${S}/${EZM3}
-	env CFLAGS="" make || die "ezm3 compile failed"
+	env -u CFLAGS -u P make || die "ezm3 compile failed"
 
 	#########################
 	### BEGIN CVSUP SETUP ###
@@ -105,6 +107,15 @@ src_install() {
 
 	dodoc ${S}/{Acknowledgments,Announce,Blurb,ChangeLog,License,Install}
 
-	dodir ${S}/etc/cvsup
-	insinto ${S}/etc/cvsup
+	dodir /etc/cvsup
+	insinto /etc/cvsup
+	doins ${FILESDIR}/gentoo.sup
+	doins ${FILESDIR}/gentoo_mirror.sup
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/cvsupd.rc cvsupd
+	insinto /etc/conf.d
+	newins ${FILESDIR}/cvsupd.confd cvsupd
+
+	dodir /var/cvsup
 }

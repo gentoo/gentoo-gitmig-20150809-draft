@@ -1,32 +1,28 @@
 # ChangeLog for dev-util/cvsup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.8 2003/02/12 06:40:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.9 2003/04/17 13:40:29 vapier Exp $
 
-*cvsup-16.1e-r2 (4 Dec. 2002)
+*cvsup-16.1h (17 Apr 2003)
 
-  26 Jan. 2002; Grant Goodyear <g2boojum@gentoo.org> cvsup-16.1e-r2.ebuild :
+  17 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump for both cvsup and the ezm3 compiler ...
+  New ezm3 is based off of gcc-3.2.1.
 
+*cvsup-16.1e-r2 (04 Dec 2002)
+
+  26 Jan 2002; Grant Goodyear <g2boojum@gentoo.org> cvsup-16.1e-r2.ebuild :
   Added support files so we can mirror portage using cvsup.
 
-*cvsup-16.1e-r1 (4 Dec. 2002)
-
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*cvsup-16.1e-r1 (4 Dec. 2002)
+*cvsup-16.1e-r1 (04 Dec 2002)
 
   4 Dec. 2002; Grant Goodyear <g2boojum@gentoo.org> cvsup-16.1e-r1.ebuild :
-
   Added new version that builds from source.  Keywording as ~x86 and nothing else
   until it gets tested.
 
-*cvsup-16.1e (19 August 2002)
-
-  19 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, cvsup-16.1e.ebuild :
-
-  Added -ppc to the keywords.
-
 *cvsup-16.1e (18 Feb 2002)
 
+  19 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, cvsup-16.1e.ebuild :
+  Added -ppc to the keywords.
+
   18 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog. Created package.
