@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.6 2004/12/06 18:33:11 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.7 2004/12/06 21:41:39 johnm Exp $
 
 # This eclass provides functions for compiling external kernel modules
 # from source.
@@ -132,7 +132,7 @@ linux-mod_src_compile() {
 		einfo "Preparing ${modulename} module"
 		cd ${sourcedir}
 		emake clean || die Unable to make clean.
-		emake ${BUILD_PARAMS} module || die Unable to make ${BUILD_PARAMS} module.
+		emake ${BUILD_PARAMS} ${BUILD_TARGETS:-module} || die Unable to make ${BUILD_PARAMS} module.
 	done
 	ARCH="${xarch}"
 }
