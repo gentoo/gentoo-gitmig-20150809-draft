@@ -1,6 +1,13 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# masked for security reasons
+# see
+# http://online.securityfocus.com/advisories/4061
+# <bangert@gentoo.org> 26 Apr 2oo2
+<app-admin/sudo-1.6.6
+
+
 #if you're not careful, you'll build yourself a rsync that depends on libpopt.so! <kainz, 18 Apr 2002>
 #this fixes that.  devlopers give it a shot
 =net-misc/rsync-2.5.4-r1
@@ -116,7 +123,6 @@ net-www/zope
 
 # Security fix (reported by M0rpheus)
 <=net-mail/exim-3.33
-<=app-admin/sudo-1.6.4
 
 #previous versions had a security hole (bug #212)
 <net-misc/stunnel-3.22
