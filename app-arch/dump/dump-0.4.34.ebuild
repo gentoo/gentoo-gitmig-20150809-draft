@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.34.ebuild,v 1.8 2003/11/14 20:00:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.34.ebuild,v 1.9 2004/01/15 04:24:03 agriffis Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://dump.sourceforge.net"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ia64"
+KEYWORDS="~x86 ~ppc ~sparc ia64 ~alpha"
 IUSE="readline static"
 
 DEPEND=">=sys-fs/e2fsprogs-1.27
