@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.2 2003/08/16 01:56:10 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.3 2003/08/16 08:16:42 g2boojum Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -50,6 +50,7 @@ DEPEND="X? ( virtual/x11 )
 	wxwindows? ( >=x11-libs/wxGTK-2.4.1 )
 	xosd? ( >=x11-libs/xosd-2.0 )
 	xvid? ( >=media-libs/xvid-0.9.1 )
+	3dfx? ( media-libs/glide-v3 )
 	>=media-libs/a52dec-0.7.4
 	>=media-libs/flac-1.1.0
 	>=media-libs/libdv-0.98
@@ -88,9 +89,19 @@ src_unpack() {
 	fi
 	)
 
-	# Change the location where glide headers are installed
+	# We only have glide v3 in portage
 	cd ${S}
 	sed -i -e "s:/usr/include/glide:/usr/include/glide3:" configure
+	sed -i -e "s:glide2x:glide3:" configure
+	cd ${S}/modules/video_output
+	epatch ${FILESDIR}/glide.patch
+	cd ${S}
+		
+	touch configure.ac
+	touch aclocal.m4
+	touch configure
+	touch config.h.in
+	touch `find . -name Makefile.in`
 }
 
 src_compile(){

@@ -1,0 +1,23 @@
+--- glide.c	2003-08-16 02:49:23.000000000 -0400
++++ glide.c-modified	2003-08-16 02:46:13.000000000 -0400
+@@ -243,20 +243,11 @@
+ 
+ static int OpenDisplay( vout_thread_t *p_vout )
+ {
+-    static char version[80];
+-    GrHwConfiguration hwconfig;
+     GrScreenResolution_t resolution = GR_RESOLUTION_800x600;
+     GrLfbInfo_t p_front_buffer_info;                    /* front buffer info */
+ 
+-    grGlideGetVersion( version );
+     grGlideInit();
+ 
+-    if( !grSstQueryHardware(&hwconfig) )
+-    {
+-        msg_Err( p_vout, "cannot get 3dfx hardware config" );
+-        return( 1 );
+-    }
+-
+     grSstSelect( 0 );
+     if( !grSstWinOpen( 0, resolution, GR_REFRESH_60Hz,
+                        GR_COLORFORMAT_ABGR, GR_ORIGIN_UPPER_LEFT, 2, 1 ) )
