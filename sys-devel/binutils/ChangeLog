@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.148 2004/08/11 15:57:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.149 2004/08/26 20:45:25 tigger Exp $
+
+  26 Aug 2004; Rob Holland <tigger@gentoo.org> binutils-2.14.90.0.8-r2.ebuild,
+  binutils-2.15.91.0.1-r2.ebuild, binutils-2.15.91.0.2.ebuild:
+  gnuconfig_update belongs in src_unpack, not src_compile
 
   11 Aug 2004; Travis Tilley <lv@gentoo.org> binutils-2.15.91.0.2.ebuild:
   masking this release -amd64. most software builds fine, but on mozilla firefox

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r2.ebuild,v 1.7 2004/08/14 02:27:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r2.ebuild,v 1.8 2004/08/26 20:45:25 tigger Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -51,6 +51,8 @@ src_unpack() {
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
 	done
+
+	gnuconfig_update
 }
 
 src_compile() {
@@ -60,8 +62,6 @@ src_compile() {
 	use arm && replace-flags -O? -O
 	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative #47581
 	has_version "=sys-devel/gcc-3.4*" && strip-flags && replace-flags -O3 -O2
-
-	gnuconfig_update
 
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"

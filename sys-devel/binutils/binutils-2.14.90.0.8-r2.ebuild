@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.10 2004/08/14 02:27:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.11 2004/08/26 20:45:25 tigger Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -51,13 +51,13 @@ src_unpack() {
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
 	done
+
+	gnuconfig_update
 }
 
 src_compile() {
 	# Generate borked binaries.  Bug #6730
 	filter-flags -fomit-frame-pointer -fssa -freduce-all-givs
-
-	gnuconfig_update
 
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"
