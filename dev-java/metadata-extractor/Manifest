@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6214c0372fc2c3254d94dd5bd24dd16 metadata-extractor-2.2.2.ebuild 1209
-MD5 c89ef589401ec43dc7d2819c1487f516 ChangeLog 414
+MD5 829b3f1d255cc0b3b170d1718f09bc36 ChangeLog 511
+MD5 d1e63a931bf2806278d7ed1088e3f24f metadata-extractor-2.2.2.ebuild 1215
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 78a5d326ec7fbf5f587b6a6b50327c97 files/digest-metadata-extractor-2.2.2 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBCdsR/rLF9B432nYRAi42AJ9gKe/96mwmXugsc6X3tHETLuzVbgCeIKuQ
-TPNiMqi+Zh8335pSTQMwfeM=
-=0nco
------END PGP SIGNATURE-----
