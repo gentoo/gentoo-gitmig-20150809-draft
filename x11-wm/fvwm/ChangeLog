@@ -1,6 +1,23 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.25 2003/09/01 10:42:57 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.26 2003/09/01 13:29:23 taviso Exp $
+
+*fvwm-2.5.7-r2 (01 Sep 2003)
+
+  01 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r2.ebuild:
+  Three new USE flags, 
+  	noxpm - Disable support for XPM Images, for people who 
+  		only use png images, or prefer solid colour/gradiant/etc.
+  	nosm - Disable session management support, for users who 
+  		never use session managers (xsm, for example)
+  	truetype - Allows users to toggle Xft support.
+  Adding /usr/share/icons/fvwm to the default ImagePath.
+  Some minor tweaks to the toolkit options, so that -gtk also removes gtk2
+  support, as reccommended.
+  
+  The new USE flags mean only XRender, SHM and Shaped Windows are left to 
+  the configure script to decide, which i suspect everybody will want unless
+  support isnt available, which the configure script will deduce automatically.
 
   01 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r1.ebuild:
   gtk2 wasnt in IUSE.
