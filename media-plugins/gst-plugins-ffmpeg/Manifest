@@ -1,4 +1,6 @@
+MD5 d6792d5948e5e603470a2bea10b0d38a gst-plugins-ffmpeg-0.8.1.ebuild 1020
 MD5 7656b8141a9dafd7103958ece9272f1e gst-plugins-ffmpeg-0.8.0.ebuild 1043
-MD5 00a1fbb24fbcbed2017fcd9bf3cb8f79 ChangeLog 867
+MD5 f146dcac9f710c3b925b6dc52754fc4b ChangeLog 994
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 08218449f7831982743033aa8a752314 files/digest-gst-plugins-ffmpeg-0.8.0 70
+MD5 0b33ba99748b99f1f1f0398c89c9bd41 files/digest-gst-plugins-ffmpeg-0.8.1 70
