@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3_rc1-r1.ebuild,v 1.3 2005/01/04 20:32:14 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3_rc2.ebuild,v 1.1 2005/01/04 20:32:14 humpback Exp $
 
 inherit eutils
 
 VER="0.9.3"
-REV="-test1"
+REV="-test2"
 MY_PV="${VER}${REV}"
 MY_P="${PN}-${MY_PV}"
 LANGVER="${VER}_rc1"
@@ -18,7 +18,8 @@ DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
 HOMEPAGE="http://psi.affinix.com"
 # translations from http://tanoshi.net/language.html
 SRC_URI="http://people.ex.ac.uk/kismith/psi/${MY_P}.tar.bz2
-		!vanilla?	( http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-${EXTRAPATCH_VER}.tar.bz2 )
+		!vanilla?	( http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-${EXTRAPATCH_VER}.tar.bz2
+		http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-0.2.tar.bz2 )
 		linguas_ar? ( ${HTTPMIRR}/psi_ar-${LANGVER}.tar.bz2 )
 		linguas_ca? ( ${HTTPMIRR}/psi_ca-${LANGVER}.tar.bz2 )
 		linguas_cs? ( ${HTTPMIRR}/psi_cs-${LANGVER}.tar.bz2 )
@@ -151,6 +152,7 @@ src_unpack() {
 			epatch ${PATCHDIR}/psi-emots-mod.diff
 
 			# few more goodies :)
+			epatch ${PATCHDIR}/adhoc+rc.diff
 			epatch ${PATCHDIR}/psi-desktop.patch
 			epatch ${PATCHDIR}/psi-richroster-status_default_on.patch
 			epatch ${PATCHDIR}/psi-richroster-status_gui_on_off.patch
