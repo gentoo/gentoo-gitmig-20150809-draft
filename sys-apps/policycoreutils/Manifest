@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b43361a2a2c302fca77460dc5eb9722 ChangeLog 5409
+MD5 5dbfcb83a09115b20a1c41b6b991c776 ChangeLog 5555
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
-MD5 fe7693f76bf332522faa4bae5fbd31af policycoreutils-1.14.ebuild 1645
 MD5 6ace8ffd9877d971422974d8a7a64252 policycoreutils-1.16.ebuild 1772
-MD5 4f60b120c053af5e96772b15f2019cc5 files/digest-policycoreutils-1.14 144
-MD5 440f1bd6fdf23f39dde7bd50aefc5731 files/policycoreutils-1.10-genhomedircon-reverse.diff 3459
-MD5 98c9b5772013d9f3a4e1fec905eed9c9 files/policycoreutils-1.14-genhomedircon-compat.diff 1520
+MD5 8fcf91c843f8e365b3abf91133842b36 policycoreutils-1.18.ebuild 1777
 MD5 b3fb897ca820d6d94105ecf7103cab70 files/digest-policycoreutils-1.16 144
 MD5 308dfedc40a02c48b8cc5118feb8f9ef files/policycoreutils-1.16-genhomedircon-compat.diff 1744
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZdAQGFJQsIJWJy4RAq8FAJ9zwvbKJhNGNAdp+JtJuY+VNvg8VQCePBPS
-OjLRQjxIShq8C6kFKef+B8M=
-=fgda
------END PGP SIGNATURE-----
+MD5 2dbe913419502995a710560072ca8517 files/digest-policycoreutils-1.18 145
