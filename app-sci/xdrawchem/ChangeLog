@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.21 2004/02/24 08:45:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.22 2004/04/01 08:53:17 phosphan Exp $
+
+  01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> xdrawchem-1.7.5.ebuild,
+  xdrawchem-1.7.8.ebuild:
+  Cleanup, 1.7.8 stable
 
 *xdrawchem-1.7.8 (24 Feb 2004)
 
