@@ -11,14 +11,13 @@ HOMEPAGE="http://www.kde-look.org/content/show.php?content=5483"
 KEYWORDS="x86 ~alpha ~ppc ~sparc"
 SLOT="0"
 LICENSE="GPL-1"
+IUSE=""
 
 # stripping hangs and we've no binaries
 RESTRICT="$RESTRICT nostrip"
 
 src_compile() {
-	unpack ${P}dave.tar.gz
-	cd ${S}
-
+	return 0
 }
 
 src_install(){
