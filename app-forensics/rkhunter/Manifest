@@ -3,21 +3,24 @@ Hash: SHA1
 
 MD5 ef857bb85b1db91d75c5ccc20ec0db77 rkhunter-1.2.0.ebuild 1697
 MD5 023a96c68f424d636a21e1b2cba1f17f rkhunter-1.1.9.ebuild 1697
-MD5 420401ac56f249bad3934421d6fe1c19 ChangeLog 6319
+MD5 fc49f5a87c05552e0920245c1035857e rkhunter-1.2.2.ebuild 1801
+MD5 084fda699571e872fc01a011d89dcd9a ChangeLog 6539
 MD5 f1608c19ea0727ee36b2a692b1f3470b metadata.xml 264
-MD5 b569fec09ea053c375f75420895bb5a1 rkhunter-1.2.1.ebuild 1748
+MD5 6540238f284620f1b9e679a34d34ae35 rkhunter-1.2.1.ebuild 1747
 MD5 9b82f88f42c67bf2a8b855a851d3cdd7 files/rkhunter-1.2.0-specify-logfile.patch 2439
+MD5 7a80610ccd08ff160d990ae57cae3a81 files/rkhunter-1.2.2-fix-broken-test.diff 647
 MD5 4aace52e301a67ef5b8b23d8d2c5ba46 files/rkhunter.cron 3855
 MD5 2473ff095ea8aa159a379872571b5d43 files/rkhunter.bash-completion 2628
 MD5 a67c10cf68af091e9f17ad100b38ee7c files/rkhunter-1.1.9-specify-logfile.patch 2379
 MD5 a8206bcb42fdb2f63d50390afe76a7be files/digest-rkhunter-1.1.9 66
 MD5 109877c6e8a34dfc0c80865daf3102f0 files/digest-rkhunter-1.2.0 66
 MD5 c8d3c0a3f16a749c915f20be1047f683 files/digest-rkhunter-1.2.1 66
+MD5 9e37d314e5ae875453e463680b85616e files/digest-rkhunter-1.2.2 66
 MD5 d07a47cbe2364dc010d37ead80ff8f4b files/rkhunter-1.2.1-create-tmpdir.diff 551
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCGxFEEZCkKN40op4RAiIwAKCMXIa7c0y5LZEOdcKFLDUGroNlngCfQTcx
-muLvrYkPU9MR+raCXavNf0Y=
-=2v7A
+iD8DBQFCPDajEZCkKN40op4RAsRyAJwI6TltM5HwtwRKhthm4v58LRnSqgCfZOGz
+5c6dd5fYtfYXVZQvM8gXwMs=
+=/fyt
 -----END PGP SIGNATURE-----
