@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i.ebuild,v 1.9 2003/02/10 07:12:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i.ebuild,v 1.10 2003/09/26 21:07:35 aliz Exp $
 
 DESCRIPTION="Utility for creating and opening lzh archives."
 HOMEPAGE="http://www2m.biglobe.ne.jp/~dolphin/lha/lha-unix.htm"
@@ -14,8 +14,7 @@ DEPEND="virtual/glibc"
 
 src_unpack () {
 	unpack ${A} ; cd ${S}
-	sed -e "/^OPTIMIZE/ s:-O2:${CFLAGS}:" < Makefile > Makefile.hacked
-	mv Makefile.hacked Makefile
+	sed -i -e "/^OPTIMIZE/ s:-O2:${CFLAGS}:" Makefile
 }
 
 src_compile() {

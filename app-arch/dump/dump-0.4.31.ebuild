@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.31.ebuild,v 1.14 2003/09/15 17:49:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.31.ebuild,v 1.15 2003/09/26 21:07:35 aliz Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -26,9 +26,8 @@ src_unpack() {
 	if [ `use readline` ] ; then
 		for i in configure configure.in
 		do
-			cp ${i} ${i}.orig
-			sed "s:-ltermcap:-lncurses:g" \
-				${i}.orig > ${i}
+			sed -i "s:-ltermcap:-lncurses:g" \
+				${i}
 		done
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.5 2003/09/05 22:49:03 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.6 2003/09/26 21:07:35 aliz Exp $
 
 IUSE="crypt"
 
@@ -22,8 +22,7 @@ src_unpack() {
 		mv -f crypt.c ${S}
 	fi
 	cd ${S}/unix
-	cp Makefile Makefile.orig
-	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i -e "s:-O2:${CFLAGS}:" Makefile
 }
 
 src_compile() {

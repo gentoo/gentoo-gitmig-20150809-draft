@@ -1,6 +1,8 @@
 # ChangeLog for app-arch/par
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/ChangeLog,v 1.9 2003/09/25 01:31:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/ChangeLog,v 1.10 2003/09/26 21:07:35 aliz Exp $
+
+*par-2.0.3 (25 Sep 2003)
 
   24 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> :
   version bump for par2 support, bug #25087

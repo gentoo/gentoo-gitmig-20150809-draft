@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r1.ebuild,v 1.20 2003/07/18 19:14:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r1.ebuild,v 1.21 2003/09/26 21:07:35 aliz Exp $
 
 DESCRIPTION="Info ZIP"
 SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${PN}23.tar.gz"
@@ -13,8 +13,7 @@ LICENSE="Info-ZIP"
 src_unpack() {
 	unpack ${A}
 	cd ${S}/unix
-	cp Makefile Makefile.orig
-	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i -e "s:-O2:${CFLAGS}:" Makefile
 }
 
 src_compile() {

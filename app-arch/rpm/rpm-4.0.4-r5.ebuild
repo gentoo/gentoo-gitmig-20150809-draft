@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.5 2003/08/05 14:49:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.6 2003/09/26 21:07:35 aliz Exp $
 
 inherit flag-o-matic eutils
 
@@ -32,8 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-glibc2.3.diff
 	rm -rf ${S}/popt
 	# Suppress pointer warnings
-	cp configure configure.orig
-	sed -e "s:-Wpointer-arith::" configure.orig > configure
+	sed -i -e "s:-Wpointer-arith::" configure
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50.ebuild,v 1.7 2003/08/05 14:55:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50.ebuild,v 1.8 2003/09/26 21:07:35 aliz Exp $
 
 DESCRIPTION="Unzipper for pkzip-compressed files"
 HOMEPAGE="ftp://ftp.info-zip.org/pub/infozip/UnZip.html"
@@ -13,9 +13,7 @@ KEYWORDS="x86 ppc alpha"
 DEPEND="virtual/glibc"
 
 src_compile() {
-
-	cp unix/Makefile unix/Makefile.orig
-	sed -e "s:-O3:${CFLAGS}:" unix/Makefile.orig > unix/Makefile
+	sed -i -e "s:-O3:${CFLAGS}:" unix/Makefile
 
 	use x86 \
 		&& TARGET=linux \

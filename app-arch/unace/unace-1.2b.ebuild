@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b.ebuild,v 1.5 2003/07/08 21:50:26 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b.ebuild,v 1.6 2003/09/26 21:07:35 aliz Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="ACE unarchiver"
@@ -20,10 +20,9 @@ src_unpack() {
 }
 
 src_compile() {
-	sed -e "s/^CFLAGS = -O.*/CFLAGS = -Wall ${CFLAGS}/g" \
+	sed -i -e "s/^CFLAGS = -O.*/CFLAGS = -Wall ${CFLAGS}/g" \
 		-e "s/-DCASEINSENSE//g" \
-		< makefile > makefile.new
-	mv -f makefile.new makefile
+		makefile
 
 	emake dep
 	emake
