@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/electric
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.1 2003/03/09 22:12:56 george Exp $
+
+*electric-6.07.ebuild (09 Mar 2003)
+
+  09 Mar 2003; George Shapovalov <george@gentoo.org> ChangeLog, electric-6.07.ebuild, files/digest-electric-6.07 :
+  initial release (15674)
+  Electric is a sophisticated electrical CAD system that can  handle many forms of circuit design
+  ebuild submitted by Nick <npaulin@purdue.edu>
