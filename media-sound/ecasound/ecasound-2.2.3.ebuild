@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.4 2003/09/10 22:41:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.5 2003/10/16 19:53:19 mholzer Exp $
 
-IUSE="ncurses arts alsa python oss mikmod oggvorbis"
+IUSE="ncurses arts alsa python oss mikmod oggvorbis jack"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A package for multitrack audio processing"
@@ -14,12 +14,12 @@ SLOT="1"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc
-	virtual/jack
+	jack?	( virtual/jack )
 	media-libs/ladspa-sdk
 	media-libs/audiofile
-	alsa?		( media-libs/alsa-lib )
+	alsa?	( media-libs/alsa-lib )
 	oggvorbis?	( media-libs/libvorbis )
-	arts?		( kde-base/arts )
+	arts?	( kde-base/arts )
 	mikmod?	( media-libs/libmikmod )
 	python?		( dev-lang/python )
 	ncurses?	( sys-libs/ncurses )"
@@ -28,17 +28,15 @@ DEPEND="virtual/glibc
 # use flags for them.
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
-	cp configure 1
-	sed -e 's:map.h:map:g' 1 > configure
-
+	sed -i 's:map.h:map:g' configure
 }
 
 src_compile () {
 	local myconf
 
+	use jack || myconf="$myconf --disable-jack"
 	use alsa || myconf="$myconf --disable-alsa"
 	use arts || myconf="$myconf --disable-arts"
 	use ncurses || myconf="$myconf --disable-ncurses"
