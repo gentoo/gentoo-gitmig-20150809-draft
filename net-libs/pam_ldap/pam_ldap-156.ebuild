@@ -1,33 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/pam_ldap-156.ebuild,v 1.3 2003/02/13 14:21:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/pam_ldap-156.ebuild,v 1.4 2003/03/29 04:27:39 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PAM LDAP Module"
-HOMEPAGE="http://www.padl.com/pam_ldap.html"
+HOMEPAGE="http://www.padl.com/OSS/pam_ldap.html"
 SRC_URI="ftp://ftp.padl.com/pub/${P}.tar.gz"
+
+SLOT="0"
+LICENSE="GPL-2 | LGPL-2"
+KEYWORDS="x86 sparc"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/pam-0.72
 	>=net-nds/openldap-1.2.11"
-
-SLOT="0"
-LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="x86 sparc "
 
 src_compile() {                           
 	aclocal
 	autoconf
 	automake --add-missing
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--sysconfdir=/etc \
-		--localstatedir=/var/lib \
-		--with-ldap-lib=openldap || die
-
+	econf --with-ldap-lib=openldap || die
 	emake || die
 }
 
@@ -41,4 +34,3 @@ src_install() {
 	docinto pam.d
 	dodoc pam.d/*
 }
-
