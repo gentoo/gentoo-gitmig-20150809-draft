@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.14 2004/01/09 19:53:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.15 2004/01/20 20:16:33 avenj Exp $
+
+  20 Jan 2004; Jon Portnoy <avenj@gentoo.org> htmltidy-3.10.29.ebuild :
+  AMD64 keywords.
 
   09 Jan 2004; Aron Griffis <agriffis@gentoo.org> htmltidy-3.10.29.ebuild:
   stable on alpha
