@@ -1,10 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.75 2004/07/03 00:40:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.76 2004/07/03 00:59:50 eradicator Exp $
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  alsa-lib-1.0.5-r2.ebuild:
+  alsa-lib-1.0.5-r2.ebuild, files/fix-asound_h.patch:
   Make bad alsa headers non-fatal.
+  Make __user patch work with linux-headers-2.4
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/fix-asound_h.patch:
