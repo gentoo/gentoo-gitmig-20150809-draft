@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.31 2002/01/04 12:06:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.32 2002/01/08 10:29:43 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base
 ECLASS=kde
@@ -20,7 +20,7 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
-			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=/usr --with-qt-dir=${QTDIR}"
+			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=${KDEDIR} --with-qt-dir=${QTDIR}"
 			use qtmt 	&& myconf="$myconf --enable-mt"
 			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug"	|| myconf="$myconf --disable-debug"
 			debug-print "$FUNCNAME: myconf: set to ${myconf}"
@@ -28,12 +28,13 @@ kde_src_compile() {
 		configure)
 			debug-print-section configure
 			debug-print "$FUNCNAME::configure: myconf=$myconf"
-
+			
 			# This can happen with e.g. a cvs snapshot			
 			if [ ! -f "./configure" ]; then
-			    for x in admin/Makefile.common; do
+			    for x in Makefile.cvs admin/Makefile.common; do
 				if [ -f "$x" ]; then
-				    make -f $x # don't || die here!
+				    make -f $x
+				    break
 				fi
 			    done
 			    [ -f "./configure" ] || die
@@ -88,7 +89,7 @@ kde_src_install() {
 EXPORT_FUNCTIONS src_compile src_install
 
 # This used to be depend.eclass. At some point I realized it might as well be called kde-depend.eclass. And then
-# because functions fom there needed functions from here and vice versa I merged them.
+# because functions from there needed functions from here and vice versa I merged them.
 
 #---------------
 
@@ -96,7 +97,10 @@ need-kde() {
 
 	debug-print-function $FUNCNAME $*
 	KDEVER="$1"
-	newdepend ">=kde-base/kdelibs-$KDEVER"
+	
+	#newdepend ">=kde-base/kdelibs-$KDEVER"
+	min-kde-ver $KDEVER
+	newdepend ">=kde-base/kdelibs-${selected_version}"
 	set-kdedir $KDEVER
 
 	qtver-from-kdever $KDEVER
@@ -108,7 +112,11 @@ need-kde() {
 set-kdedir() {
 
 	debug-print-function $FUNCNAME $*
-
+	
+	# for older make.globals versions which don't include the default KDE?DIR settings
+	[ -z "$KDE2DIR" ] && export KDE2DIR="/usr/kde/2"
+	[ -z "$KDE3DIR" ] && export KDE3DIR="/usr/kde/3"
+	
 	local KDEVER
 	KDEVER=$1
 
@@ -120,8 +128,13 @@ set-kdedir() {
 		[ -z "$KDEMAJORVER" ] && KDEMAJORVER=$x
 	done
 	IFS=$IFSBACKUP
-
-	export KDEDIR="/usr/kde/$KDEMAJORVER"
+	
+	case $KDEMAJORVER in
+	    2) export KDEDIR=${KDE2DIR};;
+	    3) export KDEDIR=${KDE3DIR};;
+	esac
+	
+	debug-print "$FUNCNAME: result: KDEDIR=$KDEDIR"
 
 }
 
@@ -129,7 +142,9 @@ need-qt() {
 
 	debug-print-function $FUNCNAME $*
 	QTVER="$1"
-	newdepend ">=x11-libs/qt-$QTVER"
+	#newdepend ">=x11-libs/qt-$QTVER"
+	min-qt-ver $QTVER
+	newdepend ">=x11-libs/qt-$selected_version"
 	set-qtdir $QTVER
 
 }
@@ -158,12 +173,14 @@ set-qtdir() {
 # returns minimal qt version needed for specified kde version
 qtver-from-kdever() {
 
+	debug-print-function $FUNCNAME $*
+
 	local ver
 
 	case $1 in
 		2*)	ver=2.3.1;;
 		3*)	ver=3.0.1;;
-		*)		echo "!!! error: qtver-from-kdever() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
+		*)		echo "!!! error: $FUNCNAME() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
 	selected_version="$ver"
@@ -178,9 +195,30 @@ If this happens at the unmerging of an old ebuild, disregard; otherwise report."
     need-kde $*
 }
 
+# for new schemes
+min-kde-ver() {
 
+	debug-print-function $FUNCNAME $*
 
+	case $1 in
+	    2*)	selected_version="2.2.2-r1";;
+	    3*)	selected_version="3.0";;
+	    *)	echo "!!! error: $FUNCNAME() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
+	esac
+	
+}
 
+min-qt-ver() {
+
+	debug-print-function $FUNCNAME $*
+
+	case $1 in
+	    2*)	selected_version="2.3.1";;
+	    3*)	selected_version="3.0.1";;
+	    *)	echo "!!! error: $FUNCNAME() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
+	esac
+
+}
 
 
 
