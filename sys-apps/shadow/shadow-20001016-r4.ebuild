@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r4.ebuild,v 1.1 2001/07/31 21:16:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r4.ebuild,v 1.2 2001/08/01 19:00:34 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,24 +14,18 @@ DEPEND=">=sys-libs/pam-0.73
 RDEPEND=">=sys-libs/pam-0.73"
 
 src_unpack() {
-
-  unpack ${A}
-  cd ${S}/src
-  patch -p0 < ${FILESDIR}/useradd.diff
-
+	unpack ${A}
+	cd ${S}/src
+	cp ${FILESDIR}/useradd.c ${S}/src
 }
 
 src_compile() {
-
-	try ./configure --disable-desrpc --with-libcrypt  \
-	--with-libcrack --with-libpam --host=${CHOST}
+	try ./configure --disable-desrpc --with-libcrypt --with-libcrack --with-libpam --host=${CHOST}
 	# Parallel make fails sometimes
 	try make LDFLAGS=\"\"
-
 }
 
 src_install() {
-
 	try make install prefix=${D}/usr mandir=${D}/usr/share/man exec_prefix=${D}
 
 	#add "vigr" symbolic link
