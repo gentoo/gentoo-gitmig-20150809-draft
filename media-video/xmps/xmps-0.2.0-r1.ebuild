@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r1.ebuild,v 1.9 2002/10/05 05:39:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r1.ebuild,v 1.10 2002/10/05 18:13:57 gerk Exp $
 
-IUSE="nls x86 gnome"
+IUSE="nls gnome"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Movie Player System"
