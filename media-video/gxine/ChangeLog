@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.9 2003/07/10 07:04:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.10 2003/08/12 01:12:37 weeve Exp $
+
+  11 Aug 2003; Jason Wever <weeve@gentoo.org> gxine-0.3.3.ebuild:
+  Added ~sparc to keywords to fix bug #26126.
 
   10 Jul 2003; Lars Weiler <pylon@gentoo.org> gxine-0.3.3.ebuild:
   Set ~ppc in KEYWORDS
