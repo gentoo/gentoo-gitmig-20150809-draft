@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-0.15.ebuild,v 1.1 2004/05/05 05:57:56 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-0.15.ebuild,v 1.2 2004/05/05 10:18:37 dholm Exp $
 
 inherit mono
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.go-mono.com"
 SRC_URI="http://www.go-mono.com/archive/beta1/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-dotnet/mono-0.91
 		>=x11-libs/gtk-sharp-0.91.1"
