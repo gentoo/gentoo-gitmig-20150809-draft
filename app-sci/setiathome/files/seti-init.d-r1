@@ -1,31 +1,58 @@
 #!/sbin/runscript
 
-checkconfig() {
-	if [ ! -e ${SETIATHOME_DIR} ]
-	then
-		einfo "Creating ${SETIATHOME_DIR}"
-		mkdir ${SETIATHOME_DIR}
-	fi
+cpus=`grep -c processor /proc/cpuinfo`
 
-	if [ ! -e ${SETIATHOME_DIR}/user_info.sah ]
-	then
-		einfo "Setting up SETI@home for the first time"
-		cd ${SETIATHOME_DIR}
-		./setiathome -login
-	fi
+checkconfig() {
+        if [ ! -e ${SETIATHOME_DIR} ]
+        then
+                einfo "Creating ${SETIATHOME_DIR}"
+                mkdir ${SETIATHOME_DIR}
+        fi
+
+        if [ ! -e ${SETIATHOME_DIR}/user_info.sah ]
+        then
+                einfo "Setting up SETI@home for the first time"
+                cd ${SETIATHOME_DIR}
+                ./setiathome -login
+        fi
+
+        if [ $cpus != '1' ]; then
+                cd ${SETIATHOME_DIR}
+                for cpu in `seq 2 $cpus`; do
+                        if [ ! -e ${SETIATHOME_DIR}/cpu${cpu} ]; then
+                                mkdir ${SETIATHOME_DIR}/cpu${cpu}
+                                cp ${SETIATHOME_DIR}/* ${SETIATHOME_DIR}/cpu${cpu} > /dev/null
+                                rm ${SETIATHOME_DIR}/cpu${cpu}/*.sah > /dev/null
+                                cp ${SETIATHOME_DIR}/user_info.sah ${SETIATHOME_DIR}/cpu${cpu}
+                        fi
+                done
+        fi
 }
 
 start() {
-	checkconfig
+        checkconfig
 
-	ebegin "Starting SETI@home"
-	cd ${SETIATHOME_DIR}
-	./setiathome ${SETIATHOME_OPTIONS} >&/dev/null&
-	eend $?
+
+        if [ $cpus = '1' ]; then
+                ebegin "Starting SETI@home"
+        else
+                ebegin "Starting SETI@home ($cpus processors)"
+        fi
+
+        for cpu in `seq 1 $cpus`; do
+                cd ${SETIATHOME_DIR}
+                if [ $cpu != '1' ]; then
+                        cd cpu${cpu}
+                fi
+
+                ./setiathome ${SETIATHOME_OPTIONS} >&/dev/null&
+        done
+
+        eend $?
 }
 
 stop() {
-	ebegin "Stopping SETI@home"
-	killall setiathome
-	eend $?
+        ebegin "Stopping SETI@home"
+        killall setiathome
+        eend $?
 }
