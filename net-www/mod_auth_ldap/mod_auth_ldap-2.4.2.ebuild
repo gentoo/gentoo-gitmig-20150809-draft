@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-2.4.2.ebuild,v 1.4 2004/06/20 13:41:17 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-2.4.2.ebuild,v 1.5 2004/06/20 15:03:35 zul Exp $
 
 DESCRIPTION="Apache module for LDAP authorizaion"
 HOMEPAGE="http://www.muquit.com/muquit/software/mod_auth_ldap/mod_auth_ldap.html"
@@ -11,8 +11,11 @@ KEYWORDS="x86 ~ppc ~sparc"
 #---> as of 2.4.2 still no version number, doing it the hard way, sigh.
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 DEPEND="=net-www/apache-1* >=net-nds/openldap-2.0.25"
+RDEPEND=""
 LICENSE="as-is"
 SLOT="0"
+
+IUSE=""
 
 S=${WORKDIR}/${P}
 
