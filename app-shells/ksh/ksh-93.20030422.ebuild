@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030422.ebuild,v 1.2 2003/05/29 11:58:41 taviso Exp $
-
-RELEASE="2003-04-22"
-DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)."
-HOMEPAGE="http://www.kornshell.com/"
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030422.ebuild,v 1.3 2003/06/24 20:22:45 vapier Exp $
 
 inherit ccc eutils 
 
+RELEASE="2003-04-22"
+DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)"
+HOMEPAGE="http://www.kornshell.com/"
 SRC_URI="http://www.research.att.com/~gsf/download/tgz/INIT.${RELEASE}.tgz
 	http://www.research.att.com/~gsf/download/tgz/ast-ksh.${RELEASE}.tgz
 	http://www.research.att.com/~gsf/download/tgz/ast-ksh-locale.${RELEASE}.tgz"
@@ -15,7 +14,6 @@ SRC_URI="http://www.research.att.com/~gsf/download/tgz/INIT.${RELEASE}.tgz
 LICENSE="ATT"
 SLOT="0"
 KEYWORDS="~x86 ~alpha"
-
 IUSE="static nls"
 
 DEPEND="virtual/glibc

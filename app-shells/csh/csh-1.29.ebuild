@@ -1,10 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.3 2003/06/04 22:58:27 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.4 2003/06/24 20:22:01 vapier Exp $
+
+inherit cvs flag-o-matic eutils ccc
+
+ECVS_SERVER="anoncvs.netbsd.org:/cvsroot"
+ECVS_MODULE="src/bin/csh"
+ECVS_USER="anoncvs"
+ECVS_PASS="anoncvs"
+ECVS_BRANCH="netbsd-1-6"
 
 DESCRIPTION="Classic UNIX shell with C like syntax"
 HOMEPAGE="http://www.netbsd.org/"
-
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/usr.bin/printf/printf.c
 	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/include/vis.h
 	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/lib/libc/gen/vis.c"
@@ -31,15 +38,7 @@ DEPEND="virtual/glibc
 	doc? ( sys-apps/groff )"
 RDEPEND="virtual/glibc"
 
-inherit cvs flag-o-matic eutils ccc
-
-ECVS_SERVER="anoncvs.netbsd.org:/cvsroot"
-ECVS_MODULE="src/bin/csh"
-ECVS_USER="anoncvs"
-ECVS_PASS="anoncvs"
-ECVS_BRANCH="netbsd-1-6"
-
-S="${WORKDIR}/${ECVS_MODULE}"
+S=${WORKDIR}/${ECVS_MODULE}
 
 src_compile() {
 	# hide some BSDisms, mostly my work, got some hints from the
