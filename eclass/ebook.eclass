@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.21 2005/03/14 19:45:13 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.22 2005/03/15 06:03:05 halcy0n Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
-# Mantainer JosÈ Alberto Su·rez LÛpez <bass@gentoo.org>
+# Mantainer Jos√© Alberto Su√°rez L√≥pez <bass@gentoo.org>
 # 
 # Latest changes thanks to Kris Verbeeck
 # The ebook eclass defines some default functions and variables to 
@@ -60,13 +60,13 @@ fi
 if [ "${SRC_URI}" = "" ]; then
 	SRC_URI="http://lidn.sourceforge.net/books_download/${SRC}.${ext}"
 fi    
-    
+
 # Default directory to install de ebook devhelped book
 if [ "${DEVHELPROOT}" = "" ]; then
 	DEVHELPROOT="usr/share/devhelp"
 fi
 if [ "${RDEPEND}" = "" ]; then
-	RDEPEND="kde? ( dev-uitl/kdevelop )
+	RDEPEND="kde? ( dev-util/kdevelop )
 	       !kde? ( >=dev-util/devhelp-0.6 )"
 fi
 if [ "${DESCRIPTION}" = "" ]; then
