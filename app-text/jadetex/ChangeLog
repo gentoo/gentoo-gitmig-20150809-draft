@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.19 2004/11/07 06:43:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.20 2004/11/08 07:05:21 usata Exp $
+
+  08 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> jadetex-3.12.ebuild,
+  jadetex-3.13.ebuild:
+  Fixed compile error when using tetex-2; bug #70378. Thanks to
+  the_sprif@hotmail.com.
 
   07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> jadetex-3.12.ebuild,
   jadetex-3.13.ebuild:

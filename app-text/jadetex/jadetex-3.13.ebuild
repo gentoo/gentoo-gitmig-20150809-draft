@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13.ebuild,v 1.3 2004/11/07 06:43:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13.ebuild,v 1.4 2004/11/08 07:05:21 usata Exp $
 
 inherit latex-package
 
@@ -29,7 +29,9 @@ src_compile() {
 	addwrite /usr/share/texmf/fonts
 	addwrite /var/cache/fonts
 
-	has_tetex_3 && sed -i -e "s:tex -ini:latex -ini:" Makefile || die
+	if has_tetex_3 ; then
+		sed -i -e "s:tex -ini:latex -ini:" Makefile || die "sed failed"
+	fi
 
 	emake || die
 }
