@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r3.ebuild,v 1.2 2004/12/25 13:04:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r3.ebuild,v 1.3 2005/01/01 15:56:58 eradicator Exp $
 
 inherit eutils
 

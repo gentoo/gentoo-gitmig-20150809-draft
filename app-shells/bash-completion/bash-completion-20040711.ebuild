@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040711.ebuild,v 1.5 2004/11/05 09:02:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040711.ebuild,v 1.6 2005/01/01 15:56:58 eradicator Exp $
 
 GENCOMP_VERS="1.0_beta"
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-shells/rssh
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.7 2004/10/25 12:32:51 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.8 2005/01/01 15:59:31 eradicator Exp $
 
 *rssh-2.2.2 (25 Oct 2004)
 
