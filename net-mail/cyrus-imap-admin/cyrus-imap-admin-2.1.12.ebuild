@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.12.ebuild,v 1.1 2003/02/07 20:16:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.12.ebuild,v 1.2 2003/02/11 06:32:25 raker Exp $
 
 inherit perl-module eutils
 
@@ -26,7 +26,8 @@ DEPEND="virtual/glibc
 	>=dev-libs/cyrus-sasl-2.1.12
 	>=sys-apps/tcp-wrappers-7.6
 	dev-perl/ExtUtils-MakeMaker
-	dev-perl/Term-ReadLine-Perl"
+	dev-perl/Term-ReadLine-Perl
+	dev-perl/TermReadKey"
 
 src_unpack() {
 	unpack ${A}

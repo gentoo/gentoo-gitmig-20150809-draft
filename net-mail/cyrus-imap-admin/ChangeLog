@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.9 2003/02/07 20:16:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.10 2003/02/11 06:32:25 raker Exp $
 
 *cyrus-imap-admin-2.1.12 (07 Feb 2003)
+
+  11 Feb 2003; Nick Hadaway <raker@gentoo.org>
+  cyrus-imap-admin-2.1.12.ebuild :
+  Added another dependancy on dev-perl/TermReadKey
 
   07 Feb 2003; Nick Hadaway <raker@gentoo.org>
   cyrus-imap-admin-2.1.12.ebuild,
