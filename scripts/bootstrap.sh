@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.70 2005/01/16 11:58:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.71 2005/01/21 23:59:08 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -57,7 +57,7 @@ unset STRAP_EMERGE_OPTS
 STRAP_RUN=1
 V_ECHO=env
 DEBUG=0
-GENTOO_VERS=2004.3 # Mostly for fluff ;)
+GENTOO_VERS=2005.0 # Mostly for fluff ;)
 
 for opt in "$@" ; do
 	case ${opt} in
@@ -75,7 +75,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.70 2005/01/16 11:58:31 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.71 2005/01/21 23:59:08 wolf31o2 Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -339,7 +339,7 @@ fi
 
 if [ ${BOOTSTRAP_STAGE} -le 4 ] ; then
 	show_status 5 Emerging libc/baselayout
-	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
+	${V_ECHO} emerge -e ${STRAP_EMERGE_OPTS} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 5
 fi
