@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.160.ebuild,v 1.4 2004/09/23 04:49:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.160.ebuild,v 1.5 2004/11/03 06:48:46 psi29a Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 s390 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 s390 sparc x86 ~mips"
 IUSE="ssl apache2 webmin-minimal"
 
 DEPEND="dev-lang/perl"
