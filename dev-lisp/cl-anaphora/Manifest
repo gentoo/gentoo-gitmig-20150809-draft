@@ -1,4 +1,6 @@
 MD5 4171dcef7b1ce66590ad024d979840f7 cl-anaphora-0.9.1.ebuild 691
+MD5 4171dcef7b1ce66590ad024d979840f7 cl-anaphora-0.9.2.ebuild 691
 MD5 c51a01eca704a73120c4b4a0bf3f4ee9 ChangeLog 413
 MD5 3679e539e19a3017d4f1a63573f4f482 metadata.xml 331
 MD5 c7b0a39bde7fc4d2ad01bea5e04d6a69 files/digest-cl-anaphora-0.9.1 64
+MD5 3338720ec879d76ad76e0c053d9bd55e files/digest-cl-anaphora-0.9.2 64
