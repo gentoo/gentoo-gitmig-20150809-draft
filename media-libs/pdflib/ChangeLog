@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.2 2002/04/04 06:04:09 drobbins Exp $
+
+*pdflib-4.0.1-r3 (3 Apr 2002)
+
+  3 Apr 2002; Daniel Robbins <drobbins@gentoo.org> : New revision -- we dodir
+  /usr/bin (required for make install), closing bug 1498.  Also, now some
+  installation steps requiring java are conditional on the java USE variable
+  being set.
 
 *pdflib-4.0.1-r2 (1 Feb 2002)
 
