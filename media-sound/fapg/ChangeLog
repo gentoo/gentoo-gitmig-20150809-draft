@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fapg
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.1 2004/08/09 19:29:49 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.2 2004/08/28 23:06:11 dholm Exp $
+
+  29 Aug 2004; David Holm <dholm@gentoo.org> fapg-0.22.ebuild:
+  Added to ~ppc.
 
 *fapg-0.22 (09 Aug 2004)
 
