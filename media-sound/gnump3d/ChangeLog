@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.7 2003/02/12 07:28:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.8 2003/03/08 23:43:48 aliz Exp $
+
+*gnump3d-2.2 (09 Mar 2003)
+
+  09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
 *gnump3d-1.0 (18 Dec 2002)
 
