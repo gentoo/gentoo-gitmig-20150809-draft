@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.26 2003/09/15 15:21:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.27 2003/09/24 05:51:32 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -37,6 +37,20 @@ INHERITED="$INHERITED $ECLASS"
 # Remove specified math types from the fpmath specification
 # If the user has -mfpmath=sse,386, running `filter-mfpmath sse`
 # will leave the user with -mfpmath=386
+#
+#### append-ldflags ####
+# Add extra flags to your current LDFLAGS
+#
+#### etexec-flags ####
+# hooked function for hardened-gcc that appends 
+# -yet_exec {C,CXX,LD}FLAGS when hardened-gcc is installed
+# and a package is filtering -fPIC
+#
+#### fstack-flags ####
+# hooked function for hardened-gcc that appends
+# -yno_propolice to {C,CXX,LD}FLAGS when hardened-gcc is installed
+# and a package is filtering -fstack-protector
+#
 
 # C[XX]FLAGS that we allow in strip-flags
 ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
@@ -71,6 +85,14 @@ filter-mfpmath() {
 }
 
 filter-flags() {
+	# we do two loops to avoid the first and last char from being chomped.
+	for x in $@ ; do
+		case "${x}" in
+			-fPIC) etexec-flags;;
+			-fstack-protector) fstack-flags;;
+			*) ;;
+		esac
+	done
 	# we do this fancy spacing stuff so as to not filter
 	# out part of a flag ... we want flag atoms ! :D
 	CFLAGS=" ${CFLAGS} "
@@ -86,6 +108,10 @@ filter-flags() {
 append-flags() {
 	CFLAGS="${CFLAGS} $@"
 	CXXFLAGS="${CXXFLAGS} $@"
+	for x in $@; do
+		[ "${x}" = "-fno-stack-protector" ] &&
+			fstack-flags
+	done
 }
 
 replace-flags() {
@@ -190,4 +216,24 @@ replace-sparc64-flags() {
 			CXXFLAGS="${CXXFLAGS/-mcpu=${x}/-mcpu=v8 -mtune=${x}}"
 		done
 	fi
+}
+
+append-ldflags() {
+	LDFLAGS="${LDFLAGS} $@"
+}
+
+etexec-flags() {
+	has_version 'sys-devel/hardened-gcc' && {
+		debug-print ">>> appending flags -yet_exec"
+		append-flags -yet_exec
+		append-ldflags -yet_exec
+	}
+}
+
+fstack-flags() {
+	has_version 'sys-devel/hardened-gcc' && {
+		debug-print ">>> appending flags -yno_propolice"
+		append-flags -yno_propolice
+		append-ldflags -yno_propolice
+	}
 }
