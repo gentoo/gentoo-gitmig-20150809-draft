@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.49 2004/11/22 19:30:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.50 2004/12/04 17:00:20 kingtaco Exp $
+
+  04 Dec 2004; Mike Doty <kingtaco@gentoo.org> nfs-utils-1.0.6-r5.ebuild:
+  stable on amd64 per #72113
 
 *nfs-utils-1.0.6-r5 (22 Nov 2004)
 
