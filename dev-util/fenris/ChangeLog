@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fenris
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.8 2004/02/05 01:30:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.9 2004/02/05 10:48:14 liquidx Exp $
+
+  05 Feb 2004; Alastair Tse <liquidx@gentoo.org> fenris-0.07m-r2.ebuild:
+  stable bump for dev snapshop -r2 to solve patching problems. (#40388)
 
 *fenris-0.07m-r2 (05 Feb 2004)
 
