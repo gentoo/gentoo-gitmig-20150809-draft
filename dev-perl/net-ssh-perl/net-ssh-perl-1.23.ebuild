@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.23.ebuild,v 1.6 2004/06/25 00:50:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.23.ebuild,v 1.7 2004/07/14 19:50:08 agriffis Exp $
 
 inherit perl-module
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/B/BT/BTROTT/${MY_P}.readme"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 ~alpha ~ppc ~sparc ~mips"
+IUSE=""
 
 DEPEND="dev-perl/Math-GMP
 		dev-perl/string-crc32

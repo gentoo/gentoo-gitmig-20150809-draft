@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ping/net-ping-2.31.ebuild,v 1.5 2004/07/09 17:59:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ping/net-ping-2.31.ebuild,v 1.6 2004/07/14 19:47:14 agriffis Exp $
 
 inherit perl-module
 
@@ -13,5 +13,6 @@ HOMEPAGE="http://search.cpan.org/author/BBB/${MY_P}/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~amd64 ppc sparc alpha ~hppa"
+IUSE=""
 
 DEPEND="${DEPEND}"
