@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externalfile/externalfile-1.2.0.ebuild,v 1.4 2004/09/04 17:15:02 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externalfile/externalfile-1.2.0.ebuild,v 1.5 2004/09/11 20:45:02 lanius Exp $
 
 inherit zproduct
 
@@ -14,3 +14,5 @@ LICENSE="ZPL"
 KEYWORDS="x86 ~ppc"
 RDEPEND="net-zope/zope
 	${RDEPEND}"
+ZPROD_LIST="ExternalFile"
+IUSE=""
