@@ -1,8 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.11 2002/09/17 15:21:56 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.12 2002/09/27 17:20:39 aliz Exp $
 
 *opessl-0.9.6g (29 Aug 2002)
+
+  27 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Cleaned out files/. 
+
+  Made OpenSSL use native crypt() instead of built-in. Thanks to Jason Jeremias 
+  <jason@penguinsolutions.com> in #8438.
 
   17 Sep 2002; Mark Guertin <gerk@gentoo.org> openssl-0.9.6g.ebuild :
   Added ppc to keywords

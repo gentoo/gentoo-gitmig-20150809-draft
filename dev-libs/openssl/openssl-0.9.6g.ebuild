@@ -14,6 +14,9 @@ KEYWORDS="x86 ppc alpha"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
+
+	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+
 	cp Configure Configure.orig
 	sed -e "s/-O3/$CFLAGS/" -e "s/-m486//" Configure.orig > Configure
 }
