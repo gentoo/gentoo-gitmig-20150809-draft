@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20031103.ebuild,v 1.5 2004/03/30 20:00:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20031103.ebuild,v 1.6 2004/04/19 11:43:45 phosphan Exp $
 
 DESCRIPTION="NCBI toolkit including the BLAST group of programs, entrez, ddv, udv, sequin and others"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
@@ -18,8 +18,6 @@ DEPEND="app-shells/tcsh
 			x11-libs/openmotif
 			png? ( media-libs/libpng )
 		)"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 
