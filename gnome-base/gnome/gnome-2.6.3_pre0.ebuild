@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.6 2004/08/21 15:25:13 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.7 2004/08/22 07:49:48 obz Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -73,7 +73,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-arch/file-roller-2.6.1
 	>=gnome-extra/gcalctool-4.3.51
 	>=gnome-extra/gconf-editor-2.6.2
-	>=gnome-base/gdm-2.6.0.3
+	>=gnome-base/gdm-2.6.0.4
 	>=app-editors/gedit-2.6.2
 
 	>=app-text/ggv-2.6.1
