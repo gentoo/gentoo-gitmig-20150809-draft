@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.1 2005/02/10 19:20:52 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.2 2005/02/12 09:58:47 sergey Exp $
 
 DESCRIPTION="ROXget - Download Handler for the ROX Desktop"
 
@@ -30,9 +30,7 @@ S=${WORKDIR}/${MY_PN}-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${MY_PN}-${MY_PV}	
-	#fix permisions on files
-	chmod -R 644 *
+	cd ${MY_PN}-${MY_PV}
 	mkdir ${APPNAME}
 	mv * ${APPNAME}/
 }
