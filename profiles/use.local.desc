@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1038 2005/03/25 01:21:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1039 2005/03/25 01:22:53 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -39,6 +39,7 @@ app-editors/gvim:nextaw - Include support for the neXtaw GUI
 app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
+app-editors/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 app-editors/scite:lua - Enable Lua scripting support
 app-editors/vim:mzscheme - Include support for the mzscheme interpreter
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
@@ -660,7 +661,6 @@ net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default
 net-www/mod_auth_ldap:disk-cache - Enables support for disk cache.
 net-www/mod_auth_ldap:mem-cache - Enables support for memory cache.
 net-www/mod_log_sql:dbi - Enables support for libDBI
-net-www/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
 sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
 sci-astronomy/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
