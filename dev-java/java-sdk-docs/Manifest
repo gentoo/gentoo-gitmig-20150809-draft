@@ -1,12 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 38a9b7d34e53c799f7f1b5494acc21d2 java-sdk-docs-1.4.2.ebuild 868
-MD5 af5316d96f07b2b77847fe6c66e03891 java-sdk-docs-1.5.0.ebuild 797
-MD5 e2e61b4980c36ea742fdb242ebba08e4 java-sdk-docs-1.4.1.ebuild 879
-MD5 618c9d9a726fb108e5ccdb00a218918e java-sdk-docs-1.2.2.006.ebuild 963
-MD5 5c466828a3e483cc74ab19204478d52e ChangeLog 4309
 MD5 fe71f8d6074876e259b4adafd91172fb java-sdk-docs-1.3.1.ebuild 840
+MD5 2b1d0042c664b55c47bc85f7b8a5e14b java-sdk-docs-1.5.0_rc.ebuild 929
+MD5 e2e61b4980c36ea742fdb242ebba08e4 java-sdk-docs-1.4.1.ebuild 879
+MD5 305ec4e0b5d336c036cde07f752d2c7f ChangeLog 4557
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 954600e9906c7735c073ebf221b82986 files/digest-java-sdk-docs-1.5.0 70
+MD5 618c9d9a726fb108e5ccdb00a218918e java-sdk-docs-1.2.2.006.ebuild 963
 MD5 d6dd3e737a5469ac2717553c95bfc023 files/digest-java-sdk-docs-1.2.2.006 71
-MD5 a4380575c5e11174354f8f4bac538fbd files/digest-java-sdk-docs-1.4.2 66
-MD5 0645a1f4c374e0fb15f893bdd22bf9a2 files/digest-java-sdk-docs-1.4.1 66
 MD5 6dc4baf5fd91548abdb10317d37bb4f2 files/digest-java-sdk-docs-1.3.1 66
+MD5 0645a1f4c374e0fb15f893bdd22bf9a2 files/digest-java-sdk-docs-1.4.1 66
+MD5 a4380575c5e11174354f8f4bac538fbd files/digest-java-sdk-docs-1.4.2 66
+MD5 aaef73c1030b765645f10f5cb9720cf2 files/digest-java-sdk-docs-1.5.0_rc 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBT+jj/rLF9B432nYRAmRsAKDJA5ihDLSDZZ+/yyKfQGkutYrb1wCgpWt8
+jPd7a2Aoz9A8T46C5JkKeBw=
+=GjY+
+-----END PGP SIGNATURE-----
