@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyds
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.1 2004/01/03 03:16:10 kloeri Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.2 2004/01/18 12:36:05 liquidx Exp $
+
+  18 Jan 2004; Alastair Tse <liquidx@gentoo.org> pyds-0.6.5.ebuild:
+  moving dev-python/Cheetah to dev-python/cheetah
 
 *pyds-0.6.5 (03 Jan 2004)
 
