@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.6.ebuild,v 1.5 2002/07/09 12:51:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.6.ebuild,v 1.6 2002/07/11 06:30:56 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"

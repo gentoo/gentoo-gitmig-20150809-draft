@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Michael Nazaroff <naz@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0-rc2.ebuild,v 1
 
 MY_PN="XDirectFB"

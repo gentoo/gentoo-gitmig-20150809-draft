@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.31.ebuild,v 1.5 2002/07/10 16:30:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.31.ebuild,v 1.6 2002/07/11 06:30:56 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU development tools - necessary to build programs"
