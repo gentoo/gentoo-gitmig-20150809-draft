@@ -1,0 +1,20 @@
+# ChangeLog for net-wireless/fnfx
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/ChangeLog,v 1.1 2005/02/22 15:21:10 genstef Exp $
+
+*fnfx-0.3 (22 Feb 2005)
+
+  22 Feb 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +files/fnfxd, +fnfx-0.3.ebuild:
+  Moved from net-wireless/fnfx to app-laptop/fnfx.
+
+*fnfx-0.3 (28 Jan 2005)
+
+  28 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +files/fnfxd, +fnfx-0.3.ebuild:
+  New ebuild thanks to stephan <stephan-01@gmx.de>, Ben Ford
+  <ben@kalifornia.com>, Julioromano <romanomarco@tin.it>, Kalin KOZHUHAROV
+  <kalin@ThinRope.net>, Nik Raub <niknik79@bossmail.de>, azote
+  <azote@slinux.net>, Claudio Corsi <corsic@cli.di.unipi.it> and Wolfgang
+  Frisch <xororand@frexx.de> in bug 33335
+
