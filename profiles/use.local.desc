@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.927 2005/02/03 01:38:03 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.928 2005/02/03 14:10:57 wschlich Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -469,6 +469,10 @@ net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risc)
 net-im/bitlbee:flood - Enable flood protection support
+net-im/centericq:gg - Enable support for the Gadu-Gadu IM protocol
+net-im/centericq:irc - Enable support for the IRC protocol
+net-im/centericq:lj - Enable support for the LiveJournal weblog system
+net-im/centericq:rss - Enable support for RSS/RDF feeds
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:eds - Enable Evolution Data Server (EDS) support
