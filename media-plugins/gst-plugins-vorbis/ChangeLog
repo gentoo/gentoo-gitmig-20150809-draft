@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.45 2005/04/02 04:56:43 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.46 2005/04/02 10:54:11 zaheerm Exp $
+
+  02 Apr 2005; <zaheerm@gentoo.org> -gst-plugins-vorbis-0.6.4.ebuild:
+  removing gstreamer 0.6.x
 
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
   gst-plugins-vorbis-0.8.7.ebuild:

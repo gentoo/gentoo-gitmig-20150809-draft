@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-swfdec
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-swfdec/ChangeLog,v 1.4 2004/07/12 12:11:42 foser Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-swfdec/ChangeLog,v 1.5 2005/04/02 10:58:07 zaheerm Exp $
+
+  02 Apr 2005; <zaheerm@gentoo.org> -gst-plugins-swfdec-0.6.4.ebuild:
+  removing gstreamer 0.6.x
 
 *gst-plugins-swfdec-0.8.2 (12 Jul 2004)
 

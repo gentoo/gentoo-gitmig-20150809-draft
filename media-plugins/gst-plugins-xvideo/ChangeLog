@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-xvideo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/ChangeLog,v 1.18 2005/03/13 03:01:29 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/ChangeLog,v 1.19 2005/04/02 10:50:46 zaheerm Exp $
+
+  02 Apr 2005; <zaheerm@gentoo.org> -gst-plugins-xvideo-0.6.4.ebuild:
+  Removing 0.6.x of gstreamer
 
   13 Mar 2005; Mike Gardiner <obz@gentoo.org>
   gst-plugins-xvideo-0.8.7.ebuild:
