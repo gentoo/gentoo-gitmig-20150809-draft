@@ -1,5 +1,6 @@
 BODY {
-	font-family: Verdana, Helvetica; 
+	font-family: Georgia, Verdana, Arial; 
+	font-size: 0.9em;
 }
 
 a:link { color: #7a5ada; text-decoration: none; }
@@ -7,14 +8,14 @@ a:visited { color: #7a5ada; text-decoration: none; }
 a:hover { color: #7a5ada; text-decoration: underline; }
 a:active { color: #7a5ada; text-decoration: underline; }
 
-.secthead {
+.employer {
 	font-size: 1.25em;
 	padding-top: 0.15em;
 	padding-left: 1.0cm;
 	padding-right: 0.5cm; 
 }
 
-.chaphead {
+.secthead {
 	font-size: 1.5em;
 	padding-top: 0.15em;
 	padding-left: 0.5cm;
@@ -36,18 +37,12 @@ a:active { color: #7a5ada; text-decoration: underline; }
 	padding-right: 0.5cm; 
 }
 
-P {
+.desc {
 	margin: 0cm;
 	padding-top: 0em;
 	padding-bottom: 0.5em;
 	padding-left: 1.5cm;
-	padding-right: 1.5cm; 
-	font-size: 8pt;
-}
-
-.nopad {
-	margin: 0cm;
-	padding: 0.2cm;
+	padding-right: 0.5cm; 
 }
 
 .list {

@@ -1,8 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.21 2001/10/10 21:39:31 drobbins Exp $
+# Author: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.22 2001/10/11 03:43:46 drobbins Exp $
  
+# WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
+ 
+TEMPLATE="xsl/guide-main.xsl"
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
 SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
@@ -25,7 +28,7 @@ src_install() {
 	local x
 	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial
 	do
-		xsltproc xsl/resume-html.xsl xml/${x}.xml > ${D}/usr/local/httpd/htdocs/doc/${x}.html || die
+		xsltproc $TEMPLATE xml/${x}.xml > ${D}/usr/local/httpd/htdocs/doc/${x}.html || die
 	done
 	dodir /usr/local/httpd/htdocs/images
 	insinto /usr/local/httpd/htdocs/images
@@ -38,16 +41,16 @@ src_install() {
 	
 	#dynamic firewalls tools page
 	cd ${FILESDIR}
-	xsltproc xsl/guide-main.xsl xml/dynfw.xml > ${D}/usr/local/httpd/htdocs/projects/dynfw.html	|| die
-	xsltproc xsl/guide-main.xsl xml/project-xml.xml > ${D}/usr/local/httpd/htdocs/projects/xml.html	|| die
+	xsltproc $TEMPLATE xml/dynfw.xml > ${D}/usr/local/httpd/htdocs/projects/dynfw.html	|| die
+	xsltproc $TEMPLATE xml/project-xml.xml > ${D}/usr/local/httpd/htdocs/projects/xml.html	|| die
 	
 	#resume
 	xsltproc xsl/resume-html.xsl xml/resume.xml > ${D}/usr/local/httpd/htdocs/resume.html || die
 	
 	#both URLs should work
 	dodir /usr/local/httpd/htdocs/projects/keychain
-	xsltproc xsl/guide-main.xsl xml/keychain.xml > ${D}/usr/local/httpd/htdocs/projects/keychain.html || die	
-	xsltproc xsl/guide-main.xsl xml/keychain.xml > ${D}/usr/local/httpd/htdocs/projects/keychain/index.html	|| die
+	xsltproc $TEMPLATE xml/keychain.xml > ${D}/usr/local/httpd/htdocs/projects/keychain.html || die	
+	xsltproc $TEMPLATE xml/keychain.xml > ${D}/usr/local/httpd/htdocs/projects/keychain/index.html	|| die
 	
 	insinto /usr/local/httpd/htdocs/projects
 	doins dynfw/dynfw-1.0.1.tar.gz 
@@ -58,10 +61,10 @@ src_install() {
 	
 	insinto /usr/local/httpd/htdocs
 
-	xsltproc xsl/resume-html.xsl xml/main-news.xml > ${D}/usr/local/httpd/htdocs/index.html || die
-	xsltproc xsl/resume-html.xsl xml/main-about.xml > ${D}/usr/local/httpd/htdocs/index-about.html || die
-	xsltproc xsl/resume-html.xsl xml/main-download.xml > ${D}/usr/local/httpd/htdocs/index-download.html || die
-	xsltproc xsl/resume-html.xsl xml/main-projects.xml > ${D}/usr/local/httpd/htdocs/index-projects.html || die
+	xsltproc $TEMPLATE xml/main-news.xml > ${D}/usr/local/httpd/htdocs/index.html || die
+	xsltproc $TEMPLATE xml/main-about.xml > ${D}/usr/local/httpd/htdocs/index-about.html || die
+	xsltproc $TEMPLATE xml/main-download.xml > ${D}/usr/local/httpd/htdocs/index-download.html || die
+	xsltproc $TEMPLATE xml/main-projects.xml > ${D}/usr/local/httpd/htdocs/index-projects.html || die
 
 	doins css/main-new.css css/resume.css
 	

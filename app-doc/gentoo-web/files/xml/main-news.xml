@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<newspage id="news">
+<mainpage id="news">
 <title>Gentoo Linux News</title>
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 
@@ -87,4 +87,4 @@ Right now, the XML component of the news system is complete, and Thread (dev-wik
 		</body>
 	</news>
 </newsitems>
-</newspage>
+</mainpage>
