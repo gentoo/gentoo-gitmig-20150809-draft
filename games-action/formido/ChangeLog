@@ -1,0 +1,10 @@
+# ChangeLog for games-action/formido
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/formido/ChangeLog,v 1.1 2004/01/30 11:18:13 mr_bones_ Exp $
+
+*formido-1.0 (30 Jan 2004)
+
+  30 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> formido-1.0.ebuild,
+  metadata.xml, files/homedir.patch:
+  initial commit
+
