@@ -1,12 +1,15 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.8 2003/02/12 08:55:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.9 2003/07/16 13:34:12 pvdabeel Exp $
 
 *apmd-3.0.2-r3 (12 July 2002)
 
   06 Feb 2003; Seemant Kulleen <seemant@gentoo.org> apmd-3.0.2-r3.ebuild :
 
   use epatch and nls fixes
+
+  16 Jul 2003; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  actually apmd is available on ppc :-) limited usefullness, marking ppc
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
   updated keywords (-ppc)

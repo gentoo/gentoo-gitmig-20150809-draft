@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r2.ebuild,v 1.7 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r2.ebuild,v 1.8 2003/07/16 13:34:12 pvdabeel Exp $
 
 IUSE="X"
 
 DESCRIPTION="Advanced Power Management Daemon"
 HOMEPAGE="http://www.worldvisions.ca/~apenwarr/apmd/"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ppc"
 SLOT="0"
 SRC_URI="http://www.worldvisions.ca/~apenwarr/apmd/${P}.tar.gz"
 S=${WORKDIR}/${PN}
