@@ -1,0 +1,22 @@
+# ChangeLog for dev-libs/libctl
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.1 2004/12/28 21:18:08 ribosome Exp $
+
+*libctl-2.2 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +libctl-2.2.ebuild:
+  Moved from dev-libs/libctl to sci-libs/libctl.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> libctl-2.2.ebuild:
+  Adding IUSE
+
+  03 Mar 2004; Peter Bienstman <pbienst@gentoo.org> libctl-2.2.ebuild :
+  mark stable on x86
+
+*libctl-2.2 (06 Jan 2004)
+
+  06 Jan 2004; George Shapovalov <george@gentoo.org> libctl-2.2.ebuild, Manifest, files/{digest-libctl-2.2} :
+  initial release
+  Guile-based library implementing flexible control files for scientific simulations
+  ebuild submitted by Peter Bienstman <Peter.Bienstman@rug.ac.be>
