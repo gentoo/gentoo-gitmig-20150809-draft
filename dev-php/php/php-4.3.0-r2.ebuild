@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r2.ebuild,v 1.1 2003/01/08 17:21:04 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r2.ebuild,v 1.2 2003/01/08 20:26:40 rphillips Exp $
 
-IUSE="freetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
+IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -20,7 +20,7 @@ KEYWORDS="x86 ~sparc"
 	# >=dev-libs/gmp-3.1.1
 
 DEPEND="
-	freetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
+	truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	X? ( virtual/x11 )
@@ -107,7 +107,7 @@ src_compile() {
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use ldap &&  myconf="${myconf} --with-ldap"
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
-	use freetype && myconf="${myconf} --with-ttf --with-t1lib"
+	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use pdflib && myconf="${myconf} --enable-pdflib=/usr"
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
