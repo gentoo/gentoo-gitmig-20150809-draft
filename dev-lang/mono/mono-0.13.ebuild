@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.13.ebuild,v 1.1 2002/07/27 22:52:33 trance Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.13.ebuild,v 1.2 2002/07/28 17:48:40 sunflare Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mono runtime"
@@ -10,7 +10,8 @@ HOMEPAGE="http://www.go-mono.com/"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+        dev-util/pkgconfig"
 RDEPEND="${DEPEND}"
 KEYWORDS="x86 -ppc"
 

@@ -1,13 +1,22 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.4 2002/07/27 22:04:58 trance Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.5 2002/07/28 17:48:40 sunflare Exp $
 
-*mono-0.13 (27 Jul 2002)
+*mono-0.13 (28 Jul 2002)
+
+  28 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mono-0.13.ebuild, ChangeLog:
+  Added pkgconfig as a dependency, closing bug #5665.  Thanks to Nathan
+  Sharfi <nisharfi@csupomona.edu> for pointing this out.
+
   27 Jul 2002: Kevyn Shortell <trance@gentoo.org> mono-0.13.ebuild, ChangLog:
   updated to mono-0.13.ebuild. The ebuild was submitted by Luis Mayoral <satriani@okulto.net>.
   Tested on PPC and X86, failed PPC. repo'd and submitted.
 
-*mono-0.12 (24 Jul 2002)
+*mono-0.12 (28 Jul 2002)
+
+  28 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mono-0.12.ebuild, ChangeLog:
+  Added pkgconfig as a dependency, closing bug #5665.  Thanks to Nathan
+  Sharfi <nisharfi@csupomona.edu> for pointing this out.
 
   24 Jul 2002: Brandon Low <lostlogic@gentoo.org> mono-0.12.ebuild, ChangeLog:
   Doesn't like parallel make, and .keep a dir that it might need (othewise why did 
