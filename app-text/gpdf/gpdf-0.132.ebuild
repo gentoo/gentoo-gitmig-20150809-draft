@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132.ebuild,v 1.6 2004/08/08 00:49:58 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132.ebuild,v 1.7 2004/08/09 00:05:05 foser Exp $
 
 inherit gnome2 flag-o-matic
 
-DESCRIPTION="A viewer for Portable Document Format (PDF) files"
+DESCRIPTION="Viewer for Portable Document Format (PDF) files"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 
@@ -23,6 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/libglade-2"
 
 DEPEND="${RDEPEND}
+	app-text/scrollkeeper
 	>=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.12.0"
 
