@@ -2,7 +2,12 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The sci-astronomy category contains astronomy software.
+		The sci-astronomy category contains software that can be used
+		in astronomical and related scientific environments.
+	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sci-astronomy enthÃ€lt Software, die in astronomischen
+		und verwandten wissenschaftlichen Umfeldern genutzt wird.
 	</longdescription>
 </catmetadata>
 

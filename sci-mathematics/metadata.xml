@@ -2,7 +2,10 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The sci-mathematics category contains mathematics software.
+		The sci-mathematics category contains mathematical software.
+	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sci-mathematics enthält mathematische Software.
 	</longdescription>
 </catmetadata>
 

@@ -2,7 +2,12 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The sci-biology category contains biology software.
+		The sci-biology category contains software that can be used
+		in biological and related scientific environments.
+	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sci-biology enthält Software, die in biologischen
+		und verwandten wissenschaftlichen Umgebungen genutzt werden kann.
 	</longdescription>
 </catmetadata>
 

@@ -2,7 +2,12 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The sci-chemistry category contains chemistry packages.
+		The sci-chemistry category contains software that can be used
+		in chemistral scientific environments.
+	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sci-chemistry enthält Software, welche in chemischen
+		und chemietechnischen Umgebungen genutzt werden kann.
 	</longdescription>
 </catmetadata>
 

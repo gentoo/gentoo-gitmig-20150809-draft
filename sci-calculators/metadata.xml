@@ -2,7 +2,10 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The sci-calculators category contains calculator packages.
+		The sci-calculators category contains scientific calculator packages.
+	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sci-calculators enthält wissenschaftliche Rechenprogramme.
 	</longdescription>
 </catmetadata>
 

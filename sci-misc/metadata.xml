@@ -3,7 +3,12 @@
 <catmetadata>
 	<longdescription lang="en">
 		The sci-misc category contains various miscellaneous science
-		applications which do not fit elsewhere.
+		applications which do not fit any other sci-* category.
+	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sci-misc enthält verschiedene wissenschaftliche
+		Anwendungen, welche in keine der anderen sci-* Kategorien
+		hineinpassen.
 	</longdescription>
 </catmetadata>
 
