@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.0.ebuild,v 1.1 2004/03/17 03:52:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.0.ebuild,v 1.2 2004/03/17 04:14:59 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Flite text to speech engine"
@@ -12,11 +12,6 @@ LICENSE="X11"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
-
-src_compile() {
-	econf || die
-	emake || die
-}
 
 src_install () {
 	cd ${S}/bin
