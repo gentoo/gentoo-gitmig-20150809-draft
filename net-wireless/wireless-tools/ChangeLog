@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.29 2004/06/15 03:04:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.30 2004/06/24 15:20:20 latexer Exp $
+
+*wireless-tools-27_pre23 (24 Jun 2004)
+
+  24 Jun 2004; Peter Johanson, <peter@gentoo.org>
+  -wireless-tools-27_pre17.ebuild, +wireless-tools-27_pre23.ebuild:
+  Bump, and now install wireless.h (see bug #52478). Also remove one older
+  version.
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   wireless-tools-27_pre17.ebuild, wireless-tools-27_pre22.ebuild:

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre17.ebuild,v 1.2 2004/06/15 03:04:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre23.ebuild,v 1.1 2004/06/24 15:20:20 latexer Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
-S=${WORKDIR}/${MY_P/.pre17/}
+S=${WORKDIR}/${MY_P/.pre23/}
 DESCRIPTION="A collection of tools to configure wireless lan cards."
 SRC_URI="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/${MY_P}.tar.gz"
 HOMEPAGE="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc"
@@ -35,7 +35,7 @@ src_install () {
 
 	dolib libiw.so.27
 	insinto /usr/include/
-	doins iwlib.h
+	doins iwlib.h wireless.h
 	dosym /usr/lib/libiw.so.27 /usr/lib/libiw.so
 
 	doman {iwconfig,iwlist,iwpriv,iwspy,iwgetid,iwevent,ifrename}.8 \
