@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libast
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.6 2003/03/03 09:31:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.7 2003/03/20 12:58:26 seemant Exp $
+
+*libast-0.5-r1 (20 Mar 2003)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> libast-0.4-r1.ebuild,
+  libast-0.4-r1.ebuild, libast-0.5-r1.ebuild:
+  pic nonsense removed: version bumped
 
   03 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> libast-0.5.ebuild :
   Unmasked becuse of unmasking of eterm-0.9.2.
