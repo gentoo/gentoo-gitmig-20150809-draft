@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3376 2004/12/03 20:54:52 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3377 2004/12/04 03:44:02 dragonheart Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <dragonheart@gentoo.org> (04 December 2004)
+# Bug #70529 indicates problems with configuration file reading
+>=dev-libs/log4c-1.0.11
 
 # <humpback@gentoo.org> (03 Dec 2004)
 # This needs testing
