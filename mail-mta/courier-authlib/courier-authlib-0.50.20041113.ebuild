@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier-authlib/courier-authlib-0.50.20041113.ebuild,v 1.1 2004/11/16 07:39:25 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier-authlib/courier-authlib-0.50.20041113.ebuild,v 1.2 2004/11/16 07:44:58 swtaylor Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	if ! has_version 'dev-tcltk/expect' ; then 
+	if ! has_version 'dev-tcltk/expect' ; then
 		einfo 'The dev-tcltk/expect package is not installed.'
 	fi
 	unpack ${A}
@@ -31,7 +31,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	myconf="`use_with pam authpam` `use_with ldap authldap`"
-	use gdbm && myconf="${myconf} --with-db=gdbm" 
+	use gdbm && myconf="${myconf} --with-db=gdbm"
 
 	if [ -f /var/vpopmail/etc/lib_deps ]; then
 		myconf="${myconf} --with-authvchkpw --without-authmysql --without-authpgsql"
@@ -67,6 +67,6 @@ src_install() {
 	emake install DESTDIR="${D}" || die "install"
 	emake install-migrate DESTDIR="${D}" || die "migrate"
 	emake install-configure DESTDIR="${D}" || die "configure"
-	dodoc AUTHORS COPYING* ChangeLog* INSTALL* NEWS* README* 
+	dodoc AUTHORS COPYING* ChangeLog* INSTALL* NEWS* README*
 }
 
