@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.20 2004/09/15 19:48:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.21 2004/09/22 16:08:37 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -80,7 +80,6 @@
 *sys-libs/zlib
 *virtual/dev-manager
 *virtual/editor
-*virtual/glibc
 *virtual/libc
 *virtual/modutils
 *virtual/os-headers
