@@ -1,18 +1,28 @@
-MD5 572bebe7cb49921dc9ddda7be3a9238f nagios-core-1.1-r6.ebuild 5834
-MD5 1b1c564617de7f96efe00936258a4f97 nagios-core-1.1-r5.ebuild 5835
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ad46d2a4e0f1a13eaeab5f7700712d5 ChangeLog 4481
+MD5 ed199f8b068fe43e6f35a046a043ee54 nagios-core-1.1-r4.ebuild 5228
 MD5 67125e899e40330692585273a7839c41 metadata.xml 980
-MD5 428ee46b8c85d324db174d930fc59b06 nagios-core-1.2-r1.ebuild 5671
-MD5 191ad2a1dc902ce12cf47a6a5ceadf5d nagios-core-1.2.ebuild 5782
-MD5 f380ab7093cd31246a60919d0591c265 nagios-core-1.1-r4.ebuild 5253
-MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
-MD5 565ce2a690d50aeb542e7afe44b8c733 files/Makefile-distclean.diff.bz2 1133
-MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2 63
-MD5 7d2fb7655d8cc9a0dc953a5531879960 files/nagios 922
+MD5 eea47d7e6c49708d4a15ec39fd56c6a0 nagios-core-1.1-r5.ebuild 5810
+MD5 9da4171ce0f4b285f1a4b65f803b93d4 nagios-core-1.1-r6.ebuild 5809
+MD5 1639df35f22bf259cda07f7445b332bd nagios-core-1.2.ebuild 5757
+MD5 9fe6b9e0291e55150125e0b2133818b9 nagios-core-1.2-r1.ebuild 5646
 MD5 673bda0ac6ab9230d23331e7f3846b7b files/99_nagios.conf 350
-MD5 93fc29972ca48db69fc84adba9754c62 files/nagios.cfg-sample 22287
-MD5 f4f0b07e1a52477f83cbb9158db70391 files/tac.cgi.diff.bz2 204
+MD5 565ce2a690d50aeb542e7afe44b8c733 files/Makefile-distclean.diff.bz2 1133
 MD5 de44d331b40a2395b74c5ebf887b7675 files/digest-nagios-core-1.1-r4 63
+MD5 d00719dedf55c1dec74c09a767a4c737 files/nagios 923
+MD5 93fc29972ca48db69fc84adba9754c62 files/nagios.cfg-sample 22287
+MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
+MD5 f4f0b07e1a52477f83cbb9158db70391 files/tac.cgi.diff.bz2 204
 MD5 de44d331b40a2395b74c5ebf887b7675 files/digest-nagios-core-1.1-r5 63
 MD5 de44d331b40a2395b74c5ebf887b7675 files/digest-nagios-core-1.1-r6 63
+MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2 63
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4vwUHTu7gpaalycRAvagAKCrDIh+oUs2wny2l1+E5fuSVj8aQgCgjycn
+N4I/e8JZRqVPIt85sxxddSw=
+=+0/w
+-----END PGP SIGNATURE-----
