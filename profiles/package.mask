@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3316 2004/11/14 03:29:01 swegener Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3317 2004/11/14 05:36:33 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -95,6 +95,7 @@ net-www/bugport
 =sys-devel/autoconf-2.59-r6
 sys-devel/autoconf-wrapper
 =sys-devel/automake-1.8.5-r2
+>=sys-devel/automake-1.9
 <sys-devel/automake-1.8
 sys-devel/automake-wrapper
 
