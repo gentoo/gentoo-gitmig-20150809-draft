@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.43 2003/11/29 16:40:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.44 2003/12/06 23:34:27 spyderous Exp $
+
+  06 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  screen-3.9.13-r4.ebuild, screen-3.9.15-r1.ebuild, screen-3.9.15.ebuild:
+  Changing obsolete chown syntax for bug #35127.
 
 *screen-4.0.1-r1 (29 Nov 2003)
 

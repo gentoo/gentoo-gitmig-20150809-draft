@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.15.ebuild,v 1.10 2003/11/16 00:38:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.15.ebuild,v 1.11 2003/12/06 23:34:27 spyderous Exp $
 
 inherit flag-o-matic
 
@@ -74,8 +74,8 @@ src_install () {
 	touch ${D}/var/run/screen/.keep
 
 	# can't use this cause fowners do not support multiple args.
-	# fowners root.utmp /{usr/bin,var/run}/screen
-	chown root.utmp ${D}/{usr/bin,var/run}/screen
+	# fowners root:utmp /{usr/bin,var/run}/screen
+	chown root:utmp ${D}/{usr/bin,var/run}/screen
 
 	insinto /usr/share/terminfo ; doins terminfo/screencap
 	insinto /usr/share/screen/utf8encodings ; doins utf8encodings/??
