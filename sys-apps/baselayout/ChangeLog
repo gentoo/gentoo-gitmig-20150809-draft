@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.173 2004/09/29 05:02:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.174 2004/10/06 04:41:47 vapier Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  06 Oct 2004; Mike Frysinger <vapier@gentoo.org> baselayout-1.10.3.ebuild,
+  baselayout-1.10.4.ebuild, baselayout-1.11.1.ebuild,
+  baselayout-1.9.4-r3.ebuild, baselayout-1.9.4-r4.ebuild:
+  Change the permissions from 755 to 775 per #48016. Also referenced RedHat
+  installs and they too use 755.
 
   29 Sep 2004; Mike Frysinger <vapier@gentoo.org> baselayout-1.10.3.ebuild,
   baselayout-1.10.4.ebuild, baselayout-1.11.1.ebuild,

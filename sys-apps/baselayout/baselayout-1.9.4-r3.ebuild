@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r3.ebuild,v 1.4 2004/09/29 05:02:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r3.ebuild,v 1.5 2004/10/06 04:41:47 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -209,7 +209,7 @@ src_install() {
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
 	kdir /opt
-	kdir -o root -g uucp -m0755 /var/lock
+	kdir -o root -g uucp -m0775 /var/lock
 	kdir /proc
 	kdir -m 0700 /root
 	kdir /sbin

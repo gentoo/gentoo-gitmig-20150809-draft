@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3de7e7bac989ca95fa6dde0a2729735e ChangeLog 39335
-MD5 69b1c56caaf57202bcd58ef23791909d baselayout-1.9.4-r3.ebuild 17770
-MD5 4b53b9423e9915cf6b5eadb5736cea77 baselayout-1.10.3.ebuild 15557
-MD5 585ceeb81e8191eac7e266e2901b2648 baselayout-1.10.4.ebuild 15557
+MD5 612dcd4f110d9579d970e978e503ec45 ChangeLog 39633
+MD5 0290b2f759547f9abaf4e118331bdbf3 baselayout-1.9.4-r3.ebuild 17770
+MD5 428bfcde4eedd130836f6f796f105211 baselayout-1.10.3.ebuild 15557
+MD5 abccbd0a4dce1e37a26e490597a9fcc6 baselayout-1.10.4.ebuild 15557
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 df992044b789706cad9bb1f8980ee123 baselayout-1.9.4-r4.ebuild 16555
-MD5 4e084e0c5d7a5291c86bd16161b2b0aa baselayout-1.11.1.ebuild 15752
+MD5 b4e1da008c01a399d29352fecb50c138 baselayout-1.9.4-r4.ebuild 16555
+MD5 b2ec2250558d3f122f4a34aec1e41d88 baselayout-1.11.1.ebuild 15752
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r3 134
 MD5 ab3b5bbd5ce8a8b1386c834ff4a118b4 files/digest-baselayout-1.10.3 69
@@ -20,7 +20,7 @@ MD5 5610331ea31b164a8eb9c45ddc9adbbf files/digest-baselayout-1.11.1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWkIWHTu7gpaalycRAuBeAJ0ZOnFAcod0lz4XnbweJqtz7BulnwCgk8H8
-bWcbiTj8Y6FpMpGwlqwH4/o=
-=LrvO
+iD8DBQFBY3eTHTu7gpaalycRAtjwAKDNlduGW9jTYw/ubqxWkyCgkBNzDACeL2K3
+PMAlQ0pPt5OHiUx+to9ymuw=
+=kU70
 -----END PGP SIGNATURE-----
