@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Base64
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.33 2005/01/12 17:12:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.34 2005/02/06 18:14:31 corsair Exp $
+
+  06 Feb 2005; Markus Rothe <corsair@gentoo.org> MIME-Base64-3.05.ebuild:
+  Stable on ppc64
 
   12 Jan 2005; Guy Martin <gmsoft@gentoo.org> MIME-Base64-3.05.ebuild:
   Stable on hppa.
