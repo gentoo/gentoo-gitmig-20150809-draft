@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/knowit-0.7.ebuild,v 1.1 2003/04/28 21:27:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/knowit-0.7.ebuild,v 1.2 2003/09/05 22:43:30 msterret Exp $
 
 inherit kde-base
 need-kde 3

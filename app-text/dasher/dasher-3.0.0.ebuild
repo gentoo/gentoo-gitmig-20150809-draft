@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dasher/dasher-3.0.0.ebuild,v 1.5 2003/08/05 18:43:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dasher/dasher-3.0.0.ebuild,v 1.6 2003/09/05 22:43:29 msterret Exp $
 
 DESCRIPTION="information-efficient text-entry interface, driven by natural continuous pointing gestures"
 HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
