@@ -13,6 +13,7 @@ ruby
 svga
 sse
 scanner 
+tcltk
 X
 vim-with-x
 

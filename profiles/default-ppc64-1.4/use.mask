@@ -13,6 +13,7 @@ mmx
 svga
 sse
 scanner 
+tcltk
 X
 vim-with-x
 
