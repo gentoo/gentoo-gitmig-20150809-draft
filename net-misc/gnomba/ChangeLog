@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gnomba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/ChangeLog,v 1.7 2004/03/19 10:10:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/ChangeLog,v 1.8 2004/04/09 00:56:30 mr_bones_ Exp $
+
+  08 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> gnomba-0.6.2.ebuild:
+  add nls to IUSE; error messages; tidy
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gnomba-0.6.2.ebuild:
   fix depend (bug #45110); tidy
