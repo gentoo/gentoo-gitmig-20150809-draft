@@ -1,6 +1,9 @@
 # ChangeLog for net-www/lingerd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/ChangeLog,v 1.1 2005/01/08 23:21:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/ChangeLog,v 1.2 2005/01/26 06:52:30 vericgar Exp $
+
+  25 Jan 2005; Michael Stewart <vericgar@gentoo.org> lingerd-0.94.ebuild:
+  Fixed so that ${D} isn't used with exeinfo
 
 *lingerd-0.94 (09 Jan 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/lingerd-0.94.ebuild,v 1.1 2005/01/08 23:21:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/lingerd-0.94.ebuild,v 1.2 2005/01/26 06:52:30 vericgar Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_compile() {
 
 src_install() {
 	enewuser lingerd
-	exeinto ${D}/usr/bin/ ; doexe lingerd || die "Installation failed."
+	exeinto /usr/bin/ ; doexe lingerd || die "Installation failed."
 	exeinto /etc/init.d ; newexe ${FILESDIR}/lingerd.rc lingerd
 	dodoc ChangeLog LICENSE README TUNING INSTALL TODO extra/lingerd.rc
 }
