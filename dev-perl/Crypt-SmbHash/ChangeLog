@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-SmbHash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.8 2004/09/06 16:03:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.9 2004/09/16 19:38:49 gustavoz Exp $
+
+  16 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  Crypt-SmbHash-0.02.ebuild:
+  Keyworded ppc64 for samba
 
   06 Sep 2004; Travis Tilley <lv@gentoo.org> Crypt-SmbHash-0.02.ebuild:
   stable on amd64
