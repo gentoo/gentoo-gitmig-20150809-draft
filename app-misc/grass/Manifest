@@ -1,6 +1,16 @@
-MD5 97ffd6b444c5d782bd3b676f5e76eb9b grass-5.0.3.ebuild 2622
-MD5 90d0d53b77f70bedf380c09ce6e3c5b7 grass-5.0.2.ebuild 2645
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b264883b0cb37e259ee7e377de3405f1 ChangeLog 1931
+MD5 75ec6d47bcc60fe6869bf1da4ec2fe85 grass-5.0.2.ebuild 2639
+MD5 d1455b1c4c30837360d9a696d05e4b27 grass-5.0.3.ebuild 2616
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 bdf9112abfe51ff3b2cd0547318640df files/digest-grass-5.0.2 69
 MD5 35189a7ae00c27bf54a1635a71d1f2c1 files/digest-grass-5.0.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4vRUHTu7gpaalycRAj4ZAKCAzID71Vz76+aqE1kg4FM+wkO5AACg7MG2
+wuvGHPj7C1SAdbHjQGZUnZY=
+=WOdv
+-----END PGP SIGNATURE-----
