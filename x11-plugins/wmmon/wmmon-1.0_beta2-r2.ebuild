@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r2.ebuild,v 1.3 2004/06/28 21:00:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r2.ebuild,v 1.4 2004/08/03 15:58:48 s4t4n Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}/${PN}

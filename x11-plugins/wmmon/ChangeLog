@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.10 2004/06/28 21:00:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.11 2004/08/03 15:58:48 s4t4n Exp $
+
+  03 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmmon-1.0_beta2-r2.ebuild:
+  Stable on x86.
+  wmmon-1.0_beta2.ebuild:
+  Remove older ebuild.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmmon-1.0_beta2-r1.ebuild,
   wmmon-1.0_beta2-r2.ebuild:
