@@ -1,4 +1,14 @@
-MD5 eb286c84a92dd00f389723b136c9715e metadata.xml 262
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f65a2f877867f3ab6d4f461cec3efbf ChangeLog 548
-MD5 e2fe50e27539dab66b845eefc1a06a35 libfpx-1.2.0.9.ebuild 811
+MD5 3eda01c0b79eee933fe1c9547dedda48 libfpx-1.2.0.9.ebuild 817
+MD5 eb286c84a92dd00f389723b136c9715e metadata.xml 262
 MD5 4943ff818bd747e44ba44f472a1a7b5e files/digest-libfpx-1.2.0.9 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdrNeHTu7gpaalycRApn/AKC6PYPMipzFtXIoU9IjGEXVPJM7GQCfWVxO
+RsAMUZWliiVcfhjRNAHtZaA=
+=YvKn
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/libfpx-1.2.0.9.ebuild,v 1.4 2004/10/19 20:56:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/libfpx-1.2.0.9.ebuild,v 1.5 2004/10/20 18:49:42 vapier Exp $
 
 MY_PN=libfpx
 
@@ -15,9 +15,9 @@ DESCRIPTION="A library for manipulating FlashPIX images"
 SRC_URI="ftp://ftp.imagemagick.org/pub/ImageMagick/delegates/${MY_P}.tar.bz2"
 HOMEPAGE=""
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64 ~alpha ~ppc"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
 src_compile() {
