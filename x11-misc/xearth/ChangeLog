@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xearth
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.5 2004/06/24 22:40:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.6 2004/08/28 01:50:37 tgall Exp $
+
+  27 Aug 2004; Tom Gall <tgall@gentoo.org> xearth-1.1.ebuild:
+  stable on ppc64, bug #59354
 
   01 Jun 2004; Brandon Hale <tseng@gentoo.org> xearth-1.1.ebuild:
   Add IUSE=
