@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.1.ebuild,v 1.5 2004/06/25 00:48:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.1.ebuild,v 1.6 2004/07/14 22:10:14 agriffis Exp $
 
 DESCRIPTION="OSD frontend for xine"
 HOMEPAGE="http://oxine.sourceforge.net/"
@@ -16,7 +16,6 @@ IUSE="nls lirc"
 SLOT="0"
 KEYWORDS="x86"
 
-S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/oxine/${P}.tar.gz"
 
 src_compile() {
