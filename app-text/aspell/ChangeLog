@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.37 2004/05/14 19:38:36 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.38 2004/06/06 21:31:12 lv Exp $
+
+  06 Jun 2004; Travis Tilley <lv@gentoo.org> aspell-0.50.5.ebuild:
+  stable on amd64 for gcc 3.4 fix
 
   14 May 2004; Stephen P. Becker <geoman@gentoo.org> aspell-0.50.3.ebuild:
   Stable on mips
