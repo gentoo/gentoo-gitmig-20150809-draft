@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ucspi-tcp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.16 2003/09/03 14:51:21 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.17 2004/02/04 04:45:00 robbat2 Exp $
+
+*ucspi-tcp-0.88-r8 (20 Jan 2004)
+
+  20 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> ucspi-tcp-0.88-r8.ebuild:
+  Added support for SSL when using IPv6 via a new patch, thanks to Stephen
+  Olesen <slepp.netmonks.ca>, bug #32007.
 
 *ucspi-tcp-0.88-r7 (03 Sep 2003)
 
