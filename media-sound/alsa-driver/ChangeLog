@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.80 2004/04/08 07:44:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.81 2004/04/08 18:42:45 eradicator Exp $
+
+*alsa-driver-1.0.4-r1 (08 Apr 2004)
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-driver-1.0.4-r1.ebuild, files/alsa-driver-1.0.4-devfix.patch:
+  Added SNDRV_DMA_TYPE_PCI to SNDRV_DMA_TYPE_DEV fixes.
 
   08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-driver-0.5.12a.ebuild, alsa-driver-0.9.0_rc2.ebuild,

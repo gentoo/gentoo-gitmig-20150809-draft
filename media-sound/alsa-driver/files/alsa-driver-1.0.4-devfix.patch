@@ -1,0 +1,59 @@
+diff -Naur alsa-driver-1.0.4/alsa-kernel/include/trident.h alsa-driver-1.0.4.devfix/alsa-kernel/include/trident.h
+--- alsa-driver-1.0.4/alsa-kernel/include/trident.h	2004-03-02 07:32:36.000000000 -0800
++++ alsa-driver-1.0.4.devfix/alsa-kernel/include/trident.h	2004-04-08 10:04:53.000000000 -0700
+@@ -56,9 +56,9 @@
+ 
+ /* Trident chipsets have 1GB memory limit */
+ #ifdef __alpha__
+-#define TRIDENT_DMA_TYPE        SNDRV_DMA_TYPE_PCI_16MB
++#define TRIDENT_DMA_TYPE        SNDRV_DMA_TYPE_DEV_16MB
+ #else
+-#define TRIDENT_DMA_TYPE        SNDRV_DMA_TYPE_PCI
++#define TRIDENT_DMA_TYPE        SNDRV_DMA_TYPE_DEV
+ #endif
+ 
+ #define SNDRV_SEQ_DEV_ID_TRIDENT			"trident-synth"
+diff -Naur alsa-driver-1.0.4/alsa-kernel/isa/cs423x/cs4231_lib.c alsa-driver-1.0.4.devfix/alsa-kernel/isa/cs423x/cs4231_lib.c
+--- alsa-driver-1.0.4/alsa-kernel/isa/cs423x/cs4231_lib.c	2004-03-06 08:51:29.000000000 -0800
++++ alsa-driver-1.0.4.devfix/alsa-kernel/isa/cs423x/cs4231_lib.c	2004-04-08 10:04:53.000000000 -0700
+@@ -1659,7 +1659,7 @@
+ #else
+ #  ifdef EBUS_SUPPORT
+         if (chip->ebus_flag) {
+-                snd_pcm_lib_preallocate_pages_for_all(pcm, SNDRV_DMA_TYPE_PCI,
++                snd_pcm_lib_preallocate_pages_for_all(pcm, SNDRV_DMA_TYPE_DEV,
+                 				      chip->dev_u.pdev,
+ 						      64*1024, 128*1024);
+         } else {
+diff -Naur alsa-driver-1.0.4/alsa-kernel/parisc/harmony.c alsa-driver-1.0.4.devfix/alsa-kernel/parisc/harmony.c
+--- alsa-driver-1.0.4/alsa-kernel/parisc/harmony.c	2004-03-17 03:14:12.000000000 -0800
++++ alsa-driver-1.0.4.devfix/alsa-kernel/parisc/harmony.c	2004-04-08 10:04:53.000000000 -0700
+@@ -847,7 +847,7 @@
+ 	harmony->pcm = pcm;
+ 	
+ 	/* initialize graveyard buffer */
+-	harmony->dma_dev.type = SNDRV_DMA_TYPE_PCI;
++	harmony->dma_dev.type = SNDRV_DMA_TYPE_DEV;
+ 	harmony->dma_dev.dev = snd_dma_pci_data(harmony->fake_pci_dev); 
+ 	harmony->graveyard_addr = snd_dma_alloc_pages(&chip->dma_dev,
+ 			HARMONY_BUF_SIZE*GRAVEYARD_BUFS, &harmony->graveyard_dma);
+diff -Naur alsa-driver-1.0.4/hal2/hal2.c alsa-driver-1.0.4.devfix/hal2/hal2.c
+--- alsa-driver-1.0.4/hal2/hal2.c	2002-10-21 11:53:22.000000000 -0700
++++ alsa-driver-1.0.4.devfix/hal2/hal2.c	2004-04-08 10:04:53.000000000 -0700
+@@ -134,14 +134,14 @@
+ 	 * true, but it seems to work.
+ 	 */
+ 	if ((err = snd_register_dma_channel(card, "HAL2 record", 0,
+-					    SNDRV_DMA_TYPE_PCI,
++					    SNDRV_DMA_TYPE_DEV,
+ 					    dma1_size[dev], NULL,
+ 					    &hal2card->dma1ptr)) < 0) {
+ 		snd_printk("Couldn't get dma1\n");
+ 		return err;
+ 	}
+ 	if ((err = snd_register_dma_channel(card, "HAL2 playback", 0,
+-					    SNDRV_DMA_TYPE_PCI,
++					    SNDRV_DMA_TYPE_DEV,
+ 					    dma2_size[dev], NULL,
+ 					    &hal2card->dma2ptr)) < 0) {
+ 		snd_printk("Couldn't get dma2\n");
