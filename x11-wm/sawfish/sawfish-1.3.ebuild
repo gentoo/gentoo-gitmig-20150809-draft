@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.ebuild,v 1.4 2003/09/04 07:39:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.ebuild,v 1.5 2003/10/12 17:49:38 foser Exp $
 
 inherit base eutils
 
@@ -67,10 +67,12 @@ src_compile() {
 }
 
 src_install() {
+
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS BUGS COPYING ChangeLog DOC FAQ NEWS README THANKS TODO OPTIONS
 
 	# Add to Gnome CC's Window Manager list
 	insinto /usr/share/gnome/wm-properties
-	doins ${FILESDIR}/Sawfish.desktop
+	doins ${S}/Sawfish.desktop
+
 }
