@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.57 2004/10/17 13:29:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.58 2004/10/17 13:45:53 hattya Exp $
+
+  17 Oct 2004; Akinori Hattori <hattya@gentoo.org> gpgme-0.9.0-r1.ebuild:
+  stable on ia64, bug #64485
 
   17 Oct 2004; Akinori Hattori <hattya@gentoo.org> gpgme-0.3.14-r1.ebuild:
   stable on ia64, bug #64485
