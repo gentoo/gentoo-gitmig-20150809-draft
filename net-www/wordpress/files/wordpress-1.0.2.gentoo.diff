@@ -1,0 +1,213 @@
+diff -u --recursive wordpress-1.0.2/b2rdf.php wordpress-1.0.2-patched/b2rdf.php
+--- wordpress-1.0.2/b2rdf.php	2004-03-11 19:15:11.000000000 +0000
++++ wordpress-1.0.2-patched/b2rdf.php	2004-05-01 11:35:57.924240544 +0100
+@@ -1,7 +1,6 @@
+ <?php
+-$curpath = dirname(__FILE__).'/';
+-require_once ($curpath.'wp-config.php');
+-require_once ($curpath.WPINC.'/template-functions.php');
++require_once ('./wp-config.php');
++require_once ('wp-includes/template-functions.php');
+ if (!empty($_SERVER["QUERY_STRING"])) {
+ 	$location = get_bloginfo('rdf_url').'?'.$_SERVER["QUERY_STRING"];
+ }
+@@ -11,4 +10,4 @@
+ header('HTTP/1.0 301 Moved Permanently');
+ header('Location: ' . $location . "\n");
+ exit;
+-?>
+\ No newline at end of file
++?>
+diff -u --recursive wordpress-1.0.2/b2rss.php wordpress-1.0.2-patched/b2rss.php
+--- wordpress-1.0.2/b2rss.php	2004-03-11 19:15:12.000000000 +0000
++++ wordpress-1.0.2-patched/b2rss.php	2004-05-01 11:36:22.726470032 +0100
+@@ -1,7 +1,6 @@
+ <?php
+-$curpath = dirname(__FILE__).'/';
+-require_once ($curpath.'wp-config.php');
+-require_once ($curpath.WPINC.'/template-functions.php');
++require_once ('./wp-config.php');
++require_once ('wp-includes/template-functions.php');
+ if (!empty($_SERVER["QUERY_STRING"])) {
+ 	$location = get_bloginfo('rss_url').'?'.$_SERVER["QUERY_STRING"];
+ }
+@@ -11,4 +10,4 @@
+ header('HTTP/1.0 301 Moved Permanently');
+ header('Location: ' . $location . "\n");
+ exit;
+-?>
+\ No newline at end of file
++?>
+diff -u --recursive wordpress-1.0.2/b2rss2.php wordpress-1.0.2-patched/b2rss2.php
+--- wordpress-1.0.2/b2rss2.php	2004-03-11 19:15:12.000000000 +0000
++++ wordpress-1.0.2-patched/b2rss2.php	2004-05-01 11:36:46.635835256 +0100
+@@ -1,7 +1,6 @@
+ <?php
+-$curpath = dirname(__FILE__).'/';
+-require_once ($curpath.'wp-config.php');
+-require_once ($curpath.WPINC.'/template-functions.php');
++require_once ('./wp-config.php');
++require_once ('wp-includes/template-functions.php');
+ if (!empty($_SERVER["QUERY_STRING"])) {
+ 	$location = get_bloginfo('rss2_url').'?'.$_SERVER["QUERY_STRING"];
+ }
+@@ -11,4 +10,4 @@
+ header('HTTP/1.0 301 Moved Permanently');
+ header('Location: ' . $location . "\n");
+ exit;
+-?>
+\ No newline at end of file
++?>
+diff -u --recursive wordpress-1.0.2/index.php wordpress-1.0.2-patched/index.php
+--- wordpress-1.0.2/index.php	2004-03-11 19:15:12.000000000 +0000
++++ wordpress-1.0.2-patched/index.php	2004-05-01 11:37:09.586346248 +0100
+@@ -56,7 +56,7 @@
+ 	<?php trackback_rdf(); ?>
+ 	-->
+ 
+-<?php include(ABSPATH . 'wp-comments.php'); ?>
++<?php include('./wp-comments.php'); ?>
+ </div>
+ 
+ <?php } } else { // end foreach, end if any posts ?>
+@@ -114,4 +114,4 @@
+ 
+ <p class="credit"><!--<?php echo $wpdb->querycount; ?> queries.--> <?php timer_stop(1); ?> || <cite>Powered by <a href="http://wordpress.org" title="Powered by WordPress, state-of-the-art semantic personal publishing platform"><strong>WordPress</strong></a></cite></p>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff -u --recursive wordpress-1.0.2/wp-blog-header.php wordpress-1.0.2-patched/wp-blog-header.php
+--- wordpress-1.0.2/wp-blog-header.php	2004-03-11 19:15:48.000000000 +0000
++++ wordpress-1.0.2-patched/wp-blog-header.php	2004-05-01 11:38:12.799736352 +0100
+@@ -3,7 +3,7 @@
+ $use_cache = 1; // No reason not to
+ 
+ /* Including config and functions files */
+-$curpath = dirname(__FILE__).'/';
++$curpath = '.';
+ 
+ if (!file_exists($curpath . '/wp-config.php'))
+ 	die("There doesn't seem to be a <code>wp-config.php</code> file. I need this before we can get started. Need more help? <a href='http://wordpress.org/docs/faq/#wp-config'>We got it</a>. You can <a href='wp-admin/install-config.php'>create a <code>wp-config.php</code> file through a web interface</a>, but this doesn't work for all server setups. The safest way is to manually create the file.");
+@@ -363,4 +363,4 @@
+     	}
+ }
+ }
+-?>
+\ No newline at end of file
++?>
+diff -u --recursive wordpress-1.0.2/wp-comments-post.php wordpress-1.0.2-patched/wp-comments-post.php
+--- wordpress-1.0.2/wp-comments-post.php	2004-03-11 19:15:48.000000000 +0000
++++ wordpress-1.0.2-patched/wp-comments-post.php	2004-05-01 11:38:32.395757304 +0100
+@@ -1,5 +1,5 @@
+ <?php
+-require(dirname(__FILE__) . '/wp-config.php');
++require('./wp-config.php');
+ 
+ function add_magic_quotes($array) {
+ 	foreach ($array as $k => $v) {
+@@ -129,4 +129,4 @@
+ 	die('Sorry, you can only post a new comment once every 10 seconds. Slow down cowboy.');
+ }
+ 
+-?>
+\ No newline at end of file
++?>
+diff -u --recursive wordpress-1.0.2/wp-includes/links-update-xml.php wordpress-1.0.2-patched/wp-includes/links-update-xml.php
+--- wordpress-1.0.2/wp-includes/links-update-xml.php	2004-03-11 19:16:07.000000000 +0000
++++ wordpress-1.0.2-patched/wp-includes/links-update-xml.php	2004-05-01 11:39:00.026556784 +0100
+@@ -3,7 +3,7 @@
+ // Copyright (C) 2003 Mike Little -- mike@zed1.com
+ 
+ // Get the path of our parent directory:
+-$parentpath = dirname(dirname(__FILE__));
++$parentpath = "../";
+ 
+ require_once($parentpath.'/wp-config.php');
+ 
+@@ -171,4 +171,4 @@
+ 	//echo('</pre>');
+ } // end if updated cache file
+ 
+-?>
+\ No newline at end of file
++?>
+diff -u --recursive wordpress-1.0.2/wp-login.php wordpress-1.0.2-patched/wp-login.php
+--- wordpress-1.0.2/wp-login.php	2004-03-11 19:16:10.000000000 +0000
++++ wordpress-1.0.2-patched/wp-login.php	2004-05-01 11:39:15.439213704 +0100
+@@ -1,5 +1,5 @@
+ <?php
+-require(dirname(__FILE__) . '/wp-config.php');
++require('./wp-config.php');
+ 
+ if (!function_exists('add_magic_quotes')) {
+ 	function add_magic_quotes($array) {
+diff -u --recursive wordpress-1.0.2/wp-mail.php wordpress-1.0.2-patched/wp-mail.php
+--- wordpress-1.0.2/wp-mail.php	2004-03-11 19:16:11.000000000 +0000
++++ wordpress-1.0.2-patched/wp-mail.php	2004-05-01 11:40:02.043128832 +0100
+@@ -1,7 +1,7 @@
+ <?php
+-require(dirname(__FILE__) . '/wp-config.php');
++require('./wp-config.php');
+ 
+-require_once(ABSPATH.WPINC.'/class-pop3.php');
++require_once('wp-includes/class-pop3.php');
+ 
+ 
+ timer_start();
+@@ -286,4 +286,4 @@
+ timer_stop($output_debugging_info);
+ exit;
+ 
+-?>
+\ No newline at end of file
++?>
+diff -u --recursive wordpress-1.0.2/wp-pass.php wordpress-1.0.2-patched/wp-pass.php
+--- wordpress-1.0.2/wp-pass.php	2004-03-11 19:16:11.000000000 +0000
++++ wordpress-1.0.2-patched/wp-pass.php	2004-05-01 11:40:17.169829224 +0100
+@@ -4,8 +4,8 @@
+   It doesn't need to connect to the DB, or do anything fancy at all. Yum.
+   -- Matt
+ */
+-require(dirname(__FILE__) . '/wp-config.php');
++require('./wp-config.php');
+ setcookie('wp-postpass_'.$cookiehash, $HTTP_POST_VARS['post_password'], time()+60*60*24*30);
+ header('Location: ' . $HTTP_SERVER_VARS['HTTP_REFERER']);
+ 
+-?>
+\ No newline at end of file
++?>
+diff -u --recursive wordpress-1.0.2/wp-register.php wordpress-1.0.2-patched/wp-register.php
+--- wordpress-1.0.2/wp-register.php	2004-03-11 19:16:11.000000000 +0000
++++ wordpress-1.0.2-patched/wp-register.php	2004-05-01 11:40:28.837055536 +0100
+@@ -1,5 +1,5 @@
+ <?php
+-require(dirname(__FILE__) . '/wp-config.php');
++require('./wp-config.php');
+ 
+ function add_magic_quotes($array) {
+ 	foreach ($array as $k => $v) {
+@@ -191,4 +191,4 @@
+ <?php
+ 
+ break;
+-}
+\ No newline at end of file
++}
+diff -u --recursive wordpress-1.0.2/wp-trackback.php wordpress-1.0.2-patched/wp-trackback.php
+--- wordpress-1.0.2/wp-trackback.php	2004-03-11 19:16:13.000000000 +0000
++++ wordpress-1.0.2-patched/wp-trackback.php	2004-05-01 11:40:37.655714896 +0100
+@@ -1,5 +1,5 @@
+ <?php
+-require(dirname(__FILE__) . '/wp-config.php');
++require('./wp-config.php');
+ 
+ // trackback is done by a POST
+ $request_array = 'HTTP_POST_VARS';
+@@ -84,4 +84,4 @@
+ 		trackback_response(0);
+ 	}
+ }
+-?>
+\ No newline at end of file
++?>
