@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/monster-masher-1.7.ebuild,v 1.1 2004/07/06 20:36:17 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/monster-masher-1.7.ebuild,v 1.2 2004/07/07 18:08:10 mr_bones_ Exp $
 
 DESCRIPTION="Squash the monsters with your levitation worker gnome"
 HOMEPAGE="http://www.cs.auc.dk/~olau/monster-masher/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.cs.auc.dk/~olau/monster-masher/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/x11
