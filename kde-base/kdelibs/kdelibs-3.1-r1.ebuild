@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r1.ebuild,v 1.1 2003/01/28 12:03:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r1.ebuild,v 1.2 2003/01/28 15:12:25 hannes Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -46,6 +46,8 @@ use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
 
 [ "$ARCH" == "x86" ] && myconf="$myconf --enable-fast-malloc=full"
+
+use alpha && append-flags -mieee
 
 qtver-from-kdever ${PV}
 need-qt $selected_version
