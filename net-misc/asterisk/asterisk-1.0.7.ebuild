@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.1 2005/03/21 00:50:41 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.2 2005/03/27 22:53:10 stkn Exp $
 
-IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex"
+IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
-inherit eutils
+inherit eutils perl-module
 
 ADDONS_VERSION="1.0.7"
 BRI_VERSION="0.2.0-RC7k"
@@ -37,22 +37,21 @@ DEPEND="dev-libs/newt
 	zaptel? ( >=net-misc/zaptel-1.0.3 )
 	postgres? ( dev-db/postgresql )
 	vmdbmysql? ( dev-db/mysql )
-	vmdbpostgres? ( dev-db/postgresql )"
-
-#	resperl? ( dev-lang/perl
-#		   >=net-misc/zaptel-1.0.3 )
+	vmdbpostgres? ( dev-db/postgresql )
+	resperl? ( dev-lang/perl
+		   >=net-misc/zaptel-1.0.3 )"
 
 pkg_setup() {
 	einfo "Running some pre-flight checks..."
-#	if use resperl; then
-#		# res_perl pre-flight check...
-#		if ! $(perl -V | grep -q "usemultiplicity=define"); then
-#			eerror "Embedded perl add-on needs Perl with built-in threads support"
-#			eerror "(rebuild perl with ithreads use-flag enabled)"
-#			die "Perl w/o threads support..."
-#		fi
-#		einfo "Perl with ithreads support found"
-#	fi
+	if use resperl; then
+		# res_perl pre-flight check...
+		if ! $(perl -V | grep -q "usemultiplicity=define"); then
+			eerror "Embedded perl add-on needs Perl with built-in threads support"
+			eerror "(rebuild perl with ithreads use-flag enabled)"
+			die "Perl w/o threads support..."
+		fi
+		einfo "Perl with ithreads support found"
+	fi
 
 
 	# mysql and postgres voicemail support are mutually exclusive..
@@ -121,28 +120,26 @@ src_unpack() {
 	#
 	# embedded perl
 	#
-#	if use resperl; then
-#		einfo "Patching asterisk for embedded perl support..."
-#		epatch ${S_ADDONS}/res_perl/astmake.diff
-#
-#		# create necessary .c file
-#		perl -MExtUtils::Embed -e xsinit || die "Could not create perlxsi.c"
-#
-#		cd ${S_ADDONS}
-#		# asterisk-1.0.6 changed two channel functions
-#		epatch ${FILESDIR}/1.0.0/${P}-resperl.diff
-#
-#		# fix perl path
-#		sed -i -e "s:/usr/local/bin/perl:/usr/bin/perl:" \
-#			res_perl/Makefile \
-#			${S}/Makefile
-#		sed -i -e "s:^ASTSRC.*:ASTSRC = ${S}:" \
-#			-e "s:\$(ASTLIBDIR)/modules/\(res_musiconhold.so\):\1:" \
-#			-e "s:\(res_musiconhold.so \$(LDFLAGS)\):\1 -Wl,-rpath,/usr/lib/asterisk/modules/:" \
-#			res_perl/Makefile
-#
-#		cd ${S}
-#	fi
+	if use resperl; then
+		einfo "Patching asterisk for embedded perl support..."
+		epatch ${S_ADDONS}/res_perl/astmake.diff
+
+		# create necessary .c file
+		/usr/bin/perl -MExtUtils::Embed -e xsinit || die "Could not create perlxsi.c"
+
+		cd ${S_ADDONS}
+
+		# fix perl path, source location and remove res_musiconhold
+		sed -i -e "s:/usr/local/bin/perl:/usr/bin/perl:" \
+			res_perl/Makefile \
+			${S}/Makefile \
+			res_perl/INC/*.pm
+		sed -i -e "s:^ASTSRC.*:ASTSRC = ${S}:" \
+			-e "s:\$(ASTLIBDIR)/modules/res_musiconhold.so::" \
+			res_perl/Makefile
+
+		cd ${S}
+	fi
 
 	#
 	# uclibc patch
@@ -205,7 +202,6 @@ src_unpack() {
 		einfo "Patching asterisk w/ BRI stuff"
 
 		# fix patch for new asterisk version...
-		# remove this as soon as there's a new bristuff version!
 		sed -i -e "s:^\([+-]\)1.0.6:\1${PV}:" \
 			${WORKDIR}/bristuff-${BRI_VERSION}/patches/asterisk.patch
 
@@ -235,15 +231,10 @@ src_compile() {
 	cd ${S_ADDONS}
 	emake -j1 || die "Make failed"
 
-#	if use resperl; then
-#		cd ${S_ADDONS}/res_perl
-#
-#		# copy plugin because -rpath and stuff only works for lib*.* files and we don't want
-#		# res_perl.so to look at the wrong places... (ugly but works)
-#		cp ${S}/res/res_musiconhold.so . || die "Could not copy musiconhold plugin, needed by res_perl!"
-#
-#		emake -j1 || die "Building embedded perl failed"
-#	fi
+	if use resperl; then
+		cd ${S_ADDONS}/res_perl
+		emake -j1 || die "Building embedded perl failed"
+	fi
 }
 
 src_install() {
@@ -296,10 +287,35 @@ src_install() {
 	cd ${S_ADDONS}
 	emake -j1 INSTALL_PREFIX=${D} install || die "Make install failed"
 
-#	if use resperl; then
-#		cd ${S_ADDONS}/res_perl
-#		emake -j1 INSTALL_PREFIX=${D} install || die "Installation of perl AST_API failed"
-#	fi
+	if use resperl; then
+		perlinfo
+
+		cd ${S_ADDONS}/res_perl
+		emake -j1 INSTALL_PREFIX=${D} install || die "Installation of perl AST_API failed"
+
+		# move AstApiBase.so to a proper place
+		dodir ${VENDOR_LIB}/auto/AstAPIBase
+		mv ${D}/etc/asterisk/perl/AstAPIBase.so ${D}${VENDOR_LIB}/auto/AstAPIBase
+
+		# move *.pm files to other location
+		dodir ${VENDOR_LIB}/AstAPI
+		dodir ${VENDOR_LIB}/AstAPIBase
+		for x in AstAPI.pm AstConfig.pm LoadFile.pm PerlSwitch.pm WebServer.pm; do
+			mv ${D}/etc/asterisk/perl/${x} ${D}${VENDOR_LIB}/AstAPI
+			dosed "s/^use[\t ]\+${x/.pm/};/use AstAPI::${x/.pm/};/" /etc/asterisk/perl/asterisk_init.pm
+		done
+		mv ${D}/etc/asterisk/perl/AstAPIBase.pm ${D}${VENDOR_LIB}/AstAPIBase
+		dosed "s/^use[\t ]\+AstAPI;/use AstAPI::AstAPI;/" /etc/asterisk/perl/asterisk_init.pm
+		dosed "s/^use[\t ]\+AstAPIBase;/use AstAPIBase::AstAPIBase;/" ${VENDOR_LIB}/AstAPI/AstAPI.pm
+
+		# move apps + htdocs to a proper place
+		dodir /var/lib/asterisk/perl
+		mv ${D}/etc/asterisk/perl/{apps,htdocs} ${D}/var/lib/asterisk/perl
+
+		# fix locations
+		sed -i -e "s:/etc/asterisk/perl:/var/lib/asterisk/perl:" \
+			${D}${VENDOR_LIB}/AstAPI/LoadFile.pm ${D}${VENDOR_LIB}/AstAPI/WebServer.pm
+	fi
 }
 
 pkg_postinst() {

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.42 2005/03/22 15:51:16 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.43 2005/03/27 22:53:10 stkn Exp $
+
+  27 Mar 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.7.ebuild:
+  Fixed and re-enabled res_perl support, perl modules are now installed into
+  /usr/lib/perl/..., applications and htdocs are in /var/lib/asterisk/perl.
+  Now everything is where it belongs.
 
   22 Mar 2005; Stefan Knoblich <stkn@gentoo.org> files/0.9.0/asterisk.rc6,
   files/1.0.0/asterisk.rc6:
