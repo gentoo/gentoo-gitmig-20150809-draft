@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.65 2005/01/22 02:08:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.66 2005/01/23 21:15:23 lu_zero Exp $
+
+*ati-drivers-8.8.25-r2 (23 Jan 2005)
+
+  23 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-8.8.25-r2.ebuild:
+  Fixed the libGL.la, solves bug #78937
 
   21 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
   ati-drivers-8.8.25-r1.ebuild:
@@ -13,7 +19,7 @@
   Multilib cleanups.
 
   19 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
-  typo in the multilib support section, fixed thanks Robert Führicht
+  typo in the multilib support section, fixed thanks Robert FÃ¼hricht
   <the_master_of_disaster@gmx.at>
 
   19 Jan 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.8.25.ebuild:
