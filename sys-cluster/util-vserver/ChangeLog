@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/util-vserver
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.3 2004/04/27 21:46:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.4 2004/05/10 23:39:49 tantive Exp $
+
+*util-vserver-0.29.5 (11 May 2004)
+
+  11 May 2004; Michael Imhof <tantive@gentoo.org> util-vserver-0.29.5.ebuild:
+  Version bumped. Added inherit eutils. Closes #49006.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> util-vserver-0.29.ebuild:
   Add inherit eutils
