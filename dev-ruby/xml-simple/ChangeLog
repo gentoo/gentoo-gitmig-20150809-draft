@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/xml-simple
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.1 2004/10/23 11:32:27 usata Exp $
+
+*xml-simple-1.0.6 (23 Oct 2004)
+
+  23 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +xml-simple-1.0.6.ebuild:
+  Initial import. Thanks to DATE Ken at GentooJP EbuildJP,
+  http://ebuild.gentoo.gr.jp/.
+
