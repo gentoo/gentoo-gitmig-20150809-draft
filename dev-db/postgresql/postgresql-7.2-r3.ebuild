@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r3.ebuild,v 1.5 2002/07/08 22:39:24 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r3.ebuild,v 1.6 2002/07/10 16:45:34 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -98,11 +98,11 @@ src_compile() {
 }
 
 pkg_preinst() {
-	if ! groupmod postgresql ; then
+	if ! groupmod postgres ; then
 		groupadd -g 70 postgres || die "problem adding group postgres"
 	fi
 
-	if ! id postgresql; then
+	if ! id postgres; then
 		useradd -g postgres -s /dev/null -d /var/lib/postgresql -c "postgres" postgres
 		assert "problem adding user postgres"
 	fi
