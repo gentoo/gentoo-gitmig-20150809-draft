@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.3.10.ebuild,v 1.2 2001/06/01 14:00:14 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -32,8 +31,8 @@ src_compile() {
     export CFLAGS="-fno-exceptions -fno-rtti ${CFLAGS}"
     export CXXFLAGS="-fno-exceptions -fno-rtti ${CXXFLAGS}"
 
-    try ./configure --prefix=/usr --sysconfdir=/etc/lftp --mandir=/usr/share/man --with-modules $myconf
-    try make
+    try ./configure --prefix=/usr --sysconfdir=/etc/lftp --with-modules --mandir=/usr/share/man $myconf
+    try pmake
 }
 
 src_install() {
