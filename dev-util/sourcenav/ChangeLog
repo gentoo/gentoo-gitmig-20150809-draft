@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sourcenav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.12 2004/06/25 02:47:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.13 2004/11/12 17:44:05 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> sourcenav-5.2_beta2.ebuild:
+  added ~amd64
 
 *sourcenav-5.2_beta2 (09 May 2004)
 
