@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/fpc-source
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/ChangeLog,v 1.4 2004/08/26 05:09:28 chriswhite Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/ChangeLog,v 1.5 2005/04/01 18:51:38 chriswhite Exp $
+
+*fpc-source-2.0.0_rc2 (02 Apr 2005)
+
+  02 Apr 2005; Chris White <chriswhite@gentoo.org>
+  +fpc-source-2.0.0_rc2.ebuild:
+  Added fpc-source update for lazarus new ebuild. Fixeds bug #87371. Thanks to
+  expose for the ebuild.
 
   26 Aug 2004; Chris White <chriswhite@gentoo.org>
   fpc-source-1.9.5_pre20040820.ebuild:
