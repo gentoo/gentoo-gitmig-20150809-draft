@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.1.ebuild,v 1.2 2004/08/14 21:05:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.1.ebuild,v 1.3 2004/08/26 10:50:58 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -114,7 +114,7 @@ src_install() {
 
 apache2msg() {
 	einfo "Edit /etc/conf.d/apache2 and add \"-D PHP5\" to APACHE2_OPTS"
-	ewarn "This is a change from before!"
+	ewarn "This is a change from the old \"-D PHP4\"!"
 }
 
 pkg_postinst() {
@@ -127,6 +127,7 @@ pkg_postinst() {
 		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP5\" to APACHE_OPTS"
 		einfo "That will include the php mime types in your configuration"
 		einfo "automagically and setup Apache to load php when it starts."
+		ewarn "This is a change from the old \"-D PHP4\"!"
 	fi
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.178 2004/08/14 21:05:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.179 2004/08/26 10:50:58 robbat2 Exp $
+
+  26 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-5.0.1.ebuild:
+  better warning message.
 
   14 Aug 2004; David Holm <dholm@gentoo.org> mod_php-5.0.1.ebuild:
   Added to ~ppc.
