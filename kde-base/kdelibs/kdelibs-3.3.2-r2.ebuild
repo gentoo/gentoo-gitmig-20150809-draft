@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r2.ebuild,v 1.4 2005/01/12 03:50:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r2.ebuild,v 1.5 2005/01/19 13:29:52 cryos Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.3
@@ -81,7 +81,10 @@ src_install() {
 
 	# needed to fix lib64 issues on amd64, see bug #45669
 	use amd64 && ln -s ${KDEDIR}/lib ${D}/${KDEDIR}/lib64
-
+	# Needed to create lib -> lib64 symlink for amd64 2005.0 profile
+	if [ "${SYMLINK_LIB}" = "yes" ]; then
+		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${KDEDIR}/lib
+	fi
 
 	if ! use arts ; then
 
