@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/filesystemsite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/filesystemsite/ChangeLog,v 1.6 2004/09/28 15:20:49 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/filesystemsite/ChangeLog,v 1.7 2004/10/14 20:37:36 radek Exp $
+
+  14 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org>
+  filesystemsite-1.4.1.ebuild:
+  Stable on x86, for silva1.1 release for 2004.3
 
 *filesystemsite-1.4.1 (28 Sep 2004)
 
