@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.50 2003/01/20 05:14:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.51 2003/01/24 06:46:26 raker Exp $
 
 *postfix-2.0.2-r1 (19 Jan 2003)
+
+  24 Jan 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.2-r1.ebuild :
+  Marked stable for x86.
 
   19 Jan 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.2-r1.ebuild,
   files/digest-postfix-2.0.2-r1 :
