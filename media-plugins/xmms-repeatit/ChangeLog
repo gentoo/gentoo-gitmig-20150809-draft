@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/xmms-repeatit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-repeatit/ChangeLog,v 1.1 2004/08/14 16:12:00 squinky86 Exp $
+
+*xmms-repeatit-0.0.4 (14 Aug 2004)
+
+  14 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +xmms-repeatit-0.0.4.ebuild:
+  Initial import. Closes #59930. Thanks to kaeng for the ebuild.
+
