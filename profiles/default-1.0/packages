@@ -177,3 +177,6 @@
 ~dev-util/gnustep-guile
 ~dev-util/gnustep-make
 
+#This is the last version working with gcc-2.95
+=media-video/mjpegtools-1.6.0-r5
+
