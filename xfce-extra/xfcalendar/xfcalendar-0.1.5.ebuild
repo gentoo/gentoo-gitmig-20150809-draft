@@ -1,13 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/xfcalendar-0.1.5.ebuild,v 1.7 2004/03/10 15:52:51 agriffis Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/xfcalendar-0.1.5.ebuild,v 1.8 2004/04/17 19:22:43 aliz Exp $
 
 DESCRIPTION="Xfce4 panel calendar plugin"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://www.xfce.org/archive/xfce-4.0.3/src/${P}.tar.gz"
-
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ia64 x86 ~ppc alpha sparc ~amd64 ~hppa ~mips"

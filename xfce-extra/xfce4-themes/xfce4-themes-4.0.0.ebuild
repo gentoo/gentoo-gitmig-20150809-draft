@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/xfce4-themes-4.0.0.ebuild,v 1.8 2004/01/16 21:16:49 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/xfce4-themes-4.0.0.ebuild,v 1.9 2004/04/17 19:22:43 aliz Exp $
 
 IUSE=""
-S=${WORKDIR}/${P}
-
 DESCRIPTION="Xfce4 themes"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz"

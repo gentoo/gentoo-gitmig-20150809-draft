@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/xfwm4-themes-4.0.4.ebuild,v 1.4 2004/04/05 01:48:53 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/xfwm4-themes-4.0.4.ebuild,v 1.5 2004/04/17 19:22:44 aliz Exp $
 
 IUSE=""
-S=${WORKDIR}/${P}
-
 DESCRIPTION="Xfwm themes"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz"

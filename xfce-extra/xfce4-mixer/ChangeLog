@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.19 2004/04/05 15:11:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.20 2004/04/17 19:22:43 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xfce4-mixer-4.0.0.ebuild,
+  xfce4-mixer-4.0.1.ebuild, xfce4-mixer-4.0.2.ebuild,
+  xfce4-mixer-4.0.3.ebuild, xfce4-mixer-4.0.4.ebuild:
+  Removed S=
 
   05 Apr 2004; Guy Martin <gmsoft@gentoo.org> xfce4-mixer-4.0.4.ebuild:
   Marked stable on hppa.

@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.0.2.ebuild,v 1.1 2003/12/24 06:15:01 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.0.2.ebuild,v 1.2 2004/04/17 19:22:43 aliz Exp $
 
 IUSE="alsa"
-S=${WORKDIR}/${P}
-
 DESCRIPTION="Xfce4 Mixer"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz"
