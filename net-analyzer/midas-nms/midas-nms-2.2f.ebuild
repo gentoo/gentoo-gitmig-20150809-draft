@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.6 2004/12/23 10:17:36 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.7 2004/12/23 10:35:27 bass Exp $
 
 inherit webapp
 
@@ -33,12 +33,15 @@ src_install () {
 
 #	make DESTDIR=${D} install || die
 
-	cp MIDASa/MIDASa.cd.dist ${D}/usr/etc
-	cp MIDASb/MIDASb.cd.dist ${D}/usr/etc
-	cp MIDASc/MIDASc.cd.dist ${D}/usr/etc
-	cp MIDASd/MIDASd.cd.dist ${D}/usr/etc
-	cp MIDASs/MIDASs.cd.dist ${D}/usr/etc
-	cp MIDASn/MIDASn.cd.dist ${D}/usr/etc
+	dodir /usr/etc
+	dodir /usr/bin
+
+	cp MIDASa/MIDASa.cf.dist ${D}/usr/etc
+	cp MIDASb/MIDASb.cf.dist ${D}/usr/etc
+	cp MIDASc/MIDASc.cf.dist ${D}/usr/etc
+	cp MIDASd/MIDASd.cf.dist ${D}/usr/etc
+	cp MIDASs/MIDASs.cf.dist ${D}/usr/etc
+	cp MIDASn/MIDASn.cf.dist ${D}/usr/etc
 	cp MIDASa/MIDASa ${D}/usr/bin
 	cp MIDASb/MIDASb ${D}/usr/bin
 	cp MIDASc/MIDASc ${D}/usr/bin
