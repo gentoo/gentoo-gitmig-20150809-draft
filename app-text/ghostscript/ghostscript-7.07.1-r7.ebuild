@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r6.ebuild,v 1.5 2004/10/07 15:14:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.1 2004/10/07 15:14:44 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips ~ppc64"
+KEYWORDS="~ia64 ~x86 -ppc ~sparc ~alpha ~hppa ~amd64 ~mips ~ppc64"
 IUSE="X cups cjk emacs truetype"
 
 RDEPEND="virtual/libc
@@ -20,9 +20,9 @@ RDEPEND="virtual/libc
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	X? ( virtual/x11 )
-	cjk? ( >=media-fonts/arphicfonts-0.1-r2
-		>=media-fonts/kochi-substitute-20030809-r2
-		>=media-fonts/baekmuk-fonts-2.2 )
+	cjk? ( media-fonts/arphicfonts
+		media-fonts/kochi-substitute
+		media-fonts/baekmuk-fonts )
 	cups? ( net-print/cups )
 	!virtual/ghostscript
 	media-libs/fontconfig
@@ -41,7 +41,7 @@ src_unpack() {
 	cd ${S}
 
 	if use cjk ; then
-		epatch ${FILESDIR}/gs${PV}-cjk.diff.bz2
+		epatch ${FILESDIR}/gs7.05.6-cjk.diff.bz2
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
 
@@ -50,9 +50,6 @@ src_unpack() {
 
 	# man page patch from absinthe@pobox.com (Dylan Carlson) bug #14150
 	epatch ${FILESDIR}/ghostscript-7.05.6.man.patch
-
-	# pxl dash patch
-	epatch ${FILESDIR}/gs${PV}-ps2epsi.patch
 
 	# ijs fPIC patch
 	epatch ${FILESDIR}/gs${PV}-ijs.patch
@@ -64,14 +61,14 @@ src_unpack() {
 	# einstall borks on multilib systems -- eradicator
 	epatch ${FILESDIR}/gs${PV}-ijsdestdir.patch
 
-	# Fix the garbage collector on ia64 and ppc
-	epatch ${FILESDIR}/gs-fix-gc.patch
-
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):"\
 	Makefile.in || die "sed failed"
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
 	Makefile.in || die "sed failed"
+
+	# insecure tempfile handling
+	epatch ${FILESDIR}/gs${PV}-tempfile.patch
 
 	# krgb support
 	cd src
