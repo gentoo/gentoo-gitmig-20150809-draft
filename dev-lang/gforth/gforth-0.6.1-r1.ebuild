@@ -1,12 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.1-r1.ebuild,v 1.1 2003/10/14 18:36:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.1-r1.ebuild,v 1.2 2004/03/14 02:29:17 mr_bones_ Exp $
 
 IUSE="emacs"
 
 inherit elisp-common
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU Forth is a fast and portable implementation of the ANSI Forth language"
 HOMEPAGE="http://www.gnu.org/software/gforth"
 SRC_URI="http://www.complang.tuwien.ac.at/forth/gforth/${P}.tar.gz"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gforth
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.5 2003/10/16 01:49:15 mkennedy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.6 2004/03/14 02:29:17 mr_bones_ Exp $
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gforth-0.5.0.ebuild,
+  gforth-0.6.1-r1.ebuild, gforth-0.6.1.ebuild, gforth-0.6.2.ebuild:
+  strip-flags into src_compile; don't assign default to S; header fix
 
   15 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org>
   files/gforth.el-gentoo.patch:
