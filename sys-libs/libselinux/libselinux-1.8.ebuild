@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.8.ebuild,v 1.1 2004/03/13 03:48:43 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.8.ebuild,v 1.2 2004/04/07 16:16:34 pebenito Exp $
 
 IUSE=""
 
@@ -12,8 +12,6 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="sys-libs/glibc"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
