@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.97 2005/01/20 23:45:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.98 2005/01/20 23:56:03 solar Exp $
+
+  20 Jan 2005; <solar@gentoo.org> ethereal-0.10.9.ebuild:
+  - stable on x86
 
 *ethereal-0.10.9 (20 Jan 2005)
 
