@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.40 2005/01/10 19:49:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.41 2005/02/07 00:58:02 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -14,14 +14,14 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 ECVS_STATE="release"
 if [[ ${PV/9999} != ${PV} ]] ; then
 	if [[ -z ${ECVS_MODULE} ]] ; then
-		ECVS_MODULE="${PN}"
+		ECVS_MODULE=${PN}
 		if [[ ${CATEGORY/libs} != ${CATEGORY} ]] ; then
 			ECVS_MODULE="e17/libs/${PN}"
 		else
 			ECVS_MODULE="e17/apps/${PN}"
 		fi
 	fi
-	ECVS_SERVER="${ECVS_SERVER:-cvs.sourceforge.net:/cvsroot/enlightenment}"
+	ECVS_SERVER=${ECVS_SERVER:-cvs.sourceforge.net:/cvsroot/enlightenment}
 	ECVS_STATE="live"
 	inherit cvs
 elif [[ ${PV/.200?????/} != ${PV} ]] || [[ ${PV/2003????} != ${PV} ]] ; then
@@ -97,7 +97,7 @@ enlightenment_src_unpack() {
 enlightenment_src_compile() {
 	if [[ ${ECVS_STATE} != "release" ]] ; then
 		[[ ! -z ${EHACKAUTOGEN} ]] && sed -i 's:.*configure.*::' autogen.sh
-		export WANT_AUTOMAKE="${EAUTOMAKE:-1.8}"
+		export WANT_AUTOMAKE=${EAUTOMAKE:-1.8}
 		env \
 			PATH="${T}:${PATH}" \
 			NOCONFIGURE=yes \
