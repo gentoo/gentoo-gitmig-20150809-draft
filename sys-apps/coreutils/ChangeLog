@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.27 2003/09/12 11:34:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.28 2003/09/12 11:35:55 seemant Exp $
 
 *coreutils-5.0-r4 (12 Sep 2003)
 
@@ -13,7 +13,7 @@
   patches into the gentoo patch tarball and changed the layout.  Patches are
   numbered to work with epatch's directory patching functionality, and if
   acl is used, then the original progresspatch is discarded.  Marked -r3
-  stable on x86
+  stable on x86.  Bug #18151 by: shadow@ines.ro is now closed.
 
 *coreutils-5.0-r3 (26 Aug 2003)
 
