@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.5.2.ebuild,v 1.3 2002/04/27 11:15:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.5.2.ebuild,v 1.4 2002/04/30 11:55:04 danarmak Exp $
 
 # 1.2.5 version links against KDE2
 MY_PV=1.2.5
@@ -14,6 +14,7 @@ need-kde 2
 DESCRIPTION="A Graphical Debugger Interface to gdb"
 SRC_URI="http://prdownloads.sourceforge.net/kdbg/kdbg-1.2.5.tar.gz"
 HOMEPAGE="http://members.nextra.at/johsixt/kdbg.html"
+S=${WORKDIR}/${MY_P}
 
 myconf="$myconf --with-kde-version=2"
 
