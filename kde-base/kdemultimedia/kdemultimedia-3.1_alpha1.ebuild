@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_alpha1.ebuild,v 1.2 2002/07/12 22:29:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_alpha1.ebuild,v 1.3 2002/07/12 23:06:26 danarmak Exp $
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="${DESCRIPTION}Multimedia"
@@ -39,7 +39,7 @@ use slang	&& myinterface="$myinterface,slang" && myconf="$myconf --enable-slang"
 use tcltk	&& myinterface="$myinterface,tcltk" && myconf="$myconf --enable-tcltk"
 use oggvorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --without-vorbis"
 
-myconf="$myconf $myaudio $myinterface --disable-final"
+myconf="$myconf $myaudio $myinterface"
 
 src_unpack() {
     
