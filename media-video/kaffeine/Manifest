@@ -1,4 +1,6 @@
 MD5 eed41664fb3bf88de57792f52e3fd07f kaffeine-0.3.2.ebuild 553
-MD5 d9eae2ed5a4e04f174150ff84706b075 metadata.xml 181
+MD5 1aa9a29925655a000a2bebcb928913a7 kaffeine-0.4.ebuild 803
 MD5 13a4acec2390a8f86553608e4d095eca ChangeLog 464
+MD5 d9eae2ed5a4e04f174150ff84706b075 metadata.xml 181
 MD5 971a6f285892ff4a6e79a35b5cd54eec files/digest-kaffeine-0.3.2 67
+MD5 dcb4b3131ed47c47de006cdd8249fe0d files/digest-kaffeine-0.4 65
