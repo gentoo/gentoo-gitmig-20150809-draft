@@ -1,6 +1,9 @@
 # ChangeLog for net-www/moinmoin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/ChangeLog,v 1.10 2004/03/18 12:24:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/ChangeLog,v 1.11 2004/03/30 13:03:09 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> moinmoin-1.2.1.ebuild:
+  Adding amd64 keyword. Closing #45757.
 
 *moinmoin-1.2.1 (17 Mar 2004)
 
