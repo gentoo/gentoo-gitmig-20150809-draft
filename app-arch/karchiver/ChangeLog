@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/karchiver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.6 2003/02/12 02:56:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.7 2003/05/02 17:00:12 caleb Exp $
+
+*karchiver-3.0.3 (02 May 2003)
+
+  02 May 2003; Caleb Tennis <caleb@gentoo.org> : ChangeLog, karchiver-3.0.3.ebuild
+  Version bump to 3.0.3.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
