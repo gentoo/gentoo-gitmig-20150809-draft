@@ -1,0 +1,41 @@
+diff -Naur libfungcalcP/Makefile.in libfungcalc/Makefile.in
+--- src/libfungcalcP/Makefile.in	2004-07-31 21:42:00.546760608 +0100
++++ src/libfungcalc/Makefile.in	2003-07-19 06:04:22.000000000 +0100
+@@ -51,14 +51,14 @@
+ AWK = @AWK@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ -fPIC
+ CONF_FILES = @CONF_FILES@
+ CPP = @CPP@
+-CPPFLAGS = @CPPFLAGS@
++CPPFLAGS = @CPPFLAGS@ 
+ CXX = @CXX@
+ CXXCPP = @CXXCPP@
+ CXXDEPMODE = @CXXDEPMODE@
+-CXXFLAGS = @CXXFLAGS@
++CXXFLAGS = @CXXFLAGS@ -fPIC
+ CYGPATH_W = @CYGPATH_W@
+ DCOPIDL = @DCOPIDL@
+ DCOPIDL2CPP = @DCOPIDL2CPP@
+diff -Naur libfungcalcuiP/Makefile.in libfungcalcui/Makefile.in
+--- src/libfungcalcuiP/Makefile.in	2004-07-31 21:42:09.651376496 +0100
++++ src/libfungcalcui/Makefile.in	2003-07-19 06:04:22.000000000 +0100
+@@ -51,14 +51,14 @@
+ AWK = @AWK@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ -fPIC
+ CONF_FILES = @CONF_FILES@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CXX = @CXX@
+ CXXCPP = @CXXCPP@
+ CXXDEPMODE = @CXXDEPMODE@
+-CXXFLAGS = @CXXFLAGS@
++CXXFLAGS = @CXXFLAGS@ -fPIC
+ CYGPATH_W = @CYGPATH_W@
+ DCOPIDL = @DCOPIDL@
+ DCOPIDL2CPP = @DCOPIDL2CPP@
