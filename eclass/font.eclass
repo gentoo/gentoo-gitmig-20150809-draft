@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.3 2004/06/21 09:17:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.4 2004/06/23 22:04:47 mr_bones_ Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -34,7 +34,7 @@ DEPEND="${DEPEND} \
 font_xfont_config() {
 
 	# create Xfont files
-	if [ -n "`use X`" ] ;
+	if use X ;
 	then
 		einfo "Creating fonts.scale & fonts.dir..."
 		mkfontscale ${D}/usr/share/fonts/${PN}
@@ -65,7 +65,7 @@ font_xft_config() {
 
 font_src_install() {
 
-	local suffix doc
+	local suffix
 
 	cd ${FONT_S}
 
@@ -83,10 +83,7 @@ font_src_install() {
 	cd ${S}
 	# try to install some common docs
 	DOCS="${DOCS} COPYRIGHT README NEWS"
-	for doc in ${DOCS}; do
-		dodoc ${doc}
-	done
-
+	dodoc ${DOCS}
 }
 
 EXPORT_FUNCTIONS src_install
