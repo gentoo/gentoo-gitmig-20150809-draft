@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.11 2005/04/06 21:09:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.3.ebuild,v 1.1 2005/04/06 21:09:33 seemant Exp $
 
 inherit eutils
 
 DESCRIPTION="Replacement for the venerable 'isql' program supplied by Sybase."
-HOMEPAGE="http://www.sqsh.org/"
-SRC_URI="http://www.sqsh.org/${P}-src.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/sqsh/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="readline X motif"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="dev-db/freetds
 	readline? ( sys-libs/readline )
@@ -30,13 +30,15 @@ src_compile() {
 		$(use_with readline) \
 		$(use_with X x) \
 		${myconf} || die
-
-
-	emake SQSHRC_GLOBAL=/etc/sqshrc || die
+		
+	emake \
+		SQSHRC_GLOBAL=/etc/sqshrc || die
 }
 
 src_install () {
-	einstall SQSHRC_GLOBAL=${D}/etc/sqshrc || die
+	einstall \
+		SQSHRC_GLOBAL=${D}/etc/sqshrc || die
+
 	make man_dir=${D}/usr/share/man install.man || die
 	dodoc COPYING INSTALL README doc/*
 }
