@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.39 2003/01/08 06:40:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.40 2003/01/08 09:38:15 mcummings Exp $
+
+  08 Jan 2003; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r8:
+  Unmasking for x86.
 
 * perl-5.8.0-r8 (06 Jan 2003)
 
