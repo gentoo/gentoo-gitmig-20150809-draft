@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.8 2003/04/17 22:44:48 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.9 2003/04/22 04:05:36 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -381,7 +381,7 @@ src_compile() {
 	# Enable distcc for this build (Az)
 	if [ "${FEATURES/-distcc/}" = "${FEATURES}" -a \
 	     "${FEATURES/distcc/}" != "${FEATURES}" -a \
-		-f /usr/bin/ccache -a  -x /usr/bin/distcc ]
+		-f /usr/bin/distcc -a  -x /usr/bin/distcc ]
 	then
 		einfo "We're using distcc for this build..."
 		# Do not bump ECPUS if the user did not touch it, as currently
@@ -389,8 +389,8 @@ src_compile() {
 		[ "$(echo ${DISTCC_HOSTS} | wc -w)" -gt 1 -a "${ECPUS}" -qt 1 ] && \
 			export ECPUS="$(echo ${DISTCC_HOSTS} | wc -w)"
 
-		export CC="distcc ${CC}"
-		export CXX="distcc ${CXX}"
+		export CC="/usr/bin/distcc ${CC}"
+		export CXX="/usr/bin/distcc ${CXX}"
 	fi
 
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
