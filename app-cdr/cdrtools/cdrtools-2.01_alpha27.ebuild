@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha27.ebuild,v 1.1 2004/03/11 01:08:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha27.ebuild,v 1.2 2004/03/17 04:32:41 pylon Exp $
 
 
 inherit eutils
 
-DVDR_PATCH_P="cdrtools-2.01a26-dvd.patch"
-DESCRIPTION="A set of tools for CDR drives, including cdrecord."
+DESCRIPTION="A set of tools for CD and DVD recording, including cdrecord."
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
-	dvdr? ( http://people.mandrakesoft.com/~warly/files/cdrtools/archives/${DVDR_PATCH_P}.bz2 )"
+	dvdr? ( http://people.mandrakesoft.com/~warly/files/cdrtools/archives/${P/_alpha/a}-dvd.patch.bz2
+			http://people.mandrakesoft.com/~warly/files/cdrtools/archives/${P/_alpha/a}-o_excl.patch.bz2
+			http://people.mandrakesoft.com/~warly/files/cdrtools/archives/${P/_alpha/a}-writemode.patch.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,14 +24,22 @@ S=${WORKDIR}/${PN}-2.01
 
 src_unpack() {
 	unpack ${A}
-	use dvdr && unpack ${DVDR_PATCH_P}.bz2
+	if use dvdr; then
+		unpack ${P/_alpha/a}-dvd.patch.bz2
+		unpack ${P/_alpha/a}-o_excl.patch.bz2
+		unpack ${P/_alpha/a}-writemode.patch.bz2
+	fi
 
 	cd ${S}
 	# Add support for 2.5 kernels
 	# <azarah@gentoo.org> (05 Feb 2003)
 	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch
 
-	use dvdr && epatch ${WORKDIR}/${DVDR_PATCH_P}
+	if use dvdr; then
+		epatch ${WORKDIR}/${P/_alpha/a}-dvd.patch
+		epatch ${WORKDIR}/${P/_alpha/a}-o_excl.patch
+		epatch ${WORKDIR}/${P/_alpha/a}-writemode.patch
+	fi
 
 	cd ${S}/DEFAULTS
 	sed -i -e "s:/opt/schily:/usr:g" Defaults.linux

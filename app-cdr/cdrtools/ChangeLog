@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.74 2004/03/11 21:57:46 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.75 2004/03/17 04:32:41 pylon Exp $
+
+  17 Mar 2004; Lars Weiler <pylon@gentoo.org> cdrtools-2.01_alpha27.ebuild:
+  The dvdr-patches are now available.  This ebuild could be used now.
 
   11 Mar 2004; Jon Portnoy <avenj@gentoo.org> cdrtools-2.01_alpha25.ebuild :
   Stable on AMD64.
