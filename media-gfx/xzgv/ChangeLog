@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.7 2004/06/24 22:53:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.8 2004/09/06 18:49:28 gustavoz Exp $
+
+  06 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> xzgv-0.7-r1.ebuild,
+  xzgv-0.8.ebuild:
+  Keyworded 0.7-r1 -sparc, 0.8 ~sparc
 
   02 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> xzgv-0.8.ebuild:
   Marked ~amd64 after adding patch to disable mmx on amd64.
