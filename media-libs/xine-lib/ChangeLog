@@ -1,10 +1,14 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.10 2002/06/20 21:10:59 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.11 2002/06/21 01:21:22 lostlogic Exp $
 
 *xine-lib-0.9.11 (20 Jun 2002)
 
-  20 Jun 2002; Arcady Genkin <agenkin@thpoon.com> xine-lib-0.9.10.ebuld :
+  20 Jun 2002; Brandon Low <lostlogic@gentoo.org> xine-lib-0.9.10.ebuild :
+
+  Updated to use the 0.9.11a source from the xine folks...
+
+  20 Jun 2002; Arcady Genkin <agenkin@thpoon.com> xine-lib-0.9.10.ebuild :
 
   Update to version 0.9.11.
 

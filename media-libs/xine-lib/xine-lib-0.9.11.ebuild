@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.11.ebuild,v 1.1 2002/06/20 21:10:59 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.11.ebuild,v 1.2 2002/06/21 01:21:22 lostlogic Exp $ 
 
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -19,13 +19,13 @@ DEPEND="X? ( virtual/x11 )
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
-SRC_URI="http://xine.sourceforge.net/files/${P}.tar.gz"
+SRC_URI="http://xine.sourceforge.net/files/${P}a.tar.gz"
 SLOT="0"
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${A/.tar.gz/}
 
 src_unpack() {
 
-	unpack ${P}.tar.gz
+	unpack ${A}
 	cd ${S}
 	# Patch for framebuffer support.
 	patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || die
