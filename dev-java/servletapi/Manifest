@@ -1,0 +1,5 @@
+MD5 29937b2b3a2a71af758f1751eac9bccd ChangeLog 1011
+MD5 6dce4b7605ce1999ead704e0a30d4fe9 servletapi-2.2.ebuild 959
+MD5 9ac71e8d6965be09106d127a238bd48d servletapi-2.3.ebuild 938
+MD5 130423ce821911d5ddc38a30df67574b files/digest-servletapi-2.2 74
+MD5 dcffc47728eefea370d29b3bf0d11158 files/digest-servletapi-2.3 75
