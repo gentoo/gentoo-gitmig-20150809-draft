@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/apollo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.2 2002/08/26 13:56:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.3 2002/10/04 20:25:59 hannes Exp $
+
+*apollo-1.4.1 (04 Oct 2002)
+
+  04 Oct 2002; Hannes Mehnert <hannes@gentoo.org> apollo-1.4.1.ebuild,
+  ChangeLog, files/digest-apollo-1.4.1, files/apollo-1.4.1.patch.bz2 :
+
+  version bump, fixed ebuild, will hopefully close bug #8649
 
 *apollo-1.1.1-r1 (1 Feb 2002)
 
