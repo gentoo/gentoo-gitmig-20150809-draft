@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/gomd-cvs-0.0_alpha.ebuild,v 1.4 2003/09/21 23:12:55 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/gomd-cvs-0.0_alpha.ebuild,v 1.5 2003/11/14 21:28:06 seemant Exp $
 
 DESCRIPTION="general openMosix daemon"
 HOMEPAGE="https://savannah.nongnu.org/forum/forum.php?forum_id=2219"
