@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.15 2004/01/15 17:08:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.16 2004/03/08 17:43:53 augustus Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.povray.org/"
 
 SLOT="0"
 LICENSE="povlegal-3.5"
-KEYWORDS="x86 ppc alpha ~amd64"
+KEYWORDS="x86 ppc alpha amd64"
 IUSE="icc X svga"
 
 DEPEND="media-libs/libpng
