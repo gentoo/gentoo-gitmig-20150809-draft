@@ -1,11 +1,14 @@
 # ChangeLog for gnome-base/gnome-mime-data
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/ChangeLog,v 1.15 2003/02/12 06:49:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/ChangeLog,v 1.16 2003/02/22 00:03:36 agriffis Exp $
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-mime-data-2.2.0.ebuild :
   Add ~alpha to KEYWORDS
 
 *gnome-mime-data-2.2.0 (04 Feb 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-mime-data-2.2.0.ebuild :
+  Mark stable on alpha
 
   04 Feb 2003; foser <foser@gentoo.org> gnome-mime-data-2.2.0.ebuild :
   New version (gnome 2.2)
