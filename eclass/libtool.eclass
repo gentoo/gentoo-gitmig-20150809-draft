@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.34 2004/09/25 19:59:51 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.35 2004/09/29 03:49:59 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -278,6 +278,7 @@ uclibctoolize() {
 
 	einfo "Applying uClibc/libtool patches ..."
 	for x in ${targets} ; do
+		[ ! -s "${x}" ] && continue
 		case $(basename "${x}") in
 		configure)
 			if grep 'Transform linux' "${x}" >/dev/null ; then
