@@ -3,7 +3,7 @@
 # $Header: 
 
 IUSE="nls"
-
+SLOT="0"
 inherit eutils flag-o-matic libtool
 
 # This ebuild mod'd from libstdc++ compatbility package ebuild to create
