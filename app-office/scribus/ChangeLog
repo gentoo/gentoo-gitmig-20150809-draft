@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.46 2004/10/17 10:18:38 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.47 2004/11/23 18:31:21 hanno Exp $
+
+  23 Nov 2004; Hanno Boeck <hanno@gentoo.org> scribus-1.2.ebuild:
+  Update dependency to qt-3.3.3 (see bug #65419).
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> scribus-1.1.7.ebuild,
   scribus-1.2.ebuild:
