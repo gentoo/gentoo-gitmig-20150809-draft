@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.4 2003/09/11 20:37:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.5 2003/09/16 12:44:34 wolf31o2 Exp $
 
 inherit games
 
@@ -42,7 +42,7 @@ src_install() {
 		# Disk 1
 		games_verify_cd "UT2003 Disk1"
 		einfo "Copying files from Disk 1..."
-		cp -r ${GAMES_CD}/{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Textures} ${Ddir} || die "copying files"
+		cp -r ${GAMES_CD}/{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Textures,Web} ${Ddir} || die "copying files"
 		cp -r ${GAMES_CD}/System/{editorres,*.{bmp,dat,det,est,frt,ini,int,itt,md5,u,upl,url}} ${Ddir}/System || die "copying files"
 		mkdir -p ${Ddir}/Benchmark/Stuff
 		cp -r ${GAMES_CD}/Benchmark/Stuff/* ${Ddir}/Benchmark/Stuff || die "copying benchmark files"
