@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r2.ebuild,v 1.2 2002/10/04 05:13:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r2.ebuild,v 1.3 2002/10/17 16:51:22 bjb Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 # hyper-optimizations untested...
 #
