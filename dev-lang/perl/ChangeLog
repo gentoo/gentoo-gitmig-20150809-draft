@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.16 2003/06/04 00:21:23 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.17 2003/06/04 21:53:00 rac Exp $
+
+  04 Jun 2003; <rac@gentoo.org> perl-5.8.0-r11.ebuild:
+  Relax db DEPEND as well as RDEPEND.  Thanks to mcummings for the catch.
 
 *perl-5.8.0-r11 (03 Jun 2003)
 

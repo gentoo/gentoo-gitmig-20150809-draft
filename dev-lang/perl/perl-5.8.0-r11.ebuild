@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r11.ebuild,v 1.1 2003/06/04 00:21:23 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r11.ebuild,v 1.2 2003/06/04 21:53:00 rac Exp $
 
 IUSE="berkdb doc gdbm threads"
 
@@ -29,7 +29,7 @@ LICENSE="Artistic GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~mips ~hppa"
 
 DEPEND="sys-apps/groff
-	berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 )
+	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.45-r5
 	=sys-devel/libperl-${PV}*"
