@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.15.ebuild,v 1.2 2004/02/13 15:38:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.15.ebuild,v 1.3 2004/02/14 00:28:44 dholm Exp $
 
 inherit games eutils
 
@@ -32,6 +32,7 @@ src_compile() {
 	if [ "${ARCH}" = "ppc" ]; then
 		sed -i -e "s/^CPU\ =\ i386/CPU = PowerPC/g" makes/mk.x11
 		sed -i -e "s/OBJECTS.*i386.o//g" makes/mk.fpse
+		sed -i -e "s/-D__i386__//g" makes/mk.fpse
 	fi
 
 	emake OPTFLAGS="${CFLAGS}" || die "x11 build failed"
