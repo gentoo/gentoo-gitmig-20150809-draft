@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Spreadsheet_Excel_Writer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Spreadsheet_Excel_Writer/ChangeLog,v 1.4 2004/04/18 13:33:39 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Spreadsheet_Excel_Writer/ChangeLog,v 1.5 2004/05/30 17:57:50 kloeri Exp $
+
+  30 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  PEAR-Spreadsheet_Excel_Writer-0.7.ebuild:
+  Stable on alpha.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   PEAR-Spreadsheet_Excel_Writer-0.6-r1.ebuild,

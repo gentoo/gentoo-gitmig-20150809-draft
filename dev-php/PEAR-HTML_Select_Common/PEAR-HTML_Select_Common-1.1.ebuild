@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/PEAR-HTML_Select_Common-1.1.ebuild,v 1.4 2003/09/11 17:05:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/PEAR-HTML_Select_Common-1.1.ebuild,v 1.5 2004/05/30 17:29:54 kloeri Exp $
 
 IUSE=""
 MY_P=${PN/PEAR-//}-${PV}
