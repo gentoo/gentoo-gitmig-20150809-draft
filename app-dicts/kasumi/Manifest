@@ -1,4 +1,6 @@
-MD5 8fbfbf58898a18cfebc6cba9e2ab07f3 ChangeLog 425
+MD5 db91c975ae462da90c1c23f1d5adc4f3 ChangeLog 540
 MD5 efa3cbce250ac960633666b07c41d02e kasumi-0.3.ebuild 747
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 2223919fde2c0fa96dd3c7e621dbed47 kasumi-0.5.ebuild 750
 MD5 28482544be7c4f6a1de3920f4a46e3d4 files/digest-kasumi-0.3 62
+MD5 cd5eb29067cf3c7fc1ad71cf406f1d7b files/digest-kasumi-0.5 62
