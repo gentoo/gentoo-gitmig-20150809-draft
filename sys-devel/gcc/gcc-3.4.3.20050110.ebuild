@@ -1,38 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.9 2005/01/25 12:55:23 tigger Exp $
-
-KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ~ppc ~sparc ~ia64"
-
-# we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
-# NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
-# .eh_frame ld optimisation and symbol visibility support, but it hasnt been
-# well tested in gentoo on any arch other than amd64!!
-RDEPEND="virtual/libc
-	>=sys-devel/gcc-config-1.3.6-r4
-	>=sys-libs/zlib-1.1.4
-	!sys-devel/hardened-gcc
-	!uclibc? (
-		>=sys-libs/glibc-2.3.3_pre20040420-r1
-		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
-	)
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
-	!build? (
-		gcj? (
-			gtk? ( >=x11-libs/gtk+-2.2 )
-			>=media-libs/libart_lgpl-2.1
-		)
-		>=sys-libs/ncurses-5.2-r2
-		nls? ( sys-devel/gettext )
-	)"
-DEPEND="${RDEPEND}
-	>=sys-apps/texinfo-4.2-r4
-	>=sys-devel/bison-1.875
-	>=sys-devel/binutils-2.14.90.0.8-r1
-	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
-PDEPEND="sys-devel/gcc-config
-	!nocxx? ( !mips? ( !ia64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
-
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.10 2005/02/01 09:20:23 eradicator Exp $
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~eradicator/gcc/"
 #GCC_MANPAGE_VERSION="none"
@@ -67,9 +35,39 @@ SPLIT_SPECS=${SPLIT_SPECS:=true}
 #GENTOO_PATCH_EXCLUDE=""
 #PIEPATCH_EXCLUDE=""
 
-inherit toolchain
+inherit toolchain eutils
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
+KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ~ppc ~sparc ~ia64"
+
+# we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
+# NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
+# .eh_frame ld optimisation and symbol visibility support, but it hasnt been
+# well tested in gentoo on any arch other than amd64!!
+RDEPEND="virtual/libc
+	>=sys-devel/gcc-config-1.3.6-r4
+	>=sys-libs/zlib-1.1.4
+	!sys-devel/hardened-gcc
+	!uclibc? (
+		>=sys-libs/glibc-2.3.3_pre20040420-r1
+		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
+	)
+	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
+	!build? (
+		gcj? (
+			gtk? ( >=x11-libs/gtk+-2.2 )
+			>=media-libs/libart_lgpl-2.1
+		)
+		>=sys-libs/ncurses-5.2-r2
+		nls? ( sys-devel/gettext )
+	)"
+DEPEND="${RDEPEND}
+	>=sys-apps/texinfo-4.2-r4
+	>=sys-devel/bison-1.875
+	>=sys-devel/binutils-2.14.90.0.8-r1
+	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
+PDEPEND="sys-devel/gcc-config
+	!nocxx? ( !mips? ( !ia64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
 
 src_unpack() {
 	gcc_src_unpack

@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.375 2005/01/31 20:16:12 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.376 2005/02/01 09:20:23 eradicator Exp $
+
+*gcc-3.3.5.20050130 (01 Feb 2005)
+
+  01 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  gcc-3.3.5-r1.ebuild, +gcc-3.3.5.20050130.ebuild, gcc-3.4.3-r1.ebuild,
+  gcc-3.4.3.20050110.ebuild, +gcc-4.0.0_alpha20050123.ebuild,
+  +gcc-4.0.0_alpha20050130.ebuild:
+  Adding gcc4 alpha ebuilds for development and testing. Fix ordering of data
+  in ebuilds so DESCRIPTION, etc comes after inherit toolchain. Bump gcc-3.3
+  to reintroduce a patch from fedora which got dropped from 3.3.5 and
+  3.3.5-r1. This should fix tls issues on sparc (bug #78320), but it is still
+  in 'KEYWORDS=-*' until the PIE patches get updated.
 
   31 Jan 2005; <plasmaroo@gentoo.org> gcc-3.3.5-r1.ebuild,
   gcc-3.4.3-r1.ebuild:

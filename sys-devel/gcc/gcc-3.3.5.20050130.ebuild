@@ -1,17 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.15 2005/02/01 09:20:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.1 2005/02/01 09:20:23 eradicator Exp $
 
-GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
-#GCC_MANPAGE_VERSION="3.3.4"
-#BRANCH_UPDATE="20041025"
-PATCH_VER="1.0"
+GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~eradicator/gcc/"
+#GCC_MANPAGE_VERSION="3.3.5"
+PATCH_VER="1.1"
+PP_VER="3_3_5_20050130"
+PP_FVER="${PP_VER//_/.}-0"
 PIE_VER="8.7.7.1"
 PIE_CORE="gcc-3.3.5-piepatches-v${PIE_VER}.tar.bz2"
-PP_VER="3_3_2"
-PP_FVER="${PP_VER//_/.}-3"
-HTB_VER="1.00"
-#HTB_GCC_VER=""
+HTB_VER="1.00-r1"
+#HTB_GCC_VER="3.3.5"
 
 ETYPE="gcc-compiler"
 
@@ -29,7 +28,7 @@ PIE_GLIBC_UNSUPPORTED="hppa"
 
 # whether we should split out specs files for multiple {PIE,SSP}-by-default
 # and vanilla configurations.
-SPLIT_SPECS="${SPLIT_SPECS:="true"}"
+SPLIT_SPECS=${SPLIT_SPECS:-"true"}
 
 #GENTOO_PATCH_EXCLUDE=""
 #PIEPATCH_EXCLUDE=""
@@ -38,11 +37,8 @@ inherit toolchain eutils
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
-KEYWORDS="~alpha ~amd64 arm hppa -ia64 ~mips s390 sh sparc x86"
-
-# we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
-# we also need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
-# SSP in glibc.
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~sh ~sparc ~x86"
+KEYWORDS="-*"
 
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
