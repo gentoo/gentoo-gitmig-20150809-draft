@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/wavbreaker
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.1 2003/07/09 21:22:37 torbenh Exp $
+
+*wavbreaker-0.3 (09 Jul 2003)
+
+  09 Jul 2003; torbenh <torbenh@gentoo.org> Manifest wavbreaker-0.3.ebuild files/digest-wavbreaker-0.3 :
+  Initial Version
+  
+  submitted by Timothy Robinson.
+
