@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Bio-Das
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.5 2005/03/23 19:19:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.6 2005/03/30 23:20:45 gustavoz Exp $
+
+  30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> Bio-Das-1.00.ebuild:
+  Keyworded ~sparc
 
 *Bio-Das-1.00 (23 Mar 2005)
 
