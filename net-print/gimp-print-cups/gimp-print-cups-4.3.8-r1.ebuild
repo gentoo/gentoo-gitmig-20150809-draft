@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.3.8.ebuild,v 1.2 2003/01/28 22:28:51 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.3.8-r1.ebuild,v 1.1 2003/01/28 22:28:51 lordvan Exp $
 
 IUSE="nls gtk readline"
 
@@ -12,7 +12,8 @@ KEYWORDS="~x86 ~ppc"
 SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 
 S=${WORKDIR}/${MY_PN}-${PV}
-DEPEND="net-print/cups 
+DEPEND=">=net-print/cups-1.1.18
+	>=net-print/foomatic-2.0.2
 	media-gfx/imagemagick
 	sys-libs/readline
 	sys-devel/perl
