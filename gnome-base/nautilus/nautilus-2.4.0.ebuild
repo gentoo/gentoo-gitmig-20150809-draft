@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.3 2003/09/12 23:21:53 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.4 2003/10/05 11:45:27 obz Exp $
 
 inherit gnome2
 
@@ -51,6 +51,10 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	# patch for startup fix, see bug #28778
+	epatch ${FILESDIR}/${PN}-2.4-startup-bonobo.patch
+
 	if [ `use cups` ]; then
 		epatch ${FILESDIR}/${PN}-2-x-printers.patch
 		WANT_AUTOCONF_2_5=1 autoconf || die
