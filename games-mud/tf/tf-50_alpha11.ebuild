@@ -1,23 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_alpha11.ebuild,v 1.2 2004/02/03 01:07:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_alpha11.ebuild,v 1.3 2004/04/12 15:02:25 aliz Exp $
 
 inherit games
 
 MY_P="${P/_alpha/a}"
 S="${WORKDIR}/${MY_P}"
-DESCRIPTION='A small, flexible, screen-oriented MUD client'
-HOMEPAGE='http://tf.tcp.com/~hawkeye/tf/'
+DESCRIPTION="A small, flexible, screen-oriented MUD client"
+HOMEPAGE="http://tf.tcp.com/~hawkeye/tf/"
 SRC_URI="http://ftp.tcp.com/pub/mud/Clients/tinyfugue/${MY_P}.tar.gz"
 
-KEYWORDS='~x86'
-LICENSE='GPL-2'
-SLOT='0'
+KEYWORDS="~x86"
+LICENSE="GPL-2"
+SLOT="0"
 
-IUSE='ipv6 doc debug'
+IUSE="ipv6 doc debug"
 
-DEPEND='sys-libs/zlib
-	>=sys-libs/ncurses-5.2'
+DEPEND="sys-libs/zlib
+	>=sys-libs/ncurses-5.2"
 
 src_compile() {
 	local myconf
@@ -25,7 +25,7 @@ src_compile() {
 	use ipv6 && myconf="${myconf} --enable-inet6"
 
 	egamesconf ${myconf} --enable-manpage || die
-	emake || die 'emake failed'
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -51,10 +51,10 @@ pkg_postinst() {
 	games_pkg_postinst
 	use ipv6 && {
 		echo
-		ewarn 'You have merged TinyFugue with IPv6-support.'
-		ewarn 'Support for IPv6 is still being experimental.'
-		ewarn 'If you experience problems with connecting to hosts,'
-		ewarn 'try re-merging this package with USE="-ipv6"'
+		ewarn "You have merged TinyFugue with IPv6-support."
+		ewarn "Support for IPv6 is still being experimental."
+		ewarn "If you experience problems with connecting to hosts,"
+		ewarn "try re-merging this package with USE="-ipv6""
 		echo
 	}
 }
