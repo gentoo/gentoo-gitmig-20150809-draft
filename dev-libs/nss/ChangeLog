@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/nss
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.1 2003/07/11 12:57:48 liquidx Exp $
+
+*nss-3.8 (11 Jul 2003)
+
+  11 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
+  intial ebuild for NSS. this will be used by evolution to avoid the mozilla
+  dependency
+
