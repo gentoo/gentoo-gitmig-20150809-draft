@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.6.ebuild,v 1.17 2004/06/24 21:57:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.6.ebuild,v 1.18 2004/07/14 15:09:34 agriffis Exp $
 
 IUSE="doc nls kde"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Core Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
@@ -83,4 +82,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS HACKING
 }
-

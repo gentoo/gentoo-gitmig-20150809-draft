@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.8.ebuild,v 1.18 2004/06/24 21:56:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.8.ebuild,v 1.19 2004/07/14 15:08:25 agriffis Exp $
 
 IUSE="kde nls cups"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Core components of the GNOME desktop environment"
 SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
 	ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
@@ -94,4 +93,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS
 }
-
