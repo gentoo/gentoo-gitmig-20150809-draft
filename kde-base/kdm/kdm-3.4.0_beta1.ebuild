@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.4.0_beta1.ebuild,v 1.2 2005/01/16 17:05:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.4.0_beta1.ebuild,v 1.3 2005/02/02 18:22:07 danarmak Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -12,7 +12,8 @@ KEYWORDS="~x86"
 IUSE="pam"
 
 KMEXTRA="kdmlib/"
-KMEXTRACTONLY="libkonq/konq_defaults.h"
+KMEXTRACTONLY="libkonq/konq_defaults.h
+	    kioslave/thumbnail/configure.in.in" # for the HAVE_LIBART test
 KMCOMPILEONLY="kcontrol/background"
 DEPEND="$DEPEND
 	pam? ( sys-libs/pam $(deprange-dual $PV $MAXKDEVER kde-base/kdebase-pam) )
