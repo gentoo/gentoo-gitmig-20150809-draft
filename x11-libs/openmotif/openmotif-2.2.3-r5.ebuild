@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r4.ebuild,v 1.3 2005/03/03 13:29:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r5.ebuild,v 1.1 2005/03/07 13:36:48 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.motifzone.org/"
 SRC_URI="ftp://ftp.motifzone.net/om${PV}/src/${MY_P}.tar.gz"
 
 LICENSE="MOTIF"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -19,10 +19,10 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	!ppc-macos? ( =sys-devel/automake-1.4* )
 	=sys-devel/autoconf-2.5*
-	x11-libs/motif-config"
+	>=x11-libs/motif-config-0.4"
 RDEPEND="virtual/libc
 	virtual/x11
-	>=x11-libs/motif-config-0.3"
+	>=x11-libs/motif-config-0.4"
 
 PROVIDE="virtual/motif"
 SLOT="2.2"
@@ -97,14 +97,13 @@ src_install() {
 
 
 	einfo "Fixing binaries"
-	dodir /usr/share/openmotif-2.2
+	dodir /usr/$(get_libdir)/openmotif-2.2
 	for file in `ls ${D}/usr/bin`
 	do
-		mv ${D}/usr/bin/${file} ${D}/usr/share/openmotif-2.2/${file}
+		mv ${D}/usr/bin/${file} ${D}/usr/$(get_libdir)/openmotif-2.2/${file}
 	done
 
 	einfo "Fixing libraries"
-	dodir /usr/$(get_libdir)/openmotif-2.2
 	mv ${D}/usr/$(get_libdir)/* ${D}/usr/$(get_libdir)/openmotif-2.2/
 
 	einfo "Fixing includes"
