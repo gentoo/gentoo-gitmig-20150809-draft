@@ -2,7 +2,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/1.5/bin/ebuild,v 1.1 2001/02/16 02:45:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/1.5/bin/ebuild,v 1.2 2001/02/18 20:14:05 drobbins Exp $
 
 if [ "`whoami`" != "root" ]
 then
@@ -13,8 +13,8 @@ fi
 
 #allow any envvars to be set like QTDIR, even if Qt was just installed
 export PATH=/usr/lib/portage/bin:${PATH}
-eval `import-settings PROXY HTTP_PROXY FTP_PROXY DEBUG MAKEOPTS MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT`
-eval `import-configsettings FETCHCOMMAND PACKAGE USE GENTOO_MIRRORS PLATFORM`
+eval `import-settings PROXY HTTP_PROXY FTP_PROXY DEBUG MAKEOPTS MAINTAINER USE CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT`
+eval `import-configsettings FETCHCOMMAND PACKAGE GENTOO_MIRRORS PLATFORM`
 source /etc/rc.d/config/functions
 
 initvars() {
