@@ -1,0 +1,27 @@
+#!/sbin/runscript
+
+depend() {
+    clock
+}
+
+checkconfig() {
+    if [ ! -e /etc/metalog/metalog.conf ] ; then
+	eerror "You need an /etc/metalog/metalog.conf file to run metalog"
+	eerror "There is a sample config  file in /usr/share/docs/metalog"
+	return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting metalog"
+    start-stop-daemon --start --quiet --exec /usr/sbin/metalog -- -B
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping metalog"
+    start-stop-daemon --stop --quiet --exec /usr/sbin/metalog
+    eend $?
+    # will look into cosmetic error message later..~dd
+}
