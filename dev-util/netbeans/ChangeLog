@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.15 2004/02/23 15:42:53 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.16 2004/04/15 16:29:17 kugelfang Exp $
+
+  15 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> netbeans-3.5.1.ebuild:
+  marked ~amd64
 
   23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> netbeans-3.5.1.ebuild:
   Stable on sparc.
