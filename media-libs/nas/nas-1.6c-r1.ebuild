@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.4 2004/04/13 16:12:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.5 2004/04/13 17:32:47 eradicator Exp $
 
 DESCRIPTION="Network Audio System"
 SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="X11"
 KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha ~amd64 ~ia64 ~mips"
 
-IUSE=""
+IUSE="static"
 
 # This is ridculuous, we only need xmkmf, but no other package
 # provides it. 20020607 (Seemant): Actually, the homepage says it needs
@@ -43,6 +43,9 @@ src_install () {
 	# doesn't change mixer's settings (inspired by Debian package):
 	mv ${D}/etc/nas/nasd.conf.eg ${D}/etc/nas/nasd.conf
 	dosed 's,\(MixerInit.*\)"\(.*\)",\1"no",' /etc/nas/nasd.conf
+
+	# Remove the static lib
+	use static || rm ${D}/usr/X11R6/lib/libaudio.a
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/nas.conf.d nas
