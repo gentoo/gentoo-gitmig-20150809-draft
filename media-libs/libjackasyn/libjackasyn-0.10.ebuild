@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.10.ebuild,v 1.3 2004/03/26 16:34:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.10.ebuild,v 1.4 2004/06/13 08:08:56 eradicator Exp $
 
 DESCRIPTION="An application/library for connecting OSS apps to Jackit."
 HOMEPAGE="http://gige.xdv.org/soft/libjackasyn"
@@ -8,7 +8,7 @@ SRC_URI="http://devel.demudi.org/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-DEPEND="virtual/jack
+DEPEND="media-sound/jack-audio-connection-kit
 	media-libs/libsamplerate"
 
 IUSE=""

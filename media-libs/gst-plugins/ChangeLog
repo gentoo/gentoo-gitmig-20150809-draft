@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.67 2004/06/03 23:55:09 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.68 2004/06/13 08:06:03 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  Getting rid of virtual/jack.
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> gst-plugins-0.8.1.ebuild:
   Stable on mips.

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libhydrogen
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.6 2004/04/26 03:32:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.7 2004/06/13 08:08:41 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libhydrogen-0.8.0.ebuild, libhydrogen-0.8.1_beta5.ebuild:
+  Getting rid of virtual/jack.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libhydrogen-0.8.0.ebuild,
   libhydrogen-0.8.1_beta5.ebuild:

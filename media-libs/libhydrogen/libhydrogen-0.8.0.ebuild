@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.0.ebuild,v 1.9 2004/04/26 03:32:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.0.ebuild,v 1.10 2004/06/13 08:08:41 eradicator Exp $
 
 inherit libtool
 
@@ -17,7 +17,7 @@ S="${WORKDIR}/${P}"
 RDEPEND="virtual/x11 \
 	>=media-libs/audiofile-0.2.3 \
 	alsa? ( media-libs/alsa-lib ) \
-	virtual/jack"
+	media-sound/jack-audio-connection-kit"
 
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
