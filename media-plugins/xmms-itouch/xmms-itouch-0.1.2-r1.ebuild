@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/xmms-itouch-0.1.2-r1.ebuild,v 1.9 2004/07/06 23:55:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/xmms-itouch-0.1.2-r1.ebuild,v 1.10 2004/09/03 21:31:08 eradicator Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.saunalahti.fi/~syrjala/xmms-itouch/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="x86 amd64 ~ppc sparc"
 
 DEPEND="media-sound/xmms"
 

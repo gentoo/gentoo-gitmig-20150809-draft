@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.10 2004/07/06 23:55:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.11 2004/09/03 21:31:56 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.dgs.monash.edu.au/~timf/kint_xmms-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 
 DEPEND="media-sound/xmms"
 

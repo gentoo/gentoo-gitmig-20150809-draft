@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-imms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/ChangeLog,v 1.17 2004/08/06 00:31:37 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/ChangeLog,v 1.18 2004/09/03 21:26:09 eradicator Exp $
+
+  03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-imms-1.1.ebuild:
+  Stable amd64, sparc.
 
   05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> xmms-imms-1.0.1.ebuild,
   xmms-imms-1.1.ebuild:
