@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8202b7a7c7952938de75c94a3017dd07 ChangeLog 1286
-MD5 f67834901749d71c3502e9eeda86c179 spamprobe-1.0a.ebuild 803
-MD5 be71b819a2a543101cc6aa284b0df0ab spamprobe-1.0.ebuild 801
+MD5 8fd51f7079950e8a63ae0894c89a101b ChangeLog 1375
+MD5 e06b0edbed6cdb6cdbb478439520adea spamprobe-1.0a.ebuild 802
+MD5 65786da9c2de68d6ac9d94404d4f061a spamprobe-1.0.ebuild 801
 MD5 7a63986c893466830ff3fb3aad7f89fa metadata.xml 251
-MD5 dae79c9a1c27694321e676e788c664a8 spamprobe-0.9h.ebuild 1013
+MD5 17709ff153cc669dfeb7787df947c0bd spamprobe-0.9h.ebuild 1013
 MD5 22dc99486764b555295bf2a75914f81b files/digest-spamprobe-0.9h 136
 MD5 3e2a7aa9ae39974be42efa119ee86ca2 files/digest-spamprobe-1.0a 66
 MD5 bd85f2fc38fcdfeefc4b5a9d6280dd22 files/digest-spamprobe-1.0 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBtJL2QlM6RnzZP+IRAmzCAKCEg9pdVEYfVRW3FDyEI4mMH8OfwACfTCbA
-xh+uq+zwVg6eMDSWjYq9Aho=
-=834S
+iD8DBQFB59irQlM6RnzZP+IRApZJAJ0RDxdkqxttSSDUuswcsshKwla2ygCgrc7k
+8VGtGg9ohuBYr7UOf07eZKk=
+=2M9e
 -----END PGP SIGNATURE-----
