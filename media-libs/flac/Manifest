@@ -1,0 +1,7 @@
+MD5 0475a65768e26fd9f2c268f0b1f5cfb0 ChangeLog 1993
+MD5 afc8e0d147a6025617d4673a301a471f flac-1.0.3.ebuild 1091
+MD5 8573a2a89956a99cd83ddb915ddaadd0 flac-1.0.4.ebuild 1260
+MD5 c2cbdabf6a0cc7dc860caaccc8422b8f flac-1.1.0.ebuild 1178
+MD5 ea7cf9841d61ef32148c08cebc7d86c7 files/digest-flac-1.0.3 62
+MD5 60392f14261ba187ca43cbdc770bcecf files/digest-flac-1.0.4 63
+MD5 c10f4a7334db0c8eab9fbc5111363490 files/digest-flac-1.1.0 63
