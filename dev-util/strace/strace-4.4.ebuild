@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.8 2002/08/27 22:53:33 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.9 2002/09/26 18:56:44 vapier Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -14,15 +14,12 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A usefull diagnostic, instructional, and debugging tool"
-SRC_URI1="http://unc.dl.sourceforge.net/sourceforge/strace/strace_4.4-1.tar.gz"
-SRC_URI2="http://telia.dl.sourceforge.net/sourceforge/strace/strace_4.4-1.tar.gz"
-SRC_URI3="http://belnet.dl.sourceforge.net/sourceforge/strace/strace_4.4-1.tar.gz"
-SRC_URI="${SRC_URI1} ${SRC_URI2} ${SRC_URI3}"
+SRC_URI="mirror://sourceforge/strace/strace_4.4-1.tar.gz"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="virtual/glibc sys-devel/autoconf"
 RDEPEND="${DEPEND}"
