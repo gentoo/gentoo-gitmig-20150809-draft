@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.2/make.defaults,v 1.4 2004/09/30 18:25:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.2/make.defaults,v 1.5 2004/10/08 16:03:10 seemant Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -14,6 +14,7 @@ crypt
 cups
 encode
 foomaticdb
+f77
 gdbm
 gif
 gnome

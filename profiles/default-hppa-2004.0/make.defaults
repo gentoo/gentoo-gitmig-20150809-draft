@@ -5,6 +5,7 @@ berkdb
 bitmap-fonts
 crypt
 cups
+f77
 encode
 foomaticdb
 gdbm
