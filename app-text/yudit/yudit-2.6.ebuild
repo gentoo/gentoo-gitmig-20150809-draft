@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.6.ebuild,v 1.9 2003/02/13 09:50:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.6.ebuild,v 1.10 2003/03/01 04:34:44 vapier Exp $
 
-DESCRIPTION="Yudit is a free (Y)unicode text editor for all unices"
+DESCRIPTION="free (Y)unicode text editor for all unices"
 SRC_URI="http://yudit.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.yudit.org/"
 
@@ -14,7 +14,7 @@ DEPEND="virtual/x11
 	>=sys-devel/gettext-0.10"
 
 src_compile() {
-	econf
+	econf || die
 	make || die
 }
 

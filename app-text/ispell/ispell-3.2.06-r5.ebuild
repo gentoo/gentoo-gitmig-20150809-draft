@@ -1,27 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r5.ebuild,v 1.5 2003/02/12 13:16:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r5.ebuild,v 1.6 2003/03/01 04:30:01 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
+DESCRIPTION="fast screen-oriented spelling checker"
 SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://fmg-www.cs.ucla.edu/geoff/ispell.html"
-
-DEPEND="sys-devel/bison
-	sys-apps/miscfiles
-	>=sys-libs/ncurses-5.2"
-
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc ~ppc ~alpha ~mips ~hppa"
 
+DEPEND="sys-devel/bison
+	sys-apps/miscfiles
+	>=sys-libs/ncurses-5.2"
+
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
 	epatch ${WORKDIR}/${P}-gentoo.diff
 }

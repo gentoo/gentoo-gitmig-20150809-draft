@@ -1,15 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r11.ebuild,v 1.12 2003/02/13 09:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r11.ebuild,v 1.13 2003/03/01 04:34:28 vapier Exp $
 
 inherit flag-o-matic
 
-IUSE="ncurses X libwww png"
-
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
-
 S=${WORKDIR}/teTeX-1.0
-DESCRIPTION="teTeX is a complete TeX distribution"
+
+DESCRIPTION="a complete TeX distribution"
 SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-${PV}.tar.gz
 	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
 	 http://www.ibiblio.org/gentoo/distfiles/ec-ready-mf-tfm.tar.gz
@@ -19,17 +17,16 @@ HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="ncurses X libwww png"
 
 DEPEND="sys-apps/ed
-	sys-libs/zlib 
+	sys-libs/zlib
 	X? ( virtual/x11 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	ncurses? ( sys-libs/ncurses )
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )"
-
 RDEPEND=">=sys-devel/perl-5.2
 	dev-util/dialog"
-
 
 src_unpack() {
 	unpack teTeX-src-${PV}.tar.gz

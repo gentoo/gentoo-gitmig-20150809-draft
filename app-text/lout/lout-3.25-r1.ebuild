@@ -1,18 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.25-r1.ebuild,v 1.5 2003/02/13 09:40:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.25-r1.ebuild,v 1.6 2003/03/01 04:31:11 vapier Exp $
 
-DESCRIPTION="Lout is a high-level language for document formatting."
+DESCRIPTION="high-level language for document formatting"
 HOMEPAGE="http://snark.ptc.spbu.ru/~uwe/lout/"
-LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
-SLOT="0"
-DEPEND=">=sys-libs/zlib-1.1.4"
-RDEPEND=""
 SRC_URI="http://www.tex.ac.uk/tex-archive/support/lout/${P}.tar.gz"
 
+LICENSE="GPL-2"
+KEYWORDS="x86 sparc"
+SLOT="0"
+
+DEPEND=">=sys-libs/zlib-1.1.4"
+RDEPEND=""
+
 src_unpack() {
-	unpack $A
+	unpack ${A}
 	cd ${S}
 
 	# Apply the makefile patch, this is the only configuration so far :-(
@@ -25,7 +27,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR=${D} install installdoc installman || die "emake install failed"
-
 	dodoc README READMEPDF blurb blurb.short whatsnew
 }
 
@@ -34,4 +35,3 @@ pkg_postinst() {
 	chmod 644 /usr/lib/lout/data/*
 	chmod 644 /usr/lib/lout/hyph/*
 }
-
