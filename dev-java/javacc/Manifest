@@ -1,11 +1,23 @@
-MD5 35441c11c3d458d3a0ef049ebb4f7772 ChangeLog 1304
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dad95d5aa955db5332d438ea71ef1d20 javacc-3.2-r3.ebuild 1362
 MD5 661cba0897b238f3524336693bdf5f26 javacc-3.2-r2.ebuild 1254
-MD5 6f5d6501b4f873ffbd9cbca5a847b897 files/javacc 128
-MD5 890206304fc74a131a30bb3f6140cfcb files/javacc-3.2 290
+MD5 b3051a30cdcd756c75360af013a36c22 ChangeLog 1505
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 34ffde7ed24a1315dbcba6b16557f644 files/jjdoc 127
+MD5 890206304fc74a131a30bb3f6140cfcb files/javacc-3.2 290
+MD5 6f5d6501b4f873ffbd9cbca5a847b897 files/javacc 128
 MD5 f4614a490a4f23987e131ce4f47a0ddf files/jjtree 128
-MD5 c1977d510ff18a454666499bed5aa797 files/digest-javacc-3.2-r2 62
-MD5 0254d70a0b74b6bdaf13ed190e83ce88 files/javacc.sh-3.2 400
-MD5 27f05e9ef0c9b90262c6f9f43dae9633 files/jjdoc-3.2 380
 MD5 169889bcf3545fed8164d19166f6216d files/jjtree-3.2 388
+MD5 c1977d510ff18a454666499bed5aa797 files/digest-javacc-3.2-r2 62
+MD5 c1977d510ff18a454666499bed5aa797 files/digest-javacc-3.2-r3 62
+MD5 27f05e9ef0c9b90262c6f9f43dae9633 files/jjdoc-3.2 380
+MD5 0254d70a0b74b6bdaf13ed190e83ce88 files/javacc.sh-3.2 400
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOvh5/rLF9B432nYRAi4iAJ45UMQhtwQgFNUynlLpnsv5c+n7owCgko3L
+tfvrMdFOZf/YiX0hlEKBnWw=
+=NBEt
+-----END PGP SIGNATURE-----
