@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b952e9a39e30cf0f1283ac8775da4acd ChangeLog 2048
-MD5 cc215552b3799d6617ee83bece0a3d14 figlet-221-r1.ebuild 1540
+MD5 44c5c9263317e62f0a2ff3c59c68278c figlet-221-r1.ebuild 1547
+MD5 60d7c70189b76e54345bbb54ca00b102 ChangeLog 2132
 MD5 27c80a8d690d932f131215d791821fcd metadata.xml 253
-MD5 3a2551bb3e1052d837bd6852df170706 files/digest-figlet-221-r1 203
 MD5 e2d8534fe03c0cd75ce80993267a59f5 files/figlet-22-r1-gentoo.diff 1110
 MD5 33b24c1ec85f5424d660e01f97d383a0 files/figlet-221-gentoo.diff 1029
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35HZHTu7gpaalycRAvBGAKDhG2yUvsAzPCRhEzr+OCXi/E+yAgCgm6FE
-34fULZw1WAYMkQVNY8iPpYo=
-=4KJz
------END PGP SIGNATURE-----
+MD5 3a2551bb3e1052d837bd6852df170706 files/digest-figlet-221-r1 203

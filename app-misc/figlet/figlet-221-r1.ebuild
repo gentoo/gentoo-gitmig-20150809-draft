@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-221-r1.ebuild,v 1.5 2004/06/28 03:34:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-221-r1.ebuild,v 1.6 2004/07/10 11:13:17 slarti Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.figlet.org/pub/figlet/program/unix/${MY_P}.tar.gz
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa"
+KEYWORDS="x86 ppc sparc mips alpha hppa ~amd64"
 IUSE=""
 
 RDEPEND="virtual/libc"
