@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift-gnutella
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.2 2003/08/03 05:08:26 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.3 2003/08/04 18:41:13 lostlogic Exp $
+
+*gift-gnutella-0.0.5 (04 Aug 2003)
+
+  04 Aug 2003; Brandon Low <lostlogic@gentoo.org> gift-gnutella-0.0.5.ebuild:
+  bump
 
   03 Aug 2003; <iggy@gentoo.org> gift-gnutella-0.0.4.ebuild:
   giftdatadir -> datadir; fixes bug 25753
