@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/rhapsody
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.1 2005/03/16 18:45:23 swegener Exp $
+
+*rhapsody-0.24b (16 Mar 2005)
+
+  16 Mar 2005; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +rhapsody-0.24b.ebuild:
+  Initial commit. ebuild based on the one Ed Wildgoose <gentoo@wildgooses.com>
+  posted to bug #85208.
+
