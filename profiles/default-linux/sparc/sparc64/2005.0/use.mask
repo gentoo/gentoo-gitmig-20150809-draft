@@ -1,7 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/use.mask,v 1.2 2005/04/04 03:17:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/use.mask,v 1.3 2005/04/04 03:33:35 weeve Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Don't allow alsa in sparc64 because of broken snd-ioctl32
 alsa
 jack
+jack-tmpfs
 ladcca
