@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.49 2003/03/11 11:34:14 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.50 2003/03/21 09:58:56 aliz Exp $
+
+*glibc-2.3.1-r4 (21 Mar 2003)
+
+  21 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> glibc-2.3.1-r4.ebuild :
+  Security update.
+
+*glibc-2.2.5-r8 (21 Mar 2003)
+
+  21 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> glibc-2.2.5-r8.ebuild :
+  Security update.
 
   11 Mar 2003; Zach Welch <zwelch@gentoo.org>
   files/2.2.5/glibc-2.2.5-arm-sysdeps-fix.diff:
