@@ -1,6 +1,6 @@
 #!/bin/sh
 # Configuration file for all qmail daemons
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r11/conf-common,v 1.2 2003/08/06 07:48:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r11/conf-common,v 1.3 2003/08/06 08:06:11 robbat2 Exp $
 
 # Qmail User IDS to run daemons as
 QMAILDUID=`id -u qmaild`
@@ -10,7 +10,8 @@ NOFILESGID=`id -g qmaild`
 #QMAIL_CONTROLDIR=/var/qmail/control
 
 # Host and port to listen on
-TCPSERVER_HOST=0
+# We listen on the IPv4 local ip by default
+TCPSERVER_HOST=0.0.0.0
 TCPSERVER_PORT=${SERVICE}
 
 # tcpserver maximum concurrency, defaults to 40 in tcpserver
