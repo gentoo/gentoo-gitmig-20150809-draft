@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.1 2004/06/03 11:44:25 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.2 2004/06/05 21:14:16 karltk Exp $
 
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
@@ -116,3 +116,11 @@ function eclipse-ext_install-plugins {
 	done
 }
 
+function eclipse-ext_pkg_postinst() {
+	einfo "For tips, tricks and general info on running Eclipse on Gentoo, go to:"
+	einfo "http://dev.gentoo.org/~karltk/projects/eclipse/"
+}
+
+function pkg_postinst() {
+	eclipse-ext_pkg_postinst
+}
