@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.37 2003/05/30 13:14:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.38 2003/05/31 16:09:01 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -27,7 +27,7 @@ perl-module_src_prep() {
 
 	SRC_PREP="yes"
 	perl Makefile.PL ${myconf} \
-	PREFIX=${D}/usr 
+	PREFIX=${D}/usr
 }
 
 perl-module_src_compile() {
@@ -95,6 +95,10 @@ perl-module_src_install() {
 		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
 		rm -f ${D}/${SITE_LIB}/perllocal.pod
 	fi
+
+	for FILE in `find ${D} -type f -name "*.html" -o -name ".packlist"`; do
+    	sed -ie "s:${D}:/:g" ${FILE}
+	done
 
 	dodoc Change* MANIFEST* README* ${mydoc}
 }
