@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/orsa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.6 2004/03/10 10:24:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.7 2004/04/19 12:02:34 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> orsa-0.3.1.ebuild,
+  orsa-0.5.0_rc2.ebuild:
+  Adding/syncing IUSE
 
   10 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> orsa-0.3.1.ebuild,
   orsa-0.5.0_rc2.ebuild:

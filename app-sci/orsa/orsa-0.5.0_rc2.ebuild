@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.5.0_rc2.ebuild,v 1.3 2004/03/10 10:24:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.5.0_rc2.ebuild,v 1.4 2004/04/19 12:02:34 phosphan Exp $
 
 inherit base flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/orsa/${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="mpi fftw ginac cln gsl qt"
+IUSE="opengl mpi fftw ginac cln gsl qt"
 
 S="${WORKDIR}/${P/_/-}"
 
