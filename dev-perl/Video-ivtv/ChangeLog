@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Video-ivtv
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.1 2004/10/15 21:17:31 iggy Exp $
+
+*Video-ivtv-0.12 (15 Oct 2004)
+
+  15 Oct 2004; <iggy@gentoo.org> +metadata.xml, +Video-ivtv-0.12.ebuild:
+  initial revision, ebuilds created by me
+
