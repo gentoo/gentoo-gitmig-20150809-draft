@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>bdharring@wisc.edu</email>
+	<email>ferringb@gentoo.org</email>
 	<name>Brian Harring</name>
-	<description>Indirectly maintaining through seemant@gentoo.org</description>
 </maintainer>
 </pkgmetadata>
