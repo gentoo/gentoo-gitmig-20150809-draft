@@ -1,6 +1,13 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.2 2002/03/04 20:58:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.3 2002/03/16 14:22:47 danarmak Exp $
+
+*wwwoffle-2.7-r1 (16 Mar 2002)
+
+  16 Mar 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  Now, if the wwwoffle init script is running, it is stopped before merging,
+  and started again afterwards.
 
 *wwwoffle-2.7 (4 Mar 2002)
 
