@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.1.1.ebuild,v 1.2 2002/11/28 01:21:00 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.1.1.ebuild,v 1.3 2002/12/03 14:59:33 nall Exp $
 
 inherit gnome2 debug
 
@@ -9,7 +9,7 @@ DESCRIPTION="Multimedia related programs for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/ http://www.prettypeople.org/~iain/gnome-media/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=media-sound/esound-0.2.29
 	>=dev-libs/glib-2.0.6

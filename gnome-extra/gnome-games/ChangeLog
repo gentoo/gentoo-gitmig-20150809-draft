@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.19 2002/11/23 01:22:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.20 2002/12/03 15:01:28 nall Exp $
 
 *gnome-games-2.0.6 (22 Nov 2002)
 
@@ -8,6 +8,9 @@
   New version 
 
 *gnome-games-2.1.2 (12 Nov 2002)
+
+  03 Dec 2002; Jon Nall <nall@gentoo.org> gnome-games-2.1.2.ebuild :
+  keyworded ~ppc
 
   12 Nov 2002; foser <foser@gentoo.org> gnome-games-2.1.2.ebuild :
   GNOME 2.1.2 release
