@@ -1,12 +1,16 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.8 2002/05/03 16:44:24 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.9 2002/05/04 09:09:16 spider Exp $
 
 
 *glib-2.0.0-r4 (1 MayApr 2002)
   1 May 2002 ; Spider <spider@gentoo.org> glib-2.0.1-r4.ebuild:
   remove libiconv again, this seems to have been a mistake as some other
 things break because of it. hope I didn't mess too much up
+
+in case of problems:
+	remove libiconv, emerge glibc, log out and in again (needed for ld.so.conf/preload ) and you can emerge glib again. Sorry for the inconvenience.
+
 
 
 *glib-2.0.0-r3 (1 MayApr 2002)
