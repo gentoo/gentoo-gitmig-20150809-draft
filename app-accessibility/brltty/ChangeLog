@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.20 2004/10/14 02:08:02 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.21 2004/12/24 08:44:41 spider Exp $
+
+*brltty-3.6.1 (24 Dec 2004)
+
+  24 Dec 2004; <spider@gentoo.org> +brltty-3.6.1.ebuild:
+  A version bump on request of dmwaters:
+  http://bugs.gentoo.org/show_bug.cgi?id=75497
+  functionally untested, but runs.
 
 *brltty-3.6 (13 Oct 2004)
 
