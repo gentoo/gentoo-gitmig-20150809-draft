@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35.ebuild,v 1.2 2003/12/06 18:58:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35.ebuild,v 1.3 2003/12/09 18:12:58 lanius Exp $
 
 DESCRIPTION="Generate traffic stats in html, ps, text and gif format"
 HOMEPAGE="http://www.mindrot.org/traffic-vis.html"
@@ -14,7 +14,7 @@ IUSE="gif"
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.4
 	gif? ( media-libs/netpbm
-		app-text/ghostscript
+		virtual/ghostscript
 		dev-lang/perl )
 	=dev-libs/glib-1.2*"
 
