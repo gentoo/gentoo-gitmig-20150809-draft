@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/speedbar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/ChangeLog,v 1.4 2004/06/24 22:24:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/ChangeLog,v 1.5 2004/09/23 05:20:43 usata Exp $
+
+  23 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> speedbar-0.14_beta4.ebuild:
+  Blocks app-emacs/cedet.
 
   14 Mar 2004; David Holm <dholm@gentoo.org> speedbar-0.14_beta4.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/speedbar-0.14_beta4.ebuild,v 1.5 2004/06/24 22:24:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/speedbar-0.14_beta4.ebuild,v 1.6 2004/09/23 05:20:43 usata Exp $
 
 inherit elisp
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 
-DEPEND="virtual/emacs"
+DEPEND="virtual/emacs
+	!app-emacs/cedet"
 
 S="${WORKDIR}/${P/_/}"
 
