@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/xmms-dflowers-1.2.1.ebuild,v 1.9 2004/06/24 23:38:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/xmms-dflowers-1.2.1.ebuild,v 1.10 2004/07/06 23:11:05 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.shell.linux.se/bm/f/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ~ppc amd64 ~sparc"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	media-sound/xmms"
