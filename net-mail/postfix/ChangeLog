@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.23 2002/07/22 23:09:48 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.24 2002/07/23 16:36:22 raker Exp $
 
 *postfix-1.1.11.20020613 (22 Jul 2002)
+
+  23 Jul 2002; Nick Hadaway <raker@gentoo.org> :
+
+  Updated all ebuilds to include the pam dependancy.  Closes bug #5148.
 
   22 Jul 2002; Nick Hadaway <raker@gentoo.org>
   postfix-1.1.11.20020613.ebuild, files/digest-postfix-1.1.11.20020613,

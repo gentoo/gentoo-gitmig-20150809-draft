@@ -17,7 +17,8 @@ DEPEND=">=sys-libs/db-3.2
 	sasl? ( >=dev-libs/cyrus-sasl-1.5.27 )
 	ldap? ( >=net-nds/openldap-1.2 )
 	mysql? ( >=dev-db/mysql-3.23.28 )
-	ssl? ( >=dev-libs/openssl-0.9.6d )"
+	ssl? ( >=dev-libs/openssl-0.9.6d )
+	pam? ( sys-libs/pam )"
 RDEPEND="${DEPEND} 
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
