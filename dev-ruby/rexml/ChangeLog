@@ -1,0 +1,14 @@
+# ChangeLog for dev-ruby/rexml
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.1 2002/04/13 20:44:49 karltk Exp $
+
+*rexml-1.2.4 (13 Apr 2002)
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> rexml-1.2.4 files/digest-rexml-1.2.4 :
+  
+  REXML is an XML processor for the language Ruby. REXML is conformant (passes
+  100% of the Oasis non-validating tests), and includes full XPath support. It
+  is reasonably fast, and is implemented in pure Ruby. Best of all, it has a 
+  clean, intuitive API.
+
+  Ebuild contributed by Aaron Malone <aaron@munge.net>.
