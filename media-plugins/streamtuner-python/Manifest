@@ -1,4 +1,6 @@
+MD5 d1d28bf8c404273a8fcc72f7bab4f340 streamtuner-python-0.1.1.ebuild 683
 MD5 319a5595a7aeeb99a5f242f6bae33874 streamtuner-python-0.1.0.ebuild 683
-MD5 de11de639246d02c2eb29f624b171098 ChangeLog 658
+MD5 fcf942029de037ca0ca378efaebd3d32 ChangeLog 808
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 951449f1ac39d6797561853f13e0bb0e files/digest-streamtuner-python-0.1.0 76
+MD5 a4b77184ca9a16679fcda82159b24130 files/digest-streamtuner-python-0.1.1 76
