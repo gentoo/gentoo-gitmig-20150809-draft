@@ -8,7 +8,7 @@ MD5 c3c21596cc9b06d386bf62afae9c9a91 quota-3.06-r2.ebuild 1218
 MD5 ff01638e6438e59ba27712208ab4ca13 quota-3.06.ebuild 1048
 MD5 1ccc840fb99c84963e36a879986e15d1 quota-3.09.ebuild 1488
 MD5 eed3b57ea6b2f0f07715466e46263672 quota-3.10.ebuild 1487
-MD5 dc8b5a2b23037476e052686fafd1292b quota-3.12.ebuild 1494
+MD5 78b83c306b1ed2bc7d0cd1733280fe9b quota-3.12.ebuild 1491
 MD5 fe63ca32e32411f6aa067fdc6d451ae9 files/digest-quota-3.06 62
 MD5 fe63ca32e32411f6aa067fdc6d451ae9 files/digest-quota-3.06-r1 62
 MD5 fe63ca32e32411f6aa067fdc6d451ae9 files/digest-quota-3.06-r2 62
@@ -21,7 +21,7 @@ MD5 bce0e9a711e2b89bce6d9039014ab837 files/digest-quota-3.12 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBq9wYroRuSHgZdywRAkf2AJ4/fsKk8H4e8ltvdykOwR8Q774HuACgk4ki
-4f2MbValKlv3rwyxBWvzs/8=
-=LRWv
+iD8DBQFBq9xjroRuSHgZdywRAu62AJ9ZrMS7Ltud2Dxyxf6tfxQoPQi39wCfXtCa
+X5JcicyRW2W8nNGn94MP2CU=
+=E7vH
 -----END PGP SIGNATURE-----
