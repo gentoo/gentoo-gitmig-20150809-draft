@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.9 2005/01/21 15:41:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.10 2005/01/21 21:57:59 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -169,9 +169,7 @@ src_install() {
 	done
 
 	# Make sure these do not get nuked.
-	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
-	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
-	keepdir ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
+	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb} ${INSTDIR}/user/psprint/{driver,fontmetric} ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
 
 	#touch files to make portage uninstalling happy (#22593)
 	find ${D} -type f -exec touch {} \;
