@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.14 2003/10/05 21:42:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.15 2003/10/20 13:02:59 nakano Exp $
+
+*mlterm-2.8.0_p1 (20 Oct 2003)
+
+  20 Oct 2003; Masatomo Nakano <nakano@gentoo.org> mlterm-2.8.0_p1.ebuild:
+  Modified to apply a bug fix patch. Thanks to Sadayuki Kobayashi
+  <desperado@s17.xrea.com>. closed #31547.
 
 *mlterm-2.8.0 (06 Oct 2003)
 
