@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.14 2003/09/26 07:21:16 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.15 2003/11/29 04:35:53 brad_mssw Exp $
+
+*sox-12.17.4-r1 (28 Nov 2003)
+
+  28 Nov 2003; Brad House <brad_mssw@gentoo.org> sox-12.17.4-r1.ebuild:
+  mark stable on amd64
 
   26 Sep 2003; jje <jje@gentoo.org> :
   Addition of USE flags, oggvorbis, mad, encode, oss, alsa.

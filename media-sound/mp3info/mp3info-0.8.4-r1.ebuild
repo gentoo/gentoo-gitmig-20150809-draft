@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.12 2003/09/16 19:39:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.13 2003/11/29 04:36:44 brad_mssw Exp $
 
 IUSE="gtk"
 
@@ -13,7 +13,7 @@ DEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc amd64"
 
 src_unpack() {
 	unpack ${A}
