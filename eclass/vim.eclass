@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.10 2003/03/15 00:41:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.11 2003/03/15 00:44:01 seemant Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
 # Modified by: Seemant Kulleen <seemant@gentoo.org>
@@ -208,6 +208,8 @@ src_install() {
 			dodoc README*
 			cd $D/usr/share/doc/$PF
 			ln -s ../../vim/*/doc $P
+
+			keepdir /usr/share/vim/vim${vim_version/.}/keymap
 
 			# fix problems with vim not finding its data files.
 			echo "VIMRUNTIME=/usr/share/vim/vim${vim_version/.}" > 40vim
