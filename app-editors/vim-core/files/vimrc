@@ -49,10 +49,14 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 if &term=="xterm"
-  set t_RV=          " don't check terminal version
-  set t_Co=8
+  " Previously we would unset t_RV to prevent gnome-terminal from beeping as
+  " vim started.  These days it appears that gnome-terminal has been repaired,
+  " so re-enable this, and don't restrict t_Co=8.  (21 Jun 2004 agriffis)
+  "set t_RV=			" don't check terminal version
+  "set t_Co=8
   set t_Sb=^[4%dm
   set t_Sf=^[3%dm
+  set ttymouse=xterm2	" only works for >=xfree86-3.3.3, should be okay
 endif
 
 if has("autocmd")

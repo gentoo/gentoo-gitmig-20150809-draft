@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.86 2004/06/21 00:14:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.87 2004/06/21 20:10:02 agriffis Exp $
+
+  21 Jun 2004; <agriffis@gentoo.org> files/vimrc:
+  Fix bug 54541: set ttymouse=xterm2 when running in xterm. Additionally comment
+  out some deprecated settings
 
   21 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> vim-core-6.2-r9.ebuild:
   Moving s390 stable up to 6.2-r9 so that I can tidy up older versions and
