@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.20 2004/02/25 00:44:30 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.21 2004/03/25 09:19:08 kumba Exp $
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> GD-2.07.ebuild:
+  Added ~mips to KEYWORDS.
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> GD-2.07.ebuild:
   Stable on sparc, thanks to Josh Grebe <josh@brokedown.net> for testing!
