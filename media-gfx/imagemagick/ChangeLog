@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.19 2002/10/17 13:26:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.20 2002/10/22 09:21:53 seemant Exp $
+
+*imagemagick-5.4.9.1 (22 Oct 2002)
+
+  22 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  imagemagick-5.4.9.1.ebuild files/digest-imagemagick-5.4.9.1 :
+
+  Version bump.  In this release, the versioning has been made smarter, so
+  that the last digit maps to the -number from the upstream version number.
 
 *imagemagick-5.4.7-r2 (24 Sep 2002)
   
