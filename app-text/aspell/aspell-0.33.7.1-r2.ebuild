@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r2.ebuild,v 1.2 2002/08/06 14:50:21 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r2.ebuild,v 1.3 2002/08/10 14:48:18 seemant Exp $
 
 inherit libtool
 
@@ -27,15 +27,17 @@ CFLAGS=${CXXFLAGS}
 
 # needed to compile
 
-if [ -e /lib/libc-2.2.5.so ] && [ `gcc -dumpversion` == "2.95.3" ]; then
-	if [ ! -f /etc/aspell/aspell.conf ]; then
-		mkdir -p /etc/aspell
-		touch /etc/aspell/aspell.conf
+pkg_setup() {
+	if [ -e /lib/libc-2.2.5.so ] && [ `gcc -dumpversion` == "2.95.3" ]; then
+		if [ ! -f /etc/aspell/aspell.conf ]; then
+			mkdir -p /etc/aspell
+			touch /etc/aspell/aspell.conf
+		fi
+		if [ ! -f /root/.aspell.conf ]; then
+			touch /root/.aspell.conf
+		fi
 	fi
-	if [ ! -f /root/.aspell.conf ]; then
-		touch /root/.aspell.conf
-	fi
-fi
+}
 
 src_unpack() {
 
@@ -55,6 +57,10 @@ src_compile() {
 		--sysconfdir=/etc/aspell \
 		--host=${CHOST} \
 		--enable-doc-dir=/usr/share/doc/${P} || die
+	
+	# cp data/Makefile data/Makefile.orig
+	# sed 's:aspell --lang=english:& --dict-dir=.:' \
+	# 	data/Makefile.orig > data/Makefile
 	
 	emake || die
 
