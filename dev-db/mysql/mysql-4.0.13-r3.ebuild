@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r3.ebuild,v 1.2 2003/06/12 21:44:47 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r3.ebuild,v 1.3 2003/06/13 01:42:16 robbat2 Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -48,6 +48,11 @@ pkg_setup() {
 }
 
 src_unpack() {
+	if use static && use ssl; then
+		local msg="MySQL does not support building statically with SSL support"
+		eerror "${msg}"
+		die "${msg}"
+	fi
 	unpack ${A} || die
 	cd ${S} || die
 	#required for qmail-mysql
