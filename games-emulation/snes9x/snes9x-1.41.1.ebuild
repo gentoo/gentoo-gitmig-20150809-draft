@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.41.1.ebuild,v 1.1 2003/10/03 20:48:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.41.1.ebuild,v 1.2 2003/10/17 17:37:56 vapier Exp $
 
 inherit games
 
@@ -16,10 +16,10 @@ IUSE="3dfx opengl X" # svga ggi
 
 RDEPEND="sys-libs/zlib
 	virtual/x11
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	3dfx? ( media-libs/glide-v3 )"
 #	X? ( virtual/x11 )
 #	svga? ( media-libs/svgalib )
-#	3dfx? ( media-libs/glide-v3 )
 #	ggi? ( media-libs/libggi )
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
@@ -42,7 +42,7 @@ src_compile() {
 		case ${vid} in
 			3dfx)
 				vidconf="--with-glide --without-opengl --without-x"
-				target=gnes9x;;
+				target=gsnes9x;;
 			opengl)
 				vidconf="--with-opengl --without-glide --without-x"
 				target=osnes9x;;
