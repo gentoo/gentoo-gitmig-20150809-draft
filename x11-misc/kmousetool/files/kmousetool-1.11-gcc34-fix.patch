@@ -1,0 +1,19 @@
+diff -urNa kmousetool-1.11.old/kmousetool/mtstroke.cpp kmousetool-1.11/kmousetool/mtstroke.cpp
+--- kmousetool-1.11.old/kmousetool/mtstroke.cpp	2002-12-11 03:14:16.000000000 +0100
++++ kmousetool-1.11/kmousetool/mtstroke.cpp	2004-08-25 05:34:47.406702016 +0200
+@@ -88,7 +88,7 @@
+       points.push_back(Pt(x,y));
+     }
+   }
+-};
++}
+ 
+ 
+ /*
+@@ -310,4 +310,4 @@
+   char ch = 'a';
+   while (ch != '\n')
+     infile.get(ch);
+-}
+\ No newline at end of file
++}
