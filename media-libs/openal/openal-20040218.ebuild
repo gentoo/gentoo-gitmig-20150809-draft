@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040218.ebuild,v 1.8 2004/04/18 06:12:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040218.ebuild,v 1.9 2004/04/20 16:39:04 eradicator Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 
 	cd ${S}/linux
 	use alsa && epatch ${FILESDIR}/openal-20040219-alsa_capture.diff
-	WANT_AUTOCONF_2_5=1 ./autogen.sh || die
+	WANT_AUTOCONF=2.5 ./autogen.sh || die
 	./configure  --prefix=/usr ${myconf} --enable-paranoid-locks \
 		--enable-capture --enable-optimize || die
 	emake all || die
