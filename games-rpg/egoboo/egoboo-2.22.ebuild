@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.3 2004/01/08 11:13:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.4 2004/02/15 14:36:45 dholm Exp $
 
 inherit flag-o-matic games
 
@@ -9,7 +9,7 @@ DESCRIPTION="A 3d dungeon crawling adventure in the spirit of NetHack"
 HOMEPAGE="http://egoboo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/ego${PV/./}.tar.gz"
 
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
@@ -34,6 +34,9 @@ src_unpack() {
 	sed \
 		-e "s:GENTOODIR:${GAMES_DATADIR}:" "${FILESDIR}/${P}.sh" \
 			> "${T}/egoboo" || die "sed wrapper failed"
+
+	# Fix endianess using SDL
+	epatch ${FILESDIR}/${PV}-endian.patch
 }
 
 src_compile() {
