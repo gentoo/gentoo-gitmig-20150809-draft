@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.1 2005/02/16 04:02:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.2 2005/02/16 05:07:51 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -16,9 +16,14 @@ GLIBC_INFOPAGE_VERSION="2.3.4-r1"
 PATCH_VER="1.2"
 
 # Libidn addon - http://www.gnu.org/software/libidn/
-IDN_VER="0.5.13"
-IDN_TARBALL="libidn-${IDN_VER}.tar.gz"
-IDN_URI="http://josefsson.org/libidn/releases/${IDN_TARBALL}"
+#IDN_VER="0.5.13"
+#IDN_TARBALL="libidn-${IDN_VER}.tar.gz"
+#IDN_URI="http://josefsson.org/libidn/releases/${IDN_TARBALL}"
+
+# C Stubbs addon
+CSTUBS_VER="2.1.2"
+CSTUBS_TARBALL="c_stubs-${CSTUBS_VER}.tar.bz2"
+CSTUBS_URI="http://dev.gentoo.org/~eradicator/${CSTUBS_TARBALL}"
 
 # (Recent snapshots fails with 2.6.5 and earlier)
 LT_KERNEL_VERSION="2.4.1"
@@ -129,6 +134,10 @@ get_glibc_src_uri() {
 		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${IDN_URI}"
 	fi
 
+	if [[ -n "${CSTUBS_URI}" ]]; then
+		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${CSTUBS_URI}"
+	fi
+
 	echo "${GLIBC_SRC_URI}"
 }
 
@@ -148,6 +157,10 @@ toolchain-glibc_src_unpack() {
 	if [[ -n "${IDN_TARBALL}" ]]; then
 		unpack ${IDN_TARBALL}
 		mv libidn-${IDN_VER} libidn
+	fi
+
+	if [[ -n "${CSTUBS_TARBALL}" ]]; then
+		unpack ${CSTUBS_TARBALL}
 	fi
 
 	if [[ -n ${PATCH_VER} ]]; then
