@@ -1,6 +1,19 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.9 2004/04/27 21:48:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.10 2004/06/07 13:38:27 raker Exp $
+
+*windowmaker-0.80.2-r4 (07 Jun 2004)
+
+  07 Jun 2004; Nick Hadaway <raker@gentoo.org> 
+  windowmaker-0.80.2-r4.ebuild, files/wmfpo.patch, 
+  files/gtk2flickerfix.patch:
+  A new release of WindowMaker coming from upstream cvs will be real 
+  soon now but these two updates are very nice.  Pretty soon
+  windowmaker will be more popular than gnome and kde combined! muhaha!
+  GTK+2 applications should no longer fight for focus and the wmfpo patch
+  adds options in WPrefs.app for single-click window raising and window 
+  maximizing instead of shading.  Thanks to bug submitters and testers 
+  on #38481 and #49804.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   windowmaker-0.80.2-r1.ebuild, windowmaker-0.80.2-r2.ebuild:
