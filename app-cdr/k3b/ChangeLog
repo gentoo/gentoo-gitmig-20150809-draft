@@ -3,6 +3,11 @@
 # /home/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.46 2004/03/27 16:18:17
 # lanius Exp $
 
+*k3b-0.11.11 (15 Jun 2004)
+
+  15 Jun 2004; Carsten Lohrke <carlo@gentoo.org> k3b-0.11.11.ebuild:
+  version bump, <media-video/transcode-0.6.12
+
   11 Jun 2004; Lars Weiler <pylon@gentoo.org> k3b-0.11.10.ebuild:
   Stable on ppc.
 
