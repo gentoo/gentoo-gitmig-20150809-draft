@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0.ebuild,v 1.2 2003/04/27 18:07:50 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0.ebuild,v 1.3 2003/06/03 18:12:46 robbat2 Exp $
 
 ECVS_SERVER="cvs.php.net:/repository"
 ECVS_MODULE="php5"
@@ -15,11 +15,10 @@ MY_P=php-${PV}
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="PHP Shell Interpreter - development version"
 SRC_URI=""
-HOMEPAGE="http://www.php.net/"
-LICENSE="PHP"
 SLOT="0"
-PROVIDE="virtual/php"
 KEYWORDS="~x86 ~ppc ~sparc"
+DEPEND="${DEPEND} 
+	>=dev-util/re2c-0.9.1"
 
 src_unpack() {
 	cvs_src_unpack
@@ -28,16 +27,6 @@ src_unpack() {
 
 src_compile() {
 	./buildconf
-	
-	if [ "`use mysql`" ] ; then
-		if [ "`mysql_config | grep '4.1'`" ] ; then
-			myconf="${myconf} --with-mysqli=/usr"
-		else
-			myconf="${myconf} --with-mysql=/usr"
-		fi
-	else
-		myconf="${myconf} --without-mysql"
-	fi
 
 	myconf="${myconf} --enable-embed"
 	myconf="${myconf} --disable-cgi --enable-cli"
