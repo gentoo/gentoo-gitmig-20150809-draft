@@ -1,4 +1,4 @@
-MD5 c448f3d06446b93f6c02b01a4d9f2733 ChangeLog 9835
+MD5 b207615067efbfbebabc9231cbedbc79 ChangeLog 10017
 MD5 a3a5f5e1cfbb02d35f055dae074bf237 bash-3.0-r4.ebuild 4119
 MD5 9b26b6899167a29ee4e9c1ad0d39b5a1 bash-2.05b-r9.ebuild 2909
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
@@ -12,7 +12,7 @@ MD5 694b8b1e47e4743e78ee5f7515f76542 files/bash-3.0-posixtrap.patch 789
 MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r9 461
 MD5 92f8f2d44177d92edd757366dbd261dc files/bashrc 761
 MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r10 461
-MD5 280727f35468e5deaadec039679ee5e8 files/bash-3.0-invisible.patch 601
+MD5 28c9d7407d5332c29dddb656a4a1f1ce files/bash-3.0-invisible.patch 705
 MD5 30a9ff1b688e79f59376a47d882f3419 files/digest-bash-3.0-r4 128
 MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
 MD5 0392b634a7a02302d24ccc4a4b349423 files/bash-3.0-local-array.patch 275
