@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.16.ebuild,v 1.2 2004/09/09 16:31:40 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.16.ebuild,v 1.3 2004/09/16 00:19:54 pebenito Exp $
 
 IUSE=""
 
@@ -22,6 +22,7 @@ RDEPEND="sec-policy/selinux-base-policy"
 src_unpack() {
 	unpack ${A}
 	sed -i -e "s:-Wall:-Wall ${CFLAGS}:g" -e 's/$(LIBS)/$(LIBS) $(LDFLAGS)/' ${S}/Makefile
+	sed -i -e '/^lex\.yy\.c/s/\.l/\.l y\.tab\.c/' ${S}/Makefile
 	epatch ${FILESDIR}/checkpolicy-1.16-no-netlink-warn.diff
 }
 
