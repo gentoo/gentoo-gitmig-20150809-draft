@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.28 2004/12/11 18:46:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.29 2004/12/23 13:15:50 gmsoft Exp $
+
+  23 Dec 2004; Guy Martin <gmsoft@gentoo.org> esearch-0.7.ebuild:
+  Stable on hppa.
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> esearch-0.7.ebuild:
   Stable on alpha.
