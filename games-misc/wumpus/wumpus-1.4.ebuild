@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.3 2004/05/04 00:21:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.4 2004/05/10 17:51:16 vapier Exp $
 
-inherit games
+inherit games gcc
 
 DESCRIPTION="Classic Hunt the Wumpus Adventure Game"
 HOMEPAGE="http://cvsweb.netbsd.org/bsdweb.cgi/src/games/wump/"
@@ -29,14 +29,13 @@ src_unpack() {
 src_compile() {
 	touch pathnames.h
 	[ -z "${PAGER}" ] && PAGER=/usr/bin/less
-	[ -z "${CC}" ] && CC=gcc
-	${CC} -Dlint -D_PATH_PAGER=\"${PAGER}\" \
+	$(gcc-getCC) -Dlint -D_PATH_PAGER=\"${PAGER}\" \
 		-D_PATH_WUMPINFO=\"${GAMES_DATADIR}/${PN}/wump.info\" ${CFLAGS} \
 		-o wump wump.c
 }
 
 src_install() {
-	dogamesbin wump
+	dogamesbin wump || die
 	doman wump.6
 	insinto ${GAMES_DATADIR}/${PN}
 	doins wump.info
