@@ -1,8 +1,11 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.2 2002/11/06 05:50:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.3 2002/11/15 09:38:49 raker Exp $
 
 *cinelerra-1.0.0 (11 Sep 2002)
+
+  15 Nov 2002; Nick Hadaway <raker@gentoo.org> cinelerra-1.0.0.ebuild :
+  Added gcc.eclass stuff so gcc3 is used if both 2 and 3 are installed.
 
   05 Nov 2002; Nick Hadaway <raker@gentoo.org> cinelerra-1.0.0.ebuild :
   Updated dependancies so it will only build on gcc3 systems
