@@ -1,6 +1,12 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.51 2003/07/12 18:16:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.52 2003/07/21 21:50:49 liquidx Exp $
+
+*galeon-1.3.6 (21 Jul 2003)
+
+  21 Jul 2003; Alastair Tse <liquidx@gentoo.org> galeon-1.2.11.ebuild,
+  galeon-1.3.6.ebuild:
+  bumping both gtk1 and gtk2 versions of galeon
 
   12 Jul 2003; Alastair Tse <liquidx@gentoo.org> galeon-1.3.5-r1.ebuild:
   it can support both 1.3 and 1.4
