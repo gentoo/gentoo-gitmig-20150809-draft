@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7h.ebuild,v 1.5 2003/12/17 04:35:16 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7h.ebuild,v 1.6 2004/04/25 00:44:10 dragonheart Exp $
 
 S=${WORKDIR}/${P}
 
@@ -17,8 +17,11 @@ LICENSE="GPL-2"
 DEPEND="sys-devel/flex
 	sys-libs/zlib
 	sys-devel/gcc
-	virtual/glibc"
+	virtual/glibc
+	>=sys-apps/sed-4"
 
+RDEPEND="sys-libs/zlib
+	virtual/glibc"
 
 src_compile() {
 	local myconf
@@ -29,6 +32,9 @@ src_compile() {
 }
 
 src_install() {
+
+	sed -i -e 's#$(TAR) xpf #$(TAR) --no-same-owner -xpf #' cache/Makefile
+
 	# Install the files
 	make prefix=${D}/usr SPOOLDIR=${D}/var/spool/wwwoffle CONFDIR=${D}/etc install || die
 

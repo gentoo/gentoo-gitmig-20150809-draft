@@ -1,6 +1,17 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.14 2004/03/19 17:42:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.15 2004/04/25 00:44:10 dragonheart Exp $
+
+*wwwoffle-2.8b (25 Apr 2004)
+
+  25 Apr 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  wwwoffle-2.7-r1.ebuild, wwwoffle-2.7b.ebuild, wwwoffle-2.7d.ebuild,
+  wwwoffle-2.7g.ebuild, wwwoffle-2.7h.ebuild, wwwoffle-2.8b.ebuild,
+  files/wwwoffled:
+  Thanks to tove <bugs@veller.net> in bug #35275. files/wwwoffled changed to use
+  --name in stop. 2.7g and 2.7h fixed tar unpack. Version bump to 2.8b as well.
+  Removed old versions.   Changed 2.8b so it stops wwwoffle before installation
+
 
   19 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> wwwoffle-2.7g.ebuild:
   stable on sparc
