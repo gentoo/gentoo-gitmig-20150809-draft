@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4bc00fcf1be88c202b5f32bc1056f415 tcptrace-6.6.1.ebuild 776
-MD5 cbd5752eb44d7db39f897c1778c1e28a tcptrace-6.6.1-r1.ebuild 1052
-MD5 e032230e28b0418f5833261046177c9a ChangeLog 1430
+MD5 85bf53928c316e80dfb50ce916da5de7 ChangeLog 1566
 MD5 1ca5a522a1c690bd58b9667fb3f3ebac metadata.xml 236
-MD5 53131797321a63c406299ae4bf29455c files/digest-tcptrace-6.6.1-r1 67
+MD5 db3388a13c64083ac997f236a82c4113 tcptrace-6.6.1-r1.ebuild 1053
+MD5 3e81fa2f3edfd594f4895c36a7792062 tcptrace-6.6.1.ebuild 781
 MD5 53131797321a63c406299ae4bf29455c files/digest-tcptrace-6.6.1 67
+MD5 53131797321a63c406299ae4bf29455c files/digest-tcptrace-6.6.1-r1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBjNLQT+MN7JbqCpMRAqwtAJ9woP2aCzVBk+BVBlOGfaPiO1EsZACffWhZ
-s9NaCHVDKbPV9ohoD2LU+pM=
-=cQxR
+iD8DBQFB/j6FmdTrptrqvGERAqNGAJsE08PwEoGNqDZiExqFMwTnif933QCgikIF
+z5hTs4gNibxXex4B0FD808g=
+=hEcv
 -----END PGP SIGNATURE-----
