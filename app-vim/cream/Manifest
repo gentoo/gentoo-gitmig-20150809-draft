@@ -1,24 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 051ebe37a95ad97530e1f60988256dc9 cream-0.30-r1.ebuild 2122
+MD5 5bc4b841f09feb3e97091cb1767a36b2 cream-0.30-r1.ebuild 2120
 MD5 b5480467d60a7baef45eaf6e1e89f6e2 cream-0.29-r1.ebuild 2048
-MD5 e1681c89e2b8d46295b1e8a89227b67a ChangeLog 2193
+MD5 6966a8c0caae48d13b7c0b046aeb7fca ChangeLog 2364
 MD5 0f44d41b4361ca8e1412c3d395cc3923 metadata.xml 434
 MD5 ed33e142107e0ad62a7ee9dbb65faf99 cream-0.28.ebuild 838
-MD5 7cf7bf79712644ca4c1bdf6e957c077f cream-0.30.ebuild 2048
 MD5 72e0247891a704fa4cbe72a221b62a56 files/cream-0.29-ctags.patch 825
 MD5 305830ed8a287efa536fb2a951a75c7f files/digest-cream-0.30-r1 347
 MD5 94138ab0e32dfd93c1412066535c1edf files/digest-cream-0.29-r1 347
 MD5 11a37b610fef3f6de7fca7058b1432e2 files/cream-0.29-paths.patch 1801
 MD5 a4b3168e3d6553e216fece5e86da946d files/cream.sh 128
 MD5 b805bdc2fd56028f6182d4fe44cfb033 files/digest-cream-0.28 62
-MD5 305830ed8a287efa536fb2a951a75c7f files/digest-cream-0.30 347
 MD5 130945b9ad1e1413be8ede26054e2a91 files/cream-0.29-desktop.patch 313
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBHBO7LLFUmVNQ7rkRAuO5AKCKf7RxFLa/ln2vfz7oFOvYogiphACfTTkk
-cmRVMF7QRaA1hnUDaNGd8S8=
-=Pm+v
+iD8DBQFBJifOLLFUmVNQ7rkRAn7sAJ9+SCumpJdT4YE84Ut8asb8s2ywjwCgug6u
+xX5toasl/RSy3dBr3lNIYL0=
+=WTI+
 -----END PGP SIGNATURE-----
