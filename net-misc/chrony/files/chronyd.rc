@@ -1,23 +1,19 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc6,v 1.3 2002/03/24 14:25:31 azarah Exp
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/files/chronyd.rc,v 1.3 2003/06/16 16:08:22 vapier Exp $
 
 depend() {
 	need net
 }
 
-CFGFILE=/etc/chrony/chrony.conf
-
 checkconfig() {
-
 	# Note that /etc/chrony.keys is *NOT* checked. This
 	# is because the user may have specified another key
 	# file, and we don't want to force the user to use that
 	# exact name for the key file.
-	if [ ! -f $CFGFILE ]
-	then
-		eerror "Please create $cfgfile and the"
+	if [ ! -f $CFGFILE ] ; then
+		eerror "Please create $CFGFILE and the"
 		eerror "chrony key file (usually /etc/chrony/chrony.keys)"
 		eerror "by using the"
 		eerror ""

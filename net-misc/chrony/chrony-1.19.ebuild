@@ -1,68 +1,45 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.19.ebuild,v 1.1 2003/03/18 10:27:05 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.19.ebuild,v 1.2 2003/06/16 16:08:22 vapier Exp $
 
-IUSE="readline"
+inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="NTP client and server programs"
 SRC_URI="http://chrony.sunsite.dk/download/${P}.tar.gz"
-HOMEPAGE="http://chrony.sunsite.dk"
+HOMEPAGE="http://chrony.sunsite.dk/"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
+IUSE="readline"
 
 DEPEND="virtual/glibc
-		readline? ( >=readline-4.1-r4 )"
-RDEPEND=$DEPEND
+	readline? ( >=readline-4.1-r4 )"
 
-# Patch the distribution so that it puts stuff in /etc/chrony/ by default
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	cp conf.c conf.c.orig
-	patch -p0 < ${FILESDIR}/${P}-conf.c-gentoo.diff
-	cd examples
-	cp chrony.conf.example chrony.conf.example.orig
-	patch -p0 < ${FILESDIR}/${P}-chrony.conf.example-gentoo.diff
+	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-conf.c-gentoo.diff
+	epatch ${FILESDIR}/${P}-chrony.conf.example-gentoo.diff
 }
 
 src_compile() {
-
-	local myconf
-
-	use readline || myconf="--disable-readline"
-
-	./configure \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		$myconf || die "./configure failed"
-		
+	econf `use_enable readline` || die
 	emake all docs || die
 }
 
-src_install () {
-	# the chrony install is brain-dead so we'll
-	# just do it ourselves.
-
+src_install() {
+	# the chrony install is brain-dead so we'll just do it ourselves
 	dobin chronyc
 	dosbin chronyd
-	
-	# documentation
-	dodoc chrony.txt chrony.html COPYING README
 
-	# man pages
+	dodoc chrony.txt README examples/chrony.{conf,keys}.example
+	dohtml chrony.html
 	doman *.{1,5,8}	
-
-	# info files
 	doinfo chrony.info*
 
-	# example configuration files
-	dodoc examples/chrony.conf.example
-	dodoc examples/chrony.keys.example
-
-	# system configuration
-	exeinto /etc/init.d ; newexe ${FILESDIR}/chronyd.rc chronyd
 	dodir /etc/chrony
+	exeinto /etc/init.d ; newexe ${FILESDIR}/chronyd.rc chronyd
+	insinto /etc/conf.d ; newins ${FILESDIR}/chronyd.conf chronyd
+	dosed "s:the documentation directory:/usr/share/doc/${PF}/:" /etc/init.d/chronyd
 }
