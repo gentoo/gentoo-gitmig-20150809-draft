@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r4.ebuild,v 1.9 2005/02/07 00:55:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r4.ebuild,v 1.10 2005/02/25 15:09:41 agriffis Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp vanilla"
 
 edit_threads_patch="patch-1.5.5.1.cd.edit_threads.9.5-gentoo.bz2"
 compressed_patch="patch-${PV}.rr.compressed.gz"
-nntp_patch="patch-${PV}.vvv.nntp-gentoo-r2.bz2"
+nntp_patch="patch-${PV}.vvv.nntp-gentoo-r3.bz2"
 mbox_hook_patch="patch-${PV}.dw.mbox-hook.1"
 header_cache_patch="patch-${PV}.tg.hcache.8"
 pgp_timeout_patch="patch-${PV}.dw.pgp-timeout.1"

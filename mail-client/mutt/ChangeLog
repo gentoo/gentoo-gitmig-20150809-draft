@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.31 2005/02/21 18:38:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.32 2005/02/25 15:09:41 agriffis Exp $
+
+  25 Feb 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6-r4.ebuild,
+  mutt-1.5.6-r5.ebuild:
+  Fix the nntp patch to apply to both -r4 and -r5. Bump the nntp patch to -r3
+  since it has been updated. #83151
 
   21 Feb 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6-r5.ebuild:
   Mark 1.5.6-r5 stable on alpha, amd64, ia64 and x86
