@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/winesetuptk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/ChangeLog,v 1.6 2002/09/04 06:38:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/ChangeLog,v 1.7 2002/12/11 00:18:19 seemant Exp $
+
+*winesetuptk-0.6.0b-r3 (10 Dec 2002)
+
+  10 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  winesetuptk-0.6.0b-r3.ebuild files/digest-winesetuptk-0.6.0b-r3 :
+
+  Version bump to Debian unstable's latest (-1.1)
 
 *winesetuptk-0.6.0b-r2 (19 August 2002)
 
