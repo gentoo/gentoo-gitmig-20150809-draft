@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.15 2004/03/31 14:32:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.16 2004/04/14 07:30:54 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> hddtemp-0.2.ebuild:
+  Added IUSE=.
 
   31 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> hddtemp-0.3_beta11.ebuild:
   Mark stable on x86, removing an old version.
