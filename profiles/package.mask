@@ -22,6 +22,12 @@
 ##
 
 # <azarah@gentoo.org> (09 Nov 2002)
+# new evo and gtkhtml.  gtkhtml breaks compat a bit with
+# 1.0
+>=net-mail/evolution-1.1.90
+>=gnome-extra/gtkhtml-1.1.4
+
+# <azarah@gentoo.org> (09 Nov 2002)
 # author say its borked
 >=app-admin/usermin-0.970
 
