@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/sdif
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/ChangeLog,v 1.1 2004/09/03 05:42:13 chriswhite Exp $
+
+*sdif-3.8.6 (03 Sep 2004)
+
+  03 Sep 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/sdif-3.8.6-cflags.patch, +sdif-3.8.6.ebuild:
+  Initial Import into the tree.
+
