@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.72-r3.ebuild,v 1.1 2003/06/22 08:55:50 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.74-r1.ebuild,v 1.1 2003/07/03 13:56:44 latexer Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 inherit eutils 
