@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r11.ebuild,v 1.3 2004/09/08 16:33:03 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r11.ebuild,v 1.4 2004/09/27 08:40:41 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -220,9 +220,9 @@ pkg_postinst() {
 	fi
 
 	if [ ! -f "/etc/portage/package.mask" ]; then
-	  if [ -f "/etc/portage/profiles/package.mask" ]; then
-			ln /etc/portage/profiles/package.mask /etc/portage/package.mask
-			einfo "/etc/portage/profiles/package.mask is now /etc/portage/package.mask"
+	  if [ -f "/etc/portage/profile/package.mask" ]; then
+			ln /etc/portage/profile/package.mask /etc/portage/package.mask
+			einfo "/etc/portage/profile/package.mask is now /etc/portage/package.mask"
 			einfo "a hardlink has been created to the new location if it exists in profiles"
 			einfo "already."
 			echo
