@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.22 2004/04/12 02:00:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.23 2004/04/12 07:07:06 spyderous Exp $
+
+  12 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
+  PATCH_VER 0.4. Add 9300_all_4.3.0-ncurses-xf86cfg-bool-conflict.patch to avoid
+  conflict of bool between ncurses-5.4 and xf86cfg (#43491).
 
   11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   Add some arch-specific CFLAGS mangling.
