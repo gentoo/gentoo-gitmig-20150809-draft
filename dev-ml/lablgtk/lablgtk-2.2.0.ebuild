@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.2.0.ebuild,v 1.6 2004/06/25 00:02:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.2.0.ebuild,v 1.7 2004/07/14 16:29:32 agriffis Exp $
 
-IUSE="gnome opengl debug glade svg"
+IUSE="debug doc glade gnome opengl svg"
 
 DESCRIPTION="Objective CAML interface for Gtk+2"
 HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html"
