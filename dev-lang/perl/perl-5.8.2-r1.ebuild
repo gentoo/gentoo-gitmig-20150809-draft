@@ -1,13 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r1.ebuild,v 1.9 2004/02/19 22:31:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r1.ebuild,v 1.10 2004/04/28 06:06:08 vapier Exp $
 
-inherit eutils flag-o-matic
-
-# Perl has problems compiling with -Os in your flags
-replace-flags "-Os" "-O2"
-# This flag makes compiling crash in interesting ways
-filter-flags -malign-double
+inherit eutils flag-o-matic gcc
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -41,7 +36,7 @@ RDEPEND="berkdb? ( sys-libs/db )
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'threads'
 	# in USE if it could break things ...
-	if [ -n "`use threads`" ]
+	if use threads
 	then
 		ewarn ""
 		ewarn "PLEASE NOTE: You are compiling perl-5.8 with"
@@ -72,7 +67,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-
 	unpack ${A}
 
 	# Get -lpthread linked before -lc.  This is needed
@@ -103,11 +97,15 @@ src_unpack() {
 }
 
 src_compile() {
+	# Perl has problems compiling with -Os in your flags
+	replace-flags "-Os" "-O2"
+	# This flag makes compiling crash in interesting ways
+	filter-flags -malign-double
 
 	export LC_ALL="C"
 	local myconf=""
 
-	if [ "`use threads`" ]
+	if use threads
 	then
 		einfo "using threads"
 		mythreading="-multi"
@@ -117,11 +115,11 @@ src_compile() {
 		myarch="${CHOST%%-*}-linux"
 	fi
 
-	if [ "`use gdbm`" ]
+	if use gdbm
 	then
 		myconf="${myconf} -Di_gdbm"
 	fi
-	if [ "`use berkdb`" ]
+	if use berkdb
 	then
 		myconf="${myconf} -Di_db"
 
@@ -139,23 +137,23 @@ src_compile() {
 	else
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
-	if [ "`use mips`" ]
+	if use mips
 	then
 		# this is needed because gcc 3.3-compiled kernels will hang
 		# the machine trying to run this test - check with `Kumba
 		# <rac@gentoo.org> 2003.06.26
 		myconf="${myconf} -Dd_u32align"
 	fi
-	if [ "`use sparc`" ]
+	if use sparc`" ]
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
-	if [ "`use sparc64`" ]
+	if use sparc64`" ]
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
 
-	if [ "`use alpha`" -a "${CC}" == "ccc" ]
+	if use alpha && "$(gcc-getCC)" == "ccc"
 	then
 		ewarn "Perl will not be built with berkdb support, use gcc if you needed it..."
 		myconf="${myconf} -Ui_db -Ui_ndbm"
@@ -320,5 +318,3 @@ pkg_postinst() {
 	eerror ""
 	eerror ""
 }
-
-
