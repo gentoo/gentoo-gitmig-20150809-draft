@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.2.3.ebuild,v 1.3 2004/08/13 18:42:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.2.3.ebuild,v 1.4 2004/12/08 00:00:12 pythonhead Exp $
 
 inherit eutils kde wxwidgets
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc"
 
-DEPEND=">=x11-libs/wxGTK-2.3.4
+DEPEND="<x11-libs/wxGTK-2.5
 	app-arch/zip
 	>=sys-libs/db-3"
 
