@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.005.ebuild,v 1.2 2003/10/10 16:22:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.005.ebuild,v 1.3 2003/10/10 16:23:21 mholzer Exp $
 
 MY_P=eGroupWare-${PV}
 S=${WORKDIR}/${PN}
@@ -38,11 +38,11 @@ src_install() {
 	cd ${WORKDIR}
 	cp -r . ${D}/${HTTPD_ROOT}
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN} 
+	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN}
 	dohtml ${PN}/doc/en_US/html/admin/*.html
 }
 
 pkg_postinst() {
 	einfo "Follow the instructions at /usr/share/doc/${PF}/html/x62.html#AEN134 "
-	einfo "to complete the install.  You need to add MySQL users and configure egroupware" 
+	einfo "to complete the install.  You need to add MySQL users and configure egroupware"
 }
