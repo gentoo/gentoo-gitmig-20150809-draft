@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.18.ebuild,v 1.2 2004/04/06 03:49:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.18.ebuild,v 1.3 2004/05/11 04:44:28 weeve Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.wonderworks.com/vm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="virtual/glibc
 	virtual/emacs"
