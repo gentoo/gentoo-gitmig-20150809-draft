@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.8.1.ebuild,v 1.2 2004/07/30 22:12:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.8.1.ebuild,v 1.3 2004/08/28 13:59:59 usata Exp $
 
 inherit eutils
 
@@ -14,19 +14,18 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 LICENSE="GPL-2"
 
-DEPEND="${DEPEND}
-	sys-devel/automake
+DEPEND="sys-devel/automake
 	sys-devel/libtool
 	net-www/mozilla
 	x11-libs/pango
-	>=x11-libs/gtk+-2*
+	>=x11-libs/gtk+-2
 	dev-util/pkgconfig
 	migemo? ( app-text/migemo dev-ruby/uconv )
 	estraier? ( app-text/estraier )"
 
 RDEPEND="net-www/mozilla
 	x11-libs/pango
-	>=x11-libs/gtk+-2*
+	>=x11-libs/gtk+-2
 	migemo? ( app-text/migemo dev-ruby/uconv )
 	estraier? ( app-text/estraier )"
 

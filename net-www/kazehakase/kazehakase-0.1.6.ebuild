@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.6.ebuild,v 1.3 2004/07/04 16:16:53 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.6.ebuild,v 1.4 2004/08/28 13:59:59 usata Exp $
 
 inherit eutils
 
@@ -14,15 +14,12 @@ SLOT="0"
 KEYWORDS="x86 ~alpha ~amd64 ~ppc"
 LICENSE="GPL-2"
 
-DEPEND="${DEPEND}
-	sys-devel/automake
+DEPEND="sys-devel/automake
 	sys-devel/libtool
 	<net-www/mozilla-1.7
 	x11-libs/pango
-	>=x11-libs/gtk+-2*
+	>=x11-libs/gtk+-2
 	dev-util/pkgconfig"
-
-S="${WORKDIR}/${P}"
 
 pkg_setup(){
 	if grep -v gtk2 /var/db/pkg/net-www/mozilla-[[:digit:]]*/USE > /dev/null

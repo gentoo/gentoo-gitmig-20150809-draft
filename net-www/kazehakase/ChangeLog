@@ -1,6 +1,10 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.15 2004/08/09 18:35:10 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.16 2004/08/28 13:59:59 usata Exp $
+
+  28 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> kazehakase-0.1.6.ebuild,
+  kazehakase-0.1.8.1-r1.ebuild, kazehakase-0.1.8.1.ebuild:
+  Added to ~ppc.
 
 *kazehakase-0.1.8.1-r1 (09 Aug 2004)
 
