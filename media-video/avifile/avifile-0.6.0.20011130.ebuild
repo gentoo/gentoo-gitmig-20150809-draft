@@ -14,7 +14,7 @@ HOMEPAGE="http://divx.euro.ru/"
 DEPEND="media-libs/win32codecs
 	>=media-libs/libsdl-1.2.2
 	>=media-libs/divx4linux-20011025
-	qt? ( >=x11-libs/qt-2 )
+	qt? ( =x11-libs/qt-2* )
 	nas? ( >=media-libs/nas-1.4.2 )"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Nathaniel Hirsch <nh2@njit.edu> Achim Gottinge <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.91.ebuild,v 1.1 2002/01/02 19:52:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.91.ebuild,v 1.2 2002/02/03 21:46:14 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DVD / video player"
@@ -11,7 +11,7 @@ DEPEND=">=media-libs/libsdl-1.1.8-r1
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
     esd? ( >=media-sound/esound-0.2.22 )
     ggi? ( >=media-libs/libggi-2.0_beta3 )
-    qt? ( >=x11-libs/qt-2.3.0 )
+    qt? ( =x11-libs/qt-2.3 )
     gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
     #alsa? ( >=media-libs/alsa-lib-0.5.10 )
     X? ( virtual/x11 )"

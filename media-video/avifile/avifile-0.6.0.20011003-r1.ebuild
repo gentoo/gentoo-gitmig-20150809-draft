@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011003-r1.ebuild,v 1.3 2001/12/29 17:41:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011003-r1.ebuild,v 1.4 2002/02/03 21:43:11 danarmak Exp $
 
 P=${PN}-0.6.0-20011003
 S=${WORKDIR}/${PN}-0.6.0
@@ -12,8 +12,8 @@ SRC_URI="http://avifile.sourceforge.net/${P}.tgz
 
 HOMEPAGE="http://divx.euro.ru/"
 
-DEPEND="virtual/glibc qt? ( >=x11-libs/qt-2.2.2 ) >=media-libs/libsdl-1.1.5  app-arch/unzip"
-RDEPEND="virtual/glibc qt? ( >=x11-libs/qt-2.2.2 ) >=media-libs/libsdl-1.1.5"
+DEPEND="virtual/glibc qt? ( =x11-libs/qt-2* ) >=media-libs/libsdl-1.1.5  app-arch/unzip"
+RDEPEND="virtual/glibc qt? ( =x11-libs/qt-2* ) >=media-libs/libsdl-1.1.5"
 
 src_unpack() {
   unpack ${P}.tgz
