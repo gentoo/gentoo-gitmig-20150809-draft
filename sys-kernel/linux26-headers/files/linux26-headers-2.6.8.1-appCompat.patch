@@ -929,17 +929,17 @@ diff -ur linux-2.6.8.1/include/linux/wait.h linux-2.6.8.1-gentoo/include/linux/w
 -#endif /* __KERNEL__ */
 -
  #endif
-diff -ur linux-2.6.7/include/linux/fd.h linux-2.6.7-gentoo/include/linux/fd.h
---- linux-2.6.7/include/linux/fd.h	2004-06-12 12:11:54.000000000 +0100
-+++ linux-2.6.7-gentoo/include/linux/fd.h	2004-06-18 20:53:39.000000000 +0100
-@@ -1,6 +1,7 @@
- #ifndef _LINUX_FD_H
- #define _LINUX_FD_H
+diff -ur linux-2.6.8.1/include/linux/fd.h linux-2.6.8.1-gentoo/include/linux/fd.h
+--- linux-2.6.8.1/include/linux/fd.h	2004-06-12 12:11:54.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/linux/fd.h	2004-06-18 20:53:39.000000000 +0100
+@@ -3,6 +3,7 @@
  
-+#include <linux/compiler.h>
  #include <linux/ioctl.h>
+ #include <linux/compiler.h>
++#include <linux/types.h>
  
  /* New file layout: Now the ioctl definitions immediately follow the
+  * definitions of the structures that they use */
 diff -ur linux-2.6.8.1/include/linux/compiler.h linux-2.6.8.1-gentoo/include/linux/compiler.h
 --- linux-2.6.8.1/include/linux/compiler.h	2004-06-12 12:11:54.000000000 +0100
 +++ linux-2.6.8.1-gentoo/include/linux/compiler.h	2004-06-24 09:48:32.478502752 +0100
@@ -977,9 +977,9 @@ diff -ur linux-2.6.8.1/include/linux/compiler.h linux-2.6.8.1-gentoo/include/lin
  /* Optimization barrier */
  #ifndef barrier
 -# define barrier() __memory_barrier()
-+# define __ffs /* Prevent ffs(...) getting declared when we don't need it */
++# define __ffs_X /* Prevent ffs(...) getting declared when we don't need it */
 +# include <asm/system.h>
-+# undef __ffs
++# undef __ffs_X
 +# ifdef mb
 +#   define barrier() mb()
 +# else
@@ -1212,7 +1212,23 @@ diff -urp linux-2.6.7/include/asm-parisc/bitops.h linux-2.6.7-gentoo/include/asm
  /**
   * __ffs - find first bit in word. returns 0 to "BITS_PER_LONG-1".
   * @word: The word to search
-@@ -345,8 +343,6 @@ static inline int sched_find_first_bit(u
+@@ -224,6 +222,7 @@ static __inline__ int test_bit(int nr, c
+  * cycles for each mispredicted branch.
+  */
+ 
++#ifndef __ffs_X
+ static __inline__ unsigned long __ffs(unsigned long x)
+ {
+ 	unsigned long ret;
+@@ -254,6 +253,7 @@ static __inline__ unsigned long __ffs(un
+ 			: "+r" (x), "=r" (ret) );
+ 	return ret;
+ }
++#endif
+ 
+ /* Undefined if no bit is zero. */
+ #define ffz(x)	__ffs(~x)
+@@ -345,8 +345,6 @@ static inline int sched_find_first_bit(c
  #endif
  }
  
@@ -1221,7 +1237,7 @@ diff -urp linux-2.6.7/include/asm-parisc/bitops.h linux-2.6.7-gentoo/include/asm
  /*
   * This implementation of find_{first,next}_zero_bit was stolen from
   * Linus' asm-alpha/bitops.h.
-@@ -486,7 +482,7 @@ extern __inline__ unsigned long ext2_fin
+@@ -486,7 +484,7 @@ extern __inline__ unsigned long ext2_fin
  	size -= result;
  	offset &= 31UL;
  	if (offset) {
@@ -1230,7 +1246,7 @@ diff -urp linux-2.6.7/include/asm-parisc/bitops.h linux-2.6.7-gentoo/include/asm
  		tmp |= ~0UL >> (32-offset);
  		if (size < 32)
  			goto found_first;
-@@ -496,14 +492,14 @@ extern __inline__ unsigned long ext2_fin
+@@ -496,14 +494,14 @@ extern __inline__ unsigned long ext2_fin
  		result += 32;
  	}
  	while (size >= 32) {
@@ -1811,7 +1827,7 @@ diff -ur linux-2.6.8.1/include/asm-alpha/bitops.h linux-2.6.8.1-gentoo/include/a
  /*
   * __ffs = Find First set bit in word.  Undefined if no set bit exists.
   */
-+#ifndef __ffs
++#ifndef __ffs_X
  static inline unsigned long __ffs(unsigned long word)
  {
  #if defined(__alpha_cix__) && defined(__alpha_fix__)
@@ -1830,7 +1846,7 @@ diff -ur linux-2.6.8.1/include/asm-i386/bitops.h linux-2.6.8.1-gentoo/include/as
   *
   * Undefined if no bit exists, so code should check against 0 first.
   */
-+#ifndef __ffs
++#ifndef __ffs_X
  static inline unsigned long __ffs(unsigned long word)
  {
  	__asm__("bsfl %1,%0"
@@ -1849,7 +1865,7 @@ diff -ur linux-2.6.8.1/include/asm-ia64/bitops.h linux-2.6.8.1-gentoo/include/as
   *
   * Undefined if no bit exists, so code should check against 0 first.
   */
-+#ifndef __ffs
++#ifndef __ffs_X
  static __inline__ unsigned long
  __ffs (unsigned long x)
  {
@@ -1868,7 +1884,7 @@ diff -ur linux-2.6.8.1/include/asm-sparc64/bitops.h linux-2.6.8.1-gentoo/include
   *
   * Undefined if no bit exists, so code should check against 0 first.
   */
-+#ifndef __ffs
++#ifndef __ffs_X
  static __inline__ unsigned long __ffs(unsigned long word)
  {
  	unsigned long result = 0;
