@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.2 2005/01/02 00:11:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.3 2005/01/02 02:42:43 dragonheart Exp $
+
+  02 Jan 2005; Daniel Black <dragonheart@gentoo.org> monotone-0.16.ebuild:
+  Added strip-flags at the suggestion of Wojciech Milkowski
+  <wmilkowski@gazeta.pl>. bug #76332
 
 *monotone-0.16 (02 Jan 2005)
 
