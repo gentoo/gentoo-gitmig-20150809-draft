@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1.ebuild,v 1.1 2002/12/05 04:14:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1.ebuild,v 1.2 2002/12/05 14:16:44 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -113,12 +113,6 @@ moz_setup() {
 	export MOZILLA_OFFICIAL=1
 	export BUILD_OFFICIAL=1
 
-	# enable XFT
-	if [ "${DISABLE_XFT}" != "1" ]
-	then
-		export MOZ_ENABLE_XFT="1"
-	fi
-	
 	# make sure the nss module gets build (for NSS support)
 	if [ -n "`use ssl`" ]
 	then
@@ -240,22 +234,20 @@ src_compile() {
 		fi
 	fi
 
-	if [ -n "${MOZ_ENABLE_XFT}" ]
+	if [ -n "`use gtk2`" ]
 	then
-		if [ -n "`use gtk2`" ]
+		# Only enable Xft if we have Xft2.0 installed ...
+		if (test -x /usr/bin/pkg-config) && (pkg-config xft)
 		then
-			# Only enable Xft if we have Xft2.0 installed ...
-			if pkg-config xft 2> /dev/null
-			then
-				einfo "Building with Xft2.0 support!"
-				myconf="${myconf} --enable-xft"
-			else
-				myconf="${myconf} --disable-xft"
-			fi
-		else
 			einfo "Building with Xft2.0 support!"
 			myconf="${myconf} --enable-xft"
+		else
+			ewarn "Building without Xft2.0 support!"
+			myconf="${myconf} --disable-xft"
 		fi
+	else
+		einfo "Building with Xft2.0 support!"
+		myconf="${myconf} --enable-xft"
 	fi
 
 	if [ -n "`use ipv6`" ]
