@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.17 2004/09/22 14:37:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.18 2004/10/01 20:24:46 mcummings Exp $
+
+  01 Oct 2004; <mcummings@gentoo.org> XML-DT-0.32.ebuild:
+  Tested new version with re-keyworded deps and all appears to be in working
+  order. Adding ~sparc to keywords.
 
 *XML-DT-0.32 (22 Sep 2004)
 
