@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/l7-filter
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.3 2004/12/02 11:38:54 dragonheart Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.4 2005/01/04 09:28:13 dragonheart Exp $
+
+*l7-filter-0.9.1-r1 (04 Jan 2005)
+
+  04 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +l7-filter-0.9.1-r1.ebuild:
+  revision bump to transition to linux-info eclass and 2.6.10 support added
 
   02 Dec 2004; Daniel Black <dragonheart@gentoo.org> l7-filter-0.9.1.ebuild:
   Fixes for bug #69279 kernel 2.6.9 support. bug #65770 - kernel 2.4 support.

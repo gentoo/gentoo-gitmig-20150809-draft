@@ -1,31 +1,33 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-0.9.1.ebuild,v 1.4 2005/01/04 09:28:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-0.9.1-r1.ebuild,v 1.1 2005/01/04 09:28:13 dragonheart Exp $
 
-inherit kernel-mod eutils
+inherit linux-info eutils
 
 MY_P=netfilter-layer7-v${PV}
 DESCRIPTION="Kernel modules for layer 7 iptables filtering"
 HOMEPAGE="http://l7-filter.sourceforge.net"
 SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
-	mirror://sourceforge/l7-filter/kernel-2.6-layer7-${PV}+working_with_2.6.9.patch"
-LICENSE="GPL-2"
-SLOT="${KV}"
-KEYWORDS="x86 ~ppc"
-IUSE=""
+	mirror://sourceforge/l7-filter/kernel-2.6-layer7-${PV}+working_with_2.6.9.patch
+	mirror://gentoo/kernel-2.6-layer7-0.9.1+working_with_2.6.10.patch"
 
+# 2.6.10 patch from
+# http://sourceforge.net/tracker/download.php?group_id=80085&atid=558670&file_id=113753&aid=1092484
+
+LICENSE="GPL-2"
+KEYWORDS="~x86 ~ppc"
+IUSE=""
+SLOT="${KV}"
 S=${WORKDIR}/${MY_P}
 DEPEND=""
 
 src_unpack() {
 
 	ewarn "This may not work with all kernels."
-	ewarn "This only patches the current kernel source code. (${KV_OUTPUT})"
+	ewarn "This only patches the current kernel source code. (${KV_DIR})"
 	ewarn "Its up to you to recompile the kernel with the l7 options"
 
 	unpack ${MY_P}.tar.gz
-
-	kernel-mod_getversion
 
 	cd ${S}
 
@@ -34,28 +36,29 @@ src_unpack() {
 
 
 	local PATCH
-	if kernel-mod_is_2_4_kernel
+	if kernel_is 2 4
 	then
 		PATCH=${S}/kernel-${KV_MAJOR}.${KV_MINOR}-layer7-${PV}.patch
+	elif kernel_is 2 6 9
+	then
+		PATCH=${DISTDIR}/kernel-2.6-layer7-${PV}+working_with_2.6.9.patch
+	elif kernel_is ge 2 6 10
+	then
+		PATCH=${DISTDIR}/kernel-2.6-layer7-0.9.1+working_with_2.6.10.patch
 	else
-		if [ "${KV_PATCH}" -ge 9 ]
-		then
-			PATCH=${DISTDIR}/kernel-2.6-layer7-${PV}+working_with_2.6.9.patch
-		else
-			PATCH=${S}/kernel-${KV_MAJOR}.${KV_MINOR}-layer7-${PV}.patch
-		fi
+		PATCH=${S}/kernel-${KV_MAJOR}.${KV_MINOR}-layer7-${PV}.patch
 	fi
 
 	if [ ! -f ${PATCH} ];
 	then
-		die "Kernel version ${KV_VERSION_FULL} no supported"
+		die "Kernel version ${KV_FULL} no supported"
 	fi
 
 	# create needed directories
 	mkdir -p ${S}/kernel/net/ipv4/netfilter/regexp/
 	mkdir -p ${S}/kernel/include/linux/netfilter_ipv4/
 
-	cd ${KERNEL_DIR}
+	cd ${KV_DIR}
 
 
 	# start to copy needed files, if file not exists create an empty file
@@ -80,12 +83,13 @@ src_compile() {
 }
 
 src_install() {
-	dodir ${KERNEL_DIR}
-	cp -a kernel/* ${D}/${KERNEL_DIR}
+	dodir ${KV_DIR}
+	cp -a kernel/* ${D}/${KV_DIR}
+	chown -R root:root ${D}
 }
 
 
 pkg_postinst() {
 	ewarn "This may not work with all kernels."
-	ewarn "This only patches the current kernel source code (${KERNEL_DIR})"
+	ewarn "This only patches the current kernel source code (${KV_DIR})"
 }
