@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.2.0.ebuild,v 1.13 2003/07/04 19:58:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.2.0.ebuild,v 1.14 2003/07/15 13:10:32 todd Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 RDEPEND="gnome-base/ORBit2
 	>=dev-libs/glib-2.0.6
