@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5_pre.ebuild,v 1.2 2002/08/21 12:23:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5_pre.ebuild,v 1.3 2002/08/21 22:42:48 azarah Exp $
 
 SNAPSHOT="20020726"
 TVISIONVER="1.1.4"
@@ -35,6 +35,9 @@ DEPEND="virtual/glibc
 	sys-libs/gpm
 	sys-libs/zlib"
 #	app-text/tetex"
+
+RDEPEND="${DEPEND}
+	X? ( x11-terms/eterm )"
 
 
 src_compile() {
@@ -87,6 +90,9 @@ src_compile() {
 	sed -e 's:CFLAGS="-g -O2":CFLAGS="-g":' \
 	    -e 's:CFLAGS="-O2":CFLAGS="":' \
 	    configure.orig > configure
+	cp libgdb/makefile.src libgdb/makefile.src.orig
+	sed -e 's:-O2::g' libgdb/makefile.src.orig > \
+		libgdb/makefile.src
 
 	# Fix a dependency due to a broken .mak file
 	cp rh_comm.mak rh_comm.mak.orig
