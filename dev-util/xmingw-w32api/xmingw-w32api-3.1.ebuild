@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/xmingw-w32api-3.1.ebuild,v 1.2 2004/10/25 16:36:02 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/xmingw-w32api-3.1.ebuild,v 1.3 2004/11/17 16:58:53 cretin Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	ln -s ${MY_P} w32api
 	ln -s ${RUNTIME} mingw
 	epatch ${FILESDIR}/xmingw-w32api-3.1-include.patch
+	epatch ${FILESDIR}/xmingw-w32api-3.1-ntddk.patch
 }
 
 src_compile() {

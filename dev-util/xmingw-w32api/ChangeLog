@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xmingw-w32api
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.8 2004/10/25 16:36:02 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.9 2004/11/17 16:58:53 cretin Exp $
+
+  17 Nov 2004; Stefan Jones <cretin@gentoo.org> +xmingw-w32api-3.1-ntddk.patch:
+  Patch for bug #70949
 
   25 Oct 2004; Stefan Jones <cretin@gentoo.org>
   +xmingw-w32api-3.1-include.patch :
