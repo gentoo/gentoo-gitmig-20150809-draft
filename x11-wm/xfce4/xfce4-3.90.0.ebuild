@@ -15,9 +15,9 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 DEPEND=">=x11-libs/gtk+-2.0.6
 	dev-util/pkgconfig
 	dev-libs/libxml2
-        =x11-libs/libxfce4util-3.90.0
-        =x11-libs/libxfcegui4-3.90.0
-        =x11-libs/libxfce4mcs-3.90.0
+	=x11-libs/libxfce4util-3.90.0
+	=x11-libs/libxfcegui4-3.90.0
+	=x11-libs/libxfce4mcs-3.90.0
 	=x11-misc/xfce-mcs-manager-3.90.0
 	=x11-misc/xfce-mcs-plugins-3.90.0
 	=x11-wm/xfwm4-3.90.0
@@ -32,7 +32,7 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 src_install() {
 	dodir /etc/X11/Sessions
 	echo startxfce4 > ${D}/etc/X11/Sessions/XFCE-4
-	chmod +755 ${D}/etc/X11/Sessions/XFCE-4
+	fperms 755 /etc/X11/Sessions/XFCE-4
 	
 	einfo "This is just a wrapper script to install all the components of Xfce4"
 	einfo "Use startxfce4 to initialize. You also might want to emerge the extras"
