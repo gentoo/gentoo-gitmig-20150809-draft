@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/glabels
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/ChangeLog,v 1.5 2003/11/07 08:53:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/ChangeLog,v 1.6 2003/11/12 21:28:37 liquidx Exp $
+
+*glabels-1.92.3 (12 Nov 2003)
+
+  12 Nov 2003; Alastair Tse <liquidx@gentoo.org> glabels-1.92.0.ebuild,
+  glabels-1.92.2.ebuild, glabels-1.92.3.ebuild:
+  version bump. marking 1.92.2 as stable
 
 *glabels-1.92.2 (07 Nov 2003)
 
