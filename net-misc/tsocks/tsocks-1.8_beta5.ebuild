@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/tsocks-1.8_beta5.ebuild,v 1.6 2005/02/22 23:52:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/tsocks-1.8_beta5.ebuild,v 1.7 2005/03/29 13:17:12 corsair Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tsocks/${PN}-${PV/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~amd64 ~ppc64"
 IUSE=""
 
 S=${WORKDIR}/tsocks-1.8
