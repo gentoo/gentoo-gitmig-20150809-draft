@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/basiliskII-jit
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.1 2004/03/21 14:18:48 dholm Exp $
+
+*basiliskII-jit-1.0.0 (21 Mar 2004)
+
+  21 Mar 2004; David Holm <dholm@gentoo.org> basiliskII-jit-1.0.0.ebuild,
+  metadata.xml:
+  This ebuild was incorrectly placed in the basiliskII directory. I have moved
+  it here since it is a fork of basiliskII and not the same project.
+
