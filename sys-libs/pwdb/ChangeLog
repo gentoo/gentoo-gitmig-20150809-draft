@@ -1,24 +1,22 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.4 2002/07/16 03:48:22 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.5 2002/09/21 04:06:20 vapier Exp $
+
+*pwdb-0.61-r3 (1 Feb 2002)
+
+  21 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added HOMEPAGE variable and updated SRC_URI
 
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
   Added ppc to keywords
 
   5 Apr 2002; M.Schlemmer <azarah@gentoo.org> pwdb-0.61-r3.ebuild :
-
   Remove lines to install /etc/pam.d/passwd, since it comes with shadow.
 
-*pwdb-0.61-r3 (21 Mar 2002)
-
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> pwdb-0.61-r3.ebuild :
-
   HTML documentation no longer gzipped.
 
-*pwdb-0.61-r3 (1 Feb 2002)
-
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
