@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.21 2004/02/22 20:45:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.22 2004/04/03 23:28:57 spyderous Exp $
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/pam-0.72
 	>=media-libs/gdk-pixbuf-0.11.0-r1"
 
 RDEPEND="${DEPEND}
-	>=x11-base/xfree-4.2.0-r3
+	virtual/x11
 	gnome? ( >=gnome-base/gnome-core-1.4.0.6 )"
 
 src_unpack() {
@@ -166,8 +166,6 @@ pkg_postinst() {
 	echo ""
 	einfo "To make GDM start at boot, edit /etc/rc.conf (or /etc/conf.d/basic)"
 	einfo "and then execute 'rc-update add xdm default'."
-	einfo ""
-	einfo "Note that you need xfree-4.1.0-r4 or later."
 }
 
 pkg_postrm() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.6.ebuild,v 1.7 2003/12/06 21:59:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.6.ebuild,v 1.8 2004/04/03 23:28:57 spyderous Exp $
 
 inherit eutils gnome2
 
@@ -28,7 +28,7 @@ RDEPEND=">=sys-libs/pam-0.72
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=app-text/scrollkeeper-0.3.11
-	>=x11-base/xfree-4.2.0-r3"
+	virtual/x11"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.55 2004/04/02 17:39:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.56 2004/04/03 23:28:57 spyderous Exp $
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; gdm-2.2.5.4-r5.ebuild,
+  gdm-2.4.1.6.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
 *gdm-2.4.4.7-r1 (02 Apr 2004)
 
