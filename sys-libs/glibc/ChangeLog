@@ -1,11 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.6 2002/06/05 16:24:48 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.7 2002/07/01 10:47:52 verwilst Exp $
+
+*glibc-2.2.5-r4 (5 June 2002)
 
   5 June 2002; Bart Verwilst <verwilst@gentoo.org> glibc-2.2.5-r4.ebuild :
 
   Added gcc3.1/binutils 2.12 patch, wich solves the nvidia-glx package, 
   amongst others... (__divdi3 stuff)
+  Update: Filtered -malign-double out of the ebuild as well now, because 
+  it b0rks glibc.
+  
 
   13 Apr 2002; M.Schlemmer <azarah@gentoo.org> glibc-2.2.5-r2.ebuild :
 
