@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gento.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-3.32-r2.ebuild,v 1.2 2001/12/30 22:18:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-3.34.ebuild,v 1.1 2001/12/30 22:18:40 drobbins Exp $
 
 #P=
 S=${WORKDIR}/${P}
