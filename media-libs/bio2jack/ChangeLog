@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.8 2004/11/14 09:14:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.9 2004/12/04 21:13:18 eradicator Exp $
+
+*bio2jack-0.4 (04 Dec 2004)
+
+  04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +bio2jack-0.4.ebuild:
+  Version bump.
 
   14 Nov 2004; Markus Rothe <corsair@gentoo.org> bio2jack-0.3-r1.ebuild:
   Marked ~ppc64; bug #68112
