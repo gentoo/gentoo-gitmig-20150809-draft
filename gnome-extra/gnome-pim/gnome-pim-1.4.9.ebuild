@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.9.ebuild,v 1.1 2003/07/28 18:59:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.9.ebuild,v 1.2 2003/08/30 09:59:10 liquidx Exp $
 
 IUSE="pda"
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~sparc alpha"
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 
 DEPEND="${RDEPEND}
-	pda? ( <gnome-extra/gnome-pilot-2 )"
+	pda? ( <app-pda/gnome-pilot-2 )"
 
 src_unpack() {
 	unpack ${A}
