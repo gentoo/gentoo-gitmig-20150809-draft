@@ -10,7 +10,11 @@ IUSE="nls"
 SLOT="3"
 
 DEPEND="virtual/xft
-	virtual/x11"
+	virtual/x11
+	>=dev-libs/glib-2
+	>=x11-libs/gtk+-2
+	>=gnome-base/libglade-2"
+	
 RDEPEND=${DEPEND}
 
 LICENSE="GPL-2"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.43 2003/08/24 06:41:37 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.44 2003/08/29 17:09:04 tseng Exp $
+
+  29 Aug 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0_alpha6.ebuild:
+  Fixed dependencies to include glib and gtk+2 (for obconf)
 
 *openbox-3.0_alpha6 (24 Aug 2003)
 
