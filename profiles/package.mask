@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# 23 Mar, m0rpheus: bind 8 keeps having serious problems.
+<=net-misc/bind-9.2.0 
+
 #these two needs automake-1.6 and autoconf-1.53
 =media-libs/audiofile-0.2.3-r1
 =app-office/abiword-0.99.3
