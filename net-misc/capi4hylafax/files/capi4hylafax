@@ -1,0 +1,20 @@
+#!/sbin/runscript
+
+depend() {
+	need capi
+}
+
+start() {
+	ebegin "Starting CAPI4HylaFAX"
+	start-stop-daemon -b -m --quiet --start --exec /usr/bin/c2faxrecv \
+		--pidfile /var/run/c2faxrecv.pid
+	eend $?
+
+}
+
+stop() {
+	ebegin "Stopping CAPI4HylaFAX"
+	start-stop-daemon -o --quiet --stop --pidfile /var/run/c2faxrecv.pid
+        eend $?
+
+}

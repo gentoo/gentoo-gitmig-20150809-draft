@@ -1,2 +1,5 @@
-MD5 9733ce85c79f376d127984dff8999612 capi4hylafax-01.02.02.ebuild 1121
+MD5 6aaa8bc134c5106f76662fc09635a07f capi4hylafax-01.02.02.ebuild 1488
+MD5 86839ab49843d9936a51027707b8422f metadata.xml 386
+MD5 ac11cc11287785b0a4a16ef3c5dc6ce4 ChangeLog 391
 MD5 7033ac371b28b9db979167f182afd52c files/digest-capi4hylafax-01.02.02 73
+MD5 8d2ed89bc1f0ec75d51b43a0bbec9a1e files/capi4hylafax 333
