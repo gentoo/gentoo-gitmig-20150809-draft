@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.7.ebuild,v 1.2 2004/01/02 16:31:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.7.ebuild,v 1.3 2004/02/26 06:24:28 jayskwak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk+-2.0 Hangul Input Modules"
@@ -9,7 +9,7 @@ SRC_URI="http://download.kldp.net/imhangul/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2.2.0"
 
