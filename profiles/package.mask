@@ -50,8 +50,6 @@
 #=media-gfx/imagemagick-5.4.7-r2
 
 # <raker@gentoo.org> (23 Sep 2002)
-# Testing a patch for gstreamer with USE="doc"
-=media-libs/gstreamer-0.4.1-r1
 # masking libsndfile-1.0.0 due to API changes
 >=media-libs/libsndfile-1.0.0
 
