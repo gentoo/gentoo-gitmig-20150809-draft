@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2c45f0411e46e931be8bfbb7b61c887a ChangeLog 2491
-MD5 d4cc992046cd8fe2a9ba5af9e2aca63d libcdio-0.64.ebuild 601
 MD5 024e0e0331e824ae4e8247df53afd3c6 libcdio-0.69.ebuild 783
+MD5 d4cc992046cd8fe2a9ba5af9e2aca63d libcdio-0.64.ebuild 601
 MD5 b6da764e61cb7f08bc47226698aacac2 libcdio-0.70.ebuild 864
-MD5 526f11a066c4a4c196484c623e3aa5c5 metadata.xml 164
+MD5 75cf34accd0710a9a5384340305a01cd ChangeLog 2584
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 0165911115603b51b34b8ae19ab71e2a files/digest-libcdio-0.64 65
 MD5 8276d2edab3e451a5639073967339ebb files/digest-libcdio-0.69 65
 MD5 29744769327f1087e4de0f7c5d8e9fbb files/digest-libcdio-0.70 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBquYBArHZZzCEUG0RAlvFAJ0ddHsoNUq62cq+bjOFjJEXVe+mNQCfWs8X
-lPAJLGVG/uGE5JojvBX1K9I=
-=3OmS
+iD8DBQFBrKKzI1lqEGTUzyQRAuPtAKDS5VDZyIxnZOLmiMC2pi9ndStb6ACgj9Lz
+RMAnmd4YCShe3ZlWhu9IJpU=
+=YyAu
 -----END PGP SIGNATURE-----
