@@ -1,14 +1,13 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2000.1b.ebuild,v 1.2 2001/08/02 20:34:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2000.1b.ebuild,v 1.3 2002/04/27 08:58:44 seemant Exp $
 
 #darn weird naming...
-P=latex2html-2K.1beta
-A=${P}.tar.gz
-S=${WORKDIR}/${P}
+MY_P=${PN}-2K.1beta
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="LATEX2HTML is a convertor written in Perl that converts LATEX documents to HTML."
-SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${A}"
+SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${MY_P}.tar.gz"
 HOMEPAGE="http://www.latex2html.org"
 
 DEPEND="virtual/glibc"
@@ -20,33 +19,34 @@ RDEPEND="sys-devel/perl
 	"
 
 src_compile() {
-    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST}
-    try make
-    try make check
-#    try make test
+	econf || die
+	make || die
+	make check || die
+#	make test || die
 }
 
 src_install () {
-    # modify cfgcache.pm
-    [ -f cfgcache.pm.backup ] && mv cfgcache.pm.backup cfgcache.pm
-    cat cfgcache.pm | sed -e "/BINDIR/s:/usr/bin:${D}usr/bin:" \
-                          -e "/LIBDIR/s:/usr/lib:${D}usr/lib:" \
-                          -e "/TEXPATH/s:/usr/share:${D}usr/share:" \
-                          -e '/MKTEXLSR/s:/usr/bin/mktexlsr::' > cfgcache.NEW
-    mv cfgcache.pm cfgcache.pm.backup
-    mv cfgcache.NEW cfgcache.pm
-    
-    dodir /usr/bin /usr/lib/latex2html /usr/share/texmf/tex/latex/html
-    try make install
+	# modify cfgcache.pm
+	[ -f cfgcache.pm.backup ] && mv cfgcache.pm.backup cfgcache.pm
+	cat cfgcache.pm | sed \
+        -e "/BINDIR/s:/usr/bin:${D}usr/bin:" \
+		-e "/LIBDIR/s:/usr/lib:${D}usr/lib:" \
+		-e "/TEXPATH/s:/usr/share:${D}usr/share:" \
+		-e '/MKTEXLSR/s:/usr/bin/mktexlsr::' > cfgcache.NEW
+	mv cfgcache.pm cfgcache.pm.backup
+	mv cfgcache.NEW cfgcache.pm
+	
+	dodir /usr/bin /usr/lib/latex2html /usr/share/texmf/tex/latex/html
+	make install || die
 
-    cp cfgcache.pm.backup ${D}/usr/lib/latex2html/cfgcache.pm
-    #Install docs
-    dodoc BUGS Changes FAQ INSTALL LICENSE MANIFEST README TODO
+	cp cfgcache.pm.backup ${D}/usr/lib/latex2html/cfgcache.pm
+	#Install docs
+	dodoc BUGS Changes FAQ INSTALL LICENSE MANIFEST README TODO
 }
 
 pkg_postinst() {
-    einfo "Running mktexlsr to rebuild ls-R database...."
-    mktexlsr
+	einfo "Running mktexlsr to rebuild ls-R database...."
+	mktexlsr
 }
 
 

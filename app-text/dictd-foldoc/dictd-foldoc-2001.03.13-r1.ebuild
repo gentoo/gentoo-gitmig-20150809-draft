@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd-foldoc/dictd-foldoc-2001.03.13-r1.ebuild,v 1.2 2002/04/27 08:35:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd-foldoc/dictd-foldoc-2001.03.13-r1.ebuild,v 1.3 2002/04/27 08:39:30 seemant Exp $
 
-MY_P=${PN}-20010313.tar.gz
+MY_P=foldoc-20010313
 S=${WORKDIR}
 DESCRIPTION=""
 SRC_URI="ftp://ftp.dict.org/pub/dict/pre/${MY_P}.tar.gz"
