@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libpixman
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpixman/ChangeLog,v 1.15 2005/01/22 13:37:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpixman/ChangeLog,v 1.16 2005/01/25 22:38:57 twp Exp $
+
+*libpixman-0.1.3 (25 Jan 2005)
+
+  25 Jan 2005; Tom Payne <twp@gentoo.org> -libpixman-0.1.0.ebuild,
+  +libpixman-0.1.3.ebuild:
+  Version bump. Bug # 79335. Removed old version.
 
   22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> libpixman-0.1.2.ebuild:
   Stable on alpha.
