@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.93 2003/04/27 12:42:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.94 2003/05/22 04:25:42 azarah Exp $
+
+  21 May 2003; Martin Schlemmer <azarah@gentoo.org> mozilla-1.3-r1.ebuild :
+  Mark stable for x86.  Update enigmail bug #20234.
 
   27 Apr 2003; Martin Schlemmer <azarah@gentoo.org> mozilla.sh :
   Fix it to run with bash and not sh, as it have bash specific features,
