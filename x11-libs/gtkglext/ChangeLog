@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.33 2005/01/31 22:53:21 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.34 2005/02/01 11:23:23 foser Exp $
+
+*gtkglext-1.0.6-r2 (01 Feb 2005)
+
+  01 Feb 2005; foser <foser@gentoo.org> gtkglext-1.0.6-r2.ebuild :
+  Re-add altered gl switch #79693
 
 *gtkglext-1.0.6-r1 (31 Jan 2005)
 
