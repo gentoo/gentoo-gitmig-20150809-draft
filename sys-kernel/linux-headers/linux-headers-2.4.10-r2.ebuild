@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.10.ebuild,v 1.1 2001/09/28 05:48:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.10-r2.ebuild,v 1.1 2001/10/08 01:47:03 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -30,7 +30,7 @@ fi
 # PCMCIA-CS            N         pcmcia            Need to move this to its own ebuild
 # lm-sensors           N         lm_sensors        Need to move this to its own ebuild
 
-LVMV=1.0.1-rc2
+LVMV=1.0.1-rc4
 
 #[ "${PN}" = "linux" ] && DESCRIPTION="Linux kernel version ${KV}, including modules, binary tools, libraries and includes"
 [ "${PN}" = "linux-sources" ] && DESCRIPTION="Linux kernel version ${KV} - full sources"
@@ -41,8 +41,8 @@ LVMV=1.0.1-rc2
 [ ! "${PN}" = "linux-extras" ] && SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 http://www.ibiblio.org/gentoo/distfiles/lvm-${LVMV}-${KV}.patch.bz2
 ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${LVMV}.tar.gz
-http://www.tech9.net/rml/linux/patch-rml-2.4.10-preempt-kernel-1
-http://www.tech9.net/rml/linux/patch-rml-2.4.10-preempt-ptrace-and-jobs-fix-2
+http://www.tech9.net/rml/linux/preempt-kernel-rml-2.4.10-7.patch
+http://www.uow.edu.au/~andrewm/linux/2.4.10-low-latency.patch.gz
 http://lameter.com/kernel/ext3-2.4.10.gz"
 	
 [ "$PN" != "linux-extras" ] && PROVIDE="virtual/kernel"
@@ -98,8 +98,7 @@ src_unpack() {
 
 	#specific to 2.4.10; preempt and ext3 patches
 	cd ${S}
-	patch -p1 < ${DISTDIR}/patch-rml-2.4.10-preempt-kernel-1 || die
-	patch -p1 < ${DISTDIR}/patch-rml-2.4.10-preempt-ptrace-and-jobs-fix-2 || die
+	patch -p1 < ${DISTDIR}/preempt-kernel-rml-2.4.10-7.patch
 	cat ${DISTDIR}/ext3-2.4.10.gz | gzip -dc | patch -p1 || die
 	#the LVM patch is included to replace the old version, irregardless if USE lvm is set
 	cat ${DISTDIR}/lvm-${LVMV}-${KV}.patch.bz2 | bzip2 -d | patch -N -l -p1 
@@ -108,6 +107,11 @@ src_unpack() {
 	cd ${S2}
 	unpack lvm_${LVMV}.tar.gz
 	#get sources ready for compilation or for sitting at /usr/src/linux
+	
+	#apply low-latency patch
+	cd ${S}
+	cat 2.4.10-low-latency.patch.gz | gzip -d | patch -p1
+	
 	echo "Preparing for compilation..."
 	cd ${S}
 	
