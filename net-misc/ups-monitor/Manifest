@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3b75f2e0b0ccce9a1cb16e7a506b8aaf ChangeLog 410
+MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
+MD5 b1a80de16cc0e2011b268fe20a8fb1ff ups-monitor-0.8.ebuild 728
+MD5 34dd97edd648bc1ecdb0683227acad40 files/digest-ups-monitor-0.8 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCBg1dEZCkKN40op4RAkijAJ9v9A/LHL2mMJnj+dyS0WkCJm+XWwCghHZv
+YpT9ImAaR7Yoj6GIhOhIl/Y=
+=LD+V
+-----END PGP SIGNATURE-----
