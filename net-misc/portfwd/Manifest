@@ -1,9 +1,19 @@
-MD5 ddd4545af13d1379b879268a307899e9 portfwd-0.26.ebuild 1552
-MD5 c0a0a5bfc9b14aa52a2144812446b9e9 portfwd-0.26_rc6.ebuild 1572
-MD5 06295ce66ff4f298a6ecd5a2bd0a4e79 portfwd-0.26_rc6-r1.ebuild 1568
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5513130912fc5ed6bea4f0e7a193808b ChangeLog 1199
-MD5 960ab2c321e4752e952e9878a8e5ae71 files/digest-portfwd-0.26 64
-MD5 2e5d079e07d2511ef3695aa36140dc2f files/portfwd.confd 55
-MD5 9c8cf096ade9aa77488de063980549c9 files/portfwd.init 881
+MD5 06295ce66ff4f298a6ecd5a2bd0a4e79 portfwd-0.26_rc6-r1.ebuild 1568
+MD5 c0a0a5bfc9b14aa52a2144812446b9e9 portfwd-0.26_rc6.ebuild 1572
+MD5 ddd4545af13d1379b879268a307899e9 portfwd-0.26.ebuild 1552
 MD5 3e26912825dccefb4a4474400d2c7eb6 files/digest-portfwd-0.26_rc6 67
 MD5 3e26912825dccefb4a4474400d2c7eb6 files/digest-portfwd-0.26_rc6-r1 67
+MD5 2e5d079e07d2511ef3695aa36140dc2f files/portfwd.confd 55
+MD5 ffc48b45008b806173e4a719e023b7c4 files/portfwd.init 887
+MD5 960ab2c321e4752e952e9878a8e5ae71 files/digest-portfwd-0.26 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fsTmdTrptrqvGERAtjNAJsHvvgImUn67ln7RoCWpubqYXsZwACgi0zR
+qEWT0YZNC8+dj1HG+946UDw=
+=bICc
+-----END PGP SIGNATURE-----
