@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.36 2004/11/16 16:08:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.37 2004/11/18 14:05:28 agriffis Exp $
+
+*mozilla-thunderbird-0.9-r3 (18 Nov 2004)
+
+  18 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/mozilla-thunderbird-0.9-4ft2.patch,
+  +mozilla-thunderbird-0.9-r3.ebuild:
+  Update to enigmail 0.89.0 #64547. Add patch for freetype-2.1.8+ binary
+  compatibility #59849
 
   16 Nov 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-thunderbird-0.9-r2.ebuild:
