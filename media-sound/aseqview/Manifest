@@ -1,3 +1,7 @@
 MD5 117e2ae62585cbf726a45520e9a30b1d ChangeLog 371
 MD5 2f24c47c8a3b43b6b5df8c4cd408c869 aseqview-0.1.4.ebuild 704
+MD5 b2798571b73da162c87e79735bf6de3d aseqview-0.2.0.ebuild 705
+MD5 b2798571b73da162c87e79735bf6de3d aseqview-0.2.1.ebuild 705
 MD5 62dc4f68c863126cdfc9ba7abe731469 files/digest-aseqview-0.1.4 65
+MD5 a1c566da00f49e5de1236b0cb8d0af65 files/digest-aseqview-0.2.0 65
+MD5 caf9e4f757d5fc811fbd8416b96dacdf files/digest-aseqview-0.2.1 65
