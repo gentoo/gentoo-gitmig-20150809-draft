@@ -1,0 +1,9 @@
+# ChangeLog for dev-ml/ulex
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.1 2004/08/08 08:51:41 mattam Exp $
+
+*camomile-0.5.3 (08 Aug 2004)
+
+  08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> +camomile-0.5.3.ebuild:
+  Camomile is a comprehensive unicode library for ocaml. Adding latest version.
+
