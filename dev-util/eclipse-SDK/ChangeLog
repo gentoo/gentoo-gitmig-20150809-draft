@@ -1,7 +1,11 @@
 # ChangeLog for dev-util/eclipse-SDK
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/ChangeLog,v 1.7 2003/02/12 06:40:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/ChangeLog,v 1.8 2003/03/17 09:58:58 gerk Exp $
 
+*eclipse-SDK-20030307_rc2 (17 Mar 2003)
+
+  17 Mar 2003; Mark Guertin <gerk@gentoo.org> eclipse-SDK-20030307_rc2.ebuild:
+  Revision bump and initial PPC support
 
 *eclipse-SDK-20030207 (07 Feb 2003)
 
