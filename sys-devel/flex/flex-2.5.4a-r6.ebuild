@@ -1,21 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.32 2005/01/21 00:07:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r6.ebuild,v 1.1 2005/01/21 00:07:04 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="GNU lexical analyser generator"
 HOMEPAGE="http://lex.sourceforge.net/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	http://dev.gentoo.org/~vapier/dist/${P}-autoconf.patch.bz2
+	mirror://gentoo/${P}-autoconf.patch.bz2"
 
 LICENSE="FLEX"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="build static"
 
 RDEPEND="virtual/libc"
 
-S="${WORKDIR}/${P/a/}"
+S=${WORKDIR}/${P/a/}
 
 src_unpack() {
 	unpack ${A}
@@ -26,13 +28,17 @@ src_unpack() {
 	epatch ${FILESDIR}/flex-2.5.4a-gcc3.patch
 	epatch ${FILESDIR}/flex-2.5.4a-gcc31.patch
 	epatch ${FILESDIR}/flex-2.5.4a-skel.patch
+
+	# included autotools are crusty, lets polish em up
+	epatch ${WORKDIR}/${P}-autoconf.patch
 }
 
 src_compile() {
-	export CC="$(tc-getCC)"
-	./configure --prefix=/usr --host=${CHOST} || die "configure failed"
+	tc-export AR CC RANLIB
 	use static && append-ldflags -static
-	emake -j1 LDFLAGS="${LDFLAGS}" || die "emake failed"
+	econf || die "econf failed"
+	emake -j1 .bootstrap || die "emake bootstrap failed"
+	emake || die "emake failed"
 }
 
 src_test() {
@@ -40,9 +46,7 @@ src_test() {
 }
 
 src_install() {
-	make -j1 prefix=${D}/usr \
-		mandir=${D}/usr/share/man/man1 \
-		install || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 
 	if use build ; then
 		rm -r "${D}"/usr/{include,lib,share}
