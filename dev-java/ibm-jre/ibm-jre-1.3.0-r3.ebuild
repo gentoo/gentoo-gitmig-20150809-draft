@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.0-r3.ebuild,v 1.4 2002/08/01 17:33:40 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.0-r3.ebuild,v 1.5 2002/08/26 16:02:30 karltk Exp $
 
 At=IBMJava2-JRE-13.tgz
 S=${WORKDIR}/IBMJava2-13
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3
 	virtual/java-scheme-2"
-SLOT="0"
+SLOT="1.3"
 LICENSE="IBM-ILNWP"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 

@@ -1,67 +1,56 @@
 # ChangeLog for dev-java/ibm-jre
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ChangeLog,v 1.7 2002/08/01 17:33:40 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ChangeLog,v 1.8 2002/08/26 16:02:30 karltk Exp $
 
 *ibm-jre-1.3.0-r3 (12 May 2002)
 
-  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.0-r3.ebuild :
+  26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.0-r3.ebuild:
+  Set SLOT to 1.3, so that future versions may coexist.
 
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.0-r3.ebuild :
   Added LICENSE, SLOT and KEYWORDS.
 
   12 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.0-r3.ebuild files/digest-ibm-jre-1.3.0-r3:
-
   Disabled browser plugin as it doesn't work.
-
   Removed ibm-jre-1.3.0-r2.ebuild files/digest-ibm-jre-1.3.0-r2
 
 *ibm-jre-1.3.1-r1 (12 May 2002)
 
+  26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.1-r1.ebuild:
+  Set SLOT to 1.3, so that future versions may coexist.
+
   12 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.1-r1.ebuild files/digest-ibm-jre-1.3.1-r1:
-
   Disabled browser plugin as it doesn't work.
-
   Removed ibm-jre-1.3.1.ebuild files/digest-ibm-jre-1.3.1
 
 *ibm-jre-1.3.1 (10 Apr 2002)
 
   10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.1.ebuild files/digest-ibm-jre-1.3.1 files/ibm-jre-1.3.1:
-
   New upstream version. Enhancement request submitted by Nuno Ferreira
   <nuno.m.r.f@mail.telepac.pt>.
 
 *ibm-jre-1.3.0-r3 (12 May 2002)
 
   01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.0-r3.ebuild :
-
   Added LICENSE, SLOT and KEYWORDS.
 
 *ibm-jre-1.3.0-r2 (09 Apr 2002)
 
   09 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.0-r2.ebuild files/digest-ibm-jre-1.3.0-r2:
-
   Fixed missing ROOTPATH.
-
   Removed ibm-jre-1.3.0-r1.ebuild files/digest-ibm-jre-1.3.0-r1
 
 *ibm-jre-1.3.0-r1 (18 Mar 2002)
 
   18 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.0-r1.ebuild files/digest-ibm-jre-1.3.0-r1 files/ibm-jre-1.3.0
-
   Added support for JVM switching.
-
   Removed old revisions.
 
 *ibm-jre-1.3.0 (8 Feb 2002)
 
   8 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jre-1.3.0.ebuild
-
   Added proper URL to IBM's download site.
 
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.
