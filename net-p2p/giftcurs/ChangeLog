@@ -1,7 +1,17 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.10 2002/11/12 10:57:25 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.11 2002/11/30 01:22:59 spider Exp $
 
+
+*giftcurs-0.5.5 (30 Nov 2002)
+
+  30 Nov 2002; Spider <spider@gentoo.org> giftcurs-0.5.5.ebuild :
+  After a very impolite letter from "Josh Guilfoyle <jasta@gotlinux.org>" about
+  me not updating the package in four days after its release, requesting that 
+  I immidately remove it from Gentoo, I had a chat with weinholt, who actually 
+  handles the releases. package is updated, all should be ok.
+   
+  
 *giftcurs-0.5.4 (12 Nov 2002)
   12 Nov 2002; L. Boshell <leonardop@gentoo.org> : Version bump.
 
