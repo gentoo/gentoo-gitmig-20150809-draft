@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>apache</herd>
+  <herd>apache</herd>
+  <maintainer>
+    <email>vericgar@gentoo.org</email>
+    <name>Michael Stewart</name>
+  </maintainer>
 </pkgmetadata>
