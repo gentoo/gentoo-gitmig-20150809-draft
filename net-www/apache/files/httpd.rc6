@@ -4,26 +4,26 @@
 #HTTPD_OPTS="-D SSL -D PHP4"
 
 depend() {
-    need net
+	need net
 }
 
 checkconfig() {
-    if [ ! -e /etc/httpd/httpd.conf ] ; then
-        eerror "You need an /etc/httpd/httpd.conf to run apache"
-        eerror "There is a sample file in /usr/share/doc/apache"
-        return 1
-    fi
+	if [ ! -e /etc/httpd/httpd.conf ] ; then
+		eerror "You need an /etc/httpd/httpd.conf to run apache"
+		eerror "There is a sample file in /usr/share/doc/apache"
+		return 1
+	fi
 }
 
 start() {
-    checkconfig || return 1
-    ebegin "Starting Apache"
-    start-stop-daemon --quiet --start --exec /usr/sbin/httpd -- $HTTPD_OPTS
-    eend $?
+	checkconfig || return 1
+	ebegin "Starting apache"
+	start-stop-daemon --quiet --start --exec /usr/sbin/httpd -- $HTTPD_OPTS
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping Apache"
-    start-stop-daemon --quiet --stop --pid /var/run/httpd.pid
-    eend $?
+	ebegin "Stopping apache"
+	start-stop-daemon --quiet --stop --pid /var/run/httpd.pid
+	eend $?
 }
