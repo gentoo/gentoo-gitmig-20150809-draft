@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/Bit-Vector-6.3.ebuild,v 1.8 2004/10/18 16:48:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/Bit-Vector-6.3.ebuild,v 1.9 2005/01/21 19:51:24 mcummings Exp $
 
 inherit perl-module
 

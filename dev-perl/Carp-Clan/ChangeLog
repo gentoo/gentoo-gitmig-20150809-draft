@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.1 2004/10/18 16:36:15 mcummings Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.2 2005/01/21 19:49:41 mcummings Exp $
+
+  21 Jan 2005; Michael Cummings <mcummings@gentoo.org> Carp-Clan-5.3.ebuild:
+  Unmasking for x86
 
 *Carp-Clan-5.3 (18 Oct 2004)
 
