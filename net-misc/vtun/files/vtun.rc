@@ -15,11 +15,11 @@ start() {
 			 read host server args
 			 if [ "$host" = "--server--" ]; then
 				 ebegin "Starting vtund server"
-				 /usr/sbin/vtund -- $args -s -P $server
+				 /usr/sbin/vtund -s -P $server -- $args
 				 eend $?
 			 else
 				 ebegin "Starting vtund client $host to $server"
-				 /usr/sbin/vtund -- $args $host $server
+				 /usr/sbin/vtund $host $server -- $args
 				 eend $?
 			 fi)
 	done
