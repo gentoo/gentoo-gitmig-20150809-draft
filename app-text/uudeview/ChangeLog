@@ -1,0 +1,18 @@
+# ChangeLog for app-text/uudeview
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.1 2002/06/06 08:27:48 george Exp $
+
+*uudeview-0.5.13.ebuild (04 Jun 2002)
+
+  03 Jun 2002; George Shapovalov <george@gentoo.org> uudeview-0.5.13.ebuild, files/digest-uudeview-0.5.13 :
+  
+  First submission
+  From the home page:
+
+   UUDeview is a program that helps you transmit and receive binary files over 
+   the Internet, using electronic mail or newsgroups The UUDeview package includes 
+   both an encoder and a decoder. The decoder automatically detects the type of 
+   encoding used, offering MIME's Base64 and BinHex as well as the popular 
+   uuencoding and the less frequently used xxencoding methods. Recently, support 
+   for the popular yEnc encoding was also added. The encoder runs the other way 
+   around and encodes a binary file for sending it by mail or news. 
