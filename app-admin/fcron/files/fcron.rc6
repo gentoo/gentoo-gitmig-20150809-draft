@@ -1,26 +1,26 @@
 #!/sbin/runscript
 
 depend() {
-    need clock
+	need clock
 }
 
 checkconfig() {
-    if [ ! -e /etc/fcron/fcron.conf ] ; then
-	eerror "You will need an /etc/fcron/fcron.conf first"
-	eerror "There is  a  sample  in /usr/share/doc/fcron"
-	return 1
-    fi
+	if [ ! -e /etc/fcron/fcron.conf ] ; then
+		eerror "You will need an /etc/fcron/fcron.conf first"
+		eerror "There is  a  sample  in /usr/share/doc/fcron"
+		return 1
+	fi
 }
 
 start() {
-    checkconfig || return 1
-    ebegin "Starting fcron"
-    start-stop-daemon --start --quiet --exec /usr/sbin/fcron
-    eend $?
+	checkconfig || return 1
+	ebegin "Starting fcron"
+	start-stop-daemon --start --quiet --exec /usr/sbin/fcron
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping fcron"
-    start-stop-daemon --stop --quiet --pidfile /var/run/fcron.pid
-    eend $?
+	ebegin "Stopping fcron"
+	start-stop-daemon --stop --quiet --pidfile /var/run/fcron.pid
+	eend $?
 }
