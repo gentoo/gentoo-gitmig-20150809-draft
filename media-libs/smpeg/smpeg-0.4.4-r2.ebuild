@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r2.ebuild,v 1.1 2002/02/02 23:09:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r2.ebuild,v 1.2 2002/04/06 08:31:16 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SDL MPEG Player Library"
@@ -35,7 +35,7 @@ src_compile() {
 		--host=${CHOST} \
 		${myconf} || die
 		
-	emake || die
+	emake CCLD="g++" || die
 }
 
 src_install () {
