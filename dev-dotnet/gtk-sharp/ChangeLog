@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.15 2005/02/21 23:43:14 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.16 2005/03/01 23:56:26 latexer Exp $
+
+  01 Mar 2005; Peter Johanson <latexer@gentoo.org> gtk-sharp-1.0.4-r1.ebuild,
+  gtk-sharp-1.0.6.ebuild:
+  Use LANG=C while compiling to avoid potential internationalization problems.
+  See bug #82254
 
   21 Feb 2005; Peter Johanson <latexer@gentoo.org> gtk-sharp-1.0.4-r1.ebuild,
   gtk-sharp-1.0.6.ebuild:

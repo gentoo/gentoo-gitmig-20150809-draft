@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.4-r1.ebuild,v 1.8 2005/02/21 23:43:14 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.4-r1.ebuild,v 1.9 2005/03/01 23:56:26 latexer Exp $
 
 inherit eutils mono
 
@@ -49,11 +49,11 @@ src_compile() {
 	done
 
 	econf ${myconf} || die "./configure failed"
-	emake -j1 || die
+	LANG=C emake -j1 || die
 }
 
 src_install () {
-	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}" \
+	LANG=C make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}" \
 		DESTDIR=${D} install || die
 
 	dodoc README* ChangeLog
