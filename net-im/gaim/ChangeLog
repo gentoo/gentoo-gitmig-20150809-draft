@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.260 2004/10/21 07:08:36 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.261 2004/10/21 09:35:51 eradicator Exp $
+
+  21 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> gaim-1.0.2.ebuild:
+  Stable amd64.
 
   21 Oct 2004; Hardave Riar <hardave@gentoo.org> gaim-1.0.2.ebuild:
   Stable on mips, bug #68271.
