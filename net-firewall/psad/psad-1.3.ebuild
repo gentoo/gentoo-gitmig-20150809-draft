@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.ebuild,v 1.2 2004/01/14 02:10:20 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.ebuild,v 1.3 2004/02/03 01:04:29 battousai Exp $
 
 inherit eutils
 inherit perl-module
@@ -111,4 +111,9 @@ pkg_postinst() {
 	einfo "configuration or it may not work correctly or start up. Specifically, check"
 	einfo "the validity of the HOSTNAME setting and replace the EMAIL_ADDRESSES and"
 	einfo "HOME_NET settings at the least."
+	echo
+	einfo "If you are using a logger other than sysklogd, please be sure to change the"
+	einfo "syslogCmd setting in /etc/psad/psad.conf. An example for syslog-ng users"
+	einfo "would be:"
+	einfo "		syslogCmd = /usr/sbin/syslog-ng;"
 }
