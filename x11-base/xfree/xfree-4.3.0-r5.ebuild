@@ -1,9 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.15 2004/06/07 22:46:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.16 2004/06/08 00:02:18 mr_bones_ Exp $
 
-#inherit needs to happen *after* DEPEND has been defined to have "newdepend"
-#do the right thing. Otherwise RDEPEND doesn't get set properly.
 inherit eutils flag-o-matic gcc xfree
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure

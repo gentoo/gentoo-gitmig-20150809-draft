@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.338 2004/06/03 06:34:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.339 2004/06/08 00:02:18 mr_bones_ Exp $
+
+  07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> xfree-4.3.0-r5.ebuild:
+  remove obsolete comment
 
   03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
   Fix typo in xrender.pc generation, includ to include.

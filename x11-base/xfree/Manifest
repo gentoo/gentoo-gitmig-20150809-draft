@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9dc774f5b732722d34ce69ebcfd688df ChangeLog 74424
+MD5 3603ea9d8350366ed61041776b92e256 ChangeLog 74528
 MD5 e6ee387a2de6b2fea8e5a3573c48b667 metadata.xml 228
-MD5 b987a68170d878b29012fa613e29537b xfree-4.3.0-r5.ebuild 35504
-MD5 9e0ac75dc627484fed93d31e1a9128f8 xfree-4.3.99.902-r2.ebuild 31360
-MD5 83ad802ee189c3723b91245f2b9d9b95 xfree-4.3.0-r6.ebuild 39690
+MD5 b43f495a34fdd2ca971630c250e4cc1f xfree-4.3.0-r5.ebuild 35364
+MD5 56a1fe01ae7c6abb5d750545086090ad xfree-4.3.0-r6.ebuild 39689
+MD5 6e235aa5adf358c0d7c92dc9ad571ddf xfree-4.3.99.902-r2.ebuild 31359
+MD5 252c61d8b687ce1467ff95552c156c48 files/digest-xfree-4.3.0-r6 1528
 MD5 7fd6e890f5d2a756eb18123975ad7f49 files/digest-xfree-4.3.0-r5 2002
 MD5 2308a80167b398e266fc7a711c8014c6 files/digest-xfree-4.3.99.902-r2 1254
-MD5 252c61d8b687ce1467ff95552c156c48 files/digest-xfree-4.3.0-r6 1528
 MD5 2d22ba49943c630e4299f439d3a0d4cc files/4.3.0/XftConfig 7750
 MD5 c343ee3f0cbca24c7210773d483cfa15 files/4.3.0/10xfree 182
 MD5 c6dd3e9a9e557b9cba51ff77cb6108a4 files/4.3.0/Xsession 1521
@@ -27,10 +24,3 @@ MD5 a0ce0f1c8a5771a1194f5895211a3f66 files/4.3.0/Sessions/Xsession 2187
 MD5 ee55a387073cca1b14f1b285e1cf33a9 files/4.3.0/lib/libGL.la 777
 MD5 18e1ac4e97a57fdba470897aa2cb452e files/4.3.0/lib/libGLU.la 769
 MD5 b2c509837ddfbd12d8f1ed9b50254f01 files/4.3.0/lib/libOSMesa.la 788
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAxPCzHTu7gpaalycRAjp6AJ9WqVJp3UXZtZAHvPNW18+z+ITYSwCghEl2
-6VKeZqzwbev5dKz4c1PF5a0=
-=siYZ
------END PGP SIGNATURE-----
