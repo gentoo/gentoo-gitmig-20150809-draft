@@ -1,8 +1,14 @@
 # ChangeLog for app-emulation/zsnes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.10 2002/07/23 04:28:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.11 2002/08/06 18:28:10 gerk Exp $
 
 *zsnes-1.36 (21 Jul 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added -ppc -sparc -sparc64 BACK to keywords, when bumping please please
+  honor these KEYWORDS if they are set and read ChangeLog entries
+  Also please make sure to enter _something_ in the cvs log when updating
+  files "*** empty log message ***" was the last cvs log entry for this
 
   21 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
