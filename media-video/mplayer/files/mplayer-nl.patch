@@ -1,0 +1,11 @@
+--- help/help_mp-nl.h_old	2005-01-23 05:30:49.467930992 +0900
++++ help/help_mp-nl.h	2005-01-23 05:31:01.400117024 +0900
+@@ -303,7 +303,7 @@
+ "            nadeel hiervan is dat voor een gegeven bitrate het uiteindelijke\n"\
+ "            bestand groter zal zijn dan in de normale mode, de kwaliteit\n"\
+ "            kan ook lager zijn.\n"\
+-"   Waarschuwing: Met de huidige versie kunnen de "snelle" presets hogere bitrates geven\n"\
++"   Waarschuwing: Met de huidige versie kunnen de \"snelle\" presets hogere bitrates geven\n"\
+ "            dan de normale, tragere presets.\n"\
+ "\n"\
+ "   \"cbr\"  - Wanneer je de ABR mode (zie hoger) gebruikt en 1 van de volgende\n"\
