@@ -1,6 +1,8 @@
 # ChangeLog for dev-libs/dvssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.4 2004/03/02 10:10:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.5 2004/03/02 11:30:34 aliz Exp $
+
+*dvssl-0.5.4 (28 Oct 2003)
 
 *dvssl-0.5.4 (28 Oct 2003)
 
