@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@cvs.gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r1.ebuild,v 1.1 2002/04/06 15:54:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r1.ebuild,v 1.2 2002/05/19 10:20:41 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Drip - A DVD to DIVX convertor frontend"
@@ -9,7 +9,7 @@ SRC_URI="${SRC_URI} http://drip.sourceforge.net/files/${P}.tar.gz"
 HOMEPAGE="http://drip.sourceforge.net/"
 
 RDEPEND="gnome-base/gnome-libs
-	=media-video/avifile-0.6*
+	=media-video/avifile-0.6.0*
 	media-libs/libdvdcss
 	media-libs/libdvdread
 	media-libs/gdk-pixbuf"
