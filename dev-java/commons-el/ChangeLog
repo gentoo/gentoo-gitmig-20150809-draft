@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.4 2004/06/24 22:21:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.5 2004/10/17 07:25:18 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> commons-el-1.0.ebuild:
+  keywords ~amd64; closes #67333.
 
   22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> commons-el-1.0.ebuild:
   Stable on x86. Fixes according to #45398
