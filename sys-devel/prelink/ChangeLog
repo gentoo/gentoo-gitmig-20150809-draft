@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.36 2004/11/08 23:49:13 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.37 2005/01/10 18:32:39 ciaranm Exp $
+
+  10 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> prelink-20040317.ebuild,
+  prelink-20040707.ebuild:
+  Added in a message with a link to the Prelink Guide, bug #77337
 
   09 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   prelink-20040707.ebuild:

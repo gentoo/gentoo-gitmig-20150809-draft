@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040707.ebuild,v 1.7 2004/11/08 23:49:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040707.ebuild,v 1.8 2005/01/10 18:32:39 ciaranm Exp $
 
 inherit eutils
 
@@ -45,4 +45,9 @@ src_install() {
 
 pkg_postinst() {
 	env-update
+	echo
+	einfo "You may wish to read the Gentoo Linux Prelink Guide, which can be"
+	einfo "found online at:"
+	einfo "    http://www.gentoo.org/doc/en/prelink-howto.xml"
+	echo
 }
