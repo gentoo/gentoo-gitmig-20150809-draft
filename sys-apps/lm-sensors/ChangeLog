@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.24 2004/03/31 21:17:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.25 2004/04/08 03:43:43 lv Exp $
+
+*lm-sensors-2.8.6 (07 Apr 2004)
+
+  07 Apr 2004; Travis Tilley <lv@gentoo.org> lm-sensors-2.8.6.ebuild:
+  added 2.8.6, which appears to be a requirement for using lm-sensors with a
+  2.6.4 or later kernel
 
 *lm-sensors-2.8.3 (31 Mar 2004)
 
