@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/iceiconcvt
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceiconcvt/ChangeLog,v 1.1 2003/03/17 09:34:36 phosphan Exp $
+
+*iceiconcvt-0.9 (17 Mar 2003)
+
+  17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> : iceiconcvt-0.9
+  files/digest-iceiconcvt-0.9 ChangeLog
+  Initial import. 
