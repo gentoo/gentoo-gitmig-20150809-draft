@@ -5,6 +5,7 @@ MD5 777f9ff896d1c4d8c15f08b5d84dfb1c portage-2.0.50-r9.ebuild 11539
 MD5 3eafd511ded12225e27b55dcbd44f6e9 portage-2.0.50-r10.ebuild 11697
 MD5 20ecfeb5ceadba69acbc3448826883a8 portage-2.0.51_pre17.ebuild 14282
 MD5 80eac5391656a5233fdc1aae4ce000df portage-2.0.50-r8.ebuild 11539
+MD5 fba789596c0c463f0546145afaf2c674 portage-2.0.51_pre23.ebuild 12222
 MD5 63cb4feff5166016c8ca65ef351bc214 portage-2.0.51_pre20.ebuild 11919
 MD5 0ea980904ecc333daf7f702ceddc1349 portage-2.0.50-r11.ebuild 11697
 MD5 ba4ae80e5e6cf58aac9c5aa1cc5f777e ChangeLog 411
@@ -15,11 +16,12 @@ MD5 b3080f4752c0b62c9eabcf932dd4e11d files/digest-portage-2.0.50-r8 70
 MD5 dcf8810357598886efe75871afe2eb64 files/digest-portage-2.0.50-r9 70
 MD5 3035dbfbd5633142b2245940e48c62b0 files/digest-portage-2.0.51_pre17 73
 MD5 7c90fae0689f3af9ea54b2e34f533f1e files/digest-portage-2.0.51_pre20 73
+MD5 4f005293a38be0704083d2eb4990ec62 files/digest-portage-2.0.51_pre23 73
 MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBQpFpBDOEqLMd+jQRAhP/AJ9fPECFk7zd0S5DDj1huU7jhVjvswCgpKqA
-UdFkHtP9OZY2GZ1zj0tCqBw=
-=s/UG
+iD8DBQFBQplzBDOEqLMd+jQRAqmMAJ0cfjjy0Gbsz3CQlJ2M0QnHZMaTLwCfQbOg
+jT1FQ0Y+tPFalh+57+rM92M=
+=wFw+
 -----END PGP SIGNATURE-----
