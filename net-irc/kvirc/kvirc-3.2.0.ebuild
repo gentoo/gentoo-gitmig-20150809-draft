@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.1-r1.ebuild,v 1.3 2005/03/04 20:42:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.1 2005/03/04 20:42:41 swegener Exp $
 
 inherit eutils kde-functions
 
@@ -12,27 +12,27 @@ SRC_URI="ftp://ftp.kvirc.net/pub/kvirc/${PV}/source/${P}.tar.bz2 \
 
 LICENSE="kvirc"
 SLOT="3"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="debug esd ipv6 kde oss ssl"
 
 RDEPEND="esd? ( media-sound/esound )
 	ssl? ( dev-libs/openssl )
 	oss? ( media-libs/audiofile )
-	>=x11-libs/qt-3
 	kde? ( >=kde-base/kdelibs-3 )
-	sys-devel/gettext"
+	>=x11-libs/qt-3"
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk
 	sys-apps/grep
 	sys-devel/libtool
+	sys-devel/gettext
 	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-kdedir-fix.patch
+	epatch ${FILESDIR}/kvirc-3.0.1-kdedir-fix.patch
 }
 
 src_compile() {
@@ -46,14 +46,13 @@ src_compile() {
 
 	# For myconf, we can't do it the easy way (use_with) because the configure
 	# script will assume we're telling it not to include support.
-	myconf="${myconf}
-		`use_with debug debug-symbols`"
+	myconf="${myconf} `use_with debug debug-symbols`"
 	use kde || myconf="${myconf} --without-kde-support --without-arts-support"
 	use ipv6 || myconf="${myconf} --without-ipv6-support"
 	use esd || myconf="${myconf} --without-esd-support"
 	use ssl || myconf="${myconf} --without-ssl-support"
 
-	[ "$ARCH" == "x86" ] && myconf="$myconf --with-ix86-asm"
+	[ "${ARCH}" == "x86" ] && myconf="${myconf} --with-ix86-asm"
 
 	need-autoconf 2.5
 	need-automake 1.5
@@ -63,7 +62,7 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die
-	emake docs DESTDIR=${D} || die
+	make install DESTDIR=${D} || die "make install failed"
+	make docs DESTDIR=${D} || die "make docs failed"
 	dodoc ChangeLog INSTALL README TODO
 }

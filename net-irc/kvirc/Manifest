@@ -1,5 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 589744b81d21138e4ca6c27e65d432c2 kvirc-3.0.1-r1.ebuild 1906
+MD5 04933950c40a8b79cd798c0b02c67dbb ChangeLog 4397
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 92e59010c557c9accbc5634f8dee78d1 ChangeLog 4242
-MD5 5b400e974e70df8e38dd872a9e06c953 kvirc-3.0.1-r1.ebuild 1933
-MD5 3f438009c2c1f4441adb149e10e746df files/kvirc-3.0.1-kdedir-fix.patch 1953
+MD5 abeb5d37c7d73105c6d5448b5fd28ea8 kvirc-3.2.0.ebuild 1952
 MD5 39628ba5cdeb5e3b6957d6a49bfd8e51 files/digest-kvirc-3.0.1-r1 65
+MD5 ddc330db93fa60a12d32e7f3e4a1d71b files/digest-kvirc-3.2.0 65
+MD5 3f438009c2c1f4441adb149e10e746df files/kvirc-3.0.1-kdedir-fix.patch 1953
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCKMhKI1lqEGTUzyQRAqTwAJ49lbVLmZn0z3LnlVbmx5JFjXkiYwCdHIGD
++Awm06hPPEHG7TAm/odYJ2I=
+=jLng
+-----END PGP SIGNATURE-----
