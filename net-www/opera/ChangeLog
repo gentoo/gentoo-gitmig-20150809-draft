@@ -1,6 +1,9 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.77 2004/08/05 16:31:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.78 2004/08/05 17:38:34 gustavoz Exp $
+
+  05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> opera-7.54.ebuild:
+  Stable on sparc wrt #59503
 
   05 Aug 2004; Tom Martin <slarti@gentoo.org> opera-7.54.ebuild:
   Marked stable for bug 59503.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.54.ebuild,v 1.2 2004/08/05 16:31:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.54.ebuild,v 1.3 2004/08/05 17:38:34 gustavoz Exp $
 
 IUSE="static spell"
 
@@ -50,7 +50,7 @@ RDEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="OPERA"
-KEYWORDS="x86 ~ppc ~sparc amd64"
+KEYWORDS="x86 ~ppc sparc amd64"
 
 src_unpack() {
 	unpack ${A}
