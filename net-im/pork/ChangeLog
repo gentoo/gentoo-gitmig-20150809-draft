@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.12 2003/07/23 18:21:04 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.13 2003/11/20 01:14:00 lostlogic Exp $
+
+*pork-0.99.2 (19 Nov 2003)
+
+  19 Nov 2003; Brandon Low <lostlogic@gentoo.org> pork-0.7.0.ebuild,
+  pork-0.8.0.ebuild, pork-0.99.0.ebuild, pork-0.99.1.ebuild,
+  pork-0.99.2.ebuild:
+  mark 0.99.1 stable, bump unstable, and cleanup
 
 *pork-0.99.1 (23 Jul 2003)
 
