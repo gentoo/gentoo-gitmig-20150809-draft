@@ -1,11 +1,21 @@
-MD5 9a5b16db51e7cf2155aee9d2fc4ad2b7 ChangeLog 3425
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 f77b0d03c2d62b4a94b0f0d84826f899 razor-2.61.ebuild 2730
-MD5 62a7a9b802be97ee06119074f0d844ad razor-2.36-r1.ebuild 2851
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 75c5d3ad1bc48ae038b747d8f104c1c6 razor-2.40-r1.ebuild 2735
-MD5 8fcc1e253bebf4448a7b0f2562ac3609 files/digest-razor-2.61 68
+MD5 7ca5dc039abf88fcb6cb36870cd2e173 razor-2.61.ebuild 2730
+MD5 62a7a9b802be97ee06119074f0d844ad razor-2.36-r1.ebuild 2851
+MD5 969a7ef948b00bfeef57b3ee53394683 ChangeLog 3526
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 d3e9a49fe82b4c304cafaadb03eedb08 files/razor-taint.patch 2125
+MD5 eb86375c84c8a7db9512ca1943fd5a7a files/no-install-razor-agents.patch 292
 MD5 86ce0f71341d41a9cf561083b241c9fb files/digest-razor-2.36-r1 68
 MD5 24b659c729fbfbf960ca1521df9840da files/digest-razor-2.40-r1 68
-MD5 eb86375c84c8a7db9512ca1943fd5a7a files/no-install-razor-agents.patch 292
-MD5 d3e9a49fe82b4c304cafaadb03eedb08 files/razor-taint.patch 2125
+MD5 8fcc1e253bebf4448a7b0f2562ac3609 files/digest-razor-2.61 68
 MD5 cf27167873572ac8be99c5195762d630 files/razor_uninstall.patch 1765
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBf2dbCHk4+ZoBpvsRAhM/AJ40ys02w7FLk2O/OTYMeifm88xWQwCgmHXg
+X5RIv20/OMp0QUfpKSRgwyc=
+=jQtl
+-----END PGP SIGNATURE-----
