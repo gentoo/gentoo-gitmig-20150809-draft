@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <herd>x86-kernel</herd>
+    <maintainer>
+        <email>steel300@gentoo.org</email>
+        <name>Jason Cox</name>
+    </maintainer>
+
+    <longdescription>
+        Support for the Broadcom 570x series of gigabit network cards.
+        This requires previous fetching of the driver in order to work. It's licensed 
+        under the GPL-2.
+    </longdescription>
+</pkgmetadata>
