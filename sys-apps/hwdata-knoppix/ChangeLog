@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwdata-knoppix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.5 2004/03/21 15:22:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.6 2004/03/23 20:17:56 zhen Exp $
+
+  23 Mar 2004; John Davis <zhen@gentoo.org> hwdata-knoppix-0.95.ebuild:
+  bumping to x86 stable
 
   21 Mar 2004; David Holm <dholm@gentoo.org> hwdata-knoppix-0.95.ebuild:
   Added to ~ppc.
