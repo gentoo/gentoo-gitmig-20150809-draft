@@ -1,19 +1,20 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/pax-3.3.4.ebuild,v 1.3 2003/12/04 09:16:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/pax-3.3.4.ebuild,v 1.4 2004/02/22 06:08:32 mr_bones_ Exp $
 
-inherit rpm
+inherit eutils rpm
 
 MY_PS=${P%.*}-${PV##*.}ras
 MY_P=${P%.*}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="pax (Portable Archive eXchange) is the POSIX standard archive tool."
+DESCRIPTION="pax (Portable Archive eXchange) is the POSIX standard archive tool"
 HOMEPAGE="http://www.openbsd.org/cgi-bin/cvsweb/src/bin/pax/"
 SRC_URI="ftp://rpmfind.net/linux/contrib/libc6/SRPMS/${MY_PS}.src.rpm"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+IUSE=""
 
 DEPEND="virtual/glibc
 	app-arch/rpm2targz"
