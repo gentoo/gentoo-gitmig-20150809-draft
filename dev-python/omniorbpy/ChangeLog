@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/omniORBpy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.1 2004/07/17 00:40:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.2 2004/07/17 09:50:03 dholm Exp $
+
+  17 Jul 2004; David Holm <dholm@gentoo.org> omniorbpy-2.3.ebuild:
+  Added to ~ppc.
 
 *omniorbpy-2.2 (17 Jul 2004)
 
