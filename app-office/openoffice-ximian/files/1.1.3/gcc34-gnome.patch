@@ -10,9 +10,7 @@
  {
  private:
 --- ucb/source/ucp/gvfs/makefile.mk    2004-11-09 18:36:49.317669216 +01
-00
 +++ ucb/source/ucp/gvfs/makefile.mk    2004-11-09 18:44:41.145940416 +01
-00
 @@ -4,6 +4,8 @@
  ENABLE_EXCEPTIONS=TRUE
  NO_BSYMBOLIC=TRUE
