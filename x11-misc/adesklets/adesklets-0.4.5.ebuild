@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.4.5.ebuild,v 1.1 2005/03/14 13:00:16 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.4.5.ebuild,v 1.2 2005/03/21 08:26:04 s4t4n Exp $
 
 DESCRIPTION="An interactive Imlib2 console for the X Window system"
 HOMEPAGE="http://adesklets.sf.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/adesklets/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="X python"
 
 DEPEND="virtual/libc
