@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.69 2004/08/23 10:28:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.70 2004/09/16 19:56:15 foser Exp $
+
+*gnome-terminal-2.7.3 (16 Sep 2004)
+
+  16 Sep 2004; foser <foser@gentoo.org> gnome-terminal-2.7.3.ebuild :
+  Gnome 2.8 release
 
   23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   gnome-terminal-2.6.1.ebuild:
