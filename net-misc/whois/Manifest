@@ -7,4 +7,4 @@ MD5 54ba3bae8b15b96af12a1316c25fdaae files/whois-4.6.8-gentoo-security.patch 454
 MD5 9d6a7c447cdafb5e2b97f86d5c6e9789 files/digest-whois-4.6.6-r2 62
 MD5 5b0f12c560d041d865109694432ffd93 files/whois-4.6.6-gentoo-security-2.patch 5366
 MD5 002b59068a31c05cfe61df2c31d655e7 files/digest-whois-4.6.9 62
-MD5 54ba3bae8b15b96af12a1316c25fdaae files/whois-4.6.9-gentoo-security.patch 4540
+MD5 5963b760548bb1f580ee3ac53ac1eb19 files/whois-4.6.9-gentoo-security.patch 4712

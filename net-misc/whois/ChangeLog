@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.29 2003/12/07 15:59:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.30 2003/12/08 02:05:56 mholzer Exp $
+
+  08 Dec 2003; Martin Holzer <mholzer@gentoo.org>
+  files/whois-4.6.9-gentoo-security.patch:
+  correcting security patch. submitted by Marcin Krycze <crytcheck@napisy.org>
+  in #34768.
 
 *whois-4.6.9 (07 Dec 2003)
 
