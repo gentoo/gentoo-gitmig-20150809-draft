@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.7 2003/11/17 16:25:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.8 2003/11/22 00:10:42 weeve Exp $
+
+  21 Nov 2003; Jason Wever <weeve@gentoo.org> opensp-1.5-r1.ebuild:
+  Added ~sparc keyword.
 
   17 Nov 2003; Aron Griffis <agriffis@gentoo.org> opensp-1.5-r1.ebuild:
   Stable on alpha
