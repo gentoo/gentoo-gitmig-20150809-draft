@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e12aeabfea98033a1919dfc2677c42bc ChangeLog 405
+MD5 d91acf25c81416c1e4f1ee2bfb831be4 ChangeLog 490
 MD5 87eba79fbf4b0474e5a4e051b246e23e metadata.xml 293
-MD5 057e0cce6d677fdb875c59e860a68883 popick-0.1.ebuild 940
+MD5 12f93bd04c9b57f3bc34618b70ef915e popick-0.1.ebuild 939
 MD5 3e21fe6a5a10b9c37ca7eeab20dbe427 files/digest-popick-0.1 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBwAhDQlM6RnzZP+IRAnzFAJwI1Sq4xwv232CzV9BePTDaJBSb9gCeNEhq
-uyyWwNopsPE31OUAsrJr9So=
-=EDUQ
+iD8DBQFCLJZZQlM6RnzZP+IRAi8qAJ9f7n8AdY78tIpYx13IjloJsXX+gwCdE2Mk
+jeRT/NyyTyX6A+kO0rXmT5I=
+=J6OJ
 -----END PGP SIGNATURE-----

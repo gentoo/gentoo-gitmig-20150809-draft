@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/popick
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.1 2004/12/15 09:47:36 ticho Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.2 2005/03/07 17:58:40 ticho Exp $
+
+  07 Mar 2005; Andrej Kacian <ticho@gentoo.org> popick-0.1.ebuild:
+  Stable on x86.
 
 *popick-0.1 (15 Dec 2004)
 
