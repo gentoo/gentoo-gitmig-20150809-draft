@@ -973,3 +973,7 @@ net-mail/spamassassin
 # raker@gentoo.org 10 Jul 2002
 # net-mail/postfix/postfix-1.1.11-r2 masked for testing saslv2 patch
 =net-mail/postfix-1.1.11-r2
+
+# stroke@gentoo.org 11 Jul 2002
+# app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
+>=app-cdr/eroaster-2.1.0
