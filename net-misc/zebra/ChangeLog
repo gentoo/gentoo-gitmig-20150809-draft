@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zebra
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.5 2003/06/01 01:12:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.6 2003/06/12 22:01:02 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> zebra-0.93a.ebuild, zebra-0.93b.ebuild:
+  add Header
 
 *zebra-0.93b-r1 (31 May 2003)
 
