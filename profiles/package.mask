@@ -62,6 +62,8 @@ app-emacs/monk
 ~kde-base/kdesdk-3.1_rc1
 ~kde-base/kdetoys-3.1_rc1
 ~kde-base/kdeutils-3.1_rc1
+# things that need kde 3.1 or qt 3.1
+>=x11-themes/mosfet-liquid-widgets-0.9.6_pre1
 
 # The user submitted ebuild for Speex is *not enough*.
 # There are issues with gcc3 that I've contacted the
