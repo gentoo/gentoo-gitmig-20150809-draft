@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.2 2004/07/03 12:44:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.3 2004/07/05 22:07:57 pythonhead Exp $
+
+  05 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> wxpython-2.4.2.4.ebuild:
+  Clarified USE='gtk2' messages. Bug# 56153
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> wxpython-2.4.0.7.ebuild,
   wxpython-2.4.1.2.ebuild, wxpython-2.4.2.4.ebuild:
@@ -118,7 +121,7 @@
   back to to 2.3.3 series of wxGTK.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *wxPython-2.3.3.1-r2 (30 Oct 2002)
 
   30 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
@@ -158,12 +161,12 @@
 
   22 Aug 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r1.ebuild,
   files/noglcanvas.diff, files/nogizmos.diff :
-  Ebuild disables glcancas and gizmos extensions as they currently are 
+  Ebuild disables glcancas and gizmos extensions as they currently are
   not building correctly.
 
   2 Jul 2002; Jon Nelson <jnelson@gentoo.org> wxPython-2.3.2.1-r1:
   Make lintool happy
-  expressly don't build GLCANVAS  
+  expressly don't build GLCANVAS
 
 *wxPython-2.3.2.1 (11 Apr 2002)
 
@@ -174,7 +177,7 @@
 *wxPython-2.3.2.1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
