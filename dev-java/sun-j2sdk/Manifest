@@ -1,4 +1,7 @@
-MD5 fa32a35d7c9420e206d0232524b0e808 sun-j2sdk-1.4.2.ebuild 3819
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2e54c6100f8ab0ce005f91097ebc92a8 sun-j2sdk-1.4.2.ebuild 3819
 MD5 cd59adb71ff8f12041fdd1b98aab590e ChangeLog 4391
 MD5 85919527e32936a785a920af4a0b8cca sun-j2sdk-1.4.1-r1.ebuild 3966
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
@@ -20,3 +23,10 @@ MD5 0bb65304895dd012bebfc692fbd48af1 files/1.4.2/j2sdk-1.4.2-pthread.patch 1624
 MD5 276f4ce091acd44428e36c15de66f7d1 files/1.4.2/j2sdk-1.4.2-gcc3.3-fixes.patch 4176
 MD5 df6db4b858ad836d290f1862857622d9 files/1.4.2/j2sdk-1.4.2-remove-fixed-paths.patch 4525
 MD5 7c7b6039ae92a59953775ddb8d8b93c8 files/1.4.2/j2sdk-1.4.2-force-motif.patch 3137
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOhLL/rLF9B432nYRAjzZAKCOFObpyRQefYNXpSMOKD13ePz87wCeJuVI
+rrLm22t6pqq27mi923T+KGk=
+=JJ3i
+-----END PGP SIGNATURE-----
