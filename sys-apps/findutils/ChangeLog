@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.16 2003/04/12 11:09:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.17 2003/04/13 21:55:51 gmsoft Exp $
 
 *findutils-4.1.7-r4 (11 Apr 2003)
+
+  13 Apr 2003; Guy Martin <gmsoft@gentoo.org> findutils-4.1.7-r4.ebuild :
+  Added hppa to KEYWORDS.
 
   12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> findutils-4.1.7-r4.ebuild:
   added ewarns to pkg_postinst to inform of locate and updatedb removal
