@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.11.ebuild,v 1.4 2004/02/29 10:33:53 vapier Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mamory/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~mips ~sparc"
+KEYWORDS="x86"
 
 DEPEND=""
 RDEPEND=""
@@ -22,8 +22,8 @@ src_compile() {
 
 src_install() {
 	egamesinstall || die
-	mv ${D}/${GAMES_PREFIX}/include ${D}/usr/
-	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
-	dohtml DOCS/mamory.html || die "dohtml failed"
+	mv ${D}/${GAMES_PREFIX}/include ${D}/usr/ || die "mv failed"
+	dodoc AUTHORS ChangeLog README TODO
+	dohtml DOCS/mamory.html
 	prepgamesdirs
 }
