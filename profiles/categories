@@ -67,6 +67,7 @@ gnustep-apps
 gnustep-base
 gnustep-libs
 kde-base
+kde-misc
 mail-filter
 mail-mta
 mail-server
