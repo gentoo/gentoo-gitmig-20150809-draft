@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.2 2003/12/05 23:40:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/parsec-0197.ebuild,v 1.3 2003/12/08 00:24:28 mholzer Exp $
 
 inherit games
 
@@ -9,6 +9,7 @@ HOMEPAGE="http://openparsec.sourceforge.net/"
 SRC_URI="http://public.www.planetmirror.com/pub/parsec/${PV}/parsec_lan_build${PV}.tar.gz
 	ftp://planetmirror.com/pub/parsec/${PV}/parsec_lan_build${PV}.tar.gz
 	http://ftp.webmonster.de/pub/parsec/parsec_lan_build${PV}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
