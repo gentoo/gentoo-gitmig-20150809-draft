@@ -1,19 +1,18 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.4 2001/08/07 16:57:37 darks Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.5 2002/02/10 16:43:43 verwilst Exp $
 
-A=db.${PV}.tar.gz
 S=${WORKDIR}/db.${PV}
 DESCRIPTION="db 1.85 -- required for RPM 4.0 to compile; that's about it."
-SRC_URI="http://www.sleepycat.com/update/${PV}/${A}"
+SRC_URI="http://www.sleepycat.com/update/${PV}/db.${PV}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com"
 DEPEND="virtual/glibc"
 RDEPEND=$DEPEND
-
+SLOT="1"
 src_unpack() {
 
-	unpack ${A}
+	unpack db.${PV}.tar.gz
 	cd ${S}
 	patch -p1 < ${FILESDIR}/db.${PV}.patch
 
@@ -22,7 +21,7 @@ src_unpack() {
 src_compile() {
 
     cd ${S}/PORT/linux
-    try make ${MAKEOPTS} OORG="${CFLAGS} -fomit-frame-pointer" prefix=/usr
+    make ${MAKEOPTS} OORG="${CFLAGS} -fomit-frame-pointer" prefix=/usr || die
 
 }
 

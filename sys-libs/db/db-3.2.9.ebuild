@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9.ebuild,v 1.1 2001/09/24 18:35:12 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9.ebuild,v 1.2 2002/02/10 16:43:43 verwilst Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
 SRC_URI="http://www.sleepycat.com/update/${PV}/${A}"
 HOMEPAGE="http://www.sleepycat.com/"
-
+SLOT="2"
 RDEPEND="virtual/glibc"
 DEPEND="$RDEPEND =sys-libs/db-1.85-r1"
 
