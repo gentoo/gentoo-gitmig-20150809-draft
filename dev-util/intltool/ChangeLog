@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/intltool
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.31 2004/02/03 21:59:40 foser Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.32 2004/02/07 00:44:50 spider Exp $
+
+  07 Feb 2004; <spider@gentoo.org> intltool-0.29.ebuild:
+  stable on x86, doing this to get building working on things that need
+  XML::Parser
 
 *intltool-0.30 (3 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.29.ebuild,v 1.1 2004/01/26 21:33:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.29.ebuild,v 1.2 2004/02/07 00:44:52 spider Exp $
 
 inherit gnome.org
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 
 RDEPEND="dev-perl/XML-Parser
 	${DEPEND}"
