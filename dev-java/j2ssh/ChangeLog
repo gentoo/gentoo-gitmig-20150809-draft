@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/j2ssh
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/ChangeLog,v 1.1 2004/04/10 15:55:38 zx Exp $
+
+*j2ssh-0.2.7 (10 Apr 2004)
+
+  10 Apr 2004; Chris Aniszczyk <zx@gentoo.org> j2ssh-0.2.7.ebuild,
+  metadata.xml:
+  Initial Import. Closes #47134.
+  Thanks to larry schuler <larryas2@yahoo.com> for the initial ebuild.
+
