@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.9 2004/04/23 22:02:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.10 2004/04/28 22:18:27 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -20,7 +20,7 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND >=net-www/webapp-config-1.4"
+DEPEND="$DEPEND >=net-www/webapp-config-1.5"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
@@ -263,8 +263,45 @@ function webapp_src_preinst ()
 
 function webapp_pkg_postinst ()
 {
-	G_HOSTNAME="localhost"
-	. /etc/vhosts/webapp-config
+	# if 'vhosts' is not set in your USE flags, we install a copy of
+	# this application in /var/www/localhost/htdocs/${PN}/ for you
 
-	use vhosts || /usr/sbin/webapp-config -I -u root -h localhost -d "${VHOST_ROOT}/htdocs/${PN}/" ${PN} ${PVR}
+	if ! use vhosts ; then
+		G_HOSTNAME="localhost"
+		. /etc/vhosts/webapp-config
+
+		local my_mode=-I
+		local my_dir="${VHOST_ROOT}/htdocs/${PN}"
+
+		# are we installing afresh - or are we upgrading?
+		# find out by looking to see what (if anything) is installed
+		# in there already
+
+		local my_output="`/usr/sbin/webapp-config --show-installed -d $my_dir 2> /dev/null`"
+		if [ "$?" = 0 ]; then
+
+			# something is in there - but the question has to be ... what?
+
+			if [ "`echo $my_output | awk '{ print $1 }'`" = "${PN}" ]; then
+				# we have an older version of whatever it is our ebuild is
+				# trying to install ;-)
+				#
+				# this is the situation we can deal with
+
+				my_mode=-U
+			else
+				# this should never happen - but just in case ...
+				#
+				# whatever is in that directory, it isn't the application
+				# that we are currently trying to install
+				#
+				# rather than overwrite the contents, we bail with an error
+				# instead
+
+				die "$my_output is already installed in $my_dir"
+			fi
+		fi
+	
+		/usr/sbin/webapp-config $my_mode -u root -d "$my_dir" ${PN} ${PVR}
+	fi
 }
