@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e1e8fb4587bba23f3f96e0f9d8f60f68 ChangeLog 4997
+MD5 d822996532e3e6502b8d30a809bd4396 ChangeLog 5142
 MD5 853cd9b8ebf824d0bc4b1f370c5ce07c dante-1.1.13.ebuild 1665
 MD5 d74517af49b35ae7db4e148fd5190d6a dante-1.1.14-r1.ebuild 1672
 MD5 c6bf0611a8d74df6a59f3397be58da61 dante-1.1.14-r2.ebuild 2075
 MD5 09b1e0f2779a1c9a16ed980f02fe8345 dante-1.1.15_pre1.ebuild 2147
+MD5 df408c91963aefe1b1d54e9cab76fec7 dante-1.1.15.ebuild 2142
 MD5 72d9add89e45e3cb921c99d79bdf31a7 files/dante-1.1.14-bindresvport.patch 485
 MD5 18a1fa3293fe5b6272427ca60293f867 files/dante-1.1.14-socksify.patch 801
 MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
@@ -16,10 +17,11 @@ MD5 a5e8f0769876952c68e2a06a1508fbfd files/digest-dante-1.1.13 64
 MD5 7d257618e686db991bad06011612d805 files/digest-dante-1.1.14-r1 64
 MD5 7d257618e686db991bad06011612d805 files/digest-dante-1.1.14-r2 64
 MD5 50224590fe8129aed7c9cb47a4e123ec files/digest-dante-1.1.15_pre1 69
+MD5 0a5831b02f1ee3c0b9810c4354839906 files/digest-dante-1.1.15 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB+AXWGSBEIeh4AEYRAru3AJ9l6s43j0k2fi8yhwXCrJjngdB4IwCdFAQZ
-WjXyp6Euo13zfCtcUqRLjKA=
-=n6z9
+iD8DBQFCAdBEGSBEIeh4AEYRAlzmAJ9I4uxuuZcB2Q5dPBAchlPAfW+yPwCeL2Qh
+RPXREul8k4YPhOp958UXBGI=
+=OcYA
 -----END PGP SIGNATURE-----
