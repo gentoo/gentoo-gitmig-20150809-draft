@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.4 2002/09/08 17:08:07 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.5 2002/09/09 02:31:53 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -63,7 +63,7 @@ src_unpack() {
 	cd ${S}
 
 	# Apply late fixage patch
-	patch -p1 < ${FILESDIR}/${P}.patch
+	patch -p1 < ${FILESDIR}/${P}.patch || die "Small fixes patch failed"
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	mv Makefile Makefile.orig
