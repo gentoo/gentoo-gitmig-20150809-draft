@@ -1,12 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.5 2004/01/17 05:21:26 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.6 2004/02/27 19:34:08 seemant Exp $
 
 inherit libtool flag-o-matic eutils
-# Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
-filter-mfpmath sse
-filter-flags -fPIC
-filter-flags -maltivec -mabi=altivec
 
 MY_P="${P/_pre/.}"
 S=${WORKDIR}/${MY_P}
@@ -52,6 +48,11 @@ src_unpack() {
 }
 
 src_compile() {
+	# Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
+	filter-mfpmath sse
+	filter-flags -fPIC
+	filter-flags -maltivec -mabi=altivec
+
 	# fix invalid paths in .la files of plugins
 	elibtoolize
 
