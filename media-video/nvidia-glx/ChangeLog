@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.80 2005/02/09 10:27:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.81 2005/02/09 10:54:56 eradicator Exp $
+
+  09 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> -files/libGL.la-r1,
+  files/libGL.la-r2, nvidia-glx-1.0.6629-r5.ebuild:
+  Remove X11R6 in .la so dependency_libs just uses /usr/lib.
 
 *nvidia-glx-1.0.6629-r5 (09 Feb 2005)
 

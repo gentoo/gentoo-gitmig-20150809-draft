@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r5.ebuild,v 1.1 2005/02/09 10:27:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r5.ebuild,v 1.2 2005/02/09 10:54:56 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -26,7 +26,7 @@ IUSE=""
 
 DEPEND="virtual/libc
 	virtual/x11
-	>=x11-base/opengl-update-2.1_pre1
+	>=x11-base/opengl-update-2.1.0
 	~media-video/nvidia-kernel-${PV}
 	!app-emulation/emul-linux-x86-nvidia"
 
@@ -159,8 +159,7 @@ src_install-libs() {
 	    -e "s:\${ver1}:${ver1}:" \
 	    -e "s:\${ver2}:${ver2}:" \
 	    -e "s:\${ver3}:${ver3}:" \
-		-e "s:\${xlibdir}:${inslibdir}:" \
-	    -e "s:\${libdir}:${NV_ROOT}/lib:" \
+	    -e "s:\${libdir}:${inslibdir}:" \
 	    ${FILESDIR}/libGL.la-r2 > ${D}/${NV_ROOT}/lib/libGL.la
 
 	# The X module
