@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.ebuild,v 1.3 2002/04/12 19:07:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.ebuild,v 1.4 2002/05/03 10:20:27 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -21,7 +21,8 @@ src_compile() {
 	kde_src_compile myconf
 
 	use python							|| myconf="$myconf --without-python"
-	use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
+	#use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	||
+	myconf="$myconf --without-java"
 	
 	export LIBPYTHON="`python-config`"
 	
