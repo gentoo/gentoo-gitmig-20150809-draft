@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.10.ebuild,v 1.3 2003/07/21 22:25:32 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.10.ebuild,v 1.4 2003/08/07 23:21:52 max Exp $
 
 inherit flag-o-matic
 
@@ -13,28 +13,26 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND=">=x11-libs/qt-3
+DEPEND="virtual/x11
+	>=x11-libs/qt-3
 	=media-tv/xmltv-0.5.14*
 	>=media-sound/lame-3.92
 	>=media-libs/freetype-2.0
 	>=sys-apps/sed-4
-	virtual/x11"
-
-RDEPEND="${DEPEND}
 	lcd? ( app-misc/lcdproc )"
 
-src_unpack() {
+RDEPEND="${DEPENED}
+	!media-tv/mythfrontend"
 
+src_unpack() {
 	unpack ${A}
 
 	for i in `grep -lr usr/local "${S}"` ; do
 		sed -e "s:usr/local:usr:" -i "${i}" || die "sed failed"
 	done
-
 }
 
 src_compile() {
-
 	cpu="`get-flag march`"
 	if [ -n "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "${S}/settings.pro" || die "sed failed"
@@ -46,11 +44,9 @@ src_compile() {
 
 	# Parallel build doesn't work.
 	make || die "compile problem"
-
 }
 
 src_install() {
-
 	make INSTALL_ROOT="${D}" install || die "make install failed"
 	newbin "setup/setup" "mythsetup"
 
@@ -74,11 +70,9 @@ src_install() {
 	dohtml docs/*.html
 
 	keepdir /var/{log,run}/mythtv
-
 }
 
 pkg_postinst() {
-
 	ewarn "Please note that /usr/share/mythtv/setup has been moved"
 	ewarn "to /usr/bin/mythsetup"
 	echo
@@ -106,5 +100,4 @@ pkg_postinst() {
 	ewarn "which need to be performed or this package will not work"
 	ewarn "properly."
 	echo
-
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.4 2003/07/21 22:25:32 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.5 2003/08/07 23:21:52 max Exp $
+
+  07 Aug 2003; Max Kalika <max@gentoo.org> mythtv-0.10.ebuild:
+  Block media-tv/mythfrontend.
 
   21 Jul 2003; Max Kalika <max@gentoo.org> mythtv-0.10.ebuild:
   Correct and simplify the compile process.
