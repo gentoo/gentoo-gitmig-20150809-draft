@@ -1,0 +1,13 @@
+--- Makefile.orig	2005-03-03 11:12:07.000000000 -0500
++++ Makefile	2005-03-03 11:50:42.000000000 -0500
+@@ -12,9 +12,8 @@
+ 
+ FC = f2c
+ FFLAGS = -A -C -Nn802 -NL400 #-c
+-CFLAGS = -O
+ 
+-.f.c:
++%.c: %.f
+ 	$(FC) $(FFLAGS) $<
+ 
+ all:	dungeon textcnv bin2txt
