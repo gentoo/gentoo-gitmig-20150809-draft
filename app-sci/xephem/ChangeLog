@@ -1,12 +1,15 @@
 # ChangeLog for app-sci/xephem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.5 2002/09/03 22:33:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.6 2002/09/14 17:33:21 owen Exp $
 
   03 Sep 2002; Daniel Robbins <drobbins@gentoo.org> xephem-3.5.2.ebuild:
   moved rphillips' 'download later' stuff into pkg_setup so it doesn't
   kill metadata extraction.
 
 *xephem-3.5.2 (31 May 2002)
+
+  14 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   01 Sep 2002; Ryan Phillips <rphillips@gentoo.org> xephem-3.5.2.ebuild :
   Fixes to the 'download later' section of the script.
