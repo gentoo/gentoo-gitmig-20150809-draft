@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.30 2005/01/24 19:12:40 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.31 2005/01/25 18:56:42 brix Exp $
+
+  25 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  -files/hostap-driver-0.3.0-firmware.patch,
+  -files/hostap-driver-0.3.2-firmware.patch,
+  -files/hostap-driver-0.3.3-firmware.patch, -hostap-driver-0.2.4.ebuild,
+  -hostap-driver-0.2.5.ebuild, -hostap-driver-0.2.6.ebuild,
+  -hostap-driver-0.3.0.ebuild, -hostap-driver-0.3.2.ebuild,
+  -hostap-driver-0.3.3-r1.ebuild, -hostap-driver-0.3.3.ebuild:
+  Pruned old versions.
 
 *hostap-driver-0.3.5 (24 Jan 2005)
 
