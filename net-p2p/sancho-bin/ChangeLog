@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.17 2004/09/16 23:55:48 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.18 2004/10/05 16:07:00 squinky86 Exp $
+
+*sancho-bin-0.9.4.16 (05 Oct 2004)
+
+  05 Oct 2004; Jon Hood <squinky86@gentoo.org> +sancho-bin-0.9.4.16.ebuild:
+  Version bump, thanks spiralvoice <spiralvoice@hotmail.com>, #65997.
 
 *sancho-bin-0.9.4.14-r1 (16 Sep 2004)
 
