@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.3-r2.ebuild,v 1.4 2003/11/04 20:19:10 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.3-r2.ebuild,v 1.5 2003/12/11 00:29:21 avenj Exp $
 
 IUSE="truetype perl xinerama"
 
@@ -13,7 +13,7 @@ SRC_URI="http://pekwm.pekdon.net/files/source/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc amd64"
 
 DEPEND="virtual/x11
 	truetype? ( virtual/xft )
