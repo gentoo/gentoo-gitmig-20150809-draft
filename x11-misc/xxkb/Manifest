@@ -1,5 +1,8 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4b9cde2807c2862f7f2d1323771d5629 xxkb-1.10.ebuild 964
-MD5 55ce689d62b4943bec41d539d9b8ded4 ChangeLog 839
+MD5 013ec5faa56c1a91fa6756c6c254d74a ChangeLog 935
 MD5 73306e20ac1b1ef3b82127d6585e9431 metadata.xml 229
 MD5 7e64eb2e6ef3936a3ca8d8afe30f40c9 files/pl15.xpm 380
 MD5 076bcbd2d0233fd87e3882eb928998f2 files/pl48.xpm 2591
@@ -8,3 +11,10 @@ MD5 668828741a9c91d290adcfd3830c51c8 files/xxkb-1.10-gcc34-fix.patch 237
 MD5 fdfdc028c40cbd47225d590f1ea4ddc6 files/de15.xpm 395
 MD5 9f963f4480dd397b9137cd491f6020a1 files/de48.xpm 2606
 MD5 59d0e52e1b00831e0c28b2df5fd28d3c files/digest-xxkb-1.10 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOfHF/rLF9B432nYRAjUoAKCHBY2GqGO67iqGiwpcU8FsSMvATQCghoPg
+0e+tcyDHcWojRW3HapnL9RM=
+=+0WA
+-----END PGP SIGNATURE-----
