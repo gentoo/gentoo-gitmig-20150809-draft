@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/libidn
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.16 2004/12/03 08:04:11 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.17 2005/01/29 17:00:10 carlo Exp $
+
+*libidn-0.5.13 (29 Jan 2005)
+
+  29 Jan 2005; Carsten Lohrke <carlo@gentoo.org> +libidn-0.5.13.ebuild:
+  version bump
 
   03 Dec 2004; Daniel Black <dragonheart@gentoo.org> libidn-0.5.11-r1.ebuild:
   Handles pic correctly now thanks to Daniel Karlsson 

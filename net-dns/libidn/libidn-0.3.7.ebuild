@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.3.7.ebuild,v 1.9 2004/08/11 23:38:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.3.7.ebuild,v 1.10 2005/01/29 17:00:10 carlo Exp $
 
 DESCRIPTION="Internationalized Domain Names (IDN) implementation."
 HOMEPAGE="http://www.gnu.org/software/libidn/"
