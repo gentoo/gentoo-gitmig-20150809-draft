@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/moldy
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/ChangeLog,v 1.5 2003/10/27 10:03:16 phosphan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/ChangeLog,v 1.6 2004/03/30 20:02:02 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   27 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> moldy-2.16e.ebuild:
   Fixing sandbox issue from bug 20657

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/xfoil
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xfoil/ChangeLog,v 1.2 2004/02/04 09:48:50 george Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xfoil/ChangeLog,v 1.3 2004/03/30 19:58:15 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; xfoil-6.94-r1.ebuild,
+  xfoil-6.94.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
 *xfoil-6.94-r1 (03 Feb 2004)
 

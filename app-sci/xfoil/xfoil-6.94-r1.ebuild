@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xfoil/xfoil-6.94-r1.ebuild,v 1.1 2004/02/04 09:48:50 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xfoil/xfoil-6.94-r1.ebuild,v 1.2 2004/03/30 19:58:15 spyderous Exp $
 
 inherit gcc
 
@@ -20,9 +20,9 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/blas
 	app-sci/blas-config
-	x11-base/xfree"
+	virtual/x11"
 
-RDEPEND="x11-base/xfree"
+RDEPEND="virtual/x11"
 
 S=${WORKDIR}/${MY_P_upper}
 

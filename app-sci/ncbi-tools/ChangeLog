@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/ncbi-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.9 2004/03/21 15:07:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.10 2004/03/30 20:00:14 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ncbi-tools-04222003-r2.ebuild, ncbi-tools-20030422.ebuild,
+  ncbi-tools-20031103.ebuild, ncbi-tools-20040202-r1.ebuild,
+  ncbi-tools-20040202.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   21 Mar 2004; Martin Holzer <mholzer@gentoo.org>
   ncbi-tools-04222003-r2.ebuild, ncbi-tools-20030422.ebuild,
