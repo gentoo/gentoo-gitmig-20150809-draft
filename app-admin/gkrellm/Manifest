@@ -3,7 +3,7 @@ MD5 ba737436adbc080cfc32870c2cb440e3 gkrellm-1.2.13.ebuild 916
 MD5 0cbfbeeb375623e66000ec9d511e8b1a gkrellm-2.1.10.ebuild 1571
 MD5 1e1ccff84ea51ae1a9eb2c5820e9ab40 metadata.xml 152
 MD5 761ca5c0b48261bd884d14378fb3b965 gkrellm-2.1.20.ebuild 1667
-MD5 0dffc7030c973aba1d8950aa8772c9b1 gkrellm-2.1.21.ebuild 1664
+MD5 fb96454ef242779f384613f59c511310 gkrellm-2.1.21.ebuild 1665
 MD5 0f5aa783d9ac45e2fc8e370ec86f8960 gkrellm-2.1.16.ebuild 1665
 MD5 c7dcb8442cab2dd0d8e7da28ff960ae4 gkrellm-2.1.22.ebuild 1668
 MD5 6e41c75396a6b0df361a04657fd45ac3 files/digest-gkrellm-1.2.13 67
