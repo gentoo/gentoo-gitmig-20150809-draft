@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.14 2004/10/19 08:16:18 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.15 2004/12/30 01:11:35 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> XML-Twig-3.15-r1.ebuild:
   Stable on amd64. Closes bug 64973.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> XML-Twig-3.15-r1.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> XML-Twig-3.15-r1.ebuild:
   Stable on alpha.
 
   22 Sep 2004; Michael Cummings <mcummings@gentoo.org>
@@ -18,7 +21,7 @@
   +XML-Twig-3.15-r1.ebuild:
   New version adds missing deps (necessary for a pretty build)
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> XML-Twig-3.13.ebuild:
+  09 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> XML-Twig-3.13.ebuild:
   Stable on alpha.
 
 *XML-Twig-3.15 (11 Jun 2004)
@@ -30,7 +33,7 @@
   XML-Twig-3.13.ebuild:
   XML-XPath is used in the tests, despite not being the prereqpm's. grunt.
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> XML-Twig-3.09.ebuild,
+  05 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> XML-Twig-3.09.ebuild,
   XML-Twig-3.13.ebuild:
   Bump alpha keywords.
 
