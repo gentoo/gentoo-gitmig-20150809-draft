@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r1.ebuild,v 1.6 2004/02/04 11:40:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r1.ebuild,v 1.7 2004/02/05 07:18:08 vapier Exp $
 
 MY_P=imap-${PV}
 S=${WORKDIR}/${MY_P}
@@ -47,9 +47,11 @@ src_unpack() {
 }
 
 src_compile() {
+	local extracflags
+	use amd64 && extracflags=-fPIC
 	if use ssl; then
 		cd ${S}
-		yes | make lnp SSLTYPE=unix || die
+		yes | make lnp EXTRACFLAGS="${extracflags}" SSLTYPE=unix || die
 
 		local i
 		for i in imapd ipop3d; do
@@ -74,7 +76,7 @@ EOF
 			umask 022
 		done
 	else
-		yes | make lnp SSLTYPE=none || die
+		yes | make lnp EXTRACFLAGS="${extracflags}" SSLTYPE=none || die
 	fi
 }
 
