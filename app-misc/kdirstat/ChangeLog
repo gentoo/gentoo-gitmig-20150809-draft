@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kdirstat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.8 2004/03/21 21:51:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.9 2004/03/23 17:40:20 augustus Exp $
+
+  23 Mar 2004; <augustus@gentoo.org> kdirstat-2.4.0.ebuild:
+  Added ~amd64 keyword.
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> kdirstat-2.4.0.ebuild:
   Added ~sparc keyword.
