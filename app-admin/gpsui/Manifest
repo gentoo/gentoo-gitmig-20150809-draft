@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a6c4313fadcd3a6bf71e109c0855f3b ChangeLog 749
-MD5 1248d7b4282beabc4cc516bd733b41c6 gpsui-2.2.ebuild 723
+MD5 9030674ae9902718862213bf78e82e07 ChangeLog 836
+MD5 f9621d19f913afa8d5990aa13bc2dc75 gpsui-2.2.ebuild 723
 MD5 01b3ecafb0fe51a5982fcd0e6eb2f332 files/digest-gpsui-2.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBm3rKHTu7gpaalycRAgeUAKDdUovvrBUcIWNl2nHNGm/kPx7aIQCggOsQ
-wF+gMoxG2ktC/jUpUro7Y4E=
-=MdqD
------END PGP SIGNATURE-----
