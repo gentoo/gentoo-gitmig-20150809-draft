@@ -23,3 +23,4 @@ move sys-apps/filelight kde-misc/filelight
 move x11-misc/komics kde-misc/komics
 move app-misc/kfish kde-misc/kfish
 move app-misc/kalbum kde-misc/kalbum
+move app-misc/kcpuload kde-misc/kcpuload
