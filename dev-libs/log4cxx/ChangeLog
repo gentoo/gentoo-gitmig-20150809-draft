@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.10 2005/01/12 12:06:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.11 2005/01/31 11:02:42 ka0ttic Exp $
+
+  31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> log4cxx-0.9.7-r1.ebuild:
+  Marked stable on x86.
 
   12 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> log4cxx-0.9.5.ebuild:
   Marked stable on x86.
