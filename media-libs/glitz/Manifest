@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6dec794dedb44242458b96d2cf4da28a ChangeLog 718
-MD5 689e5597bd279842c4769226fc421dff glitz-0.2.3.ebuild 1000
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 8b32d586372b0115d1090d99c01b558f files/glitz-0.2.3-link.patch 703
+MD5 6eae07d7b8c36191c534ad0910278dda glitz-0.2.3.ebuild 1038
 MD5 da3806ac5f02e88b51d0e0a91077f7ab files/digest-glitz-0.2.3 63
+MD5 8b32d586372b0115d1090d99c01b558f files/glitz-0.2.3-link.patch 703
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB7bSProRuSHgZdywRArZ3AJkBkZwV1IK5aRVasHa7qnGgpQ4ChQCePi86
+6YzxZsWoBXW8qXPk2qE/yWw=
+=nT87
+-----END PGP SIGNATURE-----
