@@ -1,0 +1,20 @@
+--- src/ui/eggcellrendererkeys.c.orignial	2004-07-31 17:04:48.470432948 +0200
++++ src/ui/eggcellrendererkeys.c	2004-07-31 17:10:47.685265614 +0200
+@@ -588,7 +588,7 @@
+ void
+ egg_cell_renderer_keys_set_accelerator (EggCellRendererKeys *keys,
+                                         guint                keyval,
+-                                        GdkModifierType      mask)
++                                        EggVirtualModifierType   mask)
+ {
+   char *text;
+   gboolean changed;
+@@ -630,7 +630,7 @@
+ void
+ egg_cell_renderer_keys_get_accelerator (EggCellRendererKeys *keys,
+                                         guint               *keyval,
+-                                        GdkModifierType     *mask)
++                                        EggVirtualModifierType    *mask)
+ {
+   g_return_if_fail (EGG_IS_CELL_RENDERER_KEYS (keys));
+ 
