@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3-r1.ebuild,v 1.5 2002/11/26 21:53:40 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3-r1.ebuild,v 1.6 2002/11/26 23:19:20 rphillips Exp $
 
 IUSE="ssl nls java python tcltk perl"
 
@@ -138,6 +138,8 @@ pkg_postinst() {
 	einfo ">>> Execute the following command"
 	einfo ">>> ebuild  /var/db/pkg/dev-db/${PF}/${PF}.ebuild config"
 	einfo ">>> to setup the initial database environment."
+	einfo ">>> "
+	einfo ">>> Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell, or /bin/true"
 }
 
 
