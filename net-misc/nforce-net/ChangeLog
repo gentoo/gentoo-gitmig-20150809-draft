@@ -1,0 +1,7 @@
+# ChangeLog for net-misc/nforce-net
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.1 2002/12/18 01:37:34 drobbins Exp $
+
+*nforce-net-1.0.0248 (17 Dec 2002)
+
+  17 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: initial ebuild.
