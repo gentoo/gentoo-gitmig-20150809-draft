@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/gtkwave
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gtkwave/ChangeLog,v 1.5 2003/11/27 23:10:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gtkwave/ChangeLog,v 1.6 2003/12/16 13:00:06 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org>
+  gtkwave-2.0.0_pre20030715.ebuild:
+  Added ~sparc keyword o fix broken dependencies in app/sci/tbass.
 
 *gtkwave-2.0.0_pre20030715 (27 Nov 2003)
 
