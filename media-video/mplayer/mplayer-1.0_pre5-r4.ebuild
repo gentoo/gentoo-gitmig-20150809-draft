@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.13 2004/10/24 05:56:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.14 2004/10/24 14:12:51 lu_zero Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -478,20 +478,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
-	if use ppc
-	then
-		echo
-		einfo "When you see only GREEN salad on your G4 while playing"
-		einfo "a DivX, you should recompile _without_ altivec enabled."
-		einfo "Further information: http://bugs.gentoo.org/show_bug.cgi?id=18511"
-		echo
-		einfo "If everything functions fine with watching DivX and"
-		einfo "altivec enabled, please drop a comment on the mentioned bug!"
-		echo
-		einfo "libpostproc is no longer installed by mplayer. If you have an"
-		einfo "application that depends on it, install >=ffmpeg-0.4.8.20040222"
-	fi
 
 	if use matrox; then
 		depmod -a &>/dev/null || :

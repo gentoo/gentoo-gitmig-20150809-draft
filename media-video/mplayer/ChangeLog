@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.222 2004/10/24 13:56:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.223 2004/10/24 14:12:51 lu_zero Exp $
+
+  24 Oct 2004; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre5-r3.ebuild,
+  mplayer-1.0_pre5-r4.ebuild:
+  Minor cleanup
 
   24 Oct 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild:
   Bad bash logic... [ v. ).
