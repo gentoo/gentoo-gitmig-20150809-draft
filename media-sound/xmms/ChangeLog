@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.47 2003/05/17 08:23:59 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.48 2003/05/26 06:42:22 jje Exp $
+
+  26 May 2003; jje <jje@gentoo.org> xmms-1.2.7-r21.ebuild:
+  Removing previous revision, patch needs more work - it breaks things.
 
   17 May 2003; jje <jje@gentoo.org> xmms-1.2.7-r21.ebuild,
   files/xmms-1.2.7-songpos.patch:
