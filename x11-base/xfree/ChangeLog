@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.145 2003/06/05 03:27:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.146 2003/06/05 13:13:49 seemant Exp $
+
+  05 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r3.ebuild:
+  Added via driver from cvs X -- tarballed it onto the mirrors. This should
+  close bug #19512 by Henrik Treadup <hetr9922@student.su.se>. Also added a
+  patch for dri corruption with i8x0 chipsets -- should close bug #8927 by
+  Jan Knipper <jan-gentoo@spline.de>.  PATCH_VER is 2.1.2
 
   04 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r3.ebuild:
   oops patch-2.1.1 is new replacement. 2.1.0 was slightly wonky. Also,
