@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/MIME-Base64
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.2 2002/05/05 18:47:51 seemant Exp $
+
+*MIME-Base64-2.12-r1 (5 May 2002)
+
+  5 May 2002; Seemant Kulleen <seemant@gentoo.org>
+  MIME-Base64-2.12-r1.ebuild files/digest-MIME-Base64-2.12-r1 :
+
+  Conversion to eclasses.
 
 *MIME-Base64-2.12 (1 Feb 2002)
 

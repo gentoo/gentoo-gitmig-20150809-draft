@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Msql-Mysql-modules
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/ChangeLog,v 1.2 2002/05/05 18:47:51 seemant Exp $
+
+*Msql-Mysql-modules-1.2219 (5 May 2002)
+
+  5 May 2002; Seemant Kulleen <seemant@gentoo.org>
+  Msql-Mysql-modules-1.2219.ebuild :
+
+  Version bump and eclasses.  1.2215 also eclassified
 
 *Msql-Mysql-modules-1.2215 (1 Feb 2002)
 

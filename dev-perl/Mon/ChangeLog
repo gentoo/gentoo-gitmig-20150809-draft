@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Mon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mon/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mon/ChangeLog,v 1.2 2002/05/05 18:47:51 seemant Exp $
+
+*Mon-0.11-r1 (5 May 2002)
+
+  5 May 2002; Seemant Kulleen <seemant@gentoo.org> Mon-0.11-r1.ebuild
+  files/digest-Mon-0.11-r1 :
+
+  Eclass conversion
 
 *Mon-0.11 (1 Feb 2002)
 

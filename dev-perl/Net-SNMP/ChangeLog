@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-SNMP
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.2 2002/05/05 18:47:51 seemant Exp $
+
+*Net-SNMP-3.60-r1 (5 May 2002)
+
+  5 May 2002; Seemant Kulleen <seemant@gentoo.org> Net-SNMP-3.60-r1.ebuild
+  files/digest-Net-SNMP-3.60-r1 :
+
+  eclasses.
 
 *Net-SNMP-3.60 (1 Feb 2002)
 
