@@ -4,7 +4,7 @@
 #Experimental: trying to use these USE variables to build up from stage 2->3
 #thus eliminating the inherent fragility of using USE for this
 
-GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
+GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses -java"
 
 
 USE="amd64 oss 3dnow apm arts avi berkdb crypt -cups encode foomaticdb gdbm gif gpm gtk  gtk2 imlib
