@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.8 2003/02/12 06:11:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.9 2003/05/02 07:29:03 george Exp $
+
+*gcl-2.5.2 (01 May 2003)
+
+  01 May 2003; George Shapovalov <george@gentoo.org> gcl-2.5.2.ebuild :
+  new version (#19830)
+  older version has reportedly some problms with bfd libraries
+  Thanks to Cliff Yapp <smustudent1@yahoo.com> for submission
 
 *gcl-2.4.3 (03 Sep 2002)
 
