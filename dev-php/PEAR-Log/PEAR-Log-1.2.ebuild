@@ -8,7 +8,7 @@ HOMEPAGE="http://pear.php.net/package-info.php?pacid=8"
 SRC_URI="http://pear.php.net/get/${P}.tgz"
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
 DEPEND="virtual/php"
 RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P}
