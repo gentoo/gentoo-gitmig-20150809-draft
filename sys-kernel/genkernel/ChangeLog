@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.34 2004/02/25 21:37:44 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.35 2004/02/27 17:34:21 drobbins Exp $
+
+*genkernel-3.0.1 (27 Feb 2004)
+
+  27 Feb 2004; Daniel Robbins <drobbins@gentoo.org> New release with bootsplash
+  fixes (now uses the "default" bootsplash symlink.)
 
 *genkernel-3.0.1_rc2 (25 Feb 2004)
 
