@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xxkb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.1 2003/05/15 09:00:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.2 2003/05/15 09:02:21 phosphan Exp $
 
 *xxkb-1.10 (15 May 2003)
 
@@ -8,5 +8,6 @@
   files/README, files/de15.xpm, files/de48.xpm, files/pl15.xpm,
   files/pl48.xpm:
   Initial import. Added german and polish flag xpms and a hint for XKB
-  documentation.
+  documentation. Ebuild was provided by Andrew Kirilenko <icedank@gmx.net>
+  in bug 20991.
 
