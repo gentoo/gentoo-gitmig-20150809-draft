@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-20030510.ebuild,v 1.9 2005/01/22 04:19:38 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-20030510.ebuild,v 1.10 2005/02/07 05:34:04 hollow Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DEPEND="dev-db/mysql =net-www/apache-2*"
 RDEPEND=""
 LICENSE="Apache-1.1"
 KEYWORDS="x86"
-IUSE=""
+IUSE="apache2"
 SLOT="0"
 
 if use apache2; then

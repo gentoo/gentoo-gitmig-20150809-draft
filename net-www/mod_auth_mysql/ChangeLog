@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.13 2005/02/02 05:11:17 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.14 2005/02/07 05:34:04 hollow Exp $
+
+  07 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  mod_auth_mysql-20030510.ebuild:
+  Fixed IUSE
 
 *mod_auth_mysql-2.0.0_pre20030510 (01 Feb 2005)
 
