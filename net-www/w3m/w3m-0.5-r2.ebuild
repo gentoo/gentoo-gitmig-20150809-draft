@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5-r2.ebuild,v 1.1 2004/04/07 16:40:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5-r2.ebuild,v 1.2 2004/04/28 19:58:30 usata Exp $
 
 inherit eutils
 
@@ -23,41 +23,25 @@ SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
 
 LICENSE="w3m"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
-IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk nls async"
+KEYWORDS="x86 alpha ~ppc ~sparc"
+IUSE="X gtk imlib imlib2 xface ssl migemo gpm cjk nls async"
 #IUSE="canna unicode"
 
 # canna? ( app-i18n/canna )
-RDEPEND=">=sys-libs/ncurses-5.2-r3
+DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
 	>=dev-libs/boehm-gc-6.2
-	X? ( || ( !nopixbuf? ( >=media-libs/gdk-pixbuf-0.22.0 )
-		imlib2? ( >=media-libs/imlib2-1.1.0-r2 )
-		imlib? ( >=media-libs/imlib-1.9.8 )
-		virtual/glibc )
+	X? ( gtk? ( >=media-libs/gdk-pixbuf-0.22.0 )
+		!gtk? ( imlib2? ( >=media-libs/imlib2-1.1.0 )
+			!imlib2? ( >=media-libs/imlib-1.9.8 ) )
 	)
-	!X? ( imlib2? ( >=media-libs/imlib2-1.1.0-r2 ) )
+	!X? ( imlib2? ( >=media-libs/imlib2-1.1.0 ) )
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	migemo? ( >=app-text/migemo-0.40 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 PROVIDE="virtual/textbrowser
 	virtual/w3m"
-
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58"
-
-S=${WORKDIR}/${P}
-
-pkg_setup() {
-	if [ -n "`use X`" -a -n "`use nopixbuf`" -a -z "`use imlib2`" -a -z "`use imlib`" ] ; then
-		ewarn
-		ewarn "If you set USE=\"nopixbuf\" (disable gdk-pixbuf for w3mimgdisplay),"
-		ewarn "you need to enable either imlib2 or imlib USE flag."
-		ewarn
-		die "w3m requires gdk-pixbuf, imlib2 or imlib for image support."
-	fi
-}
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -78,24 +62,18 @@ src_unpack() {
 }
 
 src_compile() {
-	export WANT_AUTOCONF=2.5
-	#autoconf || die "autoconf failed"
-
 	local myconf migemo_command imagelib
 
 	if [ -n "`use X`" ] ; then
 		myconf="${myconf} --enable-image=x11,fb `use_enable xface`"
-		if [ ! -n "`use nopixbuf`" ] ; then
+		if [ -n "`use gtk`" ] ; then
 			imagelib="gdk-pixbuf"
 		elif [ -n "`use imlib2`" ] ; then
 			imagelib="imlib2"
-		elif [ -n "`use imlib`" ] ; then
-			imagelib="imlib"
 		else
-			# defaults to gdk-pixbuf
-			imagelib="gdk-pixbuf"
+			imagelib="imlib"
 		fi
-	else
+	else	# no X
 		if [ -n "`use imlib2`" ] ; then
 			myconf="${myconf} --enable-image=fb"
 			imagelib="imlib2"
