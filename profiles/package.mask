@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (07 Sep 2002)
+# Masked for testing
+=media-plugins/xmms-nebulus-0.3.0
+
 # <spider@gentoo.org> (05 Sep 2002)
 # Masked for stable marking upstream
 # gnome 2.0.2rc things
