@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.7 2004/09/16 15:18:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.8 2004/09/25 15:10:07 lanius Exp $
 
 inherit eutils kmod
 
@@ -57,6 +57,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${DISTDIR}/01-add-2.6-devfs-and-sysfs-to-lirc_dev.patch
+	epatch ${FILESDIR}/${P}-configure.patch
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.38 2004/09/16 15:18:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.39 2004/09/25 15:10:07 lanius Exp $
+
+  25 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  +files/lirc-0.7.0_pre7-configure.patch, lirc-0.7.0_pre7-r1.ebuild,
+  lirc-0.7.0_pre7.ebuild:
+  fix typo in configure that leads to a compile error, bug #64356
 
 *lirc-0.7.0_pre7-r1 (16 Sep 2004)
 

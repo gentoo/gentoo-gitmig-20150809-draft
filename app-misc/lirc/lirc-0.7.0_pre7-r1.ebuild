@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7-r1.ebuild,v 1.2 2004/09/17 18:29:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7-r1.ebuild,v 1.3 2004/09/25 15:10:07 lanius Exp $
 
 inherit eutils kmod
 
@@ -58,6 +58,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${DISTDIR}/01-add-2.6-devfs-and-sysfs-to-lirc_dev.patch
 	epatch ${FILESDIR}/lirc-0.7.0_pre7-streamzap.patch.bz2
+	epatch ${FILESDIR}/${P}-configure.patch
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
 }
 
