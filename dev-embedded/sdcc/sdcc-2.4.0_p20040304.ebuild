@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040304.ebuild,v 1.1 2004/03/05 02:13:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040304.ebuild,v 1.2 2004/03/05 13:00:45 dholm Exp $
 
 S=${WORKDIR}/${PN}
 MY_PV=${PV/*_p/}
@@ -11,7 +11,7 @@ HOMEPAGE="http://sdcc.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="doc"
 DEPEND="virtual/glibc
