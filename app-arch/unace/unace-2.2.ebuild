@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-2.2.ebuild,v 1.5 2003/07/08 21:50:26 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-2.2.ebuild,v 1.6 2003/10/02 02:01:46 vapier Exp $
 
-S=${WORKDIR}
 DESCRIPTION="ACE unarchiver"
-SRC_URI="http://home.hccnet.nl/h.edskes/download/linunace${PV//./}.tgz"
 HOMEPAGE="http://www.winace.com/"
+SRC_URI="http://ace.edskes.com/winace/linunace${PV//.}.tgz"
 
-SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 -ppc -sparc "
+SLOT="0"
+KEYWORDS="-* x86"
 
 DEPEND="virtual/glibc"
+
+S=${WORKDIR}
 
 src_install() {
 	into /opt
