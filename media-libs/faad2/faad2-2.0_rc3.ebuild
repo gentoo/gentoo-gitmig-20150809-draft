@@ -1,8 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3.ebuild,v 1.2 2003/12/23 14:18:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3.ebuild,v 1.3 2003/12/30 17:37:03 foser Exp $
 
-inherit eutils libtool
+inherit eutils libtool flag-o-matic
+
+# see #34392
+filter-flags "-mfpmath=sse"
 
 HOMEPAGE="http://faac.sourceforge.net/"
 DESCRIPTION="The fastest ISO AAC audio decoder available, correctly decodes all MPEG-4 and MPEG-2 MAIN, LOW, LTP, LD and ER object type AAC files"
