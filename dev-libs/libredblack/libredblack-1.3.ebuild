@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libredblack/libredblack-1.3.ebuild,v 1.1 2003/12/11 20:22:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libredblack/libredblack-1.3.ebuild,v 1.2 2004/03/14 12:28:57 mr_bones_ Exp $
 
 DESCRIPTION="RedBlack Balanced Tree Searching and Sorting Library"
 HOMEPAGE="http://libredblack.sourceforge.net/"

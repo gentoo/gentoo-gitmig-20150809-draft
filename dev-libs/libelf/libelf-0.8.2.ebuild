@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.2.ebuild,v 1.12 2003/11/11 12:50:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.2.ebuild,v 1.13 2004/03/14 12:28:57 mr_bones_ Exp $
 
 DESCRIPTION="A ELF object file access library"
 SRC_URI="http://www.stud.uni-hannover.de/~michael/software/${P}.tar.gz"

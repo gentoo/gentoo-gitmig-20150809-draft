@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/cfitsio-2.430.ebuild,v 1.3 2003/08/05 19:03:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/cfitsio-2.430.ebuild,v 1.4 2004/03/14 12:28:57 mr_bones_ Exp $
 
 DESCRIPTION="C and Fortran library for reading and writing files in FITS data format"
 HOMEPAGE="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html"

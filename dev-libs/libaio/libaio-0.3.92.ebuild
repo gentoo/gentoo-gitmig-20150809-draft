@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.92.ebuild,v 1.3 2003/11/30 19:58:07 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.92.ebuild,v 1.4 2004/03/14 12:28:57 mr_bones_ Exp $
 
 DESCRIPTION="Asynchronous input/output library maintained by RedHat, required by Oracle9i AMD64 edition"
 #SRC_URI="mirror://gentoo/${P}.tar.bz2"

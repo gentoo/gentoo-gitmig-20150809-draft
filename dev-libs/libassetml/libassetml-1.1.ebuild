@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassetml/libassetml-1.1.ebuild,v 1.1 2003/11/07 16:26:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassetml/libassetml-1.1.ebuild,v 1.2 2004/03/14 12:28:57 mr_bones_ Exp $
 
 DESCRIPTION="use xml files as resource databases"
 HOMEPAGE="http://ofset.sourceforge.net/"
