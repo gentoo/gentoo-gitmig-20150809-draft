@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.4.ebuild,v 1.2 2002/03/09 12:27:18 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base
 
