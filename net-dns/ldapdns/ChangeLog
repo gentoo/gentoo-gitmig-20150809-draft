@@ -1,6 +1,6 @@
 # ChangeLog for net-dns/ldapdns
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the  GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.7 2004/07/01 22:12:06 eradicator Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.8 2004/10/02 15:27:52 swegener Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ldapdns-2.03.ebuild,
   ldapdns-2.04.ebuild, ldapdns-2.05.ebuild:
