@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/partgui
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/ChangeLog,v 1.4 2004/02/04 09:10:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/ChangeLog,v 1.5 2004/02/11 08:55:47 phosphan Exp $
+
+*partgui-0.2.3-r1 (11 Feb 2004)
+
+  11 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> partgui-0.2.3-r1.ebuild:
+  Don't ask for mouse type after start.
 
 *partgui-0.2.3 (03 Feb 2004)
 
