@@ -82,3 +82,4 @@ move net-www/jboss www-servers/jboss
 move net-www/jetty www-servers/jetty
 move net-www/lighttpd www-servers/lighttpd
 move net-www/mini_httpd www-servers/mini_httpd
+move net-www/monkeyd www-servers/monkeyd
