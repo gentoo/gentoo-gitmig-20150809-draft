@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.1 2004/05/30 09:56:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.2 2004/05/30 22:15:10 g2boojum Exp $
+
+*ssmtp-2.60.7-r1 (30 May 2004)
+
+  30 May 2004; Grant Goodyear <g2boojum@gentoo.org> ssmtp-2.60.4-r2.ebuild,
+  +ssmtp-2.60.7-r1.ebuild, ssmtp-2.60.7.ebuild:
+  Made mailwrapper an optional dep w/ USE=mailwrapper.
+  Also fixed up which docs get installed.
 
 *ssmtp-2.48 (30 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7.ebuild,v 1.1 2004/05/30 09:56:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7.ebuild,v 1.2 2004/05/30 22:15:10 g2boojum Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="ssl ipv6 md5sum"
 
 DEPEND="virtual/glibc
 	ssl? ( dev-libs/openssl )"
-RDEPEND="net-mail/mailwrapper
+RDEPEND="=net-mail/mailwrapper-0.1
 	net-mail/mailbase
 	ssl? ( dev-libs/openssl )"
 PROVIDE="virtual/mta"
