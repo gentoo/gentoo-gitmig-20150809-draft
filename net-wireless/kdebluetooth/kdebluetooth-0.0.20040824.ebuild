@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20040824.ebuild,v 1.2 2004/08/30 00:44:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20040824.ebuild,v 1.3 2004/09/20 16:48:50 puggy Exp $
 
 inherit kde
 
@@ -15,6 +15,7 @@ IUSE="${IUSE} xmms"
 
 RDEPEND=">=dev-libs/openobex-1
 	>=net-wireless/bluez-libs-2.7
+	>=media-libs/libvorbis-1.0
 	xmms? ( >=media-sound/xmms-1.2.10 )"
 
 DEPEND="${RDEPEND}"
