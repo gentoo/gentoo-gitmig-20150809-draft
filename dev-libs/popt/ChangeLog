@@ -1,9 +1,14 @@
 # ChangeLog for dev-libs/popt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.4 2002/08/02 03:28:38 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.5 2002/10/04 03:44:00 bcowan Exp $
 
 
 popt-1.6.3 (29 May 2002)
+  
+  03 Oct 2002; Brad Cowan <bcowan@gentoo.org> popt-1.6.3.ebuild :
+  
+  fixed nls compile problems per bug #8731
+  
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
   Added ppc to keywords
 
