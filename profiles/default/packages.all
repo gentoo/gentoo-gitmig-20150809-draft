@@ -37,7 +37,7 @@ app-misc/rio500
 app-misc/screen
 app-misc/splitvt
 app-misc/ttmkfdir
-app-misc/twin
+#app-misc/twin
 app-misc/xscreensaver
 app-office/sc
 app-office/siag
@@ -97,7 +97,7 @@ app-text/xmltex
 app-text/xpdf
 dev-db/postgresql
 dev-db/unixODBC
-dev-java/ant
+#dev-java/ant
 dev-java/fesi
 dev-java/jaxp
 dev-java/jikes
@@ -362,7 +362,7 @@ media-libs/libsdl
 media-libs/libungif
 media-libs/libvorbis
 media-libs/mesa-glu
-media-libs/mesa
+#media-libs/mesa
 media-libs/mpeg-lib
 media-libs/netpbm
 media-libs/ofbis
@@ -485,7 +485,7 @@ net-misc/netkit-rsh
 net-misc/netkit-talk
 net-misc/netkit-telnetd
 net-misc/netkit-timed
-net-misc/ntp
+#net-misc/ntp
 net-misc/nut
 net-misc/openssh
 net-misc/pimpd
@@ -515,11 +515,11 @@ net-print/qtcups
 net-print/xpp
 net-www/amaya
 net-www/apache-ssl
-net-www/cocoon
+#net-www/cocoon
 net-www/cvsweb
 net-www/galeon
 net-www/htdig
-net-www/jakarta
+#net-www/jakarta
 #net-www/konqueror-embedded
 net-www/links
 net-www/lynx
