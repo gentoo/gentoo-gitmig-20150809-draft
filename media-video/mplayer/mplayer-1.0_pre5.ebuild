@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5.ebuild,v 1.3 2004/07/15 02:49:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5.ebuild,v 1.4 2004/07/15 08:26:31 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -117,6 +117,9 @@ src_unpack() {
 	# fixes for mga driver with kernel 2.6
 	if use matrox; then
 		get_kernel_info
+
+		# fixes Bug #57138 with mga patching
+		epatch ${FILESDIR}/${P}-mga-kernel-2.6.patch
 
 		sed -i -e "s/KERNEL_VERSION_HERE/${KV_VERSION_FULL}/" drivers/Makefile \
 			|| die "sed failed on kernel version substitution"

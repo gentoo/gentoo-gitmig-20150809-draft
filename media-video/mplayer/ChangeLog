@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.155 2004/07/15 02:49:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.156 2004/07/15 08:26:31 chriswhite Exp $
+
+  15 Jul 2004; Chris White <chriswhite@gentoo.org>
+  +files/mplayer-1.0_pre5-mga-kernel-2.6.patch, mplayer-1.0_pre5.ebuild:
+  Re-added the mga_vid.c patch to pre5. Thanks to Norman Yarvin for the heads
+  up. This fixes Bug #57138
 
   15 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5.ebuild:
   Yay, more fun, they replaced the test ebuild which needed the noenca patch

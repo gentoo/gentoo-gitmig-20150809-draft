@@ -1,0 +1,527 @@
+--- drivers/mga_vid.c	2003-10-04 19:28:54.000000000 +0200
++++ drivers/mga_vid.c.new	2004-05-11 15:38:17.377090978 +0200
+@@ -1,9 +1,14 @@
++#define MODULENAME "mga_vid"
++
+ //#define CRTC2
+ 
+ // YUY2 support (see config.format) added by A'rpi/ESP-team
+ // double buffering added by A'rpi/ESP-team
+ // brightness/contrast introduced by eyck
+ // multiple card support by Attila Kinali <attila@kinali.ch>
++// ported to the 2.6 series kernels by F.O. Tempel
++//  thankfully using the ground work done by Ed Sweetman (for the devfs work)
++//  and Gergely Nagy for pushing into the right direction with his patch for 2.6.0-test1
+ 
+ // Set this value, if autodetection fails! (video ram size in megabytes)
+ // #define MGA_MEMORY_SIZE 16
+@@ -36,6 +41,12 @@
+ #include <linux/config.h>
+ #include <linux/version.h>
+ #include <linux/module.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++#include <linux/moduleparam.h>
++#include <linux/kobject.h>
++#include <linux/kobj_map.h>
++#include <linux/cdev.h>
++#endif
+ #include <linux/types.h>
+ #include <linux/kernel.h>
+ #include <linux/sched.h>
+@@ -43,6 +54,10 @@
+ #include <linux/string.h>
+ #include <linux/errno.h>
+ 
++#ifdef MGA_ALLOW_IRQ
++#include <asm/mach-default/irq_vectors.h>
++#include <linux/interrupt.h>
++#endif
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,4,10)
+ #include <linux/malloc.h>
+ #else
+@@ -117,7 +132,8 @@
+ #ifndef min
+ #define min(x,y) (((x)<(y))?(x):(y))
+ #endif
+-
++// These functions are provided by the 2.6.0 kernel these days.
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,4,0)
+ #include <linux/ctype.h>
+ 
+@@ -155,7 +171,7 @@
+         return simple_strtoul(cp,endp,base);
+ }
+ #endif
+-
++#endif // 2.6.0
+ 
+ typedef struct bes_registers_s
+ {
+@@ -348,17 +364,30 @@
+ #define ICLEAR	    0x1e18
+ #define STATUS      0x1e14
+ 
+-
+-// global devfs handle for /dev/mga_vid
++/* Global handles for cdev and devfs */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++static struct cdev *mga_vid_cdev;
++static dev_t mga_cdev_handle;
++#ifdef CONFIG_DEVFS_FS 
++typedef struct devfs_entry *devfs_handle_t;
++devfs_handle_t dev_handle = NULL;
++#endif
++#else
+ #ifdef CONFIG_DEVFS_FS
+-static devfs_handle_t dev_handle = NULL;
++	devfs_handle_t dev_handle = NULL;
++#endif
+ #endif
+ 
+ // card local config
+ typedef struct mga_card_s {
+ 
+ // local devfs handle for /dev/mga_vidX
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ #ifdef CONFIG_DEVFS_FS
++	struct devfs_entry *devfs_handle_t;
++#endif
++#endif
++#if CONFIG_DEVFS_FS
+ 	devfs_handle_t dev_handle;
+ #endif
+ 
+@@ -397,6 +426,7 @@
+ 	int next_frame; 
+ } mga_card_t;
+ 
++
+ #define MGA_MAX_CARDS 16
+ // this is used as init value for the parameter arrays
+ // it should have exactly MGA_MAX_CARDS elements
+@@ -411,11 +441,19 @@
+ static int mga_contrast[MGA_MAX_CARDS] = MGA_MAX_CARDS_INIT_ARRAY;
+ static int mga_top_reserved[MGA_MAX_CARDS] = MGA_MAX_CARDS_INIT_ARRAY;
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++module_param(mga_ram_size, int, 0);
++module_param(mga_top_reserved, int, 0);
++module_param(mga_brightness, int, 0);
++module_param(mga_contrast, int, 0);
++module_param(major, int, 0);
++#else
+ MODULE_PARM(mga_ram_size, "1-" __MODULE_STRING(MGA_MAX_CARDS) "i");
+ MODULE_PARM(mga_top_reserved, "1-" __MODULE_STRING(MGA_MAX_CARDS) "i");
+ MODULE_PARM(mga_brightness, "1-" __MODULE_STRING(MGA_MAX_CARDS) "i");
+ MODULE_PARM(mga_contrast, "1-" __MODULE_STRING(MGA_MAX_CARDS) "i");
+ MODULE_PARM(major, "i");
++#endif
+ 
+ #ifdef CRTC2
+ static void crtc2_frame_sel(mga_card_t * card, int frame)
+@@ -642,7 +680,7 @@
+ 	writel( card->regs.besglobctl + ((readl(card->mmio_base + VCOUNT)+2)<<16),
+ 			card->mmio_base + BESGLOBCTL);
+ 
+-#if 0
++#ifdef MP_DEBUG
+ 	printk(KERN_DEBUG "mga_vid: wrote BES registers\n");
+ 	printk(KERN_DEBUG "mga_vid: BESCTL = 0x%08x\n",
+ 			readl(card->mmio_base + BESCTL));
+@@ -651,6 +689,7 @@
+ 	printk(KERN_DEBUG "mga_vid: BESSTATUS= 0x%08x\n",
+ 			readl(card->mmio_base + BESSTATUS));
+ #endif
++
+ #ifdef CRTC2
+ //	printk("c2ctl:0x%08x c2datactl:0x%08x\n", readl(card->mmio_base + C2CTL), readl(card->mmio_base + C2DATACTL));
+ //	printk("c2misc:0x%08x\n", readl(card->mmio_base + C2MISC));
+@@ -1100,7 +1139,7 @@
+ 
+ #ifdef MGA_ALLOW_IRQ
+ 
+-static void enable_irq(mga_card_t * card){
++static void mga_enable_irq(mga_card_t * card){
+ 	long int cc;
+ 
+ 	cc = readl(card->mmio_base + IEN);
+@@ -1116,16 +1155,18 @@
+ 
+ }
+ 
+-static void disable_irq(mga_card_t * card){
++static void mga_disable_irq(mga_card_t * card){
+ 
+ 	writeb(0x11, card->mmio_base + CRTCX);
+ 	writeb(0x20, card->mmio_base + CRTCD);  /* clear 0, enable off */
+ 
+ }
+ 
+-static void mga_handle_irq(int irq, void *dev_id, struct pt_regs *pregs) {
++static int mga_handle_irq(int irq, void *dev_id, struct pt_regs *pregs) {
+ //	static int frame=0;
+-//	static int counter=0;
++#ifdef MP_DEBUG
++	static int counter=0;
++#endif
+ 	long int cc;
+ 	mga_card_t * card = dev_id;
+ 
+@@ -1136,7 +1177,7 @@
+ 	// check whether the interrupt is really for us (irq sharing)
+ 	if ( irq != -1 ) {
+ 		cc = readl(card->mmio_base + STATUS);
+-		if ( ! (cc & 0x10) ) return;  /* vsyncpen */
++		if ( ! (cc & 0x10) ) return 0;  /* vsyncpen */
+ // 		debug_irqcnt++;
+ 	} 
+ 
+@@ -1152,15 +1193,15 @@
+ // i han echt kei ahnig was das obe heisse söll
+ 	crtc2_frame_sel(card->next_frame);
+ #endif
+-	
+-#if 0
++
++#ifdef MP_DEBUG
+ 	++counter;
+ 	if(!(counter&63)){
+ 	    printk("mga irq counter = %d\n",counter);
+ 	}
+ #endif
+ 
+-//    } else {
++	//    } else {
+ //	debug_irqignore = 1;
+ //    }
+ 
+@@ -1173,7 +1214,7 @@
+ //	writel( card->regs.besglobctl, card->mmio_base + BESGLOBCTL);
+ 
+ 
+-	return;
++	return 0;
+ 
+ }
+ 
+@@ -1257,7 +1298,7 @@
+ 				mga_vid_write_regs(card, 0);
+ 			}
+ #ifdef MGA_ALLOW_IRQ
+-			if ( card->irq != -1 ) enable_irq(card);
++			if ( card->irq != -1 ) mga_enable_irq(card);
+ #endif
+ 			card->next_frame=0;
+ 		break;
+@@ -1268,7 +1309,7 @@
+ #endif			
+ 			card->vid_src_ready = 0;   
+ #ifdef MGA_ALLOW_IRQ
+-			if ( card->irq != -1 ) disable_irq(card);
++			if (card->irq != -1 ) mga_disable_irq(card);
+ #endif
+ 			card->regs.besctl &= ~1;
+                         card->regs.besglobctl &= ~(1<<6);  // UYVY format selected
+@@ -1317,6 +1358,11 @@
+ static void cards_init(mga_card_t * card, struct pci_dev * dev, int card_number, int is_g400);
+ 
+ // returns the number of found cards
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
++#define PCI_DEV_NAME(d) (d)->name
++#else
++#define PCI_DEV_NAME(d) pci_name((d))
++#endif
+ static int mga_vid_find_card(void)
+ {
+ 	struct pci_dev *dev = NULL;
+@@ -1347,27 +1393,27 @@
+ 		switch(dev->device) {
+ 		case PCI_DEVICE_ID_MATROX_G550:
+ 			mga_dev_name = "MGA G550";
+-			printk(KERN_INFO "mga_vid: Found %s at %s [%s]\n", mga_dev_name, dev->slot_name, dev->name);
++			printk(KERN_INFO "mga_vid: Found %s at %s [%s]\n", mga_dev_name, dev->slot_name, PCI_DEV_NAME(dev));
+ 			cards_init(card, dev, mga_cards_num - 1, 1);
+ 			break;
+ 		case PCI_DEVICE_ID_MATROX_G400:
+ 			mga_dev_name = "MGA G400/G450";
+-			printk(KERN_INFO "mga_vid: Found %s at %s [%s]\n", mga_dev_name, dev->slot_name, dev->name);
++			printk(KERN_INFO "mga_vid: Found %s at %s [%s]\n", mga_dev_name, dev->slot_name, PCI_DEV_NAME(dev));
+ 			cards_init(card, dev, mga_cards_num - 1, 1);
+ 			break;
+ 		case PCI_DEVICE_ID_MATROX_G200_AGP:
+ 			mga_dev_name = "MGA G200 AGP";
+-			printk(KERN_INFO "mga_vid: Found %s at %s [%s]\n", mga_dev_name, dev->slot_name, dev->name);
++			printk(KERN_INFO "mga_vid: Found %s at %s [%s]\n", mga_dev_name, dev->slot_name, PCI_DEV_NAME(dev));
+ 			cards_init(card, dev, mga_cards_num - 1, 0);
+ 			break;
+ 		case PCI_DEVICE_ID_MATROX_G200_PCI:
+ 			mga_dev_name = "MGA G200";
+-			printk(KERN_INFO "mga_vid: Found %s at %s [%s]\n", mga_dev_name, dev->slot_name, dev->name);
++			printk(KERN_INFO "mga_vid: Found %s at %s [%s]\n", mga_dev_name, dev->slot_name, PCI_DEV_NAME(dev));
+ 			cards_init(card, dev, mga_cards_num - 1, 0);
+ 			break;
+ 		default:
+ 			mga_cards_num--;
+-			printk(KERN_INFO "mga_vid: ignoring matrox device (%d) at %s [%s]\n", dev->device, dev->slot_name, dev->name);
++			printk(KERN_INFO "mga_vid: ignoring matrox device (%d) at %s [%s]\n", dev->device, dev->slot_name, PCI_DEV_NAME(dev));
+ 			break;
+ 		}
+ 	}
+@@ -1473,7 +1519,7 @@
+ 		return(-EAGAIN);
+ 	}
+ 
+-	return(0);
++	return 0;
+ }
+ 
+ static int mga_vid_release(struct inode *inode, struct file *file)
+@@ -1493,8 +1539,9 @@
+ //	card->config.colkey_on=0; //!!!
+ 	mga_vid_write_regs(card, 1);
+ 	card->vid_in_use = 0;
+-
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ 	MOD_DEC_USE_COUNT;
++#endif
+ 	return 0;
+ }
+ 
+@@ -1508,7 +1555,11 @@
+ 	mga_card_t * card;
+ 	
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,2)
++#if	LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++	int minor = iminor(inode);
++#else
+ 	int minor = MINOR(inode->i_rdev.value);
++#endif
+ #else
+ 	int minor = MINOR(inode->i_rdev);
+ #endif
+@@ -1539,8 +1590,10 @@
+ 		return(-EBUSY);
+ 
+ 	card->vid_in_use = 1;
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ 	MOD_INC_USE_COUNT;
+-	return(0);
++#endif
++	return 0;
+ }
+ 
+ #if LINUX_VERSION_CODE >= 0x020400
+@@ -1573,10 +1626,6 @@
+ static void cards_init(mga_card_t * card, struct pci_dev * dev, int card_number, int is_g400)
+ {
+ 	unsigned int card_option;
+-// temp buffer for device filename creation used only by devfs
+-#ifdef CONFIG_DEVFS_FS
+-	char buffer[16];
+-#endif
+ 
+ 	memset(card,0,sizeof(mga_card_t));
+ 	card->irq = -1;
+@@ -1647,10 +1696,11 @@
+ //		    case 0x13:  card->ram_size = 8; break;
+ 		    default: card->ram_size = 8;
+ 		}
+-	    } 
++} 
++
+ #if 0
+ //	    printk("List resources -----------\n");
+-	    for(temp=0;temp<DEVICE_COUNT_RESOURCE;temp++){
++	    for(int temp=0;temp<DEVICE_COUNT_RESOURCE;temp++){
+ 	        struct resource *res=&dev->resource[temp];
+ 	        if(res->flags){
+ 	          int size=(1+res->end-res->start)>>20;
+@@ -1665,7 +1715,6 @@
+ #endif
+         }
+ 
+-
+ #ifdef MGA_ALLOW_IRQ
+ 	if ( card->irq != -1 ) {
+ 		int tmp = request_irq(card->irq, mga_handle_irq, SA_INTERRUPT | SA_SHIRQ, "Syncfb Time Base", card);
+@@ -1683,16 +1732,15 @@
+ 		printk(KERN_INFO "syncfb (mga): IRQ disabled in mga_vid.c\n");
+ 		card->irq=-1;
+ #endif
+-
+-	// register devfs, let the kernel give us major and minor numbers
+-#ifdef CONFIG_DEVFS_FS
+-	snprintf(buffer, 16, "mga_vid%d", card_number);
++// register devfs, let the kernel give us major and minor numbers
++#if CONFIG_DEVFS_FS && LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
++	char buffer[16];
++	snprintf(buffer, 16, "%s%d", MODULENAME, card_number);
+ 	card->dev_handle = devfs_register(NULL, buffer, DEVFS_FL_AUTO_DEVNUM,
+ 					0, 0,
+ 					S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IFCHR,
+ 					&mga_vid_fops, card);
+ #endif
+-
+ }
+ 
+ /* 
+@@ -1701,71 +1749,101 @@
+ 
+ static int mga_vid_initialize(void)
+ {
+- 	int i;
+-
+-//	printk(KERN_INFO "Matrox MGA G200/G400 YUV Video interface v0.01 (c) Aaron Holtzman \n");
++ 		int i;
+ 	printk(KERN_INFO "Matrox MGA G200/G400/G450/G550 YUV Video interface v2.01 (c) Aaron Holtzman & A'rpi\n");
+-
+-	for(i = 0; i < MGA_MAX_CARDS; i++)
++	
++	if(mga_vid_find_card()) 
+ 	{
+-		if (mga_ram_size[i]) {
+-			if (mga_ram_size[i]<4 || mga_ram_size[i]>64) {
+-				printk(KERN_ERR "mga_vid: invalid RAMSIZE: %d MB\n", mga_ram_size[i]);
+-				return -EINVAL;
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++		if(register_chrdev(major, MODULENAME, &mga_vid_fops))
++		{
++			printk(KERN_ERR "mga_vid: unable to get major: %d\n", major);
++			return -EIO;
++		}
++		/* Have the kernel generate a major device number */
++		//if(!alloc_chrdev_region(&mga_cdev_handle, 0, mga_cards_num, "mga_vid"))
++		//								major = MAJOR(mga_cdev_handle);
++		printk(KERN_INFO "mga_vid: using major: %d\n", major);
++		/* Allocate a cdev for this character device, and fill in some parameters it needs */
++		mga_vid_cdev = cdev_alloc();
++		mga_vid_cdev->owner = THIS_MODULE;
++		strcpy(mga_vid_cdev->kobj.name, MODULENAME);
++		mga_vid_cdev->ops = &mga_vid_fops;
++		/* Add this character device to the system */
++		cdev_add(mga_vid_cdev, mga_cdev_handle, mga_cards_num);
++#endif
++		for(i = 0; i < mga_cards_num; i++)
++		{
++#if CONFIG_DEVFS_FS && LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++			/* Create the device, and register a symlink for the first card found. 
++			 * Lets not break default behaviour, eh? */
++			devfs_mk_cdev(MKDEV(major,i), S_IFCHR | S_IRUSR | S_IRGRP | S_IWUSR, "video/mga_vid%d", i);
++			if( i == 0 ) {
++				devfs_mk_symlink(MODULENAME,"video/mga_vid0");
++			}
++#endif
++			if (mga_ram_size[i]) {
++				if (mga_ram_size[i]<4 || mga_ram_size[i]>64) {
++					printk(KERN_ERR "mga_vid: invalid RAMSIZE: %d MB\n", mga_ram_size[i]);
++					return -EINVAL;
++				}
+ 			}
+ 		}
+-	}
+ 	
+-	if(register_chrdev(major, "mga_vid", &mga_vid_fops))
+-	{
+-		printk(KERN_ERR "mga_vid: unable to get major: %d\n", major);
+-		return -EIO;
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
++		if(register_chrdev(major, MODULENAME, &mga_vid_fops))
++		{
++			printk(KERN_ERR "mga_vid: unable to get major: %d\n", major);
++			return -EIO;
++		}
++#endif
++		return 0;
+ 	}
+-
+-	if (!mga_vid_find_card())
++	else
+ 	{
+-		printk(KERN_ERR "mga_vid: no supported devices found\n");
+-		unregister_chrdev(major, "mga_vid");
+-		return -EINVAL;
++		return -EFAULT;
+ 	}
+-#ifdef CONFIG_DEVFS_FS
+-	  else {
+-		// we assume that this always succeedes
+-		dev_handle = devfs_register(NULL, "mga_vid", DEVFS_FL_AUTO_DEVNUM,
+-		                            0,0,
+-		                            S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IFCHR,
+-		                            &mga_vid_fops, mga_cards[0]);
+-	}
+-#endif
+-
+-	return(0);
+ }
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++module_init(mga_vid_initialize);
++#else
+ int init_module(void)
+ {
+ 	return mga_vid_initialize();
+ }
++#endif
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++static void mga_cleanup_module(void)
++#else
+ void cleanup_module(void)
++#endif
+ {
+ 	int i;
+ 	mga_card_t * card;
+ 
++	printk(KERN_INFO "mga_vid: Cleaning up module\n");
+ 	for (i = 0; i < MGA_MAX_CARDS; i++)
+ 	{
+ 		card = mga_cards[i];
+ 		if(card)
+ 		{
+ #ifdef MGA_ALLOW_IRQ
+-			if (card->irq != -1)
+-				free_irq(card->irq, &(card->irq));
++			if ( card->irq != -1)
++//				free_irq(card->irq, &(card->irq));
++					free_irq(card->irq, card);
+ #endif
+ 
+ 			if(card->mmio_base)
+ 				iounmap(card->mmio_base);
+ 			if(card->param_buff)
+ 				kfree(card->param_buff);
+-#ifdef CONFIG_DEVFS_FS
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++#ifdef CONFIG_DEVFS_FS 
++			devfs_remove("video/%s%d",MODULENAME, i);
++#endif
++#else
+ 			if(card->dev_handle) devfs_unregister(card->dev_handle);
+ #endif
+ 
+@@ -1775,9 +1853,20 @@
+ 	}
+ 
+ 	//FIXME turn off BES
+-	printk(KERN_INFO "mga_vid: Cleaning up module\n");
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ #ifdef CONFIG_DEVFS_FS
+-	if(dev_handle) devfs_unregister(dev_handle);
++	devfs_unregister(dev_handle);
++#endif
++	unregister_chrdev(major, MODULENAME);
++#else
++#ifdef CONFIG_DEVFS_FS
++	devfs_remove(MODULENAME);
++#endif
++	cdev_del(mga_vid_cdev);
++	unregister_chrdev_region(mga_cdev_handle, mga_cards_num);
+ #endif
+-	unregister_chrdev(major, "mga_vid");
+ }
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++module_exit(mga_cleanup_module);
++#endif
