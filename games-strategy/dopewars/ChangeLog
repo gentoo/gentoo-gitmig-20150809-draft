@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/dopewars
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/ChangeLog,v 1.5 2003/11/22 01:37:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/ChangeLog,v 1.6 2003/11/28 09:01:34 mr_bones_ Exp $
+
+  28 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> dopewars-1.5.9.ebuild:
+  fix gtk2 USE flag usage (bug 34562); fix in-game docs; fix hiscore file; more
+  error checking/messages
+
+  27 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> dopewars-1.5.9.ebuild:
+  be less specific about glib (bug 34562)
 
   21 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> dopewars-1.5.8.ebuild,
   files/dopewars-1.5.8-gentoo.diff:
