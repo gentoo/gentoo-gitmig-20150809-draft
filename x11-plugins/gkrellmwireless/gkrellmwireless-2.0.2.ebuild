@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/gkrellmwireless-2.0.2.ebuild,v 1.5 2004/06/24 22:59:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/gkrellmwireless-2.0.2.ebuild,v 1.6 2005/04/02 02:55:34 hparker Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}
