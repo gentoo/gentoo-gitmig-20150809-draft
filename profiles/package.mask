@@ -109,6 +109,18 @@ net-www/zope
 >=app-i18n/kde-i18n-zh_CN.GB2312-3.0
 >=app-i18n/kde-i18n-zh_TW.Big5-3.0
 
+# Waiting for kde3 ebuilds. These ebuilds are ok themselves and if you're using
+# my kde3pre ebuilds, you can unmask and emerge these as well. - danarmak
+
+>=net-misc/qtella-0.4.1
+>=net-misc/krfb-0.6
+>=net-misc/kio_fish-1.1
+>=x11-misc/mosfet-liquid-widgets-0.9.1
+>=net-misc/kbiff-3.6
+>=app-cdr/k3b-0.6.0_pre2
+>=app-office/koffice-1.2_pre20020402
+
+
 # These two have compile problems -- Azarah (24/03/2002)
 #
 # Mozilla installs correctly, but there is a java-config error with the plugin
