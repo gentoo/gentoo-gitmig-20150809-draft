@@ -1,6 +1,9 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.3 2002/03/16 14:22:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.4 2002/03/26 12:48:38 danarmak Exp $
+
+  26 Mar 2002; Dan Armak <danarmak@gentoo.org>: general cleanup
+  of the ebuild. Fix bug that made the default spooldir /var/tmp/portage/...
 
 *wwwoffle-2.7-r1 (16 Mar 2002)
 

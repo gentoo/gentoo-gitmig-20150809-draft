@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7-r1.ebuild,v 1.1 2002/03/16 14:22:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7-r1.ebuild,v 1.2 2002/03/26 12:48:38 danarmak Exp $
 
 S=${WORKDIR}/${P}
 
@@ -33,16 +33,18 @@ src_install () {
     # Install the files
     make prefix=${D}/usr SPOOLDIR=${D}/var/spool/wwwoffle CONFDIR=${D}/etc install || die
     
+    cd ${D}/etc
+    mv wwwoffle.conf 1
+    sed -e "s:${D}::" 1 > wwwoffle.conf
+    rm 1
+    
     # Install the wwwoffled init script
     exeinto /etc/init.d
-    doexe ${FILESDIR}/wwwoffled-online
-    newexe ${FILESDIR}/wwwoffled.rc6 wwwoffled
+    doexe ${FILESDIR}/{wwwoffled-online,wwwoffled}
     
     # someday i'll make it use the file in /etc. for now we at least get
     # config file protection this way.
     dosym /etc/wwwoffle.conf /var/spool/wwwoffle/wwwoffle.conf
-    
-    echo test
     
 }
 
@@ -75,15 +77,17 @@ pkg_postinst() {
     
     You have successfully installed wwwoffle.
     
-    To configure it, read and edit /var/spool/wwwoffle/wwwoffle.conf.
-    It's well commented and very powerful.
+    To configure it, read and edit /etc/wwwoffle.conf.
+    It's well commented and very powerful. Alternatively, browse to
+    http://localhost:8080 and you'll be presented with a webform-based
+    configuration interface.
     
     To start using wwwoffle:
     1. rc-update add wwwoffled to boot.
     2. rc-update add wwwoffled-online to your 'online' runlevels.
-    3. Configure any programs to use localhost:8080 as a proxy
-       server for HTTP, HTTPS, FTP and finger.
-    "
+    3. Configure any programs to use localhost:8080 as a proxy server
+       for HTTP, HTTPS, FTP and finger.
+"
     
 }
 
