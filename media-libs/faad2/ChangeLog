@@ -1,9 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.15 2004/02/17 20:30:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.16 2004/02/17 21:18:18 agriffis Exp $
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> faad2-2.0_rc3-r1.ebuild:
-  add ~alpha and ~ia64
+  stable on alpha and ia64 for the sake of packages that depend on this
 
   02 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   faad2-2.0_rc3-r1.ebuild:
