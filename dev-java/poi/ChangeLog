@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/poi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.7 2004/10/22 11:35:29 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.8 2005/02/06 01:06:21 luckyduck Exp $
+
+  06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> poi-2.5-r1.ebuild,
+  -poi-2.5.ebuild:
+  latest revision stable on x86 and amd64, removed old version.
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> poi-2.0.ebuild,
   poi-2.5-r1.ebuild, poi-2.5.ebuild:
