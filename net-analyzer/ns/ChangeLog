@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ns
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.8 2004/06/07 22:11:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.9 2004/06/11 18:35:12 fmccor Exp $
+
+  11 Jun 2004; Ferris McCormick <fmccor@gentoo.org> ns-2.27-r1.ebuild:
+  Add ~sparc keyword.
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> ns-2.27-r1.ebuild:
   remove unnecessary variables and function; tidy

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.27-r1.ebuild,v 1.3 2004/06/07 22:11:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.27-r1.ebuild,v 1.4 2004/06/11 18:35:12 fmccor Exp $
 
 DESCRIPTION="Network Simulator"
 HOMEPAGE="http://www.isi.edu/nsnam/ns/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.isi.edu/nsnam/dist/${PN}-src-${PV}.tar.gz"
 
 LICENSE="BSD as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE="doc debug"
 
 DEPEND_COMMON=">=dev-lang/tcl-8.4.4
