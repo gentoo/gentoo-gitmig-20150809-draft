@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.3 2003/11/13 17:28:31 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.4 2003/12/15 16:58:21 weeve Exp $
+
+  15 Dec 2003; Jason Wever <weeve@gentoo.org> xfsprogs-2.6.0.ebuild:
+  Added sparc fix and marked ~sparc.
 
 *xfsprogs-2.6.0 (13 Nov 2003)
 
