@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.11.ebuild,v 1.1 2005/03/24 19:59:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.11.ebuild,v 1.2 2005/03/26 20:35:26 kumba Exp $
 
 # Eclass bits
 ETYPE="headers"
@@ -60,7 +60,12 @@ fi
 
 
 src_unpack() {
-	unpack ${A}
+	
+	# unpack ${A} unapcks kernel sources a second time, which we don't want
+	local my_a=${A/linux-${OKV}.tar.bz2/}
+	unpack ${my_a}
+
+	# kernel-2 stuff
 	tc-arch-kernel
 	kernel-2_src_unpack
 }
