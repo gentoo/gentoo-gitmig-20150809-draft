@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.27 2004/03/17 19:10:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.28 2004/03/17 19:11:16 mr_bones_ Exp $
+
+  17 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> libol-0.2.23.ebuild,
+  libol-0.3.6.ebuild:
+  clean some older ebuilds
 
   17 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   add metadata file
