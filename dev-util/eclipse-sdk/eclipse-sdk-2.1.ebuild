@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.ebuild,v 1.2 2003/06/30 19:17:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.ebuild,v 1.3 2003/06/30 19:27:41 karltk Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -37,6 +37,9 @@ src_install() {
 	copy_files "2.1.0" "${eclipse_files}"
 
 	dodoc plugins/org.eclipse.platform/{notice,about,cpl-v10}.html
+
+	insinto /usr/share/gnome/apps/Development
+	doins ${FILESDIR}/eclipse.desktop
 }
 
 copy_files() {

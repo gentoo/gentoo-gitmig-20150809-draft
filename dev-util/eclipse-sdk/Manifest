@@ -1,3 +1,4 @@
-MD5 d995775baeaddf308564035ff558408c ChangeLog 3767
-MD5 56b4b588fd402770b0a2668b832bebc6 eclipse-sdk-2.1.ebuild 82822
+MD5 f464c50745c4a816d6570fe26184d67f ChangeLog 593
+MD5 723ed00e098c9916ccfe9f568fc4cea2 eclipse-sdk-2.1.ebuild 82901
 MD5 5bea1174eca3d2e368ad728e5086b24a files/digest-eclipse-sdk-2.1 86
+MD5 b7d91171809903d55e187961bb62f731 files/eclipse.desktop 173
