@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.1.ebuild,v 1.4 2003/11/29 22:06:22 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.1.ebuild,v 1.5 2003/12/08 02:33:51 agriffis Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/abiword/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc amd64 alpha ia64"
 
 IUSE=""
 
