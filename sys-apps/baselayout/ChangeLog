@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.82 2003/07/06 09:15:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.83 2003/07/06 18:05:04 gmsoft Exp $
 
 
 *baselayout-1.8.6.8-r1 (21 May 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> baselayout-1.8.6.8-r1.ebuild :
+  Marked stable on hppa.
 
   06 Jul 2003; Joshua Kinard <kumba@gentoo.org> baselayout-1.8.6.8-r1.ebuild:
   Changed ~mips to mips in KEYWORDS
