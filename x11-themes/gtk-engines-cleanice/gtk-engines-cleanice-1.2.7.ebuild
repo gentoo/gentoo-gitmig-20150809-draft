@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/gtk-engines-cleanice-1.2.7.ebuild,v 1.1 2003/11/01 16:58:17 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/gtk-engines-cleanice-1.2.7.ebuild,v 1.2 2003/11/16 23:18:00 pyrania Exp $
 
 inherit gtk-engines2
 
@@ -8,7 +8,7 @@ IUSE=""
 DESCRIPTION="GTK+2 Cleanice Theme Engine"
 HOMEPAGE="http://sourceforge.net/projects/elysium-project/"
 SRC_URI="mirror://sourceforge/elysium-project/cleanice-theme-${PV}.tar.gz"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 LICENSE="GPL-2"
 SLOT="2"
 S=${WORKDIR}/cleanice-theme-${PV}
