@@ -1,18 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120.ebuild,v 1.2 2004/02/14 06:49:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120.ebuild,v 1.3 2004/02/15 05:34:01 brad_mssw Exp $
 
 inherit games eutils
 
 DESCRIPTION="Unreal Tournament 2004 Demo"
 HOMEPAGE="http://www.unrealtournament.com/"
-SRC_URI="ftp://ftp.linuxhardware.org/ut2004/ut2004-lnx-demo-${PV}.run.bz2
+
+SRC_URI="x86? ( ftp://ftp.linuxhardware.org/ut2004/ut2004-lnx-demo-${PV}.run.bz2
 	http://www.lokigames.com/sekrit/ut2004-lnx-demo-${PV}.run.bz2
-	http://pomac.netswarm.net/mirror/games/ut2004/ut2004-lnx-demo-${PV}.run.bz2"
+	http://pomac.netswarm.net/mirror/games/ut2004/ut2004-lnx-demo-${PV}.run.bz2 )
+	amd64? ( mirror://gentoo/ut2004-lnx64-demo-${PV}.run.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 amd64"
 
 DEPEND="!dedicated? ( virtual/opengl )"
 
