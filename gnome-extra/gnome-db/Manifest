@@ -1,5 +1,3 @@
-MD5 04326cf01a8fa711ae8a8aaa82cbe0fc ChangeLog 1472
-MD5 ec06596af089bbf0af928a23e4102578 gnome-db-0.2.95-r2.ebuild 1761
-MD5 e710d0ad8915240aae287cff1d0ca20b gnome-db-0.2.96.ebuild 1839
+MD5 3ab39cc9427604288e02a9198098592f ChangeLog 1569
+MD5 c327d6765e5157f791810f17c84def0b gnome-db-0.2.95-r2.ebuild 1762
 MD5 6d19169888e23623eba0a1394f6db0fd files/digest-gnome-db-0.2.95-r2 67
-MD5 bbe75e18b283cd491e85c97dc599537a files/digest-gnome-db-0.2.96 67

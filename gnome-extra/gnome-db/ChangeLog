@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/ChangeLog,v 1.9 2003/06/10 13:35:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/ChangeLog,v 1.10 2003/07/01 10:14:32 liquidx Exp $
+
+  01 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnome-db-0.2.95-r2.ebuild:
+  lock libgda deps
 
   10 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnome-db-0.2.95-r2.ebuild,
   gnome-db-0.2.96.ebuild:

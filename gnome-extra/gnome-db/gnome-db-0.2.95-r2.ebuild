@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.95-r2.ebuild,v 1.9 2003/06/10 13:35:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.95-r2.ebuild,v 1.10 2003/07/01 10:14:32 liquidx Exp $
 
 IUSE="nls"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 sparc "
 
 RDEPEND=">=gnome-base/bonobo-1.0.9-r1
-	 >=gnome-extra/libgda-${PV}
+	 =gnome-extra/libgda-${PV}*
 	 <gnome-extra/gal-1.99
 	 nls? ( sys-devel/gettext )"
 
