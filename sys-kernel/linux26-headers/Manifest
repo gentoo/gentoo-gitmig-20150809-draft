@@ -1,4 +1,4 @@
-MD5 5b40c7871a294cc2a5b496d70d41c5dc ChangeLog 5878
+MD5 4366345ab3c37f08649686cd1f7f24db ChangeLog 5991
 MD5 2492e34d9b129b18f0ba2460299741a5 linux26-headers-2.6.7-r4.ebuild 4035
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
 MD5 e545ff6a66853894c5fcbc60f199f262 linux26-headers-2.6.6.ebuild 4062
@@ -18,7 +18,7 @@ MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux26-headers-2.6.6 66
 MD5 8a065c0dc3b8fac8747de35f1af75a2c files/linux26-headers-2.6.0-fb.patch 386
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux26-headers-2.6.7-r3 66
 MD5 8fbc202526e4c1b1672c5274bbff4e5f files/linux26-headers-2.6.6-appCompat.patch 26689
-MD5 40d89671cb8057d4b51034645ed47678 files/linux26-headers-2.6.8.1-appCompat.patch 47400
+MD5 08805e52510998e228b623b5cbd07939 files/linux26-headers-2.6.8.1-appCompat.patch 48106
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux26-headers-2.6.7-r4 66
 MD5 830c6d1dcb1b22b9095e6f16f3ebdf85 files/linux26-headers-2.6.6-tcp_info-DRS-backport.patch 288
 MD5 7c487aa645f5d88e86c3252ab44ef5ae files/linux26-headers-2.6.7-appCompat.patch 42608

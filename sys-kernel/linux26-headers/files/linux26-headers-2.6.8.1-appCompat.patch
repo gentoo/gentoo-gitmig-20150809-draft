@@ -1529,3 +1529,21 @@ diff -ur linux-2.6.8.1/include/linux/videodev2.h linux-2.6.8.1-gentoo/include/li
  #ifdef __KERNEL__
  #include <linux/time.h> /* need struct timeval */
  #endif
+diff -ur linux-2.6.8.1/include/linux/crc-ccitt.h linux-2.6.8.1-gentoo/include/linux/crc-ccitt.h
+--- linux-2.6.8.1/include/linux/crc-ccitt.h	2004-08-20 19:54:37.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/linux/crc-ccitt.h	2004-08-25 18:49:57.048297800 +0100
+@@ -3,11 +3,11 @@
+ 
+ #include <linux/types.h>
+ 
+-extern u16 const crc_ccitt_table[256];
++extern __u16 const crc_ccitt_table[256];
+ 
+-extern u16 crc_ccitt(u16 crc, const u8 *buffer, size_t len);
++extern __u16 crc_ccitt(__u16 crc, const __u8 *buffer, size_t len);
+ 
+-static inline u16 crc_ccitt_byte(u16 crc, const u8 c)
++static inline __u16 crc_ccitt_byte(__u16 crc, const __u8 c)
+ {
+ 	return (crc >> 8) ^ crc_ccitt_table[(crc ^ c) & 0xff];
+ }
