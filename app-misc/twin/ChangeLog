@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/twin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/ChangeLog,v 1.9 2004/02/02 03:22:07 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/ChangeLog,v 1.10 2004/02/17 22:00:55 gmsoft Exp $
+
+  17 Feb 2004; Guy Martin <gmsoft@gentoo.org> twin-0.4.5.ebuild :
+  Marked stable on hppa.
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> twin-0.4.5.ebuild :
   AMD64 keywords.
