@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16.ebuild,v 1.2 2003/10/26 22:07:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16.ebuild,v 1.3 2003/11/10 14:04:03 vapier Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://artax.karlin.mff.cuni.cz/~brain/0verkill/release/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="X"
 
 RDEPEND="X? ( x11-base/xfree )"
