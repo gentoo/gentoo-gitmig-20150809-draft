@@ -49,6 +49,7 @@
 					$result = mysql_query( $query );
 					$tid = mysql_insert_id();
 					print '<p style="color:red;">Todo added.</p>';
+					$new_todo_post_success = 1;
 				}
 			} else {
 				$query = "update todos set title='$title',public=$sharing,priority=$priority,longdesc='$longdesc'";
@@ -165,7 +166,7 @@
 </td></tr></table>
 <?php if ( $theirs ) print '</form>'; ?>
 
-<?php if ( $action != 'new_todo' ) { ?>
+<?php if ( $action != 'new_todo' || $new_todo_post_success ) { ?>
 <table width="90%" border=0 cellpadding=0 cellspacing=0 align="center"><tr><td>
 <div style="float:right;padding:10px 0 5px 5px;">
 	<table width=200 border=0 cellpadding=3 cellspacing=0 bgcolor="#46357c"><tr><td>

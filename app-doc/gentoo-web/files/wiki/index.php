@@ -1,7 +1,6 @@
 <?php
 	include "functions.php";
 
-	if ( !$list ) $list = 'by_priority';
 	if ( $action == 'login' ) {
 		$result = mysql_query( "select * from users where username='$username'" );
 		list( $uid, $dbusername, $dbpassword ) = mysql_fetch_row( $result );
@@ -13,8 +12,9 @@
 			unset( $uid );
 		}
 	} elseif ( $action == 'logout' && $uid ) {
-		session_destroy();
-		unset( $uid, $username );
+		session_unregister( 'uid' );
+		session_unregister( 'dbusername' );
+		unset( $uid, $dbusername );
 	} elseif ( $action == 'grab_todo' && $uid ) {
 		$public = mysql_query( "select owner,public from todos where tid=$tid" );
 		list( $todo_uid, $todo_public ) = mysql_fetch_row( $public );
@@ -32,7 +32,17 @@
 		}
 	}
 
-	if ( !isset($show_privates) ) $show_privates = 1; // default
+	#if ( !isset($show_privates) ) $show_privates = 1;    // default
+	if ( !isset($list) )          $list = 'by_priority';
+	if ( isset($ch_show_privates) ) {
+		$show_privates = $ch_show_privates;
+		session_register( 'show_privates' );
+	}
+	if ( isset($ch_list) ) {
+		$list = $ch_list;
+		session_register( 'list' );
+	}
+
 	main_header( 'Home' );
 
 	if ( $action == 'login' && !$uid ) {
@@ -42,12 +52,12 @@
 	}
 
 	// show/hide privates
-	if ( $show_privates ) {
+	if ( $show_privates == 1 ) {
 		$query_where = '';
-		$disptxt = " <a href=\"index.php?list=$list&show_privates=0\">(private todos shown)</a>";
+		$disptxt = " <a href=\"index.php?ch_show_privates=0\">(private todos shown)</a>";
 	} else {
 		$query_where = ' and public!=0';
-		$disptxt = " <a href=\"index.php?list=$list&show_privates=1\">(private todos hidden)</a>";
+		$disptxt = " <a href=\"index.php?ch_show_privates=1\">(private todos hidden)</a>";
 	}
 
 	// ooh, now real content...
