@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.17 2003/03/24 22:11:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.18 2003/03/27 04:28:14 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -84,14 +84,26 @@ SRC_URI="${SRC_URI}
 [ -n "${VIMPATCH}" ] && \
 SRC_URI="${SRC_URI} mirror://gentoo/vim-${PV}-patches-001-${VIMPATCH}.tar.bz2"
 
-# Various patches from RH, etc.
-# Started versioning this tarball when VIMPATCH hit 411
-if [ "${VIMPATCH:-0}" -ge 411 ]; then
-	SRC_URI="${SRC_URI} 
-		mirror://gentoo/vim-${PV}-${VIMPATCH}-gentoo-patches.tar.bz2"
-else
-	SRC_URI="${SRC_URI} mirror://gentoo/vim-${PV}-gentoo-patches.tar.bz2"
-fi
+# Bug #18134 is interesting... All the ebuilds in the tree have
+# VIMPATCH=numeric.  However there are installed instances of vim that
+# will read the eclass when they uninstall, in which
+# VIMPATCH=full_patch_name.  So test for that here (in which case we
+# just skip the additon to SRC_URI because it really doesn't matter).
+case ${VIMPATCH} in
+	vim*) ;; # Unmerging an old ebuild ...
+	*)       # Normal operation
+
+	# Various patches from RH, etc.
+	# Started versioning this tarball when VIMPATCH hit 411
+	if [ "${VIMPATCH:-0}" -ge 411 ]; then
+		SRC_URI="${SRC_URI} 
+			mirror://gentoo/vim-${PV}-${VIMPATCH}-gentoo-patches.tar.bz2"
+	else
+		SRC_URI="${SRC_URI} mirror://gentoo/vim-${PV}-gentoo-patches.tar.bz2"
+	fi 
+	
+	;;
+esac
 
 #=== End of SRC_URI setting ===============================================
 
