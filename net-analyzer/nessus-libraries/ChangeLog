@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.44 2005/01/28 02:01:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.45 2005/02/26 03:08:48 dragonheart Exp $
+
+*nessus-libraries-2.2.3 (26 Feb 2005)
+
+  26 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  +nessus-libraries-2.2.3.ebuild:
+  Version bump as per bug #81580. Thanks to ChazeFroy <chazefroy@gmail.com>.
 
 *nessus-libraries-2.2.2a (28 Jan 2005)
 
