@@ -1,4 +1,4 @@
-MD5 560a63c280242340f5eedc59fa2ab667 ChangeLog 10268
+MD5 c5073d07397e545a16fe713a8071aa91 ChangeLog 10406
 MD5 b3d1c41a74dbe1041b4082288cacd3ca linux26-headers-2.6.7-r4.ebuild 4031
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
 MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
@@ -12,7 +12,7 @@ MD5 00e5bea1e925c2d81d32191937eb8d5b files/linux26-headers-soundcard-ppc64.patch
 MD5 602f7309c0163c018627f06b5f1ace3a files/linux26-headers-2.6.8.1-arm-float.patch 640
 MD5 b737234adedfb6dc585af6bbb40bf2d3 files/digest-linux26-headers-2.6.6-r1 66
 MD5 a73786f0b9dda7e9ebacb91a192384f9 files/linux26-headers-2.6.0-sysctl_h-compat.patch 352
-MD5 0501d9fb994e3c9721b2a239e92e30c6 files/linux26-headers-2.6.8.1-strict-ansi-fix.patch 4086
+MD5 a8a3d9eac82bc360a11a23777343b736 files/linux26-headers-2.6.8.1-strict-ansi-fix.patch 4116
 MD5 d78e0d94873de4518bca401d5688401c files/linux26-headers-2.6.7-prefetch.patch 528
 MD5 6dd79a655f006aebb7206203f3654976 files/linux26-headers-2.6.7-generic-arm-prepare.patch 978
 MD5 aa9ba92e8479bdb5f69b03b5c72be866 files/linux26-headers-2.6.4-unistd-nptl-fix.patch 362

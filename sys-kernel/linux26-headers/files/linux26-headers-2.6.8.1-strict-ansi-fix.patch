@@ -126,7 +126,7 @@
  #include <asm/sigcontext.h>
 --- linux-2.6.3/include/asm-x86_64/types.h	2004-02-17 19:59:16.000000000 -0800
 +++ linux-2.6.3/include/asm-x86_64/types.h	2004-02-28 18:49:21.000000000 -0800
-@@ -19,8 +19,14 @@
+@@ -19,8 +19,16 @@
  typedef __signed__ int __s32;
  typedef unsigned int __u32;
  
@@ -138,8 +138,10 @@
 +# endif /* __extension__ */
 +#endif /* __GNUC__ */
 +
++#ifndef _SYS_TYPES_H
 +__extension__ typedef __signed__ long long __s64;
 +__extension__ typedef unsigned long long  __u64;
++#endif
  
  #endif /* __ASSEMBLY__ */
  
