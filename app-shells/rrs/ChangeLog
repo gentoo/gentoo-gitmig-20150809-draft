@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rrs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/ChangeLog,v 1.8 2004/09/04 04:17:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/ChangeLog,v 1.9 2004/11/20 01:53:48 dragonheart Exp $
+
+  20 Nov 2004; Daniel Black <dragonheart@gentoo.org> rrs-1.70.ebuild:
+  ppc stable
 
   04 Sep 2004; Sven Wegener <swegener@gentoo.org>
   -files/1.50-include-string.h.patch, -rrs-1.50.ebuild, -rrs-1.55.ebuild:
