@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.17 2004/10/01 00:08:56 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.18 2004/10/19 21:03:43 agriffis Exp $
+
+  21 Oct 2004; Aron Griffis <agriffis@gentoo.org> pyrex-0.9.3.ebuild:
+  add ~ia64
 
   30 Sep 2004; Stephen P. Becker <geoman@gentoo.org> pyrex-0.9.3.ebuild:
   added ~mips keyword
