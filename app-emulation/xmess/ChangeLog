@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/xmess
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmess/ChangeLog,v 1.1 2003/01/13 22:21:20 rphillips Exp $
+
+*xmess-0.62.2 (13 Jan 2003)
+
+  13 Jan 2003; Ryan Phillips <rphillips@gentoo.org> xmess-0.62.2-r1.ebuild :
+  initial release. Submitted by Caleb Shay
