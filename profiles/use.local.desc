@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.72 2003/07/24 19:31:09 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.73 2003/07/27 21:49:28 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -13,6 +13,7 @@ app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop librar
 app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
+app-games/fakk2:nocd - Copies all data for game from CD
 app-games/freecraft-fcmp:music - Also installs the music that the project provides
 app-games/fortune-mod:offensive - Allow fortune to offend you
 app-games/heavygear2:videos - Copy the video files also ... adds about 100 megs and is for single player only
