@@ -1,8 +1,3 @@
-MD5 e44f04c68fe17133e795e63f5c82c683 ChangeLog 5636
-MD5 d9643e58665e5eccc1136fbf5625af03 sendmail-8.12.8.ebuild 5141
-MD5 5e877550eb167dad340a1157ef9875f8 sendmail-8.12.9-r1.ebuild 5679
-MD5 c04122fc341be4fad1d642e422e12eea sendmail-8.12.9-r2.ebuild 5578
-MD5 2351fe7d3056270638ecc1fc8bf96db0 sendmail-8.12.9.ebuild 5141
 MD5 0a63a2d919ba41dba080aeb57bb66841 files/digest-sendmail-8.12.8 68
 MD5 6d2d3106fb3c1c317310e4bf80228741 files/digest-sendmail-8.12.9 68
 MD5 6d2d3106fb3c1c317310e4bf80228741 files/digest-sendmail-8.12.9-r1 68
@@ -17,3 +12,8 @@ MD5 03494c29693bd3ceb921bbc398be4cda files/sendmail-procmail.mc 985
 MD5 5476fde164f12162d60ed3cffb0a41e3 files/sendmail.cf 39325
 MD5 57c515d75ee6bcb32fc673141ebc41fa files/sendmail.mc 930
 MD5 b908d7f9fe5b925927e6603fad156dfc files/site.config.m4 590
+MD5 d9643e58665e5eccc1136fbf5625af03 sendmail-8.12.8.ebuild 5141
+MD5 aa5decc2307eecfa55d69f4562ed9dff sendmail-8.12.9-r1.ebuild 5675
+MD5 65cc32275d36e625d530b32bd43623cf ChangeLog 5749
+MD5 2351fe7d3056270638ecc1fc8bf96db0 sendmail-8.12.9.ebuild 5141
+MD5 98c29ccf9fba2d734006bb1fa23888de sendmail-8.12.9-r2.ebuild 5575
