@@ -778,3 +778,12 @@ app-misc/todo-manager-bronze
 # rphillips@gentoo.org 01 Dec 2003
 # mask arch in favor of tla
 dev-util/arch
+
+# rizzo@gentoo.org 11 Jan 2004
+# mask new jabberd and it's transports until we've settled in.
+net-im/jabberd
+net-im/jit
+net-im/msn-transport
+net-im/jud
+net-im/yahoo-transport
+net-im/mu-conference
