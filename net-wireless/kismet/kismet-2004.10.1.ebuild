@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.10.1.ebuild,v 1.4 2004/10/27 18:13:34 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.10.1.ebuild,v 1.5 2004/12/14 16:11:02 brix Exp $
 
 inherit gnuconfig
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="ethereal gps"
 
 DEPEND=">=sys-devel/autoconf-2.58
