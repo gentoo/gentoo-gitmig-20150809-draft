@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.0.ebuild,v 1.3 2004/05/21 16:10:03 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.0.ebuild,v 1.4 2004/05/22 15:26:31 khai Exp $
 
 inherit gnome2
 IUSE=""
@@ -17,6 +17,11 @@ RDEPEND=">=gnome-base/libglade-2
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gcc34.patch
+}
 src_compile() {
 	aclocal -I scripts
 	automake -c -f
