@@ -1,0 +1,9 @@
+# ChangeLog for app-cdr/cdrtools-dvdr
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/ChangeLog,v 1.1 2003/03/05 01:42:18 agenkin Exp $
+
+*cdrtools-dvdr-1.11.37 (04 Mar 2003)
+
+  04 Mar 2003; Arcady Genkin <agenkin@getoo.org> :
+  Initial version of the ebuild.  Closes bug #13385.
+  Thanks to Faye Pearson <faye@clara.net>.
