@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/ami
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ChangeLog,v 1.7 2003/02/12 09:25:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ChangeLog,v 1.8 2003/03/22 17:29:12 jayskwak Exp $
+
+*ami-1.2.2 (22 Mar 2003)
+  
+  22 Mar 2003: Jay kwak <jayskwak@gentoo.org> ami-1.2.2.ebuild:
+  Version update
 
 *ami-1.1.0 (27 Jan 2003)
   
