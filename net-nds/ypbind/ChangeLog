@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.17 2004/06/25 00:23:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.18 2004/07/20 10:51:26 mr_bones_ Exp $
+
+  16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> ypbind-1.17.2.ebuild:
+  use emake; use use_enable; don't install COPYING; tidy
 
   08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ypbind-1.17.2.ebuild:
   Stable on alpha.

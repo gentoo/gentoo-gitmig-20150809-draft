@@ -1,32 +1,31 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2.ebuild,v 1.4 2004/06/25 00:23:52 agriffis Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2.ebuild,v 1.5 2004/07/20 10:51:26 mr_bones_ Exp $
 
 MY_P=${PN}-mt-${PV}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Multithreaded NIS bind service (ypbind-mt)"
-SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.linux-nis.org/nis/ypbind-mt/index.html"
+SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${MY_P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~sparc alpha ~ppc ~amd64"
+IUSE="nls"
 
-DEPEND="net-nds/yp-tools net-nds/portmap"
+DEPEND="net-nds/yp-tools
+	net-nds/portmap"
 RDEPEND="nls? ( sys-devel/gettext )"
 
+S="${WORKDIR}/${MY_P}"
+
 src_compile() {
-	local myconf
-	use nls || myconf="--disable-nls"
-	econf ${myconf} || die
-	make || die
+	econf $(use_enable nls) || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS ChangeLog COPYING README THANKS TODO
+	dodoc AUTHORS ChangeLog README THANKS TODO
 	insinto /etc ; doins etc/yp.conf
 	insinto /etc/conf.d ; newins ${FILESDIR}/ypbind.confd ypbind
 	exeinto /etc/init.d ; newexe ${FILESDIR}/ypbind.rc6 ypbind
