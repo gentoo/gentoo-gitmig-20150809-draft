@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.9.9.ebuild,v 1.1 2002/05/07 05:51:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.9.9.ebuild,v 1.2 2002/05/08 00:07:08 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -13,7 +13,7 @@ if [ "`use build`" ]
 then
 	RDEPEND=""
 else
-	RDEPEND=">=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils"
+	RDEPEND=">=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=sys-apps/bash-2.05a"
 fi
 
 src_unpack() {
@@ -26,16 +26,6 @@ src_compile() {
 	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
 	cd ${S}/src/sandbox
 	emake || die
-}
-
-pkg_preinst() {
-	if [ -d /var/db/pkg/sys-apps/bash-2.05a ] && [ ! -d /var/db/pkg/sys-apps/bash-2.05a-r1 ]
-	then
-		eerror "You have to update your bash-2.05a installation."
-		eerror "Please execute 'emerge sys-apps/bash' as root"
-		eerror "before installing this version of portage."
-		die
-	fi
 }
 
 src_install() {
