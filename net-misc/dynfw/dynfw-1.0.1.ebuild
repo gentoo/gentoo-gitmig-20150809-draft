@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: William McArthur <sandymac@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dynfw/dynfw-1.0.1.ebuild,v 1.1 2002/04/29 13:03:48 sandymac Exp $
+# $Header:
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Dynamic Firewall Tools for netfilter-based firewalls"
-
 SRC_URI="http://gentoo.org/projects/${P}.tar.gz"
-
 HOMEPAGE="http://gentoo.org/projects/dynfw"
-
 DEPEND="sys-apps/bash"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL"
 
 src_install () {
 	dodir /usr/sbin

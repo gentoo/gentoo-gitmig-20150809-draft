@@ -1,6 +1,12 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for net-misc/dynfw
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dynfw/ChangeLog,v 1.1 2002/04/29 13:03:48 sandymac Exp $
+# $Header:
+
+*dynfw-1.0.1 (06 July 2002)
+
+  06 Jul 2002; phoen][x <phoenix@gentoo.org> dynfw-1.0.1.ebuild :
+
+  Added KEYWORDS, LICENSE, SLOT.
 
 *dynfw-1.0.1 (29 Apr 2002)
 
