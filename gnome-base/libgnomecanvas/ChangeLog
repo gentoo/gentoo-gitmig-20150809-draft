@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomecanvas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.50 2004/11/11 15:57:54 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.51 2004/11/12 02:23:31 gustavoz Exp $
+
+  11 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  libgnomecanvas-2.8.0.ebuild:
+  Stable on sparc
 
   11 Nov 2004; Mike Gardiner <obz@gentoo.org> libgnomecanvas-2.8.0.ebuild:
   Keyworded ppc for GNOME 2.8

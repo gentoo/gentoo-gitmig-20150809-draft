@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.19 2004/11/11 11:31:29 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.20 2004/11/12 02:27:12 gustavoz Exp $
+
+  11 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-keyring-0.4.0.ebuild:
+  Stable on sparc
 
   11 Nov 2004; Mike Gardiner <obz@gentoo.org> gnome-keyring-0.4.0.ebuild:
   Keyworded ppc for GNOME 2.8
