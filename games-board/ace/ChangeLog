@@ -1,6 +1,9 @@
 # ChangeLog for games-board/ace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ChangeLog,v 1.5 2004/06/24 22:15:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ChangeLog,v 1.6 2004/11/01 21:25:26 josejx Exp $
+
+  02 Nov 2004; Joseph Jezak <josejx@gentoo.org> ace-1.2-r1.ebuild:
+  GCC 3.4 fix from Yuri Vasilevski, bug #67794.  Marked ~ppc.
 
   22 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> ace-1.2-r1.ebuild:
   WANT_AUTOMAKE=1.4 for bug #54701 - thanks to Ian Truelsen

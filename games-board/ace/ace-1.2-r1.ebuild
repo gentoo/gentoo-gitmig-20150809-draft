@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.7 2004/06/24 22:15:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.8 2004/11/01 21:25:26 josejx Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="DJ Delorie's Ace of Penguins solitaire games"
 HOMEPAGE="http://www.delorie.com/store/ace/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.delorie.com/store/ace/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/x11
@@ -19,6 +19,12 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.3.4
 	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/ace-1.2-check_for_end_of_game.patch
+}
 
 src_compile() {
 	# bug #54701
