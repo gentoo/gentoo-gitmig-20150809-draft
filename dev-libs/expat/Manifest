@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 5df6edd650ee682d19daa3eac9cdbced ChangeLog 5536
-MD5 a6902abc6ebd52482888e7eba179159b expat-1.95.4.ebuild 763
-MD5 cfbd7c4948d872a21af754fc601fccb0 expat-1.95.5-r1.ebuild 634
-MD5 990e27113f8887a61f0a36be26879333 expat-1.95.6-r1.ebuild 859
-MD5 86b967b7e27907d10a76a59fd9d67f81 expat-1.95.6.ebuild 630
-MD5 fc870f094a18e7edf608283b5b6c794a expat-1.95.7.ebuild 687
-MD5 737fbc4548e22af8d7e44d902b9f398b expat-1.95.7-r1.ebuild 844
+MD5 a067139658a38b51f33fb2d1bac1ec53 expat-1.95.4.ebuild 761
+MD5 67abb19a9e6fa425057eb2351993a4f3 expat-1.95.5-r1.ebuild 632
+MD5 cbb2d985b5930ad8265e857dc0b8d988 expat-1.95.6-r1.ebuild 857
+MD5 f37475c177bc82e8a0e810f6c6333911 expat-1.95.6.ebuild 628
+MD5 ae18cf435aeb21a9e0c0464ce35c1c31 expat-1.95.7.ebuild 687
+MD5 0511dd50018549edef7c534f67d14315 expat-1.95.7-r1.ebuild 844
 MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
-MD5 01fb819199620bc30e4ccb11ec15e7d7 expat-1.95.8.ebuild 862
+MD5 e94dd6e8964dec89af0178aaff1f59dc expat-1.95.8.ebuild 862
 MD5 7868bf2a29b820e0358f371167bc740f files/digest-expat-1.95.4 64
 MD5 a39abdca141d50129afe4aeccd400e19 files/digest-expat-1.95.5-r1 64
 MD5 5a60260c06d2a4e63854a754788998ac files/digest-expat-1.95.6 64
@@ -22,7 +22,7 @@ MD5 be97487dd2627fe82f06252c88b83ab1 files/digest-expat-1.95.8 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB5EJ3roRuSHgZdywRAqjnAKCDWuWzgFcfJaWNDODS3+eMEShpVACfSuz/
-klKMjHFFlajaHzYCIYx4odk=
-=NjxB
+iD8DBQFB5EK0roRuSHgZdywRAiaYAJ99lmJJcZ7nEYS+bDIypD7wtIs5cgCffOdu
+jl4K0HLY4Vzo18ZB82GIcuc=
+=niB+
 -----END PGP SIGNATURE-----
