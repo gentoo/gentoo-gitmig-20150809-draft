@@ -2,6 +2,16 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header $
 
+*gromacs-3.1.4-r1 (23 Mar 2003)
+
+  23 Mar 2003; George Shapovalov <george@gentoo.org> gromacs-3.1.4-r1.ebuild :
+  added mpi support, lam-mpi is the only working implementation at the moment.
+  !IMPORTANT!:
+  Since portage cannot at present check whether optional dependencies of dependencies were turned on, 
+  please check yourself that gromacs and fftw have identical mpi setting.
+  Generally USE="mpi" emerge gromacs should work fine if you did not install fftw previously (with 
+  different mpi off for example).
+
 *gromacs-3.1.4 (08 Nov 2002)
 
   08 Nov 2002; George Shapovalov <george@gentoo.org> gromacs-3.1.4.ebuild, files/digest-gromacs-3.1.4 :
