@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.98 2004/09/05 22:38:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.99 2004/09/07 11:41:29 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -878,12 +878,12 @@ Comment=${DESCRIPTION}
 Exec=${exec}
 Path=${path}
 Icon=${icon}
-Categories=Application;${type};" > ${desktop}
+Categories=Application;${type};" > "${desktop}"
 
 	if [ -d "/usr/share/applications" ]
 	then
 		insinto /usr/share/applications
-		doins ${desktop}
+		doins "${desktop}"
 	fi
 
 	#if [ -d "/usr/share/gnome/apps" ]
@@ -904,7 +904,7 @@ Categories=Application;${type};" > ${desktop}
 	if [ -d "/usr/share/applnk" ]
 	then
 		insinto /usr/share/applnk/${subdir}
-		doins ${desktop}
+		doins "${desktop}"
 	fi
 
 	return 0
