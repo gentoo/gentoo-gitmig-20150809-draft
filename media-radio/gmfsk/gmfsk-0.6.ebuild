@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/gmfsk-0.6.ebuild,v 1.4 2004/08/25 23:29:52 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/gmfsk-0.6.ebuild,v 1.5 2004/12/29 02:48:51 ribosome Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/libc
 	>=gnome-base/libgnomeui-2.0
 	gnome-extra/yelp
 	>=media-libs/hamlib-1.2.0
-	<dev-libs/fftw-3"
+	<sci-libs/fftw-3"
 
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.5
