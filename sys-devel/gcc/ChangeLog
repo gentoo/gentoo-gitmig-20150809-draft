@@ -1,6 +1,29 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.92 2003/04/25 05:25:00 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.93 2003/04/28 02:40:34 azarah Exp $
+
+*gcc-3.2.3 (28 Apr 2003)
+
+  28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.3.ebuild,
+  gcc-323-propolice-version.patch, gcc32-c++-classfn-member-template.patch,
+  gcc32-mklibgcc-serialize-crtfiles.patch, gcc323-gentoo-branding.patch,
+  protector-3.2.2-6-PPC.patch :
+  Update version
+  - Add gcc323-gentoo-branding.patch and gcc-3.2.3-tls-update.patch.bz2 thanks
+    to Nicholas Wourms <dragon@gentoo.org>.  He did a great job at porting
+    gcc-3.2.3-tls-update.patch.bz2 from 3.2.2!
+  - Add two patches from Mandrake;  gcc32-c++-classfn-member-template.patch and
+    gcc32-mklibgcc-serialize-crtfiles.patch.
+  - Cleanup the ProPolice stuff.  Also rather use the patch tarball from its
+    homepage then adding the files to cvs.
+  - Get the version patches (gcc323-gentoo-branding.patch and
+    gcc-323-propolice-version.patch) to be more generic to ebuild revisions;
+    added version_patch() for this.
+  - Fix awk/fixlafiles.awk to not change files in /usr/lib/gcc-lib.  This got
+    broken with my previous recursion fix.
+
+  28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2-r5.ebuild :
+  Remove message and 'die' in pkg_setup().
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> :
   - Fix latest ebuild to only build static if we are just building the C
