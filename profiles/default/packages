@@ -42,7 +42,7 @@
 *sys-apps/hdparm
 *sys-apps/ipchains
 *sys-apps/iptables
-*sys-apps/isapnptools
+*<sys-apps/isapnptools-1.23-r6
 *sys-apps/less
 *sys-apps/lilo
 *sys-apps/lsof
