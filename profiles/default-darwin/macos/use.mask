@@ -15,3 +15,6 @@ tcltk
 
 # needs a lot of packages ported before its usable.
 xemacs
+
+# this is going to be a hard thing to port, if even doable
+mpi
