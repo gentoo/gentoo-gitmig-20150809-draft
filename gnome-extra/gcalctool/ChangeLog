@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.16 2003/11/15 03:14:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.17 2003/12/14 18:29:35 brad_mssw Exp $
+
+  14 Dec 2003; Brad House <brad_mssw@gentoo.org> gcalctool-4.3.16.ebuild:
+  someone messed up a dep on amd64, marking this stable
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gcalctool-4.3.16.ebuild:
   Stable on ia64
