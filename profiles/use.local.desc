@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.863 2005/01/13 23:19:25 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.864 2005/01/14 12:27:01 liquidx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -365,6 +365,7 @@ media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libao:mmap - (experimental) Enable memory-mapped I/O
+media-libs/libgphoto2:nousb - Disable USB support
 media-libs/libquicktime:dv - Enables support for a codec used by many camcorders
 media-libs/libquicktime:ieee1394 - enable dv/firewire camera support
 media-libs/libsdl:libcaca - Add support for colored ASCII-art graphics
