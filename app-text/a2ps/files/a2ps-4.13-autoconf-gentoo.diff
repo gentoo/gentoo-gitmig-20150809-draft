@@ -1,0 +1,12 @@
+diff -urN a2ps-4.13.ORIG/ogonkify/configure.in a2ps-4.13/ogonkify/configure.in
+--- a2ps-4.13.ORIG/ogonkify/configure.in	2000-01-07 21:19:55.000000000 +0900
++++ a2ps-4.13/ogonkify/configure.in	2003-09-16 06:33:29.000000000 +0900
+@@ -53,7 +53,7 @@
+ dnl We need the IBM PFA files.
+ ad_IBMFONTS
+ 
+-AC_CONFIG_FILES(composeglyphs, [chmod +x composeglyphs])
++dnl AC_CONFIG_FILES(composeglyphs, [chmod +x composeglyphs])
+ AC_OUTPUT(Makefile ogonkify.in
+ 	   doc/Makefile
+ 	   m4/Makefile)
