@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r3.ebuild,v 1.1 2005/03/17 22:55:09 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r3.ebuild,v 1.2 2005/03/18 02:03:07 fafhrd Exp $
 
 inherit eutils gnustep-funcs flag-o-matic
 
@@ -24,9 +24,7 @@ RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )
 
 SLOT="0"
 LICENSE="GPL-2"
-#KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~alpha"
-# mips removed until bug missing dep bug is fixed (not in bugzilla :-\)
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~alpha"
 
 if use gnustep; then
 	egnustep_install_domain "System"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.8 2005/01/10 04:19:23 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.9 2005/03/18 02:03:07 fafhrd Exp $
 
 inherit eutils flag-o-matic
 filter-mfpmath "sse" "387"
@@ -43,7 +43,7 @@ src_unpack() {
 	epatch ${FILESDIR}/trance.patch.WM-0.80.2.diff
 
 	# Add some BETTER xinerama support
-	use xinerama && epatch ${FILESDIR}/xinerama.patch
+	use xinerama && epatch ${FILESDIR}/xinerama.patch.bz2
 
 	# Fix GTK2 window flickering bug
 	epatch ${FILESDIR}/gtk2flickerfix.patch
@@ -123,13 +123,13 @@ src_compile() {
 	cd ${S}
 	#0.80.1-r2 did not work with make -j4 (drobbins, 15 Jul 2002)
 	#with future Portage, this should become "emake -j1"
-	make || die
+	emake -j1 || die
 
 	# WindowMaker Extra
 	cd ../WindowMaker-extra-0.1
 	econf || die
 
-	make || die
+	emake -j1 || die
 }
 
 src_install() {

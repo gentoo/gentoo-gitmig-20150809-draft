@@ -1,6 +1,18 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.36 2005/01/10 20:40:48 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.37 2005/03/18 02:03:07 fafhrd Exp $
+
+*windowmaker-0.91.0-r3 (17 Mar 2005)
+
+  17 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org> -files/xinerama.patch,
+  +files/xinerama.patch.bz2, -windowmaker-0.80.2-r1.ebuild,
+  windowmaker-0.80.2-r2.ebuild, windowmaker-0.80.2-r3.ebuild,
+  windowmaker-0.80.2-r4.ebuild, -windowmaker-0.90.0.ebuild,
+  windowmaker-0.91.0-r3.ebuild, -windowmaker-0.91.0.ebuild:
+  bzipped xinerama.patch for older windowmaker ebuilds, as it crossed 20k;
+  removed old windowmaker ebuilds; re-added ~mips keyworded to latest
+  windowmaker rev, as gnustep use flag is now masked for mips, removing the
+  breakage
 
   10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
   windowmaker-0.91.0-r1.ebuild, windowmaker-0.91.0-r2.ebuild,
