@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.65 2004/10/06 03:37:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.66 2004/10/23 03:50:01 chriswhite Exp $
+
+*xine-ui-0.99.3_pre20041022 (23 Oct 2004)
+
+  23 Oct 2004; Chris White <chriswhite@gentoo.org>
+  +xine-ui-0.99.3_pre20041022.ebuild:
+  Created a cvs snapshot ebuild as per bug #64693. This should help fix a few
+  bugs hanging around xine-ui until 0.99.3 gets out.
 
   05 Oct 2004; Jason Wever <weeve@gentoo.org> xine-ui-0.99.2.ebuild:
   Added ~sparc keyword.
