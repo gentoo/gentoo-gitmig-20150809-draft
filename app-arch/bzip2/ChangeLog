@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.18 2005/02/06 19:25:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.19 2005/02/11 23:04:37 vapier Exp $
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bzip2-1.0.2-saneso.patch, bzip2-1.0.2-r4.ebuild:
+  Stabilize and add patch from Fedora.
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> bzip2-1.0.2-r4.ebuild:
   Marked stable on mips.
