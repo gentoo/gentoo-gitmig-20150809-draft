@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (05 Jul 2002)
+# sandbox violation on /proc/sys/kernel/tainted
+=net-dialup/rp-pppoe-3.4
+
 # <karltk@gentoo.org> (04 Jul 2002)
 # Has not received any testing.
 =net-www/cocoon-2.0.2
