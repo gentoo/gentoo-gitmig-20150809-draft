@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8d53264751205a77464a146781f75f31 ChangeLog 5255
 MD5 b79b08e0f979feb256c93295714b4fc9 metadata.xml 224
 MD5 11bf3aa29f21d7fe7e860cf6b53838c3 tor-0.0.9.5.ebuild 1280
+MD5 68b7a32d7e6f54094acff222a7cb26b5 tor-0.0.9.6.ebuild 1281
 MD5 6a492ad8ff012bce8c2fbd6fe7dd8832 files/digest-tor-0.0.9.5 63
+MD5 166a8c44e71dfca9f79d12e70e9bd51c files/digest-tor-0.0.9.6 63
 MD5 7587786181f235b77608c5db7fc1a033 files/tor.initd 867
 MD5 485b6c84e589898a922507f1f6df2c78 files/torrc.sample.patch-00 1349
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCQUW08zY1VwezZiERAsPSAKCeOFib+Ze+jQdxZUVXNHwItuz2LwCgmffI
-/2nHI4rVTiBzCx3nPp2rOFk=
-=mzB3
------END PGP SIGNATURE-----
