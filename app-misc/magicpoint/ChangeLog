@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/magicpoint
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/ChangeLog,v 1.1 2002/02/01 21:53:08 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/ChangeLog,v 1.2 2002/03/21 08:46:14 seemant Exp $
+
+*magicpoint-1.09a (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> magicpoint-1.09a.ebuild :
+
+  Version upgrade -- copied the 1.07a ebuild over, and updated its syntax from
+  try to die and the copyright info.  Thanks to Matthew Kennedy for the update
+  info.
 
 *magicpoint-1.07a (1 Feb 2002)
 
