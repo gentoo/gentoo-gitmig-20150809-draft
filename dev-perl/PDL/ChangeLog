@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.25 2004/09/05 23:34:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.26 2004/09/06 19:21:28 gustavoz Exp $
+
+  06 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> PDL-2.4.0-r2.ebuild:
+  Stable on sparc
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> PDL-2.4.0-r2.ebuild:
   Switch to use epause and ebeep, bug #62950
