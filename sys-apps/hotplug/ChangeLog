@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.34 2004/03/23 02:05:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.35 2004/03/30 00:27:50 gregkh Exp $
+
+*hotplug-20040329 (29 Mar 2004)
+
+  29 Mar 2004; Greg Kroah-Hartman <gregkh@gentoo.org> hotplug-20040329.ebuild,
+  metadata.xml:
+  2004_03_29 updated.  Also split the /sbin/hotplug part off to hotplug-base
+  package.
 
   22 Mar 2004; Joshua Kinard <kumba@gentoo.org> hotplug-20040311.ebuild:
   Added ~mips to KEYWORDS.
