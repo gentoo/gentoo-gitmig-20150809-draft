@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-dflowers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/ChangeLog,v 1.8 2004/04/22 06:19:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/ChangeLog,v 1.9 2004/04/27 22:05:12 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> xmms-dflowers-1.2.ebuild:
+  Add inherit eutils
 
   21 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-dflowers-1.2.1.ebuild:
