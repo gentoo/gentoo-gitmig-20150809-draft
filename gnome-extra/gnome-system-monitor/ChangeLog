@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.23 2003/07/15 14:00:28 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.24 2003/08/24 17:20:59 obz Exp $
+
+  25 Aug 2003; Mike Gardiner <obz@gentoo.org> gnome-system-monitor-2.0.5.ebuild:
+  Moved to stable on x86
 
   15 Jul 2003; Todd Sunderlin <todd@gentoo.org>
   gnome-system-monitor-2.0.4-r1.ebuild:
