@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20041031_pre13.ebuild,v 1.2 2004/11/02 04:37:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20041031_pre13.ebuild,v 1.3 2004/12/06 13:55:55 vapier Exp $
 
 EHACKAUTOGEN="yes"
 inherit enlightenment flag-o-matic
@@ -17,7 +17,7 @@ DEPEND="virtual/x11
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
-	cairo? ( x11-libs/cairo )
+	cairo? ( >=x11-libs/cairo-0.1.23 )
 	dev-util/pkgconfig"
 
 src_compile() {
