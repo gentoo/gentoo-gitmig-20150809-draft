@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b4fc0976a479e04c80c0ce67792cfc3e ChangeLog 3779
+MD5 a0edc25b59f51afa5478d6e683da8639 ChangeLog 3865
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 7cd21db1472ba23c8715a15d14248369 xmlto-0.0.18.ebuild 982
-MD5 0f71b7fe205752ea68c2d3de2235ce97 xmlto-0.0.17.ebuild 1068
 MD5 260898b1e06efec10d10739f6a52c24d xmlto-0.0.15.ebuild 1115
-MD5 cd347c7e58518ba9106284281d3b5aa0 files/digest-xmlto-0.0.18 64
+MD5 0f71b7fe205752ea68c2d3de2235ce97 xmlto-0.0.17.ebuild 1068
+MD5 aa81cc719b02786ec4e9a4ee8dc7b210 xmlto-0.0.18.ebuild 987
 MD5 1cfec32ebd5d3739c8040ed9cfb1f4ae files/digest-xmlto-0.0.15 64
 MD5 6dcff74be4bd4d52a3ed910aabaa6f63 files/digest-xmlto-0.0.17 64
+MD5 cd347c7e58518ba9106284281d3b5aa0 files/digest-xmlto-0.0.18 64
 MD5 f93a45750c50ece36b816d374dde7e28 files/xmlto-head-fix.patch 620
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRqDbugEuf3OQ0akRAlpuAJ4rX8gU9V6M6FE5iMiqEgTJI6By9QCfYj9+
-3GCfYzL73u/RQqRTquKwdY8=
-=nwha
------END PGP SIGNATURE-----
