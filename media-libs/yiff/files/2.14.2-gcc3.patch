@@ -1,0 +1,77 @@
+--- yiffutils/ymixer.c.orig	2003-07-31 14:52:34.000000000 -0400
++++ yiffutils/ymixer.c	2003-07-31 14:53:28.000000000 -0400
+@@ -23,26 +23,26 @@
+  */
+ static void print_help(void)
+ {
+-	printf("\
+-Usage: ymixer [mixer] [value1] [value2] [value3] [value4] [options]\n\
+-\n\
+-    [mixer] specifies the mixer channel device name, running without\n\
+-    any arguments prints a list of available mixer names.
+-\n\
+-    [value#] specify the percent values (from 0.0%%, 100.0%%) to be set.\n\
+-    If no [value#] is specified then the current value is printed.\n\
+-\n\
+-    [options] can be any of the following:\n\
+-\n\
+-        --recorder <address:port>    Specify which Y server to connect to.\n\
+-\n\
+-    Return values:\n\
+-\n\
+-        0       Success.\n\
+-        1       General error.\n\
+-        2       Cannot connect to Y server error.\n\
+-        3       Systems error.\n\
+-\n"
++	printf("\n"\
++"Usage: ymixer [mixer] [value1] [value2] [value3] [value4] [options]\n"\
++"\n"\
++"    [mixer] specifies the mixer channel device name, running without\n"\
++"    any arguments prints a list of available mixer names."\
++"\n"\
++"    [value#] specify the percent values (from 0.0%%, 100.0%%) to be set.\n"\
++"    If no [value#] is specified then the current value is printed.\n"\
++"\n"\
++"    [options] can be any of the following:\n"\
++"\n"\
++"        --recorder <address:port>    Specify which Y server to connect to.\n"\
++"\n"\
++"    Return values:\n"\
++"\n"\
++"        0       Success.\n"\
++"        1       General error.\n"\
++"        2       Cannot connect to Y server error.\n"\
++"        3       Systems error.\n"\
++"\n"
+ 	);
+ }
+ 
+--- yiffconfig/yccb.c.orig	2003-07-31 14:51:20.000000000 -0400
++++ yiffconfig/yccb.c	2003-07-31 14:52:19.000000000 -0400
+@@ -1302,10 +1302,10 @@
+ 	{
+ 	    CDialogGetResponse(
+ "No Y Audio Mode selected!",
+-"There is no Y Audio Mode currently selected to apply\n\
+-values for.",
+-"You must select a Y Audio Mode from the list and then
+-apply its values to the Y server.",
++"There is no Y Audio Mode currently selected to apply\n"\
++"values for.",
++"You must select a Y Audio Mode from the list and then"\
++"apply its values to the Y server.",
+ 		CDIALOG_ICON_ERROR,
+ 		CDIALOG_RESPONSE_OK | CDIALOG_RESPONSE_HELP,
+ 		CDIALOG_RESPONSE_OK
+--- yiff/Makefile.Linux	2003-07-31 14:50:45.000000000 -0400
++++ yiff/Makefile.Linux	2003-07-31 14:50:53.000000000 -0400
+@@ -111,7 +111,7 @@
+ #   farther above.
+ #
+ #LIB = -lm -lkmid
+-LIB = -lm
++LIB = -lm -lstdc++
+ 
+ # Library Directories:
+ #
