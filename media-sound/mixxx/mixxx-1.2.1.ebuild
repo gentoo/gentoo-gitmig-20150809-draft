@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.1 2004/01/28 04:30:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.2 2004/03/31 18:49:50 eradicator Exp $
 
 IUSE="jack"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mixxx/${P}.tar.gz"
 RESTRICT="nomirror"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 DEPEND="virtual/glibc
@@ -35,7 +35,7 @@ INSTALL_ROOT=${D}
 " Makefile
 	sed -i -e 's/COPY_FILE= \$\(COPY\) -p/COPY_FILE= $(COPY) -pr/' Makefile
 
-	addpredict  /usr/qt/3/etc/settings
+	addpredict  ${QTDIR}/etc/settings
 
 	make || die
 }
