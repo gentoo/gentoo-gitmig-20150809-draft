@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.80 2003/09/13 20:49:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.81 2003/09/14 18:29:15 azarah Exp $
+
+  14 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r4.ebuild,
+  files/2.3.2/glibc-2.3.2-cispeed-cospeed-fix.patch:
+  Fix sparc build issues, patch from glibc-alpha, thanks to <kumba@gentoo.org>.
 
   13 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r1.ebuild,
   glibc-2.3.2-r2.ebuild, glibc-2.3.2-r3.ebuild:

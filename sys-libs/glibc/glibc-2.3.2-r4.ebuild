@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r4.ebuild,v 1.3 2003/09/08 23:01:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r4.ebuild,v 1.4 2003/09/14 18:29:16 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -345,6 +345,13 @@ src_unpack() {
 	#   http://bugs.gentoo.org/show_bug.cgi?id=27142
 	#
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-fix-omitted-operand-in-mathinline_h.patch
+
+	if [ "${ARCH}" = "sparc" ]
+	then
+		# Fix sparc compile issues.
+		# <kumba@gentoo.org>
+		cd ${S}; epatch ${FILESDIR}/${PV}/${P}-cispeed-cospeed-fix.patch
+	fi
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.
