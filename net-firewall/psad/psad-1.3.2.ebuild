@@ -1,18 +1,18 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.9 2004/06/25 19:54:12 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.2.ebuild,v 1.1 2004/06/25 19:54:12 battousai Exp $
 
 inherit eutils perl-module
 
 IUSE=""
 
 DESCRIPTION="Port Scannning Attack Detection daemon"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://www.cipherdyne.org/psad/download/${P}.tar.bz2"
 HOMEPAGE="http://www.cipherdyne.org/psad"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc alpha ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
 
 DEPEND="${DEPEND}
 	dev-lang/perl"
@@ -73,6 +73,7 @@ src_install() {
 	cd ${S}
 	insinto /usr
 	dosbin kmsgsd psad psadwatchd
+	newsbin fwcheck_psad.pl fwcheck_psad
 	dobin pscan
 
 	cd ${S}
@@ -86,9 +87,10 @@ src_install() {
 	insinto /etc/psad
 	doins *.conf
 	doins psad_*
+	doins auto_dl icmp_types posf signatures
 
 	exeinto /etc/init.d
-	doexe psad-init.gentoo psad
+	newexe psad-init.gentoo psad
 
 	cd ${S}/snort_rules
 	dodir /etc/psad/snort_rules
