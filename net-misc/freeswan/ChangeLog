@@ -1,7 +1,13 @@
 # ChangeLog for net-misc/freeswan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.5 2002/09/12 08:04:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.6 2002/11/06 09:11:27 jhhudso Exp $
 
+*freeswan-1.98b-r2 (5 Nov 2002)
+
+  5 Nov 2002; Jared Hudson <jhhudso@gentoo.org> : Fix for bug #5045. Solution
+  provided by Nils Ohlmeier <nils@ohlmeier.de>. Added /etc/ipsec.d symlink
+  to /etc/ipsec/ipsec.d
+	
 *freeswan-1.98b-r1 (12 Sep 2002)
 
   12 Sep 2002; Daniel Ahlberg <aliz@telia.com> :
