@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1.ebuild,v 1.1 2005/01/19 23:01:32 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1.ebuild,v 1.2 2005/01/24 19:34:20 langthang Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 	app-arch/unrar
 	app-arch/zoo
 	dev-perl/Archive-Tar
-	dev-perl/Archive-Zip
+	>=dev-perl/Archive-Zip-1.14
 	dev-perl/Compress-Zlib
 	dev-perl/Convert-TNEF
 	dev-perl/Convert-UUlib
@@ -36,7 +36,7 @@ RDEPEND="${DEPEND}
 	>=dev-perl/MIME-tools-5.415
 	>=dev-perl/MailTools-1.58
 	dev-perl/net-server
-	dev-perl/libnet
+	>=dev-perl/libnet-1.16
 	dev-perl/Digest-MD5
 	dev-perl/IO-stringy
 	>=dev-perl/Time-HiRes-1.49
