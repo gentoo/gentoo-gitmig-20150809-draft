@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12.ebuild,v 1.15 2003/04/28 05:46:48 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12.ebuild,v 1.16 2003/05/19 01:12:20 taviso Exp $
 
 MY_P=${PN}-1.4a12
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://ee.lbl.gov/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc arm"
+KEYWORDS="x86 ppc sparc arm ~alpha"
 
 DEPEND="virtual/glibc"
 
@@ -25,6 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
+	[ `use alpha` ] && CHOST="alpha-unknown-linux-gnu"
 	econf --sbindir=/usr/bin || die
 	emake || die
 }
