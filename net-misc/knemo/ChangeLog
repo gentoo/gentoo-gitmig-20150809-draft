@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/knemo
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.1 2004/06/28 16:30:37 carlo Exp $
+
+*knemo-0.1.8 (28 Jun 2004)
+
+  28 Jun 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +knemo-0.1.8.ebuild:
+  Initial ebuild. Thanks to Alberto Garcia Hierro.
+
