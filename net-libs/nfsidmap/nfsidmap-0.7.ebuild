@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nfsidmap/nfsidmap-0.7.ebuild,v 1.1 2004/12/31 04:28:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nfsidmap/nfsidmap-0.7.ebuild,v 1.2 2005/01/08 13:08:32 swegener Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="NFSv4 ID <-> name mapping library"
 HOMEPAGE="http://www.citi.umich.edu/projects/nfsv4/linux/"
