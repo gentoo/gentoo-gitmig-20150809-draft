@@ -1,6 +1,14 @@
-MD5 711d24a58134fbc34dd1fdf456f64d71 ChangeLog 985
-MD5 db17e4e18af1bfa355f4bb39fcb7cd90 k3guitune-0.4.ebuild 788
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c414db75a6e927f368c5e91aae39358a ChangeLog 1115
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
-MD5 5e1e7053c95ceaa9b893bed3eec3177b k3guitune-0.4.1.ebuild 858
-MD5 4f7d4ccbd1226af07dbc2aefd7531053 files/digest-k3guitune-0.4 66
+MD5 4648657cb5aebe0fceb2b3954af6ecde k3guitune-0.4.1.ebuild 852
 MD5 78dbcff7a5cfeefae7ca2772b582de38 files/digest-k3guitune-0.4.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBb5XVArHZZzCEUG0RAlFjAJ9bbGvnHL2J7niZBBhduxQtF4yV0wCfVI1X
+yMdoPBmLPQO68wZwGB7K47A=
+=sq7P
+-----END PGP SIGNATURE-----
