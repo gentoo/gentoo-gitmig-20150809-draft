@@ -2,6 +2,7 @@ MD5 0a5babf6fe4dc66d402c90d9c27eb931 ChangeLog 1318
 MD5 f19bfa508b36854ba0e6c6e06efd491f pptpclient-1.1.0-r1.ebuild 1073
 MD5 8730b42f940be3e348e8a354a36271c6 pptpclient-1.1.0.ebuild 871
 MD5 38aadef62c187ff761df1c72ed661b90 pptpclient-1.2.0.ebuild 997
+MD5 38aadef62c187ff761df1c72ed661b90 pptpclient-1.3.1.ebuild 997
 MD5 ddba6ac5fde52ccc46d17bc1f5822a39 files/digest-pptpclient-1.1.0 70
 MD5 ddba6ac5fde52ccc46d17bc1f5822a39 files/digest-pptpclient-1.1.0-r1 70
 MD5 87d3d997b8edfa7e7590b71edc635168 files/digest-pptpclient-1.2.0 68
@@ -9,3 +10,4 @@ MD5 dad6352a156cbe6ce71b057f50af2eec files/options.pptp 359
 MD5 4c90a2d879d5fca198c93931003f7d77 files/pptp-command 23014
 MD5 34862b5af00d851d068eb3e384093c3b files/pptp_fe.pl 8100
 MD5 bd60480b6ba90362342540fb9cbe7ebe files/xpptp_fe.pl 5620
+MD5 f94e15d8f5d315c95f576882fd1f1b3e files/digest-pptpclient-1.3.1 68
