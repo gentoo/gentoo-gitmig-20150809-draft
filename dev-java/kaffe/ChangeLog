@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/kaffe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.3 2002/05/04 15:24:21 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.4 2002/05/05 02:06:46 karltk Exp $
+
+*kaffe-1.0.6-r3 (05 May 2002)
+
+  05 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> kaffe-1.0.6-r3.ebuild files/digest-kaffe-1.0.6-r3:
+
+  Bumped revision for the patch-fix.
+
+  Removed kaffe-1.0.6-r2.ebuild files/digest-kaffe-1.0.6-r2
+  Removed kaffe-1.0.6-r1.ebuild files/digest-kaffe-1.0.6-r1
 
 
 *kaffe-1.0.6-r2 (12 Apr 2002)
