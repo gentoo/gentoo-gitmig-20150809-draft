@@ -1,10 +1,16 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.9 2003/03/23 09:22:39 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.10 2003/03/30 17:32:22 azarah Exp $
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> musicbrainz-2.0.1.ebuild :
+  - Regen autoconf/make stuff to fix problems with newer versions of automake.
+  - Do not try to install non-existing doc 'NEWS'.
+  - Remove CC stuff, as it is not distcc friendly, but rather get it to build
+    with our CFLAGS by unsetting the hard-coded ones in configure.in.
 
 *musicbrainz-2.0.1 (23 Mar 2003)
 
-  23 Mar 2003; jje <jje@gentoo.org> musicbrainz-2.0.1.ebuild:
+  23 Mar 2003; jje <jje@gentoo.org> musicbrainz-2.0.1.ebuild :
   New ebuild for Music Brainz 2.0.1.
   
   Submitted by: John Steele Scott <toojays@toojays.net>

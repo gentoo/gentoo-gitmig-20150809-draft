@@ -1,9 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.1 2003/03/23 09:22:39 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.2 2003/03/30 17:32:22 azarah Exp $
 
+IUSE=""
+
+inherit libtool
+
+S="${WORKDIR}/lib${P}"
 DESCRIPTION="Client library to access free metadata about mp3/vorbis/CD media"
-S=${WORKDIR}/lib${P}
 SRC_URI="ftp://ftp.musicbrainz.org/pub/musicbrainz/lib${P}.tar.gz"
 HOMEPAGE="http://www.musicbrainz.org/"
 
@@ -13,14 +17,35 @@ KEYWORDS="~x86 ~sparc  ~ppc ~alpha"
 
 DEPEND="virtual/glibc"
 
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# Get it to build with our CFLAGS (need Reconf part below)
+	cp configure.in configure.in.orig
+	sed -e 's:^CFLAGS:#CFLAGS:g' \
+		-e 's:^CPPFLAGS:#CPPFLAGS:g' \
+		configure.in.orig > configure.in
+	
+	# Fix problems with later versions of automake.  Please do not
+	# remove .. if there are any issues, let me know.
+	# <azarah@gentoo.org> (30 Mar 2003)
+	einfo "Reconfiguring..."
+	aclocal
+	autoconf
+	automake
+	
+	elibtoolize
+}
+
 src_compile() {
-	CC="gcc ${CFLAGS}" \
 	econf || die
 	emake || die "compile problem"
 }
 
 src_install() {
-        dodir /usr/lib/pkgconfig
+	dodir /usr/lib/pkgconfig
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO docs/mb_howto.txt
+
+	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO docs/mb_howto.txt
 }
