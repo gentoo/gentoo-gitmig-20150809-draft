@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.23_pre20040129.ebuild,v 1.3 2004/02/11 21:04:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.23_pre20040129.ebuild,v 1.4 2004/03/24 22:05:50 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -13,11 +13,18 @@ SRC_URI="http://www.rcdrummond.net/uae/uae-${MY_PV}/uae-${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="X gtk sdl"
+IUSE="X gtk sdl ncurses svga"
 
-DEPEND="X? ( virtual/x11 gtk? x11-libs/gtk+ ) :
-	( ncurses? sys-libs/ncurses svga? media-libs/svgalib )
-	sdl? media-libs/libsdl"
+DEPEND="virtual/glibc
+	X? (
+		virtual/x11
+		gtk? ( x11-libs/gtk+ )
+	)
+	!X? (
+		ncurses? ( sys-libs/ncurses )
+		svga? ( media-libs/svgalib )
+	)
+	sdl? ( media-libs/libsdl )"
 
 src_compile() {
 	ewarn "Compiling the CPU-core requires a substantial amount of RAM."

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.12 2004/01/29 03:26:16 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.13 2004/03/24 22:05:50 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="An amiga emulator"
 HOMEPAGE="http://www.freiburg.linux.de/~uae/"
@@ -11,7 +13,15 @@ SLOT="0"
 KEYWORDS="x86 ~ppc amd64"
 IUSE="X gtk svga sdl"
 
-DEPEND="X? ( virtual/x11 gtk? ( x11-libs/gtk+ ) ) : ( sys-libs/ncurses svga? ( media-libs/svgalib ) )
+DEPEND="virtual/glibc
+	X? (
+		virtual/x11
+		gtk? ( x11-libs/gtk+ )
+	)
+	!X? (
+		sys-libs/ncurses
+		svga? ( media-libs/svgalib )
+	)
 	sdl? ( media-libs/libsdl )"
 
 src_unpack() {
@@ -23,11 +33,11 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	if [ `use X` ]; then
+	if use X ; then
 		myconf="--with-x --enable-dga --enable-vidmode --with-sdl --with-sdl-sound --with-sdl-gfx"
 		myconf="$myconf `use_enable gtk ui`"
 	else
-		if [ `use svga` ]; then
+		if use svga ; then
 			myconf="--with-svgalib";
 		else
 			myconf="--with-asciiart";

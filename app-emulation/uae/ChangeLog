@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.16 2004/03/07 15:50:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.17 2004/03/24 22:05:50 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> uae-0.8.22.ebuild,
+  uae-0.8.23_pre20040129.ebuild, uae-0.8.25_pre20040302.ebuild:
+  don't use deprecated ?: use syntax
 
   07 Mar 2004; David Holm <dholm@gentoo.org> uae-0.8.25_pre20040302.ebuild:
   Replace -O3 with -O2 (again). Splitting cpuemu_6.c was not enough.
