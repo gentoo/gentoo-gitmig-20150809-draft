@@ -1254,7 +1254,7 @@ x11-libs/gdkxft
 # app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
 # lostlogic@gentoo.org 17 Jul 2002
 # masked because of sandbox problems in 2.0.12 and dep problems in 2.1.0
-app-cdr/eroaster
+<app-cdr/eroaster-2.1.0-r1
 
 # stroke@gentoo.org 16 Jul 2002
 # app-editors/bluefish-2002.06.23 gtk+2 port snapshot masked. (#5034)
