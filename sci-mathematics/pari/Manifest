@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7cb19e9e55e31a5a0aad5b50e9b1ee0e pari-2.1.5-r1.ebuild 953
+MD5 846fee1f79b382cfdf9af55657ff41a4 ChangeLog 2880
 MD5 f8598af429b160527fde6eed721809bd pari-2.1.5-r3.ebuild 1842
-MD5 a1e409bb3cc4b92c3f2cf48b5820e868 pari-2.1.5-r2.ebuild 1370
-MD5 ee7827329291a42eda31e811850047ee ChangeLog 2774
+MD5 7cb19e9e55e31a5a0aad5b50e9b1ee0e pari-2.1.5-r1.ebuild 953
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 a1e409bb3cc4b92c3f2cf48b5820e868 pari-2.1.5-r2.ebuild 1370
 MD5 c3f89da5ddbdb73646e3d64ee31ea887 files/docs.patch 915
-MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r1 63
-MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r2 63
 MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0cirI1lqEGTUzyQRAmhvAJkBXlKH56fs52o64cY1NGh6YxZRjQCfb42C
-Qz2J4Tlg68WvF7weDleiIAw=
-=ZB09
------END PGP SIGNATURE-----
+MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r2 63
+MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r1 63
