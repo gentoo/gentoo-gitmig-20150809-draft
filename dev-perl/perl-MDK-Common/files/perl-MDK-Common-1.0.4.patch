@@ -1,0 +1,29 @@
+--- Makefile	29 Jan 2003 14:54:52 -0000	1.12
++++ Makefile	8 Apr 2003 13:51:59 -0000
+@@ -7,11 +7,11 @@
+ VENDORLIB = $(shell eval "`perl -V:installvendorlib`"; echo $$installvendorlib)
+ INSTALLVENDORLIB = $(shell echo $(VENDORLIB) | sed 's,/usr,$(PREFIX),')
+ 
+-GENERATED = MDK/Common.pm index.html perl_checker.src/perl_checker
++GENERATED = MDK/Common.pm index.html #perl_checker.src/perl_checker
+ 
+ .PHONY: perl_checker.src
+ 
+-all: $(GENERATED) test
++all: $(GENERATED) #test
+ 
+ index.html: MDK/Common.pm
+ 	pod2html $< > $@
+@@ -32,10 +32,10 @@
+ 
+ install: clean all
+ 	install -d $(BINDIR) $(INSTALLVENDORLIB)/MDK/Common
+-	install perl_checker.src/perl_checker $(BINDIR)
++#	install perl_checker.src/perl_checker $(BINDIR)
+ 	install -m 644 MDK/Common.pm $(INSTALLVENDORLIB)/MDK
+ 	install -m 644 MDK/Common/*.pm $(INSTALLVENDORLIB)/MDK/Common
+-	cp -r perl_checker_fake_packages $(INSTALLVENDORLIB)
++#	cp -r perl_checker_fake_packages $(INSTALLVENDORLIB)
+ 
+ rpm: update tar build commit
+ 
