@@ -1,0 +1,66 @@
+--- mod/Makefile.org	2004-07-07 20:49:59.000000000 +0200
++++ mod/Makefile	2004-07-07 20:53:58.000000000 +0200
+@@ -42,7 +42,8 @@
+ 
+ CFLAGS = -c -D__KERNEL__ -DMODULE 
+ 
+-KVER = $(shell uname -r | sed 's/\(.\..\).*/\1/')
++KVER = $(shell readlink /usr/src/linux|sed -e "s:.*linux-\([0-9]\+\.[0-9]\+\)\..*:\1:")
++KNAME = $(shell readlink /usr/src/linux|sed "s:linux-::")
+ 
+ OBJS = bc_dev22.o
+ KEXT = o
+@@ -66,7 +67,7 @@
+ #	Linux 2.4.x 
+ #######################################################################
+ ifeq ($(KVER), 2.4)
+-KERNEL_DIR = /lib/modules/$(shell uname -r)/build
++KERNEL_DIR = /lib/modules/$(KNAME)/build
+ OBJS = bc_dev24.o
+ SYMSRC = bc_dev24.c
+ CFLAGS += $(shell $(CC) -I$(KERNEL_DIR)/include/ -c test_nice.c -o /dev/null 2>/dev/null && echo "-D_NICE_PRESENT_")
+@@ -84,7 +85,7 @@
+ #	Linux 2.6.x 
+ #######################################################################
+ ifeq ($(KVER), 2.6)
+-KERNEL_DIR = /lib/modules/$(shell uname -r)/build
++KERNEL_DIR = /lib/modules/$(KNAME)/build
+ OBJS = bc_dev26.o
+ CFLAGS += -I$(KERNEL_DIR)/include/asm/mach-default/ -DKBUILD_BASENAME=BestCrypt
+ CFLAGS += $(shell $(CC) -I$(KERNEL_DIR)/include/ -I$(KERNEL_DIR)/include/asm/mach-default/ -c test_blkdev_put.c -o /dev/null 2>/dev/null && echo "-D_BLKDEV_2_")
+@@ -95,14 +96,6 @@
+ 
+ CFLAGS += -I$(CUR_DIR)/../include/ -I$(KERNEL_DIR)/include/
+ 
+-ifeq ($(ARCH), alpha)
+-CFLAGS += -O2 -pipe -fno-strict-aliasing -fno-common -mno-fp-regs -ffixed-8 -mcpu=ev5
+-else
+-ifeq ($(ARCH), x86_64)
+-CFLAGS += -O2 -fno-strength-reduce -fno-strict-aliasing -mcmodel=kernel
+-else
+-CFLAGS += -O6 -fno-strength-reduce -fno-strict-aliasing 
+-endif
+-endif
++CFLAGS += $(EXTRA_CFLAGS)
+ 
+ LDFLAGS = -d -r
+--- src/Makefile.org	2004-07-07 20:54:07.000000000 +0200
++++ src/Makefile	2004-07-07 20:54:24.000000000 +0200
+@@ -24,6 +24,7 @@
+ CFLAGS += -L../lib -I../include/ 
+ CFLAGS += -Wall -O2 -fno-strict-aliasing
+ #CFLAGS += -g -static -O6
++CFLAGS += $(EXTRA_CFLAGS)
+ LDFLAGS =
+ 
+ TARGETS = bctool
+--- kgsha/Makefile.org	2004-07-07 20:54:34.000000000 +0200
++++ kgsha/Makefile	2004-07-07 20:54:50.000000000 +0200
+@@ -20,6 +20,7 @@
+ 
+ CPP=g++
+ CPPFLAGS = -Wall -Werror -fno-strength-reduce -I../include -g 
++CPPFLAGS += $(EXTRA_CXXFLAGS)
+ 
+ TARGET = libkgsha.a
+ HEADERS = kg_defs.h kgsha.h kblock.h sha1.h random.h
