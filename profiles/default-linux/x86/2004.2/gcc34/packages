@@ -31,15 +31,14 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
-*>=sys-apps/baselayout-1.9.4-r3
-*>=sys-apps/portage-2.0.50-r8
-*>=sys-devel/binutils-2.14.90.0.8-r1
-*>=sys-devel/gcc-3.3.3
-*>=sys-libs/glibc-2.3.4.20040605
+>=sys-apps/baselayout-1.9.4-r3
+>=sys-apps/portage-2.0.50-r8
+>=sys-devel/binutils-2.14.90.0.8-r1
+>=sys-devel/gcc-3.3.3
+>=sys-libs/glibc-2.3.4.20040605
 
-*>=sys-apps/texinfo-4.6
-*>=sys-devel/autoconf-2.59-r4
-*>=sys-devel/automake-1.8.3
-*>=sys-devel/libtool-1.4.3-r4
-*>=sys-libs/ncurses-5.2.20020112a
-*>=sys-libs/pam-0.77
+>=sys-apps/texinfo-4.6
+>=sys-devel/autoconf-2.59-r4
+>=sys-devel/automake-1.8.3
+>=sys-libs/ncurses-5.2.20020112a
+>=sys-libs/pam-0.77
