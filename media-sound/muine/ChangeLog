@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.5 2004/10/26 21:54:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.6 2004/12/02 00:07:45 latexer Exp $
 
-  26 Oct 2004; <peter@gentoo.org> muine-0.6.3.ebuild:
+*muine-0.6.3-r1 (01 Dec 2004)
+
+  01 Dec 2004; Peter Johanson <latexer@gentoo.org> +muine-0.6.3-r1.ebuild:
+  Revision bump with new split up gtk-sharp deps.
+
+  26 Oct 2004; Peter Johanson <latexer@gentoo.org> muine-0.6.3.ebuild:
   Move gtk-sharp dep from x11-libs -> dev-dotnet
 
   12 Jul 2004; Peter Johanson <latexer@gentoo.org> muine-0.6.3.ebuild:
