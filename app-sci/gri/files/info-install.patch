@@ -1,0 +1,11 @@
+--- doc/Makefile	2003-05-20 21:15:56.000000000 +0200
++++ doc/Makefile.new	2003-11-18 07:42:47.000000000 +0100
+@@ -124,7 +124,7 @@
+ info-install:
+ 	$(INSTALL) -d $(INFO_DIR)
+ 	cp gri.info* $(INFO_DIR)
+-	(cd $(INFO_DIR) ; gzip -f --best gri.info gri.info-[0-9] gri.info-[0-9][0-9])
++	(cd $(INFO_DIR) ; gzip -f --best gri.info gri.info-*)
+ 	chmod 644 $(INFO_DIR)/gri.info*
+ 
+ info-install-solaris:
