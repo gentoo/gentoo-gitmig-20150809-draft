@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.7 2005/01/15 14:11:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.8 2005/01/23 23:32:59 dams Exp $
+
+*profuse-0.15 (24 Jan 2005)
+
+  24 Jan 2005; <dams@gentoo.org> +profuse-0.15.ebuild:
+  new features, uses new libconf
 
   15 Jan 2005; Markus Rothe <corsair@gentoo.org> profuse-0.14.ebuild:
   Added ~ppc64 to KEYWORDS
