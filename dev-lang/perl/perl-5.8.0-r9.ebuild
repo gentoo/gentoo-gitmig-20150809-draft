@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r9.ebuild,v 1.4 2003/05/27 19:03:08 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r9.ebuild,v 1.5 2003/06/18 20:28:51 vapier Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,16 +52,12 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-
-IUSE="berkdb gdbm threads"
-
 inherit eutils flag-o-matic 
 
 # Perl has problems compiling with -Os in your flags
 replace-flags "-Os" "-O2"
 # This flag makes compiling crash in interesting ways
-filter-flags "-malign-double"
-
+filter-flags -malign-double
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -71,7 +67,7 @@ MY_P="${P/lib}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz"
-HOMEPAGE="http://www.perl.org" 
+HOMEPAGE="http://www.perl.org/"
 
 if [ "${PN}" = "libperl" ]
 then
@@ -84,6 +80,7 @@ LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 
 LICENSE="Artistic GPL-2"
 KEYWORDS="x86 sparc ~ppc alpha ~mips hppa arm"
+IUSE="berkdb gdbm threads"
 
 DEPEND="sys-apps/groff
 	berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 )

@@ -1,15 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r11.ebuild,v 1.2 2003/06/04 21:53:00 rac Exp $
-
-IUSE="berkdb doc gdbm threads"
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r11.ebuild,v 1.3 2003/06/18 20:28:51 vapier Exp $
 
 inherit eutils flag-o-matic 
 
 # Perl has problems compiling with -Os in your flags
 replace-flags "-Os" "-O2"
 # This flag makes compiling crash in interesting ways
-filter-flags "-malign-double"
+filter-flags -malign-double
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -23,17 +21,18 @@ SAFE_VERSION="2.09"
 SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz
 	ftp://ftp.perl.org/pub/CPAN/modules/by-module/DB_File/DB_File-${DB_FILE_VERSION}.tar.gz
 	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Safe/Safe-${SAFE_VERSION}.tar.gz"
+HOMEPAGE="http://www.perl.org/"
 SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~mips ~hppa"
+IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.45-r5
 	=sys-devel/libperl-${PV}*"
-
 RDEPEND="berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 

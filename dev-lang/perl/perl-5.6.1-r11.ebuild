@@ -1,26 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r11.ebuild,v 1.6 2003/05/31 11:19:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r11.ebuild,v 1.7 2003/06/18 20:28:51 vapier Exp $
 
-IUSE="berkdb gdbm"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${P}.tar.gz"
-HOMEPAGE="http://www.perl.org"
+HOMEPAGE="http://www.perl.org/"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc ~sparc ~alpha mips ~hppa"
+IUSE="berkdb gdbm"
 
 RDEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-libs/db-3.2.3h-r3
 	=sys-libs/db-1.85-r1"
-
 DEPEND="sys-apps/groff
 	>=sys-apps/portage-2.0.45-r5
 	${RDEPEND}"
-		
 
 PDEPEND=">=dev-perl/ExtUtils-MakeMaker-6.05-r4
 	>=dev-perl/Safe-2.09"
