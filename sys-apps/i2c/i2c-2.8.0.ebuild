@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.4 2003/09/08 08:02:45 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.5 2003/09/08 11:32:47 msterret Exp $
 
 # plasmaroo@plasmaroo.squirrelserver.co.uk, datestamp Tue Aug 12, 11:11 PM
 
@@ -21,26 +21,26 @@ src_compile ()  {
 	einfo
 	einfo "This ebuild assumes your *current* kernel is >=2.4.9 && < 2.5+ "
 	einfo
-        einfo "For 2.5+ series kernels, use the support already in the kernel"
-        einfo "under 'Character devices' -> 'I2C support'."
+	einfo "For 2.5+ series kernels, use the support already in the kernel"
+	einfo "under 'Character devices' -> 'I2C support'."
 	einfo
-        einfo "To cross-compile, 'export LINUX=\"/lib/modules/<version>/build\"'"
-        einfo "or symlink /usr/src/linux to another kernel."
+	einfo "To cross-compile, 'export LINUX=\"/lib/modules/<version>/build\"'"
+	einfo "or symlink /usr/src/linux to another kernel."
 	einfo
 	einfo "*****************************************************************"
 	echo
 
-        eerror "*****************************************************************"
-        eerror
-        eerror "WARNING: This i2c support is not recommended for things such as "
+	eerror "*****************************************************************"
+	eerror
+	eerror "WARNING: This i2c support is not recommended for things such as "
 	eerror "WARNING: BTTV"
 	eerror
-        eerror "*****************************************************************"
+	eerror "*****************************************************************"
 	eerror
 	eerror "http://www2.lm-sensors.nu/~lm78/cvs/browse.cgi/lm_sensors2/README"
 	eerror
 	eerror "35 ADDITIONALLY, i2c-2.8.0 is not API compatible to earlier i2c"
-   	eerror "36 releases due to struct changes; therefore you must NOT ENABLE"
+	eerror "36 releases due to struct changes; therefore you must NOT ENABLE"
 	eerror "37 any other i2c drivers (e.g. bttv) in the kernel."
 	eerror "38 Do NOT use lm-sensors 2.8.0 or i2c-2.8.0 if you require bttv."
 	eerror
@@ -49,33 +49,33 @@ src_compile ()  {
 	eerror "nor the lm_sensors team nor the package maintainers will be able"
 	eerror "to support you if you encounter problems with I2C when using"
 	eerror "other modules with requirements on I2C..."
-        eerror
-        eerror "*****************************************************************"
-        echo
+	eerror
+	eerror "*****************************************************************"
+	echo
 	sleep 10
 
-        if [ "$LINUX" != "" ]; then
-                einfo "Cross-compiling using:- $LINUX"
-                einfo "Using headers from:- `echo $LINUX/include/linux | sed 's/\/\//\//'`"
-                LINUX=`echo $LINUX | sed 's/build\//build/'`
-        else
-                einfo "You are running:- `uname -r`"
-                check_KV || die "Cannot find kernel in /usr/src/linux"
-                einfo "Using kernel in /usr/src/linux/:- ${KV}"
+	if [ "$LINUX" != "" ]; then
+		einfo "Cross-compiling using:- $LINUX"
+		einfo "Using headers from:- `echo $LINUX/include/linux | sed 's/\/\//\//'`"
+		LINUX=`echo $LINUX | sed 's/build\//build/'`
+	else
+		einfo "You are running:- `uname -r`"
+		check_KV || die "Cannot find kernel in /usr/src/linux"
+		einfo "Using kernel in /usr/src/linux/:- ${KV}"
 
-                echo ${KV} | grep 2.4. > /dev/null
-                if [ $? == 1 ]; then
-                        eerror "Kernel version in /usr/src/linux is not 2.4.x"
-                        eerror "Please specify a 2.4.x kernel!"
-                        die "Incompatible Kernel"
-                else
-                        LINUX='/usr/src/linux'
-                fi
+		echo ${KV} | grep 2.4. > /dev/null
+		if [ $? == 1 ]; then
+			eerror "Kernel version in /usr/src/linux is not 2.4.x"
+			eerror "Please specify a 2.4.x kernel!"
+			die "Incompatible Kernel"
+		else
+			LINUX='/usr/src/linux'
+		fi
 
-                if [ "${KV}" != "`uname -r`" ]; then
-                        ewarn "WARNING:- kernels do not match!"
-                fi
-        fi
+		if [ "${KV}" != "`uname -r`" ]; then
+			ewarn "WARNING:- kernels do not match!"
+		fi
+	fi
 
 	echo
 	sleep 2
