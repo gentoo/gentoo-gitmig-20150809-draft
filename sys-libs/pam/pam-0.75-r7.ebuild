@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.2 2002/07/30 23:48:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.3 2002/08/05 18:52:16 azarah Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -44,8 +44,13 @@ src_unpack() {
 	# used as argument to module.  This should resolve bug #5686.
 	#
 	# Martin Schlemmer <azarah@gentoo.org> (31 Jul 2002)
-	#
 	patch -p1 < ${FILESDIR}/${P}-pam_wheel-segfault.patch || die
+
+	# Fixes the config file location of pam_group.so.  This
+	# resolves bug #6010.
+	#
+	# Martin Schlemmer <azarah@gentoo.org> (05 Aug 2002)
+	patch -p1 < ${FILESDIR}/${P}-pam_group-confile.patch || die
 
 	export WANT_AUTOCONF_2_5=1
 	autoconf

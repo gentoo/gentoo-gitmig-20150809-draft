@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.9 2002/07/30 23:48:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.10 2002/08/05 18:52:16 azarah Exp $
+
+  05 Aug 2002; M.Schlemmer <azarah@gentoo.org> ${P}-pam_group-confile.patch :
+  Fixes the config file location of pam_group.so.  This resolves bug #6010.
 
   31 Jul 2002; M.Schlemmer <azarah@gentoo.org> ${P}-pam_wheel-segfault.patch :
   Fix a segfault in pam_wheel.so if "use_uid" was not given as parameter.
