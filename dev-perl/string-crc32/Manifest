@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 956517078a168c7026b62d6ee943b1e1 ChangeLog 974
+MD5 807896a5846e1f54927b344532f9a29c string-crc32-1.2.ebuild 627
+MD5 8eeb68f94019e5c9bbb6de852ac82e51 ChangeLog 1070
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e2dcdd309215a71187dbe9075c7a3975 string-crc32-1.2.ebuild 631
 MD5 a13bf17cbfe594af4f6a1111c4df169e files/digest-string-crc32-1.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB5oKqKRy60XGEcJIRAqUnAJ9/KK6iYJHKuL5HtZ1jwuwl+hRz7gCfT8y8
-tlSXq5lMVRpeiMHfWQBSi5E=
-=eSWU
------END PGP SIGNATURE-----
