@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.10 2005/01/21 20:54:12 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.11 2005/01/25 13:26:42 genstef Exp $
+
+*fuse-2.2_pre5 (25 Jan 2005)
+
+  25 Jan 2005; Stefan Schweizer <genstef@gentoo.org> -fuse-2.2_pre3.ebuild,
+  +fuse-2.2_pre5.ebuild:
+  Version bump
 
   21 Jan 2005; Lars Weiler <pylon@gentoo.org> fuse-1.4.ebuild:
   Added ~ppc.
