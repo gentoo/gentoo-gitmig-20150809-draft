@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.2 2004/04/19 08:55:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.3 2004/04/27 19:10:21 agriffis Exp $
 
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Ked Password Manager helps to manage large amounts of passwords and related information."
 HOMEPAGE="http://kedpm.sourceforge.net/"

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.21 2004/04/23 16:28:44 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.22 2004/04/27 19:11:09 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> webalizer-2.01.10-r5.ebuild:
+  Add inherit eutils
 
 *webalizer-2.01.10-r5 (23 Apr 2004)
 
