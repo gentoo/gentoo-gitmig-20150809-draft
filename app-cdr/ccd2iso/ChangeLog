@@ -1,0 +1,8 @@
+# ChangeLog for app-cdr/ccd2iso
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.1 2004/02/12 02:08:35 vapier Exp $
+
+*ccd2iso-0.1 (11 Feb 2004)
+
+  11 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Graeme Humphries #36114.
