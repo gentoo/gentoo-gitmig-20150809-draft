@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.29 2003/08/21 04:46:00 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.30 2003/08/24 18:14:58 obz Exp $
+
+  25 Aug 2003; Mike Gardiner <obz@gentoo.org> libgnome-2.2.3.ebuild:
+  Moved to stable on x86
 
   21 Aug 2003; Mike Gardiner <obz@gentoo.org> libgnome-2.2.2.ebuild,
   libgnome-2.2.3.ebuild:
