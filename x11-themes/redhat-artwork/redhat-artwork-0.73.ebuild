@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.8 2004/01/26 01:14:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.9 2004/01/30 07:33:09 drobbins Exp $
 
 RH_EXTRAVERSION="1"
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ~ppc ~alpha"
 IUSE="kde gtk xmms gtk2"
 
 # Needed to build...
-DEPEND="sys-devel/autoconf
+DEPEND=">=sys-devel/autoconf-2.58
 	sys-devel/automake
 	>=x11-libs/gtk+-2.0
 	gtk? (  >=media-libs/gdk-pixbuf-0.2.5
