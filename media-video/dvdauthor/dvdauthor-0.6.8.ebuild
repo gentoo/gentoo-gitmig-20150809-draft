@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.8.ebuild,v 1.2 2004/01/03 23:15:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.8.ebuild,v 1.3 2004/01/22 22:14:51 avenj Exp $
 
 DESCRIPTION="Tools for generating DVD files to be played on standalone DVD players"
 HOMEPAGE="http://sourceforge.net/projects/dvdauthor/"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 IUSE="png zlib"
 
 DEPEND="media-libs/libdvdread
