@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.1 2003/04/22 09:15:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.2 2003/07/16 11:37:25 joker Exp $
 
 IUSE=""
 DESCRIPTION="Advanced Qt based front end to mysql"
@@ -8,7 +8,7 @@ SRC_URI="http://sql.kldp.org/snapshots/source/${P}.tar.gz"
 HOMEPAGE="http://sql.kldp.org/mysql"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND=">=dev-db/mysql-3.23.49
 		>=x11-libs/qt-3.0.3"
