@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.6 2002/02/06 13:48:46 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.7 2002/02/06 20:29:55 gbevin Exp $
+
+*portage-1.8.9_pre5 (6 Feb 2002)
+
+  6 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre5.ebuild,
+  files/digest-portage-1.8.9_pre5, files/portage-1.8.9_pre5.tar.bz2 :
+  
+  - unmerging didn't work right when packages had the same slot, but different
+    versions, this is now fixed
+  - ebuild qmerge wasn't updated for the new slots behaviour
+  - proxy configuration moved from make.globals to make.conf
 
 *portage-1.8.9_pre4 (6 Feb 2002)
 
