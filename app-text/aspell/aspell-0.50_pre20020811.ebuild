@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50_pre20020811.ebuild,v 1.2 2002/08/14 13:04:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50_pre20020811.ebuild,v 1.3 2002/08/14 17:02:41 seemant Exp $
 
-#inherit libtool
+inherit libtool
 
 MY_P=${P/_pre/-}
 S=${WORKDIR}/${MY_P}
@@ -37,7 +37,7 @@ if [ -e /lib/libc-2.2.5.so ] && [ `gcc -dumpversion` == "2.95.3" ]; then
 fi
 
 src_compile() {
-#	elibtoolize
+	elibtoolize
 
 	econf \
 		--disable-static \
