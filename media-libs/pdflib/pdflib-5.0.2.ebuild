@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.7 2004/01/23 22:04:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.8 2004/01/24 00:49:29 seemant Exp $
 
 IUSE="tcltk perl python java"
+
 MY_PN=${PN/pdf/PDF}-Lite
 MY_P=${MY_PN}-${PV}-Unix-src
 S=${WORKDIR}/${MY_P}
@@ -61,8 +62,8 @@ src_install() {
 	# NB: do this *after* build, otherwise we will get linker problems.
 	# all we basically do here is modify the install path for Makefiles that
 	# need it.
-	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-		${S}/bind/pdflib/java/Makefile
+#	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
+#		${S}/bind/pdflib/java/Makefile
 
 	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
 		${S}/bind/pdflib/perl/Makefile
@@ -94,20 +95,24 @@ src_install() {
 
 	dodoc readme.txt doc/*
 
+	# seemant: seems like the makefiles for pdflib generate and install the
+	# .jar file into /usr/share/pdflib/lib anyway
+
+
 	# karltk: This is definitely NOT how it should be done!
 	# we need this to create pdflib.jar (we will not have the source when
 	# this is a binary package ...)
-	if [ "`use java`" ]
-	then
-		insinto /usr/share/pdflib
-		doins ${S}/bind/java/pdflib.java
-
-		mkdir -p com/pdflib
-		mv ${S}/bind/java/pdflib.java com/pdflib
-		javac com/pdflib/pdflib.java
-
-		jar cf pdflib.jar com/pdflib/*.class
-
-		dojar pdflib.jar
-	fi
+#	if [ "`use java`" ]
+#	then
+#		insinto /usr/share/pdflib
+#		doins ${S}/bind/pdflib/java/pdflib.java
+#
+#		mkdir -p com/pdflib
+#		mv ${S}/bind/pdflib/java/pdflib.java com/pdflib
+#		javac com/pdflib/pdflib.java
+#
+#		jar cf pdflib.jar com/pdflib/*.class
+#
+#		dojar pdflib.jar
+#	fi
 }
