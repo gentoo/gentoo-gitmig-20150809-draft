@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.1.90.ebuild,v 1.1 2004/10/04 18:41:03 bcowan Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.1.90.ebuild,v 1.2 2004/10/05 01:32:20 bcowan Exp $
 
 IUSE=""
 DESCRIPTION="Xfce 4 application finder"

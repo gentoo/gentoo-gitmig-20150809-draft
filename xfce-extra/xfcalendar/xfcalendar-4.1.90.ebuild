@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/xfcalendar-4.1.90.ebuild,v 1.2 2004/10/05 01:32:20 bcowan Exp $
 
 IUSE=""
 DESCRIPTION="Xfce4 calendar"
@@ -15,13 +15,13 @@ RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2.2*
 	dev-libs/libxml2
 	>=dev-libs/dbh-1.0.20
-	=xfce-base/libxfce4util-4.1.90                                          
-        =xfce-base/libxfcegui4-4.1.90                                           
-        =xfce-base/libxfce4mcs-4.1.90                                           
-        =xfce-base/xfce-mcs-manager-4.1.90"
-DEPEND="${RDEPEND}                                                              
-        dev-util/pkgconfig
-	!<xfce-extra/xfcalendar-4.1.90"	
+	=xfce-base/libxfce4util-4.1.90
+	=xfce-base/libxfcegui4-4.1.90
+	=xfce-base/libxfce4mcs-4.1.90
+	=xfce-base/xfce-mcs-manager-4.1.90"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	!<xfce-extra/xfcalendar-4.1.90"
 
 src_install () {
 	make DESTDIR=${D} install || die
