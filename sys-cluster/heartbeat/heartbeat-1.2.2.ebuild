@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.2.ebuild,v 1.4 2004/08/25 15:11:21 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.2.ebuild,v 1.5 2004/09/03 15:24:45 dholm Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -8,7 +8,7 @@ SRC_URI="http://www.linux-ha.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -mips"
+KEYWORDS="x86 -mips ~ppc"
 IUSE="ldirectord"
 
 DEPEND="dev-libs/popt
