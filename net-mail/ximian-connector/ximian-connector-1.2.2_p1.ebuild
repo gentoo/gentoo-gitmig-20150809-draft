@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.5 2003/09/24 15:47:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.6 2003/11/20 11:28:59 liquidx Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
@@ -18,8 +18,6 @@ if [ `use ppc` ]; then
 elif [ `use x86` ]; then
 	XIMIAN_DIST="redhat-73-i386"
 	XIMIAN_ARCH="i386"
-else
-	die "Unsupported ARCH: ${ARCH}"
 fi
 
 # make the ximian rev from the package version
