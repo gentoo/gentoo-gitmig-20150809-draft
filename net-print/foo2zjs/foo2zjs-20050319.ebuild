@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20041030.ebuild,v 1.3 2005/02/02 20:25:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20050319.ebuild,v 1.1 2005/04/05 19:26:10 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,9 +9,7 @@ HOMEPAGE="http://foo2zjs.rkkda.com/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
 		ftp://ftp.minolta-qms.com/pub/crc/out_going/win/m23dlicc.exe
 		ftp://ftp.minolta-qms.com/pub/crc/out_going/win2000/m22dlicc.exe
-		ftp://ftp.minolta-qms.com/pub/crc/out_going/windows/cpplxp.exe
-		ftp://192.151.53.86/pub/softlib/software2/COL2222/lj-10067-2/lj1005hostbased-en.exe
-		ftp://ftp.hp.com/pub/softlib/software1/lj1488/lj-1145-2/lj1488en.exe"
+		ftp://ftp.minolta-qms.com/pub/crc/out_going/windows/cpplxp.exe"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
@@ -42,6 +40,7 @@ src_compile() {
 
 	# remove wget as we got the firmware with portage
 	sed -si "s/.*wget.*//" getweb
+	sed -si "s/error \"Couldn't dow.*//" getweb
 	# unpack files
 	./getweb all
 
@@ -49,14 +48,15 @@ src_compile() {
 }
 
 src_install() {
-	use foomaticdb && dodir /usr/share/foomatic/db/source
+	useq foomaticdb && dodir /usr/share/foomatic/db/source
 
-	use cups && dodir /usr/share/cups/model
+	useq cups && dodir /usr/share/cups/model
 
 	make DESTDIR=${D} install \
 		|| die "make install failed"
 
-	use usb && \
-		( make DESTDIR=${D} install-hotplug \
-		|| die "make install-hotplug failed" )
+	if useq usb; then
+		make DESTDIR=${D} install-hotplug \
+			|| die "make install-hotplug failed"
+	fi
 }

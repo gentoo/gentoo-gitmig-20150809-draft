@@ -1,6 +1,15 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.3 2005/02/02 20:25:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.4 2005/04/05 19:26:10 genstef Exp $
+
+*foo2zjs-20050319 (05 Apr 2005)
+
+  05 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
+  -foo2zjs-20041030.ebuild, +foo2zjs-20050319.ebuild:
+  Version bump and removing old version because of digest failure thanks to
+  psk31 in the forums, Markus Rothe <corsair@gentoo.org> and Erik Reimann for
+  testing and thanks to Seth Robertson <in-gentoo@baka.org> for reporting in
+  bug 87351
 
   02 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
   foo2zjs-20041030.ebuild:
