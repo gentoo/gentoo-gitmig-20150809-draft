@@ -1,4 +1,16 @@
-MD5 5fc470193406a24803add01d41203fb8 ChangeLog 991
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ce5ca2afae8763f7dc1659256906a59b ChangeLog 1170
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 f87b92918737d93dd93865113fa02ad8 phpdbg-2.11.23.ebuild 1254
+MD5 1e30bc6634db4b020ea9a4730efc0dcb phpdbg-2.11.32.ebuild 1721
+MD5 a7127b29ed7cd9d86717992fbea663d1 phpdbg-2.11.23.ebuild 1258
 MD5 a56cc9f2eaa32b6e4b0ed1a2dca2dbc3 files/digest-phpdbg-2.11.23 66
+MD5 4f8b7e495c942a2fc4eb4722d0b2382d files/digest-phpdbg-2.11.32 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCF1XraGfFFLhbXWkRAl6EAJ9t16+H/nzdOTvORlPyGUuZr5nLDgCfWTin
+onXWIK9pDYXa7/CPlPeZj4M=
+=7zha
+-----END PGP SIGNATURE-----

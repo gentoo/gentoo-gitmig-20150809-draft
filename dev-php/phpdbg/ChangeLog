@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/phpdbg
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/ChangeLog,v 1.10 2004/12/18 11:46:39 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/ChangeLog,v 1.11 2005/02/19 15:04:20 sebastian Exp $
+
+*phpdbg-2.11.32 (19 Feb 2005)
+
+  19 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +phpdbg-2.11.32.ebuild:
+  Version bump, closes bug 56138, bug 64697, and bug 80163.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> phpdbg-2.11.23.ebuild:
   added ~amd64
