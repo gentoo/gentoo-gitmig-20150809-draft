@@ -1,6 +1,16 @@
-MD5 cec85eefeef0b1e0872fc4805aa106ea mlterm-2.8.1_pre20040815.ebuild 1310
-MD5 10094768814e22c50baec8b027413300 mlterm-2.8.0_p1-r1.ebuild 1808
-MD5 1a3b7daf263d4ccd47611e3362186661 ChangeLog 4679
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad75773b64b17c855e9bb2cb452d3312 ChangeLog 4834
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 bcce042e55144a325d68f0f04cfdec9e files/digest-mlterm-2.8.1_pre20040815 68
+MD5 4a2a23628e3135e263aa013620cf21a5 mlterm-2.9.0.ebuild 1426
+MD5 10094768814e22c50baec8b027413300 mlterm-2.8.0_p1-r1.ebuild 1808
+MD5 b64ecd6cd796a58c304b54be81f444f6 files/digest-mlterm-2.9.0 65
 MD5 a0803ba46dc61092ab4aed1119efee8c files/digest-mlterm-2.8.0_p1-r1 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBe9L2VWNWqTUmv+0RArGUAKCxZFNI9hwMDTol//yF5m1h/f+IgQCfXDnE
+8Ar5WsWU78p6LyQXonN+vsI=
+=NmI9
+-----END PGP SIGNATURE-----
