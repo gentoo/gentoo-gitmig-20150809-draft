@@ -1,0 +1,83 @@
+Common subdirectories: sloccount-2.22/debian and sloccount-2.22-gentoo/debian
+diff -u sloccount-2.22/makefile sloccount-2.22-gentoo/makefile
+--- sloccount-2.22/makefile	2003-03-09 04:27:50.000000000 +1300
++++ sloccount-2.22-gentoo/makefile	2003-03-27 21:20:37.000000000 +1200
+@@ -52,6 +52,7 @@
+ ARCH=i386
+ VERSIONEDNAME=$(NAME)-$(VERSION)
+ INSTALL_DIR=$(PREFIX)/bin
++LIBEXEC_DIR=$(PREFIX)/libexec/$(NAME)
+ MAN_DIR=$(PREFIX)/share/man
+ MAN_DIR_MAN1=$(MAN_DIR)/man1
+ DOC_DIR=$(PREFIX)/share/doc/$(VERSIONEDNAME)-$(RPM_VERSION)
+@@ -97,11 +98,12 @@
+    sed_count \
+    sh_count \
+    show_filecount \
+-   sloccount \
+    sql_count \
+    tcl_count \
+    $(COMPILED_EXECUTABLES)
+ 
++MAIN_EXECUTABLE=sloccount
++
+ MANPAGES=sloccount.1.gz
+ 
+ MYDOCS=sloccount.html README TODO ChangeLog
+@@ -144,14 +146,26 @@
+ c_lines: C_LINES.C
+ 	$(CC) C_LINES.C -o c_lines$(EXE_SUFFIX)
+ 
++install_prefix:
++	mkdir -p $(PREFIX)
+ 
+-install_programs: all
+-	$(INSTALL) $(EXECUTABLES) $(INSTALL_DIR)
+-
+-uninstall_programs:
+-	cd $(INSTALL_DIR) && rm -f $(EXECUTABLES)
++install_program:
++	mkdir -p $(INSTALL_DIR)
++	$(INSTALL) $(MAIN_EXECUTABLE) $(INSTALL_DIR)
++
++uninstall_program:
++	cd $(INSTALL_DIR) && rm -f $(MAIN_EXECUTABLE)
++
++install_libexec: all
++	mkdir -p $(LIBEXEC_DIR)
++	$(INSTALL) $(EXECUTABLES) $(LIBEXEC_DIR)
++
++uninstall_libexec:
++	cd $(LIBEXEC_DIR) && rm -f $(EXECUTABLES)
++	rmdir $(LIBEXEC_DIR)
+ 
+ install_man:
++	mkdir -p $(LIBEXEC_DIR)
+ 	$(INSTALL_A_DIR) $(MAN_DIR_MAN1)
+ 	$(INSTALL) $(MANPAGES) $(MAN_DIR_MAN1)
+ 
+@@ -166,9 +180,9 @@
+ 	rm -fr $(DOC_DIR)
+ 
+ 
+-install: install_programs install_man install_docs
++install: install_prefix install_program install_libexec install_man install_docs
+ 
+-uninstall: uninstall_programs uninstall_docs uninstall_man
++uninstall: uninstall_program uninstall_libexec uninstall_docs uninstall_man
+ 
+ 
+ clean:
+diff -u sloccount-2.22/sloccount sloccount-2.22-gentoo/sloccount
+--- sloccount-2.22/sloccount	2002-12-05 02:57:46.000000000 +1300
++++ sloccount-2.22-gentoo/sloccount	2003-03-27 21:20:34.000000000 +1200
+@@ -18,6 +18,8 @@
+ 
+ startingdir=`pwd`
+ 
++libexec_dir=/usr/libexec/sloccount
++export PATH=$PATH:$libexec_dir
+ 
+ # "datadir" is some suitable safe place for the data; here's the default:
+ datadir=${HOME}/.slocdata
+Common subdirectories: sloccount-2.22/testcode and sloccount-2.22-gentoo/testcode

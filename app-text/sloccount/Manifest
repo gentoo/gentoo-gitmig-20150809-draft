@@ -1,5 +1,4 @@
-MD5 36e1d7d5322195812d2ee4bc3227376e sloccount-2.22.ebuild 806
-MD5 fb1546e177e68cdab93b1e66f826fbf0 Changelog 467
-MD5 4b2878d050f25d2aedd1c34899791394 .sloccount-2.22.ebuild.swp 12288
+MD5 d62b109c32a0e87be78584aab9d3124c sloccount-2.22.ebuild 910
+MD5 03adddeb4bb98afcbcfddfce60ee14f2 Changelog 367
 MD5 2662f30ed5969d9f7cedd6b0addf196b files/sloccount-2.22-libexec.patch 2324
 MD5 f0620a7ad11d6c60a8098c7d253c434f files/digest-sloccount-2.22 66
