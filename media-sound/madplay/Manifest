@@ -2,8 +2,8 @@ MD5 fe53cf528073d58cab345d451752e819 ChangeLog 3032
 MD5 3d519658795b6efec48a545560a380e6 madplay-0.15.0b-r1.ebuild 1178
 MD5 836af24f8bc9de89d9fb11b3363729d7 madplay-0.15.0b.ebuild 1250
 MD5 011f1b696d87a745fa8285ec03c1996c madplay-0.15.1b.ebuild 1178
-MD5 08ef0a630e835780190fc83aa135ab90 madplay-0.15.2b.ebuild 1157
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 06e66eea44aa1c5c42ea5d7988dadd91 madplay-0.15.2b.ebuild 1154
 MD5 0fc07eafcb4326558f0a89f1ec6d7702 files/digest-madplay-0.15.0b 67
 MD5 0fc07eafcb4326558f0a89f1ec6d7702 files/digest-madplay-0.15.0b-r1 67
 MD5 8841a359fd11baf1be0358c2fbe136b7 files/digest-madplay-0.15.1b 67

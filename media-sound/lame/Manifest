@@ -2,8 +2,8 @@ MD5 7d19ac7ab92927b438baf334881f65aa ChangeLog 7227
 MD5 f908b88d67a5f3e359ced4dd865f43d4 lame-3.92.ebuild 1552
 MD5 5a99cc8dfb13e74eaefb4f258906dcfe lame-3.93.1-r1.ebuild 1610
 MD5 39f034d2b423e6992678f5ab64a99adb lame-3.96.1.ebuild 2163
-MD5 fab7c3b0b5e01e3c5a71f0372a370dc1 lame-3.96.ebuild 2172
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
+MD5 e54937108072f56ed05c217d2bacd887 lame-3.96.ebuild 2169
 MD5 2b1af4843f5ca4107de793b7a584db34 files/digest-lame-3.92 61
 MD5 aefad4480f6888fcee536e08205804b1 files/digest-lame-3.93.1-r1 64
 MD5 3b8e04486d3959e978f2466bdc621a59 files/digest-lame-3.96 62
