@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6bbefca7d1733abd03e3b86d25256df0 fwipsec-0.4.2-r1.ebuild 800
-MD5 08b7c46acf48bfca10cc25d61a22b091 ChangeLog 741
+MD5 e8430b47809a7443b064f116dbba0fc0 fwipsec-0.4.2-r1.ebuild 802
+MD5 aaeb7981d39e2883acf786e04cc6a878 ChangeLog 837
 MD5 6e74dc477ea12630b37ce9bfa549a137 metadata.xml 427
 MD5 d7fa6046a7b05c8c38efcd35b3b1b37a files/digest-fwipsec-0.4.2-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCB2eYntT9W3vfTuoRAvVtAKCYOEotGCtGBTncG+2+egL71rJz9wCeMEaV
-h96/B4IPwwerQRNX0SNrRGI=
-=/u3G
------END PGP SIGNATURE-----
