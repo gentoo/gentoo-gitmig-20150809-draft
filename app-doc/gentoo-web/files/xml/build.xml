@@ -278,6 +278,10 @@ sure that the build variables <c>CHOST</c>, <c>CFLAGS</c>, and <c>CXXFLAGS</c>
 are set correctly for your system's architecture.  Also, you should edit the
 list of <c>USE</c> flags that you wish to use.
 </p>
+<note>
+Portage by default uses <c>${ROOT}/tmp</c> during package building, often using several hundred megabytes of temporary storage. If you would like to change where Portage stores these temporary files, set a new PORTAGE_TMPDIR in your <path>/etc/make.conf</path> pointing it to the directory
+of your choice, or simply set the same variable in your current environment by typing <c>export PORTAGE_TMPDIR="/path/to/new/tmp"</c>.
+</note>
 <p>
 To start the bootstrap the <c>bootstrap.sh</c> script requires a list of
 packages to use; it should generally be reasonable to use the most recent
