@@ -767,9 +767,6 @@ dev-libs/libiconv
 # <bangert@gentoo.org> 26 Apr 2oo2
 <app-admin/sudo-1.6.6
 
-# Fails to compile... <Verwilst, 6 april 2002>
-=dev-libs/pwlib-1.2.13
-
 #/bin/login from shadow had a root exploit when
 #pam_limits was in use.  We now use /bin/login
 #from util-linux-2.11o which have this fixed.
