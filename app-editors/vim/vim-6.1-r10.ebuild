@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r10.ebuild,v 1.2 2002/08/14 18:36:03 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r10.ebuild,v 1.3 2002/08/16 17:49:07 rphillips Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -174,7 +174,7 @@ src_compile() {
 	./configure \
 		--prefix=/usr --mandir=/usr/share/man --host=$CHOST \
 		--with-features=huge --with-cscope $myconf \
-		--enable-gui=no --without-x \
+		--enable-gui=no \
 		|| die "vim configure failed"
 	# Parallel make does not work
 	make || die "vim make failed"
