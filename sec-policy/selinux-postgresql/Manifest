@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3cfbdafca09b9445aa7f1999b07f9300 ChangeLog 552
 MD5 169761c63f66d24015db4b712ba378b6 metadata.xml 513
 MD5 cb5e3e019cd90f1377339ffd95ac5c8f selinux-postgresql-20041002.ebuild 463
 MD5 44739fb8918954b341a5bf0ceda9d6aa selinux-postgresql-20041028.ebuild 463
+MD5 f8d04b5c31b9a372df34f3acac2e5e5f selinux-postgresql-20041120.ebuild 340
 MD5 f096309d0922d0b25c147fd0d2cbb73c files/digest-selinux-postgresql-20041002 78
 MD5 8ed1d6ee47ea4e879e130d6b68c88693 files/digest-selinux-postgresql-20041028 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBljL9GSBEIeh4AEYRAgpVAJ96ZJGhoyEpuMiyV2XklaWEDFAf3gCdGLi1
-+60F/yjra1I1B6slFbj0kLA=
-=uf8X
------END PGP SIGNATURE-----
+MD5 0fbca7c8e98902600683ed4eb2915c26 files/digest-selinux-postgresql-20041120 78
