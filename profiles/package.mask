@@ -816,3 +816,7 @@ app-arch/gnorpm
 # Masked because it doesnt work properly
 # and because I'm not inclined to break that many users systems. see bug #3065
 x11-libs/gdkxft
+
+# lostlogic@gentoo.org 06 Jun 2002
+# Masked because installs headers in wrong location
+=media-libs/id3lib-3.8.0_pre2-r2

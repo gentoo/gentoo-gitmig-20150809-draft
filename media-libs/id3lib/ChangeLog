@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.2 2002/05/05 10:56:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.3 2002/06/07 03:25:45 lostlogic Exp $
+
+*id3lib-3.8.0_pre2-r3 (6 Jun 2002)
+
+  6 Jun 2002; Brandon Low <lostlogic@lostlogicx.com> id3lib-3.8.0_pre2-r3.ebuild :
+
+  Fix installation locations, and CPPFLAG specifications, neaten ebuild, fixes issue
+  with grip not finding id3.h
 
 *id3lib-3.8.0_pre2-r1 (5 May 2002)
 
