@@ -1,6 +1,9 @@
 # ChangeLog for net-www/straw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.22 2004/03/30 00:18:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.23 2004/03/30 09:16:58 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> straw-0.22.1.ebuild:
+  Adding amd64 keyword. Closing #43595.
 
   30 Mar 2004; Lars Weiler <pylon@gentoo.org> straw-0.22.1.ebuild:
   stable on ppc
