@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/hfsutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.2 2004/04/27 04:36:12 weeve Exp $
+
+  26 Apr 2004; Jason Wever <weeve@gentoo.org> hfsutils-3.2.6-r3.ebuild:
+  Added ~sparc keyword to resolve bug #48564.
 
 *hfsutils-3.2.6 (15 Sep 2003)
 
