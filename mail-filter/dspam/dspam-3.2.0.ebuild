@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.0.ebuild,v 1.3 2004/10/28 14:40:36 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.0.ebuild,v 1.4 2004/11/04 16:33:44 st_lim Exp $
 
 inherit eutils
 
@@ -172,24 +172,27 @@ src_install () {
 	fi
 
 	# build some initial configuration data
-	if use cyrus; then
-		echo "UntrustedDeliveryAgent /usr/lib/cyrus/deliver %u" >> ${D}${HOMEDIR}/dspam.conf
-		sed -e 's:/usr/bin/procmail:/usr/lib/cyrus/deliver %u:g' \
-			-i ${D}${HOMEDIR}/dspam.conf
-	elif use exim; then
-		echo "UntrustedDeliveryAgent /usr/sbin/exim -oMr spam-scanned %u" >> ${D}${HOMEDIR}/dspam.conf
-		sed -e 's:/usr/bin/procmail:/usr/sbin/exim -oMr spam-scanned %u:g' \
-			-i ${D}${HOMEDIR}/dspam.conf
-	elif use maildrop; then
-		echo "UntrustedDeliveryAgent /usr/bin/maildrop -d %u" >> ${D}${HOMEDIR}/dspam.conf
-		sed -e 's:/usr/bin/procmail:/usr/bin/maildrop -d %u:g' \
-			-i ${D}${HOMEDIR}/dspam.conf
-	elif use procmail; then
-		echo "UntrustedDeliveryAgent /usr/bin/procmail" >> ${D}${HOMEDIR}/dspam.conf
-	else
-		echo "UntrustedDeliveryAgent /usr/sbin/sendmail" >> ${D}${HOMEDIR}/dspam.conf
-		sed -e 's:/usr/bin/procmail:/usr/sbin/sendmail:g' \
-			-i ${D}${HOMEDIR}/dspam.conf
+	[ -f ${HOMEDIR}/dspam.conf ] && cp ${HOMEDIR}/dspam.conf ${D}${HOMEDIR}/dspam.conf
+	if [ ! -f ${HOMEDIR}/dspam.conf ]; then
+		if use cyrus; then
+			echo "UntrustedDeliveryAgent /usr/lib/cyrus/deliver %u" >> ${D}${HOMEDIR}/dspam.conf
+			sed -e 's:/usr/bin/procmail:/usr/lib/cyrus/deliver %u:g' \
+				-i ${D}${HOMEDIR}/dspam.conf
+		elif use exim; then
+			echo "UntrustedDeliveryAgent /usr/sbin/exim -oMr spam-scanned %u" >> ${D}${HOMEDIR}/dspam.conf
+			sed -e 's:/usr/bin/procmail:/usr/sbin/exim -oMr spam-scanned %u:g' \
+				-i ${D}${HOMEDIR}/dspam.conf
+		elif use maildrop; then
+			echo "UntrustedDeliveryAgent /usr/bin/maildrop -d %u" >> ${D}${HOMEDIR}/dspam.conf
+			sed -e 's:/usr/bin/procmail:/usr/bin/maildrop -d %u:g' \
+				-i ${D}${HOMEDIR}/dspam.conf
+		elif use procmail; then
+			echo "UntrustedDeliveryAgent /usr/bin/procmail" >> ${D}${HOMEDIR}/dspam.conf
+		else
+			echo "UntrustedDeliveryAgent /usr/sbin/sendmail" >> ${D}${HOMEDIR}/dspam.conf
+			sed -e 's:/usr/bin/procmail:/usr/sbin/sendmail:g' \
+				-i ${D}${HOMEDIR}/dspam.conf
+		fi
 	fi
 
 	local PASSWORD="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
