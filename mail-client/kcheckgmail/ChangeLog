@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/kcheckgmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/ChangeLog,v 1.7 2005/01/29 00:27:09 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/ChangeLog,v 1.8 2005/02/22 10:59:52 blubb Exp $
+
+  22 Feb 2005; Simon Stelling <blubb@gentoo.org> kcheckgmail-0.5.3a.ebuild:
+  added ~amd64
 
 *kcheckgmail-0.5.3a (29 Jan 2005)
 
