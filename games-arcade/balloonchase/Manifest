@@ -1,4 +1,5 @@
-MD5 809821cfb0e561b6f9af76b123ed2fcc balloonchase-0.9.6.ebuild 1197
-MD5 49f2583cfb7747a666310a37f8a3537a ChangeLog 425
+MD5 1c5158360b30410d057a437409b18342 ChangeLog 587
+MD5 75effcf54bc52381303e441b7fc3a926 balloonchase-0.9.6.ebuild 909
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 27e80fdc216d610068fca431f7812acf files/digest-balloonchase-0.9.6 71
+MD5 5ca33dc731be2640e79337cbee6f5fc0 files/0.9.6-gentoo.patch 6297

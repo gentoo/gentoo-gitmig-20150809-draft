@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/balloonchase
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/balloonchase/ChangeLog,v 1.2 2004/06/24 22:01:44 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/balloonchase/ChangeLog,v 1.3 2005/03/18 01:48:42 mr_bones_ Exp $
+
+  17 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.9.6-gentoo.patch, balloonchase-0.9.6.ebuild:
+  fix bad directory reading for bug #85699; tidy
 
 *balloonchase-0.9.6 (07 Nov 2003)
 
