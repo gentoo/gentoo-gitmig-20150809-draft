@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b1a1da22884bfeded8fd4bf023f9fe63 ChangeLog 418
+MD5 a25bc82f23ed36bc5fa881adfee6a295 metadata.xml 224
+MD5 1e82d0ac0f13afcc782b85a4045c87a9 biosdisk-0.50.ebuild 732
+MD5 1a9f8e09103565280c74e359dff11d7b files/digest-biosdisk-0.50 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKB+DE67gNkjlZFIRAgqGAJ4mhUKNQA/q1H1J0Tq/QOm/9MG/wgCeKGe8
+wtkPG47k/HNdMyFU8kevkWg=
+=jYqt
+-----END PGP SIGNATURE-----
