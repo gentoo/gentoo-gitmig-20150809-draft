@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3511 2005/01/21 11:41:56 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3512 2005/01/21 14:38:12 nakano Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -939,11 +939,6 @@ net-www/netscape-communicator
 # <latexer@gentoo.org> (11 Aug 2004)
 # This is broken with recent mono releases. Waiting on a new upstream release
 dev-util/mono-debugger
-
-# <nakano@gentoo.org> (Aug 10 2004)
-# PostgreSQL-8* are still beta versions for testing purposes, 
-# probably very unstable.
-=dev-db/postgresql-8*
 
 # <mkennedy@gentoo.org> (8 Aug 2004)
 # won't build for now
