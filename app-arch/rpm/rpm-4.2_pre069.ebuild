@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.8 2004/03/12 10:49:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.9 2004/04/07 22:51:10 agriffis Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -21,7 +21,8 @@ RDEPEND="=sys-libs/db-3.2*
 	dev-libs/elfutils
 	nls? ( sys-devel/gettext )
 	python? ( =dev-lang/python-2.2* )
-	!sparc? ( doc? ( app-doc/doxygen ) )"
+	!sparc? ( doc? ( app-doc/doxygen ) )
+	!dev-libs/beecrypt"
 S=${WORKDIR}/rpm-4.2
 
 strip-flags

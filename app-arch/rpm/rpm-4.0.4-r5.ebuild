@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.10 2004/01/30 05:14:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.11 2004/04/07 22:51:10 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,7 +20,8 @@ RDEPEND="=sys-libs/db-3.2*
 	>=dev-libs/popt-1.6.3"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=sys-devel/autoconf-2.58"
+	>=sys-devel/autoconf-2.58
+	!dev-libs/beecrypt"
 
 src_unpack() {
 	unpack ${A}
