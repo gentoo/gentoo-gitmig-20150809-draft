@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/jfsutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.6 2003/11/20 12:54:19 cybersystem Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.7 2004/03/08 05:18:09 bcowan Exp $
+
+*jfsutils-1.1.5 (08 Mar 2004)
+
+  08 Mar 2004; Brad Cowan <bcowan@gentoo.org> jfsutils-1.1.5.ebuild:
+  Version bump including buffer overflow fix.
 
   20 Nov 2003; Sascha Schwabbauer <cybersystem@gentoo.org> jfsutils-1.1.4.ebuild:
   added ~ppc keyword
