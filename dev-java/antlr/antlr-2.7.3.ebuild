@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.3.ebuild,v 1.4 2004/06/27 16:25:04 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.3.ebuild,v 1.5 2004/07/14 01:37:26 agriffis Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jdk-1.2"
 SLOT="0"
 LICENSE="ANTLR"
 KEYWORDS="x86 ppc ~sparc amd64"
-IUSE="jikes"
+IUSE=""
 
 src_compile() {
 	econf || die
@@ -28,4 +28,3 @@ src_install () {
 	cd lib/cpp
 	make DESTDIR=$D install
 }
-
