@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta12.ebuild,v 1.2 2003/07/12 18:06:10 aliz Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta12.ebuild,v 1.3 2003/07/14 03:28:50 drobbins Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -44,7 +44,8 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}.tar.gz"
 # replace-flags k6-2 i686
 # replace-flags k6   i686
 
-
+#13 Jul 2003: drobbins: build failure using -j5 on a dual Xeon in 1_beta12
+MAKEOPTS="$MAKEOPTS -j1"
 src_compile() {
 
 	# Make sure that the older libraries are not installed (bug #15081).
