@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/xmcd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/ChangeLog,v 1.1 2004/03/06 12:35:05 eradicator Exp $
+
+*xmcd-3.2.1 (04 Mar 2004)
+
+  04 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmcd-3.2.1.ebuild, files/xmcd-3.2.1-gentoo.patch:
+  Motif based CD player with CDDB2 support. Ebuild submitted by
+  john.ross.hunt@comcast.net in bug #25113.
+
