@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.30 2004/02/11 13:53:52 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.31 2004/02/23 19:21:24 bazik Exp $
+
+  23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> anjuta-1.2.1.ebuild:
+  Stable on sparc. Thanks to Lars Weiler <pylon@gentoo.org> for testing!
 
 *anjuta-1.2.1 (11 Feb 2004)
 
