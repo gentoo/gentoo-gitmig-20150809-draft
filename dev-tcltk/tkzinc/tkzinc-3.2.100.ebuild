@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.2.100.ebuild,v 1.1 2004/08/09 01:27:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.2.100.ebuild,v 1.2 2004/08/30 23:38:07 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.tkzinc.org"
 SRC_URI="http://www.tkzinc.org/Packages/zinc-tk_${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="threads opengl doc"
 DEPEND=">=dev-lang/tk-8.4
 	opengl? ( virtual/opengl )
