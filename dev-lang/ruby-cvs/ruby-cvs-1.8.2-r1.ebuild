@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r1.ebuild,v 1.5 2004/06/24 22:55:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.2-r1.ebuild,v 1.1 2004/08/30 18:19:53 usata Exp $
 
-IUSE="socks5 tcltk"
+IUSE="socks5 tcltk doc"
 
-inherit flag-o-matic cvs
-filter-flags -fomit-frame-pointer
+inherit flag-o-matic alternatives gnuconfig cvs
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI=""
 
 LICENSE="Ruby"
-SLOT="1.9"
+SLOT="1.8"
 KEYWORDS="~alpha ~hppa ~ia64 ~ppc ~sparc ~x86"
 
-DEPEND=">=sys-libs/glibc-2.1.3
+DEPEND="virtual/libc
 	>=sys-libs/gdbm-1.8.0
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
@@ -23,19 +22,22 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	socks5? ( >=net-misc/dante-1.1.13 )
 	tcltk?  ( dev-lang/tk )
 	sys-apps/findutils
-	dev-ruby/ruby-config"
+	>=dev-ruby/ruby-config-0.3.1"
 RDEPEND="${DEPEND}
-	!=dev-lang/ruby-${SLOT}*"
+	!=dev-lang/ruby-1.8*"
 PROVIDE="virtual/ruby"
 
 ECVS_SERVER="cvs.ruby-lang.org:/src"
 ECVS_MODULE="ruby"
 ECVS_AUTH="pserver"
 ECVS_PASS="anonymous"
+ECVS_UP_OPTS="-dP -rruby_1_8"
+ECVS_CO_OPTS="-rruby_1_8"
 
 S=${WORKDIR}/${ECVS_MODULE}
 
 src_compile() {
+	filter-flags -fomit-frame-pointer
 
 	local ruby_version=`gawk '$2=="RUBY_VERSION" {print $3}' version.h | tr -d \"`
 	if [ "${PV}" != "${ruby_version}" ]; then
@@ -61,15 +63,13 @@ src_compile() {
 	# disable install-doc because of yaml/parser
 	econf --program-suffix=${SLOT/./} --enable-shared \
 		`use_enable socks5 socks` \
-		--disable-install-doc \
+		`use_enable doc install-doc` \
 		|| die "econf failed"
-	emake || emake || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	#export RUBY=${D}/usr/bin/ruby19
-	export LD_LIBRARY_PATH=${D}/usr/lib RUBYLIB=${D}/usr/lib/ruby/${SLOT}
-	make DESTDIR=${D} install || die "make install failed"
+	einstall DESTDIR=${D} || die "einstall failed"
 
 	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV%.*}
 	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV}

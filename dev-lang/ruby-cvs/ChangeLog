@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby-cvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.14 2004/06/30 19:00:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.15 2004/08/30 18:19:53 usata Exp $
+
+*ruby-cvs-1.9.0-r2 (31 Aug 2004)
+*ruby-cvs-1.8.2-r1 (31 Aug 2004)
+
+  31 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +ruby-cvs-1.8.2-r1.ebuild,
+  -ruby-cvs-1.8.2.ebuild, -ruby-cvs-1.9.0-r1.ebuild, +ruby-cvs-1.9.0-r2.ebuild:
+  Added doc USE flag. Notice users to upgrade due to CGI::Session security issue.
 
 *ruby-cvs-1.8.2 (01 Jul 2004)
 
