@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r3.ebuild,v 1.1 2004/01/06 20:55:12 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r3.ebuild,v 1.2 2004/01/07 08:33:17 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -43,6 +43,7 @@ src_unpack() {
 
 	make mrproper || die "make mrproper failed"
 	make include/linux/version.h || die "make include/linux/version.h failed"
+	kernel_universal_unpack
 }
 
 pkg_postinst() {
