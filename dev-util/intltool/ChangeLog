@@ -1,8 +1,10 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.6 2002/05/20 15:46:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.7 2002/06/06 23:29:54 spider Exp $
 
-
+*intltool-0.22 (7 Jun 2002) 
+  7 Jun 2002; Spider <spider@gentoo.org> intltool-0.22.ebuild :
+  I missed to commit this yesterday.
 
 
 *intltool-0.21 (20 May 2002)
