@@ -5,25 +5,6 @@ retrieving revision 1.5
 diff -u -r1.1 -r1.5
 --- openh323/pwlib/plugins/vidinput_dc/video4dc1394.cxx	2003/12/17 15:40:56	1.1
 +++ openh323/pwlib/plugins/vidinput_dc/video4dc1394.cxx	2004/06/15 23:55:50	1.5
-@@ -137,6 +137,18 @@
-  *
-  *
-  * $Log: not supported by cvs2svn $
-+ * Revision 1.5  2004/06/15 23:55:50  csoutheren
-+ * Added check for different versions of dc1394 API
-+ *
-+ * Revision 1.4  2004/06/15 15:38:29  dsandras
-+ * Fixed bug with latest API of libdc1394.
-+ *
-+ * Revision 1.3  2004/06/14 20:43:33  dsandras
-+ * Try to fix compilation.
-+ *
-+ * Revision 1.2  2004/05/10 10:09:19  csoutheren
-+ * Removed printf that was interpreted as a trigraph
-+ *
-  * Revision 1.1  2003/12/17 15:40:56  dominance
-  * Added DC Plugin as provided by Julien Puydt <julien.puydt@laposte.net>. Needs manual patching of plugins/configure for now though. (i.e. disabled by default, run autoconf in plugins/)
-  *
 @@ -413,7 +425,7 @@
    else if (supported_framerates & (1U << (31-0)))
      framerate = FRAMERATE_1_875;
