@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.7 2002/10/23 19:37:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.8 2002/11/19 20:01:22 vapier Exp $
 
 *net-tools-1.60-r5 (16 Jul 2002)
+
+  19 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Under heavy loads the timestamps on the config files may cause
+  the config process to be re-run requiring user input
+  Both files are now touched at the same time (#10799)
 
   23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Removed bootcd USE flag
@@ -11,6 +16,11 @@
   added some RH patches
 
 *net-tools-1.60-r4 (21 Jun 2002)
+
+  19 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Under heavy loads the timestamps on the config files may cause
+  the config process to be re-run requiring user input.
+  Both files are now touched at the same time (#10799)
 
   23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Removed bootcd USE flag

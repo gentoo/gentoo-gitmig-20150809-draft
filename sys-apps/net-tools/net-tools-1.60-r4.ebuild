@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.11 2002/10/23 19:37:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.12 2002/11/19 20:01:22 vapier Exp $
 
 IUSE="nls build"
 
@@ -20,6 +20,7 @@ src_unpack() {
 	cd ${S}
 	cp ${FILESDIR}/config.h .
 	cp ${FILESDIR}/config.make .
+	touch config.{h,make}		#sync timestamps
 	cp Makefile Makefile.orig
 	sed -e "s/-O2 -Wall -g/${CFLAGS}/" Makefile.orig > Makefile
 	cd man
