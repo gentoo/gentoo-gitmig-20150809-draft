@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/commons-logging
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.1 2002/11/06 05:24:12 strider Exp $
+
+*commons-logging-1.0.2 (06 Nov 2002)
+
+  06 Nov 2002; Adrian Almenar <strider@gentoo.org> ChangeLog commons-logging-1.0.2.ebuild files/digest-commons-logging-1.0.2 :
+  Initial import.
+
