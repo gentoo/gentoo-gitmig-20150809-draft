@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.5_pre20040927.ebuild,v 1.1 2004/09/28 17:53:12 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.5_pre20040927.ebuild,v 1.2 2004/10/17 19:29:11 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/backbone"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${ECVS_MODULE}/Applications/${PN/t/T}
 DESCRIPTION="A terminal emulator for GNUstep"
 HOMEPAGE="http://www.nongnu.org/terminal/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
