@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.27 2004/03/13 20:15:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.28 2004/03/22 18:05:05 seemant Exp $
+
+  22 Mar 2004; Seemant Kulleen <seemant@gentoo.org> maildrop-1.5.3-r1.ebuild:
+  move 1.5.3-r1 to stable, as it compiles for people. f3ew in #gentoo reported
+  1.5.3 not working with gdbm and -gdbm, but -r1 worked on a remote server for
+  him.
 
   13 Mar 2004; David Holm <dholm@gentoo.org> maildrop-1.5.3-r1.ebuild:
   Added to ~ppc.
