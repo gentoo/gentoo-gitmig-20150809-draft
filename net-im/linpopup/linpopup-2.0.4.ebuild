@@ -1,28 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.3.ebuild,v 1.6 2004/07/20 20:30:39 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.4.ebuild,v 1.1 2004/12/30 21:16:18 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="GTK2 port of the LinPopUp messaging client for Samba (including Samba 3)"
 HOMEPAGE="http://linpopup2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/linpopup2/${P}.tar.bz2"
-RESTRICT="nomirror"
-
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="gnome"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
 	>=net-fs/samba-2.2.8a"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS BUGS COPYING ChangeLog INSTALL MANUAL NEWS README THANKS TODO"
+DOCS="AUTHORS BUGS ChangeLog INSTALL MANUAL NEWS README THANKS TODO"
 
 src_install() {
 	# Install icon and .desktop for menu entry
