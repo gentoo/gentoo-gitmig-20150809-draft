@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.32 2003/01/29 23:13:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.33 2003/02/07 19:27:39 raker Exp $
+
+*cyrus-sasl-2.1.12 (06 Feb 2003)
+
+  06 Feb 2003; Nick Hadaway <raker@gentoo.org> cyrus-sasl-2.1.12.ebuild,
+  files/digest-cyrus-sasl-2.1.12, files/cyrus-sasl-2.1.12-kerberos.patch :
+  Version bump.  Cleaned up some configure options.
 
 *cyrus-sasl-2.1.10-r2 (29 Jan 2003)
 
