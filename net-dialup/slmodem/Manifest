@@ -1,23 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 084a945334d2d2e21acc1b423007d41e slmodem-2.9.9a-r1.ebuild 3940
-MD5 892305278c2052d7be27f77a9c103679 slmodem-2.9.9a.ebuild 3864
-MD5 d7deee60e5e5e08b4ae3f415c8b98ea3 ChangeLog 9602
+MD5 f2633543a91ace8e99e01d29432a50fc slmodem-2.9.9a-r1.ebuild 3939
+MD5 057a7259ae6081d43ad824be5866fd8e ChangeLog 9716
 MD5 93dd8a9d0c0f815e8445d9f0c1fc0910 metadata.xml 578
 MD5 a5c2c40e3a6c4665033c97bb9088f03d files/slusb.hotplug 262
 MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
 MD5 0eddf6239c6536fc043144a9ea06fa2a files/slmodem-2.9.9a-alsa.patch 1040
 MD5 67543ad2e41e6dbc2150057340bb82b1 files/slmodem-2.9.conf 752
 MD5 64d03a3c87a5330faa6b8dd9d344b6a3 files/slmodem-2.9.init 2657
-MD5 ef9ad53b66480e01974b9f183e4edbc8 files/digest-slmodem-2.9.9a 66
 MD5 ef9ad53b66480e01974b9f183e4edbc8 files/digest-slmodem-2.9.9a-r1 66
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
 MD5 026f2e2fae1fbd999455b36630164a88 files/slmodem-usb_endpoint_halted-gentoo.patch 830
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB8VL3iJcSIUGNthERAtE8AKCq8h33EqUMO2nIP3fuzygHQbe7SACfWfCZ
-+y2dAaf+4tszSWqCbfKXrBo=
-=mYtV
+iD8DBQFB8ZpQiJcSIUGNthERAvfeAJ9AQ7oB7M8dgfxbWOuzwtIigk47xQCfbJPE
+Jhy/pMTNCm7kEpYDpekKE+Y=
+=MI4a
 -----END PGP SIGNATURE-----
