@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-platform-bin/eclipse-platform-bin-2.0.ebuild,v 1.10 2003/09/06 17:31:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-platform-bin/eclipse-platform-bin-2.0.ebuild,v 1.11 2004/03/13 01:49:46 mr_bones_ Exp $
 
 DESCRIPTION="Eclipse Tools Platform, basic platform binary"
 HOMEPAGE="http://www.eclipse.org/"

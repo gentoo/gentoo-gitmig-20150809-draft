@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.9.4.ebuild,v 1.1 2004/02/26 02:40:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.9.4.ebuild,v 1.2 2004/03/13 01:49:46 mr_bones_ Exp $
 
 inherit kde
 need-kde 3
