@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-pg
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pg/ChangeLog,v 1.4 2004/06/24 23:49:19 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pg/ChangeLog,v 1.5 2005/02/03 00:42:17 mkennedy Exp $
+
+*cl-pg-20050202 (02 Feb 2005)
+
+  02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-pg-20050202.ebuild:
+  New upstream version
 
 *cl-pg-0.19 (12 Feb 2004)
 

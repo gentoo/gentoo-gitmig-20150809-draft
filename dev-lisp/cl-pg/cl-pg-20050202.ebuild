@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pg/cl-pg-0.19.ebuild,v 1.4 2005/02/03 00:42:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pg/cl-pg-20050202.ebuild,v 1.1 2005/02/03 00:42:17 mkennedy Exp $
 
 inherit common-lisp
 
-DESCRIPTION="A socket-level interface to the PostgreSQL object-relational Database for Common Lisp"
-HOMEPAGE="http://www.chez.com/emarsden/downloads/
+DESCRIPTION="A socket-level interface to the PostgreSQL ORDMS for Common Lisp"
+HOMEPAGE="http://common-lisp.net/project/pg/
 	http://www.cliki.net/Pg
 	http://packages.debian.org/unstable/devel/cl-pg.html"
-SRC_URI="http://www.chez.com/emarsden/downloads/pg-dot-lisp-${PV}.tar.gz"
+SRC_URI="mirror://gentoo/${PN}_${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
@@ -18,10 +18,10 @@ DEPEND="dev-lisp/common-lisp-controller
 
 CLPACKAGE=pg
 
-S=${WORKDIR}/pg-${PV}
+S=${WORKDIR}/pg
 
 src_install() {
 	common-lisp-install *.asd *.lisp
 	common-lisp-system-symlink
-	dodoc README NEWS
+	dodoc README NEWS CREDITS TODO
 }
