@@ -1,0 +1,11 @@
+--- qca.pro	2003-10-22 15:14:43.000000000 +0100
++++ qca.pro-patched	2005-01-04 15:50:49.928406816 +0000
+@@ -1,7 +1,7 @@
+ # qca qmake profile
+ 
+ TEMPLATE = lib
+-CONFIG += qt thread release
++CONFIG += qt thread release no_fixpath
+ TARGET = qca
+ 
+ MOC_DIR        = .moc
