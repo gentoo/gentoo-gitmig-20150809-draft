@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  09 Nov 2003; Jason Wever <weeve@gentoo.org> speex-1.0.ebuild:
+  Marked stable on sparc.
+
   17 Oct 2003; Nick Hadaway <raker@gentoo.org> speex-1.0.1.ebuild:
   Added the missing ${myconf} required to specify oggvorbis and sse 
   support.
