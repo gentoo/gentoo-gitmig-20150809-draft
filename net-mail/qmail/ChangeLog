@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.10 2002/12/13 11:00:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.11 2003/02/01 08:01:36 raker Exp $
+
+*qmail-1.03-r10 (01 Feb 2003)
+
+  01 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild,
+  files/digest-qmail-1.03-r10, files/tls.patch, files/tls.txt :
+  Ebuild rework on the patch side.  I will add mysql and ldap support
+  as I work through patch conflicts.  TLS + EHLO patch, SMTP AUTH,
+  big-concurrency, ext/reiserfs non-synchronus link() fix, and the
+  ext_todo-20030105 queue optimization patch are currently included.
+  Now includes /var/qmail/bin in ROOTPATH and PATH.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
