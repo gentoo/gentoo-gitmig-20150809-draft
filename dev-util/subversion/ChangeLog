@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.15 2003/05/08 11:17:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.16 2003/05/08 21:48:37 pauldv Exp $
+
+  08 May 2003; Paul de Vrieze <pauldv@gentoo.org> subversion-0.21.0-r1.ebuild:
+  Fix a stupid typo. Thanks to Cesar Eduardo Barros <cesarb@nitnet.com.br> for
+  helping in finding this.
 
   08 May 2003; Patrick Kursawe <phosphan@gentoo.org>
   subversion-0.10_pre1.ebuild:
