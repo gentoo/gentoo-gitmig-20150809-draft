@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.9 2004/01/08 05:29:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.10 2004/01/23 02:06:05 mr_bones_ Exp $
 
 inherit eutils
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P/eta11/}
 DESCRIPTION="Blinks keyboard LEDs indicating outgoing and incoming network packets on selected network interface"
-HOMEPAGE="http://www.hut.fi/~jlohikos/tleds/"
+HOMEPAGE="http://www.hut.fi/~jlohikos/tleds.html"
 SRC_URI="http://www.hut.fi/~jlohikos/tleds/public/${MY_P/11/10}.tgz
 	http://www.hut.fi/~jlohikos/tleds/public/${MY_P}.patch.bz2"
 

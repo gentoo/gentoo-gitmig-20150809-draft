@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tleds
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.8 2004/01/08 05:29:35 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.9 2004/01/23 02:06:05 mr_bones_ Exp $
+
+  22 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> tleds-1.04-r1.ebuild,
+  tleds-1.05_beta11.ebuild:
+  fix HOMEPAGE (bug 39086); tidy
 
 *tleds-1.05_beta11 (2 Jul 2002)
 
