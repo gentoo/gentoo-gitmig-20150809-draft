@@ -1,20 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 2dc98f8dcfcfff951cf6d4a32c92cbd6 ChangeLog 2528
 MD5 46347aa2b2c92852fc2c2d41464ae0cf align-28.ebuild 481
-MD5 48451683a5b3bf7a90c76768e942997f align-23.ebuild 435
-MD5 4f353fb99009323f5fd92c7c85bcdf49 align-27.ebuild 433
-MD5 d5e4deece1a8a513b8d77c3c3343bf7f align-26.ebuild 437
-MD5 94d9f720a86b450d11dd1e852b2b179f ChangeLog 2395
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 bcfd2f0ad7175a8b8502a9faf0bc5a6a files/digest-align-23 60
-MD5 24fe13783170efd9a72e898a1adce9f3 files/digest-align-26 60
-MD5 8aa1c4b0487c057d0957bd9a49415b1f files/digest-align-27 60
 MD5 bcf8adf15332e65feb57ba3cf13b63df files/digest-align-28 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBfikUCHk4+ZoBpvsRAi1SAJwKTiMxgODoLd0knJAXrLBELbq6cwCeNkJu
-V0bdQCuild15Ptgu8eoxidA=
-=xawA
+iD8DBQFBhP62LLFUmVNQ7rkRAri1AJwMNYTlUvs80bguLqhgV8IJcGkzpgCdFK+/
+RhT7+JMVkZiK1LZIxoBeEnE=
+=FuA3
 -----END PGP SIGNATURE-----
