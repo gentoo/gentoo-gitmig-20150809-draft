@@ -1,9 +1,21 @@
-MD5 172e856789993e93f8c71ec30afeec35 ChangeLog 1748
-MD5 362f6cfeefbc227243602af252ff75d3 mail-notification-0.6.1.ebuild 1405
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2c064b8fb1e752393b49746c3d3cf7ab mail-notification-0.6.2.ebuild 1320
-MD5 5d240c2111a6535d744ec8bbc7cc692c metadata.xml 249
 MD5 3688c4313b997528c10cabb81fa4ecb0 mail-notification-0.7.0.ebuild 1523
+MD5 48f81f64f3907442dd9f68fcd0f9f1d5 mail-notification-0.8.0.ebuild 1524
+MD5 362f6cfeefbc227243602af252ff75d3 mail-notification-0.6.1.ebuild 1405
+MD5 e4d1667565b03f4d848b77a5e9ce0de3 ChangeLog 1902
+MD5 5d240c2111a6535d744ec8bbc7cc692c metadata.xml 249
 MD5 c20d65fc977d20fe4c343cbc1db3418c files/digest-mail-notification-0.6.1 75
 MD5 0b8e0b3106ddbaebf2a1d54ae0aaf040 files/digest-mail-notification-0.6.2 75
-MD5 4c450be92ce937bb17a9c9d58b4b3463 files/mail-notification-0.6.1-64bit-fix.patch 325
 MD5 982a73287c9d3dc7377a0484f07adf8b files/digest-mail-notification-0.7.0 75
+MD5 81fde15a2d8a3191031a5099ad32296a files/digest-mail-notification-0.8.0 75
+MD5 4c450be92ce937bb17a9c9d58b4b3463 files/mail-notification-0.6.1-64bit-fix.patch 325
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhmj9CHk4+ZoBpvsRAojGAJ9uscZNL4mGBWhtq7WGqth24Aj1WACfVyhq
+DeYMicg6e2sKGGyvPCrJaaM=
+=oAEH
+-----END PGP SIGNATURE-----
