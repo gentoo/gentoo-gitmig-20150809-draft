@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.3.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.3.ebuild,v 1.2 2003/09/15 15:48:41 vapier Exp $
 
 inherit games eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/prboom/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="opengl"
+IUSE="opengl debug"
 
 DEPEND="virtual/x11
 	>=media-libs/libsdl-1.1.3
@@ -31,7 +31,16 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf `use_enable opengl gl` || die
+	# leave --disable-cpu-opt in otherwise the configure script
+	# will append -march=i686 and crap ... let the user's CFLAGS
+	# handle this ...
+	egamesconf \
+		`use_enable opengl gl` \
+		`use_enable x86 i386-asm` \
+		--disable-cpu-opt \
+		|| die
+	# configure script doesnt do opengl properly
+	[ `use opengl` ] || sed -i '/GL_DOOM/s:.*::' config.h
 	emake || die
 }
 
