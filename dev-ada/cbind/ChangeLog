@@ -1,0 +1,10 @@
+# ChangeLog for dev-ada/cbind
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/ChangeLog,v 1.1 2003/07/13 23:53:59 george Exp $
+
+*cbind-6.ebuild (13 Jul 2003)
+
+  13 Jul 2003; George Shapovalov <george@gentoo.org> cbind-6.ebuild, files/{cbind6.diff,digest-cbind-6} :
+  initial release (#23025)
+  This tool is designed to aid in the creation of Ada bindings to C.
+  ebuild submitted by David Holm <dholm@telia.com>
