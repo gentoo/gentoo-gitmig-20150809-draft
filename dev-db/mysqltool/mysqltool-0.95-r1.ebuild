@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.10 2002/12/07 05:56:12 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.11 2002/12/17 21:40:20 vapier Exp $
 
 inherit perl-module
 
@@ -24,9 +24,6 @@ RDEPEND="${DEPEND}
 	dev-perl/DBD-mysql
 	dev-perl/Crypt-Blowfish"
 
-APACHE_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
-[ -z "${APACHE_ROOT}" ] && APACHE_ROOT="/home/httpd/htdocs"
-
 src_install() {
 	eval `perl '-V:installarchlib'`
 	dodir /$installarchlib
@@ -40,9 +37,9 @@ src_install() {
 	dodoc COPYING Changes MANIFEST README Upgrade
 
 	# the cgi and images..
-	dodir ${APACHE_ROOT}/mysqltool
-	cp -a htdocs/* ${D}${APACHE_ROOT}/mysqltool
-	rm ${D}${APACHE_ROOT}/mysqltool/mysqltool.conf
+	dodir /home/httpd/htdocs/mysqltool
+	cp -a htdocs/* ${D}/home/httpd/htdocs/mysqltool
+	rm ${D}/home/httpd/htdocs/mysqltool/mysqltool.conf
 
 	# the config file..
 	insinto /etc/apache/conf/addon-modules
@@ -51,21 +48,21 @@ src_install() {
 	fperms 0600 /etc/apache/conf/addon-modules/mysqltool.conf
 
 	# now fix its location in the main cgi..
-	cp ${D}${APACHE_ROOT}/mysqltool/index.cgi \
-		${D}${APACHE_ROOT}/mysqltool/index.cgi.orig
+	cp ${D}/home/httpd/htdocs/mysqltool/index.cgi \
+		${D}/home/httpd/htdocs/mysqltool/index.cgi.orig
 	sed -e "s:^\(require\).*:\1 '/etc/apache/conf/addon-modules/mysqltool.conf';:" \
-		${D}${APACHE_ROOT}/mysqltool/index.cgi.orig > \
-		${D}${APACHE_ROOT}/mysqltool/index.cgi
-	rm ${D}${APACHE_ROOT}/mysqltool/index.cgi.orig
+		${D}/home/httpd/htdocs/mysqltool/index.cgi.orig > \
+		${D}/home/httpd/htdocs/mysqltool/index.cgi
+	rm ${D}/home/httpd/htdocs/mysqltool/index.cgi.orig
 }
 
 pkg_postinst() {
 	einfo "Please add the following to commonapache.conf:"
 	einfo "PerlRequire {apache_root}/conf/mysqltool.conf"
 	einfo "<Directory {apache_document_root}/htdocs/mysqltool>"
-    einfo "Options ExecCGI"
-    einfo "<Files *.cgi>"
-    einfo "SetHandler perl-script"
+	einfo "Options ExecCGI"
+	einfo "<Files *.cgi>"
+	einfo "SetHandler perl-script"
 	einfo "PerlHandler MysqlTool"
 	einfo "</Files>"
 	einfo "</Directory>"
