@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-3.0.0.ebuild,v 1.3 2003/07/29 13:19:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-3.0.0.ebuild,v 1.4 2003/09/29 12:11:02 lanius Exp $
 
 DESCRIPTION="The Foomatic printing meta package"
-HOMEPAGE="http://www.linuxprinting.org/foomatic"
+HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
 SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
