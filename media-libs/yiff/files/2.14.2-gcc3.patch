@@ -1,5 +1,42 @@
---- yiffutils/ymixer.c.orig	2003-07-31 14:52:34.000000000 -0400
-+++ yiffutils/ymixer.c	2003-07-31 14:53:28.000000000 -0400
+diff -ur yiff-2.14.2.orig/yiff/Makefile yiff-2.14.2/yiff/Makefile
+--- yiff-2.14.2.orig/yiff/Makefile	2003-08-18 20:55:37.811026984 -0400
++++ yiff-2.14.2/yiff/Makefile	2003-08-18 20:58:41.116160368 -0400
+@@ -111,7 +111,7 @@
+ #   farther above.
+ #
+ #LIB = -lm -lkmid
+-LIB = -lm
++LIB = -lm -lstdc++
+ 
+ # Library Directories:
+ #
+diff -ur yiff-2.14.2.orig/yiffconfig/yccb.c yiff-2.14.2/yiffconfig/yccb.c
+--- yiff-2.14.2.orig/yiffconfig/yccb.c	2003-08-18 20:55:38.021994912 -0400
++++ yiff-2.14.2/yiffconfig/yccb.c	2003-08-18 20:58:26.226423952 -0400
+@@ -168,13 +168,13 @@
+ 	{
+ 	    int status = CDialogGetResponse(
+ 		"Discard changes?",
+-"Changes have not been saved, are you sure you\n\
+-want to discard those changes?",
+-"There are changes made to the configuration which\n\
+-have not been saved. If you say 'Yes' then any\n\
+-changes you have made will be lost. If you want\n\
+-to preserve those changes then say 'No' and\n\
+-continue on with the configuration.",
++"Changes have not been saved, are you sure you\n"\
++"want to discard those changes?",
++"There are changes made to the configuration which\n"\
++"have not been saved. If you say 'Yes' then any\n"\
++"changes you have made will be lost. If you want\n"\
++"to preserve those changes then say 'No' and\n"\
++"continue on with the configuration.",
+ 		CDIALOG_ICON_WARNING,
+ 		CDIALOG_BTNFLAG_YES | CDIALOG_BTNFLAG_NO |
+ 		CDIALOG_BTNFLAG_HELP,
+diff -ur yiff-2.14.2.orig/yiffutils/ymixer.c yiff-2.14.2/yiffutils/ymixer.c
+--- yiff-2.14.2.orig/yiffutils/ymixer.c	2003-08-18 20:55:37.894014368 -0400
++++ yiff-2.14.2/yiffutils/ymixer.c	2003-08-18 20:57:50.233895648 -0400
 @@ -23,26 +23,26 @@
   */
  static void print_help(void)
@@ -8,7 +45,7 @@
 -Usage: ymixer [mixer] [value1] [value2] [value3] [value4] [options]\n\
 -\n\
 -    [mixer] specifies the mixer channel device name, running without\n\
--    any arguments prints a list of available mixer names.
+-    any arguments prints a list of available mixer names.\n\
 -\n\
 -    [value#] specify the percent values (from 0.0%%, 100.0%%) to be set.\n\
 -    If no [value#] is specified then the current value is printed.\n\
@@ -28,7 +65,7 @@
 +"Usage: ymixer [mixer] [value1] [value2] [value3] [value4] [options]\n"\
 +"\n"\
 +"    [mixer] specifies the mixer channel device name, running without\n"\
-+"    any arguments prints a list of available mixer names."\
++"    any arguments prints a list of available mixer names.\n"\
 +"\n"\
 +"    [value#] specify the percent values (from 0.0%%, 100.0%%) to be set.\n"\
 +"    If no [value#] is specified then the current value is printed.\n"\
@@ -47,31 +84,3 @@
  	);
  }
  
---- yiffconfig/yccb.c.orig	2003-07-31 14:51:20.000000000 -0400
-+++ yiffconfig/yccb.c	2003-07-31 14:52:19.000000000 -0400
-@@ -1302,10 +1302,10 @@
- 	{
- 	    CDialogGetResponse(
- "No Y Audio Mode selected!",
--"There is no Y Audio Mode currently selected to apply\n\
--values for.",
--"You must select a Y Audio Mode from the list and then
--apply its values to the Y server.",
-+"There is no Y Audio Mode currently selected to apply\n"\
-+"values for.",
-+"You must select a Y Audio Mode from the list and then"\
-+"apply its values to the Y server.",
- 		CDIALOG_ICON_ERROR,
- 		CDIALOG_RESPONSE_OK | CDIALOG_RESPONSE_HELP,
- 		CDIALOG_RESPONSE_OK
---- yiff/Makefile.Linux	2003-07-31 14:50:45.000000000 -0400
-+++ yiff/Makefile.Linux	2003-07-31 14:50:53.000000000 -0400
-@@ -111,7 +111,7 @@
- #   farther above.
- #
- #LIB = -lm -lkmid
--LIB = -lm
-+LIB = -lm -lstdc++
- 
- # Library Directories:
- #
