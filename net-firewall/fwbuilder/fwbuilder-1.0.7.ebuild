@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.7.ebuild,v 1.3 2003/02/13 13:59:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.7.ebuild,v 1.4 2003/03/20 14:35:53 agriffis Exp $
 
 DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
@@ -10,6 +10,7 @@ S=${WORKDIR}/${P}
 KEYWORDS="x86 ~sparc "
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="static nls"
 
 DEPEND="=x11-libs/gtkmm-1.2*
 	>=dev-libs/libxslt-1.0.7
@@ -24,7 +25,6 @@ src_compile() {
 	myconf="--with-gnu-ld"
 	use static	&&	myconf="${myconf} --enable-shared=no --enable-static=yes"
 	use nls		||	myconf="${myconf} --disable-nls"
-	use pic		&&	myconf="${myconf} --with-pic"
 
 	./autogen.sh \
 		--prefix=/usr \

@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.5 2003/03/01 14:07:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.6 2003/03/20 14:35:53 agriffis Exp $
+
+*fwbuilder-1.0.9-r1 (20 Mar 2003)
+
+  20 Mar 2003; Aron Griffis <agriffis@gentoo.org> fwbuilder-1.0.6.ebuild,
+  fwbuilder-1.0.7.ebuild, fwbuilder-1.0.8.ebuild, fwbuilder-1.0.9-r1.ebuild,
+  fwbuilder-1.0.9.ebuild:
+  Remove pic USE-flag and bump rev
 
 *fwbuilder-1.0.9 (01 Mar 2003)
 
