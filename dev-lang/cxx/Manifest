@@ -1,6 +1,16 @@
-MD5 45bde39f2d231cb997a594130f48a1e2 ChangeLog 1060
-MD5 7fbe4e245ffd9b9fba51c9ff9339c287 cxx-6.5.9.31-r1.ebuild 5720
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 01a99c24dd3f6eb382129a633090b4e6 cxx-6.5.9.31.ebuild 5637
+MD5 78f45036751e04f60161031af9333101 ChangeLog 1137
 MD5 1301db74278b5d421b45dc4c906b0796 metadata.xml 874
-MD5 5bce56b04b2d22571e77109bfb41fbac files/digest-cxx-6.5.9.31 75
-MD5 5bce56b04b2d22571e77109bfb41fbac files/digest-cxx-6.5.9.31-r1 75
+MD5 7fbe4e245ffd9b9fba51c9ff9339c287 cxx-6.5.9.31-r1.ebuild 5720
+MD5 d359bacc658abbc5ea74e553d1a76cd8 files/digest-cxx-6.5.9.31 76
+MD5 d359bacc658abbc5ea74e553d1a76cd8 files/digest-cxx-6.5.9.31-r1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm+6FugEuf3OQ0akRAojZAKCYB6pS5Zm9/xK6IdiI3cAtzSIASgCfaKr2
+Aqhd4xgjxP3vBWHx79tQwVw=
+=w3dK
+-----END PGP SIGNATURE-----
