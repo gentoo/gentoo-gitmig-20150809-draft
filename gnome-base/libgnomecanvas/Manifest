@@ -1,0 +1,7 @@
+MD5 a2726ecfd52de9f4b9695b15b123c93a ChangeLog 2370
+MD5 849e130715a696e94d382753d18fcfb2 libgnomecanvas-2.0.4.ebuild 938
+MD5 ff800b52278eae600a6ee0ee90220ca9 libgnomecanvas-2.2.0.2.ebuild 685
+MD5 6e875aab2a336e975dc367842c6c13ac libgnomecanvas-2.2.1.ebuild 687
+MD5 098e5bfb219a24a2351a0e0b364c4d39 files/digest-libgnomecanvas-2.0.4 73
+MD5 5818b6cd99c363ebe4c21c9dcfc8e24e files/digest-libgnomecanvas-2.2.0.2 75
+MD5 b3d93d74ffbf452b0561903ff53a4f6c files/digest-libgnomecanvas-2.2.1 73

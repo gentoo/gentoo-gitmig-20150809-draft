@@ -1,0 +1,7 @@
+MD5 c4c12d3a41d8d2ad71f28e7c2b3b284f ChangeLog 2485
+MD5 888119642837b163b7aceaadd31d03a2 libgnomeprintui-1.116.0.ebuild 707
+MD5 383555cbbdbdc7941bfd2b634fd987e0 libgnomeprintui-2.2.1.1.ebuild 668
+MD5 849b5897bede12af72538c39c689023f libgnomeprintui-2.2.1.2.ebuild 667
+MD5 18289359b871af166c305a4e908642be files/digest-libgnomeprintui-1.116.0 76
+MD5 c57b5aaca44d6702f6073e011a9882d7 files/digest-libgnomeprintui-2.2.1.1 76
+MD5 561e66e7c627533d51f2d2eda38ad7ea files/digest-libgnomeprintui-2.2.1.2 76
