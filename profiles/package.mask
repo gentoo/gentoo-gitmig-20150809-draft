@@ -697,9 +697,12 @@ gnome-extra/at-spi
 gnome-extra/at-poke
 
 
-
+# Gnome2 users should only comment sawfish-2.0,
+# and leave sawfish-20020419 and up masked.
+>=x11-wm/sawfish-2.0
 >=x11-wm/sawfish-20020419
->=x11-libs/rep-gtk-20020419
+
+>=x11-libs/rep-gtk-0.16
 >=dev-libs/librep-20020201
 
 >=x11-libs/gtk-engines-1.9.0
