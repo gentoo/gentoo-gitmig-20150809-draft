@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.8.0.ebuild,v 1.1 2004/09/16 12:40:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.8.0.ebuild,v 1.2 2004/09/16 12:47:31 foser Exp $
 
 inherit gnome2
 
@@ -21,7 +21,8 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2.7.92
-	>=gnome-base/gail-1"
+	>=gnome-base/gail-1
+	>=dev-util/desktop-file-utils-0.7"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
