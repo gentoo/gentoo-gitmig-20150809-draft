@@ -1,6 +1,13 @@
 # ChangeLog for net-www/straw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.18 2004/02/14 12:43:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.19 2004/02/18 14:20:12 foser Exp $
+
+*straw-0.22 (18 Feb 2004)
+
+  18 Feb 2004; foser <foser@gentoo.org> straw-0.22.ebuild :
+  New release
+  Revamp ebuild to use distutils eclass more (removes a lot of cruft yeah)
+  Juggled a bit with deps, might as well remove the RDEP stuff really
 
   14 Feb 2004; Alastair Tse <liquidx@gentoo.org> straw-0.19.1.ebuild,
   straw-0.21.1.ebuild, straw-0.21.2.ebuild:
