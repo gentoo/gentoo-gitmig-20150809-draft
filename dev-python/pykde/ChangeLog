@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pykde
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.5 2003/08/27 15:49:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.6 2003/09/02 12:18:51 liquidx Exp $
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> pykde-3.7.4.ebuild:
+  make python modules dir otherwise make install will fail (#27619)
 
 *pykde-3.7.4 (26 Aug 2003)
 

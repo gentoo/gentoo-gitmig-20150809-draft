@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.7.4.ebuild,v 1.1 2003/08/27 15:49:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.7.4.ebuild,v 1.2 2003/09/02 12:18:51 liquidx Exp $
 
-inherit eutils
+inherit eutils distutils
 
 MAJ_PV=${PV%.[0-9]*}
 MIN_PV=${PV##*[0-9].}
@@ -43,6 +43,10 @@ src_compile() {
 }
 
 src_install() {
+	# bug #27401 and 27619
+	distutils_python_version
+	
+	mkdir -p ${D}/usr/lib/python${PYVER}/site-packages
 	make DESTDIR=${D} install || die
 	dodoc ChangeLog AUTHORS THANKS README NEWS COPYING DETAILS BUGS README.importTest
 	dodir /usr/share/doc/${PF}/
