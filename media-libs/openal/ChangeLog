@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.19 2004/04/08 07:07:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.20 2004/04/15 02:23:11 weeve Exp $
+
+  14 Apr 2004; Jason Wever <weeve@gentoo.org> openal-20040303.ebuild:
+  Added ~sparc keyword.
 
   08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   openal-20040303.ebuild:
