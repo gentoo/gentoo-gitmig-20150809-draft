@@ -2,8 +2,8 @@ MD5 066ec1fd6a6b3ec6756d5cb82596e04b libwnck-2.6.0.1.ebuild 796
 MD5 593a9554db51053682c28856b2032230 libwnck-2.8.0.ebuild 713
 MD5 74a9d69a6cebf8b189623603108ec727 libwnck-2.6.1.ebuild 669
 MD5 b0a71ee7a8156010c38db33ee117f173 libwnck-2.4.0.1-r1.ebuild 721
-MD5 26a62869daf262dab103900e77db657e libwnck-2.6.2.1.ebuild 677
-MD5 a8bfda0cc8b11020d8c0dafa6c44b3e8 ChangeLog 6482
+MD5 ceabaa65367330db0dc291502473f14e libwnck-2.6.2.1.ebuild 675
+MD5 4cbf17d47bc7722d457d4903b36d30be ChangeLog 6578
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 583d114823328a292d7682b331fc5338 files/digest-libwnck-2.6.0.1 68
 MD5 8b45d7a5f492aceec471824f1ea20c91 files/digest-libwnck-2.6.2.1 68
