@@ -1,8 +1,16 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.17 2003/02/10 01:21:07 viz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.18 2003/02/10 14:32:59 viz Exp $
 
 *irssi-0.8.6-r2 (10 Feb 2003)
+
+  10 Feb 2002; Tobias Eichert <viz@gentoo.org> :
+  Removed older irssi ebuilds and revisions to
+  make the directory more concise..now we
+  have an ebuild for irssi-0.8.5 and irssi-0.8.6.
+  Changed =dev-libs/glib-2.2* dependency to
+  >=dev-libs/glib-1.2.
+  Changed "~x86" to "x86" in KEYWORDS.
 
   10 Feb 2003; Tobias Eichert <viz@gentoo.org> irssi-0.8.6-r2.ebuild:
   Removed glib-1.2* as a dependency. Therefor added glib-2.2*.
