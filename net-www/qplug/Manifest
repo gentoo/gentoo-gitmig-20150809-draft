@@ -1,3 +1,13 @@
-MD5 0f30a7cf024298d45dcb9cf4a456935d qplug-0.4.1.ebuild 668
-MD5 bf4d329839dd49227226055f6a43f6e2 ChangeLog 324
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 02ab19b9589b86a43b1882b52b8d1e12 qplug-0.4.1.ebuild 675
+MD5 2a27e93c60a9819afdd5bb03323a411c ChangeLog 408
 MD5 6f23a4dec460e516a5e93f352da31421 files/digest-qplug-0.4.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXexwI7fK2cqeyXkRAnrVAKC0+xuoxtu3aOV3D31bZ8m1bspVAQCfZ6SP
+PJcecht3TpXGgGDzH7yow5Y=
+=dtOE
+-----END PGP SIGNATURE-----

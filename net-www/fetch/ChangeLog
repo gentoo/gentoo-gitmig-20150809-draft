@@ -1,6 +1,9 @@
 # ChangeLog for net-www/fetch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/fetch/ChangeLog,v 1.4 2004/06/25 00:52:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/fetch/ChangeLog,v 1.5 2004/10/01 23:43:03 pyrania Exp $
+
+  02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> fetch-1.0.ebuild:
+  S= unneeded.
 
   24 Jun 2003; Martin Holzer <mholzer@gentoo.org> fetch-1.0.ebuild:
   Changed DEPEND. Closes #23378.
