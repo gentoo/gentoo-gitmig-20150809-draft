@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (13 Aug 2002)
+# masked for testing
+=media-video/vlc-0.4.4
+
 # <blizzy@gentoo.org> (13 Aug 2002)
 # new package, masked for testing
 net-mail/pinepgp
