@@ -1,11 +1,14 @@
 # ChangeLog for dev-libs/libcpml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/ChangeLog,v 1.5 2003/02/12 06:04:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/ChangeLog,v 1.6 2003/03/09 20:40:19 agriffis Exp $
 
   31 Dec 2002; Aron Griffis <agriffis@gentoo.org> libcpml-5.2.01-r1.ebuild:
   Fix typo in src_unpack
 
 *libcpml-5.2.01-r1 (31 Dec 2002)
+
+  09 Mar 2003; Aron Griffis <agriffis@gentoo.org> libcpml-5.2.01-r1.ebuild:
+  Mark stable on alpha
 
   31 Dec 2002; Aron Griffis <agriffis@gentoo.org> libcpml-5.2.01-r1.ebuild:
   Use ev6 flag to determine which math library to use.  KEYWORDS=~alpha for
