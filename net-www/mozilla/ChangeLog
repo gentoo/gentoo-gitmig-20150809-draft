@@ -1,8 +1,13 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.86 2003/03/13 19:35:51 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.87 2003/03/18 17:53:01 azarah Exp $
 
-  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> mozilla-1.2.1-r5.ebuild:
+*mozilla-1.3 (18 Mar 2003)
+
+  18 Mar 2003; Martin Schlemmer <azarah@gentoo.org> mozilla-1.3.ebuild :
+  New version.
+
+  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> mozilla-1.2.1-r5.ebuild :
   Marked ppc stable
 
 *mozilla-1.3_beta (23 Feb 2003)
