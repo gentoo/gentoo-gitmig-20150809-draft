@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/alsa-xmms
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.12 2004/01/03 12:58:08 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.13 2004/02/27 04:13:23 eradicator Exp $
+
+  26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-xmms-0.9.10.ebuild, alsa-xmms-0.9.11.ebuild, alsa-xmms-0.9.12.ebuild,
+  alsa-xmms-0.9.5.ebuild, alsa-xmms-0.9.6b.ebuild, alsa-xmms-0.9.7.ebuild,
+  alsa-xmms-0.9.9b.ebuild:
+  Blocking against newer xmms versions which include it already. Removing old
+  ebuilds.
 
   03 Jan 2004; Martin Holzer <mholzer@gentoo.org> alsa-xmms-0.9.12.ebuild,
   files/alsa-xmms-alsa.patch:

@@ -1,12 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/alsa-xmms-0.9.12.ebuild,v 1.6 2004/01/03 12:58:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/alsa-xmms-0.9.12.ebuild,v 1.7 2004/02/27 04:13:23 eradicator Exp $
 
 DESCRIPTION="XMMS output plugin for ALSA 0.9*.  Supports surround 4.0 output with conversion."
 HOMEPAGE="http://savannah.gnu.org/download/alsa-xmms/"
 
 LICENSE="GPL-2"
 DEPEND=">=media-sound/xmms-1.2.4
+	!>=media-sound/xmms-1.2.8
 	>=media-libs/alsa-lib-0.9.2
 	virtual/alsa"
 
