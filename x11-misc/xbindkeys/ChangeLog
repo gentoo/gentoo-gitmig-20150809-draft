@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.4 2003/02/12 09:32:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.5 2003/10/03 22:53:50 gregf Exp $
+
+*xbindkeys-1.6.4 (03 Oct 2003)
+
+  03 Oct 2003; Greg Fitzgerald <gregf@gentoo.org> xbindkeys-1.6.4.ebuild:
+  Version Bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
