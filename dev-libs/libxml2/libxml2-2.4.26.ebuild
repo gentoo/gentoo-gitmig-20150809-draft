@@ -1,28 +1,36 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.26.ebuild,v 1.1 2002/10/27 14:06:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.26.ebuild,v 1.2 2002/11/08 17:56:38 foser Exp $
 
-inherit libtool gnome2 debug
+inherit libtool gnome2
 
+IUSE="zlib python readline"
 S=${WORKDIR}/${P}
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=sys-libs/ncurses-5.2
-	>=sys-libs/readline-4.1
-	>=sys-libs/zlib-1.1.4" 
-
+DEPEND="zlib? ( sys-libs/zlib )
+	python? ( dev-lang/python )
+	readline? ( sys-libs/readline )"
+ 
 SLOT="2"
 LICENSE="MIT"
-KEYWORDS="x86 sparc sparc64 ppc alpha"
+KEYWORDS="~x86 ~sparc ~sparc64 ~ppc ~alpha"
 
 src_compile() {
 	# Fix .la files of python site packages
 	elibtoolize
 
-	econf --with-zlib  || die
-#	patch -p0 < ${FILESDIR}/Makefile-py.patch || die "no, patch failed"
-	make || die
+	local myconf
+
+	use zlib && myconf="--with-zlib" || myconf="--without-zlib"
+	use python && myconf="${myconf} --with-python" \
+		|| myconf="${myconf} --without-python" 
+	use readline && myconf="${myconf} --with-readline" \
+		|| myconf="${myconf} --without-readline"
+
+	econf ${myconf}  || die
+	emake || die
 }
 
 src_install() {

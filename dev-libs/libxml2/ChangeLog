@@ -1,11 +1,13 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.16 2002/10/27 14:06:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.17 2002/11/08 17:56:38 foser Exp $
 
 *libxml2-2.4.27 (27 Oct 2002)
 
-  27 Oct 2002; foser <foser@gentoo.org> libxml2-2.4.26.ebuild :
+  07 Nov 2002; foser <foser@gentoo.org> libxml2-2.4.26.ebuild :
+  Fixed the ebuild a bit. Now USE flags for deps.
 
+  27 Oct 2002; foser <foser@gentoo.org> libxml2-2.4.26.ebuild :
   Gnome 2.1 commit
 
 *libxml2-2.4.24 (06 Sep 2002)
