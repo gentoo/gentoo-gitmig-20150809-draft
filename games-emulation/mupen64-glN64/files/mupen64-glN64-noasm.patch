@@ -1,0 +1,8 @@
+--- glN64-0.4.1-rc2/Makefile.old	2005-01-02 13:25:52.767070072 -0800
++++ glN64-0.4.1-rc2/Makefile	2005-01-02 13:26:11.325862186 -0800
+@@ -1,4 +1,4 @@
+-DEFINES	=	-D__LINUX__ -DX86_ASM
++DEFINES	=	-D__LINUX__
+ CXX	=	g++
+ CXXFLAGS =	-I. $(DEFINES) `sdl-config --cflags` `gtk-config --cflags gtk gthread` `glib-config --cflags`
+ #CXXFLAGS =	-I. $(DEFINES) `sdl-config --cflags` `gtk-config --cflags gtk gthread` \

@@ -1,0 +1,23 @@
+--- glN64-0.4.1-rc2/Combiner.cpp.old	2005-01-01 22:36:47.544787228 -0800
++++ glN64-0.4.1-rc2/Combiner.cpp	2005-01-01 22:49:36.378081612 -0800
+@@ -348,7 +348,7 @@
+ void Combiner_SelectCombine( u64 mux )
+ {
+ 	// Hack for the Banjo-Tooie shadow (framebuffer textures must be enabled too)
+-	if ((gDP.otherMode.cycleType == G_CYC_1CYCLE) && (mux == 0x00ffe7ffffcf9fcf) && (cache.current[0]->frameBufferTexture))
++	if ((gDP.otherMode.cycleType == G_CYC_1CYCLE) && (mux == 0x00ffe7ffffcf9fcfLL) && (cache.current[0]->frameBufferTexture))
+ 	{
+ 		mux = EncodeCombineMode( 0, 0, 0, 0, TEXEL0, 0, PRIMITIVE, 0,
+ 								 0, 0, 0, 0, TEXEL0, 0, PRIMITIVE, 0 );
+--- glN64-0.4.1-rc2/Makefile.old	2005-01-01 22:49:09.309843328 -0800
++++ glN64-0.4.1-rc2/Makefile	2005-01-01 22:49:36.378081612 -0800
+@@ -1,8 +1,6 @@
+ DEFINES	=	-D__LINUX__ -DX86_ASM
+ CXX	=	g++
+-CXXFLAGS =	-I. $(DEFINES) `sdl-config --cflags` `gtk-config --cflags gtk gthread` \
+-		`glib-config --cflags` -finline-functions -funroll-loops \
+-		-ffast-math -fomit-frame-pointer -mcpu=`uname -m` -O3
++CXXFLAGS =	-I. $(DEFINES) `sdl-config --cflags` `gtk-config --cflags gtk gthread` `glib-config --cflags`
+ #CXXFLAGS =	-I. $(DEFINES) `sdl-config --cflags` `gtk-config --cflags gtk gthread` \
+ #		 `glib-config --cflags` -g3 #-DDEBUG
+ LD	=	g++

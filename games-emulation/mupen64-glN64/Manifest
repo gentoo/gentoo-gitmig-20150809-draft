@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b373f8817725b63d4b850b86ce7f2ed7 ChangeLog 904
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 2f76fcc7e65905f88e67949d186b62eb mupen64-blight-glN64-0.4.1_pre1.ebuild 765
+MD5 d2f2bca612361154241f2b899673230e files/digest-mupen64-blight-glN64-0.4.1_pre1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3KbQUpKYMelfdYERAr5FAJ90dFBpGly2HNhOfNWDBiKb7S67EACbBJbs
+Ttr1V0AEslXfbhTvSD91v7o=
+=BgFK
+-----END PGP SIGNATURE-----
