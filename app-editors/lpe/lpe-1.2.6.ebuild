@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/lpe-1.2.6.ebuild,v 1.1 2003/10/04 15:22:15 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/lpe-1.2.6.ebuild,v 1.2 2003/10/21 00:28:57 pyrania Exp $
 
 DESCRIPTION="Lightweight Programmers Editor"
 HOMEPAGE="http://cdsmith.twu.net/professional/opensource/lpe.html"
@@ -37,5 +37,5 @@ src_install () {
 		docdir=${D}/usr/share/doc/${PF} \
 		exdir=${D}/usr/share/doc/${PF}/examples \
 		install || die
-	prealldocs
+	prepalldocs
 }
