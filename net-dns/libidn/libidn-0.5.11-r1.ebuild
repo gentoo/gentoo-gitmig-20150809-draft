@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.11-r1.ebuild,v 1.2 2004/11/30 20:33:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.11-r1.ebuild,v 1.3 2004/12/03 08:04:11 dragonheart Exp $
 
 inherit java-pkg
 
@@ -31,17 +31,21 @@ src_compile() {
 		check_java_config
 	fi
 
+	if use amd64; then
+		myconf="--with-pic"
+	else
+		myconf="`use_with pic`"
+	fi
 	econf \
 		`use_enable nls` \
 		`use_enable java` \
-		`use_with pic` \
 		${myconf} || die "Configure failed"
 
 	emake || die "Make failed"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 
 	if use java; then
 		java-pkg_dojar ${D}/usr/share/java/libidn-0.5.11.jar || die

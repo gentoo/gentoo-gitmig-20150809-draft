@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.15 2004/11/30 20:33:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.16 2004/12/03 08:04:11 dragonheart Exp $
+
+  03 Dec 2004; Daniel Black <dragonheart@gentoo.org> libidn-0.5.11-r1.ebuild:
+  Handles pic correctly now thanks to Daniel Karlsson 
+  <boogah@t-gul.rsn.bth.se> in bug #72969
 
   01 Dec 2004; Daniel Black <dragonheart@gentoo.org> libidn-0.5.11-r1.ebuild:
   moved stray symlink in install
