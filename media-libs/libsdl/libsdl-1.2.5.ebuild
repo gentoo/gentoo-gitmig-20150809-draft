@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5.ebuild,v 1.4 2002/12/06 23:45:49 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5.ebuild,v 1.5 2003/01/08 21:54:09 azarah Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa directfb"
 
-S=${WORKDIR}/SDL-${PV}
+S="${WORKDIR}/SDL-${PV}"
 DESCRIPTION="Simple Direct Media Layer"
 SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 HOMEPAGE="http://www.libsdl.org/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 alpha ~ppc"
+KEYWORDS="x86 alpha ~ppc"
 
 RDEPEND=">=media-libs/audiofile-0.1.9
 	X? ( virtual/x11 )
@@ -21,8 +21,8 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	svga? ( >=media-libs/svgalib-1.4.2 )
-	opengl? ( virtual/opengl )
-	directfb? ( dev-libs/DirectFB )"
+	opengl? ( virtual/opengl )"
+#	directfb? ( dev-libs/DirectFB )"
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
@@ -98,9 +98,10 @@ src_compile() {
 		&& myconf="${myconf} --enable-video-opengl" \
 		|| myconf="${myconf} --disable-video-opengl"
 
-	use directfb \
-		&& myconf="${myconf} --enable-video-directfb" \
-		|| myconf="${myconf} --disable-video-directfb"
+# This create circular deps for the moment ...
+#	use directfb \
+#		&& myconf="${myconf} --enable-video-directfb" \
+#		|| myconf="${myconf} --disable-video-directfb"
 
 	use x86 \
 		&& myconf="${myconf} --enable-nasm" \

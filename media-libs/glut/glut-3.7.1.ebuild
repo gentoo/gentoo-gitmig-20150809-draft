@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.4 2002/12/15 10:44:20 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.5 2003/01/08 21:58:41 azarah Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.opengl.org/developers/documentation/glut/"
 
 SLOT="0"
 LICENSE="X11 | GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/opengl
 	virtual/glu"
