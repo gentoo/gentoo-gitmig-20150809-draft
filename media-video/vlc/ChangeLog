@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.2 2002/05/07 16:06:54 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.3 2002/05/19 10:14:31 seemant Exp $
+
+*vlc-0.3.1-r1 (19 May 2002)
+
+  19 May 2002; Seemant Kulleen <seemant@gentoo.org> vlc-0.3.1-r1.ebuild
+  files/digest-vlc-0.3.1-r1 :
+
+  Added USE dependent ALSA support, since gentoo now defaults to alsa-0.9
 
 *vlc-0.3.1 (07 May 2002)
 
