@@ -3,6 +3,9 @@
 
 *ted-2.12 (24 Dec 2002)
 
+  12 Mar 2003; Martin Holzer <mholzer@gentoo.org> ted-2.12.ebuild:
+  added cd ${S}. Closes #17344
+
   24 Dec 2002; Martin Holzer <mholzer@gentoo.org> : ted-2.11.ebuild files/digest-ted-2.12 ChangeLog :
   Version pump submitted by Mark Hollomon #12625.
   
