@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.273 2004/03/14 22:17:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.274 2004/03/15 17:43:15 max Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -199,6 +199,7 @@ net-mail/exim:lmtp - Adds support for lmtp
 net-mail/mutt:nntp - Adds support for nntp via patch
 net-mail/mutt:vanilla - Refrain from patching additional functionality into mutt
 net-mail/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
+net-mail/postfix:vda - Adds support for virtual delivery agent quota enforcing
 net-mail/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
 net-mail/qmail:notlsbeforeauth - If you do NOT want to require STARTTLS before offering AUTH
 net-mail/squirrelmail:virus-scan - Install plugin to support virus scanning of email attatchments
