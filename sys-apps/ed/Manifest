@@ -1,9 +1,16 @@
-MD5 41da455193ffeb42d4be3e78bb48d087 ed-0.2-r5.ebuild 1347
-MD5 d1b602f11d8b40bf22397ac5863efe8d ed-0.2-r4.ebuild 1333
-MD5 0a2b196776175574986fc5917f1b4fbb ChangeLog 2433
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f65f890bb8e07a77fa27888e6db32139 ChangeLog 2657
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r4 58
-MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r5 58
-MD5 23a8b5483bac37c6fcd9bbb73efaf502 files/0.2-r5-mkstemp.patch 981
-MD5 e7e2248f9baa76de3db8210298e0d79e files/0.2-mkstemp.patch 738
+MD5 90f4a89ff36d4673f28be667a62f381f ed-0.2-r5.ebuild 1535
+MD5 23a8b5483bac37c6fcd9bbb73efaf502 files/0.2-mkstemp.patch 981
 MD5 549e2478edb18002261ae5dd055bcf5b files/0.2-info-dir.patch 373
+MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r5 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB4ZToroRuSHgZdywRAqsCAJ9VOf8mCFsBvssMRZMycA/LXIiwzQCfRms0
+jADkSQ5/A6u+xEZkxXmRTH0=
+=0nw0
+-----END PGP SIGNATURE-----
