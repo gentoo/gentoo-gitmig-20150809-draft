@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.93 2004/11/14 01:00:27 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.94 2004/11/30 21:09:19 rac Exp $
+
+*perl-5.8.6 (30 Nov 2004)
+
+  30 Nov 2004; Robert Coie <rac@gentoo.org> +files/perl-5.8.6-noksh.patch,
+  +files/perl-5.8.6-perldoc-emptydirs.patch, +files/perl-5.8.6-picdl.patch,
+  +files/perl-5.8.6-prelink-lpthread.patch,
+  +files/perl-5.8.6-reorder-INC.patch, +perl-5.8.6.ebuild:
+  New upstream
 
   13 Nov 2004; Robert Coie <rac@gentoo.org> perl-5.8.5-r1.ebuild:
   Go ahead and use the myarch that exists
