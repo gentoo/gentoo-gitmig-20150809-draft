@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksvg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.1 2005/02/11 15:51:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.2 2005/02/11 17:56:48 danarmak Exp $
+
+  11 Feb 2005; Dan Armak <danarmak@gentoo.org> ksvg-3.4.0_beta2-r1.ebuild:
+  I realized I was wrong to add both blocking deps and a move instruction.
+  Removing the blocking deps.
 
 *ksvg-3.4.0_beta2-r1 (11 Feb 2005)
 
