@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.72 2003/09/20 18:32:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.73 2003/09/20 21:50:58 pappy Exp $
+
+  20 Sep 2003; Alexander Gabert <pappy@gentoo.org>
+  binutils-2.14.90.0.6-r3.ebuild:
+  added hppa static fpic bugfix by tausq
 
   20 Sep 2003; <solar@gentoo.org> binutils-2.14.90.0.6-r3.ebuild,
   files/2.14/binutils-2.14.90.0.6-bfd-elf-interp.patch:
