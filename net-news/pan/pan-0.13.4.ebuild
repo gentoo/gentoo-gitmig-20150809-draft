@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.7 2004/03/08 11:31:21 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.8 2004/06/10 00:52:55 agriffis Exp $
 
 IUSE="spell"
 
@@ -29,7 +29,7 @@ src_compile() {
 
 	# Likely that glibc might of been compiled with nls turned off.
 	# Warn people that Pan requires glibc to have nls support.
-	if [ -z "`use nls`" ]; then
+	if ! use nls; then
 		ewarn "Pan requires glibc to be merged with 'nls' in your USE flags."
 	fi
 
