@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.4-r1.ebuild,v 1.1 2004/09/16 16:12:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.4-r1.ebuild,v 1.2 2004/09/16 16:13:41 eradicator Exp $
 
 IUSE=""
 
@@ -50,7 +50,7 @@ src_install() {
 	dodir /etc/shoutcast
 	insinto /etc/shoutcast
 	doins sc_serv.conf
-	
+
 	# install documentation
 	dodoc README
 	cp sc_serv.conf sc_serv.conf.example
