@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.0.ebuild,v 1.5 2004/01/22 18:35:44 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.0.ebuild,v 1.6 2004/02/06 20:11:20 plasmaroo Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -53,8 +53,11 @@ src_unpack() {
 
 src_compile() {
 
-	# Do normal src_compile stuff
-	kernel_src_compile
+	# Compile the default configuration
+	MY_ARCH=${ARCH}
+	unset ${ARCH}
+	make defconfig
+	ARCH=${MY_ARCH}
 
 	# If this is sparc, then generate asm_offsets.h
 	if [ -n "`use sparc`" ]; then
