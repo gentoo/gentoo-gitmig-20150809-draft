@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.29.ebuild,v 1.2 2000/09/15 20:08:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.29.ebuild,v 1.3 2000/11/01 04:44:16 achim Exp $
 
 P=XML-Parser-2.29
 A=${P}.tar.gz
@@ -11,6 +11,8 @@ DESCRIPTION="A  Perl extension interface to James Clark's XML parser, expat."
 SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${A}"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.readme"
 
+DEPEND=">=sys-devel/perl-5
+	>=sys-libs/glibc-2.1.3"
 
 src_compile() {
 

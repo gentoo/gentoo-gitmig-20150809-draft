@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.4 2000/10/23 11:27:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.5 2000/11/01 04:44:16 achim Exp $
 
 P=yacc-1.9.1
 A=${P}.tar.Z
 S=${WORKDIR}/${P}
 DESCRIPTION="Yacc"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/${A}"
+DEPEND=">=sys-libs/glibc-2.1.3"
 
 src_unpack () {
   unpack ${A}

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r1.ebuild,v 1.5 2000/10/23 11:27:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r1.ebuild,v 1.6 2000/11/01 04:44:16 achim Exp $
 
 P=guile-1.4
 A=${P}.tar.gz
@@ -10,6 +10,13 @@ DESCRIPTION="Guile is an interpreter for Scheme"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/guile/${A}
 	 ftp://prep.ai.mit.edu/gnu/guile/${A}"
 HOMEPAGE="http://www.gnu.org/software/guile/"
+
+DEPEND=">=sys-apps/bash-2.04 
+	>=sys-apps/gawk-3.0.6 
+	>=sys-libs/glibc-2.1.3 
+	>=sys-libs/ncurses-5.1
+	>=sys-libs/gpm-1.19.3"
+
 
 src_unpack() {
   unpack ${A}
