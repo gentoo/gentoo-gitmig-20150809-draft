@@ -1,8 +1,8 @@
 # ChangeLog for app-sci/scilab
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.7 2003/10/05 17:01:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.8 2003/10/06 23:29:10 george Exp $
 
-  05 Sep 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
+  05 Oct 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
   looks like enabling gtk makes scilab stop building macros,
   forced macros build in ebuild. 
   Also added check for previous version installed, as it would have
