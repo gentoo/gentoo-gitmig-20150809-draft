@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.12.ebuild,v 1.3 2003/12/17 04:28:05 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.12.ebuild,v 1.4 2004/06/08 09:05:40 kloeri Exp $
 
 IUSE="nls"
 
