@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.217 2005/01/23 10:16:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.218 2005/01/23 10:22:56 ka0ttic Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -269,7 +269,7 @@ tcpd - Adds support for TCP wrappers
 test - Work around to pull in packages needed to run with FEATURES=maketest / FEATURES=test
 tetex - Adds support for teTeX
 theora - Adds support for the Theora Video Compression Codec
-threads - Adds thread support for various packages. Usually pthead
+threads - Adds threads support for various packages. Usually pthreads
 tidy - Adds support for HTML Tidy
 tiff - Adds support for the tiff image format
 tokenizer - Adds support for the PHP file parser
