@@ -1,18 +1,6 @@
-diff -uNr xv-3.10a/Makefile xv-3.10a.n/Makefile
---- xv-3.10a/Makefile	Mon Jan 23 21:20:54 1995
-+++ xv-3.10a.n/Makefile	Wed Jun  5 11:05:56 2002
-@@ -188,7 +188,7 @@
- 	$(NODIRENT) $(VPRINTF) $(TIMERS) $(UNIX) $(BSDTYPES) $(RAND) \
- 	$(DXWM) $(MCHN)
- 
--LIBS = -lX11 $(JPEGLIB) $(TIFFLIB) -lm
-+LIBS = -L/usr/X11R6/lib -lX11 $(JPEGLIB) $(TIFFLIB) -lm
- 
- OBJS = 	xv.o xvevent.o xvroot.o xvmisc.o xvimage.o xvcolor.o xvsmooth.o \
- 	xv24to8.o xvgif.o xvpm.o xvinfo.o xvctrl.o xvscrl.o xvalg.o \
-diff -uNr xv-3.10a/tiff/Makefile xv-3.10a.n/tiff/Makefile
---- xv-3.10a/tiff/Makefile	Thu Dec 22 23:35:12 1994
-+++ xv-3.10a.n/tiff/Makefile	Wed Jun  5 11:26:30 2002
+diff -urN xv-3.10a.enhanced.gentoo/tiff/Makefile xv-3.10a/tiff/Makefile
+--- xv-3.10a.enhanced.gentoo/tiff/Makefile	1994-12-23 07:35:12.000000000 +0900
++++ xv-3.10a/tiff/Makefile	2003-08-14 22:35:04.000000000 +0900
 @@ -60,7 +60,6 @@
  
  ${ALL}:	${OBJS}
@@ -20,16 +8,4 @@ diff -uNr xv-3.10a/tiff/Makefile xv-3.10a.n/tiff/Makefile
 -	${RANLIB} libtiff.a
  
  ${OBJS}:	tiffio.h tiff.h tiffcomp.h tiffiop.h tiffconf.h
- 
-diff -uNr xv-3.10a/xv.h xv-3.10a.n/xv.h
---- xv-3.10a/xv.h	Mon Jan 23 21:22:23 1995
-+++ xv-3.10a.n/xv.h	Wed Jun  5 11:06:18 2002
-@@ -116,7 +116,7 @@
- #  include <errno.h>
-    extern int   errno;             /* SHOULD be in errno.h, but often isn't */
- #  ifndef __NetBSD__
--     extern char *sys_errlist[];     /* this too... */
-+//     extern char *sys_errlist[];     /* this too... */
- #  endif
- #endif
  

@@ -1,6 +1,6 @@
-diff -Nur xv-3.10a.enhanced/Imakefile xv-3.10a.gentoo/Imakefile
---- xv-3.10a.enhanced/Imakefile	2003-04-27 17:09:29.000000000 -0700
-+++ xv-3.10a.gentoo/Imakefile	2003-04-27 22:12:28.000000000 -0700
+diff -urN xv-3.10a.enhanced/Imakefile xv-3.10a/Imakefile
+--- xv-3.10a.enhanced/Imakefile	2003-08-07 15:11:03.000000000 +0900
++++ xv-3.10a/Imakefile	2003-08-07 14:51:50.000000000 +0900
 @@ -15,6 +15,12 @@
  #define HaveTiff
  
@@ -91,9 +91,9 @@ diff -Nur xv-3.10a.enhanced/Imakefile xv-3.10a.gentoo/Imakefile
  
  
  SRCS = $(SRCS1) $(SRCS2) $(SRCS3) $(SRCS4)
-diff -Nur xv-3.10a.enhanced/Makefile xv-3.10a.gentoo/Makefile
---- xv-3.10a.enhanced/Makefile	2003-04-27 21:18:58.000000000 -0700
-+++ xv-3.10a.gentoo/Makefile	2003-04-27 22:12:17.000000000 -0700
+diff -urN xv-3.10a.enhanced/Makefile xv-3.10a/Makefile
+--- xv-3.10a.enhanced/Makefile	2003-08-07 15:11:03.000000000 +0900
++++ xv-3.10a/Makefile	2003-08-07 14:51:50.000000000 +0900
 @@ -1,8 +1,8 @@
  # Makefile for xv
  
@@ -239,31 +239,9 @@ diff -Nur xv-3.10a.enhanced/Makefile xv-3.10a.gentoo/Makefile
  
  MISC = README INSTALL CHANGELOG IDEAS
  
-@@ -256,13 +258,14 @@
- 
- 
- install: all
--	cp xv bggen vdcomp xcmap xvpictoppm $(BINDIR)
--	cp docs/xv.man     $(MANDIR)/xv.$(MANSUF)
--	cp docs/bggen.man  $(MANDIR)/bggen.$(MANSUF)
--	cp docs/xcmap.man  $(MANDIR)/xcmap.$(MANSUF)
--	cp docs/xvp2p.man  $(MANDIR)/xvpictoppm.$(MANSUF)
--	cp docs/vdcomp.man $(MANDIR)/vdcomp.$(MANSUF)
--	cp docs/xvdocs.ps* $(LIBDIR)
-+	 mkdir -p ${DESTDIR}/{${BINDIR},$(MANDIR),$(LIBDIR),${DOCDIR}}
-+	cp xv bggen vdcomp xcmap xvpictoppm ${DESTDIR}/$(BINDIR)
-+	cp docs/xv.man     ${DESTDIR}/$(MANDIR)/xv.$(MANSUF)
-+	cp docs/bggen.man  ${DESTDIR}/$(MANDIR)/bggen.$(MANSUF)
-+	cp docs/xcmap.man  ${DESTDIR}/$(MANDIR)/xcmap.$(MANSUF)
-+	cp docs/xvp2p.man  ${DESTDIR}/$(MANDIR)/xvpictoppm.$(MANSUF)
-+	cp docs/vdcomp.man ${DESTDIR}/$(MANDIR)/vdcomp.$(MANSUF)
-+	cp docs/xvdocs.ps* ${DESTDIR}/$(DOCDIR)
- 
- tar:
- 	tar cvf xv.tar Makefile* Imakefile *.c *.h bits \
-diff -Nur xv-3.10a.enhanced/Makefile.std xv-3.10a.gentoo/Makefile.std
---- xv-3.10a.enhanced/Makefile.std	2003-04-27 17:10:54.000000000 -0700
-+++ xv-3.10a.gentoo/Makefile.std	2003-04-27 22:12:24.000000000 -0700
+diff -urN xv-3.10a.enhanced/Makefile.std xv-3.10a/Makefile.std
+--- xv-3.10a.enhanced/Makefile.std	2003-08-07 15:11:03.000000000 +0900
++++ xv-3.10a/Makefile.std	2003-08-07 14:51:50.000000000 +0900
 @@ -215,7 +215,7 @@
  	xvdial.o xvgraf.o xvsunras.o xvjpeg.o xvps.o xvpopup.o xvdflt.o \
  	xvtiff.o xvtiffwr.o xvpds.o xvrle.o xviris.o xvgrab.o vprintf.o \
@@ -273,10 +251,9 @@ diff -Nur xv-3.10a.enhanced/Makefile.std xv-3.10a.gentoo/Makefile.std
  
  MISC = README INSTALL CHANGELOG IDEAS
  
-Files xv-3.10a.enhanced/bggen and xv-3.10a.gentoo/bggen differ
-diff -Nur xv-3.10a.enhanced/jpeg/Makefile xv-3.10a.gentoo/jpeg/Makefile
---- xv-3.10a.enhanced/jpeg/Makefile	1969-12-31 16:00:00.000000000 -0800
-+++ xv-3.10a.gentoo/jpeg/Makefile	2003-04-27 22:11:23.000000000 -0700
+diff -urN xv-3.10a.enhanced/jpeg/Makefile xv-3.10a/jpeg/Makefile
+--- xv-3.10a.enhanced/jpeg/Makefile	1970-01-01 09:00:00.000000000 +0900
++++ xv-3.10a/jpeg/Makefile	2003-08-07 14:51:50.000000000 +0900
 @@ -0,0 +1,239 @@
 +# Generated automatically from makefile.cfg by configure.
 +# Makefile for Independent JPEG Group's software
@@ -517,17 +494,16 @@ diff -Nur xv-3.10a.enhanced/jpeg/Makefile xv-3.10a.gentoo/jpeg/Makefile
 +wrrle.o : wrrle.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
 +rdjpgcom.o : rdjpgcom.c jinclude.h jconfig.h
 +wrjpgcom.o : wrjpgcom.c jinclude.h jconfig.h
-Files xv-3.10a.enhanced/jpeg/cjpeg.o and xv-3.10a.gentoo/jpeg/cjpeg.o differ
-diff -Nur xv-3.10a.enhanced/jpeg/config.log xv-3.10a.gentoo/jpeg/config.log
---- xv-3.10a.enhanced/jpeg/config.log	1969-12-31 16:00:00.000000000 -0800
-+++ xv-3.10a.gentoo/jpeg/config.log	2003-04-27 22:11:20.000000000 -0700
+diff -urN xv-3.10a.enhanced/jpeg/config.log xv-3.10a/jpeg/config.log
+--- xv-3.10a.enhanced/jpeg/config.log	1970-01-01 09:00:00.000000000 +0900
++++ xv-3.10a/jpeg/config.log	2003-08-07 14:51:50.000000000 +0900
 @@ -0,0 +1,3 @@
 +This file contains any messages produced by compilers while
 +running configure, to aid debugging if configure makes a mistake.
 +
-diff -Nur xv-3.10a.enhanced/jpeg/config.status xv-3.10a.gentoo/jpeg/config.status
---- xv-3.10a.enhanced/jpeg/config.status	1969-12-31 16:00:00.000000000 -0800
-+++ xv-3.10a.gentoo/jpeg/config.status	2003-04-27 22:11:23.000000000 -0700
+diff -urN xv-3.10a.enhanced/jpeg/config.status xv-3.10a/jpeg/config.status
+--- xv-3.10a.enhanced/jpeg/config.status	1970-01-01 09:00:00.000000000 +0900
++++ xv-3.10a/jpeg/config.status	2003-08-07 14:51:50.000000000 +0900
 @@ -0,0 +1,186 @@
 +#!/bin/sh
 +# Generated automatically by configure.
@@ -715,18 +691,9 @@ diff -Nur xv-3.10a.enhanced/jpeg/config.status xv-3.10a.gentoo/jpeg/config.statu
 +
 +
 +exit 0
-Files xv-3.10a.enhanced/jpeg/jcapi.o and xv-3.10a.gentoo/jpeg/jcapi.o differ
-Files xv-3.10a.enhanced/jpeg/jccoefct.o and xv-3.10a.gentoo/jpeg/jccoefct.o differ
-Files xv-3.10a.enhanced/jpeg/jccolor.o and xv-3.10a.gentoo/jpeg/jccolor.o differ
-Files xv-3.10a.enhanced/jpeg/jcdctmgr.o and xv-3.10a.gentoo/jpeg/jcdctmgr.o differ
-Files xv-3.10a.enhanced/jpeg/jchuff.o and xv-3.10a.gentoo/jpeg/jchuff.o differ
-Files xv-3.10a.enhanced/jpeg/jcmainct.o and xv-3.10a.gentoo/jpeg/jcmainct.o differ
-Files xv-3.10a.enhanced/jpeg/jcmarker.o and xv-3.10a.gentoo/jpeg/jcmarker.o differ
-Files xv-3.10a.enhanced/jpeg/jcmaster.o and xv-3.10a.gentoo/jpeg/jcmaster.o differ
-Files xv-3.10a.enhanced/jpeg/jcomapi.o and xv-3.10a.gentoo/jpeg/jcomapi.o differ
-diff -Nur xv-3.10a.enhanced/jpeg/jconfig.h xv-3.10a.gentoo/jpeg/jconfig.h
---- xv-3.10a.enhanced/jpeg/jconfig.h	1969-12-31 16:00:00.000000000 -0800
-+++ xv-3.10a.gentoo/jpeg/jconfig.h	2003-04-27 22:11:23.000000000 -0700
+diff -urN xv-3.10a.enhanced/jpeg/jconfig.h xv-3.10a/jpeg/jconfig.h
+--- xv-3.10a.enhanced/jpeg/jconfig.h	1970-01-01 09:00:00.000000000 +0900
++++ xv-3.10a/jpeg/jconfig.h	2003-08-07 14:51:50.000000000 +0900
 @@ -0,0 +1,45 @@
 +/* jconfig.h.  Generated automatically by configure.  */
 +/* jconfig.cfg --- source file edited by configure script */
@@ -773,72 +740,9 @@ diff -Nur xv-3.10a.enhanced/jpeg/jconfig.h xv-3.10a.gentoo/jpeg/jconfig.h
 +#undef PROGRESS_REPORT
 +
 +#endif /* JPEG_CJPEG_DJPEG */
-Files xv-3.10a.enhanced/jpeg/jcparam.o and xv-3.10a.gentoo/jpeg/jcparam.o differ
-Files xv-3.10a.enhanced/jpeg/jcprepct.o and xv-3.10a.gentoo/jpeg/jcprepct.o differ
-Files xv-3.10a.enhanced/jpeg/jcsample.o and xv-3.10a.gentoo/jpeg/jcsample.o differ
-Files xv-3.10a.enhanced/jpeg/jdapi.o and xv-3.10a.gentoo/jpeg/jdapi.o differ
-Files xv-3.10a.enhanced/jpeg/jdatadst.o and xv-3.10a.gentoo/jpeg/jdatadst.o differ
-Files xv-3.10a.enhanced/jpeg/jdatasrc.o and xv-3.10a.gentoo/jpeg/jdatasrc.o differ
-Files xv-3.10a.enhanced/jpeg/jdcoefct.o and xv-3.10a.gentoo/jpeg/jdcoefct.o differ
-Files xv-3.10a.enhanced/jpeg/jdcolor.o and xv-3.10a.gentoo/jpeg/jdcolor.o differ
-Files xv-3.10a.enhanced/jpeg/jddctmgr.o and xv-3.10a.gentoo/jpeg/jddctmgr.o differ
-Files xv-3.10a.enhanced/jpeg/jdhuff.o and xv-3.10a.gentoo/jpeg/jdhuff.o differ
-Files xv-3.10a.enhanced/jpeg/jdmainct.o and xv-3.10a.gentoo/jpeg/jdmainct.o differ
-Files xv-3.10a.enhanced/jpeg/jdmarker.o and xv-3.10a.gentoo/jpeg/jdmarker.o differ
-Files xv-3.10a.enhanced/jpeg/jdmaster.o and xv-3.10a.gentoo/jpeg/jdmaster.o differ
-Files xv-3.10a.enhanced/jpeg/jdmerge.o and xv-3.10a.gentoo/jpeg/jdmerge.o differ
-Files xv-3.10a.enhanced/jpeg/jdpostct.o and xv-3.10a.gentoo/jpeg/jdpostct.o differ
-Files xv-3.10a.enhanced/jpeg/jdsample.o and xv-3.10a.gentoo/jpeg/jdsample.o differ
-Files xv-3.10a.enhanced/jpeg/jerror.o and xv-3.10a.gentoo/jpeg/jerror.o differ
-Files xv-3.10a.enhanced/jpeg/jfdctflt.o and xv-3.10a.gentoo/jpeg/jfdctflt.o differ
-Files xv-3.10a.enhanced/jpeg/jfdctfst.o and xv-3.10a.gentoo/jpeg/jfdctfst.o differ
-Files xv-3.10a.enhanced/jpeg/jfdctint.o and xv-3.10a.gentoo/jpeg/jfdctint.o differ
-Files xv-3.10a.enhanced/jpeg/jidctflt.o and xv-3.10a.gentoo/jpeg/jidctflt.o differ
-Files xv-3.10a.enhanced/jpeg/jidctfst.o and xv-3.10a.gentoo/jpeg/jidctfst.o differ
-Files xv-3.10a.enhanced/jpeg/jidctint.o and xv-3.10a.gentoo/jpeg/jidctint.o differ
-Files xv-3.10a.enhanced/jpeg/jidctred.o and xv-3.10a.gentoo/jpeg/jidctred.o differ
-Files xv-3.10a.enhanced/jpeg/jmemmgr.o and xv-3.10a.gentoo/jpeg/jmemmgr.o differ
-Files xv-3.10a.enhanced/jpeg/jmemnobs.o and xv-3.10a.gentoo/jpeg/jmemnobs.o differ
-Files xv-3.10a.enhanced/jpeg/jquant1.o and xv-3.10a.gentoo/jpeg/jquant1.o differ
-Files xv-3.10a.enhanced/jpeg/jquant2.o and xv-3.10a.gentoo/jpeg/jquant2.o differ
-Files xv-3.10a.enhanced/jpeg/jutils.o and xv-3.10a.gentoo/jpeg/jutils.o differ
-Files xv-3.10a.enhanced/jpeg/rdgif.o and xv-3.10a.gentoo/jpeg/rdgif.o differ
-Files xv-3.10a.enhanced/jpeg/rdppm.o and xv-3.10a.gentoo/jpeg/rdppm.o differ
-Files xv-3.10a.enhanced/jpeg/rdrle.o and xv-3.10a.gentoo/jpeg/rdrle.o differ
-Files xv-3.10a.enhanced/jpeg/rdtarga.o and xv-3.10a.gentoo/jpeg/rdtarga.o differ
-Files xv-3.10a.enhanced/vdcomp and xv-3.10a.gentoo/vdcomp differ
-Files xv-3.10a.enhanced/vprintf.o and xv-3.10a.gentoo/vprintf.o differ
-Files xv-3.10a.enhanced/xcmap and xv-3.10a.gentoo/xcmap differ
-Files xv-3.10a.enhanced/xv and xv-3.10a.gentoo/xv differ
-Files xv-3.10a.enhanced/xv.o and xv-3.10a.gentoo/xv.o differ
-Files xv-3.10a.enhanced/xv24to8.o and xv-3.10a.gentoo/xv24to8.o differ
-Files xv-3.10a.enhanced/xvalg.o and xv-3.10a.gentoo/xvalg.o differ
-Files xv-3.10a.enhanced/xvbmp.o and xv-3.10a.gentoo/xvbmp.o differ
-Files xv-3.10a.enhanced/xvbrowse.o and xv-3.10a.gentoo/xvbrowse.o differ
-Files xv-3.10a.enhanced/xvbutt.o and xv-3.10a.gentoo/xvbutt.o differ
-Files xv-3.10a.enhanced/xvcolor.o and xv-3.10a.gentoo/xvcolor.o differ
-Files xv-3.10a.enhanced/xvctrl.o and xv-3.10a.gentoo/xvctrl.o differ
-Files xv-3.10a.enhanced/xvcut.o and xv-3.10a.gentoo/xvcut.o differ
-Files xv-3.10a.enhanced/xvdflt.o and xv-3.10a.gentoo/xvdflt.o differ
-Files xv-3.10a.enhanced/xvdial.o and xv-3.10a.gentoo/xvdial.o differ
-Files xv-3.10a.enhanced/xvdir.o and xv-3.10a.gentoo/xvdir.o differ
-Files xv-3.10a.enhanced/xvevent.o and xv-3.10a.gentoo/xvevent.o differ
-Files xv-3.10a.enhanced/xvfits.o and xv-3.10a.gentoo/xvfits.o differ
-Files xv-3.10a.enhanced/xvgam.o and xv-3.10a.gentoo/xvgam.o differ
-Files xv-3.10a.enhanced/xvgif.o and xv-3.10a.gentoo/xvgif.o differ
-Files xv-3.10a.enhanced/xvgifwr.o and xv-3.10a.gentoo/xvgifwr.o differ
-Files xv-3.10a.enhanced/xvgrab.o and xv-3.10a.gentoo/xvgrab.o differ
-Files xv-3.10a.enhanced/xvgraf.o and xv-3.10a.gentoo/xvgraf.o differ
-Files xv-3.10a.enhanced/xviff.o and xv-3.10a.gentoo/xviff.o differ
-Files xv-3.10a.enhanced/xvimage.o and xv-3.10a.gentoo/xvimage.o differ
-Files xv-3.10a.enhanced/xvinfo.o and xv-3.10a.gentoo/xvinfo.o differ
-Files xv-3.10a.enhanced/xviris.o and xv-3.10a.gentoo/xviris.o differ
-Files xv-3.10a.enhanced/xvjpeg.o and xv-3.10a.gentoo/xvjpeg.o differ
-Files xv-3.10a.enhanced/xvmisc.o and xv-3.10a.gentoo/xvmisc.o differ
-Files xv-3.10a.enhanced/xvpbm.o and xv-3.10a.gentoo/xvpbm.o differ
-diff -Nur xv-3.10a.enhanced/xvpcd.c xv-3.10a.gentoo/xvpcd.c
---- xv-3.10a.enhanced/xvpcd.c	2003-04-27 17:09:30.000000000 -0700
-+++ xv-3.10a.gentoo/xvpcd.c	2003-04-27 21:38:49.000000000 -0700
+diff -urN xv-3.10a.enhanced/xvpcd.c xv-3.10a/xvpcd.c
+--- xv-3.10a.enhanced/xvpcd.c	2003-08-07 15:11:04.000000000 +0900
++++ xv-3.10a/xvpcd.c	2003-08-07 14:51:50.000000000 +0900
 @@ -33,6 +33,7 @@
  
  #include "xv.h"
@@ -847,23 +751,3 @@ diff -Nur xv-3.10a.enhanced/xvpcd.c xv-3.10a.gentoo/xvpcd.c
  
  /* comments on error handling:
     a truncated file is not considered a Major Error.  The file is loaded, the
-Files xv-3.10a.enhanced/xvpcd.o and xv-3.10a.gentoo/xvpcd.o differ
-Files xv-3.10a.enhanced/xvpcx.o and xv-3.10a.gentoo/xvpcx.o differ
-Files xv-3.10a.enhanced/xvpds.o and xv-3.10a.gentoo/xvpds.o differ
-Files xv-3.10a.enhanced/xvpictoppm and xv-3.10a.gentoo/xvpictoppm differ
-Files xv-3.10a.enhanced/xvpm.o and xv-3.10a.gentoo/xvpm.o differ
-Files xv-3.10a.enhanced/xvpng.o and xv-3.10a.gentoo/xvpng.o differ
-Files xv-3.10a.enhanced/xvpopup.o and xv-3.10a.gentoo/xvpopup.o differ
-Files xv-3.10a.enhanced/xvps.o and xv-3.10a.gentoo/xvps.o differ
-Files xv-3.10a.enhanced/xvrle.o and xv-3.10a.gentoo/xvrle.o differ
-Files xv-3.10a.enhanced/xvroot.o and xv-3.10a.gentoo/xvroot.o differ
-Files xv-3.10a.enhanced/xvscrl.o and xv-3.10a.gentoo/xvscrl.o differ
-Files xv-3.10a.enhanced/xvsmooth.o and xv-3.10a.gentoo/xvsmooth.o differ
-Files xv-3.10a.enhanced/xvsunras.o and xv-3.10a.gentoo/xvsunras.o differ
-Files xv-3.10a.enhanced/xvtarga.o and xv-3.10a.gentoo/xvtarga.o differ
-Files xv-3.10a.enhanced/xvtext.o and xv-3.10a.gentoo/xvtext.o differ
-Files xv-3.10a.enhanced/xvtiff.o and xv-3.10a.gentoo/xvtiff.o differ
-Files xv-3.10a.enhanced/xvtiffwr.o and xv-3.10a.gentoo/xvtiffwr.o differ
-Files xv-3.10a.enhanced/xvxbm.o and xv-3.10a.gentoo/xvxbm.o differ
-Files xv-3.10a.enhanced/xvxpm.o and xv-3.10a.gentoo/xvxpm.o differ
-Files xv-3.10a.enhanced/xvxwd.o and xv-3.10a.gentoo/xvxwd.o differ
