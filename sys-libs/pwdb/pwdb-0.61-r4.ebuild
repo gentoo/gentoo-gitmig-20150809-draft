@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.17 2003/09/12 01:58:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.18 2003/09/18 00:50:06 avenj Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="BSD | GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm ia64"
 
 DEPEND="virtual/glibc"
 
