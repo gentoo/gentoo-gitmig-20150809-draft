@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1-r1.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1-r1.ebuild,v 1.5 2002/08/11 14:33:43 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
@@ -35,7 +35,7 @@ src_install() {
 		install || die
 
 	cd clients
-	exeinto /usr/local/httpd/cgi-bin/nut
+	exeinto /home/httpd/cgi-bin/nut
 	doexe *.cgi
 	into /usr
 	dolib upsfetch.o
@@ -43,7 +43,7 @@ src_install() {
 	doins upsfetch.h
 	cd ..
 	rmdir ${D}/usr/misc
-	insinto /etc/rc.d/init.d
+	insinto /etc/init.d
 	doins ${O}/files/upsd
 	dodoc COPYING CREDITS Changes QUICKSTART README
 	docinto docs
