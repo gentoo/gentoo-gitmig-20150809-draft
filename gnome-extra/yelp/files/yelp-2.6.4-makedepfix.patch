@@ -1,0 +1,26 @@
+diff -ur yelp-2.6.4/src/Makefile.am yelp-2.6.4.new/src/Makefile.am
+--- yelp-2.6.4/src/Makefile.am	2004-01-12 02:07:04.000000000 +0000
++++ yelp-2.6.4.new/src/Makefile.am	2004-11-15 19:12:07.990444240 +0000
+@@ -17,7 +17,7 @@
+ noinst_PROGRAMS = test-man-parser test-pager
+ 
+ install-exec-local:
+-	rm -f $(DESTDIR)$(bindir)/gnome-help
++	rm -f $(DESTDIR)$(bindir)/gnome-help; \
+ 	ln -s yelp $(DESTDIR)$(bindir)/gnome-help
+ 
+ yelp-marshal.h: yelp-marshal.list
+Only in yelp-2.6.4.new/src: Makefile.am~
+diff -ur yelp-2.6.4/src/Makefile.in yelp-2.6.4.new/src/Makefile.in
+--- yelp-2.6.4/src/Makefile.in	2004-10-12 05:56:21.000000000 +0100
++++ yelp-2.6.4.new/src/Makefile.in	2004-11-15 19:12:30.534017096 +0000
+@@ -556,7 +556,7 @@
+ 
+ 
+ install-exec-local:
+-	rm -f $(DESTDIR)$(bindir)/gnome-help
++	rm -f $(DESTDIR)$(bindir)/gnome-help; \
+ 	ln -s yelp $(DESTDIR)$(bindir)/gnome-help
+ 
+ yelp-marshal.h: yelp-marshal.list
+Only in yelp-2.6.4.new/src: Makefile.in~

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.6.4.ebuild,v 1.5 2004/11/12 10:10:16 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.6.4.ebuild,v 1.6 2004/11/15 21:22:45 liquidx Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Help browser for GNOME"
 HOMEPAGE="http://www.gnome.org/"
@@ -31,3 +31,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-makedepfix.patch
+}
