@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21.ebuild,v 1.2 2003/09/21 01:19:30 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21.ebuild,v 1.3 2003/09/21 01:24:32 nerdboy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -11,7 +11,7 @@ EXTRAVERSION="-1.ll.acpicustom"
 S=${WORKDIR}/linux-${KV}
 
 # This package contains the Linux Kernel source for the version of the
-# Linux Kernel shipped by Red Hat, Inc. as part of their 8.0 distribution.
+# RedHat Linux Kernel modified by the Planet CCRMA project.
 #
 # Do not report problems with this source package or the resulting compiled
 # compiled kernel to Red Hat, Inc.  Red Hat is not responsible for this
