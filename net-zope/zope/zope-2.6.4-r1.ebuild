@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.9 2004/07/20 01:06:14 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.10 2004/07/27 16:02:41 batlogg Exp $
 
 inherit eutils
 
@@ -75,6 +75,11 @@ install_help() {
 		einfo "\t/etc/init.d/${ZGID} start"
 }
 
+pkg_preinst() {
+	enewgroup ${ZGID}
+	enewuser ${ZUID} 261 /bin/bash ${ZS_DIR} ${ZGID}
+}
+
 pkg_setup() {
 	if [ "${PYTHON_SLOT_VERSION}" != '' ] ; then
 		ewarn "WARNING: You set PYTHON_SLOT_VERSION=${PYTHON_SLOT_VERSION}."
@@ -87,8 +92,6 @@ pkg_setup() {
 					ewarn "with this version of zope. Emerge at your own risk."
 					sleep 12
 	fi
-	enewgroup ${ZGID}
-	enewuser ${ZUID} 261 /bin/bash ${ZS_DIR} ${ZGID}
 }
 
 src_compile() {

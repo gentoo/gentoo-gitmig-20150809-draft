@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.1.ebuild,v 1.2 2004/07/14 23:25:55 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.1.ebuild,v 1.3 2004/07/27 16:02:41 batlogg Exp $
 
 inherit eutils
 
@@ -60,9 +60,9 @@ install_help() {
 	einfo "Run zope-config to set up an instance before trying to start zope."
 }
 
-pkg_setup() {
-	enewgroup ${ZGID} 261
-	enewuser ${ZUID} 261 /bin/bash ${ZS_DIR} zope
+pkg_preinst() {
+	enewgroup ${ZGID}
+	enewuser ${ZUID} 261 /bin/bash ${ZS_DIR} ${ZGID}
 }
 
 src_compile() {
