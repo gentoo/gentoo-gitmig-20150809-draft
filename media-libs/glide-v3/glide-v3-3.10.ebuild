@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Travis Tilley <lordviram@nesit.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10.ebuild,v 1.1 2002/01/29 08:49:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10.ebuild,v 1.2 2002/01/29 08:51:42 azarah Exp $
 
 S=${WORKDIR}/${PN/-v3/3x}
 DESCRIPTION="Hardware support for the voodoo3"
@@ -48,10 +48,10 @@ src_compile() {
 		--enable-fx-glide-hw=$compilefor \
 		--enable-fx-dri-build || die
 		
-	build.3dfx all || die
+	./build.3dfx all || die
 }
 
 src_install() {
 	cd ${WORKDIR}/glide3x/build
-	build.3dfx DESTDIR=${D} install || die
+	./build.3dfx DESTDIR=${D} install || die
 }
