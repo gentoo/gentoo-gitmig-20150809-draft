@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.4.1.ebuild,v 1.1 2004/02/06 09:35:58 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.4.1.ebuild,v 1.2 2004/02/21 14:46:14 hattya Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gauche.sf.net/"
 SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
@@ -43,8 +43,7 @@ src_compile() {
 
 	sed -i -e "67s/\$(LIB_INSTALL_DIR)/\$(DISTDIR)\$(LIB_INSTALL_DIR)/" src/Makefile.in
 
-
-	filter-flags -fforce-addr
+	strip-flags
 
 	mycflags=${CFLAGS}
 	unset CFLAGS CXXFLAGS
