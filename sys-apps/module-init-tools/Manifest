@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 17b89011a2567b4045c58539ff173fcb module-init-tools-3.1.ebuild 5354
-MD5 40ac5bc82fec26ae4798037c058edcc4 ChangeLog 14013
+MD5 dc3a400b38e391b6c7c76bd85b7e83e0 ChangeLog 14167
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 8b92dabf362d229cf37abb0e09630278 module-init-tools-3.1.ebuild 5363
 MD5 5710fb42e858a845378c3fb2d024f796 module-init-tools-3.0-r2.ebuild 5336
-MD5 d179298a960a2576683689fe19818c8b files/generate-modprobe-assume-kernel.patch 3767
-MD5 060ce311606657915548168939e965b4 files/modutils-2.4.22-no-above-below.patch 382
 MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1 142
-MD5 0562a7a338175d0b6100ef7958b0ef5e files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766
+MD5 34f20e2837caff74cef9cca766e1e0c4 files/3.1-modprobe.d.5.bz2 2288
 MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
+MD5 0562a7a338175d0b6100ef7958b0ef5e files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766
+MD5 d179298a960a2576683689fe19818c8b files/generate-modprobe-assume-kernel.patch 3767
 MD5 07aa415fd57ac42cd0c11527edc9782d files/module-init-tools-0.9.15-legacy-modext-support.patch 481
+MD5 060ce311606657915548168939e965b4 files/modutils-2.4.22-no-above-below.patch 382
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBobsBPpIsIjIzwiwRAhisAKC2NRuv7o0n9t9xhJFmO2h9jGVnfwCgnFAe
-W91rmnY267ob+QKSGo3BwWc=
-=W1kW
+iD8DBQFBojnEHTu7gpaalycRAsFgAJ952WLVk2o5GXNKeAC1TFq/pcZV6QCbBqGO
+qA/d5oVMWRi9Xywxl+r5Lck=
+=Hr/j
 -----END PGP SIGNATURE-----

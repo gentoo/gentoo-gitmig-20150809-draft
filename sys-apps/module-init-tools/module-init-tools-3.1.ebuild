@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1.ebuild,v 1.1 2004/11/22 10:10:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1.ebuild,v 1.2 2004/11/22 19:09:55 vapier Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 
-inherit flag-o-matic eutils gnuconfig
+inherit flag-o-matic eutils
 
 MYP="${P/_pre/-pre}"
 S="${WORKDIR}/${MYP}"
@@ -51,15 +51,14 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/${PN}-3.1_generate-modprobe-assume-kernel.patch
 
 	cd ${S}
+	# make sure we don't try to regen the manpages
+	cp ${FILESDIR}/${PV}-modprobe.d.5.bz2 modprobe.d.5.bz2
+	bunzip2 modprobe.d.5.bz2
+	touch *.5
+
 	rm -f missing
 	export WANT_AUTOMAKE=1.6
 	automake --add-missing
-
-	cd ${S}
-	gnuconfig_update
-	if ! use no-old-linux ; then
-		cp config.{guess,sub} ${WORKDIR}/modutils-${MODUTILS_PV}/
-	fi
 }
 
 src_compile() {

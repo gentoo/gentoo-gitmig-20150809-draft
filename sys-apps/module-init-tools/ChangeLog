@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.71 2004/11/22 10:10:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.72 2004/11/22 19:09:55 vapier Exp $
+
+  22 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/3.1-modprobe.d.5.bz2, module-init-tools-3.1.ebuild:
+  Make sure we dont try to regen manpages.
 
 *module-init-tools-3.1 (22 Nov 2004)
 
