@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/raine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.2 2003/09/10 15:59:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.3 2004/01/14 02:41:41 vapier Exp $
+
+*raine-0.39.0 (Jan 13 2004)
+
+  Jan 13 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version cleanup + bump + games.eclass.
 
 *raine-0.36.2 (25 Nov 2002)
 
