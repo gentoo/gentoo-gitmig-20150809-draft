@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.2.ebuild,v 1.2 2002/08/26 20:47:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.2.ebuild,v 1.3 2002/09/05 06:37:38 azarah Exp $
 
 SV="1.3.9"
 SVREV=""
@@ -11,8 +11,8 @@ S=${WORKDIR}/rc-scripts-${SV}
 S2=${WORKDIR}/sysvinit-${SVIV}/src
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
-	ftp://unsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz
-	http://www.ibiblio.org/gentoo/distfiles/termcap.bz2"
+	ftp://unsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
+#	http://www.ibiblio.org/gentoo/distfiles/termcap.bz2"
 #	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
@@ -62,8 +62,8 @@ src_unpack() {
 	echo ">>> Unpacking rc-scripts-${SV}${SVREV}.tar.bz2"
 	tar -jxf ${FILESDIR}/rc-scripts-${SV}${SVREV}.tar.bz2 || die
 
-	echo ">>> Unpacking termcap.bz2"
-	bzip2 -dc ${DISTDIR}/termcap.bz2 > ${WORKDIR}/termcap || die
+#	echo ">>> Unpacking termcap.bz2"
+#	bzip2 -dc ${DISTDIR}/termcap.bz2 > ${WORKDIR}/termcap || die
 
 	#fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -231,8 +231,8 @@ src_install()
 	[ -f ${ROOT}/etc/passwd ] && rm -f ${D}/etc/passwd
 	[ -f ${ROOT}/etc/shadow ] && rm -f ${D}/etc/shadow
 
-	insinto /etc
-	doins ${WORKDIR}/termcap
+#	insinto /etc
+#	doins ${WORKDIR}/termcap
 
 	keepdir /lib/dev-state
 	if [ $altmerge -eq 1 ]
