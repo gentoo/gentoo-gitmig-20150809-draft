@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.13 2003/12/31 04:05:53 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.14 2004/01/26 00:02:19 vapier Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -34,11 +34,9 @@ RDEPEND="${DEPEND}
 	dev-tex/chktex"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/$P-nomktex.patch
-
 }
 
 src_compile() {
@@ -51,7 +49,7 @@ src_compile() {
 		myconf="$myconf --with-frontend=xforms"
 	fi
 
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 
 	# Aiksaurus.h fix, see bug #27648, by brandy.
 	# <obz@gentoo.org>
