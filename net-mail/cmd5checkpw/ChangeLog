@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.17 2005/02/13 20:48:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.18 2005/02/13 22:25:53 hansmi Exp $
+
+  13 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
+  cmd5checkpw-0.22-r2.ebuild:
+  Stable on ppc and hppa.
 
   13 Feb 2005; Olivier Crête <tester@gentoo.org> cmd5checkpw-0.22-r2.ebuild:
   Marking stable wrt security bug #78256
