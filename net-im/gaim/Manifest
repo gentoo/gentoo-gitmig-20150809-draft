@@ -1,11 +1,21 @@
-MD5 589f91ecfdd0e7acc51e7ca530b256a6 ChangeLog 45796
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 367bcaaeee826e22fc14a80abc614296 ChangeLog 45902
 MD5 0af3b32b8e049a3361208eee7b701724 gaim-1.1.3.ebuild 3638
+MD5 f2d76c2463da37334868c11bb1485aa9 gaim-1.1.3-r1.ebuild 4078
+MD5 8e8f5d85989232b1ded5f1e722e2b9f5 gaim-1.1.4.ebuild 4077
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
 MD5 8ee86b531b08047e75a4db5671eb9395 gaim-1.1.2.ebuild 3633
-MD5 f2d76c2463da37334868c11bb1485aa9 gaim-1.1.3-r1.ebuild 4078
-MD5 5a68697b051be235c7a0a0fd437ec4fe gaim-1.1.4.ebuild 4075
 MD5 e33ebae8e6ff204c3fdce739b35d426c files/digest-gaim-1.1.3 64
 MD5 e33ebae8e6ff204c3fdce739b35d426c files/digest-gaim-1.1.3-r1 64
 MD5 a7d3e2145df1ef66a763bd5dbb331499 files/digest-gaim-1.1.4 64
 MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
 MD5 63540ba1527c8935186ff9fd54d166a5 files/digest-gaim-1.1.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCHy6uKRy60XGEcJIRAmE0AKCJwTO/L9DoPbPwTrdceYV5vTVmVgCeNa3r
+LdWn0YrZNeoCOIeX++6prt4=
+=ti+e
+-----END PGP SIGNATURE-----
