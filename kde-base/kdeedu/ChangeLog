@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.91 2004/09/20 01:59:39 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.92 2004/10/04 15:09:49 gmsoft Exp $
+
+  04 Oct 2004; Guy Martin <gmsoft@gentoo.org> kdeedu-3.3.0.ebuild:
+  Stable on hppa.
 
   19 Sep 2004; Malcolm Lashley <malc@gentoo.org> kdeedu-3.3.0.ebuild:
   Stable on amd64
