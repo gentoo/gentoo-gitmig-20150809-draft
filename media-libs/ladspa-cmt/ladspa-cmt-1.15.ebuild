@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.9 2004/06/24 23:04:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.10 2004/07/14 09:08:51 eradicator Exp $
+
+IUSE=""
 
 S="${WORKDIR}/cmt/src"
 MY_P="cmt_src_${PV}"
@@ -9,10 +11,9 @@ DESCRIPTION="CMT (computer music toolkit) Lasdpa library plugins"
 HOMEPAGE="http://www.ladspa.org/"
 SRC_URI="http://www.ladspa.org/download/${MY_P}.tgz"
 
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE=""
 
 DEPEND="media-libs/ladspa-sdk
 	>=sys-apps/sed-4"
