@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.12 2004/12/29 00:42:01 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.13 2005/01/23 04:48:36 j4rg0n Exp $
+
+  22 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> freeglut-2.2.0.ebuild:
+  Unstable ppc-macos. Bug #63549
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -18,7 +21,7 @@
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> freeglut-2.2.0.ebuild:
   Marked ~ppc64; bug #59095
 
-  04 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> freeglut-2.2.0.ebuild:
+  04 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> freeglut-2.2.0.ebuild:
   Keyword ~alpha, bug 59095.
 
   11 Sep 2004; Guy Martin <gmsoft@gentoo.org> freeglut-2.2.0.ebuild:
