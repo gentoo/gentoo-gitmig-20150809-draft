@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8300eccfb462b877f3a67ca88f2c3c12 ChangeLog 8830
+MD5 d6311a229d19d65d549939316e1247e3 ChangeLog 8911
 MD5 bed3eab342db03b3a0ef315217ce0337 eel-1.0.2-r3.ebuild 1053
-MD5 890e6f6b2d6bbc6619210ac217ff83ca eel-2.8.2.ebuild 854
+MD5 74f2a24650b90fe96e9e2e79dd49e291 eel-2.8.2.ebuild 851
 MD5 05224b412eb70cb2dc6fb5f4f9eedf9d eel-2.6.2.ebuild 818
 MD5 8989bb4e8cb42f4ad64e17e758513143 eel-2.8.0.ebuild 868
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -11,10 +8,3 @@ MD5 c884c4a35910537301a9beec39b4d3ce files/digest-eel-1.0.2-r3 61
 MD5 264fd59008cfedede385a11935e73c63 files/digest-eel-2.8.2 62
 MD5 4db4dce6c2cb4828230a59ca6f8591da files/digest-eel-2.6.2 62
 MD5 5b6a818e2977e84150d8da4535200dac files/digest-eel-2.8.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByNTBKRy60XGEcJIRAqANAJ9+mgPclURozvi6qWUQmyhrj2iczwCgkJBD
-GEiFCkUB1489TctQ3Gzi/h0=
-=bxCZ
------END PGP SIGNATURE-----
