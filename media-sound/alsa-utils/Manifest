@@ -1,33 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4cf1aed2856af4288ddd0eab68c3499 ChangeLog 9855
+MD5 68627220cb5e4c6473f14df20c638410 ChangeLog 9941
 MD5 f1cae297e40943ab7250caf03f4fb51b alsa-utils-0.5.10-r8.ebuild 935
 MD5 8f4d45d64587cd64abf27a7328f2875f alsa-utils-0.9.0_rc2.ebuild 821
 MD5 6e78cc615da0fc4b10fdea171f211534 alsa-utils-0.9.2.ebuild 788
 MD5 282bcad49a0354a9556e16e7b42e22e7 alsa-utils-0.9.8.ebuild 1640
-MD5 9c8e4637a44f6c5359a3c0519ca3cfe5 alsa-utils-1.0.4.ebuild 1795
-MD5 851dfd61493957ba1e9675ed06a75a1f alsa-utils-1.0.5.ebuild 1696
 MD5 5acaa72cd5478b0a9b3553ebb4a60d2f alsa-utils-1.0.2.ebuild 1687
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 793ed1e2a78b3be998f11a85458d8f22 alsa-utils-1.0.3.ebuild 1680
+MD5 9c8e4637a44f6c5359a3c0519ca3cfe5 alsa-utils-1.0.4.ebuild 1795
+MD5 6ccaaa7414f86d6f515982c7eb919cac alsa-utils-1.0.5.ebuild 1692
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 dcc66ee6a9db24006a4158e2be0da3f2 files/alsa-0.5.10 392
 MD5 4d2978b89e32f1ae922eca319b87ccc0 files/alsa-modules.conf-rc 1163
 MD5 f20045fc395596290d5a6d807ba311fc files/alsa-utils-0.5.10-aplay-destdir.diff 626
+MD5 d331cfdb897b5cd5b0a3eca37ff47b9b files/alsa-utils-1.0.4-alsaconf.patch 1182
 MD5 8b504b75a499fa16ffd97740fccf983b files/alsasound 5862
 MD5 a82c4c173c1d617bae9967438c659bac files/digest-alsa-utils-0.5.10-r8 70
 MD5 59a93bf64737644e4001cbb6ad5387b4 files/digest-alsa-utils-0.9.0_rc2 71
 MD5 55414f65ffecf5f44fa35295dae8bf19 files/digest-alsa-utils-0.9.2 69
-MD5 2f5a9c2a8b65900d3e06596e994c58db files/digest-alsa-utils-1.0.4 69
 MD5 c393c831cb8bcda375cd4690e85b3495 files/digest-alsa-utils-0.9.8 69
-MD5 d331cfdb897b5cd5b0a3eca37ff47b9b files/alsa-utils-1.0.4-alsaconf.patch 1182
 MD5 937332cbdb9fab58e9e43a58a3f965de files/digest-alsa-utils-1.0.2 69
 MD5 fb1ac340c0b5d2f19099ee4c89100919 files/digest-alsa-utils-1.0.3 69
+MD5 2f5a9c2a8b65900d3e06596e994c58db files/digest-alsa-utils-1.0.4 69
 MD5 c6aff50de146998a737abed55b3dd9f1 files/digest-alsa-utils-1.0.5 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+fMMmdTrptrqvGERAqkXAJ47raTQIsxilAXeN/wO74jLtQiQfACfT+73
-HW75JjTr7C8cFguC4HHn0Io=
-=BwpX
------END PGP SIGNATURE-----
