@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.104 2004/05/15 06:50:19 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.105 2004/05/15 21:46:08 lisa Exp $
+
+  15 May 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.13-r1.ebuild,
+  distcc-2.14.ebuild:
+  Add >=gnome-base/gconf-2 as a depend for gnome to resolve bug #50594
 
   15 May 2004; Lisa Seelye <lisa@gentoo.org> :
   cleanup of old files

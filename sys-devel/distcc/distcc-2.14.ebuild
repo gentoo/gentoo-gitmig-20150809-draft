@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.14.ebuild,v 1.2 2004/05/12 12:26:20 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.14.ebuild,v 1.3 2004/05/15 21:46:08 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -30,6 +30,7 @@ RDEPEND="
 		>=gnome-base/libgnomeui-2.0.0.0
 		>=gnome-base/libglade-2.0.0
 		x11-libs/pango
+		>=gnome-base/gconf-2.0.0
 	)
 	gtk? (
 		>=x11-libs/gtk+-2.0.0
