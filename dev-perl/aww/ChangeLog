@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/aww
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.3 2004/12/20 09:56:04 mcummings Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.4 2005/02/01 11:09:24 mcummings Exp $
+
+  01 Feb 2005; Michael Cummings <mcummings@gentoo.org> aww-0.33.ebuild,
+  aww-0.34.ebuild:
+  Removing dep on Data-Dumper - this conflicts with the one provided with perl
 
 *aww-0.34 (20 Dec 2004)
 

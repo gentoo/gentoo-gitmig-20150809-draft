@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.33.ebuild,v 1.3 2004/08/03 11:31:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.33.ebuild,v 1.4 2005/02/01 11:09:24 mcummings Exp $
 
 inherit perl-module
 
@@ -21,7 +21,6 @@ DEPEND="dev-lang/perl
 dev-perl/HTML-Parser
 dev-perl/Crypt-Blowfish
 dev-perl/Getopt-Long
-dev-perl/Data-Dumper
 dev-perl/crypt-cbc
 dev-perl/Config-Simple"
 
