@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.48 2004/11/12 10:28:27 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.49 2004/12/11 09:53:48 kloeri Exp $
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  nautilus-cd-burner-2.8.2.ebuild:
+  Stable on alpha.
 
   12 Nov 2004; Mike Gardiner <obz@gentoo.org>
   nautilus-cd-burner-2.8.2.ebuild:
