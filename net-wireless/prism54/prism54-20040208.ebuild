@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20040208.ebuild,v 1.7 2005/01/02 19:50:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20040208.ebuild,v 1.8 2005/01/03 16:37:13 genstef Exp $
 
 MY_P=${P/prism54-/prism54-cvs}
 DESCRIPTION="Driver for Intersil Prism GT / Prism Duette wireless chipsets"
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="pcmcia"
 
-DEPEND="virtual/linux-sources"
+DEPEND="virtual/linux-sources
+		!net-wireless/prism54-firmware"
 RDEPEND=">=sys-apps/hotplug-20030805-r2
 		net-wireless/wireless-tools
 		pcmcia? ( sys-apps/pcmcia-cs )"
