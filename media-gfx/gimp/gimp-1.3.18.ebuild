@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.18.ebuild,v 1.1 2003/08/12 19:05:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.18.ebuild,v 1.2 2003/08/28 19:34:08 foser Exp $
 
 IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X"
 
@@ -51,8 +51,7 @@ src_compile() {
 	local AA
 	local myconf
 
-	# Strip out -fomit-frame-pointer for k6's
-	is-flag "-march=k6*" && filter-flags "-fomit-frame-pointer"
+	replace-flags "-march=k6*" "-march=i586"
 	# gimp uses inline functions (plug-ins/common/grid.c) (#23078)
 	filter-flags "-fno-inline"
 
