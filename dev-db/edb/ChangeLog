@@ -1,44 +1,13 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.17 2004/08/07 21:42:44 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.18 2004/08/10 03:11:37 vapier Exp $
 
-*edb-1.0.5.20040710 (07 Aug 2004)
+*edb-1.0.5 (09 Aug 2004)
 
-  07 Aug 2004; Tom Martin <slarti@gentoo.org> edb-1.0.3.ebuild,
-  edb-1.0.5.20040710.ebuild:
-  Typo in DESCRIPTION: Enlightment -> Enlightenment. Bug 59717.
-
-*edb-1.0.5.20040529 (29 Jun 2004)
-
-  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> edb-1.0.3.ebuild,
-  edb-1.0.5.20040529.ebuild:
-  sync IUSE (-${IUSE}), glibc -> libc
-
-*edb-1.0.4.* (13 Oct 2003)
-
-  13 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bumpage.
-
-*edb-1.0.3.20030629 (29 Jun 2003)
-
-  29 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bumpage (bug fixes from CVS).
-
-*edb-1.0.3.20030220-r1 (20 Mar 2003)
-
-  20 Mar 2003; Graham Forest <vladimir@gentoo.org>
-  edb-1.0.3.20030220-r1.ebuild:
-  Removed usage of pic USE flag
-
-*edb-1.0.3.20030220 (20 Feb 2003)
-
-  11 Mar 2003; Aron Griffis <agriffis@gentoo.org> edb-1.0.3.20030220.ebuild:
-  Add ~alpha to KEYWORDS and use -fPIC on alpha
-
-  20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bumpage (bug fixes from CVS).
+  09 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
    
-*edb-1.0.3 (3 Jun 2002)
+*edb-1.0.3 (03 Jun 2002)
 
   23 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
   Added execute bit to autogen.sh to fix compilation breakage.

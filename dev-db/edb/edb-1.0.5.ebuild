@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.5.20040710.ebuild,v 1.2 2004/08/07 21:42:44 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.5.ebuild,v 1.1 2004/08/10 03:11:37 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment flag-o-matic
@@ -19,6 +19,6 @@ src_compile() {
 		--enable-compat185
 		--enable-dump185
 	"
-	use ppc && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+	use ppc && filter-lfs-flags
 	enlightenment_src_compile
 }
