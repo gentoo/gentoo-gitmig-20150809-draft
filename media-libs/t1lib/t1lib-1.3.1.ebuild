@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.11 2003/02/13 12:56:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.12 2003/03/20 04:27:28 gmsoft Exp $
 
 IUSE="X tetex"
 
@@ -14,7 +14,7 @@ DEPEND="X? ( virtual/x11 )
 
 SLOT="0"
 LICENSE="LGPL-2 GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 src_unpack() {
 	unpack "${P}.tar.gz"

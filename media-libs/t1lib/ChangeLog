@@ -9,6 +9,9 @@
  
 *t1lib-1.3.1 (1 May 2002)
 
+  20 Mar 2003; Guy Martin <gmsoft@gentoo.org> t1lib-1.3.1.ebuild :
+  Added hppa to KEYWORDS.
+
   1 May 2002; Roman Weber <gentoo@gonzo.ch> t1lib-1.3.1.ebuild :
   
   Update to new version and fixed libtool bug. Fixes #2316
