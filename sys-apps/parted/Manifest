@@ -5,3 +5,4 @@ MD5 844bdcf30735dc2718c53408b6843f8d parted-1.6.5-r1.ebuild 1310
 MD5 17af4d8fa0f278ea445c6b1f2dc1b922 files/digest-parted-1.6.4 65
 MD5 c4eb5801edd996be57aabfd201b96711 files/digest-parted-1.6.5 65
 MD5 ca37d240601c525a3c9c4e2ce86a85b8 files/parted-1.6.5-hfs-8.patch 110746
+MD5 c4eb5801edd996be57aabfd201b96711 files/digest-parted-1.6.5-r1 65
