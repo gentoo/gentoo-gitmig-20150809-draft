@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.9 2003/10/03 13:48:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.10 2003/10/03 14:15:14 agriffis Exp $
+
+  03 Oct 2003; Aron Griffis <agriffis@gentoo.org> glide-v3-3.10-r3.ebuild:
+  Fixup for alpha (after marking stable... bad bad Aron)
 
   03 Oct 2003; Aron Griffis <agriffis@gentoo.org> glide-v3-3.10-r3.ebuild:
   Stable on alpha

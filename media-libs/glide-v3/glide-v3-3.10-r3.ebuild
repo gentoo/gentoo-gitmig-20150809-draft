@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.10 2003/10/03 13:48:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.11 2003/10/03 14:15:14 agriffis Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -49,6 +49,13 @@ src_compile() {
 	../configure --prefix=/usr \
 		--enable-fx-glide-hw=${compilefor} \
 		--enable-fx-dri-build || die
+
+	# On alpha at least, glide incorrectly guesses 486 processor.
+	# Fixup the makefiles.
+	if use alpha; then
+		find . -type f | xargs grep -le -m486 | \
+			xargs sed -i -e "s|-m486|${CFLAGS}|"
+	fi
 
 	./build.3dfx all || die
 }
