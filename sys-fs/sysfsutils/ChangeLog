@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.14 2005/03/03 16:52:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.15 2005/03/09 05:40:39 tgall Exp $
+
+  08 Mar 2005; Tom Gall <tgall@gentoo.org> sysfsutils-1.2.0.ebuild:
+  stable on ppc64, used as part of iprutils
 
   03 Mar 2005; Markus Rothe <corsair@gentoo.org> sysfsutils-1.2.0.ebuild:
   Added ~ppc64 to KEYWORDS; bug #83939
