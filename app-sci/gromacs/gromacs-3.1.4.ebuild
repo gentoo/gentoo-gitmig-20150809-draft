@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.4.ebuild,v 1.2 2003/02/13 09:22:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.4.ebuild,v 1.3 2003/03/25 09:51:20 george Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gromacs.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-libs/fftw-2.1.3
 		>=sys-devel/binutils-2.10.91.0.2"
