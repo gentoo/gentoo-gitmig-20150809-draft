@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/usbd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/ChangeLog,v 1.1 2003/01/16 07:27:45 raker Exp $
+
+*usbd-0.1 (15 Jan 2003)
+
+  15 Jan 2003; Nick Hadaway <raker@gentoo.org> usbd-0.1.ebuild,
+  files/digest-usbd-0.1, files/usbd :
+  New ebuild as suggested by Kfir Ozer on bug #11438 and modified
+  by lordvan.
