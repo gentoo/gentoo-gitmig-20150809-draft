@@ -1,0 +1,14 @@
+# ChangeLog for dev-python/quixote
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.1 2003/04/26 21:14:31 g2boojum Exp $
+
+*quixote-0.6_beta2 (21 Apr 2003)
+
+  21 Apr 2003; Grant Goodyear <g2boojum@gentoo.org> quixote-0.5.1.ebuild,
+  quixote-0.6_beta2.ebuild, quixote-0.6_beta6.ebuild:
+  New python web framework. Marked stable for 0.5.1 because I've used it.
+  Leaving the beta's marked unstable, since they're still beta.
+  That said, I highly recommend that all users who want to use quixote
+  use the latest beta, as there have been some significant changes.
+  (If it's good enough for LWN, it's good enough for me.)
+
