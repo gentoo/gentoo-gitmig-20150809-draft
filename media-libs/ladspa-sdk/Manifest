@@ -1,5 +1,5 @@
-MD5 494a5fb9f98a3646bb99dda46724e8cf ChangeLog 1514
+MD5 fa473cfd59e0de5c0b011a5e68ebeef9 ChangeLog 1623
 MD5 7db3d36ef830561974def403ef4d17da ladspa-sdk-1.0.ebuild 878
-MD5 06a56e104194b10bd9f556c876689f7b ladspa-sdk-1.12.ebuild 928
+MD5 b185a1b82cc23de747e40068e26622dd ladspa-sdk-1.12.ebuild 992
 MD5 66e1bf2c3d8f56ee85430ef5b52bb5ee files/digest-ladspa-sdk-1.0 58
 MD5 cac1ad9f78c8b6a13d80cd27413990c6 files/digest-ladspa-sdk-1.12 63

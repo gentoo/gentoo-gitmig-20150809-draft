@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.7 2003/02/11 01:17:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.8 2003/06/19 20:32:19 msterret Exp $
 
 IUSE=""
 
@@ -16,17 +16,18 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc sparc ~alpha"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-	sed -e "/^CFLAGS/ s:-O3:${CFLAGS}:" < makefile > makefile.hacked
-	mv makefile.hacked makefile
+	unpack ${A}
+	sed -i \
+		-e "/^CFLAGS/ s:-O3:${CFLAGS}:" ${S}/makefile || \
+			die "sed makefile failed"
 }
 
 src_compile() {
-	make targets || die
+	emake targets || die
 }
 
 src_install() {
@@ -34,7 +35,8 @@ src_install() {
 		INSTALL_PLUGINS_DIR=${D}/usr/lib/ladspa \
 		INSTALL_INCLUDE_DIR=${D}/usr/include \
 		INSTALL_BINARY_DIR=${D}/usr/bin \
-		install || die
+		install || die "make install failed"
 
-	dodoc ../doc/*
+	cd ../doc && \
+		dohtml *.html || die "dohtml failed"
 }
