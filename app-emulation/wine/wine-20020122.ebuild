@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020122.ebuild,v 1.1 2002/03/02 16:58:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020122.ebuild,v 1.2 2002/03/02 17:00:50 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
@@ -10,7 +10,6 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.g
 HOMEPAGE="http://www.winehq.com/"
 	  #http://wine.codeweavers.com/winesetuptk.shtml"
 
-# need to add: db2html, db2ps, db2pdf for building the docs
 DEPEND="virtual/glibc
     virtual/x11
     sys-devel/gcc
@@ -18,7 +17,7 @@ DEPEND="virtual/glibc
     dev-util/yacc
     opengl? ( virtual/opengl )
     >=sys-libs/ncurses-5.2
-    net-print/cups
+    cups? ( net-print/cups )
     >=media-libs/freetype-2.0.0
     dev-lang/tcl dev-lang/tk"
 
@@ -29,6 +28,7 @@ src_compile() {
 
     use opengl	  && myconf="--enable-opengl"				|| myconf="--disable-opengl"
     [ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" 	|| myconf="$myconf --enable-trace --enable-debug"
+    # there's no configure flag for cups, it's supposed to be autodetected
 
     ./configure --prefix=/usr --sysconfdir=/etc/wine \
 		--host=${CHOST} --enable-curses ${myconf} || die
