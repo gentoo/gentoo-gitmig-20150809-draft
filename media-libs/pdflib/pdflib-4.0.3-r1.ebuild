@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3-r1.ebuild,v 1.13 2004/01/10 17:57:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3-r1.ebuild,v 1.14 2004/01/26 19:05:16 scandium Exp $
 
 PYVER="$(/usr/bin/python -V 2>&1 | cut -d ' ' -f 2 | cut -d '.' -f 1,2)"
 DESCRIPTION="A library for generating PDF on the fly"
@@ -15,7 +15,7 @@ IUSE="tcltk perl python java"
 
 DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
 	perl? ( >=dev-lang/perl-5.1 )
-	python? ( =dev-lang/python-2.2* )
+	python? ( >=dev-lang/python-2.2 )
 	java? ( >=virtual/jdk-1.3 )"
 
 src_unpack() {
