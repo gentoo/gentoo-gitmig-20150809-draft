@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.21 2004/10/08 10:28:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.22 2004/10/25 20:00:59 arj Exp $
+
+*libebml-0.7.2 (25 Oct 2004)
+
+  25 Oct 2004; Anders Rune Jensen <arj@gentoo.org> +libebml-0.7.2.ebuild:
+  Version bump. Closes #66954
 
   08 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/libebml-0.7.1-shared.patch:
