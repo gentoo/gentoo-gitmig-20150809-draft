@@ -1,7 +1,12 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.4 2002/12/13 10:59:36 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.5 2003/02/03 18:43:12 jhhudso Exp $
 
+*nas-1.6 (03 Feb 2003)
+
+  03 Feb 2003; Jared Hudson <jhhudso@gentoo.org> : Version bump.
+
+	
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *nas-1.5 (7 Jun 2002)
