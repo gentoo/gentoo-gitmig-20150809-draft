@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.16 2004/09/24 21:29:14 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.17 2004/12/17 20:36:22 corsair Exp $
+
+  17 Dec 2004; Markus Rothe <corsair@gentoo.org> libdvdread-0.9.4.ebuild:
+  Stable on ppc64
 
   24 Sep 2004; kito@gentoo.org libdvdread-0.9.4.ebuild:
   added ~ppc-macos keyword. closes bug 59636
