@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae477605f0e74dad11922efbb9564eda ChangeLog 768
+MD5 529ddbc08a351c35060a7a0b524eb60d ChangeLog 849
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 74bab92e2995cbf9b4acc8769002ee2b pylibpcap-0.4.ebuild 577
+MD5 faa09054986efba372dcd6a30b1a9cfd pylibpcap-0.4.ebuild 578
 MD5 7f72dd0e8422b038631633864940cd56 files/digest-pylibpcap-0.4 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+/1NmdTrptrqvGERAojdAJ4q6hQw12pMe2IJBM0qYWGhYeqRNQCeJRnT
-E/pwVgdz6tGEOvChVbjEKZw=
-=cLDF
------END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylibpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.6 2005/01/29 21:16:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.7 2005/04/03 10:46:03 blubb Exp $
+
+  03 Apr 2005; Simon Stelling <blubb@gentoo.org> pylibpcap-0.4.ebuild:
+  added ~amd64
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> pylibpcap-0.4.ebuild:
   Transition dependancy from net-libs/libpcap to virtual/libpcap
