@@ -514,3 +514,8 @@ dev-lang/gpc
 # spider@gentoo.org ; 11 Apr 2002
 # Masked until we can solve the dependency issues =x11-libs/gtk+-1.2* doesn't work
 >=x11-libs/gtk+-2.0.0
+
+# mkennedy@gentoo.org ; 12 Apr 2002
+# Masked until tested by more people (see
+# http://bugs.gentoo.org/show_bug.cgi?id=1638)
+>=sys-apps/grep-2.5-r1
