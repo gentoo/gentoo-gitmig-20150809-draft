@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3.ebuild,v 1.1 2002/11/09 23:41:16 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3.ebuild,v 1.2 2002/11/10 22:21:51 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
@@ -49,6 +49,10 @@ src_compile() {
 		&& myconf="${myconf} --with-java=${JAVA_HOME}" \
 		|| myconf="${myconf} --with-java=no"
 		
+	# libpng-1.2.5 needs to be linked against stdc++ and zlib
+	cp configure configure.old
+	sed -e 's:-lpng:-lpng -lz -lstdc++:' configure.old > configure
+
 	econf \
 		--enable-cxx \
 		--disable-php \
