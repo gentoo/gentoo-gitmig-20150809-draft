@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/waproamd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/waproamd/ChangeLog,v 1.1 2003/12/18 22:09:45 latexer Exp $
+
+*waproamd-0.4 (18 Dec 2003)
+
+  18 Dec 2003; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  waproamd-0.4.ebuild, files/waproamd.confd, files/waproamd.initd:
+  Initial import. Ebuild and initscript by yours truly. In combination with
+  ifplugd, this is a *handy* little daemon
+
