@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.5 2004/03/04 22:11:56 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.6 2004/03/15 06:00:20 latexer Exp $
+
+*tor-0.0.2_pre27 (15 Mar 2004)
+
+  15 Mar 2004; Peter Johanson <latexer@gentoo.org> tor-0.0.2_pre27.ebuild:
+  Bump.
 
 *tor-0.0.2_pre25 (04 Mar 2004)
 
