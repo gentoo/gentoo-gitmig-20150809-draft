@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/pccts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.2 2002/02/12 18:09:42 karltk Exp $
+
+*pccts-1.33.31 ( 12 Feb 2002 )
+
+  12 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog pccts-1.33.31.ebuild files/digest-pccts-1.33.31
+
+  New upstream version.
+
+  Old versions removed.
 
 *pccts-1.33.24-r2 (1 Feb 2002)
 
