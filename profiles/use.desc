@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.108 2003/07/18 18:48:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.109 2003/07/20 07:27:04 raker Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -145,6 +145,7 @@ usb - Adds USB support to applications that have optional USB support (e.g. cups
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
 wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instead of the Orinoco drivers
 wmf - Adds support for the wmf vector image format
+wxwindows - Adds support for wxWindows/wxGTK
 X - Adds support for XFree86
 Xaw3d - Adds support of the 3d athena widget set
 xface - Adds xface support -- only in use for sylpheed and sylpheed-claws
