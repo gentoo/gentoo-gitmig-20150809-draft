@@ -1,0 +1,6 @@
+MD5 98e9aeeeb3bab4769a811541e28ffb00 mysqltool-0.95-r2.ebuild 3256
+MD5 3c384ea592e925a5ef7264c5699fbd73 mysqltool-0.95-r1.ebuild 2286
+MD5 3f948a5d828531b87b295056140a7012 ChangeLog 1260
+MD5 7c7ea28a4d6d8d49920c08d7129e6581 files/90_mysqltool.conf.m4 362
+MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r1 65
+MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r2 65

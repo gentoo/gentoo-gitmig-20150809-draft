@@ -1,8 +1,16 @@
 # ChangeLog for dev-db/mysqltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.9 2003/02/12 05:49:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.10 2003/05/04 11:38:50 robbat2 Exp $
 
-*mysqltool-0.95-r1 (3 May 2002)
+*mysqltool-0.95-r2 (04 May 2003)
+
+  04 May 2003; Robin Johnson <robbat2@gentoo.org> mysqltool-0.95-r2.ebuild,
+  files/90_mysqltool.conf.m4:
+  Rewrote the install/postinst sections to support apache2+mod_perl better, as
+  well as fixing bug #20119 at the same time. Also made it easier for the user
+  ;-).
+
+*mysqltool-0.95-r1 (03 May 2002)
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> mysqltool-0.95-r1.ebuild :
   Changed sparc64 to sparc keyword
@@ -19,10 +27,10 @@
   15 Oct 2002; <mucmmings@gentoo.org> :
   Add sparc64 to keywords
 
-  9 Sep 2002; <mcummings@gentoo.org> :
+  09 Sep 2002; <mcummings@gentoo.org> :
   Added perl-module eclass support properly.
   
-  3 May 2002; Donny Davies <woodchip@gentoo.org> :
+  03 May 2002; Donny Davies <woodchip@gentoo.org> :
   Added LICENSE, SLOT.
 
 *mysqltool-0.95 (17 Apr 2002)
