@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.6 2004/01/03 13:55:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.7 2004/01/29 23:43:35 mholzer Exp $
 
 inherit eutils
 
@@ -105,12 +105,11 @@ pkg_preinst() {
 	einfo "Sample config files installed by default will always"
 	einfo "include cgi.cfg"
 	chown -R nagios:nagios ${D}/etc/nagios || die "Failed Chown of ${D}/etc/nagios"
-	touch ${D}/usr/nagios/share/ssi/.keep
+	keepdir /usr/nagios/share/ssi
 	chown -R nagios:nagios ${D}/usr/nagios || die "Failed Chown of ${D}/usr/nagios"
-	touch ${D}/var/nagios/.keep
-	touch ${D}/var/nagios/archives/.keep
+	keepdir /var/nagios/archives
 	chown -R nagios:nagios ${D}/var/nagios || die "Failed Chown of ${D}/var/nagios"
-	touch ${D}/var/nagios/rw/.keep
+	keepdir /var/nagios/rw
 	chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 }
 
