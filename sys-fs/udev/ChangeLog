@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.24 2004/02/03 21:47:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.25 2004/02/08 16:59:28 azarah Exp $
+
+*udev-016-r1 (08 Feb 2004)
+
+  08 Feb 2004; Martin Schlemmer <azarah@gentoo.org> udev-016-r1.ebuild,
+  files/udev.rules.post_012:
+  Comment examples in udev.rules as they cause issues. Bump version to propagate
+  this change. Closes bug #40758.
 
 *udev-016 (03 Feb 2004)
 
