@@ -259,7 +259,7 @@ pkg_postinst() {
 
 	# fixes bug #15873 for upgrades, should be able to yank this sometime in
 	# the future
-	chown --recursive mail.mail ${ROOT}/var/run/courier
+	chown --recursive mail:mail ${ROOT}/var/run/courier
 
 	# need to do this for new installs to be able to start courier
 	# without having to run rc-update ...
