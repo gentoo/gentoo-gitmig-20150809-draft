@@ -1,0 +1,81 @@
+# ChangeLog for net-mail/xmail
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.1 2004/05/30 09:51:55 robbat2 Exp $
+
+*xmail-1.16 (30 May 2004)
+
+  30 May 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  xmail-1.16.ebuild, files/15xmail, files/xmail.confd, files/xmail.initd,
+  files/xmailwizard:
+  Moved from net-mail/xmail to mail-mta/xmail.
+
+  25 Feb 2004; Jason Wever <weeve@gentoo.org> xmail-1.16.ebuild:
+  Added patch from bug #42771 so xmail builds again on sparc.
+
+  15 Dec 2003; <spider@gentoo.org> files/xmail.initd:
+  QA: fixing chown user.group to user:group, bug #35127
+
+  17 Oct 2003; Nick Hadaway <raker@gentoo.org> xmail-1.16.ebuild:
+  Marked stable for x86.
+
+  27 Jul 2003; Nick Hadaway <raker@gentoo.org> :
+  Okay... both are now REALLY set to 29617.
+
+  25 Jul 2003; Nick Hadaway <raker@gentoo.org> files/xmailwizard:
+  Changed port 6017 to 29617 in the wizard to match the confd defaults.
+
+  23 Jul 2003; Nick Hadaway <raker@gentoo.org> files/xmail.initd,
+  files/xmail.confd:
+  Made changes to the initd file as suggested on bug #24923.
+  Thanks to Sergey Ivanov for working out the quirks with this build.
+  Added a warn to postinst about needing iptables enabled in the kernel.
+
+*xmail-1.16 (21 Jul 2003)
+
+  21 Jul 2003; Nick Hadaway <raker@gentoo.org> xmail-1.16.ebuild:
+  Version bump.  Also fixed files/* so that there aren't any cr-lf
+  remnants.  Made xmailwizard executable.
+
+*xmail-1.15 (26 May 2003)
+  
+  10 Jun 2003; Nick Hadaway <raker@gentoo.org> xmail-1.15.ebuild:
+  Moved the useradd/groupadd routine to pkg_setup and added the
+  PROVIDE="virtual/mta"
+
+  09 Jun 2003; Nick Hadaway <raker@gentoo.org> xmail-1.15.ebuild:
+  Commented out the interactive portion of the ebuild and updated the 
+  groupadd/useradd portion.
+
+  26 May 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.15.ebuild,
+  xmail-1.15.ebuild, xmail.initd, xmail.confd, xmailwizard:
+  Files updated to chroot XMail into /chroot/xmail, running as unprivileged user
+
+*XMail-1.14 (21 Mar 2003)
+
+  21 Mar 2003; Kevin Williams <kwilliams@sark.com> xmail-1.12.ebuild, files/xmailwizard, files/xmail.initd, files/xmail.confd, files/15xmail :
+  ENV.D file for MAIL_ROOT variable,
+  CONF.D file for XMail configuration, 
+  INIT.D script greatly simplified, uses CONF.D file variables, 
+  automated configuration script - separated from ebuild
+
+  07 Apr 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.12-r0.ebuild,
+  xmail-1.14-r0.ebuild, xmail.diff:
+  Update ebuild and patch to be independent of version numbers.
+
+*XMail-1.12 (07 Feb 2003)
+
+  18 Feb 2003; Kevin Williams <kwilliams@sark.com> xmail-1.12.ebuild, xmail.diff:
+  Initial import. 
+
+  11 Mar 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.12.ebuild, xmail.diff
+  Updated ebuild and start/stop script to start and stop it by it's own
+  control functions
+  
+  13 Mar 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.12.ebuild, xmail.diff
+  Updated ebuild and start/stop script to according to debian's directory
+  structure of XMail mailserver, thanks to Radim Kolar <hsn@cybermail.net>,
+  see http://home.worldonline.cz/~cz210552/xmail.html
+ 
+  18 Mar 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.12-r0.ebuild
+  Fix some mistakes in interactive configure script of xmail and move mailboxes
+  from /etc/xmail to /var/mail. 

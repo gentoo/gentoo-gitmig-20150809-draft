@@ -1,0 +1,19 @@
+# all files are relative to this folder
+
+CHROOT="/chroot/xmail"
+MAIL_ROOT=/var/MailRoot
+export CHROOT MAIL_ROOT
+
+# variables for simplicity sake
+MAIL_NAME=XMail
+MAIL_EXEC=/var/MailRoot/bin/$MAIL_NAME
+MAIL_PID=/var/run/$MAIL_NAME.pid
+
+# set your options here
+
+MY_SMTP=29025
+MY_POP3=29110
+MY_FING=29079
+MY_CTRL=29617
+
+MAIL_CMD_LINE=" -Pl -Pp $MY_POP3 -Sl -Sp $MY_SMTP -Ql -Fl -Fp $MY_FING -Cl -Cp $MY_CTRL -Ll"
