@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.26 2005/01/01 16:32:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.27 2005/01/20 18:00:23 kloeri Exp $
+
+*ptex-3.1.4-r2 (20 Jan 2005)
+
+  20 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> ptex-3.1.4-r2.ebuild:
+  Stable on alpha, bug 75801.
 
 *ptex-3.1.4.20041109-r1 (21 Nov 2004)
 
