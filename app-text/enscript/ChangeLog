@@ -1,6 +1,13 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.21 2005/01/02 22:00:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.22 2005/01/21 14:31:27 solar Exp $
+
+*enscript-1.6.3-r2 (21 Jan 2005)
+
+  21 Jan 2005; <solar@gentoo.org> +files/enscript-1.6.3-security.patch,
+  +enscript-1.6.3-r2.ebuild:
+  - security bump for bug #77408 fixes CAN-2004-1184, CAN-2004-1185,
+  CAN-2004-1186
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
