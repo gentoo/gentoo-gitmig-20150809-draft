@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/README,v 1.6 2004/07/29 05:13:49 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/README,v 1.7 2004/08/23 08:08:37 solar Exp $
 #
 # This subdir contains the cascading profiles for native uclibc environments.
 
@@ -8,3 +8,13 @@
 #  use these in production envionments.
 ##############################################################################
 
+# minifaq: http://dev.gentoo.org/~solar/uclibc/uclibc.txt
+
+# Experimental native-stages can be found here for x86 and arm.
+# - http://dev.gentoo.org/~vapier/uclibc/stage[123]-x86-uclibc.tar.bz2
+# - http://dev.gentoo.org/~vapier/uclibc/stage1-arm-uclibc.tar.bz2
+
+# When uclibc-0.9.27 is released we can support the following targets
+# assuming we acquire hardware. (x86, sparc, arm, m68k, ppc, v850, sh64,
+# sh[234], mips, mipsel, cris) At that time dev-libc/uclibc will be
+# moved to sys-libs/uclibc.
