@@ -1,2 +1,5 @@
-MD5 50bb18aa18df7c9e3dd281b954cc733d info2html-1.4.ebuild 719
+MD5 4a54b7353e63d3e384d56702dc2350d0 info2html-1.4.ebuild 938
+MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
+MD5 26689b79f9514aca83e25e294ec35f19 ChangeLog 342
 MD5 4b9f64ddf8e7ef3c725fc1f785c69456 files/digest-info2html-1.4 60
+MD5 495fd408850958212ae70b35f3b8129b files/info2html-gentoo.patch 1767
