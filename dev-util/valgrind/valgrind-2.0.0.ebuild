@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.2 2003/11/14 12:42:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.3 2004/03/05 00:16:10 mr_bones_ Exp $
 
 inherit flag-o-matic
-filter-flags -fPIC
 IUSE="X"
 
 MY_P=${P/2.0_pre/}
@@ -31,6 +30,9 @@ KEYWORDS="x86 -sparc -ppc -alpha"
 
 src_compile() {
 	local myconf
+
+	filter-flags -fPIC
+
 	use X && myconf="--with-x" || myconf="--with-x=no"
 	# note: it does not appear safe to play with CFLAGS
 	econf ${myconf} || die
@@ -39,7 +41,7 @@ src_compile() {
 
 src_install() {
 	einstall docdir="${D}/usr/share/doc/${PF}" || die
-	dodoc ACKNOWLEDGEMENTS AUTHORS COPYING INSTALL NEWS \
+	dodoc ACKNOWLEDGEMENTS AUTHORS INSTALL NEWS \
 		PATCHES_APPLIED README* TODO ChangeLog FAQ.txt
 }
 
