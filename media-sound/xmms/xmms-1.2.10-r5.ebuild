@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r5.ebuild,v 1.11 2004/11/08 21:27:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r5.ebuild,v 1.12 2004/12/12 16:41:15 eradicator Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -36,7 +36,7 @@ RDEPEND="${DEPEND}
 #We want these things in DEPEND only
 DEPEND="${DEPEND}
 	nls? ( dev-util/intltool )
-	>=sys-devel/automake-1.7.8
+	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.58"
 
 PATCHDIR=${WORKDIR}/patches
@@ -107,19 +107,21 @@ src_unpack() {
 	for subd in .; do
 		cd ${S}/${subd}
 
+		ebegin "Running libtoolize --force --copy in ${S}/${subd}"
+		libtoolize --force --copy
+		eend $?
+
 		ebegin "Running aclocal in ${S}/${subd}"
 		aclocal
 		eend $?
 
 		ebegin "Running automake in ${S}/${subd}"
-		automake --gnu --add-missing --include-deps
-		retval=$?
-		eend $retval
-
-		if [ $retval -ne 0 ]; then
-			exit 1;
-		fi
+		automake --gnu --add-missing --include-deps --force-missing --copy
+		eend $?
 	done
+
+	cd ${S}
+	autoconf
 
 	elibtoolize
 }
