@@ -1,6 +1,16 @@
-MD5 1dce8a4b14a90db51f3ef38a91746a3c ChangeLog 617
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f957e05e21c8eee514955ad593cd690 ChangeLog 755
 MD5 8d09e01dbfec503930e8fb9982d3365f Getopt-ArgvFile-1.06.ebuild 525
+MD5 c98cde8703d812f976edb9ef3b0c4c0c Getopt-ArgvFile-1.08.ebuild 522
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 366e9250c106e394bef155a0f9a6c311 Getopt-ArgvFile-1.08.ebuild 527
 MD5 a325a0ad6a8a97603012dcba6db2bcd6 files/digest-Getopt-ArgvFile-1.06 68
 MD5 8c0f2465ea17569c2f0d2c28147af2fd files/digest-Getopt-ArgvFile-1.08 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBhzzJtG5z4I8BtQoRApjLAKCElzmqyVfW/UXchdtwnrlBWookmwCePgUC
+E3vivgNiWTbtCBbwRpCq2js=
+=KJs9
+-----END PGP SIGNATURE-----
