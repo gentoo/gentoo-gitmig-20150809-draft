@@ -1,0 +1,37 @@
+--- xsim-0.3.9.4/configure	2002-10-24 19:53:57.000000000 +0100
++++ xsim-0.3.9.4a/configure	2003-05-24 22:32:41.000000000 +0100
+@@ -5223,21 +5223,20 @@
+   fi
+ 
+   for bdb_dir in $bdb_library_dirs; do
+-    if test -r "$bdb_dir/libdb_cxx.so"; then
+-      bdblibs="$bdb_dir"
+-      bdblib="db_cxx"
+-      break
+-    fi
+-    if test -r "$bdb_dir/libdb4_cxx.so"; then
+-      bdblibs="$bdb_dir"
+-      bdblib="db4_cxx"
+-      break
+-    fi
+-    if test -r "$bdb_dir/libdb3_cxx.so"; then
+-      bdblibs="$bdb_dir"
+-      bdblib="db3_cxx"
+-      break
++    if test "$bdb_version" = ">=3.2"; then
++      if test -r "$bdb_dir/libdb_cxx-3.so"; then
++        bdblibs="$bdb_dir"
++        bdblib="db_cxx-3"
++        break
++      fi
+     fi
++    if test "$bdb_version" = ">=4.1"; then
++       if test -r "$bdb_dir/libdb_cxx-4.1.so"; then
++         bdblibs="$bdb_dir"
++         bdblib="db_cxx-4.1"
++         break
++       fi
++    fi    
+   done
+ fi
+ 
