@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7.ebuild,v 1.2 2004/09/13 19:17:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7.ebuild,v 1.3 2004/09/14 08:51:49 satya Exp $
 
 inherit eutils flag-o-matic
 
@@ -76,7 +76,7 @@ src_unpack() {
 		${S}/source/smbd/quotas.c
 	#amd64 lib location is not lib32 nor lib -------------------------------
 	cd ${S} || die
-	use amd64 && epatch ${FILESDIR}/samba-3.0.6-libdirsymlink.patch
+	use amd64 && epatch ${FILESDIR}/samba-3.0.x-libdirsymlink.patch
 	# examples: to be copied as docs ---------------------------------------
 	rm -rf ${S}/examples.ORIG
 	cp -a ${S}/examples ${S}/examples.ORIG

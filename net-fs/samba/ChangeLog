@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.107 2004/09/13 12:42:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.108 2004/09/14 08:51:49 satya Exp $
+
+  14 Sep 2004; Christian Andreetta <satya@gentoo.org>
+  +files/samba-3.0.x-libdirsymlink.patch, -samba-3.0.1-r1.ebuild,
+  -samba-3.0.2a-r2.ebuild, -samba-3.0.4-r1.ebuild, -samba-3.0.6-r1.ebuild,
+  -samba-3.0.6-r2.ebuild, -samba-3.0.6.ebuild, samba-3.0.7.ebuild:
+  some old files cleanup
 
 *samba-3.0.7 (13 Sep 2004)
 
