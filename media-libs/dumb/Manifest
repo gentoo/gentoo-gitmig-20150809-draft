@@ -1,9 +1,19 @@
-MD5 a183d260d558a9d33e35892c0f117dbb dumb-0.9.2-r2.ebuild 1869
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 370dab3c122c7a47f6ba79e8f51d08a7 dumb-0.9.2-r2.ebuild 1911
 MD5 78b3f757be0bec999e6aec4392b73519 dumb-0.9.1.ebuild 738
 MD5 77bc9197031b343f29a24f43b7dbbe37 dumb-0.9.2-r1.ebuild 1811
-MD5 e0bcdae54cdc27de66c6bf70ae0db0f1 ChangeLog 1404
+MD5 00e4979e45d926c77b818fe70f11ef4b ChangeLog 1496
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 e8a7336fec185fa94008e2b1599c697c files/digest-dumb-0.9.1 62
 MD5 74d6f31a83c47d916813fff87eb8e9cf files/digest-dumb-0.9.2-r1 68
 MD5 74d6f31a83c47d916813fff87eb8e9cf files/digest-dumb-0.9.2-r2 68
 MD5 06b0308865a7fa48b3f9c75937a4c9e4 files/dumb-0.9.2-PIC.patch 2697
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBYnM3ArHZZzCEUG0RAhl8AJ9NLzPA2cyMJTlQI5C8q/WW1wsKqwCeLe3i
+7BkpStbFhJjd7kReXUUvsBk=
+=yGam
+-----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.2-r2.ebuild,v 1.2 2004/09/01 17:32:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.2-r2.ebuild,v 1.3 2004/10/05 10:10:44 eradicator Exp $
 
-IUSE=""
+IUSE="debug"
 
 inherit eutils
 
@@ -34,8 +34,14 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib /usr/include /usr/bin
-	make PREFIX="${D}/usr" install || die "make install failed"
+	dobin examples/dumbout
+	dolib.so lib/unix/libdumb.so
+
+	use debug && lib/unix/libdumbd.so
+
+	insinto /usr/include
+	doins include/dumb.h
+
 	dodoc readme.txt release.txt docs/* || die "dodoc failed"
 }
 
