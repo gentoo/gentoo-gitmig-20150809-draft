@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.91 2004/01/30 20:46:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.92 2004/02/01 04:20:26 eradicator Exp $
+
+*xmms-1.2.9-r1 (31 Jan 2004)
+
+  31 Jan 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.9-r1.ebuild,
+  xmms-1.2.9.ebuild, xmms-1.2.9_pre1.ebuild:
+  Fixed off-by-one bug that crept in with dtd/1.2.9 conflicting changes (closes
+  bug #40019). Updated random patch to fix compilation in gcc2.x (closes bug
+  #39877). Added id3v2 tag editor to mpg123 plugin (closes bug #39437). Removing
+  broken ebuilds.
 
 *xmms-1.2.8-r4 (30 Jan 2004)
 
