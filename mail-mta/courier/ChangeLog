@@ -1,0 +1,286 @@
+# ChangeLog for net-mail/courier
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.1 2004/05/30 02:17:47 robbat2 Exp $
+
+*courier-0.45.4 (29 May 2004)
+
+  29 May 2004; Robin H. Johnson <robbat2@gentoo.org> courier-0.45.1.ebuild,
+  courier-0.45.2.ebuild, courier-0.45.3.ebuild, courier-0.45.4.ebuild,
+  courier-0.45.5.ebuild, metadata.xml, files/apache-sqwebmail.inc, files/bofh,
+  files/courier-init, files/dot_courier, files/locallowercase,
+  files/norewrite.patch, files/password.dist, files/set-mime:
+  Moved from net-mail/courier to mail-mta/courier.
+
+*courier-0.45.5 (22 May 2004)
+
+  22 May 2004; Scott W Taylor <swtaylor@gentoo.org> +courier-0.45.5.ebuild:
+  bump 0.45.5
+
+  22 May 2004; Scott W Taylor <swtaylor@gentoo.org> files/courier-init:
+  spelling fix and init script update for sqwebmail which gets renamed in 0.45.5
+
+  28 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.2.ebuild,
+  courier-0.45.3.ebuild:
+  get ppc mask caught up
+
+  28 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.2.ebuild,
+  courier-0.45.3.ebuild, courier-0.45.4.ebuild:
+  Bug 49198 - moved ${D} adjustments out of pkg_preinst
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> courier-0.45.3.ebuild,
+  courier-0.45.4.ebuild:
+  Add inherit eutils
+
+  21 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.2.ebuild,
+  courier-0.45.3.ebuild, courier-0.45.4.ebuild:
+  mark 0.45.2 stable and fix bug 41819
+
+  09 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.4.ebuild:
+  Added ~sparc on 0.45.4 too
+
+  06 Apr 2004; Jason Wever <weeve@gentoo.org> courier-0.45.3.ebuild:
+  Added ~sparc keyword wrt bug #46319.
+
+*courier-0.45.4 (06 Apr 2004)
+
+  06 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.4.ebuild:
+  version bump
+
+*courier-0.45.3 (01 Apr 2004)
+
+  01 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.3.ebuild,
+  files/courier-init, files/norewrite.patch:
+  Version bump and fixes for bugs 44241 and 44245.
+
+  30 Mar 2004; Lars Weiler <pylon@gentoo.org> courier-0.45.2.ebuild:
+  Masked ~ppc on user report
+
+*courier-0.45.2 (16 Mar 2004)
+
+  16 Mar 2004; Brian Jackson <iggy@gentoo.org> courier-0.45.2.ebuild,
+  files/courier-init:
+  version bump
+
+*courier-0.45.1 (09 Mar 2004)
+
+  09 Mar 2004; Brian Jackson <iggy@gentoo.org> courier-0.44.0.ebuild,
+  courier-0.44.2.20040201.ebuild, courier-0.44.2.ebuild,
+  courier-0.45.0.ebuild, courier-0.45.1.ebuild, files/courier,
+  files/courier-authdaemond, files/courier-esmtpd, files/courier-esmtpd-msa,
+  files/courier-esmtpd-ssl, files/courier-filterd, files/courier-imapd,
+  files/courier-imapd-ssl, files/courier-ldapaliasd, files/courier-mta,
+  files/courier-pop3d, files/courier-pop3d-ssl, files/gentoo.diff.bz2:
+  version bump, fixes 2 minor bugs only
+
+*courier-0.45.0 (07 Mar 2004)
+
+  07 Mar 2004; Brian Jackson <iggy@gentoo.org> courier-0.45.0.ebuild,
+  files/courier-init:
+  version bump, fix for bug 42164, and an issue reported by 
+  hachre@dynaloop.net
+
+  15 Feb 2004; Brian Jackson <iggy@gentoo.org> courier-0.44.2.20040201.ebuild:
+  a few cleanups, and fix bug 32878
+
+*courier-0.44.2.20040201 (08 Feb 2004)
+
+  08 Feb 2004; Brian Jackson <iggy@gentoo.org> courier-0.44.0.ebuild,
+  courier-0.44.2.20040201.ebuild, courier-0.44.2.ebuild:
+  version bump to fix a problem with 2.6 kernels, changed a few keywords
+
+  14 Jan 2004; Aron Griffis <agriffis@gentoo.org> courier-0.44.2.ebuild:
+  add ~alpha (bug 21240)
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> courier-0.44.0.ebuild,
+  courier-0.44.2.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
+
+  08 Dec 2003; Brian Jackson <iggy@gentoo.org> courier-0.42.2.ebuild,
+  courier-0.43.2.ebuild, courier-0.44.0.ebuild, courier-0.44.2.ebuild,
+  files/courier-0.42.2-gentoo.diff.bz2:
+  cleaning out old ebuilds/etc, and cleaning up touch .keep's
+
+  08 Dec 2003; Brian Jackson <iggy@gentoo.org> courier-0.42.2.ebuild:
+  fixed the other chown in courier-0.42.2
+
+  07 Dec 2003; foser <foser@gentoo.org> courier-0.*.ebuild :
+  Fix fam-oss > fam, due to move
+
+  07 Dec 2003; Brian Jackson <iggy@gentoo.org> courier-0.44.2.ebuild:
+  add note about recent sed magic
+
+  30 Nov 2003; Brian Jackson <iggy@gentoo.org> courier-0.44.0.ebuild:
+  bump 0.44.0 to x86
+
+*courier-0.44.2 (30 Nov 2003)
+
+  30 Nov 2003; Brian Jackson <iggy@gentoo.org> courier-0.44.2.ebuild,
+  files/courier-init:
+  version bump
+
+*courier-0.44.0 (07 Nov 2003)
+
+  07 Nov 2003; Brian Jackson <iggy@gentoo.org> courier-0.42.2-r3.ebuild,
+  courier-0.42.2.ebuild, courier-0.43.1.ebuild, courier-0.43.2.ebuild,
+  courier-0.44.0.ebuild, files/gentoo.diff.bz2:
+  version bump
+  cleaned up the ebuild a little
+  some docs weren't getting installed
+  fix bug 32269
+  applying the sqwebmail patch again
+
+  29 Oct 2003; Brian Jackson <iggy@gentoo.org> courier-0.43.2.ebuild,
+  files/courier-init:
+  added esmtpd-ssl to init script, closes bug 32267
+
+*courier-0.43.2 (28 Sep 2003)
+
+  28 Sep 2003; <iggy@gentoo.org> courier-0.43.1.ebuild, courier-0.43.2.ebuild:
+  version bump
+
+*courier-0.43.1 (19 Aug 2003)
+
+  19 Aug 2003; <iggy@gentoo.org> courier-0.43.1.ebuild:
+  courier-0.43.1 is out, just copied the 42.2-r3 ebuild, and updated the
+  postinst msgs a bit
+
+  02 Aug 2003; <iggy@gentoo.org> courier-0.42.2-r1.ebuild,
+  courier-0.42.2-r2.ebuild, courier-0.42.2-r3.ebuild:
+  -r3 -> x86, removed older broken ebuilds (-r1, -r2)
+
+*courier-0.42.2-r3 (01 Aug 2003)
+
+  01 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> courier-0.42.2-r3.ebuild:
+  Removed the optional dependency on berkeley db, as it will not work with db4
+  and a patch to make it work with db3 is nontrivial
+
+  28 Jul 2003; <iggy@gentoo.org> courier-0.42.2-r2.ebuild:
+  temporarily removed expect dep pending clarification of tcltk situation
+
+  24 Jul 2003; <iggy@gentoo.org> files/courier-init:
+  fixed courier init script
+
+  24 Jul 2003; <iggy@gentoo.org> courier-0.42.2-r2.ebuild:
+  added !virtual/imapd to RDEPEND closes bug 25027
+
+  22 Jul 2003; <iggy@gentoo.org> courier-0.42.2-r2.ebuild:
+  a few more cleanups to 0.42.2-r2
+
+*courier-0.42.2-r2 (22 Jul 2003)
+
+  22 Jul 2003; <iggy@gentoo.org> courier-0.42.2-r2.ebuild, files/courier-init:
+  fixed bug 25028, and switched to single init script
+
+  03 Jul 2003; ,,, <iggy@gentoo.org> metadata.xml:
+  added metadata.xml
+
+  01 Jul 2003; ,,, <iggy@gentoo.org> courier-0.42.2-r1.ebuild,
+  courier-0.42.2.ebuild:
+  added --disable-autorenamesent to configure options
+
+*courier-0.42.2-r1 (14 Jun 2003)
+
+  01 Jul 2003; Brian Jackson <iggy@gentoo.org> courier-0.42.2-r1.ebuild:
+  Whatever the patch that we were using was for seems to be fixed upstream.
+  I masked this while I have some other people try to test it out.
+
+*courier-0.42.2 (14 Jun 2003)
+
+  23 Jun 2003; Nick Hadaway <raker@gentoo.org> courier-0.42.2.ebuild:
+  Added crypt use variable.  Added fax local use variable.
+
+  14 Jun 2003; Nick Hadaway <raker@gentoo.org> courier-0.42.2.ebuild,
+  files/digest-courier-0.42.2, files/courier-0.42.2-gentoo.diff.bz2:
+  New version.  Updated dependancies.  Added a fix for permissions
+  of /var/run/courier.  Changed unicode option code snippet.
+
+  15 May 2003; Martin Holzer <mholzer@gentoo.org> courier-0.40.2.ebuild,
+  courier-0.41.0.ebuild:
+  Adding !virtual/mta to RDEPEND. CLoses #21072.
+
+*courier-0.41.0 (30 Jan 2003)
+
+  22 Apr 2003; Graham Forest <vladimir@gentoo.org> courier-0.40.2.ebuild,
+  courier-0.41.0.ebuild:
+  app-text/aspell -> virtual/aspell-dict
+
+  30 Jan 2003; Alexandru Hartmann <alex@as-computer.de>, Andreas Erhart <andi@as-computer.de>
+  courier-0.41.0.ebuild, files/courier:
+  new release. supports make install-configure in post_install(). init scripts changes.
+  typo fixes.
+
+  31 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-0.40.2.ebuild,
+  files/digest-courier-0.40.2, files/courier-0.40.2-gentoo.diff.bz2 :
+  Version bump.  New unicode functionality.  Added support for the spell
+  use variable.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*courier-0.40.2 (31 Dec 2002)
+
+  15 Jan 2003; Nick Hadaway <raker@gentoo.org> courier-0.40.2.ebuild :
+  Marked stable to coincide with courier-imap-1.6.2 being stable.
+
+  31 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-0.40.2.ebuild,
+  files/digest-courier-0.40.2, files/courier-0.40.2-gentoo.diff.bz2 :
+  Version bump.  New unicode functionality.  Added support for the spell
+  use variable.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*courier-0.40.1 (19 Nov 2002)
+
+  21 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-0.40.1.ebuild :
+  Filter -fomit-frame-pointer and -funroll-loops as these flags seem
+  to cause problems with maildrop and maildirmake.
+
+  21 Nov 2002; Nick Hadaway <raker@gentoo.org> courier-0.40.1.ebuild,
+  files/password.dist :
+  Added a password.dist file so people get instructions on how to
+  setup a password for the webadmin. 
+
+  19 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
+
+*courier-0.40.0.20021026 (29 Oct 2002)
+
+  06 Nov 2002; Nick Hadaway <raker@gentoo.org> :
+  Added ebuild to portage.  Marked unstable.
+
+  29 Oct 2002; Andreas Erhart <andi@zollhaus.net> / Alexandru Hartmann <alex@nimic.net>
+  courier-0.40.0.20021026.ebuild, files/digest-courier-0.40.0.20021026
+  sqwebmail finally works !
+  new version
+  
+*courier-0.40.0 (28 Oct 2002)
+  28 Oct 2002; Alexandru Hartmann <alex@nimic.net>
+  courier-0.40.0.ebuild, files/digest-courier-0.40.0
+  sometimes /var/lib/courier/msgs and msgq just disappear after an upgrade.
+  this is now fixed.
+ 
+*courier-0.40.0 (26 Oct 2002)
+  26 Oct 2002; Andreas Erhart <andi@zollhaus.net>
+  courier-0.40.0.ebuild, files/digest-courier-0.40.0
+  new version
+  
+*courier-0.39.3 (12 Aug 2002)
+  12 Aug 2002; Andreas Erhart <andi@zollhaus.net>
+  courier-0.39.3.ebuild, files/digest-courier-0.39.3
+  new version
+  
+*courier-0.39.2 (03 Aug 2002)
+
+  06 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  courier-0.39.2.ebuild, files/digest-courier-0.39.2 :
+  Added --without-authvchkpw to the configure options as some 
+  systems will fail to finish configure if vpopmail is not installed.
+  Version bump.
+
+  03 Aug 2002; Andreas Erhart <andi@zollhaus.net> :
+  new version, thanks to Sam Varshavchik
+  removed 10MB message sizelimit
+
+*courier-0.39.1 (04 Jul 2002)
+
+  04 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+  New version, thanks to Alex Hartmann
