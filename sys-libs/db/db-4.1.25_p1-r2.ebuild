@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r2.ebuild,v 1.3 2003/10/31 20:48:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r2.ebuild,v 1.4 2003/11/04 14:12:22 pauldv Exp $
 
 IUSE="tcltk java doc"
 
@@ -46,7 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
-
+	addwrite /proc/self/maps
 	local myconf="--enable-rpc"
 
 	use java \
