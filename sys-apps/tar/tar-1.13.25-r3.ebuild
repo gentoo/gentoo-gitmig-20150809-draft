@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.12 2003/03/24 03:21:11 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.13 2003/05/20 08:35:28 kumba Exp $
 
-inherit eutils 
+inherit eutils gnuconfig
 
 IUSE="nls static build selinux"
 
@@ -31,6 +31,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Fix configure scripts to support linux-mips targets
+	gnuconfig_update
+
 	local myconf
 	[ -z "`use nls`" ] && myconf="--disable-nls"
 	econf \
