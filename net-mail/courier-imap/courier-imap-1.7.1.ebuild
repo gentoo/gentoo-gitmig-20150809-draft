@@ -1,45 +1,71 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.5.1.ebuild,v 1.10 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.1.ebuild,v 1.1 2003/04/30 11:30:40 liquidx Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
-SRC_URI="http://ftp1.sourceforge.net/courier/${P}.tar.gz"
+SRC_URI="http://twtelecom.dl.sourceforge.net/sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
-
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="~x86 ~ppc ~sparc "
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ipv6 gdbm tcltk ldap berkdb mysql pam"
-
+IUSE="ipv6 gdbm tcltk ldap berkdb mysql pam nls postgres"
 PROVIDE="virtual/imapd"
-
+# not compatible with >=sys-libs/db-4
 RDEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
-	berkdb? ( >=sys-libs/db-3.2 )
+	berkdb? ( =sys-libs/db-3* )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
-	tcltk? ( >=dev-tcltk/expect-5.33.0 )"
+	tcltk? ( >=dev-tcltk/expect-5.33.0 )
+	postgres? ( >=dev-db/postgresql-7.2 )"
 DEPEND="${RDEPEND} dev-lang/perl sys-apps/procps"
 
-# This package is complete if you just need basic IMAP functionality.
-# Here are some things that still need fixing:
-# o supervise support (of course)
-# o tweaking of config files
-# o My RC script is configured to look for maildirs in ~/.maildir
-#     (my preference, and the official Gentoo Linux standard location)
-#     instead of the more traditional and icky ~/Maildir.
-# o We need to add an /etc/mail.conf.
+inherit flag-o-matic
+filter-flags -funroll-loops
+filter-flags -fomit-frame-pointer
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	
+	# explicitly use db3 over db4
+	if [ -n "`use berkdb`" ]; then
+		sed -i -e "s,-ldb,-ldb-3.2," configure
+		sed -i -e "s,-ldb,-ldb-3.2," bdbobj/configure
+		sed -i -e 's#s,@CFLAGS@,$CFLAGS,#s,@CFLAGS@,-I/usr/include/db3 $CFLAGS,#' bdbobj/configure
+	fi
+	
+}
 
 src_compile() {
 	local myconf
 	use pam || myconf="${myconf} --without-authpam"
 	use ldap || myconf="${myconf} --without-authldap"
 	use mysql || myconf="${myconf} --without-authmysql"
-	use berkdb && myconf="${myconf} --with-db=db"
-	use berkdb || myconf="${myconf} --with-db=gdbm"
+	use postgres || myconf="${myconf} --without-authpostgresql"
+	use berkdb \
+		&& myconf="${myconf} --with-db=db" \
+		|| myconf="${myconf} --with-db=gdbm"
 	use ipv6 || myconf="${myconf} --without-ipv6"
+
+	VPOPMAIL_DIR=`cat /etc/passwd | grep ^vpopmail | cut -d: -f6`
+	if [ -f ${VPOPMAIL_DIR}/etc/lib_deps ]; then
+		myconf="${myconf} --with-authvchkpw"
+	else
+		myconf="${myconf} --without-authvchkpw"
+	fi
+
+	if use nls && [ ! -z "$ENABLE_UNICODE" ]; then
+		myconf="${myconf} --enable-unicode"
+	elif use nls; then
+		myconf="${myconf} --enable-unicode=$ENABLE_UNICODE"
+	else
+		myconf="${myconf} --disable-unicode"
+	fi
+
+	myconf="${myconf} debug=true"
 
 	./configure \
 		--prefix=/usr \
@@ -51,8 +77,6 @@ src_compile() {
 		--localstatedir=/var/lib/courier-imap \
 		--enable-workarounds-for-imap-client-bugs \
 		--with-authdaemonvar=/var/lib/courier-imap/authdaemon \
-		--enable-unicode \
-		--without-authvchkpw \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	# change the pem file location..
@@ -68,8 +92,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /var/lib/courier-imap
-	dodir /etc/pam.d
+	dodir /var/lib/courier-imap /etc/pam.d
 	make install DESTDIR=${D} || die
 
 	# avoid name collisions in /usr/sbin wrt imapd and pop3d
@@ -140,11 +163,17 @@ src_install() {
 		newexe ${FILESDIR}/courier-pop3d-ssl.rc6 courier-pop3d-ssl
 
 	exeinto /usr/lib/courier-imap
-		doexe ${FILESDIR}/gentoo-imapd.rc ${FILESDIR}/gentoo-imapd-ssl.rc \
-			${FILESDIR}/gentoo-pop3d.rc ${FILESDIR}/gentoo-pop3d-ssl.rc
+		newexe ${FILESDIR}/gentoo-imapd-1.6.1.rc gentoo-imapd.rc
+		newexe ${FILESDIR}/gentoo-imapd-ssl-1.6.1.rc gentoo-imapd-ssl.rc
+		newexe ${FILESDIR}/gentoo-pop3d-1.6.1.rc gentoo-pop3d.rc
+		newexe ${FILESDIR}/gentoo-pop3d-ssl-1.6.1.rc gentoo-pop3d-ssl.rc
 
 	dodir /usr/bin
 	mv ${D}/usr/sbin/maildirmake ${D}/usr/bin/maildirmake
+
+	dodoc ${S}/imap/ChangeLog
+
+	keepdir /var/lib/courier-imap/authdaemon
 
 }
 
@@ -152,15 +181,8 @@ pkg_postinst() {
 	# rebuild init deps to include deps on authdaemond
 	/etc/init.d/depscan.sh
 	echo
-	einfo "Courier-IMAP version 1.4.5-r1 and higher have new init scripts."
-	einfo "Please use courier-imapd instead of courier-imap."
-	einfo "This release also includes support for the included pop3 server."
-	einfo "If you choose not to switch your init files, you server will "
-	einfo "continue to function as it currently does."
-	echo
 	einfo "Make sure to change /etc/courier-imap/authdaemond.conf if"
 	einfo "you would like to use something other than the"
 	einfo "authdaemond.plain authenticator"
 	echo
-
 }

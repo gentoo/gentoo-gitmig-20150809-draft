@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.0.ebuild,v 1.5 2003/04/11 22:44:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.0.ebuild,v 1.6 2003/04/30 11:30:40 liquidx Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="http://twtelecom.dl.sourceforge.net/sourceforge/courier/${P}.tar.bz2"
@@ -159,6 +159,8 @@ src_install() {
 	mv ${D}/usr/sbin/maildirmake ${D}/usr/bin/maildirmake
 
 	dodoc ${S}/imap/ChangeLog
+
+	keepdir /var/lib/courier-imap/authdaemon
 
 }
 
