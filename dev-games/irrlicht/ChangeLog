@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.5 2004/06/24 22:11:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.6 2004/08/19 10:57:28 mr_bones_ Exp $
+
+  19 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.6-matrix4.patch, irrlicht-0.6.ebuild:
+  Add patch from marco to fix matrix function (bug #44429)
 
   13 Apr 2004; David Holm <dholm@gentoo.org> irrlicht-0.6.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.6.ebuild,v 1.3 2004/06/24 22:11:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.6.ebuild,v 1.4 2004/08/19 10:57:28 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,20 +20,20 @@ DEPEND="media-libs/jpeg
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	cd source
+	cd ${S}/source
 	unzip -qo source.zip || die "unpacking source.zip"
 	rm -rf source.zip zlib jpeglib
 	ln -s /usr/include jpeglib
 	ln -s /usr/include zlib
-	epatch ${FILESDIR}/${PV}-system-libs.patch
-	epatch ${FILESDIR}/${PV}-jpeg.patch
-	epatch ${FILESDIR}/${PV}-opengl.patch
+	epatch "${FILESDIR}/${PV}-system-libs.patch"
+	epatch "${FILESDIR}/${PV}-jpeg.patch"
+	epatch "${FILESDIR}/${PV}-opengl.patch"
+	epatch "${FILESDIR}/${PV}-matrix4.patch"
 }
 
 src_compile() {
 	cd source
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -41,5 +41,5 @@ src_install() {
 	insinto /usr/include/${PN}
 	doins include/*
 	dodoc changes.txt readme.txt
-	use doc && cp -r examples media ${D}/usr/share/doc/${PF}/
+	use doc && cp -r examples media "${D}/usr/share/doc/${PF}/"
 }
