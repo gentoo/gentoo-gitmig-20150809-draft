@@ -1,0 +1,17 @@
+diff -ru camE-1.7.orig/webcam.c camE-1.7/webcam.c
+--- camE-1.7.orig/webcam.c	2004-04-10 11:21:03.560338760 +0200
++++ camE-1.7/webcam.c	2004-04-10 11:22:27.856523792 +0200
+@@ -37,6 +36,13 @@
+ #include "parseconfig.h"
+ #include "pwc-ioctl.h"
+ 
++#ifndef TRUE
++#define TRUE 1
++#endif /* TRUE */
++#ifndef FALSE
++#define FALSE 0
++#endif /* FALSE */
++
+ #define VERSION "1.7"
+ 
+ void log(char *fmt,
