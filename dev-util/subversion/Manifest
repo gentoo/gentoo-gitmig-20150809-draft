@@ -1,4 +1,4 @@
-MD5 c4e0a3b64b508339ee94ee6334660355 ChangeLog 10204
+MD5 d92537fec3bf749b7b5d1f2a74658be1 ChangeLog 10300
 MD5 8fbcd267012fd1eef74d5161888cc7b8 metadata.xml 222
 MD5 96c37b538c43b2213ed1222415c91cac subversion-0.27.0.ebuild 7887
 MD5 722119af145ccc96f0798145c6009e1c subversion-0.28.0.ebuild 8032
@@ -8,7 +8,7 @@ MD5 a6e39b789f01207748b9eda8df8ba72c subversion-0.32.1.ebuild 8136
 MD5 75c2bee0ffc04b77b670a39f4c93e195 subversion-0.34.0.ebuild 7735
 MD5 48e87e9f0ce09bda6fdaff08cd99b29d subversion-0.35.1.ebuild 7737
 MD5 4620171b66184476cedaaabb7a901e46 subversion-0.37.0.ebuild 8151
-MD5 902fa55ee492b26aa10bbac4bda12fa1 subversion-1.0.0.ebuild 8181
+MD5 f452d6c1dbc041568926b5af28ae515d subversion-1.0.0.ebuild 8188
 MD5 4fd39b311d09602c93a9ff0aceaf8596 files/70svn-gentoo.el 136
 MD5 e232822bee0a8ed00f6b9d7805b83307 files/digest-subversion-0.27.0 132
 MD5 c055aef559559580f75e60ede5051e79 files/digest-subversion-0.28.0 130
