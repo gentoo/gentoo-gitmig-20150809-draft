@@ -1,4 +1,4 @@
-MD5 5a49a49d6443ca8a54e2c14a9dc653ea ChangeLog 907
-MD5 72feca56bf62536118ba0fee5b33e2c6 gst-plugins-gnomevfs-0.6.3.ebuild 390
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ad7d13e5c42638d153311159e0c64028 files/digest-gst-plugins-gnomevfs-0.6.3 71
+MD5 5a49a49d6443ca8a54e2c14a9dc653ea ChangeLog 907
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 f5f0b91018fbeab179d39e60213f9839 gst-plugins-gnomevfs-0.6.3.ebuild 397
