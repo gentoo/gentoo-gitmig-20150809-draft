@@ -1,8 +1,18 @@
-MD5 d979d806b5b55b61bb7c5a569d67802f ChangeLog 1692
-MD5 e981da834c61c8663841fb9c5987f1b5 dictd-vera-1.12.ebuild 1185
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 92d20fd8abfbbe8625e3502cc23ccab5 ChangeLog 1774
+MD5 9e1148a9a703c70bf845c222b6753d84 dictd-vera-1.12.ebuild 1188
 MD5 031d70eaaf781ccba5f21f06a5d1d94c dictd-vera-1.7-r1.ebuild 592
 MD5 34d29d8edf71f8e01b43484889d1daee dictd-vera-1.9_pre.ebuild 614
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 81221dc8752cde60c829e65fadd2f644 files/digest-dictd-vera-1.12 124
 MD5 636b5552a40d3cc68e4df62b26880864 files/digest-dictd-vera-1.7-r1 60
 MD5 a02434c500cb03fd1ba7eb6036b58a90 files/digest-dictd-vera-1.9_pre 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIbG160LfUIagIAkRAqVJAJ0YTYhyspTrMQ8JaKhmd0bO7QY0iwCgso9j
+881p7/+cI22dTI2FKkXPveE=
+=+utY
+-----END PGP SIGNATURE-----
