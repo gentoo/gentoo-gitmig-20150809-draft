@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.4.ebuild,v 1.3 2004/04/18 17:07:46 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.4.ebuild,v 1.4 2004/04/23 17:03:33 eradicator Exp $
 
 inherit gnome2
 
 DESCRIPTION="A text entry interface, driven by continuous pointing gestures"
 HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
-IUSE="${IUSE} accessibility gnome nls"
+IUSE="accessibility gnome nls"
 SLOT="0"
 KEYWORDS="x86"
 LICENSE="GPL-2"
