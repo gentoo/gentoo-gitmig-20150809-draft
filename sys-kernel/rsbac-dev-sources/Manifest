@@ -1,17 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fee9abc7797fef753c42454679bae9a7 metadata.xml 456
-MD5 e0f62b3cac1ebab8163e2078cbf5711e rsbac-dev-sources-2.6.7-r2.ebuild 1357
-MD5 5f4134939982c2d7f52b6c4c78661a81 ChangeLog 2058
+MD5 a66182b1948c95e4a7eb823608ec4320 rsbac-dev-sources-2.6.7-r3.ebuild 1396
+MD5 fd2068d717221fe04039e45d6eb8065a ChangeLog 2294
 MD5 a869ab037c7e264df5f8e899864f08e9 files/rsbac-dev-sources-v1.2.3-3.patch 557
 MD5 6451bd210935a3978fd3a3edac673591 files/rsbac-dev-sources-iptables-dos.patch 389
 MD5 b6e38b41c8a79943df2ab2642149d06f files/rsbac-dev-sources-CAN-2004-0497.patch 2214
-MD5 ff6ffe7543ce01c98eb4ca1c8d9ca1c3 files/digest-rsbac-dev-sources-2.6.7-r2 205
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+A7DJUNS2Y9cV5ERAglvAJ9BbSGR+zzzykO/EjSK810MqUPPEwCfeeO6
-prrtFZEwfFjFc6UeId7YtoU=
-=pg/v
------END PGP SIGNATURE-----
+MD5 f0e12ba218f53c2694a91259bdc2fdc7 files/rsbac-dev-sources-CAN-2004-0596.patch 494
+MD5 ff6ffe7543ce01c98eb4ca1c8d9ca1c3 files/digest-rsbac-dev-sources-2.6.7-r3 205
