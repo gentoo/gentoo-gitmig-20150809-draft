@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.4 2003/07/08 16:55:51 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.5 2003/11/26 11:39:21 tester Exp $
+
+  26 Nov 2003; Olivier Crete <tester@gentoo.org> tclxml-2.4.ebuild:
+  Added -i option to sed, fixing bugs 30057 and 31262
 
 *tclxml-2.4 (10 Mar 2003)
 
