@@ -1,4 +1,4 @@
-MD5 fa306d9e01faf8d4feed32ea106fd341 ChangeLog 830
-MD5 286ae8247f4cd8cee526b20a055b62c1 lsh-1.4.3-r1.ebuild 1336
+MD5 c7b0ca40fb2bf76b8e80daebba24ba06 ChangeLog 913
+MD5 6e5194f0459a3de92a94896f5c16d60a lsh-1.4.3-r1.ebuild 1337
 MD5 ff304a4da3f1a19a3da4d5c1d1382303 files/1.4.3-gcc34.patch 389
 MD5 12d8d84a70281a27cccb14cc8e2c83e2 files/digest-lsh-1.4.3-r1 62
