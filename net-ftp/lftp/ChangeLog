@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.28 2003/07/25 06:11:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.29 2003/08/03 18:59:00 gmsoft Exp $
 
 *lftp-2.6.6 (25 Jul 2003)
 
@@ -18,6 +18,9 @@
   on Alpha (adds perl and sed dependency).
 
 *lftp-2.6.5 (26 Mar 2003)
+
+  03 Aug 2003; Guy Martin <gmsoft@gentoo.org> lftp-2.6.5.ebuild :
+  Marked stable on hppa. 
 
   11 Apr 2003; Graham Forest <vladimir@gentoo.org> lftp-2.5.4-r1.ebuild,
   lftp-2.6.2.ebuild, lftp-2.6.3.ebuild, lftp-2.6.4.ebuild, lftp-2.6.5.ebuild:
