@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.1.ebuild,v 1.9 2004/11/03 06:33:07 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.1.ebuild,v 1.10 2004/11/30 23:43:18 robbat2 Exp $
 
 inherit libtool
 
@@ -30,7 +30,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,include,lib}
-	einstall || die "install failure"
+	emake install DESTDIR="${D}" || die "install failure"
 
 	dodoc AUTHORS INSTALL NEWS README TODO THANKS ChangeLog
 	dodoc doc/*.txt doc/skid*
