@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.6 2002/05/07 03:58:19 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/app-text/hd2u/hd2u-0.8.0.ebuild,v 1.10 2003/06/12 20:24:58 msterret Exp $
 
 DESCRIPTION="Dos2Unix text file converter"
 SRC_URI="http://www.megaloman.com/~hany/_data/hd2u/${P}.tgz"
