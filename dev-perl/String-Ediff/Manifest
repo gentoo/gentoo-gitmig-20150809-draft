@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6ce609b61ff3f8fd8deb901255c6e29f ChangeLog 517
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 c67c05eeb14549052bdef5ef23325ff1 String-Ediff-0.03.ebuild 536
-MD5 fe3e6f544b9eaab3718eecff2ec47ebc ChangeLog 420
+MD5 f64b7f3088cd8f85ca5ef0aa79e0819b String-Ediff-0.03.ebuild 503
 MD5 d78f9bd30bf7b01f7442fa6d248f3a7a files/digest-String-Ediff-0.03 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2psktG5z4I8BtQoRAqlUAJ4zIrtabI9dbU7UnwFDJUsRADdN8gCfSvUH
+IuswIRMvnRO/8gQBi9P6NfM=
+=ILqz
+-----END PGP SIGNATURE-----

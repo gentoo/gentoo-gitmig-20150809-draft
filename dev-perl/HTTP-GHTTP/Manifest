@@ -1,4 +1,14 @@
-MD5 f5bb1aabbf028310c9d0e30b6e69e835 HTTP-GHTTP-1.07-r1.ebuild 581
-MD5 cef9caac4c4cc9889bd4eea1bf2f2e69 ChangeLog 1625
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f7ed54f2fb6b269e36bd168f0db4042d ChangeLog 1723
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 36b81c3917c88eaf6e8d344e7da814bd HTTP-GHTTP-1.07-r1.ebuild 550
 MD5 3644ad74a52a9a9c72ce7bedadea67f2 files/digest-HTTP-GHTTP-1.07-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2pZFtG5z4I8BtQoRAsP9AJ9gRw8lFPObwIqvxIkmEFITUKpqFACfWz4w
+7KX6Qbil8sti5hDZm/eUdUU=
+=NlxL
+-----END PGP SIGNATURE-----
