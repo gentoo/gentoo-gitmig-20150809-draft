@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.1 2004/12/27 04:05:33 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.2 2004/12/27 13:01:37 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex
-	theora ipv6 altivec opengl aac pic fb xvmc nvidia i8x0 libcaca
+	theora ipv6 altivec opengl aac fb xv xvmc nvidia i8x0 libcaca
 	samba dxr3 vidix png mng"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
@@ -41,6 +41,8 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	png? ( media-libs/libpng )
 	mng? ( media-libs/libmng )"
 DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.7
+	>=sys-devel/autoconf-2.59
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}
@@ -62,9 +64,6 @@ src_unpack() {
 	# plasmaroo: Kernel 2.6 headers patch
 	epatch ${FILESDIR}/${PN}-1_rc7-2.6.patch
 
-	# force 32 bit userland
-	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/${PN}-1_rc8-configure-sparc.patch
-
 	# fixes bad X11 directories
 	epatch ${FILESDIR}/${PN}-x11.patch
 
@@ -77,10 +76,23 @@ src_unpack() {
 	# Fix building on amd64, #49569
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
 
-	use pic && epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
+	epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure
+
+	# Fix detection of sparc64 systems
+	use sparc && epatch ${FILESDIR}/xine-lib-1_rc7-configure-sparc.patch
+
+	# Makefile.ams and configure.ac get patched, so we need to rerun
+	# autotools
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.7
+	aclocal -I m4
+	libtoolize --copy --force
+	autoheader
+	automake -a -f -c
+	autoconf
 }
 
 src_compile() {
@@ -118,7 +130,7 @@ src_compile() {
 		&& myconf="${myconf} --build=${CHOST}"
 
 	# enable/disable appropiate optimizations on sparc
-	[ "${PROFILE_ARCH}" == "sparc64" ] \
+	[ "${PROFILE_ARCH}" == "sparc64" -o "${ABI}" == "sparc64" ] \
 		&& myconf="${myconf} --enable-vis"
 	[ "${PROFILE_ARCH}" == "sparc" ] \
 		&& myconf="${myconf} --disable-vis"
@@ -147,18 +159,8 @@ src_compile() {
 		myconf="${myconf} --with-caca-prefix=/tmp/non-existant"
 	fi
 
-	use nvidia \
-		&& xvmclib="XvMCNVIDIA"
-	use i8x0 \
-		&& xvmclib="I810XvMC"
-
-	use xvmc \
-		&& myconf="${myconf} --with-xvmc-path=/usr/X11R6/$(get_libdir)
-		--with-xxmc-path=/usr/X11R6/$(get_libdir) --with-xvmc-lib=$xvmclib
-		--with-xxmc-lib=$xvmclib"
-
-	( use xvmc && use nvidia && use i8x0 ) \
-		&& {
+	if use xvmc; then
+		if use nvidia && use i8x0; then
 			eerror "Invalid combination of USE flags"
 			eerror "When building support for xvmc, you may only"
 			eerror "include support for one video card:"
@@ -167,16 +169,44 @@ src_compile() {
 			eerror "Emerge again with different USE flags"
 
 			exit 1
-		}
+		elif use nvidia; then
+			xvmclib="XvMCNVIDIA"
+		elif use i8x0; then
+			xvmclib="I810XvMC"
+		else
+			ewarn "You tried to build with xvmc support."
+			ewarn "No supported graphics hardware was specified."
+			ewarn ""
+			ewarn "No xvmc support will be included."
+			ewarn "Please one appropriate USE flag and re-emerge:"
+			ewarn "   nvidia or i8x0"
+		fi
 
-	( use xvmc && ! use nvidia && ! use i8x0 ) && {
-		ewarn "You tried to build with xvmc support."
-		ewarn "No supported graphics hardware was specified."
-		ewarn ""
-		ewarn "No xvmc support will be included."
-		ewarn "Please one appropriate USE flag and re-emerge:"
-		ewarn "   nvidia or i8x0"
-	}
+		if [ -n "${xvmclib}" ]; then
+			if [ -f "${ROOT}/usr/$(get_libdir)/libXvMC.so" -o -f "${ROOT}/usr/$(get_libdir)/libXvMC.a" ]; then
+				myconf="${myconf} --with-xvmc-path=${ROOT}/usr/$(get_libdir) --with-xxmc-path=${ROOT}/usr/$(get_libdir) --with-xvmc-lib=${xvmclib} --with-xxmc-lib=${xvmclib}"
+			elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXvMC.so" -o -f "${ROOT}/usr/X11R6/$(get_libdir)/libXvMC.a" ]; then
+				myconf="${myconf} --with-xvmc-path=${ROOT}/usr/X11R6/$(get_libdir) --with-xxmc-path=${ROOT}/usr/X11R6/$(get_libdir) --with-xvmc-lib=${xvmclib} --with-xxmc-lib=${xvmclib}"
+			else
+				ewarn "Couldn't find libXvMC.  Disabling xvmc support."
+			fi
+		fi
+	fi
+
+	if use xv; then
+		if [ -f "${ROOT}/usr/$(get_libdir)/libXv.so" ]; then
+			myconf="${myconf} --enable-shared-xv --with-xv-path=${ROOT}/usr/$(get_libdir)"
+		elif [ -f "${ROOT}/usr/$(get_libdir)/libXv.a" ]; then
+			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/$(get_libdir)"
+		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.so" ]; then
+			myconf="${myconf} --enable-shared-xv --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
+		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.a" ]; then
+			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
+		else
+			myconf="${myconf} --enable-shared-xv"
+		fi
+	fi
+
 
 	econf \
 		$(use_enable nls) \
@@ -190,16 +220,14 @@ src_compile() {
 		$(use_with oggvorbis ogg) $(use_with oggvorbis vorbis) \
 		$(use_enable ipv6) \
 		$(use_enable directfb) $(use_enable fb) \
-		$(use_enable macos macosx-video) $(use_enable macos coreaudio) \
 		$(use_enable opengl) \
 		$(use_enable aac faad) \
+		${myconf} \
+		--disable-sdltest || die "Configure failed"
+
 		#$(use_with ffmpeg external-ffmpeg) \
 		#$(use_with dvdnav external-dvdnav) \
-		${myconf} \
-		--libdir=/usr/$(get_libdir) \
-		--with-xv-path=/usr/X11R6/$(get_libdir) \
-		--x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/$(get_libdir) \
-		--disable-sdltest || die "Configure failed"
+		#$(use_enable macos macosx-video) $(use_enable macos coreaudio) \
 
 	emake -j1 || die "Parallel make failed"
 }
