@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/mysqltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.11 2003/05/05 01:52:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.12 2003/05/12 01:29:26 robbat2 Exp $
 
 *mysqltool-0.95-r2 (04 May 2003)
+  
+  11 May 2003; Robin Johnson <robbat2@gentoo.org> files/90_mysqltool.conf.m4:
+  Slight fix again now, also marked as stable.
 
   04 May 2003; Robin Johnson <robbat2@gentoo.org> mysqltool-0.95-r2.ebuild,
   files/90_mysqltool.conf.m4:

@@ -2,7 +2,7 @@
   <IfDefine PERL>
   PerlRequire __APACHE_MODULES_CONF_DIR__/mysqltool.pl
   </IfDefine>
-  <Directory __APACHE_DOCUMENT_ROOT__/htdocs/mysqltool>
+  <Directory __APACHE_DOCUMENT_ROOT__/mysqltool>
     Options ExecCGI
     <Files *.cgi>
       SetHandler perl-script

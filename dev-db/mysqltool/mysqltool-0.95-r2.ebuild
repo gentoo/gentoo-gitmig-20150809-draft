@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.2 2003/05/05 01:52:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.3 2003/05/12 01:29:26 robbat2 Exp $
 
 inherit perl-module
 
@@ -12,14 +12,15 @@ IUSE="apache2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc ~hppa ~mips ~arm ~ppc ~alpha"
 
 DEPEND="virtual/glibc
-	dev-lang/perl"
+	dev-lang/perl
+	>=dev-db/mysql-3.23.38"
 RDEPEND="${DEPEND}
-	>=net-www/apache-1.3.24-r1 
-	apache2? ( >=net-www/apache-2.0.45 )
-	>=dev-db/mysql-3.23.38
+	|| ( >=net-www/apache-1.3.24-r1 
+		 apache2? ( >=net-www/apache-2.0.45 ) 
+	    )
 	dev-perl/CGI
 	dev-perl/Apache-DBI
 	dev-perl/DBI
@@ -37,8 +38,6 @@ src_install() {
 	make install || die
 
 	dodoc COPYING Changes MANIFEST README Upgrade
-
-
 	
 	local __apache_server_root__ 
 	if [ "`use apache2`" ]; then
