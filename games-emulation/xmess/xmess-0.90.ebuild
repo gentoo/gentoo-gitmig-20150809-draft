@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.88.ebuild,v 1.2 2005/01/25 02:57:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.90.ebuild,v 1.1 2005/01/25 02:57:15 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 LICENSE="xmame"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="3dfx alsa arts dga esd ggi joystick net opengl sdl svga X xv"
+IUSE="3dfx alsa arts dga esd expat ggi joystick mmx net opengl sdl svga X xv"
 
 RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.0 )
@@ -31,8 +31,7 @@ RDEPEND="sys-libs/zlib
 	ggi? ( media-libs/libggi )
 	arts? ( kde-base/arts )"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )
-	>=sys-apps/sed-4"
+	x86? ( dev-lang/nasm )"
 # Icc sucks. bug #41342
 #	icc? ( dev-lang/icc )
 
@@ -54,7 +53,6 @@ src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-glx-fix.patch"
 
 	case ${ARCH} in
 		x86)	mycpu="i386";;
@@ -75,7 +73,7 @@ src_unpack() {
 		-e "/^MANDIR/s:=.*:=/usr/share/man/man6:" \
 		-e "/^XMAMEROOT/s:=.*:=${GAMES_DATADIR}/${TARGET}:" \
 		-e "/^TARGET/s:mame:${TARGET:1}:" \
-		-e "s:^CFLAGS =:CFLAGS=${CFLAGS}:" \
+		-e "/^CFLAGS =/d" \
 		Makefile \
 		|| die "sed Makefile failed"
 
@@ -175,7 +173,7 @@ src_install() {
 	fi
 	exeinto "${GAMES_LIBDIR}/${PN}"
 	doexe chdman || die "doexe failed"
-	if [ ${PN} == "xmame" ; then
+	if [[ ${PN} == "xmame" ]] ; then
 		doexe xml2info || die "doexe failed"
 	fi
 
