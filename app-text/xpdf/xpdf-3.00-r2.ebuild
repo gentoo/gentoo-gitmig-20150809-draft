@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r2.ebuild,v 1.8 2004/10/18 15:09:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r2.ebuild,v 1.9 2004/10/19 20:11:33 gmsoft Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ~ia64 ~ppc64"
 
 DEPEND="motif? ( virtual/x11
 	x11-libs/openmotif )
