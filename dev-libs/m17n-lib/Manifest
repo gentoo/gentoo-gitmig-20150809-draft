@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b20ffb21edc6fea609546846e9ecc593 ChangeLog 2384
+MD5 0226247bbd8e2008f071157c9205c95c ChangeLog 2472
 MD5 12cfb48787e01b48267004ef45a971c7 m17n-lib-1.0.2-r1.ebuild 858
 MD5 c17924ad7500fca97165c79373fe9cbf m17n-lib-1.1.0.ebuild 835
+MD5 3aa1fad3d83f057fb58219f225522f51 m17n-lib-1.2.0.ebuild 901
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 fcd10a224cc1619456b012c2101adb41 m17n-lib-1.2.0.ebuild 905
 MD5 d94ea7c3bd6f07ebe0b9350ce349e089 files/digest-m17n-lib-1.0.2-r1 66
 MD5 0994149e9918a72731cefba7f7a85a33 files/digest-m17n-lib-1.1.0 66
+MD5 ed707c15e7ac75a5a8d9bf13879400d9 files/digest-m17n-lib-1.2.0 66
 MD5 052c2a0f1075d82e7b16593cd43a26db files/m17n-lib-1.0.2-typedef.diff 950
 MD5 4170792ccd93085bd6ecf9762d4429b9 files/m17n-lib-1.1.0-fpic.patch 748
-MD5 ed707c15e7ac75a5a8d9bf13879400d9 files/digest-m17n-lib-1.2.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCEf+AKRy60XGEcJIRAuZGAJ46zxZif8DplQ4UzZgUjLVz18L9XQCdHxZT
-uD+6bkAL2J3TgqcNGyV47yw=
-=pF0G
------END PGP SIGNATURE-----
