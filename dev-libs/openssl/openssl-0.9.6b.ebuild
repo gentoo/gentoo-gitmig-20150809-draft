@@ -17,10 +17,7 @@ src_unpack() {
 
   unpack ${A}
   cd ${S}
-  patch -p0 < ${FILESDIR}/${P}-Makefile.org-gentoo.diff
-  cp Configure Configure.orig
-  sed -e "s/-O3/$CFLAGS/" -e "s/-m486//" \
-    Configure.orig > Configure
+  try patch -p0 < ${FILESDIR}/${P}-Makefile.org-gentoo.diff
 
 }
 
