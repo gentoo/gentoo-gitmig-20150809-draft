@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7_pre1.ebuild,v 1.1 2004/05/11 07:03:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7_pre1.ebuild,v 1.2 2004/05/11 07:06:40 vapier Exp $
 
 EVER="${PV/_pre*}"
 MY_PV="${EVER}-0.56"
@@ -11,10 +11,9 @@ SRC_URI="mirror://sourceforge/enlightenment/enlightenment-${MY_PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
-IUSE="nls esd doc nofnlib xrandr nothemes"
+IUSE="nls esd doc xrandr nothemes"
 
-DEPEND="!nofnlib? ( >=media-libs/fnlib-0.5 )
-	esd? ( >=media-sound/esound-0.2.19 )
+DEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	=media-libs/freetype-2*
 	media-libs/imlib2
 	virtual/x11"
@@ -29,7 +28,6 @@ src_compile() {
 		`use_enable nls` \
 		`use_enable esd sound` \
 		`use_enable xrandr` \
-		`use_with !nofnlib fnlib` \
 		--enable-hints-ewmh \
 		--enable-fsstd \
 		--enable-zoom \
