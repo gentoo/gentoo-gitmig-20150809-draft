@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ruby-gdchart-0.0.9_beta.ebuild,v 1.4 2004/06/25 01:58:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ruby-gdchart-0.0.9_beta.ebuild,v 1.5 2004/06/30 17:20:35 vapier Exp $
 
 inherit ruby
 
@@ -8,13 +8,15 @@ MY_P="${P/_/-}"
 DESCRIPTION="Ruby/GDChart is an extension to use Bruce Verderaime's GDCHART library (http://www.fred.net/brv/chart) from Ruby."
 HOMEPAGE="http://sourceforge.jp/projects/ruby-gdchart/"
 SRC_URI="mirror://sourceforge.jp/ruby-gdchart/1080/${MY_P}.tar.gz"
+
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-USE_RUBY="ruby16 ruby18 ruby19"
 IUSE=""
+USE_RUBY="ruby16 ruby18 ruby19"
+
 DEPEND="virtual/ruby
-	media-libs/libgd"
+	media-libs/gd"
 
 S=${WORKDIR}/${MY_P}
 

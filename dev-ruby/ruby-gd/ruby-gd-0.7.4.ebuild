@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4.ebuild,v 1.2 2004/06/25 01:58:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4.ebuild,v 1.3 2004/06/30 17:21:04 vapier Exp $
 
 inherit ruby
 USE_RUBY="ruby16 ruby18 ruby19"
@@ -11,15 +11,15 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="ruby-gd: an interface to Boutell GD library"
 HOMEPAGE="http://tam.0xfa.com/ruby-gd/"
 SRC_URI="http://tam.0xfa.com/ruby-gd/${MY_P}-1.tar.gz"
+
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~x86"
-
 IUSE="jpeg truetype"
 
 DEPEND="virtual/ruby
 	virtual/x11
-	>=media-libs/libgd-2.0
+	>=media-libs/gd-2.0
 	jpeg? ( media-libs/jpeg )
 	truetype? ( media-libs/freetype )"
 
