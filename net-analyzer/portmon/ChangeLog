@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/portmon
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.1 2003/07/29 01:36:45 gregf Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.2 2004/03/22 12:00:18 mboman Exp $
+
+  22 Mar 2004; Michael Boman <mboman@gentoo.org> portmon-1.9.ebuild:
+  Changed RDEPEND to fix bug 45343.
 
 *portmon-1.9 (28 Jul 2003)
 
