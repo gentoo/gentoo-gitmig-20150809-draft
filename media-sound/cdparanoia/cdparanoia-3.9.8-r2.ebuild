@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.1 2004/09/01 08:03:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.2 2004/09/22 01:50:10 lv Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.xiph.org/paranoia/download/${MY_P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64 ~ia64 ~mips ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -27,6 +27,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-toc.patch
 	epatch ${FILESDIR}/${P}-identify_crash.patch
 	epatch ${FILESDIR}/${PV}-gcc34.patch
+
+	# if libdir is specified, cdparanoia causes sandbox violations, and using
+	# einstall doesnt work around it. so lets patch in DESTDIR support
+	epatch ${FILESDIR}/${P}-use-destdir.patch
+
 	ln -s configure.guess config.guess
 	ln -s configure.sub config.sub
 	gnuconfig_update
@@ -41,9 +46,6 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,lib,include} /usr/share/man/man1
-	make \
-		prefix=${D}/usr \
-		MANDIR=${D}/usr/share/man \
-		install || die
+	make DESTDIR=${D} install || die
 	dodoc FAQ.txt README
 }

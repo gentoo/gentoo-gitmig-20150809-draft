@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.16 2004/09/01 08:03:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.17 2004/09/22 01:50:10 lv Exp $
+
+  21 Sep 2004; Travis Tilley <lv@gentoo.org>
+  +files/cdparanoia-3.9.8-use-destdir.patch, cdparanoia-3.9.8-r2.ebuild:
+  fixed sandbox violations when CONF_LIBDIR is set by adding DESTDIR support to
+  the makefile. marked stable on amd64 for this fix
 
 *cdparanoia-3.9.8-r2 (01 Sep 2004)
 
