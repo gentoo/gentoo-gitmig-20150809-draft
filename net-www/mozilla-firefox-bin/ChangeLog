@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firefox-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.4 2004/04/26 01:41:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.5 2004/04/26 12:25:04 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-0.8.ebuild:
+  Remove accidental dependency on mozilla-launcher (until m-l is updated to work
+  with mozilla-firefox-bin
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-bin-0.8.ebuild:
