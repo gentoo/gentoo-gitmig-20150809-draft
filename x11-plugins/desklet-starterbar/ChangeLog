@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/desklet-starterbar
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.1 2003/09/09 05:18:53 obz Exp $
+
+*desklet-starterbar-0.12 (09 Sep 2003)
+
+  09 Sep 2003; Mike Gardiner <obz@gentoo.org> desklet-starterbar-0.12.ebuild:
+  First import
+
