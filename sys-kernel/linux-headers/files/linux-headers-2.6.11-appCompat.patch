@@ -443,34 +443,33 @@ diff -ur linux-2.6.8.1/include/asm-generic/siginfo.h linux-2.6.8.1-gentoo/includ
  #endif
  
  /*
-@@ -238,7 +240,7 @@
+@@ -242,6 +244,7 @@
+ #define SIGEV_PAD_SIZE	((SIGEV_MAX_SIZE/sizeof(int)) - 3)
  #endif
  
- #ifndef HAVE_ARCH_SIGEVENT_T
--
 +#ifndef _SIGNAL_H
  typedef struct sigevent {
  	sigval_t sigev_value;
  	int sigev_signo;
-@@ -253,7 +255,7 @@
+@@ -256,7 +259,7 @@
  		} _sigev_thread;
  	} _sigev_un;
  } sigevent_t;
 -
 +#endif
- #endif
- 
  #define sigev_notify_function	_sigev_un._sigev_thread._function
-diff -ur linux-2.6.0/include/linux/jiffies.h linux-2.6.0/include/linux.gentoo/jiffies.h
---- linux-2.6.0/include/linux/jiffies.h	2004-01-19 20:18:36.000000000 +0000
-+++ linux-2.6.0/include/linux.gentoo/jiffies.h	2004-01-19 20:01:11.000000000 +0000
+ #define sigev_notify_attributes	_sigev_un._sigev_thread._attribute
+ #define sigev_notify_thread_id	 _sigev_un._tid
+diff -ur linux-2.6.11/include/linux/jiffies.h linux-2.6.11/include/linux.gentoo/jiffies.h
+--- linux-2.6.11/include/linux/jiffies.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.11/include/linux.gentoo/jiffies.h	2004-01-19 20:01:11.000000000 +0000
 @@ -13,15 +13,15 @@
   * without holding read_lock_irq(&xtime_lock).
   * get_jiffies_64() will do this for you as appropriate.
   */
--extern u64 jiffies_64;
-+extern __u64 jiffies_64;
- extern unsigned long volatile jiffies;
+-extern u64 __jiffy_data jiffies_64;
++extern __u64 __jiffy_data jiffies_64;
+ extern unsigned long volatile __jiffy_data jiffies;
  
  #if (BITS_PER_LONG < 64)
 -u64 get_jiffies_64(void);
@@ -1914,26 +1913,6 @@ diff -urp linux-2.6.10/include/asm-i386/semaphore.h linux-2.6.10-gentoo/include/
  #include <linux/linkage.h>
  
  /*
-diff -urp linux-2.6.10/include/linux/mmzone.h linux-2.6.10-gentoo/include/linux/mmzone.h
---- linux-2.6.10/include/linux/mmzone.h	2005-02-08 21:01:47.000000000 +0000
-+++ linux-2.6.10-gentoo/include/linux/mmzone.h	2005-02-08 20:45:13.000000000 +0000
-@@ -1,6 +1,8 @@
- #ifndef _LINUX_MMZONE_H
- #define _LINUX_MMZONE_H
- 
-+extern int numnodes;
-+
- #ifdef __KERNEL__
- #ifndef __ASSEMBLY__
- 
-@@ -270,7 +272,6 @@ typedef struct pglist_data {
- #define node_present_pages(nid)	(NODE_DATA(nid)->node_present_pages)
- #define node_spanned_pages(nid)	(NODE_DATA(nid)->node_spanned_pages)
- 
--extern int numnodes;
- extern struct pglist_data *pgdat_list;
- 
- void __get_zone_counts(unsigned long *active, unsigned long *inactive,
 diff -urp linux-2.6.10/include/linux/prio_tree.h linux-2.6.10-gentoo/include/linux/prio_tree.h
 --- linux-2.6.10/include/linux/prio_tree.h	2005-02-08 21:01:47.000000000 +0000
 +++ linux-2.6.10-gentoo/include/linux/prio_tree.h	2005-02-08 20:15:28.000000000 +0000
@@ -2329,3 +2308,37 @@ diff -urp linux-2.6.10/include/linux/if_ppp.h linux-2.6.10-gentoo/include/linux/
  /* Constants used for fbio SunOS compatibility */
  /* (C) 1996 Miguel de Icaza */
  
+--- linux-2.6.10/include/linux/byteorder/little_endian.h.orig	2005-03-07 01:19:49.000000000 +0100
++++ linux-2.6.10/include/linux/byteorder/little_endian.h	2005-03-07 01:20:22.000000000 +0100
+@@ -40,6 +40,7 @@
+ #define __cpu_to_be16(x) ((__force __be16)__swab16((x)))
+ #define __be16_to_cpu(x) __swab16((__force __u16)(__be16)(x))
+ 
++#ifndef __STRICT_ANSI__
+ static inline __le64 __cpu_to_le64p(const __u64 *p)
+ {
+ 	return (__force __le64)*p;
+@@ -48,6 +49,7 @@
+ {
+ 	return (__force __u64)*p;
+ }
++#endif /* !__STRICT_ANSI__ */
+ static inline __le32 __cpu_to_le32p(const __u32 *p)
+ {
+ 	return (__force __le32)*p;
+@@ -64,6 +66,7 @@
+ {
+ 	return (__force __u16)*p;
+ }
++#ifndef __STRICT_ANSI__
+ static inline __be64 __cpu_to_be64p(const __u64 *p)
+ {
+ 	return (__force __be64)__swab64p(p);
+@@ -72,6 +75,7 @@
+ {
+ 	return __swab64p((__u64 *)p);
+ }
++#endif /* !__STRICT_ANSI__ */
+ static inline __be32 __cpu_to_be32p(const __u32 *p)
+ {
+ 	return (__force __be32)__swab32p(p);
