@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.38-r1.ebuild,v 1.1 2004/12/16 19:20:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.38-r1.ebuild,v 1.2 2004/12/16 23:40:55 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,7 +31,8 @@ src_compile() {
 	if use build; then
 		emake nasm || die "emake failed"
 	else
-		emake all rdf || die "emake failed"
+		emake all || die "emake failed"
+		emake rdf || die "emake failed"
 		if use doc; then
 			emake doc || die "emake failed"
 		fi

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.28 2004/12/16 19:20:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.29 2004/12/16 23:40:55 mr_bones_ Exp $
+
+  16 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> nasm-0.98.38-r1.ebuild:
+  fix parallel make
 
 *nasm-0.98.38-r1 (16 Dec 2004)
 
