@@ -1,6 +1,19 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.3 2002/06/24 20:54:02 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.4 2002/08/04 00:11:39 george Exp $
+
+*ocaml-3.04-r2 (01 Aug 2002)
+
+  02 Aug 2002; George Shapovalov <george@gentoo.org> ocaml-3.04-r2.ebuild :
+
+  tk dependence is reported (by Tim Hobbs <rectrix@rectrix.cx>) to be optional,
+  made it depend on tcltk use flag.
+  Created and masked new revision to give this some testing without interuption 
+  to the working package.
+  Core devs (cvs access people): please do not unmask it on server! Instead please 
+  let me know that it tested Ok. I will do necessary modifications to the -r1 
+  and delete -r2. This way we will not force everybody to rebuild perfectly 
+  working package.
 
 *ocaml-3.04-r1 (24 Jun 2002)
 
