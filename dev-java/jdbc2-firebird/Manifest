@@ -1,4 +1,4 @@
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 e9a2749463e911ccfe077d3bf56ae23c ChangeLog 393
-MD5 75ba4e11e498af1ec621042a55ac7442 jdbc3-firebird-1.5.3.ebuild 736
-MD5 a28064d667f1f2c8fda8f0d858cd08b8 files/digest-jdbc3-firebird-1.5.3 74
+MD5 f92482995a560c47fc717af8f4b98d22 ChangeLog 393
+MD5 c43d730a2990d5c0c3d5dba963e0bb13 jdbc2-firebird-1.5.3.ebuild 736
+MD5 65355e69fa5bd7c91d6e79f143885bc0 files/digest-jdbc2-firebird-1.5.3 74
