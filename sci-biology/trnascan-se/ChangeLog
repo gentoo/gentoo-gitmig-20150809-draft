@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/trnascan-se
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.1 2005/01/30 18:25:40 ribosome Exp $
+
+*trnascan-se-1.23 (30 Jan 2005)
+
+  30 Jan 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +trnascan-se-1.23.ebuild:
+  Initial import.
+
