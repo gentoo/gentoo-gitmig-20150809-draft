@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.7 2003/12/06 17:50:04 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.8 2004/02/14 05:32:16 strider Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -8,7 +8,7 @@
 # Based on http://www.linuxfromscratch.org/~tushar/hints/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
 
-IUSE="nptl"
+IUSE="nptl doc"
 
 inherit java nsplugins
 
@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
 	app-arch/zip
 	app-arch/unzip
 	>=virtual/jdk-1.4"
+PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.1* )"
 
 PROVIDE="virtual/jre-1.4.1
 	virtual/jdk-1.4.1

@@ -1,10 +1,10 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.23 2004/02/14 05:32:16 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.24 2004/02/14 05:33:42 strider Exp $
 
   14 Feb 2004; Adrian Almenar <strider@gentoo.org> sun-j2sdk-1.4.1-r1.ebuild,
   sun-j2sdk-1.4.1.ebuild, sun-j2sdk-1.4.2.ebuild:
-  Added doc use flag.
+  Added doc use flag. Closes #40672
 
 *sun-j2sdk-1.4.2 (20 Dec 2003)
 
