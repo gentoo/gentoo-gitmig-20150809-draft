@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.2.ebuild,v 1.6 2004/10/14 22:38:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.2.ebuild,v 1.7 2004/10/16 17:05:05 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -120,7 +120,6 @@ src_install() {
 	kdir /etc/cron.hourly
 	kdir /etc/cron.monthly
 	kdir /etc/cron.weekly
-	kdir /etc/devfs.d
 	kdir /etc/env.d
 	dodir /etc/init.d			# .keep file might mess up init.d stuff
 	kdir /etc/modules.autoload.d
