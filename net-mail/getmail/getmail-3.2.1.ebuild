@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-3.2.1.ebuild,v 1.1 2003/10/19 16:40:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-3.2.1.ebuild,v 1.2 2003/11/08 17:11:15 brad_mssw Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A POP3 mail retriever with reliable Maildir and mbox delivery"
@@ -9,7 +9,7 @@ SRC_URI="http://www.qcc.ca/~charlesc/software/getmail-3.0/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND="virtual/python"
 
