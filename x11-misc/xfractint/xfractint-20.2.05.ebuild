@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.05.ebuild,v 1.4 2004/02/17 23:38:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.05.ebuild,v 1.5 2004/02/22 22:48:41 agriffis Exp $
 
 MY_P=xfract${PV}
 
