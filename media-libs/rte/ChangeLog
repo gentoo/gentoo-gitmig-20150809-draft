@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/rte
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/ChangeLog,v 1.11 2004/06/24 23:20:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/ChangeLog,v 1.12 2004/08/28 11:57:46 mholzer Exp $
+
+*rte-0.5.2 (28 Aug 2004)
+
+  28 Aug 2004; Martin Holzer <mholzer@gentoo.org> +rte-0.5.2.ebuild:
+  Version bumped.
+
+*rte-0.5.1-r1 (28 Aug 2004)
+
+  28 Aug 2004; Martin Holzer <mholzer@gentoo.org> +rte-0.5.1-r1.ebuild,
+  rte-0.5.1.ebuild:
+  adding divx4linux through IUSE. Submitted by Jules Gagnon
+  <eonwe@users.sourceforge.net> in 30592
 
   13 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> rte-0.4.ebuild,
   rte-0.5.1.ebuild:
