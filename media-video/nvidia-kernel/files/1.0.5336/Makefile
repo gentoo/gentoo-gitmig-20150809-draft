@@ -2,7 +2,7 @@
 #   Generated on 'builder3.nvidia.com' on Thu Jun 19 04:05:35 PDT 2003
 
 LINUX_MODULE=nv-linux.o
-DEFINES=-D__KERNEL__ -DMODULE -D_LOOSE_KERNEL_NAMES -DKBUILD_MODNAME="nvidia" -DNTRM -D_GNU_SOURCE -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=5328     -DNV_UNIX   -DNV_LINUX   -DNV_INT64_OK   -DNVCPU_X86
+DEFINES=-D__KERNEL__ -DMODULE -D_LOOSE_KERNEL_NAMES -DKBUILD_MODNAME="nvidia" -DNTRM -D_GNU_SOURCE -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=5328  -DNV_UNIX   -DNV_LINUX   -DNV_INT64_OK   -DNVCPU_X86
 INCLUDES=-I.
 
 OBJECTS=nv.o os-agp.o os-interface.o os-registry.o 
@@ -12,7 +12,9 @@ CFLAGS=-Wall -Wimplicit -Wreturn-type -Wswitch -Wformat -Wchar-subscripts -Wpare
 
 RESMAN_KERNEL_MODULE=nv-kernel.o
 
+ifeq ($(KERNDIR),)
 KERNDIR=/lib/modules/$(shell uname -r)
+endif
 
 # check for newer paths. if found, use them, otherwise use old paths
 # these wouldn't work with the gnu make included with rh6.2
@@ -23,7 +25,11 @@ KERNDIR=/lib/modules/$(shell uname -r)
 ifeq ($(shell if test -d $(KERNDIR)/build; then echo yes; fi),yes)
 KERNINC=$(KERNDIR)/build/include
 else
-KERNINC=/usr/src/linux/include
+  ifeq ($(shell if test -d $(KERNDIR)/include; then echo yes; fi),yes)
+    KERNINC=$(KERNDIR)/include
+  else
+    KERNINC=/usr/src/linux/include
+  endif
 endif
 
 ifeq ($(shell if test -d $(KERNDIR)/kernel; then echo yes; fi),yes)

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.62 2004/02/01 17:16:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.63 2004/02/06 19:27:52 azarah Exp $
+
+  06 Feb 2004; Martin Schlemmer <azarah@gentoo.org>
+  nvidia-kernel-1.0.5336-r1.ebuild, files/1.0.5336/Makefile,
+  files/1.0.5336/NVIDIA_kernel-1.0-5336-basic-sysfs-support.patch:
+  Fix class_simple patch to actually not compile in sysfs support if
+  class_simple support is missing, bug #40107. Add sed to fix version of module
+  build. Fix Makefile to actually honour KERNDIR.
 
   01 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>;
   nvidia-kernel-1.0.5336-r1.ebuild:

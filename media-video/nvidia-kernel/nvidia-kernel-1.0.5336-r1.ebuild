@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r1.ebuild,v 1.2 2004/02/01 17:16:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r1.ebuild,v 1.3 2004/02/06 19:27:52 azarah Exp $
 
 inherit eutils
 
@@ -96,7 +96,8 @@ src_unpack() {
 
 		# Kbuild have issues currently (sandbox related).
 #		ln -snf Makefile.nvidia Makefile
-		cp -f ${FILESDIR}/${PV}/Makefile ${S}/makefile
+		sed -e "s:5328:${NV_V/1.0-/}:g" \
+			${FILESDIR}/${PV}/Makefile > ${S}/makefile
 	fi
 
 	# if you set this then it's your own fault when stuff breaks :)

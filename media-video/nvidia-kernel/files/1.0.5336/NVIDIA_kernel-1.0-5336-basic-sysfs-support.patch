@@ -12,11 +12,6 @@ diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/Makefile.kbuild NVIDIA-Linux-x86
  #
  # NVIDIA binary object file includes .common section.
  #
-diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/built-in.o NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/built-in.o
---- NVIDIA-Linux-x86-1.0-5336/usr/src/nv/built-in.o	1970-01-01 02:00:00.000000000 +0200
-+++ NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/built-in.o	2004-02-01 16:11:27.428340072 +0200
-@@ -0,0 +1 @@
-+!<arch>
 diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/conftest.sh NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/conftest.sh
 --- NVIDIA-Linux-x86-1.0-5336/usr/src/nv/conftest.sh	2004-01-15 05:29:11.000000000 +0200
 +++ NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/conftest.sh	2004-02-01 16:19:19.079638176 +0200
@@ -31,20 +26,20 @@ diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/conftest.sh NVIDIA-Linux-x86-1.0
 +        # support in 2.6
 +        #
 +        echo "#include <linux/device.h>
-+        struct class_simple *test_class;
-+        int add_test_class() {
++        void add_test_class(void) {
++           struct class_simple *test_class;
 +           test_class = class_simple_create(THIS_MODULE, \"test\");
 +        }" > conftest.c
 +
-+        gcc -c conftest.c -o conftest.o $* -D__KERNEL__ > /dev/null 2>&1
++        gcc -Wall -c conftest.c -o conftest.o $* -D__KERNEL__  > output.log 2>&1
 +
-+        if test -f conftest.o; then
++        if test -f conftest.o && test -z "`cat output.log`"; then
 +          echo "yes"
 +        else
 +          echo "no"
 +        fi
 +
-+        rm -f conftest.{c,o}
++        rm -f conftest.{c,o} output.log
 +    ;;
 +
      cc_sanity_check)
