@@ -1,5 +1,2 @@
-MD5 14ed7d4b068eaf2fca2b0a44e4950f37 files/digest-xfce4-toys-3.99.1 69
-MD5 78537aea57cc30179da08a7ffcfa0b73 files/digest-xfce4-toys-3.99.2 69
-MD5 dda385f7ff966cbd1e47f4c5ee1035cd xfce4-toys-3.99.1.ebuild 884
-MD5 d1038312b9a28b3eeb8ac3a35910cef2 ChangeLog 624
-MD5 4e195332a5b837a58d82c70936e0d91d xfce4-toys-3.99.2.ebuild 884
+MD5 aac0aec47ea62a0803e3515b63b9f7a8 xfce4-toys-3.99.3.ebuild 884
+MD5 967cf0051fc2a62d16b34d658c20c9c3 files/digest-xfce4-toys-3.99.3 69
