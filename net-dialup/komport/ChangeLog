@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/komport
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/ChangeLog,v 1.5 2004/07/11 12:32:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/ChangeLog,v 1.6 2004/10/26 22:25:25 malc Exp $
+
+  26 Oct 2004; Malcolm Lashley <malc@gentoo.org> komport-0.5.9.ebuild:
+  ~amd64 closes bug 68048
 
   11 Jul 2004; Carsten Lohrke <carlo@gentoo.org> komport-0.5.9.ebuild:
   stable on x86
