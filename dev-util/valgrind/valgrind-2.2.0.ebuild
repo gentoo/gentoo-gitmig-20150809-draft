@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.2.0.ebuild,v 1.3 2004/09/03 10:23:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.2.0.ebuild,v 1.4 2004/09/24 01:44:17 caleb Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="x86? ( http://developer.kde.org/~sewardj/${P}.tar.bz2 )
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -sparc ~ppc -alpha"
+KEYWORDS="x86 -sparc ~ppc -alpha"
 IUSE="X"
 RESTRICT="nostrip"
 
