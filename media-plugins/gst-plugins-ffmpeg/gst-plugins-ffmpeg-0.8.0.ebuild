@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.0.ebuild,v 1.4 2004/04/30 14:01:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.0.ebuild,v 1.5 2004/04/30 23:18:38 foser Exp $
 
 #inherit gst-plugins
 
@@ -39,21 +39,21 @@ src_install() {
 }
 
 # ripped from the gst-plugins eclass
-gst-plugins_update_registry() {
+update_registry() {
 
 	einfo "Updating gstreamer plugins registry for gstreamer ${SLOT}..."
 	gst-register-${SLOT}
 
 }
 
-gst-plugins_pkg_postinst() {
+pkg_postinst() {
 
-	gst-plugins_update_registry
+	update_registry
 
 }
 
-gst-plugins_pkg_postrm() {
+pkg_postrm() {
 
-	gst-plugins_update_registry
+	update_registry
 
 }
