@@ -14,7 +14,7 @@ MD5 037cd03c8e7281aec672e6e44c15e7e6 files/digest-kdepim-3.2.2 66
 MD5 318e6b50444a5837fed2a5ea9ecc57e9 files/digest-kdepim-3.2.3 66
 MD5 bf481282b9583a3e4095dcdef1aee22c files/KMail-inboxEater-BRANCH.diff 1619
 MD5 6f3f2b21eacb5869a9cbb821ffcf48a6 files/kpilot-parallel-make-fix.patch 737
-MD5 753ca1c819d5146b9a642e67cbf14581 files/digest-kdepim-3.3.0_rc1 70
+MD5 003148fad2df108658b5a094f9dcd7e1 files/digest-kdepim-3.3.0_rc1 70
 MD5 c15bea29d0b5aa57597bcaa4a13168de files/digest-kdepim-3.3.0_beta2 67
 MD5 bafdafa3d2488fa1168ccbb4a981dd87 files/digest-kdepim-3.2.0-r2 66
 MD5 c15bea29d0b5aa57597bcaa4a13168de files/digest-kdepim-3.3.0_beta2-r1 67
