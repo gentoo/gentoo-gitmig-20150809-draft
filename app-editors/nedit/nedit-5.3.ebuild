@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3.ebuild,v 1.4 2002/08/14 18:36:03 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3.ebuild,v 1.5 2002/08/29 20:18:52 naz Exp $
 
 S=${WORKDIR}/${P}
 MY_PV=${PV/./_}
@@ -22,7 +22,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/makefiles
 	cp Makefile.linux Makefile.orig
-	sed -e "s:-O:${CFLAGS}:" Makefile.orig > Makefile.linux
+	sed -e "s:-O:${CFLAGS}:" -e "s/-lm/-lm -lXmu/" \
+	Makefile.orig > Makefile.linux || die
 
 }
 
