@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.5 2003/10/21 17:11:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.6 2003/11/11 12:37:55 lu_zero Exp $
+
+*shfs-0.32 (11 Nov 2003)
+
+  11 Nov 2003; Luca Barbato <lu_zero@gentoo.org> shfs-0.32.ebuild:
+  New version, linux-2.6 support available.
 
   21 Oct 2003; <lu_zero@gentoo.org> shfs-0.31-r1.ebuild: Fixed the ppc patch 
   and made it use src_unpack. Works again on ppc.
