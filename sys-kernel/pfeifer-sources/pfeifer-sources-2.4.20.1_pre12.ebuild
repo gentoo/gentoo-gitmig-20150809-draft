@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/pfeifer-sources-2.4.20.1_pre12.ebuild,v 1.1 2003/06/13 06:43:15 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/pfeifer-sources-2.4.20.1_pre12.ebuild,v 1.2 2003/07/22 20:00:32 vapier Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -17,7 +17,7 @@ IUSE="build crypt evms2 aavm usagi"
 
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 OKV="2.4.20"
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.20-r3.ebuild,v 1.3 2003/06/12 22:13:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.20-r3.ebuild,v 1.4 2003/07/22 20:00:32 vapier Exp $
 
 IUSE="build selinux"
 
@@ -8,7 +8,7 @@ IUSE="build selinux"
 
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 
 OKV=2.4.20
 EXTRAVERSION=-hardened-r3

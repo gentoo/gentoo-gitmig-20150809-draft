@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.20-r2.ebuild,v 1.3 2003/02/13 16:36:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.20-r2.ebuild,v 1.4 2003/07/22 20:00:29 vapier Exp $
 
 IUSE="build"
 
@@ -8,7 +8,7 @@ IUSE="build"
 
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 
 OKV="2.4.20"
 KV="2.4.20-ck${PR/r/}"

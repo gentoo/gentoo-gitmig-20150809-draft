@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.20-r3.ebuild,v 1.4 2003/03/15 20:40:04 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.20-r3.ebuild,v 1.5 2003/07/22 20:00:32 vapier Exp $
 
 IUSE="build crypt"
 
@@ -17,7 +17,7 @@ IUSE="build crypt"
 
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 SLOT="${KV}"
 
 # Documentation on the patches contained in this kernel will be installed

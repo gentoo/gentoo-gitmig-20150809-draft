@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.20-r5.ebuild,v 1.2 2003/05/29 16:05:55 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.20-r5.ebuild,v 1.3 2003/07/22 20:00:33 vapier Exp $
 
 IUSE="selinux"
 
@@ -17,7 +17,7 @@ IUSE="selinux"
 
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 
 S=${WORKDIR}/linux-${KV}
 OKV=2.4.20

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.22_pre2.ebuild,v 1.1 2003/06/29 22:54:45 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.22_pre2.ebuild,v 1.2 2003/07/22 20:00:32 vapier Exp $
 
 IUSE="build crypt"
 
@@ -17,7 +17,7 @@ IUSE="build crypt"
 
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 PROVIDE="virtual/linux-sources virtual/winkernel"
 OKV=2.4.21
 EXTRAVERSION=_pre2-gss
