@@ -7,6 +7,8 @@ SRC_URI="http://fdutils.linux.lu/fdutils-5.4.tar.gz
 	 http://fdutils.linux.lu/fdutils-5.4-20020222.diff.gz"
 HOMEPAGE="http://fdutils.linux.lu/"
 LICENSE="GPL-2"
+KEYWORDS="x86"
+SLOT="0"
 DEPEND=">=mtools-3"
 #RDEPEND=""
 S=${WORKDIR}/${PN}-5.4
