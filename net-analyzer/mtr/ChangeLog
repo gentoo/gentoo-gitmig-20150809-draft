@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.18 2004/06/24 22:07:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.19 2004/06/30 23:24:44 eldad Exp $
+
+*mtr-0.54-r2 (01 Jul 2004)
+
+  01 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  +mtr-0.54-r2.ebuild:
+  suid: fixed permissions to 4710, group is set to root:wheel,
+  closes #47210, Thanks to Philipp Kern <phil@lordaeron.in-berlin.de>.
+  added metadata.
 
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> mtr-0.54-r1.ebuild:
   Stable on alpha.
