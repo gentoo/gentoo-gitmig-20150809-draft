@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.initd,v 1.1 2004/07/24 06:37:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.initd,v 1.2 2004/10/26 06:25:53 eradicator Exp $
 
 depend() {
 	need net portmap domainname
@@ -32,6 +32,7 @@ start() {
 stop() {
 	ebegin "Stopping ypbind"
 	start-stop-daemon --stop --quiet --exec /usr/sbin/ypbind
+	eend $?
 	# Remove binding files, if ypbind "forgets" it
 	rm -f /var/yp/binding/*
 }
