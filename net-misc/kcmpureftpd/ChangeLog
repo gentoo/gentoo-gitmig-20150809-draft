@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/kcmpureftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kcmpureftpd/ChangeLog,v 1.5 2003/02/12 08:25:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kcmpureftpd/ChangeLog,v 1.6 2003/09/17 03:10:18 caleb Exp $
+
+*kcmpureftpd-0.8 (16 Sep 2003)
+
+  16 Sep 2003; Caleb Tennis <caleb@gentoo.org> kcmpureftpd-0.8.ebuild, metadata.xml:
+  new version
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
