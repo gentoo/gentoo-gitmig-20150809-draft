@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.25 2005/01/28 17:33:17 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.26 2005/01/31 20:03:47 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -15,56 +15,82 @@
 # A Couple of env vars are available to effect usage of this eclass
 # These are as follows:
 # 
-# Env Var		Option		Default			Description
-# KERNEL_DIR	<string>	/usr/src/linux	The directory containing kernel
-#											the target kernel sources.
-# ECONF_PARAMS	<string>					The parameters to pass to econf.
-#											If this is not set, then econf isn't
-#											run.
-# BUILD_PARAMS	<string>					The parameters to pass to emake.
-# BUILD_TARGETS	<string>	clean modules	The build targets to pass to make.
-# MODULE_NAMES	<string>					This is the modules which are
-#											to be built automatically using the
-#											default pkg_compile/install. They
-#											are explained properly below.
-#											It will only make BUILD_TARGETS once
-#											in any directory.
-# NO_MODULESD	<string>					Set this to something to prevent
-#											modulesd file generation
-
+# Env Var		Option		Default		Description
+# KERNEL_DIR		<string>	/usr/src/linux	The directory containing kernel
+#							the target kernel sources.
+# ECONF_PARAMS		<string>			The parameters to pass to econf.
+#							If this is not set, then econf
+#							isn't run.
+# BUILD_PARAMS		<string>			The parameters to pass to emake.
+# BUILD_TARGETS		<string>	clean modules	The build targets to pass to
+#							make.
+# MODULE_NAMES		<string>			This is the modules which are
+#							to be built automatically using 
+#							the default pkg_compile/install. 
+#							They are explained properly 
+#							below. It will only make  
+#							BUILD_TARGETS once in any
+#							directory.
 
 # MODULE_NAMES - Detailed Overview
 # 
 # The structure of each MODULE_NAMES entry is as follows:
-# modulename(libmodulesdir:modulesourcedir)
+# modulename(libdir:srcdir:objdir)
 # for example:
-# MODULE_NAMES="module_pci(pci:${S}/pci) module_usb(usb:${S}/usb)"
+# MODULE_NAMES="module_pci(pci:${S}/pci:${S}) module_usb(usb:${S}/usb:${S})"
 # 
 # what this would do is
 #  cd ${S}/pci
 #  make ${BUILD_PARAMS} ${BUILD_TARGETS}
+#  cd ${S}
 #  insinto /lib/modules/${KV_FULL}/pci
 #  doins module_pci.${KV_OBJ}
 #
 #  cd ${S}/usb
 #  make ${BUILD_PARAMS} ${BUILD_TARGETS}
+#  cd ${S}
 #  insinto /lib/modules/${KV_FULL}/usb
 #  doins module_usb.${KV_OBJ}
 #
-# if the modulessourcedir isnt specified, it assumes ${S}
-# if the libmodulesdir isnt specified, it assumes misc.
-# if no seperator is defined ":" then it assumes the argument is modulesourcedir
+# if the srcdir isnt specified, it assumes ${S}
+# if the libdir isnt specified, it assumes misc.
+# if the objdir isnt specified, it assumes srcdir
+
+# There is also support for automatyed modules.d file generation.
+# This can be explicitly enabled by setting any of the following variables.
+#
+#
+# MODULESD_${modulename}_ENABLED		This enables the modules.d file
+#						generation even if we dont
+#						specify any additional info.
+# MODULESD_${modulename}_EXAMPLES		This is a bash array containing
+#						a list of examples which should
+#						be used. If you want us to try and
+#						take a guess. Set this to "guess"
+# MODULESD_${modulename}_ALIASES		This is a bash array containing
+#						a list of associated aliases.
+# MODULESD_${modulename}_ADDITIONS		This is a bash array containing
+#						A list of additional things to
+#						add to the bottom of the file.
+#						This can be absolutely anything.
+#						Each entry is a new line.
+# MODULES_${modulename}_DOCS			This is a string list which contains
+#						the full path to any associated
+#						documents for $modulename
+
 
 inherit linux-info
 ECLASS=linux-mod
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS pkg_setup src_install pkg_postinst src_compile
+EXPORT_FUNCTIONS pkg_setup pkg_postinst src_install src_compile \
+		 src_compile_userland src_install_userland
 
+SLOT="0"
 DESCRIPTION="Based on the $ECLASS eclass"
-SLOT=0
 DEPEND="virtual/linux-sources
 		sys-apps/sed
 		virtual/modutils"
+
 
 # eclass utilities
 # ----------------------------------
@@ -123,104 +149,147 @@ set_kvobj() {
 	else
 		KV_OBJ="o"
 	fi
-	einfo "Using KV_OBJ=${KV_OBJ}"
+	# Do we really need to know this?
+	# Lets silence it.
+	# einfo "Using KV_OBJ=${KV_OBJ}"
 }
 
 generate_modulesd() {
 	# This function will generate the neccessary modules.d file from the
 	# information contained in the modules exported parms
-	
-	local selectedmodule selectedmodule_full selectedmodulevars parameter modinfop arg xifs temp
-	local module_docs module_opts module_aliases module_config
-	
-	for arg in ${@}
+
+	local 	currm_path currm t myIFS myVAR
+	local 	module_docs module_enabled module_aliases \
+			module_additions module_examples module_modinfo module_opts
+
+	for currm_path in ${@}
 	do
-		selectedmodule_full="${arg}"
-		# strip the directory
-		selectedmodule="${selectedmodule_full/*\//}"	
-		# convert the modulename to uppercase
-		selectedmodule="$(echo ${selectedmodule} | tr '[:lower:]' '[:upper:]')"
+		currm=${currm_path//*\/}
+		currm=$(echo ${currm} | tr '[:lower:]' '[:upper:]')
 
-		module_docs="MODULESD_${selectedmodule}_DOCS"
-		module_aliases="$(eval echo \$\{#MODULESD_${selectedmodule}_ALIASES[*]\})"
-		[ ${module_aliases} == 0 ] && unset module_aliases
-		module_docs="${!module_docs}"
-		modinfop="$(modinfo -p ${selectedmodule_full}.${KV_OBJ})"
-		
-		# By now we know if there is anything we can use to generate a file with
-		# so unset empty vars and bail out if we find nothing.
-		for parameter in ${!module_*}
+		module_docs="$(eval echo \${MODULESD_${currm}_DOCS})"
+		module_enabled="$(eval echo \${MODULESD_${currm}_ENABLED})"
+		module_aliases="$(eval echo \${#MODULESD_${currm}_ALIASES[*]})"
+		module_additions="$(eval echo \${#MODULESD_${currm}_ADDITIONS[*]})"
+		module_examples="$(eval echo \${#MODULESD_${currm}_EXAMPLES[*]})"
+
+		[ ${module_aliases} -eq 0 ] 	&& unset module_aliases
+		[ ${module_additions} -eq 0 ] 	&& unset module_additions
+		[ ${module_examples} -eq 0 ] 	&& unset module_examples
+
+		# If we specify we dont want it, then lets exit, otherwise we assume 
+		# that if its set, we do want it.
+		[[ ${module_enabled} == no ]] && return 0
+
+		# unset any unwanted variables.
+		for t in ${!module_*}
 		do
-			[ -z "${!parameter}" ] && unset ${parameter}
+			[[ -z ${!t} ]] && unset ${t}
 		done
-		[ -z "${!module_*}" -a -z "${modinfop}" ] && return
 
-		#so now we can set the configfilevar
-		module_config="${T}/modulesd-${selectedmodule}"
-	
-		# and being working on things.	
+		[[ -z ${!module_*} ]] && return 0
+
+		# OK so now if we have got this far, then we know we want to continue
+		# and generate the modules.d file.
+		module_modinfo="$(modinfo -p ${currm_path}.${KV_OBJ})"
+		module_config="${T}/modulesd-${currm}"
+
 		ebegin "Preparing file for modules.d"
-		echo  "# modules.d config file for ${selectedmodule}" >> ${module_config}
-		echo  "# this file was automatically generated from linux-mod.eclass" >> ${module_config}
-		for temp in ${module_docs}
+		#-----------------------------------------------------------------------
+		echo "# modules.d configuration file for ${currm}" >> ${module_config}
+		#-----------------------------------------------------------------------
+		[[ -n ${module_docs} ]] && \
+			echo "# For more information please read:" >> ${module_config}
+		for t in ${module_docs}
 		do
-			echo "#  Please read ${temp/*\//} for more info" >> ${module_config}
+			echo "#    ${t//*\/}" >> ${module_config}
 		done
+		echo >> ${module_config}
 
-		if [ ${module_aliases} > 0 ];
+		#-----------------------------------------------------------------------
+		if [ ${module_aliases} -gt 0 ]
 		then
-			echo >> ${module_config}
 			echo  "# Internal Aliases - Do not edit" >> ${module_config}
 			echo  "# ------------------------------" >> ${module_config}
 
-			(( module_aliases-- ))
-			for temp in $(seq 0 ${module_aliases})
+			for((t=0; t<${module_aliases}; t++))
 			do
-				echo "alias $(eval echo \$\{MODULESD_${selectedmodule}_ALIASES[$temp]\})" >> ${module_config}
+				echo "alias $(eval echo \${MODULESD_${currm}_ALIASES[$t]})" \
+					>> ${module_config}
 			done
+			echo '' >> ${module_config}
 		fi
 
-		# and then stating any module parameters defined from the module
-		if [ -n "${modinfop}" ];
+		#-----------------------------------------------------------------------
+		if [[ -n ${module_modinfo} ]]
 		then
 			echo >> ${module_config}
 			echo  "# Configurable module parameters" >> ${module_config}
 			echo  "# ------------------------------" >> ${module_config}
-		
-			xifs="${IFS}"
+			myIFS="${IFS}"
 			IFS="$(echo -en "\n\b")"
-			for parameter in ${modinfop}
+			
+			for t in ${module_modinfo}
 			do
-				temp="$(echo ${parameter#*:} | grep -e " [0-9][ =]" | sed "s:.*\([01][= ]\).*:\1:")"
-				if [ -n "${temp}" ];
+				myVAR="$(echo ${t#*:} | grep -e " [0-9][ =]" | sed "s:.*\([01][= ]\).*:\1:")"
+				if [[ -n ${myVAR} ]]
 				then
-					module_opts="${module_opts} ${parameter%%:*}:${temp}"
+					module_opts="${module_opts} ${t%%:*}:${myVAR}"
 				fi
-				echo -e "# ${parameter%%:*}:\t${parameter#*:}" >> ${module_config}
-			done
-			IFS="${xifs}"
+				echo -e "# ${t%%:*}:\t${t#*:}" >> ${module_config}
+			done			
+			IFS="${myIFS}"
+			echo '' >> ${module_config}
 		fi
-		
-		# and any examples we can gather from them
-		if [ -n "${module_opts}" ];
+
+		#-----------------------------------------------------------------------
+		if [[ $(eval echo \${MODULESD_${currm}_ALIASES[0]}) == guess ]]
 		then
-			echo >> ${module_config}
-			echo  "# For Example..." >> ${module_config}
-			echo  "# ------------------------------" >> ${module_config}
-			for parameter in ${module_opts}
+			# So lets do some guesswork eh?
+			if [[ -n ${module_opts} ]]
+			then
+				echo "# For Example..." >> ${module_config}
+				echo "# --------------" >> ${module_config}
+				for t in ${module_opts}
+				do
+					echo "# options ${currm} ${t//:*}=${t//*:}" >> ${module_config}
+				done
+				echo '' >> ${module_config}
+			fi
+		elif [ ${module_examples} -gt 0 ]
+		then
+			echo "# For Example..." >> ${module_config}
+			echo "# --------------" >> ${module_config}
+			for((t=0; t<${module_examples}; t++))
 			do
-				echo "# options ${selectedmodule_full/*\//} ${parameter//:*}=${parameter//*:}" >> ${module_config}
+				echo "options $(eval echo \${MODULESD_${currm}_EXAMPLES[$t]})" \
+					>> ${module_config}
 			done
+			echo '' >> ${module_config}
+		fi
+
+		#-----------------------------------------------------------------------
+		if [ ${module_additions} -gt 0 ]
+		then
+			for((t=0; t<${module_additions}; t++))
+			do
+				echo "$(eval echo \${MODULESD_${currm}_ADDITIONS[$t]})" \
+					>> ${module_config}
+			done
+			echo '' >> ${module_config}
 		fi
 		
+		#-----------------------------------------------------------------------
+
 		# then we install it
 		insinto /etc/modules.d
-		newins ${module_config} ${selectedmodule_full/*\//}
+		newins ${module_config} ${currm_path}
 		
 		# and install any documentation we might have.
-		[ -n "${module_docs}" ] && dodoc ${module_docs}
+		[[ -n ${module_docs} ]] && dodoc ${module_docs}
 	done
 	eend 0
+	return 0
 }
 
 display_postinst() {
@@ -304,10 +373,18 @@ linux-mod_pkg_setup() {
 	set_kvobj;
 }
 
+linux-mod_src_compile_userland() {
+	return 0
+}
+
+linux-mod_src_install_userland() {
+	return 0
+}
+
 linux-mod_src_compile() {
-	local modulename libdir srcdir objdir i n myARCH=${ARCH}
+	local modulename libdir srcdir objdir i n myARCH="${ARCH}"
 	unset ARCH
-	
+
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
 	
 	for i in ${MODULE_IGNORE}
@@ -343,8 +420,8 @@ linux-mod_src_compile() {
 			cd ${OLDPWD}
 		fi
 	done
-	
-	ARCH=${myARCH}
+
+	ARCH="${myARCH}"
 }
 
 linux-mod_src_install() {
@@ -368,12 +445,11 @@ linux-mod_src_install() {
 
 		einfo "Installing ${modulename} module"
 		cd ${objdir}
-
-		insinto /lib/modules/${KV_FULL}/${libdir}
+		insinto ${ROOT}lib/modules/${KV_FULL}/${libdir}
 		doins ${modulename}.${KV_OBJ}
 		cd ${OLDPWD}
 		
-		[ -z "${NO_MODULESD}" ] && generate_modulesd ${objdir}/${modulename}
+		generate_modulesd ${objdir}/${modulename}
 	done
 }
 

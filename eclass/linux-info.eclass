@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.20 2005/01/23 20:47:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.21 2005/01/31 20:03:47 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -16,21 +16,21 @@
 # A Couple of env vars are available to effect usage of this eclass
 # These are as follows:
 # 
-# Env Var		Option		Description
+# Env Var	Option		Description
 # KERNEL_DIR	<string>	The directory containing kernel the target kernel
-#							sources.
+#				sources.
 # CONFIG_CHECK	<string>	a list of .config options to check for before
-#							proceeding with the	install. ie: CONFIG_CHECK="MTRR"
-#							You can also check that an option doesn't exist by 
-#							prepending it with an exclamation mark (!).
-#							ie: CONFIG_CHECK="!MTRR"
-# <CFG>_ERROR	<string>	The error message to display when the above check
-#							fails. <CFG> should reference the appropriate option
-#							as above. ie: MTRR_ERROR="MTRR exists in the .config
-#							but shouldn't!!"
+#				proceeding with the install. ie: CONFIG_CHECK="MTRR"
+#				You can also check that an option doesn't exist by 
+#				prepending it with an exclamation mark (!).
+#				ie: CONFIG_CHECK="!MTRR"
+# ERROR_CFG		<string>	The error message to display when the above check
+#				fails. <CFG> should reference the appropriate option
+#				as above. ie: MTRR_ERROR="MTRR exists in the .config
+#				but shouldn't!!"
 # KBUILD_OUTPUT	<string>	This is passed on commandline, or can be set from
-#							the kernel makefile. This contains the directory
-#							which is to be used as the kernel object directory.
+#				the kernel makefile. This contains the directory
+#				which is to be used as the kernel object directory.
 
 # There are also a couple of variables which are set by this, and shouldn't be
 # set by hand. These are as follows:
@@ -43,72 +43,54 @@
 # KV_EXTRA		<string>	The kernel EXTRAVERSION. ie: -gentoo
 # KV_LOCAL		<string>	The kernel LOCALVERSION concatenation. ie: -johnm
 # KV_DIR		<string>	The kernel source directory, will be null if
-#							KERNEL_DIR is invalid.
-# KV_OUT_DIR	<string>	The kernel object directory. will be KV_DIR unless
-#							koutput is used. This should be used for referencing
-#							.config.
+#					KERNEL_DIR is invalid.
+# KV_OUT_DIR		<string>	The kernel object directory. will be KV_DIR unless
+#					koutput is used. This should be used for referencing
+#					.config.
 
+# And to ensure all the weirdness with crosscompile
+inherit toolchain-funcs
 
 ECLASS=linux-info
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup
 
-inherit toolchain-funcs
-
 # Overwritable environment Var's
 # ---------------------------------------
-KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
+KERNEL_DIR="${KERNEL_DIR:-${ROOT}usr/src/linux}"
 
 
 # Bug fixes
-
 # fix to bug #75034
 case ${ARCH} in
     ppc)     	BUILD_FIXES="${BUILD_FIXES} TOUT=${T}/.tmp_gas_check";;
     ppc64)      BUILD_FIXES="${BUILD_FIXES} TOUT=${T}/.tmp_gas_check";;
 esac
 
-# Pulled from eutils as it might be more useful only being here since
-# very few ebuilds which dont use this eclass will ever ever use these functions
-set_arch_to_kernel() {
-	export ARCH="$(tc-arch-kernel)"
-}
+# These are legacy wrappers for toolchain-funcs.
+# I dont like them here, but oh well.
+set_arch_to_kernel() { $(tc-arch-kernel); }
+set_arch_to_portage() { $(tc-arch); }
 
-# set's ARCH back to what portage expects
-set_arch_to_portage() {
-	export ARCH="$(tc-arch)"
-}
-
-
-#
 # qeinfo "Message"
 # -------------------
-# qeinfo is a queit einfo call when EBUILD_PHASE
+# qeinfo is a quiet einfo call when EBUILD_PHASE
 # should not have visible output.
-#
-qeinfo() {
-    local outputmsg
-    outputmsg="${@}"
+qout() {
+	local outputmsg type
+	type=${1}
+	shift
+	outputmsg="${@}"
     case "${EBUILD_PHASE}" in
         depend)  unset outputmsg;;
         clean)   unset outputmsg;;
         preinst) unset outputmsg;;
     esac
-    [ -n "${outputmsg}" ] && einfo "${outputmsg}"
+    [ -n "${outputmsg}" ] && ${type} "${outputmsg}"
 }
 
-qeerror() {
-    local outputmsg
-    outputmsg="${@}"
-    case "${EBUILD_PHASE}" in
-        depend) unset outputmsg;;
-        clean)  unset outputmsg;;
-        preinst) unset outputmsg;;
-    esac
-    [ -n "${outputmsg}" ] && einfo "${outputmsg}"
-}
-
-
+qeinfo() { qout einfo "${@}" ; }
+qeerror() { qout eerror "${@}" ; }
 
 # File Functions
 # ---------------------------------------
@@ -117,7 +99,7 @@ qeerror() {
 # getfilevar <VARIABLE> <CONFIGFILE>
 
 getfilevar() {
-local	ERROR workingdir basefname basedname xarch
+local	ERROR workingdir basefname basedname myARCH="${ARCH}"
 	ERROR=0
 
 	[ -z "${1}" ] && ERROR=1
@@ -133,15 +115,14 @@ local	ERROR workingdir basefname basedname xarch
 		workingdir=${PWD}
 		basefname=$(basename ${2})
 		basedname=$(dirname ${2})
-		xarch=${ARCH}
 		unset ARCH
-		
+
 		cd ${basedname}
 		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | \
 			make ${BUILD_FIXES} -f - e 2>/dev/null
 		cd ${workingdir}
-		 
-		ARCH=${xarch}
+
+		ARCH=${myARCH}
 	fi
 }
 
@@ -327,17 +308,17 @@ get_version() {
 	fi
 	# and if we STILL haven't got it, then we better just set it to KV_DIR
 	KV_OUT_DIR="${KV_OUT_DIR:-${KV_DIR}}"
-	
+
 	KV_LOCAL="${KV_LOCAL}$(cat ${KV_DIR}/localversion* 2>/dev/null)"
 	KV_LOCAL="${KV_LOCAL}$(linux_chkconfig_string LOCALVERSION)"
 	KV_LOCAL="${KV_LOCAL//\"/}"
-	
+
 	# And we should set KV_FULL to the full expanded version
 	KV_FULL="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}${KV_LOCAL}"
-	
+
 	qeinfo "Found sources for kernel version:"
 	qeinfo "    ${KV_FULL}"
-	
+
 	if [ ! -s "${KV_OUT_DIR}/.config" ]
 	then
 		qeerror "Could not find a usable .config in the kernel source directory."
@@ -346,7 +327,7 @@ get_version() {
 		qeerror "it points to the necessary object directory so that it might find .config."
 		return 1
 	fi
-	
+
 	return 0
 }
 
@@ -433,9 +414,17 @@ check_extra_config() {
 		else
 			if ! linux_chkconfig_present ${config}
 			then
-				local_error="${config}_ERROR"
+				# Support the new syntax first.
+				local_error="ERROR_${config}"
 				local_error="${!local_error}"
-				[ -n "${local_error}" ] && eerror "  ${local_error}" || \
+				
+				# then fall back on the older syntax.
+				if [[ -z ${local_error} ]] ; then
+					local_error="${config}_ERROR"
+					local_error="${!local_error}"
+				fi
+				
+				[[ -n ${local_error} ]] && eerror "  ${local_error}" || \
 					eerror "  CONFIG_${config}:\tshould be set in the kernel configuration, but isn't"
 				error=1
 			fi

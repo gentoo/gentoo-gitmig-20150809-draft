@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.88 2005/01/31 19:14:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.89 2005/01/31 20:03:47 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -394,8 +394,12 @@ postinst_sources() {
 	# if the link doesnt exist, lets create it
 	[[ ! -h ${ROOT}usr/src/linux ]] && MAKELINK=1
 	
-	[[ ${MAKELINK} == 1 ]] && \
-		ln -sf ${ROOT}usr/src/linux-${KV_FULL} ${ROOT}usr/src/linux
+	if [[ ${MAKELINK} == 1 ]]
+	then
+		cd ${ROOT}usr/src
+		ln -sf linux-${KV_FULL} linux
+		cd ${OLDPWD}
+	fi
 
 	# Don't forget to make directory for sysfs
 	[ ! -d "${ROOT}/sys" -a kernel_is_2_6 ] && mkdir /sys
@@ -877,8 +881,7 @@ echo "#ifdef __arch64__
 	return 0
 }
 
-headers___fix()
-{
+headers___fix() {
 	# Voodoo to partially fix broken upstream headers.
 	# Issues with this function should go to plasmaroo.
 	sed -i \
