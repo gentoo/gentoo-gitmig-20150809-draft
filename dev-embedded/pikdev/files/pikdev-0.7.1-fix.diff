@@ -1,0 +1,36 @@
+diff -Npaur pikdev-0.7.1/pikdev/PikMain.h pikdev-0.7.1-fixed/pikdev/PikMain.h
+--- pikdev-0.7.1/pikdev/PikMain.h	2004-10-08 22:03:46.000000000 +0200
++++ pikdev-0.7.1-fixed/pikdev/PikMain.h	2004-11-30 11:22:13.795988328 +0100
+@@ -119,7 +119,7 @@ private:
+           // unique toolbar
+         KToolBar 	*toolbar ;
+ 
+-        EditorManager *edimanager ; ;
++        EditorManager *edimanager ;
+         QTextEdit  *console ;
+                 
+         // hardware support
+diff -Npaur pikdev-0.7.1/pikdev/PrgConfig.h pikdev-0.7.1-fixed/pikdev/PrgConfig.h
+--- pikdev-0.7.1/pikdev/PrgConfig.h	2004-08-16 19:48:40.000000000 +0200
++++ pikdev-0.7.1-fixed/pikdev/PrgConfig.h	2004-11-30 11:32:59.561817000 +0100
+@@ -122,7 +122,7 @@ public slots:
+   /** No descriptions */
+   void slotSerDeviceSelected(bool  state);
+   /** Changes pin/port  configuration when a new standard hardware is selected */
+-  void slotStdHardware(const QString& name) ;;
++  void slotStdHardware(const QString& name) ;
+   /** Creates a new hardware profile */
+   void slotSaveHardware();
+ signals:
+diff -Npaur pikdev-0.7.1/pikdev/ProjectWid.h pikdev-0.7.1-fixed/pikdev/ProjectWid.h
+--- pikdev-0.7.1/pikdev/ProjectWid.h	2004-08-16 19:48:43.000000000 +0200
++++ pikdev-0.7.1-fixed/pikdev/ProjectWid.h	2004-11-30 11:22:28.729718056 +0100
+@@ -75,7 +75,7 @@ public slots:
+   /** No descriptions */
+   void slotProjectEditorClosed();
+   /** No descriptions */
+-  void slotOpenProjectFile(const QString& filename) ;;
++  void slotOpenProjectFile(const QString& filename) ;
+ private: // Private attributes
+   /** New project widget */
+   NewProject * newproject;

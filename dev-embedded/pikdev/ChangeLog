@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.18 2004/11/16 07:34:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.19 2004/11/30 23:37:53 robbat2 Exp $
+
+*pikdev-0.7.1-r1 (30 Nov 2004)
+
+  30 Nov 2004; Robin H. Johnson <robbat2@gentoo.org>
+  +files/pikdev-0.7.1-fix.diff, +pikdev-0.7.1-r1.ebuild:
+  Bug #72831 for compile fix and ebuild cleanup.
 
 *pikdev-0.7.1 (16 Nov 2004)
 
