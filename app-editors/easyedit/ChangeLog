@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/easyedit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.10 2005/01/01 13:23:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.11 2005/03/05 22:01:45 slarti Exp $
+
+  05 Mar 2005; Tom Martin <slarti@gentoo.org> easyedit-1.4.6.ebuild:
+  Marked ~amd64, resolves bug 84232.
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> easyedit-1.4.6.ebuild:
   Stable on sparc.

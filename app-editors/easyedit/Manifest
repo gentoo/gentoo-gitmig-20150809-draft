@@ -1,4 +1,14 @@
-MD5 06e5ffb37eb297a8d21fc9f3586e0b7a ChangeLog 1201
-MD5 9fffb5c617b48f933e4f3bd8ebc7c4de easyedit-1.4.6.ebuild 721
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e6e8aedefc24c543a39a22b0090abd7 ChangeLog 1304
+MD5 49f54a14c80e047a65710b1b66583f4c easyedit-1.4.6.ebuild 724
 MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
 MD5 f85ccb7c4940841113d3572b8a7da566 files/digest-easyedit-1.4.6 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCKiz+CHk4+ZoBpvsRAv3NAJ9nUR9U0OGfXIl+LeaNlN1aV+sZNACfVTpf
+LDBIf3LEjjE0UdjefMoh5hg=
+=kI4N
+-----END PGP SIGNATURE-----
