@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/mudix-4.0.ebuild,v 1.2 2004/01/24 13:46:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/mudix-4.0.ebuild,v 1.3 2004/06/24 23:00:52 agriffis Exp $
 
 DESCRIPTION="A small, stable MUD client for the console"
 HOMEPAGE="http://dwizardry.dhs.org/mudix.html"
