@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.517 2004/07/29 06:41:19 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.518 2004/07/31 07:59:09 kumba Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -32,6 +32,9 @@ app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop librar
 app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
 app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
+app-emulation/mips64emul:cacheemu - Enables support for cache emulation
+app-emulation/mips64emul:delays - Enables instruction latency/delay emulation
+app-emulation/mips64emul:mips16 - Enables MIPS16 instruction support
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:sheep - Support for the sheep net driver
 app-emulation/pearpc:jit - Use the JITC-X86 CPU
