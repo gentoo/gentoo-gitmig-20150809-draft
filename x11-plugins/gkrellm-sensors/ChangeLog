@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-sensors
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/ChangeLog,v 1.8 2004/12/18 11:00:43 hansmi Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/ChangeLog,v 1.9 2005/02/27 12:24:52 brix Exp $
+
+  27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  gkrellm-sensors-0.1.ebuild:
+  Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.
 
   18 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
   gkrellm-sensors-0.1.ebuild:

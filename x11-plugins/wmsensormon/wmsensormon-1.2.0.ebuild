@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/wmsensormon-1.2.0.ebuild,v 1.6 2005/01/28 23:39:56 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/wmsensormon-1.2.0.ebuild,v 1.7 2005/02/27 12:23:38 brix Exp $
 
 IUSE=""
 S=${WORKDIR}/${P/_/-}/${PN}
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 DEPEND="virtual/x11
-	sys-apps/lm-sensors"
+	sys-apps/lm_sensors"
 
 src_compile() {
 	cd ${S}
