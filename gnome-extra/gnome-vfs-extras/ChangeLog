@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-vfs-extras
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-extras/ChangeLog,v 1.18 2004/01/17 01:43:32 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-extras/ChangeLog,v 1.19 2004/01/18 14:59:35 gustavoz Exp $
+
+  18 Jan 2004; <gustavoz@gentoo.org> gnome-vfs-extras-0.99.11.ebuild:
+  stable on hppa and sparc
 
   17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
   manifest fix
