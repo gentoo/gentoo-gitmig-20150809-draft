@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.12 2004/05/07 19:23:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.13 2004/06/09 21:19:40 lu_zero Exp $
+
+  09 Jun 2004; Luca Barbato <lu_zero@gentoo.org> pmake-1.45-r4.ebuild:
+  Marked ppc
 
   07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> pmake-1.45-r4.ebuild:
   Stable on sparc wrt bug #50378
