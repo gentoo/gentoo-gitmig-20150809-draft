@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.11.ebuild,v 1.4 2004/08/22 22:35:53 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.11.ebuild,v 1.5 2005/01/05 07:11:23 lisa Exp $
 
 DESCRIPTION="memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load."
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ~ppc"
 IUSE="static perl php"
 
 DEPEND=">=dev-libs/libevent-0.6
-	perl? ( dev-libs/memcached-api-perl )
+	perl? ( dev-perl/Cache-Memcached )
 	php? ( dev-libs/memcached-api-php )
 "
 
