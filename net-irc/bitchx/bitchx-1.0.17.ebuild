@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.17.ebuild,v 1.1 2000/09/20 17:08:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.17.ebuild,v 1.2 2000/10/09 16:02:49 achim Exp $
 
 P=BitchX-1.0c17
 A=${P}.tar.gz
@@ -27,7 +27,7 @@ src_install () {
     prepman /usr/X11R6
     dodoc Changelog README* IPv6-support
     cd doc
-    insinto /usr/X11R5/include/bitmaps
+    insinto /usr/X11R6/include/bitmaps
     doins BitchX.xpm
     insinto /opt/gnome/share/gnome/apps/Internet
     doins gtkBitchX.desktop
