@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.11.0.ebuild,v 1.2 2005/01/19 12:14:37 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.11.0.ebuild,v 1.3 2005/01/22 23:59:35 wschlich Exp $
 
 inherit eutils
 
@@ -15,10 +15,13 @@ KEYWORDS="x86 ~sparc ~amd64 ~ppc ~hppa ~ppc64"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
+	icq? ( !net-libs/libicq2000 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
+	msn? ( net-misc/curl )
 	bidi? ( dev-libs/fribidi )"
 
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
