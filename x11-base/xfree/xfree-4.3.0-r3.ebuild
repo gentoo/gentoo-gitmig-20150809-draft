@@ -1,16 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.1 2003/05/21 11:22:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.2 2003/05/24 04:58:53 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
-# that only we only strip stuff that is safe to strip ...
+# that only we only strip stuff that are safe to strip ...
 DEBUG="yes"
 RESTRICT="nostrip"
 
-IUSE="debug 3dfx sse mmx 3dnow xml truetype nvidia rage128 radeon matrox sis
-savage wacom i8x0 cyrillic cjk speedo type1 expertxfree"
+IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc"
 
-inherit eutils flag-o-matic gcc
 
 filter-flags "-funroll-loops"
 
@@ -41,10 +39,12 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="2.0.0"
+PATCH_VER="1.1.3"
 FT2_VER="2.1.3"
-SISDRV_VER="060403-1"
+XCUR_VER="0.2"
+SISDRV_VER="180403-1"
 SAVDRV_VER="1.1.27t"
+MGADRV_VER="1_3_0beta"
 
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
@@ -59,8 +59,9 @@ X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 	http://www.cpbotha.net/files/dri_resume/xfree86-dri-resume-v8.patch"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
-	savage? ( http://www.probo.com/timr/savage-${SAVDRV_VER}.zip )
-	sis? ( http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz )"
+	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
+	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
+#	ftp://ftp.matrox.com/pub/mga/archive/linux/2001/beta_1_3_0/mga-${MGADRV_VER}.tgz"
 #	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
 # Updated Wacom driver:  http://people.mandrakesoft.com/~flepied/projects/wacom/
 # Latest Savaga drivers:  http://www.probo.com/timr/savage40.html
@@ -83,31 +84,32 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	${SRC_PATH0}/X${MY_SV}src-3.tgz
 	${SRC_PATH0}/X${MY_SV}src-4.tgz
 	${SRC_PATH0}/X${MY_SV}src-5.tgz
-	${SRC_PATH0}/X${MY_SV}src-6.tgz
-	${SRC_PATH0}/X${MY_SV}src-7.tgz
 	${SRC_PATH1}/X${MY_SV}src-1.tgz
 	${SRC_PATH1}/X${MY_SV}src-2.tgz
 	${SRC_PATH1}/X${MY_SV}src-3.tgz
 	${SRC_PATH1}/X${MY_SV}src-4.tgz
 	${SRC_PATH1}/X${MY_SV}src-5.tgz
-	${SRC_PATH1}/X${MY_SV}src-6.tgz
-	${SRC_PATH1}/X${MY_SV}src-7.tgz"
+	doc? ( ${SRC_PATH0}/X${MY_SV}src-6.tgz
+		${SRC_PATH0}/X${MY_SV}src-7.tgz
+		${SRC_PATH1}/X${MY_SV}src-6.tgz
+		${SRC_PATH1}/X${MY_SV}src-7.tgz )"
 
 SRC_URI="${SRC_URI}
 	${X_PATCHES}
 	${X_DRIVERS}
-	mirror://gentoo/gemini-koi8-u.tar.bz2
+	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	mirror://gentoo/eurofonts-X11.tar.bz2
 	mirror://gentoo/xfsft-encodings.tar.bz2
 	mirror://gentoo/XFree86-compose.dir.bz2
 	mirror://gentoo/XFree86-en_US.UTF-8.old.bz2
 	mirror://gentoo/XFree86-locale.alias.bz2
 	mirror://gentoo/XFree86-locale.dir.bz2
+	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 	truetype? ( ${MS_FONT_URLS} )"
 
-SLOT="0"
 LICENSE="X11 MSttfEULA"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+SLOT="0"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa arm"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -123,39 +125,59 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	pam? ( >=sys-libs/pam-0.75 )
 	truetype? ( app-arch/cabextract )
 	app-arch/unzip
-	!virtual/xft"
-
+	!virtual/xft" 
+#RDEPEND="$DEPEND"
 # unzip - needed for savage driver (version 1.1.27t)
-# media-libs/xft - blocked because of possible interferance with xfree
+# x11-libs/xft -- blocked because of interference with xfree's
  	
 PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 PROVIDE="virtual/x11
 	virtual/opengl
 	virtual/glu
-	virtual/xft"	
+	virtual/xft"
 
-BASE_PATCHES=${WORKDIR}/gentoo-patches
-PATCHDIR=${BASE_PATCHES}/general
-HOSTCONF="config/cf/host.def"
+#inherit needs to happen *after* DEPEND has been defined to have "newdepend"
+#do the right thing. Otherwise RDEPEND doesn't get set properly.
+inherit eutils flag-o-matic gcc
 
-savage_unpack() {
+src_unpack() {
+
+	# Unpack source and patches
+	unpack X${MY_SV}src-{1,2,3,4,5}.tgz
+	if [ -n "`use doc`" ]
+	then
+		unpack X${MY_SV}src-{6,7}.tgz
+	fi
+	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+
+	# Unpack TaD's gentoo cursors
+	unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2
+
+	# Unpack extra fonts stuff from Mandrake
+	if [ -n "`use nls`" ]
+	then
+		unpack gemini-koi8-u.tar.bz2
+	fi
+	unpack eurofonts-X11.tar.bz2
+	unpack xfsft-encodings.tar.bz2
+	
+	# Remove bum encoding
+	rm -f ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/urdunaqsh-0.enc
+	
 	# Update the Savage Driver
 	# savage driver 1.1.27t is a .zip and contains a savage directory
 	# (that's why we have to be in drivers, not in savage subdir).
 	# Could be USE flag based
+
 	ebegin "Updating Savage driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers
 	unzip -oqq ${DISTDIR}/savage-${SAVDRV_VER}.zip || die
 	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
 		${S}/programs/Xserver/hw/xfree86/drivers/savage
 	cd ${S}
-
-	mv ${BASE_PATCHES}/savage/* ${PATCHDIR}
 	eend 0
-}
 
-sis_unpack() {
 	ebegin "Updating SiS driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
 	tar -zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz || die
@@ -163,34 +185,43 @@ sis_unpack() {
 		${S}/programs/Xserver/hw/xfree86/drivers/sis
 	cd ${S}
 	eend 0
-}
+    
+#	ebegin "Updating Matrox HAL driver"
+#	unpack mga-${MGADRV_VER}.tgz
+#	touch ${WORKDIR}/mga/HALlib/mgaHALlib.a
+#	mv ${WORKDIR}/mga/HALlib/mgaHALlib.a \
+#		#{S}/programs/Xserver/hw/xfree86/drivers/mga/HALlib
+#	eend 0
 
-
-nvidia_unpack() {
-	ebegin "Updating nvidia driver"
-	mv ${BASE_PATCHES}/nvidia/* ${PATCHDIR}
-	eend 0
-}
-
-
-tdfx_unpack() {
-	ebegin "Updating 3dfx driver"
-	mv ${BASE_PATCHES}/tdfx/* ${PATCHDIR}
-	
-	if [ "${TDFX_RISKY}" = "yes" ]
+	if [ "`gcc-version`" = "2.95" ]
 	then
-		mv ${PATCHDIR}/075* ${BASE_PATCHES}/excluded
+		# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
+		# closing bug #10146.
+		EPATCH_EXCLUDE="107_all_4.2.1-gcc32-internal-compiler-error.patch.bz2"
 	fi
-	eend 0
-}
 
-ati_unpack() {
-	ebegin "Updating Radeon and Rage128 drivers"
-	mv ${BASE_PATCHES}/ati/* ${PATCHDIR}
-	eend 0
-}
+	if [ -z "`use debug`" ]
+	then
+		rm -f ${WORKDIR}/patch/202_all_4.2.99.3-acecad-debug.patch.bz2
+	fi
+# FIXME: bug #19812, 075 should be deprecated by 076, left as
+# TDFX_RISKY for feedback (put in -r3 if no problems)
+	if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
+	then
+		rm -f ${WORKDIR}/patch/075*
+	else
+		rm -f ${WORKDIR}/patch/076*
+	fi
 
-wacom_unpack() {
+	# Various Patches from all over
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch/
+	
+	unset EPATCH_EXCLUDE
+	
+	# Fix DRI related problems
+	cd ${S}/programs/Xserver/hw/xfree86/
+	epatch ${DISTDIR}/xfree86-dri-resume-v8.patch
+	
 	# Update Wacom Driver, hopefully resolving bug #1632
 	# The kernel driver should prob also be updated, this can be
 	# found at:
@@ -204,17 +235,7 @@ wacom_unpack() {
 			${S}/programs/Xserver/hw/xfree86/input/wacom/xf86Wacom.c || die
 		eend 0
 	fi
-}
-
-fonts_unpack() {
-	# Unpack extra fonts stuff from Mandrake
-	unpack gemini-koi8-u.tar.bz2
-	unpack eurofonts-X11.tar.bz2
-	unpack xfsft-encodings.tar.bz2
 	
-	# Remove bum encoding
-	rm -f ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/urdunaqsh-0.enc
-
 	# Unpack the MS fonts
 	if [ -n "`use truetype`" ]
 	then
@@ -230,147 +251,16 @@ fonts_unpack() {
 		done
 		ebegin "Done unpacking Core Fonts"; eend 0
 	fi
-}
-
-
-patch_prepare() {
-	EXCLUDED=${WORKDIR}/excluded
-	mkdir ${EXCLUDED}
-
-	if [ "`gcc-version`" = "2.95" ]
-	then
-		# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
-		# closing bug #10146.
-		mv ${PATCHDIR}/107_all_4.2.1-gcc32* ${EXCLUDED}
-	fi
-
-	if [ -z "`use debug`" ]
-	then
-		mv ${PATCHDIR}/202_all_4.2.99.3-acecad-debug* ${EXCLUDED}
-	fi
-}
-
-
-vanilla_unpack() {
-	savage_unpack
-	sis_unpack
-	nvidia_unpack
-	tdfx_unpack
-	wacom_unpack
-	ati_unpack
-}
-
-
-expert_unpack() {
-	use savage && savage_unpack
-	use sis && sis_unpack
-	use nvidia && nvidia_unpack
-	use 3dfx && tdfx_unpack
-	use wacom && wacom_unpack
-
-	if [ "`use rage128`" -o "`use raddeon`" ]
-	then
-		ati_unpack
-	fi
-}
-
-
-video_card_config() {
-
-	if [ "${ARCH}" = "x86" -a use expertxfree ]
-	then
-		DRIVER_STRING="#define XF86CardDrivers apm dummy fbdev \
-			AgpGartDrivers DevelDrivers GlideDriver \
-			v4l vesa vga vmware"
-
-		use nvidia && DRIVER_STRING="${DRIVER_STRING} nv"
-		use 3dfx && DRIVER_STRING="${DRIVER_STRING} tdfx"
-		if [ -n "`use radeon`" -o -n "`use rage128`" ]
-		then
-			DRIVER_STRING="${DRIVER_STRING} ati"
-		fi
-		use i8x0 && DRIVER_STRING="${DRIVER_STRING} i810"
-		use savage && DRIVER_STRING="${DRIVER_STRING} savage"
-		use sis && DRIVER_STRING="${DRIVER_STRING} sis"
-		use matrox && DRIVER_STRING="${DRIVER_STRING} mga"
-
-		DRIVER_STRING="${DRIVER_STRING} ${MY_CARD}"
-
-		echo "${DRIVER_STRING}" >> ${HOSTCONF}
-	fi
-
-	if [ "${ARCH}" = "alpha" ]
-	then
-		echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \
-			i740 tdfx cirrus tseng fbdev \
-			ati vga v4l glint" >> ${HOSTCONF}
-	fi
-
-	if [ "${ARCH}" = "ppc" ]
-	then
-		echo "#define XF86CardDrivers mga glint s3virge sis savage trident \
-			chips tdfx fbdev ati DevelDrivers vga nv XF86OSCardDrivers \
-			XF86ExtraCardDrivers" >> ${HOSTCONF}
-	fi
-}
-
-
-font_sets_config() {
 	
-	ebegin "Defining font sets to build"
-	if use expertxfree
-	then
-		echo "#define Build75DpiFonts YES" >> ${HOSTCONF}
-		echo "#define Build100DpiFonts YES" >> ${HOSTCONF}
-		echo "#define BuildType1Fonts YES" >> ${HOSTCONF}
-		use truetype && echo "#define BuildTrueTypeFonts YES" >> ${HOSTCONF}
-		use speedo && echo "#define BuildSpeedoFonts YES" >> ${HOSTCONF}
-		use cjk && echo "#define BuildCIDFonts YES" >> ${HOSTCONF}
-	
-		if use cyrillic
-		then
-			echo "#define BuildCyrillicFonts YES" >> ${HOSTCONF}
-			echo "#define UseKoi8RForCyrillic YES" >> ${HOSTCONF}
-		fi
-	fi
-	eend 0
-}
-
-src_unpack() {
-
-	# Unpack source and patches
-	unpack X${MY_SV}src-{1,2,3,4,5,6,7}.tgz
-	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
-	
-	fonts_unpack
-
-	if use expertxfree
-	then
-		einfo "unpacking for experts"
-		expert_unpack
-	else
-		vanilla_unpack
-	fi
-	
-	patch_prepare
-	
-	cd ${S}
-	# Various Patches from all over
-	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/
-	
-	# Fix DRI related problems
-	cd ${S}/programs/Xserver/hw/xfree86/
-	epatch ${DISTDIR}/xfree86-dri-resume-v8.patch
-	
-	ebegin "Setting up ${HOSTCONF}"
-	cd ${S}; cp ${FILESDIR}/${PV}/site.def ${HOSTCONF} || die
+	ebegin "Setting up config/cf/host.def"
+	cd ${S}; cp ${FILESDIR}/${PV}/site.def config/cf/host.def || die
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
-		>> ${HOSTCONF}
+		>> config/cf/host.def
 
 	# We're using Xwrapper instead -- so that nothing else needs to be
 	# set uid any more.
-	echo "#define InstallXserverSetUID NO" >> ${HOSTCONF}
-	echo "#define BuildServersOnly NO" >> ${HOSTCONF}
+	echo "#define InstallXserverSetUID NO" >> config/cf/host.def
+	echo "#define BuildServersOnly NO" >> config/cf/host.def
 
 	# Bug #12775 .. fails with -Os.
 	replace-flags "-Os" "-O2"
@@ -385,42 +275,42 @@ src_unpack() {
 		# Without this, modules breaks with gcc3
 		if [ "`gcc-version`" = "3.1" ]
 		then
-			export CFLAGS="${CFLAGS} -fno-merge-constants"
-			export CXXFLAGS="${CXXFLAGS} -fno-merge-constants"
+			append-flags "-fno-merge-constants"
+			append-flags "-fno-merge-constants"
 		fi
 	fi
 
 	if [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then
-		echo "#define HasLinuxInput YES" >> ${HOSTCONF}
+		echo "#define HasLinuxInput YES" >> config/cf/host.def
 	fi
 
-	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> ${HOSTCONF}
-	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> ${HOSTCONF}
+	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
+	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
 	if [ -n "`use debug`" ]
 	then
-		echo "#define XFree86Devel	YES" >> ${HOSTCONF}
-		echo "#define DoLoadableServer	NO" >>${HOSTCONF}
+		echo "#define XFree86Devel	YES" >> config/cf/host.def
+		echo "#define DoLoadableServer	NO" >>config/cf/host.def
 	else
-		echo "#define ExtraXInputDrivers acecad" >> ${HOSTCONF}
+		echo "#define ExtraXInputDrivers acecad" >> config/cf/host.def
 		# use less ram .. got this from Spider's makeedit.eclass :)
 		echo "#define GccWarningOptions -Wno-return-type -w" \
-			>> ${HOSTCONF}
+			>> config/cf/host.def
 	fi
 
 	if [ -n "`use pam`" ]
 	then
 		# If you want to have optional pam support, do it properly ...
-		echo "#define HasPam YES" >> ${HOSTCONF}
-		echo "#define HasPamMisc YES" >> ${HOSTCONF}
+		echo "#define HasPam YES" >> config/cf/host.def
+		echo "#define HasPamMisc YES" >> config/cf/host.def
 	else
-		echo "#define HasPam NO" >> ${HOSTCONF}
-		echo "#define HasPamMisc NO" >> ${HOSTCONF}
+		echo "#define HasPam NO" >> config/cf/host.def
+		echo "#define HasPamMisc NO" >> config/cf/host.def
 	fi
 
 	if [ -n "`use nls`" ]
 	then
-		echo "#define XtermWithI18N YES" >> ${HOSTCONF}
+		echo "#define XtermWithI18N YES" >> config/cf/host.def
 	fi
 
 	if [ "${ARCH}" = "x86" ]
@@ -428,60 +318,102 @@ src_unpack() {
 		# optimize Mesa for architecture
 		if [ -n "`use mmx`" ]
 		then
-			echo "#define HasMMXSupport	YES" >> ${HOSTCONF}
-			echo "#define MesaUseMMX YES" >> ${HOSTCONF}
+			echo "#define HasMMXSupport	YES" >> config/cf/host.def
+			echo "#define MesaUseMMX YES" >> config/cf/host.def
 		fi
 		if [ -n "`use 3dnow`" ]
 		then
-			echo "#define Has3DNowSupport YES" >> ${HOSTCONF}
-			echo "#define MesaUse3DNow YES" >> ${HOSTCONF}
+			echo "#define Has3DNowSupport YES" >> config/cf/host.def
+			echo "#define MesaUse3DNow YES" >> config/cf/host.def
 		fi
 		if [ -n "`use sse`" ]
 		then
-			echo "#define HasKatmaiSupport YES" >> ${HOSTCONF}
-			echo "#define MesaUseKatmai YES" >> ${HOSTCONF}
+			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
+			echo "#define MesaUseKatmai YES" >> config/cf/host.def
 		fi
 
 		# build with glide3 support? (build the tdfx_dri.o module)
 		if [ -n "`use 3dfx`" ]
 		then
-			echo "#define HasGlide3 YES" >> ${HOSTCONF}
+			echo "#define HasGlide3 YES" >> config/cf/host.def
 		fi
 	fi
 
 	if [ "${ARCH}" = "hppa" ]
 	then
-		echo "#define DoLoadableServer NO" >> ${HOSTCONF}
+		echo "#define DoLoadableServer NO" >> config/cf/host.def
 	fi
 
-	video_card_config
-	font_sets_config
+	if [ "${ARCH}" = "alpha" ]
+	then
+		echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \
+			i740 tdfx cirrus tseng fbdev \
+			ati vga v4l glint" >> config/cf/host.def
+	fi
+
+	if [ "${ARCH}" = "ppc" ]
+	then
+		echo "#define XF86CardDrivers mga glint s3virge sis savage trident \
+			chips tdfx fbdev ati DevelDrivers vga nv XF86OSCardDrivers \
+			XF86ExtraCardDrivers" >> config/cf/host.def
+	fi
 
 	if [ -n "`use xml`" ]
 	then
-		echo "#define HasLibxml2 YES" >> ${HOSTCONF}
+		echo "#define HasLibxml2 YES" >> config/cf/host.def
 	fi
 
 	# The definitions for fontconfig
-	echo "#define UseFontconfig YES" >> ${HOSTCONF}
-	echo "#define HasFontconfig YES" >> ${HOSTCONF}
+	echo "#define UseFontconfig YES" >> config/cf/host.def
+	echo "#define HasFontconfig YES" >> config/cf/host.def
 
 	# Use the xfree Xft2 lib
-	echo "#define SharedLibXft YES" >> ${HOSTCONF}
+	echo "#define SharedLibXft YES" >> config/cf/host.def
+	
+	# disable docs if doc not in USE
+	if [ -z "`use doc`" ]
+	then
+		echo "#define BuildLinuxDocText NO" >> config/cf/host.def
+		echo "#define BuildLinuxDocHtml NO" >> config/cf/host.def
+		echo "#define BuildLinuxDocPS NO" >> config/cf/host.def
+		echo "#define BuildSpecsDocs NO" >> config/cf/host.def
+	fi
+
+	# enable Japanese docs, optionally
+	if [ -n "`use cjk`" -a -n "`use doc`" ]
+	then
+		echo "#define InstallJapaneseDocs YES" >> config/cf/host.def
+	fi
+
+	# Native Language Support Fonts
+	if [ -z "`use nls`" ]
+	then
+		echo "#define BuildCyrillicFonts NO" >> config/cf/host.def
+		echo "#define BuildArabicFonts NO" >> config/cf/host.def
+		echo "#define BuildGreekFonts NO" >> config/cf/host.def
+		echo "#define BuildHebrewFonts NO" >> config/cf/host.def
+		echo "#define BuildThaiFonts NO" >> config/cf/host.def
+
+		if [ -z "`use cjk`" ]
+		then
+			echo "#define BuildCIDFonts NO" >> config/cf/host.def
+			echo "#define BuildJapaneseFonts NO" >> config/cf/host.def
+			echo "#define BuildKoreanFonts NO" >> config/cf/host.def
+			echo "#define BuildChineseFonts NO" >> config/cf/host.def
+		fi
+	fi
+
+#	# Build with the binary MatroxHAL driver
+#	echo "#define HaveMatroxHal YES" >> config/cf/host.def
+#	echo "#define UseMatroxHal YES" >> config/cf/host.def
 
 # Will uncomment this after kde, qt, and *box ebuilds are alterered to use
 # it
 #	if use xinerama
 #	then
-#		echo "#define BuildXinerama YES" >> ${HOSTCONF}
-#		echo "#define BuildXineramaLibrary YES" >> ${HOSTCONF}
-#	else
-#		echo "#define BuildXinerama NO" >> ${HOSTCONF}
-#		echo "#define BuildXineramaLibrary NO" >> ${HOSTCONF}
+#		echo "#define BuildXinerama YES" >> config/cf/host.def
+#		echo "#define BuildXineramaLibrary YES" >> config/cf/host.def
 #	fi
-
-	# Default to whiteglass maybe?
-	echo "#define DefaultCursorTheme whiteglass" >> ${HOSTCONF}
 
 	# End the host.def definitions here
 	eend 0
@@ -491,18 +423,21 @@ src_unpack() {
 	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
 	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
 	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
-
-	# These are not included anymore as they are obsolete
-	rm -rf ${S}/doc/hardcopy/{XIE,PEX5}
-	for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}
-	do
-		if [ -f ${x} ]
-		then
-			cp ${x} ${x}.orig
-			grep -iv 'Load[[:space:]]*"\(pex5\|xie\)"' ${x}.orig > ${x}
-			rm -f ${x}.orig
-		fi
-	done
+	
+	if use doc
+	then
+		# These are not included anymore as they are obsolete
+		rm -rf ${S}/doc/hardcopy/{XIE,PEX5}
+		for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}
+		do
+			if [ -f ${x} ]
+			then
+				cp ${x} ${x}.orig
+				grep -iv 'Load[[:space:]]*"\(pex5\|xie\)"' ${x}.orig > ${x}
+				rm -f ${x}.orig
+			fi
+		done
+	fi
 }
 
 src_compile() {
@@ -631,16 +566,6 @@ src_install() {
 		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-9x16-lat9.pcf.gz
 	eend 0
 
-	# Change the silly red pointer to a white one ...
-	if [ -f "${D}/usr/X11R6/lib/X11/icons/default/index.theme" ]
-	then
-		dosed 's:core:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
-	
-	elif [ -f "${D}/usr/share/cursors/xfree/default/index.theme" ]
-	then
-		dosed 's:core:whiteglass:'/usr/share/cursors/xfree/default/index.theme
-	fi
-
 	# Standard symlinks
 	dodir /usr/{bin,include,lib}
 	dosym ../X11R6/bin /usr/bin/X11
@@ -725,13 +650,16 @@ src_install() {
 	done
 	eend 0
 
-	ebegin "gemini-koi8 fonts..."
-	cd ${WORKDIR}/ukr
-	gunzip *.Z
-	gzip -9 *.pcf
-	cd ${S}
-	cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
-	eend 0
+	if [ -n "`use nls`" ]
+	then
+		ebegin "gemini-koi8 fonts..."
+		cd ${WORKDIR}/ukr
+		gunzip *.Z
+		gzip -9 *.pcf
+		cd ${S}
+		cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
+		eend 0
+	fi
 	
 	exeinto /etc/X11
 	# new session management script
@@ -798,6 +726,10 @@ src_install() {
 	done
 	eend 0
 
+	# Make the core cursor the default.  People seem not to like whiteglass
+	# for some reason.
+	dosed 's:whiteglass:core:' /usr/share/cursors/xfree/default/index.theme
+
 	einfo "Striping binaries and libraries..."
 	# This bit I got from Redhat ... strip binaries and drivers ..
 	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
@@ -826,6 +758,13 @@ src_install() {
 		fi
 	done
 
+	# Install TaD's gentoo cursors
+	insinto /usr/share/cursors/xfree/gentoo/cursors
+	doins ${WORKDIR}/cursors/gentoo/cursors/*
+	insinto /usr/share/cursors/xfree/gentoo-blue/cursors
+	doins ${WORKDIR}/cursors/gentoo-blue/cursors/*
+	insinto /usr/share/cursors/xfree/gentoo-silver/cursors
+	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
 }
 
 pkg_preinst() {
@@ -927,13 +866,6 @@ pkg_postinst() {
 		
 		umask 022
 	
-		if [ -x ${ROOT}/usr/bin/fc-cache ]
-		then
-			ebegin "Creating FC font cache..."
-			HOME="/root" ${ROOT}/usr/bin/fc-cache -f
-			eend 0
-		fi
-
 		# This one cause ttmkfdir to segfault :/
 		#rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large/gbk-0.enc.gz
 
@@ -1024,6 +956,16 @@ pkg_postinst() {
 			-exec chmod 0644 {} \;
 		eend 0
 
+		# danarmak found out that fc-cache should be run AFTER all the above
+		# stuff, as otherwise the cache is invalid, and has to be run again
+		# as root anyway
+		if [ -x ${ROOT}/usr/bin/fc-cache ]
+		then
+			ebegin "Creating FC font cache..."
+			HOME="/root" ${ROOT}/usr/bin/fc-cache -f
+			eend 0
+		fi
+
 		# Switch to the xfree implementation.
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
@@ -1089,6 +1031,7 @@ pkg_postinst() {
 	einfo "Any custom cursor sets should be placed in that directory"
 	einfo "This is different from the previous versions of 4.3 and"
 	einfo "the 4.2.99 series."
+
 }
 
 pkg_postrm() {
