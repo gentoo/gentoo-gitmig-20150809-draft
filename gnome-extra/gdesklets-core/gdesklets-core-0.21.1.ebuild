@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.20.ebuild,v 1.4 2003/09/11 01:39:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.1.ebuild,v 1.1 2003/09/11 15:53:55 obz Exp $
 
 inherit gnome2
 
@@ -20,7 +20,8 @@ KEYWORDS="~x86"
 RDEPEND=">=dev-lang/python-2.2
 	>=gnome-base/gconf-2
 	>=dev-python/pygtk-1.99.14
-	>=dev-python/gnome-python-1.99.14"
+	>=dev-python/gnome-python-1.99.14
+	>=x11-libs/gtk+-2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -28,6 +29,17 @@ DEPEND="${RDEPEND}
 
 USE_DESTDIR="1"
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
+
+src_unpack( ) {
+
+	unpack ${A}
+	cd ${S}
+	# patch to prevent building the External and FontSelector
+	# sensors included here, because we're using the ones
+	# from x11-plugins/
+	epatch ${FILESDIR}/gdesklets-core-0.21-Sensors.patch
+
+}
 
 src_install( ) {
 
@@ -41,7 +53,7 @@ src_install( ) {
 	# and install the display navigation desktop
 	insinto /usr/share/applications
 	doins ${FILESDIR}/gdesklets-displays.desktop
-
+	
 }
 
 pkg_postinst( ) {
@@ -56,6 +68,10 @@ pkg_postinst( ) {
 	einfo "         /usr/share/gdesklets/Displays"
 	einfo "If you're using GNOME this can be done conveniently"
 	einfo "through Applications->Accessories menu"
+	echo ""
+	ewarn "If you are updating from a previous version of gDesklets"
+	ewarn "you may need to re-emerge Displays that complain on"
+	ewarn "startup"
 	echo ""
 
 }
