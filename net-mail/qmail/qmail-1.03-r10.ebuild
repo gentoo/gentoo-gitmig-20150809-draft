@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.6 2003/02/05 05:38:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.7 2003/02/05 08:17:36 raker Exp $
+
+inherit eutils
 
 IUSE="ssl"
-
-DESCRIPTION="A modern replacement for sendmail which uses maildirs and
-includes SSL, AUTH SMTP, queue optimization, and support"
+DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
 HOMEPAGE="http://www.qmail.org/
 	http://members.elysium.pl/brush/qmail-smtpd-auth/
 	http://www.jedi.claranet.fr/qmail-tuning.html"
@@ -34,8 +34,6 @@ PROVIDE="virtual/mta
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS=~"x86 ~ppc ~sparc"
-
-inherit eutils
 
 src_unpack() {
 
