@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ee56fe790fbebf1e0ca365c68654b331 ChangeLog 1456
-MD5 8018226c89d245243bfaf350241fd3d1 calendar-1.3u.ebuild 518
+MD5 f9dad2c1f56e59325fbfa114e6b33609 calendar-1.3u.ebuild 525
+MD5 2274f15acbabfea1ce3c84ed97109372 ChangeLog 1542
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 51f2474e8b08ae955daced7d6f9e17ee files/digest-calendar-1.3u 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBN7dSLLFUmVNQ7rkRAhsRAJ0RJBRmuZG8B/QlzC5700t+NLto0QCgtdc9
-9xiIyjeVsRnHczD7nl/GgeI=
-=Tmwh
+iD8DBQFBfin9CHk4+ZoBpvsRAvBEAKCZ6nsT2s+RrS438HyYLNd/D18BtgCgwPy+
+6LxvnrPFL3iCQmv2q3rxgG4=
+=+uU8
 -----END PGP SIGNATURE-----
