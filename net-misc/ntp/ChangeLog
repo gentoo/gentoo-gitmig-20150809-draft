@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.25 2003/03/02 20:20:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.26 2003/03/18 07:19:42 seemant Exp $
 
 *ntp-4.1.1b-r5 (26 Feb 2003)
+
+  17 Mar 2003; Seemant Kulleen <seemant@gentoo.org> ntp-4.1.1b-r5.ebuild,
+  files/ntp.conf:
+  added extra documentation to the ntp.conf file. thanks to: Daniel Seyffer
+  <gentoo-bugs@seyffer.de> in bug #17492
 
   02 Mar 2003; Guy Martin <gmsoft@gentoo.org> ntp-4.1.1b-r5.ebuild :
   Added hppa to keywords.
