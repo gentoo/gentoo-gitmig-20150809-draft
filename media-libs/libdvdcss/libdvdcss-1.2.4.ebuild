@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.1.ebuild,v 1.5 2002/10/04 05:48:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.4.ebuild,v 1.1 2002/11/20 15:51:07 azarah Exp $
+
+IUSE=""
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A portable abstraction library for DVD decryption"
@@ -9,7 +11,7 @@ HOMEPAGE="http://www.videolan.org/libdvdcss/"
 
 SLOT="1.2"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 DEPEND="virtual/glibc"
 
@@ -17,8 +19,8 @@ src_compile() {
 
 	# Dont use custom optimiziations, as it gives problems
 	# on some archs
-	CFLAGS="" \
-	CXXFLAGS="" \
+	unset CFLAGS
+	unset CXXFLAGS
 	econf || die
 		    
 	make || die
@@ -41,9 +43,9 @@ src_install() {
 		# on some locales the name of the file a symlink points to, is in the
 		# tenth field, and not the eleventh (bug #2908)
 		LC_ALL='C'
-		local realname=$(ls -l ${D}/usr/lib/libdvdcss.so |gawk '{print $11}')
+		local realname="$(ls -l ${D}/usr/lib/libdvdcss.so |gawk '{print $11}')"
 		[ -z "${realname}" ] && \
-			realname=$(ls -l ${D}/usr/lib/libdvdcss.so |gawk '{print $10}')
+			realname="$(ls -l ${D}/usr/lib/libdvdcss.so |gawk '{print $10}')"
 		[ -z "${realname}" ] && return 0
 	
 		for x in libdvdcss.so.0 libdvdcss.so.1
@@ -65,3 +67,4 @@ pkg_preinst() {
 		fi
 	done
 }
+
