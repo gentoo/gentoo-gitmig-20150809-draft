@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.0.ebuild,v 1.1 2005/01/02 05:24:56 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.0.ebuild,v 1.2 2005/01/04 23:18:47 langthang Exp $
 
 inherit eutils gnuconfig
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
@@ -149,9 +149,11 @@ src_compile() {
 	# bug #29879 - FAM support
 	myconf="${myconf} $(use_with fam)"
 
-	local cachefile
-	cachefile=${WORKDIR}/config.cache
-	rm -f ${cachefile}
+	# bug #76592
+	# configure cache confuses the configure script. 
+	#local cachefile
+	#cachefile=${WORKDIR}/config.cache
+	#rm -f ${cachefile}
 
 	# fix for bug #21330
 	CFLAGS="$(echo ${CFLAGS} | xargs)"
@@ -172,7 +174,6 @@ src_compile() {
 		--localstatedir=/var/lib/courier-imap \
 		--enable-workarounds-for-imap-client-bugs \
 		--with-authdaemonvar=/var/lib/courier-imap/authdaemon \
-		--cache-file=${cachefile} \
 		--with-mailuser=mail \
 		--with-mailgroup=mail \
 		${myconf} || die "econf failed"
