@@ -1,11 +1,23 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.20 2003/09/18 01:09:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.21 2003/09/21 05:18:54 kumba Exp $
 
-  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> linux-headers-2.4.21.ebuild :
-  ia64 keywords.
+
+*linux-headers-2.4.22 (21 Sep 2003)
+
+  21 Sep 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.22.ebuild:
+  Created ebuild for linux-headers-2.4.22; set KEYWORDS to "-*" to mask it 
+  until it is needed. Please note that at this time, net-misc/iputils will 
+  fail to compile if built against 2.4.22 headers.
 
 *linux-headers-2.4.21 (21 Jun 2003)
+
+  21 Sep 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild:
+  Typo fixes in linux-headers-2.4.21, added blank EXTRAVERSION to prevent
+  kernel.eclass from appending "-linux-r0" to the version string.
+
+  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> linux-headers-2.4.21.ebuild:
+  ia64 keywords.
 
   12 Sep 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild,
   files/bigendian-byteorder-fix.patch, files/generate-asm-sparc:
