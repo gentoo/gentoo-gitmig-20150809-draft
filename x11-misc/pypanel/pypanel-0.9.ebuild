@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-0.9.ebuild,v 1.2 2003/12/11 16:50:28 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-0.9.ebuild,v 1.3 2003/12/11 16:51:13 karltk Exp $
 
 inherit distutils
 
@@ -32,5 +32,5 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	ewarn "If you previous ran 0.8, remove ~/.pypanelrc before starting 0.9!"
+	ewarn "If you previously ran 0.8, remove ~/.pypanelrc before starting 0.9!"
 }
