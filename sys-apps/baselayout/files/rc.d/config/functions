@@ -6,7 +6,8 @@ ENOCH_BAD=$'\e[34;01m'
 ENOCH_NORMAL=$'\e[0m'
 ENOCH_HILITE=$'\e[36;01m'
 ENOCH_ENDCOL=$'\e[A\e[73G'
-
+#don't change SVCDIR unless you know exactly what you are doing
+SVCDIR=/var/lib/supervise
 function eecho() {
 	echo "${*}"
 	if [ -n "$BOOTING" ]
@@ -44,94 +45,57 @@ function eend() {
     }
 
 
-function supervised() {
-  local service=`basename $0 | sed -e "s:^[0-9][0-9]::"`
-    if [ -L "$ROOT/etc/supervise/$service" ]
-    then
-      echo "0"
-    fi
+hasfunc() {
+	local hasit
+	hasit="no"
+	local x
+	for x in $opts
+	do 
+		if [ "$x" = "$1" ]
+		then
+			hasit="yes"
+			break
+		fi
+	done
+	echo $hasit
 }
 
-function doservice() {
-    if [ "`/usr/bin/whoami`" != "root" ]; then
-        eerror "You must be root to do this."
-        exit 2
+usage() {
+	export IFS="|"
+	myline="Usage: ${SERVICE} {$*"
+	if [ "`hasfunc restart`" = "no" ]
+	then
+		myline="${myline}|restart"
 	fi
-    if [ $# -ne 1 ]; then
-        doservice usage
-        exit 1
-	fi
-    for arf in $opts; do
-        eval do_${arf}=1
-    done
+	eerror "${myline}}"
+}
 
-    case $1 in
-        start)
-            if [ ! $do_start ]; then
-                doservice usage
-            else
-                if [ "`supervised`" ]
-                then
-                  supervise_start
-                else
-                  start
-                fi
-            fi
-            ;;
-        stop)
-            if [ ! $do_stop ]; then
-                doservice usage
-            else
-                if [ "`supervised`" ]
-                then
-                  supervise_stop
-                else
-                  stop
-                fi
-            fi
-            ;;
-        reconfig)
-            if [ ! $do_reconfig ]; then
-                doservice usage
-            else
-                reconfig
-            fi
-            ;;
-       	setup)
-			if [ ! $do_setup ]; then
-				doservice usage
-			else
-				setup
-			fi
-	  		;; 
-	   restart)
-            if  ! (( $do_start && $do_stop )); then
-                doservice usage
-            else
-                if [ "`supervised`" ]
-                then
-                  supervise_stop
-                  sleep 3
-                  supervise_start
-                else
-                  stop
-                  sleep 3
-                  start
-                fi
-            fi
-            ;;
-        *)
-            foof="Usage: ${SERVICE} {"
-            for moof in $opts; do
-                foof="${foof}${moof}|"
-                done
-            if (( $do_start && $do_stop )); then
-                foof="${foof}restart"
-			fi
-            eecho "${foof}}"
-            ;;
-    esac
-    }
+doservice() {
+	if [ "`/usr/bin/whoami`" != "root" ]; then
+		eerror "You must be root to do this."
+		exit 2
+	fi
+	local arg
+	for arg in ${*}
+	do
+		if [ "`hasfunc ${arg}`" = "no" ]
+		then
+			case $arg in
+				restart)
+					stop
+					sleep 2
+					start
+					;;
+				*)
+					usage $opts
+					exit 1
+					;;
+			esac
+		else
+			eval ${arg}
+		fi	
+	done
+}
 
 function einfo() {
     eecho "$ENOCH_HILITE$1$ENOCH_NORMAL"
