@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.4 2002/08/08 18:27:55 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.5 2002/08/09 20:31:42 george Exp $
 
 S="${WORKDIR}/omni"
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
@@ -70,7 +70,11 @@ src_install () {
 	dodir /usr/lib/python2.2/site-packages
 
 	cp -af  lib/${PLT}/_* ${D}/usr/lib/python2.2/site-packages
-	dolib lib/${PLT}/*.{a,so*}
+	#well, this looks like the situation where cp will work better than dolib:
+	#during the build symlinks are already getting created
+	#dolib copies them over as files and ldconfig complains
+	cp -d lib/${PLT}/*.{a,so*} ${D}/usr/lib/
+	#dolib lib/${PLT}/*.{a,so*}
 	rm ${D}/usr/lib/_*.*
 
 	exeinto /usr/lib/python2.2/site-packages
