@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.1 2004/09/18 16:36:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.2 2004/09/18 19:38:50 leonardop Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -117,15 +117,13 @@ RDEPEND="!gnome-base/gnome-core
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.1 )
 
 	accessibility? (
-		>=gnome-extra/libgail-gnome-1.0.4
-		>=gnome-base/gail-1.6.6
-		>=gnome-extra/at-spi-1.4.2
-		>=app-accessibility/dasher-3.2.10
-		>=app-accessibility/gnome-speech-0.3.2
-		>=app-accessibility/gnome-mag-0.10.11
-		>=app-accessibility/gok-0.10.2
-		>=app-accessibility/gnopernicus-0.8.4 )"
-
+		>=gnome-extra/libgail-gnome-1.1
+		>=gnome-base/gail-1.8
+		>=gnome-extra/at-spi-1.6
+		>=app-accessibility/gnome-speech-0.3.5
+		>=app-accessibility/gnome-mag-0.11.5
+		>=app-accessibility/gok-0.11.8
+		>=app-accessibility/gnopernicus-0.9.12 )"
 
 # it should really be :
 # app-accessibility/gnome-speech-0.3.3 
