@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.889 2005/01/22 23:26:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.890 2005/01/23 03:29:47 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -464,7 +464,6 @@ media-video/mplayer:v4l - Enables video4linux support
 media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
-media-video/streamdvd:gui - Installs also the GUI for this package
 media-video/tcvp:ffmpeg - Enable ffmpeg support
 media-video/tcvp:mp3 - Enables mp3 module so mp3 format can be used (legal issues most likely..)
 media-video/tcvp:playlist - Decide whether or not you want playlist ability in tcvp.  Good if you tend to only play one video at a time and really don't care for playlisting them.  Not a good idea for you mp3 playlist fanatics out there.
