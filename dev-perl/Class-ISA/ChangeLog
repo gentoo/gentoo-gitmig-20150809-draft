@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/Class-ISA
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.4 2004/06/25 00:12:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.5 2004/12/29 23:13:18 ciaranm Exp $
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> Class-ISA-0.32.ebuild:
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Class-ISA-0.32.ebuild:
   Stable on alpha.
 
   25 Feb 2004; Joshua Kinard <kumba@gentoo.org> Class-ISA-0.32.ebuild:

@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/File-NCopy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.5 2004/12/23 07:35:51 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.6 2004/12/29 23:38:01 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> File-NCopy-0.34.ebuild:
   added ~ppc64
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> File-NCopy-0.34.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> File-NCopy-0.34.ebuild:
   Stable on alpha.
 
   03 Jun 2003; Michael Cummings <mcummings@gentoo.org> File-NCopy-0.34.ebuild:

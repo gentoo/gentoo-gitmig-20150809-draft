@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.19 2004/08/09 02:45:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.20 2004/12/29 23:27:52 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   08 Aug 2004; Tom Gall <tgall@gentoo.org> DateManip-5.42a-r1.ebuild:
   stable on ppc64, bug #57436
@@ -8,7 +11,7 @@
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> DateManip-5.42a-r1.ebuild:
   Marked stable on amd64.
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> DateManip-5.42a-r1.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> DateManip-5.42a-r1.ebuild:
   Stable on alpha.
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> DateManip-5.42a-r1.ebuild:

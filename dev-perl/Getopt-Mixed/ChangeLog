@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/Getopt-Mixed
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.4 2004/06/25 00:32:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.5 2004/12/29 23:40:43 ciaranm Exp $
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Getopt-Mixed-1.008.ebuild:
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Getopt-Mixed-1.008.ebuild:
   Stable on alpha.
 
   09 Jun 2003; <rac@gentoo.org> Getopt-Mixed-1.008.ebuild:

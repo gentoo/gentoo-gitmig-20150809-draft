@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-RSA
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.13 2004/07/02 04:59:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.14 2004/12/29 23:18:40 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   Crypt-OpenSSL-RSA-0.13-r1.ebuild, Crypt-OpenSSL-RSA-0.13.ebuild,
@@ -13,7 +16,7 @@
   Crypt-OpenSSL-RSA-0.21.ebuild:
   new version on cpan
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   Crypt-OpenSSL-RSA-0.19.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.11 2004/10/17 02:24:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.12 2004/12/29 23:30:23 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *DateTime-TimeZone-0.30 (16 Oct 2004)
 
@@ -8,7 +11,7 @@
   +DateTime-TimeZone-0.30.ebuild:
   New version from cpan
 
-  28 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  28 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   DateTime-TimeZone-0.28.ebuild:
   Add ~alpha.
 

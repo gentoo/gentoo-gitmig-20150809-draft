@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/Convert-BER
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.11 2004/06/25 00:15:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.12 2004/12/29 23:17:48 ciaranm Exp $
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> Convert-BER-1.3101.ebuild:
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Convert-BER-1.3101.ebuild:
   Stable on alpha.
 
   20 Jan 2004; <gustavoz@gentoo.org> Convert-BER-1.3101.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.21 2004/12/22 11:57:49 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.22 2004/12/29 23:16:00 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Compress-Zlib-1.33.ebuild:
   added ~ppc64
@@ -21,7 +24,7 @@
   Compress-Zlib-1.33.ebuild:
   new version on cpan
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> Compress-Zlib-1.22.ebuild:
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Compress-Zlib-1.22.ebuild:
   Stable on alpha.
 
   19 Jan 2004; Eric Sammer <esammer@gentoo.org> :

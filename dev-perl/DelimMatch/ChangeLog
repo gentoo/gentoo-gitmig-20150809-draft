@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/DelimMatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.15 2004/12/24 15:03:46 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.16 2004/12/29 23:30:58 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   25 Dec 2004; Yuta SATOH <nigoro@gentoo.org> DelimMatch-1.06.ebuild:
   added ~ppc64
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> DelimMatch-1.06.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> DelimMatch-1.06.ebuild:
   Stable on alpha.
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> DelimMatch-1.06.ebuild:

@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.9 2004/12/23 09:22:12 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.10 2004/12/29 23:31:28 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Devel-Symdump-2.03.ebuild:
   added ~ppc64
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   Devel-Symdump-2.03.ebuild:
   Stable on alpha.
 
@@ -13,7 +16,7 @@
   Devel-Symdump-2.03.ebuild:
   KEYWORDS ~amd64.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> Devel-Symdump-2.03.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Devel-Symdump-2.03.ebuild:
   Add ~alpha keyword.
 
   03 Oct 2004; Michael Cummings <mcummings@gentoo.org>

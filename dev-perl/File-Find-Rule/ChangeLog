@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Find-Rule
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.9 2004/12/22 12:10:31 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.10 2004/12/29 23:36:05 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Dec 2004; Yuta SATOH <nigoro@gentoo.org> File-Find-Rule-0.28.ebuild:
   added ~ppc64
@@ -11,7 +14,7 @@
   File-Find-Rule-0.28.ebuild:
   new version on cpan
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   File-Find-Rule-0.26.ebuild:
   Stable on alpha.
 

@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/DateTime-Locale
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/ChangeLog,v 1.8 2004/09/27 21:56:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/ChangeLog,v 1.9 2004/12/29 23:29:54 ciaranm Exp $
 
-  27 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  27 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   DateTime-Locale-0.09.ebuild:
   Add ~alpha.
 

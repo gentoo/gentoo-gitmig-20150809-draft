@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/Date-Leapyear
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.16 2004/12/23 11:39:24 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.17 2004/12/29 23:26:49 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Date-Leapyear-1.71.ebuild:
   added ~ppc64
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Date-Leapyear-1.71.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Date-Leapyear-1.71.ebuild:
   Stable on alpha.
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org>

@@ -1,17 +1,20 @@
 # ChangeLog for dev-perl/GD-SVG
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.6 2004/08/03 11:22:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.7 2004/12/29 23:40:13 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Aug 2004; David Holm <dholm@gentoo.org> GD-SVG-0.25.ebuild:
   Added to ~ppc.
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> GD-SVG-0.25.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> GD-SVG-0.25.ebuild:
   Stable on alpha.
 
   05 May 2004; Stephen Diener <sediener@gentoo.org> GD-SVG-0.25.ebuild:
   bumped 0.25 to stable on x86 (bioperl-1.4 dep)
 
-  20 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> GD-SVG-0.25.ebuild:
+  20 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> GD-SVG-0.25.ebuild:
   Added ~alpha to keywords.
 
 *GD-SVG-0.25 (08 Jan 2004)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lingua-Preferred
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.8 2004/07/15 14:37:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.9 2004/12/29 23:49:49 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   15 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   Lingua-Preferred-0.2.4.ebuild:
@@ -9,7 +12,7 @@
   13 Jul 2004; Robert Coie <rac@gentoo.org> Lingua-Preferred-0.2.4.ebuild:
   Keywording amd64 and x86
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   Lingua-Preferred-0.2.4.ebuild:
   Stable on alpha.
 

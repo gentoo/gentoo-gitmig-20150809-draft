@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.10 2004/12/21 14:25:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.11 2004/12/29 23:29:19 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Michael Cummings <mcummings@gentoo.org> DateTime-0.22.ebuild:
   Added dep for tests - closes bug 64934
 
-  28 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> DateTime-0.22.ebuild:
+  28 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> DateTime-0.22.ebuild:
   Add ~alpha.
 
   22 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> DateTime-0.22.ebuild:

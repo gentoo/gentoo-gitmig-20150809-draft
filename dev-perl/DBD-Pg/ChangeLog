@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.18 2004/12/29 10:09:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.19 2004/12/29 23:22:11 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Dec 2004; Markus Rothe <corsair@gentoo.org> DBD-Pg-1.32.ebuild:
   Added ~ppc64 to KEYWORDS
@@ -16,7 +19,7 @@
   files/DBD-Pg-1.32-versparse.patch:
   new version of module, please test
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> DBD-Pg-1.31.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> DBD-Pg-1.31.ebuild:
   Stable on alpha.
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.31.ebuild:
