@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.36.2.ebuild,v 1.5 2004/07/01 11:16:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.36.2.ebuild,v 1.6 2004/07/14 14:38:25 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.rainemu.com/html/archive/raines-${PV}.tar.bz2
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="static nls"
+IUSE="kde nls static"
 
 DEPEND="virtual/libc
 	sys-libs/zlib
