@@ -34,10 +34,6 @@ dev-embedded/picptk
 # Brand new building system for ant needs a lot of testing
 =dev-java/ant-1.5.4-r2
 
-# <lisa@gentoo.org> (18 Oct 2003)
-# The new distcc-config needs testing before its unmasked
-=sys-devel/distcc-2.11.1-r1
-
 # <mkennedy@gentoo.org> (15 Oct 2003)
 # uncertain status
 dev-lisp/cl-db-sockets
