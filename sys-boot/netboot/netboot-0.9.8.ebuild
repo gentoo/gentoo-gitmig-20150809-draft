@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/netboot-0.9.8.ebuild,v 1.1 2004/10/06 05:40:12 zhen Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/netboot-0.9.8.ebuild,v 1.2 2004/10/06 05:57:48 zhen Exp $
 
 DESCRIPTION="x86 specific netbooting utility"
 HOMEPAGE="http://netboot.sourceforge.net"
@@ -14,15 +12,13 @@ KEYWORDS="-* ~x86"
 IUSE=""
 
 DEPEND="sys-devel/autoconf"
-#RDEPEND=""
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
+RDEPEND=""
 
 src_install() {
-	einstall || die
+	# this method does not work thanks to a icky Makefile, so we use einstall instead
+	# DESTDIR="${D}" make install || die
+	einstall || die "einstall failed"
 	dodoc README version
-	cp -a FlashCard ${D}/usr/share/doc/${P}
+	docinto FlashCard
+	dodoc FlashCard/*
 }
