@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.3 2005/02/06 06:39:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.4 2005/02/06 16:59:00 mr_bones_ Exp $
 
 KEYWORDS="-*"
 
@@ -193,7 +193,7 @@ toolchain-glibc_src_compile() {
 }
 
 toolchain-glibc_src_test() {
-	# This is wrong, but glibc's tests fail bad when screwing 
+	# This is wrong, but glibc's tests fail bad when screwing
 	# around with sandbox, so lets just punt it
 	unset LD_PRELOAD
 
@@ -533,7 +533,7 @@ setup_flags() {
 			;;
 			n32|n64)
 				new_target="mips64-unknown-linux-gnu"
-			;;		
+			;;
 			ppc)
 				new_target="powerpc-unknown-linux-gnu"
 			;;
@@ -934,7 +934,7 @@ pkg_setup() {
 		ebeep
 		epause
 	fi
-	
+
 	if is_crosscompile; then
 		crosscompile_setup
 	fi
