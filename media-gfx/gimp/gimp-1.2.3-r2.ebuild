@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.11 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.12 2002/10/23 19:18:31 azarah Exp $
 
 IUSE="python nls gnome aalib perl"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="The GIMP"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
@@ -50,6 +50,10 @@ src_unpack() {
 	echo ">>> Reconfiguring package..."
 	export WANT_AUTOMAKE_1_4=1
 	export WANT_AUTOCONF_2_5=1
+	# Newer gettext borks if not forced ...
+	echo "AM_GNU_GETTEXT_VERSION(0.10.0)" >> ${S}/configure.in
+	(cp ${S}/intl/Makefile.* ${T}; rm -rf ${S}/intl/*; \
+	 cp ${T}/Makefile.* ${S}/intl/)
 	automake --add-missing
 	autoreconf --install --symlink &> ${T}/autoreconf.log || ( \
 		echo "DEBUG: working directory is: `pwd`" >>${T}/autoreconf.log
