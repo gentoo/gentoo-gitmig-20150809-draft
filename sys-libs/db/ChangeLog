@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.23 2003/03/01 22:24:47 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.24 2003/03/11 23:54:31 zwelch Exp $
 
 *db-3.2.9-r2 (23 Feb 2003)
+
+  11 Mar 2003; Zach Welch <zwelch@gentoo.org> db-3.2.9-r2.ebuild:
+  mark stable on arm
 
   01 Mar 2003; Brandon Low <lostlogic@gentoo.org> db-3.2.9-r1.ebuild,
   db-3.2.9-r2.ebuild, db-4.1.24.ebuild:
