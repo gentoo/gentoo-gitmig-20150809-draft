@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.19 2004/07/16 13:23:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.20 2004/07/20 15:10:29 dholm Exp $
+
+*uae-0.8.27_pre20040720 (20 Jul 2004)
+
+  20 Jul 2004; David Holm <dholm@gentoo.org>
+  +files/uae-0.8.27_pre20040720-ppc-asm-fix.patch,
+  -uae-0.8.23_pre20040129.ebuild, +uae-0.8.27_pre20040720.ebuild:
+  Version bumped using CVS snapshot.
+  Removed version 0.8.23 from portage.
 
   16 Jul 2004; David Holm <dholm@gentoo.org> uae-0.8.25_pre20040302.ebuild:
   Strip -msse and -msse2 as they break compilation on x86.
