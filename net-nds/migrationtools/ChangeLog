@@ -1,0 +1,15 @@
+# ChangeLog for net-ndsmigrationtoolsChangeLog/
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.1 2002/09/22 18:09:26 g2boojum Exp $
+
+*migrationtools-44-r1 (21 Sep 2002)
+
+  21 Sep 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  Moved files to /usr/share/migrationtools
+
+*migrationtools-44 (21 Sep 2002)
+
+  21 Sep 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  new package
