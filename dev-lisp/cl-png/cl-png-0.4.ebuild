@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-png/cl-png-0.4.ebuild,v 1.3 2004/06/24 23:49:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-png/cl-png-0.4.ebuild,v 1.4 2004/07/14 15:59:17 agriffis Exp $
 
 inherit common-lisp
 
@@ -12,12 +12,11 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-png/cl-png_${PV}.orig.tar.g
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
 
 CLPACKAGE=png
-
-S=${WORKDIR}/${P}
 
 src_install() {
 	common-lisp-install *.cl *.asd
