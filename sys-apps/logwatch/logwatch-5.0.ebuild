@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-5.0.ebuild,v 1.1 2003/11/17 07:50:56 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-5.0.ebuild,v 1.2 2004/02/23 17:44:35 mr_bones_ Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org"
