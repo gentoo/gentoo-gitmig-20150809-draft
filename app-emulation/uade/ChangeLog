@@ -1,31 +1,37 @@
 # ChangeLog for app-emulation/uade
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.21 2005/01/11 03:25:09 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.22 2005/03/08 00:52:08 spock Exp $
+
+*uade-1.01 (08 Mar 2005)
+
+  08 Mar 2005; Michael Januszewski <spock@gentoo.org> uade-1.00.ebuild,
+  +uade-1.01.ebuild:
+  Version bump (closes #84409). Marked 1.00 stable on x86.
 
   10 Jan 2005; Malcolm Lashley <malc@gentoo.org> uade-1.00.ebuild:
   Stable on amd64 closes bug #73841
 
-  06 Nov 2004; Michal Januszewski <spock@gentoo.org> uade-1.00.ebuild:
+  06 Nov 2004; Michael Januszewski <spock@gentoo.org> uade-1.00.ebuild:
   Removed unnecessary DESTDIR option from make install. Closes #70209.
 
-  05 Nov 2004; Michal Januszewski <spock@gentoo.org> uade-0.91-r1.ebuild:
+  05 Nov 2004; Michael Januszewski <spock@gentoo.org> uade-0.91-r1.ebuild:
   Removed beepmp support from the 0.91-rc1 ebuild, as this breaks on the
   dependency on beep-media-player-0.7_rc1 and I don't want to force anyone to
   downgrade to 0.81.
 
 *uade-1.00 (31 Oct 2004)
 
-  31 Oct 2004; Michal Januszewski <spock@gentoo.org> uade-0.91-r1.ebuild,
+  31 Oct 2004; Michael Januszewski <spock@gentoo.org> uade-0.91-r1.ebuild,
   -uade-0.91.ebuild, +uade-1.00.ebuild:
   Version bumped. Removed old 0.91 ebuild. Marked 0.91-r1 stable on x86.
 
-  10 Sep 2004; Michal Januszewski <spock@gentoo.org>
+  10 Sep 2004; Michael Januszewski <spock@gentoo.org>
   files/uade-0.91-bmp-fix.patch:
   Updated the BMP fix. Thanks to Heikki Orsila for the new patch.
 
 *uade-0.91-r1 (09 Sep 2004)
 
-  09 Sep 2004; Michal Januszewski <spock@gentoo.org>
+  09 Sep 2004; Michael Januszewski <spock@gentoo.org>
   +files/uade-0.91-bmp-fix.patch, +uade-0.91-r1.ebuild:
   Added support for the Beep Media Player (beepmp USE flag). Closes bug #62463.
 
@@ -43,16 +49,16 @@
 
 *uade-0.91 (28 Jul 2004)
 
-  28 Jul 2004; Michal Januszewski <spock@gentoo.org> +uade-0.91.ebuild:
+  28 Jul 2004; Michael Januszewski <spock@gentoo.org> +uade-0.91.ebuild:
   Version bump, closes #58645. Thanks to Heikki Orsila for providing an 
   updated ebuild.
 
-  21 Jul 2004; Michal Januszewski <spock@gentoo.org> uade-0.91_pre3.ebuild:
+  21 Jul 2004; Michael Januszewski <spock@gentoo.org> uade-0.91_pre3.ebuild:
   Fixed a problem with configure that would make UADE totally useless.
 
 *uade-0.91_pre3 (21 Jul 2004)
 
-  21 Jul 2004; Michal Januszewski <spock@gentoo.org> metadata.xml,
+  21 Jul 2004; Michael Januszewski <spock@gentoo.org> metadata.xml,
   +uade-0.91_pre3.ebuild:
   Version bump, metadata update.
 
