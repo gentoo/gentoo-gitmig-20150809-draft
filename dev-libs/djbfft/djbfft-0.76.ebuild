@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.2 2004/03/31 20:41:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.3 2004/05/26 18:50:23 lv Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/djbfft/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="static"
 
 src_unpack() {
@@ -20,6 +20,9 @@ src_unpack() {
 	# mask out everything, which is not suggested by the author (RTFM)!
 	ALLOWED_FLAGS="-fstack-protector -march -mcpu -pipe -mpreferred-stack-boundary -ffast-math"
 	strip-flags
+
+	MY_CFLAGS="$CFLAGS -O1 -fomit-frame-pointer"
+	use x86 && MY_CFLAGS="$MY_CFLAGS -malign-double"
 
 	if [ `use static` ]
 	then
@@ -36,9 +39,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-shared.patch"
 	if [ `use static` ]
 	then
-		echo "$CC $CFLAGS -O1 -fomit-frame-pointer -malign-double" > "conf-cc"
+		echo "$CC $MY_CFLAGS" > "conf-cc"
 	else
-		echo "$CC $CFLAGS -O1 -fomit-frame-pointer -malign-double -fPIC -DPIC" > "conf-cc"
+		echo "$CC $MY_CFLAGS -fPIC -DPIC" > "conf-cc"
 	fi
 	echo "$CC $LDFLAGS" > "conf-ld"
 	echo "${MY_D}" > "conf-home"
