@@ -1,5 +1,5 @@
 MD5 a55daa51391355473232f275ea01c9a2 portage-2.0.48-r5.ebuild 8732
-MD5 25a3c1223f627345b334b7b1524222e6 portage-2.0.49_pre16.ebuild 9030
+MD5 300a234edb0a20c9aaf0b6425e0f5f7b portage-2.0.49_pre16.ebuild 9030
 MD5 2096b54a6ea07c9db3b53ab9e0bd3c92 portage-2.0.48-r7.ebuild 8724
 MD5 cb6345a8cbf195f26a80a105c5d34cb8 ChangeLog 409
 MD5 81f943d098cbf79c4c56f973449d411b files/digest-portage-2.0.49_pre16 73
@@ -8,6 +8,5 @@ MD5 7fd37ede0f97932165bc4465055d62ab files/digest-portage-2.0.48-r5 70
 MD5 fb861bb60c5915cf26a8b25706009fac files/digest-portage-2.0.48-r7 70
 MD5 0e69f4c26d5511882f92601c55bb960e files/portage-rescue-2.0.47-r10-x86.tbz2 206746
 MD5 73094a2d75dca36817b40611589ea226 files/portage-rescue-2.0.44-ppc.tbz2 168027
-MD5 d18f56db27b853c3278169f51e650b0e files/emerge-2.0.48-r6-missingbins.diff 299
 MD5 d4bb71bd3515647145916ba7d6287d20 files/README.RESCUE 1064
 MD5 e2f7d2797f76d586452705abed1e515e files/portage-rescue-2.0.48-r1-sparc64.tbz2 227569
