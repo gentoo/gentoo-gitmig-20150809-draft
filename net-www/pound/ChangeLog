@@ -1,6 +1,9 @@
 # ChangeLog for net-www/pound
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pound/ChangeLog,v 1.10 2004/07/01 22:49:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/ChangeLog,v 1.11 2004/07/16 15:25:05 tigger Exp $
+
+  16 Jul 2004; <rob@gentoo.org> files/pound.init:
+  Fix the init script. Closes #57134. Thanks to kuma@legmo.com for the report
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> pound-1.6.ebuild,
   pound-1.7.ebuild:
