@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.5.ebuild,v 1.1 2004/02/25 21:36:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.5.ebuild,v 1.2 2004/05/25 18:41:14 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="makes cpio-format archives and deals somewhat gracefully with input data corruption."
 HOMEPAGE="http://freshmeat.net/projects/afio/"
@@ -18,6 +20,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/Makefile.patch
 	#our cflags
 	sed -i \
 		-e "s:-O2 -fomit-frame-pointer:${CFLAGS}:" Makefile \
