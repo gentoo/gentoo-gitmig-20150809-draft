@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-196.ebuild,v 1.1 2004/08/20 20:54:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-196.ebuild,v 1.2 2004/08/26 00:58:00 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -55,4 +55,8 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install-full || die
 	dodoc README* INSTALL*
+
+	# restore the navy blue
+	sed -i "s:blue2$:blue:" ${D}/etc/X11/app-defaults/XTerm-color
+	
 }
