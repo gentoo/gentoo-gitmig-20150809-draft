@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/packit
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.1 2003/08/18 03:32:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.2 2003/08/21 04:39:48 vapier Exp $
+
+*packit-0.6.0c-r1 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Patch to compile against SLOT-ed libnet-1.0.x #17772.
 
 *packit-0.6.0c (17 Aug 2003)
 
