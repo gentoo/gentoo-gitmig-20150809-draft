@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/figlet
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.9 2003/12/12 22:24:54 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.10 2004/03/17 04:20:42 mr_bones_ Exp $
+
+  16 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> figlet-22-r1.ebuild,
+  figlet-221.ebuild:
+  clean old versions
 
 *figlet-221-r1 (12 Dec 2003)
 
