@@ -1,6 +1,6 @@
-# Copyright 2004 Gentoo Foundation.
+# Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/packages,v 1.7 2004/09/15 20:57:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/packages,v 1.8 2004/09/20 18:27:37 vapier Exp $
 
 *sys-devel/binutils
 *sys-devel/gcc
