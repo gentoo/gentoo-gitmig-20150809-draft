@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ami-1.2.2.ebuild,v 1.2 2003/12/06 16:31:29 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ami-1.2.2.ebuild,v 1.3 2004/01/24 11:44:41 pyrania Exp $
 
 IUSE="gtk2"
 S=${WORKDIR}/${P}
@@ -12,14 +12,15 @@ HOMEPAGE="http://ami.kldp.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND="!gtk2 ( >=media-libs/gdk-pixbuf-0.7.0 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 	if [ -n "`use gtk2`" ]
-	then patch -p0 < ${DISTDIR}/${P}-imhangul_status.patch
+	then
+		epatch ${DISTDIR}/${P}-imhangul_status.patch
 	fi
 }
 

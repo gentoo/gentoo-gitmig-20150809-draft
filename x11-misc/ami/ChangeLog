@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/ami
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ChangeLog,v 1.9 2003/12/06 16:31:29 tseng Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ChangeLog,v 1.10 2004/01/24 11:44:41 pyrania Exp $
+
+  24 Jan 2004; Markus Nigbur <pyrania@gentoo.org> ami-1.0.11-r1.ebuild,
+  ami-1.0.11-r2.ebuild, ami-1.1.0.ebuild, ami-1.2.2.ebuild, metadata.xml:
+  Ebuild cleanups, bumped stable on x86 and removed old versions.
 
   06 Dec 2003; Brandon Hale <tseng@gentoo.org> ami-1.2.2.ebuild:
   Fixing bad DEPEND line, closes 34582.
