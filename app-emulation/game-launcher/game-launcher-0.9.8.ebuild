@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.1 2002/12/12 13:32:17 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.2 2003/02/13 07:13:44 vapier Exp $
 
 DESCRIPTION="Game Launcher is a cross platform, universal front end for emulators.It has been known to work with MAME, Nesticle, RockNES, zSNES, snes9x, Callus, Stella, z26 and Genecyst."
 HOMEPAGE="http://www.dribin.org/dave/game_launcher/"

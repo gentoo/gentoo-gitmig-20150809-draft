@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.65-r1.ebuild,v 1.2 2003/02/07 06:39:07 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.65-r1.ebuild,v 1.3 2003/02/13 07:14:34 vapier Exp $
 
 inherit flag-o-matic
 

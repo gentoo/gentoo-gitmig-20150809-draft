@@ -1,4 +1,4 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Peter Bienstman <Peter.Bienstman@rug.ac.be>
 # /space/gentoo/cvsroot/gentoo-x86/games/kwest/kwest-1.0.ebuild,v 1.4 2002/05/21 18:14:11 danarmak Exp

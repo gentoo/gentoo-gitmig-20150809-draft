@@ -1,7 +1,7 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmess/xmess-0.62.2-r1.ebuild,v 1.1 2003/01/13 22:21:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmess/xmess-0.62.2-r1.ebuild,v 1.2 2003/02/13 07:19:31 vapier Exp $
 
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts"
 
