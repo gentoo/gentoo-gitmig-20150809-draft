@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.5.ebuild,v 1.1 2001/08/30 22:04:52 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.5.ebuild,v 1.2 2001/10/01 00:20:58 lordjoe Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox load monitor"
@@ -22,5 +22,7 @@ src_install () {
 
 pkg_postinst() {
 	cd ${ROOT}usr/X11R6/bin/wm
+	if [ ! "`grep bbsload blackbox`" ] ; then
 	sed -e "s/.*blackbox/exec \/usr\/X11R6\/bin\/bbsload \&\n&/" blackbox | cat > blackbox
+	fi
 }
