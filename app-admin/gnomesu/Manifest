@@ -1,5 +1,5 @@
-MD5 a58febe373f8a0babbb8a8050c8e90e1 ChangeLog 983
-MD5 5e2bd5dfe4c40856efbb31506a32e4de gnomesu-0.3.1.ebuild 790
+MD5 84f949875bb991dd0d2913f47932f970 ChangeLog 1069
+MD5 fdb2b50469da788614a6e93d1e3499fe gnomesu-0.3.1.ebuild 797
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d82bf746f24d99997d12c517f8741242 files/digest-gnomesu-0.3.1 65
 MD5 6a9d98cc7e10e1a9355d93dcc2590019 files/gnomesu-0.3.1-desktopfix.patch 361
