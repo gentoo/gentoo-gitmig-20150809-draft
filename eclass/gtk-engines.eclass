@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.13 2002/11/28 05:21:23 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.14 2002/11/28 07:54:09 leonardop Exp $
 
 # The gtk-engines eclass is inheritd by all gtk-engines-* ebuilds.
 
@@ -151,7 +151,8 @@ gtk-engines_src_compile() {
 gtk-engines_src_install() {
 	[ "X${MY_PN}" = "Xgtk-engines" ] && cd ${ENGINE}
 
-	if [ "X${MY_PN}" = "Xxenophilia" ]
+	# Some corrections to misc files
+	if [ "X${ENGINE}" = "Xxenophilia" ]
 	then
 		dodir /usr/X11R6/lib/X11/fonts/misc
 		
@@ -161,6 +162,13 @@ gtk-engines_src_install() {
 			-e '7,8d' \
 			fonts/Makefile.orig > fonts/Makefile || die
 		rm fonts/Makefile.orig
+
+	elif [ "X${ENGINE}" = "Xgeramik" ]
+	then
+		mv theme/gtk-2.0/gtkrc-2.0 theme/gtk-2.0/gtkrc-2.0.old
+		sed -e '9,10d' \
+			theme/gtk-2.0/gtkrc-2.0.old > theme/gtk-2.0/gtkrc-2.0
+		rm theme/gtk-2.0/gtkrc-2.0.old
 	fi
 
 	einstall \
@@ -168,7 +176,9 @@ gtk-engines_src_install() {
 		ENGINE_DIR=${D}/usr/lib/gtk/themes/engines \
 		|| die "Installation failed"
 
-	if [ "X${MY_PN}" = "XGTK-mist-engine" ]
+	# Remove unwanted stuff, since some engines include GTK-1 and GTK-2
+	# support.
+	if [ "X${ENGINE}" = "Xmist" ]
 	then
 		if [ "$SLOT" -eq "2" ]
 		then
@@ -178,6 +188,20 @@ gtk-engines_src_install() {
 		fi
 
 		rm -rf ${D}/usr/share/themes/Mist/metacity-1
+
+	elif [ "X${ENGINE}" = "Xgeramik" ]
+	then
+		if [ "$SLOT" -eq "2" ]
+		then
+			mv ${D}/usr/share/themes/Geramik/gtk/*png \
+			   ${D}/usr/share/themes/Geramik/gtk-2.0
+			mv ${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc-2.0 \
+			   ${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc
+
+			rm -rf ${D}/usr/lib/gtk ${D}/usr/share/themes/Geramik/gtk
+		else
+			rm -rf ${D}/usr/lib/gtk-2.0 ${D}/usr/share/themes/Geramik/gtk-2.0
+		fi
 	fi
 	
 	for doc in AUTHORS BUGS ChangeLog CONFIGURATION COPYING CUSTOMIZATION \
