@@ -17,9 +17,6 @@ si:S:sysinit:/etc/rc.d/init.d/rc S
 # Script to run when going single user (runlevel 1).
 ~~:S:wait:/sbin/sulogin
 
-# Start supervise process before rc
-SV:123456:respawn:env - PATH=/usr/local/bin:/usr/sbin:/usr/bin:/bin svscan /etc/svc.d/control 
-
 # RUNLEVELS
 # 0=halt
 # 1=single user
@@ -51,5 +48,10 @@ c6:23:respawn:/sbin/agetty 38400 tty6 linux
 
 # What to do at the "Three Finger Salute".
 ca:12345:ctrlaltdel:/sbin/shutdown -t1 -r now
+
+# Start svscan process in runlevels 2 through 5
+# Placing it here makes sure that it respawns if it dies, but keeping it our of runlevel 1 prevents
+# svscan from starting before the system is ready.
+SV:2345:respawn:env - PATH=/usr/local/bin:/usr/sbin:/usr/bin:/bin svscan /etc/svc.d/control < /dev/null > /dev/console 2>/dev/console
 
 # End of /etc/inittab
