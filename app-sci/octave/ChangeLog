@@ -1,11 +1,19 @@
 # ChangeLog for app-sci/octave
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.26 2004/05/10 12:34:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.27 2004/05/12 12:27:26 kugelfang Exp $
+
+  12 May 2004; Danny van Dyk <kugelfang@gentoo.org> octave-2.1.57-r1.ebuild:
+  The ebuild checks now if g77 has been compiled. If not, a warning is shown.
+  However, the compilation process proceeds, in case that a different compiler
+  than g77 shall be used. Fixes BUG #50777.
 
 *octave-2.1.57-r1 (10 May 2004)
 
   10 May 2004; Patrick Kursawe <phosphan@gentoo.org> octave-2.1.57-r1.ebuild:
   Installs emacs related files if emacs is in USE now
+
+  09 May 2004; Danny van Dyk <kugelfang@gentoo.org> octave-2.1.57.ebuild:
+  Added local useflag "blas" to make ebuild depend on virtual/blas.
 
   05 May 2004; Bryan Østergaard <kloeri@gentoo.org> octave-2.1.57.ebuild:
   Stable on alpha.
