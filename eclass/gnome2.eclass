@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.33 2003/05/04 18:58:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.34 2003/06/12 00:41:47 liquidx Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -21,6 +21,8 @@ SCROLLKEEPER_UPDATE="1" # whether to run scrollkeeper for this package
 USE_DESTDIR=""          # use make DESTDIR=${D} install rather than einstall
 
 [ -n "$DEBUG" -o -n "`use debug`" ] && G2CONF="${G2CONF} --enable-debug=yes"
+
+newdepend ">=sys-apps/sed-4"
 
 gnome2_src_configure() {
 	elibtoolize ${ELTCONF}
@@ -100,14 +102,18 @@ gnome2_omf_fix() {
 
 	[ -f ${S}/omf-install/Makefile.in ] \
 		&& omf_makefiles="${omf_makefiles} ${S}/omf-install/Makefile.in"
+		
+	# FIXME: does this really work? because omf.make only gets included
+	#        when autoconf/automake is run. You should directly patch
+	#        the Makefile.in's
+	
 	[ -f ${S}/omf.make ] \
 		&& omf_makefiles="${omf_makefiles} ${S}/omf.make"
 
 	for omf in ${omf_makefiles}; do
 		omfbase=$(basename ${omf})
-		einfo "Fixing OMF Makefile: ${omfbase}"
-		sed -i -e 's:\(-scrollkeeper-update -p $(localstatedir)/scrollkeeper\)\([ \t\\]*\)$:\1 -o $(DESTDIR)$(omf_dest_dir)\2:' ${omf}
-		sed -i -e 's:\(-scrollkeeper-update -p $(scrollkeeper_localstate_dir)\)\([ \t\\]*\)$:\1 -o $(DESTDIR)$(omf_dest_dir)\2:' ${omf}
+		einfo "Fixing OMF Makefile: ${omf#${S}/}"
+		sed -i -e 's:-scrollkeeper-update.*::' ${omf}
 	done
 }
 
