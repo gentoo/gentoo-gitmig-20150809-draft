@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.28 2005/03/28 14:11:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.29 2005/03/28 15:49:20 chriswhite Exp $
+
+  29 Mar 2005; Chris White <chriswhite@gentoo.org> gxine-0.3.3-r1.ebuild,
+  gxine-0.4.1.ebuild:
+  Fixed the desktop icon mess, more specifically bug #50296.
 
   28 Mar 2005; Chris White <chriswhite@gentoo.org> gxine-0.4.1.ebuild:
   Fixed bug #85964 and a couple of other ones.

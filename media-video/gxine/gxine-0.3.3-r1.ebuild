@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3-r1.ebuild,v 1.4 2005/01/23 10:40:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3-r1.ebuild,v 1.5 2005/03/28 15:49:20 chriswhite Exp $
 
 inherit eutils nsplugins
 
@@ -53,7 +53,10 @@ src_install() {
 		docsdir=/usr/share/doc/${PF} \
 		install || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	insinto /usr/share/pixmaps
+	doins pixmaps/gxine-logo.png
+
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 
 	inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
 }

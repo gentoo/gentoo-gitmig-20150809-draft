@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1.ebuild,v 1.3 2005/03/28 14:11:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1.ebuild,v 1.4 2005/03/28 15:49:20 chriswhite Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -27,7 +27,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-menu-fix.patch
-	sed -i -e 's:gxine_logo.png:gxine:' gxine.desktop
 }
 
 src_compile() {
@@ -44,10 +43,13 @@ src_install() {
 		docsdir=/usr/share/doc/${PF} \
 		install || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 
 	insinto /usr/share/icons/hicolor/48x48/apps
 	newins pixmaps/gxine-logo.png gxine.png
+
+	insinto /usr/share/pixmaps
+	doins pixmaps/gxine-logo.png
 
 	use mozilla && inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
 }
