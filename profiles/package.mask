@@ -40,6 +40,8 @@ x11-themes/gtk-xfce-engine
 # lamer <lamer@gentoo.org> (4 Aug 2002)
 # Firestarter won't compile with gnome2
 =net-misc/firestarter-0.8.2
+# Kismet package is new please test
+=net-analyzer/kismet-2.4.6
 
 # phoen][x <phoenix@gentoo.org> (04 Aug 2002)
 # Masked the new winex for testing (and it needs lots of that)
