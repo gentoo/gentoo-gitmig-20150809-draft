@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-0j.ebuild,v 1.2 2003/05/23 11:30:45 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-0j.ebuild,v 1.3 2003/06/10 15:47:39 twp Exp $
 
-MY_PV=`echo ${PV} | tr -d 0`
+MY_PV=${PV/0/}
 MY_P=${PN}-${MY_PV}
 DESCRIPTION="HTTP accessing library"
 HOMEPAGE="http://rrr.jin.gr.jp/doc/http-access2/"
