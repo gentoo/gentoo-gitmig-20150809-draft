@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.2.0.ebuild,v 1.1 2003/08/20 04:58:09 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.2.0.ebuild,v 1.2 2003/10/16 20:50:10 iggy Exp $
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
 SRC_URI="http://rapidsvn.tigris.org/files/documents/341/5349/${P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc"
 
-DEPEND=">=dev-util/subversion-0.26.0
+DEPEND="=dev-util/subversion-0.26.0
 	>=x11-libs/wxGTK-2.4.0
 	doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen )"
 
