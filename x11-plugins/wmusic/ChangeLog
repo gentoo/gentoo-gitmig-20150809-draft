@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmusic
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/ChangeLog,v 1.5 2004/06/24 23:19:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/ChangeLog,v 1.6 2004/06/28 21:46:41 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmusic-1.4.10.ebuild,
+  wmusic-1.4.11.ebuild:
+  glibc -> libc, add sed-4 dep
 
 *wmusic-1.4.11 (14 Aug 2003)
 

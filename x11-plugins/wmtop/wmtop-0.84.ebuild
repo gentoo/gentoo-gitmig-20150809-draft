@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.84.ebuild,v 1.9 2004/06/24 23:18:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.84.ebuild,v 1.10 2004/06/28 21:45:01 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="top in a dockapp"
@@ -11,8 +11,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc amd64 ppc"
 
-DEPEND="virtual/glibc
-	virtual/x11"
+DEPEND="virtual/libc
+	virtual/x11
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

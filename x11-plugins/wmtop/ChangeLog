@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.5 2004/06/24 23:18:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.6 2004/06/28 21:45:01 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmtop-0.84.ebuild:
+  glibc -> libc, add sed-4 dep
 
   14 Dec 2003; Lars Weiler <pylon@gentoo.org> wmtop-0.84.ebuild:
   Make stable on ppc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.12 2004/06/24 23:18:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.13 2004/06/28 21:43:09 agriffis Exp $
 
 IUSE=""
 
@@ -17,8 +17,9 @@ KEYWORDS="x86 amd64"
 RDEPEND="=x11-libs/gtk+-1.2*
 	virtual/x11"
 
-DEPEND="virtual/glibc
-	${RDEPEND}"
+DEPEND="virtual/libc
+	${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
