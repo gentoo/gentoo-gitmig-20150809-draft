@@ -1,4 +1,4 @@
-MD5 8a953379335e53e6a1c6fc2e8b66129f ssldump-0.9.ebuild 877
-MD5 f0ab175f002cacd62f3a0c3bd3141c75 ChangeLog 546
+MD5 5020d01bd9af61ea075780f5a00ed1aa ssldump-0.9.ebuild 888
+MD5 777830289c740a15a1639767c55bc2d6 ChangeLog 642
 MD5 e48ef1ebd171e60a677b90bbe65a8a6f files/digest-ssldump-0.9 65
 MD5 fb8f0f38b6d7247b85572b321c691ccd files/ssldump-0.9-libpcap-header.patch 246
