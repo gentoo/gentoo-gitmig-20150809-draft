@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a-r1.ebuild,v 1.1 2004/04/02 03:58:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a-r1.ebuild,v 1.2 2004/04/02 18:18:52 wolf31o2 Exp $
 
 inherit games
 
@@ -28,6 +28,8 @@ RDEPEND="virtual/glibc
 	opengl? ( virtual/opengl )"
 
 S=${WORKDIR}
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	games_pkg_setup
@@ -44,11 +46,10 @@ src_unpack() {
 src_install() {
 	einfo "This will take a while ... go get a pizza or something"
 
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
-	tar -jxf armyops200a.tar.bz2 -C ${D}/${dir}/ || die "armyops untar failed"
-	tar -jxf binaries.tar.bz2 -C ${D}/${dir}/ || die "binaries untar failed"
+	tar -jxf armyops200a.tar.bz2 -C ${Ddir}/ || die "armyops untar failed"
+	tar -jxf binaries.tar.bz2 -C ${Ddir}/ || die "binaries untar failed"
 
 	dodoc README.linux
 	insinto ${dir} ; doins ArmyOps.xpm README.linux

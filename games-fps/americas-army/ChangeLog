@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.11 2004/04/02 03:58:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.12 2004/04/02 18:18:52 wolf31o2 Exp $
+
+  02 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-200a-r1.ebuild:
+  Fixing Ddir problem.  Closing bug #46578.
 
 *americas-army-200a-r1 (01 Apr 2004)
 
