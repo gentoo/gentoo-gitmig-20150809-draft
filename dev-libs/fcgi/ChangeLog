@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fcgi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.10 2004/12/18 11:53:26 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.11 2005/03/23 13:21:00 fmccor Exp $
+
+  23 Mar 2005; Ferris McCormick <fmccor@gentoo.org> fcgi-2.4.0.ebuild:
+  Add ~sparc keyword, Bug 86374. Package at least builds, so available for
+  testing.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> fcgi-2.4.0.ebuild:
   added ~amd64
