@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.1.ebuild,v 1.2 2003/10/10 18:01:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.1.ebuild,v 1.3 2003/11/10 14:18:39 usata Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ppc sparc"
 
 DEPEND="virtual/emacs
 	dev-lisp/mule-ucs"
