@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Travis Tilley <lordviram@nesit.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r2.ebuild,v 1.1 2002/02/17 19:21:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r2.ebuild,v 1.2 2002/04/15 10:23:58 seemant Exp $
 
 S=${WORKDIR}/${PN/-v3/3x}
 DESCRIPTION="Hardware support for the voodoo3, voodoo4 and voodoo5"
@@ -19,11 +19,9 @@ DEPEND=">=sys-devel/automake-1.4
 
 PROVIDE="virtual/glide"
 
-if [ "`use voodoo3`" ] ; then
-	compilefor="h3"
-else
-	compilefor="h5"
-fi
+use voodoo3 \
+	&& compilefor="h3" \
+	|| compilefor="h5"
 
 src_unpack() {
 	unpack ${A}
@@ -48,7 +46,7 @@ src_compile() {
 	mkdir build
 	cd build
 	../configure --prefix=/usr \
-		--enable-fx-glide-hw=$compilefor \
+		--enable-fx-glide-hw=${compilefor} \
 		--enable-fx-dri-build || die
 		
 	./build.3dfx all || die
@@ -61,4 +59,3 @@ src_install() {
 	dodir /usr/X11R6/lib
 	dosym /usr/lib/libglide3.so.${PV}.0 /usr/X11R6/lib/libglide3.so
 }
-
