@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.1 2004/12/27 03:52:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.2 2004/12/28 01:56:12 vapier Exp $
 
 inherit eutils flag-o-matic games
 
@@ -64,7 +64,6 @@ src_unpack() {
 			use ${v} && { ./config ${v} ../.. || die "${v} config"; }
 		done
 	fi
-return 0
 
 	cd ${S}
 	sed -i \
@@ -96,10 +95,9 @@ src_install() {
 		FILE_AREA_UNSHARE=${D}/${GAMES_LIBDIR}/${PN} \
 		FILE_AREA_DOC=${D}/usr/share/doc/${PF} \
 		install || die "make install failed"
-
 	dodoc doc/*.txt
 	dodoc dat/license
-	doman doc/*.6
+	doman doc/slashem.6
 
 	# The final /usr/bin/slashem is a sh script.  This fixes the hard-coded
 	# HACKDIR directory so it doesn't point to ${D}/usr/share/slashemdir

@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 1542fe1b0fdfbf9cb85c48ef2f69e778 ChangeLog 1446
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 8d890e635ed2081cd010e83e55cc00c5 slashem-0.0.760.ebuild 4648
+MD5 6457f7dc0060d16d025a2d76327ab27e slashem-0.0.760.ebuild 4644
 MD5 f5241b0d6dabaf677bfa7f64c5562463 slashem-0.0.648.ebuild 4525
 MD5 7042d07dab18e8ce6bf5f99c2497db44 files/0.0.6E4F8-errno.patch 4788
 MD5 c0702cf01cb9b34fb41418616181e7e8 files/0.0.6E4F8-gentoo-paths.patch 818
@@ -30,7 +30,7 @@ MD5 a390d1fc8a476b52da0e6e45e01001b1 files/0.0.7E6/gnome.configure 380
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBz4cCroRuSHgZdywRAv7oAKCIu4ik02FllcTqrdrhL1L0bhW65QCfejTH
-sW8YTPcA8lL78maAWbC6n/k=
-=0S4i
+iD8DBQFB0L1ProRuSHgZdywRAiHfAJ4t3wzISsGpmDP3OJ+S+T3UJr9zuwCfaDES
+qa4HTBAHopKBfhjOLZ3dy34=
+=0NiX
 -----END PGP SIGNATURE-----
