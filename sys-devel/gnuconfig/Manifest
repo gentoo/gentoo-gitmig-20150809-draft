@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f1ae1d5cd88cc4ad4dda509410f0d414 ChangeLog 2625
 MD5 4177eaa201fd2c42176189fae71872db gnuconfig-20040214.ebuild 829
 MD5 323cecb82ceb410827b44855ef1b123f metadata.xml 381
-MD5 723c9052541cd9a8d3240921873909d9 gnuconfig-20050223.ebuild 836
-MD5 faf484164a1ff136f2c35583538ea89b ChangeLog 2531
-MD5 bde92006bab8bae704df56b4240fe096 files/gnuconfig-20040312-update.patch 5569
+MD5 3961c36dab77ed1dc9c1823b3d517db4 gnuconfig-20050223.ebuild 833
 MD5 d576cbc9cda51d6288db8b8569eb9e2a files/automake-1.8.5-config-guess-uclibc.patch 4693
 MD5 e0970292f30d2429b94a661a4cb26d99 files/digest-gnuconfig-20050223 70
 MD5 b8962d14331ee77948e9481e2a2eebe0 files/digest-gnuconfig-20040214 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQBtrKRy60XGEcJIRAlHyAJ9MJXNggJO2rNTKChIJBZbfsb61CwCgm4D2
-AO9yao5Jzhgjo4/KB0vSt9E=
-=LCcU
------END PGP SIGNATURE-----
+MD5 bde92006bab8bae704df56b4240fe096 files/gnuconfig-20040312-update.patch 5569
