@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4.1.ebuild,v 1.6 2003/02/06 04:04:51 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4.1.ebuild,v 1.7 2003/02/06 04:32:27 nall Exp $
+
+inherit flag-o-matic || die "I lost my inheritance."
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Guile is an interpreter for Scheme"
@@ -9,10 +11,16 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 
 SLOT="1.4.1"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha -ppc"
+KEYWORDS="x86 alpha ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/readline-4.1"
+
+if [ "${ARCH}" == "ppc" ]
+then
+	# guile-config breaks with -O3
+	replace-flags -O3 -O2
+fi
 
 src_unpack() {
 	unpack ${A}
