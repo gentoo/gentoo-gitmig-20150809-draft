@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r1.ebuild,v 1.3 2004/04/15 18:59:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r1.ebuild,v 1.4 2004/04/16 05:18:16 vapier Exp $
 
 inherit libtool
 
@@ -36,6 +36,14 @@ src_unpack() {
 }
 
 src_compile() {
+	# hppa need -fPIC for to compile when X and xmss are in USE
+	# the --with-pic is not enough to fix this ... Makefiles probably
+	# need to get patched :p
+	if use xmms && use X && [ "${ARCH}" = "hppa" ]
+	then
+		export CFLAGS="${CFLAGS} -fPIC"
+	fi
+
 	econf \
 		--with-pic \
 		`use_enable sse` \
