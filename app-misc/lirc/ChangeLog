@@ -3,6 +3,9 @@
 # /home/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.21 2004/03/08 14:56:09
 # lanius Exp $
 
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> lirc-0.7.0_pre4.ebuild:
+  Stable on alpha.
+
 *lirc-0.7.0_pre6 (30 Jun 2004)
 
   30 Jun 2004; Chris Bainbridge <chrb@gentoo.org> +lirc-0.7.0_pre6.ebuild:

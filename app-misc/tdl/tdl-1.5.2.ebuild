@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.6 2004/06/28 04:15:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.7 2004/07/03 20:03:56 kloeri Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rpcurnow.force9.co.uk/tdl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ppc"
+KEYWORDS="x86 alpha ~ppc"
 IUSE="readline ncurses doc"
 
 RDEPEND=">=sys-libs/readline-4.3

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.51.ebuild,v 1.6 2004/06/28 03:36:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.51.ebuild,v 1.7 2004/07/03 20:06:53 kloeri Exp $
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 HOMEPAGE="http://www.obsession.se/gentoo/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc alpha ~hppa amd64 ~ia64"
 IUSE="nls gnome"
 
 DEPEND="=x11-libs/gtk+-1.2*"
