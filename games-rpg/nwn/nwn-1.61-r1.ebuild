@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.61-r1.ebuild,v 1.1 2004/01/16 00:17:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.61-r1.ebuild,v 1.2 2004/03/12 10:12:08 mr_bones_ Exp $
 
 inherit games
 
