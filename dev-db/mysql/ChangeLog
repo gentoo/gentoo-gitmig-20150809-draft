@@ -1,8 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.53 2003/06/12 21:21:21 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.54 2003/06/13 01:42:16 robbat2 Exp $
 
 *mysql-4.0.13-r3 (12 Jun 2003)
+
+  12 Jun 2003; <robbat2@gentoo.org> mysql-4.0.13-r3.ebuild:
+  Show a sensible error message and die if the user has USE="static ssl" as
+  MySQLv4 doesn't support these simultanoeusly.
 
   12 Jun 2003; <rac@gentoo.org> mysql-4.0.13-r3.ebuild,
   files/mysql-4.0.13-thrssl.patch:
