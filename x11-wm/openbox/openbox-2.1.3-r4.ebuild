@@ -15,7 +15,8 @@ SLOT="1"
 LICENSE="BSD"
 KEYWORDS="x86 sparc "
 
-DEPEND="$DEPEND"
+DEPEND="${DEPEND}
+	>=sys-apps/sed-4"
 
 MYBIN="${PN}"
 mydoc="CHANGE* TODO LICENSE data/README*"
