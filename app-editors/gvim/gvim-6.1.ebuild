@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1.ebuild,v 1.1 2002/09/13 09:17:31 hannes Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1.ebuild,v 1.2 2002/09/13 18:00:05 hannes Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -58,18 +58,19 @@ else
 	die "Eek!  I don't know how to interpret the version!"
 fi
 
-DESCRIPTION="gvim - vim for Gnome"
+DESCRIPTION="gvim"
 HOMEPAGE="http://www.vim.org/"
 
 SLOT="0"
 LICENSE="vim"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND="=app-editors/vim-core-6.1
-    dev-util/cscope
+DEPEND="dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2
-	gnome-base/gnome-libs
+	x11-base/xfree
 	gpm?	( >=sys-libs/gpm-1.19.3 )
+	gnome?	( gnome-base/gnome-libs )
+	gtk?	( =x11-libs/gtk+-1.2* )
 	perl?	( sys-devel/perl )
 	python? ( dev-lang/python )
 	ruby?	( >=dev-lang/ruby-1.6.4 )"
@@ -118,11 +119,9 @@ src_unpack() {
 			done
 			;;
 	esac
-
 }
 
 src_compile() {
-
 	local myconf
 	use nls    && myconf="--enable-multibyte" || myconf="--disable-nls"
 	use perl   && myconf="$myconf --enable-perlinterp"
@@ -132,14 +131,29 @@ src_compile() {
 # tclinterp is BROKEN.  See note above DEPEND=
 #	use tcltk  && myconf="$myconf --enable-tclinterp"
 
+# Added back gpm for temporary will remove if necessary, I think that I have
+# fixed most of gpm so it should be fine.
 	use gpm    || myconf="$myconf --disable-gpm"
 
-	myconf="$myconf --with-vim-name=gvim --enable-gui=gnome --with-x"
+	if use gnome; then
+		guiconf="--enable-gui=gnome --with-x"
+	elif use gtk; then
+		guiconf="--enable-gui=gtk --with-x"
+	else
+		guiconf="--enable-gui=athena --with-x"
+	fi
 	
-	./configure --host=$CHOST --with-features=huge --with-cscope \
-		$myconf || die "gvim configure failed"
-	# Parallel make does not work
-	make || die "gvim make failed"
+	# This should fix a sandbox violation. 
+	addwrite /dev/pty/*
+	
+	if [ -n "$guiconf" ]; then
+		./configure \
+			--prefix=/usr --mandir=/usr/share/man --host=$CHOST \
+			--with-features=huge --enable-cscope $myconf $guiconf \
+			--with-vim-name=gvim || die "gvim configure failed"
+		# Parallel make does not work
+		make || die "gvim make failed"
+	fi
 }
 
 src_install() {
@@ -149,4 +163,3 @@ src_install() {
 	insinto /usr/share/vim
 	doins ${FILESDIR}/gvimrc
 }
-
