@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.13 2004/11/03 11:50:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.14 2004/11/05 01:13:13 pythonhead Exp $
+
+*wxglade-0.3.5 (04 Nov 2004)
+
+  04 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> +wxglade-0.3.5.ebuild:
+  Version bump
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> wxglade-0.3.4.ebuild:
   depend on app-arch/unzip
