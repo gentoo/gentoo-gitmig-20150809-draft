@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/conectiva-crystal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/conectiva-crystal/ChangeLog,v 1.1 2002/05/18 10:06:55 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/conectiva-crystal/ChangeLog,v 1.2 2002/06/17 22:46:25 verwilst Exp $
+
+*conectiva-crystal-3.1_beta35 (17 June 2002) <verwilst@gentoo.org>
+
 
 *conectiva-crystal (18 May 2002)
 
