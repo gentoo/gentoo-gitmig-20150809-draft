@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jsx
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/ChangeLog,v 1.1 2004/07/30 05:17:45 axxo Exp $
+
+*jsx-1.0.7.4 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +jsx-1.0.7.4.ebuild:
+  initial import, dependency of gallery-remote
+
