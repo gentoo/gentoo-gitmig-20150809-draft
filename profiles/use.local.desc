@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.593 2004/09/03 05:40:23 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.594 2004/09/03 18:44:26 axxo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -124,36 +124,23 @@ dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
 dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace-cvs:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
-dev-java/ant-optional:antlr - Enable ANTLR support
-dev-java/ant-optional:bcel - Enable jakarta-bcel support
-dev-java/ant-optional:bsh - Enable BeanShell support
 dev-java/ant-optional:javamail - Enable Java Mail API Support
-dev-java/ant-optional:jdepend - Enable jdepend support
-dev-java/ant-optional:jsch - Enable Jsch Support
-dev-java/ant-optional:jython - Enable Jython support.
-dev-java/ant-optional:log4j - Enable Log4J support.
-dev-java/ant-optional:oro - Enable jakarta-oro support
-dev-java/ant-optional:regexp - Enable jakarta-regexp support
-dev-java/ant-optional:rhino - Enable Rhino JavaScript support
-dev-java/ant-optional:xalan - Enable Xalan support
-dev-java/ant-optional:xerces - Enable Xerces support
 dev-java/ant-tasks:javamail - Enable JavaMail Ant task
-dev-java/ant-tasks:noantlr - Disable ANTLR Ant task
-dev-java/ant-tasks:nobcel - Disable bcel Ant task
-dev-java/ant-tasks:nobeanutils - Disable beanutils Ant task
-dev-java/ant-tasks:nobsh - Disable bsh Ant task
-dev-java/ant-tasks:nocommonslogging - Disable commons-logging Ant task
-dev-java/ant-tasks:nocommonsnet - Disable commons-net Ant task
-dev-java/ant-tasks:nojdepend - Disable Jdepend Ant task
-dev-java/ant-tasks:nojsch - Disable Jsch Ant task
-dev-java/ant-tasks:nojython - Disable Jython Ant task
-dev-java/ant-tasks:nolog4j - Disable Apache log4j Ant task
-dev-java/ant-tasks:nooro - Disable Oro Ant task
-dev-java/ant-tasks:noregexp - Disable Apache Regexp Ant task
-dev-java/ant-tasks:norhino - Disable Rhin Ant task
-dev-java/ant-tasks:noxalan - Disable Xalan Ant task
-dev-java/ant-tasks:noxerces - Disable Xerces Ant task
-dev-java/ant:optional-tasks - Enable Optional Tasks Support
+dev-java/ant-tasks:noantlr - Disable ANTLR Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nobcel - Disable bcel Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nobeanutils - Disable beanutils Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nobsh - Disable bsh Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nocommonslogging - Disable commons-logging Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nocommonsnet - Disable commons-net Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nojdepend - Disable Jdepend Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nojsch - Disable Jsch Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nojython - Disable Jython Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nolog4j - Disable Apache log4j Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:nooro - Disable Oro Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:noregexp - Disable Apache Regexp Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:norhino - Disable Rhin Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:noxalan - Disable Xalan Ant task -- Warning: Disabling this could break some of the Java packages!!
+dev-java/ant-tasks:noxerces - Disable Xerces Ant task -- Warning: Disabling this could break some of the Java packages!!
 dev-java/bsf:jython - Enable Jython support
 dev-java/bsf:rhino - Enable Rhino support
 dev-java/gnu-classpath:native - Compile native .so libraries
