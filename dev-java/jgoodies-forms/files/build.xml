@@ -57,7 +57,7 @@
    </target>
 
    <target name="jar" depends="compile,manifest">
-      <jar jarfile="forms.jar" manifest="MANIFEST.MF">
+      <jar jarfile="forms-${imp.version}.jar" manifest="MANIFEST.MF">
          <fileset dir="${build}"/>
       </jar>
    </target>

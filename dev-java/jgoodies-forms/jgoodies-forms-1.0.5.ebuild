@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.5.ebuild,v 1.2 2005/03/28 20:44:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.5.ebuild,v 1.3 2005/03/30 23:49:14 compnerd Exp $
 
 inherit java-pkg
 
+MY_V=${PV//./_}
 DESCRIPTION="JGoodies Forms Library"
 HOMEPAGE="http://www.jgoodies.com/"
-SRC_URI="http://www.jgoodies.com/download/libraries/forms-1_0_5.zip"
+SRC_URI="http://www.jgoodies.com/download/libraries/forms-${MY_V}.zip"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,14 +21,22 @@ DEPEND=">=virtual/jdk-1.4
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
-S="${WORKDIR}/forms-1.0.5"
+S="${WORKDIR}/forms-${PV}"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} || die "Unpack failed"
 	cd ${S}
 
+	# Remove the packaged jars
 	rm *.jar
-	unzip forms-1.0.5-src.zip &> /dev/null || die "Unpack Failed"
+
+	# Extract the sources
+	unzip forms-${PV}-src.zip &> /dev/null || die "Unpack Failed"
+
+	# No support for junit tests yet
+	rm -rf ${S}/src/test
+
+	# Copy the Gentoo'ized build.xml
 	cp ${FILESDIR}/build.xml ${S}/build.xml
 }
 
@@ -35,11 +44,12 @@ src_compile() {
 	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+
 	ant ${antflags} || die "Compile failed"
 }
 
 src_install() {
-	java-pkg_dojar forms.jar
+	java-pkg_dojar forms-${PV}.jar
 
 	dodoc LICENSE.txt RELEASE-NOTES.txt
 
