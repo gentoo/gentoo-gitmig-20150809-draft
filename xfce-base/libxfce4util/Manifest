@@ -1,12 +1,22 @@
-MD5 6d190b7a85ecfd4f6c171662951d0ce4 libxfce4util-4.0.5.ebuild 668
-MD5 ae70ff35ac58ef59ddfe09f0106a72d4 libxfce4util-4.1.91.ebuild 668
-MD5 a004c5c7062c28b3ddd16ee791f16ec4 libxfce4util-4.0.4.ebuild 647
-MD5 8c120b832dcdfe2b96c4cf5b3dec8e3b libxfce4util-4.0.6.ebuild 731
-MD5 e218e4fbd979f27f739adef717e72019 libxfce4util-4.1.90.ebuild 701
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 df08c6fd3396e9b91eda4a6f265568ea ChangeLog 4508
+MD5 d2fd998d99e60041fd5faf6cd7e0d234 libxfce4util-4.0.6.ebuild 731
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 a004c5c7062c28b3ddd16ee791f16ec4 libxfce4util-4.0.4.ebuild 647
+MD5 6d190b7a85ecfd4f6c171662951d0ce4 libxfce4util-4.0.5.ebuild 668
+MD5 e7794ac2eb4f689bab3bb64dfe6dc247 libxfce4util-4.1.90.ebuild 714
+MD5 c27e5eafcb0c1b51c7fdb0bc7988bf1e libxfce4util-4.1.91.ebuild 681
+MD5 71f8db52c0e0da0e1ee4a70c35c0edd6 files/digest-libxfce4util-4.0.6 70
 MD5 2683788c07ac407cba40e7c1e3a1cf79 files/digest-libxfce4util-4.0.4 70
 MD5 36ea43949511b48226931fd2c0538b5f files/digest-libxfce4util-4.0.5 70
-MD5 71f8db52c0e0da0e1ee4a70c35c0edd6 files/digest-libxfce4util-4.0.6 70
 MD5 cac8ea6622f06547ca44d163ff16d444 files/digest-libxfce4util-4.1.90 71
 MD5 3aa3a6ef330bb46a04c27fbf9ec15d0c files/digest-libxfce4util-4.1.91 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBirRXHTu7gpaalycRAmuaAKCrjfnmt0Si4RPfUMVIVsvEdvKYrgCgnmDw
+Sa1g1fc+tDGlbjG1ym+xOQg=
+=19CL
+-----END PGP SIGNATURE-----
