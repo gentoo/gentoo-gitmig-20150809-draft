@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/mknfonts-0.5.ebuild,v 1.6 2004/11/12 03:49:02 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/mknfonts-0.5.ebuild,v 1.7 2004/11/23 20:36:54 eradicator Exp $
 
 inherit eutils gnustep
 
@@ -8,7 +8,7 @@ DESCRIPTION="Provides the tool to create .nfont packages suitable for use with g
 
 HOMEPAGE="http://w1.423.telia.com/~u42308495/alex/backart/"
 SRC_URI="http://w1.423.telia.com/~u42308495/alex/backart/mknfonts-0.5.tar.gz"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
 SLOT="0"
 LICENSE="GPL-2"
 

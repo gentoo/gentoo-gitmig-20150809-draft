@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/mknfonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.6 2004/11/12 03:49:02 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.7 2004/11/23 20:36:54 eradicator Exp $
+
+  23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mknfonts-0.5.ebuild:
+  Stable... bug #68857.
 
   11 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org> mknfonts-0.5.ebuild:
   Mass Update: gnustep.eclass revamped to allow configurable root install;

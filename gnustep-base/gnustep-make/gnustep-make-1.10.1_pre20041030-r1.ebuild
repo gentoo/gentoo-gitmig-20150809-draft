@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20041030-r1.ebuild,v 1.1 2004/11/12 03:46:56 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20041030-r1.ebuild,v 1.2 2004/11/23 20:33:32 eradicator Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="The makefile package is a simple, powerful and extensible way to write makefiles for a GNUstep-based project."
 HOMEPAGE="http://www.gnustep.org"
 
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc amd64 ~sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
