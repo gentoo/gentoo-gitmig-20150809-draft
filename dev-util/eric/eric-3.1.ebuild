@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.1.ebuild,v 1.3 2003/12/10 07:28:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.1.ebuild,v 1.4 2004/01/11 21:36:32 pythonhead Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	>=dev-python/qscintilla-1.52
 	>=dev-lang/python-2.2.1
 	>=dev-python/sip-3.6
-	>=dev-python/PyQt-3.6-r1"
+	<=dev-python/PyQt-3.8.1"
 
 src_install() {
 	python install.py \
