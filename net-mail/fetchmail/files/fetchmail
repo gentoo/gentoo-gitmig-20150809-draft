@@ -16,7 +16,7 @@ start() {
 
         ebegin "Starting fetchmail"
         start-stop-daemon --start --quiet --exec /usr/bin/fetchmail \
-                -- -f /etc/fetchmailrc
+                -- -d 60 -f /etc/fetchmailrc
         eend ${?}
 }
 
