@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-notif2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/ChangeLog,v 1.6 2004/08/31 22:58:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/ChangeLog,v 1.7 2004/09/15 13:06:39 gustavoz Exp $
+
+  15 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gtk-engines-notif2-1.0.ebuild:
+  Stable on sparc
 
   31 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gtk-engines-notif2-1.0.ebuild:
