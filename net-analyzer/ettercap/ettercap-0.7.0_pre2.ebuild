@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0_pre2.ebuild,v 1.1 2004/05/22 14:46:35 squinky86 Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0_pre2.ebuild,v 1.2 2004/05/26 19:34:35 vapier Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
@@ -14,25 +13,23 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A suite for man in the middle attacks and network mapping"
 HOMEPAGE="http://ettercap.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~arm"
 IUSE="ssl ncurses gtk debug"
 
 # libtool is needed because it provides libltdl (needed for plugins)
 RDEPEND="virtual/glibc
-		 sys-libs/zlib
-		 >=sys-devel/libtool-1.4.3
-		 >=net-libs/libnet-1.1.2.1
-		 >=net-libs/libpcap-0.8.1
-		 ncurses? ( sys-libs/ncurses )
-		 ssl? ( dev-libs/openssl )
-		 gtk? ( >=x11-libs/gtk+-2.2.2 )"
-
+	sys-libs/zlib
+	>=sys-devel/libtool-1.4.3
+	>=net-libs/libnet-1.1.2.1
+	>=net-libs/libpcap-0.8.1
+	ncurses? ( sys-libs/ncurses )
+	ssl? ( dev-libs/openssl )
+	gtk? ( >=x11-libs/gtk+-2.2.2 )"
 DEPEND=">=sys-apps/portage-2.0.45-r3
-		${RDEPEND}"
+	${RDEPEND}"
 
 src_compile() {
 	econf \
