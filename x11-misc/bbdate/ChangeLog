@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/bbdate
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*bbdate-0.2.3 (12 Dec 2002)
+  
+  12 Dec 2002; Matt Keadle <mkeadle@gentoo.org> bbdate-0.2.3.ebuild
+  files/digest-bbdate-0.2.3
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. 
