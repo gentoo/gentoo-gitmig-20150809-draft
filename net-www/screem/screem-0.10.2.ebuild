@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.10.2.ebuild,v 1.1 2004/04/24 02:22:34 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.10.2.ebuild,v 1.2 2004/04/24 05:04:22 mr_bones_ Exp $
 
 IUSE="ssl zlib"
 
@@ -47,7 +47,7 @@ src_compile() {
 
 	gnome2_src_configure
 	cd ${S}/pixmaps
-	sed -e 's:pixmapsdir = /usr/share/screem/pixmaps:pixmapsdir = ${prefix}/share/screem/pixmaps:g' -i Makefile 
+	sed -e 's:pixmapsdir = /usr/share/screem/pixmaps:pixmapsdir = ${prefix}/share/screem/pixmaps:g' -i Makefile
 
 	emake  || die "make failed"
 }
