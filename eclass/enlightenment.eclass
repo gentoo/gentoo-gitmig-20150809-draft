@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.3 2003/10/21 13:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.4 2003/11/08 19:26:49 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -60,6 +60,11 @@ enlightenment_src_compile() {
 		USER=blah \
 		./autogen.sh \
 		|| die "autogen failed"
+	if [ ! -z "${EHACKLIBLTDL}" ] ; then
+		cd libltdl
+		env WANT_AUTOCONF_2_5=1 autoconf || die "autogen in libltdl failed"
+		cd ..
+	fi
 	econf ${MY_ECONF} || die "econf failed"
 	emake || die "emake failed"
 }
