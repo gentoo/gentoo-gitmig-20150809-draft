@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 364c9a4a861c1a4b92ee5a5fd7f8a3f0 fcron-2.0.1.ebuild 2409
+MD5 13ff1700fed4de1ebd7b4501c19ebaaf fcron-2.0.1.ebuild 2408
 MD5 df0ac43022acdd5cded9cdf086312719 fcron-2.9.4.ebuild 2956
 MD5 bf70b2d5bfca86650565d966109dcdab fcron-2.0.0-r4.ebuild 2392
 MD5 ae26f2f2d02d77ea2a5bd83fbc25a57b fcron-2.9.5.ebuild 2895
-MD5 8833b450d230b0e57997d0eb5ff22b45 ChangeLog 4838
+MD5 98eb03632c37d6c425a394d5b34909c3 ChangeLog 4932
 MD5 9c8fdf815ce980c230d763b496d4d088 metadata.xml 158
 MD5 8331ba4de4f67517afa3af7c269bab22 files/fcron.conf-2.9.4 681
 MD5 8331ba4de4f67517afa3af7c269bab22 files/fcron.conf-2.9.5 681
@@ -26,7 +26,7 @@ MD5 4ca5f2b70a7519c6390c5b23c9d058b4 files/digest-fcron-2.0.0-r4 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBapZvEZCkKN40op4RAuQ8AJ9OB91+yxxaOYDcv54KpMiJDdt1BwCglLvi
-RqizbI4NOCwvotU6iYJvfTw=
-=Nvg4
+iD8DBQFBlWTvEZCkKN40op4RAuvdAJ9pHvU0QAKt+a81tG85I76iqf2xZgCdH8KB
+c0GuPmz3dxFfxVhwE/5i/bM=
+=oG13
 -----END PGP SIGNATURE-----
