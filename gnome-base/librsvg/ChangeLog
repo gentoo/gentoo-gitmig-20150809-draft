@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.2 2002/05/22 22:06:10 spider Exp $
+
+
+*librsvg-1.1.6-r2 (22 May 2002)
+ 22 May 2002; Spider <spider@gentoo.org>  librsvg-1.1.6-r2.ebuild:
+  the gnome2 branch
+
 
 *librsvg-1.0.3 (1 Feb 2002)
 
