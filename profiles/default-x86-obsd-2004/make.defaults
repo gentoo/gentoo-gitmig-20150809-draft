@@ -18,6 +18,8 @@ GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurs
 USE="-*"
 
 ARCH="x86"
+CHOST="i686-unknown-openbsd3.4"
+CFLAGS="-mcpu=i686 -O2 -pipe"
 COMPILER="gcc"
 ACCEPT_KEYWORDS="x86-obsd"
 CC="gcc"

@@ -9,3 +9,4 @@ ppc64
 s390
 sparc
 x86
+x86-obsd
