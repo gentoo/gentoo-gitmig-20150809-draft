@@ -1,7 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/irda-utils-0.9.15.ebuild,v 1.8 2003/09/08 08:03:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/irda-utils-0.9.15.ebuild,v 1.9 2004/01/17 18:03:58 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IrDA Utilities, tools for IrDA communication"
@@ -25,6 +25,11 @@ src_install () {
 	dodir /usr/X11R6/bin
 
 	make install PREFIX="${D}" ROOT="${D}" || die "Couldn't install from ${S}"
+
+	# irda-utils's install-etc installs files in /etc/sysconfig if
+	# that directory exists on the system, so clean up just in case.
+	# This is for bug 1797 (17 Jan 2004 agriffis)
+	rm -rf ${D}/etc/sysconfig 2>/dev/null
 
 	into /usr
 	dobin irsockets/irdaspray
