@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.17 2004/10/04 01:22:19 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.18 2004/10/14 22:23:02 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,7 +43,7 @@ egnustep_env() {
 
 egnustep_make() {
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		if [ `use debug` ]; then
+		if use debug ; then
 			emake -j1 HOME=${TMP} \
 				GNUSTEP_USER_ROOT=${TMP}/GNUstep \
 				GNUSTEP_DEFAULTS_ROOT=${TMP}/GNUstep \
@@ -92,7 +92,7 @@ egnustep_package_config_info() {
 
 egnustep_install() {
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		if [ `use debug` ]; then
+		if use debug ; then
 			emake -j1 HOME=${TMP} \
 				GNUSTEP_USER_ROOT=${TMP}/GNUstep \
 				GNUSTEP_DEFAULTS_ROOT=${TMP}/GNUstep \
