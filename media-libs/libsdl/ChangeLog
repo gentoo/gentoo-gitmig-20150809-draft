@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.24 2003/06/11 22:11:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.25 2003/06/12 22:30:58 seemant Exp $
+
+  12 Jun 2003; Seemant Kulleen <seemant@gentoo.org> libsdl-1.2.5-r2.ebuild:
+  unmasked on x86, thanks to Magnade in #gentoo-dev
 
 *libsdl-1.2.4.20020601 (12 Jun 2003)
 
