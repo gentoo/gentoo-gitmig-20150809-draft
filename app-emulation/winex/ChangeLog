@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.12 2002/09/13 14:49:38 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.13 2002/10/11 18:27:26 phoenix Exp $
+
+
+*winex-20021011 (11 Oct 2002)
+  
+  11 Oct 2002; phoen][x <phoenix@gentoo.org> winex-20021011.ebuild, 
+  files/digest-winex-20021011, files/winex-20021011-config,
+  files/winex-20021011-regedit, files/winex-20021011-winex :
+
+  New version of winex (2.2). Disabled the build of programs/ because there
+  were some major problems with the rc-files. If you find a way to work around
+  that, tell me how you did it. I gave up after one hour.
 
 *winex-20020807-r1 (13 Sep 2002)
   
