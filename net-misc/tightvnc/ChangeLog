@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.27 2004/03/02 23:52:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.28 2004/03/03 02:44:53 weeve Exp $
+
+  02 Mar 2004; Jason Wever <weeve@gentoo.org>
+  tightvnc-4.0_beta20031113.ebuild:
+  Added ~sparc keyword as it fixes the vncserver character flip problem.
 
   02 Mar 2004; Jason Wever <weeve@gentoo.org> tightvnc-1.2.9-r1.ebuild:
   Stable on sparc.
