@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.5.ebuild,v 1.3 2003/04/05 21:52:42 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.5.ebuild,v 1.4 2003/04/08 20:40:12 george Exp $
 
 inherit flag-o-matic kde-functions
 
@@ -21,7 +21,7 @@ DEPEND=">=media-libs/glut-3.7-r2
 	media-libs/jpeg
 	media-libs/libpng
 	gnome? ( =x11-libs/gtk+-1.2*
-		<x11-libs/gtkglarea-1.99.0 
+		<x11-libs/gtkglarea-1.99.0
 		=gnome-base/gnome-libs-1.4* )
 	!gnome? ( >=kde-base/kdelibs-3.0.5 )"
 
@@ -48,7 +48,7 @@ src_compile() {
 
 	# currently celestia's "gtk support" requires gnome
 	if [ -n "`use gnome`" ]; then
-	    myconf="$myconf --with-gtk --withou-kde"
+	    myconf="$myconf --with-gtk --without-kde"
 	else
 	    myconf="--with-kde --without-gtk"
 	    # fix for badly written configure script
