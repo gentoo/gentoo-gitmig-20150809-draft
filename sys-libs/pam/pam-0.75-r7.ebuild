@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.15 2003/09/07 00:22:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.16 2004/01/26 01:12:29 vapier Exp $
 
 IUSE="berkdb"
 
@@ -54,7 +54,7 @@ src_unpack() {
 	# Martin Schlemmer <azarah@gentoo.org> (05 Aug 2002)
 	patch -p1 < ${FILESDIR}/${P}-pam_group-confile.patch || die
 
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	autoconf
 
 	# For some reason do not link to libcrypt.
