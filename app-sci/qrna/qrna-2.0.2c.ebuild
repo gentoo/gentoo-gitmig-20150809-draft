@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qrna/qrna-2.0.2c.ebuild,v 1.2 2004/07/21 18:31:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qrna/qrna-2.0.2c.ebuild,v 1.3 2004/07/23 15:59:01 squinky86 Exp $
 
 DESCRIPTION="Prototype ncRNA genefinder"
 HOMEPAGE="http://www.genetics.wustl.edu/eddy/software/"
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="perl"
 
 DEPEND="perl? ( dev-lang/perl )
-	virtual/glibc"
+	virtual/libc"
 
 src_compile () {
 	cd ${S}/squid
