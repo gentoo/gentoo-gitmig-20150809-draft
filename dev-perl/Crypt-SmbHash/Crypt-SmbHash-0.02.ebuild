@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/Crypt-SmbHash-0.02.ebuild,v 1.7 2004/07/29 21:41:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/Crypt-SmbHash-0.02.ebuild,v 1.8 2004/09/01 11:45:38 gustavoz Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="${BASE_URI}/${P}.readme"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc mips arm"
+KEYWORDS="x86 sparc mips arm"
 IUSE=""
 
 DEPEND="dev-perl/Digest-MD4"
