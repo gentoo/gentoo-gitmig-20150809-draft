@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/xblockout
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.2 2003/09/10 15:46:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.3 2003/10/06 16:18:52 vapier Exp $
+
+*xblockout-1.1.2 (06 Oct 2003)
+
+  06 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Security version bump.
 
 *xblockout-1.1.1 (17 Aug 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/xblockout-1.0k.ebuild,v 1.1 2003/09/10 06:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/xblockout-1.1.2.ebuild,v 1.1 2003/10/06 16:18:52 vapier Exp $
 
 inherit games
 
@@ -29,8 +29,8 @@ src_compile() {
 	emake \
 		SCOREDIR=${GAMES_STATEDIR}/${PN} \
 		GROUP_GID=`id -g ${GAMES_GROUP}` \
-		RESOURCEDIR=${GAMES_DATADIR}/${PN} \
-		|| die
+		RESOURCEDIR=${GAMES_DATADIR}/${PN} || \
+			die "emake failed"
 }
 
 src_install() {
