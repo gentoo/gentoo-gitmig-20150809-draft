@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.35 2004/04/16 06:03:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.36 2004/04/17 02:14:56 kumba Exp $
+
+  16 Apr 2004; Joshua Kinard <kumba@gentoo.org>
+  files/CAN-2004-0109-2.6-iso9660.patch:
+  Had the wrong patch for 2.6.x for CAN-2004-0109 (ck-sources had this issue
+  originally). Patch is now the correct one.
 
 *mips-sources-2.4.26 (16 Apr 2004)
 
