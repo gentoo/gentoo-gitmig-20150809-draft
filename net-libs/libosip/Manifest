@@ -1,0 +1,7 @@
+MD5 411c1160e49c144901ce5c2c597c1128 ChangeLog 959
+MD5 a85a8cfaa193cc9d253834b804002098 libosip-0.8.8.ebuild 790
+MD5 e57fc12aaf2116a12e65ee54925621c8 libosip-0.8.8-r1.ebuild 793
+MD5 2a1b8948e7b5df013c22eae139b90998 libosip-0.9.6.ebuild 789
+MD5 48b9f7631c15a223b207244d5b9fcd7d files/digest-libosip-0.8.8 65
+MD5 48b9f7631c15a223b207244d5b9fcd7d files/digest-libosip-0.8.8-r1 65
+MD5 bdae20c3d071939ffd92629f5d3c00f5 files/digest-libosip-0.9.6 65

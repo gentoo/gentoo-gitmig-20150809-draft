@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libosip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.4 2003/03/20 13:43:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.5 2003/05/04 18:20:25 mholzer Exp $
+
+*libosip-0.9.6 (04 May 2003)
+
+  04 May 2003; Martin Holzer <mholzer@gentoo.org> libosip-0.9.6.ebuild:
+  Version bumped. Closes #18506.
 
 *libosip-0.8.8-r1 (20 Mar 2003)
 
