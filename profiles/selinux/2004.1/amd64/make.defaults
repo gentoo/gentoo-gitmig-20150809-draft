@@ -1,19 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/make.defaults,v 1.2 2004/11/22 02:10:35 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/make.defaults,v 1.3 2004/11/24 00:57:28 pebenito Exp $
 
-USE="amd64 berkdb crypt multilib ncurses pam python readline selinux ssl zlib"
-STAGE1_USE="multilib selinux"
-GRP_STAGE23_USE="amd64 berkdb crypt multilib ncurses pam python readline selinux ssl zlib"
+USE="amd64"
+STAGE1_USE="multilib"
+GRP_STAGE23_USE="amd64"
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="amd64"
-FEATURES="autoconfig sandbox strict sfperms"
-POLICYDIR="/etc/security/selinux/src/policy"
+FEATURES="sandbox"
 
 CONF_LIBDIR="lib"
 CONF_MULTILIBDIR="lib32"
-
-PORTAGE_T="portage_t"
-PORTAGE_FETCH_T="portage_fetch_t"
-PORTAGE_SANDBOX_T="portage_sandbox_t"
