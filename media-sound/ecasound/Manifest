@@ -1,6 +1,18 @@
-MD5 2f4811f70056502e8e0737996e42b888 ChangeLog 4246
-MD5 e11774d9d8a37bc41484d426577108bd ecasound-2.3.2.ebuild 2762
-MD5 4a679fcabbe7d333e864c6a11aed7f92 ecasound-2.3.3.ebuild 2811
-MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2dde7f7b26f4a5ca5197827737fdf69 ecasound-2.3.3.ebuild 2810
+MD5 30e1470186dc77519efe49f24e57034d ecasound-2.3.2.ebuild 2761
+MD5 965b9d8fa98e77692e62daf704bbf244 ecasound-2.4.0.ebuild 2812
+MD5 fc039bb35d21f4807522268a15fc7a73 ChangeLog 4449
+MD5 eadab3941f136b871837953c9d1472d5 metadata.xml 753
 MD5 e68dadbc41193dfa31762ee90a4b2271 files/digest-ecasound-2.3.2 66
 MD5 92bd0b879f6e514225f5db2a2d474688 files/digest-ecasound-2.3.3 66
+MD5 6a3363beab079c4f667c48d887782a04 files/digest-ecasound-2.4.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSRzv06ebR+OMO78RAlkbAKCXpovUFT2+1rCjNwAuP1zolvC7NwCgiipB
+WJNzrVJdPbkNi25NGAsdy2U=
+=qku7
+-----END PGP SIGNATURE-----

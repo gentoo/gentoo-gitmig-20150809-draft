@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.3.3.ebuild,v 1.11 2005/03/29 09:16:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.0.ebuild,v 1.1 2005/03/29 09:16:16 luckyduck Exp $
 
 IUSE="ncurses arts alsa python oss mikmod oggvorbis jack audiofile"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://eca.cx/"
 LICENSE="GPL-2"
 
 SLOT="1"
-KEYWORDS="x86 sparc ~ppc amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 DEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	media-libs/ladspa-sdk
