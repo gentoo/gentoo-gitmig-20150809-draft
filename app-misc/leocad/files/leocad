@@ -1,3 +1,0 @@
-LEOCAD_LIB="/usr/lib/leocad/lib"
-export LEOCAD_LIB
-/usr/lib/leocad/leocad
