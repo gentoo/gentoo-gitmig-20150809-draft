@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.36 2004/01/27 11:53:57 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.37 2004/01/27 18:48:06 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -364,7 +364,7 @@ src_install() {
 	fi
 
 	# Make sure the user running xterm can only write to utmp.
-	fowners root.utmp /usr/X11R6/bin/xterm
+	fowners root:utmp /usr/X11R6/bin/xterm
 	fperms 2755 /usr/X11R6/bin/xterm
 
 	# Fix permissions on locale/common/*.so

@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.272 2004/01/27 11:53:57 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.273 2004/01/27 18:48:06 spyderous Exp $
+
+  27 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.2.1-r2.ebuild:
+  Fix fowners syntax again, it got broken in the last commit.
 
   27 Jan 2004; Andrew Bevitt <cyfred@gentoo.org>; xfree-4.2.1-r2.ebuild,
   xfree-4.3.0-r2.ebuild, xfree-4.3.0-r3.ebuild, xfree-4.3.99.16.ebuild,
