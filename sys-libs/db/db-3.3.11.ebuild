@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.3.11.ebuild,v 1.1 2001/11/02 14:03:13 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.3.11.ebuild,v 1.2 2002/02/10 17:53:52 gbevin Exp $
 
 S=${WORKDIR}/${P}
 
@@ -10,6 +10,7 @@ DESCRIPTION="Berkeley DB"
 SRC_URI="http://www.sleepycat.com/update/3.3.11/db-3.3.11.tar.gz"
 
 HOMEPAGE="http://www.sleepycat.com"
+SLOT="3"
 
 DEPEND="virtual/glibc"
 
