@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.3 2002/09/01 21:23:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.4 2002/09/02 05:27:15 carpaski Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -41,14 +41,16 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 	#the main source dir for linux-2.4.19 (and higher?) has the version attached
-	mv linux-${OKV} linux-${KV} || die
+	if [ $OKV != $KV ]; then
+		mv linux-${OKV} linux-${KV} || die "moving kernel"
+	fi
 	cd ${S}
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
-	make mrproper || die
+	make mrproper || die "making proper"
 
 	#this file is required for other things to build properly, so we autogenerate it
-	make include/linux/version.h || die
+	make include/linux/version.h || die "making headers"
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
@@ -59,7 +61,7 @@ src_unpack() {
 	cd ${S}
 	mv Makefile Makefile.orig
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-		Makefile.orig >Makefile || die # test, remove me if Makefile ok
+		Makefile.orig >Makefile || die "sed makefile" # test, remove me if Makefile ok
 	rm Makefile.orig
 }
 
