@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.3 2004/04/07 00:05:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.4 2004/04/07 00:06:23 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,7 +46,7 @@ src_unpack() {
 	rm include/linux/pkt_sched.h
 
 	# Now a little hack to handle 2.4.x headers and stupid defines ...
-	if has_version '<sys-kernel/linux-headers-2.8' ; then
+	if has_version '<sys-kernel/linux-headers-2.6' ; then
 		echo '#define __constant_htons(x) htons(x)' >> include-glibc/glibc-bugs.h
 		append-flags -D_LINUX_BYTEORDER_LITTLE_ENDIAN_H -D_LINUX_BYTEORDER_BIG_ENDIAN_H
 	fi
