@@ -1,37 +1,17 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.7 2002/12/18 18:21:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.8 2002/12/29 22:18:58 mholzer Exp $
+
+*pornview-0.1.5 (29 Dec 2002)
+
+  29 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.5.ebuild files/digest-pornview-0.1.5 ChangeLog :
+  Version pumped. Sorry still no mplayer support
 
 *pornview-0.1.4 (15 Dec 2002)
 
   18 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.4.ebuild :
   Fixed Dependeny (#12366) doesn't work with xine-lib >=0.9.13) i've added a bug on sf for this
-  
 
   15 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.4.ebuild files/digest-pornview-0.1.4 Changelog :
   Added nev Version. Sorry mplayer support is broken by pornview itself. So it's disabled
 
-Sorry Guys, we had to remove 0.1.1 - 0.1.3
-Now working on 0.1.4
-please be patient
-
-*pornview-0.1.3 (10 Dec 2002)
-
-  13 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.3.ebuild pornview-0.1.2b.ebuild pornview-0.1.1.ebuild Changelog :
-  Removed hardcoded SRC_URI
-
-  10 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.3.ebuild :
-  Initial Version.
-
-*pornview-0.1.2b (06 Dec 2002)
-
-  06 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.2b.ebuild :
-  New version.
-
-*pornview-0.1.1 (17 Nov 2002)
-
-  06 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.1.ebuild :
-  Marked as stable.
-
-  17 Nov 2002; Arcady Genkin <agenkin@gentoo.org> pornview-0.1.1.ebuild :
-  Initial version, submitted by Leigh MacDonald <admin@tech-guys.com>.
