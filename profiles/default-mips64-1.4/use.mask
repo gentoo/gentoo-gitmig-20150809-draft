@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips64-1.4/use.mask,v 1.7 2004/08/16 04:50:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips64-1.4/use.mask,v 1.8 2004/09/01 03:20:14 kumba Exp $
 
 
 # Chris PeBenito <pebenito@gentoo.org>
@@ -41,6 +41,7 @@ tcc
 trusted
 voodoo3
 smartcard
+emacs
 
 # And arch keyword flags that don't work
 

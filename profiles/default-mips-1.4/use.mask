@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.13 2004/08/16 04:50:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.14 2004/09/01 03:20:14 kumba Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # mask evolution use flag until it can be properly tested
@@ -46,6 +46,7 @@ tcc
 trusted
 voodoo3
 smartcard
+emacs
 
 # And arch keyword flags that don't work
 
