@@ -2,6 +2,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.1 2002/06/25 16:01:22 stubear Exp
 
+*kinput2-3.1_beta4-r2 (2 July 2002)
+
+  1 July 2002; Stuart Bouyer <stubear@gentoo.org> kinput2-3.1_beta4-r1.ebuild :
+  Converted over to the new DEPEND="foo? bar : oni" operator. this makes for a
+  much nicer looking ebuild. Now, If I can just clean up the src_unpack stage
+
 *kinput2-3.1_beta4-r1 (1 July 2002)
 
   1 July 2002; Stuart Bouyer <stubear@gentoo.org> kinput2-3.1_beta4-r1.ebuild :
