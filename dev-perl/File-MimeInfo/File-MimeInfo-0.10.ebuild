@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/File-MimeInfo-0.10.ebuild,v 1.4 2004/08/10 12:52:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/File-MimeInfo-0.10.ebuild,v 1.5 2004/09/02 13:21:55 dholm Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/P/PA/PARDUS/${PN}/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/CPAN/authors/id/P/PA/PARDUS/${PN}/${P}.readme"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~ppc"
 IUSE=""
 SRC_TEST="do"
 

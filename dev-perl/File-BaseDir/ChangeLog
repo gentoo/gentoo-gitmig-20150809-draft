@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-BaseDir
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BaseDir/ChangeLog,v 1.4 2004/08/10 12:48:18 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BaseDir/ChangeLog,v 1.5 2004/09/02 13:21:52 dholm Exp $
+
+  02 Sep 2004; David Holm <dholm@gentoo.org> File-BaseDir-0.02.ebuild:
+  Added to ~ppc.
 
   10 Aug 2004; Ferris McCormick <fmccor@gentoo.org> File-BaseDir-0.02.ebuild:
   Add ~sparc keyword (Bug 59940).  Passes internal tests & filer seems to work.

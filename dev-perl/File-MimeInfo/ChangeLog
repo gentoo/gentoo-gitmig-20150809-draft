@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.4 2004/08/10 12:52:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.5 2004/09/02 13:21:55 dholm Exp $
+
+  02 Sep 2004; David Holm <dholm@gentoo.org> File-MimeInfo-0.10.ebuild:
+  Added to ~ppc.
 
   10 Aug 2004; Ferris McCormick <fmccor@gentoo.org> File-MimeInfo-0.10.ebuild:
   Add ~sparc keyword (Bug 59941). Passes all tests for sparc and supports
