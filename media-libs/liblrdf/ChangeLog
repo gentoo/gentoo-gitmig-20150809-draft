@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.12 2004/04/05 16:19:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.13 2004/04/16 11:30:23 lv Exp $
+
+  16 Apr 2004; Travis Tilley <lv@gentoo.org> liblrdf-0.3.7.ebuild:
+  added ~amd64 keyword
 
 *liblrdf-0.3.7 (05 Apr 2004)
 
