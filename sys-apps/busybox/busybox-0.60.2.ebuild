@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.2.ebuild,v 1.1 2001/12/19 15:22:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.2.ebuild,v 1.2 2001/12/20 16:03:17 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
@@ -13,6 +13,13 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	cp ${FILESDIR}/Config.h-${PV}-cd ${S}/Config.h
+	#This is an old patch from the mailing list that it looks like they forgot
+	#to apply.  References:
+	#http://www.google.com/search?q=cache:biJRjMW2U3g:opensource.lineo.com/lists/busybox/2001-July/004023.html+%22bad+identifier%22+busybox&hl=en
+	#This patch has already been applied to their CVS, so it doesn't need to
+	#be reported.
+	cd ${S}
+	patch -p0 < ${FILESDIR}/msh.diff || die
 }
 
 src_compile() {
