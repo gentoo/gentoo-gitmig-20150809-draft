@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/urlview
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.9 2003/10/19 01:06:41 pyrania Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.10 2004/04/16 20:06:29 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> urlview-0.9.ebuild:
+  adding s390 keywords
 
   19 Oct 2003; Markus Nigbur <pyrania@gentoo.org> urlview-0.9.ebuild:
   Added newline fix. Thanks to James Harlow (#25101).
