@@ -24,7 +24,7 @@
 # <strider@gentoo.org> (02 Dec 2002)
 # ibm-jdk-1.4.0 causes problems with other
 # java packages, so masking it.
-=dev-java/ibm-jdk-1.4.0
+>=dev-java/ibm-jdk-1.4.0
 
 # <prez@gentoo.org> (01 Dec 2002)
 # New ebuild, should be tested.
