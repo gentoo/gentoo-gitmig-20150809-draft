@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.64 2004/10/29 20:20:03 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.65 2004/11/03 17:31:35 psi29a Exp $
+
+  03 Nov 2004; Bret Curtis <psi29a@gentoo.org> mc-4.6.0-r11.ebuild:
+  marked stable for mips
 
   29 Oct 2004; Michael Imhof <tantive@gentoo.org> mc-4.6.0-r11.ebuild:
   Added ~s390 keyword.
