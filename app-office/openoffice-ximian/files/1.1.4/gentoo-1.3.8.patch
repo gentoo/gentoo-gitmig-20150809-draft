@@ -9,7 +9,7 @@
 -GentooKDE : Gentoo, KDECommon
 +GentooBase : LinuxCommon, FilePickers, GlobalDesktopFiles, NonArkCommon, Gcc34, NoRpath
 +Gentoo : GentooBase
-+GentooGNOME : GentooBase, GnomeVFS, Evo2, NovellOnly, GentooOnly
++GentooGNOME : GentooBase, GnomeVFS, NovellOnly, GentooOnly
 +GentooKDE : GentooBase, KDECommon
  
  # somewhat odder:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.8.ebuild,v 1.8 2005/02/18 03:12:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.8.ebuild,v 1.9 2005/03/06 10:40:36 suka Exp $
 
 # Notes:
 #
@@ -59,8 +59,7 @@ RDEPEND="!app-office/openoffice-ximian-bin
 	>=dev-lang/perl-5.0
 	gnome? ( >=x11-libs/gtk+-2.0
 		>=gnome-base/gnome-vfs-2.0
-		>=dev-libs/libxml2-2.0
-		>=gnome-extra/evolution-data-server-1.0 )
+		>=dev-libs/libxml2-2.0 )
 	kde? ( kde-base/kdelibs )
 	>=media-libs/libart_lgpl-2.3.13
 	>=x11-libs/startup-notification-0.5
@@ -264,6 +263,9 @@ src_unpack() {
 
 	#Another java problem
 	epatch ${FILESDIR}/${OO_VER}/javafix.patch
+
+	# fix for bug #82385
+	epatch ${FILESDIR}/${OO_VER}/getcompver.awk.patch
 
 	# Workaround for bug #73940, may break debug use flag on ppc
 	if use ppc; then
