@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sendmail
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.36 2003/09/17 20:22:55 gregf Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.37 2004/02/07 00:18:00 gregf Exp $
+
+*sendmail-8.12.11 (06 Feb 2004)
+
+  06 Feb 2004; Greg Fitzgerald <gregf@gentoo.org> sendmail-8.12.11.ebuild:
+  Version Bump.
 
 *sendmail-8.12.10 (17 Sep 2003)
 
