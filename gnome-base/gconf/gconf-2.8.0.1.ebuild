@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.8.0.1.ebuild,v 1.1 2004/09/15 14:33:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.8.0.1.ebuild,v 1.2 2004/09/15 16:05:46 foser Exp $
 
 inherit eutils gnome2
 
@@ -13,7 +13,7 @@ DESCRIPTION="Gnome Configuration System and Daemon"
 HOMEPAGE="http://www.gnome.org/"
 SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
-IUSE="doc gtk"
+IUSE="doc"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa amd64 ~ia64 ~mips ~ppc64"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.0.1
 	>=gnome-base/orbit-2.4
 	>=dev-libs/libxml2-2
 	dev-libs/popt
-	gtk? ( >=x11-libs/gtk+-2 )"
+	>=x11-libs/gtk+-2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
@@ -31,8 +31,6 @@ DEPEND="${RDEPEND}
 # FIXME : consider merging the tree (?)
 
 MAKEOPTS="${MAKEOPTS} -j1"
-
-G2CONF="${G2CONF} $(use_enable gtk)"
 
 src_install() {
 

@@ -2,10 +2,10 @@ MD5 aa35b3c82e7832bd0ea41e81c55ba8ef gconf-2.4.0.1.ebuild 1937
 MD5 e6238b6762233ce9b584f789bc99a0dc gconf-1.0.8-r3.ebuild 1707
 MD5 24ba9a03be4a4cdb12bfeab6024ebc61 gconf-2.6.1.ebuild 2102
 MD5 3a69d4cc5f346547bab0539318a111c2 gconf-1.0.9.ebuild 1865
-MD5 4dffe7ddf48b78a2380c01ef540545ba gconf-2.8.0.1.ebuild 2029
+MD5 cbb265acf32477c3ebef35596470793e gconf-2.8.0.1.ebuild 1978
 MD5 eeb0f927c533dad22743d4a646f4a774 gconf-1.0.8-r5.ebuild 1872
 MD5 9a02a5baca19634c57a87aae05ffa8cd gconf-2.6.0.ebuild 1956
-MD5 18bbe091b10a9b5bff0a26c8eb9b8ce4 ChangeLog 11989
+MD5 44412a34081eb7afba6fb262ed99eed5 ChangeLog 11975
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 b84f37b9c7bad4473d64d5db8cb1d4a4 gconf-2.6.2.ebuild 1949
 MD5 aaa79f3ad5c910cfa6f813112e66f79e files/gconf-1.0.9-locallock_mdk.patch 1202

@@ -1,12 +1,11 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.85 2004/09/15 14:33:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.86 2004/09/15 16:05:46 foser Exp $
 
 *gconf-2.8.0.1 (15 Sep 2004)
 
   15 Sep 2004; foser <foser@gentoo.org> gconf-2.8.0.1.ebuild :
   Gnome 2.8 release
-  Add gtk USE
 
   22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gconf-2.6.2.ebuild:
   Stable on alpha.
