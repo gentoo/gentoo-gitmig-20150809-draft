@@ -1,5 +1,8 @@
-MD5 50c2b6c6e7fd13e1ed163e69b49882cf ChangeLog 4723
-MD5 7fb2a3804fd09fa02c5672172ea5070a fftw-2.1.5-r1.ebuild 4113
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89a53424760f7b8622b6bb769594b4ed ChangeLog 4824
+MD5 03d9875302fd899418bfe73f4d38de14 fftw-2.1.5-r1.ebuild 4138
 MD5 43c18140a8e39d5b9858b0517086068d fftw-3.0.1-r1.ebuild 2697
 MD5 158f42a78e4eefe222b212aaffe71c24 fftw-3.0.1.ebuild 2365
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
@@ -7,3 +10,10 @@ MD5 236dda9695005c9f306fb2c55f020686 files/digest-fftw-2.1.5-r1 63
 MD5 cd32698a34d886267d48a8ccb99747b1 files/digest-fftw-3.0.1 63
 MD5 cd32698a34d886267d48a8ccb99747b1 files/digest-fftw-3.0.1-r1 63
 MD5 7718e5a1330e574b38daecb472bffa17 files/fftw-ppc-macos.patch 1356
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD4DBQFCJwZRArHZZzCEUG0RAsAKAJdSLHC0K5nxuFbz1OUVMjg8tmo7AJ4xGVoz
+g/AP9jWvbrR2qC/ItSSv9A==
+=B9RX
+-----END PGP SIGNATURE-----

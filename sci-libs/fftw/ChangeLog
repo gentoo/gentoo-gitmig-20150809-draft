@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.5 2005/01/13 17:23:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.6 2005/03/03 12:42:47 eradicator Exp $
+
+  03 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  fftw-2.1.5-r1.ebuild:
+  Multilib fixes.
 
   13 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>; fftw-2.1.5-r1.ebuild:
   Change insinto "${D}usr/include" to insinto /usr/include, thanks to Seemant
