@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/reiser4progs
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.4 2004/02/06 14:18:33 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.5 2004/04/11 23:08:49 steel300 Exp $
+
+*reiser4progs-0.5.3 (11 Apr 2004)
+
+  11 Apr 2004; <coxj@gentoo.org> reiser4progs-0.5.3.ebuild:
+  Version bump
 
 *reiser4progs-0.5.0 (06 Feb 2004)
 
