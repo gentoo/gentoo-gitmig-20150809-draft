@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/daemontools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/ChangeLog,v 1.13 2003/12/26 01:11:37 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/ChangeLog,v 1.14 2004/01/30 08:06:51 robbat2 Exp $
+
+*daemontools-0.76-r4 (30 Jan 2004)
+
+  30 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  daemontools-0.76-r4.ebuild, files/svscan-0.76-r4:
+  fix bug #33979.
 
   25 Dec 2003; Robin H. Johnson <robbat2@gentoo.org>
   daemontools-0.76-r3.ebuild:

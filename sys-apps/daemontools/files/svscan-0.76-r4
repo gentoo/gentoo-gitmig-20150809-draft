@@ -1,0 +1,37 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/files/svscan-0.76-r4,v 1.1 2004/01/30 08:06:51 robbat2 Exp $
+
+depend() {
+	need net
+	after net
+	before ntpd
+	before spamd
+	before apache
+	before apache2
+}
+
+start() {
+	ebegin "Starting service scan"
+	(
+	# workaround for #25754
+	unset -f `declare -F | sed 's:declare -f::g'`
+	PATH="/usr/bin:$PATH"
+	start-stop-daemon --start --quiet --exec /usr/bin/svscan --pidfile /var/run/svscan.pid -- /service &
+	echo $! > /var/run/svscan.pid
+	)
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping service scan"
+	start-stop-daemon --stop --quiet --pidfile /var/run/svscan.pid
+	eend $?
+	ebegin "Stopping services"
+	svc -dx /service/* 2>/dev/null
+	eend $?
+	ebegin "Stopping service logging"
+	svc -dx /service/*/log 2>/dev/null
+	eend $?
+}
