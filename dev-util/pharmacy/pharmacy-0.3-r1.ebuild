@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pharmacy/pharmacy-0.3-1.ebuild,v 1.1 2001/10/06 17:22:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pharmacy/pharmacy-0.3-r1.ebuild,v 1.1 2001/10/06 20:33:30 hallski Exp $
 
 #P=
 A=${P}.tar.gz
