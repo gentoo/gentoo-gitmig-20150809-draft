@@ -1,4 +1,4 @@
 MD5 b4ea218f9e03ca35f19b07496b5e5d33 files/digest-gpart-0.1h 61
 MD5 864b9cb6a654b69cf36c09b1240b2888 files/gpart-0.1h-errno.diff 533
-MD5 b7e0fb2ce8e71192b21979684ec3eb95 ChangeLog 484
 MD5 ebf016badc0017519a94e2cee0d5117c gpart-0.1h.ebuild 703
+MD5 7f3955ac54382e61f94bf4127be37eef ChangeLog 485
