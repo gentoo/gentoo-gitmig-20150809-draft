@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.10 2004/12/20 01:31:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.11 2004/12/30 22:28:19 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   logilab-common-0.5.0.ebuild:
@@ -20,11 +23,11 @@
 
 *logilab-common-0.5.0 (12 May 2004)
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   +logilab-common-0.5.0.ebuild:
   Version bump.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   logilab-common-0.3.4.ebuild, logilab-common-0.4.4.ebuild:
   Add missing IUSE.
 
@@ -34,7 +37,7 @@
 
 *logilab-common-0.4.4 (17 Feb 2004)
 
-  17 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  17 Feb 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   logilab-common-0.4.4.ebuild:
   Version bump.
 

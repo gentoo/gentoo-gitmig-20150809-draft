@@ -1,11 +1,14 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.7 2004/06/25 01:32:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.8 2004/12/30 22:23:20 ciaranm Exp $
 
-  31 May 2004; Bryan Østergaard <kloeri@gentoo.org> ldaptor-0.0.6.ebuild:
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  31 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ldaptor-0.0.6.ebuild:
   Stable on alpha.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> ldaptor-0.0.6.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ldaptor-0.0.6.ebuild:
   Add missing IUSE.
 
   30 Apr 2004; David Holm <dholm@gentoo.org> ldaptor-0.0.6.ebuild:

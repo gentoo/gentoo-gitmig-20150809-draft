@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.18 2004/12/11 23:16:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.19 2004/12/30 22:49:40 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   12 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pexpect-0.999.ebuild:
   Stable on alpha.
@@ -14,12 +17,12 @@
   02 Oct 2004; Hasan Khalil <gongloo@gentoo.org> pexpect-0.999.ebuild:
   Keyworded ~ppc-macos.
 
-  31 May 2004; Bryan Østergaard <kloeri@gentoo.org> pexpect-0.97.ebuild:
+  31 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pexpect-0.97.ebuild:
   Stable on alpha.
 
 *pexpect-0.999 (25 May 2004)
 
-  25 May 2004; Bryan Østergaard <kloeri@gentoo.org> +pexpect-0.999.ebuild:
+  25 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +pexpect-0.999.ebuild:
   Version bump.
 
   13 May 2004; Jason Eric Huebel <jhuebel@gentoo.org> pexpect-0.97.ebuild:

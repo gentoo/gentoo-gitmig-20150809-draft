@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/log4py
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.11 2004/10/29 03:12:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.12 2004/12/30 22:24:47 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Oct 2004; Jason Wever <weeve@gentoo.org> log4py-1.3.ebuild:
   Stable on sparc.
@@ -8,16 +11,16 @@
   21 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> log4py-1.3.ebuild:
   Marked stable on x86
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> log4py-1.1.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> log4py-1.1.ebuild,
   log4py-1.3.ebuild:
   Add missing IUSE.
 
-  28 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> log4py-1.1.ebuild:
+  28 Mar 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> log4py-1.1.ebuild:
   Update SRC_URI.
 
 *log4py-1.3 (10 Mar 2004)
 
-  10 Mar 2004; Bryan Østergaard,,, <kloeri@gentoo.org> log4py-1.3.ebuild:
+  10 Mar 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> log4py-1.3.ebuild:
   Version bump.
 
 *log4py-1.1 (22 Jun 2003)

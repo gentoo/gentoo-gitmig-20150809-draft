@@ -1,17 +1,20 @@
 # ChangeLog for dev-python/pyds
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.13 2004/07/19 22:06:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.14 2004/12/30 23:10:46 ciaranm Exp $
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pyds-0.6.5.ebuild,
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyds-0.6.5.ebuild,
   pyds-0.7.0.ebuild, pyds-0.7.1.ebuild, pyds-0.7.2.ebuild:
   dev-python/Imaging renamed to dev-python/imaging.
 
 *pyds-0.7.2 (25 May 2004)
 
-  25 May 2004; Bryan Østergaard <kloeri@gentoo.org> +pyds-0.7.2.ebuild:
+  25 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +pyds-0.7.2.ebuild:
   Version bump, bug #50754.
 
-  01 May 2004; Bryan Østergaard <kloeri@gentoo.org> pyds-0.7.1.ebuild:
+  01 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyds-0.7.1.ebuild:
   Corrected soappy dependency, bug #48984.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> pyds-0.7.1.ebuild:
@@ -29,7 +32,7 @@
 
 *pyds-0.7.1 (17 Apr 2004)
 
-  17 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> pyds-0.7.0.ebuild,
+  17 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyds-0.7.0.ebuild,
   +pyds-0.7.1.ebuild:
   Version bump.
 
@@ -46,6 +49,6 @@
 
 *pyds-0.6.5 (03 Jan 2004)
 
-  03 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pyds-0.6.5.ebuild:
+  03 Jan 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> pyds-0.6.5.ebuild:
   Initial import
 

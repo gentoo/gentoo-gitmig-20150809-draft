@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/omniorbpy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.6 2004/11/23 15:46:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.7 2004/12/30 22:41:50 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Nov 2004; Alastair Tse <liquidx@gentoo.org> omniorbpy-2.5.ebuild:
   changed install paths for CORBA.py and PortableServer.py will not collide
@@ -16,7 +19,7 @@
 
 *omniorbpy-2.4 (04 Oct 2004)
 
-  04 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> +omniorbpy-2.4.ebuild:
+  04 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +omniorbpy-2.4.ebuild:
   Version bump.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
@@ -27,14 +30,14 @@
 
 *omniorbpy-2.2 (17 Jul 2004)
 
-  17 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  17 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +metadata.xml,
   +omniorbpy-2.0.ebuild, +omniorbpy-2.2.ebuild, +omniorbpy-2.3.ebuild:
   Rename to omniorbpy.
 
   10 May 2004; Travis Tilley <lv@gentoo.org> omniORBpy-2.3.ebuild:
   added ~amd64 keyword
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> omniORBpy-2.0.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> omniORBpy-2.0.ebuild,
   omniORBpy-2.2.ebuild, omniORBpy-2.3.ebuild:
   Remove default S.
 
@@ -44,7 +47,7 @@
 
 *omniORBpy-2.3 (15 Dec 2003)
 
-  15 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> omniORBpy-2.3.ebuild:
+  15 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> omniORBpy-2.3.ebuild:
   Version bump.
 
 *omniORBpy-2.2 (03 Oct 2003)

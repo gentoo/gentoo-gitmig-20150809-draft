@@ -1,24 +1,27 @@
 # ChangeLog for dev-python/pyclimate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.6 2004/09/05 07:27:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.7 2004/12/30 23:04:19 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
 
-  24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pyclimate-1.2.1-r1.ebuild,
+  24 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyclimate-1.2.1-r1.ebuild,
   pyclimate-1.2.1.ebuild:
   Correct S.
 
-  24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pyclimate-1.2.1-r1.ebuild:
+  24 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyclimate-1.2.1-r1.ebuild:
   Fix SRC_URI typo.
 
-  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pyclimate-1.2.1-r1.ebuild,
+  20 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyclimate-1.2.1-r1.ebuild,
   pyclimate-1.2.1.ebuild:
   ScientificPython is now scientificpython - adjust dependencies accordingly.
 
 *pyclimate-1.2.1-r1 (21 Jun 2004)
 
-  21 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  21 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   +pyclimate-1.2.1-r1.ebuild, +pyclimate-1.2.1.ebuild:
   Moved from dev-python/PyClimate.
 

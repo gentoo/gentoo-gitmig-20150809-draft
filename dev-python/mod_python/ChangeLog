@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.26 2004/10/17 07:56:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.27 2004/12/30 22:33:21 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> mod_python-3.1.3.ebuild:
   keywords ~amd64; closes #66176.
@@ -15,18 +18,18 @@
   14 Jul 2004; Jason Wever <weeve@gentoo.org> mod_python-3.1.3.ebuild:
   Added ~sparc keyword, resolves bug #57102.
 
-  12 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  12 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   -mod_python-3.0.4-r1.ebuild, -mod_python-3.0.4-r2.ebuild,
   mod_python-3.1.3.ebuild:
   Remove old versions, stable on alpha.
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> mod_python-3.1.3.ebuild:
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mod_python-3.1.3.ebuild:
   Keyworded ~alpha, requested in bug #51550.
 
   24 May 2004; Chuck Short <zul@gentoo.org> mod_python-3.1.3.ebuild:
   Marked stable as requested by #51420.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> mod_python-2.7.10.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mod_python-2.7.10.ebuild,
   mod_python-3.0.4-r1.ebuild, mod_python-3.0.4-r2.ebuild,
   mod_python-3.1.3.ebuild:
   Change SRC_URI to mirror://..
@@ -34,7 +37,7 @@
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> mod_python-2.7.10.ebuild:
   Add die following econf for bug 48950
 
-  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> mod_python-2.7.10.ebuild,
+  01 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mod_python-2.7.10.ebuild,
   mod_python-3.0.4-r2.ebuild, mod_python-3.0.4.ebuild:
   Stable on x86.
 
@@ -45,7 +48,7 @@
 
 *mod_python-3.0.4-r2 (29 Jan 2004)
 
-  29 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  29 Jan 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   mod_python-3.0.4-r2.ebuild:
   Fix installation paths, closing bug #39757 and #39758.
 
@@ -62,20 +65,20 @@
   files/patch-2.7.8.diff:
   cleanup vunerable versions, bump 2.7 series due to security update (#39154)
 
-  13 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org>
+  13 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   mod_python-3.0.3.ebuild, mod_python-3.0.4.ebuild:
   Install icons needed for html documentation, closing bug #29271
 
 *mod_python-2.7.9 (12 Dec 2003)
 *mod_python-3.0.4 (12 Dec 2003)
 
-  12 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org>
+  12 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   mod_python-2.7.9.ebuild, mod_python-3.0.0_beta4.ebuild,
   mod_python-3.0.1.ebuild, mod_python-3.0.4.ebuild,
   files/mod_python-3.0.0_beta4-destdir.diff:
   Bump versions and remove some old versions.
 
-  28 Oct 2003; Bryan Østergaard <kloeri@gentoo.org>
+  28 Oct 2003; Bryan Ã˜stergaard <kloeri@gentoo.org>
   mod_python-3.0.3.ebuild:
   Fix bug when using Python-2.3 closing bug #32018.
 
@@ -86,7 +89,7 @@
 *mod_python-3.0.3 (05 Oct 2003)
 
   05 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> mod_python-3.0.3.ebuild:
-  Version bump. Thanks Bryan Østergaard <kloeri@mailme.dk>
+  Version bump. Thanks Bryan Ã˜stergaard <kloeri@mailme.dk>
 
   09 Jul 2003; Donny Davies <woodchip@gentoo.org> mod_python-2.7.8.ebuild:
   Description clarify.

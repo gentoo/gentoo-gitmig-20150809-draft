@@ -1,11 +1,14 @@
 # ChangeLog for dev-python/medusa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.9 2004/10/22 03:00:59 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.10 2004/12/30 22:30:55 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> medusa-0.5.4.ebuild:
   Marked stable on x86
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> medusa-0.5.3.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> medusa-0.5.3.ebuild:
   Remove default S.
 
   18 Apr 2004; David Holm <dholm@gentoo.org> medusa-0.5.4.ebuild:

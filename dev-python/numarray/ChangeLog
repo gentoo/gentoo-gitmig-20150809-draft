@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.8 2004/12/07 00:04:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.9 2004/12/30 22:39:16 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *numarray-1.1.1 (07 Dec 2004)
 
@@ -22,12 +25,12 @@
 
 *numarray-0.9 (28 Mar 2004)
 
-  28 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> numarray-0.9.ebuild:
+  28 Mar 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> numarray-0.9.ebuild:
   Version bump.
 
 *numarray-0.8 (13 Dec 2003)
 
-  13 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> numarray-0.8.ebuild:
+  13 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> numarray-0.8.ebuild:
   Version bump.
 
 *numarray-0.7 (16 Sep 2003)

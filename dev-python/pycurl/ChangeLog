@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.13 2004/10/29 19:07:18 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.14 2004/12/30 23:09:12 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> -pycurl-7.10.4.ebuild,
   pycurl-7.11.0.ebuild, pycurl-7.12.ebuild:
@@ -20,11 +23,11 @@
   30 Jun 2004; David Holm <dholm@gentoo.org> pycurl-7.11.0.ebuild:
   Added to ~ppc.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pycurl-7.10.4.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pycurl-7.10.4.ebuild,
   pycurl-7.11.0.ebuild:
   Add missing IUSE.
 
-  28 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> pycurl-7.10.4.ebuild:
+  28 Mar 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pycurl-7.10.4.ebuild:
   Updated SRC_URI.
 
 *pycurl-7.11.0 (14 Feb 2004)
