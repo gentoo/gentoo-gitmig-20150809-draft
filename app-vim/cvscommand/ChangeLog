@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cvscommand
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cvscommand/ChangeLog,v 1.12 2004/10/26 12:01:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cvscommand/ChangeLog,v 1.13 2004/11/27 19:12:55 ciaranm Exp $
+
+  27 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> cvscommand-1.65.ebuild:
+  Conflicts with calendar, bug #62677
 
   26 Oct 2004; Tom Martin <slarti@gentoo.org> cvscommand-1.65.ebuild:
   Marked ~amd64.
