@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.26 2003/06/28 00:01:25 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.27 2003/07/15 01:13:26 weeve Exp $
+
+  14 Jul 2003; Jason Wever <weeve@gentoo.org> lftp-2.6.5.ebuild:
+  Changed -sparc keyword to sparc to fix bug #24477
 
   28 Jun 2003; Tavis Ormandy <taviso@gentoo.org> lftp-2.6.5.ebuild:
   2.6.5 stable on alpha.
