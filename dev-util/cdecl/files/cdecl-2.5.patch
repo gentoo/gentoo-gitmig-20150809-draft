@@ -1,0 +1,33 @@
+--- cdecl-2.5.orig/Makefile
++++ cdecl-2.5/Makefile
+@@ -15,9 +15,9 @@
+ #
+ # add -DUSE_READLINE   To compile in support for the GNU readline library.
+ 
+-CFLAGS= -s -O2 -DUSE_READLINE
++
+ CC= gcc
+-LIBS= -lreadline -ltermcap
++
+ ALLFILES= makefile cdgram.y cdlex.l cdecl.c cdecl.1 testset testset++
+ BINDIR= /usr/bin
+ MANDIR= /usr/man/man1
+--- cdecl-2.5.orig/cdecl.c
++++ cdecl-2.5/cdecl.c
+@@ -67,6 +67,7 @@
+ # include <stddef.h>
+ # include <string.h>
+ # include <stdarg.h>
++# include <errno.h>
+ #else
+ # ifndef NOVARARGS
+ #  include <varargs.h>
+@@ -124,7 +125,6 @@
+ 
+ #if __STDC__
+   char *ds(char *), *cat(char *, ...), *visible(int);
+-  int getopt(int,char **,char *);
+   int main(int, char **);
+   int yywrap(void);
+   int dostdin(void);
+
