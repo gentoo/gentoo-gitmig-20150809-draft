@@ -7,7 +7,7 @@ import string
 import shutil
 
 def cleanup():
-	print ">>> Cleaning up temporary storage..."
+	print ">>> Cleaning up temporary storage."
 	shutil.rmtree("/tmp/portage-pkg/"+mypkg,1)
 
 for x in sys.argv[1:]:
@@ -58,5 +58,6 @@ for x in sys.argv[1:]:
 		cleanup()
 		continue
 
-
-
+	portage.merge(portage.getsetting("ROOT"),mycat,mypkg,os.getcwd())
+	cleanup()
+print ">>> Done."

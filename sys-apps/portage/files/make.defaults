@@ -1,6 +1,8 @@
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
 
+ROOT="/"
+
 MAINTAINER="yes"
 
 #proxy settings PROXY(both), or HTTP_PROXY/FTP_PROXY
