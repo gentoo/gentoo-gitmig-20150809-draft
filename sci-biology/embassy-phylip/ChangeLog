@@ -1,0 +1,22 @@
+# ChangeLog for app-sci/embassy-phylip
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylip/ChangeLog,v 1.1 2004/12/23 23:06:31 ribosome Exp $
+
+*embassy-phylip-3.57c (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +embassy-phylip-3.57c.ebuild:
+  Moved from app-sci/embassy-phylip to sci-biology/embassy-phylip.
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org>
+  embassy-phylip-3.57c.ebuild:
+  Added to x86.
+
+  21 Jul 2004; David Holm <dholm@gentoo.org> embassy-phylip-3.57c.ebuild:
+  Added to ~ppc.
+
+* embassy-phylip-3.57c (19 Jul 2004)
+
+  19 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  embassy-phylip-3.57c.ebuild, metadata.xml, ChangeLog
+  Initial import.
