@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.80 2004/07/19 18:09:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.81 2004/07/20 06:39:08 spyderous Exp $
+
+  20 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r2.ebuild:
+  Remove commented-out 'HasMotif YES' #define (#57271). Part of what patch 9385
+  was intended to fix was actually committed post-6.7.0, so it wasn't here to
+  start with. If anyone requests motif support, we'll look into some sort of
+  conditional enabling, probably similar to pam's, to avoid circular
+  dependencies.
 
   19 Jul 2004; Martin Schlemmer <azarah@gentoo.org> xorg-x11-6.7.0-r2.ebuild:
   Enabling Motif by default is is bogus, as XFree86/XOrg-X11 have never been

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.6 2004/07/19 18:09:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.7 2004/07/20 06:39:08 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -190,17 +190,6 @@ host_def_setup() {
 		# Suggested by Mike Harris <mharris@redhat.com>
 		#echo "#define SharedLibraryLoadFlags  -shared -Wl,-z,defs" \
 		#	>> config/cf/host.def
-
-		# 9385_all_6.7.0-motif-allow-fhs-and-default-off.patch from upstream
-		# turns off HasMotif YES default on Linux and BSDs, so we need this
-#
-# This is bogus, as XFree86/XOrg-X11 have never been built against Motif, and
-# above patch do not enable/disable it, but just add some more bits _if_ and
-# _only_if_ its enabled ...
-#
-#	http://bugs.gentoo.org/show_bug.cgi?id=57271#c21
-#
-#		echo "#define HasMotif YES" >> config/cf/host.def
 
 		# Enable i810 on x86_64 (RH #126687)
 		echo "#define XF86ExtraCardDrivers i810" >> config/cf/host.def
