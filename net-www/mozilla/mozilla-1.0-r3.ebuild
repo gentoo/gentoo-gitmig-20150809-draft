@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.15 2002/10/11 18:50:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.16 2002/10/12 19:50:32 azarah Exp $
 
-IUSE="moznomail java mozp3p mozaccess gtk2 mozinterfaceinfo ssl ldap mozxmlterm mozctl gnome"
+IUSE="moznomail java mozp3p mozaccess gtk2 mozinterfaceinfo ssl ldap mozxmlterm mozctl gnome mozsvg"
 
 inherit makeedit
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
@@ -179,6 +179,11 @@ src_compile() {
 		myext="${myext},interfaceinfo"
 	fi
 
+	if [ -n "`use mozsvg`" ] ; then
+		myconf="${myconf} --enable-svg"
+	else
+		myconf="${myconf} --disable-svg"
+	fi
 	
 	if [ -n "`use moznomail`" ] || \
 	   [ "${NO_MAIL}" = "YES" ] || [ "${NO_MAIL}" = "yes" ]
@@ -205,7 +210,6 @@ src_compile() {
 
 	./configure --prefix=/usr/lib/mozilla \
 		--disable-pedantic \
-		--disable-svg \
 		--enable-mathml \
 		--without-system-nspr \
 		--enable-nspr-autoconf \
