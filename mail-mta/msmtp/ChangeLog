@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.4 2004/06/24 22:23:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.5 2004/07/01 23:10:33 g2boojum Exp $
+
+*msmtp-1.1.2 (01 Jul 2004)
+
+  01 Jul 2004; Grant Goodyear <g2boojum@gentoo.org> msmtp-1.0.0.ebuild,
+  +msmtp-1.1.2.ebuild:
+  Version bump (closes bug # 53054)
 
   22 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> msmtp-1.0.0.ebuild:
   Marked ~amd64.
