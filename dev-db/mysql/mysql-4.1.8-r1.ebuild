@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8-r1.ebuild,v 1.1 2005/01/18 22:05:22 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8-r1.ebuild,v 1.2 2005/01/20 22:37:32 gustavoz Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -20,7 +20,7 @@ SRC_URI="mirror://mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~sparc"
 IUSE="static readline innodb berkdb tcpd ssl perl ruby selinux debug cluster"
 RESTRICT="nomirror"
 
