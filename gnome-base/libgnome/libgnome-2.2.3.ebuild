@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.2.3.ebuild,v 1.1 2003/07/12 00:03:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.2.3.ebuild,v 1.2 2003/08/21 04:46:00 obz Exp $
 
 IUSE="doc"
 
@@ -28,3 +28,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.6 )"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
+
+# fix for sandbox violations see bug #24359
+# Obz <obz@gentoo.org>
+G2CONF="${G2CONF} --disable-schemas-install"
