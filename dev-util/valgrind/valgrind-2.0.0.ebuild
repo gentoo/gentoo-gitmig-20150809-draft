@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0_pre20031012.ebuild,v 1.1 2003/10/17 07:05:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.1 2003/11/13 14:40:35 caleb Exp $
 
 inherit flag-o-matic
 filter-flags -fPIC
@@ -10,7 +10,7 @@ MY_P=${P/2.0_pre/}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="An open-source memory debugger for x86-GNU/Linux"
-HOMEPAGE="http://developer.kde.org/~sewardj"
+HOMEPAGE="http://valgrind.kde.org"
 SRC_URI="http://developer.kde.org/~sewardj/${MY_P}.tar.bz2"
 DEPEND="virtual/glibc
 	sys-devel/autoconf
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -sparc -ppc -alpha"
+KEYWORDS="x86 -sparc -ppc -alpha"
 
 src_unpack() {
 	unpack ${A}
