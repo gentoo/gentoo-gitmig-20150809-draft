@@ -1,0 +1,11 @@
+diff -urN im-ja-0.9.orig/src/canna_rk.c im-ja-0.9/src/canna_rk.c
+--- im-ja-0.9.orig/src/canna_rk.c	2003-12-17 13:17:26.000000000 +0900
++++ im-ja-0.9/src/canna_rk.c	2003-12-23 19:18:44.000000000 +0900
+@@ -25,6 +25,7 @@
+ 
+ #include <canna/keydef.h>
+ #include <gdk/gdkkeysyms.h>
++#include <canna/jrkanji.h>
+ #include <canna/RK.h>
+ 
+ #include "common.h"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.9.ebuild,v 1.1 2003/12/17 17:23:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.9.ebuild,v 1.2 2003/12/23 10:48:38 usata Exp $
 
 inherit gnome2
 
@@ -30,6 +30,13 @@ RDEPEND="virtual/glibc
 	gnome? ( >=gnome-base/gnome-panel-2.0 )
 	freewnn? ( app-i18n/freewnn )
 	canna? ( app-i18n/canna )"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-canna-3.7-gentoo.diff
+}
 
 src_compile() {
 	local myconf

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.11 2003/12/17 17:23:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.12 2003/12/23 10:48:38 usata Exp $
+
+  23 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> im-ja-0.9.ebuild,
+  files/im-ja-0.9-canna-3.7-gentoo.diff:
+  Added a patch to fix compile error with canna 3.7. See bug #36313
 
 *im-ja-0.9 (18 Dec 2003)
 
