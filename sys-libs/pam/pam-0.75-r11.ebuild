@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.8 2003/03/15 17:13:12 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.9 2003/05/19 00:43:19 taviso Exp $
 
 IUSE="berkdb"
 
-inherit gcc eutils
+inherit gcc eutils flag-o-matic
 
 PATCH_LEVEL=""
 
@@ -63,6 +63,17 @@ src_unpack() {
 
 src_compile() {
 	export CFLAGS="${CFLAGS} -fPIC"
+	if [ "${ARCH}" = "alpha" ]; then
+		if [ -f /usr/lib/libots.so -a ! -f /usr/lib/libglib.so -a /usr/lib/libglib.a ]; then
+			# should be LDFLAGS, but this configure is screwy.
+			einfo "looks like you compiled glib with ccc, i need to append -lots..."
+			einfo "Dont worry if i've got this wrong, PAM will still build correctly..."
+			append-flags -lots
+			cp ${S}/modules/pam_pwdb/Makefile ${S}/modules/pam_pwdb/Makefile.orig
+			sed -e 's/$(CC) -o/$(CC) -lots -o/g' ${S}/modules/pam_pwdb/Makefile.orig > \
+				${S}/modules/pam_pwdb/Makefile
+		fi
+	fi
 	
 	./configure --host=${CHOST} \
 		--prefix=/ \
@@ -107,7 +118,7 @@ src_install() {
 	# Make sure every module built.
 	# Do not remove this, as some module can fail to build
 	# and effectively lock the user out of his system.
-	einfo "Checking if all modules was build..."
+	einfo "Checking if all modules were built..."
 	for x in ${S}/modules/pam_*
 	do
 		if [ -d ${x} ]

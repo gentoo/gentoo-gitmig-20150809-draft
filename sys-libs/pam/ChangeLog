@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.27 2003/03/15 17:13:12 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.28 2003/05/19 00:43:19 taviso Exp $
+
+  18 May 2003; Tavis Ormandy <taviso@gentoo.org> pam-0.75-r11.ebuild:
+  If glib was compiled with ccc, we need -lots.
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> pam-0.75-r11.ebuild :
   Added arm to keywords.

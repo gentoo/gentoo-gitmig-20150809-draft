@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r1.ebuild,v 1.7 2003/03/18 22:09:12 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r1.ebuild,v 1.8 2003/05/19 00:43:19 taviso Exp $
 
 IUSE=""
 
-inherit eutils
+inherit eutils flag-o-matic
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Text formatter used for man pages"
@@ -41,6 +41,12 @@ src_compile() {
 	[ -z "${CC}" ] && export CC="gcc"
 	[ -z "${CXX}" ] && export CXX="g++"
 	
+	# cxx b0rks with too much optimisation. -taviso.
+	if [ "${ARCH}" == "alpha" -a "${CXX}" == "cxx" ]; then
+		replace-flags -fast -O1
+		replace-flags -O? -O1
+	fi
+		
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \

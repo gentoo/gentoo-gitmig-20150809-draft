@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.8 2003/03/24 13:26:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.9 2003/05/19 00:43:19 taviso Exp $
 
 inherit eutils
 
@@ -25,9 +25,10 @@ src_unpack () {
 
 src_compile() {
 	cp Makefile Makefile.orig
+	cp default.defs default.defs.orig
 	sed -e "s/^DIRS = .*/DIRS = libpwdb/" -e "s:EXTRAS += :EXTRAS += ${CFLAGS} :" \
 		Makefile.orig > Makefile
-	
+	sed -e "s/=gcc/=${CC:-gcc}/g" default.defs.orig > default.defs	
 	emake || die
 }
 

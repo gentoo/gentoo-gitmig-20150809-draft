@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b.ebuild,v 1.2 2003/04/17 11:22:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b.ebuild,v 1.3 2003/05/19 00:43:19 taviso Exp $
 
 inherit eutils
 
@@ -38,12 +38,6 @@ src_unpack() {
 	if [ "${ARCH}" = "hppa" ]; then
 	sed -e \
 	's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
-		Configure > Configure.orig
-	elif [ "${ARCH}" = "alpha" ]; then
-		# ccc users still need shared libraries.
-		sed -e \
-		's!^"linux-alpha-ccc"\(.*\)\${alpha_asm}!"linux-alpha-ccc"\1\${alpha_asm}:dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!
-		s!^"linux-alpha+bwx-ccc"\(.*\)\${alpha_asm}!"linux-alpha+bwx-ccc"\1\${alpha_asm}:dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
 		Configure > Configure.orig
 	else
 		cp Configure Configure.orig

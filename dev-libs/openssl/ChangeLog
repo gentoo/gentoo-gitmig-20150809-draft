@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.35 2003/04/17 11:22:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.36 2003/05/19 00:43:19 taviso Exp $
+
+  18 May 2003; Tavis Ormandy <taviso@gentoo.org> openssl-0.9.6i-r2.ebuild:
+  making ccc usable.
 
 *openssl-0.9.7b (10 Apr 2003)
 

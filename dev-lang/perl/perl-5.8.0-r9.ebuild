@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r9.ebuild,v 1.2 2003/04/07 18:23:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r9.ebuild,v 1.3 2003/05/19 00:43:19 taviso Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -198,6 +198,11 @@ src_compile() {
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
+	if [ "`use alpha`" -a "${CC}" == "ccc" ]
+	then
+		ewarn "Perl will not be built with berkdb support, use gcc if you needed it..."
+		myconf="${myconf} -Ui_db -Ui_ndbm"
+	fi
 
 	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 	
@@ -209,7 +214,7 @@ src_compile() {
 			-Darchname="${myarch}" \
 			-Dcccdlflags='-fPIC' \
 			-Dccdlflags='-rdynamic' \
-			-Dcc='gcc' \
+			-Dcc="${CC:-gcc}" \
 			-Dprefix='/usr' \
 			-Dvendorprefix='/usr' \
 			-Dsiteprefix='/usr' \
@@ -249,7 +254,7 @@ EOF
 sleep 10
 		sh Configure -des \
 			-Darchname="${myarch}" \
-			-Dcc='gcc' \
+			-Dcc="${CC:-gcc}" \
 			-Dprefix='/usr' \
 			-Dvendorprefix='/usr' \
 			-Dsiteprefix='/usr' \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.11 2003/03/28 08:04:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.12 2003/05/19 00:43:19 taviso Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -207,7 +207,7 @@ src_compile() {
 			-Darchname="${myarch}" \
 			-Dcccdlflags='-fPIC' \
 			-Dccdlflags='-rdynamic' \
-			-Dcc='gcc' \
+			-Dcc="${CC:-gcc}" \
 			-Dprefix='/usr' \
 			-Dvendorprefix='/usr' \
 			-Dsiteprefix='/usr' \
@@ -247,7 +247,7 @@ EOF
 sleep 10
 		sh Configure -des \
 			-Darchname="${myarch}" \
-			-Dcc='gcc' \
+			-Dcc="${CC:-gcc}" \
 			-Dprefix='/usr' \
 			-Dvendorprefix='/usr' \
 			-Dsiteprefix='/usr' \
