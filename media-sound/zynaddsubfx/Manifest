@@ -1,17 +1,25 @@
-MD5 dd0ebe44edfecef7317c4d5709a70ec4 ChangeLog 2696
-MD5 bc76c5a3cd58132b3868b789b5a0d045 zynaddsubfx-2.0.0.ebuild 1207
-MD5 eb7c2cc720f696c9fbbc9f08bc302510 zynaddsubfx-1.4.3.ebuild 1142
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 46c8f90b42daf0d23063b03c0b3acbfe ChangeLog 2808
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+MD5 eb7c2cc720f696c9fbbc9f08bc302510 zynaddsubfx-1.4.3.ebuild 1142
 MD5 1db9f46901a13e67a59ef2f1e9ec89ef zynaddsubfx-2.1.1.ebuild 2044
-MD5 dfd9304194ba37ba35a78cc8b53a061f files/digest-zynaddsubfx-2.0.0 70
-MD5 a67819493977e20890a96bf84836e319 files/zynaddsubfx-2.0.0.patch 12720
 MD5 7eb2c2f2ba9a5bf80ce3945bbbeb803c files/digest-zynaddsubfx-1.4.3 69
 MD5 2820dd087232ba392d957abc60e4b8bf files/zynaddsubfx-1.4.0.patch 2050
 MD5 2820dd087232ba392d957abc60e4b8bf files/zynaddsubfx-1.4.2.patch 2050
 MD5 2820dd087232ba392d957abc60e4b8bf files/zynaddsubfx-1.4.3.patch 2050
+MD5 a67819493977e20890a96bf84836e319 files/zynaddsubfx-2.0.0.patch 12720
 MD5 231dd10bada5a14518a5c47ce9ca2920 files/digest-zynaddsubfx-2.1.1 70
 MD5 3a9cf8fb487fa84f9d81a7046ef6176f files/zynaddsubfx-2.1.1-fltk_flags.patch 1508
 MD5 5f8f148faeaa1e1fa03f084a40515aa4 files/zynaddsubfx-2.1.1-fltk_version.patch 10611
 MD5 f863053d3f2d521ca1de5946a89c4210 files/zynaddsubfx-2.1.1-gcc34_mem_hack.patch 1894
 MD5 b4ed2c2e9a47c4a32f9ebd7c92c6f1b1 files/zynaddsubfx-2.1.1-gcc_subscript_warning.patch 3699
 MD5 41af4c94f32d7ced5e6a7966a68fbea0 files/zynaddsubfx-2.1.1-sanitize_makefile.patch 554
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdfPjArHZZzCEUG0RAjJhAJ9RaQ7z+xIrZ59ANnTcG4PhlXX/9gCdHEXH
+wFQi8PhOBJqvlNj4YJIvreQ=
+=xiai
+-----END PGP SIGNATURE-----

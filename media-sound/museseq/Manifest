@@ -1,15 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1a2a1e2c50aab17da350a14a461edfc0 ChangeLog 3413
+MD5 72e1d506324bad7ad6fb62b24a45fcf6 ChangeLog 3544
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 5414de7396aa13b76f24d7ea3d2567c8 museseq-0.6.0.ebuild 1669
-MD5 537ef14b3847d7d6c3b287abd84386ff museseq-0.6.2.ebuild 2595
 MD5 6690a31103f9a65dca251e8b57c4091a museseq-0.6.2-r1.ebuild 3165
 MD5 7a7a7eb8d4ba5df4e6abc7802a721d87 museseq-0.7.0-r1.ebuild 2048
 MD5 d862985a04252979a02376044f6afb39 museseq-0.7.0.20040925.ebuild 1609
-MD5 cbc52b356437ff53ced441374a08d178 files/digest-museseq-0.6.0 64
-MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2 64
 MD5 08b5947de834c47253a313e6a7d0a3e5 files/museseq-0.6.2-fPIC.patch 4002
 MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2-r1 64
 MD5 49c3c1f0136766a89c7cd1ba91006bc6 files/museseq-0.6.2-drumport.patch 771
@@ -23,7 +19,7 @@ MD5 b3301ccaf0af518d0858bebbd04572f5 files/museseq-0.7.0.20040925-gcc34_typeid_f
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdLDnArHZZzCEUG0RAh6pAJwLIxzEOtvAip4N3ty2sMiqxR872gCcCKif
-X6cSL+1cK2XGWFyP8DcgEg4=
-=rtTa
+iD8DBQFBdfOgArHZZzCEUG0RAr76AJ9vAdL54Qa0P8sRfjsnrs9FiB/dCQCfcRSq
+VeLCZEXfaGRAg0Aiv4zqm5w=
+=b+Km
 -----END PGP SIGNATURE-----

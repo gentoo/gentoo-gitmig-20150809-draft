@@ -2,12 +2,8 @@
 Hash: SHA1
 
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e9ef16423d3541d7ef095a532a1460a1 zinf-2.2.3.ebuild 1923
-MD5 7987587ede451b4eb0bf4ac5c1019f8b zinf-2.2.4.ebuild 1920
 MD5 ce9ba9ecef011c48da0402ddb61681f9 zinf-2.2.5-r1.ebuild 2310
-MD5 5cff6318da838ec83c7f24d1c5d1350e ChangeLog 4663
-MD5 789bfd8c9959727ea1bd1176b15f8104 files/digest-zinf-2.2.3 63
-MD5 be366a51d3b8fec4068ae8a3f932dcae files/digest-zinf-2.2.4 63
+MD5 d79ad4983bed2742cf2dfe9e2d25755d ChangeLog 4788
 MD5 e4ec1ffc5f5099848c9d55df07d85d5a files/digest-zinf-2.2.5-r1 63
 MD5 fe732feaa32b4d6a4f23daa309056288 files/zinf-2.2.3-id3.patch.bz2 12466
 MD5 2a5b9b0fb8d24a260c166417a2b2fd95 files/zinf-2.2.4-pref.patch 483
@@ -16,7 +12,7 @@ MD5 ab18405737d54fde371a5e1ceb8dc3e7 files/zinf-2.2.5-configure.patch 3782
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZLLAArHZZzCEUG0RAlAxAJ0XD4IO31K65iB3GekEI8cMGJi+UgCeL0hB
-rF/s33Gqys9564j2veFEO9k=
-=VnGd
+iD8DBQFBdfThArHZZzCEUG0RAg1+AJ9ZmCWeQ52kBChmDFVV3inAcQ3mjgCfVgaA
+hhBAdOuVttJ+UtKf07qP58g=
+=EXke
 -----END PGP SIGNATURE-----
