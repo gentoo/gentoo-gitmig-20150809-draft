@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/nss_ldap
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.20 2004/03/19 01:58:07 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.21 2004/03/30 01:11:02 pylon Exp $
+
+  30 Mar 2004; Lars Weiler <pylon@gentoo.org> nss_ldap-215-r1.ebuild:
+  Masked ~ppc on user report
 
 *nss_ldap-215-r1 (18 Mar 2004)
 

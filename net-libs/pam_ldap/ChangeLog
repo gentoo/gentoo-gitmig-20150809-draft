@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/pam_ldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.12 2004/03/01 20:42:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.13 2004/03/30 01:12:30 pylon Exp $
+
+  30 Mar 2004; Lars Weiler <pylon@gentoo.org> pam_ldap-167.ebuild:
+  Masked ~ppc on user report
 
 *pam_ldap-167 (08 Feb 2004)
 
