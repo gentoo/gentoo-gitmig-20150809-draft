@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ri
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ChangeLog,v 1.9 2004/06/25 01:56:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ChangeLog,v 1.10 2004/08/30 17:25:23 usata Exp $
+
+*ri-1.8b-r1 (31 Aug 2004)
+
+  31 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> ri-0.8a.ebuild,
+  +ri-1.8b-r1.ebuild, ri-1.8b.ebuild:
+  Install ri as ri16 (1.8b-r1) and force ruby16 dependency.
+  See bug #62003.
 
   16 Apr 2004; David Holm <dholm@gentoo.org> ri-1.8b.ebuild:
   Added to ~ppc.
