@@ -1,7 +1,5 @@
 #!/bin/bash
 XMAILDIR="$1"
-source /etc/courier-imap/imapd
-#eval \
 eval ${LOGINRUN} \
 	/usr/sbin/courier-imapd \
 	${XMAILDIR}
