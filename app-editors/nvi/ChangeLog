@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.8 2003/03/25 11:09:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.9 2003/08/01 10:13:39 pauldv Exp $
+
+  01 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> nvi-1.81.5.ebuild:
+  Have nvi block on db4, as it does not compile with db4 installed (it does not
+  select the right db)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
