@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.11 2003/02/22 08:53:59 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.12 2003/03/01 19:22:56 lostlogic Exp $
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
@@ -9,6 +9,10 @@
   Added hppa to keywords.
 
 *dialog-0.9_beta20020814 (08 Dec 2002)
+
+  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> :
+  Bump, unstable on all platforms, please test, this one I'd like to stabilize
+  soon.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> dialog-0.9_beta20020814.ebuild :
   Mark stable on Alpha
