@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.3 2003/06/12 21:18:06 msterret Exp $
 
 IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
