@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/wmnetmon-0.2.ebuild,v 1.2 2003/11/11 13:22:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/wmnetmon-0.2.ebuild,v 1.3 2003/11/16 23:00:08 pyrania Exp $
 
 S=${WORKDIR}/${P}p5/
 DESCRIPTION="dockapp that monitors up to 40 hosts/services and can execute something if there is a problem with any of them"
@@ -9,7 +9,7 @@ SRC_URI="http://www.linuks.mine.nu/dockapps/${P}p5.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11"
 
