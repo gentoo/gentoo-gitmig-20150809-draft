@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.4-r1.ebuild,v 1.1 2002/03/10 10:08:13 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.4-r1.ebuild,v 1.2 2002/03/13 03:30:03 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Core Libraries"
@@ -30,7 +30,8 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
-		--enable-prefer-db1 || die
+		--enable-prefer-db1 \
+		${myconf} || die
 
 	emake || die
 
