@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.12.ebuild,v 1.5 2004/02/01 11:52:58 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.12.ebuild,v 1.6 2004/06/08 01:39:27 agriffis Exp $
 
 DESCRIPTION="A virtual MIDI keyboard for X."
 HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
@@ -31,7 +31,7 @@ src_compile() {
 	local myconf="PREFIX=/usr"
 
 	#vkeybd requires at least one of its USE_ variable to be set
-	if [ "`use alsa`" ]; then
+	if use alsa; then
 		myconf="${myconf} USE_ALSA=1"
 		use oss || myconf="${myconf} USE_AWE=0 USE_MIDI=0"
 	else

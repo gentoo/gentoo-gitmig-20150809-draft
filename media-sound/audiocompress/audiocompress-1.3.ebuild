@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.3.ebuild,v 1.5 2004/03/01 05:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.3.ebuild,v 1.6 2004/06/08 01:38:53 agriffis Exp $
 
 MY_P="AudioCompress-${PV}"
 
@@ -18,7 +18,7 @@ DEPEND="xmms? ( media-sound/xmms )"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	if [ -n "`use xmms`" ]; then
+	if use xmms; then
 		emake || die
 	else
 		emake AudioCompress || die
@@ -27,7 +27,7 @@ src_compile() {
 
 src_install() {
 	dobin AudioCompress || die
-	if [ -n "`use xmms`" ]; then
+	if use xmms; then
 		exeinto "$(xmms-config --effect-plugin-dir)" || die
 		doexe libcompress.so || die
 	fi
