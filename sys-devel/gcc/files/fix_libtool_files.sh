@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.11 2005/01/18 01:58:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.12 2005/01/30 18:45:22 vapier Exp $
 
 usage() {
 cat << "USAGE_END"
@@ -45,6 +45,9 @@ if [[ ${EUID} -ne 0 ]] ; then
 	eerror "${0##*/}: Must be root."
 	exit 1
 fi
+
+# make sure the files come out sane
+umask 0022
 
 if [[ ${ARGV2} == "--oldarch" ]] && [[ -n ${ARGV3} ]] ; then
 	OLDCHOST=${ARGV3}
