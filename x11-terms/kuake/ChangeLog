@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/kuake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/ChangeLog,v 1.13 2005/03/23 21:47:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/ChangeLog,v 1.14 2005/03/26 11:28:00 voxus Exp $
+
+*kuake-0.3-r3 (26 Mar 2005)
+
+  26 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org -kuake-0.3-r2.ebuild,
+  +kuake-0.3-r3.ebuild,
+  +files/kuake-0.3-noarts-fix.patch:
+  Fixed compilation issue on installations without arts.
 
 *kuake-0.3-r2 (23 Mar 2005)
 
