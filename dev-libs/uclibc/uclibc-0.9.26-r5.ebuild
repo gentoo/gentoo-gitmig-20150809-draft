@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.4 2004/08/09 19:09:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.5 2004/08/10 04:46:33 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -179,6 +179,7 @@ src_unpack() {
 	sed -i 's:-DUCLIBC:$(LIBRARY_CACHE) -DUCLIBC:' ldso/{ldso,libdl}/Makefile
 	sed -i 's:\$(R_PREFIX):\\"$(RUNTIME_PREFIX)\\" $(LIBRARY_CACHE):' utils/Makefile
 	sed -i 's: I\.: -I.:' ldso/libdl/Makefile
+	sed -i 's:sys/user\.h:asm/page.h:' libc/misc/internals/__uClibc_main.c
 }
 
 src_compile() {

@@ -8,7 +8,7 @@ MD5 648448f5b143b6002812f0fb0a78c683 uclibc-0.9.26-r1.ebuild 2555
 MD5 ebf20118b3d6ced339721338685d97b0 uclibc-0.9.26-r2.ebuild 6191
 MD5 03b8de2ae5acc3aa78d72abe3f8edd7b uclibc-0.9.26-r3.ebuild 6337
 MD5 5db33bb13590ce0b1ac242639e60154e uclibc-0.9.26-r4.ebuild 7212
-MD5 83087f8ead787d9ee6c1aa3d56918cd2 uclibc-0.9.26-r5.ebuild 7578
+MD5 b3aec07e7a621de9da5c9ae4b00b9aab uclibc-0.9.26-r5.ebuild 7650
 MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
 MD5 799adc7fb6ec9ffd653831cea1d32dd5 files/digest-uclibc-0.9.21 67
 MD5 02ffb023d5b3be46c7e0c9aadf48d304 files/digest-uclibc-0.9.26-r2 231
@@ -34,7 +34,7 @@ MD5 7157f784ba7672c9904d289712131a52 files/0.9.26/uclibc-0.9.26-ldso-cache.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBF8xKHTu7gpaalycRAjDzAJ0VaIFUr4se8tkbFlWwtItKkFqgXwCdFHoc
-mURYjULotJku6+Zg/+EHxEI=
-=TrJG
+iD8DBQFBGFObHTu7gpaalycRAikxAKCAjDtfHZ9sLNI0SPevRbBCRiSvlwCgqJFd
+Ti5f/vcvgy1Vth8aCPgwK+0=
+=o6Ja
 -----END PGP SIGNATURE-----
