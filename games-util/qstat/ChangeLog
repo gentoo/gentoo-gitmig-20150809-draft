@@ -1,6 +1,11 @@
 # ChangeLog for games-util/qstat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.7 2004/12/08 21:30:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.8 2004/12/24 07:41:27 vapier Exp $
+
+*qstat-2.7 (24 Dec 2004)
+
+  24 Dec 2004; Mike Frysinger <vapier@gentoo.org> +qstat-2.7.ebuild:
+  Version bump for new xqf.
 
   08 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> qstat-2.6.ebuild:
   sysconfdir patch from vi@sh.nu via bug #73830
