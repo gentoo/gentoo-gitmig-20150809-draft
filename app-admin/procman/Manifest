@@ -1,5 +1,13 @@
-MD5 da4e2b0d149a3b1d4e32fbaccbf2d0b5 procman-0.99.0.ebuild 816
-MD5 41b6c35f4a79d0fcb12fb68653879b63 procman-1.0.ebuild 803
-MD5 81558923be7a90f49b0f5d00ec1d7b2b ChangeLog 1210
-MD5 642d64aec8f88f31cbb96ec000c09529 files/digest-procman-0.99.0 66
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a9a902ba0988efb43e3c310fba35ae2 ChangeLog 1333
+MD5 dcf17e4211318e7157d9adfac6d52244 procman-1.0.ebuild 808
 MD5 4e43867867179e603fbf302b06e33d0d files/digest-procman-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBm38JHTu7gpaalycRAo4WAKCgvlDB+1hsynimKzz9m9zPIhWGiQCbB9vG
+dIL7o3oqBdywxOWXHFMifuM=
+=8jeL
+-----END PGP SIGNATURE-----

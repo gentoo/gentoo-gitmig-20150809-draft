@@ -1,3 +1,13 @@
-MD5 8efb2824fe20eb45fa62a2b1c1c42bae osiris-1.5.2.ebuild 1310
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bc4c30af0a4858ec06bc0c6f0b4414c7 ChangeLog 931
+MD5 8b663fb2d942503c929a7d57a87ca7bf osiris-1.5.2.ebuild 1213
 MD5 6f6df8ce6e4231c6c1c4ceeca6efafa4 files/digest-osiris-1.5.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBm342HTu7gpaalycRAj7+AKDPOPb9Cd7apQSqSuyQPCtPCzurwwCdFZy/
+jqjAmse8Wo8Ax1VCXxCSGp4=
+=+7j/
+-----END PGP SIGNATURE-----
