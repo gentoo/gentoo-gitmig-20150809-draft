@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc1.ebuild,v 1.4 2004/09/16 16:11:22 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc1.ebuild,v 1.5 2004/09/22 00:24:49 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -343,5 +343,9 @@ pkg_postinst() {
 		# Overwrite the globals file automatically.
 		[ -e "${X}" ] && mv -f "${X}" "${ROOT}etc/make.globals"
 	done
-}
 
+	einfo "You may run 'emerge metadata' to perform cache updates if you have"
+	einfo "changed versions of portage. This will provide a fairly dramatic"
+	einfo "speedup. Alternatively, you may 'emerge sync' if it has been more"
+	einfo "than 30 minutes since your last sync."
+}
