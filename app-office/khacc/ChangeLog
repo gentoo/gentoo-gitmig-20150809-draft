@@ -1,6 +1,9 @@
 # ChangeLog for app-office/khacc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.12 2004/10/11 22:22:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.13 2004/10/21 03:00:16 weeve Exp $
+
+  20 Oct 2004; Jason Wever <weeve@gentoo.org> khacc-3.2.1.ebuild:
+  Stable on sparc wrt bug #67169.
 
   12 Oct 2004; Carsten Lohrke <carlo@gentoo.org> khacc-3.2.1.ebuild:
   stable on x86

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/khacc-3.2.1.ebuild,v 1.2 2004/10/11 22:22:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/khacc-3.2.1.ebuild,v 1.3 2004/10/21 03:00:16 weeve Exp $
 
 inherit kde eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://qhacc.sourceforge.net"
 SRC_URI="mirror://sourceforge/qhacc/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 sparc ~ppc"
 LICENSE="GPL-2"
 IUSE=""
 
