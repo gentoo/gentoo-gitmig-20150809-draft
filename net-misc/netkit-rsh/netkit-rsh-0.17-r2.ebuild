@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r2.ebuild,v 1.1 2001/09/29 15:23:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r2.ebuild,v 1.2 2001/09/29 21:52:44 agriffis Exp $
 
 P=netkit-rsh-0.17
 A=${P}.tar.gz
@@ -29,7 +29,7 @@ src_compile() {
 src_install() {                               
 	into /usr
 	dobin  rcp/rcp
-	fperms 1755 /usr/bin/rcp
+	fperms 4755 /usr/bin/rcp
 	doman  rcp/rcp.1
 	dobin  rexec/rexec
 	doman  rexec/rexec.1
@@ -38,14 +38,14 @@ src_install() {
 	doman  rexecd/rexecd.8
 	dosym  rexecd.8.gz /usr/share/man/man8/in.rexecd.8.gz
 	dobin  rlogin/rlogin
-	fperms 1755 /usr/bin/rlogin
+	fperms 4755 /usr/bin/rlogin
 	doman  rlogin/rlogin.1
 	dosbin rlogind/rlogind
 	dosym  rlogind /usr/sbin/in.rlogind
 	doman  rlogind/rlogind.8
 	dosym  rlogind.8.gz /usr/share/man/man8/in.rlogind.8.gz
 	dobin  rsh/rsh
-	fperms 1755 /usr/bin/rsh
+	fperms 4755 /usr/bin/rsh
 	doman  rsh/rsh.1
 	dosbin rshd/rshd
 	dosym  rshd /usr/sbin/in.rshd
