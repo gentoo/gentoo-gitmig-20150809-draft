@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.12-r2.ebuild,v 1.1 2002/03/02 23:51:06 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.12-r2.ebuild,v 1.2 2002/03/29 05:00:16 seemant Exp $
 
 S="${WORKDIR}/pwlib"
 SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/pwlib_1.2.12.tar.gz"
@@ -14,8 +14,8 @@ DEPEND="virtual/glibc
 src_unpack() {
 
 	unpack pwlib_1.2.12.tar.gz
-	cd ${S}/make
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+	cd ${S}
+	patch -p0 < ${FILESDIR}/${PN}-gentoo.diff
 
 }
 

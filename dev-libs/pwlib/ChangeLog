@@ -1,9 +1,12 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.1 2002/03/29 04:02:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.2 2002/03/29 05:00:16 seemant Exp $
 
 *pwlib-1.2.13 (28 Mar 2002)
 
   28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> pwlib-1.2.13.ebuild :
 
-  Version bump, but it is masked for now, anyway.
+  Version bump, and the patch has been renamed to allow it to work with
+  both pacakge versions, and the patch has been augmented to include the 
+  <stdio.h> lib.  This fix, provided by vikingo <gabriel@elvikingo.com.ar>
+  on the gentoo-user list, allows for successful compilation of pwlib again.
