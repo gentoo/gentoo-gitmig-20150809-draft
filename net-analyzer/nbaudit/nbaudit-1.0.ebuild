@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.14 2004/06/24 22:09:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.15 2004/07/10 11:57:22 eldad Exp $
 
 
 # Its officially called nat10 but the name conflicts with other projects
@@ -16,7 +16,8 @@ DEPEND=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
+IUSE=""
 
 src_compile() {
 
