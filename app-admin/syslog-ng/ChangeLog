@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.65 2004/08/18 16:42:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.66 2004/09/25 00:03:15 mr_bones_ Exp $
+
+  24 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-1.6.5.ebuild:
+  stable on x86
 
   18 Aug 2004; Aron Griffis <agriffis@gentoo.org> files/syslog-ng.rc6:
   Add xargs into the init-script to make parsing conf file more robust #60487
