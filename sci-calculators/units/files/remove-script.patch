@@ -1,0 +1,21 @@
+--- units.c.old	2003-08-15 13:47:25.881457784 +0200
++++ units.c	2003-08-15 13:47:08.096161560 +0200
+@@ -2324,11 +2324,11 @@
+ crude example to convert lines in a file 'feet' from ft to m might be:
+ */
+ 
+-#if 0
+-
+-    "sed 's/.*/& ft\"
+-    "m/' feet|units -q|sed 's/^[[:space:]]*\* //"
+-    "/^[[:space:]]*\//d'"
+-
+-#endif
++// #if 0
++//
++//    "sed 's/.*/& ft\"
++//    "m/' feet|units -q|sed 's/^[[:space:]]*\* //"
++//    "/^[[:space:]]*\//d'"
++//
++// #endif
+ 
