@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.25 2003/04/29 00:11:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.26 2003/04/29 00:12:38 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -24,7 +24,7 @@ DEPEND="
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	dev-util/cscope
-	vim-with-x? ( x11-base/xfree )
+	vim-with-x? ( virtual/x11 )
 	gpm?     ( >=sys-libs/gpm-1.19.3 )
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
 	perl?    ( dev-lang/perl )
