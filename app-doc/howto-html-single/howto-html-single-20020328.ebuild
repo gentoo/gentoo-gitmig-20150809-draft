@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/howto-html-single-20020328.ebuild,v 1.6 2002/09/21 23:22:47 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/howto-html-single-20020328.ebuild,v 1.7 2002/10/04 04:02:13 vapier Exp $
 
 MY_P="Linux-html-single-HOWTOs-${PV}"
 S=${WORKDIR}
