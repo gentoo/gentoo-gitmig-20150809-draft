@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.1 2004/04/27 05:54:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.2 2004/04/27 08:30:02 eradicator Exp $
 
 inherit rpm
 
@@ -24,7 +24,7 @@ LICENSE="mayadoc-5.0"
 KEYWORDS="~x86"
 
 DEPEND="app-arch/unzip"
-	
+
 RDEPEND=">=sys-libs/lib-compat-1.3
 	 !maya5-bundled-runtime ( =x11-libs/qt-3*
 	                          >=sys-devel/gcc-3*
@@ -37,7 +37,7 @@ pkg_nofetch() {
 	einfo "From the Maya 5.0 CD provided by Alias:"
 	einfo "Maya-5.0-linux-docs.tar.gz"
 	einfo "Maya-5.0-linux-software.tar.gz"
-	einfo 
+	einfo
 	einfo "Downloads from Alias's support server:"
 	einfo "http://aliaswavefront.topdownloads.com/pub/bws/bws_107/myr_maya501_gold_linux_update.tgz"
 	einfo "http://aliaswavefront.topdownloads.com/pub/bws/bws_79/myr_TechDocs.zip"
@@ -73,7 +73,7 @@ src_unpack() {
 	mkdir ${S}/docs
 	cd ${S}/docs
 	unpack Maya-5.0-linux-docs.tar.gz
-	
+
 	mkdir ${S}/docs.upgrade
 	cd ${S}/docs.upgrade
 	unpack myr_TechDocs.zip
@@ -132,10 +132,10 @@ src_install() {
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/maya-docs ${FILESDIR}/aw_flexlm
-	
+
 	insinto /etc/conf.d
 	newins ${FILESDIR}/aw_flexlm.conf.d aw_flexlm
-	
+
 	# Now for the docs stuff...
 	cd ${S}/docs/documentation
 	addpredict /var/.com.zerog.registry.lock
