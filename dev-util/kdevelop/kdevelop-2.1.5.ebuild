@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.7 2004/01/19 14:17:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.8 2004/01/26 00:19:23 vapier Exp $
 
 inherit kde eutils
 need-kde 3.1
@@ -38,7 +38,7 @@ src_unpack() {
 	cd ${S}/kdevelop
 	for x in *.desktop; do
 		mv $x $x.2
-		sed -e 's:Exec=kdevelop:Exec=env WANT_AUTOMAKE_1_4=1 WANT_AUTOCONF_2_5=1 kdevelop:g' $x.2 > $x
+		sed -e 's:Exec=kdevelop:Exec=env WANT_AUTOMAKE=1.4 WANT_AUTOCONF=2.5 kdevelop:g' $x.2 > $x
 		rm $x.2
 	done
 	cd ${WORKDIR}
