@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.2.1.ebuild,v 1.3 2005/01/02 19:15:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.2.3.ebuild,v 1.1 2005/01/02 19:15:29 matsuu Exp $
 
 IUSE="migemo estraier thumbnail"
 
 DESCRIPTION="Kazehakase is a browser with gecko engine like Epiphany or Galeon."
-SRC_URI="mirror://sourceforge.jp/${PN}/12026/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/12746/${P}.tar.gz"
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 LICENSE="GPL-2"
 
 DEPEND=">=net-www/mozilla-1.6
@@ -22,7 +22,10 @@ DEPEND=">=net-www/mozilla-1.6
 	thumbnail? ( virtual/ghostscript )"
 
 pkg_setup(){
-	if grep -v gtk2 /var/db/pkg/net-www/mozilla-[[:digit:]]*/USE &> /dev/null
+	local moz_use="$(</var/db/pkg/`best_version net-www/mozilla`/USE)"
+
+	# >=net-www/mozilla-1.7.3-r2 always depend on gtk2.
+	if ! has_version '>=net-www/mozilla-1.7.3-r2' && ! has gtk2 ${moz_use}
 	then
 		echo
 		eerror
