@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.45.ebuild,v 1.1 2003/09/16 11:08:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.45.ebuild,v 1.2 2003/09/16 15:45:02 vapier Exp $
 
 inherit gcc eutils
 
@@ -21,12 +21,6 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
 	epatch ${DISTDIR}/${PN}-3.20_statistics-1.diff
-	# fix header
-#	if [ `gcc-major-version` -eq 3 ] ; then
-#		cp nbase/nbase.h nbase/nbase.h.old
-#		sed -e 's:char \*strcasestr://:' \
-#			nbase/nbase.h.old > nbase/nbase.h
-#	fi
 }
 
 src_compile() {
