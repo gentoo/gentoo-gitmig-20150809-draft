@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.18 2003/08/02 13:18:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.19 2003/08/02 15:45:38 azarah Exp $
+
+  02 Aug 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-5.0-r1.ebuild:
+  Remove confdir3 patch for now.
 
   02 Aug 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r1.ebuild,
   coreutils-5.0.ebuild:
