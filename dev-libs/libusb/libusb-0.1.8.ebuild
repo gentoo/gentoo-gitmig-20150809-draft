@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.9 2004/09/16 01:54:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.10 2004/09/27 09:08:29 liquidx Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libusb/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~ia64 ppc64 macos ppc-macos"
+KEYWORDS="x86 ~sparc ~ppc ~alpha ~amd64 ~ia64 ppc64 macos ppc-macos"
 IUSE="debug doc"
 
 DEPEND="sys-devel/libtool
