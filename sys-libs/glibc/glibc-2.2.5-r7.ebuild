@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.21 2002/11/02 21:05:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.22 2002/11/02 21:18:16 cretin Exp $
 
 IUSE="nls pic build"
 
@@ -140,6 +140,11 @@ src_unpack() {
 	fi
 
 	# Some patches to fixup build on sparc and sparc64
+	
+	#This is a sparc mathinline.h update, fixes problems with C++ and the mathinline header, cretin@gentoo.org
+	einfo "Applying sparc-mathinline patch..."
+	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-mathinline.patch > /dev/null || die
+
 	if use sparc64 > /dev/null || use sparc > /dev/null
 	then
 		einfo "Applying sparc-misc patch..."
