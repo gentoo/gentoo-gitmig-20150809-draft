@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.6 2004/01/30 02:58:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.7 2004/04/08 17:19:11 vapier Exp $
 
-inherit gnome.org gnome2 libtool
+inherit gnome.org gnome2 libtool eutils
 
 DESCRIPTION="Gnome spellchecking component"
 HOMEPAGE="http://www.gnome.org/"
 
-KEYWORDS="~x86 ~sparc ppc ~alpha ~hppa amd64"
-SLOT="1"
 LICENSE="GPL-2"
+SLOT="1"
+KEYWORDS="~x86 ~sparc ppc ~alpha ~hppa amd64"
 
 RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=gnome-base/libbonoboui-2.0
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.6.0
 	>=sys-devel/autoconf-2.58"
 
-DOCS="AUTHORS COPYING ChangeLog NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 src_unpack() {
 	unpack ${A}
@@ -31,6 +31,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-enchant.patch
 
-	WANT_AUTOCONF=2.5 autoconf || die
-	automake || die
+	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
+	automake || die "automake failed"
 }
