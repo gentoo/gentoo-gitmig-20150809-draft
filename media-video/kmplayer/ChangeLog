@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.17 2003/10/04 17:11:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.18 2003/11/12 17:27:46 caleb Exp $
+
+  12 Nov 2003; Caleb Tennis <caleb@gentoo.org> kmplayer-0.7.2.ebuild,
+  kmplayer-0.7.3.ebuild, kmplayer-0.7.4a.ebuild, kmplayer-0.8b.ebuild:
+  Version bump, closes bug #33014. Note that I had to remove the 0.8b ebuild
+  because portage thinks that it's newer than 0.8.1 even though it's not. Since
+  0.8.1 is a bugfix release, I left x86 and ppc alone. Someone yell at me if you
+  don't like this method.
 
   04 Oct 2003; Heinrich Wendel <lanius@gentoo.org> kmplayer-0.8b.ebuild:
   stable bump #30274 and #29445
