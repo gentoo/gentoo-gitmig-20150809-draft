@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.5.1.ebuild,v 1.9 2005/01/25 15:45:37 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.5.1.ebuild,v 1.10 2005/02/21 17:40:42 agriffis Exp $
 
 IUSE="kde gnome"
 
