@@ -1,7 +1,10 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.4 2002/11/19 08:53:07 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.5 2003/01/14 00:00:13 alron Exp $
 
+*nagios-1.0		(13 Jan 2003)
+  13 Jan 2003; Dean Bailey <alron@gentoo.org> nagios-1.0 :
+  Updated to latest version.
 *nagios-1.0_beta6	(19 Nov 2002)
   19 Nov 2002; Dean Bailey <alron@gentoo.org> nagios-1.0_beta6 :
   Whoops, I guess I didnt fix it properly last time. 
