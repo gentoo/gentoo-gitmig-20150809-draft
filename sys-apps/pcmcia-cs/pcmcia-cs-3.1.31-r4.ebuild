@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>, Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r4.ebuild,v 1.1 2002/03/14 06:43:28 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r4.ebuild,v 1.2 2002/03/14 06:56:51 chadh Exp $
 
 # This ebuild installs ${FILESDIR}/hermes.conf, which you can get from
 # http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/hermes.conf
@@ -87,8 +87,6 @@ src_install () {
 	# install our own init script
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pcmcia.rc6 pcmcia
-	insinto /etc/pcmcia
-	doins ${FILESDIR}/hermes.conf
 	if [ -z "`use build`" ]
 	then
 		cd ${S}
@@ -100,7 +98,6 @@ src_install () {
 	fi
 	rm -f ${D}/etc/modules.conf
 	rm -rf ${D}/var/lib/pcmcia
-
 }
 
 src_postinst() {
