@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0-r1.ebuild,v 1.3 2004/06/25 01:23:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0-r1.ebuild,v 1.4 2004/07/14 21:43:13 agriffis Exp $
 
 ECVS_SERVER="cvs.php.net:/repository"
 ECVS_MODULE="php5"
@@ -19,6 +19,7 @@ DESCRIPTION="PHP Shell Interpreter - development version"
 SRC_URI=""
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
+IUSE=""
 DEPEND="${DEPEND}
 	>=dev-util/re2c-0.9.1"
 
