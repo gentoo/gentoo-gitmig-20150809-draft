@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.9 2003/02/12 06:47:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.10 2003/04/05 22:07:40 danarmak Exp $
 
 *valgrind-1.9.3 (09 Feb 2003)
+
+  06 Apr 2003; Dan Armak <danarmak@gentoo.org> valgrind-1.9.3.ebuild:
+  Add stable x86 keyword.
 
   09 Feb 2003; Bruce A. Locke <blocke@gentoo.org> valgrind-1.9.3.ebuild:
   Version bump to 1.9.3

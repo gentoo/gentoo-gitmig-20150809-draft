@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-1.9.3.ebuild,v 1.2 2003/02/13 12:02:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-1.9.3.ebuild,v 1.3 2003/04/05 22:07:40 danarmak Exp $
 
 IUSE="X"
 
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc
 	X? ( virtual/x11 )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -sparc -ppc -alpha"
+KEYWORDS="x86 -sparc -ppc -alpha"
 
 src_compile() 
 {	
