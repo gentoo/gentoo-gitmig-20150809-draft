@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.31.ebuild,v 1.1 2003/01/30 00:13:03 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.31.ebuild,v 1.2 2003/02/13 05:17:20 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The most popular logfile analyser in the world"

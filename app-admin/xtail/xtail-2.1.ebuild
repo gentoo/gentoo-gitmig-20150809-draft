@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/xtail-2.1.ebuild,v 1.10 2002/12/09 04:17:36 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/xtail-2.1.ebuild,v 1.11 2003/02/13 05:33:28 vapier Exp $
 
 DESCRIPTION="Tail multiple logfiles at once, even if rotated."
 SRC_URI="http://www.unicom.com/sw/xtail/${P}.tar.gz"

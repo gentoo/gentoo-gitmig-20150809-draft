@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.13 2002/12/09 04:17:34 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.14 2003/02/13 05:24:55 vapier Exp $
 
 DESCRIPTION="A tool to read SMART (or S.M.A.R.T) information from harddiscs."
 SRC_URI="http://lightside.eresmas.com/${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.11 2002/11/30 02:40:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.12 2003/02/13 05:32:47 vapier Exp $
 
 DESCRIPTION="A software watchdog."
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/system/daemons/watchdog/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/smartsuite-2.1.ebuild,v 1.8 2002/12/09 04:17:36 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/smartsuite-2.1.ebuild,v 1.9 2003/02/13 05:30:32 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Suite to control and monitor storage devices using SMART technology."

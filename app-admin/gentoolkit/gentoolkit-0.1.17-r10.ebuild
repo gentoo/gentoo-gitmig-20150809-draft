@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.17-r10.ebuild,v 1.2 2003/01/22 19:33:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.17-r10.ebuild,v 1.3 2003/02/13 05:23:41 vapier Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 SRC_URI=""
