@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.29 2004/09/22 18:35:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.30 2004/10/04 06:36:19 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -180,7 +180,7 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_enable	"gd-native-ttf"	"truetype"	0
 		enable_extension_with 	"png-dir" 		"png" 		0 "/usr"
 		enable_extension_with 	"tiff-dir" 		"tiff" 		0 "/usr"
-		enable_extension_with 	"xpm-dir" 		"xpm" 		0 "/usr/X11R6/lib"
+		enable_extension_with 	"xpm-dir" 		"xpm" 		0 "/usr/X11R6"
 		# enable gd last, so configure can pick up the previous settings
 		enable_extension_with 	"gd" 			"gd" 		0
 	fi
