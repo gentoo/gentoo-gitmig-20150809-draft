@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/elph-0.1.5.ebuild,v 1.5 2005/03/02 02:21:05 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/elph-0.1.5.ebuild,v 1.6 2005/03/04 22:57:32 j4rg0n Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.tigr.org/pub/software/ELPH/ELPH-${PV}.tar.gz"
 LICENSE="Artistic"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc-macos"
+KEYWORDS="x86 ppc-macos"
 IUSE=""
 
 S="${WORKDIR}/ELPH/sources"
