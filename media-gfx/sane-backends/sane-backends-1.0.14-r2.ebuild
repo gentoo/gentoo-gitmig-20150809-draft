@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r2.ebuild,v 1.4 2004/06/24 22:49:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r2.ebuild,v 1.5 2004/07/27 11:57:28 phosphan Exp $
 
 inherit eutils
 
@@ -58,7 +58,6 @@ src_compile() {
 
 src_install () {
 
-	enewgroup scanner
 
 	make prefix=${D}/usr \
 		sysconfdir=${D}/etc \
@@ -84,4 +83,9 @@ src_install () {
 	insinto /etc/env.d
 	doins 30sane
 
+}
+
+pkg_preinst()
+{
+	enewgroup scanner
 }

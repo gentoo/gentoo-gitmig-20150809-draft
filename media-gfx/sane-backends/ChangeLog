@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.42 2004/06/30 19:44:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.43 2004/07/27 11:57:28 phosphan Exp $
+
+  27 Jul 2004; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.14-r2.ebuild, sane-backends-1.0.14-r3.ebuild:
+  Moving enewgroup where it belongs (bug #58526)
 
   30 Jun 2004; Lars Weiler <pylon@gentoo.org> sane-backends-1.0.14-r3.ebuild:
   Stable on ppc.  1.0.13-r3 does not compile any more.
