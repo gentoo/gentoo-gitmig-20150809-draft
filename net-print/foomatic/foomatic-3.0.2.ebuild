@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-3.0.2.ebuild,v 1.5 2004/09/19 15:54:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-3.0.2.ebuild,v 1.6 2004/09/20 02:34:56 vapier Exp $
 
 DESCRIPTION="The Foomatic printing meta package"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
 SRC_URI=""
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~hppa amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="=net-print/foomatic-filters-3.0.2

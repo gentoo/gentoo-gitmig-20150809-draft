@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.2.ebuild,v 1.5 2004/09/19 15:53:15 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.2.ebuild,v 1.6 2004/09/20 02:34:05 vapier Exp $
 
 inherit perl-module eutils
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.linuxprinting.org/download/foomatic/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
-KEYWORDS="x86 ppc sparc alpha ~hppa amd64 ~ia64 ~mips ~ppc64"
 
 DEPEND="dev-libs/libxml2
 	net-misc/wget
