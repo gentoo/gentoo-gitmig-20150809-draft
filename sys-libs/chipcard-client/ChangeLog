@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/chipcard-client
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-client/ChangeLog,v 1.1 2004/12/21 19:21:20 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-client/ChangeLog,v 1.2 2004/12/26 19:57:48 weeve Exp $
+
+  26 Dec 2004; Jason Wever <weeve@gentoo.org>
+  chipcard-client-1.9.4_beta.ebuild:
+  Added ~sparc keyword wrt bug #73702.
 
 *chipcard-client-1.9.4_beta (21 Dec 2004)
 
