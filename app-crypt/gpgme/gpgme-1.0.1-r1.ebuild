@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.1-r1.ebuild,v 1.1 2004/10/25 13:59:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.1-r1.ebuild,v 1.2 2004/12/12 01:17:32 dragonheart Exp $
 
 inherit eutils
 
@@ -19,8 +19,6 @@ DEPEND="sys-apps/gawk
 	sys-devel/libtool
 	sys-devel/gcc
 	>=dev-libs/libgpg-error-0.5
-	!<=app-crypt/gpgme-0.3.14
-	!=app-crypt/gpgme-0.3.16
 	!ia64? ( !ppc64? ( dev-libs/pth ) )
 	!smime? ( >=app-crypt/gnupg-1.2.2 )
 	smime? ( >=app-crypt/gnupg-1.9.6 )"
@@ -34,8 +32,6 @@ RDEPEND="virtual/libc
 	dev-libs/libgcrypt
 	>=app-crypt/gnupg-1.2.2
 	!ia64? ( !ppc64? ( dev-libs/pth ) )
-	!<=app-crypt/gpgme-0.3.14
-	!=app-crypt/gpgme-0.3.16
 	!smime? ( >=app-crypt/gnupg-1.2.2 )
 	smime? ( >=app-crypt/gnupg-1.9.6 )"
 
@@ -64,9 +60,9 @@ src_compile() {
 	emake CFLAGS="${CFLAGS} -I../assuan/"  || die
 }
 
-src_test() {
-	einfo "testing currently broken"
-}
+#src_test() {
+#	einfo "testing currently broken"
+#}
 
 src_install() {
 	emake DESTDIR=${D} install || die

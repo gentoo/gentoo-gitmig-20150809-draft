@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.1.ebuild,v 1.1 2004/10/25 13:59:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.1.ebuild,v 1.2 2004/12/12 01:17:32 dragonheart Exp $
 
 inherit eutils
 
@@ -21,8 +21,6 @@ DEPEND=">=app-crypt/gnupg-1.2.2
 	sys-devel/libtool
 	sys-devel/gcc
 	>=dev-libs/libgpg-error-0.5
-	!<=app-crypt/gpgme-0.3.14
-	!=app-crypt/gpgme-0.3.16
 	!ia64? ( !ppc64? ( dev-libs/pth ) )"
 
 # For when gnupg-1.9+ gets unmasked
@@ -33,9 +31,7 @@ RDEPEND="virtual/libc
 	>=dev-libs/libgpg-error-0.5
 	dev-libs/libgcrypt
 	>=app-crypt/gnupg-1.2.2
-	!ia64? ( !ppc64? ( dev-libs/pth ) )
-	!<=app-crypt/gpgme-0.3.14
-	!=app-crypt/gpgme-0.3.16"
+	!ia64? ( !ppc64? ( dev-libs/pth ) )"
 
 src_compile() {
 

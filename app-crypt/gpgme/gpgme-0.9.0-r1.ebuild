@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.9.0-r1.ebuild,v 1.11 2004/10/17 13:45:53 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.9.0-r1.ebuild,v 1.12 2004/12/12 01:17:32 dragonheart Exp $
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpgme/index.html"
@@ -16,9 +16,7 @@ DEPEND=">=app-crypt/gnupg-1.2.4
 	sys-apps/gawk
 	sys-devel/libtool
 	sys-devel/gcc
-	dev-libs/libgpg-error
-	!<=app-crypt/gpgme-0.3.14
-	!=app-crypt/gpgme-0.3.16"
+	dev-libs/libgpg-error"
 
 # For when gnupg-1.9+ gets unmasked
 #	!smime? ( >=app-crypt/gnupg-1.2.5 )
@@ -26,9 +24,7 @@ DEPEND=">=app-crypt/gnupg-1.2.4
 
 RDEPEND="virtual/libc
 	dev-libs/libgpg-error
-	dev-libs/libgcrypt
-	!<=app-crypt/gpgme-0.3.14
-	!=app-crypt/gpgme-0.3.16"
+	dev-libs/libgcrypt"
 
 src_compile() {
 	if [ -x /usr/bin/gpg2 ]; then

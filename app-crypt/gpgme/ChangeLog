@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.60 2004/10/31 15:21:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.61 2004/12/12 01:17:32 dragonheart Exp $
+
+  12 Dec 2004; Daniel Black <dragonheart@gentoo.org> -gpgme-0.3.14.ebuild,
+  -gpgme-0.3.16.ebuild, -gpgme-0.4.0.ebuild, -gpgme-0.4.7.ebuild,
+  gpgme-0.9.0-r1.ebuild, gpgme-1.0.1-r1.ebuild, gpgme-1.0.1.ebuild:
+  Cleanout finally as per bug #72615. Removed unnecessary conflict dependancies
 
   31 Oct 2004; Tom Gall <tgall@gentoo.org> gpgme-0.3.14-r1.ebuild:
   stable on ppc64, bug #64485
