@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/linuxfromscratch-html
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.5 2003/02/12 03:37:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.6 2003/05/15 00:37:24 spider Exp $
+
+*linuxfromscratch-html-4.0 (15 maj 2003)
+
+  15 maj 2003; <spider@gentoo.org> linuxfromscratch-html-4.0.ebuild:
+  Updated to 4.0, the latest version on the ftpsites. www has 4.1 browseable,
+  but not packaged.
 
 *linuxfromscratch-html-3.3 (09 Apr 2002)
 
