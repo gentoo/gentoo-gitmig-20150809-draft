@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.0.ebuild,v 1.3 2004/09/05 07:12:52 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.0.ebuild,v 1.4 2004/09/21 14:04:31 axxo Exp $
 
 inherit java-pkg
 
@@ -15,8 +15,8 @@ IUSE="dbcp doc jboss jikes jmx jta oracle servlet-2.3 servlet-2.4 struts"
 
 DEPEND=">=virtual/jdk-1.4
 		oracle? ( >=dev-java/jdbc3-oracle-9.2.0.3 )
-		servlet-2.3? ( >=dev-java/servletapi-2.3-r1 )
-		servlet-2.4? ( >=dev-java/servletapi-2.4 )
+		servlet-2.3? ( >=dev-java/servletapi-2.3* )
+		servlet-2.4? ( >=dev-java/servletapi-2.4* )
 		dbcp? ( >=dev-java/commons-dbcp-1.1 )
 		jboss? ( >=www-servers/jboss-3.2.3 )
 		jta? ( >=dev-java/jta-1.0.1 )
