@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.289 2004/07/20 15:21:25 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.290 2004/07/22 12:33:26 pappy Exp $
+
+  22 Jul 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.4.1.ebuild:
+  added hppa logic and note for glibc
 
   20 Jul 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.3-r6.ebuild:
   added hardened auto PIE SSP for sparc

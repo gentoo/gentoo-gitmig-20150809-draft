@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.9 2004/07/19 22:51:23 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.10 2004/07/22 12:33:43 pappy Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -467,7 +467,7 @@ src_unpack() {
 	fi
 
 	release_version="${release_version}, pie-${PIE_VER}"
-	if use hardened && ( use x86 || use sparc || use amd64 )
+	if use hardened && ( use x86 || use sparc || use amd64 || use hppa )
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
@@ -480,8 +480,11 @@ src_unpack() {
 	version_patch ${FILESDIR}/3.4.1/gcc-${PV}-gentoo-branding.patch \
 		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
 
-	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
-	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
+	# TODO: the binutils on hppa have no PIE linker script to PROVIDE
+	# the necessary symbols for initializer and finalizer arrays
+	# so, to make the Scrt1.o fly with ld -pie, the glibc in question
+	# needs to be equipped with a patch that removes these symbols
+	# __init_array_start and __init_array_end from the csu/elf-init.c
 
 	epatch ${FILESDIR}/3.4.0/gcc34-ia64-lib64.patch
 	epatch ${FILESDIR}/3.4.0/gcc34-multi32-hack.patch
