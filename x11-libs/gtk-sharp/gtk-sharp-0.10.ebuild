@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.10.ebuild,v 1.1 2003/06/24 17:58:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.10.ebuild,v 1.2 2003/07/08 10:37:33 liquidx Exp $
 
 # WARNING 
 # All gst-sharp hacks done in this build are nonfunctional
@@ -63,7 +63,8 @@ src_install () {
 	# so we need to change it - Is being changed, check every release
 	for i in $(find . -iname Makefile); do cp $i ${i}.orig; sed "s:${DESTDIR}/usr:${D}/usr:" $i.orig > $i; done
 
-	einstall || die
+	# one of the samples require gconf schemas, and it'll violate sandbox
+	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1" einstall || die
 
 	# gst-sharp install
 	# cd ${S}/gst/
