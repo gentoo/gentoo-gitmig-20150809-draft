@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/djbfft
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/ChangeLog,v 1.1 2004/03/11 07:33:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/ChangeLog,v 1.2 2004/03/31 20:41:49 mr_bones_ Exp $
+
+  31 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> djbfft-0.76.ebuild:
+  inherit eutils flag-o-matic; move variable setting and strip-flags into
+  function
 
 *djbfft-0.76 (11 Mar 2004)
 

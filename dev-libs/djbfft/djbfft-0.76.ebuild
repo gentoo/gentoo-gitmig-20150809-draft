@@ -1,33 +1,35 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.1 2004/03/11 07:33:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.2 2004/03/31 20:41:49 mr_bones_ Exp $
+
+inherit eutils flag-o-matic
 
 DESCRIPTION="djbfft is an extremely fast library for floating-point convolution"
 HOMEPAGE="http://cr.yp.to/djbfft.html"
 SRC_URI="http://cr.yp.to/djbfft/${P}.tar.gz"
-
-MY_PV="${PV:0:1}.${PV:2:1}.${PV:3:1}" # a.bc -> a.b.c
-MY_D="${D}usr"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86"
 IUSE="static"
 
-# mask out everything, which is not suggested by the author (RTFM)!
-ALLOWED_FLAGS="-fstack-protector -march -mcpu -pipe -mpreferred-stack-boundary -ffast-math"
-strip-flags
-
-if [ `use static` ]
-then
-	LIBPERMS="0644"
-	LIBDJBFFT="libdjbfft.a"
-else
-	LIBPERMS="0755"
-	LIBDJBFFT="libdjbfft.so.${MY_PV}"
-fi
-
 src_unpack() {
+	MY_PV="${PV:0:1}.${PV:2:1}.${PV:3:1}" # a.bc -> a.b.c
+	MY_D="${D}usr"
+
+	# mask out everything, which is not suggested by the author (RTFM)!
+	ALLOWED_FLAGS="-fstack-protector -march -mcpu -pipe -mpreferred-stack-boundary -ffast-math"
+	strip-flags
+
+	if [ `use static` ]
+	then
+		LIBPERMS="0644"
+		LIBDJBFFT="libdjbfft.a"
+	else
+		LIBPERMS="0755"
+		LIBDJBFFT="libdjbfft.so.${MY_PV}"
+	fi
+
 	unpack "${A}"
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc3.patch"
