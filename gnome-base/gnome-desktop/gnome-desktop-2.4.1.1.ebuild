@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.1.1.ebuild,v 1.9 2004/03/21 23:23:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.1.1.ebuild,v 1.10 2004/04/06 15:43:37 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -37,18 +37,19 @@ src_unpack() {
 	unpack ${A}
 	# Set vendor info
 	cd ${S}
-	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in
+	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in \
+	|| die "sed failed (1)"
 
 	# fix issues with gtk+-2.4 (#45258)
 	epatch ${FILESDIR}/${PN}-2.4-no_deprecated_about.patch
 
 	# Fix bug 16853 by building gnome-about with IEEE to prevent
 	# floating point exceptions on alpha
-	use alpha || return
-	cd ${S}/gnome-about
-	sed -i '/^CFLAGS/s/$/ -mieee/' Makefile.in
+	if use alpha; then
+		sed -i '/^CFLAGS/s/$/ -mieee/' ${S}/gnome-about/Makefile.in \
+		|| die "sed failed (2)"
+	fi
 
-	WANT_AUTOCONF=2.5 autoconf || die
 	WANT_AUTOMAKE=1.4 automake || die
-
+	WANT_AUTOCONF=2.5 autoconf || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.6.0.1.ebuild,v 1.1 2004/03/31 22:21:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.6.0.1.ebuild,v 1.2 2004/04/06 15:43:37 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -29,19 +29,19 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog COPYING* README INSTALL NEWS HACKING"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 
 	# Set vendor info
-	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in
+	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in \
+	|| die "sed failed (1)"
 
 	WANT_AUTOCONF_2_5=1 autoconf || die
 
 	# Fix bug 16853 by building gnome-about with IEEE to prevent
 	# floating point exceptions on alpha
-	use alpha || return
-	cd ${S}/gnome-about
-	sed -i '/^CFLAGS/s/$/ -mieee/' Makefile.in
-
+	if use alpha; then
+		sed -i '/^CFLAGS/s/$/ -mieee/' ${S}/gnome-about/Makefile.in \
+		|| die "sed failed (2)"
+	fi
 }
