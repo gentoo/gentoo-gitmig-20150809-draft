@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.4 2004/06/16 22:35:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.5 2004/06/21 23:35:39 squinky86 Exp $
+
+  22 Jun 2004; Jon Hood <squinky86@gentoo.org> -sancho-bin-0.9.4.3.ebuild,
+  sancho-bin-0.9.4.5-r1.ebuild:
+  0.9.4.3 tarball removed- requires 0.9.4.5 to be marked stable
 
 *sancho-bin-0.9.4.5-r1 (16 Jun 2004)
 
