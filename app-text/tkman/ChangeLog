@@ -1,11 +1,17 @@
 # ChangeLog for app-text/tkman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.7 2003/02/12 05:35:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.8 2003/04/23 17:15:56 utx Exp $
+
+*tkman-2.1-r1 (23 Apr 2003)
+
+  23 Apr 2003; Stanislav Brabec <utx@gentoo.org> tkman-2.1-r1.ebuild,
+  files/tkman-2.1-r1-gentoo.diff:
+  Use wish, not wish8.3, to work with both tcl/tk 8.3 and 8.4 (bug #19553).
+
+*tkman-2.1.ebuild (23 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*tkman-2.1.ebuild (23 Nov 2002)
-
   23 Nov 2002; Sascha Schwabbauer <cybersystem@gentoo.org> tkman-2.1.ebuild :
 
   Added ~ppc to keywords.
