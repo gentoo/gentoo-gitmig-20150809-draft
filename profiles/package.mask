@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# Spider <spider@gentoo.org> (29 Jul 2002)
+# New version, lots of different USE flags that I havent tested together.
+# needs testing as I just copied the old ebuild
+=app-office/gnumeric-1.0.9
+
 # Owen Stampflee <owen@gentoo.org> (28 Jul 2002)
 # Finally, a from source xforms ebuild, lets test it!
 =x11-libs/xforms-1.0_rc4
