@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.64 2003/07/13 22:51:27 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.65 2003/07/14 00:39:47 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -22,20 +22,22 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_preinst
 
 function runningunstable() { has ~${ARCH} ${ACCEPT_KEYWORDS} > /dev/null ; }
 
-MY_PN=php
-[ -z "$MY_P" ] && MY_P=${MY_PN}-${PV}
-S=${WORKDIR}/${MY_P}
-[ -z "$HOMEPAGE" ]	&& HOMEPAGE="http://www.php.net/"
-[ -z "$LICENSE" ]	&& LICENSE="PHP"
-[ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
+[ -z "${MY_PN}" ] && MY_PN=php
+[ -z "${MY_P}" ] && MY_P=${MY_PN}-${PV}
+[ -z "${HOMEPAGE}" ]	&& HOMEPAGE="http://www.php.net/"
+[ -z "${LICENSE}" ]	&& LICENSE="PHP"
+[ -z "${PROVIDE}" ]	&& PROVIDE="virtual/php"
 # PHP.net does automatic mirroring from this URI
-if [ -z "$SRC_URI" ]; then
+if [ -z "${SRC_URI}" ]; then
 	SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 	#Remove the DB4 stuff temporarily
 	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
 
-IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gd-external gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit png postgres qt snmp spell ssl tiff truetype xml2"
+# Where we work
+S=${WORKDIR}/${MY_P}
+
+IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2"
 
 # Berkdb is disabled due to DB4 and changes in PHP4.3.2
 #RDEPEND="${RDEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
@@ -306,7 +308,7 @@ php_src_compile() {
 	myconf="${myconf} `use_with kerberos` `use_with pam`"
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable cjk mbstring` `use_enable cjk mbregex`"
-
+	myconf="${myconf} `use_enable ipv6`"
 
 	#Waiting for somebody to want Cyrus support :-)
 	#myconf="${myconf} `use_with cyrus`"
