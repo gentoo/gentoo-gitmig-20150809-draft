@@ -1,4 +1,14 @@
-MD5 dbb5b9426b84d719d23807fac9b3d7b4 oro-2.0.8.ebuild 1217
-MD5 4077b6698517f9d08f363d244fed43dc ChangeLog 2108
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 359ea02ea687a71831d2bdae09259a3d oro-2.0.8.ebuild 1213
+MD5 28d0e927ec4efa16e0e8eba5e6fc5e4e ChangeLog 2104
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 7169b855e01ca0f635579587874f6868 files/digest-oro-2.0.8 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQgWt/rLF9B432nYRAgWqAJ4mNWiy5Jvl7YvMcFDLVybTO05cVgCeJ7Dj
+9CT0m3HniHsDs8vxTrzh4l8=
+=1Txg
+-----END PGP SIGNATURE-----
