@@ -4,9 +4,8 @@
 	<herd>no-herd</herd>
 	<maintainer>
 		<email>kumba@gentoo.org</email>
-		<name>Joshua Kinard</name>
+		<name>Primary Maintainer</name>
 	</maintainer>
-
 	<longdescription>
 		crossdev is a script which generates cross-toolchains for other architectures
 	</longdescription>
