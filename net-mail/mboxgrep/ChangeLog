@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/mboxgrep
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.1 2002/02/10 22:01:59 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.2 2002/07/26 23:46:45 cselkirk Exp $
 
 *mboxgrep-0.7.3 ( 10 Feb 2002 )
+
+  26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> mboxgrep-0.7.3.ebuild :
+
+  Added ppc to KEYWORDS
 
   10 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog mboxgrep-0.7.3 files/digest-mboxgrep-0.7.3:
   
