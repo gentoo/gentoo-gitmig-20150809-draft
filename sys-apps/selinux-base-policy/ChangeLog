@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/selinux-base-policy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-base-policy/ChangeLog,v 1.5 2003/05/22 15:38:59 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-base-policy/ChangeLog,v 1.6 2003/06/03 21:14:52 pebenito Exp $
+
+*selinux-base-policy-20030603 (03 Jun 2003)
+
+  03 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030603.ebuild:
+  Numerous various fixes. Added staff role. Removed ipsec, gpm and gpg policies
+  as they are not appropriate for the base policy, and untested.
 
 *selinux-base-policy-20030522 (22 May 2003)
 
