@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.17 2002/10/20 11:04:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.18 2002/10/20 11:31:15 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -179,8 +179,6 @@ src_unpack() {
 	cd ${S}
 
 	# Various patches from all over
-	# bug #8144
-	rm -f ${WORKDIR}/018_all*.patch.bz2 ${WORKDIR}/019_all*.patch.bz2
 	einfo "Applying various patches (bugfixes/updates)..."
 	for x in ${WORKDIR}/*.patch.bz2 ${FILESDIR}/${PV}-patches/*.patch.bz2
 	do
@@ -202,6 +200,10 @@ src_unpack() {
 		if [ -f ${x} ] && \
 		   [ "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
 		then
+			# bug #8144
+			[ "${x##*/}" = "018_all_4.2.0-ati-radeon-misc-bugfixes.patch.bz2" ] && continue
+			[ "${x##*/}" = "019_all_4.2.0-ati-radeon-pci-drm-enable.patch.bz2" ] && continue
+			
 			einfo "  ${x##*/}..."
 			bzip2 -dc ${x} | patch -p2 > /dev/null || die "Failed Patch: ${x##*/}!"
 		fi
