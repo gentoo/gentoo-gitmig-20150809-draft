@@ -1,0 +1,476 @@
+diff -Naur rc-scripts-1.4.16/sbin/functions.sh rc-scripts-1.4.16-splash/sbin/functions.sh
+--- rc-scripts-1.4.16/sbin/functions.sh	2004-05-21 17:22:12.000000000 +0200
++++ rc-scripts-1.4.16-splash/sbin/functions.sh	2004-10-13 22:55:09.272082704 +0200
+@@ -41,6 +41,17 @@
+ # Override defaults with user settings ...
+ [ -f /etc/conf.d/rc ] && source /etc/conf.d/rc
+ 
++# void splash(...)
++#
++#  Notify bootsplash/splashutils/gensplash/whatever about
++#  important events.
++#
++splash() {
++	return 0
++}
++
++# This will override the splash() function...
++[ -f /sbin/splash-functions.sh ] && source /sbin/splash-functions.sh
+ 
+ # void get_bootconfig()
+ #
+@@ -114,213 +125,6 @@
+ 	return 0
+ }
+ 
+-#
+-# void splash_init (void)
+-#
+-splash_init() {
+-	pb_init=0
+-	pb_count=0
+-	pb_scripts=0
+-	pb_rate=0
+-
+-	if [ ! -x /sbin/splash ] || \
+-	   [ -e /proc/version -a ! -e /proc/splash ]
+-	then
+-		return 0
+-	fi
+-	
+-	if [ -f /etc/conf.d/bootsplash.conf ]
+-	then
+-		. /etc/conf.d/bootsplash.conf
+-		if [ -n "${PROGRESS_SYSINIT_RATE}" ]
+-		then
+-			rate=$((65535*${PROGRESS_SYSINIT_RATE}/100))
+-		fi
+-	fi
+-	
+-	if [ "${RUNLEVEL}" = "S" ]
+-	then
+-		pb_scripts=5
+-		pb_rate=16383
+-		[ -n "${rate}" ] && pb_rate="${rate}"
+-	fi
+-
+-	export pb_init pb_count pb_scripts pb_rate
+-}
+-
+-#
+-# void splash_calc (void)
+-#
+-splash_calc() {
+-	pb_runs=($(dolisting "/etc/runlevels/${SOFTLEVEL}/"))
+-	pb_runb=($(dolisting "/etc/runlevels/${BOOTLEVEL}/"))
+-	pb_scripts=${#pb_runs[*]}
+-	pb_boot=${#pb_runb[*]}
+-
+-	[ ! -e /proc/splash -o ! -x /sbin/splash ] && return 0
+-
+-	if [ -f /etc/conf.d/bootsplash.conf ]
+-	then
+-		. /etc/conf.d/bootsplash.conf
+-
+-		if [ -n "${PROGRESS_SYSINIT_RATE}" ]
+-		then
+-			init_rate=$((65535*${PROGRESS_SYSINIT_RATE}/100))
+-		fi
+-		
+-		if [ -n "${PROGRESS_BOOT_RATE}" ]
+-		then
+-			boot_rate=$((65535*${PROGRESS_BOOT_RATE}/100))
+-		fi
+-	fi
+-
+-	# In runlevel boot we have 5 already started scripts
+-	#
+-	if [ "${RUNLEVEL}" = "S" -a "${SOFTLEVEL}" = "boot" ]
+-	then
+-		pb_started=($(dolisting "${svcdir}/started/"))
+-		pb_scripts=$((${pb_boot} - ${#pb_started[*]}))
+-		pb_init=16383
+-		pb_rate=26213
+-		pb_count=0
+-		if [ -n "${init_rate}" -a -n "${boot_rate}" ]
+-		then
+-			pb_init="${init_rate}"
+-			pb_rate=$((${init_rate} + ${boot_rate}))
+-		fi
+-	elif [ "${SOFTLEVEL}" = "reboot" -o "${SOFTLEVEL}" = "shutdown" ]
+-	then
+-		pb_started=($(dolisting "${svcdir}/started/"))
+-		pb_scripts=${#pb_started[*]}
+-		pb_rate=65534
+-	else
+-		pb_init=26213
+-		pb_rate=65534
+-		if [ -n "${init_rate}" -a -n "${boot_rate}" ]
+-		then
+-			pb_init=$((${init_rate} + ${boot_rate}))
+-		fi
+-	fi
+-	
+-	echo "pb_init=${pb_init}" > "${svcdir}/progress"
+-	echo "pb_rate=${pb_rate}" >> "${svcdir}/progress"
+-	echo "pb_count=${pb_count}" >> "${svcdir}/progress"
+-	echo "pb_scripts=${pb_scripts}" >> "${svcdir}/progress"
+-}
+-
+-#
+-# void splash_update (char *fsstate, char *myscript, char *action)
+-#
+-splash_update() {
+-	local fsstate="$1"
+-	local myscript="$2"
+-	local action="$3"
+-	
+-	[ ! -e /proc/splash -o ! -x /sbin/splash ] && return 0
+-	
+-	if [ "${fsstate}" = "inline" ]
+-	then
+-		/sbin/splash "${myscript}" "${action}"
+-		pb_count=$((${pb_count} + 1))
+-
+-		# Only needed for splash_debug() 
+-		pb_execed="${pb_execed} ${myscript:-inline}"
+-	else
+-		# Update only runlevel scripts, no dependancies (only true for startup)
+-		if [ ! -L "${svcdir}/softscripts/${myscript}" ]
+-		then
+-			[ "${SOFTLEVEL}" != "reboot" -a \
+-			  "${SOFTLEVEL}" != "shutdown" ] && return
+-		fi
+-		# Source the current progress bar state
+-		[ -f "${svcdir}/progress" ] && source "${svcdir}/progress"
+-
+-		# Do not update an already executed script
+-		for x in ${pb_execed}
+-		do
+-			[ "${x}" = "${myscript}" ] && return
+-		done	
+-		
+-		/sbin/splash "${myscript}" "${action}"
+-		pb_count=$((${pb_count} + 1))
+-		
+-		echo "pb_init=${pb_init}" > "${svcdir}/progress"
+-		echo "pb_rate=${pb_rate}" >> "${svcdir}/progress"
+-		echo "pb_count=${pb_count}" >> "${svcdir}/progress"
+-		echo "pb_scripts=${pb_scripts}" >> "${svcdir}/progress"
+-		echo "pb_execed=\"${pb_execed} ${myscript}\"" >> "${svcdir}/progress"
+-	fi
+-}
+-
+-#
+-# void splash_debug (char *softlevel)
+-#
+-splash_debug() {
+-	local softlevel="$1"
+-
+-	[ ! -e /proc/splash -o ! -x /sbin/splash ] && return 0
+-	
+-	if [ -f /etc/conf.d/bootsplash.conf ]
+-	then
+-		source /etc/conf.d/bootsplash.conf
+-
+-		[ "${BOOTSPLASH_DEBUG}" = "yes" -a -n "${softlevel}" ] || return
+-		
+-		if [ -f "${svcdir}/progress" ]
+-		then
+-			cat "${svcdir}/progress" > "/var/log/bootsplash.${softlevel}"
+-		else
+-			echo "pb_init=${pb_init}" > "/var/log/bootsplash.${softlevel}"
+-			echo "pb_rate=${pb_rate}" >> "/var/log/bootsplash.${softlevel}"
+-			echo "pb_count=${pb_count}" >> "/var/log/bootsplash.${softlevel}"
+-			echo "pb_scripts=${pb_scripts}" >> "/var/log/bootsplash.${softlevel}"
+-			echo "pb_execed=\"${pb_execed}\"" >> "/var/log/bootsplash.${softlevel}"
+-		fi	
+-	fi
+-}
+-
+-update_splash_wrappers() {
+-	if [ -x /sbin/splash ] && \
+-	   ([ ! -e /proc/version ] || \
+-	    [ -e /proc/version -a -e /proc/splash ])
+-	then
+-		rc_splash() {
+-			/sbin/splash $*
+-		}
+-		rc_splash_init() {
+-			splash_init $*
+-		}
+-		rc_splash_calc() {
+-			splash_calc $*
+-		}
+-		rc_splash_update() {
+-			splash_update $*
+-		}
+-		rc_splash_debug() {
+-			splash_debug $*
+-		}
+-	else
+-		rc_splash() {
+-			return 0
+-		}
+-		rc_splash_init() {
+-			return 0
+-		}
+-		rc_splash_calc() {
+-			return 0
+-		}
+-		rc_splash_update() {
+-			return 0
+-		}
+-		rc_splash_debug() {
+-			return 0
+-		}
+-	fi
+-
+-	export rc_splash rc_splash_init rc_splash_calc \
+-		rc_splash_update rc_splash_debug
+-}
+-
+ # void esyslog(char* priority, char* tag, char* message)
+ #
+ #    use the system logger to log a message
+@@ -769,7 +573,6 @@
+ 		setup_defaultlevels
+ 	fi
+ 
+-	update_splash_wrappers
+ else
+ 	# Should we use colors ?
+ 	if [ "${*/depend}" = "$*" ]
+diff -Naur rc-scripts-1.4.16/sbin/rc rc-scripts-1.4.16-splash/sbin/rc
+--- rc-scripts-1.4.16/sbin/rc	2004-04-26 00:31:48.000000000 +0200
++++ rc-scripts-1.4.16-splash/sbin/rc	2004-10-13 22:47:57.094783640 +0200
+@@ -22,13 +22,7 @@
+ 	retval=$?
+ 	if [ "${retval}" -ne 0 ]
+ 	then
+-		# Progressbar begin
+-		if [ -c /dev/null ]; then
+-			rc_splash "stop" &>/dev/null &
+-		else
+-			rc_splash "stop" &
+-		fi
+-		# Progressbar end
++		splash "critical" &
+ 
+ 		echo -e "${ENDCOL}${NORMAL}[${BAD} oops ${NORMAL}]"
+ 		echo
+@@ -60,6 +54,7 @@
+ 	then
+ 		if ! mkdir -p "$1" &>/dev/null
+ 		then
++			splash "critical" &
+ 			echo
+ 			eerror "For Gentoo Linux to function properly, \"$1\" need to exist."
+ 			eerror "Please mount your root partition read/write, and execute:"
+@@ -119,10 +114,6 @@
+ # Save $1
+ argv1="$1"
+ 
+-# Progressbar begin
+-rc_splash_init
+-# Progressbar end
+-
+ # First time boot stuff goes here.  Note that 'sysinit' is an internal runlevel
+ # used to bring up local filesystems, and should not be started with /sbin/rc
+ # directly ...
+@@ -282,12 +273,6 @@
+ 		fi
+ 	fi
+ 
+-	# Update splash wrappers.
+-	update_splash_wrappers
+-	# Progressbar begin
+-	rc_splash "text"
+-	# Progressbar end
+-
+ 	if [ -x /sbin/irqbalance -a "$(get_KV)" -ge "$(KV_to_int '2.5.0')" ]
+ 	then
+ 		ebegin "Starting irqbalance"
+@@ -366,20 +351,17 @@
+ 	# defaults.
+ 	get_critical_services
+ 
++	splash "rc_init" "${argv1}"
++
+ 	# We do not want to break compatibility, so we do not fully integrate
+ 	# these into /sbin/rc, but rather start them by hand ...
+ 	for x in ${CRITICAL_SERVICES}
+ 	do
+-		# Progressbar begin
+-		rc_splash_update "inline" "${x}" "start"
+-		# Progressbar end
++		splash "svc_start" "${x}"
+ 
+ 		if ! start_critical_service "${x}"
+ 		then
+-			# Progressbar begin
+-			rc_splash "stop" &> /dev/null &
+-			# Progressbar end
+-			
++			splash "critical" &> /dev/null &			
+ 			echo
+ 			eerror "One of more critical startup scripts failed to start!"
+ 			eerror "Please correct this, and reboot ..."
+@@ -390,7 +372,10 @@
+ 			einfo "Rebooting"
+ 			/sbin/reboot -f
+ 		fi
++
++		splash "svc_started" "${x}" "0"
+ 	done
++	
+ 	# Check that $svcdir exists ...
+ 	check_statedir "${svcdir}"
+ 
+@@ -426,19 +411,10 @@
+ 			mark_service_started "${x}"
+ 		done
+ 	)
+-fi # Sysinit ends here
+-
+-# Update splash wrappers.
+-update_splash_wrappers
+-
+-if [ "${RUNLEVEL}" = "S" -a "${argv1}" = "sysinit" ]
+-then
+-	# Progressbar begin
+-	rc_splash_debug "${argv1}"
+-	# Progressbar end
+ 	exit 0
++fi # Sysinit ends here
+ 
+-elif [ "${RUNLEVEL}" = "S" -a "${argv1}" = "boot" ]
++if [ "${RUNLEVEL}" = "S" -a "${argv1}" = "boot" ]
+ then
+ 	setup_defaultlevels
+ 
+@@ -492,10 +468,6 @@
+ 	echo "${SOFTLEVEL}" > "${svcdir}/softlevel"
+ fi
+ 
+-# Progressbar begin
+-rc_splash_calc
+-# Progressbar end
+-
+ # For keeping a list of services that fails during boot/halt
+ if [ ! -d "${svcdir}/failed" ]
+ then
+@@ -504,6 +476,8 @@
+ 	rm -rf "${svcdir}"/failed/*
+ fi
+ 
++splash "rc_init" "${argv1}"
++
+ if [ "${SOFTLEVEL}" = "reboot" -o "${SOFTLEVEL}" = "shutdown" ]
+ then
+ 	myscripts=
+@@ -686,10 +660,6 @@
+ if [ "${SOFTLEVEL}" = "reboot" -o "${SOFTLEVEL}" = "shutdown" ]
+ then
+ 	source /sbin/functions.sh
+-	
+-	# Progressbar begin
+-	rc_splash_debug "${SOFTLEVEL}"
+-	# Progressbar end
+ 
+ 	# Make sure that our $svcdir are clean for next reboot ...
+ 	rm -rf "${svcdir}"/*
+@@ -776,9 +746,6 @@
+ # If we were in the boot runlevel, it is done now ...
+ [ -n "${BOOT}" ] && unset BOOT
+ 
+-# Progressbar begin
+-rc_splash_debug "${SOFTLEVEL}"
+-# Progressbar end
+-
++splash "rc_exit"
+ 
+ # vim:ts=4
+diff -Naur rc-scripts-1.4.16/sbin/rc-services.sh rc-scripts-1.4.16-splash/sbin/rc-services.sh
+--- rc-scripts-1.4.16/sbin/rc-services.sh	2004-05-04 04:36:12.000000000 +0200
++++ rc-scripts-1.4.16-splash/sbin/rc-services.sh	2004-10-13 22:50:54.664788896 +0200
+@@ -402,17 +402,22 @@
+ #   Start 'service' if it is not already running.
+ #
+ start_service() {
+-	[ -z "$1" ] && return 1
++	local retval=0
+ 	
++	[ -z "$1" ] && return 1
++
+ 	if ! service_started "$1"
+ 	then
++		splash "svc_start" "$1"
+ 		if is_fake_service "$1" "${SOFTLEVEL}"
+ 		then
+ 			mark_service_started "$1"
++			splash "svc_started" "$1" "0"
+ 		else
+ 			(. /sbin/runscript.sh "/etc/init.d/$1" start)
+-		
+-			return $?
++			retval="$?"	
++			splash "svc_started" "$1" "${retval}"
++			return "${retval}"
+ 		fi
+ 	fi
+ 
+@@ -424,30 +429,34 @@
+ #   Stop 'service' if it is not already running.
+ #
+ stop_service() {
++	local retval=0
+ 	[ -z "$1" ] && return 1
+ 
+ 	if service_started "$1" 
+ 	then
++		splash "svc_stop" "$1"
++		
+ 		if is_runlevel_stop
+ 		then
+ 			if is_fake_service "$1" "${OLDSOFTLEVEL}"
+ 			then
+ 				mark_service_stopped "$1"
+-
++				splash "svc_stopped" "$1" "0"
+ 				return 0
+ 			fi
+ 		else
+ 			if is_fake_service "$1" "${SOFTLEVEL}"
+ 			then
+ 				mark_service_stopped "$1"
+-
++				splash "svc_stopped" "$1" "0"
+ 				return 0
+ 			fi
+ 		fi
+ 
+ 		(. /sbin/runscript.sh "/etc/init.d/$1" stop)
+-	
+-		return $?
++		retval="$?"
++		splash "svc_stopped" "$1" "${retval}"
++		return "${retval}"
+ 	fi
+ 
+ 	return 0
+diff -Naur rc-scripts-1.4.16/sbin/runscript.sh rc-scripts-1.4.16-splash/sbin/runscript.sh
+--- rc-scripts-1.4.16/sbin/runscript.sh	2004-05-05 23:11:31.000000000 +0200
++++ rc-scripts-1.4.16-splash/sbin/runscript.sh	2004-10-13 22:51:31.221231472 +0200
+@@ -453,11 +453,9 @@
+ 	case "${arg}" in
+ 	stop)
+ 		svc_stop
+-		rc_splash_update "live" "${myservice}" "stop"
+ 		;;
+ 	start)
+ 		svc_start
+-		rc_splash_update "live" "${myservice}" "start"
+ 		;;
+ 	needsme|ineed|usesme|iuse|broken)
+ 		list_depend_trace "${arg}"
