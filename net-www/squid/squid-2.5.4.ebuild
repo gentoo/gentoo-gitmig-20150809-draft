@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.4.ebuild,v 1.7 2004/01/10 18:52:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.4.ebuild,v 1.8 2004/01/21 16:24:40 gmsoft Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/glibc
 	sasl? ( >=dev-libs/cyrus-sasl-1.5.27 )"
 DEPEND="${RDEPEND} dev-lang/perl"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha ~hppa ppc64"
+KEYWORDS="x86 ~ppc sparc alpha hppa ppc64"
 SLOT="0"
 
 src_unpack() {
@@ -119,12 +119,12 @@ src_compile() {
 	sed -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 4096:" \
 		include/autoconf.h.orig > include/autoconf.h
 
-	if [ "${ARCH}" = "hppa" ]
-	then
-		mv include/autoconf.h include/autoconf.h.orig
-		sed -e "s:^#define HAVE_MALLOPT 1:#undef HAVE_MALLOPT:" \
-			include/autoconf.h.orig > include/autoconf.h
-	fi
+#	if [ "${ARCH}" = "hppa" ]
+#	then
+#		mv include/autoconf.h include/autoconf.h.orig
+#		sed -e "s:^#define HAVE_MALLOPT 1:#undef HAVE_MALLOPT:" \
+#			include/autoconf.h.orig > include/autoconf.h
+#	fi
 
 	emake || die "compile problem"
 }
