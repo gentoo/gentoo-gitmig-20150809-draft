@@ -94,11 +94,11 @@ if (%versions) {
 if (!defined $version) {
     # Changing a patch or something, not an ebuild, so put the entry
     # after the first *version line
-	$text =~ s/^\*.*\n/$&\n$entry\n/m
+    $text =~ s/^\*.*\n/$&\n$entry\n/m
         or die "Failed to insert new entry (1)\n";
-	# If we were putting it at the top of the file, the following
-	# regex would work well.
-	# $text =~ s/^.*?\n(?=\s)/$&\n$entry\n/s;
+    # If we were putting it at the top of the file, the following
+    # regex would work well.
+    # $text =~ s/^.*?\n(?=\s)/$&\n$entry\n/s;
 } elsif ($versions{$version} > -1) {
     # Insert after the *version line
     # Sometimes the version line includes . or even .ebuild
