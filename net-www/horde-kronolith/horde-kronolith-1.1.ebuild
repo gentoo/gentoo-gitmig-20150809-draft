@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.4 2003/11/12 20:25:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.5 2003/12/04 17:52:02 mholzer Exp $
 
 inherit webapp-apache
 
@@ -18,9 +18,6 @@ S=${WORKDIR}/${MY_P}
 
 webapp-detect || NO_WEBSERVER=1
 
-HTTPD_USER="apache"
-HTTPD_GROUP="apache"
-
 pkg_setup() {
 	GREPSQL=`grep sql /var/db/pkg/dev-php/mod_php*/USE`
 	GREPLDAP=`grep ldap /var/db/pkg/dev-php/mod_php*/USE`
@@ -35,7 +32,6 @@ pkg_setup() {
 }
 
 src_install () {
-
 	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/horde/kronolith
 
@@ -47,7 +43,7 @@ src_install () {
 	cd ${D}/${HTTPD_ROOT}/horde
 
 	# protecting files
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} kronolith
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} kronolith
 	find ${D}/${destdir} -type f -exec chmod 0640 {} \;
 	find ${D}/${destdir} -type d -exec chmod 0750 {} \;
 }

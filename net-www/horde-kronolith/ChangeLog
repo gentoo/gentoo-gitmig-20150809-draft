@@ -1,6 +1,9 @@
 # ChangeLog for net-www/horde-kronolith
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/ChangeLog,v 1.7 2003/11/12 20:25:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/ChangeLog,v 1.8 2003/12/04 17:52:02 mholzer Exp $
+
+  04 Dec 2003; Martin Holzer <mholzer@gentoo.org> horde-kronolith-1.1.ebuild:
+  fixing coreutils chown.
 
   12 Nov 2003; Martin Holzer <mholzer@gentoo.org> horde-kronolith-1.1.ebuild:
   webapps-apache.
