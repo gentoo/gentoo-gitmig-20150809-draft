@@ -1,28 +1,21 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r1.ebuild,v 1.2 2001/07/30 20:21:34 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r1.ebuild,v 1.3 2001/09/15 19:28:01 drobbins Exp $
 
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
-SRC_URI="ftp://ftp.perl.org/pub/perl/CPAN/src/${A}"
+SRC_URI="ftp://ftp.perl.org/pub/perl/CPAN/src/${P}.tar.gz"
 HOMEPAGE="http://www.perl.org"
 
-DEPEND="virtual/glibc sys-apps/groff
-        berkdb? ( >=sys-libs/db-3.2.3h-r3
-                  =sys-libs/db-1.85-r1 )
-	gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
+DEPEND="virtual/glibc sys-apps/groff berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
-RDEPEND="virtual/glibc
-        berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 )
-	gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
+RDEPEND="virtual/glibc berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 src_compile() {
-
 # this is gross -- from Christian Gafton, Red Hat
-cat > config.over <<EOF
+	cat > config.over <<EOF
 installprefix=${D}/usr
 #test -d \$installprefix || mkdir \$installprefix
 #test -d \$installprefix/bin || mkdir \$installprefix/bin
@@ -53,17 +46,7 @@ EOF
     else
       myconf="${myconf} -Ui_db -Ui_ndbm"
     fi
- #   if [ "`use perl`" ]
- #   then
- #     # We create a shared libperl only if the use variable perl
- #     # is set, because using a shared lib leads to as significiant
- #     # performance penalty
- #     myconf="${myconf} -Duseshrplib"
- #   fi
-    sh Configure -des -Dprefix=/usr -Dd_dosuid \
-	-Dd_semctl_semun ${myconf} -Duselargefiles \
-	-Darchname=${CHOST%%-*}-linux
-	#-Dusethreads -Duse505threads \
+    sh Configure -des -Dprefix=/usr -Dd_dosuid -Dd_semctl_semun ${myconf} -Duselargefiles -Darchname=${CHOST%%-*}-linux
 
     #Optimize ;)
     cp config.sh config.sh.orig
@@ -76,23 +59,21 @@ EOF
 #  right the second time... -- pete
 #    cp makefile makefile.orig
 #    sed -e "s:^0::" makefile.orig > makefile
-    rm -f makefile x2p/makefile
-    try make
-    # Parallel make failes
-    make test
+    
+	#for some reason, this rm -f doesn't seem to actually do anything.  So we explicitly use "Makefile"
+	#(rather than the default "makefile") in all make commands below.
+	rm -f makefile x2p/makefile
+    make -f Makefile || die
+    # Parallel make fails
+    make -f Makefile test 
 }
 
 src_install() {
 
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
-    try make INSTALLMAN1DIR=${D}/usr/share/man/man1 \
-	     INSTALLMAN3DIR=${D}/usr/share/man/man3 install
+    make -f Makefile INSTALLMAN1DIR=${D}/usr/share/man/man1 INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die
     install -m 755 utils/pl2pm ${D}/usr/bin/pl2pm
-
-# Generate *.ph files with a trick. Is this sick or what?
-# Yes it is, and thank you Christian for getting sick just so we can
-# run perl :)
 
 make all -f - <<EOF
 STDH    =\$(wildcard /usr/include/linux/*.h) \$(wildcard /usr/include/asm/*.h) \
