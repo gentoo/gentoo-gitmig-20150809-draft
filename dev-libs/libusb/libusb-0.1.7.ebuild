@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.7.ebuild,v 1.1 2002/12/23 08:04:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.7.ebuild,v 1.2 2003/01/02 23:19:38 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Userspace access to USB devices"
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~sparc  ~ppc"
+KEYWORDS="x86 sparc ppc"
 
 src_compile() {
 
