@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.3.8.ebuild,v 1.4 2001/08/13 22:08:19 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.3.8.ebuild,v 1.5 2001/09/03 21:37:00 g2boojum Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -48,7 +48,7 @@ src_compile() {
 	    myconf="$myconf --with-db=gdbm"
 	fi
 	if [ -z "`use pam`" ] ; then
-	    myconf="$myconf --disable-pam"
+	    myconf="$myconf --without-authpam"
 	fi
 	try ./configure --sysconfdir=/etc/courier-imap --prefix=/usr \
 	--bindir=/usr/sbin --libexecdir=/usr/lib/courier-imap \
