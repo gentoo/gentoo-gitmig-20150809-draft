@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpeg-tools/mjpeg-tools-1a.ebuild,v 1.4 2000/11/02 08:31:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpeg-tools/mjpeg-tools-1a.ebuild,v 1.5 2001/04/29 19:27:11 achim Exp $
 
 P=mjpeg-tools-1a
 A="mjpeg_beta_1a.tar.gz quicktime4linux-1.1.9.tar.gz"
@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 src_unpack() {
   unpack ${A}
   cd ${S}
-  sed -e "s:-O2:${CFLAGS}:" ${O}/files/Makefile > Makefile
+  sed -e "s:-O2:${CFLAGS}:" ${FILESDIR}/Makefile > Makefile
   cd aenc
   cp Makefile Makefile.orig
   sed -e "s:\.\./jpeg-6b-mmx/libjpeg\.a:-ljpeg:" Makefile.orig > Makefile

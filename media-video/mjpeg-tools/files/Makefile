@@ -7,12 +7,12 @@ LIBS_AND_OPT= $(LIBS) -lpng -lz -ljpeg
 
 # uncomment if you want to use ALSA, 
 # the Advanced Linux Sound Architecture (http://alsa.jcu.cz) 
-USE_ALSA = -DUSE_ALSA -lasound
+#USE_ALSA = -DUSE_ALSA -lasound
 
 #this is for software MJPEG playback, and GLib is used by movtarlib
 L_FLAGS = -lpthread -lSDL -lglib
 
-CFLAGS =  -O2 -I . -I buz -I quicktime/quicktime -I mjpeg -I movtar -I/usr/lib/glib/include
+CFLAGS =  -O2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I . -I buz -I quicktime/quicktime -I mjpeg -I movtar 
 
 all:		lavrec lavplay lavvideo
 
