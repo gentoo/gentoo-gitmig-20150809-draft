@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>mozilla</herd>
+	<longdescription>
+	This is the package of the revived GPLFLash, and is based on Olivier
+	Debons original work, which hasen't had a release since June 2000.
+	This project hope to bring GPLFlash back as a free, portable and
+	useable alternative to the flash-decoder released by Macromedia.
+	The project contains a decoding library, a player and (perhaps most
+	importantly) a mozilla/netscape plugin.
+	</longdescription>
+</pkgmetadata>

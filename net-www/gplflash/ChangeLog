@@ -1,6 +1,9 @@
 # ChangeLog for net-www/gplflash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.15 2004/11/03 15:31:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.16 2004/11/03 16:08:15 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> +metadata.xml:
+  Added metadata.xml
 
 *gplflash-0.4.12 (03 Nov 2004)
 
