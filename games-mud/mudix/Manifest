@@ -1,3 +1,4 @@
-MD5 1bba339ef1715802b32462f1d31e1015 files/digest-mudix-4.0 60
-MD5 75a1b404338e826bccb7c28269f289c1 mudix-4.0.ebuild 691
 MD5 aec8006ac16e4f37379b33a2c0e09554 ChangeLog 484
+MD5 75a1b404338e826bccb7c28269f289c1 mudix-4.0.ebuild 691
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 1bba339ef1715802b32462f1d31e1015 files/digest-mudix-4.0 60
