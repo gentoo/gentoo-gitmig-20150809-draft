@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.0.3.ebuild,v 1.1 2004/03/26 23:37:02 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.0.3.ebuild,v 1.2 2004/03/27 11:10:14 dholm Exp $
 
 inherit zproduct
 
@@ -11,7 +11,7 @@ DESCRIPTION="MIME-type based transformations for Archetypes"
 HOMEPAGE="http://www.sf.net/projects/archetypes"
 SRC_URI="mirror://sourceforge/archetypes/${MY_P}.tgz"
 LICENSE="GPL-1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 ZPROD_LIST="${MY_PN}"
 MYDOC="${MYDOC} TODO README LICENSE.txt ChangeLog"
 
