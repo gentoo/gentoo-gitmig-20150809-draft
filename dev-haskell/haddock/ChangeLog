@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.5 2003/11/12 14:47:36 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.6 2003/12/16 15:36:18 kosmikus Exp $
+
+  16 Dec 2003; Andres Loeh <kosmikus@gentoo.org> haddock-0.6.ebuild:
+  Fixed ebuild: Library files now in correct position. Cleaned installation of
+  docs a little bit.
 
 *haddock-0.6 (12 Nov 2003)
 

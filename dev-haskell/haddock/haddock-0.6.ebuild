@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6.ebuild,v 1.1 2003/11/12 14:47:36 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6.ebuild,v 1.2 2003/12/16 15:36:18 kosmikus Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -37,14 +37,18 @@ src_compile() {
 	# breaks otherwise ...
 	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf
 	# using make because emake behaved strangely on my machine
-	make || die
+	make || die "make failed"
 
 	# if documentation has been requested, build documentation ...
 	if use doc; then
 		cd ${S}/haddock/doc
-		emake html || die
+		emake html \
+			datadir="/usr/share/doc/${PF}" \
+			|| die "emake html failed"
 		if use tetex; then
-			emake ps || die
+			emake ps \
+				datadir="/usr/share/doc/${PF}" \
+				|| die "emake ps failed"
 		fi
 	fi
 }
@@ -52,15 +56,11 @@ src_compile() {
 src_install() {
 	local mydoc
 
-	use doc && mydoc="html" || mydoc=""
-	use doc && use tetex && mydoc="${mydoc} ps"
-
-	echo SGMLDocWays="${mydoc}" >> mk/build.mk
-	make install install-docs \
+	make install \
 		prefix="${D}/usr" \
-		datadir="${D}/usr/share/doc/${PF}" \
+		datadir="${D}/usr/share/${PF}" \
 		infodir="${D}/usr/share/info" \
-		mandir="${D}/usr/share/man" || die
+		mandir="${D}/usr/share/man" || die "make install failed"
 
 	cd ${S}/haddock
 	dodoc CHANGES LICENSE README TODO
