@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.49 2003/01/07 16:46:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.50 2003/01/07 22:31:18 tuxus Exp $
 
 *gentoolkit-0.1.17-r8 (07 Jan 2003)
+
+  07 Jan 2003; Jan Seidel <tuxus@gentoo.org> gentoolkit-0.1.17-r8.ebuild :
+  Added mips to keywords.
 
   07 Jan 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r8.ebuild files/digest-gentoolkit-0.1.17-r8 ChangeLog :
   Updated mkebuild to meet skel.ebuild specs. This closes #13403. 
