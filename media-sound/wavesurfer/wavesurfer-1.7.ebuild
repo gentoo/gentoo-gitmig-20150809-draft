@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/wavesurfer-1.7.ebuild,v 1.6 2005/01/01 13:29:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/wavesurfer-1.7.ebuild,v 1.7 2005/03/05 08:51:38 corsair Exp $
 
 DESCRIPTION="tool for recording, playing, editing, viewing and labeling of audio"
 HOMEPAGE="http://www.speech.kth.se/wavesurfer/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.speech.kth.se/wavesurfer/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 sparc ~ppc64"
+KEYWORDS="x86 ~ppc amd64 sparc ppc64"
 IUSE=""
 
 RDEPEND=">=dev-tcltk/snack-2.2.4"
