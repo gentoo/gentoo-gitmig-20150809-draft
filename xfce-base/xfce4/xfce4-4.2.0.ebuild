@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.0.ebuild,v 1.7 2005/02/01 17:41:21 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.0.ebuild,v 1.8 2005/02/07 08:37:16 bcowan Exp $
 
 DESCRIPTION="Xfce 4 base ebuild"
 LICENSE="GPL-2 BSD LGPL-2"
@@ -34,5 +34,12 @@ pkg_postinst() {
 	einfo ""
 	einfo "For extra functionality please emerge xfce-base/xfce4-extras."
 	einfo "To start Xfce the default script is startxfce4."
+	einfo ""
+	ewarn "The composite extension in Xorg along with the compositor in"
+	ewarn "Xfwm4 are still experimental and buggy, please refrain from"
+	ewarn "filing bugs upstream for these features."
+	einfo ""
+	ewarn "Some or all of your plugins will need to be re-compiled after"
+	ewarn "an upgrade from 4.0 to 4.2."
 	einfo ""
 }
