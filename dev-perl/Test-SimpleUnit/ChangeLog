@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-SimpleUnit
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SimpleUnit/ChangeLog,v 1.1 2004/03/29 11:11:48 mcummings Exp $
+
+*Test-SimpleUnit-1.21 (29 Mar 2004)
+
+  29 Mar 2004; Michael Cummings <mcummings@gentoo.org>
+  Test-SimpleUnit-1.21.ebuild, metadata.xml:
+  dep of a dep for bricolage, bug 21549
+

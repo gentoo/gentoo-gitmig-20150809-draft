@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Scalar-Properties
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-Properties/ChangeLog,v 1.1 2004/03/29 11:08:32 mcummings Exp $
+
+*Scalar-Properties-0.12 (29 Mar 2004)
+
+  29 Mar 2004; Michael Cummings <mcummings@gentoo.org>
+  Scalar-Properties-0.12.ebuild, metadata.xml:
+  dep of a dep for bricolage, bug 21549
+
