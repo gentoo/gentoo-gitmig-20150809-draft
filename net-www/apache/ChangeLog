@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.44 2003/02/24 20:06:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.45 2003/02/25 21:56:56 woodchip Exp $
+
+  25 Feb 2003; Donny Davies <woodchip@gentoo.org> apache.rc6, apache2.initd :
+  Send USR1 signal only to parent in reload(); #16326.
 
 *apache-1.3.27-r4 (23 Feb 2003)
 
