@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.4 2004/10/20 13:57:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.5 2004/10/22 17:58:33 eradicator Exp $
 
 IUSE=""
 
@@ -24,9 +24,7 @@ src_unpack() {
 	# Fix a gcc crash.  With the new atexit patch to gcc, it
 	# seems it does not handle -mno-ieee-fp very well.
 	sed -i -e "s:-mno-ieee-fp::g" configure
-}
 
-src_compile() {
 	# Fixes some strange sed-, libtool- and ranlib-errors on
 	# Mac OS X
 	if use macos || use ppc-macos; then
@@ -34,9 +32,12 @@ src_compile() {
 	else
 		elibtoolize
 	fi
+}
 
+src_compile() {
 	# Cannot compile with sse2 support it would seem #36104
 	use x86 && [ $(gcc-major-version) -eq 3 ] && append-flags -mno-sse2
+	[ "`gcc-version`" == "3.4" ] && replace-flags -Os -O2
 
 	# take out -fomit-frame-pointer from CFLAGS if k6-2
 	is-flag -march=k6-3 && filter-flags -fomit-frame-pointer
