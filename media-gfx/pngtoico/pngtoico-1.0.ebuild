@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtoico/pngtoico-1.0.ebuild,v 1.3 2003/05/25 14:54:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtoico/pngtoico-1.0.ebuild,v 1.4 2003/11/12 03:01:40 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Convert png images to MS ico format"
 HOMEPAGE="http://www.kernel.org/pub/software/graphics/pngtoico/"
@@ -15,7 +17,7 @@ DEPEND="media-libs/libpng"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 Makefile < ${FILESDIR}/${P}-Makefile.patch
+	epatch ${FILESDIR}/${P}-Makefile.patch
 }
 
 src_compile() {

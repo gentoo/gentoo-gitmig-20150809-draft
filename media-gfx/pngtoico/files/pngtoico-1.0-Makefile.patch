@@ -7,7 +7,7 @@
 -CFLAGS  = -O2 -fomit-frame-pointer
 -LDFLAGS = -s
 -LIBS    = -lpng
-+CFLAGS  = -O2 -fomit-frame-pointer `libpng-config --cflags`
++CFLAGS  += -fomit-frame-pointer `libpng-config --cflags`
 +LDFLAGS = -s `libpng-config --ldflags` 
 +LIBS    = `libpng-config --libs`
  INSTALL = install
