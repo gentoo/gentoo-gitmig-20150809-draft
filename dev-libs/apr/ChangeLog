@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.9 2005/01/09 00:00:37 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.10 2005/01/11 04:12:35 weeve Exp $
+
+  10 Jan 2005; Jason Wever <weeve@gentoo.org> apr-0.9.5.ebuild:
+  Added ~sparc keyword wrt bug #77455.
 
 *apr-0.9.5 (08 Jan 2005)
 
