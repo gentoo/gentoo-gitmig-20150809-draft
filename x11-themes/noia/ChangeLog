@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/noia
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.4 2002/12/11 05:39:15 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.5 2003/02/03 06:25:01 satai Exp $
+
+*noia-030203 (03 Feb 03)
+
+  03 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  Version bump.  Will have to remove all these old ebuilds once 1.0 is
+  released, so that we can use standard versioning from then on.
 
 *noia-021209 (10 Dec 02)
 
