@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Defresne Sylvain (keiichi) <kamisama@free.fr>
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.0_pre4-r1.ebuild,v 1.1 2002/05/28 01:02:05 ashmodai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.0_pre4-r1.ebuild,v 1.2 2002/05/28 02:57:41 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -15,7 +15,7 @@ SLOT="0"
 
 DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6c )
-	gpm? ( >=sys-libs/gpm-1.19.6 )
+	gpm? ( sys-libs/gpm )
 	java? ( >=sys-devel/flex-2.5.4a )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
