@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.7 2004/09/23 13:01:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.8 2004/09/23 23:04:03 kloeri Exp $
+
+  24 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> check-0.8.4.ebuild:
+  Add ~alpha keyword.
 
   23 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> check-0.8.4.ebuild:
   Stable on sparc wrt #65041
