@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.8 2003/09/06 23:52:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.9 2003/09/08 05:13:41 msterret Exp $
 
 IUSE="nls doc"
 
@@ -15,18 +15,18 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha hppa"
 
 RDEPEND=">=dev-libs/libxml-1.8.16
-         >=gnome-base/gnome-print-0.34
-         =gnome-base/libglade-0*
-         =x11-libs/gtk+-1.2*
-         <gnome-base/gnome-vfs-1.9.0
-         >=dev-libs/libunicode-0.4-r1
+	>=gnome-base/gnome-print-0.34
+	=gnome-base/libglade-0*
+	=x11-libs/gtk+-1.2*
+	<gnome-base/gnome-vfs-1.9.0
+	>=dev-libs/libunicode-0.4-r1
 	media-libs/gdk-pixbuf"
 
 DEPEND="nls? ( sys-devel/gettext )
-        >=dev-util/intltool-0.11
-        dev-lang/perl
-        doc? ( dev-util/gtk-doc )
-        ${RDEPEND}"
+	>=dev-util/intltool-0.11
+	dev-lang/perl
+	doc? ( dev-util/gtk-doc )
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -40,11 +40,11 @@ src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
 
-    if [ -n "`use doc`" ]; then
-       myconf="${myconf} --enable-gtk-doc"
-    else
-       myconf="${myconf} --disable-gtk-doc"
-    fi
+	if [ -n "`use doc`" ]; then
+		myconf="${myconf} --enable-gtk-doc"
+	else
+		myconf="${myconf} --disable-gtk-doc"
+	fi
 
 	./configure --host=${CHOST}	\
 		    --prefix=/usr \

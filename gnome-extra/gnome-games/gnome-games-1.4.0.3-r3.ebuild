@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Reviewed by Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.10 2003/02/13 12:17:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.11 2003/09/08 05:15:58 msterret Exp $
 
 IUSE="nls"
 
@@ -18,8 +18,8 @@ RDEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
 	>=media-libs/gdk-pixbuf-0.11.0-r1"
 
 DEPEND="${RDEPEND}
-        >=app-text/scrollkeeper-0.2
-        nls? ( sys-devel/gettext )"
+	>=app-text/scrollkeeper-0.2
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.95-r1.ebuild,v 1.9 2003/09/06 23:52:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.95-r1.ebuild,v 1.10 2003/09/08 05:11:17 msterret Exp $
 
 IUSE="ldap odbc postgres mysql"
 
@@ -42,22 +42,22 @@ src_compile() {
 		myconf="--with-mysql=/usr"
 	fi
 
-  	if [ "`use ldap`" ]
+	if [ "`use ldap`" ]
 	then
-    		myconf="$myconf --with-ldap=/usr"
-  	fi
+		myconf="$myconf --with-ldap=/usr"
+	fi
 
-  	if [ "`use odbc`" ]
+	if [ "`use odbc`" ]
 	then
-    		myconf="$myconf --with-odbc"
-  	fi
+		myconf="$myconf --with-odbc"
+	fi
 
-  	if [ "`use postgres`" ]
+	if [ "`use postgres`" ]
 	then
-    		myconf="$myconf --with-postgres=/usr"
-  	fi
+		myconf="$myconf --with-postgres=/usr"
+	fi
 
-  	# Wierd one, it dont detect bonobo. If someone could have a look
+	# Wierd one, it dont detect bonobo. If someone could have a look
 	# and fix if i havent gotten to it yet.
 #	myconf="$myconf --disable-bonobotest"
 

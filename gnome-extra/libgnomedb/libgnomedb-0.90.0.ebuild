@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.90.0.ebuild,v 1.2 2003/09/06 23:52:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.90.0.ebuild,v 1.3 2003/09/08 05:08:40 msterret Exp $
 
 IUSE=""
 
@@ -35,11 +35,11 @@ src_unpack() {
 src_install() {
 	gnome2_src_install
 
-    # minor cosmetic fix to capplet icon
-    capplet_link=${D}/usr/share/control-center-2.0/capplets/database-properties.desktop
-    if [ -f "${capplet_link}" ]; then
-       mv ${capplet_link} ${capplet_link}.orig && \
-         sed 's,Icon=gnome-db.png,Icon=libgnomedb/gnome-db.png,' ${capplet_link}.orig > ${capplet_link}
-       rm ${capplet_link}.orig
-    fi
+	# minor cosmetic fix to capplet icon
+	capplet_link=${D}/usr/share/control-center-2.0/capplets/database-properties.desktop
+	if [ -f "${capplet_link}" ]; then
+		mv ${capplet_link} ${capplet_link}.orig && \
+		sed 's,Icon=gnome-db.png,Icon=libgnomedb/gnome-db.png,' ${capplet_link}.orig > ${capplet_link}
+		rm ${capplet_link}.orig
+	fi
 }

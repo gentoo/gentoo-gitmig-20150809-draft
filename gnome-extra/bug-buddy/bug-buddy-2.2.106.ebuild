@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.2.106.ebuild,v 1.6 2003/07/19 23:27:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.2.106.ebuild,v 1.7 2003/09/08 05:15:01 msterret Exp $
 
 inherit gnome2
 
@@ -25,7 +25,7 @@ RDEPEND=">=gnome-base/libglade-2
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-        dev-util/intltool
+	dev-util/intltool
 	>=app-text/scrollkeeper-0.3.8"
 
 DOCS="ABOUT* AUTHORS ChangeLog COPY* README* INSTALL NEWS TODO"
