@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.3.ebuild,v 1.5 2003/07/16 17:32:54 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.3.ebuild,v 1.6 2003/08/03 04:26:22 vapier Exp $
 
-IUSE="pam ldap ssl sasl snmp"
+IUSE="pam ldap ssl sasl snmp debug"
 
 #lame archive versioning scheme..
 S_PV=${PV%.*}
@@ -39,7 +39,7 @@ src_unpack() {
 	sed -e 's%^\(LINK =.*\)\(-o.*\)%\1\$(XTRA_LIBS) \2%' \
 		Makefile.in.orig > Makefile.in
 
-	if [ -z "$DEBUGBUILD" ]
+	if [ -z "`use debug`" ]
 	then
 		cd ${S}
 		mv configure.in configure.in.orig

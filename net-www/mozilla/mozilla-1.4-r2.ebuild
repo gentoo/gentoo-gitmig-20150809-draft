@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r2.ebuild,v 1.4 2003/07/30 17:50:24 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r2.ebuild,v 1.5 2003/08/03 04:23:43 vapier Exp $
 
-IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
+IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
 IUSE="${IUSE} mozsvg mozcalendar mozaccess mozp3p mozxmlterm"
 IUSE="${IUSE} moznoirc moznomail moznocompose moznoxft"
@@ -183,7 +183,7 @@ src_compile() {
 		myconf="${myconf} --disable-ldap"
 	fi
 
-	if [ "${DEBUGBUILD}" != "yes" ]
+	if [ -z "`use debug`" ]
 	then
 		myconf="${myconf} --enable-strip-libs \
 			              --disable-debug \

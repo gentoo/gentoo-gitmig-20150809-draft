@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.17 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.18 2003/08/03 04:23:43 vapier Exp $
 
-IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome mozsvg"
+IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome mozsvg debug"
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit flag-o-matic makeedit nsplugins
@@ -147,7 +147,7 @@ src_compile() {
 		myconf="${myconf} --disable-ldap"
 	fi
 
-	if [ -z "${DEBUG}" ] ; then
+	if [ -z "`use debug`" ] ; then
 		myconf="${myconf} --enable-strip-libs \
 			              --disable-debug \
 			              --disable-dtd-debug \
