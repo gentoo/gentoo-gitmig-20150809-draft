@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/regexp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/ChangeLog,v 1.5 2003/11/20 12:06:50 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/ChangeLog,v 1.6 2003/12/25 20:04:53 weeve Exp $
+
+  25 Dec 2003; Jason Wever <weeve@gentoo.org> regexp-1.3.ebuild:
+  Added ~sparc keyword.
 
   20 Nov 2003; Adrian Almenar <strider@gentoo.org> regexp-1.3.ebuild:
   Moved to stable.
@@ -18,7 +21,7 @@
   04 Nov 2002; Adrian Almenar <strider@gentoo.org> regexp-1.2.ebuild ChangeLog files/digest-regexp-1.2:
   Changed from jakarta-regexp to regexp since all jakarta projects dont have 
   jakarta- preffix. Renamed final jar from jakarta-regexp-${PV}.jar to 
-  regexp-${PV}.jar. Also added $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/ChangeLog,v 1.5 2003/11/20 12:06:50 strider Exp $ to the ebuild. Removed superfluous 
+  regexp-${PV}.jar. Also added $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/ChangeLog,v 1.6 2003/12/25 20:04:53 weeve Exp $ to the ebuild. Removed superfluous 
   A=${P}.tar.gz
 
 *jakarta-regexp-1.2 (03 Jun 2002)
