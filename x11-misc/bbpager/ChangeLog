@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbpager
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.5 2002/08/06 01:58:24 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.6 2002/12/12 22:27:09 mkeadle Exp $
+
+*bbpager-0.3.1 (12 Dec 2002)
+
+  12 Dec 2002; Matt Keadle <mkeadle@gentoo.org> bbpager-0.3.1.ebuild
+  files/digest-bbpager-0.3.1
+
+  Bump to latest version. No longer requires patch to build against gcc3.x
 
 *bbpager-0.3.0-r3 (08 Apr 2002)
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> bbpager-0.3.0-r3.ebuild :
