@@ -1,6 +1,10 @@
 # ChangeLog for media-video/fenice
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/ChangeLog,v 1.1 2005/01/06 17:13:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/ChangeLog,v 1.2 2005/01/08 11:08:47 swegener Exp $
+
+  08 Jan 2005; Sven Wegener <swegener@gentoo.org> metadata.xml,
+  fenice-1.6.ebuild:
+  Removed unneeded src_unpack and src_compile. Fixed herd name in metadata.xml.
 
 *fenice-1.6 (06 Jan 2005)
 

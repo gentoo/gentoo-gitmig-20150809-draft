@@ -1,4 +1,14 @@
-MD5 13c075507dd2fdd1fda247d2e694311c ChangeLog 339
-MD5 2ac4136cd3017b1ce3a0b47be74fd980 fenice-1.6.ebuild 666
-MD5 138067f3c0019f8388056e28af7c08db metadata.xml 297
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5250c600bda9563ad37ec8e576b4f581 fenice-1.6.ebuild 531
+MD5 9525b5c3bfd610213c79ec212ed8d3f6 ChangeLog 506
+MD5 a410c19dfae7b9b1948abd3c64b51970 metadata.xml 291
 MD5 17a0b9f65221ff4aa90ddd3a16d9abe0 files/digest-fenice-1.6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB379FI1lqEGTUzyQRAtUpAKCbGwpMjcFo0afLbUT9rbZOwGGHvACfRP3t
+Jx8MLRo1p8JR/zSyjRZy1EY=
+=7hou
+-----END PGP SIGNATURE-----
