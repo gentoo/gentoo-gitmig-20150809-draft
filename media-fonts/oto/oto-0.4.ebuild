@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/oto-0.4.ebuild,v 1.4 2004/07/01 10:48:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/oto-0.4.ebuild,v 1.5 2004/07/05 08:05:36 usata Exp $
 
 DESCRIPTION="Open Type Organizer"
 HOMEPAGE="http://sourceforge.net/projects/oto/"
-SRC_URI="mirror://sourceforge/oto/oto-0.4.tar.gz"
+SRC_URI="mirror://sourceforge/oto/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
