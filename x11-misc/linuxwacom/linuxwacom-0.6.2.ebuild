@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.2.ebuild,v 1.3 2004/05/10 21:56:05 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.2.ebuild,v 1.4 2004/05/10 22:04:37 battousai Exp $
 
 DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
@@ -64,9 +64,9 @@ src_compile() {
 	fi
 	if [ `use tcltk` ];
 	then
-	  withtcltk="--with-tcl --with-tk"
+		withtcltk="--with-tcl --with-tk"
 	else
-	  withtcltk="--without-tcl --without-tk"
+		withtcltk="--without-tcl --without-tk"
 	fi
 
 	myconf="--enable-wacomdrv --with-xf86=/usr/X11R6/lib/Server $withgtk $withtcltk"
