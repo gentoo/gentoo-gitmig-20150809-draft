@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.7.4-r1.ebuild,v 1.5 2002/10/17 14:22:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.7.4-r1.ebuild,v 1.6 2002/11/17 18:24:11 hanno Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scribus is a Layout program"
@@ -23,11 +23,11 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	einstall destdir=${D} || die "couldn't be installed"
-	
+
 	dodoc AUTHORS ChangeLog README TODO
-	
+
 	# Fixing desktop.scribus
 	use kde &&
 	(
@@ -42,7 +42,6 @@ src_install () {
 	# Copy the pixmaps to the generic place
 	insinto /usr/share/pixmaps/
 	doins debian/scribus.xpm
-	
+
 	dosym /usr/share/scribus/doc /usr/share/doc/${PF}/html
-	
 }
