@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/xmms-wakeup
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wakeup/ChangeLog,v 1.1 2004/06/17 03:05:36 eradicator Exp $
+
+*xmms-wakeup-0.15 (16 Jun 2004)
+
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +xmms-wakeup-0.15.ebuild:
+  Initial ebuild by Ben Slote <iswm@cox.net> in bug #48106.
+
