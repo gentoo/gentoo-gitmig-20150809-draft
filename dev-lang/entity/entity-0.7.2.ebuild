@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.6 2001/07/07 17:27:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.7 2001/07/07 17:29:13 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -71,7 +71,7 @@ src_compile() {
 	--enable-gtk=module \
 	--enable-c=module $myconf \
 	--enable-javascript=yes --with-included-njs --enable-csinc
-    try make LDFLAGS=\"-L/usr/lib/python2.0/config/ -lpython2.0 `python-config`\"
+    try make LDFLAGS=\"-L/usr/lib/python2.0/config/ -lpython2.0 `python-config --libs`\"
 
 
 }
