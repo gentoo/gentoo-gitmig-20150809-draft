@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.26 2005/01/31 23:50:08 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.27 2005/02/05 02:55:32 swtaylor Exp $
+
+  04 Feb 2005; Scott W Taylor <swtaylor@gentoo.org>
+  files/courier-authlib-initd:
+  add "provide authdaemond" to init script
 
   31 Jan 2005; Scott W Taylor <swtaylor@gentoo.org>
   courier-authlib-0.52-r1.ebuild, courier-authlib-0.53.ebuild:
