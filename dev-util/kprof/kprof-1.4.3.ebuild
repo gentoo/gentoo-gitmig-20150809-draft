@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.3.ebuild,v 1.2 2005/01/10 02:48:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.3.ebuild,v 1.3 2005/03/09 14:48:33 greg_g Exp $
 
 inherit kde
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/kprof/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 
 need-kde 3
