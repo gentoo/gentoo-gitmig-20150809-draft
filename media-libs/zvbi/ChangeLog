@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/zvbi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.11 2004/06/24 23:26:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.12 2004/08/29 11:36:56 mholzer Exp $
+
+*zvbi-0.2.8 (29 Aug 2004)
+
+  29 Aug 2004; Martin Holzer <mholzer@gentoo.org> zvbi-0.2.8.ebuild:
+  Version bumped. Closes 49058
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> zvbi-0.2.4.ebuild:
   stable on alpha and ia64
