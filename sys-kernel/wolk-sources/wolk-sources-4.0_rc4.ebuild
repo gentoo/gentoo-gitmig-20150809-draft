@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc4.ebuild,v 1.1 2003/03/24 20:54:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc4.ebuild,v 1.2 2003/03/29 00:25:36 livewire Exp $
 
 IUSE="build"
 
@@ -26,6 +26,7 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 	cd ${WORKDIR}/linux-${KV}
 	bzcat ${DISTDIR}/linux-${OKV}${EXTRAVERSION}.patch.bz2 | patch -p1 || die
+	echo "KV=${KV}" >/tmp/KV
 }
 src_install() {
 	dodir /usr/src
