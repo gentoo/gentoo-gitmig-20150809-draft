@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.6a.ebuild,v 1.6 2005/01/01 11:43:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.6a.ebuild,v 1.7 2005/01/18 10:07:19 dragonheart Exp $
 
 IUSE="oss"
 
@@ -85,8 +85,9 @@ src_compile() {
 	# Should fix bug #46901
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
 
-	unset ARCH
+	set_arch_to_kernel
 	emake || die "Parallel Make Failed"
+	set_arch_to_portage
 }
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r3.ebuild,v 1.8 2005/01/11 12:47:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r3.ebuild,v 1.9 2005/01/18 10:07:19 dragonheart Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -81,9 +81,10 @@ src_compile() {
 		--with-cards="${ALSA_CARDS}" || die "econf failed"
 
 	# linux-mod_src_compile doesn't work well with alsa
-	unset ARCH
+	set_arch_to_kernel
 	# -j1 : see bug #71028
-	emake -j1 || die "Parallel Make Failed"
+	emake -j1 || die "Make Failed"
+	set_arch_to_portage
 
 	if use doc;
 	then

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.8 2005/01/18 08:42:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.9 2005/01/18 10:07:19 dragonheart Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -110,9 +110,10 @@ src_compile() {
 		myconf=$(echo ${PNP_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
 	fi
 
-	unset ARCH
+	set_arch_to_kernel
 	# -j1 : see bug #71028
 	emake -j1  ${myconf} || die "Make Failed"
+	set_arch_to_portage
 
 	if use doc;
 	then
