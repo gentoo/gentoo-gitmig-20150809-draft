@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/sdl-flic-1.2.ebuild,v 1.1 2004/12/27 03:12:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/sdl-flic-1.2.ebuild,v 1.2 2005/01/31 03:39:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.geocities.com/andre_leiradella/SDL_flic-12.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib
@@ -20,13 +20,13 @@ S="${WORKDIR}"/SDL_flic-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-win32.patch
-	cp ${FILESDIR}/Makefile .
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-win32.patch"
+	cp "${FILESDIR}/Makefile" .
 	edos2unix SDL_flic.h
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README.txt
 }
