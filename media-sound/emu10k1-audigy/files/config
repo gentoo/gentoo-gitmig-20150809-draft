@@ -1,0 +1,11 @@
+# Driver build options
+KERNEL_SOURCE :=/usr/src/linux
+DEBUG := n
+SEQUENCER_SUPPORT := n
+
+# say no unless you need to use the dbgemu tool,
+# note that this allows users raw access to any register
+# it should not be used in a normal driver.
+DBGEMU := n
+
+export KERNEL_SOURCE
