@@ -3,5 +3,7 @@
 # ln -s $(portageq portdir)/profiles/default-linux/sparc/sparc32/2004.3 /etc/make.profile
 # emerge system -pv
 
+The old profile is subject to removal any time after 2005.04.01!
+
 For more information, please see:
     http://www.gentoo.org/doc/en/gentoo-upgrading.xml
