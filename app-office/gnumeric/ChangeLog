@@ -1,7 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.18 2002/12/09 22:48:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.19 2002/12/11 18:01:11 foser Exp $
 
+  10 Dec 2002; foser <foser@gentoo.org> gnumeric-1.1.6.ebuild gnumeric-1.1.8.ebuild :
+  Fixed deps (bug #11634)
 
 *gnumeric-1.1.8 (02 Sep 2002)
 

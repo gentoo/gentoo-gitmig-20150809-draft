@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.8.ebuild,v 1.4 2002/11/30 23:25:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.8.ebuild,v 1.5 2002/12/11 18:01:11 foser Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool
@@ -15,8 +15,8 @@ KEYWORDS="x86"
 IUSE="nls libgda gb evo python guile perl"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
-RDEPEND="=x11-libs/gtk+-2.0*
-	=dev-libs/glib-2.0*
+RDEPEND=">=x11-libs/gtk+-2
+	>=dev-libs/glib-2
 	>=gnome-base/libgnome-2.0.1
 	>=gnome-base/libgnomeui-2.0.1
 	>=gnome-base/libbonobo-2.0.0
