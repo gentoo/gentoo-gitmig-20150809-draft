@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9.ebuild,v 1.4 2003/07/18 22:01:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9.ebuild,v 1.5 2003/09/07 00:22:30 msterret Exp $
 
 inherit gcc
 
@@ -45,5 +45,5 @@ pkg_postinst() {
 			einfo "Removing gcc buffered slang.h to avoid conflicts"
 			rm -f `gcc-libpath`/include/slang.h
 		fi
-	fi            
+	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.10 2003/06/22 05:10:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.11 2003/09/07 00:22:30 msterret Exp $
 
 IUSE="nls pic build"
 
@@ -73,9 +73,9 @@ src_unpack() {
 	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 > /dev/null || die
 	cd ${S}
 	unpack glibc-linuxthreads-${PV}.tar.bz2 || die
-	
+
 	# This patch apparently eliminates compiler warnings for some versions of gcc.
-	# For information about the string2 patch, see: 
+	# For information about the string2 patch, see:
 	# http://lists.gentoo.org/pipermail/gentoo-dev/2001-June/001559.html
 	einfo "Applying string2.h patch..."
 	cd ${S}; patch -p0 < ${FILESDIR}/glibc-2.2.4-string2.h.diff > /dev/null || die
@@ -117,7 +117,7 @@ src_unpack() {
 	        cd ${S}; patch -p0 < ${FILESDIR}/${PV}/${P}-ppc-sqrtl.diff > /dev/null || die
 	fi
 
-	
+
 	# Some gcc-3.1.1 fixes.  This works fine for other versions of gcc as well,
 	# and should generally be ok, as it just fixes define order that causes scope
 	# problems with gcc-3.1.1.
@@ -145,7 +145,7 @@ src_unpack() {
 	fi
 
 	# Some patches to fixup build on sparc
-	
+
 	if use sparc > /dev/null
 	then
 		einfo "Applying sparc-mathinline patch..."
@@ -161,10 +161,10 @@ src_unpack() {
 		fi
 
 		einfo "Applying nall's sparc32-semctl patch..."
-		cd ${S} 
+		cd ${S}
 		patch -p1 < ${FILESDIR}/${PV}/${P}-sparc32-semctl.patch > /dev/null || die
 	fi
-	
+
 	# Some patches to fixup build on arm
 	if [ "${ARCH}" = "arm" ]; then
 		cd ${S}
@@ -180,9 +180,9 @@ src_compile() {
 
 	# If we build for the build system we use the kernel headers from the target
 	use build && myconf="${myconf} --with-headers=${ROOT}usr/include"
-	
+
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	einfo "Configuring GLIBC..."
 	rm -rf buildhere
 	mkdir buildhere
@@ -200,7 +200,7 @@ src_compile() {
 	# This next option breaks the Sun JDK and the IBM JDK
 	# We should really keep compatibility with older kernels, anyway
 	# --enable-kernel=2.4.0
-	
+
 	einfo "Building GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
 	einfo "Doing GLIBC checks..."
@@ -214,35 +214,35 @@ src_install() {
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
 		install -C buildhere || die
-		
+
 	if [ -z "`use build`" ]
 	then
 		einfo "Installing Info pages..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			info -C buildhere || die
-		
+
 		einfo "Installing Locale data..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			localedata/install-locales -C buildhere || die
-		
+
 		einfo "Installing man pages and docs..."
 		# Install linuxthreads man pages
 		dodir /usr/share/man/man3
 		doman ${S}/man/*.3thr
-		
+
 		# Install nscd config file
 		insinto /etc
 		doins ${S}/nscd/nscd.conf
-		
+
 		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
 	else
 		rm -rf ${D}/usr/share ${D}/usr/lib/gconv
 	fi
-	
-	if [ "`use pic`" ] 
+
+	if [ "`use pic`" ]
 	then
 		find ${S}/buildhere -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/buildhere -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
@@ -253,11 +253,11 @@ src_install() {
 			mv ${i} ${i%.map}_pic.map
 		done
 	fi
-	
+
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.
 	fperms 4755 /usr/lib/misc/pt_chown
-	
+
 	rm -f ${D}/etc/ld.so.cache
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the

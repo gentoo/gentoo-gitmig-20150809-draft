@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.5 2003/08/09 23:02:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.6 2003/09/07 00:22:30 msterret Exp $
 
 IUSE="nls pic build nptl"
 
@@ -81,7 +81,7 @@ PROVIDE="virtual/glibc"
 # for easy compairing or versions ...
 KV_to_int() {
 	[ -z "$1" ] && return 1
-	
+
 	local KV="`echo $1 | \
 		awk '{ tmp = $0; gsub(/^[0-9\.]*/, "", tmp); sub(tmp, ""); print }'`"
 	local KV_MAJOR="`echo "${KV}" | cut -d. -f1`"
@@ -114,9 +114,9 @@ get_KV() {
 # version need to be that which KV_to_int() returns ...
 get_KHV() {
 	local headers=
-	
+
 	[ -z "$1" ] && return 1
-	
+
 	# - First check if linux-headers are installed (or symlink
 	#   to current kernel ...)
 	# - Ok, do we have access to the current kernel's headers ?
@@ -140,17 +140,17 @@ get_KHV() {
 	for x in ${headers}
 	do
 		local header="${x}/linux/version.h"
-		
+
 		if [ -f ${header} ]
 		then
-		
+
 			local version="`grep 'LINUX_VERSION_CODE' ${header} | \
 				sed -e 's:^.*LINUX_VERSION_CODE[[:space:]]*::'`"
 
 			if [ "${version}" -ge "$1" ]
 			then
 				echo "${x}"
-			
+
 				return 0
 			fi
 		fi
@@ -232,7 +232,7 @@ pkg_setup() {
 
 		einfon "Checking kernel headers for broken sysctl.h ... "
 		if ! gcc -I"${KERNEL_HEADERS}" \
-		         -c ${FILESDIR}/test-sysctl_h.c -o ${T}/test1.o &> /dev/null 
+		         -c ${FILESDIR}/test-sysctl_h.c -o ${T}/test1.o &> /dev/null
 		then
 			echo "yes"
 			echo
@@ -251,7 +251,7 @@ pkg_setup() {
 			echo "no"
 		fi
 	fi
-	
+
 	if use_nptl
 	then
 		einfon "Checking gcc for __thread support ... "
@@ -267,7 +267,7 @@ pkg_setup() {
 		fi
 
 		echo
-	
+
 	elif use nptl &> /dev/null
 	then
 		# Just tell the user not to expect too much ...
@@ -279,17 +279,17 @@ pkg_setup() {
 src_unpack() {
 
 	unpack glibc-${MY_PV}.tar.bz2
-	
+
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
 	use_nptl || tar xjf ${FILESDIR}/glibc-manpages-${MY_PV}.tar.bz2
-	
+
 	cd ${S}
 	# Extract our threads package ...
 	if use_nptl
 	then
 		unpack nptl-${NPTL_VER}.tar.bz2
-		
+
 	elif [ -z "${BRANCH_UPDATE}" ]
 	then
 		# The branch update have this already included ...
@@ -357,8 +357,8 @@ src_unpack() {
 
 	if [ "${ARCH}" = "alpha" ]
 	then
-		# Fix compatability with compaq compilers by ifdef'ing out some 
-		# 2.3.2 additions. 
+		# Fix compatability with compaq compilers by ifdef'ing out some
+		# 2.3.2 additions.
 		# <taviso@gentoo.org> (14 Jun 2003).
 		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
 	fi
@@ -391,7 +391,7 @@ setup_flags() {
 
 			# Get rid of flags known to fail
 			replace-flags "-mvis" ""
-		
+
 			# Setup the CHOST properly to insure "sparcv9"
 			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
 			export CHOST="${CHOST/sparc/sparcv9}"
@@ -414,7 +414,7 @@ src_compile() {
 	if use_nptl
 	then
 		local kernelheaders="$(get_KHV "`KV_to_int ${MIN_NPTL_KV}`")"
-		
+
 		# NTPL and Thread Local Storage support.
 		myconf="${myconf} --with-tls --with-__thread \
 		                       --enable-add-ons=nptl \
@@ -467,9 +467,9 @@ src_compile() {
 
 src_install() {
 	local buildtarget="buildhere"
-	
+
 	setup_flags
-	
+
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
 	unset LANGUAGE LANG LC_ALL
@@ -507,7 +507,7 @@ EOF
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			info -C ${buildtarget} || die
-		
+
 		einfo "Installing Locale data..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
@@ -523,11 +523,11 @@ EOF
 			dodir /usr/share/man/man3
 			doman ${S}/man/*.3thr
 		}
-		
+
 		# Install nscd config file
 		insinto /etc
 		doins ${FILESDIR}/nscd.conf
-		
+
 		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
 	else
@@ -538,8 +538,8 @@ EOF
 			install_root=${D} \
 			timezone/install-others -C ${buildtarget} || die
 	fi
-	
-	if [ "`use pic`" ] 
+
+	if [ "`use pic`" ]
 	then
 		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
@@ -559,7 +559,7 @@ EOF
 	# in search path ...
 #	insinto /etc/env.d
 #	doins ${FILESDIR}/03glibc
-	
+
 	rm -f ${D}/etc/ld.so.cache
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.11 2003/08/11 16:08:15 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.12 2003/09/07 00:22:30 msterret Exp $
 
 IUSE="berkdb"
 
@@ -33,10 +33,10 @@ src_unpack() {
 	cd ${S}
 	tar -jxf ${S2}/pam-redhat-0.75-41.1.tar.bz2 || \
 		die "Failed to unpack pam-redhat-0.75-41.1.tar.bz2"
-		
+
 	cp /usr/share/automake/install-sh . || die
 	ln -sf defs/redhat.defs default.defs
-	
+
 	einfo "Applying various patches (bugfixes/updates)..."
 	for x in $(cat ${S2}/patch.list ${S2}/patch.list.gentoo)
 	do
@@ -62,7 +62,7 @@ src_unpack() {
 	einfo "Unpacking docs..."
 	tar -xvzf Linux-PAM-0.75-docs.tar.gz > /dev/null || \
 		die "Failed to unpack docs!"
-	
+
 	cd ${S}; einfo "Installing module docs..."
 	for readme in modules/pam_*/README
 	do
@@ -76,7 +76,7 @@ src_unpack() {
 
 src_compile() {
 	export CFLAGS="${CFLAGS} -fPIC"
-	
+
 	./configure --host=${CHOST} \
 		--prefix=/ \
 		--sbindir=/usr/sbin \
@@ -86,12 +86,12 @@ src_compile() {
 		--enable-fakeroot=${D} \
 		--enable-static-libpam \
 		|| die "Failed to configure"
-	
+
 	# Python stuff in docs gives sandbox problems
 	cp Makefile Makefile.orig
 	sed -e "s:libpam_misc doc examples:libpam_misc:" \
 		Makefile.orig > Makefile
-	
+
 	# Fix warnings for gcc-2.95.3
 	if [ "$(gcc-version)" = "2.95" ]
 	then
@@ -100,7 +100,7 @@ src_compile() {
 			Make.Rules.orig > Make.Rules
 		rm -f Make.Rules.orig
 	fi
-	
+
 	if [ -z "$(use berkdb)" ]
 	then
 		cp Make.Rules Make.Rules.orig
@@ -108,7 +108,7 @@ src_compile() {
 			Make.Rules.orig > Make.Rules
 		rm -f Make.Rules.orig
 	fi
-	
+
 	make || die "Failed to build"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r1.ebuild,v 1.1 2003/08/11 09:31:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r1.ebuild,v 1.2 2003/09/07 00:22:30 msterret Exp $
 
 inherit base
 
@@ -23,7 +23,7 @@ S=${WORKDIR}/${P}
 src_unpack() {
         unpack ${A}
         cd ${S}
-        epatch ${FILESDIR}/libcap-1.10-python.patch 
+        epatch ${FILESDIR}/libcap-1.10-python.patch
 }
 
 PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
@@ -32,7 +32,7 @@ src_compile() {
         local myflags
 		myflags=""
         if [ "`use python`" ]; then
-                myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages" 
+                myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages"
 				CFLAGS="${CFLAGS} -I/usr/include/python${PYTHONVER}"
         fi
 
@@ -46,7 +46,7 @@ src_install() {
         local myflags
 		myflags=""
         if [ "`use python`" ]; then
-                myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/lib/python${PYTHONVER}/site-packages" 
+                myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/lib/python${PYTHONVER}/site-packages"
 		fi
         make install FAKEROOT="${D}" man_prefix=/usr/share ${myflags} || die
 		dodoc CHANGELOG README License pgp.keys.asc doc/capability.notes

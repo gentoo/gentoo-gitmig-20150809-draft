@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.14 2003/06/22 05:48:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.15 2003/09/07 00:22:30 msterret Exp $
 
 IUSE="nls pic build"
 
@@ -73,7 +73,7 @@ pkg_config() {
 
 src_unpack() {
 
-	if [ -n "`is-flag "-fstack-protector"`" -a -n "`has "sandbox" $FEATURES`" ] 
+	if [ -n "`is-flag "-fstack-protector"`" -a -n "`has "sandbox" $FEATURES`" ]
 	then
 		eerror "You have both -fstack-protector and sandbox enabled"
 		eerror "glibc will not compile correctly with both of these enabled"
@@ -87,7 +87,7 @@ src_unpack() {
 	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 || die
 	cd ${S}
 	unpack glibc-linuxthreads-${PV}.tar.gz || die
-	
+
 	# Security Update
 	# Fix for http://www.cert.org/advisories/CA-2003-10.html
 	epatch ${FILESDIR}/${PN}-xdr_security.patch
@@ -178,7 +178,7 @@ src_compile() {
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
 	unset LANGUAGE LANG LC_ALL
-	
+
 	# If we build for the build system we use the kernel headers from the target
 #	( use build || use sparc ) \
 #		&& myconf="${myconf} --with-headers=${ROOT}usr/include"
@@ -186,7 +186,7 @@ src_compile() {
 	# Set it without "build" as well, else it might use the current kernel's
 	# headers, which might just fail (the linux-headers package is usually well
 	# tested...)
-	
+
 	use nls || myconf="${myconf} --disable-nls"
 
 	# Thread Local Storage support.  This dont really work as of yet...
@@ -201,7 +201,7 @@ src_compile() {
 
 	# This should not be done for: ia64 s390 s390x
 #	use x86 && CFLAGS="${CFLAGS} -freorder-blocks"
-	
+
 	einfo "Configuring GLIBC..."
 	rm -rf buildhere
 	mkdir buildhere
@@ -216,7 +216,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--libexecdir=/usr/lib/misc \
 		${myconf} || die
-	
+
 	einfo "Building GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
 #	einfo "Doing GLIBC checks..."
@@ -228,33 +228,33 @@ src_install() {
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
 	unset LANGUAGE LANG LC_ALL
-	
+
 	einfo "Installing GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
 		install -C buildhere || die
-		
+
 	if [ -z "`use build`" ]
 	then
 		einfo "Installing Info pages..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			info -C buildhere || die
-		
+
 		einfo "Installing Locale data..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			localedata/install-locales -C buildhere || die
-	
+
 		einfo "Installing man pages and docs..."
 		# Install linuxthreads man pages
 		dodir /usr/share/man/man3
 		doman ${S}/man/*.3thr
-		
+
 		# Install nscd config file
 		insinto /etc
 		doins ${S}/nscd/nscd.conf
-		
+
 		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
 	else
@@ -265,8 +265,8 @@ src_install() {
 			install_root=${D} \
 			timezone/install-others -C buildhere || die
 	fi
-	
-	if [ "`use pic`" ] 
+
+	if [ "`use pic`" ]
 	then
 		find ${S}/buildhere -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/buildhere -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
@@ -277,11 +277,11 @@ src_install() {
 			mv ${i} ${i%.map}_pic.map
 		done
 	fi
-	
+
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.
 	fperms 4755 /usr/lib/misc/pt_chown
-	
+
 	rm -f ${D}/etc/ld.so.cache
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the

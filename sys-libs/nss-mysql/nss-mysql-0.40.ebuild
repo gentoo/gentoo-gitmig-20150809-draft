@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.40.ebuild,v 1.8 2003/06/22 05:10:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.40.ebuild,v 1.9 2003/09/07 00:22:30 msterret Exp $
 
 DESCRIPTION="NSS MySQL Module"
 HOMEPAGE="http://savannah.gnu.org/projects/nss-mysql"
@@ -49,38 +49,38 @@ pkg_config() {
 	echo "typically a user named root."
 	echo
 	echo -n "MySQL-root-user [root]: "
-	read USERNAME	
+	read USERNAME
 	if [ -z "${USERNAME}" ]; then
 		USERNAME="root"
 	fi
 	echo -n "Is it required to use a password in order to access mysql with ${USERNAME} [Y/n]: "
 	read NEEDPASS
 	POPT="-p"
-	if [ "${NEEDPASS}" == "n" ]; then 
+	if [ "${NEEDPASS}" == "n" ]; then
 		POPT=""
 	fi
 	cmd="${ROOT}/usr/bin/makepasswd --minchars=10 --maxchars=12"
-	if [ -f "${cmd}" ]; then 
+	if [ -f "${cmd}" ]; then
 		PASS=`$cmd`
 		PAS2=`$cmd`
 	fi
 	cmd="${ROOT}/usr/bin/passook"
-	if [ -f "${cmd}" ]; then 
+	if [ -f "${cmd}" ]; then
 		PASS=`$cmd`
 		PAS2=`$cmd`
 	fi
-	if [ -z "${PASS}" ]; then 
+	if [ -z "${PASS}" ]; then
 		echo "";
 		echo "Didn't manage to find a passwd-generator, please type a passwords of your choise";
 		echo -n "Shadow-access-password (root-only): ";
-		read PASS 
+		read PASS
 		echo -n "Select-public-info-password: ";
-		read PAS2 
+		read PAS2
 	fi
-	if [ -z "${PAS2}" ]; then 
+	if [ -z "${PAS2}" ]; then
 		PAS2="badbadbadPASSWDMHALL20020715";
 	fi
-	if [ -z "${PASS}" ]; then 
+	if [ -z "${PASS}" ]; then
 		einfo "I will not accept that you leave that the shadow-access-password empty"
 		die
 	fi

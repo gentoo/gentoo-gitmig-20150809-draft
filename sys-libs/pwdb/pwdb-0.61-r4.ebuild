@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.15 2003/08/11 16:07:37 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.16 2003/09/07 00:22:30 msterret Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -22,10 +22,10 @@ src_unpack () {
 	unpack ${A}
 	[ "${ARCH}" = "hppa" ] && patch -p 2 < ${FILESDIR}/pwdb-0.61-hppa.patch
 
-}	
+}
 
 src_compile() {
-	# author has specified application to be compiled with `-g` 
+	# author has specified application to be compiled with `-g`
 	# no problem, but with ccc `-g` disables optimisation to make
 	# debugging easier, `-g3` enables debugging and optimisation
 	[ "${ARCH}" = "alpha" -a "${CC}" = "ccc" ] && append-flags -g3
@@ -33,7 +33,7 @@ src_compile() {
 	cp default.defs default.defs.orig
 	sed -e "s/^DIRS = .*/DIRS = libpwdb/" -e "s:EXTRAS += :EXTRAS += ${CFLAGS} :" \
 		Makefile.orig > Makefile
-	sed -e "s/=gcc/=${CC:-gcc}/g" default.defs.orig > default.defs	
+	sed -e "s/=gcc/=${CC:-gcc}/g" default.defs.orig > default.defs
 	emake || die
 }
 
@@ -53,7 +53,7 @@ src_install() {
 
 	insinto /etc
 	doins conf/pwdb.conf
-	
+
 	dodoc CHANGES Copyright CREDITS README
 	dohtml -r doc
 	docinto txt

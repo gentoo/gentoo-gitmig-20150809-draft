@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.14 2003/08/11 16:08:15 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.15 2003/09/07 00:22:30 msterret Exp $
 
 IUSE="berkdb"
 
@@ -28,14 +28,14 @@ src_unpack() {
 	cd ${WORKDIR}
 	tar -jxf ${FILESDIR}/pam-${PVR}-gentoo.tbz2 || \
 		die "Failed to unpack patches"
-		
+
 	cd ${S}
 	tar -jxf ${S2}/pam-redhat-0.75-21.tar.bz2 || \
 		die "Failed to unpack pam-redhat-0.75-21.tar.bz2"
-		
+
 	cp /usr/share/automake/install-sh . || die
 	ln -sf defs/redhat.defs default.defs
-	
+
 	for x in `cat ${S2}/patch.list`
 	do
 		bzip2 -dc ${S2}/patchdir/${x} | patch -p1 || \
@@ -66,7 +66,7 @@ src_unpack() {
 
 src_compile() {
 	export CFLAGS="${CFLAGS} -fPIC"
-	
+
 	./configure --prefix= \
 		--host=${CHOST} \
 		--sbindir=/usr/sbin \
@@ -74,13 +74,13 @@ src_compile() {
 		--enable-fakeroot=${D} \
 		--enable-static-libpam \
 		|| die "Failed to configure"
-	
+
 	# Python stuff in docs gives sandbox problems
 	cp Makefile Makefile.orig
 	sed -e "s:libpam_misc doc examples:libpam_misc:" \
 		Makefile.orig > Makefile
 	cp Make.Rules Make.orig
-	
+
 	# Fix warnings for gcc-2.95.3
 	[ -z "${CC}" ] && CC=gcc
 	if [ "`${CC} -dumpversion`" = "2.95.3" ]
@@ -92,19 +92,19 @@ src_compile() {
 		sed -e "s:/usr/bin/install:/bin/install:" \
 			Make.orig > Make.Rules
 	fi
-	
+
 	# For some reason do not link to libcrypt
 	cp modules/pam_pwdb/Makefile modules/pam_pwdb/Makefile_orig
 	sed -e "s:-lpwdb:-lpwdb -lcrypt -lnsl:g" \
 		modules/pam_pwdb/Makefile_orig > modules/pam_pwdb/Makefile
-		
+
 	if [ -z "`use berkdb`" ]
 	then
 		cp Make.Rules Make.orig
 		sed -e "s:^HAVE_LIBNDBM=yes:HAVE_LIBNDBM=no:" \
 			Make.orig > Make.Rules
 	fi
-	
+
 	make || die "Failed to build"
 
 	cd ${S}/doc
@@ -140,7 +140,7 @@ src_install() {
 	dodoc CHANGELOG Copyright README
 	docinto modules
 	dodoc modules/README
-	
+
 	cd ${S}/modules
 	for x in pam_*
 	do

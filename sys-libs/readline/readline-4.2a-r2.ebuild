@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r2.ebuild,v 1.4 2003/06/22 05:10:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r2.ebuild,v 1.5 2003/09/07 00:22:30 msterret Exp $
 
 inherit eutils gnuconfig
 
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc
 
 src_unpack() {
 	unpack ${A}
-	
+
 	# config.sub doesn't recognize alphaev67+, update it
 	use alpha && gnuconfig_update
 }
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 
 	econf --with-curses || die
-	
+
 	emake || die
 	cd shlib
 	emake || die
