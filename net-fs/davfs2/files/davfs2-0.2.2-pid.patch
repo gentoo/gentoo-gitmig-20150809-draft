@@ -1,0 +1,32 @@
+diff -ru davfs2-0.2.2.orig/src/util.c davfs2-0.2.2/src/util.c
+--- davfs2-0.2.2.orig/src/util.c	2003-12-07 23:39:48.000000000 -0500
++++ davfs2-0.2.2/src/util.c	2004-10-30 22:24:39.000000000 -0400
+@@ -281,7 +281,7 @@
+ /* dav_kill_prev_mount */
+ int dav_kill_prev_mount(const char *dev) {
+     pid_t pid;
+-    char *fname = ne_concat(DAV_TMP_DIR, dev+5, ".pid", NULL);
++    char *fname = ne_concat(DAV_PID_DIR, dev+5, ".pid", NULL);
+     FILE *fp = fopen(fname, "r");
+     
+     /* Nofile, just return */
+@@ -301,7 +301,7 @@
+ }
+ 
+ int dav_save_mount_pid(const char *dev) {
+-    char *fname = ne_concat(DAV_TMP_DIR, dev+5, ".pid", NULL);
++    char *fname = ne_concat(DAV_PID_DIR, dev+5, ".pid", NULL);
+     FILE *fp = fopen(fname, "w");
+     NE_FREE(fname);
+ 
+diff -ru davfs2-0.2.2.orig/src/util.h davfs2-0.2.2/src/util.h
+--- davfs2-0.2.2.orig/src/util.h	2003-12-07 23:39:48.000000000 -0500
++++ davfs2-0.2.2/src/util.h	2004-10-30 22:29:36.000000000 -0400
+@@ -33,6 +33,7 @@
+ #define MTAB        "/etc/mtab"
+ #define MTAB_TMP    "/etc/mtab.davfs.tmp"
+ #define DAV_TMP_DIR "/tmp/"
++#define DAV_PID_DIR "/var/run/"
+ #define DAV_MAX_MKTMP_TRY 3   /* Let's try three time to get random name */
+ 
+ /* magic flag number to indicate "new" flags */
