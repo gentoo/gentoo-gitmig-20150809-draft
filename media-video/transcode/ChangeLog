@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.18 2002/12/11 15:56:19 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.19 2003/01/19 00:44:52 mholzer Exp $
+
+  18 Jan 2003; Martin Holzer <mholzer@gentoo.org> 
+  Big commit cause avifile.0.7.25 breaks all transcode packages
 
 *transcode-0.6.3.20021205 (11 Dec 2002)
 
@@ -36,6 +39,10 @@
   Thanks to Tony Clark <tclark@telia.com> for the submission.
 
 *transcode-0.6.0 (28 Aug 2002)
+
+  18 Jan 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.0.ebuild
+  transcode-0.6.0-PP_QUALITY_MAX.patch :
+  Added mplayer dependency, downported PP_QUALITY_MAX patch
 
   11 Sep 2002; Mark Guertin <gerk@gentoo.org> :
 

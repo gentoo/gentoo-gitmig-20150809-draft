@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.1-r1.ebuild,v 1.1 2002/11/15 20:56:13 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.1-r1.ebuild,v 1.2 2003/01/19 00:44:52 mholzer Exp $
 
 IUSE="sdl mmx mpeg sse dvd encode X quicktime avi"
 
@@ -25,17 +25,16 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-video/mplayer-0.90_pre10
 	x86? ( dev-lang/nasm )
 	X? ( virtual/x11 )
-	avi? ( >=media-video/avifile-0.7.4 )
+	avi? (	<=media-video/avifile-0.7.22 	
+		>=media-video/avifile-0.7.4 )
 	dvd? ( media-libs/libdvdread )
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.89 )
 	sdl? ( media-libs/libsdl )
 	quicktime? ( media-libs/quicktime4linux )
+	<=media-video/avifile-0.7.22 
 	>=media-video/avifile-0.7.4
 	media-libs/libdvdread"
-# Dont want to build without these currently
-#	avi? ( >=media-video/avifile-0.7.4 )
-#	dvd? ( media-libs/libdvdread )"
 
 src_unpack() {
 
@@ -63,15 +62,6 @@ src_compile() {
 		&& myconf="${myconf} --enable-sse" \
 		|| myconf="${myconf} --disable-sse"
 
-#	use avi \
-#		&& myconf="${myconf} --with-avifile-mods --enable-avifile6" \
-#		|| myconf="${myconf} --without-avifile-mods --disable-avifile6"
-#
-#	use dvd \
-#		&& myconf="${myconf} --with-dvdread" \
-#		|| myconf="${myconf} --without-dvdread"
-#
-# Dont currently want to build without these
 	myconf="${myconf} --with-dvdread --with-avifile-mods --enable-avifile6"   
 
 	use encode \

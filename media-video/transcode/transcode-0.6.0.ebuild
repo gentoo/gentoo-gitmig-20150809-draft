@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0.ebuild,v 1.8 2002/10/05 18:13:22 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0.ebuild,v 1.9 2003/01/19 00:44:52 mholzer Exp $
 
 IUSE="sdl mmx mpeg sse dvd encode X quicktime avi"
 
@@ -20,21 +20,22 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=">=media-libs/a52dec-0.7.3
+DEPEND=">=media-video/mplayer-0.90_pre10
+	>=media-libs/a52dec-0.7.3
 	>=media-libs/libdv-0.9.5
 	x86? ( dev-lang/nasm )
 	X? ( virtual/x11 )
-	avi? ( >=media-video/avifile-0.7.4 )
+	avi? (	<=media-video/avifile-0.7.22
+		>=media-video/avifile-0.7.4 )
 	dvd? ( media-libs/libdvdread )
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.89 )
 	sdl? ( media-libs/libsdl )
 	quicktime? ( media-libs/quicktime4linux )
+	<=media-video/avifile-0.7.22
 	>=media-video/avifile-0.7.4
 	media-libs/libdvdread"
-# Dont want to build without these currently
-#	avi? ( >=media-video/avifile-0.7.4 )
-#	dvd? ( media-libs/libdvdread )"
+
 
 src_unpack() {
 	unpack ${A}
@@ -45,6 +46,9 @@ src_unpack() {
 		cd ${S}
 		patch -p1 < ${FILESDIR}/transcode-0.6.0_pre5.diff || die
 	fi
+
+	# Fix GET_PP_QUALITY_MAX error
+	cd ${S}; patch -p1 <  ${FILESDIR}/${MY_P}-PP_QUALITY_MAX.patch || die
 }
 
 src_compile() {
@@ -64,15 +68,6 @@ src_compile() {
 		&& myconf="${myconf} --enable-sse" \
 		|| myconf="${myconf} --disable-sse"
 
-#	use avi \
-#		&& myconf="${myconf} --with-avifile-mods --enable-avifile6" \
-#		|| myconf="${myconf} --without-avifile-mods --disable-avifile6"
-#
-#	use dvd \
-#		&& myconf="${myconf} --with-dvdread" \
-#		|| myconf="${myconf} --without-dvdread"
-#
-# Dont currently want to build without these
 	myconf="${myconf} --with-dvdread --with-avifile-mods --enable-avifile6"   
 
 	use encode \
