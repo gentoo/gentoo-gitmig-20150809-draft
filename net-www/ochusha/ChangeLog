@@ -1,6 +1,10 @@
 # ChangeLog for net-www/ochusha
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ChangeLog,v 1.23 2004/02/29 16:39:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ChangeLog,v 1.24 2004/04/07 03:47:15 usata Exp $
+
+  07 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ochusha-0.4.10.1.ebuild,
+  ochusha-0.4.10.3.ebuild, ochusha-0.5.ebuild:
+  GTK+ 2.4 fix. Marked 0.5 stable on x86.
 
 *ochusha-0.5 (01 Mar 2004)
 

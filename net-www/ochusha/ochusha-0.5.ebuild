@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.ebuild,v 1.2 2004/03/11 20:16:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.ebuild,v 1.3 2004/04/07 03:47:15 usata Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/8439/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
@@ -23,6 +23,10 @@ DEPEND="virtual/xft
 S=${WORKDIR}/${P}
 
 src_compile() {
+
+	if has_version '>=x11-libs/gtk+-2.4' ; then
+		perl -i -pe "s/-D.*?DISABLE_DEPRECATED//g" gtk2/Makefile* || die
+	fi
 
 	econf --enable-regex --with-included-oniguruma || die
 	emake || die
