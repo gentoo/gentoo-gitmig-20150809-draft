@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.1 2004/02/26 19:12:16 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.2 2004/02/26 19:32:05 pappy Exp $
 
 IUSE="static nls bootstrap java build X multilib nogcj"
 
@@ -47,6 +47,9 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 # Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
+
+# PIE support
+PIE_VER="0.9"
 
 # ProPolice version
 PP_VER="3_3"
@@ -323,19 +326,16 @@ src_unpack() {
 			sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE |' \
 				-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 
-			version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
-				"${BRANCH_UPDATE} (Gentoo Hardened GNU/Linux ${PVR}, pie-0.9)" || die "Failed Branding"
+			RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Hardened GNU/Linux ${PVR}, pie-${PIE_VER})"
 		else
 			# hppa system without propolice and without hardened
-			version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
-				"${BRANCH_UPDATE} (Gentoo Linux ${PVR})" || die "Failed Branding"
+			RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Linux ${PVR})"
 		fi
 	else
 		if [ -z "${PP_VER}" ]
 		then
 			# Make gcc's version info specific to Gentoo
-			version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
-				"${BRANCH_UPDATE} (Gentoo Linux ${PVR})" || die "Failed Branding"
+			RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Linux ${PVR})"
 		else
 			# ProPolice Stack Smashing protection
 			EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
@@ -357,15 +357,16 @@ src_unpack() {
 				sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
 					-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 
-				version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
-					"${BRANCH_UPDATE} (Gentoo Hardened GNU/Linux ${PVR}, pie-0.9 ssp-${PP_FVER})" || die "Failed Branding"
+				RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Hardened GNU/Linux ${PVR}, pie-${PIE_VER} ssp-${PP_FVER})"
 			else
-				version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
-					"${BRANCH_UPDATE} (Gentoo Linux ${PVR}, propolice-${PP_FVER})" \
-					|| die "Failed Branding"
+				RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Linux ${PVR}, pie-${PIE_VER} ssp-${PP_FVER})"
 			fi
 		fi
 	fi
+
+	# update the Gentoo gcc version string, use hardened if building default PIE and SSP
+	version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
+		"${RELEASE_VERSION}" || die "Failed Branding"
 
 	# this patch enables improved pie and ssp behaviour but does not enable it by default
 	cd ${WORKDIR}/${P}; epatch "${DISTDIR}/gcc-3.3.2-nodefault-pie-ssp.patch"
