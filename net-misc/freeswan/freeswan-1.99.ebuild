@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.9 2004/02/20 20:08:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.10 2004/02/21 08:19:40 mr_bones_ Exp $
 
 X509_PATCH=0.9.34
 S=${WORKDIR}/${P}
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/freeswan-gentoo-cflags.patch
 	epatch ${FILESDIR}/${P}-spi.c.patch
 
-	sed -i 's:/etc/ipsec.d:/etc/ipsec/ipsec.d:g' ${WORKDIR}/x509patch-${X509_PATCH}-${P}/freeswan.diff 
+	sed -i 's:/etc/ipsec.d:/etc/ipsec/ipsec.d:g' ${WORKDIR}/x509patch-${X509_PATCH}-${P}/freeswan.diff
 	epatch ${WORKDIR}/x509patch-${X509_PATCH}-${P}/freeswan.diff
 }
 
