@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/qcad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.12 2003/11/04 10:18:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.13 2004/01/04 02:02:20 caleb Exp $
+
+  03 Jan 2004; Caleb Tennis <root@gentoo.org> qcad-2.0.1.0.ebuild:
+  Remove need-qt, set dependency directly in ebuild.
+  Remove inherit of kde-functions.
 
   21 Oct 2003; Brandy Westcott brandy@gentoo.org qcad-2.0.1.0.ebuild:
   Added patch to allow qcad to compile using CXXFLAGS

@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.1.0.ebuild,v 1.3 2003/11/16 23:08:54 pyrania Exp $
-
-inherit kde-functions
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.1.0.ebuild,v 1.4 2004/01/04 02:02:20 caleb Exp $
 
 MY_P=${P}-1.src
 S=${WORKDIR}/${MY_P}
@@ -14,10 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
-need-qt 3
-
-DEPEND="${DEPEND}
-		>=sys-apps/sed-4"
+DEPEND=">=x11-libs/qt-3
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
