@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r13.ebuild,v 1.1 2004/02/18 17:15:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r13.ebuild,v 1.2 2004/02/19 19:10:18 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -129,6 +129,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gentoo-sources-2.4.CAN-2004-0001.patch || die "Failed to apply AMD64 ptrace patch!"
 	epatch ${FILESDIR}/${P}-rtc_fix.patch || die "Failed to apply RTC fix!"
 	epatch ${FILESDIR}/${P}-munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${P}-fix-proc-mm.patch || die "Failed to apply CONFIG_PROC_MM patch!"
 
 }
 

@@ -1,0 +1,41 @@
+--- linux-2.4.20-gentoo-r13/arch/i386/kernel/ptrace.c	2004-02-19 16:50:23.000000000 +0000
++++ linux-2.4.20-gentoo-r11/arch/i386/kernel/ptrace.c	2004-02-19 17:21:31.000000000 +0000
+@@ -151,7 +151,9 @@
+ extern int modify_ldt(struct task_struct *task, int func, void *ptr, 
+ 		      unsigned long bytecount);
+ 
+-extern struct mm_struct *proc_mm_get_mm(int fd);
++#ifdef CONFIG_PROC_MM
++	extern struct mm_struct *proc_mm_get_mm(int fd);
++#endif
+ 
+ asmlinkage int sys_ptrace(long request, long pid, long addr, long data)
+ {
+@@ -469,6 +471,7 @@
+ 		break;
+ 	}
+ 
++#ifdef CONFIG_PROC_MM
+ 	case PTRACE_SWITCH_MM: {
+ 		struct mm_struct *old = child->mm;
+ 		struct mm_struct *new = proc_mm_get_mm(data);
+@@ -485,6 +488,7 @@
+ 		ret = 0;
+ 		break;
+ 	}
++#endif
+ 
+ 	default:
+ 		ret = -EIO;
+--- linux-2.4.20-gentoo-r11/include/linux/mm.h	2004-02-19 17:05:39.000000000 +0000
++++ linux-2.4.20-gentoo-r13/include/linux/mm.h	2004-02-19 18:54:14.000000000 +0000
+@@ -708,8 +708,7 @@
+ 	   )
+ 	{
+ 		unsigned long ret_m;
+-		ret_m = do_mmap_pgoff(NULL, ret + SEGMEXEC_TASK_SIZE, 
+-0UL, prot, flag | MAP_MIRROR | MAP_FIXED, ret);
++		ret_m = do_mmap_pgoff(current->mm, NULL, ret + SEGMEXEC_TASK_SIZE, 0UL, prot, flag | MAP_MIRROR | MAP_FIXED, ret);
+ 		if (BAD_ADDR(ret_m)) {
+ 			do_munmap(current->mm, ret, len);
+ 			ret = ret_m;
