@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.1.1.ebuild,v 1.1 2004/08/20 23:04:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.1.1.ebuild,v 1.2 2004/09/12 06:01:12 ka0ttic Exp $
 
 inherit eutils
 
@@ -20,8 +20,7 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="sys-devel/pmake
-	sys-apps/sed
+DEPEND="sys-apps/sed
 	dev-util/yacc"
 
 src_compile() {
