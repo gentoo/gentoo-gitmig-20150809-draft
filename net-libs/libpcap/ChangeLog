@@ -1,10 +1,13 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.10 2003/02/15 19:23:28 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.11 2003/02/25 16:22:34 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *libpcap-0.7.1-r2 (3 Jan 2003)
+
+  25 Feb 2003; Guy Martin <gmsoft@gentoo.org> libpcap-0.7.1-r2.ebuild :
+  Added hppa to keywords.
 
   15 Feb 2003; Nicholas Wourms <dragon@gentoo.org> libpcap-0.7.1-r2.ebuild :
   Added mips keyword to ebuild.
