@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/dimrec
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dimrec/ChangeLog,v 1.1 2002/09/20 03:07:24 chouser Exp $
+
+*dimrec-0.1 (19 Sep 2002)
+
+  19 Sep 2002; Chris Houser <chouser@gentoo.org> dimrec-0.1.ebuild,
+  files/digest-dimrec-0.1, ChangeLog: New ebuild.
