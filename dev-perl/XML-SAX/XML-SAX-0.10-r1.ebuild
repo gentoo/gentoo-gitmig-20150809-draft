@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.10-r1.ebuild,v 1.7 2002/08/14 04:32:34 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.10-r1.ebuild,v 1.8 2002/09/24 12:38:59 mcummings Exp $
 
 inherit perl-module
 
@@ -20,6 +20,7 @@ DEPEND="${DEPEND}
 export PERL5LIB=`perl -e 'print map { ":$ENV{D}/$_" } @INC'`
 
 src_compile() {
-	echo n |perl Makefile.PL
+	echo n |perl Makefile.PL ${myconf} \
+	        PREFIX=${D}/usr 
 	make || test
 }
