@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.10 2004/06/24 22:13:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.11 2004/06/30 17:36:56 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -19,6 +19,7 @@ SLOT="${KV}"
 # have support for this package, do not change these to ~ 
 # until your arch has i2c-2.7.0 in it's kernel.
 KEYWORDS="x86 amd64 -ppc -sparc"
+IUSE=""
 LICENSE="GPL-2"
 
 DEPEND="~sys-apps/i2c-2.7.0"
