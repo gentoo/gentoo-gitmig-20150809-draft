@@ -46,35 +46,12 @@ MD5 754cfdc4c162c0cac9c073198f732fdb files/digest-binutils-2.15.91.0.2 159
 MD5 d57be7837bb42388ad4f1f9eec6fe699 files/digest-binutils-2.14.90.0.8-r1 160
 MD5 1b43962f0560663b6b0f58ffa918a8ff files/digest-binutils-2.15.92.0.2-r1 242
 MD5 b811d65855a74369e0faccf7574b886b files/2.13/binutils-2.13.90.0.10-glibc21.patch 2931
-MD5 03bc9914be9e707ed18fdfc9a35332d3 files/2.13/binutils-2.13.90.0.10-ia64-brl.patch 436
 MD5 1841b2037b3da0e0dfddb0345a0526e8 files/2.13/binutils-2.13.90.0.10-x86_64-gotpcrel.patch 769
 MD5 cbf08de84154ca2dcf26e572f2892f00 files/2.13/binutils-2.13.90.0.10-x86_64-testsuite.patch 1205
-MD5 feebd067c397d519e1ca9340606968a8 files/2.13/binutils-2.13.90.0.16-array-sects-compat.patch 1054
-MD5 9cb4e1aa89e17b711543bfbc18e6dd42 files/2.13/binutils-2.13.90.0.16-eh-frame-ro.patch 17193
-MD5 c16f13adaeb21909a350b0a562b8a4d5 files/2.13/binutils-2.13.90.0.16-ia64-bootstrap.patch 3535
-MD5 5d6014cd92f7f981294fac37c677bc8b files/2.13/binutils-2.13.90.0.16-ppc-apuinfo.patch 518
-MD5 6dd59bc404c01dd65a21a68cf62c639e files/2.13/binutils-2.13.90.0.16-rodata-cst.patch 974
-MD5 0670eef65a3797752d6f4376aee8bb3a files/2.13/binutils-2.13.90.0.16-sparc-nonpic.patch 3197
-MD5 8e6216c4ee8463ab38d9761a1be712f0 files/2.13/binutils-2.13.90.0.16-stt_tls.patch 6518
-MD5 ddcb10d9ab716f378c1fe596673a6251 files/2.13/binutils-2.13.90.0.16-tls-strip.patch 5383
-MD5 5eea3d007abf53ca4c416a1ef715d0da files/2.13/binutils-2.13.90.0.18-alpha-relax.patch 627
-MD5 f4b4e9a06281de3fb837b2e337fe590e files/2.13/binutils-2.13.90.0.18-compatsym.patch 14498
-MD5 e0bd20dafcff53d856546d93a0d291f2 files/2.13/binutils-2.13.90.0.18-eh-frame-hdr.patch 3035
-MD5 0a94baa713a60d9b3ec11847dc8f887f files/2.13/binutils-2.13.90.0.18-eh-frame-ro.patch 16506
-MD5 081ac3fc51a0c66a797b1408fdbc11b9 files/2.13/binutils-2.13.90.0.18-libpath-suffix.patch 1244
 MD5 fed0711b95edc0c64ee93ccfbc8e6268 files/2.13/binutils-2.13.90.0.18-ltconfig-multilib.patch 878
-MD5 886c4cf5037f3e353f5ea9793564f737 files/2.13/binutils-2.13.90.0.18-ppc64-tls1.patch 66696
-MD5 5691090f1b2c356df4cc30f01820d3f3 files/2.13/binutils-2.13.90.0.18-ppc64-tls2.patch 14098
 MD5 5843be8cd03f28a31ec20592c392dd3b files/2.13/binutils-2.13.90.0.18-s390-file-loc.patch 1493
-MD5 deaf6a8f7c0151b4b02a86ebcb399188 files/2.13/binutils-2.13.90.0.18-s390-noreladyn.patch 906
-MD5 b265b60d8878dd647f2e39fb9fcf4871 files/2.13/binutils-2.13.90.0.18-searchdir.patch 1523
-MD5 303de899d608b90e7b367c890bb05717 files/2.13/binutils-2.13.90.0.18-sparc-nonpic.patch 3205
-MD5 3adacb6f6d6330dc9a54cc129d09743a files/2.13/binutils-2.13.90.0.18-sub-same.patch 1035
 MD5 c013cc4711373f43cb426e8b08d69ae1 files/2.13/binutils-2.13.90.0.18-testsuite-Wall-fixes.patch 943
 MD5 feebd067c397d519e1ca9340606968a8 files/2.13/binutils-2.13.90.0.20-array-sects-compat.patch 1054
-MD5 2183b775b86400dd7eda35bf1ccee678 files/2.13/binutils-2.13.90.0.20-gas-mips-gprel.patch 945
-MD5 feebd067c397d519e1ca9340606968a8 files/2.13/binutils-2.13.90.0.18-array-sects-compat.patch 1054
-MD5 3b15f7c21e91ad63801e2ef599b4952b files/2.13/binutils-2.13.90.0.18-ld-r.patch 762
 MD5 c98edbd5a87f00832a367a40a6e576d1 files/2.14/binutils-2.14.90.0.1-eh-frame-ro.patch 17942
 MD5 e941bf2e41367989d389e2988672f87a files/2.14/binutils-2.14.90.0.1-sparc-nonpic.patch 3147
 MD5 d232bcf016de028994efd262aa2ff401 files/2.14/binutils-2.14.90.0.4-cfi.patch 74784
@@ -130,7 +107,7 @@ MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdoNpHTu7gpaalycRAtQnAKD5lHTXJkzNVXqGPcnrDYLa8TRSLQCbB1Te
-FWyz2TA1MB6UPNeLbZnBcV4=
-=1oEf
+iD8DBQFBdobqHTu7gpaalycRApFrAJ9cjltnySasntDzvEpW3fog6BzrRACgpzyP
+ZL8FdEK4hm02HhFzrdzS6sE=
+=Qlkf
 -----END PGP SIGNATURE-----
