@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/daemonshogi/daemonshogi-0.1.3.ebuild,v 1.5 2004/06/24 22:16:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/daemonshogi/daemonshogi-0.1.3.ebuild,v 1.6 2004/11/12 18:44:49 wolf31o2 Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.users.yun.co.jp/~tokita/daemonshogi/"
 SRC_URI="http://www.users.yun.co.jp/~tokita/daemonshogi/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~amd64"
 SLOT="0"
 IUSE="nls"
 
