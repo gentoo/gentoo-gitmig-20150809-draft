@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.10 2004/05/26 16:34:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.11 2004/06/02 04:05:38 lv Exp $
+
+  02 Jun 2004; Travis Tilley <lv@gentoo.org> mozilla-launcher-1.10.ebuild:
+  moving to stable ahead of schedule for the new -bin support
 
 *mozilla-launcher-1.10 (26 May 2004)
 
