@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.11 2004/04/27 20:57:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.12 2004/05/26 15:15:20 port001 Exp $
 
 inherit eutils
 
@@ -73,5 +73,5 @@ src_compile() {
 src_install () {
 	einstall || die
 
-	dodoc README COPYING CREDITS FAQ INSTALL
+	dodoc README COPYING CREDITS FAQ INSTALL NEWS ChangeLog README.config
 }
