@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/phppgadmin
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.1 2002/04/27 16:44:51 woodchip Exp $
+
+*phppgadmin-2.4.1 (27 Apr 2002)
+
+  27 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  New package.  Contributed by Xavier Garcia <xavier@dospins.com>.
