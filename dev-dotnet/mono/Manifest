@@ -9,7 +9,7 @@ MD5 b92843896a3417a8aa46a8638c029cdb mono-1.0.1.ebuild 1480
 MD5 892cd0bf648c04a329e46f64a1ee8f94 mono-1.0.5-r2.ebuild 3214
 MD5 c2d21e85729c9e588425689c41ef999e mono-1.0.1-r2.ebuild 1680
 MD5 7e241ab7225841b6eaecdc13b9e388c0 mono-1.0.2-r1.ebuild 2105
-MD5 db5d224e78eb98282cdc04a309c3bc12 ChangeLog 10568
+MD5 26317aacf9df52a5fa9bc0efa96264ec ChangeLog 10682
 MD5 aadef171728e37af3ca21aaf6a81df65 mono-1.0.5.ebuild 1525
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 9f4b4eb6a1555ed574dbdd359cae3070 files/dotnet.conf 573
@@ -25,5 +25,6 @@ MD5 2cef534891ce7b0c980d5615ae1397af files/digest-mono-1.0.4-r1 64
 MD5 3304a21c35939f14b13ea1a8759e47b7 files/digest-mono-1.0.5-r1 64
 MD5 9e2e1b58a310e4236f757e683b71c879 files/digest-mono-1.0.5-r2 127
 MD5 9e2e1b58a310e4236f757e683b71c879 files/digest-mono-1.0.5-r3 127
+MD5 48284ee0228c56980a839fb245258db7 files/mcs-1.0.5-pathfix.diff 628
 MD5 43da8709d0752a2ef9f9dfb050a05d9f files/digest-mono-0.28 123
 MD5 3c800bd50d6527c12be393369c234f0e files/mono-1.0-segv.diff 378
