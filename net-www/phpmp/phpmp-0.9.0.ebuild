@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.9.0.ebuild,v 1.2 2003/10/31 14:33:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.9.0.ebuild,v 1.3 2003/10/31 14:35:17 mholzer Exp $
 
 MY_PN="phpMp"
 MY_P="${MY_PN}-${PV}"
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 IUSE=""
 
 DEPEND=">=net-www/apache-1.3.27-r1 >=mod_php-4.2.3-r2"
