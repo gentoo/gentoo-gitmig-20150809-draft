@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.12 2003/02/20 22:00:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.13 2003/03/24 13:26:09 gmsoft Exp $
+
+  24 Mar 2003; Guy Martin <gmsoft@gentoo.org> pwdb-0.61-r4.ebuild, pwdb-0.61-hppa.patch :
+  Added patch to fix linking under some circumstances on hppa.
 
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> pwdb-0.61-r4.ebuild :
   Added arm to keywords.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.7 2003/02/20 22:00:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.8 2003/03/24 13:26:09 gmsoft Exp $
 
 inherit eutils
 
@@ -19,7 +19,9 @@ src_unpack () {
 	mkdir ${S}
 	cd ${S}
 	unpack ${A}
-}
+	[ "${ARCH}" = "hppa" ] && patch -p 2 < ${FILESDIR}/pwdb-0.61-hppa.patch
+
+}	
 
 src_compile() {
 	cp Makefile Makefile.orig
