@@ -22,7 +22,10 @@ DEPEND="virtual/libc"
 
 BUILDARCHS="ppc"
 
+DontPutThatInGlobalScope () {
+
 mkdir -p ${WORKDIR}/build/obj ${WORKDIR}/build/sym ${S}/BUILD
+}
 
 export RC_OS=macos
 export RC_ARCHS=${BUILDARCHS}
