@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.8 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.9 2002/07/20 19:01:50 gerk Exp $
 
 *lilo-21.7.5-r2 (8 Apr 2002)
+
+  20 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Adjusted keywords
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> lilo-21.7.5-r2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
