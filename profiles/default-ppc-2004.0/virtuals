@@ -22,8 +22,8 @@ virtual/imap-c-client	net-libs/c-client
 virtual/imapUW	  net-mail/uw-imap
 virtual/imapd	   net-mail/courier-imap
 virtual/inetd		sys-apps/xinetd
-virtual/jdk	     dev-java/blackdown-jdk
-virtual/jre	     dev-java/blackdown-jre
+virtual/jdk	     dev-java/blackdown-jdk dev-java/ibm-jdk
+virtual/jre	     dev-java/blackdown-jre dev-java/ibm-jre
 virtual/kernel	  sys-kernel/linux-headers
 virtual/krb5		app-crypt/heimdal
 virtual/linux-sources   sys-kernel/ppc-sources

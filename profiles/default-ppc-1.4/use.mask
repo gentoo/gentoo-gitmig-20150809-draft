@@ -15,3 +15,8 @@ tcc
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+
+# HDF is currently broken on ppc, masking
+# until it is fixed
+hdf
+

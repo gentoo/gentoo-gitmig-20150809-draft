@@ -16,3 +16,8 @@ tcc
 # Maintained by Chris Pebenito <pebenito@gentoo.org>
 
 selinux
+
+# HDF is currently broken on ppc, masking
+# until it is fixed
+hdf
+
