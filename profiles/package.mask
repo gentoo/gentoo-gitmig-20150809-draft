@@ -81,6 +81,7 @@ app-text/gpdf
 >=app-editors/gedit-plugins-2.3
 >=app-arch/file-roller-2.3
 >=media-gfx/eog-2.3
+>=gnome-extra/at-spi-1.3
 
 # <foser@gentoo.org> (07 Sept 2003)
 # experimental gst-plugins eclass stuff
