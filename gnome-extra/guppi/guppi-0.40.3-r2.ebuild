@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r2.ebuild,v 1.10 2004/06/24 22:07:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r2.ebuild,v 1.11 2004/09/19 02:35:42 morfic Exp $
+
+inherit gcc eutils
 
 IUSE="python nls readline"
 
@@ -31,6 +33,13 @@ DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.11 )
 	python? ( >=dev-lang/python-2.0 )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	#remove default: since we have none for gcc3.4, gcc3.3 safe closing bug #55228
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 src_compile() {
 
 	local myconf
