@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/PatchReader-0.9.4.ebuild,v 1.3 2004/07/18 08:27:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/PatchReader-0.9.4.ebuild,v 1.4 2004/08/28 23:55:13 rl03 Exp $
 
 inherit perl-module
 
@@ -15,3 +15,4 @@ LICENSE="Artistic | GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="dev-perl/File-Temp"
+IUSE=""

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PatchReader
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.1 2004/07/16 20:38:35 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.2 2004/08/28 23:55:13 rl03 Exp $
+
+  28 Aug 2004; Renat Lumpau <rl03@gentoo.org> PatchReader-0.9.4.ebuild:
+  Missing IUSE
 
 *PatchReader-0.9.4 (16 Jul 2004)
 
