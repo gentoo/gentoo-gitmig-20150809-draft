@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.23 2002/11/14 15:26:02 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.24 2002/11/16 10:48:35 cretin Exp $
 
 IUSE="nls pic build"
 
@@ -164,7 +164,7 @@ src_compile() {
 	local myconf=""
 
 	# If we build for the build system we use the kernel headers from the target
-	use build && myconf="${myconf} --with-header=${ROOT}usr/include"
+	use build && myconf="${myconf} --with-headers=${ROOT}usr/include"
 	
 	use nls || myconf="${myconf} --disable-nls"
 	

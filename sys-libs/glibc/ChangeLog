@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.27 2002/11/14 15:26:02 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.28 2002/11/16 10:48:35 cretin Exp $
 
 *glibc-2.3.1-r2 (7 Nov 2002)
+
+  16 Nov 2002: Stefan Jones <cretin@gentoo.org> glibc-2.3.1-r2.ebuild :
+  Changed --with-header to --with-headers to fix fake configure option.
 
   10 Nov 2002: Stefan Jones <cretin@gentoo.org> glibc-2.3.1-r2.ebuild :
 
@@ -26,6 +29,9 @@
 
 *glibc-2.3.1-r1 (26 Oct 2002)
 
+  16 Nov 2002: Stefan Jones <cretin@gentoo.org> glibc-2.3.1-r1.ebuild :
+  Changed --with-header to --with-headers to fix fake configure option.
+  
   26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r1.ebuild :
 
   Add the ctype-compat.patch to fix unresolved symbols in old static binaries
@@ -37,6 +43,9 @@
 
 *glibc-2.2.5-r7 (13 Oct 2002)
 
+  16 Nov 2002: Stefan Jones <cretin@gentoo.org> glibc-2.2.5-r7.ebuild :
+  Changed --with-header to --with-headers to fix fake configure option.
+  
   14 Nov 2002; Mark Guertin <gerk@gentoo.org> glibc-2.2.5-r7.ebuild :
   backed out semctl patches for ppc, they cause problems with mozilla builds
 
