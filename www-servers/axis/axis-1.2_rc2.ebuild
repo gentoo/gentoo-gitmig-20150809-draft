@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.1 2005/01/22 14:04:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.2 2005/01/29 21:18:37 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -21,7 +21,7 @@ DEPEND=">=virtual/jdk-1.4
 		dev-java/log4j
 		dev-java/wsdl4j
 		>=dev-java/xerces-2
-		>=dev-java/rhino-1.5.5
+		=dev-java/rhino-1.5*
 		>=dev-java/castor-0.9.5.3
 		>=dev-java/sun-jimi-1.0
 		>=dev-java/commons-httpclient-2.0
