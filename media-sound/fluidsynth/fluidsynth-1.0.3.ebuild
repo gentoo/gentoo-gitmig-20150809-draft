@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.7 2004/04/08 07:52:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.8 2004/04/16 06:30:16 lv Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,12 +10,13 @@ SRC_URI="http://savannah.nongnu.org/download/fluid/stable.pkg/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 IUSE="alsa jack sse"
 
-DEPEND="jack? ( virtual/jack ) \
-	media-libs/ladspa-sdk \
+DEPEND="jack? ( virtual/jack )
+	media-libs/ladspa-sdk
+	amd64? ( ladcca? ( =media-libs/ladcca-0.3* ) )
 	alsa? ( media-libs/alsa-lib )"
 
 # Removed as it doesn't support new ladcca yet ... bug #46916
@@ -32,7 +33,9 @@ src_unpack() {
 src_compile() {
 	local myconf
 	myconf="--enable-ladspa"
-#	use ladcca || myconf="--disable-ladcca ${myconf}"
+	#use ladcca || myconf="--disable-ladcca ${myconf}"
+	use amd64 && myconf="`use_enable ladcca` ${myconf}" \
+		|| myconf="--disable-ladcca ${myconf}"
 	use alsa || myconf="--disable-alsa ${myconf}"
 	use jack || myconf="--disable-jack-support ${myconf}"
 	if [ `use sse` ]; then
