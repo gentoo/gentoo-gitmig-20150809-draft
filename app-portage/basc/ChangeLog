@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.22 2005/03/03 15:38:40 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.23 2005/03/14 22:03:47 chriswhite Exp $
+
+*basc-1.5.9 (15 Mar 2005)
+
+  15 Mar 2005; Chris White <chriswhite@gentoo.org> metadata.xml,
+  -basc-1.5.2.ebuild, -basc-1.5.3.ebuild, -basc-1.5.4.ebuild,
+  -basc-1.5.5.ebuild, -basc-1.5.6.ebuild, -basc-1.5.7.ebuild,
+  +basc-1.5.9.ebuild:
+  Fixed bug #82628. Removed older versions to favor a better 1.5.9. Because of
+  the wish to target 1.5.9 as the right version, keywords are now taken down
+  to x86 and ppc, the arches that I could test. This keyword removal is
+  documented in bug #82628 as well.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> basc-1.5.8.ebuild:
   Dependency update: sys-apps/time -> sys-process/time.

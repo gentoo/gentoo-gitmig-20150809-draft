@@ -12,6 +12,11 @@
   <name>Pieter Van den Abeele</name>
   <description>app-portage/basc ebuild maintainer</description>
 </maintainer>
+<maintainer>
+  <email>chriswhite@gentoo.org</email>
+  <name>Chris White</name>
+  <description>co-maintainer and project contributor</description>
+</maintainer>
 <longdescription>
 BAS/c is the client software for the Gentoo stats aggregation online at
 http://www.gentoo-stats.org.
