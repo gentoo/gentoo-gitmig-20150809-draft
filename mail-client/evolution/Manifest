@@ -4,9 +4,9 @@ MD5 6ce020116cdfd530f866baff39b6ce5c evolution-2.0.3-r1.ebuild 4015
 MD5 8ec4daeb3d6cfce98637075f33550b0b evolution-2.0.2-r1.ebuild 4079
 MD5 38beda8b6f053d01b75341ea0c888322 evolution-2.0.2.ebuild 4054
 MD5 bd65828630277b9584f936c26719e5c5 evolution-2.0.4.ebuild 3999
-MD5 de1a4a1b382565750a322d0671b49ecc evolution-2.0.3-r2.ebuild 4113
+MD5 fa55d72c98c24a18eb33912861f49857 evolution-2.0.3-r2.ebuild 4110
 MD5 0e26bab8ac570ce0deb481e2249e69f2 evolution-1.4.6.ebuild 5701
-MD5 9cd90dacf95508641dce67b0d580e81c ChangeLog 22966
+MD5 13d4034c767489deebe665eaf9f6eae5 ChangeLog 23060
 MD5 6ec9b6a7896b799d17a21c4edffd33c9 metadata.xml 272
 MD5 7b8c1cc2fd2428815184d471af4bb3bf files/evolution-2.0.3-gentoo_etc_services.patch 1662
 MD5 015ecd719e11c1170e7f41b3490f52f7 files/evolution-2-CAN-2005-0102.patch 467
