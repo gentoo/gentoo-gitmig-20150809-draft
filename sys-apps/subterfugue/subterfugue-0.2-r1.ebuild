@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.13 2003/02/13 16:15:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.14 2003/04/08 23:04:05 liquidx Exp $
 
 IUSE="gtk"
 
@@ -16,12 +16,14 @@ DEPEND=">=dev-lang/python-2.0
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
 src_unpack() {
+	PYVER=$(python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:')
+
 	unpack ${A}
 
 	cd ${S}
     
 	cp Makefile Makefile.orig
-	sed "s/python1.5/python2.0/" < Makefile.orig > Makefile
+	sed "s/python1.5/python${PYVER}/" < Makefile.orig > Makefile
 }
 
 src_compile() {
