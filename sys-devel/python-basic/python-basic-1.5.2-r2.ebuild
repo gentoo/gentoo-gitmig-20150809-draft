@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/python-basic/python-basic-1.5.2-r2.ebuild,v 1.2 2000/10/20 09:19:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/python-basic/python-basic-1.5.2-r2.ebuild,v 1.3 2000/11/13 21:29:58 achim Exp $
 
 P=python-basic-1.5.2      
 A="py152.tgz python-fchksum-1.1.tar.gz"
@@ -20,9 +20,9 @@ src_compile() {
     cp Makefile Makefile.orig
     sed -e "s/-g -O2/${CFLAGS}/" Makefile.orig > Makefile
     try make
-	cd ${S2}
-	./configure
-	try make
+    cd ${S2}
+    ./configure
+    try make
 }
 
 src_unpack() {
@@ -44,7 +44,6 @@ src_install() {
 	cd ${S2}
 	try make prefix=${D}/usr install
 	cd ${S}
-    prepman
     strip ${D}/usr/bin/python
 
 #DOC
