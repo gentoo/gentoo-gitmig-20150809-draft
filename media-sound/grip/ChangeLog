@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.50 2005/03/02 20:27:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.51 2005/03/13 01:04:44 luckyduck Exp $
+
+*grip-3.3.0 (13 Mar 2005)
+
+  13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/3.3.0-crashfix.patch, +grip-3.3.0.ebuild:
+  new upstream version, fixes #84223. added a patch to fix a buffer overflow,
+  see #84704
 
 *grip-3.2.0-r1 (02 Mar 2005)
 

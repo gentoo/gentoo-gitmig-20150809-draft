@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.15 2005/03/13 01:04:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.1 2005/03/13 01:04:44 luckyduck Exp $
 
-inherit gnuconfig flag-o-matic
+inherit gnuconfig flag-o-matic eutils
 
 IUSE="nls oggvorbis"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/grip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc sparc x86 ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~ppc64"
 
 RDEPEND=">=x11-libs/gtk+-2.2
 	x11-libs/vte
@@ -31,7 +31,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+
+	cd ${S}
+	# see #84704
+	epatch ${FILESDIR}/${PV}-crashfix.patch
+
 	gnuconfig_update
 }
 
@@ -41,7 +45,7 @@ src_compile() {
 
 	econf \
 		--disable-dependency-tracking \
-		$(use_enable nls) || die
+		$(use_enable nls) || die "./configure failed"
 	emake || die "emake failed"
 }
 
