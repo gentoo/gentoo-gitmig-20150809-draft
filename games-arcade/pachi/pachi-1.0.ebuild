@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-1.0.ebuild,v 1.4 2004/10/06 20:51:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-1.0.ebuild,v 1.5 2005/02/28 04:02:33 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2
@@ -22,15 +22,14 @@ RDEPEND=">=media-libs/libsdl-1.2
 DEPEND="${RDEPEND}
 	sys-devel/automake"
 
-S="${WORKDIR}/Pachi"
+S=${WORKDIR}/Pachi
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PV}-autotools.patch"
-	aclocal
-	automake -a
-	autoconf
+	export WANT_AUTOCONF=2.5
+	aclocal && automake -a && autoconf || die "autotools failed"
 }
 
 src_install() {
