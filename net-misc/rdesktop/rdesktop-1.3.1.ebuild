@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.1-r1.ebuild,v 1.4 2004/10/12 00:24:25 weeve Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.1.ebuild,v 1.12 2004/10/12 00:24:25 weeve Exp $
 
 DESCRIPTION="A Remote Desktop Protocol Client"
 HOMEPAGE="http://rdesktop.sourceforge.net/"
@@ -10,18 +8,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha ia64 ppc64 amd64"
-IUSE="kde ssl debug"
+KEYWORDS="x86 ppc sparc alpha ia64 ppc64"
+IUSE="ssl debug"
 
 DEPEND="virtual/x11
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 src_unpack() {
 	unpack ${A}
-
-	# Apply KDE 3.3.0 compatibility patch from KDE CVS submitted to bug #58312
-	# by Ronald Moesbergen <r.moesbergen@hccnet.nl>
-	use kde && epatch ${FILESDIR}/${P}-kde.patch
 }
 
 src_compile() {
