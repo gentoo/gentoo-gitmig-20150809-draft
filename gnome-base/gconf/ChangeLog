@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.28 2003/02/04 15:43:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.29 2003/02/04 22:13:22 agriffis Exp $
+
+  04 Feb 2003; Aron Griffis <agriffis@gentoo.org> gconf-1.0.8-r4.ebuild :
+  Mark stable on alpha
 
 *gconf-2.2.0 (30 Jan 2003)
 
