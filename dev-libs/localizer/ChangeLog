@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/localizer
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/localizer/ChangeLog,v 1.1 2004/06/26 20:08:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/localizer/ChangeLog,v 1.2 2004/06/27 10:33:43 dholm Exp $
+
+  27 Jun 2004; David Holm <dholm@gentoo.org> localizer-0.3.3.ebuild:
+  Added to ~ppc.
 
 *localizer-0.3.3 (26 Jun 2004)
 
