@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.67 2004/12/23 05:55:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.68 2005/01/08 05:48:25 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -35,6 +35,16 @@ set_bootstrap_stage() {
 	echo "BOOTSTRAP_STAGE=$1" > ${progressfile}
 }
 
+usage() {
+	echo -e "Usage: ${HILITE}${0##*/}${NORMAL} ${GOOD}[options]${NORMAL}"
+	echo -e "  ${GOOD}--debug (-d)${NORMAL}     Run with debug information turned on"
+	echo -e "  ${GOOD}--fetchonly (-f)${NORMAL} Just download all the source files"
+	echo -e "  ${GOOD}--info (-i)${NORMAL}      Show system related information"
+	echo -e "  ${GOOD}--pretend (-p)${NORMAL}   Display the packages that will be merged"
+	echo -e "  ${GOOD}--tree (-t)${NORMAL}      Display the dependency tree, forces -p"
+	echo -e "  ${GOOD}--resume (-r)${NORMAL}    Build/use binary packages"
+}
+
 unset STRAP_EMERGE_OPTS 
 STRAP_RUN=1
 DEBUG=0
@@ -47,21 +57,18 @@ for opt in "$@" ; do
 			STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -f"
 			unset STRAP_RUN;;
 		--help|-h)
-			echo -e "Usage: ${HILITE}${0##*/}${NORMAL} ${GOOD}[options]${NORMAL}"
-			echo -e "  ${GOOD}--debug (-d)${NORMAL}     Run with debug information turned on"
-			echo -e "  ${GOOD}--fetchonly (-f)${NORMAL} Just download all the source files"
-			echo -e "  ${GOOD}--info (-i)${NORMAL}      Show system related information"
-			echo -e "  ${GOOD}--pretend (-p)${NORMAL}   Display the packages that will be merged"
-			echo -e "  ${GOOD}--tree (-t)${NORMAL}      Display the dependency tree, forces -p"
-			echo -e "  ${GOOD}--resume (-r)${NORMAL}    Build/use binary packages"
-			exit 1;;
+			usage
+			exit 0;;
 		--debug|-d)   STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --debug"; DEBUG=1;;
 		--info|-i)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --info"   ; unset STRAP_RUN ;;
 		--pretend|-p) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p" ; unset STRAP_RUN ;;
 		--tree|-t)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p -t"; unset STRAP_RUN ;;
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v";;
-		*) ;;
+		*)
+			echo -e "Unknown option '${opt}'"
+			usage
+			exit 1;;
 	esac
 done
 
