@@ -24,7 +24,7 @@
 # <spider@gentoo.org> (23 oct 2002)
 # okay, this has been a bothersome thing with recompiles of static packages 
 # and all that. Headache.  Masking it for now until we can get it solid.
-=sys-libs/glibc-2.3.1
+#=sys-libs/glibc-2.3.1
 
 
 # <raker@gentoo.org> (23 Oct 2002)
