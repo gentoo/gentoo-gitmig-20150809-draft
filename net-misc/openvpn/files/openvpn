@@ -6,17 +6,28 @@ depend() {
 	need net
 }
 
+checktundevice() {
+	if [ -h /dev/net/tun ] && [ -c /dev/misc/net/tun ]; then
+		ebegin Detected broken /dev/net/tun symlink, fixing...
+			rm /dev/net/tun
+			ln -s /dev/misc/net/tun /dev/net/tun
+		eend $?
+	fi
+}
+
 start() {
+	checktundevice || return 1
+	
 	cd $VPNDIR
 	for VPN in *
 	do
-		ebegin "Starting openvpn for $VPN"
-		start-stop-daemon --start --pidfile \
-			/var/run/openvpn-$VPN.pid --startas /usr/sbin/openvpn \
-			-- --config $VPN/local.conf --writepid \
-			/var/run/openvpn-$VPN.pid \
-			--daemon --cd $VPN
-		eend $?
+		if [ -d $VPN ] && [ -e $VPN/local.conf ]; then
+			ebegin "Starting openvpn for $VPN"
+				start-stop-daemon --start --pidfile /var/run/openvpn-$VPN.pid --startas /usr/sbin/openvpn -- --config $VPN/local.conf --writepid /var/run/openvpn-$VPN.pid --daemon --cd $VPN
+			eend $?
+		else
+			ewarn "Expected $VPNDIR/$VPN to be a directory containing a local.conf."
+		fi
 	done
 }
 
@@ -24,8 +35,14 @@ stop() {
 	cd $VPNDIR
 	for VPN in *
 	do
-		ebegin "Stoping openvpn for $VPN"
-		start-stop-daemon --stop --pidfile /var/run/openvpn-$VPN.pid
-		eend $?
+		if [ -e /var/run/openvpn-$VPN.pid ]; then
+			ebegin "Stoping openvpn for $VPN"
+				start-stop-daemon --oknodo --stop --pidfile /var/run/openvpn-$VPN.pid
+				rm /var/run/openvpn-$VPN.pid
+			eend 0
+		else
+			ewarn "$VPN has no pidfile!"
+		fi
 	done
+	return 0
 }
