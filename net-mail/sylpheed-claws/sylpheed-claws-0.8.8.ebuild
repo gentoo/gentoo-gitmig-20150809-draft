@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8.ebuild,v 1.2 2002/12/26 17:41:54 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8.ebuild,v 1.3 2002/12/26 17:45:45 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
@@ -19,7 +19,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	pda? ( >=app-misc/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	ldap? ( >=net-nds/openldap-2.0.7 )
-	crypt? ( >=app-crypt/gpgme-0.2.3 )
+	crypt? ( >=app-crypt/gpgme-0.3.10 )
 	gnome? ( >=media-libs/gdk-pixbuf-0.16 )
 	imlib? ( >=media-libs/imlib-1.9.10 )
 	spell? ( app-text/aspell )
