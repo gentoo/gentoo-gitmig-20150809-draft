@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libhydrogen
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.11 2004/08/25 02:26:29 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.12 2005/03/20 20:44:42 luckyduck Exp $
+
+  20 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  libhydrogen-0.8.1_beta5.ebuild:
+  added libtoolize call, fixes #86029. also added missing metadata.xml
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> libhydrogen-0.8.0.ebuild:
   Changed SRC_URI to use mirror:// syntax.

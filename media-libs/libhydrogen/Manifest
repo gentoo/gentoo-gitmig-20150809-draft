@@ -1,15 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1de5d12ae8eb59cb969b967c1a24597d ChangeLog 1929
-MD5 3e4835f9fed179102c3d6b538290602b libhydrogen-0.8.0.ebuild 1021
-MD5 49e7203af1c9d9b8819582afee8f708a libhydrogen-0.8.1_beta5.ebuild 919
+MD5 b94d718bb9a39c851474c1be6d4437ff libhydrogen-0.8.0.ebuild 1022
+MD5 b92d2a22041f9cb146c0847ec8769fef libhydrogen-0.8.1_beta5.ebuild 937
+MD5 bb02d9b8cf9a65845a864d8e897aedfe ChangeLog 2103
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 c8d5fcd2ff12b8752743a46f73ed562e files/digest-libhydrogen-0.8.0 69
 MD5 d4d63074ccd3e776ac594ab6f11f8f47 files/digest-libhydrogen-0.8.1_beta5 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBK/jcI1lqEGTUzyQRAiU9AKDJILitjB3R0vyBLWRf7YMGFryJ2ACgnRja
-jC/moYg0tYmLXwet4B7Kn4c=
-=JI0I
+iD8DBQFCPeDH06ebR+OMO78RAkyoAJ9QyHWI3YwyxBakkZg0ZjKmrIjRGwCeOyM0
+35jYD1RCV1W8PywBqrbQWcs=
+=n+S8
 -----END PGP SIGNATURE-----
