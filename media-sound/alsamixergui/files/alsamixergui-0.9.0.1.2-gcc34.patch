@@ -1,0 +1,12 @@
+diff -Nurd alsamixergui-0.9.0rc1-2-old/src/alsamixer.cxx alsamixergui-0.9.0rc1-2/src/alsamixer.cxx
+--- alsamixergui-0.9.0rc1-2-old/src/alsamixer.cxx	2004-06-06 23:35:40.994686104 -0500
++++ alsamixergui-0.9.0rc1-2/src/alsamixer.cxx	2004-06-06 23:36:04.514110608 -0500
+@@ -654,7 +654,7 @@
+       if (joined) {
+ #ifdef ALSAMIXER_GUI
+ 	for (chn = snd_mixer_selem_channel_id_t(0); chn < SND_MIXER_SCHN_LAST; 
+-	snd_mixer_selem_channel_id_t(int(chn)++))
++	snd_mixer_selem_channel_id_t(int(chn)+1))
+ #else
+ 	for (chn = 0; chn < SND_MIXER_SCHN_LAST; chn++)
+ #endif
