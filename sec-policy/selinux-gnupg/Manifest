@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2356a1f1b2134c3383e2c2768a174235 ChangeLog 1161
+MD5 9e1aadc2558bc52850aec0b111cf2e1e ChangeLog 1257
 MD5 ead6a56acfba29bb5e0b072575e0c83d metadata.xml 383
-MD5 d31c679f69c05ad6dff8091ae2be1f4c selinux-gnupg-20050219.ebuild 468
+MD5 2d8145a1b27d010f69a5341939fbdb7e selinux-gnupg-20050219.ebuild 464
 MD5 ccaf53b93f11f24488aea5fff26fed74 selinux-gnupg-20041120.ebuild 412
 MD5 82b6a02e8207eb676edf956e40cb3193 files/digest-selinux-gnupg-20050219 73
 MD5 51414e8b6c8cc0305e3268b5419e86eb files/digest-selinux-gnupg-20041120 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCHv1tGSBEIeh4AEYRAn7JAJ9Z6pTlw7RuR3TiCvcy5HWd57WkNQCfY4CC
-JYxexFZOlMdDM+krSECNqbs=
-=hLW+
+iD8DBQFCQRz3GSBEIeh4AEYRAlndAJ9LTX/jsBj+fz8Cpk91r5SOm4VKVQCeMYBS
+vCra/R71hSJDiZDyvm3xQXM=
+=Umiv
 -----END PGP SIGNATURE-----
