@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r2.ebuild,v 1.4 2002/03/28 01:51:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r2.ebuild,v 1.5 2002/06/22 19:15:37 gerk Exp $
 
 S=${WORKDIR}/raidtools-0.90
 DESCRIPTION="Linux RAID 0/1/4/5 utilities"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 src_compile() {
     ./configure || die
     cp Makefile Makefile.orig
-    sed -e "s/-O2//" -e "s/-g//" Makefile.orig > Makefile
+    sed -e "s/-O2//" -e "s/ -g/ /" Makefile.orig > Makefile
     emake || die
 }
 

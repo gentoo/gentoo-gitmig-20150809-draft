@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/raidtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/ChangeLog,v 1.2 2002/03/21 11:38:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/ChangeLog,v 1.3 2002/06/22 19:15:37 gerk Exp $
+
+*raidtools-0.90-r2 (22 June 2002)
+
+  22 June 2002; Mark Guertin <gerk@gentoo.org> raidtools-0.90-r2.ebuild :
+  
+  Adjusted bad sed command which was breaking G4 CFLAGS
+  (was stripping all "-g" now strips " -g" to " ")
 
 *raidtools-0.90-r2 (12 Mar 2002)
 
