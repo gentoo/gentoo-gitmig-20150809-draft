@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/procps
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.51 2003/12/29 03:43:18 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.52 2004/01/15 05:18:12 avenj Exp $
+
+  15 Jan 2004; Jon Portnoy <avenj@gentoo.org> procps-3.1.12-r1.ebuild :
+  Stable on AMD64.
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> procps-3.1.12-r1.ebuild:
   Move to mips stable (~mips -> mips)
