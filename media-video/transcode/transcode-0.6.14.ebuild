@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.7 2005/01/22 03:18:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.8 2005/01/23 22:10:35 luckyduck Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -17,8 +17,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="X 3dnow a52 avi altivec divx4linux dv dvdread encode fame truetype \
-	gtk imagemagick jpeg lzo mjpeg mpeg network oggvorbis pvm quicktime \
-	sdl sse theora v4l xvid xml2"
+	gtk imagemagick jpeg lve lzo mjpeg mpeg mmx network oggvorbis pvm quicktime \
+	sdl sse sse2 static theora v4l xvid xml2"
 
 DEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	=sys-devel/gcc-3*
@@ -46,7 +46,8 @@ DEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	jpeg? ( media-libs/jpeg )
 	gtk? ( x11-libs/gtk+ )
 	truetype? ( >=media-libs/freetype-2 )
-	pvm? ( >=sys-cluster/pvm-3.4 )"
+	pvm? ( >=sys-cluster/pvm-3.4 )
+	lve? ( media-video/lve )"
 
 src_compile() {
 	filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer
@@ -58,6 +59,8 @@ src_compile() {
 		&& myconf="${myconf} --enable-pvm3 \
 			--with-pvm3-lib=${PVM_ROOT}/lib/LINUX \
 			--with-pvm3-include=${PVM_ROOT}/include"
+	use xvid \
+		&& myconf="${myconf} --with-default-xvid=xvid4"
 
 	# Use the MPlayer libpostproc if present
 	[ -f ${ROOT}/usr/$(get_libdir)/libpostproc.a ] && \
@@ -80,8 +83,10 @@ src_compile() {
 		$(use_enable gtk) \
 		$(use_enable imagemagick) \
 		$(use_enable jpeg libjpeg) \
+		$(use_enable lve liblve) \
 		$(use_enable lzo) \
 		$(use_enable mjpeg mjpegtools) \
+		$(use_enable mmx) \
 		$(use_enable mpeg libmpeg3) \
 		$(use_enable network netstream) \
 		$(use_enable oggvorbis ogg) \
@@ -89,8 +94,10 @@ src_compile() {
 		$(use_enable quicktime libquicktime) \
 		$(use_enable sdl) \
 		$(use_enable sse) \
+		$(use_enable sse2) \
 		$(use_enable theora) \
 		$(use_enable v4l) \
+		$(use_enable static) \
 		$(use_enable xml2 libxml2) \
 		${myconf} \
 		|| die
