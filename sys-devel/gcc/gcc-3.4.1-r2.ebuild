@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.16 2004/09/06 20:51:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.17 2004/09/26 02:02:07 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -483,8 +483,6 @@ src_unpack() {
 	fi
 
 	cd ${S}
-	# Fixup libtool to correctly generate .la files with portage
-	elibtoolize --portage --shallow
 
 	# Branch update ...
 	if [ -n "${BRANCH_UPDATE}" ]
@@ -534,7 +532,9 @@ src_unpack() {
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
 
-	use uclibc && gnuconfig_update
+	gnuconfig_update
+	# Fixup libtool to correctly generate .la files with portage
+	elibtoolize --portage --shallow
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
