@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.1.6.ebuild,v 1.1 2003/12/06 16:20:03 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.1.6.ebuild,v 1.2 2004/01/11 13:54:33 lanius Exp $
 
 IUSE="motif"
 
@@ -13,10 +13,10 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc"
 
-DEPEND="motif? ( virtual/motif >=sys-apps/sed-4 )
+DEPEND="motif? ( x11-libs/openmotif >=sys-apps/sed-4 )
 	virtual/x11"
 
-RDEPEND="virtual/motif
+RDEPEND="x11-libs/openmotif
 	virtual/x11"
 
 src_compile() {

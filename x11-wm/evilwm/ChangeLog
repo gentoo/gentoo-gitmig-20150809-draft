@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/evilwm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.16 2004/01/09 22:13:38 aether Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.17 2004/01/11 13:53:56 lanius Exp $
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> evilwm-0.99.14.ebuild,
+  evilwm-0.99.17.ebuild:
+  fixed motif dep
 
   09 Jan 2004; Jason A Mobarak <aether@gentoo.org> evilwm-0.99.16.ebuild,
   evilwm-0.99.17.ebuild:
