@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.4 2005/02/21 01:35:40 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.5 2005/02/26 18:17:42 vericgar Exp $
 ECLASS=apache-module
 INHERITED="$INHERITED $ECLASS"
 
@@ -177,12 +177,12 @@ apache1_src_install() {
 	MOD_FILE=$(apache_mod_file)
 
 	exeinto ${APACHE1_MODULESDIR}
-	doexe ${MOD_FILE} || die "internal ebuild error: \'${MOD_FILE}\' not found"
+	doexe ${MOD_FILE} || die "internal ebuild error: '${MOD_FILE}' not found"
 	[ -n "${APACHE1_EXECFILES}" ] && doexe ${APACHE1_EXECFILES}
 
 	if [ -n "${APACHE1_MOD_CONF}" ] ; then
 		insinto ${APACHE1_MODULES_CONFDIR}
-		doins ${FILESDIR}/${APACHE1_MOD_CONF}.conf || die "internal ebuild error: \'${APACHE2_MOD_CONF}.conf\' not found."
+		doins ${FILESDIR}/${APACHE1_MOD_CONF}.conf || die "internal ebuild error: '${FILESDIR}/${APACHE1_MOD_CONF}.conf' not found."
 	fi
 	
 	cd ${S}
@@ -294,12 +294,12 @@ apache2_src_install() {
 	MOD_FILE=$(apache_mod_file)
 
 	exeinto ${APACHE2_MODULESDIR}
-	doexe ${MOD_FILE} || die "internal ebuild error: \'${MOD_FILE}\' not found"
+	doexe ${MOD_FILE} || die "internal ebuild error: '${MOD_FILE}' not found"
 	[ -n "${APACHE2_EXECFILES}" ] && doexe ${APACHE2_EXECFILES}
 
 	if [ -n "${APACHE2_MOD_CONF}" ] ; then
 		insinto ${APACHE2_MODULES_CONFDIR}
-		doins ${FILESDIR}/${APACHE2_MOD_CONF}.conf || die "internal ebuild error: \'${APACHE2_MOD_CONF}.conf\' not found."
+		doins ${FILESDIR}/${APACHE2_MOD_CONF}.conf || die "internal ebuild error: '${FILESDIR}/${APACHE2_MOD_CONF}.conf' not found."
 	fi
 
 	if [ -n "${APACHE2_VHOSTFILE}" ]; then
