@@ -44,11 +44,6 @@
 # cause this ebuild needs access X Server
 =dev-java/xalan-2.4.1
 
-# <cretin@gentoo.org> (17 Nov 2002)
-# New version
-# Test ok for me. <azarah@gentoo.org> (21 Nov 2002)
-#=sys-devel/binutils-2.13.90.0.14
-
 # <phoenix@gentoo.org> (17 Nov 2002)
 # sawfish-1.2 is newer - masking 2.0
 # to force portage to go ~back~ to 1.2
