@@ -8,9 +8,9 @@
 alpha		default-alpha-1.4			stable
 amd64		gcc34-amd64-2004.1			stable
 arm			default-arm-2004.0			stable
-arm			default-linux/arm/2004.0	dev
+arm			default-linux/arm/2004.3	dev
 hppa		default-hppa-2004.0			stable
-hppa		default-linux/hppa/2004.2	dev
+hppa		default-linux/hppa/2004.3	dev
 ia64		default-ia64-1.4			stable
 ia64		default-linux/ia64/2004.3	dev
 macos		default-macos-10.3			dev
