@@ -1,5 +1,5 @@
---- /usr/lib/python2.2/site-packages/lintool/ebuild.py.old	2003-03-29 15:44:42.000000000 -0800
-+++ /usr/lib/python2.2/site-packages/lintool/ebuild.py	2003-03-29 15:58:07.000000000 -0800
+--- lintool-0.2.4.orig/src/lintool/ebuild.py    2002-10-30 13:35:31.000000000 -0800
++++ lintool-0.2.4/src/lintool/ebuild.py 2003-09-25 18:22:30.000000000 -0700
 @@ -7,6 +7,7 @@
  import os
  import os.path

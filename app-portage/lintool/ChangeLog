@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/lintool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/ChangeLog,v 1.3 2003/09/26 01:26:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/ChangeLog,v 1.4 2003/09/27 10:06:21 robbat2 Exp $
+
+  27 Sep 2003; Robin H. Johnson <robbat2@gentoo.org>
+  files/lintool-0.2.4-fixyear.diff:
+  fix patch yet again. things with cvs tags in them are proving to be a pain
+  when you dont want it to touch the tags
 
 *lintool-0.2.4-r1 (25 Sep 2003)
 
