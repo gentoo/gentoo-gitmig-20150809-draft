@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.14 2004/03/31 13:47:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.15 2004/04/14 05:05:36 robbat2 Exp $
+
+*amanda-2.4.4_p2 (13 Apr 2004)
+
+  13 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> amanda-2.4.4_p2.ebuild,
+  metadata.xml:
+  add new version as per bug #38770, block out xfs for sparc only, so sparc can
+  use amanda too! Add metadata.xml.
 
   31 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> amanda-2.4.4-r3.ebuild:
   Adding amd64 keyword, closing #46209.
