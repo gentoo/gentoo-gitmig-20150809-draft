@@ -5,7 +5,7 @@ MD5 f67d1e63c8588166e494744c81b250d5 autofs-4.0.0.ebuild 1929
 MD5 8ada6ad17d139fa85e4089066d3cbdfb autofs-4.1.3.ebuild 1930
 MD5 1c01a893e20ffda0d2e05c5de202c6cf autofs-3.1.7-r6.ebuild 1784
 MD5 9e0182d703eeb21b039d7d299cea75af autofs-3.1.7-r3.ebuild 1286
-MD5 f24fb01aaa1d5e59574aabaf25366f0e autofs-4.1.3-r1.ebuild 2860
+MD5 93f5658bc82138cfe25f2cd798c1b40a autofs-4.1.3-r1.ebuild 2864
 MD5 3f9ef36aecb11a51f251a752482d7863 autofs-3.1.7-r5.ebuild 1750
 MD5 ca95edfb458d279932a97ddcdea9035a ChangeLog 5052
 MD5 1d3c436cc14252035bf2d97228cd3f58 metadata.xml 224
@@ -37,7 +37,7 @@ MD5 a872a3743192bbca4f78ecec7f74df03 files/ldap.diff 367
 Version: GnuPG v1.2.6 (GNU/Linux)
 Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFBt/2sPpIsIjIzwiwRAqb1AJ9wZQiIAa8asQDILpvsBTz9ez0wwwCfabcw
-a1Uhtem72SMNto0o3yrGow4=
-=m3y+
+iD8DBQFBt/37PpIsIjIzwiwRAnMrAKDOxvGF2LPTHW5G7laoA9Yqnmrs0gCbBDJo
+txXQ897BzVPIRgXefC+sbks=
+=o9ts
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r1.ebuild,v 1.1 2004/12/09 07:25:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r1.ebuild,v 1.2 2004/12/09 07:26:31 robbat2 Exp $
 
 inherit eutils
 
@@ -10,13 +10,13 @@ DESCRIPTION="Kernel based automounter"
 HOMEPAGE="http://www.linux-consulting.com/Amd_AutoFS/autofs.html"
 SRC_URI_BASE="mirror://kernel/linux/daemons/${PN}/v4"
 SRC_URI="${SRC_URI_BASE}/${P}.tar.bz2
- ${SRC_URI_BASE}/${P}-strict.patch
- ${SRC_URI_BASE}/${P}-mtab_lock.patch
- ${SRC_URI_BASE}/${P}-bad_chdir.patch
- ${SRC_URI_BASE}/${P}-non_block_ping.patch
- ${SRC_URI_BASE}/${P}-signal-race-fix.patch
- ${SRC_URI_BASE}/${P}-sock-leak-fix.patch
- ${SRC_URI_BASE}/${P}-replicated_server_select.patch"
+		${SRC_URI_BASE}/${P}-strict.patch
+		${SRC_URI_BASE}/${P}-mtab_lock.patch
+		${SRC_URI_BASE}/${P}-bad_chdir.patch
+		${SRC_URI_BASE}/${P}-non_block_ping.patch
+		${SRC_URI_BASE}/${P}-signal-race-fix.patch
+		${SRC_URI_BASE}/${P}-sock-leak-fix.patch
+		${SRC_URI_BASE}/${P}-replicated_server_select.patch"
 DEPEND="virtual/libc
 		ldap? ( >=net-nds/openldap-2.0 )"
 SLOT="0"
@@ -54,14 +54,14 @@ src_install() {
 
 	dodoc COPYING COPYRIGHT NEWS README* TODO CHANGELOG CREDITS
 	cd ${S}/samples
-	docinto samples ; dodoc auto.misc auto.master 
+	docinto samples ; dodoc auto.misc auto.master
 	cd ${S}/man
 	sed -i 's:\/etc\/:\/etc\/autofs\/:g' *.8 *.5 *.in || die "Failed to update path in manpages"
 	doman auto.master.5 autofs.5 autofs.8 automount.8
 
 	dodir /etc/autofs /etc/init.d /etc/conf.d
-	insinto /etc/autofs ; doins ${FILESDIR}/auto.master 
-	insinto /etc/autofs ; doins ${FILESDIR}/auto.misc 
+	insinto /etc/autofs ; doins ${FILESDIR}/auto.master
+	insinto /etc/autofs ; doins ${FILESDIR}/auto.misc
 	exeinto /etc/autofs ; doexe ${FILESDIR}/auto.net # chmod 755 is important!
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/autofs.rc9 autofs
