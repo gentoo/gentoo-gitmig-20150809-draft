@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2719 2004/02/24 21:12:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2720 2004/02/24 22:01:57 pebenito Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,12 @@
 ##
 ##   End example
 ##
+
+# <pebenito@gentoo.org> (24 Feb 2004)
+# Needs some work, and v16 kernel
+>=sys-libs/libselinux-1.6
+>=sys-apps/checkpolicy-1.6
+>=sys-apps/policycoreutils-1.6
 
 # <wolf31o2@gentoo.org> (24 Feb 2004)
 # needs testing with USE=alsa
