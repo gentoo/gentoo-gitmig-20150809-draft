@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.11 2003/10/21 02:42:17 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.12 2003/10/29 16:16:21 method Exp $
+
+  29 Oct 2003; Joshua Brindle <method@gentoo.org>
+  policycoreutils-1.2-r1.ebuild:
+  added sparc
 
 *policycoreutils-1.2-r1 (20 Oct 2003)
 
