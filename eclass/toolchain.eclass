@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.72 2005/01/10 11:18:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.73 2005/01/11 08:50:20 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -42,22 +42,23 @@ if [[ ${CTARGET} = ${CHOST} ]] ; then
 	fi
 fi
 
-MY_PV_FULL="$(get_version_component_range 1-3)"
-MY_PV="$(get_version_component_range 1-2)"
+GCC_RELEASE_VER="$(get_version_component_range 1-3)"
+GCC_BRANCH_VER="$(get_version_component_range 1-2)"
+GCC_CONFIG_VER="${PV}"
 GCCMAJOR="$(get_version_component_range 1)"
 GCCMINOR="$(get_version_component_range 2)"
 GCCMICRO="$(get_version_component_range 3)"
+[ -z "${BRANCH_UPDATE}" ] && BRANCH_UPDATE="$(get_version_component_range 4)"
 
-MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 # Pre-release support
 if [ ${PV} != ${PV/_pre/-} ] ; then
 	PRERELEASE=${PV/_pre/-}
 fi
 # make _alpha and _beta ebuilds automatically use a snapshot
 if [ ${PV} != ${PV/_alpha/} ] ; then
-	SNAPSHOT="${MY_PV}-${PV##*_alpha}"
+	SNAPSHOT="${GCC_BRANCH_VER}-${PV##*_alpha}"
 elif [ ${PV} != ${PV/_beta/} ] ; then
-	SNAPSHOT="${MY_PV}-${PV##*_beta}"
+	SNAPSHOT="${GCC_BRANCH_VER}-${PV##*_beta}"
 fi
 
 if [ "${ETYPE}" == "gcc-library" ] ; then
@@ -75,16 +76,16 @@ PREFIX="${PREFIX:="/usr"}"
 if [ "${GCC_VAR_TYPE}" == "versioned" ] ; then
 	if version_is_at_least 3.4.0 ; then
 		# GCC 3.4 no longer uses gcc-lib.
-		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CTARGET}/${MY_PV_FULL}"}"
+		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CTARGET}/${GCC_CONFIG_VER}"}"
 	else
-		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc-lib/${CTARGET}/${MY_PV_FULL}"}"
+		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc-lib/${CTARGET}/${GCC_CONFIG_VER}"}"
 	fi
 	INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
-	BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}"}"
-	DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${MY_PV_FULL}"}"
+	BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}"}"
+	DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}"}"
 	# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 	# We will handle /usr/include/g++-v3/ with gcc-config ...
-	STDCXX_INCDIR="${STDCXX_INCDIR:="${LIBPATH}/include/g++-v${MY_PV/\.*/}"}"
+	STDCXX_INCDIR="${STDCXX_INCDIR:="${LIBPATH}/include/g++-v${GCC_BRANCH_VER/\.*/}"}"
 elif [ "${GCC_VAR_TYPE}" == "non-versioned" ] ; then
 	# using non-versioned directories to install gcc, like what is currently
 	# done for ppc64 and 3.3.3_pre, is a BAD IDEA. DO NOT do it!! However...
@@ -113,11 +114,11 @@ else
 	fi
 	# Support upgrade paths here or people get pissed
 	if use multislot ; then
-		SLOT="${CTARGET}-${MY_PV_FULL}"
+		SLOT="${CTARGET}-${GCC_CONFIG_VER}"
 	elif [[ ${CTARGET} != ${CHOST} ]] ; then
-		SLOT="${CTARGET}-${MY_PV}"
+		SLOT="${CTARGET}-${GCC_BRANCH_VER}"
 	else
-		SLOT="${MY_PV}"
+		SLOT="${GCC_BRANCH_VER}"
 	fi
 fi
 #----<< SLOT+IUSE logic >>----
@@ -138,7 +139,7 @@ gcc_get_s_dir() {
 	elif [ -n "${SNAPSHOT}" ] ; then
 		GCC_S="${WORKDIR}/gcc-${SNAPSHOT}"
 	else
-		GCC_S="${WORKDIR}/gcc-${MAIN_BRANCH}"
+		GCC_S="${WORKDIR}/gcc-${GCC_RELEASE_VER}"
 	fi
 
 	echo "${GCC_S}"
@@ -178,7 +179,7 @@ gcc_get_s_dir() {
 #	PATCH_GCC_VER
 #			This should be set to the version of the gentoo patch tarball.
 #			The resulting filename of this tarball will be:
-#			${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2
+#			${PN}-${PATCH_GCC_VER:=${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 #
 #	PIE_VER
 #	PIE_CORE
@@ -209,7 +210,7 @@ gcc_get_s_dir() {
 #
 #	GCC_MANPAGE_VERSION
 #			The version of gcc for which we will download manpages. This will
-#			default to ${PV}, but we may not want to pre-generate man pages
+#			default to ${GCC_RELEASE_VER}, but we may not want to pre-generate man pages
 #			for prerelease test ebuilds for example. This allows you to
 #			continue using pre-generated manpages from the last stable release.
 #			If set to "none", this will prevent the downloading of manpages,
@@ -225,10 +226,10 @@ get_gcc_src_uri() {
 	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:=${devspace_uri}}
 
 	if [ -n "${PIE_VER}" ] ; then
-		PIE_CORE="${PIE_CORE:=gcc-${MY_PV_FULL}-piepatches-v${PIE_VER}.tar.bz2}"
+		PIE_CORE="${PIE_CORE:=gcc-${GCC_RELEASE_VER}-piepatches-v${PIE_VER}.tar.bz2}"
 	fi
 
-	GCC_MANPAGE_VERSION="${GCC_MANPAGE_VERSION:=${MY_PV_FULL}}"
+	GCC_MANPAGE_VERSION="${GCC_MANPAGE_VERSION:=${GCC_RELEASE_VER}}"
 
 	# Set where to download gcc itself depending on whether we're using a
 	# prerelease, snapshot, or release tarball.
@@ -237,12 +238,12 @@ get_gcc_src_uri() {
 	elif [ -n "${SNAPSHOT}" ] ; then
 		GCC_SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT}.tar.bz2"
 	else
-		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/gcc-${MAIN_BRANCH}.tar.bz2"
+		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/gcc-${GCC_RELEASE_VER}.tar.bz2"
 		# we want all branch updates to be against the main release
 		if [ -n "${BRANCH_UPDATE}" ] ; then
 			GCC_SRC_URI="${GCC_SRC_URI}
-				mirror://gentoo/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
-				${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+				mirror://gentoo/${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
+				${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 		fi
 	fi
 
@@ -264,8 +265,8 @@ get_gcc_src_uri() {
 	# various gentoo patches
 	if [ -n "${PATCH_VER}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
-			mirror://gentoo/${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2
-			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2"
+			mirror://gentoo/${PN}-${PATCH_GCC_VER:=${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
+			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${PATCH_GCC_VER:=${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2"
 	fi
 
 	# strawberry pie, Cappuccino and a Gauloises
@@ -278,7 +279,7 @@ get_gcc_src_uri() {
 	# gcc bounds checking patch
 	if [ -n "${HTB_VER}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
-					boundschecking? ( http://web.inter.nl.net/hcc/Haj.Ten.Brugge/bounds-checking-${PN}-${HTB_GCC_VER:=${PV}}-${HTB_VER}.patch.bz2 )"
+					boundschecking? ( http://web.inter.nl.net/hcc/Haj.Ten.Brugge/bounds-checking-${PN}-${HTB_GCC_VER:=${GCC_RELEASE_VER}}-${HTB_VER}.patch.bz2 )"
 	fi
 
 	echo "${GCC_SRC_URI}"
@@ -577,7 +578,7 @@ split_out_specs_files() {
 
 create_gcc_env_entry() {
 	dodir /etc/env.d/gcc
-	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}"
+	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}"
 
 	if [ "$1" == "" ] ; then
 		gcc_envd_file="${D}${gcc_envd_base}"
@@ -683,7 +684,7 @@ gcc-compiler-pkg_postinst() {
 		then
 			OLD_GCC_VERSION="$(cat "${WORKDIR}/.oldgccversion")"
 		else
-			OLD_GCC_VERSION="${MY_PV_FULL}"
+			OLD_GCC_VERSION="${GCC_CONFIG_VER}"
 		fi
 
 		if [ -f "${WORKDIR}/.oldgccchost" ] && \
@@ -1047,10 +1048,10 @@ gcc_do_make() {
 	popd
 }
 
-# This function will add ${PV} to the names of all shared libraries in the
+# This function will add ${GCC_CONFIG_VER} to the names of all shared libraries in the
 # directory specified to avoid filename collisions between multiple slotted 
 # non-versioned gcc targets. If no directory is specified, it is assumed that
-# you want -all- shared objects to have ${PV} added. Example
+# you want -all- shared objects to have ${GCC_CONFIG_VER} added. Example
 #
 #	add_version_to_shared ${D}/usr/$(get_libdir)
 #
@@ -1066,11 +1067,11 @@ add_version_to_shared() {
 
 	for sharedlib in `find ${sharedlibdir} -name *.so.*` ; do
 		if [ ! -L "${sharedlib}" ] ; then
-			einfo "Renaming `basename "${sharedlib}"` to `basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`"
-			mv "${sharedlib}" "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}" \
+			einfo "Renaming `basename "${sharedlib}"` to `basename "${sharedlib/.so*/}-${GCC_CONFIG_VER}.so.${sharedlib/*.so./}"`"
+			mv "${sharedlib}" "${sharedlib/.so*/}-${GCC_CONFIG_VER}.so.${sharedlib/*.so./}" \
 				|| die
 			pushd `dirname "${sharedlib}"` > /dev/null || die
-			ln -sf "`basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`" \
+			ln -sf "`basename "${sharedlib/.so*/}-${GCC_CONFIG_VER}.so.${sharedlib/*.so./}"`" \
 				"`basename "${sharedlib}"`" || die
 			popd > /dev/null || die
 		fi
@@ -1175,7 +1176,7 @@ gcc-library-src_install() {
 gcc-compiler-src_install() {
 	local x=
 
-	# Do allow symlinks in ${PREFIX}/lib/gcc-lib/${CHOST}/${PV}/include as
+	# Do allow symlinks in ${PREFIX}/lib/gcc-lib/${CHOST}/${GCC_CONFIG_VER}/include as
 	# this can break the build.
 	for x in ${WORKDIR}/build/gcc/include/*
 	do
@@ -1260,7 +1261,7 @@ gcc-compiler-src_install() {
 
 		# Rename jar because it could clash with Kaffe's jar if this gcc is
 		# primary compiler (aka don't have the -<version> extension)
-		cd ${D}${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}
+		cd ${D}${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}
 		[ -f jar ] && mv -f jar gcj-jar
 
 		# Move <cxxabi.h> to compiler-specific directories
@@ -1283,10 +1284,10 @@ gcc-compiler-src_install() {
 				ln -sf ${x} ${CTARGET}-${x}
 			fi
 
-			if [ -f "${CTARGET}-${x}-${PV}" ]
+			if [ -f "${CTARGET}-${x}-${GCC_CONFIG_VER}" ]
 			then
-				rm -f ${CTARGET}-${x}-${PV}
-				ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${PV}
+				rm -f ${CTARGET}-${x}-${GCC_CONFIG_VER}
+				ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${GCC_CONFIG_VER}
 			fi
 		done
 
@@ -1475,7 +1476,7 @@ chk_gcc_version() {
 	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
 	                       sed -e 's:^.*/gcc[^/]*/\([^/]*\)/[0-9]\+.*$:\1:')"
 
-	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
+	if [ "${OLD_GCC_VERSION}" != "${GCC_CONFIG_VER}" ]
 	then
 		echo "${OLD_GCC_VERSION}" > "${WORKDIR}/.oldgccversion"
 	fi
@@ -1506,18 +1507,18 @@ gcc_quick_unpack() {
 	elif [ -n "${SNAPSHOT}" ] ; then
 		unpack gcc-${SNAPSHOT}.tar.bz2
 	else
-		unpack gcc-${MAIN_BRANCH}.tar.bz2
+		unpack gcc-${GCC_RELEASE_VER}.tar.bz2
 		# We want branch updates to be against a release tarball
 		if [ -n "${BRANCH_UPDATE}" ] ; then
 			pushd ${S:="$(gcc_get_s_dir)"} > /dev/null
-			epatch ${DISTDIR}/gcc-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
+			epatch ${DISTDIR}/gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 			popd > /dev/null
 		fi
 	fi
 
 	if [ -n "${PATCH_VER}" ]
 	then
-		unpack ${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2
+		unpack ${PN}-${PATCH_GCC_VER:=${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 	fi
 
 	if [ -n "${PP_VER}" ]
@@ -1536,7 +1537,7 @@ gcc_quick_unpack() {
 	# pappy@gentoo.org - Fri Oct  1 23:24:39 CEST 2004
 	if want_boundschecking
 	then
-		unpack "bounds-checking-${PN}-${HTB_GCC_VER:=${PV}}-${HTB_VER}.patch.bz2"
+		unpack "bounds-checking-${PN}-${HTB_GCC_VER:=${GCC_RELEASE_VER}}-${HTB_VER}.patch.bz2"
 	fi
 
 	popd > /dev/null
@@ -1570,7 +1571,7 @@ exclude_gcc_patches() {
 
 do_gcc_HTB_boundschecking_patches() {
 	# modify the bounds checking patch with a regression patch
-	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER:=${PV}}-${HTB_VER}.patch"
+	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER:=${GCC_RELEASE_VER}}-${HTB_VER}.patch"
 	release_version="${release_version}, HTB-${HTB_VER}"
 }
 
@@ -1680,8 +1681,8 @@ should_we_gcc_config() {
 	# ...skip this check if the current version is -exactly- the same
 	local c_gcc_conf_ver=$(gcc-config -c | awk -F - '{ print $5 }')
 	local c_majmin=$(get_version_component_range 1-2 ${c_gcc_conf_ver})
-	if [ "${c_gcc_conf_ver}" != "${MY_PV_FULL}" ] ; then
-		if [ "${c_majmin}" == "${MY_PV}" ] ;then
+	if [ "${c_gcc_conf_ver}" != "${GCC_CONFIG_VER}" ] ; then
+		if [ "${c_majmin}" == "${GCC_BRANCH_VER}" ] ;then
 			return 0
 		else
 			# if we're installing a genuinely different compiler version,
@@ -1692,7 +1693,7 @@ should_we_gcc_config() {
 			einfo "switch to the newly installed gcc version, do the"
 			einfo "following:"
 			echo
-			einfo "gcc-config ${CTARGET}-${MY_PV_FULL}"
+			einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
 			einfo "source /etc/profile"
 			echo
 			ebeep
@@ -1720,7 +1721,7 @@ do_gcc_config() {
 	[ "${current_specs}" != "" ] && local use_specs="-${current_specs}"
 
 
-	if [ -n "${use_specs}" -a ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}${use_specs} ] ; then
+	if [ -n "${use_specs}" -a ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ] ; then
 		ewarn "The currently selected specs-specific gcc config,"
 		ewarn "${current_specs}, doesn't exist anymore. This is usually"
 		ewarn "due to enabling/disabling hardened or switching to a version"
@@ -1731,12 +1732,12 @@ do_gcc_config() {
 	fi
 
 
-	if [ -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}${use_specs} ] ; then
+	if [ -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ] ; then
 		# we dont want to lose the current specs setting!
-		gcc-config ${CTARGET}-${MY_PV_FULL}${use_specs}
+		gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
 	else
 		# ...unless of course the specs-specific entry doesnt exist :)
-		gcc-config --use-portage-chost ${CTARGET}-${MY_PV_FULL}
+		gcc-config --use-portage-chost ${CTARGET}-${GCC_CONFIG_VER}
 	fi
 }
 
