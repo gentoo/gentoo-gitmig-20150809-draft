@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.23 2004/10/19 10:20:32 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.24 2004/10/19 10:23:50 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  sylpheed-claws-0.9.11.ebuild, sylpheed-claws-0.9.12a.ebuild:
+  Stable on amd64.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   sylpheed-claws-0.9.12b-r1.ebuild:
