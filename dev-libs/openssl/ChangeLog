@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.90 2004/07/13 18:47:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.91 2004/07/19 19:08:16 vapier Exp $
+
+  19 Jul 2004; Mike Frysinger <vapier@gentoo.org> openssl-0.9.7d-r1.ebuild:
+  Move `make test` out of src_compile() and into src_test() where it should be.
 
   13 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7d-r1.ebuild:
   Change back to single make.

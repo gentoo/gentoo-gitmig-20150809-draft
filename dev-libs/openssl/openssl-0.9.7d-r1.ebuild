@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.7 2004/07/13 18:47:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.8 2004/07/19 19:08:16 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -160,7 +160,6 @@ src_compile() {
 
 	einfo "Compiling ${P}"
 	make all || die
-	make test || die
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
@@ -197,7 +196,14 @@ src_compile() {
 
 		einfo "Compiling ${OLD_096_P}"
 		make all || die
-		make test || die
+	}
+}
+
+src_test() {
+	make test || die
+	# openssl-0.9.6
+	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
+		make all || die
 	}
 }
 
