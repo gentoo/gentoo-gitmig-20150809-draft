@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0d003aadae22453bcc8685ce0a08a9f6 ChangeLog 11661
+MD5 bda5c1ffdef667da4107f76b41079800 ChangeLog 11761
 MD5 f5659d73ef347dcb529d867d6d5b4272 metadata.xml 642
 MD5 5a4fbf4918657d0e207cd88205d38c56 uim-0.4.3.ebuild 1798
-MD5 d1a304da3eb167084dd577207b7f5ffa uim-0.4.5.ebuild 2271
+MD5 c459fc44537819e046c81111b33bfa6d uim-0.4.5.ebuild 2268
 MD5 8026dc67094188dfa01c4d6b271b9b9e uim-0.3.4.2.ebuild 1629
 MD5 c3186a24334df6fa9495cd94f60df007 uim-0.4.1.ebuild 1780
 MD5 5a56dd3c78e339ef2608e735fe86c2c0 uim-0.4.2.1.ebuild 1790
@@ -18,7 +18,7 @@ MD5 8441b16a6e27ce2428f377da2a8eb07e files/uim-pinyin-big5-gentoo.diff 275
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBd49mVWNWqTUmv+0RAuiMAJ41ik6PR+uFrbLGmyOsunKJOp5NsgCdHRyC
-6YjgRDI9dsvQ1DxER0bGkg4=
-=4Fo4
+iD8DBQFBuDBoVWNWqTUmv+0RAizJAJ9Pb/RszmWjcriiny0Y6KtyCw1jDACbBaSa
+RZJETsgobOmpNIcC3Mik0Rc=
+=4d80
 -----END PGP SIGNATURE-----
