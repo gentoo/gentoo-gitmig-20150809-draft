@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.8.ebuild,v 1.11 2002/10/19 22:00:52 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.8.ebuild,v 1.12 2002/11/16 07:26:45 lostlogic Exp $
 
 IUSE="qt"
 
@@ -9,7 +9,7 @@ DESCRIPTION="ODBC Interface for Linux"
 SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 HOMEPAGE="http://www.unixodbc.org"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 DEPEND="virtual/glibc
         >=sys-libs/readline-4.1
         >=sys-libs/ncurses-5.2
