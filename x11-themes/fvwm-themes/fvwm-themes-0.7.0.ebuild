@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/fvwm-themes-0.7.0.ebuild,v 1.1 2004/03/25 02:14:56 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/fvwm-themes-0.7.0.ebuild,v 1.2 2004/03/25 02:35:15 pyrania Exp $
 
 IUSE="gnome"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~amd64"
 SLOT="0"
 
-DEPEND="x11-wm/fvwm
+DEPEND=">=x11-wm/fvwm-2.5.8
 	gnome? ( media-gfx/imagemagick )"
 RDEPEND="x11-wm/fvwm"
 
