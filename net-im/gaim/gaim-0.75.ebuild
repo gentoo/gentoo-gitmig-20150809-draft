@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75.ebuild,v 1.1 2004/01/10 06:41:58 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75.ebuild,v 1.2 2004/01/10 06:43:51 rizzo Exp $
 
 IUSE="nls perl spell nas mozilla cjk debug" #ssl
 
@@ -35,8 +35,8 @@ pkg_setup() {
 		eerror "If you wish to install gaim without gaim-encryption,"
 		eerror "run: USE=\"-ssl\" emerge gaim"
 		eerror
+		die "net-im/gaim-0.75 does not yet support USE=\"ssl\""
 	fi
-	die "net-im/gaim-0.75 does not yet support USE=\"ssl\""
 }
 
 src_unpack() {
