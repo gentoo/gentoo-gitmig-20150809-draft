@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.11 2005/01/14 17:24:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.12 2005/01/19 21:56:29 brix Exp $
+
+  19 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  wpa_supplicant-0.3.4.ebuild:
+  0.3.4 doesn't work on amd64, marking as such. A fix is in upstream CVS.
 
   14 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
   wpa_supplicant-0.2.6.ebuild:
