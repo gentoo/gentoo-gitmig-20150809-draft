@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0.ebuild,v 1.1 2004/06/25 20:15:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r1.ebuild,v 1.1 2004/06/30 17:51:14 plasmaroo Exp $
 
 IUSE=""
 
@@ -39,6 +39,7 @@ src_unpack() {
 
 	cd linux-${KV}
 	epatch ../${MY_P/linux/${base}}.${patch} || die "Failed to apply uClinux patch!"
+	epatch ${FILESDIR}/${PN}-2.6.IPTables-RDoS.patch || die "Failed to apply the IPTables RDoS security patch!"
 
 	set MY_ARCH=${ARCH}
 	unset ARCH
