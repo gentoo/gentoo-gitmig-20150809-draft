@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.5 2004/02/22 11:35:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.6 2004/03/01 19:33:23 aliz Exp $
 
   22 Feb 2004; David Holm <dholm@gentoo.org> ifplugd-0.20.ebuild:
   Added to ~ppc.
@@ -20,6 +20,8 @@
   Note: For it to work on my system (eepro100), I need to add -m mii to the
   options, and add -a. I think. Testers welcome.
   TODO: add an /etc/apm/event.d/ifplugd script
+
+*ifplugd-0.13-r1 (21 Mar 2003)
 
   21 Mar 2003; Wout Mertens <wmertens@gentoo.org> :
   Fixed the action script, otherwise ifplugd would die when dhcpcd
