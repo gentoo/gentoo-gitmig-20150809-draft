@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ap-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ap-utils/ChangeLog,v 1.7 2004/02/25 04:09:09 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ap-utils/ChangeLog,v 1.8 2004/03/21 09:57:37 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> ap-utils-1.3.1.ebuild,
+  ap-utils-1.3.3.ebuild, ap-utils-1.4.ebuild:
+  adding categorie. see 45110 for details
 
 *ap-utils-1.4 (24 Feb 2004)
 
