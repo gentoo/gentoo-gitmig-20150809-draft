@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.7-r5.ebuild,v 1.1 2001/08/29 19:42:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.7-r5.ebuild,v 1.2 2001/08/30 05:05:55 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -16,7 +16,8 @@ src_unpack() {
     unpack ${A}
 
     cd ${S}
-    patch -p1 < ${FILESDIR}/${P}.diff
+    #This patch prevents top from segfaulting when LANG is set
+	patch -p1 < ${FILESDIR}/${P}.diff
 
     mv Makefile Makefile.orig
     sed -e "s/-O3/${CFLAGS}/" -e 's/all: config/all: /' \
