@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/katalog
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.1 2004/11/08 19:12:19 motaboy Exp $
+
+*katalog-0.3 (08 Nov 2004)
+
+  08 Nov 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +katalog-0.3.ebuild:
+  New ebuild, thanks to Charles Phoenix. Closes bug #70343
+
