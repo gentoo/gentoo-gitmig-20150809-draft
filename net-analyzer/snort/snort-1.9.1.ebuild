@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.1.ebuild,v 1.1 2003/03/04 11:05:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.1.ebuild,v 1.2 2003/03/06 10:18:41 aliz Exp $
+
+inherit eutils
 
 IUSE="ssl postgres mysql snmp"
-
 S=${WORKDIR}/${P}
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 SRC_URI="http://www.snort.org/dl/${P}.tar.gz"
@@ -11,7 +12,7 @@ HOMEPAGE="http://www.snort.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1
@@ -32,7 +33,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	patch -l -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${P}-configure.patch
 }
 
 src_compile() {
