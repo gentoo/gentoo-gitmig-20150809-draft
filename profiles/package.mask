@@ -25,6 +25,7 @@
 # <seemant@gentoo.org> (25 Jul 2002)
 # masked while licensing is sorted out
 app-games/halflife-server
+app-arch/ncompress
 
 # <seemant@gentoo.org> 25 Jul 2002
 # masked for testing
