@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.22 2004/03/02 23:45:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.23 2004/04/09 05:46:59 solar Exp $
+
+  09 Apr 2004; <solar@gentoo.org> chkrootkit-0.42b.ebuild:
+  Added filter-ldflags -pie to avoid static linking problems when LDFLAGS=-pie
+  is used. bug 47057
 
   02 Mar 2004; Jason Wever <weeve@gentoo.org> chkrootkit-0.42b.ebuild:
   Stable on sparc I am, yes.
