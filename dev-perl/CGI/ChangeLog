@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.10 2003/03/27 00:14:28 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.11 2003/03/27 01:04:10 rac Exp $
 
 *CGI-2.81 (26 Mar 2003)
+
+  26 Mar 2003; <rac@gentoo.org> CGI-2.81.ebuild, CGI-2.91.ebuild:
+  change multiple license to space-separated
 
   26 Mar 2003; <rac@gentoo.org> CGI-2.81.ebuild, CGI-2.91.ebuild:
   We had a situation (bug #18150) where the version of dev-perl/CGI was
