@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.10 2004/04/20 17:33:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.11 2004/04/28 16:56:15 eradicator Exp $
+
+  28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rosegarden-4.0.9.7.ebuild:
+  Fixed with_use line.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   rosegarden-4.0.9.6.ebuild, rosegarden-4.0.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.7.ebuild,v 1.3 2004/04/16 10:49:36 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.7.ebuild,v 1.4 2004/04/28 16:56:15 eradicator Exp $
 
 MY_PV="${PV/./-}"
 MY_P="${PN}-${MY_PV}"
@@ -26,7 +26,7 @@ DEPEND=">=kde-base/kdelibs-3.0
 
 src_compile() {
 	addwrite ${QTDIR}/etc/settings
-	econf `use_with --with-jack` \
+	econf `use_with jack` \
 		--with-ladspa \
 		|| die "./configure failed"
 	emake || die
