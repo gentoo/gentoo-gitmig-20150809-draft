@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/gnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.12 2003/05/14 12:40:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.13 2003/07/06 12:43:10 gmsoft Exp $
 
 *gnet-2.0.3 (14 May 2003)
 
@@ -13,6 +13,9 @@
   New version, use gnome2 eclass, SLOT 2
 
 *gnet-1.1.9 (07 May 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnet-1.1.9.ebuild :
+  Added hppa to KEYWORDS.
 
   07 May 2003; foser <foser@gentoo.org> gnet-1.1.9.ebuild :
   New version, removed patch, fixed license
