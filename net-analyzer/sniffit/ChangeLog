@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sniffit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.7 2004/06/24 22:18:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.8 2004/07/09 20:25:04 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  sniffit-0.3.7-r1.ebuild, sniffit-0.3.7.ebuild:
+  Tidy up. added IUSE.
 
 *sniffit-0.3.7-r1 (28 Jul 2003)
 

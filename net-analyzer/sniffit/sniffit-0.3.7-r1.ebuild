@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r1.ebuild,v 1.3 2004/06/24 22:18:13 agriffis Exp $
-
-IUSE=
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r1.ebuild,v 1.4 2004/07/09 20:25:04 eldad Exp $
 
 inherit eutils
 
@@ -18,7 +16,8 @@ DEPEND=">=net-libs/libpcap-0.6.2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
