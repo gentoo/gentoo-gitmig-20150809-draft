@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.7 2003/09/05 02:40:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.8 2003/12/05 21:10:54 robbat2 Exp $
 
 inherit eutils
 
@@ -156,7 +156,7 @@ src_install() {
 	for i in mailer-daemon postmaster root
 	do
 		touch ${D}/var/qmail/alias/.qmail-${i}
-		fowners alias.qmail /var/qmail/alias/.qmail-${i}
+		fowners alias:qmail /var/qmail/alias/.qmail-${i}
 	done
 
 	einfo "Setting up maildirs by default in the account skeleton ..."
@@ -242,15 +242,15 @@ pkg_postinst() {
 
 	dd if=/dev/zero of=${ROOT}/var/qmail/queue/lock/tcpto bs=1024 count=1
 	chmod 644 ${ROOT}/var/qmail/queue/lock/tcpto
-	chown qmailr.qmail ${ROOT}/var/qmail/queue/lock/tcpto
+	chown qmailr:qmail ${ROOT}/var/qmail/queue/lock/tcpto
 
 	touch ${ROOT}/var/qmail/queue/lock/sendmutex
 	chmod 600 ${ROOT}/var/qmail/queue/lock/sendmutex
-	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/sendmutex
+	chown qmails:qmail ${ROOT}/var/qmail/queue/lock/sendmutex
 
 	mkfifo ${ROOT}/var/qmail/queue/lock/trigger
 	chmod 622 ${ROOT}/var/qmail/queue/lock/trigger
-	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/trigger
+	chown qmails:qmail ${ROOT}/var/qmail/queue/lock/trigger
 
 	echo -e "\e[32;01m Please do not forget to run, the following syntax :\033[0m"
 	echo -e "\e[32;01m ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}-${PR}/${PN}-${PV}-${PR}.ebuild config \033[0m"
