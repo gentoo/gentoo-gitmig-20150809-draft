@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.2 2005/01/01 15:40:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.3 2005/03/02 22:44:47 foser Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://planner.imendio.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE="doc libgda python"
 
 RDEPEND=">=x11-libs/gtk+-2.0.5
