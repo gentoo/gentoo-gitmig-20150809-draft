@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.22 2004/06/24 21:34:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.23 2004/06/29 19:59:07 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://gnometoaster.rulez.org/archive/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc ~amd64"
-IUSE="nls esd gnome oss oggvorbis"
+IUSE="esd gnome oggvorbis oss"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2 )
