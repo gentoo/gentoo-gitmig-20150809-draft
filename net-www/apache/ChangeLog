@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.279 2004/10/15 16:26:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.280 2004/10/23 21:16:02 stuart Exp $
+
+*apache-1.3.32 (23 Oct 2004)
+
+  23 Oct 2004; Stuart Herbert <stuart@gentoo.org> +apache-1.3.32.ebuild:
+  Version bump
 
   15 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> apache-2.0.52.ebuild:
   Marked stable on amd64.
