@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.10 2004/04/17 00:42:08 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.11 2004/04/27 21:48:30 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> shfs-0.31-r1.ebuild,
+  shfs-0.31.ebuild, shfs-0.32-r1.ebuild:
+  Add inherit eutils
 
 *shfs-0.32-r1 (16 Apr 2004)
 

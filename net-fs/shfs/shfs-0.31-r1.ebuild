@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.6 2003/11/23 23:44:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.7 2004/04/27 21:48:30 agriffis Exp $
+
+inherit eutils
 
 IUSE="amd doc"
 

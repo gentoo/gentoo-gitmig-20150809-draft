@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.6 2004/04/26 04:41:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.7 2004/04/27 21:47:48 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="SFS (Self-certifying File System) client and server daemons"
 HOMEPAGE="http://www.fs.net/"

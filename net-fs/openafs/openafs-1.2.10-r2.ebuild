@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r2.ebuild,v 1.4 2004/02/20 02:44:17 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r2.ebuild,v 1.5 2004/04/27 21:47:12 agriffis Exp $
 
-inherit check-kernel fixheadtails flag-o-matic
+inherit check-kernel fixheadtails flag-o-matic eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The AFS 3 scalable distributed file system"
