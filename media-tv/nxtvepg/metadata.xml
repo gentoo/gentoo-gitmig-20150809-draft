@@ -5,4 +5,8 @@
 <maintainer>
   <email>phosphan@gentoo.org</email>
 </maintainer>
+<maintainer>
+  <email>pylon@gentoo.org</email>
+  <description>Follow-up maintainer for this package</description>
+</maintainer>
 </pkgmetadata>

@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/nxtvepg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.8 2005/01/11 23:17:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.9 2005/03/29 23:29:26 pylon Exp $
+
+*nxtvepg-2.7.4 (29 Mar 2005)
+
+  29 Mar 2005; Lars Weiler <pylon@gentoo.org> -files/nxtvepg-2.6.0.patch,
+  -files/nxtvepg-2.7.0.patch, +files/nxtvepg-db.patch, metadata.xml,
+  nxtvepg-2.6.0.ebuild, -nxtvepg-2.7.0.ebuild, +nxtvepg-2.7.4.ebuild:
+  Version bump -> bug #67020 and bug #86816
+  Cleaned up patch, as it is used in every version.
 
   12 Jan 2005; Danny van Dyk <kugelfang@gentoo.org> nxtvepg-2.7.0.ebuild:
   Marked ~amd64.
