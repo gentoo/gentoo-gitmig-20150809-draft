@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/alsa-patch-bay
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.1 2002/12/21 05:36:58 agenkin Exp $
+
+*alsa-patch-bay-0.3 (20 Dec 2002)
+
+  20 Dec 2002; Arcady Genkin <agenkin@gentoo.org> :
+  Initial version by Jonathan Kraut <jkraut1@nyc.rr.com>.  Closes bug
+  #12405.
