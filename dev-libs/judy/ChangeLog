@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.5 2004/07/17 09:29:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.6 2004/09/20 08:31:44 twp Exp $
+
+*judy-1.0.0 (20 Sep 2004)
+
+  20 Sep 2004; Tom Payne <twp@gentoo.org> +metadata.xml, +judy-1.0.0.ebuild:
+  Version bump.
 
   17 Jul 2004; David Holm <dholm@gentoo.org> judy-20020627-r1.ebuild:
   Added to ~ppc.
