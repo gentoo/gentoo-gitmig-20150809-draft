@@ -1,5 +1,7 @@
 # This is a list of USE flags that should not be used on PPC
 
+x86
+
 afs
 3dnow
 avi
