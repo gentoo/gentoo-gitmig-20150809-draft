@@ -1,22 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6-r2.ebuild,v 1.3 2004/06/30 03:15:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.1.ebuild,v 1.1 2004/06/30 03:15:16 agriffis Exp $
 
 IUSE="gnome gtk2 ipv6 ldap crypt xinerama"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher
 
-EMVER="0.83.6"
-IPCVER="1.0.5"
+EMVER="0.84.2"
+IPCVER="1.0.7"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thunderbird-source-${PV}.tar.bz2
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thunderbird-${PV}-source.tar.bz2
 	 crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -40,8 +40,7 @@ RDEPEND="virtual/x11
 	>=net-www/mozilla-launcher-1.7-r1"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	dev-lang/perl"
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/mozilla
 
@@ -270,9 +269,18 @@ src_install() {
 	if use gnome; then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/thunderbird-icon.png
-		insinto /usr/share/gnome/apps/Internet
+		# Fix bug 54179: Install .desktop file into /usr/share/applications
+		# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+		insinto /usr/share/applications
 		doins ${FILESDIR}/icon/mozillathunderbird.desktop
 	fi
+
+	# Normally thunderbird-0.7.1 must be run as root once before it can
+	# be run as a normal user.  Drop in some initialized files to
+	# avoid this.
+	einfo "Extracting thunderbird-${PV} initialization files"
+	tar xjpf ${FILESDIR}/thunderbird-0.7-init.tar.bz2 \
+		-C ${D}/usr/lib/MozillaThunderbird
 }
 
 pkg_preinst() {
