@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r4.ebuild,v 1.8 2004/06/24 22:06:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r4.ebuild,v 1.9 2004/06/28 19:04:56 agriffis Exp $
 
 inherit eutils
 
@@ -12,8 +12,9 @@ HOMEPAGE="http://www.metrolink.com/openmotif/"
 LICENSE="MOTIF"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 IUSE=""
-DEPEND="virtual/glibc
-	virtual/x11"
+DEPEND="virtual/libc
+	virtual/x11
+	>=sys-apps/sed-4"
 
 SLOT="0"
 
