@@ -1,4 +1,4 @@
-MD5 d265d07416aa4bc885c37e837f71bbb3 libsqlora8-2.2.11.ebuild 1771
-MD5 4ec3fc1b1960e307fa6fa6f02ff7500f ChangeLog 383
-MD5 b6bcffbcff180bd9de06a00c564d1b19 metadata.xml 401
+MD5 066200696f1f21522c665438d159deba ChangeLog 565
+MD5 893fc7ea48712cd840741f6f469d48c6 libsqlora8-2.2.11.ebuild 1649
+MD5 40eef4c0d3ce4b82b599f5a889568975 metadata.xml 429
 MD5 8a06edc637420287b983ec91532dbadf files/digest-libsqlora8-2.2.11 69

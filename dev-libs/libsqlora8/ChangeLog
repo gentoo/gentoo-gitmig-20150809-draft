@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libsqlora8
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/ChangeLog,v 1.1 2004/02/13 02:50:48 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/ChangeLog,v 1.2 2004/06/23 11:55:14 jmglov Exp $
+
+  23 Jun 2004; Josh Glover <jmglov@gentoo.org> libsqlora8-2.2.11.ebuild,
+  metadata.xml:
+  Fixed bug in ebuild that was preventing emerges; submitted by Josh Glover in
+  bug #35679
 
 *libsqlora8-2.2.11 (12 Feb 2004)
 
