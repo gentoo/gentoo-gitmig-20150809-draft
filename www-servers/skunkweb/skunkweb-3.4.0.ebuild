@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0.ebuild,v 1.2 2004/11/07 11:35:06 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0.ebuild,v 1.3 2004/11/19 11:00:56 satya Exp $
 
 inherit eutils
 
@@ -71,8 +71,10 @@ src_install() {
 	mkdir -p ${D}/var/{lib,log}/${PN}
 	chown skunkweb:skunkweb ${D}/var/{lib,log}/${PN}
 	mkdir -p ${D}/var/lib/${PN}/run
-	# init --------------------------------------------------------------
+	# scripts------------------------------------------------------------
 	exeinto /etc/init.d; newexe ${FILESDIR}/skunkweb-init skunkweb
+	exeinto /etc/cron.daily
+		newexe ${FILESDIR}/skunkweb-cron-cache_cleaner skunkweb-cache_cleaner
 	# docs --------------------------------------------------------------
 	dodoc README ChangeLog NEWS HACKING ACKS INSTALL
 	if use doc; then
