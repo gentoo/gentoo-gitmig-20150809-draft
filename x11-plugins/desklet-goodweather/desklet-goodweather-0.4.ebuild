@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/desklet-goodweather-0.2.ebuild,v 1.1 2003/11/21 10:30:36 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/desklet-goodweather-0.4.ebuild,v 1.1 2004/04/27 12:28:12 obz Exp $
 
 DESKLET_NAME="GoodWeather"
 
@@ -14,9 +14,9 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64 ~alpha"
 
-DEPEND=">=gnome-extra/gdesklets-core-0.24"
+DEPEND=">=gnome-extra/gdesklets-core-0.26"
 
 DOCS="INSTALL README"
 
