@@ -1,14 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.1 2003/11/27 03:01:46 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.2 2004/01/26 00:59:28 vapier Exp $
 
-IUSE="nls ipv6 perl ssl"
-
+ECVS_SERVER="cvs.irssi.org:/home/cvs"
+ECVS_MODULE="irssi"
+ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 inherit perl-module cvs
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
 HOMEPAGE="http://irssi.org/"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips"
+IUSE="nls ipv6 perl ssl"
 
 DEPEND=">=dev-libs/glib-2.2.1
 		sys-libs/ncurses
@@ -16,23 +21,11 @@ DEPEND=">=dev-libs/glib-2.2.1
 		!net-irc/irssi"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips"
-ECVS_SERVER="cvs.irssi.org:/home/cvs"
-ECVS_MODULE="irssi"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 S=${WORKDIR}/${ECVS_MODULE}
-
-src_unpack() {
-	# grab irssi cvs
-	ECVS_MODULE_IRSSI="${ECVS_MODULE}"
-	cvs_src_unpack
-}
 
 src_compile() {
 	# Fixes bug 27584
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 
 	# Note: there is an option to build a GUI for irssi, but according
 	# to the website the GUI is no longer developed, so that option is
