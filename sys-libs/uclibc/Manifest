@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b9cdfc9b3e399146b1d5b77300f9f27c ChangeLog 8284
+MD5 c9800c105dd5709742b374c335560842 ChangeLog 8488
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
 MD5 a4612f199b26df52b09c0055f5672567 uclibc-0.9.26-r7.ebuild 7862
-MD5 7bd7b2a2e1b2956e619c5e30a8d5cdd4 uclibc-0.9.27.ebuild 9290
-MD5 d942a37aaa0f2fb3c52228a50fe26dbb uclibc-0.9.26-r8.ebuild 9772
+MD5 2ac17ac0db6804d65e2055ef0750749b uclibc-0.9.27.ebuild 10062
+MD5 f0cff3cbb3807e78beab2131ad348440 uclibc-0.9.26-r8.ebuild 10249
 MD5 6fb9166cb9a919ce76e4ebd58f74fec5 files/0.9.26-r8-cvs.patch 1184
 MD5 8801c8a97f025fb426cba64a5b9a4501 files/digest-uclibc-0.9.27 229
 MD5 0b733285f186f31c1be9ffcc42f1064e files/getent 973
@@ -22,7 +22,7 @@ MD5 a503ef49001f5f67d61cd40b0809fb76 files/0.9.26/unsecvars.h 682
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB6JiJroRuSHgZdywRAhmzAJ42ltiRNGoWlTcoFjbgRnACNRNHHACfRXZ5
-E8kf6tG7FJLyzvb+xroS+VQ=
-=HHk/
+iD8DBQFB7EWHroRuSHgZdywRAkomAJ4+GPnSxn5xd2RNZQqykdFckPjyEACgg1+Y
+6wecDaoatZxWpETwvwLF8do=
+=uYQa
 -----END PGP SIGNATURE-----

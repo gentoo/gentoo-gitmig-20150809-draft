@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.1 2005/01/15 04:13:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.2 2005/01/17 23:08:04 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -9,6 +9,13 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
+fi
+# Handle the case where we want uclibc on glibc ...
+if [[ ${CTARGET} == ${CHOST} ]] && [[ ${CHOST} != *-uclibc ]] ; then
+	export UCLIBC_AND_GLIBC="sitting in a tree"
+	export CTARGET=${CHOST%%-*}-pc-linux-uclibc
+else
+	export UCLIBC_AND_GLIBC=""
 fi
 
 # To make a new CVS_VER we do.
@@ -41,15 +48,22 @@ PROVIDE="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 
+alt_kprefix() {
+	if [[ ${CTARGET} == ${CHOST} ]] || [[ -n ${UCLIBC_AND_GLIBC} ]] ; then
+		echo /usr
+	else
+		echo /usr/${CTARGET}
+	fi
+}
 alt_prefix() {
-	if [[ ${CTARGET} = ${CHOST} ]] ; then
+	if [[ ${CTARGET} == ${CHOST} ]] ; then
 		echo /usr
 	else
 		echo /usr/${CTARGET}
 	fi
 }
 alt_rprefix() {
-	if [[ ${CTARGET} = ${CHOST} ]] ; then
+	if [[ ${CTARGET} == ${CHOST} ]] ; then
 		echo /
 	else
 		echo /usr/${CTARGET}
@@ -192,7 +206,7 @@ src_unpack() {
 
 	# we are building against system installed kernel headers
 	sed -i \
-		-e "s:KERNEL_SOURCE.*:KERNEL_SOURCE=\"$(alt_prefix)\":" \
+		-e "s:KERNEL_SOURCE.*:KERNEL_SOURCE=\"$(alt_kprefix)\":" \
 		-e "s:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX=\"$(alt_rprefix)/$(get_libdir)\":" \
 		-e "s:DEVEL_PREFIX=.*:DEVEL_PREFIX=\"$(alt_prefix)\":" \
 		-e "s:RUNTIME_PREFIX=.*:RUNTIME_PREFIX=\"$(alt_rprefix)\":" \
@@ -205,6 +219,14 @@ src_unpack() {
 	cp .config myconfig
 
 	emake clean >/dev/null || die "could not clean"
+
+	echo
+	einfo "Runtime Prefix: $(alt_rprefix)"
+	einfo "Kernel Prefix:  $(alt_kprefix)"
+	einfo "Devel Prefix:   $(alt_prefix)"
+	einfo "CBUILD:         ${CBUILD:-${CHOST}}"
+	einfo "CHOST:          ${CHOST}"
+	einfo "CTARGET:        ${CTARGET}"
 }
 
 src_compile() {
@@ -240,10 +262,14 @@ src_compile() {
 }
 
 src_test() {
+	# This is wrong, but uclibc's tests fail bad when screwing 
+	# around with sandbox, so lets just punt it
+	unset LD_PRELOAD
+
 	# assert test fails on pax/grsec enabled kernels - normal
 	# vfork test fails in sandbox (both glibc/uclibc)
 	cd test
-	make
+	make || die "test failed"
 }
 
 src_install() {
