@@ -1,3 +1,6 @@
 MD5 19b71f0c944af7211ba95b08fc59a504 ChangeLog 1278
 MD5 23393eb9df9ff52abc7ad9c6256a8707 amstd-2.0.0.ebuild 685
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 b61dc5f2640e52073c2ca3d307c5ef4d amstd-2.0.0-r1.ebuild 527
 MD5 30a9701cc28cb91eef419c5b9ff9ff66 files/digest-amstd-2.0.0 62
+MD5 30a9701cc28cb91eef419c5b9ff9ff66 files/digest-amstd-2.0.0-r1 62

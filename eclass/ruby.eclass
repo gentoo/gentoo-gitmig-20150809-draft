@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.14 2003/11/15 21:25:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.15 2003/11/16 19:27:24 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -13,11 +13,16 @@
 # econf, emake and einstall defined by ebuild.sh respectively).
 
 # Variables:
-# USE_RUBY	Defines which version of ruby is supported.
-#		Set it to "0" if it installs only version independent files,
-#		and set it to something like "1.6 1.8" if the ebuild supports 
-#		both ruby 1.6 and 1.8 but has version depenedent files such
-#		as libraries.
+# USE_RUBY	Space delimited list of supported ruby.
+#		Set it to "any" if it installs only version independent files.
+#		If your ebuild supports both ruby 1.6 and 1.8 but has version
+#		depenedent files such as libraries, set it to something like
+#		"ruby16 ruby18". Possible values are "any ruby16 shim18 ruby18"
+#		Note: USE_RUBY="shim18" doesn't take any effect at the moment.
+# WITH_RUBY	Contains space delimited list of installed ruby which is
+#		supported (supported ruby should be specified in USE_RUBY).
+#		It is automatically defined if your ebuild set DEPEND list
+#		correctly, so usually you shouldn't set this variable by hand.
 # EXTRA_ECONF	You can pass extra arguments to econf by defining this
 #		variable. Note that you cannot specify them by command line
 #		if you are using <sys-apps/portage-2.0.49-r17.
@@ -34,19 +39,19 @@ SLOT="0"
 LICENSE="Ruby"
 
 newdepend ">=dev-lang/ruby-1.6.8"
-if has_version '=dev-lang/ruby-1.6*' && [[ "${USE_RUBY/1.6/}" != "${USE_RUBY}" ]] ; then
-	WITH_RUBY="${WITH_RUBY} 1.6"
+if has_version '=dev-lang/ruby-1.6*' && [[ "${USE_RUBY/ruby16/}" != "${USE_RUBY}" ]] ; then
+	WITH_RUBY="${WITH_RUBY} ruby16"
 fi
-if has_version '=dev-lang/ruby-1.8*' && [[ "${USE_RUBY/1.8/}" != "${USE_RUBY}" ]] ; then
-	WITH_RUBY="${WITH_RUBY} 1.8"
+if has_version '=dev-lang/ruby-1.8*' && [[ "${USE_RUBY/ruby18/}" != "${USE_RUBY}" ]] ; then
+	WITH_RUBY="${WITH_RUBY} ruby18"
 fi
 if has_version '=dev-lang/ruby-1.6*' && has_version '=dev-lang/ruby-1.8*' \
-	[[ "${USE_RUBY/0/}" != "${USE_RUBY}" ]] ; then
-	WITH_RUBY="0"
+	&& [[ "${USE_RUBY/any/}" != "${USE_RUBY}" ]] ; then
+	WITH_RUBY="${WITH_RUBY} any"
 fi
 
 ruby_src_unpack() {
-	if [[ "${WITH_RUBY/1.6/}" != "${WITH_RUBY}" && "${WITH_RUBY/1.8/}" != "${WITH_RUBY}" ]] ; then
+	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		mkdir -p ${S}/{1.6,1.8}
 		cd ${S}/1.6; unpack ${A}; cd -
 		cd ${S}/1.8; unpack ${A}; cd -
@@ -91,7 +96,7 @@ erubyconf() {
 }
 
 ruby_econf() {
-	if [[ "${WITH_RUBY/1.6/}" != "${WITH_RUBY}" && "${WITH_RUBY/1.8/}" != "${WITH_RUBY}" ]] ; then
+	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running econf for ruby 1.6 ;)"
 		cd 1.6/${S#${WORKDIR}}
 		erubyconf ruby16 $@ || die
@@ -100,6 +105,12 @@ ruby_econf() {
 		cd 1.8/${S#${WORKDIR}}
 		erubyconf ruby18 $@ || die
 		cd -
+	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
+		einfo "running econf for ruby 1.6 ;)"
+		erubyconf ruby16 $@ || die
+	elif [[ "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
+		einfo "running econf for ruby 1.8 ;)"
+		erubyconf ruby18 $@ || die
 	else
 		einfo "running econf for ruby ;)"
 		erubyconf ruby $@ || die
@@ -113,7 +124,7 @@ erubymake() {
 }
 
 ruby_emake() {
-	if [[ "${WITH_RUBY/1.6/}" != "${WITH_RUBY}" && "${WITH_RUBY/1.8/}" != "${WITH_RUBY}" ]] ; then
+	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running emake for ruby 1.6 ;)"
 		cd 1.6/${S#${WORKDIR}}
 		erubymake $@ || die
@@ -122,6 +133,14 @@ ruby_emake() {
 		cd 1.8/${S#${WORKDIR}}
 		erubymake $@ || die
 		cd -
+	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
+		einfo "running emake for ruby 1.6 ;)"
+		[[ -x /usr/bin/ruby16 ]] && alias ruby ruby16
+		erubymake $@
+	elif [[ "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
+		einfo "running emake for ruby 1.8 ;)"
+		[[ -x /usr/bin/ruby18 ]] && alias ruby ruby18
+		erubymake $@
 	else
 		einfo "running emake for ruby ;)"
 		erubymake $@ || die
@@ -153,7 +172,7 @@ erubyinstall() {
 	elif [ -f extconf.rb -o -f Makefile ] ; then
 		make DESTDIR=${D} $@ install || die "make install failed"
 	else
-		if [[ "${WITH_RUBY/1.6/}" != "${WITH_RUBY}" && "${WITH_RUBY/1.8/}" != "${WITH_RUBY}" ]] ; then
+		if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 			siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
 		else
 			siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
@@ -167,7 +186,7 @@ ruby_einstall() {
 
 	local siteruby=$(ruby -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
 
-	if [[ "${WITH_RUBY/1.6/}" != "${WITH_RUBY}" && "${WITH_RUBY/1.8/}" != "${WITH_RUBY}" ]] ; then
+	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running einstall for ruby 1.6 ;)"
 		MY_S=${S}/1.6/${S#${WORKDIR}}
 		cd ${MY_S}
@@ -178,7 +197,13 @@ ruby_einstall() {
 		erubyinstall ruby18 $@
 		S=${MY_S}
 		#cd -
-	elif [[ "${WITH_RUBY/0/}" != "${WITH_RUBY}" ]] ; then
+	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
+		einfo "running einstall for ruby 1.6 ;)"
+		erubyinstall ruby16 $@
+	elif [[ "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
+		einfo "running einstall for ruby 1.8 ;)"
+		erubyinstall ruby18 $@
+	elif [[ "${WITH_RUBY/any/}" != "${WITH_RUBY}" ]] ; then
 		if [ -n "`use ruby18`" ] ; then
 			erubyinstall ruby18 $@
 			if [ -d ${D}${siteruby}/../1.8 ] ; then
