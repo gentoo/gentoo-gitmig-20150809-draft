@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.11.ebuild,v 1.2 2003/01/09 16:11:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.11.ebuild,v 1.3 2003/01/15 18:43:21 mholzer Exp $
 
 IUSE="doc python"
 
@@ -23,8 +23,8 @@ RDEPEND=">=x11-libs/gtk+-2.0.0
 	>=media-libs/tiff-3.5.7
 	>=media-libs/libart_lgpl-2.3.8-r1
 	sys-devel/gettext
-	python? ( >=dev-lang/python-2.2 )
-	>=dev-python/pygtk-1.99.13"
+	python? ( >=dev-lang/python-2.2 
+	>=dev-python/pygtk-1.99.13 ) "
 
 
 DEPEND="${RDEPEND}
