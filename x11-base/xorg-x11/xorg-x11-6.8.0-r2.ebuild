@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.36 2004/10/29 06:27:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.37 2004/10/29 07:13:52 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -850,45 +850,6 @@ setup_config_files() {
 	sed -i "s:^.*Option.*"XkbRules".*$::g" ${D}/etc/X11/xorg.conf.example
 }
 
-update_config_files() {
-	# Fix any installed config files for installing fonts to /usr/share/fonts
-	# This *needs* to be after all other installation so files aren't
-	# overwritten.
-
-	if [ "${ROOT}" = "/" ]; then
-		einfo "Preparing any installed configuration files for font move..."
-		FILES="/etc/X11/xorg.conf
-			/etc/X11/XF86Config-4
-			/etc/X11/XF86Config
-			/etc/X11/fs/config"
-		#	/etc/fonts/fonts.conf
-		#	/etc/fonts/local.conf
-
-		local FILE
-		for FILE in ${FILES}; do
-			if [ -e ${FILE} ]; then
-				# New font paths
-				sed "s,/usr/X11R6/$(get_libdir)/X11/fonts,/usr/share/fonts,g" \
-					${ROOT}${FILE} > ${IMAGE}${FILE}
-
-				if [ "${FILE}" = "/etc/X11/xorg.conf" ] \
-					|| [ "${FILE}" = "/etc/X11/XF86Config" ] \
-					|| [ "${FILE}" = "/etc/X11/XF86Config-4" ]; then
-					# "keyboard" driver is deprecated and will be removed,
-					# switch to "kbd"
-					sed -i 's~^\([ \t]*Driver[ \t]\+\)"[kK]eyboard"~\1"kbd"~' \
-						${IMAGE}${FILE}
-
-					# Work around upgrade problem where people have
-					# Option "XkbRules" "xfree86" in their config file
-					sed -i "s:^.*Option.*\"XkbRules\".*$::g" \
-						${IMAGE}${FILE}
-				fi
-			fi
-		done
-	fi
-}
-
 fix_opengl_symlinks() {
 	# Remove invalid symlinks
 	local LINK
@@ -1067,6 +1028,55 @@ src_install() {
 
 }
 
+migrate_usr_x11r6_lib() {
+	# We need a symlink from /usr/X11R6/lib -> /usr/lib so all the packages
+	# whose files we move don't lose track of them. As such, we need
+	# _absolutely nothing_ in /usr/X11R6/lib so we can make such a symlink.
+	# Donnie Berkholz <spyderous@gentoo.org> 20 October 2004
+	mv -f ${ROOT}usr/X11R6/$(get_libdir)/* ${ROOT}usr/$(get_libdir)
+	rmdir ${ROOT}usr/X11R6/$(get_libdir)
+	ln -s ${ROOT}usr/X11R6/$(get_libdir) ${ROOT}usr/$(get_libdir)
+}
+
+update_config_files() {
+	# Fix any installed config files for installing fonts to /usr/share/fonts
+	# This *needs* to be after all other installation so files aren't
+	# overwritten.
+
+	if [ "${ROOT}" = "/" ]; then
+		einfo "Preparing any installed configuration files for font move..."
+		FILES="/etc/X11/xorg.conf
+			/etc/X11/XF86Config-4
+			/etc/X11/XF86Config
+			/etc/X11/fs/config"
+		#	/etc/fonts/fonts.conf
+		#	/etc/fonts/local.conf
+
+		local FILE
+		for FILE in ${FILES}; do
+			if [ -e ${FILE} ]; then
+				# New font paths
+				sed "s,/usr/X11R6/$(get_libdir)/X11/fonts,/usr/share/fonts,g" \
+					${ROOT}${FILE} > ${IMAGE}${FILE}
+
+				if [ "${FILE}" = "/etc/X11/xorg.conf" ] \
+					|| [ "${FILE}" = "/etc/X11/XF86Config" ] \
+					|| [ "${FILE}" = "/etc/X11/XF86Config-4" ]; then
+					# "keyboard" driver is deprecated and will be removed,
+					# switch to "kbd"
+					sed -i 's~^\([ \t]*Driver[ \t]\+\)"[kK]eyboard"~\1"kbd"~' \
+						${IMAGE}${FILE}
+
+					# Work around upgrade problem where people have
+					# Option "XkbRules" "xfree86" in their config file
+					sed -i "s:^.*Option.*\"XkbRules\".*$::g" \
+						${IMAGE}${FILE}
+				fi
+			fi
+		done
+	fi
+}
+
 clean_dynamic_libgl() {
 	# clean the dynamic libGL stuff's home to ensure
 	# we don't have stale libs floating around
@@ -1081,6 +1091,8 @@ clean_dynamic_libgl() {
 }
 
 pkg_preinst() {
+	# Do this before anything else, so we do all the rest inside the symlink
+	migrate_usr_x11r6_lib
 
 	update_config_files
 	for G_FONTDIR in ${G_FONTDIRS}; do
