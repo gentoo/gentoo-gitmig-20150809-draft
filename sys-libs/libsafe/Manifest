@@ -1,4 +1,14 @@
-MD5 22cf908c43d5f53727473092dd4ce85b libsafe-2.0_p16-r1.ebuild 1725
-MD5 74e5a864250794cb9157466f1536b6e9 ChangeLog 684
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 45136ab9fa6bb0f84d8fef8af04433a5 ChangeLog 820
+MD5 934c88be6562bbbab35376353acebf1c libsafe-2.0_p16-r1.ebuild 1760
 MD5 bb8d0a4581b8faf1798232a83d6b2553 metadata.xml 520
 MD5 4802aa342dde49b03cd59d85b07e801c files/digest-libsafe-2.0_p16-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCAfgoArHZZzCEUG0RAuGDAJ9sL9EfawTBmuUnpqZkjD+8JH1jrACcDhTT
+XVSwqTcOWNP90LjohTOwKgQ=
+=RVDe
+-----END PGP SIGNATURE-----

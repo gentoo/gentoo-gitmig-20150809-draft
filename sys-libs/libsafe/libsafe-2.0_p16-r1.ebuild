@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16-r1.ebuild,v 1.1 2004/11/06 04:57:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16-r1.ebuild,v 1.2 2005/02/03 10:08:17 eradicator Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs multilib
 
 MY_P="${P/_p/-}"
 DESCRIPTION="Protection against buffer overflow vulnerabilities"
@@ -31,17 +31,16 @@ src_compile() {
 	# It safer not too assume it is. Uncomment the following if desired
 	# use mta && mycflags="${mycflags} -DNOTIFY_WITH_EMAIL"
 
-	emake CC="$(tc-getCC)" CFLAGS="${mycflags}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${mycflags}" libsafe || die
 }
 
 src_install() {
-
 	# libsafe stuff
 	into /
 	dolib.so src/libsafe.so.${PV/_p/.} || die
 	# dodir /lib
-	dosym libsafe.so.${PV/_p/.} /lib/libsafe.so || die
-	dosym libsafe.so.${PV/_p/.} /lib/libsafe.so.${PV%%.*} || die
+	dosym libsafe.so.${PV/_p/.} /$(get_libdir)/libsafe.so || die
+	dosym libsafe.so.${PV/_p/.} /$(get_libdir)/libsafe.so.${PV%%.*} || die
 
 	# Documentation
 	doman doc/libsafe.8
@@ -57,6 +56,6 @@ pkg_postinst() {
 	einfo "To use this you have to put the library as one of the variables"
 	einfo "in LD_PRELOAD."
 	einfo "Example in bash:"
-	einfo "export LD_PRELOAD=/lib/libsafe.so.${PV%%.*}"
+	einfo "export LD_PRELOAD=libsafe.so.${PV%%.*}"
 	einfo
 }

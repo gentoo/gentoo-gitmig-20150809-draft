@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libsafe
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.4 2004/11/06 04:57:28 matsuu Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.5 2005/02/03 10:08:17 eradicator Exp $
+
+  03 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  libsafe-2.0_p16-r1.ebuild:
+  Multilib friendly fix.  Closes bug #80391.
 
 *libsafe-2.0_p16-r1 (06 Nov 2004)
 
