@@ -1,15 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.6.0_pre2.ebuild,v 1.6 2002/05/27 17:27:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.7.ebuild,v 1.1 2002/05/29 19:53:12 danarmak Exp $
 
 inherit kde-base || die
 
 need-kde 3
 
-S="${WORKDIR}/k3b-0.6.0pre2"
 DESCRIPTION="K3b, KDE CD Writing Software"
-SRC_URI="mirror://sourceforge/k3b/k3b-0.6.0pre2.tar.gz"
+SRC_URI="mirror://sourceforge/k3b/${P}.tar.gz"
 HOMEPAGE="http://k3b.sourceforge.net"
 newdepend ">=media-sound/mpg123-0.59
 	>=media-sound/cdparanoia-3.9.8
@@ -19,6 +18,9 @@ newdepend ">=media-sound/mpg123-0.59
 	>=media-sound/mad-0.14.2b-r1
 	media-video/transcode
 	media-libs/libvorbis"
+
+myconf="$myconf --enable-sso"
+[ -n "$DEBUG" ] && myconf="$myconf --enable-debugging --enable-profiling" || myconf="$myconf --disable-debugging --disable-profiling"
 
 src_compile() {
 
