@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.16 2003/07/20 00:29:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.17 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="nls bonobo"
 
@@ -30,7 +30,7 @@ src_compile() {
 	elibtoolize
 
 	local myconf=""
-	
+
 	use bonobo && myconf="${myconf} --enable-bonobo"
 	use bonobo || myconf="${myconf} --disable-bonobo --disable-bonobotest"
 
@@ -42,7 +42,7 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--disable-gnomedb \
 		${myconf} || die
-		
+
 	Xemake || die
 }
 
@@ -51,7 +51,7 @@ src_install() {
 	     sysconfdir=${D}/etc \
 	     localstatedir=${D}/var/lib \
 	     install || die
-	
+
 	dodoc AUTHORS COPYING* ChangeLog NEWS
 	dodoc doc/*.txt
 }

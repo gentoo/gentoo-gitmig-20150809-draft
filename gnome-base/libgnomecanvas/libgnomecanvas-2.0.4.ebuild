@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.0.4.ebuild,v 1.9 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.0.4.ebuild,v 1.10 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="doc"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
-LICENSE="GPL-2 LGPL-2.1" 
+LICENSE="GPL-2 LGPL-2.1"
 
 
 RDEPEND=">=gnome-base/libglade-2.0.1

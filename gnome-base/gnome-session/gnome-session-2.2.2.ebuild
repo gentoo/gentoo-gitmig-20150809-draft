@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.2.ebuild,v 1.7 2003/08/24 18:20:16 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.2.ebuild,v 1.8 2003/09/06 23:51:37 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install
-	
+
 	dodir /etc/X11/Sessions
 	exeinto /etc/X11/Sessions
 	doexe ${FILESDIR}/Gnome

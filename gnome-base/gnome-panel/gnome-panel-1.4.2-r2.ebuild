@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.2-r2.ebuild,v 1.5 2003/08/19 23:55:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.2-r2.ebuild,v 1.6 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="kde nls"
 
@@ -43,7 +43,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	local myldflags=""
-	
+
 	use nls || myconf="${myconf} --disable-nls"
 
 	if [ "`use kde`" ]
@@ -66,7 +66,7 @@ src_compile() {
 	cat gnome-panel-screenshot.c.orig | \
 		sed 's:\(^#include <errno.h>\):\1\n#include <locale.h>:' \
 		> gnome-panel-screenshot.c
-	
+
 	cd ${S}
 	make -C panel
 }

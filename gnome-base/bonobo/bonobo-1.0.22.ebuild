@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.12 2003/07/20 00:29:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.13 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="nls"
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/oaf-0.6.8
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	nls? ( sys-devel/gettext 
+	nls? ( sys-devel/gettext
 	>=dev-util/intltool-0.11 )"
 
 src_compile() {
@@ -30,7 +30,7 @@ src_compile() {
 
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
-  
+
 	econf ${myconf} || die
 
 	make || die # make -j 4 didn't work

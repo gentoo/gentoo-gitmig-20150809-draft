@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.2-r1.ebuild,v 1.4 2003/08/25 23:44:53 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.2-r1.ebuild,v 1.5 2003/09/06 23:51:37 msterret Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -13,9 +13,9 @@ SLOT="2.0"
 KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 
 #  Note to developers:
-#  This is a wrapper for the complete Gnome2 desktop, 
+#  This is a wrapper for the complete Gnome2 desktop,
 #  This means all components that a user expects in Gnome2 are present
-#  please do not reduce this list further unless 
+#  please do not reduce this list further unless
 #  dependencies pull in what you remove.
 #  With "emerge gnome" a user expects the full "standard" distribution of Gnome and should be provided with that, consider only installing the parts needed for smaller installations.
 
@@ -40,7 +40,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gconf-editor-0.4.1
 	>=gnome-extra/gnome2-user-docs-2.0.6
 	>=gnome-base/gnome-mime-data-2.2.1
-	
+
 	>=x11-libs/gtk+-2.2.1-r1
 	>=x11-libs/pango-1.2.3
 	>=dev-libs/atk-1.2.4
@@ -76,7 +76,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/acme-2.0.6
 	>=app-text/ggv-2.0.1
 
-	!hppa? ( !alpha? ( 
+	!hppa? ( !alpha? (
 		>=gnome-extra/gnome-media-2.2.2
 		>=gnome-extra/nautilus-media-0.2.2
 		>=media-libs/gst-plugins-0.6.2-r1

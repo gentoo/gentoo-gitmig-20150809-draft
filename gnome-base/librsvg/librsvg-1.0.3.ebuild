@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-1.0.3.ebuild,v 1.8 2003/05/30 09:59:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-1.0.3.ebuild,v 1.9 2003/09/06 23:51:37 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="librsvg"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
         >=dev-libs/popt-1.5"
 
 
-src_compile() {                           
+src_compile() {
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr	 				\
 		    --sysconfdir=/etc					\

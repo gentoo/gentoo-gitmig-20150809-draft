@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.1.ebuild,v 1.10 2003/02/13 12:07:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.1.ebuild,v 1.11 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="kde nls cups"
 
@@ -41,7 +41,7 @@ src_unpack() {
 
 	cd ${S}
 	# Fix build error
-	patch -p0 <${FILESDIR}/${P}-configure.in.patch  || die "failed patch" 
+	patch -p0 <${FILESDIR}/${P}-configure.in.patch  || die "failed patch"
 
 	# Libtoolize
 	elibtoolize
@@ -53,7 +53,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	local myldflags=""
-	
+
 	use nls || myconf="${myconf} --disable-nls"
 
 	if [ "`use kde`" ]
@@ -76,7 +76,7 @@ src_compile() {
 	cat gnome-panel-screenshot.c.orig | \
 		sed 's:\(^#include <errno.h>\):\1\n#include <locale.h>:' \
 		> gnome-panel-screenshot.c
-	
+
 	cd ${S}
 
 	emake || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.2.1.ebuild,v 1.5 2003/08/04 16:02:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.2.1.ebuild,v 1.6 2003/09/06 23:51:37 msterret Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ IUSE="doc"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc ~alpha ~sparc hppa amd64"
-LICENSE="GPL-2 LGPL-2" 
+LICENSE="GPL-2 LGPL-2"
 
 RDEPEND=">=x11-libs/pango-1.1.2
 	>=dev-lang/perl-5.002

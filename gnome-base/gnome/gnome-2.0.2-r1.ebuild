@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.2-r1.ebuild,v 1.6 2003/02/13 12:06:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.2-r1.ebuild,v 1.7 2003/09/06 23:51:37 msterret Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -10,9 +10,9 @@ KEYWORDS="ppc x86 sparc alpha"
 SLOT="2.0"
 
 #  Note to developers:
-#  This is a wrapper for the complete Gnome2 desktop, 
+#  This is a wrapper for the complete Gnome2 desktop,
 #  This means all components that a user expects in Gnome2 are present
-#  please do not reduce this list further unless 
+#  please do not reduce this list further unless
 #  dependencies pull in what you remove.
 #  With "emerge gnome" a user expects the full "standard" distribution of Gnome and should be provided with that, consider only installing the parts needed for smaller installations.
 
@@ -70,5 +70,5 @@ pkg_postinst () {
 	einfo "note that to change windowmanager to metacity do: "
 	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""
 	einfo "of course this works for all other window managers as well"
-	
+
 }

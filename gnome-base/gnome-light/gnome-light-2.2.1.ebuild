@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.2.1.ebuild,v 1.2 2003/08/13 03:20:00 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.2.1.ebuild,v 1.3 2003/09/06 23:51:37 msterret Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -18,7 +18,7 @@ KEYWORDS="~x86"
 #  It is basicly the gnome-base/gnome without all extra apps
 
 #  This is currently in it's test phase, if you feel like some dep
-#  should be added or removed from this pack file a bug to 
+#  should be added or removed from this pack file a bug to
 #  gnome@gentoo.org on bugs.gentoo.org
 
 #	>=media-gfx/eog-2.2.1
@@ -32,7 +32,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/control-center-2.2.1
 	>=gnome-base/gnome-mime-data-2.2.0
 	>=gnome-extra/yelp-2.2.2
-	
+
 	>=x11-libs/gtk+-2.2.1
 	>=x11-libs/pango-1.2.1
 	>=dev-libs/atk-1.2.2

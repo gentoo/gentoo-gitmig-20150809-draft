@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.3.ebuild,v 1.9 2003/08/07 03:37:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.3.ebuild,v 1.10 2003/09/06 23:51:37 msterret Exp $
 
 inherit libtool gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
 SRC_URI="mirror://gnome/2.0.2/sources/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-2 FDL-1.1" 
+LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE="doc"
@@ -27,7 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.0.6
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	doc? ( dev-util/gtk-doc )
 	${DEPEND}"
-		
+
 src_compile() {
 	elibtoolize
 	./configure --host=${CHOST} \
@@ -50,8 +50,8 @@ src_install() {
 		localstatedir=${D}/var \
 		install || die
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-    
-	dodoc AUTHORS ChangeLog COPYING* README* INSTALL NEWS message-of-doom 
+
+	dodoc AUTHORS ChangeLog COPYING* README* INSTALL NEWS message-of-doom
 	docinto battstat
 	dodoc battstat/AUTHORS battstat/ChangeLog battstat/README battstat/TODO
 	docinto cdplayer

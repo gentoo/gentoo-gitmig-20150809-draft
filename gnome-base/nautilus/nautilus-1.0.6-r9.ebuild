@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.15 2003/05/25 08:57:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.16 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="nls mozilla"
 
@@ -69,7 +69,7 @@ src_unpack() {
 	# (mkennedy@gentoo.org)
 
 	patch -p1 < ${FILESDIR}/${P}-mozilla-embed-1.0_rc3.diff || die
-	
+
 
 	# Add missing files
 	mkdir -p ${S}/intl
@@ -85,9 +85,9 @@ src_unpack() {
 	autoconf &>${S}/foo
 }
 
-src_compile() {                           
+src_compile() {
 	local myconf
-	
+
 	if [ -z "`use nls`" ]
 	then
 		myconf="${myconf} --disable-nls"

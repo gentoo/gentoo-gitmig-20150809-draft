@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0.ebuild,v 1.10 2003/08/29 20:28:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0.ebuild,v 1.11 2003/09/06 23:51:37 msterret Exp $
 
 inherit flag-o-matic
 # Do _NOT_ strip symbols in the build!
@@ -28,11 +28,11 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	app-text/docbook-xml-dtd"
-	
+
 src_compile() {
 	local myconf
 	use doc && myconf="--enable-gtk-doc" || myconf="--disable-gtk-doc"
-	
+
 	## patch for xml stuff
 	patch -p0 < ${FILESDIR}/Makefile.in-0.patch
 	libtoolize --copy --force
@@ -42,7 +42,7 @@ src_compile() {
 			--infodir=/usr/share/info \
 			--mandir=/usr/share/man \
 			--enable-debug=yes ${myconf} || die "configure this"
-	
+
 	emake || die "die a horrible death"
 }
 
@@ -53,15 +53,15 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
 		install || die
-    
- 	dodoc ABOUT-NLS AUTHORS COPYING  ChangeLog INSTALL NEWS README 
+
+ 	dodoc ABOUT-NLS AUTHORS COPYING  ChangeLog INSTALL NEWS README
 }
 
 pkg_postinst() {
 	echo ">>> Updating XML catalog"
 	/usr/bin/xmlcatalog --noout --add "system" \
 		"http://glade.gnome.org/glade-2.0.dtd" \
-		/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog	
+		/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog
 }
 
 pkg_postrm() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.2.5.ebuild,v 1.7 2003/08/23 17:44:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.2.5.ebuild,v 1.8 2003/09/06 23:51:37 msterret Exp $
 
 inherit gnome2
 
@@ -19,21 +19,21 @@ RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/popt-1.5
 	>=gnome-extra/libgsf-1.6.0"
 
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.9 )"
-	
+
 DOCS="AUTHORS ChangeLog COPYIN* README INSTALL NEWS TODO"
 
 pkg_postinst() {
- 
+
         gdk-pixbuf-query-loaders > /etc/gtk-2.0/gdk-pixbuf.loaders
- 
+
 }
- 
+
 pkg_postrm() {
- 
+
         gdk-pixbuf-query-loaders > /etc/gtk-2.0/gdk-pixbuf.loaders
- 
+
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.3.ebuild,v 1.9 2003/08/22 17:04:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.3.ebuild,v 1.10 2003/09/06 23:51:37 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -34,7 +34,7 @@ RDEPEND="app-admin/fam-oss
 	x11-themes/gnome-themes
 	oggvorbis? ( media-sound/vorbis-tools )"
 
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.11
 	>=dev-util/pkgconfig-0.12.0
 	>=gnome-base/gconf-1.2.1"

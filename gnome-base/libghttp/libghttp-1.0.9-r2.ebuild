@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r2.ebuild,v 1.9 2003/02/13 12:11:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r2.ebuild,v 1.10 2003/09/06 23:51:37 msterret Exp $
 
 inherit libtool
 
@@ -25,7 +25,7 @@ src_compile() {
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	make prefix=${D}/usr						\
 	     sysconfdir=${D}/etc					\
 	     localstatedir=${D}/var/lib					\

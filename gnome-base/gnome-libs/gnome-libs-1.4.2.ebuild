@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.11 2003/07/19 23:22:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.12 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="doc nls kde"
 
@@ -19,11 +19,11 @@ RDEPEND=">=media-libs/imlib-1.9.10
 		>=media-sound/esound-0.2.23
 		>=gnome-base/ORBit-0.5.12
 		=x11-libs/gtk+-1.2*
-		amd64? sys-libs/db : <sys-libs/db-2 
-		doc? ( app-text/docbook-sgml 
+		amd64? sys-libs/db : <sys-libs/db-2
+		doc? ( app-text/docbook-sgml
 		       dev-util/gtk-doc )"
 
-DEPEND="nls? ( >=sys-devel/gettext-0.10.40 
+DEPEND="nls? ( >=sys-devel/gettext-0.10.40
 				>=dev-util/intltool-0.11 )
 		${RDEPEND}"
 SLOT="1"
@@ -36,7 +36,7 @@ src_unpack() {
 
 }
 
-src_compile() {                           
+src_compile() {
 	CFLAGS="$CFLAGS -I/usr/include/db1"
 
 	local myconf
@@ -46,7 +46,7 @@ src_compile() {
 	use doc || myconf="${myconf} --disable-gtk-doc"
 
 	# libtoolize
-	elibtoolize 
+	elibtoolize
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-1.0.2-r3.ebuild,v 1.9 2003/02/13 12:05:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-1.0.2-r3.ebuild,v 1.10 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="nls"
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 SLOT="1"
 
-src_compile() { 
+src_compile() {
 
 	local myconf
 
@@ -36,7 +36,7 @@ src_compile() {
 	make || die # Doesn't work with -j 4 (hallski)
 }
 
-src_install() {                           
+src_install() {
 
 	make prefix=${D}/usr sysconfdir=${D}/etc \
 		localstatedir=${D}/var/lib install || die

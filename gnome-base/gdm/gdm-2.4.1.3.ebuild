@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.3.ebuild,v 1.9 2003/07/19 23:22:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.3.ebuild,v 1.10 2003/09/06 23:51:37 msterret Exp $
 
 inherit eutils gnome.org
 
@@ -39,7 +39,7 @@ src_unpack() {
 		gdm.h.orig > gdm.h
 	rm -f gdm.h.orig
 
-	# Make Gentoo theme default	
+	# Make Gentoo theme default
 	cd ${S}/config
 	cp gdm.conf.in gdm.conf.in.orig
 	sed -e "s:/usr/bin/X11:/usr/X11R6/bin:g" \
@@ -53,14 +53,14 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc/X11 \
 		--localstatedir=/var/lib \
 		--with-pam-prefix=/etc \
 		${myconf} || die
-		
+
 	emake || die
 }
 
@@ -89,7 +89,7 @@ src_install() {
 	dodir /var/lib/gdm
 	chown gdm:gdm ${D}/var/lib/gdm
 	chmod 0750 ${D}/var/lib/gdm
-  
+
 	# pam startup
 	dodir /etc/pam.d
 	insinto /etc/pam.d
@@ -117,7 +117,7 @@ src_install() {
 
 	cd ${D}/etc/X11/gdm
 	cp gdm.conf gdm.conf.orig
-	
+
 	sed -e "s:0=/usr/X11R6/bin/X:0=/usr/X11R6/bin/X -dpi 100 -nolisten tcp dpms vt7:g" \
 	    -e "s:GtkRC=/opt/gnome/share/themes/Default/gtk/gtkrc:GtkRC=/usr/share/themes/Default/gtk/gtkrc:g" \
 	    -e "s:BackgroundColor=#007777:BackgroundColor=#2a3f5b:g" \
@@ -139,7 +139,7 @@ src_install() {
 
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-emergence  ${D}/usr/share/gdm/themes
-	
+
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
 }
 

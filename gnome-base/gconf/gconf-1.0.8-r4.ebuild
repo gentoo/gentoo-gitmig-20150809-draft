@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r4.ebuild,v 1.8 2003/06/27 14:15:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r4.ebuild,v 1.9 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="nls"
 
@@ -18,7 +18,7 @@ inherit libtool
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
 	>=dev-util/guile-1.4
 	dev-util/indent
 	=dev-libs/glib-1.2*
@@ -29,9 +29,9 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	local myconf
-	
-	elibtoolize 
-	
+
+	elibtoolize
+
 	use nls	\
 		|| myconf="--disable-nls"	\
 		&& mkdir intl			\

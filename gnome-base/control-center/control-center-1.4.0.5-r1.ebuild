@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.14 2003/07/20 00:29:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.15 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="nls"
 
@@ -17,7 +17,7 @@ RDEPEND="<gnome-base/gnome-vfs-1.9.0
 		>=media-libs/gdk-pixbuf-0.11.0-r1"
 
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext ) 
+	nls? ( sys-devel/gettext )
         >=dev-util/intltool-0.11"
 
 src_compile() {
@@ -31,7 +31,7 @@ src_compile() {
 	# Fix build agains gdk-pixbuf-0.12 and later
 	#	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
 	# Not needed anymore? uncomment if this bugs.
-	
+
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
 		    --mandir=/usr/share/man \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-2.2.1.1.ebuild,v 1.6 2003/07/19 23:22:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-2.2.1.1.ebuild,v 1.7 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="doc"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.0.1
 	>=gnome-base/ORBit2-2.4
 	>=net-libs/linc-0.5.1"
 
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.10 )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.6 2003/07/20 00:29:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.7 2003/09/06 23:51:37 msterret Exp $
 
 IUSE="ssl nls"
 
@@ -15,7 +15,7 @@ SLOT="1"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
-RDEPEND="( =gnome-base/gconf-1.0* )	
+RDEPEND="( =gnome-base/gconf-1.0* )
 	>=gnome-base/gnome-libs-1.4.1.2
 	>=gnome-base/gnome-mime-data-1.0.1
 	>=sys-apps/bzip2-1.0.2
@@ -50,9 +50,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	
+
 	elibtoolize
-	
+
 	use nls || {
 		myconf="${myconf} --disable-nls"
 		mkdir intl
