@@ -1,5 +1,5 @@
---- xine-lib-1-rc3/src/xine-utils/xine_check.c	2003-12-08 10:36:27.000000000 +0000
-+++ xine-lib-1-rc3/src/xine-utils/xine_check.c.plasmaroo	2003-12-27 14:20:36.000000000 +0000
+--- src/xine-utils/xine_check.c	2003-12-08 10:36:27.000000000 +0000
++++ src/xine-utils/xine_check.c.plasmaroo	2003-12-27 14:20:36.000000000 +0000
 @@ -276,6 +276,11 @@
      return hc;
    }
