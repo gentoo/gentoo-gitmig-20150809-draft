@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.41.ebuild,v 1.1 2003/06/26 15:46:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.41.ebuild,v 1.2 2003/09/11 01:12:59 msterret Exp $
 
 inherit perl-module eutils
 CATEGORY="dev-perl"
@@ -16,7 +16,7 @@ IUSE="X jpeg gif truetype"
 
 DEPEND="${DEPEND}
 	media-libs/libpng
-        sys-libs/zlib
+	sys-libs/zlib
 	=media-libs/libgd-1*
 	truetype? ( =media-libs/freetype-1* )
 	jpeg? ( media-libs/jpeg )

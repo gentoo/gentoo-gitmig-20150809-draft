@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-MDK-Common/perl-MDK-Common-1.0.4.ebuild,v 1.3 2003/06/21 21:36:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-MDK-Common/perl-MDK-Common-1.0.4.ebuild,v 1.4 2003/09/11 01:12:59 msterret Exp $
 
 inherit perl-module
 
@@ -23,6 +23,6 @@ src_unpack() {
 }
 
 src_compile() {
- 	cd ${S}
+	cd ${S}
 	emake || die
 }

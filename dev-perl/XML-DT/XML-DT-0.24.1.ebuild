@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.24.1.ebuild,v 1.2 2003/09/06 22:37:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.24.1.ebuild,v 1.3 2003/09/11 01:12:59 msterret Exp $
 
 inherit perl-module
 
@@ -20,5 +20,5 @@ DEPEND="${DEPEND}
 	>=dev-perl/XML-Parser-2.31"
 
 src_compile() {
-        echo "" | perl-module_src_compile
-		}
+	echo "" | perl-module_src_compile
+}
