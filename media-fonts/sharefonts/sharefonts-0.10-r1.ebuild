@@ -1,11 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/sharefonts-0.10-r1.ebuild,v 1.4 2004/02/09 18:01:38 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/sharefonts-0.10-r1.ebuild,v 1.5 2004/05/30 23:45:51 leonardop Exp $
 
 S=${WORKDIR}/sharefont
 DESCRIPTION="A Collection of True Type Fonts"
 SRC_URI="mirror://gimp/fonts/${P}.tar.gz"
 HOMEPAGE="http://www.gimp.org/fonts.html"
+
+IUSE=""
 KEYWORDS="x86 sparc ppc amd64"
 SLOT="0"
 LICENSE="public-domain"
