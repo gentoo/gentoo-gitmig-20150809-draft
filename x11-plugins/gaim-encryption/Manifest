@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b9c2609bfef4cd172c5ea4eb5b78bee ChangeLog 8503
 MD5 bb162c17660316ce0125f9de02a01d6f gaim-encryption-2.29.ebuild 1109
-MD5 f10f1caad1b77674a58acf2635e52910 gaim-encryption-2.28.ebuild 1114
-MD5 ab7db4bf9ff48c8de9da14fd12f6c15c metadata.xml 344
 MD5 4a973606854da49154e44eaef7da7a75 gaim-encryption-2.30.ebuild 1107
+MD5 8234ffad84d635e39e51ccad2201f978 gaim-encryption-2.32.ebuild 1092
+MD5 f10f1caad1b77674a58acf2635e52910 gaim-encryption-2.28.ebuild 1114
+MD5 6b2ddd803a8f5c940fe14dd1744edf01 ChangeLog 8613
 MD5 9d83c53ac36fea7edebe6cafc3746efe gaim-encryption-2.31.ebuild 1087
-MD5 98234e65d506d26ed9f34e38ea485c81 gaim-encryption-2.32.ebuild 1092
-MD5 571e96ba73294761bf61482053d3f169 files/digest-gaim-encryption-2.29 72
+MD5 ab7db4bf9ff48c8de9da14fd12f6c15c metadata.xml 344
 MD5 4199a4a07c312219c1667706cd77df4f files/digest-gaim-encryption-2.28 72
+MD5 571e96ba73294761bf61482053d3f169 files/digest-gaim-encryption-2.29 72
 MD5 95c12d6da2c16c80baccdd20cb9032b4 files/digest-gaim-encryption-2.30 72
 MD5 328582eaf2056a82875c2ac7218373a8 files/digest-gaim-encryption-2.31 72
 MD5 ff64a30a61d21ad47aab6594e4b1325b files/digest-gaim-encryption-2.32 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBdq7tHTu7gpaalycRAtVlAJ92HqtLYDb0h8WVPvUutVnvvwY2NACfSBYV
-4OHt5N+IF+WswuouVNZODdg=
-=Y6Gg
------END PGP SIGNATURE-----
