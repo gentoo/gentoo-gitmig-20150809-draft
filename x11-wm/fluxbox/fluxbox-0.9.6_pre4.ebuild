@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.6_pre4.ebuild,v 1.1 2003/09/10 02:16:03 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.6_pre4.ebuild,v 1.2 2003/09/10 11:23:32 tseng Exp $
 
 IUSE="gnome kde nls xinerama truetype"
 
 #inherit flag-o-matic eutils
 
-MY_P="${PN}-0.9.6pre1"
+MY_P="${PN}-0.9.6pre4"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Fluxbox is yet another windowmanager for X. It's based on the Blackbox 0.61.1 code. Fluxbox looks like blackbox and handles styles, colors, window placement and similar thing exactly like blackbox (100% theme/style compability). So what's the difference between fluxbox and blackbox then? The answer is: LOTS! *This is a development release and should not be considered stable.* *This release includes the Blueflux style.*"
 SRC_URI="http://fluxbox.org/download/${MY_P}.tar.gz

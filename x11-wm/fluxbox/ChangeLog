@@ -1,11 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.62 2003/09/10 02:16:03 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.63 2003/09/10 11:23:32 tseng Exp $
 
 *fluxbox-0.9.6_pre4 (09 Sep 2003)
 
   09 Sep 2003; Brandon Hale <tseng@gentoo.org> fluxbox-0.9.6_pre4.ebuild:
-  Version bump, thanks to d0minick for the tip!
+  Version bump, thanks to d0minik for the tip!
 
 *fluxbox-0.9.6pre1 (30 Aug 2003)
 
