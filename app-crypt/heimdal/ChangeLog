@@ -1,8 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.11 2003/02/12 03:27:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.12 2003/05/27 07:53:14 aliz Exp $
 
-  04 Feb 2003; Daniel Ahlberg <aliz@genoto.org> heimdal-0.5.1-r1.ebuild :
+*heimdal-0.6 (27 May 2003)
+
+  27 May 2003; Daniel Ahlberg <aliz@gentoo.org> heimdal-0.6.ebuild :
+  Version bump and security update. Thanks to Ian <ian@stacken.kth.se> for notifying us.
+
+  04 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> heimdal-0.5.1-r1.ebuild :
   Moved includefiles to include/heimdal. Closes #14459.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
