@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf247464faaf54458f25692d3d00f8cc ChangeLog 5819
+MD5 4022e22ee556b9482758922cddc82a22 ChangeLog 5907
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 ca42c18e46b70937fe8c3ff46ec89dc2 php-cgi-4.3.8-r1.ebuild 771
+MD5 a673bafe30cbf7e555363d4c6a136081 php-cgi-4.3.8.ebuild 752
+MD5 97e002bcf522c1fb90a38b7708789ce3 php-cgi-4.3.9-r1.ebuild 813
+MD5 28661c422a37c7eb23140532a3d84ab6 php-cgi-4.3.9.ebuild 795
 MD5 6069f9c2784adf67f7fb2ed0e860ca0d php-cgi-4.3.9_rc1-r1.ebuild 886
 MD5 3411777bc579d53726a119e9bcd58c0c php-cgi-4.3.9_rc1.ebuild 866
 MD5 dea7eefba04e3e8d7fa6dcb9f01bd95a php-cgi-5.0.0-r1.ebuild 898
-MD5 dffa69fb33eb0cadc0ba2d01e178dda8 php-cgi-5.0.1.ebuild 895
-MD5 a673bafe30cbf7e555363d4c6a136081 php-cgi-4.3.8.ebuild 752
 MD5 ff8d280e1df6a129bc07898d5acbb1c0 php-cgi-5.0.0.ebuild 751
-MD5 28661c422a37c7eb23140532a3d84ab6 php-cgi-4.3.9.ebuild 795
-MD5 c81b9e1407b0e796994e43a2f8786fe9 php-cgi-5.0.2.ebuild 902
-MD5 97e002bcf522c1fb90a38b7708789ce3 php-cgi-4.3.9-r1.ebuild 813
-MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-cgi-5.0.1 63
+MD5 dffa69fb33eb0cadc0ba2d01e178dda8 php-cgi-5.0.1.ebuild 895
+MD5 ad706bf1cfd99db6f3c56df52111feff php-cgi-5.0.2.ebuild 910
+MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8 282
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8-r1 282
+MD5 aeed7aba3334e2f1437aa1ef48d850e8 files/digest-php-cgi-4.3.9 205
+MD5 aeed7aba3334e2f1437aa1ef48d850e8 files/digest-php-cgi-4.3.9-r1 205
 MD5 286ce4ea00fde75122c14fd35c3d4672 files/digest-php-cgi-4.3.9_rc1 208
 MD5 286ce4ea00fde75122c14fd35c3d4672 files/digest-php-cgi-4.3.9_rc1-r1 208
-MD5 11f305b98b753ee023da8503a360762a files/digest-php-cgi-5.0.0-r1 63
-MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
-MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8 282
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-cgi-5.0.0 63
-MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
-MD5 aeed7aba3334e2f1437aa1ef48d850e8 files/digest-php-cgi-4.3.9 205
+MD5 11f305b98b753ee023da8503a360762a files/digest-php-cgi-5.0.0-r1 63
+MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-cgi-5.0.1 63
 MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-cgi-5.0.2 63
-MD5 aeed7aba3334e2f1437aa1ef48d850e8 files/digest-php-cgi-4.3.9-r1 205
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBX40+HTu7gpaalycRAnXnAJoCVsa3UVBa5dVmblh2t3AUAwU19QCghRjX
-OmrgginO1AJmmofMN580CHE=
-=mbFj
------END PGP SIGNATURE-----
+MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
+MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
