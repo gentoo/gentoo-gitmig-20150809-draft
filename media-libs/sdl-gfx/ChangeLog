@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.2 2002/07/05 20:02:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.3 2002/08/06 21:25:55 gerk Exp $
 
 *sdl-gfx-2.0.3 (5 Jul 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   05 Jul 2002; Seemant Kulleen <seemant@gentoo.org> sdl-gfx-2.0.3.ebuild
   files/digest-sdl-gfx-2.0.3 :
