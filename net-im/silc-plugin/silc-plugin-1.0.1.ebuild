@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.6 2004/09/04 23:15:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.7 2004/10/12 19:42:04 ticho Exp $
+
+inherit eutils
 
 IRSSI_PV=0.8.9
 
@@ -39,9 +41,13 @@ src_compile() {
 	cd ${S}
 	emake patch IRSSI=${S_IRSSI} SILC=${S_SILC} || die "patching irssi sources failed"
 
+	cd ${S_IRSSI}
+
+	# this tiny patch fixes a compile-time error (bug #67255)  - ticho
+	epatch ${FILESDIR}/${PV}-gcc34.patch || die "${PV}-gcc34.patch failed"
+
 	echo
 	einfo "Configuring irssi\n"
-	cd ${S_IRSSI}
 	econf --sysconfdir=/etc || die "irssi configure failed"
 	echo
 	einfo "Compiling silc-plugin\n"
