@@ -103,6 +103,11 @@ global $uid, $dbusername, $show_privates; ?>
 			}
 ?>
 			</ul>
+
+			<p style="font-size:x-small;font-weight:bold;">Go</p>
+			<ul>
+				<li><a href="http://www.gentoo.org">Gentoo Linux</a>
+			</ul>
 		</td></tr></table>
 		</td></tr></table>
 	</td>
