@@ -34,7 +34,6 @@
 #does not build with gcc-2.x
 <media-gfx/graphviz-1.9
 <app-arch/rar-3.2.0
-<media-video/transcode-0.6.4
 =dev-libs/elfutils
 
 *>=sys-apps/baselayout-1.7.3
