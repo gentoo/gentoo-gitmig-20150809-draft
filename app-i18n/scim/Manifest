@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 92bc06c23a698d86caa0216facfbadff ChangeLog 7194
+MD5 ff8767dafba11e489cda10fce9ffb18c ChangeLog 7373
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 34f1e8bc32e1771f8d4670e36d3d8dc3 scim-1.0.1.ebuild 3123
 MD5 125ec9eb63a97e52b7dc7589bf2df23f scim-1.0.1-r1.ebuild 3306
-MD5 f9a96d957c49a21c341a13db1d7a16de scim-1.0.2.ebuild 3294
-MD5 2a235919f3066c4ffddb3f693ab8c0ce files/digest-scim-1.0.1 63
+MD5 53527b9ec63dc93e33eefbecbb5e7e3f scim-1.0.2.ebuild 3302
 MD5 2a235919f3066c4ffddb3f693ab8c0ce files/digest-scim-1.0.1-r1 63
+MD5 2a235919f3066c4ffddb3f693ab8c0ce files/digest-scim-1.0.1 63
 MD5 95e4d06699356649f034690e3c3e870e files/scim-0.6.1-gtk2immodule.patch 545
 MD5 5b9acefad166f2f6e0a8635ceadc9d08 files/digest-scim-1.0.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB/jUNVWNWqTUmv+0RAvOFAJ4g4AMGkdb5CHpYV5lFhuHkBxChywCcCJmf
-xuamj861IgeL6QcwXsa8o/o=
-=i3iT
------END PGP SIGNATURE-----

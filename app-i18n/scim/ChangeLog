@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.45 2005/01/31 13:47:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.46 2005/02/05 09:45:46 corsair Exp $
+
+  04 Feb 2005; Markus Rothe <corsair@gentoo.org> scim-1.0.2.ebuild:
+  latest stable version for ppc64 was removed. Bumping this to stable as it is
+  the one, I've just tested.
 
   31 Jan 2005; Mamoru KOMACHI <usata@gentoo.org> -scim-0.9.7.ebuild,
   -scim-0.99.8.ebuild, scim-1.0.1-r1.ebuild, scim-1.0.1.ebuild:
