@@ -1,0 +1,12 @@
+diff -Nur mpg123.epatched/layer3.c mpg123/layer3.c
+--- mpg123.epatched/layer3.c	2004-11-03 16:18:15.016995488 +0900
++++ mpg123/layer3.c	2004-11-03 16:18:38.618003240 +0900
+@@ -626,7 +626,7 @@
+   int *me;
+ 
+   int num=getbitoffset(&bsi);
+-  long mask;
++  int mask;
+   /* we must split this, because for num==0 the shift is undefined if you do it in one step */
+   mask  = ((unsigned long) getbits(&bsi,num))<<BITSHIFT;
+   mask <<= 8-num;

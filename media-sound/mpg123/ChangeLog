@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.68 2004/10/30 23:31:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.69 2004/11/03 16:40:41 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  +files/mpg123-0.59s-r6-ppc64.patch, mpg123-0.59s-r6.ebuild:
+  Added ppc64 specific patch
 
   30 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -files/0.59s-generic.patch, -files/mpg123-0.59s-CAN-2004-0805.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r6.ebuild,v 1.9 2004/10/30 22:17:27 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r6.ebuild,v 1.10 2004/11/03 16:40:41 corsair Exp $
 
 IUSE="mmx 3dnow esd nas oss"
 
@@ -40,6 +40,8 @@ src_unpack() {
 	epatch ${PATCHDIR}
 
 	sed -i "s:${PV}-mh4:${PVR}:" version.h
+	#fixes bug #69512
+	use ppc64 && epatch ${FILESDIR}/${P}-ppc64.patch
 }
 
 src_compile() {
@@ -52,7 +54,13 @@ src_compile() {
 	use oss && styles="${styles} -generic"
 
 	case $ARCH in
-		ppc*)
+		ppc64)
+			use esd && styles="${styles} -ppc64-esd"
+			use oss && styles="${styles} -ppc64"
+
+			[ -z "${styles}" ] && styles="-ppc64"
+			;;
+		ppc)
 			use esd && styles="${styles} -ppc-esd"
 			use oss && styles="${styles} -ppc"
 

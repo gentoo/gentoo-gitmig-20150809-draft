@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1de4931db1e7c6b9b1b3fd9248a3a19a ChangeLog 10951
+MD5 24c14b3434b5d7eafc70473624b897ab ChangeLog 11089
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 6d4cf525882aa757e09fa8b9b3ea6ac6 mpg123-0.59s-r6.ebuild 2726
+MD5 1eca8c4bf72c332dce8f5621ef03438e mpg123-0.59s-r6.ebuild 2937
 MD5 792c4eea53fd8d57facf635a93c11d5d files/digest-mpg123-0.59s-r6 141
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhCSWArHZZzCEUG0RAtPzAJ9a0zG2hcVpGCK3gpEIm1XsZ4VV8QCeO2rX
-WrF8BA1swHVIskb+zIoH3cQ=
-=J4MS
------END PGP SIGNATURE-----
+MD5 f581c359eb63b4830bedf4eefac77d2a files/mpg123-0.59s-r6-ppc64.patch 437
