@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.2 2003/08/31 01:39:41 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.3 2003/08/31 03:25:30 scandium Exp $
 
 inherit flag-o-matic
 
@@ -32,7 +32,8 @@ src_compile() {
 
 	# We have to use --disable-make_conf to override make.conf settings
 	# Otherwise it may set -fomit-frame-pointer again
-	emake CONFIGUREARGS="${myconf} --prefix=/usr --disable-make_conf" || die
+	# disable ffmpeg support because it is broken
+	emake CONFIGUREARGS="${myconf} --prefix=/usr --disable-make_conf --without-ffmpeg" || die
 
 	cd ${S}/refdoc
 	make || die
@@ -43,7 +44,7 @@ src_install () {
 	sed -i s/rm\(mod\+\"\.o\"\)\;/\{\}/ ${S}/bin/install.pike || die "Failed to modify install.pike"
 	make INSTALLARGS="--traditional" buildroot="${D}" install || die
 
-	if [ `use doc` ]; then
+	if use doc; then
 		einfo "Installing 60MB of docs, this could take a while ..."
 		dohtml -r ${S}/refdoc/traditional_manual ${S}/refdoc/modref
 	fi
