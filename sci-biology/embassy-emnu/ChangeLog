@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/embassy-emnu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.4 2005/03/02 23:31:32 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.5 2005/03/25 17:44:32 ribosome Exp $
+
+*embassy-emnu-1.05-r1 (25 Mar 2005)
+
+  25 Mar 2005; Olivier Fisette <ribosome@gentoo.org>
+  +files/embassy-emnu-1.05-r1.patch, +embassy-emnu-1.05-r1.ebuild:
+  Patched version for EMBOSS 2.10.
 
   02 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> embassy-emnu-1.05.ebuild:
   Stable ppc-macos
