@@ -1,6 +1,6 @@
 # ChangeLog for net-wireless/wavemon
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.5 2003/01/07 11:02:00 jrray Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.6 2003/02/12 08:46:01 vapier Exp $
 
 *wavemon-0.4.0b (07 Jan 2003)
 
