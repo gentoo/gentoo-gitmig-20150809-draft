@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.88 2004/07/23 11:47:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.89 2004/07/23 21:52:10 gmsoft Exp $
+
+  23 Jul 2004; Guy Martin <gmsoft@gentoo.org> subversion-1.0.6.ebuild:
+  Marked stable on hppa.
 
   23 Jul 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
   subversion-1.0.6.ebuild:
