@@ -1,7 +1,14 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.2 2002/06/08 02:21:53 gerk Exp $
+# /space/gentoo/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.2 2002/06/08 02:21:53 gerk Exp
 
+
+*xforms-089-r2 (19 June 2002)
+
+  7 June 2002; Felix Kurth <felix@fkurth.de>
+  
+  Updated to -r2 because of missing fdesign and fd2ps needed for app development.  
+  
 *xforms-089-r1 (7 June 2002)
 
   7 June 2002; Mark Guertin <gerk@gentoo.org>
