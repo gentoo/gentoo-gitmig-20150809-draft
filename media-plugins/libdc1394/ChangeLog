@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/libdc1394
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.5 2004/07/24 05:59:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.6 2004/10/23 03:33:09 weeve Exp $
+
+*libdc1394-1.0.0 (22 Oct 2004)
+
+  22 Oct 2004; Jason Wever <weeve@gentoo.org> libdc1394-1.0.0.ebuild:
+  Added ~sparc keyword.
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libdc1394-0.9.1.ebuild:
