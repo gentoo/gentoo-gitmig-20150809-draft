@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.51 2004/03/21 05:19:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.52 2004/04/07 22:38:03 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -312,6 +312,37 @@ src_install() {
 	fi
 }
 
+# Make convenience symlinks, hopefully without stepping on toes.  Some
+# of these links are "owned" by the vim ebuild when it is installed,
+# but they might be good for gvim as well (see bug 16852)
+update_vim_symlinks() {
+	local f syms="vi vimdiff rvim ex view rview"
+
+	# Make or remove convenience symlink, vim -> gvim
+	if [[ -f /usr/bin/gvim ]]; then
+		ln -s gvim /usr/bin/vim 2>/dev/null
+	elif [[ -L /usr/bin/vim && ! -f /usr/bin/vim ]]; then
+		rm /usr/bin/vim
+	fi
+
+	# Make or remove convenience symlinks to vim
+	if [[ -f /usr/bin/vim ]]; then
+		for f in ${syms}; do
+			ln -s vim /usr/bin/${f} 2>/dev/null
+		done
+	else
+		for f in ${syms}; do
+			if [[ -L /usr/bin/${f} && ! -f /usr/bin/${f} ]]; then
+				rm -f /usr/bin/${f}
+			fi
+		done
+	fi
+
+	# This will still break if you merge then remove the vi package,
+	# but there's only so much you can do, eh?  Unfortunately we don't
+	# have triggers like are done in rpm-land.
+}
+
 pkg_postinst() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
@@ -342,12 +373,14 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	# Make convenience symlinks, hopefully without stepping on toes
-	[ -f /usr/bin/gvim ] && ln -s gvim /usr/bin/vim 2>/dev/null
-	[ -f /usr/bin/vim ] && ln -s vim /usr/bin/vi 2>/dev/null
+	# Make convenience symlinks
+	update_vim_symlinks
 }
 
 pkg_postrm() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
+
+	# Make convenience symlinks
+	update_vim_symlinks
 }
