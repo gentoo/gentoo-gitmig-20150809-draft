@@ -1,6 +1,4 @@
-MD5 db6175b8491058b8a11e7cdcfc8af231 files/digest-horde-kronolith-1.1.1 67
 MD5 94d65c6caba3a424d6a58706db30f20f files/digest-horde-kronolith-1.1.2 67
 MD5 0c1705f23a3c80943d9e25c210491337 ChangeLog 1788
 MD5 852eb8fe9390c47a540b8e248d128632 metadata.xml 1230
-MD5 99c5c173d124228e15f0f0f87df49f33 horde-kronolith-1.1.1.ebuild 619
-MD5 c9b5b5e94474076dfed493d8e8dcf30e horde-kronolith-1.1.2.ebuild 621
+MD5 f8729b8fca0811883ebe360eb9b23398 horde-kronolith-1.1.2.ebuild 443
