@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.4 2002/04/04 20:09:23 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.5 2002/04/09 08:50:13 danarmak Exp $
+
+*kdebase-3.0-r1 (9 Apr 2002)
+
+  9 Apr 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+  
+  Added KDEDIRS and KDEMAINDIR variables to startkde. Hope it helps some people.
 
 *kdebase-3.0 (4 Apr 2002)
 
