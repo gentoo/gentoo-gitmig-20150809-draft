@@ -192,7 +192,7 @@ function open_mail() {
       exec $MOZ_CLIENT_PROGRAM 'xfeDoCommand(openInbox)' \
         2>/dev/null >/dev/null
     else
-      exec $MOZ_PROGRAM $MOZ_LANG $*
+      exec $MOZ_PROGRAM $MOZ_LANG "$@"
     fi
 }
 
@@ -201,7 +201,7 @@ function open_compose() {
       exec $MOZ_CLIENT_PROGRAM 'xfeDoCommand(composeMessage)' \
         2>/dev/null >/dev/null
     else
-      exec $MOZ_PROGRAM $MOZ_LANG $*
+      exec $MOZ_PROGRAM $MOZ_LANG "$@"
     fi
 }
 
