@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.1 2003/11/17 00:19:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.2 2003/12/17 04:31:19 brad_mssw Exp $
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}-try.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~hppa ~mips ~amd64 ~ia64 ppc64"
 IUSE="static" #doc
 
 DEPEND="virtual/glibc
