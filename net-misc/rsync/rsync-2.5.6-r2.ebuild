@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r2.ebuild,v 1.3 2003/06/08 05:24:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r2.ebuild,v 1.4 2003/06/22 08:05:53 drobbins Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://rsync.samba.org/ftp/rsync/${P}.tar.gz
 	http://www.imada.sdu.dk/~bardur/personal/patches/${PN}-proxy-auth/${P}-proxy-auth-1.patch"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~hppa ~arm ~sparc ~mips ~alpha"
+KEYWORDS="amd64 ~x86 ~ppc ~hppa ~arm ~sparc ~mips ~alpha"
 SLOT="0"
 
 DEPEND="virtual/glibc
