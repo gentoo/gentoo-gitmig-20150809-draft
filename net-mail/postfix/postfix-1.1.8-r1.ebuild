@@ -91,7 +91,6 @@ src_install () {
 	chown root.postdrop ${D}/usr/sbin/{postdrop,postqueue}
 	chmod 2755 ${D}/usr/sbin/{postdrop,postqueue}
 
-	dosym /usr/sbin/sendmail /usr/bin/mail
 	dosym /usr/sbin/sendmail /usr/bin/mailq
 	dosym /usr/sbin/sendmail /usr/bin/newaliases
 	dosym /usr/sbin/sendmail /usr/lib/sendmail

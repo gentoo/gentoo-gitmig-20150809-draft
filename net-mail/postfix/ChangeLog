@@ -1,6 +1,13 @@
-# ChangeLog for net-mail/postfix
+# ChangeLog for net-mailpostfixChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.20 2002/07/19 15:06:39 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.21 2002/07/19 15:46:31 g2boojum Exp $
+
+*-1.1.8-r1 (19 Jul 2002)
+
+  19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  removed /usr/bin/mail symlink in postfix-1.1.8
+# ChangeLog for net-mail/postfix
 
 *postfix-1.1.11-r4 (19 Jul 2002)
 
