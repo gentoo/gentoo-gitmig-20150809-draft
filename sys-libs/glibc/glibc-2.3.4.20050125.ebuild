@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.23 2005/02/14 03:38:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.24 2005/02/14 07:58:48 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -307,15 +307,14 @@ toolchain-glibc_src_install() {
 			${D}$(alt_usrlibdir)/nptl
 
 		# linker script crap
-		sed "s~/$(get_libdir)/~$(alt_libdir)/tls/~" ${D}$(alt_usrlibdir)/libc.so \
-			> ${D}$(alt_usrlibdir)/nptl/libc.so
+		for lib in libc libpthread; do
+			sed -e "s:$(alt_libdir)/${lib}.so:$(alt_libdir)/tls/${lib}.so:g" \
+			    -e "s:$(alt_usrlibdir)/${lib}_nonshared.a:$(alt_usrlibdir)/nptl/${lib}_nonshared.a:g" \
+			          ${D}$(alt_usrlibdir)/${lib}.so \
+				> ${D}$(alt_usrlibdir)/nptl/${lib}.so
 
-		sed "s~/$(get_libdir)/~$(alt_libdir)/tls/~" ${D}$(alt_usrlibdir)/libpthread.so \
-			> ${D}/$(alt_usrlibdir)/nptl/libpthread.so
-
-		sed -i -e "s~/usr/$(get_libdir)/~$(alt_usrlibdir)/nptl/~" ${D}$(alt_usrlibdir)/nptl/libpthread.so ${D}$(alt_usrlibdir)/nptl/libc.so
-
-		chmod 755 ${D}$(alt_usrlibdir)/nptl/libpthread.so ${D}$(alt_usrlibdir)/nptl/libc.so
+			chmod 755 ${D}$(alt_usrlibdir)/nptl/${lib}.so
+		done
 
 		dosym ../librt.so $(alt_usrlibdir)/nptl/librt.so
 
@@ -342,26 +341,6 @@ toolchain-glibc_src_install() {
 	fi
 	env -uRESTRICT CHOST=${CHOST} prepallstrip
 	cp -R -- ${T}/thread-backup/* ${D}$(alt_libdir)/ || die
-
-	# If librt.so is a symlink, change it into linker script (Redhat)
-	if [ -L "${D}$(alt_usrlibdir)/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
-		local LIBRTSO="`cd ${D}$(alt_libdir); echo librt.so.*`"
-		local LIBPTHREADSO="`cd ${D}$(alt_libdir); echo libpthread.so.*`"
-
-		rm -f ${D}$(alt_usrlibdir)/librt.so
-		cat > ${D}$(alt_usrlibdir)/librt.so <<EOF
-/* GNU ld script
-	librt.so.1 needs libpthread.so.0 to come before libc.so.6*
-	in search scope.  */
-EOF
-		grep "OUTPUT_FORMAT" ${D}$(alt_usrlibdir)/libc.so >> ${D}$(alt_usrlibdir)/librt.so
-		echo "GROUP ( $(alt_libdir)/${LIBPTHREADSO} $(alt_libdir)/${LIBRTSO} )" \
-			>> ${D}$(alt_usrlibdir)/librt.so
-
-		for x in ${D}$(alt_usrlibdir)/librt.so.[1-9]; do
-			[ -L "${x}" ] && rm -f ${x}
-		done
-	fi
 
 	if use pic && [[ $(tc-arch) != "amd64" ]]; then
 		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}$(alt_libdir)/soinit.o \;
