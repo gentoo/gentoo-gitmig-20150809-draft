@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/staden
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/ChangeLog,v 1.4 2004/09/16 19:16:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/ChangeLog,v 1.5 2004/09/16 23:13:26 ribosome Exp $
+
+*staden-1.4.1-r4 (16 Sep 2004)
+
+  16 Sep 2004; Olivier Fisette <ribosome@gentoo.org>
+  +files/staden-1.4.1-emboss.patch, -staden-1.4.1-r3.ebuild,
+  +staden-1.4.1-r4.ebuild:
+  Patched the "create_emboss_files" program to allow more flexibility.
 
 *staden-1.4.1-r3 (16 Sep 2004)
 

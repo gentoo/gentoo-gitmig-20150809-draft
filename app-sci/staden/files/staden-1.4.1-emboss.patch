@@ -1,0 +1,22 @@
+--- lib/spin2_emboss/create_emboss_files.tcl.old	2004-09-16 18:52:45.566400400 -0400
++++ lib/spin2_emboss/create_emboss_files.tcl	2004-09-16 18:43:32.912416576 -0400
+@@ -2,15 +2,15 @@
+ # dialogue for each program along with the necessary menu definitions.
+ #
+ # These will be written to
+-#     $STADENROOT/lib/spin2_emboss/acdtcl/*
+-#     $STADENROOT/tables/emboss_menu
++#     $OUTDIR
++#     $OUTDIR/emboss_menu
+ #
+ # To run it, simply run this script. NOTE that it requires DISPLAY to be set
+ # correctly, even though no graphics are obvious. This is because certain
+ # widgets are temporarily created in order to query their pathnames.
+ 
+-set acdtcl_dir acdtcl
+-set menu_file  ../../tables/emboss_menu
++set acdtcl_dir $env(OUTDIR)
++set menu_file  $env(OUTDIR)/emboss_menu
+ 
+ tkinit
+ wm withdraw .

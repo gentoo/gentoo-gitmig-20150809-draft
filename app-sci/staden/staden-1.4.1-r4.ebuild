@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r3.ebuild,v 1.1 2004/09/16 19:16:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r4.ebuild,v 1.1 2004/09/16 23:13:26 ribosome Exp $
 
 inherit eutils
 
@@ -135,12 +135,12 @@ src_compile() {
 	mkdir ${S}/lib/linux-binaries
 	mv ${S}/src/lib/linux-binaries/* ${S}/lib/linux-binaries
 
-	# Link "itcl" and "itk" libraries to the Staden libraries directories.
 	ln -s /usr/lib/libitcl3.2.so ${S}/lib/itcl3.3/libitcl3.3.so
 	ln -s /usr/lib/libitk3.2.so ${S}/lib/itk3.3/libitk3.3.so
 
-	# Patched version of iwidgetsrc
 	cp ${FILESDIR}/${P}-iwidgetsrc.new ${S}/tables/iwidgetsrc
+
+	epatch ${FILESDIR}/${P}-emboss.patch
 
 	# Netscape is not a good default browser (security masked in Portage).
 	# Use documentation.html rather than staden_home.html as the top-level
