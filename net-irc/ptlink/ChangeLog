@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/ptlink
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink/ChangeLog,v 1.1 2003/10/12 02:47:08 zul Exp $
+
+*ptlink-6.14.2 (11 Oct 2003)
+
+  11 Oct 2003; Chuck Short <zul@gentoo.org> metadata.xml,
+  ptlink-6.14.2.ebuild, files/ptlinkircd.confd, files/ptlinkircd.rc:
+  Added new ebuild by James Webster jimmyj@netstat.org.
+  Closes bug #15007.
+
