@@ -1,4 +1,14 @@
-MD5 391888c0e29aba80c8ea509cd4329529 libsqlora8-2.2.11.ebuild 1635
-MD5 c96865cfb2dad39d518ea594934a8196 ChangeLog 662
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e84981c5b73c5218f2c5fe0125d234e7 ChangeLog 811
+MD5 817227c5aec795b2e5e8622f11396ae1 libsqlora8-2.2.11.ebuild 1633
 MD5 40eef4c0d3ce4b82b599f5a889568975 metadata.xml 429
 MD5 8a06edc637420287b983ec91532dbadf files/digest-libsqlora8-2.2.11 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8tqimdTrptrqvGERAqpFAKCHw+hyeQiMf9dgaslQvQ/h2LRuhACbBRLI
+Vkn+L8yL+s8nQKxLZa/qbzk=
+=hjpP
+-----END PGP SIGNATURE-----

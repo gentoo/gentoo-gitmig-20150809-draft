@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/libsqlora8-2.2.11.ebuild,v 1.4 2004/06/25 19:30:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/libsqlora8-2.2.11.ebuild,v 1.5 2005/01/22 22:58:36 dragonheart Exp $
 
-IUSE="pthreads orathreads"
+IUSE="threads orathreads"
 
 DESCRIPTION="libsqlora8 is a simple C-library to access Oracle databases via the OCI interface"
 SRC_URI="http://www.poitschke.de/libsqlora8/${P}.tar.gz"
@@ -15,12 +15,12 @@ KEYWORDS="~x86"
 DEPEND=""
 
 pkg_setup() {
-	if use orathreads && use pthreads; then
+	if use orathreads && use threads; then
 		eerror
-		eerror 'Enable the "pthreads" USE flag for POSIX threads,'
+		eerror 'Enable the "threads" USE flag for POSIX threads,'
 		eerror '*or* the "orathreads" USE flag for Oracle threads'
 		eerror
-		die 'Both "pthreads" and "orathreads" USE flags set, see above'
+		die 'Both "threads" and "orathreads" USE flags set, see above'
 	fi
 
 	# Make sure ORACLE_HOME is set
@@ -45,7 +45,7 @@ src_compile() {
 
 	export LD_LIBRARY_PATH
 
-	use pthreads && myconf="--with-threads=posix"
+	use threads && myconf="--with-threads=posix"
 	use orathreads && myconf="--with-threads=oracle"
 
 	# Build
