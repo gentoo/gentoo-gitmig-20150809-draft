@@ -91,12 +91,13 @@ src_compile() {
 		--sharedstatedir=/var/lib/courier/com \
 		--localstatedir=/var/lib/courier \
 		--with-piddir=/var/run/courier \
+		--with-authdaemonvar=/var/lib/courier/authdaemon \
 		--with-mailuser=mail \
 		--with-mailgroup=mail \
 		--with-paranoid-smtpext \
+		--disable-autorenamesent \
 		--enable-mimetypes=/etc/apache/conf/mime.types \
 		--enable-workarounds-for-imap-client-bugs \
-		--with-authdaemonvar=/var/lib/courier/authdaemon \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	emake || die "compile problem"
