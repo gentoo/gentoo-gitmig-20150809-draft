@@ -1,3 +1,5 @@
 MD5 b70a63c5600dd394c457e265cb38cb06 cmake-1.8.1.ebuild 761
+MD5 b70a63c5600dd394c457e265cb38cb06 cmake-1.8.2.ebuild 761
 MD5 3c8bd109a1e06599aca97dacc5c32c43 ChangeLog 392
+MD5 d09ac0128b045e4315708f386d7e3f71 files/digest-cmake-1.8.2 64
 MD5 eaa3b57ea53c95f529330b91e95dc518 files/digest-cmake-1.8.1 64
