@@ -80,7 +80,7 @@ information.</p>
 	<section>
 		<title>In what format are the packages stored?</title>
 		<body><p>They exist in our portage tree as <e>ebuilds</e>; we are primarily a ports-based distribution, meaning that we provide scripts (<c>.ebuild</c> files) and a special system (Portage) so
-that you can build apps from sources. We generally only build binaries for releases and snapshots. The <uri link="/doc/gentoo-howto">Development HOWTO</uri> covers the contents of an ebuild script in detail.  For ISO releases, we create a full suite of binary packages in an enhanced <c>.tbz2</c> format (<c>.tar.bz2</c> compatible with meta-information attached to the end of the file.)</p>
+that you can build apps from sources. We generally only build binaries for releases and snapshots. The <uri link="/doc/gentoo-howto.html">Development HOWTO</uri> covers the contents of an ebuild script in detail.  For ISO releases, we create a full suite of binary packages in an enhanced <c>.tbz2</c> format (<c>.tar.bz2</c> compatible with meta-information attached to the end of the file.)</p>
 		</body>
 	</section>
 
