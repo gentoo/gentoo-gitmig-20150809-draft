@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.9 2003/03/09 13:40:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.10 2003/03/31 18:03:09 agriffis Exp $
 
 *libmpeg3-1.5-r1 (15 Apr 2002)
+
+  31 Mar 2003; Aron Griffis <agriffis@gentoo.org> libmpeg3-1.5-r1.ebuild:
+  Add -fPIC on alpha for bug 10943
 
   09 Mar 2003; Seemant Kulleen <seemant@gentoo.org> libmpeg3-1.5-r1.ebuild:
   filter out -fno-common from CFLAGS, thanks to teri-aka TrAns13nT
