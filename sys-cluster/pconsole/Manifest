@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 129a26148271c850eaa3c0ede25007ca pconsole-1.0-r1.ebuild 852
 MD5 92fed4f42d2a5627a05311429330e111 pconsole-1.0.ebuild 842
-MD5 b8d8163a9bb7cf2ef4dc42d2f0831832 ChangeLog 667
-MD5 3cd29c35b2fc6d527133bbb43884ad91 files/digest-pconsole-1.0 64
+MD5 01c2532a172fefc5195b2b1cf7e808d2 ChangeLog 818
+MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 3cd29c35b2fc6d527133bbb43884ad91 files/digest-pconsole-1.0-r1 64
 MD5 831ce0c1ca12bf4f0ee512f433507741 files/pconsole-1.0-exit-warn.patch 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOsygI1lqEGTUzyQRAvh3AJ4o5OyiwXqBrxbGoz5NvQmd9twVuQCeKMdA
-EvDI6Y0ROLMs9TERXmsq+Sw=
-=pTla
------END PGP SIGNATURE-----
+MD5 3cd29c35b2fc6d527133bbb43884ad91 files/digest-pconsole-1.0 64
