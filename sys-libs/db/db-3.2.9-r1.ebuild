@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r1.ebuild,v 1.4 2002/09/14 15:51:26 bjb Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r1.ebuild,v 1.5 2002/10/04 06:36:45 vapier Exp $
 
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"

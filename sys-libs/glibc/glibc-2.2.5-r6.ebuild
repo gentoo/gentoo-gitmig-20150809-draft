@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r6.ebuild,v 1.6 2002/09/22 08:01:31 azarah Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r6.ebuild,v 1.7 2002/10/04 06:37:02 vapier Exp $
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
