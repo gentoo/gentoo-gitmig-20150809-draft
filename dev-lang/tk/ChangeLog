@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.5 2002/09/26 15:59:00 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.6 2002/11/11 16:49:38 karltk Exp $
+
+*tk-8.3.3-r3 (11 Nov 2002)
+
+  11 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org>
+  tk-8.3.3-r3.ebuild files/digest-tk-8.3.3-r3:
+  Some legacy code for default handling of the Control-V keypress is now
+  patched away. Fixes #10154.
 
 *tk-8.3.3-r2 (25 Sep 2002)
 
