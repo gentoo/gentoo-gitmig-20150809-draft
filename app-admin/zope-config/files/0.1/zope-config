@@ -2,7 +2,7 @@
 # Gentoo Zope Instance configure tool.
 # Copyright 2003 Jason Shoemaker <kutsuya@gentoo.org>
 # Distributed under GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.1/zope-config,v 1.2 2003/02/26 07:08:46 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.1/zope-config,v 1.3 2003/02/26 08:06:43 kutsuya Exp $
 
 VERSION="0.1"
 ZUID=zope
@@ -239,7 +239,7 @@ zinst_zpasswd_set()
     fi
 
     echo ">>> Create Zope inituser for \"$(basename ${ZINST_DIR})\"..."
-    /usr/bin/python2.1 ${ZSERV_DIR}/zpasswd.py ${ZINST_DIR}/inituser
+    /usr/bin/python ${ZSERV_DIR}/zpasswd.py ${ZINST_DIR}/inituser
     # If zpasswd is aborted it creates a blank inituser
     chown ${ZUID} ${ZINST_DIR}/inituser
 }
