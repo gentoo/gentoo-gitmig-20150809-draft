@@ -1,10 +1,13 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.11 2003/03/14 15:18:15 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.12 2003/03/21 17:29:54 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *metalog-0.6-r10 (15 Jul 2002)
+
+  21 Mar 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to KEYWORDS.
 
   14 Mar 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to KEYWORDS
