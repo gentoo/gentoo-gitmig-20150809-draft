@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.11 2003/03/14 07:41:29 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.12 2003/03/22 08:33:57 george Exp $
+
+*ghc-5.04.2 (21 Mar 2003)
+
+  21 Mar 2003; George Shapovalov <george@gentoo.org> ghc-5.04.3.ebuild :
+  new version
+  Now with all virtuals in place should build off existing ghc nicely..
+
+  21 Mar 2003; George Shapovalov <george@gentoo.org> ghc-5.04.2.ebuild :
+  created new virtual: virtual/ghc.
+  Made ghc depend on virtual/ghc (and provide one) instead of on dev-lang/ghc-bin
+  ghc-bin in turn now also provides virtual/ghc, this closes #10155
 
   13 Mar 2003; George Shapovalov <george@gentoo.org> ghc-5.04.2.ebuild :
   fix for when ghc gets bootstrapped off different version.
@@ -11,7 +22,7 @@
   updated the ebuild to correctly build (namely to build ghci) if bootstrapped off different (older)
   version. See #10155 for details.
 
-*ghc-5.04i.2.ebuild (12 Feb 2003)
+*ghc-5.04i.2 (12 Feb 2003)
 
   12 Feb 2003; George Shapovalov <george@gentoo.org> ghc-5.04.2.ebuild, files/digest-ghc-5.04.2 :
 

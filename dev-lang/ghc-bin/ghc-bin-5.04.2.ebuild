@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.2.ebuild,v 1.4 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.2.ebuild,v 1.5 2003/03/22 08:33:57 george Exp $
 
 IUSE="opengl"
 
@@ -21,6 +21,8 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	opengl? ( virtual/opengl
 		virtual/glu
 		virtual/glut )"
+
+PROVIDE="virtual/ghc"
 
 src_compile() {
 	econf || die "./configure failed"
