@@ -1,3 +1,4 @@
 MD5 c040f6dc39be9087c0815f2eb07dbf27 files/digest-horde-turba-1.2.1 63
-MD5 df9c8db5ee66c479bb50f4323926ddbe horde-turba-1.2.1.ebuild 1585
-MD5 6b64b5b594e4d9b63537ca98170502b2 ChangeLog 1216
+MD5 9eaa558bbce677004fbdc6d2d1546e95 horde-turba-1.2.1.ebuild 629
+MD5 7c061cb907734a6e6fe859d1161d0c3e ChangeLog 1215
+MD5 4a52cd771138efea4026da82a803a812 metadata.xml 1156

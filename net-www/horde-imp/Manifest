@@ -1,4 +1,4 @@
-MD5 f3cf71f6653a3a4350f8c810c2c9702a ChangeLog 2013
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 89c965321016bc6512ab1e89d8d4c5b7 horde-imp-3.2.2.ebuild 647
 MD5 3c27fa2d766fcde19cc8a601915f4d0b files/digest-horde-imp-3.2.2 62
+MD5 0dffc773c389e43780d7af1e71a26873 ChangeLog 2013
+MD5 df7b9cb8aaba349bce3d45e694e2f7a1 metadata.xml 375
+MD5 c13127ba791ef8c1712930abf74c3f19 horde-imp-3.2.2.ebuild 648
