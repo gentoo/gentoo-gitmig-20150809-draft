@@ -1,6 +1,22 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.20 2003/04/10 07:24:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.21 2003/05/27 04:36:16 absinthe Exp $
+
+*tomcat-4.1.24-r1 (27 May 2003)
+
+  27 May 2003; Dylan Carlson <absinthe@gentoo.org> tomcat-4.1.24-r1.ebuild:
+  /opt/tomcat/conf was vulnerable to local users who are snooping the
+  tomcat-users.xml file for passwords. The new ebuild fixes this problem for new
+  installations.
+  
+  If you have an existing installation of Tomcat you can do the following:
+  
+  1. # /etc/init.d/tomcat stop
+  2. # chmod -R 750 /opt/tomcat/
+  3. # /etc/init.d/tomcat start
+  
+  Thanks to "D.Tuinstra" <tuinstra@inteo.com> for pointing out the
+  vulnerability.
 
 *tomcat-4.1.24 (25 Mar 2003)
 
