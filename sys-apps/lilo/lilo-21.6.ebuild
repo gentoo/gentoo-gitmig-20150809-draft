@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-21.5.1.ebuild,v 1.2 2000/09/15 20:09:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-21.6.ebuild,v 1.1 2000/10/18 04:14:03 achim Exp $
 
-P=lilo-21.5.1
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
