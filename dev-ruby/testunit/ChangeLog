@@ -1,0 +1,14 @@
+# ChangeLog for dev-ruby/testunit
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/ChangeLog,v 1.1 2002/08/20 02:07:07 george Exp $
+
+*testunit-0.1.4.ebuild (19 Aug 2002)
+
+19 Aug 2002; G Shapovalov <george@gentoo.org> testunit-0.1.4.ebuild, files/digest-testunit-0.1.4 :
+
+  initial release
+
+  "A ruby library Test::Unit, a unit testing framework   
+  for the Ruby language."
+
+  ebuild submitted by Jeremiah Mahler <jmahler@pacbell.net>
