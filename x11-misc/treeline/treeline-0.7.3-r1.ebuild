@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.7.3-r1.ebuild,v 1.1 2004/05/26 19:48:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.7.3-r1.ebuild,v 1.2 2004/05/26 19:54:57 taviso Exp $
 
 inherit eutils python
 
@@ -16,7 +16,7 @@ IUSE="spell"
 
 DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
 	|| ( dev-python/pyxml dev-libs/expat )
-	dev-lang/python dev-python/PyQt
+	virtual/python dev-python/PyQt
 	>=x11-libs/qt-3.3.0-r1"
 
 S=${WORKDIR}/TreeLine
