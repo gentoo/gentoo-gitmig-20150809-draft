@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.1-r2.ebuild,v 1.2 2002/09/06 10:10:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.1-r2.ebuild,v 1.3 2002/09/11 15:43:12 seemant Exp $
 
 inherit debug 
 
@@ -32,17 +32,18 @@ RDEPEND=">=dev-libs/glib-2.0.4
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
-	
+
+export WANT_AUTOMAKE_1_4=1
+
 src_unpack() {
 	unpack ${A}
+
 	# this patch is from Riccardo Persichetti
 	# (ricpersi@libero.it) to make balsa compile
+	# <seemant@gentoo.org> this patch is updated by me to compile
+	# against the new aspell (until upstream gets its act together, aspell
+	# will be a required dep).
 	patch -p0 < ${FILESDIR}/${P}-gentoo.patch || die
-
-	# this patch is from Seemant Kulleen to make it compile against aspell
-	# instead of the deprecated pspell
-	cd ${S}
-	patch -p0 < ${FILESDIR}/configure.diff || die
 
 
 	# Workaround for bug #4095, replaces the varmail patch.
@@ -64,15 +65,20 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-ssl"
 	use gtkhtml && myconf="${myconf} --with-gtkhtml"
 	use perl && myconf="${myconf} --enable-pcre"
-# 	use spell && myconf="${myconf} --enable-all"
 
-	libmutt/configure --prefix=/usr \
-	        --host=${CHOST} \
+	autoconf || die
+	automake || die
+
+	libmutt/configure \
+		--prefix=/usr \
+		--host=${CHOST} \
 		--with-mailpath=/var/mail || die "configure libmutt failed"
 
 	myconf="${myconf} --enable-threads"
 
-	econf ${myconf} || die "configure balsa failed"
+	econf \
+		--with-aspell=yes \
+		${myconf} || die "configure balsa failed"
 	emake || die "emake failed"
 }
 

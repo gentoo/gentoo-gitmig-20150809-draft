@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later  
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.0-r1.ebuild,v 1.1 2002/09/04 06:06:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.0-r1.ebuild,v 1.2 2002/09/11 15:43:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Balsa: email client for GNOME"
@@ -25,16 +25,26 @@ DEPEND="=dev-libs/glib-1.2*
 	spell? ( >=app-text/aspell-0.50 )
 	gtkhtml? ( >=gnome-extra/gtkhtml-0.16.1 )"
 
+src_unpack() {
+	unpack ${A}
+
+	Patch to use the new aspell instead of the old, crusty pspell modules
+	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+
+}
+
 src_compile() {
 	local myconf
+
 	use nls || myconf="${myconf} --disable-nls"
 	use ssl && myconf="${myconf} --with-ssl"
 	use gtkhtml && myconf="${myconf} --with-gtkhtml"
 	use perl && myconf="${myconf} --enable-pcre"
-	use spell && myconf="${myconf} --enable-all"
+	use spell && myconf="${myconf} --with-aspell=yes"
 
 	myconf="${myconf} --with-mailpath=/var/mail --enable-threads"
 
+	autoconf || die
 	econf ${myconf} || die "configure balsa failed"
 	emake || die "emake failed"
 }
