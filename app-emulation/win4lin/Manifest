@@ -9,9 +9,7 @@ MD5 e910056949f5711c131f501e1fea8742 files/digest-win4lin-4.0.20 142
 MD5 710ef99af4d9318d273c6596773de660 files/digest-win4lin-4.0.22 72
 MD5 baf7d82f65c984dda45ba34d32aac52f files/registerme.sh 327
 MD5 64806537e817b95e25bb98a6e1b67379 files/win4lin.initd 1677
-MD5 d41d8cd98f00b204e9800998ecf8427e sedsl1lEz 0
 MD5 83d29fbf16d56063e8ec94e8e95f6259 win4lin-5.0.1.ebuild 2836
-MD5 d41d8cd98f00b204e9800998ecf8427e sed0zz3LB 0
 MD5 a6c48cf748218c7587aaf9e74b7b7860 win4lin-4.0.20.ebuild 2429
 MD5 d474430c570cb43fe6881aa71180ef76 win4lin-4.0.16.ebuild 2430
 MD5 c8b3d6cf66a8dbbbf7ed252c7343d419 win4lin-5.0.8.ebuild 2837
