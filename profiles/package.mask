@@ -66,6 +66,7 @@ sys-apps/policycoreutils
 # Alpha Ebuild, it breaks dev-java/ant
 # Also its not working very well
 =dev-java/sun-jdk-1.4.2
+=dev-java/java-sdk-docs-1.4.2
 
 # <azarah@gentoo.org> (28 July 2003)
 # These are depriciated
