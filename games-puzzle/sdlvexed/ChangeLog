@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/sdlvexed
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/ChangeLog,v 1.1 2004/06/07 08:16:15 mr_bones_ Exp $
+
+*sdlvexed-0.5 (07 Jun 2004)
+
+  07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  sdlvexed-0.5.ebuild:
+  initial commit - ebuild supplied by Marcin Federowicz via bug #53052
+
