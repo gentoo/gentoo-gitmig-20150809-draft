@@ -1,0 +1,30 @@
+# ChangeLog for dev-python/PyXML-py21
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml-py21/ChangeLog,v 1.1 2004/07/20 18:46:17 kloeri Exp $
+
+*pyxml-py21-0.8.2 (20 Jul 2004)
+
+  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  +pyxml-py21-0.8.1.ebuild, +pyxml-py21-0.8.2.ebuild:
+  Rename dev-python/PyXML-py21 to dev-python/pyxml-py21.
+
+  15 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  PyXML-py21-0.8.1.ebuild:
+  ppc needs stable dev-lang/python-2.1 first
+
+*PyXML-py21-0.8.2 (22 Jun 2003)
+
+  22 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> PyXML-py21-0.8.2.ebuild:
+  Version bump. All archs are marked as unstable.
+
+  22 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> PyXML-py21-0.8.1.ebuild:
+  ~ppc ~sparc ~alpha -> ppc sparc alpha
+
+*PyXML-py21-0.8.1 (25 Mar 2003)
+
+  05 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> PyXML-py21-0.8.1.ebuild:
+  ~x86 -> x86
+
+  25 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> PyXML-py21-0.8.1.ebuild:
+  Initial import.  Basically a fork of PyXML-0.8.1 to be used with python2.1.
+
