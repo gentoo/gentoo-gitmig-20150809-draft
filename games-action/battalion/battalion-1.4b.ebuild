@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.3 2004/06/03 23:10:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.4 2004/06/03 23:17:46 mr_bones_ Exp $
 
 inherit games
 
@@ -43,28 +43,15 @@ src_unpack() {
 	sed -i \
 		-e "s:-O2:${CFLAGS}:" \
 		Makefile || die "sed Makefile failed"
-}
-
-src_compile() {
-	emake || die "emake failed"
+	# Only .raw sound files are used on Linux. The .au files are not needed.
+	rm {SOUNDS,MUSIC}/*.au
 }
 
 src_install() {
-	local f
-
-	# Only .raw sound files are used on Linux. The .au files are not needed.
-	rm {SOUNDS,MUSIC}/*.au
-
-	# Install game data
-	for f in DATA MUSIC SOUNDS TEXTURES
-	do
-		dodir ${dir}/${f}
-		insinto ${dir}/${f}
-		doins ${f}/*
-	done
-
-	dodoc README
 	dogamesbin battalion || die "dogamesbin failed"
+	dodir "${dir}"
+	cp -r DATA MUSIC SOUNDS TEXTURES "${D}${dir}" || die "cp failed"
+	dodoc README
 
 	dodir "${GAMES_STATEDIR}"
 	touch "${D}${GAMES_STATEDIR}/battalion_hiscore"
