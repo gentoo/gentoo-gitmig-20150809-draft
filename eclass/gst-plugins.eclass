@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.4 2004/01/09 01:08:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.5 2004/01/09 02:19:04 liquidx Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -119,8 +119,9 @@ gst-plugins_update_registry() {
 gst-plugins_src_unpack() {
 	local makefiles
 	unpack ${A}
-	
+	#
 	# Remove generation of any other Makefiles except the plugin's Makefile
+	#
 	if [ -d "${S}/sys/${GST_PLUGINS_BUILD_DIR}" ]; then
 		makefiles="Makefile sys/Makefile sys/${GST_PLUGINS_BUILD_DIR}/Makefile"
 	elif [ -d "${S}/ext/${GST_PLUGINS_BUILD_DIR}" ]; then
