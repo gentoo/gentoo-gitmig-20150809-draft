@@ -1,0 +1,11 @@
+--- sylpheed-0.9.4-gtk2-20030802.diff.old	2003-09-05 02:32:08.000000000 +0200
++++ sylpheed-0.9.4-gtk2-20030802.diff	2003-09-05 02:32:31.000000000 +0200
+@@ -4708,7 +4708,7 @@
+  
+ -#undef STEXT_FREEZE
+  #undef GET_CHAR
+-+#undef CHAR_BUF_SIZR
+++#undef CHAR_BUF_SIZE
+  
+  static void compose_set_title(Compose *compose)
+  {
