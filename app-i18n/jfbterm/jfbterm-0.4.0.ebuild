@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.0.ebuild,v 1.1 2003/09/02 18:35:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.0.ebuild,v 1.2 2003/09/04 01:47:36 usata Exp $
 
 inherit flag-o-matic
 replace-flags "-march=pentium3" "-mcpu=pentium3"
 
-DESCRIPTION="A Japanized framebuffer terminal with Multilingual Enhancement"
-HOMEPAGE="http://sourceforge.jp/projects/jfbterm/"
+DESCRIPTION="The J Framebuffer Terminal/Multilingual Enhancement"
+HOMEPAGE="http://jfbterm.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/${PN}/5792/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
@@ -48,5 +48,5 @@ src_install() {
 	doman jfbterm.1 jfbterm.conf.5
 
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
-	dodoc jfbterm.conf.smaple*
+	dodoc jfbterm.conf.sample*
 }
