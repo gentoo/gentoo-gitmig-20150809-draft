@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xft
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.9 2003/01/01 18:58:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.10 2003/01/16 04:03:25 weeve Exp $
+ 
+  15 Jan 2003; Jason Wever <weeve@gentoo.org> xft-2.0.1-r1.ebuild :
+  Added ~sparc to KEYWORDS.
 
   01 Jan 2003; Aron Griffis <agriffis@gentoo.org> xft-2.0.1-r1.ebuild :
   Add ~alpha to KEYWORDS
