@@ -2,7 +2,7 @@
 
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/files/ruby-config.sh,v 1.1 2004/01/29 18:02:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/files/ruby-config.sh,v 1.2 2004/01/30 07:50:34 usata Exp $
 
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 
@@ -59,14 +59,15 @@ switch_profile() {
 		eerror "You need root privilege to switch profile."
 		exit 1
 	fi
-	if [ -x /usr/bin/"$1" -a "$1" != "ruby" ] ; then
+	if [ "`expr $1 : ruby`" != 0 -a "$1" != "ruby" ] ; then
 		local suf=${1/ruby/}
-		for i in ruby irb erb testrb rdoc ri ; do
+		# don't make symlink to ri
+		for i in ruby irb erb testrb rdoc ; do
 			alternatives_makesym \
-				/usr/bin/$i /usr/bin/$i{$suf,18,16,19}
+				/usr/bin/$i /usr/bin/${i}{$suf,18,16,19}
 		done
 		alternatives_makesym \
-			/usr/lib/libruby.so /usr/lib/libruby{$suf,18.16,19}.so
+			/usr/lib/libruby.so /usr/lib/libruby{$suf,18,16,19}.so
 		alternatives_makesym \
 			/usr/share/man/man1/ruby.1.gz \
 			/usr/share/man/man1/ruby{$suf,18,16,19}.1.gz
