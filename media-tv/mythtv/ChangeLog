@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.27 2004/07/07 10:14:54 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.28 2004/07/09 10:57:35 chrb Exp $
+
+  09 Jul 2004; Chris Bainbridge <chrb@gentoo.org> mythtv-0.15.1-r1.ebuild:
+  Add X to IUSE
 
 *mythtv-0.15.1-r1 (07 Jul 2004)
 
