@@ -1,10 +1,18 @@
 # ChangeLog for sys-devel/bin86
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.6 2003/02/12 09:13:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.7 2003/03/16 17:39:38 azarah Exp $
+
+  16 Mar 2003; Martin Schlemmer <azarah@gentoo.org> bin86-0.16.0.ebuild :
+  Mark stable for x86.
+
+*bin86-0.16.11 (16 Mar 2003)
+
+  16 Mar 2003; Martin Schlemmer <azarah@gentoo.org> bin86-0.16.11.ebuild :
+  Update version.
 
 *bin86-0.16.10 (30 Dec 2002)
 
-  30 Dec 2002; Martin Schlemmer <azarah@gentoo.org> bin86-0.16.10.ebuild
+  30 Dec 2002; Martin Schlemmer <azarah@gentoo.org> bin86-0.16.10.ebuild :
   Update version.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> :
