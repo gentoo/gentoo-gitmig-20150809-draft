@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-null/xmms-null-0.3.ebuild,v 1.8 2004/09/14 07:08:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-null/xmms-null-0.3.ebuild,v 1.9 2004/11/27 20:27:03 corsair Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ DEPEND="media-sound/xmms"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64 sparc"
+KEYWORDS="x86 ~ppc amd64 sparc ~ppc64"
 
 S=${WORKDIR}/null_output-${PV}
 
