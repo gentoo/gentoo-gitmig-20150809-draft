@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.3 2004/04/15 00:03:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.4 2004/04/30 14:01:53 foser Exp $
+
+  30 Apr 2004; foser <foser@gentoo.org> gst-plugins-ffmpeg-0.8.0.ebuild :
+  Do not use the gst-plugins eclass, the eclass structure messes up the deps (#49228)
 
   14 Apr 2004; Jason Wever <weeve@gentoo.org> gst-plugins-ffmpeg-0.8.0.ebuild:
   Added ~sparc keyword.
