@@ -1,10 +1,15 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-util/gnustep-gui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/ChangeLog,v 1.1 2002/07/19 20:24:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/ChangeLog,v 1.2 2002/09/03 19:25:36 raker Exp $
+
+*gnustep-gui-0.8.0 (03 Aug 2002)
+
+  03 Aug 2002; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.0.ebuild,
+  files/digest-gnustep-gui-0.8.0 :
+  Version bump.
 
 *gnustep-gui-0.7.9 (19 Jul 2002)
 
   19 Jul 2002; Nick Hadaway <raker@gentoo.org>
   gnustep-gui-0.7.9.ebuild, ChangeLog, files/digest-gnustep-gui-0.7.9 :
-
   Initial ebuild.
