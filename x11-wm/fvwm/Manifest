@@ -1,3 +1,4 @@
+MD5 33f0396f68761de419618b1574c29717 fvwm-2.5.7-r2.ebuild 7835
 MD5 c2eeb0a9ce5240f426cdfa121e0fe84f fvwm-2.4.16-r1.ebuild 4020
 MD5 1dbc99becd75a529172f222a96595493 fvwm-2.5.7-r1.ebuild 7611
 MD5 7e8dad745798db4e98817ffb0925bf4a fvwm-2.5.7.ebuild 5591
@@ -6,8 +7,10 @@ MD5 dfaf464749310f07207e4c26649dae12 ChangeLog 4314
 MD5 beaa1ad08ff661a32c25d1a51c879a8d metadata.xml 450
 MD5 ccd8378d86941cb17669e64ca88949c1 fvwm-2.4.8.ebuild 1146
 MD5 40725b9b9496d374f5f1a763618781ea files/digest-fvwm-2.4.16 65
+MD5 c8de5eb611c13b1b9b91901f7e86f6a8 files/fvwm-translucent-menus.diff 4502
 MD5 40725b9b9496d374f5f1a763618781ea files/digest-fvwm-2.4.16-r1 65
 MD5 2bdb17132f9d7f352002a1fbace7fca1 files/acinclude.m4 61423
 MD5 88a5b60b496d1f4a8fe1b0c3710da7f9 files/digest-fvwm-2.4.8 134
 MD5 b7c82b289eda8d75c9c1589e505b7c73 files/digest-fvwm-2.5.7 64
 MD5 bcb882f07bc947241105ed86c731bd67 files/digest-fvwm-2.5.7-r1 224
+MD5 f0a5eded67c59acb1e0561791fc2784c files/digest-fvwm-2.5.7-r2 168
