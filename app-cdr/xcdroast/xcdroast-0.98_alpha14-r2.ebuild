@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha14-r2.ebuild,v 1.1 2003/09/04 00:17:33 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha14-r2.ebuild,v 1.2 2003/09/11 02:20:50 pylon Exp $
 
 inherit eutils
 
@@ -16,14 +16,13 @@ SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="nls dvd"
+IUSE="nls dvd dvdr"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
 	>=media-libs/gdk-pixbuf-0.16.0
 	>=media-libs/giflib-3.0
-	>=app-cdr/cdrtools-2.01_alpha17
-	dvd? ( >=app-cdr/cdrtools-dvdr-2.0 )"
+	>=app-cdr/cdrtools-2.01_alpha17"
 
 RDEPEND="${DEPEND}"
 
@@ -40,14 +39,11 @@ src_unpack() {
 	# Patch to fix startup problem with cdrools >=2.01alpha17
 	epatch ${DISTDIR}/cdrtools201a17.patch
 
-	# Patches for DVD writing
-	if use dvd; then
-		# Patch to fix fixes the display of ATIP information of DVD-media.
-		epatch ${DISTDIR}/dvd_atip.patch
+	# Patch to fix fixes the display of ATIP information of DVD-media.
+	use dvd && epatch ${DISTDIR}/dvd_atip.patch
 
-		#Patch to enable DVD-Writing
-		epatch ${FILESDIR}/${P/_/}-dvd.patch
-	fi
+	#Patch to enable DVD-writing
+	use dvdr && epatch ${FILESDIR}/${P/_/}-dvd.patch
 }
 
 src_compile() {
@@ -70,4 +66,16 @@ src_install() {
 
 	#remove extraneous directory
 	rm ${D}/usr/etc -rf
+}
+
+pkg_postinst() {
+	if use dvdr; then
+		echo
+		einfo "You are now using X-CD-Roast with the cdrtools patches for several"
+		einfo "DVD writers.  You can also use cdrecord-ProDVD, which has to be"
+		einfo "installed manually."
+		einfo "See http://www.xcdroast.org/xcdr098/README.ProDVD.txt for further"
+		einfo "instructions."
+		echo
+	fi
 }
