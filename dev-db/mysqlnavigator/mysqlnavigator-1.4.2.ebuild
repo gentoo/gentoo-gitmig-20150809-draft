@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.6 2004/10/06 08:02:54 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.7 2004/12/21 08:13:51 sejo Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
+	libtoolize --copy --force
 	myconf="--with-mysql-includes=/usr/include/mysql"
 	econf ${myconf} || die "econf failed"
 	emake -DUSE_OLD_FUNCTIONS=1
