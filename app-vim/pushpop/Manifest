@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4972b19aa76be40efa1f26c0ae531e3a ChangeLog 605
+MD5 b69d938dfac28e44ec281cba45a4eb01 ChangeLog 708
 MD5 b6deb13fae9232065a4bdf92742fa9c4 metadata.xml 219
-MD5 4f9c66bb4629982edb732df268b147a8 pushpop-2.4.ebuild 502
+MD5 5fde8d8b2b25280508fdeafb770557a5 pushpop-2.4.ebuild 621
 MD5 88fed4e5f652fda52bc1dc66d9f38fb3 files/digest-pushpop-2.4 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBJiyMLLFUmVNQ7rkRAll0AKDRdyo+LnBirg8yIRqb4/4/o1dbYQCfaj83
-uc42mV4PBa+rdN5EXt/2aPQ=
-=0xF8
+iD8DBQFBOmghLLFUmVNQ7rkRAmLiAJ9thAi/eSa5QOTLfQHnrXETRRLI8wCdE14f
+FdIS1wjYqY6DPruPbA80UAo=
+=UWdC
 -----END PGP SIGNATURE-----
