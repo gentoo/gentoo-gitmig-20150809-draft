@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@bigfoot.com>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.43.ebuild,v 1.1 2001/09/07 00:05:09 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.43.ebuild,v 1.2 2001/09/07 00:17:04 lordjoe Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -10,6 +10,7 @@ SRC_URI="http://prdownloads.sourceforge.net/gaim/${A}"
 HOMEPAGE="http://gaim.sourceforge.net"
 
 DEPEND=">=x11-libs/gtk+-1.2.3
+	nls? ( sys-devel/gettext )
 	gnome? ( >=gnome-base/gnome-libs-1.2.13 )
 	perl? ( >=sys-devel/perl-5.6.1 )
 	nas? ( >=media-sound/nas-1.4.1-r1 )
@@ -36,6 +37,9 @@ src_compile() {
     fi
     if [ -z "`use arts`" ] ; then
         myopts="$myopts --disable-arts"
+    fi
+    if [ -z "`use nls`" ] ; then
+        myopts="$myopts --disable-nls"
     fi
     try ./configure --host=${CHOST} ${myopts}
     try emake
