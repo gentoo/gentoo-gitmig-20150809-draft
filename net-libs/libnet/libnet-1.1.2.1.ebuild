@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.2.1.ebuild,v 1.7 2004/07/25 19:08:57 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.2.1.ebuild,v 1.8 2004/09/16 02:13:29 pvdabeel Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.packetfactory.net/libnet/dist/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="1.1"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 macos ppc-macos"
 IUSE=""
 
 S=${WORKDIR}/libnet

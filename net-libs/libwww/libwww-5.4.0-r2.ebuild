@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.21 2004/07/12 08:44:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.22 2004/09/16 02:14:54 pvdabeel Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64 macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64 macos ppc-macos"
 IUSE="ssl mysql"
 
 RDEPEND="dev-lang/perl
@@ -35,6 +35,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-disable-ndebug-gentoo.diff	# bug #50483
 
 	if use macos; then
+		glibtoolize -c -f || die "libtoolize failed"
+	elif use ppc-macos; then
 		glibtoolize -c -f || die "libtoolize failed"
 	else
 		libtoolize -c -f || die "libtoolize failed"
@@ -60,6 +62,7 @@ src_compile() {
 	emake check-am || die
 
 	use macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
+	use ppc-macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
 
 	emake || die
 }
