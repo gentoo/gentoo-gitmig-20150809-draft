@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 846915dac4ab40e2aa5a6371f13bc0f9 ChangeLog 1183
-MD5 5d734e3742a89e5b7337d35e004f2db3 gtkatlantic-0.4.1.ebuild 699
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 3352d24a54e3689bddfb492240488016 gtkatlantic-0.3.2.ebuild 683
 MD5 cbdc309fee6d889826af05056275144e gtkatlantic-0.3.1.ebuild 678
-MD5 84e4f4c92d7339bd6a02a43497e171d6 files/digest-gtkatlantic-0.4.1 70
+MD5 5d734e3742a89e5b7337d35e004f2db3 gtkatlantic-0.4.1.ebuild 699
+MD5 a5104058127053f3b4111fae9ea7cd53 ChangeLog 1394
 MD5 c9cb1050f701978820d0069a0dc979d9 files/digest-gtkatlantic-0.3.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+9wACHk4+ZoBpvsRAmX3AJ98iGNwePSp5IbVi3YIp9frplOjjwCgpiSy
-qdWgazWSrvYOrVuHcAciRY4=
-=Lrhi
------END PGP SIGNATURE-----
+MD5 84e4f4c92d7339bd6a02a43497e171d6 files/digest-gtkatlantic-0.4.1 70
+MD5 886d99ac6b0abc046a7a4226f03623c4 files/digest-gtkatlantic-0.3.2 70
