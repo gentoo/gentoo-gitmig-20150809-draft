@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.0_rc2.ebuild,v 1.3 2004/02/22 16:19:56 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.0_rc2.ebuild,v 1.4 2004/05/25 13:10:08 carlo Exp $
 
 IUSE=""
 
@@ -10,14 +10,12 @@ MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="SIP is a tool for generating bindings for C++ classes so that they can be used by Python."
-SRC_URI="http://www.river-bank.demon.co.uk/download/sip/${MY_P}.tar.gz"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/sip/"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc amd64"
-#note, python-2.3 isn't keyworded for alpha yet.
-# ~alpha"
 
 DEPEND="virtual/glibc
 	x11-libs/qt
