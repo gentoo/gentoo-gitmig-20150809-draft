@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.ebuild,v 1.4 2004/10/02 15:13:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.1.ebuild,v 1.1 2004/10/10 02:27:58 eradicator Exp $
 
-IUSE="cjk gstreamer xmms opengl xine arts"
+IUSE="noamazon cjk gstreamer xmms opengl xine arts"
 
 inherit kde eutils
 
@@ -16,10 +16,9 @@ SRC_URI="mirror://sourceforge/amarok/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-# ppc: please test out libvisual!
 KEYWORDS="~x86 ~ppc ~amd64"
 
-DEPEND="!ppc? ( >=media-libs/libvisual-0.1.6 )
+DEPEND=">=media-libs/libvisual-0.1.6
 	arts? ( >=kde-base/kdemultimedia-3.2 )
 	gstreamer? ( >=media-libs/gst-plugins-0.8.1 )
 	opengl? ( virtual/opengl )
@@ -48,7 +47,7 @@ src_compile() {
 	PREFIX="`kde-config --prefix`"
 
 	myconf="`use_with arts` `use_with gstreamer`"
-	myconf="${myconf} `use_with opengl` `use_with xine`" # `use_enable !noamazon amazon`"
+	myconf="${myconf} `use_with opengl` `use_with xine` `use_enable !noamazon amazon`"
 
 	einfo "${myconf}"
 
