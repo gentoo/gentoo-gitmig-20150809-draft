@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.12.ebuild,v 1.5 2004/11/04 05:18:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.12.ebuild,v 1.6 2004/12/11 15:55:01 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,13 +13,12 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
 LICENSE="GPL-2 FVWM"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="bidi debug gnome gtk gtk2 imlib ncurses nls nosm noxpm perl png readline rplay stroke tcltk truetype xinerama"
+IUSE="bidi debug gtk gtk2 imlib nls perl png readline rplay stroke tcltk truetype xinerama"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 		gtk? ( =x11-libs/gtk+-1.2*
 				imlib? ( >=media-libs/gdk-pixbuf-0.21.0
-						>=media-libs/imlib-1.9.14-r1 )
-				gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 ) )
+						>=media-libs/imlib-1.9.14-r1 ) )
 		rplay? ( >=media-sound/rplay-3.3.2 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		png? ( >=media-libs/libpng-1.0.12-r2 )
@@ -35,8 +34,7 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
 # XXX:	netpbm is used by FvwmScript-ScreenDump, worth a dependency?
-DEPEND="${RDEPEND} dev-util/pkgconfig
-	!x11-wm/metisse"
+DEPEND="${RDEPEND} dev-util/pkgconfig !x11-wm/metisse"
 
 SFT=${WORKDIR}/FvwmTabs-v3.3
 
@@ -67,9 +65,6 @@ src_unpack() {
 	# fixing #51287, the fvwm-menu-xlock script is not compatible
 	# with the xlockmore implementation in portage.
 	cd ${S}; epatch ${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff
-
-	# build fails on alpha with certain options without this.
-	use alpha && append-flags -fPIC
 }
 
 src_compile() {
@@ -85,9 +80,7 @@ src_compile() {
 	if ! use readline; then
 		myconf="${myconf} --without-readline-library"
 	else
-		myconf="${myconf} --with-readline-library"
-
-		myconf="${myconf} --without-termcap-library"
+		myconf="${myconf} --with-readline-library --without-termcap-library"
 	fi
 
 	# since fvwm-2.5.8 GTK support can be diabled with --disable-gtk, previously
@@ -101,11 +94,7 @@ src_compile() {
 			einfo "ATTN: You can safely ignore any imlib related configure errors."
 			myconf="${myconf} --with-imlib-prefix=${T}"
 		fi
-		if ! use gnome; then
-			myconf="${myconf} --without-gnome"
-		else
-			myconf="${myconf} --with-gnome"
-		fi
+		myconf="${myconf} --without-gnome"
 	fi
 
 	# rplay is a cool, but little used way of playing sounds over a network
@@ -155,8 +144,6 @@ src_compile() {
 	# more verbosity for module developers/hackers/etc.
 	if use debug; then
 		myconf="${myconf} --enable-debug-msgs --enable-command-log"
-		# XXX: incvs will no longer be needed in 2.5.13, configurable at run time
-		append-flags -DCR_DETECT_MOTION_METHOD_DEBUG
 	fi
 
 	# Xft Anti Aliased text support
@@ -164,18 +151,6 @@ src_compile() {
 		myconf="${myconf} --enable-xft"
 	else
 		myconf="${myconf} --disable-xft"
-	fi
-
-	# disable xsm protocol (session management) support?
-	if use nosm; then
-		myconf="${myconf} --disable-sm"
-	else
-		myconf="${myconf} --enable-sm"
-	fi
-
-	# disable xpm support?
-	if use noxpm; then
-		myconf="${myconf} --without-xpm-library"
 	fi
 
 	# set the local maintainer for fvwm-bug.
@@ -284,7 +259,7 @@ pkg_postinst() {
 	fi
 	echo
 	einfo "If you have been using the 'ShowOnlyIcons never' syntax in"
-	einfo "FvwmIconMan, please update your configuration to use the new "
+	einfo "FvwmIconMan, please update your configuration to use the new"
 	einfo "officially supported 'ShowNoIcons' option."
 	echo
 	einfo "The FvwmButtons 'HoverIcon', 'HoverTitle' and 'HoverColorset'"

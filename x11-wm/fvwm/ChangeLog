@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.85 2004/12/07 02:01:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.86 2004/12/11 15:55:01 taviso Exp $
+
+  11 Dec 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.12.ebuild:
+  minor updates
 
   07 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> fvwm-2.5.10-r5.ebuild:
   -fPIC is no longer needed on alpha.
