@@ -1,6 +1,25 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.118 2004/02/11 18:08:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.119 2004/02/11 18:21:17 caleb Exp $
+
+  11 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.2.1.ebuild,
+  qt-3.2.2-r1.ebuild, files/0001-dnd_optimization.patch,
+  files/0002-dnd_active_window_fix.patch, files/0003-qmenubar_fitts_law.patch,
+  files/0004-qiconview_etc_ctrl_selecting.patch,
+  files/0009-window_group.patch, files/0011-listview_keys.patch,
+  files/0013-qtabwidget-less_flicker.patch,
+  files/0014-qiconview-autoscroll.patch, files/0015-qiconview-finditem.patch,
+  files/0016-qiconview-rebuildcontainer.patch,
+  files/0017-qiconview-ctrl_rubber.patch,
+  files/0018-qlistview-paintcell.patch,
+  files/0019-qlistview-adjustcolumn.patch,
+  files/0020-designer-deletetabs.patch,
+  files/0021-qiconview-dragalittle.patch,
+  files/0022-qdragobject-hotspot.patch, files/0023-qstring-crash.patch,
+  files/0024-fix_enter_leave_notify.patch, files/0026-netwm-fullscreen.patch,
+  files/0027-dnd-leak.patch, files/0028-fix_sub_popup_crash.patch,
+  files/qt-3.2.2-crash-fix.patch:
+  Clean up old builds and patches
 
   11 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0.ebuild:
   Make $QTBASE/etc/settings a "keepdir" instead of a "dodir" so it doesn't get
