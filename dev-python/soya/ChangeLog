@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/soya
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.3 2004/03/18 22:02:16 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.4 2004/03/31 23:26:42 kloeri Exp $
+
+  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> soya-0.3.1.ebuild,
+  soya-0.5.ebuild, soya-0.6.1.ebuild:
+  Mark 0.6.1 stable on x86, change homepage + src_uri, remove old version.
 
 *soya-0.6.1 (21 Dec 2003)
 
