@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.2_pre20041203.ebuild,v 1.1 2004/12/04 20:18:23 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.2_pre20041203.ebuild,v 1.2 2004/12/05 21:52:07 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -10,7 +10,7 @@ ECVS_MODULE="gnustep/core/base"
 ECVS_CO_OPTS="-P -D ${PV/*_pre}"
 ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
-inherit gnustep cvs
+inherit gnustep toolchain-funcs cvs
 
 S=${WORKDIR}/${ECVS_MODULE}
 
@@ -29,7 +29,7 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=dev-libs/libxslt-1.1*
 	>=dev-libs/gmp-4.1*
 	>=dev-libs/openssl-0.9.7*
-	|| ( gcc-libffi? >=sys-devel/gcc-3.4.3-r1
+	|| ( gcc-libffi? >=sys-devel/gcc-3.3*
 		>=dev-libs/libffi-3* )
 	>=sys-libs/zlib-1.2*
 	${DOC_DEPEND}"
@@ -37,6 +37,15 @@ RDEPEND="${DEPEND}
 	${DOC_RDEPEND}"
 
 egnustep_install_domain "System"
+
+pkg_setup() {
+	gnustep_pkg_setup
+
+	if use gcc-libffi; then
+			eval $(tc-getCC) -lffi ${FILESDIR}/tryffi.c -o ${TMP}/tryffi \
+				|| die "Your FFI libraries and headers seem to be installed incorrectly -- this is not as bad as it sounds -- not many projects use libffi at the moment, and gcc may have installed the headers in an inavailable place.  Especially check for 'ffi.h' in your /usr/lib/gcc/\$CHOST/'gcc-version'/include directory, and that any other ffi related files it #include's (e.g. 'ffitarget.h') are in that directory as well; this can be solved by moving the files, or with a symlink.  This is a quick fix, and newer ebuilds of gcc should install the files in the correct places, but for now, it could save you a recompilation of gcc.  If this still fails for you, consider not using the 'gcc-libffi' USE flag and letting dev-libs/libffi build as a dependency.  It is important that either 'gcj' is a USE flag for gcc, or 'gcj' or 'objc' for >=gcc-3.4.3-r1."
+	fi
+}
 
 src_unpack() {
 	cvs_src_unpack ${A}
