@@ -1,7 +1,24 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.3 2002/03/05 19:19:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.4 2002/03/14 06:57:02 chadh Exp $
 
+*pcmcia-cs-3.1.31-r4 (14 Mar 2002)
+
+  14 Mar 2002; Chad Huneycutt <chadh@gentoo.org>: many fixes:
+  1. added USE variables for trusted apps, apm, cardbus, and pnp
+  2. updated init script to die slightly more gracefully when cardmgr
+     cannot start
+  3. changed configuration settings for init script (previously
+     /etc/pcmcia.conf) to install instead to /etc/conf.d as the Gentoo-specific
+     config
+  4. Undid drobbins "-f" fix below, as it is not a very good default behavior,
+     if , say, cardmgr starts dhcpcd, which can take a while to obtain
+     information.  There is a CARDMGR_OPTS variable in /etc/conf.d/pcmcia where
+     users can specify this if they want.
+  5. I also put hermes.conf in ${FILESDIR}, but I am not installing it, as it
+     causes cardmgr to choose the orinoco_cs driver over wvlan_cs, which may not
+     be what the user wants.  It is documented pretty well that it must be
+     downloaded, so I think it is safe to leave it out.
 *pcmcia-cs-3.1.31-r3 (05 Mar 2002)
 
   05 Mar 2002; Daniel Robbins <drobbins@gentoo.org>: properly install the pcmcia
