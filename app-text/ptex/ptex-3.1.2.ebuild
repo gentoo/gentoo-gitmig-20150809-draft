@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.8 2004/02/23 17:56:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.9 2004/02/23 17:59:02 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
-filter-flags "-fstack-protector"
 
 IUSE="cjk ncurses X libwww png"
 
@@ -71,7 +70,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf=""
 	use X \
 		&& myconf="--with-x" \
@@ -88,6 +86,7 @@ src_compile() {
 	use ncurses \
 		&& myconf="${myconf} --with-system-ncurses"
 
+	filter-flags "-fstack-protector"
 
 	# Does it make sense to compile the included libwww with mysql ?
 
