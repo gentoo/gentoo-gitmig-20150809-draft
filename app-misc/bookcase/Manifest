@@ -1,3 +1,5 @@
-MD5 c04180d1a8afc679fd2928a1919250e1 ChangeLog 421
 MD5 4a6305c35424838d7da9d57aebfed522 bookcase-0.6.4.ebuild 516
+MD5 e7ec730a14c3e34437af8214d9e54b78 bookcase-0.7.2.ebuild 503
+MD5 c04180d1a8afc679fd2928a1919250e1 ChangeLog 421
 MD5 edc430e3841c42044fad11c9cd5a0959 files/digest-bookcase-0.6.4 66
+MD5 84d75ecb6d74dbfec93189d5aa212b4b files/digest-bookcase-0.7.2 67

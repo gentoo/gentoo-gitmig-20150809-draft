@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bookcase
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/ChangeLog,v 1.1 2003/09/08 17:42:27 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/ChangeLog,v 1.2 2003/11/30 14:23:10 caleb Exp $
+
+  30 Nov 2003; Caleb Tennis <caleb@gentoo.org> :
+  Version bump
 
 *bookcase-0.6.4 (08 Sep 2003)
 
