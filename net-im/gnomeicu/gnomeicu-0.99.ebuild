@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.126.ebuild,v 1.4 2003/03/11 18:42:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.ebuild,v 1.1 2003/03/11 18:42:05 spider Exp $
 
 inherit gnome2 
 
@@ -27,6 +27,15 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 	
 RDEPEND="sys-devel/gettext"
 
+src_unpack () {
+	unpack ${A}
+	cd ${S}/doc/C
+	cp Makefile.in Makefile.in.old
+	sed -e "s:-scrollkeeper-update.*::g" \
+		Makefile.in.old > Makefile.in
+	rm Makefile.in.old
+	cd ${S}
+}
 DOCS="AUTHORS COPYING CREDITS ChangeLog README ABOUT-NLS"
 
 
