@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/cdargs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.1 2005/01/07 10:27:54 ka0ttic Exp $
+
+*cdargs-1.31 (07 Jan 2005)
+
+  07 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +cdargs-1.31.ebuild:
+  Initial commit - bug 76736. Thanks to Stefan Kamphausen.
+
