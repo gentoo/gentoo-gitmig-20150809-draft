@@ -79,3 +79,4 @@ move dev-java/sun-java3d dev-java/sun-java3d-bin
 move net-www/boa www-servers/boa
 move net-www/fnord www-servers/fnord
 move net-www/jboss www-servers/jboss
+move net-www/jetty www-servers/jetty
