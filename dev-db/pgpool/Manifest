@@ -1,6 +1,6 @@
 MD5 0ea094ca6b1771cc31e63745d4ff4955 pgpool-2.0.3.ebuild 869
 MD5 bd7a6c271646ff9c8972384483241ced pgpool-1.2.3.ebuild 864
-MD5 f3e521cda6b1b9adb81ab2ac4fc11014 ChangeLog 1075
+MD5 473d67f9212325510fbcc1990c34b2eb ChangeLog 1102
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 b7d50dddfbac438baf5594c30d9b93ae pgpool-1.1.ebuild 862
 MD5 8a60b75889b4ce03b548a1f3b2ed9711 files/pgpool.init 522
