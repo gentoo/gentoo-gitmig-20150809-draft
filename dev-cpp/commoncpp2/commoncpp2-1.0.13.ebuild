@@ -1,24 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.0.13.ebuild,v 1.5 2004/08/02 08:01:40 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.0.13.ebuild,v 1.6 2004/08/21 00:40:25 mr_bones_ Exp $
 
-IUSE="doc xml2"
-
-DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\
-threading, sockets, file access, daemons, persistence, serial I/O, XML parsing,\
-and system services"
+DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for threading, sockets, file access, daemons, persistence, serial I/O, XML parsing, and system services"
 SRC_URI="mirror://gnu/commonc++/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/commonc++/"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
+IUSE="doc xml2"
 
 DEPEND="xml2? ( dev-libs/libxml2 )
 	doc? ( app-doc/doxygen )"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86"
-
 src_compile() {
-	local myconf=""
+	local myconf=
 
 	use xml2 \
 		&& myconf="${myconf} --with-xml" \
@@ -33,7 +30,6 @@ src_compile() {
 }
 
 src_install () {
-
 	einstall || die
 
 	dodoc AUTHORS INSTALL NEWS ChangeLog README\
