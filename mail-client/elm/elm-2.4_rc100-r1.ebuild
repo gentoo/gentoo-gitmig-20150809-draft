@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100-r1.ebuild,v 1.1 2004/08/07 17:57:24 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100-r1.ebuild,v 1.2 2004/09/22 10:10:14 ticho Exp $
 
 DESCRIPTION="a classic mail client enhanced by Michael Elkins"
 HOMEPAGE="http://www.ozone.fmi.fi/KEH/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ozone.fmi.fi/KEH/elm-2.4ME+100.tar.gz"
 
 LICENSE="Elm"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="x86 ~sparc ~ppc ~alpha"
 
 IUSE="spell"
 
