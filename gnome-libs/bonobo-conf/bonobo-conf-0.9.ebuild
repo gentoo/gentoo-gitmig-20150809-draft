@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-libs/bonobo-conf/bonobo-conf-0.9.ebuild,v 1.1 2001/07/27 20:48:21 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-libs/bonobo-conf/bonobo-conf-0.9.ebuild,v 1.2 2001/07/28 00:59:23 hallski Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -13,7 +13,7 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=dev-libs/glib-1.2.0
 	>=dev-util/xml-i18n-tools-0.8.4
 	>=x11-libs/gtk+-1.2.0
-	>=gnome-base/bonobo-1.0.7
+	>=gnome-base/bonobo-1.0
 	>=gnome-base/oaf-0.6.2"
 
 src_compile() {
