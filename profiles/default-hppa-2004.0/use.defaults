@@ -29,7 +29,7 @@ guile		dev-util/guile
 ruby		dev-lang/ruby
 mysql		dev-db/mysql
 postgres	dev-db/postgresql
-X		x11-base/xfree
+X		x11-base/xorg-x11
 sdl		media-libs/libsdl
 gpm		sys-libs/gpm
 tcpd		sys-apps/tcp-wrappers
