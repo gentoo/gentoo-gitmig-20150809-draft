@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.77 2003/03/05 19:46:22 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.78 2003/03/09 03:23:08 azarah Exp $
+
+  09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.2*.ebuild :
+  Fix handling of fix_libtool_files.sh to be more $FILESDIR independant.
+  We basically install it to /sbin now, and then call it from there.  Also
+  export LD_LIBRARY_PATH with new gcc library path in it to prevent gcc-config
+  from borking when run.  This will hopefully fix bugs #15288, #16632, #16797.
 
 *gcc-3.2.2-r3 (03 Mar 2003)
 

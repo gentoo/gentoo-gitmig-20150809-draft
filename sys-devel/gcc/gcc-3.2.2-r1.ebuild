@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r1.ebuild,v 1.3 2003/02/25 13:50:16 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r1.ebuild,v 1.4 2003/03/09 03:23:08 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -116,6 +116,19 @@ PDEPEND="sys-devel/gcc-config"
 # Hack used to patch Makefiles to install into the build dir
 FAKE_ROOT=""
 
+chk_gcc_version() {
+	# This next bit is for updating libtool linker scripts ...
+	OLD_GCC_VERSION="`gcc -dumpversion`"
+
+	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
+	then
+		echo "${OLD_GCC_VERSION}" > ${WORKDIR}/.oldgccversion
+	fi
+
+	# Did we check the version ?
+	touch ${WORKDIR}/.chkgccversion
+}
+
 src_unpack() {
 	if [ -z "${SNAPSHOT}" ]
 	then
@@ -209,14 +222,6 @@ src_unpack() {
 		
 		rm -f ${x}.orig
 	done
-
-	# This next bit is for updating libtool linker scripts ...
-	OLD_GCC_VERSION="`gcc -dumpversion`"
-
-	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
-	then
-		echo "${OLD_GCC_VERSION}" > ${WORKDIR}/.oldgccversion
-	fi
 }
 
 src_compile() {
@@ -464,13 +469,30 @@ src_install() {
         rm -rf ${D}/usr/share/{man,info}
 	fi
 
+	# Rather install the script, else portage with changing $FILESDIR
+	# between binary and source package borks things ....
+	insinto /lib/rcscripts/awk
+	doins ${FILESDIR}/awk/fixlafiles.awk
+	exeinto /sbin
+	doexe ${FILESDIR}/fix_libtool_files.sh
+
     # Fix ncurses b0rking
     find ${D}/ -name '*curses.h' -exec rm -f {} \;
 }
 
+pkg_preinst() {
+
+	if [ ! -f "${WORKDIR}/.chkgccversion" ]
+	then
+		chk_gcc_version
+	fi
+}
+
 pkg_postinst() {
 
-	if [ "${ROOT}" = "/" -a "${COMPILER}" = "gcc3" -a "${CHOST}" == "${CCHOST}" ]
+	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+
+	if [ "${ROOT}" = "/" -a "${COMPILER}" = "gcc3" -a "${CHOST}" = "${CCHOST}" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
 	fi
@@ -480,9 +502,7 @@ pkg_postinst() {
 	then 
 		OLD_GCC_VERSION="`cat ${WORKDIR}/.oldgccversion`"
 
-		cp -f ${FILESDIR}/fix_libtool_files.sh ${T}
-		chmod +x ${T}/fix_libtool_files.sh
-		${T}/fix_libtool_files.sh ${OLD_GCC_VERSION}
+		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION}
 	fi
 	
 	# Fix ncurses b0rking (if r5 isn't unmerged)

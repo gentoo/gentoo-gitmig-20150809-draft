@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.5 2003/02/03 18:35:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.6 2003/03/09 03:23:08 azarah Exp $
 
 function einfo(string)
 {
@@ -79,7 +79,7 @@ BEGIN {
 		
 		if (DIRLIST[x] ~ GCCLIB) continue
 
-		einfo("Scanning " DIRLIST[x] "...")
+		einfo("  Scanning " DIRLIST[x] "...")
 
 		pipe = "find " DIRLIST[x] "/ -name '*.la' 2>/dev/null"
 		while (((pipe) | getline la_files) > 0) {
@@ -100,7 +100,7 @@ BEGIN {
 
 			if (CHANGED) {
 
-				ewarn("  FIXING: " la_files)
+				ewarn("    FIXING: " la_files)
 
 				while ((getline la_data < (la_files)) > 0) {
 
