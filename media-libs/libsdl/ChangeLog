@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.48 2004/06/07 07:48:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.49 2004/06/07 19:15:05 mr_bones_ Exp $
+
+  07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  files/1.2.7-joystick.patch:
+  remove the rcs keywords from the patch
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.7-r1.ebuild,
   files/1.2.7-joystick.patch:

@@ -1,4 +1,4 @@
-MD5 3d51cea6bb6642ef417bf5964e97c6a5 ChangeLog 7512
+MD5 107a365edb301482d9e0187ce9645e7e ChangeLog 7639
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
 MD5 a4236b0d45ce94b829ce7359d2ec80fc libsdl-1.2.7-r1.ebuild 2766
 MD5 ce1a8ba785e834534e748fc65e85b63c libsdl-1.2.6-r3.ebuild 2893
@@ -12,4 +12,4 @@ MD5 b66ce90b8939cef871c1c9b065fc0658 files/digest-libsdl-1.2.6-r3 62
 MD5 419d8c241f85b4deba895c615faa5612 files/libsdl-1.2.6-fullscreen.patch 1094
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.6-nobuggy-X.patch 568
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.7-nobuggy-X.patch 568
-MD5 0af2b62803a27df1c5c41c5511c49d8f files/1.2.7-joystick.patch 1610
+MD5 e71ab5ce20cb7c70631a59f9d209cce1 files/1.2.7-joystick.patch 1317

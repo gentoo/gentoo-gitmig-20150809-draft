@@ -1,15 +1,6 @@
 diff -u -r1.13 -r1.14
 --- SDL12/src/joystick/linux/SDL_sysjoystick.c	2004/01/04 16:49:18	1.13
 +++ SDL12/src/joystick/linux/SDL_sysjoystick.c	2004/03/05 15:09:18	1.14
-@@ -22,7 +22,7 @@
- 
- #ifdef SAVE_RCSID
- static char rcsid =
-- "@(#) $Id: 1.2.7-joystick.patch,v 1.1 2004/06/07 07:48:05 mr_bones_ Exp $";
-+ "@(#) $Id: 1.2.7-joystick.patch,v 1.1 2004/06/07 07:48:05 mr_bones_ Exp $";
- #endif
- 
- /* This is the system specific header for the SDL joystick API */
 @@ -383,7 +383,7 @@
  
  static SDL_bool EV_ConfigJoystick(SDL_Joystick *joystick, int fd)
