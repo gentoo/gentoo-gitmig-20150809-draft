@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3.ebuild,v 1.1 2005/03/02 07:49:32 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3.ebuild,v 1.2 2005/03/23 15:11:56 seemant Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -56,7 +56,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-media-2.8
 
 	>=media-gfx/eog-2.8.2
-	!hppa? ( !mips? ( >=net-www/epiphany-1.4.8 ) )
+	!hppa? ( !mips? ( >=www-client/epiphany-1.4.8 ) )
 	>=app-arch/file-roller-2.8.4
 	>=gnome-extra/gcalctool-4.4.22
 	>=gnome-extra/gconf-editor-2.8.2

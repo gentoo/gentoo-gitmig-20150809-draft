@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2-r1.ebuild,v 1.9 2005/01/08 23:58:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2-r1.ebuild,v 1.10 2005/03/23 15:11:56 seemant Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -69,7 +69,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-media-2.6.2
 
 	>=media-gfx/eog-2.6.1
-	!hppa? ( !mips? ( >=net-www/epiphany-1.2.6 ) )
+	!hppa? ( !mips? ( >=www-client/epiphany-1.2.6 ) )
 	>=app-arch/file-roller-2.6.1
 	>=gnome-extra/gcalctool-4.3.51
 	>=gnome-extra/gconf-editor-2.6.2

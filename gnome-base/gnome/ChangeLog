@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.151 2005/03/21 19:45:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.152 2005/03/23 15:11:56 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> gnome-2.6.ebuild,
+  gnome-2.6.2-r1.ebuild, gnome-2.8.0-r1.ebuild, gnome-2.8.1-r1.ebuild,
+  gnome-2.8.2.ebuild, gnome-2.8.3_pre0.ebuild, gnome-2.8.3.ebuild,
+  gnome-2.8.3-r1.ebuild, gnome-2.10_pre0.ebuild:
+  change dep from net-www/epiphany to www-client/epiphany
 
   21 Mar 2005; Guy Martin <gmsoft@gentoo.org> gnome-2.8.2.ebuild:
   Stable on hppa.
