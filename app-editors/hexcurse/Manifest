@@ -1,4 +1,4 @@
-MD5 f2612b71c6e5c2d976c704ed7f1e51fb files/digest-hexcurse-1.55 65
-MD5 5629492aa8e897b8fdbf1a026352de5f hexcurse-1.55.ebuild 585
+MD5 3c3e130d5b50b86b757dbaafbe15f2ed hexcurse-1.55.ebuild 578
+MD5 ea7844b034cf9b20b500234f5489f5f1 ChangeLog 356
 MD5 d516054daaa4513c52b473b66c6e762a metadata.xml 340
-MD5 d08ffcc5a792bd2fe3d9ad41446e8303 ChangeLog 363
+MD5 f2612b71c6e5c2d976c704ed7f1e51fb files/digest-hexcurse-1.55 65
