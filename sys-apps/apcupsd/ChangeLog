@@ -1,10 +1,15 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.9 2003/02/12 08:54:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.10 2003/02/24 01:34:17 zwelch Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*apcupsd-3.10.5 (23 Feb 2003)
+
+  23 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Update to latest version to address GLSA (see bug 16002)
  
 *apcupsd-3.10.1 (20 Oct 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   15 Nov 2002; Zach Welch <zwelch@gentoo.org> :
   Update ebuild to patch powerflute for gcc 3.2 compatibliity
