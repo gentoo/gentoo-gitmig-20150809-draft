@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/gtorrentviewer-0.2a.ebuild,v 1.1 2004/10/20 03:28:43 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/gtorrentviewer-0.2a.ebuild,v 1.2 2004/11/05 22:15:47 lv Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,7 @@ DESCRIPTION="A GTK2-based viewer and editor for BitTorrent meta files"
 HOMEPAGE="http://gtorrentviewer.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gtorrentviewer/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 amd64"
 SLOT="0"
 IUSE=""
 S=${WORKDIR}/${MY_P}
