@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.5 2003/07/17 21:26:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.6 2003/07/18 21:43:37 tester Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 src_unpack () {
 	unpack ${A}
@@ -22,6 +22,7 @@ src_unpack () {
 	patch -p1 < ${FILESDIR}/${P}-sparc.diff
 	use alpha && patch -p1 < ${FILESDIR}/${P}-alpha.diff
 	use hppa && patch -p0 < ${FILESDIR}/${P}-hppa.diff
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.diff
 	cp Makefile Makefile.orig
 	sed -e "s:-O2 -m486:${CFLAGS}:" \
 		-e "s:-O2 -mcpu=ppc:${CFLAGS}:g" \
@@ -37,6 +38,7 @@ src_compile() {
 		sed -e s/[i]*.86/i386/ \
 			-e s/sun.*/sparc/ \
 			-e s/arm.*/arm/ \
+			-e s/amd64/x86_64/ \
 			-e s/sa110/arm/`
 
 	if [ -z "$SYSTEM_ARCH" ]
@@ -56,6 +58,8 @@ src_compile() {
 	   MAKESTYLE="-alpha";;
 	  hppa)
 	   MAKESTYLE="-hppa";;
+	  x86_64)
+	   MAKESTYLE="-x86_64";;
 	  arm)
 	   ;; 
 	esac

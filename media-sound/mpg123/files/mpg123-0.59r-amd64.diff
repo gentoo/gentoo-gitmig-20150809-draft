@@ -1,0 +1,32 @@
+--- Makefile.orig	2003-07-15 00:17:35.000000000 -0400
++++ Makefile	2003-07-15 00:19:58.000000000 -0400
+@@ -192,6 +192,29 @@
+ 			$(RPM_OPT_FLAGS)' \
+ 		mpg123-make
+ 
++linux-x86_64:
++	$(MAKE) LDFLAGS= \
++		OBJECTS='decode.o dct64.o audio_oss.o' \
++		CFLAGS='-O2 -Wall -DLINUX -DOSS -DUSE_MMAP \
++			$(RPM_OPT_FLAGS)' \
++		mpg123-make
++
++linux-x86_64-esd:
++	$(MAKE) LDFLAGS= \
++		AUDIO_LIB='-lesd -laudiofile' \
++		OBJECTS='decode.o dct64.o audio_esd.o' \
++		CFLAGS='-O2 -Wall -DLINUX -DOSS -DUSE_MMAP \
++			$(RPM_OPT_FLAGS)' \
++		mpg123-make
++
++linux-x86_64-alsa:
++	$(MAKE) LDFLAGS= \
++		AUDIO_LIB='-lasound' \
++		OBJECTS='decode.o dct64.o audio_alsa.o' \
++		CFLAGS='-O2 -Wall -DLINUX -DOSS -DUSE_MMAP \
++			$(RPM_OPT_FLAGS)' \
++		mpg123-make
++
+ #linux-ppc:
+ #	$(MAKE)   LDFLAGS= \
+ #		OBJECTS='decode.o dct64.o audio_oss.o' \
