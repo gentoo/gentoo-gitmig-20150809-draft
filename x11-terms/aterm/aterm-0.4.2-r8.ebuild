@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r8.ebuild,v 1.1 2004/01/31 19:43:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r8.ebuild,v 1.2 2004/02/01 10:43:47 spock Exp $
 
 IUSE="cjk"
 S=${WORKDIR}/${P}
@@ -74,7 +74,9 @@ src_install () {
 	docinto menu
 	dodoc doc/menu/*
 	dohtml -r .
+}
 
+pkg_postinst () {
 	einfo
 	einfo "Hint: you can copy text from aterm to the clipboard by holding the ALT key"
 	einfo "while highlighting the text."
