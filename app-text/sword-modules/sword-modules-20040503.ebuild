@@ -1,34 +1,41 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.5 2004/08/18 17:17:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.6 2004/08/18 21:38:51 squinky86 Exp $
 
 DESCRIPTION="a collection of modules for the sword project"
 HOMEPAGE="http://www.crosswire.org/sword/"
 SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/StrongsGreek.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/StrongsHebrew.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ASV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/RSV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/AKJV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ISBE.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ISV.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/WebstersDict.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJVD.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/SME.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Robinson.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/WEB.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Packard.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Vulgate.zip
-http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Josephus.zip
-offensive? (mirror://gentoo/BoM.zip
-	mirror://gentoo/Jasher.zip
-	mirror://gentoo/Quran.zip)"
-#	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/QuranShakir.zip)"
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/StrongsGreek.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/StrongsHebrew.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ASV.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/RSV.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/AKJV.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ISBE.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/ISV.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/WebstersDict.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJVD.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/SME.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Robinson.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/WEB.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Packard.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Vulgate.zip
+	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Josephus.zip
+	offensive? (mirror://gentoo/BoM.zip
+		mirror://gentoo/Jasher.zip
+		mirror://gentoo/Quran.zip)
+	intl? (http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb.zip
+		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb1871.zip
+		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerLut.zip
+		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerLut1545.zip
+		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerSch.zip)"
+# must wait for the betamodules to return.
+#	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/QuranShakir.zip
+
 RESTRICT="nomirror"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
-IUSE="offensive"
+IUSE="offensive intl"
 
 S=${WORKDIR}
 
@@ -54,6 +61,14 @@ src_unpack() {
 	unpack Packard.zip > /dev/null
 	unpack Vulgate.zip > /dev/null
 	unpack Josephus.zip > /dev/null
+
+	if use intl; then
+		unpack GerElb.zip > /dev/null
+		unpack GerElb1871.zip > /dev/null
+		unpack GerLut.zip > /dev/null
+		unpack GerLut1545.zip > /dev/null
+		unpack GerSch.zip > /dev/null
+	fi
 
 	if use offensive; then
 		unpack BoM.zip > /dev/null
@@ -92,7 +107,12 @@ pkg_postinst() {
 		echo
 		einfo "You do not have the offensive USE flag enabled."
 		einfo "Questionable texts were not installed. To install them,"
-		einfo "USE=\"offensive\" emerge sword-modules"
+		einfo "USE=\"offensive\" emerge ${PN}"
+	fi
+	if ! use intl; then
 		echo
+		einfo "To enable different languages of selected texts contained"
+		einfo "in this ebuild,"
+		einfo "USE=\"intl\" emerge ${PN}"
 	fi
 }
