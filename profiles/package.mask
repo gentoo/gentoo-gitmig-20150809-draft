@@ -478,8 +478,9 @@ net-misc/radvd
 # Masked while the system people put this through the test
 # (25 Jul 2002)  Discovered bugs in file completion, and error messaging
 # Best to leave this masked until we get either a patch or 2.05c or
-# something.
-=sys-apps/bash-2.05b
+# something.  the -r1 patches the file completion. error messaging is just a
+# new format. so this can be tested (30 Aug 2002)
+>=sys-apps/bash-2.05b
 
 # <seemant@gentoo.org> (23 Jul 2002)
 # Masked while g2boojum approves
