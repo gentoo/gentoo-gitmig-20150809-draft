@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r6.ebuild,v 1.1 2002/04/25 02:03:01 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r6.ebuild,v 1.2 2002/04/25 02:26:16 drobbins Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -12,7 +12,6 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz"
 HOMEPAGE="http://www.python.org"
 
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
-	>=dev-python/python-fchksum-1.6.1
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
 	tcltk? ( >=dev-lang/tk-8.0 )"
