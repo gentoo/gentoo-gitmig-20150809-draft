@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.12 2004/03/19 17:00:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.13 2004/04/03 05:38:42 seemant Exp $
+
+*sdl-image-1.2.3-r1 (02 Apr 2004)
+
+  02 Apr 2004; Seemant Kulleen <seemant@gentoo.org> sdl-image-1.2.3-r1.ebuild:
+  install the showimage binary, thanks to: Gerry <trick@icculus.org> in bug
+  #46655. Also, use USE flag to determine what support to build
 
   19 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> sdl-image-1.2.3.ebuild:
   stable on sparc
