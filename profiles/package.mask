@@ -22,6 +22,15 @@
 ##
 
 # <rac@gentoo.org> (24 Jun 2003)
+# proof of concept for the vendor directory changes made possible with
+# perl-5.8.0-r12
+=dev-perl/ExtUtils-MakeMaker-6.05-r6
+
+# <rac@gentoo.org> (24 Jun 2003)
+# very untested, changes @INC order
+=dev-lang/perl-5.8.0-r12
+
+# <rac@gentoo.org> (24 Jun 2003)
 # needs testing - fairly radical reconfiguring
 =dev-perl/mod_perl-1.27-r3
 
