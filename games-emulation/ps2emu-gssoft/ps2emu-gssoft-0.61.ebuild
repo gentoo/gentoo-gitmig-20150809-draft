@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ps2emu-gssoft-0.61.ebuild,v 1.2 2004/02/20 06:26:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ps2emu-gssoft-0.61.ebuild,v 1.3 2004/03/21 20:02:18 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pcsx2.net/download/0.5release/GSsoft-${PV}.tgz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/opengl
 	virtual/x11
