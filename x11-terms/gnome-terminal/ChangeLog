@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.71 2004/10/01 06:57:19 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.72 2004/11/11 18:18:20 obz Exp $
+
+  11 Nov 2004; Mike Gardiner <obz@gentoo.org> gnome-terminal-2.7.3.ebuild:
+  Keyworded ppc for GNOME 2.8
 
   01 Oct 2004; Stephen P. Becker <geoman@gentoo.org>
   gnome-terminal-2.6.1.ebuild:
