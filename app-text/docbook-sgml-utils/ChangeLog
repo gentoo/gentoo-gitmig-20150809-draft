@@ -1,17 +1,22 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.2 2002/04/28 03:10:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.3 2002/07/11 07:01:26 phoenix Exp $
+
+*docbook-sgml-utils-0.6.11 (11 July 2002)
+
+  11 Jul 2002; Seemant Kulleen <seemant@gentoo.org> docbook-sgml-utils-0.6.11.ebuild, 
+  files/digest-docbook-sgml-utils-0.6.11 :
+  
+  Version bump, adjusted DEPEND list.
 
 *docbook-sgml-utils-0.6.9 (27 Apr 2002)
 
   27 Apr 2002; Seemant Kulleen <seemant@gentoo.org> docbook-sgml-utils-0.6.9.ebuild files/digest-docbook-sgml-utils-0.6.9 :
-
   Version bump, new SRC_URI and new HOMEPAGE
 
 *docbook-sgml-utils-0.6.6 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
