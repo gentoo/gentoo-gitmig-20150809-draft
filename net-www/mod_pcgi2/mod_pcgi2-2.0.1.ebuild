@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.9 2004/06/25 15:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.10 2004/08/16 17:40:12 mr_bones_ Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ IUSE="apache2"
 DEPEND="${DEPEND}
 		net-www/apache
 		apache2? ( >=net-www/apache-2 )
-		net-www/pcgi"
+		www-apps/pcgi"
 #RDEPEND=""
 S=${WORKDIR}/${PN/mod_}
 
