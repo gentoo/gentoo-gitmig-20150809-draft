@@ -12,7 +12,7 @@
  # the executable `tkman' is placed in BINDIR
  # this should be a directory that's in your bin PATH
 -BINDIR = /usr/local/bin
-+BINDIR = /usr/bin
++BINDIR = ${DESTDIR}/usr/bin
  #BINDIR = /private/share/bin
  
  
