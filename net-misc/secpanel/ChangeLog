@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/secpanel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.6 2004/03/15 11:19:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.7 2004/03/28 23:37:56 taviso Exp $
+
+  29 Mar 2004; Tavis Ormandy <taviso@gentoo.org> secpanel-0.43.ebuild:
+  stable on x86
 
   15 Mar 2004; Tavis Ormandy <taviso@gentoo.org> secpanel-0.43.ebuild:
   fixing #44600
