@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.3.ebuild,v 1.10 2004/10/29 08:16:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.3.ebuild,v 1.11 2005/02/01 14:45:21 corsair Exp $
 
 inherit gnome2 eutils
 

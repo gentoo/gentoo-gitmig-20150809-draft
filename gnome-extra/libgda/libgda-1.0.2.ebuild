@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.2.ebuild,v 1.12 2004/08/06 01:34:08 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.2.ebuild,v 1.13 2005/02/01 14:45:21 corsair Exp $
 
 IUSE="odbc postgres mysql ldap firebird freetds sqlite mdb oci8 doc"
 
