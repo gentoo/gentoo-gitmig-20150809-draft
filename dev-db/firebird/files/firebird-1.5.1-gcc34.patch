@@ -1,27 +1,30 @@
 diff -uNr firebird-1.5.1.4481-orig/src/common/classes/alloc.h firebird-1.5.1.4481/src/common/classes/alloc.h
 --- firebird-1.5.1.4481-orig/src/common/classes/alloc.h	2003-10-30 22:25:52.000000000 +0000
-+++ firebird-1.5.1.4481/src/common/classes/alloc.h	2004-09-12 11:26:47.351584232 +0000
-@@ -237,12 +237,14 @@
++++ firebird-1.5.1.4481/src/common/classes/alloc.h	2004-09-14 04:12:37.967099632 +0000
+@@ -237,12 +237,17 @@
  // loaded by host application using STL
  
  // This is to prevent inclusion of <new> header
 -#ifdef __NEW__
-+#ifdef _NEW
++#if defined( _NEW ) || defined ( __NEW__ )
  #error "alloc.h must be included before <new>"
  #endif
--#define __NEW__
 +#define _NEW
+ #define __NEW__
  namespace std {
  	class bad_alloc : public exception {};
++#if ( __GNUC__ > 3) || ((__GNUC__==3) && __GNUC_MINOR__ >=4)
 +	struct nothrow_t { };
 +	extern const nothrow_t nothrow;    
++#endif
  }
  // Define operators as static inline to prevent replacement of STL versions
  static inline void* operator new(size_t s) {
-@@ -258,6 +260,19 @@
+@@ -258,6 +263,21 @@
  	);
  }
  
++#if ( __GNUC__ > 3) || ((__GNUC__==3) && __GNUC_MINOR__ >=4)
 +static inline void* operator new(size_t s, const std::nothrow_t&) {
 +#if defined(DEV_BUILD)
 +// Do not complain here. It causes client tools to crash on Red Hat 8.0
@@ -34,13 +37,14 @@ diff -uNr firebird-1.5.1.4481-orig/src/common/classes/alloc.h firebird-1.5.1.448
 +#endif
 +	);
 +}
++#endif
 +
  static inline void* operator new[](size_t s) {
  #if defined(DEV_BUILD)
  // Do not complain here. It causes client tools to crash on Red Hat 8.0
 diff -uNr firebird-1.5.1.4481-orig/src/common/classes/array.h firebird-1.5.1.4481/src/common/classes/array.h
 --- firebird-1.5.1.4481-orig/src/common/classes/array.h	2004-03-29 07:40:23.000000000 +0000
-+++ firebird-1.5.1.4481/src/common/classes/array.h	2004-09-12 11:31:34.555922536 +0000
++++ firebird-1.5.1.4481/src/common/classes/array.h	2004-09-14 04:10:26.267121072 +0000
 @@ -60,15 +60,15 @@
  class Array : private Storage {
  public:
@@ -93,7 +97,7 @@ diff -uNr firebird-1.5.1.4481-orig/src/common/classes/array.h firebird-1.5.1.448
  	    int pos;
 diff -uNr firebird-1.5.1.4481-orig/src/common/classes/tree.h firebird-1.5.1.4481/src/common/classes/tree.h
 --- firebird-1.5.1.4481-orig/src/common/classes/tree.h	2003-10-30 22:25:52.000000000 +0000
-+++ firebird-1.5.1.4481/src/common/classes/tree.h	2004-09-12 11:22:54.754944296 +0000
++++ firebird-1.5.1.4481/src/common/classes/tree.h	2004-09-14 04:10:26.268120920 +0000
 @@ -215,7 +215,7 @@
  	}
      Value& current() const { return (*curr)[curPos]; }
@@ -114,7 +118,7 @@ diff -uNr firebird-1.5.1.4481-orig/src/common/classes/tree.h firebird-1.5.1.4481
  			if (level) {
 diff -uNr firebird-1.5.1.4481-orig/src/common/classes/vector.h firebird-1.5.1.4481/src/common/classes/vector.h
 --- firebird-1.5.1.4481-orig/src/common/classes/vector.h	2002-12-14 21:43:18.000000000 +0000
-+++ firebird-1.5.1.4481/src/common/classes/vector.h	2004-09-12 11:23:25.422282152 +0000
++++ firebird-1.5.1.4481/src/common/classes/vector.h	2004-09-14 04:10:26.268120920 +0000
 @@ -100,17 +100,17 @@
  public:
  	SortedVector() : Vector<Value, Capacity>() {}
