@@ -1,0 +1,10 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.1 2003/02/07 19:38:20 rphillips Exp $
+
+*rsbac-admin-1.2.1 (07 Dic 2002)
+
+  07 Dic 2002; Quequero <quequero@bitchx.it> rsbac-admin-1.2.1.ebuild:
+  First import. Ebuild submitted by Quequero <quequero@bitchx.it>.
+  rsbac-admin is a set of tools needed for the administration of rsbac
+  kernel, you need this packet if you have installed rsbac-sources
