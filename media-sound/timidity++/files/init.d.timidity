@@ -1,7 +1,7 @@
 #!/sbin/runscript
  
 depend() {
-	use alsasound esound
+	after alsasound esound
 }
  
 start() {
