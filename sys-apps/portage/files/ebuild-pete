@@ -11,7 +11,7 @@ fi
 
 #allow any envvars to be set like QTDIR, even if Qt was just installed
 export PATH=/usr/lib/portage/bin:${PATH}
-eval `import-settings PROXY HTTP_PROXY FTP_PROXY DEBUG MAKEOPTS MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT INTERACTIVE`
+eval `import-settings PROXY HTTP_PROXY FTP_PROXY DEBUG MAKEOPTS MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT INTERACTIVE OPTIONS`
 eval `import-configsettings FETCHCOMMAND PACKAGE USE GENTOO_MIRRORS PLATFORM`
 source /etc/rc.d/config/functions
 
@@ -326,6 +326,24 @@ dyn_unpack() {
     trap SIGINT SIGQUIT
 }
 
+dyn_setoptions() {
+    local option option_name option_value
+    # convert commas to spaces
+    
+    echo ">>> Setting options...
+    trimmed_options="$( echo ${OPTIONS} | sed -e 's/,\+/ /' )"
+    
+    if [ -s ${BUILDDIR}/OPTIONS ]
+    then
+        echo ">>> It looks like some options have already been set.
+        echo ">>> I will replace them with the new ones.
+    fi
+    for option in ${trimmed_options}
+    do
+	echo $option >> ${BUILDDIR}/OPTIONS
+    done
+}
+
 dyn_clean() {
 	if [ -d ${WORKDIR} ]
 	then
@@ -336,6 +354,7 @@ dyn_clean() {
 		rm -rf ${BUILDDIR}/image
 	fi
 	rm -rf ${BUILDDIR}/.compiled
+	rm -f ${BUILDDIR}/OPTIONS
 }
 
 into() {
@@ -630,7 +649,7 @@ dyn_help() {
 	echo 
 	echo "How to use the ebuild command:"
 	echo
-	echo "ebuild [-i] {packagename.ebuild} [command [command [command ...]]]"
+	echo "ebuild [-i] [-o options] {packagename.ebuild} [command [command ...]]"
 	echo 
 	echo "The first argument after any switches to ebuild should be an existing"
 	echo ".ebuild file."
@@ -639,13 +658,16 @@ dyn_help() {
 	echo
 	echo "  -i          : puts ebuild into interactive mode"
         echo "                this allows interactive configuration of the package"
+        echo "  -o options  : set package options"
 	echo
 	echo "One or more of the following commands can then be specified.  If more"
 	echo "than one command is specified, each will be executed in order."
 	echo
+        echo "  query       : query package options and other information"
 	echo "  check       : test if all dependencies get resolved"
 	echo "  fetch       : download source archive(s) and patches"
-	echo "  unpack      : unpack/patch sources (auto-fetch if needed)"
+	echo "  unpack      : unpack/patch sources (auto-fetch if needed) and set
+        echo "                options"
 	echo "  compile     : compile sources (auto-fetch/unpack if needed)"
 	echo "  merge       : merge image into live filesystem, recording files in db"
 	echo "  remerge     : forces merge even if the package is installed"
@@ -694,6 +716,7 @@ src_menu() {
 	unpack)
 	    dyn_fetch
 	    dyn_unpack
+            dyn_setoptions
 	    ;;
 	compile)
 		build_depend
@@ -814,6 +837,15 @@ while [ "${1:0:1}" = "-" ]; do
 	-i)
 	    INTERACTIVE=y
 	    ;;
+        -o)
+            OPTIONS="${OPTIONS},${2}"
+            shift
+            ;;
+        -*)
+            echo "Unknown option $1"
+            echo
+            dyn_help
+            ;;
 	esac
 	shift
 done
@@ -945,5 +977,3 @@ then
 fi
 foo=$(( $foo + 1))
 done
-
-
