@@ -1,0 +1,13 @@
+# ChangeLog for net-wireless/atmel-firmware
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/ChangeLog,v 1.1 2005/01/03 16:35:01 genstef Exp $
+
+*atmel-firmware-1.1 (03 Jan 2005)
+
+  03 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +atmel-firmware-1.1.ebuild:
+  New ebuild thanks to Martin von Gagern <Martin.vGagern@gmx.net>, n0ne
+  <baal.killer@gmail.com>, Peter Johanson <latexer@gentoo.org>, Henrik Brix
+  Andersen <brix@gentoo.org and Klaus S. Madsen <gentoo@hjernemadsen.org> in
+  bug 52893
+
