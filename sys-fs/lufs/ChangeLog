@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.19 2005/01/23 19:35:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.20 2005/02/02 17:09:33 genstef Exp $
+
+  02 Feb 2005; Stefan Schweizer <genstef@gentoo.org> lufs-0.9.7-r3.ebuild:
+  Removing autofs stuff, because it has no chance to work, thanks to Michael S
+  <gentoo.bugzilla@mas.ml1.net> in bug 79739 for reporting.
 
   23 Jan 2005; <avatar@gentoo.org> :
   Added to ~ppc.

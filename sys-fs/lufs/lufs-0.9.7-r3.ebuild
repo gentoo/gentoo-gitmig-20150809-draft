@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.3 2005/01/23 19:35:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.4 2005/02/02 17:09:33 genstef Exp $
 
 inherit eutils
 
@@ -48,9 +48,6 @@ src_compile() {
 		emake || die "emake failed"
 		cd ..
 	done
-	cd ..
-
-	cd util; emake auto.sshfs auto.ftpfs ||  die "emake failed"; cd ..
 }
 
 src_install() {
@@ -61,13 +58,6 @@ src_install() {
 		make DESTDIR=${D} install || die "make install failed"
 		cd ..
 	done
-	cd ..
-
-	cd util; dobin auto.sshfs auto.ftpfs; cd ..
-
-	dodir /etc/autofs
-	dosym /usr/bin/auto.sshfs /etc/autofs/auto.sshfs
-	dosym /usr/bin/auto.ftpfs /etc/autofs/auto.ftpfs
 }
 
 pkg_postinst() {
