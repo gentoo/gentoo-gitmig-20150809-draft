@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.7.2.ebuild,v 1.1 2004/07/23 13:51:21 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.7.2.ebuild,v 1.2 2004/09/06 00:13:49 ciaranm Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -28,7 +30,7 @@ src_unpack() {
 	ewarn "or you will have problems!"  See:
 	ewarn "http://bugs.gentoo.org/show_bug.cgi?id=24530"
 	ewarn ""
-	sleep 5
+	epause 5
 	unpack ${A}
 	cd ${S}
 }
