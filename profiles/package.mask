@@ -388,3 +388,4 @@ dev-lang/tcl-tk
 
 #maksing 2.2 kernels until a new baselayout is available
 <=sys-kernel/linux-sources-2.4
+<=sys-kernel/linux-headers-2.4
