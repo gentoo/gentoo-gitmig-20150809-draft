@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.9 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.10 2003/01/07 22:25:09 mholzer Exp $
 
 IUSE="berkdb"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
 DESCRIPTION="Pluggable Authentication Modules"
 SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz"
-HOMEPAGE="http://www.redhat.com/linux-info/pam/"
+HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 
 LICENSE="PAM"
 KEYWORDS="x86 ppc sparc alpha"
