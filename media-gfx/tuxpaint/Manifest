@@ -1,4 +1,6 @@
 MD5 1e37d9c1c3c504993cb183bc71dac2e3 tuxpaint-0.9.12.ebuild 1876
 MD5 9d0318460af84a9962617aede0fa1b51 ChangeLog 736
 MD5 978ca7de1eb30365afc7555b471468a6 metadata.xml 219
+MD5 1e37d9c1c3c504993cb183bc71dac2e3 tuxpaint-0.9.13.ebuild 1876
 MD5 60d68c719ff0eec4ce2849662bbce97e files/digest-tuxpaint-0.9.12 68
+MD5 9f0ca98deef70db6f3e6878392434cae files/digest-tuxpaint-0.9.13 68
