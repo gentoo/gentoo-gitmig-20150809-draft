@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.4.2.ebuild,v 1.2 2002/07/17 02:25:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.4.2.ebuild,v 1.3 2002/10/20 18:52:34 vapier Exp $
 
 S=${WORKDIR}/GNUnet-${PV}
 DESCRIPTION="GNUnet is an anonymous, distributed, reputation based network."
@@ -17,7 +17,6 @@ DEPEND=">=dev-libs/openssl-0.9.6d
 	=x11-libs/gtk+-1.2*
 	>=dev-libs/libextractor-0.1.0"
 
-RDEPEND="${DEPEND}"
 
 src_compile () {
 	econf || die "./configure failed"

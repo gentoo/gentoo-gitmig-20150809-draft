@@ -1,13 +1,12 @@
 # Copyright (c) 2002, Per Wigren <wigren@home.se>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.5 2002/10/04 21:25:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.6 2002/10/20 18:52:34 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Freenet server"
 SRC_URI="http://freenetproject.org/snapshots/${P}.tgz"
 HOMEPAGE="http://freenetproject.org"
 DEPEND="virtual/jdk"
-RDEPEND="${DEPEND}"
 SLOT="0"
 KEYWORDS="x86 ppc"
 LICENSE="GPL"

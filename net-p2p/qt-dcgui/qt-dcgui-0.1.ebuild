@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.1.ebuild,v 1.1 2002/10/07 17:33:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.1.ebuild,v 1.2 2002/10/20 18:52:34 vapier Exp $
 
 MY_P=${P/qt-/}
 S=${WORKDIR}/${MY_P}
@@ -15,7 +15,6 @@ KEYWORDS="x86"
 DEPEND="=x11-libs/qt-3*
 	>=dev-libs/libxml2-2.4.22
 	=net-p2p/dclib-${PV}"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	export CPPFLAGS="${CXXFLAGS} -I/usr/include/libxml2/libxml"
