@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.4.ebuild,v 1.3 2003/07/12 20:30:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.4.ebuild,v 1.4 2003/09/07 00:06:06 msterret Exp $
 
 MY_P="${PN}44"
 
@@ -20,9 +20,9 @@ S="${WORKDIR}"
 
 src_unpack() {
 	mkdir doc
-	
+
 	unpack ${MY_P}src.tar.gz
-	
+
 	cd doc
 	unpack ${MY_P}doc.tar.gz
 }

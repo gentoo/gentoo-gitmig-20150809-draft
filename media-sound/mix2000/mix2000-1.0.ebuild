@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mix2000/mix2000-1.0.ebuild,v 1.6 2003/02/13 13:15:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mix2000/mix2000-1.0.ebuild,v 1.7 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/mix-2000
 DESCRIPTION="The OSS sound mixer from the bcast2000 people; now orphaned."
@@ -10,7 +10,7 @@ DESCRIPTION="The OSS sound mixer from the bcast2000 people; now orphaned."
 SRC_URI="http://diddl.firehead.org/software/unix/media/heroine/mix-2000-src.tar.gz"
 HOMEPAGE="http://www.geocities.com/Hollywood/3709/mix2000.html"
 
-DEPEND=" virtual/x11	
+DEPEND=" virtual/x11
 	media-libs/libpng
 	sys-libs/zlib
 	>=dev-libs/glib-1.2.0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.7 2003/08/03 02:48:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.8 2003/09/07 00:06:05 msterret Exp $
 
 MY_PV=310pl3
 DESCRIPTION="GoGo is an assembly optimized version of LAME 3.91"
@@ -15,7 +15,7 @@ DEPEND="dev-lang/nasm"
 #	>=sys-libs/ncurses-5.H2
 #	gtk?    ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
-# Oggvorbis support breaks with -rc3 
+# Oggvorbis support breaks with -rc3
 #RDEPEND="virtual/glibc"
 #	>=sys-libs/ncurses-5.2
 #	gtk?    ( =x11-libs/gtk+-1.2* )"
@@ -37,13 +37,13 @@ src_compile() {
 	[ `use debug` ] \
 		&& myconf="$myconf --enable-debug=yes" \
 		|| myconf="$myconf --enable-debug=no"
-	
+
 	econf \
 		--enable-shared \
 		--enable-nasm \
 		--enable-extopt=full \
 		$myconf || die
-		
+
 	emake || die
 }
 

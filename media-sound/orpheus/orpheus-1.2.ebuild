@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.2.ebuild,v 1.1 2003/08/03 12:35:11 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.2.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://konst.org.ua/en/orpheus"
@@ -36,7 +36,7 @@ src_compile() {
 	#use nas && myconf="${myconf} --with-nas"
 	#use nas || myconf="${myconf} --disable-nas"
 	myconf="${myconf}"
-	
+
 	econf ${myconf} || die
 	make CC="gcc ${CFLAGS}" CXX="c++ ${CXXFLAGS}" || die
 }

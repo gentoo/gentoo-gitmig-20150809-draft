@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-0.9.9.4.ebuild,v 1.8 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-0.9.9.4.ebuild,v 1.9 2003/09/07 00:06:05 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
@@ -38,7 +38,7 @@ src_install() {
 		DESTDIR=${D} install || die
 
 	dodoc AUTHORS BUGS CHANGELOG COPYING README* TODO
-	docinto templates; dodoc templates/README* 
+	docinto templates; dodoc templates/README*
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/gnump3d.rc6 gnump3d

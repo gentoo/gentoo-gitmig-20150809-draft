@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.4.ebuild,v 1.2 2003/09/04 15:11:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.4.ebuild,v 1.3 2003/09/07 00:06:06 msterret Exp $
 
 IUSE="esd X gtk oggvorbis gnome arts"
 
-inherit kde-functions 
+inherit kde-functions
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
@@ -15,18 +15,18 @@ RDEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	sys-libs/zlib
 	>=sys-libs/ncurses-5.2
-	=media-libs/freetype-1* 
+	=media-libs/freetype-1*
 	>=media-libs/musicbrainz-1.0.1
 	>=media-libs/id3lib-3.8.0
-	X? ( virtual/x11 ) 
-	esd? ( media-sound/esound ) 
+	X? ( virtual/x11 )
+	esd? ( media-sound/esound )
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
 	gnome? ( gnome-base/ORBit )
 	oggvorbis? ( media-libs/libvorbis )
 	arts? ( kde-base/arts )" # doesn't work anymore? see bug #9675
 	#alsa? ( media-libs/alsa-lib ) # it only supports alsa 0.5.x, so support disabled
 
-DEPEND="$RDEPEND x86? ( dev-lang/nasm ) 
+DEPEND="$RDEPEND x86? ( dev-lang/nasm )
 	media-libs/id3lib
 	dev-lang/perl"
 
@@ -46,7 +46,7 @@ src_compile() {
 	local myconf="--disable-alsa --enable-debug --enable-cmdline"
 	use esd  || myconf="${myconf} --disable-esd"
 	use gnome && myconf="${myconf} --enable-corba"
-	
+
 	if [ -n "`use arts`" ]; then
 	    export ARTSCCONFIG="$KDEDIR/bin/artsc-config"
 	    myconf="${myconf} --enable-arts"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/gtkguitune-0.6.ebuild,v 1.2 2003/07/12 23:41:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/gtkguitune-0.6.ebuild,v 1.3 2003/09/07 00:06:05 msterret Exp $
 
 LICENSE="GPL-2"
 KEYWORDS="~x86"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=dev-cpp/gtkmm-1.2*"
-		
+
 src_install() {
 	einstall || die
 	dodoc README AUTHORS

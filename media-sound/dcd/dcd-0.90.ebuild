@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/dcd-0.90.ebuild,v 1.11 2003/02/13 13:09:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/dcd-0.90.ebuild,v 1.12 2003/09/07 00:06:04 msterret Exp $
 
 S=${WORKDIR}/dcd-0.90
 DESCRIPTION="A simple command-line based CD Player"
@@ -22,9 +22,9 @@ src_unpack() {
 		-e "s:/man/:/share/man/:" \
 		-e "s:# CDROM = /dev/cdroms/cdrom0:CDROM = \"/dev/cdroms/cdrom0\":"\
 		Makefile.orig > Makefile
-   
+
 }
- 
+
 src_compile() {
 
 	make EXTRA_CFLAGS="$CFLAGS" || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.2 2003/07/12 20:30:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.3 2003/09/07 00:06:04 msterret Exp $
 
 DESCRIPTION="Common Music: An object oriented music composition environment in LISP/scheme"
 HOMEPAGE="http://www-ccrma.stanford.edu/software/cm/doc/cm.html"
@@ -48,6 +48,6 @@ pkg_prerm() {
 	    rm /usr/bin/cm
 	fi
         if [ -e /usr/share/cm/bin ]; then
-            rm -rf /usr/share/cm/bin 
+            rm -rf /usr/share/cm/bin
         fi
 }

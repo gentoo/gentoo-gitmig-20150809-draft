@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r5.ebuild,v 1.1 2003/03/08 04:28:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r5.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
@@ -47,7 +47,7 @@ src_install() {
 		sed -e 's:/usr/local:/usr:g' ${f}.old > ${f}
 	done
 	make man_prefix=${D}/usr/share/man DESTDIR=${D} install-tools || die "could not install tools"
-	
+
 	# clean up the /usr/etc directory, movind stuff to /usr/bin...
 	cd ${D}/usr/etc
 	mv `find -type f -perm +1` ../bin/
@@ -56,7 +56,7 @@ src_install() {
 	rm -rf ${D}/usr/etc
 
 	# add our special fixed audigy-script. Yes, the one in the driver package is b0rked and should
-	# not be used until you're absolutely sure it's superior to this one. Much thanks to 
+	# not be used until you're absolutely sure it's superior to this one. Much thanks to
 	# Jonathan Boler (tenpin22@blueyonder.co.uk) for this excellent fixed version.
 	dobin ${FILESDIR}/audigy-script || die
 

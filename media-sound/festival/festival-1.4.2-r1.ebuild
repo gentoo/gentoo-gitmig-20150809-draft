@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r1.ebuild,v 1.5 2003/02/13 13:11:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r1.ebuild,v 1.6 2003/09/07 00:06:04 msterret Exp $
 
 S=${WORKDIR}/${PN}
 T=${WORKDIR}/speech_tools
 DESCRIPTION="Festival Text to Speech engine"
-GCCPV=`cc -dumpversion` 
+GCCPV=`cc -dumpversion`
 IUSE=""
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SITE="http://www.speech.cs.cmu.edu/${PN}/cstr/${PN}/${PV}"
@@ -47,7 +47,7 @@ src_compile() {
 
 	econf
 	# static linking seems to work <rigo@home.nl>
-	
+
 	if [ ${GCCPV} != "2.95.3" ] ; then
 		echo "COMPILERLIBS=/usr/lib/gcc-lib/i686-pc-linux-gnu/${GCCPV}/libstdc++.a /usr/lib/gcc-lib/i686-pc-linux-gnu/${GCCPV}/libgcc_s.so.1" >> ${T}/config/config
 	fi
@@ -60,7 +60,7 @@ src_compile() {
 	sed -e '/^MODULE_LIBS/s/-ltermcap/-lncurses/' editline.mak.orig \
 		> editline.mak
 	pushd
-	
+
 	# emake worked for me on SMP
 	#emake did not work for me because I had -j5. If there is anything greater than
 	#-j2, emake dies.
@@ -104,15 +104,15 @@ src_install() {
 	dobin text2wave
 	cd ${WORKDIR}/festival/lib/etc/unknown_Linux
 	dobin audsp
-	
+
 	einfo ""
 	einfo "Please ignore errors about skipped directories. They are harmless."
 	einfo ""
-	
+
 	# Install the main libraries
 	insinto /usr/lib/festival
 	doins ${WORKDIR}/festival/lib/*
-	
+
 	# Install the dicts and vioces
 	FESTLIB=${WORKDIR}/festival/lib
 	DESTLIB=/usr/lib/festival
@@ -123,35 +123,35 @@ src_install() {
 	doins ${FESTLIB}/dicts/cmu/*
 	insinto ${DESTLIB}/dicts/oald
 	doins ${FESTLIB}/dicts/oald/*
-	
+
 	FESTLIB=${WORKDIR}/festival/lib/voices/spanish/el_diphone
 	DESTLIB=/usr/lib/festival/voices/spanish/el_diphone
 	insinto ${DESTLIB}/festvox
 	doins ${FESTLIB}/festvox/*
 	insinto ${DESTLIB}/group
 	doins ${FESTLIB}/group/*
-	
+
 	FESTLIB=${WORKDIR}/festival/lib/voices/english
 	DESTLIB=/usr/lib/festival/voices/english
 	insinto ${DESTLIB}/don_diphone
 	doins ${FESTLIB}/don_diphone/*
 	insinto ${DESTLIB}/don_diphone/festvox
 	doins ${FESTLIB}/don_diphone/festvox/*
-	
+
 	insinto ${DESTLIB}/kal_diphone
 	doins ${FESTLIB}/kal_diphone/*
 	insinto ${DESTLIB}/kal_diphone/festvox
 	doins ${FESTLIB}/kal_diphone/festvox/*
 	insinto ${DESTLIB}/kal_diphone/group
 	doins ${FESTLIB}/kal_diphone/group/*
-	
+
 	insinto ${DESTLIB}/ked_diphone
 	doins ${FESTLIB}/ked_diphone/*
 	insinto ${DESTLIB}/ked_diphone/festvox
 	doins ${FESTLIB}/ked_diphone/festvox/*
 	insinto ${DESTLIB}/ked_diphone/group
 	doins ${FESTLIB}/ked_diphone/group/*
-	
+
 	insinto ${DESTLIB}/rab_diphone
 	doins ${FESTLIB}/rab_diphone/*
 	insinto ${DESTLIB}/rab_diphone/festvox
@@ -163,12 +163,12 @@ src_install() {
 	doins ${FESTLIB}/us1_mbrola/*
 	insinto ${DESTLIB}/us1_mbrola/festvox
 	doins ${FESTLIB}/us1_mbrola/festvox/*
-	
+
 	insinto ${DESTLIB}/us2_mbrola
 	doins ${FESTLIB}/us2_mbrola/*
 	insinto ${DESTLIB}/us2_mbrola/festvox
 	doins ${FESTLIB}/us2_mbrola/festvox/*
-	
+
 	insinto ${DESTLIB}/us3_mbrola
 	doins ${FESTLIB}/us3_mbrola/*
 	insinto ${DESTLIB}/us3_mbrola/festvox

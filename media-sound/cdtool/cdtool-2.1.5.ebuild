@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5.ebuild,v 1.2 2003/07/12 20:30:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5.ebuild,v 1.3 2003/09/07 00:06:04 msterret Exp $
 
 IUSE=""
 DESCRIPTION="A package of command-line utilities to play and catalog cdroms."
@@ -25,14 +25,14 @@ src_install() {
 	dobin cdtool
 
 	dosym cdtool /usr/bin/cdpause
-	dosym cdtool /usr/bin/cdeject 
+	dosym cdtool /usr/bin/cdeject
 	dosym cdtool /usr/bin/cdinfo
 	dosym cdtool /usr/bin/cdir
 	dosym cdtool /usr/bin/cdreset
 	dosym cdtool /usr/bin/cdshuffle
 	dosym cdtool /usr/bin/cdstart
 	dosym cdtool /usr/bin/cdstop
-	
+
 	doman cdctrl.1 cdown.1 cdtool.1
 
 	dodoc COPYING INSTALL README

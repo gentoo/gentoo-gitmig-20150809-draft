@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r25.ebuild,v 1.3 2003/08/18 05:54:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r25.ebuild,v 1.4 2003/09/07 00:06:06 msterret Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -97,7 +97,7 @@ src_unpack() {
 		fi
 	fi
 
-	# This patch passes audio output through the output plugin 
+	# This patch passes audio output through the output plugin
 	# before recording via the diskwriter plugin
 	# http://forum.xmms.org/viewtopic.php?t=500&sid=c286e1c01fb924a2f81f519969f33764
 	epatch ${FILESDIR}/xmms-diskwriter-audio.patch
@@ -159,8 +159,8 @@ src_install() {
 		sysdir=${D}/usr/share/applets/Multimedia \
 		GNOME_SYSCONFDIR=${D}/etc install || die "FOO"
 
-	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO 
-	
+	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO
+
 	keepdir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
 	donewins gnomexmms/gnomexmms.xpm xmms.xpm

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.7 2003/09/01 12:03:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.8 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Free MP3 player, drop-in replacement for mpg123"
@@ -17,7 +17,7 @@ KEYWORDS="x86 ~ppc ~sparc"
 MPG123="false"
 
 pkg_setup() {
-	
+
 	# test if mpg123 owns the /usr/bin/mpg123 file. If it does, then do not
 	# create a symlink.  If it is already a symlink or does not exist, then
 	# we create it

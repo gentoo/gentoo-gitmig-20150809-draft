@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.0_rc2.ebuild,v 1.7 2003/02/13 13:06:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.0_rc2.ebuild,v 1.8 2003/09/07 00:06:04 msterret Exp $
 
 S=${WORKDIR}/${P/_rc/rc}
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
@@ -21,12 +21,12 @@ src_compile() {
 }
 
 src_install() {
-	local ALSA_UTILS_DOCS="COPYING ChangeLog README TODO 
-		seq/aconnect/README.aconnect 
+	local ALSA_UTILS_DOCS="COPYING ChangeLog README TODO
+		seq/aconnect/README.aconnect
 		seq/aseqnet/README.aseqnet"
-	
+
 	make DESTDIR=${D} install || die "Installation Failed"
-	
+
 	dodoc ${ALSA_UTILS_DOCS}
 	newdoc alsamixer/README README.alsamixer
 }

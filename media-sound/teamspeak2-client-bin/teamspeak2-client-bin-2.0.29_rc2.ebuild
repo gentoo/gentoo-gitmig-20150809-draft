@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.29_rc2.ebuild,v 1.1 2003/07/19 13:37:14 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.29_rc2.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
 
 DESCRIPTION="The Teamspeak Voice Communication Tool"
 HOMEPAGE="http://www.teamspeak.org"
@@ -31,14 +31,14 @@ src_install() {
 		> ${S}/setup.data/image/TeamSpeak
 	rm ${S}/setup.data/image/TeamSpeak.tmp
 
-	# Copy the files 
+	# Copy the files
 	cp -r ${S}/setup.data/image/* ${D}usr/share/teamspeak2-client
-	
+
 	# Setup a sym-link to the binary
 	insinto ${D}/usr/share/teamspeak2-client/
-	dobin ${S}/setup.data/image/TeamSpeak		
+	dobin ${S}/setup.data/image/TeamSpeak
 	dosym /usr/share/teamspeak2-client/TeamSpeak /usr/bin/TeamSpeak
-		
+
 }
 pkg_postinst() {
 

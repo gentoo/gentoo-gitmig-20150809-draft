@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.3.ebuild,v 1.7 2003/02/13 13:16:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.3.ebuild,v 1.8 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 MY_P="${PN}43"
@@ -20,10 +20,10 @@ src_unpack() {
 
 	mkdir ${P}
 	mkdir ${P}/doc
-	
+
 	cd ${WORKDIR}/${P}
 	unpack mup43src.tar.gz
-	
+
 	cd doc
 	unpack mup43doc.tar.gz
 
@@ -33,13 +33,13 @@ src_compile() {
 
 	cd ${S}/mup
 	cc -o mup *.c -lm
-	
+
 	cd ${S}/mupdisp
 	cc -o mupdisp *.c -lm -lvga -lX11 -L/usr/X11R6/lib
-	
+
 	cd ${S}/mkmupfnt
 	cc -o mkmupfnt *.c
-	
+
 }
 
 src_install () {
@@ -48,7 +48,7 @@ src_install () {
 	dobin mupdisp/mupdisp
 	dobin mkmupfnt/mkmupfnt
 	dobin mupprnt
-	
+
 	dodoc license.txt README0
 	cd doc
 	dodoc faq.txt license.txt mupfeat.txt overview.txt register.txt README1

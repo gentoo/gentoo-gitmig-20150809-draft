@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.5.ebuild,v 1.1 2003/07/31 16:00:59 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.5.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
 
 MY_P="${P//[-.]/}"
 
@@ -20,7 +20,7 @@ S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${MY_P}src.tar.gz
-	
+
 	mkdir doc
 	cd doc
 	unpack ${MY_P}doc.tar.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/mikmod-3.1.6a.ebuild,v 1.2 2003/07/02 21:21:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/mikmod-3.1.6a.ebuild,v 1.3 2003/09/07 00:06:06 msterret Exp $
 
 MY_P=${PN}-${PV/a}
 DESCRIPTION="MikMod is a console MOD-Player based on libmikmod"
@@ -22,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-        	
+
 	emake || die
 }
 

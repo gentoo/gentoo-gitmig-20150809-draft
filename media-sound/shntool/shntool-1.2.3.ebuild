@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/shntool-1.2.3.ebuild,v 1.2 2003/07/12 20:30:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/shntool-1.2.3.ebuild,v 1.3 2003/09/07 00:06:06 msterret Exp $
 
 DESCRIPTION="shntool is a multi-purpose WAVE data processing and reporting utility"
 HOMEPAGE="http://shnutils.freeshell.org/shntool/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=media-sound/shorten-3.5.1 
+DEPEND=">=media-sound/shorten-3.5.1
 	>=media-libs/flac-1.1.0 "
 
 S="${WORKDIR}/${P}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29.ebuild,v 1.10 2003/07/18 21:43:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29.ebuild,v 1.11 2003/09/07 00:06:04 msterret Exp $
 
 IUSE="tcpd alsa"
 
@@ -8,7 +8,7 @@ inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Enlightened Sound Daemon"
-SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2" 
+SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 SLOT="0"
@@ -36,7 +36,7 @@ src_compile() {
 	make || die
 }
 
-src_install() {                               
+src_install() {
 	einstall \
 		sysconfdir=${D}/etc/esd \
 		|| die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.2.1.ebuild,v 1.2 2003/02/13 13:12:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.2.1.ebuild,v 1.3 2003/09/07 00:06:05 msterret Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-pkg_setup() { 
+pkg_setup() {
     einfo "Freeamp got renamed to zinf because of legal reasons. Please emerge zinf."
     die "Package moved"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.5.3.ebuild,v 1.1 2003/06/28 23:30:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.5.3.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
 
 DESCRIPTION="BEAST - the Bedevilled Sound Engine"
 HOMEPAGE="http://beast.gtk.org"
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.0
 	>=dev-util/guile-1.6
 	>=media-libs/libart_lgpl-2.3.8
 	>=gnome-base/libgnomecanvas-2"
-	
+
 DEPEND="dev-util/pkgconfig
 	dev-lang/perl
 	${RDEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.12.ebuild,v 1.1 2003/08/15 02:50:33 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.12.ebuild,v 1.2 2003/09/07 00:06:05 msterret Exp $
 
 IUSE=""
 
@@ -17,12 +17,12 @@ DEPEND=">=x11-libs/fltk-1.1.2
 
 src_compile() {
 	econf || die "configure failed"
-     
+
 	emake || die "compile failed"
 }
 
 src_install() {
          make prefix=${D}/usr install || die
 
-         dodoc AUTHORS INSTALL NEWS README 
+         dodoc AUTHORS INSTALL NEWS README
 }

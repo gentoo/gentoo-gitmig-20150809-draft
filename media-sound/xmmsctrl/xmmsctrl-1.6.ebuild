@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/xmmsctrl-1.6.ebuild,v 1.4 2003/07/11 01:12:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/xmmsctrl-1.6.ebuild,v 1.5 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small program to control xmms from a shell script."
@@ -27,5 +27,5 @@ src_install () {
 	dobin xmmsctrl
 	dodoc README HELP
 	mv samples ${D}/usr/share/doc/${PF}/
-	prepalldocs	
+	prepalldocs
 }

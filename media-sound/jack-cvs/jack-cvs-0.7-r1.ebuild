@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.7-r1.ebuild,v 1.2 2003/06/29 16:37:29 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.7-r1.ebuild,v 1.3 2003/09/07 00:06:05 msterret Exp $
 
 IUSE="doc jack-tmpfs"
 
-inherit cvs            
+inherit cvs
 
 DESCRIPTION="A low-latency audio server - cvs version"
 HOMEPAGE="http://jackit.sourceforge.net/"
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/jackit"
 ECVS_MODULE="jack"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/jackit" 
+ECVS_TOP_DIR="${DISTDIR}/cvs-src/jackit"
 
 SRC_URI=""
 
@@ -20,7 +20,7 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="$DEPEND 
+DEPEND="$DEPEND
         dev-libs/glib
 	>=media-libs/alsa-lib-0.9.0_rc6
 	>=media-libs/libsndfile-1.0.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.5 2003/08/07 04:11:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.6 2003/09/07 00:06:06 msterret Exp $
 
 inherit flag-o-matic
 
@@ -33,10 +33,10 @@ src_unpack() {
 src_compile() {
 	# need to filter -fomit-frame-pointer for pentium II
 	is-flag "-march=pentium2" && filter-flags "-fomit-frame-pointer"
-	
+
 	#needed to let configure detect the id3libs correct
 	export LDFLAGS="-lstdc++"
-	
+
 	local myconf
 	use xmms || myconf="--disable-xmms"
 	use kde || myconf="--disable-noatun ${myconf}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.6.ebuild,v 1.7 2003/02/13 13:19:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.6.ebuild,v 1.8 2003/09/07 00:06:06 msterret Exp $
 
 IUSE="nls esd gnome oss alsa"
 
@@ -11,11 +11,11 @@ HOMEPAGE="http://www.soundtracker.org"
 
 DEPEND="sys-libs/zlib
 	=x11-libs/gtk+-1.2*
-	>=media-libs/audiofile-0.2.1 
-	alsa? ( media-libs/alsa-lib ) 
-	esd? ( media-sound/esound ) 
+	>=media-libs/audiofile-0.2.1
+	alsa? ( media-libs/alsa-lib )
+	esd? ( media-sound/esound )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.7 )"
-	
+
 
 RDEPEND="$DEPEND sys-apps/bzip2 sys-apps/gzip app-arch/unzip"
 
@@ -24,7 +24,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 src_compile() {
-	
+
 	local myconf
 
 	use oss || myconf="--disable-oss"
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	einstall || die
 
 	# strip suid from binary

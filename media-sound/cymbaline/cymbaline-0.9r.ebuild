@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cymbaline/cymbaline-0.9r.ebuild,v 1.3 2003/08/07 04:06:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cymbaline/cymbaline-0.9r.ebuild,v 1.4 2003/09/07 00:06:04 msterret Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}.patch
-}	
+}
 
 src_compile() {
 	einfo No compilation necessary.
@@ -34,5 +34,5 @@ src_install () {
 	dodir /usr/lib/cymbaline
 	newbin cymbaline.py cymbaline
 	insinto /usr/lib/cymbaline
-	doins ID3.py mp3.py cycolors.py 
+	doins ID3.py mp3.py cycolors.py
 }

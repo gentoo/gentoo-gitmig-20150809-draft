@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.27.ebuild,v 1.5 2003/02/13 13:16:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.27.ebuild,v 1.6 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="console based mp3 ripper, with cddb support"
@@ -25,5 +25,5 @@ src_install () {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
-	dodoc AUTHORS *README BUGS CDDB_HOWTO COPYING ChangeLog FAQ NEWS OTHERS TODO          
+	dodoc AUTHORS *README BUGS CDDB_HOWTO COPYING ChangeLog FAQ NEWS OTHERS TODO
 }

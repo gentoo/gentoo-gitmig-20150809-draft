@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-0.91.ebuild,v 1.2 2003/07/12 20:30:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-0.91.ebuild,v 1.3 2003/09/07 00:06:05 msterret Exp $
 
 DESCRIPTION="horgand is an opensource software organ."
 HOMEPAGE="http://personal.telefonica.terra.es/web/soudfontcombi/"
@@ -26,7 +26,7 @@ src_install() {
         sed -e "s:PREFIX = /usr/local:PREFIX = /usr:" Makefile~ > Makefile
 
 	dodir /usr/bin
-	
+
 	einstall DESTDIR=${D}
 
 	prepalldocs

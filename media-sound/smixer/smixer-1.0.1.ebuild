@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/smixer-1.0.1.ebuild,v 1.7 2003/02/13 13:19:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smixer/smixer-1.0.1.ebuild,v 1.8 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A command-line tool for setting and viewing mixer settings."
@@ -21,7 +21,7 @@ src_install () {
 	dodir /usr/bin
 	dodir /etc
 	dodir /usr/share/man/man1
-	
+
 	make INS_BIN=${D}/usr/bin \
 		INS_ETC=${D}/etc \
 		INS_MAN=${D}/usr/share/man/man1 \

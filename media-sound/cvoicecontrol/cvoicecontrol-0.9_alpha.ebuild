@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.5 2003/02/13 13:09:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.6 2003/09/07 00:06:04 msterret Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -18,8 +18,8 @@ src_unpack() {
 	unpack ${A}
 
 	patch -p0 <${FILESDIR}/${P}-gentoo.diff || die
-	
-	#remove "docs" from SUBDIRS in Makefile.in 
+
+	#remove "docs" from SUBDIRS in Makefile.in
 	#Makefile will try to install few html files directly under the /usr
 	#much easier to do with dohtml
 	cd ${S}/cvoicecontrol/

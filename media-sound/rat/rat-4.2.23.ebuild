@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/rat-4.2.23.ebuild,v 1.1 2003/08/10 03:43:00 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/rat-4.2.23.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
 
 DESCRIPTION="Robust Audio Tool for audio conferencing and streaming"
 HOMEPAGE="http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/"
@@ -31,7 +31,7 @@ src_install() {
 	dobin rat-4.2.23
 	dobin rat-4.2.23-ui
 	dobin rat-4.2.23-media
-	dodoc COPYRIGHT MODS README README.IXJ README.WB-ADPCM README.debug 
+	dodoc COPYRIGHT MODS README README.IXJ README.WB-ADPCM README.debug
 	dodoc README.devices README.files README.g728 README.gsm
 	dodoc README.mbus README.playout README.reporting-bugs
 	dodoc README.settings README.timestamps README.voxlet VERSION

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.6 2003/07/18 21:43:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.7 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -45,10 +45,10 @@ src_compile() {
 	then
 		SYSTEM_ARCH=`uname -m |\
 		sed -e s/[i]*.86/i386/ -e s/arm.*/arm/ -e s/sa110/arm/`
-	fi 
+	fi
 
-	case $SYSTEM_ARCH in 
-	  ppc) 
+	case $SYSTEM_ARCH in
+	  ppc)
 	   MAKESTYLE="-ppc";;
 	  i386)
 	   MAKESTYLE="-i486";;
@@ -61,7 +61,7 @@ src_compile() {
 	  x86_64)
 	   MAKESTYLE="-x86_64";;
 	  arm)
-	   ;; 
+	   ;;
 	esac
 
 	make linux${MAKESTYLE}${MAKEOPT} || die

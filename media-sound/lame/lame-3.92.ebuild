@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.15 2003/08/03 02:50:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.16 2003/09/07 00:06:05 msterret Exp $
 
 inherit libtool
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
-# Oggvorbis support breaks with -rc3 
+# Oggvorbis support breaks with -rc3
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
@@ -40,7 +40,7 @@ src_compile() {
 	use debug \
 		&& myconf="${myconf} --enable-debug=yes" \
 		|| myconf="${myconf} --enable-debug=no"
-	
+
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
 		--enable-shared \
@@ -48,7 +48,7 @@ src_compile() {
 		--enable-mp3rtp \
 		--enable-extopt=full \
 		${myconf} || die
-		
+
 	emake || die
 }
 

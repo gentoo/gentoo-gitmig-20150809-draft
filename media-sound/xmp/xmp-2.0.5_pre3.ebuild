@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3.ebuild,v 1.6 2003/02/13 13:22:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3.ebuild,v 1.7 2003/09/07 00:06:06 msterret Exp $
 
 IUSE="xmms arts esd nas X oss alsa"
 
@@ -52,8 +52,8 @@ src_compile() {
 		|| myconf="${myconf} --with-x"
 
 	econf ${myconf} || die
-		
-	make || die 
+
+	make || die
 }
 
 src_install () {

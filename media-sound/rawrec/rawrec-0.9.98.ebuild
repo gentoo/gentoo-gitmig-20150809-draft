@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.98.ebuild,v 1.1 2003/06/26 16:15:28 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/rawrec-0.9.98.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
 
 DESCRIPTION="CLI program to play and record audiofiles."
 HOMEPAGE="http://rawrec.sourceforge.net/"
@@ -21,7 +21,7 @@ src_install() {
 	cd src
 	make EXE_DIR=${D}/usr/bin \
 	MAN_DIR=${D}/usr/share/man/man1 install || die
-		
+
 	einfo "Removing SUID from binary.."
 	chmod u-s ${D}/usr/bin/rawrec
 }

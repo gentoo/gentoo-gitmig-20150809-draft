@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.10.1.ebuild,v 1.5 2003/02/13 13:09:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.10.1.ebuild,v 1.6 2003/09/07 00:06:04 msterret Exp $
 
 IUSE="encode oggvorbis"
 
@@ -20,7 +20,7 @@ src_compile() {
 	local myconf
 	use encode && myconf="--with-lame"
 	use oggvorbis && myconf="${myconf} --with-vorbis"
-	
+
 	./configure ${myconf} \
 		    --prefix=/usr \
 		    --sysconfdir=/etc \
@@ -31,6 +31,6 @@ src_compile() {
 
 src_install() {
 	einstall darkicedocdir=${D}/usr/share/doc/${PF} || die
-	
+
 	dodoc README TODO NEWS AUTHORS ChangeLog NEWS
 }

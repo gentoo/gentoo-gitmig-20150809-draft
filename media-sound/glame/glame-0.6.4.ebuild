@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.4.ebuild,v 1.3 2003/02/13 13:12:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.4.ebuild,v 1.4 2003/09/07 00:06:05 msterret Exp $
 
 IUSE="nls gnome"
 
@@ -23,7 +23,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	# fix NLS problem (bug #7587)
 	if [ ! "`use nls`" ]
 	then
@@ -31,7 +31,7 @@ src_unpack() {
 		mv swapfilegui.c swapfilegui.c.bad
 		sed -e "s:#include <libintl.h>::" swapfilegui.c.bad > swapfilegui.c
 	fi
-	
+
 	# fix makefile problem
 	export WANT_AUTOCONF_2_5=1
 	cd ${S}/libltdl
@@ -49,7 +49,7 @@ src_compile() {
 			src/gui/glame.desktop.old > src/gui/glame.desktop
 		rm src/gui/glame.desktop.old
 	fi
-	
+
 	use nls	&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"
 	use gnome && myconf="${myconf} --enable-gui" \
@@ -61,14 +61,14 @@ src_compile() {
 
 src_install () {
 	einstall || die "Installation failed"
-	
+
 	if [ "`use gnome`" ]
 	then
 		dodir /usr/share/pixmaps
 		dosym ../glame/pixmaps/glame-logo.jpg \
 		      /usr/share/pixmaps/glame-logo.jpg
 	fi
-	
+
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING CREDITS ChangeLog MAINTAINERS \
 		NEWS README TODO
 }

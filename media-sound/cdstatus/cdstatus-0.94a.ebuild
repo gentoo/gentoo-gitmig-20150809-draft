@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.1 2003/08/09 01:16:54 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
 
 MY_P="cdstatus${PV}"
 DESCRIPTION="Tool for diagnosing cdrom drive and digital data (audio) extraction"
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	
+
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	make || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/rexima-1.4.ebuild,v 1.1 2003/07/19 04:06:16 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/rexima-1.4.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A curses-based interactive mixer which can also be used from the command-line."
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install () {
 	cd ${S}
-	
+
 	make \
 		PREFIX=${D}/usr \
 		BINDIR=${D}/usr/bin \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.5.4.ebuild,v 1.1 2003/07/26 11:48:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.5.4.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
 
 IUSE="debug mad static"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.0
 	>=media-libs/libogg-1.0
 	>=media-libs/libvorbis-1.0
 	mad? ( media-sound/mad )"
-	
+
 DEPEND="dev-util/pkgconfig
 	dev-lang/perl
 	media-libs/ladspa-cmt

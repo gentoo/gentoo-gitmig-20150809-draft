@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.7.ebuild,v 1.1 2003/06/13 13:06:33 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.7.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
 
 IUSE="nls ardour-ksi"
 
-inherit cvs            
+inherit cvs
 
 ECVS_SERVER="cvs.ardour.sourceforge.net:/cvsroot/ardour"
 ECVS_MODULE="ardour"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/ardour" 
-                                                                                
+ECVS_TOP_DIR="${DISTDIR}/cvs-src/ardour"
+
 DESCRIPTION="multi-track hard disk recording software"
 HOMEPAGE="http://ardour.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ardour/ardour-pixmaps-2.6.tar.bz2"
@@ -77,7 +77,7 @@ src_install() {
 	dodoc ${S}/AUTHORS ${S}/INSTALL ${S}/README ${S}/README.it \
 		${S}/NEWS ${S}/COPYING ${S}/ChangeLog ${S}/sample_ardour.rc \
 		${S}/FAQ ${S}/sample_ardour_ui.rc
-	doman ${S}/ardour.1 
+	doman ${S}/ardour.1
 }
 
 pkg_postinst() {

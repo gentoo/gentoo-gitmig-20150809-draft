@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.14 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.15 2003/09/07 00:06:04 msterret Exp $
 
 IUSE="arts esd gnome X gtk oggvorbis alsa"
 
-inherit kde-functions 
+inherit kde-functions
 
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support"
 SRC_URI="http://www.freeamp.org/download/src/${P}.tar.bz2"
@@ -25,7 +25,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( gnome-base/ORBit )
 	oggvorbis? ( media-libs/libvorbis )"
 
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	dev-lang/perl"
 
@@ -41,7 +41,7 @@ KEYWORDS="x86"
 src_unpack() {
 
     unpack ${A}
-    
+
     if [ "`use arts`" ]; then
 	cd ${S}/io/arts/src
 	cp artspmo.cpp 1

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0261.ebuild,v 1.2 2003/08/03 02:58:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0261.ebuild,v 1.3 2003/09/07 00:06:06 msterret Exp $
 
 inherit gcc
 
@@ -29,7 +29,7 @@ src_install() {
 	# The driver goes into the standard modules location
 	insinto /lib/modules/${KV}/kernel/drivers/sound
 	doins nvaudio/nvaudio.o
-    
+
 	dodoc ${S}/ReleaseNotes.html ${S}/GNULicense.txt ${S}/NVLicense.txt
 
 	dodir /etc/modules.d

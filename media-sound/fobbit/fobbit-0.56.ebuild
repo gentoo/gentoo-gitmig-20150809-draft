@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.1 2003/08/10 04:23:57 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
 
 MY_P="${PN}-0.60rc1"
 S="${WORKDIR}/${MY_P}/src"
@@ -23,9 +23,9 @@ src_compile() {
 	einfo "Building kernel module"
 
 	cd ${S}/linux_drv/
-	
+
 	# the linux driver for kernel series 2.4.20 is different than for
-	# earlier kernels, so we have to detect the kernel version and 
+	# earlier kernels, so we have to detect the kernel version and
 	# manually select the source file.
 
 	# snippet courtesy of media-video/nvidia-kernel

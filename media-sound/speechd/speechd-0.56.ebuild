@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speechd/speechd-0.56.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speechd/speechd-0.56.ebuild,v 1.7 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Implements /dev/speech (any text written to /dev/speech will be spoken aloud)"
@@ -30,7 +30,7 @@ pkg_postinst () {
 	if ! grep -q ^speech: /etc/group ; then
 		groupadd speech || die "problem adding group speech"
 	fi
-	
+
 	einfo "Execute ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	einfo "to build the neccessary FIFO on /dev/speech."
 }

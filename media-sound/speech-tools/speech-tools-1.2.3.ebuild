@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/speech-tools-1.2.3.ebuild,v 1.1 2003/07/20 03:55:36 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/speech-tools-1.2.3.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/speech_tools
@@ -38,7 +38,7 @@ src_compile() {
 	mv -f gcc_defaults.mak gcc_defaults.mak.orig
 	sed -e 's/-fno-implicit-templates //' gcc_defaults.mak.orig > gcc_defaults.mak
 	popd
-	
+
 	econf
 
 	make || die
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
 
 	into /usr/lib/speech-tools
-	
+
 	if [ -n "`use static`" ]
 	then
 		cd ${S}/main
@@ -126,10 +126,10 @@ src_install() {
 	cd ${S}
 	find config -print | cpio -pmd ${D}/usr/lib/speech-tools
 	find include -print | cpio -pmd ${D}/usr/lib/speech-tools
-	
+
 	insinto /etc/env.d
 	doins ${FILESDIR}/58speech-tools
-	
+
 	cd ${S}
 	dodoc README
 	dodoc INSTALL

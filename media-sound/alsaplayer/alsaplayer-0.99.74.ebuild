@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.74.ebuild,v 1.3 2003/07/12 20:30:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.74.ebuild,v 1.4 2003/09/07 00:06:04 msterret Exp $
 
 IUSE="nas nls esd opengl doc oss gtk oggvorbis alsa"
 
@@ -22,7 +22,7 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 	oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/libmikmod-3.1.10
 	>=dev-libs/glib-1.2.10"
-	
+
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
@@ -60,7 +60,7 @@ src_compile() {
 	use sparc \
 		&& myconf="${myconf} --enable-sparc" \
 		|| myconf="${myconf} --disable-sparc"
-	
+
 	export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include"
 
 	econf \
@@ -75,7 +75,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} docdir=${D}/usr/share/doc/${PF} install
-	
+
 #	einstall \
 #		docdir=${D}/usr/share/doc/${P}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.1.ebuild,v 1.8 2003/06/12 21:11:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.1.ebuild,v 1.9 2003/09/07 00:06:06 msterret Exp $
 
 IUSE="sdl svga esd alsa"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="virtual/x11 
+DEPEND="virtual/x11
 	esd? ( >=media-sound/esound-0.2.22 )
 	sdl? ( >=media-libs/libsdl-1.2.0 )
 	alsa? ( >=media-libs/alsa-lib-0.5.10 )

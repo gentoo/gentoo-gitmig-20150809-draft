@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-6.7.ebuild,v 1.3 2003/06/20 23:48:31 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-6.7.ebuild,v 1.4 2003/09/07 00:06:06 msterret Exp $
 
 IUSE="esd motif guile X gtk ruby alsa"
 
@@ -59,16 +59,16 @@ src_compile() {
 
 	econf --with-ladspa --with-float-samples \
 		--with-float-sample-width ${myconf} || die
-	
-	emake || die 
+
+	emake || die
 }
 
 src_install () {
 
 	dobin snd
-	
+
 	dodoc COPYING HISTORY.Snd README.Snd TODO.Snd
-	
+
 	cd contrib/tutorial
 	dohtml *
 }

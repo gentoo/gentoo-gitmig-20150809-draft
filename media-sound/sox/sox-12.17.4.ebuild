@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4.ebuild,v 1.2 2003/08/04 05:51:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4.ebuild,v 1.3 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The swiss army knife of sound processing programs"
@@ -30,6 +30,6 @@ src_install () {
 pkg_postinst () {
 	# the rec binary doesnt exist anymore
 	if([ ! -e /usr/bin/rec ]) then
-		ln -s /usr/bin/play /usr/bin/rec 
+		ln -s /usr/bin/play /usr/bin/rec
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.5.9.ebuild,v 1.1 2003/07/09 10:46:58 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.5.9.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
 
 DESCRIPTION="Alsa Modular Software Synthesizer"
 HOMEPAGE="http://alsamodular.sourceforge.net"
@@ -34,7 +34,7 @@ src_install() {
 
 	dobin ams
 
-	dodoc README INSTALL THANKS LICENSE 
+	dodoc README INSTALL THANKS LICENSE
 
 	docinto examples
 	dodoc *.ams

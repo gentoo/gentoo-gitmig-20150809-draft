@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.3 2003/07/30 13:46:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.4 2003/09/07 00:06:06 msterret Exp $
 
 DESCRIPTION="Play sounds on remote Unix systems, without sending audio data over the network."
 HOMEPAGE="http://rplay.doit.org/"
@@ -19,8 +19,8 @@ S=${WORKDIR}/${P}
 pkg_setup() {
 		enewgroup "rplayd" ""
 		enewuser "rplayd" "" "" "" "rplayd"
-}				
-	
+}
+
 src_unpack() {
 	unpack ${P}.tar.gz
 	epatch ${DISTDIR}/rplay_3.3.2-8.diff.gz
@@ -35,7 +35,7 @@ src_compile() {
 		--sysconfdir=/etc \
 		--enable-rplayd-user="rplayd" \
 		--enable-rplayd-group="rplayd" || die "./configure failed"
-		
+
 	emake || die
 }
 

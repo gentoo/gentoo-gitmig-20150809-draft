@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.32.ebuild,v 1.1 2003/09/06 12:01:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.32.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
 
 IUSE="tcpd alsa ipv6"
 
@@ -30,7 +30,7 @@ src_compile() {
 	make || die
 }
 
-src_install() {                               
+src_install() {
 	einstall \
 		sysconfdir=${D}/etc/esd \
 		|| die

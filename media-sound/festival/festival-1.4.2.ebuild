@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2.ebuild,v 1.7 2003/02/13 13:11:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2.ebuild,v 1.8 2003/09/07 00:06:04 msterret Exp $
 
 S=${WORKDIR}/${PN}
 T=${WORKDIR}/speech_tools
@@ -30,13 +30,13 @@ src_compile() {
 	cd ${T}
 	econf || die
 	patch -p1 < ${WORKDIR}/speech_tools.patch || die
-	
+
 	make || die
 
 	cd ${S}
 	econf || die
 	patch -p1 < ${WORKDIR}/festival.patch || die
-	
+
 	make || die
 
 	# Need to fix saytime to look for festival in the correct spot
@@ -53,7 +53,7 @@ src_compile() {
 src_install () {
 
 	. install.sh || die
-	
+
 	# Install the docs
 	dodoc ACKNOWLEDGMENTS COPYING NEWS README
 

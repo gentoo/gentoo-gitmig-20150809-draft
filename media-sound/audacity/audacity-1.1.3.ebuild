@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.3.ebuild,v 1.2 2003/07/12 20:30:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.3.ebuild,v 1.3 2003/09/07 00:06:04 msterret Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 		eerror "-gtk2 in use for this program to compile"
 		eerror ""
 		die "Make sure -gtk2 is in USE"
-	fi		
+	fi
 	unpack ${PN}-src-${PV}.tgz
 }
 

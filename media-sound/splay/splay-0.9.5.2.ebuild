@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/splay-0.9.5.2.ebuild,v 1.4 2003/08/07 04:06:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/splay-0.9.5.2.ebuild,v 1.5 2003/09/07 00:06:06 msterret Exp $
 
 DESCRIPTION="splay is an audio player, primarily for the console"
 HOMEPAGE="http://splay.sourceforge.net/"
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc"
 src_compile() {
 	# Force compilation to omit X support according to BUG #5856
 	# even when qt is present on the system.
-	export ac_cv_lib_qt_main=no 
+	export ac_cv_lib_qt_main=no
 	econf || die "econf failed"
 	emake || die "emake failed"
 }

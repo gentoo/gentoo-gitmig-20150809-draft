@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.1-r1.ebuild,v 1.7 2003/02/18 02:50:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.1-r1.ebuild,v 1.8 2003/09/07 00:06:04 msterret Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 		eerror "-gtk2 in use for this program to compile"
 		eerror ""
 		die "Make sure -gtk2 is in USE"
-	fi		
+	fi
 	unpack ${PN}-src-${PV}-3.tgz
 	cd ${S}
 	epatch ${FILESDIR}/mono_mp3_export.patch || die

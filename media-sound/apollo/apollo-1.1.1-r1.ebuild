@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1-r1.ebuild,v 1.14 2003/02/13 13:07:13 vapier Exp $
- 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1-r1.ebuild,v 1.15 2003/09/07 00:06:04 msterret Exp $
+
 use kde && inherit kde-base
 
 S=${WORKDIR}/${P}-1
@@ -31,15 +31,15 @@ src_unpack() {
 src_compile() {
 
 	make || die "died making"
-	
+
 }
 
 src_install () {
 
 	use kde && myconf="${myconf} --with-kde=${D}/${KDEDIR}"
-	
+
 	dodir /usr/bin
 	echo `pwd`
 	sh install.sh --prefix=${D}/usr ${myconf}
-	
+
 }

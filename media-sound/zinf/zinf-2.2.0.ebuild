@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.15 2003/08/10 20:35:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.16 2003/09/07 00:06:06 msterret Exp $
 
 IUSE="arts esd X gtk oggvorbis gnome alsa"
 
-inherit kde-functions 
+inherit kde-functions
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
@@ -15,17 +15,17 @@ RDEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	sys-libs/zlib
 	>=sys-libs/ncurses-5.2
-	=media-libs/freetype-1* 
+	=media-libs/freetype-1*
 	>=media-libs/musicbrainz-1.0.1
-	X? ( virtual/x11 ) 
-	esd? ( media-sound/esound ) 
+	X? ( virtual/x11 )
+	esd? ( media-sound/esound )
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	gnome? ( gnome-base/ORBit )
 	oggvorbis? ( media-libs/libvorbis )"
 
-DEPEND="x86? ( dev-lang/nasm ) 
+DEPEND="x86? ( dev-lang/nasm )
 	media-libs/id3lib
 	dev-lang/perl"
 
@@ -41,7 +41,7 @@ KEYWORDS="x86"
 src_unpack() {
 
     unpack ${A}
-    
+
     if [ "`use arts`" ]; then
 	cd ${S}/io/arts/src
 	cp artspmo.cpp 1

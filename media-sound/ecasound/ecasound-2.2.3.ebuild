@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.2 2003/07/12 20:30:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.3 2003/09/07 00:06:04 msterret Exp $
 
 IUSE="ncurses arts alsa python oss mikmod oggvorbis"
 
@@ -58,7 +58,7 @@ src_compile () {
 		python_includes="$python_prefix/include/python$python_version"
 		python_modules="$python_prefix/lib/python$python_version"
 
-		# ecasound configure assumes `disable' if you pass 
+		# ecasound configure assumes `disable' if you pass
 		# --(enable|disable)-pyecasound.  *sigh*
 		#myconf="$myconf --enable-pyecasound"
 
@@ -84,7 +84,7 @@ src_install () {
 		install *.pyc *.pyo "${D}/${python_sitepkgsdir}"
 		cd ..
 	fi
-		
+
 	dodoc INSTALL FAQ BUGS COPYING NEWS README TODO
 	dohtml `find Documentation -name "*.html"`
 	dodoc Documentation/edi-list.txt

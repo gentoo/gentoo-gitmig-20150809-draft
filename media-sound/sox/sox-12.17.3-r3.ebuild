@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r3.ebuild,v 1.5 2003/08/12 22:38:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r3.ebuild,v 1.6 2003/09/07 00:06:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The swiss army knife of sound processing programs"
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 DEPEND="virtual/glibc"
 
 src_compile () {
-	# Looks like support for alsa09's dsp is broken in sox; 
+	# Looks like support for alsa09's dsp is broken in sox;
 	# disabling it for now.  Note that even when this is fixed,
 	# then we should check for USE=alsa and set --without-alsa-dsp
 	# appropriately.
@@ -32,6 +32,6 @@ src_install () {
 pkg_postinst () {
 	# the rec binary doesnt exist anymore
 	if([ ! -e /usr/bin/rec ]) then
-		ln -s /usr/bin/play /usr/bin/rec 
+		ln -s /usr/bin/play /usr/bin/rec
 	fi
 }

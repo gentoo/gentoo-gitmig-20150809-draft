@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.10 2003/02/13 13:16:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.11 2003/09/07 00:06:06 msterret Exp $
 
 IUSE="gtk"
 
@@ -18,7 +18,7 @@ KEYWORDS="x86 ppc sparc"
 src_unpack() {
 
 	unpack ${A}
-	
+
 	cd ${S}
 	cp Makefile Makefile.orig
 	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
@@ -28,7 +28,7 @@ src_compile() {
 
 	emake mp3info || die
 	if [ `use gtk` ]; then
-		emake gmp3info || die "gtk mp3info failed" 
+		emake gmp3info || die "gtk mp3info failed"
 	fi
 }
 
@@ -36,7 +36,7 @@ src_install() {
 
 	dobin mp3info
 	use gtk && dobin gmp3info
-	
+
 	dodoc ChangeLog INSTALL LICENSE README
 	doman mp3info.1
 }

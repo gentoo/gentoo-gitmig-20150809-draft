@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r21.ebuild,v 1.5 2003/06/18 12:29:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r21.ebuild,v 1.6 2003/09/07 00:06:06 msterret Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -133,8 +133,8 @@ src_install() {
 		sysdir=${D}/usr/share/applets/Multimedia \
 		GNOME_SYSCONFDIR=${D}/etc install || die "FOO"
 
-	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO 
-	
+	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO
+
 	dodir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
 	donewins gnomexmms/gnomexmms.xpm xmms.xpm

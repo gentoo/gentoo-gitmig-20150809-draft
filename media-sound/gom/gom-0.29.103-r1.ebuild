@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103-r1.ebuild,v 1.8 2003/02/13 13:12:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103-r1.ebuild,v 1.9 2003/09/07 00:06:05 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console Mixer Program for OSS"
@@ -26,7 +26,7 @@ src_install () {
 
 	dodoc AUTHORS NEWS ChangeLog README
 	docinto examples
-	dodoc README 
+	dodoc README
 	docinto examples/default
 	dodoc examples/default/*
 	docinto examples/standard
