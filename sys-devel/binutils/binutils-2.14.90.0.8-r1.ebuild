@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.22 2004/09/08 18:14:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.23 2004/09/09 01:51:37 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -28,13 +28,8 @@ src_unpack() {
 	# The prescott patch is not ready yet.
 	mkdir ${WORKDIR}/patch/skip
 	mv ${WORKDIR}/patch/05* ${WORKDIR}/patch/skip/
-
-	# one of 38/39 has to be moved out of the way, both are backports of different relro versions
-	# 39 is more current, but not fully backported
-	mv ${WORKDIR}/patch/39_* ${WORKDIR}/patch/skip/
-
-	use uclibc && mv ${WORKDIR}/patch/*relro* ${WORKDIR}/patch/*sparc1* ${WORKDIR}/patch/skip/
-
+	# relro doesnt play well with pax
+	mv ${WORKDIR}/patch/{38,39,63,92}_* ${WORKDIR}/patch/skip/
 	epatch ${WORKDIR}/patch
 
 	# Libtool is broken (Redhat).
