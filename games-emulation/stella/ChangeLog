@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/stella
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.10 2004/06/28 23:10:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.11 2004/07/20 06:32:49 mr_bones_ Exp $
+
+*stella-1.4 (19 Jul 2004)
+
+  19 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> +stella-1.4.ebuild:
+  version bump
 
   28 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> stella-1.3-r1.ebuild:
   fix use flag invocation; tidy
