@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Shachar Goldin <aldarsior@yahoo.com>
 # Maintainer Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.6.5.ebuild,v 1.1 2002/03/24 15:23:23 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.6.9.ebuild,v 1.1 2002/04/23 07:58:35 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ncurses ICQ/Yahoo!/MSN Client"
