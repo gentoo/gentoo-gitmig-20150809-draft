@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.2 2004/11/12 20:42:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.3 2004/11/27 19:56:01 eradicator Exp $
+
+  27 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> ivman-0.3.ebuild:
+  Added libtool DEP per comment in bug #66013.
 
   12 Nov 2004; Simon Stelling <blubb@gentoo.org> ivman-0.3.ebuild:
   added ~amd64

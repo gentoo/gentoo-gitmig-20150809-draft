@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.3.ebuild,v 1.2 2004/11/12 20:42:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.3.ebuild,v 1.3 2004/11/27 19:56:01 eradicator Exp $
 
 IUSE="debug"
 
@@ -12,13 +12,14 @@ SRC_URI="mirror://sourceforge/ivman/ivman-0.3.tar.gz"
 
 SLOT="0"
 LICENSE="QPL"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-libs/glib
 	 dev-libs/libxml2
 	 >=sys-apps/hal-0.2.98"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-1.5
 	dev-util/pkgconfig"
 
 src_unpack() {
