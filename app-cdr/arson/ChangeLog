@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.22 2004/03/14 17:20:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.23 2004/03/14 21:54:49 weeve Exp $
+
+  14 Mar 2004; Jason Wever <weeve@gentoo.org> arson-0.9.7-r3.ebuild:
+  Stable on sparc.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> arson-0.9.7-r3.ebuild:
   inherit kde instead of deprecated kde-base
