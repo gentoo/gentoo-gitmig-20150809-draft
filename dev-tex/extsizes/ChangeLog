@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/extsizes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.4 2004/10/05 06:49:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.5 2004/10/16 16:00:59 usata Exp $
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> extsizes-1.0.ebuild:
+  Changed DEPEND to tetex-1.
 
   05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> extsizes-1.0.ebuild:
   Added app-arch/unzip to DEPEND. Marked as stable.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/eurosym
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.14 2004/09/04 23:01:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.15 2004/10/16 15:58:54 usata Exp $
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> eurosym-1.4.ebuild:
+  Changed DEPEND to tetex-1.
 
   05 Sep 2004; David Holm <dholm@gentoo.org> eurosym-1.4.ebuild:
   Added to ~ppc.
