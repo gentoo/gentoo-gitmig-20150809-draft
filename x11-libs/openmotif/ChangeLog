@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.70 2005/02/04 23:31:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.71 2005/02/06 11:37:20 lanius Exp $
+
+  06 Feb 2005; Heinrich Wendel <lanius@gentoo.org> openmotif-2.2.3.ebuild:
+  fix autotools dependencies
 
   05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
   openmotif-2.2.3.ebuild:

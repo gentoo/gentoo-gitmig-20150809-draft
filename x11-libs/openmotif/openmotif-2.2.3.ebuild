@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.9 2005/02/06 11:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.10 2005/02/06 11:37:20 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -18,8 +18,8 @@ IUSE=""
 DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4
-	sys-devel/automake
-	sys-devel/autoconf
+	=sys-devel/automake-1.4*
+	=sys-devel/autoconf-2.5*
 	!virtual/motif"
 RDEPEND="virtual/libc
 	virtual/x11
