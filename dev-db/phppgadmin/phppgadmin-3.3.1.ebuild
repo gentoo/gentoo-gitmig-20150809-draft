@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.2.1.ebuild,v 1.2 2004/03/03 10:57:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.3.1.ebuild,v 1.1 2004/03/21 22:46:26 nakano Exp $
 
 inherit eutils
 inherit webapp-apache
@@ -35,7 +35,8 @@ src_compile() {
 	mv login.php ${T}/login.php
 	sed -e "s|conf/config.inc.php|/etc/phppgadmin/config.inc.php|g" \
 		${T}/login.php > login.php
-	sed -e "s|conf/config.inc.php|/etc/phppgadmin/config.inc.php|g" \
+	sed -e "s|include('./conf|include('conf|g" \
+		-e "s|conf/config.inc.php|/etc/phppgadmin/config.inc.php|g" \
 		${T}/lib.inc.php > libraries/lib.inc.php
 }
 
