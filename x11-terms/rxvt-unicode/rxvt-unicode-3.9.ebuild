@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.9.ebuild,v 1.2 2004/09/02 16:47:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.9.ebuild,v 1.3 2004/09/09 22:14:28 kugelfang Exp $
+
+inherit 64-bit eutils
 
 IUSE="xgetdefault"
 
@@ -23,6 +25,7 @@ src_unpack() {
 	sed -i -e \
 		"s~@TIC@ \(etc/rxvt\)~@TIC@ -o ${D}/${tdir} \1~" \
 		doc/Makefile.in
+	64-bit && epatch ${FILESDIR}/${P}-64bit.patch
 }
 
 src_compile() {
