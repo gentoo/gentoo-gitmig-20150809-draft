@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.25-r1.ebuild,v 1.3 2003/09/06 12:13:41 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.25-r1.ebuild,v 1.4 2003/10/01 17:34:57 scandium Exp $
 
-inherit eutils mono
+inherit mono
 
 MCS_P="mcs-${PV}"
 MCS_S=${WORKDIR}/${MCS_P}
