@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.8.ebuild,v 1.4 2004/07/15 02:28:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.8.ebuild,v 1.5 2004/09/22 08:33:10 ticho Exp $
 
 DESCRIPTION="Tiny POP3 server"
 SRC_URI="ftp://ftp.toontown.org/pub/teapop/${P}.tar.gz"
@@ -14,7 +14,7 @@ DEPEND="virtual/libc
 IUSE="mysql postgres ldap ipv6 tcpd java"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 src_compile() {
 	local myconf

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/teapop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.17 2004/07/01 22:35:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.18 2004/09/22 08:33:10 ticho Exp $
+
+  22 Sep 2004; Andrej Kacian <ticho@gentoo.org> teapop-0.3.7-r1.ebuild,
+  teapop-0.3.8.ebuild:
+  Stable on x86
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> teapop-0.3.5.ebuild,
   teapop-0.3.7-r1.ebuild, teapop-0.3.7.ebuild, teapop-0.3.8.ebuild:
