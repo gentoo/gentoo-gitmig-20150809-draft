@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.5 2004/10/06 22:18:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.6 2004/10/19 02:31:37 tgall Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2 LGPL-2.1"
 
 # previous release known to b0rk glibc on hppa... i dont know if this bug
 # still exists, so i'll keep in the -hppa...
-KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ppc s390"
+KEYWORDS="-* ~amd64 ~mips ppc64 ~x86 -hppa ppc s390"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # we also need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
