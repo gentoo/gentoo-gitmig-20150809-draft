@@ -1,7 +1,12 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.15 2003/02/12 09:12:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.16 2003/03/27 04:34:17 drobbins Exp $
 
+*xinetd-2.3.10 (26 Mar 2003)
+ 
+  26 Mar 2003; Daniel Robbins <drobbins@gentoo.org>: new upstream release, unstable for
+  x86.
+  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *xinetd-2.3.9 (24 Oct 2002)
