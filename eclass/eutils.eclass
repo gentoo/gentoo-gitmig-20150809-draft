@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.117 2004/10/09 18:25:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.118 2004/10/13 14:33:01 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -896,22 +896,19 @@ edos2unix() {
 # Make a desktop file !
 # Great for making those icons in kde/gnome startmenu !
 # Amaze your friends !  Get the women !  Join today !
-# gnome2 /usr/share/applications
-# gnome1 /usr/share/gnome/apps/
-# KDE ${KDEDIR}/share/applnk /usr/share/applnk
 #
 # make_desktop_entry(<binary>, [name], [icon], [type], [path])
 #
 # binary:	what binary does the app run with ?
 # name:		the name that will show up in the menu
 # icon:		give your little like a pretty little icon ...
-#		this can be relative (to /usr/share/pixmaps) or
-#		a full path to an icon
+#			this can be relative (to /usr/share/pixmaps) or
+#			a full path to an icon
 # type:		what kind of application is this ?  for categories:
-#		http://www.freedesktop.org/standards/menu-spec/
+#			http://www.freedesktop.org/standards/menu-spec/
 # path:		if your app needs to startup in a specific dir
 make_desktop_entry() {
-	[ -z "$1" ] && eerror "You must specify the executable" && return 1
+	[ -z "$1" ] && eerror "make_desktop_entry: You must specify the executable" && return 1
 
 	local exec="${1}"
 	local name="${2:-${PN}}"
@@ -953,32 +950,8 @@ Path=${path}
 Icon=${icon}
 Categories=Application;${type};" > "${desktop}"
 
-	if [ -d "/usr/share/applications" ]
-	then
-		insinto /usr/share/applications
-		doins "${desktop}"
-	fi
-
-	#if [ -d "/usr/share/gnome/apps" ]
-	#then
-	#	insinto /usr/share/gnome/apps/Games
-	#	doins ${desktop}
-	#fi
-
-	#if [ ! -z "`ls /usr/kde/* 2>/dev/null`" ]
-	#then
-	#	for ver in /usr/kde/*
-	#	do
-	#		insinto ${ver}/share/applnk/Games
-	#		doins ${desktop}
-	#	done
-	#fi
-
-	if [ -d "/usr/share/applnk" ]
-	then
-		insinto /usr/share/applnk/${subdir}
-		doins "${desktop}"
-	fi
+	insinto /usr/share/applications
+	doins "${desktop}"
 
 	return 0
 }
