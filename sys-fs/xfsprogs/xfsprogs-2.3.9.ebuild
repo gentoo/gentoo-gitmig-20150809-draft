@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.4 2004/01/31 11:11:14 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.5 2004/03/16 17:22:53 vapier Exp $
 
 inherit flag-o-matic
 
+DESCRIPTION="xfs filesystem utilities"
+HOMEPAGE="http://oss.sgi.com/projects/xfs"
 #SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 SRC_URI="mirror://gentoo/${P}.src.tar.gz"
-HOMEPAGE="http://oss.sgi.com/projects/xfs"
-DESCRIPTION="xfs filesystem utilities"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 amd64 alpha mips hppa ia64 ~ppc"
+SLOT="0"
+KEYWORDS="x86 ~ppc alpha mips hppa ia64 amd64"
 
-S=${WORKDIR}/${P}
-
-DEPEND="sys-fs/e2fsprogs
+RDEPEND="sys-fs/e2fsprogs"
+DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	>=sys-apps/sed-4"
 
