@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r4.ebuild,v 1.4 2005/03/22 23:35:20 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r4.ebuild,v 1.5 2005/03/22 23:40:21 fafhrd Exp $
 
 inherit eutils gnustep-funcs flag-o-matic
 
@@ -65,9 +65,6 @@ src_compile() {
 	use nls \
 		&& export LINGUAS="`ls po/*.po | sed 's:po/\(.*\)\.po$:\1:'`" \
 		|| myconf="${myconf} --disable-nls --disable-locale"
-
-	# one of the patches included triggers ltmain.sh / libtool mismatches
-	libtoolize --copy --force
 
 	# default settings with $myconf appended
 	econf \
