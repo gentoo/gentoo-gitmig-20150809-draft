@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.10 2004/02/22 16:56:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.11 2004/03/31 21:46:15 method Exp $
 
 IUSE="snmp pam ldap debug"
 
@@ -17,7 +17,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha mips hppa"
 
 RDEPEND="pam? ( >=sys-libs/pam-0.72 )
-	ldap? ( >=net-nds/openldap-2 )"
+	ldap? ( >=net-nds/openldap-2 )
+	selinux? ( sec-policy/selinux-squid )"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
