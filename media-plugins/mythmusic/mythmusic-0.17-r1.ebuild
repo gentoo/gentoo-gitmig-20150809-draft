@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.17-r1.ebuild,v 1.1 2005/02/27 10:36:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.17-r1.ebuild,v 1.2 2005/02/27 10:38:12 eradicator Exp $
 
 inherit myth flag-o-matic toolchain-funcs
 
@@ -27,7 +27,9 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	|| ( ~media-tv/mythtv-${PV} ~media-tv/mythfrontend-${PV} )"
 
 setup_pro() {
-	return 0
+	if ! use x86 || ! use mmx; then
+		echo "DEFINES -= HAVE_MMX" >> ${S}/settings.pro
+	fi
 }
 
 src_unpack() {
@@ -36,10 +38,6 @@ src_unpack() {
 	fi
 
 	myth_src_unpack || die "unpack failed"
-
-	if ! use x86 || ! use mmx; then
-		echo "DEFINES -= HAVE_MMX" >> ${S}/settings.pro
-	fi
 }
 
 src_compile() {
