@@ -1,5 +1,5 @@
-MD5 eadf97503ed1f6689d277c5d31e81872 hamlib-1.1.4.ebuild 1959
-MD5 0979abb0959d2707cee7df4e1f0cb0d5 ChangeLog 369
+MD5 9803698ed4b52e66c413f84757db1912 hamlib-1.1.4.ebuild 1949
+MD5 a38bc8f805ecc8473ba0e531a0dd7068 ChangeLog 359
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
 MD5 41faaa334b794a19e12f6ceaa7b11c6f files/digest-hamlib-1.1.4 65
 MD5 2d4e1df9c7fa10b146286ef764530f68 files/hamlib-pkgconfig-fix.diff 373
