@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-1.5.3.ebuild,v 1.6 2002/08/14 11:52:28 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-1.5.3.ebuild,v 1.7 2002/08/23 02:59:55 seemant Exp $
 
 S=${WORKDIR}/ZThread-${PV}
 
@@ -29,6 +29,6 @@ src_compile() {
 }
 
 src_install () {
-	make prefix=${D}/usr install || die
+	einstall || die
 	dodoc AUTHORS ChangeLog COPYING README* INSTALL NEWS TODO THANK.YOU
 }

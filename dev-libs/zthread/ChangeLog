@@ -1,8 +1,12 @@
 # ChangeLog for dev-libs/zthread
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.2 2002/08/23 02:59:55 seemant Exp $
 
 *zthread-1.5.3 (1 Feb 2002)
+
+  22 Aug 2002; Seemant Kulleen <seemant@gentoo.org> zthread-1.5.3.ebuild :
+
+  Sandbox violation fix.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
