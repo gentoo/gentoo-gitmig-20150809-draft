@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.3 2002/10/26 20:31:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.4 2002/10/26 20:39:28 vapier Exp $
 
 IUSE="pic X mmx truetype opengl nls"
 
@@ -55,8 +55,12 @@ src_compile() {
 
 	local cflags
 	local ldflags
+	local ldflags_lib
+	local ldflags_src
 	cflags="${CFLAGS} -I${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
 	cflags="${cflags} -I${S}/apps/efsd/efsd"
+	ldflags_src="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
+	ldflags_lib="${ldflags_src}/.libs"
 
 	# the stupid gettextize script prevents non-interactive mode, so we hax it
 	mkdir ${S}/hax
@@ -74,7 +78,7 @@ src_compile() {
 	############
 	### libs ###
 	############
-	ldflags="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
+	ldflags="${ldflags_src}"
 
 	### imlib2 ###
 	cd ${S}/libs/imlib2
@@ -149,7 +153,7 @@ src_compile() {
 	############
 	### apps ###
 	############
-	ldflags="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,wd}/src/.libs"
+	ldflags="${ldflags_libs}"
 
 	### etcher ###
 	cd ${S}/apps/etcher
@@ -171,20 +175,19 @@ src_compile() {
 	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not build med"
 
 	### efsd ###
-	ldflags="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,wd}/src"
+	ldflags="${ldflags_src}"
 	cd ${S}/apps/efsd
 	./autogen.sh ${baseconf} || die "could not autogen efsd"
 	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not build efsd"
 
 	### ebindings ###
-	ldflags="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,wd}/src/.libs"
+	ldflags="${ldflags_lib}"
 	cd ${S}/apps/ebindings
 	./autogen.sh ${baseconf} || die "could not autogen ebindings"
 	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not build ebindings"
 
 	### e ###
-	ldflags="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,wd}/src"
-	ldflags="${ldflags} -L${S}/apps/efsd/efsd"
+	ldflags="${ldflags_src} -L${S}/apps/efsd/efsd"
 	cd ${S}/apps/e
 	# hack it a little ;D
 	cp configure.ac configure.ac.old
