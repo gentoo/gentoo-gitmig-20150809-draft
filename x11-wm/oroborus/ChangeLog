@@ -1,10 +1,15 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.1 2002/02/01 21:53:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.2 2002/08/19 18:44:23 blizzy Exp $
 
-*oroborus-2.0.4-r1 (1 Feb 2002)
+*oroborus-2.0.7 (19 Aug 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  19 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : New version, closes bug
+  #5776.
+
+*oroborus-2.0.4-r1 (01 Feb 2002)
+
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
