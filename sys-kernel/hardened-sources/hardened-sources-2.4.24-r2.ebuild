@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.24-r1.ebuild,v 1.5 2004/04/12 18:06:51 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.24-r2.ebuild,v 1.1 2004/04/15 22:28:46 plasmaroo Exp $
 
 IUSE="selinux"
 ETYPE="sources"
@@ -20,7 +20,6 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	selinux?  ( ${BASE_URI}/hardened-sources-${OKV}-selinux.patch.bz2 )
 	!selinux? ( ${BASE_URI}/hardened-sources-${OKV}-grsec.patch.bz2 )"
 
-
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
 KEYWORDS="x86"
 SLOT="${KV}"
@@ -32,7 +31,6 @@ src_unpack() {
 	cd linux-${KV}
 
 	bzcat ${DISTDIR}/hardened-sources-${OKV}-base.patch.bz2 | patch -p1
-
 	if [ "`use selinux`" ]; then
 		bzcat ${DISTDIR}/hardened-sources-${OKV}-selinux.patch.bz2 | patch -p1
 	else
@@ -40,6 +38,7 @@ src_unpack() {
 	fi
 
 	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 	kernel_src_unpack
 }
 
