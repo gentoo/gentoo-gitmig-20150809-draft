@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ksms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksms/ChangeLog,v 1.5 2004/07/03 16:22:47 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksms/ChangeLog,v 1.6 2004/07/03 21:22:42 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> ksms-0.1.2.1.ebuild,
+  ksms-0.1.2.4.ebuild:
+  QA: need-kde after R/DEPEND
 
 *ksms-0.1.2.4 (03 Jul 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ksambaplugin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.12 2004/06/24 23:52:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.13 2004/07/03 21:21:25 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> ksambaplugin-0.5f.ebuild:
+  QA: need-kde after R/DEPEND
 
   18 Jan 2004; Caleb Tennis <caleb@gentoo.org> ksambaplugin-0.5f.ebuild:
   Fix workdir
