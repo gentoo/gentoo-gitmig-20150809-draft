@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/freesci
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/freesci/ChangeLog,v 1.1 2002/07/18 22:57:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/freesci/ChangeLog,v 1.2 2002/07/27 13:36:37 stubear Exp $
+
+*freesci-0.3.3 (27 Jul 2002)
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> freesci-0.3.3.ebuild :
+
+  Added LICENSE, SLOT, and KEYWORDS="x86" for QA happiness.
 
 *freesci-0.3.3 (18 Jul 2002)
 
