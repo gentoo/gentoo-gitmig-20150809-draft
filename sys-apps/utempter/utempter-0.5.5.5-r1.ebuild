@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.5-r1.ebuild,v 1.2 2005/01/02 23:55:37 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.5-r1.ebuild,v 1.3 2005/03/31 16:04:28 kugelfang Exp $
 
 inherit rpm eutils flag-o-matic
 
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	make \
 		RPM_BUILD_ROOT="${D}" \
-		LIBDIR=/usr/lib \
+		LIBDIR=/usr/$(get_libdir) \
 		install || die
 	dobin utmp
 

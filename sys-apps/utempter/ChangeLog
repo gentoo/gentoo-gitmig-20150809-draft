@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/utempter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.26 2005/01/02 23:55:37 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.27 2005/03/31 16:04:28 kugelfang Exp $
+
+  31 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
+  utempter-0.5.5.5-r1.ebuild:
+  Fixed BUG #87283 (multilib-strict).
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
