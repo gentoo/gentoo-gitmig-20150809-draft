@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r3.ebuild,v 1.1 2004/06/29 18:32:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r3.ebuild,v 1.2 2004/07/20 14:49:24 spock Exp $
 
 IUSE=""
 S=${WORKDIR}
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~spock/portage/distfiles/${PN}-core-0.6.1-r3.tar.
 	http://dev.gentoo.org/~spock/portage/distfiles/${PN}-kernel-0.6.1-r3.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 DEPEND=">=media-libs/freetype-2
 	media-libs/libmng"
