@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbapm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/ChangeLog,v 1.8 2003/03/02 23:13:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/ChangeLog,v 1.9 2003/06/19 13:21:09 mkeadle Exp $
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> bbapm-0.0.1-r3.ebuild:
+  quick fix to enable successful compile on >=gcc3x systems
 
 *bbapm-0.0.1-r3 (12 Dec 2002)
 
