@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/psemu-gpupetemesagl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-gpupetemesagl/ChangeLog,v 1.3 2002/07/16 06:17:35 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-gpupetemesagl/ChangeLog,v 1.4 2002/07/27 14:35:01 stubear Exp $
+
+*psemu-gpupetemesalgl (17 Jul 2002)
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> 
+  psemu-gpupetemesalgl-1.6.4.ebuild psemu-gpupetemesalgl-1.6.3.ebuild 
+  psemu-gpupetemesalgl-1.6.4.ebuild :
+
+  Added KEYWORDS="x86" and SLOT for QA happiness.
 
 *psemu-gpupetemesalgl-1.6.4 (15 Jul 2002)
 
