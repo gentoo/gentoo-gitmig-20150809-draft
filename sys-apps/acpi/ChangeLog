@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/acpi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpi/ChangeLog,v 1.3 2003/09/26 00:23:34 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpi/ChangeLog,v 1.4 2003/10/13 11:50:30 robbat2 Exp $
+
+*acpi-0.06-r5 (13 Oct 2003)
+
+  13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> acpi-0.06-r5.ebuild:
+  fixed bug #31002, used debian patches
 
   25 Sep 2003; Tom Payne <twp@gentoo.org> acpi-0.06.ebuild :
   Marked stable on x86 and n/a for other arches.
