@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.15 2003/11/15 02:40:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.16 2003/12/07 12:42:47 pyrania Exp $
+
+  07 Dec 2003; Markus Nigbur <pyrania@gentoo.org> libao-0.8.4.ebuild,
+  files/alsa-1.0.patch:
+  Added patch to make it work with alsa-1.0
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> libao-0.8.3-r1.ebuild:
   Stable on ia64
