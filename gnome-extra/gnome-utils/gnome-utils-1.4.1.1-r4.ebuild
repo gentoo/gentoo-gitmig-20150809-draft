@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.4.1.1-r4.ebuild,v 1.1 2002/01/14 10:24:15 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.4.1.1-r4.ebuild,v 1.2 2002/06/01 11:20:55 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-utils"
@@ -19,6 +19,7 @@ DEPEND="${RDEPEND}
 		>=sys-apps/shadow-20000000
 		nls? ( sys-devel/gettext )"
 
+SLOT="0"
 
 src_unpack() {
 
