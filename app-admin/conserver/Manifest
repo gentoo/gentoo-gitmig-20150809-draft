@@ -4,6 +4,7 @@ MD5 c27b26abaf603255113770c511088f26 conserver-8.0.1.ebuild 1900
 MD5 af85c487fe38b66c8b87857993306471 conserver-8.0.3.ebuild 1982
 MD5 db109ae3e620120b654118ff198a9d0a metadata.xml 1062
 MD5 1f34c3b27124c041806f07a080744ceb conserver-8.0.7.ebuild 1984
+MD5 1f34c3b27124c041806f07a080744ceb conserver-8.0.8.ebuild 1984
 MD5 3a98b3aa2654214cd71e8b2a5b41e4d2 files/conserver.confd 299
 MD5 338bf82fc823c16c8cd8924440abb096 files/conserver.initd 1203
 MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/conserver.pam 431
@@ -11,3 +12,4 @@ MD5 3d435ff83d5bc903d39c0c25154442c2 files/digest-conserver-8.0.1 67
 MD5 3d435ff83d5bc903d39c0c25154442c2 files/digest-conserver-8.0.1-r1 67
 MD5 8438d2212da0e740700a2c6ce19e93fe files/digest-conserver-8.0.3 67
 MD5 c02710929309f4ec9256cb33a5f7e554 files/digest-conserver-8.0.7 67
+MD5 2de0aee5bd8361b6a165bbbb0bd563cb files/digest-conserver-8.0.8 67

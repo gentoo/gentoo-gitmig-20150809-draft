@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conserver
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.4 2003/11/23 14:49:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.5 2003/12/05 12:32:59 weeve Exp $
+
+*conserver-8.0.8 (05 Dec 2003)
+
+  05 Dec 2003; Jason Wever <weeve@gentoo.org> conserver-8.0.8.ebuild:
+  version bump
 
 *conserver-8.0.7 (23 Nov 2003)
 
