@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/waveselect-0.1.2.ebuild,v 1.1 2005/01/27 18:41:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/waveselect-0.1.2.ebuild,v 1.2 2005/01/28 05:53:55 genstef Exp $
 
 inherit kde
 
@@ -16,7 +16,6 @@ S=${WORKDIR}/${PN}
 
 RDEPEND="net-wireless/wireless-tools
 		>=x11-libs/qt-3.3.3"
-inherit kde-functions
 need-qt 3
 
 src_compile() {
