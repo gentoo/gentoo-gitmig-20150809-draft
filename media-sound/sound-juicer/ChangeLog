@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.20 2004/04/03 01:00:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.21 2004/04/24 21:23:47 foser Exp $
+
+*sound-juicer-0.5.11 (24 Apr 2004)
+
+  24 Apr 2004; foser <foser@gentoo.org> sound-juicer-0.5.11.ebuild :
+  New release, update gstreamer deps to 0.8 only
 
   03 Apr 2004; foser <foser@gentoo.org> sound-juicer-*.ebuild :
   Fix gstreamer deps to 0.6
