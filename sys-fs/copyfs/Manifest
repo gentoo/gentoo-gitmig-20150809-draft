@@ -1,5 +1,5 @@
 MD5 a6cf703e3aaf237dae6065a4c68e40a2 ChangeLog 397
-MD5 a95943ad704dca8b5420d97a521c181a copyfs-1.0.ebuild 1045
+MD5 cc8fdbc927e570d3cf2b4c60f6a099b1 copyfs-1.0.ebuild 949
 MD5 71da003bb2109fed15aff6635287c6a6 metadata.xml 222
 MD5 c05721e998e3acccd0813319c8e08dfd files/digest-copyfs-1.0 62
 MD5 5ec647183c280e2dbed2a9f03d5d5776 files/copyfs-1.0-gentoo.patch 1330

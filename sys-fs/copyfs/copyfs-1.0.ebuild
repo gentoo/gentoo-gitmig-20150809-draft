@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/copyfs-1.0.ebuild,v 1.1 2004/12/16 22:21:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/copyfs-1.0.ebuild,v 1.2 2004/12/16 22:24:39 stuart Exp $
 
 inherit eutils
 DESCRIPTION="fuse-based filesystem for maintaining configuration files"
@@ -15,8 +15,6 @@ DEPEND=">=sys-fs/fuse-2.0
 	sys-apps/attr"
 #RDEPEND=""
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S} || die
@@ -30,11 +28,6 @@ src_unpack() {
 	#
 	# patch by stuart@gentoo.org
 	epatch ${FILESDIR}/${P}-unlink.patch
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
