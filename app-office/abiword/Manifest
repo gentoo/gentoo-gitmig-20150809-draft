@@ -5,7 +5,7 @@ MD5 cf9dcca5745cda8078a0386993cc0d8a abiword-2.0.5.ebuild 2542
 MD5 ef14059ce0b1c9a3a8cf93c5b0b7390b abiword-2.0.6.ebuild 2129
 MD5 abfb2e2e507d908d06169c5a8d4378d5 abiword-2.0.2.ebuild 2266
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 332605c9a065c5fb995fd7bfacf3b319 ChangeLog 10519
+MD5 f81310e970b36c9a87ec3eb6f193a930 ChangeLog 10603
 MD5 ddf70a53b4fc5671c7ed5cb4acb4a6e8 files/digest-abiword-2.0.3-r1 68
 MD5 31616e14907aefda2489036cc3d1db3d files/AbiWord.desktop 901
 MD5 1ebcd22c6249c06e631c13491113d8ef files/AbiWord2.desktop 166
