@@ -1,9 +1,43 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.7 2002/05/15 11:30:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.8 2002/05/19 18:46:58 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
+
+# convinience functios for requesting autotoos versions
+need-automake() {
+
+    debug-print-function $FUNCNAME $*
+
+    unset WANT_AUTOMAKE_1_4
+    unset WANT_AUTOMAKE_1_5
+    unset WANT_AUTOMAKE_1_6
+    
+    case $1 in
+	1.4)	export WANT_AUTOMAKE_1_4=1;;
+	1.5)	export WANT_AUTOMAKE_1_5=1;;
+	1.6)	export WANT_AUTOMAKE_1_6=1;;
+	*)	echo "!!! $FUNCNAME: Error: unrecognized automake version $1 requested";;
+    esac
+
+}
+
+need-autoconf() {
+
+    debug-print-function $FUNCNAME $*
+
+    unset WANT_AUTOCONF_2_1
+    unset WANT_AUTOCONF_2_5
+    
+    case $1 in
+	2.1)	export WANT_AUTOCONF_2_1=1;;
+	2.5)	export WANT_AUTOCONF_2_5=1;;
+	*)	echo "!!! $FUNCNAME: Error: unrecognized autoconf version $1 requested";;
+    esac
+
+}
+
 
 # ---------------------------------------------------------------
 # kde/qt directory management etc. functions, was kde-dirs.ebuild
@@ -31,14 +65,12 @@ set-kdedir() {
 	
 	case "$1" in
 	    2*)	
-	    debug-print "$FUNCNAME: requesting autoconf-2.1, automake-1.4 for kde version 2*"
-	    export WANT_AUTOCONF_2_1=1
-	    export WANT_AUTOMAKE_1_4=1
+	    need-autoconf 2.1
+	    need-automake 1.4
 	    ;;
 	    3*)	
-	    debug-print "$FUNCNAME: requesting autoconf-2.5, automake-1.4 for kde version 3*"
-	    export WANT_AUTOCONF_2_5=1
-	    export WANT_AUTOMAKE_1_4=1
+	    need-autoconf 2.5
+	    need-automake 1.5
 	    ;;
 	esac
 	
