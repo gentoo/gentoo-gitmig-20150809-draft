@@ -1,5 +1,0 @@
-Explanation of the KDE-i18n package move. Author: Dan Armak <danarmak@gentoo.org>.
-$Header: /var/cvsroot/gentoo-x86/kde-i18n/README,v 1.1 2001/10/28 20:04:10 danarmak Exp $
-
-All kde-i18n packages have been moved into the new category app-i18n 28/10/01,
-and the old locations have been masked.
