@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2.ebuild,v 1.3 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2.ebuild,v 1.4 2003/09/29 22:05:59 mholzer Exp $
 
 DESCRIPTION="Chora ${PV} is the Horde CVS viewer."
 HOMEPAGE="http://www.horde.org"
-P=chora-1.2
-SRC_URI="ftp://ftp.horde.org/pub/chora/tarballs/${P}.tar.gz"
+MY_P=${P/horde-/}
+SRC_URI="ftp://ftp.horde.org/pub/chora/tarballs/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
@@ -14,6 +14,7 @@ RDEPEND=">=net-www/horde-2.2
 	>=app-text/rcs-5.7-r1
 	>=dev-util/cvs-1.11.2"
 IUSE=""
+S=${WORKDIR}/${MY_P}
 
 find_http_root() {
 	HTTPD_ROOT=`grep apache /etc/passwd | cut -d: -f6`/htdocs

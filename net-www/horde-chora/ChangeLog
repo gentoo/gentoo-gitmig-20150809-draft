@@ -1,6 +1,10 @@
 # ChangeLog for net-www/horde-chora
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/ChangeLog,v 1.7 2003/04/08 21:50:17 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/ChangeLog,v 1.8 2003/09/29 22:05:59 mholzer Exp $
+
+  30 Sep 2003; Martin Holzer <mholzer@gentoo.org> horde-chora-1.1.ebuild,
+  horde-chora-1.2-r1.ebuild, horde-chora-1.2.ebuild:
+  Now used MY_P. Closes #28170.
 
 *horde-chora-1.2-r1 (08 Apr 2003)
   08 Apr 2003; Dean Bailey <alron@gentoo.org> horde-chora-1.2-r1 :
