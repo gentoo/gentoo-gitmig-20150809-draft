@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/ploneerrorreporting
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/ploneerrorreporting/ChangeLog,v 1.4 2004/09/24 20:53:38 batlogg Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/ploneerrorreporting/ChangeLog,v 1.5 2005/03/19 17:32:59 weeve Exp $
+
+  19 Mar 2005; Jason Wever <weeve@gentoo.org>
+  ploneerrorreporting-0.11.ebuild:
+  Added ~sparc keyword wrt bug #84791.
 
   24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>;
   ploneerrorreporting-0.11.ebuild:

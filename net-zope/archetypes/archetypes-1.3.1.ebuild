@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/archetypes-1.3.1.ebuild,v 1.1 2004/12/04 20:15:27 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/archetypes-1.3.1.ebuild,v 1.2 2005/03/19 17:16:02 weeve Exp $
 
 inherit zproduct
 
@@ -10,7 +10,7 @@ DESCRIPTION="Allows creation of new content types for Plone"
 WEBPAGE="http://www.sourceforge.net/projects/${PN}"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 SLOT="1.3"
 

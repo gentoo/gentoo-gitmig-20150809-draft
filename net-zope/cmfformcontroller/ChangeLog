@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/cmfformcontroller
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfformcontroller/ChangeLog,v 1.8 2004/09/24 20:55:17 batlogg Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfformcontroller/ChangeLog,v 1.9 2005/03/19 17:20:28 weeve Exp $
+
+  19 Mar 2005; Jason Wever <weeve@gentoo.org>
+  cmfformcontroller-1.0.3.ebuild:
+  Added ~sparc keyword wrt bug #84791.
 
   24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>;
   cmfformcontroller-1.0.3.ebuild:
