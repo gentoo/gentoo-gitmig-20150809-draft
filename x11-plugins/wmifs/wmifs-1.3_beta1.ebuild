@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
-# Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1.ebuild,v 1.2 2002/12/09 04:41:58 manson Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1.ebuild,v 1.3 2003/09/06 05:56:25 msterret Exp $
 
 S=${WORKDIR}/wmifs.app/wmifs
 DESCRIPTION="Network monitoring dock.app"

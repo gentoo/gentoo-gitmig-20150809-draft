@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
-# Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.6.ebuild,v 1.2 2002/12/09 04:41:59 manson Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.6.ebuild,v 1.3 2003/09/06 05:56:25 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="WMaker DockUp to monitor: Memory usage, Swap usage, I/O throughput, system uptime, hardware interrupts, paging and swap activity."

@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
-# Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5.ebuild,v 1.4 2002/12/09 04:41:58 manson Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5.ebuild,v 1.5 2003/09/06 05:56:25 msterret Exp $
 
 IUSE=""
 
