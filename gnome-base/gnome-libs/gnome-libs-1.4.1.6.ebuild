@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.5.ebuild,v 1.1 2002/04/05 23:24:34 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.6.ebuild,v 1.1 2002/04/28 23:47:56 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Core Libraries"
@@ -13,8 +13,12 @@ DEPEND=">=media-libs/imlib-1.9.10
 		>=gnome-base/ORBit-0.5.12
 		>=x11-libs/gtk+-1.2.10-r4
 		<sys-libs/db-2
-		nls? ( >=sys-devel/gettext-0.10.40 >=dev-util/intltool-0.11 )"
+		doc? ( app-text/docbook-sgml 
+		       dev-util/gtk-doc )"
 
+RDEPEND="nls? ( >=sys-devel/gettext-0.10.40 >=dev-util/intltool-0.11 )"
+
+SLOT="1.4"
 
 src_compile() {                           
 	CFLAGS="$CFLAGS -I/usr/include/db1"
@@ -23,6 +27,7 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
 	use kde && myconf="${myconf} --with-kde-datadir=/usr/share"
+	use doc || myconf="${myconf} --disable-gtk-doc"
 
 	# libtoolize
 	libtoolize --copy --force
@@ -40,9 +45,12 @@ src_compile() {
 
 	#do the docs (maby add a use variable or put in seperate
 	#ebuild since it is mostly developer docs?)
-	cd ${S}/devel-docs
-	emake || die
-	cd ${S}
+	if [ -n "`use doc`" ]
+	then
+		cd ${S}/devel-docs
+		emake || die
+		cd ${S}
+	fi
 }
 
 src_install() {
@@ -56,14 +64,18 @@ src_install() {
 		install || die
 
 	#do the docs
-	cd ${S}/devel-docs
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		docdir=${D}/usr/share/doc \
-		install || die
-	cd ${S}
+	if [ -n "`use doc`" ]
+	then
+		cd ${S}/devel-docs
+		make prefix=${D}/usr \
+			mandir=${D}/usr/share/man \
+			docdir=${D}/usr/share/doc \
+			install || die
+		cd ${S}
+	fi
 
 	rm ${D}/usr/share/gtkrc*
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS HACKING
 }
+

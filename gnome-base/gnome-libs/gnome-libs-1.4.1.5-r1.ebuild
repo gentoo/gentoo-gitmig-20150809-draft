@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.5-r1.ebuild,v 1.1 2002/04/28 00:55:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.5-r1.ebuild,v 1.2 2002/04/28 23:47:56 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Core Libraries"
@@ -17,6 +17,7 @@ DEPEND=">=media-libs/imlib-1.9.10
 
 RDEPEND="nls? ( >=sys-devel/gettext-0.10.40 >=dev-util/intltool-0.11 )"
 
+SLOT="1.4"
 
 src_compile() {                           
 	CFLAGS="$CFLAGS -I/usr/include/db1"
