@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r2.ebuild,v 1.12 2004/01/04 01:22:58 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r3.ebuild,v 1.1 2004/01/07 13:55:10 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -34,7 +34,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the XFS Specialized Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://gentoo.lostlogicx.com/patches-${KV}.tar.bz2"
+	 http://gentoo.lostlogicx.com/patches-${KV/${PR}/r2}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc "
 SLOT="${KV}"
 
@@ -53,8 +53,10 @@ src_unpack() {
 	# http://www.sourceforge.net/projects/acpi	
 	[ `use acpi4linux` ] || rm 70*
 
-	#IMPORTANT! Root Exploit!
 	cd ${S}
-	epatch ${FILESDIR}/do_brk_fix.patch
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+
 	kernel_src_unpack
 }

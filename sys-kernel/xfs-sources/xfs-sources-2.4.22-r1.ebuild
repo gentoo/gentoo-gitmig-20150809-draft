@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.22.ebuild,v 1.4 2004/01/04 01:22:58 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.22-r1.ebuild,v 1.1 2004/01/07 13:55:10 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -19,7 +19,7 @@ ETYPE="sources"
 
 inherit kernel
 OKV=2.4.22
-EXTRAVERSION=-${P/-sources-2.4.22}
+EXTRAVERSION=-${P/-sources-2.4.22}-${PR}
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 
@@ -28,7 +28,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the XFS Specialized Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 mirror://gentoo/patches-${KV}.tar.bz2"
+	 mirror://gentoo/patches-${OKV}-xfs.tar.bz2"
 KEYWORDS="~x86 -ppc -sparc "
 SLOT="${KV}"
 
@@ -63,9 +63,10 @@ src_unpack() {
 		einfo "Cryptographic support enabled..."
 	fi
 
-	#IMPORTANT! Root Exploit!
 	cd ${S}
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 
 	kernel_src_unpack
 }

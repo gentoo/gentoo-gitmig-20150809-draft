@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.36 2004/01/04 01:22:58 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.37 2004/01/07 13:55:10 plasmaroo Exp $
+
+*xfs-sources-2.4.19-r3 (07 Jan 2004)
+
+  07 Jan 2004; <plasmaroo@gentoo.org> xfs-sources-2.4.19-r2.ebuild,
+  xfs-sources-2.4.19-r3.ebuild, xfs-sources-2.4.20-r5.ebuild,
+  xfs-sources-2.4.22-r1.ebuild, xfs-sources-2.4.22.ebuild,
+  xfs-sources-2.4.23-r1.ebuild, xfs-sources-2.4.23.ebuild:
+  Bumped versions and added patches to address the security 
+  vulnerabilities in bugs #37292 and #37317.
 
 *xfs-sources-2.4.23 (04 Jan 2004)
 

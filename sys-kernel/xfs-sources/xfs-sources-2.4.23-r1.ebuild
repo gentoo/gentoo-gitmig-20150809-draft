@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.23.ebuild,v 1.3 2004/01/04 01:22:58 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.23-r1.ebuild,v 1.3 2004/01/07 13:55:10 plasmaroo Exp $
 
 ETYPE="sources"
 
 inherit kernel
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
-EXTRAVERSION="-${PN/-*/}"
+EXTRAVERSION="-${PN/-*/}-${PR}"
 KV=${OKV}${EXTRAVERSION}
 
 S=${WORKDIR}/linux-${KV}
@@ -16,23 +16,27 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the XFS Specialized Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://dev.gentoo.org/~scox/kernels/v2.4/xfs-sources-${PVR}.patch.bz2"
+	http://dev.gentoo.org/~scox/kernels/v2.4/xfs-sources-${PV}.patch.bz2"
 
 KEYWORDS="~x86 -ppc -sparc "
 SLOT="${KV}"
 
 src_unpack() {
+
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
 
 	cd linux-${KV}
 
-	bzcat ${DISTDIR}/xfs-sources-${PVR}.patch.bz2 | patch -p1 \
+	bzcat ${DISTDIR}/xfs-sources-${PV}.patch.bz2 | patch -p1 \
 		|| die "Failed to patch kernel"
 
 	cd ${S}
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}-2.4.22.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 
 	make mrproper || die "make mrproper failed"
+	kernel_universal_unpack
 
 }
 
