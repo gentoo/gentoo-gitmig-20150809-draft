@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.63.ebuild,v 1.4 2004/02/20 20:26:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.63.ebuild,v 1.5 2004/02/21 03:17:24 vapier Exp $
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Perl Mail::SpamAssassin - A program to filter spam"
+HOMEPAGE="http://spamassassin.org/"
 SRC_URI="http://spamassassin.org/released/${P}.tar.bz2"
-HOMEPAGE="http://spamassassin.org"
-IUSE="berkdb ssl"
-SLOT="0"
-LICENSE="GPL-2 | Artistic"
-KEYWORDS="x86 amd64 ppc ~sparc alpha ~hppa ~mips ia64"
 
-newdepend ">=dev-perl/ExtUtils-MakeMaker-6.11-r1
+LICENSE="GPL-2 | Artistic"
+SLOT="0"
+KEYWORDS="x86 ppc ~sparc alpha hppa ~mips ia64 amd64"
+IUSE="berkdb ssl"
+
+DEPEND=">=dev-perl/ExtUtils-MakeMaker-6.11-r1
 	dev-perl/Time-Local
 	dev-perl/Getopt-Long
 	>=dev-perl/File-Spec-0.8
