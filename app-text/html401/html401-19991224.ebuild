@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/html401-19991224.ebuild,v 1.6 2004/06/24 22:39:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/html401-19991224.ebuild,v 1.7 2004/07/13 22:03:52 agriffis Exp $
 
 DESCRIPTION="DTDs for the HyperText Markup Language 4.01"
 HOMEPAGE="http://www.w3.org/TR/${PN}/"
@@ -9,6 +9,7 @@ S=${WORKDIR}
 LICENSE="W3C"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 DEPEND="app-text/sgml-common"
 
 src_install() {
