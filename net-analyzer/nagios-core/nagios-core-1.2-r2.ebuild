@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.8 2004/10/20 18:22:24 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.9 2004/10/20 18:53:02 eldad Exp $
 
 inherit eutils
 
@@ -147,6 +147,14 @@ src_install() {
 	insinto /usr/nagios/contrib/eventhandlers/redundancy-scenario1
 	doins contrib/eventhandlers/redundancy-scenario1/*
 
+	chown -R nagios:nagios ${D}/etc/nagios || die "Failed Chown of ${D}/etc/nagios"
+	keepdir /usr/nagios/share/ssi
+	chown -R nagios:nagios ${D}/usr/nagios || die "Failed Chown of ${D}/usr/nagios"
+	keepdir /var/nagios
+	keepdir /var/nagios/archives
+	chown -R nagios:nagios ${D}/var/nagios || die "Failed Chown of ${D}/var/nagios"
+	keepdir /var/nagios/rw
+
 	#Apache Module
 
 	if use !noweb; then
@@ -165,13 +173,6 @@ pkg_preinst() {
 	einfo "Sample config files installed by default will always"
 	einfo "include cgi.cfg"
 	einfo "The sample configs can be found in /usr/share/doc/${PF}/sample-configs/"
-	chown -R nagios:nagios ${D}/etc/nagios || die "Failed Chown of ${D}/etc/nagios"
-	keepdir /usr/nagios/share/ssi
-	chown -R nagios:nagios ${D}/usr/nagios || die "Failed Chown of ${D}/usr/nagios"
-	keepdir /var/nagios
-	keepdir /var/nagios/archives
-	chown -R nagios:nagios ${D}/var/nagios || die "Failed Chown of ${D}/var/nagios"
-	keepdir /var/nagios/rw
 
 	enewgroup nagios
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r3.ebuild,v 1.3 2004/10/20 18:22:24 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r3.ebuild,v 1.4 2004/10/20 18:53:02 eldad Exp $
 
 inherit eutils
 
@@ -159,8 +159,12 @@ src_install() {
 	exeinto /usr/nagios/contrib/eventhandlers/redundancy-scenario1
 	doexe contrib/eventhandlers/redundancy-scenario1/*
 
-	#Apache Module
+	for dir in etc/nagios usr/nagios var/nagios usr/nagios/contrib
+	do
+		chown -R nagios:nagios ${D}/${dir} || die "Failed chown of ${D}/${dir}"
+	done
 
+	#Apache Module
 	if use !noweb; then
 		if use apache2; then
 			insinto /etc/apache2/conf/modules.d
@@ -170,7 +174,6 @@ src_install() {
 			doins ${FILESDIR}/nagios.conf
 		fi
 	fi
-
 }
 
 pkg_preinst() {
@@ -193,11 +196,6 @@ pkg_preinst() {
 		usermod -G apache nagios
 		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
-
-	for dir in etc/nagios usr/nagios var/nagios usr/nagios/contrib
-	do
-		chown -R nagios:nagios ${D}/${dir} || die "Failed chown of ${D}/${dir}"
-	done
 }
 
 pkg_postinst() {
