@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/visitors/visitors-0.2a.ebuild,v 1.1 2004/06/11 22:00:24 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/visitors/visitors-0.2a.ebuild,v 1.2 2004/06/12 09:22:41 dholm Exp $
 
 DESCRIPTION="Visitors - fast web log analyzer"
 HOMEPAGE="http://www.hping.org/visitors/"
 SRC_URI="http://www.hping.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="debug"
 
 DEPEND=">=media-gfx/graphviz-1.10"
