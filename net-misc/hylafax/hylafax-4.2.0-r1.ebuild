@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r1.ebuild,v 1.1 2004/10/24 05:50:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r1.ebuild,v 1.2 2004/11/15 23:20:58 nerdboy Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="~x86 ~sparc ~hppa ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc ~hppa ~alpha ~amd64 ~ppc"
 
 DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=sys-libs/zlib-1.1.4
@@ -106,16 +106,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "New Hylafax tiff support requires tiff-3.7.0 (still ~arch)"
+	ewarn "New Hylafax tiff support requires tiff-3.7.0 now,"
 	ewarn "but hopefully this libtiff silliness is now fixed."
-	echo
-	ewarn "You can add both hylafax and tiff to /etc/portage/package.keywords"
-	ewarn "and emerge hylafax as normal.  As always, report any problems."
-	echo
 	echo
 	einfo "Hylafax now depends on sharutils instead of metamail for mime"
 	einfo "handling, however, you can continue to use the latter if you"
-	einfo "like."
+	einfo "like (emerge metamail manually)."
 	echo
 	einfo "Now run faxsetup and (if necessary) faxaddmodem."
 	echo

@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.42 2004/10/25 22:18:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.43 2004/11/15 23:20:58 nerdboy Exp $
+
+  15 Nov 2004; Steve Arnold <nerdboy@gentoo.org> hylafax-4.2.0-r1.ebuild:
+  Bumped to stable on x86 due to tiff 3.6.x brokenness.  All reports so
+  far indicate this version of Hylafax plus tiff 3.7.0 is the smoothest
+  yet (with no apparent tiff bugs).  Changes in Hylafax 4.2:
+    1) no more tiff silliness (requires tiff 3.7.0 or better)
+    2) tiff supports native lzw-compression
+    3) metamail is optional, and can be used instead of sharutils, for
+       fax-mail support (sharutils is the default depend)
 
   25 Oct 2004; Steve Arnold <nerdboy@gentoo.org>
   +files/configure-gcc-3.4.patch:
