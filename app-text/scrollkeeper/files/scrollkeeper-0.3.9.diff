@@ -1,0 +1,10 @@
+--- Makefile.in.old	Wed May  1 15:55:59 2002
++++ Makefile.in	Wed May  1 15:56:07 2002
+@@ -222,7 +222,6 @@
+ 
+ install-data-am: install-dtdsHEADERS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-data: install-data-am
+ 
+ install-am: all-am
