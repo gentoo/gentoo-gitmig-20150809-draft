@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.172 2004/12/28 02:32:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.173 2004/12/28 17:39:22 eradicator Exp $
+
+  28 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xine-lib-1.0.ebuild:
+  Die if you can't find libXv.
 
   27 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xine-lib-1.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.3 2004/12/28 02:32:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.4 2004/12/28 17:39:22 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -203,10 +203,10 @@ src_compile() {
 		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.a" ]; then
 			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
 		else
-			myconf="${myconf} --enable-shared-xv"
+			eerror "Couldn't find your libXv.  Did you set USE="xv" when you emerged xorg-x11?"
+			die "Couldn't find libXv."
 		fi
 	fi
-
 
 	econf \
 		$(use_enable nls) \
