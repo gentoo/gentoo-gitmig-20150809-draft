@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/externaleditor-0.7.ebuild,v 1.3 2004/06/25 01:20:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/externaleditor-0.8.ebuild,v 1.1 2004/07/27 20:22:17 batlogg Exp $
 
 inherit zproduct
 
 MY_PN="ExternalEditor"
-MY_P="${MY_PN}-${PV}"
+MY_P="${MY_PN}-${PV}-src"
 MY_P2="zopeedit-${PV}-src"
 DESCRIPTION="Allows you to use your favorite editor(s) from ZMI."
 HOMEPAGE="http://www.zope.org/Members/Caseman/${MY_PN}/"
@@ -14,6 +14,7 @@ SRC_URI="${SRC_URI_BASE}/${MY_P}.tgz
 	${SRC_URI_BASE}/${MY_P2}.tgz"
 LICENSE="ZPL"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 ZPROD_LIST="${MY_PN}"
 
 # the base of teh application is in Python2.1, but zopeedit.py wants Python2.2
