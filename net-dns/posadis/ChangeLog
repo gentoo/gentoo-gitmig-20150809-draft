@@ -1,8 +1,11 @@
 # ChangeLog for net-dns/posadis
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.1 2003/11/02 04:36:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.2 2003/12/07 23:48:10 foser Exp $
 
 *posadis-0.60.1 (02 Nov 2003)
+
+  07 Dec 2003; foser <foser@gentoo.org> posadis-0.60.1.ebuild :
+  Fix fam-oss dep to fam, due to move
 
   02 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> metadata.xml,
   posadis-0.60.1.ebuild:
