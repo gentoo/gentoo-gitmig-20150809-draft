@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.3_pre1.ebuild,v 1.1 2004/03/30 10:40:01 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.3_pre1.ebuild,v 1.2 2004/04/01 09:38:07 taviso Exp $
 
-DESCRIPTION="A very nice and powerful theme for FVWM"
+DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
 HOMEPAGE="http://fvwm-crystal.linuxpl.org/"
 SRC_URI="ftp://ftp.linuxpl.org/fvwm-crystal/tarballs/${P/_pre/pre}.tar.gz"
 LICENSE="GPL-2"
