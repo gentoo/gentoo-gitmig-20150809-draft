@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.10 2004/12/14 18:56:46 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.11 2004/12/18 16:00:10 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -56,7 +56,8 @@ EXPORT_FUNCTIONS pkg_setup pkg_postinst src_compile
 DESCRIPTION="Based on the $ECLASS eclass"
 SLOT=0
 DEPEND="virtual/linux-sources
-		sys-apps/sed"
+		sys-apps/sed
+		sys-apps/module-init-tools"
 
 # eclass utilities
 # ----------------------------------
@@ -115,6 +116,97 @@ set_kvobj() {
 		KV_OBJ="o"
 	fi
 	einfo "Using KV_OBJ=${KV_OBJ}"
+}
+
+generate_modulesd() {
+	# This function will generate the neccessary modules.d file from the
+	# information contained in the modules exported parms
+	
+	local selectedmodule selectedmodule_full selectedmodulevars parameter modinfop arg xifs temp
+	local module_docs module_opts module_aliases module_config
+	
+	for arg in ${@}
+	do
+		# convert the modulename to uppercase
+		selectedmodule_full="${arg}"
+		selectedmodule="${selectedmodule_full/*\//}"	
+		selectedmodule="$(echo ${selectedmodule} | tr '[:lower:]' '[:upper:]')"
+
+		module_docs="MODULESD_${selectedmodule}_DOCS"
+		module_aliases="$(eval echo \$\{#MODULESD_${selectedmodule}_ALIASES[*]\})"
+		module_docs="${!module_docs}"
+		
+		for parameter in ${!module_*}
+		do
+			[ -z "${!parameter}" ] && unset ${parameter}
+		done
+		
+		# OK, so now ${!module_*} only contains stuff from the ebuild.
+		# now we can do some proper work!
+		[ -z "${!module_*}" ] && return
+
+		module_config="${T}/modulesd-${selectedmodule}"
+		
+		ebegin "Preparing file for modules.d"
+		echo  "# modules.d config file for ${selectedmodule}" >> ${module_config}
+		echo  "# this file was automatically generated from linux-mod.eclass" >> ${module_config}
+		echo  "# on behalf of ${EBUILD/*\//}" >> ${module_config}
+		for temp in ${module_docs}
+		do
+			echo "#  Please read ${temp/*\//} for more info" >> ${module_config}
+		done
+
+		if [ ${module_aliases} -gt 0 ];
+		then
+			echo  "# Internal Aliases - Do not edit" >> ${module_config}
+			echo  "# ------------------------------" >> ${module_config}
+			
+			(( module_aliases-- ))
+			for temp in $(seq 0 ${module_aliases})
+			do
+				echo "alias $(eval echo \$\{MODULESD_${selectedmodule}_ALIASES[$temp]\})" >> ${module_config}
+				
+			done		
+		fi
+
+		modinfop="$(modinfo -p ${selectedmodule_full}.${KV_OBJ})"
+		if [ -n "${modinfop}" ];
+		then
+			echo >> ${module_config}
+			echo  "# Configurable module parameters" >> ${module_config}
+			echo  "# ------------------------------" >> ${module_config}
+		
+			xifs="${IFS}"
+			IFS="$(echo -en "\n\b")"
+			for parameter in ${modinfop}
+			do
+				temp="$(echo ${parameter#*:} | grep -e " [0-9][ =]" | sed "s:.*\([01][= ]\).*:\1:")"
+				if [ -n "${temp}" ];
+				then
+					module_opts="${module_opts} ${parameter%%:*}:${temp}"
+				fi
+				echo -e "# ${parameter%%:*}:\t${parameter#*:}" >> ${module_config}
+			done
+			IFS="${xifs}"
+		fi
+		
+		if [ -n "${module_opts}" ];
+		then
+			echo >> ${module_config}
+			echo  "# For Example..." >> ${module_config}
+			echo  "# ------------------------------" >> ${module_config}
+			for parameter in ${module_opts}
+			do
+				echo "# options ${selectedmodule_full/*\//} ${parameter//:*}=${parameter//*:}" >> ${module_config}
+			done
+		fi
+		
+		insinto /etc/modules.d
+		newins ${module_config} ${selectedmodule_full/*\//}
+		
+		[ -n "${module_docs}" ] && dodoc ${module_docs}
+	done
+	eend 0
 }
 
 display_postinst() {
@@ -199,6 +291,8 @@ linux-mod_src_install() {
 		cd ${sourcedir}
 		insinto /lib/modules/${KV_FULL}/${moduledir}
 		doins ${modulename}.${KV_OBJ}
+		
+		generate_modulesd ${sourcedir}/${modulename}
 	done
 }
 
