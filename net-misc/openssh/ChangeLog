@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.43 2003/09/05 14:01:46 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.44 2003/09/16 16:41:19 vapier Exp $
+
+*openssh-3.7_p1 (16 Sep 2003)
+
+  16 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix #28873 ... selinux needs to be caught up though :(.
+  Marked stable due to nature of release (security).
 
 *openssh-3.6.1_p2-r3 (05 Sep 2003)
 
