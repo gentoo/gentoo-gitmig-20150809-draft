@@ -1,7 +1,7 @@
 #!/sbin/runscript
 
 #you can put this in your rc.conf file if you wish
-#HTTPD_OPTS="-D SSL -D PHP4
+#HTTPD_OPTS="-D SSL -D PHP4"
 
 depend() {
     need net
