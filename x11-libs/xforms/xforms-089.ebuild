@@ -1,21 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-089.ebuild,v 1.4 2002/06/08 02:21:53 gerk Exp $
+# /space/gentoo/cvsroot/gentoo-x86/x11-libs/xforms/xforms-089.ebuild,v 1.3 2002/04/27 21:43:48 seemant Exp
 
 MY_P=bxform-${PV}-glibc2.1
-
-if [ ${ARCH] = "x86" ] ; then
-	MY_D = "linux-i386/elf"
-else
-	MY_D = "linux-ppc"
-fi
-
 S=${WORKDIR}/${PN}
 DESCRIPTION="A GUI Toolkit based on Xlib"
-SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/${MY_D}/${MY_P}.tgz"
+SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/linux-i386/elf/${MY_P}.tgz"
 HOMEPAGE="http://world.std.com/~xforms/"
-
 
 DEPEND="virtual/x11"
 
