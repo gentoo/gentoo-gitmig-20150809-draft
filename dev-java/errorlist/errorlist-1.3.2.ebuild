@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/errorlist/errorlist-1.3.2.ebuild,v 1.3 2005/01/01 18:23:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/errorlist/errorlist-1.3.2.ebuild,v 1.4 2005/02/06 01:38:51 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,11 +10,12 @@ HOMEPAGE="http://plugins.jedit.org/plugins/?ErrorList"
 SRC_URI="mirror://sourceforge/jedit-plugins/ErrorList-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
-DEPEND=">=app-editors/jedit-4.2
+DEPEND=">=virtual/jdk-1.4
+	>=app-editors/jedit-4.2
 	dev-java/ant"
-#RDEPEND=""
+RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/ErrorList
 

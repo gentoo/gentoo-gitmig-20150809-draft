@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/errorlist
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/errorlist/ChangeLog,v 1.3 2005/01/01 18:23:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/errorlist/ChangeLog,v 1.4 2005/02/06 01:38:51 luckyduck Exp $
+
+  06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> errorlist-1.3.2.ebuild:
+  stable on amd64 and x86
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> errorlist-1.3.2.ebuild:
   Keywords ~amd64.

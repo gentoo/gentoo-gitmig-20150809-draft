@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sidekick/sidekick-0.3.ebuild,v 1.2 2004/10/20 07:58:26 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sidekick/sidekick-0.3.ebuild,v 1.3 2005/02/06 01:40:53 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -10,12 +10,13 @@ HOMEPAGE="http://plugins.jedit.org/plugins/?SideKick"
 SRC_URI="mirror://sourceforge/jedit-plugins/SideKick-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
-DEPEND=">=app-editors/jedit-4.2
-		dev-java/errorlist
-		dev-java/ant"
-#RDEPEND=""
+DEPEND=">=virtual/jdk-1.4
+	>=app-editors/jedit-4.2
+	dev-java/errorlist
+	dev-java/ant"
+RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/SideKick
 

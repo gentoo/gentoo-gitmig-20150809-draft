@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/htmlparser
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/htmlparser/ChangeLog,v 1.4 2004/10/20 07:56:33 absinthe Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/htmlparser/ChangeLog,v 1.5 2005/02/06 01:45:30 luckyduck Exp $
+
+  06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> htmlparser-1.3.ebuild,
+  htmlparser-1.5.20040728.ebuild:
+  stable on amd64 and x86
 
 *htmlparser-1.5.20040728 (20 Oct 2004)
 
