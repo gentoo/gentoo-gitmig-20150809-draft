@@ -5,11 +5,15 @@ ARCH="mips"
 
 # Host-type
 
+# Cobalt is little-endian mips
 CHOST=mipsel-unknown-linux-gnu
 PLATFORM=$CHOST
 
 # Options passed to make during the build process
 MAKEOPTS="-j1"
+
+# Distinguish us from other mips profiles
+PROFILE_ARCH="cobalt"
 
 # Fetching command (5 tries, passive ftp for firewall compatibility)
 FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
