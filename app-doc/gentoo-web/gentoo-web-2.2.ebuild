@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.5 2001/07/20 22:36:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.6 2001/07/21 20:53:45 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -76,6 +76,9 @@ src_install() {
 	cd ${D}
 	chmod -R g+rw,o+r *
 	chown -R root.root *
+	cd ${D}/usr/local/httpd
+	chown -R drobbins.webadmin htdocs 
+	chmod -R g+rws htdocs
 
 	dobin ${DISTDIR}/cvs2cl.pl
 	dosbin ${FILESDIR}/bin/cvslog.sh
@@ -89,7 +92,10 @@ pkg_preinst() {
 	then
 		rm -rf /usr/local/httpd/htdocs.bak
 	fi
-	cp -ax /usr/local/httpd/htdocs /usr/local/httpd/htdocs.bak
+	if [ -d /usr/local/httpd/htdocs ]
+	then
+		cp -ax /usr/local/httpd/htdocs /usr/local/httpd/htdocs.bak
+	fi
 }
 
 pkg_postinst() {
