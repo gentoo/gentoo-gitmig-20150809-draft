@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1-r1.ebuild,v 1.6 2004/03/27 02:32:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1-r1.ebuild,v 1.7 2004/04/20 16:49:55 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -28,11 +28,6 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 PROVIDE="virtual/jack"
 
 src_unpack() {
-	if use jack-caps; then
-		eerror "The jack-caps USE flag has been changed to caps.  Please update your environment."
-		exit 1
-	fi
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-doc-option.patch || \
