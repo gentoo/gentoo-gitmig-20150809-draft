@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (30 Aug 2002)
+# masked for testing
+=sys-libs/readline-4.3
+
 # <tantive@gentoo.org> (30 Aug 2002)
 # masked for further testing
 =sys-apps/openmosix-user-0.2.4-r1
