@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.91.ebuild,v 1.3 2004/05/31 00:14:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.92.ebuild,v 1.1 2004/05/31 00:14:14 tester Exp $
 
 S="${WORKDIR}/msn"
 DESCRIPTION="Alvaro's Messenger client for MSN"
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~sparc ~ppc ~hppa ~amd64"
 
 
-DEPEND=">=dev-lang/tcl-8.4
-	>=dev-lang/tk-8.4
+DEPEND=">=dev-lang/tcl-8.3
+	>=dev-lang/tk-8.3
 	imlib? ( media-libs/imlib )"
 
 RDEPEND="${DEPEND}
@@ -78,8 +78,8 @@ src_install() {
 	ln -s /usr/share/amsn/amsn ${D}/usr/bin/amsn
 
 	cd ${D}/usr/share/amsn
-	rm -f TODO README FAQ CREDITS HELP
 	dodoc TODO README FAQ CREDITS HELP
+	rm -f TODO
 }
 pkg_postinst() {
 	if use xmms
