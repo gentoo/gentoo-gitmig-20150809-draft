@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.54.ebuild,v 1.3 2004/05/05 15:57:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.54.ebuild,v 1.4 2004/05/05 18:12:18 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -27,6 +27,8 @@
 #   need to be able to install more than one language pack.
 
 inherit flag-o-matic eutils gcc
+
+IUSE="gnome kde ooo-kde"
 
 # Compile problems with these ...
 filter-flags "-funroll-loops"
