@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.10 2003/09/17 21:59:15 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.11 2003/09/20 20:15:53 pappy Exp $
 
 IUSE="tcltk java doc"
 
@@ -55,10 +55,10 @@ src_compile() {
 	fi
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	#if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
-	#then
-	#	CC="${CC} -yet_exec"
-	#fi
+	has_version 'sys-devel/hardened-gcc' && \
+		einfo "hardened-gcc: activating ${CC} -yet_exec for configuring"
+	
+	has_version 'sys-devel/hardened-gcc' && CC="${CC} -yet_exec"
 
 	../dist/configure \
 		--prefix=/usr \
@@ -71,6 +71,9 @@ src_compile() {
 		--enable-cxx \
 		--with-uniquename \
 		${myconf} || die
+
+	has_version 'sys-devel/hardened-gcc' && find ${W} -name "Makefile" -type f -exec \
+		sed -i "s:-yet_exec::g" {} \;
 
 #	disable posix mutexes as they are not available in linuxthreads from
 #	the standard profile and they should be autodetected if available
