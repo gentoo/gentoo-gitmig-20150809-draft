@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b1adad4e69cdb5c59fba4f327c676720 nssha1-0.1.ebuild 317
+MD5 67f5e7b173b79b79a33d29b5314fc014 ChangeLog 333
+MD5 9bfa59519ab2ed6d9f1589b374183441 metadata.xml 410
+MD5 918d32f43e26476fa106f3051f8530ab files/digest-nssha1-0.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB2/b0UxGWrFYv8KQRAqyXAKDLvo7Lo7ikJ35vp4sdEVhwzy2ivgCfX9/P
+8cf1rL9Vw0qbaJmJpy6Hzz0=
+=3tNx
+-----END PGP SIGNATURE-----
