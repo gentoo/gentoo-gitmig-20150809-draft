@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.6.ebuild,v 1.2 2004/08/21 15:29:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-1.1.0.ebuild,v 1.1 2004/11/30 08:11:03 usata Exp $
 
 inherit gnome2 eutils cvs
 
-DESCRIPTION="Smart Common Input Method (SCIM) is a Input Method (IM) development platform"
+DESCRIPTION="Smart Common Input Method (SCIM) is an Input Method (IM) development platform"
 HOMEPAGE="http://freedesktop.org/~suzhe/"
 SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc"
-IUSE="gnome"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64"
+IUSE="gnome gtk immqt immqt-bc"
 
 ECVS_AUTH="ext"
 CVS_RSH="ssh"
@@ -22,14 +22,17 @@ ECVS_PASS=""
 ECVS_MODULE="scim-lib"
 S="${WORKDIR}/${ECVS_MODULE}"
 
+GTK_DEPEND=">=x11-libs/gtk+-2
+	>=dev-libs/atk-1
+	>=x11-libs/pango-1
+	>=dev-libs/glib-2"
 RDEPEND="virtual/x11
 	gnome? ( >=gnome-base/gconf-1.2
 		>=dev-libs/libxml2-2.5
 		>=gnome-base/orbit-2.8 )
-	>=x11-libs/gtk+-2
-	>=dev-libs/atk-1
-	>=x11-libs/pango-1
-	>=dev-libs/glib-2
+	gtk? ( ${GTK_DEPEND} )
+	immqt? ( ${GTK_DEPEND} )
+	immqt-bc? ( ${GTK_DEPEND} )
 	!app-i18n/scim
 	!<app-i18n/scim-chinese-0.4.0"
 DEPEND="${RDEPEND}
@@ -37,13 +40,31 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake
 	>=sys-apps/sed-4"
-PDEPEND="|| ( app-i18n/scim-m17n
-		app-i18n/scim-uim
-		app-i18n/scim-tables )"
+PDEPEND="|| ( >=app-i18n/scim-m17n-0.1.2
+		>=app-i18n/scim-uim-0.1.3
+		>=app-i18n/scim-chinese-0.4.2
+		>=app-i18n/scim-hangul-0.1.1
+		>=app-i18n/scim-tables-0.4.0 )"
 
 ELTCONF="--reverse-deps"
 SCROLLKEEPER_UPDATE="0"
 USE_DESTDIR="1"
+
+has_gtk() {
+	if has_version '>=x11-libs/gtk+-2' ; then
+		true
+	else
+		false
+	fi
+}
+
+get_gtk_confdir() {
+	if useq amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && useq x86 ) ; then
+		echo "/etc/gtk-2.0/${CHOST}"
+	else
+		echo "/etc/gtk-2.0"
+	fi
+}
 
 src_unpack() {
 	cvs_src_unpack
@@ -67,6 +88,8 @@ src_unpack() {
 
 src_compile() {
 	use gnome || G2CONF="${G2CONF} --disable-config-gconf"
+	use gtk || use immqt || use immqt-bc || G2CONF="${G2CONF} --disable-panel-gtk --disable-setup-ui"
+	has_gtk || G2CONF="${G2CONF} --disable-gtk2-immodule"
 	gnome2_src_compile
 }
 
@@ -99,10 +122,10 @@ pkg_postinst() {
 	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
 
-	gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
+	has_gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
 }
 
 pkg_postrm() {
 
-	gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
+	has_gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
 }
