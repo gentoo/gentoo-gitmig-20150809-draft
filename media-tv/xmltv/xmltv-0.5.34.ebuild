@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.34.ebuild,v 1.5 2004/08/25 21:20:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.34.ebuild,v 1.6 2004/09/10 23:27:28 aliz Exp $
 
 inherit perl-module
 
@@ -63,11 +63,11 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_uk_rt ${XMLTV_OPTS} \
-	&& newdepend >=dev-perl/HTML-Parser-3.34
+	&& newdepend \>=dev-perl/HTML-Parser-3.34
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_na_dd ${XMLTV_OPTS} \
 	&& newdepend dev-perl/SOAP-Lite dev-perl/TermReadKey
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_na_icons ${XMLTV_OPTS} \
-	&& newdepend dev-perl/HTML-TableExtract >=dev-perl/WWW-Mechanize-1.02
+	&& newdepend dev-perl/HTML-TableExtract \>=dev-perl/WWW-Mechanize-1.02
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_fi ${XMLTV_OPTS} \
 	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_es ${XMLTV_OPTS} \
@@ -85,13 +85,13 @@ DEPEND="${RDEPEND}
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_jp ${XMLTV_OPTS} \
 	&& newdepend dev-perl/HTML-Tree dev-perl/Text-Kakasi
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_de_tvtoday ${XMLTV_OPTS} \
-	&& newdepend >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree
+	&& newdepend \>=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_se ${XMLTV_OPTS} \
 	&& newdepend dev-perl/XML-LibXML
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_fr ${XMLTV_OPTS} \
-	&& newdepend >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree
+	&& newdepend \>=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_no ${XMLTV_OPTS} \
-	&& newdepend >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-TableExtract dev-perl/HTML-LinkExtractor
+	&& newdepend \>=dev-perl/HTML-Parser-3.34 dev-perl/HTML-TableExtract dev-perl/HTML-LinkExtractor
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_pt ${XMLTV_OPTS} \
 	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_check ${XMLTV_OPTS} \
