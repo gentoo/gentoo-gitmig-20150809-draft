@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.1 2004/04/06 21:56:10 sj7trunks Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.2 2004/04/07 02:06:20 mr_bones_ Exp $
 
 IUSE="ssl"
 
@@ -26,7 +26,7 @@ DEPEND="virtual/glibc
 	>=net-mail/checkpassword-0.90
 	ssl? ( >=dev-libs/openssl-0.9.6e )
 	>=net-mail/queue-fix-1.4-r1"
-	
+
 
 RDEPEND="!virtual/mta
 	${DEPEND}
@@ -63,7 +63,7 @@ src_unpack() {
 	# Lets make Aiko Barz very happy with his patch, this allows you to use a
 	# pipe in deliverpath.
 	epatch ${FILESDIR}/${PV}-${PR}/pipehack.patch.bz2 || die "pipehack did not apply correctly"
-	
+
 	# make the qmail 'sendmail' binary behave like sendmail's for -f
 	#BROKEN
 	#epatch ${DISTDIR}/sendmail-flagf.patch
@@ -151,7 +151,7 @@ src_install() {
 	dodir /etc/env.d
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PV}-${PR}/99qmail
-	
+
 
 	einfo "Creating sendmail replacement ..."
 	diropts -m 755
@@ -312,7 +312,7 @@ pkg_postinst() {
 	if [ "`getent passwd ldapauth | cut -d: -f1`" != "ldapauth" ]; then
 		useradd -g ldapauth -d /var/qmail/maildirs -s /bin/true -u 11184 ldapauth
 	fi
-				
+
 
 	einfo "Please do not forget to run, the following syntax :"
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}-${PR}/${PN}-${PV}-${PR}.ebuild config "
