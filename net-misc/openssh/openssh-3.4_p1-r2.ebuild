@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r1.ebuild,v 1.1 2002/07/03 00:14:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r2.ebuild,v 1.1 2002/07/05 06:07:37 lostlogic Exp $
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
@@ -60,6 +60,7 @@ src_install() {
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
 	insinto /etc/pam.d  ; newins ${FILESDIR}/sshd.pam sshd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/sshd.rc6 sshd
+	touch ${D}/var/empty/.keep
 }
 
 pkg_preinst() {
