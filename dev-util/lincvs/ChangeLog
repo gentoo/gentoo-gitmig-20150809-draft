@@ -1,10 +1,10 @@
 # ChangeLog for dev-util/lincvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.12 2003/03/13 09:54:29 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.13 2003/03/13 09:55:11 absinthe Exp $
 
 *lincvs-1.1.2-r1 (13 Mar 2003)
 
-  13 Mar 2003; Dylan Carlson <dcarlson@absinthe.org> lincvs-1.1.2-r1.ebuild:
+  13 Mar 2003; Dylan Carlson <absinthe@gentoo.org> lincvs-1.1.2-r1.ebuild:
   Fixed wrapper script, added patch for minor typo in program.
 
 *lincvs-1.1.2 (7 Mar 2003)
