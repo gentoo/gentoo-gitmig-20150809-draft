@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.1.1.ebuild,v 1.5 2004/12/16 10:26:47 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.1.1.ebuild,v 1.6 2004/12/19 20:42:42 carlo Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc ~alpha amd64 ~ppc64"
-IUSE="doc"
+IUSE="debug doc"
 
 DEPEND="virtual/libc
 	x11-libs/qt
@@ -22,20 +22,22 @@ DEPEND="virtual/libc
 
 src_compile(){
 	distutils_python_version
-	python configure.py -l qt-mt \
-		-b /usr/bin \
-		-d /usr/lib/python${PYVER}/site-packages \
-		-e /usr/include/python${PYVER} \
-		"CXXFLAGS+=${CXXFLAGS}"
-	emake || die
+
+	local myconf="-l qt-mt -b /usr/bin -d /usr/lib/python${PYVER}/site-packages -e /usr/include/python${PYVER}"
+	use debug && myconf="${myconf} -u"
+
+	python configure.py ${myconf} "CFLAGS+=${CFLAGS}" "CXXFLAGS+=${CXXFLAGS}"
+	emake || die "emake failed"
 }
 
 src_install() {
-	einstall DESTDIR=${D} || die
+	make DESTDIR=${D} install || die "install failed"
 	dodoc ChangeLog LICENSE NEWS README THANKS TODO
 	if use doc ; then dohtml doc/* ; fi
 }
 
 pkg_postinst() {
+	echo ""
 	einfo "Please note, that you have to emerge PyQt again, when upgrading from sip-3.x."
+	echo ""
 }
