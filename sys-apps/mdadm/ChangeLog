@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/mdadm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.24 2005/01/17 19:06:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.25 2005/02/19 17:42:07 vapier Exp $
+
+*mdadm-1.9.0 (19 Feb 2005)
+
+  19 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/mdadm-1.9.0-dont-make-man.patch, +mdadm-1.9.0.ebuild:
+  Version bump #82368 by Neil Bothwick.
 
   17 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> mdadm-1.7.0.ebuild,
   mdadm-1.8.1.ebuild:
