@@ -22,8 +22,8 @@ src_compile() {
 
 src_install () {
 
-    exeinto /usr/lib/gkrellm/plugins
-    doexe src/gkrellm-gnome.so
-    dodoc README Changelog COPYRIGHT INSTALL
+	exeinto /usr/lib/gkrellm/plugins
+	doexe src/gkrellm-gnome.so
+	dodoc README Changelog COPYRIGHT INSTALL
 
 }

@@ -15,13 +15,13 @@ DEPEND=">=app-admin/gkrellm-1.2.9"
 
 src_compile() {
 	export PATH="${PATH}:/usr/X11R6/bin"
-    make || die
+	make || die
 
 }
 
 src_install () {
 
-    insinto /usr/lib/gkrellm/plugins
-    doins wireless.so
-    dodoc README Changelog
+	insinto /usr/lib/gkrellm/plugins
+	doins wireless.so
+	dodoc README Changelog
 }

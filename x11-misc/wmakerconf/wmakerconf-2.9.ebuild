@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.ebuild,v 1.1 2002/07/17 05:40:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.ebuild,v 1.2 2002/08/02 17:54:50 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X based config tool for the windowmaker X windowmanager."
@@ -42,11 +42,11 @@ src_compile() {
 
 src_install() {
 	
-        make 	\
+	make 	\
 			prefix=${D}/usr 	\
 			GNOMEDIR=${D}/usr/share/gnome/apps/Settings	\
 			install || die
 
-        dodoc README MANUAL AUTHORS TODO COPYING ChangeLog
+	dodoc README MANUAL AUTHORS TODO COPYING ChangeLog
 		dohtml -r .
 }

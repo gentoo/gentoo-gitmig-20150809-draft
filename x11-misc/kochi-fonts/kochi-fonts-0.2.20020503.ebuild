@@ -51,7 +51,7 @@ rebuild_fontfiles() {
 }
 
 pkg_postinst() {
-       
+	   
 	rebuild_fontfiles
 }
 

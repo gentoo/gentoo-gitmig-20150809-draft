@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/toolbox/toolbox-0.6.0-r1.ebuild,v 1.8 2002/08/01 11:59:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/toolbox/toolbox-0.6.0-r1.ebuild,v 1.9 2002/08/02 17:57:38 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox style file configuration utility"
@@ -15,14 +15,14 @@ DEPEND=">=x11-wm/blackbox-0.61
 
 src_compile() {
 
-    QTDIR=/usr/qt/2 ./configure --prefix=/usr --host=${CHOST} || die
-    emake || die
+	QTDIR=/usr/qt/2 ./configure --prefix=/usr --host=${CHOST} || die
+	emake || die
 
 }
 
 src_install () {
 
-    make DESTDIR=${D} install || die
-    dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }
 

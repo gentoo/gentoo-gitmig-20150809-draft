@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/asclock/asclock-2.0.12.ebuild,v 1.4 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/asclock/asclock-2.0.12.ebuild,v 1.5 2002/08/02 17:57:38 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc virtual/x11"
 
 src_unpack() {
-    unpack ${P}.tar.gz
+	unpack ${P}.tar.gz
 	cd ${S}
 	ln -s themes/classic default_theme
 }

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.31.ebuild,v 1.4 2002/07/11 06:30:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.31.ebuild,v 1.5 2002/08/02 17:54:50 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Control a remote computer running VNC from X"
@@ -14,8 +14,8 @@ DEPEND="virtual/x11"
 
 src_compile() {
 
-        xmkmf || die
-        make || die
+	xmkmf || die
+	make || die
 
 }
 
