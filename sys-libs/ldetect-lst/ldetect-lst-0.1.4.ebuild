@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ldetect-lst-0.1.4.ebuild,v 1.4 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ldetect-lst-0.1.4.ebuild,v 1.5 2003/02/28 19:01:18 liquidx Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -17,7 +17,7 @@ HOMEPAGE="http://cvs.mandrakesoft.com/cgi-bin/cvsweb.cgi/soft/ldetect-lst/"
 SRC_URI=""
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 src_compile() {
