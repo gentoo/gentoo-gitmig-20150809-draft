@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r1.ebuild,v 1.5 2002/04/12 19:02:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r1.ebuild,v 1.6 2002/04/13 04:08:25 azarah Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -100,21 +100,19 @@ src_compile() {
 	CFLAGS="${CFLAGS/-fomit-frame-pointer}"
 	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer}"
 
-	./configure  --prefix=/usr/lib/mozilla 				\
-		     --disable-tests		 			\
-		     --disable-pedantic					\
-		     --enable-mathml					\
-		     --disable-svg					\
-		     --enable-xsl					\
-		     --enable-crypto					\
-		     --enable-detect-webshell-leaks			\
-		     --enable-xinerama					\
-		     --with-java-supplement				\
-		     --enable-nspr-autoconf				\
-		     --with-extensions="${myext}"			\
-		     --enable-optimize=-O3				\
-		     --enable-xterm-updates				\
-		     --with-default-mozilla-five-home=/usr/lib/mozilla	\
+	./configure  --prefix=/usr/lib/mozilla \
+		     --disable-tests \
+		     --disable-pedantic \
+		     --disable-svg \
+		     --enable-xsl \
+		     --enable-crypto \
+		     --enable-detect-webshell-leaks \
+		     --enable-xinerama \
+		     --with-java-supplement \
+			 --with-pthreads \
+		     --with-extensions="${myext}" \
+		     --enable-optimize=-O3 \
+		     --with-default-mozilla-five-home=/usr/lib/mozilla \
 		     ${myconf} || die
 
 #	make depend || die
@@ -196,7 +194,7 @@ src_install() {
 	doins ${S}/build/package/rpm/SOURCES/mozicon16.xpm
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
-        # Install icon and .desktop for menu entry
+	# Install icon and .desktop for menu entry
 	if [ "`use gnome`" ] ; then
 		insinto /usr/share/pixmaps
 		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
@@ -230,7 +228,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-        # Make symlink for Java plugin (do not do in src_install(), else it only
+	# Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
 	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/`java-config --browser-plugin=mozilla` ]
 	then
