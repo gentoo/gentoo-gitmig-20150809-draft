@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r3.ebuild,v 1.4 2004/03/01 05:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r3.ebuild,v 1.5 2004/04/18 14:29:44 lv Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/alsa
 	>=x11-libs/fltk-1.1.0_rc6"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc amd64"
 LICENSE="GPL-2"
 
 src_unpack() {
