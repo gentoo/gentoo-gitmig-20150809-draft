@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.1-r2.ebuild,v 1.3 2002/07/10 13:45:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.1-r2.ebuild,v 1.4 2002/08/02 20:14:09 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU debugger"
@@ -7,7 +7,7 @@ SRC_URI="ftp://sourceware.cygnus.com/pub/gdb/releases/${P}.tar.gz
 	 ftp://ftp.freesoftware.com/pub/sourceware/gdb/releases/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
