@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gnomeboyadvance
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/ChangeLog,v 1.3 2004/06/24 22:28:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/ChangeLog,v 1.4 2004/11/05 04:47:54 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org> gnomeboyadvance-0.1.ebuild:
+  Added ~ppc.
 
   29 Aug 2003; Michael Sterrett <msterret@gentoo.org>
   gnomeboyadvance-0.1.ebuild:

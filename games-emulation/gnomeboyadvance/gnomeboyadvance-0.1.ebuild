@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.4 2004/06/24 22:28:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.5 2004/11/05 04:47:54 josejx Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.socialistsoftware.com/gnomeboyadvance.php"
 SRC_URI="http://www.socialistsoftware.com/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE=""
 
