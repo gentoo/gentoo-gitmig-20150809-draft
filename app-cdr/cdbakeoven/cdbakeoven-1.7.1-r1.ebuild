@@ -25,7 +25,6 @@ src_unpack() {
     cd ${S}
     patch -p1 < ${FILESDIR}/cdbakeoven_generic-1.7.1.patch || die
     ln -s Makefile.dist Makefile.cvs
-    kde-objprelink-patch
 
 }
 
