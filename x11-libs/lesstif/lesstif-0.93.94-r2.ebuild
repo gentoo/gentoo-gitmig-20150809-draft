@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r2.ebuild,v 1.2 2005/03/07 19:48:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r2.ebuild,v 1.3 2005/03/10 14:26:52 lanius Exp $
 
 inherit libtool flag-o-matic multilib
 
@@ -94,6 +94,15 @@ pkg_postinst() {
 	motif-config --install lesstif-1.2
 }
 
-pkg_prerm() {
-	motif-config --uninstall lesstif-1.2
+is_upgrade() {
+	vdb_path=`portageq vdb_path`
+	if [ "`grep -r SLOT $vdb_path/${CATEGORY}/${PN}* | grep $SLOT`" ]; then
+		return 0
+	else
+		return 1
+	fi
+}
+
+pkg_postrm() {
+	is_upgrade || motif-config --uninstall lesstif-1.2
 }
