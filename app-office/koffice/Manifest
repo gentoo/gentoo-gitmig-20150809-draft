@@ -2,9 +2,9 @@ MD5 82d58e79457d600e2e1eb47c83d9fb8d koffice-1.2.1-r1.ebuild 875
 MD5 f073cce5ca5665ca1e11d32d285374aa koffice-1.3.ebuild 863
 MD5 ed7d6a329bdae14fbb43a40819100887 koffice-1.3.1.ebuild 873
 MD5 bab9a6560c48cec935644c4866e84ec3 koffice-1.3.1-r1.ebuild 955
-MD5 795f1a4ef483b55196c02dd5f7c6e289 ChangeLog 7443
+MD5 678c6099e3a0e6084ee55bc35f3c4463 ChangeLog 7568
 MD5 3567b0f5f53ad3a98e67fe21ecb23624 metadata.xml 225
-MD5 c2693c413d437317f4bcd2c6aa7a6673 files/koffice-1.3.1-gcc34.patch 497
+MD5 3b1ec49bae2cb0bcdd35223574324335 files/koffice-1.3.1-gcc34.patch 482
 MD5 bd89862f0c15396ad54e30a1c9f2f5d9 files/koffice-1.2.1-kword-crashes.diff 3840
 MD5 65a32b814eb23f48f2392f1ae13ac167 files/digest-koffice-1.3 66
 MD5 48048df40bacada1eaef7e9982f40927 files/digest-koffice-1.3.1 68
