@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.20 2005/02/11 21:57:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.21 2005/03/08 18:27:03 luckyduck Exp $
+
+*musepack-tools-1.15u (08 Mar 2005)
+
+  08 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/musepack-tools-1.15u-Makefile.patch,
+  +files/musepack-tools-1.15u-gcc4.patch, +musepack-tools-1.15u.ebuild:
+  new upstream version, fixes #83528
 
   09 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   musepack-tools-1.15s-r2.ebuild, musepack-tools-1.15t.ebuild:
