@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.27.2.0.1-r2.ebuild,v 1.1 2004/11/10 08:46:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.27.2.0.1-r2.ebuild,v 1.2 2004/11/10 21:16:18 mr_bones_ Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -65,10 +65,9 @@ patch_grsec_kernel() {
 
 	# Potential security issue in /proc/cmdline bug 59905
 	epatch ${FILESDIR}/2.4.27-cmdline-race.patch
-	
+
 	# remote denial-of-service. bug 62524
 	epatch ${DISTDIR}/linux-2.4.27-nfs3-xdr.patch.bz2
 
 	return 0
 }
-

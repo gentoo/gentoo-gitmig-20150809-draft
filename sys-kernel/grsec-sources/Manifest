@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6199a33f2ebf1fb2fe9f60b4154d19c1 grsec-sources-2.4.27.2.0.1-r2.ebuild 2536
 MD5 1f53cebaf51ee0fb7879595a189deb64 ChangeLog 7050
+MD5 10f710c7e977489e49a135879de8e62d grsec-sources-2.4.27.2.0.1-r2.ebuild 2538
 MD5 140d8af1d66f9f6cd030e7d9902f38d9 metadata.xml 478
-MD5 c47b7075dd1e065b09bb08936c1901a1 files/2.4.26-signal-race.patch 365
-MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/openmosix-sources.CAN-2004-0497.patch 707
-MD5 3dac23b6e285462a7cda41505cc698e1 files/2.4.26-CAN-2004-0394.patch 319
 MD5 8de19d3c0628653407c25bbcbd00383a files/digest-grsec-sources-2.4.27.2.0.1-r2 214
-MD5 36615aa14e3aed91008beeeb406693bf files/2.4.26-pax-binfmt_elf-page-size.patch 427
-MD5 b293289df61d6f42ff54e4e0ceae53cf files/2.4.24-x86.config 2397
-MD5 0f66013f643c79c97fda489618a4e2fd files/gentoo-sources-2.4.CAN-2004-0535.patch 476
-MD5 dc18e982f8149588a291956481885a8c files/gentoo-sources-2.4.CAN-2004-0495.patch 17549
+MD5 3dac23b6e285462a7cda41505cc698e1 files/2.4.26-CAN-2004-0394.patch 319
+MD5 c47b7075dd1e065b09bb08936c1901a1 files/2.4.26-signal-race.patch 365
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBkdVO94CCfB4KcwwRAks0AKCmWIxoPaGbJb2d76IR0i/atzVThwCggiuE
-uWi645eY/KWf1COJprnn1ws=
-=Xj/G
------END PGP SIGNATURE-----
+MD5 b293289df61d6f42ff54e4e0ceae53cf files/2.4.24-x86.config 2397
+MD5 36615aa14e3aed91008beeeb406693bf files/2.4.26-pax-binfmt_elf-page-size.patch 427
+MD5 dc18e982f8149588a291956481885a8c files/gentoo-sources-2.4.CAN-2004-0495.patch 17549
+MD5 0f66013f643c79c97fda489618a4e2fd files/gentoo-sources-2.4.CAN-2004-0535.patch 476
+MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/openmosix-sources.CAN-2004-0497.patch 707
