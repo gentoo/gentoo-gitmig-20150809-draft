@@ -1,13 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-0.2.ebuild,v 1.1 2003/10/13 23:09:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-0.2.ebuild,v 1.2 2003/10/14 04:28:40 vapier Exp $
 
-IUSE=
-
-S="${WORKDIR}/${P}"
-DESCRIPTION="This is a sample skeleton ebuild file"
-SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
+DESCRIPTION="userspace implementation of devfs"
 HOMEPAGE="http://www.kernel.org/"
+SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,8 +28,8 @@ src_unpack() {
 	sed -ie "/^CFLAGS/ c\CFLAGS = ${CFLAGS}" libsysfs/Makefile
 
 	# Make sure we do not build libsysfs
-# For now we use included libsysfs, as udev do not work with
-# latest libsysfs from sysfsutils yet ...
+	# For now we use included libsysfs, as udev do not work with
+	# latest libsysfs from sysfsutils yet ...
 #	echo 'all:' > libsysfs/Makefile
 
 	epatch ${FILESDIR}/${P}-major_minor-in-decimal.patch
