@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/gkrellweather
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.8 2003/03/01 22:17:18 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.9 2003/04/23 00:18:11 lostlogic Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -16,6 +16,9 @@
   (Erich Wahl)
 
 *gkrellweather-2.0.3 (10 Nov 2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> gkrellweather-2.0.3.ebuild:
+  Change supersed dependencies
 
   10 Nov 2002; Seemant Kulleen <seemant@gentoo.org>
   gkrellweather-2.0.3.ebuild files/digest-gkrellweather-2.0.3 :
