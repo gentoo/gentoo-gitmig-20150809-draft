@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.6 2004/10/31 20:27:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.7 2004/11/14 16:04:14 axxo Exp $
 
 inherit java-utils
 
@@ -18,8 +18,8 @@ IUSE="jikes doc"
 RDEPEND=">=virtual/jdk-1.4"
 DEPEND="${RDEPEND}
 	doc? (
-		=app-text/docbook-xml-dtd-4.3*
-		=app-text/docbook-xsl-stylesheets-1.65.1*
+		>=app-text/docbook-xml-dtd-4.3
+		>=app-text/docbook-xsl-stylesheets-1.65.1
 		dev-libs/libxslt
 	)
 	>=dev-java/ant-1.5.4
@@ -30,9 +30,17 @@ S="${WORKDIR}/jEdit"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	local xsl=$(best_version docbook-xsl-stylesheets);
+	xml=${xml/docbook-};
+	xml=${xml/*\/}
+	local xml=$(best_version docbook-xml-dtd)
+	xsl=${xsl/docbook-}
+	xsl=${xsl/*\/}
+
 	if use doc; then
-		echo "docbook.dtd.catalog=/usr/share/sgml/docbook/xml-dtd-4.3/docbook.cat" > build.properties
-		echo "docbook.xsl=/usr/share/sgml/docbook/xsl-stylesheets-1.65.1" >> build.properties
+		echo "build.directory=." > build.properties
+		echo "docbook.dtd.catalog=/usr/share/sgml/docbook/${xml}/docbook.cat" >> build.properties
+		echo "docbook.xsl=/usr/share/sgml/docbook/${xsl}" >> build.properties
 	fi
 }
 src_compile() {

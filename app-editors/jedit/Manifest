@@ -1,9 +1,19 @@
-MD5 89b424ecfd4d8633fe455f707e343478 ChangeLog 6716
-MD5 4364404349f030ebafdb89842f84d0bc jedit-4.1.ebuild 1861
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a28543cd4823bb43a026577f826f959 jedit-4.1-r1.ebuild 2270
+MD5 b9935823058d50ad980db157b83508d6 jedit-4.2.ebuild 2323
+MD5 4364404349f030ebafdb89842f84d0bc jedit-4.1.ebuild 1861
+MD5 18c9e57640590bab00b823de48b11de5 ChangeLog 6873
 MD5 0c1bc759b6cafc454c336cb35fd05550 metadata.xml 257
-MD5 191605e08f8a48f8f2a88d85c3525213 jedit-4.2.ebuild 2127
-MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1 66
-MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1-r1 66
 MD5 c8305f25e0689d0224f1c0f565a92709 files/jedit-4.1-jikes-fix.patch 492
+MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1 66
 MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2 66
+MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBl4Ia/rLF9B432nYRAvdtAJ9McittKrO1fJyts1SECg9Nti9ohACdEOWb
+AVox5Fas9kuwrpdsYEnJfZ4=
+=1JNO
+-----END PGP SIGNATURE-----

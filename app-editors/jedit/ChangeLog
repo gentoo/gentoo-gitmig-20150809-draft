@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.45 2004/10/31 20:27:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.46 2004/11/14 16:04:14 axxo Exp $
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jedit-4.2.ebuild:
+  don't = depend on docbook, and use evilness to find where the stylesheets
+  are located
 
   31 Oct 2004; Jason Wever <weeve@gentoo.org> jedit-4.2.ebuild:
   Stable on sparc.
