@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmal
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.8 2003/10/27 02:06:48 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.9 2004/02/17 09:00:03 absinthe Exp $
+
+  17 Feb 2004; Dylan Carlson <absinthe@gentoo.org> libmal-0.40.ebuild:
+  masked due to API changes, which breaks everything that currently deps on
+  libmal.
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org> libmal-0.31.ebuild:
   add amd64 flag

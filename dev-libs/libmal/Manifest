@@ -1,4 +1,6 @@
-MD5 9f81f8f567a4c460c61a0e1764b9657f ChangeLog 1023
+MD5 579c1c0724f472130ff4278907a56874 ChangeLog 1180
 MD5 5d1d914266bbce483a3b11a49653efcc libmal-0.31.ebuild 754
 MD5 16b15046bc5a6898d09bee4ca7038211 metadata.xml 213
+MD5 2c4824784fd40d240e387aab8ad7cfff libmal-0.40.ebuild 757
 MD5 86806cf347927d4f0c7fc8be3f8360c1 files/digest-libmal-0.31 63
+MD5 66013732b55f2ed2fe85e54c040b636a files/digest-libmal-0.40 63
