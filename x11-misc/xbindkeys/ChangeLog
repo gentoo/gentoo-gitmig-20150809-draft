@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.13 2004/06/24 22:38:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.14 2004/07/03 13:34:18 pyrania Exp $
+
+*xbindkeys-1.7.1 (03 Jul 2004)
+
+  03 Jul 2004; <pyrania@gentoo.org> +xbindkeys-1.7.1.ebuild:
+  Version bump. Closing bug #53472.
 
   30 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> xbindkeys-1.7.0.ebuild:
   Stable on sparc
