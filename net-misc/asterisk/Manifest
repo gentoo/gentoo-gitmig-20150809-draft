@@ -6,7 +6,7 @@ MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
 MD5 20d4a092a6a7a65a1bcb4cbc981cd1d1 asterisk-1.0.0.ebuild 3425
 MD5 b607fca660a52ad001d968ec51389f4a asterisk-1.0.1.ebuild 5640
 MD5 64cd5e3855adff2b38f2f442004a47b1 files/digest-asterisk-0.2.0 67
-MD5 96927166e5c299f77d298e7f6d1bbe40 files/digest-asterisk-0.5.0 138
+MD5 377ac80460beeda5a79a85e473023a95 files/digest-asterisk-0.5.0 67
 MD5 0243bdde80a5b8433cf93c306458dfd8 files/digest-asterisk-0.9.0 67
 MD5 1bb1cf45f134eeae6adcc7dc17b6b5db files/digest-asterisk-1.0.0 141
 MD5 b97c969a083704e6f8c8c9b07d56db3b files/digest-asterisk-1.0.1 213
