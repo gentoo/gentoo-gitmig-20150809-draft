@@ -1,0 +1,144 @@
+--- ./motif/lib/Xm/util/mkmsgcat.c	2005-01-28 09:42:33.000000000 -0800
++++ ./motif/lib/Xm/util/mkmsgcat.c.jj	2005-01-28 09:42:24.000000000 -0800
+@@ -14,7 +14,7 @@
+ #include <string.h>
+ char buf[1024];
+ 
+-char *OSF_COPYRIGHT = "$\n\
++char *OSF_COPYRIGHT = "$ \n\
+ $  @OSF_COPYRIGHT@\n\
+ $  COPYRIGHT NOTICE\n\
+ $  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.\n\
+@@ -28,7 +28,7 @@
+ $ (c) Copyright 1996 Novell, Inc. \n\
+ $ (c) Copyright 1996 FUJITSU LIMITED.\n\
+ $ (c) Copyright 1996 Hitachi.\n\
+-$";
++$ ";
+ 
+ char *OSF_COPYRIGHT_C = "/*\n\
+  *\n\
+--- ./hotspot/src/cpu/i486/vm/i486.ad	2005-01-27 20:26:50.000000000 -0800
++++ ./hotspot/src/cpu/i486/vm/i486.ad.jj	2005-01-27 20:23:19.000000000 -0800
+@@ -246,10 +246,10 @@
+ static jlong fp_signmask_pool[(4+1)*2]; // 4*128bits(data) + 128bits(alignment)
+ 
+ // Static initialization during VM startup.
++static jlong *float_signmask_pool  = double_quadword(&fp_signmask_pool[1*2], 0x7FFFFFFF7FFFFFFFULL, 0x7FFFFFFF7FFFFFFFULL); 
++static jlong *double_signmask_pool = double_quadword(&fp_signmask_pool[2*2], 0x7FFFFFFFFFFFFFFFULL, 0x7FFFFFFFFFFFFFFFULL); 
++static jlong *float_signflip_pool  = double_quadword(&fp_signmask_pool[3*2], 0x8000000080000000ULL, 0x8000000080000000ULL); 
++static jlong *double_signflip_pool = double_quadword(&fp_signmask_pool[4*2], 0x8000000000000000ULL, 0x8000000000000000ULL); 
+-static jlong *float_signmask_pool  = double_quadword(&fp_signmask_pool[1*2], 0x7FFFFFFF7FFFFFFF, 0x7FFFFFFF7FFFFFFF); 
+-static jlong *double_signmask_pool = double_quadword(&fp_signmask_pool[2*2], 0x7FFFFFFFFFFFFFFF, 0x7FFFFFFFFFFFFFFF); 
+-static jlong *float_signflip_pool  = double_quadword(&fp_signmask_pool[3*2], 0x8000000080000000, 0x8000000080000000); 
+-static jlong *double_signflip_pool = double_quadword(&fp_signmask_pool[4*2], 0x8000000000000000, 0x8000000000000000); 
+ 
+ // !!!!! Special hack to get all type of calls to specify the byte offset
+ //       from the start of the call to the point where the return address
+--- ./hotspot/src/share/vm/prims/jvmtiExport.cpp	2005-01-27 20:48:18.000000000 -0800
++++ ./hotspot/src/share/vm/prims/jvmtiExport.cpp.jj	2005-01-27 20:48:12.000000000 -0800
+@@ -13,8 +13,8 @@
+ extern struct JVMDI_Interface_1_ jvmdiTrace_Interface;  // temporary
+ 
+ #ifdef JVMTI_TRACE
++#define EVT_TRACE(evt,out) if ((JvmtiTrace::event_trace_flags(evt) & JvmtiTrace::SHOW_EVENT_SENT) != 0) { SafeResourceMark rm; tty->print_cr out; }
++#define EVT_TRIG_TRACE(evt,out) if ((JvmtiTrace::event_trace_flags(evt) & JvmtiTrace::SHOW_EVENT_TRIGGER) != 0) { SafeResourceMark rm; tty->print_cr out; }
+-#define EVT_TRACE(evt,out) if ((JvmtiTrace::event_trace_flags(evt) & JvmtiTrace::SHOW_EVENT_SENT) != 0) { SafeResourceMark rm; tty->print_cr##out; }
+-#define EVT_TRIG_TRACE(evt,out) if ((JvmtiTrace::event_trace_flags(evt) & JvmtiTrace::SHOW_EVENT_TRIGGER) != 0) { SafeResourceMark rm; tty->print_cr##out; }
+ #else
+ #define EVT_TRIG_TRACE(evt,out)
+ #define EVT_TRACE(evt,out)
+--- ./hotspot/src/share/vm/prims/jvmtiEventController.cpp	2005-01-27 20:47:15.000000000 -0800
++++ ./hotspot/src/share/vm/prims/jvmtiEventController.cpp.jj	2005-01-27 20:47:12.000000000 -0800
+@@ -10,7 +10,7 @@
+ # include "incls/_jvmtiEventController.cpp.incl"
+ 
+ #ifdef JVMTI_TRACE
++#define EC_TRACE(out) if (JvmtiTrace::trace_event_controller()) { SafeResourceMark rm; tty->print_cr out; } while (0)
+-#define EC_TRACE(out) if (JvmtiTrace::trace_event_controller()) { SafeResourceMark rm; tty->print_cr##out; } while (0)
+ #else
+ #define EC_TRACE(out)
+ #endif /*JVMTI_TRACE */
+--- ./hotspot/src/share/vm/runtime/globals_extension.hpp	2005-01-27 20:32:39.000000000 -0800
++++ ./hotspot/src/share/vm/runtime/globals_extension.hpp.jj	2005-01-27 20:32:15.000000000 -0800
+@@ -110,7 +110,7 @@
+ 
+ #define FLAG_SET_DEFAULT(name, value) ((name) = (value))
+ 
++#define FLAG_SET(type, name, value)   (CommandLineFlagsEx::type##AtPut(FLAG_MEMBER_WITH_TYPE(name,type), (type)(value)))
+-#define FLAG_SET(type, name, value)   (CommandLineFlagsEx::##type##AtPut(FLAG_MEMBER_WITH_TYPE(name,type), (type)(value)))
+ 
+ // Can't put the following in CommandLineFlags because
+ // of a circular dependency on the enum definition.
+--- ./hotspot/src/share/vm/runtime/thread.hpp	2005-01-27 20:15:15.000000000 -0800
++++ ./hotspot/src/share/vm/runtime/thread.hpp.jj	2005-01-27 20:14:41.000000000 -0800
+@@ -460,7 +460,7 @@
+   static ByteSize stack_size_offset()            { return byte_offset_of(Thread, _stack_size ); }
+ 
+ #define TLAB_FIELD_OFFSET(name) \
++  static ByteSize tlab_##name##_offset()            { return byte_offset_of(Thread, _tlab) + ThreadLocalAllocBuffer::name##_offset(); }
+-  static ByteSize tlab_##name##_offset()            { return byte_offset_of(Thread, _tlab) + ThreadLocalAllocBuffer::##name##_offset(); }
+ 
+   TLAB_FIELD_OFFSET(start)
+   TLAB_FIELD_OFFSET(end)
+--- ./hotspot/src/share/vm/memory/dump.cpp	2005-01-27 20:38:23.000000000 -0800
++++ ./hotspot/src/share/vm/memory/dump.cpp.jj	2005-01-27 20:38:21.000000000 -0800
+@@ -1035,7 +1035,7 @@
+ // Support for a simple checksum of the contents of the class list
+ // file to prevent trivial tampering. The algorithm matches that in
+ // the MakeClassList program used by the J2SE build process.
++#define JSUM_SEED ((jlong)0xcafebabebabecafeULL)
+-#define JSUM_SEED ((jlong)0xcafebabebabecafe)
+ static jlong
+ jsum(jlong start, const char *buf, const int len)
+ {
+
+--- ./deploy/make/plugin/adapter/Makefile.jj	2005-01-29 16:44:24.000000000 -0800
++++ ./deploy/make/plugin/adapter/Makefile	2005-01-29 16:44:25.000000000 -0800
+@@ -18,9 +18,9 @@
+   SUBDIRS += ns4-adapter
+ endif
+ 
+-ifeq ($(PLATFORM), linux)
+-  SUBDIRS += ns7-gcc29-adapter
+-endif
++#ifeq ($(PLATFORM), linux)
++#  SUBDIRS += ns7-gcc29-adapter
++#endif
+ 
+ all optimized debug clobber:: $(SUBDIRS)
+ 
+--- ./deploy/make/plugin/nscore/Makefile.jj	2005-01-29 16:52:18.000000000 -0800
++++ ./deploy/make/plugin/nscore/Makefile	2005-01-29 16:52:36.000000000 -0800
+@@ -18,9 +18,9 @@
+   SUBDIRS += unix
+ endif
+ 
+-ifeq ($(PLATFORM), linux)
+-  SUBDIRS += linux-gcc29
+-endif
++#ifeq ($(PLATFORM), linux)
++#  SUBDIRS += linux-gcc29
++#endif
+ 
+ all optimized debug clobber:: $(SUBDIRS)
+ 
+--- ./hotspot/src/os/linux/vm/os_linux.cpp.jj	2005-01-30 13:05:21.028754800 -0800
++++ ./hotspot/src/os/linux/vm/os_linux.cpp	2005-01-30 13:07:31.295951176 -0800
+@@ -6,6 +6,16 @@
+  * SUN PROPRIETARY/CONFIDENTIAL.  Use is subject to license terms.
+  */
+ 
++/* 
++   Some gcc version do not consider noinline defined 
++   so some linux/compiler.hpp version define it as blank
++   which screws up 
++   static void _expand_stack_to(address bottom) __attribute__ ((noinline));
++   */
++#ifndef noinline
++#define noinline noinline
++#endif
++
+ // do not include  precompiled  header file
+ # include "incls/_os_linux.cpp.incl"
+ 
