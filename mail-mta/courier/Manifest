@@ -1,9 +1,10 @@
+MD5 c9c639d89720b3360030f7407a7ab1e4 courier-0.48_pre.ebuild 8665
 MD5 eae06bc935727a2243daae27af6fba24 courier-0.47.ebuild 10447
 MD5 7081e569469cea4e56aeb1a0873f5197 courier-0.47.20041129.ebuild 8638
 MD5 9482696d470d858a2e9331aed21191fa courier-0.46.ebuild 9766
 MD5 8169e6bebff6d078a1c11fad92e6ffbe courier-0.46.20040825.ebuild 10008
 MD5 7428e4492712d927ef9d824ed3e21d85 courier-0.46.20040902.ebuild 10010
-MD5 9dd0100d1978aa34ff605c2945cc501b ChangeLog 16171
+MD5 374f3e3a85103d9a6a68ff33b45c316b ChangeLog 16292
 MD5 b287829e2f9edbcf1ff7bb349055e77e metadata.xml 392
 MD5 f1aff7a3783a8d47aa594e304c0f966f courier-0.47-r1.ebuild 10994
 MD5 52f032e570c6f5f9f69b4e4bdfa562a1 files/password.dist 247
@@ -20,3 +21,4 @@ MD5 e3a4ab031bd750b7ce2c7b85fee83d8e files/set-mime 741
 MD5 548c02d9627ea67bf8109dcf960a60c8 files/digest-courier-0.47.20041129 75
 MD5 8396693e821bf04e8382d047cc740b5e files/digest-courier-0.47-r1 66
 MD5 4eb96413bfbc91629bdf43526716cd1e files/dot_courier 26
+MD5 a073821e5e69bb76e1e713d27f5cda75 files/digest-courier-0.48_pre 66
