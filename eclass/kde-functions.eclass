@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.71 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.72 2004/08/30 13:30:22 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -243,7 +243,11 @@ set-qtdir() {
 	done
 	IFS=$IFSBACKUP
 
-	export QTDIR="/usr/qt/$QTMAJORVER"
+	# Don't se the QTDIR if it's already set
+	# See bug #61967
+	if [ ! $QTDIR ]; then
+		export QTDIR="/usr/qt/$QTMAJORVER"
+	fi
 
 	# i'm putting this here so that the maximum amount of qt/kde apps gets it -- danarmak
 	# if $QTDIR/etc/settings/qtrc file exists, the qt build tools try to create
