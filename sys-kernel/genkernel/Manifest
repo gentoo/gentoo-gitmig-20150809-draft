@@ -13,7 +13,7 @@ MD5 2c3259f869e04ff498e4ba16fd7aad6c files/digest-genkernel-3.1.0c 70
 MD5 ac5aa968fb16a108a6536efc2fe94621 files/digest-genkernel-2.1 200
 MD5 1f19fad2f303865b8a247dcdac81fe02 files/digest-genkernel-2.0 195
 MD5 440e33e8603dd4aad622093a60c7e32e files/digest-genkernel-1.6 66
-MD5 3b7affd62b2cd7dfe4b9de715407c2b8 files/digest-genkernel-3.1.1 200
+MD5 96dc8038a097cb90e18b1b6a83536f53 files/digest-genkernel-3.1.1 270
 MD5 9a17266ead735f39098dc393745e6d88 files/digest-genkernel-3.0.1 69
 MD5 291fa3228fe4c8ef8f5d3a820984be53 files/digest-genkernel-1.9 66
 MD5 dd2611bb1ae0689fbbb0ecdbca6e0cec files/bin-keymaps.tar.gz 17054
