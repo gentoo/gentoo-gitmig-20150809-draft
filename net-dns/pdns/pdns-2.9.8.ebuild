@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.8.ebuild,v 1.4 2004/01/03 19:04:01 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.8.ebuild,v 1.5 2004/04/26 04:34:30 agriffis Exp $
 
 DESCRIPTION="The PowerDNS Daemon."
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -25,7 +25,7 @@ src_compile() {
 	use mysql && modules="gmysql $modules"
 	myconf="$myconf --with-modules=$modules"
 
-	econf $myconf
+	econf $myconf || die "econf failed"
 	emake || die "emake failed"
 }
 

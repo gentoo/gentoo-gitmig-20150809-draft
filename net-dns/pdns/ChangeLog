@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.9 2004/03/10 16:47:58 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.10 2004/04/26 04:34:30 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> pdns-2.9.12.ebuild,
+  pdns-2.9.8.ebuild:
+  Add die following econf for bug 48950
 
 *pdns-2.9.16 (10 Mar 2004)
 
