@@ -1,9 +1,0 @@
---- include/qmlined.h~	2003-04-05 23:49:48.000000000 +0200
-+++ include/qmlined.h	2003-04-05 23:50:00.000000000 +0200
-@@ -22,5 +22,5 @@
- *****************************************************************************/
- #ifndef QMLINED_H
- #define QMLINED_H
--#include "qtmultilineedit.h"
-+#include "qmultilineedit.h"
- #endif
