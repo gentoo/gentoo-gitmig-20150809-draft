@@ -1,0 +1,6 @@
+MD5 6a66385d8d179613729965714e48699f litestream-1.2.ebuild 1024
+MD5 205fd54c92316bcb311dcb9507e159b8 ChangeLog 555
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 7b22396a0ce85c0f2f7260047052237c files/digest-litestream-1.2 65
+MD5 75c1a84a3546138fc57472a7c9882e14 files/litestream-1.2-Makefile.patch 331
+MD5 ed48bbd28f65e23350257f8daabf6102 files/vargs.h 4939
