@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.7 2003/03/19 18:42:27 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.8 2003/03/19 20:50:19 tantive Exp $
 
 *gentoo-rsync-mirror-1.0-r2 (19 Mar 2003)
+
+  19 Mar 2003; Michael Imhof <tantive@gentoo.org> :
+  Masked stable and cleaned out old ebuilds.
 
   19 Mar 2003; Michael Imhof <tantive@gentoo.org> :
   Changed the rsyncd.init from start-stop-daemon to --daemon.
