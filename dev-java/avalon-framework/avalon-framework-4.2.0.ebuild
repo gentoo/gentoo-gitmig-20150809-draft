@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/avalon-framework-4.2.0.ebuild,v 1.4 2005/03/26 03:31:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/avalon-framework-4.2.0.ebuild,v 1.5 2005/04/03 08:30:44 sejo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Avalon Framework"
 HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/avalon/avalon-framework/source/${PF}-src.tar.gz"
-KEYWORDS="~amd64 ~x86 ~ppc64 ~sparc"
+KEYWORDS="~amd64 ~x86 ~ppc64 ~sparc ~ppc"
 LICENSE="Apache-2.0"
 SLOT="4.2"
 
