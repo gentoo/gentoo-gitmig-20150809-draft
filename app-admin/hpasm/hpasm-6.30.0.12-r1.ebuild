@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.13 2004/06/24 21:29:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.14 2004/06/29 19:38:17 agriffis Exp $
 
 inherit rpm
 
@@ -9,7 +9,7 @@ S=${WORKDIR}
 DESCRIPTION="hp Server Management Drivers and Agents"
 HOMEPAGE="http://h18000.www1.hp.com/products/servers/linux/documentation.html"
 SRC_URI="ftp://ftp.compaq.com/pub/products/servers/supportsoftware/linux/RedHat/${MY_P}.Redhat8_0.i386.rpm"
-IUSE=""
+IUSE="snmp"
 LICENSE="hp-value"
 SLOT="0"
 KEYWORDS="x86"
