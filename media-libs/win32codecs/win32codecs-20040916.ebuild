@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20040916.ebuild,v 1.2 2004/10/23 23:36:18 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20040916.ebuild,v 1.3 2004/10/23 23:45:13 chriswhite Exp $
 
 
 DESCRIPTION="Win32 binary codecs for video and audio playback support"
@@ -24,8 +24,8 @@ src_install() {
 
 	if use quicktime
 	then
-		mkdir -p ${D}/usr/lib/quicktime
-		mv *.qtx *.qts qtmlClient.dll  ${D}/usr/lib/quicktime
+		mkdir -p ${D}/usr/lib/win32
+		mv *.qtx *.qts qtmlClient.dll  ${D}/usr/lib/win32
 	fi
 
 	mkdir -p ${D}/usr/lib/win32
