@@ -1,6 +1,6 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.15 2002/10/26 04:01:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.16 2002/10/26 04:02:04 seemant Exp $
 
 *aspell-0.50.2 (05 Oct 2002)
 
@@ -9,7 +9,7 @@
   Nall (nall@gentoo.org) pointed out that elibtoolize --reverse-deps causes
   this build to look in ${D} before /usr/lib, so apps that compile against
   aspell should not have to be recompiled with an aspell version bump any
-  more.  Closes bug #9583.
+  more.  Closes bug #9583.  Note that Azarah came up with the solution :)
 
   05 Oct 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.2.ebuild
   files/digest-aspell-0.50.2 :
