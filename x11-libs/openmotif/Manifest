@@ -2,7 +2,7 @@ MD5 bf79c6badf3196bd504f669a20eb16bb ChangeLog 10348
 MD5 b385c61765918c22c7effa1cb7c70076 openmotif-2.1.30-r5.ebuild 3705
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 84da30838fedca094e625631fd6dbbaa openmotif-2.1.30-r4.ebuild 3288
-MD5 a8b9ea40874b63661926a7bbf78eca8b openmotif-2.1.30-r6.ebuild 3865
+MD5 d2301173afe23e789e219313e9238bde openmotif-2.1.30-r6.ebuild 3863
 MD5 f8dc4e0e78b91ce183afb172e90dcd02 openmotif-2.1.30-r7.ebuild 3921
 MD5 9a8fc1534151f18c1c712850d01856b7 openmotif-2.2.3.ebuild 2850
 MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r5 79
