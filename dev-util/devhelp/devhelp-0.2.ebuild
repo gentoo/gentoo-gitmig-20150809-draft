@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.2.ebuild,v 1.1 2001/10/15 15:34:24 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.2.ebuild,v 1.2 2001/10/22 10:12:02 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Developer help browser"
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/gnome-libs-1.2.8
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	>=dev-util/xml-i18n-tools-0.8.4"
+	>=dev-util/intltool-0.11"
 
 src_compile() {
 	local myconf
