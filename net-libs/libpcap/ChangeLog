@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.32 2005/01/18 21:08:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.33 2005/01/22 06:49:23 dragonheart Exp $
+
+  22 Jan 2005; Daniel Black <dragonheart@gentoo.org> -libpcap-0.7.2-r1.ebuild,
+  -libpcap-0.7.2.ebuild, -libpcap-0.8.1-r1.ebuild, -libpcap-0.8.1.ebuild,
+  libpcap-0.8.3-r1.ebuild, -libpcap-0.8.3.ebuild:
+  QA fix using toolchain-funcs for gcc. Removed old versions
 
   19 Jan 2005; Daniel Black <dragonheart@gentoo.org> libpcap-0.8.3-r1.ebuild:
   Corrected for multilib as per bug #78534. Thanks to Kevin Koltzau
