@@ -1,36 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-- -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-- - -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4db3bf7c83d345ff406531a4479a655a mtx-1.2.17.ebuild 754
 MD5 f19e6f9af1f327690ade769c0e087ed1 mtx-1.2.18.ebuild 809
-MD5 26457002ff4ba2928a9b8f1111e8d82f ChangeLog 2393
+MD5 4db3bf7c83d345ff406531a4479a655a mtx-1.2.17.ebuild 754
+MD5 5d8ba82768f4bad7154f8ab06f0952cb ChangeLog 2395
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8832da25d461a2c902b1fc5076de53a4 files/digest-mtx-1.2.17 65
 MD5 07eb107ed4d8911e6f428014d22ccaec files/digest-mtx-1.2.18 65
-- - -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNzvlLLFUmVNQ7rkRAmyZAJ9aWt+hFIgMF1QZjHtEDAidRzR2HwCdEsjb
-ntyh8IzRirFGU7NrljRJ+b8=
-=LyGB
-- - -----END PGP SIGNATURE-----
-- -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNzwiLLFUmVNQ7rkRAsVYAKC0jZ21S5GjcwImAGxABfX5iFrAAgCgxmpw
-FIrvJb5C3rWlHeajCNwULjY=
-=8yti
-- -----END PGP SIGNATURE-----
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCNzxqLLFUmVNQ7rkRAtO2AJ9JVv4u/JY3f0H83m+0ibEErJ5b9ACgsGVz
-WxxgBkoTSxDfzbt95+mOF30=
-=hk1s
+iD8DBQFCOIWVI1lqEGTUzyQRAnSzAKC7og9y046aQaEL5wpW4ms0cScw0gCgzlvL
+8KDQpAESVLipvB4Oidv9hDU=
+=KnQ6
 -----END PGP SIGNATURE-----
