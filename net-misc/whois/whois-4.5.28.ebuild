@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.26.ebuild,v 1.1 2002/05/15 14:19:58 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.28.ebuild,v 1.1 2002/06/25 10:39:03 bangert Exp $
 
 A=whois_${PV}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,6 +9,7 @@ DESCRIPTION="improved Whois Client"
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/w/whois/${A}"
 HOMEPAGE="http://www.linux.it/~md/software/"
 LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="virtual/glibc >=sys-devel/perl-5"
 RDEPEND="virtual/glibc"
