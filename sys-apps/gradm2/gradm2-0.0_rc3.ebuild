@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/gradm2-0.0_pre4.ebuild,v 1.3 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/gradm2-0.0_rc3.ebuild,v 1.1 2003/09/26 09:49:56 solar Exp $
 
-MY_PV=2.0-pre4
+MY_PV=2.0-${PV/*_/}
 
 MAINTAINER="solar@gentoo.org"
 DESCRIPTION="Administrative interface for grsecuritys2 access control lists"
 SRC_URI="http://www.grsecurity.net/gradm-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.grsecurity.net/"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~sparc"
+KEYWORDS="x86 amd64 ~sparc ~ppc ~alpha"
 SLOT="0"
 
 IUSE=""
@@ -48,18 +48,22 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	mkdir -p ${D}/etc/grsec2
-	doman gradm2.8
-	dodoc acl
 	# Were not ready for init.d,script functions yet.
 		#exeinto /etc/init.d
-		#newexe ${FILESDIR}/grsecurity.rc grsecurity
+		#newexe ${FILESDIR}/grsecurity2.rc grsecurity2
 		#insinto /etc/conf.d
-		#doins ${FILESDIR}/grsecurity
+		#doins ${FILESDIR}/grsecurity2
+
+	mkdir -p -m 755 ${D}/dev/
+	mknod -m 0622 ${D}/dev/grsec c 1 10 || die "Cant mknod for grsec learning device"
+	mkdir -p -m 700 ${D}/etc/grsec2
+	doman gradm2.8
+	dodoc acl
+
 	into /
 	mv gradm{,2}
-	dosbin gradm2
 	dosbin grlearn
+	dosbin gradm2
 
 	# Normal users can authenticate to special roles now and thus 
 	# need execution permission on gradm2. We remove group,other readable bits 
@@ -69,12 +73,12 @@ src_install() {
 
 pkg_setup() {
 	if [ -e /usr/src/linux/grsecurity ]; then
-		[ ! -e /usr/src/linux/grsecurity/gracl_learn.c ] && {
+		if [ ! -e /usr/src/linux/grsecurity/gracl_learn.c ]; then
 			ewarn "gradm2 was designed to be used with grsecurity2 but it looks like your using grsecurity1"
 			ewarn "we hope you know what your doing"
 			einfo "(hint try emerge sys-apps/gradm) If you need support for grsecurity 1.x"
 			echo
-		}
+		fi
 	else
 		ewarn "Your going to need to a grsecurity2 enabled kernel to take advantage of the tool"
 	fi
@@ -90,5 +94,3 @@ pkg_postinst() {
 	fi
 	einfo "Bugs can be reported to <${MAINTAINER}> using http://bugs.gentoo.org"
 }
-
-# grep "extern int grsec_" /usr/src/linux/include/linux/grinternal.h | sed s/'extern int grsec_*'/'# '/g | sed s:';':: | sort
