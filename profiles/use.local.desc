@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.237 2004/02/06 14:25:57 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.238 2004/02/07 11:24:49 spock Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -166,6 +166,8 @@ net-im/bitlbee:jabber - Enable jabber protocol support
 net-im/bitlbee:msn - Enable MSN Messenger protocol support
 net-im/bitlbee:oscar - Enable Oscar (AIM/ICQ) protocol support
 net-im/bitlbee:yahoo - Enable Yahoo Messenger protocol support
+net-im/gnugadu:jabber - Enable jabber protocol support
+net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/jabber-server:j-noaim - If you do NOT want the AIM/ICQ transport built with jabber-server
 net-im/jabber-server:j-nojud - If you do NOT want the Jabber User Directory built with jabber-server
 net-im/jabber-server:j-nomsn - If you do NOT want the MSN transport built with jabber-server
