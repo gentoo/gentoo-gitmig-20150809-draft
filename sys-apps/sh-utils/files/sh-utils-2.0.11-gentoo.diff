@@ -104,7 +104,8 @@ diff -ur ./src/uname.c ./src/uname.c.new
 +	
 +	if ((ffd=fopen("/proc/cpuinfo", "r") )!=NULL) {
 +		while ( fscanf(ffd, "%s :", temp_string) != EOF)
-+			if (!(strcmp(temp_string, "vendor_id"))) {
++			if ( (!(strcmp(temp_string, "vendor_id"))) || 
++				(!(strcmp(temp_string, "machine" ))) ) {
 +					fscanf(ffd, "%s", final_string);
 +					break;
 +			}
