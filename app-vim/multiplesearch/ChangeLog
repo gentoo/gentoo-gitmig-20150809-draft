@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/multiplesearch
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/multiplesearch/ChangeLog,v 1.5 2004/04/04 00:41:52 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/multiplesearch/ChangeLog,v 1.6 2004/06/24 23:02:49 agriffis Exp $
 
   04 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   multiplesearch-1.2.1.ebuild:

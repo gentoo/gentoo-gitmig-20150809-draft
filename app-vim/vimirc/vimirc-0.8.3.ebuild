@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimirc/vimirc-0.8.3.ebuild,v 1.1 2004/04/21 19:24:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimirc/vimirc-0.8.3.ebuild,v 1.2 2004/06/24 23:04:45 agriffis Exp $
 
 inherit vim-plugin
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/supertab
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.9 2004/04/04 00:46:27 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.10 2004/06/24 23:03:32 agriffis Exp $
 
   04 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> supertab-0.32.ebuild:
   Stable on mips

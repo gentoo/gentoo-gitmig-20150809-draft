@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/searchcomplete
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/searchcomplete/ChangeLog,v 1.4 2004/04/04 00:43:16 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/searchcomplete/ChangeLog,v 1.5 2004/06/24 23:03:10 agriffis Exp $
 
   04 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> searchcomplete-1.1.ebuild:
   Stable on sparc

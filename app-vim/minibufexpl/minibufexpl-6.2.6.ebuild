@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/minibufexpl/minibufexpl-6.2.6.ebuild,v 1.6 2004/06/23 17:18:42 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/minibufexpl/minibufexpl-6.2.6.ebuild,v 1.7 2004/06/24 23:02:38 agriffis Exp $
 
 inherit vim-plugin
 

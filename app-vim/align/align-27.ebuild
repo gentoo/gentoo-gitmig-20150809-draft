@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/align-27.ebuild,v 1.2 2004/06/19 23:22:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/align-27.ebuild,v 1.3 2004/06/24 22:59:33 agriffis Exp $
 
 inherit vim-plugin
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/alternate
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.10 2004/06/19 23:24:45 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.11 2004/06/24 22:59:44 agriffis Exp $
 
   20 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> alternate-2.7.ebuild:
   Stable on sparc, mips

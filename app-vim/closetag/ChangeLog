@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/closetag
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/closetag/ChangeLog,v 1.5 2003/12/05 04:26:07 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/closetag/ChangeLog,v 1.6 2004/06/24 23:00:25 agriffis Exp $
 
   05 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> closetag-0.9.ebuild:
   Added amd64 keyword

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/gtk-syntax-20030219.ebuild,v 1.5 2004/03/16 00:55:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/gtk-syntax-20030219.ebuild,v 1.6 2004/06/24 23:01:48 agriffis Exp $
 
 inherit vim-plugin
 
