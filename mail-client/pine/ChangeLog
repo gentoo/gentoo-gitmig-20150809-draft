@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.13 2004/08/06 21:09:39 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.14 2004/08/07 00:55:29 langthang Exp $
+
+  06 Aug 2004; Tuan Van <langthang@gentoo.org> pine-4.61-r1.ebuild:
+  fix typo.
 
 *pine-4.61-r1 (06 Aug 2004)
 
