@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2868 2004/05/24 13:36:52 pauldv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2869 2004/05/25 01:01:32 caleb Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# <caleb@gentoo.org> (24 May 2004)
+# 3.3 alpha1 versions for testing purposes, probably very unstable
+=kde-base/arts-3.3.0_alpha1
+=kde-base/kdelibs-3.3.0_alpha1
+=kde-base/kdebase-3.3.0_alpha1
 
 # <pauldv@gentoo.org> (24 May 2004)
 # Insecure, do not use unless for converting old databases
