@@ -1,3 +1,13 @@
-MD5 ef92219c78463d255879159da52d57bd ChangeLog 1893
-MD5 3964ff5361afd225d1c1e54a297997ca cryptoapi-2.4.7.0.ebuild 1480
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3654ef24968199bb167caf7afe708d79 ChangeLog 2008
+MD5 6bfb4da948693abd0dcd324714a11b28 cryptoapi-2.4.7.0.ebuild 1438
 MD5 92886f018db2a13c3afc8397898c1f0d files/digest-cryptoapi-2.4.7.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMklEmdTrptrqvGERAkGyAJ4qzgosMbK/v9nia3MYxM6CxSDblwCeLslg
+u4yR8QfUXHyMdvbbp0r0bf4=
+=BLVU
+-----END PGP SIGNATURE-----

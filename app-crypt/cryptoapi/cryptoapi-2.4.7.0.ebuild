@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.23 2005/01/01 12:27:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.24 2005/03/12 01:43:26 dragonheart Exp $
 
-inherit check-kernel
+inherit linux-info
 
 DESCRIPTION="Modules that add encryption ability at the kernel level."
 HOMEPAGE="http://www.sourceforge.net/projects/cryptoapi"
@@ -14,11 +14,10 @@ KEYWORDS="x86 -ppc"
 IUSE=""
 
 DEPEND=">=sys-apps/util-linux-2.11o-r2
-	virtual/linux-sources
-	>=sys-apps/portage-1.9.10"
+	virtual/linux-sources"
 
 pkg_setup() {
-	if is_2_5_kernel || is_2_6_kernel ; then
+	if kernel_is gt 2 5; then
 		die "CryptoAPI is only for 2.4 kernels"
 	fi
 }
@@ -54,3 +53,4 @@ pkg_postinst() {
 	einfo "Make sure loopback support is included within your kernel."
 	echo  " "
 }
+

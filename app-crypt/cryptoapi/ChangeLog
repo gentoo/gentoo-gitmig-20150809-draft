@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptoapi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.12 2005/01/01 12:27:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.13 2005/03/12 01:43:26 dragonheart Exp $
+
+  12 Mar 2005; Daniel Black <dragonheart@gentoo.org> cryptoapi-2.4.7.0.ebuild:
+  Transition to linux-info eclass
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> cryptoapi-2.4.7.0.ebuild:
   Add die following econf for bug 48950
