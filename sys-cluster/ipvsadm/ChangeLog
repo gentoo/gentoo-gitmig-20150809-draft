@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.2 2003/05/30 04:00:12 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.3 2003/07/04 02:16:26 iggy Exp $
+
+  03 Jul 2003; ,,, <iggy@gentoo.org> metadata.xml:
+  added metadata.xml
 
   29 May 2003; Zach Welch <zwelch@gentoo.org> ipvsadm-1.21.ebuild:
   fix description and homepage according to comments on bug 15705

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>iggy@gentoo.org</email>
+    <name>Brian Jackson</name>
+    <description>Actively maintained</description>
+  </maintainer>
+  <longdescription>
+    Administration tools for linux virtual server clusters
+  </longdescription>
+</pkgmetadata>
