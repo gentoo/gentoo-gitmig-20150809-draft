@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kportage
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportage/ChangeLog,v 1.6 2004/06/28 23:53:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportage/ChangeLog,v 1.7 2004/06/29 18:09:09 mr_bones_ Exp $
+
+  29 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> kportage-0.6.1.ebuild:
+  Fix the dev-lang/python-2.2.2 dep.
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kportage-0.6.1.ebuild:
   QA: kde-base -> kde, need-kde after R/DEPEND

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportage/kportage-0.6.1.ebuild,v 1.4 2004/06/28 23:53:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportage/kportage-0.6.1.ebuild,v 1.5 2004/06/29 18:09:09 mr_bones_ Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE=""
 
 DEPEND=">=sys-apps/portage-2.0.46-r12
-	dev-lang/python-2.2.2
+	>=dev-lang/python-2.2.2
 	>=x11-libs/qt-3.1"
 need-kde 3
 
