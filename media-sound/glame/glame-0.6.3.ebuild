@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.3.ebuild,v 1.3 2002/11/18 16:37:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.3.ebuild,v 1.4 2002/11/23 02:19:34 foser Exp $
 
 IUSE="nls gnome"
 
@@ -20,6 +20,18 @@ DEPEND=">=dev-util/guile-1.4-r3
 	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	
+	# fix NLS problem (bug #7587)
+	if [ ! "`use nls`" ]
+	then
+		cd ${S}/src/gui
+		mv swapfilegui.c swapfilegui.c.bad
+		sed -e "s:#include <libintl.h>::" swapfilegui.c.bad > swapfilegui.c
+	fi
+}
 
 src_compile() {
 	if [ "`use gnome`" ]
