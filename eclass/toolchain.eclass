@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.4 2004/09/06 01:46:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.5 2004/09/06 14:55:06 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -9,15 +9,14 @@ inherit eutils
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
+EXPORT_FUNCTIONS src_unpack pkg_setup
 IUSE="nls uclibc hardened multilib"
 
-# BIG FAT WARNING!!!!!
-# NO EBUILDS IN THE TREE SHOULD USE THIS ECLASS UNTIL IT IS FINISHED AND
-# STABLE!!! THIS ECLASS IS STILL A WORK IN PROGRESS!!
-# This eclass is only in the tree so that i can trick^H^H^H^H^Hencourage
-# others to help me out. That and I expect super-agent Mr_Bones_ to see
-# the commit and beat me for any mistakes I might have made. ;)
+if [ "${ETYPE}" == "" ] ; then
+	ETYPE="gcc"
+fi
 
+# BIG FAT WARNING!!!!! This eclass is still a work in progress!
 
 # This function handles the basics of setting the SRC_URI for a gcc ebuild.
 # To use, set SRC_URI with:
@@ -780,5 +779,28 @@ add_version_to_shared() {
 			popd > /dev/null || die
 		fi
 	done
+}
+
+
+toolchain_src_unpack() {
+	if [ "${ETYPE}" == "gcc" ] ; then
+		gcc_src_unpack
+	else
+		unpack ${A}
+	fi
+}
+
+
+toolchain_pkg_setup() {
+	if [ "${ETYPE}" == "gcc" ] ; then
+		# if pkg name contains 'gcc', assume we want versioned variables.
+		# if not, assume we're installing an individual lib target and use
+		# non-versioned variables.
+		if [ "${PN}" == "${PN/gcc/}" ] ; then
+			gcc_setup_variables non-versioned
+		else
+			gcc_setup_variables versioned
+		fi
+	fi
 }
 
