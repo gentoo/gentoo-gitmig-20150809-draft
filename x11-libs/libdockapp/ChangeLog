@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libdockapp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.13 2004/09/03 02:47:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.14 2004/09/15 21:20:35 s4t4n Exp $
+
+*libdockapp-0.5.0 (15 Sep 2004)
+
+  15 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> libdocapp-0.5.0-r1.ebuild:
+  Revision bump, adding patch to fix installation paths, closing #64047.
+  I won't change the KEYWORDS variable as these changes are trivial...
 
   02 Sep 2004; Tom Gall <tgall@gentoo.org> libdocapp-0.5.0.ebuild:
   stable on ppc64, bug #62251
