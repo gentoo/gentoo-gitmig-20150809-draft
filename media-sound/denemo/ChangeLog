@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/denemo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.9 2004/08/25 02:38:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.10 2004/09/14 07:35:27 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> denemo-0.7.2.ebuild:
+  Stable amd64, sparc.
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> denemo-0.5.9.ebuild,
   denemo-0.7.2.ebuild:

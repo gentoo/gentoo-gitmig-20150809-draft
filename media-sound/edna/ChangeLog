@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.9 2004/07/20 01:15:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.10 2004/09/14 07:38:04 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> edna-0.5-r3.ebuild:
+  Stable amd64, sparc.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> edna-0.5-r3.ebuild:
   ~amd64

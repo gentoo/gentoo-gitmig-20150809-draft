@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/extace
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.7 2004/08/05 19:38:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.8 2004/09/14 07:38:41 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> extace-1.8.11.ebuild:
+  Stable amd64, sparc.
 
   05 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org> extace-1.8.11.ebuild:
   Added documentation.  Fixed fftw DEP to be versioned... bug #58614.
