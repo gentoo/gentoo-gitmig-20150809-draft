@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.22-r1.ebuild,v 1.4 2004/04/27 21:38:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.22-r1.ebuild,v 1.5 2004/06/09 05:36:21 leonardop Exp $
 
 inherit eutils
 
 DESCRIPTION="Gtk2 frontend for rdesktop"
-HOMEPAGE="http://www.nongnu.org/grdesktop"
+HOMEPAGE="http://www.nongnu.org/grdesktop/"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc amd64"
 
-IUSE=""
+IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.0.6-r3
 	>=net-misc/rdesktop-1.1.0.19.9.0
@@ -23,7 +23,16 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/docbook2X )
 	app-text/scrollkeeper"
 
-S="${WORKDIR}/${P}"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix invalid C code that breaks compilation under gcc 2.
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
+
+	# Correct icon path. See bug #50295.
+	sed -i -e 's:Icon=.*:Icon=grdesktop/icon.png:' grdesktop.desktop
+}
 
 src_compile() {
 	econf \

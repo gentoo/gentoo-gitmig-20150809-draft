@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/grdesktop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.12 2004/04/27 21:38:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.13 2004/06/09 05:36:21 leonardop Exp $
+
+*grdesktop-0.23 (09 Jun 2004)
+
+  09 Jun 2004; L. Boshell <leonardop@gentoo.org> grdesktop-0.23.ebuild:
+  New release.
+
+  08 Jun 2004; L. Boshell <leonardop@gentoo.org> grdesktop-0.22-r1.ebuild,
+  files/grdesktop-0.22-gcc2_fix.patch:
+  Added patch to fix compilation under gcc-2. Cosmetic fixes. Fix the
+  program's icon path in grdesktop.desktop, resolving bug #50295.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> grdesktop-0.22-r1.ebuild:
   Add inherit eutils
