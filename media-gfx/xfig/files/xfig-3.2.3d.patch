@@ -1,0 +1,79 @@
+--- xfig.3.2.3d.orig/Imakefile	Tue May 29 13:32:11 2001
++++ xfig.3.2.3d/Imakefile	Thu Jun 21 22:57:52 2001
+@@ -26,9 +26,9 @@
+ XCOMM app-defaults resource files to go.  You will have to use the environment
+ XCOMM variable XAPPLRESDIR to point to this directory.
+ 
+-XCOMM BINDIR = /usr/bin/X11
++XCOMM BINDIR = /usr/X11/bin
+ XCOMM MKDIRHIER = /bin/sh /usr/bin/X11/mkdirhier
+-XCOMM XAPPLOADDIR = /home/user/xfig
++XAPPLOADDIR = /etc/X11/app-defaults
+ 
+ XCOMM If don't want JPEG support, comment out the #define USEJPEG line
+ XCOMM Uncomment the #define for USEJPEG if you want to be able to import
+@@ -47,8 +47,8 @@
+ 
+ #ifdef USEJPEG
+ #ifdef USEINSTALLEDJPEG
+-JPEGLIBDIR = /usr/local/lib
+-JPEGINCDIR = /usr/include/X11
++JPEGLIBDIR = /usr/lib
++JPEGINCDIR = /usr/include
+ #else
+ JPEGLIBDIR = ../jpeg
+ JPEGINCDIR = $(JPEGLIBDIR)
+@@ -72,8 +72,8 @@
+ XCOMM Change XPMLIBDIR if necessary to point to the xpm library (libXpm)
+ XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
+ 
+-XCOMM #define USEXPM
+-XCOMM #define USEXPM_ICON
++#define USEXPM
++#define USEXPM_ICON
+ 
+ #ifdef USEXPM
+ XPMLIBDIR = $(USRLIBDIR)
+@@ -90,7 +90,7 @@
+ XCOMM Then be sure to change the XAW3DINC to point to the directory where your
+ XCOMM 3D Athena widget headers are located
+ 
+-#define XAW3D
++XCOMM #define XAW3D
+ 
+ #ifdef XAW3D
+ XAW3DINC = -I/usr/include/X11/Xaw3d
+@@ -120,7 +120,7 @@
+ XCOMM If your setlocale() dosen't support the locale, you should
+ XCOMM add -DSETLOCALE to I18N_DEFS.
+ 
+-XCOMM #define I18N
++#define I18N
+ 
+ XCOMM If using an input tablet uncomment the following
+ 
+@@ -131,19 +131,19 @@
+ XCOMM inline functions. With the "INLINE" keyword, you should notice that
+ XCOMM the display will be a bit faster in complex figures
+ 
+-XCOMM USEINLINE = -DUSE_INLINE
++USEINLINE = -DUSE_INLINE
+ 
+ XCOMM use (and change) the following if you want the multi-key data base file
+ XCOMM somewhere other than the standard X11 library directory
+ XCOMM be sure to comment out the second copy of XFIGLIBDIR if you use this one
+-XCOMM XFIGLIBDIR = /usr/local/lib/xfig
++XFIGLIBDIR = /usr/X11R6/lib/xfig
+ 
+ XCOMM use this if you want the multi-key data base file in the standard X11 tree
+-XFIGLIBDIR = $(LIBDIR)/xfig
++XCOMM XFIGLIBDIR = $(LIBDIR)/xfig
+ 
+ XCOMM now you can configure where the documentation should be located
+-XFIGDOCDIR = $(LIBDIR)/xfig
+-XCOMM XFIGDOCDIR = /usr/share/doc/xfig-doc
++XCOMM XFIGDOCDIR = $(LIBDIR)/xfig
++XFIGDOCDIR = /usr/share/doc/xfig-3.2.3d
+ 
+ XCOMM If your system doesn't have strstr undefine the following definition
+ XCOMM HAVE_NO_NOSTRSTR = -DNOSTRSTR
