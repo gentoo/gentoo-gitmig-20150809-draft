@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.5.ebuild,v 1.2 2005/01/04 13:34:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.5.ebuild,v 1.3 2005/01/07 07:55:05 swegener Exp $
 
 inherit eutils confutils
 
@@ -26,7 +26,7 @@ LIGHTTPD_DIR="/var/www/localhost/htdocs/"
 LOG_DIR="/var/log/lighttpd/"
 
 pkg_setup() {
-	enewuser lighttpd /bin/false "${LIGHTTPD_DIR}" nofiles
+	enewuser lighttpd -1 /bin/false "${LIGHTTPD_DIR}" nofiles
 }
 
 src_unpack() {
