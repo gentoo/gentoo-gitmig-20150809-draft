@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/directoryadministrator/directoryadministrator-1.5.1.ebuild,v 1.3 2004/04/30 13:10:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/directoryadministrator/directoryadministrator-1.5.1.ebuild,v 1.4 2004/06/08 04:28:20 raker Exp $
 
 MY_PN="directory_administrator"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -28,4 +28,13 @@ src_install () {
 	dodoc doc/misc_docs/*
 	docinto pam.d
 	dodoc doc/pam.d/*
+}
+
+pkg_postinst() {
+	ewarn "NOTE: You need to enable LDAPv2 support for directory_administrator"
+	ewarn "to work properly.  If you are running openldap-2.1.x,"
+	ewarn "add this line to /etc/openldap/slapd.conf"
+	einfo ""
+	einfo "allow	bind_v2"
+	einfo ""
 }
