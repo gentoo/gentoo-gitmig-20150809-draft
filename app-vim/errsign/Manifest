@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b313c62b713bcc12a1921920187aff85 ChangeLog 333
-MD5 0663129e65980b4bffb6677414052c47 errsign-0.1.ebuild 628
+MD5 003d4c971a23777d0726e5ae9310101e ChangeLog 432
+MD5 788a4ab30de484b2868eae80b88e7bdd errsign-0.1.ebuild 625
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 15ca09ec8f929534a004583cfcb8769a files/digest-errsign-0.1 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBi+VnLLFUmVNQ7rkRAlV7AKC6IhVkUt/UMdge21M5VUhDTKgQqwCgoJt1
-I+inIwIUCkBaBfRlJoxqMLg=
-=yLpT
+iD8DBQFBpMgiLLFUmVNQ7rkRAs7gAJ4x76BYWPZggUoMvjay3x1dX10FyACgwG+Q
+p+djDyUhzEQAeWT9bDA8tRk=
+=3osw
 -----END PGP SIGNATURE-----
