@@ -27,7 +27,7 @@
 
 # <liquidx@gentoo.org> (8 May 2003)
 # testing patch for >=tk-8.4
-=dev-lang/python-2.2.2-r1
+#=dev-lang/python-2.2.2-r1
 
 # <foser@gentoo.org> (7 May 2003)
 # New branch, not backwards compatible.
