@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.25 2004/04/20 19:05:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.26 2004/04/28 15:53:39 dholm Exp $
+
+  28 Apr 2004; David Holm <dholm@gentoo.org> rep-gtk-0.18.ebuild:
+  Added to ~ppc.
 
   20 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> rep-gtk-0.18.ebuild:
   Added ~sparc
