@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/unclutter
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.1 2003/03/16 19:43:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.2 2003/04/10 06:10:47 phosphan Exp $
+
+  10 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> unclutter-8.ebuild:
+  entered a link to the README as Homepage since it has none
+  Closes bug #19068
 
 *unclutter-8 (16 Mar 2003)
 
