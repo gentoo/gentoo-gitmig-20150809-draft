@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/ksetiwatch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ChangeLog,v 1.4 2003/02/12 05:17:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ChangeLog,v 1.5 2003/02/12 13:22:12 hannes Exp $
+
+*ksetiwatch-2.6.0 (12 Feb 2003)
+
+  12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> ksetiwatch-2.6.0.ebuild:
+  version bump, fixes bug #15508
 
   02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> ksetiwatch-2.5.0.ebuild,
   ksetiwatch-2.5.1.ebuild: marked stable for x86
