@@ -914,6 +914,9 @@ dev-lang/tcl-tk
 # instead. Also, this release hasn't been tested with xfs yet, only with
 # reiserfs
 # Doesn't seem to work with xfs :-(
+# <styx@gentoo.org> (Aug 13 2002)
+# I've added grub-0.92-usbfix.patch to grub-0.92.ebuild, to close bug #6372, 
+# hit me if something breaks. Still compiles here.
 >=sys-apps/grub-0.91
 
 # We are masking out the older pams now, in order to get the
