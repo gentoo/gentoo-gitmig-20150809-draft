@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.1-r2.ebuild,v 1.2 2004/07/26 18:39:16 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.1-r2.ebuild,v 1.3 2004/08/27 15:42:43 mholzer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Music Player Daemon (mpd)"
 SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 HOMEPAGE="http://www.musicpd.org"
 
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 ~amd64 ~sparc ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
