@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/bladeenc-0.94.2-r1.ebuild,v 1.3 2003/02/13 13:08:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/bladeenc-0.94.2-r1.ebuild,v 1.4 2003/12/05 13:02:33 weeve Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://bladeenc.mp3.no/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~sparc"
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bladeenc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.4 2003/02/12 07:25:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.5 2003/12/05 13:02:33 weeve Exp $
+
+  05 Dec 2003; Jason Wever <weeve@gentoo.org> bladeenc-0.94.2-r1.ebuild:
+  Added ~sparc to keywords.
 
 *bladeenc-0.94.2-r1 (5 Feb 2003)
 
