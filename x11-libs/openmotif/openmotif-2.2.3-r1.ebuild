@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r1.ebuild,v 1.2 2005/02/14 19:15:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r1.ebuild,v 1.3 2005/02/14 19:28:03 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -129,14 +129,13 @@ src_install() {
 	dodoc COPYRIGHT.MOTIF LICENSE
 	dodoc README RELEASE RELNOTES
 	dodoc BUGREPORT TODO
-
-	# install profile
-	echo "$P" > ${D}/usr/lib/motif/openmotif-2.2
 }
 
+# Profile stuff
 pkg_postinst() {
-	motif-config openmotif-2.2
+	motif-config --install openmotif-2.2
+}
 
-	ewarn "This breaks applications linked against libXm.so.2."
-	ewarn "You have to rebuild these applications with revdep-rebuild."
+pkg_postrm() {
+	motif-config --uninstall openmotif-2.2
 }
