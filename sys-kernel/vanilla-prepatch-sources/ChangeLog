@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/vanilla-prepatch-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/ChangeLog,v 1.18 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/ChangeLog,v 1.19 2003/11/20 20:21:05 iggy Exp $
+
+*vanilla-prepatch-sources-2.4.23_rc2 (20 Nov 2003)
+
+  20 Nov 2003; Brian Jackson <iggy@gentoo.org>
+  vanilla-prepatch-sources-2.4.23_pre6.ebuild,
+  vanilla-prepatch-sources-2.4.23_pre7.ebuild,
+  vanilla-prepatch-sources-2.4.23_pre8.ebuild,
+  vanilla-prepatch-sources-2.4.23_pre9.ebuild,
+  vanilla-prepatch-sources-2.4.23_rc2.ebuild:
+  added rc2, removed pre6-9
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   vanilla-prepatch-sources-2.4.23_rc1.ebuild:
