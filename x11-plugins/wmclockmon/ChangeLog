@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmclockmon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.7 2003/08/25 19:55:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.8 2003/09/27 14:33:57 pyrania Exp $
+
+*wmclockmon-0.3.0 (27 Sep 2003)
+
+  27 Sep 2003; Markus Nigbur <pyrania@gentoo.org> wmclockmon-0.3.0.ebuild:
+  Bump (bug #29742).
 
   25 Aug 2003; Jason Wever <weeve@gentoo.org> wmclockmon-0.2.0.ebuild:
   Marked stable for sparc to fix bug #27311.
