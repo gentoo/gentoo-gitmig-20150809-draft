@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/flac123-0.0.7.ebuild,v 1.2 2004/11/03 16:48:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/flac123-0.0.7.ebuild,v 1.3 2004/11/22 05:25:01 eradicator Exp $
 
 IUSE=""
 
 DESCRIPTION="flac-tools provides flac123 a console app for playing FLAC audio files."
-SRC_URI="mirror://sourceforge/flac-tools/${P}.tar.gz"
 HOMEPAGE="http://flac-tools.sourceforge.net"
+SRC_URI="mirror://sourceforge/flac-tools/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~sparc ~x86 ~ppc64"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="amd64 ~ppc64 sparc x86"
 
 DEPEND="media-libs/flac
 	media-libs/libao"
