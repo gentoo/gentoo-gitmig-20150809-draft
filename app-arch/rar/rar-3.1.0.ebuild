@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.1.0.ebuild,v 1.1 2002/12/23 19:29:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.1.0.ebuild,v 1.2 2003/02/13 05:56:02 vapier Exp $
 
 S=${WORKDIR}/${PN}
 MY_P=${PN}linux-${PV}

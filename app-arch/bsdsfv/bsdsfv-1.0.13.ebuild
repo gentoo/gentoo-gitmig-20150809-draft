@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.	  
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/bsdsfv-1.0.13.ebuild,v 1.5 2002/12/09 04:17:36 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/bsdsfv-1.0.13.ebuild,v 1.6 2003/02/13 05:52:56 vapier Exp $
 
 S=${WORKDIR}/bsdsfv
 DESCRIPTION="BSDSFV: All-in-one SFV checksum utility"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gnorpm/gnorpm-0.96.ebuild,v 1.11 2002/12/09 04:17:36 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gnorpm/gnorpm-0.96.ebuild,v 1.12 2003/02/13 05:54:45 vapier Exp $
 
 DESCRIPTION="A Gnome RPM Frontend"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-8.0.ebuild,v 1.12 2002/12/16 14:36:52 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-8.0.ebuild,v 1.13 2003/02/13 05:56:26 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Convert a .rpm file to a .tar.gz archive"
