@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.2 2005/02/11 16:29:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.3 2005/02/11 20:07:04 eradicator Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -213,6 +213,8 @@ src_install() {
 	if use opengl; then
 		dynamic_libgl_install
 	fi
+
+	fix_libtool_libdir_paths "$(find ${D} -name *.la)"
 
 	cursor_install
 
@@ -1097,14 +1099,13 @@ libtool_archive_install() {
 		# (#67729) Needs to be lib, not $(get_libdir)
 		doins ${FILES_DIR}/lib/*.la
 	fi
-
-	fix_libtool_libdir_paths "$(find ${D} -name *.la)"
 }
 
 fix_libtool_libdir_paths() {
 	local dirpath
 	for archive in ${*} ; do
 		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
+		[[ ${dirpath::1} == "/" ]] || dirpath="/"${dirpath}
 		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
 	done
 }
