@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pal
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.5 2004/02/29 17:20:00 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.6 2004/03/16 07:57:04 wschlich Exp $
+
+*pal-0.3.3 (16 Mar 2004)
+
+  16 Mar 2004; Wolfram Schlich <wschlich@gentoo.org> pal-0.3.3.ebuild:
+  version bump
 
 *pal-0.3.2 (08 Jan 2004)
 
