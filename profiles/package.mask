@@ -1,9 +1,6 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
-# (blocke, 17-Feb-2002) pam 0.75-r2 masked out... needs more work and testing
->=sys-libs/pam-0.75-r2
-
 # 18 Feb 2002, azarah.
 # Gnumeric needs 0.0.17, and most other stuff should work with this version
 >gnome-extra/gb-0.0.17
