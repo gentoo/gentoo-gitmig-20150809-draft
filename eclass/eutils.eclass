@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.119 2004/10/14 22:44:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.120 2004/10/15 19:48:26 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1430,7 +1430,7 @@ strip-linguas() {
 	newls=""
 	for f in ${LINGUAS} ; do
 		if [ "${ls/ ${f} /}" != "${ls}" ] ; then
-			nl="${newls} ${f}"
+			newls="${newls} ${f}"
 		else
 			ewarn "Sorry, but ${PN} does not support the ${f} LINGUA"
 		fi
