@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.8_pre20031214.ebuild,v 1.2 2004/02/01 05:17:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.8_pre20040112.ebuild,v 1.1 2004/02/01 05:17:21 usata Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P/_pre/.}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="~x86 ~alpha"
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.3
