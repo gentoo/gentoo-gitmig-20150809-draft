@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.58.ebuild,v 1.1 2004/04/06 14:42:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.58.ebuild,v 1.2 2004/04/16 11:39:27 mcummings Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="~x86 ~amd64 ~alpha ~ppc ~sparc"
 
-newdepend ">=dev-perl/XML-SAX-0.12
+DEPEND=">=dev-perl/XML-SAX-0.12
 	dev-perl/XML-LibXML-Common
 	>=dev-libs/libxml2-2.6.6
 	>=dev-perl/XML-NamespaceSupport-1.07"

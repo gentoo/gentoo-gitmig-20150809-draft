@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTP-GHTTP
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.12 2004/03/20 10:12:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.13 2004/04/16 11:26:45 mcummings Exp $
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org>
+  HTTP-GHTTP-1.07-r1.ebuild, HTTP-GHTTP-1.07.ebuild:
+  Syntax fix for newdepend, bug 29064
 
   20 Mar 2004; Joshua Kinard <kumba@gentoo.org> HTTP-GHTTP-1.07-r1.ebuild:
   Added ~mips to KEYWORDS.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.38.ebuild,v 1.6 2004/03/21 09:17:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.38.ebuild,v 1.7 2004/04/16 11:31:43 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,9 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha hppa ~mips"
 
-newdepend "dev-perl/Digest-MD5 dev-perl/Digest-HMAC dev-perl/MIME-Base64 || ( dev-perl/Test-Simple >=dev-lang/perl-5.8.0-r12 )"
+DEPEND="dev-perl/Digest-MD5
+		dev-perl/Digest-HMAC
+		dev-perl/MIME-Base64 || ( dev-perl/Test-Simple >=dev-lang/perl-5.8.0-r12 )"
 mydoc="TODO"
 
 src_compile() {

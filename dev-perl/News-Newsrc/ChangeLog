@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/News-Newsrc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.1 2003/12/24 05:10:26 rac Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.2 2004/04/16 11:37:48 mcummings Exp $
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org>
+  News-Newsrc-1.08.ebuild:
+  Syntax fix for newdepend, bug 29064
 
 *News-Newsrc-1.08 (23 Dec 2003)
 

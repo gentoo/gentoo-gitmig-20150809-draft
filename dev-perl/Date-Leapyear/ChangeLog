@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Date-Leapyear
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.12 2004/01/19 02:49:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.13 2004/04/16 11:22:21 mcummings Exp $
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org>
+  Date-Leapyear-1.7-r1.ebuild, Date-Leapyear-1.7.ebuild:
+  Syntax fix for newdepend, bug 29064
 
   18 Jan 2004; <gustavoz@gentoo.org> Date-Leapyear-1.71.ebuild:
   stable on sparc

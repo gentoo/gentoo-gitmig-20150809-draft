@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6.1.ebuild,v 1.9 2004/02/25 00:41:26 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6.1.ebuild,v 1.10 2004/04/16 11:17:37 mcummings Exp $
 
 inherit perl-module
 
@@ -14,19 +14,19 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ~alpha sparc ~ppc"
 
-newdepend ">=dev-perl/libapreq-1.0 \
-	>=dev-perl/Compress-Zlib-1.10 \
-	>=dev-perl/Error-0.13 \
+DEPEND=">=dev-perl/libapreq-1.0
+	>=dev-perl/Compress-Zlib-1.10
+	>=dev-perl/Error-0.13
 	gnome? ( >=dev-perl/HTTP-GHTTP-1.06 )
-	>=dev-perl/libwww-perl-5.64-r1 \
-	>=dev-perl/Storable-1.0.7 \
-	>=dev-perl/XML-XPath-1.04 \
-	>=dev-perl/XML-LibXML-1.31 \
-	>=dev-perl/XML-LibXSLT-1.31 \
-	>=dev-perl/XML-Parser-2.31 \
-	>=dev-perl/XML-Sablot-0.50 \
-	>=dev-perl/Digest-MD5-2.09 \
-	>=sys-apps/sed-4 \
+	>=dev-perl/libwww-perl-5.64-r1
+	>=dev-perl/Storable-1.0.7
+	>=dev-perl/XML-XPath-1.04
+	>=dev-perl/XML-LibXML-1.31
+	>=dev-perl/XML-LibXSLT-1.31
+	>=dev-perl/XML-Parser-2.31
+	>=dev-perl/XML-Sablot-0.50
+	>=dev-perl/Digest-MD5-2.09
+	>=sys-apps/sed-4
 	<dev-perl/mod_perl-1.99"
 
 src_unpack() {

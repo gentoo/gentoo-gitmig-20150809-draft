@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Log-TraceMessages
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.2 2003/06/08 08:47:27 rac Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.3 2004/04/16 11:28:14 mcummings Exp $
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org>
+  Log-TraceMessages-1.3.ebuild:
+  Syntax fix for newdepend, bug 29064
 
 *Log-TraceMessages-1.3 (08 Jun 2003)
 

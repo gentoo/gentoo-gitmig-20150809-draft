@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/pgperl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/ChangeLog,v 1.1 2003/06/06 20:46:19 nakano Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/ChangeLog,v 1.2 2004/04/16 11:40:29 mcummings Exp $
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org> pgperl-2.0.2.ebuild:
+  Syntax fix for newdepend, bug 29064
 
 *pgperl-2.0.2 (06 Jun 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r5.ebuild,v 1.3 2004/04/15 02:56:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r5.ebuild,v 1.4 2004/04/16 11:33:44 mcummings Exp $
 
 MY_P="${P}ii"
 S=${WORKDIR}/${PN}
@@ -11,7 +11,8 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~sparc ~alpha ~ppc ~hppa ~ia64 mips"
-newdepend ">=dev-lang/perl-5.8.0-r12 >=sys-apps/sed-4"
+DEPEND=">=dev-lang/perl-5.8.0-r12
+		>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.12 2004/02/25 00:42:29 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.13 2004/04/16 11:20:09 mcummings Exp $
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.31.ebuild:
+  Syntax fix for newdepend, bug 29064
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> DBD-Pg-1.22.ebuild:
   Stable on sparc, thanks to Josh Grebe <josh@brokedown.net> for testing!

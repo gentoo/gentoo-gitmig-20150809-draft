@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008.ebuild,v 1.4 2004/04/14 21:24:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008.ebuild,v 1.5 2004/04/16 11:33:12 mcummings Exp $
 
 inherit perl-module
 
@@ -21,7 +21,7 @@ KEYWORDS="x86 ~sparc"
 #if kdebindings is installed compilation is really fast!
 # because libsmoke comes with kdebindings-3.1
 
-newdepend ">=x11-libs/qt-3.0.0"
+DEPEND=">=x11-libs/qt-3.0.0"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/Date-ISO-1.28-r1.ebuild,v 1.5 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/Date-ISO-1.28-r1.ebuild,v 1.6 2004/04/16 11:21:49 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 
-newdepend "dev-perl/Date-ICal
+DEPEND="dev-perl/Date-ICal
 	dev-perl/Memoize"
 
 src_compile() {

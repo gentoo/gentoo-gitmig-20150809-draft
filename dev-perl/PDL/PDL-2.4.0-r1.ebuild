@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r1.ebuild,v 1.6 2004/04/15 02:47:33 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r1.ebuild,v 1.7 2004/04/16 11:32:41 mcummings Exp $
 
 IUSE="opengl"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="Artistic as-is"
 KEYWORDS="x86 amd64 ~ppc sparc alpha hppa mips"
 
-newdepend ">=sys-libs/ncurses-5.2
+DEPEND=">=sys-libs/ncurses-5.2
 	dev-perl/Filter
 	|| ( dev-perl/File-Spec >=dev-lang/perl-5.8.0-r12 )
 	dev-perl/Inline
@@ -21,7 +21,7 @@ newdepend ">=sys-libs/ncurses-5.2
 	dev-perl/Text-Balanced
 	opengl? ( virtual/opengl virtual/glu )"
 
-mydoc="DEPNDENCIES DEVELOPMENT MANIFEST* COPYING Release_Notes TODO"
+mydoc="DEPENDENCIES DEVELOPMENT MANIFEST* COPYING Release_Notes TODO"
 
 
 src_unpack() {

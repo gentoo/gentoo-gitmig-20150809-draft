@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/Digest-HMAC-1.01-r1.ebuild,v 1.10 2004/03/23 09:48:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/Digest-HMAC-1.01-r1.ebuild,v 1.11 2004/04/16 11:23:54 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,9 @@ KEYWORDS="x86 amd64 ppc sparc alpha hppa mips ia64"
 
 mydoc="rfc*.txt"
 
-newdepend "dev-perl/digest-base dev-perl/Digest-MD5 dev-perl/Digest-SHA1"
+DEPEND="dev-perl/digest-base
+		dev-perl/Digest-MD5
+		dev-perl/Digest-SHA1"
 
 src_compile() {
 	perl-module_src_compile

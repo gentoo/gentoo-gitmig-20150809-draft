@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/News-Newsrc-1.08.ebuild,v 1.1 2003/12/24 05:10:26 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/News-Newsrc-1.08.ebuild,v 1.2 2004/04/16 11:37:48 mcummings Exp $
 
 inherit perl-module
 
@@ -12,5 +12,5 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64 ~hppa"
 SRC_TEST="do"
-newdepend ">=dev-perl/Set-IntSpan-1.07"
+DEPEND=">=dev-perl/Set-IntSpan-1.07"
 

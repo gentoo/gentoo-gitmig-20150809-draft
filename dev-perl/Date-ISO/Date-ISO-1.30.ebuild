@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/Date-ISO-1.30.ebuild,v 1.3 2004/01/19 03:05:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/Date-ISO-1.30.ebuild,v 1.4 2004/04/16 11:21:49 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ~ppc sparc ~alpha"
 
-newdepend "dev-perl/Date-Leapyear
+DEPEND="dev-perl/Date-Leapyear
 	dev-perl/Test-Simple
 	dev-perl/Date-ICal
 	dev-perl/Memoize"

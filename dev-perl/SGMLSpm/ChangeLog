@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.17 2004/04/15 02:56:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.18 2004/04/16 11:33:44 mcummings Exp $
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org> SGMLSpm-1.03-r5.ebuild:
+  Syntax fix for newdepend, bug 29064
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> SGMLSpm-1.03-r5.ebuild:
   Marked stable on mips.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.29 2004/03/20 02:59:10 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.30 2004/04/16 11:18:56 mcummings Exp $
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org> CGI-2.97.ebuild,
+  CGI-2.98.ebuild, CGI-2.99.ebuild, CGI-3.00.ebuild, CGI-3.04.ebuild:
+  Syntax fix for newdepend, bug 29064
 
   19 Mar 2004; Eric Sammer <esammer@gentoo.org> :
   Fixed category-less dependencies as per bug #45110.
