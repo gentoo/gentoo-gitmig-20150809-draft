@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.14 2004/02/26 14:41:30 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.15 2004/03/06 01:20:29 gustavoz Exp $
+
+  05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> wv2-0.2.ebuild:
+  stable on sparc
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> wv2-0.1.9.ebuild:
   Ooops, forgot a depend for KOffice ;)
