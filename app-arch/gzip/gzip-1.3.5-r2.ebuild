@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r2.ebuild,v 1.2 2004/10/27 00:00:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r2.ebuild,v 1.3 2004/10/27 01:02:51 lv Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/g/gzip/gzip_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~x86 ~ppc sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390"
 IUSE="nls build static pic"
 
 RDEPEND="virtual/libc"
