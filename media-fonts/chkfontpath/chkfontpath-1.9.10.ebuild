@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/chkfontpath/chkfontpath-1.9.10.ebuild,v 1.6 2004/07/14 17:04:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/chkfontpath/chkfontpath-1.9.10.ebuild,v 1.7 2005/03/03 16:26:50 ciaranm Exp $
 
 IUSE=""
 
@@ -22,7 +22,7 @@ DEPEND="virtual/libc
 	dev-libs/popt"
 
 RDEPEND="${DEPEND}
-	sys-apps/psmisc"
+	sys-process/psmisc"
 
 
 src_unpack() {
