@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r3.ebuild,v 1.2 2003/01/25 00:58:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r3.ebuild,v 1.3 2003/02/07 19:53:47 agriffis Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit libtool gnome.org
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GNOME http client library"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 HOMEPAGE="http://www.gnome.org/"
 
