@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.18 2003/02/26 19:26:37 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.19 2003/03/19 19:11:53 agriffis Exp $
 
 *ccache-2.2 (26 Feb 2003)
+
+  19 Mar 2003; Aron Griffis <agriffis@gentoo.org> ccache-2.2.ebuild:
+  Mark stable on alpha
 
   26 Feb 2003; Zach Welch <zwelch@gentoo.org> ccache-2.2.ebuild files/digest-ccache-2.2 :
   Bump to new version; see bug 15100
