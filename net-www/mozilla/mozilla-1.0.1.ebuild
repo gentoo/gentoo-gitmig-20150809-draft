@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1.ebuild,v 1.3 2002/10/05 05:39:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1.ebuild,v 1.4 2002/10/08 07:48:46 hanno Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome"
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.mozilla.org"
 
 KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
-LICENSE="MPL-1.1 | NPL-1.1"
+LICENSE="MPL-1.1 NPL-1.1"
 
 RDEPEND=">=x11-base/xfree-4.2.0-r11
 	>=gnome-base/ORBit-0.5.10-r1
