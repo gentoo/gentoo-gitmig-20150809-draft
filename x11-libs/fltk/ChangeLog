@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.17 2002/12/19 04:21:39 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.18 2003/01/09 03:51:16 raker Exp $
+
+*fltk-1.1.2-r1 (09 Jan 2003)
+
+  08 Jan 2003; Nick Hadaway <raker@gentoo.org> fltk-1.1.2-r1.ebuild,
+  files/digest-fltk-1.1.2-r1 :
+  New ebuild which only enables xft if you are using the "stock"
+  xfree86 xft headers/etc.
 
 *fltk-1.1.2 (09 Dec 2002)
 
