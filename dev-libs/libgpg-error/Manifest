@@ -1,8 +1,20 @@
-MD5 effd80e5a44ba31c4d8a2d5c536ddf22 ChangeLog 2377
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6a5441b8d2b5aca83f5befceba929c5c ChangeLog 2694
 MD5 c1784906f80f5c9beefa83016ff0460e libgpg-error-0.6.ebuild 682
-MD5 2a664bbeadfb78e5cd7c82666a8ebc99 libgpg-error-0.7.ebuild 772
-MD5 6dd39fb20ec5139983924e851cf18919 libgpg-error-1.0.ebuild 837
 MD5 cbb90c3fb885f86a1c6bea0f4493f9ab metadata.xml 250
+MD5 2a664bbeadfb78e5cd7c82666a8ebc99 libgpg-error-0.7.ebuild 772
+MD5 1fc3507f73c30f5490ae3744a123f0e5 libgpg-error-1.0.ebuild 865
+MD5 7b6cf538ae6381196496ae0c3a7dfed9 libgpg-error-1.0-r1.ebuild 844
 MD5 2a0413caa56a5072d7da6e76fa995239 files/digest-libgpg-error-0.6 68
 MD5 79ccf482189a756d86e48ae6519bae82 files/digest-libgpg-error-0.7 68
 MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0 68
+MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBSpqHmdTrptrqvGERAnacAJ4g/JuZtA9lNF3flYeTUCMQkBxsCgCeP+bI
+7FXq8MIMO9zEWJaeZf/ThIA=
+=oEVF
+-----END PGP SIGNATURE-----

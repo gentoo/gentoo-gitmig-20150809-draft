@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.20 2004/09/09 18:20:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.21 2004/09/17 08:04:17 dragonheart Exp $
+
+*libgpg-error-1.0-r1 (17 Sep 2004)
+
+  17 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  +libgpg-error-1.0-r1.ebuild, libgpg-error-1.0.ebuild:
+  Removed nls USE flag from libgpg-error-1.0 until the cause of bug 63919 can be
+  found. Copied libgpg-error-1.0 to libgpg-error-1.0-r1 to continue debugging
+  effort
 
   09 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> libgpg-error-1.0.ebuild:
   Stable on sparc
