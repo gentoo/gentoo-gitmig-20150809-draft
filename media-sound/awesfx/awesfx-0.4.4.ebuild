@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.4.4.ebuild,v 1.9 2004/06/24 23:51:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.4.4.ebuild,v 1.10 2004/07/01 07:48:46 eradicator Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ DESCRIPTION="AWE Utilities - sfxload"
 HOMEPAGE="http://mitglied.lycos.de/iwai/awedrv.html"
 SRC_URI="http://mitglied.lycos.de/iwai/${P}.tar.bz2"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="GPL-2"

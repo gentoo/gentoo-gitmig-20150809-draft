@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-0.9.2.ebuild,v 1.8 2004/06/25 00:10:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-0.9.2.ebuild,v 1.9 2004/07/01 07:53:57 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=x11-libs/qt-3.0.3
 	media-libs/portaudio
 	media-sound/madplay

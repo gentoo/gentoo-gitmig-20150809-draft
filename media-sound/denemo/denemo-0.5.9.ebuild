@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.5.9.ebuild,v 1.6 2004/06/24 23:57:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.5.9.ebuild,v 1.7 2004/07/01 07:50:47 eradicator Exp $
 
 DESCRIPTION="GTK+ graphical music notation editor"
 HOMEPAGE="http://denemo.sourceforge.net/"
@@ -11,13 +11,13 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	=x11-libs/gtk+-1.2*
 	dev-libs/libxml
 	dev-util/yacc
 	sys-devel/flex
 	sys-devel/gettext"
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	=x11-libs/gtk+-1.2*
 	dev-libs/libxml"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.8 2004/06/25 00:04:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.9 2004/07/01 07:52:36 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="OSI-Approved"
 KEYWORDS="x86 ~amd64 ~ppc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 

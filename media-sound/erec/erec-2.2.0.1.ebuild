@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/erec-2.2.0.1.ebuild,v 1.3 2004/06/24 23:58:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/erec-2.2.0.1.ebuild,v 1.4 2004/07/01 07:51:13 eradicator Exp $
 
 DESCRIPTION="A shared audio recording server"
 HOMEPAGE="http://bisqwit.iki.fi/source/erec.html"
@@ -10,7 +10,7 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="sys-apps/sed"
 
 IUSE=""

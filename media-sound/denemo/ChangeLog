@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/denemo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.4 2004/06/24 23:57:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.5 2004/07/01 07:50:47 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> denemo-0.5.9.ebuild:
+  virtual/glibc -> virtual/libc
 
   10 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> denemo-0.5.9.ebuild,
   denemo-0.7.2.ebuild:

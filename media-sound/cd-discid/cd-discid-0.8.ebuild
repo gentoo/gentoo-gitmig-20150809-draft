@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/cd-discid-0.8.ebuild,v 1.6 2004/06/24 23:53:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/cd-discid-0.8.ebuild,v 1.7 2004/07/01 07:55:17 eradicator Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ DESCRIPTION="returns the disc id for the cd in the cd-rom drive"
 SRC_URI="http://lly.org/~rcw/cd-discid/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://lly.org/~rcw/abcde/page/"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="GPL-2"

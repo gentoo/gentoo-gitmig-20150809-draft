@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtick
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.11 2004/06/25 00:04:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.12 2004/07/01 07:52:50 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gtick-0.2.4.ebuild:
+  virtual/glibc -> virtual/libc
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> gtick-0.2.13.ebuild,
   gtick-0.2.4.ebuild, gtick-0.3.0.ebuild:

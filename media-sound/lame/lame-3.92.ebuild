@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.20 2004/06/25 00:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.21 2004/07/01 07:56:20 eradicator Exp $
 
 inherit libtool
 
@@ -13,13 +13,13 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE="gtk debug" #oggvorbis
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	x86? ( dev-lang/nasm )
 	>=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
 # Oggvorbis support breaks with -rc3
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"

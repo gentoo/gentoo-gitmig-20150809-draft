@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.41 2004/06/26 20:22:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.42 2004/07/01 07:56:20 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lame-3.92.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lame-3.92.ebuild:
+  virtual/glibc -> virtual/libc
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> -files/intcast.spider,
   lame-3.96.ebuild:

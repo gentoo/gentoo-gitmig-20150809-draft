@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.3.2.ebuild,v 1.5 2004/06/24 23:58:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.3.2.ebuild,v 1.6 2004/07/01 07:56:05 eradicator Exp $
 
 IUSE="ncurses arts alsa python oss mikmod oggvorbis jack audiofile"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	jack?	( media-sound/jack-audio-connection-kit )
 	media-libs/ladspa-sdk
 	audiofile? ( media-libs/audiofile )

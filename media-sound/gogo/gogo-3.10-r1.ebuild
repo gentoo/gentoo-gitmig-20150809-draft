@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.13 2004/06/25 00:02:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.14 2004/07/01 07:52:22 eradicator Exp $
 
 inherit eutils
 IUSE="debug"
@@ -19,7 +19,7 @@ DEPEND="dev-lang/nasm"
 #	gtk?    ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
 # Oggvorbis support breaks with -rc3
-#RDEPEND="virtual/glibc"
+#RDEPEND="virtual/libc"
 #	>=sys-libs/ncurses-5.2
 #	gtk?    ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"

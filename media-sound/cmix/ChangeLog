@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/cmix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/ChangeLog,v 1.4 2004/06/24 23:55:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/ChangeLog,v 1.5 2004/07/01 07:55:57 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cmix-1.6.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cmix-1.6.ebuild:
+  virtual/glibc -> virtual/libc
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> cmix-1.6.ebuild:
   Added IUSE.
