@@ -1,5 +1,2 @@
-MD5 c86a25e3f580bd3065077fd5782029f4 /files/rxvt-2.7.8-azz4.diff 5032
-MD5 80a958edd8a6f68140bca93f4bdeadbd /files/rxvt-2.7.8-security.patch 1038
-MD5 a38b2f365a55cad915e1e503466ab029 /files/rxvt-2.7.10-azz4.diff 5072
-MD5 0d25606468eb980059b17f68db3912dd /rxvt-2.7.10.ebuild 1106
 MD5 302c5c455e64047b02d1ef19ff749141 rxvt-2.7.10.tar.gz 595073
+MD5 16be90450ba268312bb146b3d4e7b6e9 rxvt-2.7.10-rk.patch 2772

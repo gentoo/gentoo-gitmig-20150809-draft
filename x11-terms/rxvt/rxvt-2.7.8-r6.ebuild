@@ -1,15 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.3 2003/03/26 11:12:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.4 2003/08/02 21:16:26 usata Exp $
 
 inherit eutils
 
-IUSE="motif"
+IUSE="motif cjk"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="rxvt -- nice small x11 terminal"
 HOMEPAGE="http://www.rxvt.org"
-SRC_URI="ftp://ftp.rxvt.org/pub/rxvt/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz
+	cjk? ( http://hp.vector.co.jp/authors/VA021953/rxvt/src/${P}-rk.patch )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,6 +26,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-security.patch
 	use motif && epatch ${FILESDIR}/${P}-azz4.diff
+	use cjk && epatch ${DISTDIR}/${P}-rk.patch
 }
 
 src_compile() {
@@ -52,7 +54,7 @@ src_install() {
 
 	einstall \
 		mandir=${D}/usr/share/man/man1 || die
-	
+
 	cd ${S}/doc
 	dodoc README* *.txt BUGS FAQ
 	dohtml *.html
