@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <pebenito@gentoo.org> 13 June 2003
+# needs testing, new patches, esp one to make it
+# play nice with glibc 2.3.2
+>=sys-apps/selinux-small-2003040709-r4
+
 # <vladimir@gentoo.org> 10 June 2003
 # As per Luca's request
 # buffer issue on ncurses application (e.g. BitchX)
