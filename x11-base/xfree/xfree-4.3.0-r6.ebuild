@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.11 2004/03/20 20:23:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.12 2004/03/22 22:13:20 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -34,7 +34,7 @@ PATCH_VER="2.1.26.15"
 FILES_VER="0.1.5"
 RENDER_VER="0.8"
 XRENDER_VER="0.8.4"
-XFT_VER="2.1.5"
+XFT_VER="2.1.6"
 XCUR_VER="0.3.1"
 SISDRV_VER="060304-1"
 SAVDRV_VER="1.1.27t"
