@@ -1,2 +1,14 @@
-MD5 1fac3621e3d41ba38cf88c37863b0a19 parapin-1.0.0.ebuild 784
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 afc0a49af9d24095d20c15914e90300a parapin-1.0.0.ebuild 888
+MD5 625daaf92ddb106a2f3a608ff34a0533 metadata.xml 823
+MD5 fdde2e2671c5ac20da78ee789f714cb4 ChangeLog 423
 MD5 568a2741a903e8bc3cbd932c5c50c5e1 files/digest-parapin-1.0.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB/Fl9mdTrptrqvGERAi6fAJ98fbVWe9/gV55D4aRnH98HMcbzkQCgoBmF
+lzZW5GSwFtEVLYResmS18fM=
+=sPM1
+-----END PGP SIGNATURE-----

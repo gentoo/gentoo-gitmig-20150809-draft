@@ -1,4 +1,14 @@
-MD5 640ea5741c24342ba15ca0137b18fb1b parapin-driver-1.0.0.ebuild 1000
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 733e90c0023c6e334f2cb6b56fcc16cf parapin-driver-1.0.0.ebuild 1122
 MD5 625daaf92ddb106a2f3a608ff34a0533 metadata.xml 823
-MD5 7d0d711f620993e2df78171c465eec8f ChangeLog 347
+MD5 26a7e09ee479957febc199deacc8dcf6 ChangeLog 451
 MD5 568a2741a903e8bc3cbd932c5c50c5e1 files/digest-parapin-driver-1.0.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB/FismdTrptrqvGERAoQLAJ9krCL5iNCKwFiVpzMvyINFXP9fuwCeOAF7
+MsHYnbwnHmoNoZTW4BkmfAY=
+=819C
+-----END PGP SIGNATURE-----
