@@ -90,8 +90,19 @@ CONFIG_XMONISDN_DOWNCMD='/etc/isdn/netdown'
 #
 # Applications
 #
-# CONFIG_VBOX is not set
+CONFIG_VBOX=y
 CONFIG_IPPPD=y
+
+#
+# Options for vbox package
+#
+VBOX_SPOOLDIR='/var/spool/vbox'
+VBOX_LOGDIR='/var/log/vbox'
+VBOX_PIDDIR='/var/run'
+VBOX_LOCKDIR='/var/lock'
+VBOX_DOCDIR='/usr/doc/vbox'
+VBOX_TCL='tcl8.3'
+# VBOX_SUSPEND_ID is not set
 
 #
 # Options for ipppd
