@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.2s-r6.ebuild,v 1.1 2001/11/01 19:23:29 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.2s-r6.ebuild,v 1.2 2001/11/04 23:05:03 azarah Exp $
 
 DESCRIPTION="A caching web proxy, with advanced features"
 HOMEPAGE="http://www.squid-cache.org/"
@@ -16,7 +16,9 @@ RDEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.72 )"
 DEPEND="$RDEPEND sys-devel/perl"
 
+
 src_unpack() {
+
 	unpack ${A} ; cd ${S}
 
 	# lots of nice patches, thanks debian ;)
@@ -26,6 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
+
 	local myconf mymodules="getpwnam,YP,NCSA,SMB"
 	use pam && mymodules="PAM,${mymodules}"
 	use ldap && mymodules="LDAP,${mymodules}"
@@ -58,9 +61,6 @@ src_compile() {
 }
 
 src_install() {
-	dodir /var/log /var/spool
-	diropts -m 770 -o root -g squid ; dodir /var/log/squid
-	diropts -m 770 -o root -g squid ; dodir /var/spool/squid
 
 	make \
 	prefix=${D}/usr \
@@ -71,6 +71,12 @@ src_install() {
 	install || die
 
 	make -C src install-pinger libexecdir=${D}/usr/lib/squid || die
+
+	# We need to do this after install, else it gets removed again
+	dodir /var/log /var/spool
+	diropts -m 770 -o root -g squid ; dodir /var/log/squid
+	diropts -m 770 -o root -g squid ; dodir /var/spool/squid
+			
 
 	# some cleanup action
 	mv ${D}/usr/sbin/*_auth* ${D}/usr/lib/squid
