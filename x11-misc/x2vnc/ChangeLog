@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.22 2004/06/24 22:36:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.23 2004/08/28 19:29:47 phosphan Exp $
+
+*x2vnc-1.6.1 (28 Aug 2004)
+
+  28 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> -x2vnc-1.3.1.ebuild,
+  -x2vnc-1.5.1-r1.ebuild, -x2vnc-1.5.1.ebuild, +x2vnc-1.6.1.ebuild:
+  Cleanup + version bump
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> x2vnc-1.5.1-r1.ebuild,
   x2vnc-1.6.ebuild:
