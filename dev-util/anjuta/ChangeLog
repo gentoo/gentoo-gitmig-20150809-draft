@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.5 2002/09/10 12:52:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.6 2002/09/19 12:30:29 doctomoe Exp $
 
 *anjuta-0.9.99 (19 Aug 2002)
+
+  19 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> anjuta-0.9.99.ebuild:
+  Added ppc keyword
 
   19 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> anjuta-0.9.99.ebuild:
   
