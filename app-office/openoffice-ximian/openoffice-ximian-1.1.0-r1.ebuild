@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0-r1.ebuild,v 1.2 2003/11/12 21:16:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0-r1.ebuild,v 1.3 2003/11/13 09:42:37 seemant Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -528,7 +528,7 @@ src_install() {
 	virtualmake "-v -noexit -r:${T}/autoresponse"
 
 	echo
-	einfo "Removing build root from registy..."
+	einfo "Removing build root from registry..."
 	# Remove totally useless stuff.
 	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh}
 	# Remove build root from registry and co
