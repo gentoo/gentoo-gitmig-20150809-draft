@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e3b1dad1edee23b3aad2a1d76464876 ChangeLog 3267
+MD5 f24597685d18d400d4d0009b20d1cae9 ChangeLog 3343
 MD5 d5daf93b5f1214816d2d9066f7ede12c lsof-4.64.ebuild 1539
 MD5 f77cd6eb905d0e856ef8c5490d6447a0 lsof-4.67.ebuild 1537
 MD5 843ef180f36990b01b6758592b37e475 lsof-4.68.ebuild 1797
 MD5 44c31e6ecaf1b6042935cd3f20f994b5 lsof-4.69.ebuild 1805
+MD5 31353e4fe3da9b9422f4aaf9d801c740 lsof-4.71.ebuild 1824
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 2207d5b0778a6ff1eeab5f5572c5af3e lsof-4.71.ebuild 1828
 MD5 8d9d90e05e24a5ffaf927bb83670715a files/digest-lsof-4.64 61
 MD5 4da5c4c30e43d53ea46517baa6125d1a files/digest-lsof-4.67 61
 MD5 ce8b6000c8273dd5481bc4f4fcdd9ec2 files/digest-lsof-4.68 61
 MD5 b04c75690e9bb81c851f72da3c116180 files/digest-lsof-4.69 61
 MD5 17950eec4cb0ad6f3a3b6a521239dcbe files/digest-lsof-4.71 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBjAuEHTu7gpaalycRAmtDAKCwP5xUPZIH2ddkfnwy9ZQJJovwsgCdH6e+
-/Zr3lT7zYASbBM0fMsNI4Ys=
-=wqrn
------END PGP SIGNATURE-----
