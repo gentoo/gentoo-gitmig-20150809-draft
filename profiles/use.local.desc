@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.195 2003/12/29 10:34:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.196 2003/12/29 11:49:49 mholzer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -105,7 +105,6 @@ media-libs/libgd:freetype-version-1 - if for some reason you want to use freetyp
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
-media-libs/sdl-sound:flac - Enable flac support
 media-libs/sdl-sound:speex - Enable speex sound support
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/xine-lib:speex - Enable speex sound support
@@ -117,7 +116,6 @@ media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
-media-sound/rhythmbox:flac - Enable flac support
 media-sound/rhythmbox:xine - Use Xine backend
 media-sound/terminatorX:sox - Enable sox support
 media-tv/freevo:matrox - Enable output support on Matrox cards

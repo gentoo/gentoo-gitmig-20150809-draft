@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.128 2003/12/23 08:26:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.129 2003/12/29 11:49:49 mholzer Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -49,6 +49,7 @@ fam - Enable FAM support
 fastcgi - Add support for the FastCGI interface
 fbcon - Adds framebuffer support for the console, via the kernel
 firebird - Adds support for the Firebird relational database
+flac - Adds support for the flac audio codec 
 flash - Adds support for creating flash files using Ming
 foomaticdb - Adds support for the foomatic printing driver database
 freetds - Adds support for the TDS protocol to connect to MSSQL/Sybase databases
