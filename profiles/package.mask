@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3110 2004/08/27 09:59:45 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3111 2004/08/27 12:21:04 dragonheart Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -485,6 +485,7 @@ net-misc/zebra
 # can lead to a denial of service. Bug #35623
 =net-irc/xchat-2.0.6
 
+# <dragonheart@gentoo.org> (27 August 2004)
 # <hattya@gentoo.org> (20 Jun 2004)
 # <seemant@gentoo.org> (12 Dec 2003)
 # All the sylpheed-gtk2 versions will be masked here together
@@ -493,6 +494,7 @@ net-misc/zebra
 =mail-client/sylpheed-claws-0.9.5-r1
 =mail-client/sylpheed-0.9.12-r1
 =mail-client/sylpheed-0.9.12-r2
+=mail-client/sylpheed-0.9.12-r3
 
 # <solar@gentoo.org> (Dec 10 2003)
 # masked for security reasons, see bug #30554
