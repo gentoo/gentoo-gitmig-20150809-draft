@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.48 2002/11/18 23:17:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.49 2002/11/19 19:15:22 azarah Exp $
+
+  19 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2_beta.ebuild :
+
+  Add DEPEND on !gtk2? dev-libs/libIDL, closing bug #10955.
 
   19 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2_beta.ebuild :
 

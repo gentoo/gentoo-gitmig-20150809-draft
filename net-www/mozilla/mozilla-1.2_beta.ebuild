@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2_beta.ebuild,v 1.3 2002/11/18 23:17:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2_beta.ebuild,v 1.4 2002/11/19 19:15:22 azarah Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -36,10 +36,10 @@ LICENSE="MPL-1.1 NPL-1.1"
 
 RDEPEND=">=x11-base/xfree-4.2.0-r11
 	>=gnome-base/ORBit-0.5.10-r1
+	>=dev-libs/libIDL-0.8.0
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
-	!gtk2? ( >=media-libs/fontconfig-2.0-r3 )
 	>=sys-apps/portage-2.0.14
 	dev-libs/expat
 	app-arch/zip
@@ -48,6 +48,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	        =x11-libs/gtk+-1.2* )
 	( gtk2? >=dev-libs/glib-2.0.4 :
 	        =dev-libs/glib-1.2* )
+	!gtk2? ( >=media-libs/fontconfig-2.0-r3 )
 	java?  ( virtual/jre )"
 
 DEPEND="${RDEPEND}
