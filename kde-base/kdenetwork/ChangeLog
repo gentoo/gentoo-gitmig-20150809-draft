@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.112 2004/11/05 19:03:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.113 2004/11/05 19:13:53 caleb Exp $
+
+*kdenetwork-3.3.1-r1 (05 Nov 2004)
+
+  05 Nov 2004; Caleb Tennis <caleb@gentoo.org> +files/3.3.1-kget.diff,
+  +kdenetwork-3.3.1-r1.ebuild:
+  do a rev bump here, fixes a nasty kget crash
+  I'm going to keep sparc as stable, because the patch is pretty unobtrusive.
 
   05 Nov 2004; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.3.1.ebuild:
   x86 stable
