@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.0.6.ebuild,v 1.3 2002/07/13 20:54:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.0.6.ebuild,v 1.4 2002/07/13 21:03:28 danarmak Exp $
 inherit kde-base flag-o-matic
 
 SRC_URI="mirror://kde/unstable/kde-3.1-alpha1/src/${P}.tar.bz2"
@@ -16,6 +16,7 @@ if [ "${COMPILER}" == "gcc3" ]; then
 fi
 
 SLOT="1.1"
+LICENSE="GPL-2 LGPL-2"
 
 use alsa && myconf="$myconf --enable-alsa" || myconf="$myconf --disable-alsa"
 
