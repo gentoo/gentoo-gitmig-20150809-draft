@@ -1,4 +1,7 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/2004.0/use.mask,v 1.2 2004/03/18 00:16:43 seemant Exp $
 
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
+# This file serves as a mask file for USE flags.  This way flags that may be
+# invalid on a specific architecture or profile and not on this one will
+# be listed in here.

@@ -1,35 +1,17 @@
-# IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
+# Copyright 2001-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/2004.0/packages,v 1.2 2004/03/18 00:16:43 seemant Exp $
 
-# OK; you're staring at this file and you have no idea what these stars are
-# for.  Here's the scoop.  An initial "*" marks a package that is part of the
-# official "base" system profile.  If there's a "*", then "emerge system" will
-# use the line in its calculations of what "should" be installed for this
-# profile.  Lines without a "*" prefix will be ignored for profile
-# calculations.
+# For instructions on how this file works (as an inclusion mask, primarily),
+# please refer to ${PORTDIR}/profiles/base/packages
 
-# Now, this is new: *all* lines (star or no star) will be used as a special
-# package *inclusion* mask.  For example, the line *=sys-devel/gcc-2.95.3-r1
-# will cause Portage to totally ignore all gcc ebuilds other than
-# gcc-2.95.3-r1.  >=, <=, <, > and ~ can be used to offer a bit more
-# flexibility.  For example, >=sys-libs/glibc-2.2.4 will cause emerge to ignore
-# all glibc ebuilds with a version less than 2.2.4.  This allows us to have
-# profile-specific package.mask settings.  *All* lines are used for this
-# masking process, whether they are prefixed with a * or not.  And if a generic
-# dep is used, like "sys-apps/foo", then all versions of foo are included.  If
-# there is no entry, then all versions of an app are included.  The key thing
-# to note is that this file does not need to end up being an exhaustive list
-# of portage packages; just the ones critical to this profile.
+# Use this file to lock down specific versions of packages ONLY TO THIS
+# SPECIFIC PROFILE!
 
-# So, what happens to /usr/portage/profiles/package.mask?  It's still around,
-# and still useful.  But it should mainly be used for broken ebuilds only.
-# package.mask continues to function as normal, masking out ebuilds from *all*
-# system profiles.
+# You can also add files to the base system itself if you prefix them with a
+# *
 
-# Which to use?  Use the profile-specific stuff to "lock down" specific
-# versions of ebuilds.  Gentoo Linux 1.0_rc6 uses certain known-compatible
-# versions of binutils, gcc and glibc, so we lock them down here.  This
-# prevents the user from shooting himself/herself in the foot by installing a
-# wacky version.
+
 
 >dev-lang/gpc-2.1
 >=sys-apps/baselayout-1.7.9-r1
@@ -38,3 +20,6 @@
 >=sys-libs/glibc-2.2.5
 
 >=x11-base/xfree-4.1.0-r12
+
+>=app-admin/sysklogd-1.4.1
+<sys-apps/shadow-5
