@@ -1,37 +1,29 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 02e83c8b9b08c45f59877f8bf2d860d5 ChangeLog 9827
-MD5 088f0c7d6fc38e61da81464eb45cab6d gcc-config-1.3.3-r1.ebuild 2201
 MD5 8ee73cb152e0efd3b7443b20ee9229b5 gcc-config-1.3.3-r2.ebuild 2182
+MD5 6885a0db3801aa33069939f36014eb49 gcc-config-1.3.6.ebuild 2621
+MD5 03977fbdb202981a93edc47f23e594fc ChangeLog 10062
+MD5 088f0c7d6fc38e61da81464eb45cab6d gcc-config-1.3.3-r1.ebuild 2201
 MD5 d8a914d16f1a12e8a70dbea99e456b82 gcc-config-1.3.4.ebuild 2301
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9eb40c0112df24e7899358bd77a61f1e gcc-config-1.3.5.ebuild 2191
 MD5 0220f9bd49959356ec0ed4670b71e7d8 gcc-config-1.3.5-r1.ebuild 2076
-MD5 6885a0db3801aa33069939f36014eb49 gcc-config-1.3.6.ebuild 2621
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.3-r1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.3-r2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.4 0
-MD5 0d2fe061cd97a1d9b6a7230f92a767a8 files/gcc-config-1.3.3 8803
-MD5 7ddbeeed76fa5f83e7b7ddabe8bad86c files/gcc-config-1.3.3-multi-ldpath 8822
-MD5 9f2d4a45319e807f73671c1cc870f012 files/gcc-config-1.3.4 8825
-MD5 9c95908dc444d2a674309696656a7a23 files/gcc-config-1.3.4-multi-ldpath 8844
-MD5 7227c7b90d3f05a802ee2cdde8edbeda files/gcc-config-1.4 11974
-MD5 1a09fa907ee2481cc44a7e888a984759 files/gcc-config-1.4.1 12935
-MD5 4788038eaa6be90b14354db23b1a01c4 files/wrapper-1.4.1.c 7297
-MD5 61a6efc018768155ade1a2259fca9f7f files/wrapper-1.4.c 5647
-MD5 b3798d14164bc9eb35cb435a5bc6cff6 files/wrapper.c 3531
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.5 0
-MD5 654c9238fad29b2bf0954df0a0f3fbe0 files/gcc-config-1.3.5 9302
+MD5 9eb40c0112df24e7899358bd77a61f1e gcc-config-1.3.5.ebuild 2191
+MD5 92ddc663628dd8d4f146e6382ee75d89 gcc-config-1.3.6-r1.ebuild 2622
 MD5 15a653aa8910781945ce9ffa08c3d0de files/gcc-config-1.3.5-multi-ldpath 8846
-MD5 f86361bcf4d0511ad58831c409422559 files/wrapper-1.4.2.c 7379
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.5 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.5-r1 0
+MD5 9f2d4a45319e807f73671c1cc870f012 files/gcc-config-1.3.4 8825
+MD5 654c9238fad29b2bf0954df0a0f3fbe0 files/gcc-config-1.3.5 9302
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.4 0
+MD5 1a09fa907ee2481cc44a7e888a984759 files/gcc-config-1.4.1 12935
+MD5 f86361bcf4d0511ad58831c409422559 files/wrapper-1.4.2.c 7379
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.3-r2 0
+MD5 7227c7b90d3f05a802ee2cdde8edbeda files/gcc-config-1.4 11974
+MD5 a3fe15dee02cfee5b8eb9b9a240d77a0 files/gcc-config-1.3.6 9542
+MD5 b3798d14164bc9eb35cb435a5bc6cff6 files/wrapper.c 3531
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.6 0
-MD5 29679877b3b1bdf53abb93419fdcea2c files/gcc-config-1.3.6 9687
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+gIKmdTrptrqvGERArOLAJ9Kg+1ljmKeC/SG5lreH815O/YfPACfUoFu
-tt7rHR1+PCDVekknNONFRYs=
-=V6Tq
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.3-r1 0
+MD5 9c95908dc444d2a674309696656a7a23 files/gcc-config-1.3.4-multi-ldpath 8844
+MD5 61a6efc018768155ade1a2259fca9f7f files/wrapper-1.4.c 5647
+MD5 4788038eaa6be90b14354db23b1a01c4 files/wrapper-1.4.1.c 7297
+MD5 7ddbeeed76fa5f83e7b7ddabe8bad86c files/gcc-config-1.3.3-multi-ldpath 8822
+MD5 0d2fe061cd97a1d9b6a7230f92a767a8 files/gcc-config-1.3.3 8803
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.6-r1 0

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.6,v 1.2 2004/07/15 00:59:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.6,v 1.3 2004/07/24 20:40:14 azarah Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 source /etc/init.d/functions.sh || {
@@ -50,24 +50,15 @@ then
 	usage
 fi
 
-HAVE_WHICH="no"
-if [ -n "$(which which 2> /dev/null)" ]
-then
-	HAVE_WHICH="yes"
-fi
-
 find_path() {
 	[ -z "$1" ] && return 0
 
-	if [ "${HAVE_WHICH}" = "yes" ]
+	local fullpath="$(type -P $1)"
+	
+	if [ -x "${fullpath}" ]
 	then
-		local fullpath="$(which $1 2> /dev/null)"
-		
-		if [ -x "${fullpath}" ]
-		then
-			echo "${fullpath}"
-			return 0
-		fi
+		echo "${fullpath}"
+		return 0
 	fi
 
 	for x in /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin
