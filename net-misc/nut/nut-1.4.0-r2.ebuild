@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.4.0-r2.ebuild,v 1.1 2003/10/20 10:37:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.4.0-r2.ebuild,v 1.2 2003/10/21 14:03:57 max Exp $
 
 DESCRIPTION="Network-UPS Tools."
 SRC_URI="http://www.exploits.org/nut/release/${PV%.*}/${P}.tar.gz"
@@ -69,9 +69,9 @@ src_install() {
 	dodoc docs/cables/*
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/upsd.rc6 upsd
-	newexe ${FILESDIR}/upsdrv.rc6 upsdrv
-	newexe ${FILESDIR}/upsmon.rc6 upsmon
+	newexe "${FILESDIR}/upsd.rc6" upsd
+	newexe "${FILESDIR}/upsdrv.rc6" upsdrv
+	newexe "${FILESDIR}/upsmon.rc6" upsmon
 }
 
 pkg_postinst() {

@@ -1,25 +1,21 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/files/upsdrv.rc6,v 1.1 2003/10/20 10:37:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/files/upsdrv.rc6,v 1.2 2003/10/21 14:03:57 max Exp $
 
 depend() {
 	need net
-    before upsd
+	before upsd
 }
-
-controlprog="/usr/lib/nut/upsdrvctl"
 
 start() {
 	ebegin "Starting UPS drivers"
-	${controlprog} start
-    rc=$?
-    eend $rc "Failed to start UPS drivers!"
+	/usr/lib/nut/upsdrvctl start
+	eend $? "Failed to start UPS drivers!"
 }
 
 stop() {
 	ebegin "Stopping UPS drivers"
-	${controlprog} stop
-    rc=$?
-	eend $rc "Failed to stop UPS drivers!"
+	/usr/lib/nut/upsdrvctl stop
+	eend $? "Failed to stop UPS drivers!"
 }
