@@ -520,3 +520,10 @@ dev-lang/tcl-tk
 # >ncurses-5.2-r5 causes an incompatibility here
 # masking until that can be resolved
 =sys-devel/gdb-5.1.1
+
+#george@gentoo.org
+#10 Apr 2002
+#gpc rebuilds gcc backend when installed.
+#I removed all gcc entries (so supposedly it is a clean install)
+#masked for a few days for testing
+dev-lang/gpc
