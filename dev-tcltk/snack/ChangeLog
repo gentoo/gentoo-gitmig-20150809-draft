@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/snack
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.1 2003/08/15 00:53:57 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.2 2003/12/18 21:59:54 mholzer Exp $
+
+*snack-2.2.3 (18 Dec 2003)
+
+  18 Dec 2003; Martin Holzer <mholzer@gentoo.org> snack-2.2.3.ebuild:
+  Version bumped. closes 34459
 
 *snack-2.2.2 (14 Aug 2003)
 
