@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/polipo/files/polipo.initd,v 1.1 2005/03/26 14:14:56 mrness Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Polipo HTTP proxy"
+
+	if [ ! -f "/etc/polipo/config" ]; then
+		eerror "Unable to read configuration file: /etc/polipo/config"
+		return 1
+	fi
+
+	start-stop-daemon --start --quiet --chuid polipo \
+		--background --pidfile /var/run/polipo.pid --make-pidfile \
+			--exec /usr/bin/polipo
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Polipo HTTP proxy"
+	start-stop-daemon --stop --quiet --pidfile /var/run/polipo.pid
+	eend $?
+
+	[ -f /var/run/polipo.pid ] && rm /var/run/polipo.pid
+}
+
