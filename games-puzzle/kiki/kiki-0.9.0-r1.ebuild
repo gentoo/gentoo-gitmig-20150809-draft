@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-0.9.0-r1.ebuild,v 1.2 2004/09/03 01:05:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-0.9.0-r1.ebuild,v 1.3 2004/11/22 12:37:09 josejx Exp $
 
 inherit python games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/kiki/${PN}-src-${PV}.tgz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2
