@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 dbd15ba893dc4b59e18cb6d4b43c2f22 noteedit-2.6.2.ebuild 966
+MD5 1fcc4634a1e5aafe7eeea4805dca561d ChangeLog 1924
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 b133462237c0e7390ab5b5574fd625db ChangeLog 1678
-MD5 5023d5139a03cb2f31e1d8705d526afb noteedit-2.6.2.ebuild 933
 MD5 872c8c5d5228329ce0f644c2b5a542da files/digest-noteedit-2.6.2 64
 MD5 e4d9e7d1a9ceafde0c6cbe9a7c9692b7 files/noteedit-2.6.2-gcc34.patch 2142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBb5WSArHZZzCEUG0RAjKiAJ9U59Zp3e+pAAsW08DaovdQhl2kwgCfV+JS
-ubjS861vkiVhuHBhonHCL3M=
-=a19v
------END PGP SIGNATURE-----
