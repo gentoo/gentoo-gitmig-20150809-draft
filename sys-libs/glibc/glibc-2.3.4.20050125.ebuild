@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.15 2005/02/13 07:25:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.16 2005/02/13 10:35:34 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -540,17 +540,7 @@ setup_flags() {
 	strip-unsupported-flags
 	filter-flags -m32 -m64 -mabi=*
 
-	if has_multilib_profile; then
-		# We change our CHOST, so set this right here
-		export CC="$(tc-getCC)"
-
-		if tc-is-cross-compiler; then
-			CHOST_OPT="$(get_abi_CHOST)"
-		else
-			CHOST="$(get_abi_CHOST)"
-			CBUILD="${CHOST}"
-		fi
-	fi
+	has_multilib_profile && CHOST_OPT="$(get_abi_CHOST)"
 
 	case $(tc-arch) in
 		ppc)
@@ -568,27 +558,33 @@ setup_flags() {
 					default|sparc)
 						if is-flag "-mcpu=ultrasparc3"; then
 							CHOST_OPT="sparcv9b-unknown-linux-gnu"
+							tc-is-cross-compiler || CBUILD_OPT=${CHOST_OPT}
 						else
 							CHOST_OPT="sparcv9-unknown-linux-gnu"
+							tc-is-cross-compiler || CBUILD_OPT=${CHOST_OPT}
 						fi
 					;;
 					sparc64)
 						if is-flag "-mcpu=ultrasparc3"; then
 							CHOST_OPT="sparc64b-unknown-linux-gnu"
+							tc-is-cross-compiler || CBUILD_OPT=${CHOST_OPT}
 							CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9b"
 						else
 							CHOST_OPT="sparc64-unknown-linux-gnu"
+							tc-is-cross-compiler || CBUILD_OPT=${CHOST_OPT}
 							CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9a"
 						fi
 
 						filter-flags -Wa,-xarch -Wa,-A
 					;;
 				esac
-			elif tc-is-cross-compiler && use nptl; then
+			else
 				if is-flag "-mcpu=ultrasparc3"; then
 					CHOST_OPT="sparcv9b-unknown-linux-gnu"
-				else
+					CBUILD_OPT=${CHOST_OPT}
+				elif { tc-is-cross-compiler && use nptl; } || is-flag "-mcpu=ultrasparc2" || is-flag "-mcpu=ultrasparc"; then
 					CHOST_OPT="sparcv9-unknown-linux-gnu"
+					CBUILD_OPT=${CHOST_OPT}
 				fi
 			fi
 		;;
@@ -775,7 +771,7 @@ glibc_do_configure() {
 	# Who knows if this works :)
 	myconf="${myconf} --without-cvs
 			--enable-bind-now
-			--build=${CBUILD}
+			--build=${CBUILD_OPT:-${CBUILD}}
 			--host=${CHOST_OPT:-${CHOST}}
 			--disable-profile
 			--without-gd
@@ -783,7 +779,7 @@ glibc_do_configure() {
 			--prefix=$(alt_prefix)
 			--mandir=$(alt_prefix)/share/man
 			--infodir=$(alt_prefix)/share/info
-			--libexecdir=$(alt_prefix)/lib/misc"
+			--libexecdir=$(alt_prefix)/libexec"
 
 	GBUILDDIR="${WORKDIR}/build-${ABI}-${CHOST}-$1"
 	mkdir -p ${GBUILDDIR}
@@ -1133,11 +1129,10 @@ src_install() {
 
 		mv ${D}/lib ${D}/$(get_libdir)
 		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
-		mkdir ${D}/lib
+		dodir /lib
+		dodir /usr/lib
+		mv ${D}/usr/$(get_libdir)/locale ${D}/usr/lib
 		dosym ../$(get_libdir)/ld-linux.so.2 /lib/ld-linux.so.2
-		dosed "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/libc.so /usr/$(get_libdir)/libpthread.so
-
-		rm -rf ${D}/usr/$(get_libdir)/misc ${D}/usr/$(get_libdir)/locale
 
 		for f in ${D}/usr/$(get_libdir)/*.so; do
 			local basef=$(basename ${f})
@@ -1149,10 +1144,10 @@ src_install() {
 			fi
 		done
 
-		sed -i "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/lib{c,pthread}.so
+		dosed "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/lib{c,pthread}.so
 
 		if use nptl && use !nptlonly; then
-			sed -i "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/nptl/lib{c,pthread}.so
+			dosed  "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/nptl/lib{c,pthread}.so
 		fi
 	fi
 }
