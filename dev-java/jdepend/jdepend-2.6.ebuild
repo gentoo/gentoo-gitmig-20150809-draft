@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.6.ebuild,v 1.1 2004/01/03 19:31:55 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.6.ebuild,v 1.2 2004/01/18 22:08:56 strider Exp $
+
+inherit java-pkg
 
 DESCRIPTION="JDepend traverses Java class file directories and generates design quality metrics for each Java package."
 HOMEPAGE="http://www.clarkware.com/software/JDepend.html"
@@ -15,8 +17,6 @@ DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
 	jikes? ( >=dev-java/jikes-1.17 )"
 RDEPEND=">=virtual/jdk-1.3"
-
-#S=${WORKDIR}/jakarta-oro-${PV}
 
 #TODO Do junit testing but resolve the circular dependency we have with ant.
 src_compile() {
@@ -36,8 +36,11 @@ src_compile() {
 }
 
 src_install() {
-	dojar lib/jdepend.jar || die "Failed Installing"
+	java-pkg_dojar lib/jdepend.jar || die "Failed Installing"
 	dodoc LICENSE README
+
+	dodir /usr/share/ant/lib
+	dosym /usr/share/jdepend/lib/jdepend.jar /usr/share/ant/lib
 
 	if [ -n "`use doc`" ]; then
 		dohtml docs/JDepend.html
