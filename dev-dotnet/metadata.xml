@@ -6,8 +6,12 @@
 		.NET programming environment.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-dotnet enthält Bibliotheken und Werkzeuge für die
+		Die Kategorie dev-dotnet enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die
 		.NET Programmierumgebung.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-dotnet contiene librerias y utilidades referentes al
+		ambiente de programación .NET.
 	</longdescription>
 </catmetadata>
 
