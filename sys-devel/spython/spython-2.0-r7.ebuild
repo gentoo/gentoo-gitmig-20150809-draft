@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.14 2002/10/05 05:39:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.15 2002/10/23 19:40:23 vapier Exp $
 
-IUSE="readline bootcd"
+IUSE="readline build"
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -83,7 +83,7 @@ src_install() {
 	rm -rf ${D}/usr/lib/spython${PV}/site-packages
 	dosym ../python${PV}/site-packages /usr/lib/spython${PV}/site-packages
 	
-    if [ "`use build`" ] || [ "`use bootcd`" ]
+    if [ "`use build`" ]
     then
         rm -rf ${D}/usr/share/man
 		rm -rf ${D}/usr/include

@@ -1,11 +1,13 @@
 # ChangeLog for sys-devel/spython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.2 2002/03/15 04:09:13 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.3 2002/10/23 19:40:23 vapier Exp $
 
 *spython-2.0-r9 (14 Mar 2002)
 
-  14 Mar 2002; Bruce A. Locke <blocke@shivan.org> spython-2.0-r9.ebuild :
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
+  14 Mar 2002; Bruce A. Locke <blocke@shivan.org> spython-2.0-r9.ebuild :
   Bumped zlib dependency up to 1.1.4
 
 
