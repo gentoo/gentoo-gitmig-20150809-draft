@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.48 2004/02/21 03:31:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.49 2004/03/08 21:07:02 avenj Exp $
+
+  08 Mar 2004; Jon Portnoy <avenj@gentoo.org> sylpheed-0.9.8.ebuild :
+  Disable nls for amd64. Can't use gettext-0.12 on AMD64 systems.
 
   20 Feb 2004; Aron Griffis <agriffis@gentoo.org> sylpheed-0.9.8.ebuild:
   Mark a non-package-masked version stable on alpha and ia64
