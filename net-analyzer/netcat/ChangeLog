@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.3 2002/08/30 16:36:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.4 2002/10/22 08:15:23 seemant Exp $
+
+*netcat-110-r1 (22 Oct 2002)
+
+  22 Oct 2002; Seemant Kulleen <seemant@gentoo.org> netcat-110-r1.ebuild
+  files/digest-netcat-110-r1 :
+
+  The executable is now installed as /usr/bin/netcat instead of /usr/bin/nc
+  which conflicted with /usr/bin/nc from app-editors/nedit.  Closes bug
+  #6370 by Klaus.Kusche@inode.at (Klaus Kusche)
 
 *netcat-110 (1 Feb 2002)
 
