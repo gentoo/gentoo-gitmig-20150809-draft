@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5d19bc5a267f71ac4ad9704d1295c061 oprofile-0.7.ebuild 1648
-MD5 1c7ac8bd384c1821aeb2c988bf5a5202 oprofile-0.7.1.ebuild 1918
-MD5 7f007fa4745eaf4b14bc4abcaa621216 ChangeLog 1274
-MD5 4974939ba1f98b20592df4151ddfcfd8 oprofile-0.8.1.ebuild 1862
-MD5 2985e6bd8a86b9f72b35ec2a357d332f oprofile-0.8.ebuild 1862
+MD5 0edd36ae4d9c9fecad9cfb4000971e03 oprofile-0.7.ebuild 1645
+MD5 144b5cd45d9ec9f5b5ce538a03d15e55 oprofile-0.7.1.ebuild 1915
+MD5 78cfda90fe76a7c2317e6015841ff9ab ChangeLog 1369
+MD5 ad36cd7d43f84bfaacb260ef16fa4546 oprofile-0.8.1.ebuild 1861
+MD5 0fc56ce4adc0619ba4ad4fc88c969e55 oprofile-0.8.ebuild 1859
 MD5 3d4a085e59f4ef22017d52452649205b metadata.xml 310
 MD5 8fb81a645cd9dcca67423b0e42d7255c files/digest-oprofile-0.7.1 66
 MD5 26253b92a26a505d340c30e8bd9be1d3 files/digest-oprofile-0.8.1 66
 MD5 06028442781220898a045871c9db7de6 files/digest-oprofile-0.7 64
 MD5 c90612912e77016c9aa69bb752907940 files/digest-oprofile-0.8 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBRxY5chej4aZK9/cRAuROAJ9tTl3wERbIUGTQ03in2+wYiuX6egCeMf9G
-Jzg7ktOdrk6onvV/m/wPhNw=
-=2w3a
+iD8DBQFB5Gqychej4aZK9/cRAhVBAKCBz4EgiFBd/FJg5MIJBpGCXhfGlQCfRro1
+2WubQ8KaBgCPBFPWYO0HJqM=
+=3Wsg
 -----END PGP SIGNATURE-----
