@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11.ebuild,v 1.14 2004/06/24 22:06:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11.ebuild,v 1.15 2004/06/25 20:53:54 agriffis Exp $
 
 IUSE="nls build"
 
@@ -54,7 +54,7 @@ src_install() {
 	cd usr/bin
 	ln -s ../../bin/* .
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		dodoc AUTHORS ChangeLog* COPYING NEWS README* THANKS TODO

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.28 2004/06/24 22:06:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.29 2004/06/25 20:53:54 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> fileutils-4.1.11-r1.ebuild,
+  fileutils-4.1.11.ebuild:
+  QA - fix use invocation
 
   19 Apr 2004; Michael McCabe <randy@gentoo.org> fileutils-4.1.11-r2.ebuild:
   added s390 keywords
