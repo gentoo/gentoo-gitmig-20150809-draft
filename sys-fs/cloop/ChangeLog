@@ -1,0 +1,46 @@
+# ChangeLog for sys-apps/cloop
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.1 2004/11/23 22:36:14 genstef Exp $
+
+*cloop-1.0 (23 Nov 2004)
+
+  23 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +cloop-0.68.ebuild, +cloop-1.0.ebuild, +cloop-1.02.ebuild,
+  +cloop-2.00.ebuild:
+  Moved from sys-apps/cloop to sys-fs/cloop.
+
+  29 Dec 2003; Stuart Herbert <stuart@gentoo.org> cloop-0.68.ebuild:
+  New digest (original tarball no longer available; made a new one from source
+  code on my local machine); also fixed compilation failures due to make -jN
+
+*cloop-2.00 (29 Dec 2003)
+
+  29 Dec 2003; Stuart Herbert <stuart@gentoo.org> cloop-2.00.ebuild:
+  Version bumped.  Closes #36696
+
+*cloop-1.02 (13 Oct 2003)
+
+  13 Oct 2003; Martin Holzer <mholzer@gentoo.org> cloop-1.02.ebuild:
+  Version bumped. Closes #30792.
+
+  04 Sep 2003; stuart <stuart@gentoo.org> cloop-0.68.ebuild:
+  Fix for bug #27882
+  
+  cloop needs to be *sure* that the zlib code is linked into the kernel.
+  Simply enabling the zlib config options isn't enough; the code needs
+  to be called from elsewhere in the kernel.
+  
+  The kernel-mod eclass now provides a function to test for this, and
+  I've updated the cloop-0.68 ebuild to use it.
+
+  26 Aug 2003; stuart <stuart@gentoo.org> cloop-1.0.ebuild:
+  Added test to catch cause of bug #27343
+
+  26 Aug 2003; stuart <stuart@gentoo.org> cloop-0.68.ebuild:
+  Added test to abort if Linux kernel != 2.4.x
+
+*cloop-1.0 (25 Aug 2003)
+*cloop-0.68 (25 Aug 2003)
+
+  25 Aug 2003; stuart <stuart@gentoo.org> cloop-0.68.ebuild, cloop-1.0.ebuild:
+  Initial import
