@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.12 2002/07/16 03:50:42 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.13 2002/07/19 23:56:28 g2boojum Exp $
+
+*ghostscript-7.05.3 (19 Jul 2002)
+
+  19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  removed unnecessary cups dep
 
 *ghostscript-7.05.3-r1 (12 Jul 2002)
 
