@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.7 2002/12/09 04:37:29 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.8 2002/12/09 22:22:55 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -40,7 +40,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${PV}.tar.gz
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="x86 ~ppc ~sparc  ~alpha"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="GPL-2"
@@ -48,7 +48,7 @@ LICENSE="GPL-2"
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 # Drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
 DEPEND=">=sys-devel/gcc-3.2-r1
-	>=sys-devel/binutils-2.13.90.0.4-r1
+	>=sys-devel/binutils-2.13.90.0.16
 	sys-kernel/linux-headers
 	nls? ( sys-devel/gettext )"
 RDEPEND="sys-kernel/linux-headers
