@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.18 2003/08/04 23:26:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.19 2003/10/06 20:33:37 weeve Exp $
+
+  06 Oct 2003; Jason Wever <weeve@gentoo.org> mod_ssl-2.8.15.ebuild:
+  Marked stable for sparc.
 
   04 Aug 2003; Donny Davies <woodchip@gentoo.org> mod_ssl-2.8.15.ebuild:
   Mark x86 stable.
