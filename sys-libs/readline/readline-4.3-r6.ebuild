@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.6 2004/08/26 11:51:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.7 2004/09/16 02:28:09 pvdabeel Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/readline/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="macos" # Only changed Darwin specific part, should work just fine on other archs.
+KEYWORDS="macos ppc-macos" # Only changed Darwin specific part, should work just fine on other archs.
 IUSE=""
 
 # We must be certain that we have a bash that is linked
@@ -31,6 +31,7 @@ src_unpack() {
 		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
 	done
 	use macos && epatch ${FILESDIR}/macos.patch
+	use ppc-macos && epatch ${FILESDIR}/macos.patch
 
 	gnuconfig_update
 }
@@ -57,6 +58,7 @@ src_install() {
 	cd ${S}
 
 	if ! use macos; then
+	if ! use ppc-macos; then
 		dodir /$(get_libdir)
 		mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
 		rm -f ${D}/$(get_libdir)/*.old
@@ -70,6 +72,7 @@ src_install() {
 		dosym libhistory.so.${PV/a/} /$(get_libdir)/libhistory.so.4
 		dosym libreadline.so.${PV/a/} /$(get_libdir)/libreadline.so.4
 		chmod 755 ${D}/$(get_libdir)/*.${PV/a/}
+	fi
 	fi
 
 	dodoc CHANGELOG CHANGES README USAGE
