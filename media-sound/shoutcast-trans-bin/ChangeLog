@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/shoutcast-trans-bin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.1 2004/08/31 23:57:00 chriswhite Exp $
+
+*shoutcast-trans-bin-0.4.0 (01 Sep 2004)
+
+  01 Sep 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/shoutcast_trans, +shoutcast-trans-bin-0.4.0.ebuild:
+  Initial import to the tree. Closes bug #57066. Thanks to Georg Brandl
+  <g.brandl@gmx.net> for posting.
+
