@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cd545deeb87929c0b0a4528debb79356 stardork-0.6.ebuild 554
+MD5 35a10afeb311a2224f2f666fe5709ed8 ChangeLog 438
+MD5 69bd61de16c74c22893bb09f29950ee1 metadata.xml 159
+MD5 b294194235a1c000812ffebfbf9260af files/digest-stardork-0.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBr6/5/UDVUK2NELYRAluvAKCvKc1GZS9LAod4QUJchzpuqMvJowCfXiZy
+e3yFzE/ovydH9/DIE93wr6g=
+=PFjh
+-----END PGP SIGNATURE-----

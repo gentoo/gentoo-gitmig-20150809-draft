@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/stardork
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stardork/ChangeLog,v 1.1 2004/12/03 00:14:39 citizen428 Exp $
+
+*stardork-0.6 (03 Dec 2004)
+
+  03 Dec 2004; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +stardork-0.6.ebuild:
+  Initial commit; Ebuild submitted by Adrian Fruehwirt
+  <fruehwia@spengergasse.at> in bug #44999
+
