@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.18 2004/01/23 21:43:47 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.19 2004/01/25 21:58:26 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -27,6 +27,7 @@
 # H_SUPPORTEDARCH	- this should be a space separated list of ARCH's which can be supported by the headers ebuild
 
 # UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
+# UNIPATCH_EXCLUDE	- an addition var to support exlusion based completely on "<passedstring>*" and not "<passedno#>_*"
 # UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of order, so they are applied in the order passed
 
@@ -282,7 +283,7 @@ unipatch() {
 	local x
 	local extention
 	local PIPE_CMD
-	local UNIPATCH_EXCLUDE
+	local UNIPATCH_DROP
 	local KPATCH_DIR
 	local PATCH_DEPTH
 	local ELINE
@@ -342,7 +343,7 @@ unipatch() {
 			   diff) PIPE_CMD="cat";;
 			 gz|Z|z) PIPE_CMD="gzip -dc";;
 			ZIP|zip) PIPE_CMD="unzip -p";;
-			      *) UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} ${i}";;
+			      *) UNIPATCH_DROP="${UNIPATCH_DROP} ${i}";;
 		esac
 		x=${i/*\//}
 		x=${x/\.${extention}/}
@@ -366,11 +367,12 @@ unipatch() {
 	done
 
 	#so now lets get rid of the patchno's we want to exclude
-	for i in ${UNIPATCH_EXCLUDE}
+	UNIPATCH_DROP="${UNIPATCH_EXCLUDE} ${UNIPATCH_DROP}"
+	for i in ${UNIPATCH_DROP}
 	do
 		for x in ${KPATCH_DIR}
 		do
-			rm ${x}/${i}_* 2>/dev/null
+			rm ${x}/${i}* 2>/dev/null
 			if [ $? == 0 ]
 			then
 				einfo "Excluding Patch #${i}"
