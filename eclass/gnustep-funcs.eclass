@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.1 2004/11/12 03:46:33 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.2 2004/11/16 02:30:16 fafhrd Exp $
 
 ECLASS=gnustep-funcs
 INHERITED="$INHERITED $ECLASS"
@@ -204,6 +204,7 @@ egnustep_install() {
 # Note: docs installed with this from a GNUMakefile,
 #  not just some files in a Documentation directory
 egnustep_doc() {
+	cd ${S}/Documentation
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
 		local gs_make_opts="${1}"
 		if use debug ; then
@@ -217,6 +218,7 @@ egnustep_doc() {
 	else
 		die "no Makefile found"
 	fi
+	cd ..
 	return 0
 }
 ###########################################################################
