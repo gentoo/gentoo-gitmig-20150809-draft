@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1.ebuild,v 1.2 2002/07/02 11:47:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1.ebuild,v 1.3 2002/07/02 16:50:36 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -74,7 +74,18 @@ src_compile() {
 		--enable-superfluous \
 		--enable-usermenu \
 		${myconf} || die
-		    
+	
+	cd ${S}/po
+	cp Makefile Makefile.orig
+	sed 's:zh_TW.*::' \
+		Makefile.orig > Makefile
+
+	cd ${S}/WPrefs.app/po
+	cp Makefile Makefile.orig
+	sed 's:zh_TW.*::' \
+		Makefile.orig > Makefile
+	
+	cd ${S}
 	emake || die
   
   	# WindowMaker Extra
