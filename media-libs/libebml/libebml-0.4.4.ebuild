@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libebml/libebml-0.4.4.ebuild,v 1.1 2003/07/20 07:05:39 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libebml/libebml-0.4.4.ebuild,v 1.2 2003/08/23 19:35:41 zul Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	cd ${S}/make/linux
-	make PREFIX=/usr die "make failed"
+	make PREFIX=/usr || die "make failed"
 }
 
 src_install () {
