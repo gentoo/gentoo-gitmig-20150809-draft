@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.65 2004/09/14 06:20:53 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.66 2004/10/07 00:41:55 gregkh Exp $
+
+*udev-033 (06 Oct 2004)
+
+  06 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +files/udev.hotplug.empty, +udev-033.ebuild:
+  033 upstream release
+  added volume_id back to the package, as it works again
+  new program, wait_for_sysfs is now run before udev.
+  udev is now 10-udev.hotplug in /etc/hotplug.d/default so that HAL
+  is happier.
+  Please feel free to delete the /etc/hotplug.d/default/udev.hotplug file.
 
 *udev-032 (13 Sep 2004)
 
