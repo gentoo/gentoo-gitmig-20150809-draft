@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-2.7.ebuild,v 1.5 2004/06/24 21:55:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-2.7.ebuild,v 1.6 2004/07/01 16:10:31 squinky86 Exp $
 
 DESCRIPTION="A next-generation scanning tool for pentesters"
 HOMEPAGE="http://www.thc.org/releases.php"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="ssl"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6j )"
 
 src_unpack() {
