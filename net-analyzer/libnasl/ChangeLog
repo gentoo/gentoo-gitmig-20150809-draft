@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.40 2005/01/28 02:02:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.41 2005/02/14 13:34:04 dragonheart Exp $
+
+  14 Feb 2005; Daniel Black <dragonheart@gentoo.org> libnasl-2.0.12.ebuild,
+  libnasl-2.3.0.ebuild:
+  Compile fault and doc flag added as per bug #81962 and bug #81975. Thanks to
+  Nguyen Thai Ngoc Duy <pclouds@gentoo.org>
 
 *libnasl-2.2.2a (28 Jan 2005)
 
