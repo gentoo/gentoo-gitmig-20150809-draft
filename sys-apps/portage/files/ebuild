@@ -554,8 +554,9 @@ dyn_merge() {
     fi
     echo
     pkg_preinst
-    /usr/sbin/portage-merge
-    cd ${BUILDDIR}
+    #/usr/sbin/portage-merge
+	dopython portage.merge $ROOT $CATEGORY $PF $D
+	cd ${BUILDDIR}
     #zap it so that people don't look at a bad image and get confused
     rm -rf image
     pkg_postinst

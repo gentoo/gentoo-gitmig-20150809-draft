@@ -51,6 +51,9 @@
 # the vast majority of packages, however.
 
 import string,os
+from commands import *
+import md5
+from stat import *
 
 # parsever:
 # This function accepts an 'inter-period chunk' such as
@@ -70,6 +73,164 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm")
 
+def isfifo(x):
+	mymode=os.stat(x)[ST_MODE]
+	return S_ISFIFO(mymode)
+
+def movefile(src,dest):
+    if os.path.exists(dest):
+	os.unlink(dest)
+    mystat=os.stat(src)
+    mymode=mystat[ST_MODE]
+    myperms=S_IMODE(mymode)
+    if S_ISCHR(mymode):
+	mydev=getstatusoutput("/bin/ls -l "+src)[1][34:42]
+	mymajor=mydev[:3]
+	myminor=mydev[4:]
+	myout=getstatusoutput("/bin/mknod "+dest+" c "+mymajor+" "+myminor)
+	#character device
+    elif S_ISBLK(mymode):
+	mydev=getstatusoutput("/bin/ls -l "+src)[1][34:42]
+	mymajor=mydev[:3]
+	myminor=mydev[4:]
+	myout=getstatusoutput("/bin/mknod "+dest+" b "+mymajor+" "+myminor)
+	#block device
+    elif S_ISLNK(mymode):
+	pointsto=os.readlink(src)
+	os.symlink(pointsto,dest)
+	#symbolic link
+    elif S_ISREG(mymode):
+	mybuffer=""
+	myin=open(src,"r")
+	myout=open(dest,"w")
+	while (1):
+        	#do 256K reads for enhanced performance
+        	mybuffer=myin.read(262144)
+        	if mybuffer=="":
+            		break
+		myout.write(mybuffer)
+    	myin.close()
+	myout.close()
+ 	#regular file
+    elif S_ISFIFO(mymode): 
+	os.mkfifo(dest)
+	#fifo
+    #set permissions/ownership
+    os.chmod(dest,myperms)
+    os.chown(dest,mystat[ST_UID],mystat[ST_GID])
+    #unlink src
+    return 1
+
+def md5digest(x):
+    hexmap=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+    m=md5.new()
+    mydata=""
+    myfile=open(x)
+    while (1):
+        #do 256K reads for enhanced performance
+        mydata=myfile.read(262144)
+        if mydata=="":
+            break
+        m.update(mydata)
+    myfile.close()
+    asciidigest=""
+    for mydigit in m.digest():
+        asciidigest=asciidigest+hexmap[((ord(mydigit) & 0xf0) >> 4)]+hexmap[(ord(mydigit) & 0xf)]
+    return asciidigest
+
+def getmtime(x):
+	 return `os.lstat(x)[-2]`
+
+def prepare_db(myroot,mycategory,mypackage):
+    if not os.path.isdir(myroot+"var/db"):
+	os.mkdir(myroot+"var/db",0755)
+    if not os.path.isdir(myroot+"var/db/pkg"):
+	os.mkdir(myroot+"var/db/pkg",0755)
+    if not os.path.isdir(myroot+"var/db/pkg/"+mycategory):
+	os.mkdir(myroot+"var/db/pkg/"+mycategory,0755)
+    if not os.path.isdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage):
+	os.mkdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
+
+def pathstrip(x,myroot,mystart):
+    cpref=os.path.commonprefix([x,mystart])
+    return [myroot+x[len(cpref)+1:],x[len(cpref):]]
+
+
+def mergefiles(outfile,myroot,mystart):
+	mycurpath=os.getcwd()
+	myfiles=os.listdir(mycurpath)
+	for x in myfiles:
+		floc=pathstrip(os.path.normpath(mycurpath+"/"+x),myroot,mystart)
+		if os.path.islink(x):
+			myto=os.readlink(x)
+			if os.path.exists(floc[0]):
+				if os.path.isdir(floc[0]):
+					print "!!!",floc[0],"->",myto
+				else:
+					os.unlink(floc[0])
+			try:
+				os.symlink(myto,floc[0])
+				print "<<<",floc[0],"->",myto
+				outfile.write("sym "+floc[1]+" -> "+myto+" "+getmtime(floc[0])+"\n")
+			except:
+				print "!!!",floc[0],"->",myto
+		elif os.path.isdir(x):
+			mystat=os.stat(x)
+			if not os.path.exists(floc[0]):
+				os.mkdir(floc[0])
+				os.chmod(floc[0],mystat[0])
+				os.chown(floc[0],mystat[4],mystat[5])
+				print "<<<",floc[0]+"/"
+			else:
+				print "---",floc[0]+"/"
+			#mtime doesn't mean much for directories -- we don't store it
+			outfile.write("dir "+floc[1]+"\n")
+			mywd=os.getcwd()
+			os.chdir(x)
+			mergefiles(outfile,myroot,mystart)
+			os.chdir(mywd)
+		elif os.path.isfile(x):
+			mymd5=md5digest(mycurpath+"/"+x)
+			if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+				zing="<<<"
+			else:
+				zing="!!!"
+	
+			print zing+" "+floc[0]
+			print "md5",mymd5
+			outfile.write("obj "+floc[1]+" "+mymd5+" "+getmtime(floc[0])+"\n")
+		elif isfifo(x):
+			zing="!!!"
+			if not os.path.exists(pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):	
+				if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+					zing="<<<"
+			elif isfifo(pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+				os.unlink(pathstrip(mycurpath,myroot,mystart)[0]+"/"+x)
+				if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+					zing="<<<"
+			print zing+" "+floc[0]
+			outfile.write("fif "+floc[1]+"\n")
+		else:
+			if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+				zing="<<<"
+			else:
+				zing="!!!"
+			print zing+" "+floc[0]
+			outfile.write("dev "+floc[1]+"\n")
+
+def merge(myroot,mycategory,mypackage,mystart):
+	mystart=os.path.normpath(mystart)
+	os.chdir(mystart)
+	print 
+	print ">>> Merging contents of",mystart,"to "+myroot
+	print ">>> Logging merge to "+myroot+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS"
+	prepare_db(myroot,mycategory,mypackage)
+	outfile=open(myroot+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS","w")
+	mergefiles(outfile,myroot,mystart)
+	outfile.close()
+	print
+	print ">>>",mypackage,"merged."
+	print
 
 def getsetting(mykey,recdepth=0):
 	"""perform bash-like basic variable expansion, recognizing ${foo} and $bar"""

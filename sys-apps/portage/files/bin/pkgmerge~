@@ -1,0 +1,53 @@
+#!/usr/bin/env python
+
+import portage
+import sys
+import os
+import string
+import shutil
+
+for x in sys.argv[1:]:
+
+	#make sure pkg exists
+
+	if not os.path.exists(x):
+		print "!!! Error:",x,"not found."
+		continue
+
+	#get extension, package name
+
+	mps=string.split(os.path.basename(x),".")
+	myextension=mps[-1]
+	mypkg=string.join(mps[:-1],".")
+	del mps
+
+	if myextension != "tbz2":
+		print "!!! Error:",x,"is not a tbz2 file."
+		continue
+	
+	mypkgsplit=portage.pkgsplit(mypkg)
+	if mypkgsplit==None:
+		print "!!! Error:",x,"does not have a valid name."
+		continue
+
+	if not os.path.exists("/tmp/portage-pkg"):
+		os.mkdir("/tmp/portage-pkg")
+	if os.path.exists("/tmp/portage-pkg/"+mypkg):
+		shutil.rmtree("/tmp/portage-pkg/"+mypkg,1)
+	os.mkdir("/tmp/portage-pkg/"+mypkg)		
+	os.chdir("/tmp/portage-pkg/"+mypkg)
+
+	print ">>> extracting",mypkg
+	unpacknotok=os.system("cat "+x+"| bzip2 -d | tar xf -")
+	if unpacknotok:
+		print "!!! Error extracting",x
+		continue
+
+	#get category
+	mycat=os.listdir("var/db/pkg")[0]
+
+	#exact version of package is already installed
+
+	if portage.isinstalled(mycat+"/"+mypkg):
+		print "!!! Error:",mypkg,"is already installed.  Unmerge first."
+		continue
