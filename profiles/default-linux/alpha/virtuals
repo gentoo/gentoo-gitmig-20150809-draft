@@ -1,11 +1,11 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.6 2004/08/21 00:39:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.7 2004/09/15 05:11:40 vapier Exp $
 
 # This file is used to either override or extend the parent profile's
 # virtuals mappings.   In this case, this is for ARCHITECTURE SPECIFIC
 # mappings
 
 virtual/bootloader		sys-boot/aboot
-virtual/linux-sources		sys-kernel/alpha-sources
-virtual/x11			x11-base/xorg-x11
+virtual/linux-sources	sys-kernel/alpha-sources
+virtual/x11				x11-base/xorg-x11
