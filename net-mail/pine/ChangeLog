@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.8 2002/11/25 18:50:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.9 2002/11/25 19:34:31 raker Exp $
+
+*pine-4.50-r1 (25 Nov 2002)
+
+  25 Nov 2002; Nick Hadaway <raker@gentoo.org> pine-4.50-r1.ebuild,
+  files/digest-pine-4.50-r1, files/4.50-gentoo.diff :
+  Now supports maildir!  This ebuild uses just one diff which is based
+  off the diff provided by Michael Grubb on bug #8474.  I updated it
+  to work with pine-4.50 and changed the reference to .maildir instead
+  of Maildir to work with the gentoo standard.
 
 *pine-4.50 (22 Nov 2002)
 
