@@ -474,3 +474,5 @@ TIFFLIB = libtiff.so
 JPEGLIB = libjpeg.so
 PNGLIB = libpng.so
 ZLIB = libz.so
+LINUXSVGAHDR_DIR = /usr/include
+LINUXSVGALIB = /usr/lib/libvga.so
