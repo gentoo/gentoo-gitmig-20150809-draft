@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.6.ebuild,v 1.1 2003/11/25 23:56:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.6.ebuild,v 1.2 2003/11/30 03:38:03 lu_zero Exp $
 
 DESCRIPTION="program to map special Powerbook/iBook keys in Linux"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
@@ -27,11 +27,16 @@ src_compile() {
 
 src_install() {
 	dodir /etc/power
-	make sysconfdir=${D}/etc			\
-		localstatedir=${D}/var/lib		\
+	make sysconfdir=${D}/etc				\
+		localstatedir=${D}/var/lib				\
 		DESTDIR=${D} install || die "failed to install"
-	exeinto /etc/init.d ; newexe ${FILESDIR}/pbbuttonsd.rc5 pbbuttonsd
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/pbbuttonsd.rc5 pbbuttonsd
 	dodoc README COPYING
+	#fix the symlink
+	rm ${D}/etc/pbbuttonsd.conf
+	mv ${D}/var/lib/pbbuttons/pbbuttonsd.conf ${D}/etc/pbbuttonsd.conf
+	dosym /etc/pbbuttonsd.conf /var/lib/pbbuttons/pbbuttonsd.conf
 }
 
 pkg_postinst(){
