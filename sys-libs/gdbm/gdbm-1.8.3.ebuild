@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3.ebuild,v 1.2 2003/11/02 07:14:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3.ebuild,v 1.3 2003/12/17 04:19:55 brad_mssw Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/gdbm/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64"
+KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ppc64"
 
 DEPEND="virtual/glibc
 	berkdb? ( amd64? sys-libs/db : =sys-libs/db-1.85-r1 )"
