@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.1.ebuild,v 1.4 2004/01/25 23:15:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.1.ebuild,v 1.5 2004/01/25 23:16:36 plasmaroo Exp $
 
 DESCRIPTION="I2C Bus support for 2.4.x kernels"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
@@ -97,7 +97,7 @@ src_compile ()  {
 
 src_install() {
 	emake \
-		CC = ${CC} \
+		CC=${CC} \
 		LINUX=$LINUX \
 		LINUX_INCLUDE_DIR=/usr/include/linux \
 		DESTDIR=${D} \
