@@ -1,6 +1,12 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.9 2004/09/10 13:16:38 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.10 2004/09/23 21:14:21 latexer Exp $
+
+*blam-1.4.1 (23 Sep 2004)
+
+  23 Sep 2004; <peter@gentoo.org> -blam-1.2.0.ebuild, -blam-1.2.1.ebuild,
+  -blam-1.2.3.ebuild, -blam-1.2.4.ebuild, +blam-1.4.1.ebuild:
+  Bump, and remove a bunch of older versions.
 
   10 Sep 2004; Brandon Hale <tseng@gentoo.org> blam-1.4.0.ebuild:
   Fix SRC_URI, thanks jorm for catching this quick.
