@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.13 2003/02/13 12:53:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.14 2003/07/14 14:15:10 phosphan Exp $
 
 IUSE="mpeg arts esd sdl oggvorbis alsa"
 
@@ -23,7 +23,8 @@ DEPEND="x86? ( dev-lang/nasm )
 	esd? ( media-sound/esound )
 	sdl? ( media-libs/libsdl )
 	oggvorbis? ( media-libs/libvorbis )
-	mpeg? ( media-libs/smpeg )"
+	mpeg? ( media-libs/smpeg )
+	>=sys-devel/autoconf-2.57-r1"
 
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.7 2003/02/12 07:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.8 2003/07/14 14:15:10 phosphan Exp $
+
+  14 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> openal-20020127.ebuild:
+  Added depend on autoconf-2.57-r1 because of bug 19504
 
   14 Jan 2003; Mark Guertin <gerk@gentoo.org> : openal-20020127.ebuild :
   set ~ppc in keywords
