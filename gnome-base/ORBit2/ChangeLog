@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/ORBit2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ChangeLog,v 1.51 2004/05/29 03:46:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ChangeLog,v 1.52 2004/05/30 18:32:23 foser Exp $
+
+*ORBit2-2.10.2 (30 May 2004)
+
+  30 May 2004; foser <foser@gentoo.org> ORBit2-2.10.2.ebuild :
+  New release, add MAKEOPTS cap to 1 job (#49211)
 
   29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   ORBit2-2.10.0.ebuild:
