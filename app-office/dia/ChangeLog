@@ -1,6 +1,13 @@
 # ChangeLog for app-office/dia
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.2 2002/06/20 21:20:50 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.3 2002/06/21 01:41:49 stroke Exp $
+
+*dia-0.90-r1 (21 Jun 2002)
+
+  21 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog :
+
+  Added missing dep to dev-libs/libunicode. Fixes bug #3959
+
 
 *dia-0.90 (20 Jun 2002)
 
