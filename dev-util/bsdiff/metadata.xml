@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>Brian Harring bdharring@wisc.edu</maintainer>
-<maintainer>through: seemant</maintainer>
+<maintainer>
+	<name>Brian Harring</name>
+	<email>bdharring@wisc.edu</email>
+	<description>Indirectly maintaining through seemant@gentoo.org</description>
+</maintainer>
 </pkgmetadata>
