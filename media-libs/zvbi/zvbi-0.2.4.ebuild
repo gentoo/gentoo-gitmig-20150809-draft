@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.4.ebuild,v 1.3 2003/10/24 23:58:09 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.4.ebuild,v 1.4 2004/02/17 20:29:33 agriffis Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://zapping.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc amd64"
+KEYWORDS="x86 sparc ~ppc amd64 alpha ia64"
 
 DEPEND="virtual/x11
 	nls? ( sys-devel/gettext )"
