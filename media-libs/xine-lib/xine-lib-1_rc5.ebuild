@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5.ebuild,v 1.3 2004/06/24 23:25:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5.ebuild,v 1.4 2004/06/26 20:11:08 hansmi Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -104,14 +104,17 @@ src_compile() {
 
 	# Disable compiling of altivec-code if it's not in the
 	# USE-flags
-	use ppc && use altivec \
-		&& myconf="${myconf} --enable-altivec" \
-		|| CFLAGS="${CFLAGS} -U__ALTIVEC__"
+	if use ppc
+	then
+		use altivec \
+			&& myconf="${myconf} --enable-altivec" \
+			|| CFLAGS="${CFLAGS} -U__ALTIVEC__"
+	fi
 
 	# The default CFLAGS (-O) is the only thing working on hppa.
 	use hppa \
 		&& unset CFLAGS
-	
+
 	econf \
 		`use_enable X x11` \
 		`use_enable esd` \

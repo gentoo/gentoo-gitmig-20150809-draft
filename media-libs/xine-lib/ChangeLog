@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.127 2004/06/24 23:25:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.128 2004/06/26 20:11:08 hansmi Exp $
+
+  26 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> xine-lib-1_rc5.ebuild:
+  Fixed my patch from yesterday that it only affects ppc.
 
   25 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> xine-lib-1_rc5.ebuild:
   Fixed a compilation-error on PowerPC when CFLAGS don't allow Altivec-code.
