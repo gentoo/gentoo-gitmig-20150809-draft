@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.10 2004/10/04 15:05:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.11 2004/11/03 19:09:51 kloeri Exp $
+
+  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> tunepimp-0.3.0.ebuild:
+  ~alpha keyword.
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> tunepimp-0.3.0.ebuild:
   Stable on hppa.
