@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040131.ebuild,v 1.2 2004/02/03 01:10:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040131.ebuild,v 1.3 2004/02/04 13:19:52 dragonheart Exp $
 
 inherit eutils crosscompile
 
@@ -63,7 +63,7 @@ LICENSE="LGPL-2"
 # ONLY single slot support since only one version of package can exist in db.
 
 
-IUSE="nls ipv6 debug nommu fullrpc pie propolice softfloat"
+IUSE="nls ipv6 debug nommu fullrpc pie propolice softfloat savedconfig"
 
 # Local use flags
 # nommu = No memory management unit on target architecture
@@ -246,15 +246,21 @@ src_compile() {
 	local uconfig;
 	use nls && uconfig="sources/uClibc.config-locale" || uconfig="sources/uClibc.config"
 
+	#stripflags -march -mcpu???
+
 	cd ${UCLIBCDIR}
 
 
 	# restore last config
-	if [ -f /etc/embedded/uClibc.config ]; then
+	if [ -f /etc/embedded/uClibc.config && `use savedconfig` ]; then
 		cp /etc/embedded/uClibc.config ${uconfig}
 	else
 		# or make the default with a few changes
 		emake defconfig || die "Could not make uclibc default config"
+
+		/bin/sed -i -e 's,^.*TARGET_$(UCLIBC_TARGET_ARCH).*,TARGET_$(TARGETARCH)=y,g' \
+		-e "s,^KERNEL_SOURCE=.*,KERNEL_SOURCE=\"${WORKDIR}/linux\"," \
+		-e 's,^TARGET_ARCH.*,TARGET_ARCH=\"$(TARGETARCH)\",g' .config
 
 		uclibc_config_option n MALLOC_GLIBC_COMPAT
 		uclibc_config_option y DO_C99_MATH
@@ -271,102 +277,105 @@ src_compile() {
 		uclibc_config_option y UNIX98PTY_ONLY
 		uclibc_config_option n UCLIBC_HAS_TZ_FILE_READ_MANY
 		uclibc_config_option y UCLIBC_HAS_LFS
+		uclibc_config_option y UCLIBC_COMPLETELY_PIC
+
+
+		if [ `use debug` ]; then
+			uclibc_config_option y DODEBUG
+			uclibc_config_option y PTHREADS_DEBUG_SUPPORT
+			uclibc_config_option y CONFIG_PROFILING
+		# Other possibe options for debug use flag
+		# DOASSERTS
+		# SUPPORT_LD_DEBUG
+		# SUPPORT_LD_DEBUG_EARLY
+		# PTHREADS_DEBUG_SUPPORT
+		else
+			uclibc_config_option  n DODEBUG
+			uclibc_config_option  n PTHREADS_DEBUG_SUPPORT
+		fi
+
+		[ `use ipv6` ] && uclibc_config_option y UCLIBC_HAS_IPV6 || \
+			uclibc_config_option n UCLIBC_HAS_IPV6
+
+		[ `use fullrpc` ] && uclibc_config_option y UCLIBC_HAS_FULL_RPC || \
+			uclibc_config_option n UCLIBC_HAS_FULL_RPC
+
+		[ `use nommu` ] && uclibc_config_option n UCLIBC_HAS_MMU || \
+			uclibc_config_option y UCLIBC_HAS_MMU
+
+
+		if [ `use pie` && ${TARGETARCH}=="i386" ]; then
+			uclibc_config_option y UCLIBC_PIE_SUPPORT
+			uclibc_config_option n CONFIG_PROFILING
+		else
+			uclibc_config_option n UCLIBC_PIE_SUPPORT
+		fi
+
+		[ `use propolice` ] && uclibc_config_option y UCLIBC_PROPOLICE || \
+			uclibc_config_option n UCLIBC_PROPOLICE
+
+		if [ `use softfloat` ]; then
+			uclibc_config_option n HAS_FPU
+			uclibc_config_option y UCLIBC_HAS_FLOATS
+			uclibc_config_option y UCLIBC_HAS_SOFT_FLOAT
+		#else
+			#TODO for completeness
+		fi
+
+
+		uclibc_config_option n UCLIBC_PREGENERATED_LOCALE_DATA
+		uclibc_config_option n UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA
+
+		if [ `use nls` ]; then
+			uclibc_config_option y UCLIBC_HAS_LOCALE
+
+			#pregen is for i386 architectures only
+			if [ ${TARGETARCH}=="i386" ]; then
+				uclibc_config_option y UCLIBC_PREGENERATED_LOCALE_DATA
+				cp ${DISTDIR}/uClibc-locale-030818.tgz ${UCLIBCDIR}/extra/locale
+			else
+				uclibc_config_option n UCLIBC_PREGENERATED_LOCALE_DATA
+
+				#TODO - below needs to be done for savedconfig too
+				pushd extra/locale
+				find charmaps -name "*.pairs" > codesets.txt
+				cp LOCALES locales.txt
+				emake clean all || die "Could not generate codepages"
+				popd
+			fi
+			uclibc_config_option y UCLIBC_HAS_XLOCALE
+			uclibc_config_option y UCLIBC_HAS_HEXADECIMAL_FLOATS
+			uclibc_config_option y UCLIBC_HAS_GLIBC_DIGIT_GROUPING
+			uclibc_config_option y UCLIBC_HAS_SCANF_LENIENT_DIGIT_GROUPING
+			uclibc_config_option y UCLIBC_HAS_GETTEXT_AWARENESS
+			# lots of stuff from uclibc.spec - TODO LATER
+		else
+			uclibc_config_option n UCLIBC_HAS_LOCALE
+		fi
+
+
 	fi
 
-	/bin/sed -i -e 's,^.*TARGET_$(UCLIBC_TARGET_ARCH).*,TARGET_$(TARGETARCH)=y,g' \
-		-e 's,^TARGET_ARCH.*,TARGET_ARCH=\"$(TARGETARCH)\",g' \
-		-e "s,^KERNEL_SOURCE=.*,KERNEL_SOURCE=\"${WORKDIR}/linux\"," \
-		-e 's,^RUNTIME_PREFIX=.*,RUNTIME_PREFIX=\"/\",g' \
+
+	/bin/sed -i -e 's,^RUNTIME_PREFIX=.*,RUNTIME_PREFIX=\"/\",g' \
 		-e 's,^DEVEL_PREFIX=.*,DEVEL_PREFIX=\"/usr/\",g' \
 		-e 's,^SHARED_LIB_LOADER_PREFIX=.*,SHARED_LIB_LOADER_PREFIX=\"/lib\",g' \
 		.config
 
-	if [ `use debug` ]; then
-		uclibc_config_option y DODEBUG
-		uclibc_config_option y PTHREADS_DEBUG_SUPPORT
-		uclibc_config_option y CONFIG_PROFILING
-	# Other possibe options for debug use flag
-	# DOASSERTS
-	# SUPPORT_LD_DEBUG
-	# SUPPORT_LD_DEBUG_EARLY
-	# PTHREADS_DEBUG_SUPPORT
-	else
-		uclibc_config_option  n DODEBUG
-		uclibc_config_option  n PTHREADS_DEBUG_SUPPORT
-	fi
-
-	[ `use ipv6` ] && uclibc_config_option y UCLIBC_HAS_IPV6 || \
-		uclibc_config_option n UCLIBC_HAS_IPV6
-
-	[ `use fullrpc` ] && uclibc_config_option y UCLIBC_HAS_FULL_RPC || \
-		uclibc_config_option n UCLIBC_HAS_FULL_RPC
-
-	[ `use nommu` ] && uclibc_config_option n UCLIBC_HAS_MMU || \
-		uclibc_config_option y UCLIBC_HAS_MMU
-
-
-	if [ `use pie` && ${TARGETARCH}=="i386" ]; then
-		uclibc_config_option y UCLIBC_PIE_SUPPORT
-		uclibc_config_option y UCLIBC_COMPLETELY_PIC
-		uclibc_config_option n CONFIG_PROFILING
-	else
-		uclibc_config_option n UCLIBC_PIE_SUPPORT
-		uclibc_config_option n UCLIBC_COMPLETELY_PIC
-	fi
-
-	[ `use propolice` ] && uclibc_config_option y UCLIBC_PROPOLICE || \
-		uclibc_config_option n UCLIBC_PROPOLICE
-
-	if [ `use softfloat` ]; then
-		uclibc_config_option n HAS_FPU
-		uclibc_config_option y UCLIBC_HAS_FLOATS
-		uclibc_config_option y UCLIBC_HAS_SOFT_FLOAT
-	#else
-		#TODO for completeness
-	fi
-
-
-	uclibc_config_option n UCLIBC_PREGENERATED_LOCALE_DATA
-	uclibc_config_option n UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA
-
-	if [ `use nls` ]; then
-		uclibc_config_option y UCLIBC_HAS_LOCALE
-
-		#pregen is for i386 architectures only
-		if [ ${TARGETARCH}=="i386" ]; then
-			uclibc_config_option y UCLIBC_PREGENERATED_LOCALE_DATA
-			cp ${DISTDIR}/uClibc-locale-030818.tgz ${UCLIBCDIR}/extra/locale
-		else
-			uclibc_config_option n UCLIBC_PREGENERATED_LOCALE_DATA
-			pushd extra/locale
-			find charmaps -name "*.pairs" > codesets.txt
-			cp LOCALES locales.txt
-			emake clean all || die "Could not generate codepages"
-			popd
-		fi
-		uclibc_config_option y UCLIBC_HAS_XLOCALE
-		uclibc_config_option y UCLIBC_HAS_HEXADECIMAL_FLOATS
-		uclibc_config_option y UCLIBC_HAS_GLIBC_DIGIT_GROUPING
-		uclibc_config_option y UCLIBC_HAS_SCANF_LENIENT_DIGIT_GROUPING
-		uclibc_config_option y UCLIBC_HAS_GETTEXT_AWARENESS
-		# lots of stuff from uclibc.spec - TODO LATER
-	else
-		uclibc_config_option n UCLIBC_HAS_LOCALE
-	fi
 
 
 	cd ${S}
 	emake -j1 || die "Could not make uclibc-buildroot"
 
 	if [ -n "`use debug`" ]; then
-		if [ -f /etc/embedded/busybox.config ]; then
+		if [ -f /etc/embedded/busybox.config && `use savedconfig` ]; then
 			emake BUSYBOX_CONFIG=/etc/embedded/busybox.config busybox \
 				|| "Error making busybox old config"
 		else
 			emake  busybox || "Error making busybox default config"
 		fi
 
-		[ -f /etc/embedded/tinylogin.config ] && \
+		[ -f /etc/embedded/tinylogin.config && `use savedconfig` ] && \
 			cp /etc/embedded/tinylogin.config build_${TARGETARCH}/tinylogin-${TINYLOGINVER}/Config.h
 
 		emake extras-compile
@@ -390,11 +399,10 @@ src_install() {
 
 	cd staging_dir
 
-	# there's probably a better way to do this but it was giving me the
-	# sh?ts trying to find it. usr/bin got mapped to bin in most cases.
+	# there's probably a better way to do this. usr/bin got mapped to bin in most cases.
 	mv info share
 
-	tar -cf - lib/ usr/bin/ bin/ ${BINPREFIX} ${TARGETARCH}-linux \
+	tar -cf - lib/ usr/bin/ bin/ ${BINPREFIX}/* ${TARGETARCH}-linux \
 		include/ | \
 		tar --no-same-owner -C ${D}/usr/${BINPREFIX} -xf -
 

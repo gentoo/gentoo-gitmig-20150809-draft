@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/uclibc-buildroot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.3 2004/02/03 03:44:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.4 2004/02/04 13:19:52 dragonheart Exp $
+
+  04 Feb 2004; Daniel Black <dragonheart@gentoo.org>
+  uclibc-buildroot-20040131.ebuild:
+  It compiles now. Install isn't quite right though.
 
   03 Feb 2004; Daniel Black <dragonheart@gentoo.org>
   files/0.9.26/uClibc-0.9.26-Makefile.patch,
