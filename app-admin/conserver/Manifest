@@ -1,5 +1,5 @@
-MD5 5574f4c5aff1cc393f66815e8a80644a ChangeLog 1658
-MD5 79b6720c2e784d2c75e27017cd34c6e1 conserver-8.0.9.ebuild 1982
+MD5 8773c50fcf0e561b5071ae9f02e76101 ChangeLog 1764
+MD5 7f033a471caee0009d23b2cd1124f815 conserver-8.0.9.ebuild 1996
 MD5 db109ae3e620120b654118ff198a9d0a metadata.xml 1062
 MD5 3a98b3aa2654214cd71e8b2a5b41e4d2 files/conserver.confd 299
 MD5 338bf82fc823c16c8cd8924440abb096 files/conserver.initd 1203
