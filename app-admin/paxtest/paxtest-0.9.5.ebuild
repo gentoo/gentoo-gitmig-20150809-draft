@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5.ebuild,v 1.2 2003/11/17 00:04:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5.ebuild,v 1.3 2003/11/28 22:14:47 solar Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="PaX regression test suite"
 SRC_URI="http://pageexec.virtualave.net/paxtest-${PV}.tar.gz"
 HOMEPAGE="http://pageexec.virtualave.net"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 LICENSE="GPL-2"
 SLOT="0"
 

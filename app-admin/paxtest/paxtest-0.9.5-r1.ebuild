@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.4.ebuild,v 1.2 2003/11/17 00:04:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.1 2003/11/28 22:14:47 solar Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,14 +12,20 @@ LICENSE="GPL-2"
 SLOT="0"
 
 IUSE=""
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-apps/chpax-0.5"
+
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/paxtest-0.9.5.1.diff
+	cp Makefile{,.orig}
+	cp Makefile{.Gentoo-hardened,}
+}
 
 src_compile() {
-	# If you really paranoid you can uncomment this umask stuff.
-	# local mask=$(umask)
-	# umask 0077
-	emake DESTDIR=${D} BINDIR=${D}/usr/bin RUNDIR=/usr/lib/paxtest generic || die "Parallel Make Failed"
-	# umask $mask
+	emake DESTDIR=${D} BINDIR=${D}/usr/bin RUNDIR=/usr/lib/paxtest || die
 }
 
 src_install() {
