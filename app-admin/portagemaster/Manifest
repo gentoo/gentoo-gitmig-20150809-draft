@@ -1,0 +1,7 @@
+MD5 fec906c64ead7aa3c6c648cd4b94eee8 ChangeLog 1983
+MD5 7895b5fa72bcc69040a672a1055b2733 portagemaster-0.1.5.ebuild 686
+MD5 f4f1c377165ececb08b3c71862ca4457 portagemaster-0.1.8.ebuild 1163
+MD5 b78cab51845d19cb5275574a8d1735c5 portagemaster-0.2.0.ebuild 1233
+MD5 b798fe10c396ec71d8ce986366ce1778 files/digest-portagemaster-0.1.5 71
+MD5 cb7c39297283bd80e0229f959401834a files/digest-portagemaster-0.1.8 71
+MD5 8a940fc25ce6a223c06dfed054da2669 files/digest-portagemaster-0.2.0 71
