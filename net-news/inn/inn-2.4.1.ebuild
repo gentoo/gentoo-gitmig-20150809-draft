@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.5 2004/09/12 02:03:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.6 2004/09/27 21:01:35 swegener Exp $
 
-inherit fixheadtails ssl-cert eutils
+inherit fixheadtails ssl-cert eutils libtool flag-o-matic
 
 DESCRIPTION="The Internet News daemon, fully featured NNTP server"
 HOMEPAGE="http://www.isc.org/products/INN"
@@ -27,6 +27,8 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	>=sys-apps/sed-4"
 
+append-ldflags -Wl,-z,now
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -44,6 +46,8 @@ src_unpack() {
 		Makefile.global.in \
 		control/Makefile \
 		doc/man/Makefile
+
+	elibtoolize || die "elibtoolize failed"
 }
 
 src_compile() {

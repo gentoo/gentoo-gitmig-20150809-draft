@@ -1,6 +1,10 @@
 # ChangeLog for net-news/inn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.14 2004/09/12 02:03:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.15 2004/09/27 21:01:35 swegener Exp $
+
+  27 Sep 2004; Sven Wegener <swegener@gentoo.org> inn-2.4.1.ebuild:
+  Added elibtoolize to src_unpack() because the included libtool is broken.
+  Modified to not use lazy bindings.
 
   12 Sep 2004; Sven Wegener <swegener@gentoo.org> files/2.4.1-berkdb.patch,
   inn-2.4.1.ebuild:
