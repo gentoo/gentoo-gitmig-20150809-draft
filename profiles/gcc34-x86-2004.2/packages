@@ -97,7 +97,7 @@ virtual/logger
 *sys-devel/patch
 *sys-libs/cracklib  
 *sys-libs/db
-*>=sys-libs/ncurses-5.4-r2
+*>=sys-libs/ncurses-5.2.20020112a
 *>=sys-libs/pam-0.77-r1
 *sys-libs/pwdb      
 *sys-libs/readline  
