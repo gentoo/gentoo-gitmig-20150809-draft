@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.36 2004/05/09 06:32:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.37 2004/05/11 19:55:36 solar Exp $
+
+*libpng-1.0.15-r2 (11 May 2004)
+
+  11 May 2004; <solar@gentoo.org> libpng-1.0.15-r2.ebuild,
+  libpng-1.2.5-r5.ebuild:
+  bump ebuild revisions to force user updates for GLSA process. No change in the
+  .ebuild so no need to call for arch maintiners. By request of koon@g.o
 
   09 May 2004; <solar@gentoo.org> files/libpng-1.0.15-gentoo.diff,
   files/libpng-1.2.5-gentoo.diff:
