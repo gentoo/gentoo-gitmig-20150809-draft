@@ -1,16 +1,26 @@
-MD5 dbaa828d6c720939e86dabbf12998ca0 ChangeLog 7662
-MD5 0caeace3cd28436acc33312d706e96ae cracklib-2.7-r7.ebuild 1428
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aad32071f5ffd7f84e2377ddf8685cb8 cracklib-2.7-r10.ebuild 2680
+MD5 57a1e60e11541b1b3a3518573eb8f915 ChangeLog 7760
 MD5 ef6d24922a3b097c8dc393fb3eae36f8 cracklib-2.7-r8.ebuild 1702
-MD5 1183d6d5dfc09852005843127f87ecbf cracklib-2.7-r9.ebuild 2453
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 000c10b99f4ef3d2e7368617479bbd64 cracklib-2.7-r10.ebuild 2683
-MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 333
-MD5 9c566d6a249f8d02ad419aac76fffd66 files/cracklib-2.7-gentoo-new.diff 4244
-MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
-MD5 cd32ee2bf36a5facd5b5eb5d99aa66ee files/cracklib-2.7-static-lib.patch 1346
-MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r7 63
-MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r8 63
-MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r9 63
-MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
-MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r10 63
+MD5 0caeace3cd28436acc33312d706e96ae cracklib-2.7-r7.ebuild 1428
+MD5 1183d6d5dfc09852005843127f87ecbf cracklib-2.7-r9.ebuild 2453
 MD5 70692d376ebaca787743b7e54d7dd49e files/cracklib-2.7-libdir.patch 762
+MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r9 63
+MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r8 63
+MD5 9c566d6a249f8d02ad419aac76fffd66 files/cracklib-2.7-gentoo-new.diff 4244
+MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r7 63
+MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r10 63
+MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
+MD5 cd32ee2bf36a5facd5b5eb5d99aa66ee files/cracklib-2.7-static-lib.patch 1346
+MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 333
+MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBkACVugEuf3OQ0akRAoNsAJ91a1+Rkb//+cqBg/U8rk1fFfD7hQCfaAQE
+HY+2WIn5bxcKfn6+SpiiZVg=
+=As4R
+-----END PGP SIGNATURE-----
