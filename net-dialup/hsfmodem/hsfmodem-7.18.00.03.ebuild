@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.03.ebuild,v 1.1 2005/03/06 00:20:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.03.ebuild,v 1.2 2005/03/08 05:42:29 mrness Exp $
 
 DESCRIPTION="Linuxant's modem driver for Connexant HSF chipset"
 HOMEPAGE="http://www.linuxant.com/drivers/hsf/index.php"
@@ -19,7 +19,7 @@ pkg_setup() {
 	if useq x86; then
 		MY_ARCH_S=${S}/${P}full
 	elif useq amd64; then
-		MY_ARCH_S=${S}/${P}X86_64full
+		MY_ARCH_S=${S}/${P}x86_64full
 	fi
 }
 
