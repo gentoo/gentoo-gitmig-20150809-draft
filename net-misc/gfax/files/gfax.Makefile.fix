@@ -1,0 +1,35 @@
+--- Makefile.orig	2004-11-27 11:02:17.808734280 +0100
++++ Makefile	2004-11-27 11:02:52.047529192 +0100
+@@ -39,20 +39,18 @@
+ 	
+ install: mono-gfax.exe
+ 	mkdir -p $(prefix)/bin
+-	mkdir -p /usr/share/gfax
+-	mkdir -p /var/spool/gfax
+-	chmod 777 /var/spool/gfax
+-	$(INSTALL) -m 755 mono-gfax.exe /usr/bin/mono-gfax.exe
+-	$(INSTALL) -m 755 gfax /usr/bin/gfax
+-	$(INSTALL) -m 755 gfaxlpr /usr/bin/gfaxlpr
+-	$(INSTALL) -m 755 pixmaps/gfax.png /usr/share/pixmaps/
+-	$(INSTALL) -m 755 data/gfax.desktop /usr/share/applications/
+-	$(INSTALL) -m 755 data/fax-g3.profile /usr/share/gfax/
+-	$(INSTALL) -m 755 data/GFAX.xml /usr/share/gfax/
+-	$(INSTALL) -m 755 data/GNOME-GFAX-PS.xml /usr/share/gfax/
+-	$(INSTALL) -m 755 scripts/printer-setup.sh /usr/share/gfax/
+-	env GCONF_CONFIG_SOURCE="" gconftool-2 --makefile-install-rule $(SCHEMA)
+-	./scripts/printer-setup.sh --install
++	mkdir -p $(DESTDIR)/usr/share/gfax
++	mkdir -p $(DESTDIR)/var/spool/gfax
++	chmod 777 $(DESTDIR)/var/spool/gfax
++	$(INSTALL) -m 755 mono-gfax.exe $(DESTDIR)/usr/bin/mono-gfax.exe
++	$(INSTALL) -m 755 gfax $(DESTDIR)/usr/bin/gfax
++	$(INSTALL) -m 755 gfaxlpr $(DESTDIR)/usr/bin/gfaxlpr
++	$(INSTALL) -m 755 pixmaps/gfax.png $(DESTDIR)/usr/share/pixmaps/
++	$(INSTALL) -m 755 data/gfax.desktop $(DESTDIR)/usr/share/applications/
++	$(INSTALL) -m 755 data/fax-g3.profile $(DESTDIR)/usr/share/gfax/
++	$(INSTALL) -m 755 data/GFAX.xml $(DESTDIR)/usr/share/gfax/
++	$(INSTALL) -m 755 data/GNOME-GFAX-PS.xml $(DESTDIR)/usr/share/gfax/
++	$(INSTALL) -m 755 scripts/printer-setup.sh $(DESTDIR)/usr/share/gfax/
+ 
+ uninstall:
+ 	rm -f /usr/bin/mono-gfax.exe
