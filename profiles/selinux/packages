@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.12 2005/01/05 03:54:49 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.13 2005/01/14 19:47:25 kaiowas Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -41,6 +41,7 @@
 >=sys-kernel/development-sources-2.6.0
 >=sys-kernel/mm-sources-2.6.0
 >=sys-kernel/vanilla-sources-2.6.0
+<=sys-kernel/hardened-dev-sources-2.6.10-r1
 ##############################################################################
 
 *virtual/bootloader
