@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # This ebuild by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4.ebuild,v 1.2 2001/11/27 08:15:56 jerrya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4-r1.ebuild,v 1.1 2002/02/05 18:08:09 karltk Exp $
 
 
 S=${WORKDIR}/${P}
@@ -26,15 +26,20 @@ src_compile() {
 		--enable-zshrc=/etc/zsh/zshrc \
 		--enable-fndir=/usr/share \
 		--enable-function-subdirs || die
-	emake || die
-	make check || die
+	# Can't use emake, b0rks
+	make || die
+	# make check violates sandboxing
+#	make check || die
 }
 
 src_install() {
-	make prefix=${D} mandir=${D}/usr/share/man \
-		libdir=${D}/usr/lib fndir=${D}/usr/share \
+	make prefix=${D} \
+		mandir=${D}/usr/share/man \
+		libdir=${D}/usr/lib \
+		fndir=${D}/usr/share \
+		infodir=${D}/usr/share/info \
 		install.bin install.man install.modules \
-		install.info || die
+		install.info install.fns || die
 		
 	dodoc ChangeLog META-FAQ README INSTALL LICENCE config.modules
 	docinto StartupFiles

@@ -1,8 +1,13 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.1 2002/02/01 21:53:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.2 2002/02/05 18:08:09 karltk Exp $
 
-*zsh-4.0.4 (1 Feb 2002)
+*zsh-4.0.4-r1 (5 Feb 2002)
+
+  5 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> zsh-4.0.4.ebuild zsh-4.0.4-r1.ebuild files/digest-zsh-4.0.4 files/digest-zsh-4.0.4-r1
+
+  The ebuild now installs the standard zsh functions properly. It can also
+  now be run nicely within the sandbox.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
