@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.16 2003/06/08 07:17:29 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.17 2003/07/02 19:18:11 gmsoft Exp $
 
 *DBI-1.30-r1 (08 Jun 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> DBI-1.37.ebuild
+  Marked stable on hppa.
 
   08 Jun 2003; <rac@gentoo.org> DBI-1.30-r1.ebuild, DBI-1.30.ebuild:
   Fix ebuild headers, add IUSE

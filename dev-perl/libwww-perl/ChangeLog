@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.16 2003/06/24 14:56:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.17 2003/07/02 19:47:17 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> libwww-perl-5.69.ebuild:
   Mark stable on alpha
 
 *libwww-perl-5.69 (31 May 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> libwww-perl-5.69.ebuild :
+  Marked stable on hppa.
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org>
   libwww-perl-5.69.ebuild:

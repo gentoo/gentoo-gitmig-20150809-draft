@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/Storable-2.07.ebuild,v 1.3 2003/06/21 21:36:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/Storable-2.07.ebuild,v 1.4 2003/07/02 19:34:25 gmsoft Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Storable/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~ppc ~alpha sparc"
+KEYWORDS="x86 amd64 ~ppc ~alpha sparc hppa"
 
 DEPEND="dev-perl/Test-Simple"

@@ -1,12 +1,15 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.15 2003/06/10 11:51:31 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.16 2003/07/02 19:13:35 gmsoft Exp $
 
   10 Jun 2003; Christian Birchinger <joker@gentoo.org>
   DBD-mysql-2.1027.ebuild:
   Added sparc stable keyword
 
 *DBD-mysql-2.1027 (07 Jun 2003)
+
+  02 Jun 2003; Guy Martin <gmsoft@gentoo.org> DBD-mysql-2.1027.ebuild :
+  Marked stable on hppa.
 
   07 Jun 2003; Michael Cummings <mcummings@gentoo.org>
   DBD-mysql-2.1027.ebuild:
