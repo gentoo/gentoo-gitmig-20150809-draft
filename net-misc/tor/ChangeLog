@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.26 2005/02/04 16:32:40 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.27 2005/02/10 21:12:02 humpback Exp $
+
+*tor-0.0.9.4-r1 (10 Feb 2005)
+
+  10 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>; +files/tor.initd,
+  +tor-0.0.9.4-r1.ebuild:
+  Using ideas in bug #75381 from Faustus <orlovm@cs.bgu.ac.il> and after talking
+  to latexer i'm commiting this version that can use a init.d script for easier
+  usage.
 
 *tor-0.0.9.4 (04 Feb 2005)
 
