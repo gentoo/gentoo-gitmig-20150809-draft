@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/ptlink-opm
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ChangeLog,v 1.1 2004/07/10 22:50:41 swegener Exp $
+
+*ptlink-opm-1.1.1 (11 Jul 2004)
+
+  11 Jul 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +files/ptlink-opm.conf.d, +files/ptlink-opm.init.d,
+  +ptlink-opm-1.1.1.ebuild:
+  Initial import, ebuild written by me.
+
