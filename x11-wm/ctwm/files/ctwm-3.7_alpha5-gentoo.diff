@@ -1,0 +1,21 @@
+diff -urN ctwm-3.7-alpha5.ORIG/Imakefile ctwm-3.7-alpha5/Imakefile
+--- ctwm-3.7-alpha5.ORIG/Imakefile	2004-06-09 18:31:35.000000000 +0900
++++ ctwm-3.7-alpha5/Imakefile	2004-11-14 18:36:41.093501472 +0900
+@@ -174,7 +174,7 @@
+ 
+ AllTarget(ctwm)
+ 
+-SpecialObjectRule(parse.o,parse.c,'-DSYSTEM_INIT_FILE="'$(DESTDIR)$(TWMDIR)'/system.ctwmrc"')
++SpecialObjectRule(parse.o,parse.c,'-DSYSTEM_INIT_FILE="'$(DESTDIR)/etc/X11/twm'/system.ctwmrc"')
+ SpecialObjectRule(ctwm.o,ctwm.c,'-DPIXMAP_DIRECTORY="'$(DESTDIR)$(TWMDIR)'/images"')
+ #if !HasPutenv
+ SpecialObjectRule(util.o,util.c,-DNOPUTENV)
+@@ -184,7 +184,7 @@
+ 
+ NormalLibraryTarget(ctwm, libctwm.o)
+ ComplexProgramTarget(ctwm)
+-InstallNonExecFile(system.ctwmrc,$(TWMDIR))
++InstallNonExecFile(system.ctwmrc,/etc/X11/twm)
+ #ifdef XPM
+ install::
+ 	MakeDir($(DESTDIR)$(TWMDIR)/images)

@@ -1,12 +1,22 @@
 # ChangeLog for x11-wm/ctwm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.9 2004/06/24 23:40:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.10 2004/11/14 09:50:36 usata Exp $
+
+*ctwm-3.7_alpha5 (14 Nov 2004)
+
+  14 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> -files/ctwm-3.6-gentoo.diff,
+  +files/ctwm-3.7_alpha5-gentoo.diff, +ctwm-3.7_alpha5.ebuild:
+  Version bumped.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ctwm-3.6-r1.ebuild,
   ctwm-3.7_alpha4-r1.ebuild:
   Add inherit eutils
 
   07 Feb 2004; Mamoru KOMACHI <usata@gentoo.org>
+  files/ctwm-3.6-r1-gentoo.diff, files/ctwm-3.7_alpha4-gentoo.diff:
+  Fixed compile error when >=sys-devel/bison-1.875, closing bug #40599
+
+  07 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> 
   files/ctwm-3.6-r1-gentoo.diff, files/ctwm-3.7_alpha4-gentoo.diff:
   Fixed compile error when >=sys-devel/bison-1.875, closing bug #40599
 
