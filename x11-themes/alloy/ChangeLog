@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.11 2004/07/31 14:58:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.12 2004/08/16 21:55:55 carlo Exp $
+
+  16 Aug 2004; Carsten Lohrke <carlo@gentoo.org>
+  +files/remove-extra-semicolon.patch, alloy-0.5.2.ebuild:
+  satisfy gcc 3.4
 
 *alloy-0.5.2 (31 Jul 2004)
 
