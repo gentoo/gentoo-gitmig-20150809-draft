@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7c58be4f63467925b06771c50049ac68 ChangeLog 563
-MD5 850f28ae3c86034af0639dd2a5c84a84 gaimosd-1.0.0.ebuild 761
+MD5 b6fb2e82692d7e2481111eaf2a714d8e ChangeLog 719
+MD5 d8b416b880ea46d5bb83fcaf537612a8 gaimosd-1.0.0.ebuild 835
 MD5 c0faf0b1810affab2e94a1a23f8533ab metadata.xml 370
 MD5 e562a7f08384757d72348e1590ae7ba6 files/digest-gaimosd-1.0.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBvmPHArHZZzCEUG0RAlvwAJ9Y/n4483QMVNFu78AbY4ggmj7OrwCfSBQl
-rACxvnGfBd9/J2JfNoAjNKg=
-=oIjm
------END PGP SIGNATURE-----
+MD5 bf766281a9286c3ad2c0fc74ec0c3e45 files/gaimosd-quiet.diff 718

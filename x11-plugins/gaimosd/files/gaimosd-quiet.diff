@@ -1,0 +1,31 @@
+diff -ruN old/gaimosd-1.0.0/display.c new/gaimosd-1.0.0/display.c
+--- old/gaimosd-1.0.0/display.c	2004-09-20 08:08:44.000000000 +0200
++++ new/gaimosd-1.0.0/display.c	2005-02-15 16:32:25.349400000 +0100
+@@ -65,11 +65,9 @@
+ gboolean
+ osd_display_cb(osd_display_t *disp)
+ {
+-	printf("bar 1\n");
+ 	if (!disp)
+ 		return FALSE;
+ 
+-	printf("bar 2\n");
+ 	if (disp->lines > -Osd_lines) {
+ 		disp->lines--;
+ 		XOSD_SCROLL(Osd, 1);
+@@ -82,7 +80,6 @@
+ 		return TRUE;
+ 	}
+ 
+-	printf("bar 3\n");
+ 	XOSD_HIDE(Osd);
+ 	XOSD_SCROLL(Osd, Osd_lines);
+ 	Osd_current = NULL;
+@@ -328,7 +325,6 @@
+ 	XOSD_SET_COLOUR(Osd, color);
+ 	XOSD_SET_TIMEOUT(Osd, -1);
+ 
+-	printf("foo 1\n");
+ 	for (i = 0; i < Osd_lines; i++) {
+ 		if (!slist)
+ 			break;
