@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.15 2003/09/08 23:50:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.16 2003/09/12 19:26:25 foser Exp $
 
 *rhythmbox-0.5.3 (09 Sep 2003)
+
+  12 Sep 2003; foser <foser@gentoo.org> rhythmbox-0.5.3.ebuild :
+  Fix gst-plugins-* deps, they moved
 
   09 Sep 2003; foser <foser@gentoo.org> rhythmbox-0.5.3.ebuild :
   New version, adapted to new gst-plugins eclass
