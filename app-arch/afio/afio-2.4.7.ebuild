@@ -1,20 +1,20 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.4.7.ebuild,v 1.5 2002/07/25 14:16:07 seemant Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="makes cpio-format archives and deals somewhat gracefully with \
-input data corruption."
+DESCRIPTION="makes cpio-format archives and deals somewhat gracefully with input data corruption."
 SRC_URI="http://www.ibiblio.org/pub/linux/system/backup/${P}.tgz"
-SLOT="0"
 HOMEPAGE="http://freshmeat.net/projects/afio/"
-LICENSE="Artistic|LGPL"
 
-DEPEND="virtual/glibc"
-RDEPEND="$DEPEND sys-apps/gzip"
+SLOT="0"
+LICENSE="Artistic|LGPL-2"
+KEYWORDS="x86"
+
+DEPEND="sys-apps/gzip"
 
 src_compile() {
     emake || die
-
 }
 
 src_install () {
@@ -28,4 +28,3 @@ src_install () {
 	#prepalldocs
 	doman afio.1
 }
-

@@ -1,13 +1,15 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-0.6.ebuild,v 1.4 2002/07/17 20:44:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-0.6.ebuild,v 1.5 2002/07/25 14:16:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enhanced mt command for Linux, supporting Linux 2.4 ioctls"
 SRC_URI="http://www.ibiblio.org/pub/linux/system/backup/${P}.tar.gz"
-SLOT="0"
 HOMEPAGE="http://www.gnu.org/software/tar/"
+
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
@@ -19,12 +21,10 @@ src_unpack() {
 }
 
 src_compile() {
-	try make
+	make || die
 }
 
 src_install() {
 	dosbin mt stinit
 	doman mt.1 stinit.8
 }
-
-
