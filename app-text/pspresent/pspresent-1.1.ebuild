@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.1.ebuild,v 1.7 2004/07/01 12:01:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.1.ebuild,v 1.8 2004/10/25 08:04:13 usata Exp $
 
 IUSE="xinerama"
 
@@ -8,17 +8,17 @@ DESCRIPTION="A tool to display full-screen PostScript presentations."
 SRC_URI="http://www.cse.unsw.edu.au/~matthewc/pspresent/${P}.tar.gz"
 HOMEPAGE="http://www.cse.unsw.edu.au/~matthewc/pspresent/"
 
-DEPEND="virtual/libc
-	virtual/x11
-	>=sys-apps/sed-4
-	virtual/ghostscript"
 RDEPEND="virtual/libc
 	virtual/x11
 	virtual/ghostscript"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+PROVIDE="virtual/psviewer"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile()
 {
