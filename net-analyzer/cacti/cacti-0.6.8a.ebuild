@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.6.8a.ebuild,v 1.10 2003/10/21 07:44:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.6.8a.ebuild,v 1.11 2003/12/05 16:41:17 mholzer Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_install() {
 
 	dodir ${INSTALL_DEST}
 	edos2unix `find -type f -name '*.php'`
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} *
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} *
 	mv * ${D}/${INSTALL_DEST}/
 }
 

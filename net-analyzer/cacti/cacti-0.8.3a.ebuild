@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.5 2003/11/17 21:22:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.6 2003/12/05 16:41:17 mholzer Exp $
 
-inherit eutils
-inherit webapp-apache
+inherit eutils webapp-apache
 
 DESCRIPTION="Cacti is a complete frondend to rrdtool"
 HOMEPAGE="http://www.raxnet.net/products/cacti/"
@@ -23,9 +22,6 @@ RDEPEND="net-www/apache
 	dev-php/mod_php"
 
 webapp-detect || NO_WEBSERVER=1
-
-HTTPD_USER=apache
-HTTPD_GROUP=apache
 
 pkg_setup() {
 	webapp-pkg_setup "${NO_WEBSERVER}"
@@ -53,7 +49,7 @@ src_install() {
 	#chown -R ${HTTPD_USER}.${HTTPD_GROUP} *
 	cp -r . ${D}/${HTTPD_ROOT}/${PN}
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN}
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${PN}
 }
 
 pkg_postinst() {
