@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.ebuild,v 1.2 2001/08/13 02:38:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.ebuild,v 1.3 2001/08/13 19:20:17 drobbins Exp $
 
 SV=1.1
 S=${WORKDIR}/rc-scripts-${SV}
@@ -143,6 +143,7 @@ src_install()
 	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 	cd ${D}/dev
 	#These devices are also needed by many people and should be included
+	echo "Making device nodes... (this could take a minute or so...)"
 	${S}/sbin/MAKEDEV generic-i386
 	${S}/sbin/MAKEDEV sg
 	${S}/sbin/MAKEDEV scd

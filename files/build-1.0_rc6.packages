@@ -1,6 +1,5 @@
 ./sys-apps/baselayout/baselayout-1.6.ebuild
 ./sys-libs/glibc/glibc-2.2.3-r5.ebuild
-#done up to here
 ./sys-apps/bash/bash-2.04-r4.ebuild
 ./sys-apps/bzip2/bzip2-1.0.1-r4.ebuild
 ./sys-apps/debianutils/debianutils-1.13.3-r4.ebuild
@@ -23,6 +22,6 @@
 ./sys-devel/make/make-3.79.1-r3.ebuild
 ./sys-devel/patch/patch-2.5.4-r3.ebuild
 ./sys-devel/spython/spython-2.0-r7.ebuild
-./net-misc/wget/wget-1.7-r1.ebuild
+./net-misc/wget-1.7-r1.ebuild
 ./net-misc/rsync/rsync-2.4.6-r4.ebuild
-./sys-kernel/linux-sources/linux-sources-2.4.6-r2.ebuild
+./sys-kernel/linux-sources/linux-headers-2.4.6-r3.ebuild

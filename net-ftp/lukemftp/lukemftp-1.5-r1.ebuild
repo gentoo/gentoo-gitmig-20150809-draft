@@ -12,7 +12,6 @@ SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/lukemftp/${A}"
 DEPEND="virtual/glibc
         >=sys-libs/ncurses-5.1"
 
-
 src_unpack() {
 
     unpack ${A}
@@ -25,8 +24,6 @@ src_unpack() {
         -e "s/case 't'/case 's':\n\t\t\tverbose = 0;\n\t\t\tprogress = 1;\n\t\t\tbreak;\n\n\t\t&/" \
         src/main.orig > src/main.c
 }
-
-
 
 src_compile() {
     try ./configure --host=${CHOST} --prefix=/usr \

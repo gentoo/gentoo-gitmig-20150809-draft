@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.7-r4.ebuild,v 1.2 2001/08/12 19:20:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.7-r4.ebuild,v 1.3 2001/08/13 19:20:17 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,11 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/diffutils/${A}
 	 ftp://ftp.gnu.org/gnu/diffutils/${A}"
 
 HOMEPAGE="http://www.gnu.org/software/diffutils/diffutils.html"
-DEPEND="virtual/glibc nls? ( sys-devel/gettext ) sys-apps/texinfo"
+DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
+if [ -z "`use build`" ]
+then
+	DEPEND="$DEPEND sys-apps/texinfo"
+fi
 RDEPEND="virtual/glibc"
 
 src_unpack() {
@@ -28,11 +32,18 @@ src_compile() {
     fi
     try ./configure --host=${CHOST} --prefix=/usr ${myconf}
 
+	if [ "`use build`" ]
+	then
+		#disable texinfo building so we can remove the dep
+		cp Makefile Makefile.orig
+		sed -e 's/^all: ${PROGRAMS} info/all: ${PROGRAMS}/g' Makefile.orig > Makefile
+	fi
+
     if [ -z "`use static`" ]
     then
-        try pmake
+        try emake
     else
-        try pmake LDFLAGS=-static
+        try emake LDFLAGS=-static
     fi
 
 }

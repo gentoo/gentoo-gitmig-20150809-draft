@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<!-- $Id: gentoo-howto.xml,v 1.18 2001/08/12 19:33:40 drobbins Exp $ -->
+<!-- $Id: gentoo-howto.xml,v 1.19 2001/08/13 19:20:17 drobbins Exp $ -->
 
 <guide link="/doc/gentoo-howto.html">
 <title>Gentoo Linux Developers HOWTO</title>
@@ -334,7 +334,7 @@ exactly the way you want it.
 <c>USE</c>), this will only instruct Portage to disable <e>optional</e>
 build-time support for GNOME.  However, if you <c>emerge</c> an ebuild that
 <e>requires</e> GNOME, the package will obviously have GNOME support enabled, as you
-would expect.  This also means taht
+would expect.  This also means that
 GNOME will be automatically installed (as a dependency) if it hasn't been already.  That's why
 it's always a good idea to do an <c>emerge --pretend</c> before doing the
 "real" <c>emerge</c>; that way, you'll always know that you're going to get!

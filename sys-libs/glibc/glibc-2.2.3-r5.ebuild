@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r5.ebuild,v 1.1 2001/08/13 00:35:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r5.ebuild,v 1.2 2001/08/13 19:20:17 drobbins Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -14,7 +14,8 @@ SRC_URI="ftp://sourceware.cygnus.com/pub/glibc/releases/glibc-${PV}.tar.gz
 	 ftp://ftp.gnu.org/pub/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-DEPEND="nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
+#Specific Linux headers are now required so that we build from a stable "base"
+DEPEND="~sys-kernel/linux-headers-2.4.6 nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
 
 if [ -z "`use bootstrap`" ] && [ -z "`use bootcd`" ] && [ -z "`use build`" ]
 then

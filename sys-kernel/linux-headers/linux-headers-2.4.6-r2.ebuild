@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.6-r2.ebuild,v 1.9 2001/08/08 01:03:33 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.6-r2.ebuild,v 1.10 2001/08/13 19:20:17 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 
@@ -9,10 +9,10 @@ OKV=2.4.6
 KV=2.4.6
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
-if [ $PN = "linux-extras" ] || [ $PN = "linux-headers" ]
+if [ $PN = "linux-extras" ] 
 then
-	KS=/usr/src/linux-${KV}
-	KS2=/usr/src/linux-${KV}-extras
+	KS=${ROOT}usr/src/linux-${KV}
+	KS2=${ROOT}usr/src/linux-${KV}-extras
 else
 	KS=${S}
 	KS2=${S2}
@@ -84,22 +84,26 @@ then
 		#ncurses is required for "make menuconfig"
 		RDEPEND=">=sys-libs/ncurses-5.2"
 	fi
-elif [ $PN = "linux-extras" ] || [ $PN = "linux-headers" ]
+elif [ $PN = "linux-extras" ]
 then
 	#linux-extras/headers requires a rev of the current kernel sources to be installed
-	DEPEND="~sys-kernel/linux-sources-${PV}"
+	RDEPEND="~sys-kernel/linux-sources-${PV}"
+elif [ $PN = "linux-headers" ]
+then
+	DEPEND=""
+	RDEPEND=""
 fi
 
 # this is not pretty...
 LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${KS}/include"
 
 src_unpack() {
-	if [ "$PN" = "linux-extras" ] || [ "$PN" = "linux-headers" ]
+	if [ "$PN" = "linux-extras" ] 
 	then
 		return
 	fi
 
-    mkdir ${S2}
+	mkdir ${S2}
 
 	#unpack kernel and apply reiserfs-related patches
 	cd ${WORKDIR}
@@ -406,10 +410,17 @@ src_install() {
 		cd ${S}
 
 		if [ "`use build`" ] ; then
-			dodir /usr/src/linux-${KV}
+			
+			#if we install linux-sources in "build" mode, then only kernel headers
+			#are installed.  And they are installed to /usr/include as system defaults
+			#rather than to /usr/src/linux-${KV}
+			
+			dodir /usr/include/linux
+			dodir /usr/include/asm
 			#grab includes and documentation only
-			echo ">>> Copying includes..."
-			cp -ax ${S}/include ${D}/usr/src/linux-${KV}
+			echo ">>> Copying includes to /usr/include..."
+			cp -ax ${KS}/include/linux/* ${D}/usr/include/linux
+			cp -ax ${KS}/include/asm-i386/* ${D}/usr/include/asm
 		else
 			echo ">>> Copying sources..."
 			cp -ax ${WORKDIR}/* ${D}/usr/src
