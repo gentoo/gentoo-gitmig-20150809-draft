@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/atop-1.9.ebuild,v 1.4 2004/06/24 21:58:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/atop-1.9.ebuild,v 1.5 2004/06/30 14:23:52 agriffis Exp $
 
 
 DESCRIPTION="Resource-specific view of processes"
@@ -11,6 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 DEPEND="sys-apps/acct"
 KEYWORDS="~x86 amd64"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
