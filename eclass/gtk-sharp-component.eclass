@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.6 2005/02/18 18:20:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.7 2005/03/02 00:04:09 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -128,12 +128,12 @@ gtk-sharp-component_src_compile() {
 	gtk-sharp-component_src_configure ${@}
 
 	cd ${S}/${GTK_SHARP_COMPONENT_BUILD_DIR}
-	emake || die "compile failure"
+	LANG=C emake || die "compile failure"
 }
 
 gtk-sharp-component_src_install() {
 	cd ${GTK_SHARP_COMPONENT_BUILD_DIR}
-	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package gtk-sharp${GTK_SHARP_COMPONENT_SLOT_DEC}" \
+	LANG=C make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package gtk-sharp${GTK_SHARP_COMPONENT_SLOT_DEC}" \
 		DESTDIR=${D} install || die
 }
 
