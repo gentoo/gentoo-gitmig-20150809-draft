@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/cowloop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.1 2005/01/01 15:03:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.2 2005/01/01 21:30:42 dragonheart Exp $
+
+*cowloop-1.4 (02 Jan 2005)
+
+  02 Jan 2005; Daniel Black <dragonheart@gentoo.org> +cowloop-1.4.ebuild:
+  added 1.4 version for 2.4 Kernels
 
 *cowloop-2.11 (02 Jan 2005)
 
