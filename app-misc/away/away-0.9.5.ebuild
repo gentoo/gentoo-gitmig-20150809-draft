@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/away-0.9.5.ebuild,v 1.6 2004/09/20 02:33:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/away-0.9.5.ebuild,v 1.7 2004/09/22 19:47:03 hansmi Exp $
 
 DESCRIPTION="Terminal locking program with few additional features"
 HOMEPAGE="http://unbeatenpath.net/software/away/"
@@ -8,7 +8,7 @@ SRC_URI="http://unbeatenpath.net/software/away/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc64"
+KEYWORDS="x86 sparc ppc64 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
