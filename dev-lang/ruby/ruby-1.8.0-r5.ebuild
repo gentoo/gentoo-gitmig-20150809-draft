@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r4.ebuild,v 1.1 2003/12/25 01:29:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r5.ebuild,v 1.1 2004/01/30 08:03:38 usata Exp $
 
-IUSE="socks5 tcltk ruby16 cjk"
+IUSE="socks5 tcltk cjk"
 
 ONIGURUMA="onigd20031224"
 
@@ -25,14 +25,17 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-misc/dante-1.1.13 )
 	tcltk?  ( dev-lang/tk )
-	sys-apps/findutils"
+	sys-apps/findutils
+	>=dev-ruby/ruby-config-0.2"
+RDEPEND="${DEPEND}
+	!=dev-lang/ruby-cvs-${SLOT}*"
 
 src_unpack() {
 	unpack ${A}
 	if [ -n "`use cjk`" ] ; then
 		pushd oniguruma
 		econf --with-rubydir=${S}
-		make 18
+		make ${SLOT/./}
 		popd
 	fi
 
@@ -57,7 +60,7 @@ src_compile() {
 		export CFLAGS
 	fi
 
-	econf --program-suffix=18 --enable-shared \
+	econf --program-suffix=${SLOT/./} --enable-shared \
 		`use_enable socks5 socks` \
 		|| die "econf failed"
 	emake || die "emake failed"
@@ -66,51 +69,30 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dosym /usr/lib/libruby18.so.${PV} /usr/lib/libruby.so.${PV%.*}
-	dosym /usr/lib/libruby18.so.${PV} /usr/lib/libruby.so.${PV}
-
-	if has_version '=dev-lang/ruby-1.6.8*' ; then
-		dobin ${FILESDIR}/ruby-config
-	fi
+	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV%.*}
+	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV}
 
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 }
 
-ruby_alternatives() {
-	if [ -n "`use ruby16`" ] ; then
-		alternatives_makesym /usr/bin/ruby /usr/bin/ruby{16,18}
-		alternatives_makesym /usr/bin/irb /usr/bin/irb{16,18}
-		alternatives_makesym /usr/bin/erb /usr/bin/erb{16,18}
-		alternatives_makesym /usr/lib/libruby.so \
-			/usr/lib/libruby{16,18}.so
-		alternatives_makesym /usr/share/man/man1/ruby.1.gz \
-			/usr/share/man/man1/ruby{16,18}.1.gz
-	else
-		alternatives_makesym /usr/bin/ruby /usr/bin/ruby{18,16}
-		alternatives_makesym /usr/bin/irb /usr/bin/irb{18,16}
-		alternatives_makesym /usr/bin/erb /usr/bin/erb{18,16}
-		alternatives_makesym /usr/lib/libruby.so \
-			/usr/lib/libruby{18,16}.so
-		alternatives_makesym /usr/share/man/man1/ruby.1.gz \
-			/usr/share/man/man1/ruby{18,16}.1.gz
-	fi
-}
-
 pkg_postinst() {
-	ruby_alternatives
 	ewarn
 	ewarn "Warning: Vim won't work if you've just updated ruby from"
 	ewarn "1.6.8 to 1.8.0 due to the library version change."
 	ewarn "In that case, you will need to remerge vim."
 	ewarn
 
-	if [ -x "/usr/bin/ruby-config" ] ; then
-	einfo
-	einfo "You can switch default ruby by /usr/bin/ruby-config."
-	einfo
+	if [ ! -e "$(readlink /usr/bin/ruby)" ] ; then
+		/usr/sbin/ruby-config ruby${SLOT/./}
 	fi
+	einfo
+	einfo "You can change the default ruby interpreter by /usr/sbin/ruby-config"
+	einfo
 }
 
 pkg_postrm() {
-	ruby_alternatives
+
+	if [ ! -e "$(readlink /usr/bin/ruby)" ] ; then
+		/usr/sbin/ruby-config ruby${SLOT/./}
+	fi
 }
