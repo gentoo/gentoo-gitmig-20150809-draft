@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r11.ebuild,v 1.13 2005/02/13 12:42:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r11.ebuild,v 1.14 2005/02/14 21:35:42 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -53,7 +53,7 @@ src_compile() {
 	local myconf
 
 	# macos doesn't support -z flag
-	if ! ( use macos || use ppc-macos ) ; then
+	if ! use ppc-macos ; then
 		append-ldflags -Wl,-z,now
 	fi
 
