@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.13 2004/10/27 20:35:44 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.14 2004/11/15 06:05:07 hardave Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -38,6 +38,7 @@ src_unpack() {
 	ln -sf i386-linux-cc.rul x86_64-linux-cc.rul
 	ln -sf i386-linux-gcc.rul x86_64-linux-gcc.rul
 	ln -sf ppc-linux-cc.rul ppc64-linux-cc.rul
+	ln -sf mips-linux-cc.rul mips64-linux-cc.rul
 }
 
 src_compile() {
