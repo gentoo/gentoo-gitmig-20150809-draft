@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3d.ebuild,v 1.1 2004/10/05 08:49:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3d.ebuild,v 1.2 2004/10/05 19:42:50 eradicator Exp $
 
 IUSE="mpeg4 howl"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 
-DEPEND="zlib? ( sys-libs/zlib )
+DEPEND="sys-libs/zlib
 	howl? ( >=net-misc/howl-0.9.6-r1 )
 	mpeg4? ( media-libs/faad2 )
 	>=media-libs/libid3tag-0.15.0b
@@ -26,10 +26,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	cd ${S}
-	if ! use zlib; then
-		sed -ie 's/ZLIB_ENABLE = 1/ZLIB_ENABLE = 0/g' makefile
-	fi
-
 	if ! use howl; then
 		sed -ie 's/HOWL_ENABLE = 1/HOWL_ENABLE = 0/g' makefile
 	fi
