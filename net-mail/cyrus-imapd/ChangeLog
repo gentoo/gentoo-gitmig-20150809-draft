@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.14 2002/10/11 14:57:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.15 2002/11/26 08:07:50 raker Exp $
+
+*cyrus-imapd-2.1.9-r2 (26 Nov 2002)
+
+  26 Nov 2002; Nick Hadaway <raker@gentoo.org>
+  cyrus-imapd-2.1.9-r2.ebuild, files/digest-cyrus-imapd-2.1.9-r2 :
+  Added some sed magic so kerberos support is detected correctly.
+  See bug #11013.
 
 *cyrus-imapd-2.1.9-r1 (01 Oct 2002)
 
