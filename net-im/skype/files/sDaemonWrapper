@@ -18,7 +18,7 @@ else
 	then
 		echo "Running artsd found"
 		echo "Starting artsd wrapped ${progname}"
-		artsdsp ${progpath}/${progname}.bin
+		artsdsp -m ${progpath}/${progname}.bin
 
 	elif [[ ${shellcheck2} == /usr/bin/esd && -n ${esdcheck} ]]
 	then
