@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/aspectj
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.4 2004/07/14 20:45:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.5 2004/07/16 09:19:41 dholm Exp $
+
+  16 Jul 2004; David Holm <dholm@gentoo.org> aspectj-1.1.1.ebuild,
+  aspectj-1.2.ebuild:
+  Added to ~ppc.
 
 *aspectj-1.2 (14 Jul 2004)
 

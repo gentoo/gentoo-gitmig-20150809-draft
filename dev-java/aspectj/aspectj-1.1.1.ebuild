@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.1.1.ebuild,v 1.4 2004/06/24 22:17:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.1.1.ebuild,v 1.5 2004/07/16 09:19:41 dholm Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jdk-1.3
 	dev-java/ant"
 SLOT="0"
 LICENSE="CPL-1.0 Apache-1.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 
 # Welcome to the AspectJ ebuild.  An upstream source archive is not
