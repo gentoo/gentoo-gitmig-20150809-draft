@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.5 2002/11/12 12:42:38 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.6 2002/11/12 17:42:14 cretin Exp $
+
+*sun-j2sdk-1.4.0-r1 (12 Nov 2002)
+
+  12 Nov 2002; Stefan A. Jones <cretin@gentoo.org> sun-j2sdk-1.4.0-r2.ebuild:
+
+  This ebuild uses the sun version of motif. Lesstif was causing quite a
+  few crashes. During the emerge openmotif and lesstif must be unmerged
+  to stop java linking to the bad versions.
 
 *sun-j2sdk-1.4.0-r1 (07 Nov 2002)
 
