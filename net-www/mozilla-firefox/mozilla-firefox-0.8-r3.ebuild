@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.4 2004/04/26 16:11:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.5 2004/04/26 17:56:37 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -55,6 +55,10 @@ src_unpack() {
 	# http://bugzilla.mozilla.org/show_bug.cgi?id=64485
 	# See bug 44646 (26 Apr 2004 agriffis)
 	epatch ${FILESDIR}/mozilla-firefox-mousebuttons.patch
+
+	# Fix compilation with gcc-3.4, bug 47870
+	# (26 Apr 2004 agriffis)
+	epatch ${FILESDIR}/firefox-0.8-gcc-3.4.patch
 }
 
 src_compile() {

@@ -1,0 +1,11 @@
+--- gfx/public/nsRegion.h.old	2003-03-25 02:57:42.000000000 +0000
++++ gfx/public/nsRegion.h	2004-04-23 02:25:09.606368256 +0100
+@@ -234,7 +234,7 @@
+   void MoveInto (nsRegion& aDestRegion)
+   {    MoveInto (aDestRegion, mRectListHead.next);  }
+ 
+-  nsRegion (const nsRegion& aRegion);       // Prevent copying of regions
++  public:nsRegion (const nsRegion& aRegion);       // Prevent copying of regions
+   nsRegion& operator = (const nsRegion& aRegion);
+ };
+ 

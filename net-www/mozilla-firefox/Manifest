@@ -1,8 +1,8 @@
 MD5 65040a1928b2cbd4d6cdd1d7712d0a20 mozilla-firefox-0.8-r2.ebuild 7661
 MD5 6577d9ffb39c6cc66a8a8fb41307e1c6 mozilla-firefox-0.8.ebuild 7672
 MD5 7eec2b27a51c55f06d60487bb24e33be mozilla-firefox-0.8-r1.ebuild 7594
-MD5 afa07b18fcfc62751c5655b8fe4d4da2 mozilla-firefox-0.8-r3.ebuild 8152
-MD5 f6a1257ed13e65edafff819fd9d03427 ChangeLog 5054
+MD5 8646b212bd6a3ef5da9f5f26ed23e422 mozilla-firefox-0.8-r3.ebuild 8268
+MD5 6cfab56ffbd68751185975dc24b1aa33 ChangeLog 5262
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 507a3d1338e85acc8828cec7c91d22df files/digest-mozilla-firefox-0.8 73
 MD5 88371b8f812caf799a1ede2b1b07c079 files/mozilla-firefox-mousebuttons.patch 17099
@@ -12,5 +12,6 @@ MD5 606e82226379fd5ae6cd1d0d1faff7ff files/10MozillaFirefox 31
 MD5 507a3d1338e85acc8828cec7c91d22df files/digest-mozilla-firefox-0.8-r1 73
 MD5 507a3d1338e85acc8828cec7c91d22df files/digest-mozilla-firefox-0.8-r2 73
 MD5 507a3d1338e85acc8828cec7c91d22df files/digest-mozilla-firefox-0.8-r3 73
+MD5 3ad7410bd680964096c84eee3fa21abf files/firefox-0.8-gcc-3.4.patch 460
 MD5 f0e9adeb0454377ce019e8969e644efb files/mozilla-firebird-amd64.patch 35052
 MD5 bff260036c5dcca45da3218517fb33d8 files/icon/firefox-icon.png 3979
