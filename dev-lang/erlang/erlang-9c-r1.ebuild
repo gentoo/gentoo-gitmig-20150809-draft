@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.4 2003/08/05 16:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.5 2003/10/14 16:43:23 george Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz"
 
 LICENSE="EPL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="X ssl"
 
 DEPEND=">=dev-lang/perl-5.6.1
