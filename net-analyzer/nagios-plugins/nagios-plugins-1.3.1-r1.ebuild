@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.7 2004/08/04 22:18:17 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.8 2004/08/20 15:08:50 eldad Exp $
 
 inherit eutils
 
@@ -40,6 +40,8 @@ src_compile() {
 	use mysql && myconf="${myconf} --with-mysql" || myconf="${myconf} --without-mysql"
 	use postgres && myconf="${myconf} --with-pgsql" || myconf="${myconf} --without-pgsql"
 	use ssl && myconf="${myconf} --with-openssl" || myconf="${myconf} --without-openssl"
+
+	epatch ${FILESDIR}/nagios-plugins-noradius.patch
 
 	./configure ${myconf} \
 		--host=${CHOST} \
