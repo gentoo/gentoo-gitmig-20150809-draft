@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.11.23.ebuild,v 1.3 2004/02/22 21:09:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.11.23.ebuild,v 1.4 2004/04/17 15:02:29 aliz Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_ZENDEXT="no"
 inherit php-ext-source
-
+IUSE=""
 S="${WORKDIR}/dbg-${PV}-src"
 DESCRIPTION="A PHP debugger useable with some editors like phpedit."
 SRC_URI="http://dd.cron.ru/dbg/dnld/dbg-${PV}${PL}-src.tar.gz"

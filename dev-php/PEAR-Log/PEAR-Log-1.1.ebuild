@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Authore: Tom von Schwerdtner <tvon@etria.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/PEAR-Log-1.1.ebuild,v 1.6 2004/01/10 00:06:21 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/PEAR-Log-1.1.ebuild,v 1.7 2004/04/17 15:02:28 aliz Exp $
 
 MY_P=${PN/PEAR-//}-${PV}
 DESCRIPTION="The Log framework provides an abstracted logging system supporting logging to console, file, syslog, SQL, and mcal targets."
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc"
 DEPEND="virtual/php"
 S=${WORKDIR}/${MY_P}
+IUSE=""
 
 src_install () {
 	insinto /usr/lib/php/

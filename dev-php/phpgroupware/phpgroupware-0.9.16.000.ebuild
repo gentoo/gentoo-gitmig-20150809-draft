@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.16.000.ebuild,v 1.2 2004/03/21 09:20:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.16.000.ebuild,v 1.3 2004/04/17 15:02:29 aliz Exp $
 
 inherit webapp-apache
 
@@ -10,10 +10,10 @@ DESCRIPTION="intranet/groupware tool and application framework"
 HOMEPAGE="http://www.phpgroupware.org/"
 SRC_URI="mirror://sourceforge/phpgroupware/${P}-1.tar.bz2"
 RESTRICT="nomirror"
-
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~amd64 ~sparc ~hppa"
+KEYWORDS="x86 ~ppc ~alpha amd64 ~sparc ~hppa"
 
 RDEPEND=">=dev-php/mod_php-4.1
 	dev-db/mysql"

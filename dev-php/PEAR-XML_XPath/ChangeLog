@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_XPath
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/ChangeLog,v 1.5 2003/12/25 12:03:47 coredumb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/ChangeLog,v 1.6 2004/04/17 15:02:28 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> PEAR-XML_XPath-1.2-r1.ebuild,
+  PEAR-XML_XPath-1.2.ebuild:
+  Added IUSE=
 
 *PEAR-XML_XPath-1.2-r1 (25 Dec 2003)
 

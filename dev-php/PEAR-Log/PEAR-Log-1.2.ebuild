@@ -12,6 +12,7 @@ KEYWORDS="x86 ~ppc sparc ~alpha"
 DEPEND="virtual/php"
 RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
+IUSE=""
 
 src_install () {
 	insinto /usr/lib/php/

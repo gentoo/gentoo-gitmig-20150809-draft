@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/groupoffice
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.14 2004/04/12 17:22:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.15 2004/04/17 15:02:29 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> groupoffice-1.98.ebuild,
+  groupoffice-2.01.ebuild, groupoffice-2.02.ebuild:
+  Added IUSE, unmasked on amd64.
 
 *groupoffice-2.04 (25 Mar 2004)
 

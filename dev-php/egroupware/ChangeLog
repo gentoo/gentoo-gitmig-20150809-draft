@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/egroupware
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/ChangeLog,v 1.10 2004/03/24 23:32:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/ChangeLog,v 1.11 2004/04/17 15:02:29 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> egroupware-0.9.99.008.ebuild:
+  Unmasked on amd64, added IUSE=.
 
   25 Mar 2004; Martin Holzer <mholzer@gentoo.org>
   egroupware-0.9.99.008.ebuild:

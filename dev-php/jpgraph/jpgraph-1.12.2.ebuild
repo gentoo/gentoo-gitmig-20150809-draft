@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.8 2003/11/06 20:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.9 2004/04/17 15:02:29 aliz Exp $
 
 inherit php-lib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.aditus.nu/jpgraph/downloads/${P}.tar.gz"
 LICENSE="QPL-1.0"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-IUSE="truetype"
+IUSE=""
 
 DEPEND=""
 RDEPEND="virtual/php

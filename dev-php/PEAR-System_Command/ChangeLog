@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-System_Command
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/ChangeLog,v 1.6 2003/12/25 11:47:47 coredumb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/ChangeLog,v 1.7 2004/04/17 15:02:28 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  PEAR-System_Command-1.0-r1.ebuild, PEAR-System_Command-1.0.ebuild:
+  Added IUSE=
 
 *PEAR-System_Command-1.0-r1 (25 Dec 2003)
 

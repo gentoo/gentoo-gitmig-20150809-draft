@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r1.ebuild,v 1.9 2004/03/19 10:16:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r1.ebuild,v 1.10 2004/04/17 15:02:29 aliz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="phpSysInfo is a nice package that will display your system stats vi
 HOMEPAGE="http://phpsysinfo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/phpsysinfo/${MY_P}.tar.gz
 	mirror://debian/pool/main/p/phpsysinfo/${PN}_${PV}-1.diff.gz"
-
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~alpha hppa ~sparc amd64"

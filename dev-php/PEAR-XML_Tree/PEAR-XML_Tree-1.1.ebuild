@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Tree/PEAR-XML_Tree-1.1.ebuild,v 1.4 2003/09/11 17:04:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Tree/PEAR-XML_Tree-1.1.ebuild,v 1.5 2004/04/17 15:02:28 aliz Exp $
 
 MY_P=${PN/PEAR-//}-${PV}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pear.php.net/package-info.php?pacid=19"
 SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
 LICENSE="PHP"
 SLOT="0"
-
+IUSE=""
 # Afaik, anything that runs php will run this...
 KEYWORDS="x86 ppc sparc"
 
