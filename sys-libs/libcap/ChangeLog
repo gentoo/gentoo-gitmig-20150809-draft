@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.19 2004/02/25 00:03:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.20 2004/03/28 23:21:08 solar Exp $
+
+  28 Mar 2004; <solar@gentoo.org> libcap-1.10-r3.ebuild:
+  stable on x86. Bugzilla Bug 44955
 
   24 Feb 2004; <agriffis@gentoo.org> libcap-1.10-r3.ebuild:
   stable on alpha and ia64
