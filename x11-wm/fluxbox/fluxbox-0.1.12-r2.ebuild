@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.12-r2.ebuild,v 1.4 2003/02/13 17:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.12-r2.ebuild,v 1.5 2003/04/12 10:23:45 cybersystem Exp $
 
 inherit commonbox flag-o-matic
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Window manager based on Blackbox and pwm -- has tabs. Remember patch applied."
+DESCRIPTION="Window manager based on Blackbox -- has tabs. Remember patch applied."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://gentoo/${PN}-gentoo.diff.bz2
 	http://fluxbox.org/download/patches/unofficial-fluxbox-0.1.12-remember-patch.bz2"

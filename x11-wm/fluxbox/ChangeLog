@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.51 2003/03/06 13:54:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.52 2003/04/12 10:23:45 cybersystem Exp $
+
+*fluxbox (12 Apr 2003)
+
+  12 Apr 2003; Sascha Schwabbauer <cybersystem@gentoo.org>:
+  Fluxbox was never based on pwm, so I changed the Description of all ebuilds.
 
 *fluxbox-0.1.14-r1 (10 Dec 2002)
 
