@@ -1,4 +1,4 @@
-MD5 e5d97f3ae9cf26e367f9a4f64dc02b43 files/digest-cmfcollectorng-0.20 140
-MD5 7e4dc7a7392a03c65a905a1ee06681b3 cmfcollectorng-0.20.ebuild 798
-MD5 06d19465d840e8726f4e5c2a280975c1 ChangeLog 801
+MD5 aaa3a2b7ccee63e38fabbee497c39c16 cmfcollectorng-0.20.ebuild 792
+MD5 ceb7a7e51938bbbe2aa7f4fa8828b400 ChangeLog 905
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 e5d97f3ae9cf26e367f9a4f64dc02b43 files/digest-cmfcollectorng-0.20 140
