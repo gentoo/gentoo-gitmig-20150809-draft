@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0_rc1.ebuild,v 1.5 2004/03/30 05:32:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0_rc1.ebuild,v 1.6 2004/04/26 15:07:43 agriffis Exp $
 
 inherit elisp-common
 
@@ -32,7 +32,7 @@ src_compile() {
 	then
 		libtoolize -c -f
 	fi
-	econf
+	econf || die "econf failed"
 	emake CFLAGS="${CFLAGS} -I/usr/X11R6/include" || die
 	if use emacs; then
 		cd contrib && elisp-comp ratpoison.el

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/kahakai
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.14 2004/04/11 17:44:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.15 2004/04/26 15:05:28 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> kahakai-0.2.1.ebuild,
+  kahakai-0.2.ebuild:
+  Add die following econf for bug 48950
 
   12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> kahakai-0.6.2.ebuild:
   virtual/ruby fix

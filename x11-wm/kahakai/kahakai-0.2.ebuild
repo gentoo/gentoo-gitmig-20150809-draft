@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.2.ebuild,v 1.2 2003/09/04 07:38:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.2.ebuild,v 1.3 2004/04/26 15:05:28 agriffis Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -24,7 +24,7 @@ PROVIDE="virtual/blackbox"
 
 src_compile() {
 	./autogen.sh
-	econf
+	econf || die "econf failed"
 	emake
 }
 
