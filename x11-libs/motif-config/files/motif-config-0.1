@@ -8,19 +8,20 @@ source /etc/init.d/functions.sh || {
     echo "$0: Could not source /etc/init.d/functions.sh!"
     exit 1
 }
-source /etc/make.profile/make.defaults || {
-	echo "$0: Could not source /etc/make.profile/make.defaults!"
-	exit 1
-}
 umask 022
 
 # functions.sh returns a wrong libdir on multilib architectures
+#source /etc/make.profile/make.defaults || {
+#	echo "$0: Could not source /etc/make.profile/make.defaults!"
+#	exit 1
+#}
 #get_libdir() {
 #	libdirvar="LIBDIR_${DEFAULT_ABI}"
 #	echo ${!libdirvar}
 #}
 
-PROFILE_PATH=/usr/$(get_libdir)/motif
+LIBDIR=$(get_libdir)
+PROFILE_PATH=/usr/$LIBDIR/motif
 CONFIG_FILE=${PROFILE_PATH}/current
 
 usage() {
@@ -67,8 +68,8 @@ _activate_profile() {
 
 	new=${1}
 	# libs
-	for file in `ls /usr/$(get_libdir)/${new}/`; do
-		ln -s /usr/$(get_libdir)/${new}/${file} /usr/$(get_libdir)/${file}
+	for file in `ls /usr/$LIBDIR/${new}/`; do
+		ln -s /usr/$LIBDIR/${new}/${file} /usr/$LIBDIR/${file}
 	done
 	# includes
 	for file in `ls /usr/include/${new}/`; do
@@ -86,8 +87,6 @@ _activate_profile() {
 	# set new profile as default
 	rm -f ${CONFIG_FILE}
 	cat ${PROFILE_PATH}/${new} > ${CONFIG_FILE}
-
-	exit 0
 }
 
 _deactivate_profile() {
@@ -96,15 +95,15 @@ _deactivate_profile() {
 		exit 1
 	fi
 
-	current=`cat ${CONFIG_FILE}`
+	current=`cat ${CONFIG_FILE} 2>/dev/null`
 
 	if [ -z "$current" ]; then
 		exit 0
 	fi
 
 	# libs
-	for file in `ls /usr/$(get_libdir)/${current}/`; do
-		rm -f /usr/$(get_libdir)/${file}
+	for file in `ls /usr/$LIBDIR/${current}/`; do
+		rm -f /usr/$LIBDIR/${file}
 	done
 	# includes
 	for file in `ls /usr/include/${current}/`; do
@@ -135,18 +134,20 @@ switch_profile() {
 		fi
 	else
 		for x in `ls ${PROFILE_PATH}`; do
-			if [ "${x}" != "current" ]; then
+			if [ "${x}" != "current" -a "${x}" != "removed" ]; then
 				_deactivate_profile
 				_activate_profile ${x}
 				break
 			fi
 		done
+		if [ -z ${x} ]; then
+			error "$0: no profile to activate"
+		fi
 	fi
-	if [ -z ${x} ]; then
-		error "$0: no profile to activate"
-	else
-		exit 0
-	fi
+
+	einfo "$0: New default Profile is: `cat ${CONFIG_FILE}`"
+
+	exit 0
 }
 
 get_current_profile() {
@@ -156,8 +157,8 @@ get_current_profile() {
 list_profiles() {
 	i=1
 	for x in `ls ${PROFILE_PATH}`; do
-		current=`cat ${CONFIG_FILE}`
-		if [ "${x}" != "current" ]; then
+		current=`cat ${CONFIG_FILE} 2>/dev/null`
+		if [ "${x}" != "current" -a "${x}" != "removed" ]; then
 			output=`cat ${PROFILE_PATH}/${x}`;
 			output="[${i}] $output";
 			if [ "${x}" = "${current}" ]; then
@@ -180,7 +181,7 @@ get_lib_path() {
 	if [ $? -eq 1 ]; then
 		eerror "motif-config: No such profile: $profile"
 	else
-		echo "/usr/$(get_libdir)/${name}/"
+		echo "/usr/$LIBDIR/${name}/"
 		exit 0
 	fi
 }
@@ -225,7 +226,7 @@ get_libs() {
 	if [ $? -eq 1 ]; then
 		eerror "motif-config: No such profile: $profile"
 	else
-		echo "-L/usr/$(get_libdir)/${name}/"
+		echo "-L/usr/$LIBDIR/${name}/"
 		exit 0
 	fi
 }
@@ -236,12 +237,17 @@ install_profile() {
 		exit 1
 	fi
 
+	# give info
+	einfo "$0: Installing Profile: ${1}"
+
 	# create profile
 	echo ${1} > ${PROFILE_PATH}/${1}
 
 	# make it default if no profile is activated
-	if [ ! -e $CONFIG_FILE ]; then
-		switch_profile
+	# or if it was just removed
+	if [ ! -e $CONFIG_FILE -o "${1}" == "`cat ${PROFILE_PATH}/removed 2>/dev/null`" ]; then
+		rm -f ${PROFILE_PATH}/removed
+		switch_profile ${1}
 	fi
 
 	exit 0
@@ -253,8 +259,16 @@ uninstall_profile() {
 		exit 1
 	fi
 
+	# give info
+	einfo "$0: Uninstalling Profile: ${1}"
+
 	# remove profile
 	rm -f ${PROFILE_PATH}/${1} 2> /dev/null
+
+	# cache which profile was removed for upgrades
+	# little hack, because portage has no way
+	# to detect if a package was upgraded
+	echo "${1}" > "${PROFILE_PATH}/removed"
 
 	# activate next profile if non is activated
 	if [ "`cat $CONFIG_FILE`" == "${1}" ]; then
@@ -269,65 +283,54 @@ for x in "$@"; do
 		-c|--get-current-profile)
 			[[ $# -ne 1 ]] && usage 1
 			get_current_profile
-			exit $?
 		;;
 
 		-l|--list-profiles)
 			[[ $# -ne 1 ]] && usage 1
 			list_profiles
-			exit $?
 		;;
 
 		-s|--set-profile)
 			[[ $# -ne 2 ]] && usage 1
 			switch_profile $2
-			exit $?
 		;;
 
 		-L|--get-lib-path)
 			[[ $# -gt 2 ]] && usage 1
 			get_lib_path $2
-			exit $?
 		;;
 
 		-I|--get-inc-path)
 			[[ $# -gt 2 ]] && usage 1
 			get_lib_path $2
-			exit $?
 		;;
 
 		--cflags)
 			[[ $# -gt 2 ]] && usage 1
 			get_cflags $2
-			exit $?
 		;;
 
 		--libs)
 			[[ $# -gt 2 ]] && usage 1
 			get_libs $2
-			exit $?
 		;;
 
 		--install)
 			[[ $# -ne 2 ]] && usage 1
 			install_profile $2
-			exit $?
 		;;
 
 		--uninstall)
 			[[ $# -ne 2 ]] && usage 1
 			uninstall_profile $2
-			exit $?
 		;;
 
 		-h|--help)
 			usage 0
-			exit $?
 		;;
 
 		-v|--version)
 			echo "motif-config-0.1"
-			exit $?
 		;;
 
 		-*)
