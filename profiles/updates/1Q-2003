@@ -19,3 +19,4 @@ move sys-apps/bash app-shells/bash
 move sys-devel/perl dev-lang/perl
 move sys-apps/ipchains net-firewall/ipchains
 move sys-apps/iptables net-firewall/iptables
+move media-video/kino-0.60 media-video/kino-0.6
