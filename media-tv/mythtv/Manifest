@@ -9,8 +9,8 @@ MD5 788cdcff1808794391bf5ef2e157b5fb files/digest-mythtv-0.15.1 67
 MD5 788cdcff1808794391bf5ef2e157b5fb files/digest-mythtv-0.15.1-r1 67
 MD5 a01439b4ddf480862e31867fc4689698 files/digest-mythtv-0.13-r1 65
 MD5 24ab1e90e64fb0be4704e74b633e96b1 files/digest-mythtv-0.14-r1 65
-MD5 3c150f80fdec582108af25558f4a5716 files/mythbackend.conf 862
+MD5 edd304638b110182dc687e535104ad17 files/mythbackend.conf 856
 MD5 f34c79d00b235a08f18cf9f2107d6390 files/mythtv-0.15-directfb.patch 1185
-MD5 7eb7585f7d3619b53ce2ca1180093f82 files/mythbackend.rc6 1660
+MD5 6ccb01083167ee942d8e0ac84748b276 files/mythbackend.rc6 1654
 MD5 e7cc68f54ad1c6128aec944e105189e3 files/gcc-3.4-fix.patch 1773
 MD5 b3a4780890d53640604812b8069a8297 files/mythfilldatabase.cron 74
