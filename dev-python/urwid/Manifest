@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 53de18023a077d898e0f9a5bdafd6927 urwid-0.8.6.ebuild 601
+MD5 0a340834bc70cad99acf8cef571833b8 urwid-0.8.6.ebuild 604
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
-MD5 7658bd27686f5d08e8f5f0ac240944a9 ChangeLog 347
+MD5 8b43203e42726c2b4aa4ce0d883fa809 ChangeLog 451
 MD5 84b7b6bba847f6a4f3c63695b607eb8a files/digest-urwid-0.8.6 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB6yGhz2gxt1z4IGYRAnjKAKDPVFUQ7XYCd/xc/gZr1F/2wMY4rwCgrgMd
-34HSegWkkNM/tDHvtdbkc0A=
-=KJCt
+iD8DBQFB8IYaz2gxt1z4IGYRAjSDAKCfF4nullopJfpVk+Tjx0jIWP5irwCgknzA
+VcadzbxeqXw2vg8cGFPP8Ic=
+=qV5Q
 -----END PGP SIGNATURE-----
