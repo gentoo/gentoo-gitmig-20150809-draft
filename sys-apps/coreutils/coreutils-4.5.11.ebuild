@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.10.ebuild,v 1.4 2003/03/21 02:47:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.11.ebuild,v 1.1 2003/03/21 02:47:15 seemant Exp $
 
 inherit eutils
 
@@ -10,24 +10,27 @@ S="${WORKDIR}/${P}"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.bz2
-	mirror://gentoo/${PN}-gentoo.tar.bz2
-	selinux? mirror://gentoo/${P}-selinux.patch.bz2"
+	mirror://gentoo/${PN}-gentoo.tar.bz2"
+#	selinux? mirror://gentoo/${P}-selinux.patch.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa arm"
 
 DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )
-	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+	nls? ( sys-devel/gettext )"
+#	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+
+PROVIDE="sys-apps/sh-utils
+	sys-apps/fileutils
+	sys-apps/textutils"
 
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Causes compile failure
-	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
+#	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
 
 	# patch to remove Stallman's su/wheel group rant (which doesn't apply,
 	# since Gentoo's su is not GNU/su, but that from shadow.
