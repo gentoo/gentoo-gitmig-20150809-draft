@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.2 2004/12/28 01:56:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.3 2005/01/27 20:38:46 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -37,8 +37,7 @@ S=${WORKDIR}/slashem-${SE_FIXVER}
 src_unpack() {
 	unpack ${SE_PN}
 	cd ${S}
-	epatch ${FILESDIR}/${SE_VER}/makefile.patch
-	epatch ${FILESDIR}/${SE_VER}/gentoo-paths.patch
+	epatch ${FILESDIR}/${SE_VER}/*.patch
 	sed -i \
 		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" \
 		include/unixconf.h \

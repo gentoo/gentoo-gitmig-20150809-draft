@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/slashem
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/ChangeLog,v 1.8 2004/12/27 03:52:18 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/ChangeLog,v 1.9 2005/01/27 20:38:46 mr_bones_ Exp $
+
+  27 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.0.7E6/va_copy.patch, slashem-0.0.760.ebuild:
+  Added patch for gcc-3.4 from OKUMURA N. Shin-ya (bug #76509)
 
 *slashem-0.0.760 (26 Dec 2004)
 
