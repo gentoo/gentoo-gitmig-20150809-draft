@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.31 2005/01/17 23:07:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.32 2005/01/30 20:07:15 ciaranm Exp $
+
+*gentoo-syntax-20050130 (30 Jan 2005)
+
+  30 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20050130.ebuild:
+  New release. Changes include support for many new eclasses, updates to
+  existing eclass function names, sandbox function highlighting, better
+  make.conf and init.d highlighting, new init.d/conf.d creation templates and
+  error highlighting for bad EXPORT_FUNCTIONS declarations in eclasses.
 
   18 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
   gentoo-syntax-20041227.ebuild:
