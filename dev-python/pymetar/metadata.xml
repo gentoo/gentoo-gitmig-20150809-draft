@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>python</herd>
+<longdescription>
+This library downloads the weather report for a given station
+ID (get yours from http://www.nws.noaa.gov/tg/siteloc.shtml),
+decodes it and provides easy access to all the data found in the
+report. Documentation and a small example app are inside the tarball.
+</longdescription>
+</pkgmetadata>
