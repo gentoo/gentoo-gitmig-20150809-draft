@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.51 2004/02/13 19:55:21 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.52 2004/02/13 23:31:02 kloeri Exp $
+
+*subversion-0.37.0-r1 (14 Feb 2004)
+
+  14 Feb 2004; <kloeri@gentoo.org> subversion-0.37.0-r1.ebuild:
+  Replace python-config with python_version.
 
   13 Feb 2004; <paul@gentoo.org> subversion-0.37.0.ebuild:
   Make emacs regeneration more tolerant (bug #41411)
