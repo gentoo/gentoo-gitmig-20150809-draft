@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.92-r1.ebuild,v 1.9 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.92-r1.ebuild,v 1.10 2003/03/11 05:39:24 seemant Exp $
 
-inherit mount-boot
+inherit mount-boot eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
@@ -20,23 +20,23 @@ PROVIDE="virtual/bootloader"
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.92-vga16.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.5.96.1-special-raid-devices.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-configfile.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-vga16-keypressclear.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-passwordprompt.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-install.in.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-installcopyonly.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-staticcurses.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-symlinkmenulst.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-append.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.90-addsyncs.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.91-splashimagehelp.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.91-bootonce.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.92-automake16.patch || die
-	patch -p0 < ${FILESDIR}/${P}/grub-0.92-nodeprecatedflags.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.91-vga16-serial.patch || die
-	patch -p1 < ${FILESDIR}/${P}/grub-0.92-usbfix.patch || die
+	epatch ${FILESDIR}/${P}/grub-0.92-vga16.patch
+	epatch ${FILESDIR}/${P}/grub-0.5.96.1-special-raid-devices.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-configfile.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-vga16-keypressclear.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-passwordprompt.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-install.in.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-installcopyonly.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-staticcurses.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-symlinkmenulst.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-append.patch
+	epatch ${FILESDIR}/${P}/grub-0.90-addsyncs.patch
+	epatch ${FILESDIR}/${P}/grub-0.91-splashimagehelp.patch
+	epatch ${FILESDIR}/${P}/grub-0.91-bootonce.patch
+	epatch ${FILESDIR}/${P}/grub-0.92-automake16.patch
+	epatch ${FILESDIR}/${P}/grub-0.92-nodeprecatedflags.patch
+	epatch ${FILESDIR}/${P}/grub-0.91-vga16-serial.patch
+	epatch ${FILESDIR}/${P}/grub-0.92-usbfix.patch
 }
 
 src_compile() {
