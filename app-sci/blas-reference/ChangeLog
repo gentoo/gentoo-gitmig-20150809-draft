@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-reference
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.6 2004/06/02 13:52:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.7 2004/06/10 01:50:00 george Exp $
+
+  09 Jun 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild :
+  added ~amd64 keyword (ifc masked in use.mask for amd64 profiles until we get 64bit ifc)
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   blas-reference-19940131.ebuild:

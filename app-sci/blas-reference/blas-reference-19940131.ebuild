@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.5 2004/06/02 13:52:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.6 2004/06/10 01:50:00 george Exp $
 
 Name="blas"
 DESCRIPTION="FORTRAN reference implementation of the BLAS (linear algebra lib)"
@@ -9,7 +9,7 @@ SRC_URI="http://www.netlib.org/blas/${Name}.tgz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="ifc"
 
 DEPEND="app-sci/blas-config

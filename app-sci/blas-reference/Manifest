@@ -1,5 +1,5 @@
-MD5 99c6e89ad0f63eb6c837cabe6d270313 blas-reference-19940131.ebuild 2468
-MD5 aba58aa1d8e3cd8913f9a69ab618a858 ChangeLog 1765
+MD5 629d55a5edcfdd537209e444b9c0c3c1 blas-reference-19940131.ebuild 2473
+MD5 aec4cae095aadff903550416df62fe12 ChangeLog 1940
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 d5cd617fba85f0c278240f7446ca52c8 files/Makefile.gz 986
 MD5 2d7bae33a1553ed8eccbdb971a459ff2 files/f77-reference 396
