@@ -8,7 +8,7 @@ MD5 4deee7453993e04e335f83a2ff87a798 apache-1.3.33-r1.ebuild 8638
 MD5 c38ac1102b1c9e8c2d535c736c8bd3d4 apache-2.0.52-r1.ebuild 13150
 MD5 d039a8316ffde50c2331f0d446623147 apache-1.3.31.ebuild 6693
 MD5 9a5242011f95057c3afabf1cc3973f11 apache-1.3.31-r2.ebuild 6864
-MD5 5878f35cf2e134b3aecec86534a60564 apache-2.0.52-r3.ebuild 11810
+MD5 5c0f3b8820feab46268cb0b731619a63 apache-2.0.52-r3.ebuild 11814
 MD5 451d45c9613e9ed7ee770085a8e28ef8 apache-2.0.51.ebuild 12831
 MD5 a6568a1f276ed27458ab61fb5897bca2 apache-1.3.33.ebuild 6851
 MD5 eb0434ac86c30471d86c92872015e42d apache-1.3.32-r1.ebuild 6607
@@ -100,7 +100,7 @@ MD5 61df284cb67dfde3085aec5543eeb03c files/patches/1.3.31-r2/00_gentoo_apachectl
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCO30NI1lqEGTUzyQRAiyFAJ9O8NH4/Y5N9mIYKOokOXemNxIw8ACdH8j9
-kN4ASn1g8hh9nvb3jbN1iQU=
-=J3mc
+iD8DBQFCPBb2I1lqEGTUzyQRAhLqAKCj8C5Y4iDAvtfmxIaDnzeNifyA6ACfSLXC
+IUY+Z201Ay3+XvQ6bjOi0fw=
+=TW+d
 -----END PGP SIGNATURE-----
