@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r1.ebuild,v 1.8 2003/02/13 15:52:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r1.ebuild,v 1.9 2003/04/02 08:37:03 rajiv Exp $
 
 IUSE="nls build"
 
@@ -60,7 +60,7 @@ src_install() {
 	if [ -z "`use build`" ]
 	then
 		dodoc COPYING ChangeLog NEWS README
-	lse
+	else
 		rm -rf ${D}/usr/share/info
 	fi
 }

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.17 2003/02/28 03:26:39 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.18 2003/04/02 08:37:03 rajiv Exp $
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
@@ -29,6 +29,9 @@
   Changed sparc ~sparc keywords.
  
 *diffutils-2.8.4-r1 (14 Oct 2002)
+
+  02 Apr 2003; Rajiv Manglani <rajiv@gentoo.org> :
+  fixed if/else typo.
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
