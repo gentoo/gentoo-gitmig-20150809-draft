@@ -1,6 +1,6 @@
 #compdef emerge
 
-# $Id: _portage,v 1.1 2003/12/28 19:51:46 usata Exp $
+# $Id: _portage,v 1.2 2004/01/18 17:51:04 usata Exp $
 
 # ZSH completion function for emerge
 # Author: baptux <bapt@ifrance.com>
@@ -16,13 +16,17 @@ _emerge () {
         case "$words[2]" in
 	    unmerge|-C)
 		_arguments -s \
-		    '*:installed pkg:_portage_unmerge' "$common_args[@]" && return 0
+		    '*:installed pkgname with versions:_portage_unmerge' "$common_args[@]" && return 0
+		;;
+	    clean|-c)
+	    	_arguments -s \
+		    '*:installed pkgname:_portage_clean' "$common_args[@]" && return 0
 		;;
 	    --usepkgonly|-K)
 		_arguments -s \
 		    '*:use package only:_portage_tbz2list' "$common_args[@]" && return 0
 		;;
-	    clean|depclean|-c|help|-h|info|regen|sync|rsync|--searchdesc|-S|search|-s|inject|-j|prune|-P)
+	    depclean|help|-h|info|regen|sync|rsync|--searchdesc|-S|search|-s|inject|-j|prune|-P)
 		;;
 	    *)
 		_arguments -s \
@@ -49,12 +53,22 @@ _emerge () {
     done
 }
 
-#Function to show only installed packages "cat/name"
+#Function to show only installed packages "cat/name-ver"
 _portage_unmerge(){
     installed_portage=(/var/db/pkg/*-*/*)
     installed_dir=/var/db/pkg/
     installed_pkg=${installed_portage//$installed_dir/}
     _tags -s installed_pkg && { compadd "$@" -k installed_pkg || compadd "$@" ${(kv)=installed_pkg} }
+}
+
+#Functions to show "cat/name", classes and dependencies
+_portage_clean() {
+    installed_portage=(/var/db/pkg/*-*/*)
+    installed_dir=/var/db/pkg/
+    installed_pkg=${installed_portage//$installed_dir/}
+    installed_pkgname=${(M)${${installed_portage##*/}%%-[0-9]*}}
+    _tags -s installed_pkg && { compadd "$@" -k installed_pkg || compadd "$@" ${(kv)=installed_pkg} }
+    _tags -s installed_pkgname && { compadd "$@" -k installed_pkgname || compadd "$@" ${(kv)=installed_pkgname} }
 }
 
 #Function to show tbz2 files available
