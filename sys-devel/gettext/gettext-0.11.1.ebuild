@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.10.39-r1.ebuild,v 1.2 2001/11/24 18:40:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.1.ebuild,v 1.1 2002/03/27 11:35:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/gettext/${P}.tar.gz"
+SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gettext/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
 
 if [ -z "`use build`" ] ; then
@@ -18,7 +18,7 @@ src_unpack() {
 	cd ${S}/misc
 	cp Makefile.in Makefile.in.orig
 	#This fix stops gettext from invoking emacs to install the po mode
-	sed -e '185,187d' Makefile.in.orig > Makefile.in
+	sed -e '185,187d' Makefile.in.orig > Makefile.in || die
 	#Eventually, installation of the po mode should be performed in pkg_postinst()
 }
 
