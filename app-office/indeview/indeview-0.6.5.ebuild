@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.5.ebuild,v 1.1 2004/04/22 17:00:17 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.5.ebuild,v 1.2 2004/04/22 17:19:31 kanaka Exp $
 
 DESCRIPTION="Convert OpenOffice/KOffice to run independently on Linux, OSX, or Windows"
 HOMEPAGE="http://www.indeview.org/"
@@ -61,13 +61,21 @@ src_install() {
 }
 
 pkg_postinst() {
-	grep "IndeViewExport" /opt/OpenOffice.org/share/basic/Tools/script.xlb > /dev/null ||
+	# Add script to OpenOffice macros list
+	grep "IndeViewExport" /opt/OpenOffice.org/share/basic/Tools/script.xlb > /dev/null 2>&1 ||
 		sed -i -e 's;</library:library>; <library:element library:name="IndeViewExport"/>\n</library:library>;' /opt/OpenOffice.org/share/basic/Tools/script.xlb
+
+	echo
+	einfo "If you install or re-install openoffice, "
+	einfo "you will need to re-merge this pacakge."
+	echo
 }
 
 pkg_postrm() {
+	# Delete script from OpenOffice macros list
 	if [ ! -e ${ROOT}/usr/bin/indeview ];
 	then
-		sed -i -e '/^ <library:element library:name="IndeViewExport"\/>$/d' /opt/OpenOffice.org/share/basic/Tools/script.xlb
+		grep "IndeViewExport" /opt/OpenOffice.org/share/basic/Tools/script.xlb > /dev/null 2>&1 &&
+			sed -i -e '/^ <library:element library:name="IndeViewExport"\/>$/d' /opt/OpenOffice.org/share/basic/Tools/script.xlb
 	fi
 }
