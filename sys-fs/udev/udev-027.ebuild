@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-027.ebuild,v 1.2 2004/06/24 22:54:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-027.ebuild,v 1.3 2004/06/30 18:43:52 vapier Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-apps/hotplug-base"
 
 RDEPEND="${DEPEND}
