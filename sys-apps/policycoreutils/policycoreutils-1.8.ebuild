@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.8.ebuild,v 1.3 2004/04/06 03:22:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.8.ebuild,v 1.4 2004/04/07 16:15:32 pebenito Exp $
 
 IUSE="build"
 
@@ -20,7 +20,6 @@ DEPEND="sys-libs/libselinux
 
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${P}
 S2=${WORKDIR}/policycoreutils-extra
 
 src_unpack() {

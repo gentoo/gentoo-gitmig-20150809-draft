@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.8.ebuild,v 1.1 2004/03/13 03:52:01 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.8.ebuild,v 1.2 2004/04/07 16:14:29 pebenito Exp $
 
 IUSE=""
 
@@ -15,8 +15,6 @@ DEPEND="sys-devel/flex
 	sys-devel/bison"
 
 RDEPEND="sec-policy/selinux-base-policy"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
