@@ -1,0 +1,46 @@
+# ChangeLog for net-www/horde-turba
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.1 2004/08/15 12:40:40 stuart Exp $
+
+*horde-turba-1.2.2 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +horde-turba-1.2.2.ebuild:
+  Moved from net-www/horde-turba to www-apps/horde-turba.
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> horde-turba-1.2.1.ebuild,
+  horde-turba-1.2.2.ebuild:
+  Clean up + Marking ~hppa
+
+*horde-turba-1.2.2 (26 Feb 2004)
+
+  26 Feb 2004; Martin Holzer <mholzer@gentoo.org> horde-turba-1.2.2.ebuild:
+  Version bumped.
+
+  07 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> horde-turba-1.2.1.ebuild:
+  fix bug #37492 and update copyright headers
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> horde-turba-1.2.1.ebuild:
+  Fix for bug #32636
+
+  04 Dec 2003; Martin Holzer <mholzer@gentoo.org> horde-turba-1.2.1.ebuild:
+  added webapps-apache
+
+  19 Oct 2003; Martin Holzer <mholzer@gentoo.org> horde-turba-1.2.1.ebuild:
+  marked x86 stable.
+
+*horde-turba-1.2.1 (02 Oct 2003)
+
+  02 Oct 2003; Martin Holzer <mholzer@gentoo.org> horde-turba-1.2.1.ebuild:
+  Version bumped.
+
+*horde-turba-1.2 (08 Apr 2003)
+  08 Apr 2003; Dean Bailey <alron@gentoo.org> horde-turba-1.2 :
+  Version bump and fix for when updatin turba.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*horde-turba-1.1 (31 Oct 2002)
+
+  31 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> horde-turba-1.1.ebuild files/digest-horde-turba-1.1 :
+  Initial import. Ebuild submitted by Christophe GUILLOUX <cg@rootix.info>.
