@@ -1,10 +1,18 @@
 # ChangeLog for sys-kernel/hppa-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.5 2003/10/27 22:05:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.6 2003/11/07 18:38:18 gmsoft Exp $
+
+*hppa-headers-2.4.22_p13 (07 Nov 2003)
+
+  07 Nov 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.22_p13.ebuild :
+  New version. Should fix missing version.h and offset.h.
 
 *hppa-headers-2.4.21_p13 (27 Oct 2003)
 
-  27 Oct 2003; Guy Martin hppa-headers-2.4.21_p13.ebuild :
+  07 Nov 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.21_p13.ebuild :
+  Removed. It was missing version.h and offset.h.
+
+  27 Oct 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.21_p13.ebuild :
   New hppa-headers for glibc-2.3.2. It also fix ntp-4.1.2 compilation problem.
 
 *hppa-headers-2.4.20_p32 (03 Apr 2003)
