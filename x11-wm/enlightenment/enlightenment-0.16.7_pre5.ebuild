@@ -1,17 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7_pre3.ebuild,v 1.3 2004/06/28 23:00:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7_pre5.ebuild,v 1.1 2004/07/06 02:46:37 vapier Exp $
 
-EVER="${PV/_pre*}"
-MY_PV="${EVER}-0.65"
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
-SRC_URI="mirror://sourceforge/enlightenment/enlightenment-${MY_PV}.tar.gz"
+SRC_URI="mirror://sourceforge/enlightenment/enlightenment-${PV/_/-}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
-IUSE="esd nls xrandr"
+IUSE="esd nls xrandr nothemes"
 
 DEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	=media-libs/freetype-2*
@@ -21,7 +19,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 PDEPEND="!nothemes? ( x11-themes/ethemes )
 	doc? ( app-doc/edox-data )"
 
-S=${WORKDIR}/${PN}-${EVER}
+S=${WORKDIR}/${PN}-${PV/_pre?}
 
 src_compile() {
 	econf \
