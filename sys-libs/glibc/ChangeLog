@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.127 2004/02/09 19:34:30 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.128 2004/02/12 11:05:57 solar Exp $
+
+  12 Feb 2004; <solar@gentoo.org> glibc-2.3.3_pre20040117-r1.ebuild,
+  files/2.3.3/glibc-2.3.3_pre20040117-got-fix.diff:
+  GOTOFF during linking seems to fail to recognize where main() is because it is
+  not visible in the object linked which might not be really legal C but it
+  apparently works anyway. This can be seen when trying to build bind9 as a
+  Position Independent Executable. ie CFLAGS=-fPIC,LDFLAGS=-pie. This patch
+  fixes that. Submitted by the PaX Team
 
 *glibc-2.3.3_pre20040207 (09 Feb 2004)
 

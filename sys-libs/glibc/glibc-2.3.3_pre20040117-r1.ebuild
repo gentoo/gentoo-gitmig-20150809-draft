@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040117-r1.ebuild,v 1.1 2004/01/26 16:14:28 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040117-r1.ebuild,v 1.2 2004/02/12 11:05:57 solar Exp $
 
 IUSE="nls pic build nptl"
 
@@ -411,6 +411,10 @@ src_unpack() {
 	# send a SEGV vs ABRT on self termniation.
 	# KILL might be even better?
 	epatch ${FILESDIR}/2.3.3/${PN}-${PV}-signal-ssp.diff
+
+	# When linking with -pie we have to fix the GOT up in order to avoid 
+	# some unresolved relocations that would otherwise not show up. (bind is one such example)
+	epatch ${FILESDIR}/2.3.3/${PN}-${PV}-got-fix.diff
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
