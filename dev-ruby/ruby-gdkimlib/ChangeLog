@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gdkimlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ChangeLog,v 1.6 2003/02/12 06:36:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ChangeLog,v 1.7 2003/08/06 01:46:43 agriffis Exp $
+
+*ruby-gdkimlib-0.34 (05 Aug 2003)
+
+  05 Aug 2003; Aron Griffis <agriffis@gentoo.org> ruby-gdkimlib-0.34.ebuild:
+  Update to current release
 
 *ruby-gdkimlib-0.30 (07 Jan 2003)
 
