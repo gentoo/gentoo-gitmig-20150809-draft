@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.1 2004/12/29 01:12:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.2 2005/01/03 09:41:02 corsair Exp $
 
 inherit flag-o-matic
 
