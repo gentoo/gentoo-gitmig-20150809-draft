@@ -1,7 +1,0 @@
-MD5 26e9ab27d429cbb8ba1e18a27b27c8e9 ChangeLog 3460
-MD5 9f87cea58c3f3ebdb41a84e53c1c564e tar-1.13.25-r3.ebuild 1441
-MD5 ebfd134ad54b3a6a08124bef38ecdad6 files/digest-tar-1.13.25-r3 64
-MD5 a1ab9f186c82b2894e285c1945dcbbcc files/tar-1.13.19-r1-gentoo.diff 706
-MD5 a1ab9f186c82b2894e285c1945dcbbcc files/tar-1.13.19.patch 706
-MD5 4518c28dd014a2efcc10690d53b58ffd files/tar-1.13.25-r3.gentoo.diff 314
-MD5 a5f8c5da7a9465ea1978145f3ef0610c files/tar.1 7113
