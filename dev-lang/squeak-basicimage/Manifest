@@ -1,2 +1,4 @@
-MD5 b9bd055fb555bf5fa282330b4cf21938 squeak-basicimage-3.6_p5429.ebuild 1020
-MD5 75da034c67d502c24067388c1be2a526 files/digest-squeak-basicimage-3.6_p5429 135
+MD5 40e3a04263188cdc8d06c23c9cf9f895 squeak-basicimage-3.6.5429.ebuild 1142
+MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
+MD5 594d0b027be321822480baa2c3a65415 ChangeLog 386
+MD5 75da034c67d502c24067388c1be2a526 files/digest-squeak-basicimage-3.6.5429 135
