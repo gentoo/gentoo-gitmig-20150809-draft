@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.21-r1.ebuild,v 1.1 2004/01/07 10:15:33 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.21-r1.ebuild,v 1.2 2004/01/07 10:17:03 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel
@@ -18,7 +18,7 @@ mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2"
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="${UML_VERSION}"
-KEYWORDS="~x86 -ppc -sparc  -alpha"
+KEYWORDS="x86 -ppc -sparc  -alpha"
 EXTRAVERSION=${PR}
 
 #console-tools is needed to solve the loadkeys fiasco.
