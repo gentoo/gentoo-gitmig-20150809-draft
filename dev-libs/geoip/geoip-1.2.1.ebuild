@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.2.1.ebuild,v 1.2 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.2.1.ebuild,v 1.3 2003/09/11 02:25:27 msterret Exp $
 
 inherit eutils
 
 MY_P=${P/geoip/GeoIP}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="Geo-IP enables you to easily lookup countries by IP addresses, even when Reverse DNS entries don't exist.
- The Geo-IP database contains IP Network Blocks as keys and countries as values, covering every public IP address."
+DESCRIPTION="Geo-IP enables you to easily lookup countries by IP addresses, even when Reverse DNS entries don't exist. The Geo-IP database contains IP Network Blocks as keys and countries as values, covering every public IP address."
 
 SRC_URI="http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz"
 HOMEPAGE="http://www.maxmind.com/geoip/api/c.shtml"
