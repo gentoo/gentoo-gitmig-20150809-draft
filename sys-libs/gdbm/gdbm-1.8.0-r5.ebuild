@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.35 2004/07/02 08:45:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.36 2004/07/24 17:15:27 usata Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -10,13 +10,19 @@ SRC_URI="mirror://gnu/gdbm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos"
 IUSE="berkdb static"
 
+# Mac OS X already has berkdb installed
 DEPEND="virtual/libc
-	berkdb? ( =sys-libs/db-1.85-r1 )"
+	!macos? ( berkdb? ( =sys-libs/db-1.85-r1 ) )"
 
 RDEPEND="virtual/libc"
+
+pkg_setup() {
+	einfo "This package needs bin:bin."
+	enewuser bin
+}
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.20 2004/07/24 06:57:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.21 2004/07/24 17:15:27 usata Exp $
+
+  25 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> gdbm-1.8.0-r5.ebuild:
+  Added to macos.
 
   24 Jul 2004; Mike Frysinger <vapier@gentoo.org> gdbm-1.8.3.ebuild:
   Clean up the ebuild a bit and add temp backwards compat #32510.
