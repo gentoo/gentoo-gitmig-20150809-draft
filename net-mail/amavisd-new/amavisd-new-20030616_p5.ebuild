@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p5.ebuild,v 1.4 2003/11/03 23:58:50 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p5.ebuild,v 1.5 2003/11/12 21:48:39 max Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_compile() {
 		cd "${S}/helper-progs"
 
 		econf --with-runtime-dir=/var/run/amavis \
-			--with-sockname=/var/run/amavis/amavis.sock \
+			--with-sockname=/var/run/amavis/amavisd.sock \
 			--with-user=amavis
 		emake || die "compile problem"
 

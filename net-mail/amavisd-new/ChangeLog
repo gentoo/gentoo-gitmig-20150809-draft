@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/amavisd-new
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.5 2003/11/11 05:42:54 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.6 2003/11/12 21:48:39 max Exp $
+
+  12 Nov 2003; <max@gentoo.org> amavisd-new-20030616_p4.ebuild,
+  amavisd-new-20030616_p5.ebuild, amavisd-new-20030616_p6.ebuild:
+  Fix milter socket path.
 
 *amavisd-new-20030616_p6 (10 Nov 2003)
 
