@@ -1,21 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3.ebuild,v 1.5 2002/08/01 12:37:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3.ebuild,v 1.6 2002/08/01 17:17:12 drobbins Exp $
 
 S="${WORKDIR}/${P}"
-
 DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (DFT)"
-
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
 HOMEPAGE="http://www.fftw.org"
-
+#lam compiled fine on uniprocessor (drobbins, 01 Aug 2002)
+DEPEND="mpi? ( >=dev-libs/lam-mpi-6.5.6 )"
 SLOT="2.1"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-
-
-DEPEND="mpi? ( >=dev-libs/lam-mpi-6.5.6 )"
-#will just leave this as a dependency on mpi for now until I test if lam does not brake anything on uniproc systems.
 
 src_unpack() {
 	#doc suggests installing single and double precision versions via separate compilations
