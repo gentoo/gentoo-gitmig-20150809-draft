@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mini-qmail/mini-qmail-1.05.ebuild,v 1.5 2004/04/24 08:09:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mini-qmail/mini-qmail-1.05.ebuild,v 1.6 2004/04/24 08:12:51 vapier Exp $
 
 inherit eutils gcc fixheadtails
 
@@ -76,6 +76,6 @@ src_install() {
 
 pkg_postinst() {
 	einfo "In order for mini-qmail to work, you need to setup"
-	einfo "the QMTP server information."
+	einfo "the QMQP server information."
 	einfo "Just run /var/mini-qmail/bin/config-mini for more information."
 }
