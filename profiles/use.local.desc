@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.789 2004/12/11 21:40:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.790 2004/12/11 23:46:09 ciaranm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -35,7 +35,7 @@ app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
 app-editors/scite:lua - Enable Lua scripting support
 app-editors/vim:mzscheme - Include support for the mzscheme interpreter
-app-editors/vim:vim-pager - Install vimpager links
+app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
