@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r2.ebuild,v 1.8 2002/10/20 18:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r2.ebuild,v 1.9 2002/11/14 18:33:42 vapier Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,8 @@ DEPEND="=sys-libs/db-1*
 	>=media-libs/libpng-1.2
 	>=media-libs/libgd-1.8.3"
 
-
+APACHE_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
+[ -z "${APACHE_ROOT}" ] && APACHE_ROOT="/home/httpd/htdocs"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -43,12 +44,12 @@ src_install() {
 	newins ${FILESDIR}/webalizer-${PV}.conf webalizer.conf
 	insinto /etc/apache/conf/addon-modules
 	doins ${FILESDIR}/apache.webalizer
+	dosed "s:/home/httpd/htdocs:${APACHE_ROOT}:" /etc/apache/conf/addon-modules/apache.webalizer
 	dodoc README* CHANGES COPYING Copyright sample.conf
+	dodir ${APACHE_ROOT}/webalizer
 }
 
 pkg_postinst() {
-	install -d -o root -g root -m0755 ${ROOT}/home/httpd/htdocs/webalizer
-
 	einfo
 	einfo "Execute: \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with webalizer."

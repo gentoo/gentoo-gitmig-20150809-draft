@@ -1,38 +1,36 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.8 2002/08/06 16:05:19 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.9 2002/11/14 18:33:42 vapier Exp $
 
 *webalizer-2.01.10-r2 (3 May 2002)
+
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
   26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> webalizer-2.01.10-r2.ebuild :
-
   Changed DESCRIPTION to something descriptive ;)
   Added RDEPEND
   
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Add LICENSE, SLOT, $Headers.
 
 *webalizer-2.01.10-r1 (24 Apr 2002)
 
   24 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   Added --enable-dns to ./configure, added small sed patch and sys-libs/db1
   to the dependencies to facilitate this.
 
 *webalizer-2.01.10 (19 Apr 2002)
 
   18 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   This version fixes a security bug.
 
 *webalizer-2.01.06-r2 (18 Apr 2002)
 
   18 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   Updated to match the new apache layout.  Add missing zlib dependency and correct
   the libpng dependency.  Add a pkg_config for easy apache.conf auto-update.  Fix
   the report output directory by moving it's creation into pkg_postinst.  Tweaked
@@ -41,13 +39,11 @@
 *webalizer-2.01.06-r1 (12 Apr 2002)
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> webalizer-2.01.06-r1.ebuild:
-
   Compile against newest libpng
 
 *webalizer-2.01.06 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
