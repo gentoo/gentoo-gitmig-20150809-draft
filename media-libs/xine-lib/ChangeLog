@@ -1,9 +1,17 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.68 2003/10/05 00:06:41 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.69 2003/10/11 05:19:27 drobbins Exp $
 
-  04 Oct 2003; Brad House <brad_mssw@gentoo.org> xine-lib-1_rc0-r3.ebuild:
-  add ~amd64 flag
+  10 Oct 2003; Daniel Robbins <drobbins@gentoo.org> xine-lib-1_rc0-r3.ebuild:
+  add a patch to disable xine-lib's default CFLAGS settings. They are a bit
+  out-of-date and not really optimal (-O3 often benchmarks worse than -O2, as
+  do many of the options that were being enabled.) Also added a dep on gcc-3.2+
+  for DEPEND in order to fix the -march=pentium4 compile issue.  Gentoo CFLAGS
+  are now preserved and respected on x86. The patch can be extended to other
+  arches as well, and this would probably be best.
+  
+  04 Oct 2003; Brad House <brad_mssw@gentoo.org> xine-lib-1_rc0-r3.ebuild: add
+  ~amd64 flag
 
   26 Sep 2003; Jason Wever <weeve@gentoo.org> xine-lib-1_beta12-r1.ebuild:
   Added sparc keyword.

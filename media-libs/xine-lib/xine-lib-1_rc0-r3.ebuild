@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r3.ebuild,v 1.4 2003/10/05 00:06:41 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r3.ebuild,v 1.5 2003/10/11 05:19:27 drobbins Exp $
 
 inherit eutils
 
@@ -49,7 +49,10 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	media-libs/speex"
 
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	>=sys-devel/gcc-3.2"
+
+#sys-devel/gcc-3.2 fixes -march=pentium4 compile issue
 
 S=${WORKDIR}/${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
@@ -59,7 +62,8 @@ src_unpack() {
 
 	# gcc2 fixes provided by <T.Henderson@cs.ucl.ac.uk> in #26534
 	epatch ${FILESDIR}/${P}-gcc2_fix.patch
-
+	# preserve CFLAGS added by drobbins, -O3 isn't as good as -O2 most of the time
+	epatch ${FILESDIR}/protect-CFLAGS.patch
 }
 
 src_compile() {
@@ -98,12 +102,6 @@ src_compile() {
 		|| myconf="${myconf} --with-sdl-prefix=/null" # disable sdl check
 
 	einfo "myconf: ${myconf}"
-
-	# Very specific optimization is set by configure
-	# Should fix problems like the one found on bug #11779
-	# raker@gentoo.org (25 Dec 2002)
-	unset CFLAGS
-	unset CXXFLAGS
 
 	econf ${myconf} || die "Configure failed"
 
