@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.2.0.ebuild,v 1.19 2004/07/02 03:18:54 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.2.0.ebuild,v 1.20 2004/07/28 02:51:44 tgall Exp $
 
 inherit gtk-engines2 gnuconfig
 
@@ -13,7 +13,7 @@ HOMEPAGE=""
 SRC_URI="mirror://gnome/sources/${PN}/${GTK1_VER}/${PN}-${GTK1_VER}.tar.gz
 	mirror://gnome/sources/${PN}/${PVP[0]}.${PVP[1]}/${PN}-${GTK2_VER}.tar.gz"
 
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
 LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
