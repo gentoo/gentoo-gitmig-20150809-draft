@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.21 2004/03/17 00:41:43 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.22 2004/04/07 01:08:25 blauwers Exp $
 
 inherit distutils virtualx
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
 
 DEPEND="virtual/python
 	>=media-libs/glut-3.7-r2
-	x11-base/xfree
+	virtual/x11
 	virtual/opengl"
 
 src_unpack() {
@@ -38,18 +38,24 @@ src_install () {
 }
 
 pkg_setup () {
-	VOID=`cat /etc/env.d/09opengl | grep xfree`
-
-	USING_NVIDIA=$?
-	if [ ${USING_NVIDIA} -eq 1 ]
+	if [ -e /etc/env.d/09opengl ]
 	then
-		opengl-update xfree
+		VOID=$(cat /etc/env.d/09opengl | grep xfree)
+
+		USING_XFREE=$?
+		if [ ${USING_XFREE} -eq 1 ]
+		then
+			GL_IMPLEM=$(cat /etc/env.d/09opengl | cut -f5 -d/)
+			opengl-update xfree
+		fi
+	else
+		die "Could not find /etc/env.d/09opengl. Please run opengl-update."
 	fi
 }
 
 pkg_postinst () {
-	if [ ${USING_NVIDIA} -eq 1 ]
+	if [ ${USING_XFREE} -eq 1 ]
 	then
-		opengl-update nvidia
+		opengl-update ${GL_IMPLEM}
 	fi
 }
