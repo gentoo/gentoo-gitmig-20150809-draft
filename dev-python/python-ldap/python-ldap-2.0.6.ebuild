@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.6.ebuild,v 1.1 2004/12/14 19:58:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.6.ebuild,v 1.2 2004/12/14 20:00:39 carlo Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ P_DOC="html-python-ldap-docs-2.0.3" # no newer docs available
 
 DESCRIPTION="Various LDAP-related Python modules"
 SRC_URI="mirror://sourceforge/python-ldap/${P}.tar.gz
-	doc? ( mirror://sourceforge/python-ldap/${P_DOC}.tar.gz )" 
+	doc? ( mirror://sourceforge/python-ldap/${P_DOC}.tar.gz )"
 HOMEPAGE="http://python-ldap.sourceforge.net/"
 
 DEPEND="virtual/python
@@ -33,15 +33,15 @@ src_unpack() {
 		-i setup.cfg || die "error fixing setup.cfg"
 
 	local mylibs="ldap"
-	if use sasl ; then 
+	if use sasl ; then
 		use ssl && mylibs="ldap_r"
 		mylibs="${mylibs} sasl2"
 	fi
 	use ssl && mylibs="${mylibs} ssl crypto"
-	
+
 	# Fixes bug #25693
 	sed -e "s|<sasl.h>|<sasl/sasl.h>|" -i Modules/LDAPObject.c
-	
+
 	sed -e "s:^libs = .*:libs = lber resolv ${mylibs}:" \
 		-e "s:^compile.*:compile = 0:" \
 		-e "s:^optimize.*:optimize = 0:" \
