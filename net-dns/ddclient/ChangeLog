@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.13 2005/04/01 22:20:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.14 2005/04/02 16:34:29 weeve Exp $
+
+  02 Apr 2005; Jason Wever <weeve@gentoo.org> ddclient-3.6.3.ebuild:
+  Stable on SPARC wrt bug #76625.
 
 *ddclient-3.6.6 (01 Apr 2005)
 
