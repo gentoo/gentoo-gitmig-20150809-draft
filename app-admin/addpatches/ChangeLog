@@ -1,16 +1,20 @@
 # ChangeLog for app-admin/addpatches
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.9 2003/02/27 18:10:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.10 2003/07/04 05:11:34 kumba Exp $
+
+ 
+*addpatches-0.2 (25 Oct 2002)
+
+  04 Jul 2003; Joshua Kinard <kumba@gentoo.org> addpatches-0.2.ebuild:
+  Added mips to KEYWORDS
+
+  27 Feb 2003; Zach Welch <zwelch@gentoo.org> addpatches-0.2.ebuild:
+  add arm keyword
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> addpatches-0.2.ebuild :
   Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*addpatches-0.2 (25 Oct 2002)
-
-  27 Feb 2003; Zach Welch <zwelch@gentoo.org> addpatches-0.2.ebuild:
-  add arm keyword
 
   02 Dec 2002; Will Woods <wwoods@gentoo.org> addpatches-0.2.ebuild :
   Added alpha to KEYWORDS.
