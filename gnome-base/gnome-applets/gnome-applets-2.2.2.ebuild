@@ -1,54 +1,41 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.4.ebuild,v 1.7 2003/02/13 12:07:33 vapier Exp $
-
-inherit libtool gnome2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.2.2.ebuild,v 1.1 2003/05/22 12:44:44 foser Exp $
 
 IUSE="doc"
+
+inherit gnome2
+
 S=${WORKDIR}/${P}
 DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2 FDL-1.1" 
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND=">=x11-libs/gtk+-2.1
 	>=x11-libs/libwnck-0.13
 	>=gnome-base/gail-0.13
-	>=gnome-base/gconf-1.2
+	>=gnome-base/gconf-1.2.1
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libgtop-2
 	>=gnome-base/gnome-panel-2
-	>=gnome-base/libglade-2"
+	>=gnome-base/libglade-2
+	>=gnome-base/libgnome-2
+	>=gnome-base/libgnomeui-2"
 											
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=app-text/scrollkeeper-0.3.11
 	doc? ( dev-util/gtk-doc )
 	${RDEPEND}"
 
-#G2CONF="${G2CONF} --enable-panelmenu=yes"		
-
-src_compile() {
-        elibtoolize
-        ./configure --host=${CHOST} \
-                --prefix=/usr \
-                --sysconfdir=/etc \
-                --infodir=/usr/share/info \
-                --mandir=/usr/share/man \
-                --disable-install-schemas \
-                --enable-panelmenu=yes || die
-        make || die
+src_unpack() {
+	unpack ${A}
+	gnome2_omf_fix
 }
 
 src_install() {
-	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		localstatedir=${D}/var \
-		install || die
-	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+	gnome2_src_install
     
 	dodoc AUTHORS ChangeLog COPYING* README* INSTALL NEWS message-of-doom 
 	docinto battstat
