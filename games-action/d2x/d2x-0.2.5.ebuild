@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5.ebuild,v 1.3 2004/03/14 18:19:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5.ebuild,v 1.4 2004/03/31 06:53:08 mr_bones_ Exp $
 
-inherit games flag-o-matic eutils
+inherit flag-o-matic eutils games
 
-DATAFILE=d2shar10
+DATAFILE="d2shar10"
 DESCRIPTION="Descent 2"
 HOMEPAGE="http://icculus.org/d2x/"
 SRC_URI="http://icculus.org/d2x/src/${P}.tar.gz
@@ -15,11 +15,12 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="debug opengl ggi svga"
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	opengl? ( virtual/opengl )
 	ggi? ( media-libs/libggi )
-	svga? ( media-libs/svgalib )
+	svga? ( media-libs/svgalib )"
+DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 src_unpack() {
