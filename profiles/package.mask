@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3165 2004/09/19 01:50:35 ribosome Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3166 2004/09/19 10:56:31 hattya Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -549,6 +549,7 @@ net-misc/zebra
 =mail-client/sylpheed-claws-0.9.5-r1
 =mail-client/sylpheed-0.9.12-r2
 =mail-client/sylpheed-0.9.12-r4
+=mail-client/sylpheed-0.9.12-r5
 
 # <genone@gentoo.org> (30 Nov 2003)
 # Service is down, current versions won't work with the new service
