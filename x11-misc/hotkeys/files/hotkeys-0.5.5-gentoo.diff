@@ -1,0 +1,77 @@
+--- ./src/kbddef.c.xml2 Sun Jun  2 22:37:33 2002
++++ ./src/kbddef.c      Sun Jun  2 22:37:43 2002
+@@ -38,7 +38,7 @@
+ #include "XF86keysym.h"
+
+ #include <xmlmemory.h>
+-#include <parser.h>
++#include <libxml2/libxml/parser.h>
+
+ #include "hotkeys.h"
+ #include "kbddef.h"
+--- ./configure.xml2    Mon Oct 29 12:47:31 2001
++++ ./configure Sun Jun  2 22:37:17 2002
+@@ -2189,14 +2189,14 @@
+     CFLAGS="$CFLAGS $XML_CFLAGS"
+     LIBS="$LIBS $XML_LIBS"
+
+-    echo $ac_n "checking for xmlParseFile in -lxml""... $ac_c" 1>&6
+-echo "configure:2194: checking for xmlParseFile in -lxml" >&5
++    echo $ac_n "checking for xmlParseFile in -lxml2""... $ac_c" 1>&6
++echo "configure:2194: checking for xmlParseFile in -lxml22" >&5
+ ac_lib_var=`echo xml'_'xmlParseFile | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lxml  $LIBS"
++LIBS="-lxml2  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 2202 "configure"
+ #include "confdefs.h"
+@@ -2230,7 +2230,7 @@
+ #define $ac_tr_lib 1
+ EOF
+
+-  LIBS="-lxml $LIBS"
++  LIBS="-lxml2 $LIBS"
+
+ else
+   echo "$ac_t""no" 1>&6
+@@ -2247,7 +2247,7 @@
+ #line 2248 "configure"
+ #include "confdefs.h"
+
+-    #include <parser.h>
++    #include <libxml2/libxml/parser.h>
+     int main ()
+     {
+ #ifdef xmlChildrenNode
+
+--- /tmp/kbddef.c       Wed Sep 11 18:51:19 2002
++++ src/kbddef.c        Wed Sep 11 18:51:33 2002
+@@ -37,7 +37,7 @@
+  */
+ #include "XF86keysym.h"
+
+-#include <xmlmemory.h>
++#include <libxml2/libxml/xmlmemory.h>
+ #include <libxml2/libxml/parser.h>
+
+ #include "hotkeys.h"
+
+--- /tmp/configure	Wed Sep 11 19:02:34 2002
++++ configure	Wed Sep 11 19:03:12 2002
+@@ -2447,10 +2447,10 @@
+ 
+ 
+     if test ! x$xosd_libdir = x; then
+-        LIBS="$LIBS -L$xosd_libdir"
++        LIBS="-L$xosd_libdir $LIBS"
+     fi
+     if test ! x$xosd_incdir = x; then
+-        CPPFLAGS="$CPPFLAGS -I$xosd_incdir"
++        CPPFLAGS="-I$xosd_incdir $CPPFLAGS"
+     fi
+ 
+     if test "x$enable_xosd" = "xyes"
