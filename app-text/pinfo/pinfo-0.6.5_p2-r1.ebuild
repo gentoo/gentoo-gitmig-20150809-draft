@@ -1,22 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.5_p2-r1.ebuild,v 1.8 2002/12/09 04:17:44 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.5_p2-r1.ebuild,v 1.9 2002/12/18 16:06:44 vapier Exp $
 
-IUSE="nls readline"
-
-MY_P=${PN}-0.6.5p2
+MY_P=${PN}-${PV/_/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Hypertext info and man viewer based on (n)curses"
 SRC_URI="http://zeus.polsl.gliwice.pl/~pborys/stable-version/${MY_P}.tar.gz"
 HOMEPAGE="http://zeus.polsl.gliwice.pl/~pborys/"
 
-DEPEND="sys-libs/ncurses
-	sys-devel/bison
-	nls? ( sys-devel/gettext )"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
+IUSE="nls readline"
+
+DEPEND="sys-libs/ncurses
+	sys-devel/bison
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf
@@ -29,10 +28,10 @@ src_compile() {
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
 
-	econf ${myconf} || die
+	econf ${myconf}
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} sysconfdir=/etc install || die
 }

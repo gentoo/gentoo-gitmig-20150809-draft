@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.95-r1.ebuild,v 1.9 2002/12/09 04:17:45 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.95-r1.ebuild,v 1.10 2002/12/18 16:10:45 vapier Exp $
 
 MY_P="Sablot-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -21,21 +21,19 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
-
 	use perl && myconf="--enable-perlconnect"
 
 	# rphillips
 	# fixes bug #3876
 	export LDFLAGS="-lstdc++"
-	
-	econf ${myconf} || die
+
+	econf ${myconf}
 	make || die
 }
 
-src_install () {
-	einstall || die
+src_install() {
+	einstall
 	dodoc README* RELEASE
 	dodoc src/TODO
 }
