@@ -6,6 +6,7 @@ IUSE="xml2"
 DESCRIPTION="GNU VCDimager"
 S=${WORKDIR}/${PN}-${PV}-cdio
 SRC_URI="mirror://sourceforge/xine/${P}-cdio.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.vcdimager.org/"
 
 SLOT="0"
