@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.0.ebuild,v 1.3 2004/04/10 16:04:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.0.ebuild,v 1.4 2004/04/11 08:51:26 mholzer Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
@@ -29,7 +29,7 @@ src_compile() {
 	econf \
 		--disable-dependency-tracking \
 		--disable-debug \
-		`use-with quicktime` || die
+		`use_with quicktime` || die
 
 	emake || die
 }

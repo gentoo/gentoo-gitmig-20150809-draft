@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.13 2004/04/10 16:04:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.14 2004/04/11 08:51:26 mholzer Exp $
+
+  11 Apr 2004; Martin Holzer <mholzer@gentoo.org> kino-0.7.0.ebuild,
+  kino-0.7.1.ebuild:
+  adding depend. fixing econf issue. closes 47449.
 
 *kino-0.7.1 (10 Apr 2004)
 
