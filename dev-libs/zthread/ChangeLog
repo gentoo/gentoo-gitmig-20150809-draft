@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/zthread
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.14 2004/11/01 23:13:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.15 2004/12/04 07:40:57 dragonheart Exp $
+
+  04 Dec 2004; Daniel Black <dragonheart@gentoo.org> -zthread-1.5.3.ebuild,
+  -zthread-2.2.10-r1.ebuild, zthread-2.3.1.ebuild:
+  added -fpermissive flag as per bug #72642. Old version deleted. Thanks to  
+  Lasse Kärkkäinen <tronic2@sci.fi> for the bug report
 
   01 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> zthread-1.5.3.ebuild,
   zthread-2.2.10-r1.ebuild, zthread-2.3.1.ebuild:
