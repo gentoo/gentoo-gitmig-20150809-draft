@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.18 2004/10/14 22:23:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.19 2004/10/14 22:23:50 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -178,7 +178,7 @@ gnustep_src_compile() {
 gnustep_src_install() {
 	egnustep_env
 	egnustep_install || die
-	if [ `use doc` ]; then
+	if use doc ; then
 		egnustep_env
 		egnustep_doc || die
 	fi
