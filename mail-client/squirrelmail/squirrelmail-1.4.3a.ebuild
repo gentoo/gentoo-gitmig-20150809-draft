@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.3.ebuild,v 1.4 2004/06/02 19:33:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.3a.ebuild,v 1.1 2004/06/08 03:11:35 eradicator Exp $
 
 inherit webapp-apache eutils
 
@@ -36,7 +36,7 @@ IUSE="crypt virus-scan ldap ssl apache2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86 ~ppc sparc alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND="virtual/php
 	dev-perl/DB_File
@@ -59,9 +59,6 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-fortune.patch
-
-	cd ${S}/src
-	epatch ${FILESDIR}/${P}-compose.patch
 
 	# Now do the plugins
 	cd ${S}/plugins

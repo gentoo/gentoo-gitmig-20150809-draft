@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.6 2004/06/03 17:05:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.7 2004/06/08 03:11:35 eradicator Exp $
+
+*squirrelmail-1.4.3a-r1 (07 Jun 2004)
+
+  07 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  squirrelmail-1.4.3-r1.ebuild, squirrelmail-1.4.3.ebuild,
+  squirrelmail-1.4.3a-r1.ebuild, squirrelmail-1.4.3a.ebuild,
+  files/squirrelmail-1.4.3-compose.patch:
+  Version bump.
 
   03 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/squirrelmail-1.4.3-compose.patch:
