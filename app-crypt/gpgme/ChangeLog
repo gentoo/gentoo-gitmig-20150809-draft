@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.39 2004/08/08 20:05:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.40 2004/08/11 13:46:53 dragonheart Exp $
+
+  11 Aug 2004; Daniel Black <dragonheart@gentoo.org> gpgme-0.3.14-r1.ebuild:
+  Fixes thanks to genone
 
   09 Aug 2004; Daniel Black <dragonheart@gentoo.org> gpgme-0.3.14-r1.ebuild:
   header files fix - gpgme.h -> gpgme3.h

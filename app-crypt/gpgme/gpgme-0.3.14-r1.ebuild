@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.3 2004/08/08 20:05:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.4 2004/08/11 13:46:53 dragonheart Exp $
 
 DESCRIPTION="GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications."
 HOMEPAGE="http://www.gnupg.org/gpgme.html"
@@ -38,7 +38,7 @@ src_unpack() {
 
 	sed -i -e 's:gpgme-config:gpgme3-config:g' \
 		configure.ac gpgme/Makefile.am doc/gpgme.texi \
-		./doc/gpgme.info-1 gpgme/gpgme-config.in
+		gpgme/gpgme-config.in
 
 	sed -i -e 's:gpgme\.info:gpgme3.info:g' \
 		-e 's:gpgme\.texi:gpgme3\.texi:g' \
@@ -71,7 +71,7 @@ src_compile() {
 	if [ -x ${ROOT}usr/bin/gpg2 ]; then
 		myconf="${myconf} --with-gpg=${ROOT}usr/bin/gpg2"
 	else
-		myconf="${myconf} --with-gpg=${ROOT}usr/bin/gpg2"
+		myconf="${myconf} --with-gpg=${ROOT}usr/bin/gpg"
 	fi
 
 	aclocal
@@ -85,7 +85,6 @@ src_compile() {
 	econf \
 		--enable-gpgmeplug \
 		--includedir=/usr/include/gpgme3 \
-		--with-gpg=$GPGBIN \
 		${myconf} \
 		|| die "econf failed"
 
