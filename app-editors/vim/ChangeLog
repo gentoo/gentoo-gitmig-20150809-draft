@@ -1,11 +1,15 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.34 2002/12/16 21:15:48 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.35 2003/01/06 10:41:54 seemant Exp $
+
+*vim-6.1-r17.ebuild (06 Dec 2002)
+
+  06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  PROVIDE=virtual/editor
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*vim-6.1-r17.ebuild (06 Dec 2002)
-
   16 Dec 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r17.ebuild :
   Added sandbox violation fix. Fixes #10049. Submitted by Leonardo Boshell.
 

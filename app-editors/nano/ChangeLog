@@ -1,11 +1,15 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.11 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.12 2003/01/06 10:41:54 seemant Exp $
+
+*nano-1.0.9-r2 (01 Dec 2002)
+
+  06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> nano-1.0.9-r2.ebuild :
+
+  PROVIDE virtual/editor
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*nano-1.0.9-r2 (01 Dec 2002)
-
   01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
   Added a symlink for /usr/bin/nano to /bin/nano #10916
 

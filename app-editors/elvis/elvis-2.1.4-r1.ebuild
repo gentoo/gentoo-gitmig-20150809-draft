@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.11 2002/12/09 04:17:38 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.12 2003/01/06 10:41:54 seemant Exp $
+
+IUSE="X"
 
 MY_P="${PN}-2.1_4"
 S=${WORKDIR}/${MY_P}
@@ -11,19 +13,23 @@ HOMEPAGE="ftp://ftp.cs.pdx.edu/pub/elvis/"
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 ppc sparc "
-IUSE="X"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2
+DEPEND=">=sys-libs/ncurses-5.2
 	X? ( virtual/x11 )"
-RDEPEND=""
+
+PROVIDE="virtual/editor"
 
 src_compile() {
 	local myconf
 	use X \
 		&& myconf="--with-x" \
 		|| myconf="--without-x"
-	./configure --bindir=${D}/usr/bin --datadir=${D}/usr/share/elvis ${myconf} || die
+
+	./configure \
+		--bindir=${D}/usr/bin \
+		--datadir=${D}/usr/share/elvis \
+		${myconf} || die
+
 	cp Makefile Makefile.orig
 	sed -e "s:gcc -O2:gcc ${CFLAGS}:" Makefile.orig > Makefile
 	cp config.h config.h.orig

@@ -1,11 +1,15 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.5 2002/12/13 10:56:05 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.6 2003/01/06 10:41:54 seemant Exp $
+
+*emacs-cvs-21.3.50 (22 Nov 2002)
+
+  06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> emacs-cvs-21.3.50.ebuild :
+
+  PROVIDE virtual/editor in addition to virtual/emacs
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*emacs-cvs-21.3.50 (22 Nov 2002)
-
   06 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   emacs-cvs-21.3.50.ebuild :
 

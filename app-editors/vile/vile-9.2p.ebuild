@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2p.ebuild,v 1.8 2002/12/09 04:17:41 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2p.ebuild,v 1.9 2003/01/06 10:41:54 seemant Exp $
 
 IUSE="perl"
 
@@ -25,13 +25,11 @@ SRC_URI="ftp://ftp.phred.org/pub/vile/vile-9.2.tgz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.2p.patch.gz"
 HOMEPAGE="http://invisible-island.net/vile/"
 
-DEPEND="virtual/glibc
-	sys-devel/flex
+DEPEND="sys-devel/flex
 	>=sys-libs/ncurses-5.2
 	perl? ( sys-devel/perl )"
 
-RDEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2"
+PROVIDE="virtual/editor"
 
 SLOT="0"
 LICENSE="GPL-2"

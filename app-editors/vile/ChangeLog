@@ -1,15 +1,19 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.6 2002/12/27 17:18:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.7 2003/01/06 10:41:54 seemant Exp $
+
+
+*vile-9.3h (22 Dec 2002)
+
+  06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  PROVIDE virtual/editor
 
   27 Dec 2002; Michael Cummings <mcummings@gentoo.org> :
   vile-9.3h.ebuild:
 
   Unmasking for x86 - this version works with perl 5.8, now unmasked.
     
-
-*vile-9.3h (22 Dec 2002)
-
   22 Dec 2002; Michael Cummings <mcummings@gentoo.org> :
   vile-9.3h.ebuild:
 

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r16.ebuild,v 1.7 2002/12/15 10:44:10 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r16.ebuild,v 1.8 2003/01/06 10:41:54 seemant Exp $
 
 VIMPATCH="vimpatch-1-245.tar.bz2"
 inherit vim
@@ -16,6 +16,9 @@ DEPEND="app-editors/vim-core
 	python? ( dev-lang/python )
 	ruby?	( >=dev-lang/ruby-1.6.4 )"
 #	tcltk?	( dev-lang/tcl )"
+
+
+PROVIDE="virtual/editor"
 
 src_compile() {
 	local myconf
