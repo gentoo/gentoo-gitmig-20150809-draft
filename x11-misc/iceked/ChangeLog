@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/iceked
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/ChangeLog,v 1.1 2003/03/17 09:40:44 phosphan Exp $
+
+*iceked-1.2 (17 Mar 2003)
+
+  17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> : iceked-1.2
+  files/digest-iceked-1.2 ChangeLog
+  Initial import. 
