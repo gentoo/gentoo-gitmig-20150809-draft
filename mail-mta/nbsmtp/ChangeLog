@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nbsmtp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.11 2004/11/01 21:17:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.12 2004/11/12 18:44:09 gustavoz Exp $
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> nbsmtp-0.96.ebuild:
+  Stable on sparc
 
   01 Nov 2004; Andrej Kacian <ticho@gentoo.org> nbsmtp-0.92-r1.ebuild,
   nbsmtp-0.92.ebuild, nbsmtp-0.96.ebuild:
