@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-mad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.45 2005/03/21 01:36:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.46 2005/04/02 11:07:35 zaheerm Exp $
+
+  02 Apr 2005; <zaheerm@gentoo.org> -gst-plugins-mad-0.6.4.ebuild:
+  removing gstreamer 0.6.x
 
   21 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   gst-plugins-mad-0.8.7.ebuild:
