@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-libglade2
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.13 2004/11/25 03:48:36 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.14 2005/03/13 23:44:31 citizen428 Exp $
+
+*ruby-libglade2-0.12.0 (14 Mar 2005)
+
+  14 Mar 2005; Michael Kohl <citizen428@gentoo.org>
+  +ruby-libglade2-0.12.0.ebuild:
+  Version bump.
 
 *ruby-libglade2-0.11.0 (25 Nov 2004)
 
