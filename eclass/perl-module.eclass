@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.18 2002/08/07 01:49:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.19 2002/08/14 13:54:23 mcummings Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
@@ -13,7 +13,7 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_compile src_install src_test
 
-newdepend ">=sys-devel/perl-5"
+DEPEND=">=sys-devel/perl-5"
 
 SRC_PREP="no"
 
