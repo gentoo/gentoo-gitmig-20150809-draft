@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ksymoops
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.18 2004/08/14 23:22:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.19 2004/11/22 02:57:17 robbat2 Exp $
+
+*ksymoops-2.4.10 (21 Nov 2004)
+
+  21 Nov 2004; Robin H. Johnson <robbat2@gentoo.org>
+  +ksymoops-2.4.10.ebuild:
+  Version bump. Contains a fix for usage with syslog-ng and also a fix for
+  usage with a multitarget binutils on some architectures (submitted to
+  upstream by myself).
 
   15 Aug 2004; <plasmaroo@gentoo.org> ksymoops-2.4.9.ebuild:
   /sbin/ksymoops >> /usr/bin/ksymoops; bug #47482.
