@@ -1,8 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.20 2002/10/01 00:07:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.21 2002/10/01 00:27:25 rphillips Exp $
 
 *xchat-1.8.10-r1 (29 Sep 2002)
+
+  30 Sep 2002; Ryan Phillips <rphillips@gentoo.org> xchat-1.8.10-r1.ebuild :
+
+  Deleted the patch after talking to seemant... We have decided on /etc/X11/applnk
+  to be the standard place
 
   30 Sep 2002; Ryan Phillips <rphillips@gentoo.org> xchat-1.8.10-r1.ebuild :
 
