@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/tkhylafax
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkhylafax/ChangeLog,v 1.2 2004/04/26 03:05:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkhylafax/ChangeLog,v 1.3 2004/04/26 08:23:26 nerdboy Exp $
+
+  26 Apr 2004; Steve Arnold <nerdboy@gentoo.org> tkhylafax-3.2.ebuild:
+  removed sparc from keywords
 
   25 Apr 2004; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
   tkhylafax-3.2.ebuild:
