@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.1 2003/10/24 15:54:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.2 2003/10/26 11:59:53 mholzer Exp $
 
 inherit libtool
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/${P}
 src_compile() {
 	elibtoolize
 	econf || die "./configure failed"
-	make || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
