@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.7 2003/03/12 19:05:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.8 2003/03/20 15:25:06 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -347,6 +347,8 @@ src_compile() {
 }
 
 src_install() {
+
+	unset MAKE_OPTS
 
 	einfo "Installing XFree86..."
 	# gcc3 related fix.  Do this during install, so that our

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0.ebuild,v 1.7 2003/03/15 20:11:11 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0.ebuild,v 1.8 2003/03/20 15:25:06 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -191,12 +191,12 @@ src_unpack() {
 	eend 0
     
 	# Update the SIS Driver
-	ebegin "Updating SiS driver"
-	cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
-	tar -zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz || die
-	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
-		${S}/programs/Xserver/hw/xfree86/drivers/sis
-	eend 0
+#	ebegin "Updating SiS driver"
+#	cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
+#	tar -zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz || die
+#	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
+#		${S}/programs/Xserver/hw/xfree86/drivers/sis
+#	eend 0
     
 	# Update Wacom Driver, hopefully resolving bug #1632
 	# The kernel driver should prob also be updated, this can be
@@ -326,12 +326,13 @@ src_compile() {
 	# Set MAKEOPTS to have proper -j? option ..
 	get_number_of_jobs
 
-	einfo "Building XFree86..."
 	#if a user defines the MAKE_OPTS variable in /etc/make.conf instead of MAKEOPTS,
 	#they'll redefine an internal XFree86 Makefile variable and the xfree build will
 	#silently die. This is tricky to track down, so I'm adding a preemptive fix for
 	#this issue by making sure that MAKE_OPTS is unset. (drobbins, 08 Mar 2003)
 	unset MAKE_OPTS
+
+	einfo "Building XFree86..."
 	emake World || die
 
 	if [ -n "`use nls`" ]
@@ -342,6 +343,8 @@ src_compile() {
 }
 
 src_install() {
+
+	unset MAKE_OPTS
 
 	einfo "Installing XFree86..."
 	# gcc3 related fix.  Do this during install, so that our

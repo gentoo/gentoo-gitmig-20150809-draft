@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.20 2003/03/11 21:11:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.21 2003/03/20 15:25:06 azarah Exp $
 
 IUSE="sse nls mmx 3dnow 3dfx"
 
@@ -166,6 +166,13 @@ src_compile() {
 		cd ${S}
 	fi
 	
+	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
+	# MAKEOPTS, they'll redefine an internal XFree86 Makefile variable and the
+	# xfree build will silently die. This is tricky to track down, so I'm
+	# adding a preemptive fix for this issue by making sure that MAKE_OPTS is
+	# unset. (drobbins, 08 Mar 2003)
+	unset MAKE_OPTS
+	
 	emake World || die
 
 	if [ "`use nls`" ]
@@ -177,6 +184,8 @@ src_compile() {
 }
 
 src_install() {
+
+	unset MAKE_OPTS
 
 	# fix compile for gcc-3.x
 	if [ "${COMPILER}" = "gcc3" ]  && [ "${ARCH}" = "x86" ]

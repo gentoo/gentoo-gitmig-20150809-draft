@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.26 2003/03/11 21:11:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.27 2003/03/20 15:25:06 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -326,6 +326,13 @@ src_compile() {
 	# Set MAKEOPTS to have proper -j? option ..
 	get_number_of_jobs
 
+	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
+	# MAKEOPTS, they'll redefine an internal XFree86 Makefile variable and the
+	# xfree build will silently die. This is tricky to track down, so I'm
+	# adding a preemptive fix for this issue by making sure that MAKE_OPTS is
+	# unset. (drobbins, 08 Mar 2003)
+	unset MAKE_OPTS
+
 	einfo "Building XFree86..."
 	emake World || die
 
@@ -337,6 +344,8 @@ src_compile() {
 }
 
 src_install() {
+
+	unset MAKE_OPTS
 
 	einfo "Installing XFree86..."
 	# gcc3 related fix.  Do this during install, so that our
