@@ -1,4 +1,6 @@
 MD5 354edd1a22dfee5b1a0fac8bdf912f4b gtksourceview-0.6.0.ebuild 727
-MD5 9d48eb7e7f723c9f9b2be960e63ab6a8 files/digest-gtksourceview-0.6.0 72
+MD5 354edd1a22dfee5b1a0fac8bdf912f4b gtksourceview-0.7.0.ebuild 727
 MD5 46f07e992a6d80186eb48f323e832cb8 ChangeLog 908
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 9d48eb7e7f723c9f9b2be960e63ab6a8 files/digest-gtksourceview-0.6.0 72
+MD5 1402eb2fe2d5eccbb5213a7e3979480e files/digest-gtksourceview-0.7.0 72
