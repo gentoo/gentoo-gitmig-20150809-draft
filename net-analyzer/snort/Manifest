@@ -13,8 +13,8 @@ MD5 4a957dd6316ffe54d0a8c3f5780aac10 files/digest-snort-1.9.1-r2 63
 MD5 20eeb720d24e091ead1b128bc4981748 files/snort-1.9.1-alpha-core_vuln.diff 9864
 MD5 710488a1702ad6555b6266400feca61c snort-1.8.6.ebuild 2539
 MD5 4b805689503782e047d03cd3cceaee93 snort-1.8.7.ebuild 2565
-MD5 cf4a92f35bdb8786f2e58741e3c08603 snort-1.9.0.ebuild 2720
-MD5 18c22b81c6afedc8c624bfc0c3b31591 ChangeLog 3298
+MD5 b121e9b8a4544c1b8b693744a25d9bac snort-1.9.0.ebuild 2716
+MD5 ece374ba385fe2c436db0a0d5e31c46a ChangeLog 3409
 MD5 b7a9320806fdb6c56b298980ec223d1d snort-1.9.1.ebuild 2727
 MD5 b3815c56fdef8172caa0830e23810739 snort-1.9.1-r1.ebuild 2833
 MD5 006245d824acd3b53cdc0976edfb94dd snort-2.0.0.ebuild 3007

@@ -1,5 +1,5 @@
-MD5 75df49732cfb0dd578a0288218ea277d ChangeLog 936
-MD5 b00dbcaebb9d77a59eb8f1db472b3a19 slurm-0.2.2.ebuild 1003
 MD5 d1776e848116293161a1973b4ee313c7 files/digest-slurm-0.2.2 62
 MD5 2dc5e67b0c6424cc560be57e7dcf099a files/slurm-0.2.2-altcolors-gentoo.patch 808
 MD5 42f81938478bb63828b98c7367b49949 files/slurm-0.2.2-fix-gentoo.patch 2209
+MD5 75df49732cfb0dd578a0288218ea277d ChangeLog 936
+MD5 ad6ea3365da97e76d843a9b920c59d6c slurm-0.2.2.ebuild 998

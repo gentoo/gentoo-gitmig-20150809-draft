@@ -1,4 +1,4 @@
-MD5 ee30afa0402472faca5cd125fc21abf7 ChangeLog 386
-MD5 63cf3277f07710e613eb65aff7d38898 argus-2.0.5.ebuild 970
 MD5 e7d773b85b71bca96d20df40a11d6e00 files/argus-2.0.5-gentoo.diff 317
 MD5 890a4c236df08f0041db409a40d6d0b4 files/digest-argus-2.0.5 63
+MD5 e3054236c1854b1d470c941f8a8df66e argus-2.0.5.ebuild 967
+MD5 ee30afa0402472faca5cd125fc21abf7 ChangeLog 386

@@ -1,4 +1,4 @@
-MD5 ff5151d34c50f0f39dbf83496ab232ff ChangeLog 383
-MD5 8cdd40326c231dca58726755d61b2f42 snorticus-1.0.4.ebuild 1472
 MD5 58b5bcacaeeb295cc8f0cee6beba68ad files/digest-snorticus-1.0.4 66
 MD5 eda912eea5751601bc4e8be74f1ac5b0 files/snorticus-1.0.4-gentoo.patch 2675
+MD5 ff5151d34c50f0f39dbf83496ab232ff ChangeLog 383
+MD5 426487c6f7742d6767dc27c683e126d8 snorticus-1.0.4.ebuild 1471
