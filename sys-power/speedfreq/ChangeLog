@@ -1,0 +1,50 @@
+# ChangeLog for sys-apps/speedfreq
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/speedfreq/ChangeLog,v 1.1 2005/03/14 21:57:10 ciaranm Exp $
+
+*speedfreq-0.7.2-r2 (14 Mar 2005)
+*speedfreq-0.7.2-r1 (14 Mar 2005)
+*speedfreq-0.7.2 (14 Mar 2005)
+*speedfreq-0.5 (14 Mar 2005)
+
+  14 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/0.7.2-python-ver.patch, +files/battery.sh, +files/battery-new.sh,
+  +files/speedfreq.conf, +files/speedfreq.rc, +metadata.xml,
+  +speedfreq-0.5.ebuild, +speedfreq-0.7.2.ebuild,
+  +speedfreq-0.7.2-r1.ebuild, +speedfreq-0.7.2-r2.ebuild:
+  Moved from sys-apps/speedfreq to sys-power/speedfreq.
+
+  09 Oct 2004; Doug Goldstein <cardoe@gentoo.org>
+  +speedfreq-0.7.2-r2.ebuild, +files/battery-new.sh:
+  added support for BAT0 and BAT1 (bug #66670)
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  speedfreq-0.7.2.ebuild:
+  Masked speedfreq-0.7.2.ebuild stable for ppc
+
+  24 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  speedfreq-0.7.2-r1.ebuild:
+  posix chown (bug #58131)
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org> speedfreq-0.5.ebuild,
+  speedfreq-0.7.2.ebuild:
+  QA - fix use invocation
+
+  10 May 2004; Daniel Ahlberg <aliz@gentoo.org> speedfreq-0.7.2-r1.ebuild:
+  Added amd64 keyword, closing #50573.
+
+*speedfreq-0.7.2-r1 (28 Mar 2004)
+
+  28 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Fix python search paths and use `make install` #43118.
+
+*speedfreq-0.7.2 (25 Feb 2004)
+
+  25 Feb 2004; Michael Imhof <tantive@gentoo.org> speedfreq-0.7.2.ebuild,
+  files/speedfreq.rc:
+  Version bumped. Fixed error in init-script.
+
+*speedfreq-0.5 (20 Aug 2003)
+
+  20 Aug 2003; Christian Axelsson <smiler@lanil.mine.nu> speedfreq-0.5.ebuild :
+  Initial release.  #26973

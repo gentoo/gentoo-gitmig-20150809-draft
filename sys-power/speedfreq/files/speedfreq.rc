@@ -1,0 +1,51 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/speedfreq/files/speedfreq.rc,v 1.1 2005/03/14 21:57:10 ciaranm Exp $
+
+depend() {
+	need modules logger
+	use acpid
+}
+
+check_battery() {
+	[ "${SPEEDFREQ_SPEED}" == "auto" ] || return 0
+
+	local status=""
+	if [ -e /proc/acpi/battery/BAT0/state ] ; then
+		status="$(awk '/^charging/ {print $NF}' /proc/acpi/battery/BAT0/state)"
+	elif [ -e /proc/acpi/battery/BAT1/state ] ; then
+		status="$(awk '/^charging/ {print $NF}' /proc/acpi/battery/BAT1/state)"
+	elif [ -e /proc/pmu/info ] ; then
+		status="$(awk '/^AC Power/ {print $NF}' /proc/pmu/info)"
+	[ ${status} -eq 1 ] \
+			&& status="charging" \
+			|| status="discharging"
+	fi
+
+	case ${status} in
+		charging)	SPEEDFREQ_SPEED=performance;;
+		discharging)	SPEEDFREQ_SPEED=powersave;;
+		*)		SPEEDFREQ_SPEED=performance;;
+	esac
+	return 0
+}
+
+start() {
+	check_battery
+
+	ebegin "Starting speedfreq"
+	/usr/sbin/speedfreqd -P /var/run/speedfreq.pid -p ${SPEEDFREQ_SPEED} ${SPEEDFREQ_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping speedfreq"
+	if [ -e /var/run/speedfreq.pid ] ; then
+		local pid="$(</var/run/speedfreq.pid)"
+		kill ${pid} >& /dev/null
+		eend $? "Could not kill pid '${pid}'"
+	else
+		eend 1 "Lost pid file :("
+	fi
+}
