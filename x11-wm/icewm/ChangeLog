@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.47 2004/06/28 23:49:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.48 2004/07/09 07:05:01 morfic Exp $
+
+  09 Jul 2004; Daniel Goller <morfic@gentoo.org> :
+  this version has varios bug fixes and upstream merged our gcc 3.4 patches
+  (yes, they actually never made it into portage before upstream merged them)
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> icewm-1.2.13.ebuild,
   icewm-1.2.14.ebuild:
