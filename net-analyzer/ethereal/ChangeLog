@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.52 2004/03/20 06:54:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.53 2004/03/24 21:01:48 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ethereal-0.9.14.ebuild:
+  don't use deprecated ?: use syntax; use sed -i; tidy
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ethereal-0.10.2.ebuild,
   ethereal-0.9.16-r1.ebuild, ethereal-0.9.16.ebuild:
