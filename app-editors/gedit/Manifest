@@ -3,8 +3,8 @@ MD5 c8c3159eef4c62a9d93191924d9b316d gedit-2.6.1.ebuild 867
 MD5 0d0b886c6d1f81ec1c30752210de8e70 gedit-0.9.6-r1.ebuild 903
 MD5 eb67912bf9e81408c283f720c3ff1c29 gedit-2.6.0.ebuild 859
 MD5 e571e4929f75c136060c2ffb2e91c9f0 gedit-2.4.1.ebuild 1204
-MD5 9a5ece2a4b2a0dbe070f362045f49548 gedit-2.6.2.ebuild 868
-MD5 793e5121f53a4359de61fd9043079d99 ChangeLog 8782
+MD5 85b0dc1e6c3f23806760813695f4513c gedit-2.6.2.ebuild 867
+MD5 01f6c27aca7300fd54aaf2cc71a7bf2a ChangeLog 8874
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 b7be57955648bf8b99fbd0bc1adfb3b9 gedit-2.8.0.ebuild 873
 MD5 871bd845733e2e5c91dd3b17f1103037 files/gedit-2.4.0-64bit-fix.patch 433
