@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/atop-1.13.ebuild,v 1.1 2004/12/10 19:47:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/atop-1.13.ebuild,v 1.2 2005/03/03 15:22:55 ciaranm Exp $
 
 
 ATOP_INIT_VERSION="1.9"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.atcomputing.nl/pub/tools/linux/${P}.tar.gz
 HOMEPAGE="http://freshmeat.net/releases/112061/"
 LICENSE="GPL-2"
 SLOT="0"
-DEPEND="sys-apps/acct"
+DEPEND="sys-process/acct"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 

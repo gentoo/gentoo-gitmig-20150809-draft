@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/atop-1.9.ebuild,v 1.5 2004/06/30 14:23:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/atop-1.9.ebuild,v 1.6 2005/03/03 15:22:22 ciaranm Exp $
 
 
 DESCRIPTION="Resource-specific view of processes"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.atcomputing.nl/pub/tools/linux/${P}.tar.gz
 HOMEPAGE="http://freshmeat.net/releases/112061/"
 LICENSE="GPL-2"
 SLOT="0"
-DEPEND="sys-apps/acct"
+DEPEND="sys-process/acct"
 KEYWORDS="~x86 amd64"
 IUSE=""
 
