@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ProgressBar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.5 2004/04/02 13:18:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.6 2004/04/04 18:58:08 mholzer Exp $
+
+  04 Apr 2004; Martin Holzer <mholzer@gentoo.org>
+  Term-ProgressBar-2.06-r1.ebuild:
+  adding forgotten depend.
 
 *Term-ProgressBar-2.06-r1 (02 Apr 2004)
 
