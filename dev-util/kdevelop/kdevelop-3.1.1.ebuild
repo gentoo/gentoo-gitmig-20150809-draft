@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.1.ebuild,v 1.1 2004/10/14 14:49:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.1.ebuild,v 1.2 2004/12/01 18:23:06 caleb Exp $
 
 inherit python kde eutils
 
@@ -50,20 +50,17 @@ einfo "kdevelop can use a wide range of apps for extra functionality. This is an
 einfo "complete list. If you want subversion support, you must emerge it and then re-emerge"
 einfo "kdevelop; all other packages can be emerged after kdevelop."
 einfo
-einfo "dev-util/cvs:		provide frontend for cvs version control system"
-einfo "net-misc/x11-ssh-askpass		for use with SSH protected CVS systems"
-einfo "dev-util/subversion		ditto for subversion."
-einfo ">=dev-util/ctags-5		faster and more powerful code browsing logic"
-einfo "dev-util/kdoc		tools to generate KDE-style documentation for your project"
-einfo "app-misc/glimpse		index and search your project's documentation"
-einfo "net-www/htdig		ditto. yet another supported indexing/searching backend"
-einfo "dev-util/kdbg		kde frontend to gdb"
-einfo "app-arch/rpm			supports creating RPMs of your project"
-einfo "kde-base/kdebase		embed konsole kpart in kdevelop ide"
-einfo "kde-base/kdesdk		use kompare widget for showing the output of diff"
-einfo "dev-util/valgrind		integrates valgrind (memory debugger) commands"
-einfo "app-emulation/		create and run projects for this gameboy"
-einfo "	visualboyadvance	/gameboy color/gameboy advance emulator"
+einfo "kde-base/kdebase:			(RECOMMENDED) embed konsole kpart in kdevelop ide"
+einfo "kde-base/kdesdk:				(RECOMMENDED) use kompare widget for showing the output of diff, cvs support"
+einfo "dev-util/kdbg:				(RECOMMENDED) kde frontend to gdb"
+einfo "dev-util/valgind:			(RECOMMENDED) integrates valgrind (memory debugger) commands"
+einfo "dev-util/cvs dev-util/subversion:	provide frontend for cvs version control system"
+einfo ">=dev-util/ctags-5:			faster and more powerful code browsing logic"
+einfo "app-doc/doxygen:				generate KDE-style documentation for your project"
+einfo "app-misc/glimpse:			index and search your project's documentation"
+einfo "net-www/htdig:				ditto. yet another supported indexing/searching backend"
+einfo "app-arch/rpm:				supports creating RPMs of your project"
+einfo "app-emulation/visualboyadvance		create and run projects for this gameboy"
 einfo
 einfo "Support for GNU-style make, tmake, qmake and probably jam and other systems is included."
 einfo "There is also php, fortran, etc. support - use your favourite package, I suppose."
