@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/beast-data
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast-data/ChangeLog,v 1.2 2003/02/12 07:25:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast-data/ChangeLog,v 1.3 2003/03/03 13:00:32 vladimir Exp $
 
 *beast-data-0.3 (01 Nov 2002)
+
+  03 Mar 2003; <vladimir@gentoo.org> beast-data-0.3.ebuild:
+  Fixed minor problem in KEYWORDS
 
   01 Nov 2002; Arcady Genkin <agenkin@gentoo.org> beast-data-0.3.ebuild :
 
