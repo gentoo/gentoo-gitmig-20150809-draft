@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.8 2004/02/20 23:58:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.9 2004/04/09 07:23:08 iggy Exp $
+
+  09 Apr 2004; Brian Jackson <iggy@gentoo.org> devtodo-0.1.17.ebuild:
+  added s390 keyword
 
   20 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> devtodo-0.1.17.ebuild:
   header fix; inherit eutils for epatch; arm needs deps first
