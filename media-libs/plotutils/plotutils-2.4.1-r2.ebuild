@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.15 2004/02/06 17:30:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.16 2004/02/09 07:40:43 augustus Exp $
 
 IUSE="X"
+
+inherit libtool
 
 #The plotutils package contains extra X fonts.  These fonts are not installed
 #in the current ebuild.  The commented out ebuild lines below are for future
@@ -18,7 +20,7 @@ HOMEPAGE="http://www.gnu.org/software/plotutils/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )"
@@ -39,6 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
+	elibtoolize
 
 	#enable build of C++ version
 	local myconf="--enable-libplotter"
