@@ -1,0 +1,6 @@
+MD5 2fa60e63a2477e9f9263162e88c94635 wmgrabimage-0.72.ebuild 1057
+MD5 c15b89fe2ab01793e1c108161d6846a0 ChangeLog 390
+MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 510f4557928c8d5b4788f93c938fb236 files/wmgrabimage.desktop 179
+MD5 ddc76446e5b95bcb71d118f3a483c1a3 files/wmgrabimage-noman.patch 296
+MD5 acb5efeb412afb808e7b493a835b57f4 files/digest-wmgrabimage-0.72 64
