@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.0.0.ebuild,v 1.2 2003/11/21 18:35:54 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.0.0.ebuild,v 1.3 2004/01/16 20:59:46 rphillips Exp $
 
 IUSE="ldap"
 
@@ -51,6 +51,7 @@ src_install() {
 
 	dodoc COPYING COPYRIGHT NEWS README* TODO
 	cd man
+	sed -i 's:\/etc\/:\/etc\/autofs\/:g' *.8 *.5 *.in
 	doman auto.master.5 autofs.5 autofs.8 automount.8
 
 	cd ../samples
