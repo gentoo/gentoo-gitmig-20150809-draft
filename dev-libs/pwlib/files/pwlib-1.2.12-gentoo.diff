@@ -1,0 +1,11 @@
+--- unix.mak.orig	Thu Feb 28 22:30:39 2002
++++ unix.mak	Thu Feb 28 22:32:47 2002
+@@ -556,7 +556,7 @@
+ STDCCFLAGS	+= -fomit-frame-pointer -fno-strict-aliasing -fno-common -pipe -mpreferred-stack-boundary=2 -march=i686 -malign-functions=0 
+ STDCCFLAGS      += -malign-jumps=0 -malign-loops=0
+ else
+-STDCCFLAGS	+= -mcpu=$(CPUTYPE)
++#STDCCFLAGS	+= -mcpu=$(CPUTYPE)
+ endif
+ endif
+ endif
