@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pysnmp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.1 2003/07/03 09:08:47 liquidx Exp $
+
+*pysnmp-2.0.8 (03 Jul 2003)
+
+  03 Jul 2003; Alastair Tse <liquidx@gentoo.org> pysnmp-2.0.8.ebuild:
+  new package contributed by Rob Cakebread <robc@myrealbox.com> (#23191)
+
