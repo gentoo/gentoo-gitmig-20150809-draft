@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12_rc1.ebuild,v 1.1 2005/01/15 02:39:45 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12_rc1.ebuild,v 1.2 2005/01/21 16:27:57 voxus Exp $
 
 
 PATCHLEVEL="1.1.12"
@@ -16,7 +16,7 @@ SRC_URI="http://www.danga.com/memcached/dist/testing/memcached-${MY_PV}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="static perl php"
 
 DEPEND=">=dev-libs/libevent-0.6
