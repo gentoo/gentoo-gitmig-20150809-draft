@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.137 2005/01/11 19:08:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.138 2005/01/11 22:56:41 gmsoft Exp $
+
+  11 Jan 2005; Guy Martin <gmsoft@gentoo.org> fluxbox-0.9.11.ebuild:
+  Stable on hppa.
 
   11 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> fluxbox-0.9.11.ebuild:
   Fix nasty subshell usage
