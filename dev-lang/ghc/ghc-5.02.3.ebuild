@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.11 2002/12/09 04:20:57 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.12 2003/01/18 04:02:54 satai Exp $
 
 IUSE="doc tetex opengl"
 
@@ -50,7 +50,7 @@ DEPEND=">=sys-devel/perl-5.6.1
 	>=sys-devel/flex-2.5.4a
 	doc? ( >=app-text/openjade-1.3.1
 		>=app-text/sgml-common-0.6.3
-		=app-text/docbook-sgml-dtd-3.1
+		=app-text/docbook-sgml-dtd-3.1-r1
 		>=app-text/docbook-dsssl-stylesheets-1.64
 		tetex? ( >=app-text/tetex-1.0.7
 			>=app-text/jadetex-3.12 ) )
