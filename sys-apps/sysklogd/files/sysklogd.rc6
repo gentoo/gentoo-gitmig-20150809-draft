@@ -5,23 +5,28 @@ SYSLOGD="-m 0"
 KLOGD="-c 3 -2"
 
 depend() {
-    need hostname
+
+	need hostname
 }
 
 start() {
-    ebegin "Starting syslogd, klogd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/syslogd -- $SYSLOGD
-    retval=$?
-    start-stop-daemon --start --quiet --exec /usr/sbin/klogd -- $KLOGD
-    retval=$(( $retval + $? ))
-    eend $retval 
+
+	ebegin "Starting syslogd, klogd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/syslogd -- $SYSLOGD
+	retval=$?
+	# klogd do not always start proper if started too early
+	sleep 2
+	start-stop-daemon --start --quiet --exec /usr/sbin/klogd -- $KLOGD
+	retval=$(( $retval + $? ))
+	eend $retval 
 }
 
 stop() {
-    ebegin "Stopping klogd, syslogd"
-    start-stop-daemon --stop --quiet --pidfile /var/run/klogd.pid
-    retval=$?
-    start-stop-daemon --stop --quiet --pidfile /var/run/syslogd.pid
-    retval=$(( $retval + $? ))
-    eend $retval 
+
+	ebegin "Stopping klogd, syslogd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/klogd.pid
+	retval=$?
+	start-stop-daemon --stop --quiet --pidfile /var/run/syslogd.pid
+	retval=$(( $retval + $? ))
+	eend $retval 
 }
