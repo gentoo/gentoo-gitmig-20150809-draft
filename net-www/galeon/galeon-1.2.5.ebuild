@@ -33,7 +33,7 @@ pkg_setup() {
 	then
 		eerror
 		eerror "It seems that your Mozilla was not compiled against gtk+-1.2,"
-		eerror "but rather gtk+-2.0.  As Galeon do not support this setup yet,"
+		eerror "but rather gtk+-2.0. As Galeon does not support this setup yet,"
 		eerror "you will have to remerge Mozilla with gtk+-1.2 support.  This"
 		eerror "can be done by taking \"gtk2\" out of your USE flags:"
 		eerror
