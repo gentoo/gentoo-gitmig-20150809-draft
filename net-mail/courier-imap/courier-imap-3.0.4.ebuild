@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.4.ebuild,v 1.1 2004/05/18 01:33:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.4.ebuild,v 1.2 2004/06/10 20:52:55 agriffis Exp $
 
 inherit eutils
 
@@ -130,7 +130,7 @@ src_compile() {
 	myconf="${myconf} --without-redhat"
 
 	# bug #29879 - FAM support
-	#if has_version 'app-admin/fam' && [ -z "`use fam`" ]; then
+	#if has_version 'app-admin/fam' && ! use fam; then
 	#	ewarn "FAM will be detected by the package and support will be enabled"
 	#	ewarn "The package presently provides no way to disable fam support if you don't want it"
 	#fi
