@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.14 2004/07/18 22:12:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.15 2004/10/29 18:34:19 carlo Exp $
+
+*libofx-0.7.0 (29 Oct 2004)
+
+  29 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +libofx-0.7.0.ebuild:
+  version bump
 
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> libofx-0.6.6.ebuild:
   Added amd64 keyword.
