@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.13.0.ebuild,v 1.1 2003/09/10 17:46:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.13.0.ebuild,v 1.2 2003/09/12 06:18:06 vapier Exp $
 
 inherit games
 
@@ -19,8 +19,8 @@ IUSE="gtk gtk2 readline guile X gdbm truetype nls png"
 DEPEND="guile? ( dev-util/guile )
 	truetype? ( =media-libs/freetype-1* )
 	|| (
-		gtk? ( =x11-libs/gtk+-1.2* )
-		gtk2? ( =x11-libs/gtk+-2* )
+		gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1* )
+		gtk2? ( =x11-libs/gtk+-2* =dev-libs/glib-2* )
 	)
 	readline? ( sys-libs/readline )
 	X? ( virtual/x11 )
