@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 76e893a972cc19ec8954e6a6730a8e97 desktop-file-utils-0.3.ebuild 776
+MD5 9988b49e84398bac6b207fbd08e2c3b5 desktop-file-utils-0.9.ebuild 919
+MD5 e09234415b678277864155f7ab967d1e ChangeLog 2855
 MD5 f5af5513e416338307cbb64c7e18b1a8 desktop-file-utils-0.5.ebuild 710
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 5e1cd246ad71bbb29ce5b6c5504cd3d4 ChangeLog 2750
-MD5 d19d049f82ed03df20eca290f312cc1d desktop-file-utils-0.9.ebuild 922
+MD5 76e893a972cc19ec8954e6a6730a8e97 desktop-file-utils-0.3.ebuild 776
+MD5 a5b7ad2bec794347c2aa4fd97ccb4228 files/desktop-file-utils-0.8-noemacs.patch 417
 MD5 d5fb44d1f502de66b26adb38f8cb552e files/digest-desktop-file-utils-0.3 74
 MD5 3ec40b5b7c9a78f971f6208e41e847c0 files/digest-desktop-file-utils-0.5 74
-MD5 a5b7ad2bec794347c2aa4fd97ccb4228 files/desktop-file-utils-0.8-noemacs.patch 417
 MD5 f7113107af039bf8cf5156ecc74e62f5 files/digest-desktop-file-utils-0.9 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoxDQRkyva5PS18kRAgvoAKCQ4ny8K5CvL0cm1m5gJ/OUL9ApuwCeL9Af
-j6LeW2F5KWD/7+1cCd3HiU0=
-=I6SS
+iD8DBQFBusqOugEuf3OQ0akRAl3iAJ49Yrk2uIdmGornJkq/Nf78Ip142gCfQ3BL
+Q2mAkA1dPiIqZjz7eNutOEY=
+=efBF
 -----END PGP SIGNATURE-----
