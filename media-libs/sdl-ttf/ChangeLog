@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.9 2003/06/11 07:00:58 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.10 2003/10/03 00:40:45 mr_bones_ Exp $
+
+  02 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> sdl-ttf-2.0.6.ebuild:
+  more error message and checking
 
 *sdl-ttf-2.0.6 (11 Jun 2003)
 
