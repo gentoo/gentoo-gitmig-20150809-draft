@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r7.ebuild,v 1.1 2003/08/19 23:08:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r7.ebuild,v 1.2 2003/09/02 19:05:18 mholzer Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,9 +8,9 @@ inherit eutils flag-o-matic
 PLEVEL="x002 x003 x004 x005 x006 x007"
 
 DESCRIPTION="The standard GNU Bourne again shell"
-SRC_URI="ftp://ftp.gnu.org/gnu/bash/${P}.tar.gz
+SRC_URI="mirror://gnu/bash/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
-	${PLEVEL//x/ftp://ftp.gnu.org/gnu/bash/bash-${PV}-patches/bash${PV/\.}-}"
+	${PLEVEL//x/mirror://gnu/bash/bash-${PV}-patches/bash${PV/\.}-}"
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
 SLOT="0"

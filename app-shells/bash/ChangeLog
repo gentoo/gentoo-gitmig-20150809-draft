@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.13 2003/08/19 23:08:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.14 2003/09/02 19:05:18 mholzer Exp $
+
+  02 Sep 2003; Martin Holzer <mholzer@gentoo.org> bash-2.05a-r3.ebuild,
+  bash-2.05b-r3.ebuild, bash-2.05b-r4.ebuild, bash-2.05b-r5.ebuild,
+  bash-2.05b-r6.ebuild, bash-2.05b-r7.ebuild:
+  Now uses mirror://gnu.
 
 *bash-2.05b-r7 (19 Aug 2003)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05a-r3.ebuild,v 1.1 2003/03/11 20:50:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05a-r3.ebuild,v 1.2 2003/09/02 19:05:18 mholzer Exp $
 
 inherit flag-o-matic gnuconfig
 
 DESCRIPTION="The standard GNU Bourne again shell"
-SRC_URI="ftp://ftp.gnu.org/gnu/bash/${P}.tar.gz"
+SRC_URI="mirror://gnu/bash/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
 KEYWORDS="x86 ppc sparc alpha mips"
