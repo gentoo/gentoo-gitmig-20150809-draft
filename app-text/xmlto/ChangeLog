@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.30 2005/03/28 13:22:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.31 2005/04/01 17:03:57 blubb Exp $
+
+  01 Apr 2005; <blubb@gentoo.org> xmlto-0.0.18.ebuild:
+  stable on amd64
 
   28 Mar 2005; Guy Martin <gmsoft@gentoo.org> xmlto-0.0.18.ebuild:
   Stable on hppa.

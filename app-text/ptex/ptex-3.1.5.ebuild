@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.5.ebuild,v 1.7 2005/03/27 12:00:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.5.ebuild,v 1.8 2005/04/01 17:02:30 blubb Exp $
 
 PTEX_TEXMF_PV=2.3
 TETEX_PV=2.0.2
@@ -24,7 +24,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 ppc-macos sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 ppc-macos sparc x86"
 IUSE="X"
 
 DEPEND="X? ( >=media-libs/freetype-2

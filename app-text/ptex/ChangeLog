@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.40 2005/03/31 07:06:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.41 2005/04/01 17:02:30 blubb Exp $
+
+  01 Apr 2005; <blubb@gentoo.org> ptex-3.1.5.ebuild:
+  stable on amd64
 
 *ptex-3.1.8.1_p20050325 (31 Mar 2005)
 
