@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/knock
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.1 2004/04/15 05:12:04 vapier Exp $
+
+*knock-0.1 (15 Apr 2004)
+
+  15 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
