@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.2.0.ebuild,v 1.4 2000/11/04 18:43:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.2.0-r1.ebuild,v 1.1 2000/11/25 16:38:02 achim Exp $
 
 P=gnome-pim-1.2.0
 A=${P}.tar.gz
@@ -15,8 +15,7 @@ RDEPEND=">gnome-base/gnome-libs-1.2.4"
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--with-catgets
+  try ./configure --host=${CHOST} --prefix=/opt/gnome
   try make
 }
 
