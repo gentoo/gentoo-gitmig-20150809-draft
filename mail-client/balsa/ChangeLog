@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.13 2004/11/30 11:57:49 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.14 2004/12/04 17:38:26 slarti Exp $
+
+  04 Dec 2004; Tom Martin <slarti@gentoo.org> balsa-2.0.15-r2.ebuild:
+  Marked ~amd64 for bug 72417.
 
   30 Nov 2004; Mike Gardiner <obz@gentoo.org> balsa-2.0.15-r2.ebuild:
   Marked x86 for bug #72620
@@ -43,7 +46,7 @@
   Depandancy changes as per bug #57193. Cleanout of old version. Version bump
   for new gpgme0.3.14-r1 (permission from foser
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> balsa-2.0.15-r1.ebuild:
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> balsa-2.0.15-r1.ebuild:
   Stable on alpha.
 
 *balsa-2.0.11 (29 May 2004)
