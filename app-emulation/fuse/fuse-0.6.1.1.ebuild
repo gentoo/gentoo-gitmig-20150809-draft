@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.6.1.1.ebuild,v 1.6 2003/12/01 19:59:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.6.1.1.ebuild,v 1.7 2003/12/24 18:15:55 dholm Exp $
 
 DESCRIPTION="Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://www.srcf.ucam.org/~pak21/spectrum/fuse.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/fuse-emulator/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="xml2 png zlib X gtk gtk2 sdl svga fbcon gnome libdsk"
 
 # This build is heavily use dependent. USE="svga" will build the svga
