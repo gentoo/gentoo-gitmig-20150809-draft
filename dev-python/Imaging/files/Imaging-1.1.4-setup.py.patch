@@ -1,0 +1,11 @@
+--- setup.py.old	2003-07-15 22:44:54.000000000 +0100
++++ setup.py	2003-07-15 22:46:29.000000000 +0100
+@@ -229,6 +229,8 @@
+     INCLUDE_DIRS = ["libImaging"]
+     LIBRARY_DIRS = []
+     LIBRARIES = []
++    EXTRA_COMPILE_ARGS = None
++    EXTRA_LINK_ARGS = None
+     have_freetype = 1 # Assume we have it, unless proven otherwise
+ 
+     # use source distribution, if available

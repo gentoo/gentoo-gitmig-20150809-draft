@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.4 2003/07/12 12:49:25 aliz Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.5 2003/07/15 22:22:23 liquidx Exp $ 
 
 inherit distutils
 
@@ -18,23 +18,24 @@ DEPEND="virtual/python
 	>=media-libs/jpeg-6a
 	>=sys-libs/zlib-0.95
 	tcltk? ( dev-lang/tk )"
-	
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p0 setup.py < ${FILESDIR}/${P}-setup.py.patch
+}
+
 src_compile() {
 	export OPT=${CFLAGS}
 
 	#Build the core imaging library (libImaging.a)
 	cd ${S}/libImaging
 	econf
-	cp Makefile Makefile.orig
-
 	#Not configured by configure
-	sed \
-    	-e "s:\(JPEGINCLUDE=[[:blank:]]*/usr/\)local/\(include\).*:\1\2:" \
-	Makefile.orig > Makefile
+	sed -e "s:\(JPEGINCLUDE=[[:blank:]]*/usr/\)local/\(include\).*:\1\2:" \
+		-i Makefile
 	emake || die
 	cd ${S}; distutils_src_compile
-	#cd ${S}
-	#CFLAGS="$(CFLAGS) -DUSE_COMPOSITELESS_PHOTO_PUT_BLOCK" distutils_src_compile
 }
 
 src_install () 
