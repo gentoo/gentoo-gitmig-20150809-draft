@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.15 2005/01/05 20:57:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.16 2005/01/05 22:03:10 luckyduck Exp $
+
+  05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> asm-1.4.3-r1.ebuild,
+  asm-1.5.2.ebuild:
+  slotted asm-1.5.2 as 1.5 and asm-1.4.3 as 1.4 since they are not fully api
+  compatible. Updating references.
 
 *asm-2.0_alpha (05 Jan 2005)
 
