@@ -4,6 +4,9 @@
 
 *howto-html-20020328 (4 Jul 2002)
   
+  21 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated the LICENSE var to cover LDP license
+
   20 Jul 2002; Doug Goldstein <cardoe@gentoo.org> howto-html-20020328.ebuild
   Added missing KEYWORDS, SLOT
  
