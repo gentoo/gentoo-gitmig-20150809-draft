@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libungif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.24 2005/01/14 17:04:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.25 2005/01/31 03:02:01 lv Exp $
+
+  31 Jan 2005; Travis Tilley <lv@gentoo.org> libungif-4.1.3.ebuild:
+  stable on amd64
 
   14 Jan 2005; Mike Frysinger <vapier@gentoo.org> libungif-4.1.3.ebuild:
   Add media-libs/giflib to DEPEND to resolve stupid header file problems #77809.
