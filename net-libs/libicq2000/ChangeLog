@@ -1,7 +1,11 @@
 # ChangeLog for net-libs/libicq2000
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/ChangeLog,v 1.3 2002/04/27 07:13:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/ChangeLog,v 1.4 2002/06/05 19:18:57 spider Exp $
 
+libicq2000-0.3.1 (05 Jun 2002)
+  05 Jun 2002; Spider <spider@gentoo.org> :
+  fixed libsigc++ dependency
+  
 *libicq2000-0.3.1 (27 Apr 2002)
   27 Apr 2002; Spider <spider@gentoo.org> libicq2000-0.3.1.ebuild
   new version, get it while its fresh....   
