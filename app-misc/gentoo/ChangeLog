@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.3 2002/03/21 08:16:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.4 2002/04/17 19:47:14 mkennedy Exp $
+
+*gentoo-0.11.23 (17 Apr 2002)
+
+  17 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  gentoo-0.11.23.ebuild, files/digest-gentoo-0.11.23, files/gentoo.desktop
+
+  Corrected ebuild to actually install some documentation (FAQ, HTML,
+  etc). Incidental version upgrade to latest. Added GNOME .desktop
+  file if GNOME is in use.
 
 *gentoo-0.11.22 (21 Mar 2002)
 
