@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3b7e4edec3520de5aba0afd0328a6fb0 ChangeLog 40544
-MD5 0314903fdd2fb1069541e87a3a3fc0e6 gaim-0.81-r5.ebuild 3356
-MD5 fac2f3cdad87d2ec1d4c1f47163bae44 gaim-0.82.1.ebuild 3360
-MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
 MD5 285b9be8bcc8e4743bc94fb60950dab6 gaim-1.0.0.ebuild 3235
+MD5 0314903fdd2fb1069541e87a3a3fc0e6 gaim-0.81-r5.ebuild 3356
+MD5 6607d8376335af67a2a9bb97ef913ab1 gaim-1.0.2.ebuild 3535
+MD5 fac2f3cdad87d2ec1d4c1f47163bae44 gaim-0.82.1.ebuild 3360
 MD5 d88f2ea99e50f2c85304a04854e59ba2 gaim-1.0.1.ebuild 3165
-MD5 26f0d817f81afb10697e8b04bac20d0e gaim-1.0.2.ebuild 3539
+MD5 e42e284efc37777b0d3eedbb32c84782 ChangeLog 40645
+MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
+MD5 9f2fa9ae8de6d285902cb2b46389c681 files/gaim-0.81-security2.diff 10297
+MD5 ee4d6e1ffb8d36e2296864a1e420dfb1 files/gaim-1.0.1cvs-jabber-roomlist.diff 2304
+MD5 22aae7173f7cbf5d93d1db9907740064 files/syslog_fd_leak.diff 8423
 MD5 ed679fa262748c5626af4d9dcfd4b278 files/digest-gaim-0.81-r5 63
 MD5 c8c73743c47ef3956b6b499fa0d91347 files/digest-gaim-0.82.1 65
 MD5 46cd327a59460bd2d31ccd06cd712700 files/digest-gaim-1.0.0 64
-MD5 ee4d6e1ffb8d36e2296864a1e420dfb1 files/gaim-1.0.1cvs-jabber-roomlist.diff 2304
-MD5 9f2fa9ae8de6d285902cb2b46389c681 files/gaim-0.81-security2.diff 10297
-MD5 8126122fdccc9c046ba5c5a8e151980b files/gaim-0.83cvs-gtkcellrendererprogress.diff 12886
-MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
 MD5 e7b2997aece3c4ab4421c863e8625a7b files/digest-gaim-1.0.1 64
 MD5 f9039f6cb5717109cf48a9f7e5d51a32 files/digest-gaim-1.0.2 64
-MD5 22aae7173f7cbf5d93d1db9907740064 files/syslog_fd_leak.diff 8423
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBd4MCArHZZzCEUG0RAubZAJ0fYZj7qzah5JmVHLfjFi83JM3sKQCdHG3s
-NuTeWEhKRPcpItOjrgUnyus=
-=2GSm
------END PGP SIGNATURE-----
+MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
+MD5 8126122fdccc9c046ba5c5a8e151980b files/gaim-0.83cvs-gtkcellrendererprogress.diff 12886
