@@ -1146,9 +1146,9 @@ diff -ur linux-2.6.7/include/linux/list.h linux-2.6.7-gentoo/include/linux/list.
  }
  
  /*
-diff -ur linux-2.6.7/compiler.h linux-2.6.7-gentoo/compiler.h
---- linux-2.6.7/compiler.h	2004-07-13 19:00:02.464663368 +0100
-+++ linux-2.6.7-gentoo/compiler.h	2004-07-13 18:44:43.000000000 +0100
+diff -ur linux-2.6.7/include/linux/compiler.h linux-2.6.7-gentoo/include/linux/compiler.h
+--- linux-2.6.7/include/linux/compiler.h	2004-07-13 19:00:02.464663368 +0100
++++ linux-2.6.7-gentoo/include/linux/compiler.h	2004-07-13 18:44:43.000000000 +0100
 @@ -27,8 +27,6 @@
  #endif
  #endif
@@ -1178,9 +1178,9 @@ diff -ur linux-2.6.7/compiler.h linux-2.6.7-gentoo/compiler.h
 +#endif
 +
  #endif /* __LINUX_COMPILER_H */
-diff -ur linux-2.6.7/list.h linux-2.6.7-gentoo/list.h
---- linux-2.6.7/list.h	2004-07-13 19:00:02.453665040 +0100
-+++ linux-2.6.7-gentoo/list.h	2004-07-13 18:44:43.000000000 +0100
+diff -ur linux-2.6.7/include/linux/list.h linux-2.6.7-gentoo/include/linux/list.h
+--- linux-2.6.7/include/linux/list.h	2004-07-13 19:00:02.453665040 +0100
++++ linux-2.6.7-gentoo/include/linux/list.h	2004-07-13 18:44:43.000000000 +0100
 @@ -159,8 +159,8 @@
  static inline void list_del(struct list_head *entry)
  {
@@ -1232,9 +1232,9 @@ diff -ur linux-2.6.7/list.h linux-2.6.7-gentoo/list.h
  }
  
  static inline void hlist_del_init(struct hlist_node *n)
-diff -ur linux-2.6.7/prefetch.h linux-2.6.7-gentoo/prefetch.h
---- linux-2.6.7/prefetch.h	2004-07-13 19:00:02.450665496 +0100
-+++ linux-2.6.7-gentoo/prefetch.h	2004-07-13 18:44:43.000000000 +0100
+diff -ur linux-2.6.7/include/linux/prefetch.h linux-2.6.7-gentoo/include/linux/prefetch.h
+--- linux-2.6.7/include/linux/prefetch.h	2004-07-13 19:00:02.450665496 +0100
++++ linux-2.6.7-gentoo/include/linux/prefetch.h	2004-07-13 18:44:43.000000000 +0100
 @@ -59,9 +59,9 @@
  {
  #ifdef ARCH_HAS_PREFETCH
