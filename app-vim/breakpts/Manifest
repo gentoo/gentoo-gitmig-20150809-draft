@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2067c6408e2feb6f3411175439c2ea61 ChangeLog 340
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 4696fd30d946ace9b0394f0ebd6bbaf3 breakpts-3.1.ebuild 552
+MD5 b85f97ca7e788bade4791f9cdfc21c1f files/digest-breakpts-3.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA9u+PLLFUmVNQ7rkRAvE5AJ4rtIKoJiJ3xCfW2POj/7apQiPowwCePVRA
+FElfDZj9ICi3ZxbyUFSIpeA=
+=NyC9
+-----END PGP SIGNATURE-----
