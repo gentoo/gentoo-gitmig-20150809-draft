@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.02.ebuild,v 1.2 2002/12/09 04:33:19 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.02.ebuild,v 1.3 2003/01/04 02:38:19 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TSL/SSL - Port Wrapper"
@@ -17,10 +17,10 @@ src_unpack() {
 	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 }
 
-src_compile() {
-	./configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man || die
-	emake || die
-}
+#src_compile() {
+#	econf || die
+#	emake || die
+#}
 
 src_install() {
 	into /usr
@@ -33,14 +33,18 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	doins tools/ca.pl tools/importCA.sh
 
-	insinto /etc/init.d
-	newins ${FILESDIR}/stunnel.rc6 stunnel
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/stunnel.rc6 stunnel
 
 	dolib src/.libs/libstunnel.la
 	dolib.so src/.libs/libstunnel.so
 
-	insinto /etc
+	insinto /etc/stunnel
 	doins ${FILESDIR}/stunnel.conf	
+
+	dosed "s:/usr/etc/stunnel:/etc/stunnel:" /etc/stunnel/stunnel.conf
+
+	dodir /etc/stunnel
 }
 
 pkg_postinst() {

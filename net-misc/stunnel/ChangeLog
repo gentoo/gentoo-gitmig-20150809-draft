@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.5 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.6 2003/01/04 02:38:19 aliz Exp $
+
+  04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-4.02.ebuild, files/stunnel.rc6 :
+  Misc fixes, closes #12608.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
