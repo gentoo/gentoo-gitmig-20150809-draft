@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 882894abe05f9829c47f8dd48e5f5e4c ChangeLog 450
+MD5 df63bdb54a63f90dfd9a2d2db7ac8db5 ChangeLog 536
 MD5 3f61d9f697e7b7352880a66d156f26ca metadata.xml 222
-MD5 d71f667a0c1b74b0a418a95580740326 spamprobe-0.9h.ebuild 956
+MD5 ef55ee1442b89a06a1465f5686a26245 spamprobe-0.9h.ebuild 961
 MD5 22dc99486764b555295bf2a75914f81b files/digest-spamprobe-0.9h 136
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBRv3410xuJSrg3/sRAvlBAJ4oIDBr5EDQXiopJaNvlbad/Tj+7QCfRG9s
-EtC7o0DCifyw6upVQboeJ5Q=
-=53SY
------END PGP SIGNATURE-----

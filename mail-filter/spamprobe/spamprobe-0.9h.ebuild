@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-0.9h.ebuild,v 1.1 2004/09/14 14:19:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-0.9h.ebuild,v 1.2 2004/10/18 12:12:37 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/spamprobe/${P}.tar.gz
 
 LICENSE="QPL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="berkdb"
 DEPEND="berkdb? ( >=sys-libs/db-3.2 )
