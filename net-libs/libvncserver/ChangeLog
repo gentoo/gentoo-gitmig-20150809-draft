@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.5 2004/06/24 23:15:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.6 2004/08/11 22:42:35 slarti Exp $
+
+  11 Aug 2004; Tom Martin <slarti@gentoo.org> libvncserver-0.6.ebuild:
+  Marked ~amd64.
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> libvncserver-0.6.ebuild:
   Fix use invocation
