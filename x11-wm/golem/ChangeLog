@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/lwm
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/ChangeLog,v 1.1 2003/01/07 15:46:35 mholzer Exp $
+
+*golem-0.0.5.ebuild (07 Jan 2003)
+
+  07 Jan 2003; Martin Holzer <mholzer@gentoo.org> golem-0.0.5.ebuild files/digest-golem-0.0.5 ChangeLog :
+
+  Initial ebuild submitted by matsuu@7501.net in #13414.
+
