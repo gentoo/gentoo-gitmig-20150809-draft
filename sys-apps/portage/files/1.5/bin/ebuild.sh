@@ -75,7 +75,7 @@ dyn_digest() {
 	if [ ! -d ${FILESDIR} ]
 	then
 		install -d ${FILESDIR}
-		if [ -n ${MAINTAINER} ]
+		if [ -n "${MAINTAINER}" ]
 		then
 			echo ">>> adding ${FILESDIR} to CVS (just in case it isn't there)"
 			( echo; cd `/usr/bin/dirname ${FILESDIR}`; cvs add `/usr/bin/basename ${FILESDIR}`; echo)
@@ -239,7 +239,14 @@ dyn_unpack() {
 	if [ -e ${WORKDIR} ]
 	then
 		local x
-		for x in ${DISTDIR}/${A} ${EBUILD}
+		local checkme
+		if [ -n "${MAINTAINER}" ]
+		then
+			checkme="${DISTDIR}/${A}"
+		else
+			checkme="${DISTDIR}/${A} ${EBUILD}"
+		fi
+		for x in $checkme
 		do
 			echo ">>> Checking ${x}'s mtime..."
 			if [ ${x} -nt ${WORKDIR} ]
