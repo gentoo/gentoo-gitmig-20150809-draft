@@ -9,10 +9,11 @@ SRC_URI="http://www.dtek.chalmers.se/~d3august/xt/dl/${P}.tar.gz
 	http://www.dtek.chalmers.se/~d3august/xt/dl/ndg_files.tar.gz"
 HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
 SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="x11-base/xfree
 	=x11-libs/gtk+-1.2*
-	net-misc/traceroute
+	net-analyzer/traceroute
 	<x11-libs/gtkglarea-1.99.0
 	media-libs/gdk-pixbuf
 	net-misc/host"
