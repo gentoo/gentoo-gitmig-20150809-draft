@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0-r1.ebuild,v 1.5 2003/02/13 11:47:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0-r1.ebuild,v 1.6 2003/07/18 20:19:11 vapier Exp $
 
 DESCRIPTION="BitKeeper is a scalable configuration management system."
 SRC_URI=""
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="BKL"
 KEYWORDS="x86 ppc sparc alpha"
 
-DEPEND=">=virtual/glibc-2.2
+DEPEND="virtual/glibc
 	>=dev-lang/tcl-8.3.3
 	X? ( >=dev-lang/tk-8.3.3 )"
 
