@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r1.ebuild,v 1.2 2005/01/01 16:39:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r1.ebuild,v 1.3 2005/01/20 15:35:32 luckyduck Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,9 @@ KEYWORDS="~x86"
 IUSE="jikes"
 DEPEND="dev-java/saxon-bin
 	=dev-java/xerces-1.3.1
-	>=virtual/jdk-1.4"
+	>=virtual/jdk-1.4
+	app-arch/unzip
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
