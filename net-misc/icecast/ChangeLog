@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.18 2004/03/17 04:04:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.19 2004/03/26 21:44:44 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> icecast-2.0.0.ebuild:
+  Stable on x86.
 
   16 Mar 2004; Dylan Carlson <absinthe@gentoo.org> icecast-2.0.0.ebuild:
   Added amd64 to KEYWORDS.
