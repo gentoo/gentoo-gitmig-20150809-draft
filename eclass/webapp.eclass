@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.11 2004/04/29 10:18:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.12 2004/04/29 13:53:24 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -326,7 +326,7 @@ function webapp_pkg_postinst ()
 			einfo "${PN}-${PVR} is not installed - using install mode"
 		fi
 	
-		my_cmd="/usr/sbin/webapp-config $my_mode -u root -d $my_dir ${PN} ${PVR}"
+		my_cmd="/usr/sbin/webapp-config $my_mode -h localhost -u root -d $my_dir ${PN} ${PVR}"
 		einfo "Running $my_cmd"
 		$my_cmd
 	fi
