@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/qmail-scanner
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/ChangeLog,v 1.7 2003/02/12 08:15:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/ChangeLog,v 1.8 2003/02/15 19:36:57 raker Exp $
+
+*qmail-scanner-1.16 (15 Feb 2003)
+
+  15 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-scanner-1.16.ebuild,
+  files/digest-qmail-scanner-1.16 :
+  Version bump.  Adds keepdir stuff to /var directories.
 
 *qmail-scanner-1.15 (21 Jan 2003)
 
