@@ -1,0 +1,5 @@
+MD5 2e47268271b892ea3eb2418db1bcec44 asterisk-app_rtxfax-0.0.2_pre10.ebuild 824
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+MD5 da18d3fd797c98297023ab8c89544c1e ChangeLog 446
+MD5 bcd665be46c03da598c1ab50885c3cee files/app_rtxfax-0.0.2_pre10-astcfg.diff 946
+MD5 5f62cbaf8c10718ddd31aab69f8276bc files/digest-asterisk-app_rtxfax-0.0.2_pre10 73

@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/asterisk-app_rtxfax
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_rtxfax/ChangeLog,v 1.1 2005/03/26 13:21:04 stkn Exp $
+
+*asterisk-app_rtxfax-0.0.2_pre10 (26 Mar 2005)
+
+  26 Mar 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
+  +files/app_rtxfax-0.0.2_pre10-astcfg.diff,
+  +asterisk-app_rtxfax-0.0.2_pre10.ebuild:
+  Initial import.
+
