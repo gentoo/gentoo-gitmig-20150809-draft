@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-tfmx
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-tfmx/ChangeLog,v 1.1 2004/06/28 18:31:29 eradicator Exp $
+
+*xmms-tfmx-0.5 (28 Jun 2004)
+
+  28 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +xmms-tfmx-0.5.ebuild:
+  initial submission by Cla'udio Valente <claudiovalente@yahoo.com> in bug
+  #50918.
+
