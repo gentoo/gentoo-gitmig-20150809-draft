@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.17 2004/07/15 02:41:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.18 2004/07/29 01:40:39 tgall Exp $
 
 DESCRIPTION="A command that displays info about resources used by a program"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/time/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/directory/time.html"
-KEYWORDS="x86 amd64 ppc sparc "
+KEYWORDS="x86 amd64 ppc sparc ppc64"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
