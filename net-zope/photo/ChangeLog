@@ -1,8 +1,11 @@
 # ChangeLog for net-zope/photo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/ChangeLog,v 1.1 2003/04/03 23:54:14 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/ChangeLog,v 1.2 2003/04/06 03:03:50 kutsuya Exp $
 
 *photo-1.2.3 (03 Apr 2003)
+
+  05 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> photo-1.2.3.ebuild:
+  ~x86 -> x86 and added ~ppc
 
   03 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> photo-1.2.3.ebuild:
   Initial import. #15306
