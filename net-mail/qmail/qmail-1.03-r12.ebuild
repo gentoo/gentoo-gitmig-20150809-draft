@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.2 2003/08/12 05:47:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.3 2003/08/12 08:16:26 robbat2 Exp $
 
 inherit eutils
 
@@ -111,7 +111,7 @@ src_unpack() {
 	# provide badrcptto support
 	# as per bug #17283
 	# patch re-diffed from original at http://www.iecc.com/bad-rcpt-noisy-patch.txt
-	epatch ${FILESDIR}/${PV}-${PR}/bad-rcpt-noisy-patch
+	#epatch ${FILESDIR}/${PV}-${PR}/bad-rcpt-noisy-patch
 
 	cd ${S}
 
