@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.20 2003/03/29 00:24:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.21 2003/04/15 11:38:09 liquidx Exp $
 
 *xscreensaver-4.09 (17 Mar 2003)
 
@@ -57,6 +57,10 @@
   files/digest-xscreensaver-4.06: Version bump.
 
 *xscreensaver-4.05-r3 (21 Jul 2002)
+
+  15 Apr 2003; Alastair Tse <liquidx@gentoo.org> xscreensaver-4.05-r3.ebuild:
+  fix for xscreensaver for motif only installs. thanks to Jason Howlett
+  <howlett@byu.edu> in #18068.
 
   26 Mar 2003; Alastair Tse <liquidx@gentoo.org> xscreensaver-4.05-r3.ebuild:
   should depend on virtual/motif rather than openmotif

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.11 2003/03/29 00:24:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.12 2003/04/15 11:38:09 liquidx Exp $
 
 IUSE="pam gtk motif gnome opengl"
 
@@ -64,6 +64,8 @@ src_compile() {
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
 		--host="${CHOST}" \
+		--x-libraries=/usr/X11R6/lib \
+		--x-includes=/usr/X11R6/includes \
 		--enable-hackdir=/usr/lib/xscreensaver \
 		--with-mit-ext \
 		--with-dpms-ext \
