@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ld.so/ld.so-1.9.11-r3.ebuild,v 1.1 2002/11/07 19:53:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ld.so/ld.so-1.9.11-r3.ebuild,v 1.2 2002/12/09 04:37:27 manson Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Linux dynamic loader & linker"
@@ -11,7 +11,7 @@ RDEPEND="sys-libs/lib-compat"
 
 LICENSE="LD.SO"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 
 src_unpack() {
 

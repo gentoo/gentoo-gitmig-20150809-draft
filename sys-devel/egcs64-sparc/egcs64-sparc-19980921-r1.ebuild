@@ -1,23 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.10 2002/11/30 21:49:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.11 2002/12/09 04:37:27 manson Exp $
 
 EGCSDATE=`echo $P| sed -e 's/egcs64-sparc-\([0-9]*\).*/\1/'`
 EGCSVER=2.92.11
 S=${WORKDIR}/egcs64-${EGCSDATE}
-DESCRIPTION="sparc64 crosscompiler for building sparc64 kernels on sparc32"
+DESCRIPTION=" crosscompiler for building  kernels on sparc32"
 SRC_URI="http://ftp.us.debian.org/debian/dists/stable/main/source/devel/egcs64_${EGCSDATE}.orig.tar.gz"
 HOMEPAGE="http://www.rocklinux.de/projects/sparc/sparc.html"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="sparc sparc64 -x86 -ppc"
+KEYWORDS="sparc -x86 -ppc"
 
 #RDEPEND="virtual/glibc"
-#MYCHOST=`echo $CHOST | sed 's/sparc-/sparc64-/'`
+#MYCHOST=`echo $CHOST | sed 's/sparc-/-/'`
 DEPEND="sys-devel/autoconf"
 
 MYPREFIX=/usr
-MYCHOST=sparc64-unknown-linux-gnu
+MYCHOST=-unknown-linux-gnu
 
 # Reset CFLAGS, gcc doesn't want that stuff
 CFLAGS=""
@@ -83,10 +83,10 @@ src_install() {
 	cd ${D}/${MYPREFIX}
 	rm -rf info man
 	cd ${D}/${MYPREFIX}/bin
-	mv sparc64-unknown-linux-gnu-gcc egcs-${EGCSVER}
-	ln -s egcs-${EGCSVER} sparc64-unknown-linux-gnu-gcc
-	ln -s egcs-${EGCSVER} sparc64-unknown-linux-gcc
-	ln -s egcs-${EGCSVER} sparc64-linux-gcc
+	mv -unknown-linux-gnu-gcc egcs-${EGCSVER}
+	ln -s egcs-${EGCSVER} -unknown-linux-gnu-gcc
+	ln -s egcs-${EGCSVER} -unknown-linux-gcc
+	ln -s egcs-${EGCSVER} -linux-gcc
 	ln -s egcs-${EGCSVER} gcc64
 	ln -s egcs-${EGCSVER} egcs64
 	ln -s egcs-${EGCSVER} cc64

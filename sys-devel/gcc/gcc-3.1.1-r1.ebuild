@@ -30,7 +30,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="${MY_PV}"
-KEYWORDS="x86 sparc sparc64 -ppc"
+KEYWORDS="x86 sparc  -ppc"
 
 DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2

@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.10 2002/10/20 10:46:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.11 2002/12/09 04:37:27 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *libtool-1.4.2-r2 (20 Oct 2002)
 
   20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :

@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/sparc32
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.2 2002/09/27 00:38:09 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.3 2002/12/09 04:37:27 manson Exp $
 
 *sparc32-1.1 (20 Aug 2002)
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 
   27 Sep 2002; Maarten Thibaut <murphy@gentoo.org> sparc32-1.1.ebuild: Adding
   SLOT statement as reminded by George Shapovalov <georges@its.caltech.edu>.

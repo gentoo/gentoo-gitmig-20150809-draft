@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.13-r2.ebuild,v 1.10 2002/10/04 06:32:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.13-r2.ebuild,v 1.11 2002/12/09 04:37:27 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Used to create autoconfiguration files"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/autoconf/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 DEPEND=">=sys-devel/m4-1.4o-r2"
 
 SLOT="2"

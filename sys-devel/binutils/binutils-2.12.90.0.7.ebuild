@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.7.ebuild,v 1.13 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.7.ebuild,v 1.14 2002/12/09 04:37:27 manson Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2|LGPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
 DEPEND="virtual/glibc

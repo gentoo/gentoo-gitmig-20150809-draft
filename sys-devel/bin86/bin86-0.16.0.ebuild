@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.0.ebuild,v 1.1 2002/11/16 17:24:01 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.0.ebuild,v 1.2 2002/12/09 04:37:27 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Assembler and loader used to create kernel bootsector"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cix.co.uk/~mayday/"
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc "
 
 src_compile() {
 

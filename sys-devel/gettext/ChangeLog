@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.9 2002/11/24 23:40:49 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.10 2002/12/09 04:37:27 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *gettext-0.11.5-r1 (24 Nov 2002)
 
   24 Nov 2002; L. Boshell <leonardop@gentoo.org> : Don't delete the entire

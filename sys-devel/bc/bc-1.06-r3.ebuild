@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r3.ebuild,v 1.12 2002/10/23 18:22:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r3.ebuild,v 1.13 2002/12/09 04:37:27 manson Exp $
 
 IUSE="readline"
       
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/bc/bc.html"
 
 LICENSE="GPL-2 & LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 
 	>=sys-libs/ncurses-5.2 )"

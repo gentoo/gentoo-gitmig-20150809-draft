@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.13 2002/12/03 10:26:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.14 2002/12/09 04:37:27 manson Exp $
 
 IUSE="nls static build"
 
@@ -15,7 +15,7 @@ DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texi
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc"

@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002 Gentoo Technologies, Inc. Distributed under the GPL, v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.9 2002/10/20 06:42:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.10 2002/12/09 04:37:27 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *gdb-5.2.1 (20 Aug 2002)
 
   19 Oct 2002; Seemant Kulleen <seemant@gentoo.org> :

@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/spython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.3 2002/10/23 19:40:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.4 2002/12/09 04:37:28 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *spython-2.0-r9 (14 Mar 2002)
 
   23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :

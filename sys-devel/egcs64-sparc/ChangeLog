@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/egcs64-sparc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/ChangeLog,v 1.1 2002/07/09 15:11:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/ChangeLog,v 1.2 2002/12/09 04:37:27 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *egcs64-sparc-19980921-r1 (09 Jul 2002)
 
   09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
