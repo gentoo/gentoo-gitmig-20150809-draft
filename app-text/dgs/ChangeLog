@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dgs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.9 2003/02/21 17:03:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.10 2003/08/03 05:30:23 tester Exp $
+
+  03 Aug 2003; Olivier Crete <tester@gentoo.org> dgs-0.5.10-r1.ebuild:
+  Add gnuconfig_update for amd64, mark stable on amd64
 
   13 Jan 2003; Aron Griffis <agriffis@gentoo.org> dgs-0.5.10-r1.ebuild:
   Add alpha to KEYWORDS

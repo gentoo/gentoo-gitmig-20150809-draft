@@ -1,4 +1,4 @@
-MD5 320d5da39b4026c3f205bf2eae12da92 ChangeLog 1365
-MD5 8b34a665fbb1509ee9eb663a85a417ff dgs-0.5.10-r1.ebuild 970
-MD5 c80e720c69104e2ac5daec31d4b9affc files/dgs-0.5.10-gs-time_.h-gentoo.diff 415
+MD5 b715a3855dd4f6f8fcd4f9f985c9ce49 dgs-0.5.10-r1.ebuild 1024
+MD5 4c53c8b9d09ca39c5873a2b69257a50d ChangeLog 1491
 MD5 451b8d732d17eb1e16e6fd6b116411d9 files/digest-dgs-0.5.10-r1 63
+MD5 c80e720c69104e2ac5daec31d4b9affc files/dgs-0.5.10-gs-time_.h-gentoo.diff 415
