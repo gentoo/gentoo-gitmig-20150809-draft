@@ -1,8 +1,13 @@
 # ChangeLog for dev-perl/IPC-ShareLite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.1 2002/11/17 03:22:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.2 2002/11/20 04:33:10 mkennedy Exp $
 
 *IPC-ShareLite-0.08 (13 Nov 2002)
+
+  18 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  IPC-ShareLite-0.08.ebuild, ChangeLog :
+
+  Force non-interactive compilation. Resolves bug #10977
 
   13 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>
   IPC-ShareLite-0.08.ebuild, ChangeLog,
