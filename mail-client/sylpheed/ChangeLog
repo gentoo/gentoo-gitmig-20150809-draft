@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.86 2005/03/19 09:40:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.87 2005/03/21 14:18:56 hattya Exp $
+
+  21 Mar 2005; Akinori Hattori <hattya@gentoo.org> sylpheed-1.0.3.ebuild:
+  stable on ia64. fixes bug #84056.
 
   19 Mar 2005; Akinori Hattori <hattya@gentoo.org> sylpheed-1.0.3.ebuild:
   stable on x86. fixes bug #84056.
