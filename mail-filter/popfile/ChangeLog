@@ -1,0 +1,34 @@
+# ChangeLog for net-mail/popfile
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.1 2004/06/03 07:22:04 seemant Exp $
+
+*popfile-0.20.1 (03 Jun 2004)
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +popfile-0.20.1.ebuild, +popfile-0.21.1.ebuild:
+  Moved from net-mail/popfile to mail-filter/popfile.
+
+*popfile-0.20.1 (17 Apr 2004)
+
+  17 Apr 2004; Stuart Herbert <stuart@gentoo.org> popfile-0.20.1.ebuild,
+  popfile-0.21.1.ebuild:
+  Added popfile-0.20.1.ebuild, to provide the correct fix for bug #45883.
+  
+  Added missing dependency DBD:SQLite to popfile-0.21.1.ebuild, and marked it as
+  unstable for testing. Fixes bug #48031.
+
+  27 Mar 2004; Seemant Kulleen <seemant@gentoo.org> popfile-0.21.1.ebuild:
+  fetch the CORRECT sources, for crying out loud. Use the portage variables for
+  this stuff NOT the hardcoded version info! Thanks to: Dale K Dicks
+  <dale_d@telusplanet.net> in bug #45883
+
+  17 Mar 2004; Stuart Herbert <stuart@gentoo.org> popfile-0.21.1.ebuild:
+  Added missing HTML-Tagset dependency, and tightended up security permissions.
+  Fixes for bugs #44394 and #44397
+
+*popfile-0.21.1 (25 Dec 2003)
+
+  25 Dec 2003; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  popfile-0.21.1.ebuild:
+  Initial import
+
