@@ -1,15 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r2.ebuild,v 1.4 2004/01/04 18:35:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r6.ebuild,v 1.1 2004/01/11 18:32:54 usata Exp $
 
-IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk"
+IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk unicode nls async"
+#IUSE="canna"
 
 W3M_CVS_PV="1.890"
-W3M_CVS_P="${P}+cvs-${W3M_CVS_PV}"
+W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
 
 DESCRIPTION="Text based WWW browser, supports tables and frames"
+PATCH_PATH="http://www.page.sannet.ne.jp/knabe/w3m/"
 SRC_URI="mirror://gentoo/${W3M_CVS_P}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}.tar.gz"
+	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}-1.896.diff.gz
+	async? ( ${PATCH_PATH}/${W3M_CVS_P}-async-5.diff.gz )
+	${PATCH_PATH}/${W3M_CVS_P}-nls-4.diff"
+# w3m color patch:
+#	http://homepage3.nifty.com/slokar/w3m/${P}-cvs-1.895_256-001.patch.gz
+# w3n canna inline patch:
+#	canna? ( http://www.j10n.org/files/${W3M_CVS_P}-canna.patch )
+
 HOMEPAGE="http://w3m.sourceforge.net/"
 
 SLOT="0"
@@ -19,6 +29,7 @@ KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.57"
+# canna? ( app-i18n/canna )
 RDEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
 	>=dev-libs/boehm-gc-6.2
@@ -36,7 +47,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r3
 PROVIDE="virtual/textbrowser
 	virtual/w3m"
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 
@@ -53,7 +64,15 @@ src_unpack() {
 
 	unpack ${W3M_CVS_P}.tar.gz
 	cd ${S}
+	epatch ${DISTDIR}/${W3M_CVS_P}-1.896.diff.gz
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
+	epatch ${FILESDIR}/${PN}-m17n-search-gentoo.diff
+	epatch ${FILESDIR}/${PN}-libwc-gentoo.diff
+	epatch ${DISTDIR}/${W3M_CVS_P}-nls-4.diff
+	#epatch ${DISTDIR}/${W3M_CVS_P}-ja.po.diff
+	use async && epatch ${DISTDIR}/${W3M_CVS_P}-async-5.diff.gz
+	#epatch ${DISTDIR}/${P}-cvs-1.895_256-001.patch.gz
+	#use canna && epatch ${DISTDIR}/${W3M_CVS_P}-canna.patch
 }
 
 src_compile() {
@@ -93,12 +112,24 @@ src_compile() {
 
 	if [ -n "`use cjk`" ] ; then
 		myconf="${myconf}
+			--enable-m17n
 			--enable-japanese=E
 			--with-charset=EUC-JP"
+	else
+		myconf="${myconf}
+			--disable-m17n
+			--with-charset=US-ASCII"
 	fi
 
-	# You can't disable cjk and nls at the moment(w3mhelper hangs)
-	# `use_enable nls` `use_enable cjk`
+	if [ -n "`use unicode`" ] ; then
+		myconf="${myconf}
+			--enable-m17n
+			--enable-unicode"
+	else
+		myconf="${myconf}
+			--disable-unicode"
+	fi
+
 	econf --enable-keymap=w3m \
 		--with-editor=/usr/bin/nano \
 		--with-mailer=/bin/mail \
@@ -106,11 +137,12 @@ src_compile() {
 		--with-termlib=ncurses \
 		--with-imagelib="${imagelib}" \
 		--with-migemo="${migemo_command}" \
-		--enable-m17n \
 		`use_enable gpm mouse` \
 		`use_enable ssl digest-auth` \
 		`use_with ssl` \
+		`use_enable nls` \
 		${myconf} "$@" || die
+		# `use_with canna`
 
 	# emake borked
 	make all || make all || die "make failed"
