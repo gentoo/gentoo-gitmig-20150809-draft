@@ -87,7 +87,7 @@
 <!--Netscape 4.7 hack table start-->
 <!--<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">-->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
-<tr><td class="content" valign="top" align="left">
+<tr><td width="99%" class="content" valign="top" align="left">
 			<br/>
 			<p class="dochead">
 			<xsl:choose>
