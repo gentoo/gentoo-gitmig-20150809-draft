@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.182 2005/01/03 03:26:58 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.183 2005/01/03 19:46:47 chriswhite Exp $
+
+  04 Jan 2005; Chris White <chriswhite@gentoo.org>
+  +files/xine-lib-configure.ac.patch, xine-lib-1.0.ebuild:
+  Fixing xv for various bugs.
 
   03 Jan 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
   Quick fix. Removed libcaca USE flag but forgot to remove the conditional dep

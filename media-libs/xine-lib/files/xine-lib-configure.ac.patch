@@ -1,0 +1,27 @@
+--- xine-lib-1.0/configure.ac	2004-12-26 02:40:24.000000000 +0900
++++ xine-lib/configure.ac	2004-12-30 18:55:16.000000000 +0900
+@@ -495,9 +495,6 @@
+ dnl With recent XFree86 or Xorg, dynamic linking is preferred!
+ dnl Only dynamic linking is possible when using libtool < 1.4.0
+ 
+-dnl ----------------------------------------------
+-dnl SECTION: Check for Xv and XvMC support (iconv is also tested here?)
+-dnl ----------------------------------------------
+ AC_ARG_WITH(xv-path, AC_HELP_STRING([--with-xv-path=path], [where libXv is installed]),
+             xv_path="$withval",)
+ 
+@@ -507,13 +504,9 @@
+         xv_prefer_shared="yes")
+ 
+ if test x"$no_x" != "xyes"; then
+-
+-  dnl -----------------------------------------------
+-  dnl   Finding install Xv library
+-  dnl -----------------------------------------------
+   AC_FIND_LIBXV
+-
+ fi
++AM_CONDITIONAL(HAVE_XV, test x$ac_have_xv = "xyes")
+ 
+ 
+ host_or_hostalias="$host"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.12 2005/01/03 03:26:58 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.13 2005/01/03 19:46:47 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -65,6 +65,10 @@ src_unpack() {
 
 	# fixes bad X11 directories
 	epatch ${FILESDIR}/${PN}-x11.patch
+
+	# fixes bad configure stuff
+	# for xv handling
+	epatch ${FILESDIR}/${PN}-configure.ac.patch
 
 	# Bad version included... may drop .so
 	#libtoolize --copy --force
