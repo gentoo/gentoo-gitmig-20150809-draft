@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-redorchestra
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-redorchestra/ChangeLog,v 1.1 2004/11/25 00:20:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-redorchestra/ChangeLog,v 1.2 2004/11/29 15:35:17 wolf31o2 Exp $
+
+  29 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-redorchestra-3.1.ebuild:
+  Added IUSE.
 
 *ut2004-redorchestra-3.1 (24 Nov 2004)
 
