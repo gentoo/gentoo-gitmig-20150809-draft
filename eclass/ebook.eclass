@@ -80,3 +80,7 @@ ebook_src_install() {
 }
 
 EXPORT_FUNCTIONS src_unpack src_install
+
+SLOT="0"
+LICENSE="OPL"
+KEYWORDS="x86"
