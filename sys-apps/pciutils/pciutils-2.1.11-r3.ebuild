@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r3.ebuild,v 1.1 2004/10/09 08:36:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r3.ebuild,v 1.2 2004/10/14 21:07:40 plasmaroo Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-sysfs.patch #38645
 	epatch ${FILESDIR}/pciutils-2.1.11-fix-pci-ids-location-refs.patch  # bug #62786
 
-
 	# Unconditionally use -fPIC for libs (#55238)
 	sed -i \
 		-e "/^include/s/$/\nCFLAGS+=-fPIC/" lib/Makefile \
@@ -43,14 +42,14 @@ src_unpack() {
 }
 
 src_compile() {
-	emake PREFIX=/usr lib || die "emake lib failed"
-
 	cd ${S}/lib
+	./configure
 	sed -i \
 		-e "s:/usr/share/pci.ids:/usr/share/misc/pci.ids:" config.h \
 		|| die "sed config.h failed"
 
 	cd ${S}
+	emake PREFIX=/usr lib || die "emake lib failed"
 	emake PREFIX=/usr || die "emake failed"
 
 	sed -i \
