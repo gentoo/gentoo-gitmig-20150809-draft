@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.104 2004/09/16 12:55:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.105 2004/09/28 21:38:24 swtaylor Exp $
+
+  28 Sep 2004; Scott W Taylor <swtaylor@gentoo.org>
+  +files/nautilus-2.6.3-libexif-0.6.patch, nautilus-2.6.3-r1.ebuild:
+  handle libexif 0.6 as per bug 13463
 
 *nautilus-2.8.0 (16 Sep 2004)
 

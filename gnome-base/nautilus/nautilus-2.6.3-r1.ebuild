@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.3-r1.ebuild,v 1.3 2004/08/22 17:54:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.3-r1.ebuild,v 1.4 2004/09/28 21:38:24 swtaylor Exp $
 
 inherit gnome2 eutils
 
@@ -83,7 +83,7 @@ src_unpack() {
 	# applying patch to optionally remove volumes from the desktop,
 	# see bug #51343 <obz@gentoo.org>
 	epatch ${FILESDIR}/${P}-novolumes.patch
-
+	has_version '>=media-libs/libexif-0.6' && epatch ${FILESDIR}/${P}-libexif-0.6.patch
 }
 
 pkg_postinst() {
