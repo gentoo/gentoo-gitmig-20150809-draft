@@ -13,6 +13,7 @@ sys-libs/readline
 sys-libs/zlib
 
 sys-apps/at
+#Hmmm... having baselayout in here may not be a good idea
 sys-apps/baselayout
 sys-apps/bash
 sys-apps/bzip2
