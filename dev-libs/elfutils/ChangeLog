@@ -1,12 +1,15 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.17 2003/09/01 20:35:32 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.18 2003/09/03 20:06:30 cretin Exp $
 
   23 Aug 2003; Luca Barbato <lu_zero@gentoo.org> :
   Setting ppc for elfutils-0.76-r2, fixes bug 27017.
 
 *elfutils-0.84 (23 Aug 2003)
 
+  03 Sep 2003; Stefan Jones <cretin@gentoo.org> :
+  Move to stable and require binutils-2.14.90.0.6
+  
   01 Sep 2003; Stefan Jones <cretin@gentoo.org> :
   Add patch for alpha for st_atime, bug #27372
 
