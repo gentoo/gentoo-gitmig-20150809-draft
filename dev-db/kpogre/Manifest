@@ -1,5 +1,5 @@
-MD5 73043ca19e2bdd62ae6c3e575183b814 kpogre-0.97.ebuild 581
+MD5 75f9a8eab8db8369488d95c6fb711bb2 ChangeLog 603
+MD5 686bdbc2ee1d1b4bb04c1f4bf3df41ae kpogre-0.97.ebuild 583
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 e98a86b80ada64f022fd6f6f76cab027 ChangeLog 523
 MD5 5244be185b552d41f9f45087be8b533d files/digest-kpogre-0.97 63
 MD5 5f093364f827679bfb6847a7eee0592d files/kpogre-0.97-gentoo.patch 1061
