@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bf85ae154ebe299d91a641056321f058 sun-java3d-bin-1.3.2.ebuild 1119
+MD5 39bcfb3fed5f7d6a8c129af9cd815ff0 sun-java3d-bin-1.3.2.ebuild 1196
 MD5 215f2cf1c6a728aa251b9903ab7e03df ChangeLog 1119
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 da71a7a2f87af48b34229d9e8b186899 files/digest-sun-java3d-bin-1.3.2 74
+MD5 45d16bf92ef711b4f274af8aa6ec1420 files/digest-sun-java3d-bin-1.3.2 147
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCUWw706ebR+OMO78RAhoNAJ0R7YMwqgunqgme45xCnang7FAiHQCeK7Xo
-tm9bcSXxmhM2116CCbu0VTM=
-=Je2b
+iD8DBQFCUW+D06ebR+OMO78RAl4LAJ4k3wLT+3r3xDCgbDqdLEdR/G/SvACfeBSP
+aEUF3jCthRaLGa1+75WUa7s=
+=8q9i
 -----END PGP SIGNATURE-----

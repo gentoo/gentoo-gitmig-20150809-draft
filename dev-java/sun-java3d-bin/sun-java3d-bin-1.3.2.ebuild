@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.3.2.ebuild,v 1.1 2005/04/04 16:32:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.3.2.ebuild,v 1.2 2005/04/04 16:46:39 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Sun Java3D API Core"
 HOMEPAGE="https://j3d-core.dev.java.net/"
-SRC_URI="java3d-${PV//./_}-linux-${ARCH/x86/i586}.zip"
+SRC_URI="amd64? ( java3d-${PV//./_}-linux-amd64.zip )
+	x86? ( java3d-${PV//./_}-linux-i586.zip )"
 KEYWORDS="~amd64 ~x86 -*"
 SLOT="0"
 LICENSE="sun-jrl sun-jdl"
@@ -18,7 +19,7 @@ RESTRICT="fetch"
 S=${WORKDIR}/${A/.zip/}
 
 pkg_nofetch() {
-	einfo "Please download ${SRC_URI} from"
+	einfo "Please download java3d-${PV//./_}-linux-${ARCH/x86/i586}.zip from"
 	einfo "${HOMEPAGE} and place it in ${DISTDIR}"
 }
 
