@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ccsh-0.0.4-r1.ebuild,v 1.2 2000/08/16 04:37:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ccsh-0.0.4-r1.ebuild,v 1.3 2000/09/15 20:08:46 drobbins Exp $
 
 P=ccsh-0.0.4      
 A=${P}.tar.gz
@@ -13,7 +13,7 @@ HOMEPAGE="http://ccsh.sourceforge.net"
 src_compile() {                           
 	cd ${S}
 	
-	make CFLAGS="${CFLAGS}" all
+	try make CFLAGS="${CFLAGS}" all
 }
 
 src_install() {                               
