@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.60 2004/10/14 10:14:41 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.61 2004/10/14 10:58:17 gmsoft Exp $
+
+  14 Oct 2004; Guy Martin <gmsoft@gentoo.org> phpmyadmin-2.6.0_p2.ebuild:
+  Stable on hppa.
 
   14 Oct 2004; Tom Payne <twp@gentoo.org> phpmyadmin-2.6.0_p2.ebuild:
   Stable on x86.
