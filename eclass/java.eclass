@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.19 2004/09/22 11:04:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.20 2004/09/29 20:58:45 axxo Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -12,50 +12,43 @@ DESCRIPTION="Based on the $ECLASS eclass"
 
 VMHANDLE=${PN}-${PV}
 
-function sed2() {
-	unset filename
-	unset arglist
-	local filename=""
-	local arglist
-	declare -a arglist
-	while test $# -gt 0 ; do
-		case $1 in
-			-e)
-				shift
-				arglist[${#arglist[@]}]="-e"
-				arglist[${#arglist[@]}]="$1"
-			;;
-			*)
-				if [ -e "$1" ] ; then
-					filename=$1
-				fi
-			;;
-		esac
-		shift
-	done
+EXPORT_FUNCTIONS pkg_postinst pkg_prerm
 
-	if [ ! -z $filename ] ; then
-		mv "${filename}" "${filename}.orig"
-		sed "${arglist[@]}" < ${filename}.orig > ${filename}
-		return 0
+java_pkg_postinst() {
+	local jdk=${PN#*-}
+	if [ ${jdk:0:3} == "jdk" ]; then
+		java_set_default_vm_
 	else
-		return 1
+		# Only install the JRE as the system default if there's no JDK
+		# installed. Installing a JRE over an existing JDK will result
+		# in major breakage, see #9289.
+		if [ ! -f "${JAVAC}" ]; then
+			 ewarn "Found no JDK, setting ${VMHANDLE} as default system VM"
+			java_set_default_vm_
+	fi
+	fi
+	java_mozilla_clean_
+}
+
+java_pkg_prerm() {
+	if java-config -J | grep -q ${P} ; then
+		ewarn "It appears you are removing your default system VM!"
+		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
 	fi
 }
 
-java_pkg_postinst() {
-#	if [ -z `java-config --java 2> /dev/null` ] ; then
-#		einfo "No default VM found, setting ${VMHANDLE} as default"
-		einfo "Setting ${VMHANDLE} as default"
-		einfo "Use java-config to reassign your VM."
+java_set_default_vm_() {
 		java-config --set-system-vm=${VMHANDLE}
 		/usr/sbin/env-update
 		source /etc/profile
-#	fi
-}
 
-pkg_postinst() {
-	java_pkg_postinst
+	echo
+	einfo " After installing ${P} this"
+	einfo " was set as the default JVM to run."
+	einfo " When finished please run the following so your"
+	einfo " enviroment gets updated."
+	eerror "	/usr/sbin/env-update && source /etc/profile"
+	einfo " Or use java-config program to set your preferred VM"
 }
 
 system_arch() {
@@ -82,12 +75,31 @@ set_java_env() {
 		> ${D}/etc/env.d/java/20`basename $1` || die
 }
 
-install_mozilla_plugin() {
-	local bn
-	bn=`basename $1`
 
-	if use mozilla ; then
-		dodir /usr/$(get_libdir)/mozilla/plugins
-		dosym $1 /usr/$(get_libdir)/mozilla/plugins/${bn}
-	fi
+java_get_plugin_dir_() {
+	echo /usr/$(get_libdir)/nsbrowser/plugins
 }
+
+install_mozilla_plugin() {
+	if [ ! -f ${D}/$1 ] ; then
+		die "Cannot find mozilla plugin at ${D}/${1}"
+	fi
+
+	local plugin_dir=$(java_get_plugin_dir_)
+	dodir ${plugin_dir}
+	dosym ${1} ${plugin_dir}/javaplugin.so
+}
+
+java_mozilla_clean_() {
+	#Because previously some ebuilds installed symlinks outside of pkg_install
+	#and are left behind, which forces you to manualy remove them to select the
+	#jdk/jre you want to use for java
+	local plugin_dir=$(java_get_plugin_dir_)
+	for file in ${plugin_dir}/javaplugin_*; do
+		rm -f ${file}
+	done
+	for file in ${plugin_dir}/libjavaplugin*; do
+		rm -f ${file}
+	done
+}
+
