@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rlwrap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.4 2004/06/28 02:04:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.5 2004/11/08 22:54:11 mkennedy Exp $
+
+*rlwrap-0.18 (08 Nov 2004)
+
+  08 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> +rlwrap-0.18.ebuild:
+  New upstream version; Resolves Bug #68629
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> rlwrap-0.16.ebuild:
   Added ~sparc, ~mips

@@ -1,13 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da133977f4cd279f4f0743e4289a9855 ChangeLog 402
 MD5 379e67f5ebc0abafb0d52f2853aef109 rlwrap-0.16.ebuild 633
+MD5 da133977f4cd279f4f0743e4289a9855 ChangeLog 402
+MD5 379e67f5ebc0abafb0d52f2853aef109 rlwrap-0.18.ebuild 633
 MD5 04395c7e842bf7ff90bd2710e02b430f files/digest-rlwrap-0.16 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35p6HTu7gpaalycRAtBeAJ4mtEp3IP4gN9+mIPYwS/iU72JQ0QCff53D
-LMOQVkvJF/T364qPWWquqwU=
-=xDwR
------END PGP SIGNATURE-----
+MD5 8158105bb56a333b1a2b928d6dc13a45 files/digest-rlwrap-0.18 63
