@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.10.2.ebuild,v 1.2 2004/04/24 05:04:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.10.2.ebuild,v 1.3 2004/06/09 01:40:41 khai Exp $
 
 IUSE="ssl zlib"
 
@@ -12,7 +12,7 @@ integrated environment of the creation and maintenance of websites and
 pages"
 SRC_URI="mirror://sourceforge/screem/${P}.tar.gz"
 HOMEPAGE="http://www.screem.org"
-KEYWORDS="~x86 sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -30,6 +30,7 @@ RDEPEND=">=gnome-base/libgnome-2.2.0
 	>=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeprintui-2.2.0
 	>=x11-libs/gtksourceview-0.3.0
+	>=dev-libs/libcroco-0.5
 	app-text/scrollkeeper
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )"
