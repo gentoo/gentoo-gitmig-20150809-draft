@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.1 2002/02/24 02:50:55 tod Exp $
+
+*worker-2.3.1 (23 Feb 2002)
+
+  23 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, worker-2.3.1.ebuild, digest-worker-2.3.1 :
+ 
+  Initial commit. Worker is a filemanager: Amiga Directory Opus clone. Thanks to Per Wigren for the contribution.
