@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.12 2004/02/26 09:41:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.13 2004/03/26 21:07:55 eradicator Exp $
 
 inherit kde-base eutils
 
@@ -11,6 +11,8 @@ HOMEPAGE="http://www.xmms.org/plugins_output.html"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 -ppc"
+
+IUSE=""
 
 newdepend ">=media-sound/xmms-1.2.5-r1
 	kde-base/arts"
