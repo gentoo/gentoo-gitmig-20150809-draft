@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.174 2004/12/29 01:02:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.175 2004/12/29 20:06:45 chriswhite Exp $
+
+  30 Dec 2004; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
+  Added some stuff that will hopefully get this mmx/pic/hardened thing working.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
