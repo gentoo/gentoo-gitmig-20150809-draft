@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/crimson/ChangeLog,v 1.1 2004/01/10 21:48:58 karltk Exp $
+
+*crimson-1.1.3 (10 Jan 2004)
+
+  10 Jan 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  crimson-1.1.3.ebuild:
+  Initial import.  Ebuild submitted by myself.
