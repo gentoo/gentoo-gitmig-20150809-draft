@@ -12,9 +12,9 @@ HOMEPAGE="http://cpan.org/modules/by-module/Authen/"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
+IUSE=""
 
 DEPEND="${DEPEND}"
 RDEPEND=">=dev-perl/MIME-Base64-3.00"
 
 export OPTIMIZE="$CFLAGS"
-
