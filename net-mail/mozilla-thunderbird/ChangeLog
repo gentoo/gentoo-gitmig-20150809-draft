@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.2 2003/07/26 16:53:20 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.3 2003/07/29 05:17:25 brad Exp $
+
+*mozilla-thunderbird-0.1_alpha20030727 (29 Jul 2003)
+
+  29 Jul 2003; Brad Laue <brad@gentoo.org>
+  mozilla-thunderbird-0.1_alpha20030727.ebuild:
+  Version bump. This is the same trunk date as the 0.1 release, so it should be
+  identical to that. Waiting on thunderbird developers to roll their own
+  tarball.
 
 *mozilla-thunderbird-0.1_alpha20030723 (26 Jul 2003)
 
