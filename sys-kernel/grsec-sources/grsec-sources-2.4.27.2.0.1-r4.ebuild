@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.27.2.0.1-r2.ebuild,v 1.2 2004/11/10 21:16:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.27.2.0.1-r4.ebuild,v 1.1 2004/11/17 17:51:37 solar Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -14,7 +14,7 @@
 ETYPE="sources"
 IUSE=""
 
-inherit eutils kernel
+inherit kernel
 
 [ "$OKV" == "" ] && OKV="2.4.27"
 
@@ -25,13 +25,17 @@ KV="${OKV}${EXTRAVERSION}"
 
 PATCH_SRC_BASE="grsecurity-${PATCH_BASE}-${OKV}.patch"
 DESCRIPTION="Vanilla sources of the linux kernel with the grsecurity ${PATCH_BASE} patch"
-CAN_PATCHES="mirror://linux-2.4.27-nfs3-xdr.patch.bz2"
+CAN_PATCHES=" \
+	mirror://gentoo/linux-2.4.27-nfs3-xdr.patch.bz2 \
+	mirror://gentoo/grsec-sources-2.4.27-CAN-2004-0814.patch.bz2 \
+	mirror://gentoo/grsec-sources-2.4.27-binfmt_elf.patch.bz2
+	mirror://gentoo/linux-2.4.27-binfmt_aout.patch.bz2"
 SRC_URI="http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
 	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 ${CAN_PATCHES}"
-#mirror://gentoo/grsecurity-${PATCH_BASE}-${OKV}.patch.bz2
 
 HOMEPAGE="http://www.kernel.org/ http://www.grsecurity.net"
 KEYWORDS="x86 sparc ppc alpha amd64 -hppa"
+RESTRICT="buildpkg"
 
 SLOT="${KV}"
 S="${WORKDIR}/linux-${KV}"
@@ -51,8 +55,7 @@ src_unpack() {
 patch_grsec_kernel() {
 	# users are often confused by what settings should be set.
 	# so we provide an  example of what a P4 desktop would look like.
-	cp ${FILESDIR}/2.4.24-x86.config gentoo-grsec-custom-example-2.4.24-x86.config
-
+	cp ${FILESDIR}/2.4.24-x86.config gentoo-grsec-custom-example-2.4.2x-x86.config
 
 	[ -f "${DISTDIR}/${PATCH_SRC_BASE}" ] || die "File ${PATCH_SRC_BASE} does not exist?"
 	ebegin "Patching the kernel with ${PATCH_SRC_BASE}"
@@ -69,5 +72,12 @@ patch_grsec_kernel() {
 	# remote denial-of-service. bug 62524
 	epatch ${DISTDIR}/linux-2.4.27-nfs3-xdr.patch.bz2
 
-	return 0
+	# tty io fixes.
+	epatch ${DISTDIR}/grsec-sources-2.4.27-CAN-2004-0814.patch.bz2
+
+	# binfmt_elf - round #2
+	epatch ${DISTDIR}/grsec-sources-2.4.27-binfmt_elf.patch.bz2
+
+	# binfmt_aout
+	epatch ${DISTDIR}/linux-2.4.27-binfmt_aout.patch.bz2
 }

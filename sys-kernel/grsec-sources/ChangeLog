@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.33 2004/11/11 19:27:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.34 2004/11/17 17:51:37 solar Exp $
+
+*grsec-sources-2.4.27.2.0.1-r4 (17 Nov 2004)
+
+  17 Nov 2004; <solar@gentoo.org> -grsec-sources-2.4.27.2.0.1-r2.ebuild,
+  -grsec-sources-2.4.27.2.0.1-r3.ebuild,
+  +grsec-sources-2.4.27.2.0.1-r4.ebuild:
+  last fixes before 2.4.28 - fixes binfmt_elf+JJ and fixes binfmt_aout
 
 *grsec-sources-2.4.27.2.0.1-r3 (11 Nov 2004)
 
