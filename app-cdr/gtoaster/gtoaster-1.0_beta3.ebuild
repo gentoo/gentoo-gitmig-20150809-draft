@@ -15,7 +15,7 @@ DEPEND=">=x11-libs/gtk+-1.2
 	gnome? ( >=gnome-base/gnome-core-1.2.2.1 )
 	esd? ( >=media-sound/esound-0.2.22 )"
 
-RDEPEND=">=app-cdr/cdrecord-1.9
+RDEPEND=">=app-cdr/cdrtools-1.11
 	 >=media-sound/sox-12
 	 >=media-sound/mpg123-0.59
 	 >=media-sound/mp3info-0.8.4
