@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/turck-mmcache
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.17 2004/01/05 21:28:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.18 2004/01/14 00:23:49 stuart Exp $
+
+  13 Jan 2004; Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.20.ebuild,
+  turck-mmcache-2.3.21.ebuild, turck-mmcache-2.3.22.ebuild,
+  turck-mmcache-2.3.23.ebuild, turck-mmcache-2.4.1.ebuild,
+  turck-mmcache-2.4.2.ebuild, turck-mmcache-2.4.3.ebuild,
+  turck-mmcache-2.4.4.ebuild, turck-mmcache-2.4.5.ebuild,
+  turck-mmcache-2.4.6.ebuild:
+  Fix for coreutils no longer support user.group syntax; fixes bug #38032
 
 *turck-mmcache-2.4.6 (05 Nov 2003)
 

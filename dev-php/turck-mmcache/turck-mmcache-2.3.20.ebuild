@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.20.ebuild,v 1.4 2003/10/10 09:30:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.20.ebuild,v 1.5 2004/01/14 00:23:49 stuart Exp $
 
 PHP_EXT_NAME="mmcache"
 PHP_EXT_ZENDEXT="yes"
@@ -36,7 +36,7 @@ src_install() {
 	# for you
 
 	keepdir ${MMCACHE_CACHEDIR}
-	fowners root.root ${MMCACHE_CACHEDIR}
+	fowners root:root ${MMCACHE_CACHEDIR}
 	fperms 1777 ${MMCACHE_CACHEDIR}
 
 	insinto /usr/share/${PN}
