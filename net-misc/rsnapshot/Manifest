@@ -1,3 +1,5 @@
-MD5 4fbab5ce36c33869c70ada4a79639832 ChangeLog 509
+MD5 3dbd5659df8e93d3b88606fed7896306 ChangeLog 632
 MD5 4950d0bab8dc8ad8450c5106b16c44e4 rsnapshot-1.1.0.ebuild 1132
+MD5 0f3a038a584e9451a4dfc6cd6ca4c52b rsnapshot-1.1.2.ebuild 1130
 MD5 72b2d3805df87cc643ab774eeffa10bf files/digest-rsnapshot-1.1.0 66
+MD5 f31d0ab4d53d35c7b0ce66e85abd750d files/digest-rsnapshot-1.1.2 66
