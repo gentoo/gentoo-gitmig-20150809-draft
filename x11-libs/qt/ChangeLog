@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.79 2003/07/31 07:41:21 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.80 2003/08/04 13:35:22 gmsoft Exp $
 
 qt-3.2.0 (30 Jul 2003)
 
@@ -34,7 +34,10 @@ qt-3.2.0 (30 Jul 2003)
   Add Korean xim patch
 
 *qt-3.1.2-r4 (11 Jul 2003)
-  
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> qt-3.1.2-r4.ebuild :
+  Added hppa to KEYWORDS.
+
   11 Jul 2003; Michele Balistreri <brain@gentoo.org> qt-3.1.2-r4.ebuild
   Fix bug #24171, the patch was taken from upstream
   
