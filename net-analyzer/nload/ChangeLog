@@ -1,11 +1,16 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.1 2002/06/28 11:54:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.2 2002/07/18 14:40:44 nitro Exp $
+
+
+*nload-0.4.0 (14 Jun 2002)
+
+  18 Jul 2002; Kyle Manna <nitro@gentoo.org> nload-0.4.0.ebuild :
+
+  Added KEYWORDS and ncurses dependency.
 
   28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   moved to net-analyzer - added SLOT
-
-*nload-0.4.0 (14 Jun 2002)
 
   14 Jun 2002; Kyle Manna <nitro@gentoo.org> nload-0.4.0.ebuild :
   
