@@ -1,2 +1,4 @@
-MD5 edbffe8b94ae85bb066d4cf664fb2c31 gnutls-0.8.10.ebuild 763
+MD5 113609f0ee266efa2027ea367b8d56b2 ChangeLog 393
+MD5 ea46c92d3c571b24f3a5ac77510e1280 gnutls-0.8.10.ebuild 1024
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 b2ae83a3180a66ab61bdf08669f27399 files/digest-gnutls-0.8.10 66
