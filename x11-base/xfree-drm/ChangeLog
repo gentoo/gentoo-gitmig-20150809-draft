@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.1 2003/02/03 00:37:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.2 2003/02/03 01:04:31 seemant Exp $
+
+*xfree-drm-4.2.99.4 (03 Feb 2003)
+
+  03 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  xfree-drm-4.2.99.4.ebuild files/* :
+
+  version bump for newer snapshot
 
 *xfree-drm-4.2.99.3 (03 Feb 2003)
 
