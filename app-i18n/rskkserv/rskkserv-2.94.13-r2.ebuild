@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r2.ebuild,v 1.4 2004/06/24 21:53:09 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r2.ebuild,v 1.5 2004/09/23 23:54:54 vapier Exp $
 
 inherit ruby eutils
 
@@ -13,6 +11,7 @@ SRC_URI="http://www.unixuser.org/~ysjj/rskkserv/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/ruby
 	dev-ruby/ruby-tcpwrap"
@@ -24,7 +23,6 @@ USE_RUBY="ruby16 ruby18 ruby19"
 S=${WORKDIR}/${PN}-cvs
 
 src_unpack() {
-
 	unpack ${P}.tar.gz
 
 	cd ${S}
@@ -37,18 +35,16 @@ src_unpack() {
 }
 
 src_compile() {
-
-	EXTRA_ECONF="--with-dicfile=/usr/share/skk/SKK-JISYO.L
-		--with-cachedir=/var/lib/rskkserv
-		--with-piddir=/var/run
-		--with-logdir=/var/log"
-
-	econf || die
+	econf \
+		--with-dicfile=/usr/share/skk/SKK-JISYO.L \
+		--with-cachedir=/var/lib/rskkserv \
+		--with-piddir=/var/run \
+		--with-logdir=/var/log \
+		|| die
 	emake || die
 }
 
 src_install() {
-
 	keepdir /var/lib/rskkserv
 	einstall || die
 
@@ -65,7 +61,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "If you want to add auxiliary dictionaries (e.g. SKK-JISYO.JIS2,"
 	einfo "SKK-JISYO.jinmei, SKK-JISYO.2ch and so on) you need to emerge"
