@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.5 2003/02/10 21:03:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.6 2003/02/13 03:05:15 raker Exp $
 
 TLS_P="pfixtls-0.8.13-2.0.3-0.9.7"
 IPV6_P="tls+ipv6-1.12-pf-2.0.3"
@@ -95,7 +95,7 @@ src_unpack() {
 	DEBUG=""
 
 	cd ${S}
-	make makefiles CC="cc" OPT="${CFLAGS}" DEBUG="${DEBUG}" \
+	make makefiles CC="${CC}" OPT="${CFLAGS}" DEBUG="${DEBUG}" \
 		CCARGS="${CCARGS}" AUXLIBS="${AUXLIBS}" \
 		|| die "creating makefiles failed"
 }
