@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1.ebuild,v 1.3 2004/10/16 17:38:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1.ebuild,v 1.4 2004/10/17 19:21:22 axxo Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}-src.zip"
 HOMEPAGE="http://www.tagunit.org"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND=">=virtual/jdk-1.3
 		>=dev-java/ant-1.6
 		jikes? ( >=dev-java/jikes-1.17 )

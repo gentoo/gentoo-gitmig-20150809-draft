@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tagunit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/ChangeLog,v 1.3 2004/10/16 17:38:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/ChangeLog,v 1.4 2004/10/17 19:21:22 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> tagunit-1.0.1.ebuild:
+  keyword x86
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> tagunit-1.0.1.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
