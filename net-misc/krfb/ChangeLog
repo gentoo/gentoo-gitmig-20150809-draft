@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/krfb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/krfb/ChangeLog,v 1.5 2003/02/12 08:26:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/krfb/ChangeLog,v 1.6 2003/04/23 13:38:31 danarmak Exp $
+
+  23 Apr 2003; Dan Armak <danarmak@gentoo.org> krfb-0.6.ebuild:
+  Added warning message about krfb being part of kdenetwork-3.1.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
