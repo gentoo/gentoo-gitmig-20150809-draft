@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 c26ed3da779ce955094faf49bffbbf97 sazanami-20040621.ebuild 714
-MD5 a8432341cc18f852f41617a1c343d5aa ChangeLog 1280
-MD5 40022ef457dae0d2e058ccbbc021eada sazanami-20040629.ebuild 741
+MD5 4f13df7b5f5906cb12a055658d88f1e3 sazanami-20040629.ebuild 740
+MD5 a17e52ad62bca28068d23c7533ddd12c ChangeLog 1387
+MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 40535596d04428344c743f046ae4bfa9 files/digest-sazanami-20040621 71
 MD5 7a5d56a073321a3dff3b7e096af4aa9c files/digest-sazanami-20040629 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBZAEeVWNWqTUmv+0RAsI3AJ9qN/nRmkYCzA4oBBaY79uBfv+AYQCeKV1X
-EhJBau/7XeBqij4rvD7uZNk=
-=I4RG
------END PGP SIGNATURE-----
