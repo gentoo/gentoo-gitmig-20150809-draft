@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.15 2005/01/15 22:53:21 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.16 2005/01/15 23:16:12 compnerd Exp $
+
+  15 Jan 2005; Saleem Abdulrasool <compnerd@gentoo.org> sun-jre-bin-1.5.2.05-r1.ebuild:
+  Removed
 
   15 Jan 2005; Saleem Abdulrasool <compnerd@gentoo.org> sun-jre-bin-1.4.2.06.ebuild:
   Marked stable for x86

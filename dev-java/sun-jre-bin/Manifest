@@ -1,7 +1,6 @@
-MD5 0e0dc788bce2fe102db1d55f028cca85 ChangeLog 2984
+MD5 600bb11013bc6e7d2bd03fd31cb21bb0 ChangeLog 3083
 MD5 ca35f917561afc166491d77810b71095 metadata.xml 242
 MD5 2e3a2448f1ea368e48e0a5621ad8ab99 sun-jre-bin-1.4.2.06.ebuild 4857
-MD5 10ce5a0abc9eb2c339fab574c6b71801 sun-jre-bin-1.4.2.05-r1.ebuild 4817
 MD5 02bb0fec57bb548e2c469dafeda1bf24 sun-jre-bin-1.5.0.ebuild 5236
 MD5 a289abd24e832311e67cd75211e0d6e3 sun-jre-bin-1.5.0.01.ebuild 5285
 MD5 65240bd8b9977fbe20b35c7f5201c10d files/sun-jre-bin-1.4.2.05 439
@@ -9,6 +8,5 @@ MD5 6ec9cb0d5657017ab82a1e42f6e677b1 files/sun-jre-bin-1.4.2.06 439
 MD5 0c481e10e5702031b8f20112266fad5c files/sun-jre-bin-1.5.0.01 439
 MD5 e769eaeb7ddf420cace1a83890d42703 files/digest-sun-jre-bin-1.4.2.06 75
 MD5 37325b1ce12abd1a1a66277a305be8ef files/digest-sun-jre-bin-1.5.0.01 149
-MD5 ea64994bb63f18d8c29ce57e4f5d80ea files/digest-sun-jre-bin-1.4.2.05-r1 75
 MD5 4a0f05a5dd8f5357dec66ae47dce0ebf files/sun-jre-bin-1.5.0 436
 MD5 acb452269bc2a3897ba121b5ebfd7524 files/digest-sun-jre-bin-1.5.0 143
