@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <tad@gentoo.org> (11 Nov 03)
+# 1.0 is final release, previous versions were snapshots.
+# Bug #32759
+>=x11-themes/noia-021209
+
 # <phosphan@gentoo.org> (11 Nov 2003)
 # does not compile with current ffmpeg, and old version is
 # no longer in portage - should be fixed upstream instead of
