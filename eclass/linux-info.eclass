@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.8 2004/12/06 18:33:10 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.9 2004/12/10 22:43:03 johnm Exp $
 #
 # This eclass provides functions for querying the installed kernel
 # source version, selected kernel options etc.
@@ -169,13 +169,6 @@ get_version() {
 		eerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
 		die "Makefile not found in ${KV_DIR}"
 	fi
-
-	if [ ! -s "${KV_DIR}/.config" ]
-	then
-		eerror "Could not find a usable .config in the kernel source directory."
-		eerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources"
-		die ".config not found in ${KV_DIR}"
-	fi
 	
 	# OK so now we know our sources directory, but they might be using
 	# KBUILD_OUTPUT, and we need this for .config and localversions-*
@@ -230,6 +223,13 @@ get_version() {
 	
 	einfo "Found sources for kernel version:"
 	einfo "    ${KV_FULL}"
+	
+	if [ ! -s "${KV_OUT_DIR}/.config" ]
+	then
+		eerror "Could not find a usable .config in the kernel source directory."
+		eerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources"
+		die ".config not found in ${KV_OUT_DIR}"
+	fi
 }
 
 
