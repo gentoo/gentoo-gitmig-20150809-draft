@@ -1,5 +1,0 @@
-#!/bin/sh
-
-[ -z ${BROWSER} ] \
-	&& echo 'staden_help: "BROWSER" environment variable not set.' && exit 1 \
-	|| ${BROWSER} ${STADENROOT}/doc/documentation.html
