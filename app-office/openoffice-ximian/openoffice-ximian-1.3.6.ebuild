@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.6.ebuild,v 1.8 2005/01/29 12:21:07 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.6.ebuild,v 1.9 2005/03/28 08:37:55 suka Exp $
 
 # Notes:
 #
@@ -242,6 +242,9 @@ src_unpack() {
 	cd ${S}
 	cp ${DISTDIR}/STLport-4.6.2.tar.gz ${S}/stlport/download || die
 	epatch ${FILESDIR}/${OO_VER}/newstlportfix.patch
+
+	# fix for bug #82385
+	epatch ${FILESDIR}/${OO_VER}/getcompver.awk.patch
 
 	if use ppc; then
 		epatch ${FILESDIR}/${OO_VER}/STLport-vector.patch

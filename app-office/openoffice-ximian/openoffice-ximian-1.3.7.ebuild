@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.18 2005/03/04 20:58:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.19 2005/03/28 08:37:55 suka Exp $
 
 # Notes:
 #
@@ -261,6 +261,9 @@ src_unpack() {
 
 	#Another java problem
 	epatch ${FILESDIR}/${OO_VER}/javafix.patch
+
+	# fix for bug #82385
+	epatch ${FILESDIR}/${OO_VER}/getcompver.awk.patch
 
 	# Workaround for bug #73940, may break debug use flag on ppc
 	if use ppc; then
