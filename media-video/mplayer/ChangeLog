@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.150 2004/06/25 00:46:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.151 2004/06/29 10:03:52 ferringb Exp $
+
+  29 Jun 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r1.ebuild,
+  mplayer-1.0_pre4-r2.ebuild, mplayer-1.0_pre4-r3.ebuild,
+  mplayer-1.0_pre4-r4.ebuild, files/mplayer-1.0_pre4-gcc34-mtune.patch, 
+  files/mplayer-1.0_pre4-help_mp-ro.h:
+  Closing out bugs #49669 (help/help_mp-ro.h having completely broken syntax),
+  gcc3.4 s:-mcpu:-mtune: (bug #49488).
 
   17 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
   mplayer-1.0_pre4-r4.ebuild:

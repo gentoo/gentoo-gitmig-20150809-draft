@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.11 2004/06/25 00:46:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.12 2004/06/29 10:03:52 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -107,8 +107,14 @@ src_unpack() {
 	# Fix mencoder segfaulting with bad arguments
 	epatch ${FILESDIR}/mencoder-segfault.patch
 
+	# bug #49669, *major* syntax errors in help/help_mp-ro.h
+	epatch ${FILESDIR}/${P}-help_mp-ro.h.patch
+
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/${P}-alsa-gcc34.patch
+	epatch ${FILESDIR}/${P}-altivec-gcc34.patch
+	bug #49488, s:-mcpu:-mtune:
+	epatch ${FILESDIR}/${P}-gcc3.4-mtune.patch
 
 	# fixes for mga driver with kernel 2.6
 	if use matrox; then

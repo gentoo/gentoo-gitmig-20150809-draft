@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r1.ebuild,v 1.9 2004/06/25 00:46:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r1.ebuild,v 1.10 2004/06/29 10:03:52 ferringb Exp $
 
 inherit eutils flag-o-matic
 
@@ -105,8 +105,13 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/mencoder-segfault.patch
 
 	# GCC 3.4 fixes
-	cd ${S}; epatch ${FILESDIR}/${P}-alsa-gcc34.patch
+	epatch ${FILESDIR}/${P}-alsa-gcc34.patch
+	epatch ${FILESDIR}/${P}-altivec-gcc34.patch
+	#bug #49488 s:-mcpu:-mtune:
+	epatch ${FILESDIR}/${P}-gcc34-mtune.patch
 
+	#bug #49669 *major* syntax errors in help/help_mp-ro.h
+	epatch ${FILESDIR}/${P}-help_mp-ro.h.patch
 
 	# Fix hppa detection
 	[ "${ARCH}" = "hppa" ] && sed -i -e "s/9000*/parisc*/" "${S}/configure"
