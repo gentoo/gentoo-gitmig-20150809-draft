@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.38 2004/06/09 21:50:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.39 2004/06/24 14:24:10 mholzer Exp $
+
+  24 Jun 2004; Martin Holzer <mholzer@gentoo.org>
+  ffmpeg-0.4.8.20040322-r1.ebuild, ffmpeg-0.4.8.20040322.ebuild:
+  removing symblink from ffplay to ffmpeg. closes 51014
 
   09 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
   ffmpeg-0.4.8.20040322-r1.ebuild:

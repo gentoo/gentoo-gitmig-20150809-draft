@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040322-r1.ebuild,v 1.4 2004/06/09 21:57:03 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040322-r1.ebuild,v 1.5 2004/06/24 14:24:10 mholzer Exp $
 
 inherit eutils flag-o-matic
 
@@ -87,7 +87,6 @@ src_install() {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
-	dosym /usr/bin/ffmpeg /usr/bin/ffplay
 	dosym /usr/lib/libavcodec-${MY_PV}.so /usr/lib/libavcodec.so
 
 	dodoc COPYING CREDITS Changelog INSTALL README
