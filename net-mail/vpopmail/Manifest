@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5867b54ad82fc3de202fa5cb7afccca2 vpopmail-5.2.2-r1.ebuild 7487
 MD5 0f45c195f993f33c78c2a6d98108a3c8 vpopmail-5.4.0.ebuild 7429
 MD5 a6fbf86e82e7039d4256fdd6c1a38bcb vpopmail-5.4.0-r1.ebuild 7410
 MD5 98eb520388c505ec8e99f8fdf5f33d3a vpopmail-5.2.1-r9.ebuild 7567
 MD5 39aa2505d0a7cf2d02650d8cdf4b187c vpopmail-5.2.1-r6.ebuild 6380
 MD5 3886587ecb82bfa71669f27a2880f8f5 vpopmail-5.2.1-r8.ebuild 6724
-MD5 8084f285eaaf0e6d31a5a27b78bd7156 vpopmail-5.4.6-r1.ebuild 7637
+MD5 a3fe7e49d24bc54345271068246a90cb vpopmail-5.4.6-r1.ebuild 7632
 MD5 0bc96064a9872b49c094b93f24e9f909 vpopmail-5.4.0_rc1.ebuild 8362
-MD5 9cb9f545f72335fc7ba8402d9c616d01 vpopmail-5.4.6.ebuild 7499
+MD5 ab9e97da3b11fe993427e0bc2161fbdc vpopmail-5.4.6.ebuild 7494
 MD5 5c75d54e8924b414cba1dda30a7181e4 vpopmail-5.2.1-r5.ebuild 6062
 MD5 8359e63e0c39d804533dc59a4f8b53cb vpopmail-5.2.2.ebuild 7487
-MD5 5e7f8de9e3287442651611b8dad0f849 ChangeLog 7274
+MD5 92534d443950f694b65105140637ead6 ChangeLog 7395
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 ac097e29d83d3347f7773eb8e73341ab vpopmail-5.2.1-r7.ebuild 6379
 MD5 c8f37f4f0e61e7c848351d7e4a38478f files/vpopmail-Maildir-dotmaildir-fix.sh 931
@@ -35,10 +32,3 @@ MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
 MD5 9aeca181f86314f09d9cfe99ebe8b7d0 files/vpopmail.diff 2101
 MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235
 MD5 eb33b7205c4d4d75c4fc3710d7774e07 files/vpopmail-5.4.6-access.violation.patch 918
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBKTfZ5FrxP71izLARAjQtAJ0enMGkXxyqQonoGdUCeFa40cZcpQCbBtTM
-ADbRn6LN47QOgoCoB7Tqvrw=
-=scch
------END PGP SIGNATURE-----

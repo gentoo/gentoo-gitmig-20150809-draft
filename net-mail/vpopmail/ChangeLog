@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.44 2004/08/23 00:02:07 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.45 2004/08/24 18:11:06 robbat2 Exp $
+
+  24 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> vpopmail-5.4.6-r1.ebuild,
+  vpopmail-5.4.6.ebuild:
+  Fix bug #58647.
 
   22 Aug 2004; Tuan Van <langthang@gentoo.org>
   +files/vpopmail-5.4.6-access.violation.patch, vpopmail-5.4.6-r1.ebuild:

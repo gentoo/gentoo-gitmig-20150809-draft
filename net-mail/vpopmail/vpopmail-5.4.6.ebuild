@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6.ebuild,v 1.3 2004/08/21 20:34:27 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6.ebuild,v 1.4 2004/08/24 18:11:06 robbat2 Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -84,7 +84,7 @@ src_compile() {
 	use mysql \
 		&& myopts="${myopts} --enable-auth-module=mysql \
 			--enable-libs=/usr/include/mysql \
-			--enable-sqllibdir=/usr/lib/mysql \
+			--enable-libdir=/usr/lib/mysql \
 			--enable-mysql-logging=y \
 			--enable-auth-logging=y \
 			--enable-valias=y \
