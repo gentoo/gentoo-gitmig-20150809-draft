@@ -1,0 +1,11 @@
+--- src/widgets/qlistview.cpp	2003-02-24 19:30:39.000000000 +1100
++++ src/widgets/qlistview.cpp	2003-07-09 23:11:05.000000000 +1000
+@@ -4166,7 +4166,7 @@
+ 	else if ( selectionMode() == Extended ) {
+ 	    bool changed = FALSE;
+ 	    if ( !(e->state() & (ControlButton | ShiftButton)) ) {
+-		if ( !i->isSelected() || e->button() != RightButton ) {
++		if ( !i->isSelected() ) {
+ 		    bool blocked = signalsBlocked();
+ 		    blockSignals( TRUE );
+ 		    clearSelection();
