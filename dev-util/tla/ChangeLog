@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/tla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.10 2004/04/15 16:52:25 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.11 2004/05/28 17:47:17 rphillips Exp $
+
+*tla-1.2.1_pre1 (28 May 2004)
+
+  28 May 2004; <rphillips@gentoo.org> tla-1.2.1_pre1.ebuild:
+  version bump to 1.2.1_pre1 due to security bug with neon.  Fixes #51586
 
   15 Apr 2004; <dvandyk@gentoo.org> tla-1.2-r1.ebuild:
   marked ~amd64
