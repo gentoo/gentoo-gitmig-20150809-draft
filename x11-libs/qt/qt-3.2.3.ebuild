@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3.ebuild,v 1.9 2004/01/05 02:57:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3.ebuild,v 1.10 2004/01/05 18:20:29 weeve Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
-KEYWORDS="x86 hppa amd64 ~sparc"
+KEYWORDS="x86 hppa amd64 sparc"
 IUSE="cups nas postgres opengl mysql odbc gif doc"
 
 DEPEND="virtual/x11
@@ -83,7 +83,7 @@ src_compile() {
 	addwrite "${QTBASE}/etc/settings"
 	addwrite "$HOME/.qt"
 	dodir ${QTBASE}/etc/settings
-	
+
 	export LDFLAGS="-ldl"
 
 	use cups	|| myconf="${myconf} -no-cups"
@@ -104,7 +104,7 @@ src_compile() {
 		linux-g++ -xrender -prefix ${D}${QTBASE} -plugindir ${QTBASE}/plugins \
 		-docdir ${QTBASE}/doc -translationdir ${QTBASE}/translations \
 		-datadir ${QTBASE} -sysconfdir ${QTBASE}/etc/settings -fast ${myconf} || die
-	
+
 	export QTDIR=${S}
 	emake src-qmake src-moc sub-src sub-tools || die
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH_OLD}
