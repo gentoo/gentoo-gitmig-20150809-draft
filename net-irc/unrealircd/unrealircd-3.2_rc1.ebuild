@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.1 2004/02/21 02:42:37 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.2 2004/03/05 02:17:44 zul Exp $
 
 MY_P=Unreal3.2-RC1
 DESCRIPTION="aimed to be an advanced (not easy) IRCd"
@@ -10,62 +10,106 @@ SRC_URI="http://www.gower.net/unrealircd/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
-IUSE="ssl"
+KEYWORDS="~x86 -*"
+IUSE="ssl ipv6 leaf"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	>=sys-apps/sed-4"
 
 S=${WORKDIR}/Unreal3.2
 
-src_unpack() {
-	unpack ${A} && cd ${S}
-	rm -f .CHANGES.NEW .RELEASE.NOTES
-#	epatch ${FILESDIR}/${PV}-Config.patch
-#	sed -i 's:^ID_CVS.*::' src/res_mkquery.c
-
-#	cp Config{,.orig}
-#	sed -e "s:GENTOO_CFLAGS:${CFLAGS}:" \
-#		Config.orig > Config
-}
 
 src_compile() {
-	./Config -quick || die "configure failed"
-	make RES="res_init.o res_comp.o res_mkquery.o" \
-		|| die "compiling failed"
+	local myconf=" --enable-nospoof \
+	--prefix=/usr \
+	--with-dpath=${D}/etc/unrealircd \
+	--with-spath=/usr/bin/unrealircd \
+	--enable-prefixaq \
+	--enable-ziplinks \
+	--with-listen=5 \
+	--with-nick-history=2000 \
+	--with-sendq=3000000 \
+	--with-bufferpool=18 \
+	--with-hostname=`hostname` \
+	--with-permissions=0600 \
+	--with-fd-setsize=1024 \
+	--enable-dynamic-linking"
+
+	if [ -n "`use ssl`" ] ; then
+		einfo "Enabling SSL/Crypto support"
+		myconf="${myconf} --enable-ssl"
+	fi
+
+	if [ -n "`use ipv6`" ] ; then
+		einfo "Enabling IPv6 support"
+		myconf="${myconf} --enable-inet6"
+	fi
+
+	if [ -n "`use leaf`" ] ; then
+		einfo "Enabling ircd as leaf server"
+		myconf="${myconf} --enable-leaf"
+		sleep 5
+	else
+		einfo "Enabling ircd as hub server(default)"
+		ewarn "Set USE=\"leaf\" if you want a leaf server."
+		sleep 5
+		myconf="${myconf} --enable-hub"
+	fi
+
+	econf ${myconf} || die
+
+	emake || die
 }
 
 src_install() {
+	cd ${S}
+
 	newbin src/ircd unrealircd || die
 
-	insinto /etc/unrealircd
-	doins badwords.*.conf
-	insinto /etc/unrealircd/networks
-	doins networks/{template.network,unrealircd.conf}
+	if [ -n "`use ssl`" ] ; then
+		newbin ${FILESDIR}/mkunrealircd-cert.sh mkunrealircd-cert
+	fi
 
-	rm -rf ircdcron/CVS
-	rm -rf doc/CVS
-	rm -rf doc/technical/CVS
-	dodoc doc/* Changes Donation Unreal.nfo ircdcron/*
+	insinto /etc/unrealircd
+	doins badwords.*.conf help.conf
+
+	if [ -n "`use ssl`" ] ; then
+		doins src/ssl.cnf
+	fi
+
+	insinto /etc/unrealircd/networks
+	doins networks/{*.network,makenet,networks.ndx}
+
+	insinto /etc/unrealircd/aliases
+	doins aliases/*.conf
+
+	insinto /etc/unrealircd/modules
+	doins src/modules/*.so
+
+	dodoc doc/Authors doc/example.conf doc/example.settings
+	dodoc doc/coding-guidelines doc/tao.of.irc doc/unreal32docs.html
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/unrealircd.rc unrealircd
+
 	insinto /etc/conf.d
 	newins ${FILESDIR}/unrealircd.confd unrealircd
+
+	into /etc/unrealircd
+	dodir /etc/unrealircd/tmp
 }
 
 pkg_postinst() {
 	einfo "UnrealIRCD will not run until you do a few things ..."
 	echo
 	einfo "Setup /etc/unrealircd/unrealircd.conf"
-	einfo "      see /etc/unrealircd/template.network for more info"
-	einfo "Setup /etc/unrealircd/ircd.conf"
 	einfo "      see /usr/share/doc/${PF}/example.conf.gz for more info"
-	echo
-	einfo "You can find example cron scripts here:"
-	einfo "   /usr/share/doc/${PF}/ircd.cron"
-	einfo "   /usr/share/doc/${PF}/ircdchk"
 	echo
 	einfo "You can also use /etc/init.d/unrealircd to start at boot"
 	echo
+	if [ -n "`use ssl`" ] ; then
+		einfo "Run /usr/bin/mkunrealircd-cert to create a default cert for ssl."
+		einfo "The cert defaults are in /etc/unrealircd/ssl.cnf edit this prior to running."
+		echo
+	fi
 }

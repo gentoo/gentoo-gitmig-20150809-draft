@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.5 2004/02/21 02:42:37 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.6 2004/03/05 02:17:44 zul Exp $
+
+  04 Mar 2004; Chuck Short <zul@gentoo.org> unrealircd-3.2_rc1.ebuild:
+  Ebuild improvements. Closes #42396.
 
 *unrealircd-3.2_rc1 (20 Feb 2004)
 
