@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.12 2004/09/25 22:25:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.13 2004/12/24 14:20:53 ticho Exp $
+
+*nmh-1.1-r1 (24 Dec 2004)
+
+  24 Dec 2004; Andrej Kacian <ticho@gentoo.org>
+  +files/nmh-1.1-annotate-fix.patch, +nmh-1.1-r1.ebuild:
+  Apply patch to fix reply annotation. Closes #69688, reported by Adam Jones
+  <jaybuhner77@yahoo.com>.
 
   25 Sep 2004; Jason Wever <weeve@gentoo.org> nmh-1.1.ebuild:
   Stable on sparc.
