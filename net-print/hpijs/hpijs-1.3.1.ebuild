@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.3.1.ebuild,v 1.1 2003/03/07 16:36:42 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.3.1.ebuild,v 1.2 2003/09/07 00:18:10 msterret Exp $
 
 # Though this program runs on it's own it makes no sense to run it without ghostscript
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 SLOT="0"
 
 src_compile () {
-	econf 
+	econf
 	make || die "compile problem"
 }
 

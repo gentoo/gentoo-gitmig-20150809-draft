@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90-r1.ebuild,v 1.3 2003/07/29 13:45:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90-r1.ebuild,v 1.4 2003/09/07 00:18:10 msterret Exp $
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
@@ -15,7 +15,7 @@ DEPEND="qt?      ( >=x11-libs/qt-3.1.0-r1 )
 	scanner? ( >=media-gfx/sane-backends-1.0.9 )
 	scanner? ( || ( X? ( >=media-gfx/xsane-0.89 ) >=media-gfx/sane-frontends-1.0.9 ) )
 	snmp?    ( >=net-analyzer/ucd-snmp-4.2.6 )
-	cups?    ( >=net-print/cups-1.1.18-r2 ) 
+	cups?    ( >=net-print/cups-1.1.18-r2 )
 	usb?     ( dev-libs/libusb )
         >=net-print/hpijs-1.3.1"
 RDEPEND=""
@@ -41,7 +41,7 @@ src_compile() {
 	&& myconf="${myconf} --with-sane-packend=/usr" \
 	|| myconf="${myconf} --without-sane"
 
-    econf ${myconf} 
+    econf ${myconf}
 #    patch -p0 ${S}/mlcd/Makefile < ${FILESDIR}/mlcd_make.patch
 #   patch -p0 ${S}/mlcd/ExMgr.cpp < ${FILESDIR}/ExMgr.cpp_patch
     make || die "compilation failed"

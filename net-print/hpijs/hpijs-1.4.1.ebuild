@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.3 2003/07/29 13:21:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.4 2003/09/07 00:18:10 msterret Exp $
 
 DESCRIPTION="The HP Inkjet server for Ghostscript. Provides best output for HP Inkjet Printers"
 HOMEPAGE="http://hpinkjet.sourceforge.net"
@@ -24,7 +24,7 @@ src_compile () {
 
 	econf --disable-cups-install ${myconf}
 
-	for i in Makefile; do 
+	for i in Makefile; do
 		mv $i $i.orig ;
 		cat $i.orig | \
 			sed -e 's|/usr/share/cups|${prefix}/share/cups|g' | sed -e 's|/usr/lib/cups|${prefix}/lib/cups|g' > $i
@@ -46,7 +46,7 @@ src_install () {
 
 	if [ "`use cups`" -a "`use ppds`" ] ; then
 		dodir /usr/share/cups/model
-		dosym /usr/share/ppd /usr/share/cups/model/foomatic-ppds 
+		dosym /usr/share/ppd /usr/share/cups/model/foomatic-ppds
 	fi
 
 	use ppds && rm -f ${D}/usr/bin/foomatic-rip

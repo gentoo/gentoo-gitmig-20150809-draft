@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20030716.ebuild,v 1.4 2003/07/29 13:17:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20030716.ebuild,v 1.5 2003/09/07 00:18:10 msterret Exp $
 
 DESCRIPTION="Foomatic printer database"
 HOMEPAGE="http://www.linuxprinting.org/foomatic"
@@ -32,7 +32,7 @@ src_compile() {
 	emake || die
 	rm db/source/driver/stp.xml
 	cd ..
-	
+
 	if [ `use ppds` ]; then
 		cd foomatic-db-engine-3.0.0
 		epatch ${FILESDIR}/perl-module.diff

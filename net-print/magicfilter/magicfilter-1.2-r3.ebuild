@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-1.2-r3.ebuild,v 1.6 2003/02/11 12:29:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-1.2-r3.ebuild,v 1.7 2003/09/07 00:18:10 msterret Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ DEPEND=">=app-text/ghostscript-6.50-r2
 	>=sys-apps/gzip-1.2.4a-r6"
 
 src_unpack() {
-	
+
 	unpack ${A}
 	# This is the patch directly from the Debian package.  It's included
 	# here (instead of fetching from Debian) because their package
@@ -58,7 +58,7 @@ src_install() {
 	newman magicfilter.man magicfilter.8
 	doman magicfilterconfig.8
 
-	dodoc README QuickInst TODO debian/copyright 
+	dodoc README QuickInst TODO debian/copyright
 	docinto filters
 	dodoc filters/README*
 }

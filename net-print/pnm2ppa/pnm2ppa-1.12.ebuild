@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.3 2003/07/13 20:39:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.4 2003/09/07 00:18:10 msterret Exp $
 
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 # executable.
 DEPEND="gtk? ( x11-libs/gtk+ )
 	ncurses? ( sys-libs/ncurses )"
-	
+
 RDEPEND="${DEPEND}
 	app-text/enscript
 	dev-util/dialog"
@@ -34,7 +34,7 @@ src_unpack() {
 
 src_compile() {
 	export CFLAGS="-DNDEBUG ${CFLAGS}"
-	
+
 	emake CFLAGS="${CFLAGS} -DLANG_EN" || die
 
 	cd ${S}/ppa_protocol
@@ -54,7 +54,7 @@ src_install () {
 
 	exeinto /usr/bin
 	doexe utils/Linux/detect_ppa utils/Linux/test_ppa
- 	
+
 	insinto /usr/share/pnm2ppa/lpd
 	doins ${S}/lpd/*
 	exeinto /usr/share/pnm2ppa/lpd
@@ -62,7 +62,7 @@ src_install () {
 
 	insinto /usr/share/pnm2ppa/pdq
 	doins ${S}/pdq/*
-	
+
 	# Interfaces for configuration of integration with lpd
 	# These are not installed because we do not assume that
 	# lpd, ncurses, gtk, but the sources are provided.  Thus,
@@ -77,13 +77,13 @@ src_install () {
 	exeinto /etc/pdq/interfaces
 	doexe dummy
 
-	# possibly not needed	
+	# possibly not needed
 	#rm ${D}/etc/printcap.*
-	
+
 	cd ${S}/docs/en
 	dodoc CALIBRATION*txt COLOR*txt PPA*txt RELEASE*
 	dodoc CREDITS INSTALL LICENSE README TODO
-	
+
 	cd sgml
 	insinto /usr/share/doc/${P}
 	doins *.sgml
@@ -98,7 +98,7 @@ pkg_postinst() {
 	einfo "your printer model and papersize."
 	einfo ""
 	einfo "Run calibrate_ppa to calibrate color offsets."
-	einfo ""   
+	einfo ""
     	einfo "Read the docs in /usr/share/pnm2ppa/ to configure the printer,"
 	einfo "configure lpr substitutes, cups, pdq, networking etc."
  	einfo ""

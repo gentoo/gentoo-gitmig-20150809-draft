@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/xprint-008-r1.ebuild,v 1.1 2003/08/08 20:14:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/xprint-008-r1.ebuild,v 1.2 2003/09/07 00:18:10 msterret Exp $
 
 DESCRIPTION="An advanced printing system which enables X11 applications to use devices like printers in formats like PostScript, PDF, PCL, etc."
 HOMEPAGE="http://xprint.mozdev.org"
@@ -23,7 +23,7 @@ src_install() {
 
 	tar -xzf xprint.tar.gz
 	mv xprint/install/* ${D}
-	
+
 	# this is a really nasty package, so we have to clean up a bit
 	rm -fR ${D}/etc/X11/
 	rm -fR ${D}/etc/profile.d
