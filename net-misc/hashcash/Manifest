@@ -1,5 +1,18 @@
-MD5 68498dfc86ccb3f11550c135d1ae4250 hashcash-0.27.ebuild 775
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 37ff0a439e52c65f0d508fcc0144a8d9 ChangeLog 1001
 MD5 81b4416adba2e6b18cb174e6a9bebca6 hashcash-1.02.ebuild 750
-MD5 3978ddc27cf55c760e5c63149363e76d ChangeLog 850
+MD5 ae5592e9a022e6beab44a52a4f23c3f0 metadata.xml 221
+MD5 68498dfc86ccb3f11550c135d1ae4250 hashcash-0.27.ebuild 775
+MD5 a6ff49041b9898d8a78826d5b19d80a4 hashcash-1.13.ebuild 751
+MD5 b8945440c5d5fc363304c85279d43771 files/digest-hashcash-1.13 62
 MD5 574981d65f92a3870bb9b254ebcf31d5 files/digest-hashcash-1.02 62
 MD5 16b3bf4afa6be029dcb2f921e988f698 files/digest-hashcash-0.27 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBq/1yugEuf3OQ0akRAsjIAJ9g+fkzXc8qU++TTUYwFv8TizngSgCfWNV4
+dtSVrCR4tJ3nZSmXJMBVe+8=
+=5RkL
+-----END PGP SIGNATURE-----
