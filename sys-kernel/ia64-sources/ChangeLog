@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.1 2003/09/17 18:23:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.2 2003/10/02 19:58:36 avenj Exp $
+
+  02 Oct 2003; Jon Portnoy <avenj@gentoo.org>
+  ia64-sources-2.4.22.ebuild :
+  Modified to use functional patch.
 
 *ia64-sources-2.4.22 (17 Sep 2003)
 
