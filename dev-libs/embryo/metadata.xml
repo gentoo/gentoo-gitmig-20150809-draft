@@ -12,7 +12,7 @@ interpredted programs compiled into the abstract machine bytecode that it
 understands. This abstrac (or virtual) machine is imilar to a real machine
 with a CPU, but it is emulated in software. The architecture is simple and is
 the same as the abstract machine (AMX) in the
-<uri link=http://www.compuphase.com/small.htm>SMALL</uri> language as it is based
+SMALL (http://www.compuphase.com/small.htm) language as it is based
 on exactly the same code. Embryo has modified the code for the AMX extensively
 and has made it smaller and more portable. It is VERY small. The total size
 of the virtual machine code AND header files is less than 2500 lines of code.
