@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.14 2003/02/16 01:59:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.15 2003/02/21 17:25:49 aliz Exp $
+
+*webmin-1.070 (21 Feb 2003)
+
+  21 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *webmin-1.060 (15 Feb 2003)
 
