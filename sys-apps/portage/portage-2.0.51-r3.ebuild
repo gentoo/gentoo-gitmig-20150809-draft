@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.5 2004/11/07 12:26:14 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.6 2004/11/07 16:13:57 ferringb Exp $
 
 IUSE="build selinux"
 inherit flag-o-matic
+inherit eutils
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
 # cause everything to segfault !!
@@ -55,6 +56,7 @@ src_unpack() {
 	sed -i "s:^CFLAGS =.*:CFLAGS = :" src/sandbox-1.1/Makefile
 	sed -i "/PORTAGE_RESTRICT.*'')/s:''):' '):" pym/portage.py
 	sed -i "s/self.config/self.options/" bin/dispatch-conf
+	epatch ${FILESDIR}/gcc-2.95-libsandbox.patch
 }
 
 src_compile() {
