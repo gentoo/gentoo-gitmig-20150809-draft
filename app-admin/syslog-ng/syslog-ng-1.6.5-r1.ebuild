@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.5-r1.ebuild,v 1.5 2004/10/13 23:03:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.5-r1.ebuild,v 1.6 2004/11/18 20:14:34 corsair Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.balabit.com/downloads/syslog-ng/${PV%.*}/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ~ia64 ppc64 ~s390"
 IUSE="static tcpd"
 
 RDEPEND=">=dev-libs/libol-0.3.14
