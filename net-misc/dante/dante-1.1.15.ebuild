@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.15.ebuild,v 1.11 2005/02/18 11:02:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.15.ebuild,v 1.12 2005/02/18 22:47:56 dragonheart Exp $
 
 inherit gcc fixheadtails eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.inet.no/pub/socks/${PN}-${MY_PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="tcpd debug selinux"
+IUSE="tcpd debug selinux pam"
 
 RDEPEND="virtual/libc
 	pam? ( sys-libs/pam )
