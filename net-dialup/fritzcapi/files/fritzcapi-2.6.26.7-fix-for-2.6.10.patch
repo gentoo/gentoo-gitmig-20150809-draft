@@ -1,0 +1,12 @@
+diff -Nru fritz.pcmcia.old/src/fcpcmcia_cs.c fritz.pcmcia/src/fcpcmcia_cs.c
+--- fritz.pcmcia.old/src/fcpcmcia_cs.c	2004-03-10 13:01:03.000000000 +0200
++++ fritz.pcmcia/src/fcpcmcia_cs.c	2004-12-31 12:51:57.480716688 +0200
+@@ -118,7 +118,7 @@
+ static int irq_list_count	= -1;
+ static int irq_list[10];
+ 
+-module_param_array (irq_list, int, irq_list_count, 0);
++module_param_array (irq_list, int, &irq_list_count, 0);
+ 
+ MODULE_PARM_DESC (irq_list, "List of IRQ numbers");
+ 
