@@ -1,0 +1,11 @@
+--- build.xml	2003-07-28 19:50:44.000000000 -0500
++++ build.xml.patched	2004-02-28 10:50:41.675563664 -0500
+@@ -205,7 +205,7 @@
+            classpathref="compile.classpath" />
+   </target>
+ 
+-  <target name="jar" depends="compile-only" > 
++  <target name="jar" depends="compile-only,prepare,init-dist" > 
+     <mkdir      dir="${build.home}/classes/META-INF"/>
+     <copy      file="src/java/org/apache/commons/modeler/ant/ant.properties"
+              tofile="${build.home}/classes/META-INF/ant.properties"/>
