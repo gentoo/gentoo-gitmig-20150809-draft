@@ -4,10 +4,10 @@ MD5 bd5dab4e58c73ac69462457eb3bf62d0 koffice-1.2.1-r1.ebuild 826
 MD5 41f373b330594e41454feaf1d1ec7cf6 koffice-1.2_beta2.ebuild 1105
 MD5 2e2842e7db798be596acdcb2f5a39e17 koffice-1.2.ebuild 770
 MD5 9a620860de6fc04a27efe67c76f8c71d koffice-1.2-r2.ebuild 963
-MD5 a3bc4bf636ce8262caa00859806a1767 koffice-1.3_beta1.ebuild 814
+MD5 90b66cd7fcc3e63a926142dd5363c291 koffice-1.3_beta1.ebuild 1043
 MD5 8d25144bc3f609caab76c82bc069a66b koffice-1.2_rc1.ebuild 847
 MD5 c286c5cdcc826bca829d7cb96900a014 koffice-1.1.1.ebuild 1148
-MD5 b5b9d8823bde655018ed815018a05273 ChangeLog 3949
+MD5 e5fed35089f1426ede1dac402771fdf6 ChangeLog 4140
 MD5 7eb5f8e0051bdfa9d39ddc41d0f2b11e files/digest-koffice-1.2_beta2 71
 MD5 362c1081c562d8405d25be71122ca125 files/koffice-1.2-connectortool.diff 493
 MD5 0fdb0d815d97087336270d8b09d82018 files/koffice-1.1.1-gentoo.diff 978
