@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/circlemud
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/ChangeLog,v 1.4 2004/06/24 22:59:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/ChangeLog,v 1.5 2004/07/01 11:20:31 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> circlemud-3.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> circlemud-3.1.ebuild:
   marking stable - no bugs for 125 days.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/ytin/ytin-1.83.5-r1.ebuild,v 1.3 2004/06/24 23:02:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/ytin/ytin-1.83.5-r1.ebuild,v 1.4 2004/07/01 11:22:08 eradicator Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-libs/ncurses"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"

@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/ytin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/ytin/ChangeLog,v 1.6 2004/06/24 23:02:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/ytin/ChangeLog,v 1.7 2004/07/01 11:22:08 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ytin-1.83.5-r1.ebuild, ytin-1.83.5.ebuild:
+  virtual/glibc -> virtual/libc
 
 *ytin-1.83.5-r1 (23 Mar 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/gMOO-0.4.8-r1.ebuild,v 1.5 2004/06/24 22:59:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/gMOO-0.4.8-r1.ebuild,v 1.6 2004/07/01 11:21:02 eradicator Exp $
 
 DESCRIPTION="GTK+ Based MOO client"
 HOMEPAGE="http://www.nowmoo.demon.nl/"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="nls tcltk"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/x11
 	=x11-libs/gtk+-1.2*
 	tcltk? ( dev-lang/tcl )"
