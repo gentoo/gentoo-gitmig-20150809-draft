@@ -1,6 +1,16 @@
-MD5 3502d482dbc7b87115456d4e224ba178 ChangeLog 2826
-MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8429c58913fe6ed3b22f96edf8d868c6 ChangeLog 2929
 MD5 907e72bc76901248ec571634fb3c8735 run-mailcap-3.26_p1.ebuild 1040
-MD5 8db5e22e16f55582e272d9b183d09561 run-mailcap-3.28_p1.ebuild 1041
+MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
+MD5 6f6eda30507a956ce715ab0c036d0419 run-mailcap-3.28_p1.ebuild 1040
 MD5 0c15db34fcdaa0b84d2df607d75542fa files/digest-run-mailcap-3.26_p1 70
 MD5 319537083b6740e7f97520fa740a4154 files/digest-run-mailcap-3.28_p1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFBy0JaugEuf3OQ0akRApDdAJUSgWlBP9TWyZmZGi9fJteAeKy2AJ0RIMMR
+5znNK8ook47yit5YS/SZ2Q==
+=PLVk
+-----END PGP SIGNATURE-----
