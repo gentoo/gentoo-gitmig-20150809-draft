@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/xsu
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/ChangeLog,v 1.1 2002/07/14 19:46:43 blocke Exp $
+
+*xsu-0.2.3 (14 Jul 2002)
+
+  14 Jul 2002; Bruce A. Locke <blocke@shivan.org> xsu-0.2.3.ebuild files/digest-xsu-0.2.3:
+
+  Initial ebuild contributed by erikg@wired-networks.net (Erik Grinaker) and
+  modernized before being checked in.
+
