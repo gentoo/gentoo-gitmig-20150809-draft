@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r2.ebuild,v 1.9 2002/08/14 03:27:57 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r2.ebuild,v 1.10 2002/09/15 06:32:49 drobbins Exp $
 
 S=${WORKDIR}/raidtools-0.90
 DESCRIPTION="Linux RAID 0/1/4/5 utilities"
@@ -15,7 +15,8 @@ src_compile() {
     ./configure || die
     cp Makefile Makefile.orig
     sed -e "s/-O2//" -e "s/ -g/ /" Makefile.orig > Makefile
-    emake || die
+    #emake appears to kill this every now and then (drobbins, 15 Sep 2002)
+	make || die
 }
 
 src_install() {
