@@ -1,3 +1,4 @@
-MD5 b32a17083e2beddb422fbc873e953d7c haddock-0.4.ebuild 1960
-MD5 a73e3298b72b7ea07f4dee1b9b06efbd ChangeLog 650
+MD5 8179a81337753427bf912469bbf42ad0 haddock-0.4.ebuild 2066
+MD5 7f24863d166e7a9ba989af4993991270 ChangeLog 795
+MD5 0fe55540bd0531c1ca8da69fb5098d76 files/haddock-0.4-ghc6.patch 6858
 MD5 345c00e86d5388d60c897e487987922a files/digest-haddock-0.4 67

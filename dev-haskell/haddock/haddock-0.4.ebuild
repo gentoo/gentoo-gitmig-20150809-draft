@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.4.ebuild,v 1.3 2003/06/06 08:32:52 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.4.ebuild,v 1.4 2003/07/28 13:09:06 kosmikus Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -8,6 +8,7 @@
 #   tetex  - Build the above docs as PostScript as well.
 
 
+inherit base
 IUSE="doc tetex"
 
 DESCRIPTION="A documentation tool for Haskell"
@@ -15,7 +16,7 @@ SRC_URI="http://www.haskell.org/haddock/${P}-src.tar.gz"
 HOMEPAGE="http://www.haskell.org/haddock"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 LICENSE="as-is"
 
 DEPEND="virtual/ghc
@@ -30,6 +31,12 @@ RDEPEND=""
 
 # extend path to /opt/ghc/bin to guarantee that ghc-bin is found
 GHCPATH="${PATH}:/opt/ghc/bin"
+
+src_unpack() {
+	base_src_unpack
+	cd ${S}
+	patch -p1 < ${FILESDIR}/haddock-${PV}-ghc6.patch
+}
 
 src_compile() {
 	# unset SGML_CATALOG_FILES because documentation installation
