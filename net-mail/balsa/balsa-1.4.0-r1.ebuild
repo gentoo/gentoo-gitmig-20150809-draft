@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2  
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.0-r1.ebuild,v 1.6 2003/02/13 14:22:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.0-r1.ebuild,v 1.7 2003/03/26 10:18:49 seemant Exp $
 
-IUSE="ssl nls cups gtkhtml the spell perl"
+IUSE="ssl nls cups gtkhtml spell perl"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Balsa: email client for GNOME"
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 
 	Patch to use the new aspell instead of the old, crusty pspell modules
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 }
 
