@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.1 2004/11/16 20:28:27 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.2 2004/11/17 11:30:04 lu_zero Exp $
+
+  17 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/liboil-0.2.0-altivec.patch, liboil-0.2.0.ebuild:
+  Fixed for ppc
 
 *liboil-0.2.0 (16 Nov 2004)
 
