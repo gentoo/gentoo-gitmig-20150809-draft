@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/freedroidrpg
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.3 2003/10/27 13:31:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.4 2004/04/09 06:12:11 vapier Exp $
+
+*freedroidrpg-0.9.12 (09 Apr 2004)
+
+  09 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #46979 by gentoo@leezpc.freeserve.co.uk.
 
 *freedroidrpg-0.9.9 (27 Oct 2003)
 
