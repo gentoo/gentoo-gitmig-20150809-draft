@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.127 2004/11/10 10:59:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.128 2004/11/10 19:40:37 tester Exp $
+
+  10 Nov 2004; Olivier Crete <tester@gentoo.org> samba-3.0.8.ebuild:
+  Stable on x86 see 70429
 
   10 Nov 2004; Joshua Kinard <kumba@gentoo.org> samba-3.0.8.ebuild:
   Marked stable on mips.
