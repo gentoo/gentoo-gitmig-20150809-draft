@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.1.1.ebuild,v 1.2 2002/11/25 16:52:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.1.1.ebuild,v 1.3 2002/11/28 01:04:19 nall Exp $
 
 IUSE="doc"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=dev-libs/glib-2.0.6-r1"
 
