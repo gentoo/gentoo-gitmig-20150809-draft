@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20040730.ebuild,v 1.3 2004/10/16 17:24:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20040730.ebuild,v 1.4 2004/10/22 08:48:21 absinthe Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ IUSE="doc jikes"
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=virtual/jdk-1.4
 		>=dev-java/ant-1.5.1
