@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/kgraphspace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kgraphspace/ChangeLog,v 1.8 2004/07/18 17:07:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kgraphspace/ChangeLog,v 1.9 2004/10/27 22:34:20 motaboy Exp $
+
+  28 Oct 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +files/kgraphspace-0.3.0_pre1-configure.patch,
+  kgraphspace-0.3.0_pre1.ebuild:
+  Added a patch to the configure script to honor the 'arts' USE flag. Fixes
+  bug #69189. Also added the missing 'metadata.xml' file.
 
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> kgraphspace-0.3.0_pre1.ebuild:
   Added amd64 keyword, closing #54328.
