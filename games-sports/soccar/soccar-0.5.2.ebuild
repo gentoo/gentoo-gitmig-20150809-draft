@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/soccar/soccar-0.5.2.ebuild,v 1.2 2003/11/24 17:36:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/soccar/soccar-0.5.2.ebuild,v 1.3 2004/03/20 12:59:58 mr_bones_ Exp $
 
 inherit games eutils
 
