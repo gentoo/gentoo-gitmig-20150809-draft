@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ruby-gtk-0.34-r1.ebuild,v 1.10 2004/07/14 22:08:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ruby-gtk-0.34-r1.ebuild,v 1.11 2004/08/09 02:42:25 usata Exp $
 
 inherit ruby-gnome2 ruby
 
@@ -22,5 +22,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	sed -i -e "s/PLATFORM/RUBY_PLATFORM/g" extconf.rb
+
+	ruby -i -pe 'sub "PLATFORM","RUBY_PLATFORM"' \
+		extconf.rb src/makedefconst.rb || "substitution failed"
 }
