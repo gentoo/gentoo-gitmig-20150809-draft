@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-2.0.2.ebuild,v 1.7 2004/02/25 02:08:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-2.0.2.ebuild,v 1.8 2004/02/27 01:44:22 vapier Exp $
 
 DESCRIPTION="Library and front-end for retrieving information about a system's hardware"
 HOMEPAGE="http://hackers.progeny.com/discover/"
@@ -19,11 +19,11 @@ PDEPEND="sys-apps/discover-data"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	if which docbook-to-man 2>/dev/null ; then
+	if ! which docbook-to-man 2>/dev/null ; then
 		if which docbook2man 2>/dev/null ; then
-			sed -i 's:docbook-to-man:echo:' doctools/docbook.mk
-		else
 			sed -i 's:docbook-to-man:docbook2man:' doctools/docbook.mk
+		else
+			sed -i 's:docbook-to-man:echo:' doctools/docbook.mk
 		fi
 	fi
 }
