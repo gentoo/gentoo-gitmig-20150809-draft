@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.15 2003/10/03 00:21:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.16 2003/10/06 21:30:39 george Exp $
+
+*ocaml-3.07 (06 Oct 2003)
+
+  06 Oct 2003; George Shapovalov <george@gentoo.org> ocaml-3.07.ebuild :
+  3.07 is out, this outdates the beta that was fixing #28025
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> ocaml-3.06-r2.ebuild,
   ocaml-3.07_beta2.ebuild:
