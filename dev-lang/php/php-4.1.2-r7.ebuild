@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r7.ebuild,v 1.3 2002/04/16 10:01:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r7.ebuild,v 1.4 2002/04/16 15:40:56 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -20,6 +20,7 @@ DEPEND=">=dev-libs/gmp-3.1.1
 	>=net-www/apache-1.3.24-r1
 	X? ( virtual/x11 )
 	qt? ( =x11-libs/qt-2.3* )
+	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
 	xml? ( >=app-text/sablotron-0.44 )
 	imap? ( >=net-mail/uw-imap-2001a-r1 )
@@ -41,7 +42,6 @@ DEPEND=">=dev-libs/gmp-3.1.1
 
 RDEPEND="${DEPEND}
 	qt? ( >=x11-libs/qt-2.3.0 )
-	nls? ( sys-devel/gettext )
 	xml? ( >=app-text/sablotron-0.44 )"
 
 src_unpack() {
@@ -79,49 +79,47 @@ src_compile() {
 	# also, t1lib support seems to be broken: gcc: /usr/lib/.libs/libt1.so: No such file or directory
 
 	myconf="--without-readline --without-t1lib"
-	use pam && myconf="$myconf --with-pam"
-	use nls \
-		&& myconf="$myconf --with-gettext" \
-		|| myconf="${myconf} --without-gettext"
-	use gdbm && myconf="$myconf --with-gdbm=/usr"
-	use berkdb && myconf="$myconf --with-db3=/usr"
-	use mysql && myconf="$myconf --with-mysql=/usr"
-	use postgres && myconf="$myconf --with-pgsql=/usr"
-	use odbc && myconf="$myconf --with-unixODBC=/usr"
-	use ldap &&  myconf="$myconf --with-ldap" 
-	use pdflib && myconf="$myconf --with-pdflib"
+	use pam && myconf="${myconf} --with-pam"
+	use nls || myconf="${myconf} --without-gettext"
+	use gdbm && myconf="${myconf} --with-gdbm=/usr"
+	use berkdb && myconf="${myconf} --with-db3=/usr"
+	use mysql && myconf="${myconf} --with-mysql=/usr"
+	use postgres && myconf="${myconf} --with-pgsql=/usr"
+	use odbc && myconf="${myconf} --with-unixODBC=/usr"
+	use ldap &&  myconf="${myconf} --with-ldap" 
+	use pdflib && myconf="${myconf} --with-pdflib"
 
-	if [ "`use qt`" ] ; then
+	use qt && ( \
 		export QTDIR=/usr/qt/2 #hope this helps - danarmak
-		myconf="$myconf --with-qtdom" 
-	fi
+		myconf="${myconf} --with-qtdom" 
+	)
 
 	if [ "`use imap`" ] ; then
 		if [ "`use ssl`" ] && [ "`strings ${ROOT}/usr/lib/c-client.a \
 					| grep ssl_onceonlyinit`" ] ; then
 			echo "Compiling imap with SSL support"
-			myconf="$myconf --with-imap --with-imap-ssl"
+			myconf="${myconf} --with-imap --with-imap-ssl"
 		else
 			echo "Compiling imap without SSL support"
-			myconf="$myconf --with-imap"
+			myconf="${myconf} --with-imap"
 		fi
 	fi
-	use libwww && myconf="$myconf --with-xml" || myconf="$myconf --disable-xml"
-	use flash && myconf="$myconf --with-swf=/usr --with-ming=/usr"
+	use libwww && myconf="${myconf} --with-xml" || myconf="${myconf} --disable-xml"
+	use flash && myconf="${myconf} --with-swf=/usr --with-ming=/usr"
 
 	if [ "`use xml`" ] ; then
 		export LIBS="-lxmlparse -lxmltok"
-		myconf="$myconf --with-sablot=/usr"
+		myconf="${myconf} --with-sablot=/usr"
 	fi
 
-	use xml2 && myconf="$myconf --with-dom"
-	use crypt && myconf="$myconf --with-mcrypt --with-mhash"
-	use java && myconf="$myconf --with-java=${JDK_HOME}"
+	use xml2 && myconf="${myconf} --with-dom"
+	use crypt && myconf="${myconf} --with-mcrypt --with-mhash"
+	use java && myconf="${myconf} --with-java=${JDK_HOME}"
 
 	LDFLAGS="$LDFLAGS -ltiff -ljpeg"
 
 	if [ "`use X`" ] ; then
-		myconf="$myconf --with-xpm-dir=/usr/X11R6"
+		myconf="${myconf} --with-xpm-dir=/usr/X11R6"
 		LDFLAGS="$LDFLAGS -L/usr/X11R6/lib"
 	fi
     
