@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.7a.ebuild,v 1.6 2003/03/12 14:18:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.7a.ebuild,v 1.7 2003/06/08 02:16:31 seemant Exp $
 
 DESCRIPTION="Single process stack of various system monitors"
 SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.bz2"
@@ -11,14 +11,14 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc alpha sparc"
 IUSE="gtk gtk2 nls"
 
-DEPEND="gtk? (  >=x11-libs/gtk+-2.0.5 )
+DEPEND=">=sys-apps/sed-4
+	gtk? (  >=x11-libs/gtk+-2.0.5 )
 	gtk2? ( >=x11-libs/gtk+-2.0.5 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 	if [ ! "`use nls`" ]; then
-		cp Makefile Makefile.orig
-		sed -e "s:enable_nls=1:enable_nls=0:" Makefile.orig > Makefile
+		sed -i "s:enable_nls=1:enable_nls=0:" Makefile
 	fi
 	
 	if use gtk2 || use gtk
