@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmsmixer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.9 2004/06/28 21:31:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.10 2004/06/30 08:25:32 s4t4n Exp $
+
+  *wmsmixer-0.5.1 (30 June 2004)
+
+  30 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> wmsmixer-0.5.1.ebuild:
+  Version Bump. No longer need for gcc3.diff as the problem
+  was fixed upstream. wmsmixer now installs in /usr/bin/ instead
+  of /usr/X11R6/bin/
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmsmixer-0.5.ebuild:
   glibc -> libc
