@@ -227,3 +227,4 @@ move dev-libs/cln sci-libs/cln
 move dev-libs/djbfft sci-libs/djbfft
 move dev-libs/galib sci-libs/galib
 move dev-libs/gaul-devel sci-libs/gaul-devel
+move dev-libs/gsl sci-libs/gsl
