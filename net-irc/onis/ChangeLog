@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/onis
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/ChangeLog,v 1.4 2004/08/05 23:28:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/ChangeLog,v 1.5 2004/09/07 23:28:30 swegener Exp $
+
+  08 Sep 2004; Sven Wegener <swegener@gentoo.org> -onis-0.6.0.ebuild,
+  onis-0.6.1.ebuild:
+  Marked stable on x86. Removed old ebuild.
 
 *onis-0.6.1 (06 Aug 2004)
 
