@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/desklet-clock-0.32.ebuild,v 1.3 2003/11/01 03:05:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/desklet-clock-0.32.ebuild,v 1.4 2004/04/30 20:37:55 pvdabeel Exp $
 
 DESKLET_NAME="Clock"
 
