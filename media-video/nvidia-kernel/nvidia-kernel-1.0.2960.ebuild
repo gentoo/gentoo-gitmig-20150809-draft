@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2960.ebuild,v 1.4 2002/07/23 00:04:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2960.ebuild,v 1.5 2002/08/16 01:07:10 agenkin Exp $
 
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
@@ -10,10 +10,6 @@ NV_PACKAGE=NVIDIA_kernel-${NV_V}
 S="${WORKDIR}/${NV_PACKAGE}"
 SRC_URI="ftp://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz
 	http://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"
-
-SLOT="0"
-LICENSE="NVIDIA"
-KEYWORDS="x86 -ppc -sparc -sparc64"
 
 DEPEND="virtual/linux-sources
 	>=sys-apps/portage-1.9.10"
