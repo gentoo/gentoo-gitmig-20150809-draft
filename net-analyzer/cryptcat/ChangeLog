@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cryptcat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/ChangeLog,v 1.6 2004/08/13 10:19:13 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/ChangeLog,v 1.7 2004/11/20 03:21:24 weeve Exp $
+
+  19 Nov 2004; Jason Wever <weeve@gentoo.org> cryptcat-20031202.ebuild:
+  Stable on sparc.
 
   13 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> cryptcat-20031202.ebuild:
   Marked ~amd64.
