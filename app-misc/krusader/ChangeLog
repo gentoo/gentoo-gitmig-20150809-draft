@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/krusader
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.25 2004/07/01 11:58:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.26 2004/07/22 11:20:45 carlo Exp $
+
+*krusader-1.40 (22 Jul 2004)
+
+  22 Jul 2004; Carsten Lohrke <carlo@gentoo.org>
+  -files/krusader-1.40_beta1-gcc34-goodness.diff, +krusader-1.40.ebuild,
+  -krusader-1.40_beta1-r1.ebuild, -krusader-1.40_beta1.ebuild,
+  -krusader-1.40_beta2.ebuild:
+  version bump, removed beta ebuilds
 
   01 Jul 2004; Aron Griffis <agriffis@gentoo.org> krusader-1.30.ebuild,
   krusader-1.40_beta1-r1.ebuild, krusader-1.40_beta1.ebuild,
