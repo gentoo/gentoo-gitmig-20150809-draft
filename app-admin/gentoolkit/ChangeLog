@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.33 2002/07/26 06:07:42 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.34 2002/07/28 19:28:54 karltk Exp $
+
+*gentoolkit-0.1.15-r2 (28 Jul 2002)
+
+  28 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.15-r2.ebuild files/digest-gentoolkit-0.1.15-r2:
+
+  Added dependency on grep-2.5-r1 or newer, as old systems may actually not
+  have 2.5 installed.
+
+  Removed gentoolkit-0.1.15-r1.ebuild files/digest-gentoolkit-0.1.15-r1
 
 *gentoolkit-0.1.15-r1 (19 Jul 2002)
 
