@@ -1,6 +1,9 @@
 # ChangeLog for media-video/helixplayer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.5 2005/03/27 06:21:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.6 2005/03/30 11:57:16 luckyduck Exp $
+
+  30 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> helixplayer-1.0.3.ebuild:
+  now we generate a menu entry for the helixplayer, fixes #75554 and #60633
 
 *helixplayer-1.0.3 (27 Mar 2005)
 

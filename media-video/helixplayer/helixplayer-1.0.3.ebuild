@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.3.ebuild,v 1.1 2005/03/27 06:21:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.3.ebuild,v 1.2 2005/03/30 11:57:16 luckyduck Exp $
 
 inherit nsplugins eutils
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~x86 -sparc -amd64"
 IUSE="mozilla nptl"
 DEPEND="media-libs/libtheora
-		media-libs/libogg"
+	media-libs/libogg"
 RDEPEND=">=dev-libs/glib-2
-		>=x11-libs/pango-1.2
-		>=x11-libs/gtk+-2.2"
+	>=x11-libs/pango-1.2
+	>=x11-libs/gtk+-2.2"
 
 # Had to change the source directory because of this somewhat
 # non-standard naming convention
@@ -36,6 +36,9 @@ src_unpack() {
 
 	#fixes sem_t based issues
 	use nptl && epatch ${FILESDIR}/${P}-sem_t.patch
+
+	#fixes icon name in .desktop file
+	sed -i -e 's:hxplay.png:hxplay:' ${S}/player/installer/common/hxplay.desktop
 }
 
 src_compile() {
@@ -66,4 +69,12 @@ src_install() {
 	fi
 
 	doenvd ${FILESDIR}/50helix
+
+	for res in 16 192 32 48; do
+		insinto /usr/share/icons/hicolor/${res}x${res}/apps
+		newins ${S}/player/app/gtk/res/icons/hxplay/hxplay_${res}x${res}.png \
+				hxplay.png
+	done
+
+	domenu ${S}/player/installer/common/hxplay.desktop
 }
