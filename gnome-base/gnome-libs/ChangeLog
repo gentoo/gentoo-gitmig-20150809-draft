@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/gnome-libs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.12 2002/10/23 18:45:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.13 2002/12/06 22:23:23 mholzer Exp $
 
 *gnome-libs-1.4.2 (19 Aug 2002)
+
+  06 Dec 2002; Martin Holzer <mholzer@gentoo.org> gnome-libs-1.4.2.ebuild :
+  Changes SRC_URI.
   
   23 Oct 2002; Spider <spider@gentoo.org> gnome-libs-1.4.2.ebuild :
   removed the "use doc" install hack (it gets installed anyhow) and change 
