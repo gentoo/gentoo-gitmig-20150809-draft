@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.15 2002/09/27 09:55:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.16 2002/10/09 20:11:28 azarah Exp $
+
+  09 Oct 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r7.ebuild,
+                                                    glibc-2.2.5-divdi3.diff :
+
+  Add divdi3 patches for PPC, thanks to nall <nall@themountaingoats.net>.
 
 *glibc-2.2.5-r8 (27 Sep 2002)
   

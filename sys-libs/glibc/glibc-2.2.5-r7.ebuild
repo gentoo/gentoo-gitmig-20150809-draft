@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.8 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.9 2002/10/09 20:11:28 azarah Exp $
 
 IUSE="nls pic build"
 inherit flag-o-matic
@@ -35,8 +35,8 @@ fi
 PROVIDE="virtual/glibc"
 
 #lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
-export CFLAGS="$CFLAGS -O2"
-export CXXFLAGS="$CFLAGS"
+export CFLAGS="${CFLAGS//-O?} -O2"
+export CXXFLAGS="${CFLAGS}"
 
 src_unpack() {
 	unpack glibc-${PV}.tar.bz2 || die
@@ -88,10 +88,10 @@ src_unpack() {
 	#
 	cd ${S}; patch -p1 < ${FILESDIR}/${P}-sunrpc-overflow.diff || die
 
-	if [ "${ARCH}" = "x86" ]; then
-	# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
-        # http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
-        cd ${S}; patch -p1 < ${FILESDIR}/glibc-divdi3.diff || die
+	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" ]; then
+		# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
+		# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
+		cd ${S}; patch -p1 < ${FILESDIR}/${P}-divdi3.diff || die
 	fi
 	
 	# Some gcc-3.1.1 fixes.  This works fine for other versions of gcc as well,
@@ -115,8 +115,11 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
+
 	# If we build for the build system we use the kernel headers from the target
-	use build && myconf="${myconf} --with-header=${ROOT}usr/include"
+	use build \
+		&& myconf="${myconf} --with-header=${ROOT}usr/include"
+	
 	use nls || myconf="${myconf} --disable-nls"
 	
 	rm -rf buildhere
