@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/libtlen-20031114.ebuild,v 1.7 2004/07/01 22:27:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/libtlen-20031114.ebuild,v 1.8 2005/03/27 00:55:15 luckyduck Exp $
 
 DESCRIPTION="Support library for Tlen IMS"
 HOMEPAGE="http://libtlen.eu.org/"
