@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.76 2004/10/07 17:19:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.77 2004/10/07 21:50:54 kloeri Exp $
+
+  07 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  ghostscript-7.07.1-r7.ebuild:
+  Stable on alpha, bug 66357.
 
   07 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   ghostscript-7.07.1-r7.ebuild:
