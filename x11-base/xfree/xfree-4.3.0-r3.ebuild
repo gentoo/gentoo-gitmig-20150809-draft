@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.14 2003/06/05 02:12:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.15 2003/06/05 02:34:11 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -1067,6 +1067,10 @@ pkg_postinst() {
 	einfo "Any custom cursor sets should be placed in that directory"
 	einfo "This is different from the previous versions of 4.3 and"
 	einfo "the 4.2.99 series."
+	einfo 
+	ewarn "New in this release: if you wish to set system-wide default"
+	ewarn "cursors, please set them in /usr/local/share/cursors/xfree"
+	ewarn "so that future emerges will not overwrite those settingse"
 
 }
 
