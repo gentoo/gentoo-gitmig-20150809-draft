@@ -9,6 +9,9 @@ then
     exit 1
 fi
 
+#allow any envvars to be set like QTDIR, even if Qt was just installed
+#2 minutes ago.
+source /etc/profile
 source /etc/make.conf
 export PROXY
 export HTTP_PROXY

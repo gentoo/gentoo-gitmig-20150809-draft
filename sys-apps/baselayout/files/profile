@@ -22,9 +22,9 @@ fi
 
 # Set Var for QT
 
-if [ -d /usr/lib/qt-copy-1.92 ] ; then
-  export QTDIR="/usr/lib/qt-copy-1.92"
-  PATH=$PATH:/usr/lib/qt-copy-1.92/bin
+if [ -d /usr/lib/qt-x11-2.2.0 ] ; then
+  export QTDIR="/usr/lib/qt-x11-2.2.0"
+  PATH=$PATH:/usr/lib/qt-x11-2.2.0/bin
 fi
 
 # Set Var for KDE
