@@ -1,17 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.2 2003/02/13 13:53:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.3 2003/04/18 18:51:35 seemant Exp $
 
 IUSE="X"
+
 S=${WORKDIR}/${PN}
 DESCRIPTION="ISDN-4-Linux Utils"
 SRC_URI="ftp://ftp.isdn4linux.de/pub/isdn4linux/utils/${PN}.v3.2p1.tar.bz2"
 HOMEPAGE="http://www.isdn4linux.de/"
+
 SLOT="0"
 KEYWORDS="x86"
 LICENSE="GPL-2"
 
-RDEPEND="virtual/glibc
+RDEPEND=">=sys-apps/portage-2.0.47-r10
+	virtual/glibc
 	sys-libs/ncurses
 	sys-libs/gdbm
 	X? ( virtual/x11 )"
@@ -47,7 +50,7 @@ src_unpack() {
 		> .config || die
 
 	# Patch in order to make generic config for countries which are not known to isdnlog source
-	patch -p1 < ${FILESDIR}/${PVR}/gentoo.patch || die
+	epatch ${FILESDIR}/${PVR}/gentoo.patch
 
 	#disabling device creation the easy way:
 	echo "#!/bin/bash" > scripts/makedev.sh
