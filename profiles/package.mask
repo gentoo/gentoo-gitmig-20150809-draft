@@ -795,3 +795,8 @@ sys-apps/texinfo
 # patch to support gcc3.1 -- masked until someone tests this with
 # gcc2.95.3
 =x11-libs/gtkmm-1.2.9-r1
+
+# mkennedy@gentoo.org 22 May 2002
+# patch to support gcc3.1 -- masked until someone tests this with
+# gcc2.95.3 etc.
+=net-www/galeon-1.2.1-r2
