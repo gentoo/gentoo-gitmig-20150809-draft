@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.04-r1.ebuild,v 1.4 2004/12/20 10:29:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.04-r1.ebuild,v 1.5 2005/03/07 15:21:51 mcummings Exp $
 
 IUSE=""
 inherit perl-module eutils

@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gnome2-wnck
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.6 2004/12/20 10:29:23 mcummings Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.7 2005/03/07 15:21:51 mcummings Exp $
+
+*gnome2-wnck-0.10 (07 Mar 2005)
+
+  07 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  +gnome2-wnck-0.10.ebuild:
+  version bump; bug 57713
 
   20 Dec 2004; Michael Cummings <mcummings@gentoo.org>
   gnome2-wnck-0.04-r1.ebuild:
