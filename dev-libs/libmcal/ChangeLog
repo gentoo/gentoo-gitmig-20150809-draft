@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.12 2004/08/07 21:54:30 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.13 2004/08/08 18:18:11 robmoss Exp $
+
+  08 Aug 2004; <rmoss@gentoo.org> files/libmcal-0.7-fpic.patch:
+  Updating the PIC patch so it creates PIC icap and mstore as well.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> libmcal-0.7-r1.ebuild,
   libmcal-0.7-r2.ebuild, libmcal-0.7.ebuild:

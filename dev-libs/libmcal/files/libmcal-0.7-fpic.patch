@@ -28,3 +28,29 @@
  
  lex.ical_yy.c: icalscanner.lex
  	$(FLEX) $<
+--- mstore/Makefile.old	2004-08-08 16:37:13.641537544 +0100
++++ mstore/Makefile	2004-08-08 16:37:35.473218624 +0100
+@@ -8,6 +8,10 @@
+ ALLOBJS=mstore.o
+ TARGET=mstore_driver.o
+ 
++%.o: %.c
++	gcc $(CFLAGS) -fPIC $(INCLUDE) -c -o $@ $<
++
++
+ all: $(TARGET)
+ 
+ 
+--- icap/Makefile.old	2004-08-08 16:38:58.353618888 +0100
++++ icap/Makefile	2004-08-08 16:39:18.841504256 +0100
+@@ -7,6 +7,10 @@
+ ALLOBJS=icap.o icaproutines.o lex.icap_yy.o
+ TARGET=icap_driver.o
+ 
++%.o: %.c
++	gcc $(CFLAGS) -fPIC $(INCLUDE) -c -o $@ $<
++
++
+ all: $(TARGET)
+ 
+ 
