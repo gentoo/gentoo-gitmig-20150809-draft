@@ -8,6 +8,7 @@
 ;;; Heavy modifications by Peter Van Eynde
 
 ;;; More modifications for Gentoo by Matthew Kennedy
+;;; <mkennedy@gentoo.org>
 
 (in-package "SYSTEM")
 
@@ -33,70 +34,25 @@
 
 ;;; newbie functions, delete if you don't like them
 
-#-hemlock
-(defun ed (&rest rest)
-  (multiple-value-bind (return errorp)
-    (ignore-errors (require :cmucl-hemlock))
-   (if errorp
-     (error "Sorry, cannot find hemlock, please install and use ilisp. Reason: ~S" errorp)
-    (apply #'ed rest))))
-
 (defun help ()
   (format t "~
-Welcome to CMUCL for Linux.
+Welcome to the Gentoo GNU/Linux port of CMUCL.
 
-If you aren't running this with ilisp in emacs,
-or aren't intending to use hemlock then you
-deserve to lose. :-)
+If you aren't running this with ILISP (see: app-emacs/ilisp or
+app-xemacs/ilisp) in Emacs, or don't intend to use Hemlock
+(see: dev-lisp/cmucl-source) then you deserve to lose. :-)
+
+The CMUCL REPL does not have GNU Readline-like support, however
+you may wish to install rlwap (see: app-misc/rlwrap) to achieve
+the same effect.
+
+If you think you found a bug, please use http://bugs.gentoo.org
 
 Read the documentation in /usr/share/doc/@PF@.
 
-(quit) is to quit.
-(ed) starts hemlock (if installed)
-(demo) shows a list of demos
-(describe 'progn) gives information about progn for 
- example.
-(inspect '*a*) interactively inspects *a* for example.
+(quit)            exit Lisp
+(describe 'foo)   gives information about foo
+(inspect '*foo*)  interactively inspects *foo*
+(apropos \"foo\") briefly describe all symbols which match \"foo\"
 "))
-
-(defun demo ()
-  (format t "Some demos are in the source package, some in the
-normal package.
-
-General demos:
-CLX demos:
- if you have installed cmucl-source you can do:
- (require :cmucl-clx)
- (load \"cl-library:cmucl-clx;demo;hello\")
- (xlib::hello-world \"\")
- (load \"cl-library:;cmucl-clx;demo;menu\")
- (xlib::just-say-lisp \"\")
- (xlib::pop-up \"\"
-	       '(\"Linux\" \"FreeBSD\" \"OpenBSD\"))
-  exit by pressing control+C followed by a keypress.
-
-Clue demos:
- if you have installed the clue package you can do:
- (require :clue)
- (load \"cl-library:;clue;examples;menu\")
- (clue-examples::beatlemenuia \"\")
- (clue-examples::pick-one \"\"
-			  \"One\"
-			  \"Two\"
-			  \"Three\")
- (clue-examples::just-say-lisp \"\")
- 
- or you can use the Clio demos:
- (require :clio)
- (require :clio-examples)
- (clio-examples::sketch :host  \"\")
-
-Pictures demos:
- (require :pictures)
- (load \"cl-library:;pictures;examples;road-demo\")
- (pictures::road-demo)
- press control-a to animate
-
-"))
-
 

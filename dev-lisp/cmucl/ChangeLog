@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/cmucl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.3 2003/11/25 17:40:20 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.4 2004/01/28 22:12:37 mkennedy Exp $
+
+*cmucl-18e-r2 (28 Jan 2004)
+
+  28 Jan 2004; <mkennedy@gentoo.org> cmucl-18e-r2.ebuild,
+  files/18e/herald-save.lisp-gentoo.patch,
+  files/18e/install-clc.lisp-gentoo.patch, files/18e/site-init.lisp.in:
+  inherit common-lisp-common; use register-common-lisp-implementation and not
+  /usr/sbin/register-common-lisp-implementation; controller clean up
 
   25 Nov 2003; <mkennedy@gentoo.org> cmucl-18e-r1.ebuild:
   marking stable for x86

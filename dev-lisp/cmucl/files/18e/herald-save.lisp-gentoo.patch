@@ -1,6 +1,7 @@
---- cmucl-18e.orig.orig/src/code/save.lisp	2003-09-23 15:57:49.993364656 -0500
-+++ cmucl-18e.orig/src/code/save.lisp	2003-09-23 15:56:31.261333744 -0500
-@@ -289,12 +289,9 @@
+diff -ur cmucl-18e.original/src/code/save.lisp cmucl-18e/src/code/save.lisp
+--- cmucl-18e.original/src/code/save.lisp	2003-06-08 02:23:44.000000000 -0500
++++ cmucl-18e/src/code/save.lisp	2004-01-14 14:03:28.487836232 -0600
+@@ -289,11 +289,9 @@
  	))
  
  (setf (getf *herald-items* :bugs)
@@ -9,10 +10,9 @@
 -	"or to "
 -	"pvaneynd@debian.org" terpri
 -       "type (help) for help, (quit) to exit, and (demo) to see the demos" terpri
--        terpri
 +      '("For support see http://www.cons.org/cmucl/support.html" terpri
-+	"Send bug reports to the Gentoo Bugzilla http://bugs.gentoo.org" terpri
-+	"Type (help) for help, (quit) to exit, and (demo) to see the demos" terpri
++	"Send bug reports to http://bugs.gentoo.org." terpri
++	"Type (help) for help or (quit) to exit." terpri
+         terpri
  	"Loaded subsystems:"))
  
- ;;; PRINT-HERALD  --  Public

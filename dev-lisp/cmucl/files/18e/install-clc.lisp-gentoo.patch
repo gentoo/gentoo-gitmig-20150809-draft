@@ -1,0 +1,35 @@
+diff -ur cmucl-18e.original/own-work/install-clc.lisp cmucl-18e/own-work/install-clc.lisp
+--- cmucl-18e.original/own-work/install-clc.lisp	2003-05-02 02:49:32.000000000 -0500
++++ cmucl-18e/own-work/install-clc.lisp	2004-01-15 02:25:05.514260000 -0600
+@@ -10,15 +10,17 @@
+           (load "/usr/share/common-lisp/source/common-lisp-controller/common-lisp-controller.lisp"))
+   (unix:unix-exit 1))
+ 
+-(unless (ignore-errors
++;; (unless (ignore-errors
+           (common-lisp-controller:init-common-lisp-controller 
+            "/usr/lib/common-lisp/cmucl/"
+            :version 3)
+-          t)
+-  (format t "~%Error during init of common-lisp-controller~%")
+-  (unix:unix-exit 1))
++;;           t)
++;;   (format t "~%Error during init of common-lisp-controller~%")
++;;   (unix:unix-exit 1))
+ 
+-(defun common-lisp-controller:send-clc-command (command package)
++(in-package :common-lisp-controller)
++
++(defun send-clc-command (command package)
+   (let ((process
+          (ext:run-program "/usr/bin/clc-send-command"
+                           (list
+@@ -40,6 +42,8 @@
+                package
+ 	       "cmucl"))))
+ 
++(in-package "COMMON-LISP-USER")
++
+ (unless (ignore-errors
+           ;; it loaded, configure it for common-lisp-controller use:
+           (format t "~%Saving to new-lisp.core...")
