@@ -1,0 +1,37 @@
+--- Makefile.org	2003-03-11 21:30:41.000000000 +0000
++++ Makefile	2003-03-11 21:47:14.000000000 +0000
+@@ -16,8 +16,8 @@
+ 
+ DVBDIR   = ../DVB
+ DTVDIR   = ./libdtv
+-MANDIR   = /usr/local/man
+-BINDIR   = /usr/local/bin
++MANDIR   = /usr/man
++BINDIR   = /usr/bin
+ 
+ PLUGINDIR= ./PLUGINS
+ 
+@@ -117,12 +117,18 @@
+ # Install the files:
+ 
+ install:
+-	@cp vdr runvdr $(BINDIR)
+-	@gzip -c vdr.1 > $(MANDIR)/man1/vdr.1.gz
+-	@gzip -c vdr.5 > $(MANDIR)/man5/vdr.5.gz
++	@mkdir -p $(DESTDIR)$(BINDIR)
++	@mkdir -p $(BINDIR)
++	@cp vdr runvdr $(DESTDIR)$(BINDIR)
++	@mkdir -p $(DESTDIR)$(MANDIR)/man1
++	@mkdir -p $(DESTDIR)$(MANDIR)/man5
++	@mkdir -p $(MANDIR)/man1
++	@mkdir -p $(MANDIR)/man5
++	@gzip -c vdr.1 > $(DESTDIR)$(MANDIR)/man1/vdr.1.gz
++	@gzip -c vdr.5 > $(DESTDIR)$(MANDIR)/man5/vdr.5.gz
+ 	@if [ ! -d $(VIDEODIR) ]; then\
+-            mkdir $(VIDEODIR);\
+-            cp *.conf $(VIDEODIR);\
++            mkdir $(DESTDIR)$(VIDEODIR);\
++            cp *.conf $(DESTDIR)$(VIDEODIR);\
+             fi
+ 
+ # Source documentation:
