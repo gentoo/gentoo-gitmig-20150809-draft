@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.5 2003/03/30 19:38:14 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.6 2003/04/23 22:01:12 liquidx Exp $
+
+*gramps-0.9.1 (23 Apr 2003)
+
+  23 Apr 2003; Alastair Tse <liquidx@gentoo.org> gramps-0.9.1.ebuild:
+  version bump. gnome2-ize menu shortcut location
 
 *gramps-0.9.0 (30 Mar 2003)
 
