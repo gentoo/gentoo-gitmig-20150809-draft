@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2-r1.ebuild,v 1.2 2003/06/02 13:03:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3.ebuild,v 1.1 2003/06/02 13:03:23 liquidx Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
-PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
-PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
+PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
+PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
 S="${WORKDIR}/Python-${PV}"
 DESCRIPTION="A really great language"
-SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz"
+SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz"
 
 HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
@@ -37,12 +37,6 @@ PROVIDE="virtual/python"
 SLOT="2.2"
 
 inherit flag-o-matic
-
-src_unpack() {
-	unpack ${A}
-	einfo "Applying python-2.2.2-tk8.4.x.patch .."
-	cd ${S}; patch -p4 < ${FILESDIR}/${P}-tk-8.4.x.patch
-}
 
 src_compile() {
 	filter-flags -malign-double
@@ -73,9 +67,10 @@ src_compile() {
 src_install() {
 	dodir /usr
 	make install prefix=${D}/usr || die
+	
 	rm -f ${D}/usr/bin/python
-	dosym python${PYVER_MAJOR} /usr/bin/python
 	dosym python${PYVER_MAJOR}.${PYVER_MINOR} /usr/bin/python${PYVER_MAJOR}
+	dosym python${PYVER_MAJOR} /usr/bin/python	
 	dodoc README
 
 	# install our own custom python-config
