@@ -1,4 +1,4 @@
-MD5 4dac575a98a8a0c243fc8059fe8b4391 ChangeLog 4304
+MD5 ba8aec59f092b814c5258c49f5ec09b2 ChangeLog 4376
 MD5 df57ef8725ba1a35553f00ae1f40fdda cdrdao-1.1.5-r1.ebuild 2603
 MD5 9690dcaee895d52a1b0c4fed8f60dbf6 cdrdao-1.1.7-r2.ebuild 2753
 MD5 9945c13d43819d7f1f712389dba3ac0d cdrdao-1.1.7.ebuild 1941
@@ -14,4 +14,4 @@ MD5 e21496bf5b1e2efcd09be0b16241b165 files/digest-cdrdao-1.1.7 69
 MD5 e21496bf5b1e2efcd09be0b16241b165 files/digest-cdrdao-1.1.7-r2 69
 MD5 e21496bf5b1e2efcd09be0b16241b165 files/digest-cdrdao-1.1.7-r3 69
 MD5 bfcab12a6211829eb71aa6ee3d0245be files/gcdmaster.desktop 127
-MD5 30dbca333c85f84db7f86414d112ce68 files/digest-cdrdao-1.1.8 65
+MD5 4982087a6a964cb6f399cef0b52ab638 files/digest-cdrdao-1.1.8 65
