@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.15 2004/07/18 13:00:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.16 2004/07/18 22:57:35 dragonheart Exp $
+
+  19 Jul 2004; Daniel Black <dragonheart@gentoo.org> pikdev-0.6.6a.ebuild:
+  x86 keyworded due to bug #57472 being invalid. Thanks Colin Tinker
+  <g1gsw@g1gsw.org> for working it out on your own.
 
   18 Jul 2004; Daniel Black <dragonheart@gentoo.org> pikdev-0.6.6a.ebuild:
   ~x86 keyworded due to bug #57472
