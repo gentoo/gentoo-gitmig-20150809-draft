@@ -7,7 +7,7 @@
 #
 # <fs>          <mountpoint>    <type>  	<opts>      		<dump/pass>
 
-dev/#BOOT#	/boot		ext2		noauto,noatime		1 1
+/dev/#BOOT#	/boot		ext2		noauto,noatime		1 1
 /dev/#ROOT#	/		reiserfs	notail,noatime		0 0
 /dev/#SWAP#	none            swap		sw			0 0
 /dev/#CD#	/mnt/cdrom	iso9660		noauto,ro		0 0
