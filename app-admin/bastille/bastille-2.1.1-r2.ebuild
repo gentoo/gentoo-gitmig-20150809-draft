@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r2.ebuild,v 1.1 2004/01/14 02:18:45 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r2.ebuild,v 1.2 2004/03/21 02:10:48 battousai Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 IUSE="X"
 
@@ -28,6 +28,7 @@ RDEPEND="net-firewall/iptables
 src_unpack() {
 	unpack ${A}
 	epatch ${WORKDIR}/${P}-gentoo-${PATCHVER}.patch
+	epatch ${FILESDIR}/bastille-firewall-imap.patch
 }
 
 src_compile() {

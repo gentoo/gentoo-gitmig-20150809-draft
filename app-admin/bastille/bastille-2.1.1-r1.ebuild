@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r1.ebuild,v 1.3 2004/01/14 02:18:45 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r1.ebuild,v 1.4 2004/03/21 02:10:48 battousai Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 IUSE="X"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}-linux/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 RDEPEND="net-firewall/iptables
 	app-admin/logrotate
@@ -28,6 +28,7 @@ RDEPEND="net-firewall/iptables
 src_unpack() {
 	unpack ${A}
 	epatch ${WORKDIR}/${P}-gentoo-${PATCHVER}.patch
+	epatch ${FILESDIR}/bastille-firewall-imap.patch
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.5 2004/01/14 02:18:45 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.6 2004/03/21 02:10:48 battousai Exp $
+
+  22 Mar 2004; Bryan Stine <battousai@gentoo.org> bastille-2.1.1-r1.ebuild,
+  bastille-2.1.1-r2.ebuild, files/bastille-firewall-imap.patch:
+  Bumped 2.1.1-r1 to stable. Added a patch to replace all 'imap' service
+  references to 'imap2' for compatibility with /etc/services.
 
 *bastille-2.1.1-r2 (13 Jan 2004)
 
