@@ -1,0 +1,52 @@
+--- metacity-2.4.1.orig/src/screen.c	Tue Aug  6 14:25:48 2002
++++ metacity-2.4.1/src/screen.c	Thu Aug 15 00:35:11 2002
+@@ -1334,6 +1334,7 @@
+     }
+ }
+ 
++
+ void
+ meta_screen_calc_workspace_layout (MetaScreen *screen,
+                                    int         num_workspaces,
+@@ -1368,17 +1369,34 @@
+   if (rows <= 0 && cols <= 0)
+     cols = num_workspaces;
+ 
+-  if (rows <= 0)
+-    rows = num_workspaces / cols + ((num_workspaces % cols) > 0 ? 1 : 0);
+-  if (cols <= 0)
+-    cols = num_workspaces / rows + ((num_workspaces % rows) > 0 ? 1 : 0);
++  if (rows <= 0) {
++    /* fix PPC compile issue
++     * ICE occurs using embedded macro in calculation, split 
++     * into if statements 
++     */
++    if ((num_workspaces % cols) > 0) { 
++      rows = num_workspaces / cols + 1;
++    } else {
++      rows  = num_workspaces / cols;
++    }
++  }
++  if (cols <= 0) {
++    /* another fix for PPC compile issue */
++    if ((num_workspaces % rows) > 0) {
++      cols = num_workspaces / rows + 1;
++    } else {
++      cols = num_workspaces / rows;
++    }
++  }
+ 
+   /* paranoia */
++
+   if (rows < 1)
+     rows = 1;
+   if (cols < 1)
+     cols = 1;
+ 
+-  *r = rows;
+-  *c = cols;
++  r[0] = rows;
++  c[0] = cols;
+ }
++
+

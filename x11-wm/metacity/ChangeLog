@@ -1,9 +1,12 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.12 2002/09/20 23:23:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.13 2002/09/26 02:32:38 gerk Exp $
 
-*metacit-2.4.1 (20 Sep 2002)
-  
+*metacity-2.4.1 (20 Sep 2002)
+  25 Sep 2002; Mark Guertin <gerk@gentoo.org> metacity-2.4.1.ebuild : 
+  updated ppc patch and re-insterted (still needed).  Patch is being
+  re-submitted upstream.
+
   20 Sep 2002; Spider <spider@gentoo.org> metacity-2.4.1.ebuild : version bump,
   removed the ppc patch
 
