@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.71 2004/12/28 22:11:34 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.72 2005/01/27 00:32:43 mr_bones_ Exp $
+
+  26 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  xscreensaver-4.16.ebuild:
+  revert the KDEDIR change since it causes the install to break
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
