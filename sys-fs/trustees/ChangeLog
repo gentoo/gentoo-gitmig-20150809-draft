@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/trustees
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.4 2003/10/29 20:08:34 max Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.5 2004/03/10 18:16:50 max Exp $
+
+  10 Mar 2004; Max Kalika <max@gentoo.org> trustees-2.10.ebuild:
+  Ditch sed dependency.
 
   29 Oct 2003; Max Kalika <max@gentoo.org> trustees-2.10.ebuild:
   Really fix link error. Move kernel check to pkg_setup(). Add echo of the
