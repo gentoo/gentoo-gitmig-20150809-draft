@@ -1,0 +1,14 @@
+--- karbon/configure.in.in.old	2002-11-30 18:23:39.000000000 +0100
++++ karbon/configure.in.in	2003-05-17 19:25:56.000000000 +0200
+@@ -64,6 +64,11 @@
+   AC_MSG_WARN([Could not find fontconfig anywhere, please check http://fontconfig.org])
+ ])
+ 
++PKG_CHECK_MODULES(FONTCONFIG, fontconfig)
++if test -n "$FONTCONFIG_LIBS"; then
++     AC_DEFINE_UNQUOTED(HAVE_FONTCONFIG, 1, [Defines if your system has the libfontconfig library])
++fi
++
+ if test -n "$FONTCONFIG_CONFIG"; then
+   vers=`$FONTCONFIG_CONFIG --version 2>/dev/null | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
+   if test -n "$vers" && test "$vers" -ge 1000001

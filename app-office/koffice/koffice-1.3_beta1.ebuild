@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3_beta1.ebuild,v 1.1 2003/04/16 18:22:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3_beta1.ebuild,v 1.2 2003/05/19 13:02:52 brain Exp $
 inherit kde-base flag-o-matic
 
 # TODO : mysql support
@@ -24,7 +24,8 @@ DEPEND="$DEPEND
 	>=dev-lang/python-2.2.1
 	>=media-libs/libart_lgpl-2.3.9
 	>=media-gfx/imagemagick-5.4.5
-	>=app-text/wv2-0.0.9"
+	>=app-text/wv2-0.0.9
+	dev-util/pkgconfig"
 
 export LIBPYTHON="`python-config --libs`"
 export LIBPYTHON="${LIBPYTHON//-L \/usr\/lib\/python2.2\/config}"
@@ -32,3 +33,10 @@ export LIBPYTHON="${LIBPYTHON//-L \/usr\/lib\/python2.2\/config}"
 need-automake 1.5
 need-autoconf 2.5
 
+PATCHES="$FILESDIR/$P-fontconfig-2.2-support.diff"
+
+src_compile() {
+	rm -f configure configure.in
+	kde_src_compile configure
+	kde_src_compile make
+}
