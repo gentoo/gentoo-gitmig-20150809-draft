@@ -1,11 +1,11 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0.11.ebuild,v 1.1 2001/11/24 05:23:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0.19.ebuild,v 1.1 2001/12/12 20:26:28 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU text utilities"
-SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz"
+SRC_URI="http://fetish.sf.net/${P}.tar.gz"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
