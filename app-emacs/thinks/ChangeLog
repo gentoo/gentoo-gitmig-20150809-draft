@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/thinks
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thinks/ChangeLog,v 1.2 2004/06/24 22:25:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thinks/ChangeLog,v 1.3 2004/11/01 13:34:41 usata Exp $
+
+  01 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> thinks-1.8.ebuild:
+  Stable on x86. Added to ~alpha and ~ppc-macos.
 
 *thinks-1.8 (12 Nov 2003)
 
