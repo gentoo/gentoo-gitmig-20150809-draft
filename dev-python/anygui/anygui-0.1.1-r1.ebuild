@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.15 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.16 2003/07/12 23:00:50 aliz Exp $
 
 IUSE="wxwin gtk qt tcltk"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://anygui.sourceforge.net/"
 
 DEPEND=">=dev-lang/python-2.0
 	sys-libs/ncurses
-	qt? ( =dev-python/PyQt-2.4* ) 
+	qt? ( dev-python/PyQt ) 
 	gtk? ( dev-python/pygtk )
 	tcltk? ( dev-lang/tk )
 	wxwin? ( dev-python/wxPython )"
