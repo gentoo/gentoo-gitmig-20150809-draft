@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1-r1.ebuild,v 1.1 2002/11/19 02:07:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1-r1.ebuild,v 1.2 2002/11/30 21:57:50 vapier Exp $
 
 IUSE="perl nls gnome build spell jpeg xml2"
 
@@ -56,8 +56,7 @@ src_compile() {
 
 	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
 	
-	econf \
-		${myconf} || die
+	econf ${myconf}
 
 	make || die
 }
@@ -66,7 +65,7 @@ src_install() {
 
 	dodir /usr/{bin,lib}
 
-	einstall PERLDEST=${D} || die
+	einstall PERLDEST=${D}
 	
 	dosed "s:${D}::g" /usr/bin/AbiWord
 	

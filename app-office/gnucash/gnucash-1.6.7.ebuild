@@ -1,19 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.7.ebuild,v 1.3 2002/10/05 05:39:09 drobbins Exp $
-
-IUSE="nls postgres"
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.7.ebuild,v 1.4 2002/11/30 22:01:32 vapier Exp $
 
 inherit flag-o-matic
 
-
-S=${WORKDIR}/${P}
 DESCRIPTION="A personal finance manager"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnucash.org/"
+
 KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="nls postgres"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	 >=dev-libs/libxml-1.8.3
@@ -33,7 +31,6 @@ DEPEND="${RDEPEND}
 	dev-util/guile
 	gnome-base/libghttp
 	nls? ( sys-devel/gettext )"
-
 
 # won't configure with this
 filter-flags -fomit-frame-pointer
@@ -56,13 +53,12 @@ src_compile() {
 
 	econf --enable-profile \
 		--enable-rpc \
-		$myconf || die "Configuration failed"
+		${myconf}
 
 	make || die # Doesn't work with make -j 4 (hallski)
 }
 
-src_install () {
-    einstall || die "Installation failed"
-
-    dodoc ABOUT-NLS AUTHORS COPYING ChangeLog HACKING NEWS README* TODO
+src_install() {
+	einstall
+	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog HACKING NEWS README* TODO
 }

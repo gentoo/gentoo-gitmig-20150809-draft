@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.2-r1.ebuild,v 1.7 2002/10/24 23:23:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.2-r1.ebuild,v 1.8 2002/11/30 21:55:32 vapier Exp $
 
 IUSE="perl nls gnome build spell jpeg xml2"
 
@@ -108,7 +108,7 @@ src_compile() {
 	
 	econf \
 		--enable-extra-optimization \
-		${myconf} || die
+		${myconf}
 
 	# Doesn't work with -j 4 (hallski)
 	make UNIX_CAN_BUILD_STATIC=0 \
@@ -119,7 +119,7 @@ src_install() {
 
 	dodir /usr/{bin,lib}
 
-	einstall PERLDEST=${D} || die
+	einstall PERLDEST=${D}
 	
 	dosed "s:${D}::g" /usr/bin/AbiWord
 	

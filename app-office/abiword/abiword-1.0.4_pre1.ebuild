@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1.ebuild,v 1.4 2002/11/17 22:47:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1.ebuild,v 1.5 2002/11/30 21:57:24 vapier Exp $
 
 #inherit debug
 
@@ -99,8 +99,7 @@ src_compile() {
 
 	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
 	
-	econf \
-		${myconf} || die
+	econf ${myconf}
 	#   --enable-debug \
 
 	make || die
@@ -110,7 +109,7 @@ src_install() {
 
 	dodir /usr/{bin,lib}
 
-	einstall PERLDEST=${D} || die
+	einstall PERLDEST=${D}
 	
 	dosed "s:${D}::g" /usr/bin/AbiWord
 	
