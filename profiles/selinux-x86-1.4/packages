@@ -48,6 +48,8 @@
 # packages, otherwise we'll need to lock down the ver/rev
 *sys-apps/selinux-small
 *sec-policy/selinux-base-policy
+*dev-python/python-selinux
+
 *>=sys-apps/findutils-4.1.7-r3
 # locking procps, selinux code is gone in newer versions
 *=sys-apps/procps-3.1.12
