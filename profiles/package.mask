@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2883 2004/05/29 16:02:21 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2884 2004/05/29 16:17:51 tgall Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -140,10 +140,6 @@ dev-python/pyparted
 =gnome-base/gnome-2.6_p1
 =gnome-base/gnome-2.6.1_p1
 =gnome-base/gnome-2.6.2_p1
-
-# <lu_zero@gentoo.org> (15 Apr 2004)
-# Latest snapshot
-=sys-devel/gcc-3.3.3_pre20040408-r1
 
 # <lanius@gentoo.org> (12 Apr 2004) (upd. 17 Apr 2004)
 # this is an alpha version
