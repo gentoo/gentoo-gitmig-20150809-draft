@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# <george@gentoo.org> (06 Aug 2002)
+# new version, masked for testing.
+# supposedly fixes some ppc problems, ppc people, please test!
+=dev-lang/ocaml-3.05
+
 # <blizzy@gentoo.org> (07 Aug 2002)
 # new package, masked for testing
 net-misc/fmirror
