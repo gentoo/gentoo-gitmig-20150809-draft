@@ -1,6 +1,17 @@
 # ChangeLog for app-editors/jove
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.6 2005/03/11 13:34:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.7 2005/03/25 21:44:02 seemant Exp $
+
+*jove-4.16.0.65 (25 Mar 2005)
+*jove-4.16.0.56 (25 Mar 2005)
+
+  25 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +jove-4.16.0.56.ebuild,
+  -jove-4.16.0.64.ebuild, +jove-4.16.0.65.ebuild:
+  ok, since Debian is effectively the upstream, our stable versions will
+  follow their stable, hence the downgrade to 56. 65-3 is in unstable, so that
+  is the new unstable for us. Sorry if this inconveniences. If you can
+  convince me to do otherwise, please email me. This closes bug #86521 by
+  ian.colquhoun@sheridanc.on.ca
 
 *jove-4.16.0.64 (11 Mar 2005)
 
