@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dlint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.9 2005/01/17 18:08:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.10 2005/03/03 17:23:31 ticho Exp $
+
+*dlint-1.4.0-r2 (03 Mar 2005)
+
+  03 Mar 2005; Andrej Kacian <ticho@gentoo.org> +dlint-1.4.0-r2.ebuild:
+  Fixed 'tail +/usr/share/mc/bin/mc.sh' occurances not caught by
+  fixheadtails.eclass. Thanks to Heiko Helmle <helman@gmx.de> for reporting.
+  Closes bug 83932.
 
   17 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> dlint-1.4.0-r1.ebuild:
   Stable on sparc
