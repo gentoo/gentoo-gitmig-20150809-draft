@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.88 2004/01/23 13:54:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.89 2004/01/26 00:34:09 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -145,6 +145,10 @@ configure_die()
 	echo $@
 	eerror
 	eerror	"Your KDE program installation died while running the configure script"
+	eerror
+	eerror  "If the error was related to not finding the STL, you have a gcc error"
+	eerror  "that is easily fixed by re-emerging the latest version of gcc"
+	eerror
 	eerror
 	eerror	"If the error died during the check for Qt, and you have Qt installed, the problem"
 	eerror	"is most likely due to your nvidia drivers being configured improperly."
