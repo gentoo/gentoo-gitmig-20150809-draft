@@ -145,23 +145,11 @@ media-video/SDLcam
 # useful security tool; masked while in freeze
 app-admin/logsentry
 
-# <bcowan@gentoo.org> (27 Sep 2002)
-# version bumps to many XFS utilities...need testing Thanks to Hanno
-=sys-apps/xfsprogs-2.2.2 
-=sys-apps/acl-2.0.18
-=sys-apps/attr-2.0.9
-=sys-apps/dmapi-2.0.5
-=sys-apps/xfsdump-2.1.5
-
 # <azarah@gentoo.org> (27 Sep 2002)
 #latest gnome-spell
 =app-text/gnome-spell-0.5
 #not compadible with 1.0, or at least not out of the box
 =gnome-extra/gtkhtml-1.1.2
-
-# <bcowan@gentoo.org> (26 Sep 2002)
-#version bump. needs testing to see if patches need to be re-applied
-=net-misc/vnc-3.3.4
 
 # <agenkin@gentoo.org> (26 Sep 2002)
 # Masking pending portage tree unfreeze.
@@ -199,7 +187,6 @@ dev-perl/perl-ldap
 # Masking pending unfreeze.
 >=media-video/ogle-0.8.5
 >=media-video/ogle-gui-0.8.5
-
 
 # <satai@gentoo.org> (20 Sep 2002)
 # Too many problems.  Masking to fix.
