@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-icon-theme
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-icon-theme/ChangeLog,v 1.1 2004/10/04 18:45:22 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-icon-theme/ChangeLog,v 1.2 2004/11/01 03:11:48 bcowan Exp $
+
+*xfce4-icon-theme-4.1.91 (31 Oct 2004)
+
+  31 Oct 2004; Brad Cowan <bcowan@gentoo.org>
+  +xfce4-icon-theme-4.1.91.ebuild:
+  Version bump of beta version of 4.2 release.
 
 *xfce4-icon-theme-4.1.90 (04 Oct 2004)
 

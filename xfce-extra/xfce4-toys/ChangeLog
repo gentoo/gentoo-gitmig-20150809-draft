@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-toys
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-toys/ChangeLog,v 1.35 2004/10/19 09:25:36 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-toys/ChangeLog,v 1.36 2004/11/01 03:16:57 bcowan Exp $
+
+*xfce4-toys-4.1.91 (31 Oct 2004)
+
+  31 Oct 2004; Brad Cowan <bcowan@gentoo.org> +xfce4-toys-4.1.91.ebuild:
+  Version bump of beta version of 4.2 release.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xfce4-toys-4.0.6.ebuild:
   Stable on amd64.
