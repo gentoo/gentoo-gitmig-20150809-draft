@@ -1,43 +1,48 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.8-r1.ebuild,v 1.4 2004/03/25 10:07:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.9-r1.ebuild,v 1.1 2004/04/05 23:06:44 spider Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda gtk2"
 
-inherit eutils
+inherit eutils debug
 
-PATCHVER=20031212
+PATCHVER=20040229
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A lightweight email client and newsreader"
 HOMEPAGE="http://sylpheed.good-day.net/
 	http://sylpheed-gtk2.sourceforge.net/"
 SRC_URI="http://sylpheed.good-day.net/${PN}/${P}.tar.bz2
-	gtk2? ( mirror://sourceforge/${PN}-gtk2/${P}-gtk2-${PATCHVER}.diff.bz2
-		http://dev.gentoo.org/~seemant/extras/${P}-gtk2-${PATCHVER}.diff.bz2 )"
+	gtk2? ( mirror://sourceforge/${PN}-gtk2/${P}-gtk2-${PATCHVER}.tar.gz )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86"
 
 PROVIDE="virtual/sylpheed"
 
-DEPEND="
-	gtk2? ( >=x11-libs/gtk+-2.0  )
-	!gtk2? ( =x11-libs/gtk+-1.2* )
+DEPEND="gtk2? ( >=x11-libs/gtk+-2.0  )
+	!gtk2? ( =x11-libs/gtk+-1.2*
+		gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
+	)
 	xface? ( >=media-libs/compface-1.4 )
 	ssl? ( dev-libs/openssl )
 	pda? ( app-pda/jpilot )
 	crypt? ( >=app-crypt/gnupg-1.0.6 =app-crypt/gpgme-0.3.14 )
 	ldap? ( >=net-nds/openldap-2.0.11 )
-	gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
 	x11-misc/shared-mime-info"
 
+S=${WORKDIR}/${P}
+use gtk2 && S=${WORKDIR}/${P}-gtk2-${PATCHVER}
+
+
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/shared-mime.patch
-	use gtk2 && epatch  ${WORKDIR}/${P}-gtk2-${PATCHVER}.diff
+	if [ `use gtk2` ];
+	then
+		unpack ${P}-gtk2-${PATCHVER}.tar.gz
+	else
+		unpack ${P}.tar.bz2
+	fi
 }
 
 src_compile() {
@@ -49,7 +54,6 @@ src_compile() {
 		use gnome || myconf="${myconf} --disable-gdk-pixbuf --disable-imlib"
 		use nls || myconf="${myconf} --disable-nls"
 	fi
-
 
 	use ssl && myconf="${myconf} --enable-ssl"
 
@@ -64,7 +68,7 @@ src_compile() {
 	use xface || myconf="${myconf} --disable-compface"
 
 	# build fails if this is done normally. dunno why and didn't bother to find out. : )
-	use gtk2 && ./autogen.sh
+# 	use gtk2 && ./autogen.sh
 
 	econf ${myconf}
 

@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.52 2004/04/05 15:17:07 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.53 2004/04/05 23:06:44 spider Exp $
+
+*sylpheed-0.9.9-r1 (06 Apr 2004)
+
+  06 Apr 2004; <spider@gentoo.org> sylpheed-0.9.9-r1.ebuild:
+  updated to 0.9.9 only cause thats the last version with gtk2 support. Removed
+  all arches I can't test for. tested the non-gtk2 only superficially. it
+  starts, it reads mail. it checks mail.
 
 *sylpheed-0.9.10 (06 Apr 2004)
 
