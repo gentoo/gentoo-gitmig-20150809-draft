@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.7.ebuild,v 1.1 2002/07/08 14:29:18 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.7.ebuild,v 1.2 2002/07/11 16:58:17 blizzy Exp $
 
 S=${WORKDIR}/${P}
 HTTPD_ROOT="/home/httpd/htdocs"
@@ -47,7 +47,7 @@ pkg_postinst() {
 	einfo "the new location:"
 	einfo ""
 	einfo "\tmv ${HTTPD_ROOT}/squirrelmail-OLDVERSION/data/* \\"
-	einfo "\t\t${HTTPD_ROOT}/squirrelmail-${PV}/data"
+	einfo "\t\t${HTTPD_ROOT}/squirrelmail/data"
 	einfo "\tmv ${HTTPD_ROOT}/squirrelmail-OLDVERSION/config/config.php \\"
-	einfo "\t\t${HTTPD_ROOT}/squirrelmail-${PV}/config"
+	einfo "\t\t${HTTPD_ROOT}/squirrelmail/config"
 }
