@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-SHA1
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.21 2004/06/25 00:25:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.22 2004/07/21 22:01:38 tgall Exp $
+
+  21 Jul 2004; Tom Gall <tgall@gentoo.org> Digest-SHA1-2.10.ebuild:
+  stable on ppc64, bug #57585
 
 *Digest-SHA1-2.10 (05 Jun 2004)
 

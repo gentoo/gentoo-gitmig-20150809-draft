@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/Digest-SHA1-2.10.ebuild,v 1.3 2004/07/14 17:25:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/Digest-SHA1-2.10.ebuild,v 1.4 2004/07/21 22:01:38 tgall Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://cpan.pair.com/modules/by-category/14_Security_and_Encryption/Di
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ppc64"
 IUSE=""
 
 SRC_TEST="do"
