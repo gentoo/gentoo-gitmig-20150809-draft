@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.24 2004/10/05 13:34:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.25 2004/10/26 23:49:07 malc Exp $
+
+  26 Oct 2004; Malcolm Lashley <malc@gentoo.org> workrave-1.6.2.ebuild:
+  ~amd64 bug #65132
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   workrave-1.4.0-r1.ebuild:
