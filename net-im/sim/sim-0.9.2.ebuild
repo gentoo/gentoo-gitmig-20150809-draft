@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.2.ebuild,v 1.3 2004/01/19 17:06:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.2.ebuild,v 1.4 2004/01/20 07:28:38 aliz Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -28,7 +28,7 @@ DEPEND="$DEPEND
 	app-text/sablotron"
 
 src_unpack() {
-	unpack ${P}.tar.bz2 ; cd ${S}
+	unpack ${P}.tar.gz ; cd ${S}
 	rm -rf admin/
 	unpack sim-cvs-admin.tar.bz2
 
