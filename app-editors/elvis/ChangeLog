@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.8 2003/10/01 11:39:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.9 2003/11/14 14:20:01 agriffis Exp $
+
+*elvis-2.2.0 (13 Nov 2003)
+
+  13 Nov 2003; Aron Griffis <agriffis@gentoo.org> elvis-2.2.0.ebuild:
+  Version bump to 2.2_0 for bug 32797. Note that elvis-2.1.4-keysym.patch was
+  integrated into this version, so it no longer applies.  This version bump
+  required extensive changes to the ebuild.
 
   12 Jun 2003; Aron Griffis <agriffis@gentoo.org> elvis-2.1.4-r1.ebuild,
   files/elvis-2.1.4-keysym.patch:
