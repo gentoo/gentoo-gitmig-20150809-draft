@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.21 2003/10/20 21:59:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.22 2003/10/28 14:53:40 aliz Exp $
+
+  28 Oct 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-4.04-r1 stunnel-3.26.ebuild :
+  Depend on >=openssl-0.9.6j becuse of blinding issues.
 
   20 Oct 2003; Aron Griffis <agriffis@gentoo.org> stunnel-4.04-r1.ebuild:
   Stable on alpha
