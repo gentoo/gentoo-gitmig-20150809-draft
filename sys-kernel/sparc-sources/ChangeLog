@@ -1,8 +1,12 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.18 2003/03/20 14:56:11 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.19 2003/03/25 15:16:27 joker Exp $
 
 *sparc-sources-2.4.20-r6 (19 Mar 2003)
+
+  25 Mar 2003; Christian Birchinger <joker@gentoo.org>
+  sparc-sources-2.4.20-r6.ebuild:
+  Added an optional HME patch for Ultra1 machines
 
   20 Mar 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.20-r6.ebuild:

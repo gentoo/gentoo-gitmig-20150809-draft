@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20-r6.ebuild,v 1.2 2003/03/20 14:56:11 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20-r6.ebuild,v 1.3 2003/03/25 15:16:27 joker Exp $
 
 IUSE="build"
 
@@ -43,4 +43,21 @@ src_unpack() {
 	# failures, if they aren't there that is a good thing!
 
 	kernel_src_unpack
+
+	# Patch the HME driver only on Ultra1 machines.
+	[ -n "${U1_HME_FIX}" ] && epatch ${FILESDIR}/U1-hme-lockup.patch
+}
+
+pkg_postinst() {
+	kernel_pkg_postinst
+
+	# Display SUN Ultra 1 HME warning if it can be detected or if the machinetype is unknown.
+	if [ ! -r "/proc/openprom/name" -o "`cat /proc/openprom/name 2>/dev/null`" = "'SUNW,Ultra-1'" ]; then
+		einfo
+		einfo "For users with an Enterprise model Ultra 1 using the HME network interface,"
+                einfo "please emerge the kernel using the following command:"
+		einfo
+		einfo "U1_HME_FIX=y emerge sparc-sources"
+		einfo
+	fi
 }
