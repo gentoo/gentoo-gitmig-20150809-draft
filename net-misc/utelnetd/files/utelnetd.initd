@@ -1,0 +1,16 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/files/utelnetd.initd,v 1.1 2004/01/23 00:52:18 matsuu Exp $
+
+start() {
+	ebegin "Starting utelnetd"
+	start-stop-daemon -b --start --quiet --exec /usr/sbin/utelnetd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping utelnetd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/utelnetd
+	eend $?
+}
