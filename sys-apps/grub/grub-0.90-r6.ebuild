@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@gentoo.org>, Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.90-r6.ebuild,v 1.2 2002/02/05 07:25:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.90-r6.ebuild,v 1.3 2002/02/05 07:51:46 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
@@ -87,6 +87,6 @@ pkg_postinst() {
 		einfo '*** A new GRUB has been installed. If you need to reinstall GRUB to a'
 		einfo '*** boot record on your drive, please remember to'
 		einfo '*** "cp /usr/share/grub/i386-pc/*stage* /boot/grub" first.'
-		einfo '*** If you\'re using XFS, unmount and remount /boot as well.'
+		einfo "*** If you're using XFS, unmount and remount /boot as well."
 	fi
 }
