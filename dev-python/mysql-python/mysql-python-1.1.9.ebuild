@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.1.9.ebuild,v 1.1 2005/01/25 14:31:50 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.1.9.ebuild,v 1.2 2005/01/26 01:47:41 fserb Exp $
 
 inherit distutils
 
@@ -19,13 +19,10 @@ DEPEND="virtual/python
 	ssl? ( dev-libs/openssl )"
 
 src_compile() {
-	if has_version '>=dev-db/mysql-4.0.10' >& /dev/null ; then
-		sed -i 's/thread_safe_library = YES/thread_safe_library = NO/' setup.py
-	fi
-
 	if use ssl; then
 		export mysqloptlibs="ssl crypto"
 	fi
+	export mysqlclient="mysqlclient_r"
 	distutils_src_compile
 }
 
