@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.98.ebuild,v 1.3 2005/03/08 23:13:27 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.98.ebuild,v 1.4 2005/03/08 23:35:26 mattam Exp $
 
 inherit findlib
 
@@ -20,7 +20,7 @@ S="${WORKDIR}/${P}/src"
 DATADIR=/usr/share/${PN}
 
 src_compile() {
-	./configure -with-pop -datadir ${DATADIR}  || die "configure failed"
+	./configure -enable-compatcgi -with-pop -datadir ${DATADIR}  || die "configure failed"
 	make all opt || die "make failed"
 }
 
