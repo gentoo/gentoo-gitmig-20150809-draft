@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/agrep-2.04.ebuild,v 1.7 2004/06/28 02:14:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/agrep-2.04.ebuild,v 1.8 2004/07/01 11:56:00 eradicator Exp $
 
 DESCRIPTION="agrep is a tool for the fast searching of text allowing for errors in the search pattern."
 HOMEPAGE="ftp://ftp.cs.arizona.edu/agrep/README"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ~amd64 ~mips"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	# Remove first occurace of CFLAGS so we grab the user CFLAGS

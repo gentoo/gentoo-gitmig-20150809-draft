@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r1.ebuild,v 1.14 2004/06/24 22:49:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r1.ebuild,v 1.15 2004/07/01 12:02:25 eradicator Exp $
 
 DESCRIPTION="Revision Control System"
 SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gnu.org/software/rcs/"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 RDEPEND="sys-apps/diffutils"
 

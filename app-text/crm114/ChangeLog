@@ -1,6 +1,14 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.6 2004/06/24 22:30:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.7 2004/07/01 11:56:40 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  crm114-20030920.ebuild, crm114-20040212.ebuild, crm114-20040601.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  crm114-20030920.ebuild, crm114-20040212.ebuild, crm114-20040601.ebuild:
+  virtual/glibc -> virtual/libc
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> crm114-20040601.ebuild:
   Fix use invocation

@@ -1,6 +1,14 @@
 # ChangeLog for app-text/openjade
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.33 2004/06/29 04:18:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.34 2004/07/01 12:00:36 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  openjade-1.3.1-r5.ebuild, openjade-1.3.1-r6.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  openjade-1.3.1-r5.ebuild, openjade-1.3.1-r6.ebuild:
+  virtual/glibc -> virtual/libc
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org> openjade-1.3.2-r1.ebuild:
   stable on ppc64, bug #54792

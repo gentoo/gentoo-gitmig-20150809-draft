@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-3.0.6.ebuild,v 1.3 2004/06/24 22:45:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-3.0.6.ebuild,v 1.4 2004/07/01 12:00:07 eradicator Exp $
 
 DESCRIPTION="Tail with multiple windows."
 HOMEPAGE="http://www.vanheusden.com/multitail/index.html"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ia64 amd64"
 
 IUSE=""
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	make all CFLAGS="-D`uname` ${CFLAGS}" || die "make failed"

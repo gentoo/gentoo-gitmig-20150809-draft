@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r5.ebuild,v 1.9 2004/06/24 22:46:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r5.ebuild,v 1.10 2004/07/01 12:00:36 eradicator Exp $
 
 inherit libtool flag-o-matic
 
@@ -14,10 +14,10 @@ HOMEPAGE="http://openjade.sourceforge.net"
 SLOT="0"
 LICENSE="as-is"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-lang/perl"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	app-text/sgml-common"
 
 KEYWORDS="x86 ppc sparc alpha"

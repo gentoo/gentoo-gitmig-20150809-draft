@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htp/htp-1.15.ebuild,v 1.2 2004/06/24 22:40:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htp/htp-1.15.ebuild,v 1.3 2004/07/01 11:58:59 eradicator Exp $
 
 DESCRIPTION="An HTML preprocessor"
 HOMEPAGE="http://htp.sourceforge.net/"
@@ -11,8 +11,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
 
-DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
 
 # HTP does not use autoconf, have to set options defined in Makefile.config
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.5 2004/06/24 22:30:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.6 2004/07/01 11:56:40 eradicator Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ KEYWORDS="~x86 ~ppc"
 TREVERS="0.6.8"
 
 DEPEND=">=sys-apps/sed-4
-	virtual/glibc
+	virtual/libc
 	mail-filter/procmail
 	emacs? ( app-emacs/mew )
 	!emacs? ( net-mail/metamail )

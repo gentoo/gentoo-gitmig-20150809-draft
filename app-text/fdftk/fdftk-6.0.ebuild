@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/fdftk-6.0.ebuild,v 1.2 2004/06/24 22:35:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/fdftk-6.0.ebuild,v 1.3 2004/07/01 11:57:20 eradicator Exp $
 
 IUSE="perl"
 
@@ -16,7 +16,7 @@ LICENSE="Adobe"
 KEYWORDS="-* ~x86" # binaries for i386 type hardware ONLY
 RESTRICT="fetch"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	perl? ( dev-lang/perl )"
 
 S=${WORKDIR}/${MY_P}

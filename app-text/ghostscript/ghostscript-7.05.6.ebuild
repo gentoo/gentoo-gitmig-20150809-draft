@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.8 2004/06/29 23:55:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.9 2004/07/01 11:57:37 eradicator Exp $
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
@@ -15,7 +15,7 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86 ppc ~sparc alpha"
 IUSE="X cups cjk"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=media-libs/jpeg-6b 
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4

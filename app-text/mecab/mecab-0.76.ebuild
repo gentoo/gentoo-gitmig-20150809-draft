@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.76.ebuild,v 1.4 2004/06/24 22:44:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.76.ebuild,v 1.5 2004/07/01 11:59:39 eradicator Exp $
 
 MY_IPADIC="ipadic-2.5.1"
 DESCRIPTION="Yet Another Part-of-Speech and Morphological Analyzer"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-lang/perl"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/par-1.52.ebuild,v 1.3 2004/06/28 03:15:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/par-1.52.ebuild,v 1.4 2004/07/01 12:00:50 eradicator Exp $
 
 MY_P="Par${PV/./}"
 
@@ -12,7 +12,7 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~mips"
 IUSE=""
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {

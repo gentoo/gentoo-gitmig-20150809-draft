@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.19 2004/06/24 22:49:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.20 2004/07/01 12:03:10 eradicator Exp $
 
 inherit flag-o-matic gcc
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 IUSE="nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

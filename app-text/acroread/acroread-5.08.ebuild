@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.9 2004/06/24 22:26:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.10 2004/07/01 11:55:47 eradicator Exp $
 
 inherit nsplugins eutils
 
@@ -16,7 +16,7 @@ LICENSE="Adobe"
 KEYWORDS="-* x86"
 
 RESTRICT="nostrip"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 RDEPEND="cjk? ( media-fonts/acroread-asianfonts )"
 

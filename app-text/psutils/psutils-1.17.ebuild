@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/psutils-1.17.ebuild,v 1.18 2004/06/28 02:08:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/psutils-1.17.ebuild,v 1.19 2004/07/01 12:02:11 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Post Script Utilities"
@@ -10,8 +10,8 @@ KEYWORDS="ia64 x86 ppc sparc alpha amd64 hppa mips"
 SLOT="0"
 LICENSE="as-is"
 
-DEPEND="virtual/glibc dev-lang/perl"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc dev-lang/perl"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.10 2004/06/28 04:11:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.11 2004/07/01 12:09:02 eradicator Exp $
 
 MY_PV="${PV}b3"
 DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha amd64 ~mips"
 IUSE=""
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

@@ -1,6 +1,14 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.7 2004/06/24 22:45:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.8 2004/07/01 12:00:07 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  multitail-3.0.6.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  multitail-3.0.6.ebuild:
+  virtual/glibc -> virtual/libc
 
   03 Mar 2004; Jon Portnoy <avenj@gentoo.org> multitail-3.0.6.ebuild :
   Stable keywords. Older ebuilds deleted; SRC_URIs were bad.

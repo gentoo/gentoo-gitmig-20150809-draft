@@ -1,6 +1,14 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.16 2004/06/25 23:31:53 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.17 2004/07/01 12:08:10 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  texi2html-1.64-r1.ebuild, texi2html-1.64.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  texi2html-1.64-r1.ebuild, texi2html-1.64.ebuild:
+  virtual/glibc -> virtual/libc
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> texi2html-1.64-r1.ebuild:
   Marked stable on amd64.

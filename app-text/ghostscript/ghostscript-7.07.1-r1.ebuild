@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r1.ebuild,v 1.11 2004/06/29 23:55:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r1.ebuild,v 1.12 2004/07/01 11:57:37 eradicator Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="ia64 x86 -ppc sparc alpha hppa amd64 mips"
 IUSE="X cups cjk"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.19 2004/06/24 22:54:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.20 2004/07/01 12:09:52 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=media-libs/freetype-2.0"
 DEPEND="${RDEPEND}
 	dev-lang/perl"

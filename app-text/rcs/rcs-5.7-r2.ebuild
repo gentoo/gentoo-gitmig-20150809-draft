@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.16 2004/06/24 22:49:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.17 2004/07/01 12:02:25 eradicator Exp $
 
 DESCRIPTION="Revision Control System"
 HOMEPAGE="http://www.gnu.org/software/rcs/"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="sys-apps/diffutils"
 
 src_compile() {

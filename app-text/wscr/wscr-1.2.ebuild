@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/wscr-1.2.ebuild,v 1.5 2004/06/28 04:21:38 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/wscr-1.2.ebuild,v 1.6 2004/07/01 12:11:19 eradicator Exp $
 
 DESCRIPTION="A Lightweight and Fast Anagram Solver"
 HOMEPAGE="http://hood.sjfn.nb.ca/~eddie/wscr.html"
@@ -10,9 +10,9 @@ SLOT="0"
 
 KEYWORDS="x86 alpha ~sparc ~mips"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-apps/miscfiles"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/dbacl-1.3.ebuild,v 1.7 2004/06/24 22:31:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/dbacl-1.3.ebuild,v 1.8 2004/07/01 11:56:53 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 s390"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

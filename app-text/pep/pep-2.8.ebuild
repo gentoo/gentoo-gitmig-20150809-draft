@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8.ebuild,v 1.5 2004/06/28 03:18:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8.ebuild,v 1.6 2004/07/01 12:01:31 eradicator Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips"
 IUSE=""
 
 DEPEND="app-arch/unzip
-	virtual/glibc"
-RDEPEND="virtual/glibc"
+	virtual/libc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}
 
