@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.49 2004/03/29 17:09:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.50 2004/03/31 00:05:30 pylon Exp $
+
+  31 Mar 2004; Lars Weiler <pylon@gentoo.org> automake-1.8.3.ebuild:
+  stable on ppc, as requested in bug #45646
 
   29 Mar 2004; Aron Griffis <agriffis@gentoo.org> automake-1.8.3.ebuild:
   Mark stable on alpha and ia64 for bug 45646
