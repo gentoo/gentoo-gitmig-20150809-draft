@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.23 2005/02/19 10:06:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.24 2005/03/04 07:46:17 hansmi Exp $
+
+  04 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> dictd-1.9.14.ebuild:
+  Stable on ppc, bug 83997.
 
   19 Feb 2005; Markus Rothe <corsair@gentoo.org> dictd-1.9.11-r1.ebuild:
   Stable on ppc64; bug #81211
@@ -51,7 +54,7 @@
   files/1.5.5-r6/dictd.rc6, files/1.5.5-r6/site.info, files/1.9.7/dict.conf,
   files/1.9.7/dictd, files/1.9.7/dictd.conf, files/1.9.7/dictd.confd,
   files/1.9.7/site.info:
-  version bump, thanks to: José Romildo Malaquias <romildo@uber.com.br> in bug
+  version bump, thanks to: JosÃ© Romildo Malaquias <romildo@uber.com.br> in bug
   #36638
 
 *dictd-1.8.0 (14 Dec 2002)
