@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.25 2004/06/28 16:21:19 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.26 2004/07/04 17:11:42 chrb Exp $
+
+  04 Jul 2004; Chris Bainbridge <chrb@gentoo.org> :
+  Support QT-embedded and fix typos (bug #53403)
 
   28 Jun 2004; Daniel Goller <morfic@gentoo.org> mythtv-0.15.1.ebuild:
   Added patch to allow compilation on gcc-3.4.0 conditionally
