@@ -1,20 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/gtk-engines-notif2-1.0.ebuild,v 1.6 2004/06/24 23:31:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/gtk-engines-notif2-1.0.ebuild,v 1.7 2004/08/22 16:15:55 kugelfang Exp $
 
-inherit gtk-engines2
+inherit gtk-engines2 gnuconfig
 
 IUSE=""
 DESCRIPTION="GTK+1 Notif2 Theme Engine"
 HOMEPAGE="http://themes.freshmeat.net/projects/notif210/"
 SRC_URI="http://download.freshmeat.net/themes/notif210/notif210-1.2.tar.gz"
-KEYWORDS="x86 alpha ppc"
+KEYWORDS="x86 alpha ppc ~amd64"
 LICENSE="GPL-2"
 SLOT="1"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
 S=${WORKDIR}/notif2-${PV}
+
+src_unpack() {
+	unpack ${A}
+	if [[ ${ARCH} == "amd64" ]]; then
+		gnuconfig_update
+	fi
+}
 
 src_install() {
 	einstall || die

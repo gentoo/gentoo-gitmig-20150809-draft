@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-notif2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/ChangeLog,v 1.4 2004/06/24 23:31:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/ChangeLog,v 1.5 2004/08/22 16:15:55 kugelfang Exp $
+
+  22 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  gtk-engines-notif2-1.0.ebuild:
+  Added confitional gnuconfig_update on amd64. Fixed BUG #59242. Marked ~amd64
 
   06 Feb 2004; Aron Griffis <agriffis@gentoo.org>
   gtk-engines-notif2-1.0.ebuild:
