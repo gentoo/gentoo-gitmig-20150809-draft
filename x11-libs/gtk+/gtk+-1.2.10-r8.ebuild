@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r8.ebuild,v 1.2 2002/06/01 08:39:13 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r8.ebuild,v 1.3 2002/07/01 09:50:24 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP Toolkit"
@@ -17,6 +16,7 @@ DEPEND="virtual/glibc virtual/x11
 		dev-util/intltool )"
 
 SLOT="1"
+LICENSE="GPL-2"
 
 src_unpack() {
 
