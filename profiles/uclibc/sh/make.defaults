@@ -3,3 +3,6 @@ ACCEPT_KEYWORDS="sh"
 
 GRP_STAGE23_USE="berkdb ncurses readline zlib uclibc"
 STAGE1_USE="uclibc"
+
+UCLIBC_CPU_DEFAULT="SH4"
+UCLIBC_ENDIAN_DEFAULT="LITTLE"
