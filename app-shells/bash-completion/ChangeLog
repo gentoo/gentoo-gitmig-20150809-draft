@@ -1,8 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.12 2002/07/27 18:38:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.13 2002/07/29 02:28:09 cselkirk Exp $
 
 *bash-completion-20020727 (27 Jul 2002)
+
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org>
+  bash-completion-20020727.ebuild, bash-completion-20020624.ebuild :
+
+  Added ppc to KEYWORDS.
 
   27 Jul 2002; Maik Schreiber <blizzy@gentoo.org> : new version
 
