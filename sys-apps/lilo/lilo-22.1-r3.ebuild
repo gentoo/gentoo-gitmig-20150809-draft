@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.1 2002/04/06 07:27:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.2 2002/04/06 07:30:46 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
@@ -36,10 +36,6 @@ pkg_setup() {
 		fi
 	else
 		einfo "You do not have a seperate /boot partition."
-		if [ ! -d /boot ]
-		then
-			mkdir /boot
-		fi
 	fi
 }
 
