@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.69.ebuild,v 1.2 2005/02/09 22:31:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.69.ebuild,v 1.3 2005/03/15 17:15:27 mrness Exp $
 
-inherit flag-o-matic linux-mod
+inherit eutils flag-o-matic linux-mod
 
 DESCRIPTION="Driver for Intel 536EP modem"
 HOMEPAGE="http://developer.intel.com/design/modems/products/536ep.htm"
@@ -30,9 +30,13 @@ pkg_setup() {
 src_unpack(){
 	unpack ${A}
 
+	cd ${S}
 	if kernel_is 2 4; then
 		#there is no way of passing this as make parameter
-		sed -i -e 's/\$(PSTN_DEF)/-DTARGET_SELAH -DTARGET_LINUX -DLINUX/' ${S}/coredrv/Makefile
+		sed -i -e 's/\$(PSTN_DEF)/-DTARGET_SELAH -DTARGET_LINUX -DLINUX/' coredrv/Makefile
+	elif kernel_is ge 2 6 11; then
+		#addapt to power management changes occured in kernel
+		epatch ${FILESDIR}/${P}-kernel-2.6.11-pm.patch
 	fi
 }
 
