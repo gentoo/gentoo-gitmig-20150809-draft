@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304.ebuild,v 1.7 2001/09/13 16:57:58 darks Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r6.ebuild,v 1.1 2001/09/13 16:57:58 darks Exp $
 
 A="${PN}_${PV}.tar.gz omniORBpy_1_4.tar.gz omniNotify11b1.tar.gz"
 S=${WORKDIR}/omni
@@ -78,7 +78,7 @@ src_install () {
     doman man/man[15]/*.[15]
 
     exeinto /etc/rc.d/init.d
-    newexe ${FILESDIR}/omniORB.rc5 omniORB
+    newexe ${FILESDIR}/omniORB.rc6 omniORB
     
     dodir /etc/omniorb
     insinto /etc/omniorb
