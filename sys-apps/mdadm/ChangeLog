@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mdadm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.23 2004/12/20 13:03:15 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.24 2005/01/17 19:06:22 gustavoz Exp $
+
+  17 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> mdadm-1.7.0.ebuild,
+  mdadm-1.8.1.ebuild:
+  Keyworded ~sparc wrt #67477, 1.8.1 goes -sparc since it SIGBUS on --assemble
+  --scan
 
   20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> mdadm-1.7.0.ebuild:
   Stable on amd64.
