@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2005.01.29.ebuild,v 1.2 2005/02/02 10:28:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2005.01.29.ebuild,v 1.3 2005/02/02 10:33:13 eradicator Exp $
 
 IUSE=""
 
@@ -43,7 +43,7 @@ src_compile() {
 	./genMakefiles linux
 	# emake doesn't work
 	make CPLUSPLUS_COMPILER="$(tc-getCXX)" \
-	     C_COMPILER="$(tc-getCXX)" \
+	     C_COMPILER="$(tc-getCC)" \
 	     LINK="$(tc-getCXX) -o" || die
 }
 
