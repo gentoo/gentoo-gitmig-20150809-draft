@@ -1,7 +1,9 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.2 2003/07/17 10:27:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.3 2003/07/18 11:03:50 lu_zero Exp $
 
+  18 Jul 2003; Luca Barbato <lu_zero@gentoo.org> libmad-0.15.0b.ebuild:
+  Added keyword ~ppc
 *libmad-0.15.0b (17 Jul 2003)
 
   17 Jul 2003; Nick Hadaway <raker@gentoo.org> libmad-0.15.0b.ebuild:
