@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/device-mapper
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.2 2003/10/21 22:51:07 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.3 2003/10/27 19:24:27 max Exp $
+
+  27 Oct 2003; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild:
+  Fix kernel support check.
 
   21 Oct 2003; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild:
   Bump to stable x86.
