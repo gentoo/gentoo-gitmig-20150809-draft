@@ -4,6 +4,7 @@
  
 depend() { 
         need net
+		after domainname
 } 
  
 start() { 
