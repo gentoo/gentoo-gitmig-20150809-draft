@@ -1,10 +1,13 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.5 2003/02/12 07:43:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.6 2003/04/05 12:48:08 mholzer Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cacti-0.6.8a (23 Oct 2002)
+
+  05 Apr 2003; Martin Holzer <mholzer@gentoo.org> cacti-0.6.8a.ebuild:
+  Digest fix, marked as stable
 
   14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
