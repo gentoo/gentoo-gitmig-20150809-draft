@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ri
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ChangeLog,v 1.11 2004/10/20 16:12:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ChangeLog,v 1.12 2004/11/04 16:14:39 usata Exp $
+
+  05 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> ri-1.8b-r1.ebuild:
+  Stable on x86, alpha and ppc.
 
   20 Oct 2004; <agriffis@gentoo.org> ri-1.8b-r1.ebuild, ri-1.8b.ebuild:
   add ~amd64
