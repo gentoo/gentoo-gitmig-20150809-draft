@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.39 2005/01/02 16:05:49 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.40 2005/01/03 00:43:23 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *libxfce4util-4.1.99.3 (02 Jan 2005)
 
@@ -38,7 +41,7 @@
   libxfce4util-4.0.6.ebuild:
   Masked libxfce4util-4.0.6.ebuild stable for ppc
 
-  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> libxfce4util-4.0.6.ebuild:
+  07 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libxfce4util-4.0.6.ebuild:
   Stable on alpha.
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
