@@ -1,0 +1,45 @@
+--- baghiraclient.h.orig	2005-03-22 13:11:10.174799822 +0300
++++ baghiraclient.h	2005-03-22 13:11:24.254841399 +0300
+@@ -105,26 +105,6 @@
+ 
+ class BaghiraClient;
+ 
+-#if KDE_IS_VERSION(3,3,91)
+-class ResizeHandle : public QWidget
+-{
+-friend class BaghiraClient;
+-    Q_OBJECT
+-public:
+-    ResizeHandle(BaghiraClient *parent);
+-protected:
+-    virtual void mousePressEvent ( QMouseEvent * );
+-    virtual void mouseReleaseEvent ( QMouseEvent * );
+-    virtual void paintEvent ( QPaintEvent * );
+-    void updateLook(bool rp = FALSE);
+-private:
+-    bool eventFilter(QObject *obj, QEvent *e);
+-    void shape();
+-    BaghiraClient *client;
+-    QPixmap pix;
+-};
+-#endif
+-
+ class DeMaximizer : public QWidget
+ {
+ friend class BaghiraClient;
+@@ -384,7 +364,6 @@
+ class BaghiraClient : public KDecoration
+ {
+ friend class BaghiraButton;
+-friend class ResizeHandle;
+     Q_OBJECT
+ public:
+     BaghiraClient(KDecorationBridge *b, KDecorationFactory *f);
+@@ -457,7 +436,6 @@
+ //    QWidget *inactiveOverlay;
+     QHBoxLayout *windowlayout;
+     int ICONX, ICONY;
+-    ResizeHandle *grip;
+ //    QSizeGrip *grip;
+ //    KDecorationBridge *myBridge_;
+ //    QImage* ActiveDecoImage_;

@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.31 2005/03/21 08:25:29 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.32 2005/03/22 10:34:51 voxus Exp $
+
+*baghira-0.6e-r1 (22 Mar 2005)
+
+  22 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> baghira-0.6e.ebuild,
+  +baghira-0.6e-r1.ebuild, +files/baghira-0.6e-drop_resize_handle.patch:
+  Closing bug #86065. Based on original patch by Enrico Horn
+  <EnricoHorn@web.de>. Also ppc keyword is restored.
 
   21 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> baghira-0.6e.ebuid,
   +baghira-0.6d.ebuild, +files/baghira-0.6d-compile-fix.patch:
