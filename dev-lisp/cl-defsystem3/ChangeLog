@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-defsystem3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.10 2004/10/16 04:46:01 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.11 2004/11/04 17:34:17 mkennedy Exp $
+
+  04 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org>
+  cl-defsystem3-3.3i-r4.ebuild:
+  Corrected dependencies.
 
   16 Oct 2004; <ndimiduk@gentoo.org> cl-defsystem3-3.3i-r4.ebuild:
   Added ~ppc-macos to keywords

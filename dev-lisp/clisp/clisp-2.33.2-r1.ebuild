@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.2-r1.ebuild,v 1.2 2004/10/09 12:11:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.2-r1.ebuild,v 1.3 2004/11/04 17:31:23 mkennedy Exp $
 
 inherit flag-o-matic common-lisp-common eutils gcc
 
@@ -15,6 +15,8 @@ IUSE="X fastcgi nls pcre postgres readline"
 
 DEPEND="dev-libs/libsigsegv
 	dev-lisp/common-lisp-controller
+	>=cl-defsystem3-3.3i-r3
+	>=dev-lisp/cl-asdf-1.84
 	fastcgi? ( dev-libs/fcgi )
 	postgres? ( dev-db/postgresql )
 	X? ( virtual/x11 )
