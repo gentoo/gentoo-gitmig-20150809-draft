@@ -1,0 +1,86 @@
+diff -Nru a/namedev.c b/namedev.c
+--- a/namedev.c	Thu Dec 25 20:27:43 2003
++++ b/namedev.c	Thu Dec 25 20:27:43 2003
+@@ -200,11 +200,12 @@
+ 			case 'D':
+ 				if (strlen(udev->kernel_number) == 0) {
+ 					strcat(pos, "disc");
++					dbg("substitute devfs disc");
+ 					break;
+ 				}
+ 				strcat(pos, "part");
+ 				strcat(pos, udev->kernel_number);
+-				dbg("substitute kernel number '%s'", udev->kernel_number);
++				dbg("substitute devfs part number '%s'", udev->kernel_number);
+ 				break;
+ 			case 'm':
+ 				sprintf(pos, "%u", udev->minor);
+@@ -225,12 +226,14 @@
+ 						num--;
+ 						pos3 = strsep(&pos2, " ");
+ 						if (pos3 == NULL) {
+-							dbg("requested part of callout string not found");
++							dbg("requested part of callout string is empty");
+ 							break;
+ 						}
+ 					}
+-					strcat(pos, pos3);
+-					dbg("substitute partial callout output '%s'", pos3);
++					if (pos3) {
++						strcat(pos, pos3);
++						dbg("substitute partial callout output '%s'", pos3);
++					}
+ 				} else {
+ 					strcat(pos, udev->callout_value);
+ 					dbg("substitute callout output '%s'", udev->callout_value);
+diff -Nru a/extras/ide-devfs.sh b/extras/ide-devfs.sh
+--- a/extras/ide-devfs.sh	Thu Dec 25 23:53:20 2003
++++ b/extras/ide-devfs.sh	Thu Dec 25 23:53:20 2003
+@@ -2,7 +2,7 @@
+ 
+ # udev CALLOUT script
+ # return devfs-names for ide-devices
+-# CALLOUT, BUS="ide", PROGRAM="/etc/udev/ide-devfs.sh %k %b %n", ID="hd*", NAME="%1c", SYMLINK="%2c"
++# CALLOUT, BUS="ide", PROGRAM="/etc/udev/ide-devfs.sh %k %b %n", ID="hd*", NAME="%1c", SYMLINK="%2c %3c"
+ 
+ HOST=${2%\.[0-9]}
+ TARGET=${2#[0-9]\.}
+@@ -14,14 +14,34 @@
+ 	BUS="0"
+ fi
+ 
++get_dev_number() {
++	local x=
++	local num=0
++	local MEDIA=
++	local DRIVE=${1%[0-9]*}
++
++	for x in /proc/ide/*/media; do
++		if [ -e "$x" ]; then
++			MEDIA=`cat $x`
++			if [ "$MEDIA" = "$2" ]; then
++				num=`expr $num + 1`
++			fi
++			if [ "$x" = "/proc/ide/$DRIVE/media" ]; then
++				break
++			fi
++		fi
++	done
++	
++	echo `expr $num - 1`
++}
++
+ if [ -z "$3" ]; then
+ 	MEDIA=`cat /proc/ide/$1/media`
+ 	if [ "$MEDIA" = "cdrom" ]; then
+-		echo $1 ide/host$HOST/bus$BUS/target$TARGET/lun0/cd
++		echo $1 ide/host$HOST/bus$BUS/target$TARGET/lun0/cd cdroms/cdrom`get_dev_number $1 cdrom`
+ 	elif [ "$MEDIA" = "disk" ]; then
+-		echo $1 ide/host$HOST/bus$BUS/target$TARGET/lun0/disc
++		echo $1 ide/host$HOST/bus$BUS/target$TARGET/lun0/disc discs/disc`get_dev_number $1 disk`/disc
+ 	fi
+ else
+-	echo $1 ide/host$HOST/bus$BUS/target$TARGET/lun0/part$3
++	echo $1 ide/host$HOST/bus$BUS/target$TARGET/lun0/part$3 discs/disc`get_dev_number $1 disk`/part$3
+ fi
+-

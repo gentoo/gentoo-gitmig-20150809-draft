@@ -1,0 +1,40 @@
+--- a/namedev.c	2003-12-26 00:45:50.065844024 +0200
++++ b/namedev.c	2003-12-26 00:47:14.761968256 +0200
+@@ -634,6 +634,7 @@
+ 	struct sysfs_device *sysfs_device;
+ 	struct sysfs_class_device *class_dev_parent;
+ 	int loop;
++	int wait = 1;
+ 	char filename[SYSFS_PATH_MAX + 6];
+ 	int retval;
+ 	char *temp;
+@@ -668,6 +669,9 @@
+ 	}
+ 	strcat(filename, "/device");
+ 
++	if (getenv("UDEV_NO_SLEEP") != NULL)
++		wait = 0;
++
+ 	loop = 2;
+ 	while (loop--) {
+ 		struct stat buf;
+@@ -676,7 +680,8 @@
+ 		if (!retval)
+ 			break;
+ 		/* sleep to give the kernel a chance to create the device file */
+-		sleep(1);
++		if (wait)
++			sleep(1);
+ 	}
+ 
+ 	loop = 1;	/* FIXME put a real value in here for when everything is fixed... */
+@@ -694,7 +699,8 @@
+ 			 * to wait for the device properly.  Once the libsysfs code is
+ 			 * fixed properly, this sleep should go away, and we can just loop above.
+ 			 */
+-			sleep(1);
++			if (wait)
++				sleep(1);
+ 			dbg("really is a partition");
+ 			class_dev_parent = sysfs_get_classdev_parent(class_dev);
+ 			if (class_dev_parent == NULL) {
