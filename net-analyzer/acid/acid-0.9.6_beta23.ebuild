@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.2 2004/07/25 08:58:32 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.3 2004/07/31 08:39:01 mr_bones_ Exp $
 
 inherit webapp
 
@@ -16,10 +16,15 @@ IUSE="apache2"
 S=${WORKDIR}/${PN}
 
 # Note: jpgraph is an unstable package
-DEPEND="apache2? ( >=net-www/apache-2 ) : ( =net-www/apache-1.* )
-		>=dev-php/adodb-4.0.5
-		>=dev-php/jpgraph-1.12.2
-		net-analyzer/snort"
+DEPEND="apache2? ( >=net-www/apache-2 )
+	!apache2? ( =net-www/apache-1* )
+	>=dev-php/adodb-4.0.5
+	>=dev-php/jpgraph-1.12.2
+	net-analyzer/snort"
+
+src_compile () {
+	einfo "Nothing to compile."
+}
 
 src_install () {
 	webapp_src_preinst
@@ -32,10 +37,6 @@ src_install () {
 	webapp_src_install
 }
 
-src_compile () {
-	einfo "Nothing to compile."
-}
-
 pkg_postinst() {
 	webapp_pkg_postinst
 
@@ -45,4 +46,3 @@ pkg_postinst() {
 	einfo "To setup ACID database look in the README"
 	einfo ""
 }
-
