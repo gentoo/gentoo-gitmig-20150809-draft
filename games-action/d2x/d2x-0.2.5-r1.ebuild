@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r1.ebuild,v 1.4 2004/07/09 23:51:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r1.ebuild,v 1.5 2004/08/26 19:07:28 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -58,8 +58,8 @@ src_compile() {
 	# --disable-network --enable-console
 	local myconf="$(use_enable x86 assembler)"
 	use debug \
-		&& debugconf="${myconf} --enable-debug --disable-release" \
-		|| debugconf="${myconf} --disable-debug --enable-release"
+		&& myconf="${myconf} --enable-debug --disable-release" \
+		|| myconf="${myconf} --disable-debug --enable-release"
 	# we do this because each of the optional guys define the same functions
 	# in gr, thus when they go to link they cause redefine errors ...
 	# we build each by it self, save the binary file, clean up, and start over
