@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.7 2003/02/12 05:56:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.8 2003/04/09 22:48:16 twp Exp $
+
+*lua-5.0_beta (09 Apr 2003)
+
+  09 Apr 2003; Tom Payne <twp@gentoo.org> lua-5.0_beta.ebuild :
+
+  Version bump. Install docs. Tidied ebuild.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
