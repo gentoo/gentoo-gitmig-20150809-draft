@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60cd5c12e2ef8574250751467f2b8848 vienna-rna-1.4.ebuild 2362
-MD5 4205f46005661d10873bc946c6314d8e ChangeLog 826
+MD5 ee564c8c785cb4f1eab5a1724928c453 vienna-rna-1.4.ebuild 2362
+MD5 24b5c77e05d9d54cefb5493c36846d26 vienna-rna-1.5_beta.ebuild 834
+MD5 633062e3e1406b9e32259acda1b4f0db ChangeLog 987
 MD5 07151097bf19cf3d886552b62d5f13c4 metadata.xml 1317
 MD5 f1a1d167e6d5e17687cee4ffb95c6044 files/digest-vienna-rna-1.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFByw3QI1lqEGTUzyQRAsWKAJ9jFGzdV1kSAQczom3scuuhKUI+rQCg3bwO
-dv//KR94VTOpavpQcEOvqPA=
-=oCIs
------END PGP SIGNATURE-----
+MD5 d44512d781a7870d4d116af561bb3e75 files/digest-vienna-rna-1.5_beta 69
