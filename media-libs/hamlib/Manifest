@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 85556c96fa8248a1c326f1b1de63ec79 ChangeLog 878
-MD5 9377427adb452836298d00c0e6a0bcbc hamlib-1.2.1.ebuild 1610
 MD5 28d0c3bb6c80425620241cff231da8d3 metadata.xml 224
-MD5 2d4e1df9c7fa10b146286ef764530f68 files/hamlib-pkgconfig-fix.diff 373
+MD5 39839c38ebff326f99cb768e8fb08190 hamlib-1.2.1.ebuild 1604
 MD5 570753afff3842b121bff6d6d8db3493 files/digest-hamlib-1.2.1 65
+MD5 2d4e1df9c7fa10b146286ef764530f68 files/hamlib-pkgconfig-fix.diff 373
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4vjRHTu7gpaalycRAqfdAKCHo9c/MaR6IK/UimJY9NB4JdKZVwCg6en9
+1VCjeAiD0ZoUikdDmIyaQJQ=
+=1wDu
+-----END PGP SIGNATURE-----
