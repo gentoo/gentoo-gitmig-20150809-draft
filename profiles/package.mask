@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3593 2005/02/11 09:17:10 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3594 2005/02/11 15:09:55 ka0ttic Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Aaron Walker <ka0ttic@gentoo.org> (11 Feb 2005)
+# Masked pending new upstream release to fix security bug 74649
+www-apps/wordpress
 
 # Torsten Veller <tove@gentoo.org> (10 Feb 2005)
 # many changes - want feedback
