@@ -1,0 +1,56 @@
+Only in mono-0.20.patched/mono/os/unix/: .deps
+diff -ur mono-0.20/mono/os/unix/Makefile.am mono-0.20.patched/mono/os/unix/Makefile.am
+--- mono-0.20/mono/os/unix/Makefile.am	2002-07-19 19:08:25.000000000 +0200
++++ mono-0.20.patched/mono/os/unix/Makefile.am	2003-02-25 23:27:13.000000000 +0100
+@@ -1,5 +1,6 @@
+ 
+-INCLUDES = -I$(top_srcdir)
++INCLUDES = -I$(top_srcdir) \
++	$(GLIB_CFLAGS)
+ 
+ noinst_LTLIBRARIES = libmonoos.la
+ 
+diff -ur mono-0.20/mono/os/unix/Makefile.in mono-0.20.patched/mono/os/unix/Makefile.in
+--- mono-0.20/mono/os/unix/Makefile.in	2003-02-24 00:58:18.000000000 +0100
++++ mono-0.20.patched/mono/os/unix/Makefile.in	2003-02-25 23:29:33.000000000 +0100
+@@ -109,7 +109,8 @@
+ libmono_cflags = @libmono_cflags@
+ libmono_ldflags = @libmono_ldflags@
+ 
+-INCLUDES = -I$(top_srcdir)
++INCLUDES = -I$(top_srcdir) \
++	$(GLIB_CFLAGS)
+ 
+ noinst_LTLIBRARIES = libmonoos.la
+ 
+diff -ur mono-0.20/mono/os/unix/util.c mono-0.20.patched/mono/os/unix/util.c
+--- mono-0.20/mono/os/unix/util.c	2002-08-28 16:14:24.000000000 +0200
++++ mono-0.20.patched/mono/os/unix/util.c	2003-02-25 23:45:19.000000000 +0100
+@@ -8,6 +8,7 @@
+  */
+ #include <config.h>
+ #include <mono/os/util.h>
++#include <mono/metadata/metadata.h>
+ 
+ /*
+  * mono_set_rootdir:
+@@ -18,7 +19,18 @@
+ void
+ mono_set_rootdir (void)
+ {
+-	/* nothing on Unix */
++	gchar *moddir, *root;
++
++	moddir = (gchar*)g_getenv ("MONO_ROOTDIR");
++
++	if (moddir)
++	{
++	        root = g_build_path (G_DIR_SEPARATOR_S, moddir, NULL);
++
++        	mono_assembly_setrootdir (root);
++
++	        g_free (root);
++	}
+ }
+ 
+  
