@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10-r4.ebuild,v 1.3 2005/02/07 04:27:02 kumba Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10-r4.ebuild,v 1.4 2005/02/15 14:55:13 corsair Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1.5"
-KEYWORDS="~alpha amd64 arm hppa ia64 mips ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 mips ~ppc ppc64 s390 sh sparc x86"
 IUSE="uclibc"
 
 DEPEND="virtual/libc
