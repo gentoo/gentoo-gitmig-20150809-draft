@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/silver-xcursors
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.9 2004/06/09 07:30:42 spyderous Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.10 2004/06/25 03:03:24 agriffis Exp $
 
   09 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
   silver-xcursors-0.4.ebuild:
