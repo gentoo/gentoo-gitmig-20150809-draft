@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr> with the help of Terje Kvernes
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.6.ebuild,v 1.1 2002/04/29 05:51:08 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.6.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${P}
 

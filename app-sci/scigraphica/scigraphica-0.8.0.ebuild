@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tod Neidt <tod@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0.ebuild,v 1.1 2002/05/07 01:57:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${P}
 
