@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.71 2004/04/24 10:53:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.72 2004/04/28 22:15:39 robbat2 Exp $
+
+*openldap-2.1.30 (28 Apr 2004)
+
+  28 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.30.ebuild,
+  files/openldap-2.1.30-db40.patch:
+  new version with changes from bug #42427. direct kerberos is deprecated
+  upstream.
 
   24 Apr 2004; Robin H. Johnson <robbat2@gentoo.org>
   openldap-2.0.25-r1.ebuild, openldap-2.0.25-r2.ebuild,
