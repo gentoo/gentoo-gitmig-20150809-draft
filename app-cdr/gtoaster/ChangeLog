@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/gtoaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.2 2002/03/28 22:25:03 seemant Exp $
+
+*gtoaster-1.0_beta5 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org>  gtoaster-1.0_beta5.ebuild :
+
+  Changed USE flag from "ogg" to "oggvorbis"
 
 *gtoaster-1.0_beta5 (1 Feb 2002)
 
