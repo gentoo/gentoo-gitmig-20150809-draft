@@ -1,0 +1,20 @@
+--- bdb/include/mutex.h.orig	2004-07-24 21:34:02.164952224 +0200
++++ bdb/include/mutex.h	2004-07-24 21:34:37.961510320 +0200
+@@ -486,7 +486,7 @@
+ 	int __one = 1;			\
+ 	int __r;			\
+ 	tsl_t *__l = (tsl);		\
+-	asm volatile ("			\
++	__asm volatile ("			\
+ 0:					\
+ 	lwarx %0,0,%1;			\
+ 	cmpwi %0,0;			\
+@@ -621,7 +621,7 @@
+ #define  MUTEX_SET(tsl) ({           \
+ 	register tsl_t *__l = (tsl);          \
+ 	int __r;              \
+-	asm volatile("mov $1,%%rax; lock; xchgb %1,%%al; xor $1,%%rax"\
++	__asm volatile("mov $1,%%rax; lock; xchgb %1,%%al; xor $1,%%rax"\
+ 		: "=&a" (__r), "=m" (*__l)          \
+ 		: "1" (*__l)            \
+ 		);                \

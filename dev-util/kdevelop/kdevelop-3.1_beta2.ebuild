@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1_beta2.ebuild,v 1.1 2004/07/22 20:49:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1_beta2.ebuild,v 1.2 2004/07/24 21:52:55 carlo Exp $
 
 inherit python kde eutils
 
@@ -29,6 +29,7 @@ myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apido
 src_unpack() {
 	kde_src_unpack
 
+	epatch ${FILESDIR}/${P}-mutex.h.diff
 	if use amd64; then
 		epatch ${FILESDIR}/${P/beta?/beta1}-bdb-fPIC.patch
 	fi
