@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.3 2002/08/01 04:05:43 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.4 2002/09/09 21:53:26 mcummings Exp $
+
+*P1RPC-0.2016 (8 Sep 2002)
+  
+  8 Sep 2002; <mcummings@gentoo.org> PlRPC-0.2016.ebuild:
+  Version bump to correct bugs
 
 *PlRPC-0.2014-r1 (5 May 2002)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Memoize
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/ChangeLog,v 1.1 2002/06/28 12:41:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/ChangeLog,v 1.2 2002/09/09 21:53:26 mcummings Exp $
+
+*Memoize-1.00-r1 (8 Sep 2002)
+  08 Sep 2002; <mcummings@gentoo.org> Memoize-1.00-r1.ebuild
+  Added support for perl-module eclass
 
 *Memoize-1.00 (28 Jun 2002)
 
