@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/nemerle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.1 2005/03/11 02:36:03 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.2 2005/03/11 03:25:11 latexer Exp $
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> nemerle-0.2.1-r1.ebuild,
+  nemerle-0.2.1-r2.ebuild:
+  mono moved from dev-dotnet -> dev-lang
 
 *nemerle-0.2.1-r2 (10 Mar 2005)
 
