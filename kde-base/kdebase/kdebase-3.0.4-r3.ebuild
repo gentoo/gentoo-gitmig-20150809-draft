@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.9 2003/09/06 23:54:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.10 2003/11/14 21:25:23 seemant Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -19,7 +19,7 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	opengl? ( virtual/opengl )
 	samba? ( net-fs/samba )
-	sys-apps/gzip"
+	app-arch/gzip"
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
 RDEPEND="${RDEPEND}
