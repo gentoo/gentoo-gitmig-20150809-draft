@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.27 2002/11/29 13:13:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.28 2002/11/30 19:44:18 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -300,7 +300,7 @@ cvs_src_unpack() {
 	# if the directory is empty, remove it; empty directories cannot exist in cvs.
 	# this happens when fex. kde-source requests module/doc/subdir which doesn't exist.
 	# still create the empty directory in workdir though.
-	if [ "`ls -A $DIR`" == "CVS" ]; then
+	if [ "`ls -A \"$DIR\"`" == "CVS" ]; then
 		debug-print "$FUNCNAME: removing cvs-empty directory $ECVS_MODULE/$ECVS_SUBDIR"
 		rm -rf "$DIR"
 	fi
