@@ -1,6 +1,6 @@
-# ChangeLog for app-games/stepmania
+# ChangeLog for games-action/stepmania
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/stepmania/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/stepmania/ChangeLog,v 1.2 2003/09/10 20:28:26 vapier Exp $
 
 stepmania-20030705 
  01 Sept 2003; Joshua Charles Campbell <warpzero@gentoo.org> ChangeLog stepmania-20030705.ebuild:
