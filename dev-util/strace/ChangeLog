@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.38 2004/06/04 08:08:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.39 2004/06/05 14:53:59 tuxus Exp $
+
+  05 Jun 2004; <tuxus@gentoo.org> strace-4.4.98-r1.ebuild,
+  strace-4.4.98.ebuild:
+  Change ~mips -mips
 
   04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> strace-4.5.1.ebuild:
   Stable on alpha.
