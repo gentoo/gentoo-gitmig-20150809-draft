@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3000 2004/07/12 02:30:32 lv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3001 2004/07/12 06:02:02 robbat2 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -118,11 +118,6 @@ sys-fs/progsreiserfs
 # <klieber@gentoo.org> (01 June 2004)
 # security masked due to issue described in #51585
 net-misc/sitecopy
-
-# <robbat2@gentoo.org> (04 June 2004)
-# Mask until some brokenness with --with-qde is resolved
-# bug #52944
-=app-admin/amanda-2.4.4_p2-r1
 
 # <klieber@gentoo.org> (01 June 2004)
 # security masked due to issue described in #51586
