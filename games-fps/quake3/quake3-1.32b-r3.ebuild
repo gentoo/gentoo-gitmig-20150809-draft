@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.14 2004/08/15 06:15:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.15 2005/01/20 07:55:13 eradicator Exp $
 
 inherit games
 
@@ -21,7 +21,6 @@ RDEPEND="virtual/libc
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-nvidia
 	)"
 
 S=${WORKDIR}

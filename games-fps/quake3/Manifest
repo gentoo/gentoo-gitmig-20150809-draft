@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6bf44cab3e604c7726a8b73b865908fc ChangeLog 2436
+MD5 047b7759653943bc304ac4231aa70f3a ChangeLog 2678
 MD5 0a25a9c85ee385ef578cb770a957756d metadata.xml 954
-MD5 7ec4ca6d07522428a96d80dd7a7dcefe quake3-1.31.ebuild 1873
-MD5 189d8c6f88f95cb5c7e1ee669247ba7d quake3-1.32b-r3.ebuild 2086
+MD5 54dd3af45f78b495c5309afafe8b67e5 quake3-1.31.ebuild 1839
+MD5 993d4526d50d66eb95dc9692dfcce827 quake3-1.32b-r3.ebuild 2052
 MD5 aa25102bc1d29a9d3cef6ccb88b87833 files/digest-quake3-1.31 73
 MD5 ac0eeb5bcea4995d27e0c6575b8f4dbb files/digest-quake3-1.32b-r3 76
 MD5 ccfdb942c238488a3626c63a53574485 files/q3ded.conf.d 305
 MD5 398efeaa7e416ad1a58e334d37b5ac26 files/q3ded.rc 817
 MD5 2d4f86497a3ba63bc01677f8c306cea5 files/quake3.png 2170
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB0NNrroRuSHgZdywRAislAJwLFgBIgejKIr85h/iCdhJ/JoUBnQCeM7kp
-T7sJCYZEeFaucMeP67Hc0/U=
-=5Uk9
+iD8DBQFB72PrArHZZzCEUG0RAtScAJwIABaQNCLUKoOaa9EBhOQrqgR/cgCeNQ9x
+Qfttt/2EOTAFreYNeEH8JPo=
+=sqBS
 -----END PGP SIGNATURE-----

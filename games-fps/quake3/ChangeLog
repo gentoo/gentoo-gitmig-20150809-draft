@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.13 2004/12/28 03:30:33 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.14 2005/01/20 07:55:13 eradicator Exp $
+
+  19 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org> quake3-1.31.ebuild,
+  quake3-1.32b-r3.ebuild:
+  Removing nvidia emul libs from DEPEND as it is not needed if you don't have
+  an nvidia card, and it is brought in with nvidia-glx.
 
   27 Dec 2004; Mike Frysinger <vapier@gentoo.org> quake3-1.31.ebuild:
   Add install fixes by Erdroh Moshan #66437.
