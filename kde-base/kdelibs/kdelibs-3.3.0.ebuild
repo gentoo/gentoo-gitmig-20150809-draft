@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0.ebuild,v 1.4 2004/08/27 22:56:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0.ebuild,v 1.5 2004/08/29 17:14:35 tgall Exp $
 
-inherit kde eutils
+inherit kde eutils flag-o-matic
 set-kdedir 3.3
 
 DESCRIPTION="KDE libraries needed by all kde programs"
@@ -55,6 +55,7 @@ src_compile() {
 	use cups	&& myconf="$myconf --enable-cups" || myconf="$myconf --disable-cups"
 
 	use x86 && myconf="$myconf --enable-fast-malloc=full"
+	use ppc64 && append-flags -mminimal-toc
 
 	kde_src_compile configure make
 
