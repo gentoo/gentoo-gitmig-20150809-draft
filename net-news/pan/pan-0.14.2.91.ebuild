@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.14.2.91.ebuild,v 1.2 2004/07/15 03:50:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.14.2.91.ebuild,v 1.3 2004/07/15 18:19:39 swegener Exp $
 
 inherit libtool
 
@@ -18,6 +18,7 @@ RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/gtk+-2.0.5
 	>=dev-libs/libxml2-2.4.22
 	>=net-libs/gnet-1.1.8
+	>=dev-libs/libpcre-4.0
 	spell? ( >=app-text/gtkspell-2.0.2 )"
 
 DEPEND="${RDEPEND}
