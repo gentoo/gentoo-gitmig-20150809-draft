@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vimbuddy
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimbuddy/ChangeLog,v 1.1 2005/01/22 20:07:01 ciaranm Exp $
+
+*vimbuddy-0.9.1 (22 Jan 2005)
+
+  22 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +vimbuddy-0.9.1.ebuild:
+  New package, bug #79006
+
