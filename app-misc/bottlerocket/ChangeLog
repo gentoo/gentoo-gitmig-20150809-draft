@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bottlerocket
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/ChangeLog,v 1.4 2005/01/06 22:46:41 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/ChangeLog,v 1.5 2005/01/17 01:57:01 weeve Exp $
+
+  16 Jan 2005; Jason Wever <weeve@gentoo.org> bottlerocket-0.04c.ebuild:
+  Added ~sparc keyword wrt bug #78277.
 
   06 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   bottlerocket-0.04c.ebuild:

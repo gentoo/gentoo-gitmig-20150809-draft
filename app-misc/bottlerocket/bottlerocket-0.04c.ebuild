@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/bottlerocket-0.04c.ebuild,v 1.6 2005/01/06 22:46:41 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/bottlerocket-0.04c.ebuild,v 1.7 2005/01/17 01:57:01 weeve Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mlug.missouri.edu/~tymm/"
 SRC_URI="http://mlug.missouri.edu/~tymm/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~sparc"
 DEPEND=""
 
 src_compile() {
