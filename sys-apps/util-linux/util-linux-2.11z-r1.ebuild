@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r1.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r1.ebuild,v 1.7 2003/03/24 03:11:55 method Exp $
 
-IUSE="crypt nls"
+IUSE="crypt nls selinux"
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,9 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
-	sys-apps/pam-login"
+	!selinux? ( sys-apps/pam-login )
+	selinux? ( sys-apps/shadow )"
+
 
 RDEPEND="${DEPEND} dev-lang/perl
 	nls? ( sys-devel/gettext )"
@@ -44,6 +46,7 @@ src_unpack() {
 	epatch ${FILESDIR}/no-symlink-resolve.patch
 
 	cp MCONFIG MCONFIG.orig
+
 	sed -e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
 		-e "s:CPU=.*:CPU=${CHOST%%-*}:" \
 		-e "s:HAVE_PAM=no:HAVE_PAM=yes:" \
@@ -51,7 +54,7 @@ src_unpack() {
 		-e "s:HAVE_TSORT=no:HAVE_TSORT=yes:" \
 		-e "s:usr/man:usr/share/man:" \
 		-e "s:usr/info:usr/share/info:" \
-			MCONFIG.orig > MCONFIG
+		MCONFIG.orig > MCONFIG
 }
 
 src_compile() {
