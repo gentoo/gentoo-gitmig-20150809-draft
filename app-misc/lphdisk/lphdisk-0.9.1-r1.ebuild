@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/lphdisk-0.9.1-r1.ebuild,v 1.1 2004/04/26 08:01:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/lphdisk-0.9.1-r1.ebuild,v 1.2 2004/04/27 19:38:04 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="utility for preparing a hibernation partition for APM Suspend-To-Disk"
 HOMEPAGE="http://www.procyon.com/~pda/lphdisk/"
