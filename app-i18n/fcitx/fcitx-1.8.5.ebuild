@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-1.8.5.ebuild,v 1.4 2004/06/02 02:05:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-1.8.5.ebuild,v 1.5 2004/06/21 17:20:28 usata Exp $
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -13,8 +13,6 @@ IUSE="truetype"
 
 DEPEND="virtual/x11
 	truetype? ( virtual/xft )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	if use truetype; then
