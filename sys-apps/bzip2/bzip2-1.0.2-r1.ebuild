@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r1.ebuild,v 1.1 2002/03/21 11:42:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r1.ebuild,v 1.2 2002/06/30 04:54:55 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
@@ -13,9 +13,7 @@ DEPEND="virtual/glibc"
 
 
 src_unpack() {
-	
 	unpack ${A}
-
 	cd ${S}
 	cp Makefile Makefile.orig
 	sed -e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' \
