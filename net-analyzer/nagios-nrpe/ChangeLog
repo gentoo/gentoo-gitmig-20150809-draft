@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.5 2003/02/12 07:47:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.6 2003/03/01 01:19:59 alron Exp $
+
+  28 Feb 2003; Dean Bailey <alron@gentoo.org> nagios-nrpe-1.8 :
+  Moved to x86 stable
 
 *nagios-nrpe-1.8
   09 Feb 2003; Dean Bailey <alron@gentoo.org> nagios-nrpe-1.8 :
