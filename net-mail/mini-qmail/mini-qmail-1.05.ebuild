@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mini-qmail/mini-qmail-1.05.ebuild,v 1.2 2004/04/03 03:40:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mini-qmail/mini-qmail-1.05.ebuild,v 1.3 2004/04/04 18:32:42 vapier Exp $
 
 inherit eutils gcc fixheadtails
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.qmail.org/netqmail-${PV}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~mips ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa"
 
 DEPEND="virtual/glibc
 	sys-apps/groff"
