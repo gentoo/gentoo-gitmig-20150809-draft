@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3.ebuild,v 1.4 2004/09/17 09:43:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3.ebuild,v 1.5 2004/10/19 20:17:16 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cwi.nl/htbin/sen1/twiki/bin/view/SEN1/ATermLibrary"
 SRC_URI="http://www.cwi.nl/projects/MetaEnv/jjtraveler/JJTraveler-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"

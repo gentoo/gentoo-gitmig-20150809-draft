@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jjtraveler
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.5 2004/09/30 00:02:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.6 2004/10/19 20:17:16 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jjtraveler-0.4.3.ebuild:
+  Keywords ~amd64.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation

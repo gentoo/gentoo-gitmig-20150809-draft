@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-contrib
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.4 2004/10/16 16:56:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.5 2004/10/19 20:13:58 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  ant-contrib-1.0_beta1-r1.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   ant-contrib-1.0_beta1-r1.ebuild:

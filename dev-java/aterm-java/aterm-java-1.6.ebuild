@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/aterm-java-1.6.ebuild,v 1.6 2004/10/16 16:59:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/aterm-java-1.6.ebuild,v 1.7 2004/10/19 20:18:33 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cwi.nl/htbin/sen1/twiki/bin/view/SEN1/ATermLibrary"
 SRC_URI="http://www.cwi.nl/projects/MetaEnv/aterm-java/aterm-java-1.6.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	dev-java/jjtraveler"

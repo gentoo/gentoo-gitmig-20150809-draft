@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/avalon-phoenix-4.0.4.ebuild,v 1.10 2004/10/16 17:00:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/avalon-phoenix-4.0.4.ebuild,v 1.11 2004/10/19 20:20:24 absinthe Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://avalon.apache.org"
 SRC_URI="mirror://apache/avalon/phoenix/v${PV}/${MY_P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.5.2"
 RDEPEND=">=virtual/jre-1.3"
