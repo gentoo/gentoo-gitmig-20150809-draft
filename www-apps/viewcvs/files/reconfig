@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $1 = "start" -o $1 = "install" ]; then
+	find ${VHOST_CGIBINDIR}/${PN} ${VHOST_ROOT}/${PN} -type f | xargs sed -e "s|\(^LIBRARY_DIR\)\(.*\$\)|\1 = \"${VHOST_CGIBINDIR}/${PN}/lib\"|g
+	s,\(^CONF_PATHNAME\)\(.*\$\),\1 = \"${VHOST_ROOT}/${PN}/viewcvs.conf\",g
+	s,\(<VIEWCVS_INSTALL_DIRECTORY>\),${VHOST_ROOT}/${PN},g" -i
+fi

@@ -1,6 +1,12 @@
 # ChangeLog for net-www/viewcvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.1 2004/08/15 15:52:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.2 2004/08/26 07:55:40 rl03 Exp $
+
+*viewcvs-0.9.2_p20030430-r2 (26 Aug 2004)
+
+  26 Aug 2004; Renat Lumpau <rl03@gentoo.org> +files/postinstall-en.txt,
+  +files/reconfig, +viewcvs-0.9.2_p20030430-r2.ebuild:
+  Rewrite to use webapp.ecalss. Closes #60893.
 
 *viewcvs-0.9.2-r2 (15 Aug 2004)
 
