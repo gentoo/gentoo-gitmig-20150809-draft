@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gproftpd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.8 2004/06/24 22:45:58 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.9 2005/01/27 03:34:55 weeve Exp $
+
+  26 Jan 2005; Jason Wever <weeve@gentoo.org> gproftpd-8.1.4.ebuild:
+  Stable on sparc.
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> gproftpd-8.1.4.ebuild:
   Fix use invocation
