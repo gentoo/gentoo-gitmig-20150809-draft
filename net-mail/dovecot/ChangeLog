@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.20 2005/02/19 02:51:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.21 2005/02/25 16:28:09 ticho Exp $
+
+*dovecot-0.99.14-r1 (25 Feb 2005)
+
+  25 Feb 2005; Andrej Kacian <ticho@gentoo.org> +dovecot-0.99.14-r1.ebuild:
+  Use common PAM profiles provided by >=net-mail/mailbase-0.00-r8 if pam USE
+  flag is set. This only means changing auth_passdb setting in installed
+  config file to "pam *".
 
 *dovecot-0.99.14 (18 Feb 2005)
 
