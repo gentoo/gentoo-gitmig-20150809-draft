@@ -4,4 +4,4 @@ MD5 b19a4b8209587ec222338c3ef3bd3ea7 files/python-xlib-0.12-info.patch 3003
 MD5 8e6551b553e779890641e707e77d81a2 ChangeLog 838
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 9e544329180741c3720217a7c6faee02 python-xlib-0.12.ebuild 666
-MD5 891d6a8bab80725f73fc7e205574c8a3 python-xlib-0.12-r1.ebuild 703
+MD5 f3b9f3c48dc13662618262b1b0f808fa python-xlib-0.12-r1.ebuild 690
