@@ -1,4 +1,4 @@
-MD5 e692650a82b32ba395190b656399a0bb ChangeLog 3265
+MD5 d4f702886e315a0832658a9409030830 ChangeLog 3369
 MD5 800d59bca6b74f54268ca8c63af928ee metadata.xml 668
 MD5 af8db5e7e94c29b370ea7f832f4506c4 uae-0.8.22.ebuild 1279
 MD5 29d8dc818001e2f0ce15c9effdc2b36b uae-0.8.25_pre20040302.ebuild 1819
@@ -8,4 +8,4 @@ MD5 02f734719ea8dc27787fb6be6ddcc11e files/digest-uae-0.8.25_pre20040302 73
 MD5 77b204c71d52f0a0423054b5a9b8a0cb files/split_cpuemu.pl 498
 MD5 4d3af2d2cc2945b006249066cb8c7adb files/uae-patch.diff 364
 MD5 892f9c2140ccb66fdb1b3900cbc4de9f files/uae-0.8.27_pre20040720-ppc-asm-fix.patch 1232
-MD5 472e04bb20f08bf835a95b0cc1ae763e files/digest-uae-0.8.27_pre20040720 72
+MD5 4e6bc702ce0118f127154bddd790fdda files/digest-uae-0.8.27_pre20040720 72
