@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dspam-web/dspam-web-3.1.0_beta11.ebuild,v 1.1 2004/07/21 12:59:25 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dspam-web/dspam-web-3.1.0_beta11.ebuild,v 1.2 2004/07/22 21:05:10 dholm Exp $
 
 inherit webapp
 
@@ -20,7 +20,7 @@ DEPEND=">=mail-filter/dspam-3.1.0_beta11
 	dev-perl/GD-Graph3d
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 S=${WORKDIR}/${MY_P}/cgi
 
 src_compile () {
