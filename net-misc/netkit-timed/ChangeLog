@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-timed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.13 2004/08/16 08:11:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.14 2004/09/26 05:29:58 tgall Exp $
+
+  26 Sep 2004; Tom Gall <tgall@gentoo.org> netkit-timed-0.17-r7.ebuild:
+  stable on ppc64, bug #59610
 
   16 Aug 2004; Daniel Black <dragonheart@gentoo.org>
   netkit-timed-0.17-r6.ebuild, netkit-timed-0.17-r7.ebuild:
