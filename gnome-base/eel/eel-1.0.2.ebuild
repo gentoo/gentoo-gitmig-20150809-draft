@@ -14,7 +14,7 @@ RDEPEND=">=media-libs/freetype-2.0.1
 	 >=gnome-base/librsvg-1.0.1-r1"
 
 DEPEND="${RDEPEND}
-        >=dev-util/xml-i18n-tools-0.8.4"
+        >=dev-util/intltool-0.11"
 
 src_compile() {                           
 	./configure --host=${CHOST}					\

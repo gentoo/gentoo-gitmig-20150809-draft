@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.4-r2.ebuild,v 1.1 2001/10/07 22:15:58 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.4-r2.ebuild,v 1.2 2001/10/22 10:00:00 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-core"
@@ -9,14 +9,14 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=gnome-base/control-center-1.4.0.1-r1
-	 >=gnome-base/libglade-0.17-r1"
+	 >=gnome-base/libglade-0.17-r1
+	 >=gnome-base/gnome-libs-1.4.1.2-r1"
 
 DEPEND="${RDEPEND}
         nls? ( sys-devel/gettext )
-	>=gnome-base/gnome-libs-1.4.1.2-r1
         >=sys-apps/tcp-wrappers-7.6
         >=app-text/scrollkeeper-0.2
-	>=dev-util/xml-i18n-tools-0.8.4"
+	>=dev-util/intltool-0.11"
 
 src_compile() {
 	local myconf
