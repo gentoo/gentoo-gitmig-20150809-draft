@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.2.3.ebuild,v 1.2 2004/01/02 07:56:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.2.3.ebuild,v 1.3 2004/01/02 08:00:00 vapier Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ DESCRIPTION="save the world from Morgoth and battle evil (or become evil ;])"
 HOMEPAGE="http://t-o-m-e.net/"
 SRC_URI="http://t-o-m-e.net/dl/src/tome-${MY_PV}-src.tgz"
 
-LICENSE="Moria | GPL-2"
+LICENSE="Moria"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
