@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r1.ebuild,v 1.3 2004/01/09 19:17:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r1.ebuild,v 1.4 2004/02/09 18:20:34 vapier Exp $
 
 IUSE="opengl"
 
@@ -49,13 +49,13 @@ src_unpack() {
 src_install () {
 
 	perl-module_src_install
-	mkdir -p ${D}/usr/doc/${P}/html
+	dodir /usr/share/doc/${PF}/html
 	eval `perl '-V:version'`
 	PERLVERSION=${version}
 	mv ${D}/usr/lib/perl5/site_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/HtmlDocs/PDL \
-		${D}/usr/doc/${P}/html
+		${D}/usr/share/doc/${PF}/html
 
-	mydir=${D}/usr/doc/${P}/html/PDL
+	mydir=${D}/usr/share/doc/${PF}/html/PDL
 
 	for i in ${mydir}/* ${mydir}/IO/* ${mydir}/Fit/* ${mydir}/Pod/* ${mydir}/Graphics/*
 	do
