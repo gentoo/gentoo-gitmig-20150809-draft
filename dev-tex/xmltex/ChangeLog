@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/xmltex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.10 2005/02/07 17:24:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.11 2005/02/10 09:06:54 usata Exp $
+
+  10 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> xmltex-1.9-r1.ebuild:
+  Stable on x86 and ppc.
 
   07 Feb 2005; Aron Griffis <agriffis@gentoo.org> xmltex-1.9-r1.ebuild:
   add ~alpha
