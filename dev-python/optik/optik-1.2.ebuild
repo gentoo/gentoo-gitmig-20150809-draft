@@ -9,7 +9,6 @@ SRC_URI="mirror://sourceforge/optik/Optik-${PV}.tar.gz"
 HOMEPAGE="http://optik.sourceforge.net/"
 
 DEPEND="virtual/python"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="x86 sparc sparc64 alpha"

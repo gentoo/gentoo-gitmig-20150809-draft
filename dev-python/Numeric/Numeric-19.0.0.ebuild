@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-19.0.0.ebuild,v 1.11 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-19.0.0.ebuild,v 1.12 2002/10/20 18:47:32 vapier Exp $
 
 
 S=${WORKDIR}/${P}
@@ -9,7 +9,6 @@ SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz"
 HOMEPAGE="http://www.pfdubois.com/numpy/"
 
 DEPEND="virtual/python"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64 alpha"

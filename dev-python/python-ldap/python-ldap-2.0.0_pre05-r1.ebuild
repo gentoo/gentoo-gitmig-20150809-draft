@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre05-r1.ebuild,v 1.3 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre05-r1.ebuild,v 1.4 2002/10/20 18:47:32 vapier Exp $
 
 VERSION="2.0.0pre05"
 S=${WORKDIR}/${PN}-${VERSION}
@@ -10,7 +10,6 @@ HOMEPAGE="http://python-ldap.sourceforge.net/"
 
 DEPEND="virtual/python
 	>=net-nds/openldap-2.0.11"
-RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="public-domain" # NOTE: win32 section is under questionable license
 KEYWORDS="x86 sparc sparc64 alpha"

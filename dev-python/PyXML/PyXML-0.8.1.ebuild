@@ -11,7 +11,6 @@ SRC_URI="mirror://sourceforge/pyxml/${P}.tar.gz"
 HOMEPAGE="http://pyxml.sourceforge.net/"
 
 DEPEND="virtual/python"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/snmpy-1.0_alpha4.ebuild,v 1.7 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/snmpy-1.0_alpha4.ebuild,v 1.8 2002/10/20 18:47:32 vapier Exp $
 
 TARNAME=snmpy-alpha-4
 S=${WORKDIR}/${TARNAME}
@@ -13,7 +13,6 @@ KEYWORDS="x86 sparc sparc64 alpha"
 
 DEPEND="virtual/python
 	>=net-analyzer/ucd-snmp-4.2.0"
-RDEPEND="${DEPEND}"
 
 
 mydocs="RELEASE-NOTES docs/docs.html"

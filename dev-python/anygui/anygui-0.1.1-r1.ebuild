@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.9 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.10 2002/10/20 18:47:32 vapier Exp $
 
 IUSE="wxwin gtk qt tcltk"
 
@@ -15,7 +15,6 @@ DEPEND=">=dev-lang/python-2.0
 	gtk? ( dev-python/pygtk )
 	tcltk? ( dev-lang/tk )
 	wxwin? ( dev-python/wxPython )"
-RDEPEND="${DEPEND}"
 
 #Propsed wxwin use variable for wxGTK for wxWindows? ( dev-python/wxPython ) *NOT* official
 #future: 

@@ -1,12 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-0.8.5.ebuild,v 1.8 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-0.8.5.ebuild,v 1.9 2002/10/20 18:47:32 vapier Exp $
 
 DESCRIPTION="A toolkit for building high-level compound widgets in Python using the Tkinter module."
 HOMEPAGE="http://pmw.sourceforge.net/"
 
 DEPEND=">=dev-lang/python-2.1"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64 alpha"

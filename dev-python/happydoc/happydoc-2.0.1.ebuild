@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.0.1.ebuild,v 1.6 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.0.1.ebuild,v 1.7 2002/10/20 18:47:32 vapier Exp $
 
 # HappyDoc version numbering is not very compatible with portage -- kludgeing
 S=${WORKDIR}/HappyDoc-r2_0_1/
@@ -10,7 +10,6 @@ SRC_URI="http://unc.dl.sourceforge.net/sourceforge/happydoc/HappyDoc_r2_0_1.tar.
 HOMEPAGE="http://happydoc.sourceforge.net/"
 
 DEPEND="virtual/python"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="as-is"

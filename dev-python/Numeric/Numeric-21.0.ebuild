@@ -1,6 +1,6 @@
 # Copyright 1999-20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-21.0.ebuild,v 1.8 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-21.0.ebuild,v 1.9 2002/10/20 18:47:32 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="numerical python module"
@@ -9,7 +9,6 @@ HOMEPAGE="http://www.pfdubois.com/numpy/"
 
 # 2.1 gave sandbox violations see #21
 DEPEND=">=dev-lang/python-2.2"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64 alpha"

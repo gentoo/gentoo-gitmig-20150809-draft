@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.2-r1.ebuild,v 1.4 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.2-r1.ebuild,v 1.5 2002/10/20 18:47:32 vapier Exp $
 
 
 S=${WORKDIR}/${P}
@@ -11,7 +11,6 @@ HOMEPAGE="http://starship.python.net/crew/hinsen/scientific.html"
 DEPEND=">=dev-lang/python-2.0-r4
         >=dev-python/Numeric-19.0
         >=app-sci/netcdf-3.0"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="as-is"

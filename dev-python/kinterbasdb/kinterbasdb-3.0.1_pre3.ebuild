@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.0.1_pre3.ebuild,v 1.5 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.0.1_pre3.ebuild,v 1.6 2002/10/20 18:47:32 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="kinterbasdb - firebird/interbase interface for Python."
@@ -13,7 +13,6 @@ KEYWORDS="x86 sparc sparc64 alpha"
 DEPEND="virtual/python
         >=dev/db/firebird-1.0_rc1
         >=dev-python/egenix-mx-base-2.0.1"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	python setup.py build || die

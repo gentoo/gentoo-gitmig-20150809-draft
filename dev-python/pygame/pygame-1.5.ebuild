@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.ebuild,v 1.5 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.ebuild,v 1.6 2002/10/20 18:47:32 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="python bindings to sdl and other libs that facilitate game production"
@@ -18,7 +18,6 @@ DEPEND="virtual/python
 	>=media-libs/sdl-mixer-1.2.3
 	>=dev-python/Numeric-21.0.0
 	>=media-libs/smpeg-0.4.4-r1"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	python setup.py build || die
