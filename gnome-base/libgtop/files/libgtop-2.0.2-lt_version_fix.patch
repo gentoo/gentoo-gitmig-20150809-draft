@@ -1,0 +1,14 @@
+diff -ur libgtop-2.0.2/configure libgtop-2.0.2.patched/configure
+--- libgtop-2.0.2/configure	2003-05-15 19:08:16.000000000 +0200
++++ libgtop-2.0.2.patched/configure	2003-05-21 01:53:43.000000000 +0200
+@@ -1827,8 +1827,8 @@
+ fi
+ 
+ 
+-LIBGTOP_INTERFACE_AGE=1
+-LIBGTOP_BINARY_AGE=1
++LIBGTOP_INTERFACE_AGE=2
++LIBGTOP_BINARY_AGE=2
+ 
+ # you can set this to `-snap' for instance to create
+ # a `libgtop-1.x.y-snap.tar.gz' tarball.
