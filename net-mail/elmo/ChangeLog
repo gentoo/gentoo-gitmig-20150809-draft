@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/elmo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/elmo/ChangeLog,v 1.1 2003/04/05 13:46:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/elmo/ChangeLog,v 1.2 2003/08/17 13:30:41 mholzer Exp $
+
+*elmo-0.6 (17 Aug 2003)
+
+  17 Aug 2003; Martin Holzer <mholzer@gentoo.org> elmo-0.6.ebuild:
+  Version bumped.
 
 *elmo-0.5 (05 Apr 2003)
 
