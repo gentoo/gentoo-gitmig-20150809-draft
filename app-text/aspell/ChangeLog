@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.60 2004/10/03 22:36:46 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.61 2004/10/05 00:05:46 eradicator Exp $
+
+  04 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> aspell-0.60.ebuild:
+  Added to ~amd64 and ~sparc.
 
 *aspell-0.60 (03 Oct 2004)
 
