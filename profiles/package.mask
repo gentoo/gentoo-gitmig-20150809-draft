@@ -53,7 +53,7 @@ media-video/sinek
 # <mattam@gentoo.org> (24 Jan 2004)
 # OCaml binary incompatibility and deps not rebuilt.
 # bug #39246
-=dev-ml/lablgtk-2.2.O
+=dev-ml/lablgtk-2.2.0
 
 # <suka@gentoo.org> (24 Jan 2004)
 # Big rework of the OOo-ebuild needs some testing
