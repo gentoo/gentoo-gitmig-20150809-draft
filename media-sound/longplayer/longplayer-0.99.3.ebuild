@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/longplayer-0.99.3.ebuild,v 1.3 2004/04/30 16:36:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/longplayer-0.99.3.ebuild,v 1.4 2004/06/03 11:36:14 mr_bones_ Exp $
 
 inherit eutils kde
 
@@ -45,6 +45,6 @@ src_compile() {
 }
 
 src_install () {
-	einstall || dir "einstall failed"
+	einstall || die "einstall failed"
 	dodoc AUTHORS BUGS COPYING FAQ ChangeLog INSTALL NEWS README TODO
 }
