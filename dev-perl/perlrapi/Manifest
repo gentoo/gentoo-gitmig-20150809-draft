@@ -1,4 +1,14 @@
-MD5 e2ebe1520dbfaa88f9ef59867d94fe8d ChangeLog 631
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9b9790fe9ae900eb8961aa27b33ada5f perlrapi-0.2.ebuild 581
-MD5 b4b8fc9e5f8f3fe7dc82c05270b22a08 files/digest-perlrapi-0.2 125
+MD5 91098c82652f57cb35a189330d2345ee ChangeLog 698
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 ea4dd36c8230ef5deaea3624e8d1945a files/digest-perlrapi-0.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBon4UI1lqEGTUzyQRAnZ1AJ9t69x5AKAkZ6t6/ksgbyBFr5fW7wCgzqY1
+drjxsmJdfcakc1b9m9RxV/I=
+=J1yV
+-----END PGP SIGNATURE-----

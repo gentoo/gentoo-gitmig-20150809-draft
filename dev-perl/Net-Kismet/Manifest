@@ -1,4 +1,14 @@
-MD5 e90fc99263459d66212dadcf30121f32 ChangeLog 422
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae377b0fdcf60aef64dd7a755a747861 Net-Kismet-0.04.ebuild 526
+MD5 b8121ffd23969aa92e618f9e91ca34c7 ChangeLog 494
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 fb5d82c358f9bca395cdc1aad4a896a1 files/digest-Net-Kismet-0.04 130
+MD5 95e56dab5a4784e1909062803869b4c4 files/digest-Net-Kismet-0.04 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBon9aI1lqEGTUzyQRAlN8AKCBKG09P6T4dBnch1ophYqTsfZC5ACeOnWv
+0BeTdoDCZ9ivLoYD5HIRx3M=
+=9PXb
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 0fc0aef141078e0d84db928c0b2d370c ChangeLog 771
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b60c0fa99e2db2c1bfefaf6de69978fc ChangeLog 840
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cfb9d1530fc46a512d6363a35e27f3d1 Audio-Tools-0.01.ebuild 519
-MD5 9916e0ca8e37d9c28dd93373a72e50d9 files/digest-Audio-Tools-0.01 132
+MD5 3624eeb9ea3ca4cb36be7c6e394daee5 files/digest-Audio-Tools-0.01 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBooD9I1lqEGTUzyQRAt35AJ0TCVG+l7IpNudCkM3qnYY3UNz/JgCgoa11
+40DRxFttgohOCLiOumVHFQk=
+=nES8
+-----END PGP SIGNATURE-----
