@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 83edf49a7069fcd081ca1e0052a2c7c4 ChangeLog 2418
-MD5 e35b37dce94da69fefa2c280651ee487 kde-env-3-r1.ebuild 481
-MD5 170a9d26f3746bb9fbfb2a968a896dc3 kde-env-3-r2.ebuild 663
+MD5 be09668f49ebebcf5dcbfab5d80e8820 kde-env-3-r2.ebuild 664
+MD5 197c838869214006a091494d9012254c kde-env-3-r1.ebuild 482
+MD5 6380655a8497d5d4795975771fd7e72c kde-env-3-r3.ebuild 696
+MD5 9fbbb52617deeb2673501d07eed7fa5a ChangeLog 2508
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 691ff007503b0a2bae9eb4a5af45f5d3 kde-env-3-r3.ebuild 696
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-env-3-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-env-3-r2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-env-3-r3 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB9YSHroRuSHgZdywRAp+0AJ9/jpZ0pNSEvNwLemmr8JD0/DX5xQCeI0ln
-NPkjBmXoCRFp0wcI7tWF7iU=
-=d4K+
+iD8DBQFCGl4uM+I1L6GK/u4RAsBcAJ4wOQPEHgKinqV3ZkR3NotzpThsdACeK00v
+i7oCS4E4AIYBap/8rZ5Z7LI=
+=vEKa
 -----END PGP SIGNATURE-----
