@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.16 2004/11/07 09:52:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.17 2004/11/07 10:20:46 kumba Exp $
 
 inherit flag-o-matic
 append-flags -Wstrict-prototypes
@@ -11,7 +11,7 @@ SRC_URI="http://www.ohse.de/uwe/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc amd64 hppa alpha"
+KEYWORDS="x86 sparc ~ppc amd64 hppa alpha ~mips"
 IUSE="nls"
 
 DEPEND=""
