@@ -1,6 +1,16 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.44 2004/06/10 16:13:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.45 2004/06/16 17:33:41 seemant Exp $
+
+*aspell-0.50.5-r2 (16 Jun 2004)
+
+  16 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
+  files/aspell-buffer-fix.patch, -aspell-0.50.5-r1.ebuild,
+  +aspell-0.50.5-r2.ebuild, -aspell-0.50.5.ebuild:
+  Fix the buffer patch for the truncated dictionaries issue reported in bug
+  #53801 by Tom Wesley <tom.wesley@ntlworld.com>. Adam Bregenzer
+  <adam@bregenzer.net> posted a patch to the patch there, so big-up to him.
+  Removed crusty 50.5 versions, and -r2 straight to stable for everyone
 
   10 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> aspell-0.50.5-r1.ebuild:
   Stable on alpha, bug #53389.

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5.ebuild,v 1.10 2004/06/06 21:31:12 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r2.ebuild,v 1.1 2004/06/16 17:33:41 seemant Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="A spell checker replacement for ispell"
 HOMEPAGE="http://aspell.net/"
@@ -10,7 +10,7 @@ SRC_URI="http://aspell.net/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc sparc ~mips alpha arm hppa amd64 ~ia64 s390"
+KEYWORDS="x86 ppc sparc mips alpha ~arm hppa amd64 ~ia64 s390"
 IUSE="gpm"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -22,6 +22,12 @@ pkg_setup() {
 		CFLAGS=${CXXFLAGS}
 	fi
 	use gpm && LDFLAGS="-lgpm"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-buffer-fix.patch
 }
 
 src_compile() {
@@ -60,4 +66,13 @@ pkg_postinst() {
 	einfo "After installing an aspell dictionary for your language(s),"
 	einfo "You may use the aspell-import utility to import your personal"
 	einfo "dictionaries from ispell, pspell and the older aspell"
+
+	ewarn ""
+	ewarn "Please re-emerge ALL your aspell-LANG dictionaries"
+	ewarn ""
+	for TICKER in 1 2 3 4 5; do
+		# Double beep here.
+		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+		echo -ne "\a" ; sleep 1
+	done
 }
