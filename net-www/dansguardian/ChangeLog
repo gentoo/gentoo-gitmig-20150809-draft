@@ -1,0 +1,16 @@
+# ChangeLog for net-www/dansguardian
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/dansguardian/ChangeLog,v 1.1 2003/05/28 21:49:43 method Exp $
+
+*dansguardian-2.7.1 (28 May 2003)
+
+  28 May 2003; Joshua Brindle <method@gentoo.org> dansguardian-2.6.0.ebuild,
+  dansguardian-2.7.1.ebuild, files/dansguardian.init:
+  initial import thanks to Pat Double <double@inebraska.com>
+
+*dansguardian-2.6.0 (28 May 2003)
+
+  28 May 2003; Joshua Brindle <method@gentoo.org> dansguardian-2.6.0.ebuild,
+  dansguardian-2.7.1.ebuild, files/dansguardian.init:
+  initial import thanks to Pat Double <double@inebraska.com>
+
