@@ -145,6 +145,13 @@ x11-themes/gtk-xfce-engine
 >=gnome-extra/yelp-1.0.2
 >=gnome-extra/gnome-utils-2.0.2
 >=gnome-extra/gnome-games-2.0.2
+>=gnome-base/libgnomecanvas-2.0.2
+>=gnome-base/libgnome-2.0.2
+>=gnome-base/libgnomeui-2.0.3
+>=gnome-extra/gnome-vfs-extras-0.99.2
+>=gnome-base/control-center-2.0.1
+
+
 # Gabriele Giorgetti <stroke@gentoo.org> (05 Aug 2002)
 # other gnome2 packages masked for testing
 >=gnome-base/gdm-2.4.0.5
