@@ -62,6 +62,9 @@ games-strategy
 games-util
 gnome-base
 gnome-extra
+gnustep-apps
+gnustep-base
+gnustep-libs
 kde-base
 local
 mail-filter
