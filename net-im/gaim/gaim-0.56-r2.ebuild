@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.55.ebuild,v 1.1 2002/03/30 11:20:51 seemant Exp $
+# Maintainer: system@gentoo.org
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.56-r2.ebuild,v 1.1 2002/04/25 21:11:42 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk AOL Instant Messenger client"
@@ -8,13 +9,13 @@ SRC_URI="http://prdownloads.sourceforge.net/gaim/${P}.tar.bz2"
 HOMEPAGE="http://gaim.sourceforge.net"
 SLOT="0"
 DEPEND=">=x11-libs/gtk+-1.2.10-r4
-	>=media-libs/gdk-pixbuf-0.16.0
-	nls? ( sys-devel/gettext )
-	gnome? ( >=gnome-base/gnome-core-1.4 )
-	perl? ( >=sys-devel/perl-5.6.1 )
-	nas? ( >=media-libs/nas-1.4.1-r1 )
 	esd? ( >=media-sound/esound-0.2.22-r2 )
-	arts? ( >=kde-base/kdelibs-2.2 )"
+	nls? ( sys-devel/gettext )
+	nas? ( >=media-libs/nas-1.4.1-r1 )
+	arts? ( kde-base/arts )
+	perl? ( >=sys-devel/perl-5.6.1 )
+	gnome? ( >=gnome-base/gnome-core-1.4
+		>=media-libs/gdk-pixbuf-0.16.0 )"
 	
 src_compile() {
     
@@ -25,28 +26,34 @@ src_compile() {
     use perl || myopts="$myopts --disable-perl"
 
     use arts || myopts="$myopts --disable-arts"
-    use arts && KDEDIR=/usr/kde/2
+    use arts && KDEDIR=/usr/kde/3
 
     use nls || myopts="$myopts --disable-nls"
 
     gnomeopts="${myopts}"
 
     # always build standalone gaim program
-    ./configure --host=${CHOST} --disable-gnome --prefix=/usr ${myopts} || die
+    ./configure 	\
+		--host=${CHOST}	\
+		--disable-gnome	\
+		--prefix=/usr	\
+		${myopts} || die
+
     emake || die
 
-
-    # if gnome support is enabled, also build gaim_applet
-    if [ "`use gnome`" ]
-    then
 	# if gnome support is enabled, then build gaim_applet
-	gnomeopts="${gnomeopts} --with-gnome=${GNOME_PATH} --enable-panel"
+    if [ "`use gnome`" ]
+	then
+		gnomeopts="${gnomeopts} --with-gnome=${GNOME_PATH} --enable-panel"
 
-	# save appletless version and clean up
-	cp src/gaim ${S}/gaim
-	make distclean || die
+		# save appletless version and clean up
+		cp src/gaim ${S}/gaim
+		make distclean || die
 
-	./configure --host=${CHOST} --prefix=/usr ${gnomeopts} || die
+		./configure 	\
+			--host=${CHOST}	\
+			--prefix=/usr	\
+			${gnomeopts} || die
     	emake || die
     fi
 
@@ -54,7 +61,7 @@ src_compile() {
 
 src_install () {
 
-    try make DESTDIR=${D} install
+    make DESTDIR=${D} install
 
     # if gnome enabled, make sure to install standalone version also
     use gnome && dobin ${S}/gaim
