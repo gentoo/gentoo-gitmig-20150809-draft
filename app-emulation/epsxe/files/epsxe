@@ -32,5 +32,5 @@ ln -s /usr/games/lib/psemu/plugins/* plugins/
 ln -s /usr/games/lib/psemu/cfg/* cfg/
 ln -s /usr/games/lib/psemu/cheats/* cheats/
 ) >& /dev/null
-
+export LD_PRELOAD="libpthread.so.0:${LD_PRELOAD}"
 exec ./epsxe "$@"
