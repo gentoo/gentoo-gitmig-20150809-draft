@@ -11,8 +11,8 @@
    and samba (unix/windows interoperability).
 </abstract>
 
-<version>0.2</version>
-<date>1 July 2001</date>
+<version>0.21</version>
+<date>10 Oct 2001</date>
 
 <chapter>
 <title>Preliminaries</title>
@@ -54,8 +54,7 @@ an <c>emerge</c> to see what dependencies are going to be installed, and in our
 case it's quite a lot.
 </p>
 <pre>
-# <i>cd /usr/portage/kde-base/kdebase</i>
-# <i>emerge --pretend kdebase-2.1.1-r1.ebuild</i>
+# <i>emerge --pretend kde-base/kdebase</i>
 
 These are the packages that I would merge, in order.
 
@@ -76,17 +75,18 @@ Calculating dependencies............... done!
 [ebuild N  ] app-text/sgml-common-0.6.1 to /
 [ebuild N  ] kde-base/kdelibs-2.1.2 to /
 [ebuild N  ] kde-base/kdebase-2.1.1-r1 to /
+<comment>Your dependencies will probably be different</comment>
 
-# <i>emerge kdebase-2.1.1-r1.ebuild</i>
+# <i>emerge kde-base/kdebase</i>
 </pre>
 <p>Have a nice nap!</p>
-<note>If you have the Gentoo Linux rc5 binary CD, then you can install
+<note>If you have a Gentoo Linux binary CD, then you can install
 the packages directly off of the CD.</note>
 <pre caption="Installing binary packages from the CD">
 # <c>export PKGDIR=/mnt/cdrom/gentoo/packages</c>
 <comment>Normally Portage expects packages to be in /usr/portage/packages
 </comment>
-# <c>emerge --usepkg /mnt/cdrom/gentoo/packages/All/kdebase-2.1.1-r1.tbz2</c>
+# <c>emerge --usepkg /mnt/cdrom/gentoo/packages/All/kdebase-x.y.z.tbz2</c>
 <comment>The <c>--usepkg</c> flag makes sure that binary packages are used
 for the dependencies (if available).</comment>
 </pre>
@@ -104,7 +104,7 @@ Vertical: 55-90 KHz), the type and amount of ram (in KB) of your video card
 (a 32768 KB GeForce card, in my case), and the type and device of your
 mouse (an intellimouse plugged into the ps/2 port <path>/dev/psaux</path>).
 </p>
-<pre># <c>xf86config</c></pre>
+<pre># <c>/usr/X11R6/bin/xf86config</c></pre>
 <p>Because I have a three-button mouse I choose not to enable 
 3-button emulation.  I don't add any additional XKB keyboard options
 because I don't know what any of them do.  You'll have to guess at
@@ -122,7 +122,9 @@ part of the monitor specs.</note>
 <warn>If you're an X-configuring veteran, you may be used to making
 a symbolic link from your mouse device to <path>/dev/mouse</path>.  If
 you are using <c>devfs</c> you may be unpleasantly surprised to discover
-that your link is not preserved upon rebooting.</warn>
+that your link is not preserved upon rebooting.  Instructions for registering
+<path>/dev/mouse</path> with devfs can be found in the Gentoo faq,
+<uri>http://www.gentoo.org/doc/faq.html</uri>. </warn>
 
 <pre># <i>startx</i></pre>
 <p>If you configured X properly, running <c>startx</c> should start an
@@ -160,20 +162,8 @@ for instructions.  Better yet, use <c>konqueror</c>, <c>opera</c>,
 
 <p>Run <c>startx</c> again just to make sure that X still comes up.
 Assuming that it does, kill X and we'll start a real window manager
-instead.  First, though, we need to fix a minor KDE bug.
-</p>
-<pre># <i>nano /opt/kde2.1/bin/startkde</i></pre>
-<pre caption="the top of the startkde file after it has been fixed">
-<i>#!/bin/sh --login</i>
-#
-#  DEFAULT KDE STARTUP SCRIPT ( KDE-2.1 )
-#
-</pre>
-<p>By adding <e>--login</e> to the end of the <e>#! /bin/sh</e> line
-we ensure that KDE will read <path>/etc/profile</path> when starting
-up a terminal.</p>
-
-<p>Because Achim, Gentoo Linux's lead package guru, is a genius, the
+instead.  
+Thanks to Achim and Danarmak, Gentoo's KDE packagers, the
 KDE ebuild configures KDE quite well all by itself.  The KDM display
 manager should work just by starting it.</p>
 <pre># <i>kdm</i></pre>
@@ -186,27 +176,32 @@ you scroll up and down in the konsole window.  It really should
 work!</p>
 
 <p>All that's left is to make sure that X comes up when Gentoo boots.
-Edit <path>/etc/rc.d/config/basic</path> so that 
+Edit <path>/etc/rc.conf</path> so that 
 <e>DISPLAYMANAGER="kdm"</e>.  
 </p>
 <pre>
-# <i>nano /etc/rc.d/config/basic</i>
+# <i>nano /etc/rc.conf</i>
 </pre>
-<pre caption="/etc/rc.d/config/basic -- setting DISPLAYMANAGER">
+<pre caption="/etc/rc.conf -- setting DISPLAYMANAGER">
+<!-- gpm not yet in rc.conf
 MOUSE="ms"				# Set to the mouse type as used by gpm (auto, ps2, ms, etc.)
 
+-->
 DISPLAYMANAGER="<comment>kdm</comment>"			# Enter your display manager here (xdm,kdm,gdm)
 </pre>
+<note>Pre-rc6 users need to edit <path>/etc/rc.d/config/basic</path> instead.</note>
 <p>
 Now we just need to make sure that the
-<e>xdm</e> start-up script is read when booting runlevel 4 (Gentoo's
-default runlevel for X) and change <path>/etc/inittab</path> so that
-runlevel 4 is the default runlevel.</p>
-<pre>
+<e>xdm</e> start-up script is read when booting.
+</p>
+<pre caption="rc6+ users">
+# <i>rc-update add xdm default</i>
+</pre>
+<pre caption="Only for pre-rc6 users">
 # <i>rc-update add xdm</i>
 # <i>nano /etc/inittab</i>
 </pre>
-<pre caption="the initdefault line, configured to start kdm (runlevel 4)">
+<pre caption="the initdefault line, configured to start kdm (runlevel 4), only for pre-rc6 users">
 # Default runlevel.
 
 id:<comment>4</comment>:initdefault:
@@ -230,19 +225,10 @@ the venerable <c>chkconfig</c> command for managing init scripts.  Type
 <p>Gentoo Linux supports Alsa for sound using the default kernel.  Alsa can
 be run with or without <e>devfs</e>.  One note; if you've installed a new
 <path>sys-kernel/linux-sources</path> package, make sure that your Linux kernel
-has sound support enabled, and that <c>alsa</c> is defined in
-<path>/etc/make.conf</path>'s <c>USE</c> variable (important!).  Then, merge the
-<path>sys-kernel/linux-extras</path> package that matches the linux-sources
-that you are currently using.  The <path>linux-extras</path> ebuild is a special
-ebuild that uses the sources in <path>/usr/src/linux</path> to compile and install
-all necessary extra modules (like Alsa) and kernel-specific tools, like the LVM
-utilities.</p>
+has sound support enabled.</p>
 
 <pre>
-# <i>nano /etc/make.conf</i>
-<comment>above, make sure that "alsa" is in the USE variable</comment>
-# <i>cd /usr/portage/sys-kernel/linux-extras</i>
-# <i>emerge linux-extras-x.y.z.ebuild</i>
+# <i>emerge media-sound/alsa-driver</i>
 <comment>the Alsa modules will now be installed</comment>
 # <i>depmod -a</i>
 </pre>
@@ -253,7 +239,7 @@ see the Gentoo FAQ:
 <uri>http://www.gentoo.org/doc/faq.html</uri>.
 </p>
 <pre>
-# <i>nano /etc/rc.d/config/modules</i>
+# <i>nano /etc/modules</i>
 </pre>
 <pre caption="modules.conf with Alsa modules">
 # Put modules to be loaded, with arguments, one per line
@@ -263,6 +249,8 @@ snd-card-emu10k1
 snd-pcm-oss
 
 </pre>
+<note>Pre-rc6 users will need to edit <path>/etc/rc.d/config/modules</path>
+instead.</note>
 <p>
 You'll want to replace <e>snd-card-emu10k1</e> with the
 appropriate sound card for your system.  Look in
@@ -298,10 +286,11 @@ persistdir=/var/lib/modules/persist
 </pre>
 <p>
 Again, you'll want to replace <e>snd-card-emu10k1</e> with
-your sound card.  
+your sound card and kernel version <e>2.4.4-ac9</e> with your kernel
+version.
 </p>
-<p>We should still help out <e>devfs</e>, however.
-Add the following to <path>/etc/devfsd.conf</path>.</p>
+<p>You should also verify that <path>/etc/devfsd.conf</path>
+has the alsa devices and permissions correctly registered.</p>
 <pre>
 # <i>nano /etc/devfsd.conf</i>
 </pre>
@@ -314,7 +303,7 @@ CREATE          .*              COPY    $devpath /dev-state/$devname
 <i>REGISTER        sound/.*        PERMISSIONS root.audio 660</i>
 <i>REGISTER        snd/.*          PERMISSIONS root.audio 660</i>
 </pre>
-<note>Notice that we have just set <path>/dev/sound</path>
+<note>Notice that devfsd.conf sets <path>/dev/sound</path>
 permissions to be <c>root.audio</c>.  Thus, for non-root users to
 use audio they will have to be part of the <c>audio</c> group.
 </note>
@@ -324,8 +313,7 @@ hear any sound yet, though, because alsa keeps all sound channels
 muted by default.
 </p>
 <pre>
-# <i>cd /usr/portage/media-sound/alsa-utils</i>
-# <i>emerge alsa-utils-0.5.10.ebuild</i>
+# <i>emerge media-sound/alsa-utils</i>
 # <i>amixer</i>
 
 Group 'Input Gain',0
@@ -358,7 +346,7 @@ Group 'Master',0
 
 # <i>amixer set Master 100 unmute</i>
 # <i>amixer set PCM 100 unmute</i>
-# <i>aplay /opt/kde2.1/share/sounds/pop.wav</i>
+# <i>aplay /usr/share/sounds/pop.wav</i> <comment>(pop.wav is part of KDE)</comment>
 </pre>
 <p>
 After installing the alsa utilities we use <c>amixer</c> to 
@@ -367,7 +355,14 @@ to 100%.  We check to see if sound is working by using the
 <c>aplay</c> (alsa play) command.  If you hear a pop, then sound
 is indeed working.  Then, adjust the volume settings to your liking;
 the ncurses-based <c>alsamixer</c> is a great way to get them "just so".
-When you reboot your system, the <path>/etc/rc.d/init.d/alsa</path>
+</p>
+<pre caption="rc6+ users only">
+# <i>rc-update add alsa default</i>
+</pre>
+<note>For pre-rc6 users the alsa-utils ebuild automatically adds the
+<e>alsa</e> init script to runlevels 3, 4, and 5.</note>
+<p>
+When you reboot your system, the <e>alsa</e> init
 script will properly save and restore your volume settings.
 </p>
 </body>
@@ -391,8 +386,9 @@ in the usual manner
 (<uri>http://www.linuxdoc.org/HOWTO/Kernel-HOWTO.html</uri>).
 If you choose to compile the sound driver as a module (not
 compile it directly into the kernel), they you need to add
-the module name (without the .o extension) to 
-<path>/etc/rc.d/config/modules</path>.</p>
+the module name (without the .o extension) to <path>/etc/modules</path>
+(rc6+ users) or
+<path>/etc/rc.d/config/modules</path> (pre-rc6 users).</p>
 <p>
 Reboot the machine.  With any luck the appropriate sound driver 
 should now be loaded.  To actually produce sound, a few more steps
@@ -402,10 +398,9 @@ are required.
 # <i>cd /dev</i>
 # <i>/usr/sbin/MAKEDEV audio</i>
 #
-# <i>cat /opt/kde2.1/share/sounds/pop.wav &gt; /dev/dsp</i>
-# <i>cd /usr/portage/media-sound/sox</i>
-# <i>emerge sox-x.y.z.ebuild</i>
-# <i>play /opt/kde2.1/share/sounds/pop.wav</i>
+# <i>cat /usr/share/sounds/pop.wav &gt; /dev/dsp</i>
+# <i>emerge media-sound/sox</i>
+# <i>play /usr/share/sounds/pop.wav</i>
 </pre>
 <p>
 If any sound at all results from cat'ing the .wav file to 
@@ -430,8 +425,7 @@ KDE has some nice sound utilities, including the KDE sound mixer
 <c>kmix</c>.  
 </p>
 <pre>
-# <i>cd /usr/portage/kde-base/kdemultimedia</i>
-# <i>emerge --pretend kdemultimedia-x.y.z.ebuild</i>
+# <i>emerge --pretend kde-base/kdemultimedia</i>
  
 These are the packages that I would merge, in order.
  
@@ -443,7 +437,7 @@ Calculating dependencies...... done!
 [ebuild N  ] x11-libs/gtk+-1.2.10-r1 to /
 [ebuild N  ] kde-base/kdemultimedia-2.1.1 to /
 
-# <i>emerge kdemultimedia-x.y.z.ebuild</i>
+# <i>emerge kde-base/kdemultimedia</i>
 # <i>kmix</i>
 </pre>
 <note>If kmix cannot find a mixer, then it probably thinks you don't
@@ -468,8 +462,7 @@ configure <c>sendmail</c>.  While we're at it we'll also install
 <c>postfix</c> configuration.
 </p>
 <pre>
-# <i>cd /usr/portage/net-mail/postfix</i>
-# <i>emerge --pretend postfix-20010228.2-r1.ebuild</i>
+# <i>emerge --pretend net-mail/postfix net-mail/mutt</i>
 
 These are the packages that I would merge, in order.
  
@@ -477,11 +470,9 @@ Calculating dependencies... done!
 [ebuild N  ] dev-libs/libpcre-3.4-r1 to /
 [ebuild N  ] net-mail/mailbase-0.00-r1 to /
 [ebuild N  ] net-mail/postfix-20010228.2 to /
+[ebuild N  ] net-mail/mutt-1.3.22.1 to /
 
-# <i>emerge postfix-20010228.2-r1.ebuild</i>
-
-# <i>cd ../mutt</i>
-# <i>emerge mutt-1.2.5-r2.ebuild</i>
+# <i>emerge net-mail/postfix net-mail/mutt</i>
 </pre>
 <p>
 If you only intend to use your mail server for sending mail,
@@ -566,9 +557,10 @@ reject mail coming from a source that can't be reached by reverse-DNS.
 </warn>
 <p>
 Assuming everything is working, then it's time to set up postfix
-so that it starts at boot time.
+so that it starts at boot time (unless you're running rc6+, in which
+case it is already set up for you).
 </p>
-<pre>
+<pre caption="Pre-rc6 users only!">
 # <i>postfix stop</i>
 postfix-script: starting the Postfix mail system
 # <i>rc-update add postfix</i>
@@ -607,8 +599,7 @@ For simple systems where you don't need <c>samba</c>
 support the PDQ printing system is nice and simple.
 </p>
 <pre>
-# <i>cd /usr/portage/net-print/pdq</i>
-# <i>emerge pdq-2.2.1.ebuild</i>
+# <i>emerge net-print/pdq</i>
 # <i>xpdq</i>
 </pre>
 <p>
@@ -636,28 +627,31 @@ commands) it emulates all of the <c>lpr</c> commands as
 well.
 </p>
 <pre>
-# cd /usr/portage/net-print/gimp-print-cups
-# emerge --pretend gimp-print-cups-4.1.1.ebuild
+# emerge --pretend net-print/gimp-print-cups
 These are the packages that I would merge, in order.
  
 Calculating dependencies.. done!
-[ebuild N  ] net-print/cups-1.1.8 to /
+[ebuild N  ] net-print/cups-1.1.10-r6 to /
 [binary N  ] net-print/gimp-print-cups-4.1.1 to /
 # emerge gimp-print-cups-4.1.1.ebuild
-# rc-update add cupsd
-Adding cupsd to runlevel 2 3 4
-# /etc/rc.d/init.d/cupsd start
+# rc-update add cupsd default
+ * cupsd added to runlevel default...
+ * Caching service dependencies...                                        [ ok ] 
+ * rc-update complete.
+# /etc/init.d/cupsd start
 Starting Common Unix Printing System...... [  ok  ]
 # konqueror localhost:631
 </pre>
+<note>Pre-rc6 users need to use <c>rc-update add cupsd</c> and
+<c>/etc/rc.d/init.d/cupsd start</c> instead of what is given above.</note>
 <p>
 The <c>gimp-print-cups</c> package is a set of printer drivers for cups,
 which is useful because the cups package itself includes drivers only
 for HP and Epson printers.
 Building <c>gimp-print-cups</c>
 builds cups as a dependency.  Once cups is built
-we add its init scripts to the appropriate run levels using 
-<c>rc-update add cupsd</c>, and then we turn on the cups daemon by starting
+we add its init scripts to the default runlevel using 
+<c>rc-update</c>, and then we turn on the cups daemon by starting
 the init script.
 </p>
 <p>
@@ -695,13 +689,13 @@ the Samba articles by Daniel Robbins at
 <uri>http://www.ibm.com/developerworks</uri>.
 </p>
 <pre>
-# <i>cd /usr/portage/net-fs/samba</i>
-# <i>emerge samba-2.2.0a.ebuild</i>
-# <i>rc-update add samba</i>
+# <i>emerge net-fs/samba</i>
+# <i>rc-update add samba default</i>
 # <i>cd /etc/smb</i>
 # <i>cp /etc/smb/smb.conf.eg /etc/smb/smb.conf</i>
 # <i>nano /etc/smb/smb.conf</i>
 </pre>
+<note>Pre-rc6 users will need to use <c>rc-update add samba</c> (without the "default").</note>
 <pre caption="smb.conf -- workgroup">
 # workgroup = NT-Domain-Name or Workgroup-Name, eg: REDHAT4
    workgroup = MYGROUP <comment>[change to match your workgroup]</comment>
@@ -754,9 +748,10 @@ the first time you run the <c>smbpasswd</c> command, albeit with the
 cosmetic "error" seen above.
 </p>
 <pre>
-# <i>/etc/rc.d/init.d/samba start</i>
+# <i>/etc/init.d/samba start</i>
 Starting samba...        [  ok  ]
 </pre>
+<note>Pre-rc6 users will use <c>/etc/rc.d/init.d/samba start</c> instead.</note>
 <p>
 Start samba, and you should be able to connect to your Gentoo Linux
 box from any of your windows machines and see the home directory for
@@ -764,20 +759,6 @@ whatever user you connect as and also whatever printers you have set up.
 If you can't connect, take a look at 
 <path>/usr/share/doc/samba-2.2.0a/textdocs/DIAGNOSIS.txt.gz</path>
 for additional help.
-</p>
-<pre caption="Optional high-availability samba">
-# <i>/etc/rc.d/init.d/samba stop</i>
-Stopping samba...            [  ok  ]
-# <i>rc-update add svc-samba</i>
-Adding svc-samba to runlevel 3 4
-# <i>/etc/rc.d/init.d/svc-samba start</i>
-Starting svc-samba...        [  ok  ]
-</pre>
-<p>
-The above steps, which are recommended but optional
-run samba under <c>supervise</c>, which is
-part of <c>daemontools</c>, ensuring that if the <c>smbd</c>
-or <c>nmbd</c> daemons die they get restarted.  
 </p>
 </body>
 </section>
