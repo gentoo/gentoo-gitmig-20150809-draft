@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.1.ebuild,v 1.10 2004/04/27 21:25:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.1.ebuild,v 1.11 2004/05/05 00:34:19 lv Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.2
@@ -36,6 +36,8 @@ src_unpack() {
 
 	cd ${S}
 	use amd64 && epatch ${FILESDIR}/arts-${PV}-buffer.patch
+	# this patch fixes the high cpu usage of mp3 and vorbis
+	epatch ${FILESDIR}/arts-vorbis-fix.dif
 }
 
 src_compile() {

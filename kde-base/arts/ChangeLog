@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.92 2004/04/27 21:25:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.93 2004/05/05 00:34:19 lv Exp $
+
+  04 May 2004; Travis Tilley <lv@gentoo.org> +files/arts-vorbis-fix.dif,
+  arts-1.2.1.ebuild, arts-1.2.2.ebuild:
+  added a patch to fix arts suddenly jumping to 100% cpu usage and staying there
+  for mp3 or vorbis streams at least, a bug that is particularly annoying on
+  amd64
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> arts-1.2.1.ebuild,
   arts-1.2.2.ebuild:
