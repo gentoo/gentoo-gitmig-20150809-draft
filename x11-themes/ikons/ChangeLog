@@ -1,8 +1,12 @@
-# ChangeLog for x11-misc/ikons
+# ChangeLog for x11-themes/ikons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ikons/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ikons/ChangeLog,v 1.1 2002/08/30 08:06:26 seemant Exp $
 
 *ikons-0.5.7 (1 Feb 2002)
+
+  30 Aug 2002; Seemant Kulleen <seemant@gentoo.org>  * :
+
+  Moved to x11-themes
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
