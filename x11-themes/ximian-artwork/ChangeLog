@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/ximian-artwork
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.10 2004/03/29 15:07:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.11 2004/04/03 07:14:46 pylon Exp $
+
+  03 Apr 2004; Lars Weiler <pylon@gentoo.org>
+  ximian-artwork-0.2.29.0.6.3.ebuild:
+  stable on ppc
 
 *ximian-artwork-0.2.29.0.6.3 (29 Mar 2004)
 

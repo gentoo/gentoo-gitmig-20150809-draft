@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.6.ebuild,v 1.3 2004/03/24 02:16:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.6.ebuild,v 1.4 2004/04/03 07:13:39 pylon Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Additional themes for GNOME 2.2"
 HOMEPAGE="http://librsvg.sourceforge.net/theme.php"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~hppa ~amd64 ~ppc"
+KEYWORDS="~x86 ~sparc ~hppa ~amd64 ppc"
 IUSE=""
 LICENSE="LGPL-2.1 GPL-2 DSL"
 
