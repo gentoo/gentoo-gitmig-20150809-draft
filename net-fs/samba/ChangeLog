@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.8 2002/05/06 19:57:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.9 2002/05/14 05:24:01 woodchip Exp $
+
+*samba-2.2.4-r1 (13 May 2002)
+
+  13 May 2002; Donny Davies <woodchip@gentoo.org> :
+
+  o Install smbmnt and smbumount suid root, making user's lives easier; closes #2635.
+  o Pass --bindir to ./configure, un-breaking mount.smbfs; closes #2515.
+  o Add a few more codepages.
 
 *samba-2.2.4 (6 May 2002)
   
@@ -29,19 +37,19 @@
   o Added a few convenience directories for netlogon, profiles, samba-hosted
     printer drivers and the samba spool directory.  These are only really for
     those who will blindly follow smb.conf.example.  If you already have
-    your own setup/layout, they're not really needed.  (like me ;)
+    your own setup/layout, they're not really needed.
 
   ** Changes important for people upgrading **
   o None
     If you're coming from samba-2.2.3, then this is a transparent upgrade.
     Just down your daemon, merge 2.2.4, and bring it back up.
 
-  If you're coming from something older than 2.2.3 there's instructions
-  printed after install.  Follow them!
+    If you're coming from something older than 2.2.3 there's instructions
+    printed after install.  Follow them!
 
   All-in-all this update basically adds more features, better documentation,
   better out-of-the-box support for various things, and bug fixes.  There
-  are no sweeping changes to the package layout and such.  Enjoy! 
+  are no sweeping changes to the package layout and such.
 
 *samba-2.2.3a-r3 (3 May 2002)
   
