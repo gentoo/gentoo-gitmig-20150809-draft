@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.17 2004/12/13 16:05:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.18 2004/12/16 04:15:29 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -78,8 +78,8 @@ src_install() {
 
 	into /
 	newlib.so libwrap.so libwrap.so.0.${PV}
-	dosym /lib/libwrap.so.0.${PV} /lib/libwrap.so.0
-	dosym /lib/libwrap.so.0 /lib/libwrap.so
+	dosym /$(get_libdir)/libwrap.so.0.${PV} /$(get_libdir)/libwrap.so.0
+	dosym /$(get_libdir)/libwrap.so.0 /$(get_libdir)/libwrap.so
 	# bug #4411
 	gen_usr_ldscript libwrap.so || die "gen_usr_ldscript failed"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.34 2004/12/13 16:05:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.35 2004/12/16 04:15:29 eradicator Exp $
+
+  15 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  tcp-wrappers-7.6-r8.ebuild:
+  get_libdir love for multilib archs.
 
   13 Dec 2004; Mike Frysinger <vapier@gentoo.org>
   tcp-wrappers-7.6-r8.ebuild:
