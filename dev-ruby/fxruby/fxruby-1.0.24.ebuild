@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.24.ebuild,v 1.1 2003/06/17 11:44:49 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.24.ebuild,v 1.2 2004/02/21 01:05:13 mr_bones_ Exp $
 
 MY_P=FXRuby-${PV}
 DESCRIPTION="Ruby language binding to the FOX GUI toolkit"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.fxruby.org/"
 SRC_URI="mirror://sourceforge/fxruby/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha arm hppa mips sparc x86"
+KEYWORDS="alpha hppa sparc x86"
 IUSE=""
 DEPEND=">=dev-lang/ruby-1.6
 	>=x11-libs/fox-1.0"
