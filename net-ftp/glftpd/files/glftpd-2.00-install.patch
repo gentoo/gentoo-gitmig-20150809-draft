@@ -37,7 +37,7 @@
 +    servicename=glftpd
 @@ -617 +616 @@
 -            read keystroke
-+            echo "SHOULD NOT HAVE BEEN HERE 6" ; exit 1
++            keystroke=y
 @@ -639 +638 @@
 -    read keystroke
 +    echo "SHOULD NOT HAVE BEEN HERE 6.2" ; exit 1
