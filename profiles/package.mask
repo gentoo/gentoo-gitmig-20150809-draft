@@ -100,50 +100,6 @@
 # should be unmasked *prior* to libpng-1.0* removal!!!
 =media-gfx/graphviz-1.8.10-r1
 
-# <danarmak@gentoo.org> (03 Dec 2002)
-# masked until release
-=app-office/koffice-1.2.1
-# <hannes@gentoo.org> (11 Dec 2002)
-# i18n ebuilds
-~app-i18n/koffice-i18n-1.2.1
-~app-i18n/koffice-i18n-af-1.2.1
-~app-i18n/koffice-i18n-ar-1.2.1
-~app-i18n/koffice-i18n-bs-1.2.1
-~app-i18n/koffice-i18n-ca-1.2.1
-~app-i18n/koffice-i18n-cs-1.2.1
-~app-i18n/koffice-i18n-da-1.2.1
-~app-i18n/koffice-i18n-de-1.2.1
-~app-i18n/koffice-i18n-el-1.2.1
-~app-i18n/koffice-i18n-en_GB-1.2.1
-~app-i18n/koffice-i18n-eo-1.2.1
-~app-i18n/koffice-i18n-es-1.2.1
-~app-i18n/koffice-i18n-et-1.2.1
-~app-i18n/koffice-i18n-fr-1.2.1
-~app-i18n/koffice-i18n-he-1.2.1
-~app-i18n/koffice-i18n-hu-1.2.1
-~app-i18n/koffice-i18n-it-1.2.1
-~app-i18n/koffice-i18n-ja-1.2.1
-~app-i18n/koffice-i18n-lt-1.2.1
-~app-i18n/koffice-i18n-lv-1.2.1
-~app-i18n/koffice-i18n-mt-1.2.1
-~app-i18n/koffice-i18n-nb-1.2.1
-~app-i18n/koffice-i18n-nl-1.2.1
-~app-i18n/koffice-i18n-nn-1.2.1
-~app-i18n/koffice-i18n-pl-1.2.1
-~app-i18n/koffice-i18n-pt-1.2.1
-~app-i18n/koffice-i18n-pt_BR-1.2.1
-~app-i18n/koffice-i18n-ru-1.2.1
-~app-i18n/koffice-i18n-sk-1.2.1
-~app-i18n/koffice-i18n-sl-1.2.1
-~app-i18n/koffice-i18n-sv-1.2.1
-~app-i18n/koffice-i18n-th-1.2.1
-~app-i18n/koffice-i18n-tr-1.2.1
-~app-i18n/koffice-i18n-uk-1.2.1
-~app-i18n/koffice-i18n-ven-1.2.1
-~app-i18n/koffice-i18n-xh-1.2.1
-~app-i18n/koffice-i18n-zh_TW-1.2.1
-~app-i18n/koffice-i18n-zu-1.2.1
-
 # <strider@gentoo.org> (02 Dec 2002)
 # new ebuild masking it for now
 =dev-java/ibm-jre-1.4.0
