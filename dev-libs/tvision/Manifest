@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a06393cb380009ca383846f4ab063d68 ChangeLog 760
+MD5 23d978e0cd537571b2033eb9d732d45d ChangeLog 887
 MD5 935da17837809d6fb55dfb62a5ac00d2 tvision-2.0.1.ebuild 668
 MD5 38ab4ec805ba12e56887c718687e460d tvision-2.0.2.ebuild 666
-MD5 79521d36d8c24fb2108fddc40547869c tvision-2.0.3.ebuild 671
+MD5 0be94d1223656ff4a4bcb9e2deede1bc tvision-2.0.3.ebuild 709
 MD5 77d7e341e8e9ec834ca7719f61b21451 files/digest-tvision-2.0.1 72
 MD5 b879cf036720b207be4dc98d04ed22bf files/digest-tvision-2.0.2 72
 MD5 7daddb9d361ccd75c36a648f9224cfc6 files/digest-tvision-2.0.3 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBvgSDmdTrptrqvGERAjeIAJ94wblZSWcPQEZnxy6UnHCeEPeYPACfa8L1
-F0UBxayfErjFsbyS+XXB3QE=
-=UmO2
+iD8DBQFBvsrUmdTrptrqvGERAttQAJsHgmLyV9vJrP1pgAAgNg2M3vu66gCeL5Gu
+QvV/lKu2agPvwAt9EE9R+X0=
+=hQKg
 -----END PGP SIGNATURE-----
