@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.3 2003/06/04 14:06:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.4 2003/06/04 14:09:48 liquidx Exp $
 
 IUSE="X gpm truetype"
 
 P0=${PN}-0.99-16
 S=${WORKDIR}/${P0}
 DESCRIPTION="Console S-Lang-based editor"
-SRC_URI="ftp://ftp.jedsoft.org/pub/davis/jed/v0.99/${PN}-0.99-16.tar.bz2"
+SRC_URI="ftp://ftp.jedsoft.org/pub/davis/jed/v0.99/${P0}.tar.bz2"
 HOMEPAGE="http://space.mit.edu/~davis/jed/"
 
 DEPEND=">=sys-libs/slang-1.4.5
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/slang-1.4.5
 PROVIDE="virtual/editor"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 LICENSE="GPL-2"
 
 src_compile() {
