@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxmms
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.8 2004/01/25 10:50:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.9 2004/01/26 15:23:23 gustavoz Exp $
+
+  26 Jan 2004; <gustavoz@gentoo.org> pyxmms-1.07.ebuild:
+  stable on sparc
 
 *pyxmms-2.02 (25 Jan 2004)
 
