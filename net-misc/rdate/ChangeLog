@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/rdate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.8 2003/03/13 23:30:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.9 2003/07/28 16:23:12 gmsoft Exp $
 
 *rdate-990821-r1 (13 Mar 2003)
+
+  28 Jul 2003; Guy Martin <gmsoft@gentoo.org> rdate-990821-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> rdate-990821-r1.ebuild
   :
