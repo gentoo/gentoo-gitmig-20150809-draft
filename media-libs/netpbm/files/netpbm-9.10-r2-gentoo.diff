@@ -1,6 +1,6 @@
-diff -ur netpbm-9.10.orig/Makefile.config netpbm-9.10/Makefile.config
+diff -ru netpbm-9.10.orig/Makefile.config netpbm-9.10/Makefile.config
 --- netpbm-9.10.orig/Makefile.config	Sun Jan  7 13:52:54 2001
-+++ netpbm-9.10/Makefile.config	Wed Feb 21 00:17:39 2001
++++ netpbm-9.10/Makefile.config	Wed Feb 21 08:52:55 2001
 @@ -50,7 +50,7 @@
  
  # MAKE is set automatically by Make to what was used to invoke Make.
@@ -82,6 +82,15 @@ diff -ur netpbm-9.10.orig/Makefile.config netpbm-9.10/Makefile.config
  # NetBSD:
  #PNGLIB_DIR = $(LOCALBASE)/lib
  #PNGHDR_DIR = $(LOCALBASE)/include
+@@ -235,7 +235,7 @@
+ # network functions is the option in ppmtompeg to run it on multiple
+ # computers simultaneously.
+ 
+-NETWORKLD = 
++NETWORKLD = -lnsl
+ # Solaris, SunOS:
+ #NETWORKLD = -lsocket -lnsl
+ # Don't build network functions:
 @@ -281,7 +281,7 @@
  #INSTALL_PREFIX = /djgpp
  # Typical:
@@ -109,3 +118,15 @@ diff -ur netpbm-9.10.orig/Makefile.config netpbm-9.10/Makefile.config
 -
 -
 -
+diff -ru netpbm-9.10.orig/pnm/Makefile netpbm-9.10/pnm/Makefile
+--- netpbm-9.10.orig/pnm/Makefile	Sun Jan  7 13:54:37 2001
++++ netpbm-9.10/pnm/Makefile	Wed Feb 21 08:55:31 2001
+@@ -45,7 +45,7 @@
+ ifeq ($(JPEGLIB_DIR),NONE)
+   JPEGLD =
+ else
+-  JPEGLD = -L$(JPEGLIB_DIR) -ljpeg
++  JPEGLD = -L$(JPEGLIB_DIR) -ljpeg -lz
+ endif
+ 
+ # We tend to separate out the build targets so that we don't have
