@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.44 2003/10/18 20:03:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.45 2003/10/20 13:38:37 obz Exp $
+
+*gnome-session-2.4.1 (20 Oct 2003)
+
+  20 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-session-2.4.1.ebuild:
+  New version, 64 bit patch is no longer necessary, the fix is in the source
+  archive
 
   18 Oct 2003; Aron Griffis <agriffis@gentoo.org> gnome-session-2.4.0.ebuild:
   Stable on alpha
