@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.8 2003/04/09 22:48:16 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.9 2003/04/14 10:37:46 twp Exp $
+
+*lua-5.0 (14 Apr 2003)
+
+  14 Apr 2003; Tom Payne <twp@gentoo.org> lua-5.0.ebuild :
+
+  Version bump. Added ~arch keywords.
 
 *lua-5.0_beta (09 Apr 2003)
 
