@@ -1,6 +1,6 @@
 # Copyrigth 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10.ebuild,v 1.1 2002/09/05 15:14:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10.ebuild,v 1.2 2002/09/05 20:07:46 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
@@ -26,6 +26,8 @@ src_unpack() {
 	unpack ${A}
 	
 	cd ${S}
+	
+	patch -p1 <${FILESDIR}/xc1810fixme3.diff
 	cp configure configure.orig
 
 	use python && ( \

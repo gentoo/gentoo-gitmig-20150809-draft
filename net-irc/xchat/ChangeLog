@@ -1,9 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.16 2002/09/05 15:14:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.17 2002/09/05 20:07:46 spider Exp $
 
 
 *xchat-1.8.10 (05 Sep 2002) 
+  05 Sep 2002; Spider <spider@gentoo.org> xchat-1.8.10.ebuild :
+  added an upstream patch to fix /me  in queries sending messages to oneself
+
+
   05 Sep 2002; Spider <spider@gentoo.org> xchat-1.8.10.ebuild :
   removed the perl/gnome code. this should be reimplemented.
   updated the version
