@@ -228,3 +228,5 @@ move dev-libs/djbfft sci-libs/djbfft
 move dev-libs/galib sci-libs/galib
 move dev-libs/gaul-devel sci-libs/gaul-devel
 move dev-libs/gsl sci-libs/gsl
+move dev-libs/hdf sci-libs/hdf
+move dev-libs/hdf5 sci-libs/hdf5
