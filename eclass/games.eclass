@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.69 2004/07/05 23:53:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.70 2004/09/02 01:35:57 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -36,6 +36,16 @@ export GAMES_GROUP="${GAMES_GROUP:-games}"
 
 egamesconf() {
 	if [ -x ./configure ] ; then
+		echo \
+		./configure \
+			--prefix=${GAMES_PREFIX} \
+			--host=${CHOST} \
+			--mandir=/usr/share/man \
+			--infodir=/usr/share/info \
+			--datadir=${GAMES_DATADIR} \
+			--sysconfdir=${GAMES_SYSCONFDIR} \
+			--localstatedir=${GAMES_STATEDIR} \
+			"$@"
 		./configure \
 			--prefix=${GAMES_PREFIX} \
 			--host=${CHOST} \
