@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.6.ebuild,v 1.5 2003/02/13 16:04:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.6.ebuild,v 1.6 2003/02/23 21:48:58 drobbins Exp $
 
 IUSE="static"
 
@@ -16,8 +16,8 @@ KEYWORDS="x86 -ppc ~sparc"
 # evms-1.0.6 no longer requires kernel sources to be installed to compile
 # properly. I have removed this dependency. (drobbins, 12 Jan 2003)
 
-DEPEND=""
-RDEPEND=">=sys-apps/sed-4.0"
+DEPEND=">=sys-apps/sed-4.0"
+RDEPEND=""
 
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"

@@ -1,7 +1,11 @@
 # ChangeLog for sys-apps/lvm-user
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.14 2003/02/12 09:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.15 2003/02/23 21:48:58 drobbins Exp $
 
+  23 Jan 2003; Daniel Robbins <drobbins@gentoo.org> lvm-user-1.0.6.ebuild:
+  misplaced sed dependency is now a a DEPEND rather than an RDEPEND. No
+  rev bump.
+  
   12 Jan 2003; Daniel Robbins <drobbins@gentoo.org> lvm-user-1.0.6.ebuild:
   removed dependency on kernel sources. This is no longer needed (see note in
   the ebuild.)
