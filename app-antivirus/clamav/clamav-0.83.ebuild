@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.83.ebuild,v 1.1 2005/02/14 01:47:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.83.ebuild,v 1.2 2005/02/27 23:21:30 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,6 +15,7 @@ IUSE="crypt milter selinux"
 
 DEPEND="virtual/libc
 	crypt? ( >=dev-libs/gmp-4.1.2 )
+	milter? ( mail-mta/sendmail )
 	>=sys-libs/zlib-1.2.1-r3
 	>=net-misc/curl-7.10.0"
 RDEPEND="selinux? ( sec-policy/selinux-clamav )"
@@ -23,6 +24,14 @@ PROVIDE="virtual/antivirus"
 #S="${WORKDIR}/${P/_/}"
 
 pkg_setup() {
+	if use milter; then
+		if ! built_with_use mail-mta/sendmail milter; then
+			ewarn "In order to enable milter support, clamav needs sendmail with enabled milter"
+			ewarn "USE flag. Either recompile sendmail with milter USE flag enabled, or disable"
+			ewarn "this flag for clamav as well to disable milter support."
+			die "need milter-enabled sendmail"
+		fi
+	fi
 	enewgroup clamav
 	enewuser clamav -1 /bin/false /dev/null clamav
 	pwconv || die
