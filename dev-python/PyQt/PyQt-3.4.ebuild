@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.4.ebuild,v 1.1 2002/09/17 17:24:11 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.4.ebuild,v 1.2 2002/09/18 13:31:33 cybersystem Exp $
 
 S="${WORKDIR}/PyQt-x11-gpl-${PV}"
 DESCRIPTION="PyQt is a set of Python bindings for the QT 3.x Toolkit"
@@ -8,7 +8,7 @@ SRC_URI="http://www.river-bank.demon.co.uk/download/PyQt/PyQt-x11-gpl-${PV}.tar.
 HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 DEPEND="virtual/glibc
 	sys-devel/libtool
 	>=x11-libs/qt-3.0.4.1
