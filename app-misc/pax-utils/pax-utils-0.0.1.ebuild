@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.1.ebuild,v 1.1 2003/10/24 10:15:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.1.ebuild,v 1.2 2003/10/24 10:16:07 solar Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -18,8 +18,6 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	use debug && export STRIP=touch
-	ls -R
-	pwd
 	MAKEOPTS=-j1 emake || ls -R
 }
 
