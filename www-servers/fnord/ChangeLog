@@ -1,0 +1,52 @@
+# ChangeLog for net-www/fnord
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.1 2004/08/08 11:37:29 stuart Exp $
+
+*fnord-1.8 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +files/fnord-1.2-gentoo.diff, +files/fnord-1.5-gentoo.diff,
+  +files/fnord-1.6-gentoo.diff, +files/fnord-1.7-gentoo.diff,
+  +fnord-1.2.ebuild, +fnord-1.5.ebuild, +fnord-1.6.ebuild, +fnord-1.7.ebuild,
+  +fnord-1.8.ebuild:
+  Moved from net-www/fnord to www-servers/fnord.
+
+  02 Jun 2004; Michael hanselmann <hansmi@gentoo.org> fnord-1.8.ebuild:
+  Added ~ppc to KEYWORDS
+
+  25 Mar 2004; Jason Wever <weeve@gentoo.org> fnord-1.8.ebuild:
+  Added fix for bug #45716.
+
+*fnord-1.8 (08 Jul 2003)
+
+  08 Jul 2003; Martin Holzer <mholzer@gentoo.org> fnord-1.8.ebuild:
+  Version bumped. Closes #22169
+
+*fnord-1.7 (17 Jan 2003)
+
+  17 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> fnord-1.7.ebuild :
+  Security update.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*fnord-1.6 (26 Oct 2002)
+
+  30 Oct 2002; Nick Hadaway <raker@gentoo.org> fnord-1.6.ebuild :
+  Marked stable.
+
+  26 Oct 2002; Nick Hadaway <raker@gentoo.org> fnord-1.6.ebuild :
+  Version bump.
+
+*fnord-1.5 (18 Sep 2002)
+  
+  11 Sep 2002; Fridtjof Busse <fridtjof@fbunet.de> fnord-1.5.ebuild,
+  files/digest-fnord-1.5, files/fnord-1.5-gentoo.diff :
+  Added fnord/fnordlog user. Corrected small bug in fnord-conf.
+
+*fnord-1.2 (30 Mar 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> fnord-1.2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  30 Mar 2002; Thilo Bangert <thilo.bangert@gmx.net> ChangeLog :
+  initial release ;-)
