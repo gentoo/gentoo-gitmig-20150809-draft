@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portage-prefpane
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-prefpane/ChangeLog,v 1.5 2005/01/01 15:54:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-prefpane/ChangeLog,v 1.6 2005/01/11 21:02:37 hansmi Exp $
+
+*portage-prefpane-0.3-r1 (11 Jan 2005)
+
+  11 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  +portage-prefpane-0.3-r1.ebuild:
+  Added a small patch from MacShabba to make portage-prefpane understand
+  FEATURES="autoconfig".
 
 *portage-prefpane-0.3 (08 Dec 2004)
 

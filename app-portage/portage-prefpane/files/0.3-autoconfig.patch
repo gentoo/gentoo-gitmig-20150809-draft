@@ -1,0 +1,11 @@
+--- portage-prefpane-0.3.orig/FeatureFlagArray.m	2005-01-11 21:47:41.315905344 +0100
++++ portage-prefpane-0.3/FeatureFlagArray.m	2005-01-11 21:52:46.318537896 +0100
+@@ -27,6 +27,8 @@
+ - (id)init {
+     if((self = [super init])) {
+         m_oData = [[NSMutableArray alloc] init];
++        [self addFeatureFlag:@"autoconfig"
++                        desc:@"Enable portage support for the autoconfig package"];
+         [self addFeatureFlag:@"ccache"
+                         desc:@"Enable portage support for the ccache package"];
+         [self addFeatureFlag:@"buildpkg"
