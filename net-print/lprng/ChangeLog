@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.34 2005/01/29 19:45:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.35 2005/01/30 20:23:15 kloeri Exp $
+
+  30 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> lprng-3.8.27-r1.ebuild:
+  Stable on alpha, bug 75484.
 
   29 Jan 2005; Jason Wever <weeve@gentoo.org> lprng-3.8.27-r1.ebuild:
   Stable on sparc wrt security bug #75484.
