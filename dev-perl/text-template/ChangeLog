@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/text-template
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.1 2003/07/29 13:53:23 mcummings Exp $
+
+*text-template-1.44 (29 Jul 2003)
+
+  29 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  text-template-1.44.ebuild:
+  bug 24857 for request tracker, Celestial Wizard
+  <gentoo@dev.celestialwizard.org>
+
