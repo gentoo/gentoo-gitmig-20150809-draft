@@ -1,0 +1,13 @@
+--- Makefile.org	2003-04-16 12:47:58.000000000 +0000
++++ Makefile	2003-04-16 12:48:27.000000000 +0000
+@@ -18,8 +18,8 @@
+ all: fb.install
+ 
+ install: all
+-	install -m 0644 flexbackup.conf $(CONFFILE)
+-	install -m 0755 fb.install $(BINPATH)/flexbackup
++	install -m 0644 flexbackup.conf ${D}$(CONFFILE)
++	install -m 0755 fb.install ${D}$(BINPATH)/flexbackup
+ 
+ fb.install:
+ 	cp flexbackup fb.install
