@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.5 2004/03/11 18:56:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.6 2004/04/25 15:08:56 usata Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD | LGPL-2.1"
 KEYWORDS="x86 alpha ~sparc ~ppc"
 SLOT="0"
-S="${WORKDIR}/${P}"
 
 DEPEND="virtual/glibc
 	app-i18n/qkc

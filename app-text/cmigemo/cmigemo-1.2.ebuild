@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.2.ebuild,v 1.3 2004/04/07 21:40:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.2.ebuild,v 1.4 2004/04/25 15:08:56 usata Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kaoriya.net/dist/${P}.tar.bz2"
 
 LICENSE="cmigemo"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 IUSE="emacs"
 
 DEPEND="virtual/glibc

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/cmigemo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.6 2004/03/13 08:55:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.7 2004/04/25 15:08:56 usata Exp $
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> cmigemo-1.1.013.ebuild,
+  cmigemo-1.2.ebuild:
+  Marked stable on x86 and alpha. Don't assign default to S
 
 *cmigemo-1.2 (12 Mar 2004)
 
