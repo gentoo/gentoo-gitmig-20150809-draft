@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkeycaps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.12 2004/12/05 01:30:35 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.13 2004/12/07 22:37:17 pyrania Exp $
+
+  05 Dec 2004; Markus Nigbur <pyrania@gentoo.org> :
+  Removed -r1 again. See bug #73436.
 
 *xkeycaps-2.46-r1 (05 Dec 2004)
 

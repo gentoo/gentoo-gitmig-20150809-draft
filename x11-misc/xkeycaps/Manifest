@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4daf2ed1b4a0623c47683d74070a423b ChangeLog 1579
+MD5 d067c93f56fee9ba8f233644e26c1e4a ChangeLog 1669
 MD5 ad1c61c4ac3bc036569f3c61f1780927 xkeycaps-2.46.ebuild 863
-MD5 e4528a8957c7acb51cb5c8569dd1fd58 xkeycaps-2.46-r1.ebuild 928
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 f22d961023c7dc9527a112fb95edd8cd files/Imakefile.patch 664
 MD5 95672a6aa92eeb1fc9ab0cbcfb8d87a7 files/digest-xkeycaps-2.46 64
-MD5 95672a6aa92eeb1fc9ab0cbcfb8d87a7 files/digest-xkeycaps-2.46-r1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsmVOI7fK2cqeyXkRAo+WAJ0ZG6rmOYCmapFSgVYEy3QlA9judQCg+A8Q
-GftAcl4+fqVN03ZG5z+aaf8=
-=Pi4D
+iD8DBQFBtjDCI7fK2cqeyXkRArktAJ0ScljnB0cWu+CBQ6xYrJpEO/+khwCdEu3h
+/mEjswloLhfsdcgs4zmVY34=
+=zpCV
 -----END PGP SIGNATURE-----
