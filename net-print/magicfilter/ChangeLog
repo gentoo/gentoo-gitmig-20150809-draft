@@ -1,6 +1,10 @@
 # ChangeLog for net-print/magicfilter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.8 2003/10/11 20:00:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.9 2003/12/09 18:14:06 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> magicfilter-1.2-r4.ebuild,
+  magicfilter-2.3a.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
 *magicfilter-2.3a (11 Oct 2003)
 
