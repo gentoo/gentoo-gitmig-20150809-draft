@@ -1,34 +1,32 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.3-r1.ebuild,v 1.2 2004/09/19 03:47:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.3-r1.ebuild,v 1.3 2004/09/23 04:11:57 vapier Exp $
 
 inherit libtool eutils
 
 DESCRIPTION="Kerberos 5 implementation from KTH"
-SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz"
 HOMEPAGE="http://www.pdc.kth.se/heimdal/"
+SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ppc alpha ~ia64 amd64 hppa mips"
+SLOT="0"
+KEYWORDS="alpha amd64 hppa ia64 mips sparc ppc x86"
 IUSE="ssl berkdb ipv6 krb4 ldap"
-PROVIDE="virtual/krb5"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
 	krb4? ( >=app-crypt/kth-krb-1.2.2-r2 )
 	ldap? ( net-nds/openldap )
 	!virtual/krb5"
-
 	# With this enabled, we create a multiple stage
 	# circular dependency with USE="ldap kerberos"
 	# -- Kain <kain@kain.org> 05 Dec 2002
-
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/gcc
 	>=sys-apps/sed-4"
+PROVIDE="virtual/krb5"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
