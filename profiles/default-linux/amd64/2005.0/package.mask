@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.4 2005/01/11 08:57:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.5 2005/01/12 04:06:26 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to / look in proper $(get_libdir))
@@ -39,4 +39,5 @@
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # This is provided by sys-libs/glibc now
-app-emulation/emul-linux-x86-glibc
+-=app-emulation/emul-linux-x86-glibc-1000
+<app-emulation/emul-linux-x86-glibc-1000
