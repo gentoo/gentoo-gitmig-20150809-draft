@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/text-wrapper
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-wrapper/ChangeLog,v 1.1 2003/08/22 09:20:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-wrapper/ChangeLog,v 1.2 2003/08/22 09:21:16 mcummings Exp $
+
+  22 Aug 2003; Michael Cummings <mcummings@gentoo.org>
+  text-wrapper-1.000.ebuild:
+  No sense in keeping masked. Also, failed to thank Celestial Wizard
+  <gentoo@dev.celestialwizard.org> in initial update.
 
 *text-wrapper-1.000 (22 Aug 2003)
 
