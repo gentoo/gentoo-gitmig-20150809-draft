@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.0.ebuild,v 1.3 2003/10/05 15:52:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.1 2004/03/22 07:03:39 zx Exp $
 
 inherit java
 
-S=${WORKDIR}/${P/_/-}
 DESCRIPTION="A cleanroom, open source Java VM and class libraries"
 SRC_URI="http://www.kaffe.org/ftp/pub/kaffe/v1.1.x-development/${P/_/-}.tar.gz"
 HOMEPAGE="http://www.kaffe.org/"
@@ -16,20 +15,20 @@ DEPEND=">=dev-libs/gmp-3.1
 	>=dev-java/java-config-0.2.4"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-
-src_unpack() {
-	unpack ${A}
-}
+KEYWORDS="~x86 ~sparc"
 
 src_compile() {
-	./configure --host=${CHOST} \
-		    --prefix=/opt/${P}
+	./configure \
+		--prefix=/opt/${P} \
+		--host=${CHOST} \
+		`use_enable alsa`\
+		`use_enable esd`
+	# --with-bcel
+	# --with-profiling
 	make || die
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
-
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
 }
