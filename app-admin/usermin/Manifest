@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eef260c179f2afe8fe4d4901921da7e8 ChangeLog 5330
 MD5 72b3da5f3e255f83a909b3eb2abf240b usermin-1.080-r1.ebuild 2210
+MD5 48c492b1fb17eae0ca856a7c48e9c7a8 usermin-1.090.ebuild 2216
+MD5 068df5892254135b702cdf49c74e0e71 ChangeLog 5431
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
-MD5 2dbcb83379172a9cb403c8d3832118e7 usermin-1.090.ebuild 2217
-MD5 e6e25dc89f0ccd9ce1af4b508d27a5d6 files/digest-usermin-1.080-r1 66
-MD5 bd4b2cc177b4fb7b0f96edc60008a6b5 files/usermin-1.080-safestop.patch 620
-MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/usermin.pam 431
-MD5 9e90c17c1e63a8027bbb4e7aa18f8b20 files/init.d.usermin 821
 MD5 4a8c93084becc5ae5beb4488282df537 files/digest-usermin-1.090 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBPpSKHTu7gpaalycRAiIfAKDhMbOL3PqrEXgcYVnQ+AK8YlBcbQCg66yS
-NAUeHDvvZn3tGksllzKWevU=
-=Z4Nv
------END PGP SIGNATURE-----
+MD5 e6e25dc89f0ccd9ce1af4b508d27a5d6 files/digest-usermin-1.080-r1 66
+MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/usermin.pam 431
+MD5 bd4b2cc177b4fb7b0f96edc60008a6b5 files/usermin-1.080-safestop.patch 620
+MD5 9e90c17c1e63a8027bbb4e7aa18f8b20 files/init.d.usermin 821
