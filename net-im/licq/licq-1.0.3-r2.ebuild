@@ -20,6 +20,8 @@ DEPEND="virtual/glibc
 
 src_compile() {                           
   local myconf
+  local myconf2
+
   if [ -z "`use ssl`" ]
   then
     myconf="--disable-openssl"
@@ -35,7 +37,6 @@ src_compile() {
 
   if [ "`use qt`" ]
   then
-    local myconf2
     if [ "`use kde`" ]
     then
       myconf2="--with-kde"
