@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.6 2002/08/04 00:24:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.7 2002/08/04 09:43:46 trance Exp $
+
+*lm_sensors-2.6.3-r1 (04 Aug 2002)
+
+  04 Aug 2002; Kevyn Shortell <kevyn@gentoo.org> : Added
+  digest that blizzy forgot =P
 
 *lm_sensors-2.6.4-r1 (04 Aug 2002)
 
