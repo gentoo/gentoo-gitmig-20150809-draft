@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.9 2003/07/09 17:00:06 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.10 2003/07/14 18:07:09 frogger Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -184,10 +184,14 @@ src_unpack() {
 	version_patch ${FILESDIR}/3.2.3/gcc323-gentoo-branding.patch
 
 	# ProPolice Stack Smashing protection - protector-3.2.2-8
-	epatch ${WORKDIR}/protector.dif
-	cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
-	cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
-	version_patch ${FILESDIR}/3.2.3/gcc-323-propolice-version.patch 
+	# ProPolice does not work on archs where the stack grows upward (HPPA)
+	if [ ${ARCH} != "hppa" ]
+	then
+		epatch ${WORKDIR}/protector.dif
+		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
+		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
+		version_patch ${FILESDIR}/3.2.3/gcc-323-propolice-version.patch 
+	fi
 
 	# Patches from Mandrake/Suse ...
 	epatch ${FILESDIR}/3.2.1/gcc31-loop-load-final-value.patch
