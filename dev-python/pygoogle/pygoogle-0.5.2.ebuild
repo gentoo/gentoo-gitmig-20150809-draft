@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/pygoogle-0.5.2.ebuild,v 1.7 2004/06/25 01:39:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/pygoogle-0.5.2.ebuild,v 1.8 2004/11/04 16:45:25 pythonhead Exp $
 
 inherit distutils
 
@@ -14,4 +14,5 @@ SLOT="0"
 LICENSE="PYTHON"
 KEYWORDS="x86"
 
-DEPEND="virtual/python"
+DEPEND="virtual/python
+	app-arch/unzip"

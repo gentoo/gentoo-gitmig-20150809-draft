@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygoogle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/ChangeLog,v 1.7 2004/10/30 14:24:33 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/ChangeLog,v 1.8 2004/11/04 16:45:25 pythonhead Exp $
+
+  04 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> pygoogle-0.5.2.ebuild:
+  depend on app-arch/unzip
 
 *pygoogle-0.6 (30 Oct 2004)
 
