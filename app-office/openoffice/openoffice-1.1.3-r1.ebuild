@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3-r1.ebuild,v 1.3 2004/11/16 09:26:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3-r1.ebuild,v 1.4 2004/11/16 09:29:39 suka Exp $
 
 # Notes:
 #
@@ -179,7 +179,6 @@ oo_setup() {
 		# Do we have a gcc that use the new layout and gcc-config ?
 		if /usr/sbin/gcc-config --get-current-profile &> /dev/null
 		then
-			export NEW_GCC="1"
 			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
 
 			# Just recheck gcc version ...
