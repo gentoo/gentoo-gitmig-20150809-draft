@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.6 2004/03/29 00:52:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.7 2004/03/29 17:17:19 eradicator Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Festival Text to Speech engine"
 GCCPV=`gcc -dumpversion`
-IUSE="asterisk"
+IUSE="asterisk doc"
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SITE="http://www.speech.cs.cmu.edu/${PN}/cstr/${PN}/${PV}"
 
