@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.164 2005/01/01 17:42:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.165 2005/01/04 13:22:07 nakano Exp $
+
+*postgresql-8.0.0_rc3 (04 Jan 2005)
+
+  04 Jan 2005; Masatomo Nakano <nakano@gentoo.org>
+  +files/pg_autovacuum.conf-8.0.0_rc3, +files/pg_autovacuum.init-8.0.0_rc3,
+  +files/postgresql-8.0.0_rc3-gentoo.patch, +postgresql-8.0.0_rc3.ebuild:
+  Version bump.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
