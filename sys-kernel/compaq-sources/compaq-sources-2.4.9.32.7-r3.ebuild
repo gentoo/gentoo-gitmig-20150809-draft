@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r2.ebuild,v 1.2 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r3.ebuild,v 1.1 2004/04/15 08:17:06 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
 OKV=2.4.9
 KV=${OKV}-32.7
-EXTRAVERSION="-compaq-r2"
+EXTRAVERSION="-compaq-${PR}"
 S=${WORKDIR}/linux-${KV}
 IUSE=""
 
@@ -54,6 +54,7 @@ src_unpack() {
 	# Security patches
 	epatch ${FILESDIR}/${P}.do_brk.patch || die "Failed to patch do_brk() vulnerability!"
 	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
 

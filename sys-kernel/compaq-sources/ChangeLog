@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/compaq-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/ChangeLog,v 1.4 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/ChangeLog,v 1.5 2004/04/15 08:17:06 plasmaroo Exp $
+
+*compaq-sources-2.4.9.32.7-r3 (15 Apr 2004)
+
+  15 Apr 2004; <plasmaroo@gentoo.org> compaq-sources-2.4.9.32.7-r2.ebuild,
+  compaq-sources-2.4.9.32.7-r3.ebuild,
+  files/compaq-sources-2.4.9.32.7.CAN-2004-0109.patch:
+  Version bump for the CAN-2004-0109 issue; bug #47881.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   compaq-sources-2.4.9.32.7-r2.ebuild:
