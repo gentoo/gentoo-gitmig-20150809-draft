@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.03.ebuild,v 1.4 2004/02/15 06:57:19 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.03.ebuild,v 1.5 2004/02/21 04:53:30 zx Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -104,8 +104,8 @@ src_install () {
 		doins ${T}/sun_java.desktop
 	fi
 	if use kde ; then
-		dodir $KDEDIR/share/applnk/Internet
-		insinto $KDEDIR/share/applnk/Internet
+		dodir /usr/share/applnk/Internet
+		insinto /usr/share/applnk/Internet
 		doins ${T}/sun_java.desktop
 	fi
 
