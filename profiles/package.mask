@@ -675,8 +675,6 @@ gnome-extra/nautilus-gtkhtml
 gnome-extra/gconf-editor
 gnome-extra/gal2
 >=app-text/ggv-1.99.0
-# this fails to compile until new gtk+ is out 
-=app-text/ggv-1.99.5
 >=app-editors/gedit-1.110.0
 
 dev-libs/libmrproject
@@ -695,10 +693,13 @@ dev-libs/libmrproject
 >=dev-util/gob-1.99.3
 >=media-gfx/gthumb-1.100
 >=net-mail/balsa-2.0.0_pre1
-
 gnome-extra/libgail-gnome
 gnome-extra/at-spi
 gnome-extra/at-poke
+media-sound/rhythmbox
+
+# This application is broken and has been removed
+=app-text/ggv-1.99.5
 
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
