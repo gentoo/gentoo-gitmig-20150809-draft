@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc3-r1.ebuild,v 1.4 2003/09/06 22:07:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc3-r1.ebuild,v 1.5 2004/01/02 17:52:31 bazik Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.directfb.org"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 -sparc"
 
 PROVIDE="virtual/x11"
 
