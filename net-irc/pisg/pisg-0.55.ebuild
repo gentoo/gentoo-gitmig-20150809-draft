@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.55.ebuild,v 1.1 2004/06/10 01:50:16 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.55.ebuild,v 1.2 2004/06/17 20:52:46 swegener Exp $
 
 DESCRIPTION="Perl IRC Statistics Generator"
 HOMEPAGE="http://pisg.sourceforge.net/"
@@ -36,7 +36,8 @@ src_install () {
 	dodoc docs/dev/API pisg.cfg COPYING README
 	dohtml docs/html/*
 
-	chmod -R 644 ${D}/usr/share/pisg/layout
+	chmod 755 ${D}/usr/share/pisg/layout
+	chmod 644 ${D}/usr/share/pisg/layout/*
 }
 
 pkg_postinst() {

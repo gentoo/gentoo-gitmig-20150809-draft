@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/pisg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.7 2004/06/10 01:50:16 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.8 2004/06/17 20:52:46 swegener Exp $
+
+  17 Jun 2004; Sven Wegener <swegener@gentoo.org> pisg-0.52.ebuild,
+  pisg-0.55.ebuild:
+  Fixed permission issue.
 
 *pisg-0.55 (09 Jun 2004)
 
