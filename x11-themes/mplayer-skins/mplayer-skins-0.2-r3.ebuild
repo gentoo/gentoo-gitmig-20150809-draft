@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r3.ebuild,v 1.1 2003/11/01 15:07:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r3.ebuild,v 1.2 2003/11/01 20:57:08 puggy Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of mplayer themes"
@@ -48,7 +48,7 @@ RDEPEND="media-video/mplayer
 src_install () {
 	dodir /usr/share/mplayer/Skin
 	cp -dR * ${D}/usr/share/mplayer/Skin/
-	chown -R root.root ${D}/usr/share/mplayer/Skin/
+	chown -R root:root ${D}/usr/share/mplayer/Skin/
 	chmod -R o-w ${D}/usr/share/mplayer/Skin/
 	chmod -R a+rX ${D}/usr/share/mplayer/Skin/
 }
