@@ -12,7 +12,7 @@ use strict;
 use POSIX qw(strftime getcwd);
 
 use Text::Wrap;
-$Text::Wrap::columns = 77;
+$Text::Wrap::columns = 79;
 $Text::Wrap::unexpand = 0;
 
 my @files = ();
@@ -72,7 +72,7 @@ die "Empty entry; aborting\n" unless $input =~ /\S/;
 # If there are any long lines, then wrap the input at $columns chars
 # (leaving 2 chars on each end after adding indentation below).
 $input =~ s/^\s*(.*?)\s*\z/$1/s;  # trim whitespace
-$input = Text::Wrap::fill('', '', $input) if ($input =~ /^.{78}/m);
+$input = Text::Wrap::fill('', '', $input) if ($input =~ /^.{80}/m);
 $input =~ s/^/  /gm;        # add indentation
 
 # Prepend the user info to the input
