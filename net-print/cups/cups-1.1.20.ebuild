@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20.ebuild,v 1.10 2004/01/30 07:14:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20.ebuild,v 1.11 2004/01/30 18:24:07 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,16 +13,20 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ~ia64 ppc64"
 IUSE="ssl slp pam"
 
-DEPEND="virtual/glibc
+DEP="virtual/glibc
 	pam? ( >=sys-libs/pam-0.75 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
-RDEPEND="${DEPEND} !virtual/lpr"
-DEPEND="$DEPEND >=sys-devel/autoconf-2.58"
-has_version net-print/foomatic && DEPEND="${DEPEND} >=net-print/foomatic-3.0.0"
+
+DEPEND="${DEP}
+	>=sys-devel/autoconf-2.58"
+
+RDEPEND="${DEP}
+	!virtual/lpr"
+
 PROVIDE="virtual/lpr"
 
 src_unpack() {

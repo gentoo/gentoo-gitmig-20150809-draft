@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.11 2003/12/28 15:02:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.12 2004/01/30 18:24:07 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,16 +13,20 @@ S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
 PROVIDE="virtual/lpr"
 
-DEPEND="virtual/glibc
+DEP="virtual/glibc
 	pam? ( >=sys-libs/pam-0.75 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
-RDEPEND="${DEPEND} !virtual/lpr"
 
-has_version net-print/foomatic && DEPEND="${DEPEND} >=net-print/foomatic-3.0.0"
+DEPEND="${DEP}
+	>=sys-devel/autoconf-2.58
+	>=sys-devel/automake-1.7.2"
+
+RDEPEND="${DEP}
+	!virtual/lpr"
 
 LICENSE="GPL-2"
 SLOT="0"
