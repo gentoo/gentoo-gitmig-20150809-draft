@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.48 2004/10/29 08:13:23 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.49 2004/10/30 02:28:21 chriswhite Exp $
+
+  30 Oct 2004; Chris White <chriswhite@gentoo.org> mpd-0.11.4-r2.ebuild:
+  Fixed some permissions issues in mpd for ferringb as per bug #64558.
 
 *mpd-0.11.4-r2 (29 Oct 2004)
 

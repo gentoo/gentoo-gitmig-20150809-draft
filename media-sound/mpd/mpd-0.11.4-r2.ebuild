@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.4-r2.ebuild,v 1.1 2004/10/29 08:13:23 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.4-r2.ebuild,v 1.2 2004/10/30 02:28:21 chriswhite Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa"
 
@@ -71,9 +71,9 @@ src_install() {
 	dodir /usr/share/mpd/
 	insinto /var/log
 	touch ${T}/blah
-	diropts -m0640 -o mpd -g audio
-	doins ${T}/blah mpd.log
-	doins ${T}/blah mpd.error.log
+	insopts -m0640 -o mpd -g audio
+	newins ${T}/blah mpd.log
+	newins ${T}/blah mpd.error.log
 }
 
 pkg_postinst() {
