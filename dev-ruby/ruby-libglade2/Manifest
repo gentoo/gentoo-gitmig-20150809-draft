@@ -1,4 +1,6 @@
+MD5 f618baca1dbf99b26cab6a7743399dbd ruby-libglade2-0.7.0.ebuild 489
 MD5 f618baca1dbf99b26cab6a7743399dbd ruby-libglade2-0.5.0.ebuild 489
-MD5 318011de6a2cfe0e89edc65d043c90ee ChangeLog 425
+MD5 cfa6ec1d6d0ba3c1ac63673a5b3e021f ChangeLog 598
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 09c1005bfdf294a6657070475a55b5ed files/digest-ruby-libglade2-0.5.0 69
+MD5 4f9c7018ce4d7fed7f075d8ec562f13f files/digest-ruby-libglade2-0.7.0 73
