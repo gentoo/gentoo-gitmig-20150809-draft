@@ -1,14 +1,18 @@
 # ChangeLog for media-libs/libogg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.8 2003/07/04 22:03:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.9 2003/11/04 09:48:07 kumba Exp $
+
+
+*libogg-1.0 (19 Jul 2002)
+
+  04 Nov 2003; Joshua Kinard <kumba@gentoo.org> libogg-1.0.ebuild:
+  Added ~mips to KEYWORDS
 
   17 Dec 2002; Aron Griffis <agriffis@gentoo.org> libogg-1.0.ebuild :
   Added ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*libogg-1.0 (19 Jul 2002)
-
   04 Jul 2003; Guy Martin <gmsoft@gentoo.org> libogg-1.0.ebuild :
   Added hppa to KEYWORDS.
 
