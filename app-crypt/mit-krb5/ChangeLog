@@ -1,8 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.1 2002/12/27 19:10:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.2 2002/12/30 22:00:54 rphillips Exp $
 
 *mit-krb5-1.2.6-r2 (07 Dec 2002)
+
+  30 Dec 2002; Ryan Phillips <rphillips@gentoo.org> mit-krb5-1.2.6-r3 :
+  Added Martti Rannajarvi's fixes. Fixes #3480
 
   07 Dec 2002; Dave Love <dlove@cashmeresoftware.com>, 
   Martti Rannanjärvi <grypt@kapsi.net>:
