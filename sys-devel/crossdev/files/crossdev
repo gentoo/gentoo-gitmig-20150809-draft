@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.3 2005/03/04 03:27:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.4 2005/03/04 04:28:44 vapier Exp $
 
 source /sbin/functions.sh || exit 1
 die() {
@@ -210,8 +210,10 @@ EOPTS="${UOPTS} -u --nodeps"
 doemerge binutils
 USE=nocxx doemerge gcc gcc-stage1
 doemerge linux-headers
+[[ ${STAGE} -gt 1 ]] || exit 0
 USE=$TARCH doemerge ${LPKG}
 
+[[ ${STAGE} -gt 2 ]] || exit 0
 if ! type -p ${CTARGET}-g++ > /dev/null ; then
 	EOPTS="${UOPTS} --nodeps"
 fi
