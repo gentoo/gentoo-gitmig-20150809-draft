@@ -1,10 +1,13 @@
 # ChangeLog for app-sci/spice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/ChangeLog,v 1.3 2003/02/12 05:19:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/ChangeLog,v 1.4 2003/04/29 06:17:54 george Exp $
+
+  28 Apr 2003; George Shapovalov <george@gentoo.org> spice-3.5.5.ebuild :
+  few cosmetic touches + added ISUE; made ebuild honor EDITOR setting on user system
 
 *spice-3.5.5 (7 Aug 2002)
 
-  07 Aug 2002; G. Shapovalov <george@gentoo.org> spice-3.5.5.ebuild, files/digest-spice-3.5.5:
+  07 Aug 2002; George Shapovalov <george@gentoo.org> spice-3.5.5.ebuild, files/digest-spice-3.5.5:
 
   initial release
 
