@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.53 2003/11/30 21:24:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.54 2003/12/14 23:05:02 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> files/gencert.sh,
+  files/1.03-r8/qmail-1.03-starttls-smtp-auth.patch:
+  A few more issues of : instead of . in chown
 
   30 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r14.ebuild,
   files/1.03-r14/qmail-gentoo-branding.patch,
