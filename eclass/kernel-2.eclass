@@ -1,12 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.74 2005/01/11 21:20:59 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.75 2005/01/12 01:58:27 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
 #
 # Maintainer: John Mylchreest <johnm@gentoo.org>
-# Copyright 2004 Gentoo Linux
 #
 # Please direct your bugs to the current eclass maintainer :)
 
@@ -43,11 +42,18 @@
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of
 #						  order, so they are applied in the order passed
 
+inherit toolchain-funcs
+
 ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 
-export CTARGET="${CTARGET:-${CHOST}}"
+export CTARGET=${CTARGET:-${CHOST}}
+if [[ ${CTARGET} == ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET=${CATEGORY/cross-}
+	fi
+fi
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
@@ -132,7 +138,7 @@ kernel_is_2_6() {
 }
 
 kernel_header_destdir() {
-	[ "${CTARGET}" = "${CHOST}" ] \
+	[[ ${CTARGET} == ${CHOST} ]] \
 		&& echo /usr/include \
 		|| echo /usr/${CTARGET}/include
 }
@@ -225,54 +231,49 @@ unpack_set_extraversion() {
 # Compile Functions
 #==============================================================
 compile_headers() {
-	local extra_makeopts=
+	# if we couldnt obtain HOSTCFLAGS from the Makefile, 
+	# then set it to something sane
 	local HOSTCFLAGS=$(getfilevar HOSTCFLAGS ${S}/Makefile)
-	
-	set_arch_to_kernel;
-	
+	HOSTCFLAGS=${HOSTCFLAGS:--Wall -Wstrict-prototypes -O2 -fomit-frame-pointer}
+
+	# Kernel ARCH != portage ARCH
+	local KARCH=$(tc-arch-kernel ${CTARGET})
+
+	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE 
+	# variables properly or bad things happen !
+	local xmakeopts="ARCH=${KARCH}"
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		xmakeopts="${xmakeopts} CROSS_COMPILE=${CTARGET}-"
+	elif type -p ${CHOST}-ar ; then
+		xmakeopts="${xmakeopts} CROSS_COMPILE=${CHOST}-"
+	fi
+
 	if kernel_is 2 4
 	then
-		yes "" | make oldconfig
+		yes "" | make oldconfig ${xmakeopts}
 		echo ">>> make oldconfig complete"
-		use sparc && make dep
+		use sparc && make dep ${xmakeopts}
+
 	elif kernel_is 2 6
 	then
 		# autoconf.h isnt generated unless it already exists. plus, we have
 		# no guarantee that any headers are installed on the system...
-		[ -f "${ROOT}"/usr/include/linux/autoconf.h ] \
+		[[ -f ${ROOT}/usr/include/linux/autoconf.h ]] \
 			|| touch include/linux/autoconf.h
 
-		# When cross-compiling, we need to set the CROSS_COMPILE var properly
-		if [[ ${CTARGET} != ${CHOST} ]] ; then
-			extra_makeopts="CROSS_COMPILE=${CTARGET}-"
-		elif type -p ${CHOST}-ar ; then
-			extra_makeopts="CROSS_COMPILE=${CHOST}-"
-		fi
-		
-		# if we couldnt obtain HOSTCFLAGS from the Makefile, 
-		#then set it to something sane
-		[ -z "${HOSTCFLAGS}" ] && \
-			HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
-			
 		# if there arent any installed headers, then there also isnt an asm
 		# symlink in /usr/include/, and make defconfig will fail, so we have
 		# to force an include path with $S.
-		ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
-		make defconfig HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "defconfig failed"
-		make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "prepare failed"
+		HOSTCFLAGS="${HOSTCFLAGS} -I${S}/include/"
+		ln -sf asm-${KARCH} "${S}"/include/asm
+		make defconfig HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "defconfig failed"
+		make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "prepare failed"
 	fi
-	
-	set_arch_to_portage;
 }
 
 compile_manpages() {
-	local MY_ARCH
-
 	einfo "Making manpages ..."
-	MY_ARCH=${ARCH}
-	unset ARCH
-	make mandocs
-	ARCH=${MY_ARCH}
+	env -u ARCH make mandocs
 }
 
 # install functions
@@ -308,8 +309,6 @@ install_headers() {
 	then
 		dodir ${ddir}/asm-generic
 		cp -ax ${S}/include/asm-generic/* ${D}/${ddir}/asm-generic
-		
-		
 	fi
 }
 
@@ -639,26 +638,6 @@ unipatch() {
 		rm -Rf ${x}
 	done
 	unset LC_ALL
-}
-
-# custom functions
-#==============================================================
-# Pulled from eutils as it might be more useful only being here since
-# very few ebuilds which dont use this eclass will ever ever use these functions
-set_arch_to_kernel() {
-	export PORTAGE_ARCH="${ARCH}"
-	case ${ARCH} in
-		x86)	export ARCH="i386";;
-		amd64)	export ARCH="x86_64";;
-		hppa)	export ARCH="parisc";;
-		mips)	export ARCH="mips";;
-		*)	export ARCH="${ARCH}";;
-	esac
-}
-
-# set's ARCH back to what portage expects
-set_arch_to_portage() {
-	export ARCH="${PORTAGE_ARCH}"
 }
 
 # getfilevar accepts 2 vars as follows:
