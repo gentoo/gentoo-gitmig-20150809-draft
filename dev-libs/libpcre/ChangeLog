@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.46 2004/10/09 02:03:50 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.47 2004/12/28 17:29:15 eradicator Exp $
+
+*libpcre-5.0 (28 Dec 2004)
+
+  28 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/pcre-5.0-uclibc-tuple.patch, -libpcre-3.9-r1.ebuild,
+  -libpcre-3.9-r2.ebuild, -libpcre-3.9.ebuild, +libpcre-5.0.ebuild:
+  Version bump closes bug #75919.
 
   08 Oct 2004; Lina Pezzella <j4rg0n@gentoo.org> libpcre-4.5.ebuild:
   Added patch for creation of dylibs on ppc-macos. Bug #58165. Thanks to Robin Munn for the submission.
