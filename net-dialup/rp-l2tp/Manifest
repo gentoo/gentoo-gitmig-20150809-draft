@@ -1,5 +1,5 @@
+MD5 8ae8edd5fcd5b218e7e9552f9a3e8672 rp-l2tp-0.3-r1.ebuild 909
 MD5 307ca99a62a08060338ecbd01a84fdc8 ChangeLog 977
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 8ae8edd5fcd5b218e7e9552f9a3e8672 rp-l2tp-0.3-r1.ebuild 909
+MD5 253968a2351a4312da37ef20131502a5 files/rp-l2tpd-init 484
 MD5 bf2a5a28edcc6ffeccae338ebc4b62b2 files/digest-rp-l2tp-0.3-r1 133
-MD5 78e3c052fd652514c634231566b1bf9f files/rp-l2tpd-init 490

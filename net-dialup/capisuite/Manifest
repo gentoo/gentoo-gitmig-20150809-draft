@@ -1,6 +1,6 @@
 MD5 a2ddc0a768006693e2140933d28fb66a capisuite-0.4.3.ebuild 989
 MD5 daaaf22d6d71c303e5b862d6dedee026 ChangeLog 777
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 448cb74cd892bbf0300aa90d21a41b69 files/capisuite 493
+MD5 a6bdc491a9d9a33c0f41c68f06a320ca files/capisuite 487
 MD5 bb4582d756f7452bbb11542fd3c7dc46 files/digest-capisuite-0.4.3 68
 MD5 8cf7cf4419129ea9e97fc080c15ba077 files/capisuite-0.4.3-gentoo.patch 2238
