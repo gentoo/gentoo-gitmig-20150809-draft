@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.8.2-r3.ebuild,v 1.2 2004/12/28 13:08:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.8.2-r3.ebuild,v 1.3 2005/02/17 17:33:53 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,8 @@ DEPEND="!<dev-java/java-gnome-2.8
 	>=dev-java/libgnome-java-2.8.2-r1
 	>=dev-java/libgconf-java-2.8.2
 	>=dev-java/libglade-java-2.8.2.2
-	doc? ( >=virtual/jdk-1.2 )"
+	doc? ( >=virtual/jdk-1.2 )
+	app-arch/unzip"
 
 SLOT="2.8"
 LICENSE="as-is"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.6.0.1.ebuild,v 1.6 2004/07/20 14:08:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.6.0.1.ebuild,v 1.7 2005/02/17 17:33:53 luckyduck Exp $
 
 inherit eutils
 
