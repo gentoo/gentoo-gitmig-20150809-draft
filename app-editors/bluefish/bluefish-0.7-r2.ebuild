@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.7-r2.ebuild,v 1.11 2002/10/16 23:09:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.7-r2.ebuild,v 1.12 2002/10/20 18:37:25 vapier Exp $
 
 IUSE="nls perl"
 
@@ -16,7 +16,6 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1
 		perl? ( sys-devel/perl )
 		nls? ( sys-devel/gettext )"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 
