@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27.ebuild,v 1.8 2004/10/04 21:51:54 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27.ebuild,v 1.9 2004/10/13 14:35:52 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ MY_PN=LPRng
 S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Extended implementation of the Berkeley LPR print spooler"
 HOMEPAGE="http://www.lprng.com/"
-KEYWORDS="x86 ppc sparc alpha ~hppa ~amd64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ~mips"
 SRC_URI="ftp://ftp.lprng.com/pub/${MY_PN}/${MY_PN}/${MY_PN}-${PV}.tgz"
 
 PROVIDE="virtual/lpr"
