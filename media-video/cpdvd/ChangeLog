@@ -1,10 +1,10 @@
 # ChangeLog for media-sound/cpdvd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.1 2004/10/06 20:31:27 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.2 2004/10/06 20:33:46 trapni Exp $
 
 *cpdvd-1.10 (21 Aug 2004)
 
-  21 Aug 2004; Christian Parpart <cparpart@surakware.net>:
+  21 Aug 2004; Christian Parpart <trapni@gentoo.org>:
   Initial import. Ebuild submitted (#64508) 
   by henning <henning@wh9.tu-dresden.de>.
   Adapted to meet gentoo policies.
