@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/kahakai
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.3 2003/07/29 17:07:16 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.4 2003/09/04 01:24:28 bcowan Exp $
+
+*kahakai-0.4 (03 Sep 2003)
+
+  03 Sep 2003; Brad Cowan <bcowan@gentoo.org> kahakai-0.4.ebuild:
+  Version bump.
 
 *kahakai-0.3 (29 Jul 2003)
 
