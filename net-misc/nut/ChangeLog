@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.23 2003/11/21 04:49:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.24 2003/11/23 23:51:54 robbat2 Exp $
+
+*nut-1.5.8-r1 (23 Nov 2003)
+
+  23 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> nut-1.5.8-r1.ebuild:
+  fix bugs from #34174, partially based on submitted patch
 
 *nut-1.5.8 (20 Nov 2003)
 
