@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/uclibc-buildroot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.2 2004/02/03 01:10:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.3 2004/02/03 03:44:15 dragonheart Exp $
+
+  03 Feb 2004; Daniel Black <dragonheart@gentoo.org>
+  files/0.9.26/uClibc-0.9.26-Makefile.patch,
+  files/0.9.26/uClibc-0.9.26-pie-option.patch:
+  Missed a few patches.
 
   03 Feb 2004; Daniel Black <dragonheart@gentoo.org>
   uclibc-buildroot-20040131.ebuild, files/Makefile-buildroot-helpers.patch,
