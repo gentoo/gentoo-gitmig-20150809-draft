@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 fd3200198ebf966b11d58505c0d9d5ad ChangeLog 543
-MD5 880f877b623c1a498671b8cb40ef8dfa imlib2_loaders-1.1.2.ebuild 631
 MD5 8f9bf5eb8132bca3e8d10cb57a7d37b1 metadata.xml 331
-MD5 96233c6df8fbaf1b7c8ecf78e889c263 files/digest-imlib2_loaders-1.1.2 72
+MD5 2bf67a58c26cd2b5c04f70e079600484 imlib2_loaders-1.1.2.20040912.ebuild 640
+MD5 a1284fd3cde1fa58b3283f7e496681fc files/digest-imlib2_loaders-1.1.2.20040912 81
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBNP0JHTu7gpaalycRAiNSAKDIbAsXLK39ovKLpbLSYW+u5mSyOQCgr8b7
-KJ1Fm9XMCEC+pNFplMy8T5A=
-=qDsd
+iD8DBQFBR3f6HTu7gpaalycRAt+2AKDnvDuOT0Gp1J2y773aKllLZj3DNgCgz7ka
+i9AW6d4a3oQA5qbiMMxvciw=
+=AUEI
 -----END PGP SIGNATURE-----
