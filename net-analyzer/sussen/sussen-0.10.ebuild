@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.10.ebuild,v 1.3 2005/03/11 03:20:47 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.10.ebuild,v 1.4 2005/03/23 01:56:37 vanquirius Exp $
 
 inherit gnome2 mono
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 -sparc"
 
 RDEPEND=">=dev-lang/mono-1.0
-	>=dev-dotnet/gtk-sharp-1.0
-	>=dev-dotnet/glade-sharp-1.0
-	>=dev-dotnet/gnome-sharp-1.0"
+	=dev-dotnet/gtk-sharp-1.0*
+	=dev-dotnet/glade-sharp-1.0*
+	=dev-dotnet/gnome-sharp-1.0*"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
