@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.114 2005/02/15 20:02:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.115 2005/02/15 20:31:13 ferdy Exp $
+
+  15 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  -files/cyrus-sasl-ntlm_impl-spnego.patch.gz, cyrus-sasl-2.1.20-r2.ebuild:
+  Move the ntlm patch out of the CVS
 
   15 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org>
   cyrus-sasl-2.1.20-r2.ebuild:

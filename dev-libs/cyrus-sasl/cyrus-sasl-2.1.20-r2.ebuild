@@ -1,12 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r2.ebuild,v 1.2 2005/02/15 20:02:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r2.ebuild,v 1.3 2005/02/15 20:31:13 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
+ntlm_patch=${PN}-ntlm_impl-spnego.patch.gz
+
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/sasl/"
-SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
+SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
+	ntlm_unsupported_patch? http://dev.gentoo.org/~ferdy/distfiles/${ntlm_patch}"
+	# ntlm_unsupported_patch? mirror://gentoo/${ntlm_patch}"
 
 LICENSE="as-is"
 SLOT="2"
@@ -97,8 +101,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 
 	# UNSUPPORTED ntlm patch. Bug #81342
-	use ntlm_unsupported_patch && \
-		epatch "${FILESDIR}/cyrus-sasl-ntlm_impl-spnego.patch.gz"
+	use ntlm_unsupported_patch && epatch "${DISTDIR}/${ntlm_patch}"
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
