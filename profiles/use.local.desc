@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.25 2003/05/27 19:00:23 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.26 2003/05/29 12:42:50 jje Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -14,6 +14,7 @@ dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
+media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-video/transcode - Enable Altivec code portions
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
