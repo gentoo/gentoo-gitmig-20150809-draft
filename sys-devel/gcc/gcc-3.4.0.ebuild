@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.13 2004/04/28 22:26:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.14 2004/04/29 02:09:40 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -267,11 +267,12 @@ src_unpack() {
 
 	ewarn "Do not hold me accountable if GCC 3.4 makes things unstable, wont"
 	ewarn "compile your favorite piece of software, breaks anything C++"
-	ewarn "that you compiled with it after uninstalling gcc 3.4, miscompiles"
-	ewarn "binutils at optimisation levels greater than -O2, eats your cat,"
+	ewarn "that you compiled with it after uninstalling gcc 3.4, eats your cat,"
 	ewarn "humps your leg, or pees on your rug. YOU HAVE BEEN WARNED!!!"
-	ewarn "ALSO DO NOT BOTHER TSENG OR GENTOO-HARDENED ABOUT GCC 3.4"
-	ewarn "While this may be a final release, numerous problems still exist"
+	ewarn "ALSO DO NOT BOTHER TSENG, SOLAR, OR GENTOO-HARDENED ABOUT GCC 3.4!"
+	ewarn "SSP has yet to be ported, and if you are using -fstack-protector,"
+	ewarn "you should cancel this install before you end up breaking something!"
+	ewarn "While this may be a final release, numerous problems still exist.."
 
 	if [ -z "${SNAPSHOT}" ]
 	then
