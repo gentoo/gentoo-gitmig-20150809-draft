@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.12 2004/07/03 02:24:40 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.13 2004/07/07 19:11:59 lv Exp $
+
+  07 Jul 2004; Travis Tilley <lv@gentoo.org> sendmail-8.12.11-r3.ebuild:
+  stable on amd64
 
   02 Jul 2004; Grant Goodyear <g2boojum@gentoo.org> :
   Removing old (and broken) sendmail ebuilds.

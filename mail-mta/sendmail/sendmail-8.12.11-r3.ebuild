@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.12.11-r3.ebuild,v 1.10 2004/07/03 02:00:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.12.11-r3.ebuild,v 1.11 2004/07/07 19:11:59 lv Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa alpha ia64 s390"
+KEYWORDS="x86 ppc sparc hppa alpha ia64 s390 amd64"
 IUSE="ssl ldap sasl tcpd mbox milter mailwrapper"
 
 DEPEND="net-mail/mailbase
