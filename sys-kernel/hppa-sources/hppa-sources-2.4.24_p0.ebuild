@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.24_p0.ebuild,v 1.1 2004/01/12 22:16:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.24_p0.ebuild,v 1.2 2004/01/16 01:25:50 gmsoft Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -20,7 +20,6 @@ PATCH_COUNT="$(( `echo ${PATCH_SET} | wc -w` - 1 ))"
 
 DESCRIPTION="Full sources for the Linux kernel with patch for hppa"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa`echo ${PATCH_SET} | awk '{ print $1 }'`.gz
-`for i in \`seq 1 ${PATCH_COUNT}\`; do echo http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa\`echo ${PATCH_SET} | awk \"{ print \\\\\$$i }\"\`-pa\`echo ${PATCH_SET} | awk \"{ print \\\\\$$((i + 1)) }\"\`.gz; done`
 xfs? ( http://dev.gentoo.org/~gmsoft/patches/xfs-2.4.23_p4-hppa.patch.bz2 )
 http://dev.gentoo.org/~gmsoft/patches/parisc-2.4.23-pa4-missing-ioctl-translations.diff"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org"
@@ -35,14 +34,6 @@ src_unpack() {
 
 	einfo Applying ${OKV}-pa`echo ${PATCH_SET} | awk '{ print $1 }'`
 	zcat ${DISTDIR}/patch-${OKV}-pa`echo ${PATCH_SET} | awk '{ print $1 }'`.gz | patch -sp 1
-
-	for i in `seq 1 ${PATCH_COUNT}`
-	do
-		a=`echo ${PATCH_SET} | awk "{ print \\\$$i }"`
-		b=`echo ${PATCH_SET} | awk "{ print \\\$$((i + 1)) }"`
-		einfo Applying patch from ${OKV}-pa${a} to ${OKV}-pa${b}
-		zcat ${DISTDIR}/patch-${OKV}-pa${a}-pa${b}.gz | patch -sp 1
-	done
 
 	use xfs && epatch ${DISTDIR}/xfs-2.4.23_p4-hppa.patch.bz2
 
