@@ -1,4 +1,4 @@
-MD5 b477b62325e45b7e6942162cfc8bc0a5 dbskkd-cdb-1.01.ebuild 950
 MD5 eb1da72cf65ee6940ac6b87293063754 ChangeLog 452
-MD5 c50800da7ba411b73c590e753480c42e files/digest-dbskkd-cdb-1.01 66
-MD5 c66086d3882809750c5d6ea49bb1ba52 files/dbskkd-cdb.xinetd 326
+MD5 30bb9ff68fd55da1255be0b97eeccbbb dbskkd-cdb-1.01-r1.ebuild 1525
+MD5 c50800da7ba411b73c590e753480c42e files/digest-dbskkd-cdb-1.01-r1 66
+MD5 c28c0f26dfa3bb0b2b9b583be3673e6b files/dbskkd-cdb.xinetd 327
