@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <ermak@netvision.net.il>
+# Author Dan Armak <danarmak@gentoo.org>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.3 2001/07/05 02:43:36 drobbins Exp
 
 # !! IMPORTANT NOTE !!
@@ -64,8 +64,7 @@ src_install () {
     
     # There is no install target in the Makefile.
     # We have to copy everything by hand.
-    # Note: I don't understand dodoc, dobin, dodir... 
-    # What happens if I just copy things?
+    # Update: usage of ebuild installation functions added by achim, thanks
     
     into /usr/X11R6
     dolib.so libXaw3d.so.[0-9].[0-9]

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <ermak@netvision.net.il>
-# /home/cvsroot/gentoo-x86/skel.build,v 1.3 2001/07/05 02:43:36 drobbins Exp
+# Author Dan Armak <danarmak@gentoo.org>
+# $ /home/cvsroot/gentoo-x86/skel.build,v 1.3 2001/07/05 02:43:36 drobbins Exp$
 
 # The real version of LyX is 1.1.6fix2. As Portage has no support for
 # arbitrary suffixes like 'fix' (yet), this is translated into 1.1.6.2.
