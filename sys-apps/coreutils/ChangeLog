@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.45 2003/11/05 01:30:10 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.46 2003/11/18 21:59:38 pebenito Exp $
+
+*coreutils-5.0.91-r1 (18 Nov 2003)
+
+  18 Nov 2003; Chris PeBenito <pebenito@gentoo.org>
+  coreutils-5.0.91-r1.ebuild:
+  Bump to update SELinux patch. The old patch had a rare segfault/hang problem
+  in ls. Otherwise, same as -r0.
 
   04 Nov 2003; Brad House <brad_mssw@gentoo.org> coreutils-5.0.91.ebuild:
   mark stable on amd64
