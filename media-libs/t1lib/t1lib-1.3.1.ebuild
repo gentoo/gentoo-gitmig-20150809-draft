@@ -12,6 +12,15 @@ HOMEPAGE="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib/t1l
 DEPEND="X? ( virtual/x11 )
 	tetex? ( >=app-text/tetex-1.0.7 )"
 
+src_unpack() {
+	unpack "${P}.tar.gz"
+
+	cd ${S}/doc
+	mv Makefile.in Makefile.in-orig
+	sed -e "s:dvips:#dvips:" Makefile.in-orig>Makefile.in
+
+}
+
 src_compile() {
 
 	local myconf
@@ -30,7 +39,7 @@ src_compile() {
 		--datadir=/etc \
 		${myconf} || die
 	
-	emake ${myopt} || die
+	make ${myopt} || die
 }
 
 src_install() {
@@ -56,5 +65,8 @@ src_install() {
 
 	cd ..
 	dodoc Changes LGPL LICENSE README*
+	cd doc
+	insinto /usr/share/doc/t1lib-1.3.1/
+	doins *.pdf *.dvi
 
 }
