@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1-r1.ebuild,v 1.1 2004/07/06 22:27:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1-r1.ebuild,v 1.2 2004/07/14 01:44:43 agriffis Exp $
 
 IUSE="doc mozilla"
 
@@ -146,4 +146,3 @@ pkg_postinst () {
 		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
 	fi
 }
-

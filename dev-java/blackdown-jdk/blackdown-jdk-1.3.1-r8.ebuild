@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.14 2004/07/02 04:18:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.15 2004/07/14 01:44:43 agriffis Exp $
 
 inherit java nsplugins
 
@@ -76,4 +76,3 @@ pkg_postinst () {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 }
-
