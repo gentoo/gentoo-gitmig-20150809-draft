@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.12 2002/06/26 23:18:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.13 2002/08/02 20:10:33 gerk Exp $
 
 eog-1.0.1 (27 Jun 2002)
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
+  Added ppc to keywords
+
   27 Jun 2002; Spider <spider@gentoo.org> eog-1.0.1-r2.ebuild :
   mirror:// code
 
@@ -38,6 +41,9 @@ eog-0.118.0 (06 Jun 2002)
 
 
 *eog-0.6-r4 (12 Apr 2002)
+
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
+  Added ppc to keywords
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> eog-0.6-r4.ebuild :
 
