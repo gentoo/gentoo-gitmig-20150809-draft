@@ -1,0 +1,9 @@
+# ChangeLog for sys-kernel/mips-headers
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.1 2003/03/23 21:26:06 zwelch Exp $
+
+*mips-headers-2.4.21 (23 Mar 2003)
+
+  23 Mar 2003; Zach Welch <zwelch@gentoo.org> mips-headers-2.4.21.ebuild:
+  new ebuild per dragon's request; derived from arm-headers
+
