@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gmudix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/ChangeLog,v 1.7 2004/12/21 11:53:15 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/ChangeLog,v 1.8 2004/12/28 23:07:47 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Dylan Carlson <absinthe@gentoo.org> gmudix-1.0.ebuild:
   keywords ~amd64.
@@ -35,5 +38,5 @@
 
 *gmudix-0.6 (12 Aug 2002)
 
-  127 Aug 2002; J. Alberto Su·rez LÛpez <bass@gentoo.org> gmudix-0.6.ebuild :
+  127 Aug 2002; J. Alberto Su√°rez L√≥pez <bass@gentoo.org> gmudix-0.6.ebuild :
   First relase.

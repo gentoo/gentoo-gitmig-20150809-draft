@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.13 2004/11/05 05:21:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.14 2004/12/28 23:08:16 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Nov 2004; Joseph Jezak <josejx@gentoo.org> gnome-mud-0.10.5.ebuild:
   Added ~ppc.
@@ -64,7 +67,7 @@
 
 *gnome-mud-0.9.1 (04 Jul 2002)
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gnome-mud-0.9.1.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> gnome-mud-0.9.1.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   04 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-mud-0.9.1.ebuild:
@@ -72,10 +75,10 @@
 
 *gnome-mud-0.8-r1 (7 May 2002)
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gnome-mud-0.8-r1.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> gnome-mud-0.8-r1.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gnome-mud-0.8.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> gnome-mud-0.8.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   7 May 2002; Spider <spider@gentoo.org> gnome-mud-0.8-r1.ebuild gnome-mud-0.8.ebuild :

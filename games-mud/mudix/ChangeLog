@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/mudix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/ChangeLog,v 1.7 2004/12/21 12:06:20 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/ChangeLog,v 1.8 2004/12/28 23:09:51 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *mudix-4.3 (21 Dec 2004)
 
@@ -19,7 +22,7 @@
 
 *mudix-4.0 (27 Feb 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> mudix-4.0.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> mudix-4.0.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   27 Feb 2002; Bruce A. Locke <blocke@shivan.org> mudix-4.0.ebuild :

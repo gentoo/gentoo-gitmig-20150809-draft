@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gMOO
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/ChangeLog,v 1.9 2004/12/28 17:11:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/ChangeLog,v 1.10 2004/12/28 23:07:19 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Dec 2004; Joseph Jezak <josejx@gentoo.org> gMOO-0.4.8-r1.ebuild:
   Marked ppc stable.
@@ -22,10 +25,10 @@
 
 *gMOO-0.4.8-r1 (1 Feb 2002)
 
-  30 Jul 2002: Jose Alberto Suárez López <bass@gentoo.org> gMOO-0.4.8-r1.ebuild:
+  30 Jul 2002: Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> gMOO-0.4.8-r1.ebuild:
   Fix problems with nls.
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gMOO-0.4.8.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> gMOO-0.4.8.ebuild :
   Added LICENSE, KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
