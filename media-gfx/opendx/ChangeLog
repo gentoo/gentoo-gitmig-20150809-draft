@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/opendx
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/ChangeLog,v 1.1 2004/03/15 02:31:35 spyderous Exp $
+
+*opendx-4.3.2 (14 Mar 2004)
+
+  14 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml,
+  opendx-4.3.2.ebuild:
+  Initial commit to close #22217. Ebuild by myself and Patrick Kursawe
+  <phosphan@gentoo.org>.
+
