@@ -1,8 +1,14 @@
 # ChangeLog for dev-libs/lam-mpi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/ChangeLog,v 1.1 2002/07/30 03:53:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/ChangeLog,v 1.2 2002/10/18 21:23:38 george Exp $
 
 *lam-mpi-6.5.6.ebuild (29 Jul 2002)
+
+  18 Oct 2002; George Shapovalov <george@gentoo.org> lam-mpi-6.5.6.ebuild :
+
+  fix to make mpi++.h a local symlink (seems to happen with newver binutils?),
+  see #9236 for detail.
+  Thanks Chad Schmutzer for report.
 
   29 Jul 2002; George Shapovalov <george@gentoo.org> lam-mpi-6.5.6.ebuild :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/lam-mpi-6.5.6.ebuild,v 1.3 2002/10/04 05:15:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/lam-mpi-6.5.6.ebuild,v 1.4 2002/10/18 21:23:38 george Exp $
 
 Name="lam"
 S=${WORKDIR}/${Name}-${PV}
@@ -45,6 +45,11 @@ src_install () {
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man infodir=${D}/usr/share/info \
 		sysconfdir=${D}/etc/lam-mpi install || die
+
+	#need to correct the produced absolute symlink
+	cd ${D}/usr/include
+	rm mpi++.h
+	ln -sf mpi2c++/mpi++.h mpi++.h
 
 	dodoc README HISTORY LICENSE RELEASE_NOTES VERSION
 }
