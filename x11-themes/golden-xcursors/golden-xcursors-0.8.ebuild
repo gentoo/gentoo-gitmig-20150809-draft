@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.8 2004/06/09 01:48:58 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.9 2004/06/09 07:14:12 mr_bones_ Exp $
 
 MY_P="5507-Golden-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -14,11 +14,11 @@ DEPEND=""
 RDEPEND="virtual/x11"
 
 src_install() {
-    # Set up X11 implementation
+	# Set up X11 implementation
 	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
-    X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-    X11_IMPLEM="${X11_IMPLEM##*\/}"
-    einfo "X11 implementation is ${X11_IMPLEM}."
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+	einfo "X11 implementation is ${X11_IMPLEM}."
 
 	mkdir -p ${D}/usr/share/cursors/${X11_IMPLEM}/Gold/cursors/
 	cp -d ${WORKDIR}/${MY_P:5}/Gold/cursors/* ${D}/usr/share/cursors/${X11_IMPLEM}/Gold/cursors/ || die
