@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.8 2002/10/13 01:01:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.9 2002/10/20 06:43:10 seemant Exp $
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
@@ -44,8 +44,8 @@ append-flags () {
 
 replace-flags () {
 
-	CFLAGS="${CFLAGS/${1}/${2}}"
-	CXXFLAGS="${CXXFLAGS/${1}/${2}}"
+	CFLAGS="${CFLAGS/${1}/${2} }"
+	CXXFLAGS="${CXXFLAGS/${1}/${2} }"
 
 }
 
