@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r1.ebuild,v 1.6 2002/12/30 03:58:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r1.ebuild,v 1.7 2002/12/30 04:00:31 drobbins Exp $
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
@@ -66,6 +66,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	/sbin/depmod -a
 	einfo "In order for the module to work correctly you must"
 	einfo "Enable the following options in your kernel:"
 	echo
