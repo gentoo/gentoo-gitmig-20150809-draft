@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7a-r3.ebuild,v 1.5 2003/02/13 16:01:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7a-r3.ebuild,v 1.6 2003/02/17 15:35:05 gmsoft Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 HOMEPAGE="http://www.iptables.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc"
+KEYWORDS="x86 ppc alpha sparc hppa"
 LICENSE="GPL-2"
 
 # iptables is dependent on kernel sources.  Strange but true.
@@ -25,7 +25,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-files
 	# The folowing hack is needed because ${ARCH} is "sparc" and not "sparc64"
 	# and epatch uses ??_${ARCH}_foo.${EPATCH_SUFFIX} when reading from directories
-	 [ "${PROFILE_ARCH}" = "sparc64" ] && epatch ${FILESDIR}/sparc64_limit_fix.patch.bz2
+	[ "${PROFILE_ARCH}" = "sparc64" ] && epatch ${FILESDIR}/sparc64_limit_fix.patch.bz2
+	[ "${ARCH}" = "hppa" ] && epatch ${FILESDIR}/iptables-1.2.7a-hppa.diff
 
 	chmod +x extensions/.IMQ-test*
 
