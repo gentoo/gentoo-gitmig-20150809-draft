@@ -300,10 +300,6 @@ dev-perl/CDDB-File
 # masked for testing...
 #>=sys-apps/pcmcia-cs-3.2.1
 
-# <satai@gentoo.org> (23 Aug 2002)
-# problems with tetex/pdftex.
-=app-text/tetex-1.0.7-r11
-
 # <seemant@gentoo.org> (23 Aug 2002)
 # masked for testing.  x3270 for version bump, and xmms for removal of avi
 # stuff, gpgme for version bump.
