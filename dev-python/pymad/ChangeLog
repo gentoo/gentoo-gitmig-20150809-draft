@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.4 2003/07/19 19:49:33 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.5 2003/08/14 20:25:09 pylon Exp $
+
+  14 Aug 2003; Lars Weiler <pylon@gentoo.org> pymad-0.4.1.ebuild:
+  Added keyword ~ppc
 
   19 Jul 2003; Nick Hadaway <raker@gentoo.org>:
   Reverted back to 0.4.1
