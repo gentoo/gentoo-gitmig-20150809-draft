@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/speech-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/ChangeLog,v 1.4 2004/02/25 18:18:46 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/ChangeLog,v 1.5 2004/03/01 03:01:11 eradicator Exp $
+
+  29 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  speech-tools-1.2.3.ebuild:
+  Change compile-time paths in scripts to fix bug #36128. Removed USE=static
+  options as they bork.
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> speech-tools-1.2.3.ebuild:
   Broken on sparc, see bug 41329.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/speech-tools-1.2.3.ebuild,v 1.6 2004/02/25 18:18:46 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/speech-tools-1.2.3.ebuild,v 1.7 2004/03/01 03:01:11 eradicator Exp $
 
 inherit eutils fixheadtails
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc -sparc amd64"
 
 RDEPEND="virtual/glibc"
 
-S=${WORKDIR}/speech_tools
+S="${WORKDIR}/speech_tools"
 
 src_unpack() {
 	unpack ${A}
@@ -23,7 +23,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-gcc3.3.diff
 	ht_fix_file config.guess
 	sed -i 's:-O3:$(CFLAGS):' base_class/Makefile
-	[ `use static` ] || sed -i 's/# SHARED=1/SHARED=1/' config/config.in
 	sed -i 's/-fno-implicit-templates //' config/compilers/gcc_defaults.mak
 }
 
@@ -35,21 +34,23 @@ src_compile() {
 src_install() {
 	into /usr/lib/speech-tools
 
-	if [ `use static` ] ; then
-		dobin `find main/ -perm +1` `find bin/ -perm +1`
-	else
-		cd ${S}/bin
-		rm -f Makefile
-		dobin *
-	fi
+	cd ${S}/bin
+	rm -f Makefile
+
+	dodir /usr/lib/speech-tools/share/testsuite
+	for file in *; do
+		dobin ${file}
+		dosed "s:${S}/testsuite/data:/usr/lib/speech-tools/share/testsuite:g" /usr/lib/speech-tools/bin/${file} testsuite/data
+		dosed "s:${S}/bin:/usr/lib/speech-tools/bin:g" /usr/lib/speech-tools/bin/${file}
+		dosed "s:${S}/main:/usr/lib/speech-tools/bin:g" /usr/lib/speech-tools/bin/${file}
+		dosed "s:${S}/lib:/usr/lib/speech-tools/lib:g" /usr/lib/speech-tools/bin/${file}
+	done
 
 	cd ${S}/lib
-	if [ ! `use static` ] ; then
-		dolib.so libestbase.so.1.2.3.1
-		dosym /usr/lib/speech-tools/lib/libestbase.so.1.2.3.1 /usr/lib/speech-tools/lib/libestbase.so
-		dolib.so libeststring.so.1.2
-		dosym /usr/lib/speech-tools/lib/libeststring.so.1.2 /usr/lib/speech-tools/lib/libeststring.so
-	fi
+	dolib.so libestbase.so.1.2.3.1
+	dosym /usr/lib/speech-tools/lib/libestbase.so.1.2.3.1 /usr/lib/speech-tools/lib/libestbase.so
+	dolib.so libeststring.so.1.2
+	dosym /usr/lib/speech-tools/lib/libeststring.so.1.2 /usr/lib/speech-tools/lib/libeststring.so
 	dolib.a libestbase.a
 	dolib.a libestools.a
 	dolib.a libeststring.a
@@ -67,6 +68,8 @@ src_install() {
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/58speech-tools
+
+	cd ${D}/
 
 	cd ${S}
 	dodoc README
