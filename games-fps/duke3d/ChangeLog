@@ -1,10 +1,6 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.8 2004/03/19 07:34:14 mr_bones_ Exp $
-
-  18 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
-  duke3d-20030817-r1.ebuild:
-  ppc back to ~ since it still doesn't have stable deps yet.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.9 2004/03/19 16:51:35 vapier Exp $
 
   28 Nov 2003; David Holm <dholm@gentoo.org> duke3d-20030817-r1.ebuild:
   nasm is only available on x86 and timidity-eawpatches is only available on
