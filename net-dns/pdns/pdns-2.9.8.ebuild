@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.8.ebuild,v 1.7 2004/07/01 22:13:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.8.ebuild,v 1.8 2004/07/14 23:37:33 agriffis Exp $
 
 DESCRIPTION="The PowerDNS Daemon."
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -14,8 +14,6 @@ DEPEND="virtual/libc
 	mysql? ( >=dev-db/mysql-3.23.54a )"
 
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf=""
