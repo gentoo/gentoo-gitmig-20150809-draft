@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/anthy-ss
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.32 2004/06/13 13:41:20 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.33 2004/06/17 14:06:53 hattya Exp $
+
+*anthy-ss-5414 (17 Jun 2004)
+
+  17 Jun 2004; Akinori Hattori <hattya@gentoo.org> +anthy-ss-5414.ebuild:
+  version bump.
 
   13 Jun 2004; Akinori Hattori <hattya@gentoo.org> -anthy-ss-5229.ebuild,
   -anthy-ss-5312.ebuild:
