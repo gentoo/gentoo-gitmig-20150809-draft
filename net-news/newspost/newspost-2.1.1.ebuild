@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-2.1.1.ebuild,v 1.1 2003/07/20 14:38:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-2.1.1.ebuild,v 1.2 2003/09/08 11:36:02 msterret Exp $
 
 DESCRIPTION="a usenet binary autoposter for unix"
 HOMEPAGE="http://newspost.unixcab.org/"
@@ -19,12 +19,10 @@ RDEPEND="sys-libs/glibc"
 S=${WORKDIR}/${P}
 
 src_unpack() {
-
-    unpack $A
-    cd $S
-    cp Makefile Makefile.orig
-    sed -e "s:OPT_FLAGS = :OPT_FLAGS = ${CFLAGS}#:" Makefile.orig > Makefile
-
+	unpack $A
+	cd $S
+	cp Makefile Makefile.orig
+	sed -e "s:OPT_FLAGS = :OPT_FLAGS = ${CFLAGS}#:" Makefile.orig > Makefile
 }
 
 src_compile() {
@@ -32,9 +30,9 @@ src_compile() {
 }
 
 src_install () {
-  dobin newspost
-  doman man/man1/newspost.1
-  dodoc README
-  dodoc CHANGES
-  dodoc COPYING
+	dobin newspost
+	doman man/man1/newspost.1
+	dodoc README
+	dodoc CHANGES
+	dodoc COPYING
 }
