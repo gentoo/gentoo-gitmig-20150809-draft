@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.15 2004/10/05 10:18:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.16 2004/10/31 14:38:47 chainsaw Exp $
+
+*fmod-3.74 (31 Oct 2004)
+
+  31 Oct 2004; Tony Vroon <chainsaw@gentoo.org> +fmod-3.74.ebuild:
+  Version bump as requested by Nickolay Kolchin-Semyonov in bug #69592.
 
   05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> -fmod-3.71.ebuild:
   Removing old version.

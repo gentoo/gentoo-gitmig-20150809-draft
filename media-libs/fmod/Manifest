@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d45e6d5ca0a307dda64443b884501477 fmod-3.74.ebuild 877
 MD5 fd52a5f2f0dae00665d438c2e8e22c38 fmod-3.73.ebuild 877
+MD5 934135a0f03eba3aba24f7c1a18201d7 ChangeLog 2383
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 73fc23e43daae003279d474fc3159e57 ChangeLog 2219
 MD5 5aef506f9dde9b67e021567843ea46de files/digest-fmod-3.73 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYnT2ArHZZzCEUG0RAlYrAJ4tct6/ALlJ2PAfgd9LehK9UFZgZQCfQ80o
-C9C8AMwL/z5NyOVEhU1llpg=
-=R4zF
------END PGP SIGNATURE-----
+MD5 4fb7e37aff652fe8fb9d4dd6ea0b4ed8 files/digest-fmod-3.74 67
