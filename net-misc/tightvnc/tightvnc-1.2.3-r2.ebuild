@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.3-r1.ebuild,v 1.5 2002/07/11 06:30:49 drobbins Exp $
+# Author Bart Verwilst <verwilst@gentoo.org>
+# Modified by Ivan C.  <navi_@hotmail.com>
+# $ Header: $
 
 S="${WORKDIR}/vnc_unixsrc"
 DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."
@@ -33,6 +35,14 @@ src_install() {
 	mkdir -p ${D}/usr/man
 	mkdir -p ${D}/usr/man/man1
 	mkdir -p ${D}/usr/bin
-	./vncinstall ${D}/usr/bin ${D}/usr/man || die
 
+	# fix the web based interface, it needs the java class files
+	mkdir -p ${D}/usr/share/tightvnc
+	mkdir -p ${D}/usr/share/tightvnc/classes
+	insinto /usr/share/tightvnc/classes ; doins classes/*
+
+	# and then patch vncserver to point to /usr/share/tightvnc/classes
+	patch -p0 < ${FILESDIR}/tightvnc-gentoo.diff || die
+
+	./vncinstall ${D}/usr/bin ${D}/usr/man || die
 }
