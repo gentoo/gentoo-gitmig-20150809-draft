@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.8-r1.ebuild,v 1.3 2004/04/14 11:32:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.8-r1.ebuild,v 1.4 2004/04/26 01:36:17 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_compile() {
 	#local myconf="--with-tcl=/usr/lib --enable-shared"
 	local myconf="--enable-shared"
 	CFLAGS="${CFLAGS} -I`ls /usr/lib/tcl8.*/include/generic/tclInt.h | tail -n1 | xargs dirname`"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake all || die
 	emake libotcl.so || die
 }
