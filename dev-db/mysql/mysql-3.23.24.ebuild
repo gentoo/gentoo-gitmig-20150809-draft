@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.24.ebuild,v 1.1 2000/09/10 17:48:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.24.ebuild,v 1.2 2000/09/15 20:08:47 drobbins Exp $
 
 P=mysql-3.23.24-beta
 A=${P}.tar.gz
@@ -35,7 +35,7 @@ src_compile() {
 	--mandir=/usr/man \
 	--without-debug \
 	--with-mysql-user=mysql
-	make benchdir=/usr/share/mysql-bench
+	try make benchdir=/usr/share/mysql-bench
 }
 
 src_install() {
@@ -44,7 +44,7 @@ src_install() {
 	
 	# Install MySQL
 
-	make install prefix=${D}/usr \
+	try make install prefix=${D}/usr \
 		libdir=${D}/usr/lib \
 		libexecdir=${D}/usr/sbin \
 		sysconfdir=${D}/etc/mysql \
