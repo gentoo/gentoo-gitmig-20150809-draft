@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/bsdsfv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.6 2003/02/12 02:56:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.7 2003/04/15 22:25:56 absinthe Exp $
+
+*bsdsfv-1.14 (15 Apr 2003)
+
+  15 Apr 2003; Dylan Carlson <absinthe@gentoo.org>
+  bsdsfv-1.14.ebuild, files/bsdsfv-1.14-gentoo.diff:
+  Version bump, masked for testing. The authors changed the versioning scheme.
+  This new version also includes a patch supplied by PJ to colorize the output
+  ( thanks to: PJ <PJ@EliteGamer.com> in #18214 )
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
