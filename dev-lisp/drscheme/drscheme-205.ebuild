@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-205.ebuild,v 1.3 2004/03/14 01:31:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-205.ebuild,v 1.4 2004/04/26 01:19:53 agriffis Exp $
 
 S=${WORKDIR}/plt
 DESCRIPTION="DrScheme programming environment.  Includes mzscheme."
@@ -20,7 +20,7 @@ src_compile() {
 	cd ${S}/src
 
 	econf \
-		--prefix=/usr/share/drscheme/
+		--prefix=/usr/share/drscheme/ || die "econf failed"
 
 	make || die
 }
