@@ -1,0 +1,30 @@
+--- include/config.h.orig	2003-06-21 21:06:38.000000000 -0400
++++ include/config.h	2003-06-21 21:12:00.000000000 -0400
+@@ -48 +48 @@
+-/* #define GNOME_GRAPHICS */	/* Gnome interface */
++#define GNOME_GRAPHICS
+--- Makefile.orig	2003-06-21 21:06:38.000000000 -0400
++++ Makefile	2003-06-21 21:13:02.000000000 -0400
+@@ -43 +43 @@
+-VARDATND =  x11tiles pet_mark.xbm rip.xpm
++VARDATND =  x11tiles pet_mark.xbm rip.xpm mapbg.xpm
+--- src/Makefile.orig	2003-06-21 21:06:38.000000000 -0400
++++ src/Makefile	2003-06-21 21:17:33.000000000 -0400
+@@ -142 +142 @@
+-GNOMEINC=-I/usr/lib/glib/include -I/usr/lib/gnome-libs/include -I../win/gnome
++GNOMEINC=-I/usr/lib/glib/include -I/usr/lib/gnome-libs/include -I../win/gnome -I/usr/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/usr/lib/gnome-libs/include -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include
+@@ -191 +191 @@
+-	gnyesno.o gnworn.o tile.o
++	gnyesno.o gnworn.o
+@@ -207,2 +207,2 @@
+-WINSRC = $(WINTTYSRC) $(WINX11SRC) $(WINQTSRC)
+-WINOBJ = $(WINTTYOBJ) $(WINX11OBJ) $(WINQTOBJ)
++WINSRC = $(WINTTYSRC) $(WINX11SRC) $(WINQTSRC) $(WINGNOMESRC)
++WINOBJ = $(WINTTYOBJ) $(WINX11OBJ) $(WINQTOBJ) $(WINGNOMEOBJ)
+@@ -248 +248 @@
+-WINLIB = $(WINTTYLIB) $(WINX11LIB) $(WINQTLIB)
++WINLIB = $(WINTTYLIB) $(WINX11LIB) $(WINQTLIB) $(WINGNOMELIB)
+--- include/config.h.orig	2003-06-21 22:04:25.000000000 -0400
++++ include/config.h	2003-06-21 22:04:31.000000000 -0400
+@@ -96 +95,0 @@
+-# define USE_XPM		/* Use XPM format for images (required) */

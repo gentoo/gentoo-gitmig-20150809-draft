@@ -1,0 +1,4 @@
+MD5 d8e0b6aeda4e4938606822e33edf7322 files/digest-crossfire-client-1.5.0 74
+MD5 ad1e49c4a56222488166b9c4f4091a55 files/1.5.0-errno.patch 682
+MD5 a3add6a20959912624ecefb98814b94d crossfire-client-1.5.0.ebuild 1441
+MD5 c86775e8d8951d96331c9ff01f9191d6 ChangeLog 1069

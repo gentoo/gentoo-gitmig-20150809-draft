@@ -1,0 +1,36 @@
+# ChangeLog for app-games/zangband
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.1 2003/09/10 04:59:58 vapier Exp $
+
+  10 Jun 2003; <msterret@gentoo.org> zangband-2.7.3.ebuild:
+  DEPEND on sed >= 4
+
+*zangband-2.7.3 (18 May 2003)
+
+  18 May 2003; Martin Holzer <mholzer@gentoo.org> zangband-2.7.3.ebuild:
+  Version bumped. Ebuild submitted by Frank Straetz <Frank@KTHXBYE.de>
+  in #20994.
+
+*zangband-2.7.2 (16 Mar 2003)
+
+  16 Mar 2003; José Alberto Suárez López <bass@gentoo.org> zangband-2.7.2.ebuild:
+  bumped version and use game.eclass
+
+*zangband-2.7.1 (15 Jul 2002)
+
+  07 Sep 2002; J. Alberto S. L. <bass@gentoo.org>
+  zangband-2.7.1.ebuild:
+  Fix problem with PORTAGE_TMPDIR #7292
+
+  6 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Changed "PPC" in keywords, to "ppc".
+
+  22 Aug 2002;  J. Alberto S. L. <bass@gentoo.org> zangband-2.7.1.ebuild:
+  Added PPC KEYWORD.
+
+  Added "ZAngband remember its highscores by touching the file in a
+  more gentle way" by nikai@nikai.net (Nicolas Kaiser)
+
+  15 Jul 2002; J. Alberto S. L. <bass@gentoo.org> zangband-2.7.1.ebuild:
+  First relase
+

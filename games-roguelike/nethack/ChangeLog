@@ -1,0 +1,89 @@
+# ChangeLog for app-games/nethack
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.1 2003/09/10 04:59:58 vapier Exp $
+
+*nethack-3.4.1-r1 (07 Aug 2003)
+
+  07 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fix file permissions/writable file locations #26085
+
+*nethack-3.4.1 (03 Mar 2003)
+
+  11 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Don't overwrite saved games and stuff ... #16428
+
+  22 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Cleaned up ebuild ... move most sed statements to patches.  #16436 #16827
+
+  05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> nethack-3.4.1.ebuild:
+  set ~ppc in keywords
+
+  03 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
+
+*nethack-3.4.0-r7 (26 Feb 2003)
+
+  26 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added errno patch to fix #16436 (#16267).
+
+*nethack-3.4.0-r6 (18 Feb 2003)
+
+  18 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
+
+*nethack-3.4.0-r5 (22 Dec 2002)
+
+  22 Dec 2002; J.Alberto Suarez L. <bass@gentoo.org> :
+  Fix bug #12576
+
+*nethack-3.4.0-r4 (16 Dec 2002)
+
+  16 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added games.eclass support and fix for #9147.
+
+*nethack-3.4.0-r3 (23 Apr 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> nethack-3.4.0-r3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> nethack-3.4.0.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+  23 Apr 2002; Spider <spider@gentoo.org> nethack-3.4.0-r3.ebuild:
+  Fix qt dependency
+
+*nethack-3.4.0-r2 (17 Apr 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> nethack-3.4.0-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+  17 Apr 2002; Spider <spider@gentoo.org> nethack-3.4.0-r2.ebuild:
+  Here is the bulk message from Jason Ritchie <jasonr@myrealbox.com>
+  This version I wrote from scratch, but after I got stuck I got a lot of
+  good info from the existing nethack ebuilds.  I have included a
+  CREDITS.gentoo.
+
+  On to the meat.  This ebuild supports USE flags X, qt, and gnome.  I
+  have also included a default .nethackrc file and a FAQ-ish thing about
+  why I made some decisions.  It removes the need for /usr/games as this is to be avoided
+  from what I hear.  It will emerge with qt2 or 3 installed, but it will only
+  use 2.  I have tested tty, X, qt, and gnome window types and it seems to run very
+  nicely.  
+
+  The whole setup process should be:
+  emerge nethack
+  cp /usr/share/nethackdir/dot.nethackrc ~/.nethackrc
+  nethack
+
+  This was such a fun project.  Let me know if I screwed the pooch.
+
+*nethack-3.4.0-r1 (13 Apr 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> nethack-3.4.0-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+  13 Apr 2002; Spider <spider@gentoo.org> nethack-3.4.0-r1.ebuild :
+  Adding comment on how to get colour support thanks to Ryan Phillips
+  Update dodoc line
+
+  *nethack-3.4.0 (09 Apr 2002)
+  9 Apr 2002; Spider <spider@gentoo.org> nethack-3.4.0.ebuild :
+  Second release of nethack really, only including the 3.4.0 release though.
+  initial commit to cvs/portage

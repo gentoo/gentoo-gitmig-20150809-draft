@@ -1,0 +1,58 @@
+diff -Naur falconseye-1.9.3/win/jtp/jtp_sdl.c falconseye-1.9.3.over/win/jtp/jtp_sdl.c
+--- falconseye-1.9.3/win/jtp/jtp_sdl.c	2001-07-02 08:05:50.000000000 -0400
++++ falconseye-1.9.3.over/win/jtp/jtp_sdl.c	2002-07-01 22:00:19.000000000 -0400
+@@ -131,6 +131,7 @@
+   {
+     if (jtp_sdl_music_player_pid > 0)
+       kill(jtp_sdl_music_player_pid, SIGKILL);
++    waitpid(jtp_sdl_music_player_pid, NULL, 0);
+     jtp_sdl_music_player_pid = -1;
+   }
+ }
+@@ -579,28 +580,32 @@
+     jtp_sdl_audio_wanted.userdata = NULL;
+ 
+     /* Open the audio device, forcing the desired format */
++    /* Make it so if opening audio device fails, just don't play audio. - Jonathan Hseu */
+     if ( SDL_OpenAudio(&jtp_sdl_audio_wanted, NULL) < 0 ) 
+     {
+       jtp_SDLWriteLogMessage(JTP_SDL_LOG_ERROR, "[jtp_sdl.c/jtp_SDLEnterGraphicMode/Check1] ERROR: Could not initialize SDL audio device\n");
+       jtp_SDLWriteLogMessage(JTP_SDL_LOG_ERROR, "[SDL Error] ");
+       jtp_SDLWriteLogMessage(JTP_SDL_LOG_ERROR, SDL_GetError());
+       jtp_SDLWriteLogMessage(JTP_SDL_LOG_ERROR, "\n");
+-      exit(1);
+-    }
+-    jtp_sdl_audio_chunk = (Uint8 *)malloc(JTP_SDL_SOUND_BUFFER_SIZE*sizeof(Uint8));
+-    jtp_sdl_audio_len = 30000;
+-    jtp_sdl_audio_pos = NULL;
+-
+-    /* Create the sound cache */
+-    jtp_sdl_cached_sounds = (jtp_sdl_cached_sound *)malloc(JTP_SDL_MAX_CACHED_SOUNDS*sizeof(jtp_sdl_cached_sound));
+-    for (i = 0; i < JTP_SDL_MAX_CACHED_SOUNDS; i++)
+-    {
+-      jtp_sdl_cached_sounds[i].length = 0;
+-      jtp_sdl_cached_sounds[i].samples = NULL;
+-      jtp_sdl_cached_sounds[i].filename = NULL;
++      jtp_play_effects = 0;
++//      exit(1);
+     }
+-
++    else
++    {
++      jtp_sdl_audio_chunk = (Uint8 *)malloc(JTP_SDL_SOUND_BUFFER_SIZE*sizeof(Uint8));
++      jtp_sdl_audio_len = 30000;
++      jtp_sdl_audio_pos = NULL;
++
++      /* Create the sound cache */
++      jtp_sdl_cached_sounds = (jtp_sdl_cached_sound *)malloc(JTP_SDL_MAX_CACHED_SOUNDS*sizeof(jtp_sdl_cached_sound));
++      for (i = 0; i < JTP_SDL_MAX_CACHED_SOUNDS; i++)
++      {
++        jtp_sdl_cached_sounds[i].length = 0;
++        jtp_sdl_cached_sounds[i].samples = NULL;
++        jtp_sdl_cached_sounds[i].filename = NULL;
++      }
+     /* SDL_PauseAudio(0); */ /* Start playing sounds */
++    }
+   }
+ 
+   if (jtp_play_music)

@@ -1,0 +1,9 @@
+# ChangeLog for app-games/ivan
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ChangeLog,v 1.1 2003/09/10 04:59:58 vapier Exp $
+
+*ivan-0.430 (08 Aug 2003)
+
+  08 Aug 2003; Michael Sterrett <msterret@gentoo.org> ivan-0.430.ebuild:
+  initial commit.  ebuild supplied by Rob Cakebread (modified) bug 26225
+

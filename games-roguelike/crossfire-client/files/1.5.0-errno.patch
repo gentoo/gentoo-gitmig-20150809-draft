@@ -1,0 +1,21 @@
+--- common/client.h.orig	2003-06-27 20:15:48.000000000 -0400
++++ common/client.h	2003-06-27 20:16:12.000000000 -0400
+@@ -270,7 +270,7 @@
+ /* We need to declare most of the structs before we can include this */
+ #include <proto.h>
+ 
+-extern int errno;
++#include <errno.h>
+ 
+ /* translation of the STAT_RES names into printable names,
+  * in matching order.
+--- common/newsocket.c.orig	2003-06-27 20:15:36.000000000 -0400
++++ common/newsocket.c	2003-06-27 20:15:41.000000000 -0400
+@@ -154,7 +154,6 @@
+ int SockList_ReadPacket(int fd, SockList *sl, int len)
+ {
+     int stat,toread,readsome=0;
+-    extern int errno;
+ 
+     /* We already have a partial packet */
+     if (sl->len<2) {

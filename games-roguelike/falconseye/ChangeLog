@@ -1,0 +1,38 @@
+# ChangeLog for app-games/falconseye
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/ChangeLog,v 1.1 2003/09/10 04:59:58 vapier Exp $
+
+  02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  falconseye-1.9.3-r1.ebuild:
+  Fixed to use mirror://sourceforge
+
+*falconseye-1.9.3-r1 (11 Jul 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> falconseye-1.9.3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> falconseye-1.9.3-r1.ebuild :
+  Added KEYWORDS.
+
+  11 Jul 2002; Dan <overridex@punkass.com> falconseye-1.9.3.ebuild-r1:
+  Changed the default config to point at /usr/bin/timidity rather
+  than /usr/local/bin/timidity since that's where it gets installed.
+
+  Enabled some defines to use gzip for saved game compression (the
+  ebuild down has a runtime dependency for gzip).
+
+  Fixes a problem with some systems (hardware related?) where the
+  music player program would switch songs too quickly leaving <defunct> processes,
+  after a few of these built up it would cause saving games to fail, this will be
+  included in the next falconseye upstream release whenever that is.
+
+  Added support to the /usr/bin/falconseye script to look for
+  options in ~/.falconseyerc, and if it doesn't exist create it with some basic
+  options.
+
+
+*falconseye-1.9.3 (18 Feb 2002)
+
+   18 Feb 2002; F.Meyndert <m0rpheus@gentoo.org> falconseye-1.9.3.ebuild,
+
+   New ebuild for falconseye, a graphical nethack version.

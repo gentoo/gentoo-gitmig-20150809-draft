@@ -1,0 +1,31 @@
+# ChangeLog for app-games/crossfire-client
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+*crossfire-client-1.5.0 (27 Jun 2003)
+
+  03 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Disable alsa if using newer version #25743.
+
+  27 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #22201 + games.eclass support + errno patch.
+  Also reworked optional stuff.
+
+*crossfire-client-1.4.0 (22 Nov 2002)
+
+  12 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  crossfire-client-1.2.1.ebuild, crossfire-client-1.4.0.ebuild:
+  xfree provides xpm
+
+  22 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump for 10810 and general cleanups
+
+*crossfire-client-1.2.1 (09 May 2002)
+
+  23 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated SRC_URI to use mirror: and LICENSE to GPL-2
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> crossfire-client-1.2.1.ebuild :
+  Added KEYWORDS, SLOT.
+
+  09 May 2002; J. Alberto Suárez L. <bass@gentoo.org> crossfire-client-1.2.1.ebuild:
+  Added the Crossfire-client to portage.

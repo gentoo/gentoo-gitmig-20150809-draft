@@ -1,0 +1,25 @@
+# ChangeLog for app-games/angband
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.1 2003/09/10 04:59:58 vapier Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> angband-3.0.3.ebuild:
+  don't mangle myconf when USE=-X; removed DOCDIR (unused)
+
+  09 Jun 2003; <msterret@gentoo.org> angband-3.0.3.ebuild:
+  DEPEND on sed >= 4; check sed return value
+
+*angband-3.0.3 (19 May 2003)
+
+  19 May 2003; Martin Holzer <mholzer@gentoo.org> angband-3.0.3.ebuild:
+  Version bumped. Closes #21048
+
+*angband-3.0.1 (06 Nov 2002)
+
+  06 Nov 2002; Ryan Phillips <rphillips@gentoo.org> angband-3.0.1.ebuild :
+  New version
+
+*angband-3.0.0 (15 Jul 2002)
+
+  15 Jul 2002; J. Alberto S. L. <bass@gentoo.org> angband-3.0.0.ebuild: 
+    First relase
+    

@@ -1,0 +1,51 @@
+# ChangeLog for app-games/tome
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.1 2003/09/10 04:59:58 vapier Exp $
+
+*tome-2.2.2 (28 Jul 2003)
+
+  28 Jul 2003; Michael Sterrett <msterret@gentoo.org> tome-2.2.2.ebuild:
+  version bump (bug 23729)
+  
+  Note that this version of ToME is not save game compatible with older versions.
+
+  28 Jul 2003; Michael Sterrett <msterret@gentoo.org> tome-2.2.1.ebuild:
+  added a pkg_postinst() that warns people that the new version of ToME isn't
+  compatible with their old save games.
+
+  28 Jul 2003; Michael Sterrett <msterret@gentoo.org> tome-1.0.0.ebuild,
+  tome-2.0.0.ebuild, tome-2.1.0.ebuild, tome-2.2.1.ebuild:
+  fix DESCRIPTION
+
+  01 Jul 2003; <msterret@gentoo.org> tome-2.2.1.ebuild:
+  mark stable for ppc.  SpanKY said so.
+
+*tome-2.2.1 (01 Jul 2003)
+
+  01 Jul 2003; Michael Sterrett <msterret@gentoo.org> tome-2.2.1.ebuild:
+  added ~ppc keyword (bug 23729)
+
+  30 Jun 2003; Michael Sterrett <msterret@gentoo.org> :
+  version bump - seems to install in roughly the same way as 2.1
+
+  30 Jun 2003; Michael Sterrett <msterret@gentoo.org> tome-2.1.0.ebuild:
+  use sed -i
+  sed file in unpack
+  install more docs
+  more error checking
+
+*tome-2.1.0 (21 Dec 2002)
+  
+  21 Dec 2002; J.Alberto Suarez L. <bass@gentoo.org> tome-2.1.0.ebuild:
+  New version.
+  Maybe it have a little incompatibility with Tome-2.0.
+
+*tome-2.0.0 (13 Feb 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*tome-1.0.0 (1 Aug 2002)
+
+  1 Aug 2002; Jose Alberto Suárez López <bass@gentoo.org> tome-1.0.0.ebuild:
+  First release.
