@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.91.1.ebuild,v 1.1 2004/05/05 04:54:19 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.91.1.ebuild,v 1.2 2004/05/05 09:59:07 dholm Exp $
 
 # WARNING
 # All gst-sharp hacks done in this build are nonfunctional
@@ -34,7 +34,7 @@ RDEPEND=">=sys-apps/sed-4.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-KEYWORDS="~x86 -ppc"
+KEYWORDS="~x86 ~ppc"
 
 src_unpack() {
 	unpack ${A}
