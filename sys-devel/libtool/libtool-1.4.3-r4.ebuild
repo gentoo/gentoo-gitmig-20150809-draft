@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r4.ebuild,v 1.1 2004/03/01 19:39:09 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r4.ebuild,v 1.2 2004/03/01 21:02:39 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
@@ -101,7 +101,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/${PN}-1.4.3-quotes.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.4.3-lib64.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.4.2-add-x11r6-lib-in-ignores-for-rpath.patch
-	epatch ${FILESDIR}/${PV}/${PN}-1.4.2-fix-linkage-of-cxx-code-with-gcc.patch
+# Fix bug #43244
+#	epatch ${FILESDIR}/${PV}/${PN}-1.4.2-fix-linkage-of-cxx-code-with-gcc.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.4.2-archive-shared.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.4.3-ltmain-SED.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.4.2-expsym-linux.patch
