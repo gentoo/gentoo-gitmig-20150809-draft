@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/CDDB
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.1 2004/04/30 02:55:24 esammer Exp $
+
+  29 Apr 2004; Eric Sammer <esammer@gentoo.org> :
+  Initial import of CDDB. Fills a dep for the soon to be added
+  media-sound/choad submitted by Josh Glover <gentoo@jmglov.net>.
+  Closes bug #49432.
+
