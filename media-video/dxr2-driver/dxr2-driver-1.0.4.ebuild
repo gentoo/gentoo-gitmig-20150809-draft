@@ -1,20 +1,21 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/dxr2-driver-1.0.4.ebuild,v 1.7 2003/09/02 20:48:32 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/dxr2-driver-1.0.4.ebuild,v 1.8 2004/04/21 18:28:51 mr_bones_ Exp $
 
 DESCRIPTION="Driver and minimal DVD player(s) for the Creative Labs Dxr2 Card"
 HOMEPAGE="http://dxr2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dxr2/${P}.tar.gz
-	${HOMEPAGE}/projects/dxr2-driver/firmware/DVD12.UX"
+	http://dxr2.sourceforge.net/projects/dxr2-driver/firmware/DVD12.UX"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=media-libs/libdvdread-0.9.3"
 
 # Non-standard source dir name for dxr2-driver
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	# Don't try to unpack the last item -- should be the .UX firmware file
