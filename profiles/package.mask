@@ -76,3 +76,7 @@ app-text/sgml2x
 >=x11-base/xfree-4.1.0-r1
 # incompatible
 >=sys-devel/autoconf-2.50
+
+#crux made a big boo-boo
+=kde-apps/kvirc-2.1.1
+
