@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0-r1.ebuild,v 1.4 2004/06/24 23:05:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0-r1.ebuild,v 1.5 2004/06/28 03:35:05 agriffis Exp $
 
 MAX_NICK_LENGTH=30
 MAX_CLIENTS=500
@@ -77,7 +77,7 @@ src_unpack()
 
 	# Store unmodified source tree for compiling necessary shared libs and
 	# binaries with ipv6 support.
-	if [ -n "$(use ipv6)" ]; then
+	if use ipv6; then
 		mkdir ${T}/ipv6
 		cp -r ${S} ${T}/ipv6
 	fi
@@ -184,11 +184,11 @@ src_compile()
 
 	# Build respond binary for using rsa keys instead of plain text oper 
 	# passwords.
-	[[ -n "$(use ssl)" ]] && \
+	use ssl && \
 		gcc ${CFLAGS} -o respond tools/rsa_respond/respond.c -lcrypto
 
 	# Configure and compile with ipv6 support in temp.
-	if [ -n "$(use ipv6)" ]; then
+	if use ipv6; then
 		einfo "IPv6 support"
 		cd ${T}/ipv6/${P}
 
@@ -236,7 +236,7 @@ src_install()
 	mv ${D}/usr/sbin/ircd ${D}/usr/sbin/ircd-ipv4
 
 	# Install the respond binary.
-	if [ -n "$(use ssl)" ]; then
+	if use ssl; then
 		exeinto /usr/sbin
 		doexe ${S}/respond
 	fi
@@ -275,7 +275,7 @@ src_install()
 	# Only the shared libraries and the ircd binary differ from the ipv4
 	# installation. Thus installing those is sufficient to make ipv6 support
 	# work (and different config files, pid files etc. of cource). 
-	if [ -n "$(use ipv6)" ]; then
+	if use ipv6; then
 		cd ${T}/ipv6/${P}/modules
 		make prefix=${D}/usr/share/ircd-hybrid-7/ \
 			 moduledir=${D}/usr/lib/ircd-hybrid-7/ipv6 \
@@ -303,7 +303,7 @@ pkg_postinst()
 {
 	# Create the default config files out of example ones.
 	cp /etc/ircd/example-ipv4.conf /etc/ircd/ircd-ipv4.conf
-	if [ -n "$(use ipv6)" ]; then
+	if use ipv6; then
 		cp /etc/ircd/example-ipv6.conf /etc/ircd/ircd-ipv6.conf
 	fi
 
@@ -314,7 +314,7 @@ pkg_postinst()
 	einfo "Modify /etc/ircd/ircd-{ipv4,ipv6}.conf and /etc/conf.d/ircd"
 	einfo "otherwise the daemon(s) will quietly refuse to run."
 
-	if [ -n "$(use ssl)" ]; then
+	if use ssl; then
 		einfo "To create a rsa keypair for crypted links execute:"
 		einfo "ebuild /var/db/pkg/net-irc/${PF}/${PF}.ebuild config"
 	fi
