@@ -2,8 +2,8 @@ MD5 e36e36c86e70162381497e166353aaa7 librep-0.16.2.ebuild 1252
 MD5 bcb201be2b204036a98ea33c24300b9e librep-0.16.ebuild 1322
 MD5 d02e78a24edab767a01914ede4ea2407 librep-0.16.1-r1.ebuild 1261
 MD5 cf8d6717f90f801e6847bc1be6b60f62 librep-0.16.1.ebuild 1146
-MD5 feaaa150d06ce8540605ee0bb87da69d librep-0.17.ebuild 1257
-MD5 acd81fdf718d053456958f88067d839e ChangeLog 2416
+MD5 10b503aad3db93754d39c7efc008b7c2 librep-0.17.ebuild 1255
+MD5 776f45d48ce7a233c256807e1249063b ChangeLog 2552
 MD5 f00764d421c89187dd67a52d68954ae5 librep-0.15.2-r1.ebuild 1180
 MD5 f878188de6e4e2a6f6efa758fc1a76eb files/digest-librep-0.16 64
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17 64
