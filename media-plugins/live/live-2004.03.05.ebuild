@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.05.ebuild,v 1.1 2004/03/09 11:04:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.05.ebuild,v 1.2 2004/03/16 06:47:54 lu_zero Exp $
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
 
@@ -19,6 +19,8 @@ src_unpack() {
 	cd ${S}
 	sed -i.orig -e "s:-O:${CFLAGS} -Wno-deprecated:" config.linux
 	epatch ${FILESDIR}/gcc-3.3.patch
+	#quick fix, something better will follow.
+	rm testProgs/qtParse
 }
 
 src_compile() {
