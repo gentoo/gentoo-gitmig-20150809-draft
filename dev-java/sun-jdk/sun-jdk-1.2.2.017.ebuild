@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.2.2.017.ebuild,v 1.1 2004/07/16 12:13:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.2.2.017.ebuild,v 1.2 2004/07/23 16:07:40 squinky86 Exp $
 
 IUSE="doc mozilla X"
 
@@ -22,7 +22,7 @@ RESTRICT="fetch"
 # NOTE:  Sun's JDK also requires the XFree86 be installed to use the graphical
 # libraries.  Even some non-graphical libraries (such as JavaMail) have bizarre
 # dependencies on windowing toolkits.
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.7
 	doc? ( =dev-java/java-sdk-docs-1.2.2* )"
 RDEPEND="sys-libs/lib-compat"
