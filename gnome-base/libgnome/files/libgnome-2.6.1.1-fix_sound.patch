@@ -1,0 +1,12 @@
+diff -uNr libgnome-2.6.1.1/libgnome/gnome-program.c libgnome-2.6.1.1.patched/libgnome/gnome-program.c
+--- libgnome-2.6.1.1/libgnome/gnome-program.c	2004-04-18 20:57:13.000000000 +0200
++++ libgnome-2.6.1.1.patched/libgnome/gnome-program.c	2004-07-19 14:19:34.378750928 +0200
+@@ -602,6 +602,8 @@
+ 
+     program->_priv->state = APP_CREATE_DONE;
+ 
++    program->_priv->prop_enable_sound = TRUE;
++
+     for (i = 0; i < program_modules->len; i++) {
+ 	GnomeModuleInfo *a_module = g_ptr_array_index (program_modules, i);
+ 

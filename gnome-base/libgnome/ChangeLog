@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.53 2004/07/04 10:52:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.54 2004/07/19 12:44:30 foser Exp $
+
+*libgnome-2.6.1.1-r1 (19 Jul 2004)
+
+  19 Jul 2004; foser <foser@gentoo.org> libgnome-2.6.1.1-r1.ebuild, files/libgnome-2.6.1.1-fix_sounds.patch  :
+  Add patch to fix sound events (#50700)
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libgnome-2.6.0.ebuild:
   Stable on alpha.
