@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.3 2004/05/25 01:36:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.4 2004/06/11 20:13:18 kugelfang Exp $
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -11,11 +11,11 @@ SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc arm"
+KEYWORDS="~x86 ~ppc arm ~amd64"
 IUSE="debug static uclibc savedconfig make-busybox-symlinks"
 
 DEPEND="virtual/glibc
-	uclibc? ( dev-libs/uclibc )"
+	!amd64? ( uclibc? ( dev-libs/uclibc ) )"
 RDEPEND="!static? ( ${DEPEND} )"
 # <pebenito> then eventually turning on selinux would mean
 # adding a dep: selinux? ( sys-libs/libselinux )
@@ -33,6 +33,8 @@ busybox_config_option() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 
 	# check for a busybox config before making one of our own.
 	# if one exist lets return and use it.

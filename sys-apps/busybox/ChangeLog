@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.28 2004/05/10 21:05:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.29 2004/06/11 20:13:18 kugelfang Exp $
+
+  11 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/busybox-1.00_pre8-amd64.patch, busybox-0.60.3-r1.ebuild,
+  busybox-0.60.3-r2.ebuild, busybox-0.60.5-r1.ebuild,
+  busybox-0.60.5-r2.ebuild, busybox-1.00_pre8.ebuild:
+  Marked all versions -amd64, except -1.00_pre8. Added patch to make the latter
+  work on amd64.
 
   10 May 2004; Michael Sterrett <mr_bones_@gentoo.org> busybox-0.50.ebuild,
   busybox-0.60.2.ebuild, busybox-0.60.3.ebuild, busybox-0.60.5.ebuild,
