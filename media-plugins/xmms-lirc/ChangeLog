@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-lirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/ChangeLog,v 1.14 2005/02/13 21:58:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/ChangeLog,v 1.15 2005/03/19 19:37:03 kloeri Exp $
+
+  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> xmms-lirc-1.4.ebuild:
+  Stable on alpha.
 
   13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> xmms-lirc-1.4.ebuild:
   ~alpha keyword.
