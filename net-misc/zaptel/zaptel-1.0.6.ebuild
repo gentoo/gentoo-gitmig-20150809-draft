@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.6.ebuild,v 1.2 2005/03/11 15:20:53 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.6.ebuild,v 1.3 2005/03/12 12:17:23 stkn Exp $
 
 IUSE="devfs26 bri florz"
 
@@ -77,7 +77,7 @@ src_unpack() {
 	# apply patch for gcc-3.4.x if that's the compiler in use...
 	# fixes (#76707)
 	if use x86 && [[ `gcc-fullversion` = "3.4.3" ]]; then
-		epatch ${FILESDIR}/${P}-gcc34.patch
+		epatch ${FILESDIR}/${PN}-1.0.4-gcc34.patch
 	fi
 
 	# try to apply bristuff patch
