@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.2 2003/09/25 15:41:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.3 2003/10/13 16:03:30 caleb Exp $
+
+  13 Oct 2003; Caleb Tennis <caleb@gentoo.org> kde-1i8n-3.1.4.ebuild:
+  Now that portage has fixed USE_EXPAND, let's go with a new scheme in this ebuild.
 
   25 Sep 2003; Caleb Tennis <caleb@gentoo.org> kde-i18n-3.1.4.ebuild:
   marking x86 stable
