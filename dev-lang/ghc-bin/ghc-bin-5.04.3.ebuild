@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.3.ebuild,v 1.1 2003/05/09 09:41:39 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.3.ebuild,v 1.2 2003/07/02 10:28:01 kosmikus Exp $
 
 IUSE="opengl"
 
@@ -11,7 +11,7 @@ SRC_URI="x86? ( http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-i386-unknown-lin
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
-KEYWORDS="~x86 -ppc ~sparc -alpha"
+KEYWORDS="x86 -ppc ~sparc -alpha"
 SLOT="0"
 
 LOC="/opt/ghc"
@@ -42,21 +42,22 @@ src_install () {
 	dodoc ANNOUNCE INSTALL LICENSE README VERSION
 
 	cd ${D}${LOC}/share
-	mkdir ${D}${LOC}/doc/${PF}
-	mv hslibs.ps users_guide.ps html/ ${D}${LOC}/doc/${PF}
+	mv hslibs.ps users_guide.ps html ${D}/usr/share/doc/${PF}
 
 	#ghc seems to set locations in wrapper scripts from make install
 	#need to strip the ${D} part out
 	cd ${D}${LOC}/bin
-	mv ghc-${PV} ghc-${PV}-orig
-	sed -e "s:${D}::" ghc-${PV}-orig > ghc-${PV}
-	mv ghci-${PV} ghci-${PV}-orig
-	sed -e "s:${D}::" ghci-${PV}-orig > ghci-${PV}
-	mv ghc-pkg-${PV} ghc-pkg-${PV}-orig
-	sed -e "s:${D}::" ghc-pkg-${PV}-orig > ghc-pkg-${PV}
-	rm ghc-${PV}-orig ghci-${PV}-orig ghc-pkg-${PV}-orig
-	chmod a+x ghc-${PV} ghci-${PV} ghc-pkg-${PV}
+	clean_wrappers ghc-${PV} ghci-${PV} ghc-pkg-${PV} hsc2hs
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/10ghc
+}
+
+clean_wrappers () {
+	for i in $*; do
+		mv ${i} ${i}-orig
+		sed -e "s:${D}::" ${i}-orig > ${i}
+		chmod a+x ${i}
+		rm ${i}-orig
+	done
 }
