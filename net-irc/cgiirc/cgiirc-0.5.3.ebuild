@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.3.ebuild,v 1.1 2004/01/29 15:45:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.3.ebuild,v 1.2 2004/04/19 07:48:36 mholzer Exp $
 
 inherit webapp-apache
 
@@ -12,9 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-webapp-detect || NO_SERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_SERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing for ${WEBAPP_SERVER}"
 }
