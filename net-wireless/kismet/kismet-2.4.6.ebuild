@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.4.6.ebuild,v 1.3 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.4.6.ebuild,v 1.4 2002/12/30 10:22:57 mholzer Exp $
 
 IUSE="X snmp ssl"
 
@@ -8,7 +8,7 @@ IUSE="X snmp ssl"
 S="${WORKDIR}/${P}"
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 SRC_URI="http://www.kismetwireless.net/code/${P}.tar.gz
-		 http://www.ethereal.com/distribution/ethereal-0.9.5.tar.gz"
+	 http://www.ethereal.com/distribution/old-versions/ethereal-0.9.5.tar.gz"
 HOMEPAGE="http://www.kismetwireless.net/"
 LICENSE="GPL-2"
 SLOT="0"

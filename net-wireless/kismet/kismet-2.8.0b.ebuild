@@ -4,7 +4,7 @@
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
 SRC_URI="http://www.kismetwireless.net/code/${P}.tar.gz
-	 http://www.ethereal.com/distribution/old-versions/ethereal-0.9.7.tar.bz2"
+	 http://www.ethereal.com/distribution/old-version/ethereal-0.9.7.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
