@@ -1,10 +1,14 @@
 # ChangeLog for dev-perl/ogg-vorbis-header
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.1 2003/07/06 01:31:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.2 2003/07/06 04:01:55 mcummings Exp $
+
+  06 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  ogg-vorbis-header-0.02.ebuild:
+  Corrected deps for libogg and libvorbis - both were missing
 
 *ogg-vorbis-header-0.02 (05 Jul 2003)
 
   05 Jul 2003; Michael Cummings <mcummings@gentoo.org>
   ogg-vorbis-header-0.02.ebuild:
-  Fills bug 17280
+  Fills bug 17280. Ebuild submitted by Nick Fish.
 
