@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Martin Schlemmer <azarah@saintmail.net>
+# Author Martin Schlemmer <azarah@gentoo.org>
 
 S=${WORKDIR}
 DESCRIPTION="Binary release of DivX Codec 4.0"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.divx.com/"
 
 DEPEND="virtual/glibc"
 
-RDEPEND="$DEPEND"
+RDEPEND="virtual/glibc"
 
 
 src_install () {

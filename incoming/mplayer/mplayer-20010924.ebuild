@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@saintmail.net>
+# Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@gentoo.org>
 #         Donny Davies <woodchip@gentoo.org>
 # /home/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.18_pre-r1.ebuild,v 1.1 2001/09/24 06:34:22 woodchip Exp
 

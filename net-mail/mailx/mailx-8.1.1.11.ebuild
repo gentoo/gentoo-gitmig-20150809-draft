@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Martin Schlemmer <azarah@saintmail.net>
+# Author Martin Schlemmer <azarah@gentoo.org>
 
 S=${WORKDIR}/mailx-8.1.1.orig
 DESCRIPTION="The /bin/mail program, which is used to send mail via shell scripts."
