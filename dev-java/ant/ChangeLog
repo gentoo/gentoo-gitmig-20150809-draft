@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.32 2003/04/26 05:36:58 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.33 2003/04/26 11:34:38 absinthe Exp $
+
+*ant-1.5.3-r3 (26 Apr 2003)
+
+  26 Apr 2003; Dylan Carlson <absinthe@gentoo.org> :
+  Switched to java-pkg eclass; added detection routines for antlr, beanutils,
+  junitreport, oro and xerces classes for optional ant tasks.
 
 *ant-1.5.3-r2 (23 Apr 2003)
 
