@@ -1,10 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.2.1.ebuild,v 1.5 2002/10/26 18:51:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.2.1.ebuild,v 1.6 2002/12/04 03:19:32 nall Exp $
 
 IUSE="sdl X"
 
 inherit libtool
+
+# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
+inherit flag-o-matic  || die "I lost my inheritance"                                                                                              
+filter-flags "-maltivec -mabi=altivec"
 
 MY_P="${P/libmpeg2/mpeg2dec}"
 S="${WORKDIR}/${MY_P}"
@@ -14,7 +18,7 @@ HOMEPAGE="http://libmpeg2.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 ~ppc"
 
 DEPEND="sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )"
