@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.149 2005/03/13 23:44:06 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.150 2005/03/15 12:55:58 weeve Exp $
+
+  15 Mar 2005; Jason Wever <weeve@gentoo.org> arts-3.4.0.ebuild:
+  Added ~sparc keyword as it was mistakenly dropped in the version bump.
 
   13 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> arts-3.4.0.ebuild:
   Marked ~amd64, keywording KDE split ebuilds, bug 80944.
