@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.ebuild,v 1.5 2002/07/22 08:24:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.ebuild,v 1.6 2002/08/06 17:44:43 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LyX is an WYSIWYM frontend for LaTeX"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.lyx.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 # This lyx-base ebuild only depends on the absolutely necessary packages.
 # The acompanying lyx-utils ebuild depends on lyx-base and on everything

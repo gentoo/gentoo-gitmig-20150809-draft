@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.12.ebuild,v 1.5 2002/08/01 13:09:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.12.ebuild,v 1.6 2002/08/06 17:45:35 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="sc is a free curses-based spreadsheet program that uses key bindings similar to vi and less."
@@ -9,7 +9,7 @@ HOMEPAGE=""
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
