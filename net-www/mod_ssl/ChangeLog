@@ -1,9 +1,12 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.12 2003/02/23 23:14:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.13 2003/03/11 09:54:37 lordvan Exp $
 
 *mod_ssl-2.8.12-r1 (21 Feb 2003)
-
+  
+  11 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org> mod_ssl-2.8.12-r1.ebuild:
+  configure says it needs apache 1.3.27 (only) -> changed dep
+	
   21 Feb 2003; Martin Holzer <mholzer@gentoo.org> mod_ssl-2.8.12-r1.ebuild :
   Bumped Revision cause of openssl
  
