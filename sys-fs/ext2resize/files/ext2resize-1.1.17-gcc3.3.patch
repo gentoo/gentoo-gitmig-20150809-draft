@@ -1,0 +1,50 @@
+diff -ur ext2resize-1.1.17/src/ext2_block_relocator.c ext2resize-1.1.17.plasmaroo/src/ext2_block_relocator.c
+--- ext2resize-1.1.17/src/ext2_block_relocator.c	2004-03-20 13:48:21.244439888 +0000
++++ ext2resize-1.1.17.plasmaroo/src/ext2_block_relocator.c	2004-03-20 13:46:00.144890280 +0000
+@@ -854,9 +854,9 @@
+ 			if (j >= it && j < itend) {
+ 				if (delgrp)
+ 					continue;
+-				fprintf(stderr, __FUNCTION__
+-					"trying to move block %d in itable!\n",
+-					j + start);
++				fprintf(stderr, 
++					"%s: trying to move block %d in itable!\n",
++					__FUNCTION__, j + start);
+ 				return 0;
+ 			}
+ 
+diff -ur ext2resize-1.1.17/src/ext2_resize.c ext2resize-1.1.17.plasmaroo/src/ext2_resize.c
+--- ext2resize-1.1.17/src/ext2_resize.c	2004-03-20 13:48:21.267436392 +0000
++++ ext2resize-1.1.17.plasmaroo/src/ext2_resize.c	2004-03-20 13:46:00.143890432 +0000
+@@ -41,7 +41,7 @@
+ 	int   i;
+ 
+ 	if (fs->flags & FL_DEBUG)
+-		printf(__FUNCTION__ " %d\n", group);
++		printf("%s: %d\n", __FUNCTION__, group);
+ 
+ 	if (fs->sb.s_blocks_count !=
+ 	    fs->sb.s_first_data_block + group * fs->sb.s_blocks_per_group) {
+@@ -165,7 +165,7 @@
+ 	int   has_sb;
+ 
+ 	if (fs->flags & FL_DEBUG)
+-		printf(__FUNCTION__ " %d\n", group);
++		printf("%s: %d\n", __FUNCTION__, group);
+ 
+ 	has_sb = ext2_bg_has_super(fs, group);
+ 
+@@ -318,9 +318,9 @@
+ 	bpg = fs->sb.s_blocks_count - start;
+ 
+ 	if (newsize < itend + (fs->stride ? 2 : 0)) {
+-		fprintf(stderr, __FUNCTION__
+-			"can't shrink group %d to %d blocks\n",
+-			group, newsize);
++		fprintf(stderr,
++			"%s: can't shrink group %d to %d blocks\n",
++			__FUNCTION__, group, newsize);
+ 		return 0;
+ 	}
+ 
