@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/rtgraph-0.70.ebuild,v 1.1 2004/04/02 22:02:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/rtgraph-0.70.ebuild,v 1.2 2004/04/04 09:33:23 dholm Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://navi.picogui.org/releases/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND="virtual/python
 	>=dev-python/pygtk-2"
 RDEPEND=${DEPEND}
