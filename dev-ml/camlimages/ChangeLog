@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.5 2005/02/06 15:28:50 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.6 2005/02/17 21:38:03 mattam Exp $
+
+  17 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> camlimages-2.20.ebuild:
+  Fix parallel builds bug
 
 *camlimages-2.20 (06 Feb 2005)
 

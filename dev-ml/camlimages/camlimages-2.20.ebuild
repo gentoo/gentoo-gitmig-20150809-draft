@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.1 2005/02/06 15:28:50 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.2 2005/02/17 21:38:03 mattam Exp $
 
 inherit findlib
 
@@ -21,8 +21,8 @@ MY_S="${WORKDIR}/${P/20/2}"
 src_compile() {
 	cd ${MY_S}
 	econf || die
-	emake || die
-	emake opt || die
+	emake -j1 || die
+	emake -j1 opt || die
 }
 
 src_test() {
