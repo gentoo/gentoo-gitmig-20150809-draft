@@ -1,0 +1,6 @@
+# Config file for /etc/init.d/fakeidentd
+
+# Change this to whatever you want the daemon to reply with.
+# By default it answers with "nobody" anyway..
+
+#FAKEIDENTD_OPTS="nobody"

@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/fakeidentd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.2 2002/04/01 19:51:09 woodchip Exp $
+
+*fakeidentd-1.4-r7 (1 Apr 2002)
+
+  1 Apr 2002; Donny Davies <woodchip@gentoo.org> fakeidentd-1.4-r7,
+  files/fakeidentd.confd files/fakeidentd.rc6 :
+
+  Added an /etc/conf.d/fakeidentd file for those who want to easily change
+  what it replies with ;)  Patched the source to write its PID to fakeidentd.pid
+  instead of identd.pid.  Tweaked the initscript accordingly.
 
 *fakeidentd-1.4-r6 (1 Feb 2002)
 
