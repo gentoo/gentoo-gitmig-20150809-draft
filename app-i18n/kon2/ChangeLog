@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/kon2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/ChangeLog,v 1.4 2003/06/29 22:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/ChangeLog,v 1.5 2003/12/23 11:23:26 usata Exp $
+
+  23 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> kon2-0.3.9b-r1.ebuild,
+  kon2-0.3.9b.ebuild, files/kon2-0.3.9b-gentoo.patch,
+  files/kon2-0.3.9b-gentoo.patch.gz:
+  Fixed man path (/usr/man/man1 to /usr/share/man/ja/man1).
+  Corrected DEPEND. Unpacked ${FILESDIR}/${P}-gentoo.patch.gz.
 
 *kon2-0.3.9b-r1 (05 Jun 2003)
 
