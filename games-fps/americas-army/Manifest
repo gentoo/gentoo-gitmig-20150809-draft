@@ -1,6 +1,16 @@
-MD5 d17712408c1eeb43ecfa3ed71f392c16 americas-army-210.ebuild 2380
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5c8672669a80e164a642e24fbc7c13b9 ChangeLog 4479
+MD5 d17712408c1eeb43ecfa3ed71f392c16 americas-army-210.ebuild 2380
 MD5 f1a9a44e85e58296a3710c291666ab78 metadata.xml 672
-MD5 ac67105eb021f005c4c9ec60b85d0f58 files/armyops-ded.rc 723
-MD5 e043a88a599a9bf06f7b20b2508b9bd5 files/armyops-ded.conf.d 679
 MD5 8094280c1969e5f8784d7c8d1a3b7611 files/digest-americas-army-210 68
+MD5 237d02b1f54647192d254d7ac21ec7ba files/armyops-ded.conf.d 671
+MD5 1cdb6be5554b260130911d262aff1b6c files/armyops-ded.rc 716
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcvxoI1lqEGTUzyQRAjG1AJ0Wxdy3n+QmBsSZCJDYOoGQ7+jliQCbB1WN
+Oaci3+x9VBAoLAykepC1U4M=
+=fnun
+-----END PGP SIGNATURE-----
