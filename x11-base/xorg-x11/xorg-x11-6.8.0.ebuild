@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.13 2004/09/14 17:47:07 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.14 2004/09/14 23:34:40 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -25,7 +25,7 @@ RESTRICT="nostrip"
 IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc insecure-drivers ipv6 mmx nls pam sdk sse static xprint"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
-FILES_VER="0.1"
+FILES_VER="0.2"
 PATCH_VER="0.1"
 XCUR_VER="0.3.1"
 #MGADRV_VER="1_3_0beta"
@@ -38,6 +38,7 @@ HOMEPAGE="http://freedesktop.org/XOrg"
 
 # Misc patches we may need to fetch ..
 X_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2
 	http://dev.gentoo.org/~cyfred/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS=""
@@ -46,6 +47,7 @@ X_DRIVERS=""
 # Latest SIS drivers:  http://www.winischhofer.net/
 
 GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2
+	http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-${PATCH_VER}.tar.bz2
 	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2

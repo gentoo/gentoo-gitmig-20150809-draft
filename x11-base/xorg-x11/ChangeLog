@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.114 2004/09/14 17:47:07 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.115 2004/09/14 23:34:40 spyderous Exp $
+
+  14 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.8.0.ebuild:
+  FILES_VER 0.2. Support any future display managers (#23957) and update MANPATH
+  (#63645).
 
   14 Sep 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.8.0.ebuild:
   Added -mtune to ALLOWED_FLAGS for mips.
