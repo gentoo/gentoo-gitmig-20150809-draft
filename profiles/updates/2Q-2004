@@ -74,3 +74,4 @@ move net-mail/amavis mail-filter/amavis
 move net-mail/amavisd-new mail-filter/amavisd-new
 move net-mail/anomy-sanitizer mail-filter/anomy-sanitizer
 move net-mail/anubis mail-filter/anubis
+move net-mail/bmf mail-filter/bmf
