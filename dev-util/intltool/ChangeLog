@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.36 2004/02/10 22:09:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.37 2004/02/16 18:07:59 gustavoz Exp $
+
+  16 Feb 2004; Gustavo Zacarias <gustavoz@gentoo.org> intltool-0.30.ebuild:
+  stable on hppa and sparc
 
   10 Feb 2004; <spider@gentoo.org> intltool-0.30.ebuild:
   x86 bump due to bugs with missing Makefile.in.in
