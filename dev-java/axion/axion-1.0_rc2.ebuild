@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2.ebuild,v 1.7 2004/08/15 17:20:49 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2.ebuild,v 1.8 2004/09/04 12:59:34 axxo Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ RDEPEND=">=dev-java/commons-collections-2.1
 	>=dev-java/commons-primitives-1.0*
 	>=dev-java/commons-codec-1.2*
 	>=dev-java/log4j-1.2*
-	>=dev-java/regexp-bin-1.3*"
+	>=dev-java/regexp-1.3-r1"
 DEPEND="${RDEPEND}
 	jikes? >=dev-java/jikes-1.19
 	junit? >=dev-java/junit-3.8.1
