@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.14 2004/07/01 22:15:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.15 2004/09/06 20:07:53 plasmaroo Exp $
+
+  06 Sep 2004; <plasmaroo@gentoo.org> ipsec-tools-0.2.5.ebuild,
+  ipsec-tools-0.3.1.ebuild, ipsec-tools-0.3.3.ebuild:
+  Added an RDEPEND for sec-policy/selinux-ipsec-tools for SELinux USE flag
+  users, bug #62902.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ipsec-tools-0.2.5.ebuild, ipsec-tools-0.3.1.ebuild,
