@@ -224,7 +224,7 @@ net-www/zope
 # This is more a java-config bug ....
 =net-www/mozilla-0.9.9
 
-# Opera 6 final does not run yet.
+# Opera 6 final.  Masked out pending some testing.
 # Arcady Genkin <agenkin@gentoo.org> May 18, 2002.
 #
 >=net-www/opera-6.0
