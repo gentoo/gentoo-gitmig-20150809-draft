@@ -5,19 +5,13 @@ MD5 1fb1663f841e5afe50da00cdbd22e439 ChangeLog 8330
 MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
 MD5 d9e4ca42b79c105aa47283786d511446 pam-0.77.ebuild 7422
 MD5 301cd084cd567f57a9679687e7691491 pam-0.77-r2.ebuild 7762
-MD5 028c285db4076f549774c258d0eddcfc files/digest-pam-0.77 201
-MD5 7d46eb9ff97b13f9f6fcd1b44736adf1 files/pam-0.75-configure-db4.patch 504
-MD5 e23ff84c5fee1855b966271fd61b8f44 files/pam-0.75-pam_console-bison.fixes.patch 534
-MD5 4a38d68124955388013f9ad6ead0b9fa files/pam-0.75-pam_group-confile.patch 478
-MD5 6a4d8c09b6a1825f28cbd1127a2fe582 files/pam-0.75-pam_userdb-use-db3.patch 1157
-MD5 83fe40b0072c25238cb0918e9aee8652 files/pam-0.75-pam_wheel-segfault.patch 949
-MD5 1974ad520e0b3f8b7a0a7feea28f7fda files/pam-0.75-selinux.diff.bz2 1523
-MD5 7abfe66b5996b628696d244d462e47b0 files/digest-pam-0.77-r2 201
 MD5 69f8cfad7f241eb669085eaa753cd9dd files/pam-0.77-console-reset.patch 1826
+MD5 028c285db4076f549774c258d0eddcfc files/digest-pam-0.77 201
+MD5 7abfe66b5996b628696d244d462e47b0 files/digest-pam-0.77-r2 201
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBiwAIHTu7gpaalycRAhP5AJ97c96jB8exMkAoJCHuzQXvajIL7ACdGj8n
-fgbliC8oWBVq+iimIgVZ91Q=
-=kj/c
+iD8DBQFBiwDcHTu7gpaalycRAh1OAKDcw7TnddTM7L7rmrjKd+Fc+yrVpgCgx5QW
+GaFeaUoh+U0cVfaZaDQeVO0=
+=nrGd
 -----END PGP SIGNATURE-----
