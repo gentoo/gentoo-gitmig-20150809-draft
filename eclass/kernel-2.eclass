@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.31 2004/02/18 22:33:29 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.32 2004/03/14 06:43:16 seemant Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -67,7 +67,7 @@ kernel_is_2_6() {
 # capture the sources type and set depends
 if [ "${ETYPE}" == "sources" ]
 then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
+	#kbd is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
 		>=sys-devel/binutils-2.11.90.0.31 )"
 

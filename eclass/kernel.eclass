@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.44 2003/12/14 22:45:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.45 2004/03/14 06:43:16 seemant Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -16,7 +16,7 @@ IUSE="${IUSE} build"
 
 if [ "${ETYPE}" = "sources" ]
 then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
+	#kbd is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
 			  >=sys-devel/binutils-2.11.90.0.31 )
 		app-admin/addpatches"
