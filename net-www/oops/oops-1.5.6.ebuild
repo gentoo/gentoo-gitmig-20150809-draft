@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.20 2004/07/14 06:02:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.21 2004/07/27 10:15:30 tigger Exp $
 
 DESCRIPTION="An advanced multithreaded caching web proxy"
 HOMEPAGE="http://zipper.paco.net/~igor/oops.eng/"
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	/configure --prefix=/usr --libdir=/usr/lib/oops --enable-oops-user=squid \
+	./configure --prefix=/usr --libdir=/usr/lib/oops --enable-oops-user=squid \
 		--sysconfdir=/etc/oops --sbindir=/usr/sbin --with-regexp=pcre --localstatedir=/var/run/oops || die
 	cd src
 	cp config.h.in config.h.in.orig
