@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r1.ebuild,v 1.12 2003/02/13 06:39:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r1.ebuild,v 1.13 2003/07/01 21:47:40 aliz Exp $
 
 IUSE="X nls motif"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An incredibly powerful, extensible text editor"
-SRC_URI="ftp://ftp.codefactory.se/pub/gnu/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gnu/emacs/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/emacs"
 
 # Never use the sandbox, it causes Emacs to segfault on startup

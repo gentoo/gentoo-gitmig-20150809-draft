@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.10 2003/06/15 17:41:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.11 2003/07/01 21:47:40 aliz Exp $
 
 IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Text Editor"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gnome//sources/gedit/${PV/.6}/${P}.tar.gz"
 HOMEPAGE="http://gedit.sourceforge.net/"
 SLOT="O"
 LICENSE="GPL-2"
