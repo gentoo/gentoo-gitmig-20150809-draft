@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.5 2004/12/13 18:36:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.1 2004/12/13 18:36:20 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,21 +8,22 @@ TW_VER="2.3.1-2"
 DESCRIPTION="Open Source File Integrity Checker and IDS"
 HOMEPAGE="http://www.tripwire.org/"
 SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
-	http://non-us.debian.org/debian-non-US/pool/non-US/main/t/tripwire/tripwire_2.3.1.2-6.1.diff.gz"
+	mirror://gentoo/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -alpha"
-IUSE=""
+KEYWORDS="~x86"
+IUSE="ssl"
 
 DEPEND="virtual/libc
-	dev-util/patchutils
-	sys-devel/automake
-	dev-libs/openssl"
+		sys-devel/automake
+		sys-devel/autoconf
+		dev-util/patchutils
+		ssl? ( dev-libs/openssl )"
 RDEPEND="virtual/libc
-	virtual/cron
-	virtual/mta
-	dev-libs/openssl"
+		virtual/cron
+		virtual/mta
+		ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/tripwire-${TW_VER}
 
@@ -30,55 +31,48 @@ src_unpack() {
 	# unpack tripwire source tarball
 	unpack tripwire-${TW_VER}.tar.gz; cd ${S}
 
-	# some patches ive collected/made for tripwire
-	# mostly from mandrake, some from other sources
+	# Paul Herman has been maintaining some updates to tripwire
+	# including autoconf support and portability fixes.
+	# http://www.frenchfries.net/paul/tripwire/
+	epatch ${DISTDIR}/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
 	epatch ${FILESDIR}/tripwire-2.3.0-50-rfc822.patch.bz2
-	epatch ${FILESDIR}/tripwire-2.3.1-2-fhs.patch.bz2
-	epatch ${FILESDIR}/tripwire-2.3.1-2-gcc-3.3.patch.bz2
-	epatch ${FILESDIR}/tripwire-2.3.1-gcc3.patch.bz2
-	epatch ${FILESDIR}/tripwire-jbj.patch.bz2
-	epatch ${FILESDIR}/tripwire-mkstemp.patch.bz2
-	epatch ${FILESDIR}/tripwire-2.3.1.2-force_gcc334.patch.bz2
-
-	# pull out the interesting debian patches
-	filterdiff  -i '*/man/man8/twadmin.8' -z  --strip=1	\
-		${DISTDIR}/tripwire_2.3.1.2-6.1.diff.gz > ${T}/debian-patch.diff
-	epatch ${T}/debian-patch.diff
-
-	# cleanup ready for build
-	rm -rf ${S}/src/STLport*
-	touch ${S}/src/STLport_r ${S}/src/STLport_d
-
-	# security fix, http://www.securityfocus.com/archive/1/365036
-	epatch ${FILESDIR}/tripwire-format-string-email-report.diff
 }
 
 src_compile() {
-	cd ${S}/src
-
 	# tripwire can be sensitive to compiler optimisation.
 	# see #32613, #45823, and others.
 	# 	-taviso@gentoo.org
 	strip-flags
+	replace-flags -O2 -O1
+	append-flags -DCONFIG_DIR='"\"/etc/tripwire\""'
 
-	emake -j1 release RPM_OPT_FLAGS="${CXXFLAGS}" || die
+	einfo "Preapring build..."
+		rm -f ${S}/configure
+		ebegin "	Running aclocal"
+			aclocal &> /dev/null || true
+		eend
+		ebegin "	Running autoheader"
+			autoheader &> /dev/null || true
+		eend
+		ebegin "	Running automake"
+			automake --add-missing &> /dev/null || true
+		eend
+		ebegin "	Running autoreconf"
+			autoreconf &> /dev/null || true
+		eend
+		ebegin "	Preparing Directory"
+			mkdir ${S}/lib ${S}/bin || die
+		eend
+	einfo "Done."
+	econf `use_enable ssl openssl` || die
+	emake || die
 }
 
 src_install() {
-	dosbin ${S}/bin/*/siggen
-	dosbin ${S}/bin/*/tripwire
-	dosbin ${S}/bin/*/twadmin
-	dosbin ${S}/bin/*/twprint
-
-	for i in {4,5,8}
-	do
-		cd ${S}/man/man${i}
-		doman *.$i
-		cd ${S}
-	done
-
-	dodir /etc/tripwire
-	dodir /var/lib/tripwire/report
+	dosbin ${S}/bin/{siggen,tripwire,twadmin,twprint}
+	doman ${S}/man/man{4/*.4,5/*.5,8/*.8}
+	dodir /etc/tripwire /var/lib/tripwire{,/report}
+	keepdir /var/lib/tripwire{,/report}
 
 	exeinto /etc/cron.daily
 	doexe ${FILESDIR}/tripwire.cron
