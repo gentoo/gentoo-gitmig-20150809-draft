@@ -22,7 +22,7 @@ RDEPEND=">=kde-base/kdelibs-${PV} gphoto2? ( >=gnome-apps/gphoto-2.0_beta1 >=med
 src_unpack() {
     unpack ${A}
     cd ${S}
-#    patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+    patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
