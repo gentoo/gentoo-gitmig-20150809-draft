@@ -1,12 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2000.12.ebuild,v 1.3 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2000.12.ebuild,v 1.4 2002/07/18 03:41:50 george Exp $
 
 MY_P="hugs98-Dec2001"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The HUGS98 Haskell interpreter"
 SRC_URI="http://cvs.haskell.org/Hugs/downloads/${MY_P}.tar.gz"
 HOMEPAGE="http://www.haskell.org/hugs"
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="as-is"
 
 DEPEND="virtual/glibc"
 

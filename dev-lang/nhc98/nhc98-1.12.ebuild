@@ -8,6 +8,10 @@ DESCRIPTION="Haskell 98 compiler"
 SRC_URI="ftp://ftp.cs.york.ac.uk/pub/haskell/nhc98/${TARBALL}"
 HOMEPAGE="http://www.cs.york.ac.uk/fp/nhc98/"
 
+SLOT="0"
+LICENSE="nhc98"
+KEYWORDS="x86"
+
 DEPEND="readline? ( >=readline-4.1 )"
 
 src_unpack() {

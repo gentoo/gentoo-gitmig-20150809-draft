@@ -12,6 +12,10 @@ SRC_URI="http://gnu-pascal.de/current/${P}.tar.gz
 
 HOMEPAGE="http://gnu-pascal.de"
 
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+
 DEPEND="virtual/glibc
 		~sys-devel/gcc-2.95.3"
 
