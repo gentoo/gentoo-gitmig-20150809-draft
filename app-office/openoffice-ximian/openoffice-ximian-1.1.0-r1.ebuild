@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0.ebuild,v 1.5 2003/11/04 19:53:55 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0-r1.ebuild,v 1.1 2003/11/04 19:53:55 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -31,9 +31,8 @@ inherit flag-o-matic eutils kernel-mod
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
 append-flags "-fno-strict-aliasing"
-replace-flags "-Os" "-O2"
-
 replace-flags "-O3" "-O2"
+replace-flags "-Os" "-O2"
 
 # Enable Bytecode Interpreter for freetype ...
 append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
@@ -51,7 +50,7 @@ inherit virtualx
 [ -z "${ECPUS}" ] && export ECPUS="1"
 
 
-XIMIAN_VER=1.1.44
+XIMIAN_VER=1.1.45
 PATCHLEVEL=OOO_1_1_0
 ICON_VER=OOO_1_1-5
 INSTDIR="/opt/Ximian-OpenOffice"
@@ -68,7 +67,7 @@ HOMEPAGE="http://ooo.ximian.com"
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="gnome kde nptl"
+IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
 	!=sys-libs/glibc-2.3.1*
@@ -91,7 +90,6 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	>=virtual/jdk-1.4.1
 	virtual/lpr
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2.1 )"
@@ -111,30 +109,6 @@ export LS_COLORS=""
 
 pkg_setup() {
 
-	if [ -z "$(echo ${JDK_HOME} | grep "blackdown")" ] && [ "${FORCE_JAVA}" != "yes" ]
-	then
-		eerror
-		eerror "This ebuild has only been tested with the blackdown port of"
-		eerror "java.  If you use another java implementation, it could fail"
-		eerror "horribly, so please merge the blackdown-jdk and set it as"
-		eerror "system VM before proceeding:"
-		eerror
-		eerror " # emerge blackdown-jdk"
-		eerror " # java-config --set-system-vm=blackdown-jdk-<VERSION>"
-		eerror " # env-update"
-		eerror " # source /etc/profile"
-		eerror
-		eerror "Please adjust <VERSION> according to the version installed in"
-		eerror "/opt."
-		eerror
-		eerror "If you however want to test another JDK (not officially supported),"
-		eerror "you could do the following:"
-		eerror
-		eerror " # export FORCE_JAVA=yes"
-		eerror
-		die
-	fi
-
 	ewarn "****************************************************************"
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
@@ -149,9 +123,11 @@ pkg_setup() {
 
 
 set_languages () {
+
 	if [ -z "$LANGUAGE" ]; then
 		LANGUAGE=01
 	fi
+
 	case "$LANGUAGE" in
 		01 | ENUS ) LANGNO=01; LANGNAME=ENUS; LFULLNAME="US English (default)"
 			;;
@@ -256,7 +232,6 @@ oo_setup() {
 		fi
 	fi
 
-	export JAVA_BINARY="`which java`"
 }
 
 src_unpack() {
@@ -271,23 +246,14 @@ src_unpack() {
 	rm stlport/STLport-4.5.3.patch
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 
-	#Fix compilation with gcc 3.2.x
+	#Fix compilation with gcc 3.2.x	
 	epatch ${FILESDIR}/${PV}/config.patch
 
-	#Hopefully this fixes some of the compile problems
-	kernel-mod_getversion
-	cd ${S}
-	if [ "$KV_MAJOR" = "2" ] && [ "$KV_MINOR" -gt "4" ]
-	then
-		epatch ${FILESDIR}/${PV}/solar_segfix.patch
-	fi
+	#Fix nptl compile issues
+	epatch ${FILESDIR}/${PV}/nptl.patch
 
-	#Fixes compile problems with nptl
-	if use nptl
-	then
-		cd ${S}
-		epatch ${FILESDIR}/${PV}/oo_1.1-nptl.patch
-	fi
+	#Additional patch for Kernel 2.6
+	epatch ${FILESDIR}/${PV}/openoffice-1.1.0-linux-2.6-fix.patch
 
 	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=Ximian || die "Ximian patches failed"
@@ -336,8 +302,8 @@ src_compile() {
 		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
 	fi
 
-	addpredict /root/.gconfd
 	addpredict /bin
+	addpredict /root/.gconfd
 	local buildcmd=""
 
 	set_languages
@@ -361,7 +327,7 @@ src_compile() {
 	# Enable new ccache for this build
 	elif [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
 	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
-	     -x /usr/bin/ccache -a  ! -d /usr/bin/ccache ]
+	     -x /usr/bin/ccache -a ! -d /usr/bin/ccache ]
 	then
 		einfo "We're using ccache for this build..."
 		# Build uses its own env with $PATH, etc, so
@@ -396,25 +362,22 @@ src_compile() {
 	cd ${S}/config_office
 	rm -f config.cache
 	autoconf
-	if [ "LANGNAME" != "ENUS" ]; then
-		LANGNAME="${LANGNAME},ENUS"
-	fi
 	./configure \
 		--enable-libart \
 		--enable-libsn \
 		--enable-crashdump=no \
-		--with-lang=${LANGNAME} \
+		--with-lang=ENUS,${LANGNAME} \
 		--without-fonts \
-		--with-jdk-home=${JAVA_HOME} \
-		--disable-rpath || die
+		--disable-rpath \
+		--disable-java \
+		--enable-fontconfig \
+		--with-system-zlib || die
 
 	cd ${S}
 	get_EnvSet
 
 	# Build as minimal as possible
 	export BUILD_MINIMAL="${LANGNO}"
-	# Fix for Java
-	export LANG="C"
 
 	# Do not include /usr/include in header search path, and
 	# same thing for internal gcc include dir, as gcc3 handles
@@ -436,9 +399,9 @@ src_compile() {
 	# Should the build use multiprocessing?
 	if [ "${ECPUS}" -gt 1 ]
 	then
-		buildcmd="${S}/solenv/bin/build.pl --all -P ${ECPUS} product=full"
+		buildcmd="${S}/solenv/bin/build.pl --all -P ${ECPUS} product=full --dlv_switch link"
 	else
-		buildcmd="${S}/solenv/bin/build.pl --all product=full"
+		buildcmd="${S}/solenv/bin/build.pl --all product=full --dlv_switch link"
 	fi
 
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
