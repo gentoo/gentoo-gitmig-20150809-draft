@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # distributed under the terms of the GNU General Pulic License, v2.
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-1.18.5-r2.ebuild,v 1.3 2002/07/25 05:23:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-1.18.5-r2.ebuild,v 1.4 2002/08/01 23:02:11 cselkirk Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="http://sdlperl.org/downloads/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="${DEPEND}
 	virtual/opengl

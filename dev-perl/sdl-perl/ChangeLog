@@ -1,9 +1,13 @@
 # ChangeLog for dev-perl/SDL-sdlpl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.3 2002/07/05 16:22:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.4 2002/08/01 23:02:11 cselkirk Exp $
 
 
 *sdl-perl-1.18.5-r2 (5 Jul 2002)
+
+  1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> sdl-perl-1.18.5-r2.ebuild :
+
+  Added ppc to KEYWORDS.
 
   05 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   sdl-perl-1.18.5-r2.ebuild files/digest-sdl-perl-1.18.5-r2 :

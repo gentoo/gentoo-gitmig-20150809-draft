@@ -1,12 +1,15 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.5 2002/06/20 19:26:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.6 2002/08/01 22:57:19 cselkirk Exp $
 
 *mod_perl-1.27 (20 Jun 2002)
 
+  1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> mod_perl-1.27.ebuild :
+
+  Added ppc to KEYWORDS.
+
   20 Jun 2002; Thilo Bangert <bangert@gentoo.org> mod_perl-1.27.ebuild :
   version bump
-
 
 *mod_perl-1.26 (7 May 2002)
 
