@@ -9,7 +9,7 @@
 
 # NOTE:  For all of those brave souls out there that wants to fix
 #        or update this, note that all three versions install
-#        .m4 files to /usr/share/aclocal-${ver}/ and am files
+#        .m4 files to /usr/share/aclocal-${ver}/ and .am files
 #        to /usr/share/automake-${ver}/.  We then add the default
 #        /usr/share/aclocal/ to aclocal's search path by adding
 #        "push (@dirlist, \"/usr/share/aclocal\");" after @dirlist
@@ -198,7 +198,7 @@ src_install() {
 	# ************ automake-1.4-p5 ************
 	#
 
-    cd ${OLD14_S}
+	cd ${OLD14_S}
 	fix_bins "1.4"
 	
 	make DESTDIR=${D} \
