@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.19.ebuild,v 1.1 2002/07/07 02:55:56 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.19.ebuild,v 1.2 2002/07/24 05:08:28 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XSLT libraries and tools"
@@ -21,8 +21,9 @@ src_compile() {
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
 		    --mandir=/usr/share/man || die
-
-	emake || die
+	#libxslt-1.0.19 didn't like parallel make; test a good deal before re-enabling
+	#(drobbins, 24 Jul 2002)
+	make || die
 }
 
 src_install() {                               
