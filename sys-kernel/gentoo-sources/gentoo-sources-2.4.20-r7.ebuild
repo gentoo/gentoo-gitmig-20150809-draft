@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r7.ebuild,v 1.3 2003/09/24 19:31:53 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r7.ebuild,v 1.4 2003/10/02 22:11:35 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -118,6 +118,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-gcc33.patch
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-grsec-disabled.patch
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-sched-interrupt.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-mdcount.patch
 
 }
 
@@ -125,6 +126,7 @@ pkg_postinst() {
 
 	kernel_pkg_postinst
 
+	echo
 	ewarn "There is no xfs support in this kernel."
 	ewarn "If you need xfs support, emerge xfs-sources."
 	echo
@@ -135,10 +137,13 @@ pkg_postinst() {
 	echo
 	einfo "If there are issues with it, read the docs and associated help provided."
 	einfo "Next you should check http://forums.gentoo.org/ for assistance."
+	echo
 	einfo "Otherwise check http://bugs.gentoo.org/ for an existing bug."
 	einfo "Only create a new bug if you have not found one that matches your issue."
 	einfo "It is best to do an advanced search to increase search yield."
-	einfo "Assign bugs to x86-kernel@gentoo.org"
+	echo
+	einfo "Please assign bugs to x86-kernel@gentoo.org"
 	echo
 	einfo "Please read the ChangeLog and associated docs for more information."
+	echo
 }

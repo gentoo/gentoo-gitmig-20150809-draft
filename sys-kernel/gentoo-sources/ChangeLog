@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.32 2003/09/24 19:31:53 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.33 2003/10/02 22:11:35 plasmaroo Exp $
+
+  02 Oct 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r7.ebuild,
+  files/gentoo-sources-2.4.20-mdcount.patch:
+  Added Software RAID patch for fix unsynchronized reference counts: Bug #30124.
 
   24 Sep 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r7.ebuild,
   files/gentoo-sources-2.4.20-sched-interrupt.patch:
