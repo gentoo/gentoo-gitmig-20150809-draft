@@ -1,8 +1,15 @@
 # ChangeLog for media-plugins/alsa-xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.1 2002/10/31 15:04:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.2 2002/10/31 16:43:36 seemant Exp $
 
-*media-sound/alsa-xmms-0.9.5 (23 Sep 2002)
+*alsa-xmms-0.9.6b (31 Oct 2002)
+
+  31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> alsa-xmms-0.9.6b.ebuild
+  files/digest-alsa-xmms-0.9.6b :
+
+  Version bump thanks to: synonymousca@yahoo.com in bug #9694.
+
+*alsa-xmms-0.9.5 (23 Sep 2002)
  
   31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> * :
 
@@ -18,7 +25,7 @@
   Update to 0.9.5 and ebuild facelift.  Thanks to Nicolas Lidzborski
   <cpc@freeshell.org>.
   
-*media-sound/alsa-xmms-0.9-r1 (07 Jul 2002)
+*alsa-xmms-0.9-r1 (07 Jul 2002)
 
   07 Jul 2002; Nick Hadaway <raker@gentoo.org> alsa-xmms-0.9-r1.ebuild
   
@@ -30,7 +37,7 @@
   Much props to Matthieu Sozeau (alsa-xmms author) for his ultra-prompt 
   response to a bug report.
 
-*media-sound/alsa-xmms-0.9 (2 May 2002)
+*alsa-xmms-0.9 (2 May 2002)
 
   2 May 2002; Seemant Kulleen <seemant@gentoo.org> alsa-xmms-0.9.ebuild
   ChangeLog files/digest-alsa-xmms-0.9 :
