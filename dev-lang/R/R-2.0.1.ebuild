@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.0.ebuild,v 1.5 2005/02/21 21:46:56 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.1.ebuild,v 1.1 2005/02/21 21:46:56 kugelfang Exp $
 
 inherit 64-bit fortran
 
-IUSE="blas lapack X tcltk gnome zlib bzlib pcre"
-
+IUSE="blas X tcltk gnome zlib bzlib pcre"
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 SRC_URI="http://cran.r-project.org/src/base/R-2/${P}.tar.gz"
 #There are daily release patches, don't know how to utilize these
@@ -18,7 +17,6 @@ DEPEND="virtual/libc
 		>=media-libs/jpeg-6b-r2
 		>=media-libs/libpng-1.2.1
 		blas? ( virtual/blas )
-		lapack? ( virtual/lapack )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		pcre? ( dev-libs/libpcre )
@@ -34,30 +32,29 @@ DEPEND="virtual/libc
 			>=media-libs/audiofile-0.2.1 )"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~sparc ~ppc ppc64 amd64"
-64-bit || FORTRAN="g77 f2c" # No f2c on 64-bit systems :-/
+KEYWORDS="~x86 ~sparc ~ppc ppc64 ~amd64"
+64-bit || FORTRAN="g77" # No f2c on 64-bit archs anymore.
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed \
-		-e 's/^#define NeedFunctionPrototypes 0/#define NeedFunctionPrototypes 1/' \
-		-i src/modules/X11/dataentry.c \
-		|| die "sed failed"
+	#sed -e 's/^#define NeedFunctionPrototypes 0/#define NeedFunctionPrototypes 1/' \
+	#-i src/modules/X11/dataentry.c || die "sed failed"
 }
 
 src_compile() {
-	addwrite "/var/cache/fonts"
+	#addwrite "/var/cache/fonts"
 	local myconf="--enable-static --enable-R-profiling --enable-R-shlib --with-readline"
 
 	use zlib || myconf="${myconf} --with-zlib"		#default disabled
 	use bzlib || myconf="${myconf} --with-bzlib"	#default disabled
-	use pcre || myconf="${myconf} --with-pcre"		#default disabled
+	use pcre || myconf="${myconf} --with-pcre"   	#default disabled
 
 	# Using the blas USE flag now instead atlas, as atlas now
 	# has been broken into blas-atlas and lapack-atlas.
 	use blas || myconf="${myconf} --without-blas" #default enabled
-	use lapack && myconf="${myconf} --with-lapack" #default disabled
+	# --with-lapack is deprecated now by upstream
+	# use lapack && myconf="${myconf} --with-lapack" #default disabled
 
 	use X || myconf="${myconf} --without-x" #default enabled
 
@@ -80,28 +77,27 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
-	# rhome=${D} fixes sandbox violation.
+src_install() {
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
-		rhome=${D}/usr/$(get_libdir)/R/ \
+		rhome=${D}/usr/$(get_libdir)/R \
 		install || die "Installation Failed"
 
 	#fix the R wrapper script to have the correct R_HOME_DIR
 	#sed regexp borrowed from included debian rules
 	sed \
-		-e "s:^R_HOME_DIR=.*:R_HOME_DIR=/usr/$(get_libdir)/R:" \
+		-e '/^R_HOME_DIR=.*/s::R_HOME_DIR=/usr/lib/R:' \
 		-i ${D}/usr/$(get_libdir)/R/bin/R \
-		|| die "sed failed (R_HOME_DIR)!"
+		|| die "sed failed"
 
 	#R installs two identical wrappers under /usr/bin and /usr/lib/R/bin/
 	#the 2nd one is corrected by above sed, for the 1st
 	#I'll just symlink it into /usr/bin
 	cd ${D}/usr/bin/
 	rm R
-	dosym ../lib/R/bin/R /usr/bin/R
+	dosym ../$(get_libdir)/R/bin/R /usr/bin/R
 	cd ${S}
 
 	dodoc AUTHORS BUGS COPYING* ChangeLog FAQ INSTALL *NEWS README \

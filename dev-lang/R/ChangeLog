@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.38 2005/02/17 21:59:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.39 2005/02/21 21:46:56 kugelfang Exp $
+
+*R-2.0.1 (21 Feb 2005)
+
+  21 Feb 2005; Danny van Dyk <kugelfang@gentoo.org> R-2.0.0.ebuild,
+  +R-2.0.1.ebuild:
+  Fixed a sandbox violation in R-2.0.0 (BUG #79004) and marked stabled on
+  amd64. Added R-2.0.1 (BUG #72313).
 
   17 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> R-1.9.1.ebuild:
   ~alpha keyword.
