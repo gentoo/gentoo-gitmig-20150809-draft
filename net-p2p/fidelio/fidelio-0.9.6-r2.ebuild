@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fidelio/fidelio-0.9.6-r2.ebuild,v 1.8 2004/06/25 00:30:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fidelio/fidelio-0.9.6-r2.ebuild,v 1.9 2004/07/15 03:48:47 agriffis Exp $
 
 IUSE="nls esd"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Fidelio is a Linux/Unix client for Hotline, a proprietary protocol that combines ftp-like, irc-like and news-like functions with user authentication and permissions in one package."
 SRC_URI="http://download.sourceforge.net/fidelio/${P}.tar.gz"
 HOMEPAGE="http://fidelio.sourceforge.net/"

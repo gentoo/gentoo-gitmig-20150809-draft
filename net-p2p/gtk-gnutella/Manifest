@@ -2,7 +2,7 @@ MD5 b656fcb0c4c5c0c5aa8f25401dddb586 gtk-gnutella-0.93.4.ebuild 2268
 MD5 31182cab392681a9d16da9275ead48db gtk-gnutella-0.93.3.ebuild 2171
 MD5 f24fd012245744ded46445bf9e0b63f3 ChangeLog 6166
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 29383e7c14d5546ac8834ce2dffba713 gtk-gnutella-0.91.1.ebuild 877
+MD5 ce7e6ee71ad26511e209ec35f7651f39 gtk-gnutella-0.91.1.ebuild 864
 MD5 777703229937bea0cf00343c10c186b6 files/0.93.4-gcc34.patch 3206
 MD5 dd86fcdefbd3fdb0a115c277b0087e60 files/0.93-Configure.patch 498
 MD5 f3ea5611e91933a99e10202e5b6860b1 files/digest-gtk-gnutella-0.91.1 71
