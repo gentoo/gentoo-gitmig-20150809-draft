@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7819598dc1ff22c1d44c34c5fd8d671b ChangeLog 709
-MD5 ad239060562007add66fce64ca2cfaa7 qmail-qfilter-1.5.ebuild 999
+MD5 ab8e7ac68657fe9e2916de8aae3bebc3 qmail-qfilter-1.5.ebuild 1055
+MD5 3c42a42a1c2969559d14f959d227d405 ChangeLog 839
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 c96a370699200816c4726353815e3ea2 files/digest-qmail-qfilter-1.5 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBWrgW10xuJSrg3/sRAi2SAJ0e3idDMAUgoX9xNR5PEbtlQjn3owCbBUeH
-9UXw1nzxP6iL/8fdXRecS34=
-=SYT9
+iD8DBQFBfqC0CHk4+ZoBpvsRAjCmAKCWFtpe6dqiJI5VWH2mN6TCuDuMjACfSnQO
+UUnhyAKnwp+Vsn8sTuyy1UM=
+=UeTG
 -----END PGP SIGNATURE-----

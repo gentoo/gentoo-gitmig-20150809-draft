@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-qfilter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/ChangeLog,v 1.5 2004/09/29 13:26:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/ChangeLog,v 1.6 2004/10/26 20:08:23 slarti Exp $
+
+  26 Oct 2004; Tom Martin <slarti@gentoo.org> qmail-qfilter-1.5.ebuild:
+  Marked ~amd64, fixing ${CC} with regard to bug 69004.
 
   29 Sep 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   qmail-qfilter-1.5.ebuild:
