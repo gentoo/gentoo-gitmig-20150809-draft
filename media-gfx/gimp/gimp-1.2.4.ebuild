@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.6 2003/07/04 05:39:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.7 2003/07/05 13:39:10 liquidx Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,6 +42,8 @@ src_compile() {
 	replace-flags -march=k6-2 -march=i586
 	replace-flags -march=k6-3 -march=i586
 	replace-flags -march=k6 -march=i586
+	# over optimisations (#21787)
+	replace-flags -Os -O2
 
 	local mymake=""
 
