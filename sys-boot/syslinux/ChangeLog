@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.13 2005/01/10 00:41:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.14 2005/01/15 21:25:41 vapier Exp $
+
+*syslinux-3.07 (15 Jan 2005)
+
+  15 Jan 2005; Mike Frysinger <vapier@gentoo.org> +syslinux-3.07.ebuild:
+  Version bump #78098 by Ziga Boehm.
 
 *syslinux-3.05 (09 Jan 2005)
 
