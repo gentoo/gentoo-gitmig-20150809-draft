@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.17 2003/10/09 15:11:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.18 2003/10/09 15:37:57 liquidx Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -39,7 +39,11 @@ distutils_src_compile() {
 }
 
 distutils_src_install() {
-	${python} setup.py install --root=${D} --no-compile "$@" || die
+	if has_version ">=dev-lang/python-2.3"; then
+		${python} setup.py install --root=${D} --no-compile "$@" || die
+	else
+		${python} setup.py install --root=${D} "$@" || die
+	fi		
 	
 	dodoc CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO
 	dodoc CONTRIBUTORS LICENSE COPYING*
@@ -49,14 +53,6 @@ distutils_src_install() {
 	
 	# deprecated! please use DOCS instead.
 	[ -n "${mydoc}" ] && dodoc ${mydoc}
-}
-
-distutils_pkg_postrm() {
-	python_mod_cleanup
-}
-
-distutils_pkg_postinst() {
-	python_mod_optimize
 }
 
 # e.g. insinto ${ROOT}/usr/include/python${PYVER}
@@ -82,5 +78,5 @@ distutils_python_tkinter() {
 }
 
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS src_compile src_install
 
