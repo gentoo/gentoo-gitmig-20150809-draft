@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.25 2004/02/26 19:13:32 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.26 2004/02/27 12:53:22 bazik Exp $
+
+  27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> sip-3.8-r1.ebuild:
+  Stable on sparc.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> sip-3.8.ebuild:
   Stable on sparc.
