@@ -1,14 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.1 2004/07/23 22:39:14 swegener Exp $
-
-IUSE="nls ipv6 perl ssl socks5"
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.2 2004/11/03 00:26:54 vapier Exp $
 
 inherit perl-module eutils
 
-DESCRIPTION="A modular textUI IRC client with IPv6 support."
-SRC_URI="http://irssi.org/files/${P}.tar.bz2"
+DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
+SRC_URI="http://irssi.org/files/${P}.tar.bz2"
+
+SLOT="0"
+LICENSE="GPL-2"
+# Original KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64 ia64 ppc64 s390"
+# All other KEYWORDS were removed because this ebuild only contains an 64-bit arch fix.
+KEYWORDS="alpha amd64 ia64 ppc64"
+IUSE="nls ipv6 perl ssl socks5"
 
 RDEPEND="!net-irc/irssi-cvs
 	>=dev-libs/glib-2.2.1
@@ -19,12 +24,6 @@ RDEPEND="!net-irc/irssi-cvs
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
-
-SLOT="0"
-LICENSE="GPL-2"
-# Original KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64 ia64 ppc64 s390"
-# All other KEYWORDS were removed because this ebuild only contains an 64-bit arch fix.
-KEYWORDS="amd64 ia64 ppc64"
 
 src_unpack() {
 	unpack ${A}

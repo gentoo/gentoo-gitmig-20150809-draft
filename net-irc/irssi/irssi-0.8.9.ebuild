@@ -1,14 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9.ebuild,v 1.13 2004/07/07 22:42:52 swegener Exp $
-
-IUSE="nls ipv6 perl ssl socks5"
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9.ebuild,v 1.14 2004/11/03 00:26:54 vapier Exp $
 
 inherit perl-module
 
-DESCRIPTION="A modular textUI IRC client with IPv6 support."
-SRC_URI="http://irssi.org/files/${P}.tar.bz2"
+DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
+SRC_URI="http://irssi.org/files/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+IUSE="nls ipv6 perl ssl socks5"
 
 RDEPEND="!net-irc/irssi-cvs
 	>=dev-libs/glib-2.2.1
@@ -19,10 +22,6 @@ RDEPEND="!net-irc/irssi-cvs
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64 ia64 ppc64 s390"
 
 src_unpack() {
 	unpack ${A}

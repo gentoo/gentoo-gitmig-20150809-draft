@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5.ebuild,v 1.2 2004/10/31 23:37:05 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5.ebuild,v 1.3 2004/11/03 00:26:54 vapier Exp $
 
 inherit perl-module eutils
 
 MY_P="${P//_/-}"
 
-DESCRIPTION="A modular textUI IRC client with IPv6 support."
-SRC_URI="http://irssi.org/files/${MY_P}.tar.gz"
+DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
-IUSE="nls ipv6 perl ssl socks5"
-SLOT="0"
+SRC_URI="http://irssi.org/files/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64 ~s390 ~ppc-macos"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
+IUSE="nls ipv6 perl ssl socks5"
 
 # Block net-irc/irssi-charconv and net-irc/irssi-recode as
 # their features have been integrated into Irssi itself.
