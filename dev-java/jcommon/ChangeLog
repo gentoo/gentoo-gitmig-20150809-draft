@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jcommon
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.3 2004/10/16 17:20:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.4 2004/10/20 09:14:23 absinthe Exp $
+
+*jcommon-0.9.7 (20 Oct 2004)
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jcommon-0.9.4.ebuild,
+  +jcommon-0.9.7.ebuild:
+  Version bump. Added KEYWORDS ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jcommon-0.9.4.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
