@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7.ebuild,v 1.2 2001/12/06 22:57:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7.ebuild,v 1.3 2001/12/08 08:01:19 drobbins Exp $
 
 SV=1.2.1
 S=${WORKDIR}/rc-scripts-${SV}
@@ -189,15 +189,15 @@ src_install()
 	dosbin init rc rc-update
 
 	#env-update stuff
-	dodir /etc/env.d
+	keepdir /etc/env.d
 	insinto /etc/env.d
 	doins ${S}/etc/env.d/00basic
 	
-	dodir /etc/modules.d
+	keepdir /etc/modules.d
 	insinto /etc/modules.d
 	doins ${S}/etc/modules.d/aliases ${S}/etc/modules.d/i386
 
-	dodir /etc/conf.d
+	keepdir /etc/conf.d
 	insinto /etc/conf.d
 	for foo in ${S}/etc/conf.d/*
 	do
@@ -208,7 +208,7 @@ src_install()
 
 	#this seems the best place for templates .. any ideas ?
 	#NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
-	dodir /etc/ppp
+	keepdir /etc/ppp
 	insinto /etc/ppp
 	doins ${S}/etc/ppp/chat-default
 
@@ -235,7 +235,7 @@ src_install()
 	local bar
 	for foo in default boot nonetwork single
 	do
-		dodir /etc/runlevels/${foo}
+		keepdir /etc/runlevels/${foo}
 		for bar in `cat ${S}/rc-lists/${foo}`
 		do
 			[ -e ${S}/init.d/${bar} ] && dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
