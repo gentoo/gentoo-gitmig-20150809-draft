@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10.ebuild,v 1.22 2004/06/24 23:11:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10.ebuild,v 1.23 2004/11/08 09:12:21 mr_bones_ Exp $
 inherit gnuconfig
 
 IUSE="oss esd alsa"
@@ -13,8 +13,8 @@ DEPEND=">=media-libs/audiofile-0.2.3
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	esd? ( >=media-sound/esound-0.2.19 )"
 
+LICENSE="|| ( LGPL-2.1 LGPL-2 )"
 SLOT="0"
-LICENSE="LGPL-2.1 | LGPL-2"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
 src_compile() {
