@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbd/nbd-2.0-r1.ebuild,v 1.3 2004/05/02 06:34:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbd/nbd-2.6.0.ebuild,v 1.1 2004/05/02 06:34:27 vapier Exp $
 
 DESCRIPTION="Userland client/server for kernel network block device"
 HOMEPAGE="http://nbd.sourceforge.net/"
@@ -13,12 +13,17 @@ IUSE=""
 
 DEPEND="virtual/glibc"
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${PN}-2.6
+
+src_unpack() {
+	unpack ${A}
+	sed -i "s:-O2:${CFLAGS}:" ${S}/gznbd/Makefile
+}
 
 src_compile() {
 	econf || die
-	make || die
-	make -C gznbd || die
+	emake || die
+	emake -C gznbd || die
 }
 
 src_install() {
