@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.0_pre20040720.ebuild,v 1.1 2004/07/20 06:43:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.0.0_pre20040721.ebuild,v 1.1 2004/07/21 13:13:49 solar Exp $
 
 inherit eutils
 
 DESCRIPTION="Utilities for rescue and embedded systems"
-SNAPSHOT=20040720
+SNAPSHOT=20040721
 HOMEPAGE="http://www.busybox.net/"
 LICENSE="GPL-2"
 SLOT="0"
