@@ -4,11 +4,15 @@
 
 *<PACKAGE_NAME>-<PACKAGE_VERSION>-<PACKAGE_RELEASE> (DD MMM YYYY)
 
-  01 Feb 2002; G.Bevin <gbevin@gentoo.org> skel.ChangeLog: This changelog is
-  targetted to users. This means that the comments should be well explained and
-  written in clean English. 
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> skel.ChangeLog :
+
+  Initial import.
+
  
 -- Explanation of ChangeLog format:
+
+  This changelog is targetted to users. This means that the comments should be
+  well explained and written in clean English.
  
   Every new version or revision of the package should be marked by a '*'
   seperator line as above. Changes since the last revision have to be added to
