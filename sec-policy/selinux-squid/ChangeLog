@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-squid
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.5 2004/11/13 19:04:50 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.6 2004/11/22 21:15:52 kaiowas Exp $
+
+*selinux-squid-20041120 (22 Nov 2004)
+
+  22 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  +selinux-squid-20041120.ebuild:
+  merge with nsa policy
 
 *selinux-squid-20041109 (13 Nov 2004)
 
