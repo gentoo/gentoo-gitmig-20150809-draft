@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6-r1.ebuild,v 1.11 2003/02/13 12:45:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6-r1.ebuild,v 1.12 2003/03/09 14:30:44 seemant Exp $
 
-inherit libtool
+inherit libtool flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
-SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 HOMEPAGE="http://enlightenment.org/"
+SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/giflib-4.1.0
@@ -19,6 +19,10 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/tiff-3.5.5
 	<=media-libs/freetype-1.4
 	dev-db/edb"
+
+replace-flags k6-3 i586
+replace-flags k6-2 i586
+replace-flags k6 i586
 
 src_compile() {
 	# always turn off mmx because binutils 2.11.92+ 

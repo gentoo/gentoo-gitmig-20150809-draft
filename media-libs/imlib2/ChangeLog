@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.9 2003/02/20 11:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.10 2003/03/09 14:30:44 seemant Exp $
 
 *imlib2-1.0.6.20030220 (20 Feb 2003)
 
@@ -8,6 +8,10 @@
   Version bump (bug fixes from CVS).
  
 *imlib2-1.0.6-r1 (26 Apr 2002)
+
+  09 Mar 2003; Seemant Kulleen <seemant@gentoo.org> imlib2-1.0.6-r1.ebuild:
+  changed k6* flags to i586, closing bug #15754 by Mark McKenna
+  <lanatha@kasmir.org>
 
   26 Apr 2002; Spider <spider@gentoo.org> imlib2-1.0.6-r1.ebuild :
   libtoolize
