@@ -1,0 +1,25 @@
+--- build.xml.orig	2004-07-30 05:50:41.822161512 +0200
++++ build.xml	2004-07-30 05:53:17.553486752 +0200
+@@ -25,12 +25,8 @@
+   <!-- Compile the java code from ${src} into ${build} -->
+   <javac srcdir="${src}" destdir="${build}"
+    includes="com/**,HTTPClient/**,edu/**"
++   classpath="${compile.classpath}"
+    listfiles="on" debug="on" source="1.3">
+-   <classpath>
+-    <pathelement location="lib/JSX1.0.7.4.jar"/>
+-    <pathelement location="lib/AppleJavaExtensions.jar"/>
+-    <pathelement location="lib/metadata-extractor-2.1.jar"/>
+-   </classpath>
+   </javac>
+ 
+   <!-- other files needed -->
+@@ -65,7 +61,7 @@
+    <manifest>
+     <attribute name="Built-By" value="${user.name}" />
+     <attribute name="Main-Class" value="com.gallery.GalleryRemote.GalleryRemote" />
+-    <attribute name="Class-Path" value="lib/metadata-extractor-2.1.jar lib/JSX1.0.7.4.jar img/" />
++	<attribute name="Class-Path" value="${compile.classpath} /usr/share/gallery-remote/img/" />
+    </manifest>
+   </jar>
+  </target>
