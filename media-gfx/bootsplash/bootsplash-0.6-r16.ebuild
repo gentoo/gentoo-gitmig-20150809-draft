@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r16.ebuild,v 1.4 2004/06/24 22:33:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r16.ebuild,v 1.5 2004/08/06 10:45:18 spock Exp $
 
 IUSE=""
 S=${WORKDIR}/${PF}
@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 
 DEPEND=">=media-libs/freetype-2
-	media-libs/libmng"
+	media-libs/libmng
+	media-libs/lcms"
 
 src_compile() {
 	# compile utils

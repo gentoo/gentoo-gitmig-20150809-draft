@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r4.ebuild,v 1.3 2004/08/06 10:45:18 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r5.ebuild,v 1.1 2004/08/06 10:45:18 spock Exp $
 
 IUSE=""
 S=${WORKDIR}
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
 HOMEPAGE="http://www.bootsplash.org/ http://linux.tkdack.com/"
-SRC_URI="http://dev.gentoo.org/~spock/portage/distfiles/${PN}-core-0.6.1-r4.tar.bz2
+SRC_URI="http://dev.gentoo.org/~spock/portage/distfiles/${PN}-core-0.6.1-r5.tar.bz2
 	http://dev.gentoo.org/~spock/portage/distfiles/${PN}-themes-0.6.1.tar.bz2
 	http://dev.gentoo.org/~spock/portage/distfiles/${PN}-kernel-0.6.1-r4.tar.bz2"
 SLOT="0"
@@ -38,7 +38,10 @@ src_install() {
 	doexe misc/bootsplash_resize
 	newexe utils/splashutils/splash splash.bin
 	doexe misc/splash
-	doexe utils/splashutils/{fbresolution,getkey,progress}
+	doexe utils/splashutils/{fbresolution,getkey,progress,splashpbm}
+
+	insinto /sbin
+	doins misc/splash-functions.sh
 
 	exeinto /usr/lib/${PN}
 	doexe misc/bootsplash_resizer.pl

@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.50 2004/08/04 10:51:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.51 2004/08/06 10:45:18 spock Exp $
+
+*bootsplash-0.6.1-r5 (06 Aug 2004)
+
+  06 Aug 2004; Michal Januszewski <spock@gentoo.org>
+  bootsplash-0.6-r16.ebuild, bootsplash-0.6.1-r4.ebuild,
+  +bootsplash-0.6.1-r5.ebuild:
+  Added splashpbm, updated the helper scripts to work with the new
+  splash<->rc-scripts interface (too be introduced soon), fixed
+  bootsplash_resize, added dependecies on lcms. Closes bugs #57466, #57050,
+  #59298. Sorry, but no 2.6.8 patch this time.
 
   04 Aug 2004; Michal Januszewski <spock@gentoo.org>
   -bootsplash-0.6.1-r1.ebuild, -bootsplash-0.6.1-r2.ebuild,
