@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.9 2002/09/08 07:44:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.10 2002/09/20 21:12:21 vapier Exp $
 
 *nasm-0.98.34 (08 Sep 2002)
   
@@ -18,6 +18,9 @@
   Only create ps, pdf etc. docs if USE doc is enabled. Closes bug #2824.
 
 *nasm-0.98.31 (17 May 2002)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE variable
 
   16 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Updated to new web page and added -ppc to keywords.  Note
