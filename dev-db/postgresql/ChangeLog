@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.16 2002/07/13 08:59:26 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.17 2002/07/14 00:03:06 rphillips Exp $
 
 *postgresql-7.2-r3 (02 Jul 2002)
   
@@ -17,6 +17,10 @@
 
 *postgresql-7.2.1-r1 (20 Jun 2002)
 
+  13 Jul 2002l Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.1-r1.ebuild :
+
+  Added sudo dependency
+  
   13 Jul 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.1-r1.ebuild :
 
   Removed daemontools dep
