@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.3.ebuild,v 1.1 2003/07/12 17:38:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.3.ebuild,v 1.2 2003/07/23 21:09:39 gmsoft Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ IUSE=""
 DESCRIPTION="C++ interface for GTK+2"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc hppa"
 
 SLOT="2"
 

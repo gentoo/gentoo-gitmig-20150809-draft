@@ -1,8 +1,11 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.1 2003/07/12 17:38:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.2 2003/07/23 21:09:39 gmsoft Exp $
 
 *gtkmm-2.2.3 (23 May 2003)
+
+  23 Jul 2003; Guy Martin <gmsoft@gentoo.org> gtkmm-2.2.3.ebuild :
+  Added hppa to KEYWORDS.
 
   12 Jul 2003; foser <foser@gentoo.org> gtkmm-2.2.3.ebuild :
   Moved gtkmm from x11-libs to dev-cpp
