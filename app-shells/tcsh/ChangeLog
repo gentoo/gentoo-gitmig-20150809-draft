@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.27 2004/11/22 11:48:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.28 2004/11/22 22:02:07 swegener Exp $
+
+  22 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed digests.
 
 *tcsh-6.13 (22 Nov 2004)
 
