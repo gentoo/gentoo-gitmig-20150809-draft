@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.2-r1.ebuild,v 1.6 2004/04/28 21:44:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.2-r1.ebuild,v 1.7 2004/05/25 22:39:39 gmsoft Exp $
 
 inherit java-pkg gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 
-KEYWORDS="x86 ~ppc ~hppa ~alpha ~ia64 sparc ~amd64"
+KEYWORDS="x86 ~ppc hppa ~alpha ~ia64 sparc ~amd64"
 LICENSE="LGPL-2"
 
 
