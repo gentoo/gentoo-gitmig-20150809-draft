@@ -1,6 +1,9 @@
 # ChangeLog for app-text/uudeview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.9 2003/08/01 20:48:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.10 2003/08/25 03:19:31 msterret Exp $
+
+  24 Aug 2003; Michael Sterrett <msterret@gentoo.org> uudeview-0.5.18.ebuild:
+  use emake; add error message; tidy
 
 *uudeview-0.5.18.ebuild (08 Nov 2002)
 
