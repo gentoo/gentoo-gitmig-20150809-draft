@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/adjtimex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.8 2005/01/07 12:03:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.9 2005/01/19 12:54:38 luckyduck Exp $
+
+  19 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> adjtimex-1.16-r1.ebuild:
+  added ~amd64 to KEYWORDS.
 
   07 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
   +files/adjtimex-1.16-pic.patch:
