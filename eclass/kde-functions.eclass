@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.36 2002/10/27 10:37:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.37 2002/10/31 10:55:08 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -226,7 +226,7 @@ need-qt() {
 
 	case $QTVER in
 	    2*)	newdepend "=x11-libs/${QT}-2.3*" ;;
-	    3*)	newdepend ">=x11-libs/${QT}-3" ;;
+	    3*)	newdepend ">=x11-libs/${QT}-${QTVER}" ;;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
 
@@ -386,21 +386,21 @@ kde_remove_dir(){
 # return the $1th parameter, starting from $2
 get_param() {
 
-    num=$1
+	num=$1
 
-    for x in `seq $num`; do shift; done
-    echo "$1"
+	for x in `seq $num`; do shift; done
+	echo "$1"
 
 }
 
 # return total amount of free memory (ram+swap) assuming /proc/meminfo exists and is readable
 get_free_mem() {
 
-    free_ram=`get_param 2 \`grep MemFree /proc/meminfo\``
-    free_swap=`get_param 2 \`grep SwapFree /proc/meminfo\``
-    declare -i total
-    total=$free_ram+$free_swap
-    echo $total
+	free_ram=`get_param 2 \`grep MemFree /proc/meminfo\``
+	free_swap=`get_param 2 \`grep SwapFree /proc/meminfo\``
+	declare -i total
+	total=$free_ram+$free_swap
+	echo $total
 
 }
 
@@ -409,12 +409,14 @@ get_free_mem() {
 # is only called by ebuilds (& kde-dist.eclass) that actually support enable-final!
 set_enable_final() {
 
-    # current limit is 200,000 kB
-    if [ "`get_free_mem`" -ge 200000 ]; then
-	myconf="$myconf --enable-final"
-    else
-	myconf="$myconf --disable-final" # just to be sure :-)
-    fi
+	# current limit is 200,000 kB
+	if [ "`get_free_mem`" -ge 200000 ]; then
+		debug-print "$FUNCNAME: enable-final ON"
+		myconf="$myconf --enable-final"
+	else
+		debug-print "$FUNCNAME: enable-final OFF"
+		myconf="$myconf --disable-final" # just to be sure :-)
+	fi
 
 }
 
