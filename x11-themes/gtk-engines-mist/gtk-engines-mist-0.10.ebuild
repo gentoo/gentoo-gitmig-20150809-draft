@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/gtk-engines-mist-0.10.ebuild,v 1.10 2004/07/09 21:30:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/gtk-engines-mist-0.10.ebuild,v 1.11 2005/01/28 04:52:40 joem Exp $
 
 inherit gtk-engines2 eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 	# patch that adds --[enable|disable]-gtk-[1|2] - liquidx@g.o (04 Oct 03)
 	epatch ${FILESDIR}/${P}-autoconf.patch
-	cd ${S}; aclocal; automake; autoconf
+	cd ${S}; aclocal; libtoolize --copy --force; automake; autoconf
 }
 
 src_compile() {
