@@ -1,0 +1,7 @@
+# ChangeLog for dev-cpp/gccxml
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.1 2005/01/25 22:05:42 g2boojum Exp $
+
+  25 Jan 2005; Grant Goodyear <g2boojum@gentoo.org> :
+  New package.
+
