@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4.ebuild,v 1.3 2002/09/29 12:00:39 azarah Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4.ebuild,v 1.4 2002/10/04 06:23:51 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools to make diffs and compare files"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.6.4-r1.ebuild,v 1.2 2002/08/14 04:40:34 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.6.4-r1.ebuild,v 1.3 2002/10/04 06:26:55 vapier Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Hardware Sensors Monitoring by lm_sensors"

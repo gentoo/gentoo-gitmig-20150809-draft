@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r1.ebuild,v 1.1 2002/08/23 11:12:31 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r1.ebuild,v 1.2 2002/10/04 06:30:43 vapier Exp $
 
 MY_P=sed-${PV}
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r2.ebuild,v 1.10 2002/09/15 06:32:49 drobbins Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r2.ebuild,v 1.11 2002/10/04 06:29:41 vapier Exp $
 
 S=${WORKDIR}/raidtools-0.90
 DESCRIPTION="Linux RAID 0/1/4/5 utilities"

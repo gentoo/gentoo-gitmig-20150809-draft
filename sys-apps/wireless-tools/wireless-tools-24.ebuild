@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/wireless-tools/wireless-tools-24.ebuild,v 1.4 2002/08/14 04:40:34 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/wireless-tools/wireless-tools-24.ebuild,v 1.5 2002/10/04 06:32:15 vapier Exp $
 
 S=${WORKDIR}/wireless_tools.24
 DESCRIPTION="Wireless Tools"
