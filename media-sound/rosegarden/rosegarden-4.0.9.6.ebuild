@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.6.ebuild,v 1.1 2004/01/24 08:01:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.6.ebuild,v 1.2 2004/02/25 12:49:33 caleb Exp $
 
 DESCRIPTION="MIDI and audio sequencer and notation editor."
 HOMEPAGE="http://www.all-day-breakfast.com/rosegarden/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-4-0.9.6.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=kde-base/kdelibs-3.0
 	kde-base/kdemultimedia
@@ -21,6 +21,7 @@ DEPEND=">=kde-base/kdelibs-3.0
 S=${WORKDIR}/${PN}-4-0.9.6
 
 src_compile() {
+	addwrite ${QTDIR}/etc/settings
 	econf \
 		--with-jack \
 		--with-ladspa \
