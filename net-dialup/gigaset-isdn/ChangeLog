@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gigaset-isdn
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/ChangeLog,v 1.1 2004/11/07 21:44:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/ChangeLog,v 1.2 2004/12/05 21:40:11 mrness Exp $
+
+  05 Dec 2004; Alin Nastac <mrness@gentoo.org> gigaset-isdn-0.4.0.ebuild:
+  Remove inherit kernel-mod and mark stable on x86.
 
 *gigaset-isdn-0.4.0 (07 Nov 2004)
 

@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/gigaset-isdn-0.4.0.ebuild,v 1.1 2004/11/07 21:44:26 mrness Exp $
-
-inherit kernel-mod
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/gigaset-isdn-0.4.0.ebuild,v 1.2 2004/12/05 21:40:11 mrness Exp $
 
 MY_P=${P/-isdn/}
 S=${WORKDIR}/${MY_P}
@@ -13,13 +11,12 @@ DEPEND="virtual/linux-sources"
 
 SRC_URI="mirror://sourceforge/gigaset307x/${MY_P}.tar.bz2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug"
 
 src_compile() {
-	check_KV
 	cd "${S}"
-	./configure --kernel=${KV} --kerneldir=${KV_DIR} --root=${D} --prefix=/usr \
+	./configure --kernel=${KV} --root=${D} --prefix=/usr \
 		--with-ring `use_with debug`
 
 	(
@@ -29,7 +26,6 @@ src_compile() {
 }
 
 src_install () {
-	check_KV
 	cd "${S}"
 	#Disable depmod while in sandbox
 	sed -i -e 's:.*depmod :#&:' generic/post
@@ -39,6 +35,5 @@ src_install () {
 }
 
 pkg_postinst () {
-	check_KV
 	depmod -ae ${KV}
 }
