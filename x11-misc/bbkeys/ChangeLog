@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbkeys
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
+
+  26 Jan 2004; Markus Nigbur <pyrania@gentoo.org> bbkeys-0.8.3-r1.ebuild,
+  bbkeys-0.8.4.ebuild:
+  Removed old ebuilds.
 
   30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Added metadata.xml
