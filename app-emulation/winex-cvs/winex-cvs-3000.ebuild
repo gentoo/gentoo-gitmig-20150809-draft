@@ -13,7 +13,7 @@ IUSE=""
 DEPEND=""
 
 pkg_postinst() {
-einfo This package was removed from portage tree due to the request from Transgaming. Here is an extract from there email:
+einfo This package was removed from portage tree due to the request from Transgaming. Here is an extract from their email:
 einfo The primary reason for the WineX CVS tree being publicly available
 einfo "under the Aladdin Free Public License (AFPL) is to give outside"
 einfo developers who have an interest in the project the ability to track
