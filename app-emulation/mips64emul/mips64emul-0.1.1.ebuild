@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mips64emul/mips64emul-0.1.1.ebuild,v 1.1 2004/07/31 08:21:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mips64emul/mips64emul-0.1.1.ebuild,v 1.2 2004/07/31 19:14:50 kumba Exp $
 
 DESCRIPTION="MIPS Machine Emulator, Emulates many machines/CPUs/OSes"
 HOMEPAGE="http://www.mdstud.chalmers.se/~md1gavan/${PN}/index.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.mdstud.chalmers.se/~md1gavan/${PN}/src/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc mips"
+KEYWORDS="~x86 ~sparc ~mips"
 IUSE="X mips16"
 #IUSE="X cacheemu delays mips16"
 DEPEND="X? ( virtual/x11 )"
