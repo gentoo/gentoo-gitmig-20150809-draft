@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/enemy-territory-truecombat
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/ChangeLog,v 1.1 2004/12/10 01:56:38 wolf31o2 Exp $
+
+*enemy-territory-truecombat-1.0_alpha (09 Dec 2004)
+
+  09 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +enemy-territory-truecombat-1.0_alpha.ebuild:
+  Initial import. Ebuild and supporting eclass added to bug #71189 by Greg
+  Loscombe <greg@loscombe.com>. Closing bug #71082.
+
