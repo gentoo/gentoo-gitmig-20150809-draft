@@ -3,6 +3,13 @@
 # /home/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.46 2004/03/27 16:18:17
 # lanius Exp $
 
+*k3b-0.11.12-r1 (03 Jul 2004)
+
+  03 Jul 2004; Heinrich Wendel <lanius@gentoo.org> k3b-0.11.11.ebuild,
+  k3b-0.11.12-r1.ebuild, k3b-0.11.12.ebuild, k3b-0.11.6.ebuild,
+  k3b-0.11.9.ebuild:
+  add icon for gnome, bug #55272, remove old versions, add arts useflag
+
 *k3b-0.11.12 (25 Jun 2004)
 
   25 Jun 2004; Carsten Lohrke <carlo@gentoo.org> +k3b-0.11.12.ebuild:
