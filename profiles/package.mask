@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3372 2004/12/03 13:53:28 klieber Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3373 2004/12/03 18:01:46 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -53,14 +53,6 @@ app-shells/rssh
 >=sys-kernel/vanilla-sources-2.6
 # this includes the headers too
 >=sys-kernel/linux-headers-2.6
-
-# <latexer@gentoo.org> (1 Dec 2004)
-# Ebuilds using the split up gtk-sharp ebuilds
-=media-sound/muine-0.6.3-r1
-=dev-util/monodoc-1.0.4-r1
-=dev-util/monodevelop-0.5.1-r2
-=app-misc/tomboy-0.2.2-r1
-=net-news/blam-1.6.0-r1
 
 # <jhuebel@gentoo.org> (29 Nov 2004)
 # masking vmware-workstation 5.0 betas, since the beta test
@@ -125,19 +117,6 @@ app-editors/zoinks
 # <langthang@gentoo.org> (18 Nov 2004)
 # Masking for testing
 >=net-mail/courier-imap-3.0.8.20041116
-
-# <latexer@gentoo.org> (18 Nov 2004)
-# Masking of the split-up gtk-sharp stuff.
-=dev-dotnet/gtk-sharp-1.0.4-r1
-dev-dotnet/art-sharp
-dev-dotnet/gconf-sharp
-dev-dotnet/gda-sharp
-dev-dotnet/glade-sharp
-dev-dotnet/gnomedb-sharp
-dev-dotnet/gnome-sharp
-dev-dotnet/gtkhtml-sharp
-dev-dotnet/rsvg-sharp
-dev-dotnet/vte-sharp
 
 # <robbat2@gentoo.org> (17 Nov 2004)
 # Masking for testing
