@@ -1,0 +1,7 @@
+# ChangeLog for media-video/avifile
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.1 2002/04/02 22:31:39 danarmak Exp $
+
+*transcode-0.5.3 (2 Apr 2002)
+
+  2 Apr 2002; Dan Armak <danarmak@gentoo.org> ChangeLog : initial version
