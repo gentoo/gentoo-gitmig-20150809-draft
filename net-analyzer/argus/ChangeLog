@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/argus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.7 2004/07/13 06:46:57 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.8 2004/07/27 02:18:38 j4rg0n Exp $
+
+  26 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org> argus-2.0.5.ebuild:
+  Changed newsbin for macos to argus_bpf.  Stable macos.
 
   13 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml:
   Added metadata

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.7 2004/07/01 16:42:58 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.8 2004/07/27 02:18:38 j4rg0n Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_install () {
 
 	dobin bin/ra*
 
-	newsbin bin/argus_linux argus
+	use macos && newsbin bin/argus_bpf argus || newsbin bin/argus_linux argus
 
 	insinto /etc/argus
 	doins support/Config/argus.conf
