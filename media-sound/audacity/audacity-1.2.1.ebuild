@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.1.ebuild,v 1.1 2004/05/11 03:45:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.1.ebuild,v 1.2 2004/05/26 14:09:17 jhuebel Exp $
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-src-${MY_PV}"
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 IUSE="encode flac mad oggvorbis"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=x11-libs/wxGTK-2.2.9
 	>=app-arch/zip-2.3
