@@ -24,7 +24,7 @@ then
 	echo "Assuming you're running no sound daemon"
 	echo "Starting ${progname} without a sound wrapper" | tee --append "${logfile}"
 else
-	if [[ ${wrapsound} == "yes" && ${shellcheck1} == ${KDEDIR}/bin/artsshell && -n ${artsdcheck} ]]
+	if [[ ${wrapsound} == "yes" && ${shellcheck1} == $(artsc-config --arts-prefix)/bin/artsshell && -n ${artsdcheck} ]]
 	then
 		echo "Running artsd found"
 		echo "Starting artsd wrapped ${progname}" | tee --append "${logfile}"
