@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/tellico
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.1 2004/10/30 18:26:51 carlo Exp $
+
+*tellico-0.12 (30 Oct 2004)
+
+  30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +tellico-0.12.ebuild:
+  tellico, previously known as app-misc/bookcase
+
