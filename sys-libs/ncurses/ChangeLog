@@ -1,13 +1,15 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.16 2002/10/26 09:45:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.17 2002/11/10 17:02:15 raker Exp $
 
 *ncurses-5.2-r7 (26 Oct 2002)
 *ncurses-5.2.20020511-r3 (26 Oct 2002)
 *ncurses-5.3-r1 (26 Oct 2002)
 
-  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> ncurses*.ebuild :
+  10 Nov 2002; Nick Hadaway <raker@gentoo.org> ncurses-5.3-r1.ebuild :
+  Marked unstable and unmasking.
 
+  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> ncurses*.ebuild :
   Add linker scripts in /usr/lib to fix bug #4411.
 
 *ncurses-5.3 (17 Oct 2002)
