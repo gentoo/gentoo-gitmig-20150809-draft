@@ -1,0 +1,14 @@
+# ChangeLog for media-plugins/blop
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/ChangeLog,v 1.1 2003/01/26 03:43:28 viz Exp $
+
+*blop-0.2.5 (26 Jan 2003)
+
+  26 Jan 2003; Tobias Eichert <viz@gentoo.org> blop-0.2.5.ebuild
+  files/digest-blop-0.2.5 ChangeLog:
+
+  New package for LADSPA sound effects plugins. Submitted by 
+  rigo@home.nl (Rigo Ketelings) (bug #9456) but this package is
+  taken from bug #12830, a modified version by ashura666@mac.com
+  which is more standards compliant. Did a few ebuild
+  cleanups to make it real standards compliant. ;)
