@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20040214.ebuild,v 1.3 2004/04/09 05:07:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20040214.ebuild,v 1.4 2004/04/24 08:16:48 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Updated config.sub and config.guess file from GNU"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="ftp://ftp.gnu.org/pub/gnu/config"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~mips ~sparc ~x86 ~ppc ~alpha ~hppa amd64 ~ia64 ppc64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ppc64 ~sparc ~mips ~alpha arm ~hppa amd64 ~ia64"
+IUSE=""
 
 src_install() {
 	insinto /usr/share/${PN}
-	doins ${WORKDIR}/ChangeLog ${WORKDIR}/config.sub ${WORKDIR}/config.guess
+	doins ${WORKDIR}/ChangeLog ${WORKDIR}/config.sub ${WORKDIR}/config.guess || die
 	chmod +x ${D}/usr/share/${PN}/config.sub
 	chmod +x ${D}/usr/share/${PN}/config.guess
 }

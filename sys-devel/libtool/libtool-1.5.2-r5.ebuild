@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.4 2004/04/09 05:09:07 lv Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
-
-IUSE=
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.5 2004/04/24 08:15:54 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -12,13 +10,14 @@ OLD_PV="1.3.5"
 S="${WORKDIR}/${P}"
 OLD_S="${WORKDIR}/${PN}-${OLD_PV}"
 DESCRIPTION="A shared library tool for developers"
+HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 	mirror://gnu/${PN}/${PN}-${OLD_PV}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~ppc sparc ~alpha ~mips ~hppa ~ia64 ppc64 s390"
+KEYWORDS="~x86 ~ppc ppc64 sparc ~mips ~alpha arm ~hppa amd64 ~ia64 s390"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -196,7 +195,5 @@ src_install() {
 	einfo "Installing ${S##*/} ..."
 	cd ${S}; make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeLog* NEWS \
-	      README THANKS TODO doc/PLATFORMS
+	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO doc/PLATFORMS
 }
-
