@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.1 2003/09/10 19:29:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.2 2003/10/27 15:38:30 mholzer Exp $
 
 inherit games
 
 DESCRIPTION="Multiplayer Gauntlet-style arcade game"
 HOMEPAGE="http://xtux.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xtux/xtux-src-${PV}.tar.gz"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
