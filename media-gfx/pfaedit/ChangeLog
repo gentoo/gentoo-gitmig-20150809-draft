@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pfaedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.13 2004/03/21 15:12:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.14 2004/04/15 16:37:30 kugelfang Exp $
+
+  15 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> pfaedit-031123.ebuild:
+  marked ~amd64
 
   21 Mar 2004; David Holm <dholm@gentoo.org> pfaedit-030512.ebuild,
   pfaedit-031123.ebuild:
