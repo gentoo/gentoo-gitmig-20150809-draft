@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.4.2.4.ebuild,v 1.7 2004/08/15 18:30:14 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.4.2.4.ebuild,v 1.8 2004/10/17 08:01:53 absinthe Exp $
 
 MY_P="${P/wxpython-docs/wxPythonDocs}"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.gz"
 
 LICENSE="wxWinFDL-3"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE=""
 
 S="${WORKDIR}/wxPython-${PVR}"

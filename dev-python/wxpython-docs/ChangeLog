@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython-docs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.9 2004/08/15 18:30:14 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.10 2004/10/17 08:01:53 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  wxpython-docs-2.4.2.4.ebuild:
+  keywords ~amd64; closes #60994.
 
   15 Aug 2004; Rob Cakebread <pythonhead@gentoo.org>
   wxpython-docs-2.4.0.7.ebuild, wxpython-docs-2.4.1.2.ebuild,
