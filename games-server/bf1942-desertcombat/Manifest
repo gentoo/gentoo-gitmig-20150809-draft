@@ -1,4 +1,16 @@
-MD5 1d6bbe1a666d5b3d522b8e9307f41935 ChangeLog 588
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 955ed673e2a962026339f2e6690992f3 ChangeLog 740
 MD5 d4ca17b1cdb4501c13a7b9f0c8b12f8a bf1942-desertcombat-0.6.ebuild 1111
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 749f34ad05a991c8d3bc3c64a3ce5c5f bf1942-desertcombat-0.7_beta1.ebuild 904
+MD5 52268ff9ce6cf75b2464ad2c837b050f files/digest-bf1942-desertcombat-0.7_beta1 86
 MD5 548dbb584e7dd3b9a8fb40a0e8c83aeb files/digest-bf1942-desertcombat-0.6 174
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBM+0PHTu7gpaalycRAlKeAKDl7iF71/FEZhvkMK99EjwLSNg+XACcDDXt
+ip/W9pVATGE82Sat6PW+aUY=
+=vCd0
+-----END PGP SIGNATURE-----
