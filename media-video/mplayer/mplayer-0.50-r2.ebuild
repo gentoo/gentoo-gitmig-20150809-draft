@@ -1,8 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
-# Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@gentoo.org>,
-#         Donny Davies <woodchip@gentoo.org>
+# Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.50-r2.ebuild,v 1.3 2001/11/18 21:45:59 azarah Exp $
 
 # Handle PREversions as well
 MY_PV="`echo ${PV} |sed -e 's/_//'`"
@@ -17,6 +17,7 @@ HOMEPAGE="http://www.mplayerhq.hu"
 # Experimental USE flags dvd and decss
 DEPEND="virtual/glibc
         dev-lang/nasm
+	app-arch/unzip
         media-libs/win32codecs
 	>=media-libs/divx4linux-20011010
         dvd? ( media-libs/libdvdread )
