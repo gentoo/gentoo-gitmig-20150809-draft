@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fvwm_sounds
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_sounds/ChangeLog,v 1.2 2003/02/12 09:45:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_sounds/ChangeLog,v 1.3 2003/09/14 10:16:44 taviso Exp $
+
+  14 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm_sounds-1.0.ebuild:
+  stable on x86, testing on alpha
 
 *fvwm_sounds-1.0 (12 Sep 2002)
 
