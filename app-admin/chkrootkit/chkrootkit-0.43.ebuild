@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.43.ebuild,v 1.11 2004/06/29 19:22:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.43.ebuild,v 1.12 2004/07/24 12:49:00 solar Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	sed -i 's:${head} -:${head} -n :' chkrootkit
+	sed -i 's:/var/adm:/var/log:g' chklastlog.c
 }
 
 src_compile() {
