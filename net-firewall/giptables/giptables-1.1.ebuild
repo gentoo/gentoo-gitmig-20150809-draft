@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/giptables/giptables-1.1.ebuild,v 1.7 2004/06/26 13:21:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/giptables/giptables-1.1.ebuild,v 1.8 2004/07/14 23:42:38 agriffis Exp $
 
 DESCRIPTION="set of shell scripts that help generate iptables rules"
 HOMEPAGE="http://www.giptables.org/"
@@ -9,6 +9,7 @@ SRC_URI="http://www.giptables.org/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 
 DEPEND=""
 RDEPEND="net-firewall/iptables"

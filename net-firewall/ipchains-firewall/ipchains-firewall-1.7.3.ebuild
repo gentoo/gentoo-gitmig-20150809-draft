@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipchains-firewall/ipchains-firewall-1.7.3.ebuild,v 1.4 2004/06/24 22:40:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipchains-firewall/ipchains-firewall-1.7.3.ebuild,v 1.5 2004/07/14 23:46:30 agriffis Exp $
 
 S=${WORKDIR}/ipchains-firewall-1.7
 DESCRIPTION="IP-Chains Firewall Script "
 SRC_URI="mirror://sourceforge/plonk/${P}.tar.gz"
 HOMEPAGE="http://plonk.sourceforge.net/"
 KEYWORDS="x86 sparc "
+IUSE=""
 LICENSE="as-is"
 SLOT="0"
 
