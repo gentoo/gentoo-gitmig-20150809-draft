@@ -1,9 +1,13 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.29 2003/11/24 17:47:34 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.30 2003/11/24 22:53:06 rphillips Exp $
 
   24 Nov 2003; <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild:
   added fixheadtails
+
+  24 Nov 2003; <rphillips@gentoo.org> openafs-1.2.8.ebuild,
+  openafs-1.2.9.ebuild:
+  removed older version
 
   21 Nov 2003; <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild,
   openafs-1.2.10.ebuild, files/openafs-pinstall-execve-1.2.10.patch:
