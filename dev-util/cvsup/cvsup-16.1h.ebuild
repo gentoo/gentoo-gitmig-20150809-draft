@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.2 2003/07/12 14:28:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.3 2003/07/17 23:23:15 vapier Exp $
 
 S=${WORKDIR}
 MY_P="${P/-/-snap-}"
@@ -16,16 +16,23 @@ HOMEPAGE="http://www.cvsup.org/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 DEPEND="virtual/glibc
-	dev-util/yacc"
+	dev-util/yacc
+	ppc? ( dev-lang/cm3 )"
 RDEPEND="virtual/glibc"
 
 seduse() {
 	[ -z "`use ${1}`" ] && echo "${2}" || echo ":"
 }
 
+src_unpack() {
+	unpack ${A}
+	[ ${ARCH} == "ppc" ] && epatch ${FILESDIR}/${PV}-ppc.patch
+}
+
 src_compile() {
+	if [ ${ARCH} != "ppc" ] ; then
 	########################
 	### BEGIN EZM3 SETUP ###
 	########################
@@ -54,6 +61,7 @@ src_compile() {
 	#	newer build system uses this variable and having it breaks it
 	cd ${S}/${EZM3}
 	env -u CFLAGS -u P make || die "ezm3 compile failed"
+	fi
 
 	#########################
 	### BEGIN CVSUP SETUP ###
@@ -78,9 +86,6 @@ src_compile() {
 
 	# then we compile cvsup
 	env PATH="${S}/${EZM3}-install/bin:${PATH}" make || die "cvsup compile failed"
-	# check to make sure all the binaries compiled ... the make doesnt return
-	# if an error was encountered ... it just keeeeeeeeeps going :/
-	[ `find ${S}/${MY_P} -perm +1 -type f | wc -l` == 9 ] || die "cvsup compile failed"
 
 	# now we do up the html pages ...
 	cd ${S}/${MY_P}/doc

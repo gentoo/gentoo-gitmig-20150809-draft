@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/cvsup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.9 2003/04/17 13:40:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.10 2003/07/17 23:23:15 vapier Exp $
 
 *cvsup-16.1h (17 Apr 2003)
+
+  17 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added ppc patch so ppc people can emerge cvsup!
 
   17 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump for both cvsup and the ezm3 compiler ...

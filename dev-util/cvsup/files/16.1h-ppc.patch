@@ -1,0 +1,32 @@
+diff -ur cvsup-snap-16.1h/suplib/src/m3makefile wagner-cvsup/suplib/src/m3makefile
+--- cvsup-snap-16.1h/suplib/src/m3makefile	2003-03-04 13:13:12.000000000 -0500
++++ wagner-cvsup/suplib/src/m3makefile	2003-07-17 19:11:22.000000000 -0400
+@@ -45,6 +45,7 @@
+ 
+ readonly DevTPieces = {
+   "LINUXLIBC6" : [ "dev_t_linux" ],
++  "PPC_LINUX"  : [ "dev_t_linux" ],
+   "default"    : [ "dev_t_posix" ]
+ }
+ 
+diff -ur cvsup-snap-16.1h/suptcp/src/POSIX/SupTCP.m3 wagner-cvsup/suptcp/src/POSIX/SupTCP.m3
+--- cvsup-snap-16.1h/suptcp/src/POSIX/SupTCP.m3	2003-04-06 19:48:58.000000000 -0400
++++ wagner-cvsup/suptcp/src/POSIX/SupTCP.m3	2003-07-17 19:11:24.000000000 -0400
+@@ -18,6 +18,7 @@
+ IMPORT SupTCPHack AS TCPHack;
+ IMPORT SupTCPPosix AS TCPPosix;
+ FROM Ctypes IMPORT char, int;
++IMPORT IO;
+ 
+ REVEAL
+   Connector = MUTEX BRANDED "SupTCP.Connector" OBJECT
+@@ -201,6 +202,9 @@
+         IF TCPHack.RefetchError(fd) THEN seenBadFBug := TRUE END;
+       END;
+     END;
++    IO.Put("CheckConnect: errno=");
++    IO.PutInt(Cerrno.GetErrno());
++    IO.Put("\n");
+     CASE Cerrno.GetErrno() OF
+     | Uerror.EISCONN => RETURN TRUE;
+     | Uerror.EADDRNOTAVAIL,  Uerror.ECONNREFUSED, Uerror.EINVAL,
