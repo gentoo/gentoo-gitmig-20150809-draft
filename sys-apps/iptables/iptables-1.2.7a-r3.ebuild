@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7a-r3.ebuild,v 1.6 2003/02/17 15:35:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7a-r3.ebuild,v 1.7 2003/02/22 02:18:35 zwelch Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 HOMEPAGE="http://www.iptables.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa"
+KEYWORDS="x86 ppc alpha sparc hppa arm"
 LICENSE="GPL-2"
 
 # iptables is dependent on kernel sources.  Strange but true.

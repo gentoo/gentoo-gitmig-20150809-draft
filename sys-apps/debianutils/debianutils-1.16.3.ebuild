@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.3.ebuild,v 1.11 2003/02/13 15:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.3.ebuild,v 1.12 2003/02/22 02:18:35 zwelch Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A selection of tools from Debian"
 SRC_URI="http://ftp.debian.org/debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://packages.debian.org/unstable/base/debianutils.html"
 
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 SLOT="0"
 LICENSE="GPL-2 BSD SMAIL"
 IUSE="static build"

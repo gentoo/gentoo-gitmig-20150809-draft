@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.17 2003/02/13 16:17:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.18 2003/02/22 02:18:35 zwelch Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 DEPEND="virtual/glibc"
 
