@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1.ebuild,v 1.5 2004/07/08 23:24:36 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1.ebuild,v 1.6 2004/08/04 22:04:13 squinky86 Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ DEPEND=">=net-dns/bind-tools-9.2.2_rc1
 		postgres? ( >=dev-db/postgresql-7.2 )
 		ldap? ( >=net-nds/openldap-2.0.25 )"
 
-pkg_setup() {
+pkg_preinst() {
 	enewgroup nagios
 	enewuser nagios -1 /bin/bash /dev/null nagios
 }
