@@ -3,11 +3,13 @@ MD5 29186e37f49472a96f63b08ec23a2843 sylpheed-claws-0.9.5-r1.ebuild 4651
 MD5 245b65d30944dc96574a75ce92891656 sylpheed-claws-0.9.4.ebuild 3471
 MD5 60f0c479b2892ac83ba289ac2a3ee85f sylpheed-claws-0.9.4-r1.ebuild 3878
 MD5 17558d831dc20f8f89961af8bd50f80f sylpheed-claws-0.9.0-r1.ebuild 3334
+MD5 0d0ce7a1256f5931b46ec5ae2843dabc sylpheed-claws-0.9.6.ebuild 3876
 MD5 03f89b288f02fedd5fb19703bfabc9c7 sylpheed-claws-0.8.11.ebuild 2944
 MD5 972cab99053a82ff8d122495e267ef52 ChangeLog 9250
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 bc2cbfb7afd5f4264ea57fbdc55874f8 files/digest-sylpheed-claws-0.9.4 73
 MD5 1d59fb5412cf0ddfa5c4e5e85ab6c37c files/digest-sylpheed-claws-0.9.5 148
+MD5 706bd2a62e08094bb59b3c1710aa353b files/digest-sylpheed-claws-0.9.6 148
 MD5 8b029fc7176a8bad264d1676bd83984b files/digest-sylpheed-claws-0.8.11 74
 MD5 debd84fa61847ff672e179bcb7845e2b files/sylpheed-0.8.3claws32-dillo.patch 9123
 MD5 d9e778ef490a8e07e7b931d13052fca2 files/digest-sylpheed-claws-0.9.0-r1 73
