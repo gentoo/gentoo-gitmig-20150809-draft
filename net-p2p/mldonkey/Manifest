@@ -7,7 +7,7 @@ MD5 3e0fc05480e245cb1c86f6fe3c9d29ea ChangeLog 11160
 MD5 74e4ceef69a9fc3a7a76299e5f4d2ed8 metadata.xml 307
 MD5 476ec69e79e7c93a7bdaa6cb049c0857 files/mldonkey.confd 836
 MD5 dd6c047ee9ad00cddbc438e8ea30641a files/mldonkey.initd 2858
-MD5 738f3925da83f267bd52f986706ce3f4 files/digest-mldonkey-2.5.27 129
+MD5 ae3c9e1220ea79b608e241f41e5b794e files/digest-mldonkey-2.5.27 129
 MD5 920f9e5989329dba967bff5a111911a7 files/digest-mldonkey-2.5.16-r7 126
 MD5 8a6a83aef1530834a8fa4e64a1b0191b files/digest-mldonkey-2.5.16-r8 129
 MD5 97c421f85a3a6aaaeb849d97400f89ca files/digest-mldonkey-2.5.21-r1 125
