@@ -1,24 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.16.ebuild,v 1.4 2003/05/25 14:57:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.19.ebuild,v 1.1 2003/06/20 03:55:14 vapier Exp $
+
+inherit eutils
 
 MY_P="${P/ucl/uCl}"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
-SRC_URI="mirror://kernel/linux/libs/uclibc/${MY_P}.tar.bz2"
+SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE=""
-PROVIDE="virtual/glibc"
+KEYWORDS="x86"
 
 DEPEND="sys-devel/gcc"
+PROVIDE="virtual/glibc"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	make allyesconfig || die "could not config"
+	make defconfig || die "could not config"
 
 	for def in UCLIBC_HAS_LOCALE DODEBUG DOASSERTS SUPPORT_LD_DEBUG SUPPORT_LD_DEBUG_EARLY ; do
 		sed -e "s:${def}=y:# ${def} is not set:" \
@@ -32,6 +33,6 @@ src_compile() {
 }
 
 src_install() {
-	patch -p0 < ${FILESDIR}/Makefile-cp-order-fix.patch || die
+	epatch ${FILESDIR}/Makefile-cp-order-fix.patch
 	make PREFIX=${D} install || die "install failed"
 }
