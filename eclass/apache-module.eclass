@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.3 2005/01/21 08:06:38 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.4 2005/02/21 01:35:40 vericgar Exp $
 ECLASS=apache-module
 INHERITED="$INHERITED $ECLASS"
 
@@ -233,24 +233,30 @@ apache1_pkg_postinst() {
 apache2_pkg_setup() {
 	debug-print-function apache2_pkg_setup
 
-	if [ -n "${APACHE2_MT_UNSAFEE}" ]; then
-		if [ "x${APACHE2_MT_UNSAFE}" != "no" ]; then
-			APACHE2_MPM_STYLE=`/usr/sbin/apxs2 -q MPM_NAME`
-			if [ "x$APACHE2_MPM_STYLE" != "xprefork" ]; then
-				eerror "You currently have Apache configured to use the."
-				eerror "$APACHE2_MPM_STYLE MPM style.  The module you are"
-				eerror "trying to install is not currently thread-safe,"
-				eerror "and will not work under your current configuraiton."
-				echo
-				eerror "If you still want to use the module, please reinstall"
-				eerror "Apache with mpm-prefork set."
+	if [ -n "${APACHE2_SAFE_MPMS}" ]; then
 
-				epause
-				ebeep
-				die Invalid Apache MPM style.
+		INSTALLED_MPMS=$(ls ${ROOT}/usr/sbin/apache2.*)
+
+		for mpm in ${INSTALLED_MPMS}; do
+			# strip everything up to and including 'apache2.' from ${mpm}
+			mpm=${mpm#*apache2.}
+
+			if hasq ${mpm} ${APACHE2_SAFE_MPMS} ; then
+				INSTALLED_MPM_SAFE="${INSTALLED_MPM_SAFE} ${mpm}"
 			fi
+		done
+
+		if [ -z "${INSTALLED_MPM_SAFE}" ] ; then
+			eerror "The module you are trying to install (${PN})"
+			eerror "will only work with one of the following MPMs:"
+			eerror "   ${APACHE2_SAFE_MPMS}"
+			eerror "You do not currently have any of these MPMs installed."
+			eerror "Please re-install apache with the correct mpm-* USE flag set."
+			die "No safe MPM installed."
 		fi
+
 	fi
+
 }
 				
 ####
@@ -328,6 +334,32 @@ apache2_pkg_postinst() {
 		einfo "You may want to edit it before turning the module on in /etc/conf.d/apache2"
 		einfo
 	fi
+
+	if [ -n "${APACHE2_SAFE_MPMS}" ]; then
+
+		INSTALLED_MPMS=$(ls ${ROOT}/usr/sbin/apache2.*)
+
+		for mpm in ${INSTALLED_MPMS}; do
+			# strip everything up to and including 'apache2.' from ${mpm}
+			mpm=${mpm#*apache2.}
+
+			if ! hasq ${mpm} ${APACHE2_SAFE_MPMS} ; then
+				INSTALLED_MPM_UNSAFE="${INSTALLED_MPM_UNSAFE} ${mpm}"
+			else
+				INSTALLED_MPM_SAFE="${INSTALLED_MPM_SAFE} ${mpm}"
+			fi
+		done
+
+		if [ -n "${INSTALLED_MPM_UNSAFE}" ] ; then
+			ewarn "You have one or more MPMs installed that will not work with"
+			ewarn "this module (${PN}). Please make sure that you only enable"
+			ewarn "this module if you are using one of the following MPMs:"
+			ewarn "     ${INSTALLED_MPM_SAFE}"
+		fi
+
+	fi
+
+	
 }
 
 ######
