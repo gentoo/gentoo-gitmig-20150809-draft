@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.14.0.ebuild,v 1.1 2001/12/13 23:06:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0.ebuild,v 1.1 2002/01/23 12:16:57 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Image Library"
