@@ -1,5 +1,5 @@
-MD5 ced24675a0cfc56299e1601cbf599b38 ChangeLog 2972
+MD5 89b5af26f95bc01cf5f49eb7e7463c83 ChangeLog 3067
 MD5 bf656d25834cf04ccf2ccdd88342bc99 libmcrypt-2.5.5.ebuild 1737
-MD5 1056009eff6fdccaf6ba4297d4f419ba libmcrypt-2.5.7.ebuild 909
+MD5 f3b7e34503ba1471d40872d831c52179 libmcrypt-2.5.7.ebuild 916
 MD5 b359b330ab4a094225f32f99fe99be98 files/digest-libmcrypt-2.5.5 67
 MD5 2bd84b4dd5ae60eb157dd0972ccda77e files/digest-libmcrypt-2.5.7 67
