@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.13 2005/01/01 15:56:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.14 2005/01/02 21:47:17 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   09 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> ash-1.6.ebuild:
   Updated to use flag-o-matic and toolchain-funcs eclasses; also added static
@@ -16,7 +19,7 @@
   no more ash->sh symlinks. Closes (kinda) bug #58385 by Rich
   <linguist-gentoo@rich-paul.net>
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> ash-1.6.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ash-1.6.ebuild:
   Stable on alpha.
 
   07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> ash-1.6.ebuild:

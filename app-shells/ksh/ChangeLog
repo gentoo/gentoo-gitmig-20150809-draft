@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.19 2004/12/31 13:58:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.20 2005/01/02 21:47:49 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jan 2005; Joseph Jezak <josejx@gentoo.org> ksh-93.20040229.ebuild:
   Marked ~ppc.
@@ -11,7 +14,7 @@
   23 Oct 2004; Akinori Hattori <hattya@gentoo.org> ksh-93.20040229.ebuild:
   add ~ia64, bug #68321.
 
-  05 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> ksh-93.20040229.ebuild:
+  05 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ksh-93.20040229.ebuild:
   Stable on alpha.
 
   23 Sep 2004; Tavis Ormandy <taviso@gentoo.org>
