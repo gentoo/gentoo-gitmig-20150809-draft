@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.6 2002/04/04 21:13:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.7 2002/04/05 20:55:19 danarmak Exp $
+
+*kdelibs-3.0-r1 (5 Apr 2002)
+
+  5 Apr 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+  
+  Add --with-fast-malloc=full configure option for a considerable speed improvement.
 
 *kdelibs-3.0 (4 Apr 2002)
 

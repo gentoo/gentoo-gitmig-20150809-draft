@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.ebuild,v 1.3 2002/04/04 21:13:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0-r1.ebuild,v 1.1 2002/04/05 20:55:19 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org
 #don't inherit kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
@@ -66,7 +66,7 @@ src_compile() {
 	use ssl		&& myconf="$myconf --with-ssl-dir=/usr"		|| myconf="$myconf --without-ssl"
 	use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 	use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
-	#myconf="$myconf --enable-arts-gsl" #doesn't yet work, compile error
+	myconf="$myconf --enable-fast-malloc=full"
 	
 	kde_src_compile configure make
 
