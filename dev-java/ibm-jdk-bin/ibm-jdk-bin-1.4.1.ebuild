@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1.ebuild,v 1.8 2004/07/02 04:20:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1.ebuild,v 1.9 2004/07/14 01:59:34 agriffis Exp $
 
-IUSE="doc javacomm"
+IUSE="X doc javacomm"
 
 inherit java nsplugins
 
