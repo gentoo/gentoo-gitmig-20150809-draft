@@ -1,7 +1,8 @@
 MD5 466865cbbb69784a9dcaf752582421c4 stratego-0.11.ebuild 786
 MD5 9ac7621364fd84f4a06c94f277181098 stratego-0.8.ebuild 737
+MD5 eaa19c3caa064cd7fe80fdaec8517dff stratego-0.13.ebuild 804
 MD5 b4e0eee83c27e700d017efde9abeba0f stratego-0.8.1.ebuild 895
-MD5 e010e76508360120a6ad28be1f6208aa ChangeLog 3602
+MD5 cd66de8b807478fc46f7ef5bbc2810b5 ChangeLog 3738
 MD5 21a99a3ae05c5af72eae0bbef9c577f0 stratego-0.9.4.ebuild 750
 MD5 d1eead34572f0e1a480253e2b4c012d8 metadata.xml 626
 MD5 70cbdeed766ab1e250bbfbe2b61f3cff stratego-0.12.ebuild 786
@@ -10,4 +11,5 @@ MD5 f1c3a70b539596218da8cd99217b962f files/digest-stratego-0.8.1 67
 MD5 bf510c6fe1efa23cb986276cf7a5bc52 files/digest-stratego-0.9.4 69
 MD5 00d511e3c32eb99ed2b6aac1d6746afb files/digest-stratego-0.11 68
 MD5 93e013a6db5cbcbf8212087232a0e3dd files/digest-stratego-0.12 68
+MD5 a6fab269a3555902c222227fad341c75 files/digest-stratego-0.13 68
 MD5 a83727bed12bf38ee250f0116df38adf files/42stratego 21
