@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r12.ebuild,v 1.1 2003/10/08 11:27:23 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r12.ebuild,v 1.2 2003/10/08 16:15:45 carpaski Exp $
 
 IUSE="build"
 
@@ -93,7 +93,8 @@ src_install() {
 
 	dodir /usr/lib/portage/pym
 	cd ${S}/pym
-	doins *.py
+	insinto /usr/lib/portage/pym
+	doins *.py ../bin/emergehelp.py
 
 
 	#binaries, libraries and scripts
