@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r4.ebuild,v 1.1 2002/04/09 23:59:01 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r5.ebuild,v 1.1 2002/04/11 04:34:21 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -182,6 +182,7 @@ src_install() {
 	doexe .libs/libphp4.so
 
 	insinto /etc/apache/conf/addon-modules
+	doins ${FILESDIR}/mod_php.conf
 	newins php.ini-dist php.ini
 }
 
@@ -197,14 +198,6 @@ pkg_config() {
 	${ROOT}/usr/sbin/apacheaddmod \
 		${ROOT}/etc/apache/conf/apache.conf \
 		extramodules/libphp4.so mod_php4.c php4_module \
-		define=PHP4
-
-	# Activate PHP-Extension in httpd.conf
-	einfo "Enabling PHP support in ${ROOT}/etc/apache/conf/apache.conf"
-	cp ${ROOT}/etc/apache/conf/apache.conf ${ROOT}/etc/apache/conf/apache.conf-before-php
-	sed -e "s/#AddType application\/x-httpd-php /AddType application\/x-httpd-php /" \
-		-e "s/#AddType application\/x-httpd-php-/AddType application\/x-httpd-php-/" \
-		${ROOT}/etc/apache/conf/apache.conf-before-php > ${ROOT}/etc/apache/conf/apache.conf
-
+		before=perl define=PHP4 addconf=conf/addon-modules/mod_php.conf
 	:;
 }
