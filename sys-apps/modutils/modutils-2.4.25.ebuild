@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.25.ebuild,v 1.13 2003/09/25 16:29:18 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.25.ebuild,v 1.14 2003/09/25 22:50:02 msterret Exp $
 
 inherit flag-o-matic
 
@@ -28,7 +28,7 @@ src_compile() {
 	then
 		append-flags "-yet_exec -fstack-protector -Wl,$(gcc-config -L)/libgcc.a -Wl,/lib/libc.so.6"
 	fi
-	
+
 	myconf=""
 	# see bug #3897 ... we need insmod static, as libz.so is in /usr/lib
 	#
