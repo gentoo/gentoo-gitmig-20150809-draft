@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.0.ebuild,v 1.6 2004/05/05 16:42:59 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.0.ebuild,v 1.7 2004/05/16 18:37:57 zx Exp $
 
 inherit eutils java-pkg
 
@@ -28,9 +28,12 @@ src_unpack() {
 src_compile() {
 	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	use doc && antflags="${antflags} javadoc"
 	ant ${antflags} || die "compilation error"
 }
 
 src_install() {
-	java-pkg_dojar target/${P}.jar
+	mv ${S}/target/${P}.jar ${S}/target/${PN}.jar
+	java-pkg_dojar target/${PN}.jar
+	use doc && dohtml -r dist/docs/
 }

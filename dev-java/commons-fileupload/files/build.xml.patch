@@ -1,5 +1,5 @@
---- build.xml	2003-06-26 01:12:13.000000000 -0500
-+++ build.xml.fixed	2004-02-25 18:06:28.836148792 -0500
+--- build.xml	2004-05-16 14:32:30.149792532 -0400
++++ build.xml.updated	2004-05-16 14:32:21.609062656 -0400
 @@ -1,159 +1,115 @@
 -<?xml version="1.0" encoding="UTF-8"?>
 -
@@ -209,7 +209,7 @@
 +	  <classpath refid="compile.classpath"/>
 +    </javac>
 +  </target>
-+  <target name="jar" description="o Create the jar" depends="compile">
++  <target name="jar" description="o Create the jar" depends="init,compile">
 +    <jar jarfile="target/${final.name}.jar" excludes="**/package.html" basedir="${classesdir}">
 +    </jar>
 +  </target>
