@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.1 2003/07/26 17:31:24 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.2 2003/10/12 09:45:00 lanius Exp $
+
+  12 Oct 2003; Heinrich Wendel <lanius@gentoo.org> cvsd-0.9.19.ebuild:
+  fixed typo, bug #30954
 
 *cvsd-0.9.19 (26 Jul 2003)
 

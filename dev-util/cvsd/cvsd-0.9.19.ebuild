@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-0.9.19.ebuild,v 1.3 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-0.9.19.ebuild,v 1.4 2003/10/12 09:45:00 lanius Exp $
 
 DESCRIPTION="CVS pserver daemon"
 HOMEPAGE="http://tiefighter.et.tudelft.nl/~arthur/cvsd/"
@@ -35,6 +35,6 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "To configure cvsd please read /usr/share/cvsd-0.9.17/README.gz"
+	einfo "To configure cvsd please read /usr/share/${P}/README.gz"
 	einfo
 }
