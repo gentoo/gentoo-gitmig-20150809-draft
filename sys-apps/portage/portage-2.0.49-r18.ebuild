@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r18.ebuild,v 1.3 2003/12/06 06:47:08 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r18.ebuild,v 1.4 2003/12/07 06:06:50 carpaski Exp $
 
 IUSE="build"
 
@@ -88,7 +88,7 @@ src_install() {
 	doins etc-update.conf dispatch-conf.conf
 
 	#python modules
-	if [ -x "$(which python2.2 2>/dev/null)" ] || [ -x /usr/bin/python2.2 ]; then
+	if [ -x "$(type -p python2.2)" ] || [ -x /usr/bin/python2.2 ]; then
 		cd ${S}/src/python-missingos
 		chmod +x setup.py
 		./setup.py install --root ${D} || die "Failed to install missingos module"
