@@ -1,11 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.33 2005/03/04 13:46:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.34 2005/03/10 22:43:11 eradicator Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
 # This eclass contains (or should) functions to get common info 
 # about the toolchain (libc/compiler/binutils/etc...)
+
+inherit multilib
 
 ECLASS=toolchain-funcs
 INHERITED="$INHERITED $ECLASS"
@@ -21,11 +23,12 @@ tc-getPROG() {
 		return 0
 	fi
 
-	if [[ -n $3 ]] ; then
-		local search=$(type -p "$3-${prog}")
-		[[ -n ${search} ]] && prog=${search##*/}
-	elif [[ -n ${CHOST} ]] ; then
-		local search=$(type -p "${CHOST}-${prog}")
+	local chost=$3
+	[[ -z ${chost} ]] && chost=$(get_abi_CHOST)
+	[[ -z ${chost} ]] && chost=${CHOST}
+	
+	if [[ -n ${chost} ]] ; then
+		local search=$(type -p "${chost}-${prog}")
 		[[ -n ${search} ]] && prog=${search##*/}
 	fi
 
