@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/SoGtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/ChangeLog,v 1.6 2003/02/12 07:05:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/ChangeLog,v 1.7 2003/04/23 00:15:05 lostlogic Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *SoGtk-20010601-r1 (1 Feb 2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> SoGtk-20010601-r1.ebuild:
+  Change supersed dependencies
 
   08 Nov 2002; Seemant Kulleen <seemant@gentoo.org> SoGTK-20010601-r1.ebuild :
 

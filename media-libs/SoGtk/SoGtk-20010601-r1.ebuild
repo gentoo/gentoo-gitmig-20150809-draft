@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.13 2003/02/13 12:39:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.14 2003/04/23 00:15:05 lostlogic Exp $
 
 IUSE="nls doc"
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 sparc "
 DEPEND="virtual/x11
 	<x11-libs/gtkglarea-1.99.0
 	media-libs/coin
-	sys-apps/supersed
+	=sys-apps/sed-4*
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
@@ -37,7 +37,7 @@ src_compile() {
 		--with-x \
 		${myconf} || die
 
-	ssed -i "s:ENABLE_NLS 1:ENABLE_NLS 0:" config.h
+	sed -i "s:ENABLE_NLS 1:ENABLE_NLS 0:" config.h
 	make || die
 }
 
