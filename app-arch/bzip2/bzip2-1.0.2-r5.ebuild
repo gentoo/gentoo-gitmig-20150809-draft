@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r5.ebuild,v 1.1 2005/02/19 18:30:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r5.ebuild,v 1.2 2005/03/31 15:52:22 kugelfang Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -23,6 +23,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-saneso.patch
 	epatch "${FILESDIR}"/${P}-progress.patch
 	sed -i -e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' Makefile || die
+	# make the Makefile multilib aware <kugelfang@gentoo.org>
+	sed -i -e "s:\/lib\(\ \|\/\|$\):\/$(get_libdir)\1:g" Makefile \
+		|| die "sed failed: get_libdir"
 
 	use static && append-flags -static
 
@@ -58,12 +61,10 @@ src_install() {
 			fi
 		done
 
-		[[ -z ${CONF_LIBDIR} ]] && CONF_LIBDIR="lib"
-		[[ ${CONF_LIBDIR} != "lib" ]] && mv ${D}/usr/lib ${D}/usr/${CONF_LIBDIR}
 		dolib.so "${S}"/libbz2.so.${PV}
-		dosym libbz2.so.${PV} /usr/${CONF_LIBDIR}/libbz2.so.1.0
-		dosym libbz2.so.${PV} /usr/${CONF_LIBDIR}/libbz2.so
-		dosym libbz2.so.${PV} /usr/${CONF_LIBDIR}/libbz2.so.1
+		dosym libbz2.so.${PV} /usr/$(get_libdir)/libbz2.so.1.0
+		dosym libbz2.so.${PV} /usr/$(get_libdir)/libbz2.so
+		dosym libbz2.so.${PV} /usr/$(get_libdir)/libbz2.so.1
 
 		dodoc README CHANGES Y2K_INFO
 		docinto txt
