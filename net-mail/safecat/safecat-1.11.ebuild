@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.8 2004/07/01 22:35:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.9 2004/07/15 02:26:52 agriffis Exp $
 
 IUSE=""
 
 inherit fixheadtails eutils
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="Safecat implements qmail's maildir algorithm, copying standard input safely to a specified directory."
 HOMEPAGE="http://budney.homeunix.net:8080/users/budney/linux/software/${PN}/"
@@ -47,4 +45,3 @@ src_install() {
 	dodoc CHANGES COPYING INSTALL README
 	doman maildir.1 safecat.1
 }
-
