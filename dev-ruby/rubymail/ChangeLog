@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubymail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.10 2004/10/11 01:09:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.11 2004/10/11 23:52:34 gmsoft Exp $
+
+  12 Oct 2004; Guy Martin <gmsoft@gentoo.org> :
+  Stable on hppa.
 
   10 Oct 2004; Jason Wever <weeve@gentoo.org> rubymail-0.16.ebuild:
   Stable on sparc.
