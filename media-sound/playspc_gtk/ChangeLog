@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/playspc_gtk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc_gtk/ChangeLog,v 1.5 2004/06/25 00:17:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc_gtk/ChangeLog,v 1.6 2004/07/12 22:59:23 eradicator Exp $
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  playspc_gtk-0.2.7.3.ebuild:
+  -* for x86 assembly.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   playspc_gtk-0.2.7.3.ebuild:

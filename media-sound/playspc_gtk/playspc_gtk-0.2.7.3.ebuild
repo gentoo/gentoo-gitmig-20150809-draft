@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc_gtk/playspc_gtk-0.2.7.3.ebuild,v 1.6 2004/06/25 00:17:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc_gtk/playspc_gtk-0.2.7.3.ebuild,v 1.7 2004/07/12 22:59:23 eradicator Exp $
 
 IUSE=""
 
@@ -12,10 +12,10 @@ HOMEPAGE="http://playspc.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+# -*: Contains x86 assembly
+KEYWORDS="-* x86"
 
-DEPEND="app-arch/rar
-	=x11-libs/gtk+-1.2*"
+DEPEND="=x11-libs/gtk+-1.2*"
 
 src_compile() {
 	cd ${S}
