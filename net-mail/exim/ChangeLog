@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.41 2003/11/05 14:24:46 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.42 2003/11/07 14:14:16 klieber Exp $
+
+*exim-4.24-r1 (07 Nov 2003)
+
+  07 Nov 2003; Kurt Lieber <klieber@gentoo.org> exim-4.24-r1.ebuild:
+  minor change to fix 32814. if the original ebuild emerged successfully for
+  you, there is no need to install this version.
 
   05 Nov 2003; Kurt Lieber <klieber@gentoo.org> exim-4.22.ebuild,
   exim-4.24.ebuild:
