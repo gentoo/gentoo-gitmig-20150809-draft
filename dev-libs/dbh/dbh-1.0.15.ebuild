@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/dbh-1.0.15.ebuild,v 1.9 2004/03/08 05:13:00 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/dbh-1.0.15.ebuild,v 1.10 2004/03/10 06:20:18 bcowan Exp $
 
 IUSE=""
 MY_P="${PN}_1.0-15"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ia64 x86 ppc sparc ~alpha amd64 hppa ~mips"
+KEYWORDS="ia64 x86 ppc sparc alpha amd64 hppa ~mips"
 
 DEPEND="dev-util/pkgconfig"
 
