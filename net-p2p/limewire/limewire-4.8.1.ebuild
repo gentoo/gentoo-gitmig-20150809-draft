@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.8.1.ebuild,v 1.1 2005/03/22 07:33:50 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.8.1.ebuild,v 1.2 2005/03/29 02:49:53 tester Exp $
 
 IUSE="gtk"
 DESCRIPTION="Limewire Java Gnutella client"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.limewire.com"
 SRC_URI="http://dev.gentoo.org/~sekretarz/distfiles/LimeWireOther-${PV}.zip"
 LICENSE="GPL-2 Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/jre
 	virtual/x11

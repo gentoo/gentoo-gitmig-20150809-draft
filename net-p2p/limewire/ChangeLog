@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.14 2005/03/22 07:33:50 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.15 2005/03/29 02:49:53 tester Exp $
+
+  23 Mar 2005; Olivier Crête <tester@gentoo.org> limewire-4.8.1.ebuild:
+  Stable on x86 per security bug #85380
 
 *limewire-4.8.1 (22 Mar 2005)
 
