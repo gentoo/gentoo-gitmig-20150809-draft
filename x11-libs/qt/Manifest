@@ -1,7 +1,8 @@
+MD5 c9e4310181f4439678973b037ba4e009 qt-3.2.1-r2.ebuild 6088
 MD5 232c9a440f58d6f1a15c750ba4a25c48 qt-3.1.2-r3.ebuild 4979
 MD5 3ea4b4de8bf408a89bad7560499c5517 qt-2.3.2-r1.ebuild 2274
 MD5 c47d4bd47ef74b87a7eaa1c5969ec48e qt-3.2.1.ebuild 4937
-MD5 651404c4830d5a1094cd9b8bad46d7de qt-3.2.1-r1.ebuild 5857
+MD5 5423c7fd2399d3fde3905d1c13fe4e4b qt-3.2.1-r1.ebuild 6039
 MD5 a3dd25c9f882f04df789dddc02ed3177 qt-3.0.5-r2.ebuild 3896
 MD5 00e9d63f2373eecbf8d070845e3ed794 qt-3.1.0-r3.ebuild 4698
 MD5 aff33d960efe2f7ef7782bd0a7cc9441 qt-3.1.2-r4.ebuild 5340
@@ -30,6 +31,7 @@ MD5 cfa73af7c2f2661be4ea9f3c9347db84 files/digest-qt-3.1.1-r2 72
 MD5 f197d87f2b33685cadba08c9cf2d08ee files/digest-qt-3.1.2-r3 72
 MD5 f197d87f2b33685cadba08c9cf2d08ee files/digest-qt-3.1.2-r4 72
 MD5 b79277b535797e854be75d1c396de0f2 files/digest-qt-3.2.1-r1 72
+MD5 b79277b535797e854be75d1c396de0f2 files/digest-qt-3.2.1-r2 72
 MD5 024632ca815ede1ccdd13cacea10e64a files/qt-3.1.2-thai-complextext.patch 528
 MD5 1a268563c150260e99ed24dd4d2f5fd0 files/0021-qiconview-dragalittle.patch 2341
 MD5 1da4214f7cf90d34592e0453f47b4758 files/designer.diff 380
