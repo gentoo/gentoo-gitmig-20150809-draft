@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r1.ebuild,v 1.11 2004/08/28 15:16:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r1.ebuild,v 1.12 2004/11/07 12:08:52 sekretarz Exp $
+
+inherit eutils
 
 IUSE="png flash imagemagick"
 
@@ -19,6 +21,14 @@ DEPEND=">=x11-libs/gtkDPS-0.3.3
 	png? ( >=media-libs/libpng-1.2.5-r4 )
 	flash? ( >=media-libs/ming-0.2a )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6-r1 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-imagemagick.patch
+	autoreconf
+}
 
 src_compile() {
 	local myconf=""
