@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.ebuild,v 1.2 2004/11/20 14:11:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.ebuild,v 1.3 2004/11/21 17:27:07 mrness Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 
 DEPEND="${RDEPEND}
 	virtual/libc
+	dev-util/pkgconfig
 	tcltk? ( >=dev-lang/tcl-8.4*
 		>=sys-devel/autoconf-2.59 )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.25 2004/11/20 14:11:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.26 2004/11/21 17:27:07 mrness Exp $
+
+  21 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  wvstreams-4.0.ebuild:
+  Add metadata.xml and correct dependencies.
 
   20 Nov 2004; Bryan Østergaard,,, <kloeri@gentoo.org> wvstreams-4.0.ebuild:
   ~alpha keyword.
