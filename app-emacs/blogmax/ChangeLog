@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/blogmax
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/blogmax/ChangeLog,v 1.1 2005/01/25 22:05:12 mkennedy Exp $
+
+*blogmax-20041208 (25 Jan 2005)
+
+  25 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/50blogmax-gentoo.el, +files/README.Gentoo,
+  +blogmax-20041208.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
