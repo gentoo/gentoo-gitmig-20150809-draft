@@ -1,9 +1,6 @@
-# ChangeLog for media-sound/mbrola 
+# ChangeLog for app-accessibility/mbrola 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /home/cvsroot/gentoo-x86/media-sound/mbrola/mbrola-3.0.1h.ebuild,v
-# 1.0 2002/05/07 03:58:19 naz Exp $
-
-*mbrola-3.0.1h-r1 (17 Mar 2004)
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.2 2004/03/17 16:10:57 eradicator Exp $
 
   17 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mbrola-3.0.1h-r1.ebuild, metadata.xml:
