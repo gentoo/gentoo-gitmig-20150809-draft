@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.7 2002/11/04 14:28:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.8 2003/01/21 20:38:52 agriffis Exp $
 
 depend() {
 	need clock hostname
@@ -27,4 +27,5 @@ stop() {
     ebegin "Stopping syslog-ng"
     start-stop-daemon --stop --quiet --pidfile /var/run/syslog-ng.pid
     eend $? "Failed to stop syslog-ng"
+    sleep 1 # needed for syslog-ng to stop in case we're restarting
 }
