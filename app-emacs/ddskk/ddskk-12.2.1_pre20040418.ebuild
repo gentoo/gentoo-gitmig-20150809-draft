@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.1_pre20040309.ebuild,v 1.1 2004/03/13 18:00:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.1_pre20040418.ebuild,v 1.1 2004/05/05 09:09:22 usata Exp $
 
 inherit elisp
 
@@ -49,4 +49,5 @@ src_install () {
 	doins etc/*SKK.tut* etc/skk.xpm
 
 	dodoc READMEs/* ChangeLog*
+	doinfo doc/skk.info*
 }
