@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.16 2003/09/07 00:22:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.17 2003/09/12 01:58:42 vapier Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Password database"
-SRC_URI="ftp://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}.tar.gz"
 HOMEPAGE="http://www.firstlinux.com/cgi-bin/package/content.cgi?ID=6886"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="BSD | GPL-2"
-KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm"
 SLOT="0"
+KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm"
 
 DEPEND="virtual/glibc"
 
@@ -20,8 +19,7 @@ src_unpack () {
 	mkdir ${S}
 	cd ${S}
 	unpack ${A}
-	[ "${ARCH}" = "hppa" ] && patch -p 2 < ${FILESDIR}/pwdb-0.61-hppa.patch
-
+	[ "${ARCH}" = "hppa" ] && epatch ${FILESDIR}/${P}-hppa.patch
 }
 
 src_compile() {
@@ -59,4 +57,3 @@ src_install() {
 	docinto txt
 	dodoc doc/*.txt
 }
-
