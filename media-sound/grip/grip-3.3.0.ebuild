@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.1 2005/03/13 01:04:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.2 2005/03/14 16:39:56 corsair Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/grip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ppc64"
 
 RDEPEND=">=x11-libs/gtk+-2.2
 	x11-libs/vte
