@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/bmp-itouch-0.1.4.3.ebuild,v 1.1 2004/10/01 19:11:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/bmp-itouch-1.0.0.ebuild,v 1.1 2004/10/09 18:35:33 chainsaw Exp $
 
 IUSE=""
 

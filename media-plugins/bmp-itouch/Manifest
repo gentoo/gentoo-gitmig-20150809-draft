@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af81bc6663d0463ff77402f62bfaa16f ChangeLog 1022
+MD5 fe8cb52ee8e1c91a52ff328b32d901e7 bmp-itouch-1.0.0.ebuild 959
+MD5 a71c32b66ac955981169aa56ebe33335 ChangeLog 1184
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 327cf931d508e030dce34df2ef6f43fd bmp-itouch-0.1.4.3.ebuild 961
-MD5 78de72524fb77d88a2b4934ea6c9db48 files/digest-bmp-itouch-0.1.4.3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsbNI1lqEGTUzyQRArckAKCneWKjql6PBHSag0mi0YIV4CmehgCeKK1r
-ya4kKV6muf1Fep6+R4QDsKs=
-=USdn
------END PGP SIGNATURE-----
+MD5 9116bb62fd057e8ef09068d774c34b8b files/digest-bmp-itouch-1.0.0 68
