@@ -1,6 +1,14 @@
 # ChangeLog for media-video/xanim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.3 2002/04/27 11:26:53 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.4 2002/06/04 05:43:25 mkennedy Exp $
+
+*xanim-2.80.1-r4 (3 June 2002)
+  
+  3 June 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  xanim-2.80.1-r4.ebuild, files/digest-xanim-2.80.1-r4 :
+
+  Pin to -O2. Anything higher breaks GCC3.1 for some -march/cpu
+  combinations.
 
 *xanim-2.80.1-r3 (27 Apr 2002)
   
