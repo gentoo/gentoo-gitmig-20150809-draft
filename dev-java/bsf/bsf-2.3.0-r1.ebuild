@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r1.ebuild,v 1.2 2004/08/08 21:20:19 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r1.ebuild,v 1.3 2004/08/09 11:08:44 axxo Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="Bean Script Framework"
 HOMEPAGE="http://jakarta.apache.org/bsf/"
-SRC_URI="http://cvs.apache.org/dist/jakarta/bsf/v2.3.0rc1/src/bsf-src-2.3.0.tar.gz"
+SRC_URI="http://cvs.apache.org/dist/jakarta/bsf/v2.3.0rc1/src/bsf-src-2.3.0.tar.gz mirror://gentoo/bsf-rhino-1.5.patch.bz2"
 LICENSE="Apache-1.1"
 SLOT="2.3"
 KEYWORDS="~x86"
@@ -21,7 +21,7 @@ DEPEND="${REPEND}
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/bsf-rhino-1.5.patch
+	epatch ${WORKDIR}/bsf-rhino-1.5.patch
 
 	cd ${S}/src/build/lib
 	java-pkg_jar-from rhino || die "Missing rhino"
@@ -35,8 +35,8 @@ src_compile() {
 
 	# karltk: this is dirty. should be fixed when we overhaul tomcat
 	# and the entire servlet/java server pages system
-	local cp=/opt/tomcat/common/lib/servlet-api.jar
-	cp="${cp}:/opt/tomcat/common/lib/jsp-api.jar"
+	local cp=/opt/tomcat5/common/lib/servlet-api.jar
+	cp="${cp}:/opt/tomcat5/common/lib/jsp-api.jar"
 
 
 	cp="${cp}:$(java-config -p rhino)"
