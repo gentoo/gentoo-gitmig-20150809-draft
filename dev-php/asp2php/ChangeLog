@@ -1,11 +1,19 @@
 # ChangeLog for dev-php/asp2php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/ChangeLog,v 1.5 2003/11/10 18:58:09 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/ChangeLog,v 1.6 2003/12/18 18:11:05 coredumb Exp $
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
 
+*asp2php-0.76.19 (18 Dec 2003)
+
+  18 Dec 2003; Tal Peer <coredumb@gentoo.org> asp2php-0.76.19.ebuild:
+  Version bump.
+
 *asp2php-0.76.18 (10 Oct 2003)
+
+  18 Dec 2003; Tal Peer <coredumb@gentoo.org> asp2php-0.76.19.ebuild:
+  Mark as x86 and amd64 stable.
 
   10 Oct 2003; Tal Peer <coredumb@gentoo.org> asp2php-0.76.18.ebuild:
   Version bump.
