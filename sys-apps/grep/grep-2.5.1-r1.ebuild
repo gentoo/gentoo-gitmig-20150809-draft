@@ -1,8 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.2 2003/04/25 02:14:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.3 2003/05/20 04:37:35 kumba Exp $
+
 
 IUSE="nls build"
+
+inherit gnuconfig
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU regular expression matcher"
@@ -28,6 +31,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Fix configure scripts to detect linux-mips
+	gnuconfig_update
+
 	local myconf=""
 	use nls || myconf="--disable-nls"
 	
