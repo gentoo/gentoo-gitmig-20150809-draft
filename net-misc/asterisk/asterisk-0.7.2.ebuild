@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.7.2.ebuild,v 1.5 2004/03/16 00:37:00 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.7.2.ebuild,v 1.6 2004/04/16 22:12:51 stkn Exp $
 
 IUSE="doc alsa mysql gtk mmx nopri nozaptel noiax vhosts"
 
-inherit eutils webapp
+inherit eutils webapp-apache
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
@@ -27,8 +27,15 @@ DEPEND="virtual/glibc
 		     >=net-libs/zapata-0.8.1 )"
 
 pkg_setup() {
-	webapp-pkg_setup
-	einfo "Voicemail webapp will be installed into: ${ROOT}${HTTPD_ROOT}"
+	NO_WEBSERVER=0
+
+	webapp-detect || NO_WEBSERVER=1
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	if [ $NO_WEBSERVER -eq 0 ]; then
+		einfo "Voicemail webapp will be installed into: ${ROOT}${HTTPD_ROOT}"
+	else
+		einfo "Skipping installation of Voicemail webapp"
+	fi
 }
 
 src_unpack() {
@@ -69,7 +76,7 @@ src_install() {
 		emake -j1 DESTDIR=${D} progdocs
 
 	# voicemail webapp
-	if [ -z $NO_WEBSERVER ]; then
+	if [ $NO_WEBSERVER -eq 0 ]; then
 	    einfo "Installing voicemail webapp"
 	    insinto ${HTTPD_CGIBIN}
 	    doins contrib/scripts/vmail.cgi
