@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.1 2004/08/22 07:34:59 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.2 2004/08/29 21:38:24 lu_zero Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas network nls nvidia oggvorbis opengl oss png rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas network nls nvidia oggvorbis opengl oss png rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -71,6 +71,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 		)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
+	jack? ( >=dev-libs/bio2jack-0.2 )
 	xmms? ( media-sound/xmms )
 	>=sys-apps/portage-2.0.36"
 
@@ -160,6 +161,8 @@ src_unpack() {
 	# Remove kernel-2.6 workaround as the problem it works around is
 	# fixed, and the workaround breaks sparc
 	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
+	# Doesn't break if bio2jack is in
+	epatch ${FILESDIR}/${P}-bio2jack.patch
 }
 
 src_compile() {
@@ -208,6 +211,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable truetype freetype)"
 	myconf="${myconf} $(use_enable v4l tv-v4l)"
 	myconf="${myconf} $(use_enable v4l2 tv-v4l2)"
+	myconf="${myconf} $(use_enable jack)"
 
 	#########
 	# Codecs #

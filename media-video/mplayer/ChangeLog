@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.201 2004/08/25 06:46:12 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.202 2004/08/29 21:38:24 lu_zero Exp $
+
+  29 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/mplayer-1.0_pre5-bio2jack.patch, mplayer-1.0_pre5-r4.ebuild:
+  Jack support
 
   25 Aug 2004; Hardave Riar <hardave@gentoo.org> mplayer-1.0_pre5-r3.ebuild:
   Added ~mips keyword.
