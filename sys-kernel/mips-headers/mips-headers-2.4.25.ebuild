@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.22-r1.ebuild,v 1.10 2004/04/06 05:49:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.25.ebuild,v 1.1 2004/04/06 05:49:55 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
 
 OKV=${PV/_/-}
-CVSDATE=20030825
+CVSDATE=20040222
 EXTRAVERSION=-mipscvs-${CVSDATE}
 KV="${OKV}${EXTRAVERSION}"
 S=${WORKDIR}/linux-${KV}
@@ -33,12 +33,6 @@ src_unpack() {
 
 	# Update the vanilla sources with linux-mips CVS changes
 	cat ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff | patch -p1
-
-	# Big Endian Fix
-	cat ${FILESDIR}/bigendian-byteorder-fix.patch | patch -p1
-
-	# Patch arch/mips/Makefile for gcc
-	cat ${FILESDIR}/mipscvs-${OKV}-${CVSDATE}-makefile-fix.patch | patch -p0
 
 	kernel_universal_unpack
 }
