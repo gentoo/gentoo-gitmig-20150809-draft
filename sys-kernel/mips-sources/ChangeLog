@@ -1,7 +1,13 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.3 2003/07/04 05:01:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.4 2003/07/05 06:27:26 kumba Exp $
 
+
+*mips-sources-2.4.21_pre4-r1 (05 Jul 2003)
+
+  05 Jul 2003; Joshua Kinard <kumba@gentoo.org> :
+  ebuild for CVS Snapshot (20030705) of linux-mips.org kernel, tagged linux_2_4
+  Removed ebuild for mips-sources-2.4.21_pre4-r1
 
 *mips-sources-2.4.21_pre4-r1 (04 Jul 2003)
 
