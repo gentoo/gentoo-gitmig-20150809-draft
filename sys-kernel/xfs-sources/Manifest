@@ -1,7 +1,8 @@
-MD5 86901a1c2a5839ff7882a57cdb683105 ChangeLog 12235
+MD5 6c7b3d82ede4e17b721774d1f640670a ChangeLog 12464
 MD5 6f7d7132b9c44041ad37c5f556dbbe79 xfs-sources-2.4.24.ebuild 1064
 MD5 f0a9e84650d3661de4d2f6078920a808 xfs-sources-2.4.24-r3.ebuild 1152
 MD5 9d0457271fd1f3afdcf4f7ee602d3b34 metadata.xml 414
+MD5 6abd08f293410899d6881bbc9a2d2e27 xfs-sources-2.4.24-r7.ebuild 2092
 MD5 3bf43d1dc3740162b9fabdb6ee540958 xfs-sources-2.4.24-r2.ebuild 1148
 MD5 7a7d4dd718fc32296b852bbb80ec6aed xfs-sources-2.4.24-r5.ebuild 1538
 MD5 6934c1007e4f6c56f2fa58ed7deef21e xfs-sources-2.4.24-r4.ebuild 1256
@@ -9,6 +10,7 @@ MD5 c0dab5f8f62b207a051151f8a67545a1 xfs-sources-2.4.24-r6.ebuild 2001
 MD5 bc1840b22fbca3216cc2d10679c534d7 xfs-sources-2.4.24-r1.ebuild 1073
 MD5 b0c3e68e37892be35fc1c33723bbbdc3 files/xfs-sources-2.4.19.patch 497
 MD5 9c816c892d6e3d3f0b7b77d3d503ab10 files/xfs-sources.CAN-2004-0075.patch 634
+MD5 53da61155df6e5a6d0c8f57f0195e78a files/digest-xfs-sources-2.4.24-r7 144
 MD5 d4a740ae56c2049247083af387a22a85 files/xfs-sources.CAN-2004-0394.patch 350
 MD5 53da61155df6e5a6d0c8f57f0195e78a files/digest-xfs-sources-2.4.24-r3 144
 MD5 df40eece807d039cba79f477e80ebda2 files/xfs-sources-2.4.19.rtc_fix.patch 4974
@@ -29,5 +31,6 @@ MD5 e2e2b545b6fcdcecf49e33798efa5b84 files/xfs-sources-2.4.22.rtc_fix.patch 7073
 MD5 ac42024b6e6ee1e2165914db4b22a61c files/xfs-sources.CAN-2004-0178.patch 424
 MD5 de75cfa969ed092578d9ddda6c5be334 files/xfs-sources.CAN-2004-0181.patch 1233
 MD5 53da61155df6e5a6d0c8f57f0195e78a files/digest-xfs-sources-2.4.24-r5 144
+MD5 c9da1bc82b906f6abc648c056e7bf662 files/xfs-sources.FPULockup-53804.patch 354
 MD5 53da61155df6e5a6d0c8f57f0195e78a files/digest-xfs-sources-2.4.24-r4 144
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242

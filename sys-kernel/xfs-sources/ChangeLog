@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.47 2004/06/04 15:54:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.48 2004/06/14 22:02:20 plasmaroo Exp $
+
+*xfs-sources-2.4.24-r7 (14 Jun 2004)
+
+  14 Jun 2004; <plasmaroo@gentoo.org> +xfs-sources-2.4.24-r7.ebuild,
+  +files/xfs-sources.FPULockup-53804.patch:
+  Added a patch for the FPU-lockup issue; please see bug #58304 for details.
 
 *xfs-sources-2.4.24-r6 (04 Jun 2004)
 
