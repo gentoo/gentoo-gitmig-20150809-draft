@@ -1,0 +1,7 @@
+# ChangeLog for app-emulation/point2play
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/ChangeLog,v 1.1 2003/05/01 16:08:37 lordvan Exp $
+
+*point2play-1.0.1 (01 May 2003)
+  01 May 2003; Thomas Raschbacher <lordvan@gentoo.org> point2play-1.0.1.ebuild:
+  initial version bug #19989
