@@ -1,0 +1,37 @@
+--- /var/tmp/portage/mkvtoolnix-0.9.4/work/mkvtoolnix-0.9.4/configure	2004-07-25 03:48:01.000000000 -0700
++++ /tmp/configure	2004-08-11 09:42:34.595046336 -0700
+@@ -6037,8 +6037,8 @@
+ 
+   echo "$as_me:$LINENO: checking for wxWindows" >&5
+ echo $ECHO_N "checking for wxWindows... $ECHO_C" >&6
+-  if wx-config --cxxflags > /dev/null 2>&1; then
+-    wxwversion=`wx-config --version`
++  if $WX_CONFIG --cxxflags > /dev/null 2>&1; then
++    wxwversion=`$WX_CONFIG --version`
+     wxw_ver_req_major=2
+     wxw_ver_req_minor=4
+     wxw_ver_req_micro=0
+@@ -6062,9 +6062,9 @@
+     fi
+ 
+     if test "$wxwver_ok" = "1" ; then
+-      WXWINDOWS_CFLAGS=`wx-config --cxxflags`
+-      WXWINDOWS_LDFLAGS=`wx-config --ldflags`
+-      WXWINDOWS_LIBS=`wx-config --libs`
++      WXWINDOWS_CFLAGS=`$WX_CONFIG --cxxflags`
++      WXWINDOWS_LDFLAGS=`$WX_CONFIG --ldflags`
++      WXWINDOWS_LIBS=`$WX_CONFIG --libs`
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_WXWINDOWS 1
+@@ -6080,8 +6080,8 @@
+ echo "${ECHO_T}no: version $wxwversion is too old" >&6
+     fi
+   else
+-    echo "$as_me:$LINENO: result: no: wx-config was not found" >&5
+-echo "${ECHO_T}no: wx-config was not found" >&6
++    echo "$as_me:$LINENO: result: no: $WX_CONFIG was not found" >&5
++echo "${ECHO_T}no: $WX_CONFIG was not found" >&6
+   fi
+ 
+ 

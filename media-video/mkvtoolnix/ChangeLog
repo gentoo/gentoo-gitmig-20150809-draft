@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.19 2004/08/01 12:02:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.20 2004/08/25 19:25:53 mholzer Exp $
+
+*mkvtoolnix-0.9.4 (25 Aug 2004)
+
+  25 Aug 2004; Martin Holzer <mholzer@gentoo.org> mkvtoolnix-0.9.4.ebuild,
+  files/configure-wx_config.patch:
+  Version bumped. Closes 58284.
 
 *mkvtoolnix-0.9.3 (01 Aug 2004)
 
