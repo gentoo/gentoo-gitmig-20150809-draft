@@ -1,5 +1,15 @@
 # ChangeLog for media-libs/gstreamer-plugins
 
+*gst-plugins-0.4.2-r1 (08 Dec 2002)
+  
+  08 Dec 2002; Jon Nall <nall@gentoo.org> gst-plugins-0.4.2-r1.ebuild
+  files/digest-gst-plugins-0.4.2-r1
+  files/gst-plugins-0.4.2-parallel-make-depfix.patch
+  files/gst-plugins-0.4.2-wavparse-bigendian.patch :
+
+  keyworded ~ppc; fixed endianness problem for wav playing; 
+  fixed parallel compilation problem on ppc
+
 *gst-plugins-0.4.2 (02 Nov 2002)
 
   02 Nov 2002; foser <foser@gentoo.org> gst-plugins-0.4.2.ebuild :
