@@ -1,9 +1,13 @@
 # ChangeLog for gnome-extra/libglademm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libglademm/ChangeLog,v 1.6 2002/12/13 10:56:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libglademm/ChangeLog,v 1.7 2002/12/23 17:05:36 foser Exp $
+
+*libglademm-2.0.0 (23 Dec 2002) 
+
+  23 Dec 2002; foser <foser@gentoo.org> libglademm-2.0.0.ebuild :
+  New version, first stable gnome 2 release
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 
 *libglademm-1.3.4 (13 Sep 2002)
   13 Sep 2002; Spider <spider@gentoo.org> libglademm-1.3.4.ebuild :
