@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.4.1.ebuild,v 1.5 2004/02/10 06:23:28 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.4.1.ebuild,v 1.6 2004/03/02 13:09:34 agriffis Exp $
 
 inherit gnome2
 
@@ -31,3 +31,17 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} $(use_enable ipv6)"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS"
+
+src_compile() {
+	gnome2_src_configure
+	
+	# This fixes compilation on ia64.  I wish I knew the "right"
+	# solution but this will have to do for now.
+	# (01 Mar 2004 agriffis)
+	if use ia64; then
+		sed -i -e 's/^DEFS.*/& -Ds64=__s64 -Du64=__u64 -Ds32=__s32 -Du32=__u32/' \
+			gfloppy/src/Makefile || die "ia64 sed failed"
+	fi
+
+	emake || die "emake failed"
+}
