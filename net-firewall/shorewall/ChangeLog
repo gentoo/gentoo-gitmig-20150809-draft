@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.15 2003/06/20 02:04:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.16 2003/06/23 19:43:46 mholzer Exp $
+
+*shorewall-1.4.5 (23 Jun 2003)
+
+  23 Jun 2003; Martin Holzer <mholzer@gentoo.org> shorewall-1.4.5.ebuild:
+  Version bumped.
 
   19 Jun 2003; Seemant Kulleen <seemant@gentoo.org> shorewall-1.4.4b.ebuild:
   stop /var/lib/shorewall from being removed on remerge, and /var/state is
