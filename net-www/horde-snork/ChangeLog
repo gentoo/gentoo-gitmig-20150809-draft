@@ -1,0 +1,8 @@
+# ChangeLog for net-www/horde-snork
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-snork/ChangeLog,v 1.1 2004/01/27 00:55:01 vapier Exp $
+
+*horde-snork-0 (26 Jan 2004)
+
+  26 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial ebuild made by me.
