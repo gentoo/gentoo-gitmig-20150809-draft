@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.34 2003/09/09 15:24:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.35 2003/09/17 03:09:03 hhg Exp $
+
+  17 Sep 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org> mutt-1.5.4-r1.ebuild:
+  Don't gzip manual. Added maildir to IUSE. See bug #28186
 
   09 Sep 2003; Aron Griffis <agriffis@gentoo.org> mutt-1.5.4-r1.ebuild:
   Mark stable on alpha
