@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.2.1-r10.ebuild,v 1.1 2004/09/29 14:19:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.2.1-r10.ebuild,v 1.2 2004/09/29 17:28:45 tester Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-r6-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.patch
 	epatch ${FILESDIR}/${P}-buffer-check.patch #46998
 	epatch ${FILESDIR}/${P}-buffer-limits.patch #65773
 
