@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <spyderous@gentoo.org> (8 Oct 2003)
+# New major version, masked for testing
+# on advice of robbat2.
+>=app-misc/screen-4
+
 # <liquidx@gentoo.org> (8 Oct 2003)
 # these need some more testing outside of just me
 >=x11-libs/wxGTK-2.4.2
