@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.34 2004/03/07 05:24:23 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.35 2004/03/07 12:12:04 foser Exp $
+
+*esound-0.2.33 (07 Mar 2004)
+
+  07 Mar 2004; foser <foser@gentoo.org> esound-0.2.33.ebuild :
+  New release
+  alsa patch got included upstream
+  made amd64 patch apply in general
 
   07 Mar 2004; Stephen P. Becker <geoman@gentoo.org> esound-0.2.32.ebuild:
   Added ~mips keyword.
