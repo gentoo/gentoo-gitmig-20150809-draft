@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.2 2003/10/08 09:36:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.3 2003/10/08 23:36:38 azarah Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba"
 
@@ -343,7 +343,13 @@ src_install() {
 	fi
 
 	dodir /usr/share/mplayer/fonts
-	cp -a ${WORKDIR}/font-arial* ${D}/usr/share/mplayer/fonts
+	local x=
+	# Do this generic, as the mplayer people like to change the structure
+	# of their zips ...
+	for x in $(find ${WORKDIR}/ -type d -name 'font-arial-??-iso-*')
+	do
+		cp -Rd ${x} ${D}/usr/share/mplayer/fonts
+	done
 	# Fix the font symlink ...
 	rm -rf ${D}/usr/share/mplayer/font
 	dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer/font
