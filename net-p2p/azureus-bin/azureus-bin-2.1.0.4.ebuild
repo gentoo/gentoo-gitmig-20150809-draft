@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.1.0.4.ebuild,v 1.3 2004/10/24 12:15:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.1.0.4.ebuild,v 1.4 2004/10/26 21:43:53 eradicator Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ SRC_URI="mirror://gentoo/seda-${MY_DT}.zip
 	x86? ( !gtk? ( mirror://sourceforge/${MY_PN}/Azureus_${MY_PV}_linux.Motif.tar.bz2 ) )
 	amd64? ( mirror://sourceforge/${MY_PN}/Azureus_${MY_PV}_linux.GTK.tar.bz2 )
 	amd64? ( ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/eclipse/R-3.0-200406251208/swt-3.0-linux-gtk-amd64.zip )"
-
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
