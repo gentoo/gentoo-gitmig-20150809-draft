@@ -1,9 +1,8 @@
 # ChangeLog for net-misc/esms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/ChangeLog,v 1.2 2002/12/09 04:33:16 manson Exp $
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/ChangeLog,v 1.3 2002/12/13 11:00:11 blizzy Exp $
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *gtkems-0.0.4 (26 May 2002)

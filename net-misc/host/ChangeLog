@@ -1,9 +1,8 @@
 # ChangeLog for net-misc/host
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.4 2002/12/09 04:33:16 manson Exp $
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.5 2002/12/13 11:00:11 blizzy Exp $
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *host-991529,  (10 May 2002)

@@ -1,9 +1,8 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/ChangeLog,v 1.5 2002/12/10 23:13:44 bass Exp $
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/ChangeLog,v 1.6 2002/12/13 11:00:11 blizzy Exp $
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *coccinella-0.94.2 (11 Dec 2002)
 

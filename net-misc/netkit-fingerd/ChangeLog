@@ -1,9 +1,8 @@
 # ChangeLog for net-misc/netkit-fingerd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/ChangeLog,v 1.6 2002/12/09 04:33:16 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/ChangeLog,v 1.7 2002/12/13 11:00:13 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *netkit-fingerd-0.17-r2 (1 Feb 2002)
 
