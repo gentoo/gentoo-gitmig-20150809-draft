@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.9.ebuild,v 1.1 2003/08/18 17:34:34 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.9.ebuild,v 1.2 2003/08/21 21:26:01 max Exp $
 
 inherit flag-o-matic
 
@@ -21,6 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall DESTDIR="${D}"
+	einstall
 	dodoc AUTHORS COPYING ChangLog NEWS README README.BeOS README.OSF1 TODO
 }
