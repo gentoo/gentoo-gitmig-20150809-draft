@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aterm-java
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/ChangeLog,v 1.4 2004/08/24 03:29:20 zx Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/ChangeLog,v 1.5 2004/09/28 00:26:00 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
   23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> aterm-java-1.6.ebuild:
   Marking x86
