@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/sun-dsml-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/ChangeLog,v 1.1 2005/01/15 19:16:27 luckyduck Exp $
+
+*sun-dsml-bin-2.1.2_pre1 (15 Jan 2005)
+
+  15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +sun-dsml-bin-2.1.2_pre1.ebuild:
+  Initial import. Package needed as a dependency of jxplorer. fixes bug #76419.
+
