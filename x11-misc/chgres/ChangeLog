@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/chgres 
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/ChangeLog,v 1.1 2003/03/17 14:05:18 phosphan Exp $
+
+*chgres-0.1 (17 Mar 2003)
+
+  17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> chgres-0.1.ebuild
+  files/digest-chgres-0.1 ChangeLog :
+  Initial import. Ebuild submitted by Henrik Johansson 
+  <henrik_johansson@home.se>. This closes bug #16371.
