@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2-r1.ebuild,v 1.2 2004/09/03 23:19:13 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2-r1.ebuild,v 1.3 2005/01/16 22:10:11 foser Exp $
 
 IUSE="nls"
 
@@ -29,6 +29,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc-3.4.patch"
 	# Fix loggin keystrokes (#62322)
 	epatch ${FILESDIR}/${P}-remove_debug.patch
+	# gcc2 fix (#65029)
+	epatch ${FILESDIR}/${P}-zvt_term.patch
 
 }
 
