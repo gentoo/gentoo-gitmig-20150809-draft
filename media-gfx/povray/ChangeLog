@@ -1,6 +1,6 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.9 2002/08/05 03:08:54 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.10 2002/08/07 01:41:51 rphillips Exp $
 
 *povray-3.5a (2 Aug 2002)
 
@@ -15,6 +15,11 @@
   I/O error looking for povray.ini... I or someone will look into this.
 
 *povray-3.1g-r5 (27 Jun 2002)
+
+  6 Aug 2002; Ryan Phillips <rphillips@gentoo.org> povray-3.1g-r5.ebuild :
+
+  Changed ebuild to reflect the manually mirrored source files.
+
   27 Jun 2002; Spider <spider@gentoo.org> povray-3.1g-r5.ebuild :
   updated with SLOT and LICENSE flags. added povlegal-3.1g to licenses
 
