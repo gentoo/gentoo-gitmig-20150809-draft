@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.74 2004/10/29 01:35:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.75 2004/10/29 02:59:31 vapier Exp $
+
+  28 Oct 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.4.1-r4.ebuild,
+  shadow-4.0.5.ebuild, +files/shadow-4.0.4.1-passwd-typo.patch:
+  Fix small glitch in passwd.1 #68150 by rob holland.
 
 *shadow-4.0.5 (28 Oct 2004)
 

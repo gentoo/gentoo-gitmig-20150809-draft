@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f0da2c8a44b0d962b830cd8a6093dcc0 ChangeLog 14217
+MD5 45f252469142b03dec4a9a581c3df5a2 ChangeLog 14412
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f227fddac93c5f27799b9a8c9e34cd2b shadow-4.0.4.1-r3.ebuild 6076
-MD5 984c5a15d438d0d1c9c8ee3c83073508 shadow-4.0.4.1-r4.ebuild 5852
-MD5 13e623b5efe169b152954a03676d53ad shadow-4.0.5.ebuild 4816
+MD5 23ef7363bf5ffa1d0f3343ff2a618e5d shadow-4.0.4.1-r4.ebuild 5943
+MD5 e531273bb3064bdc79cc36da2d7533ac shadow-4.0.5.ebuild 4917
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r4 67
 MD5 2d2faa6b9a837f9319de52a780485743 files/securetty 243
 MD5 058f760e522ab65e270293003805fe61 files/shadow-4.0.4.1-userdel-missing-brackets.patch 380
@@ -16,6 +16,7 @@ MD5 38ab75648a10b5d49d2aaffab77d787e files/shadow-4.0.5-login.defs.patch 753
 MD5 aaf16ddabef285df169e37254b13561c files/shadow-4.0.4.1-selinux.diff 4296
 MD5 201f1321262da41ccd1a0283216ae9a7 files/shadow-4.0.4.1-su-pam_open_session.patch 4886
 MD5 bb55107c3a9354ef2d1977547fdb5a83 files/shadow-4.0.4.1-useradd-manpage-update.patch 958
+MD5 7becc41b4f7264483ee3ff0ca8277084 files/shadow-4.0.4.1-passwd-typo.patch 438
 MD5 b8efca60a25e256eebe54c3d0db0760f files/shadow-4.0.4.1-gcc34-xmalloc.patch 361
 MD5 020e030c2d09b206e88cf9051ced6244 files/shadow-4.0.4.1-nonis.patch 1504
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r3 67
@@ -30,7 +31,7 @@ MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth-1.1 491
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBgas8HTu7gpaalycRAhgPAKDGB6OIdR3tq5wyb4VCnu/KgZg+rACeL9iZ
-U6i0alFmth7a8hsJPAUTCgE=
-=vFpl
+iD8DBQFBgbI5HTu7gpaalycRAobjAJ9wxipsxzPgXs8yRQEaL97+HPWzLACg3zse
+BtL2RdjLw5oSMIjKWMs9Mjo=
+=eGJ/
 -----END PGP SIGNATURE-----

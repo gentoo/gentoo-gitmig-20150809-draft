@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.10 2004/10/29 00:09:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.11 2004/10/29 02:59:31 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -66,6 +66,9 @@ src_unpack() {
 
 	# don't install manpages if USE=-nls
 	epatch ${FILESDIR}/${P}-nls-manpages.patch
+
+	# fix small graphical typo in passwd.1 #68150
+	epatch ${FILESDIR}/${P}-passwd-typo.patch
 
 	# Allows shadow configure detect newer systems properly
 	gnuconfig_update

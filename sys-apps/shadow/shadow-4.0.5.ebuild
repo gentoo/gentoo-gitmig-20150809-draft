@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5.ebuild,v 1.2 2004/10/29 02:29:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5.ebuild,v 1.3 2004/10/29 02:59:31 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -46,6 +46,9 @@ src_unpack() {
 
 	# tweak the default login.defs
 	epatch ${FILESDIR}/shadow-${PV}-login.defs.patch
+
+	# fix small graphical typo in passwd.1 #68150
+	epatch ${FILESDIR}/shadow-4.0.4.1-passwd-typo.patch
 
 	# Allows shadow configure detect newer systems properly
 	gnuconfig_update
