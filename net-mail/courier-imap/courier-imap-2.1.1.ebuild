@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.1.ebuild,v 1.2 2003/09/03 09:49:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.1.ebuild,v 1.3 2003/09/03 09:58:59 robbat2 Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -35,11 +35,10 @@ src_unpack() {
 	unpack ${A}
 
 	# patch to fix db4.0 detection as db4.1
+	# bug #27517, patch needs to go upstream
 	epatch ${FILESDIR}/courier-imap-2.1.1-db40vs41.patch
 	
 	cd ${S}
-
-
 	# explicitly use db3 over db4
 	if use berkdb; then
 		sed -i -e 's,-ldb,-ldb-3.2,g' configure
@@ -91,6 +90,10 @@ src_compile() {
 	CFLAGS=`echo ${CFLAGS} | xargs`
 	CXXFLAGS=`echo ${CXXFLAGS} | xargs`
 	LDFLAGS=`echo ${LDFLAGS} | xargs`
+
+	# fix for bug #27528 
+	# they really should use a better way to detect redhat
+	myconf="${myconf} --without-redhat" 
 
 	# Do the actual build now
 	LDFLAGS="${LDFLAGS}" econf \
