@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/ChangeLog,v 1.1 2003/09/02 19:40:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/ChangeLog,v 1.2 2003/09/22 14:05:43 abhishek Exp $
+
+*synce-0.8.4-r1 (22 Sep 2003)
+
+  22 Sep 2003; Abhishek Amit <abhishek@gentoo.org> synce-0.8.4-r1.ebuild:
+  Adds orange as a dependency, as this is a metapackage for all of synce
 
 *synce-0.8.4 (02 Sep 2003)
 

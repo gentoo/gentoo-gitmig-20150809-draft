@@ -1,0 +1,11 @@
+# ChangeLog for app-pda/dynamite
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/dynamite/ChangeLog,v 1.1 2003/09/22 14:05:43 abhishek Exp $
+
+*dynamite-0.1 (22 Sep 2003)
+
+  22 Sep 2003; Abhishek Amit <abhishek@gentoo.org> dynamite-0.1.ebuild,
+  metadata.xml:
+  Initial import. Closes #28882. Thanks to Gustavo Felisberto
+  <gustavo@felisberto.net>
+
