@@ -9,6 +9,11 @@ DESCRIPTION="gda lib"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${A}"
 HOMEPAGE="http://www.gnome.org/gnome-db"
 
+DEPEND=">=gnome-base/gconf-0.8
+	>=gnome-base/gnome-libs-1.2.4
+	>=dev-db/mysql-3.23.26
+	>=net-nds/openldap-1.2.11"
+
 src_unpack() {
   unpack ${A}
 }
