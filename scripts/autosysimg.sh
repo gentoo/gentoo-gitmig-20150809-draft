@@ -26,7 +26,8 @@ rm -rf "${SYSIMG_ROOT}"
 mkdir -p "${SYSIMG_ROOT}"
 
 mount --bind ${PORTDIR} ${SYSIMG_ROOT}/${PORTDIR}
-chroot bash -c "cd ${PORTDIR} ; scripts/bootstrap.sh ${BOOTSTRAP_PACKAGES}"
+mkdir ${SYSIMG_ROOT}/scripts
+chroot bash -c "cd ${PORTDIR} ; ROOT=/sysimg scripts/bootstrap.sh ${BOOTSTRAP_PACKAGES}"
 chroot bash -c "cd ${PORTDIR} ; scripts/autocompile.sh ${SYS_PACKAGES}"
 
 # now unmerge the build packages
@@ -45,7 +46,7 @@ umount ${SYSIMG_ROOT}/${PORTDIR}
 rm -rf "${SYSIMG_ROOT}/tmp"
 mkdir -p ${SYSIMG_ROOT}/tmp
 chown root.root ${SYSIMG_ROOT}/tmp
-chmod 1777 ${SYSIM_ROOT}/tmp
+chmod 1777 ${SYSIMG_ROOT}/tmp
 mv ${SYSIMG_ROOT}/var/db/pkg ${ROOT}/var/db/pkg.build
 
 echo ">>> Creating ${SYS_TARBALL}..."
