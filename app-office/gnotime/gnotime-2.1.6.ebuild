@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.6.ebuild,v 1.4 2003/10/06 22:49:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.6.ebuild,v 1.5 2003/11/18 05:43:59 obz Exp $
 
 inherit gnome2
 
-DESCRIPTION="A GNOME utility for tracking the amount of time spent on activities, and calculating data, such as pay rates, from those times."
+DESCRIPTION="A utility for tracking the amount of time spent on activities, and calculating data, such as pay rates, from those times."
 HOMEPAGE="http://gttr.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gttr/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=">=gnome-base/libgnome-2.0
 	>=gnome-base/libgnomeui-2.0.3
 	>=gnome-base/libglade-2.0
-	>=gnome-extra/libgtkhtml-2.0
+	=gnome-extra/libgtkhtml-2*
 	>=gnome-base/gconf-2.0
 	dev-libs/libxml2
 	dev-util/guile
