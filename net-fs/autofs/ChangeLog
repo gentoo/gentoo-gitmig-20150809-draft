@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.17 2003/05/13 02:36:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.18 2003/05/25 15:00:37 mholzer Exp $
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org> autofs-3.1.7-r3.ebuild,
+  autofs-3.1.7-r4.ebuild, autofs-3.1.7-r5.ebuild:
+  now uses mirror://kernel
 
   12 May 2003; Jason Wever <weeve@gentoo.org> autofs-3.1.7-r5.ebuild:
   Changed ~sparc keyword to sparc.
