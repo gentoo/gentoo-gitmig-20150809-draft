@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r4.ebuild,v 1.2 2001/10/07 11:11:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r5.ebuild,v 1.1 2002/02/25 00:43:52 danarmak Exp $
 
 A=ircii-pana-1.0c18.tar.gz
 S=${WORKDIR}/BitchX
@@ -32,20 +32,31 @@ src_compile() {
 		myopts="$myopts --with-ssl"
 	fi
 
-	if [ -n "`use gnome`" ]
-	then
-		myopts="$myopts --with-gtk"
-	fi
 
 	if [ -n "`use esd`" ]
 	then
 		myopts="$myopts --enable-sound"
+	fi
+	
+	if [ -z "`use gnome`" ]
+	then
+	    myopts="$myopts --without-gtk"
 	fi
 
 	./configure --prefix=/usr --host=${CHOST} --build=${CHOST}	\
 		    --enable-cdrom --enable-ipv6 --with-plugins 	\
 		    ${myopts} || die
 	emake || die
+
+	if [ -n "`use gnome`" ]
+	then
+		myopts="$myopts --with-gtk"
+		./configure --prefix=/usr --host=${CHOST} --build=${CHOST}	\
+		    --enable-cdrom --enable-ipv6 --with-plugins 	\
+		    ${myopts} || die
+		emake || die
+	fi
+
 }
 
 src_install () {
@@ -54,14 +65,11 @@ src_install () {
 
         if [ -n "`use gnome`" ]
 	then
-  		rm -f gtkBitchX
-		dosym /usr/bin/gtkBitchX-1.0c18 /usr/bin/gtkBitchX
-		dosym /usr/bin/gtkBitchX-1.0c18 /usr/bin/bitchX
-	else
-		rm -f BitchX
-		dosym /usr/bin/BitchX-1.0c18 /usr/bin/BitchX
-		dosym /usr/bin/BitchX-1.0c18 /usr/bin/bitchX
+		exeinto /usr/bin
+		newexe ${S}/source/BitchX BitchX-1.0c18
+		dosym gtkBitchX-1.0c18 /usr/bin/gtkBitchX
 	fi
+	dosym BitchX-1.0c18 /usr/bin/BitchX
 
 	chmod -x ${D}/usr/lib/bx/plugins/BitchX.hints
 
