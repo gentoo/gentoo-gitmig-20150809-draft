@@ -32,6 +32,7 @@
 
 # Michael Cummings <mcummings@gentoo.org> (04 Aug 2002)
 # Found hardcoded refs for i686 in ebuild - please test
+# Tested on 05 Aug 2002 on ppc by pvdabeel@gentoo.org
 =sys-devel/perl-5.6.1-r6
 
 # Seemant Kulleen <seemant@gentoo.org> (04 Aug 2002)
@@ -194,6 +195,7 @@ media-video/kxine
 
 # <blizzy@gentoo.org> (28 Jul 2002)
 # new version, please test!
+# tested on 05 Aug 2002 on ppc by pvdabeel@gentoo.org
 =sys-devel/perl-5.8.0
 
 # <raker@gentoo.org> (26 Jul 2002)
