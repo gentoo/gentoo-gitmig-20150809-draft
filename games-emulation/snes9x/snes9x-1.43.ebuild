@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.42-r1.ebuild,v 1.7 2005/01/03 06:48:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.1 2005/01/03 06:48:40 vapier Exp $
 
 inherit eutils games
 
@@ -10,10 +10,10 @@ SRC_URI="http://www.lysator.liu.se/snes9x/${PV}/snes9x-${PV}-src.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
-IUSE="3dfx opengl X joystick"
+KEYWORDS="amd64 ppc x86"
+IUSE="3dfx opengl X joystick zlib"
 
-RDEPEND="sys-libs/zlib
+RDEPEND="zlib? ( sys-libs/zlib )
 	virtual/x11
 	media-libs/libpng
 	opengl? ( virtual/opengl )
@@ -26,9 +26,10 @@ S="${WORKDIR}/${P}-src"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}/snes9x"
-	epatch "${FILESDIR}/${PV}-system-zlib.patch"
-	epatch "${FILESDIR}/nojoy.patch"
+	cd "${S}"/snes9x
+	epatch "${FILESDIR}"/nojoy.patch
+	sed -i 's:png_jmpbuf:png_write_info:g' configure
+	sed -i 's:@OPTIMIZE@:@CFLAGS@:' Makefile.in
 }
 
 src_compile() {
@@ -39,7 +40,7 @@ src_compile() {
 	mkdir mybins
 	for vid in 3dfx opengl X ; do
 		use ${vid} || continue
-		cd "${S}/snes9x"
+		cd "${S}"/snes9x
 		case ${vid} in
 			3dfx)
 				vidconf="--with-glide --without-opengl --without-x"
@@ -52,19 +53,20 @@ src_compile() {
 				target=snes9x;;
 		esac
 		# this stuff is ugly but hey the build process sucks ;)
-		OPTFLAGS="${CXXFLAGS} -DHAVE_LIBPNG" \
 		egamesconf \
-			--with-screenshot \
-			$(use_with joystick) \
 			${vidconf} \
 			$(use_with x86 assembler) \
-				|| die
-		emake \
-			EXTRALIBS="$(libpng-config --libs) -lpthread" \
-			${target} || die "making ${target}"
-		mv ${target} "${S}/mybins/"
+			$(use_with joystick) \
+			$(use_with debug debugger) \
+			$(use_with zlib) \
+			--with-screenshot \
+			|| die
+		# Makefile doesnt quite support parallel builds
+		emake -j1 offsets || die "making offsets"
+		emake ${target} || die "making ${target}"
+		mv ${target} "${S}"/mybins/
 		cd "${WORKDIR}"
-		rm -rf "${S}/snes9x"
+		rm -r "${S}"/snes9x
 		src_unpack
 	done
 }

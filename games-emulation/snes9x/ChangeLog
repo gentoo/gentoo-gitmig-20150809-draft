@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/snes9x
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.13 2004/11/11 01:31:42 josejx Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.14 2005/01/03 06:48:40 vapier Exp $
+
+*snes9x-1.43 (03 Jan 2005)
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org> +snes9x-1.43.ebuild:
+  Version bump.
 
   11 Nov 2004; Joseph Jezak <josejx@gentoo.org> snes9x-1.42-r1.ebuild:
   Marked ppc stable.
