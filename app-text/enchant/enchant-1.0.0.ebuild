@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.0.0.ebuild,v 1.3 2003/11/02 05:19:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.0.0.ebuild,v 1.4 2003/11/02 05:23:38 agriffis Exp $
 
 inherit gnome2
 
@@ -29,5 +29,7 @@ DOCS="AUTHORS BUGS COPYING.LIB ChangeLog HACKING MAINTAINERS NEWS README TODO"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/enchant-1.0.0-alpha.patch || die "epatch failed"
+	if use alpha; then
+		epatch ${FILESDIR}/enchant-1.0.0-alpha.patch || die "epatch failed"
+	fi
 }
