@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c61224c7df728577df1f467a1f54643c ChangeLog 1704
-MD5 a2e699d81f4d39f9beef307ff78d9b41 librsync-0.9.6.ebuild 707
-MD5 338e69b29ab078eb6d84fdfef2c0ff3e librsync-0.9.7.ebuild 672
+MD5 a49156e84de0bd118e9532adcf522d11 ChangeLog 1797
+MD5 43320660d39f81ba519b1296d4b67ea2 librsync-0.9.6.ebuild 704
+MD5 6770a33e73de7b36b3e8bd0a093e0dc6 librsync-0.9.7.ebuild 681
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 d0c1f5fb5a02f40c16491c2c003dadf5 files/digest-librsync-0.9.6 66
 MD5 3271b117997d294c547e95009ef7070d files/digest-librsync-0.9.7 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBtcNzKRy60XGEcJIRAmCMAKCU9DiVLy6M5yMiuD/akTdK8rLJ7QCdHrH2
-bMtVkCGdFizUraB/ISOxwNQ=
-=RBUF
------END PGP SIGNATURE-----
