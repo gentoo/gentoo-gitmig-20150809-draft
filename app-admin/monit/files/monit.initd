@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/files/monit.initd,v 1.1 2004/03/28 03:52:36 matsuu Exp $
+
+opts="${opts} reload"
+
+depend() {
+	use net
+}
+
+start() {
+	ebegin "Starting monit"
+	start-stop-daemon --start --quiet --exec /usr/bin/monit >/dev/null 2>&1
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping monit"
+	start-stop-daemon --stop --quiet --pidfile /var/run/monit.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading monit"
+	/usr/bin/monit -c /etc/monitrc reload >/dev/null 2>&1
+	eend $?
+}
