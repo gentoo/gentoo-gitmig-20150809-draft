@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.0.ebuild,v 1.1 2004/12/11 05:40:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.0.ebuild,v 1.2 2005/01/20 05:47:59 mr_bones_ Exp $
 
 inherit eutils games
 

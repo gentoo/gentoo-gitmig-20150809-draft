@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.2.7.ebuild,v 1.4 2004/07/01 05:21:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.1.ebuild,v 1.1 2005/01/20 05:47:59 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,12 +14,10 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	dev-lang/lua
 	>=sys-libs/ncurses-5
 	virtual/x11"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 S="${WORKDIR}/tome-${MY_PV}-src"
 
@@ -31,17 +29,25 @@ src_unpack() {
 	sed -i \
 		-e "s:GENTOO_DIR:${GAMES_STATEDIR}:" files.c init2.c \
 		|| die "sed failed"
+	#bug #53640
+	sed -i \
+		-e "s:-DUSE_X11:-DUSE_GCU -DUSE_X11:" \
+		-e "s:-lX11:-lncurses -lX11:" \
+		makefile \
+		|| die "sed failed"
 	find "${S}" -name .cvsignore -exec rm -f \{\} \;
+	find "${S}/lib/edit" -type f -exec chmod a-x \{\} \;
 }
 
 src_compile() {
 	cd src
 	make depend || die "make depend failed"
-	emake -j1 \
+	emake ./tolua || die "emake ./tolua failed"
+	emake \
 		COPTS="${CFLAGS}" \
 		BINDIR="${GAMES_BINDIR}" \
 		LIBDIR="${GAMES_DATADIR}/${PN}" \
-			|| die "emake failed"
+		|| die "emake failed"
 }
 
 src_install() {
@@ -59,6 +65,7 @@ src_install() {
 	touch "${D}/${GAMES_STATEDIR}/${PN}-scores.raw"
 	prepgamesdirs
 	fperms g+w "${GAMES_STATEDIR}/${PN}-scores.raw"
+	#FIXME: something has to be done about this.
 	fperms g+w "${GAMES_DATADIR}/${PN}/data"
 }
 
