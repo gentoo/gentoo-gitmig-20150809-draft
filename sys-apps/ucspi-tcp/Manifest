@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 afb33b48281e03c2f5708b6f5efaef8b ChangeLog 4268
+MD5 3be15cda6e51a78a18c7268549d29ea8 ChangeLog 4373
+MD5 f28315c57485584788c9824481bc7603 ucspi-tcp-0.88-r8.ebuild 2148
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a00fd33d85a68b9e731b48a278f8436e ucspi-tcp-0.88-r8.ebuild 2147
-MD5 0479a09fdd4ce855d35e36563cab4743 files/0.88-errno.patch 239
 MD5 b36e99b422384451ac68b3a9b31b7ed6 files/0.88-head-1.patch 1403
-MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r8 350
 MD5 64eb2b26c9c0e5d6b4042fd36b74dbb8 files/tcprules-Makefile 168
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBitiMHTu7gpaalycRAlCqAKD7uBYC/IcTjgMXwGOue+ay/f/qrQCfStVq
-YCcEIvdsICZFxp4nb0BK3kY=
-=iPDi
------END PGP SIGNATURE-----
+MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r8 350
+MD5 0479a09fdd4ce855d35e36563cab4743 files/0.88-errno.patch 239
