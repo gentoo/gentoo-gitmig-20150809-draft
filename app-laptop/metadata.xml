@@ -6,8 +6,12 @@
 		with certain kinds of laptop or notebook computer.
 	</longdescription>
 	<longdescription>
-		Die Kategorie app-laptop enthält Pakete für das Arbeiten mit verschiedenen
+		Die Kategorie app-laptop enthÃ¤lt Pakete fÃ¼r das Arbeiten mit verschiedenen
 		Notebook- und Laptop-Modellen.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría app-laptop contiene paquetes diseñados para trabajar
+		con ciertas clases de laptops ó computadoras portátiles.
 	</longdescription>
 </catmetadata>
 
