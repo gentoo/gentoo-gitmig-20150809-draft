@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/rplay
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/ChangeLog,v 1.1 2003/07/03 16:41:32 taviso Exp $
+
+*rplay-3.3.2 (03 Jul 2003)
+
+  03 Jul 2003; Tavis Ormandy <taviso@gentoo.org> metadata.xml,
+  rplay-3.3.2.ebuild:
+  initial import
+
