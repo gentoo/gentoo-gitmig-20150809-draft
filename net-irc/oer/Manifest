@@ -1,5 +1,5 @@
-MD5 72d09159c906ce0ccf93e78531743016 oer-1.0.64.ebuild 1060
+MD5 71ffa7f95961d1248bdc2b12cabb6126 ChangeLog 536
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 dd2ec8e387e9fb2692efe0d9150155c3 ChangeLog 457
+MD5 750c461b51221c0ff5f28018a6a2b746 oer-1.0.64.ebuild 1062
 MD5 734b0897c2e042b8c0d75bb79c00f733 files/1.0.64-basename.patch 240
 MD5 8d109710bda2d73afccad03fc696cd33 files/digest-oer-1.0.64 62
