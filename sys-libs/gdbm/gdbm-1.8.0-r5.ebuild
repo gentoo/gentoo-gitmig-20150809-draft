@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.38 2004/09/22 19:09:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.39 2004/09/28 02:55:57 vapier Exp $
 
 inherit gnuconfig eutils flag-o-matic libtool
 
@@ -13,9 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos ppc-macos"
 IUSE="berkdb static"
 
-# Mac OS X already has berkdb installed
 DEPEND="virtual/libc
-	!macos? ( !ppc-macos? ( berkdb? ( =sys-libs/db-1.85-r1 ) ) )"
+	berkdb? ( ~sys-libs/db-1.85 )"
 
 RDEPEND="virtual/libc"
 
