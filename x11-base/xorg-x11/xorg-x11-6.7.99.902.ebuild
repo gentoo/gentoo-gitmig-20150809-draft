@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.6 2004/08/27 04:19:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.7 2004/08/29 03:53:25 lv Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -227,6 +227,13 @@ host_def_setup() {
 		# Don't use /lib64 ..
 		# Replaces 0181_all_4.3.0-amd64-nolib64.patch
 		echo "#define HaveLib64 NO" >> config/cf/host.def
+
+		# incredibly useful on amd64, especially since it may fix the
+		# hardened gcc issue with building gdm and kdebase
+		if use amd64
+		then
+			echo "#define StaticNeedsPicForShared YES" >> config/cf/host.def
+		fi
 
 		# Set location of DRM source to be installed
 		echo "#define InstSrcDir ${ROOT}/usr/src/${PF}" >> config/cf/host.def

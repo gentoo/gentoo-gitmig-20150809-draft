@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.96 2004/08/25 07:35:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.97 2004/08/29 03:53:25 lv Exp $
+
+  28 Aug 2004; Travis Tilley <lv@gentoo.org> xorg-x11-6.7.99.902.ebuild:
+  added a host.def define (StaticNeedsPicForShared) for amd64 that fixes the
+  problem with building gdm or kdebase PIE
 
   25 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.99.902.ebuild:
