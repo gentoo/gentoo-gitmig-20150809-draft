@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.49 2003/09/27 14:54:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.50 2003/09/27 17:25:59 caleb Exp $
+
+  27 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdeadmin-2.2.2.ebuild,
+  kdeadmin-2.2.2.ebuild, kdeadmin-3.1.1-r2.ebuild, kdeadmin-3.1.1-r2.ebuild,
+  kdeadmin-3.1.3.ebuild, kdeadmin-3.1.3.ebuild:
+  removing stale versions
 
 *kdeadmin-3.2.0_alpha2 (27 Sep 2003)
 

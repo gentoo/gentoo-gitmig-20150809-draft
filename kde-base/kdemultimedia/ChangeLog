@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.59 2003/09/26 17:30:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.60 2003/09/27 17:31:34 caleb Exp $
+
+  27 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdemultimedia-2.2.2-r1.ebuild,
+  kdemultimedia-2.2.2-r1.ebuild, kdemultimedia-3.1.1.ebuild,
+  kdemultimedia-3.1.1.ebuild, kdemultimedia-3.1.3-r1.ebuild,
+  kdemultimedia-3.1.3-r1.ebuild, kdemultimedia-3.1.3.ebuild,
+  kdemultimedia-3.1.3.ebuild, kdemultimedia-3.1.4.ebuild,
+  kdemultimedia-3.1.4.ebuild, files/kdemultimedia-2.2.2-r1-gentoo.diff,
+  files/kdemultimedia-3.1.1-gentoo-timidity.diff,
+  files/kdemultimedia-3.1.1-ln-sf.diff, files/kdemultimedia-3.1.3-gcc33.diff,
+  files/kdemultimedia-3.1.3-gentoo-timidity.diff,
+  files/kdemultimedia-3.1.3-ln-sf.diff:
+  removing stale versions
 
   26 Sep 2003; Jason Wever <weeve@gentoo.org> kdemultimedia-3.1.4-r1.ebuild:
   Added sparc keyword.

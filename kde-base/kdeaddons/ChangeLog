@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.51 2003/09/26 17:33:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.52 2003/09/27 17:25:39 caleb Exp $
+
+  27 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdeaddons-2.2.2-r1.ebuild,
+  kdeaddons-2.2.2-r1.ebuild, kdeaddons-3.1.1.ebuild, kdeaddons-3.1.1.ebuild,
+  kdeaddons-3.1.3.ebuild, kdeaddons-3.1.3.ebuild:
+  removing stale versions
 
   26 Sep 2003; Jason Wever <weeve@gentoo.org> kdeaddons-3.1.4.ebuild:
   Added sparc keyword.
