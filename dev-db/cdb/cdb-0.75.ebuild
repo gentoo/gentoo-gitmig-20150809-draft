@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.11 2003/11/14 21:24:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.12 2003/11/21 07:49:23 mr_bones_ Exp $
 
 inherit eutils gcc
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="x86 alpha"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4
 	app-arch/tar
 	app-arch/gzip"
 
@@ -20,6 +21,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-errno.diff
+
+	sed -i \
+		-e 's/head -1/head -n 1/g' Makefile || \
+			die "sed Makefile failed"
 }
 
 src_compile() {
@@ -30,10 +35,12 @@ src_compile() {
 }
 
 src_install() {
-	dobin cdbdump cdbget cdbmake cdbmake-12 cdbmake-sv cdbstats cdbtest
-	newlib.a cdb.a libcdb.a
+	dobin cdbdump cdbget cdbmake cdbmake-12 cdbmake-sv cdbstats cdbtest || \
+		die "dobin failed"
+	newlib.a cdb.a libcdb.a || die "newlib.a failed"
 	insinto /usr/include
-	doins cdb.h
+	doins cdb.h || die "doins failed"
 
-	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
+	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION || \
+		die "dodoc failed"
 }
