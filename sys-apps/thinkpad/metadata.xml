@@ -1,13 +1,6 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>karltk@gentoo.org</email>
-  <name>Karl Trygve Kalleberg</name>
-  <description>Primary maintainer</description>
-</maintainer>
-<longdescription>
-Kernel driver modules for the IBM Thinkpad laptop series.
-</longdescription>
+<herd>base-system</herd>
 </pkgmetadata>

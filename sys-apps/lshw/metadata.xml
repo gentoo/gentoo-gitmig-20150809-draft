@@ -1,12 +1,6 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>mholzer@gentoo.org</email>
-  <name>Martin Holzer</name>
-</maintainer>
-<longdescription>
-lshw is a small tool to extract detailed information  on  the  hardware configuration of the machine. It can report exact memory configuration, firmware version, mainboard configuration, CPU version and speed, cache configuration,  bus  speed, etc. on DMI-capable x86 systems and on some PowerPC machines (PowerMac G4 is known to work).
-</longdescription>
+<herd>base-system</herd>
 </pkgmetadata>

@@ -1,10 +1,6 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>This Package Lacks Primary Maintainer</description>
-	</maintainer>
-	<longdescription>Secure locate provides a secure way to index and quickly search for files on your system. A drop-in replacement for locate</longdescription>
+<herd>base-system</herd>
 </pkgmetadata>

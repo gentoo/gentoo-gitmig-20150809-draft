@@ -1,30 +1,6 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>karltk@gentoo.org</email>
-  <name>Karl Trygve Kalleberg</name>
-  <description>Temporary maintainer, Description of the maintainership</description> -->
-</maintainer>
-
-<longdescription>
-tpctl is a package of configuration tools for Linux. 
-
-The centrepiece of the package is tpctl, a program that does some of
-what PS2.EXE does under DOS and the ThinkPad Configuration program does
-under Windows.  (See the README file for a comparison of tpctl's
-features with those of PS2.EXE.  You can consult this in combination
-with this compendium of all the PS2.EXE help outputs on my ThinkPad
-600.) 
-
-tpctl gives the user access to all the functions of the SMAPI BIOS that
-are documented in the various ThinkPad Technical Reference manuals.  It
-can also control the resources used by the parallel and serial ports. 
-The USAGE output and the README file should give a rough idea of what
-the program can do.
-
-tpctl accesses SMAPI and hardware resources through the drivers provided
-in the thinkpad package. 
-</longdescription>
+<herd>base-system</herd>
 </pkgmetadata>

@@ -1,17 +1,6 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-	<email>pebenito@gentoo.org</email>
-	<name>Chris PeBenito</name>
-	<description>Maintainer</description>
-</maintainer>
-<longdescription>
-Mkinitrd creates filesystem images for use as initial ramdisk (initrd)
-images.  These ramdisk images are often used to preload the block
-device modules (SCSI, RAID or LVM) needed to access the root filesystem.
-
-Mkinitrd also does the inital policy load for SELinux users.
-</longdescription>
+<herd>base-system</herd>
 </pkgmetadata>
