@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6111-r3.ebuild,v 1.3 2004/11/30 01:25:56 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6111-r3.ebuild,v 1.4 2004/12/05 12:45:35 johnm Exp $
 
 inherit eutils linux-mod
 
@@ -39,7 +39,7 @@ BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} SYSOUT=${KV_OUT_DIR}"
 
 mtrr_check() {
 	ebegin "Checking for MTRR support"
-	getfilevar_isset CONFIG_MTRR ${KV_OUT_DIR}/.config
+	linux_chkconfig_present MTRR
 	eend $?
 
 	if [ "$?" != 0 ]
@@ -47,7 +47,8 @@ mtrr_check() {
 		eerror "This version needs MTRR support for most chipsets!"
 		eerror "Please enable MTRR support in your kernel config, found at:"
 		eerror
-		eerror "  Processor type and features -> [*] MTRR (Memory Type Range Register) support"
+		eerror "  Processor type and features"
+		eerror "    [*] MTRR (Memory Type Range Register) support"
 		eerror
 		eerror "and recompile your kernel ..."
 		die "MTRR support not detected!"

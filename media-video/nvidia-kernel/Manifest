@@ -1,21 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9e3d151cbb86b10e80feb4e57caf8a51 nvidia-kernel-1.0.6629.ebuild 4640
+MD5 6ec1ac8788c77524bd37df3829654c7f nvidia-kernel-1.0.6111-r3.ebuild 4487
 MD5 dda9732bf59be952f0d0e3e89239096b ChangeLog 26695
 MD5 c84a79e7d9b69a204003fb8c2dbaad01 metadata.xml 297
-MD5 224654d1abb7460eea761e73ba5b8ac1 nvidia-kernel-1.0.6629.ebuild 4650
-MD5 03040575eac994e7bfb5dce6fa3bba10 nvidia-kernel-1.0.6111-r3.ebuild 4498
-MD5 d8fcf2021aa68584d4a4d9e96b671da0 files/nvidia 501
-MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629 163
 MD5 ed1e098d85579c75542ef0a49ee4dd5c files/digest-nvidia-kernel-1.0.6111-r3 163
+MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629 163
+MD5 d8fcf2021aa68584d4a4d9e96b671da0 files/nvidia 501
 MD5 762e6f6e16aa6dd5b2469e99fe8decd3 files/1.0.6111/nv-pci_find_class.patch 2903
-MD5 c2b155f40d7b904f07550e8e326969c2 files/1.0.6111/nv-remap-range.patch 5715
-MD5 29eafcaf7ab5d59dd90d3d3243bf57c3 files/1.0.6111/nv_enable_pci.patch 3640
-MD5 5177339888e44bb5f4b6124fa5830e7f files/1.0.6111/vmalloc-reserve.patch 542
 MD5 b5b7f947ffb9e6c19f7457ff7c14d0db files/1.0.6111/conftest_koutput_includes.patch 1082
 MD5 14924b09123b075f910c73316baff848 files/1.0.6111/power-suspend-2.6.9-changes.patch 856
-MD5 e70739410861defb6bf3d40f2706d554 files/1.0.6629/nv-pgd_offset.patch 3139
-MD5 0009ccc8f3896f22bad06fd549639072 files/1.0.6629/nv-pgprot-speedup.patch 1518
+MD5 5177339888e44bb5f4b6124fa5830e7f files/1.0.6111/vmalloc-reserve.patch 542
+MD5 29eafcaf7ab5d59dd90d3d3243bf57c3 files/1.0.6111/nv_enable_pci.patch 3640
+MD5 c2b155f40d7b904f07550e8e326969c2 files/1.0.6111/nv-remap-range.patch 5715
+MD5 64d76075a90dedc83f1dc971389c910e files/1.0.6629/nv-shutup-warnings.patch 712
+MD5 c3d0a0f59fa6b06a5ee139fb01858287 files/1.0.6629/nv-disable-preempt-on-smp_processor_id.patch 542
 MD5 dbf80a2cbaf69a10521429e1b2a7e10c files/1.0.6629/conftest_koutput_includes.patch 1082
 MD5 5aef5c6a394896bbb8392816f6795147 files/1.0.6629/nv-amd64-shutup-warnings.patch 902
-MD5 c3d0a0f59fa6b06a5ee139fb01858287 files/1.0.6629/nv-disable-preempt-on-smp_processor_id.patch 542
 MD5 ddeae194df6bb2112d7de723df8d84c2 files/1.0.6629/nv-fix-memory-limit.patch 18398
-MD5 64d76075a90dedc83f1dc971389c910e files/1.0.6629/nv-shutup-warnings.patch 712
+MD5 0009ccc8f3896f22bad06fd549639072 files/1.0.6629/nv-pgprot-speedup.patch 1518
+MD5 e70739410861defb6bf3d40f2706d554 files/1.0.6629/nv-pgd_offset.patch 3139
 MD5 7c9db721d244f6ca709e2b8003ce4e0d files/1.0.6629/nv-vm_flags-no-VM_LOCKED.patch 677
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBswL5KiUX0BdHiZkRAgmaAJ9oI65QFKUI1wZdYPEL2Ms0LYRhmwCfRD1J
+TjWr9Z7f0muTVHplwrRhLOQ=
+=4tgu
+-----END PGP SIGNATURE-----
