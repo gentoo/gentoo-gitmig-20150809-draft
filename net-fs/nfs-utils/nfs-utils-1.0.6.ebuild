@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6.ebuild,v 1.1 2003/09/18 17:15:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6.ebuild,v 1.2 2003/09/23 17:29:49 drobbins Exp $
 
 IUSE="tcpd"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://nfs.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~arm ~hppa ~amd64"
+KEYWORDS="ia64 ~x86 ~ppc ~alpha ~sparc ~arm ~hppa ~amd64"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )"
 RDEPEND="${DEPEND} >=net-nds/portmap-5b-r6"
