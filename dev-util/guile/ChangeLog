@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.32 2004/06/25 02:35:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.33 2004/09/19 15:20:01 kugelfang Exp $
+
+*guile-1.6.4-r2 (19 Sep 2004)
+
+  19 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> +guile-1.6.4-r2.ebuild:
+  Bumped to version 1.6.4-r2. This version is only necessary for gnucash on
+  amd64. It disables deprecations that leave undefined references in shared
+  libraries.
 
   13 May 2004; Michael McCabe <randy@gentoo.org> guile-1.6.4-r1.ebuild:
   Added s390 keywords
