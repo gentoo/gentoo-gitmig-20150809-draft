@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r3.ebuild,v 1.4 2004/10/20 18:53:02 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r3.ebuild,v 1.5 2004/10/22 10:47:01 eldad Exp $
 
 inherit eutils
 
@@ -237,7 +237,7 @@ pkg_postinst() {
 	fi
 
 	einfo
-	einfo "If you are using distributed monitoring, checkout the contrib scripts."
+	einfo "If you are using distributed monitoring, check the contrib scripts."
 	einfo "configure the central nagios server for the nsca in /etc/conf.d/nagios."
 	einfo
 	einfo "If your kernel has /proc protection, nagios"
