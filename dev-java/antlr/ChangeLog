@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.14 2004/01/19 12:38:33 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.15 2004/01/20 05:25:53 strider Exp $
+
+  20 Jan 2004; Adrian Almenar <strider@gentoo.org> antlr-2.7.2.ebuild:
+  Stable on sparc.
 
   19 Jan 2004; Adrian Almenar <strider@gentoo.org> antlr-2.7.2.ebuild:
   Added ~ppc keyword.
