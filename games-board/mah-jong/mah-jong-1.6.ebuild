@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.6.ebuild,v 1.1 2003/11/05 10:04:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.6.ebuild,v 1.2 2003/11/05 10:06:30 mr_bones_ Exp $
 
 inherit games
 
@@ -34,7 +34,7 @@ src_unpack() {
 		-e "/^MANDIR =/ s:man/man1:/usr/share/man/man6:" \
 		-e "/^MANSUFFIX =/ s:1:6:" \
 		-e "/^CFLAGS =/ s:=:= ${CFLAGS}:" \
-		-e "/^TILESETPATH=/ s:NULL:\"${GAMES_DATADIR}/${PN}\":" Makefile || \
+		-e "/^TILESETPATH=/ s:NULL:\"${GAMES_DATADIR}/${PN}/\":" Makefile || \
 			die "sed Makefile failed"
 }
 
