@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/cgkit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.1 2004/07/30 08:55:49 chrb Exp $
+
+*cgkit-1.1.0 (30 Jul 2004)
+
+  30 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +cgkit-1.1.0.ebuild:
+  New package
+
