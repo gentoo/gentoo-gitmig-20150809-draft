@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.6.ebuild,v 1.2 2004/08/15 21:36:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.6.ebuild,v 1.3 2004/08/16 07:35:32 eldad Exp $
 
 inherit libtool flag-o-matic gcc eutils
 
@@ -33,21 +33,14 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
+src_compile() {
 
 	replace-flags -O3 -O
 	replace-flags -O2 -O
+
 	# Fix gcc-3.4 segfault #49238
-	[ "`gcc-version`" == "3.4" ] && epatch ${FILESDIR}/0.10.6-gcc34.patch
+	[ "`gcc-version`" == "3.4" ] && append-flags -fno-unroll-loops
 
-	# running a full elibtoolize seems to break things in this
-	# package... see bug 41831 (17 Feb 2004 agriffis)
-	# elibtoolize --patch-only
-}
-
-src_compile() {
 	local myconf="
 		$(use_with ssl)
 		$(use_enable ipv6)
