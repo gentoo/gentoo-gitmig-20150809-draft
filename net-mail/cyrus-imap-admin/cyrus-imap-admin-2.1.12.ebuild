@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.12.ebuild,v 1.7 2003/07/13 13:32:32 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.12.ebuild,v 1.8 2003/09/05 08:43:07 msterret Exp $
 
 inherit perl-module eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-    	>=dev-lang/perl-5.6.1
+	>=dev-lang/perl-5.6.1
 	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
@@ -43,7 +43,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	
+
 	use afs && myconf="--with-afs" \
 		|| myconf="--without-afs"
 
@@ -83,12 +83,12 @@ src_install () {
 	echo "Installation of perl-modules"
 	export DESTDIR=${D}
 	cd ${S}/perl/imap
-		perl-module_src_prep
-                perl-module_src_compile
-                perl-module_src_install
-        cd ${S}/perl/sieve
-		perl-module_src_prep
-                perl-module_src_compile
-                perl-module_src_test
-                perl-module_src_install
+	perl-module_src_prep
+	perl-module_src_compile
+	perl-module_src_install
+	cd ${S}/perl/sieve
+	perl-module_src_prep
+	perl-module_src_compile
+	perl-module_src_test
+	perl-module_src_install
 }
