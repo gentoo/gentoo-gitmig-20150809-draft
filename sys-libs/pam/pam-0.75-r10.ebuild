@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.1 2002/10/26 10:11:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.2 2002/11/03 10:50:00 azarah Exp $
 
 IUSE="berkdb"
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-libs/cracklib-2.7-r3
 	>=sys-devel/automake-1.6
 	>=sys-devel/flex-2.5.4a-r5
 	berkdb? ( ~sys-libs/db-1.85
-	          ~sys-libs/db-3.2.9 )"
+	          >=sys-libs/db-3.2.9 )"
 
 src_unpack() {
 	unpack ${A}
@@ -48,6 +48,10 @@ src_unpack() {
 				die "Failed Patch: ${x##*/}!"
 		fi
 	done
+
+	# Get pam_userdb to link to db3 or db4 if they exist
+	# <azarah@gentoo.org> (3 Nov 2002)
+	cd ${S}; patch -p1 < ${FILESDIR}/${P}-pam_userdb-use-db3.patch || die
 
 	for readme in modules/pam_*/README
 	do

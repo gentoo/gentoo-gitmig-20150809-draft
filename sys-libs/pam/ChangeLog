@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.14 2002/10/26 10:11:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.15 2002/11/03 10:50:00 azarah Exp $
+
+  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r10.ebuild :
+
+  Add pam-0.75-pam_userdb-use-db3.patch to get pam_userdb to link to
+  db3 or db4 if present, rather than libndbm, as that causes unresolved
+  symbols.
 
 *pam-0.75-r10 (26 Oct 2002)
 
