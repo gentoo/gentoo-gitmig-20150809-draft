@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.22 2003/01/15 16:18:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.23 2003/01/16 15:52:21 agriffis Exp $
+
+  16 Jan 2003; Aron Griffis <agriffis@gentoo.org> screen-3.9.13-r3.ebuild :
+  Fix bug 12683 again.  Last fix broke screen at run-time.
 
   15 Jan 2003; Aron Griffis <agriffis@gentoo.org> screen-3.9.13-r3.ebuild :
   Fixup term.h to fix bug 12683.  Believe this is an upstream problem in
