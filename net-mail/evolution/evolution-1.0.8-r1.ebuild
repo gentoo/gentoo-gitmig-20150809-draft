@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r1.ebuild,v 1.3 2002/08/15 14:49:06 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r1.ebuild,v 1.4 2002/08/20 15:18:08 gerk Exp $
 
 #provide Xmake and Xemake
 
@@ -31,8 +31,8 @@ RDEPEND=">=gnome-extra/bonobo-conf-0.14
 	>=dev-libs/libxml-1.8.16
 	=gnome-base/gnome-vfs-1.0*		
 	>=gnome-base/gnome-print-0.34
-	>=app-text/scrollkeeper-0.3.10-r1
 	>=dev-util/gob-1.0.12
+	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl?     ( >=net-www/mozilla-0.9.9 )
 	ldap?    ( >=net-nds/openldap-2.0 )
 	mozilla? ( >=net-www/mozilla-0.9.9 )
