@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.304 2004/08/13 20:14:05 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.305 2004/08/15 02:25:56 lv Exp $
+
+  14 Aug 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r6.ebuild,
+  gcc-3.4.1-r2.ebuild, gcc-3.4.1.ebuild:
+  -mcpu is deprecated on amd64 and x86
 
   13 Aug 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.1-r2.ebuild:
   stable on amd64 :)

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.7 2004/08/13 20:14:05 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.8 2004/08/15 02:25:56 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -143,15 +143,15 @@ do_filter_flags() {
 	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	replace-flags -O? -O2
 
-	# -mcpu is deprecated, and will actually break the gcc build on
-	# a few archs... so we change it to mtune, and then strip unsupported
-	# flags so we dont break versions of gcc that dont understand mtune.
-	setting="`get-flag mcpu`"
-	[ ! -z "${setting}" ] && \
-		replace-flags -mcpu="${setting}" -mtune="${setting}" && \
-		ewarn "-mcpu is deprecated\a\a\a" && \
-		sleep 5
-	strip-unsupported-flags
+	# -mcpu is deprecated on these archs, and possibly others
+	if use amd64 || use x86 ; then
+		setting="`get-flag mcpu`"
+		[ ! -z "${setting}" ] && \
+			replace-flags -mcpu="${setting}" -mtune="${setting}" && \
+			ewarn "-mcpu is deprecated on your arch\a\a\a" && \
+			sleep 5
+		strip-unsupported-flags
+	fi
 
 	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
 	# build of non-default-abi libraries.
