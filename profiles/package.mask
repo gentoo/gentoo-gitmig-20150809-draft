@@ -36,6 +36,7 @@ media-libs/nurbs++
 # These ones are untested, and introduce new stuff
 # azarah - 28 May 2002
 =x11-base/xfree-4.2.0-r11
+=net-www/mozilla-1.0-r2
 =net-www/mozilla-1.0_rc3-r2
 =net-www/mozilla-1.0_rc3-r50
 =net-www/mozilla-1.0_rc3-r51
