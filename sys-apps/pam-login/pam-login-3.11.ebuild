@@ -1,6 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.1 2003/05/18 23:50:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.2 2003/05/20 08:00:11 kumba Exp $
+
+
+inherit gnuconfig
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -21,6 +24,11 @@ DEPEND="virtual/glibc
 	>=sys-apps/shadow-4.0.2-r5"
 
 src_compile() {
+
+	# Fix configure scripts to recognize linux-mips
+	# (imports updated config.sub and config.guess)
+	gnuconfig_update
+
 	local myconf=""
 	use nls ||myconf="--disable-nls"
 
