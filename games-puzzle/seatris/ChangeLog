@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/seatris
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/ChangeLog,v 1.1 2004/12/11 08:12:04 mr_bones_ Exp $
+
+*seatris-0.0.14 (11 Dec 2004)
+
+  11 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +seatris-0.0.14.ebuild:
+  initial commit - in response to bug #54939
+
