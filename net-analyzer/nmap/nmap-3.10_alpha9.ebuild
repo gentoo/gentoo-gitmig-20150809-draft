@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.10_alpha9.ebuild,v 1.2 2003/02/13 13:48:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.10_alpha9.ebuild,v 1.3 2003/02/25 14:10:31 gmsoft Exp $
 
 inherit gcc
 
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc sparc ~alpha"
+KEYWORDS="~x86 ~ppc sparc ~alpha hppa"
 
 src_compile() {
 	# fix header
