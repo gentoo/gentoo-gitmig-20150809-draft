@@ -24,3 +24,4 @@ move net-news/brag net-nntp/brag
 move net-news/glitter net-nntp/glitter
 move net-news/gnewspost net-nntp/gnewspost
 move net-news/klibido net-nntp/klibido
+move net-news/leafnode net-nntp/leafnode
