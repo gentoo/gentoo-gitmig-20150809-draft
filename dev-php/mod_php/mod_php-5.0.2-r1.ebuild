@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.2-r1.ebuild,v 1.1 2005/01/13 13:08:57 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.2-r1.ebuild,v 1.2 2005/01/14 14:42:46 trapni Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -103,7 +103,7 @@ src_install() {
 	if [ -n "${USE_APACHE2}" ] ; then
 		einfo "Installing a Apache2 config for PHP (70_mod_php5.conf)"
 		insinto ${APACHE2_MODULES_CONFDIR}
-		doins ${FILESDIR}/70_mod_php5.conf
+		doins "${FILESDIR}/5.0.2-r170_mod_php5.conf"
 	else
 		einfo "Installing a Apache config for PHP (mod_php5.conf)"
 		insinto ${APACHE_MODULES_CONFDIR}
