@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7-r1.ebuild,v 1.1 2002/08/22 17:58:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7-r1.ebuild,v 1.2 2002/09/07 09:18:36 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,15 +12,13 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
-DEPEND="virtual/glibc
-	>=sys-libs/db-3.2
+DEPEND=">=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
 	>=dev-libs/openssl-0.9.6d
-	cyrus-gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	cyrus-berkdb? ( >=sys-libs/db-3.2.9 )
-	cyrus-ldap? ( >=net-nds/openldap-2.0.25 )
-	cyrus-mysql? ( >=dev-db/mysql-3.23.51 )"
-RDEPEND="${DEPEND}"
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	berkdb? ( >=sys-libs/db-3.2.9 )
+	ldap? ( >=net-nds/openldap-2.0.25 )
+	mysql? ( >=dev-db/mysql-3.23.51 )"
 
 src_unpack() {
 
@@ -35,15 +33,15 @@ src_compile() {
 
 	local myconf
 
-	use sasl-ldap && myconf="${myconf} --with-ldap" \
+	use ldap && myconf="${myconf} --with-ldap" \
 		|| myconf="${myconf} --without-ldap"
 
-	use sasl-mysql && myconf="${myconf} --with-mysql" \
+	use mysql && myconf="${myconf} --with-mysql" \
 		|| myconf="${myconf} --without-mysql"
 
-	if use cyrus-berkdb; then
+	if use berkdb; then
 		myconf="${myconf} --with-dblib=berkeley"
-	elif use cyrus-gdbm; then
+	elif use gdbm; then
 		myconf="${myconf} --with-dblib=gdbm --with-gdbm=/usr"
 	else
 		myconf="${myconf} --with-dblib=berkeley"
