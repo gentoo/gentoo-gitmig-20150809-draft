@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.683 2004/10/11 23:18:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.684 2004/10/12 22:12:55 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -365,6 +365,7 @@ media-sound/mpd:droproot - Run the daemon as non-root by default.
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:faad - Enables faad2 support
+media-sound/sound-juicer:hal - Enable Hardware Abstraction Layer (HAL) support
 media-sound/tagtool:mp3 - Enables id3lib support for tagging mp3's
 media-sound/terminatorx:sox - Enable sox support
 media-tv/freevo:matrox - Enable output support on Matrox cards
