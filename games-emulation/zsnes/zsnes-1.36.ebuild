@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.36.ebuild,v 1.2 2004/01/05 02:53:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.36.ebuild,v 1.3 2004/01/05 03:17:34 vapier Exp $
 
 inherit games
 
@@ -32,7 +32,6 @@ src_compile() {
 src_install() {
 	dogamesbin src/zsnes
 	newman src/linux/zsnes.1 zsnes.6
-	cd ..
 	dodoc *.txt linux/*
 	prepgamesdirs
 }
