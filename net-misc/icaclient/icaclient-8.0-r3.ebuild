@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-8.0.ebuild,v 1.2 2004/09/18 19:38:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-8.0-r3.ebuild,v 1.1 2004/12/12 16:36:27 weeve Exp $
 
 DESCRIPTION="ICA Client"
 HOMEPAGE="http://www.citrix.com/download/unix-downloads.asp"
@@ -9,7 +9,7 @@ SRC_URI="ICAClient-8.0-1.i386.rpm"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~x86"
-IUSE=""
+IUSE="gnome"
 RESTRICT="fetch"
 
 RDEPEND="virtual/libc
@@ -42,12 +42,18 @@ src_install() {
 	doins lib/ICAClient/eula.txt
 	doins lib/ICAClient/npica.so
 	doins lib/ICAClient/readme.txt
+	doins lib/ICAClient/libctxssl.so
 	insinto /opt/ICAClient/cache
 	doins lib/ICAClient/cache/*
 	insinto /opt/ICAClient/config
 	doins lib/ICAClient/config/*
+	doins lib/ICAClient/config/.*
 	insinto /opt/ICAClient/help
 	doins lib/ICAClient/help/*
+	insinto /opt/ICAClient/nls
+	dosym en /opt/ICAClient/nls/C
+	insinto /opt/ICAClient/nls/en
+	doins lib/ICAClient/nls/en/*
 	insinto /opt/ICAClient/icons
 	doins lib/ICAClient/icons/*
 	insinto /opt/ICAClient/keyboard
@@ -64,4 +70,11 @@ src_install() {
 	doexe lib/ICAClient/wfica
 	insinto /etc/env.d
 	doins ${FILESDIR}/10ICAClient
+	insinto /usr/lib/nsbrowser/plugins
+	dosym /opt/ICAClient/npica.so /usr/lib/nsbrowser/plugins/npica.so
+
+	if [ use gnome ]; then
+		insinto /usr/share/applications
+		doins lib/ICAClient/desktop/*.desktop
+	fi	
 }
