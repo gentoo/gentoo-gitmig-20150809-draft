@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.1 2003/11/15 06:53:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.2 2003/12/09 17:52:25 lanius Exp $
 
 DESCRIPTION="tcng - Traffic Control Next Generation"
 HOMEPAGE="http://tcng.sourceforge.net/"
@@ -8,7 +8,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="doc? ( app-text/ghostscript app-text/tetex media-gfx/transfig )
+DEPEND="doc? ( virtual/ghostscript app-text/tetex media-gfx/transfig )
 	dev-lang/perl
 	virtual/os-headers
 	sys-apps/iproute"
