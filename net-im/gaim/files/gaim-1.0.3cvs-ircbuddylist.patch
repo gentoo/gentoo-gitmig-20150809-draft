@@ -1,0 +1,123 @@
+? AUTHORS.recv
+? NEWS.stu
+? gaim-1.0.0.tar.gz
+? gaim-1.0.1cvs.tar.gz
+? gaim.bin.rcv
+? gaim.rcv-foo-blah
+? stugen.sh
+? plugins/newline.c
+? plugins/yahoo_im_buzz.c
+Index: plugins/statenotify.c
+===================================================================
+RCS file: /cvsroot/gaim/gaim/plugins/statenotify.c,v
+retrieving revision 1.21.2.1
+diff -u -p -r1.21.2.1 statenotify.c
+--- plugins/statenotify.c	3 Sep 2004 21:34:04 -0000	1.21.2.1
++++ plugins/statenotify.c	10 Nov 2004 16:41:38 -0000
+@@ -18,6 +18,7 @@ write_status(GaimBuddy *buddy, const cha
+ 	GaimConversation *conv;
+ 	const char *who;
+ 	char buf[256];
++	char *escaped;
+ 
+ 	conv = gaim_find_conversation_with_account(buddy->name, buddy->account);
+ 
+@@ -25,8 +26,10 @@ write_status(GaimBuddy *buddy, const cha
+ 		return;
+ 
+ 	who = gaim_buddy_get_alias(buddy);
++	escaped = g_markup_escape_text(who, -1);
+ 
+-	g_snprintf(buf, sizeof(buf), message, who);
++	g_snprintf(buf, sizeof(buf), message, escaped);
++	g_free(escaped);
+ 
+ 	gaim_conversation_write(conv, NULL, buf, GAIM_MESSAGE_SYSTEM, time(NULL));
+ }
+Index: src/gtkdialogs.c
+===================================================================
+RCS file: /cvsroot/gaim/gaim/src/gtkdialogs.c,v
+retrieving revision 1.11.2.11
+diff -u -p -r1.11.2.11 gtkdialogs.c
+--- src/gtkdialogs.c	23 Oct 2004 15:25:33 -0000	1.11.2.11
++++ src/gtkdialogs.c	10 Nov 2004 16:41:40 -0000
+@@ -874,15 +874,18 @@ static void
+ gaim_gtkdialogs_remove_chat_cb(GaimChat *chat)
+ {
+ 	char *name = NULL;
++	GaimAccount *account;
+ 	GaimConversation *conv = NULL;
+ 
+-	if (GAIM_PLUGIN_PROTOCOL_INFO(chat->account->gc->prpl)->get_chat_name != NULL)
+-		name = GAIM_PLUGIN_PROTOCOL_INFO(chat->account->gc->prpl)->get_chat_name(chat->components);
++	account = chat->account;
++
++	if (GAIM_PLUGIN_PROTOCOL_INFO(account->gc->prpl)->get_chat_name != NULL)
++		name = GAIM_PLUGIN_PROTOCOL_INFO(account->gc->prpl)->get_chat_name(chat->components);
+ 
+ 	gaim_blist_remove_chat(chat);
+ 
+ 	if (name != NULL) {
+-		conv = gaim_find_conversation_with_account(name, chat->account);
++		conv = gaim_find_conversation_with_account(name, account);
+ 		g_free(name);
+ 	}
+ 
+Index: src/gtkpounce.c
+===================================================================
+RCS file: /cvsroot/gaim/gaim/src/gtkpounce.c,v
+retrieving revision 1.60
+diff -u -p -r1.60 gtkpounce.c
+--- src/gtkpounce.c	30 Aug 2004 01:40:07 -0000	1.60
++++ src/gtkpounce.c	10 Nov 2004 16:41:40 -0000
+@@ -948,6 +948,9 @@ pounce_cb(GaimPounce *pounce, GaimPounce
+ 	{
+ 		char tmp[1024];
+ 		const char *name_shown;
++		char *escaped;
++
++		escaped = g_markup_escape_text(alias, -1);
+ 
+ 		/*
+ 		 * Here we place the protocol name in the pounce dialog to lessen
+@@ -971,7 +974,9 @@ pounce_cb(GaimPounce *pounce, GaimPounce
+ 				   (events & GAIM_POUNCE_AWAY) ?
+ 				   _("%s has gone away. (%s)") :
+ 				   _("Unknown pounce event. Please report this!"),
+-				   alias, gaim_account_get_protocol_name(account));
++				   escaped, gaim_account_get_protocol_name(account));
++
++		g_free(escaped);
+ 
+ 		/*
+ 		 * Ok here is where I change the second argument, title, from
+Index: src/gtkprefs.c
+===================================================================
+RCS file: /cvsroot/gaim/gaim/src/gtkprefs.c,v
+retrieving revision 1.204.2.3
+diff -u -p -r1.204.2.3 gtkprefs.c
+--- src/gtkprefs.c	2 Oct 2004 00:11:54 -0000	1.204.2.3
++++ src/gtkprefs.c	10 Nov 2004 16:41:40 -0000
+@@ -636,7 +636,7 @@ gint gaim_sort_smileys (GtkTreeModel	*mo
+ 						gpointer		userdata)
+ {
+ 	gint ret = 0;
+-	gchar *name1, *name2;
++	gchar *name1 = NULL, *name2 = NULL;
+ 
+ 	gtk_tree_model_get(model, a, 3, &name1, -1);
+ 	gtk_tree_model_get(model, b, 3, &name2, -1);
+@@ -645,8 +645,11 @@ gint gaim_sort_smileys (GtkTreeModel	*mo
+ 		if (!(name1 == NULL && name2 == NULL))
+ 			ret = (name1 == NULL) ? -1: 1;
+ 	} else if (!g_ascii_strcasecmp(name1, "none")) {
+-		/* Sort name1 first */
+-		ret = -1;
++		if (!g_utf8_collate(name1, name2))
++			ret = 0;
++		else
++			/* Sort name1 first */
++			ret = -1;
+ 	} else if (!g_ascii_strcasecmp(name2, "none")) {
+ 		/* Sort name2 first */
+ 		ret = 1;
