@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 640675f64ba50f125eafbf9ed03edb6d ChangeLog 1285
+MD5 88c8ef097c682618dd9672226380a5fc ChangeLog 1456
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 244cde1f3935f9d803cd60f6dfffcb48 nbd-2.6.0.ebuild 791
-MD5 7e5a83bdd69d08aa06e3fbc88eb373be nbd-2.7.1.ebuild 820
+MD5 33e7a4e8b403057c32e294b3bada6568 nbd-2.7.1.ebuild 991
 MD5 7d72774d4a5e1921448e981852601c2c nbd-2.0-r1.ebuild 708
 MD5 f897737fcb8999f6281a2df960b05119 files/nbd-client.8 3095
 MD5 df04bcd5d2490ea5fc2bfffdddd74172 files/nbd-server.1 4432
 MD5 d958e9b80c8885d0368dfe2fe4b3ad37 files/digest-nbd-2.6.0 60
 MD5 72e5f76ef01f2de3ab00115892c61a2c files/digest-nbd-2.0-r1 58
-MD5 9c5a8a58750b833d3e7d5afd6bfccff0 files/digest-nbd-2.7.1 61
+MD5 61d64bd0afc3756d1b8848e9204f6bb8 files/digest-nbd-2.7.1 127
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA4isqHTu7gpaalycRAoNsAKDUv7foa3s9hnfFBF+vc6PvWpRnqgCfUeVE
-dwxbIDNPgFci24ZbHnhPn9E=
-=k9S3
+iD8DBQFA6bdNHTu7gpaalycRAg2eAKCA4d0fUSeappbQMz2EKE74JQw4QwCcDUMs
+l0qGVmmKsAI0LzyZs54BCdg=
+=v/sC
 -----END PGP SIGNATURE-----
