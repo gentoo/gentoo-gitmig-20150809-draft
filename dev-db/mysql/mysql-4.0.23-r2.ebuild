@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.23-r2.ebuild,v 1.5 2005/02/27 06:20:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.23-r2.ebuild,v 1.6 2005/02/27 17:56:31 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -119,7 +119,7 @@ src_unpack() {
 		#WANT_AUTOMAKE=1.7 automake
 		gnuconfig_update
 	done
-	
+
 	# upstream bug http://bugs.mysql.com/bug.php?id=7971
 	# names conflict with stuff in 2.6.10 kernel headers
 	sed -i \
