@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ptlink-services
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ChangeLog,v 1.4 2004/10/18 16:20:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ChangeLog,v 1.5 2004/11/14 15:42:58 swegener Exp $
+
+  14 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  -ptlink-services-2.24.1.ebuild:
+  Removed old ebuild.
 
 *ptlink-services-2.25.1 (18 Oct 2004)
 
