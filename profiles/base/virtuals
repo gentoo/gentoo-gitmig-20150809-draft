@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.44 2004/12/23 10:08:17 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.45 2004/12/29 18:35:56 ribosome Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -13,7 +13,7 @@ virtual/antivirus			app-antivirus/clamav
 virtual/aspell-dict			app-dicts/aspell-en
 virtual/bittorrent			net-p2p/bittorrent
 virtual/blackbox			x11-wm/blackbox
-virtual/blas				app-sci/blas-atlas
+virtual/blas				sci-libs/blas-atlas
 virtual/cdrtools			app-cdr/cdrtools
 virtual/commonlisp			dev-lisp/sbcl
 virtual/cron				sys-apps/vixie-cron
@@ -40,7 +40,7 @@ virtual/jack				media-sound/jack-audio-connection-kit
 virtual/jdk					dev-java/blackdown-jdk
 virtual/jre					dev-java/blackdown-jre
 virtual/krb5				app-crypt/mit-krb5
-virtual/lapack				app-sci/lapack-atlas
+virtual/lapack				sci-libs/lapack-atlas
 virtual/libc				sys-libs/glibc
 virtual/logger				app-admin/metalog
 virtual/lpr					net-print/cups

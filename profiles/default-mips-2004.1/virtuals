@@ -3,7 +3,7 @@ virtual/antivirus		app-antivirus/clamav
 virtual/aspell-dict		app-dicts/aspell-en
 virtual/bittorrent		net-p2p/bittorrent
 virtual/blackbox		x11-wm/blackbox
-virtual/blas			app-sci/blas-atlas
+virtual/blas			sci-libs/blas-atlas
 virtual/bootloader		sys-boot/dvhtool
 virtual/commonlisp		dev-lisp/sbcl
 virtual/cron			sys-apps/dcron
@@ -26,7 +26,7 @@ virtual/jdk			dev-java/blackdown-jdk
 virtual/jre			dev-java/blackdown-jre
 virtual/kernel			sys-kernel/mips-headers
 virtual/krb5			app-crypt/mit-krb5
-virtual/lapack			app-sci/lapack-atlas
+virtual/lapack			sci-libs/lapack-atlas
 virtual/libc			sys-libs/glibc
 virtual/linux-sources		sys-kernel/mips-sources
 virtual/logger			app-admin/sysklogd
