@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/madman
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.7 2004/07/17 09:42:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.8 2004/08/07 23:26:03 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> madman-0.91.1.ebuild,
+  madman-0.93.ebuild:
+  Typo in DESCRIPTION: extrodinaire -> extraordinaire. Bug 59717.
 
   17 Jul 2004; David Holm <dholm@gentoo.org> madman-0.93.ebuild:
   Added to ~ppc.

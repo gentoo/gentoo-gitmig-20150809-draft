@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3_check
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3_check/ChangeLog,v 1.9 2004/07/01 07:54:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3_check/ChangeLog,v 1.10 2004/08/07 23:26:47 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> mp3_check-1.98.ebuild:
+  Typo in DESCRIPTION: consistancy -> consistency. Bug 59717.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mp3_check-1.98.ebuild:

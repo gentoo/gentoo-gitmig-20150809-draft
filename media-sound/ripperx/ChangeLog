@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ripperx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.9 2004/06/25 00:20:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.10 2004/08/07 23:27:48 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> ripperx-2.3.ebuild,
+  ripperx-2.4.ebuild, ripperx-2.5.ebuild, ripperx-2.6.0.ebuild,
+  ripperx-2.6.1.ebuild:
+  Typo in DESCRIPTION: enconde -> encode. Bug 59717.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> ripperx-2.3.ebuild,
   ripperx-2.4.ebuild, ripperx-2.5.ebuild, ripperx-2.6.0.ebuild,

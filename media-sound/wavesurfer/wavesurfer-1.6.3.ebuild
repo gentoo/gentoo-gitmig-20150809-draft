@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/wavesurfer-1.6.3.ebuild,v 1.5 2004/06/25 00:29:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/wavesurfer-1.6.3.ebuild,v 1.6 2004/08/07 23:37:11 slarti Exp $
 
-DESCRIPTION="tool for recording, playing, editing, viewing and labling of audio"
+DESCRIPTION="tool for recording, playing, editing, viewing and labeling of audio"
 HOMEPAGE="http://www.speech.kth.se/wavesurfer/"
 SRC_URI="http://www.speech.kth.se/wavesurfer/${P}.tar.gz"
 

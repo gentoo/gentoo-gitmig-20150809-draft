@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.91.1.ebuild,v 1.8 2004/07/12 19:43:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.91.1.ebuild,v 1.9 2004/08/07 23:26:03 slarti Exp $
 
-DESCRIPTION="MP3 organizer/ID3 tag-editor extrodinaire"
+DESCRIPTION="MP3 organizer/ID3 tag-editor extraordinaire"
 HOMEPAGE="http://madman.sf.net"
 SRC_URI="mirror://sourceforge/madman/${P}.tar.gz"
 RESTRICT="nomirror"
