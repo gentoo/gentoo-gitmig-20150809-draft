@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.6 2000/12/01 01:37:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.7 2000/12/01 21:58:45 achim Exp $
 
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
@@ -17,8 +17,8 @@ RDEPEND="$DEPEND
 src_compile() {
 
     try ./configure --host=${CHOST} --sysconfdir=/etc/at \
-	--with-jobdir=/var/spool/cron/atjobs \
-	--with-atspool=/var/spool/cron/atspool \
+	--with-jobdir=/var/cron/atjobs \
+	--with-atspool=/var/cron/atspool \
 	--with-etcdir=/etc/at 
     try pmake 
 
@@ -44,9 +44,9 @@ src_install() {
 	dosbin atd atrun
 	for i in atjobs atspool
 	do
-	  dodir /var/spool/cron/${i}
- 	  fperms 700 /var/spool/cron/${i}
-	  fowners daemon.daemon /var/spool/cron/${i}
+	  dodir /var/cron/${i}
+ 	  fperms 700 /var/cron/${i}
+	  fowners daemon.daemon /var/cron/${i}
 	done
 	doman at.1 at_allow.5 atd.8 atrun.8
 	dodoc COPYING ChangeLog Copyright 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.ebuild,v 1.3 2000/11/30 23:14:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.ebuild,v 1.4 2000/12/01 21:58:45 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,11 +9,11 @@ DESCRIPTION="Linux console display libarary"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/ncurses/${A}
 	 ftp://ftp.gnu.org/pub/gnu/ncurses/${A}"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
-DEPEND=">=sys-libs/gpm-1.19.3"
+DEPEND=">=sys-libs/glibc-2.1.3"
 
 src_compile() {  
 	try ./configure --prefix=/usr --libdir=/lib --enable-symlinks --disable-termcap \
-	--with-gpm --with-shared --with-libtool --without-debug --with-rcs-ids --host=${CHOST}
+--with-shared --with-libtool --without-debug --with-rcs-ids --host=${CHOST}
 	try make ${MAKEOPTS}
 }
 

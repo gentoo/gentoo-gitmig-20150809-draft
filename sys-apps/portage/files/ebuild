@@ -673,10 +673,12 @@ dyn_help() {
 	echo "One or more of the following options can then be specified.  If more"
 	echo "than one option is specified, each will be executed in order."
 	echo
+	echo "  check       : test if all dependencies get resolved"
 	echo "  fetch       : download source archive(s) and patches"
 	echo "  unpack      : unpack/patch sources (auto-fetch if needed)"
 	echo "  compile     : compile sources (auto-fetch/unpack if needed)"
 	echo "  merge       : merge image into live filesystem, recording files in db"
+	echo "  remerge     : forces merge even if the package is installed"
 	echo "                (auto-fetch/unpack/compile if needed)"
 	echo "  unmerge     : remove package from live filesystem"
 	echo "  package     : create tarball package of type ${PACKAGE}"
@@ -783,7 +785,7 @@ src_menu() {
 		dyn_package
 		;;
 
-	qmerge)
+	remerge)
 		#this is meant to merge over an existing version even if it exists
 		build_depend
 		dyn_fetch
@@ -792,6 +794,10 @@ src_menu() {
 		dyn_install
 		dyn_merge
 		runtime_depend
+		;;
+	qmerge)
+		#this means to run only dyn_merge
+		dyn_merge
 		;;
  	merge)
 		#merge makes sure the package isn't already merged first

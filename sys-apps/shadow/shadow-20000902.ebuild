@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20000902.ebuild,v 1.2 2000/11/30 23:14:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20000902.ebuild,v 1.3 2000/12/01 21:58:45 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,7 +13,8 @@ DEPEND=">=sys-libs/pam-0.72"
 src_compile() {                           
 	try ./configure --disable-desrpc --with-libcrypt  \
 	--with-libcrack --with-libpam --disable-shared --host=${CHOST}
-	try make ${MAKEOPTS} LDFLAGS=\"\"
+	# Parallel make fails sometimes
+	try make LDFLAGS=\"\"
 }
 
 src_install() {                               

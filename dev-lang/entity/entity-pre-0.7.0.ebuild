@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-pre-0.7.0.ebuild,v 1.1 2000/11/18 12:27:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-pre-0.7.0.ebuild,v 1.2 2000/12/01 21:58:45 achim Exp $
 
 P=entity-pre0.7.0
 A=${P}.tar.gz
@@ -35,8 +35,9 @@ src_compile() {
 src_install () {
 
     cd ${S}
+    ldconfig ${D}/usr/lib
     export LD_LIBRARY_PATH=${D}/usr/lib
     try make DESTDIR=${D} install
-
+    ldconfig
 }
 
