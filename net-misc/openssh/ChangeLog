@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.48 2003/09/18 12:22:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.49 2003/09/18 14:46:33 aliz Exp $
+
+*openssh-3.7.1_p1-r1 (18 Sep 2003)
+
+  18 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p1-r1.ebuild :
+  Removed krb4 and afs support since they are removed according to the Announcment.
+  Ebuild cleanups.
+  Added a bunch of patches from CVS. Among them a fix for CAN-2003-0682.
 
   18 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p1.ebuild :
   Readd X509 patch. Closing #28992.
