@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/java-wakeonlan
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/ChangeLog,v 1.5 2004/10/16 18:18:31 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/ChangeLog,v 1.6 2005/02/17 17:53:03 luckyduck Exp $
+
+  17 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  java-wakeonlan-0.3.0.ebuild:
+  added missing unzip dependency. see #69831
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   java-wakeonlan-0.3.0.ebuild:

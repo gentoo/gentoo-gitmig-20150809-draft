@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/java-wakeonlan-0.3.0.ebuild,v 1.5 2004/10/16 18:18:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/java-wakeonlan-0.3.0.ebuild,v 1.6 2005/02/17 17:53:03 luckyduck Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,8 @@ IUSE="doc"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
 	>=dev-java/commons-logging-1.0.2
-	 >=dev-java/commons-cli-1.0"
+	>=dev-java/commons-cli-1.0
+	app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.3"
 
 S=${WORKDIR}/wakeonlan
