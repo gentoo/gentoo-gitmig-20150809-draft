@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdplay
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/ChangeLog,v 1.4 2003/09/20 11:58:50 jje Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/ChangeLog,v 1.5 2004/03/27 02:42:11 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> cdplay-0.8.ebuild,
+  cdplay-0.9.ebuild:
+  Stable on x86.
 
 *cdplay-0.9 (20 Sep 2003)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3.ebuild,v 1.5 2004/03/01 04:23:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3.ebuild,v 1.6 2004/03/27 02:48:34 eradicator Exp $
 
 DESCRIPTION="A SQL-based mp3-player frontend designed to work with Grip"
 HOMEPAGE="http://www.nostatic.org/ddj/"
 SRC_URI="http://www.nostatic.org/ddj/${P}.tar.gz"
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~alpha ~hppa ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ~sparc x86"
 IUSE=""
 DEPEND="dev-db/mysql
 	gnome-base/libghttp
