@@ -1,0 +1,7 @@
+MD5 a4f6addbfddcd105cbbbdceab3459e0a ChangeLog 1108
+MD5 0e818cd2e42fba4e4a7d44e912082eea gkrellsun-0.2.ebuild 674
+MD5 2d85ba5128fed9aa37c57ecf02de563d gkrellsun-0.9.1.ebuild 962
+MD5 6c44b19045cf558e30f3600461bd708b gkrellsun-0.9.ebuild 960
+MD5 c20687af4452225af3b66bec62345826 files/digest-gkrellsun-0.2 64
+MD5 601451306451179fb885bc01a1228433 files/digest-gkrellsun-0.9 64
+MD5 72aa7ba3f8586925a58b6c48db102e85 files/digest-gkrellsun-0.9.1 66

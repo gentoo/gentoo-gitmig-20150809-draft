@@ -1,0 +1,5 @@
+MD5 3c839d644bae02f88fde536b7e953ef9 ChangeLog 546
+MD5 72eb2a226a1243503b61aeea461e608a asmon-0.62.ebuild 728
+MD5 7b0913a99b68877e50ea847c8242f12d files/asmon-alpha.diff 819
+MD5 bf02e91d30bd8f286faac1484d86a30f files/asmon-cflags.diff 512
+MD5 2f3b3737e0b104f481cfd0cbd66f5ac3 files/digest-asmon-0.62 60

@@ -1,0 +1,5 @@
+MD5 7d88bcfbaf83409921945fe0d8296d51 ChangeLog 423
+MD5 f583ed0ad62e9cdeaa2e53ae5f46f89c wmsmixer-0.5.ebuild 822
+MD5 2a88cef104773c371d0b8d96362d47d5 files/digest-wmsmixer-0.5 63
+MD5 2888240d41fcb8a0569feba2cb252dfa files/gcc3.diff 398
+MD5 a6d5356a2b6f0592c0086e9c4f7d7775 files/makefile.diff 691

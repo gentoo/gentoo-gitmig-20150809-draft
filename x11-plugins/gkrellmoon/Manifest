@@ -1,0 +1,7 @@
+MD5 4a4e41205c3d0526d0ec3fb41e49e5f4 ChangeLog 1099
+MD5 ebc427a8142023d2ca561beea2b52dad gkrellmoon-0.3.ebuild 673
+MD5 2501c40790a2b5b621366b8296136f47 gkrellmoon-0.5.ebuild 674
+MD5 54d99fce6b314266474a4fb5c7dca697 gkrellmoon-0.6.ebuild 690
+MD5 2217dca19fa6d14cb2ca372a20b2d0ba files/digest-gkrellmoon-0.3 65
+MD5 aa155e4d8db318a7d29c08e522fdf8b1 files/digest-gkrellmoon-0.5 65
+MD5 8a609e41089285f7d58fb47c22ac80aa files/digest-gkrellmoon-0.6 65

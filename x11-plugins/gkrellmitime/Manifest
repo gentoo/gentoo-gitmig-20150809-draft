@@ -1,0 +1,7 @@
+MD5 b24bd86f6e774b1ee02d04ccb6197b34 ChangeLog 1316
+MD5 08c8ef90a52c830dae42eff819cefd87 gkrellmitime-0.4.ebuild 637
+MD5 c6cc89fcb9959a5e4b9804d7e060197a gkrellmitime-0.5.1.ebuild 733
+MD5 90aaae55787e06ba85f354651e6fa34c gkrellmitime-1.0.ebuild 647
+MD5 503a4f552ef762dc99302f2cd842717c files/digest-gkrellmitime-0.4 67
+MD5 efa4b3b7158eaf277dad14da3b096826 files/digest-gkrellmitime-0.5.1 69
+MD5 4d00717aa575f50036b0129992917506 files/digest-gkrellmitime-1.0 67

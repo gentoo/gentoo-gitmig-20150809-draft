@@ -1,0 +1,6 @@
+MD5 3edcfa4edcc6fda60753911ea4fb46fd ChangeLog 495
+MD5 7e9c970f54784c554cbbc7d4992f54f4 wmget-0.4.4.ebuild 729
+MD5 f75a6d4e92c63c098ff223228b46e6d5 wmget-0.5.0.ebuild 722
+MD5 b61bb40d756eaf34aceb685f2bec5e82 files/digest-wmget-0.4.4 66
+MD5 7839b46d53fe997ab15799a7250a5a0f files/digest-wmget-0.5.0 66
+MD5 4ad748dd7bcc0235ebce79719f2751e5 files/makefile.diff 956

@@ -1,0 +1,6 @@
+MD5 ff9ee836c0d663d309aa0819fb9fd668 ChangeLog 990
+MD5 998a21153988c0bd44d8872689ffb542 asapm-2.10.ebuild 771
+MD5 ca9766e73cdb6b4ccfdb2ad22ee86f06 asapm-2.11.ebuild 994
+MD5 fda28a37f9d22eaab623916850ab8559 files/asapm-2.10-gentoo.diff 625
+MD5 8421c0b48b3a26caa0993a6d56c448b0 files/digest-asapm-2.10 61
+MD5 88a7ec946c29032d3526c5481c29ca67 files/digest-asapm-2.11 61
