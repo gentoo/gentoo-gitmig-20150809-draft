@@ -3,7 +3,7 @@ import string
 import portage
 import sys
 
-myuse=portage.getsetting("USE")
+myuse=portage.settings["USE"]
 myuse=string.split(myuse)
 for x in myuse:
 	if x==sys.argv[1]:

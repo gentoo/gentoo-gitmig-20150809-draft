@@ -9,48 +9,95 @@ import commands
 
 #build our package digraph
 
-def digraph_create(digraph,mykey,thetree,myenv,myparent=None):
-	myebuild=porttree.getname(mykey)
-	mysplit=portage.catpkgsplit(mykey)
-	mycommands="export PATH=/usr/lib/portage/bin:${PATH}; export PV='"+mysplit[2]+"'; export P='"+mysplit[1]+"-"+mysplit[2]+"'; export PR='"+mysplit[3]+"';"
-	if mysplit[3]=='r0':
-		mycommands=mycommands+"export PF='"+mysplit[1]+"-"+mysplit[2]+"'; export PVR='"+mysplit[2]+"'"
-	else:
-		mycommands=mycommands+"export PF='"+mysplit[1]+"-"+mysplit[2]+"-"+mysplit[3]+"'; export PVR='"+mysplit[2]+"-"+mysplit[3]+"'"
-	if myenv=="DEPEND":
-		mydep=commands.getoutput(mycommands+"; source "+myebuild+"; echo $DEPEND")
-	else:
-		mydep=commands.getoutput(mycommands+"; source "+myebuild+'; if [ "$RDEPEND" = "" ]; then echo $DEPEND; else  echo $RDEPEND; fi')
-	#eliminate duplicates
-	depdict={}
-	for x in string.split(mydep):
-		depdict[mydep]=1
-	mynewdep=string.join(depdict.keys()," ")
-	digraph.addnode(mykey,myparent)
-	mycheck=thetree.depcheck(mynewdep)
-	if mycheck[0]==0:
-		print "!!! Error: "+myenv+" string formatted incorrectly:",mydep
-		return None 
-	for x in mycheck[1]:
-		mymatch=porttree.dep_bestmatch(x)
-		if mymatch=="":
-			print "!!! Error: can't resolve dependency --",x
-			print "!!!",mydep
-			return None
-		if not digraph_create(digraph,mymatch,thetree,myenv,mykey):
-			return None
-	return 1
+class depgraph:
 
-#main program loop
-virts=portage.getvirtual(portage.root)
-roottree=portage.vartree("/",virts)
-#roottee=the apps we have installed right now
-if portage.root=="/":
-	desttree=roottree
-else:
-	desttree=portage.vartree(portage.root,virts)
-#desttree=the apps on our destination filesystem
-porttree=portage.portagetree("/",virts)
+	def __init__(self):
+		virts=portage.getvirtuals("/")
+		self.db={}
+		self.db["/"]={"virtuals":virts,"vartree":portage.vartree("/",virts),"porttree":portage.portagetree("/",virts)}
+		if portage.root!="/":
+			pr=portage.root
+			virts=portage.getvirtuals(pr)
+			self.db[pr]={"virtuals":virts,"vartree":portage.vartree(pr,virts),"porttree":portage.portagetree(pr,virts)}
+	
+		self.digraph=portage.digraph()
+
+	def create(self,mybigkey=None,myparent=None):
+		sys.stdout.write(".")	
+		sys.stdout.flush()
+		if self.digraph.hasnode(mybigkey):
+			#if we've already hit this node before, we're already recursing on the dependencies.
+			#no need to recurse again.
+			self.digraph.addnode(mybigkey,myparent)
+			return 1
+		myroot,mykey=string.split(mybigkey)
+		myebuild=self.db[myroot]["porttree"].getname(mykey)
+		mydep={}
+		mydep["/"],mydep[portage.root]=portage.doebuild(myebuild,"depend")
+		self.digraph.addnode(mybigkey,myparent)
+		for dep in mydep.keys():
+			mycheck=self.db[dep]["vartree"].depcheck(mydep[dep])
+			if mycheck[0]==0:
+				print "!!! depgraph.create() error: string format:",mydep
+				return 0
+			for x in mycheck[1]:
+				mymatch=self.db[dep]["porttree"].dep_bestmatch(x)
+				if mymatch=="":
+					print "!!! depgraph.create() error: can't resolve dependency:",x
+					return 0
+				mynew=dep+" "+mymatch
+				if not self.digraph.hasnode(mynew):
+					if not self.create(mynew,mybigkey):
+						return 0
+				else:
+					self.digraph.addnode(mynew,mybigkey)
+		return 1
+	
+	def altlist(self):
+		mygraph=self.digraph.copy()
+		dolist=["/"]
+		retlist=[]
+		for x in self.db.keys():
+			self.db[x]["merge"]=[]
+			if x not in dolist:
+				dolist.append(x)
+		while (not mygraph.empty()):
+			mycurkey=mygraph.firstzero()
+			if not mycurkey:
+				print "!!! Error: circular dependencies"
+				sys.exit(1)
+			splitski=string.split(mycurkey)
+			self.db[splitski[0]]["merge"].append(splitski[1])	
+			mygraph.delnode(mycurkey)
+		for x in dolist:
+			for y in self.db[x]["merge"]:
+				retlist.append([x,y])
+		return retlist
+
+	def list(self):
+		mygraph=self.digraph.copy()
+		retlist=[]
+		while not mygraph.empty():
+			mycurkey=mygraph.firstzero()
+			if not mycurkey:
+				print "!!! Error: circular dependencies"
+				sys.exit(1)
+			retlist.append(string.split(mycurkey))	
+			mygraph.delnode(mycurkey)
+		return retlist
+
+	def display(self,mylist):
+		for x in mylist:
+			print x[1],"to",x[0]
+
+	def merge(self,mylist):
+		for x in mylist:
+			os.environ["ROOT"]=x[0]
+			print ">>> emerge",x[1],"to",x[0]
+			retval=portage.doebuild(self.db[x[0]]["porttree"].getname(x[1]),"merge")
+			if retval:
+				print "!!! emerge aborting."
+				sys.exit(1)
 pretend=0
 if len(sys.argv)>=2:
 	if sys.argv[1]=="--pretend":
@@ -62,7 +109,6 @@ if len(sys.argv)>=2:
 	elif sys.argv[1]=="--help":
 		print "Usage: pkgmerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
 		sys.exit(1)
-digraph=portage.digraph()
 for mypkg in sys.argv[1:]:
 	if len(mypkg)<=7:
 		print ">>> Error: short ebuild name, skipping..."
@@ -72,26 +118,11 @@ for mypkg in sys.argv[1:]:
 		continue
 		
 	mykey=os.path.basename(os.path.abspath(mypkg+"/../.."))+"/"+os.path.basename(mypkg)[:-7]
-	
-	for x in [[roottree,"DEPEND","/","Build"],[desttree,"RDEPEND",portage.root,"Runtime"]]:
-		if pretend==1:
-			print x[3],"dependencies:"
-		digraph_create(digraph,mykey,x[0],x[1])	
-		while (not digraph.empty()):
-			mycurkey=digraph.firstzero()
-			if (mykey==mycurkey) and (x[1]=="DEPEND"):
-				digraph.delnode(mycurkey)
-				continue
-			if not mycurkey:
-				print "!!! Error: circular dependencies"
-				sys.exit(1)
-			myebuild=porttree.getname(mycurkey)
-			if pretend:
-				print "  ",myebuild+" to "+x[2]
-			else:
-				retval=os.system("/usr/sbin/ebuild "+myebuild+" merge")
-				if retval:
-					print "!!! Error emerging",mypkg+".  Stopping."
-					sys.exit(1)
-			digraph.delnode(mycurkey)
-			
+	mydepgraph=depgraph()
+	print "Calculating dependencies",
+	mydepgraph.create(portage.root+" "+mykey)
+	print " done!"
+	if pretend:
+		mydepgraph.display(mydepgraph.altlist())
+	else:
+		mydepgraph.merge(mydepgraph.altlist())

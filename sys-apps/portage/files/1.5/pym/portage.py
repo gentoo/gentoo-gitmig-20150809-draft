@@ -61,7 +61,14 @@ class digraph:
 			return 1
 		return 0
 
+	def hasnode(self,mynode):
+		return self.dict.has_key(mynode)
 
+	def copy(self):
+		mygraph=digraph()
+		for x in self.dict.keys():
+			mygraph.dict[x]=self.dict[x][:]
+		return mygraph
 
 # valid end of version components; integers specify offset from release version
 # pre=prerelease, p=patchlevel (should always be followed by an int), rc=release candidate
@@ -89,18 +96,18 @@ def env_update():
 	env={}
 
 	for x in fns:
-		myconfig=configfile(root+"etc/env.d/"+x)
+		myconfig=getconfig(root+"etc/env.d/"+x)
 		# process PATH, CLASSPATH, LDPATH
 		for myspec in specials.keys():
 			if myconfig.has_key(myspec):
 				if myspec=="LDPATH":
-					specials[myspec].extend(string.split(myconfig.get_key(myspec),":"))
+					specials[myspec].extend(string.split(expand(myconfig[myspec]),":"))
 				else:
-					specials[myspec].append(myconfig.get_key(myspec))
-			myconfig.del_key(myspec)
+					specials[myspec].append(expand(myconfig[myspec]))
+				del myconfig[myspec]
 		# process all other variables
-		for myenv in myconfig.all_keys():
-			env[myenv]=myconfig.get_key(myenv)
+		for myenv in myconfig.keys():
+			env[myenv]=expand(myconfig[myenv])
 			
 	if os.path.exists(root+"etc/ld.so.conf"):
 		myld=open(root+"etc/ld.so.conf")
@@ -153,54 +160,94 @@ def env_update():
 	
 	#need to add cshrc support
 
-#new configfile reading code using shlex
-class configfile:
-	def __init__(self,cfgfile):
-		self.keys={}
-		self.filename=cfgfile
-		f=open(cfgfile,'r')
-		lex=shlex.shlex(f)
-		lex.wordchars=string.digits+string.letters+"~!@#$%*_\:;?,./-+{}"     
-		lex.quotes="\"'"
-		while 1:
-			key=lex.get_token()
-			if (key==''):
-				#normal end of file
-				break;
-			equ=lex.get_token()
-			if (equ==''):
-				#unexpected end of file
-				#lex.error_leader(self.filename,lex.lineno)
+def getconfig(mycfg,tolerant=0):
+	mykeys={}
+	f=open(mycfg,'r')
+	lex=shlex.shlex(f)
+	lex.wordchars=string.digits+string.letters+"~!@#$%*_\:;?,./-+{}"     
+	lex.quotes="\"'"
+	while 1:
+		key=lex.get_token()
+		if (key==''):
+			#normal end of file
+			break;
+		equ=lex.get_token()
+		if (equ==''):
+			#unexpected end of file
+			#lex.error_leader(self.filename,lex.lineno)
+			if not tolerant:
 				print "!!! Unexpected end of config file: variable",key
 				return None
-			elif (equ!='='):
-				#invalid token
-				#lex.error_leader(self.filename,lex.lineno)
+			else:
+				return mykeys
+		elif (equ!='='):
+			#invalid token
+			#lex.error_leader(self.filename,lex.lineno)
+			if not tolerant:
 				print "!!! Invalid token (not \"=\")",equ
 				return None
-			val=lex.get_token()
-			if (val==''):
-				#unexpected end of file
-				#lex.error_leader(self.filename,lex.lineno)
+			else:
+				return mykeys
+		val=lex.get_token()
+		if (val==''):
+			#unexpected end of file
+			#lex.error_leader(self.filename,lex.lineno)
+			if not tolerant:
 				print "!!! Unexpected end of config file: variable",key
 				return None
-			self.keys[key]=val
-	def get_key(self,mykey):
-		if self.keys.has_key(mykey):
-			return self.keys[mykey]
-		else:
+			else:
+				return mykeys
+		mykeys[key]=val
+	return mykeys
+"""	
+def var_expand(mystring,dictlist,rec=0):
+	if (rec>=16):
+		print "!!! Recursion level too high when expanding",mystring
+		return ""
+	pos=0
+	newstring=" "
+	while (pos<len(mystring)):
+		if ( mystring[pos]!="$" or mystring[pos-1]=="\\" ):
+			newstring=newstring+mystring[pos]
+			pos=pos+1
+			continue
+		if (pos+1)>=len(mystring):
+			#we're at the end of the string, error
 			return ""
-	def has_key(self,mykey):
-		return self.keys.has_key(mykey)
-	def set_key(self,mykey,myval):
-		self.keys[mykey]=myval
-	def del_key(self,mykey):
-		if self.keys.has_key(mykey):
-			del self.keys[mykey]
-	def all_keys(self):
-		return self.keys.keys()
-		
-def var_expand(mystring,dictlist=[]):
+		if mystring[pos+1]=="{":
+			newpos=pos+1
+			while newpos<len(mystring) and mystring[newpos]!="}":
+				newpos=newpos+1
+			if newpos>=len(mystring):
+				return "" # ending } not found
+			varname=mystring[pos+2:newpos]
+			if len(varname)==0:
+				return "" #zero-length variable, error
+			for x in dictlist:
+				if x.has_key(varname):
+					#recurse
+					newstring=newstring+var_expand(x[varname],dictlist,rec+1)
+					break
+			pos=newpos+1
+		else:
+			newpos=pos+1
+			while newpos<len(mystring) and (mystring[newpos] not in string.whitespace):
+				newpos=newpos+1
+			if newpos>=len(mystring):
+				varname=mystring[pos+1:]
+			else:
+				varname=mystring[pos+1:newpos]
+			pos=newpos
+			if len(varname)==0:
+				return "" #zero-length variable, error
+			for x in dictlist:
+				if x.has_key(varname):
+					#recurse
+					newstring=newstring+var_expand(x[varname],dictlist,rec+1)
+					break
+	return newstring[1:]
+"""
+def expand(mystring,dictlist=[]):
 	"""
 	new variable expansion code.  Removes quotes, handles \n, etc, and
 	will soon use the dictlist to expand ${variable} references.
@@ -212,7 +259,7 @@ def var_expand(mystring,dictlist=[]):
 	insing=0
 	indoub=0
 	pos=1
-	newstring=""
+	newstring=" "
 	while (pos<len(mystring)):
 		if (mystring[pos]=="'") and (mystring[pos-1]!="\\"):
 			if (indoub):
@@ -256,25 +303,195 @@ def var_expand(mystring,dictlist=[]):
 						#remove backslash only, as bash does: this takes care of \\ and \' and \" as well
 						newstring=newstring+mystring[pos-1:pos]
 						continue
+			elif (mystring[pos]=="$") and (mystring[pos-1]!="\\"):
+				pos=pos+1
+				if (pos+1)>=len(mystring):
+					return ""
+				if mystring[pos]=="{":
+					pos=pos+1
+					terminus="}"
+				else:
+					terminus=string.whitespace
+				myvstart=pos
+				while mystring[pos] not in terminus:
+					if (pos+1)>=len(mystring):
+						return ""
+					pos=pos+1
+				myvarname=mystring[myvstart:pos]
+				pos=pos+1
+				if len(myvarname)==0:
+					return ""
+				newstring=newstring+settings[myvarname]	
 			else:
 				newstring=newstring+mystring[pos]
 				pos=pos+1
 		else:
 			newstring=newstring+mystring[pos]
 			pos=pos+1
-	return newstring	
+	return newstring[1:]	
+
+class config:
+	def __init__(self):
+		self.origenv=os.environ.copy()
+		self.configlist=[self.origenv.copy(),getconfig("/etc/make.conf"),getconfig("/etc/make.profile/make.defaults"),getconfig("/etc/make.globals")]
+	def __getitem__(self,mykey):
+		for x in self.configlist:
+			if x.has_key(mykey):
+				return expand(x[mykey],self.configlist)
+		return ""		
+	def has_key(self,mykey):
+		for x in self.configlist:
+			if x.has_key(mykey):
+				return 1 
+		return 0
+	def keys(self):
+		mykeys=[]
+		for x in self.configlist:
+			for y in x.keys():
+				if y not in mykeys:
+					mykeys.append(y)
+		return mykeys
+	def __setitem__(self,mykey,myvalue):
+		self.configlist[0][mykey]=myvalue
+	def reset(self):
+		"reset environment to original settings"
+		self.configlist[0]=self.origenv.copy()
+	def environ(self):
+		"return our locally-maintained environment"
+		mydict={}
+		for x in self.keys(): 
+			mydict[x]=self[x]
+		return mydict
 	
-def gen_archnames():
-	"generate archive names from URL list"
-	myurls=getenv("SRC_URI")
-	a=string.split(myurls)
-	myfiles={}
-	for x in a:
-		myfiles[string.split(x,"/")[-1]]=1
-	print "A='"+string.join(myfiles.keys()," ")+"'"
+def spawn(mystring):
+	global settings
+	mypid=os.fork()
+	if mypid==0:
+		mycommand="/bin/bash"
+		myargs=["bash","-c",mystring]
+		os.execve(mycommand,myargs,settings.environ())
+		return
+	retval=os.waitpid(mypid,0)[1]
+	if (retval & 0xff)==0:
+		#return exit code
+		return (retval >> 8)
+	else:
+		#interrupted by signal
+		return 16
 
 def doebuild(myebuild,mydo):
-	return os.system("/usr/sbin/ebuild "+myebuild+" "+mydo)
+	global settings
+	if not os.path.exists(myebuild):
+		print "!!!",myebuild,"not found."
+		return 1
+	if myebuild[-7:]!=".ebuild":
+		print "!!!",myebuild,"does not appear to be an ebuild file."
+		return 1
+	settings.reset()
+	settings["ROOT"]=root
+	settings["STARTDIR"]=os.getcwd()
+	settings["EBUILD"]=os.path.abspath(myebuild)
+	settings["O"]=os.path.dirname(settings["EBUILD"])
+	settings["CATEGORY"]=os.path.basename(os.path.normpath(settings["O"]+"/.."))
+	#PEBUILD
+	settings["FILESDIR"]=settings["O"]+"/files"
+	settings["PF"]=os.path.basename(settings["EBUILD"])[:-7]
+	mysplit=pkgsplit(settings["PF"],0)
+	if mysplit==None:
+		return 1
+	settings["P"]=mysplit[0]+"-"+mysplit[1]
+	settings["PN"]=mysplit[0]
+	settings["PV"]=mysplit[1]
+	settings["PR"]=mysplit[2]
+	if mysplit[2]=="r0":
+		settings["PVR"]=mysplit[1]
+	else:
+		settings["PVR"]=mysplit[1]+"-"+mysplit[2]
+	if settings.has_key("PATH"):
+		mysplit=string.split(settings["PATH"],":")
+	else:
+		mysplit=[]
+	if not "/usr/lib/portage/bin" in mysplit:
+		settings["PATH"]="/usr/lib/portage/bin:"+settings["PATH"]
+
+	if not settings.has_key("BUILD_PREFIX"):
+		print "!!! Error: BUILD_PREFIX not defined."
+		return 1
+	settings["BUILDDIR"]=settings["BUILD_PREFIX"]+"/"+settings["PF"]
+	if not os.path.exists(settings["BUILDDIR"]):
+		os.makedirs(settings["BUILDDIR"])
+	settings["T"]=settings["BUILDDIR"]+"/temp"
+	if not os.path.exists(settings["T"]):
+		os.makedirs(settings["T"])
+	settings["WORKDIR"]=settings["BUILDDIR"]+"/work"
+	settings["D"]=settings["BUILDDIR"]+"/image/"
+	
+	#initial ebuild.sh bash environment configured
+	
+	if mydo=="unpack":
+		return spawn("/usr/sbin/ebuild.sh fetch unpack")
+	elif mydo=="compile":
+		#do build deps
+		return spawn("/usr/sbin/ebuild.sh fetch unpack compile")
+	elif mydo in ["prerm","postrm","preinst","postinst","config","touch","clean","fetch","digest","unmerge","install"]:
+		return spawn("/usr/sbin/ebuild.sh "+mydo)
+	elif mydo=="qmerge":
+		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info")
+	elif mydo=="merge":
+		mydeps=string.split(getoutput("/usr/sbin/ebuild.sh depend"),"\n")
+		retval=dep_frontend("build",mydeps[0])
+		if (retval):
+			return retval
+		retval=dep_frontend("runtime",mydeps[1])
+		if retval:
+			return retval
+		retval=spawn("/usr/sbin/ebuild.sh fetch unpack compile install")
+		if retval:
+			return retval
+		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info")
+	elif mydo=="unmerge":
+		return unmerge(settings["CATEGORY"],settings["PF"])
+	elif mydo=="rpm":
+		mydeps=string.split(getoutput("/usr/sbin/ebuild.sh depend"),"\n")
+		retval=dep_frontend("build",mydeps[0])
+		if (retval):
+			return retval
+		return spawn("/usr/sbin/ebuild.sh fetch unpack compile install rpm")
+	elif mydo=="package":
+		mydeps=string.split(getoutput("/usr/sbin/ebuild.sh depend"),"\n")
+		retval=dep_frontend("build",mydeps[0])
+		if (retval):
+			return retval
+		retval=spawn("/usr/sbin/ebuild.sh fetch")
+		if retval:
+			return retval
+		for x in ["","/"+settings["CATEGORY"]]:
+			if not os.path.exists(settings["PKGDIR"]+x):
+				os.makedirs(settings["PKGDIR"]+x)
+		pkgloc=settings["PKGDIR"]+"/All/"+settings["PF"]+".tbz2"
+		rebuild=0
+		if os.path.exists(pkgloc):
+			for x in [settings["A"],settings["EBUILD"]]:
+				if not os.path.exists(x):
+					continue
+				if os.path.getmtime(x)>os.path.getmtime(pkgloc):
+					rebuild=1
+					break
+		else:	
+			rebuild=1
+		if not rebuild:
+			print
+			print ">>> Package",settings["PF"]+".tbz2 appears to be up-to-date."
+			print ">>> To force rebuild, touch",os.path.basename(settings["EBUILD"])
+			print
+			return 0
+		else:
+			return spawn("/usr/sbin/ebuild.sh unpack compile install package")
+	elif mydo=="depend":
+		return string.split(getoutput("/usr/sbin/ebuild.sh depend"),"\n")
+	else:
+		print "!!! Please specify a valid command."
+		return 1
 
 def isdev(x):
 	mymode=os.stat(x)[ST_MODE]
@@ -326,159 +543,13 @@ def unmerge(cat,pkg):
 		mylink.unmerge()
 	mylink.delete()
 
-def getenv(mykey):
-	if os.environ.has_key(mykey):
-		return os.environ[mykey]
+def getenv(mykey,dictlist=[]):
+	"dictlist contains a list of dictionaries to check *before* the environment"
+	dictlist.append(os.environ)
+	for x in dictlist:
+		if x.has_key(mykey):
+			return expand(x[mykey],dictlist)
 	return ""
-
-def getsetting(mykey,root="/",env=1,recdepth=0):
-	"""perform bash-like basic variable expansion, recognizing ${foo} and $bar"""
-	
-	if recdepth>10:
-		return ""
-		#avoid infinite recursion
-
-	if os.path.exists(root+"etc/make.globals"):
-		configglobals=getconfig(root+"etc/make.globals")
-	else:
-		print "!!! Error:",root+"etc/make.globals not found."
-		sys.exit(1)
-	if os.path.exists(root+"etc/make.conf"):
-		configsettings=getconfig(root+"etc/make.conf")
-	else:
-		configsettings={}
-
-	myvals={"SYSPROFILE":None, "SYSPROFILEDIR":None}
-	for x in myvals.keys():
-		if configsettings.has_key(x):
-			myvals[x]=configsettings[x]
-		elif configglobals.has_key(x):
-			myvals[x]=configglobals[x]
-		else:
-			print "!!! Error: couldn't find",x,"setting in /etc/make.conf or /etc/make.globals"
-			sys.exit(1)
-	
-	myprofile=os.path.normpath(root+myvals["SYSPROFILEDIR"]+"/"+myvals["SYSPROFILE"])
-	if os.path.exists(myprofile):
-		configdefaults=getconfig(myprofile)
-	else:
-		print "!!! Error: SYSPROFILEDIR/SYSPROFILE specify a non-existent profile."
-		sys.exit(1)
-	
-	mystring=None
-	if env:
-		if os.environ.has_key(mykey):
-			mystring=os.environ[mykey]
-	if mystring==None:		
-		if configsettings.has_key(mykey):
-			mystring=configsettings[mykey]
-		elif configdefaults.has_key(mykey):
-			mystring=configdefaults[mykey]
-		elif configglobals.has_key(mykey):
-			mystring=configglobals[mykey]
-		else:
-			return ""
-		
-	if (len(mystring)==0):
-		return ""
-	if mystring[0]=="'":
-		#single-quoted, no expansion
-		return mystring[1:-1]
-	newstring=""
-	pos=0
-	while (pos<len(mystring)):
-		if mystring[pos]=='\\':
-			if (pos+1)>=len(mystring):
-				#we're at the end of the string
-				return "" #error
-			a=mystring[pos+1]
-			pos=pos+2
-			if a=='a':
-				newstring=newstring+chr(007)
-			elif a=='b':
-				newstring=newstring+chr(010)
-			elif a=='e':
-				newstring=newstring+chr(033)
-			elif a=='f':
-				newstring=newstring+chr(012)
-			elif a=='r':
-				newstring=newstring+chr(015)
-			elif a=='t':
-				newstring=newstring+chr(011)
-			elif a=='v':
-				newstring=newstring+chr(013)
-			elif a=="'":
-				newstring=newstring+"'"
-			else:
-				newstring=newstring+mystring[pos-1:pos]
-		elif mystring[pos]=="$":
-			#variable expansion
-			if (pos+1)>=len(mystring):
-				#we're at the end of the string, error
-				return ""
-			if mystring[pos+1]=="{":
-				newpos=pos+1
-				while newpos<len(mystring) and mystring[newpos]!="}":
-					newpos=newpos+1
-				if newpos>=len(mystring):
-					return "" # ending } not found
-				varname=mystring[pos+2:newpos]
-				if len(varname)==0:
-					return "" #zero-length variable, error
-				newstring=newstring+getsetting(varname,root,env,recdepth+1)
-				pos=newpos+1
-			else:
-				newpos=pos+1
-				while newpos<len(mystring) and (mystring[newpos] not in string.whitespace):
-					newpos=newpos+1
-				if newpos>=len(mystring):
-					varname=mystring[pos+1:]
-				else:
-					varname=mystring[pos+1:newpos]
-				pos=newpos
-				if len(varname)==0:
-					return "" #zero-length variable, error
-				newstring=newstring+getsetting(varname,root,env,recdepth+1)
-				#recurse
-		else:
-			newstring=newstring+mystring[pos]
-			pos=pos+1
-	return newstring
-				
-def getconfig(mycfg):
-	myconfigfile=open(mycfg,"r")
-	myconfiglines=myconfigfile.readlines()
-	myconfigfile.close()
-	myconfigdict={}
-	for x in myconfiglines:
-		#strip whitespace
-		x=string.strip(x)
-		#skip comment or blank line
-		if (len(x)==0):
-			continue
-		if (x[0]=="#"):
-			continue
-		myparts=string.split(x,"=")
-		if myparts<2:
-			continue
-			#invalid line, no equals sign
-		mykey=string.strip(myparts[0])
-		myvalue=string.strip(string.join(myparts[1:],"="))
-		if myvalue[0]=='"':
-			if myvalue[-1]=='"':
-				myvalue=myvalue[1:-1]
-			else:
-				continue
-				#no closing double-quote!
-		elif myvalue[0]=="'":
-			if myvalue[-1]=="'":
-				pass
-			else:
-				continue
-				#no closing single-quote!
-		if len(myvalue)>0:
-			myconfigdict[mykey]=myvalue
-	return myconfigdict
 
 def relparse(myver):
 	"converts last version part into three components"
@@ -786,9 +857,8 @@ def dep_opconvert(mysplit,myuse):
 				mypos=mypos-1
 		mypos=mypos+1
 	return mysplit
-
+"""
 def dep_wordreduce(mydeplist):
-	"""Calls dep_depreduce() on all the items in the deplist"""
 	mypos=0
 	deplist=mydeplist[:]
 	while mypos<len(deplist):
@@ -807,7 +877,7 @@ def dep_wordreduce(mydeplist):
 					return None
 		mypos=mypos+1
 	return deplist
-
+"""
 def dep_eval(deplist):
 	if len(deplist)==0:
 		return 1
@@ -952,7 +1022,6 @@ def dep_listcleanup(deplist):
 	
 def dep_frontend(mytype,depstring):
 	"""ebuild frontend for dependency system"""
-	global ebuild_intialized
 	if ebuild_initialized==0:
 		ebuild_init()
 	if depstring=="":
@@ -964,7 +1033,7 @@ def dep_frontend(mytype,depstring):
 		myparse=roottree.depcheck(depstring)
 	else:
 		print "!!! Error: dependency type",mytype,"not recognized.  Exiting."
-		sys.exit(1)
+		return 1
 	if myparse[0]==0:
 		#error
 		print '!!! '+mytype+' dependency error:',myparse[1]
@@ -983,9 +1052,8 @@ def dep_frontend(mytype,depstring):
 	return 1
 
 # gets virtual package settings
-
-def getvirtual(myroot):
-	myfile=open(myroot+"/etc/make.profile/virtual","r")
+def getvirtuals(myroot):
+	myfile=open(myroot+"/etc/make.profile/virtuals")
 	mylines=myfile.readlines()
 	myvirts={}
 	for x in mylines:
@@ -1070,7 +1138,7 @@ class packagetree:
 		"""
 		if not self.populated:
 			self.populate()
-		myusesplit=string.split(getsetting("USE"),self.root)
+		myusesplit=string.split(settings["USE"],self.root)
 		mysplit=string.split(depstring)
 		#convert parenthesis to sublists
 		mysplit=dep_parenreduce(mysplit)
@@ -1092,7 +1160,11 @@ class packagetree:
 		if myeval:
 			return [1,[]]
 		else:
-			return [1,dep_listcleanup(dep_zapdeps(mysplit,mysplit2))]
+			mylist=dep_listcleanup(dep_zapdeps(mysplit,mysplit2))
+			mydict={}
+			for x in mylist:
+				mydict[x]=1
+			return [1,mydict.keys()]
 
 	def dep_wordreduce(self,mydeplist):
 		"""Calls dep_depreduce() on all the items in the deplist"""
@@ -1291,7 +1363,7 @@ class portagetree(packagetree):
 	"this tree will scan a portage directory located at root (passed to init)"
 	def __init__(self,root="/",virtual=None):
 		self.root=root
-		self.portroot=getsetting("PORTDIR",self.root)
+		self.portroot=settings["PORTDIR"]
 		packagetree.__init__(self,virtual)
 	def populate(self):
 		"populates the port tree"
@@ -1349,7 +1421,7 @@ class portagetree(packagetree):
 		mysplit=string.split(pkgname,"/")
 		psplit=pkgsplit(mysplit[1])
 		return self.portroot+"/"+mysplit[0]+"/"+psplit[0]+"/"+mysplit[1]+".ebuild"
-
+"""
 class currenttree(packagetree):
 	"this tree will scan a current package file located at root (passed to init)"
 	def __init__(self,root):
@@ -1357,7 +1429,7 @@ class currenttree(packagetree):
 		packagetree.__init__(self)
 	def populate(self):
 		"populates the current tree"
-		newroot=getsetting("CURRENTFILE",self.root)
+		newroot=settings["CURRENTFILE",self.root)
 		
 		#the currentfile still comes from /usr/portage, not ${ROOT}/usr/portage, but the currentfile setting
 		#comes from ${ROOT}/etc/make.*
@@ -1381,12 +1453,12 @@ class currenttree(packagetree):
 			self.tree[mykey].append([fullpkg,mysplit])
 		mycurrent.close()
 		self.populated=1
-
+"""
 class binarytree(packagetree):
 	"this tree scans for a list of all packages available in PKGDIR"
 	def __init__(self,root="/",virtual=None):
 		self.root=root
-		self.pkgdir=getsetting("PKGDIR",root)
+		self.pkgdir=settings["PKGDIR"]
 		packagetree.__init__(self,virtual)
 	def populate(self):
 		"popules the binarytree"
@@ -1670,16 +1742,13 @@ class dblink:
 				self.copyfile(x)
 			#this will update the virtual links that are different between the current and old provides settings
 			self.setprovides(None,oldprovides)
+			#do postinst script
+			doebuild(self.dbdir+"/"+self.pkg+".ebuild","postinst")
 			#update environment settings, library paths
 			env_update()	
 			print ">>>",self.cat+"/"+self.pkg,"merged."
 			os.chdir(origdir)
 	
-	def doebuild(self,funcname):
-		if not os.path.exists(self.dbdir+"/"+self.pkg+".ebuild"):
-			return 0
-		return doebuild(self.dbdir+"/"+self.pkg+".ebuild",funcname)
-
 	def getstring(self,name):
 		"returns contents of a file with whitespace converted to spaces"
 		if not os.path.exists(self.dbdir+"/"+name):
@@ -1870,15 +1939,14 @@ def pkgmerge(mytbz2):
 		a.close()
 	cleanup_pkgmerge(mypkg,origdir)
 	return returnme
-
 def ebuild_init():
 	"performs db/variable initialization for the ebuild system.  Not required for other scripts."
 	global local_virts, root_virts, roottree, localtree, ebuild_initialized, root, virtuals
-	local_virts=getvirtual("/")
+	local_virts=getvirtuals("/")
 	if root=="/":
 		root_virts=local_virts
 	else:
-		root_virts=getvirtual(root)
+		root_virts=getvirtuals(root)
 	
 	localtree=vartree("/",local_virts)	
 	if root=="/":
@@ -1886,7 +1954,6 @@ def ebuild_init():
 	else:
 		roottree=vartree(root,root_virts)
 	ebuild_initialized=1
-
 root=getenv("ROOT")
 if len(root)==0:
 	root="/"
@@ -1903,4 +1970,5 @@ if root != "/":
 		print "!!! Exiting."
 		print
 		sys.exit(1)
+settings=config()
 ebuild_initialized=0
