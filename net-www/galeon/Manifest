@@ -2,11 +2,11 @@ MD5 181e7c739b3b6255abf826b0bc7a7f8f ChangeLog 13953
 MD5 1d061f4017a91b15ae98770d1d7e2616 galeon-1.2.12.ebuild 3409
 MD5 6e6dde901d7c8fc7da7e7e74f257177f galeon-1.2.13.ebuild 3410
 MD5 26d4db08eb30aba07c5ce1fe9a7e3436 galeon-1.3.12.ebuild 1849
-MD5 7b4853a17b81a138f4ecd06fdf436e47 galeon-1.3.14a.ebuild 2009
+MD5 7f1068d3c92618bd623b4e74c3df046a galeon-1.3.14a.ebuild 2011
 MD5 72219ad1d0b3367b7dd0064b472890e6 galeon-1.3.15-r1.ebuild 1988
-MD5 e1f37199d9639a70bbdbbf884557de11 galeon-1.3.16.ebuild 1830
+MD5 d039b111c4134f9ad055facfe15111ed galeon-1.3.16.ebuild 1832
 MD5 4c1c1e710ea77d8d7db9906084c4228d metadata.xml 215
-MD5 95b00b2dacfefc1e314a1c716fda5fa4 galeon-1.3.17.ebuild 1838
+MD5 ead6516455a07d15156427a9aa889cb7 galeon-1.3.17.ebuild 1840
 MD5 436b77780200d51a954cfa3fc77e9e2d files/digest-galeon-1.2.12 66
 MD5 757bec18c63defa1dd1be1b773cd456d files/digest-galeon-1.2.13 66
 MD5 71648981f30022647bdcf652473ba2a9 files/digest-galeon-1.3.12 67
