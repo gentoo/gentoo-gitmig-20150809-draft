@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r1.ebuild,v 1.1 2001/05/18 20:05:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r1.ebuild,v 1.2 2001/06/21 14:08:38 achim Exp $
 
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -109,7 +109,7 @@ src_install() {
     FULLPATH=${D}${T}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dodir /lib
-	dosym	${T}/lib/gcc-lib/${CHOST}/${PV}/cpp0 /lib/cpp
+	dosym	/usr/bin/cpp /lib/cpp
 	dosym   /usr/bin/gcc /usr/bin/cc
 	dodir /etc/env.d
 	echo "LDPATH=${T}/lib/gcc-lib/${CHOST}/${PV}" > ${D}/etc/env.d/05gcc

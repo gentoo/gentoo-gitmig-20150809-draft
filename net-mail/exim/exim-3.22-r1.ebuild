@@ -11,7 +11,7 @@ HOMEPAGE="http://www.exim.org/"
 
 
 DEPEND="virtual/glibc
-        perl? ( >=sys-devel/perl-5.6.0 )
+        >=sys-devel/perl-5.6.0
         pam? ( >=sys-libs/pam-0.75 )
         >=sys-libs/db-3.2"
 

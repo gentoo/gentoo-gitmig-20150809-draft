@@ -23,7 +23,7 @@ sys-devel/gcc
 sys-devel/make
 sys-devel/patch
 sys-devel/spython
-#net-misc/wget
+net-misc/wget
 net-misc/rsync
 
 

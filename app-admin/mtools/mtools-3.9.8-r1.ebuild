@@ -8,8 +8,8 @@ from Unix without mounting them. It supports Win95 style long file names,..."
 
 SRC_URI="http://mtools.linux.lu/mtools-3.9.8.tar.gz"
 HOMEPAGE="http://mtools.linux.lu"
-
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc sys-apps/texinfo"
+RDEPEND="virtual/glibc"
 
 
 src_compile() {

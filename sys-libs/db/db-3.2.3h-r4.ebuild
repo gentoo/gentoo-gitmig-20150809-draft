@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r4.ebuild,v 1.1 2001/06/16 03:00:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r4.ebuild,v 1.2 2001/06/21 14:08:38 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/build_unix
@@ -16,11 +16,12 @@ DEPEND="$RDEPEND
 
 src_compile() {
 
-    try ../dist/configure \
+    try ../dist/configure --host=${CHOST} \
 	--enable-compat185 --enable-dump185 \
-	--prefix=/usr --host=${CHOST} --target=${CHOST} --build=${CHOST} \
+	--prefix=/usr \
 	--enable-shared --enable-static \
 	--enable-cxx
+
 	#--enable-rpc does not work
 
     echo
