@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3-r1.ebuild,v 1.6 2004/06/24 22:46:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3-r1.ebuild,v 1.7 2004/08/03 04:31:00 vapier Exp $
 
 inherit flag-o-matic ccc eutils
 
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
+	hppa? ( mirror://gentoo/${P}-hppa-patches.tar.bz2 )
 	objc? ( ftp://ftp.gnustep.org/pub/gnustep/patches/gdb-5_3-objc-patch.tgz )
 	mirror://gentoo/${P}-s390-june2003.tar.gz"
 
@@ -23,10 +24,9 @@ src_unpack() {
 	unpack ${P}-s390-june2003.tar.gz
 
 	if [ "${ARCH}" = "hppa" ]; then
+		unpack ${P}-hppa-patches.tar.bz2
 		cd ${S}
-		epatch ${FILESDIR}/gdb-5.3-hppa-01.patch
-		epatch ${FILESDIR}/gdb-5.3-hppa-02.patch
-		epatch ${FILESDIR}/gdb-5.3-hppa-03.patch
+		EPATCH_SUFFIX="patch" epatch ${WORKDIR}/hppa
 	fi
 
 	#s390 Specific fixes to close Bug #47903

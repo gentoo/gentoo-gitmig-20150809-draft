@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.11 2004/07/15 03:25:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.12 2004/08/03 04:31:00 vapier Exp $
 
-IUSE="nls objc"
+inherit flag-o-matic ccc eutils
 
 SNAPSHOT="20030710"
 PATCH_VER="1.0"
@@ -26,16 +26,13 @@ fi
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha -hppa amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64 ~mips"
+IUSE="nls objc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
 
-inherit flag-o-matic ccc eutils
-replace-flags -O? -O2
-
 src_unpack() {
-
 	if [ -n "${SNAPSHOT}" ]
 	then
 		unpack ${P}-${SNAPSHOT}.tar.bz2 \
@@ -84,15 +81,13 @@ src_unpack() {
 }
 
 src_compile() {
+	replace-flags -O? -O2
 
-	local myconf=
-
-	use nls && myconf="--enable-nls" || myconf="--disable-nls"
-
-	econf --enable-threads \
+	econf \
+		--enable-threads \
 		--with-separate-debug-dir=/usr/lib/debug \
-		${myconf} || die
-
+		`use_enable nls` \
+		|| die
 	make || die
 }
 

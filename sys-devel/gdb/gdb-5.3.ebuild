@@ -1,37 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.18 2004/07/15 03:25:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.19 2004/08/03 04:31:00 vapier Exp $
 
-IUSE="nls objc"
+inherit flag-o-matic ccc eutils
 
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
+	mirror://gentoo/${P}-hppa-patches.tar.bz2 )
 	objc? ( ftp://ftp.gnustep.org/pub/gnustep/patches/gdb-5_3-objc-patch.tgz )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha hppa amd64 ia64"
+IUSE="nls objc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
 
-inherit flag-o-matic ccc eutils
-replace-flags -O? -O2
-
 src_unpack() {
 	unpack gdb-${PV}.tar.bz2
 
-	if [ "${ARCH}" = "hppa" ]; then
+	if [ "${ARCH}" == "hppa" ] ; then
+		unpack ${P}-hppa-patches.tar.bz2
 		cd ${S}
-		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-01.patch
-		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-02.patch
-		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-03.patch
+		EPATCH_SUFFIX="patch" epatch ${WORKDIR}/hppa
 	fi
 
-
 	# Fix Compile bug on sparc
-	if [ "${ARCH}" = "sparc" ]; then
+	if [ "${ARCH}" == "sparc" ] ; then
 		cd ${S}
 		epatch ${FILESDIR}/${P}-sparc-nat-asm.patch
 	fi
@@ -41,7 +38,7 @@ src_unpack() {
 		unpack gdb-5_3-objc-patch.tgz
 		cd ${S}
 
-		patch -p1 < ${WORKDIR}/gdb-5_3-objc-patch/gdb-5.3-objc-patch.diff || die
+		epatch ${WORKDIR}/gdb-5_3-objc-patch/gdb-5.3-objc-patch.diff || die
 
 		cp ${WORKDIR}/gdb-5_3-objc-patch/objc-exp.y gdb/
 		cp ${WORKDIR}/gdb-5_3-objc-patch/objc-lang.c gdb/
@@ -55,18 +52,13 @@ src_unpack() {
 }
 
 src_compile() {
+	replace-flags -O? -O2
 
-	local myconf
-
-	use nls && myconf="--enable-nls" || myconf="--disable-nls"
-
-	econf ${myconf} || die
-
+	econf `use_enable nls` || die
 	make || die
 }
 
 src_install() {
-
 	 make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
