@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.7.2.ebuild,v 1.2 2003/09/06 16:20:00 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.7.2.ebuild,v 1.3 2003/09/06 22:50:41 pappy Exp $
 
 inherit mount-boot eutils
 
@@ -44,12 +44,10 @@ src_compile() {
 
 	CC="${CC:=gcc}"
 
-    # http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-    # lilo and grub have broken CFLAGS behaviour
-	if has_version 'sys-devel/hardened-gcc' && [ ${CC}="gcc" ] ; then
-		einfo "activating hardened-gcc exclude flags: ${CC} ${CFLAGS} -yet_exec"
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
+	then
 		find ${W} -type f -name "Makefile" -exec sed -i "s:CC=cc:CC=${CC} ${CFLAGS} -yet_exec:" {} \;
-		sleep 2s
 	fi
 
 	emake lilo || die
