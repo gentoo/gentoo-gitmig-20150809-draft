@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15r-r2.ebuild,v 1.1 2004/09/06 00:27:30 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15r-r2.ebuild,v 1.2 2004/09/14 07:58:05 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ DESCRIPTION="Musepack audio compression tools"
 HOMEPAGE="http://www.uni-jena.de/~pfk/mpp/ http://corecodec.org/projects/mpc/"
 
 #-*: nasm is x86/amd64 only
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 IUSE="static esd oss"
