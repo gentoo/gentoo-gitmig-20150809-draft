@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.0.ebuild,v 1.6 2004/06/27 17:29:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.0.ebuild,v 1.7 2004/06/30 20:52:23 agriffis Exp $
 
 inherit mount-boot
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="serial"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}
 
@@ -71,4 +71,3 @@ pkg_postinst() {
 	einfo "    > label  = Memtest86Plus"
 	einfo
 }
-

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.9 2004/06/28 21:28:16 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.10 2004/06/30 20:52:23 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> memtest86+-1.0.ebuild,
+  memtest86+-1.11.ebuild, memtest86+-1.15.ebuild, memtest86+-1.20.ebuild:
+  glibc -> libc, trim trailing whitespace
 
 *memtest86+-1.20 (28 Jun 2004)
 
