@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.5 2005/03/04 18:59:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.6 2005/03/08 23:39:39 vapier Exp $
 
 source /sbin/functions.sh || exit 1
 die() {
@@ -24,6 +24,8 @@ ${GOOD}Options${NORMAL}:
     ${GOOD}--k, --kernel${NORMAL} ver     Specify version of kernel headers to use
     ${GOOD}--l, --libc${NORMAL} ver       Specify version of libc to use
     ${GOOD}-a, -b, -p, -v${NORMAL}        Options to pass to emerge (see emerge(1))
+
+    ${GOOD}-V, --version${NORMAL}         Show crossdev version
 
     ${GOOD}-s1, --stage1${NORMAL}         Build a C compiler (no libc/C++)
     ${GOOD}-s2, --stage2${NORMAL}         Build a C compiler & libc (no C++)
@@ -104,6 +106,7 @@ LVER="[latest]"
 
 while [[ $# -gt 0 ]] ; do
 	case $1 in
+	-V|--version)   echo "crossdev-GENTOO_PV"; exit 0;;
 	-t|--target)    shift; parse_target $1;;
 	--b|--binutils) shift; BVER=-$1;;
 	--g|--gcc)      shift; GVER=-$1;;
@@ -156,6 +159,7 @@ einfo "PKGDIR:                ${PKGDIR}"
 hr
 ) >& ${PORT_LOGDIR}/cross-${CTARGET}-info.log
 cat ${PORT_LOGDIR}/cross-${CTARGET}-info.log
+emerge info >> ${PORT_LOGDIR}/cross-${CTARGET}-info.log
 
 #################
 mkdir -p /etc/portage
