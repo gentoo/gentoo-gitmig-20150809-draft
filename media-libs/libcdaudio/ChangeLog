@@ -1,13 +1,18 @@
 # ChangeLog for media-libs/libcdaudio
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.3 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.4 2002/12/17 00:39:25 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*libcdaudio-0.99.6-r1 (16 Dec 2002)
+
+  16 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added patch from #12208.
+
 *libcdaudio-0.99.6 (1 Feb 2002)
 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  changed sparc ~sparc keywords
+ 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
