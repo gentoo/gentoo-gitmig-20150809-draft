@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.33-r3.ebuild,v 1.3 2001/10/06 16:51:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.33-r3.ebuild,v 1.4 2001/10/07 04:30:26 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
-SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.bz"
+SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.gz"
 
 DEPEND="virtual/glibc"
 
