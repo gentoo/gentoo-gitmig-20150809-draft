@@ -1,0 +1,45 @@
+# ChangeLog for sys-fs/dosfstools
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.1 2003/09/17 02:43:10 seemant Exp $
+
+*dosfstools-2.9 (16 Sep 2003)
+
+  16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> dosfstools-2.8-r3.ebuild,
+  dosfstools-2.9.ebuild, files/errno.patch:
+  move to sys-fs
+
+*dosfstools-2.9 (08 Sep 2003)
+
+  08 Sep 2003; Martin Holzer <mholzer@gentoo.org> dosfstools-2.8-r3.ebuild,
+  dosfstools-2.9.ebuild, files/2.8-errno.patch, files/errno.patch:
+  Version bumped. Closes #28139.
+
+*dosfstools-2.8-r3 (26 Feb 2003)
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> dosfstools-2.8-r3.ebuild :
+  Added hppa to KEYWORDS.
+
+  26 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  errno include fix #16344 (#16267).
+
+*dosfstools-2.8-r2 (3 May 2002)
+
+  7 Dec 2002; bjb <bjb@gentoo.org> :
+  Added alpha to KEYWORDS
+
+  18 Sept 2002; SpanKY <vapier@gentoo.org> :
+  Fixed HOMEPAGE
+
+  3 May 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Add LICENSE, SLOT.
+
+*dosfstools-2.8-r1 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
