@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.11 2004/03/06 03:39:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.12 2004/03/18 13:08:05 aliz Exp $
 
 depend() {
 	use logger dns
@@ -9,6 +9,10 @@ depend() {
 }
 
 checkconfig() {
+	if [ ! -d /var/empty ] ; then
+		mkdir -p /var/empty || return 1
+	fi
+
 	if [ ! -e /etc/ssh/sshd_config ] ; then
 		eerror "You need an /etc/ssh/sshd_config file to run sshd"
 		eerror "There is a sample file in  /usr/share/doc/openssh"
