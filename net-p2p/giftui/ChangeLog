@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.16 2004/08/19 03:41:41 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.17 2004/11/30 22:30:32 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> giftui-0.4.1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   18 Aug 2004; Jon Hood <squinky86@gentoo.org> +files/0.4.1-gentoo.patch,
   giftui-0.4.1.ebuild:

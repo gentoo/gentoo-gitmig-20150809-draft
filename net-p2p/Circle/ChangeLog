@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/Circle
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/ChangeLog,v 1.10 2004/08/23 03:09:25 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/ChangeLog,v 1.11 2004/11/30 22:29:23 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> Circle-0.40e.ebuild,
+  Circle-0.41c.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   22 Aug 2004; Jon Hood <squinky86@gentoo.org> -Circle-0.39-r1.ebuild,
   Circle-0.41c.ebuild:

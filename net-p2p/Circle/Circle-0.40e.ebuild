@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.40e.ebuild,v 1.3 2004/07/22 04:17:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.40e.ebuild,v 1.4 2004/11/30 22:29:23 swegener Exp $
 
 inherit python
 
@@ -15,7 +15,7 @@ IUSE="oggvorbis gnome"
 
 DEPEND="virtual/python
 	>=dev-python/pygtk-1.99.14
-	>=gtk+-2
+	>=x11-libs/gtk+-2
 	oggvorbis? ( dev-python/pyogg
 		dev-python/pyvorbis )
 	gnome? ( dev-python/gnome-python )"
