@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.2 2001/08/06 23:01:55 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.3 2001/08/17 23:41:54 drobbins Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -74,7 +74,8 @@ src_install() {
 	
     dodir /usr/share/man
     try make install prefix=${D}/usr MANDIR=${D}/usr/share/man
-	
+	dosym spython /usr/bin/python	
+
 	rm -rf ${D}/usr/include
 	rm -rf ${D}/usr/lib/${PN}${PV}/config
 	
