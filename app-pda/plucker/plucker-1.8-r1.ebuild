@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/plucker-1.8-r1.ebuild,v 1.4 2004/06/24 21:44:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/plucker-1.8-r1.ebuild,v 1.5 2004/06/26 03:13:03 agriffis Exp $
 
 IUSE="gtk"
 
@@ -34,7 +34,7 @@ src_unpack() {
 	sed -i "/^DOCSDIR/s/packages/${PF}/" plucker_desktop/Makefile.in || die "sed 1 failed"
 
 	# Fix default path to netpbm files
-	sed -i "s:, 'palm\(.*\.map\):, '/usr/share/netpdb/\1:p" \
+	sed -i "s:, '\(palm.*\.map\):, '/usr/share/netpbm/\1:p" \
 		parser/python/PyPlucker/ImageParser.py || die "sed 2 failed"
 
 	# Fix deprecation warnings for python-2.3
