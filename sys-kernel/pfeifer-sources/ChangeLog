@@ -1,23 +1,32 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.13 2003/07/13 02:44:30 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.14 2003/07/14 23:52:01 pfeifer Exp $
 
   TODO:
 	update FreeSWAN, aic7xxx
 	update some of the docs
     
+*pfeifer-sources-2.4.21.1_pre4 (14 Jul 2003)
+
+14 Jul 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.21._pre4.ebuild
+ Changes:
+ * Added usb solid state disk support - i forgot to add this last release... 
+ * Updated kernel-config. It is genkernel ready.
+ * Minor fixes and cleanups
+ * Other things I am forgetting to mention
+
 *pfeifer-sources-2.4.21.1_pre3 (12 Jul 2003)
 
 12 Jul 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.21._pre3.ebuild
  Changes:
  * Re-added USAGI
- * updated grsec to 1.9.11
- * updated systrace to 1.4
- * updated evms to 2.1.0
- * added ja1 patch
- * added epcam usb driver
- * added hfsplus support
- * minor fixes and cleanups
+ * Updated grsec to 1.9.11
+ * Updated systrace to 1.4
+ * Updated evms to 2.1.0
+ * Added ja1 patch
+ * Added epcam usb driver
+ * Added hfsplus support
+ * Minor fixes and cleanups
  * Other things I am forgetting to mention
 
 *pfeifer-sources-2.4.21.1_pre2 (30 Jun 2003)
