@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.7 2004/07/17 09:56:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.8 2004/08/31 22:10:52 vapier Exp $
+
+*opensc-0.9.2 (31 Aug 2004)
+
+  31 Aug 2004; Mike Frysinger <vapier@gentoo.org> -opensc-0.9.0_alpha.ebuild,
+  +opensc-0.9.2.ebuild:
+  Version bump #62359 by Andreas Jellinghaus.
 
   17 Jul 2004; David Holm <dholm@gentoo.org> opensc-0.8.1.ebuild,
   opensc-0.9.0_alpha.ebuild:
