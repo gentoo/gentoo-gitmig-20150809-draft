@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.13.ebuild,v 1.1 2004/05/26 20:05:16 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.13.ebuild,v 1.2 2004/05/27 19:36:20 tantive Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use snmp && myconf="--enable-snmp"
+	use snmp && myconf="--enable-net-snmp"
 	APCUPSD_MAIL=/usr/sbin/sendmail ./configure \
 		--prefix=/usr \
 		--sbindir=/usr/sbin \
