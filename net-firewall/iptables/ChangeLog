@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.48 2004/11/06 16:43:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.49 2004/11/07 10:36:09 kumba Exp $
+
+  07 Nov 2004; Joshua Kinard <kumba@gentoo.org> iptables-1.2.11-r2.ebuild:
+  Marked stable on mips.
 
 *iptables-1.2.11-r3 (06 Nov 2004)
 
