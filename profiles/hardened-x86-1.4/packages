@@ -36,18 +36,15 @@
 *>=sys-apps/portage-2.0.49-r3
 *>=sys-devel/binutils-2.13.90.0.6-r2
 
-# we lock the user into the stable version of gcc even when ~arch flags are used.
 *>=sys-devel/gcc-3.2.3-r2
-*<sys-devel/gcc-3.3.0
 
-*>=sys-devel/hardened-gcc-2.4.2
+*>=sys-devel/hardened-gcc-2.4.5
 *>=sys-libs/glibc-2.3.2-r1
 #*>=sys-apps/module-init-utils-0.9.10-r5
 *virtual/modutils
 virtual/os-headers
 >=app-admin/sysklogd-1.4.1
 *dev-lang/python
-
 
 >=x11-base/xfree-4.1.0-r12
 *app-shells/sash
