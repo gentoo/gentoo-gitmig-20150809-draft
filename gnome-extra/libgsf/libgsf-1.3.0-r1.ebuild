@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.3.0-r1.ebuild,v 1.4 2002/12/09 04:22:40 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.3.0-r1.ebuild,v 1.5 2002/12/09 23:40:27 mholzer Exp $
 
 IUSE="gnome doc"
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="The GNOME Structured File Library"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/libgsf/libgsf-1.3.0.tar.bz2 mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.3/${P}.tar.bz2 mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
