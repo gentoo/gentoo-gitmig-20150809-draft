@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.6 2004/02/24 06:45:31 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.7 2004/02/24 07:18:44 augustus Exp $
+
+  24 Feb 2004; root <root@gentoo.org> ut2004-demo-3120-r1.ebuild:
+  Added install of README-tts.txt and tts-festival.pl. Also added einfos on how
+  to get TTS working.
 
   24 Feb 2004; <augustus@gentoo.org> ut2004-demo-3120-r1.ebuild:
   Added AMD64 ping and tts patch.
