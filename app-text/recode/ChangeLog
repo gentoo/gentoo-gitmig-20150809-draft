@@ -1,10 +1,21 @@
 # ChangeLog for app-text/recode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.11 2003/06/28 16:00:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.12 2003/06/28 23:32:13 pylon Exp $
 
   28 Jun 2003; Martin Holzer <mholzer@gentoo.org> recode-3.5.ebuild,
   recode-3.6.ebuild:
   Updated SRC_URI. Closes #23534
+
+*recode-3.6-r1 (29 Jun 2003)
+
+  29 Jun 2003; Lars Weiler <pylon@gentoo.org> recode-3.6-r1.ebuild:
+  Inherits the debian patches to recode, so that BigEndian machines can handle
+  utf8 correctly.  Tested only on ppc yet.
+  
+  This closes Bug #20141
+  
+  Thanks to John Steele Scott <toojays@toojays.net> for giving the hint to this
+  patch.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
