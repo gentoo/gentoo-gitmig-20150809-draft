@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.3 2004/01/30 07:02:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.4 2004/01/30 12:33:12 mr_bones_ Exp $
 
 inherit gnuconfig ssl-cert
 
@@ -26,7 +26,7 @@ DEPEND="$RDEPEND
 	sys-devel/automake
 	sys-devel/libtool
 	>=sys-apps/sed-4"
-	
+
 S="${WORKDIR}/${PN}-v${PV}"
 
 src_unpack() {
