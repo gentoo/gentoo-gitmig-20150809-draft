@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mdadm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.20 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.21 2004/11/25 14:21:03 gmsoft Exp $
+
+  25 Nov 2004; Guy Martin <gmsoft@gentoo.org> mdadm-1.7.0.ebuild:
+  Stable on hppa.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> mdadm-1.7.0.ebuild:
   Masked mdadm-1.7.0.ebuild stable for ppc
