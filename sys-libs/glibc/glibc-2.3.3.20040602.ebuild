@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040602.ebuild,v 1.1 2004/06/02 19:14:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040602.ebuild,v 1.2 2004/06/02 20:05:55 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened"
 
@@ -161,6 +161,7 @@ use_nptl() {
 }
 
 pkg_setup() {
+	die "this ebuild is broken and shouldnt be used yet!"
 	# We need gcc 3.2 or later ...
 	if [ "`gcc-major-version`" -ne "3" -o "`gcc-minor-version`" -lt "2" ]
 	then
