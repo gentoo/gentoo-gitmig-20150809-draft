@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r1.ebuild,v 1.4 2005/03/13 14:22:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r1.ebuild,v 1.5 2005/03/15 19:40:25 luckyduck Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ src_unpack() {
 		WANT_AUTOMAKE=1.7 aclocal
 		WANT_AUTOMAKE=1.7 automake
 		WANT_AUTOCONF=2.5 autoconf
-		elibtoolize
+		libtoolize --copy --force
 	fi
 }
 
