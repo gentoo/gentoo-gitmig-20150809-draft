@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-20010601-r1.ebuild,v 1.2 2001/12/29 17:41:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-20010601-r1.ebuild,v 1.3 2002/02/03 21:52:07 danarmak Exp $
 
 
 A=${P}.tar.gz
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.coinn3d.org"
 
 DEPEND="virtual/x11
         virtual/opengl
-	>=x11-libs/qt-2.3
+	=x11-libs/qt-2.3*
         =media-libs/coin-${PV}"
 
 src_compile() {
