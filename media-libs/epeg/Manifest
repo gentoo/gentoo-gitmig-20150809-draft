@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 8bb571ede56589258df342c96d60da29 ChangeLog 327
 MD5 656b81f4172d47e2eff3c9d93c823c30 epeg-9999.ebuild 315
 MD5 edfdfec4e93ebb0d10eb86b8a8594eba metadata.xml 324
-MD5 77dd251c56c4f4f13b44aca27e6ce416 epeg-0.9.0.20041031.ebuild 325
+MD5 2f08afdd88cf697e59ace766505d9d5e epeg-0.9.0.20041208.ebuild 325
 MD5 053ef2a22fb911800d11b963fc5ee399 epeg-0.9.0.ebuild 316
-MD5 c4345efffc77f0ecd6d327fc27984331 files/digest-epeg-0.9.0.20041031 73
+MD5 16813cff2d172f09f4f6ee66abb5074e files/digest-epeg-0.9.0.20041208 73
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-epeg-9999 0
 MD5 ec6db47e042f01aab3935df4a61db99c files/digest-epeg-0.9.0 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhwRcHTu7gpaalycRAqFSAJ9AhHGu2pgwOgA3JpvAYjYcM2GcEQCdEjSO
-73zuGUyNg1ielNJoBJmjysk=
-=x9yR
+iD8DBQFBubv4roRuSHgZdywRAhibAJ4xRU7t8blx74LZXn72N17HUGWkfgCdHTGV
+GHqJ4Tv1FmjPPItS1Di7VS0=
+=FWvK
 -----END PGP SIGNATURE-----
