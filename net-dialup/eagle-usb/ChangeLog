@@ -1,0 +1,11 @@
+# ChangeLog for net-dialup/eagle-usb
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.1 2005/02/25 21:18:35 mrness Exp $
+
+*eagle-usb-2.1.1 (25 Feb 2005)
+
+  25 Feb 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml, +files/confd,
+  +files/dsl.peer, +files/initd, +eagle-usb-2.1.1.ebuild:
+  Initial import from bug #82480, thanks to genstef and Daniel Plaza
+  <daniel@dilmun.ls.fi.upm.es>.
+
