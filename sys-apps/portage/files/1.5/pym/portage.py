@@ -1011,13 +1011,18 @@ class packagetree:
 			if x[0]==catpkg:
 				return 1
 		return 0
-	def exists_node(self,nodename):
+	def hasnode(self,nodename):
 		if not self.populated:
 			self.populate()
 		if self.tree.has_key(nodename):
 			return 1
 		return 0
-	def getnodes(self,nodename):
+	def getallnodes(self):
+		"returns a list of all keys in our tree"
+		if not self.populated:
+			self.populate()
+		return self.tree.keys()
+	def getnode(self,nodename):
 		if not self.populated:
 			self.populate()
 		if self.tree.has_key(nodename):
@@ -1094,18 +1099,18 @@ class packagetree:
 					cpv=mypkgdep[1:]
 			if not isspecific(cpv):
 				return None
-			if self.exists_node(getgeneral(cpv)):
+			if self.hasnode(getgeneral(cpv)):
 				mycatpkg=catpkgsplit(cpv)
 				mykey=mycatpkg[0]+"/"+mycatpkg[1]
-				if not self.exists_node(mykey):
+				if not self.hasnode(mykey):
 					return 0
-				for x in self.getnodes(mykey):
+				for x in self.getnode(mykey):
 					if eval("pkgcmp(x[1][1:],mycatpkg[1:])"+cmpstr+"0"):
 						return 1
 			return 0
 		if not isspecific(mypkgdep):
 			# cat/pkg 
-			if self.exists_node(mypkgdep):
+			if self.hasnode(mypkgdep):
 				return 1
 			else:
 				return 0
@@ -1136,10 +1141,10 @@ class packagetree:
 				return ""
 			mycatpkg=catpkgsplit(cpv)
 			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-			if not self.exists_node(mykey):
+			if not self.hasnode(mykey):
 				return ""
 			mynodes=[]
-			for x in self.getnodes(mykey):
+			for x in self.getnode(mykey):
 				if eval("pkgcmp(x[1][1:],mycatpkg[1:])"+cmpstr+"0"):
 					mynodes.append(x)
 			#now we have a list of all nodes that qualify
@@ -1151,9 +1156,9 @@ class packagetree:
 					bestmatch=x
 			return bestmatch[0]		
 		elif not isspecific(mypkgdep):
-			if not self.exists_node(mypkgdep):
+			if not self.hasnode(mypkgdep):
 				return ""
-			mynodes=self.getnodes(mypkgdep)[:]
+			mynodes=self.getnode(mypkgdep)[:]
 			if len(mynodes)==0:
 				return ""
 			bestmatch=mynodes[0]
@@ -1186,19 +1191,19 @@ class packagetree:
 				return []
 			mycatpkg=catpkgsplit(cpv)
 			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-			if not self.exists_node(mykey):
+			if not self.hasnode(mykey):
 				return []
 			mynodes=[]
-			for x in self.getnodes(mykey):
+			for x in self.getnode(mykey):
 				if eval("pkgcmp(x[1][1:],mycatpkg[1:])"+cmpstr+"0"):
 					mynodes.append(x)
 			#now we have a list of all nodes that qualify
 			#since we want all nodes that match, return this list
 			return mynodes
 		elif not isspecific(mypkgdep):
-			if not self.exists_node(mypkgdep):
+			if not self.hasnode(mypkgdep):
 				return [] 
-			return self.getnodes(mypkgdep)[:]
+			return self.getnode(mypkgdep)[:]
 			
 class vartree(packagetree):
 	"this tree will scan a var/db/pkg database located at root (passed to init)"
