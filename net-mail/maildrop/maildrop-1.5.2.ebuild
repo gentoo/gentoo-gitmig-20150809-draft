@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.2.ebuild,v 1.3 2003/03/26 04:42:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.2.ebuild,v 1.4 2003/06/12 02:21:57 robbat2 Exp $
 
 IUSE="mysql ldap gdbm berkdb"
 
@@ -83,9 +83,9 @@ src_install() {
 	insinto /etc
 	doins ${FILESDIR}/maildroprc
 	
+	insinto /etc/maildrop
 	if [ -n "`use mysql`" ]
 	then
-		cp ${S}/maildropmysql.config ${S}/maildropmysql.cf
 		sed -e "s:/var/lib/mysql/mysql.sock:/var/run/mysqld/mysqld.sock:" \
 		 	${S}/maildropmysql.config > ${S}/maildropmysql.cf
 		newins ${S}/maildropmysql.cf maildropmysql.cf
