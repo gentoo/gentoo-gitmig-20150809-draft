@@ -1,0 +1,13 @@
+--- configure	2004-01-06 20:09:39.126501031 +0000
++++ configure	2004-01-06 20:09:30.122975487 +0000
+@@ -10571,7 +10571,9 @@
+ 	ac_cv_libtool_non_pic=yes
+     cd ..; rm -fr ac_test_libtool; echo "$as_me:$LINENO: result: $ac_cv_libtool_non_pic" >&5
+ echo "${ECHO_T}$ac_cv_libtool_non_pic" >&6
+-    if test x"$ac_cv_libtool_non_pic" = x"yes"; then
++    if test "$host_cpu" = "x86_64"; then
++	LIBMPEG2_CFLAGS="$LIBMPEG2_CFLAGS -prefer-pic"
++    elif test x"$ac_cv_libtool_non_pic" = x"yes"; then
+ 	LIBMPEG2_CFLAGS="$LIBMPEG2_CFLAGS -prefer-non-pic"
+     else
+ 	:
