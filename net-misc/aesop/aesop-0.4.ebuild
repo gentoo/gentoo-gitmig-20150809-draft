@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/aesop-0.4.ebuild,v 1.5 2003/02/13 14:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/aesop-0.4.ebuild,v 1.6 2003/03/03 13:01:28 vladimir Exp $
 
 
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ SRC_URI="http://kryptology.org/aesop/download/${P}.tar.gz"
 HOMEPAGE="http://kryptology.org/aesop"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 PPC"
+KEYWORDS="x86 ppc"
 
 DEPEND="sys-devel/gcc"
 
