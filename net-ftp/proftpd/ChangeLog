@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.32 2003/06/17 17:10:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.33 2003/06/22 18:56:47 raker Exp $
+
+  22 Jun 2003; root <root@gentoo.org> proftpd-1.2.9_rc1.ebuild:
+  Changed install stanza so files install in the proper location
 
   17 Jun 2003; Nick Hadaway <raker@gentoo.org> proftpd-1.2.9_rc1.ebuild,
   proftpd-1.2.8.ebuild:
