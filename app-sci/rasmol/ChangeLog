@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/rasmol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.8 2004/04/01 09:31:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.9 2004/04/01 19:41:01 spyderous Exp $
+
+  01 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; rasmol-2.7.2.1.ebuild:
+  Drop old version, also closes #45706.
 
 *rasmol-2.7.2.1.1 (01 Apr 2004)
 
