@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.2.ebuild,v 1.8 2004/06/24 23:59:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.2.ebuild,v 1.9 2004/07/14 16:22:33 agriffis Exp $
 
 inherit elisp-common
 
 IUSE="emacs"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
 SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"

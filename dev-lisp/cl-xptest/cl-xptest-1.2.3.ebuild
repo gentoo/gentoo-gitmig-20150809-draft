@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xptest/cl-xptest-1.2.3.ebuild,v 1.3 2004/06/24 23:57:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xptest/cl-xptest-1.2.3.ebuild,v 1.4 2004/07/14 16:19:55 agriffis Exp $
 
 inherit common-lisp
 
@@ -16,8 +16,6 @@ DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
 
 CLPACKAGE=xptest
-
-S=${WORKDIR}/${P}
 
 src_install() {
 	common-lisp-install *.lisp *.asd

@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.3.ebuild,v 1.9 2004/06/24 23:59:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.3.ebuild,v 1.10 2004/07/14 16:22:33 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
 SRC_URI="ftp://ftp.gnu.org/gnu/gcl/gcl-2.4.3.tgz"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
@@ -14,6 +13,7 @@ DEPEND=">=app-text/texi2html-1.64
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 src_compile() {
 
