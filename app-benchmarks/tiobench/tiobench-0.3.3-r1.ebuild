@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/tiobench-0.3.3-r1.ebuild,v 1.4 2004/07/18 17:29:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/tiobench-0.3.3-r1.ebuild,v 1.5 2004/08/27 15:59:24 tgall Exp $
 
 DESCRIPTION="Portable, robust, fully-threaded I/O benchmark program"
 HOMEPAGE="http://tiobench.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ppc ppc64"
 IUSE=""
 
 RDEPEND="virtual/libc
