@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.84.8.4.ebuild,v 1.2 2004/06/24 23:23:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.84.8.4.ebuild,v 1.3 2004/08/15 06:09:09 vapier Exp $
 
 inherit games
 
@@ -13,11 +13,16 @@ SRC_URI="http://hajo.simutrans.com/download/simubase-${MY_PV}.zip
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="media-libs/libsdl"
+RDEPEND="media-libs/libsdl
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-sdl
+	)"
 
 src_install() {
 	local dir="${GAMES_PREFIX_OPT}/${PN}"
