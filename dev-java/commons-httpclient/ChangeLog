@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.8 2004/09/17 09:30:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.9 2004/10/12 19:20:00 axxo Exp $
+
+  12 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  commons-httpclient-2.0-r1.ebuild, commons-httpclient-2.0.1.ebuild:
+  made jikes happy, closes 66977
 
 *commons-httpclient-2.0.1 (16 Sep 2004)
 
