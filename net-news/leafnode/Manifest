@@ -1,29 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 1b5b620b548875e7504a22585ac63307 ChangeLog 7268
 MD5 79b5d2fdce4d9983f72699141d4b28a3 leafnode-1.10.1.ebuild 1935
 MD5 b74113fc92db2adeb34c60b7f27398c3 leafnode-1.10.2.ebuild 1935
+MD5 36cbd78781b0d32fc68500cb14ed02e2 leafnode-1.10.4.ebuild 1935
 MD5 9da72ab9d19b9c3cc28f391671eff3ca leafnode-1.9.49.ebuild 1986
 MD5 ad07bab1d4cc67965c2a7a8f4f9223d6 leafnode-1.9.50.ebuild 1994
 MD5 815ce631650114d4a9b2c8425a17fd78 leafnode-2.0.0_alpha20040513.ebuild 2051
-MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 36cbd78781b0d32fc68500cb14ed02e2 leafnode-1.10.4.ebuild 1935
-MD5 82792b8ad31b5c119eb316d1617fa2cb ChangeLog 7144
 MD5 af48f458dde0b0f775f3aee346eb2e77 leafnode-2.0.0_alpha20040813.ebuild 2051
+MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
+MD5 e738edcf518c8b67b6ec3b54446fc6ec leafnode-1.10.5.ebuild 1915
 MD5 3821841ecf37466cd3630872cb7f0c7d files/digest-leafnode-1.10.1 72
 MD5 0d93f5423deff195529393ccf7d2bc5b files/digest-leafnode-1.10.2 72
+MD5 0eb894e15099db44e747d17b97408f92 files/digest-leafnode-1.10.4 72
 MD5 55746f46949f232f8cc02f902f807b08 files/digest-leafnode-1.9.49 72
 MD5 b6867235b6efd8bf05a2734ee5432667 files/digest-leafnode-1.9.50 72
 MD5 400f282f47bfa31b927f0b1cb06ef29e files/digest-leafnode-2.0.0_alpha20040513 82
+MD5 bbfb0fb543ca0ee706edc3849299d1eb files/digest-leafnode-2.0.0_alpha20040813 82
 MD5 5909cb0566e88e7694e85246c78fe4ff files/fetchnews.cron 177
 MD5 510836c882c3365d0441ba7d8854ba6b files/leafnode.xinetd 230
 MD5 72cc5e849b413ec0cf288a65980dd3b5 files/texpire.cron 158
-MD5 0eb894e15099db44e747d17b97408f92 files/digest-leafnode-1.10.4 72
-MD5 bbfb0fb543ca0ee706edc3849299d1eb files/digest-leafnode-2.0.0_alpha20040813 82
+MD5 77f5baae985324905dc359a4db23776a files/digest-leafnode-1.10.5 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBIM5CI1lqEGTUzyQRAgTPAJwPiknnC4HqGbBtlpe4cCjQhAj5nQCeLzDW
-CiKfKLWFpVrR+CDFxZqbxFo=
-=WN3K
+iD8DBQFBOTtLI1lqEGTUzyQRAn/aAKCPs8OUTbrNGKyXMAG3zxbjY4OPKwCfSP4X
+8xK2KDrOiZfiJnEAomCyY/w=
+=sTDz
 -----END PGP SIGNATURE-----
