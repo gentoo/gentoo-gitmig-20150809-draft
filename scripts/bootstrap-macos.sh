@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 2004 The Gentoo Foundation, Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.8 2004/11/18 02:28:54 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.9 2004/11/21 17:32:37 kito Exp $
 
 # Make sure sudo passwd is asked for
 
