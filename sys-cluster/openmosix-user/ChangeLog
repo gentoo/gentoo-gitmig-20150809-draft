@@ -1,6 +1,17 @@
 # ChangeLog for sys-cluster/openmosix-user
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.20 2004/07/06 13:40:58 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.21 2004/08/05 15:02:54 voxus Exp $
+
+*openmosix-user-0.3.6-r1 (05 Aug 2004)
+
+  05 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +openmosix-user-0.3.6-r1.ebuild,
+  -openmosix-user-0.3.2.ebuild,
+  -openmosix-user-0.3.3.ebuild,
+  -openmosix-user-0.3.4-r1.ebuild,
+  -openmosix-user-0.3.4.ebuild,
+  -openmosix-user-0.3.5.ebuild:
+  Version bump. Old ebuild wiped out.
 
 *openmosix-user-0.3.6 (06 Jul 2004)
 

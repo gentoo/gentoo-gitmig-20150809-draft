@@ -1,20 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.4.ebuild,v 1.7 2004/07/15 03:04:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r1.ebuild,v 1.1 2004/08/05 15:02:54 voxus Exp $
 
+PV=0.3.6-2
 S=${WORKDIR}/openmosix-tools-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
-SRC_URI="mirror://sourceforge/openmosix/openmosix-tools-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/openmosix/openmosix-tools-${PV}.tar.gz"
 HOMEPAGE="http://www.openmosix.com/"
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
-	>=sys-kernel/openmosix-sources-2.4.18"
+	>=sys-kernel/openmosix-sources-2.4.24"
 RDEPEND="${DEPEND}
 	sys-apps/findutils
 	dev-lang/perl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 IUSE=""
 
 pkg_setup() {
@@ -53,6 +54,7 @@ src_compile() {
 		    --with-sysvdir=${D}/etc/init.d \
 		    --with-configdir=${D}/etc/openmosix \
 		    --with-mapdir=${D}/etc \
+		    --with-mosrundir=${D}/bin \
 		    --prefix=${D}/usr
 	make
 }
