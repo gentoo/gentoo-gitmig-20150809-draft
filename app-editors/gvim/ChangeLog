@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.78 2004/06/19 01:55:46 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.79 2004/06/19 21:47:01 ciaranm Exp $
+
+  19 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> -gvim-6.2-r3.ebuild,
+  -gvim-6.2-r5.ebuild, -gvim-6.2-r6.ebuild:
+  Remove older versions
 
   18 Jun 2004; Brandon Hale <tseng@gentoo.org> gvim-6.3.ebuild:
   Stable on x86.
