@@ -827,3 +827,7 @@ x11-libs/gdkxft
 # lostlogic@gentoo.org 3 Jun 2002
 # GCC3.1 support, new version masked for testing
 =dev-db/edb-1.0.3
+
+# lostlogic@gentoo.org 3 Jun 2002
+# GCC3.1 support, new version masked for testing
+=gnome-extra/gnomemm-1.2.2-r2
