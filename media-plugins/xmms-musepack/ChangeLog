@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.22 2004/10/31 09:45:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.23 2004/11/14 19:10:41 eradicator Exp $
+
+  14 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-musepack-1.1_alpha10.ebuild:
+  changing LICENSE to dual license according to
+  http://www.musepack.net/index.php?pg=lin
 
 *xmms-musepack-1.1_alpha10 (31 Oct 2004)
 
