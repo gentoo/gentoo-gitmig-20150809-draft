@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-8.0.ebuild,v 1.11 2002/12/15 14:06:18 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-8.0.ebuild,v 1.12 2002/12/16 14:36:52 avenj Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Convert a .rpm file to a .tar.gz archive"
@@ -13,7 +13,8 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc ppc alpha"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	sys-apps/cpio"
 
 src_unpack() {
 	cd ${WORKDIR} && mkdir ${P}
