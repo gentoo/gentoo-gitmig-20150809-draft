@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.7 2002/11/25 04:20:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.8 2002/12/01 12:34:23 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
 #
@@ -129,6 +129,8 @@ EPATCH_EXCLUDE=""
 epatch() {
 	local PIPE_CMD=""
 	local STDERR_TARGET="${T}/$$.out"
+	local PATCH_TARGET="${T}/$$.patch"
+	local PATCH_SUFFIX=""
 	local SINGLE_PATCH="no"
 	local x=""
 
@@ -149,21 +151,33 @@ epatch() {
 	then
 		local EPATCH_SOURCE="$1/*.${EPATCH_SUFFIX}"
 	else
+		if [ ! -d ${EPATCH_SOURCE} ]
+		then
+			echo
+			eerror "Cannot find \$EPATCH_SOURCE!"
+			echo
+			die "Cannot find \$EPATCH_SOURCE!"
+		fi
+		
 		local EPATCH_SOURCE="${EPATCH_SOURCE}/*.${EPATCH_SUFFIX}"
 	fi
 
 	case ${EPATCH_SUFFIX##*\.} in
 		bz2)
 			PIPE_CMD="bzip2 -dc"
+			PATCH_SUFFIX="bz2"
 			;;
 		gz|Z|z)
 			PIPE_CMD="gzip -dc"
+			PATCH_SUFFIX="gz"
 			;;
 		ZIP|zip)
 			PIPE_CMD="unzip -p"
+			PATCH_SUFFIX="zip"
 			;;
 		*)
 			PIPE_CMD="cat"
+			PATCH_SUFFIX="patch"
 			;;
 	esac
 
@@ -198,41 +212,88 @@ epatch() {
 				einfo "  ${x##*/}..."
 			fi
 
-			echo "***** ${x##*/} *****" > ${STDERR_TARGET}
-			echo >> ${STDERR_TARGET}
+			echo "***** ${x##*/} *****" > ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+			echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
 
 			# Allow for prefix to differ ... im lazy, so shoot me :/
 			while [ "${count}" -lt 5 ]
 			do
 				# Generate some useful debug info ...
-				draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET}
-				echo >> ${STDERR_TARGET}
-				
-				echo -n "PATCH COMMAND:  " >> ${STDERR_TARGET}
-				echo "${PIPE_CMD} ${x} | patch ${popts} -p${count}" >> ${STDERR_TARGET}
-				
-				echo >> ${STDERR_TARGET}
-				draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET}
-				
-				if eval ${PIPE_CMD} ${x} | patch ${popts} --dry-run -f -p${count} 2>&1 >> ${STDERR_TARGET}
+				draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+				echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+
+				if [ "${PATCH_SUFFIX}" != "patch" ]
 				then
-					eval ${PIPE_CMD} ${x} | patch ${popts} -p${count} 2>&1 >> ${STDERR_TARGET}
+					echo -n "PIPE_COMMAND:  " >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+					echo "${PIPE_CMD} ${x} > ${PATCH_TARGET}" >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+				else
+					PATCH_TARGET="${x}"
+				fi
+				
+				echo -n "PATCH COMMAND:  " >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+				echo "patch ${popts} -p${count} < ${PATCH_TARGET}" >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+				
+				echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+				draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+
+				if [ "${PATCH_SUFFIX}" != "patch" ]
+				then
+					if ! (${PIPE_CMD} ${x} > ${PATCH_TARGET}) >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/} 2>&1
+					then
+						echo
+						eerror "Could not extract patch!"
+						#die "Could not extract patch!"
+						count=5
+						break
+					fi
+				fi
+				
+				if patch ${popts} --dry-run -f -p${count} < ${PATCH_TARGET} >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/} 2>&1
+				then
+					draw_line "***** ${x##*/} *****" >	${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
+					echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
+					echo "ACTUALLY APPLYING ${x##*/}..." >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
+					echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
+					draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
+
+					patch ${popts} -p${count} < ${PATCH_TARGET} >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real 2>&1
+
+					if [ "$?" -ne 0 ]
+					then
+						cat ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
+						echo
+						eerror "A dry-run of patch command succeeded, but actually"
+						eerror "applying the patch failed!"
+						#die "Real world sux compared to the dreamworld!"
+						count=5
+					fi
+
+					rm -f ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
+					
 					break
 				fi
 
 				count=$((count + 1))
 			done
 
+			if [ "${PATCH_SUFFIX}" != "patch" ]
+			then
+				rm -f ${PATCH_TARGET}
+			fi
+
 			if [ "${count}" -eq 5 ]
 			then
+				echo
 				eerror "Failed Patch: ${x##*/}!"
 				eerror
 				eerror "Include in your bugreport the contents of:"
 				eerror
-				eerror "  ${STDERR_TARGET}"
-				eerror
+				eerror "  ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}"
+				echo
 				die "Failed Patch: ${x##*/}!"
 			fi
+
+			rm -f ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}
 
 			eend 0
 		fi
