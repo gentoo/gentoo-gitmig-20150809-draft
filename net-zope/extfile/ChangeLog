@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/extfile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/extfile/ChangeLog,v 1.5 2004/06/25 01:20:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/extfile/ChangeLog,v 1.6 2004/07/19 22:24:55 kloeri Exp $
+
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  extfile-1.2.0_beta1.ebuild, extfile-1.2.0_beta2.ebuild:
+  dev-python/Imaging renamed to dev-python/imaging.
 
   05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   extfile-1.2.0_beta2.ebuild:
