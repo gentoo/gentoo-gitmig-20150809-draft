@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2695 2004/02/13 22:12:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2696 2004/02/14 01:27:52 george Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -46,10 +46,6 @@ sys-kernel/gentoo-test-sources
 # RealOne/RealPlayer 8 vulnerabilities bug #40469
 media-video/realplayer
 media-video/realone
-
-# <george@gentoo.org> (03 Feb 2004)
-# symlinks need refinment
-=dev-libs/boost_alpha2-r1
 
 # <liquidx@gentoo.org> (04 Feb 2004)
 # deprecating libgpio because it isn't needed by anything and unmaintained
