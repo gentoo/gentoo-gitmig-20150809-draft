@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.3.ebuild,v 1.2 2003/12/20 15:08:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.3.ebuild,v 1.3 2004/01/03 15:15:22 mholzer Exp $
 
 inherit eutils
 
 DESCRIPTION="GTK+ based Audio CD Player/Ripper."
 HOMEPAGE="http://www.nostatic.org/grip"
 SRC_URI="mirror://sourceforge/grip/${P}.tar.gz"
+RESTRICT="nomirror"
 LICENSE="GPL-2"
 
 DEPEND="=x11-libs/gtk+-2.2*
