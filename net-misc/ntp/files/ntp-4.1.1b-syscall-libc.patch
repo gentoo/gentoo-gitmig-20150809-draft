@@ -1,17 +1,11 @@
 --- ntp-4.1.1b/include/ntp_syscall.h	2003-01-06 18:51:39.000000000 +0100
 +++ ntp-4.1.1b-alpha/include/ntp_syscall.h	2003-01-06 18:54:57.000000000 +0100
-@@ -14,7 +14,6 @@
+@@ -14,7 +14,7 @@
  # include <sys/timex.h>
  #endif
  
 -#ifndef NTP_SYSCALLS_LIBC
++#if !defined(NTP_SYSCALLS_LIBC) || defined(__alpha__)
  #ifdef NTP_SYSCALLS_STD
  # define ntp_adjtime(t)		syscall(SYS_ntp_adjtime, (t))
  # define ntp_gettime(t)		syscall(SYS_ntp_gettime, (t))
-@@ -50,6 +49,5 @@
- #  endif
- # endif /* !HAVE_ADJTIMEX */
- #endif /* !NTP_SYSCALLS_STD */
--#endif /* !NTP_SYSCALLS_LIBC */
- 
- #endif /* NTP_SYSCALL_H */

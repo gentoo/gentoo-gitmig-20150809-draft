@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.50 2004/08/07 10:38:30 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.51 2004/11/09 15:46:44 vapier Exp $
+
+*ntp-4.2.0.20040617 (09 Nov 2004)
+
+  09 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  files/ntp-4.1.1b-syscall-libc.patch, files/ntp.conf,
+  +ntp-4.2.0.20040617.ebuild:
+  Version bump to resolve ipv6 problems (#51721 #57355 #67654), segfaults
+  (#48128 #58684), be more friendly with openntpd (#70142), clean up the
+  config files (#64171 #65502), some md5 key troubles (#65099 #67408), and
+  change the default install path (#66671).
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> ntp-4.2.0-r2.ebuild:
   Stable on amd64.
