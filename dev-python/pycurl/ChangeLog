@@ -1,0 +1,25 @@
+# ChangeLog for net-ftp/pycurl
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.1 2003/06/13 22:21:27 liquidx Exp $
+
+*pycurl-7.10.4 (09 Apr 2003)
+
+  09 Apr 2003; Alastair Tse <liquidx@gentoo.org> pycurl-7.10.4.ebuild:
+  version bump
+
+*pycurl-7.10.3 (28 Feb 2003)
+
+  28 Feb 2003; Alastair Tse <liquidx@gentoo.org> pycurl-7.10.3.ebuild files/digest-pycurl-7.10.3 :
+  Version Bump. Fixes #11932.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*pycurl-0.4.5 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
