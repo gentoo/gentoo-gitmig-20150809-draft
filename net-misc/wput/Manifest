@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ac29f1880ddce9ec87abfa791aeb4a8 wput-0.5.ebuild 944
 MD5 99ee84722a32630b8271c4932a346e42 wput-0.4.ebuild 825
-MD5 a311659367f3e5bed6c4f23b56ab6739 ChangeLog 983
+MD5 888331973c293d452d1870724c46e2ce ChangeLog 1091
+MD5 5ac29f1880ddce9ec87abfa791aeb4a8 wput-0.5.ebuild 944
 MD5 0ea3ffdc7ca29f08414d91f62d259c31 metadata.xml 249
 MD5 c4f33a3f597e892402d506bb45c85e71 files/digest-wput-0.4 57
-MD5 5658b10fdaa5e2c2663e63aa8d58db37 files/digest-wput-0.5 57
 MD5 25eb8a44df9c58935f1fa03421d2a493 files/wput-0.5-gentoo.diff 1164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBvJdTEZCkKN40op4RAk+wAKCrS6GZQAeIkVRFYPQnP0fEaZ1fQQCglHe0
-NswBnY7iek/t2z22HMOcr5o=
-=Edj1
------END PGP SIGNATURE-----
+MD5 5658b10fdaa5e2c2663e63aa8d58db37 files/digest-wput-0.5 57

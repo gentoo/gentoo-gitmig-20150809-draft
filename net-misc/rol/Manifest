@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5023511a3e100be778eb41cdbbccfcf4 ChangeLog 1231
+MD5 2bd78e1bcd2e50aac57d46319e0ae04e ChangeLog 1339
+MD5 3c69c8297324ca96cc261f677656e04e rol-0.2.2.ebuild 721
 MD5 cae762a7f055b30d44c7f2973befae91 rol-0.3.0.ebuild 679
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 3c69c8297324ca96cc261f677656e04e rol-0.2.2.ebuild 721
 MD5 a0268e3f16437b5b48df87a1745a76b2 files/digest-rol-0.3.0 60
 MD5 51ce7cab4f972be6fa69e9aab3e1076d files/digest-rol-0.2.2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwOlSQlM6RnzZP+IRAmGqAJ42kqh8buu5DPjiPlUWyp6aETHuGACgrbgq
-EOic7CVxbtxYIpY101/2G9c=
-=FbpV
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 550028bc8a0f4f7627684c5908b5c23c ChangeLog 1183
-MD5 2696089ba7c3050ec23df1117391888f guidedog-0.9.0.ebuild 517
-MD5 caf41593f894b64c4beeb0993514f978 guidedog-1.0.0.ebuild 529
+MD5 786cd999af57597440c805df67868261 ChangeLog 1287
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 e49c2381ad2feceb95b4e1ad02168f9b files/digest-guidedog-0.9.0 66
+MD5 caf41593f894b64c4beeb0993514f978 guidedog-1.0.0.ebuild 529
+MD5 2696089ba7c3050ec23df1117391888f guidedog-0.9.0.ebuild 517
 MD5 ef11a71f8da9dd10d59e1a37957c0696 files/digest-guidedog-1.0.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBG1D/mdTrptrqvGERAjxPAJ4hixGIPxw5FxMZnrTgGkWcrRe0xwCfUGR6
-UAjwhq60eZ/K3D92huPmcqQ=
-=VpWX
------END PGP SIGNATURE-----
+MD5 e49c2381ad2feceb95b4e1ad02168f9b files/digest-guidedog-0.9.0 66
