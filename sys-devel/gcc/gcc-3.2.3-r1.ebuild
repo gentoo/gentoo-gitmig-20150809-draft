@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.13 2003/07/20 18:42:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.14 2003/08/10 01:18:41 george Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -281,7 +281,7 @@ src_compile() {
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
-		gcc_lang="c,c++,ada,f77,objc"
+		gcc_lang="c,c++,f77,objc"
 	else
 		gcc_lang="c"
 	fi

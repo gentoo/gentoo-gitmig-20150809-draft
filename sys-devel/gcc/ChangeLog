@@ -1,7 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.115 2003/08/04 23:37:26 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.116 2003/08/10 01:18:41 george Exp $
 
+  09 Aug 2003; George Shapovalov <george@gentoo.org> gcc-2.95.3-r7.ebuild,gcc-2.95.3-r8.ebuild,gcc-3.0.4-r6.ebuild,gcc-3.1.1-r1.ebuild,gcc-3.1-r8.ebuild,gcc-3.2.3-r1.ebuild,gcc-3.2.3-r2.ebuild,gcc-3.2-r5.ebuild,gcc-3.3.ebuild,gcc-3.3-r1.ebuild
+  Removed "ada" from gcc_lang on listed ebuilds (did not touch three which do some patches,
+  will do them later myself or leave to azarah).
+  See #25178 for details. In short, having ada in --enable-languages does not make gcc build
+  ada support properly (there is more involved, see for example #11204) and makes gcc build fail 
+  on users who have gnat installed.
+  
   04 Aug 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.3-r1.ebuild:
   Update 3.3 ebuild to use the latest protector-3.  Also don't patch
   in ProPolice on HPPA (consistent with the 3.2.x gcc ebuilds).
