@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.11 2004/07/15 03:45:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.12 2004/11/30 22:28:17 swegener Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SLOT="0"
 
 DEPEND="virtual/libc
 	sys-devel/binutils
-	pam? ( >=pam-0.75-r11 )
+	pam? ( >=sys-libs/pam-0.75-r11 )
 	snmp? ( virtual/snmp )"
 
 RDEPEND="virtual/libc sys-devel/binutils"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sendpage/sendpage-0.9.14.ebuild,v 1.3 2004/06/25 00:10:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sendpage/sendpage-0.9.14.ebuild,v 1.4 2004/11/30 22:26:37 swegener Exp $
 
 inherit perl-module
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND=">=Device-SerialPort-0.13
-	>=MailTools-1.44
+DEPEND=">=dev-perl/Device-SerialPort-0.13
+	>=dev-perl/MailTools-1.44
 	>=dev-perl/libnet-1.11
-	>=Net-SNPP-1.13"
+	>=dev-perl/Net-SNPP-1.13"
 
 mydoc="FEATURES THANKS TODO email2page.conf sendpage.cf snpp.conf docs/*"
 

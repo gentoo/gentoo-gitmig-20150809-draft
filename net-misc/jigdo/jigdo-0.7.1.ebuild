@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.1.ebuild,v 1.3 2004/10/14 03:57:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.1.ebuild,v 1.4 2004/11/30 22:25:16 swegener Exp $
 
 inherit eutils
 
@@ -14,10 +14,10 @@ KEYWORDS="x86 sparc ~ppc ~amd64"
 
 IUSE="gtk nls berkdb libwww"
 
-DEPEND="gtk? ( >=gtk+-2.0.6 )
+DEPEND="gtk? ( >=x11-libs/gtk+-2.0.6 )
 	nls? ( sys-devel/gettext )
-	berkdb? ( =sys-libs/db* )
-	libwww? ( >=libwww-5.3.2 )"
+	berkdb? ( =sys-libs/db-3* )
+	libwww? ( >=net-libs/libwww-5.3.2 )"
 
 src_compile() {
 	local myconf

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/jigdo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.8 2004/10/14 03:57:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.9 2004/11/30 22:25:16 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> jigdo-0.7.0.ebuild,
+  jigdo-0.7.1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   13 Oct 2004; Jason Wever <weeve@gentoo.org> jigdo-0.7.1.ebuild:
   Stable on sparc and x86.

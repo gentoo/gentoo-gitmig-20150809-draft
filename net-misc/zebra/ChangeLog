@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zebra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.15 2004/07/01 22:16:07 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.16 2004/11/30 22:28:17 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> zebra-0.93a.ebuild,
+  zebra-0.93b-r1.ebuild, zebra-0.93b-r2.ebuild, zebra-0.93b.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> zebra-0.93a.ebuild,
   zebra-0.93b-r1.ebuild, zebra-0.93b-r2.ebuild, zebra-0.93b.ebuild:
