@@ -1,7 +1,17 @@
-MD5 2c462a1603125ac086c0a062452b8498 x86info-1.11.ebuild 1798
-MD5 75d28a9694283d877f86a90960b25da8 x86info-1.12b.ebuild 1851
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4e0398f9878e1b863fa4ecbf2b5d69ea ChangeLog 943
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1759a81bcf65ea2266520c18b934df09 files/digest-x86info-1.12b 61
+MD5 2c462a1603125ac086c0a062452b8498 x86info-1.11.ebuild 1798
+MD5 75d28a9694283d877f86a90960b25da8 x86info-1.12b.ebuild 1851
 MD5 14514d85680a44ebe1a0625f76262b3a files/digest-x86info-1.11 60
-MD5 122c0e16e774e475d6f37c309e1838e4 files/x86info-modules.conf-rc 326
+MD5 1759a81bcf65ea2266520c18b934df09 files/digest-x86info-1.12b 61
+MD5 e622e47087f8556df73aae8e3c4dd896 files/x86info-modules.conf-rc 330
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+gE1mdTrptrqvGERApjWAJ9EM67uk9OlnnFBv9omgeD2jquZXQCfaUiB
+2EYK8YjfJ49ZADXeSQBW2WY=
+=z3f7
+-----END PGP SIGNATURE-----
