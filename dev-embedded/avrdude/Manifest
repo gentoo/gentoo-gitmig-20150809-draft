@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9104db2796b630210ecb6cb8b4fedda8 avrdude-4.4.0.ebuild 665
+MD5 99b0ca325c5165d6bc16c155f1e90dbf ChangeLog 513
 MD5 61dd990d46d9043e65248d672b9e217e metadata.xml 265
-MD5 3627255661307997d8ef7aced1bcea06 ChangeLog 419
+MD5 b31ba28f4461dc4655a7809d588b8564 avrdude-4.4.0.ebuild 681
 MD5 dfbaf205065b44ca16000f2fac812136 files/digest-avrdude-4.4.0 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBU5KMmdTrptrqvGERAvvFAJ93QE8PD2Nwwwu/d3gGJqBculBChwCeLweG
-yrY5ZaBE04ueJmYRHhG11P0=
-=cIEs
+iD8DBQFBsSMOI7fK2cqeyXkRAurrAKC2zSL9mL7hd0C/8C5pOoaP0XCYwQCfUCQt
+uEcwWtY+ipCjjJXWH9GLfiE=
+=uIFf
 -----END PGP SIGNATURE-----
