@@ -1,11 +1,18 @@
 # ChangeLog for x11-base/xdirectfb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.6 2002/12/13 11:00:48 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.7 2003/02/02 22:08:15 seemant Exp $
+
+*xdirectfb-1.0_rc3-r1 (02 Feb 2003)
+
+  02 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  xdirectfb-1.0_rc3-r1.ebuild files/digest-xdirectfb-1.0_rc3-r1 :
+
+  Updated to use DirectFB-0.9.16 and the xfree-cvs-4.2.99.4 snapshot.
+
+*xdirectfb-1.0_rc3 (16 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*xdirectfb-1.0_rc3 (16 Nov 2002)
-
   16 Nov 2002; Seemant Kulleen <seemant@gentoo.org> xdirectfb-1.0_rc3.ebuild
   files/digest-xdirectfb-1.0_rc3 :
 

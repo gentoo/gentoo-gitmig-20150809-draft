@@ -1,32 +1,36 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc2-r1.ebuild,v 1.10 2002/12/09 04:41:17 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc3-r1.ebuild,v 1.1 2003/02/02 22:08:15 seemant Exp $
+
+inherit eutils
 
 MY_PN="XDirectFB"
 MY_PV=${PV/_/-}
 MY_P=${MY_PN}-${MY_PV}
-MY_V=X4299
+MY_V=X4.2.99.4
 S=${WORKDIR}/xc
 X=${WORKDIR}/${MY_P}
-DESCRIPTION="XDirectFB is a rootless XServer on top of DirectFB"
 
+DESCRIPTION="XDirectFB is a rootless XServer on top of DirectFB"
 SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-1.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-2.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-3.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-4.tar.bz2
-	 http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz
-	 http://www.directfb.org/download/${MY_PN}/${MY_P}.tar.gz"
-
+	http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz
+	http://www.directfb.org/download/${MY_PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.directfb.org"
-LICENSE="X11"
+
 SLOT="0"
-KEYWORDS="~x86 ~sparc "
+LICENSE="X11"
+KEYWORDS="~x86 ~sparc"
+
+PROVIDE="virtual/x11"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	sys-devel/flex
 	sys-devel/perl
-	dev-libs/DirectFB"
+	>=dev-libs/DirectFB-0.9.16"
 	
 src_unpack () {
 	unpack ${A}
@@ -34,15 +38,23 @@ src_unpack () {
 	cd ${X}
 	cp xc-directfb.diff ${S} 
 	cp -a programs/Xserver/hw/directfb ${S}/programs/Xserver/hw
-	cp ${X}/config/cf/directfb.cf ${S}/config/cf
+	cp ${X}/config/cf/* ${S}/config/cf
 	cp ${FILESDIR}/host.def ${S}/config/cf/
 	
 	cd ${S}
-	patch -p0 < xc-directfb.diff || die
-# Add any optimazations seems to break the build for some reason.
-#	echo "#define DefaultGcc2i386Opt ${CFLAGS}" >> config/cf/host.def
-#	echo "#define GccWarningOptions -Wno" >> config/cf/host.def
-#	echo "#define DefaultCCOptions -ansi" >> config/cf/host.def
+	epatch ./xc-directfb.diff
+
+	cd ${S}/programs/Xserver/hw/directfb
+	cp directfbScreen.c rootlessDirectFB.c ${T}
+
+
+	# update changes in the newer DirectFB versions
+	sed "s:DSPF_RGB15:DSPF_ARGB1555:g" \
+		${T}/directfbScreen.c > directfbScreen.c
+
+	sed "s:DSPF_RGB15:DSPF_ARGB1555:g" \
+		${T}/rootlessDirectFB.c > rootlessDirectFB.c
+	
 }
 
 src_compile() {
