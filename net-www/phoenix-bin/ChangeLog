@@ -1,6 +1,6 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.14 2002/12/10 17:23:02 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.15 2002/12/13 11:00:28 blizzy Exp $
 
 *phoenix-bin-0.4-r2 (10 Dec 2002)
 
@@ -9,7 +9,7 @@
   Version bump. Tagging that unstable.
 
 * Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *phoenix-bin-20021121 (21 Nov 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.6 2002/12/12 16:46:41 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.7 2002/12/13 11:00:27 blizzy Exp $
 
 *amaya-7.0 (12 Dec 2002)
 
@@ -9,8 +9,7 @@
   
   Version bump, closes bug #12008.
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *amaya-6.1 (2 June 2002)
 
