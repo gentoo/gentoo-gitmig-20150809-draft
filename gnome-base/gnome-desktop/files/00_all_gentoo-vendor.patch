@@ -1,0 +1,11 @@
+--- configure.old	2003-04-02 15:37:50.000000000 +0200
++++ configure	2003-04-02 15:38:42.000000000 +0200
+@@ -8175,7 +8175,7 @@
+ GNOME_PLATFORM=2
+ GNOME_MINOR=2
+ GNOME_MICRO=1
+-GNOME_VENDOR="Gnome.Org"
++GNOME_VENDOR="Gentoo Linux"
+ GNOME_DATE="Tuesday, March 11th 2003"
+ 
+ 
