@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.26 2003/06/05 11:13:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.27 2003/07/01 21:15:08 gmsoft Exp $
 
 *libgnomeui-2.2.1 (04 Jun 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> libgnomeui-2.2.1.ebuild :
+  Added ~hppa to KEYWORDS.
 
   04 Jun 2003; foser <foser@gentoo.org> libgnomeui-2.2.1.ebuild :
   New version, fixed deps up a bit
@@ -15,6 +18,9 @@
   Add ~alpha to KEYWORDS
 
 *libgnomeui-2.2.0.1 (30 Jan 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> libgnomeui-2.2.0.1.ebuild :
+  Added hppa to KEYWORDS.
 
   09 Apr 2003; Todd Sunderlin <todd@gentoo.org> libgnomeui-2.2.0.1.ebuild:
   Marked stable for sparc.

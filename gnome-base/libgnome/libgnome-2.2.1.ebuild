@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.2.1.ebuild,v 1.2 2003/06/10 12:17:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.2.1.ebuild,v 1.3 2003/07/01 21:09:20 gmsoft Exp $
 
 IUSE="doc"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Essential Gnome Libraries"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc hppa"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND=">=dev-libs/glib-2.0.3

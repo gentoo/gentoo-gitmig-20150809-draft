@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.50 2003/05/22 12:36:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.51 2003/07/01 21:06:57 gmsoft Exp $
 
 *gnome-vfs-2.2.5 (22 May 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnome-vfs-2.2.5.ebuild :
+  Added hppa to KEYWORDS.
 
   22 May 2003; foser <foser@gentoo.org> gnome-vfs-2.2.5.ebuild :
   New version
