@@ -3,7 +3,7 @@
 # some simple aliases
 alias h		history 25				# use `h` to show the last 25 commands
 alias j		jobs -l					# use `j` to list the background/stopped jobs
-alias ls	ls -F --color=auto		# most people expect `ls` to show nice colours.
+alias ls	ls -F --color=auto		# alias `ls` to show nice colours.
 alias la	ls -a					# \
 alias lf	ls -FA					#  > some shortcuts to common ls options
 alias ll	ls -lA					# /
@@ -30,9 +30,14 @@ if ($?prompt) then
 	set unm = `whoami`				# your username
 	
 	# some example csh prompts, choose one you like.
-	set prompt = "% "					# csh default, simple.
-	set prompt = "${mch:q}: {\!} "		# NetBSD example prompt, shows hostname and history reference
-	set prompt = "${unm:q}@${mch:q}% "	# similar to bash.
+	#set prompt = "% "					# csh default, simple.
+	#set prompt = "${mch:q}: {\!} "		# NetBSD example prompt, shows hostname and history reference
+	set prompt = "${unm:q}@${mch:q}% "	# similar to Gentoo default.
+	
+	# try this to get pwd in your prompt.
+	#set prompt = "${unm:q}@${mch:q}:\!:`pwd`% "
+	#alias cd	'cd \!*;set prompt = "${unm:q}@${mch:q}:\!:`pwd`% "'
+	
 	
 	umask 0022						# set your user's umask.
 endif
