@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.4 2004/05/10 18:48:44 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.5 2004/05/10 18:56:10 battousai Exp $
+
+  10 May 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.2.ebuild:
+  Patched ebuild. Also, pedantic spacing fixes.
 
 *linuxwacom-0.6.2 (10 May 2004)
 
