@@ -2,6 +2,7 @@
 # Gentoo Zope Instance configure tool.
 # Copyright 2003 Jason Shoemaker <kutsuya@gentoo.org>
 # Distributed under GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.1/zope-config,v 1.2 2003/02/26 07:08:46 kutsuya Exp $
 
 VERSION="0.1"
 ZUID=zope
@@ -124,7 +125,7 @@ zinst_dir_set()
     while : ; do
 	ZINST_DIR=$(dialog --stdout \
 	    --backtitle "Need a uniqe name for zinstance directory.(Also the name of the rcscript.)" \
-	    --inputbox "Enter a new zinstance name:" 0 0 )
+	    --inputbox "Enter a new zinstance name:" 0 0 zope- )
 	RESULT=$?
 	if [ ${RESULT} -ne 0 ] ; then
 	    break
