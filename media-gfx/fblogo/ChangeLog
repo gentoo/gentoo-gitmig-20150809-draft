@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fblogo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.2 2003/09/26 18:54:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.3 2003/09/27 00:33:07 weeve Exp $
+
+  26 Sep 2003; Jason Wever <weeve@gentoo.org> fblogo-0.5.0.ebuild,
+  fblogo-0.5.1.ebuild:
+  Added ~sparc keyword.
 
 *fblogo-0.5.1 (26 Sep 2003)
 
