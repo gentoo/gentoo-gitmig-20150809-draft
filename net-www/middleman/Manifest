@@ -1,5 +1,5 @@
 MD5 0cc1b9098ac604551d17d5e2da3c2d35 middleman-1.9.1-r1.ebuild 1726
-MD5 33b42aebaf63f8c23fbe95f17b8e9e1b ChangeLog 2476
+MD5 3af7556e884995e203cfc04275138dfa ChangeLog 2598
 MD5 b3089a22f33a39676bb267f8d3d59c07 metadata.xml 1012
 MD5 f56e6a1b911a262af8c048ca31b2753e middleman-2.0.1-r1.ebuild 2123
 MD5 a187f38dc084c3b8e31abcb320579fd3 middleman-2.0.1.ebuild 1838
@@ -8,4 +8,4 @@ MD5 5e7fe1fa845ace7e8f4d753e7770c2f1 files/digest-middleman-1.9.1-r1 67
 MD5 900b7f67e15e2549a495775afebed6b9 files/digest-middleman-2.0.1 67
 MD5 900b7f67e15e2549a495775afebed6b9 files/digest-middleman-2.0.1-r1 67
 MD5 5cca318658e1fe03d10adece2c8e4d42 files/conf.d/mman 108
-MD5 adaeaa9a833c363e71229fd494f8df49 files/init.d/mman 914
+MD5 f69a18b544969aff06cde7d5ef11adaa files/init.d/mman 975
