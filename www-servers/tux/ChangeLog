@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.5 2004/09/05 09:52:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.6 2004/09/26 06:28:19 vapier Exp $
+
+*tux-3.2.16-r1 (26 Sep 2004)
+
+  26 Sep 2004; Mike Frysinger <vapier@gentoo.org> +files/3.2.16-glibc.patch,
+  +tux-3.2.16-r1.ebuild:
+  Add patch to work with newer glibcs #65344 by Canal Vorfeed.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> tux-2.2.7.ebuild:
   Fixed ChangeLog header. Added missing IUSE.

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/tux-2.2.7.ebuild,v 1.2 2004/09/05 09:52:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/tux-3.2.16-r1.ebuild,v 1.1 2004/09/26 06:28:19 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="kernel level httpd"
 HOMEPAGE="http://people.redhat.com/mingo/TUX-patches/"
@@ -8,14 +10,25 @@ SRC_URI="http://people.redhat.com/mingo/TUX-patches/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
-IUSE=""
+KEYWORDS="x86 ppc"
+IUSE="doc"
 
-DEPEND="dev-libs/glib
+RDEPEND="dev-libs/glib
 	dev-libs/popt"
+DEPEND="${RDEPEND}
+	doc? ( app-text/docbook-sgml-utils )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i "s:-g -fomit-frame-pointer -O2:${CFLAGS}:" Makefile
+	use doc || echo "all:" > docs/Makefile
+	epatch ${FILESDIR}/${PV}-gcc34.patch
+	epatch ${FILESDIR}/${PV}-glibc.patch
+}
 
 src_compile() {
-	emake tux tux2w3c tuxstat TMPDIR=${T} || die
+	emake || die
 }
 
 src_install() {
