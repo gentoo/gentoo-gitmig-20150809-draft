@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.42 2005/01/11 22:45:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.43 2005/01/25 14:24:18 weeve Exp $
+
+  25 Jan 2005; Jason Wever <weeve@gentoo.org> gradm-2.1.0.ebuild:
+  Marking back to ~sparc as, to my knowledge, the sparc team didn't change
+  this nor were we consulted.
 
   11 Jan 2005; <solar@gentoo.org> gradm-2.1.0.ebuild:
   - marking gradm stable
