@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythong
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.11 2004/08/07 22:13:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.12 2004/10/03 21:24:38 kloeri Exp $
+
+  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pythong-2.1.2.ebuild,
+  pythong-2.1.4.ebuild, pythong-2.1.5.ebuild:
+  Remove sed from global scope.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> pythong-2.1.2.ebuild,
   pythong-2.1.4.ebuild, pythong-2.1.5.ebuild:
