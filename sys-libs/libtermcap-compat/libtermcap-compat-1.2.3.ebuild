@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3.ebuild,v 1.7 2002/12/09 04:37:29 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3.ebuild,v 1.8 2002/12/14 01:19:09 seemant Exp $
 
 MY_PN="termcap-compat"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -38,6 +38,7 @@ src_install () {
 	insinto /etc
 	newins ${S}/termtypes.tc termcap
 
+	cd ${S}
 	dodoc ChangeLog README
 }
 

@@ -1,11 +1,18 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.5 2002/12/13 11:00:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.6 2002/12/14 01:19:09 seemant Exp $
+
+*libtermcap-compat-1.2.3 (05 Sep 2002)
+
+  13 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  libtermcap-compat-1.2.3.ebuild :
+
+  ChangeLog and README are now properly installed in the docs folder.
+  Thanks to: fede2@fuerzag.ulatina.ac.cr (Alvaro Figueroa) for catching this
+  in bug #12087.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*libtermcap-compat-1.2.3 (05 Sep 2002)
-
   02 Dec 2002; Will Woods <wwoods@gentoo.org> libtermcap-compat-1.2.3.ebuild:
   Added alpha keyword.
 
