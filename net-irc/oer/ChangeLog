@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/oer
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/ChangeLog,v 1.1 2004/06/17 22:33:17 swegener Exp $
+
+*oer-1.0.64 (18 Jun 2004)
+
+  18 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +files/1.0.64-basename.patch, +oer-1.0.64.ebuild:
+  Initial import, ebuild written by me. Requested by Daniel Webert
+  <daniel_webert@web.de> in bug #51091.
+
