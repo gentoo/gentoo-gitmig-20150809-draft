@@ -1,9 +1,20 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.21 2003/02/27 22:37:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.22 2003/03/22 04:02:52 pylon Exp $
 
  14 Feb 2003; Guy Martin <gmsoft@gentoo.org> mutt-1.4-r3.ebuild :
  Added hppa to keywords.
+
+*mutt-1.4.1 (22 Mar 2003)
+
+  22 Mar 2003; Lars Weiler <pylon@gentoo.org> mutt-1.4.1.ebuild:
+  version bump
+  
+  closes security bug 17857
+  
+  adds a feature for thread editing (bug 12165)
+  change on ppc -O3 to -O2 so that it won't segfault on config-files with
+  lines larger than 255 characters (closes bug 11170)
 
 *mutt-1.4-r3 (03 Sept 2002)
 
