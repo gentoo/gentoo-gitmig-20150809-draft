@@ -1,17 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.8 2002/08/25 16:50:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.9 2002/08/29 15:37:04 raker Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
-
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
+HOMEPAGE="http://www.wxwindows.org/"
+
 LICENSE="LGPL-2"
 SLOT="2.3"
 KEYWORDS="x86 ppc sparc sparc64"
-
-HOMEPAGE="http://www.wxwindows.org/"
 
 DEPEND="dev-libs/libunicode
 	media-libs/netpbm
@@ -20,33 +19,21 @@ DEPEND="dev-libs/libunicode
 	jpeg? ( media-libs/jpeg )
 	media-libs/tiff
 	odbc? ( dev-db/unixODBC  )
-	opengl? ( virtual/opengl )"
-
-use gtk		\
-	&& DEPEND="${DEPEND} =x11-libs/gtk+-1.2*"	\
-	|| DEPEND="${DEPEND} x11-libs/openmotif"
+	opengl? ( virtual/opengl )
+	=x11-libs/gtk+-1.2*"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 	
 
 src_compile() {
 
-	
 	local myconf
-	#--with-gtk enabled by default, if you want to build against motif,
-	#replace --with-gtk with --with-motif and --without-gtk. You will
-	#also need openmotif installed.	Unfortunately, the package build tools
-	#only support installation of one currently.
-	
-	use gtk	\
-		&& myconf="--with-gtk"	\
-		|| myconf="--with-motif --without-gtk"
 
-	
-	#Build static library too, shared library is enabled by default.
-	#Enable useful config options that don't have USE flags
+	# Build static library too, shared library is enabled by default.
+	# Enable useful config options that don't have USE flags
+	# motif is not a supported build environment.  forcing gtk
 	myconf="${myconf} --enable-static --with-zlib --with-unicode \
-		--with-libtiff"
+		--with-libtiff --with-gtk"
 	
 	#Note: pcx image support enabled by default if found.
 	#Also, all wxWindows gui features are enabled by default. If you

@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.10 2002/08/25 16:50:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.11 2002/08/29 15:37:04 raker Exp $
 
 *wxGTK-2.2.9-r1 (09 Aug 2002)
 
@@ -14,8 +14,11 @@
 
 *wxGTK-2.3.2-r2 (13 Jun 2002) 
 
-  25 Aug 2002; Nick Hadaway <raker@gentoo.org>
-  wxGTK-2.3.2-r2.ebuild :
+  29 Aug 2002; Nick Hadaway <raker@gentoo.org> wxGTK-2.3.2-r2.ebuild :
+  Removed motif comments and forced gtk as motif is no longer a supported
+  build dependancy.
+
+  25 Aug 2002; Nick Hadaway <raker@gentoo.org> wxGTK-2.3.2-r2.ebuild :
   Changed tiff to be a forced dependancy as wxGTK will not compile without it.
 
   13 Aug 2002; Nick Hadaway <raker@gentoo.org>
@@ -26,17 +29,16 @@
   Added ppc to keywords
 
   13 Jun 2002; Bart Verwilst <verwilst@gentoo.org> wxGTK-2.3.2-r2.ebuild : 
- 
-  Apply a little patch to let GCC-3.1 compile this. ( src/gtk/joystick.cpp ), thanks to Francisco Gimeno <kikov@fco-gimeno.com>.
+   Apply a little patch to let GCC-3.1 compile this. ( src/gtk/joystick.cpp ), thanks to Francisco Gimeno <kikov@fco-gimeno.com>.
   Closes bug # 3660
 
 *wxGTK-2.3.2-r1 (14 Apr 2002)
 
   14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> wxGTK-2.3.2-r1.ebuild :
-
   Cleaned up the ebuild a little bit and needs recompiling against newer libpng.
 
 *wxGTK-2.2.9 (28 Mar 2002)
+
   28 Mar 2002; Spider <spider@gentoo.org>; wxGTK-2.2.9.ebuild
   Well, backported this thing to a stable branch, since hte other version is verified as working, I added this without masking anything, should be transparent except that it provides the dependency some people want.
 
