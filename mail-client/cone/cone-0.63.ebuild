@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.63.ebuild,v 1.1 2004/12/26 18:35:45 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.63.ebuild,v 1.2 2005/04/02 10:39:02 ferdy Exp $
 
 DESCRIPTION="CONE: COnsole News reader and Emailer"
 HOMEPAGE="http://www.courier-mta.org/cone/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~sparc x86"
 IUSE="crypt fam spell"
 
 RDEPEND="virtual/libc

@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 541522d3c5f03bf10b0e2dd580a1f678 cone-0.57-r1.ebuild 961
-MD5 c96b653f67cb4c8e5b469c703b03a7eb cone-0.63.ebuild 806
-MD5 660d97795b6e2be03fcf2c58dc45cf4c ChangeLog 1796
+MD5 5bc8f6fd12ac641aef0e59898002c036 cone-0.63.ebuild 806
+MD5 cb7aaa940b51a2e98a9f3385df8e7235 ChangeLog 1890
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 6a82a031a17392d5565b4ceaafc87604 files/digest-cone-0.57-r1 63
 MD5 28b43eab37446bf115b3a7c894f99040 files/cone-dotsignature.patch 2127
 MD5 2487e4a2a650ad88efe5a4fcae050bab files/digest-cone-0.63 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTnZaViELBEf1JB0RAnRbAJ0YRMqiV4rDN+2aBYRufmhlLgsTKgCfdB39
+Aoo9Adi8nKIjcTFLo6lGMdU=
+=nJFF
+-----END PGP SIGNATURE-----
