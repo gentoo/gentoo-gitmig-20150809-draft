@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.1.ebuild,v 1.1 2001/04/13 16:59:03 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.1.ebuild,v 1.2 2001/04/15 18:57:14 pete Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,12 +15,16 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=gnome-base/gnome-print-0.25"
 
 src_compile() {
-
   local myconf
   if [ -z "`use nls`" ]
   then
     myconf="--disable-nls"
   fi
+  
+  # on of the samples in the package need to be regenerated from the idl files
+  rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo.h
+  rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo-*.c
+  
   try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}
   try make
 }

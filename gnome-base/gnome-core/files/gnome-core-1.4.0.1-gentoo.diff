@@ -1,0 +1,65 @@
+diff -urP gnome-core-1.4.0.1.orig/configure.in gnome-core-1.4.0.1/configure.in
+--- gnome-core-1.4.0.1.orig/configure.in	Wed Mar 28 11:49:10 2001
++++ gnome-core-1.4.0.1/configure.in	Sun Apr 15 14:04:14 2001
+@@ -283,6 +283,15 @@
+ 	])
+ ])
+ 
++CPPFLAGS=`$GNOME_CONFIG --cflags print`
++LDFLAGS=`$GNOME_CONFIG --libs print`
++
++lib_gnomeprint=false
++AC_CHECK_LIB(gnomeprint, main, lib_gnomeprint=true, [
++	AC_MSG_WARN([GnomePrint not found (using GtkXmHTML)
++	])
++])
++
+ CPPFLAGS=$CPPFLAGS_save
+ LDFLAGS=$LDFLAGS_save
+ 
+@@ -291,22 +300,18 @@
+ 	gtkhtml_enabled="$enableval", gtkhtml_enabled=no)
+ 
+ if test "x$gtkhtml_enabled" = "xyes" ; then
+-	if test "x$lib_gtkhtml" = "xtrue" ; then
+-		AC_MSG_CHECKING(for static libgtkhtml)
+-		if test -e $GTK_HTML_PREFIX/lib/libgtkhtml.a ; then
+-			AC_MSG_RESULT(yes)
+-			AC_MSG_CHECKING(for static libgnomeprint)
+-			if test -e $GNOME_PRINT_PREFIX/lib/libgnomeprint.a ; then
+-				AC_MSG_RESULT(yes)
+-				help_use_gtkhtml=true
+-			else
+-				AC_MSG_RESULT(no)
+-			fi
+-		else
+-			AC_MSG_RESULT(no)
+-		fi
++	if test \( "x$lib_gtkhtml" = "xtrue" \) -a \( "x$lib_gnomeprint" = "xtrue" \) ; then
++		GTKHTML_CFLAGS=`$GNOME_CONFIG --cflags gtkhtml`
++		GTKHTML_LIBS=`$GNOME_CONFIG --libs gtkhtml`
++		GNOMEPRINT_CFLAGS=`$GNOME_CONFIG --cflags print`
++		GNOMEPRINT_LIBS=`$GNOME_CONFIG --libs print`
++		help_use_gtkhtml=true
+ 	fi
+ fi
++AC_SUBST(GTKHTML_CFLAGS)
++AC_SUBST(GTKHTML_LIBS)
++AC_SUBST(GNOMEPRINT_CFLAGS)
++AC_SUBST(GNOMEPRINT_LIBS)
+ 
+ AC_MSG_CHECKING(which HTML widget to use)
+ if test "x$help_use_gtkhtml" = "xtrue" ; then
+diff -urP gnome-core-1.4.0.1.orig/help-browser/Makefile.am gnome-core-1.4.0.1/help-browser/Makefile.am
+--- gnome-core-1.4.0.1.orig/help-browser/Makefile.am	Mon Feb  5 11:04:57 2001
++++ gnome-core-1.4.0.1/help-browser/Makefile.am	Sun Apr 15 12:50:28 2001
+@@ -16,8 +16,7 @@
+ 
+ if HELP_USE_GTKHTML
+ htmllibs = $(GNOME_XML_LIB) @PIXBUF_LIBS@ \
+-	$(GTK_HTML_PREFIX)/lib/libgtkhtml.a	\
+-	$(GNOME_PRINT_PREFIX)/lib/libgnomeprint.a
++	$(GTKHTML_LIBS) $(GNOMEPRINT_LIBS)
+ else
+ htmllibs = $(GTKXMHTML_LIBS)
+ endif
