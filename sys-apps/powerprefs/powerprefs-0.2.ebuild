@@ -3,16 +3,16 @@
 # Author David Chamberlain <daybird@gentoo.org>
 
 S=${WORKDIR}/${P}
-DESCRIPTION="PBButtons is a PPC-only program to map special Powerbook/iBook keys in Linux"
+DESCRIPTION="powerprefs is a PPC-only program to interface with special Powerbook/iBook keys in Linux"
 SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
 
-DEPEND=""
+DEPEND="x11-libs/gtk+ sys-apps/pbbuttonsd"
 
 src_compile() {
 
 	./configure --prefix=/usr || die "sorry, ppc-only package"
-	make || die "sorry, failed to compile pbbuttons"
+	make || die "sorry, powerprefs compile failed"
 }
 
 src_install() {
@@ -21,7 +21,7 @@ src_install() {
 		prefix=${D}/usr \
 		mandir={D}/usr/share/man \
 		infodir={D}/usr/share/info \
-		install || die "sorry, failed to install pbbuttons"
+		install || die "sorry, failed to install powerprefs"
 
 	dodoc README COPYING
 
