@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/ximian-connector
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.17 2004/03/01 21:10:35 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.18 2004/03/04 16:26:39 obz Exp $
+
+  05 Mar 2004; Mike Gardiner <obz@gentoo.org>
+  ximian-connector-1.2.2_p1.ebuild, ximian-connector-1.4.4.0.6.1.ebuild,
+  ximian-connector-1.4.5.0.6.1.ebuild:
+  Removed version 1.4.4.0.6.1 as it depends on a version of evolution (1.4.4)
+  that no longer exists in the tree. Using evo 1.4.5, and connector 1.4.5.0.6.1
+  will work as usual
 
   20 Nov 2003; Alastair Tse <liquidx@gentoo.org>
   ximian-connector-1.2.2_p1.ebuild:
