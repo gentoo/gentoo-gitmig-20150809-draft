@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.26 2004/10/20 12:27:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.27 2004/10/21 16:25:40 wolf31o2 Exp $
+
+*livecd-tools-1.0.8 (21 Oct 2004)
+
+  21 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -livecd-tools-1.0.6.ebuild, -livecd-tools-1.0.7.ebuild,
+  +livecd-tools-1.0.8.ebuild:
+  Updated with latest versions of autoconfig and net-setup to resolve problems
+  with wireless configuration and not forcing hwsetup to be run by autoconfig
+  (for sparc and such that don't support it).
 
 *livecd-tools-1.0.7 (20 Oct 2004)
 
