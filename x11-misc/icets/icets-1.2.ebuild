@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-1.2.ebuild,v 1.1 2004/07/27 12:25:27 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-1.2.ebuild,v 1.2 2004/07/27 12:29:13 phosphan Exp $
 
 DESCRIPTION="IceWM Theme Editor"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
@@ -18,7 +18,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	sed -e "s:/usr/local/bin:${D}/usr/bin:" -i ${PN}.pro || die "sed failed"
+	sed -e "s:/usr/local/bin:/usr/bin:" -i ${PN}.pro || die "sed failed"
 	sed -e 's:/usr/local/share:/usr/share:g' -i ${PN}.cpp || die "sed failed"
 }
 
@@ -28,7 +28,7 @@ src_compile () {
 }
 
 src_install () {
-	einstall || die
+	make INSTALL_ROOT="${D}" install || die
 
 	rm -rf ${D}/usr/doc
 	dohtml icets/docs/en/*.{html,sgml}
