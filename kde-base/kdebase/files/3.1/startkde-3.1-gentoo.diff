@@ -1,6 +1,6 @@
---- startkde	2002-09-16 00:08:25.000000000 +0300
-+++ startkde	2002-10-01 14:02:59.000000000 +0300
-@@ -1,8 +1,28 @@
+--- startkde	2002-11-24 16:45:51.000000000 -0800
++++ startkde	2002-11-25 23:39:56.000000000 -0800
+@@ -1,12 +1,30 @@
 -#!/bin/sh
 +#!/bin/sh --login
  #
@@ -8,30 +8,32 @@
 +#  GENTOO CUSTOMIZED KDE STARTUP SCRIPT ( KDE-3.1 )
  #
  
+ # When the X server dies we get a SIGHUP from xinit. We must ignore it
+ # because we still need to do some cleanup.
+ trap 'echo GOT SIGHUP' SIGHUP
+ 
 +# Gentoo part:
 +export PATH="_KDEDIR_/bin:${PATH}"
 +export KDEDIR="_KDEDIR_"
 +export KDEDIRS="_KDEDIR_:/usr" # do NOT add env.d's KDEDIRS
-+
 +cd ~
 +[ -d .kde ] && mv .kde .kde.backup
 +if [ ! -e .kde3.1 ]; then
-+    if [ -e .kde3 ]; then
-+	cp -r .kde3 .kde3.1
-+    else
-+	mkdir .kde3.1
-+    fi
++	if [ -e .kde3 ]; then
++		cp -r .kde3 .kde3.1
++	else
++		mkdir .kde3.1
++	fi
 +fi
 +ln -sf .kde3.1 .kde
 +
 +#export KDEHOME="${HOME}/.kdecvs"
 +
 +# Gentoo part ends
-+
  # Boot sequence:
  #
  # kdeinit is used to fork off processes which improves memory usage
-@@ -25,12 +45,12 @@
+@@ -29,12 +47,12 @@
  # especially necessary on slow machines, where starting KDE takes one or two
  # minutes until anything appears on the screen.
  #
@@ -46,7 +48,7 @@
  xsetroot -cursor_name left_ptr $bkg
  
  # The user's personal KDE directory is usually ~/.kde, but this setting
-@@ -134,7 +154,11 @@
+@@ -140,7 +158,11 @@
  fi
  
  # the splashscreen and progress indicator
