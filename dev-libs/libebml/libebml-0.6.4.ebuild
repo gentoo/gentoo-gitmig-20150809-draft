@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.4.ebuild,v 1.2 2004/02/26 04:50:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.4.ebuild,v 1.3 2004/02/26 19:27:40 gmsoft Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.matroska.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~ia64 ~sparc"
+KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~ia64 ~sparc ~hppa"
 
 DEPEND="virtual/glibc"
 
