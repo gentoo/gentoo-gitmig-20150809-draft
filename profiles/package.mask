@@ -1322,3 +1322,6 @@ app-cdr/eroaster
 # mask todo-manager because it's really busted
 app-misc/todo-manager-bronze
 
+# vapier@gentoo.org 2 Oct 2002
+# masked for testing
+net-dialup/ltmodem
