@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Jcode
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.9 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.10 2004/01/22 01:53:15 gustavoz Exp $
+
+  21 Jan 2004; <gustavoz@gentoo.org> Jcode-0.83.ebuild:
+  stable on sparc
 
 *Jcode-0.83 (31 May 2003)
 
