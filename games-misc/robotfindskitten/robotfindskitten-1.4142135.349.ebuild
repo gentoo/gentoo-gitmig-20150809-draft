@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/robotfindskitten-1.4142135.349.ebuild,v 1.2 2004/02/20 06:43:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/robotfindskitten-1.4142135.349.ebuild,v 1.3 2004/04/27 01:59:18 mr_bones_ Exp $
 
 inherit games
 
@@ -14,13 +14,8 @@ KEYWORDS="x86 sparc amd64"
 
 DEPEND="sys-libs/ncurses"
 
-src_compile() {
-	egamesconf || die
-	emake || die
-}
-
 src_install() {
-	dogamesbin src/robotfindskitten
+	dogamesbin src/robotfindskitten || die "dogamesbin failed"
 	doinfo doc/robotfindskitten.info
 	dodoc AUTHORS BUGS ChangeLog NEWS README
 }
