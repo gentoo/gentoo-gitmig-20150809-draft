@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/quota
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.9 2002/12/09 08:42:21 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.10 2002/12/13 11:00:33 blizzy Exp $
 
 *quota-3.06 (9 Dec 2002)
 
@@ -8,8 +8,7 @@
 
   Added rc script from gregg@unix.net to -r1, and masked it for testing.
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   3 Dec 2002; Joachim Blaabjerg <styx@gentoo.org> quota-3.03.ebuild
   quota-3.04.ebuild :

@@ -1,9 +1,8 @@
 # ChangeLog for sys-apps/cpio
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.5 2002/12/10 00:12:19 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.6 2002/12/13 11:00:31 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cpio-2.5 (19 Nov 2002)
 

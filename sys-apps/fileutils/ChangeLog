@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.10 2002/12/12 21:22:02 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.11 2002/12/13 11:00:31 blizzy Exp $
 
   12 Dec 2002; Joachim Blaabjerg <styx@gentoo.org>
   files/digest-fileutils-4.1.11-r1 :
@@ -17,8 +17,7 @@
   anyway?) and forward-ported the 4.1.8 patch to 4.1.11, masked for testing.
   Fixes bug #11936
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *fileutils-4.1.11 (25 Sep 2002)
 

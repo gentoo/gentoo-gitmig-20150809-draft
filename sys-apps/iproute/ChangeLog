@@ -1,9 +1,8 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.10 2002/12/09 04:37:25 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.11 2002/12/13 11:00:31 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *iproute-20010824-r2 (30 Aug 2002)
 
