@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xpdf-chinese-simplified
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-chinese-simplified/ChangeLog,v 1.6 2004/06/24 22:57:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-chinese-simplified/ChangeLog,v 1.7 2004/10/17 11:08:35 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  xpdf-chinese-simplified-1.ebuild:
+  keywords amd64.
 
 *xpdf-chinese-simplified-1 (16 Aug 2002)
   
