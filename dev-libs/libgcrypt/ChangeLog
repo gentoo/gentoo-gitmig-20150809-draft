@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.39 2004/10/03 09:23:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.40 2004/10/10 14:12:19 weeve Exp $
+
+*libgcrypt-1.2.0-r2 (10 Oct 2004)
+
+  10 Oct 2004; Jason Wever <weeve@gentoo.org>
+  +files/libgcrypt-rijndael.patch, +libgcrypt-1.2.0-r2.ebuild:
+  Added a fix for bug #53667 that makes libgcrypt apps happy on sparc.
 
   03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> libgcrypt-1.2.0-r1.ebuild,
   libgcrypt-1.2.0.ebuild:
