@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/glpk
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/ChangeLog,v 1.1 2003/11/20 20:26:08 robbat2 Exp $
+
+*glpk-4.2 (20 Nov 2003)
+
+  20 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> glpk-4.2.ebuild,
+  metadata.xml:
+  Initial commit. ebuild written by robbat2@gentoo.org
+
