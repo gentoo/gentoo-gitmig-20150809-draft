@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12_pre8.ebuild,v 1.1 2002/10/23 20:32:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12_pre8.ebuild,v 1.2 2002/10/24 17:34:19 raker Exp $
 
 DESCRIPTION="A perl module which integrates virus scanning software with your MTA"
 HOMEPAGE="http://www.amavis.org"
 SRC_URI="mirror://sourceforge/amavis/${P/_/}.tar.gz"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
