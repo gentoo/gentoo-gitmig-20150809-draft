@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.26.ebuild,v 1.7 2004/04/27 21:20:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.26.ebuild,v 1.8 2004/05/19 18:16:12 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,7 +24,7 @@ src_compile() {
 	local myconf=
 	local mymake=
 
-	filter-flags -fPIC
+	# filter-flags -fPIC
 
 	# see bug #3897 ... we need insmod static, as libz.so is in /usr/lib
 	#
