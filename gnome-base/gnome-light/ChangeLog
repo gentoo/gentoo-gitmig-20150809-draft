@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-light
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.12 2004/12/20 17:30:38 joem Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.13 2005/03/11 17:02:07 spider Exp $
+
+*gnome-light-2.10_pre0 (11 Mar 2005)
+
+  11 Mar 2005; <spider@gentoo.org> +gnome-light-2.10_pre0.ebuild:
+  Updated dependencies so they match the 2.10_pre0 meta
 
 *gnome-light-2.8.1 (20 Dec 2004)
 
