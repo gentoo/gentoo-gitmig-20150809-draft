@@ -1,5 +1,14 @@
-MD5 7b47cc75f95bb36157801954503e3842 ChangeLog 1569
-MD5 ca8d4a00e5a29697ea136a222230b311 herdstat-0.6-r1.ebuild 1250
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 750497c6184a7a98caedd1fd1d96a8a7 herdstat-1.0_rc1.ebuild 1166
+MD5 d4dcf3e617d0165351038e05a63a50d5 ChangeLog 1757
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 7c2b7e4f965005f9fe94728c434072a2 files/digest-herdstat-0.6-r1 65
-MD5 4325434be2093988b4b5c6ec7e14cb59 files/herdstat-0.6-fix-dev-all.diff 475
+MD5 74de37557082287a08c4f22981ec7b77 files/digest-herdstat-1.0_rc1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQCWTEZCkKN40op4RAldvAJ95ltsW51aVJ2qEp+JbDJABVCY+pgCaA7xg
+9Llc36kMlJL2L7qalPdijpQ=
+=kYdE
+-----END PGP SIGNATURE-----

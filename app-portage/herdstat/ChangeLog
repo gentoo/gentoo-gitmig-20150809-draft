@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.9 2005/03/21 09:53:50 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.10 2005/03/22 14:02:42 ka0ttic Exp $
+
+*herdstat-1.0_rc1 (22 Mar 2005)
+
+  22 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/herdstat-0.6-fix-dev-all.diff, -herdstat-0.6-r1.ebuild,
+  +herdstat-1.0_rc1.ebuild:
+  bump
 
   21 Mar 2005; Mike Gardiner <obz@gentoo.org> herdstat-0.6-r1.ebuild:
   Keyworded ~ppc

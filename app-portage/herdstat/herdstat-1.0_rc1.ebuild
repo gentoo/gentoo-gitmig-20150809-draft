@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-0.6-r1.ebuild,v 1.2 2005/03/21 09:53:50 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.0_rc1.ebuild,v 1.1 2005/03/22 14:02:42 ka0ttic Exp $
 
-inherit bash-completion eutils
+inherit bash-completion
 
 DESCRIPTION="Utility that parses Gentoo's herds.xml and allows queries based on herd or developer"
 HOMEPAGE="http://developer.berlios.de/projects/herdstat/"
@@ -17,12 +17,6 @@ RDEPEND="dev-libs/xmlwrapp
 	net-misc/wget"
 DEPEND="dev-libs/xmlwrapp
 	>=sys-apps/sed-4"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-fix-dev-all.diff
-}
 
 src_compile() {
 	econf $(use_enable debug) || die "econf failed"
