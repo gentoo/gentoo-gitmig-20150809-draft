@@ -47,6 +47,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/${OLD15_P}.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/${OLD14_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
+LICENSE="GPL-2"
 
 DEPEND="sys-devel/perl
 	>=sys-devel/autoconf-2.53-r1"

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d-r2.ebuild,v 1.2 2002/04/07 13:46:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d-r2.ebuild,v 1.3 2002/07/09 20:13:54 aliz Exp $
 
 OLD_PV=1.4-p5
 OLD_P=${PN}-${OLD_PV}
@@ -11,6 +11,7 @@ DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 SRC_URI="ftp://sources.redhat.com/pub/${PN}/${P}.tar.bz2
 	ftp://ftp.gnu.org/gnu/${PN}/${OLD_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
+LICENSE="GPL-2"
 
 DEPEND="sys-devel/perl
 	>=sys-devel/autoconf-2.52-r1"

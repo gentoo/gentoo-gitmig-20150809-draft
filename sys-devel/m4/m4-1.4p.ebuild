@@ -1,13 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p.ebuild,v 1.1 2002/03/21 08:03:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p.ebuild,v 1.2 2002/07/09 20:13:55 aliz Exp $
 
 MY_P=${P/p/ppre2}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="GNU macro processor"
 SRC_URI="ftp://ftp.seindal.dk/gnu/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )

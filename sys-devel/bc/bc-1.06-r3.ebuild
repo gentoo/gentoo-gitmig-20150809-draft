@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r3.ebuild,v 1.2 2001/11/24 18:40:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r3.ebuild,v 1.3 2002/07/09 20:13:54 aliz Exp $
       
 DESCRIPTION="Handy console-based calculator utility"
 HOMEPAGE="http://www.gnu.org/software/bc/bc.html"
 S=${WORKDIR}/${P}
 SRC_URI="ftp://prep.ai.mit.edu/pub/gnu/bc/${P}.tar.gz"
-
+LICENSE="GPL-2 & LGPL-2.1
+"
 RDEPEND="virtual/glibc readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 DEPEND="$RDEPEND sys-devel/flex"
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.3 2002/06/24 18:22:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.4 2002/07/09 20:13:55 aliz Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -19,6 +19,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
 	ftp://ftp.ibiblio.org/pub/linux/distributions/gentoo/distfiles/texinfo-${TV}.tar.gz"
 DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texinfo to boot"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+LICENSE="GPL-2 LGPL-2.1"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc >=sys-libs/zlib-1.1.4"

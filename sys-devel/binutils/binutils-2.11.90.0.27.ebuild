@@ -2,11 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.27.ebuild,v 1.4 2001/09/10 16:54:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.27.ebuild,v 1.5 2002/07/09 20:13:54 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="http://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
+LICENSE="GPL-2 LGPL-2 BINUTILS"
 
 DEPEND="virtual/glibc"
 

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.ebuild,v 1.1 2002/02/07 21:47:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.ebuild,v 1.2 2002/07/09 20:13:55 aliz Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -10,6 +10,7 @@ DESCRIPTION="GNU debugger"
 HOMEPAGE="http://www.gnu.org/software/gdb/gdb.html"
 SRC_URI="ftp://sourceware.cygnus.com/pub/gdb/releases/${A}
 	 ftp://ftp.freesoftware.com/pub/sourceware/gdb/releases/${A}"
+LICENSE="GPL-2 LGPL-2"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2

@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ld.so/ld.so-1.9.11-r2.ebuild,v 1.2 2001/03/06 05:27:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ld.so/ld.so-1.9.11-r2.ebuild,v 1.3 2002/07/09 20:13:55 aliz Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux dynamic loader & linker"
 SRC_URI="ftp://ftp.ods.com/pub/linux/${A}"
 RDEPEND="sys-libs/lib-compat"
+LICENSE="LD.SO"
 
 src_unpack() {
 

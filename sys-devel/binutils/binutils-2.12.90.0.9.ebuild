@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.9.ebuild,v 1.2 2002/06/11 15:49:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.9.ebuild,v 1.3 2002/07/09 20:13:55 aliz Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -12,6 +12,7 @@ inherit libtool
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
+LICENSE="GPL-2 LGPL-2 BINUTILS"
 
 SLOT="0"
 
