@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.19 2003/10/21 14:55:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.20 2003/11/22 06:37:12 mr_bones_ Exp $
+
+*dietlibc-0.24 (21 Nov 2003)
+
+  21 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> dietlibc-0.24.ebuild,
+  files/0.24-dirent-prototype.patch:
+  version bump
 
   21 Oct 2003; <solar@gentoo.org> dietlibc-0.23.ebuild:
   bumping 0.23 to stable on x86 per request, and added a metadata.xml
