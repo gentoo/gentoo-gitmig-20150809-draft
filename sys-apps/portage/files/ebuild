@@ -944,14 +944,6 @@ dyn_package() {
     local PNAME=${PF}.${PACKAGE}
     cd ${BUILDDIR}/image
     echo ">>> Creating ${PNAME} in ${PKGDIR}/All..."
-    if [ ! -e ${PKGDIR} ]
-    then
-	mkdir ${PKGDIR}
-    fi
-    if [ ! -e ${PKGDIR}/All ]
-    then
-        mkdir ${PKGDIR}/All
-    fi    
     if [ "$PACKAGE" = "tbz2" ]
     then
 	tar cvf ${PKGDIR}/All/${PF}.tar *
@@ -963,10 +955,6 @@ dyn_package() {
     else
 	echo '!!! Package format '${PACKAGE}' not recognized.  Please correct /etc/make.conf'
 	exit 1
-    fi
-    if [ ! -e ${PKGDIR}/${CATEGORY} ]
-    then
-        mkdir ${PKGDIR}/${CATEGORY}
     fi
     ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
     echo ">>> Done."
@@ -1160,8 +1148,24 @@ src_menu() {
 	package)
 	dyn_fetch
 	local PNAME=${PF}.${PACKAGE}
+	if [ ! -d ${PKGDIR} ]
+	then
+		install -d ${PKGDIR}
+	fi
+	if [ ! -d ${PKGDIR}/All ]
+	then
+		install -d ${PKGDIR}/All
+	fi	
+	if [ ! -d ${PKGDIR}/${CATEGORY} ]
+	then
+		install -d ${PKGDIR}/${CATEGORY}
+	fi
     	if [ -e ${PKGDIR}/All/${PNAME} ]
     	then
+		if [ ! -d ${PKGDIR}/${CATEGORY}/${PNAME} ]
+		then
+			ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
+		fi
     		local x
     		local dopackage
     		dopackage="no"
