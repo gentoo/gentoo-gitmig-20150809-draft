@@ -1,6 +1,18 @@
-MD5 d414115a4cbdcd901a2772680f25f678 ChangeLog 2517
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9c0113ce73ee730f532ae90affbcdc97 ChangeLog 2699
 MD5 97cab9b786e8010013fb3435a18f52cb Test-Simple-0.47-r1.ebuild 714
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cc144759674167e9ade6d3a59a4a7e0c Test-Simple-0.53.ebuild 631
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 cb83044ec961acec3bb2d908966a8ffb Test-Simple-0.54.ebuild 634
 MD5 6c92c841c2a87efdcbbcb3e66ec05494 files/digest-Test-Simple-0.47-r1 67
 MD5 d67588559692c2e16600d1a23dd8ab73 files/digest-Test-Simple-0.53 67
+MD5 92843a9ec74e56d38b026d35c9c5098d files/digest-Test-Simple-0.54 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCKvDOtG5z4I8BtQoRAgZuAJ0Wf7s15BgXgOkDjXyiud35VsOEigCffB9S
+vCvpJ1I3aFQfk/vYYXVTVvc=
+=379O
+-----END PGP SIGNATURE-----
