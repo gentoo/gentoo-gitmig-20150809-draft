@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0_pre20021024.ebuild,v 1.1 2002/10/31 05:30:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0_pre20021024.ebuild,v 1.2 2002/10/31 21:37:24 danarmak Exp $
 
 # the qt-copy snapshotfrfom 20021024 distibuted with kde 3.1 rc1
 
@@ -75,7 +75,7 @@ src_compile() {
 	
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -qt-imgfmt-{jpeg,mng,png}\
 		-tablet -system-libmng -system-libpng -ldl -lpthread -xft -largefile \
-		-platform linux-g++ -xplatform linux-g++ -fast $myconf || die
+		-platform linux-g++ -xplatform linux-g++ -fast -L/usr/lib $myconf || die
 
 	emake sub-tools || die
 

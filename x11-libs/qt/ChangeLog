@@ -1,6 +1,18 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.27 2002/08/15 16:29:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.28 2002/10/31 21:37:24 danarmak Exp $
+
+  31 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Change the 3.1.0_pre20021024 ebuild to pass -L/usr/lib to configure,
+  to fix bug #10005 (xft2 linking problems).
+
+*qt-3.1.0_pre20021024 (30 Oct 2002)
+
+  31 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  This is the snapshot of qt-copy that was distributed with KDE 3.1 rc1. That's
+  the only reason we have it here. Masked, of course.
 
   15 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
