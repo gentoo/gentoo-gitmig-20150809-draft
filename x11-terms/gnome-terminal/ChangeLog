@@ -1,11 +1,14 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.25 2003/02/22 04:54:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.26 2003/02/22 18:44:49 foser Exp $
 
   06 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-terminal-2.2.1.ebuild :
   Add ~alpha to KEYWORDS
 
 *gnome-terminal-2.2.1 (06 Feb 2003)
+
+  22 Feb 2003; foser <foser@gentoo.org> gnome-terminal-2.2.1.ebuild :
+  Added login shell by default patch (#12900)
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-terminal-2.2.1.ebuild :
   Mark stable on Alpha

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.2.1.ebuild,v 1.5 2003/02/22 04:54:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.2.1.ebuild,v 1.6 2003/02/22 18:44:49 foser Exp $
 
 inherit gnome2 eutils
 
@@ -29,5 +29,13 @@ DEPEND="${RDEPEND}
 # gnome-core overwrite /usr/bin/gnome-terminal
 
 G2CONF="${G2CONF} --with-widget=vte"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# Use login shell by default (#12900) 
+	epatch ${FILESDIR}/${PN}-2-default_shell.patch
+}
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
