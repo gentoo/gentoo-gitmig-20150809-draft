@@ -3,7 +3,7 @@ MD5 796fbd99785ea213b9034edf02fcf4d6 ssmtp-2.60.4-r2.ebuild 2448
 MD5 1a2b21b06596f5d14c93c8ec257179ee ssmtp-2.48.ebuild 1538
 MD5 3451923e5f0d6b8215b0fb98e3f9a452 ssmtp-2.60.7-r1.ebuild 2856
 MD5 1c6968489b9231b0df0bb2f563aa68c6 ssmtp-2.60.7.ebuild 2447
-MD5 544298142cd5b49fd5b74a55f7f11d8e ChangeLog 6249
+MD5 2820c6dc678b30460dd0ef18c3257a3b ChangeLog 6243
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 81137430efddc6bf83f7caa7c2687e72 ssmtp-2.38.14-r1.ebuild 1467
 MD5 eff0defff56d4ddb5c96257de5cf47b7 ssmtp-2.60.9.ebuild 2676

@@ -1,6 +1,6 @@
 MD5 716fa9a6962971627b6d8a96462a94c1 qmail-mysql-1.03-r13.ebuild 14056
 MD5 d50526687642a486fa216d1ac9b36e96 qmail-mysql-1.03.ebuild 8434
-MD5 f6e55b38b62de94f977e99f432c0059e ChangeLog 2458
+MD5 7bc3cd3cc2f8ce0edb0552cf69fe096f ChangeLog 2452
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 e0686e52df7f0c840a7ac2bfe1fd291a files/tcp.qmqp.sample 337
 MD5 02b7d10943e7640a9e4bc684a0c2ed1a files/digest-qmail-mysql-1.03-r13 1446

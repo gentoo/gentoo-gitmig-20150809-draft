@@ -6,7 +6,7 @@ MD5 ab7db74720267e9bf8ca4518e33c9839 qmail-1.03-r15.ebuild 16674
 MD5 19283f2ce033d3b726caa9ee5c219b01 qmail-1.03-r10.ebuild 11103
 MD5 99e11a3d000c4a33843a65fadc605c3f qmail-1.03-r8.ebuild 8062
 MD5 feb5c7e8b6b86c1bc56dcc4f7369886f qmail-1.03-r12.ebuild 13678
-MD5 335a4382be75f6b405a4c746414f5b05 ChangeLog 17828
+MD5 17aa1bf2773fde6d735dfccf02aaadd9 ChangeLog 17825
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 f96a54108b7424f342dd4842e81faded files/rc 280
 MD5 b7e7c96254dabacdec5bf5904957c7b2 files/tcp.qmqp.sample 399
