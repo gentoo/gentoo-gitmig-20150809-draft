@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.23 2004/01/22 19:54:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.24 2004/04/27 23:27:18 vapier Exp $
+
+  27 Apr 2004; Mike Frysinger <vapier@gentoo.org> slang-1.4.9.ebuild :
+  Mark arm stable and remove the trimming of the gcc/slang.h stuff since
+  this has been fixed in latest gcc's.
 
   22 Jan 2004; Guy Martin <gmsoft@gentoo.org> slang-1.4.9.ebuild :
   Marked stable on hppa.
