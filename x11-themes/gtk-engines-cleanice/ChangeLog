@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-cleanice
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.7 2004/01/12 15:57:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.8 2004/01/12 23:22:14 gustavoz Exp $
+
+  12 Jan 2004; <gustavoz@gentoo.org> gtk-engines-cleanice-1.2.7.ebuild:
+  stable on hppa
 
   12 Jan 2004; <gustavoz@gentoo.org> gtk-engines-cleanice-1.2.7.ebuild:
   marked stable on sparc
