@@ -1,29 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.9 2003/02/13 05:27:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.10 2003/02/28 23:03:30 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="mon is a highly configurable service monitoring daemon."
+DESCRIPTION="highly configurable service monitoring daemon"
 SRC_URI="ftp://ftp.kernel.org/pub/software/admin/mon/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/software/mon/"
-IUSE=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 DEPEND=">=dev-perl/Mon-0.9
 	>=dev-perl/Time-HiRes-01.20
 	>=dev-perl/Period-1.20-r2"
 
 src_compile() {
-
 	cd ${S}/mon.d
 	make CC="gcc $CFLAGS" || die
 }
 
-src_install () {
-
+src_install() {
 	exeinto /usr/sbin
 	doexe mon clients/mon*
 

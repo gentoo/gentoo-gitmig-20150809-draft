@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
-DESCRIPTION="Integrit is a file integrity verification program"
+DESCRIPTION="file integrity verification program"
 SRC_URI="http://www.noserose.net/e/integrit/download/${P}.tar.gz"
-HOMEPAGE="http://integrit.sourceforge.net"
+HOMEPAGE="http://integrit.sourceforge.net/"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -12,12 +12,10 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 
-UNPACKDIR=integrit-3.02
-
-S=${WORKDIR}/${UNPACKDIR}
+S=${WORKDIR}/${PN}-3.02
 
 src_compile() {
-	econf --prefix=/usr
+	econf --prefix=/usr || die
 	emake || die
 	emake utils || die
 	cd ${S}/doc
