@@ -1,6 +1,16 @@
-MD5 b26149e3ffa95ffee10922a2931795d0 ChangeLog 5792
-MD5 7b2c83b67db99a833fa8c95369a2548e livecd-tools-1.0.2.ebuild 601
-MD5 0496a2d2438d21e591d12bd0963203f6 livecd-tools-1.0.9.ebuild 749
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e79184bd1e90e36d918cad8d42fb062 livecd-tools-1.0.9.ebuild 754
+MD5 fdd3c8b3facfb168248d0e36b502392e ChangeLog 5920
+MD5 bf837db55bcd8cebc4496ba578b53a1f livecd-tools-1.0.2.ebuild 598
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 ba44758c53e492b1e57008b0519d0e42 files/digest-livecd-tools-1.0.9 69
 MD5 8f43f0324736162bc1bd26a4650f4ba9 files/digest-livecd-tools-1.0.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfbdAugEuf3OQ0akRAtWxAJ9WfOzSMwQwu3/goS4oSNzfQExxtACdFqtL
+ON3bkUG/fE+u8YF7Nc64XDU=
+=ZxXI
+-----END PGP SIGNATURE-----
