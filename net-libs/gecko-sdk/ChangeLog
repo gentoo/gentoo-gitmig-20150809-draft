@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gecko-sdk
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.5 2004/12/28 20:33:00 chriswhite Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.6 2005/02/19 07:52:38 josejx Exp $
+
+*gecko-sdk-1.7.5 (19 Feb 2005)
+
+  19 Feb 2005; Joseph Jezak <josejx@gentoo.org> +gecko-sdk-1.7.5.ebuild:
+  Updated to mozilla-1.7.5, should fix compile problems.
 
   29 Dec 2004; Chris White <chriswhite@gentoo.org> gecko-sdk-1.7.3.ebuild:
   Added to stable as this should have been (ugh).
