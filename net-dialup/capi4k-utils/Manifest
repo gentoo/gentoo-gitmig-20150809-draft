@@ -16,12 +16,12 @@ MD5 f2524d2cc37ffcbc2096a4f0ac7177c7 files/digest-capi4k-utils-20041006-r2 75
 MD5 2c94e9d125d5c9af8c485d8b844f55a2 files/20041006/README.gentoo 1548
 MD5 f9d08e560e844f4556da1f58bb5513b4 files/20041006/capi.init 829
 MD5 2892db0b497c4141318dbf30ef60e550 files/20041006/capi4k-utils.patch 1075
-MD5 b2b12a474e6fa76bb7864d6bb63acbfe files/20041006/config 189
+MD5 edc50538053b658093927f9fb28c3aff files/20041006/config 195
 MD5 2fe94d2623c5b129780b72bacaf4a7bc files/20041006/rcapid.xinetd 236
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBl70ajtv59x0+BrURAiWtAKDb5XTFk8Od2bOzHJyxEtuVIyTHqwCg9Fop
-37uNomFk8xbmcwWfGuva6qc=
-=Xnvi
+iD8DBQFBmN5Fjtv59x0+BrURAocNAJ0dwENMtoASvfQfblxsOxYptGyIwQCfbK64
+zHmnNryR0cAI8qtQYKeTc+k=
+=HQ5I
 -----END PGP SIGNATURE-----
