@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0-r1.ebuild,v 1.4 2002/12/01 19:04:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0-r1.ebuild,v 1.5 2002/12/01 22:39:27 azarah Exp $
 
 PROVIDE="virtual/xft"
 DESCRIPTION="Xft2"
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="x11-base/xfree
-	media-libs/fontconfig"
+	>=media-libs/fontconfig-2.0-r4"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.53a"	
@@ -39,11 +39,14 @@ src_install() {
 		datadir=${D}/usr/share || die
 
 	dodir /usr/X11R6/lib
-	dosym /usr/lib/libXft.so.2.0 /usr/X11R6/lib/libXft.so     
+	dosym ../../lib/libXft.so.2.0 /usr/X11R6/lib/libXft.so     
 }
 
 pkg_preinst() {
-	mv /usr/X11R6/include/X11/Xft /root/.Xft	
+	if [ "${ROOT}" = "/" -a ! -d /root/.Xft ]
+	then
+		mv -f /usr/X11R6/include/X11/Xft /root/.Xft
+	fi
 }
 
 pkg_postinst() {
