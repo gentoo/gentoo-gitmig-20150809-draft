@@ -1,6 +1,8 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.11 2004/03/30 21:58:21 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.12 2004/04/27 09:38:35 aliz Exp $
+
+*jdom-1.0_bet10 (30 Mar 2004)
 
   30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jdom-1.0_beta9.ebuild,
   files/jdom-1.0_beta8-nojdk1.1.patch:
