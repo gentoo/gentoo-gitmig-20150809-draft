@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/lwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.6 2003/09/17 11:26:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.7 2003/12/06 16:20:03 tseng Exp $
+
+*lwm-1.1.6 (06 Dec 2003)
+
+  06 Dec 2003; Brandon Hale <tseng@gentoo.org> lwm-1.1.6.ebuild:
+  Version bump, closes 34908
 
   17 Sep 2003; Seemant Kulleen <seemant@gentoo.org> lwm-1.1.5.ebuild:
   added virtual/motif to DEPEND. Really, that should have been in there in the
