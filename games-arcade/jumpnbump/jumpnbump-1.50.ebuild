@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50.ebuild,v 1.1 2004/08/08 08:10:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50.ebuild,v 1.2 2004/08/10 12:03:40 mr_bones_ Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc ~amd64"
 IUSE="svga fbcon"
 
 RDEPEND="virtual/libc
-	virtual/x11
+	X? ( virtual/x11 )
 	>=media-libs/sdl-mixer-1.2
 	>=media-libs/libsdl-1.2
 	>=media-libs/sdl-net-1.2"
