@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 171a2860c8099c791c1a5d09a6de79d9 sbcl-0.8.14.ebuild 3882
 MD5 b1dc94cfc64e3f6a12ca8ddf43d87eb5 sbcl-0.8.16.ebuild 3940
-MD5 1a61746190521014a5e13a25c288b1ce sbcl-0.8.18.ebuild 4015
+MD5 0a5a8b16074b62312129dd45f1502e3d sbcl-0.8.18.ebuild 4014
 MD5 99471881a4600b3754568cf9a57da836 sbcl-0.8.15.ebuild 3941
-MD5 f7a3f217e75305b7eb63f3318a8fd011 ChangeLog 15426
+MD5 670e39aeeb2e918391ae0c2db56870cd ChangeLog 15554
 MD5 0c9bf11185a2a2f1916fc3dc72c0e89e metadata.xml 1037
 MD5 c79912580313a9a43b0b9fd2aa794ba2 files/digest-sbcl-0.8.14 468
 MD5 74f94f11c31e6e9395b26994ebc70aa7 files/digest-sbcl-0.8.15 469
@@ -43,10 +40,3 @@ MD5 5e7d83e9a206030ad981e3bae015ee9f files/0.8.18/README.Gentoo 1059
 MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.8.18/customize-target-features.lisp-suffix 8
 MD5 653f804ebcd167d167f8163756b7da17 files/0.8.18/sbclrc 639
 MD5 5f377492c1c9e69f16eea4d48c9515a0 files/0.8.18/sbcl-gentoo.patch 1172
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB37WYI1lqEGTUzyQRAs+DAJ4nmKL9b8pXxNAgUaHs40GgwkCaiQCePbsw
-8LSRJTjB7eU++7Ex9hQ1WDo=
-=Cjao
------END PGP SIGNATURE-----
