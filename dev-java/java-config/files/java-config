@@ -4,9 +4,9 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.2 2002/01/23 20:06:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.3 2002/01/28 23:00:29 karltk Exp $
 
-version=0.1.1
+version=0.1.2
 
 oldpath=$PATH
 . /etc/env.d/20java
@@ -19,7 +19,8 @@ Options:
 	[--javac]
 	[--java]
 	[--jar]
-	[--java-home]
+	[--jdk-home]
+	[--jre-home]
 	[--java-version]
 	[--classpath[=package-name]]
 	[--full-classpath=package-name]
@@ -106,8 +107,11 @@ while test $# -gt 0; do
 		--full-classpath=*)
 			echo "${CLASSPATH}:`classpathfor $optarg`."
 		;;
-		--java-home)
-			echo ${JAVA_HOME}
+		--jdk-home)
+			echo ${JDK_HOME}
+		;;
+		--jre-home)
+			echo ${JRE_HOME}
 		;;
 		--javac)
 			find_exec javac

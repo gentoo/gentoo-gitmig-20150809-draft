@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r3.ebuild,v 1.2 2002/01/23 20:06:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r4.ebuild,v 1.1 2002/01/28 23:00:29 karltk Exp $
 
 A=j2re-1.3.1-FCS-linux-i386.tar.bz2
 S=${WORKDIR}/j2re1.3.1
@@ -10,7 +10,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1
 HOMEPAGE="http://www.blackdown.org"
 
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.1.1"
+	>=dev-java/java-config-0.1.2"
 RDEPEND="$DEPEND"
 
 PROVIDE="virtual/jre-1.3"
@@ -138,11 +138,12 @@ src_install () {
 	fi
 	
 	dodir /etc/env.d
-	echo "PATH=/opt/${P}/bin" > ${D}/etc/env.d/20java
-	echo "JAVA_HOME=/opt/${P}" >> ${D}/etc/env.d/20java
-	echo "ROOTPATH=/opt/${P}/bin" >> ${D}/etc/env.d/20java
-	echo "CLASSPATH=/opt/${P}/lib/rt.jar" >> ${D}/etc/env.d/20java
-        echo "LDPATH=/opt/${P}/lib/i386:/opt/${P}/lib/i386/client"      
+	echo "PATH=/opt/${P}/bin" > ${D}/etc/env.d/20jre
+	echo "JRE_HOME=/opt/${P}" >> ${D}/etc/env.d/20jre
+	echo "JAVA_HOME=/opt/${P}" >> ${D}/etc/env.d/20jre
+	echo "ROOTPATH=/opt/${P}/bin" >> ${D}/etc/env.d/20jre
+	echo "CLASSPATH=/opt/${P}/lib/rt.jar" >> ${D}/etc/env.d/20jre
+        echo "LDPATH=/opt/${P}/lib/i386:/opt/${P}/lib/i386/client" >> ${D}/etc/env.d/20jre
 }
 
 pkg_postinst () {

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.1.1.ebuild,v 1.1 2002/01/20 22:30:04 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.1.2.ebuild,v 1.1 2002/01/28 23:00:29 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gentoo-specific configuration for Java"
