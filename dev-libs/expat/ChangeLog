@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.16 2003/03/08 23:09:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.17 2003/03/17 07:58:58 phosphan Exp $
+
+*expat-1.95.6-r1 (17 Mar 2003)
+
+  17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> :
+  added patch xmlstatus to fix problem described in
+  sourceforge request 676844 and gentoo bug 17426
+  (that made pwlib build fail)
 
 *expat-1.95.6 (09 Mar 2003)
 
