@@ -280,11 +280,14 @@ unipatch() {
 		case ${extention} in
 			    bz2) PIPE_CMD="bzip2 -dc";;
 			  patch) PIPE_CMD="cat";;
+			   diff) PIPE_CMD="cat";;
 			 gz|Z|z) PIPE_CMD="gzip -dc";;
 			ZIP|zip) PIPE_CMD="unzip -p";;
 			      *) UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} ${i}";;
 		esac
-		[ -n "${PIPE_CMD}" ] && ${PIPE_CMD} ${i} > ${KPATCH_DIR}/${i/*\//}.patch
+		x=${i/*\//}
+		x=${x/\.${extention}/}
+		[ -n "${PIPE_CMD}" ] && ${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch
 	done
 
 	#populate KPATCH_DIRS so we know where to look to remove the excludes
@@ -312,7 +315,7 @@ unipatch() {
 	# and now, finally, we patch it :)
 	for x in ${KPATCH_DIR}
 	do
-		for i in $(find ${x} -maxdepth 1 -iname "*.patch" | sort -u)
+		for i in $(find ${x} -maxdepth 1 -iname "*.patch" -or -iname "*.diff" | sort -u)
 		do
 
 
