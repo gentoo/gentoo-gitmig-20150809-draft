@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.9 2003/06/26 10:05:37 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.10 2003/07/03 17:59:13 brad Exp $
+
+*mozilla-firebird-0.6-r6 (03 Jul 2003)
+
+  03 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.6-r6.ebuild:
+  Filter out -ffast-math in order to close an upstream bug; refer to bug 23833.
 
   26 Jun 2003; Tavis Ormandy <taviso@gentoo.org>
   mozilla-firebird-0.6-r5.ebuild:
