@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/lush
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lush/ChangeLog,v 1.1 2003/06/20 08:36:34 tad Exp $
+
+*lush-0.1.0 (20 June 2003)
+
+  20 June 2003; Troy Dack <tad@gentoo.org> lush-0.1.0.ebuild :
+  Initial import. Ebuild submitted by Elias Probst <elias.probst@t-online.de>
+  
