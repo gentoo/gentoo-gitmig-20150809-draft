@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.7.ebuild,v 1.2 2003/01/07 05:29:28 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.7.ebuild,v 1.3 2003/01/15 21:51:34 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
@@ -60,7 +60,7 @@ src_compile() {
 	    
 	use ldap && myconf="${myconf} --enable-ldap"
 	
-	use ssl && myconf="${myconf} --enable-ssl"
+	use ssl && myconf="${myconf} --enable-openssl"
 	
 	use crypt && myconf="${myconf} --enable-gpgme"
 	
