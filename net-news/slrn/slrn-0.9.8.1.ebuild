@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.1.ebuild,v 1.3 2004/11/12 23:42:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.1.ebuild,v 1.4 2004/12/05 02:42:10 swegener Exp $
 
 inherit eutils
 
@@ -10,11 +10,11 @@ SLRN_PATCHES="fetch lastchar2"
 
 DESCRIPTION="s-lang Newsreader"
 HOMEPAGE="http://slrn.sourceforge.net/"
-SRC_URI="mirror://sourceforge/slrn/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~ppc x86"
 IUSE="ssl nls unicode uudeview"
 
 RDEPEND="virtual/mta
@@ -29,7 +29,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	for i in ${SLRN_PATCHES} ; do
+	for i in ${SLRN_PATCHES}
+	do
 		epatch ${FILESDIR}/${PV}/${P}-${i}.diff
 	done
 
@@ -40,9 +41,9 @@ src_compile() {
 	econf \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-slrnpull \
-		`use_enable nls` \
-		`use_with ssl` \
-		`use_with uudeview` \
+		$(use_enable nls) \
+		$(use_with ssl) \
+		$(use_with uudeview) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }

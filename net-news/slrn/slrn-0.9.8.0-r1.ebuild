@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0-r1.ebuild,v 1.9 2004/08/22 22:06:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0-r1.ebuild,v 1.10 2004/12/05 02:42:10 swegener Exp $
 
 inherit eutils
 
@@ -29,7 +29,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	for i in ${SLRN_PATCHES} ; do
+	for i in ${SLRN_PATCHES}
+	do
 		epatch ${FILESDIR}/${PV}/${P}-${i}.diff
 	done
 }
@@ -38,9 +39,9 @@ src_compile() {
 	econf \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-slrnpull \
-		`use_enable nls` \
-		`use_with ssl` \
-		`use_with uudeview` \
+		$(use_enable nls) \
+		$(use_with ssl) \
+		$(use_with uudeview) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
