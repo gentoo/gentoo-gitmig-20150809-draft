@@ -98,3 +98,4 @@ sybase
 sybase-ct
 djbfft
 qdbm
+mzscheme
