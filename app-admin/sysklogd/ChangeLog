@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.33 2004/07/24 21:38:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.34 2004/10/03 15:41:07 weeve Exp $
+
+  03 Oct 2004; Jason Wever <weeve@gentoo.org> sysklogd-1.4.1-r11.ebuild:
+  Added sparc keyword back in, bad Spanky.
 
 *sysklogd-1.4.1-r11 (24 Jul 2004)
 
