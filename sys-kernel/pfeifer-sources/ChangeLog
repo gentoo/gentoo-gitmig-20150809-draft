@@ -1,19 +1,33 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.4 2003/05/03 21:23:50 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.5 2003/05/05 02:22:45 pfeifer Exp $
 
   TODO:
-    ht support
     better ide chipset support (ie. CSB6)
     fine tune gcc optimizations (yes, there is a bit more to look @)
+    some usb driver updates (ie. WinTV USB)
+    a few other hardware updates in prep for 1.4
+    
   * Maybe:
-    Re-add XFS (extremely doubtful)
     RSBAC
     NPTL (doubtful)
-    skas
+    skas - probably through yet another use flag... cause most will *not* want this
 
-*pfeifer-sources-2.4.20.1_pre9 (03 Mar 2003)
+*pfeifer-sources-2.4.20.1_pre10 (04 May 2003)
 
+04 May 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre10.ebuild
+ Changes:
+ * Added imq support & the ipv4 & ipv6 imq ipt patches
+ * Updated Wireless Extensions to WE-15
+ * Updated evms2 stuff to version 2.0.1
+ * Fixed another small grsec/rmap issue + added a grsec hardlink fix
+ * Added some jfs 1.1.2 fixes
+ * Minor fixes
+ * Other things I am forgetting to mention :)
+
+*pfeifer-sources-2.4.20.1_pre9 (03 May 2003)
+
+03 May 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre9.ebuild
  Changes:
  * Added usb scanners update from 16Apr2003
  * Added some minor grsecurity fixes
@@ -21,6 +35,7 @@
 
 *pfeifer-sources-2.4.20.1_pre8 (03 May 2003)
 
+03 May 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre8.ebuild
  Changes:
  * Added a few updates for ck6
  * Updated SuperFreeS/WAN to 1,99,7rc2
@@ -40,6 +55,7 @@
 
 *pfeifer-sources-2.4.20.1_pre7 (15 Apr 2003)
 
+15 Apr 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre7.ebuild
  Changes:
  * Added latest ck (12Apr2003) - thank you Con Kolivas! 
  * Added support for either rmap(default) or aavm (your choice)
@@ -59,7 +75,7 @@
  * Added backported bluetooth support from MH
  * Added bootsplash 3.0.7
  * Other things I am forgetting to mention
- 
+
 *pfeifer-sources-2.4.20.1_pre2-pre6 (20 Mar - 10 Apr 2003)
 
  Changes:
@@ -68,7 +84,6 @@
 *pfeifer-sources-2.4.20.1_pre1 (19 Mar 2003)
 
   19 Mar 2003; Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.20.1_pre1.ebuild:
-
   First release of pfeifer-sources, please test and provide productive feedback.
   This is based off of the lolo-sources 2.4.20.2_pre5 that I put out on 13 Mar 2003
   This release contains the ptrace fix.
