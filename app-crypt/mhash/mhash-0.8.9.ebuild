@@ -31,6 +31,6 @@ src_install () {
 	     install || die
 
 	dodoc AUTHORS COPYING INSTALL NEWS README TODO
-	docinto html
-	dodoc doc/*.html doc/*.txt doc/skid*
+	dodoc doc/*.txt doc/skid*
+	dohtml -r doc
 }
