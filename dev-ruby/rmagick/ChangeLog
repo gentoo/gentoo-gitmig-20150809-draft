@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rmagick
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.9 2004/02/28 09:32:52 twp Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.10 2004/03/25 08:40:09 kumba Exp $
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> rmagick-1.3.0.ebuild,
+  rmagick-1.3.1.ebuild, rmagick-1.3.2.ebuild:
+  As far as I know, this package has never been tested on mips, so to avoid
+  repoman issues, re-marking all ebuilds of this package as unstable to stay
+  inline with the imagemagik ebuild(s) until it is tested to be stable.
 
 *rmagick-1.4.0 (28 Feb 2004)
 
