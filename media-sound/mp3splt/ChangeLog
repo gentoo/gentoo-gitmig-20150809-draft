@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/mp3splt
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.1 2003/05/13 09:43:19 jje Exp $
+
+*mp3splt-1.7 (13 May 2003)
+
+  13 May 2003; jje <jje@gentoo.org> mp3splt-1.7.ebuild:
+    Initial revision. Really done by torbenh <torbenh@gentoo.org>.
+ 
+    Submitted by Ryan Shaw
+
