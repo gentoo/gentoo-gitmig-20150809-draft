@@ -2,12 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.7.ebuild,v 1.1 2002/03/05 22:20:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.7.ebuild,v 1.2 2002/07/08 00:26:21 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An object-oriented scripting language"
 SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${P}.tar.gz"
 HOMEPAGE="http://www.ruby-lang.org/"
+LICENSE="Ruby"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
