@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 789889e83025541e72c47b5ef7a8fb18 ChangeLog 768
+MD5 e19cd0b29757f6a2a61c42af6debbfbf ChangeLog 860
 MD5 14594f19e320cd8f1735a5e2e9a00f88 metadata.xml 357
 MD5 5cbb383de5de1250b376ad901eca31d5 nzbget-0.1.1.ebuild 811
-MD5 184ba1df7d02a0008826021cc06c67f6 nzbget-0.1.2.ebuild 810
+MD5 fe5da4697622fd8eb6fd9b6cc7e9ff91 nzbget-0.1.2.ebuild 818
 MD5 e8f8555aeb850fa1657b4ae1e04edd77 files/digest-nzbget-0.1.1 63
 MD5 1a637353d98b39791d0761ba1e777259 files/digest-nzbget-0.1.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBH2WaI1lqEGTUzyQRAjSJAJ47TuJQQ19MkCWzYp81doXv5nPdXwCfcf4b
-rJCir88MBC8T6yzKrDn4V2Y=
-=gQKA
------END PGP SIGNATURE-----
