@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+ <herd>antivirus</herd>
+ <maintainer>
+  <email>ticho@gentoo.org</email>
+  <name>Andrej Kacian</name>
+ </maintainer>
+ <longdescription>Complete virus defense solution designed for easy virus prevention on Linux systems.</longdescription>
+</pkgmetadata>
