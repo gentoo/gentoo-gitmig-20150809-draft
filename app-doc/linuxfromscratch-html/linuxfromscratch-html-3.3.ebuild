@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/linuxfromscratch-html-3.3.ebuild,v 1.8 2003/02/13 06:36:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/linuxfromscratch-html-3.3.ebuild,v 1.9 2004/02/22 18:41:33 agriffis Exp $
 
 MY_P="LFS-BOOK-${PV}-HTML"
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.linuxfromscratch.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 src_install() {
 	dodir /usr/share/doc/linuxfromscratch-html-${PV}

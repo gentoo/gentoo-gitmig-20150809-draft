@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/mini-howto-html-single/mini-howto-html-single-20021121.ebuild,v 1.4 2003/02/13 06:36:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/mini-howto-html-single/mini-howto-html-single-20021121.ebuild,v 1.5 2004/02/22 18:42:03 agriffis Exp $
 
 MY_P="Linux-mini-html-single-HOWTOs-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.linuxdoc.org"
 
 SLOT="0"
 LICENSE="GPL-2 LDP"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 src_install() {
 	dodir /usr/share/doc/howto/mini

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-user-manual/gimp-user-manual-2.0.ebuild,v 1.13 2003/11/14 21:23:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-user-manual/gimp-user-manual-2.0.ebuild,v 1.14 2004/02/22 18:39:24 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="A user manual for GIMP"
@@ -13,7 +13,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="OPL"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 src_compile() {
 	rm GUM/wwhsrch.js

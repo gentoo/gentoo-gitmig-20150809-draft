@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/howto-html-20021121.ebuild,v 1.5 2003/09/06 22:17:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/howto-html-20021121.ebuild,v 1.6 2004/02/22 18:39:46 agriffis Exp $
 
 MY_P="Linux-html-HOWTOs-${PV}"
 S=${WORKDIR}/HOWTO
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.linuxdoc.org"
 
 SLOT="0"
 LICENSE="GPL-2 LDP"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 src_install() {
 	dodir /usr/share/doc/howto
