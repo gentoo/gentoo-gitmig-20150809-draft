@@ -1,43 +1,37 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.79 2003/01/08 22:29:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.80 2003/01/09 12:45:34 jmorgan Exp $
+
+  09 Jan 2003; Jack Morgan <jmorgan@gentoo.org> mozilla-1.2.1-r4.ebuild :
+  Added sparc support with replace-flags (bug #13554 - thanks to Kumba)
 
   09 Jan 2003; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r4.ebuild :
-
   We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
   (bug #13287)
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r4.ebuild :
-
   Same as last -r3, just created to make sure we have all the fixes, and
   marked stable for x86.
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
-
   Update google search plugin, closing bug #10605.
-
   Fix my braindead stuff up with the "WANT_GTK2" fix of yesterday.
 
   25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
-
   Add pkg_setup() to not build with gtk2 support if the user did not export
   WANT_GTK2="yes".  I did this due to the multitude of problems with gtk2
   support (plugins do not work, crashes, etc).
 
   23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
-
   Some cleanups for the java-config stuff in an effort to resolve bug #12610.
 
   17 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
-
   Update mozilla-1.2.1-Xrender-includes.patch.bz2 to hopefully (?) fix #12223.
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
-
   Update mozilla-1.2.1-Xrender-includes.patch.bz2 to truely fix #12223.
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
-
   Currently --enable-elf-dynstr-gc only works for x86 and ppc, thanks
   to Jason Wever <weeve@gentoo.org> for the fix.
 
