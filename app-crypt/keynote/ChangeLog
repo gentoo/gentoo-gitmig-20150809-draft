@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/keynote
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.1 2003/12/23 15:29:33 plasmaroo Exp $
+
+*keynote-2.3 (23 Dec 2003)
+
+  23 Dec 2003; <plasmaroo@gentoo.org> keynote-2.3.ebuild:
+  Initial commit. This ebuild was kindly contributed by Sebastien 
+  Estienne, bug #27279.
+
