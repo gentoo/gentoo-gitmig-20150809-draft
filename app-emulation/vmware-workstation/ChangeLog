@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.65 2004/12/24 02:54:10 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.66 2004/12/26 15:29:35 wolf31o2 Exp $
+
+  26 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Changing maintainer
 
   23 Dec 2004; Mike Doty <kingtaco@gentoo.org>
   vmware-workstation-5.0_beta1.ebuild:
