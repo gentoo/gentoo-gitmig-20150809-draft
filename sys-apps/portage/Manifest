@@ -1,6 +1,6 @@
 MD5 4143452262e01976a763e0a4c87b6058 portage-2.0.49-r21.ebuild 10463
 MD5 d822fb423a0ac812af1c5b665455ef82 portage-2.0.50_pre22.ebuild 9083
-MD5 f80c09f6b5fc33997ac973c7da948ee7 portage-2.0.50.ebuild 9077
+MD5 f0b4ccf65097624d8e23fa33f75425d8 portage-2.0.50.ebuild 9171
 MD5 dbc739d33fdd409bd2f7973e35689abb portage-2.0.49-r20.ebuild 10524
 MD5 3d889f27da546b08d93c8e44dd378019 portage-2.0.50_pre21.ebuild 10516
 MD5 2264df67fab8f5ab427e536d7e32f497 ChangeLog 695
@@ -17,3 +17,4 @@ MD5 73094a2d75dca36817b40611589ea226 files/portage-rescue-2.0.44-ppc.tbz2 168027
 MD5 d4bb71bd3515647145916ba7d6287d20 files/README.RESCUE 1064
 MD5 e2f7d2797f76d586452705abed1e515e files/portage-rescue-2.0.48-r1-sparc64.tbz2 227569
 MD5 fa4bfa4ee3ec778658dadf6a63864877 files/portage-rescue-2.0.49-r15-amd64.tbz2 289608
+MD5 e29c76cdf41ee9db2d81cca98ce9de31 files/regenworld.bz2 1050

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50.ebuild,v 1.1 2004/02/06 20:47:18 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50.ebuild,v 1.2 2004/02/06 21:09:39 carpaski Exp $
 
 IUSE="build"
 
@@ -34,6 +34,8 @@ python_version() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	bzip2 -dc ${FILESDIR}/regenworld.bz2 2>/dev/null > bin/regenworld
+	chmod a+rx bin/regenworld
 }
 
 src_compile() {
