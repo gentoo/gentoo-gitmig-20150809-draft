@@ -2,7 +2,7 @@
 #we need this next line for "die" and "assert"
 shopt -s expand_aliases
 source /etc/profile.env > /dev/null 2>&1
-export PATH="/usr/lib/portage/bin:${ROOTPATH}"
+export PATH="/sbin:/usr/sbin:/usr/lib/portage/bin:/bin:/usr/bin:${ROOTPATH}"
 if [ -e /etc/rc.d/config/functions ]
 then
 	source /etc/rc.d/config/functions > /dev/null 2>&1
