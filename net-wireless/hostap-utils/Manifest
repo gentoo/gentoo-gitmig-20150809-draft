@@ -1,6 +1,14 @@
-MD5 1cbbb1dd6e8b1a86ff5b4783df3204a4 hostap-utils-0.2.4.ebuild 755
-MD5 f89de30a44a4cfb327aae0951af9dbd3 hostap-utils-0.1.3.ebuild 762
-MD5 6de6448f1a8c6de4954bfdb437dd76ec ChangeLog 1768
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10fd96c8bd8bbb64aebe7b1be75946e3 ChangeLog 2017
 MD5 0d08d740672bf3b41532938b6f9c0a19 metadata.xml 337
-MD5 03063f23ff1bf75a6da90833038f6a76 files/digest-hostap-utils-0.1.3 69
+MD5 addf782e18fdfbb92b692304d9d7ce9f hostap-utils-0.2.4.ebuild 778
 MD5 b31ab184e34a7e5d3443d51d91c5008f files/digest-hostap-utils-0.2.4 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBu3pRmdTrptrqvGERAodZAKCTZhlSIsfgDLlq5Aw6sgzfWbQz4ACeLkJD
+UtaPF8hJWje1lXLxaJuqPwc=
+=oXor
+-----END PGP SIGNATURE-----
