@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.45.ebuild,v 1.2 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.45.ebuild,v 1.3 2002/12/10 01:48:09 blauwers Exp $
 
 S=${WORKDIR}/${PN/-rescue/}-${PV}
 DESCRIPTION="a nice backup tool"
@@ -40,7 +40,7 @@ pkg_postinst() {
 	einfo "2) make a symlink \"ln -s /boot/grub/menu.lst /etc/grub.conf\""
 	einfo "   as mondo wants to have a /etc/grub.conf file"
 	einfo "3) when doing a system backup be sure to use"
-	einfo "   \"-E /usr/portage/distfiles\" because otherwise"
+	einfo "   \"-E ${DISTDIR}\" because otherwise"
 	einfo "   all source files will be included into the backup"
 	einfo
 }
