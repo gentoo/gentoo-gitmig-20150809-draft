@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.47 2003/11/08 15:28:04 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.48 2003/11/15 02:38:03 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gedit-2.4.0.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> gedit-2.4.0.ebuild:
   set sparc keyword
