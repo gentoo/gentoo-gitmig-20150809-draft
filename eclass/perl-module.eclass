@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.60 2004/05/01 22:03:12 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.61 2004/05/10 21:10:50 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -15,8 +15,15 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 	src_compile src_install src_test \
 	perlinfo updatepod
 
+# 2004.05.10 rac
+# block on makemaker versions earlier than that in the 5.8.2 core. in
+# actuality, this should be handled in the perl ebuild, so every perl
+# ebuild should block versions of MakeMaker older than the one it
+# carries. in the meantime, since we have dumped support for MakeMaker
+# <6.11 and the associated broken DESTDIR handling, block here to save
+# people from sandbox trouble.
 
-DEPEND="dev-lang/perl"
+DEPEND="dev-lang/perl !<dev-perl/ExtUtils-MakeMaker-6.17"
 SRC_PREP="no"
 SRC_TEST="skip"
 
