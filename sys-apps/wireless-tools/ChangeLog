@@ -1,0 +1,20 @@
+# ChangeLog for sys-apps/wireless-tools
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/wireless-tools/ChangeLog,v 1.1 2002/02/10 21:08:10 karltk Exp $
+
+*wireless-tools-23 ( 10 Feb 2002 )
+
+  10 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog wireless-tools-23.ebuild files/digest-wireless-tools-23:
+  
+  The Wireless Tools is a set of tools allowing to manipulate the Wireless 
+  Extensions. They use a textual interface and are rather crude, but aim to
+  support the full Wireless Extension.
+
+    * iwconfig manipulate the basic wireless parameters
+    * iwlist (formerly part of iwspy) allow to list addresses, frequencies,
+      bit-rates...
+    * iwspy allow to get per node link quality
+    * iwpriv allow to manipulate the Wireless Extensions specific to a driver
+      (private)
+
+
