@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.2.ebuild,v 1.1 2002/08/25 19:12:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.2.ebuild,v 1.2 2002/08/26 20:47:08 azarah Exp $
 
 SV="1.3.9"
 SVREV=""
@@ -20,11 +20,19 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND="sys-kernel/linux-headers"
+DEPEND="sys-kernel/linux-headers
+	>=sys-apps/portage-2.0.23"
+# We need at least portage-2.0.23 to handle these DEPEND's properly.
 
-# This version need awk and wc in /bin, so add it with this dummy depend.
 RDEPEND="${DEPEND}
-	!<sys-apps/gawk-3.1.0-r3"
+	|| ( >=sys-apps/gawk-3.1.0-r3
+	     ( !build? ( >=sys-apps/gawk-3.1.0-r3 ) )
+	     ( !bootstrap? ( >=sys-apps/gawk-3.1.0-r3 ) )
+	   )"
+# This version of baselayout needs gawk in /bin, but as we do not have
+# a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
+# or "build" are in USE.
+	   
 
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 

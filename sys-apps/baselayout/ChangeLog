@@ -1,24 +1,30 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.31 2002/08/25 19:12:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.32 2002/08/26 20:47:08 azarah Exp $
 
-*baselayout-1.8.2.ebuild (25 Aug 2002)
+  26 Aug 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.2.ebuild :
+  Tweak DEPEND to depend on portage-2.0.23 or later.  Also remove the '!'
+  depend on <sys-apps/gawk-3.1.0-r3 in favour of one that depend on
+  >=sys-apps/gawk-3.1.0-r3 if "build" and "bootstrap" not in USE.  This
+  should resolve bug #7018.
+
+*baselayout-1.8.2 (25 Aug 2002)
 
   25 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
   New release, see included ChangeLog for changes.
 
-*baselayout-1.8.1.ebuild (08 Aug 2002)
+*baselayout-1.8.1 (08 Aug 2002)
 
   08 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
   New release.  Adds many fixes/update.  Add /etc/termcap.
 
-*baselayout-1.8.0.ebuild (17 July 2002)
+*baselayout-1.8.0 (17 July 2002)
 
   17 July 2002; Martin Schlemmer <azarah@gentoo.org> :
   Lots of bugfixes and updates.  Please see included ChangeLog in
   /usr/share/doc/baselayout-1.8.0/ChangeLog.gz for details.
 
-*baselayout-1.7.9-r2.ebuild (14 July 2002)
+*baselayout-1.7.9-r2 (14 July 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> baselayout-1.7.9-r2.ebuild :
   Added KEYWORDS.
