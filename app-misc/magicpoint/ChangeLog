@@ -1,12 +1,15 @@
 # ChangeLog for app-misc/magicpoint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/ChangeLog,v 1.11 2003/09/01 20:54:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/ChangeLog,v 1.12 2003/09/11 03:05:33 usata Exp $
 
 *magicpoint-1.10a-r1 (02 Sep 2003)
 
+  11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a-r1.ebuild:
+  Marked stable on x86 and alpha.
+
   02 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a-r1.ebuild,
   files/magicpoint-1.10a-r1-gentoo.diff:
-  Defaults to Xft2 instead of VFlib2.
+  Defaults to Xft2 instead of VFlib2 (added a patch to fix Xft2 problem)
 
 *magicpoint-1.10a (06 Aug 2003)
 

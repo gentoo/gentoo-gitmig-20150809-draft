@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.3 2003/09/11 03:05:33 usata Exp $
 
 inherit elisp eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mew.org/mgp/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc"
+KEYWORDS="x86 alpha ~sparc ~ppc"
 
 E_DEPEND="emacs? ( ${E_DEPEND}  )"
 E_RDEPEND="emacs? ( ${E_RDEPEND} )"
