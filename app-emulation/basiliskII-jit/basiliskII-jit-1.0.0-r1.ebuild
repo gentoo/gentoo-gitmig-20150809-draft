@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.3 2004/09/28 09:22:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.4 2004/11/07 08:59:56 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="Basilisk II/JIT Macintosh Emulator"
 HOMEPAGE="http://gwenole.beauchesne.online.fr/basilisk2/"
 SRC_URI="http://hometown.aol.de/wimdk/files/BasiliskII-jit-1.0-mdk-src.tar.bz2"
 
-LICENSE="GPL-2 | LGPL-2.1"
+LICENSE="|| ( GPL-2 LGPL-2.1 )"
 KEYWORDS="x86 -ppc"
 SLOT="0"
 

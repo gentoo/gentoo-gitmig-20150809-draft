@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.12 2004/06/27 23:06:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.13 2004/11/07 09:00:44 mr_bones_ Exp $
 
 ### Several versions of specemu exist,  xspect & vgaspect, utilising X11
 ### and/or svgalib. libreadline provides optional runtime features.
@@ -11,7 +11,7 @@ DESCRIPTION="48k ZX Spectrum Emulator"
 HOMEPAGE="http://kempelen.iit.bme.hu/~mszeredi/spectemu/spectemu.html"
 SRC_URI="http://home.gwi.net/~plemon/sources/spectemu-0.94.tar.gz"
 
-LICENSE="GPL-2 | LGPL-2"
+LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="X readline svga"
