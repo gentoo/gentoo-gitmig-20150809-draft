@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/dnetc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.31 2004/10/05 13:34:50 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.32 2005/01/01 14:11:51 aliz Exp $
+
+*dnetc-2.9009.494 (01 Jan 2005)
+
+  01 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9007.489.ebuild,
+  dnetc-2.9009.494.ebuild:
+  Version bump, closing #68344.
+  Fixed buffer flushing, should close #76178."
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   dnetc-2.9008.490.ebuild:
