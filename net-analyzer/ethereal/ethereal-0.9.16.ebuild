@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.16.ebuild,v 1.4 2003/11/24 08:29:04 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.16.ebuild,v 1.5 2003/11/25 15:26:36 phosphan Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 inherit libtool
@@ -31,6 +31,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# re-declaring functions is no good idea
+	sed -i 's/getline/packet_giop_getline/g' packet-giop.c
 	elibtoolize
 	# gcc related configure script braindamage
 	sed -i "s|-I/usr/local/include||" configure
