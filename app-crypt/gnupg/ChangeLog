@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.12 2002/12/09 04:17:37 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.13 2002/12/09 22:15:49 blauwers Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
@@ -10,6 +10,9 @@
   Added ppc keyword
 
 *gnupg-1.2.1 (31 Oct 2002)
+
+  09 Dec 2002; B.Lauwers <blauwers@gentoo.org> gnupg-1.2.1.ebuild :
+  Un~masked spac keyword per #11870
 
   31 Oct 2002; Ryan Phillips <rphillips@gentoo.org> gnupg-1.2.1.ebuild :
   Version bump
