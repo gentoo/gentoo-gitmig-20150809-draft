@@ -1,4 +1,14 @@
-MD5 a43b385e48a3833f7c70589b8d8d7d2f ChangeLog 887
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 217337920de56d05d2856aa4c4530371 ChangeLog 1012
+MD5 d1b422366baec3b320aa30cce1f3d4c2 atomix-1.0.1.ebuild 1320
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 814f92801392a9737981714ecf7301aa atomix-1.0.1.ebuild 1286
 MD5 856b6bd13d4c9efac37f882d6eef9425 files/digest-atomix-1.0.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBemQMRkyva5PS18kRAoIMAJ9LY/hE6QEh/0fqvzua77gIF4caCgCfbS8C
+EmmVxwEv+A+pfqRU/Cks6bg=
+=r7Et
+-----END PGP SIGNATURE-----

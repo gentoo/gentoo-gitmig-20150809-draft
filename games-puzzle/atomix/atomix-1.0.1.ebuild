@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-1.0.1.ebuild,v 1.7 2004/10/06 05:33:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-1.0.1.ebuild,v 1.8 2004/10/23 14:00:16 liquidx Exp $
 
 inherit gnome2
 
@@ -44,10 +44,9 @@ src_unpack() {
 	sed -i \
 		-e 's/games.games/games:games/' Makefile.in \
 		|| die "sed failed"
+
+	# Seems to fix the infamous "OrigTree module" bug
+	cd ${S}; intltoolize -c -f || die
+	sed -i -e 's/@INTLTOOL_ICONV@/iconv/' intltool-merge.in
 }
 
-src_compile() {
-	# Seems to fix the infamous "OrigTree module" bug
-	intltoolize -c -f
-	gnome2_src_compile
-}
