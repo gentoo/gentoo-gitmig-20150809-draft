@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtkglextmm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.1 2003/09/21 13:41:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.2 2003/11/25 20:07:53 foser Exp $
+
+*gtkglextmm-1.0.1 (25 Nov 2003)
+
+  25 Nov 2003; foser <foser@gentoo.org> gtkglextmm-1.0.1.ebuild :
+  New release, added pkgconfig dep
 
   21 Sep 2003; Alastair Tse <liquidx@gentoo.org> gtkglextmm-0.7.1.ebuild,
   gtkglextmm-1.0.0.ebuild, metadata.xml:
