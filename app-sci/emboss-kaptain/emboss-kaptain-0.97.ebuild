@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss-kaptain/emboss-kaptain-0.97.ebuild,v 1.3 2004/12/23 22:54:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss-kaptain/emboss-kaptain-0.97.ebuild,v 1.4 2004/12/23 23:10:10 ribosome Exp $
 
 DESCRIPTION="Graphical interfaces for EMBOSS and EMBASSY programs"
 HOMEPAGE="http://userpage.fu-berlin.de/~sgmd/"
@@ -16,8 +16,8 @@ S=${WORKDIR}/EMBOSS.kaptns_${PV}
 DEPEND="kde-misc/kaptain
 	app-editors/nedit
 	sci-biology/emboss
-	app-sci/embassy-phylip
-	app-sci/embassy-domainatrix"
+	sci-biology/embassy-phylip
+	sci-biology/embassy-domainatrix"
 
 src_compile() {
 	cd EMBOSS

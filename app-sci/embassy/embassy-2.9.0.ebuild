@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/embassy/embassy-2.9.0.ebuild,v 1.4 2004/11/01 01:47:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/embassy/embassy-2.9.0.ebuild,v 1.5 2004/12/23 23:11:51 ribosome Exp $
 
 DESCRIPTION="A meta-package for installing all EMBASSY packages (EMBOSS add-ons)"
 HOMEPAGE="http://www.emboss.org/"
@@ -18,11 +18,11 @@ IUSE=""
 # versa), and the no-conflict USE flag will make it easy to install all EMBASSY
 # packages except the conflictual ones.
 
-RDEPEND="app-sci/embassy-domainatrix
-	app-sci/embassy-emnu
-	app-sci/embassy-esim4
-	app-sci/embassy-hmmer
-	app-sci/embassy-meme
-	app-sci/embassy-mse
-	app-sci/embassy-phylip
-	app-sci/embassy-topo"
+RDEPEND="sci-biology/embassy-domainatrix
+	sci-biology/embassy-emnu
+	sci-biology/embassy-esim4
+	sci-biology/embassy-hmmer
+	sci-biology/embassy-meme
+	sci-biology/embassy-mse
+	sci-biology/embassy-phylip
+	sci-biology/embassy-topo"
