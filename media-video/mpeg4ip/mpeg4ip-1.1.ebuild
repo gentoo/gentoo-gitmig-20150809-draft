@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.5 2004/06/25 00:45:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.6 2004/06/30 01:05:49 tester Exp $
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -12,7 +12,7 @@ LICENSE="MPL-1.1 LGPL-2 GPL-2 LGPL-2.1 BSD UCL MPEG4"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 IUSE="ipv6 mmx gtk v4l2 xvid nas alsa esd arts"
 
@@ -32,8 +32,6 @@ RDEPEND="sys-devel/libtool
 
 DEPENDS="${RDEPEND}
 	x86? ( mmx? ( >=dev-lang/nasm-0.98.19 ) )"
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0.ebuild,v 1.7 2004/06/25 00:45:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0.ebuild,v 1.8 2004/06/30 01:05:49 tester Exp $
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -26,8 +26,6 @@ DEPEND="sys-devel/libtool
 		mmx? ( >=dev-lang/nasm-0.98.19 )
 		media-video/ffmpeg
 		!media-libs/faad2"
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}
