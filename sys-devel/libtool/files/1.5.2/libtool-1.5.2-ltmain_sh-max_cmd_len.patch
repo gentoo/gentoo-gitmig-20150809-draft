@@ -17,7 +17,7 @@
 +             = "XX$testring") >/dev/null 2>&1 &&
 +          new_result=`expr "X$testring" : ".*" 2>&1` &&
 +          max_cmd_len="$new_result" &&
-+          test $i != 17 # 1/2 MB should be enough
++          test "$i" != 17 # 1/2 MB should be enough
 +  do
 +    i=`expr $i + 1`
 +    testring="$testring$testring"

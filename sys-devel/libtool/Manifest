@@ -36,5 +36,5 @@ MD5 d5d5e0c05015661718dd3015531342c5 files/1.5.6/libtool-1.5.6-libtool_m4-shared
 MD5 6ef585a59058c79f3601bbd7787f2683 files/1.5.2/libtool-1.5-libtool.m4-x86_64.patch 466
 MD5 0fb02114fa6b6cd63ea25510f04f346a files/1.5.2/libtool-1.5-testfailure.patch 6448
 MD5 8ac4aa8ff1c680fe44447274d9f3a673 files/1.5.2/libtool-1.5.2-libtool_m4-shared_ext.patch 882
-MD5 d2313fcf3c18603f201627ca94850786 files/1.5.2/libtool-1.5.2-ltmain_sh-max_cmd_len.patch 1153
+MD5 b81a86ce5e9014e53bd7beb12e46ed12 files/1.5.2/libtool-1.5.2-ltmain_sh-max_cmd_len.patch 1155
 MD5 ec9cd0c9953bac111564122a5c209278 files/1.5.2/libtool-1.5-filter-host-tags.patch 1846
