@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.58 2004/10/17 13:45:53 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.59 2004/10/25 13:59:54 dragonheart Exp $
+
+*gpgme-1.0.1-r1 (25 Oct 2004)
+
+  25 Oct 2004; Daniel Black <dragonheart@gentoo.org>
+  -files/gpgme-1.0.0-assuan_fix.patch, -files/gpgme-1.0.0-testconfigure.patch,
+  -gpgme-1.0.0-r1.ebuild, -gpgme-1.0.0-r2.ebuild, -gpgme-1.0.0-r3.ebuild,
+  -gpgme-0.9.0-r20.ebuild, -gpgme-1.0.0.ebuild, +gpgme-1.0.1-r1.ebuild,
+  +gpgme-1.0.1.ebuild:
+  commited version 1.0.1 as per bug #68724. Removed 1.0.0* due to bug #67517 and
+  other faults. Thanks to Erinn Looney-Triggs <erinn_looneytriggs@ekit.com> and
+  Jeremy Huddleston <eradicator@gentoo.org>
 
   17 Oct 2004; Akinori Hattori <hattya@gentoo.org> gpgme-0.9.0-r1.ebuild:
   stable on ia64, bug #64485

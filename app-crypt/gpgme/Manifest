@@ -1,26 +1,28 @@
-MD5 1b2c082aa7d31c2bf23bc5dff42f13bc ChangeLog 9267
-MD5 5749e5966691e723a51145196d1436fa gpgme-0.3.14-r1.ebuild 2385
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 608910789a98c4098e9936eaf26f8e19 ChangeLog 9810
 MD5 c91f227a64cd1f967b123962e0f32134 gpgme-0.3.14.ebuild 1045
 MD5 b4b67d388151a1919ab97bf9f77c5186 gpgme-0.3.16.ebuild 862
 MD5 c60aa07c58226f4a164ab89cff2616a1 gpgme-0.4.0.ebuild 1564
 MD5 078cdd0af281263b34748a7df7dc51a9 gpgme-0.4.7.ebuild 1553
-MD5 d528d3b25ee8e3eb46a19780cf49cb0d gpgme-0.9.0-r1.ebuild 1337
-MD5 ecfec85b02f3527ff9405ad4643c2e4e gpgme-0.9.0-r20.ebuild 1238
-MD5 7293e3a0f7d2859c3fb1fa8e8f3130c0 gpgme-1.0.0-r1.ebuild 1979
-MD5 3fa7ad27c5d56abf5ff3b53b46fcc42e gpgme-1.0.0-r2.ebuild 2048
-MD5 0164683b21bfb11b8188ffb9a0651ef6 gpgme-1.0.0-r3.ebuild 1877
-MD5 b9a7f6e3b2075dd0cc14cb4c141cccf2 gpgme-1.0.0.ebuild 1805
 MD5 ce0db60fd655ade98789a1643d4fdd9d metadata.xml 314
+MD5 5749e5966691e723a51145196d1436fa gpgme-0.3.14-r1.ebuild 2385
+MD5 d528d3b25ee8e3eb46a19780cf49cb0d gpgme-0.9.0-r1.ebuild 1337
+MD5 14e0855597fa0a992c2e4db46e5030f7 gpgme-1.0.1.ebuild 1702
+MD5 4b6de8938bb579adfdb6841caa906f48 gpgme-1.0.1-r1.ebuild 1866
 MD5 438d865640f00b860f2c3f88b21e621e files/digest-gpgme-0.3.14 64
-MD5 438d865640f00b860f2c3f88b21e621e files/digest-gpgme-0.3.14-r1 64
 MD5 f8d60472ee71707fd01798c5677b15ae files/digest-gpgme-0.3.16 64
 MD5 1e195068762b5aafd2f260d76b108a70 files/digest-gpgme-0.4.0 63
 MD5 f61d73bc505b5a542662b75aa0fa219f files/digest-gpgme-0.4.7 63
+MD5 438d865640f00b860f2c3f88b21e621e files/digest-gpgme-0.3.14-r1 64
 MD5 260bf91983886d989efa3e54792c921d files/digest-gpgme-0.9.0-r1 63
-MD5 260bf91983886d989efa3e54792c921d files/digest-gpgme-0.9.0-r20 63
-MD5 8607f302e5645b608abfb7b1d84e5fe5 files/digest-gpgme-1.0.0 63
-MD5 8607f302e5645b608abfb7b1d84e5fe5 files/digest-gpgme-1.0.0-r1 63
-MD5 8607f302e5645b608abfb7b1d84e5fe5 files/digest-gpgme-1.0.0-r2 63
-MD5 8607f302e5645b608abfb7b1d84e5fe5 files/digest-gpgme-1.0.0-r3 63
-MD5 91a9a75ed83bb440a634d78c1fe07eb6 files/gpgme-1.0.0-assuan_fix.patch 426
-MD5 08b94d6859a4d95e2d4405eb16977095 files/gpgme-1.0.0-testconfigure.patch 547
+MD5 c21b6b9b7f8f9f95ba2a8d6d189407ac files/digest-gpgme-1.0.1 63
+MD5 c21b6b9b7f8f9f95ba2a8d6d189407ac files/digest-gpgme-1.0.1-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfQbimdTrptrqvGERAqZKAJ9TANB9+e7ohcDC3yZM3PXo7Ev24gCfVM4A
+XWbs5miotD6PNeJGMlBjHiU=
+=bIO+
+-----END PGP SIGNATURE-----

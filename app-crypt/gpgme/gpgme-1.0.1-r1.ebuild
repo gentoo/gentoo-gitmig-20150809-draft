@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.0-r2.ebuild,v 1.2 2004/10/14 07:40:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.1-r1.ebuild,v 1.1 2004/10/25 13:59:54 dragonheart Exp $
 
 inherit eutils
 
@@ -40,12 +40,6 @@ RDEPEND="virtual/libc
 	smime? ( >=app-crypt/gnupg-1.9.6 )"
 
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/gpgme-1.0.0-testconfigure.patch || die "patch failed"
-	epatch ${FILESDIR}/${P}-assuan_fix.patch || die "assuan fix failed"
-}
 src_compile() {
 
 	WANT_AUTOCONF=2.57
