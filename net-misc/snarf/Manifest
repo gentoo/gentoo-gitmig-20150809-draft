@@ -1,5 +1,5 @@
-MD5 69e191c8799ba499e99bbca5d548db47 snarf-7.0-r1.ebuild 601
-MD5 121845ce395c2b4fb258ab91d8724c15 snarf-7.0-r2.ebuild 992
+MD5 79882ab406978870829de6114effa4ed snarf-7.0-r1.ebuild 591
+MD5 a29c4802a32d166b67c580b2caae5785 snarf-7.0-r2.ebuild 973
 MD5 048200fe45208edc4a33143d70828663 ChangeLog 2513
 MD5 db12e15fc605f25b9c7cc2ee19891bdf metadata.xml 452
 MD5 600c99f449fb48c1cf7fa2ee0a2001b0 files/snarf-unlink-empty.diff 1856
