@@ -1,5 +1,5 @@
 MD5 04c0ce6ac8ef3236c1b79f35f2eeebd7 libsdl-1.2.6.ebuild 2249
-MD5 29820ea4b7c015e1370bd2da99465b63 libsdl-1.2.6-r1.ebuild 2334
+MD5 5a4cdeb4b1b7c0891808875a5a1b6f04 libsdl-1.2.6-r1.ebuild 2331
 MD5 2468dd594bc1f3ad3b47bcf69ba5ded2 files/libsdl_gcc33_fix.diff 395
 MD5 b66ce90b8939cef871c1c9b065fc0658 files/digest-libsdl-1.2.6 62
 MD5 ec07d8e05e12f4447f76d065ffa22475 files/digest-libsdl-1.2.5-r1 62
