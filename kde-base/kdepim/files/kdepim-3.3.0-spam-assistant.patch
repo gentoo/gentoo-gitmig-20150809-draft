@@ -1,6 +1,6 @@
-diff -ru kmail/antispamwizard.cpp /home/carsten/a/antispamwizard.cpp
---- kmail/antispamwizard.cpp	2004-08-05 21:26:52.000000000 +0200
-+++ /home/carsten/a/antispamwizard.cpp	2004-09-03 13:58:25.000000000 +0200
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/antispamwizard.cpp ./kmail/antispamwizard.cpp
+--- /home/fiam/kdepim-3.3.0.orig/kmail/antispamwizard.cpp	2004-08-05 21:26:52.000000000 +0200
++++ ./kmail/antispamwizard.cpp	2004-09-11 14:27:58.745702928 +0200
 @@ -141,6 +141,7 @@
                      << mVirusRulesPage->selectedFolderName() << endl;
  
@@ -156,10 +156,18 @@ diff -ru kmail/antispamwizard.cpp /home/carsten/a/antispamwizard.cpp
      }
    }
  
-diff -ru kmail/kmail_part.cpp /home/carsten/a/kmail_part.cpp
---- kmail/kmail_part.cpp	2004-08-05 21:26:53.000000000 +0200
-+++ /home/carsten/a/kmail_part.cpp	2004-09-03 13:58:38.000000000 +0200
-@@ -58,7 +58,7 @@
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmail_part.cpp ./kmail/kmail_part.cpp
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmail_part.cpp	2004-08-05 21:26:53.000000000 +0200
++++ ./kmail/kmail_part.cpp	2004-09-11 14:27:58.746702776 +0200
+@@ -49,6 +49,7 @@
+ #include <dcopclient.h>
+ #include <kiconloader.h>
+ #include <kdebug.h>
++#include <libkdepim/part.h>
+ 
+ #include <qlayout.h>
+ 
+@@ -58,7 +59,7 @@
  
  KMailPart::KMailPart(QWidget *parentWidget, const char *widgetName,
  		     QObject *parent, const char *name, const QStringList &) :
@@ -168,7 +176,7 @@ diff -ru kmail/kmail_part.cpp /home/carsten/a/kmail_part.cpp
    mParentWidget( parentWidget )
  {
    kdDebug(5006) << "KMailPart()" << endl;
-@@ -94,6 +94,8 @@
+@@ -94,6 +95,8 @@
    kmsetSignalHandler(kmsignalHandler);
    kapp->dcopClient()->resume(); // Ok. We are ready for DCOP requests.
  
@@ -177,7 +185,7 @@ diff -ru kmail/kmail_part.cpp /home/carsten/a/kmail_part.cpp
    // create a canvas to insert our widget
    QWidget *canvas = new QWidget(parentWidget, widgetName);
    canvas->setFocusPolicy(QWidget::ClickFocus);
-@@ -118,7 +120,8 @@
+@@ -118,7 +121,8 @@
    setXMLFile( "kmmainwin.rc" );
    kmkernel->inboxFolder()->close();
  #else
@@ -187,7 +195,7 @@ diff -ru kmail/kmail_part.cpp /home/carsten/a/kmail_part.cpp
    QVBoxLayout *topLayout = new QVBoxLayout(canvas);
    topLayout->addWidget(mainWidget);
    mainWidget->setFocusPolicy(QWidget::ClickFocus);
-@@ -237,6 +240,7 @@
+@@ -237,6 +241,7 @@
    return mParentWidget;
  }
  
@@ -195,9 +203,29 @@ diff -ru kmail/kmail_part.cpp /home/carsten/a/kmail_part.cpp
  KMailBrowserExtension::KMailBrowserExtension(KMailPart *parent) :
    KParts::BrowserExtension(parent, "KMailBrowserExtension")
  {
-diff -ru kmail/kmfilter.cpp /home/carsten/a/kmfilter.cpp
---- kmail/kmfilter.cpp	2004-05-22 22:58:05.000000000 +0200
-+++ /home/carsten/a/kmfilter.cpp	2004-09-03 13:58:02.000000000 +0200
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmail_part.h ./kmail/kmail_part.h
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmail_part.h	2004-06-25 10:57:47.000000000 +0200
++++ ./kmail/kmail_part.h	2004-09-11 14:27:58.747702624 +0200
+@@ -33,6 +33,7 @@
+ #include <kparts/factory.h>
+ #include <kparts/event.h>
+ #include <qwidget.h>
++#include <libkdepim/part.h>
+ 
+ class KInstance;
+ class KAboutData;
+@@ -47,7 +48,7 @@
+ 
+ class ActionManager;
+ 
+-class KMailPart: public KParts::ReadOnlyPart, virtual public KMailPartIface
++class KMailPart: public KPIM::Part, virtual public KMailPartIface
+ {
+     Q_OBJECT
+   public:
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmfilter.cpp ./kmail/kmfilter.cpp
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmfilter.cpp	2004-05-22 22:58:05.000000000 +0200
++++ ./kmail/kmfilter.cpp	2004-09-11 14:27:58.748702472 +0200
 @@ -180,6 +180,8 @@
  
      bStopProcessingHere = config->readBoolEntry("StopProcessingHere", true);
@@ -215,9 +243,9 @@ diff -ru kmail/kmfilter.cpp /home/carsten/a/kmfilter.cpp
      config->writeEntry( "Icon", mIcon );
  
      QString key;
-diff -ru kmail/kmfilter.h /home/carsten/a/kmfilter.h
---- kmail/kmfilter.h	2004-05-22 22:58:05.000000000 +0200
-+++ /home/carsten/a/kmfilter.h	2004-09-03 13:57:48.000000000 +0200
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmfilter.h ./kmail/kmfilter.h
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmfilter.h	2004-05-22 22:58:05.000000000 +0200
++++ ./kmail/kmfilter.h	2004-09-11 14:27:58.749702320 +0200
 @@ -154,10 +154,42 @@
    void setStopProcessingHere( bool aStop ) { bStopProcessingHere = aStop; }
    bool stopProcessingHere() const { return bStopProcessingHere; }
@@ -270,9 +298,40 @@ diff -ru kmail/kmfilter.h /home/carsten/a/kmfilter.h
  };
  
  #endif /*kmfilter_h*/
-diff -ru kmail/kmmainwidget.cpp /home/carsten/a/kmmainwidget.cpp
---- kmail/kmmainwidget.cpp	2004-08-09 11:27:48.000000000 +0200
-+++ /home/carsten/a/kmmainwidget.cpp	2004-09-03 13:55:55.000000000 +0200
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmfiltermgr.cpp ./kmail/kmfiltermgr.cpp
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmfiltermgr.cpp	2004-05-22 22:58:05.000000000 +0200
++++ ./kmail/kmfiltermgr.cpp	2004-09-11 14:27:58.750702168 +0200
+@@ -321,6 +321,15 @@
+   endUpdate();
+ }
+ 
++void KMFilterMgr::appendFilters( const QPtrList <KMFilter> filters )
++{
++  beginUpdate();
++  QPtrListIterator<KMFilter> it(filters);
++  for ( it.toFirst(); it.current() ; ++it )
++  	append( *it );
++  writeConfig( TRUE );
++  endUpdate();
++}
+ 
+ //-----------------------------------------------------------------------------
+ bool KMFilterMgr::folderRemoved(KMFolder* aFolder, KMFolder* aNewFolder)
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmfiltermgr.h ./kmail/kmfiltermgr.h
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmfiltermgr.h	2004-05-22 22:58:05.000000000 +0200
++++ ./kmail/kmfiltermgr.h	2004-09-11 14:27:58.751702016 +0200
+@@ -48,6 +48,8 @@
+       write everything back into the configuration.*/
+   void appendFilter( KMFilter* filter );
+ 
++  void appendFilters( const QPtrList <KMFilter> );
++
+   /** Process given message by applying the filter rules one by
+       one. You can select which set of filters (incoming or outgoing)
+       should be used.
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmmainwidget.cpp ./kmail/kmmainwidget.cpp
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmmainwidget.cpp	2004-08-09 11:27:48.000000000 +0200
++++ ./kmail/kmmainwidget.cpp	2004-09-11 14:27:58.754701560 +0200
 @@ -101,8 +101,9 @@
  static KStaticDeleter<QPtrList<KMMainWidget> > mwlsd;
  
@@ -470,9 +529,9 @@ diff -ru kmail/kmmainwidget.cpp /home/carsten/a/kmmainwidget.cpp
  }
  
  //-----------------------------------------------------------------------------
-diff -ru kmail/kmmainwidget.h /home/carsten/a/kmmainwidget.h
---- kmail/kmmainwidget.h	2004-08-05 21:26:53.000000000 +0200
-+++ /home/carsten/a/kmmainwidget.h	2004-09-03 13:55:26.000000000 +0200
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmmainwidget.h ./kmail/kmmainwidget.h
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmmainwidget.h	2004-08-05 21:26:53.000000000 +0200
++++ ./kmail/kmmainwidget.h	2004-09-11 14:27:58.756701256 +0200
 @@ -9,6 +9,7 @@
  #define __KMMAINWIDGET
  
@@ -562,9 +621,9 @@ diff -ru kmail/kmmainwidget.h /home/carsten/a/kmmainwidget.h
    static QPtrList<KMMainWidget>* s_mainWidgetList;
  };
  
-diff -ru kmail/kmmainwin.cpp /home/carsten/a/kmmainwin.cpp
---- kmail/kmmainwin.cpp	2004-08-05 21:26:53.000000000 +0200
-+++ /home/carsten/a/kmmainwin.cpp	2004-09-03 13:54:47.000000000 +0200
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmmainwin.cpp ./kmail/kmmainwin.cpp
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmmainwin.cpp	2004-08-05 21:26:53.000000000 +0200
++++ ./kmail/kmmainwin.cpp	2004-09-11 14:27:58.757701104 +0200
 @@ -27,7 +27,7 @@
        mReallyClose( false )
  {
@@ -585,9 +644,9 @@ diff -ru kmail/kmmainwin.cpp /home/carsten/a/kmmainwin.cpp
    applyMainWindowSettings(KMKernel::config(), "Main Window");
  
    connect( KPIM::BroadcastStatus::instance(), SIGNAL( statusMsg( const QString& ) ),
-diff -ru kmail/kmmainwin.rc /home/carsten/a/kmmainwin.rc
---- kmail/kmmainwin.rc	2004-07-17 21:16:37.000000000 +0200
-+++ /home/carsten/a/kmmainwin.rc	2004-09-03 13:57:00.000000000 +0200
+diff -uNr /home/fiam/kdepim-3.3.0.orig/kmail/kmmainwin.rc ./kmail/kmmainwin.rc
+--- /home/fiam/kdepim-3.3.0.orig/kmail/kmmainwin.rc	2004-07-17 21:16:37.000000000 +0200
++++ ./kmail/kmmainwin.rc	2004-09-11 14:27:58.758700952 +0200
 @@ -1,5 +1,5 @@
  <!DOCTYPE kpartgui>
 -<kpartgui version="77" name="kmmainwin" >
@@ -615,3 +674,118 @@ diff -ru kmail/kmmainwin.rc /home/carsten/a/kmmainwin.rc
 +  <ActionList name="toolbar_filter_actions" />
   </ToolBar>
  </kpartgui>
+diff -uNr /home/fiam/kdepim-3.3.0.orig/libkdepim/Makefile.am ./libkdepim/Makefile.am
+--- /home/fiam/kdepim-3.3.0.orig/libkdepim/Makefile.am	2004-08-05 21:27:05.000000000 +0200
++++ ./libkdepim/Makefile.am	2004-09-11 14:28:18.001775560 +0200
+@@ -24,7 +24,7 @@
+   overlaywidget.cpp progressmanager.cpp progressdialog.cpp \
+   statusbarprogresswidget.cpp ssllabel.cpp completionordereditor.cpp \
+   resourceabc.cpp diffalgo.cpp addresseediffalgo.cpp calendardiffalgo.cpp \
+-  htmldiffalgodisplay.cpp broadcaststatus.cpp
++  htmldiffalgodisplay.cpp broadcaststatus.cpp part.cpp
+ 
+ noinst_HEADERS = categoryselectdialog.h categoryeditdialog.h ktimeedit.h 
+ $(srcdir)/categoryselectdialog.h: categoryselectdialog_base.h
+@@ -36,7 +36,7 @@
+ AddressBookServiceIface_DIR = $(srcdir)/interfaces
+ 
+ libkdepim_la_LDFLAGS = $(all_libraries) -no-undefined -version-info 1:0:0
+-libkdepim_la_LIBADD  = $(LIB_KIO) $(LIB_KABC) \
++libkdepim_la_LIBADD  = $(LIB_KIO) $(LIB_KABC) $(LIB_KPARTS) \
+   $(top_builddir)/libkcal/libkcal.la $(LIB_KDEUI) 
+ #               $top_builddir)/libkdepim/resources/libkpimresources.la
+ 
+diff -uNr /home/fiam/kdepim-3.3.0.orig/libkdepim/part.cpp ./libkdepim/part.cpp
+--- /home/fiam/kdepim-3.3.0.orig/libkdepim/part.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./libkdepim/part.cpp	2004-09-11 14:27:58.791695936 +0200
+@@ -0,0 +1,35 @@
++/*
++    This file is part of libkdepim.
++
++    Copyright (c) 2004 Tobias Koenig <tokoe@kde.org>
++
++    This library is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Library General Public
++    License as published by the Free Software Foundation; either
++    version 2 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Library General Public License for more details.
++
++    You should have received a copy of the GNU Library General Public License
++    along with this library; see the file COPYING.LIB.  If not, write to
++    the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
++    Boston, MA 02111-1307, USA.
++*/
++
++#include "part.h"
++
++using namespace KPIM;
++
++Part::Part( QObject *parent, const char *name )
++  : KParts::ReadOnlyPart( parent, name )
++{
++}
++
++Part::~Part()
++{
++}
++
++#include "part.moc"
+diff -uNr /home/fiam/kdepim-3.3.0.orig/libkdepim/part.h ./libkdepim/part.h
+--- /home/fiam/kdepim-3.3.0.orig/libkdepim/part.h	1970-01-01 01:00:00.000000000 +0100
++++ ./libkdepim/part.h	2004-09-11 14:27:58.798694872 +0200
+@@ -0,0 +1,51 @@
++/*
++    This file is part of libkdepim.
++
++    Copyright (c) 2004 Tobias Koenig <tokoe@kde.org>
++
++    This library is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Library General Public
++    License as published by the Free Software Foundation; either
++    version 2 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Library General Public License for more details.
++
++    You should have received a copy of the GNU Library General Public License
++    along with this library; see the file COPYING.LIB.  If not, write to
++    the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
++    Boston, MA 02111-1307, USA.
++*/
++
++#ifndef KPIM_PART_H
++#define KPIM_PART_H
++
++#include <kparts/part.h>
++
++namespace KPIM {
++
++/**
++  This special part should be used as base class for all applications
++  which shall be integrated in Kontact.
++ */
++class Part : public KParts::ReadOnlyPart
++{
++  Q_OBJECT
++
++  public:
++    Part( QObject *parent, const char *name );
++    virtual ~Part();
++
++  signals:
++    /**
++      Emit this signal whenever the plugin with this part shall be
++      raised inside Kontact.
++     */
++    void raise();
++};
++
++}
++
++#endif
