@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.2.4.ebuild,v 1.4 2004/11/19 04:25:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.2.4.ebuild,v 1.5 2004/11/19 04:38:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -32,5 +32,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc howto.txt faq.txt quickstart.txt readme.txt todo.txt bugs.txt changelog
+	dodoc *txt
 }
