@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.17 2004/07/27 15:10:12 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.18 2004/07/28 15:21:28 plasmaroo Exp $
+
+  28 Jul 2004; <plasmaroo@gentoo.org>
+  files/linux26-headers-2.6.7-appCompat.patch:
+  Added a fix for bug #58299 on AMD64, and also some IA64 fixes.
 
   27 Jul 2004; <plasmaroo@gentoo.org>
   files/linux26-headers-2.6.7-appCompat.patch:

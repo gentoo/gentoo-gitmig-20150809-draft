@@ -1321,3 +1321,57 @@ diff -ur linux-2.6.7/include/linux/sem.h linux-2.6.7-gentoo/include/linux/sem.h
  #include <linux/ipc.h>
  #include <asm/atomic.h>
  
+diff -ur linux-2.6.7/include/asm-x86_64/bitops.h linux-2.6.7-gentoo/include/asm-x86_64/bitops.h
+--- linux-2.6.7/include/asm-x86_64/bitops.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.7-gentoo/include/asm-x86_64/bitops.h	2004-07-28 16:08:37.650740208 +0100
+@@ -475,8 +475,6 @@
+ 
+ #endif /* __KERNEL__ */
+ 
+-#ifdef __KERNEL__
+-
+ #define ext2_set_bit(nr,addr) \
+ 	__test_and_set_bit((nr),(unsigned long*)addr)
+ #define ext2_set_bit_atomic(lock,nr,addr) \
+@@ -504,6 +502,4 @@
+ 
+ #define ARCH_HAS_ATOMIC_UNSIGNED 1
+ 
+-#endif /* __KERNEL__ */
+-
+ #endif /* _X86_64_BITOPS_H */
+diff -ur linux-2.6.7/include/asm-ia64/unistd.h linux-2.6.7-gentoo/include/asm-ia64/unistd.h
+--- linux-2.6.7/include/asm-ia64/unistd.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.7-gentoo/include/asm-ia64/unistd.h	2004-07-28 08:28:20.000000000 +0100
+@@ -121,7 +121,7 @@
+ #define __NR_setdomainname		1129
+ #define __NR_uname			1130
+ #define __NR_adjtimex			1131
+-/* 1132 was __NR_create_module */
++#define __NR_create_module		1132
+ #define __NR_init_module		1133
+ #define __NR_delete_module		1134
+ /* 1135 was __NR_get_kernel_syms */
+diff -ur linux-2.6.7/include/asm-ia64/types.h linux-2.6.7-gentoo/include/asm-ia64/types.h
+--- linux-2.6.7/include/asm-ia64/types.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.7-gentoo/include/asm-ia64/types.h	2004-07-27 20:13:02.000000000 +0100
+@@ -44,11 +44,6 @@
+ typedef __signed__ long __s64;
+ typedef unsigned long __u64;
+ 
+-/*
+- * These aren't exported outside the kernel to avoid name space clashes
+- */
+-# ifdef __KERNEL__
+-
+ typedef __s8 s8;
+ typedef __u8 u8;
+ 
+@@ -69,7 +64,5 @@
+ 
+ typedef unsigned short kmem_bufctl_t;
+ 
+-# endif /* __KERNEL__ */
+ #endif /* !__ASSEMBLY__ */
+-
+ #endif /* _ASM_IA64_TYPES_H */
