@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.3.ebuild,v 1.1 2002/12/02 18:49:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.3.ebuild,v 1.2 2002/12/09 00:54:03 raker Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -42,15 +42,10 @@ src_compile() {
 	use socks5 && myconf="${myconf} --with-socksdante=/usr" \
 		|| myconf="${myconf} --without-socksdante"
 
-	export CFLAGS="-fno-exceptions -fno-rtti ${CFLAGS}"
-	export CXXFLAGS="-fno-exceptions -fno-rtti ${CXXFLAGS}"
-
-	./configure \
-		--prefix=/usr \
+	econf \
 		--sysconfdir=/etc/lftp \
 		--without-modules \
-		--mandir=/usr/share/man \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
+		${myconf} || die "bad ./configure"
 
 	make || die "compile problem"
 }
