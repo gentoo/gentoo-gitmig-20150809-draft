@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r2.ebuild,v 1.2 2004/06/14 09:06:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r2.ebuild,v 1.3 2004/06/15 10:26:21 mcummings Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r6
 	>=dev-perl/XML-DOM-1.39-r1
 	>=dev-perl/XML-Grove-0.46_alpha
 	>=dev-perl/XML-Handler-YAWriter-0.23
-	dev-perl/gtk-perl-glade
+	gtk? ( dev-perl/gtk-perl-glade )
 	>=dev-perl/XML-XQL-0.67"
 
 src_unpack() {

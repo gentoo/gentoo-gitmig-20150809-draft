@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.26.ebuild,v 1.3 2004/06/15 10:26:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.26-r1.ebuild,v 1.1 2004/06/15 10:26:21 mcummings Exp $
 
 inherit eutils
 
@@ -36,11 +36,16 @@ DEPEND=">=dev-lang/perl-5.6.1-r6
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-install.patch
 }
 
 src_install() {
 	echo "" |env DESTDIR=${D} PREFIX="/usr" ./install.sh || die
 	# Fix for pathing
+	for i in `grep -l portage ${D}/usr/bin/*`; do
+		sed -i -e  "s:${D}:/:" ${i}
+	done
+
 	mkdir ${D}/usr/local
 	mv ${D}/usr/share ${D}/usr/local/
 }
