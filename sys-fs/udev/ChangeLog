@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.59 2004/07/28 04:03:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.60 2004/08/11 20:48:28 gregkh Exp $
+
+  11 Aug 2004; Greg Kroah-Hartman <gregkh@gentoo.org> udev-030.ebuild:
+  mark 030 stable on x86
 
   28 Jul 2004; Travis Tilley <lv@gentoo.org> udev-030.ebuild:
   marking stable on amd64 for misc bugfixes
