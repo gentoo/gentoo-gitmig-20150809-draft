@@ -1,6 +1,9 @@
 # ChangeLog for net-print/mtink
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.12 2004/11/08 12:08:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.13 2004/11/09 23:40:01 taviso Exp $
+
+  09 Nov 2004; Tavis Ormandy <taviso@gentoo.org> mtink-1.0.5.ebuild:
+  typo
 
   08 Nov 2004; Heinrich Wendel <lanius@gentoo.org> mtink-1.0.5.ebuild:
   fix /var files for users who are ugprading
