@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.30 2004/06/11 22:26:33 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.31 2004/06/11 23:02:57 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -50,9 +50,7 @@ IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap infor
 # Hardened-PHP support
 
 HARDENEDPHP_PATCH="hardened-php-4.3.6-0.1.2.patch.gz"
-[ `use hardenedphp` ] && SRC_URI="${SRC_URI} http://www.hardened-php.net/$HARDENEDPHP_PATCH"
-
-echo "$SRC_URI"
+SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/$HARDENEDPHP_PATCH )"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
