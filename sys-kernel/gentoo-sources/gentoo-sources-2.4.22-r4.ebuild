@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r4.ebuild,v 1.2 2004/01/09 11:49:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r4.ebuild,v 1.3 2004/01/09 14:49:24 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -37,6 +37,8 @@ src_unpack() {
 		|| die "Failed to patch kernel"
 
 	cd ${S}
+	sed -e '34s/#//' -i net/ipsec/Config.in
+	sed -e '13s/^/#/' -i net/ipsec/alg/Config.in
 
 	kernel_universal_unpack
 }
