@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.0.2230.ebuild,v 1.3 2002/10/16 23:32:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.0.2230.ebuild,v 1.4 2002/10/17 13:45:18 aliz Exp $
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators."
 S=${WORKDIR}/vmware-distrib
@@ -36,7 +36,7 @@ RDEPEND="${DEPEND}"
 #debug is needed to prevent a segfault from stripping vmware executables
 export DEBUG="yes"
 RESTRICT="nostrip"
-
+IUSE="gnome"
 src_install () {
 	# Copy:
 	dodir /opt/vmware/bin

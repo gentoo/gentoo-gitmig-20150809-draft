@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/epsxe-1.5.2.ebuild,v 1.6 2002/10/17 00:55:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/epsxe-1.5.2.ebuild,v 1.7 2002/10/17 13:45:18 aliz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="ePSXe Playstation Emulator"
@@ -8,6 +8,7 @@ HOMEPAGE="http://www.epsxe.com"
 LICENSE="freedist"
 KEYWORDS="x86 -ppc"
 SLOT="0"    
+IUSE="opengl"
 
 use opengl && GLDEPEND="app-emulation/psemu-gpupetemesagl"
 use opengl || GLDEPEND="app-emulation/psemu-peopssoftgpu"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.3 2002/10/17 01:06:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.4 2002/10/17 13:45:18 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An amiga emulator"
@@ -11,7 +11,7 @@ DEPEND="X? ( virtual/x11 gtk? ( x11-libs/gtk+ ) ) : ( sys-libs/ncurses svga? ( m
 SRC_URI="ftp://ftp.freiburg.linux.de/pub/uae/sources/develop/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="x86"
-
+IUSE="X gtk svga sdl"
 
 src_compile() {
 	local myopt

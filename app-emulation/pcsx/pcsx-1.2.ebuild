@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/pcsx-1.2.ebuild,v 1.5 2002/09/23 07:18:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/pcsx-1.2.ebuild,v 1.6 2002/10/17 13:45:18 aliz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Playstation emulator"
@@ -8,6 +8,7 @@ HOMEPAGE="http://www.pcsx.net/"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc"
 SLOT="0"  
+IUSE="opengl"
 
 use opengl && GLDEPEND="app-emulation/psemu-gpupetemesagl"
 use opengl || GLDEPEND="app-emulation/psemu-peopssoftgpu"
