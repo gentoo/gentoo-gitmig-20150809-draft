@@ -14,6 +14,12 @@ Run the following to extract the tarball (substitute your arch for 'x86')
 You'll see a warning about garbage at the end of the tarball/bzip2.  That's
 normal and not a problem.  That should get Portage up and running again.
 
+Immediately after that finishes do the following:
+# emerge rsync
+# emerge portage
+
+Everything should be fine from then on.
+
 Best Regards,
 
 Gentoo Linux
