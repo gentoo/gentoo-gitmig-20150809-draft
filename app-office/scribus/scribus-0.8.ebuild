@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.8.ebuild,v 1.7 2003/03/01 01:16:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.8.ebuild,v 1.8 2003/08/23 23:31:25 lanius Exp $
 
-DESCRIPTION="Layout program similar to Adobe® PageMaker, QuarkXPress, or Adobe® InDesign"
+DESCRIPTION="Layout program similar to Adobe(R) PageMaker, QuarkXPress, or Adobe(R) InDesign"
 HOMEPAGE="http://web2.altmuehlnet.de/fschmid/"
 SRC_URI="http://web2.altmuehlnet.de/fschmid/${P}.tar.gz"
 
