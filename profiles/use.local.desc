@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.367 2004/05/10 17:45:24 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.368 2004/05/11 07:12:26 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -384,6 +384,8 @@ x11-terms/eterm:etwin - enable twin support
 x11-terms/mlterm:uim - Enable uim support
 x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
+x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
+x11-wm/enlightenment:nothemes - Don't include the standard E themes
 x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
