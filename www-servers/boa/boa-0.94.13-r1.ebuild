@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.13-r1.ebuild,v 1.1 2004/08/08 11:09:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.13-r1.ebuild,v 1.2 2004/09/03 15:58:50 pvdabeel Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Boa - A very small and very fast http daemon"
 SRC_URI="http://www.boa.org/${P}.tar.gz"
 HOMEPAGE="http://www.boa.org/"
 
-KEYWORDS="~x86 ~sparc ~mips ~ppc"
+KEYWORDS="~x86 ~sparc ~mips ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="tetex"

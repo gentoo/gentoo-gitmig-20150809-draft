@@ -1,6 +1,10 @@
 # ChangeLog for net-www/boa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.1 2004/08/08 11:09:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.2 2004/09/03 15:58:50 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  boa-0.94.13-r1.ebuild:
+  Masked boa-0.94.13-r1.ebuild stable for ppc
 
 *boa-0.94.13-r1 (08 Aug 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/plb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/plb/ChangeLog,v 1.1 2004/08/08 17:56:08 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/plb/ChangeLog,v 1.2 2004/09/03 15:58:51 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> plb-0.3.ebuild:
+  Masked plb-0.3.ebuild stable for ppc
 
 *plb-0.3 (08 Aug 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/pound
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.1 2004/08/08 17:59:18 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.2 2004/09/03 15:58:51 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> pound-1.7.ebuild:
+  Masked pound-1.7.ebuild stable for ppc
 
 *pound-1.6 (08 Aug 2004)
 

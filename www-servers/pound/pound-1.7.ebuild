@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.7.ebuild,v 1.1 2004/08/08 17:59:18 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.7.ebuild,v 1.2 2004/09/03 15:58:51 pvdabeel Exp $
 
 MY_P=${P/p/P}
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.apsis.ch/pound/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~mips ~hppa"
+KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa"
 IUSE="ssl msdav unsafe"
 
 DEPEND="virtual/libc

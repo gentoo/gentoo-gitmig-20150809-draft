@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.1-r1.ebuild,v 1.1 2004/08/08 17:14:24 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.1-r1.ebuild,v 1.2 2004/09/03 15:58:51 pvdabeel Exp $
 
 MY_P="${P}-src"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.jboss.org"
 LICENSE="LGPL-2"
 IUSE="doc"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.2.2.ebuild,v 1.1 2004/08/08 17:28:06 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.2.2.ebuild,v 1.2 2004/09/03 15:58:51 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jan.kneschke.de/projects/lighttpd/"
 SRC_URI="$URI_ROOT/${P}.tar.gz"
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="mysql ssl php"
 DEPEND="virtual/libc
 		>=dev-libs/libpcre-3.1

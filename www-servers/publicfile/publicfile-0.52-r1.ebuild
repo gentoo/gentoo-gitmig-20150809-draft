@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r1.ebuild,v 1.1 2004/08/08 18:14:47 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r1.ebuild,v 1.2 2004/09/03 15:58:51 pvdabeel Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://cr.yp.to/publicfile/${P}.tar.gz
 	http://www.publicfile.org/ftp-ls-patch"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ppc sparc"
 
 RDEPEND=">=sys-apps/daemontools-0.70
 	>=sys-apps/ucspi-tcp-0.83
