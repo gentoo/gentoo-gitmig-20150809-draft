@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp-freetype
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.2 2002/02/23 01:56:54 drobbins Exp $
+
+*gimp-freetype-0.2-r1 (22 Feb 2002)
+
+  22 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: Added a dep on
+  >=media-gfx/gimp-1.2.3-r1 so that gimptool can be found (symlink was missing
+  in earlier versions)
 
 *gimp-freetype-0.2 (1 Feb 2002)
 
