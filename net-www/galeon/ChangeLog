@@ -1,6 +1,9 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.30 2002/12/26 20:17:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.31 2003/01/08 21:31:33 azarah Exp $
+
+  08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> galeon-1.2.7-r1.ebuild :
+  Mark stable for x86.
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> galeon-1.2.7.ebuild :
   Mark stable for x86.
