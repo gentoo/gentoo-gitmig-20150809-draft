@@ -1,13 +1,18 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.19 2002/10/26 23:41:50 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.20 2002/11/07 06:32:42 woodchip Exp $
+
+*samba-2.2.6-r2 (Nov 07 2002)
+
+  07 Nov 2002; Donny Davies <woodchip@gentoo.org> : Added patch to fix fd leak.
+  Made pam support optional.  Added --with-sendfile-support.  Fixup digest (vscan).
+  Fix for #9249.
 
 *samba-2.2.6-r1 (Oct 26 2002)
 
-  26 Oct 2002; Jon Nall <nall@gentoo.org> :
-  samba expects ldap to depend on sasl in order for libresolv.so to
-  get linked in, but ldap need not be compiled with sasl support. in
-  this case samba needs to link in libresolv.so
+  26 Oct 2002; Jon Nall <nall@gentoo.org> : samba expects ldap to depend on sasl
+  in order for libresolv.so to get linked in, but ldap need not be compiled with
+  sasl support. in this case samba needs to link in libresolv.so
 
 *samba-2.2.6 (Oct 24 2002)
 
@@ -15,29 +20,26 @@
 
   25 Oct 2002; Donny Davies <woodchip@gentoo.org> : Fix openldap dependency from #9249.
 
-  24 Oct 2002; Donny Davies <woodchip@gentoo.org> :
-  Chase latest release.  New local USE vscan flag for building the
-  openantivirus project plugins.  Added several more ldap files
-  and scripts.  Now builds the bundled VFS plugins.  Added more docs
-  and findsmb script.  Added lazy smbumount and VFS plugins reloc patches.
+  24 Oct 2002; Donny Davies <woodchip@gentoo.org> : Chase latest release.  New local USE
+  vscan flag for building the openantivirus project plugins.  Added several more ldap files
+  and scripts.  Now builds the bundled VFS plugins.  Added more docs and findsmb script.
+  Added lazy smbumount and VFS plugins reloc patches.
 
 *samba-2.2.5-r1 (Aug 27 2002)
 
-  20 Oct 2002; Michael Cohen <mjc@gentoo.org> samba-2.2.5-r1.ebuild,
+  20 Oct 2002; Michael Cohen <mjc@gentoo.org> samba-2.2.5-r1.ebuild:
   added portldap use flag for my nifty ldap stuff coming up.  no need 
   to bump version.
 
   27 Aug 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.5-r1.ebuid,
-  smb.conf.example :
-  Fix #6936; thanks shadow@ines.ro.  Fix #7133, thanks klebermass@limtec.de.
+  smb.conf.example :  Fix #6936; thanks shadow@ines.ro.  Fix #7133, thanks
+  klebermass@limtec.de.
 
 *samba-2.2.5 (23 Jun 2002)
 
-  25 Aug 2002; Jack Morgan <jmorgan@gentoo.org> :
-  Added sparc64 keyword
+  25 Aug 2002; Jack Morgan <jmorgan@gentoo.org> : Added sparc64 keyword
 
-  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
-  Added ppc keyword
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> : Added ppc keyword
 
   23 Jun 2002; Donny Davies <woodchip@gentoo.org> :
   Update to latest; samba-2.2.5.  Please see the samba WHATSNEW.txt file
@@ -45,10 +47,9 @@
 
 *samba-2.2.4-r1 (13 May 2002)
 
-  13 May 2002; Donny Davies <woodchip@gentoo.org> :
-  Install smbmnt and smbumount suid root, close #2635.
-  Pass --bindir to ./configure, close #2515.
-  Add a few more codepages.
+  13 May 2002; Donny Davies <woodchip@gentoo.org> :  Install smbmnt and smbumount
+  suid root, close #2635. Pass --bindir to ./configure, close #2515. Add a few
+  more codepages.
 
 *samba-2.2.4 (6 May 2002)
   
@@ -67,8 +68,7 @@
 
 *samba-2.2.3a-r3 (3 May 2002)
   
-  3 May 2002; Donny Davies <woodchip@gentoo.org> :  
-  Added LICENSE, SLOT, $Headers.
+  3 May 2002; Donny Davies <woodchip@gentoo.org> : Added LICENSE, SLOT, $Headers.
 
 *samba-2.2.3a-r2 (27 March 2002)
 

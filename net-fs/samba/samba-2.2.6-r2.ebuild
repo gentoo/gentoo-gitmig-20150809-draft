@@ -1,15 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6-r1.ebuild,v 1.1 2002/10/26 23:32:04 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6-r2.ebuild,v 1.1 2002/11/07 06:32:42 woodchip Exp $
 
-IUSE="tcpd ldap cups ssl acl vscan"
+IUSE="pam acl cups ldap ssl tcpd vscan"
 
-inherit perl-module
-
-# please test/report your experiences with these new VFS plugins.
 VSCAN_VER=0.2.5e
 VSCAN_MODS="fprot mks openantivirus" #kaspersky sophos symantec trend
-#need libs/headers/extra support for these ones^^
+#need libs/headers/extra support for these ones^; please test!
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org"
@@ -18,13 +15,13 @@ S=${WORKDIR}/${P}
 SRC_URI="vscan? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.gz
 	http://us2.samba.org/samba/ftp/${P}.tar.bz2"
 
-DEPEND=">=sys-libs/pam-0.72
-	acl? ( sys-apps/acl )
-	cups? ( net-print/cups )
-	ldap? ( =net-nds/openldap-2* )
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	vscan? ( >=dev-libs/popt-1.6.3 )"
+DEPEND="pam? >=sys-libs/pam-0.72
+	acl? sys-apps/acl
+	cups? net-print/cups
+	ldap? =net-nds/openldap-2*
+	ssl? >=dev-libs/openssl-0.9.6
+	tcpd? >=sys-apps/tcp-wrappers-7.6
+	vscan? >=dev-libs/popt-1.6.3"
 KEYWORDS="~x86 ~ppc ~sparc64"
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,21 +31,21 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 
-	patch -p0 < ${FILESDIR}/samba-2.2.2-smbmount.diff || die
-	patch -p1 < ${FILESDIR}/samba-2.2.5-gp-reloc-fix.patch || die
-	cd source/client; patch -p0 < ${FILESDIR}/samba-2.2.6-smbumount_lazy.patch || die
+	patch -p0 <${FILESDIR}/samba-2.2.2-smbmount.diff || die
+	patch -p1 <${FILESDIR}/samba-2.2.5-gp-reloc-fix.patch || die
+	cd ${S}/source/smbd
+	patch -p0 <${FILESDIR}/samba-2.2.6-notify_kernel.patch || die
+	cd ${S}/source/client
+	patch -p0 <${FILESDIR}/samba-2.2.6-smbumount_lazy.patch || die
 
 	if use portldap; then
 		cd ${S}/source
-		patch -p0 < $FILESDIR/nonroot-bind.diff || die
-		cd ${S}
+		patch -p0 <$FILESDIR/nonroot-bind.diff || die
 	fi
 
-	if use ldap ; then
-		if ! use sasl ; then
-			cd ${S}
-			patch -p0 < ${FILESDIR}/samba-2.2.6-libresolv.patch || die
-		fi
+	if use ldap; then
+		cd ${S}
+		patch -p0 <${FILESDIR}/samba-2.2.6-libresolv.patch || die
 	fi
 
 	# fix kerberos include file collision..
@@ -76,6 +73,8 @@ src_compile() {
 	local i myconf
 	use acl && myconf="${myconf} --with-acl-support" ||  myconf="${myconf} --without-acl-support"
 	use ssl && myconf="${myconf} --with-ssl" || myconf="${myconf} --without-ssl"
+	use pam && myconf="${myconf} --with-pam --with-pam_smbpass" || \
+		myconf="${myconf} --without-pam --without-pam_smbpass"
 	use cups && myconf="${myconf} --enable-cups" || myconf="${myconf} --disable-cups"
 	use ldap && myconf="${myconf} --with-ldapsam" || myconf="${myconf} --without-ldapsam"
 
@@ -94,7 +93,7 @@ src_compile() {
 		--with-swatdir=/usr/share/swat \
 		--with-privatedir=/etc/samba/private \
 		--with-codepagedir=/var/lib/samba/codepages \
-		--with-pam --with-pam_smbpass \
+		--with-sendfile-support \
 		--without-sambabook \
 		--without-automount \
 		--without-spinlocks \
@@ -109,11 +108,15 @@ src_compile() {
 		--with-utmp \
 		--with-vfs \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
+		#--with-winbind-ldap-hack
 
 	# compile samba..
-	make all smbfilter smbwrapper smbcacls pam_smbpass \
+	make all smbfilter smbwrapper smbcacls \
 		nsswitch nsswitch/libnss_wins.so debug2html
 	assert "samba compile problem"
+	if use pam; then
+		make pam_smbpass || die "pam_smbpass compile problem"
+	fi
 
 	# compile the bundled vfs modules..
 	cd ${S}/examples.bin/VFS
@@ -168,7 +171,7 @@ src_install() {
 	insinto /usr/lib
 	doins source/bin/libsmbclient.a
 	exeinto /lib/security
-	doexe source/bin/pam_smbpass.so
+	use pam && doexe source/bin/pam_smbpass.so
 	doexe source/nsswitch/pam_winbind.so
 
 
