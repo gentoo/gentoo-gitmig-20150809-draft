@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.10-r1.ebuild,v 1.5 2004/06/28 15:58:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.10-r1.ebuild,v 1.6 2004/06/29 15:19:24 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="doc snmp usb apache2"
 
 DEPEND=">=sys-apps/baselayout-1.8.4
-	virtual/glibc
+	virtual/libc
 	virtual/mta
 	snmp? ( net-analyzer/ucd-snmp )
 	sys-libs/ncurses"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.23 2004/06/28 15:59:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.24 2004/06/29 15:19:45 vapier Exp $
 
 inherit eutils
 
@@ -16,10 +16,10 @@ IUSE="nls debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
-	virtual/glibc
+	virtual/libc
 	nls? ( sys-devel/gettext )
 	sys-devel/libtool"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
