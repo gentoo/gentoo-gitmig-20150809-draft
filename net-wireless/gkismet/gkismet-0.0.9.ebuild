@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/gkismet-0.0.9.ebuild,v 1.2 2004/12/23 09:57:16 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/gkismet-0.0.9.ebuild,v 1.3 2005/01/17 11:40:20 brix Exp $
 
 DESCRIPTION="Gtk perl based Kismet client"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -12,7 +12,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-perl/gtk-perl
-		=net-wireless/kismet-2004.10.1*
+		>=net-wireless/kismet-2004.10.1
 		sys-apps/sed"
 
 src_unpack() {
