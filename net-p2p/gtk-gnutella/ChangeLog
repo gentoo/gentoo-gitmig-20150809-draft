@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.21 2004/02/11 20:57:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.22 2004/03/14 05:37:44 weeve Exp $
+
+  13 Mar 2004; Jason Wever <weeve@gentoo.org> gtk-gnutella-0.92.ebuild:
+  Stable on sparc.
 
 *gtk-gnutella-0.93.3 (11 Feb 2004)
 
