@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.12 2004/11/17 17:02:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.13 2004/12/17 21:38:25 corsair Exp $
+
+  17 Dec 2004; Markus Rothe <corsair@gentoo.org> lzop-1.01.ebuild:
+  Stable on ppc64
 
   17 Nov 2004; Mike Frysinger <vapier@gentoo.org> lzop-1.01.ebuild:
   Use make install DESTDIR.
