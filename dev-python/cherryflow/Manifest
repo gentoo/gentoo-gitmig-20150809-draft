@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b4855878d574ecc99d02661ebde7dd3d cherryflow-5.ebuild 721
+MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 5efb719554232d4b373d8f6532e34fa8 ChangeLog 342
+MD5 e457205fd65ba4b1d6cf3f29d070438c files/digest-cherryflow-5 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOx4Nz2gxt1z4IGYRArLuAJ4hC1U1WnUotiUWkYx9d8mjtnPDSwCgqUdU
+vkgzQge84apKIj2e/bKhEZc=
+=6AVJ
+-----END PGP SIGNATURE-----
