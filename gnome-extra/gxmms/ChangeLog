@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/gxmms
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/ChangeLog,v 1.1 2004/02/01 07:24:34 eradicator Exp $
+
+*gxmms-0.1.0 (31 Jan 2004)
+
+  31 Jan 2004; Jeremy Huddleston <eradicator@gentoo.org> gxmms-0.1.0.ebuild:
+  Gnome2 panel applet for controlling xmms. Ebuild provided by Svyatogor
+  <svyatogor@gentoo.org> in bug #34268.
+
