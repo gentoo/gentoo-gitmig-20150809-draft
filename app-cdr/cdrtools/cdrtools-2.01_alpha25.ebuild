@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.2 2004/01/18 08:08:12 pylon Exp $
+
 
 inherit eutils
 
-DVDR_PATCH_P="cdrtools-2.01a20-dvd.patch"
+DVDR_PATCH_P="cdrtools-2.01a25-dvd.patch"
 DESCRIPTION="A set of tools for CDR drives, including cdrecord."
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
-	dvdr? ( http://people.mandrakesoft.com/~warly/files/cdrtools/archives/${DVDR_PATCH_P}.bz2 )"
+	dvdr? ( mirror://gentoo/${DVDR_PATCH_P}.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +30,7 @@ src_unpack() {
 	# <azarah@gentoo.org> (05 Feb 2003)
 	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch
 
-	use dvdr && epatch ../${DVDR_PATCH_P}
+	use dvdr && epatch ${FILESDIR}/${DVDR_PATCH_P}
 
 	cd ${S}/DEFAULTS
 	sed -i -e "s:/opt/schily:/usr:g" Defaults.linux
