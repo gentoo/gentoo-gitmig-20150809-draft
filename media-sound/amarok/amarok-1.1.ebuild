@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.ebuild,v 1.1 2004/09/27 20:29:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.ebuild,v 1.2 2004/09/28 17:59:43 eradicator Exp $
 
-IUSE="cjk gstreamer xmms opengl xine arts"
+IUSE="cjk gstreamer xmms opengl xine arts noamazon"
 
 inherit kde eutils
 
@@ -48,7 +48,9 @@ src_compile() {
 	PREFIX="`kde-config --prefix`"
 
 	myconf="`use_with arts` `use_with gstreamer`"
-	myconf="${myconf} `use_with opengl` `use_with xine`"
+	myconf="${myconf} `use_with opengl` `use_with xine` `use_enable !noamazon amazon`"
+
+	einfo "${myconf}"
 
 	kde_src_compile myconf configure make || die
 }
