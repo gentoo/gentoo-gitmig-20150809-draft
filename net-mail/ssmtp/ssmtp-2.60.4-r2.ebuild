@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.4-r1.ebuild,v 1.4 2004/04/01 19:24:54 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.4-r2.ebuild,v 1.1 2004/04/13 18:10:07 g2boojum Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/${P/-/_}.tar.gz"

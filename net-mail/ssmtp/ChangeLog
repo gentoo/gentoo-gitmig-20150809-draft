@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.24 2004/04/01 19:24:54 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.25 2004/04/13 18:10:07 g2boojum Exp $
+
+*ssmtp-2.60.4-r2 (13 Apr 2004)
+
+  13 Apr 2004; Grant Goodyear <g2boojum@hotmail.com> ssmtp-2.60.4-r1.ebuild,
+  ssmtp-2.60.4-r2.ebuild, files/mailer.conf:
+  New revision that installs a mailer.conf file w/ send-mail defined.
+  Closes bug 47714.
 
   01 Apr 2004; <randy@gentoo.org> ssmtp-2.60.4-r1.ebuild:
   adding s390 to keywords
