@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.2.ebuild,v 1.1 2004/06/10 09:52:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.2.ebuild,v 1.2 2004/06/17 02:02:38 mr_bones_ Exp $
 
-inherit distutils
-inherit eutils
+inherit distutils eutils
 
 MY_PN="BitTornado"
 MY_P="${MY_PN}-${PV}"

@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.11.ebuild,v 1.3 2004/03/23 06:07:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.11.ebuild,v 1.4 2004/06/17 02:04:53 mr_bones_ Exp $
 
-inherit distutils
-inherit eutils
+inherit distutils eutils
 
 DESCRIPTION="TheShad0w's experimental BitTorrent client"
 HOMEPAGE="http://www.bittornado.com/"
