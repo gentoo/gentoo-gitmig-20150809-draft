@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/tilp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.5 2004/03/30 10:10:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.6 2004/03/31 08:24:13 phosphan Exp $
+
+  31 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> tilp-6.06.ebuild,
+  tilp-6.68.ebuild:
+  Cleanup
 
   30 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> tilp-6.68-r1.ebuild:
   Fixing for gtk 2.4, see bug #45599
