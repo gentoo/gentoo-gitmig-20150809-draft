@@ -1,6 +1,10 @@
 # ChangeLog for app-gnustep/gridlock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.1 2004/07/22 22:06:56 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.2 2004/07/23 14:58:21 fafhrd Exp $
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  gridlock-1.6.1.ebuild:
+  Changed referenced categories in ebuilds to reflect recent epkgmove changes.
 
 *gridlock-1.6.1 (22 Jul 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-gnustep/imageviewer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/imageviewer/ChangeLog,v 1.1 2004/07/23 13:21:27 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/imageviewer/ChangeLog,v 1.2 2004/07/23 14:59:18 fafhrd Exp $
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  imageviewer-0.6.2.ebuild:
+  Changed referenced categories in ebuilds to reflect recent epkgmove changes.
 
 *imageviewer-0.6.2 (23 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/affiche/affiche-0.6.0.ebuild,v 1.1 2004/07/22 22:01:02 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/affiche/affiche-0.6.0.ebuild,v 1.2 2004/07/23 14:57:39 fafhrd Exp $
 
 inherit gnustep-old
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
-DEPEND=">=dev-util/gnustep-gui-0.8.5"
+DEPEND=">=gnustep-base/gnustep-gui-0.8.5"
 
 src_unpack() {
 	unpack ${P/a/A}.tar.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.3.0.ebuild,v 1.1 2004/07/23 13:16:13 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.3.0.ebuild,v 1.2 2004/07/23 14:58:03 fafhrd Exp $
 
 inherit base gnustep-old
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
-DEPEND=">=dev-util/gnustep-gui-0.8.5"
+DEPEND=">=gnustep-base/gnustep-gui-0.8.5"
 
 src_unpack() {
 	unpack ${P/g/G}.tar.gz
