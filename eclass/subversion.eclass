@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.2 2004/01/26 08:46:29 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.3 2004/01/26 15:06:02 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -101,7 +101,13 @@ subversion_svn_fetch() {
 	fi
 
 	cd "${ESVN_STORE_DIR}"
+
+	# every time
 	addwrite "/etc/subversion"
+
+	# -userpriv
+	addwrite "/root/.subversion"
+
 	einfo
 
 	if [ -z ${ESVN_REPO_URI##*/} ]; then
