@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.5 2003/10/21 22:27:25 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.6 2003/11/15 09:15:32 seemant Exp $
+
+*ddclient-3.6.3 (15 Nov 2003)
+
+  15 Nov 2003; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.3.ebuild,
+  files/ddclient-3.6.3-gentoo.diff, files/ddclient-3.6.3-mss1.diff:
+  version bump thanks to: Matthew Smith <matthewsmith@iinet.net.au> in bug
+  #32756. Includes two patches he wrote: one for dnspark users; one for putting
+  config files into /etc/ddclient
 
   21 Oct 2003; Tavis Ormandy <taviso@gentoo.org> ddclient-3.6.2.ebuild:
   adding ~alpha keyword
