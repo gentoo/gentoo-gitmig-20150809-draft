@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.1 2003/07/20 18:42:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.2 2003/08/04 23:37:26 frogger Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -47,7 +47,7 @@ STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # ProPolice version
 PP_VER="3_3"
-PP_FVER="${PP_VER//_/.}-1"
+PP_FVER="${PP_VER//_/.}-3"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
@@ -192,7 +192,7 @@ src_unpack() {
 			"${BRANCH_UPDATE} (Gentoo Linux ${PVR})" || die "Failed Branding"
 	fi
 
-	if [ -n "${PP_VER}" ]
+	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
 	then
 		# ProPolice Stack Smashing protection - protector-3.2.2-7
 		epatch ${WORKDIR}/protector.dif
