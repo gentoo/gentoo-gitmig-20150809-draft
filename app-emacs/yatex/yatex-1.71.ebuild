@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.71.ebuild,v 1.5 2004/04/04 17:01:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.71.ebuild,v 1.6 2004/06/02 01:49:14 agriffis Exp $
 
 inherit elisp eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 	cd docs
 	mv yatexe yatex.info
 	mv yahtmle yahtml.info
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		nkf -e yatexj > yatex-ja.info
 		nkf -e yahtmlj > yahtml-ja.info
 	fi
@@ -48,7 +48,7 @@ src_install() {
 	elisp-install ${PN} help/YATEXHLP*
 
 	dodoc docs/*.eng
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		dodoc 00readme install
 		dodoc docs/{htmlqa,qanda} docs/*.doc
 	fi

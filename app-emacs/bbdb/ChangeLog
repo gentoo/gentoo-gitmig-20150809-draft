@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/bbdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.8 2004/05/11 03:47:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.9 2004/06/02 01:48:24 agriffis Exp $
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  bbdb-2.35_pre20040323.ebuild:
+  Fix use invocation
 
   10 May 2004; Jason Wever <weeve@gentoo.org> bbdb-2.35_pre20040323.ebuild:
   Added ~sparc keyword to help resolve bug #50695.

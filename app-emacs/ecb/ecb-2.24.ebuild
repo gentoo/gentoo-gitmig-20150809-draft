@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.24.ebuild,v 1.2 2004/04/30 20:11:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.24.ebuild,v 1.3 2004/06/02 01:47:13 agriffis Exp $
 
 inherit elisp
 
@@ -28,7 +28,7 @@ src_unpack() {
 
 src_compile() {
 	local my_loadpath="${SITELISP}/semantic ${SITELISP}/eieio"
-	[ "`use java`" ] \
+	use java \
 		&& my_loadpath="${my_loadpath} ${SITELISP}/elib ${SITELISP}/jde/lisp"
 	make CEDET='' \
 		LOADPATH="${my_loadpath}" \
