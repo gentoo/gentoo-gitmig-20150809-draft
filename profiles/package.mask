@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <dholm@gentoo.org> (27 Aug 2003)
+# CVS snapshot of the coming gnat 5.0
+=dev-lang/gnat-5.0*
+
 # msterret@gentoo.org (20 Aug 2003)
 # New versioning scheme so hid the old one from portage
 =app-games/neverball-0805a
