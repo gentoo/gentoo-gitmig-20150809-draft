@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre3.ebuild,v 1.1 2003/11/06 17:51:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre5.ebuild,v 1.1 2003/12/24 08:13:54 solar Exp $
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -26,13 +26,10 @@ RDEPEND="!static? ${DEPEND}"
 busybox_config_option() {
 	[ "$2" = "" ] && return 1
 	case $1 in
-		y) sed -e "s:.*CONFIG_$2.*set:CONFIG_$2=y:g" < \
-			.config > .config~;;
-		n) sed -e "s:CONFIG_$2=y:# CONFIG_$2 is not set:g" < \
-			.config > .config~;;
+		y) sed -i -e "s:.*CONFIG_$2.*set:CONFIG_$2=y:g" .config;;
+		n) sed -i -e "s:CONFIG_$2=y:# CONFIG_$2 is not set:g" .config;;
 		*) return 1;;
 	esac
-	mv .config{~,}
 	einfo `grep CONFIG_$2 .config`
 }
 
@@ -42,7 +39,10 @@ src_unpack() {
 
 	# busybox has changed quite a bit from 0.[5-6]* to 1.x so this
 	# config might not be cd ready.
-	make defconfig
+
+	make allyesconfig
+	busybox_config_option n DMALLOC
+	busybox_config_option n FEATURE_SUID
 
 	#[ -f .config ] || die "No .config file found for ${PN}"
 
@@ -59,7 +59,7 @@ src_unpack() {
 	# 
 
 	#[ `use selinux` ] && busybox_config_option y SELINUX ||
-	#	busybox_config_option n SELINUX
+		busybox_config_option n SELINUX
 
 	[ `use debug` ] && busybox_config_option y DEBUG ||
 		busybox_config_option n DEBUG
@@ -92,6 +92,7 @@ src_unpack() {
 	#for f in $busybox_features; do
 	#	has $f ${FEATURES} && busybox_config_option y `echo ${f/busybox_/}|tr [a-z] [A-Z]`
 	#done
+	echo | make clean oldconfig > /dev/null
 }
 
 src_compile() {
