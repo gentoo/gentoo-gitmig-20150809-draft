@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.2.ebuild,v 1.2 2005/01/26 23:23:54 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.2.ebuild,v 1.3 2005/03/03 18:48:54 ciaranm Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yet another small httpd."
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 DEPEND="dev-libs/dietlibc"
 
-RDEPEND="sys-apps/daemontools"
+RDEPEND="sys-process/daemontools"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

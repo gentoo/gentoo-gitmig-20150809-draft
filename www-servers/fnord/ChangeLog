@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/fnord
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.6 2005/01/26 23:23:54 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.7 2005/03/03 18:48:54 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> fnord-1.2.ebuild,
+  fnord-1.5.ebuild, fnord-1.6.ebuild, fnord-1.7.ebuild, fnord-1.8.ebuild:
+  Move sys-apps/daemontools -> sys-process/daemontools
 
   27 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> fnord-1.8.ebuild:
   fixed bug #61251, now you can choose if you want to compile it with

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.6 2005/01/27 21:02:18 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.7 2005/03/03 18:48:54 ciaranm Exp $
 
 # flag-o-matic needed for replace-sparc64-flags
 inherit flag-o-matic eutils
@@ -19,7 +19,7 @@ DEPEND="diet?(dev-libs/dietlibc)
 	!diet? ( virtual/libc )"
 
 RDEPEND="${DEPEND}
-	sys-apps/daemontools
+	sys-process/daemontools
 	sys-apps/ucspi-tcp
 	"
 
