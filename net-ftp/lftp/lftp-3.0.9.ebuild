@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.9.ebuild,v 1.8 2004/11/01 01:03:08 kloeri Exp $
-
-IUSE="ssl socks5 nls"
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.9.ebuild,v 1.9 2004/11/02 15:16:24 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="A sophisticated ftp/http client, file transfer program."
+DESCRIPTION="A sophisticated ftp/http client, file transfer program"
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
 
 #SRC_URI="http://the.wiretapped.net/mirrors/lftp/${P}.tar.bz2"
 # Was a bit too slow and unreliable last time I tried (dragonheart)
 SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar.bz2"
-SLOT="0"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc sparc alpha ~hppa ~mips ~ia64 ~ppc64 ~ppc-macos"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos s390 sparc x86"
+IUSE="ssl socks5 nls"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
