@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.21 2003/02/01 20:30:58 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.22 2003/02/02 21:21:14 danarmak Exp $
+
+*kdeedu-3.1-r1 (02 Feb 2003)
+
+  02 Feb 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #51708 on bugs.kde.org (kstars exiting when view is swithed to a
+  point below the horizon). This is a patch from upstream cvs.
 
   01 Feb 2003; Jack Morgan <jmorgan@gentoo.org> kdeedu-3.1.ebuild:
   added ~sparc to keywords
