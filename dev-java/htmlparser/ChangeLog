@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/htmlparser
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/htmlparser/ChangeLog,v 1.1 2004/09/17 09:40:23 axxo Exp $
+
+*htmlparser-1.4 (17 Sep 2004)
+
+  17 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +htmlparser-1.3.ebuild, +htmlparser-1.4.20040104.ebuild,
+  +htmlparser-1.4.20040727.ebuild, +htmlparser-1.4.ebuild:
+  initial import, ebuild created by me, as a dependency
+

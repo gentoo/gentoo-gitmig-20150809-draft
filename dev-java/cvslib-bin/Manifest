@@ -1,0 +1,6 @@
+MD5 e4aa3b3de3a4bd69edf9d39c3d32cb42 cvslib-bin-3.6.ebuild 729
+MD5 3075f4f6af3d4bd5684ccf1d59e2753b cvslib-bin-3.5.ebuild 702
+MD5 526f8f6638a3f134a0e7e4fafcc12dbd ChangeLog 322
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 70c62181f6094ef6288c1611472172dc files/digest-cvslib-bin-3.5 118
+MD5 7443a5dae142af526e70f0a18b551a09 files/digest-cvslib-bin-3.6 118

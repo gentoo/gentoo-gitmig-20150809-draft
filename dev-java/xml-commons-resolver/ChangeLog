@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/xml-commons-resolver
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.1 2004/09/17 09:36:09 axxo Exp $
+
+*xml-commons-resolver-1.1 (17 Sep 2004)
+
+  17 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +xml-commons-resolver-1.1.ebuild:
+  initial import, ebuild created by me, as a dependency
+

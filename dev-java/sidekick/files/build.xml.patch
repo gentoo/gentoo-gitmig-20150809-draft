@@ -1,0 +1,10 @@
+--- build.xml	2003-05-17 02:07:53.000000000 +0200
++++ build.xml	2004-09-16 23:43:42.168728304 +0200
+@@ -33,6 +33,7 @@
+ 
+ 	<path id="project.class.path">
+ 		<pathelement location="${install.dir}/ErrorList.jar"/>
++		<pathelement location="${jedit.install.dir}/jedit.jar"/>
+ 		<pathelement location="."/>
+ 	</path>
+ 

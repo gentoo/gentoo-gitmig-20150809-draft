@@ -1,0 +1,9 @@
+--- build.xml	2004-09-17 00:48:04.811741928 +0200
++++ build.xml   2004-09-17 00:48:09.156081488 +0200
+@@ -38,6 +38,7 @@
+		<pathelement location="${install.dir}/xmlParserAPIs.jar"/>
+		<pathelement location="${install.dir}/xml-commons-resolver.jar"/>
+		<pathelement location="${install.dir}/htmlparser.jar"/>
++		<pathelement location="${jedit.install.dir}/jedit.jar"/>
+		<pathelement location="."/>
+	</path>

@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/gruntspudplugin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gruntspudplugin/ChangeLog,v 1.1 2004/09/17 09:36:10 axxo Exp $
+
+*gruntspudplugin-0.4.6_beta (17 Sep 2004)
+
+  17 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +gruntspudplugin-0.4.6_beta.ebuild:
+  initial import, ebuild created by me, as a dependency
+

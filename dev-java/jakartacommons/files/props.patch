@@ -1,0 +1,14 @@
+--- jakartacommons.props.orig	2004-09-16 23:20:18.157170504 +0200
++++ jakartacommons.props	2004-09-16 23:20:29.761406392 +0200
+@@ -15,9 +15,9 @@
+ # included jar files
+ plugin.jakartacommons.JakartaCommonsPlugin.jars=\
+ 	bcel.jar \
+-	commons-lang-2.0.jar \
++	commons-lang.jar \
+ 	commons-collections.jar \
+-	commons-httpclient-2.0.1.jar \
++	commons-httpclient.jar \
+ 	commons-logging.jar \
+ 	log4j.jar
+ 
