@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/apg
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.2 2003/03/28 09:16:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.3 2003/11/12 08:20:08 tad Exp $
+
+*apg-2.2.3 (12 Nov 2003)
+
+  12 Nov 2003; Troy Dack <tad@gentoo.org> apg-2.2.3.ebuild, apg-2.3.0b.ebuild:
+  Latest development release. Closes Bug #33261. Thanks Sven Wegener
+  <sven.wegener@stealer.net> for subnmitting the ebuild.
+
+*apg-2.2.3 (12 Nov 2003)
+
+  12 Nov 2003; Troy Dack <tad@gentoo.org> apg-2.2.3.ebuild:
+  Version bump, 2.2.3 is the stable release. Thanks to Sven Wegener
+  <sven.wegener@stealer.net> for the ebuild. Closes Bug #33260.
 
 *apg-2.1.0 (02 Mar 2003)
 
