@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.8 2004/02/09 12:01:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.9 2004/02/12 12:20:01 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -75,7 +75,7 @@ start() {
 		do
 			if [ ! "${DRIVER}" = off ] &&
 			   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${DRIVER}\$"` ] &&
-			   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${DRIVER/-/_}\$"` ]; then
+			   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${DRIVER//-/_}\$"` ]; then
 				einfo "Loading: ${DRIVER}"
 				/sbin/modprobe ${DRIVER}
 			fi
@@ -84,11 +84,13 @@ start() {
 		sleep 1
 
 		if [ -f /proc/asound/seq/drivers ] ; then
-			SEQUENCERS="$(awk -F, '$2~/^empty$/ {print $1}' /proc/asound/seq/drivers)"
+			# We want to ensure snd-seq is loaded as it is needed for things like timidity even if
+			# we don't use a real sequencer.
+			SEQUENCERS="snd-seq $(awk -F, '$2~/^empty$/ {print $1}' /proc/asound/seq/drivers)"
 			for SEQUENCER in ${SEQUENCERS}
 			do
 				if [ -z `cut -d' ' -f1 /proc/modules | egrep "^${SEQUENCER}\$"` ] &&
-				   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${SEQUENCER/-/_}\$"` ]; then
+				   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${SEQUENCER//-/_}\$"` ]; then
 					einfo "Loading: ${SEQUENCER}"
 					[ -n "${SEQUENCER}" ] && /sbin/modprobe ${SEQUENCER}
 				fi

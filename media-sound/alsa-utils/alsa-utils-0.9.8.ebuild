@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.8.ebuild,v 1.4 2004/01/17 03:18:40 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.8.ebuild,v 1.5 2004/02/12 12:20:01 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -52,8 +52,8 @@ pkg_postinst() {
 	einfo "	# rc-update add alsasound boot"
 	echo
 	einfo "You will also need to edit the file /etc/modules.d/alsa"
-	einfo "and run update-modules. You can do this like so:"
-	einfo "	# nano -w /etc/modules.d/alsa && update-modules"
+	einfo "and run modules-update. You can do this like so:"
+	einfo "	# nano -w /etc/modules.d/alsa && modules-update"
 	echo
 	ewarn "Pausing for 20 seconds to give you time to read..."
 	sleep 20

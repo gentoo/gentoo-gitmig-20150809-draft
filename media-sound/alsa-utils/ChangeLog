@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.42 2004/02/09 12:01:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.43 2004/02/12 12:20:01 eradicator Exp $
+
+  12 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-utils-0.9.8.ebuild, alsa-utils-1.0.0_rc2.ebuild,
+  alsa-utils-1.0.1.ebuild, alsa-utils-1.0.2.ebuild, files/alsasound:
+  Always load snd-seq to make timidity work when no real sequencer. Also, fix
+  module loading on 2.6 kernels. Changed ebuilds' reference from update-modules
+  to modules-update.  Closes bug #31849.
+
+  10 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  Added snd-seq to SEQUENCERS to load so timidity will work even if we have no
+  real sequenced. Closes bug #30942.
 
   09 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
   Updated alsasound init script to not load sequencer modules that are compiled
