@@ -1,4 +1,4 @@
-MD5 4015d6e57da5fb4a600127b73806456a files/digest-jgraph-3.1 71
-MD5 db4b4379b6f16e197b472dff36398321 jgraph-3.1.ebuild 828
-MD5 d66fc1fc7dd9405b4089676c23c50d22 ChangeLog 396
+MD5 3dc15362c2bef9282fd4e68f7d832156 ChangeLog 553
+MD5 e74751ab7d3ca1408effe2a46cb05aaa jgraph-3.2.ebuild 827
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 c6d0179bb0aac742f9e84801d80eff44 files/digest-jgraph-3.2 71
