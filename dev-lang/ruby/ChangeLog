@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.75 2004/06/24 22:55:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.76 2004/07/17 09:54:45 usata Exp $
+
+*ruby-1.8.2_pre1 (17 Jul 2004)
+
+  17 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.0-r6.ebuild,
+  ruby-1.8.1-r3.ebuild, ruby-1.8.1-r6.ebuild, ruby-1.8.1-r7.ebuild,
+  +ruby-1.8.2_pre1.ebuild:
+  Version bumped. Block dev-lang/ruby-cvs-1.8
 
   19 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.1-r7.ebuild:
   Fixed non-existent S

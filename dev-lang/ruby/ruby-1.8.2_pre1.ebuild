@@ -1,31 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r3.ebuild,v 1.11 2004/07/17 09:54:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre1.ebuild,v 1.1 2004/07/17 09:54:45 usata Exp $
 
-IUSE="socks5 tcltk cjk"
-
-ONIG_DATE="20040316"
-SNAP_DATE="20040410"
+ONIGURUMA="onigd2_3_1"
+MY_P=${P/_pre/-preview}
 
 inherit flag-o-matic alternatives eutils gnuconfig
-filter-flags -fomit-frame-pointer
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
-	mirror://gentoo/${P}-${SNAP_DATE}.diff.gz
-	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/onigd${ONIG_DATE}.tar.gz )"
+SRC_URI="mirror://ruby/${PV%.*}/${MY_P}.tar.gz"
+SRC_URI="${SRC_URI}
+	cjk? ( http://www.geocities.jp/kosako1/oniguruma/archive/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="amd64 alpha hppa -ia64 mips ppc sparc x86 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 -ia64 ~s390"
+IUSE="socks5 tcltk cjk"
 
 RDEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-misc/dante-1.1.13 )
-	tcltk?  ( dev-lang/tk )
+	tcltk? ( dev-lang/tk )
 	>=dev-ruby/ruby-config-0.2
 	!=dev-lang/ruby-cvs-1.8*"
 DEPEND="sys-devel/autoconf
@@ -33,31 +31,30 @@ DEPEND="sys-devel/autoconf
 	${RDEPEND}"
 PROVIDE="virtual/ruby"
 
-S=${WORKDIR}/${P%_pre*}
+S=${WORKDIR}/${P%_*}
 
 src_unpack() {
 	unpack ${A}
 
-	pushd ${S}
-	epatch ../${P}-${SNAP_DATE}.diff
-	popd
-
 	if use cjk ; then
-		pushd oniguruma
+		einfo "Applying ${ONIGURUMA}"
+		pushd ${WORKDIR}/oniguruma
 		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}
 		popd
 	fi
 
 	# Enable build on alpha EV67
-	if use alpha; then
+	if use alpha ; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
 }
 
 src_compile() {
+	filter-flags -fomit-frame-pointer
+
 	# Socks support via dante
-	if ! use socks5 ; then
+	if use socks5; then
 		# Socks support can't be disabled as long as SOCKS_SERVER is
 		# set and socks library is present, so need to unset
 		# SOCKS_SERVER in that case.
@@ -70,7 +67,9 @@ src_compile() {
 		export CFLAGS
 	fi
 
-	econf --program-suffix=${SLOT/./} --enable-shared \
+	econf \
+		--program-suffix=${SLOT/./} \
+		--enable-shared \
 		`use_enable socks5 socks` \
 		|| die "econf failed"
 	emake || die "emake failed"
@@ -101,7 +100,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-
 	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
 		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r6.ebuild,v 1.7 2004/06/24 22:55:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r6.ebuild,v 1.8 2004/07/17 09:54:45 usata Exp $
 
 IUSE="socks5 tcltk cjk"
 
@@ -25,7 +25,8 @@ RDEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-misc/dante-1.1.13 )
 	tcltk?  ( dev-lang/tk )
-	>=dev-ruby/ruby-config-0.2"
+	>=dev-ruby/ruby-config-0.2
+	!=dev-lang/ruby-cvs-1.8*"
 DEPEND="sys-devel/autoconf
 	sys-apps/findutils
 	${RDEPEND}"

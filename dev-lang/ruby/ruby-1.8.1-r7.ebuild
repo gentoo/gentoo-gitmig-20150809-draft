@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r7.ebuild,v 1.3 2004/06/24 22:55:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r7.ebuild,v 1.4 2004/07/17 09:54:45 usata Exp $
 
 ONIGURUMA="onigd2_2_8"
 SNAP_DATE="2004.05.02"
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 -ia64 ~s390"
+KEYWORDS="x86 ppc ~sparc ~mips alpha ~arm ~hppa ~amd64 -ia64 ~s390"
 IUSE="socks5 tcltk cjk"
 
 RDEPEND=">=sys-libs/glibc-2.1.3
@@ -25,7 +25,8 @@ RDEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-misc/dante-1.1.13 )
 	tcltk? ( dev-lang/tk )
-	>=dev-ruby/ruby-config-0.2"
+	>=dev-ruby/ruby-config-0.2
+	!=dev-lang/ruby-cvs-1.8*"
 DEPEND="sys-devel/autoconf
 	sys-apps/findutils
 	${RDEPEND}"
