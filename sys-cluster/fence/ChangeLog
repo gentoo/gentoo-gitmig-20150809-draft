@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/fence
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.4 2005/01/27 16:04:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.5 2005/03/19 15:30:00 xmerlin Exp $
+
+*fence-1.5 (19 Mar 2005)
+
+  19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +fence-1.5.ebuild:
+  fence-1.5 in portage
 
 *fence-1.1 (27 Jan 2005)
 
