@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.9 2002/04/09 19:24:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.10 2002/04/13 10:53:01 spider Exp $
+
+*evolution-1.0.3-r4 (13 Apr 2002)
+  13 Apr 2002; Spider <spider@gentoo.org> evolution-1.0.3-r4.ebuild :
+  Adding a dependency on gob in a futile attempt to solve bug #1674
+  
 
 *evolution-1.0.3-r3 (9 April 2002)
 
