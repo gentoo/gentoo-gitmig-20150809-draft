@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.ebuild,v 1.6 2005/01/01 14:08:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.ebuild,v 1.7 2005/01/09 10:44:35 swegener Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/libc
 	virtual/x11
 	sdl? ( media-libs/libsdl )
 	gtk? ( x11-libs/wxGTK )
-	readline? sys-libs/readline"
+	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
