@@ -6,7 +6,7 @@ MD5 bda2e6b82684286bc13346b7851e0473 mono-0.28.ebuild 2151
 MD5 67131dd9bf95d27be0abb143fd60199a mono-0.95.ebuild 1606
 MD5 5c86ac77b2f24de275750f9b43b647ad mono-0.97.ebuild 1602
 MD5 4854360d1955592fb8e93f7bf4efa93d mono-0.31.ebuild 2603
-MD5 b5c17c7b478e461fd3d6d16d34dce1de ChangeLog 7614
+MD5 aac5c6d188c85c3de296f7b1f6246da4 ChangeLog 7686
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 9f4b4eb6a1555ed574dbdd359cae3070 files/dotnet.conf 573
 MD5 f33c78b627cbbc1db2ab5f6cc5299e70 files/dotnet.init 1034
