@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.50 2004/11/15 00:35:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.51 2004/11/17 14:37:46 vapier Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -8,8 +8,10 @@
 inherit eutils versionator libtool
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
-DESCRIPTION="Based on the ${ECLASS} eclass"
 EXPORT_FUNCTIONS src_unpack pkg_setup src_compile src_install
+
+DESCRIPTION="Based on the ${ECLASS} eclass"
+HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 export CTARGET="${CTARGET:-${CHOST}}"
 
@@ -27,7 +29,7 @@ else
 		SLOT="${CTARGET}-${PV%.*}"
 	fi
 fi
-
+LICENSE="GPL-2 LGPL-2.1"
 
 gcc_setup_static_vars() {
 	#MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
