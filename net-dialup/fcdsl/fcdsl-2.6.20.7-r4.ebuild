@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.2 2005/03/04 13:09:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.3 2005/03/05 16:06:46 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -222,11 +222,11 @@ pkg_config() {
 		readvalue FCDSL_PROVIDER "Enter the name of your ISP"
 		if [ ! -e "/etc/ppp/peers/${FCDSL_PROVIDER}" ]; then
 			readvalue FCDSL_USER "Enter your user name"
-			if [ "$(grep "${FCDSL_USER}" /etc/ppp/pap-secrets)" == "" ]; then
+			if ! grep "${FCDSL_USER}" /etc/ppp/pap-secrets >/dev/null 2>&1; then
 				readpassword FCDSL_PASSWORD
 				echo '"'${FCDSL_USER}'" * "'${FCDSL_PASSWORD}'"' >>/etc/ppp/pap-secrets
 				unset FCDSL_PASSWORD
-				cat <<EOF >>/etc/ppp/peers/${FCDSL_PROVIDER}
+				cat <<EOF >/etc/ppp/peers/${FCDSL_PROVIDER}
 connect ""
 ipcp-accept-remote
 ipcp-accept-local
@@ -260,18 +260,20 @@ EOF
 				einfo "or"
 				einfo "    pppd call \"${FCDSL_PROVIDER}\""
 			else
-				ewarn "User \"${FCDSL_USER}\" always exists in \"/etc/ppp/pap-secrets\"!"
+				ewarn "User \"${FCDSL_USER}\" already exists in \"/etc/ppp/pap-secrets\"!"
 			fi
 		else
-			ewarn "Peer file \"/etc/ppp/peers/${FCDSL_PROVIDER}\" always exists!"
+			ewarn "Peer file \"/etc/ppp/peers/${FCDSL_PROVIDER}\" already exists!"
 		fi
 
 		#Uncomment correspondent lines in /etc/capi.conf & /etc/modules.d/fcdsl
 		if [ -f /etc/capi.conf ]; then
-			sed -i -e "s:^#${FCDSL_MODULE}:${FCDSL_MODULE}" /etc/capi.conf
+			sed -i -e "s:^#${FCDSL_MODULE}:${FCDSL_MODULE}:" \
+				/etc/capi.conf >/dev/null 2>&1
 		fi
 		if [ -f /etc/modules.d/fcdsl ]; then
-			sed -i -e "s:^#options +${FCDSL_MODULE}:options ${FCDSL_MODULE}" /etc/modules.d/fcdsl
+			sed -i -e "s:^#options ${FCDSL_MODULE}:options ${FCDSL_MODULE}:" \
+				/etc/modules.d/fcdsl >/dev/null 2>&1
 		fi
 	else
 		ewarn "No AVM FRITZ!Card DSL found!"
