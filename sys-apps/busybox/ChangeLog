@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.53 2004/12/31 11:48:11 gmsoft Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.54 2005/01/02 03:54:44 vapier Exp $
+
+  01 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/1.00/more-insmod-arches.patch, busybox-1.00-r1.ebuild:
+  Add patch from upstream to support alpha/hppa.
 
   31 Dec 2004; Guy Martin <gmsoft@gentoo.org> busybox-1.00-r1.ebuild:
   Added needed symlink of /sbin/init for busybox when USE=netboot.

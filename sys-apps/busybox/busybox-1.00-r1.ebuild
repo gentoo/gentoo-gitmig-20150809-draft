@@ -1,34 +1,32 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.4 2004/12/31 11:48:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.5 2005/01/02 03:54:44 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Utilities for rescue and embedded systems"
 #SNAPSHOT=20040726
+
+DESCRIPTION="Utilities for rescue and embedded systems"
 HOMEPAGE="http://www.busybox.net/"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~x86 ~ppc ~mips ~arm ~amd64 ~sparc ~hppa"
-IUSE="debug uclibc static savedconfig netboot make-busybox-symlinks"
-
-MY_PV=${PV/_/-}
-
-if [ "$SNAPSHOT" != "" ]; then
+if [[ -n $SNAPSHOT ]] ; then
 	MY_P=${PN}
 	SRC_URI="http://www.busybox.net/downloads/snapshots/${PN}-${SNAPSHOT}.tar.bz2"
 else
-	MY_P=${PN}-${MY_PV}
+	MY_P=${PN}-${PV/_/-}
 	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2"
 fi
 
-S=${WORKDIR}/${MY_P}
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
+IUSE="debug uclibc static savedconfig netboot make-busybox-symlinks"
 
 DEPEND="virtual/libc
 	!amd64? ( uclibc? ( dev-libs/uclibc ) )
 	>=sys-apps/sed-4"
 RDEPEND="!static? ( virtual/libc )"
+
+S=${WORKDIR}/${MY_P}
 
 # <pebenito> then eventually turning on selinux would mean
 # adding a dep: selinux? ( sys-libs/libselinux )
@@ -50,6 +48,7 @@ src_unpack() {
 	# patches for 1.00 go here.
 	epatch ${FILESDIR}/1.00/busybox-read-timeout.patch
 	epatch ${FILESDIR}/1.00/readlink-follow.patch
+	epatch ${FILESDIR}/1.00/more-insmod-arches.patch
 
 	#bunzip
 	#ftp://ftp.simtreas.ru/pub/my/bb/new/find.c.gz
@@ -61,13 +60,7 @@ src_unpack() {
 	# [package]-[version].config
 	# [package].config
 
-	if use netboot ; then
-		cp ${FILESDIR}/config-netboot .config
-		sed -i \
-			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
-			networking/udhcp/libbb_udhcp.h \
-			|| die "fixing netboot/udhcpc"
-	elif use savedconfig ; then
+	if use savedconfig ; then
 		[ -r .config ] && rm .config
 		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
 			configfile=/etc/${PN}/${CHOST}/${conf}.config
@@ -80,6 +73,12 @@ src_unpack() {
 			einfo "Found your ${configfile} and using it."
 			return 0
 		fi
+	elif use netboot ; then
+		cp ${FILESDIR}/config-netboot .config
+		sed -i \
+			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
+			networking/udhcp/libbb_udhcp.h \
+			|| die "fixing netboot/udhcpc"
 	fi
 
 	# busybox has changed quite a bit from 0.[5-6]* to 1.x so this
@@ -110,25 +109,6 @@ src_unpack() {
 	use debug \
 		&& busybox_config_option y DEBUG \
 		|| busybox_config_option n DEBUG
-
-	# Supported architectures:
-
-	# Busybox in general will build on any architecture supported by
-	# gcc.  It has a few specialized features added for __sparc__
-	# and __alpha__.  insmod functionality is currently limited to
-	# x86, ARM, SH3/4, powerpc, m68k, MIPS, and v850e.
-	case ${ARCH} in
-		alpha|sparc*)
-			# non x86 needs to figure out what works for
-			# them the best. sparc64 bobmed while building
-			# ash in my tests
-			busybox_config_option n INSMOD
-			busybox_config_option n MODPROBE
-			busybox_config_option n RMMOD;;
-		hppa)
-			 busybox_config_option n INSMOD;;
-		*) ;;
-	esac
 
 	#busybox_features=`grep CONFIG_ .config | tr '#' '\n' | 
 	#	awk  '{print $1}' | cut -d = -f 1 | grep -v ^$ | cut -c 8- | 
