@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.3.ebuild,v 1.2 2004/02/03 21:46:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.3.ebuild,v 1.3 2004/03/13 16:27:57 wolf31o2 Exp $
 
 DESCRIPTION="Stella Atari 2600 VCS Emulator"
 HOMEPAGE="http://stella.sourceforge.net/"
@@ -15,7 +15,7 @@ DEPEND="|| (
 		X? ( virtual/x11 )
 		sdl? ( media-libs/libsdl )
 		virtual/x11
-		alsa? ( media-sound/alsa-driver )
+		alsa? ( media-sound/alsa-lib )
 		media-libs/libpng
 	)"
 
