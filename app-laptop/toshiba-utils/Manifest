@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 319bbf7e846cbabcb7fbc9f1d7a08db5 ChangeLog 595
 MD5 5631752d7b26af637d5195de5cefd8cb toshiba-utils-2.0.1-r1.ebuild 1563
-MD5 eba354581685a783dfbeac94292cb28d files/toshiba-utils-2.0.1-gentoo.diff 1037
 MD5 13479a47a47561e9b8fd367a66dfe019 files/digest-toshiba-utils-2.0.1-r1 67
-MD5 45052d0094e340831e343daeb11d12e7 files/toshiba-modules.d 156
+MD5 ccabc1b4b01e5698f3b89b75106c97f0 files/toshiba-modules.d 160
+MD5 eba354581685a783dfbeac94292cb28d files/toshiba-utils-2.0.1-gentoo.diff 1037
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+eOWmdTrptrqvGERAkaUAJ49cAAUiaZ7H+eLfbTP4P+9W+GNwACfXUMY
+4UNIEs2S43i47U+a2HJAehE=
+=T5Sa
+-----END PGP SIGNATURE-----
