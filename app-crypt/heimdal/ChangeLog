@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.30 2004/04/09 09:49:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.31 2004/04/11 00:21:29 gmsoft Exp $
+
+  10 Apr 2004; Guy Martin <gmsoft@gentoo.org> heimdal-0.6.1.ebuild:
+  Marked stable on hppa.
 
   09 Apr 2004; <solar@gentoo.org> heimdal-0.6.1.ebuild:
   pushed to stable for x86 bug #46590#c11
