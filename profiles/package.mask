@@ -42,10 +42,6 @@
 # Masking pending unfreeze.
 =app-cdr/bin2iso-19b-r1
 
-# <satai@gentoo.org> (21 Oct 2002)
-# severe issues.  now unsupported.
-=app-office/texmacs
-
 # <azarah@gentoo.org> (21 Oct 2002)
 # have portage issues
 =sys-devel/flex-2.5.22
