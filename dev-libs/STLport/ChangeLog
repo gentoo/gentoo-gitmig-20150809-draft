@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.8 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.9 2002/12/16 03:01:44 azarah Exp $
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> STLport-4.5.3-r2.ebuild :
+
+  Only apply the gcc3 g++-v3? patches if we do not use the multi spec gcc
+  ebuild ...
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,8 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.4 2002/12/09 04:20:59 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.5 2002/12/16 03:01:44 azarah Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
+
+inherit eutils
+
+S="${WORKDIR}/${P}"
 DESCRIPTION="C++ STL library"
 SRC_URI="http://www.stlport.org/archive/${P}.tar.gz"
 HOMEPAGE="http://www.stlport.org"
@@ -16,9 +20,15 @@ LICENSE="as-is"
 src_unpack() {
 
 	unpack ${A}
+	
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gcc3.patch2 || die "Patching failed"
-	patch -p1 < ${FILESDIR}/${P}-optimize.patch || die "Patching failed"
+	# Do we use the new multi scheme gcc ?
+	if ! /usr/sbin/gcc-config --get-current-profile &> /dev/null
+	then
+		epatch ${FILESDIR}/${P}-gcc3.patch2
+	fi
+	
+	epatch ${FILESDIR}/${P}-optimize.patch
 }
 
 src_compile() {
@@ -42,3 +52,4 @@ src_install () {
 	cd ${S}
 	dohtml -r doc
 }
+
