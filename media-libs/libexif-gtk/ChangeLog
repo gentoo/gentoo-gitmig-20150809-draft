@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libexif
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.1 2003/01/08 13:23:01 mholzer Exp $
+
+*libexif-gtk-0.3.3 (08 Jan 2003)
+
+  08 Jan 2003; Martin Holzer <mholzer@gentoo.org> libexif-gtk-0.3.3.ebuild
+  files/digest-libexif-gtk-0.3.3 ChangeLog : 
+  Initial version submitted by asl@launay.org in #13461.
+
