@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.ebuild,v 1.6 2004/05/04 15:40:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.ebuild,v 1.7 2004/06/16 09:31:38 kloeri Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Bochs is a pc emulator.
 This ebuild is set up to emulate a Pentium, with a NE2000 network card, and a
 CDROM drive. It also comes with a disk image using dlxlinux."
@@ -26,11 +25,9 @@ src_unpack() {
 	sed -e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
 	-e 's:BOCHSDIR=:BOCHSDIR=/usr/lib/bochs#:' \
 	-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in.orig > Makefile.in
-
 }
 
 src_compile() {
-
 	[ "$ARCH" == "x86" ] && myconf="--enable-idle-hack"
 	use sdl && myconf="${myconf} --with-sdl" \
 		|| myconf="${myconf} --without-sdl"
@@ -38,13 +35,11 @@ src_compile() {
 	--enable-ne2000 --enable-sb16=linux --enable-slowdown --prefix=/usr \
 	--infodir=/usr/share/info --mandir=/usr/share/man --host=${CHOST} --with-x11 $myconf || die
 
-
 	emake || die
 }
 
 
 src_install () {
-
 	make DESTDIR=${D} install || die
 	dodoc CHANGES COPYING CVS README TESTFORM.txt
 }
