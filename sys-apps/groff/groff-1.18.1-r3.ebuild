@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r3.ebuild,v 1.8 2004/02/23 00:43:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r3.ebuild,v 1.9 2004/02/29 19:52:35 azarah Exp $
 
 IUSE="X cjk"
 
