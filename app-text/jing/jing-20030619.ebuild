@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619.ebuild,v 1.6 2004/10/16 18:16:09 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619.ebuild,v 1.7 2004/11/03 11:52:50 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND=">=virtual/jdk-1.3
 	dev-java/saxon-bin
 	dev-java/xerces"
-DEPEND=""
+DEPEND="app-arch/unzip"
 
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.6.ebuild,v 1.3 2004/10/17 09:39:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.6.ebuild,v 1.4 2004/11/03 11:53:39 axxo Exp $
 
 MY_PV="${PV/.}"
 DESCRIPTION="gsView PostScript and PDF viewer"
@@ -14,6 +14,7 @@ KEYWORDS="~x86 ~ppc"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	virtual/ghostscript"
+DEPEND="app-arch/unzip"
 
 src_compile() {
 	## copy Unix makefile
