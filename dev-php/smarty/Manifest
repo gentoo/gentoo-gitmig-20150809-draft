@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12acc485ffaa4856e07e21d4df388f04 ChangeLog 2665
+MD5 ae4fdc1b15d26fd42402bf41cc652a63 ChangeLog 2836
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 bd5146deaab977c06d8f9b79bd9e7931 smarty-2.6.5.ebuild 898
 MD5 d58936231d3a7d65bcf61a69b8701148 smarty-2.6.0-r2.ebuild 869
 MD5 66adefa7f0bb0e43b231400952a8fdc5 smarty-2.6.2.ebuild 896
-MD5 e4efdb7a0ff70439c7314f0f570ea9aa files/digest-smarty-2.6.2 64
+MD5 283aee62fd8be9eddc96225d198b244a smarty-2.6.5.ebuild 904
 MD5 cc746919357bf3d40185fb16d4e2be1c files/digest-smarty-2.6.0-r2 64
+MD5 e4efdb7a0ff70439c7314f0f570ea9aa files/digest-smarty-2.6.2 64
 MD5 3724d102d85b8d2f110e277db301709e files/digest-smarty-2.6.5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBu302ugEuf3OQ0akRAplaAJ41xR98EWQdYDC1Se6b7iuY+PgocACfW5SW
-luFZgsWKNITPI8Zglt+3HFU=
-=YZO8
------END PGP SIGNATURE-----
