@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.39 2004/09/26 21:15:25 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.40 2004/10/03 07:00:41 spyderous Exp $
+
+  02 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; tightvnc-1.2.8.ebuild:
+  x11-base/xfree -> virtual/x11.
 
   26 Sep 2004; Daniel Goller <morfic@gentoo.org> tightvnc-1.3_alpha5.ebuild:
   Some QA and simplifications

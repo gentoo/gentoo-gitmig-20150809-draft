@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.8.ebuild,v 1.8 2004/06/25 00:15:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.8.ebuild,v 1.9 2004/10/03 07:00:41 spyderous Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=">=x11-base/xfree-4.2.1
+DEPEND="virtual/x11
 	~media-libs/jpeg-6b
 	sys-libs/zlib
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )
