@@ -356,6 +356,7 @@ app-emacs/monk
 # Unstable GNOME2 tree mask (2.1)
 # or whats left of it
 gnome-extra/gcalctool
+=gnome-extra/gnome-vfs-extras-0.99.8
 
 # <spider@gentoo.org> (23 oct 2002)
 # okay, this has been a bothersome thing with recompiles of static packages 
