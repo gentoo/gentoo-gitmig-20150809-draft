@@ -1,6 +1,11 @@
 # ChangeLog for net-news/eventwatcher
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.6 2004/04/13 11:33:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.7 2004/05/11 19:39:59 centic Exp $
+
+*eventwatcher-0.4.1 (11 May 2004)
+
+  11 May 2004; Dominik Stadler <centic@gentoo.org> +eventwatcher-0.4.1.ebuild:
+  Add new version 0.4.1, see Bug 47674
 
   13 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> eventwatcher-0.3.ebuild:
   Adding amd64 keyword.
