@@ -1,6 +1,30 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.8 2002/04/25 14:37:23 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.9 2002/04/29 00:10:22 karltk Exp $
+
+*abiword-1.0.0-r1 (29 Apr 2002)
+
+  29 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> abiword-1.0.0-r1.ebuild files/digest-abiword-1.0.0-r1:
+
+  Bonobo is only required if the gnome USE flag is set.
+
+  Removed abiword-1.0.0.ebuild files/digest-abiword-1.0.0
+
+*abiword-0.99.5-r1 (29 Apr 2002)
+
+  29 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> abiword-0.99.5-r1.ebuild files/digest-abiword-0.99.5-r1:
+
+  Bonobo is only required if the gnome USE flag is set.
+
+  Removed abiword-0.99.5.ebuild files/digest-abiword-0.99.5
+
+*abiword-0.99.3-r2 (29 Apr 2002)
+
+  29 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> abiword-0.99.3-r2.ebuild files/digest-abiword-0.99.3-r2:
+
+  Bonobo is only required if the gnome USE flag is set.
+
+  Removed abiword-0.99.3-r1.ebuild files/digest-abiword-0.99.3-r1
 
 *abiword-1.0.0 (25 Apr 2002)
 
