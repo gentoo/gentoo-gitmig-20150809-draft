@@ -39,7 +39,7 @@ diff -N -r -U3 cracklib,2.7.orig/Makefile cracklib,2.7/Makefile
 diff -N -r -U3 cracklib,2.7.orig/cracklib/Makefile cracklib,2.7/cracklib/Makefile
 --- cracklib,2.7.orig/cracklib/Makefile	Sun Dec 14 23:49:21 1997
 +++ cracklib,2.7/cracklib/Makefile	Tue Feb 27 16:03:39 2001
-@@ -6,13 +6,21 @@
+@@ -6,13 +6,20 @@
  # and upwards.
  ###
  
@@ -49,7 +49,6 @@ diff -N -r -U3 cracklib,2.7.orig/cracklib/Makefile cracklib,2.7/cracklib/Makefil
 +LIB	= libcrack.so
 +OBJ	= fascist.o packlib.o rules.o stringlib.o
 +CFLAGS += -g -I../cracklib -DIN_CRACKLIB -fPIC
-+LD	= ld
  
 -$(LIB):	$(OBJ)
 -	ar rv $(LIB) $?

@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 38e595116c5c8cc472efdd526104650b ChangeLog 6099
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 edc51fc7a68e0c74b78a969fdd35322b zlib-1.2.1-r3.ebuild 2001
-MD5 8eb0753f37271d908fea2f539d4712d9 zlib-1.2.2.ebuild 1963
+MD5 faba0384777903f8a6f7639b25a51eb0 zlib-1.2.2.ebuild 1888
 MD5 3ccc7437df1921bba1a37d42a70e711f files/digest-zlib-1.2.2 63
 MD5 40634a4cbdcd9c795cfc34473c76038c files/zlib-1.2.2-mapfile.patch 2139
 MD5 9c2321cdb61e2d58b41a0d61a98d293b files/zlib-1.2.1-build-fPIC.patch 2252
@@ -17,7 +17,7 @@ MD5 a337d1727a4f6f9ed8d29e43cde40e89 files/zlib-1.2.1-fPIC.patch 662
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBs/XtroRuSHgZdywRAtVUAJ4095e6WT/INjfBAajkHKR9L2pCewCeKcx7
-jE7zHxALG9rMC1hR8dBLJDI=
-=Nimj
+iD8DBQFBs/nproRuSHgZdywRAsz6AJ9s48gClOR/pJ4v2xwaAad+PTA8HACfWhqm
+PUxMO9GdLy4cNTc/1YhIzLE=
+=lknE
 -----END PGP SIGNATURE-----

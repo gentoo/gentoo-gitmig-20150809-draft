@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.7 2004/11/12 21:07:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.8 2004/12/06 06:18:29 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 MY_P=${P/-/,}
 DESCRIPTION="Password Checking Library"
@@ -11,7 +11,7 @@ SRC_URI="http://www.crypticide.org/users/alecm/security/${MY_P}.tar.gz"
 
 LICENSE="CRACKLIB"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="pam uclibc"
 
 RDEPEND="sys-apps/miscfiles
@@ -47,6 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC LD AR
 	emake all || die "emake failed"
 }
 
