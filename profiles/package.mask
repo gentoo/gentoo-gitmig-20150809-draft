@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3291 2004/10/30 11:04:46 stuart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3292 2004/10/30 13:05:07 scandium Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -187,10 +187,6 @@ dev-perl/libapreq2
 # Mamoru KOMACHI <usata@gentoo.org> (28 Sep 2004)
 # masked for security reason; bug #64947
 <=dev-tex/latex2rtf-1.9.15-r1
-
-# Rainer Groesslinger <scandium@gentoo.org> (25 Sept 2004)
-# masked for testing new stuff
-=dev-util/cvs-1.12*
 
 # Armando Di Cianno <fafhrd@gentoo.org> (22 Sept 2004)
 # - antiquated GNUstep packages should've been masked long, long ago
