@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030629.ebuild,v 1.1 2003/06/29 19:19:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030629.ebuild,v 1.2 2003/07/18 22:35:08 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.enlightenment.org/pages/efsd.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="${DEPEND}
 	dev-lang/perl"

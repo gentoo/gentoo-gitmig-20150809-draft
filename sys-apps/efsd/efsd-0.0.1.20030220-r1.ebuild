@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220-r1.ebuild,v 1.3 2003/06/22 05:25:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220-r1.ebuild,v 1.4 2003/07/18 22:35:08 vapier Exp $
 
 inherit flag-o-matic
-
-IUSE=""
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="daemon that provides commonly needed file system functionality to clients"
@@ -13,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="dev-lang/perl"
 
