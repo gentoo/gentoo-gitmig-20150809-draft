@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/secure-delete
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.4 2003/09/17 13:49:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.5 2003/12/30 11:52:33 seemant Exp $
+
+  30 Dec 2003; Seemant Kulleen <seemant@gentoo.org> secure-delete-3.0.ebuild:
+  typo fix, remove useless sed expressions, and chmod u+w to allow to compile
+  with userpriv -- the first and last thanks to: Cory Visi <cory@visi.name> in
+  bug #36065
 
 *secure-delete-3.0 (17 Sep 2003)
 

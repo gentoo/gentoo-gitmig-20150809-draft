@@ -1,5 +1,5 @@
-MD5 ac8c80108a613cb0d6510c7ef43e6fc5 ChangeLog 702
 MD5 0a27fdb35fd636a90389543b6ff53cea secure-delete-2.3.ebuild 1141
-MD5 802d03a9e1eaefa722e2229cef45cae3 secure-delete-3.0.ebuild 1126
+MD5 94f2e4ee54dcaa057fcc721d2458cec6 secure-delete-3.0.ebuild 1110
+MD5 c687d1b1d05aef12c74c03fdcbf08a61 ChangeLog 954
 MD5 2acdb58717304e1f14e0b04ba5a95fb3 files/digest-secure-delete-2.3 68
 MD5 1bee983c8785c87d868a02f06c49e29d files/digest-secure-delete-3.0 68
