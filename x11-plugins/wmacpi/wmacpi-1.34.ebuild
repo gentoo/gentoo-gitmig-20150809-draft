@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/wmacpi-1.34.ebuild,v 1.8 2004/04/30 22:05:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/wmacpi-1.34.ebuild,v 1.9 2004/06/23 22:38:59 agriffis Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ src_unpack() {
 	cd ${S}
 	use apm && use acpi && eerror "APM and ACPI are in USE ... defaulting to ACPI"
 	use apm || use acpi || eerror "Neither APM or ACPI are in USE ... defaulting to ACPI"
-	if [ `use acpi` ] || [ ! `use apm` ] ; then
+	if use acpi || ! use apm ; then
 		epatch ${FILESDIR}/${PV}-acpi.patch
 	else
 		epatch ${FILESDIR}/${PV}-apm.patch
