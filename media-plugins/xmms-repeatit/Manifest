@@ -1,4 +1,14 @@
-MD5 3732a27e2f9cf7437a4d12dfa40ab669 ChangeLog 737
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d6101a2a012d77aa2f69b93ba4493f82 ChangeLog 848
 MD5 3712d83793c74bd12be7c2a17bae473b metadata.xml 222
-MD5 9788235c454c6889e1d98f365a300909 xmms-repeatit-0.0.4.ebuild 782
+MD5 6116667e1d4424a86e629ae89e86afae xmms-repeatit-0.0.4.ebuild 782
 MD5 4ebee699cd1fc279064c4e7d32517f5a files/digest-xmms-repeatit-0.0.4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdK+dArHZZzCEUG0RAifFAJ9B0pc8hIwKLQ7KkYjuaoF/QtAbawCeJb9N
+DAHg4hmDeHN0OMQsExAASR4=
+=XqN5
+-----END PGP SIGNATURE-----
