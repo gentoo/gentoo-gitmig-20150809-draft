@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sqlite-ruby
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.8 2004/11/20 12:00:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.9 2004/11/21 09:14:26 hardave Exp $
+
+  21 Nov 2004; Hardave Riar <hardave@gentoo.org> sqlite-ruby-2.2.2.ebuild:
+  Added ~mips, bug #71769
 
   20 Nov 2004; Ferris McCormick <fmccor@gentoo.org> sqlite-ruby-2.2.2.ebuild:
   Add ~sparc keyword, Bug 71769 --- runs internal tests and my test
