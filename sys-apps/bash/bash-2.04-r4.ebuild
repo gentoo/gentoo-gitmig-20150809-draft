@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.04-r4.ebuild,v 1.2 2001/08/04 18:22:45 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.04-r4.ebuild,v 1.3 2001/09/15 19:27:22 danarmak Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,9 +12,9 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/bash/${A}
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-        readline? ( >=sys-libs/readline-4.1-r2 )
-        tex? ( app-text/tetex )
-	"
+        readline? ( >=sys-libs/readline-4.1-r2 )"
+#        tex? ( app-text/tetex )
+	
 RDEPEND="virtual/glibc"
 
 src_compile() {
@@ -37,15 +37,15 @@ src_compile() {
 
     try pmake
 
-	if [ "`use tex`" ] && [ -z "`use build`" ] && [ -z "`use bootcd`" ]
-	then
-        cd support
-        cp texi2html texi2html.orig
-        sed -e "s:/usr/local/bin/perl:/usr/bin/perl:" \
-        texi2html.orig > texi2html
-        cd ../doc
-        try make
-	fi
+#	if [ "`use tex`" ] && [ -z "`use build`" ] && [ -z "`use bootcd`" ]
+#	then
+#        cd support
+#        cp texi2html texi2html.orig
+#        sed -e "s:/usr/local/bin/perl:/usr/bin/perl:" \
+#        texi2html.orig > texi2html
+#        cd ../doc
+#        try make
+#	fi
 
 }
 
