@@ -1,32 +1,24 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joshua Pollak <pardsbane@offthehill.org>
-# /home/cvsroot/gentoo-x86/sys-apps/less/less-358-r2.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.5.ebuild,v 1.2 2001/11/01 06:55:04 woodchip Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="Extracts files from Microsoft .cab files."
-SRC_URI="http://www.kyz.uklinux.net/downloads/${A}"
+DESCRIPTION="Extracts files from Microsoft .cab files"
+SRC_URI="http://www.kyz.uklinux.net/downloads/${P}.tar.gz"
 HOMEPAGE="http://www.kyz.uklinux.net/cabextract.php3"
 
-DEPEND=""
+DEPEND="virtual/glibc"
 
 src_compile() {
 
-    try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
-    try pmake
-
+	./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man || die
+	emake || die
 }
 
 src_install() {
 
 	dobin cabextract
-
 	doman cabextract.1
-
 	dodoc COPYING NEWS README TODO AUTHORS
 }
-
-
-
-
