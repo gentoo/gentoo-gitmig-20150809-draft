@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.17.ebuild,v 1.2 2004/11/21 04:29:15 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.17.ebuild,v 1.3 2004/11/22 22:58:18 morfic Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/src
 	if use silverxp ; then
-		epatch ${FILESDIR}/icewm-1.2.17.ybutton.cc.patch
+		epatch ${FILESDIR}/${P/_}.ybutton.cc.patch
 	fi
 
 	echo "#!/bin/sh" > $T/icewm
