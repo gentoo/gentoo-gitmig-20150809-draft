@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixwebview/openmosixwebview-0.2.13.ebuild,v 1.4 2004/06/07 21:02:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixwebview/openmosixwebview-0.2.13.ebuild,v 1.5 2004/06/07 21:45:43 mr_bones_ Exp $
 
 DESCRIPTION="Produces web charts for monitoring an openMosix cluster"
 SRC_URI="http://laurel.datsi.fi.upm.es/~rpons/openmosix/download/openmosixwebview-${PV}.tar.gz"
 HOMEPAGE="http://laurel.datsi.fi.upm.es/~rpons/openmosix/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND=">=sys-cluster/openmosix-user-0.3.5
 	>=net-www/apache-2
 	>=dev-php/mod_php-4"
-RDEPEND="${DEPEND}"
 
 src_install() {
 	use apache2 || insinto /etc/apache/conf/addon-modules
@@ -25,7 +25,7 @@ src_install() {
 	cp * ${D}/var/www/openmosixwebview
 }
 
-src_postinst() {
+pkg_postinst() {
 	einfo
 	einfo "Make sure to start openmosixcollector by running"
 	einfo "\"/etc/init.d/openmosixcollector start\""
