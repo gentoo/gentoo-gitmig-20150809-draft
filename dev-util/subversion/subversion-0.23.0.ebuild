@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.23.0.ebuild,v 1.1 2003/05/28 09:21:20 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.23.0.ebuild,v 1.2 2003/05/31 09:05:19 pvdabeel Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="ssl apache2 berkdb python"
 
 S_DB="${WORKDIR}/db-4.0.14/build_unix"
