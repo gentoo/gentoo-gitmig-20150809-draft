@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.6 2004/10/11 08:29:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.7 2004/10/11 08:33:27 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -23,7 +23,8 @@ RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
 IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri glx hardened
-	insecure-drivers ipv6 mmx nls pam sdk sse static uclibc xfs xprint"
+	insecure-drivers ipv6 mmx nls pam sdk sse static truetype-fonts type1-fonts
+	uclibc xfs xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
@@ -411,6 +412,10 @@ host_def_setup() {
 		use_build glx BuildGlxExt
 		use_build glx BuildGLXLibrary
 
+		# Make xv optional for more minimal builds
+		use_build xv BuildXvLibrary
+		use_build xv BuildXvExt
+
 		# uclibc love from iggy
 		if use uclibc
 		then
@@ -500,6 +505,12 @@ host_def_setup() {
 		# Crappy bitmap fonts
 		use_build bitmap-fonts Build75DpiFonts
 		use_build bitmap-fonts Build100DpiFonts
+
+		# Type1 fonts
+		use_build type1-fonts BuildType1Fonts
+
+		# TrueType fonts
+		use_build truetype-fonts BuildTrueTypeFonts
 
 		# X Font Server
 		use_build xfs BuildFontServer
