@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.5.9.ebuild,v 1.1 2004/03/21 17:59:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.0.1.ebuild,v 1.1 2004/03/31 22:35:47 foser Exp $
 
 inherit gnome2
 
@@ -17,6 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
+	>=gnome-base/librsvg-2
 	guile? ( dev-util/guile )"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.59 2004/03/21 17:59:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.60 2004/03/31 22:35:47 foser Exp $
+
+*gnome-games-2.6.0.1 (01 Apr 2004)
+
+  01 Apr 2004; foser <foser@gentoo.org> gnome-games-2.6.0.1.ebuild :
+  Gnome 2.6 final, add librsvg dep
 
 *gnome-games-2.5.9 (21 Mar 2004)
 
