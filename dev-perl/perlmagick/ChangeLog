@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.16 2004/09/08 18:36:02 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.17 2004/09/15 03:15:56 swtaylor Exp $
+
+*perlmagick-6.0.7.3 (14 Sep 2004)
+
+  14 Sep 2004; Scott W Taylor <swtaylor@gentoo.org>
+  +perlmagick-6.0.7.3.ebuild:
+  bump to match imagemagick
 
   08 Sep 2004; Robert Coie <rac@gentoo.org> perlmagick-6.0.7.1.ebuild:
   keyword to match imagemagick
