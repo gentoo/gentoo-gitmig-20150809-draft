@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.10 2004/06/28 22:09:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r1.ebuild,v 1.1 2004/11/06 09:14:05 usata Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="rxvt -- nice small x11 terminal"
 HOMEPAGE="http://www.rxvt.org/"
-SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz
-	cjk? ( http://hp.vector.co.jp/authors/VA021953/rxvt/src/${P}-rk.patch )"
+SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips amd64 ~ppc64"
 IUSE="motif cjk xgetdefault"
 
 DEPEND="virtual/libc
@@ -22,9 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-security.patch
 	use motif && epatch ${FILESDIR}/${P}-azz4.diff
-	use cjk && epatch ${DISTDIR}/${P}-rk.patch
+	use cjk && epatch ${FILESDIR}/${P}-rk.patch
 }
 
 src_compile() {
@@ -36,7 +34,12 @@ src_compile() {
 		term="rxvt"
 	fi
 
+	# bug #22325
+	append-flags -DLINUX_KEYS
+	append-ldflags -Wl,-z,now
+
 	econf \
+		--enable-everything \
 		--enable-rxvt-scroll \
 		--enable-next-scroll \
 		--enable-xterm-scroll \
@@ -47,13 +50,14 @@ src_compile() {
 		--enable-mousewheel \
 		--enable-slipwheeling \
 		--enable-smart-resize \
+		--enable-256-color \
 		--enable-menubar \
 		--enable-languages \
 		--enable-xim \
 		--enable-shared \
 		--enable-keepscrolling \
 		--with-term=${term} \
-		`use_enable xgetdefault` || die
+		$(use_enable xgetdefault) || die
 
 	emake || die
 }
