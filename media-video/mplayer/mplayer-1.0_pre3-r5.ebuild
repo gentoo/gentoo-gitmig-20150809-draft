@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.9 2004/04/28 16:35:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.10 2004/05/12 13:51:58 pappy Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2"
 
@@ -223,7 +223,7 @@ src_compile() {
 		myconf="${myconf} --enable-linux-devfs"
 	fi
 
-	has_pic && CC="${CC} `test_flag -yet_exec``test_flag -nopie`"
+	has_pic && CC="${CC} `test_flag -fno-pic` `test_flag -nopie`"
 
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
