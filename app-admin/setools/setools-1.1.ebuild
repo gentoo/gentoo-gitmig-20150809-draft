@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.1.ebuild,v 1.1 2003/12/22 20:15:02 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.1.ebuild,v 1.2 2003/12/23 02:07:14 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -29,6 +29,7 @@ has_version '>=dev-lang/tk-8.4' \
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 
 	# fix the Makefile to listen to portage CFLAGS
 	sed -i -e "s:-O2:-O2 ${CFLAGS}:" ${S}/Makefile
@@ -43,6 +44,9 @@ src_unpack() {
 
 	# fix up the file contexts
 	sed -i -e 's:local/selinux/::' -e 's:local/::' ${S}/policy/seuser.fc
+
+	# makefiles are broken, fix to not build tcl/tk stuff for non X
+	use X || epatch ${FILESDIR}/setools-1.1-fix_noX.diff
 }
 
 src_compile() {

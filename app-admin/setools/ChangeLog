@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/setools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.6 2003/12/22 20:15:02 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.7 2003/12/23 02:07:14 pebenito Exp $
+
+  22 Dec 2003; Chris PeBenito <pebenito@gentoo.org> setools-1.1.ebuild,
+  files/setools-1.1-fix_noX.diff:
+  Treesys makefiles are broken. Add a hack to make it really work for non X
+  systems.
 
 *setools-1.1 (22 Dec 2003)
 
