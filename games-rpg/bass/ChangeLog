@@ -1,0 +1,8 @@
+# ChangeLog for games-rpg/bass
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.1 2003/10/13 21:38:34 vapier Exp $
+
+*bass-0 (13 Oct 2003)
+
+  13 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Daniel Seyffer <gentoo-bugs@seyffer.de> #30751.
