@@ -1,14 +1,20 @@
 # ChangeLog for app-admin/flexlm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.4 2005/01/01 10:59:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.5 2005/01/02 16:00:30 chrb Exp $
 
+*flexlm-9.5 (02 Jan 2005)
+
+  02 Jan 2005; Chris Bainbridge <chrb@gentoo.org> flexlm-9.2.1.ebuild,
+  +flexlm-9.5.ebuild:
+  Version bump and added RESTRICT=nomirror.
+
+*flexlm-9.2.1 (23 Jul 2004)
+	
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/flexlm-init:
   Gentoo Technologies, Inc. -> Gentoo Foundation
 
   23 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> flexlm-9.2.1.ebuild:
   virtual/libc; add missing IUSE
-
-*flexlm-9.2.1 (23 Jul 2004)
 
   23 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
   +files/90flexlm, +files/flexlm-conf, +files/flexlm-init,
