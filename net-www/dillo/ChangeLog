@@ -1,6 +1,13 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.23 2003/10/12 12:54:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.24 2003/11/05 19:30:24 usata Exp $
+
+*dillo-0.7.3-r3 (06 Nov 2003)
+
+  06 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> dillo-0.7.3-r2.ebuild,
+  dillo-0.7.3-r3.ebuild:
+  Updated I18N patch (it includes fixes for iconv and encode auto-detection).
+  Marked -r2 stable for x86 and alpha.
 
 *dillo-0.7.3-r2 (12 Oct 2003)
 
