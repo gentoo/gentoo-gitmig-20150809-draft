@@ -1,7 +1,8 @@
+MD5 49c9741593c223ee98f6ce3b3d6b6ef2 grsec-sources-2.4.26.2.0-r7.ebuild 3568
 MD5 b969d312ac4266769ab295c44748ffc4 grsec-sources-2.4.26.2.0-r4.ebuild 3065
 MD5 22d142953a39883a2c9c839978510f9d grsec-sources-2.4.26.2.0-r6.ebuild 3331
 MD5 ea8807d44eed01d93f651bd7254e3a83 grsec-sources-2.4.26.2.0-r3.ebuild 2817
-MD5 4d8a2837376522d81b68a20bd3ac70ce ChangeLog 6002
+MD5 e3749af61aed899c571a82bdb2887b46 ChangeLog 6190
 MD5 140d8af1d66f9f6cd030e7d9902f38d9 metadata.xml 478
 MD5 d1056a17aa337464259468e329785e46 grsec-sources-2.4.26.2.0-r5.ebuild 3181
 MD5 c47b7075dd1e065b09bb08936c1901a1 files/2.4.26-signal-race.patch 365
@@ -16,3 +17,4 @@ MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r3 14
 MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r4 143
 MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r5 143
 MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r6 143
+MD5 2dc3a7f7f036e87ce4af63af31989311 files/digest-grsec-sources-2.4.26.2.0-r7 219

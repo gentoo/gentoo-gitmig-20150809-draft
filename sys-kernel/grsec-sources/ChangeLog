@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.28 2004/07/11 13:15:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.29 2004/08/04 18:41:10 solar Exp $
+
+*grsec-sources-2.4.26.2.0-r7 (04 Aug 2004)
+
+  04 Aug 2004; <solar@gentoo.org> grsec-sources-2.4.26.2.0-r7.ebuild:
+  security bump - file offset pointer handling vulnerability - bug 59378
 
   11 Jul 2004; <solar@gentoo.org> grsec-sources-2.4.26.2.0-r6.ebuild,
   files/2.4.26-fchown-attr.patch, files/openmosix-sources.CAN-2004-0497.patch:
