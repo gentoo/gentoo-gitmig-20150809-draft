@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.3 2001/04/25 00:15:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.4 2001/04/25 06:21:35 drobbins Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://zipper.paco.net/~igor/oops/oops-1.5.6.tar.gz"
@@ -35,18 +35,7 @@ src_install() {
 	try make DESTDIR=${D} install
 	chmod -R g+srw ${D}/etc/oops
 	chmod -R g+rw ${D}/etc/oops/*	
-	dodir /var/log/oops
-	
-	chmod o-rwx ${D}/var/log/oops
-	
-	dodir /var/lib/oops/storage
-	dodir /var/lib/oops/db
-	chmod o-rwx ${D}/var/lib/oops
-	
-	dodir /var/run/oops
-	chmod o-rwx ${D}/var/run/oops
-	chown -R squid.squid ${D}/var/run/oops
-	
+
 	insinto /etc/oops
 	doins ${FILESDIR}/oops.cfg
 	cd ${D}
@@ -73,11 +62,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	cd ${ROOT}/etc/oops
 	local x
 	local y
 	local mylen
 	local newf
+	cd ${ROOT}/etc/oops
 	for y in . tables
 	do
 		for x in ${y}/*.eg
@@ -89,5 +78,21 @@ pkg_postinst() {
 			fi
 		done
 	done
+	if [ ! -e ${ROOT}/var/log/oops ]
+	then
+		install -d -o squid -g squid -m0770 ${ROOT}/var/log/oops
+	fi
+	if [ ! -e ${ROOT}/var/lib/oops/storage ]
+	then
+		install -d -o squid -g squid -m0770  ${ROOT}/var/lib/oops/storage
+	fi
+	if [ ! -e ${ROOT}/var/lib/oops/db ]
+	then
+		install -d -o squid -g squid -m0770 ${ROOT}/var/lib/oops/db
+	fi
+	if [ ! -e ${ROOT}/var/run/oops ]
+	then
+		install -d -o squid -g squid -m0775 ${ROOT}/var/run/oops
+	fi
 }
 
