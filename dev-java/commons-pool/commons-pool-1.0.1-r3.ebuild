@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.0.1-r3.ebuild,v 1.1 2003/03/22 12:36:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.0.1-r3.ebuild,v 1.2 2003/04/06 08:04:04 absinthe Exp $
 
 inherit jakarta-commons
 
@@ -16,7 +16,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/commons-collections-2.0"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ppc sparc"
 IUSE="doc jikes junit"
 
 src_compile() {
