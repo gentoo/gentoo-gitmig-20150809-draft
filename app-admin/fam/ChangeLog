@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.21 2004/11/12 08:42:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.22 2004/11/22 02:51:35 vapier Exp $
+
+  21 Nov 2004; Mike Frysinger <vapier@gentoo.org> fam-2.7.0-r1.ebuild,
+  fam-2.7.0-r2.ebuild, fam-2.7.0.ebuild:
+  Install with DESTDIR instead of einstall #71538.
 
   12 Nov 2004; Luca Barbato <lu_zero@gentoo.org> fam-2.7.0-r2.ebuild:
   Marked ppc

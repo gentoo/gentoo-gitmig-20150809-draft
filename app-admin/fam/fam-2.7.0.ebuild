@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.20 2004/10/11 22:39:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.21 2004/11/22 02:51:35 vapier Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -31,7 +31,7 @@ src_unpack() {
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR="${D}" || die
 
 	dosed "s:local_only = false:local_only = true:g" conf/fam.conf
 

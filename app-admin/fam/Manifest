@@ -1,10 +1,20 @@
-MD5 0f179a7449e29c0712103276e2f149b0 ChangeLog 6798
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f2a7f5a34cd4df3acde0a9c886c1fd56 ChangeLog 6961
+MD5 85300e18310176e3d7c26e71cfb3ac5b fam-2.7.0.ebuild 1920
 MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
-MD5 73329e55dcf67ad2134db4625b63971c fam-2.7.0-r1.ebuild 2062
-MD5 63d7f2dd00f75dfe3aefbd63c8a71639 fam-2.7.0-r2.ebuild 2060
-MD5 4d1b2c159a798e794f7045b237db72ab fam-2.7.0.ebuild 1900
-MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0-r1 61
-MD5 46e90fb6975cfcaa7f5946ab36aa2023 files/fam-2.7.0-dnotify.patch 26419
-MD5 4c750113abbc289ee93c3aa378692f07 files/famd 490
+MD5 14429864747be823b982211d2528bb1a fam-2.7.0-r1.ebuild 2082
+MD5 6a926108893f347b6d8c97e1ed43bcaa fam-2.7.0-r2.ebuild 2078
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0 61
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0-r2 61
+MD5 4c750113abbc289ee93c3aa378692f07 files/famd 490
+MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0-r1 61
+MD5 46e90fb6975cfcaa7f5946ab36aa2023 files/fam-2.7.0-dnotify.patch 26419
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBoVR2HTu7gpaalycRAngPAJ9Ge636V9CK52UOJ7HcYfOrOo9pBACfcQlS
+9DL3QBZzBewwHRkRTBe+MOY=
+=iHMi
+-----END PGP SIGNATURE-----
