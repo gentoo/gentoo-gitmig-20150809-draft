@@ -1,25 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.4.ebuild,v 1.11 2005/04/01 01:43:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.4.ebuild,v 1.12 2005/04/01 22:53:30 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P/a/}
 DESCRIPTION="Single process stack of various system monitors"
 HOMEPAGE="http://www.gkrellm.net/"
 SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ppc64 ~mips"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="X nls ssl"
 
-DEPEND=">=sys-apps/sed-4
+DEPEND="=dev-libs/glib-1*
 	ssl? ( dev-libs/openssl )
-	X? (  >=x11-libs/gtk+-2.0.5
+	X? ( >=x11-libs/gtk+-2.0.5
 		>=x11-libs/pango-1.4.0 )"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
+
+S=${WORKDIR}/${P/a/}
 
 src_compile() {
 	local myconf
