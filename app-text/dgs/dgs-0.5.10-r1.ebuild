@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.28 2004/07/17 21:18:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.29 2004/08/12 09:00:27 mr_bones_ Exp $
 
 inherit gnuconfig eutils
 
-DESCRIPTION="A Ghostscript based DPS server"
+DESCRIPTION="A Ghostscript based Display Postscript (DPS) server"
 HOMEPAGE="http://www.gyve.org/dgs/"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/old/dgs/${P}.tar.gz"
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	WANT_AUTOCONF=2.1 autoconf
-	econf --with-x `use_enable tcpd` || die
+	econf --with-x $(use_enable tcpd) || die
 	make || die
 }
 
