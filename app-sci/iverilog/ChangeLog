@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/iverilog
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.8 2003/11/28 20:36:22 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.9 2004/04/19 10:25:42 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> iverilog-20031009.ebuild:
+  Adding IUSE
 
 *iverilog-20031009 (28 Nov 2003)
 
