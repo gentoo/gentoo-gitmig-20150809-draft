@@ -24,11 +24,11 @@ diff -Naupr openswan-2.1.2/Makefile.inc openswan-2.1.2-gentoo/Makefile.inc
  # sample configuration files go into
  INC_DOCDIR?=share/doc
 -FINALEXAMPLECONFDIR=${INC_USRLOCAL}/${INC_DOCDIR}/freeswan
-+FINALEXAMPLECONFDIR=${INC_USRLOCAL}/${INC_DOCDIR}/openswan-2.1.0
++FINALEXAMPLECONFDIR=${INC_USRLOCAL}/${INC_DOCDIR}/openswan-2.1.2
  EXAMPLECONFDIR=${DESTDIR}${FINALEXAMPLECONFDIR}
  
 -FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/freeswan
-+FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/openswan-2.1.0
++FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/openswan-2.1.2
  DOCDIR=${DESTDIR}${FINALDOCDIR}
  
  # where per-conn pluto logs go
