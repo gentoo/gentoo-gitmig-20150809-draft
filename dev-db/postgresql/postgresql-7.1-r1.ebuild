@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1-r1.ebuild,v 1.7 2002/08/13 19:43:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1-r1.ebuild,v 1.8 2002/08/13 19:49:30 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -76,17 +76,17 @@ src_compile() {
     then
         myconf="$myconf --enable-locale"
     fi
-    try autoconf
+    autoconf || die
     unset ROOT
-    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
-	--enable-syslog $myconf
-    try make
+    ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
+	--enable-syslog $myconf || die 
+    make || die
 
 }
 
 src_install () {
 
-    try make DESTDIR=${D} install
+    make DESTDIR=${D} install || die
     dodoc COPYRIGHT HISTORY README register.txt
     cd ${S}/doc
     dodoc FAQ* KNOWN_BUGS MISSING_FEATURES README*
