@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.1 2003/09/11 06:26:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.2 2003/09/12 04:03:16 usata Exp $
 
 inherit cannadic
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND=""
 # You cannot use 2ch.cbd as its name. Canna doesn't load dictionaries
 # if the name begins with number. (I don't know why ...)
-CANNADICS="nichan"
+CANNADICS="2ch"
 
 S="${WORKDIR}/${PN}"
 
