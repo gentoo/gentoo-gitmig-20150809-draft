@@ -1,7 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3729b354308e2586d4cf1041e18a5983 vim-6.3-r2.ebuild 863
-MD5 f895130bd33ec80d278fba851e92d2bf ChangeLog 22636
+MD5 e451cddb1030556e67000f8582d61954 ChangeLog 22864
 MD5 eef8f0ac9fc8f9f020572ff1c3c777d7 vim-6.3-r4.ebuild 895
-MD5 1908b3ed07261e0ba5361f7c1a23bd0f vim-6.3.068.ebuild 901
+MD5 f4ad42a70f954ecc9003ca6fafbcfb30 vim-6.3.068.ebuild 901
 MD5 5a1185dc7d0014ef98ffc41e9c79d213 vim-7.0_alpha20050321.ebuild 819
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 87fe7821e180647f3bf48ed099a22b83 files/vim-completion 998
@@ -10,3 +13,10 @@ MD5 b9203f742a2fb575ca24d486e177a9dc files/digest-vim-6.3-r4 274
 MD5 48e706214652b216c21280e50511627d files/vimrc 3004
 MD5 461a5fdc06cac13bb9c7d9c869d68e2e files/digest-vim-6.3-r2 274
 MD5 402d38e428c7b23a62b23f7e96250099 files/digest-vim-6.3.068 275
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQ4VbLLFUmVNQ7rkRAm7dAJ9YiOZBG7YzHPYK5pJd1hbbJefaowCeIW7S
+C2YLEWzlopuXGi61uAYA4+o=
+=/1Pk
+-----END PGP SIGNATURE-----
