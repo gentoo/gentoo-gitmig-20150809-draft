@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/xfce4-themes-4.0.6.ebuild,v 1.9 2004/11/09 02:58:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/xfce4-themes-4.0.6.ebuild,v 1.10 2005/01/03 01:25:24 ciaranm Exp $
 
 DESCRIPTION="Xfce4 themes"
 HOMEPAGE="http://www.xfce.org/"
