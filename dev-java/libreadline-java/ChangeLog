@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/libreadline-java
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/ChangeLog,v 1.9 2004/09/07 09:52:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/ChangeLog,v 1.10 2004/09/11 19:56:33 axxo Exp $
+
+*libreadline-java-0.8.0-r1 (11 Sep 2004)
+
+  11 Sep 2004; Thomas Matthijs <axxo@gentoo.org>
+  +files/termcap-to-ncurses.patch, +libreadline-java-0.8.0-r1.ebuild:
+  link against ncurses, gets rid of libtermcap-compat dependency, patch
+  submitted by Sven <skoehler@upb.de>, bug 63129
 
   07 Sep 2004; Thomas Matthijs <axxo@gentoo.org>
   libreadline-java-0.8.0.ebuild:

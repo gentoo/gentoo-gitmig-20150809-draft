@@ -2,13 +2,16 @@
 Hash: SHA1
 
 MD5 72c0210148795e9f62e1e18ced2c52bb libreadline-java-0.8.0.ebuild 749
-MD5 fb533fb9af344f286586979e29ae8697 ChangeLog 1221
+MD5 c8056489406e4339692b6fc45575c069 ChangeLog 1505
+MD5 dd37d4099b1dba5ee0000a296565fb37 libreadline-java-0.8.0-r1.ebuild 853
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9e6c8c38a34f297ef3ff5d65648dc214 files/digest-libreadline-java-0.8.0-r1 77
 MD5 9e6c8c38a34f297ef3ff5d65648dc214 files/digest-libreadline-java-0.8.0 77
+MD5 dcfb40cea2d4ce6b93a3a05548f702a0 files/termcap-to-ncurses.patch 498
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBPYUP/rLF9B432nYRAhyiAKC7UpixmDSwd1Rzz/rxitJ9PfWDeACffSvr
-Vsz3bjxQCT3W2LSQeyzrStE=
-=GZyJ
+iD8DBQFBQ1h5/rLF9B432nYRAm5BAKCK5XhuI1dbAvcyDYarEUw7pGphrACglAwE
+nSwiW7PUP6ytyagbusbcfiU=
+=0o+e
 -----END PGP SIGNATURE-----
