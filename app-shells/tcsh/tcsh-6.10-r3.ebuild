@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.10-r3.ebuild,v 1.1 2002/03/21 11:49:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.10-r3.ebuild,v 1.2 2002/07/09 13:30:29 seemant Exp $
       
 S=${WORKDIR}/${P}.00
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -10,6 +9,10 @@ SRC_URI="ftp://ftp.astron.com/pub/tcsh/${P}.tar.gz"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
     perl? ( sys-devel/perl )"
+
+SLOT="0"
+KEYWORDS="*"
+LICENSE="BSD"
 
 src_unpack() {
     unpack ${A}
