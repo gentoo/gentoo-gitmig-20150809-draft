@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r1.ebuild,v 1.11 2004/06/06 20:53:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r1.ebuild,v 1.12 2004/06/19 05:49:45 vapier Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="A checkpassword compatible authentication program that used CRAM-MD5 authentication mode."
 SRC_URI="http://members.elysium.pl/brush/cmd5checkpw/dist/${P}.tar.gz"
@@ -10,15 +10,13 @@ HOMEPAGE="http://members.elysium.pl/brush/cmd5checkpw/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 IUSE=""
 
 DEPEND="virtual/glibc"
 
 douser() {
-	if  [ -z "`getent passwd cmd5checkpw`" ]; then
-		enewuser cmd5checkpw 212 /bin/false /dev/null bin
-	fi
+	enewuser cmd5checkpw 212 /bin/false /dev/null bin
 }
 
 pkg_preinst() {
@@ -37,8 +35,8 @@ src_compile() {
 		-e "s:cp cmd5checkpw.8 /usr/man/man8/:cp cmd5checkpw.8 \${D}/usr/share/man/man8/:" \
 		< Makefile.orig > Makefile
 	cd ${S}
-	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC} ${LDFLAGS}" > conf-ld
+	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
 	make || die
 }
 
@@ -53,6 +51,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	chmod 400 /etc/poppasswd
-	chown cmd5checkpw /etc/poppasswd
+	chmod 400 ${ROOT}/etc/poppasswd
+	chown cmd5checkpw ${ROOT}/etc/poppasswd
 }
