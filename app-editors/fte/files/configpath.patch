@@ -1,0 +1,13 @@
+--- src/cfte.cpp	2002-03-23 00:46:32.000000000 +0100
++++ src/cfte.cpp.new	2004-03-17 15:25:13.170166354 +0100
+@@ -1756,8 +1756,8 @@
+         //fprintf(stderr, "Looking for %s\n", Cfg);
+         if (!FileExists(Cfg))
+         {
+-            // Okay, now try "local config".
+-            sprintf(tmp, "%slocalconfig/%s", StartDir, CfgName);
++	    // Try at least one FHS compliant location
++            sprintf(tmp, "/usr/share/fte/%s", CfgName);
+             ExpandPath(tmp, Cfg);
+             //fprintf(stderr, "Looking for %s\n", Cfg);
+             if (!FileExists(Cfg))
