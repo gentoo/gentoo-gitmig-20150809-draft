@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.2 2004/03/02 16:36:29 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.3 2004/04/24 08:33:18 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,10 +21,10 @@ SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz"
 #ftp://ftp.perl.org/pub/CPAN/modules/by-module/DB_File/DB_File-${DB_FILE_VERSION}.tar.gz
 #ftp://ftp.perl.org/pub/CPAN/modules/by-module/Safe/Safe-${SAFE_VERSION}.tar.gz"
 HOMEPAGE="http://www.perl.org/"
-SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~alpha ~mips ~hppa ~ia64 ~ppc64 s390"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 s390"
 IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
