@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.5 2004/01/07 09:35:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.6 2004/01/25 04:38:42 vapier Exp $
 
 inherit libtool
 
@@ -9,7 +9,7 @@ inherit libtool
 #	theora - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
 
-inherit gcc
+inherit gcc eutils
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
 	oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
