@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.78 2003/09/13 09:51:11 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.79 2003/09/27 00:26:04 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -315,12 +315,17 @@ php_src_compile() {
 
 	myconf="${myconf} `use_with nls gettext` `use_with qt qtdom`"
 	myconf="${myconf} `use_with spell pspell` `use_with ssl openssl`"
-	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap`"
+	myconf="${myconf} `use_with imap` `use_with ldap`"
 	myconf="${myconf} `use_with xml2 dom` `use_with xml2 dom-xslt`"
 	myconf="${myconf} `use_with xml2 dom-exslt`"
 	myconf="${myconf} `use_with kerberos` `use_with pam`"
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable ipv6`"
+	if use curl; then
+		myconf="${myconf} --with-curlwrappers --with-curl"
+	else
+		myconf="${myconf} --without-curl"
+	fi
 
 	#Waiting for somebody to want Cyrus support :-)
 	#myconf="${myconf} `use_with cyrus`"
