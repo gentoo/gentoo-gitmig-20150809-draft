@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.1.ebuild,v 1.12 2005/01/20 00:05:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.1.ebuild,v 1.13 2005/01/23 01:31:27 swtaylor Exp $
 
 inherit gnome2
 
@@ -22,3 +22,9 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} $(use_enable ssl) $(use_enable ipv6)"
 DOCS="AUTHORS ChangeLog README* TODO"
+
+src_unpack() {
+	unpack ${A}
+	has_version ">=net-libs/gnutls-1.1.23" && sed -e's|GNUTLS_CERT_NOT_TRUSTED|0|g' -i ${S}/libsoup/soup-gnutls.c
+}
+

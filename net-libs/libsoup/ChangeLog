@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.44 2004/12/29 03:20:41 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.45 2005/01/23 01:31:27 swtaylor Exp $
+
+  22 Jan 2005; Scott W Taylor <swtaylor@gentoo.org> libsoup-2.2.1.ebuild:
+  nuke GNUTLS_CERT_NOT_TRUSTED which does not exist in gnutls-1.1.23. closes
+  #79161
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
