@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/verynice
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.1 2003/10/18 06:12:36 mr_bones_ Exp $
+
+*verynice-1.1 (17 Oct 2003)
+
+  17 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> verynice-1.1.ebuild,
+  files/verynice:
+  initial commit; very clean starting ebuild from Amiel Martin via bug 27077
+
