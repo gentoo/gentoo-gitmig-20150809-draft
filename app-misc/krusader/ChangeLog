@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/krusader
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.26 2004/07/22 11:20:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.27 2004/09/08 19:08:46 caleb Exp $
+
+  08 Sep 2004; Caleb Tennis <caleb@gentoo.org> -krusader-1.30.ebuild:
+  Removing old version
+
+  08 Sep 2004; Caleb Tennis <caleb@gentoo.org> krusader-1.40.ebuild:
+  Mark x86 stable
 
 *krusader-1.40 (22 Jul 2004)
 
