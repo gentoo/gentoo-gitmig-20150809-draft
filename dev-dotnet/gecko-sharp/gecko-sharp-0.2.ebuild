@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.2.ebuild,v 1.2 2004/05/05 10:02:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.2.ebuild,v 1.3 2004/05/05 16:44:50 latexer Exp $
 
 inherit mono
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-dotnet/mono-0.91
 
 src_compile() {
 	econf || die "./configure failed!"
-	MAKEOPTS="-j1" make || die "make failed"
+	MAKEOPTS="-j1" make || die "Make failed. You may need to unmerge gecko-sharp and re-emerge it if you are upgrading from an earlier version."
 }
 
 src_install() {
