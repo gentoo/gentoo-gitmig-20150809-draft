@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.0.5a.ebuild,v 1.8 2003/02/13 12:24:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.0.5a.ebuild,v 1.9 2003/03/14 21:34:07 danarmak Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa"
@@ -40,4 +40,14 @@ src_unpack() {
 src_install() {
 	kde_src_install
 	dodoc ${S}/doc/{NEWS,README,TODO}
+
+	# Moved here from kdelibs
+	dodir /etc/env.d
+	echo "PATH=${PREFIX}/bin
+ROOTPATH=${PREFIX}/bin
+LDPATH=${PREFIX}/lib
+CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/65kdelibs-3.0.5a # number goes down with version upgrade
+
+	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/50kdedir-3.0.5a # number goes up with version upgrade
+
 }

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.64 2003/03/14 19:29:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.65 2003/03/14 21:33:14 danarmak Exp $
+
+  14 Mar 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.0.5a-r1.ebuild:
+  
+  Add fix for #16329 to this version as well. Added the other part of the fix
+  to arts-1.0.5a. No new revisions.
 
   14 Mar 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.1-r3.ebuild:
   
