@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.5 2003/08/04 11:07:23 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.6 2003/08/05 17:00:38 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -24,16 +24,16 @@ EXPORT_FUNCTIONS pkg_preinst
 function webapp-apache-detect ()
 {
 	APACHEVER=
-	has_version '=net-www/apache-1*' && APACHEVER=1
-	has_version '=net-www/apache-2*' && use apache2 && APACHEVER=2
-	[ -z "${APACHEVER}" ] && has_version '=net-www/apache-2*' && APACHEVER=2
+	has_version '=net-www/apache-1*' && APACHEVER=1 && CONFVER=
+	has_version '=net-www/apache-2*' && use apache2 && APACHEVER=2 && CONFVER=2
+	[ -z "${APACHEVER}" ] && has_version '=net-www/apache-2*' && APACHEVER=2 && CONFVER=2
 
 	if [ "${APACHEVER}+" = "+" ]; then
 		# no apache version detected
 		return 1
 	fi
 
-	APACHECONF="/etc/apache${APACHEVER}/conf/apache${APACHEVER}.conf"
+	APACHECONF="/etc/apache${CONFVER}/conf/apache${CONFVER}.conf"
 	WEBAPP_SERVER="Apache v${APACHEVER}"
 }
 
