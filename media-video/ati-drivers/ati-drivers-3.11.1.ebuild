@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.11.1.ebuild,v 1.1 2004/08/09 21:00:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.11.1.ebuild,v 1.2 2004/08/30 13:28:25 lu_zero Exp $
 
-IUSE="qt kde gnome"
+IUSE=""
 
 inherit eutils rpm
 
@@ -134,7 +134,7 @@ src_install() {
 	dosym ../${X11_IMPLEM}/extensions ${ATI_ROOT}/extensions
 	rm -f ${WORKDIR}/usr/X11R6/lib/libGL.so.1.2
 
-	dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.*
+	# Not necessary dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.
 
 	#apps
 	insinto /etc/env.d

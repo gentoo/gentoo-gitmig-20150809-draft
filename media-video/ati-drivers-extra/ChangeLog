@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers-extra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.13 2004/08/09 21:18:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.14 2004/08/30 13:24:19 lu_zero Exp $
+
+  30 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.11.1.ebuild:
+  Generic tidy up, see bug #61921
 
 *ati-drivers-extra-3.11.1 (09 Aug 2004)
 

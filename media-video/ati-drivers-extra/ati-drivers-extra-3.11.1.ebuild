@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.11.1.ebuild,v 1.1 2004/08/09 21:18:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.11.1.ebuild,v 1.2 2004/08/30 13:24:19 lu_zero Exp $
 
 IUSE="qt"
 
@@ -89,7 +89,7 @@ src_install() {
 		rm -rf ${WORKDIR}/usr/share/{applnk,gnome,icons,pixmaps}
 	fi
 
-	dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.*
+	# not necessary dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.*
 
 	# Removing unused stuff
 	rm -rf ${WORKDIR}/usr/{src,share/doc}
