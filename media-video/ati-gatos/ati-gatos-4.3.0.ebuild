@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.4 2004/01/15 06:20:29 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.5 2004/02/05 21:35:07 battousai Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="${DEPEND}
 	x11-base/xfree"
 
 pkg_setup() {
-	if [ ! "`grep gatos /var/db/pkg/x11-base/xfree*/USE`" ]
+	if [ ! "`grep gatos /var/db/pkg/x11-base/xfree-[0-9]*/USE`" ]
 	then
 		ewarn "This package requires that xfree was merged with the gatos USE flag enabled."
 		die "Please merge xfree with the gatos and sdk USE flags enabled."
