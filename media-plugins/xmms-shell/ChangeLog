@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-shell
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.5 2003/06/21 01:39:08 jje Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.6 2004/02/04 08:42:37 eradicator Exp $
+
+*xmms-shell-0.99.3-r1 (04 Feb 2004)
+
+  04 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmms-shell-0.99.3-r1.ebuild, files/xmms-shell-readline.patch:
+  Added patch to fix readline detection.  Closes bug #36443.
 
 *xmms-shell-0.99.3 (21 Jun 2003)
 
