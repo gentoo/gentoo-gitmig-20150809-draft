@@ -2,26 +2,29 @@
 
 LIST=$1
 
+myPORTAGE=`grep "sys-apps/portage" $1`
 myGETTEXT=`grep "sys-devel/gettext" $1`
 myBINUTILS=`grep "sys-devel/binutils" $1`
 myGCC=`grep "sys-devel/gcc" $1`
 myGLIBC=`grep "sys-libs/glibc" $1`
 
+echo "Using PORTAGE $myPORTAGE"
 echo "Using BINUTILS $myBINUTILS"
 echo "Using GCC $myGCC"
 echo "Using GETTEXT $myGETTEXT"
 echo "Using GLIBC $myGLIBC"
 
 export USE="build"
-export STEPS="clean unpack compile install qmerge clean" 
 cd /usr/portage
-ebuild $myBINUTILS $STEPS || exit
-ebuild $myGCC $STEPS || exit
-ebuild $myGETTEXT $STEPS || exit
+#commented out for now; why do we need to do this?
+#emerge $myPORTAGE || exit
+#emerge $myBINUTILS || exit
+#emerge $myGCC || exit
+#emerge $myGETTEXT || exit
 unset USE
-export USE="`python -c 'import portage; print portage.settings["USE"];'` bootstrap"
-ebuild $myGLIBC $STEPS || exit
-ebuild $myGETTEXT $STEPS || exit
-ebuild $myBINUTILS $STEPS || exit
-ebuild $myGCC $STEPS || exit
+export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
+emerge $myGLIBC || exit
+emerge $myGETTEXT || exit
+emerge $myBINUTILS || exit
+emerge $myGCC || exit
 unset USE

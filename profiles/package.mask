@@ -86,10 +86,6 @@ app-editors/gtk-xemacs
 #=sys-kernel/linux-extras-2.4.5.5
 
 # chadh
-# e3-1.7-r1 does not work on cvs.gentoo.org (gzexe executable does not work).
-=app-editors/e3-1.7-r1
-
-# chadh
 # this is the pam for rc6
 #=sys-libs/pam-0.75-r1
 
