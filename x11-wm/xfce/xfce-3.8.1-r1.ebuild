@@ -35,5 +35,5 @@ src_install () {
     dodoc ChangeLog* AUTHORS LICENSE README* TODO*
     exeinto /usr/X11R6/bin/wm
     doexe ${FILESDIR}/xfce
-    mkdir -p /etc/skel/.xfce
+    dodir /etc/skel/.xfce
 }
