@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.7.ebuild,v 1.1 2003/10/03 00:27:11 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.7.ebuild,v 1.2 2003/10/07 10:01:24 darkspecter Exp $
 
 IUSE=""
 
@@ -41,7 +41,7 @@ src_compile() {
 	for f in ${ALSA_TOOLS}
 	do
 		cd "${S}/${f}"
-		econf || die "configure failed"
+		econf --with-kernel="${KV}" || die "configure failed"
 		make || die "make failed"
 	done
 }
