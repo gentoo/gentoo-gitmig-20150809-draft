@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.0.1_pre20040501.ebuild,v 1.3 2004/05/01 20:59:12 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.0.1_pre20040503.ebuild,v 1.1 2004/05/03 18:27:09 squinky86 Exp $
 
 DESCRIPTION="speechup screen reader with software synthesis"
 HOMEPAGE="http://www.freebsoft.org/speechd-up"
@@ -35,4 +35,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/speechd-up.rc speechd-up
+	dodoc README NEWS BUGS
 }
