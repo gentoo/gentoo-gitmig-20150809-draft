@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.6.ebuild,v 1.1 2003/11/12 04:45:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.6.ebuild,v 1.2 2003/11/15 22:37:23 vapier Exp $
 
 inherit flag-o-matic
 replace-flags -O? -O2
@@ -25,10 +25,10 @@ DEPEND=">=media-libs/hermes-1.3.2
 
 S=${WORKDIR}/ClanLib-${PV}
 
-fsrc_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc3.patch
+	epatch ${FILESDIR}/${PV}-port.patch
 }
 
 src_compile() {
