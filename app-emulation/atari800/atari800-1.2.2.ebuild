@@ -1,23 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.2.2.ebuild,v 1.7 2003/02/13 07:12:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.2.2.ebuild,v 1.8 2003/08/05 18:19:48 vapier Exp $
 
-IUSE="sdl"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Atari 800 emulator"
+HOMEPAGE="http://atari800.sourceforge.net/"
 SRC_URI="mirror://sourceforge/atari800/${P}.tar.gz
 	mirror://sourceforge/atari800/xf25.zip"
-HOMEPAGE="http://atari800.sourceforge.net"
-SLOT="0"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE="sdl"
 
 DEPEND="virtual/x11
 	app-arch/unzip
 	sdl? ( >=media-libs/libsdl-1.2.0 )"
-
 RDEPEND="virtual/x11
 	sdl? ( >=media-libs/libsdl-1.2.0 )"
 
