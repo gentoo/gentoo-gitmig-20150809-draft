@@ -1,0 +1,300 @@
+diff -urN espgs-7.07.1.ORIG/pstoraster/cups.mak espgs-7.07.1/pstoraster/cups.mak
+--- espgs-7.07.1.ORIG/pstoraster/cups.mak	2003-08-21 00:12:43.000000000 +0900
++++ espgs-7.07.1/pstoraster/cups.mak	2004-11-02 02:20:40.792526492 +0900
+@@ -24,9 +24,9 @@
+ 
+ cups_=	$(GLOBJ)gdevcups.$(OBJ)
+ 
+-CUPSSERVER= $(install_prefix)`cups-config --serverbin`
+-CUPSCONFIG= $(install_prefix)`cups-config --serverroot`
+-CUPSDATA= $(install_prefix)`cups-config --datadir`
++CUPSSERVER= $(DESTDIR)`cups-config --serverbin`
++CUPSCONFIG= $(DESTDIR)`cups-config --serverroot`
++CUPSDATA= $(DESTDIR)`cups-config --datadir`
+ 
+ $(DD)cups.dev:	$(cups_) $(GLD)page.dev
+ 	$(SETPDEV2) $(DD)cups $(cups_)
+diff -urN espgs-7.07.1.ORIG/src/all-arch.mak espgs-7.07.1/src/all-arch.mak
+--- espgs-7.07.1.ORIG/src/all-arch.mak	2003-07-13 13:43:17.000000000 +0900
++++ espgs-7.07.1/src/all-arch.mak	2004-11-02 01:58:21.000000000 +0900
+@@ -299,24 +299,24 @@
+ # Remove the old gs binary first, so as to preserve the previous
+ # gs-x.yy version, if any.
+ install-binary:
+-	-$(RM) $(BINDIR)/$(GS)
++	-$(RM) $(DESTDIR)$(BINDIR)/$(GS)
+ 	@$(MAKE) $(ARGS) install GS=$(GS) XLIBDIRS=$(XLIBDIRSALL) ; \
+ 	d=`pwd` ; \
+ 	d=`basename $$d` ; \
+ 	d=`echo $$d | sed -e s/gs/gs-/` ; \
+-	$(RM) $(BINDIR)/$$d ; \
+-	ln $(BINDIR)/$(GS) $(BINDIR)/$$d ; \
+-	ls -l $(BINDIR)/$(GS) $(BINDIR)/$$d
++	$(RM) $(DESTDIR)$(BINDIR)/$$d ; \
++	ln $(DESTDIR)$(BINDIR)/$(GS) $(DESTDIR)$(BINDIR)/$$d ; \
++	ls -l $(DESTDIR)$(BINDIR)/$(GS) $(DESTDIR)$(BINDIR)/$$d
+ 
+ install-binary-gnu-readline:
+-	-$(RM) $(BINDIR)/$(GS)
++	-$(RM) $(DESTDIR)$(BINDIR)/$(GS)
+ 	@$(MAKE) $(ARGS) install GS=$(GS)  XLIBDIRS=$(XLIBDIRSALL) $(GNU_READLINE_ARGS) ; \
+ 	d=`pwd` ; \
+ 	d=`basename $$d` ; \
+ 	d=`echo $$d | sed -e s/gs/gs-/` ; \
+-	$(RM) $(BINDIR)/$$d ; \
+-	ln $(BINDIR)/$(GS) $(BINDIR)/$$d ; \
+-	ls -l $(BINDIR)/$(GS) $(BINDIR)/$$d
++	$(RM) $(DESTDIR)$(BINDIR)/$$d ; \
++	ln $(DESTDIR)$(BINDIR)/$(GS) $(DESTDIR)$(BINDIR)/$$d ; \
++	ls -l $(DESTDIR)$(BINDIR)/$(GS) $(DESTDIR)$(BINDIR)/$$d
+ 
+ install-fontmap:
+ 	@d=`pwd` ; \
+@@ -324,14 +324,14 @@
+ 	d=`echo $$d | sed -e s/gs//` ; \
+ 	if test -f $(GS_SRC_DIR)/Fontmap.new ; \
+ 	then \
+-		if test -f $(GS_SHARE_DIR)/$$d/lib/Fontmap.org ; \
++		if test -f $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/Fontmap.org ; \
+ 		then \
+ 			true ; \
+ 		else \
+-			mv $(GS_SHARE_DIR)/$$d/lib/Fontmap $(GS_SHARE_DIR)/$$d/lib/Fontmap.org ; \
++			mv $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/Fontmap $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/Fontmap.org ; \
+ 		fi ; \
+-		$(CP) $(GS_SRC_DIR)/Fontmap.new $(GS_SHARE_DIR)/$$d/lib/Fontmap ; \
+-		ls -l $(GS_SHARE_DIR)/$$d/lib/Fontmap* ; \
++		$(CP) $(GS_SRC_DIR)/Fontmap.new $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/Fontmap ; \
++		ls -l $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/Fontmap* ; \
+ 	fi
+ 
+ install-pdfsec:
+@@ -340,9 +340,9 @@
+ 	d=`echo $$d | sed -e s/gs//` ; \
+ 	if test -f $(GS_SRC_DIR)/lib/pdf_sec.ps ; \
+ 	then \
+-		$(MV) $(GS_SHARE_DIR)/$$d/lib/pdf_sec.ps $(GS_SHARE_DIR)/$$d/lib/pdf_sec.ps.org ; \
+-		$(CP) lib/pdf_sec.ps $(GS_SHARE_DIR)/$$d/lib/pdf_sec.ps ; \
+-		$(CHMOD) 664 $(GS_SHARE_DIR)/$$d/lib/pdf_sec.ps ; \
++		$(MV) $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/pdf_sec.ps $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/pdf_sec.ps.org ; \
++		$(CP) lib/pdf_sec.ps $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/pdf_sec.ps ; \
++		$(CHMOD) 664 $(DESTDIR)$(GS_SHARE_DIR)/$$d/lib/pdf_sec.ps ; \
+ 	fi
+ 
+ #=======================================================================
+diff -urN espgs-7.07.1.ORIG/src/contrib.mak espgs-7.07.1/src/contrib.mak
+--- espgs-7.07.1.ORIG/src/contrib.mak	2002-10-13 08:24:34.000000000 +0900
++++ espgs-7.07.1/src/contrib.mak	2004-11-02 01:53:55.000000000 +0900
+@@ -1236,10 +1236,10 @@
+ # and the PPD files are not copied.
+ pcl3-install:
+ 	for f in gs-pcl3 pcl3opts; do	\
+-	  $(INSTALL_DATA) $(pcl3_root)doc$(D)$$f.1 $(man1dir)/$$f.$(man1ext) \
++	  $(INSTALL_DATA) $(pcl3_root)doc$(D)$$f.1 $(DESTDIR)$(man1dir)/$$f.$(man1ext) \
+ 	    || exit 1;	\
+-	  $(INSTALL_DATA) $(pcl3_root)doc$(D)$$f.html $(docdir) || exit 1; done
+-	$(INSTALL_PROGRAM) $(BINDIR)$(D)pcl3opts$(XE) $(bindir)
++	  $(INSTALL_DATA) $(pcl3_root)doc$(D)$$f.html $(DESTDIR)$(docdir) || exit 1; done
++	$(INSTALL_PROGRAM) $(BINDIR)$(D)pcl3opts$(XE) $(DESTDIR)$(bindir)
+ 
+ ### ----------------- LexMark 5000 printer ----------------------------- ###
+ ### Note: this driver was contributed by users.  Please contact:         ###
+diff -urN espgs-7.07.1.ORIG/src/macos-fw.mak espgs-7.07.1/src/macos-fw.mak
+--- espgs-7.07.1.ORIG/src/macos-fw.mak	2003-07-13 13:43:18.000000000 +0900
++++ espgs-7.07.1/src/macos-fw.mak	2004-11-02 02:02:19.000000000 +0900
+@@ -102,19 +102,19 @@
+ 	$(MAKE) $(SODEFS) GENOPT='-DDEBUG' CFLAGS='$(CFLAGS_DEBUG) $(CFLAGS_SO) $(GCFLAGS) $(XCFLAGS)' $(GSSOC) $(GSSOX)
+ 
+ install-so: so
+-	-mkdir $(prefix)
+-	-mkdir $(datadir)
+-	-mkdir $(gsdir)
+-	-mkdir $(gsdatadir)
+-	-mkdir $(bindir)
+-	-mkdir $(libdir)
+-	$(INSTALL_PROGRAM) $(GSSOC) $(bindir)/$(GSSOC_XENAME)
+-	$(INSTALL_PROGRAM) $(GSSOX) $(bindir)/$(GSSOX_XENAME)
+-	$(INSTALL_PROGRAM) $(BINDIR)/$(SOBINRELDIR)/$(GS_SONAME_MAJOR_MINOR) $(libdir)/$(GS_SONAME_MAJOR_MINOR)
+-	$(RM_) $(libdir)/$(GS_SONAME)
+-	ln -s $(GS_SONAME_MAJOR_MINOR) $(libdir)/$(GS_SONAME)
+-	$(RM_) $(libdir)/$(GS_SONAME_MAJOR)
+-	ln -s $(GS_SONAME_MAJOR_MINOR) $(libdir)/$(GS_SONAME_MAJOR)
++	-mkdir $(DESTDIR)$(prefix)
++	-mkdir $(DESTDIR)$(datadir)
++	-mkdir $(DESTDIR)$(gsdir)
++	-mkdir $(DESTDIR)$(gsdatadir)
++	-mkdir $(DESTDIR)$(bindir)
++	-mkdir $(DESTDIR)$(libdir)
++	$(INSTALL_PROGRAM) $(GSSOC) $(DESTDIR)$(bindir)/$(GSSOC_XENAME)
++	$(INSTALL_PROGRAM) $(GSSOX) $(DESTDIR)$(bindir)/$(GSSOX_XENAME)
++	$(INSTALL_PROGRAM) $(BINDIR)/$(SOBINRELDIR)/$(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR_MINOR)
++	$(RM_) $(DESTDIR)$(libdir)/$(GS_SONAME)
++	ln -s $(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME)
++	$(RM_) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
++	ln -s $(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
+ 
+ soinstall: install-so install-scripts install-data
+ 
+@@ -143,8 +143,8 @@
+ 	cp -r doc $(GS_FRAMEWORK)/Versions/Current
+ 
+ framework_install : framework
+-	rm -rf $(prefix)
+-	cp -r $(GS_FRAMEWORK) $(prefix)
++	rm -rf $(DESTDIR)$(prefix)
++	cp -r $(GS_FRAMEWORK) $(DESTDIR)$(prefix)
+ 
+ # Make the build directories
+ SODIRS: STDDIRS
+diff -urN espgs-7.07.1.ORIG/src/unix-dll.mak espgs-7.07.1/src/unix-dll.mak
+--- espgs-7.07.1.ORIG/src/unix-dll.mak	2002-04-23 21:43:44.000000000 +0900
++++ espgs-7.07.1/src/unix-dll.mak	2004-11-02 02:00:44.000000000 +0900
+@@ -96,19 +96,19 @@
+ 	$(MAKE) $(SODEFS) GENOPT='-DDEBUG' CFLAGS='$(CFLAGS_DEBUG) $(CFLAGS_SO) $(GCFLAGS) $(XCFLAGS)' $(GSSOC) $(GSSOX)
+ 
+ install-so: so
+-	-mkdir -p $(prefix)
+-	-mkdir -p $(datadir)
+-	-mkdir -p $(gsdir)
+-	-mkdir -p $(gsdatadir)
+-	-mkdir -p $(bindir)
+-	-mkdir -p $(libdir)
+-	$(INSTALL_PROGRAM) $(GSSOC) $(bindir)/$(GSSOC_XENAME)
+-	$(INSTALL_PROGRAM) $(GSSOX) $(bindir)/$(GSSOX_XENAME)
+-	$(INSTALL_PROGRAM) $(BINDIR)/$(SOBINRELDIR)/$(GS_SONAME_MAJOR_MINOR) $(libdir)/$(GS_SONAME_MAJOR_MINOR)
+-	$(RM_) $(libdir)/$(GS_SONAME)
+-	ln -s $(GS_SONAME_MAJOR_MINOR) $(libdir)/$(GS_SONAME)
+-	$(RM_) $(libdir)/$(GS_SONAME_MAJOR)
+-	ln -s $(GS_SONAME_MAJOR_MINOR) $(libdir)/$(GS_SONAME_MAJOR)
++	-mkdir -p $(DESTDIR)$(prefix)
++	-mkdir -p $(DESTDIR)$(datadir)
++	-mkdir -p $(DESTDIR)$(gsdir)
++	-mkdir -p $(DESTDIR)$(gsdatadir)
++	-mkdir -p $(DESTDIR)$(bindir)
++	-mkdir -p $(DESTDIR)$(libdir)
++	$(INSTALL_PROGRAM) $(GSSOC) $(DESTDIR)$(bindir)/$(GSSOC_XENAME)
++	$(INSTALL_PROGRAM) $(GSSOX) $(DESTDIR)$(bindir)/$(GSSOX_XENAME)
++	$(INSTALL_PROGRAM) $(BINDIR)/$(SOBINRELDIR)/$(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR_MINOR)
++	$(RM_) $(DESTDIR)$(libdir)/$(GS_SONAME)
++	ln -s $(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME)
++	$(RM_) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
++	ln -s $(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
+ 
+ soinstall: install-so install-scripts install-data
+ 
+diff -urN espgs-7.07.1.ORIG/src/unixinst.mak espgs-7.07.1/src/unixinst.mak
+--- espgs-7.07.1.ORIG/src/unixinst.mak	2002-07-21 06:03:21.000000000 +0900
++++ espgs-7.07.1/src/unixinst.mak	2004-11-02 02:05:32.000000000 +0900
+@@ -28,24 +28,24 @@
+ # rules, just in case bindir or scriptdir is a subdirectory of any of these.
+ 
+ install-exec: $(GS_XE)
+-	-mkdir -p $(datadir)
+-	-mkdir -p $(gsdir)
+-	-mkdir -p $(gsdatadir)
+-	-mkdir -p $(bindir)
+-	$(INSTALL_PROGRAM) $(GS_XE) $(bindir)/$(GS)
++	-mkdir -p $(DESTDIR)$(datadir)
++	-mkdir -p $(DESTDIR)$(gsdir)
++	-mkdir -p $(DESTDIR)$(gsdatadir)
++	-mkdir -p $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) $(GS_XE) $(DESTDIR)$(bindir)/$(GS)
+ 
+ install-scripts: $(PSLIBDIR)/gsnd
+-	-mkdir -p $(datadir)
+-	-mkdir -p $(gsdir)
+-	-mkdir -p $(gsdatadir)
+-	-mkdir -p $(scriptdir)
++	-mkdir -p $(DESTDIR)$(datadir)
++	-mkdir -p $(DESTDIR)$(gsdir)
++	-mkdir -p $(DESTDIR)$(gsdatadir)
++	-mkdir -p $(DESTDIR)$(scriptdir)
+ 	$(SH) -c 'for f in \
+ gsbj gsdj gsdj500 gslj gslp gsnd \
+ bdftops dvipdf eps2eps font2c \
+ pdf2dsc pdf2ps pdfopt pf2afm pfbtopfa printafm \
+ ps2ascii ps2epsi ps2pdf ps2pdf12 ps2pdf13 ps2pdf14 ps2pdfwr ps2ps wftopfa \
+ fixmswrd.pl lprsetup.sh pj-gs.sh pv.sh sysvlp.sh unix-lpr.sh ;\
+-	do if ( test -f $(PSLIBDIR)/$$f ); then $(INSTALL_PROGRAM) $(PSLIBDIR)/$$f $(scriptdir); fi;\
++	do if ( test -f $(PSLIBDIR)/$$f ); then $(INSTALL_PROGRAM) $(PSLIBDIR)/$$f $(DESTDIR)$(scriptdir); fi;\
+ 	done'
+ 
+ PSDOCDIR=$(PSLIBDIR)/../doc
+@@ -58,10 +58,10 @@
+ # one file from each subdirectory just as a sanity check.
+ 
+ install-libdata: 
+-	-mkdir -p $(datadir)
+-	-mkdir -p $(gsdir)
+-	-mkdir -p $(gsdatadir)
+-	-mkdir -p $(gsdatadir)/lib
++	-mkdir -p $(DESTDIR)$(datadir)
++	-mkdir -p $(DESTDIR)$(gsdir)
++	-mkdir -p $(DESTDIR)$(gsdatadir)
++	-mkdir -p $(DESTDIR)$(gsdatadir)/lib
+ 	$(SH) -c 'for f in \
+ Fontmap Fontmap.GS \
+ CIDFnmap CIDFnmap.Ore CIDFnmap.ARP CIDFnmap.Bae CIDFnmap.Koc \
+@@ -82,13 +82,13 @@
+ winmaps.ps wftopfa.ps wrfont.ps zeroline.ps \
+ pdf2dsc.ps pdfopt.ps \
+ dmp_init.ps dmp_site.ps gdevmjc.ps escp_24.src ;\
+-	do if ( test -f $(PSLIBDIR)/$$f ); then $(INSTALL_DATA) $(PSLIBDIR)/$$f $(gsdatadir)/lib; fi;\
++	do if ( test -f $(PSLIBDIR)/$$f ); then $(INSTALL_DATA) $(PSLIBDIR)/$$f $(DESTDIR)$(gsdatadir)/lib; fi;\
+ 	done'
+ 	$(SH) -c 'for f in $(PSLIBDIR)/gs_*.ps $(PSLIBDIR)/pdf*.ps;\
+-	do $(INSTALL_DATA) $$f $(gsdatadir)/lib ;\
++	do $(INSTALL_DATA) $$f $(DESTDIR)$(gsdatadir)/lib ;\
+ 	done'
+ 	$(SH) -c 'for f in $(PSLIBDIR)/*.ppd $(PSLIBDIR)/*.rpd $(PSLIBDIR)/*.upp $(PSLIBDIR)/*.xbm $(PSLIBDIR)/*.xpm;\
+-	do $(INSTALL_DATA) $$f $(gsdatadir)/lib ;\
++	do $(INSTALL_DATA) $$f $(DESTDIR)$(gsdatadir)/lib ;\
+ 	done'
+ 
+ # install html documentation
+@@ -105,9 +105,9 @@
+ 	   Psfiles.htm Public.htm Readme.htm Release.htm \
+ 	   Source.htm Tester.htm Unix-lpr.htm Use.htm Xfonts.htm
+ install-doc: $(PSDOCDIR)/News.htm
+-	-mkdir -p $(docdir)
++	-mkdir -p $(DESTDIR)$(docdir)
+ 	$(SH) -c 'for f in $(DOC_PAGES) ;\
+-	do if ( test -f $(PSDOCDIR)/$$f ); then $(INSTALL_DATA) $(PSDOCDIR)/$$f $(docdir); fi;\
++	do if ( test -f $(PSDOCDIR)/$$f ); then $(INSTALL_DATA) $(PSDOCDIR)/$$f $(DESTDIR)$(docdir); fi;\
+ 	done'
+ 
+ # install the man pages for each locale
+@@ -116,9 +116,9 @@
+ MAN1_LINKS_PS2PDF=ps2pdf12 ps2pdf13
+ MAN1_LINKS_GSLP=gsbj gsdj gsdj500 gslj
+ install-man: $(PSMANDIR)/gs.1
+-	$(SH) -c 'test -d $(mandir) || mkdir -p $(mandir)'
++	$(SH) -c 'test -d $(DESTDIR)$(mandir) || mkdir -p $(DESTDIR)$(mandir)'
+ 	$(SH) -c 'for d in $(MAN_LCDIRS) ;\
+-	do man1dir=$(mandir)/$$d/man$(man1ext) ;\
++	do man1dir=$(DESTDIR)$(mandir)/$$d/man$(man1ext) ;\
+ 	  ( test -d $$man1dir || mkdir -p $$man1dir ) ;\
+ 	  for f in $(PSMANDIR)/$$d/*.1 ;\
+ 	    do $(INSTALL_DATA) $$f $$man1dir ;\
+@@ -145,17 +145,17 @@
+ 
+ # install the example files
+ install-examples:
+-	-mkdir -p $(exdir)
++	-mkdir -p $(DESTDIR)$(exdir)
+ 	for f in \
+ alphabet.ps colorcir.ps doretree.ps escher.ps golfer.ps \
+ grayalph.ps snowflak.ps tiger.ps vasarely.ps waterfal.ps \
+ ridt91.eps ;\
+-	do $(INSTALL_DATA) $(PSEXDIR)/$$f $(exdir) ;\
++	do $(INSTALL_DATA) $(PSEXDIR)/$$f $(DESTDIR)$(exdir) ;\
+ 	done
+-	-mkdir -p $(exdir)/cjk
++	-mkdir -p $(DESTDIR)$(exdir)/cjk
+ 	for f in \
+ all_ac1.ps all_ag1.ps all_aj1.ps all_aj2.ps all_ak1.ps \
+ gscjk_ac.ps gscjk_ag.ps gscjk_aj.ps gscjk_ak.ps \
+ iso2022.ps;\
+-	do $(INSTALL_DATA) $(PSEXDIR)/cjk/$$f $(exdir)/cjk ;\
++	do $(INSTALL_DATA) $(PSEXDIR)/cjk/$$f $(DESTDIR)$(exdir)/cjk ;\
+ 	done
