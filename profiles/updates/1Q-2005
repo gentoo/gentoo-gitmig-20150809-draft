@@ -152,3 +152,4 @@ move kde-base/konqueror-webarchiver kde-base/konq-plugins
 move sys-libs/device-mapper sys-fs/device-mapper
 move sys-apps/mdadm sys-fs/mdadm
 move net-analyzer/snort_inline net-analyzer/snort
+slotmove x11-libs/lesstif 2.1 0
