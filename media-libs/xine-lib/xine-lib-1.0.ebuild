@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.21 2005/03/01 03:27:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.22 2005/03/17 06:22:38 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib libcaca arts cle266 esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec opengl aac fbcon ffmpeg xv xvmc nvidia i8x0 samba dxr3 vidix png mng"
 RESTRICT="nostrip"
 
@@ -39,7 +39,7 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	samba? ( net-fs/samba )
 	png? ( media-libs/libpng )
 	mng? ( media-libs/libmng )
-	ffmpeg? (media-video/ffmpeg)"
+	ffmpeg? (>=ffmpeg-0.4.9_p20050226-r1)"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.195 2005/02/28 15:52:45 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.196 2005/03/17 06:22:37 chriswhite Exp $
+
+  17 Mar 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
+  Specifically targeted latest ffmpeg as dep target. Regression of ppc64.
+  dostrow and corsair are aware of this.
 
   01 Mar 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
   Fixed bug #82571.  Also added in external ffmpeg support.
