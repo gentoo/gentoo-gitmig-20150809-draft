@@ -1,5 +1,5 @@
-MD5 2c96c730f4247e6bd0e779f5eefca200 ChangeLog 403
-MD5 dc5ad9934941d7cb29c27f26dcb2e663 table-1.5.53.ebuild 902
+MD5 a56961a4a60d55db2ef9e46359c91ab3 ChangeLog 521
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 261628fd2c4221db533dcce5de2aadae table-1.5.53.ebuild 906
 MD5 9af1a008f461fcc42085534fdb7a7e16 files/50table-gentoo.el 145
 MD5 cbf116f0cb84cdb4fc96c2f2197b515a files/digest-table-1.5.53 62
