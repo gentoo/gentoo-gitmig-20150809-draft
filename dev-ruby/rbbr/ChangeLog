@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rbbr
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.1 2003/10/31 03:44:20 agriffis Exp $
+
+*rbbr-0.4.0 (30 Oct 2003)
+
+  30 Oct 2003; Aron Griffis <agriffis@gentoo.org> metadata.xml,
+  rbbr-0.4.0.ebuild:
+  Add rbbr ebuild. Thanks to alex f in bug 30666
+
