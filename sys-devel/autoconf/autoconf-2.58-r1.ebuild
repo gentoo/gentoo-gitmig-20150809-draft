@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.58-r1.ebuild,v 1.3 2004/06/24 22:42:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.58-r1.ebuild,v 1.4 2004/07/15 03:07:10 agriffis Exp $
 
 IUSE=""
 
@@ -8,7 +8,6 @@ inherit eutils
 
 OLD_PV="2.13"
 OLD_P="${PN}-${OLD_PV}"
-S="${WORKDIR}/${P}"
 OLD_S="${WORKDIR}/${OLD_P}"
 DESCRIPTION="Used to create autoconfiguration files"
 SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.bz2
@@ -147,4 +146,3 @@ pkg_postinst() {
 	einfo "For instance:  WANT_AUTOCONF=2.5"
 	echo
 }
-
