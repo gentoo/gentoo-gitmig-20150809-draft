@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.91 2004/09/08 19:02:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.92 2004/10/12 13:45:53 pappy Exp $
+
+  12 Oct 2004; Alexander Gabert <pappy@gentoo.org> gimp-2.0.4.ebuild:
+  adding hardened versus mmx use flag suppression
 
   08 Sep 2004; Guy Martin <gmsoft@gentoo.org> gimp-2.0.4.ebuild:
   Stable on hppa.

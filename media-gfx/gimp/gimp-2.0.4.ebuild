@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.4.ebuild,v 1.5 2004/09/22 22:47:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.4.ebuild,v 1.6 2004/10/12 13:45:53 pappy Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -70,14 +70,25 @@ src_compile() {
 	# Workaround portage variable leakage
 	local AA=
 
+	# only use mmx if hardened is not set
+	local USE_MMX=
+
 	replace-flags "-march=k6*" "-march=i586"
+
 	# gimp uses inline functions (plug-ins/common/grid.c) (#23078)
 	filter-flags "-fno-inline"
+
+	if use hardened; then
+		ewarn "hardened use flag suppressing mmx use flag"
+		HARDENED_SUPPRESS_MMX="--disable-mmx"
+	else
+		HARDENED_SUPPRESS_MMX="`use_enable mmx`"
+	fi
 
 	econf \
 		--disable-default-binary \
 		--with-x \
-		`use_enable mmx` \
+		"${HARDENED_SUPPRESS_MMX}" \
 		`use_enable sse` \
 		`use_enable altivec` \
 		`use_enable doc gtk-doc` \
