@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/redir
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.4 2004/06/25 00:08:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.5 2004/07/12 01:41:13 kloeri Exp $
+
+  12 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> redir-2.2.1.ebuild:
+  Remove whitespace from CVS header to make repoman happy.
 
   07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> redir-2.2.1.ebuild:
   Stable on alpha.
