@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptplug
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.27 2005/01/01 12:28:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.28 2005/01/02 19:18:15 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Nov 2004; <plasmaroo@gentoo.org> cryptplug-0.3.16-r1.ebuild:
   Marking stable on IA64.
@@ -19,7 +22,7 @@
   cryptplug-0.3.16.ebuild:
   Masked cryptplug-0.3.16.ebuild stable for ppc
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   cryptplug-0.3.16-r1.ebuild:
   Stable on alpha, requested in bug 64485.
 
@@ -48,7 +51,7 @@
   +cryptplug-0.3.16-r1.ebuild:
   version bump for bug #57193
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> cryptplug-0.3.16.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> cryptplug-0.3.16.ebuild:
   Stable on alpha.
 
   15 Jun 2004; Jason Wever <weeve@gentoo.org> cryptplug-0.3.16.ebuild:

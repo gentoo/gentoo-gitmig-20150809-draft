@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.31 2005/01/01 12:38:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.32 2005/01/02 19:24:53 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; Daniel Black <dragonheart@gentoo.org>
   +files/seahorse-0.6.3-gpg1.4.patch, seahorse-0.6.3-r1.ebuild:
@@ -40,7 +43,7 @@
   16 Oct 2004; Daniel Black <dragonheart@gentoo.org> seahorse-0.6.3-r1.ebuild:
   x86 stable. bug #64485
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> seahorse-0.6.3-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> seahorse-0.6.3-r1.ebuild:
   Keyword ~alpha, requested in bug 64485.
 
   23 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>

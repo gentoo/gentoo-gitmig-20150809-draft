@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.56 2005/01/01 12:31:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.57 2005/01/02 19:21:34 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Sep 2004; Joshua Kinard <kumba@gentoo.org> heimdal-0.6.3-r1.ebuild:
   Marked stable on mips.
@@ -25,7 +28,7 @@
   + Added suid fix patch instead of appending flags to ldflags globally.
   + Compressed patches.
 
-  16 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> heimdal-0.6.3.ebuild:
+  16 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> heimdal-0.6.3.ebuild:
   Stable on alpha, bug 61412.
 
   15 Sep 2004; Olivier Crete <tester@gentoo.org> heimdal-0.6.3.ebuild:
@@ -84,7 +87,7 @@
   12 May 2004; Guy Martin <gmsoft@gentoo.org> heimdal-0.6.2.ebuild:
   Marked stable on hppa.
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> heimdal-0.6.2.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> heimdal-0.6.2.ebuild:
   Stable on alpha, bug #50208.
 
 *heimdal-0.6.2 (10 May 2004)
