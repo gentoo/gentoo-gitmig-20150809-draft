@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-641d-r1.ebuild,v 1.2 2002/07/11 06:30:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.0-r2.ebuild,v 1.1 2002/07/15 18:51:54 azarah Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -14,11 +14,11 @@
 MY_PV="`echo ${PV} | gawk '{ print toupper($1) }'`"
 LOC="/opt"
 MAIN_VER="`echo ${PV} |sed -e "s:[a-z]::g"`"
-S="${WORKDIR}/normal"
+S="${WORKDIR}/install"
 DESCRIPTION="OpenOffice productivity suite"
-SRC_URI="http://ny1.mirror.openoffice.org/${PV}/install${MY_PV}_linux_intel.tar.gz
-	http://sf1.mirror.openoffice.org/${PV}/install${MY_PV}_linux_intel.tar.gz
-	http://www.ibiblio.org/gentoo/distfiles/openoffice-${PV}-registry.tbz2"
+SRC_URI="http://ny1.mirror.openoffice.org/${PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz
+	http://sf1.mirror.openoffice.org/${PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz
+	http://www.ibiblio.org/gentoo/distfiles/openoffice-${PV}b-registry.tbz2"
 HOMEPAGE="http://www.openoffice.org"
 
 DEPEND="virtual/glibc
@@ -32,7 +32,7 @@ SLOT="0"
 
 src_unpack() {
 
-	unpack install${MY_PV}_linux_intel.tar.gz
+	unpack OOo_${MY_PV}_LinuxIntel_install.tar.gz
 }
 
 src_install() {
@@ -76,12 +76,12 @@ src_install() {
 	# Install binary with "./setup -net" to generate.
 	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry
 	rm -rf *
-	tar -jxpf ${DISTDIR}/openoffice-${PV}-registry.tbz2 || \
+	tar -jxpf ${DISTDIR}/openoffice-${PV}b-registry.tbz2 || \
 		die "Could not unpack registry!"
 	# Fix paths
 	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry/instance/org/openoffice/Office
 	cp Common.xml Common.xml.orig
-	sed -e "s:/opt/OpenOffice.org641:${LOC}/OpenOffice-${PV}:g" \
+	sed -e "s:/opt/OpenOffice\.org1\.0:${LOC}/OpenOffice-${PV}:g" \
 		Common.xml.orig >Common.xml
 	rm -f Common.xml.orig
 
