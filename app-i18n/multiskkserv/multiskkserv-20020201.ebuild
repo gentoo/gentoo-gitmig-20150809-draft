@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.8 2004/06/28 01:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.9 2004/11/23 10:01:06 usata Exp $
 
-inherit eutils
+inherit eutils fixheadtails
 
 CDB_PV=0.75
 CDB_PN=cdb
@@ -32,11 +32,13 @@ src_unpack() {
 
 	cd ${WORKDIR}/${CDB_P}
 	epatch ${FILESDIR}/${CDB_P}-errno.diff
+	ht_fix_all
 
-	cp ${FILESDIR}/multiskkserv.conf ${S}
+	cd ${S}
+	ht_fix_all
 
-	cd ${WORKDIR}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd ${S}/src
+	epatch ${FILESDIR}/${P}-gcc34.diff
 }
 
 src_compile() {
@@ -56,10 +58,10 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	insinto /etc/conf.d
-	newins multiskkserv.conf multiskkserv
+	newins ${FILESDIR}/multiskkserv.conf multiskkserv
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/multiskkserv.initd multiskkserv

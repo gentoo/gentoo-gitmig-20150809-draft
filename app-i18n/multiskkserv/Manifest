@@ -1,8 +1,18 @@
-MD5 fe5f27ae828cddd4ed1ef58720fd3c9f multiskkserv-20020201.ebuild 1658
-MD5 2ceff536c511fd3b87d0cb91e94865bb ChangeLog 786
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 88f7139ffcbe9ea4defb8d6651de96c9 multiskkserv-20020201.ebuild 1690
+MD5 eb682697f650e07aadbede0b4dff83f0 ChangeLog 1047
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 1a3e347b6ebfe24f60f255100a2af4a0 files/cdb-0.75-errno.diff 243
 MD5 b7dd124eba2575850725d5d7cadc5837 files/multiskkserv.initd 941
-MD5 24096a839c83b3c0a574f777254ba9cf files/multiskkserv-20020201-gentoo.diff 5014
+MD5 0eab7e3a010cca14e7d727dbf49d64b4 files/multiskkserv-20020201-gcc34.diff 432
 MD5 70560693c79857b305848a2c49fc6bd8 files/multiskkserv.conf 461
 MD5 ce6ff83d1b90b4daa1b1b076c72db6d0 files/digest-multiskkserv-20020201 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBowpsVWNWqTUmv+0RAh4mAJ9mZzvTOTwcqvf+L17/nIcHZotiUwCfbdjc
+Mdh0OR+JeRwqoftytPJR3y0=
+=LC12
+-----END PGP SIGNATURE-----
