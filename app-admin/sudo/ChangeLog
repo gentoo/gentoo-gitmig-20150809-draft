@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.27 2004/09/17 19:44:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.28 2004/11/11 23:15:15 taviso Exp $
+
+*sudo-1.6.8_p1-r2 (11 Nov 2004)
+
+  11 Nov 2004; Tavis Ormandy <taviso@gentoo.org> +files/sudoers,
+  +sudo-1.6.7_p5-r2.ebuild, +sudo-1.6.8_p1-r2.ebuild:
+  env_reset has been added to the Defaults in the default sudoers file.
 
 *sudo-1.6.8_p1-r1 (17 Sep 2004)
 
