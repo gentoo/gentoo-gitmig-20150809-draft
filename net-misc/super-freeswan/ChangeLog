@@ -1,7 +1,12 @@
 # ChangeLog for net-misc/super-freeswan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/super-freeswan/ChangeLog,v 1.1 2003/02/07 20:28:32 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/super-freeswan/ChangeLog,v 1.2 2003/06/15 13:28:08 jhhudso Exp $
 
+*super-freeswan-1.99.7.3 (15 Jun 2003)
+
+  15 Jun 2003; Jared Hudson <jhhudso@gentoo.org> : Version bump. Set 1.99_p4
+  to x86 (stable)
+	
 *super-freeswan-1.99_p4 (07 Jan 2003)
 
   07 Jan 2003; Jared Hudson <jhhudso@gentoo.org> : Initial import.

@@ -1,3 +1,5 @@
+MD5 d32379668ecb5a4ca1a9826df3384cd0 super-freeswan-1.99_p4.ebuild 1752
 MD5 7f75b94398265741b19014aff1b6d30b ChangeLog 335
-MD5 3909ab7202855f74148314a5dacf78e5 super-freeswan-1.99_p4.ebuild 1787
+MD5 3909ab7202855f74148314a5dacf78e5 super-freeswan-1.99.7.3.ebuild 1787
 MD5 e626dabcb8cd06c149e85833da018cf9 files/digest-super-freeswan-1.99_p4 76
+MD5 44a2ec27e0c44cc49e47662f0958978f files/digest-super-freeswan-1.99.7.3 76
