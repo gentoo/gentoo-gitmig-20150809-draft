@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.6 2004/09/06 00:15:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.7 2004/09/17 09:28:16 mr_bones_ Exp $
 
 inherit fixheadtails eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ppc64"
 IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca noaudio novideo nojoystick"
 # if you disable audio/video/joystick and something breaks, you pick up the pieces
 
@@ -29,7 +29,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
-S=${WORKDIR}/SDL-${PV}
+S="${WORKDIR}/SDL-${PV}"
 
 pkg_setup() {
 	if use noaudio || use novideo || use nojoystick ; then
@@ -79,32 +79,35 @@ src_compile() {
 		--enable-timers \
 		--enable-endian \
 		--enable-file \
-		`use_enable oss` \
-		`use_enable alsa` \
-		`use_enable esd` \
-		`use_enable arts` \
-		`use_enable nas` \
-		`use_enable x86 nasm` \
-		`use_enable X video-x11` \
-		`use_enable dga` \
-		`use_enable xv video-x11-xv` \
-		`use_enable xinerama video-x11-xinerama` \
-		`use_enable dga video-dga` \
-		`use_enable fbcon video-fbcon` \
-		`use_enable directfb video-directfb` \
-		`use_enable ggi video-ggi` \
-		`use_enable svga video-svga` \
-		`use_enable aalib video-aalib` \
-		`use_enable libcaca video-caca` \
-		`use_enable opengl video-opengl` \
+		$(use_enable oss) \
+		$(use_enable alsa) \
+		$(use_enable esd) \
+		$(use_enable arts) \
+		$(use_enable nas) \
+		$(use_enable x86 nasm) \
+		$(use_enable X video-x11) \
+		$(use_enable dga) \
+		$(use_enable xv video-x11-xv) \
+		$(use_enable xinerama video-x11-xinerama) \
+		$(use_enable dga video-dga) \
+		$(use_enable fbcon video-fbcon) \
+		$(use_enable directfb video-directfb) \
+		$(use_enable ggi video-ggi) \
+		$(use_enable svga video-svga) \
+		$(use_enable aalib video-aalib) \
+		$(use_enable libcaca video-caca) \
+		$(use_enable opengl video-opengl) \
 		${myconf} || die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	preplib
-	dosed "s:-pthread::g" /usr/lib/libSDL.la # Bug 34804
+	# Bug 34804
+	sed -i \
+		-e "s:-pthread::g" "${D}/usr/lib/libSDL.la" \
+		|| die "sed failed"
 	dodoc BUGS CREDITS README README-SDL.txt README.CVS TODO WhatsNew
 	dohtml -r ./
 }

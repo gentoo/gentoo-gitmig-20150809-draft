@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.56 2004/09/06 00:15:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.57 2004/09/17 09:28:16 mr_bones_ Exp $
+
+  17 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.7-r2.ebuild:
+  stable on x86; `` -> $(); tidy
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> libsdl-1.2.7-r2.ebuild:
   Switch to use epause and ebeep, bug #62950
