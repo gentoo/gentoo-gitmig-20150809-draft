@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.25 2004/09/01 03:43:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.26 2004/09/01 03:52:37 kumba Exp $
+
+  31 Aug 2004; Joshua Kinard <kumba@gentoo.org> cscope-15.5.ebuild:
+  Added ~mips to KEYWORDS.
 
   01 Sep 2004; Tom Gall <tgall@gentoo.org> cscope-15.5.ebuild:
   added ~ppc64
