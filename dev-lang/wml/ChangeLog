@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/wml
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.1 2002/07/18 01:29:57 george Exp $
+
+*wml-2.0.8.ebuild  (17 July 2002)
+
+  17 July 2002; George Shapovalov <george@gentoo.org> wml-2.0.8.ebuild, digest-wml-2.0.8 :
+
+  initial release
+  ebuild submitted by Bardur Arantsson <bardur@imada.sdu.dk>
+
