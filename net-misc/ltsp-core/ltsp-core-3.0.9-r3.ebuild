@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r3.ebuild,v 1.9 2004/06/24 23:55:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r3.ebuild,v 1.10 2004/07/15 03:03:06 agriffis Exp $
 
 
 IUSE="gnome kde"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="LTSP - Linux Terminal Server Project"
 HOMEPAGE="http://www.ltsp.org/"
 SRC_URI="mirror://sourceforge/ltsp/ltsp_core-3.0.9-i386.tgz
@@ -338,4 +337,3 @@ pkg_postinst() {
 	einfo " | FOR MORE INFORMATION AND COMPLETE SET OF DOCUMENTATION GO TO WWW.LTSP.ORG  ***********| "
 	einfo "*******************************************************************************************"
 }
-
