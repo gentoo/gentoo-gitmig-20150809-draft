@@ -1,0 +1,7 @@
+MD5 4684defc77151f0e2483eedb9f1d4076 ChangeLog 1597
+MD5 0566b1536262d34d232c555ce994dcbc sip-3.5.ebuild 1146
+MD5 3c4a5f3f9efa66889bcf60d480634959 sip-3.6.ebuild 1152
+MD5 3d3910def0f161c87391dd758512fc18 files/license-3.6.diff 1037
+MD5 02beeecfef8cd92555d0a20b8d331fa6 files/digest-sip-3.5 67
+MD5 ea94cf729c92330a5d8a6d508361fd1c files/license-3.5.diff 1052
+MD5 6e388fdcff422e9e350096079b248249 files/digest-sip-3.6 67
