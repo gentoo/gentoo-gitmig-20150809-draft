@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.2 2004/04/02 21:24:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.3 2004/04/14 11:36:12 dholm Exp $
+
+inherit eutils
 
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://www.ogre3d.org/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/ogre/${PN}-linux_osx-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc gtk"
 
 RDEPEND="virtual/opengl
@@ -21,11 +23,26 @@ RDEPEND="virtual/opengl
 	)
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	>=media-gfx/nvidia-cg-toolkit-1.2
+	x86? || amd64? ( >=media-gfx/nvidia-cg-toolkit-1.2 )
 	>=sys-apps/sed-4
 	|| ( dev-libs/STLport >=sys-devel/gcc-3.0 )"
 
 S=${WORKDIR}/ogrenew
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	case "${ARCH}" in
+	x86 | amd64)
+		;;
+	*)
+		einfo "Removing nVidia Cg dependency on this arch"
+		epatch ${FILESDIR}/${PV}-nocg.patch || \
+			die "Failed while removing nVidia Cg support"
+		./bootstrap
+		;;
+	esac
+}
 
 src_compile() {
 	local myconf="cli"
