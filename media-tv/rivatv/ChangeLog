@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/rivatv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.2 2003/07/12 20:36:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.3 2003/10/10 23:25:08 blauwers Exp $
+
+*rivatv-0.8.3 (11 Oct 2003)
+
+  11 Oct 2003; Bart Lauwers <blauwers@gentoo.org> :
+  Version bump + configure patch
 
 *rivatv-0.8.0-r1 (18 Jun 2003)
  
