@@ -1,12 +1,12 @@
 # ChangeLog for x11-themes/knifty
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/ChangeLog,v 1.4 2004/04/22 20:43:48 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/ChangeLog,v 1.5 2004/04/22 20:45:34 centic Exp $
 
 *knifty-0.4.1 (22 Apr 2004)
 
   22 Apr 2004; Dominik Stadler <centic@gentoo.org> knifty-0.3.2.ebuild,
   +knifty-0.4.1.ebuild:
-  Correct IUSE and S= in 0.3.2, add new Version 0.4.1
+  Correct IUSE and S= in 0.3.2, add new Version 0.4.1, see Bug 39849.
 
   25 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> knifty-0.3.2.ebuild:
   Moved to ~sparc, thanks to gust4voz on #gentoo-sparc
