@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.5.ebuild,v 1.1 2003/06/12 12:37:08 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.5.ebuild,v 1.2 2003/06/13 10:32:51 yakina Exp $
 
 DESCRIPTION="A Japanese input module for GTK2"
 HOMEPAGE="http://im-ja.sourceforge.net/"
@@ -29,7 +29,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=--with-gconf-source="`gconftool-2 --get-default-source | sed -e \"s|xml::|xml::${D}|\"`"
+	local gconfdir="`gconftool-2 --get-default-source | sed -e \"s|^xml::/|$D|\"`"
+	local myconf="--with-gconf-source=xml::${gconfdir}"
 	use canna || myconf="$myconf --disable-canna"
 	use freewnn || myconf="$myconf --disable-wnn"
 	econf $myconf
@@ -37,7 +38,11 @@ src_compile() {
 }
 
 src_install () {
+	local gconfdir="`gconftool-2 --get-default-source | sed -e \"s|^xml::/|$D|\"`"
 	einstall
+	# /etc/gconf should be world readable
+	find ${gconfdir} -type d | xargs chmod -R +rx
+	find ${gconfdir} -type f | xargs chmod -R +r
 	dodoc AUTHORS COPYING README ChangeLog
 }
 
