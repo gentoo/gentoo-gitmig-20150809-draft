@@ -1,5 +1,5 @@
-MD5 81f6cb72ab3e08b10c65df64cf5d3b24 ChangeLog 603
-MD5 14512c6266c1ff2a30e4906fa48fec61 moc-1.1.0.ebuild 888
+MD5 83441f66f51069af871a5df786f8c06b moc-1.1.0.ebuild 885
+MD5 e988ca2e6ebe92ad41e3ea4e55822db0 ChangeLog 743
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 a90f9e3223b6e3cb5a0bf42b862d130e files/digest-moc-1.1.0 61
 MD5 ffe585145e5d7dfe41d78a4b05a36802 files/moc-1.1.0-gcc3.patch 4196
