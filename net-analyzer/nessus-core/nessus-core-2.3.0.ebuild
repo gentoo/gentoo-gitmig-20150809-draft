@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.3.0.ebuild,v 1.2 2005/01/12 19:38:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.3.0.ebuild,v 1.3 2005/01/26 11:06:56 angusyoung Exp $
 
 inherit eutils
 
@@ -53,7 +53,7 @@ src_install() {
 	dodoc doc/*.txt doc/ntp/*
 	insinto /etc/init.d
 	insopts -m 755
-	newins ${FILESDIR}/nessusd-r6 nessusd
+	newins ${FILESDIR}/nessusd-r7 nessusd
 	keepdir /var/lib/nessus/logs
 	keepdir /var/lib/nessus/users
 }
