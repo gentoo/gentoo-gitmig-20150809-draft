@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3.ebuild,v 1.8 2004/07/23 01:10:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3.ebuild,v 1.9 2004/07/27 20:48:32 malc Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ S="${WORKDIR}/${MY_P//\.[0-9]}"
 
 src_compile() {
 	./configure || die
+	epatch ${FILESDIR}/amd64-header-fix.patch
 
 	if use debug
 	then
