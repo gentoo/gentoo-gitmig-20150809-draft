@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellm-volume
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.13 2003/09/04 13:58:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.14 2003/10/21 20:58:02 mholzer Exp $
+
+*gkrellm-volume-2.1.9 (21 Oct 2003)
+
+  21 Oct 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-volume-2.1.9.ebuild:
+  Version bumped.
 
   04 Sep 2003; Aron Griffis <agriffis@gentoo.org> gkrellm-volume-2.1.8.ebuild:
   add ~alpha to KEYWORDS
