@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.24 2005/02/04 22:57:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.25 2005/02/19 21:36:27 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -22,9 +22,9 @@ DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2"
-[ -n "${PATCHVER}" ] && \
+[[ -n ${PATCHVER} ]] && \
 	SRC_URI="${SRC_URI} mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
-[ -n "${UCLIBC_PATCHVER}" ] && \
+[[ -n ${UCLIBC_PATCHVER} ]] && \
 	SRC_URI="${SRC_URI} mirror://gentoo/${P}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
@@ -180,12 +180,12 @@ toolchain-binutils_src_install() {
 	# Generate an env.d entry for this binutils
 	cd "${S}"
 	insinto /etc/env.d/binutils
-	cat << EOF > env.d
-TARGET="${CTARGET}"
-VER="${PV}"
-LIBPATH="${LIBPATH}"
-FAKE_TARGETS="${FAKE_TARGETS}"
-EOF
+	cat <<-EOF > env.d
+		TARGET="${CTARGET}"
+		VER="${PV}"
+		LIBPATH="${LIBPATH}"
+		FAKE_TARGETS="${FAKE_TARGETS}"
+	EOF
 	newins env.d ${CTARGET}-${PV}
 
 	# Handle documentation
