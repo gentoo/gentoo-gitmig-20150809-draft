@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r2.ebuild,v 1.17 2004/12/07 00:14:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r2.ebuild,v 1.18 2004/12/07 04:13:33 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -88,6 +88,7 @@ fi
 if [ -n "${PP_VER}" ]
 then
 	SRC_URI="${SRC_URI}
+		mirror://gentoo/protector-${PP_FVER}.tar.gz
 		http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
 fi
 SRC_URI="${SRC_URI}

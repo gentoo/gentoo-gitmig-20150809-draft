@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.13 2004/12/07 00:14:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.14 2004/12/07 04:13:33 vapier Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -87,6 +87,7 @@ else
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
 fi
 SRC_URI="${SRC_URI}
+	mirror://gentoo/protector-${PP_VER2}.tar.gz
 	http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER1}/protector-${PP_VER2}.tar.gz
 	mirror://gentoo/${P}-manpages.tar.bz2
 	mirror://gentoo/${P}-tls-update.patch.bz2"
