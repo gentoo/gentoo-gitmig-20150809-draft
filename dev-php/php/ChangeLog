@@ -1,8 +1,13 @@
 # ChangeLog for dev-php/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.24 2002/12/30 19:49:36 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.25 2003/01/07 19:06:17 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*php-4.3.0-r1 (7 Jan 2003)
+
+  7 Jan 2003; Ryan Phillips <rphillips@gentoo.org> :
+  Fixed sed and php binary location for install
  
 *php-4.3.0 (30 Dec 2002)
 
