@@ -214,3 +214,4 @@ move net-www/lynx www-client/lynx
 move net-www/amaya www-client/amaya
 move net-www/opera www-client/opera
 move sys-apps/cpuspeedy sys-power/cpuspeedy
+move sys-apps/acpid sys-power/acpid
