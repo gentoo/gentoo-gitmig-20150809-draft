@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/files/irda.rc,v 1.1 2004/10/04 18:53:38 brix Exp $
+
+checkconfig() {
+        if [ -z "$IRDA" ] || [ -z "$IRDADEV" ] ; then
+		eerror "You need to setup IRDA and IRDADEV in /etc/conf.d/irda first"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	
+	# Check that irda is enabled.
+	[ ${IRDA} = "no" ] && return 1
+
+	[ -f /usr/sbin/irattach ] || return 1
+
+	local ARGS=""
+	if [ $DONGLE ]; then
+		ARGS="$ARGS -d $DONGLE"
+	fi
+	if [ "$DISCOVERY" = "yes" ];then
+		ARGS="$ARGS -s"
+	fi
+
+        # Attach irda device 
+        ebegin "Starting IrDA"
+        start-stop-daemon --start --quiet \
+                --exec /usr/sbin/irattach -- ${IRDADEV} ${ARGS}
+	eend ${?}
+}
+	
+stop() {
+        ebegin "Shutting down IrDA"
+	start-stop-daemon --stop --quiet --pidfile /var/run/irattach.pid
+	eend ${?}
+}
