@@ -1,0 +1,22 @@
+# ChangeLog for app-misc/krecipes
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.1 2004/10/30 17:10:38 carlo Exp $
+
+*krecipes-0.5_beta (30 Oct 2004)
+
+  30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +krecipes-0.5_beta.ebuild:
+  Moved from app-misc/krecipes to kde-misc/krecipes.
+
+  21 Oct 2004; Jason Wever <weeve@gentoo.org> krecipes-0.5_beta.ebuild:
+  Added ~sparc keyword.
+
+  05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> krecipes-0.5_beta.ebuild:
+  Depend on version 2 of sqlite.
+	
+*krecipes-0.5_beta (04 Jul 2004)
+
+  04 Jul 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +krecipes-0.5_beta.ebuild:
+  Add new application, fixes Bug 34246.
+
