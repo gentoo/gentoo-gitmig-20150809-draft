@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.4 2002/12/13 11:00:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.5 2003/01/06 00:28:04 foser Exp $
+
+*vte-0.10.7 (05 Jan 2003)
+
+  05 Jan 2003; foser <foser@gentoo.org> vte-0.10.7.ebuild :
+  New version
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
