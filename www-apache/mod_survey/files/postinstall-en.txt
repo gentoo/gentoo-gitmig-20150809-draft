@@ -1,0 +1,9 @@
+
+If you are using Apache 1, execute:
+# cp /usr/lib/mod_survey/survey.conf /etc/apache/conf/addon-modules/99_mod_survey.conf
+# echo "Include conf/addon-modules/99_mod_survey.conf" >>	/etc/apache/conf/apache.conf
+
+If you are using Apache 2, execute:
+# cp /usr/lib/mod_survey/survey.conf /etc/apache2/conf/modules.d/99_mod_survey.conf
+
+Now restart Apache and test your installation: http://YOURHOST/mod_survey
