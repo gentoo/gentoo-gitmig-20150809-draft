@@ -510,3 +510,8 @@ dev-lang/gpc
 #11 Apr 2002
 # USE dependent nls bloat reduction, but needs more testing
 =sys-apps/util-linux-2.11o-r1
+
+#seemant@gentoo.org
+#12 Apr 2002
+# New avifile released, but it fails to build.
+=media-video/avifile-0.7.20020412
