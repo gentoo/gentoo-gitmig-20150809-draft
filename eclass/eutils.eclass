@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.84 2004/02/29 07:17:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.85 2004/02/29 22:34:41 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -562,16 +562,13 @@ enewuser() {
 	local egroups="$1"; shift
 	if [ ! -z "${egroups}" ]
 	then
-		local realgroup=
 		local oldifs="${IFS}"
 		export IFS=","
 		for g in ${egroups}
 		do
-			chgrp ${g} ${tmpfile} >& /dev/null
-			realgroup="`ls -l ${tmpfile} | awk '{print $4}'`"
-			if [ "${g}" != "${realgroup}" ]
+			if [ -z "`getent group \"${g}\"`" ]
 			then
-				eerror "You must add ${g} to the system first"
+				eerror "You must add group ${g} to the system first"
 				die "${g} is not a valid GID"
 			fi
 		done
