@@ -1,3 +1,5 @@
-MD5 bb4d7fa4b3051fda8b475bee939c2a4e ChangeLog 501
-MD5 f8b274403c5e1bbdd7cb8a5a61b810c7 game-launcher-0.9.8.ebuild 2225
+MD5 0ce1a828196b8d4e3e0302ed4d95c4d3 files/0.9.8-gcc3.patch 299
 MD5 79514d6adf8fd7f9d6fc78210cc91aee files/digest-game-launcher-0.9.8 55
+MD5 671b1311f9989ac4e746ae60042ec36c files/0.9.8-digi-oss.patch 229
+MD5 6a4fa3f8e4480394f5d61c80d45a408d game-launcher-0.9.8.ebuild 1240
+MD5 5d0398b6fc3cc5cd8560a9fc3363ffca ChangeLog 598

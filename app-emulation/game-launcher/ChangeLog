@@ -1,9 +1,14 @@
 # ChangeLog for app-emulation/game-launcher
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/game-launcher/ChangeLog,v 1.4 2003/02/12 04:00:59 vapier Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/game-launcher/ChangeLog,v 1.5 2003/06/21 08:05:27 vapier Exp $
 	
-* game-launcher-0.9.8 (27 Oct 2002)
+*game-launcher-0.9.8 (27 Oct 2002)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added games.eclass support and a gcc-3.x patch.
+
   27 Oct 2002; Thomas Raschbacher <lordvan@gentoo.org>: added ebuild
   WARNING: is a security-hole cuz parts of it are(and have to be) world-writeable!!!!
+
   04 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org>:
   fixed ChangeLog
