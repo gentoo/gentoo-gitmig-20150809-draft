@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.3-r1.ebuild,v 1.3 2003/09/08 04:49:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.3-r1.ebuild,v 1.4 2003/09/17 03:08:07 robbat2 Exp $
 
 PHPSAPI="cli"
 inherit php eutils
@@ -19,7 +19,8 @@ RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
 src_compile() {
 	# Readline and Ncurses are CLI PHP only
 	# readline implies ncurses
-	use ncurses || use readline && use_ncurses="--with" || use_ncurses="--without"
+	use_ncurses="--without"
+	use ncurses || use readline && use_ncurses="--with"
 	myconf="${myconf} `use_with readline`"
 	myconf="${myconf} ${use_ncurses}-ncurses"
 
