@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/eprog/eprog-0.0.0.20030220.ebuild,v 1.1 2003/02/20 12:25:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/eprog/eprog-0.0.0.20030220.ebuild,v 1.2 2003/02/22 08:50:59 vapier Exp $
 
 DESCRIPTION="convenience library for evas2"
 HOMEPAGE="http://www.rephorm.com/rephorm/code/eprog/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="pic"
 
 DEPEND="virtual/x11
