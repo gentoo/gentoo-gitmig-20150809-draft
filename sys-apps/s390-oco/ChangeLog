@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/s390-oco
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/ChangeLog,v 1.5 2004/08/24 03:27:26 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/ChangeLog,v 1.6 2005/01/22 01:18:04 kugelfang Exp $
+
+*s390-oco-2.4.21-r1 (22 Jan 2005)
+
+  22 Jan 2005; Danny van Dyk <kugelfang@gentoo.org>
+  +s390-oco-2.4.21-r1.ebuild, -s390-oco-2.4.21.ebuild,
+  s390-oco-2.6.5.ebuild:
+  Fixed digests wrt BUG #72954. Version bump to s390-oco-2.4.21-r1 as IBM
+  only publishes version 2 of the 2.4.21 tape driver.
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> s390-oco-2.4.21.ebuild,
   s390-oco-2.6.5.ebuild:

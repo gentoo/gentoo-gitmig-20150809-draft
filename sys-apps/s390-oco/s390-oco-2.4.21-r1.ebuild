@@ -1,9 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.4.21.ebuild,v 1.3 2004/08/24 03:27:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.4.21-r1.ebuild,v 1.1 2005/01/22 01:18:04 kugelfang Exp $
 
 DESCRIPTION="Object-code only (OCO) modules for s390"
-SRC_URI="s390x?( tape3590-2.4.21-s390x-01-june2003.tar.gz ) :( tape3590-2.4.21-s390-01-june2003.tar.gz )"
+SRC_URI="s390x? ( tape3590-2.4.21-s390x-02-june2003.tar.gz )
+	!s390x? ( tape3590-2.4.21-s390-02-june2003.tar.gz )"
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/linux390/june2003_recommended.shtml"
 LICENSE="IBM-ILNWP"
 KEYWORDS="~s390"
@@ -28,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${WORKDIR}
-	mv tape3590-2.4.21-s390*-01-june2003.o tape_3590.o
+	mv tape3590-2.4.21-s390*-02-june2003.o tape_3590.o
 }
 
 src_install() {
