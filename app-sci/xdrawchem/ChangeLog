@@ -1,7 +1,13 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.3 2002/06/10 00:55:49 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.4 2002/07/10 18:08:00 rphillips Exp $
 
+*xdrawchem-1.4 (10 Jul 2002)
+
+  10 Jul 2002; Ryan Phillips <rphillips@gentoo.org> xdrawchem-1.4.ebuild:
+
+  New Version.  Fixes #4765
+  
 *xdrawchem-1.3.2 (09 June 2002)
 
   09 June 2002; Ryan Phillips <rphillips@gentoo.org> xdrawchem-1.3.2.ebuild:
