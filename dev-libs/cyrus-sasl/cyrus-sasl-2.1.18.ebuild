@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.11 2004/02/28 00:51:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.1 2004/03/15 20:03:20 max Exp $
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/sasl/"
@@ -10,14 +10,14 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 alpha ia64 hppa ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha"
 IUSE="gdbm ldap mysql postgres kerberos static ssl java pam"
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=sys-apps/sed-4
 	sys-devel/libtool
-	>=sys-devel/autoconf-2.58
+	sys-devel/autoconf
 	sys-devel/automake
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
@@ -40,7 +40,7 @@ src_unpack() {
 		-i saslauthd/auth_rimap.c || die "sed failed"
 
 	# DB4 detection and versioned symbols.
-	epatch "${FILESDIR}/cyrus-sasl-2.1.17-db4.patch"
+	epatch "${FILESDIR}/cyrus-sasl-2.1.18-db4.patch"
 
 	# Add configdir support.
 	epatch "${FILESDIR}/cyrus-sasl-2.1.17-configdir.patch"
@@ -88,9 +88,6 @@ src_compile() {
 	# Compaq-sdk checks for -D_REENTRANT and -pthread takes care the cpp stuff.
 	# taviso #24998 (17 Aug 03)
 	use alpha && append-flags -D_REENTRANT -pthread
-
-	# Detect mips systems properly
-	use mips && gnuconfig_update
 
 	econf \
 		--with-saslauthd=/var/lib/sasl2 \
