@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.9 2003/05/02 07:29:03 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.10 2003/05/16 06:30:42 george Exp $
+
+  14 May 2003; George Shapovalov <george@gentoo.org> gcl-2.5.2.ebuild :
+  added >=app-text/tetex-2.0* to DEPEND as apparently ebuild creates some dvi's
+  todo: make that conditional on doc? (requies some patching) (#21077)
 
 *gcl-2.5.2 (01 May 2003)
 
