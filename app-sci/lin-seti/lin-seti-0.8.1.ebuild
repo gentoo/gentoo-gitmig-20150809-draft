@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.8.1.ebuild,v 1.1 2004/06/26 15:50:31 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.8.1.ebuild,v 1.2 2004/06/30 07:48:03 s4t4n Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~hppa"
 
 DEPEND="app-sci/setiathome"
 
