@@ -17,3 +17,4 @@ move sys-apps/bzip2 app-arch/bzip2
 move sys-apps/gzip app-arch/gzip
 move sys-apps/gzip_x86 app-arch/gzip-x86
 move sys-apps/sharutils app-arch/sharutils
+move sys-apps/genflags app-portage/genflags
