@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50.ebuild,v 1.1 2004/05/14 09:42:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50.ebuild,v 1.2 2004/05/14 20:54:53 lanius Exp $
 
 IUSE="static"
 
@@ -74,6 +74,8 @@ src_install() {
 
 	dosed /opt/opera/bin/opera
 	dosed /opt/opera/share/opera/java/opera.policy
+
+	sed -i -e "s:/usr/lib/opera/plugins:/opt/opera/lib/opera/plugins" ${D}/opt/opera/bin/opera
 
 	# Install the icons
 	insinto /usr/share/pixmaps
