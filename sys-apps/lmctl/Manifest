@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bdee741748d67b155d566ef70315b70f ChangeLog 820
-MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
 MD5 e8ff161ff91d738e6ee5968736b9b6dd lmctl-0.3.2-r1.ebuild 1041
-MD5 12ce060e3732608d162e1d3c42f04179 lmctl-0.3.2-r2.ebuild 1082
+MD5 9b85dfcfaaac8519010c8192c53ec352 ChangeLog 940
+MD5 34801217f8a06223cd0d02a1efb09589 lmctl-0.3.2-r2.ebuild 1092
+MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
 MD5 28632edefbfc4bc5b72659b30ac9320d files/C-BK16A-DUAL.patch 576
+MD5 1a909d8a0ebb516ddf57d7d9c2a95f78 files/0.3.2-beautyfix.diff 432
 MD5 9e0da21fd6f234d98d9952777960cda6 files/digest-lmctl-0.3.2-r1 63
 MD5 9e0da21fd6f234d98d9952777960cda6 files/digest-lmctl-0.3.2-r2 63
-MD5 1a909d8a0ebb516ddf57d7d9c2a95f78 files/0.3.2-beautyfix.diff 432
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB82E3mPFBzbX68WERAqiLAJ9TUn+sAwF+C1VdNhI/RIWAuNHCcQCgjSiV
-hd2DH3t9GLLCi1rjfZXnJSI=
-=uWcv
------END PGP SIGNATURE-----
