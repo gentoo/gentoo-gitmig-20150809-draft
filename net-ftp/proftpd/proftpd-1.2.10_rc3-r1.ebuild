@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10_rc3-r1.ebuild,v 1.2 2004/08/11 11:05:27 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10_rc3-r1.ebuild,v 1.3 2004/09/06 19:04:05 ciaranm Exp $
 
 inherit flag-o-matic eutils
 
@@ -61,7 +61,7 @@ src_compile() {
 		ewarn "Presently this ebuild defaults to mysql. If you would like to"
 		ewarn "change the default behaviour, merge ProFTPD with;"
 		ewarn "USE=\"-mysql postgres\" emerge proftpd"
-		sleep 5
+		epause 5
 	fi
 
 	if use mysql; then
