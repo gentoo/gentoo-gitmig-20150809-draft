@@ -1,7 +1,2 @@
-MD5 add751ca5856300f8e2a349fb944257c /files/get_header.c 3486
-MD5 b82b4c09c356dc91fcbe907a24326b52 /files/ezmlm-0.53-errno.patch 270
-MD5 31baef31f2ce0c9343530c3467220a60 /files/from-header.patch 6165
-MD5 faac5e3fb54753c4a9f6475bb1a5b20a /files/get_header.h 101
-MD5 e7ebd30b3d6f45544e85f82d49f386f6 /ezmlm-idx-mysql-0.40-r2.ebuild 2368
 MD5 c6137114060cff19301a956e73d46fc0 ezmlm-idx-0.40.tar.gz 553974
 MD5 108c632caaa8cdbfd3041e6c449191b2 ezmlm-0.53.tar.gz 62693
