@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.4 2004/09/03 15:11:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.5 2005/03/15 23:16:01 mr_bones_ Exp $
 
 inherit kde
 
@@ -18,19 +18,20 @@ IUSE="python ruby"
 
 DEPEND=">=sys-devel/libperl-5.6.1
 	python? ( >=dev-lang/python-2.2 )
-	ruby? ( >=dev-lang/ruby-1.8.0 )"
+	ruby? ( >=dev-lang/ruby-1.8.0 )
+	kde-base/arts"
 need-kde 3
 
 
 src_compile() {
 	econf \
-		`use_with python python` \
-		`use_with ruby ruby` \
+		$(use_with python python) \
+		$(use_with ruby ruby) \
 		|| die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog DESIGN NEWS README TODO
 }
