@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.62.ebuild,v 1.3 2001/10/08 09:09:47 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.64-r1.ebuild,v 1.1 2002/03/24 09:13:41 seemant Exp $
 
 
 S=${WORKDIR}/${P}
@@ -11,15 +11,29 @@ HOMEPAGE="http://www.gnome.org/gnome-pilot/"
 
 DEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
 	>=gnome-base/control-center-1.4.0.1-r1
-	>=dev-libs/pilot-link-0.9.6"
+	>=dev-libs/pilot-link-0.9.6
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
+	local myopts
+
 	CFLAGS="${CFLAGS} `gnome-config --cflags libglade vfs`"
+
+	if [ "`use nls`" ]
+	then
+		myopts="--enable-nls"
+	else
+		myopts="--disable-nls"
+	fi
+
+	mkdir intl && touch intl/libgettext.h
 	
 	./configure --prefix=/usr	 				\
 		    --with-gnome-libs=/usr/lib				\
+		    --mandir=/usr/share/man	 			\
 		    --sysconfdir=/etc		 			\
 		    --enable-usb-visor=yes 				\
+		    ${myopts}		 				\
 		    --host=${CHOST} || die
 
 	emake || die
