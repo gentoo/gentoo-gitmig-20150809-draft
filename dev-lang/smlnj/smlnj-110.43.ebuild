@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.3 2004/04/16 02:32:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.4 2004/04/21 16:37:32 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Standard ML of New Jersey compiler and libraries"
 HOMEPAGE="http://cm.bell-labs.com/cm/cs/what/smlnj/"
