@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cfitsio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/ChangeLog,v 1.6 2004/07/02 04:35:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/ChangeLog,v 1.7 2004/07/26 23:43:14 ribosome Exp $
+
+  26 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  cfitsio-2.430.ebuild, cfitsio-2.490.ebuild:
+  Version bump suggested by Nathaniel C. Domingo <nathaniel.domingo@up.edu.ph>
+  (in bug # 39311).
+  Removed obsolete version (2.430).
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cfitsio-2.430.ebuild:
   virtual/glibc -> virtual/libc

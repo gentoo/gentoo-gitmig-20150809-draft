@@ -1,3 +1,4 @@
-MD5 2393f33017ad39e1ac25d356aa8a075b cfitsio-2.430.ebuild 866
-MD5 839e46e192261934ce3c21b9bcdbe179 ChangeLog 645
-MD5 417a2780ed87c0e060054beeec49a4ed files/digest-cfitsio-2.430 64
+MD5 26259dae97509987ecdeaaecb77aaeb1 ChangeLog 878
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 289ec3405dadf1e5202ac488b66f3960 cfitsio-2.490.ebuild 973
+MD5 3563a5722dad5d085d0eb548dd3bd0d6 files/digest-cfitsio-2.490 64
