@@ -11,5 +11,10 @@
 		algunos paquetes no esenciales que aún no han sido movidos a otras
 		categorías sys-.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sys-apps enthält sowohl Programme die Bestandteil des Basissystems sind,
+		als auch Applikationen die noch nicht in eine der anderen sys- Kategorien eingeordnet
+		wurden.
+	</longdescription>
 </catmetadata>
 
