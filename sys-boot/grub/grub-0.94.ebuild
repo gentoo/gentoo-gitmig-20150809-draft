@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94.ebuild,v 1.3 2004/02/04 17:01:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94.ebuild,v 1.4 2004/02/15 22:26:22 spock Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
-SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz"
+SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
+	http://dev.gentoo.org/~spock/portage/distfiles/${P}-splash.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,6 +21,9 @@ PROVIDE="virtual/bootloader"
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
+
+	epatch ${WORKDIR}/${P}-splash.patch
+
 	# grub-0.93.20030118-gentoo.diff; <woodchip@gentoo.org> (18 Jan 2003)
 	# -fixes from grub CVS pulled on 20030118
 	# -vga16 patches; mined from Debian's grub-0.93+cvs20030102-1.diff
