@@ -1,6 +1,6 @@
 # ChangeLog for net-www/elinks
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.4 2003/01/25 10:29:11 doctomoe Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.5 2003/02/12 08:47:15 vapier Exp $
 
   25 Jan 2002; Olivier Reisch <doctomoe@gentoo.org> : elinks-0.4.1.ebuild:
   Added ~ppc keyword.

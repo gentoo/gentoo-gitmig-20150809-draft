@@ -1,6 +1,6 @@
 # ChangeLog for net-www/privoxy
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.6 2002/12/15 01:13:32 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.7 2003/02/12 08:52:33 vapier Exp $
 
 *privoxy-3.0.0 (14 Dec 2002)
 

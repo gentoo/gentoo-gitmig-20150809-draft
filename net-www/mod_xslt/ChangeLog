@@ -1,6 +1,6 @@
 # ChangeLog for net-www/mod_xslt
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.2 2002/12/17 19:46:28 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.3 2003/02/12 08:51:16 vapier Exp $
 
 *mod-xslt-1.0.5a (29 Nov 2002)
 

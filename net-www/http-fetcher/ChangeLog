@@ -1,6 +1,6 @@
 # ChangeLog for net-www/http-fetcher
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/http-fetcher/ChangeLog,v 1.2 2003/01/07 07:12:15 mkennedy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/http-fetcher/ChangeLog,v 1.3 2003/02/12 08:48:31 vapier Exp $
 
 *http-fetcher-1.0.1-r1 (06 Jan 2003)
 
