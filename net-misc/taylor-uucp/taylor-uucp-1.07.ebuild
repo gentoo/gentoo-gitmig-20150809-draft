@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07.ebuild,v 1.4 2003/10/24 12:02:13 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07.ebuild,v 1.5 2003/11/10 23:51:10 zul Exp $
 
 S=${WORKDIR}/uucp-1.07	# This should be a .2 bug the package is messed
 DESCRIPTION="Taylor UUCP"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/uucp/uucp-${PV}.tar.gz"
 HOMEPAGE="http://www.airs.com/ian/uucp.html"
 
-KEYWORDS="~x86 ~sparc alpha"
+KEYWORDS="x86 sparc alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
