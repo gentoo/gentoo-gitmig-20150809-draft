@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-3.3.6-r1.ebuild,v 1.1 2002/03/13 04:16:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-3.3.6-r1.ebuild,v 1.2 2002/07/06 18:49:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="System performance tools for Linux"
 SRC_URI="http://www.ibiblio.org/pub/Linux/system/status/${P}.tar.gz"
 HOMEPAGE="http://perso.wanadoo.fr/sebastien.godard/"
+LICENSES="GPL-2"
 
 DEPEND="virtual/glibc
         nls? ( sys-devel/gettext )"

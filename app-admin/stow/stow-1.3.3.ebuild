@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Jim Nutt <jim@nuttz.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/stow-1.3.3.ebuild,v 1.1 2002/02/01 22:52:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/stow-1.3.3.ebuild,v 1.2 2002/07/06 18:49:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Stow -- manage installation of software in /usr/local"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/stow/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/${PN}/"
+LICENSE="GPL-2"
 
 DEPEND=">=sys-devel/perl-5.005"
 

@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/gwcc-0.9.6-r1.ebuild,v 1.3 2002/05/27 17:27:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/gwcc-0.9.6-r1.ebuild,v 1.4 2002/07/06 18:49:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Workstation Command Center"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gwcc.sourceforge.net"
+LICENSE="GPL-2"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	nls? ( sys-devel/gettext )"

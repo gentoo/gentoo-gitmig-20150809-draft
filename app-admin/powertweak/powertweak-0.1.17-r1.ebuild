@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.1.17-r1.ebuild,v 1.4 2002/05/23 06:50:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.1.17-r1.ebuild,v 1.5 2002/07/06 18:49:03 drobbins Exp $
 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Powertweak"
 SRC_URI="http://powertweak.sourceforge.net/files/${P}.tar.bz2"
 HOMEPAGE="http://powertweak.sourceforge.net"
+LICENSE="GPL-2"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-libs/libxml-1.8.10"

@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.7-r1.ebuild,v 1.1 2002/03/15 09:00:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.7-r1.ebuild,v 1.2 2002/07/06 18:49:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="AIDE (Advanced Intrusion Detection Environment) is a free replacement for Tripwire"
 SRC_URI="http://www.cs.tut.fi/~rammer/${P}.tar.gz"
 HOMEPAGE="http://www.cs.tut.fi/~rammer/aide.html"
+LICENSE="GPL-2"
 
 DEPEND="sys-apps/gzip sys-devel/bison sys-devel/flex"
 

@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.3 2001/11/10 02:30:19 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.4 2002/07/06 18:49:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an interactive who-like program that displays information
 about the users currently logged on to the machine, in real time."
 SRC_URI="http://wizard.ae.krakow.pl/~mike/download/${P}.tar.gz"
 HOMEPAGE="http://wizard.ae.krakow.pl/~mike/"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc sys-libs/ncurses"
 
