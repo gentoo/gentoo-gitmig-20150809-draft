@@ -1,0 +1,5 @@
+MD5 c4f436f1e2a74effeb60777591770452 jdbc-mysql-2.0.14.ebuild 699
+MD5 68e5cd121bb0976ec141a85f3de76814 ChangeLog 1282
+MD5 d8ed661a80321b7cacced1e807300cf4 jdbc-mysql-3.0.7.ebuild 706
+MD5 37bafd293d17f463a4f1dd295bf6e321 files/digest-jdbc-mysql-2.0.14 79
+MD5 a93253a8f660e90b57bcc4554564de5b files/digest-jdbc-mysql-3.0.7 85
