@@ -2,10 +2,12 @@ MD5 b83bf23f1c96084b79765739613430ac fvwm-2.5.7-r5.ebuild 8757
 MD5 76fde55c6ffece27a13fd976d5fb51b6 fvwm-2.5.8-r4.ebuild 10169
 MD5 babbec50812f1dd2af1b76b9afa837af fvwm-2.4.17.ebuild 3961
 MD5 a52e679cbc4958400b382099353e03f7 fvwm-2.5.8-r3.ebuild 10167
+MD5 9cf2f4124a2caddb2180508095c2c3a3 fvwm-2.5.8-r5.ebuild 10280
 MD5 cae562f0d42d47edab4ae128a0c2e8d4 ChangeLog 10670
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
 MD5 6a0ba650b7f07dc1e6e94ea256a8ec94 fvwm-2.5.8-r2.ebuild 9684
 MD5 e2ceb5d855c5406a09d82442196efad8 files/README.transluceny.gz 5788
+MD5 7e00938e8f20ffaa22e1c5672666c027 files/fvwm-2.5.8-iconfile.diff 791
 MD5 e5701841190ad529d5577c8da69d5006 files/fvwmtabs-insecure-tmp-handling.diff 2350
 MD5 98b1cd33f30ee47c88a2c3da2b2ddc68 files/fvwm-iconman.diff 2383
 MD5 b2af3c1c8fe4f142e2b8debbb5c59a94 files/digest-fvwm-2.4.17 65
@@ -21,4 +23,5 @@ MD5 e52e1c9212c856d5de29c603678dc52e files/digest-fvwm-2.5.7-r5 127
 MD5 ebe3c015c02ef069b110e30f3e84cf49 files/digest-fvwm-2.5.8-r2 127
 MD5 ebe3c015c02ef069b110e30f3e84cf49 files/digest-fvwm-2.5.8-r3 127
 MD5 c3ea3b9a8c5d7700913a795096e0b51a files/digest-fvwm-2.5.8-r4 127
+MD5 c3ea3b9a8c5d7700913a795096e0b51a files/digest-fvwm-2.5.8-r5 127
 MD5 97373a30210df0b93c59e2aac76d17e0 files/fvwm-2.5.8-undermouse.diff 2534
