@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.17 2002/07/16 04:40:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.18 2002/07/17 20:25:16 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -74,6 +74,9 @@ need-kde() {
 
 set-kdedir() {
 
+	# NOTE: version 5 (no minor version or revision)
+	# are the new cvs ebuilds; these go into /usr/kde/cvs
+
 	debug-print-function $FUNCNAME $*
 
 	case "$1" in
@@ -85,6 +88,10 @@ set-kdedir() {
 	    need-autoconf 2.5
 	    need-automake 1.4
 	    ;;
+		5*)
+		need-autoconf 2.5
+		need-automake 1.4
+		;;
 	esac
 	
 	# get version elements
@@ -98,11 +105,13 @@ set-kdedir() {
 	done
 	IFS=$IFSBACKUP
 	
-	# set install location.
-	# 3rd party apps go into /usr/kde/$MAJORVER by default
-	# a kde version goes into /usr/kde/$MAJORVER.$MINORVER by default
-	# and has a SLOT that includes the major and minor version
-	# if $KDE3DIR is defined (by the user), it overrides everything
+	# set install location:
+	# - 3rd party apps go into /usr/kde/$MAJORVER by default and have SLOT="$MAJORVER"
+	# - kde-base ebuilds go into /usr/kde/$MAJORVER.$MINORVER by default
+	# and have SLOT="$MAJORVER.$MINORVER"
+	# - kde-base cvs ebuilds have major version 5 and go into /usr/kde/cvs by default;
+	# they have SLOT="cvs"
+	# - if $KDE3DIR is defined (by the user), it overrides everything
 	# and both base and 3rd party kde stuff goes in there, while
 	# using the kdelibs (assumedly) present in $KDE3LIBSDIR
 	# which equals $KDE3DIR if not set (for kde3, same applies to kde2 with $KDE2DIR etc.)
@@ -111,66 +120,86 @@ set-kdedir() {
 	
 	case $KDEMAJORVER in
 	    2)
-		if [ -n "$KDE2DIR" ]; then
-		    export PREFIX=${KDE2DIR}
-		    export KDEDIR=${KDE2LIBSDIR}
-		else
-		    export PREFIX=/usr/kde/2
-		    # backward compatibility, kde 2.2.2 goes in /usr/kde/2 not /usr/kde/2.2
-		    export KDEDIR=/usr/kde/2
-		fi
-		;;
-	    3)
-		if [ -n "$KDE3DIR" ]; then
-		    # override all other considerations
-		    export PREFIX=${KDE3DIR}
-		else
-		    # base kde part
-		    if [ "${INHERITED//kde-dist}" != "${INHERITED}" -o PN=kdelibs -o PN=arts ]; then
-			case $KDEMINORVER in
-		    	    "")	export PREFIX=/usr/kde/3
-				;;
-			    0)	export PREFIX=/usr/kde/3
-				# kde 3.1 alphas
-				[ "$KDEREVISION" -ge 6 ] && export PREFIX=/usr/kde/3.1
-				;;
-			    1)	export PREFIX=/usr/kde/3.1
-				;;
-			    2)	export PREFIX=/usr/kde/3.2
-				;;
-			esac
-		    else
-			# 3rd party kde app
-			export PREFIX=/usr/kde/3
-		    fi
-		fi
+			if [ -n "$KDE2DIR" ]; then
+				export PREFIX=${KDE2DIR}
+				export KDEDIR=${KDE2LIBSDIR}
+			else
+				export PREFIX=/usr/kde/2
+				# backward compatibility, kde 2.2.2 goes in /usr/kde/2 not /usr/kde/2.2
+				export KDEDIR=/usr/kde/2
+			fi
+			;;
+		3)
+			if [ -n "$KDE3DIR" ]; then
+				# override all other considerations
+				export PREFIX=${KDE3DIR}
+			else
+				# base kde part
+				if [ "${INHERITED//kde-dist}" != "${INHERITED}" -o PN=kdelibs -o PN=arts ]; then
+					case $KDEMINORVER in
+						"")	export PREFIX=/usr/kde/3
+							;;
+						0)	export PREFIX=/usr/kde/3
+							# kde 3.1 alphas
+							[ "$KDEREVISION" -ge 6 ] && export PREFIX=/usr/kde/3.1
+							;;
+						1)	export PREFIX=/usr/kde/3.1
+							;;
+						2)	export PREFIX=/usr/kde/3.2
+							;;
+					esac
+				else
+					# 3rd party kde app
+					export PREFIX=/usr/kde/3
+				fi
+			fi
 		
-		# set kdelibs location
-		# KDE3LIBSDIR overrides all considerations
-		if [ -n "$KDE3LIBSDIR" ]; then
-		    export KDEDIR=${KDE3LIBSDIR}
-		else
-		    # for kde base, equal to prefix
-		    if [ "${INHERITED//kde-dist}" != "$INHERITED" ] || [ "$PN" == kdelibs ] || [ "$PN" == arts ]; then
-			debug-print "base package"
-			export KDEDIR=$PREFIX
-		    else
+			# set kdelibs location
+			# KDE3LIBSDIR overrides all considerations
+			if [ -n "$KDE3LIBSDIR" ]; then
+				export KDEDIR=${KDE3LIBSDIR}
+			else
+			# for kde base, equal to prefix
+				if [ "${INHERITED//kde-dist}" != "$INHERITED" ] || [ "$PN" == kdelibs ] || [ "$PN" == arts ]; then
+					debug-print "base package"
+					export KDEDIR=$PREFIX
+				else
 			# for everything else: try to locate latest version
 			# of kdelibs installed. if yours is outside the standard
 			# paths, that's what KDE3LIBSDIR is for, use it
-			for x in /usr/kde/{cvs,3.2,3.1,3.0,3} $KDEDIR $KDE3DIR $KDE3LIBSDIR /usr/kde/*; do
-			    debug-print "checking for $x/include/kwin.h..."
-			    if [ -f "${x}/include/kwin.h" ]; then
-				debug-print found
-				export KDEDIR="$x"
-				break
-			    fi
-			done
-		    fi
-		fi
-		
+					for x in /usr/kde/{cvs,3.2,3.1,3.0,3} $KDEDIR $KDE3DIR $KDE3LIBSDIR /usr/kde/*; do
+						debug-print "checking for $x/include/kwin.h..."
+						if [ -f "${x}/include/kwin.h" ]; then
+							debug-print found
+							export KDEDIR="$x"
+							break
+						fi
+					done
+				fi
+			fi
 		;;
-	esac
+		
+		5)
+		# cvs
+			if [ -n "$KDECVSDIR" ]; then
+				# override all other considerations
+				export PREFIX="${KDECVSDIR}"
+			else
+				# cvs ebuilds are all from kde-base
+				export PREFIX="/usr/kde/cvs"
+			fi
+		
+			# set kdelibs location
+			# KDECVSLIBSDIR overrides all considerations
+			if [ -n "$KDECVSLIBSDIR" ]; then
+				export KDEDIR=${KDECVSLIBSDIR}
+			else
+				# for kde base, equal to prefix
+				export KDEDIR=$PREFIX
+			fi
+		;;
+
+	esac # $KDEMAJORVER in
 
 	# check that we've set everything
 	[ -z "$PREFIX" ] && die "$ECLASS: Error: could set install prefix, consult log"
@@ -217,6 +246,7 @@ qtver-from-kdever() {
 	case $1 in
 		2*)	ver=2.3.1;;
 		3*)	ver=3.0.3;;
+		5)	ver=3.0.3;; # cvs version
 		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
