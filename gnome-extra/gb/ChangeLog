@@ -1,17 +1,20 @@
 # ChangeLog for gnome-extra/gb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gb/ChangeLog,v 1.3 2002/07/25 03:10:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gb/ChangeLog,v 1.4 2002/10/19 22:07:51 cselkirk Exp $
 
+*gb-0.0.20-r1 (1 Feb 2002)
+  
+  20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> gb-0.0.17.ebuild
+  gb-0.0.20-r1.ebuild :
 
+  Added ppc to KEYWORDS.
+  
   25 Jul 2002; Spider <spider@gentoo.org>
   SLOT KEYWORDS and LICENSE added
     
   18 Feb 2002; M.Schlemmer <azarah@gentoo.org> gb-0.0.17.ebuild :
 
   Added back for Gnumeric to have working GB support.
-
-*gb-0.0.20-r1 (1 Feb 2002)
-
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
