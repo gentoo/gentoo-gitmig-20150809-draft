@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/kde-i18n-af
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-af/ChangeLog,v 1.9 2002/12/21 19:46:03 hannes Exp $
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-af/ChangeLog,v 1.10 2003/01/11 17:09:19 hannes Exp $
+
+*kde-i18n-af-3.1_rc6 (11 Jan 2003)
+
+  11 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kde-i18n-af-3.1_rc6.ebuild:
+  version bump
 
 *kde-i18n-af-3.0.5a (21 Dec 2002)
 
