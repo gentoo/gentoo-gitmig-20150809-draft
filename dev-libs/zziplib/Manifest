@@ -1,19 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2ebf58f7b8c13727d1d72f9f1f6e60a zziplib-0.13.33.ebuild 907
-MD5 4ef73d7837e8b1d5fbdf4f1c8ca6a50f zziplib-0.10.82.ebuild 971
-MD5 97cf739b7e790c28e686c378695fad69 zziplib-0.13.26.ebuild 934
-MD5 1d6b7863fd85edbb451caf130a9e753c zziplib-0.13.36.ebuild 904
-MD5 f7e3fec226209493e91e4d975792507c ChangeLog 1279
-MD5 aba0f2b1c4a7c38014bbd1eb2e3d4f29 files/digest-zziplib-0.10.82 68
-MD5 922d62e282fd162475acbc778d70fa9e files/digest-zziplib-0.13.26 68
-MD5 417df12e646b2add64e0a6b181aaa4bd files/digest-zziplib-0.13.33 68
+MD5 403182553cf0065e518b522dce45bdb1 ChangeLog 1438
+MD5 dc87558c4354cd343aa09d6d60927cac zziplib-0.13.36.ebuild 912
 MD5 8c8297e1f481bd0a0e076393cd827e40 files/digest-zziplib-0.13.36 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOegJ/rLF9B432nYRAj76AJoC1tDn9DTXc7wPp+HQeylcqnIbIQCghK1x
-h4+YqQaH3yjPw0MpG79bNkE=
-=GuOI
------END PGP SIGNATURE-----
