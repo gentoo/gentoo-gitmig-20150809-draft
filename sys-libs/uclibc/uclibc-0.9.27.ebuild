@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.12 2005/03/10 19:51:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.13 2005/03/14 23:01:35 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -283,8 +283,8 @@ src_install() {
 	rm -rf "${D}"$(alt_prefix)/include/{asm,linux,asm-generic}
 
 	# clean up misc cruft
-	find "${D}"$(alt_prefix)/include -type d '(' -name CVS -o -name .svn ')' | xargs rm -r
-	find "${D}"$(alt_prefix)/include -type f -name .cvsignore | xargs rm -f
+	find "${D}"$(alt_prefix)/include -type d '(' -name CVS -o -name .svn ')' -print0 | xargs -0 rm -r
+	find "${D}"$(alt_prefix)/include -type f -name .cvsignore -print0 | xargs -0 rm -f
 
 	# Make sure we install the sys-include symlink so that when 
 	# we build a 2nd stage cross-compiler, gcc finds the target 
