@@ -1,0 +1,9 @@
+# ChangeLog for sys-libs/csu
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.1 2004/11/15 06:39:41 kito Exp $
+
+*csu-46 (15 Nov 2004)
+
+  15 Nov 2004; Kito <kito@gentoo.org> +csu-46.ebuild:
+  initial import. added ~ppc-macos
+
