@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <avenj@gentoo.org> (18 Sep 2003)
+# Not available to non-premier users yet
+=dev-lang/icc-7.1.029
+
 # msterret@gentoo.org (17 Sep 2003)
 # No need for the cvs snap anymore since the beta is out.
 =games-strategy/freeciv-1.15.0_alpha20030901
