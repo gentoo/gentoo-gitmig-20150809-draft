@@ -1,12 +1,12 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.46 2005/03/30 19:16:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.47 2005/03/30 19:20:09 chainsaw Exp $
 
   30 Mar 2005; Tony Vroon <chainsaw@gentoo.org>
   beep-media-player-0.9.7-r2.ebuild, beep-media-player-0.9.7-r3.ebuild,
   beep-media-player-0.9.7-r4.ebuild:
   -r4 stable on x86. Dependency update, pkg-config wasnt explicitly depended
-  upon.
+  upon. Closes bug #87311.
 
   04 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   beep-media-player-0.9.7-r3.ebuild:
