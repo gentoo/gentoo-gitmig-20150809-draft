@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r1.ebuild,v 1.3 2004/12/15 23:10:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r1.ebuild,v 1.4 2005/01/16 15:16:18 gmsoft Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/libs/X/xview/${MY_PN}.src.tar.gz
 S=${WORKDIR}/${MY_PN}
 LICENSE="sun-openlook"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11"
