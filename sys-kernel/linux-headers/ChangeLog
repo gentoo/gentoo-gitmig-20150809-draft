@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.37 2003/12/24 12:09:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.38 2004/01/08 07:04:10 iggy Exp $
+
+  08 Jan 2004; Brian Jackson <iggy@gentoo.org> linux-headers-2.2.20.ebuild,
+  linux-headers-2.2.21_pre3.ebuild, linux-headers-2.4.16-r1.ebuild,
+  linux-headers-2.4.16-r3.ebuild, linux-headers-2.4.16.ebuild,
+  linux-headers-2.4.17-r3.ebuild, linux-headers-2.4.17-r4.ebuild,
+  linux-headers-2.4.17-r5.ebuild, linux-headers-2.4.18-r1.ebuild,
+  linux-headers-2.4.18-r2.ebuild, linux-headers-2.4.18.ebuild,
+  linux-headers-2.4.19-r1.ebuild, linux-headers-2.4.19.ebuild,
+  linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
+  linux-headers-2.4.22.ebuild, linux-headers-2.4.23.ebuild,
+  linux-headers-2.6.0.ebuild:
+  updated ebuild Copyright years
 
 *linux-headers-2.6.0 (24 Dec 2003)
 
