@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r1.ebuild,v 1.1 2002/08/14 03:17:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r1.ebuild,v 1.2 2002/08/14 17:46:43 seemant Exp $
 
 MY_P=linux-${PV/./}
 S=${WORKDIR}
@@ -11,8 +11,6 @@ HOMEPAGE="http://www.adobe.com/products/acrobat/"
 SLOT="0"
 LICENSE="Adobe"
 KEYWORDS="x86 -ppc"
-
-DEPEND="sys-apps/supersed"
 
 RESTRICT="nostrip"
 
@@ -37,7 +35,9 @@ src_install () {
 	done
 	
 
-	sed -i "s:\$PROG =.*:\$PROG = '${INSTALLDIR}/acroread.real'" acroread
+	mv acroread acroread.sed
+	sed -e "s:\$PROG =.*:\$PROG = '${INSTALLDIR}/acroread.real'" \
+		acroread.sed > acroread
 	
 	exeinto ${INSTALLDIR}
 	doexe acroread
