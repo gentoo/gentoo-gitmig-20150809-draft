@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.7.3-r1.ebuild,v 1.3 2004/05/26 20:01:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.7.3-r1.ebuild,v 1.4 2004/05/26 20:04:26 taviso Exp $
 
 inherit eutils python
 
@@ -39,7 +39,6 @@ src_install() {
 	dohtml ${S}/doc/README.html
 
 	dobin ${T}/treeline
-	prepalldocs
 }
 
 pkg_postinst() {
