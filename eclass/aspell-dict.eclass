@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.30 2004/10/03 22:13:56 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.31 2005/02/20 10:17:01 arj Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -24,14 +24,15 @@ SRC_URI="ftp://ftp.gnu.org/gnu/aspell/dict/${SPELLANG}/${MY_P}.tar.bz2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
 
 if [ x${ASPOSTFIX} = x6 ] ; then
 	RDEPEND=">=app-text/aspell-0.60
 		sys-apps/which"
+        KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 else
 	RDEPEND=">=app-text/aspell-0.50
 		sys-apps/which"
+        KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
 fi
 
 PROVIDE="virtual/aspell-dict"
