@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.3 2003/10/25 11:56:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.4 2003/11/01 07:11:42 mr_bones_ Exp $
+
+  31 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  advancemame-0.70.0.ebuild, advancemame-0.76.0.ebuild:
+  These need >=svgalib-1.9 and that's not stable yet.  Marked ~x86 for now.
 
 *advancemame-0.76.0 (25 Oct 2003)
 
