@@ -21,19 +21,19 @@ if [ "$USEPEERDNS" ]; then
 
 	if [ "$REALRESOLVCONF" != "/etc/ppp/resolv.conf" ]; then
 
-	# merge the new nameservers with the other options from the old configuration
-	{
-		grep --invert-match '^nameserver[[:space:]]' $REALRESOLVCONF
-		cat /etc/ppp/resolv.conf
-	} > $REALRESOLVCONF.tmp
+		# merge the new nameservers with the other options from the old configuration
+		{
+			grep --invert-match '^nameserver[[:space:]]' $REALRESOLVCONF
+			cat /etc/ppp/resolv.conf
+		} > $REALRESOLVCONF.tmp
 
-	# backup the old configuration and install the new one
-	cp -a $REALRESOLVCONF $REALRESOLVCONF.pppd-backup
-	mv $REALRESOLVCONF.tmp $REALRESOLVCONF
+		# backup the old configuration and install the new one
+		cp -a $REALRESOLVCONF $REALRESOLVCONF.pppd-backup
+		mv $REALRESOLVCONF.tmp $REALRESOLVCONF
 
-	# correct permissions
-	chmod 640 /etc/resolv.conf
-	chown root:users /etc/resolv.conf
+		# correct permissions
+		chmod 644 /etc/resolv.conf
+		chown root:root /etc/resolv.conf
 
 	fi
 
