@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/darcs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.27 2004/12/15 11:01:38 kosmikus Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.28 2005/01/17 13:48:10 kosmikus Exp $
+
+  17 Jan 2005; Andres Loeh <kosmikus@gentoo.org> -darcs-0.9.20.ebuild,
+  darcs-0.9.23.ebuild, darcs-1.0.1.ebuild:
+  Disabled wxwindows USE flag in 0.9.23 because of bug #77559. Marked 1.0.1
+  stable on x86.
 
 *darcs-1.0.1 (15 Dec 2004)
 
