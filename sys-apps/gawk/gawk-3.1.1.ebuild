@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0-r2.ebuild,v 1.5 2002/07/16 05:50:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.1.ebuild,v 1.1 2002/07/21 16:36:05 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU awk pattern-matching language"
@@ -31,18 +31,20 @@ src_compile() {
 src_install() {
 
 	make prefix=${D}/usr \
+		bindir=${D}/bin \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		libexecdir=${D}/usr/lib/awk \
 		install || die
 		
-	cd ${D}/usr/bin
+	cd ${D}/bin
 	rm -f gawk
 	ln -s gawk-${PV} gawk
 	#compat symlink
-	dodir /bin
-	cd ${D}/bin
-	ln -s /usr/bin/gawk-${PV} awk
+	dodir /usr/bin
+	cd ${D}/usr/bin
+	ln -s /bin/gawk-${PV} awk
+	ln -s /bin/gawk-${PV} gawk
 	
 	cd ${S}
 	if [ -z "`use build`" ] 
