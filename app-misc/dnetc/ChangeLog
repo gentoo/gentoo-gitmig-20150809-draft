@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.25 2004/06/02 02:10:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.26 2004/06/14 16:49:04 aliz Exp $
+
+  14 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9007.489.ebuild:
+  Unmasked on x86.
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> dnetc-2.9001.478.ebuild,
   dnetc-2.9002.479.ebuild, dnetc-2.9003.481-r1.ebuild,
