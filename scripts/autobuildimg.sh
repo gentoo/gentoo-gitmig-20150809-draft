@@ -12,6 +12,7 @@ TODAY=`date '+%Y%m%d'`
 [ -z "${PORTDIR}" ] && PORTDIR=/usr/portage
 [ -z "${BUILDTARBALL}" ] && BUILDTARBALL="build-${TODAY}.tbz2"
 [ -z "${BUILD_PACKAGES}" ] && BUILD_PACKAGES=`ls -1 ${PORTDIR}/files/build-*.packages | sort | tail -1`
+mkdir -p ${PORTDIR}/distribution
 
 echo ">>> Cleaning up ${ROOT}..."
 rm -rf "${ROOT}"
@@ -23,6 +24,7 @@ rm -rf "${ROOT}/tmp"
 mkdir -p ${ROOT}/tmp
 chown root.root ${ROOT}/tmp
 chmod 1777 ${ROOT}/tmp
+mv ${ROOT}/var/db/pkg ${ROOT}/var/db/pkg.build
 
 echo ">>> Creating ${BUILDTARBALL}..."
 cd ${ROOT}
