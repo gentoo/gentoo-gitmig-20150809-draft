@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6-r1.ebuild,v 1.1 2004/05/30 19:41:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6-r1.ebuild,v 1.2 2004/06/07 22:12:12 kugelfang Exp $
 
 IUSE="gtk2 ipv6 ldap crypt xinerama"
 
@@ -61,7 +61,8 @@ src_unpack() {
 		cp ${FILESDIR}/enigmail/Makefile-ipc ${S}/extensions/ipc/Makefile
 	fi
 
-	use amd64 && epatch ${FILESDIR}/mozilla-thunderbird-amd64.patch
+	# not necesary any more - Danny van Dyk <kugelfang@gentoo.org> 2004/06/08
+	# use amd64 && epatch ${FILESDIR}/mozilla-thunderbird-amd64.patch
 }
 
 src_compile() {
