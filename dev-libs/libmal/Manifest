@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 cf564b63f1d4f198e0be57eb8ce4f3ef ChangeLog 1334
-MD5 42abc18d3e29b5b7381bf7f55e7a4e33 libmal-0.31.ebuild 650
+MD5 7874ab468f3d50ad2a329d1e69006adc libmal-0.31.ebuild 655
 MD5 16b15046bc5a6898d09bee4ca7038211 metadata.xml 213
-MD5 0be289d4f4be02c6a02ebcf04c440d2d libmal-0.40.ebuild 653
+MD5 be1f48bb476e28d16a55108dced1183e libmal-0.40.ebuild 659
 MD5 86806cf347927d4f0c7fc8be3f8360c1 files/digest-libmal-0.31 63
 MD5 66013732b55f2ed2fe85e54c040b636a files/digest-libmal-0.40 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdVcXHTu7gpaalycRAuyzAKCwDYaJjojJrI+O4dyPNue+3lO/1wCfdHK/
-Tw67ZUmOvgx6uNjuSBtEIEA=
-=oSHn
+iD8DBQFBdVscHTu7gpaalycRAsMGAJ9CUASBqNWBtzag2KVtice+QwZ2SwCgyGDn
+GHzVT3AiJ50sWOd8x575tfw=
+=DF6H
 -----END PGP SIGNATURE-----
