@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.1.6.ebuild,v 1.1 2000/11/15 16:18:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.1.6.ebuild,v 1.2 2000/11/22 12:23:28 achim Exp $
 
 A=SDL-${PV}.tar.gz
 S=${WORKDIR}/SDL-${PV}
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {                               
   cd ${S}
   try make DESTDIR=${D} install
-  prepman
+  preplib /usr
   dodoc BUGS COPYING CREDITS README* TODO WhatsNew
   docinto html
   dodoc *.html
@@ -38,7 +38,11 @@ src_install() {
   dodoc docs/*.html
   
 }
+pkg_postinst() {
 
+ ldconfig -r ${ROOT}
+
+}
 
 
 

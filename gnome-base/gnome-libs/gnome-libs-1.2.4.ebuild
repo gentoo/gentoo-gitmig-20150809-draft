@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.4.ebuild,v 1.8 2000/11/17 11:15:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.4.ebuild,v 1.9 2000/11/22 12:23:28 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -33,7 +33,11 @@ src_install() {
   rm -rf ${D}/opt/gnome/doc
   dodoc AUTHORS COPYING* ChangeLog README NEWS HACKING
 }
+pkg_postinst() {
 
+  ldconfig -r ${ROOT}
+
+}
 
 
 
