@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre6.ebuild,v 1.3 2003/11/19 07:08:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre6.ebuild,v 1.4 2003/12/07 05:56:48 pylon Exp $
 
 inherit flag-o-matic
 
@@ -96,8 +96,5 @@ pkg_postinst() {
 	einfo "    Packet filtering (CONFIG_IP_NF_FILTER)"
 	einfo "    Full NAT (CONFIG_IP_NF_NAT)"
 	einfo "    MASQUERADE target support (CONFIG_IP_NF_TARGET_MASQUERADE)"
-	echo
-	ewarn "ALSA support on Gentoo hasn't been tested yet.  If you have ALSA"
-	ewarn "working, we would like to hear your results with MOL."
 	echo
 }
