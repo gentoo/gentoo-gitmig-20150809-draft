@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.4 2003/01/18 14:45:19 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.5 2003/01/31 23:18:15 rphillips Exp $
 
 S="${WORKDIR}/cracklib,${PV}"
 DESCRIPTION="Cracklib"
@@ -36,6 +36,8 @@ src_install() {
 	cd ${D}/usr/lib
 	dosym libcrack.so.2.7 /usr/lib/libcrack.so.2
 	cd ${S}
+
+	cp ${S}/cracklib/packer.h ${D}/usr/include
 
 	preplib /usr/lib
 

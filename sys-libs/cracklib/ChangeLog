@@ -1,10 +1,13 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.9 2003/01/18 14:45:19 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.10 2003/01/31 23:18:15 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cracklib-2.7-r6 (25 Oct 2002)
+
+  31 Jan 2003; Ryan Phillips <rphillips@gentoo.org> :
+  Install packer.h into /usr/include
   
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org>
   Added mips to keywords
