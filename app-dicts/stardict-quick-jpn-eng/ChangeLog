@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/stardict-quick-jpn-eng
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-quick-jpn-eng/ChangeLog,v 1.1 2003/07/01 10:00:32 liquidx Exp $
+
+*stardict-quick-jpn-eng-2.1.0 (01 Jul 2003)
+
+  01 Jul 2003; Alastair Tse <liquidx@gentoo.org>
+  stardict-quick-jpn-eng-2.1.0.ebuild:
+  new ebuild for japanese romaji to english dictionary for stardict
+
