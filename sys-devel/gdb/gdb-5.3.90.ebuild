@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.1 2003/09/20 20:22:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.90.ebuild,v 1.2 2003/09/24 09:19:29 weeve Exp $
 
 IUSE="nls objc"
 
@@ -51,7 +51,7 @@ src_unpack() {
 		epatch ${WORKDIR}/patch
 	fi
 
-	if [ "${ARCH}" = "hppa" -a -z "${SNAPSHOT}" ]
+	if [ "${ARCH}" = "hppa" -a -n "${SNAPSHOT}" ]
 	then
 		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-01.patch
 		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-02.patch
@@ -59,12 +59,12 @@ src_unpack() {
 	fi
 
 	# Fix Compile bug on sparc
-	if [ "${ARCH}" = "sparc" -a -z "${SNAPSHOT}" ]
+	if [ "${ARCH}" = "sparc" -a -n "${SNAPSHOT}" ]
 	then
-		epatch ${FILESDIR}/${P}-sparc-nat-asm.patch
+		epatch ${FILESDIR}/${PN}-5.3-sparc-nat-asm.patch
 	fi
 
-	if [ -n "`use objc`" -a -z "${SNAPSHOT}" ]
+	if [ -n "`use objc`" -a -n "${SNAPSHOT}" ]
 	then
 		cd ${WORKDIR}
 		unpack gdb-5_3-objc-patch.tgz

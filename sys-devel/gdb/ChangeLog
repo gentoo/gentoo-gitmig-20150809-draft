@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.22 2003/09/20 20:22:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.23 2003/09/24 09:19:29 weeve Exp $
+
+  24 Sep 2003; Jason Wever <weeve@gentoo.org> gdb-5.3.90.ebuild:
+  Applied patch from Sven Blumenstein <me@pl4.net> to fix sparc and hppa
+  compilation issues, fixes bug #29390.
 
 *gdb-5.3.90 (20 Sep 2003)
 
