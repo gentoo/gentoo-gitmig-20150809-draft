@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.11.ebuild,v 1.4 2004/09/30 18:37:37 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.11.ebuild,v 1.5 2004/09/30 20:57:04 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -293,13 +293,14 @@ pkg_postinst() {
 	einfo "officially supported 'ShowNoIcons' option."
 	echo
 	einfo "The recommended name for your primary configuration file is now"
-	einfo "~/.fvwm/config, of course, all previously supported locations are"
-	einfo "stlil supported, and this can be overridden on the command line."
+	einfo "~/.fvwm/config. Of course, all previous locations are still"
+	einfo "supported, and this can be overridden on the command line."
 	echo
 	einfo "The FvwmButtons 'HoverIcon' feature has been renamed 'ActiveIcon'."
-	einfo "If you have been using the feature, you may also be interested in the"
-	einfo "new 'PressIcon' Feature."
+	einfo "If you have been using this feature, you may also be interested"
+	einfo "in the new 'PressIcon' Option."
 	echo
 	einfo "For in depth information about all changes in this release, please"
 	einfo "refer to the ChangeLog."
+	echo
 }
