@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/freedroid-1.0.2.ebuild,v 1.1 2003/09/15 01:16:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/freedroid-1.0.2.ebuild,v 1.2 2003/09/15 15:22:54 vapier Exp $
 
-inherit games
+inherit games flag-o-matic gcc
+[ "`gcc-fullversion`" == "3.2.3" ] && filter-mfpmath sse
 
 DESCRIPTION="Freedroid - a Paradroid clone"
 HOMEPAGE="http://freedroid.sourceforge.net/"
