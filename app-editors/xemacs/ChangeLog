@@ -1,9 +1,13 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.15 2002/08/05 06:27:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.16 2002/08/06 08:39:02 mkennedy Exp $
 
 *xemacs-21.4.8-r3 (28 Jul 2002)
 
+  05 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  xemacs-21.4.8-r3.ebuild :
+
+  Restored DISABLE_SANDBOX. (the right one this time)
 
   05 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org>
   xemacs-21.4.8-r3.ebuild :
