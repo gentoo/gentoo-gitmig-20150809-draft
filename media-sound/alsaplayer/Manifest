@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d41e2deaa8aef46712f1ede969a217d4 alsaplayer-0.99.75-r1.ebuild 2285
-MD5 be9ff759766379b90f6541db37800e2e ChangeLog 5006
+MD5 ae4836d1ccf5dd6edd99722a2aa5b717 ChangeLog 5185
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
-MD5 32fc0505c89d588eb2c77d98bc65f4a0 alsaplayer-0.99.76.ebuild 1466
-MD5 d7c5048a47693b7a9ba603a3fadd8cd1 files/digest-alsaplayer-0.99.75-r1 71
+MD5 d41e2deaa8aef46712f1ede969a217d4 alsaplayer-0.99.75-r1.ebuild 2285
+MD5 c5f31cdad93bab7eef654e895149a993 alsaplayer-0.99.76.ebuild 1587
 MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76 71
+MD5 4d1180a1109044fb119335839a357f95 files/alsaplayer-endian.patch 1143
 MD5 5c35a3140250067b9e24fea110bde6c4 files/gcc.patch 805
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFCDstPPpIsIjIzwiwRAnpUAKCLoZuk7UFwG6fD0E1kegZEnslgFgCeMWHV
-/XptaTUBl/4lTYM/+aN1D4U=
-=I/Fk
------END PGP SIGNATURE-----
+MD5 d7c5048a47693b7a9ba603a3fadd8cd1 files/digest-alsaplayer-0.99.75-r1 71

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.29 2005/02/13 03:36:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.30 2005/03/06 02:00:06 josejx Exp $
+
+  06 Mar 2005; Joseph Jezak <josejx@gentoo.org>
+  +files/alsaplayer-endian.patch, alsaplayer-0.99.76.ebuild:
+  Added Chris White's patch for big endian machines.  See bug #76409.
 
   12 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
   alsaplayer-0.99.76.ebuild:

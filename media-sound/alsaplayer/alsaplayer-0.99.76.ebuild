@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76.ebuild,v 1.13 2005/02/13 03:36:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76.ebuild,v 1.14 2005/03/06 02:00:06 josejx Exp $
+
+inherit eutils
 
 IUSE="nas nls esd opengl doc oss gtk oggvorbis alsa jack mikmod flac"
 
@@ -10,7 +12,7 @@ SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86 ~mips"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86 ~mips"
 
 RDEPEND=">=dev-libs/glib-1.2.10
 	doc? ( app-doc/doxygen )
@@ -27,6 +29,14 @@ RDEPEND=">=dev-libs/glib-1.2.10
 DEPEND="${RDEPEND}
 	sys-apps/sed
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if use ppc; then
+		epatch ${FILESDIR}/alsaplayer-endian.patch
+	fi
+}
 
 src_compile() {
 	export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include"
