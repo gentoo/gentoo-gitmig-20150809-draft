@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.72 2003/09/20 07:43:36 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.73 2003/10/24 08:08:05 sergey Exp $
+
+*xmms-1.2.8-r3 (24 Oct 2003)
+
+  24 Oct 2003; Sergey Kuleshov <svyatogor@gentoo.org> xmms-1.2.8-r3.ebuild,
+  files/xmms-1.2.8-russian-charset-csa20.patch:
+  Added new version of xmms-russian-charset patch, which solves many bugs (most
+  importantly the UTF ones) and has improved algorithms of encoding detection.
+  So bumped -r to -r3.
 
   20 Sep 2003; jje <jje@gentoo.org> files/xmms-1.2.8-dtd.patch:
   Removed chunk from the dtd patch that overrides the config. Closes #29029.
