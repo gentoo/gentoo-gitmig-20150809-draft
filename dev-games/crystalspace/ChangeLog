@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.4 2004/04/13 09:23:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.5 2004/06/03 21:46:19 lordvan Exp $
+
+  03 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  crystalspace-20030413-r1.ebuild:
+  changed dep for ode to match version 0.039 because it doesn't work with 0.5
 
   13 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   crystalspace-20030413-r1.ebuild:
