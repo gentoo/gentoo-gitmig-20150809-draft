@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.11 2002/12/26 23:07:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.12 2003/02/09 08:04:56 blocke Exp $
+
+*libol-0.3.9 (09 Feb 2003)
+
+  09 Feb 2003; Bruce A. Locke <blocke@shivan.org> libol-0.3.9.ebuild:
+  Version Bumped.
 
 *libol-0.3.6 (26 Dec 2002)
 
