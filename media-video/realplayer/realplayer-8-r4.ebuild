@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r4.ebuild,v 1.2 2003/01/08 23:58:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r4.ebuild,v 1.3 2003/01/12 14:49:57 mholzer Exp $
 
 DESCRIPTION="RealPlayer 8 is a streaming media player"
 HOMEPAGE="http://forms.real.com/real/player/unix/unix.html"
@@ -12,16 +12,16 @@ HOMEPAGE="http://forms.real.com/real/player/unix/unix.html"
 
 if use x86
 then
-	MY_P=rp8_linux20_libc6_i386_cs2.bin
+	A="rp8_linux20_libc6_i386_cs2.bin"
 elif use ppc
 then
-	MY_P=rp8_linux_powerpc_cs1.bin
+	A="rp8_linux_powerpc_cs1.bin"
 elif use sparc
 then
-	MY_P=rp8_linux_sparc_cs1.bin
+	A="rp8_linux_sparc_cs1.bin"
 elif use alpha
 then
-	MY_P=rp8_linux_alpha_rh62_cs1.bin
+	A="rp8_linux_alpha_rh62_cs1.bin"
 fi
 
 
@@ -40,8 +40,7 @@ BASE="/opt/RealPlayer8"
 S=${WORKDIR}
 
 pkg_setup() {
-	if [ ! -f ${DISTDIR}/${MY_P} ]
-	then
+	if [ ! -f ${DISTDIR}/${A} ] ; then
 		eerror "Please go to:"
 		eerror "http://forms.real.com/real/player/unix/unix.html"
 		eerror "And download the appropriate realplayer binary installer"

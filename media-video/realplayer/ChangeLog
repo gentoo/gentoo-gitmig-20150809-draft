@@ -1,9 +1,12 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.6 2003/01/08 23:08:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.7 2003/01/12 14:49:57 mholzer Exp $
 
 
 *realplayer-8-r4 (08 Jan 2003)
+
+  12 Jan 2003; Martin Holzer <mholzer@gentoo.org> realplayer-8-r4.ebuild :
+  Fixed script, now display's how it should do 
 
   08 Jan 2003; Seemant Kulleen <seemant@gentoo.org> realplayer-8-r4.ebuild
   files/realplayer.desktop files/mimeinfo files/digest-realplayer-8-r4 :
