@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rpc2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.11 2004/07/01 22:27:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.12 2004/07/15 20:53:32 dragonheart Exp $
+
+  16 Jul 2004; Daniel Black <dragonheart@gentoo.org> rpc2-1.22.ebuild:
+  lwp added to dependancies as per bug #53561. Thanks to Peter Jensen
+  <gentoo-bugs@pekaje.homeip.netre-vax> and <re-vax@wanadoo.fr>.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> rpc2-1.13.ebuild,
   rpc2-1.19.ebuild, rpc2-1.20.ebuild, rpc2-1.22.ebuild:
