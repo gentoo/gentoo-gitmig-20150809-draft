@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.11 2004/04/28 17:00:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.12 2004/04/28 22:13:14 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -54,6 +54,10 @@ do_filter_flags() {
 	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	replace-flags -O? -O2
 
+	# -mcpu is deprecated, and will actually break the gcc build on
+	# a few archs... use mtune instead
+	setting="`get-flag mcpu`"
+	[ ! -z "${setting}" ] && replace-flags -mcpu="${setting}" -mtune="${setting}"
 	export GCJFLAGS="${CFLAGS/-O?/-O2}"
 }
 
@@ -400,7 +404,7 @@ src_compile() {
 	# Default arch support
 	use amd64 && myconf="${myconf} --with-arch=k8"
 	#use s390 && myconf="${myconf} --with-arch=nofreakingclue"
-	#use x86 && myconf="${myconf} --with-cpu=pentium4 --with-arch=i586"
+	#use x86 && myconf="${myconf} --with-arch=i586"
 	#use mips && myconf="${myconf} --with-arch=mips3"
 
 	do_filter_flags

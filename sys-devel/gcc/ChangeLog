@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.226 2004/04/28 16:36:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.227 2004/04/28 22:13:14 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0.ebuild:
+  fixed things up a bit and added a check that changes the deprecated -mcpu
+  option to -mtune so that libiberty wont break anymore for people with -mcpu in
+  CFLAGS
 
   28 Apr 2004; <solar@gentoo.org> gcc-3.3.3-r3.ebuild:
   More updates for uClibc, cross compiling fixes and addition of
