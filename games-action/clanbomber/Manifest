@@ -1,3 +1,5 @@
 MD5 e2b7d8463098a618a534512c27e44ae0 files/digest-clanbomber-1.04 68
-MD5 6bcf3cfbbd8d0b489cd7b2647888fd5d clanbomber-1.04.ebuild 882
-MD5 b14793076e56ce6aca22b433e4050b68 ChangeLog 366
+MD5 ee76e48cb66f47c894a990e83dea2802 files/1.04-no-display.patch 1122
+MD5 ce353b3c9d04f6d74b8ff4ce6bf301cb clanbomber-1.04.ebuild 911
+MD5 f6677837ab79cb3ae21823ab73c0f465 ChangeLog 490
+MD5 042c680a45dc47c6b52b7f6643ef0ae2 metadata.xml 664
