@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ppmd-9.1.ebuild,v 1.5 2004/03/12 15:17:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ppmd-9.1.ebuild,v 1.6 2004/03/22 10:18:02 seemant Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE=""
 
@@ -19,7 +19,8 @@ SLOT="0"
 LICENSE="public-domain"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips amd64 ~ia64"
 
-DEPEND="app-arch/gzip
+DEPEND=">=sys-apps/sed-4
+	app-arch/gzip
 	sys-devel/patch
 	sys-devel/autoconf
 	sys-devel/automake"
@@ -29,9 +30,14 @@ src_unpack() {
 	cd ${S}
 	epatch ${WORKDIR}/${MY_P}-${PATCHV}.diff
 	chmod +x ${S}/configure
-	head -n 3 Makefile.am > Makefile.am.new
-	mv Makefile.am.new Makefile.am
+	sed -i 3q Makefile.am
 	autoreconf --force || die
+}
+
+src_compile() {
+	replace-flags "-O3" "-O2"
+	econf || die
+	emake || die
 }
 
 src_install() {
