@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.76.ebuild,v 1.8 2003/12/27 02:33:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.76.ebuild,v 1.9 2004/01/05 23:03:24 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail server network protocol front-ends."
@@ -11,8 +11,7 @@ DEPEND="virtual/glibc
 	dev-libs/bglibs"
 
 RDEPEND="net-mail/cvm-vmailmgr
-	net-mail/qmail
-	net-mail/qmail-pop3d"
+	net-mail/qmail"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -21,8 +20,8 @@ KEYWORDS="x86 ~sparc "
 src_compile() {
 	cd ${S}
 	echo "/var/qmail/bin" > conf-bin
-	echo "gcc ${CFLAGS} -I/usr/lib/bglibs/include" > conf-cc
-	echo "gcc -s -L/usr/lib/bglibs/lib" > conf-ld
+	echo "${CC} ${CFLAGS} -I/usr/lib/bglibs/include" > conf-cc
+	echo "${CC} -s -L/usr/lib/bglibs/lib" > conf-ld
 	emake || die
 }
 
