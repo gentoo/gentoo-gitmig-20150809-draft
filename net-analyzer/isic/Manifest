@@ -1,20 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 912245ffd6ba2eda8fe5e616b4113538 ChangeLog 920
-MD5 7ed15bc4dfbe1294874b338dc7360201 isic-0.05-r1.ebuild 791
-MD5 5dc96fc52c25881d7004355a5dd034ae isic-0.05.ebuild 615
-MD5 4f5c9367681616acdacf39757436f12e isic-0.06.ebuild 739
-MD5 48694fb04dc8ea1eddf21fe67bdcf79c metadata.xml 221
+MD5 9ed30806b0485643336d6bebaf885318 ChangeLog 1233
+MD5 5a753cd69cb2271fd2c7657ee7113a56 isic-0.06.ebuild 738
+MD5 f00333dfc594456606fe48bf50a9c392 metadata.xml 320
 MD5 7d4f90aea0221994b56ea15b508e8b92 files/digest-isic-0.06 57
-MD5 dc04d956165e86c16def01ea29593c2f files/0.05-libnet-1.0.patch 1540
-MD5 8289eac05d43982e280d8afc20d7431b files/digest-isic-0.05 57
-MD5 8289eac05d43982e280d8afc20d7431b files/digest-isic-0.05-r1 57
 MD5 761301ac69be4d5a63cf74dd9a933115 files/isic-0.06-makefile.patch 1495
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB36/emdTrptrqvGERAoBYAKCLZqX3z7ipF9iomezaVqyedR+ScwCfYVOC
-D4dfr7gSrqEAQPEeJEz/GFo=
-=Qu0w
+iD8DBQFB4GA1mdTrptrqvGERAvskAJ46KKiDnyyNEDjcTAWPEU//C9wVYwCgmj0Q
+0FRV4IvnSVIPkq5JT3iEDAI=
+=w9TC
 -----END PGP SIGNATURE-----

@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/isic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/ChangeLog,v 1.6 2005/01/08 10:02:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/ChangeLog,v 1.7 2005/01/08 22:35:26 dragonheart Exp $
+
+  09 Jan 2005; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  -files/0.05-libnet-1.0.patch, -isic-0.05-r1.ebuild, -isic-0.05.ebuild,
+  isic-0.06.ebuild:
+  Removed old version as per bug #75193. Old versions had dependancy errors.
+  Vanquirius <marcelogoes@gmail.com> confirmed the new version is working.
 
 *isic-0.06 (08 Jan 2005)
 
