@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.95.ebuild,v 1.3 2004/12/16 05:48:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.95.ebuild,v 1.4 2005/01/10 09:52:07 phosphan Exp $
 
 DESCRIPTION="graphical scanning frontend"
 SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
