@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.7.1.ebuild,v 1.2 2004/07/14 16:21:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.7.1.ebuild,v 1.3 2004/10/17 23:17:20 swegener Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -15,7 +15,7 @@ RESTRICT="nostrip"
 
 KEYWORDS="-* ~x86"
 SLOT="0"
-LICENSE="MPL-1.1 | NPL-1.1"
+LICENSE="MPL-1.1 NPL-1.1"
 IUSE="gnome"
 
 DEPEND="virtual/libc"
