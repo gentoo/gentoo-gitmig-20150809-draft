@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape/netscape-4.76.ebuild,v 1.1 2000/11/04 00:10:07 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape/netscape-4.76.ebuild,v 1.2 2000/12/25 16:17:42 achim Exp $
 
 P=netscape-4.76
 A=communicator-v476-us.x86-unknown-linux2.2.tar.gz
@@ -27,7 +27,7 @@ src_install() {
   rm ${D}/opt/netscape/netscape-dynMotif
   rm ${D}/opt/netscape/libnullplugin-dynMotif.so
   insinto /usr/X11R6/bin
-  doins ${FILES}/netscape 
+  doins ${FILESDIR}/netscape 
   chmod +x ${D}/usr/X11R6/bin/netscape
 }
 
