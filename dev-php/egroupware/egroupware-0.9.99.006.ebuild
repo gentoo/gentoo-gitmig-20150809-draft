@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.006.ebuild,v 1.2 2003/11/04 23:17:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.006.ebuild,v 1.3 2003/11/09 13:26:00 mholzer Exp $
 
 inherit webapp-apache
 
@@ -27,8 +27,8 @@ HTTPD_GROUP="apache"
 
 pkg_setup() {
 	if [ -L ${HTTPD_ROOT}/${PN} ] ; then
-		ewarn "You need to unmerge your old egroupware version first."
-		ewarn "egroupware will be installed into ${HTTPD_ROOT}/${PN}"
+		ewarn "You need to unmerge your old ${PN} version first."
+		ewarn "${PN} will be installed into ${HTTPD_ROOT}/${PN}"
 		ewarn "directly instead of a version-dependant directory."
 		die "need to unmerge old version first"
 	fi
@@ -44,8 +44,6 @@ src_install() {
 	cp -r . ${D}${destdir}
 	cd ${D}/${HTTPD_ROOT}
 	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN}
-	pwd
-	ls -la ${PN}/fudforum
 	# Fix permissions
 	find ${D}${destdir} -type d | xargs chmod 755
 	find ${D}${destdir} -type f | xargs chmod 644
