@@ -1,6 +1,13 @@
 # ChangeLog for app-text/rman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.7 2003/07/17 00:14:01 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.8 2003/09/24 19:06:59 mholzer Exp $
+
+*rman-3.1 (25 Sep 2003)
+
+  25 Sep 2003; Martin Holzer <mholzer@gentoo.org> rman-3.1.ebuild,
+  files/rman-3.1-gentoo.diff:
+  Version bumped. Submitted by José Romildo Malaquias <romildo@uber.com.br> in
+  #23225.
 
   17 Jul 2003; Lars Weiler <pylon@gentoo.org> rman-3.0.9.ebuild:
   Set ppc into KEYWORDS
