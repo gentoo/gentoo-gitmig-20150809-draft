@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/daaplib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.9 2005/01/03 21:15:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.10 2005/01/20 14:29:43 gustavoz Exp $
+
+  20 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> daaplib-0.1.1a.ebuild:
+  Stable on sparc
 
   03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> daaplib-0.1.1a.ebuild:
   Keyworded ~sparc wrt #76093
