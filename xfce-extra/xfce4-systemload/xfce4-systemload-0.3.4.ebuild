@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/xfce4-systemload-0.3.4.ebuild,v 1.11 2004/09/18 16:51:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/xfce4-systemload-0.3.4.ebuild,v 1.12 2004/11/09 03:13:43 vapier Exp $
 
-IUSE=""
 MY_P="${PN}-plugin-${PV}"
 S=${WORKDIR}/${MY_P}
 
@@ -10,9 +9,10 @@ DESCRIPTION="Xfce system load monitor"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ia64 x86 ppc alpha sparc amd64 ~mips hppa ppc64"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
+IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.6
 	dev-libs/libxml2
@@ -22,5 +22,5 @@ DEPEND="${RDEPEND}
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS INSTALL COPYING README
+	dodoc AUTHORS INSTALL README
 }
