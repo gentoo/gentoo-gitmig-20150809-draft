@@ -1,3 +1,5 @@
+MD5 3e22adb9d9c20cf4431528a6a0e56d31 ChangeLog 3323
+MD5 cfb5bff0f62a373549a5f8d510b43340 bidwatcher-1.3.16.ebuild 657
 MD5 8c9b75846511dcd30c0109c6337b0ada bidwatcher-1.3.15.ebuild 659
-MD5 6944285b3a785735873133b415d72ea1 ChangeLog 3196
+MD5 5011f8d46b45b6fb8906deec18ba588c files/digest-bidwatcher-1.3.16 69
 MD5 6bde23e4ad1030f6b7283229901791d4 files/digest-bidwatcher-1.3.15 69
