@@ -1,20 +1,11 @@
 # ChangeLog for sec-policy/selinux-ucspi-tcp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ucspi-tcp/ChangeLog,v 1.5 2004/10/24 16:25:23 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ucspi-tcp/ChangeLog,v 1.6 2004/11/13 20:15:38 kaiowas Exp $
 
-  24 Oct 2004; petre rodan <kaiowas@gentoo.org>
-  selinux-ucspi-tcp-20041016.ebuild:
-  mark stable
+*selinux-ucspi-tcp-20041016 (13 Nov 2004)
 
-*selinux-ucspi-tcp-20041016 (23 Oct 2004)
-
-  23 Oct 2004; petre rodan <kaiowas@gentoo.org> metadata.xml,
-  +selinux-ucspi-tcp-20041016.ebuild:
-  minor changes. updated primary maintainer
-
-*selinux-ucspi-tcp-20031221 (21 Dec 2003)
-
-  21 Dec 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
-  selinux-ucspi-tcp-20031221.ebuild:
-  Initial commit.  Submitted by Petre Rodan.
+  13 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  -selinux-ucspi-tcp-20031221.ebuild, -selinux-ucspi-tcp-20041016.ebuild,
+  +selinux-ucspi-tcp-20041111.ebuild:
+  small name_bind fix for qmail
 
