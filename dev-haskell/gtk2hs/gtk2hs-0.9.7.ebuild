@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.7.ebuild,v 1.1 2005/01/26 17:31:00 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.7.ebuild,v 1.2 2005/03/23 16:15:53 seemant Exp $
 
 inherit base check-reqs ghc-package
 
@@ -19,7 +19,7 @@ DEPEND=">=virtual/ghc-5.04
 		gnome? ( >=gnome-base/libglade-2
 				 >=x11-libs/gtksourceview-0.6
 				 >=gnome-base/gconf-2 )
-		mozilla? ( >=net-www/mozilla-1.4 )
+		mozilla? ( >=www-client/mozilla-1.4 )
 		doc? ( >=dev-haskell/haddock-0.6 )"
 
 pkg_setup() {
