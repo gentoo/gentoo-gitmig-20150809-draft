@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.30 2002/11/16 21:05:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.31 2002/11/29 09:25:51 azarah Exp $
+
+  29 Nov 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.2.0.ebuild :
+  Update DEPEND to include the required versions needed.
 
 *evolution-1.2.0 (16 Nov 2002)
 

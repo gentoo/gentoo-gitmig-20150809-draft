@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.0.ebuild,v 1.1 2002/11/16 21:05:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.0.ebuild,v 1.2 2002/11/29 09:25:51 azarah Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
@@ -24,15 +24,15 @@ RDEPEND="app-text/scrollkeeper
 	>=gnome-base/gnome-common-1.2
 	>=gnome-extra/gal-0.21
 	=gnome-base/gconf-1.0*
-	>=gnome-extra/gtkhtml-1.1.4
-	>=gnome-base/oaf-0.6.7
+	>=gnome-extra/gtkhtml-1.1.5
+	>=gnome-base/oaf-0.6.10
 	>=gnome-base/ORBit-0.5.12
 	( >=gnome-base/libglade-0.17-r1
 	  <gnome-base/libglade-2.0 )		
-	>=media-libs/gdk-pixbuf-0.14.0
-	>=dev-libs/libxml-1.8.16
+	>=media-libs/gdk-pixbuf-0.18.0
+	>=dev-libs/libxml-1.8.17
 	=gnome-base/gnome-vfs-1.0*		
-	>=gnome-base/gnome-print-0.34
+	>=gnome-base/gnome-print-0.35
 	>=dev-util/gob-1.0.12
 	>=net-libs/soup-0.7.4-r1
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
