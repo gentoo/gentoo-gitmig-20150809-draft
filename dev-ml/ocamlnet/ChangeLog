@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.4 2004/06/25 00:02:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.5 2004/08/21 18:38:09 mattam Exp $
+
+*ocamlnet-0.97.1 (19 Aug 2004)
+
+  19 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> ocamlnet-0.97.1.ebuild:
+  Version bump, use findlib eclass.
 
   23 Mar 2004; Matthieu Sozeau <mattam@gentoo.org> ocamlnet-0.95.ebuild:
   Added ~ppc keyword.
