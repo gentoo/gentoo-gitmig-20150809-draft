@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.14 2004/07/31 19:53:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.15 2004/08/01 16:43:16 tgall Exp $
+
+  01 Aug 2004; Tom Gall <tgall@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
+  stable on ppc64, bug #59028
 
   31 Jul 2004; Aron Griffis <agriffis@gentoo.org>
   libstdc++-v3-3.3.3-r1.ebuild:
