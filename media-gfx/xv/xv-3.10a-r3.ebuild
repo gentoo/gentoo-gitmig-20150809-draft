@@ -1,20 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.6 2003/06/16 08:36:19 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.7 2003/08/05 17:17:41 vapier Exp $
 
-inherit ccc
+inherit ccc eutils
 
-IUSE="png"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="An interactive image manipulation program for X which can deal with a wide variety of image formats"
+HOMEPAGE="http://www.trilon.com/xv/index.html"
 SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
 	png? http://www.ibiblio.org/gentoo/distfiles/xv-png-patch.tar.bz2"
-HOMEPAGE="http://www.trilon.com/xv/index.html"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+IUSE="png"
 
 DEPEND="virtual/x11
 	png? ( media-libs/jpeg
@@ -22,38 +20,22 @@ DEPEND="virtual/x11
 	media-libs/libpng
 	>=sys-libs/zlib-1.1.4 )"
 
-PATCHDIR=${WORKDIR}/patches
-
 src_unpack() {
 	unpack ${A}
-	
-	use png && ( \
-		cd ${S}
-		patch -p1 < ${WORKDIR}/${P}-naz-gentoo.patch || die
-	)
-	
-	if [ `use ppc` ] && [ -z `use png` ]
-	then
-		cd ${S}
-		patch -p1 < ${FILESDIR}/xv-${PV}-ppc.patch || die
-	fi
+
+	cd ${S}
+	[ `use png` ] && epatch ${WORKDIR}/${P}-naz-gentoo.patch	
+	[ `use ppc` ] && [ -z `use png` ] && epatch ${FILESDIR}/xv-${PV}-ppc.patch
 }
 
 src_compile() {
-	mv Makefile Makefile.orig
-	sed -e "s:CCOPTS = -O:CCOPTS = ${CFLAGS}:" \
-		Makefile.orig > Makefile
-	cd tiff
-	mv Makefile Makefile.orig
-	sed -e "s:COPTS=\t-O:COPTS= ${CFLAGS}:" \
-		Makefile.orig > Makefile
-	cd ..
+	sed -i "s:CCOPTS = -O:CCOPTS = ${CFLAGS}:" Makefile
+	sed -i "s:COPTS=\t-O:COPTS= ${CFLAGS}:" tiff/Makefile
 	is-ccc && replace-cc-hardcode 
 	make || die
 }
 
-src_install () {
-	
+src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
 	
@@ -64,5 +46,5 @@ src_install () {
 		LIBDIR=${D}/usr/lib \
 		install || die
 
-	 dodoc README INSTALL CHANGELOG BUGS IDEAS docs/*.ps docs/*.doc
+	dodoc README INSTALL CHANGELOG BUGS IDEAS docs/*.ps docs/*.doc
 }

@@ -1,23 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r4.ebuild,v 1.2 2003/08/03 05:04:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r4.ebuild,v 1.3 2003/08/05 17:17:41 vapier Exp $
 
-IUSE="jpeg tiff png zlib X"
+inherit flag-o-matic eutils
 
 DESCRIPTION="An interactive image manipulation program for X which can deal with a wide variety of image formats"
-SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz"
 HOMEPAGE="http://www.trilon.com/xv/index.html"
+SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+LICENSE="as-is"
 SLOT="0"
-LICENSE="shareware; only free for personal use."
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE="jpeg tiff png zlib X"
+RESTRICT="fetch"
 
 DEPEND="virtual/x11
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5 )
 	png? ( >=media-libs/libpng-1.2 )
 	>=sys-libs/zlib-1.1.4"
-RESTRICT="fetch"
 
 src_unpack() {
 	unpack ${A}
@@ -25,42 +26,19 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-enhanced-Nu.patch || die
 	epatch ${FILESDIR}/${P}-gentoo-Nu.patch || die
-	
-	if [ `use ppc` ] 
-	then
-		cd ${S}
-		patch -p1 < ${FILESDIR}/${P}-ppc.patch || die
-	fi
+	[ `use ppc` ] && epatch ${FILESDIR}/${P}-ppc.patch
 }
 
 src_compile() {
-	if [ `use jpeg` ]
-	then
-		export CFLAGS="${CFLAGS} -DDOJPEG"
-	fi
-
-	if [ `use png` ]
-	then
-		export CFLAGS="${CFLAGS} -DDOPNG"
-	fi
-
-	if [ `use tiff` ]
-	then
-		export CFLAGS="${CFLAGS} -DDOTIFF"
-	fi
-	mv Makefile Makefile.orig
-	sed -e "s:CCOPTS = -O:CCOPTS = ${CFLAGS}:" \
-		Makefile.orig > Makefile
-	cd tiff
-	mv Makefile Makefile.orig
-	sed -e "s:COPTS=\t-O:COPTS= ${CFLAGS}:" \
-		Makefile.orig > Makefile
-	cd ..
+	[ `use jpeg` ] && append-flags -DDOJPEG
+	[ `use png` ] && append-flags -DDOPNG
+	[ `use tiff` ] && append-flags -DDOTIFF
+	sed -i "s:CCOPTS = -O:CCOPTS = ${CFLAGS}:" Makefile
+	sed -i "s:COPTS=\t-O:COPTS= ${CFLAGS}:" tiff/Makefile
 	make || die
 }
 
-src_install () {
-	
+src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
 	
@@ -71,5 +49,5 @@ src_install () {
 		LIBDIR=${D}/usr/lib \
 		install || die
 
-	 dodoc README INSTALL CHANGELOG BUGS IDEAS docs/*.ps docs/*.doc
+	dodoc README INSTALL CHANGELOG BUGS IDEAS docs/*.ps docs/*.doc
 }

@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r2.ebuild,v 1.14 2003/02/13 12:39:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r2.ebuild,v 1.15 2003/08/05 17:17:40 vapier Exp $
 
-IUSE="png"
+inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An interactive image manipulation program for X which can deal with a wide variety of image formats"
+HOMEPAGE="http://www.trilon.com/xv/index.html"
 SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
 	png? http://www.ibiblio.org/gentoo/distfiles/xv-png-patch.tar.bz2"
-HOMEPAGE="http://www.trilon.com/xv/index.html"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc "
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE="png"
 
 DEPEND="virtual/x11
 	png? ( media-libs/jpeg
@@ -20,30 +20,19 @@ DEPEND="virtual/x11
 	media-libs/libpng
 	>=sys-libs/zlib-1.1.4 )"
 
-PATCHDIR=${WORKDIR}/patches
-
 src_unpack() {
 	unpack ${A}
-	
-	use png && ( \
-		cd ${S}
-		patch -p1 < ${WORKDIR}/${P}-naz-gentoo.patch || die
-	)
-	
-	if [ `use ppc` ] && [ -z `use png` ]
-	then
-		cd ${S}
-		patch -p1 < ${FILESDIR}/xv-${PV}-ppc.patch || die
-	fi
+
+	cd ${S}
+	[ `use png` ] && epatch ${WORKDIR}/${P}-naz-gentoo.patch
+	[ `use ppc` ] && [ -z `use png` ] && epatch ${FILESDIR}/xv-${PV}-ppc.patch
 }
 
 src_compile() {
-	
 	make || die
 }
 
-src_install () {
-	
+src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
 	
@@ -54,5 +43,5 @@ src_install () {
 		LIBDIR=${D}/usr/lib \
 		install || die
 
-	 dodoc README INSTALL CHANGELOG BUGS IDEAS
+	dodoc README INSTALL CHANGELOG BUGS IDEAS
 }
