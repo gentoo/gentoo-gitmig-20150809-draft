@@ -1,16 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05-r2.ebuild,v 1.2 2002/07/05 00:03:31 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05-r2.ebuild,v 1.3 2002/07/10 07:11:53 drobbins Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU Ghostscript"
 SRC_URI="http://download.sourceforge.net/ghostscript/${P}.tar.bz2
 	 http://download.sourceforge.net/gs-fonts/ghostscript-fonts-std-6.0.tar.gz
 	 http://download.sourceforge.net/gs-fonts/gnu-gs-fonts-other-6.0.tar.gz
-	 http://lxm3200.sourceforge.net/lxm3200-0.4.1-gs5.50-src.tar.gz"
-
-use cups && SRC_URI="${SRC_URI}
-	ftp://ftp.easysw.com/pub/cups/1.1.15/cups-1.1.15-1-source.tar.bz2"
+	 http://lxm3200.sourceforge.net/lxm3200-0.4.1-gs5.50-src.tar.gz
+	cups? ftp://ftp.easysw.com/pub/cups/1.1.15/cups-1.1.15-1-source.tar.bz2"
 HOMEPAGE="http://www.cs.wisc.edu/~ghost/"
 DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
