@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1507d781327dfc350a7eb9ef72f32fe1 unrar-3.4.2.ebuild 658
-MD5 3846e234d37e2650f52d6629d7dd92a5 ChangeLog 5935
-MD5 f0b34774d4dab215ef38621830607a34 unrar-3.4.3.ebuild 674
-MD5 2c87fa64b0202b7a9fd0e8a9fbc0a623 unrar-3.4.1.ebuild 658
+MD5 f8874db34b1e5691ed7a8fa60429088a ChangeLog 6036
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
-MD5 3768e409b5d3aadc7f21c6a5da615ef2 files/digest-unrar-3.4.3 66
-MD5 8818046df86873479674bf33aceef2dd files/digest-unrar-3.4.2 66
+MD5 2c87fa64b0202b7a9fd0e8a9fbc0a623 unrar-3.4.1.ebuild 658
+MD5 35fa04dc1f526c0483a7e7ee9f9987ec unrar-3.4.2.ebuild 655
+MD5 87844c6184d4bffd330e68c984069c0c unrar-3.4.3.ebuild 674
 MD5 f9f393a40de80264e70980046324be99 files/digest-unrar-3.4.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB7Ea+ugEuf3OQ0akRAm/+AJ0TcGvG+QN9zZ6q0m9fzxixWz47aQCeMIyH
-on7lKz7wYPBjcQ3n/kA/MXk=
-=5UPt
------END PGP SIGNATURE-----
+MD5 8818046df86873479674bf33aceef2dd files/digest-unrar-3.4.2 66
+MD5 3768e409b5d3aadc7f21c6a5da615ef2 files/digest-unrar-3.4.3 66
