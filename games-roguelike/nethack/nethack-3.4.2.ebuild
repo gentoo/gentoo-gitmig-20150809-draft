@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.2.ebuild,v 1.3 2003/10/06 06:59:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.2.ebuild,v 1.4 2003/11/04 07:45:20 vapier Exp $
 
 inherit games eutils flag-o-matic gcc
 append-flags -I../include
@@ -137,5 +137,11 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
+	if [ `use qt` ] ; then
+		if has_version '=x11-libs/qt-3.1*' ; then
+			ewarn "the qt frontend may be a little unstable with this version of qt"
+			ewarn "please see Bug 32629 for more information"
+		fi
+	fi
 	einfo "you may want to look at /etc/skel/.nethackrc for interesting options"
 }
