@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/libconf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.16 2005/02/19 16:33:54 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.17 2005/03/07 16:40:02 corsair Exp $
+
+  07 Mar 2005; Markus Rothe <corsair@gentoo.org> libconf-0.39.8.ebuild:
+  Stable on ppc64
 
 *libconf-0.39.11 (19 Feb 2005)
 
