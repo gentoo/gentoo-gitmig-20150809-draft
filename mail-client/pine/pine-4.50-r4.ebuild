@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.5 2004/07/01 19:49:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.6 2004/07/14 16:25:51 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/${PN}/${PN}${PV}.tar.gz
 LICENSE="PICO"
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
-IUSE="ssl ldap debug"
+IUSE="debug ldap mbox ssl"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.1

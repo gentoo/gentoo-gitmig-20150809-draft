@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.58-r2.ebuild,v 1.6 2004/07/01 19:49:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.58-r2.ebuild,v 1.7 2004/07/14 16:25:51 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.washington.edu/pine/
 LICENSE="PICO"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-IUSE="ssl ldap passfile"
+IUSE="debug ldap passfile ssl"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4
