@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.4.ebuild,v 1.1 2004/08/30 18:28:06 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.4.ebuild,v 1.2 2004/09/04 16:13:07 axxo Exp $
 
 inherit java-pkg
 
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.3
 		dev-java/commons-cli
 		dev-java/commons-collections
 		dev-java/commons-logging
-		dev-java/regexp-bin"
+		>=dev-java/regexp-1.3-r1"
 
 src_compile() {
 	local antflags="compile.checkstyle"
