@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1_beta1.ebuild,v 1.4 2004/09/10 11:24:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1_beta1.ebuild,v 1.5 2005/01/22 15:35:19 luckyduck Exp $
 
 DESCRIPTION="A fully functional ldap browser written in java."
 HOMEPAGE="http://jxplorer.org/"

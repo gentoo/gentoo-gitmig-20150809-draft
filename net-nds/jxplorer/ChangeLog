@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/jxplorer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.4 2004/09/10 11:24:56 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.5 2005/01/22 15:35:19 luckyduck Exp $
+
+*jxplorer-3.1_rc4 (22 Jan 2005)
+
+  22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/jxplorer-gentoo.patch, +files/jxplorer-log4j.patch,
+  +files/jxplorer.sh, +jxplorer-3.1_rc4.ebuild:
+  version bump. now we build jxplorer from source and we also dont make use of
+  packed jars any longer. fixes bug #63243.
 
   10 Sep 2004; <blubb@gentoo.org> jxplorer-3.1_beta1.ebuild:
   added ~amd64 keyword
