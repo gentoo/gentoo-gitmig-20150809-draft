@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/prime-dict-0.8.2.ebuild,v 1.1 2004/04/30 15:30:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/prime-dict-0.8.2.ebuild,v 1.2 2004/05/22 18:38:33 usata Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://taiyaki.org/prime/"
 SRC_URI="http://prime.sourceforge.jp/src/${P/_/-}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="x86 alpha ppc"
 SLOT="0"
 S="${WORKDIR}/${P%_*}"
 
