@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3-r1.ebuild,v 1.6 2005/02/11 23:02:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3-r1.ebuild,v 1.7 2005/03/06 19:12:12 hansmi Exp $
 
 IUSE="${IUSE} apache2"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 PROVIDE="virtual/php-${PV} virtual/httpd-php-${PV}"
 
 detectapache() {
