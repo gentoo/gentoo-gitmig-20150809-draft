@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.12.ebuild,v 1.2 2003/02/24 22:39:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.12.ebuild,v 1.3 2003/02/25 21:30:12 mholzer Exp $
 
 IUSE="doc python aalib"
 
-inherit debug
+inherit debug flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Development series of Gimp"
@@ -13,6 +13,8 @@ HOMEPAGE="http://www.gimp.org/"
 SLOT="1.4"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
+
+replace-flags -Os -O2
 
 #libglade
 RDEPEND=">=x11-libs/gtk+-2
