@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.10.ebuild,v 1.3 2001/08/31 21:47:40 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.10.ebuild,v 1.4 2001/08/31 22:39:19 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome install || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
