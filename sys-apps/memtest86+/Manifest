@@ -1,10 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 689ed7a30f6901644563c492004707e2 memtest86+-1.15.ebuild 1997
 MD5 ed60e912f863381715e099326bfed556 memtest86+-1.0.ebuild 1964
+MD5 a2ad1c086797efaac8e131ccd3ea0932 memtest86+-1.25.ebuild 1855
 MD5 0ab0adf7eda2bec891e16e52e6b2d92d memtest86+-1.20.ebuild 1940
 MD5 033049c23ae11ee3f82ce929b6efdec3 memtest86+-1.11.ebuild 1989
-MD5 d2dcb953161f17210f7fa9ddc5b0710b ChangeLog 1653
+MD5 7569ea57d4d11fc7b4da7d81d161beb9 ChangeLog 1777
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 0782c1c3a12f88f4b728016925d26bd3 files/digest-memtest86+-1.0 72
 MD5 f128d61e79967e3bc5f9f9beb73a4a23 files/digest-memtest86+-1.11 72
 MD5 0bfcaf72ce7088b75ff6a6f688a91afa files/digest-memtest86+-1.15 72
 MD5 cbc6e195dcb7b389d62d08a07d95dd88 files/digest-memtest86+-1.20 67
+MD5 8c3712269e1cba14b23b3ab215cf6628 files/digest-memtest86+-1.25 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBNbcfchej4aZK9/cRAt6eAJ9s960jMXDFQp5KLEC2FYtg3X/9oACfckO7
+smABAD9QLqK+moct1QI2KY8=
+=L/jm
+-----END PGP SIGNATURE-----
