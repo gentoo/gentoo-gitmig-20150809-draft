@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author David Chamberlain <daybird@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.15.ebuild,v 1.2 2002/05/09 14:59:33 daybird Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xautoconfig is a PPC only config file generator for xfree86"
