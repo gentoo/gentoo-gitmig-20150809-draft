@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.4 2001/06/04 21:57:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.5 2001/06/09 12:00:51 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -19,7 +19,7 @@ DEPEND=">=media-libs/imlib-1.9.8.1
         opengl? ( >=x11-libs/gtkglarea-1.2.2 )
 	gnome? ( >=gnome-base/gnome-core-1.4.0.4 )"
 
-DEPEND=">=media-libs/imlib-1.9.8.1
+RDEPEND=">=media-libs/imlib-1.9.8.1
 	>=dev-libs/libpcre-3.2
 	tcltk? ( >=dev-lang/tcl-tk-8.1.1 )
 	perl? ( >=sys-devel/perl-5.6 )
@@ -28,6 +28,7 @@ DEPEND=">=media-libs/imlib-1.9.8.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
         opengl? ( >=x11-libs/gtkglarea-1.2.2 )
 	gnome? ( >=gnome-base/gnome-libs-1.2.4 )"
+
 src_compile() {
 
     local myconf
