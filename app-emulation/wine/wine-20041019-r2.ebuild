@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.1 2004/10/31 01:19:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.2 2004/10/31 08:39:25 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,9 +37,9 @@ DEPEND="sys-devel/gcc
 
 src_unpack() {
 	unpack Wine-${PV}.tar.gz
-	unpack ${PN}-${STAMP}-fake_windows.tar.bz2
+	unpack ${PN}-${STAMP1}-fake_windows.tar.bz2
 	mkdir misc ; cd misc
-	unpack ${PN}-${STAMP}-misc.tar.bz2
+	unpack ${PN}-${STAMP2}-misc.tar.bz2
 
 	cd ${S}
 	epatch ${WORKDIR}/misc/config.patch
