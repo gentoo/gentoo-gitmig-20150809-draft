@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.2.200503041846.ebuild,v 1.1 2005/03/06 20:18:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.3.200503070918.ebuild,v 1.1 2005/03/07 20:26:31 solar Exp $
 
 inherit flag-o-matic gcc eutils
 
 myPV=${PV:0:5}-${PV:6}
 
 MAINTAINER="solar@gentoo.org"
-DESCRIPTION="Administrative interface for grsecuritys2 access control lists"
+DESCRIPTION="Administrative interface for the grsecurity Role Based Access Control system"
 HOMEPAGE="http://www.grsecurity.net/"
 SRC_URI="http://www.grsecurity.net/gradm-${myPV}.tar.gz"
 #SRC_URI="mirror://gentoo/gradm-${myPV}.tar.gz"
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/gradm-2.1.2-non-interactive.patch
+	#epatch ${FILESDIR}/gradm-2.1.2-non-interactive.patch
 
 	ebegin "Patching Makefile to use gentoo CFLAGS"
 	sed -i -e "s|-O2|${CFLAGS}|" Makefile
