@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.2 2005/03/14 00:25:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.3 2005/03/14 23:18:23 vapier Exp $
 
 inherit eutils toolchain-funcs mono libtool
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.14.2-fix-race.patch
 
 	# bundled libtool seems to be broken so skip certain rpath tests
+	# http://lists.gnu.org/archive/html/bug-libtool/2005-03/msg00070.html
 	sed -i \
 		-e '2iexit 77' \
 		autoconf-lib-link/tests/rpath-3*[ef] || die "sed tests"

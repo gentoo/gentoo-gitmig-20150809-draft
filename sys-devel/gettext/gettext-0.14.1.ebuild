@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.26 2005/03/12 22:13:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.27 2005/03/14 23:18:23 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs mono libtool
 
@@ -10,10 +10,10 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc x86"
 IUSE="emacs nls"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -46,11 +46,6 @@ src_compile() {
 		$(use_enable nls) \
 		|| die
 	emake || die
-}
-
-src_test() {
-	unset LD_PRELOAD
-	make check || die "make check failed"
 }
 
 src_install() {
