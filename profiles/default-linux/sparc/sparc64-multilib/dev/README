@@ -1,3 +1,37 @@
+Make sure you have the latest gcc-config baselayout and portage:
+# emerge -uv gcc-config baselayout portage
+
+Get a multilib stage1 gcc:
+EXTRA_ECONF="--enable-multilib" emerge -v gcc-sparc64
+
+Switch to profile:
+# rm /etc/make.profile
+# ln -s /usr/portage/profiles/default-linux/sparc/sparc64-multilib/dev /etc/make.profile
+
+Change CHOST in /etc/make.conf to sparc64-unknown-linux-gnu (or delete it since
+the profile sets it for us):
+# nano -w /etc/make.conf
+
+Delete the /usr/sparc64-unknown-linux-gnu symlink hackery:
+# rm /usr/sparc64-unknown-linux-gnu
+
+Get a sparc64 binutils:
+# emerge -v binutils
+
+Use binutils-config to choose sparc64-* binutils:
+# binutils-config -l
+# binutils-config <value>
+
+Get a stage1 sparc64 gcc.  We need to trick the build into using the sparc-unknown-linux-gnu toolchain, though:
+# CFLAGS="-O2 -march=ultrasparc -pipe -Dinhibit_libc" GCC_MAKE_TARGET="all" EXTRA_ECONF="--disable-threads --build=sparc-unknown-linux-gnu --host=sparc-unknown-linux-gnu --target=sparc64-unknown-linux-gnu" USE="build static" emerge -v gcc
+
+Use gcc-config to choose sparc64-* gcc:
+# gcc-config -l
+# gcc-config <value>
+
+Use the stage1 gcc to build multilib glibc, full gcc, and updated baselayout:
+# emerge -v glibc gcc baselayout
+
 This profile is purely for development purposes only and is subject to break or
 even disappear.  If if destroys your system, sorry, but you were warned...
 Please let us know, so we can fix the problem, but you ae entering this at

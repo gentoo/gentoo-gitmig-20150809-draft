@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.7 2005/02/10 23:08:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.8 2005/02/16 01:44:46 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -15,6 +15,7 @@
 <dev-python/PyQt-3.13
 <dev-python/sip-4.1.1
 <dev-tcltk/expect-5.42.1
+<media-libs/ming-0.2a-r1
 <media-video/transcode-0.6.14
 <net-fs/samba-3.0.11
 <net-libs/courier-authlib-0.52
