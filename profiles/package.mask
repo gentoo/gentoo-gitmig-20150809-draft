@@ -23,7 +23,6 @@
 
 # <carpaski@gentoo.org> (12 Jan 2003)
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
-=sys-apps/portage-2.0.46-r6
 >=sys-apps/portage-2.0.47_pre1
 
 # <mjc@gentoo.org> (10 Jan 2003)
