@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.17 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.18 2005/02/19 20:20:00 radek Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -58,7 +58,8 @@ zproduct_src_install()
 			do_install)
 				debug-print-section do_install
 				# Copy everything that's left to ${D}${ZP_DIR}
-				cp -a ${S}/* ${D}/${ZP_DIR}/${PF} ;;
+				# modified to not copy ownership (QA)
+				cp --recursive --no-dereference --preserve=timestamps,mode,links ${S}/* ${D}/${ZP_DIR}/${PF} ;;
 						
 			all)
 				debug-print-section all 
