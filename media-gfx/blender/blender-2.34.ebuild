@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.33a.ebuild,v 1.5 2004/08/08 15:20:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.34.ebuild,v 1.1 2004/08/08 15:20:57 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
 #IUSE="sdl jpeg png mozilla truetype static fmod"
-IUSE="blender-game" #blender-plugin"
+IUSE="blender-game" # blender-plugin"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org/"
-SRC_URI="http://download.blender.org/source/${P}.tar.bz2
-		 http://download.blender.org/source/${P}-gcc34.patch.bz2"
+SRC_URI="http://download.blender.org/source/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 | BL"
@@ -35,7 +34,6 @@ DEPEND="dev-util/scons
 
 src_unpack() {
 	unpack ${A}
-	epatch ${DISTDIR}/${P}-gcc34.patch.bz2
 	cd ${S}/release/plugins
 	chmod 755 bmake
 }
@@ -81,7 +79,7 @@ src_compile() {
 	# Build the plugin
 #	use blender-plugin && \
 #	( einfo "enabling mozilla plugin"
-#	sed -i -e "s:BUILD_BLENDER_PLUGIN = 'false':PLUGIN = 'true':" \
+#	sed -i -e "s:BUILD_BLENDER_PLUGIN = 'false':BUILD_BLENDER_PLUGIN = 'true':" \
 #	config.opts )
 
 	#Solid desn't work with gcc-3.4, ode does, but the physics bridge
@@ -99,7 +97,8 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin/
 	doexe ${S}/blender
-
+	use blender-game && \
+	doexe ${S}/blenderplayer
 #	einstall || die
 
 #	exeinto /usr/lib/${PN}/textures

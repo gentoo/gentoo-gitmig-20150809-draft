@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.39 2004/07/21 04:54:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.40 2004/08/08 15:20:57 lu_zero Exp $
+
+*blender-2.34 (07 Aug 2004)
+
+  07 Aug 2004; Luca Barbato <lu_zero@gentoo.org> +blender-2.34.ebuild:
+  New version
 
   21 Jul 2004; Luca Barbato <lu_zero@gentoo.org> :
   Missing digest added
