@@ -16,11 +16,16 @@ pcmcia
 # The rest should work in theory. Feel free to test and remove.
 # doesn't compile
 alsa
+
 # No hardware to test
 pda
+
 # Can't get USB working to test
 gphoto2
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+
+# No apm support on alpha
+apm
