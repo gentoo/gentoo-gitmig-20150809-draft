@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.0-r2.ebuild,v 1.3 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.0-r2.ebuild,v 1.4 2002/10/20 18:49:11 vapier Exp $
 
 IUSE="arts gnome dvd mikmod jpeg esd avi sdl oggvorbis png alsa"
 
@@ -47,7 +47,6 @@ DEPEND=">=media-libs/gstreamer-0.4.0
 #	media-sound/xmms
 # aalib? ( media-libs/aalib )
 
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	elibtoolize
