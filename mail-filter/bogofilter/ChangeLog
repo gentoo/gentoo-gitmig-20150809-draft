@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/bogofilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.5 2004/07/01 19:50:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.6 2004/07/06 20:06:52 lostlogic Exp $
+
+*bogofilter-0.92.1 (06 Jul 2004)
+
+  06 Jul 2004; Brandon Low <lostlogic@gentoo.org> -bogofilter-0.14.5.4.ebuild,
+  -bogofilter-0.15.13.1.ebuild, -bogofilter-0.16.4.ebuild,
+  bogofilter-0.91.1.ebuild, +bogofilter-0.92.0.ebuild,
+  +bogofilter-0.92.1.ebuild:
+  Bump up stable on x86, hope this doesn't break anyone... add 2 new unstable
+  versions for testing... clean up cruft
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   bogofilter-0.13.7.3.ebuild, bogofilter-0.14.5.4.ebuild,

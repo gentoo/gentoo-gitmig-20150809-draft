@@ -1,21 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.16.4.ebuild,v 1.3 2004/07/01 19:50:30 eradicator Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.1.ebuild,v 1.1 2004/07/06 20:06:52 lostlogic Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
-SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~hppa ~amd64 ~mips ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+IUSE="doc"
 
 DEPEND="virtual/libc
-	!mips? ( !ppc64? ( doc? ( app-text/xmlto ) ) )
+	!ppc64? ( doc? ( app-text/xmlto ) )
 	>=sys-libs/db-3.2"
-
 RDEPEND="virtual/libc
 	>=sys-libs/db-3.2"
 
@@ -47,9 +45,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The goal of the bogofilter 0.16 series is to clean out this excess code."
-	einfo "A number of features have been deprecated."
-	ewarn "Please read the RELEASE.NOTES-0.16 carefully!"
+	einfo "The goal of the bogofilter 0.17 series was to clean out this excess code."
+	einfo "A number of features have been removed."
+	ewarn "Please read the RELEASE.NOTES-0.17 carefully!"
 	einfo ""
 	einfo "Contributed tools and documentation is in ${ROOT}usr/lib/${PN}/contrib"
 	einfo "beside documentation in ${ROOT}usr/share/doc/${PF}."
