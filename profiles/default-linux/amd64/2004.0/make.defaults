@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Foundation.
 # System-wide defaults for the gcc 3.3 Portage system
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.0/make.defaults,v 1.3 2004/06/26 23:29:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.0/make.defaults,v 1.4 2004/07/09 19:29:26 lv Exp $
 
 #Experimental: trying to use these USE variables to build up from stage 2->3
 #thus eliminating the inherent fragility of using USE for this
@@ -19,3 +19,8 @@ ACCEPT_KEYWORDS="amd64"
 CFLAGS="-O2 -pipe"
 CHOST="x86_64-pc-linux-gnu"
 CXXFLAGS="${CFLAGS}"
+
+# not having a 32bit sandbox breaks too much right now, and we cant even be
+# sure the user has a 32bit sandbox! it only gets installed if you add multilib
+# to use, recompile gcc, and then recompile portage. :/
+FEATURES="-sandbox"

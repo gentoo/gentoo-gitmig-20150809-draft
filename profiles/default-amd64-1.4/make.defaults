@@ -18,3 +18,8 @@ ACCEPT_KEYWORDS="amd64"
 CFLAGS="-O2 -fPIC"
 CHOST="x86_64-pc-linux-gnu"
 CXXFLAGS="${CFLAGS}"
+
+# not having a 32bit sandbox breaks too much right now, and we cant even be
+# sure the user has a 32bit sandbox! it only gets installed if you add multilib
+# to use, recompile gcc, and then recompile portage. :/
+FEATURES="-sandbox"
