@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/phpgroupware
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.19 2004/01/08 08:41:30 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.20 2004/03/04 17:54:15 mholzer Exp $
+
+*phpgroupware-0.9.16.000 (04 Mar 2004)
+
+  04 Mar 2004; Martin Holzer <mholzer@gentoo.org>
+  phpgroupware-0.9.16.000.ebuild:
+  Version bumped.
 
   08 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
   phpgroupware-0.9.14.007.ebuild:
