@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3050 2004/08/10 14:59:14 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3051 2004/08/10 15:58:30 nakano Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <nakano@gentoo.org> (Aug 10 2004)
+# PostgreSQL-8* are still beta versions for testing purposes, 
+# probably very unstable.
+=dev-db/postgresql-8*
 
 # <rac@gentoo.org> (6 Aug 2004)
 # safe instead of sorry, as i won't be around in case something
