@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.01-r1.ebuild,v 1.2 2002/03/04 18:06:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.01-r1.ebuild,v 1.3 2002/03/04 18:49:52 azarah Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="a modular screensaver for X11"
-SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz
+SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 DEPEND="virtual/x11 sys-devel/bc
