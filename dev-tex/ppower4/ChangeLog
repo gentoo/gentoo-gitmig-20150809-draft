@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ppower4
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ChangeLog,v 1.3 2004/04/17 16:36:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ChangeLog,v 1.4 2004/04/26 13:55:41 usata Exp $
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ppower4-0.9.6.ebuild:
+  Stable on x86
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ppower4-0.9.6.ebuild:
   Inherit eutils, added IUSE, removed S=.
