@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.4.1-r7.ebuild,v 1.5 2005/01/09 11:39:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.4.1-r7.ebuild,v 1.6 2005/03/08 18:32:21 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,7 +38,7 @@ pkg_setup() {
 		echo
 		eerror "The Fortran compiler \"${F77:-g77}\" could not be found on your system."
 		if [ -z ${F77} ] || [ ${F77} = g77 ]; then
-			eerror 'Please reinstall "sys-devel/gcc" with the "f77" "USE" flag enabled.'
+			eerror 'Please reinstall "sys-devel/gcc" with the "fortran" "USE" flag enabled.'
 		else
 			eerror 'Please make sure the variable ${F77} is set to the name of a valid'
 			eerror 'Fortran compiler installed on your system. Make sure this executable'
