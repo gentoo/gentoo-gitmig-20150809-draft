@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-2.50.ebuild,v 1.4 2001/09/10 17:39:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-2.50.ebuild,v 1.5 2001/11/10 02:33:03 hallski Exp $
 
-A=unrar250.zip
 S=${WORKDIR}/${P}
 DESCRIPTION="Uncompress rar files"
-SRC_URI="ftp://ftp.elf.stuba.sk/pub/pc/pack/${A}"
+SRC_URI="ftp://ftp.elf.stuba.sk/pub/pc/pack/unrar250.zip"
 HOMEPAGE="ftp://ftp.elf.stuba.sk/pub/pc/pack"
 
 DEPEND="virtual/glibc app-arch/unzip"

@@ -1,14 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.42.ebuild,v 1.3 2001/11/01 19:47:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.42.ebuild,v 1.4 2001/11/10 02:33:03 hallski Exp $
 
-A=unzip542.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Unzipper for pkzip-compressed files"
-#SRC_URI="ftp://ftp.freesoftware.com/pub/infozip/src/${A}"
-SRC_URI="http://soft.ivanovo.ru/Linux/${A}"
-#         http://mirrors.rcn.com/pub/OpenBSD/distfiles/${A}"
+SRC_URI="http://soft.ivanovo.ru/Linux/unzip542.tar.gz"
 
 HOMEPAGE="ftp://ftp.info-zip.org/pub/infozip/UnZip.html"
 

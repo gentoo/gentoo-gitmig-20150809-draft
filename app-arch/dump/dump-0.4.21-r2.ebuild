@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.21-r2.ebuild,v 1.2 2001/05/29 17:28:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.21-r2.ebuild,v 1.3 2001/11/10 02:33:03 hallski Exp $
 
 P=dump-0.4b21
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Dump/restore ext2fs backup utilities"
-SRC_URI="http://download.sourceforge.net/dump/${A}"
+SRC_URI="http://download.sourceforge.net/dump/${P}.tar.gz"
 HOMEPAGE="http://dump.sourceforge.net"
 
 DEPEND=">=sys-apps/e2fsprogs-1.19
