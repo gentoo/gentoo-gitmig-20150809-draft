@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040707.ebuild,v 1.4 2004/10/14 17:51:54 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040707.ebuild,v 1.5 2004/10/16 20:27:49 mr_bones_ Exp $
 
 inherit eutils
 
@@ -44,5 +44,5 @@ src_install() {
 }
 
 pkg_postinst() {
-    env-update
+	env-update
 }
