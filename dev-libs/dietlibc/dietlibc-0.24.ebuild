@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.6 2004/02/20 02:51:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.7 2004/03/25 16:15:15 weeve Exp $
 
 inherit eutils flag-o-matic fixheadtails gcc
 
@@ -31,35 +31,24 @@ src_unpack() {
 		-e "s:^#DESTDIR=.*:DESTDIR=${D}:" Makefile || \
 			die "sed Makefile failed"
 
+	# New fix for sparc64 and dietlibc, fixes bug #45601
+	[ "${PROFILE_ARCH}" = "sparc64" ] && \
+		epatch ${FILESDIR}/dietlibc-sparc64-makefile.patch
+
 	ht_fix_all
 }
 
 src_compile() {
 	filter-flags "-fstack-protector"
 
-	# Added by Jason Wever <weeve@gentoo.org>
-	# Fix for bug #27171.
-	# dietlibc assumes that if uname -m is sparc64, then gcc is 64 bit
-	# but this is not the case on Gentoo currently.
-
-	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc64" ]; then
-		cd ${S}
-		/usr/bin/sparc32 make || die "make failed"
-	else
-		emake || die "emake failed"
-	fi
+	emake || die "emake failed"
 }
 
 src_install() {
-	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc64" ]; then
-		cd ${S}
-		/usr/bin/sparc32 make install || die "make install failed"
-	else
-		make install || die "make install failed"
-	fi
+	make install || die "make install failed"
 
 	exeinto /usr/bin
-	newexe bin-$(uname -m | sed -e 's/i[4-9]86/i386/' -e 's/armv[3-6][lb]/arm/')/diet-i diet || die "newexe failed"
+	newexe bin-$(uname -m | sed -e 's/i[4-9]86/i386/' -e 's/armv[3-6][lb]/arm/' -e 's/sparc64/sparc/')/diet-i diet || die "newexe failed"
 
 	doman diet.1 || die "doman failed"
 	dodoc AUTHOR BUGS CAVEAT CHANGES README THANKS TODO PORTING || \
