@@ -1,0 +1,19 @@
+--- ftpcube-0.4.3/setup.py	2003-03-29 07:39:17.000000000 +0000
++++ ftpcube-0.4.3-chuck/setup.py	2003-04-01 22:14:48.000000000 +0000
+@@ -43,7 +43,7 @@
+ _packages = [ 'libftpcube', 'libftpcube/archtypes', 'libftpcube/icons' ]
+ try:
+ 	from libftpcube import wxPyColourChooser
+-	_packages.append ('libftpcube/wxPyColourChooser')
++#	_packages.append ('libftpcube/wxPyColourChooser')
+ except:
+ 	pass
+ 
+--- ftpcube-0.4.3/setup.cfg	2002-11-16 04:51:05.000000000 +0000
++++ ftpcube-0.4.3-chuck/setup.cfg	2003-04-01 22:10:49.000000000 +0000
+@@ -1,3 +1,3 @@
+ [install]
+-install_data=/usr/local/share
+-install_scripts=/usr/local/bin
++install_data=/usr/share
++install_scripts=/usr/bin
