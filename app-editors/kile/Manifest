@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 050404f04ef3c24fcc1e677183147727 kile-1.6.3.ebuild 532
-MD5 78e3c1b57103dfc06fa32980599a4128 kile-1.7.1.ebuild 1788
-MD5 e799e330a0782052425f51fb6878101f ChangeLog 6379
+MD5 dea8792dae6836995dc248f6d6ed726f kile-1.6.3.ebuild 563
+MD5 69fb841ec8ce00b9ed5cc05a835a5c6c kile-1.7.1.ebuild 1824
+MD5 afbc695762bb194d41c68922ad66d693 ChangeLog 6639
 MD5 dff3d1b6fe3c83e5952738d79f768ddd metadata.xml 187
 MD5 b2d942b2f202ceac4b91da5338540b6f files/digest-kile-1.6.3 63
 MD5 7f8dbc0d36bce8259744741ad061d507 files/digest-kile-1.7.1 131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB5CJCI1lqEGTUzyQRAnqMAKDXJMVjlRca+BJqc/eGbnwNzOq/CQCfdhyG
-VVxG2iFtCzqNGkpvhVEhEog=
-=PWAp
------END PGP SIGNATURE-----

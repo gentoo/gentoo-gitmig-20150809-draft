@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.48 2005/01/11 19:00:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.49 2005/01/14 23:32:33 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> kile-1.6.3.ebuild,
+  kile-1.7.1.ebuild:
+  Changed dep on kdegraphics to accept kdegraphics-meta, the split 'meta'
+  package. This dep will be narrowed down in the future to the precise split
+  packages required.
 
   11 Jan 2005; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.
