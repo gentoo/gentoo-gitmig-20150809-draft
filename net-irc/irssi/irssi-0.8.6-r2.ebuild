@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r2.ebuild,v 1.10 2003/07/18 16:54:23 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r2.ebuild,v 1.11 2003/07/18 21:27:13 tester Exp $
 
 IUSE="nls ipv6 perl"
 
@@ -20,7 +20,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips amd64"
 
 src_unpack() {
 	unpack ${A}
@@ -31,6 +31,8 @@ src_unpack() {
 	sed -i \
 		-e 's/[^ 	]\+\.html//g' docs/Makefile.in || \
 			die "sed doc/Makefile.in failed"
+
+	epatch ${FILESDIR}/irssi-0.8.6-configure.patch
 }
 
 src_compile() {

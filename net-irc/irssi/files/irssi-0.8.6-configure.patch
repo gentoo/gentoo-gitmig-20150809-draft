@@ -1,0 +1,22 @@
+--- configure.orig	2003-07-01 03:28:21.000000000 +0000
++++ configure	2003-07-01 03:28:48.000000000 +0000
+@@ -1983,7 +1983,7 @@
+   lt_cv_file_magic_cmd='/usr/bin/file -L'
+   case "$host_os" in
+   rhapsody* | darwin1.[012])
+-    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -1`
++    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -n 1`
+     ;;
+   *) # Darwin 1.3 on
+     lt_cv_file_magic_test_file='/usr/lib/libSystem.dylib'
+@@ -9368,8 +9368,8 @@
+ 	echo "$ac_t""$irssi_cv_type_in6_addr" 1>&6
+ fi
+ 
+-VERSION_DATE=`head -1 $srcdir/ChangeLog|sed 's/^\(....\)-\(..\)-\(..\).*/\1\2\3/'`
+-VERSION_TIME=`head -1 $srcdir/ChangeLog|sed -e 's/^[^ ]* \(..\):\(..\).*/\1\2/' -e 's/^0*//'`
++VERSION_DATE=`head -n 1 $srcdir/ChangeLog|sed 's/^\(....\)-\(..\)-\(..\).*/\1\2\3/'`
++VERSION_TIME=`head -n 1 $srcdir/ChangeLog|sed -e 's/^[^ ]* \(..\):\(..\).*/\1\2/' -e 's/^0*//'`
+ 
+ 
+ 
