@@ -1,7 +1,0 @@
-#!/bin/sh
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/files/bnr2,v 1.2 2004/08/11 13:06:51 swegener Exp $
-
-export LD_LIBRARY_PATH="/opt/bnr2/lib:${LD_LIBRARY_PATH}"
-exec /opt/bnr2/bin/BNR2 "$@"
