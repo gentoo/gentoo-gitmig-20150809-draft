@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.4 2003/01/20 14:41:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.5 2003/02/07 16:14:00 weeve Exp $
 
 IUSE="gif jpeg X opengl truetype tiff png"
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 src_unpack() {
 	unpack ${A}
