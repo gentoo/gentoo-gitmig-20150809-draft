@@ -1,6 +1,36 @@
 # ChangeLog for dev-java/mysql-jdbc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.1 2003/05/14 07:29:25 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.2 2003/06/04 19:20:29 absinthe Exp $
+
+*jdbc-mysql-3.0.8 (04 Jun 2003)
+
+  04 Jun 2003; Dylan Carlson <absinthe@gentoo.org> jdbc-mysql-3.0.8.ebuild:
+  Bugfix version bump. Closes #22178.
+  
+  Changes in this version:
+  * Allow bogus URLs in Driver.getPropertyInfo().
+  * Return list of generated keys when using multi-value INSERTS with
+    Statement.getGeneratedKeys().
+  * Use JVM charset with filenames and 'LOAD DATA [LOCAL] INFILE'
+  * Fix infinite loop with Connection.cleanup().
+  * Changed Ant target 'compile-core' to 'compile-driver', and made testsuite
+    compilation a separate target.
+  * Fixed result set not getting set for Statement.executeUpdate(), which 
+    affected getGeneratedKeys() and getUpdateCount() in some cases.
+  * Unicode character 0xFFFF in a string would cause the driver to throw an
+    ArrayOutOfBoundsException
+  * Return correct amount of generated keys when using 'REPLACE' statements.
+  * Fix problem detecting server character set in some cases.
+  * Fix row data decoding error when using _very_ large packets.
+  * Optimized row data decoding.
+  * Issue exception when operating on an already-closed prepared statement.
+  * Fixed SJIS encoding bug, thanks to Naoto Sato.
+  * Optimized usage of EscapeProcessor.
+  * Fixed numbering of KEY_SEQ column in DBMD.getImported/Exported keys 
+  * Allow multiple calls to Statement.close()
+  * Use hex escaping for PreparedStatement.setBytes()/setBinaryStream() when 
+    the character set is Shift_JIS, workaround for parsing bug in server.
+  * Added whitespace insensitivity to EscapeProcessor.
 
 *jdbc-mysql-2.0.14 (14 May 2003)
 
