@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.9 2004/06/25 01:40:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.10 2004/10/17 08:00:19 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> pylint-0.4.0.ebuild:
+  keywords ~amd64; closes #60988.
 
   12 May 2004; David Holm <dholm@gentoo.org> pylint-0.4.0.ebuild:
   Added to ~ppc.
