@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.4 2004/06/06 16:47:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.5 2004/06/14 18:02:07 kugelfang Exp $
 
 inherit virtualx eutils
 
@@ -12,12 +12,13 @@ HOMEPAGE="http://www.scilab.org/"
 LICENSE="scilab"
 SLOT="0"
 KEYWORDS="~x86 amd64"
-IUSE="tcltk gtk"
+IUSE="tcltk gtk ifc"
 
 DEPEND="virtual/x11
 	x11-libs/Xaw3d
 	sys-libs/ncurses
 	tcltk? ( dev-lang/tk )
+	x86? ( ifc? ( dev-lang/ifc ) )
 	gtk? ( =x11-libs/gtk+-1.2*
 			>=gnome-base/gnome-libs-1.4.2
 			>=dev-libs/glib-2.2
@@ -32,6 +33,12 @@ pkg_setup() {
 		ewarn "Previous version of scilab was detected on your system"
 		ewarn "Unfortunately these versions cause problems for newer ones during update"
 		ewarn 'Please uninstall it with "emerge unmerge scilab" before continuig'
+		die
+	fi
+	use ifc || if [ -z `which g77` ]; then
+		#if ifc is defined then the dep was already checked
+		eerror "No fortran compiler found on the system!"
+		eerror "Please add f77 to your USE flags and reemerge gcc!"
 		die
 	fi
 }

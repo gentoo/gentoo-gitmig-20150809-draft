@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/scilab
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.15 2004/06/06 16:47:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.16 2004/06/14 18:02:07 kugelfang Exp $
+
+  14 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> scilab-2.7-r1.ebuild,
+  scilab-2.7-r3.ebuild:
+  Added (already) global USE flag "ifc" and appropriate dependency as well as the
+  g77/ifc warning routine from app-sci/octave. Fixes BUG #53872.
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> scilab-2.7-r3.ebuild:
   Marked stable on amd64.
