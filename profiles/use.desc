@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.120 2003/11/06 16:41:57 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.121 2003/11/09 22:30:42 lu_zero Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -9,6 +9,7 @@ acl - Adds support for Access Control Lists
 acpi - Adds support for Advanced Configuration and Power Interface
 afs - Adds OpenAFS support (distributed file system)
 alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
+altivec - Adds support for optimizations for G4 and G5/ppc970 processors
 apache2 - Chooses Apache2 support when a package supports both Apache1 and Apache2
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for aRts: the KDE sound daemon

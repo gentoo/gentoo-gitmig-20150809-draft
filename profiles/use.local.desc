@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.166 2003/11/06 20:58:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.167 2003/11/09 22:30:42 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -117,7 +117,6 @@ media-tv/xawdecode:ffmpeg - Enable ffmpeg support
 media-video/ffmpeg:faad - Enables faad2 support
 media-video/mjpegtools:dv - Enables libdv support
 media-video/mplayer:matroska - Enables support for the matroska video format
-media-video/transcode:altivec - Enable Altivec code portions
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
 media-video/vlc:xvid - Enables xvid codec support
