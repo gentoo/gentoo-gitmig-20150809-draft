@@ -1,4 +1,4 @@
-MD5 c3787736e8292579aab0e4b86e4b1918 ximian-artwork-0.2.26.0.6.1.ebuild 2028
-MD5 dbe68f6ff01975fffa1eca4b9a4a5672 ChangeLog 637
-MD5 a733ce592710282d7d68dceedcf32d00 files/ximian-artwork-0.2.26-gdm.patch 520
+MD5 52d27c537e7a50d5ca6a80942b01fa3d ChangeLog 769
+MD5 a33df014d63916d03033bc98c3010f42 ximian-artwork-0.2.26.0.6.1.ebuild 2048
 MD5 4c7e2c510200a7fcf63d66700ada089c files/digest-ximian-artwork-0.2.26.0.6.1 88
+MD5 a733ce592710282d7d68dceedcf32d00 files/ximian-artwork-0.2.26-gdm.patch 520
