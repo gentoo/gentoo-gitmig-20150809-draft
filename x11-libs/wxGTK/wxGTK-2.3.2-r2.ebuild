@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.4 2002/07/16 03:12:03 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.5 2002/08/13 22:17:59 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -83,14 +83,9 @@ src_compile() {
 	
 	gunzip < ${FILESDIR}/${P}.diff.gz | patch -p1
 	
-	./configure 	\
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--prefix=/usr \
-		--host=${CHOST} \
-		${myconf}|| die
+	econf ${myconf} || die "configuration failed"
 	
-	emake || die
+	make || die "make failed"
 
 }
 

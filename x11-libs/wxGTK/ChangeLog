@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.7 2002/08/09 18:32:11 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.8 2002/08/13 22:17:59 raker Exp $
 
 *wxGTK-2.2.9-r1 (09 Aug 2002)
 
@@ -9,6 +9,10 @@
   Thanks to Francisco Gimeno for fixing the joystick code compile problem.
 
 *wxGTK-2.3.2-r2 (13 Jun 2002) 
+
+  13 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  wxGTK-2.3.2-r2.ebuild :
+  Changed to econf and verified joystick patch is working.
  
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
   Added ppc to keywords
