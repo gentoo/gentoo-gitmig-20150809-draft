@@ -1,6 +1,14 @@
 # ChangeLog for media-fonts/artwiz-fonts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.4 2003/08/26 15:03:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.5 2003/09/22 02:14:44 seemant Exp $
+
+*artwiz-fonts-2.4-r1 (21 Sep 2003)
+
+  21 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  artwiz-fonts-2.4-r1.ebuild:
+  a fonts.alias file is installed this time, which allows one to do, for
+  example: xterm -fn snap. This is thanks to: D. Curtis <dcurtis@cs.uiowa.edu>
+  in bug #29293
 
   26 Aug 2003; Heinrich Wendel <lanius@gentoo.org> artwiz-fonts-2.4.ebuild:
   marked sparc (only data package)
