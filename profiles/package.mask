@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <drobbins@gentoo.org> (01 Sep 2002)
-# needs dev testing
-=sys-apps/portage-2.0.34
-
 # <phoenix@gentoo.org> (01 Sep 2002)
 # This needs a lot of testing
 app-emulation/winex-cvs
