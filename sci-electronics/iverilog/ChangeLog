@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/iverilog
+# ChangeLog for sci-electronics/iverilog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.1 2004/12/27 19:51:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.2 2004/12/27 20:59:33 swegener Exp $
 
 *iverilog-20031009 (27 Dec 2004)
 

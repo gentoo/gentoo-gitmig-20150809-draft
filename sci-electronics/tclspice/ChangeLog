@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/tclspice
+# ChangeLog for sci-electronics/tclspice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/tclspice/ChangeLog,v 1.1 2004/12/27 20:25:42 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/tclspice/ChangeLog,v 1.2 2004/12/27 21:08:07 swegener Exp $
 
 *tclspice-0.2.17 (27 Dec 2004)
 
