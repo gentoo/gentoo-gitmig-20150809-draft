@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freecdb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.1 2003/05/05 08:28:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.2 2003/06/24 07:45:32 phosphan Exp $
+
+  24 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> freecdb-0.62.ebuild:
+  Considered stable for x86
 
 *freecdb-0.62 (05 May 2003)
 
