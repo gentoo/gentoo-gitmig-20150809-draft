@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.3 2003/01/29 05:45:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.4 2003/01/29 12:50:55 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -319,20 +319,6 @@ src_compile() {
 	cd ${S}
 	get_EnvSet
 	
-	# Workaround for missing libs with GCC3 (thanks to Debian) (Az)
-	if [ "$(gcc-major-version)" -eq 3 ]
-	then
-		einfo "Installing GCC related libs..."
-
-		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/lib
-
-		cd ${S}/solver/${SOLVER}/${SOLPATH}/lib
-		cp $(gcc-libpath)/libstdc++.so.$(gcc-libstdcxx-major-version)* . || \
-			die "Could not copy gcc-libs!"
-		cp $(gcc-libpath)/libgcc_s.so* . || die "Could not copy gcc-libs!"
-		cd ${S}
-	fi
-
 	# Do not include /usr/include in header search path, and
 	# same thing for internal gcc include dir, as gcc3 handles
 	# it correctly by default! (Az)
@@ -363,7 +349,20 @@ src_compile() {
 		echo "setenv CCCOMP \"${CC}\"" >> ${S}/${LinuxEnvSet}
 		echo "setenv CXXCOMP \"${CXX}\"" >> ${S}/${LinuxEnvSet}
 	fi 
-    
+
+	if [ "$(gcc-major-version)" -eq 3 ]
+	then
+		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/{lib,inc}
+
+		einfo "Installing GCC related libs..."
+		# Workaround for missing libs with GCC3 (thanks to Debian) (Az)
+		cd ${S}/solver/${SOLVER}/${SOLPATH}/lib
+		cp $(gcc-libpath)/libstdc++.so.$(gcc-libstdcxx-major-version)* . || \
+			die "Could not copy gcc-libs!"
+		cp $(gcc-libpath)/libgcc_s.so* . || die "Could not copy gcc-libs!"
+		cd ${S}
+	fi
+
 	einfo "Bootstrapping OpenOffice.org..."
 	# Get things ready for bootstrap (Az)
 	chmod 0755 ${S}/solenv/bin/*.pl
@@ -371,6 +370,16 @@ src_compile() {
 	touch ${S}/solver/${SOLVER}/${SOLPATH}/inc/minormkchanged.flg
 	# Bootstrap ...
 	./bootstrap
+
+	if [ "$(gcc-major-version)" -eq 3 ]
+	then
+		local LIBFILE="$(readlink `gcc-libpath`/libstdc++.so.`gcc-libstdcxx-major-version`)"
+		local LIBVERSION="$(echo ${LIBFILE} | sed -e 's|libstdc++\.so\.||g')"
+		# Get this beast to use the right version of libstdc++ ... (Az)
+		echo "LIBSTDCPP3:=${LIBVERSION}" >> \
+			${S}/solver/${SOLVER}/${SOLPATH}/inc/comp_ver.mk
+		cd ${S}
+	fi
 
 	einfo "Building OpenOffice.org..."
 	# Setup virtualmake
