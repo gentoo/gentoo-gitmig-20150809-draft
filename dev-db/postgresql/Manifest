@@ -2,10 +2,12 @@ MD5 b74ddef00a98e9d3a9ca05f73def5222 postgresql-7.3.ebuild 5542
 MD5 81d6711326226ed25d35a9723fd83edf postgresql-7.3.3.ebuild 5958
 MD5 2e752de9634e2a5cd5d9f159434d8a89 postgresql-7.3.2.ebuild 5949
 MD5 64048afc8551006a922a36f223eb2d36 ChangeLog 9594
+MD5 d696f1ed8591e02bcb657b71d8ef1ed2 postgresql-7.3.4.ebuild 6082
 MD5 bc6938c5fbc47a864dddb0c885f0a6dd files/pgsql 613
 MD5 26e2c8e4978d59f58bf13e94bbdc446b files/postgres 851
 MD5 7506f28d74e703211fb53ebd246b5791 files/digest-postgresql-7.3.2 70
 MD5 b140ea7a1bde8bbe8d14c34d7b2bf243 files/digest-postgresql-7.3.3 70
+MD5 c85aa6c2eb4a2fea8869eaccb5b4a6dc files/digest-postgresql-7.3.4 70
 MD5 ed9c20d88bfaf8e24e28a79309a17a52 files/digest-postgresql-7.3 68
 MD5 a9021afba518a106483188ea60dadc7c files/postmaster-wrapper 445
 MD5 2b0c84d2c26622573d4e2b7e0518fdad files/postgresql.conf 375
