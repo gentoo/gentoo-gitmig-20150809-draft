@@ -1,8 +1,11 @@
 # ChangeLog for dev-ruby/optparse
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/optparse/ChangeLog,v 1.4 2002/10/27 01:12:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/optparse/ChangeLog,v 1.5 2003/01/08 03:30:07 george Exp $
 
 *optparse-0.10.1 (26 Oct 2002)
+
+  07 Jan 2003; George Shapovalov <george@gentoo.org> optparse-0.10.1.ebuild :
+  added IUSE
 
   26 Oct 2002; George Shapovalov <george@gentoo.org> optparse-0.10.1.ebuild :
 
