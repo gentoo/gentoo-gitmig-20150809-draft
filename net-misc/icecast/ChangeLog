@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.34 2004/10/10 19:18:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.35 2004/11/05 23:38:04 chriswhite Exp $
+
+*icecast-2.1.0 (06 Nov 2004)
+
+  06 Nov 2004; Chris White <chriswhite@gentoo.org> icecast-2.0.2.ebuild,
+  +icecast-2.1.0.ebuild:
+  Fixed illegal eutils inherit in 2.0.2 version. Updated to version 2.1.0 and
+  setup for arch marking per bug #70096.
 
   10 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   icecast-2.0.2.ebuild:
