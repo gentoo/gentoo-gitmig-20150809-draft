@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-DOM
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.14 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.15 2003/07/29 11:47:23 mcummings Exp $
+
+*XML-DOM-1.43 (29 Jul 2003)
+
+  29 Jul 2003; Michael Cummings <mcummings@gentoo.org> XML-DOM-1.43.ebuild:
+  CPAN version bump
+  Fixes XML::Parser bug
 
 *XML-DOM-1.42 (16 Jun 2003)
 
