@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.30 2005/03/05 15:19:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.31 2005/03/27 05:54:08 usata Exp $
+
+*emacs-w3m-1.4.4 (27 Mar 2005)
+
+  27 Mar 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -files/emacs-w3m-1.4.3-e22.diff, -emacs-w3m-1.4.3-r1.ebuild,
+  +emacs-w3m-1.4.4.ebuild:
+  Version bumped.
 
 *emacs-w3m-1.4.3-r2 (06 Mar 2005)
 

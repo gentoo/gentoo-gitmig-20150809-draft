@@ -1,13 +1,22 @@
-MD5 7deaac185fc43a11f5a61d9c77ce74bc emacs-w3m-1.3.6.ebuild 1532
-MD5 73cea1366df52af546c38ec3027f3173 ChangeLog 4570
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2d500712d54d4f543b0180c90d69acef ChangeLog 4760
 MD5 be681fa523c844480ea9f2ec7d40479c emacs-w3m-1.4.3.ebuild 1564
-MD5 8f2a422c5b42af439ba749cc663f6955 emacs-w3m-1.4.3-r1.ebuild 1649
+MD5 7deaac185fc43a11f5a61d9c77ce74bc emacs-w3m-1.3.6.ebuild 1532
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 256ab562fa8276781e986f84401f281e emacs-w3m-1.4.3-r2.ebuild 1707
+MD5 06f82fb3d6c649bf52899b44f73aca50 emacs-w3m-1.4.4.ebuild 1548
 MD5 652abce1ecea5cf20323bd9f27ec8a6b files/70emacs-w3m-gentoo.el 605
-MD5 51951f89d5a4c0bed84788a881adc286 files/digest-emacs-w3m-1.3.6 67
 MD5 1a86c5bfcbb063dad0683ef554222234 files/digest-emacs-w3m-1.4.3 67
-MD5 1a86c5bfcbb063dad0683ef554222234 files/digest-emacs-w3m-1.4.3-r1 67
-MD5 10f0df2344b9d0fa21c7b9bf6174dd79 files/emacs-w3m-1.4.3-e22.diff 1393
-MD5 a6227ba936faf41fe9c67abc735b06c7 files/emacs-w3m-1.4.3-e23.diff 1048
+MD5 51951f89d5a4c0bed84788a881adc286 files/digest-emacs-w3m-1.3.6 67
 MD5 844c0dc28b4157331c3dab94c9adecd7 files/digest-emacs-w3m-1.4.3-r2 123
+MD5 a6227ba936faf41fe9c67abc735b06c7 files/emacs-w3m-1.4.3-e23.diff 1048
+MD5 399b14135c7df63ea110530a7b2c1cc3 files/digest-emacs-w3m-1.4.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRkk1VWNWqTUmv+0RAksXAKCS+2gaW+eP5sartM5y67GZbmUviwCdFe9W
+xPK6U942g0JrY10N2eUvOHw=
+=pOnD
+-----END PGP SIGNATURE-----

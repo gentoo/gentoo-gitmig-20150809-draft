@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.3-r1.ebuild,v 1.1 2005/02/11 14:39:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4.ebuild,v 1.1 2005/03/27 05:54:08 usata Exp $
 
-inherit elisp eutils
+inherit elisp
 
 IUSE=""
 MY_P="${P/_/}"
@@ -30,14 +30,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-e22.diff
-}
-
 src_compile() {
-	autoconf || die
 	./configure --prefix=/usr \
 		--with-lispdir=${SITELISP}/${PN} \
 		--with-icondir=/usr/share/${PN}/icon
