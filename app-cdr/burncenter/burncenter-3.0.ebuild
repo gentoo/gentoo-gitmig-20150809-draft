@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.0.ebuild,v 1.6 2003/03/28 11:28:21 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.0.ebuild,v 1.7 2003/03/28 11:28:51 pvdabeel Exp $
 
 DESCRIPTION="Easy-to-use text based interface to the UNIX CD burning tools"
 HOMEPAGE="http://alx14.free.fr/burncenter/"
@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}
 
 IUSE="oggvorbis"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 SRC_URI="http://alx14.free.fr/burncenter/download/${P}.tar.gz"
 S="${WORKDIR}/burncenter3"
