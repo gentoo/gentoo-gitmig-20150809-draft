@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r2.ebuild,v 1.16 2004/06/01 06:04:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r2.ebuild,v 1.17 2004/06/21 02:05:15 tgall Exp $
 
 DESCRIPTION="Sets up some env.d files for kde"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="GPL-2" # like the ebuild itself
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips" # works everywhere - nothing to compile, no deps
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips ppc64" # works everywhere - nothing to compile, no deps
 IUSE=""
 
 # needs the new portage to process the CONFIG_PROTECT values correctly

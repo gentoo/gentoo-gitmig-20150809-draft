@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.16 2004/04/25 03:18:23 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.17 2004/06/21 02:05:15 tgall Exp $
+
+  20 Jun 2004; Tom Gall <tgall@gentoo.org> kde-env-3-r2.ebuild:
+  stable on ppc64, bug #54146
 
   24 Apr 2004; Bret Curtis <psi29a@gentoo.org> kde-env-3-r2.ebuild:
   Added to ~mips
