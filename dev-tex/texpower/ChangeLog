@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/texpower
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.4 2003/09/16 14:46:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.5 2003/09/23 01:21:57 pylon Exp $
+
+  23 Sep 2003; Lars Weiler <pylon@gentoo.org> texpower-0.0.9d.ebuild:
+  Masked stable.
 
 *texpower-0.0.9d (16 Sep 2003)
 
