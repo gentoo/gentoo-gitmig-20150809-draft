@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12-r1.ebuild,v 1.13 2004/12/29 02:39:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12-r1.ebuild,v 1.14 2005/03/15 22:17:56 seemant Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_compile() {
 
 	if has_version 'www-client/dillo' ; then
 		gracehelpviewer="dillo"
-	elif has_version 'net-www/opera' ; then
+	elif has_version 'www-client/opera' ; then
 		gracehelpviewer="opera"
 	elif has_version 'net-www/mozilla-firebird' \
 		|| has_version 'net-www/mozilla-firebird-bin' \
