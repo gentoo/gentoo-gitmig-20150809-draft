@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-zebu
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-zebu/ChangeLog,v 1.1 2004/11/08 02:55:44 mkennedy Exp $
+
+*cl-zebu-3.5.5 (07 Nov 2004)
+
+  07 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> +metadata.xml,
+  +files/3.5.5-zebu-compiler-gentoo.patch, +cl-zebu-3.5.5.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
