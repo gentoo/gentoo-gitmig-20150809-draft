@@ -1,10 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.50-r2.ebuild,v 1.8 2001/06/23 21:34:37 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.50-r2.ebuild,v 1.9 2001/07/06 21:54:11 lamer Exp $
 
 GPV="4.1.1"
-A="${P}.tar.gz ghostscript-fonts-std-6.0.tar.gz print-${GPV}.tar.gz"
+A="${P}.tar.gz ghostscript-fonts-std-6.0.tar.gz print-${GPV}.tar.gz
+jpegsrc.v6b.tar.gz zlib-1.1.3.tar.gz libpng-1.0.12.tar.gz"
 A1=jpegsrc.v6b.tar.gz
 A2=zlib-1.1.3.tar.gz
 A3=libpng-1.0.12.tar.gz
