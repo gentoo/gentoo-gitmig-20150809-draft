@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.7 2004/10/20 08:48:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.8 2004/10/23 03:48:02 vapier Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -38,7 +38,6 @@ amd64
 arm
 hppa
 ia64
-macos
 mips
 ppc
 ppc64

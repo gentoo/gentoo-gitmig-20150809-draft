@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.8 2004/10/20 00:05:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.9 2004/10/23 03:48:02 vapier Exp $
 
 # Ciaran McCreesh <ciaranm@gentoo.org>
 # not even slightly reliable, bug #65216
@@ -64,7 +64,6 @@ amd64
 arm
 hppa
 ia64
-macos
 mips
 ppc
 ppc64
