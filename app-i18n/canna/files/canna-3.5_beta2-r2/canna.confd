@@ -1,4 +1,0 @@
-# Config file for /etc/init.d/canna
-
-# Specify user to run as
-CANNASERVER_OPTS="-u canna"

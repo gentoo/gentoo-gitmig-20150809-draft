@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.12 2004/04/06 03:50:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.13 2004/05/04 18:12:04 usata Exp $
 
 inherit cannadic eutils
 
@@ -78,7 +78,7 @@ src_install() {
 		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
 	fi
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/canna.initd.new canna || die
+	exeinto /etc/init.d ; newexe ${FILESDIR}/canna.initd canna || die
 	insinto /etc/conf.d ; newins ${FILESDIR}/canna.confd canna || die
 	insinto /etc/       ; newins ${FILESDIR}/canna.hosts hosts.canna || die
 	keepdir /var/log/canna/ || die
