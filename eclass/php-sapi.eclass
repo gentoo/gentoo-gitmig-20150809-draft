@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.15 2004/03/28 22:57:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.16 2004/03/29 00:54:05 vapier Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -60,7 +60,7 @@ RDEPEND="${RDEPEND}
    app-arch/bzip2
    X? ( virtual/x11 )
    crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
-   curl? ( >=net-ftp/curl-7.10.2 )
+   curl? ( >=net-misc/curl-7.10.2 )
    x86? ( firebird? ( >=dev-db/firebird-1.0 ) )
    freetds? ( >=dev-db/freetds-0.53 )
    gd-external? ( media-libs/libgd >=media-libs/jpeg-6b 
