@@ -1,0 +1,2 @@
+# needs gcc-3.3.3
+=dev-lang/gpc-20040516
