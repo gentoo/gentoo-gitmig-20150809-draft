@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.1 2005/01/31 16:33:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.2 2005/02/05 06:28:07 genstef Exp $
+
+  05 Feb 2005; Stefan Schweizer <genstef@gentoo.org> loop-aes-3.0b.ebuild:
+  Change config check to check for BLK_DEV_LOOP not set as in documentation,
+  thanks to Tom P. <fkqstjg02@sneakemail.com> in bug 80776
 
 *loop-aes-3.0b (31 Jan 2005)
 

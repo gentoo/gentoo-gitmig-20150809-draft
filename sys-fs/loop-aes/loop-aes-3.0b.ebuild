@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.0b.ebuild,v 1.1 2005/01/31 16:33:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.0b.ebuild,v 1.2 2005/02/05 06:28:07 genstef Exp $
 
 inherit linux-mod
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 
 S=${WORKDIR}/${MY_P}
 
-CONFIG_CHECK="BLK_DEV_LOOP"
+CONFIG_CHECK="!BLK_DEV_LOOP"
 MODULE_NAMES="loop(block:)"
 BUILD_PARAMS="LINUX_SOURCE=${KV_DIR} MODINST=n RUNDM=n"
 BUILD_TARGETS="all"
@@ -55,5 +55,4 @@ pkg_postinst() {
 	einfo "For more instructions take a look at examples in"
 	einfo "/usr/share/doc/${PF}/README.gz"
 	einfo ""
-
 }
