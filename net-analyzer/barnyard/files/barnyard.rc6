@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/files/barnyard.rc6,v 1.1 2003/08/10 01:23:54 solar Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/snort/barnyard.conf ] ; then
+		eerror "You need an /etc/snort/barnyard.conf to run barnyard"
+		eerror "There is an example config in /etc/snort/barnyard.conf.distrib"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting barnyard"
+	start-stop-daemon --start --quiet --exec /usr/bin/barnyard \
+		-- ${BARNYARD_OPTS} >/dev/null 2>&1
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping barnyard"
+	start-stop-daemon --stop --quiet --pidfile ${PIDFILE}
+	eend $?
+}
