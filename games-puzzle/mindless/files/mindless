@@ -1,0 +1,20 @@
+#!/bin/bash
+
+SEARCHDIRS="
+${HOME}/.mindless/
+GENTOO_DIR
+"
+
+CARDINFO_DAT=""
+for d in ${SEARCHDIRS} ; do
+	if [ -f "${d}/cardinfo.dat" ] ; then
+		export CARDINFO_DAT="${d}/cardinfo.dat"
+		exec mindless-bin "$@"
+	elif [ -f "${d}/CardInfo.dat" ] ; then
+		export CARDINFO_DAT="${d}/CardInfo.dat"
+		exec mindless-bin "$@"
+	fi
+done
+
+echo "No CardInfo.dat found in:"
+echo "${SEARCHDIRS}"
