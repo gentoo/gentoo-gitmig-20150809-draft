@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.29 2005/02/11 16:28:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.30 2005/02/12 07:18:30 cardoe Exp $
+
+  12 Feb 2005; Doug Goldstein <cardoe@gentoo.org> mythfrontend-0.17.ebuild:
+  forgot to override $S
 
 *mythfrontend-0.17 (11 Feb 2005)
 

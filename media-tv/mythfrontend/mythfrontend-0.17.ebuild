@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.17.ebuild,v 1.1 2005/02/11 16:28:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.17.ebuild,v 1.2 2005/02/12 07:18:30 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="alsa arts dvb lcd lirc nvidia cle266 opengl xv mmx ieee1394"
-
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -28,6 +27,8 @@ DEPEND=">=media-libs/freetype-2.0
 
 RDEPEND="${DEPEND}
 	!media-tv/mythtv"
+
+S=${WORKDIR}/mythtv-${PV}
 
 pkg_setup() {
 	local qt_use="$(</var/db/pkg/`best_version x11-libs/qt`/USE)"
