@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.4.4.ebuild,v 1.3 2004/03/05 09:14:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.4.4.ebuild,v 1.4 2004/03/23 18:47:49 dragonheart Exp $
 
 DESCRIPTION="Graphical IDE for PIC-based application development"
 HOMEPAGE="http://pikdev.free.fr/"
@@ -8,7 +8,7 @@ SRC_URI="http://pikdev.free.fr/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
+IUSE="xinerama"
 RDEPEND=">=kde-base/kde-3.0
 		x11-libs/qt
 		sys-libs/zlib
