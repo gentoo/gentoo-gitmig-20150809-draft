@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.11 2004/12/28 22:50:37 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.12 2004/12/30 04:45:22 mr_bones_ Exp $
+
+  29 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  files/0.9.12-gcc3-gentoo.patch, chromium-0.9.12-r5.ebuild:
+  tidy ebuild and add patch for gcc-34 to the gcc-3 patch (bug #76094)
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

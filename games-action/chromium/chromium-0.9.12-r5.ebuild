@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.8 2004/06/30 02:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.9 2004/12/30 04:45:22 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64 ~sparc"
 IUSE="qt sdl oggvorbis"
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	|| (
 		sdl? ( media-libs/libsdl
 			media-libs/smpeg )
@@ -24,17 +24,15 @@ RDEPEND="virtual/libc
 	qt? ( x11-libs/qt )
 	media-libs/openal
 	virtual/x11"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 S="${WORKDIR}/Chromium-0.9"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc3-gentoo.patch
-	epatch ${FILESDIR}/${PV}-proper-options.patch
-	has_version '=x11-libs/qt-3*' && epatch ${FILESDIR}/${PV}-qt3.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-gcc3-gentoo.patch"
+	epatch "${FILESDIR}/${PV}-proper-options.patch"
+	has_version '=x11-libs/qt-3*' && epatch "${FILESDIR}/${PV}-qt3.patch"
 	append-flags -DPKGDATADIR="'\"${GAMES_DATADIR}/${PN}\"'"
 	append-flags -DPKGBINDIR="'\"${GAMES_BINDIR}\"'"
 	sed -i \
@@ -46,6 +44,7 @@ src_unpack() {
 	sed -i \
 		-e "s:-O2:${CFLAGS}:" support/glpng/src/Makefile \
 			|| die "sed support/glpng/src/Makefile failed"
+	find "${S}" -type d -name CVS -exec rm -rf '{}' \; >& /dev/null
 }
 
 src_compile() {
@@ -72,13 +71,8 @@ src_compile() {
 }
 
 src_install() {
-	exeinto "${GAMES_BINDIR}"
-	doexe bin/chromium* || die "doexe failed"
-
+	dogamesbin bin/chromium* || die "dogamesbin failed"
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -r data "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
-
-	find "${D}" -name CVS -exec rm -rf '{}' \; >& /dev/null
-
 	prepgamesdirs
 }
