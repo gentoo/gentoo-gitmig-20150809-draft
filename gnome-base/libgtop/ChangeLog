@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.11 2003/02/22 03:42:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.12 2003/03/16 15:19:17 spider Exp $
 
 *libgtop-2.0.1 (27 Jan 2003)
+
+  16 mar 2003; <spider@gentoo.org> libgtop-2.0.1.ebuild:
+  fixed the description
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> libgtop-2.0.1.ebuild :
   Mark stable on Alpha
