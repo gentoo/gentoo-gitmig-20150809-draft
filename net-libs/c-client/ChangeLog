@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.13 2004/02/02 02:45:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.14 2004/02/06 05:53:12 robbat2 Exp $
+
+*c-client-2002e-r2 (05 Feb 2004)
+
+  05 Feb 2004; Robin H. Johnson <robbat2@gentoo.org> c-client-2002e-r2.ebuild:
+  fix bug #40146, move -fPIC to all arches as it's needed for lots of fixes.
 
   01 Jan 2004; Jon Portnoy <avenj@gentoo.org> c-client-2002e-r1.ebuild :
   AMD64 keywords.
