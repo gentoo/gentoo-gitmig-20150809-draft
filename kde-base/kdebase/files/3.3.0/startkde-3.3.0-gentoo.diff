@@ -1,11 +1,11 @@
---- startkde.orig	2004-05-24 19:52:04.536984592 -0500
-+++ startkde	2004-05-24 19:53:32.712579864 -0500
-@@ -1,8 +1,31 @@
+--- startkde.orig	2004-08-06 09:37:38.231823856 -0500
++++ startkde	2004-08-06 09:40:04.372607080 -0500
+@@ -1,8 +1,32 @@
 -#!/bin/sh
 +#!/bin/sh --login
  #
 -#  DEFAULT KDE STARTUP SCRIPT ( KDE-3.3 )
-+#  GENTOO CUSTOMIZED KDE STARTUP SCRIPT ( KDE-3.3 )
++#  GENTOO CUSTOMIZED STARTUP SCRIPT ( KDE-3.3 )
  #
  
 +# Gentoo part:
@@ -20,6 +20,8 @@
 +if [ ! -e .kde3.3 ]; then
 +       if [ -e .kde3.2 ]; then
 +               /bin/cp -r .kde3.2 .kde3.3
++
++               /bin/cp -r .kde3.2 .kde3.3
 +       else
 +               /bin/mkdir .kde3.3
 +       fi
@@ -30,22 +32,21 @@
 +
 +# Gentoo part ends
 +
-+
  # When the X server dies we get a HUP signal from xinit. We must ignore it
  # because we still need to do some cleanup.
  trap 'echo GOT SIGHUP' HUP
-@@ -144,12 +167,12 @@
- # especially necessary on slow machines, where starting KDE takes one or two
- # minutes until anything appears on the screen.
- #
+@@ -14,12 +38,12 @@
+ 	exit 1
+ fi
+ 
 -# Set the background to plain grey.
 +# Set the background to plain cyan.
  # The standard X background is nasty, causing moire effects and exploding
  # people's heads. We use colours from the standard KDE palette for those with
  # palettised displays.
+ if test -z "$XDM_MANAGED" || echo "$XDM_MANAGED" | grep ",auto" > /dev/null; then
+-  xsetroot -solid "#C0C0C0"
++  xsetroot -solid "#5477A0"
+ fi
  
--test "$XDM_MANAGED" || bkg="-solid #C0C0C0"
-+test "$XDM_MANAGED" || bkg="-solid #5477A0"
- xsetroot -cursor_name left_ptr $bkg
- 
- # Get Ghostscript to look into user's KDE fonts dir for additional Fontmap
+ # we have to unset this for Darwin since it will screw up KDE's dynamic-loading

@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_beta2.ebuild,v 1.2 2004/07/28 13:38:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0.ebuild,v 1.1 2004/08/19 14:23:01 caleb Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="~x86 ~amd64"
-IUSE="ldap pam motif cups ssl opengl samba java arts"
+IUSE="ldap pam cups ssl opengl samba java arts"
 
 DEPEND="ldap? ( net-nds/openldap )
 	pam? ( sys-libs/pam )
-	motif? ( x11-libs/openmotif )
 	cups? ( net-print/cups )
 	ssl? ( dev-libs/openssl )
 	opengl? ( virtual/opengl )
@@ -23,12 +22,12 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
 }
 
 src_compile() {
-	myconf="$myconf --with-dpms --with-cdparanoia"
-	myconf="$myconf `use_with ldap` `use_with motif`"
-	myconf="$myconf `use_with encode lame` `use_with cups`"
+	myconf="$myconf --with-dpms"
+	myconf="$myconf `use_with ldap` `use_with cups`"
 	myconf="$myconf `use_with opengl gl` `use_with ssl`"
 	myconf="$myconf `use_with arts`"
 
@@ -61,11 +60,16 @@ src_install() {
 
 	# startkde script
 	cd ${D}/${KDEDIR}/bin
-	epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
 	mv startkde startkde.orig
 	sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
 	rm startkde.orig
 	chmod a+x startkde
+
+	# startup and shutdown scripts
+	dodir ${KDEDIR}/env
+	dodir ${KDEDIR}/shutdown
+	cp -a ${FILESDIR}/agent-startup.sh ${D}/${KDEDIR}/env
+	cp -a ${FILESDIR}/agent-shutdown.sh ${D}/${KDEDIR}/shutdown
 
 	# kcontrol modules
 	cd ${D}/${KDEDIR}/etc/xdg/menus
