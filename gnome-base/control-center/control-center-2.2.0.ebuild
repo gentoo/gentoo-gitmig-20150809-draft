@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.2.0.ebuild,v 1.1 2003/01/31 01:40:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.2.0.ebuild,v 1.2 2003/01/31 13:03:26 foser Exp $
 
 inherit gnome2
 
@@ -10,6 +10,8 @@ HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
+
+MAKEOPTS="-j1"
 
 RDEPEND=">=x11-libs/gtk+-2.2
 	>=gnome-base/gconf-1.2
