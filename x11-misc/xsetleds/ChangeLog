@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsetleds
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsetleds/ChangeLog,v 1.1 2003/10/16 01:09:08 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsetleds/ChangeLog,v 1.2 2004/04/05 14:30:35 zx Exp $
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> xsetleds-0.1.3.ebuild:
+  Marking stable on hppa
 
 *xsetleds-0.1.3 (15 Oct 2003)
 
