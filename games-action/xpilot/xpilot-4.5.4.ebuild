@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.4.ebuild,v 1.6 2005/03/06 15:07:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.4.ebuild,v 1.7 2005/03/07 00:38:17 mr_bones_ Exp $
 
 DESCRIPTION="A multi-player 2D client/server space game"
 HOMEPAGE="http://www.xpilot.org/"
@@ -8,20 +8,19 @@ SRC_URI="http://xpilot.org/pub/xpilot/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="virtual/x11"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:/usr/local:/usr:" \
 		-e "s:/man/man:/share/man/man:" \
-		Local.config || die "sed Local.config failed"
+		Local.config \
+		|| die "sed failed"
 }
 
 src_compile() {
