@@ -1,28 +1,34 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/cdrtools-dvdr-1.11.37.ebuild,v 1.2 2003/03/05 02:39:32 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/cdrtools-dvdr-2.01_alpha04.ebuild,v 1.1 2003/03/05 02:39:32 agenkin Exp $
+
+inherit eutils
 
 DESCRIPTION="A set of tools for CDR drives, including cdrecord.	 Includes Mandrake's DVDR patch."
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc"
+
 DEPEND="virtual/glibc"
 
-SLOT="0"
-KEYWORDS="~x86"
-
 DVDR_PATCH_P=cdrtools-1.11a37-dvd.patch
-MY_P=${PN/-dvdr/}-${PV%.*}a${PV##*.}
-S=${WORKDIR}/${PN/-dvdr}-1.11
-SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/OLD/2.0aX/${MY_P}.tar.gz
+SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${PN/-dvdr/}-${PV/_alpha/a}.tar.gz
 	http://people.mandrakesoft.com/~warly/files/cdrtools/${DVDR_PATCH_P}.bz2"
+S="${WORKDIR}/${PN/-dvdr/}-2.01"
 
 src_unpack() {
-	unpack ${MY_P}.tar.gz || die
+	unpack ${PN/-dvdr/}-${PV/_alpha/a}.tar.gz || die
 	unpack ${DVDR_PATCH_P}.bz2 || die
 
 	cd ${S}
-	patch -p1 < ../${DVDR_PATCH_P} || die "Patch failed"
+	patch -p1 < ../${DVDR_PATCH_P} || die "Patch failed."
 
+	cd ${S}
+	# Add support for 2.5 kernels
+	# <azarah@gentoo.org> (05 Feb 2003)
+	epatch ${FILESDIR}/${PN/-dvdr}-2.01-kernel25-support.patch || die
+	
 	cd ${S}/DEFAULTS
 	sed -e "s:/opt/schily:/usr:g" < Defaults.linux > Defaults.linux.hacked
 	mv Defaults.linux.hacked Defaults.linux
