@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (19 Aug 2002)
+# masked for testing
+=x11-wm/oroborus-2.0.7
+
 # <phoenix@gentoo.org> (19 Aug 2002)
 # masked for testing
 =app-shells/zsh-4.0.6
