@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.5-r2.ebuild,v 1.2 2003/04/14 10:52:20 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.5-r2.ebuild,v 1.3 2003/04/19 19:36:25 lostlogic Exp $
 
 IUSE="svga"
+
+inherit flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -33,17 +35,21 @@ src_unpack() {
 		fi
 	fi
 
-	sed <${FILESDIR}/${PV}/Makefile.${cfg} >Makefile.config \
-		-e "s|-O3|${CFLAGS} -fPIC|"
+	# Sparc support ...
+	replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=ultrasparc"
+	replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
+
+	sed -e "s:-O3:${CFLAGS} -fPIC:" ${FILESDIR}/${PV}/Makefile.${cfg} \
+		> Makefile.config || die "Flag replacement failed"
 }
 
 src_compile() {
 	MAKEOPTS="${MAKEOPTS} -j1"
-	emake CC="${CC}" CXX="${CXX}"|| die
+	emake CC="${CC}" CXX="${CXX}"|| die "emake failed"
 }
 
 src_install () {
-	make package pkgdir=${D}/usr/ || die
+	make package pkgdir=${D}/usr/ || die "make package failed"
 
 	# Fix symlink not being created.
 	dosym `basename ${D}/usr/lib/libnetpbm.so.*` /usr/lib/libnetpbm.so
