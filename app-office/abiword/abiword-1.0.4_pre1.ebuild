@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1.ebuild,v 1.3 2002/11/17 12:22:51 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1.ebuild,v 1.4 2002/11/17 22:47:19 foser Exp $
 
 #inherit debug
 
@@ -103,7 +103,7 @@ src_compile() {
 		${myconf} || die
 	#   --enable-debug \
 
-	emake || die
+	make || die
 }
 
 src_install() {
