@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.13 2003/04/15 09:12:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.14 2003/04/15 11:47:57 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -352,9 +352,6 @@ src_unpack() {
 #		echo "#define BuildXineramaLibrary YES" >> config/cf/host.def
 #	fi
 
-	# Default to whiteglass maybe?
-	echo "#define DefaultCursorTheme whiteglass" >> config/cf/host.def
-
 	# End the host.def definitions here
 	eend 0
 
@@ -502,16 +499,6 @@ src_install() {
 	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
 		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-9x16-lat9.pcf.gz
 	eend 0
-
-	# Change the silly red pointer to a white one ...
-	if [ -f "${D}/usr/X11R6/lib/X11/icons/default/index.theme" ]
-	then
-		dosed 's:core:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
-	
-	elif [ -f "${D}/usr/share/cursors/xfree/default/index.theme" ]
-	then
-		dosed 's:core:whiteglass:'/usr/share/cursors/xfree/default/index.theme
-	fi
 
 	# Standard symlinks
 	dodir /usr/{bin,include,lib}
