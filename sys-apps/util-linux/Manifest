@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d6859c757c22eec819411275fc368a4b ChangeLog 13597
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 e92a492381d2073f6f42d2f2e1e63a10 util-linux-2.11z-r8.ebuild 3161
@@ -5,13 +8,11 @@ MD5 e012bcb53938d7147bd4eb55a2f21d41 util-linux-2.11z-r9.ebuild 3354
 MD5 608d202bf0e75fcd128fab85401471cd util-linux-2.12-r2.ebuild 3198
 MD5 f3789fe0aec47dff68ad09c16afc1371 util-linux-2.12-r3.ebuild 3699
 MD5 6d3d6296b9adb878eb1e8e76d7c8d37a util-linux-2.12-r4.ebuild 4108
-MD5 9bf637ea5b06f85b0efd369479ec19ff util-linux-2.12-r5.ebuild 4220
+MD5 a7d560c1fbec607e50ddc90151460142 util-linux-2.12-r5.ebuild 4215
 MD5 02afa4d774f45ab0b9ef42ecc1748005 files/digest-util-linux-2.11z-r8 153
 MD5 02afa4d774f45ab0b9ef42ecc1748005 files/digest-util-linux-2.11z-r9 153
 MD5 830453d37b748b7e2ec454603e33b920 files/digest-util-linux-2.12-r2 151
 MD5 5a1bf3d383850b6c8ca05cc4fe76c813 files/digest-util-linux-2.12-r3 154
-MD5 5a1bf3d383850b6c8ca05cc4fe76c813 files/digest-util-linux-2.12-r4 154
-MD5 5a1bf3d383850b6c8ca05cc4fe76c813 files/digest-util-linux-2.12-r5 154
 MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
 MD5 0f2f1ddaeaf52622fa80f4f08bb25a6b files/util-linux-2.11z-01-nfsv4-crypt.dif 13460
 MD5 0be8df03dae23c81a0e929e58a4114e0 files/util-linux-2.11z-01-nfsv4.dif 13442
@@ -20,10 +21,19 @@ MD5 6dc0134d8d5f325a86257698d2184718 files/util-linux-2.11z-mips-fdisk-fix.patch
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
 MD5 18371db840b08f5782e3f8f96c4efe8d files/util-linux-2.11z-pic.patch 3056
 MD5 90b5a47385e394b9112357282c35eb4a files/util-linux-2.11z-script.patch 1580
-MD5 11fdaf3d68904b318fbffd7243e719b7 files/util-linux-2.12-amd64_rdev_installation.patch 737
-MD5 7ce604460c5607e6eb5d894b6c8b2064 files/util-linux-2.12-fat-LABEL-support.patch 11583
-MD5 4460875a6ebcf24a7ca5b41ed12f9fe5 files/util-linux-2.12-gcloop.patch 3806
 MD5 d927611f34139a40f1fc9f4162c61f8a files/util-linux-2.12-kernel-2.6.patch 2964
 MD5 8d4f1146f0699deb1e6872e1c81293e3 files/util-linux-2.12-selinux.diff.bz2 2558
-MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
 MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
+MD5 5a1bf3d383850b6c8ca05cc4fe76c813 files/digest-util-linux-2.12-r4 154
+MD5 7ce604460c5607e6eb5d894b6c8b2064 files/util-linux-2.12-fat-LABEL-support.patch 11583
+MD5 5a1bf3d383850b6c8ca05cc4fe76c813 files/digest-util-linux-2.12-r5 154
+MD5 4460875a6ebcf24a7ca5b41ed12f9fe5 files/util-linux-2.12-gcloop.patch 3806
+MD5 11fdaf3d68904b318fbffd7243e719b7 files/util-linux-2.12-amd64_rdev_installation.patch 737
+MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBKYVrHTu7gpaalycRAgaSAKC/VwANOT8VNWcEWBkq0Nm6xAGVTQCg71yX
+MhZvHGkhZ/WrfhEAUMOwANQ=
+=2yVU
+-----END PGP SIGNATURE-----
