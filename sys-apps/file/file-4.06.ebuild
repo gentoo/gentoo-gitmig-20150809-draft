@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.11 2004/01/22 23:54:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.12 2004/01/29 04:43:17 agriffis Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 
-KEYWORDS="x86 ~amd64 ~ppc sparc ~arm ~alpha hppa mips ia64 ppc64"
+KEYWORDS="x86 ~amd64 ~ppc sparc ~arm alpha hppa mips ia64 ppc64"
 SLOT="0"
 LICENSE="as-is"
 

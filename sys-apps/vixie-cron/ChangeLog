@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.6 2004/01/22 21:06:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.7 2004/01/29 04:42:26 agriffis Exp $
+
+  28 Jan 2004; Aron Griffis <agriffis@gentoo.org> vixie-cron-3.0.1-r3.ebuild:
+  stable on alpha and ia64
 
   22 Jan 2004; Martin Holzer <mholzer@gentoo.org> vixie-cron-3.0.1-r1.ebuild,
   vixie-cron-3.0.1-r3.ebuild:
