@@ -1,9 +1,19 @@
-MD5 6849d1e60420809356fa2cb570987ad7 gaim-otr-2.0.0.ebuild 781
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2193c5c0836323946883b912b3a1e82 ChangeLog 1233
 MD5 772dce3497d3125e130d268b63273b24 metadata.xml 226
-MD5 23d95d74aba3ba4e02a804afe248f114 ChangeLog 1133
-MD5 6370b5ce7d912f4cdb16683da1b0c411 gaim-otr-2.0.1.ebuild 781
+MD5 6849d1e60420809356fa2cb570987ad7 gaim-otr-2.0.0.ebuild 781
 MD5 66b5b37566145ac3166a3c7e61c64f8e gaim-otr-1.0.3.ebuild 880
+MD5 427e92582b14950851d46e3a18cdf54d gaim-otr-2.0.1.ebuild 791
 MD5 972e2f6cda3a9c79b1de8cbd95549597 files/digest-gaim-otr-2.0.0 65
-MD5 f35f82a092a303af1e9780ec9fd495fa files/gaim-otr-1.0.3-fPIC.patch 364
-MD5 25b670ffc82acacbee5777a73c30c608 files/digest-gaim-otr-1.0.3 65
 MD5 92722fbea66bd224305cdbdb38a2caa5 files/digest-gaim-otr-2.0.1 65
+MD5 25b670ffc82acacbee5777a73c30c608 files/digest-gaim-otr-1.0.3 65
+MD5 f35f82a092a303af1e9780ec9fd495fa files/gaim-otr-1.0.3-fPIC.patch 364
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCSyD4KRy60XGEcJIRAnWUAJ4vCr3nRq0m8RHaMB6UYJyewTibmwCdFECE
+zp9U3NyqfXwAUggx31+Lauc=
+=8Q1F
+-----END PGP SIGNATURE-----
