@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.22 2003/02/28 09:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.23 2003/03/01 03:38:40 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -397,3 +397,174 @@ get_number_of_jobs() {
 	fi
 }
 
+# Simplify/standardize adding users to the system
+# vapier@gentoo.org
+#
+# enewuser(username, uid, shell, homedir, groups, extra options)
+#
+# Default values if you do not specify any:
+# username:	REQUIRED !
+# uid:		next available (see useradd(8))
+# shell:	/bin/false
+# homedir:	/dev/null
+# groups:	none
+# extra:	comment of 'added by portage for ${PN}'
+enewuser() {
+	# get the username
+	local euser="$1"; shift
+	if [ -z "${euser}" ] ; then
+		eerror "No username specified !"
+		die "Cannot call enewuser without a username"
+	fi
+	einfo "Adding user '${euser}' to your system ..."
+
+	# setup a file for testing usernames/groups
+	local tmpfile="`mktemp -p ${T}`"
+	touch ${tmpfile}
+	chown ${euser} ${tmpfile} >& /dev/null
+	local realuser="`ls -l ${tmpfile} | awk '{print $3}'`"
+
+	# see if user already exists
+	if [ "${euser}" == "${realuser}" ] ; then
+		einfo "${euser} already exists on your system :)"
+		return 0
+	fi
+
+	# options to pass to useradd
+	local opts=""
+
+	# handle uid
+	local euid="$1"; shift
+	if [ ! -z "${euid}" ] ; then
+		if [ ${euid} -gt 0 ] ; then
+			opts="${opts} -u ${euid}"
+		else
+			eerror "Userid given but is not greater than 0 !"
+			die "${euid} is not a valid UID"
+		fi
+	else
+		euid="next available"
+	fi
+	einfo " - Userid: ${euid}"
+
+	# handle shell
+	local eshell="$1"; shift
+	if [ ! -z "${eshell}" ] ; then
+		if [ ! -e ${eshell} ] ; then
+			eerror "A shell was specified but it does not exist !"
+			die "${eshell} does not exist"
+		fi
+	else
+		eshell=/bin/false
+	fi
+	einfo " - Shell: ${eshell}"
+	opts="${opts} -s ${eshell}"
+
+	# handle homedir
+	local ehome="$1"; shift
+	if [ -z "${ehome}" ] ; then
+		ehome=/dev/null
+	fi
+	einfo " - Home: ${ehome}"
+	opts="${opts} -d ${ehome}"
+
+	# handle groups
+	local egroups="$1"; shift
+	if [ ! -z "${egroups}" ] ; then
+		local realgroup
+		local oldifs="${IFS}"
+		export IFS=","
+		for g in ${egroups} ; do
+			chgrp ${g} ${tmpfile} >& /dev/null
+			realgroup="`ls -l ${tmpfile} | awk '{print $4}'`"
+			if [ "${g}" != "${realgroup}" ] ; then
+				eerror "You must add ${g} to the system first"
+				die "${g} is not a valid GID"
+			fi
+		done
+		export IFS="${oldifs}"
+		opts="${opts} -g ${egroups}"
+	else
+		egroups="(none)"
+	fi
+	einfo " - Groups: ${egroups}"
+
+	# handle extra and add the user
+	local eextra="$@"
+	local oldsandbox="${oldsandbox}"
+	export SANDBOX_ON="0"
+	if [ -z "${eextra}" ] ; then
+		useradd ${opts} ${euser} \
+			-c "added by portage for ${PN}" \
+			|| die "enewuser failed"
+	else
+		einfo " - Extra: ${eextra}"
+		useradd ${opts} ${euser} ${eextra} \
+			|| die "enewuser failed" 
+	fi
+	export SANDBOX_ON="${oldsandbox}"
+
+	if [ ! -e ${ehome} ] && [ ! -e ${D}/${ehome} ] ; then
+		einfo " - Creating ${ehome} in ${D}"
+		dodir ${ehome}
+		fperms ${euser} ${ehome}
+	fi
+}
+
+# Simplify/standardize adding groups to the system
+# vapier@gentoo.org
+#
+# enewgroup(group, gid)
+#
+# Default values if you do not specify any:
+# groupname:	REQUIRED !
+# gid:		next available (see groupadd(8))
+# extra:	none
+enewgroup() {
+	# get the group
+	local egroup="$1"; shift
+	if [ -z "${egroup}" ] ; then
+		eerror "No group specified !"
+		die "Cannot call enewgroup without a group"
+	fi
+	einfo "Adding group '${egroup}' to your system ..."
+
+	# setup a file for testing groupname
+	local tmpfile="`mktemp -p ${T}`"
+	touch ${tmpfile}
+	chgrp ${egroup} ${tmpfile} >& /dev/null
+	local realgroup="`ls -l ${tmpfile} | awk '{print $4}'`"
+
+	# see if group already exists
+	if [ "${egroup}" == "${realgroup}" ] ; then
+		einfo "${egroup} already exists on your system :)"
+		return 0
+	fi
+
+	# options to pass to useradd
+	local opts=""
+
+	# handle gid
+	local egid="$1"; shift
+	if [ ! -z "${egid}" ] ; then
+		if [ ${egid} -gt 0 ] ; then
+			opts="${opts} -g ${egid}"
+		else
+			eerror "Groupid given but is not greater than 0 !"
+			die "${egid} is not a valid GID"
+		fi
+	else
+		egid="next available"
+	fi
+	einfo " - Groupid: ${egid}"
+
+	# handle extra
+	local eextra="$@"
+	opts="${opts} ${eextra}"
+
+	# add the group
+	local oldsandbox="${oldsandbox}"
+	export SANDBOX_ON="0"
+	groupadd ${opts} ${egroup} || die "enewgroup failed"
+	export SANDBOX_ON="${oldsandbox}"
+}
