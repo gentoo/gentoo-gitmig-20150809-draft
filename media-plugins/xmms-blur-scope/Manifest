@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 ab9c0d5509689ce62afb82cfda723970 xmms-blur-scope-1.2.10.ebuild 321
-MD5 094e8808942df6335a5047058b9a6330 ChangeLog 329
+MD5 6e2a835b2980c9dd41a792fe94f3df85 xmms-blur-scope-1.2.10.ebuild 446
+MD5 243e66f49e030cd5efe38070b7d31c6f ChangeLog 434
 MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-blur-scope-1.2.10 142
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDXi4ArHZZzCEUG0RAkFDAJ9e4E6eVSHpimQ/7Tec55lXmr7QIACdEvuv
+p5nby8YMuwioF1q+Qk330r8=
+=OiZJ
+-----END PGP SIGNATURE-----
