@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/python-cdb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.1 2003/07/12 15:54:44 liquidx Exp $
+
+*python-cdb-0.32 (12 Jul 2003)
+
+  12 Jul 2003; Alastair Tse <liquidx@gentoo.org> python-cdb-0.32.ebuild:
+  initial ebuild. contributed by M Stearn <mstearn@hotmail.com>
+
