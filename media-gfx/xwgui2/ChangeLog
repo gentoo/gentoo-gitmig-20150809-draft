@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/xwgui2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xwgui2/ChangeLog,v 1.1 2003/10/29 23:45:17 plasmaroo Exp $
+
+*xwgui2-2.08 (29 Oct 2003)
+
+  29 Oct 2003; <plasmaroo@gentoo.org> xwgui2-2.08.ebuild,
+  files/xwgui2-2.08-makefilediff.patch:
+  Initial import.
+
