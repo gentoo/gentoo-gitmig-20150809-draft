@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-0.4.0.ebuild,v 1.1 2004/12/20 12:30:43 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-0.4.0.ebuild,v 1.2 2004/12/20 14:16:24 citizen428 Exp $
 
 inherit ruby
 
@@ -22,5 +22,7 @@ DEPEND="virtual/ruby"
 
 src_install() {
 	ruby setup.rb install --prefix=${D} || die
-	dodoc -r README examples
+	dodoc README
+	docinto examples
+	dodoc ${S}/examples/*
 }
