@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/vendetta-test
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-test/ChangeLog,v 1.2 2003/09/10 16:06:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-test/ChangeLog,v 1.3 2003/11/19 07:11:24 mr_bones_ Exp $
+
+  18 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  vendetta-test-0.ebuild:
+  depend on gtk+-1.2 (bug 33579)
 
 *vendetta-test-0 (02 Sep 2003)
 
