@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r14.ebuild,v 1.5 2002/12/09 04:17:41 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r14.ebuild,v 1.6 2002/12/15 10:44:10 bjb Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -67,7 +67,7 @@ HOMEPAGE="http://www.vim.org/"
 
 SLOT="0"
 LICENSE="vim"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="app-editors/vim-core
 	dev-util/cscope
