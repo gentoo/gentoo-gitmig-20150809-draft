@@ -43,14 +43,14 @@ if [ -f "$usermodmap" ]; then
 fi  
 
 #xsession
-if [ -n "`/etc/X11/chooser.sh`" ]; then
-	exec "`/etc/X11/chooser.sh`"
-elif [ -s "$startup" ]; then
+if [ -s "$startup" ]; then
 	if [ -x "$startup" ]; then
 		exec "$startup"
 	else
 		exec /bin/sh "$startup"
 	fi
+elif [ -n "`/etc/X11/chooser.sh`" ]; then
+	exec "`/etc/X11/chooser.sh`"
 else
 	exec xsm
 fi
