@@ -1,0 +1,48 @@
+diff -Naurp colo-1.10.orig/chain/colo-chain.lnk colo-1.10/chain/colo-chain.lnk
+--- colo-1.10.orig/chain/colo-chain.lnk	2004-04-18 14:26:35.000000000 -0400
++++ colo-1.10/chain/colo-chain.lnk	2004-08-02 03:05:19.000000000 -0400
+@@ -16,7 +16,7 @@ SECTIONS
+ 	{
+ 		start.o(.text)
+ 		*(.text)
+-		*(.rodata)
++		*(.rodata*)
+ 		__stage2 = .;
+ 		*(.stage2)
+ 	}
+diff -Naurp colo-1.10.orig/stage1/Makefile colo-1.10/stage1/Makefile
+--- colo-1.10.orig/stage1/Makefile	2004-05-23 08:34:41.000000000 -0400
++++ colo-1.10/stage1/Makefile	2004-08-02 03:06:48.000000000 -0400
+@@ -35,7 +35,7 @@ clean:
+ 	rm -f $(TARG){,.bin,.map} $(OBJS)
+ 
+ $(TARG).bin: $(TARG)
+-	objcopy -O binary $^ $@
++	objcopy -O binary --adjust-vma -0xbfc00000 $^ $@
+ 
+ $(TARG): $(OBJS)
+ 	$(LD) -T $@.lnk -Map $@.map -o $@ $^
+diff -Naurp colo-1.10.orig/stage1/colo-rom-image.lnk colo-1.10/stage1/colo-rom-image.lnk
+--- colo-1.10.orig/stage1/colo-rom-image.lnk	2004-04-18 14:26:37.000000000 -0400
++++ colo-1.10/stage1/colo-rom-image.lnk	2004-08-02 03:05:34.000000000 -0400
+@@ -38,7 +38,7 @@ SECTIONS
+ 		__text = .;
+ 		start.o(.text)
+ 		*(.text)
+-		*(.rodata)
++		*(.rodata*)
+ 		__stage2 = .;
+ 		*(.stage2)
+ 		__etext = .;
+diff -Naurp colo-1.10.orig/stage2/stage2.lnk colo-1.10/stage2/stage2.lnk
+--- colo-1.10.orig/stage2/stage2.lnk	2004-04-18 14:26:39.000000000 -0400
++++ colo-1.10/stage2/stage2.lnk	2004-08-02 03:05:45.000000000 -0400
+@@ -14,7 +14,7 @@ SECTIONS
+ 	{
+ 		__text = .;
+ 		*(.text)
+-		*(.rodata)
++		*(.rodata*)
+ 	}
+ 
+ 	.data :

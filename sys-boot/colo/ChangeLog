@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/colo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.8 2004/07/27 17:28:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.9 2004/08/02 09:35:41 kumba Exp $
+
+*colo-1.11 (02 Aug 2004)
+
+  02 Aug 2004; Joshua Kinard <kumba@gentoo.org>
+  +files/colo-linker-overlap-fix.patch, colo-1.10.ebuild, +colo-1.11.ebuild,
+  colo-1.9.ebuild:
+  Revision bump to 1.11, and 1.9/1.10 bumped to stable.
 
   28 Jun 2004; Joshua Kinard <kumba@gentoo.org> colo-1.4.ebuild,
   colo-1.6.ebuild, colo-1.8.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.10.ebuild,v 1.2 2004/08/02 09:35:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.11.ebuild,v 1.1 2004/08/02 09:35:41 kumba Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.colonel-panic.org/cobalt-mips/"
 SRC_URI="http://www.colonel-panic.org/cobalt-mips/colo/colo-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* mips"
+KEYWORDS="-* ~mips"
 IUSE=""
 DEPEND=""
 RESTRICT="nostrip"
@@ -37,12 +37,30 @@ src_unpack() {
 
 src_compile() {
 	# boot-loader
+	echo -e ""
+	einfo ">>> Building the CoLo Bootloader ..."
 	cd ${S}
 	make clean || die	# emake breaks the build
 	make || die
 
 	# flash-tool
+	echo -e ""
+	einfo ">>> Building flash-tool ..."
 	cd ${S}/tools/flash-tool
+	make clean || die
+	make || die
+
+	# colo-perm
+	echo -e ""
+	einfo ">>> Building colo-perm ..."
+	cd ${S}/tools/colo-perm
+	make clean || die
+	make || die
+
+	# md5rom
+	echo -e ""
+	einfo ">>> Building md5rom ..."
+	cd ${S}/tools/md5rom
 	make clean || die
 	make || die
 }
@@ -60,6 +78,15 @@ src_install() {
 
 	# flash-tool
 	dosbin tools/flash-tool/flash-tool
+	doman tools/flash-tool/flash-tool.8
+
+	# colo-perm
+	dosbin tools/colo-perm/colo-perm
+	doman tools/colo-perm/colo-perm.8
+
+	# md5rom
+	dosbin tools/md5rom/md5rom
+	doman tools/md5rom/md5rom.8
 }
 
 pkg_postinst() {
