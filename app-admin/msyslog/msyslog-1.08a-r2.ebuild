@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r2.ebuild,v 1.1 2002/05/04 01:22:36 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r2.ebuild,v 1.2 2002/07/09 22:04:21 nitro Exp $
 
 DESCRIPTION="Flexible and easy to integrate syslog with modularized input/output"
 HOMEPAGE="http://www.core-sdi.com/download/download1.html"
@@ -9,6 +9,7 @@ S=${WORKDIR}/${PN}-v${PV}
 
 RDEPEND="virtual/glibc mysql? ( >=dev-db/mysql-3.23 ) postgres? ( >=dev-db/postgresql-7 )"
 DEPEND="virtual/glibc"
+KEYWORDS="x86"
 LICENSE="BSD"
 SLOT="0"
 
