@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012-r1.ebuild,v 1.11 2003/04/15 19:18:56 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-0.0.1.ebuild,v 1.1 2003/04/15 19:18:56 latexer Exp $
 
 inherit eutils
 
@@ -8,11 +8,11 @@ DESCRIPTION="HostAP wireless drivers"
 HOMEPAGE="http://hostap.epitest.fi/"
 
 MY_PCMCIA="pcmcia-cs-3.2.1"
-
 PATCH_3_2_2="${MY_PCMCIA}-3.2.2.diff.gz"
 PATCH_3_2_3="${MY_PCMCIA}-3.2.3.diff.gz"
 PATCH_3_2_4="${MY_PCMCIA}-3.2.4.diff.gz"
-SRC_URI="http://hostap.epitest.fi/releases/${PN}-2002-10-12.tar.gz
+
+SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz
 		pcmcia? ( mirror://sourceforge/pcmcia-cs/${MY_PCMCIA}.tar.gz )
 		pcmcia? ( mirror://gentoo/${PATCH_3_2_2} )
 		pcmcia? ( mirror://gentoo/${PATCH_3_2_3} )
@@ -27,21 +27,19 @@ IUSE="pcmcia"
 DEPEND=">=net-wireless/wireless-tools-25
 		pcmcia? ( >=sys-apps/pcmcia-cs-3.2.1* )"
 
-S=${WORKDIR}/${PN}-2002-10-12
 LIB_PATH="/lib/modules/${KV}"
 
-if [ -z "${HOSTAP_DRIVERS}" ]; then
+if [  x"${HOSTAP_DRIVERS}" = x ]; then
 	CUSTOM="no"
-	HOSTAP_DRIVERS="pci plx"
 else
 	CUSTOM="yes"
 fi
 
 src_unpack() {
-	unpack ${PN}-2002-10-12.tar.gz
+	check_KV
+	unpack ${P}.tar.gz
 
 	if [ -n "`use pcmcia`" ]; then
-		check_KV
 		unpack ${MY_PCMCIA}.tar.gz
 		cd ${WORKDIR}/${MY_PCMCIA}
 		if [ -z "`has_version =sys-apps/pcmcia-cs-3.2.4*`" ]; then
@@ -54,12 +52,7 @@ src_unpack() {
 	fi
 
 
-	# This is a patch that has already been applied to the hostap
-	# cvs tree. It fixes hostapd compilation for gcc-3.2
-
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo-patch.diff
-
 	mv Makefile ${T}
 	sed -e "s:gcc:${CC}:" \
 		-e "s:-O2:${CFLAGS}:" \
@@ -94,15 +87,17 @@ src_compile() {
 	# try disabling CONFIG_MODVERSION from your kernel.
 	#
 
-	if [ "${CUSTOM}" == no ]; then
-		if [ -n "`use pcmcia`" ]; then
-			emake ${HOSTAP_DRIVERS} pccard hostap crypt || die
-		else
-			emake ${HOSTAP_DRIVERS} hostap crypt || die
-		fi
-	else
+	if [ "${CUSTOM}" == yes ]; then
 		einfo "Building the folowing drivers: ${HOSTAP_DRIVERS}"
 		emake ${HOSTAP_DRIVERS} hostap crypt || die
+	else
+		if [ -n "`use pcmcia`" ]; then
+			einfo "Building the folowing drivers: pci plx pccard"
+			emake pci plx pccard || die
+		else
+			einfo "Building the folowing drivers: pci plx"
+			emake ${HOSTAP_DRIVERS} || die
+		fi
 	fi
 
 	cd ${S}/hostapd
