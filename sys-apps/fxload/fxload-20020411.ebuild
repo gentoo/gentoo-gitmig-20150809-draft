@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.1 2002/05/11 00:58:36 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.2 2002/07/10 16:17:57 aliz Exp $
 
 # source maintainers named it fxload-YYYY_MM_DD instead of fxload-YYYYMMDD
 OLDP="$P"
@@ -9,6 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="USB firmware uploader"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/linux-hotplug/fxload-2002_04_11.tar.gz"
 HOMEPAGE="http://linux-hotplug.sourceforge.net"
+LICENSE="GPL-2"
 
 # fxload needs pcimodules utility provided by pcitutils-2.1.9-r1
 DEPEND="virtual/glibc

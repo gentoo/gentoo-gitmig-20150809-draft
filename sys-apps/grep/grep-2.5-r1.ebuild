@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5-r1.ebuild,v 1.1 2002/04/13 00:11:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5-r1.ebuild,v 1.2 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU regular expression matcher"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/grep/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"

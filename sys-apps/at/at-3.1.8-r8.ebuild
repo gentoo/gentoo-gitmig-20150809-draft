@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Ferry Meyndert <m0rpheus@poseidon.mine.nu> 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r8.ebuild,v 1.1 2002/03/19 04:38:39 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r8.ebuild,v 1.2 2002/07/10 16:17:55 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Queues jobs for later execution"
 SRC_URI="http://ftp.debian.org/debian/pool/main/a/at/at_${PV}-11.tar.gz"
 HOMEPAGE=""
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc >=sys-devel/flex-2.5.4a"
 RDEPEND="virtual/glibc virtual/mta"

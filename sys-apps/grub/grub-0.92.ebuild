@@ -8,6 +8,7 @@ DESCRIPTION="GNU GRUB boot loader"
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/grub"
 SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r5

@@ -6,6 +6,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Utility to change hard drive performance parameters"
 SRC_URI="http://metalab.unc.edu/pub/Linux/system/hardware/${P}.tar.gz"
 DEPEND="virtual/glibc"
+LICENSE="BSD"
 
 src_compile() {
 	emake || die "compile error"

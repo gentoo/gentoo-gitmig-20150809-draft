@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.4.2-r4.ebuild,v 1.4 2001/12/31 23:47:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.4.2-r4.ebuild,v 1.5 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A file archival tool which can also read and write tar files"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/cpio/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/cpio/cpio.html"
+LICENSE="GPL-2 LGPL-2"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc"

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jays Kwak <jayskwak@gentoo.or.kr>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ami/ami-1.0.11-r1.ebuild,v 1.3 2002/05/30 01:58:12 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ami/ami-1.0.11-r1.ebuild,v 1.4 2002/07/10 16:17:55 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean IMS Ami"
@@ -9,6 +9,7 @@ SRC_URI="http://www.kr.freebsd.org/~hwang/ami/${P}.tar.gz
     http://www.kr.freebsd.org/~hwang/ami/hanja.dic.gz
 	ftp://ftp.nnongae.com/pub/gentoo/${P}.patch"
 HOMEPAGE="http://www.kr.freebsd.org/~hwang/ami/index.html"
+LICENSE="GPL-2"
 
 DEPEND=">=media-libs/gdk-pixbuf-0.7.0"
 

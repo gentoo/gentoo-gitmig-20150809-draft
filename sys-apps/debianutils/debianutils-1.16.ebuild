@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.ebuild,v 1.1 2002/03/23 12:00:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.ebuild,v 1.2 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A selection of tools from Debian"
 SRC_URI="http://ftp.debian.org/debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz"
+LICENSE="GPL-2 BSD SMAIL"
 
 DEPEND="virtual/glibc"
 

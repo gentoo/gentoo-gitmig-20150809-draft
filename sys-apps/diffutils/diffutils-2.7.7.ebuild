@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.7.7.ebuild,v 1.1 2002/02/02 02:12:12 aeoo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.7.7.ebuild,v 1.2 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools to make diffs and compare files"
 SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/diffutils/diffutils.html"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 

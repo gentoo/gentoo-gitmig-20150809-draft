@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.37.ebuild,v 1.2 2001/12/31 23:47:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.37.ebuild,v 1.3 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
+LICENSE="as-is"
 
 DEPEND="virtual/glibc"
 

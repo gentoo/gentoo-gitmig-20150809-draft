@@ -1,13 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1-r1.ebuild,v 1.4 2001/11/24 18:36:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1-r1.ebuild,v 1.5 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text formatter used for man pages"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/groff/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 DEPEND="virtual/glibc"
+LICENSE="GPL-2"
 
 src_compile() {
 	./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man || die

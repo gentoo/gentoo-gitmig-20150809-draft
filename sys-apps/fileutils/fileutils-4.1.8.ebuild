@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.8.ebuild,v 1.1 2002/03/31 00:12:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.8.ebuild,v 1.2 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls, etc)"
 SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/fileutils/fileutils.html"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"

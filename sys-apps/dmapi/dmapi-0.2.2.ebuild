@@ -2,12 +2,13 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-0.2.2.ebuild,v 1.1 2001/11/17 08:39:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-0.2.2.ebuild,v 1.2 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs data management API library"
 SRC_URI="ftp://oss.sgi.com/projects/xfs/download/latest/cmd_tars/${P}.src.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
+LICENSE="LGPL-2.1 GPL-2"
 
 DEPEND="virtual/glibc sys-devel/autoconf sys-devel/make"
 RDEPEND="virtual/glibc"

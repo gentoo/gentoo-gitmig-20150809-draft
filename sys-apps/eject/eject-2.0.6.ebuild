@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.6.ebuild,v 1.3 2001/12/31 23:47:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.6.ebuild,v 1.4 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command to eject a disc from the CD-ROM drive"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/disk-management/${P}.tar.gz"
 HOMEPAGE="http://www.pobox.com/~tranter/eject.html"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 

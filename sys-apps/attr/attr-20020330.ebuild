@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-20020330.ebuild,v 1.1 2002/03/31 01:21:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-20020330.ebuild,v 1.2 2002/07/10 16:17:55 aliz Exp $
 
 S=${WORKDIR}/cmd/${PN}
 DESCRIPTION="xfs extended attributes tools"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${PV}.tar.bz2"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
+LICENSE="LGPL-2.1"
 
 DEPEND="virtual/glibc sys-devel/autoconf sys-devel/make"
 RDEPEND="virtual/glibc"

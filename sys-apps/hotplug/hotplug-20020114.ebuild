@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.3 2002/07/10 16:17:58 aliz Exp $
 
 # source maintainers named it hotplug-YYYY_MM_DD instead of hotplug-YYYYMMDD
 S=${WORKDIR}/${P}
 DESCRIPTION="USB hotplug utilities"
 SRC_URI="mirror://sourceforge/linux-hotplug/hotplug-2002_01_14.tar.gz"
 HOMEPAGE="http://linux-hotplug.sourceforge.net"
+LICENSE="GPL-2"
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
 DEPEND="virtual/glibc

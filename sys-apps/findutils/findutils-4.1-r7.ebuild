@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r7.ebuild,v 1.2 2001/11/24 18:36:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r7.ebuild,v 1.3 2002/07/10 16:17:57 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU utilities to find files"
@@ -10,6 +10,7 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/findutils/${P}.tar.gz http://www.ibiblio.org/
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 DEPEND="virtual/glibc sys-devel/gettext"
 RDEPEND="virtual/glibc"
+LICENSE="GPL-2"
 
 src_unpack() {
 	unpack ${P}.tar.gz 

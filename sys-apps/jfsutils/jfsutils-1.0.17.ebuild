@@ -2,12 +2,13 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/jfsutils/jfsutils-1.0.17.ebuild,v 1.1 2002/04/25 22:05:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/jfsutils/jfsutils-1.0.17.ebuild,v 1.2 2002/07/10 16:17:58 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IBM's Journaling Filesystem (JFS) Utilities"
 SRC_URI="http://www10.software.ibm.com/developer/opensource/jfs/project/pub/${P}.tar.gz"
 HOMEPAGE="http://www-124.ibm.com/developerworks/oss/jfs/index.html"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 
