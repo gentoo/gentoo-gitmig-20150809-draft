@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.75 2004/10/04 22:05:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.76 2004/10/17 17:02:39 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -73,7 +73,8 @@ else
 	fi
 
 	# vim7 has some extra options. tcltk is working again, and mzscheme support
-	# has been added.
+	# has been added. netbeans now has its own USE flag, but it's only available
+	# under gvim (*not* kvim).
 	if [[ $(get_major_version ) -ge 7 ]] ; then
 		if [[ "${MY_PN}" != "vim-core" ]] ; then
 			IUSE="${IUSE} tcltk mzscheme"
@@ -83,6 +84,11 @@ else
 			RDEPEND="$RDEPEND
 				tcltk?    ( dev-lang/tcl )
 				mzscheme? ( dev-lisp/mzscheme )"
+		fi
+		if [[ "${MY_PN}" == "gvim" ]] ; then
+			IUSE="$IUSE netbeans"
+			DEPEND="$DEPEND   netbeans? ( dev-util/netbeans )"
+			RDEPEND="$RDEPEND netbeans? ( dev-util/netbeans )"
 		fi
 	fi
 fi
@@ -283,6 +289,9 @@ src_compile() {
 		if [[ $(get_major_version ) -ge 7 ]] ; then
 			myconf="${myconf} `use_enable tcl tclinterp`"
 			myconf="${myconf} `use_enable mzscheme mzschemeinterp`"
+			if [[ "${MY_PN}" == "gvim" ]] ; then
+				myconf="${myconf} `use_enable netbeans`"
+			fi
 		fi
 
 		# --with-features=huge forces on cscope even if we --disable it. We need
