@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.13 2004/10/21 20:16:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.14 2004/10/22 11:55:05 mholzer Exp $
+
+  22 Oct 2004; Martin Holzer <mholzer@gentoo.org> flightgear-0.9.5.ebuild:
+  adding forgotten symlink
 
 *flightgear-0.9.6 (21 Oct 2004)
 
