@@ -1,4 +1,6 @@
 MD5 a4f5117ca99af92e6851805c8ced5cb6 pgadmin3-1.0.1.ebuild 764
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 e03978cf39c9e51d2e8858a349a4b08e ChangeLog 522
+MD5 bc10b9cdad40486c710de0ff924c9f39 ChangeLog 644
+MD5 533895a2010cf58dc7a1dd5abe95b371 pgadmin3-1.0.2.ebuild 764
 MD5 bade05e7b6355fce1d2729c00dd30621 files/digest-pgadmin3-1.0.1 67
+MD5 e69c2dd9e40469e9bc040a05e04054f1 files/digest-pgadmin3-1.0.2 67
