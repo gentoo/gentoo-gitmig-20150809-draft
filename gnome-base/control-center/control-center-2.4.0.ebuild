@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.4.0.ebuild,v 1.8 2003/12/13 00:23:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.4.0.ebuild,v 1.9 2004/03/12 07:57:16 jhuebel Exp $
 
 inherit gnome2 eutils
 
@@ -44,6 +44,7 @@ src_unpack() {
 	# See http://gcc.gnu.org/cgi-bin/gnatsweb.pl problem #9700 for
 	# what this is about.
 	use alpha && epatch ${FILESDIR}/control-center-2.2.0.1-alpha_hack.patch
+	use amd64 && epatch ${FILESDIR}/control-center-2.4.0-64bit-fixes.patch
 
 	# temporary fix for icon installation adapted by <link@sub_pop.net> (#16928)
 	epatch ${FILESDIR}/${PN}-2.2-icons_install.patch
