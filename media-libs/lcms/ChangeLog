@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.25 2004/03/03 04:38:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.26 2004/03/07 04:20:41 geoman Exp $
+
+  06 Mar 2004; Stephen P. Becker <geoman@gentoo.org> lcms-1.12.ebuild:
+  Added ~mips keyword.
 
   02 Mar 2004; Tom Gall <tgall@gentoo.org> lcms-1.12.ebuild:
   stable on ppc64
