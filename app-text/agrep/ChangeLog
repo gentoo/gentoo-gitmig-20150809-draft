@@ -1,6 +1,9 @@
 # ChangeLog for app-text/agrep
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.6 2004/06/24 22:27:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.7 2004/06/28 02:14:47 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> agrep-2.04.ebuild:
+  Added ~mips
 
   01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> agrep-2.04.ebuild:
   fix depend
