@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.16 2002/06/09 02:19:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.17 2002/06/17 13:22:29 seemant Exp $
+
+*gtk+-2.0.5 (17 Jun 2002)
+
+  17 Jun 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-2.0.5.ebuild
+  files/digest-2.0.5 :
+
+  Version bump for both regular GTK+2 and GTK+DirectFB
 
 *gtk+-2.0.3-r1 (8 Jun 2002)
 
