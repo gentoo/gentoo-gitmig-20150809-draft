@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55.ebuild,v 1.17 2004/08/21 19:34:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55.ebuild,v 1.18 2004/10/12 14:06:10 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -44,7 +44,7 @@ SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}p1_source.tar.bz2
 
 HOMEPAGE="http://ooo.ximian.com"
 
-LICENSE="LGPL-2 | SISSL-1.1"
+LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
