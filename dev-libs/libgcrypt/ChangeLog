@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/atlas
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.2 2002/08/13 19:33:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.3 2002/10/13 02:23:33 seemant Exp $
+
+*libgcrypt-1.1.8 (12 Oct 2002)
+
+  12 Oct 2002; Seemant Kulleen <seemant@gentoo.org> libgcrypt-1.1.8.ebuild
+  files/digest-libgcrypt-1.1.8 :
+
+  Version bump.  License is now LGPL-2.1 unless using a unix without
+  /dev/random or windows, in which case use GPL-2.  Removed myconf settings 
+  from 1.1.3 since README mentioned nothing about them.  Added docs in 
+  src_install.
 
 *libgcrypt-1.1.3 (15 Mar 2002 )
 
