@@ -21,6 +21,16 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (23 Nov 2003)
+# This is a mask for the API change. All portage tools that meet
+# this change in API should be masked version-specific and follow
+# immediately underneath.
+>=sys-apps/portage-2.0.49-r18
+
+# <carpaski@gentoo.org> (23 Nov 2003)
+# -r16 has a bug.
+=sys-apps/portage-2.0.49-r16
+
 # <foser@gentoo.org> (23 Nov 2003)
 # Mask gdm 2.4.4 for testing of session changes
 >=gnome-base/gdm-2.4.4
@@ -32,10 +42,6 @@
 # <brad@gentoo.org> (20 Nov 2003)
 # Mask the experimental Mozilla's
 >net-www/mozilla-1.5-r1
-
-
-# <carpaski@gentoo.org> (19 Nov 2003)
-=sys-apps/portage-2.0.49-r16
 
 # <genone@gentoo.org> (18 Nov 2003)
 # 2.4.22-xfs is breaking portage for several people, masking it until
