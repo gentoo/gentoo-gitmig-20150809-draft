@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SAX
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.13 2004/01/18 22:50:59 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.14 2004/02/16 15:23:42 mcummings Exp $
+
+  16 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
+  XML-SAX-0.10-r1.ebuild, XML-SAX-0.10-r2.ebuild:
+  Cleaning house
 
   18 Jan 2004; <tuxus@gentoo.org> XML-SAX-0.12.ebuild:
   Added ~mips to KEYWORDS.
