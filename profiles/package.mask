@@ -4,6 +4,9 @@
 # Mozilla installs correctly, but there is a java-config error with the plugin
 =net-www/mozilla-0.9.9
 
+# Galeon 1.2.0 depends on Mozilla 0.9.9
+>=net-www/galeon-1.1.0
+
 # Version Errors
 =sys-apps/pcmcia-cs-1.3.33
 
