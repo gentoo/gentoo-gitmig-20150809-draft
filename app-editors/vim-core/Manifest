@@ -1,5 +1,5 @@
 MD5 069cc5b8b1662bf8223bed07fbe463fe vim-core-6.2_pre4.ebuild 804
-MD5 542b1aeb4df9f061cfc36b6dee12986f vim-core-6.2.ebuild 804
+MD5 f4fb20174808f02fa0ab1fcbf3d964ce vim-core-6.2.ebuild 802
 MD5 31505cfe80a73066407322680501e6a2 vim-core-6.1-r4.ebuild 779
 MD5 54591cf4dd92f8bc74e8350d1d313087 vim-core-6.2_pre6.ebuild 824
 MD5 19ab2b5ad844590d09032a3bf5a9477b vim-core-6.2_pre1.ebuild 813
@@ -8,7 +8,7 @@ MD5 cb16f1a7ef436cad754e0b22e9ee2015 vim-core-6.2_pre5.ebuild 804
 MD5 e07c7b938dd22000336f5eae9e5008c9 vim-core-6.1-r5.ebuild 785
 MD5 396ed55fffd5c55f157cc6386b791755 vim-core-6.2_pre2.ebuild 804
 MD5 1a244060a4e5e21fff81c28730f61208 vim-core-6.2_pre6-r1.ebuild 827
-MD5 e71a9f8d39377789f4bb91eb284e926d ChangeLog 4053
+MD5 ae998b5176aac74e14be3d8cf4e65aba ChangeLog 4156
 MD5 f370a04e69eaf4296f14ebc1cf0646d2 files/vimrc 2621
 MD5 61433f14f33c16dd168c32f32c2152d4 files/digest-vim-core-6.2_pre6-r1 202
 MD5 c1c3576985bcab3a31e4abd27ee00d07 files/digest-vim-core-6.2_pre1 201
