@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 92f783738a95e93f7d733b9b5711f7ac pike-7.6.6.ebuild 2977
 MD5 de494ece933e48cc759bcb4728e41d90 pike-7.4.44.ebuild 3105
-MD5 aab808d5b79524a1d584de18e6682385 pike-7.6.24.ebuild 2172
+MD5 cfd07c0e02863e06223d0bb6de4e77b4 pike-7.6.24.ebuild 2110
 MD5 ec42ea8622caf34982b633bceb285e9a ChangeLog 2104
 MD5 7164d2a546785fee1e77dac8839fdeaa metadata.xml 224
 MD5 f481d65b2c48dd5213c96abb5d591923 files/digest-pike-7.6.6 64
@@ -12,7 +12,7 @@ MD5 24797deb43287becc1e22d716d43921e files/digest-pike-7.6.24 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBWvDLPgS8WLD64cERAnEIAJ95i01zJ6SSpz0JfvG/B4unbOQJ1ACdEcOc
-qnrULNNCql/o9qryv0AI5iY=
-=5duK
+iD8DBQFBWvbUPgS8WLD64cERAqhFAJ92C3cvQ2HEeSlgDZZ/eqkq3y0gogCgjkVL
+5YMZJTW9f9m/wV5aB1X9uIg=
+=vOdH
 -----END PGP SIGNATURE-----
