@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3_rc1-r1.ebuild,v 1.2 2005/04/05 22:36:59 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3_rc1-r2.ebuild,v 1.1 2005/04/05 22:36:59 lostlogic Exp $
 
 inherit eutils
 
