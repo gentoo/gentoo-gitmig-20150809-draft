@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.8 2004/04/24 14:00:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.9 2004/04/25 03:09:49 vapier Exp $
 
 IUSE="nls bootstrap build"
 
@@ -63,16 +63,9 @@ src_compile() {
 		myconf="${myconf} --disable-nls"
 
 	# Filter CFLAGS=".. -O2 .." on arm
-	if [ "${ARCH}" = "arm" ]
-	then
-		CFLAGS="$(echo "${CFLAGS}" | sed -e 's,-O[2-9] ,-O1 ,')"
-	fi
-
-	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative. See
-	# bug #47581 for more information.
-	# Travis Tilley <lv@gentoo.org>
-	has_version "=sys-devel/gcc-3.4*" && CFLAGS="-O2"
-
+	use arm && replace-flags -O? -O
+	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative #47581
+	has_version "=sys-devel/gcc-3.4*" && strip-flags
 
 	# Fix /usr/lib/libbfd.la
 	elibtoolize --portage

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.3-r1.ebuild,v 1.3 2004/04/24 14:00:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.3-r1.ebuild,v 1.4 2004/04/25 03:09:49 vapier Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -60,6 +60,8 @@ src_compile() {
 	filter-flags -fomit-frame-pointer -fssa
 	# Filter CFLAGS=".. -O2 .." on arm
 	use arm && replace-flags -O? -O
+	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative #47581
+	has_version "=sys-devel/gcc-3.4*" && strip-flags
 
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"
@@ -69,12 +71,6 @@ src_compile() {
 
 	# untested functionality.
 	# use cross && myconf="${myconf} --targets-all"
-
-	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative. See
-	# bug #47581 for more information.
-	# Travis Tilley <lv@gentoo.org>
-	has_version "=sys-devel/gcc-3.4*" && CFLAGS="-O2"
-
 
 	# Fix /usr/lib/libbfd.la
 	elibtoolize --portage
@@ -106,7 +102,8 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr \
+	make \
+		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
