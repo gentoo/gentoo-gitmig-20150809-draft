@@ -183,11 +183,6 @@ x11-themes/gtk-thinice-theme
 x11-themes/gtk-xenophilia-engine
 x11-themes/gtk-xfce-engine
 
-# phoen][x <phoenix@gentoo.org (04 Aug 2002)
-# Bumped to new version. Masked for testing.
-=net-libs/libicq2000-0.3.2
-=net-im/ickle-0.3.2
-
 # lamer <lamer@gentoo.org> (4 Aug 2002)
 # Firestarter won't compile with gnome2
 =net-misc/firestarter-0.8.2
