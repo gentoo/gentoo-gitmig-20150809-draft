@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.530 2004/08/06 03:00:29 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.531 2004/08/06 12:02:16 slarti Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -227,7 +227,7 @@ mail-client/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with
 mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/bsfilter:chasen - Adds support for chasen
-mail-filter/clamassassin:subjectrewrite - Adds support for subject rewriting.
+mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting.
 mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
 mail-filter/dspam:cyrus - Build delivery options for cyrus-imapd
