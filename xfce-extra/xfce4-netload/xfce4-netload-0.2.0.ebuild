@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/xfce4-netload-0.2.0.ebuild,v 1.1 2003/09/18 17:11:48 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/xfce4-netload-0.2.0.ebuild,v 1.2 2003/10/09 04:22:58 drobbins Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV}"
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="ia64 ~x86 ~ppc ~alpha ~sparc"
 
 DEPEND=">=x11-libs/gtk+-2.0.6
 	dev-util/pkgconfig
