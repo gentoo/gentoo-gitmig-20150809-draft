@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.1.1.ebuild,v 1.2 2002/11/28 01:52:46 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.1.1.ebuild,v 1.3 2002/12/03 14:57:47 nall Exp $
 
 inherit gnome2 debug
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Terminal"
 
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
