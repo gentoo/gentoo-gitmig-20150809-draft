@@ -1,8 +1,12 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.7 2003/06/09 15:17:31 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.8 2003/06/14 00:33:23 gmsoft Exp $
 
 *mit-krb5-1.2.8 (6 Jun 2003)
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> mit-krb5-1.2.8.ebuild :
+  Added a fix for hppa. It needs to link with gcc and not with ld.
+  Added hppa to KEYWORDS.
 
   7 Jun 2003; Ryan Phillips <rphillips@gentoo.org> mit-krb5-1.2.6-r3.ebuild :
   Initd script split, merge mit packages into one mit-krb5 ebuild,
