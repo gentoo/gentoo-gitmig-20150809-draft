@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.5.ebuild,v 1.2 2001/05/08 03:33:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.5.ebuild,v 1.3 2001/05/15 21:30:02 achim Exp $
 
 A=${PN}-4.0.5.tar.gz
 S=${WORKDIR}/${PN}-4.0.5
@@ -30,7 +30,8 @@ DEPEND="virtual/glibc
 	postgres? ( >=dev-db/postgresql-7.1 )
 	X? ( virtual/x11 )
 	qt? ( x11-libs/qt-x11-2.3.0 )
-	xml? ( >=app-text/sablotron-0.44 )"
+	xml? ( >=app-text/sablotron-0.44 )
+	imap? ( virtual/imap )"
 
 src_compile() {
 
@@ -51,7 +52,7 @@ src_compile() {
       myconf="$myconf --with-db3=/usr"
     fi
     if [ "`use mysql`" ] ; then
-      myconf="$myconf --with-mysql"
+      myconf="$myconf --with-mysql=/usr"
     fi
     if [ "`use postgres`" ] ; then
       myconf="$myconf --with-pgsql=/usr"
@@ -64,6 +65,9 @@ src_compile() {
     fi
     if [ "`use qt`" ] ; then
       myconf="$myconf --with-qtdom" 
+    fi
+    if [ "`use imap`" ] ; then
+      myconf="$myconf --with-imap" 
     fi
     if [ "`use xml`" ] ; then
       export LIBS="-lxmlparse -lxmltok"
