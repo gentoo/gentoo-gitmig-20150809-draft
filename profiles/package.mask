@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (23 Nov 2003)
+# Mask gdm 2.4.4 for testing of session changes
+>=gnome-base/gdm-2.4.4
+
 # <brad@gentoo.org> (22 Nov 2003)
 # Mask mandrake-artwork-0.9.6 until it works with KDE
 =x11-themes/mandrake-artwork-0.9.6
