@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ttyrec
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.2 2003/09/13 23:14:35 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.3 2004/04/04 14:02:35 hattya Exp $
+
+  04 Apr 2004; Akinori Hattori <hattya@gentoo.org> ttyrec-1.0.6.ebuild:
+  removed S. stable on x86.
 
 *ttyrec-1.0.6 (11 Sep 2003)
 
