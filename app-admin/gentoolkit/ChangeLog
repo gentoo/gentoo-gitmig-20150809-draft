@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.72 2003/04/22 18:54:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.73 2003/04/22 20:07:03 agriffis Exp $
+
+*gentoolkit-0.1.19-r5 (22 Apr 2003)
+
+  22 Apr 2003; Aron Griffis <agriffis@gentoo.org> gentoolkit-0.1.19-r5.ebuild:
+  Update echangelog to ignore Manifest when listing files
 
 *gentoolkit-0.1.19-r4 (22 Apr 2003)
 
