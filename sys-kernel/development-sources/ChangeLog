@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.146 2004/10/23 18:07:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.147 2004/10/29 10:56:45 dsd Exp $
+
+  29 Oct 2004; Daniel Drake <dsd@gentoo.org>
+  development-sources-2.6.10_rc1.ebuild:
+  Remove 2.6.9 buildfix, no longer needed thanks to brix in bug 69361
 
   23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   development-sources-2.6.9.ebuild:

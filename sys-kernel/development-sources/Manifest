@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d9d4dc96f157ba9a90f6ed30096af1ef ChangeLog 26622
-MD5 eeceb31d16d4879c28142757eaf36379 development-sources-2.6.5.ebuild 1395
-MD5 bd78750f3868d90dde38a9657b1ef195 development-sources-2.6.7.ebuild 996
-MD5 5caccd9193acfe5a3a07ea88861cb11b metadata.xml 660
-MD5 87b98538df412d9f30ba35bd3d8fe153 development-sources-2.6.10_rc1.ebuild 606
 MD5 88f17719957f009d1e0d4f93e1bd01a2 development-sources-2.6.6.ebuild 997
-MD5 f0a46abecfc585ab73ecd5bca8de9a9f development-sources-2.6.9.ebuild 644
 MD5 7e4e1272f74842d9a110c00399d7fc9f development-sources-2.6.8.1.ebuild 555
-MD5 a09d4ddd7fe62bbf298879c6450cb6e7 files/digest-development-sources-2.6.5 208
-MD5 23e1b75850b5a41b95c65e7771f39c48 files/digest-development-sources-2.6.7 137
-MD5 18bed04a1b45de515096089cc10913ec files/digest-development-sources-2.6.8.1 68
+MD5 eeceb31d16d4879c28142757eaf36379 development-sources-2.6.5.ebuild 1395
+MD5 ce4354a11dd2211be58c36689eaa4e16 development-sources-2.6.10_rc1.ebuild 555
+MD5 bd78750f3868d90dde38a9657b1ef195 development-sources-2.6.7.ebuild 996
+MD5 f0a46abecfc585ab73ecd5bca8de9a9f development-sources-2.6.9.ebuild 644
+MD5 e526aad3fd046fd97eddfe699323bcc9 ChangeLog 26776
+MD5 5caccd9193acfe5a3a07ea88861cb11b metadata.xml 660
 MD5 155dda0cbd63a01416c6a8a1b8785046 files/digest-development-sources-2.6.10_rc1 201
-MD5 414403f6046e06086e6d2fb0e2d5be60 files/digest-development-sources-2.6.9 135
+MD5 a09d4ddd7fe62bbf298879c6450cb6e7 files/digest-development-sources-2.6.5 208
 MD5 214f14a8b49844fc44f74d8ab84019de files/digest-development-sources-2.6.6 137
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBeroKugEuf3OQ0akRAsHyAJ4sqLeSfxQuY35LXL+++rJM6B8CUACeP6tf
-1uaU/+xgdWGPpPeq9WU6mpU=
-=00v4
------END PGP SIGNATURE-----
+MD5 23e1b75850b5a41b95c65e7771f39c48 files/digest-development-sources-2.6.7 137
+MD5 414403f6046e06086e6d2fb0e2d5be60 files/digest-development-sources-2.6.9 135
+MD5 18bed04a1b45de515096089cc10913ec files/digest-development-sources-2.6.8.1 68
