@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-speech
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-speech/ChangeLog,v 1.4 2004/01/07 18:42:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-speech/ChangeLog,v 1.5 2004/01/14 14:57:54 obz Exp $
+
+  14 Jan 2004; Mike Gardiner <obz@gentoo.org> gnome-speech-0.2.8.ebuild:
+  Stable on x86 as part of GNOME-2.4.1
 
   07 Jan 2004; <gustavoz@gentoo.org> gnome-speech-0.2.8.ebuild:
   keyworded ~sparc
