@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.14 2004/11/06 22:48:33 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.15 2004/12/27 19:06:19 griffon26 Exp $
+
+*coda-6.0.8 (27 Dec 2004)
+
+  27 Dec 2004; Maurice van der Pot <griffon26@gentoo.org>
+  +files/6.0.8/venus, coda-6.0.7.ebuild, +coda-6.0.8.ebuild:
+  Fixed some cosmetic errors in RDEPEND and marked coda-6.0.7 stable on x86
+  Added new version coda-6.0.8
 
   06 Nov 2004; Maurice van der Pot <griffon26@gentoo.org> coda-6.0.6.ebuild,
   coda-6.0.7.ebuild:
