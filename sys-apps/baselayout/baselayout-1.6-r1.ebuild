@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.2 2001/08/21 02:44:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.3 2001/08/21 02:47:38 drobbins Exp $
 
 SV=1.1.2
 S=${WORKDIR}/rc-scripts-${SV}
@@ -183,7 +183,9 @@ src_install()
 	do
 		[ -f $foo ] && doexe $foo
 	done
-	
+	#not the greatest location for this file; should move it at some point
+	rm ${S}/etc/init.d/runscript.c
+
 	#set up default runlevel symlinks
 	local bar
 	for foo in default boot nonetwork single
