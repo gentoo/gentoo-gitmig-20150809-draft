@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.8 2002/06/11 21:43:52 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.9 2002/06/27 12:20:27 seemant Exp $
+
+
+*xchat-1.8.9-r1 (27 Jun 2002)
+
+  27 Jun 2002; Seemant Kulleen <seemant@gentoo.org> xchat-1.8.9-r1.ebuild
+  files/digest-xchat-1.8.9-r1 :
+
+  cleaned up, so things are not installed in /share
 
 *xchat-1.9.1.ebuild (11 Jun 2002)
   11 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> xchat-1.9.1.ebuild:
