@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.7 2002/10/31 13:32:46 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.8 2002/11/12 22:17:21 wwoods Exp $
 
 *dhcpcd-1.3.22_p3-r1 (31 Oct 2002)
+
+  12 Nov 2002; Will Woods <wwoods@gentoo.org> dhcpcd-1.3.22_p3-r1.ebuild :
+  Added "inherit gnuconfig" and src_unpack to fix build problems on alphaev67
 
   31 Oct 2002; Brandon Low <lostlogic@gentoo.org> dhcpcd-1.3.22_p3-r1.ebuild :
 
