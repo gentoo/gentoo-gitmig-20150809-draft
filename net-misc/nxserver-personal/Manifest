@@ -2,6 +2,7 @@ MD5 d33cad939e070ab861aeddd9ae15f04c nxserver-personal-1.2.2-r1.ebuild 520
 MD5 aa00f9b1669b58c647778ea9f27ffbf1 nxserver-personal-1.3.0_beta2.ebuild 997
 MD5 88c2c451bf0071b73b72a94e4dd0e1fb nxserver-personal-1.2.2-r2.ebuild 521
 MD5 ad67e62ad01c52ecfb98833e30b27d9b ChangeLog 1343
+MD5 c50f2c93c0835326d18aa8df25c35fb2 nxserver-personal-1.3.0-r1.ebuild 519
 MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
 MD5 6af0508d76e04c8fe5a0be975ea57835 nxserver-personal-1.2.2.ebuild 489
 MD5 f71ad151480b0b4c5429cc87cfde5cfd nxserver-personal-1.3.0.ebuild 519
@@ -10,5 +11,6 @@ MD5 82dcbf8c7e1cd573567a46b66fef59b8 files/digest-nxserver-personal-1.3.0 72
 MD5 6d011af03802be8b2783fa237923caeb files/digest-nxserver-personal-1.3.0_beta2 80
 MD5 1c3fc9f944dcceec4dd0f16d8ea441b5 files/digest-nxserver-personal-1.2.2-r1 72
 MD5 361120b2fee58f8d4e41a95e6e7b9ee1 files/digest-nxserver-personal-1.2.2-r2 72
+MD5 d6bd7b1a284f32b5946da6b24bb38bf6 files/digest-nxserver-personal-1.3.0-r1 72
 MD5 3d3179cfb8373d562ceb43a610c1ba7d files/1.2.2/50nxserver 84
 MD5 3d3179cfb8373d562ceb43a610c1ba7d files/1.3.0/50nxserver 84
