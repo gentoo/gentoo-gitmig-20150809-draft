@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.570 2004/08/19 08:45:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.571 2004/08/19 21:36:44 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -305,6 +305,7 @@ media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rezound:portaudio - compile with support for portaudio
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:faad - Enables faad2 support
+media-sound/tagtool:mp3 - Enables id3lib support for tagging mp3's
 media-sound/terminatorx:sox - Enable sox support
 media-sound/timidity++:portaudio - Enable support for the portaudio API
 media-tv/freevo:matrox - Enable output support on Matrox cards
