@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.13 2004/11/04 09:51:04 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.14 2004/11/06 23:12:37 plasmaroo Exp $
+
+*xbox-sources-2.6.8.1-r2 (06 Nov 2004)
+
+  06 Nov 2004; <plasmaroo@gentoo.org> -xbox-sources-2.4.27-r1.ebuild,
+  -xbox-sources-2.4.27-r2.ebuild, +xbox-sources-2.4.27-r3.ebuild,
+  -xbox-sources-2.6.7-r5.ebuild, -xbox-sources-2.6.8.1-r1.ebuild,
+  +xbox-sources-2.6.8.1-r2.ebuild, -xbox-sources-2.6.8.1.ebuild,
+  +files/xbox-sources-2.4.27.XDRWrapFix.patch,
+  -files/xbox-sources-2.6.7.CAN-2004-0596.patch,
+  +files/xbox-sources-2.6.8.1.devPtmx.patch,
+  -files/xbox-sources.CAN-2004-0497.patch,
+  -files/xbox-sources.IPTables-RDoS.patch,
+  -files/xbox-sources.ProcPerms.patch:
+  Fix for the 2.4 kNFSd security vulnerability and the 2.6 /dev/ptmx DoS, bug
+  #62524. Also fixed CAN-2004-0814 for 2.4 and 2.6, bug #68421. Removing
+  old versions.
 
 *xbox-sources-2.6.8.1-r1 (04 Nov 2004)
 
