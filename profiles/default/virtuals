@@ -17,7 +17,7 @@ virtual/sylpheed        net-mail/sylpheed
 virtual/php             dev-php/mod_php
 virtual/textbrowser		net-www/links
 virtual/mda				net-mail/procmail
-virtual/xft				x11-base/xft
+virtual/xft				x11-base/xfree
 virtual/krb5			app-crypt/heimdal
 virtual/motif			x11-libs/lesstif
 virtual/bootloader		sys-apps/grub
