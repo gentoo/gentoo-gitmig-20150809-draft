@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.3.ebuild,v 1.2 2003/03/11 21:11:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.3-r1.ebuild,v 1.1 2003/06/13 19:55:09 vapier Exp $
 
 inherit eutils
 
@@ -21,6 +21,8 @@ RDEPEND="virtual/x11
 	x11-misc/xloadimage"
 
 src_compile() {
+	cp electricsheep.c{,.orig}
+	sed -e "s:/usr/local/share:/usr/share/${PN}:" electricsheep.c.orig > electricsheep.c
 	econf --datadir=/usr/share/${PN} || die
 	emake || die
 }
