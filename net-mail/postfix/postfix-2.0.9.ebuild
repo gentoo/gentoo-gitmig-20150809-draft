@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.9.ebuild,v 1.1 2003/04/19 02:26:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.9.ebuild,v 1.2 2003/04/19 02:55:27 drobbins Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.13/${IPV6_P}.patch.gz )"
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 PROVIDE="virtual/mta
 	 virtual/mda"
 DEPEND=">=sys-libs/db-3.2
@@ -106,6 +106,8 @@ src_unpack() {
 }
 
 src_compile() {
+	#this is a bug fix for gcc-2.95.3-r5 (bug 16547)
+	export CC=gcc
 	emake || die "compile problem"
 }
 
@@ -158,7 +160,7 @@ src_install () {
 	rm main.cf.orig
 	fperms 600 /etc/postfix/saslpass
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/postfix.rc6 postfix
+	exeinto /etc/init.d ; doexe ${FILESDIR}/postfix
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
 
 	if [ "`use sasl`" ] ; then
@@ -184,6 +186,10 @@ src_install () {
 		rm main.cf.prembox
 	fi
 	rm main.cf~
+
+	#install an rmail for UUCP, closing bug #19127
+	cd ${S}/auxiliary/rmail
+	dobin rmail
 }
 
 pkg_postinst() {
