@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbsload
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/ChangeLog,v 1.11 2004/05/06 17:13:53 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/ChangeLog,v 1.12 2004/06/06 23:34:04 weeve Exp $
+
+  06 Jun 2004; Jason Wever <weeve@gentoo.org> bbsload-0.2.8.ebuild:
+  Stable on sparc.
 
   06 May 2004; Brandon Hale <tseng@gentoo.org> bbsload-0.2.8.ebuild:
   Fix explicit RDEPEND

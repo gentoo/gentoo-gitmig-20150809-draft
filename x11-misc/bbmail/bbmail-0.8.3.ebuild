@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/bbmail-0.8.3.ebuild,v 1.4 2004/05/23 14:46:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/bbmail-0.8.3.ebuild,v 1.5 2004/06/06 23:38:36 weeve Exp $
 
 IUSE=""
 DESCRIPTION="blackbox mail notification"
@@ -9,7 +9,7 @@ HOMEPAGE="http://bbtools.windsofstorm.net/available.phtml#bbmail"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ppc"
+KEYWORDS="x86 sparc ppc"
 
 DEPEND="virtual/blackbox"
 
