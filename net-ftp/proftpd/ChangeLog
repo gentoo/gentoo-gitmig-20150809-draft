@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.83 2004/12/06 19:29:06 humpback Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.84 2005/01/09 11:26:27 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> proftpd-1.2.10-r1.ebuild,
+  proftpd-1.2.10-r2.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
 
 *proftpd-1.2.10-r2 (06 Dec 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10.ebuild,v 1.7 2004/11/01 00:51:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10.ebuild,v 1.8 2005/01/09 11:26:27 swegener Exp $
 
 inherit flag-o-matic eutils
 

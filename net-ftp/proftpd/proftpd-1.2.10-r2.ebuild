@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r2.ebuild,v 1.1 2004/12/06 19:29:06 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r2.ebuild,v 1.2 2005/01/09 11:26:27 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="An advanced and very configurable FTP server"
 SRC_URI="ftp://ftp.proftpd.org/distrib/source/${MY_P}.tar.bz2
-		shaper? http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-0.5.5.tar.gz
+		shaper? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-0.5.5.tar.gz )
 		http://www.castaglia.org/${PN}/modules/${PN}-mod-delay-0.4.tar.gz"
 HOMEPAGE="http://www.proftpd.org/"
 
