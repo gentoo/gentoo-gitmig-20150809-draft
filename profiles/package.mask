@@ -246,10 +246,6 @@ media-sound/libsidutils
 # needs an update ... currently broken #30452
 <=games-sports/soccar-0.5.2
 
-# <mkennedy@gentoo.org> (05 Oct 2003)
-# maxima depending on cmucl and not cmucl-bin needs testing
-=app-sci/maxima-5.9.0-r2
-
 # <agenkin@gentoo.org> (02 Oct 2003)
 # deprecated.  now comes as part of app-cdf/cdrtools
 # bug #18539
