@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.6_p0-r1.ebuild,v 1.2 2004/06/24 23:01:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0-r2.ebuild,v 1.1 2004/06/25 20:15:29 plasmaroo Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 
 EXTRAVERSION="uc${PV/*_p/}"
-[ "${PR}" != "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 KV="${OKV}-${EXTRAVERSION}"
 
 # Get the major & minor kernel version
@@ -44,6 +44,9 @@ src_unpack() {
 	unset ARCH
 	rm ../${MY_P/linux/${base}}.${patch}
 
+	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${P}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 
 	kernel_universal_unpack
