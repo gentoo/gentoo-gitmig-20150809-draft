@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cxfe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/ChangeLog,v 1.9 2005/02/24 16:42:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/ChangeLog,v 1.10 2005/03/01 23:08:37 arj Exp $
+
+  01 Mar 2005; Anders Rune Jensen <arj@gentoo.org> files/position-osd.patch:
+  Better position patch.
 
   24 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> cxfe-0.9.1-r1.ebuild:
   apllied a patch to fix #82684.
