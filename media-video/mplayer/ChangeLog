@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.49 2003/02/12 07:39:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.50 2003/02/16 14:22:34 azarah Exp $
+
+*mplayer-0.90_rc4 (16 Feb 2003)
+
+  16 Feb 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_rc4.ebuild :
+
+  Update version.
+  Add LIVE.COM support, thanks to J Robert Ray <jrray@gentoo.org>, bug #14766.
 
   02 Feb 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_*.ebuild :
 
