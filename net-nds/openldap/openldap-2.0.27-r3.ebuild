@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r3.ebuild,v 1.2 2003/05/11 23:29:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r3.ebuild,v 1.3 2003/05/12 04:02:28 weeve Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
 HOMEPAGE="http://www.OpenLDAP.org/"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 LICENSE="OPENLDAP"
 
 DEPEND=">=sys-libs/ncurses-5.1
