@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.5 2002/07/19 03:26:53 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.6 2002/07/26 04:58:40 gerk Exp $
 
 *openbox-1.2.5_beta20020714-r1 (18 jul 2002)
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
+
   18 Jul 2002; Spider <spider@gentoo.org> openbox-1.2.5_beta20020714-r1.ebuild :
   updated, now with AA
   make sure your ~/.openbox/rc has something like this in it to force AA on if you dont have a AA style :

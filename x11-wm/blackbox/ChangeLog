@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.13 2002/07/19 00:28:56 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.14 2002/07/26 04:57:09 gerk Exp $
 
 *blackbox-0.65.0_beta3-r1 (18 Jul 2002)
     18 Jul 2002; Spider <spider@gentoo.org> blackbox-0.65.0_beta3-r1.ebuild :
@@ -13,6 +13,9 @@
   repomaned 
 
 *blackbox-0.62.1-r3 (14 Jul 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   14 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   blackbox-0.62.1-r3.ebuild files/digest-blackbox-0.62.1-r3 :
