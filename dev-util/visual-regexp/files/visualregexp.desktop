@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=visualregexp
+Icon=/usr/share/pixmaps/visualregexp/visualregexp-icon.png
+Name=Visual Regexp
+Comment=An interactive regular expression editor
+Categories=Application;Development
