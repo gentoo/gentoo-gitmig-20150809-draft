@@ -1,14 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r1.ebuild,v 1.5 2004/06/25 00:37:06 agriffis Exp $
-
-MY_P=${P}b
-S=${WORKDIR}/${MY_P}
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.4.ebuild,v 1.1 2004/07/17 03:06:26 squinky86 Exp $
 
 DESCRIPTION="wxWindows based client for the eDonkey/eMule/lMule network"
-HOMEPAGE="http://home.gna.org/xmule/start.html"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
+HOMEPAGE="http://xmule.ws/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,7 +30,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's/@datadir@/${DESTDIR}@datadir@/' Makefile.in
+	sed -i 's/@datadir@/${DESTDIR}@datadir@/' Makefile.in || die
 }
 
 src_compile () {
@@ -46,9 +42,17 @@ src_compile () {
 	myconf="${myconf} --with-zlib=/tmp/zlib/"
 
 	econf ${myconf} || die
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die
+	emake || die
 }
 
 src_install () {
 	einstall mkinstalldirs=${S}/mkinstalldirs DESTDIR=${D} || die
+	dodir /usr/share/xmule
+	insinto /usr/share/xmule
+	doins src/resource/*
+	mv ${D}/usr/bin/xmule ${D}/usr/bin/xmule-bin
+	mv ${D}/var/tmp/portage/${PF}/image/usr/share/locale/* ${D}/usr/share/locale/
+	rm -f ${D}/var
+	exeinto /usr/bin
+	newexe ${FILESDIR}/xmule.sh xmule
 }

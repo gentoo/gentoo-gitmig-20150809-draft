@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.0a-r1.ebuild,v 1.10 2004/06/25 00:37:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.0a-r1.ebuild,v 1.11 2004/07/17 03:06:26 squinky86 Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_P=${P//a}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="wxWindows based client for the eDonkey/eMule/lMule network"
-HOMEPAGE="http://home.gna.org/xmule/start.html"
+HOMEPAGE="http://xmule.ws/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 RESTRICT="nomirror"
 

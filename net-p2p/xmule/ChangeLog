@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.40 2004/07/09 03:02:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.41 2004/07/17 03:06:26 squinky86 Exp $
+
+*xmule-1.8.4 (16 Jul 2004)
+
+  16 Jul 2004; Jon Hood <squinky86@gentoo.org> xmule-1.6.0a-r1.ebuild,
+  xmule-1.6.0a.ebuild, xmule-1.6.1.ebuild, xmule-1.7.4c.ebuild,
+  xmule-1.8.0.ebuild, xmule-1.8.1.ebuild, -xmule-1.8.2-r1.ebuild,
+  -xmule-1.8.2-r2.ebuild, xmule-1.8.2-r3.ebuild, -xmule-1.8.2.ebuild,
+  +xmule-1.8.4.ebuild:
+  version bump, change homepage irt #57343, cleanups
 
   08 Jul 2004; Jon Hood <squinky86@gentoo.org> xmule-1.8.2-r3.ebuild:
   remove MAKEOPTS definition
