@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fblogo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.4 2004/01/26 11:19:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.5 2004/02/17 23:43:38 spock Exp $
+
+  18 Feb 2004; Michal Januszewski <spock@gentoo.org> fblogo-0.5.2.ebuild:
+  Marked stable on x86.
 
 *fblogo-0.5.2 (26 Jan 2004)
 

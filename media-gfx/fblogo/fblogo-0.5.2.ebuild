@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/fblogo-0.5.2.ebuild,v 1.1 2004/01/26 11:19:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/fblogo-0.5.2.ebuild,v 1.2 2004/02/17 23:43:38 spock Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://freakzone.net/gordon/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND=">=sys-apps/sed-4
 	media-libs/libpng
