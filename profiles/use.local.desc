@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1030 2005/03/22 22:50:07 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1031 2005/03/23 03:30:51 rocket Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -748,6 +748,7 @@ sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-fs/lufs:disablekernelsupport - If you already have a patched lufs kernel, skip the module building part
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
+sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/unionfs:vserver - Enable vserver kernel patches support
 sys-kernel/alpha-sources:usagi - adds USAGI (Linux IPv6 Development Project) support
