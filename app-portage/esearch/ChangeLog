@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.22 2004/10/04 23:24:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.23 2004/10/06 18:42:57 genone Exp $
+
+  06 Oct 2004; <genone@gentoo.org> files/eupdatedb.cron:
+  added cronscript from bug 51794 (thanks to Sridhar Dhanapalan)
 
 *esearch-0.7 (05 Oct 2004)
 
@@ -71,7 +74,7 @@
 *esearch-0.5.1 (23 Oct 2003)
 
   23 Oct 2003; Marius Mauch <genone@gentoo.org> esearch-0.5.1.ebuild:
-  version bu,mp
+  version bump
 
 *esearch-0.5 (19 Oct 2003)
 
