@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdauthor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.16 2004/10/04 14:39:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.17 2004/11/08 00:35:24 sekretarz Exp $
+
+  08 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/dvdauthor-0.6.10-im6.patch, dvdauthor-0.6.10.ebuild:
+  Make dvdauthor work with imagemagick-6*, bug #66226
 
   04 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> dvdauthor-0.5.0.ebuild,
   dvdauthor-0.5.3.ebuild, dvdauthor-0.6.10.ebuild:

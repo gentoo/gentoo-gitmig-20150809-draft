@@ -1,0 +1,11 @@
+--- src/subgen-image.c.orig	2004-10-21 21:24:21.515919208 +0200
++++ src/subgen-image.c	2004-10-21 21:24:39.728150528 +0200
+@@ -177,7 +177,7 @@
+             p.r=pdata[x*4];
+             p.g=pdata[x*4+1];
+             p.b=pdata[x*4+2];
+-            p.t=255-pdata[x*4+3];
++            p.t=pdata[x*4+3];
+             putpixel(s,y*s->width+x,&p);
+         }
+     }
