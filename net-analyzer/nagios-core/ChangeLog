@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.23 2004/03/21 14:12:18 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.24 2004/04/17 01:19:44 mboman Exp $
+
+*nagios-core-1.2-r1 (17 Apr 2004)
+
+  17 Apr 2004; Michael Boman <mboman@gentoo.org> nagios-core-1.2-r1.ebuild:
+  Fixed installation instructions at the end of the installation. Closes #46519.
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> nagios-core-1.1-r4.ebuild:
   Adding categories to dependencies. See bug 45110 for details.
