@@ -4,7 +4,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.8/java-config,v 1.1 2003/03/22 07:07:17 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.8/java-config,v 1.2 2003/04/01 21:34:01 drobbins Exp $
 
 version="0.2.8"
 all_params="$*"
@@ -23,7 +23,7 @@ case $SYSTEM_ARCH in
 	ppc)	PFORM="ppc";;
 	i386)	PFORM="i386";;
 	sparc64)PFORM="sparc64";;
-	sparc)  PFORM="arm";;
+	sparc)  PFORM="sparc";;
 	arm)    PFORM="arm";;
 esac
 
@@ -168,12 +168,13 @@ findpluginpath() {
 }
 
 function env_update() {
-    if [ $UID == 0 ]; then
-	env-update
-	echo -e "\033[01;37m * \033[01;32m You should login again to have your java-config changes available"
-    else
-	echo -e "\033[01;37m * \033[01;32m You should login again to have your java-config changes available"
-    fi
+	echo -e "\033[01;37m * \033[01;32m You should login again to make your java-config changes available"
+	if [ $UID == 0 ]; then
+		env-update
+		echo -e "\033[01;37m * \033[01;32m Or, you can type 'source /etc/profile' in your current session."
+	else
+		echo -e "\033[01;37m * \033[01;32m Or, you can type 'source ~/.gentoo/java-env' in your current session."
+	fi
 }
 
 #WE NEED TO FIX THIS BECAUSE I DONT KNOW

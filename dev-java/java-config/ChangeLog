@@ -1,8 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.20 2003/03/29 11:26:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.21 2003/04/01 21:34:01 drobbins Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  01 Apr 2003; Daniel Robbins <drobbins@gentoo.org>: files/0.2.8/java-config:
+  minor cosmetic fixes to allow closing of bug #17696, unmasking for x86.
 
 *java-config-0.2.8 (21 Mar 2003)
   21 Mar 2003; Adrian Almenar <strider@gentoo.org> java-config-0.2.8.ebuild files/digest-java-config-0.2.8 files/0.2.8/java-config files/0.2.8/java-config.1 files/0.2.8/30java-finalclasspath :
