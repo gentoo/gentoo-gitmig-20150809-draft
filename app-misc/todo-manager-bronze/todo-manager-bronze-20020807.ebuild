@@ -1,26 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/todo-manager-bronze-20020807.ebuild,v 1.4 2004/03/14 10:59:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/todo-manager-bronze-20020807.ebuild,v 1.5 2004/06/07 21:09:35 mr_bones_ Exp $
+
+inherit distutils
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="A task manager."
 SRC_URI="mirror://sourceforge/todo-manager/${P}.tar.gz"
 HOMEPAGE="http://todo-manager.sourceforge.net"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/python
 	dev-lang/tk"
-
-inherit distutils
-
-src_foo() {
-
-	dodoc AUTHORS.txt ChangeLog.txt LICENSE.txt PKG-INFO README.txt TODO.txt
-	dohtml doc/*
-}
 
 src_compile() {
 	python setup.py clean || die
@@ -29,7 +24,7 @@ src_compile() {
 
 src_install() {
 	exeinto /opt/todo-manager
-	doexe   todo-manager
+	doexe todo-manager
 
 	insinto /opt/todo-manager
 	doins __init__.py controls.py interface.py main.py objectlistbox.py \
@@ -42,8 +37,8 @@ src_install() {
 	cd ..
 
 	insinto /etc/env.d
-	doins ${FILESDIR}/97todomanager
+	doins "${FILESDIR}/97todomanager"
 
-	dodoc docs/*.txt AUTHORS.txt ChangeLog.txt LICENSE.txt PKG-INFO README.txt TODO.txt
+	dodoc docs/*.txt AUTHORS.txt ChangeLog.txt PKG-INFO README.txt TODO.txt
 	dohtml docs/*.html
 }
