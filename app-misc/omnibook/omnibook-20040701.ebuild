@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/omnibook-20040701.ebuild,v 1.1 2004/07/20 16:56:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/omnibook-20040701.ebuild,v 1.2 2004/08/18 14:05:23 tantive Exp $
 
-MY_PV='2004-07-01'
+MY_PV="2004-07-01"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION='Linux kernel module for HP Omnibook support'
-HOMEPAGE='http://www.sourceforge.net/projects/omke'
+DESCRIPTION="Linux kernel module for HP Omnibook support"
+HOMEPAGE="http://www.sourceforge.net/projects/omke"
 SRC_URI="mirror://sourceforge/omke/${MY_P}.tar.gz"
-LICENSE='GPL-2'
+LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS='~x86'
-IUSE=''
+KEYWORDS="~x86"
+IUSE=""
 
-DEPEND='virtual/kernel'
+DEPEND="virtual/kernel"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
