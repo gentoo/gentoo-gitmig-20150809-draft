@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.27 2005/01/01 19:09:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.28 2005/01/07 21:06:32 aliz Exp $
+
+  07 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> ulogd-1.02-r1.ebuild:
+  doh, inherit flag-o-matic.
 
 *ulogd-1.02-r1 (01 Jan 2005)
 
