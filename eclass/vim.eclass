@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.66 2004/09/01 03:30:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.67 2004/09/06 02:34:41 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -415,7 +415,7 @@ src_test() {
 	ewarn "If the tests fail, your terminal may be left in a strange "
 	ewarn "state. Usually, running 'reset' will fix this."
 	ewarn " "
-	sleep 5
+	epause 5
 
 	# Don't let vim talk to X
 	unset DISPLAY
