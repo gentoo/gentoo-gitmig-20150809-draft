@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r1.ebuild,v 1.2 2003/09/05 01:26:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r1.ebuild,v 1.3 2003/10/20 19:12:43 agriffis Exp $
 
 DESCRIPTION="Utility for creating and opening lzh archives."
 HOMEPAGE="http://sourceforge.jp/projects/lha/"
@@ -10,7 +10,7 @@ DEPEND="virtual/glibc"
 IUSE="nls"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 MY_P="${P}.autoconf"
 SRC_URI="http://downloads.sourceforge.jp/lha/1548/${MY_P}-20020903.tar.gz"
