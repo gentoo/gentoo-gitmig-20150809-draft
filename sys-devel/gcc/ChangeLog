@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.203 2004/04/18 23:36:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.204 2004/04/18 23:41:31 solar Exp $
+
+  18 Apr 2004; <solar@gentoo.org> :
+  ChangeLog correction.. instructions on unmasking can be found in
+  /usr/portage/profiles/package.mask
 
 *gcc-3.3.3-r2 (18 Apr 2004)
 
