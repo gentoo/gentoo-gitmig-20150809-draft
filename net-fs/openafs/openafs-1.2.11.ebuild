@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.11.ebuild,v 1.2 2004/04/27 21:47:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.11.ebuild,v 1.3 2004/06/07 21:29:43 mr_bones_ Exp $
 
 inherit check-kernel fixheadtails flag-o-matic eutils
 
@@ -112,7 +112,7 @@ src_install () {
 		>> ${D}/etc/env.d/01${PN}
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	# See note in src_install regarding this
 	mkdir /afs 2>/dev/null
 
@@ -123,7 +123,7 @@ pkg_postinst () {
 	einfo
 }
 
-pkg_preun () {
+pkg_prerm() {
 	# See note in src_install regarding this
 	rmdir /afs 2>/dev/null
 }
