@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.45 2004/07/22 04:31:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.46 2004/07/27 08:36:27 mr_bones_ Exp $
+
+  27 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> -slocate-2.7-r2.ebuild,
+  -slocate-2.7-r3.ebuild, -slocate-2.7-r4.ebuild:
+  prune ebuilds
 
   22 Jul 2004; Mike Frysinger <vapier@gentoo.org> files/updatedb.conf:
   Add subfs to the prune list #56432 by Andreas Simon.

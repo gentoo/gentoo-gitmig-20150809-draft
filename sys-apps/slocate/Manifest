@@ -1,21 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bafe8b7b8d481291998b2f49c2ef8088 ChangeLog 5801
+MD5 8eadc3da92bd2b046f2dfe7a9d78fea5 ChangeLog 5950
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 fe9b9460e8e491ae31ad040458d92749 slocate-2.7-r2.ebuild 2188
-MD5 fa6c1923f5f5d9e07b8865b28e41dc96 slocate-2.7-r3.ebuild 2323
-MD5 e23115f7fc1fc8bdb644880dcf4edcd3 slocate-2.7-r4.ebuild 2320
 MD5 c55940ff299338519db199aa12061422 slocate-2.7-r5.ebuild 2487
-MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r2 62
-MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r3 62
 MD5 1d6262a2616b8521ac7b81c950b1346a files/updatedb.conf 622
-MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r4 62
 MD5 4bdd089557d4d782d79f12dff709c202 files/digest-slocate-2.7-r5 137
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA/0NDHTu7gpaalycRAlOJAKCh2iZtoll+SiISRFRljjY40BlQfgCfY/+2
-UUkX2QvE5hwLU09uLxOoq9g=
-=wOFt
------END PGP SIGNATURE-----
