@@ -3,14 +3,16 @@ Hash: SHA1
 
 MD5 7bd9ec75f217ba0e17a7faa4bc115466 adzapper-20040408.ebuild 1464
 MD5 6468530c7f00afcc485ded995f848d10 adzapper-20050106.ebuild 1521
-MD5 6fa0b5433ce642178cafe67679ed3d9c ChangeLog 3417
+MD5 8884ef6a8a0eef2338853b1114800ff9 adzapper-20050316.ebuild 1523
+MD5 4bbfec37211bf2fc236d8ca5cf6bea3a ChangeLog 3552
 MD5 721f99d55a63f5e643476a5340957c04 metadata.xml 368
 MD5 d1666b04a8c2b141f1a5875a0eea33f0 files/digest-adzapper-20040408 65
 MD5 e7d816cf4877320a48ec63fb3b3b7d6c files/digest-adzapper-20050106 65
+MD5 2d648a6b3987ab877735484f8fa35b59 files/digest-adzapper-20050316 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCHKe/ntT9W3vfTuoRAieeAJ9GSBG+L+8Wxf50oA5Czz6NdAWY3ACfWwOj
-/BOttK+/zpZUi7JHT9Ux3rw=
-=mMM4
+iD8DBQFCPfp1jiC39V7gKu0RAp6XAKCIyK23RsdSRsF5vyizKePs95rsEQCfTs5q
+Tk9s2LjFLGasE5HiP5xqYdw=
+=JTRg
 -----END PGP SIGNATURE-----
