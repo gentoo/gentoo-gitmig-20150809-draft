@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.18 2003/05/25 15:00:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.19 2003/07/26 10:46:45 cretin Exp $
+
+  26 Jul 2003; Stefan Jones <cretin@gentoo.org> files/autofs.rc8 
+  files/autofs.confd:
+  Fixed the --timeout options, can be specified in daemonoptions in 
+  autofs.confd or via the last option in the misc.master file.
 
   25 May 2003; Martin Holzer <mholzer@gentoo.org> autofs-3.1.7-r3.ebuild,
   autofs-3.1.7-r4.ebuild, autofs-3.1.7-r5.ebuild:
