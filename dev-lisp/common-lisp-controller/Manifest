@@ -3,8 +3,8 @@ MD5 e1c47cbb4d7205e44f1ce07d0d05bf57 common-lisp-controller-3.76.ebuild 2866
 MD5 e436b24323efb91f8a5b7447e27a0d5e common-lisp-controller-3.82.ebuild 2939
 MD5 d7d5dcb17bcbea9dab4e9ad14556c620 common-lisp-controller-3.76-r2.ebuild 3174
 MD5 984625d8f77c1bd841adc67a0e9186dd common-lisp-controller-3.64.ebuild 3606
-MD5 2773b1d07ad0b666df09172f1c645a30 ChangeLog 2834
-MD5 f6307feb88de731a450e1494fc6941d7 common-lisp-controller-3.91.ebuild 2918
+MD5 bef59884715a95940f08312b2d29c907 ChangeLog 2952
+MD5 6cf491fef22a5ad26fa784a7fec68f2d common-lisp-controller-3.91.ebuild 2997
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 ad8d66b4cc62aa6b09805068265e89d1 files/README.Gentoo 642
 MD5 36bc27f941c18714b9e519274bfa30f7 files/digest-common-lisp-controller-3.91 80
