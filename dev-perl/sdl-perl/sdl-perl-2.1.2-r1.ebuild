@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.2-r1.ebuild,v 1.2 2005/01/31 03:54:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.2-r1.ebuild,v 1.3 2005/03/16 16:07:43 mcummings Exp $
 
-style=builder
 inherit perl-module
 
 DESCRIPTION="SDL binding for perl"
@@ -17,9 +16,6 @@ IUSE="truetype mpeg"
 # Only enable this if you are confirming a bug in this module. The testsrequire
 # access to your /dev/{snd,sound} devices.
 #SRC_TEST="do"
-
-
-style="builder"
 
 DEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.6
