@@ -111,7 +111,7 @@
 *sys-libs/cracklib  
 *sys-libs/db
 *sys-libs/gdbm  
-*sys-libs/ncurses     
+*>=sys-libs/ncurses-5.2.20020112a
 # Removed since it's really no need for this to be default, and it together 
 # with defaulting to db in /etc/nsswitch.conf breaks evolution >= 0.11.
 # sys-libs/nss-db 
@@ -165,7 +165,6 @@
 >=net-www/squid-2.4.2s-r6
 >=net-dialup/ppp-2.4.1-r6
 >=sys-apps/tcp-wrappers-7.6-r4
->=sys-libs/ncurses-5.2.20020112a
 
 # ickle 0.2.2 breaks with gcc3. lost history, permissions and dates.
 >=net-im/ickle-0.3.0
