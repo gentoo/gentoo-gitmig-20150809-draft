@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.5 2002/08/09 07:25:14 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.6 2002/08/26 19:32:19 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
@@ -59,23 +59,9 @@ src_compile() {
 		#This is optimized for Pentium 4 (untested, I don't own one):
 		#echo "s/^CPPFLAGS =/CPPFLAGS = -O3 -xW -ip -tpp7 /" >> makefile.sed
 
-		if [ "`use icc-pgo`" ]; then
-			IPD=${BUILDDIR}/icc-pgo
-			echo "s:^CPPFLAGS =:CPPFLAGS = -prof_dir ${IPD} :" >> makefile.sed
-			if [ ! -d "${IPD}" ]; then
-				mkdir -m 777 -p ${IPD}
-				echo "s/^CPPFLAGS =/CPPFLAGS = -prof_gen /" >> makefile.sed
-				einfo Building PGO prof_gen version.
-			else 
-				einfo Building PGO prof_use version. 
-				echo "s/^CPPFLAGS =/CPPFLAGS = -prof_use /" >> makefile.sed
-			fi
-		fi
-	else
 		# GCC CPPFLAGS
 		echo "s/^CPPFLAGS =/CPPFLAGS = -finline-functions -ffast-math /" >> makefile.sed
 		echo "s/^CPPFLAGS =/CPPFLAGS = ${CFLAGS} /" >> makefile.sed
-	fi
 
     # fix library dependency
 	echo 's/LIBS = \(.*\)/LIBS = \1 -ldl/' >> makefile.sed
