@@ -1,0 +1,71 @@
+--- evolution-1.4.4/shell/e-config-upgrade.c	2003-06-25 13:08:01.000000000 -0400
++++ ../../evo-avg/shell/e-config-upgrade.c	2003-08-18 14:54:57.000000000 -0400
+@@ -734,7 +734,7 @@
+ struct _map_table {
+ 	char *from;
+ 	char *to;
+-	int type;
++	GType type;
+ 	struct _map_table *child;
+ };
+ 
+@@ -1097,7 +1097,7 @@
+ struct _gconf_map {
+ 	char *from;
+ 	char *to;
+-	int type;
++	GType type;
+ };
+ 
+ /* ********************************************************************** */
+--- evolution-1.4.4/filter/rule-context.c	2003-06-12 13:04:20.000000000 -0400
++++ ../../evo-avg/filter/rule-context.c	2003-08-18 14:29:14.000000000 -0400
+@@ -209,7 +209,7 @@
+ }
+ 
+ void
+-rule_context_add_part_set(RuleContext *rc, const char *setname, int part_type, RCPartFunc append, RCNextPartFunc next)
++rule_context_add_part_set(RuleContext *rc, const char *setname, GType part_type, RCPartFunc append, RCNextPartFunc next)
+ {
+ 	struct _part_set_map *map;
+ 	
+@@ -226,7 +226,7 @@
+ }
+ 
+ void
+-rule_context_add_rule_set(RuleContext *rc, const char *setname, int rule_type, RCRuleFunc append, RCNextRuleFunc next)
++rule_context_add_rule_set(RuleContext *rc, const char *setname, GType rule_type, RCRuleFunc append, RCNextRuleFunc next)
+ {
+ 	struct _rule_set_map *map;
+ 	
+--- evolution-1.4.4/filter/rule-context.h	2003-04-29 14:14:08.000000000 -0400
++++ ../../evo-avg/filter/rule-context.h	2003-08-18 14:28:04.000000000 -0400
+@@ -85,14 +85,14 @@
+ 
+ struct _part_set_map {
+ 	char *name;
+-	int type;
++	GType type;
+ 	RCPartFunc append;
+ 	RCNextPartFunc next;
+ };
+ 
+ struct _rule_set_map {
+ 	char *name;
+-	int type;
++	GType type;
+ 	RCRuleFunc append;
+ 	RCNextRuleFunc next;
+ };
+@@ -122,9 +122,9 @@
+ int rule_context_get_rank_rule (RuleContext *rc, FilterRule *rule, const char *source);
+ 
+ /* setup type for set parts */
+-void rule_context_add_part_set (RuleContext *rc, const char *setname, int part_type,
++void rule_context_add_part_set (RuleContext *rc, const char *setname, GType part_type,
+ 				RCPartFunc append, RCNextPartFunc next);
+-void rule_context_add_rule_set (RuleContext *rc, const char *setname, int rule_type,
++void rule_context_add_rule_set (RuleContext *rc, const char *setname, GType rule_type,
+ 				RCRuleFunc append, RCNextRuleFunc next);
+ 
+ /* uri's disappear/renamed externally */
