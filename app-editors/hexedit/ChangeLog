@@ -1,0 +1,9 @@
+# ChangeLog for app-editors/hexedit
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.1 2002/02/15 06:20:17 agenkin Exp $
+
+*hexedit-1.2.2; (14 Feb 2002)
+
+  14 Feb 2002; Arcady Genkin <agenkin@thpoon.com> hexedit-1.2.2.ebuild :
+
+  First version of the package, submitted by Marc Soda.
