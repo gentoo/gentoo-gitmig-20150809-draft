@@ -53,9 +53,11 @@ src_unpack() {
 	chown -R 0.0 *
 	chmod -R a+r-w+X,u+w *
 
+	cd ${S}
+	# Tiny patch for symbol generation
+	patch -p1 < ${FILESDIR}/gentoo-sources-2.4.19-r9-ksyms.patch || die
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
-	cd ${S}
 	mv Makefile Makefile.orig
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
 	    -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
