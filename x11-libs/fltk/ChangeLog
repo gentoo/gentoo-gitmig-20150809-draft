@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.8 2002/08/22 20:23:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.9 2002/09/20 14:40:34 raker Exp $
 
 *fltk-1.1.0_rc6 (22 Aug 2002)
+
+  20 Sep 2002; Nick Hadaway <raker@gentoo.org> fltk-1.1.0_rc6.ebuild :
+  Removed invalid xdbe and xft flags.
 
   22 Aug 2002; Nick Hadaway <raker@gentoo.org> fltk-1.1.0_rc6.ebuild :
   Updated install so all libraries are installed correctly.
