@@ -9,6 +9,5 @@ MD5 e1fe59c9583e8cff244a322c15cee217 files/digest-ruby-1.8.1-r7 137
 MD5 d05f63da27634456886e7c924eaf96da files/ruby-1.6.8-fix-x86_64.patch 431
 MD5 00ccb2b51acb8e90488b9bd2f8bf2c32 files/digest-ruby-1.6.8-r11 136
 MD5 a5d6f26168583bd4fd399f0855323175 files/digest-ruby-1.8.2_pre2 134
-MD5 a1aff527ed4b468611a7e55ab17e6bc0 files/ruby-1.6.8-oniguruma-gentoo.diff 1125
 MD5 c20ec6eaf6847e4eb46d8865241f1016 files/ruby-1.8.0-CGI::Session.patch 801
 MD5 999d392f0a17f7643659081973e99def files/ruby-rdoc-gentoo.diff 432
