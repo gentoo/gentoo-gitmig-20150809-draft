@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> (16 Sep 2002)
+# Version bumped, masked due to freeze
+=sys-kernel/openmosix-sources-2.4.18-r5
+
 # <blocke@shivan.org> (16 Sep 2002)
 # Masked due to freeze
 =net-www/galeon-1.2.6
