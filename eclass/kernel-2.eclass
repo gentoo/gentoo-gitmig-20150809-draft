@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.77 2005/01/12 11:13:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.78 2005/01/12 17:55:14 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -27,6 +27,7 @@
 #						  postinst and can be used to carry additional postinst
 #						  messages
 # K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
+# K_SYMLINK				- if this is set, then forcably create symlink anyway
 
 # H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
 #						  can be supported by the headers ebuild
@@ -42,8 +43,7 @@
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of
 #						  order, so they are applied in the order passed
 
-inherit toolchain-funcs multilib
-
+inherit toolchain-funcs versionator
 ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
@@ -133,8 +133,8 @@ kernel_is_2_4() {
 }
 
 kernel_is_2_6() {
-	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && \
-		return 0 || return 1
+	kernel_is 2 6 || kernel_is 2 5
+	return $?
 }
 
 kernel_header_destdir() {
@@ -157,8 +157,9 @@ then
 		virtual/modutils
 		sys-devel/make )"
 
-	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" \
-		|| PROVIDE="virtual/linux-sources virtual/alsa"
+
+	PROVIDE="virtual/linux-sources"
+	kernel_is gt 2 4 && PROVIDE="${PROVIDE} virtual/alsa"
 		
 	SLOT="${PVR}"
 	DESCRIPTION="Sources for the Linux kernel"
@@ -217,7 +218,7 @@ universal_unpack() {
 			&& mv Makefile.new Makefile
 		cd ${S}
 	fi
-	# fix a problem on ppc
+	# fix a problem on ppc where TOUT writes to /usr/src/linux breaking sandbox
 	use ppc && \
 	sed -ie 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
 	${S}/arch/ppc/Makefile
@@ -254,7 +255,7 @@ compile_headers() {
 		echo ">>> make oldconfig complete"
 		use sparc && make dep ${xmakeopts}
 
-	elif kernel_is 2 6
+	elif kernel_is 2_6
 	then
 		# autoconf.h isnt generated unless it already exists. plus, we have
 		# no guarantee that any headers are installed on the system...
@@ -300,17 +301,18 @@ install_headers() {
 		dodir ${ddir}/asm-sparc64
 		cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
 		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
+		generate_sparc_asm ${D}/usr/include
+	else
+		cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
+	fi
 
-		#generate_sparc_asm ${D}/usr/include
-		create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
-	elif [ "${ARCH}" = "amd64" ]; then
+	if [ "${ARCH}" = "amd64" ]; then
 		rm -Rf ${D}/${ddir}/asm
 		dodir ${ddir}/asm-i386
 		dodir ${ddir}/asm-x86_64
 		cp -ax ${S}/include/asm-i386/* ${D}/usr/include/asm-i386
 		cp -ax ${S}/include/asm-x86_64/* ${D}/usr/include/asm-x86_64
-		#/bin/sh ${FILESDIR}/generate-asm-amd64 ${D}/usr/include
-		create_ml_includes /usr/include/asm __i386__:/usr/include/asm-i386 __x86_64__:/usr/include/asm-x86_64
+		/bin/sh ${FILESDIR}/generate-asm-amd64 ${D}/usr/include
 	else
 		cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
 	fi
@@ -367,16 +369,11 @@ install_sources() {
 }
 
 install_manpages() {
-	local MY_ARCH
-
+	env -u ARCH	sed -ie "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
 	ebegin "Installing manpages"
-	MY_ARCH=${ARCH}
-	unset ARCH
-	sed -ie "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
-	make installmandocs
+	env -u ARCH make installmandocs
 	eend $?
-	sed -ie "s#${D}/usr/man#/usr/local/man#g" scripts/makeman
-	ARCH=${MY_ARCH}
+	env -u ARCH sed -ie "s#${D}/usr/man#/usr/local/man#g" scripts/makeman
 }
 
 # pkg_preinst functions
@@ -390,13 +387,22 @@ preinst_headers() {
 # pkg_postinst functions
 #==============================================================
 postinst_sources() {
-	if [ ! -h ${ROOT}usr/src/linux ]
-	then
-		ln -sf ${ROOT}usr/src/linux-${KV_FULL} ${ROOT}usr/src/linux
+	local MAKELINK
+	
+	# if we are to forcably symlink, delete it if it already exists first.
+	if [ -n "${K_SYMLINK}" ]; then
+		[ -h ${ROOT}usr/src/linux ] && rm ${ROOT}usr/src/linux
+		MAKELINK=1
 	fi
+	
+	# if the link doesnt exist, lets create it
+	[ ! -h ${ROOT}usr/src/linux ] && MAKELINK=1
+	
+	[ ${MAKELINK} == 1 ] && \
+		ln -sf ${ROOT}usr/src/linux-${KV_FULL} ${ROOT}usr/src/linux
 
 	# Don't forget to make directory for sysfs
-	[ ! -d "${ROOT}/sys" -a $(kernel_is_2_6) $? == 0 ] && mkdir /sys
+	[ ! -d "${ROOT}/sys" -a kernel_is_2_6 ] && mkdir /sys
 
 	echo
 	einfo "After installing a new kernel of any version, it is important"
@@ -482,6 +488,11 @@ unipatch() {
 	local ELINE
 	local STRICT_COUNT
 	local PATCH_LEVEL
+	local myLC_ALL
+	
+	# set to a standard locale to ensure sorts are ordered properly.
+	myLC_ALL="${LC_ALL}"
+	LC_ALL="C"
 
 	[ -z "${KPATCH_DIR}" ] && KPATCH_DIR="${WORKDIR}/patches/"
 	[ ! -d ${KPATCH_DIR} ] && mkdir -p ${KPATCH_DIR}
@@ -574,7 +585,6 @@ unipatch() {
 	#populate KPATCH_DIRS so we know where to look to remove the excludes
 	x=${KPATCH_DIR}
 	KPATCH_DIR=""
-	LC_ALL="C"
 	for i in $(find ${x} -type d | sort -n)
 	do
 		KPATCH_DIR="${KPATCH_DIR} ${i}"
@@ -647,7 +657,8 @@ unipatch() {
 	do
 		rm -Rf ${x}
 	done
-	unset LC_ALL
+	
+	LC_ALL="${myLC_ALL}"
 }
 
 # getfilevar accepts 2 vars as follows:
@@ -707,9 +718,9 @@ detect_version() {
 		OKV=${OKV/-r*/}
 	fi
 
-	KV_MAJOR=$(echo ${OKV} | cut -d. -f1)
-	KV_MINOR=$(echo ${OKV} | cut -d. -f2)
-	KV_PATCH=$(echo ${OKV} | cut -d. -f3-)
+	KV_MAJOR=$(get_version_component_range 1 ${OKV})
+	KV_MINOR=$(get_version_component_range 2 ${OKV})
+	KV_PATCH=$(get_version_component_range 3- ${OKV})
 	KV_PATCH=${KV_PATCH/[-_]*/}
 
 	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
@@ -721,7 +732,7 @@ detect_version() {
 	then
 		RELEASE=${RELEASE/_pre/-pre}
 	else
-	RELEASE=${RELEASE/_pre/-bk}
+		RELEASE=${RELEASE/_pre/-bk}
 	fi
 	RELEASETYPE=${RELEASE//[0-9]/}
 	EXTRAVERSION="${RELEASE}"
