@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0_rc1.ebuild,v 1.3 2004/02/08 04:59:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0_rc1.ebuild,v 1.4 2004/02/15 22:56:28 robbat2 Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -169,7 +169,7 @@ src_install () {
 		echo 'localhost|0|vpopmail|secret|vpopmail' >>${D}/etc/vpopmail.conf
 		# lock down perms
 		fperms 640 /etc/vpopmail.conf
-		fowner root:vpopmail /etc/vpopmail.conf
+		fowners root:vpopmail /etc/vpopmail.conf
 	fi
 
 	# Install a proper cronjob instead of the old nastiness

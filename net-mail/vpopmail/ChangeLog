@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.27 2004/01/05 07:55:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.28 2004/02/15 22:56:28 robbat2 Exp $
+
+  15 Feb 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  vpopmail-5.4.0_rc1.ebuild:
+  fix fowner/fowners.
 
 *vpopmail-5.4.0_rc1 (05 Jan 2004)
 
