@@ -1,4 +1,6 @@
 MD5 68fe7079ccb812b32272595f0dcf1e8f icets-1.1.ebuild 869
-MD5 b501045a165e925f574e91fab45ba978 ChangeLog 1244
+MD5 b75e2854deefab5c35032525b53666f7 icets-1.2.ebuild 836
+MD5 d49e56a74d0e8b3e3c3c5082b0d268cc ChangeLog 1386
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
 MD5 2b2bb51a215b1b08030e0b71b477f47d files/digest-icets-1.1 62
+MD5 d7eea449a4f164cbf4c3eb2a0ec14cb4 files/digest-icets-1.2 61

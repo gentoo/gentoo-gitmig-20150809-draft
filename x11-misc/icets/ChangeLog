@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/icets
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.11 2004/06/24 22:24:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.12 2004/07/27 12:25:27 phosphan Exp $
+
+*icets-1.2 (27 Jul 2004)
+
+  27 Jul 2004; Patrick Kursawe <phosphan@gentoo.org> +icets-1.2.ebuild:
+  Version bump, build process has changed.
 
   24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> icets-1.1.ebuild:
   Adding IUSE
