@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
 # Author:  Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.4.9-r1.ebuild,v 1.1 2001/11/02 02:04:57 azarah Exp $
 
 TVISIONVER="1.1.3b"
 SETEDITVER="0.4.41"
@@ -10,16 +11,19 @@ GDBVER="5.0"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="RHIDE is a console IDE for various languages."
-SRC_URI="http://prdownloads.sourceforge.net/rhide/rhide-${PV}.tar.gz
-	 http://prdownloads.sourceforge.net/setedit/rhtvision-${TVISIONVER}.src.tar.gz
-	 http://prdownloads.sourceforge.net/setedit/setedit-${SETEDITVER}.tar.gz
+SRC_URI="http://download.sourceforge.net/rhide/rhide-${PV}.tar.gz
+	 http://download.sourceforge.net/setedit/rhtvision-${TVISIONVER}.src.tar.gz
+	 http://download.sourceforge.net/setedit/setedit-${SETEDITVER}.tar.gz
 	 ftp://ftp.gnu.org/gnu/gdb/gdb-${GDBVER}.tar.gz"
 HOMEPAGE="http://www.rhide.com/"
 
 # Ugly I know, but the build fails if teTeX not installed
 DEPEND="virtual/glibc
 	dev-libs/libpcre
+	sys-apps/texinfo
 	sys-devel/gettext
+	sys-libs/gpm
+	sys-libs/zlib
 	app-text/tetex"
 	
 
@@ -34,8 +38,7 @@ src_unpack() {
 	patch -p1 <${FILESDIR}/setedit-${SETEDITVER}.diff || die
 	
 	cd ${S}
-	patch <${FILESDIR}/rhide-1.4.9.diff-1 || die
-	patch <${FILESDIR}/rhide-1.4.9.diff-2 || die
+	patch <${FILESDIR}/rhide-1.4.9-makefile.diff || die
 }
 
 src_compile() {
@@ -45,7 +48,7 @@ src_compile() {
 	
 # ************* TVision *************
 	
-	cd ${S}/../tvision/
+	cd ${WORKDIR}/tvision/
 	
 	DUMMYFLAGS=""
 	
@@ -63,32 +66,32 @@ src_compile() {
 	make || die
 	
 	# Fix include problem
-	cp ${S}/../tvision/include/tv/* ${S}/../tvision/include
+	cp ${WORKDIR}/tvision/include/tv/* ${WORKDIR}/tvision/include
 		
 	
 # ************* SetEdit *************
 	
-	cd ${S}/../setedit/
+	cd ${WORKDIR}/setedit/
 	
 	./configure --prefix=/usr				\
 		--fhs						\
 		--libset || die
 	
 	# Fix CFLAGS and CXXFLAGS
-	cd ${S}/../setedit/makes
+	cd ${WORKDIR}/setedit/makes
 	cp rhide.env rhide.env.orig
 	sed -e "s:${CFLAGS}::g"					\
 		-e "s:${CXXFLAGS}::g" 				\
 		rhide.env.orig >rhide.env
 	make clean || die
 	make force-patch || die
-	cd ${S}/../setedit/
+	cd ${WORKDIR}/setedit/
 	
 	# -j breaks build
 	make || die
 
 	# Make the docs
-	cd ${S}/../setedit/doc
+	cd ${WORKDIR}/setedit/doc
 	make || die
 	
 	
@@ -96,15 +99,15 @@ src_compile() {
 	
 	cd ${S}
 	
-	# Fix CFLAGS and CXXFLAGS
+	# Fix CXXFLAGS
 	cp rhide.mak rhide.mak.orig
-	sed -e 's:-O2:$(CFLAGS):' rhide.mak.orig >rhide.mak
+	sed -e 's:-O2:$(CXXFLAGS):' rhide.mak.orig >rhide.mak
         cp rhide_.mak rhide_.mak.orig
-	sed -e 's:-O2:$(CFLAGS):' rhide_.mak.orig >rhide_.mak
+	sed -e 's:-O2:$(CXXFLAGS):' rhide_.mak.orig >rhide_.mak
 	cp gpr2mak.mak gpr2mak.mak.orig
-	sed -e 's:-O2:$(CFLAGS):' gpr2mak.mak.orig >gpr2mak.mak
+	sed -e 's:-O2:$(CXXFLAGS):' gpr2mak.mak.orig >gpr2mak.mak
 	cp gprexp.mak gprexp.mak.orig
-	sed -e 's:-O2:$(CFLAGS):' gprexp.mak.orig >gprexp.mak
+	sed -e 's:-O2:$(CXXFLAGS):' gprexp.mak.orig >gprexp.mak
 	
 	export RHIDESRC="`pwd`"
 	export SETSRC="${RHIDESRC}/../setedit"
@@ -112,32 +115,24 @@ src_compile() {
 	export TVSRC="${RHIDESRC}/../tvision"
 	export TVOBJ="${RHIDESRC}/../tvision/linux"
 	
+	# -j breaks build
 	make prefix=/usr			  		\
 		install_docdir=share/doc/${PF}			\
 		install_infodir=share/info			\
 		|| die
 	
-	# -j breaks build
-	make || die
-
-	# Update SetEdit and InfView's info pages
-	cp -f ${S}/../setedit/doc/editor.inf			\
-		${S}/share/setedit/setedit.inf
-	cp -f ${S}/../setedit/doc/infeng.inf			\
-		${S}/share/setedit/infview.inf
-
-	# Fix the filenames in the info pages
+	# Update and Fix DIR entry in .info files
 	cd ${S}/share/setedit/
-	cp setedit.inf setedit.inf.orig
 	sed -e 's:editor.inf:setedit.inf:g'			\
-		setedit.inf.orig > setedit.inf
-	cp infview.inf infview.inf.orig
-	sed -e 's:infeng.inf:infview.inf:g'			\
-		infview.inf.orig > infview.inf
-	cd ${S}
-	
+		${WORKDIR}/setedit/doc/editor.inf >		\
+		setedit.inf || die
+	sed -e	's:infeng.inf:infview.inf:g'			\
+		${WORKDIR}/setedit/doc/infeng.inf >             \
+		infview.inf || die
+        cd ${S}
+
 	# Update setedit macro's
-	cp -f ${S}/../setedit/cfgfiles/*.pmc ${S}/share/setedit
+	cp -f ${WORKDIR}/setedit/cfgfiles/*.pmc ${S}/share/setedit
 }
 
 src_install() {
@@ -151,6 +146,8 @@ src_install() {
 	for file in ${D}/usr/share/info/*.inf ; do
 		mv ${file} ${file}o
 	done
+
+	doman ${WORKDIR}/setedit/doc/{infview.1,setedit.1}
 
 	# Install default CFG file and fix the paths
 	cd ${D}/usr/share/rhide

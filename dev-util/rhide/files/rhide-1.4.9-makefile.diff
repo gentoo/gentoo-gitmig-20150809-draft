@@ -1,3 +1,16 @@
+--- makefile.src.orig	Fri Oct 26 01:57:35 2001
++++ makefile.src	Fri Oct 26 01:57:46 2001
+@@ -191,8 +191,8 @@
+ 	   -o -name "$(name)") -print)
+ endif
+ 
+-mark.copyright: $(copyrite.exe)
+-	$(copyrite.exe) $(Markfiles)
++mark.copyright: $(copyrite_exe)
++	$(./copyrite_exe) $(Markfiles)
+ 
+ _languages.src: $(addsuffix .po,$(LANGUAGES))
+ 
 --- common.mak.orig	Mon Sep  3 12:36:41 2001
 +++ common.mak	Fri Oct 26 01:52:40 2001
 @@ -126,8 +126,8 @@
