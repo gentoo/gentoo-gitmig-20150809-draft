@@ -1,7 +1,11 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.6 2002/12/17 03:41:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.7 2003/01/07 03:57:22 spider Exp $
 
+  07 Dec 2002 Spider <spider@gentoo.org> vorbis-tools-1.0-r1.ebuild :
+  added an explicit depend on libogg, since users who remove it, keep libvorbis then claim that vorbis-tools are broken because they dont depend on libogg.
+
+  
   17 Dec 2002; Aron Griffis <agriffis@gentoo.org> vorbis-tools-1.0-r1.ebuild :
   Added ~alpha to KEYWORDS
 
