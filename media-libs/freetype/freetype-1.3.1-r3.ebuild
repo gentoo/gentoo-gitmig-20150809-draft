@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.11 2002/12/09 04:26:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.12 2002/12/09 22:42:49 mholzer Exp $
 
 IUSE="nls"
 
@@ -19,7 +19,9 @@ P2=${PN}1-contrib
 S=${WORKDIR}/${P}
 DESCRIPTION="TTF-Library"
 SRC_URI="ftp://ftp.freetype.org/freetype/freetype1/${P}.tar.gz
-	 ftp://ftp.freetype.org/freetype/freetype1/${P2}.tar.gz"
+	 ftp://ftp.freetype.org/freetype/freetype1/${P2}.tar.gz
+         http://ftp.sunet.se/pub/text-processing/freetype/freetype1/${P}.tar.gz
+	 http://ftp.sunet.se/pub/text-processing/freetype/freetype1/${P2}.tar.gz"
 HOMEPAGE="http://www.freetype.org/"
 
 SLOT="1"

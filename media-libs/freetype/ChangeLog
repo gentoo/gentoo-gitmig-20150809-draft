@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.11 2002/12/09 04:26:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.12 2002/12/09 22:42:49 mholzer Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
@@ -24,8 +24,10 @@
 
 *freetype-1.3.1-r3 (28 Aug 2002)
 
-  28 Aug 2002; Seemant Kulleen <seemant@gentoo.org> freetype-1.3.1-r3.ebuild :
+  09 Dec 2002; Martin Holzer <mholzer@gentoo.org> freetype-1.3.1-r3.ebuild Changelog :
+  Added SRC_URI cause ftp.freetype.org is permanent down.
 
+  28 Aug 2002; Seemant Kulleen <seemant@gentoo.org> freetype-1.3.1-r3.ebuild :
   SRC_URI fix by: tobias@databoogie.net (Tobias Eichert) in bug #7147
 
 *freetype-2.1.2 (16 Jul 2002)
