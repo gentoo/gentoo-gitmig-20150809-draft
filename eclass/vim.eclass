@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.90 2005/01/15 11:57:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.91 2005/01/19 19:49:19 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -23,7 +23,7 @@
 # -aqua -gtk -motif nextaw      NEXTAW (7+)
 # -aqua -gtk -motif -nextaw     ATHENA
 
-inherit eutils vim-doc flag-o-matic versionator
+inherit eutils vim-doc flag-o-matic versionator fdo-mime
 
 # Support -cvs ebuilds, even though they're not in the official tree.
 MY_PN="${PN%-cvs}"
@@ -328,7 +328,7 @@ src_compile() {
 		#   VIMINIT='let OS=system("uname -s")' vim
 		# vim7 seems to be ok though. (24 Sep 2004 ciaranm)
 		if [[ $(get_major_version ) -ge 7 ]] ; then
-			myconf="${myconf} `use_enable tcl tclinterp`"
+			myconf="${myconf} `use_enable tcltk tclinterp`"
 			myconf="${myconf} `use_enable mzscheme mzschemeinterp`"
 			if [[ "${MY_PN}" == "gvim" ]] ; then
 				myconf="${myconf} `use_enable netbeans`"
@@ -574,6 +574,11 @@ pkg_postinst() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
 
+	# Update fdo mime stuff, bug #78394
+	if [[ "${MY_PN}" == "gvim" ]] ; then
+		fdo-mime_mime_database_update
+	fi
+
 	einfo
 	if [[ $(get_major_version ) -lt 7 ]] ; then
 		if [[ "${MY_PN}" == "gvim" ]] ; then
@@ -635,6 +640,11 @@ pkg_postrm() {
 
 	# Make convenience symlinks
 	update_vim_symlinks
+
+	# Update fdo mime stuff, bug #78394
+	if [[ "${MY_PN}" == "gvim" ]] ; then
+		fdo-mime_mime_database_update
+	fi
 }
 
 src_test() {
