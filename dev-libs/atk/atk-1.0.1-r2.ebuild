@@ -1,12 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Spider  <spider.gentoo@darkmere.wanfear.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.0.1-r2.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.0.1-r2.ebuild,v 1.3 2002/05/21 18:14:07 danarmak Exp $
 
 # ACONFVER=2.52f
 # AMAKEVER=1.5b
-# Source inherit.eclass and inherit AutoTools
-# . /usr/portage/eclass/inherit.eclass  || die
 # inherit autotools 
 SLOT="1"
 S=${WORKDIR}/${P}

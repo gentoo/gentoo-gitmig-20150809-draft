@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Ilian Zarov <coder@descom.com>
 # Maintainer: Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.2 2002/02/03 21:54:32 danarmak Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.3 2002/05/21 18:14:07 danarmak Exp $
+
 use kde && inherit kde
 
 S=${WORKDIR}/${P}

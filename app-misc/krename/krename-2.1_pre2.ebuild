@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Michael v.Ostheim <MvOstheim@web.de>
 # /space/gentoo/cvsroot/gentoo-x86/skel.build,v 1.11 2001/12/06 22:12:34 drobbins Exp
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit kde-base
 
 MY_P=${PN}-${PV//_/-}

@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.6.ebuild,v 1.1 2002/04/21 01:10:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.6.ebuild,v 1.2 2002/05/21 18:14:07 danarmak Exp $
 
 #provide Xmake and Xemake
-. /usr/portage/eclass/inherit.eclass
+
 inherit virtualx
 
 S=${WORKDIR}/${P}

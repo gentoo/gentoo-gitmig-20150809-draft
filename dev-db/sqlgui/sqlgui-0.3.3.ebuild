@@ -1,8 +1,8 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Christophe Vanfleteren <c.vanfleteren@pandora.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.3.3.ebuild,v 1.1 2002/05/11 13:49:24 danarmak Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.3.3.ebuild,v 1.2 2002/05/21 18:14:07 danarmak Exp $
+
 inherit kde-base || die
 
 need-kde 3
