@@ -1,41 +1,11 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.8 2004/11/12 06:49:31 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.9 2004/11/15 18:16:54 brix Exp $
 
-*ibm-acpi-0.8 (12 Nov 2004)
+*ibm-acpi-0.8 (15 Nov 2004)
 
-  12 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> +ibm-acpi-0.8.ebuild:
-  Version bump.
-
-  24 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> ibm-acpi-0.7.ebuild:
-  Added dependency on virtual/linux-sources.
-
-*ibm-acpi-0.7 (23 Oct 2004)
-
-  23 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> +ibm-acpi-0.7.ebuild:
-  Version bump.
-
-*ibm-acpi-0.6 (20 Oct 2004)
-
-  20 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> +ibm-acpi-0.6.ebuild:
-  Version bump. Only install example configuration if USE="doc".
-
-*ibm-acpi-0.5 (18 Oct 2004)
-
-  18 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> +ibm-acpi-0.5.ebuild:
-  Version bump.
-
-  04 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> ibm-acpi-0.4.ebuild:
-  Stable on x86
-
-*ibm-acpi-0.4 (16 Sep 2004)
-
-  16 Sep 2004; Henrik Brix Andersen <brix@gentoo.org> +ibm-acpi-0.4.ebuild:
-  Version bump.
-
-*ibm-acpi-0.3 (02 Sep 2004)
-
-  02 Sep 2004; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
-  +ibm-acpi-0.3.ebuild:
-  Initial import. Fixes bug #62243. Ebuild by me.
+  15 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> -ibm-acpi-0.3.ebuild,
+  ibm-acpi-0.4.ebuild, -ibm-acpi-0.5.ebuild, -ibm-acpi-0.6.ebuild,
+  ibm-acpi-0.7.ebuild, ibm-acpi-0.8.ebuild:
+  Added check for CONFIG_ACPI_IBM, mark 0.7 x86, pruned old versions.
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.8.ebuild,v 1.1 2004/11/12 06:49:31 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.8.ebuild,v 1.2 2004/11/15 18:16:54 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -19,14 +19,30 @@ DEPEND="virtual/linux-sources
 		sys-apps/sed"
 
 pkg_setup() {
-	kernel-mod_check_modules_supported
+	local DIE=0
 
-	if ! kernel-mod_configoption_present ACPI
+	if kernel-mod_configoption_present ACPI_IBM
 	then
 		eerror ""
-		eerror "${PN} requires support for ACPI (CONFIG_ACPI) in the kernel."
+		eerror "${P} requires IBM ThinkPad Laptop Extras (CONFIG_ACPI_IBM)"
+		eerror "to be DISABLED in the kernel to avoid conflicting modules."
+		DIE=1
+	fi
+
+	if ! egrep "^CONFIG_ACPI=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
+	then
 		eerror ""
-		die "CONFIG_ACPI support not detected."
+		eerror "${PN} requires an ACPI (CONFIG_ACPI) enabled kernel."
+		eerror ""
+		DIE=1
+	fi
+
+	kernel-mod_check_modules_supported
+
+	if [ $DIE -eq 1 ]
+	then
+		eerror ""
+		die "You kernel is missing the required option(s) listed above."
 	fi
 }
 
