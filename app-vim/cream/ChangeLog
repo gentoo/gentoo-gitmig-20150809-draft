@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.6 2004/04/28 14:47:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.7 2004/04/29 06:06:04 ciaranm Exp $
+
+*cream-0.29-r1 (29 Apr 2004)
+
+  29 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/cream-0.29-ctags.patch, +files/cream-0.29-desktop.patch,
+  +files/cream-0.29-paths.patch, -files/gentoo-cream-0.29-mkdir.patch,
+  +cream-0.29-r1.ebuild, -cream-0.29.ebuild:
+  Pulling 0.29 as it is broken. Adding in 0.29-r1 as ~arch. Thanks to TGL
+  <degrenier@easyconnect.fr> in #48960
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> cream-0.29.ebuild:
   Add inherit eutils
