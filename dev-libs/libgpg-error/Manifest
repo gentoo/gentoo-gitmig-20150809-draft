@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4ffc587beba100c7ef2b962707941c6 libgpg-error-0.7-r1.ebuild 792
-MD5 16f813cc8fda892e389bb2057962ef1f ChangeLog 4028
 MD5 34d06984a9ccc744c29063718db1740b libgpg-error-1.0-r1.ebuild 1078
-MD5 c3070e9dea666666fcbc1fa8f04e1d0e libgpg-error-1.0.ebuild 861
 MD5 622d2ebe3ed3ca88a279470a57ff3f30 libgpg-error-0.6-r1.ebuild 706
+MD5 1646d3f1509858606b36ec1003b894b1 ChangeLog 4138
+MD5 d4ffc587beba100c7ef2b962707941c6 libgpg-error-0.7-r1.ebuild 792
+MD5 c3070e9dea666666fcbc1fa8f04e1d0e libgpg-error-1.0.ebuild 861
 MD5 cbb90c3fb885f86a1c6bea0f4493f9ab metadata.xml 250
 MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0-r1 68
+MD5 351613fb76980248b69def1933899216 files/libgpg-error-1.0-locale.h.patch 367
 MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0 68
 MD5 2a0413caa56a5072d7da6e76fa995239 files/digest-libgpg-error-0.6-r1 68
-MD5 351613fb76980248b69def1933899216 files/libgpg-error-1.0-locale.h.patch 367
 MD5 79ccf482189a756d86e48ae6519bae82 files/digest-libgpg-error-0.7-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByFGdugEuf3OQ0akRAmEbAJ9xZnbViKLgzupgwFQqKpEeTwdY/ACfeIpz
-oQCg/L8wyOA/3UHhVJeS4+8=
-=aMtL
------END PGP SIGNATURE-----
