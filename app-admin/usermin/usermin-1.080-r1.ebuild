@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080.ebuild,v 1.3 2004/06/16 16:05:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080-r1.ebuild,v 1.1 2004/06/16 17:51:32 eradicator Exp $
 
 inherit eutils
 
@@ -76,6 +76,8 @@ pkg_postinst() {
 		# Start if it was running before
 		/etc/init.d/usermin start
 	fi
+
+	sed -i 's:^pidfile=.*$:pidfile=/var/run/usermin.pid:' /etc/usermin/miniserv.conf
 
 	einfo "Add usermin to your boot-time services with 'rc-update add usermin'."
 	einfo "Point your web browser to http://localhost:20000 to use usermin."
