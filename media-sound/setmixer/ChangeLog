@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/setmixer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/ChangeLog,v 1.6 2004/07/01 07:58:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/ChangeLog,v 1.7 2004/07/20 06:17:14 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> files/setmixer.rc:
+  Added depend() to init.d file.  Added to ~amd64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   setmixer-19941227_rc7.ebuild:
