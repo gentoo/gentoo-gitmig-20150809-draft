@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpoj
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.6 2003/09/09 06:50:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.7 2003/11/05 20:09:51 lanius Exp $
+
+  05 Nov 2003; Heinrich Wendel <lanius@gentoo.org> files/hpoj.init:
+  bug #32770 (hotplug)
 
   09 Sep 2003; Heinrich Wendel <lanius@gentoo.org> hpoj-0.90-r1.ebuild:
   removed dep on hpijs, added comment instead
