@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.5.ebuild,v 1.1 2004/02/26 18:11:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.5.ebuild,v 1.2 2004/03/19 01:22:26 vapier Exp $
 
 inherit horde
 
 DESCRIPTION="Horde Application Framework"
 HOMEPAGE="http://www.horde.org/"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND=""
 RDEPEND=">=dev-php/mod_php-4.1.0

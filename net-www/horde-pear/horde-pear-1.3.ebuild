@@ -1,14 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-pear/horde-pear-1.3.ebuild,v 1.1 2004/02/26 18:05:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-pear/horde-pear-1.3.ebuild,v 1.2 2004/03/19 01:22:11 vapier Exp $
 
 inherit horde
 
 DESCRIPTION="Horde Application Framework PHP PEAR files"
 HOMEPAGE="http://www.horde.org/"
-SRC_URI="http://ftp.horde.org/pub/${HORDE_PN}/${HORDE_PN}-${PV}.tar.bz2"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND=""
 RDEPEND=">=dev-php/mod_php-4.1.0
