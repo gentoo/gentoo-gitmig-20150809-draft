@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r9.ebuild,v 1.1 2004/11/11 06:04:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r9.ebuild,v 1.2 2004/11/17 22:14:31 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -19,7 +19,8 @@ RDEPEND="virtual/libc
 	activefilter? ( >=net-libs/libpcap-0.8.3-r1 )
 	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	pam? ( sys-libs/pam )"
 
 src_unpack() {
 	unpack ${A}
