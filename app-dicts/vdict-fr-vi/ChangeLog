@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/vdict-fr-vi
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict-fr-vi/ChangeLog,v 1.1 2005/02/24 08:34:51 pclouds Exp $
+
+*vdict-fr-vi-20050224 (24 Feb 2005)
+
+  24 Feb 2005; <pclouds@gentoo.org> +metadata.xml,
+  +vdict-fr-vi-20050224.ebuild:
+  Initial ebuild, part of #82929 by Luu Danh Hieu <ipridian@spymac.com>
+
