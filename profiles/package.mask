@@ -1,4 +1,5 @@
 >=sys-apps/bash-2.05
+>=sys-apps/procps-2.0.7
 >=sys-devel/gcc-2.96
 >=sys-libs/readline-4.2
 >=sys-libs/glibc-2.2.3
