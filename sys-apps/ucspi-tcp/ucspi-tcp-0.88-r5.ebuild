@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r5.ebuild,v 1.4 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r5.ebuild,v 1.5 2003/09/03 14:51:21 vapier Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 		epatch ${WORKDIR}/ucspi-tcp-ssl-20020705.patch
 	fi
 	epatch ${FILESDIR}/${PV}-errno.patch
+	epatch ${FILESDIR}/${PV}-head-1.patch
 
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
