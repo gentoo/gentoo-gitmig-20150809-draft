@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.9 2003/02/15 08:13:09 gerk Exp ${PN}/${PN}-3.1.5-r2.ebuild,v 1.2 2002/03/15 12:10:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.10 2003/03/29 19:36:41 tuxus Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTTP/HTML indexing and searching system"
 SRC_URI="http://www.htdig.org/files/${P}.tar.gz"
 HOMEPAGE="http://www.htdig.org"
-KEYWORDS="x86 sparc  ppc"
+KEYWORDS="x86 sparc ppc mips"
 SLOT="0"
 LICENSE="GPL-2"
 
