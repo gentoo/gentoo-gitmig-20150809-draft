@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r9.ebuild,v 1.1 2003/12/26 01:56:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r9.ebuild,v 1.2 2004/01/05 06:07:29 robbat2 Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -74,6 +74,12 @@ src_unpack() {
 	for i in vchkpw.c vconvert.c vdelivermail.c vpopbull.c vpopmail.c vqmaillocal.c vuserinfo.c; do
 		sed -e 's|Maildir|.maildir|g' -i $i || die "Failed to change s/Maildir/.maildir/g in $i"
 	done
+
+	# the configure script tries to force root and make directories not using ${D}
+	cp configure configure.orig
+	sed -e '1282,1289d' -e '1560,1567d' -e '2349d' -e '2107d' -e '2342d' configure > configure.new
+	mv --force configure.new configure
+	chmod u+x configure
 }
 
 src_compile() {
@@ -91,15 +97,13 @@ src_compile() {
 			--enable-mysql-replication=n" \
 		|| myopts="${myopts} --enable-mysql=n"
 
-	# the configure script tries to force root and make directories not using ${D}
-	sed -e '1282,1289d' -e '1560,1567d' -e '2349d' -e '2107d' -e '2342d' configure > configure.new
-	mv --force configure.new configure
-	chmod u+x configure
-
 	# Bug 20127
 	use clearpasswd &&
 		myopts="${myopts} --enable-clear-passwd=y" ||
 		myopts="${myopts} --enable-clear-passwd=n"
+
+	addpredict /var/vpopmail/etc/lib_deps
+	addpredict /var/vpopmail/etc/inc_deps
 
 	econf ${myopts} --sbindir=/usr/sbin \
 		--bindir=/usr/bin \
