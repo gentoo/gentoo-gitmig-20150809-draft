@@ -1897,7 +1897,7 @@ def pkgmerge(mytbz2):
 	origdir=os.getcwd()
 	os.chdir(pkgloc)
 	print ">>> extracting",mypkg
-	notok=os.system("cat "+mytbz2+"| bzip2 -dq | tar xf -")
+	notok=os.system("cat "+mytbz2+"| bzip2 -dq | tar xpf -")
 	if notok:
 		print "!!! Error extracting",mytbz2
 		cleanup_pkgmerge(mypkg,origdir)
