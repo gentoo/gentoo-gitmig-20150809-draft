@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wdiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.14 2004/10/16 20:02:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.15 2004/10/21 15:19:06 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
+  Updated metadata (no-herd => shell-tools)
 
   16 Oct 2004; Mike Frysinger <vapier@gentoo.org> wdiff-0.5-r2.ebuild:
   Fix stupid dependency on sys-libs/libtermcap-compat (i.e. remove it) #64212.
