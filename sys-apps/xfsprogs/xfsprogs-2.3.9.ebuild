@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.2 2003/04/16 07:19:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.3 2003/06/03 06:58:59 bcowan Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,8 @@ LICENSE="LGPL-2.1"
 
 S=${WORKDIR}/${P}
 
-DEPEND="sys-apps/e2fsprogs"
+DEPEND="sys-apps/e2fsprogs
+	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
