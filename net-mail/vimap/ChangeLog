@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vimap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.13 2005/03/03 21:58:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.14 2005/03/04 20:13:27 gustavoz Exp $
+
+  04 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> vimap-2002c-r3.ebuild:
+  Stable on sparc wrt #83797
 
   03 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> vimap-2002c-r3.ebuild:
   Stable on ppc.
