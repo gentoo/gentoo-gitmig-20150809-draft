@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.16 2004/06/13 01:59:12 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.17 2004/06/19 18:46:57 kugelfang Exp $
+
+  19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> fox-1.2.4.ebuild:
+  Marked ~amd64.
 
 *fox-1.2.4 (13 Jun 2004)
 
