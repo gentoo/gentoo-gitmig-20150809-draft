@@ -70,6 +70,28 @@ at boot-time; <c>devfs=mount</c> is no longer needed.</note>
 # <i>./MAKEDEV audio</i></pre></body>
 	</section>
 	<section>
+		<title>Grub can't find stage x.y?</title>
+		<body><p>
+		During installation the grub boot files are copied
+		to <path>/boot/boot/grub</path>.  Grub automatically
+		looks in the <path>/boot/grub</path> directory on the
+		boot partition.  (We strongly recommend having a separate
+		no-auto boot partition mounted at <path>/boot</path>,
+		since that way it is much more difficult to clobber your
+		kernel and boot info by accident.)  The above error generally
+		arises from (a) not using a separate boot partition, (b)
+		forgetting to mount the boot partition at <path>/boot</path>
+		before either unpacking the build snapshot or running
+		<c>emerge --usepkg system</c>, or (c) forgetting the
+		<c>notail</c> option when mounting <path>/boot</path>.
+		You can get more information on grub, including how to
+		debug grub from the grub prompt, by reading the grub
+		tutorial at 
+		<uri>http://www-105.ibm.com/developerworks/education.nsf/linux-onlinecourse-bytitle/0F1731DC664023B7862569D0005C44AF?OpenDocument</uri>.
+		</p>
+                </body>
+	</section>
+	<section>
 		<title>I'm getting ALSA errors -- "mixer #/# not found", etc.</title>
 		<body>
 		<p>Your ALSA sound devices need to be set up correctly.  To do this, grab <uri link="/scripts/snddevices">our updated snddevices script</uri> and execute it by typing <c>bash snddevices</c>.  This will configure the ALSA devices correctly, and these errors should go away and ALSA should now work.</p>
