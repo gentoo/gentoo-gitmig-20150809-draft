@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.5 2003/04/20 21:22:02 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.6 2003/06/06 23:53:04 rphillips Exp $
+
+*mit-krb5-1.2.7-r1 (6 Jun 2003)
+
+  7 Jun 2003; Ryan Phillips <rphillips@gentoo.org> mit-krb5-1.2.6-r3.ebuild :
+  Initd script split, merge mit packages into one mit-krb5 ebuild,
+  support for static build with USE="static", have html docs installed, pass
+  $CFLAGS and $CXXFLAGS to configure, remove the unnecessary 1.2.2 patch.
 
 *mit-krb5-1.2.7 (30 Mar 2003)
 
