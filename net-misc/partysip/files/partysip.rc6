@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/files/partysip.rc6,v 1.1 2004/03/14 21:23:55 stkn Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting partysip"
+	start-stop-daemon --start --background --pidfile /var/run/partysip.pid \
+		-m --quiet --exec /usr/bin/partysip -- ${PARTYSIP_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping partysip"
+	start-stop-daemon --stop --quiet --pidfile /var/run/partysip.pid
+	eend $?
+}

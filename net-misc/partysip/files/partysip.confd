@@ -1,0 +1,6 @@
+#
+# 
+#
+#
+
+PARTYSIP_OPTS="-l /var/log/partysip.log"
