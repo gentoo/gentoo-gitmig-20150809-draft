@@ -1,7 +1,14 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.6 2002/10/19 23:07:28 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.7 2002/11/18 06:07:37 jhhudso Exp $
 
+*djbdns-1.05-r5 (17 Nov 2002)
+
+  17 Nov 2002; Jared Hudson <jhhudso@gentoo.org> files/ipv6-fix.diff,
+  files/djbdns-1.05-fwd-ipv6.diff : Fixed Bug #8236 & 8236. Added static
+  keyword to ebuild and changed ipv6 patch to work with the forwarding patch
+  added in -r4.
+	
   20 Oct 2002; Maik Schreiber <blizzy@gentoo.org> djbdns-1.05-r3.ebuild,
   djbdns-1.05-r4.ebuild: Cleaned up ebuilds. Also removed removal of
   djbdns users, since this can break your djbdns setup when updating.
