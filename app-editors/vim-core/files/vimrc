@@ -1,6 +1,7 @@
 " Default configuration file for Vim
 " Written by Aron Griffis <agriffis@gentoo.org>
 " Modified by Ryan Phillips <rphillips@gentoo.org>
+" Modified some more by Ciaran McCreesh <ciaranm@gentoo.org>
 " Added Redhat's vimrc info by Seemant Kulleen <seemant@gentoo.org>
 
 " The following are some sensible defaults for Vim for most users.
@@ -19,6 +20,8 @@ set ruler               " Show the cursor position all the time
 " according to conversation on vim devel ML:
 " http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=212696
 " http://article.gmane.org/gmane.editors.vim.devel/4410
+" If you're not paranoid, feel free to delete this line or override it in
+" your ~/.vimrc -- there aren't any known security issues with this any more.
 set nomodeline
 
 if v:lang =~ "^ko"
@@ -59,6 +62,14 @@ if &term=="xterm"
   set ttymouse=xterm2	" only works for >=xfree86-3.3.3, should be okay
 endif
 
+" Enable plugin-provided filetype settings
+filetype plugin on
+
+" Uncomment the next line (or copy to your ~/.vimrc) for plugin-provided
+" indent settings. Some people don't like these, so we won't turn them on by 
+" default.
+" filetype indent on
+
 if has("autocmd")
 
 augroup gentoo
@@ -67,6 +78,8 @@ augroup gentoo
   " Gentoo-specific settings for ebuilds.  These are the federally-mandated
   " required tab settings.  See the following for more information:
   " http://www.gentoo.org/doc/en/xml/gentoo-howto.xml
+  " Better yet, emerge app-vim/gentoo-syntax and you'll get full syntax,
+  " filetype and indent settings for all things Gentoo.
   au BufRead,BufNewFile *.e{build,class} let is_bash=1|setfiletype sh
   au BufRead,BufNewFile *.e{build,class} set ts=4 sw=4 noexpandtab
 
