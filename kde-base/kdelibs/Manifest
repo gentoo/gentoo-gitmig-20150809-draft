@@ -7,7 +7,7 @@ MD5 e33f7fe2f62e86b37c668281a73229bc ChangeLog 32044
 MD5 79b789f02dced6acb0daf91de04bd55c kdelibs-3.3.2-r2.ebuild 3153
 MD5 fcbbc60f31a8a5ec853b401b5a058e9d kdelibs-3.4.0_beta2.ebuild 2701
 MD5 3110a84a8fab7b6ed8b7e2d6d8458eae kdelibs-3.4.0_rc1-r1.ebuild 2637
-MD5 1fbd36175f355abd8b9e1d27d7d189b4 files/digest-kdelibs-3.4.0_rc1-r1 72
+MD5 29bcfee4f3cecd8529fa92ce4caba53c files/digest-kdelibs-3.4.0_rc1-r1 72
 MD5 119cc73926dceafff9107b5f916277ee files/post-3.2.3-kdelibs-htmlframes.patch 15435
 MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.2-kdelibs-htmlframes2.patch 989
 MD5 0046c691fa833b2ff8d7eac15312a68b files/post-3.2.3-kdelibs-dcopserver.patch 4751
