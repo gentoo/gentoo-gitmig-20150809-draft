@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/artresources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/ChangeLog,v 1.2 2004/10/09 21:58:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/ChangeLog,v 1.3 2004/10/25 03:23:35 weeve Exp $
+
+  24 Oct 2004; Jason Wever <weeve@gentoo.org> artresources-0.1.2.ebuild:
+  Added ~sparc keyword wrt bug #68729.
 
 *artresources-0.1.2 (10 Oct 2004)
 

@@ -1,5 +1,5 @@
-MD5 e30e84427168e8b399c073e1c106a194 ChangeLog 420
-MD5 6e525861285168d3fa8d6ade9a8d6059 artresources-0.1.2.ebuild 849
+MD5 b3fb9bf7869a214cb360484a9448ba7c ChangeLog 533
+MD5 58594e1c53583df5cbf56ee7c0875de9 artresources-0.1.2.ebuild 856
 MD5 9549997fe7562b1be89b5e4f4e1846da metadata.xml 343
 MD5 892e005cc3738915896d6e46fa79472b files/config-artresources.sh 560
 MD5 74c55a275f831cb2ad466f69d0bc6c1a files/digest-artresources-0.1.2 72
