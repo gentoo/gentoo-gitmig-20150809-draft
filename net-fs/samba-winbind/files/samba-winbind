@@ -1,0 +1,38 @@
+#!/bin/sh
+#RCUPDATE:3 4:76:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=samba
+opts="start stop"
+
+EXE0=/usr/sbin/nmbd
+EXE1=/usr/sbin/smbd
+EXE2=/usr/sbin/winbindd
+
+start() {
+	ebegin "Starting $SERVICE"
+	start-stop-daemon --start --quiet --exec $EXE0 
+	result=$?
+	start-stop-daemon --start --quiet --exec $EXE1 
+	result=$(( $result + $? ))
+        start-stop-daemon --start --quiet --exec $EXE2
+        result=$(( $result + $? ))
+	eend $result
+}
+
+stop() {
+	ebegin "Starting $SERVICE"
+	start-stop-daemon --stop --quiet --exec $EXE0 
+	result=$?
+	start-stop-daemon --stop --quiet --exec $EXE1 
+	result=$(( $result + $? ))
+        start-stop-daemon --stop --quiet --exec $EXE2
+        result=$(( $result + $? ))
+	eend $result
+}
+
+doservice ${@}
+
+
+

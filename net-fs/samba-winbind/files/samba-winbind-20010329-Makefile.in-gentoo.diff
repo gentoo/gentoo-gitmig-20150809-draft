@@ -1,0 +1,11 @@
+--- Makefile.in~	Mon Feb 26 13:44:20 2001
++++ Makefile.in	Thu Mar 29 16:27:03 2001
+@@ -768,7 +768,7 @@
+ 		$(WINBINDD_OBJ1) $(NOPROTO_OBJ) \
+ 		$(RPC_CLIENT_OBJ) $(RPC_PARSE_OBJ) $(STUB_UID_OBJ) \
+ 		$(LIBNMB_OBJ) $(PARAM_OBJ) $(UBIQX_OBJ) $(LIB_OBJ) \
+-		$(NSSWINS_OBJ) $(SIDDB_OBJ) $(LIBSMB_OBJ)
++		$(NSSWINS_OBJ) $(SIDDB_OBJ) $(LIBSMB_OBJ) $(LIBMSRPC_MISC_OBJ)
+ 
+ WBINFO_OBJ = nsswitch/wbinfo.o nsswitch/wb_common.o
+ 

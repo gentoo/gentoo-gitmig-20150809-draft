@@ -1,0 +1,42 @@
+#!/bin/sh
+#RCUPDATE:3 4:76:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=svc-samba-winbind
+opts="start stop"
+
+start() {
+	ebegin "Starting $SERVICE"
+	ln -sf ../services/smbd ${SVCDIR}/control/smbd
+	ln -sf ../services/nmbd ${SVCDIR}/control/nmbd
+        ln -sf ../services/winbind ${SVCDIR}/control/winbind
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $SERVICE"
+        if [ -e ${SVCDIR}/control/smbd ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/smbd/log
+		/usr/bin/svc -dx ${SVCDIR}/control/smbd
+		rm ${SVCDIR}/control/smbd
+	fi
+	if [ -e ${SVCDIR}/control/nmbd ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/nmbd/log
+		/usr/bin/svc -dx ${SVCDIR}/control/nmbd
+		rm ${SVCDIR}/control/nmbd
+	fi
+        if [ -e ${SVCDIR}/control/winbind ]
+        then
+                /usr/bin/svc -dx ${SVCDIR}/control/winbind/log
+                /usr/bin/svc -dx ${SVCDIR}/control/winbind
+                rm ${SVCDIR}/control/winbind
+	eend $?
+}
+
+doservice ${@}
+
+
+

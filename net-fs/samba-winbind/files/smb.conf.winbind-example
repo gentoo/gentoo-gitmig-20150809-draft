@@ -1,0 +1,15 @@
+[global]
+	winbind separator = +
+	winbind cache time = 10
+	template shell = /bin/bash
+	template homedir = /home/%D/%U
+	winbind uid = 10000-20000
+        winbind gid = 10000-20000
+        workgroup = NTDOM
+        securtity = domain
+        password server = *
+[data]
+	path = /data
+	writeable = no
+	write list = root NTDOM+administrator
+        valid users = root NTDOM+administrator @NTDOM+User
