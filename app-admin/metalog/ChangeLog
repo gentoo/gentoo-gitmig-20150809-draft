@@ -1,7 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.16 2003/09/30 17:44:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.17 2003/10/17 02:47:53 pebenito Exp $
 
+  16 Oct 2003; Chris PeBenito <pebenito@gentoo.org> files/metalog.conf:
+  Change crond logging from program to facility to close out old bug #11009.
 
 *metalog-0.7-r1 (17 Sep 2003)
 
