@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r1.ebuild,v 1.3 2003/04/13 10:52:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r1.ebuild,v 1.4 2003/04/15 11:26:10 hannes Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="3"
 LICENSE="QPL-1.0"
 
 # WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
-KEYWORDS="~x86 ~ppc ~sparc" # alpha removed temporarily as I wasn't sure about the special
+KEYWORDS="x86 ~ppc ~sparc" # alpha removed temporarily as I wasn't sure about the special
 			    # alpha stuff in src_unpack; alpha ppl please readd. --danarmak
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
