@@ -197,11 +197,11 @@ src_unpack() {
 		mv -f ${PATCH_DIR}/5901* ${PATCH_DIR}/excluded
 	fi
 
-        # Bulk patching - based on patch name
-        # Will create excluded stuff once it's needed
-        EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
+	# Bulk patching - based on patch name
+	# Will create excluded stuff once it's needed
+	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
 
-        unset EPATCH_EXCLUDE
+	unset EPATCH_EXCLUDE
 
 	# Set up Synaptics Makefile
 	cd ${WORKDIR}

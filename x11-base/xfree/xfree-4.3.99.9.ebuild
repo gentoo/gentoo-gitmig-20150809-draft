@@ -144,7 +144,7 @@ src_unpack() {
 
 	# cyfred::
 	# There is an invalid lvalue assignment in xf86DDC.c
-    # This patch updates the file, the diff comes from CVS
+	# This patch updates the file, the diff comes from CVS
 	cd ${WORKDIR}
 	epatch ${FILES_DIR}/cvs-update.patch
 

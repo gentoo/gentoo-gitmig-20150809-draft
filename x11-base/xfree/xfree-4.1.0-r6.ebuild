@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.13 2003/09/07 07:27:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.14 2003/09/07 07:32:01 msterret Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -14,7 +14,7 @@ SRC_URI="$SRC_PATH0/X${MY_V}src-1.tgz
 	 $SRC_PATH1/X${MY_V}src-1.tgz
 	 $SRC_PATH1/X${MY_V}src-2.tgz
 	 $SRC_PATH1/X${MY_V}src-3.tgz
-       	 http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz"
+	http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz"
 
 HOMEPAGE="http://www.xfree.org"
 LICENSE="X11"
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc"
 
 DEPEND=">=sys-libs/ncurses-5.1
-        >=sys-libs/zlib-1.1.3-r2
+	>=sys-libs/zlib-1.1.3-r2
 	sys-devel/flex
 	dev-lang/perl"
 
