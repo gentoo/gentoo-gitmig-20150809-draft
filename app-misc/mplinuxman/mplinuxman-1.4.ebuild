@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.2 2004/03/24 17:43:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.3 2004/06/02 02:16:39 agriffis Exp $
 
 DESCRIPTION="A gtk2 frontend and drivers for mpman f50/55/60 mp3 players."
 HOMEPAGE="http://mplinuxman.sourceforge.net"
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A} && cd ${S} || die "unpack failed"
 	sed -i -e "s,^CFLAGS = ,CFLAGS = ${CFLAGS} ," makefile
 	sed -i -e "s,export LOCALE_DIR=/usr/local/share/locale,export LOCALE_DIR=${D}/usr/share/locale," makefile
-	if [ ! `use nls` ] ; then
+	if ! use nls ; then
 		sed -i -e "s,-D NLS=1,," makefile
 	fi
 }
@@ -31,7 +31,7 @@ src_compile() {
 
 src_install() {
 	dobin mplinuxman || die "dobin failed"
-	if [ `use nls` ] ; then
+	if use nls ; then
 		dodir /usr/share/locale/es/LC_MESSAGES
 		dodir /usr/share/locale/fr/LC_MESSAGES
 		dodir /usr/share/locale/ja/LC_MESSAGES

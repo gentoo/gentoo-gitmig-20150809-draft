@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.4-r1.ebuild,v 1.4 2004/04/27 19:34:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.4-r1.ebuild,v 1.5 2004/06/02 02:11:13 agriffis Exp $
 
 inherit eutils
 
@@ -63,7 +63,7 @@ src_compile() {
 	econf ${myconf} || die
 	emake || die
 
-	if [ `use doc` ]; then
+	if use doc; then
 		cd ${S}/docs/lcdproc-user
 		docbook2html lcdproc-user.docbook
 	fi
@@ -77,7 +77,7 @@ src_install() {
 
 	dodoc README ChangeLog COPYING INSTALL
 
-	if [ `use doc` ]; then
+	if use doc; then
 		insinto /usr/share/doc/${PF}/lcdproc-user
 		doins docs/lcdproc-user/*.html
 	fi

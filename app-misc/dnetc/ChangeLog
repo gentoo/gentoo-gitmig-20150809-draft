@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.24 2004/05/25 09:44:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.25 2004/06/02 02:10:25 agriffis Exp $
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org> dnetc-2.9001.478.ebuild,
+  dnetc-2.9002.479.ebuild, dnetc-2.9003.481-r1.ebuild,
+  dnetc-2.9005.483.ebuild, dnetc-2.9008.490.ebuild:
+  Fix use invocation
 
   25 May 2004; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9008.490.ebuild:
   Added PPC client.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.4.ebuild,v 1.1 2004/03/31 13:02:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.4.ebuild,v 1.2 2004/06/02 02:11:13 agriffis Exp $
 
 SRC_URI="mirror://sourceforge/lcdproc/${P}.tar.bz2"
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
@@ -60,7 +60,7 @@ src_compile() {
 	econf ${myconf} || die
 	emake || die
 
-	if [ `use doc` ]; then
+	if use doc; then
 		cd ${S}/docs/lcdproc-user
 		docbook2html lcdproc-user.docbook
 	fi
@@ -74,7 +74,7 @@ src_install() {
 
 	dodoc README ChangeLog COPYING INSTALL
 
-	if [ `use doc` ]; then
+	if use doc; then
 		insinto /usr/share/doc/${PF}/lcdproc-user
 		doins docs/lcdproc-user/*.html
 	fi

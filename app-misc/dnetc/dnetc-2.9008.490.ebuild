@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9008.490.ebuild,v 1.2 2004/05/25 09:44:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9008.490.ebuild,v 1.3 2004/06/02 02:10:25 agriffis Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -16,11 +16,11 @@ KEYWORDS="~x86 ~ppc ~sparc -alpha"
 IUSE=""
 DEPEND=""
 RDEPEND="net-dns/bind-tools"
-if [ `use x86` ]; then
+if use x86; then
 	S="${WORKDIR}/dnetc${MIN_PV}-linux-x86-elf-uclibc"
-elif [ `use sparc` ]; then
+elif use sparc; then
 	S="${WORKDIR}/dnetc${MIN_PV}-linux-sparc"
-elif [ `use ppc` ]; then
+elif use ppc; then
 	S="${WORKDIR}/dnetc${MIN_PV}-linux-ppc"
 fi
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.2 2003/09/27 08:14:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.3 2004/06/02 02:07:22 agriffis Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_unpack() {
 src_compile() {
 
 	emake CFLAGS="${CFLAGS}" LDFLAGS="-lncurses" || die
-	if [ -n "`use cjk`" ]; then
+	if use cjk; then
 		nkf -e sl.1 > sl.ja.1
 	fi
 }
@@ -49,7 +49,7 @@ src_install() {
 	dobin sl
 	newman sl.en.1 sl.1
 	dodoc README* sl.txt
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		insinto /usr/share/man/ja/man1
 		newins sl.ja.1 sl.1
 	fi

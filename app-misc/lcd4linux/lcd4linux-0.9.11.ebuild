@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.11.ebuild,v 1.3 2004/04/25 22:20:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.11.ebuild,v 1.4 2004/06/02 02:08:45 agriffis Exp $
 
 DESCRIPTION="system and ISDN information is shown on an external display or in a X11 window."
 SRC_URI="mirror://sourceforge/lcd4linux/${P}.tar.gz"
@@ -42,7 +42,7 @@ src_install() {
 	dodoc README* NEWS COPYING INSTALL TODO CREDITS FAQ
 	dodoc lcd4linux.conf.sample lcd4linux.kdelnk lcd4linux.xpm
 
-	if [ `use kde` ] ; then
+	if use kde ; then
 		insinto /etc/lcd4linux
 		insopts -o root -g root -m 0600
 		doins lcd4kde.conf

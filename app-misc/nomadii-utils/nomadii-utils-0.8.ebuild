@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.10 2004/03/14 10:59:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.11 2004/06/02 02:17:26 agriffis Exp $
 
 IUSE="readline"
 
@@ -24,7 +24,7 @@ src_compile() {
 	sed -i -e "s:^OPTIMIZER= -O2$:OPTIMIZER= ${CFLAGS}:" \
 		Makefile
 
-	if [ -z "`use readline`" ] ; then
+	if ! use readline ; then
 		sed -i -e "s:^USE_READLINE=1$:USE_READLINE=0:" \
 			Makefile
 	fi

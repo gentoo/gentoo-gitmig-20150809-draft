@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.9 2004/05/30 19:40:31 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.10 2004/06/02 02:13:35 agriffis Exp $
 
 inherit eutils
 
@@ -61,14 +61,14 @@ src_compile() {
 	use noexperimental && myconf="${myconf} --disable-experimental"
 	use xml2           && myconf="${myconf} --enable-xml"
 
-	if [ `use gnome` ]
+	if use gnome
 	then
 		myconf="${myconf} --enable-gconf"
 	else
 		myconf="${myconf} --disable-gnome"
 	fi
 
-	if [ ! `use gnome` ] && [ ! `use xml2` ]
+	if ! use gnome && ! use xml2
 	then
 		myconf="${myconf} --enable-gconf"
 	fi

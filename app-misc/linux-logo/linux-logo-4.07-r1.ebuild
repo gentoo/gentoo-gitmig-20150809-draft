@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07-r1.ebuild,v 1.5 2004/05/07 19:57:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07-r1.ebuild,v 1.6 2004/06/02 02:12:53 agriffis Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo-logo.patch
 
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		sed -i 's:cd po && $(MAKE)::' Makefile
 	fi

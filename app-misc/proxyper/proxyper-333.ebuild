@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/proxyper/proxyper-333.ebuild,v 1.5 2004/03/14 10:59:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/proxyper/proxyper-333.ebuild,v 1.6 2004/06/02 02:15:23 agriffis Exp $
 
 DESCRIPTION="distributed.net personal proxy"
 HOMEPAGE="http://www.distributed.net"
@@ -12,13 +12,13 @@ KEYWORDS="x86 -ppc -sparc ~alpha"
 IUSE=""
 DEPEND=""
 RDEPEND="net-misc/host"
-if [ `use x86` ]; then
+if use x86; then
 	S="${WORKDIR}/${PN}${PV}-linux-x86"
-elif [ `use ppc` ]; then
+elif use ppc; then
 	S="${WORKDIR}/${PN}${PV}-linux-ppc"
-elif [ `use sparc` ]; then
+elif use sparc; then
 	S="${WORKDIR}/${PN}${PV}-linux-sparc"
-elif [ `use alpha` ]; then
+elif use alpha; then
 	S="${WORKDIR}/${PN}${PV}-linux-alpha"
 fi
 
