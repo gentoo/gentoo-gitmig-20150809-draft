@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/mono
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.10 2003/01/22 23:30:01 lostlogic Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.11 2003/02/12 05:57:08 vapier Exp $
 
 *mono-0.19 (22 Jan 2003)
 

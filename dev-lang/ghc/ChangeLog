@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/ghc
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.7 2003/01/18 04:02:54 satai Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.8 2003/02/12 05:56:08 vapier Exp $
 
   17 Jan 2003; Matthew Turk <satai@gentoo.org> :
   Looks like it didn't take...  Trying again!

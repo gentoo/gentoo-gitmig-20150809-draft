@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/ocaml
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.8 2003/01/28 13:47:05 nall Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.9 2003/02/12 05:57:26 vapier Exp $
 
 *ocaml-3.06 (28 Jan 2003)
 
