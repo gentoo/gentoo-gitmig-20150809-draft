@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/enca
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.1 2003/11/14 10:13:41 sergey Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.2 2004/06/02 08:00:19 sergey Exp $
+
+*enca-1.5 (02 Jun 2004)
+
+  02 Jun 2004; Sergey Kuleshov <svyatogor@gentoo.org> enca-1.5.ebuild:
+  Version bump. Closing bug #52583.
 
 *enca-1.0 (14 Nov 2003)
 
