@@ -1,4 +1,8 @@
 MD5 6154ab6c1f3771516819532c42ce5f76 mysql++-1.7.9.ebuild 1413
+MD5 82b424f1c90188463ab6e5fac14c9db7 mysql++-1.7.9-r2.ebuild 3528
+MD5 2c176d15a0dbcebf5f58b3e33edf1010 mysql++-1.7.9-r1.ebuild 2721
+MD5 88c76a2c5c0e30c7215a30bd9d42e74c ChangeLog 2393
+MD5 20b413d3e151c8c4774609dce9d7a59a mysql++-1.7.9-r3.ebuild 3638
 MD5 29dd283bdc19e7542a9f50501d4eda70 files/mysql++-1.7.9_example.patch 1203
 MD5 027947f703cc541c6b056955cf5606be files/mysql++-1.7.9-gcc_throw.patch 7310
 MD5 54b8d3ba432ce4cad6c23fa32ac17042 files/mysql++-1.7.9-mysql4-gcc295.patch 421
@@ -8,7 +12,3 @@ MD5 5ac32002d3e432c050e274928b7a1d78 files/mysql++-1.7.9-missing.patch 2922
 MD5 083796fbc1e79084808389a6e8237dc1 files/digest-mysql++-1.7.9-r1 200
 MD5 13b4cad28b5dfaa0f580276962effada files/digest-mysql++-1.7.9-r2 397
 MD5 13b4cad28b5dfaa0f580276962effada files/digest-mysql++-1.7.9-r3 397
-MD5 776fafe694c69df988f77b5e66645075 mysql++-1.7.9-r2.ebuild 3532
-MD5 f6147a202d91b801a49dd426127c00fc mysql++-1.7.9-r1.ebuild 2726
-MD5 88c76a2c5c0e30c7215a30bd9d42e74c ChangeLog 2393
-MD5 889758c4194ef1455c4878de95c413dc mysql++-1.7.9-r3.ebuild 3642
