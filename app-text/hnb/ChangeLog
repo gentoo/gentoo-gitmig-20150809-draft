@@ -1,0 +1,9 @@
+# ChangeLog for app-text/wv
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.1 2003/02/09 23:21:10 mholzer Exp $
+
+*hnb-1.9.8.ebuild (09 Feb 2003)
+
+  09 Feb 2003; Martin Holzer <mholzer@gentoo.org> hnb-1.9.8.ebuild,
+  files/digest-hnb-1.9.8 ChangeLog :
+  Initial release submitted by bsaslinux@globo.com in #14427.
