@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.1.94.ebuild,v 1.6 2004/06/25 22:21:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.1.94.ebuild,v 1.7 2004/07/03 15:07:38 kloeri Exp $
 
 DESCRIPTION="general purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 amd64 ~sparc ~mips ~alpha"
+KEYWORDS="x86 amd64 ~sparc ~mips alpha"
 IUSE="doc nls"
 
 DEPEND="dev-libs/libgpg-error"
