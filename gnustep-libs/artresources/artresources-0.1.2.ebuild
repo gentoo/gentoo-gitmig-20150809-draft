@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.5 2004/11/05 22:13:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.6 2004/11/12 04:07:07 fafhrd Exp $
 
 inherit gnustep
 
@@ -18,7 +18,9 @@ PROVIDES="virtual/gnustep-back"
 
 IUSE=""
 DEPEND="${GNUSTEP_GUI_DEPEND}
-	=media-libs/libart_lgpl-2.3.16"
+	>=media-libs/libart_lgpl-2.3.16"
+
+egnustep_install_domain "System"
 
 src_compile() {
 	echo "nothing to compile"
@@ -26,8 +28,8 @@ src_compile() {
 
 src_install() {
 	egnustep_env
-	dodir ${GNUSTEP_SYSTEM_ROOT}/Library/Fonts
-	insinto ${GNUSTEP_SYSTEM_ROOT}/Library/Fonts
-	cp -a *.nfont ${D}${GNUSTEP_SYSTEM_ROOT}/Library/Fonts
+	dodir $(egnustep_system_root)/Library/Fonts
+	insinto $(egnustep_system_root)/Library/Fonts
+	cp -a *.nfont ${D}$(egnustep_system_root)/Library/Fonts
 }
 
