@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 2004 The Gentoo Foundation, Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.4 2004/07/13 16:32:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.5 2004/07/26 20:42:02 pvdabeel Exp $
 
 # Make sure sudo passwd is asked for
 
@@ -29,8 +29,10 @@ RELEASE="10"
 
 case "`uname -r`" in
         6*)
+		# We don't really support this
 		NAME="Jaguar"
-		RELEASE="10.2"
+		# We reuse the Panther profile
+		RELEASE="10.3"
 		;;
 	7*)
 		NAME="Panther"
@@ -56,8 +58,11 @@ function missing_devtools {
 gcc -v 2> /dev/null || missing_devtools
 
 echo
+
+# As of 20040726 the part below is no longer needed, we still do it 
+# for backwards compatiblity with older installers. 
  
-for package in `cat /usr/portage/profiles/default-macos-${RELEASE}/packages.build`; do
+for package in `cat /usr/portage/profiles/default-macos-${RELEASE}/package.provided`; do
 	ebegin " >>> Injecting ${package} " && ewend $?
 	sudo emerge inject ${package} > /dev/null 2> /dev/null 
 done
