@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.226-r1.ebuild,v 1.1 2005/02/12 20:40:35 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.226-r1.ebuild,v 1.2 2005/02/13 08:54:11 centic Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ RDEPEND="net-firewall/iptables
 	)"
 
 pkg_setup() {
-	# Bug 81600 fail if iproute2 is built without minimal
+	# Bug 81600 fail if iproute2 is built with minimal
 	if built_with_use sys-apps/iproute2 minimal; then
 		eerror "Firehol requires iproute2 to be emerged without"
 		eerror "the USE-Flag \"minimal\"."
