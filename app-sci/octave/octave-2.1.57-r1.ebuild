@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.8 2004/10/01 00:11:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.9 2004/10/04 14:53:41 phosphan Exp $
 
 inherit flag-o-matic
 
@@ -65,7 +65,7 @@ src_compile() {
 		--target=${CHOST} \
 		--enable-rpath \
 		--enable-lite-kernel \
-		LDFLAGS=${LDFLAGS} || die "configure failed"
+		LDFLAGS="${LDFLAGS}" || die "configure failed"
 
 	emake || die "emake failed"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/octave
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.35 2004/10/01 00:11:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.36 2004/10/04 14:53:41 phosphan Exp $
+
+  04 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> octave-2.1.57-r1.ebuild:
+  Adding proper quotes to LDFLAGS, fixing bug #66111
 
   01 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> octave-2.1.57-r1.ebuild:
   Switched on blas use-flag as all arches have at least blas-atlas in testing
