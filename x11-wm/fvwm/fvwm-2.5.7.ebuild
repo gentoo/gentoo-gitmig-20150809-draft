@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.1 2003/07/30 14:18:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.2 2003/07/30 16:02:32 taviso Exp $
 
 inherit gnuconfig
 
@@ -19,8 +19,10 @@ RDEPEND="oss? ( media-sound/rplay )
 		>=dev-libs/libstroke-0.4
 		gtk? ( =x11-libs/gtk+-1.2* )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
-		ncurses? ( >=sys-libs/readline-4.1 )"
-DEPEND="${RDEPEND} sys-devel/automake"
+		ncurses? ( >=sys-libs/readline-4.1 )
+		media-libs/fontconfig"
+DEPEND="${RDEPEND} sys-devel/automake
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -43,12 +45,19 @@ src_compile() {
 	sed -i 's#\x27s,xCFLAGSx,$(CFLAGS),\x27#\x27s!xCFLAGSx!$(CFLAGS)!\x27#' \
 		${S}/utils/Makefile.am
 
-	automake
-
+	einfo "Fixing Xft detection..."
+	cp ${FILESDIR}/acinclude.m4 ${S}/acinclude.m4
+ 	aclocal
+	autoheader
+	automake --add-missing
+	autoreconf
+	
 	econf \
 		--enable-multibyte \
 		--libexecdir=/usr/lib \
-		${myconf} || die
+		--enable-xft \
+		${myconf} \
+		PKG_CONFIG=${ROOT}/usr/bin/pkg-config || die
 
 	emake || die
 }
