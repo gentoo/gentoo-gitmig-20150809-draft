@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.5 2004/04/13 18:54:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.6 2004/06/03 23:06:01 mr_bones_ Exp $
 
 inherit eutils gcc games
 
@@ -17,7 +17,7 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
-IUSE="svga X sdl aalib opengl noqmax rogue xatrix"
+IUSE="arts svga X sdl aalib opengl noqmax rogue xatrix"
 
 # default to X11 if svga/X/sdl/aalib are not in USE
 RDEPEND="virtual/glibc
