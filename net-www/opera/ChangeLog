@@ -1,6 +1,11 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.18 2003/03/25 04:01:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.19 2003/04/15 17:23:07 agenkin Exp $
+
+*opera-7.10_beta1 (15 Apr 2003)
+
+  15 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
+  New version, thanks to Elsener Adrian <els@gmx.li>.
 
 *opera-6.12 (24 Mar 2003)
 
