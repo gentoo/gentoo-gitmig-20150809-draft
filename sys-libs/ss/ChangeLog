@@ -1,0 +1,8 @@
+# ChangeLog for sys-libs/ss
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ChangeLog,v 1.1 2005/03/24 03:55:50 vapier Exp $
+
+*ss-1.37 (23 Mar 2005)
+
+  23 Mar 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me, forked from e2fsprogs.
