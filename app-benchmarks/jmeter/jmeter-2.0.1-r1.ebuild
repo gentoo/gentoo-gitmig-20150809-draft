@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r1.ebuild,v 1.7 2005/03/29 17:16:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r1.ebuild,v 1.8 2005/04/04 15:02:55 axxo Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/jmeter/source/jakarta-${P}_src.tgz"
 DEPEND=">=virtual/jdk-1.3
 	dev-java/ant
 	dev-java/commons-logging
-	>=dev-java/commons-httpclient-2.0
+	=dev-java/commons-httpclient-2*
 	dev-java/commons-collections
 	=dev-java/jakarta-oro-2.0*
 	~dev-java/jdom-1.0_beta9

@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.19 2005/03/29 17:16:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.20 2005/04/04 15:02:55 axxo Exp $
+
+  04 Apr 2005; Thomas Matthijs <axxo@gentoo.org> jmeter-2.0.1-r1.ebuild:
+  change dep to reflect commons-httpclient slotting
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> jmeter-2.0.1-r1.ebuild:
   moved from dev-java/oro to dev-java/jakarta-oro dependency. see #71337.
