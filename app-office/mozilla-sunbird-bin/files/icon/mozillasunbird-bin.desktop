@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Mozilla Sunbird (bin)
+Comment=Mozilla Sunbird Calendar
+Exec=/usr/bin/sunbird-bin
+Icon=mozillasunbird-bin-icon.png
+Terminal=false
+Type=Application
+Categories=Application;Network;

@@ -1,0 +1,11 @@
+# ChangeLog for app-office/mozilla-sunbird-bin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.1 2004/08/20 03:54:45 agriffis Exp $
+
+*mozilla-sunbird-bin-0.2.20040812 (19 Aug 2004)
+
+  19 Aug 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +mozilla-sunbird-bin-0.2.20040812.ebuild:
+  First ebuild for mozilla-sunbird calendar #54988. Note this is pmasked for now
+  since it's still got some bugs to work out (in the program, not the ebuild)
+
