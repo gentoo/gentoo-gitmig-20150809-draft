@@ -1,1 +1,1 @@
-export PATH=/usr/sbin:/usr/libexec:${PATH}
+export PATH=/sbin:/usr/sbin:/usr/libexec:${PATH}
