@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <bcowan@gentoo.org> (03 Oct 2002)
+# masking due to major compile problems
+=net-print/xpp-1.1
+
 # <aliz@gentoo.org> (3 Oct 2002)
 # Masked for testing
 =app-sci/magic-7.1-r1
