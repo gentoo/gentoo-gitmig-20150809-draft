@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.7 2004/09/25 17:04:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.8 2004/09/27 07:56:24 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -39,7 +39,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-ftp.patch
 	epatch ${FILESDIR}/${P}-largefile.patch
 
-	use unicode && epatch ${FILESDIR}/${P}-utf8.patch.bz2
+	if use unicode && use slang; then
+		epatch ${FILESDIR}/${P}-utf8.patch.bz2
+	fi
 }
 
 src_compile() {
