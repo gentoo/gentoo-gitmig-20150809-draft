@@ -38,7 +38,7 @@
 
 #define BuildFonts             YES
 /* #define BuildCyrillicFonts     YES */
-
+#define DefaultCursorTheme	whiteglass
 #define BuildXF86MiscExt       YES
 #define BuildXInputExt         YES
 #define BuildXKB               YES
