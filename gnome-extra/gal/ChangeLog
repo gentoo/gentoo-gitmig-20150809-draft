@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.32 2003/05/07 11:12:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.33 2003/05/16 01:02:46 pylon Exp $
+
+  16 May 2003; Lars Weiler <pylon@gentoo.org> gal-0.24.ebuild:
+  Set ppc in KEYWORDS
 
 *gal-1.99.4 (07 May 2003)
 
