@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.7 2004/01/26 00:02:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.8 2004/01/30 05:23:03 drobbins Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -22,7 +22,8 @@ DEPEND="virtual/x11
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus
-	qt? ( >=x11-libs/qt-3 ) !qt? ( =x11-libs/xforms-1* )"
+	qt? ( >=x11-libs/qt-3 ) !qt? ( =x11-libs/xforms-1* )
+	"
 
 RDEPEND="${DEPEND}
 	virtual/ghostscript
@@ -37,6 +38,8 @@ RDEPEND="${DEPEND}
 	app-text/sgmltools-lite
 	app-text/noweb
 	dev-tex/chktex"
+
+DEPEND="$DEPEND >=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}

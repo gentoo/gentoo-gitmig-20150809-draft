@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.4.ebuild,v 1.3 2004/01/08 00:18:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.4.ebuild,v 1.4 2004/01/30 05:24:38 drobbins Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils
@@ -38,7 +38,8 @@ RDEPEND=">=x11-libs/gtk+-2
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.27.2
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 
