@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/build-rel.sh,v 1.4 2002/08/26 15:42:17 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/build-rel.sh,v 1.5 2002/09/02 23:04:30 murphy Exp $
 #
 # Where we get the sauce
-SOURCE=../default-x86-2.0
+: ${SOURCE:=../default-x86-2.0}
 
 # New packages file
 FILES="packages.build use.defaults packages make.defaults virtuals"
