@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.3 2004/06/18 18:51:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.4 2004/06/23 01:48:41 mr_bones_ Exp $
 
-inherit games flag-o-matic
-
-IUSE="opengl"
-
-DESCRIPTION="An SDL port of xkobo, a addictive space shoot-em-up"
-HOMEPAGE="http://www.olofson.net/kobodl/"
-KEYWORDS="~x86 ~amd64 ~ppc"
-LICENSE="GPL-2"
+inherit flag-o-matic games
 
 MY_P="KoboDeluxe-${PV/_/}"
-S=${WORKDIR}/${MY_P}
+DESCRIPTION="An SDL port of xkobo, a addictive space shoot-em-up"
+HOMEPAGE="http://www.olofson.net/kobodl/"
 SRC_URI="http://www.olofson.net/kobodl/download/${MY_P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT=0
+KEYWORDS="~x86 ~amd64 ~ppc"
+IUSE="opengl"
 
 RDEPEND="virtual/glibc
 	media-libs/libsdl
@@ -22,7 +21,7 @@ RDEPEND="virtual/glibc
 DEPEND="$RDEPEND
 	>=sys-apps/sed-4"
 
-SLOT=0
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	filter-flags -fforce-addr
@@ -39,28 +38,25 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf `use_enable opengl` || die "./configure failed"
-	emake || die
+	egamesconf $(use_enable opengl) || die
+	emake || die "emake failed"
 }
 
 src_install () {
-	make install DESTDIR=${D}
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc ChangeLog README* TODO
 
-	dodoc ChangeLog README* TODO || die "dodoc failed"
-
-	insinto /var/games/kobodeluxe
+	insinto "${GAMES_STATEDIR}/${PN}"
 	doins 501 || die "doins failed"
 	prepgamesdirs
-	fperms 2775 /var/games/kobodeluxe
+	fperms 2775 "${GAMES_STATEDIR}/${PN}"
 }
 
 pkg_postinst() {
-
+	games_pkg_postinst
 	einfo "The location of the highscore files has changed.  If this isn't the"
 	einfo "first time you've installed ${PN} and you'd like to keep the high"
 	einfo "scores from a previous version of ${PN}, please move all the files"
-	einfo "in /var/lib/games/kobodeluxe/ to /var/games/kobodeluxe/. If you"
+	einfo "in /var/lib/games/kobodeluxe/ to ${GAMES_STATEDIR}/${PN}. If you"
 	einfo "have a /var/lib/games/kobodeluxe/ directory it may be removed."
-
-	games_pkg_postinst
 }
