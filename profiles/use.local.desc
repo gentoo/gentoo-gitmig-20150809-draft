@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.874 2005/01/17 16:29:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.875 2005/01/17 17:05:12 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -173,6 +173,7 @@ dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Po
 dev-java/velocity:j2ee - Add j2ee support
 dev-java/xerces:examples - Install example source code
 dev-java/xerces:source - Zip the sources and install them
+dev-java/xml-commons-resolver:source - Zip the sources and install them
 dev-java/xml-xmlbeans:source - Zip the sources and install them
 dev-lang/R:blas - Use the blas library. (virtual/blas)
 dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
