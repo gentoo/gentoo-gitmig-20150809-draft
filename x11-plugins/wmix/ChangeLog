@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmix
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/ChangeLog,v 1.1 2002/09/16 16:20:23 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/ChangeLog,v 1.2 2003/02/12 09:41:56 vapier Exp $
 
 *wmix-3.0-r1 (1 Feb 2002)
 

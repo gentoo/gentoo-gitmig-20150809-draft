@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmnetload
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.6 2002/12/19 23:37:06 mholzer Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.7 2003/02/12 09:42:55 vapier Exp $
 
 *wmnetload-1.2 (17 Dec 2002)
 

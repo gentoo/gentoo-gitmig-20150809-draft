@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmgtemp
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.3 2002/12/13 11:00:58 blizzy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.4 2003/02/12 09:41:02 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
