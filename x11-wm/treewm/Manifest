@@ -1,6 +1,6 @@
 MD5 f03c6de66eeb4540340d4fd2b9f713d8 treewm-0.4.2.ebuild 998
 MD5 868e5c25684412cb5b5641cb71f4584b treewm-0.4.3.ebuild 952
-MD5 5c76b527da2214344a4792010e496cc2 ChangeLog 934
+MD5 b2168506ac138c5496b701ee851146bf ChangeLog 1028
 MD5 a53ed9b76c9a4a50872d58aeee4d66d0 metadata.xml 426
 MD5 8d65e0d86293c0b3ef533e6fe8fdc221 files/treewm-0.4.2-gcc3-gentoo.patch 4621
 MD5 5b46486d7983703c28f1cacac327e8f2 files/digest-treewm-0.4.2 64
