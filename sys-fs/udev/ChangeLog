@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.34 2004/02/29 11:14:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.35 2004/03/04 19:13:03 azarah Exp $
+
+*udev-021 (04 Mar 2004)
+
+  04 Mar 2004; Martin Schlemmer <azarah@gentoo.org> udev-021.ebuild:
+  Update version.  Add udevstart and manpage to be installed.
 
   29 Feb 2004; Martin Schlemmer <azarah@gentoo.org> udev-019-r1.ebuild:
   Fix it to use udev.rules-018.
