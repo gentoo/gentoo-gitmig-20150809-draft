@@ -1,0 +1,20 @@
+--- 1/nv.c	2004-11-14 20:29:48.000000000 +0200
++++ 2/nv.c	2004-11-14 20:30:23.372332944 +0200
+@@ -1606,7 +1606,7 @@ int nv_kern_mmap(
+ 
+         /* prevent the swapper from swapping it out */
+         /* mark the memory i/o so the buffers aren't dumped on core dumps */
+-        vma->vm_flags |= (VM_LOCKED | VM_IO);
++        vma->vm_flags |= VM_IO;
+     }
+ 
+     /* Magic allocator */
+@@ -1680,7 +1680,7 @@ int nv_kern_mmap(
+ 
+         /* prevent the swapper from swapping it out */
+         /* mark the memory i/o so the buffers aren't dumped on core dumps */
+-        vma->vm_flags |= (VM_IO | VM_LOCKED);
++        vma->vm_flags |= VM_IO;
+     }
+ 
+     vma->vm_file = file;

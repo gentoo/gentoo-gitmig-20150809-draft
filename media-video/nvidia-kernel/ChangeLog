@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.97 2004/11/11 23:01:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.98 2004/11/14 20:01:46 azarah Exp $
+
+  14 Nov 2004; Martin Schlemmer <azarah@gentoo.org>
+  +files/1.0.6629/nv-pgprot-speedup.patch,
+  +files/1.0.6629/nv-vm_flags-no-VM_LOCKED.patch,
+  nvidia-kernel-1.0.6629.ebuild:
+  Add two patches from http://www.nvnews.net/vbulletin/showthread.php?t=40106.
 
   11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/1.0.6629/nv-amd64-shutup-warnings.patch,

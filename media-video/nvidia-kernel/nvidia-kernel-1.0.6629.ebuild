@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.4 2004/11/11 23:01:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.5 2004/11/14 20:01:46 azarah Exp $
 
 inherit eutils kernel-mod
 
@@ -94,6 +94,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/conftest_koutput_includes.patch
 	# Fix pgd_offset() -> pml4_pgd_offset() for >=2.6.10-rc1-mm3
 	epatch ${FILESDIR}/${PV}/nv-pgd_offset.patch
+	# Speedup driver for 2.6 kernel to be on par with 2.4 kernel
+	epatch ${FILESDIR}/${PV}/nv-pgprot-speedup.patch
+	# Fix the vm_flags to only have VM_IO, and not VM_LOCKED as well
+	epatch ${FILESDIR}/${PV}/nv-vm_flags-no-VM_LOCKED.patch
 	# Fix calling of smp_processor_id() when preempt is enabled
 	epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id.patch
 
@@ -180,7 +184,7 @@ pkg_postinst() {
 	einfo "This module will now work correctly under udev, you do not need to"
 	einfo "manually create the devices anymore."
 	echo
-	ewarn "If you are using 2.6.10-r1-(bk|mm)[0-9]*, please note that you might have"
+	ewarn "If you are using 2.6.10-rc1-(bk|mm)[0-9]*, please note that you might have"
 	ewarn "to disable the kernel agp driver, and use NVAGP instead, as there are some"
 	ewarn "unresolved issues with some kernel agp drivers ..."
 	echo
