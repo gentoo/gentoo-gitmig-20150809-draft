@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a28543cd4823bb43a026577f826f959 jedit-4.1-r1.ebuild 2270
-MD5 f80adea82bbec73584453bf12e9c77e3 jedit-4.2.ebuild 2127
+MD5 89b424ecfd4d8633fe455f707e343478 ChangeLog 6716
 MD5 4364404349f030ebafdb89842f84d0bc jedit-4.1.ebuild 1861
-MD5 2b2b7a21bcfc3c810cd80028efbc1167 ChangeLog 6631
+MD5 7a28543cd4823bb43a026577f826f959 jedit-4.1-r1.ebuild 2270
 MD5 0c1bc759b6cafc454c336cb35fd05550 metadata.xml 257
-MD5 c8305f25e0689d0224f1c0f565a92709 files/jedit-4.1-jikes-fix.patch 492
+MD5 191605e08f8a48f8f2a88d85c3525213 jedit-4.2.ebuild 2127
 MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1 66
-MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2 66
 MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhBWV/rLF9B432nYRAl6hAJ9EiZ00BFQ2hU+WRsV7hVWPQVWkZgCfT64k
-SpCxbSecH8veNYjnrco7cpY=
-=tQko
------END PGP SIGNATURE-----
+MD5 c8305f25e0689d0224f1c0f565a92709 files/jedit-4.1-jikes-fix.patch 492
+MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2 66
