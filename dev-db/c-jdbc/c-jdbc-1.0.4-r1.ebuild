@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4.ebuild,v 1.2 2005/03/04 11:23:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.1 2005/03/27 17:18:02 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/kunststoff-2.0.2
 	>=dev-java/log4j-1.2.8
 	=dev-java/mx4j-2.1*
-	>=dev-java/regexp-1.3
+	=dev-java/jakarta-regexp-1.3*
 	>=dev-java/xalan-2.5.2
 	~dev-java/xerces-2.6.2
 	=dev-db/octopus-3.0*"
@@ -47,11 +47,10 @@ src_unpack() {
 		rm -f *.jar
 	done
 
-	java-pkg_jar-from ant-core ant.jar
 	java-pkg_jar-from commons-cli-1
 	java-pkg_jar-from crimson-1
 	java-pkg_jar-from dtdparser-1.21
-	java-pkg_jar-from regexp
+	java-pkg_jar-from jakarta-regexp-1.3
 	java-pkg_jar-from jaxen-1.1
 	java-pkg_jar-from jcommon
 	java-pkg_jar-from jdbc2-stdext

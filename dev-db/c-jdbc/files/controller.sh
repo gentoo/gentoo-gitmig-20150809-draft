@@ -11,7 +11,7 @@ sax_parser_class=org.apache.crimson.parser.XMLReaderImpl
   
 cp=${CJDBC_HOME}/config/language:${CJDBC_HOME}/config/controller:$CJDBC_HOME/xml
 cp=${cp}:${CJDBC_HOME}/config/virtualdatabase:${CJDBC_HOME}/config:${CJDBC_HOME}/xsl
-cp=${cp}:`java-config -p regexp`:`java-config -p xerces-2`
+cp=${cp}:`java-config -p jakarta-regexp-1.3`:`java-config -p xerces-2`
 cp=${cp}:`java-config -p octopus-3.0`:`java-config -p c-jdbc-1`
 cp=${cp}:`java-config -p hsqldb`:`java-config -p crimson-1`
 cp=${cp}:`java-config -p jgroups`:`java-config -p dom4j-1`
