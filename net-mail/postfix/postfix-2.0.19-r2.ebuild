@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.19-r2.ebuild,v 1.1 2004/03/17 23:50:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.19-r2.ebuild,v 1.2 2004/03/18 15:25:31 g2boojum Exp $
 
 inherit eutils ssl-cert
 
@@ -129,7 +129,7 @@ src_install () {
 		setgid_group="postdrop" || die "postfix-install failed"
 
 	# Remove the /usr/sbin/sendmail symlink
-	rm ${D}/usr/sbin/sendmail
+	mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.postfix
 	# Provide another link for legacy FSH.
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
 
