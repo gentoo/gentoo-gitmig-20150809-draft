@@ -1,6 +1,12 @@
 # ChangeLog for app-text/html401
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.6 2004/06/24 22:39:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.7 2004/11/06 12:56:17 usata Exp $
+
+*html401-19991224-r2 (06 Nov 2004)
+
+  06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +files/html401-decl.diff,
+  +html401-19991224-r2.ebuild, -html401-19991224.ebuild:
+  Added DTDDECL to HTML4.cat; bug #33517.
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org>
   html401-19991224-r1.ebuild:
