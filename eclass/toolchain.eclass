@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.64 2004/12/07 01:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.65 2004/12/07 04:05:28 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -241,7 +241,8 @@ get_gcc_src_uri() {
 	# propolice aka stack smashing protection
 	if [ -n "${PP_VER}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
-			http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
+			http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz
+			mirror://gentoo/protector-${PP_FVER}.tar.gz"
 	fi
 
 	# PERL cannot be present at bootstrap, and is used to build the man pages.
