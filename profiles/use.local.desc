@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.480 2004/07/14 11:13:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.481 2004/07/14 14:05:42 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -319,6 +319,7 @@ net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
+net-ftp/proftpd:softquota - Enable support for the mod_quotatab
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-im/bitlbee:flood - Enable flood protection support
 net-im/gaim:gnutls - Use GnuTLS for SSL support
