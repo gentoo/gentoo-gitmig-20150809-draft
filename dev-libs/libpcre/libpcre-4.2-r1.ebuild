@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.2-r1.ebuild,v 1.8 2003/11/08 17:20:51 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.2-r1.ebuild,v 1.9 2003/12/29 02:58:05 kumba Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pcre.org/"
 
 SLOT="3"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ia64 mips"
 
 DEPEND="virtual/glibc"
 

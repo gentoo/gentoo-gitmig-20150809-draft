@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.6-r1.ebuild,v 1.10 2003/09/23 15:48:27 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.6-r1.ebuild,v 1.11 2003/12/29 02:51:39 kumba Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://expat.sourceforge.net/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 x86 ppc sparc alpha hppa arm ia64"
+KEYWORDS="amd64 x86 ppc sparc alpha hppa arm ia64 mips"
 
 DEPEND="virtual/glibc"
 

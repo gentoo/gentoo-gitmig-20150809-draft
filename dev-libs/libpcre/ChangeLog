@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.23 2003/12/21 23:39:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.24 2003/12/29 02:58:05 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> libpcre-4.2-r1.ebuild:
+  Move to mips stable (~mips -> mips)
 
 *libpcre-4.4 (19 Nov 2003)
 
