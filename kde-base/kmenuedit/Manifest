@@ -1,6 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 69cbce8452119a36cd5b2935c80e4067 kmenuedit-3.4.0.ebuild 366
 MD5 1efdf984ed3505289e434cb5624721d6 kmenuedit-3.4.0_rc1.ebuild 373
 MD5 6f12d25ce4649c175aa3b13a60d513a7 kmenuedit-3.4.0_beta2.ebuild 371
 MD5 c3c416a4bcdb8250d078367a7ccc4d25 ChangeLog 988
@@ -9,10 +7,4 @@ MD5 d818992991c702315ded88782d83cd18 kmenuedit-3.4.0_beta1.ebuild 371
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kmenuedit-3.4.0_beta1 216
 MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-kmenuedit-3.4.0_beta2 294
 MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kmenuedit-3.4.0_rc1 378
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJQ2UntT9W3vfTuoRAuiYAJ9nLclFCm76U0m21JSMEtIQjhyKYACgkDBp
-t9imtgLAUEd5AoL54guuZrI=
-=EFd8
------END PGP SIGNATURE-----
+MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kmenuedit-3.4.0 68

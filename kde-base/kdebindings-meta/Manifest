@@ -5,8 +5,10 @@ MD5 4af5394460a9819d6e26fda1c4ade219 kdebindings-meta-3.4.0_rc1.ebuild 860
 MD5 a0eaca847e22ff95e86f651dd66a1a48 ChangeLog 2329
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 12b79deb58d7cc5f2296eef7b59fda85 kdebindings-meta-3.3.2.ebuild 868
+MD5 4af5394460a9819d6e26fda1c4ade219 kdebindings-meta-3.4.0.ebuild 860
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.0_rc1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.0_beta1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.0_beta2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.3.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.3.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebindings-meta-3.4.0 0

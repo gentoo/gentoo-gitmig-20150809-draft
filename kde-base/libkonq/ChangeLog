@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.4 2005/03/02 00:57:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.5 2005/03/13 21:19:12 danarmak Exp $
+
+  13 Mar 2005; Dan Armak <danarmak@gentoo.org> libkonq-3.4.0.ebuild:
+  KDE 3.4.0 ebuilds. Note that the tarballs won't be officially released for a
+  few more days.
 
 *libkonq-3.4.0_rc1 (02 Mar 2005)
 

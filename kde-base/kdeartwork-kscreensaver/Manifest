@@ -1,6 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d0c38d993da814b60bd2028312686ae1 kdeartwork-kscreensaver-3.4.0.ebuild 737
 MD5 420905bcb862477335305fff0b3b19d7 kdeartwork-kscreensaver-3.4.0_rc1.ebuild 744
 MD5 5c583e3cc99d739667833211f5045ea2 kdeartwork-kscreensaver-3.4.0_beta2.ebuild 740
 MD5 364e7715647aa41c9e0021565fec5a54 kdeartwork-kscreensaver-3.4.0_beta1.ebuild 682
@@ -10,11 +8,4 @@ MD5 6b416f110e6d5bc46416709a4ad08237 files/kdeartwork-3.4.0_beta2-gl-kdesavers.p
 MD5 ace1aa288fc445334d417fd8ecc6fd1c files/digest-kdeartwork-kscreensaver-3.4.0_rc1 390
 MD5 09af1c83a94e3efb529eb66b885e7559 files/digest-kdeartwork-kscreensaver-3.4.0_beta1 224
 MD5 92c0fb40653b25f4d53c3ee2063819b9 files/digest-kdeartwork-kscreensaver-3.4.0_beta2 304
-MD5 6b416f110e6d5bc46416709a4ad08237 files/kdeartwork-3.4.0_rc1-gl-kdesavers.patch 599
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLRCCntT9W3vfTuoRAjVDAKCBX0fn0vVU/IHqNo8V+xwbRLJKRwCgqMtg
-qPJey+UO1eR4+umcyvvkrvA=
-=8aJZ
------END PGP SIGNATURE-----
+MD5 c9a45836420240177a502b8a0f421222 files/digest-kdeartwork-kscreensaver-3.4.0 71

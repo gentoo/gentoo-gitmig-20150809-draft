@@ -1,4 +1,6 @@
+MD5 4ed1dd81912fb32d8612d5f0d07fae57 kcmlinuz-3.4.0.ebuild 406
 MD5 4ed1dd81912fb32d8612d5f0d07fae57 kcmlinuz-3.4.0_beta1.ebuild 406
 MD5 e8b34adcb01d069217c0b736e811ea8d ChangeLog 448
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 06d8b082374f502eb28cb4e5681f0bf7 files/digest-kcmlinuz-3.4.0_beta1 215
+MD5 dff739018360a0997224c39ad20e83fb files/digest-kcmlinuz-3.4.0 68

@@ -1,6 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 cd6fe8ecbf564620c08700dcfd953f7d eyesapplet-3.4.0.ebuild 416
 MD5 9e05afb973cda5b67b7f2f1b7ddd59a2 eyesapplet-3.4.0_rc1.ebuild 423
 MD5 e14722914c3062d244b410e5366f6c15 eyesapplet-3.4.0_beta1.ebuild 421
 MD5 71c131a8ae925b206ab559ae562e7078 ChangeLog 1009
@@ -8,11 +6,5 @@ MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 412aa359acab2146bf5ffcf7c20a29f0 eyesapplet-3.4.0_beta2.ebuild 421
 MD5 5224e7a7ada9a24776f67cfcd38bd62d files/digest-eyesapplet-3.4.0_beta1 212
 MD5 0e9e7fa138d6dfe862e8a50162b994bc files/digest-eyesapplet-3.4.0_beta2 289
+MD5 5b4e3adba5796dc0f4ac34763f6e0bff files/digest-eyesapplet-3.4.0 67
 MD5 72ac09de5dee4a204a0ee54a99bc0908 files/digest-eyesapplet-3.4.0_rc1 371
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLQ6rntT9W3vfTuoRAhg4AKCD7oX8bzlNGx6SWZ2dczfToja63wCcDkty
-bEJ2AdIzsKdDD9kTMHYCHzE=
-=6KSm
------END PGP SIGNATURE-----

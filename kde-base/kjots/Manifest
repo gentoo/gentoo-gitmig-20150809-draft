@@ -1,7 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a9c3d70f10a43386ede06e7cd1dad6ee kjots-3.4.0_rc1.ebuild 379
+MD5 1b532afc88239d78a06dfd76eefd1d1b kjots-3.4.0.ebuild 372
 MD5 716b1f08381609e9abff1510106e4aa2 kjots-3.4.0_beta2.ebuild 377
 MD5 b60347ea479e9f9a59f49141fc42fefc kjots-3.4.0_beta1.ebuild 377
 MD5 0b7cb9fe576322833ac2b9307acd4afe ChangeLog 952
@@ -9,10 +7,4 @@ MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 2e986761e662b965b58e8ca3bbe8579b files/digest-kjots-3.4.0_rc1 378
 MD5 88e740876cecf9b079bcc6622808dbb1 files/digest-kjots-3.4.0_beta1 216
 MD5 8262fa9d5b3c0c280885ce9d6ac6ad94 files/digest-kjots-3.4.0_beta2 294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLITDntT9W3vfTuoRAj+9AKCLLgDT3HmpOiH4jC/MR6PtQ/Q2VgCbBTRK
-BspO+oXLfT55GLZg0pINtvc=
-=M27L
------END PGP SIGNATURE-----
+MD5 dbade662a75a6b44c890deef5400485f files/digest-kjots-3.4.0 68

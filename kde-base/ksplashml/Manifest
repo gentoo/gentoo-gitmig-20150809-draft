@@ -1,7 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6033f1e58cb05df571521cda7a181dc5 ksplashml-3.4.0_beta1.ebuild 438
+MD5 e6814ce256239c93441a653f4e98a889 ksplashml-3.4.0.ebuild 433
 MD5 c397e65196488ed9b008271060f30f62 ksplashml-3.4.0_beta2.ebuild 438
 MD5 61ad5bd93dae807c24ab6b85bc14b689 ChangeLog 1015
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
@@ -9,10 +7,4 @@ MD5 370d40a5159f9c266d6246a18f7fed34 ksplashml-3.4.0_rc1.ebuild 440
 MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-ksplashml-3.4.0_rc1 378
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-ksplashml-3.4.0_beta1 216
 MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-ksplashml-3.4.0_beta2 294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJRVlntT9W3vfTuoRAjHmAKCRyXfM2KK6MvBhvWjo3D90XWhuAwCePUYO
-fVZXfBnZrw7ozjKgeedLjUo=
-=bv9k
------END PGP SIGNATURE-----
+MD5 54e17e8f38d377972c220f10357c9b2f files/digest-ksplashml-3.4.0 68

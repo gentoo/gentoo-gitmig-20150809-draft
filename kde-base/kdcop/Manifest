@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2dd71eb1904554e3b1a98bc7bdf6b40a kdcop-3.4.0_beta2.ebuild 407
+MD5 a03c6be60b67df8e127ea39f148f1d34 kdcop-3.4.0.ebuild 394
 MD5 415274a979e0966c2e2266910a2b89f9 kdcop-3.4.0_beta1.ebuild 397
 MD5 31607b480b41f800a9897566b784e2fc ChangeLog 848
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdcop-3.4.0 68
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kdcop-3.4.0_beta1 216
 MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-kdcop-3.4.0_beta2 294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJRDjntT9W3vfTuoRAl5/AJ9SUqHVcDh08WjUgvmbWiSaKbKqVACghLoW
-AqJUxSDp6NTV3l2jSevN7W8=
-=/gXp
------END PGP SIGNATURE-----

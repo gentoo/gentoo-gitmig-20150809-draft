@@ -1,6 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6c95cb2735e9b6bd9433add112367391 konsolekalendar-3.4.0.ebuild 741
 MD5 c3bd13f3e057eb4a00efb9c378f9a312 konsolekalendar-3.4.0_beta1.ebuild 756
 MD5 7dbf3dbd8fdfb10df9f363dd2333132b konsolekalendar-3.4.0_rc1.ebuild 748
 MD5 a7ade7fe1ca5f60524b2aec8fc6567b4 konsolekalendar-3.4.0_beta2.ebuild 746
@@ -9,10 +7,4 @@ MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-konsolekalendar-3.4.0_rc1 373
 MD5 91d4f5b007e372c77780c153cb54c612 files/digest-konsolekalendar-3.4.0_beta1 213
 MD5 47c329442cef798bbff590c1c0c9e5f3 files/digest-konsolekalendar-3.4.0_beta2 290
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJvrhntT9W3vfTuoRAh+UAJ9pfu0IzOfLSQHy3F4PSe4nS7SDDgCeIVD2
-GxJ01dPleNElYtGTLLILORE=
-=GefH
------END PGP SIGNATURE-----
+MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-konsolekalendar-3.4.0 67

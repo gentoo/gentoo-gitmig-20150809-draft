@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 74f77c8ce1efd1564fc7091d09189c3c kcharselect-3.4.0_beta2.ebuild 428
 MD5 6a2e9bec0a06547d3924e156f695d87f kcharselect-3.4.0_beta1.ebuild 418
+MD5 db918940898c403aa8c6b30fb30d43ac kcharselect-3.4.0.ebuild 415
 MD5 d61e582bbd49f446382cf50b2bb7a98b ChangeLog 894
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 88e740876cecf9b079bcc6622808dbb1 files/digest-kcharselect-3.4.0_beta1 216
 MD5 8262fa9d5b3c0c280885ce9d6ac6ad94 files/digest-kcharselect-3.4.0_beta2 294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLIMVntT9W3vfTuoRAu//AKCzfQm5xz9oI2wOBO25O2J4/xVQlgCbBhTg
-jboALyKjLOGhXkobyO/upxQ=
-=6N7C
------END PGP SIGNATURE-----
+MD5 dbade662a75a6b44c890deef5400485f files/digest-kcharselect-3.4.0 68

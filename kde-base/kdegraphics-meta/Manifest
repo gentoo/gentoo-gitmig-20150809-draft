@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 de8dbf1cf45db8a6bd1af7146d4789c7 kdegraphics-meta-3.4.0.ebuild 1438
 MD5 60a729593b4763d2c7568b8a1f5d5284 kdegraphics-meta-3.4.0_beta1.ebuild 1401
 MD5 550a37eeba4fbb5ad5c3823584eab7ee kdegraphics-meta-3.4.0_beta2-r1.ebuild 1446
 MD5 5c0a728bdfd6902e4438d7c8dfac4eae ChangeLog 1748
 MD5 2788dee69534e2a1d76c6557ab61641b kdegraphics-meta-3.4.0_rc1.ebuild 1461
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.0_rc1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.0_beta2-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.0_beta1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLGUcntT9W3vfTuoRAjy7AJ9SfPxIH8ME9bANrEfGuf+PGB/63QCfQ9Rn
-5uOpbTdO8C6IUTkhic786yM=
-=C7mq
------END PGP SIGNATURE-----

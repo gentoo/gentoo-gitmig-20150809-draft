@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 89ff8175a827ad6ef0050a3a665595dc kdialog-3.4.0_beta2.ebuild 439
+MD5 b13f4a71843508b5ae80caccbdee2cd6 kdialog-3.4.0.ebuild 426
 MD5 6911f12c9f1b68bb44ec0a2fc7b8d714 kdialog-3.4.0_beta1.ebuild 429
 MD5 6513da26e13a8d712fc74edcfd08e4aa ChangeLog 864
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kdialog-3.4.0_beta1 216
 MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-kdialog-3.4.0_beta2 294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJRIwntT9W3vfTuoRAm1rAJ9Mv798hZEkTPEXBBOcI2gJGVME0wCdG1/x
-mH4nnfwwEW56rtXm+xsi57o=
-=2gRO
------END PGP SIGNATURE-----
+MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdialog-3.4.0 68

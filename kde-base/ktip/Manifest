@@ -1,7 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 57ca2bc2e66ae258c1c71247a8c560ad ktip-3.4.0_beta1.ebuild 374
+MD5 407d8b897122d33f483683bb292e8848 ktip-3.4.0.ebuild 369
 MD5 42790cd0283c28ad035438c21ab11bee ktip-3.4.0_rc1.ebuild 376
 MD5 ebdab3a02a451a9a7022425a5bb3db0e ktip-3.4.0_beta2.ebuild 374
 MD5 6bab5edda187853474ccaa501e51218f ChangeLog 892
@@ -9,10 +7,4 @@ MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-ktip-3.4.0_rc1 378
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-ktip-3.4.0_beta1 216
 MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-ktip-3.4.0_beta2 294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJRLJntT9W3vfTuoRAuGKAJ926uNZVFbEPTF0RGsuocQqwVXsqwCcC9ZI
-nCHxKEc8Qodct8Ksh1SSTuc=
-=AJv6
------END PGP SIGNATURE-----
+MD5 54e17e8f38d377972c220f10357c9b2f files/digest-ktip-3.4.0 68

@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 aab9aaee57f056512e75651c721b8cf6 renamedlg-images-3.4.0.ebuild 452
 MD5 4a92a903535cca32c569b2f3d3f7e1db renamedlg-images-3.4.0_beta2.ebuild 465
 MD5 391c4f787fa96eeb8b57de95e68a09a3 renamedlg-images-3.4.0_beta1.ebuild 455
 MD5 2d04975b9f1e95c56a8485601b76ed27 ChangeLog 929
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 723a604383a2fd8238013a8b609a62f3 files/digest-renamedlg-images-3.4.0_beta1 219
 MD5 9009a89a3313cb85f25a0d66683e48ed files/digest-renamedlg-images-3.4.0_beta2 298
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLw+dntT9W3vfTuoRApaKAJ9nLWyqmCe2Tv1vIPFldTe7dzDI2ACgnoOj
-eTEmVZu93zlRL4XJ5YL9o9g=
-=zK+S
------END PGP SIGNATURE-----
+MD5 231586b7509d98416a3043180cebfe60 files/digest-renamedlg-images-3.4.0 69

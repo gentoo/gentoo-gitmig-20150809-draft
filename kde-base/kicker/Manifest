@@ -1,6 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 54a6b46536ff0ba2f7bdb3678ad8e850 kicker-3.4.0.ebuild 614
 MD5 9986b785546f2d73135c9b925fc2a758 kicker-3.4.0_beta2.ebuild 690
 MD5 f74755de34cec5906f8bf41c552ee870 kicker-3.4.0_beta1.ebuild 624
 MD5 6835847ba1356e7dd24c2bb8cc1c34a7 ChangeLog 997
@@ -9,12 +7,6 @@ MD5 98a78404a5eb030d44b889969cc1931a kicker-3.4.0_rc1.ebuild 621
 MD5 07e3f3f7982d29e2317f32f209e06573 files/applets-configure.in.in.diff 606
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kicker-3.4.0_beta1 216
 MD5 2e2e2d2d81cc101225b07b5032f29cca files/digest-kicker-3.4.0_beta2 294
+MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kicker-3.4.0 68
 MD5 91d7c186d90f5da51a627860e23ea594 files/kicker-visibility.diff 2424
 MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kicker-3.4.0_rc1 378
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJRM8ntT9W3vfTuoRAqTsAJ9QQllBYhD7n/nDT7/jS7FjwIE1YACfR4jN
-t8lNdsuOdNnImH+rblm4KeY=
-=nnVc
------END PGP SIGNATURE-----
