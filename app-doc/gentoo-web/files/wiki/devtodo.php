@@ -37,6 +37,7 @@
 			$fupcount = mysql_query( 'select fid from followups where tid='.$todo['tid'] );
 			$fupcount = mysql_num_rows( $fupcount );
 
+			$flagimgs = '';
 			if ( $todo['public'] == 1 )
 				$flagimgs = '<img src="images/public.gif" width=16 height=16 alt="public">';
 ?>
