@@ -38,7 +38,7 @@
 
 # optional SELinux-patched programs:
 >=app-admin/logrotate-3.6.5-r1
->=sys-apps/vcron-3.0.1-r2
+>=sys-apps/vixie-cron-3.0.1-r2
 >=sys-libs/pwdb-0.61-r4
 
 # New API SELinux kernels:

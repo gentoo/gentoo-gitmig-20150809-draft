@@ -36,7 +36,7 @@
 
 # optional SELinux-patched programs:
 >=app-admin/logrotate-3.6.5-r1
->=sys-apps/vcron-3.0.1-r2
+>=sys-apps/vixie-cron-3.0.1-r2
 
 # must use coreutils (these RDEP on it):
 >=sys-apps/fileutils-4.1.11-r2

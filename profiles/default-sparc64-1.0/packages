@@ -119,7 +119,6 @@
 >=net-misc/fakeidentd-1.4-r6
 >=net-nds/openldap-1.2.12-r6
 >=net-nds/portmap-5b-r6
-#>=sys-apps/vcron-3.0_p1-r6
 >=media-sound/alsa-utils-0.5.10-r6
 >=net-print/LPRng-3.7.9-r6
 >=net-nds/ypbind-1.7-r6
@@ -140,7 +139,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.46 2003/12/09 08:40:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.47 2003/12/11 16:26:45 seemant Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
