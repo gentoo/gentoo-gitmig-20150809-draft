@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.6-r1.ebuild,v 1.3 2005/03/23 20:04:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.6-r1.ebuild,v 1.4 2005/03/25 10:50:56 blubb Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${PV}/mozilla-i686-pc-linux-gnu-${PV}.tar.gz"
 RESTRICT="nostrip"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
