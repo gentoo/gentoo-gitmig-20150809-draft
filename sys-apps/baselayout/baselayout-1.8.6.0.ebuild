@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.0.ebuild,v 1.1 2003/01/06 23:10:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.0.ebuild,v 1.2 2003/01/07 06:08:35 azarah Exp $
 
 IUSE="bootstrap build"
 
@@ -502,7 +502,7 @@ EOF
 	then
 		local rcconfd="`ls ${ROOT}/etc/conf.d/._cfg????_rc 2> /dev/null`"
 
-		if [ -f "${rcconfd}" ]
+		if [ -f "${rcconfd}" -a -z "`grep 'svcmount' ${ROOT}/etc/conf.d/rc`" ]
 		then
 			ewarn "Backing up your old /etc/conf.d/rc, and replacing with new!"
 			ewarn "This is needed, as \$svcdir moved from /mnt/.init.d to"
