@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/atokx2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.1 2005/02/10 11:54:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.2 2005/04/05 14:00:58 usata Exp $
+
+*atokx2-17.0-r1 (05 Apr 2005)
+
+  05 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> atokx2-17.0.ebuild,
+  +atokx2-17.0-r1.ebuild:
+  Added ext-iiimf USE flag to use the system IIIMF instead of bundled version.
+  Marked 17.0 stable.
 
 *atokx2-17.0 (10 Feb 2005)
 

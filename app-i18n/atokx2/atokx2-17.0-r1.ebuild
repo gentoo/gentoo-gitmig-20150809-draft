@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0.ebuild,v 1.2 2005/04/05 14:00:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r1.ebuild,v 1.1 2005/04/05 14:00:58 usata Exp $
 
 inherit eutils
 
@@ -12,18 +12,30 @@ SRC_URI=""
 LICENSE="ATOK X11"
 
 SLOT="0"
-KEYWORDS="-* x86"
-IUSE=""
+KEYWORDS="-* ~x86"
+IUSE="ext-iiimf"
 
 RESTRICT="nostrip"
 
 DEPEND=">=x11-libs/gtk+-2.2
-	!dev-libs/libiiimcf
-	!dev-libs/csconv
-	!app-i18n/iiimgcf
-	!dev-libs/libiiimp
-	!app-i18n/iiimsf
-	!app-i18n/iiimxcf"
+	ext-iiimf?
+	(
+		>=dev-libs/libiiimcf-12.1
+		>=dev-libs/csconv-12.1
+		>=app-i18n/iiimgcf-12.1
+		>=dev-libs/libiiimp-12.1
+		>=app-i18n/iiimsf-12.1
+		>=app-i18n/iiimxcf-12.1
+	)
+	!ext-iiimf?
+	(
+		!dev-libs/libiiimcf
+		!dev-libs/csconv
+		!app-i18n/iiimgcf
+		!dev-libs/libiiimp
+		!app-i18n/iiimsf
+		!app-i18n/iiimxcf
+	)"
 
 src_unpack() {
 	cdrom_get_cds doc/license.html || die "Please mount ATOK for Linux CD-ROM or set CD_ROOT variable to the directory containing ATOK for Linux."
@@ -32,30 +44,35 @@ src_unpack() {
 src_install() {
 	cd ${D}
 
-	local iiimgcf
-	if has_version '>=x11-libs/gtk+-2.4' ; then
-		iiimgcf=iiimf-gtk24-${IIIMF_V}.i386.tar.gz
-	else
-		iiimgcf=iiimf-gtk22-${IIIMF_V}.i386.tar.gz
-	fi
+	if ! use ext-iiimf ; then
+		local iiimgcf
+		if has_version '>=x11-libs/gtk+-2.4' ; then
+			iiimgcf=iiimf-gtk24-${IIIMF_V}.i386.tar.gz
+		else
+			iiimgcf=iiimf-gtk22-${IIIMF_V}.i386.tar.gz
+		fi
 
-	for i in ${iiimgcf} \
-		iiimf-client-lib-${IIIMF_V}.i386.tar.gz \
-		iiimf-csconv-${IIIMF_V}.i386.tar.gz \
-		iiimf-protocol-lib-${IIIMF_V}.i386.tar.gz \
-		iiimf-rc-${IIIMF_V}.i386.tar.gz \
-		iiimf-server-${IIIMF_V}.i386.tar.gz \
-		iiimf-x-${IIIMF_V}.i386.tar.gz
-	do
-		echo ${CDROM_ROOT}
-		tar xzf ${CDROM_ROOT}/bin/IIIMF/${i} || die "Failed to unpack ${i}"
-	done
+		for i in ${iiimgcf} \
+			iiimf-client-lib-${IIIMF_V}.i386.tar.gz \
+			iiimf-csconv-${IIIMF_V}.i386.tar.gz \
+			iiimf-protocol-lib-${IIIMF_V}.i386.tar.gz \
+			iiimf-rc-${IIIMF_V}.i386.tar.gz \
+			iiimf-server-${IIIMF_V}.i386.tar.gz \
+			iiimf-x-${IIIMF_V}.i386.tar.gz
+		do
+			echo ${CDROM_ROOT}
+			tar xzf ${CDROM_ROOT}/bin/IIIMF/${i} \
+			|| die "Failed to unpack ${i}"
+		done
+
+		# /etc files
+		newinitd ${FILESDIR}/iiim.initd iiim || die
+		newconfd ${FILESDIR}/iiim.confd iiim || die
+	fi
 
 	tar xzf ${CDROM_ROOT}/bin/ATOK/atokx-${PV}-2.0.i386.tar.gz || die "Failed to unpack atokx-${PV}-2.0.i386.tar.gz"
 
 	newinitd ${FILESDIR}/atokx2.initd atokx2 || die
-	newinitd ${FILESDIR}/iiim.initd iiim || die
-	newconfd ${FILESDIR}/iiim.confd iiim || die
 
 	dohtml -r ${CDROM_ROOT}/doc/* || die
 	insinto /usr/share/doc/${PF}
