@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r3.ebuild,v 1.3 2003/11/05 01:22:31 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r3.ebuild,v 1.4 2003/11/07 06:46:03 vapier Exp $
 
 inherit base flag-o-matic
 
@@ -41,6 +41,7 @@ src_compile() {
 
 	use alpha && append-flags -fPIC
 	use amd64 && append-flags -fPIC
+	use hppa && append-flags -fPIC
 
 	emake COPTFLAG="${CFLAGS}" DEBUG="" ${myflags} || die
 }
