@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9bfb804c5f3a9be9de9fe30bba13e45d ChangeLog 1410
+MD5 00f7485a993c903a3e5392f66a10b67e ChangeLog 1517
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 b503171058135ed8966a87b397498d50 qmbtagger-0.06.ebuild 763
-MD5 56b9e4bb8dfdf522193b68f4a5439894 qmbtagger-0.07.ebuild 1074
+MD5 4ffb6d1c27e0adc37016bd31b1fdbf44 qmbtagger-0.07.ebuild 1072
 MD5 9d8b84bc62dc1b385f9c187465228596 files/digest-qmbtagger-0.06 67
 MD5 df565fdedc570429d548a729dbe9746f files/digest-qmbtagger-0.07 67
 MD5 8201bc5ae9dc0b533146e1669029612b files/qmbtagger-0.07-errno.patch 841
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBab4yI1lqEGTUzyQRAuqzAKC3zHChxzO+AxwKlO+ya9xyPeN0dACfaLfM
-ER2sqJsfy0aJ6SNwdupeDkw=
-=EgF+
+iD8DBQFBxRz5ArHZZzCEUG0RAgdqAJ9b+9aR1kNHSp/lnkXahMOGdKACxwCdE28L
+g4gtCFDtPEsyw3QHLoZtyeI=
+=aVM4
 -----END PGP SIGNATURE-----
