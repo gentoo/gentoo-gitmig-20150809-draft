@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5-r1.ebuild,v 1.2 2004/07/24 09:33:08 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5-r1.ebuild,v 1.3 2004/07/25 14:33:43 satya Exp $
 
 inherit eutils flag-o-matic
 
@@ -63,7 +63,7 @@ src_unpack() {
 	#Next one is from eger@cc.gatech.edu
 	epatch ${FILESDIR}/samba-3.0.x-python-setup.patch || die
 	#bug #44743 ------------------------------------------------------------
-	if [ ${ARCH} = "ppc" -o ${ARCH} = "ppc64" ]; then
+	if [ ${ARCH} = "amd64" -o ${ARCH} = "ppc" -o ${ARCH} = "ppc64" ]; then
 		cd ${S} && epatch ${FILESDIR}/samba-3.0.x-smbumount-uid32.patch
 	fi
 	#Fix for bug #27858 ----------------------------------------------------
