@@ -122,9 +122,9 @@ int main(void) {
 	char mychar;
 	FILE *distfile;	
 	printf("\033c\n\0337\033[01;23r\033[24;01f\033[01;44;32m%s\033[0m\0338\033[A",blurb); 
-	//printf("\nRemounting root fs read-write...\n");
+	printf("\nRemounting root fs read-write...\n");
 	//should be rw anyway but it's not?
-	//domount("/dev/ram0","/","ext2",MS_MGC_VAL|MS_REMOUNT,NULL);
+	domount("/dev/ram0","/","ext2",MS_MGC_VAL|MS_REMOUNT,NULL);
 	printf("%sLet's begin...%s\n\n",color,off);
 	printf("%sMounting /proc...%s\n",color,off);
 	//mount /proc filesystem
@@ -173,13 +173,12 @@ int main(void) {
 
 	printf("%sSuccess!%s\n",color,off);		
 	mount("/dev/loop0","/","ext2",0,MS_MGC_VAL|MS_RDONLY,0);
-
+	printf("%sSuccess /dev/loop0!%s\n",color,off);		
 	//set real root device to /dev/loop0 (major 7, minor 0)
 	writefile("/proc/sys/kernel/real-root-dev","0x700");
-	
+	printf("%sRoot changed ...%s\n",color,off);
 	//umount /proc
 	umount("proc");
-
 	//turn bottom bar off
 	printf("\0337\033[r\033[24;01f\033[K\0338");
 }
