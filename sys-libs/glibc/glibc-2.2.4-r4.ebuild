@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.5 2001/12/08 18:20:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.6 2001/12/09 01:21:06 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -13,13 +13,15 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 #Specific Linux headers are now required so that we build from a stable "base"
 #We need gcc-2.95.3-r2 because it includes a special fix for this glibc version (2.2.4)
-DEPEND="~sys-kernel/linux-headers-2.4.16 nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
+LHV=2.4.16
+DEPEND="~sys-kernel/linux-headers-${LHV} nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
+RDEPEND="~sys-kernel/linux-headers-${LHV}"
 
-if [ -z "`use bootstrap`" ] && [ -z "`use bootcd`" ] && [ -z "`use build`" ]
+if [ -z "`use build`" ]
 then
-	RDEPEND="gd? ( sys-libs/zlib media-libs/libpng ) sys-apps/baselayout"
+	RDEPEND="$RDEPEND gd? ( sys-libs/zlib media-libs/libpng ) sys-apps/baselayout"
 else
-	RDEPEND="sys-apps/baselayout"
+	RDEPEND="$RDEPEND sys-apps/baselayout"
 fi
 
 PROVIDE="virtual/glibc"
