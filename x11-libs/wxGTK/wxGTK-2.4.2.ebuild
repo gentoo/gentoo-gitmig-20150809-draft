@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.1 2003/10/07 23:49:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.2 2003/10/08 00:04:29 liquidx Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -42,7 +42,6 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	myconf="${myconf} `use_with odbc`"
 	myconf="${myconf} `use_with opengl`"
 	myconf="${myconf} --with-gtk"
 	myconf="${myconf} `use_enable debug`"
@@ -55,10 +54,12 @@ src_compile() {
 	#
 	# bug #20116 - liquidx@gentoo.org (07 May 2003)
 
-	#use gtk2 && myconf="${myconf} --enable-gtk2 --enable-unicode"
 	use gtk2 && myconf="${myconf} --enable-gtk2"
+	# only allow unicode if using gtk2
 	use gtk2 && use unicode && myconf="${myconf} --enable-unicode"
-
+	# only enable odbc if unicode is not enabled.
+	( use gtk2 && use unicode ) || myconf="${myconf} --with-odbc"
+	
 	econf ${myconf}
 	emake || die "make failed"
 
