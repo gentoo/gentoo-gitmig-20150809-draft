@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.13 2002/10/27 19:05:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.14 2002/12/18 00:13:16 lostlogic Exp $
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
 
@@ -16,7 +16,6 @@ S=${WORKDIR}/linux-${KV}
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
-SLOT="0"
 
 if [ $ETYPE = "sources" ]
 then
