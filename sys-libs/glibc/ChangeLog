@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.139 2004/03/16 22:00:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.140 2004/03/18 22:08:09 solar Exp $
+
+  18 Mar 2004; <solar@gentoo.org> glibc-2.3.2-r9.ebuild:
+  adding filter-ldflags -pie to stable glibc
 
   16 Mar 2004; <solar@gentoo.org> glibc-2.3.3_pre20040207.ebuild:
   glibc fails to link properly with global LDFLAGS=-pie so we filter it with new

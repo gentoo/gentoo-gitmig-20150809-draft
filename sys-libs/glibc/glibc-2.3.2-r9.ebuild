@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.22 2004/03/15 09:46:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.23 2004/03/18 22:08:09 solar Exp $
 
 IUSE="nls pic build nptl"
 
 inherit eutils flag-o-matic gcc
 
 filter-flags "-fomit-frame-pointer -malign-double"
+filter-ldflags "-pie"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
