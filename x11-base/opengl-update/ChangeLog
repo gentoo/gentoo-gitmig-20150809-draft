@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.62 2005/01/27 01:49:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.63 2005/02/01 19:39:36 lu_zero Exp $
+
+*opengl-update-2.0_pre5 (01 Feb 2005)
+
+  01 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/opengl-update-2.0_pre5, +opengl-update-2.0_pre5.ebuild:
+  Backport from the 2.1, should fix problems with programs linking using -rpath
 
 *opengl-update-2.1_pre4 (26 Jan 2005)
 
