@@ -1,6 +1,8 @@
 # ChangeLog for net-mail/qmail-ldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/ChangeLog,v 1.8 2004/04/06 21:56:10 sj7trunks Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/ChangeLog,v 1.9 2004/04/27 09:23:24 aliz Exp $
+
+*qmail-ldap-1.03-r4 (06 Apr 2004)
 
   06 Apr 2004; Benjamin Coles <sj7trunks@gentoo.org>
   A special thanks to these people:
