@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.11.ebuild,v 1.1 2003/12/08 14:18:06 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.11.ebuild,v 1.2 2003/12/09 16:28:14 lanius Exp $
 
 inherit eutils
 
@@ -19,6 +19,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X cups cjk"
 
+PROVIDE="virtual/ghostscript"
+
 DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
@@ -28,7 +30,8 @@ DEPEND="virtual/glibc
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
 	cups? ( >=net-print/cups-1.1.20 )
-	!app-text/ghostscript"
+	gtk? ( =x11-libs/gtk+-1.2* )
+	!virtual/ghostscript"
 
 S=${WORKDIR}/${MY_P}
 
@@ -61,6 +64,9 @@ src_compile() {
 	use X && myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
 
+	use gtk || sed -i -e 's:$(INSTALL_PROGRAM) $(GSSOX):#:' src/unix-dll.mak \
+		-e 's:$(GSSOX)::' src/unix-dll.mak
+
 	econf ${myconf}
 
 	use cups && echo 'include pstoraster/cups.mak' >> Makefile; sed -i -e 's:DEVICE_DEVS17=:DEVICE_DEVS17=$(DD)cups.dev:' Makefile
@@ -74,6 +80,7 @@ src_compile() {
 	use cups && sed -i -e 's:LDFLAGS=$(XLDFLAGS):LDFLAGS=-L/usr/include -lcups -lcupsimage $(XLDFLAGS):' Makefile
 
 	make || die "make failed"
+	make so || die "make so failed"
 
 	cd ijs
 	econf --prefix=${D}/usr
@@ -82,7 +89,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall install_prefix=${D}
+	einstall install_prefix=${D} soinstall
 
 	cd ${WORKDIR}
 	cp -a fonts ${D}/usr/share/ghostscript || die
@@ -107,4 +114,5 @@ src_install() {
 	cd ${S}/ijs
 	dodir /usr/bin /usr/include /usr/lib
 	einstall install_prefix=${D}
+	die
 }
