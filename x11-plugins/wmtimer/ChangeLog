@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmtimer
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.13 2004/11/25 15:21:13 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.14 2005/03/14 15:20:03 s4t4n Exp $
+
+*wmtimer-2.9.2 (14 March 2004)
+
+  14 Mar 2004; Michele Noberasco <s4t4n@gentoo.org> wmtimer-2.9.2.ebuild:
+  Version bump. Closes #84982, reported by André-Sebastian Liebe.
+  wmtimer-2.4.ebuild:
+  Updated copyright headers.
 
   25 Nov 2004; Jason Wever <weeve@gentoo.org> wmtimer-2.4.ebuild:
   Added ~sparc keyword.
