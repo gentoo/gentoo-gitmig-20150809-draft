@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3170 2004/09/22 00:43:34 liquidx Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3171 2004/09/22 01:33:28 lv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -43,12 +43,6 @@ net-irc/irssi-charconv
 # Olivier Fisette <ribosome@gentoo.org> (14 Sep 2004)
 # Insufficient testing and many issues. In Portage for testing.
 app-sci/staden
-
-# <lv@gentoo.org> (14 Sep 2004)
-# This release has so many issues it's not even funny. With the insanity
-# caused by unmasking gcc 3.4 on x86, I want to make sure the bugs fixed
-# are actual gcc 3.4 bugs, and not just "ebuild rewrite for 3.4.2" bugs.
->=sys-devel/gcc-3.4.2
 
 # <foser@gentoo.org> (14 Sep 2004)
 # Big GNOME 2.8 mask
