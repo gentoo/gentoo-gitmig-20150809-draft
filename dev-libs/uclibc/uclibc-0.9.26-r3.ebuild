@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r3.ebuild,v 1.5 2004/07/24 17:05:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r3.ebuild,v 1.6 2004/07/28 04:36:05 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -24,16 +24,12 @@ PROVIDE="virtual/glibc virtual/libc"
 S=${WORKDIR}/${MY_P}
 
 check_main_libc() {
-	if [ -f ${ROOT}/lib/libuClibc-*.so -a ! -f ${ROOT}/lib/libc.so.6 ] ; then
-		if echo "${CHOST}" | grep -q uclibc ; then
-			retval=0
-		else
-			retval=1
-		fi
+	if "${CHOST/uclibc}" != "${CHOST}" ; then
+		SYS_LIBC=uClibc
 	else
-		retval=1
+		SYS_LIBC=glibc
 	fi
-	[ "${retval}" = "0" ] && SYS_LIBC=uClibc || SYS_LIBC=glibc
+	export SYS_LIBC
 	echo
 	einfo "We are building for ${SYS_LIBC} system library"
 	echo
