@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.104 2003/11/27 20:59:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.105 2003/11/30 09:57:31 azarah Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  30 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
+  baselayout-1.8.6.12-r2.ebuild:
+  Fix format of calling chown, bug #34612.
 
 *baselayout-1.8.6.12-r2 (26 Nov 2003)
 

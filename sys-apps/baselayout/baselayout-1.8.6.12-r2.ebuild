@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.1 2003/11/27 20:59:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.2 2003/11/30 09:57:31 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -259,24 +259,24 @@ src_install() {
 
 	# The .keep file messes up Portage when looking in /var/db/pkg
 	dodir /var/db/pkg
-	chmod 1777 ${D}/var/tmp
+	fperms 1777 /var/tmp
 	keepdir /root
 
 	# /proc is very likely mounted right now so a keepdir will fail on merge
 	dodir /proc
 
-	chmod go-rx ${D}/root
+	fperms go-rx /root
 	keepdir /tmp /var/lock
-	chmod 1777 ${D}/tmp
-	chmod 1777 ${D}/var/tmp
-	chown root.uucp ${D}/var/lock
-	chmod 775 ${D}/var/lock
+	fperms 1777 /tmp
+	fperms 1777 /var/tmp
+	fowners root:uucp /var/lock
+	fperms 775 /var/lock
 	insopts -m0644
 
 	keepdir /opt /etc/opt
 
 	insinto /etc
-	ln -s ../proc/filesystems ${D}/etc/filesystems
+	dosym  ../proc/filesystems /etc/filesystems
 	for foo in hourly daily weekly monthly
 	do
 		keepdir /etc/cron.${foo}
@@ -286,13 +286,13 @@ src_install() {
 		# Install files, not dirs
 		[ -f ${foo} ] && doins ${foo}
 	done
-	chmod go-rwx ${D}/etc/shadow
+	fperms go-rwx /etc/shadow
 	# We do not want to overwrite the user's settings during bootstrap ...
 	[ -f "${ROOT}/etc/hosts" ] && rm -f ${D}/etc/hosts
 
 	keepdir /mnt
 	keepdir_mount /mnt/floppy /mnt/cdrom
-	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
+	fperms go-rwx /mnt/floppy /mnt/cdrom
 
 	into /
 	dosbin ${S}/sbin/MAKEDEV
