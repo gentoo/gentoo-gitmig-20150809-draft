@@ -1,4 +1,0 @@
-#!/bin/bash -login
-
-exec "/usr/X11R6/bin/wm/blackbox"
-
