@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.1 2003/09/19 21:57:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.2 2003/09/20 02:48:26 caleb Exp $
 
 inherit kde
 need-kde ${PV}
@@ -15,7 +15,7 @@ LANGS="af ar bg bs ca cs da de el es en_GB eo es et eu fa fi fr he hr hu is it
 ja lt mk mt bn nl nn nso pl pt pt_BR ro ru se sk sl sr ss sv ta th tr uk ven vi xh
 zh_CN zh_TW zu"
 
-BASEDIR="mirror://kde/stable/${PV}/src/kde-i18n/"
+BASEDIR="mirror://kde/stable/${PV}/src/"
 
 #Maybe this isn't the smartest way of doing things, but it works
 #for the purposes of this ebuild.
@@ -31,7 +31,7 @@ else
 	for pkg in $LANGS
 	do
 		if [ `use ${pkg}` ] ; then
-			SRC_URI="$SRC_URI $BASEDIR/kde-i18n-$pkg-${PV}.tar.bz2"
+			SRC_URI="$SRC_URI $BASEDIR/kde-i18n/kde-i18n-$pkg-${PV}.tar.bz2"
 			echo "using package ${pkg}"
 		fi
 	done
