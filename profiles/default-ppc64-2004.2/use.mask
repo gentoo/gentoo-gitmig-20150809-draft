@@ -24,6 +24,7 @@ firebird
 mzscheme
 chasen
 fdftk
+mono
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
