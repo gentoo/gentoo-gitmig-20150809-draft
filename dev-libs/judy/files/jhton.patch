@@ -1,0 +1,31 @@
+--- jhton.c	2004-06-16 10:19:41.127799366 -0400
++++ jhton.c.new	2004-06-16 10:17:03.620619690 -0400
+@@ -690,8 +690,8 @@
+ 	    PageName and PageSection), and the ]W value from the second
+ 	    TD, for an nroff file header like this:
+ 
+-	    .\" Auto-translated from <file> by <prog> at <date>
+-	    .\" <revision string above>
++	    .\" Auto-translated from <file> by <prog> at <date>"
++	    .\" <revision string above>"
+ 	    .TA x
+ 	    .TH Judy<suffix> 3X
+ 	    .ds )H Hewlett-Packard Company
+@@ -704,7 +704,7 @@
+     </DL>
+ 
+     Note:  Anchors within <B><PRE> are not font-marked because this
+-    messes up nroff, which doesn't nest fonts well.
++    messes up nroff, which doesn''t nest fonts well.
+ 
+     Note:  Font C (computer) is preferred to bold for other markings,
+     but it only seems to work for ".C", not ".ft C" nor "\fC", and ".C"
+@@ -728,7 +728,7 @@
+     <I>text</I>		\fItext\fP
+ 
+     Note:  Ideally most <PRE> text that is not bold should be in ".C"
+-    font, but this requires ensuring there is no " on the line, and
++    font, but this requires ensuring there is no "" on the line, and
+     would simply make the line bold anyway for nroff; it would only be a
+     real improvement for troff (which we do not expect will be used with
+     these manual entries).

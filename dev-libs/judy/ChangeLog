@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.3 2004/06/24 23:13:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.4 2004/07/06 19:42:37 twp Exp $
+
+*judy-20020627-r1 (06 Jul 2004)
+
+  06 Jul 2004; <twp@gentoo.org> +files/jhton.patch, +judy-20020627-r1.ebuild:
+  Fix compile problems with recent gccs. Bug # 51528. Thanks J.C. Wren.
 
 *judy-20020627 (12 Nov 2002)
 
