@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.1.ebuild,v 1.3 2004/07/02 04:29:15 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.1.ebuild,v 1.4 2004/08/12 11:16:14 carlo Exp $
 
 inherit eutils distutils
 
@@ -22,7 +22,7 @@ DEPEND="virtual/libc
 	virtual/python
 	>=dev-python/sip-3.10.2
 	>=dev-python/PyQt-3.12
-	<=kde-base/kdelibs-3.2.3"
+	<kde-base/kdelibs-3.3"
 
 src_compile() {
 	cd ${S}
