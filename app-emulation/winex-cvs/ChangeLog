@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.6 2002/10/10 15:23:10 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.7 2002/11/13 18:20:43 cretin Exp $
+
+*winex-cvs-2.2.1 (13 Nov 2002)
+
+  13 Nov 2002; Stefan Jones<cretin@gentoo.org> winex-cvs-2.2.1.ebuild :
+
+    Added winex-cvs.2.2.1 and fixed bug in regex for cvs tag use //./- not
+    /./-
 
 *winex-cvs-2.2 (10 October 2002)
 
