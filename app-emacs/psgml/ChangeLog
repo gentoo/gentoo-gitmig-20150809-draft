@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/psgml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.2 2003/02/12 03:55:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.3 2003/10/23 08:52:48 obz Exp $
+
+*psgml-1.2.5-r1 (23 Oct 2003)
+
+  23 Oct 2003; Mike Gardiner <obz@gentoo.org> psgml-1.2.5-r1.ebuild,
+  files/50psgml-gentoo.el:
+  Fixed the catalog setting in the site-lisp 50psgml-gentoo.el. This is a fix to
+  the installed files so the ebuild has been revised.
 
 *psgml-1.2.5 (31 Oct 2002)
 
