@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/calltree
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.4 2003/08/11 20:53:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.5 2003/10/18 11:14:42 solar Exp $
+
+*calltree-0.9.4 (18 Oct 2003)
+
+  18 Oct 2003; <solar@gentoo.org> calltree-0.9.4.ebuild:
+  version bump, bug #28085
 
 *calltree-0.9.3 (11 Aug 2003)
 
