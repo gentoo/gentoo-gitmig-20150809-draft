@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.18 2004/11/24 11:40:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.19 2004/12/31 21:40:35 battousai Exp $
+
+*linuxwacom-0.6.6 (31 Dec 2004)
+
+  31 Dec 2004; Bryan Stine <battousai@gentoo.org>
+  +files/linuxwacom-0.6.6-nonx86.patch, +linuxwacom-0.6.6.ebuild:
+  Version bump to 0.6.6. This one needs ARCH unset before emake for the kernel
+  Makefiles, regardless of whether they get built. Thanks to roger (bug
+  #76253) for the update and error report. This closes aforementioned bug.
 
   24 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   linuxwacom-0.6.4.ebuild:

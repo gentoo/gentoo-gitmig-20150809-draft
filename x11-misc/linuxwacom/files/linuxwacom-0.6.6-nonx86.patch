@@ -1,0 +1,11 @@
+--- linuxwacom-0.6.6/src/Makefile.am.orig	2004-12-31 16:28:47.488608440 -0500
++++ linuxwacom-0.6.6/src/Makefile.am	2004-12-31 16:29:07.690537280 -0500
+@@ -85,7 +85,7 @@
+ 	gcc $(CFLAGS) $(DEPFLAGS) -pipe -ansi \
+ 		-pedantic -Wall -Wpointer-arith $(NO_MERGE_CONSTANTS) \
+ 		-I. $(DRIVER_INCLUDES) \
+-		-Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L -D_POSIX_SOURCE \
++		-Dlinux -D_POSIX_C_SOURCE=199309L -D_POSIX_SOURCE \
+ 		-D_XOPEN_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE  -D_GNU_SOURCE \
+ 		-DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP -DXCSECURITY \
+ 		-DTOGCUP -DXF86BIGFONT -DDPMSExtension -DPIXPRIV -DPANORAMIX \
