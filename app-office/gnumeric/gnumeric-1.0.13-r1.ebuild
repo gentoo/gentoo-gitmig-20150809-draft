@@ -1,7 +1,7 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.9 2004/06/02 12:33:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.10 2004/06/24 22:40:22 agriffis Exp $
 
 inherit virtualx libtool gnome.org
 

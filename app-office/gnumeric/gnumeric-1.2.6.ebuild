@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.6.ebuild,v 1.6 2004/06/02 12:33:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.6.ebuild,v 1.7 2004/06/24 22:40:22 agriffis Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils flag-o-matic

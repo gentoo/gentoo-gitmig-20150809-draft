@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.7.ebuild,v 1.1 2004/06/07 11:52:56 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.7.ebuild,v 1.2 2004/06/24 22:45:20 agriffis Exp $
 
 inherit kde-functions
 need-qt 3

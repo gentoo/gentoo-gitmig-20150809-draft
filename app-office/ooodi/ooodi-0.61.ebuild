@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooodi/ooodi-0.61.ebuild,v 1.5 2004/03/29 00:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooodi/ooodi-0.61.ebuild,v 1.6 2004/06/24 22:43:06 agriffis Exp $
 
 MY_P="OOodi2-${PV}"
 DESCRIPTION="automated dictionary installer for OpenOffice"

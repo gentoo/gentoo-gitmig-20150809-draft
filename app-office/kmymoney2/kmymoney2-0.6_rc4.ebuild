@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.6_rc4.ebuild,v 1.2 2004/04/28 16:39:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.6_rc4.ebuild,v 1.3 2004/06/24 22:41:49 agriffis Exp $
 
 inherit kde-base
 need-kde 3

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.4.ebuild,v 1.6 2004/06/02 02:28:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.4.ebuild,v 1.7 2004/06/24 22:45:20 agriffis Exp $
 
 DESCRIPTION="Desktop Publishing (DTP) and Layout program for Linux."
 HOMEPAGE="http://web2.altmuehlnet.de/fschmid/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-2.9.ebuild,v 1.8 2004/04/07 19:00:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-2.9.ebuild,v 1.9 2004/06/24 22:44:58 agriffis Exp $
 
 inherit libtool eutils
 

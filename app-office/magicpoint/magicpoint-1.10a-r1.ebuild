@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.5 2004/06/02 02:22:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.6 2004/06/24 22:42:45 agriffis Exp $
 
 inherit elisp-common eutils
 

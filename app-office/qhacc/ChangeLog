@@ -1,6 +1,6 @@
 # ChangeLog for app-office/qhacc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.10 2004/06/19 07:30:52 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.11 2004/06/24 22:44:58 agriffis Exp $
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> qhacc-2.9.8.ebuild:
   Stable on sparc.

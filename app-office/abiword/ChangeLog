@@ -1,6 +1,6 @@
 # ChangeLog for app-office/abiword
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.80 2004/06/02 04:14:27 lv Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.81 2004/06/24 22:38:43 agriffis Exp $
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> abiword-2.0.7.ebuild:
   marking stable on amd64 ahead of schedule for the gcc 3.4 fix

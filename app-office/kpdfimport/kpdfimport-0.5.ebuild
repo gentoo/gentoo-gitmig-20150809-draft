@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpdfimport/kpdfimport-0.5.ebuild,v 1.2 2004/03/19 08:05:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpdfimport/kpdfimport-0.5.ebuild,v 1.3 2004/06/24 22:42:11 agriffis Exp $
 
 inherit kde-base
 need-kde 3

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.1.ebuild,v 1.11 2004/06/19 06:06:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.1.ebuild,v 1.12 2004/06/24 22:39:06 agriffis Exp $
 
 DESCRIPTION="Convert UML diagrams produced with Dia to various source code flavours."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
