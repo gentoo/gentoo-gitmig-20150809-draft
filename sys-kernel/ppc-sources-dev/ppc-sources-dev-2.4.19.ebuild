@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.4 2002/08/17 23:47:23 gerk Exp $ 
+# Distributed under the terms of the GNU General Public License v2
+# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.5 2002/10/04 06:36:06 vapier Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
