@@ -1,11 +1,11 @@
 # ChangeLog for app-text/pdf2html
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.2 2004/02/23 13:37:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.3 2004/02/23 16:29:34 usata Exp $
 
 *pdf2html-1.4 (21 Feb 2004)
 
   23 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> pdf2html-1.4.ebuild:
-  Marked x86 only. See bug #15980
+  Added ~alpha. After I cleaned ccache directory it emerged fine..
 
   21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
   pdf2html-1.4.ebuild:
