@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/amap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.14 2004/09/25 05:00:04 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.15 2005/01/09 05:16:50 dragonheart Exp $
+
+*amap-4.7 (09 Jan 2005)
+
+  09 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/4.7-system-pcre.patch, +amap-4.7.ebuild:
+  Version bump as per bug #71433. Thanks to Robert Rodgers <rrodgers@gmail.com>
+  and Vanquirius <marcelogoes@gmail.com>.
 
 *amap-4.6 (25 Sep 2004)
 

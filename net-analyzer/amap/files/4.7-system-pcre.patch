@@ -1,0 +1,43 @@
+diff -Naur amap-4.7.orig/amap-inc.h amap-4.7/amap-inc.h
+--- amap-4.7.orig/amap-inc.h	2004-12-18 22:18:07.077224832 -0200
++++ amap-4.7/amap-inc.h	2004-12-18 22:19:09.243774080 -0200
+@@ -20,7 +20,7 @@
+ #include <errno.h>
+ #include <sys/resource.h>
+ #include <sys/wait.h>
+-#include "pcre-3.9/pcre.h"
++#include <pcre.h>
+ #ifdef OPENSSL
+  #include <openssl/ssl.h>
+  #include <openssl/err.h>
+diff -Naur amap-4.7.orig/configure amap-4.7/configure
+--- amap-4.7.orig/configure	2004-12-18 22:18:07.064226808 -0200
++++ amap-4.7/configure	2004-12-18 22:19:40.911959784 -0200
+@@ -13,10 +13,6 @@
+   exit 0
+ fi
+ 
+-cd pcre-3.9 || exit 1
+-./configure || exit 1
+-cd ..
+-
+ echo
+ echo
+ echo "Starting amap auto configuration ..."
+diff -Naur amap-4.7.orig/Makefile.am amap-4.7/Makefile.am
+--- amap-4.7.orig/Makefile.am	2004-12-18 22:18:07.065226656 -0200
++++ amap-4.7/Makefile.am	2004-12-18 22:18:43.609671056 -0200
+@@ -1,11 +1,11 @@
+ CC=gcc
+-LIB=-lpcre -L./pcre-3.9/ -I./pcre-3.9/
++LIB=-lpcre
+ OPT=-O2
+ OPT_DEBUG=-ggdb -Wall -lefence
+ DIR=/bin
+ SCRIPTS=appdefs.trig appdefs.resp appdefs.rpc
+ MANPAGE=amap.1
+-all:	pcre strip
++all:	amap amapcrap
+ 
+ pcre:
+ 	cd pcre-3.9 && make

@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 afeb7b6084a256c24595976154666174 ChangeLog 1694
+MD5 5ebc9f3a86ff38b18b05d2d8ee9fea3d amap-4.7.ebuild 1358
+MD5 adb203ccaff76e121de0b8426a3db48b amap-4.6.ebuild 1330
+MD5 76b8d7f65fd9a06a7cde4845737a9052 ChangeLog 1950
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 64198856b7adfc72015b16ebc44a732e amap-4.6.ebuild 1325
-MD5 c50165b5bb6fb19a617df68f6001d98d files/4.6-system-pcre.patch 1103
+MD5 0650e1a8429fc7f1febbffe8435ed1c4 files/digest-amap-4.7 60
 MD5 a5f16a887d88f7d685dbaed470ee6ec8 files/digest-amap-4.6 60
+MD5 c1c1d543f5427e6ccf71fe8648a6b322 files/4.7-system-pcre.patch 1155
+MD5 c50165b5bb6fb19a617df68f6001d98d files/4.6-system-pcre.patch 1103
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBWBfiHTu7gpaalycRAktGAKCKnxIS7Ns+y0QCGuQAEJu1hEhddwCcDanF
-JvVi+A3/c1o3GMXCAcxRXzk=
-=Adoe
+iD8DBQFB4L5ImdTrptrqvGERAur8AJ9YcxrVsSbiaK4kt9cPMS0MepQZrACdF0Tt
+RLIdOjScw2CxoX8RY2mQ0sY=
+=0Qg2
 -----END PGP SIGNATURE-----

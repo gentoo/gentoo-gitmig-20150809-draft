@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.6.ebuild,v 1.2 2005/01/09 05:16:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.7.ebuild,v 1.1 2005/01/09 05:16:50 dragonheart Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://packetstormsecurity.nl/groups/thc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ssl"
 
 DEPEND="virtual/libc
@@ -25,7 +25,7 @@ src_unpack() {
 		amap.h || die
 
 	rm -rf pcre-3.9
-	epatch ${FILESDIR}/${PV}-system-pcre.patch
+	epatch ${FILESDIR}/${PV}-system-pcre.patch || die "patch failed"
 }
 
 src_compile() {
