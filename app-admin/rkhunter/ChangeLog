@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/ChangeLog,v 1.13 2004/08/12 00:02:29 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/ChangeLog,v 1.14 2004/08/15 20:24:40 solar Exp $
+
+  15 Aug 2004; <solar@gentoo.org> rkhunter-1.1.5.ebuild:
+  added doexe check_update.sh bug 60387
 
 *rkhunter-1.1.5 (11 Aug 2004)
 
