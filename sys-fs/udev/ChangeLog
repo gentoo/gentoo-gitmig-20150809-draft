@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.36 2004/03/06 23:44:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.37 2004/03/16 21:41:17 seemant Exp $
+
+*udev-019-r2 (16 Mar 2004)
+
+  16 Mar 2004; Seemant Kulleen <seemant@gentoo.org> udev-016-r1.ebuild,
+  udev-016-r2.ebuild, udev-017-r1.ebuild, udev-017.ebuild, udev-018-r1.ebuild,
+  udev-018-r2.ebuild, udev-018-r3.ebuild, udev-018-r4.ebuild,
+  udev-018-r5.ebuild, udev-018.ebuild, udev-019-r1.ebuild, udev-019-r2.ebuild,
+  udev-019-r3.ebuild, udev-019.ebuild, udev-021-r1.ebuild, udev-021.ebuild:
+  bumps to PROVIDE virtual/dev-manager
 
 *udev-021 (04 Mar 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-018-r2.ebuild,v 1.1 2004/02/26 21:17:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-019-r2.ebuild,v 1.1 2004/03/16 21:41:17 seemant Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -23,6 +23,8 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND}
 	>=sys-apps/baselayout-1.8.6.12-r3"
 # We need some changes for devfs type layout
+
+PROVIDE="virtual/dev-manager"
 
 pkg_setup() {
 	[ "${USE_KLIBC}" = "yes" ] && check_KV
@@ -62,9 +64,6 @@ src_unpack() {
 	then
 		ln -snf ${ROOT}/usr/src/linux ${S}/klibc/linux
 	fi
-
-	# Fix build problem, bug #42377
-	epatch ${FILESDIR}/${P}-sysfs-build-fix.patch
 }
 
 src_compile() {
@@ -148,3 +147,13 @@ pkg_preinst() {
 		mv -f ${ROOT}/etc/udev/udev.config ${ROOT}/etc/udev/udev.rules
 	fi
 }
+
+pkg_postinst() {
+	if [ "${ROOT}" = "/" -a -n "`pidof udevd`" ]
+	then
+		killall -15 udevd &>/dev/null
+		sleep 1
+		killall -9 udevd &>/dev/null
+	fi
+}
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-021.ebuild,v 1.3 2004/03/10 13:13:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-018-r5.ebuild,v 1.1 2004/03/16 21:41:17 seemant Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~hppa ~amd64 ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-apps/hotplug-20030805-r1
@@ -23,6 +23,8 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND}
 	>=sys-apps/baselayout-1.8.6.12-r3"
 # We need some changes for devfs type layout
+
+PROVIDE="virtual/dev-manager"
 
 pkg_setup() {
 	[ "${USE_KLIBC}" = "yes" ] && check_KV
@@ -34,8 +36,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-udev_add_c-gcc295-compat.patch
-
 	# No need to clutter the logs ...
 	sed -ie '/^DEBUG/ c\DEBUG = false' Makefile
 	# Do not use optimization flags from the package
@@ -64,6 +64,9 @@ src_unpack() {
 	then
 		ln -snf ${ROOT}/usr/src/linux ${S}/klibc/linux
 	fi
+
+	# Fix build problem, bug #42377
+	epatch ${FILESDIR}/${P}-sysfs-build-fix.patch
 }
 
 src_compile() {
@@ -100,7 +103,7 @@ src_compile() {
 src_install() {
 	dobin udevinfo
 	into /
-	dosbin udev udevd udevsend udevstart
+	dosbin udev udevd udevsend
 	dosbin extras/scsi_id/scsi_id
 	# Device-mapper support?
 	if false
@@ -117,7 +120,7 @@ src_install() {
 	doins ${FILESDIR}/udev.conf
 #	newins etc/udev/udev.rules udev.rules.example
 	# For devfs style layout
-	newins ${FILESDIR}/udev.rules-018 udev.rules
+	newins ${FILESDIR}/udev.rules.post_012 udev.rules
 	# Our own custom udev.permissions
 	doins ${FILESDIR}/udev.permissions
 #	doins etc/udev/udev.permissions
@@ -145,14 +148,5 @@ pkg_preinst() {
 	     ! -f "${ROOT}/etc/udev/udev.rules" ]
 	then
 		mv -f ${ROOT}/etc/udev/udev.config ${ROOT}/etc/udev/udev.rules
-	fi
-}
-
-pkg_postinst() {
-	if [ "${ROOT}" = "/" -a -n "`pidof udevd`" ]
-	then
-		killall -15 udevd &>/dev/null
-		sleep 1
-		killall -9 udevd &>/dev/null
 	fi
 }
