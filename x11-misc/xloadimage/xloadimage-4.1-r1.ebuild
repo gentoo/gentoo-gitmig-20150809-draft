@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1-r1.ebuild,v 1.5 2003/04/18 17:17:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1-r1.ebuild,v 1.6 2003/06/07 12:09:08 pauldv Exp $
 
 IUSE="tiff jpeg png"
 
@@ -35,6 +35,7 @@ src_unpack() {
 	sed -i "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf
 
 	chmod +x ${S}/configure
+	sed -i "s:^#include <varargs.h>:#include <stdarg.h>:" ${S}/rlelib.c
 }
 
 src_install () {

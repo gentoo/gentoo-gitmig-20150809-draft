@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xloadimage
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.13 2003/04/18 17:17:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.14 2003/06/07 12:09:08 pauldv Exp $
+
+  07 Jun 2003; Paul de Vrieze <pauldv@gentoo.org> xloadimage-4.1-r1.ebuild:
+  Make a fix so xloadimage compiles with gcc-3.3
 
 *xloadimage-4.1-r1 (02 Jan 2003)
 
