@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.16 2004/10/09 21:34:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.17 2004/10/24 08:19:36 fafhrd Exp $
+
+  24 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> libffi-3.3.3-r1.ebuild,
+  libffi-3.3.4.ebuild:
+  Making gcc depends more explicit; libffi really needs to be installed
+  alongside gcc on of these days...
 
   09 Oct 2004; David Holm <dholm@gentoo.org> libffi-3.4.1-r1.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.3-r1.ebuild,v 1.1 2004/09/22 21:48:48 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.3-r1.ebuild,v 1.2 2004/10/24 08:19:36 fafhrd Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -96,7 +96,7 @@ DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
-	>=sys-devel/gcc-3.3.3_pre20040130
+	=sys-devel/gcc-3.3.3*
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
