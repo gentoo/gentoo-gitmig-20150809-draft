@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.50.ebuild,v 1.3 2005/01/24 20:32:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.50.ebuild,v 1.4 2005/02/10 09:21:31 spock Exp $
 
 inherit mount-boot eutils
 
@@ -18,7 +18,7 @@ src_unpack() {
 	cd ${S}
 
 	# send the DOS newlines where they belong - /dev/null ;>
-	sed -e 's/\x0d//g' -i Makefile
+	sed -e 's/\x0d//g' -i Makefile || die
 	epatch "${FILESDIR}"/${P}-hardened.patch
 	if use serial ; then
 		sed -e 's/#define SERIAL_CONSOLE_DEFAULT 0/#define SERIAL_CONSOLE_DEFAULT 1/' -i config.h
@@ -31,7 +31,7 @@ src_compile() {
 
 src_install() {
 	dodir /boot/memtest86plus
-	cp memtest.bin ${D}/boot/memtest86plus/memtest.bin
+	cp memtest.bin ${D}/boot/memtest86plus/memtest.bin || die
 	dodoc README README.build-process
 }
 
@@ -46,15 +46,17 @@ pkg_postinst() {
 	# a little magic to make users' life as easy as possible ;)
 	bootpart=0
 	root="(hd0,0)"
-	res=`cat /etc/fstab | grep /boot | grep -v "^#" | awk '{print $1}' | grep '/dev/hd[a-z0-9]\+'`
+	res=`grep /boot /etc/fstab | grep -v "^#" | awk '{print $1}' | grep '/dev/hd[a-z0-9]\+'`
 	if [ -n "${res}" ] ; then
 		bootpart=1
 	else
-		res=`cat /etc/fstab | grep -v '^#' | grep -e '/dev/hd[a-z0-9]\+[[:space:]]\+\/[[:space:]]\+' | awk '{print $1}'`
+		res=`grep -v '^#' /etc/fstab | grep -e '/dev/hd[a-z0-9]\+[[:space:]]\+\/[[:space:]]\+' | \
+			awk '{print $1}'`
 	fi
 
 	if [ -n "${res}" ] ; then
-		root=`echo ${res} | grep -o '[a-z][0-9]' | tr -t a-z 0123456789 | sed -e 's/\([0-9]\)\([0-9]\)/\1 \2/' | awk '{print "(hd" $1 "," $2-1 ")" }'`
+		root=`echo "${res}" | grep -o '[a-z][0-9]' | tr -t a-z 0123456789 | \
+			  sed -e 's/\([0-9]\)\([0-9]\)/\1 \2/' | awk '{print "(hd" $1 "," $2-1 ")" }'`
 	fi
 
 	einfo "    > root ${root}"
