@@ -18,6 +18,7 @@ xemacs
 
 # this is going to be a hard thing to port, if even doable
 mpi
+sasl
 
 # until we can get mysql keyworded
 mysql
