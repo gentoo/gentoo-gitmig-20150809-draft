@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-1.8.4-r2.ebuild,v 1.1 2004/06/30 15:51:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-1.8.4-r2.ebuild,v 1.2 2004/10/26 14:02:44 vapier Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://www.boutell.com/gd/"
@@ -30,7 +30,7 @@ src_unpack() {
 	local incopts
 
 	use alpha \
-		&& [ "$(gcc-getCC)" == "ccc" ] \
+		&& [ "$(tc-getCC)" == "ccc" ] \
 		&& epatch ${FILESDIR}/${PV}-dec-alpha-compiler.diff
 
 	use X \
@@ -58,7 +58,7 @@ src_unpack() {
 		-e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
 		-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
 		-e "s:^\(INCLUDEDIRS\)=:\1=${incopts} :" \
-		-e "s:\(COMPILER=\)gcc:\1${CC:-gcc}:" \
+		-e "s:\(COMPILER=\)gcc:\1$(tc-getCC):" \
 		Makefile || die
 }
 
