@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0-r1.ebuild,v 1.6 2004/07/01 22:21:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0-r1.ebuild,v 1.7 2004/09/06 19:01:27 ciaranm Exp $
+
+inherit eutils
 
 MAX_NICK_LENGTH=30
 MAX_CLIENTS=500
@@ -158,7 +160,7 @@ src_compile()
 		myconf="--disable-kqueue"
 	fi
 	# Wait for admins to see the default variables.
-	sleep 5
+	epause 5
 
 	use debug || myconf="${myconf} --disable-assert"
 	use ssl && myconf="${myconf} --enable-openssl"
