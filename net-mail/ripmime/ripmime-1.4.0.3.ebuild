@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.4.0.0.ebuild,v 1.5 2005/01/30 04:43:59 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.4.0.3.ebuild,v 1.1 2005/01/30 04:43:59 superlag Exp $
 
 DESCRIPTION="extract attachment files out of a MIME-encoded email pack"
 HOMEPAGE="http://pldaniels.com/ripmime/"
