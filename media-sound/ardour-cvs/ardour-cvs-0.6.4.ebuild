@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.6 2003/05/25 13:05:37 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.7 2003/05/29 10:49:50 jje Exp $
 
 IUSE="nls"
 
@@ -28,7 +28,8 @@ DEPEND="$DEPEND
 	sys-libs/gdbm
 	>=media-libs/ladspa-sdk-1.12
 	>=media-libs/libsamplerate-0.0.14
-	>=media-libs/liblrdf-0.3.1"
+	>=media-libs/liblrdf-0.3.1
+	>=dev-libs/libxml2-2.5.7"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
