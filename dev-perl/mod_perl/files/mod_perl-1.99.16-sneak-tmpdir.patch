@@ -1,0 +1,11 @@
+--- t/conf/modperl_extra.pl.orig	2004-09-23 21:56:23.443749414 -0700
++++ t/conf/modperl_extra.pl	2004-09-23 21:55:22.149258138 -0700
+@@ -52,6 +52,8 @@
+ 
+ #see t/response/TestModperl/env.pm
+ $ENV{MODPERL_EXTRA_PL} = __FILE__;
++$ENV{TMPDIR} = __FILE__;
++$ENV{TMPDIR} =~ s,/work/.*,/temp,;
+ 
+ my $ap_mods  = scalar grep { /^Apache/ } keys %INC;
+ my $apr_mods = scalar grep { /^APR/    } keys %INC;
