@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/sashxb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/ChangeLog,v 1.1 2002/07/09 22:12:49 blizzy Exp $
+
+*sashxb-1.0.1 (10 Jul 2002)
+
+  10 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
+
+  Initial import, closes bug #4126.
+  ebuild submitted by Leonardo Boshell <gentoo@kapcoweb.com>
