@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.6 2004/03/01 03:54:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.7 2004/03/26 16:24:22 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> fmod-3.61.ebuild,
+  fmod-3.62.ebuild, fmod-3.70.ebuild, fmod-3.71.ebuild:
+  .70 and .71 in stable x86.  Added empty IUSE
 
 *fmod-3.71 (29 Feb 2004)
 
