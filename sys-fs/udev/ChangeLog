@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.69 2004/10/10 04:23:34 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.70 2004/10/12 00:36:38 gregkh Exp $
+
+*udev-035 (11 Oct 2004)
+
+  11 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-035.ebuild:
+  035 bump
+  Lots more wait_for_sysfs warnings fixed.  If anyone sees any on their boxes,
+  please send them to the address that the message tells you to.
 
   09 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org> udev-034-r1.ebuild:
   oops, missed HOMEPAGE change for udev...
