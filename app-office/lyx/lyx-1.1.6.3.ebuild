@@ -9,5 +9,5 @@ DESCRIPTION="Lyx itself (lyx-base), plus all the utils/packages it can make use 
 
 HOMEPAGE="http://www.lyx.org/"
 
-DEPEND="~app-office/lyx-utils-1.1.6.2
-	~app-office/lyx-base-1.1.6.2"
+DEPEND="~app-office/lyx-utils-1.1.6.3
+	~app-office/lyx-base-1.1.6.3"

@@ -3,9 +3,9 @@
 # Author Dan Armak <danarmak@gentoo.org>
 # $ /home/cvsroot/gentoo-x86/skel.build,v 1.3 2001/07/05 02:43:36 drobbins Exp$
 
-# The real version of LyX is 1.1.6fix2. As Portage has no support for
-# arbitrary suffixes like 'fix' (yet), this is translated into 1.1.6.2.
-P=lyx-1.1.6fix2
+# The real version of LyX is 1.1.6fix3. As Portage has no support for
+# arbitrary suffixes like 'fix' (yet), this is translated into 1.1.6.3.
+P=lyx-1.1.6fix3
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 

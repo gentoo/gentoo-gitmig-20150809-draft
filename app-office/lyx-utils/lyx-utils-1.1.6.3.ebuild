@@ -13,7 +13,7 @@ DESCRIPTION="All the utils/packages LyX (lyx-base.ebuild) can make use of."
 
 HOMEPAGE="http://www.lyx.org/"
 
-DEPEND="~app-office/lyx-base-1.1.6.2
+DEPEND="~app-office/lyx-base-1.1.6.3
 	app-text/ghostscript
 	app-text/xpdf
 	app-text/ispell
@@ -21,8 +21,12 @@ DEPEND="~app-office/lyx-base-1.1.6.2
 	app-text/latex2html
 	media-gfx/imagemagick
 	virtual/lpr
-	app-text/rcs"
-
+	app-text/rcs
+	dev-util/cvs
+	app-text/sgmltools-lite
+	app-text/noweb"
+#	app-text/chktex"
+	
 # Missing from this list:
 # sgmltools - www.sgmltools.org is unreachable so I couldn't make
 # an ebuild for it. Lyx uses sgmltools for DocBook conversion.
