@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.47 2004/01/26 22:06:26 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.48 2004/02/18 22:41:31 joker Exp $
+
+*sparc-sources-2.4.24-r2 (18 Feb 2004)
+
+  18 Feb 2004; Christian Birchinger <joker@gentoo.org>
+  sparc-sources-2.4.24-r2.ebuild:
+  Added a mremap_unmap security fix
 
 *sparc-sources-2.4.24-r1 (26 Jan 2004)
 
