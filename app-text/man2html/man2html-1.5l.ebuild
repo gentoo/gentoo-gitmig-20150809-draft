@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l.ebuild,v 1.1 2003/09/28 02:03:47 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l.ebuild,v 1.2 2003/10/27 08:36:33 aliz Exp $
 
 DESCRIPTION="Convert manual pages to HTML"
 HOMEPAGE="http://freshmeat.net/projects/man/"
-SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-${PV}.tar.gz"
+SRC_URI="mirror://kernel/linux/utils/man/man-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha arm hppa mips sparc x86"
