@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.20 2004/06/01 14:15:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.21 2004/06/17 22:09:28 mr_bones_ Exp $
+
+  17 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sysstat-3.3.6-r1.ebuild, sysstat-4.0.7.ebuild, sysstat-5.0.0.ebuild,
+  sysstat-5.0.1.ebuild:
+  clean out older versions
 
   01 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> sysstat-5.0.2.ebuild:
   Keyworded hppa
