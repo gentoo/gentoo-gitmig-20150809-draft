@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.54 2004/12/07 01:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.55 2004/12/07 02:54:04 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -36,12 +36,15 @@ then
 			virtual/modutils
 			sys-devel/make )"
 	PROVIDE="virtual/linux-sources"
-elif [ "${ETYPE}" = "headers" ]
+elif [[ ${CTARGET} = ${CHOST} ]]
 then
-	PROVIDE="virtual/kernel virtual/os-headers"
-else
-	eerror "Unknown ETYPE=\"${ETYPE}\"!"
-	die
+	if [ "${ETYPE}" = "headers" ]
+	then
+		PROVIDE="virtual/kernel virtual/os-headers"
+	else
+		eerror "Unknown ETYPE=\"${ETYPE}\"!"
+		die
+	fi
 fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
