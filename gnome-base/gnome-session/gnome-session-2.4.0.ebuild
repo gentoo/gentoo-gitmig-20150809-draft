@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.0.ebuild,v 1.3 2003/10/05 14:55:35 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.0.ebuild,v 1.4 2003/10/10 11:25:25 leonardop Exp $
 
 inherit gnome2
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	!gnome-base/gnome-core"
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
-DOC="AUTHORS COPYING* README HACKING INSTALL NEWS TODO ChangeLog"
+DOCS="AUTHORS ChangeLog COPYING* HACKING NEWS README"
 
 G2CONF="${G2CONF} $(use_enable ipv6)"
 
