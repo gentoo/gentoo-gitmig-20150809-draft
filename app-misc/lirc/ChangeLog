@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.8 2003/10/22 21:08:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.9 2003/11/16 17:09:32 brad_mssw Exp $
+
+  16 Nov 2003; Brad House <brad_mssw@gentoo.org> lirc-0.6.6-r1.ebuild:
+  mark stable on amd64
 
   23 Oct 2003; Martin Holzer <mholzer@gentoo.org> lirc-0.7.0_pre2.ebuild:
   added warning about irda and kernel. Closes #30847.
