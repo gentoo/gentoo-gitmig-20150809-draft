@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-svg
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.1 2003/12/15 17:28:55 usata Exp $
+
+*ruby-svg-1.0.3 (16 Dec 2003)
+
+  16 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ruby-svg-1.0.3.ebuild:
+  Initial import. Ebuild submitted by Martin Stannard <martins@aardvark.net.au>
+  Closing bug #35773
+
