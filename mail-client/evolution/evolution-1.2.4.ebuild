@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.1 2004/05/30 02:43:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.2 2004/06/09 15:36:40 agriffis Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 
@@ -125,26 +125,26 @@ src_compile() {
 	local myconf=""
 	local MOZILLA="${MOZILLA_FIVE_HOME}"
 
-	if [ -n "`use pda`" ] ; then
+	if use pda ; then
 		myconf="${myconf} --with-pisock=/usr --enable-pilot-conduits=yes"
 	else
 		myconf="${myconf} --enable-pilot-conduits=no"
 	fi
 
-	if [ -n "`use ldap`" ] ; then
+	if use ldap ; then
 		myconf="${myconf} --with-openldap=yes --with-static-ldap=no"
 	else
 		myconf="${myconf} --with-openldap=no"
 	fi
 
-	if [ -n "`use kerberos`" ]; then
+	if use kerberos; then
 		myconf="${myconf} --with-krb5=/usr --with-krb4=/usr"
 	else
 		myconf="${myconf} --with-krb5=no --with-krb4=no"
 	fi
 
 	# Use Mozilla NSS libs if 'mozilla' *and* 'ssl' in USE
-	if [ -n "`use ssl`" -a -n "`use mozilla`" ] ; then
+	if use ssl && use mozilla; then
 		myconf="${myconf} --enable-nss=yes \
 			--with-nspr-includes=${MOZILLA}/include/nspr \
 			--with-nspr-libs=${MOZILLA} \
@@ -156,23 +156,23 @@ src_compile() {
 	fi
 
 	# Else use OpenSSL if 'mozilla' not in USE  ...
-	if [ -n "`use ssl`" -a -z "`use mozilla`" ] ; then
+	if use ssl && ! use mozilla; then
 		myconf="${myconf} --enable-openssl=yes"
 	fi
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		myconf="${myconf} --enable-gtk-doc"
 	else
 		myconf="${myconf} --disable-gtk-doc"
 	fi
 
-	if [ -n "`use ipv6`" ] ; then
+	if use ipv6 ; then
 		myconf="${myconf} --enable-ipv6=yes"
 	else
 		myconf="${myconf} --enable-ipv6=no"
 	fi
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		myconf="${myconf} --disable-nls"
 	fi
 
@@ -217,7 +217,7 @@ src_install() {
 		install || die
 
 	# remove kde link if USE="-kde"
-	if [ -z "`use kde`" ]; then
+	if ! use kde; then
 		rm -rf ${D}/usr/share/applnk
 	fi
 
