@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.2 2002/02/21 16:07:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.3 2002/02/21 19:34:47 azarah Exp $
+
+  21 Feb 2002; M.Schlemmer <azarah@gentoo.org> multi-gnome-terminal-1.3.12.ebuild :
+
+  Just take Scrollkeeper update out of the 'make intall', and into
+  pkg_postinst().
 
 *multi-gnome-terminal-1.3.12 (21 Feb 2002)
 
