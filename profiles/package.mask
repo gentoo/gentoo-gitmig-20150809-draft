@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# rsync-2.5.4 needs to be tested by whoever runs chiba
+=net-misc/rsync-2.5.4
+
 # According to judge on irc, this needs to be removed from portage
 # for various legal reasons 
 >=net-misc/gift-0.9.7
