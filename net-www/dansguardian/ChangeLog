@@ -1,6 +1,11 @@
 # ChangeLog for net-www/dansguardian
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dansguardian/ChangeLog,v 1.5 2003/12/05 20:25:07 method Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/dansguardian/ChangeLog,v 1.6 2004/03/15 00:23:43 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  dansguardian-2.6.0.ebuild, dansguardian-2.7.2.ebuild,
+  dansguardian-2.7.5.ebuild:
+  tidy extra versions, leaving one stable and one unstable
 
 *dansguardian-2.7.6 (05 Dec 2003)
 
