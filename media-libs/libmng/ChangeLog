@@ -1,11 +1,17 @@
 # ChangeLog for media-libs/libmng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.15 2004/07/18 14:20:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.16 2004/08/06 13:16:45 agriffis Exp $
+
+*libmng-1.0.8 (06 Aug 2004)
+
+  06 Aug 2004; Aron Griffis <agriffis@gentoo.org> +libmng-1.0.8.ebuild:
+  Bump to 1.0.8 for the sake of eventually supporting mng in firefox #54651
 
 *libmng-1.0.7 (15 Jul 2004)
 
-  15 Jul 2004; Chris White <chriswhite@gentoo.org> :
-  version bump thanks to bug report by Raphael Assenat.  Added self as mantainer.
+  15 Jul 2004; Chris White <chriswhite@gentoo.org> libmng-1.0.7.ebuild:
+  version bump thanks to bug report by Raphael Assenat.  Added self as
+  mantainer.
 
   19 Jun 2004; Tom Gall <tgall@gentoo.org> libmng-1.0.5.ebuild:
   Stable on ppc64
