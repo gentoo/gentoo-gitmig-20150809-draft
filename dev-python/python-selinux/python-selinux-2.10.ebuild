@@ -1,6 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.10.ebuild,v 1.2 2003/12/06 23:44:01 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.10.ebuild,v 1.3 2003/12/07 00:59:49 pebenito Exp $
+
+inherit python
+python_version
 
 DESCRIPTION="Python bindings for SELinux functions"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
@@ -24,10 +27,10 @@ src_unpack() {
 src_compile() {
 	cd ${S}
 	einfo "Compiling selinux.so"
-	gcc -fPIC -shared -o selinux.so -I /usr/include/python2.2/ selinux.c -lselinux || die
+	gcc -fPIC -shared -o selinux.so -I /usr/include/python${PYVER}/ selinux.c -lselinux || die
 }
 
 src_install() {
-	insinto /usr/lib/python2.2/site-packages
+	insinto /usr/lib/python${PYVER}/site-packages
 	doins selinux.so
 }

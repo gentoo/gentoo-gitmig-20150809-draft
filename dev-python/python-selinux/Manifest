@@ -1,5 +1,5 @@
-MD5 1c5ab0ef01568cbf783e23fd3581d035 ChangeLog 2470
+MD5 40499ee5719c9c973c2394b49bc4dfa1 ChangeLog 2541
 MD5 c998c579cfc08c6860f78304a67cfce9 metadata.xml 525
-MD5 80a6e6b843598c36ec171d9ba60b5e21 python-selinux-2.10.ebuild 807
+MD5 3c4912511a7e2207b5341e7e85187f47 python-selinux-2.10.ebuild 848
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-python-selinux-2.10 0
 MD5 7917bf5ac68090fb6fcfe784a4807463 files/python-selinux-2.10.c.bz2 5624
