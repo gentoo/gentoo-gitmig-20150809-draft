@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-4.6.ebuild,v 1.2 2005/01/21 20:59:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-4.8.ebuild,v 1.1 2005/01/29 21:44:30 latexer Exp $
 
 inherit 64-bit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://rxvt-unicode-dist.plan9.de/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips ~amd64 ~ppc"
+KEYWORDS="~x86 ~sparc ~mips ~amd64 ppc"
 
 DEPEND="virtual/libc
 	virtual/x11
