@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.91 2004/03/04 23:44:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.92 2004/03/11 07:34:20 robbat2 Exp $
+
+  10 Mar 2004; Robin Johnson <robbat2@gentoo.org>
+  mysql-4.0.18.ebuild:
+  bug #44308, bump 4.0.18 to same stable level as 4.0.17, strongly recommended
+  that ppc/alpha/mips move to 4.0.18 as well
 
 *mysql-4.0.18 (04 Mar 2004)
 
