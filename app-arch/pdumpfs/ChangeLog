@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/pdumpfs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/ChangeLog,v 1.1 2003/09/09 01:03:25 matsuu Exp $
+
+*pdumpfs-0.6 (09 Sep 2003)
+
+  09 Sep 2003; MATSUU Takuto <matsuu@gentoo.org> pdumpfs-0.6.ebuild:
+  Initial import. Bug #26986
+
