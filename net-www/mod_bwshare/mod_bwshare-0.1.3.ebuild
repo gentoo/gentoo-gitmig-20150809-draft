@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bwshare/mod_bwshare-0.1.3.ebuild,v 1.2 2005/02/17 14:42:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bwshare/mod_bwshare-0.1.3.ebuild,v 1.3 2005/02/17 17:23:10 robbat2 Exp $
 
 inherit eutils apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.topology.org/src/bwshare/README.html"
 SRC_URI="http://www.topology.org/src/bwshare/bwshare-${PV}.zip"
 
 KEYWORDS="~x86"
-DEPEND=""
+DEPEND="app-arch/unzip"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
