@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.3 2004/10/26 04:24:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.4 2004/10/26 04:46:03 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -61,26 +61,6 @@ HARDENED_GCC_WORKS="x86 sparc amd64"
 SPLIT_SPECS="${SPLIT_SPECS:="true"}"
 
 
-# Recently there has been a lot of stability problem in Gentoo-land.  Many
-# things can be the cause to this, but I believe that it is due to gcc3
-# still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himeself) yet.
-#
-# This can clearly be seen in large builds like glibc, where too aggressive
-# CFLAGS cause the tests to fail miserbly.
-#
-# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
-# knows what he is talking about:
-#
-#   People really shouldn't force code-specific options on... It's a
-#   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when apropriate).
-#
-# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
-# you do not like it, comment it, but do not bugreport if you run into
-# problems.
-#
-# <azarah@gentoo.org> (13 Oct 2002)
 gcc_do_filter_flags() {
 	strip-flags
 
@@ -151,6 +131,14 @@ src_unpack() {
 	# misc patches that havent made it into a patch tarball yet
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
 	epatch ${FILESDIR}/gcc-spec-env.patch
+	epatch ${FILESDIR}/3.4.2/400-mips-pr17565.patch
+	epatch ${FILESDIR}/3.4.2/401-ppc-eabi-typo.patch
+	epatch ${FILESDIR}/3.4.2/600-gcc34-arm-ldm-peephole.patch
+	epatch ${FILESDIR}/3.4.2/601-gcc34-arm-ldm.patch
+	epatch ${FILESDIR}/3.4.2/602-sdk-libstdc++-includes.patch
+	epatch ${FILESDIR}/3.4.2/700-pr15068-fix.patch
+	epatch ${FILESDIR}/3.4.2/800-arm-bigendian.patch
+	epatch ${FILESDIR}/3.4.2/810-arm-bigendian-uclibc.patch
 
 	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
 	if use mips && use !multilib; then
@@ -210,7 +198,9 @@ src_install() {
 	S="${WORKDIR}/build" \
 	make DESTDIR="${D}" install || die
 
-	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
+	if [ "${CHOST}" == "${CTARGET}" ] ; then
+		[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
+	fi
 
 	if [ "${SPLIT_SPECS}" == "true" ] ; then
 		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
@@ -310,23 +300,16 @@ src_install() {
 	fi
 
 	# This one comes with binutils
-	if [ -f "${D}${PREFIX}/lib/libiberty.a" ]
-	then
-		rm -f ${D}${PREFIX}/lib/libiberty.a
-	fi
-	if [ -f "${D}${LIBPATH}/libiberty.a" ]
-	then
-		rm -f ${D}${LIBPATH}/libiberty.a
-	fi
+	rm -f ${D}${PREFIX}/lib/libiberty.a
+	rm -f ${D}${LIBPATH}/libiberty.a
 
 	[ -e ${D}/${PREFIX}/lib/32 ] && rm -rf ${D}/${PREFIX}/lib/32
 
 	cd ${S}
-	if ! use build
-	then
+	if ! use build && [ "${CHOST}" == "${CTARGET}" ] ; then
 		cd ${S}
-		docinto /${CTARGET}
-		dodoc COPYING COPYING.LIB ChangeLog* FAQ MAINTAINERS README
+		docinto ${CTARGET}
+		dodoc ChangeLog* FAQ MAINTAINERS README
 		docinto ${CTARGET}/html
 		dohtml *.html
 		cd ${S}/boehm-gc
@@ -337,18 +320,17 @@ src_install() {
 		cd ${S}/gcc
 		docinto ${CTARGET}/gcc
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
-		if use f77
-		then
+		if use f77 ; then
 			cd ${S}/libf2c
 			docinto ${CTARGET}/libf2c
 			dodoc ChangeLog* README TODO *.netlib
 		fi
 		cd ${S}/libffi
 		docinto ${CTARGET}/libffi
-		dodoc ChangeLog* LICENSE README
+		dodoc ChangeLog* README
 		cd ${S}/libiberty
 		docinto ${CTARGET}/libiberty
-		dodoc ChangeLog* COPYING.LIB README
+		dodoc ChangeLog* README
 		if use objc
 		then
 			cd ${S}/libobjc
@@ -367,10 +349,10 @@ src_install() {
 		then
 			cd ${S}/fastjar
 			docinto ${CTARGET}/fastjar
-			dodoc AUTHORS CHANGES COPYING ChangeLog* NEWS README
+			dodoc AUTHORS CHANGES ChangeLog* NEWS README
 			cd ${S}/libjava
 			docinto ${CTARGET}/libjava
-			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
+			dodoc ChangeLog* HACKING NEWS README THANKS
 		fi
 
 		prepman ${DATAPATH}
@@ -382,10 +364,12 @@ src_install() {
 
 	# Rather install the script, else portage with changing $FILESDIR
 	# between binary and source package borks things ....
-	insinto /lib/rcscripts/awk
-	doins ${FILESDIR}/awk/fixlafiles.awk
-	exeinto /sbin
-	doexe ${FILESDIR}/fix_libtool_files.sh
+	if [ "${CHOST}" == "${CTARGET}" ] ; then
+		insinto /lib/rcscripts/awk
+		doins ${FILESDIR}/awk/fixlafiles.awk
+		exeinto /sbin
+		doexe ${FILESDIR}/fix_libtool_files.sh
+	fi
 
 	# we dont want these in freaky non-versioned paths that dont ever get used
 	if [ -d ${D}/${LIBPATH}/../$(get_libdir) ] ; then
