@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.53.ebuild,v 1.4 2005/03/05 02:52:49 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.53.ebuild,v 1.5 2005/03/07 16:58:43 beu Exp $
 
 inherit eutils gnuconfig
 
@@ -188,7 +188,7 @@ src_install () {
 	done
 
 	# symlink the default mpm
-	for i in prefork worker metuxmpm peruser threadpool leader; do
+	for i in prefork worker peruser threadpool leader; do
 	if [ -x ${D}/usr/sbin/apache2.${i} ]; then
 			dosym /usr/sbin/apache2.${i} /usr/sbin/apache2
 			break
@@ -341,13 +341,12 @@ setup_apache_vars() {
 select_mpms() {
 	useq mpm-prefork && mpms="${mpms} prefork"
 	useq mpm-worker && mpms="${mpms} worker"
-	useq mpm-metux && mpms="${mpms} metuxmpm"
 	useq mpm-peruser && mpms="${mpms} peruser"
 	useq mpm-threadpool && mpms="${mpms} threadpool"
 	useq mpm-leader && mpms="${mpms} leader"
 
 	if useq mpm-peruser; then
-		ewarn "Metux/Peruser are considered more or less insecure"
+		ewarn "Peruser is considered more or less insecure"
 		ewarn "and beta staged. Use at your own risk!"
 	fi
 

@@ -10,8 +10,8 @@ MD5 85c356965e12f6c785c887ddf6844714 apache-1.3.31-r3.ebuild 6872
 MD5 a6568a1f276ed27458ab61fb5897bca2 apache-1.3.33.ebuild 6851
 MD5 784b3e3150529826ac47e99ec3514f90 apache-1.3.29-r2.ebuild 7178
 MD5 d039a8316ffde50c2331f0d446623147 apache-1.3.31.ebuild 6693
-MD5 d6fa97751da7f35477d99700182a350b ChangeLog 55674
-MD5 3517fc5d9ca647e4cc2c09985ec7d6aa apache-2.0.53.ebuild 11770
+MD5 ab04b72f2132c25378cec6cd96cdfaac ChangeLog 55782
+MD5 d298c5e82fd49e3f6fb6f3e4a4fccbef apache-2.0.53.ebuild 11711
 MD5 7ee11979b35fe1539a4feb3d6c6b613c apache-1.3.33-r1.ebuild 8632
 MD5 cd6aff6c1515610209f5e62e56ea47f8 apache-1.3.32.ebuild 6616
 MD5 451d45c9613e9ed7ee770085a8e28ef8 apache-2.0.51.ebuild 12831
@@ -100,7 +100,7 @@ MD5 a63b9472904d3500cf72b370a9ee3200 files/patches/1.3.31-r1/00_gentoo_db4_detec
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCKR8IjUHll2nfF60RAnGdAJ0e9hVUqqwwEWGfNXtv2RO8DNKTLQCaA5XQ
-VrpE6qmgwpBEd+I+7d1ZJ8k=
-=bFr/
+iD8DBQFCLIhLjUHll2nfF60RAohrAJ9cgbmoZtdQbSIEv46CC5JDynarQACeLfqc
+/t04hJeKGqbP6WXJpN9ud9Y=
+=Xqbj
 -----END PGP SIGNATURE-----
