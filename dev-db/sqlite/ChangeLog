@@ -1,10 +1,17 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.12 2003/02/12 05:49:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.13 2003/04/22 10:21:59 robbat2 Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*sqlite-2.8.0 (22 Apr 2003)
+
+  22 Apr 2003: Robin Johnson <robbat2@gentoo.org> sqlite-2.8.0.ebuild:
+  bug #19477 - submission by Tal Peer <coredumb@gentoo.org>
+  Simplified ebuild a lot 
+  Added manpage installataion back into his ebuild
  
 *sqlite-2.7.3 (05 Nov 2002)
+  
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   11 Nov 2002: Stefan Jones <cretin@gentoo.org>:
   Added sparc keywords

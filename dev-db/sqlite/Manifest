@@ -1,0 +1,5 @@
+MD5 e4ee1e59223317c18045a2859b058697 sqlite-2.8.0.ebuild 620
+MD5 c368bbd9770a4e52b33fb10fdfa8da8f sqlite-2.7.3.ebuild 964
+MD5 8c1c6f4bf69bf54fb9960efb8b67b7a6 ChangeLog 1593
+MD5 4f5e39f9c072788907392d423c0d1afe files/digest-sqlite-2.7.3 64
+MD5 b6d0c4a26df2632d5d158e7563de60c0 files/digest-sqlite-2.8.0 64
