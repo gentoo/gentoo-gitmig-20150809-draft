@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.20 2004/06/25 17:39:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.21 2004/08/11 09:03:13 taviso Exp $
 
 inherit gcc
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-	emake \
+	emake -j1 \
 		CC="$(gcc-getCC)" PROF="${CFLAGS}" \
 		clean all || die
 }
