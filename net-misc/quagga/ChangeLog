@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/quagga
 # Copyright 2003-2004 DataCore GmbH; Distributed under the GPL v2 
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.6 2004/07/01 21:47:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.7 2004/07/16 14:50:38 amir Exp $
+
+  16 Jul 2004; Amir Guindehi <amir@datacore.org> quagga-0.96.4-r6.ebuild:
+  fixed copyright statement according to dmwaters and seemants wishes.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> quagga-0.96.4-r6.ebuild:
   change virtual/glibc to virtual/libc

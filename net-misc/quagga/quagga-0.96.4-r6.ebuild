@@ -1,6 +1,7 @@
-# Copyright 2003-2004 DataCore GmbH.
+# Copyright 1999-2004 Gentoo Foundation
+# Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.4 2004/07/15 03:21:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.5 2004/07/16 14:50:38 amir Exp $
 
 inherit eutils
 
