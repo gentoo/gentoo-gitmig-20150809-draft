@@ -14,6 +14,15 @@
  
  # somewhat odder:
  Win32 : VCLPlug, Common, ODKFixes, VBABits, Win32Only
+@@ -747,8 +747,6 @@
+ sc-autofilter-empty-nonempty.diff
+ # Improves the standard filter options and menu. bxc #62187 #62495 Issue#35579
+ sc-standard-filter-options.diff
+-# Paste just to clip size bxc #62158 Issue#35580
+-sc-paste-limitedsize.diff
+ # Hides the filtered rows when height of rows are changed bxc #62161 Issue#35581
+ sc-filter-hide-filteredrows.diff
+ # allows not to delete nonfiltered rows while deleting filtered ones bxc #62186 Issue#35582
 @@ -1121,14 +1121,6 @@
  
  ########################################################
