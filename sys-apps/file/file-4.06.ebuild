@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.3 2003/10/18 03:17:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.4 2003/10/18 10:04:04 kumba Exp $
 
 inherit flag-o-matic
 
@@ -24,7 +24,7 @@ src_unpack() {
 	# on MIPS machines to a specific format so that other programs can
 	# recognize things.
 	if [ "${ARCH}" = "mips" ]; then
-		epatch ${FILESDIR}/${P}-mips-gentoo.diff
+		epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
 	fi
 }
 
