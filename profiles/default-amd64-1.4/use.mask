@@ -4,8 +4,8 @@ svga
 
 # There is no JDK for x86_64 yet
 #java
-jikes
-junit
+#jikes
+#junit
 
 # Update 10/02/03 Brad House <brad_mssw@gentoo.org> 
 #    arts patches are in, it builds now
