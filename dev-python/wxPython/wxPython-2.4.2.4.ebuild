@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.1 2003/10/07 23:53:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.2 2003/10/08 10:21:31 seemant Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=dev-lang/python-2.1
 		=dev-libs/glib-1.2* )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
-	tiff? ( media-libs/libtiff )
+	tiff? ( media-libs/tiff )
 	>=sys-libs/zlib-1.1.4
 	opengl? ( >=dev-python/PyOpenGL-2.0.0.44 )"
 
