@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.2.ebuild,v 1.3 2002/09/05 06:37:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.2.ebuild,v 1.4 2002/09/05 21:32:23 azarah Exp $
 
 SV="1.3.9"
 SVREV=""
@@ -12,9 +12,8 @@ S2=${WORKDIR}/sysvinit-${SVIV}/src
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
 	ftp://unsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
-#	http://www.ibiblio.org/gentoo/distfiles/termcap.bz2"
 #	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
-HOMEPAGE="http://www.gentoo.org"
+HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,13 +36,13 @@ RDEPEND="${DEPEND}
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
 pkg_setup() {
-	if [ "$ROOT" = "/" ]
+
+	if [ "${ROOT}" = "/" ]
 	then
 		#make sure we do not kill X because of the earlier bad /etc/inittab we used.
-		source /etc/init.d/functions.sh || die
 		if [ -L ${svcdir}/started/xdm ] && \
-		   [ -n "`grep -e 'x:3:respawn:/etc/X11/startDM.sh' /etc/inittab`" ] && \
-		   [ -n "`ps -A | grep -e "X"`" ]
+		   [ -n "`egrep 'x:3:respawn:/etc/X11/startDM.sh' /etc/inittab`" ] && \
+		   [ -n "`ps -A | egrep "X"`" ]
 		then
 			echo
 		   	einfo "!!! With the current version of baselayout installed (1.7.3-r1), merging"
@@ -57,13 +56,11 @@ pkg_setup() {
 }
 
 src_unpack() {
+
 	unpack sysvinit-${SVIV}.tar.gz
 
 	echo ">>> Unpacking rc-scripts-${SV}${SVREV}.tar.bz2"
 	tar -jxf ${FILESDIR}/rc-scripts-${SV}${SVREV}.tar.bz2 || die
-
-#	echo ">>> Unpacking termcap.bz2"
-#	bzip2 -dc ${DISTDIR}/termcap.bz2 > ${WORKDIR}/termcap || die
 
 	#fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -75,24 +72,26 @@ src_unpack() {
 		#build image.
 		cp Makefile Makefile.orig
 		sed -e 's:PROGS\t= init halt shutdown killall5 runlevel sulogin:PROGS\t= init halt shutdown killall5 runlevel:g' \
-			Makefile.orig >Makefile || die
+			Makefile.orig > Makefile || die
 	fi
 	
 	# Fix Sparc specific stuff
-	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]; then
+	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]
+	then
 		cd ${S}/etc
 		cp rc.conf rc.conf.orig
 		sed -e 's:KEYMAP="us":KEYMAP="sun":' rc.conf.orig >rc.conf || die
-		rm rc.conf.orig
+		rm -f rc.conf.orig
 
 		cp inittab inittab.orig
 		sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 linux\n\n# TERMINALS"' \
-			inittab.orig >inittab || die
-		rm inittab.orig
+			inittab.orig > inittab || die
+		rm -f inittab.orig
 	fi
 }
 
 src_compile() {
+
 	cp ${S}/sbin/runscript.c ${T}
 	cp ${S}/sbin/start-stop-daemon.c ${T}
 
@@ -110,13 +109,14 @@ src_compile() {
 }
 
 defaltmerge() {
+
 	#define the "altmerge" variable.
 	altmerge=0
 	#special ${T}/ROOT hack because ROOT gets automatically unset during src_install()
 	#(because it conflicts with some makefiles)
 	local ROOT=""
 	ROOT="`cat ${T}/ROOT`"
-	if [ -z "`use bootstrap`" ] && [ -z "`use build`" ] &&  [ -e ${ROOT}/dev/.devfsd ]
+	if [ -z "`use bootstrap`" -a -z "`use build`" -a -e ${ROOT}/dev/.devfsd ]
 	then
 		# we're installing to a system that has devfs enabled; don't create device
 		# nodes.
@@ -125,8 +125,8 @@ defaltmerge() {
 }
 
 
-src_install()
-{
+src_install() {
+
 	local foo=""
 	defaltmerge
 	keepdir /sbin
@@ -221,21 +221,14 @@ src_install()
 	for foo in ${S}/etc/*
 	do
 		#install files, not dirs
-		[ -f $foo ] && doins $foo
+		[ -f ${foo} ] && doins ${foo}
 	done
 	chmod go-rwx ${D}/etc/shadow
 	keepdir /lib /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
-	#dont add a new /etc/{passwd,shadow} if they exist
-	[ -f ${ROOT}/etc/passwd ] && rm -f ${D}/etc/passwd
-	[ -f ${ROOT}/etc/shadow ] && rm -f ${D}/etc/shadow
-
-#	insinto /etc
-#	doins ${WORKDIR}/termcap
-
 	keepdir /lib/dev-state
-	if [ $altmerge -eq 1 ]
+	if [ "${altmerge}" -eq "1" ]
 	then
 		#rootfs and devfs
 		dosym /usr/sbin/MAKEDEV /lib/dev-state/MAKEDEV
@@ -283,7 +276,7 @@ src_install()
 	insinto /etc/conf.d
 	for foo in ${S}/etc/conf.d/*
 	do
-		[ -f $foo ] && doins $foo
+		[ -f ${foo} ] && doins ${foo}
 	done
 	#/etc/conf.d/net.ppp* should only be readible by root
 	chmod 0600 ${D}/etc/conf.d/net.ppp*
@@ -298,7 +291,7 @@ src_install()
 	exeinto /etc/init.d
 	for foo in ${S}/init.d/*
 	do
-		[ -f $foo ] && doexe $foo
+		[ -f ${foo} ] && doexe ${foo}
 	done
 	#/etc/init.d/net.ppp* should only be readible by root
 #	chmod 0600 ${D}/etc/init.d/net.ppp*
@@ -318,26 +311,25 @@ src_install()
 
 	dodir /etc/skel
 	insinto /etc/skel
-	for foo in `find ${S}/etc/skel -type f -maxdepth 1`
+	for foo in $(find ${S}/etc/skel -type f -maxdepth 1)
 	do
-		[ -f $foo ] && doins $foo
+		[ -f ${foo} ] && doins ${foo}
 	done
 
-	#make sure our ${svcdir} exists
-	source ${D}/etc/init.d/functions.sh
 	keepdir ${svcdir} >/dev/null 2>&1
 
 	#skip this if we are merging to ROOT
-	[ "$ROOT" = "/" ] && return
+	[ "${ROOT}" = "/" ] && return 0
 	
 	#set up default runlevel symlinks
 	local bar=""
 	for foo in default boot nonetwork single
 	do
 		keepdir /etc/runlevels/${foo}
-		for bar in `cat ${S}/rc-lists/${foo}`
+		for bar in $(cat ${S}/rc-lists/${foo})
 		do
-			[ -e ${S}/init.d/${bar} ] && dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
+			[ -e ${S}/init.d/${bar} ] && \
+				dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
 		done
 	done
 
@@ -367,12 +359,13 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+
 	#doing device node creation in pkg_postinst() now so they aren't recorded in CONTENTS.
 	#latest CVS-only version of Portage doesn't record device nodes in CONTENTS at all.
 	defaltmerge
 	# we dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	if [ $altmerge -eq 0 ]
+	if [ "${altmerge}" -eq "0" ]
 	then
 		cd ${ROOT}/dev
 		#These devices are also needed by many people and should be included
@@ -411,7 +404,7 @@ pkg_postinst() {
 	install -d ${ROOT}/boot
 	if [ ! -L ${ROOT}/boot/boot ]
 	then
-		ln -sf . ${ROOT}/boot/boot
+		ln -snf . ${ROOT}/boot/boot
 	fi
 	#we create this here so we don't overwrite an existing /etc/hosts during bootstrap
 	if [ ! -e ${ROOT}/etc/hosts ]
@@ -438,9 +431,8 @@ EOF
 	done
 
 	#handle the ${svcdir} that changed in location
-	source ${ROOT}/etc/init.d/functions.sh
-	if [ ! -d ${ROOT}/${svcdir}/started/ ] && [ -z "`use bootstrap`" ] && \
-	   [ -z "`use build`" ]
+	if [ ! -d ${ROOT}/${svcdir}/started/ ] && \
+	   [ -z "`use bootstrap`" -a -z "`use build`" ]
 	then
 		mkdir -p ${ROOT}/${svcdir}
 		mount -t tmpfs tmpfs ${ROOT}/${svcdir}
@@ -450,10 +442,19 @@ EOF
 		fi
 	fi
 
+	#touching /etc/passwd and /etc/shadow after install can be fatal, as many
+	#new users do not update them properly.  thus remove all ._cfg files if
+	#we are not busy with a bootstrap.
+	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	then
+		ewarn "Removing invalid backup copies of critical config files..."
+		rm -f ${ROOT}/etc/._cfg????_{passwd,shadow}
+	fi
+
 	#reload init to fix unmounting problems of / on next reboot
 	# this is really needed, as without the new version of init cause init
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
-	if [ "$ROOT" = "/" ] && [ -z "`use bootstrap`" ] && [ -z "`use build`" ]
+	if [ "${ROOT}" = "/" -a -z "`use build`" -a -z "`use bootstrap`" ]
 	then
 		#do not return an error if this fails
 		/sbin/init U &>/dev/null || :
@@ -461,6 +462,7 @@ EOF
 }
 
 pkg_postrm() {
+
 	# Fix problematic links
 	ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
 	ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
