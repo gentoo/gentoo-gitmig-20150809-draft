@@ -1,3 +1,4 @@
+MD5 da5f2e2acb1ff613670ea3b88fba7b9d qt-3.3.0.ebuild 4894
 MD5 9e84006a240b69c02e0aa8b957d48662 qt-3.1.2-r3.ebuild 4984
 MD5 17042c3146d3b939079defa0835af1ab qt-3.2.2-r1.ebuild 6291
 MD5 15cb67cf0a0a71f8c86c4aa91714360c qt-2.3.2-r1.ebuild 2285
@@ -17,6 +18,7 @@ MD5 c7f65a0625242eccf159e2b8ee74976d files/45qt3 109
 MD5 7a287bc7609ad2420f70af6d4c58302f files/50qt2 63
 MD5 65c6cd464a60955c85a85b1dfd487c04 files/0004-qiconview_etc_ctrl_selecting.patch 2207
 MD5 b79277b535797e854be75d1c396de0f2 files/digest-qt-3.2.1 72
+MD5 c585d6ad02168e4645ea5ca46d237e1c files/digest-qt-3.3.0 72
 MD5 8fd2bb8fe0c4752252d064ff62257f9a files/0028-fix_sub_popup_crash.patch 302
 MD5 e4054a5914b182318d548c53beea9590 files/0020-designer-deletetabs.patch 3493
 MD5 c6dc1b6fadcb4897d4c7b0a768c2d196 files/qt-3.1.2-r3-qsocket.diff 447
