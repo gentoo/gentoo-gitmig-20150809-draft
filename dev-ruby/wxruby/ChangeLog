@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/wxruby
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.6 2004/06/25 02:05:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.7 2004/08/02 17:20:30 fmccor Exp $
+
+*wxruby-0.4.0 (02 Aug 2004)
+
+  02 Aug 2004; Ferris McCormick <fmccor@gentoo.org> wxruby-0.4.0.ebuild:
+  Add ~sparc keyword. Samples run.
 
   18 Jun 2004; <twp@gentoo.org> :
   Version bump.
