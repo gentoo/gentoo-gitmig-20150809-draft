@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.3c-r1.ebuild,v 1.1 2003/05/24 16:03:10 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.3c-r1.ebuild,v 1.2 2003/05/25 02:33:43 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -76,6 +76,9 @@ src_install() {
 	newins ${FILESDIR}/alsa-modules.conf-rc alsa
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/alsasound
+
+	exeinto /usr/sbin
+	doexe snddevices
 }
 
 pkg_postinst() {
@@ -93,5 +96,10 @@ pkg_postinst() {
 	einfo
 	einfo "Also, remember that all mixer channels will be MUTED by default."
 	einfo "Use 'alsamixer' program to unmute them."
+	einfo
+	einfo "If you are upgrading from version 0.9.3b or older, and you are not using"
+	einfo "devfs, then you will need to create devices under /dev/snd, since the"
+	einfo "directory /proc/asound/dev no longer exists.  You can create the device"
+	einfo "nodes by running /usr/sbin/snddevices."
 	einfo
 }
