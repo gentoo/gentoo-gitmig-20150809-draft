@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Plucene
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.1 2004/10/06 23:22:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.2 2004/10/18 14:27:47 mcummings Exp $
+
+  18 Oct 2004; Michael Cummings <mcummings@gentoo.org> Plucene-1.19.ebuild:
+  Corrected deps - sorry about that folks
 
 *Plucene-1.19 (06 Oct 2004)
 
