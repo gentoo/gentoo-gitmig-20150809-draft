@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.11 2004/08/04 16:10:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.12 2004/09/02 21:09:59 kugelfang Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -55,7 +55,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gs7.05.6-gdevpx.patch
 
 	# search path fix
-	sed -i -e 's:$(gsdatadir)/lib:/usr/share/ghostscript/7.07/lib:' Makefile.in
+	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):" Makefile.in
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/ghostscript/fonts:' Makefile.in
 
 	# krgb support
@@ -116,6 +116,6 @@ src_install() {
 
 	# Install ijs
 	cd ${S}/ijs
-	dodir /usr/bin /usr/include /usr/lib
+	dodir /usr/bin /usr/include /usr/$(get_libdir)
 	einstall install_prefix=${D}
 }

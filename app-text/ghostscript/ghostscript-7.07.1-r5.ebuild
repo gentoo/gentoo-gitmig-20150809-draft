@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r5.ebuild,v 1.1 2004/08/11 08:15:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r5.ebuild,v 1.2 2004/09/02 21:09:59 kugelfang Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -62,7 +62,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gs7.05.6-gdevpx.patch
 
 	# search path fix
-	sed -i -e 's:$(gsdatadir)/lib:/usr/share/ghostscript/7.07/lib:' Makefile.in
+	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):" Makefile.in
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/ghostscript/:' Makefile.in
 
 	# krgb support
@@ -125,7 +125,7 @@ src_install() {
 
 	# Install ijs
 	cd ${S}/ijs
-	dodir /usr/bin /usr/include /usr/lib
+	dodir /usr/bin /usr/include /usr/$(get_libdir)
 	# This is broken - there are not even a 'install_prefix'
 	# anywhere in ${S}/ijs ...
 	#einstall install_prefix=${D}
