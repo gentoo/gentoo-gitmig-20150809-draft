@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r4.ebuild,v 1.7 2004/01/15 15:20:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r4.ebuild,v 1.8 2004/01/15 18:19:34 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -147,6 +147,9 @@ src_install() {
 	mv bin/{tail,test,tsort,unexpand,users} usr/bin
 	cd usr/bin
 	ln -s ../../bin/* .
+
+	cd ../../bin
+	ln -s ../usr/bin/install .
 
 	if [ -z "`use build`" ]
 	then
