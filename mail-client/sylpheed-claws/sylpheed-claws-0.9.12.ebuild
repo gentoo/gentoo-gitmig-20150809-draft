@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.9.ebuild,v 1.2 2004/06/24 22:18:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12.ebuild,v 1.1 2004/06/30 07:21:45 genone Exp $
 
 IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -10,16 +10,15 @@ GS_PN=ghostscript-viewer
 GS_PV=0.6
 MY_GS=${GS_PN}-${GS_PV}
 MY_P="sylpheed-${PV}claws"
-S=${WORKDIR}/${MY_P}
 S2=${S}/src/plugins/${MY_GS}
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	pdflib? ( mirror://sourceforge/${PN}/${MY_GS}.tar.bz2 )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND=">=sys-apps/sed-4
 	=x11-libs/gtk+-1.2*
@@ -121,7 +120,7 @@ src_install() {
 	fi
 
 	dodir /usr/share/pixmaps
-	mv sylpheed.png ${D}/usr/share/pixmaps/sylpheed-claws.png
+	mv ${D}/usr/share/pixmaps/sylpheed{,-claws}.png
 
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*
 	docinto tools
@@ -140,4 +139,8 @@ src_install() {
 		docinto ${MY_GS}
 		dodoc AUTHORS ChangeLog INSTALL NEWS README
 	fi
+}
+
+pkg_postinst() {
+	einfo "NOTE: Some plugins have to be re-loaded."
 }

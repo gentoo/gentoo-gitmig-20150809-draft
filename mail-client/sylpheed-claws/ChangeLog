@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.5 2004/06/24 22:18:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.6 2004/06/30 07:21:45 genone Exp $
+
+*sylpheed-claws-0.9.12 (30 Jun 2004)
+
+  30 Jun 2004; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.11.ebuild,
+  +sylpheed-claws-0.9.12.ebuild:
+  version bump and marking 0.9.11 stable. The new version has a few problems 
+  (including segfaults), it will stay hardmasked until they are solved.
 
   24 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   sylpheed-claws-0.9.5-r1.ebuild:
