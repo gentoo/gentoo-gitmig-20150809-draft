@@ -2,5 +2,7 @@ MD5 882238df298c4558f6ddc20e4ba01976 wmbiff-0.4.15.ebuild 634
 MD5 a1bc1e3d8e259fe4678c36e590eab7d7 wmbiff-0.4.17.ebuild 1024
 MD5 7d6de108682cc0c4976f55c5dfe3b4b6 ChangeLog 1003
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
+MD5 2989baae359d6718618ed467a989ae22 wmbiff-0.4.20.ebuild 804
 MD5 8391e3fac11ce2c658e6c7b8803321de files/digest-wmbiff-0.4.15 65
 MD5 1c3db557c466c299ecf1fcf38194b155 files/digest-wmbiff-0.4.17 65
+MD5 218b9bd8a41dfb0bcf674649d9fbc46e files/digest-wmbiff-0.4.20 65
