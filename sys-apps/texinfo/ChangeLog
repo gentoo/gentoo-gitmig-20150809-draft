@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.4 2002/06/28 01:33:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.5 2002/07/01 21:34:11 azarah Exp $
+
+*texinfo-4.2-r4 (1 Jul 2002)
+
+  Remove automake DEPEND, as it is not needed, and pulls in perl during
+  bootstrap.
 
 *texinfo-4.2-r3 (27 Jun 2002)
 
