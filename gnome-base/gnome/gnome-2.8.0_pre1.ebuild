@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.5 2004/09/23 14:58:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.6 2004/09/23 15:01:07 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="as-is"
 SLOT="2.0"
 
-IUSE="accessibility cdr dvdr"
+IUSE="accessibility cdr dvdr hal"
 # when unmasking for an arch
 # double check none of the deps are still masked !
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~alpha ~hppa"
