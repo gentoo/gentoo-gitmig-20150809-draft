@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.2.17.ebuild,v 1.4 2004/06/24 22:23:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.2.17.ebuild,v 1.5 2004/07/01 11:13:17 eradicator Exp $
 
 inherit games eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="debug fbcon static svga alsa oss slang sdl"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	games-emulation/advancemame
 	sys-libs/zlib
 	x86? ( >=dev-lang/nasm-0.98 )

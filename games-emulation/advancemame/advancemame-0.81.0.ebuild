@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.81.0.ebuild,v 1.3 2004/06/24 22:23:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.81.0.ebuild,v 1.4 2004/07/01 11:12:56 eradicator Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="debug static svga truetype fbcon alsa oss slang sdl"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	app-arch/unzip
 	app-arch/zip
 	x86? ( >=dev-lang/nasm-0.98 )

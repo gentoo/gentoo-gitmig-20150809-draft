@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/hugo-2.09.ebuild,v 1.4 2004/06/24 22:29:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/hugo-2.09.ebuild,v 1.5 2004/07/01 11:15:10 eradicator Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/x11
-	virtual/glibc
+	virtual/libc
 	media-libs/libsdl"
 
 S=${WORKDIR}/hugo-${PV}

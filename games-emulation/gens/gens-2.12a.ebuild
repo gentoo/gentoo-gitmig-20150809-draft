@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.12a.ebuild,v 1.6 2004/06/24 22:27:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.12a.ebuild,v 1.7 2004/07/01 11:14:31 eradicator Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=media-libs/libsdl-1.2
 	>=x11-libs/gtk+-2.0*"
 DEPEND="${RDEPEND}

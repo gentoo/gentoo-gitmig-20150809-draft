@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/handy-0.82.ebuild,v 1.3 2004/06/24 22:29:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/handy-0.82.ebuild,v 1.4 2004/07/01 11:14:57 eradicator Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="media-libs/libsdl
 	sys-libs/zlib
-	virtual/glibc
+	virtual/libc
 	sys-libs/lib-compat"
 
 S=${WORKDIR}

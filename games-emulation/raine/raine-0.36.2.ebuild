@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.36.2.ebuild,v 1.4 2004/06/24 22:35:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.36.2.ebuild,v 1.5 2004/07/01 11:16:04 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="static nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/zlib
 	<media-libs/allegro-4.1.0
 	media-libs/svgalib"

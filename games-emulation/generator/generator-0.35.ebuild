@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.10 2004/06/28 04:29:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.11 2004/07/01 11:14:12 eradicator Exp $
 
 inherit eutils gcc games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="svga gtk"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	gtk? (
 		=x11-libs/gtk+-1*
 		media-libs/libsdl

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/qmamecat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/qmamecat/ChangeLog,v 1.5 2004/06/24 22:35:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/qmamecat/ChangeLog,v 1.6 2004/07/01 11:15:51 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  qmamecat-0.44.45.ebuild, qmamecat-0.44.46.ebuild:
+  virtual/glibc -> virtual/libc
 
 *qmamecat-0.44.46 (27 May 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox-cvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.7 2004/06/24 22:25:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.8 2004/07/01 11:13:45 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  dosbox-cvs-20030809.ebuild:
+  virtual/glibc -> virtual/libc
 
   04 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   dosbox-cvs-20030809.ebuild:

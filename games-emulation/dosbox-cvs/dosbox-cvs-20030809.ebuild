@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.8 2004/06/24 22:25:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.9 2004/07/01 11:13:45 eradicator Exp $
 
 inherit games cvs
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 IUSE="alsa opengl"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
 	opengl? ( virtual/opengl )
 	>=media-libs/libsdl-1.2.0

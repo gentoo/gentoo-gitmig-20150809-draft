@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gens
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.8 2004/06/24 22:27:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.9 2004/07/01 11:14:31 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gens-2.12a.ebuild:
+  virtual/glibc -> virtual/libc
 
   04 May 2004; Michael Sterrett <mr_bones_@gentoo.org> gens-2.12a.ebuild:
   IUSE; dep tidy; shot at fixing bug #49308
