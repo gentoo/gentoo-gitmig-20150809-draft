@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.8 2003/08/10 11:14:25 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.9 2004/03/13 19:48:58 twp Exp $
+
+*fxruby-1.0.28 (13 Mar 2003)
+
+  13 Mar 2003; Tom Payne <twp@gentoo.org> fxruby-1.0.28.ebuild :
+  Version bump. Bug # 44319. Add fxscintilla dependency. Bug # 44228.
 
 *fxruby-1.0.25 (10 Aug 2003)
 
