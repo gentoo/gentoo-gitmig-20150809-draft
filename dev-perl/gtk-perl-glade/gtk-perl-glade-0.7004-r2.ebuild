@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r2.ebuild,v 1.16 2004/06/25 00:35:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r2.ebuild,v 1.17 2004/07/14 17:47:10 agriffis Exp $
 
 inherit perl-module
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://www.perl.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha"
+IUSE=""
 
 DEPEND="${DEPEND}
 	>=dev-perl/gtk-perl-${PV}
