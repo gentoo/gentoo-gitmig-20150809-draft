@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.42 2004/10/23 14:02:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.43 2004/10/31 09:33:02 josejx Exp $
+
+  31 Oct 2004; Joseph Jezak <josejx@gentoo.org> gnomemeeting-1.0.2.ebuild:
+  Marked ppc stable to fix compilation problems with GCC 3.4
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> gnomemeeting-1.0.2.ebuild:
   Added ~sparc keyword.
