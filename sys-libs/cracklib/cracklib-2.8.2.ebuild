@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.2.ebuild,v 1.2 2005/03/18 00:11:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.2.ebuild,v 1.3 2005/03/29 15:48:31 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -44,7 +44,7 @@ src_install() {
 	insinto /usr/share/dict
 	doins dicts/cracklib-small || die "word dict"
 	tc-is-cross-compiler \
-		|| export PATH=${D}/usr/sbin:${PATH} LD_LIBRARY_PATH=${D}/lib
+		|| export PATH=${D}/usr/sbin:${PATH} LD_LIBRARY_PATH=${D}/$(get_libdir)
 	cracklib-format dicts/cracklib-small \
 		| cracklib-packer "${D}"/usr/$(get_libdir)/cracklib_dict \
 		|| die "couldnt create dict"
