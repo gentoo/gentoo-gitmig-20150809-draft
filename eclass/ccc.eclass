@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.11 2003/07/22 05:39:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.12 2003/09/05 12:19:19 taviso Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -13,13 +13,6 @@
 
 ECLASS=ccc
 INHERITED="${INHERITED} ${ECLASS}"
-
-newdepend "sys-apps/findutils
-	sys-apps/sed
-	sys-apps/util-linux
-	sys-devel/binutils
-	sys-apps/grep
-	sys-apps/diffutils"
 
 # define this to make this eclass noisy.
 #DEBUG_CCC_ECLASS=1
