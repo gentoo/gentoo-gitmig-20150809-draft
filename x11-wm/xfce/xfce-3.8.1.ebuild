@@ -14,7 +14,7 @@ DEPEND="virtual/x11
 	>=media-libs/imlib-1.9.10"
 
 src_compile() {
-	try ./configure --prefix=/usr/X11R6 --mandir=/usr/X11R7/share/man --host=${CHOST} 
+	try ./configure --prefix=/usr/X11R6 --mandir=/usr/X11R6/share/man --host=${CHOST} 
     try make
 }
 
