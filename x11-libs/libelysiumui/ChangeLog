@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/elysiumlibui
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/ChangeLog,v 1.1 2003/05/01 00:01:19 bass Exp $
+
+*libelysiumui-0.2.0 (01 May 2003)
+
+  01 May 2003; Jose Alberto Suarez Lopez <bass@gentoo.org> libelysiumui-0.2.0.ebuild:
+  First relase
+
+
