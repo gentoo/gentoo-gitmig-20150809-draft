@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31-r2.ebuild,v 1.2 2004/08/10 21:37:04 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31-r2.ebuild,v 1.3 2004/08/18 03:36:22 tgall Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 IUSE="nls oggvorbis flac"
 
@@ -20,7 +20,7 @@ RDEPEND=">=media-libs/id3lib-3.8.2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ppc64"
 
 S=${WORKDIR}/${MY_P}
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
 	epatch ${DISTDIR}/${EXTRA_PATCH}
+	gnuconfig_update
 }
 
 src_compile() {
