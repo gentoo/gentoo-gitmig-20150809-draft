@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.5 2003/04/18 16:19:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.6 2003/05/20 21:42:10 mkeadle Exp $
 
-IUSE="nls"
+IUSE="kde gnome nls xinerama"
 
 inherit commonbox flag-o-matic eutils
 
@@ -16,7 +16,6 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc hppa"
 
 mydoc="ChangeLog COPYING NEWS"
-myconf="--enable-xinerama"
 if pkg-config xft
 then
 	CXXFLAGS="${CXXFLAGS} -I/usr/include/freetype2"

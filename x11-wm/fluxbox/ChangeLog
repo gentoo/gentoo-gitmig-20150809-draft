@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.53 2003/04/18 16:19:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.54 2003/05/20 21:42:10 mkeadle Exp $
+
+*fluxbox (20 May 2003)
+
+  20 May 2003; mkeadle <mkeadle@gentoo.org>:
+  Moving --enable-xinerama to USE test in commonbox.eclass.
 
 *fluxbox (12 Apr 2003)
 
