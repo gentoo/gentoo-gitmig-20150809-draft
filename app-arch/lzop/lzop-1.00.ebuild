@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/lzop-1.00.ebuild,v 1.7 2002/07/26 05:05:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/lzop-1.00.ebuild,v 1.8 2002/08/02 04:50:11 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility for fast (even reat-time) compression/decompression"
@@ -14,12 +14,12 @@ KEYWORDS="x86"
 DEPEND="dev-libs/lzo"
 RDEPEND="${DEPEND}"
 
-src_compile() {                           
+src_compile() {
 	econf --disable-shared || die
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
