@@ -1,19 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r3.ebuild,v 1.4 2004/01/21 18:42:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r6.ebuild,v 1.1 2004/01/21 18:42:08 azarah Exp $
 
-IUSE="static nls bootstrap java build"
+IUSE="static nls bootstrap java build X multilib"
 
 inherit eutils flag-o-matic libtool
 
 # Compile problems with these (bug #6641 among others)...
-# We don't need these since we strip-flags below -- Joshua
-#filter-flags "-fno-exceptions -fomit-frame-pointer"
+#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
 # still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himself) yet.
+# combinations (protecting the user maybe from himeself) yet.
 #
 # This can clearly be seen in large builds like glibc, where too aggressive
 # CFLAGS cause the tests to fail miserbly.
@@ -23,7 +22,7 @@ inherit eutils flag-o-matic libtool
 #
 #   People really shouldn't force code-specific options on... It's a
 #   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when appropriate).
+#   options that are sensible (and include sse,mmx,3dnow when apropriate).
 #
 # The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
 # you do not like it, comment it, but do not bugreport if you run into
@@ -31,6 +30,9 @@ inherit eutils flag-o-matic libtool
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
+
+# gcc produce unstable binaries if compiled with a different CHOST.
+[ "${ARCH}" = "hppa" ] && export CHOST="hppa-unknown-linux-gnu"
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -42,27 +44,27 @@ MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
 LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
 BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
 DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
-# Don't install in /usr/include/g++-v3/, but in gcc internal directory.
+# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # ProPolice version
-PP_VER1="3_2_2"
-PP_VER2="3.2.2-10"
+PP_VER="3_3"
+PP_FVER="${PP_VER//_/.}-7"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
-PATCH_VER=""
+PATCH_VER="1.0"
 
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
-SNAPSHOT=""
+SNAPSHOT=
 
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 
 #BRANCH_UPDATE="20021208"
-BRANCH_UPDATE=""
+BRANCH_UPDATE="20040108"
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -84,20 +86,20 @@ else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
 fi
+if [ -n "${PP_VER}" ]
+then
+	SRC_URI="${SRC_URI}
+		http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
+fi
 SRC_URI="${SRC_URI}
-	http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER1}/protector-${PP_VER2}.tar.gz
-	mirror://gentoo/${P}-manpages.tar.bz2
-	mirror://gentoo/${P}-tls-update.patch.bz2"
+	mirror://gentoo/${P}-manpages.tar.bz2"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-# this is a glibc-propolice forced bump to a gcc without guard 
-# when no binary on the system has references to guard@@libgcc
-# hppa has no dependency on propolice for gcc - skip this arch
-KEYWORDS="x86 ppc sparc alpha arm mips -hppa"
+KEYWORDS="~x86 ~mips ~sparc ~amd64 ~hppa ~alpha ~ia64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -105,30 +107,40 @@ KEYWORDS="x86 ppc sparc alpha arm mips -hppa"
 # their old gcc unmerged ...
 if [ "${CHOST}" == "${CCHOST}" ]
 then
-	SLOT="${MY_PV}"
+# GCC-3.3 is supposed to be binary compatible with 3.2..
+#	SLOT="${MY_PV}"
+	SLOT="3.2"
 else
-	SLOT="${CCHOST}-${MY_PV}"
+# GCC-3.3 is supposed to be binary compatible with 3.2..
+#	SLOT="${CCHOST}-${MY_PV}"
+	SLOT="${CCHOST}-3.2"
 fi
 
-DEPEND="!arm? ( >=sys-libs/glibc-2.3.2-r3 )
-	mips? >=sys-devel/binutils-2.13.90.0.16 : >=sys-devel/binutils-2.13.90.0.18
+# We need the later binutils for support of the new cleanup attribute.
+# 'make check' fails for about 10 tests (if I remember correctly) less
+# if we use later bison.
+# This one depends on glibc-2.3.2-r3 containing the __guard in glibc
+# we scan for Guard@@libgcc and then apply the function moving patch.
+# If using NPTL, we currently cannot however depend on glibc-2.3.2-r3,
+# else bootstap will break.
+DEPEND="virtual/glibc
+	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	>=sys-devel/binutils-2.14.90.0.6-r1
+	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
-	!build? ( !arm? ( >=sys-libs/ncurses-5.2-r2 )
+	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
+	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
-# this glibc has the glibc guard symbols which are needed for the propolice functions to get moved to glibc
-# out of the libgcc in this gcc release, however, the propolice patch itself is not defused by this removal
-RDEPEND="!arm? ( >=sys-libs/glibc-2.3.2-r3 )
+RDEPEND="virtual/glibc
+	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
-	!build? ( !arm? ( >=sys-libs/ncurses-5.2-r2 ) )"
+	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 PDEPEND="sys-devel/gcc-config"
 
-
-# Hack used to patch Makefiles to install into the build dir
-FAKE_ROOT=""
 
 chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
@@ -155,9 +167,66 @@ chk_gcc_version() {
 
 version_patch() {
 	[ ! -f "$1" ] && return 1
+	[ -z "$2" ] && return 1
 
-	sed -e "s:@PV@:${PVR}:g" ${1} > ${T}/${1##*/}
+	sed -e "s:@GENTOO@:$2:g" ${1} > ${T}/${1##*/}
 	epatch ${T}/${1##*/}
+}
+
+check_glibc_ssp() {
+	# Check for the glibc to have the guard
+	if  [ "$(readelf -s /lib/libc.so.6 2>/dev/null | \
+	         grep GLOBAL | grep OBJECT | grep '__guard')" ] && \
+	    [ "$(readelf -s /lib/libc.so.6 2>/dev/null | \
+	         grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
+	then
+		if [ -n "${GLIBC_SSP_CHECKED}" ] && \
+		   [ -z "$(readelf -s  "$(gcc-config -L)/libgcc_s.so" 2>/dev/null | \
+		           grep GLOBAL | grep OBJECT | grep '__guard')" ]
+		then
+			sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
+				-i ${S}/gcc/Makefile.in
+
+			touch ${WORKDIR}/.glibc_ssp_checked
+
+			return 0
+		fi
+
+		echo
+		ewarn "This sys-libs/glibc has __guard object and __stack_smash_handler functions"
+		ewarn "scanning the system for binaries with __guard - this may take 5-10 minutes"
+		ewarn "Please do not press ctrl-C or ctrl-Z during this period - it will continue"
+		echo
+		if ! bash ${FILESDIR}/scan_libgcc_linked_ssp.sh
+		then
+			echo
+			eerror "Found binaries that are dynamically linked to the libgcc with __guard@@GCC"
+			eerror "You need to compile these binaries without CFLAGS -fstack-protector/hcc -r"
+			echo
+			eerror "Also, you have to make sure that using ccache needs the cache to be flushed"
+			eerror "wipe out /var/tmp/ccache or /root/.ccache.  This will remove possible saved"
+			eerror "-fstack-protector arguments that still may reside in such a compiler cache"
+			echo
+			eerror "When such binaries are found, gcc cannot remove libgcc propolice functions"
+			eerror "leading to gcc -static -fstack-protector breaking, see gentoo bug #25299"
+			echo
+			einfo  "To do a full scan on your system, enter this following command in a shell"
+			einfo  "(Please keep running and remerging broken packages until it do not report"
+			einfo  " any breakage anymore!):"
+			echo
+			einfo  " # ${FILESDIR}/scan_libgcc_linked_ssp.sh"
+			echo
+			die "Binaries with libgcc __guard@GCC dependencies detected!"
+		else
+			echo
+			einfo "No binaries with suspicious libgcc __guard@GCC dependencies detected"
+			echo
+			sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
+				-i ${S}/gcc/Makefile.in
+
+			touch ${WORKDIR}/.glibc_ssp_checked
+		fi
+	fi
 }
 
 src_unpack() {
@@ -173,7 +242,10 @@ src_unpack() {
 		unpack gcc-${SNAPSHOT//-}.tar.bz2
 	fi
 
-	unpack protector-${PP_VER2}.tar.gz
+	if [ -n "${PP_VER}" ]
+	then
+		unpack protector-${PP_FVER}.tar.gz
+	fi
 
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
@@ -190,94 +262,45 @@ src_unpack() {
 	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
 	if [ -n "${PATCH_VER}" ]
 	then
+		mkdir -p ${WORKDIR}/patch/exclude
+		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
+
+		if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+		then
+			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
+			bzip2 -c ${FILESDIR}/gcc331_use_multilib.amd64.patch > \
+				${WORKDIR}/patch/06_amd64_gcc331-use-multilib.patch.bz2
+		fi
+
 		epatch ${WORKDIR}/patch
 	fi
 
-	# Update to support TLS and __thread
-	epatch ${DISTDIR}/${P}-tls-update.patch.bz2
-
-	# Make gcc's version info specific to Gentoo
-	version_patch ${FILESDIR}/3.2.3/gcc323-gentoo-branding.patch
-
-	# ProPolice Stack Smashing protection
-	# ProPolice does not work on archs where the stack grows upward (HPPA)
-	if [ ${ARCH} != "hppa" ]
+	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
 	then
+		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
+	fi
+
+	if [ -z "${PP_VER}" ]
+	then
+		# Make gcc's version info specific to Gentoo
+	 	version_patch ${FILESDIR}/3.3.2/gcc332-gentoo-branding.patch \
+			"${BRANCH_UPDATE} (Gentoo Linux ${PVR})" || die "Failed Branding"
+	fi
+
+	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
+	then
+		# ProPolice Stack Smashing protection
+		EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
+		epatch ${FILESDIR}/3.3.1/gcc331-pp-fixup.patch
 		epatch ${WORKDIR}/protector.dif
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
-		version_patch ${FILESDIR}/3.2.3/gcc-323-propolice-version.patch
+		version_patch ${FILESDIR}/3.3.2/gcc332-gentoo-branding.patch \
+			"${BRANCH_UPDATE} (Gentoo Linux ${PVR}, propolice-${PP_FVER})" \
+			|| die "Failed Branding"
 
-		# check for the glibc to have the guard
-		if	[ "$(readelf -s /lib/libc.so.6 | grep GLOBAL | grep OBJECT | grep '__guard')" ] &&
-			[ "$(readelf -s /lib/libc.so.6 | grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
-		then
-			ewarn "this sys-libs/glibc has __guard object and __stack_smash_handler functions"
-			ewarn "scanning the system for binaries with __guard - this may take 5-10 minutes"
-			ewarn "please do not press crtl-C or crtl-Z during this period - it will continue"
-			SCANPATH="$(for i in $(cat /etc/ld.so.conf | grep -v '/usr/lib/gcc-lib' | grep -v '^\#'); do echo -n $i; echo -n ' '; done) $(echo ${PATH} | sed 's,:, ,g')"
-			if [ "$(find ${SCANPATH} -type f -perm -1 -maxdepth 9 -exec readelf -s {} \; 2>&1 | grep "__guard\@GCC" 2>&1 1>/dev/null; echo $?)" == "0" ]
-			then
-				eerror "found binaries that are dynamically linked to the libgcc with __guard@@GCC"
-				eerror "you need to compile these binaries without CFLAGS -fstack-protector/hcc -r"
-				echo
-				eerror "also you have to make sure that using ccache needs the cache to be flushed"
-				eerror "wipe out /var/tmp/ccache or /root/.ccache, this will remove possible saved"
-				eerror "-fstack-protector arguments that still may reside in such a compiler cache"
-				echo
-				eerror "when such binaries are found, gcc cannot remove libgcc propolice functions"
-				eerror "leading to gcc -static -fstack-protector breaking, see gentoo bug id 25299"
-				einfo  "you can run 'qpkg -f' from the gentoolkit package and reemerge the program"
-				einfo  "to do a full scan on your system, enter this following command in a shell:"
-				echo
-				einfo  "find / -type f -perm -1 -maxdepth 9 -exec echo -n '__guard at GCC check in: {} ' \; -exec qpkg -f {} \; -exec readelf -s {} \; 2>&1 | grep __guard | grep -B1 '__guard\@GCC'"
-				echo
-				exit 1
-			else
-				echo
-				einfo  "no binaries with suspicious libgcc __guard@GCC dependencies in ${SCANPATH}"
-				echo
-				epatch ${FILESDIR}/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch
-			fi
-		fi
-		# end of check for the glibc to have the guard
-	fi
-
-	# Patches from Mandrake/Suse ...
-	epatch ${FILESDIR}/3.2.1/gcc31-loop-load-final-value.patch
-	epatch ${FILESDIR}/3.2.1/gcc32-strip-dotdot.patch
-	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
-	epatch ${FILESDIR}/3.2.3/gcc32-c++-classfn-member-template.patch
-	epatch ${FILESDIR}/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch
-
-	# GCC bugfixes ...
-	epatch ${FILESDIR}/3.2.2/gcc32-pr7768.patch
-	epatch ${FILESDIR}/3.2.2/gcc32-pr8213.patch
-
-	# Get gcc to decreases the number of times the collector has to be run
-	# by increasing its memory workspace, bug #16548.
-	epatch ${FILESDIR}/3.2.2/gcc322-ggc_page-speedup.patch
-
-	# sparc patches from Redhat ...
-	use sparc && epatch ${FILESDIR}/3.2.1/gcc32-sparc32-hack.patch
-
-	# Patches from debian-arm
-	if use arm
-	then
-		epatch ${FILESDIR}/3.2.1/gcc32-arm-disable-mathf.patch
-		epatch ${FILESDIR}/3.2.1/gcc32-arm-reload1-fix.patch
-	fi
-	#ppc mergel miscompilation workaround
-	if use ppc
-	then
-		epatch ${FILESDIR}/3.2.3/gcc-3.2.3-mergel-fix.patch
-	fi
-	if use hppa
-	then
-		# There exists a bug in the ebuild patched gcc that prevents hppa from
-		# getting build because of default_assemble_visibility is not compiled.
-		# Alexander Gabert <pappy@nikita.ath.cx> (14 Jul 2003).
-		epatch ${FILESDIR}/3.2.3/gcc323-hppa-default_assemble_visibility.patch
+		# Check for the glibc to have the guard
+		check_glibc_ssp
 	fi
 
 	# Install our pre generated manpages if we do not have perl ...
@@ -286,47 +309,16 @@ src_unpack() {
 		cd ${S}; unpack ${P}-manpages.tar.bz2
 	fi
 
-	# Currently if any path is changed via the configure script, it breaks
-	# installing into ${D}.  We should not patch it in src_install() with
-	# absolute paths, as some modules then gets rebuild with the wrong
-	# paths.  Thus we use $FAKE_ROOT.
-	einfo "Fixing Makefiles..."
-	cd ${S}
-	for x in $(find . -name Makefile.in)
-	do
-		# Fix --datadir=
-		cp ${x} ${x}.orig
-		sed -e 's:datadir = @datadir@:datadir = $(FAKE_ROOT)@datadir@:' \
-			${x}.orig > ${x}
+	# Misdesign in libstdc++ (Redhat)
+	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
-		# Fix --bindir=
-		cp ${x} ${x}.orig
-		sed -e 's:bindir = @bindir@:bindir = $(FAKE_ROOT)@bindir@:' \
-			${x}.orig > ${x}
-
-		# Fix --includedir=
-		cp ${x} ${x}.orig
-		sed -e 's:includedir = @includedir@:includedir = $(FAKE_ROOT)@includedir@:' \
-			${x}.orig > ${x}
-
-		# Fix --with-gxx-include-dir=
-		cp ${x} ${x}.orig
-		sed -e 's:gxx_include_dir = @gxx_:gxx_include_dir = $(FAKE_ROOT)@gxx_:' \
-			-e 's:glibcppinstalldir = @gxx_:glibcppinstalldir = $(FAKE_ROOT)@gxx_:' \
-			${x}.orig > ${x}
-
-		# Where java security stuff should be installed
-		cp ${x} ${x}.orig
-		sed -e 's:secdir = $(libdir)/security:secdir = $(FAKE_ROOT)$(LIBPATH)/security:' \
-			${x}.orig > ${x}
-
-		rm -f ${x}.orig
-	done
+	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
 
 src_compile() {
-	local myconf=""
-	local gcc_lang=""
+
+	local myconf=
+	local gcc_lang=
 
 	if [ -z "`use build`" ]
 	then
@@ -335,22 +327,51 @@ src_compile() {
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" ] || [ "`use build`" ]
+	if [ -z "`use nls`" -o "`use build`" ]
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
-	if [ -n "`use java`" ] && [ -z "`use build`" ]
+	if [ -n "`use java`" -a -z "`use build`" ]
 	then
 		gcc_lang="${gcc_lang},java"
 	fi
 
+	# Enable building of the gcj Java AWT & Swing X11 backend
+	# if we have X as a use flag and are not in a build stage.
+	# X11 support is still very experimental but enabling it is
+	# quite innocuous...  [No, gcc is *not* linked to X11...]
+	# <dragon@gentoo.org> (15 May 2003)
+	if [ -n "`use java`" -a -n "`use X`" -a -z "`use build`" -a \
+	     -f /usr/X11R6/include/X11/Xlib.h ]
+	then
+		myconf="${myconf} --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib"
+		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
+	fi
+
+	# Multilib not yet supported
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		einfo "WARNING: Multilib support enabled. This is still experimental."
+		myconf="${myconf} --enable-multilib"
+	else
+		if [ "${ARCH}" = "amd64" ]
+		then
+			einfo "WARNING: Multilib not enabled. You will not be able to build 32bit binaries."
+		fi
+		myconf="${myconf} --disable-multilib"
+	fi
+
+	# Fix linking problem with c++ apps which where linkedi
+	# agains a 3.2.2 libgcc
+	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
+
 	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.
-	# These aren't needed since we strip-flags above -- Joshua
-	#export CFLAGS="${CFLAGS//-O?}"
-	#export CXXFLAGS="${CXXFLAGS//-O?}"
+	# it is safe.  This is especially true for gcc-3.3 ...
+	export CFLAGS="${CFLAGS/-O?/-O2}"
+	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
+	export GCJFLAGS="${CFLAGS/-O?/-O2}"
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -409,15 +430,28 @@ src_compile() {
 		emake bootstrap-lean \
 			LIBPATH="${LIBPATH}" \
 			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
+
 	fi
 }
 
 src_install() {
+	local x=
+
 	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
 	# this can break the build.
-	for x in cd ${WORKDIR}/build/gcc/include/*
+	for x in ${WORKDIR}/build/gcc/include/*
 	do
 		if [ -L ${x} ]
+		then
+			rm -f ${x}
+			continue
+		fi
+	done
+	# Remove generated headers, as they can cause things to break
+	# (ncurses, openssl, etc).
+	for x in `find ${WORKDIR}/build/gcc/include/ -name '*.h'`
+	do
+		if grep -q 'It has been auto-edited by fixincludes from' ${x}
 		then
 			rm -f ${x}
 		fi
@@ -427,14 +461,14 @@ src_install() {
 	# Do the 'make install' from the build directory
 	cd ${WORKDIR}/build
 	S="${WORKDIR}/build" \
-	make prefix=${D}${LOC} \
-		bindir=${D}${BINPATH} \
-		includedir=${D}${LIBPATH}/include \
-		datadir=${D}${DATAPATH} \
-		mandir=${D}${DATAPATH}/man \
-		infodir=${D}${DATAPATH}/info \
+	make prefix=${LOC} \
+		bindir=${BINPATH} \
+		includedir=${LIBPATH}/include \
+		datadir=${DATAPATH} \
+		mandir=${DATAPATH}/man \
+		infodir=${DATAPATH}/info \
+		DESTDIR="${D}" \
 		LIBPATH="${LIBPATH}" \
-		FAKE_ROOT="${D}" \
 		install || die
 
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
@@ -443,20 +477,26 @@ src_install() {
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		# amd64 is a bit unique because of multilib.  Add some other paths
+		echo "LDPATH=\"${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32\"" >> \
+			${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	else
+		echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	fi
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-
-	# Install wrappers
-# Handled by gcc-config now ...
-#	exeinto /lib
-#	doexe ${FILESDIR}/cpp
-#	exeinto /usr/bin
-#	doexe ${FILESDIR}/cc
+	# Make sure we do not check glibc for ssp again, as we did already
+	if [ -f "${WORKDIR}/.glibc_ssp_checked" -o \
+	     -f "${ROOT}/etc/env.d/99glibc_spp" ]
+	then
+		echo "GLIBC_SSP_CHECKED=1" > ${D}/etc/env.d/99glibc_spp
+	fi
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
@@ -465,30 +505,29 @@ src_install() {
 		cd ${D}${LIBPATH}
 
 		# Tell libtool files where real libraries are
-		for LA in ${D}${LOC}/lib/*.la ${D}${LIBPATH}/../*.la
+		for x in ${D}${LOC}/lib/*.la ${D}${LIBPATH}/../*.la
 		do
-			if [ -f ${LA} ]
+			if [ -f "${x}" ]
 			then
-				sed -e "s:/usr/lib:${LIBPATH}:" ${LA} > ${LA}.hacked
-				mv ${LA}.hacked ${LA}
-				mv ${LA} ${D}${LIBPATH}
+				sed -i -e "s:/usr/lib:${LIBPATH}:" ${x}
+				mv ${x} ${D}${LIBPATH}
 			fi
 		done
 
 		# Move all the libraries to version specific libdir.
 		for x in ${D}${LOC}/lib/*.{so,a}* ${D}${LIBPATH}/../*.{so,a}*
 		do
-			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}
+			[ -f "${x}" -o -L "${x}" ] && mv -f ${x} ${D}${LIBPATH}
 		done
 
 		# Move Java headers to compiler-specific dir
 		for x in ${D}${LOC}/include/gc*.h ${D}${LOC}/include/j*.h
 		do
-			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}/include/
+			[ -f "${x}" ] && mv -f ${x} ${D}${LIBPATH}/include/
 		done
 		for x in gcj gnu java javax org
 		do
-			if [ -d ${D}${LOC}/include/${x} ]
+			if [ -d "${D}${LOC}/include/${x}" ]
 			then
 				dodir /${LIBPATH}/include/${x}
 				mv -f ${D}${LOC}/include/${x}/* ${D}${LIBPATH}/include/${x}/
@@ -496,8 +535,15 @@ src_install() {
 			fi
 		done
 
+		if [ -d "${D}${LOC}/lib/security" ]
+		then
+			dodir /${LIBPATH}/security
+			mv -f ${D}${LOC}/lib/security/* ${D}${LIBPATH}/security
+			rm -rf ${D}${LOC}/lib/security
+		fi
+
 		# Move libgcj.spec to compiler-specific directories
-		[ -f ${D}${LOC}/lib/libgcj.spec ] && \
+		[ -f "${D}${LOC}/lib/libgcj.spec" ] && \
 			mv -f ${D}${LOC}/lib/libgcj.spec ${D}${LIBPATH}/libgcj.spec
 
 		# Rename jar because it could clash with Kaffe's jar if this gcc is
@@ -506,20 +552,26 @@ src_install() {
 		[ -f jar ] && mv -f jar gcj-jar
 
 		# Move <cxxabi.h> to compiler-specific directories
-		[ -f ${D}${STDCXX_INCDIR}/cxxabi.h ] && \
+		[ -f "${D}${STDCXX_INCDIR}/cxxabi.h" ] && \
 			mv -f ${D}${STDCXX_INCDIR}/cxxabi.h ${D}${LIBPATH}/include/
 
 		# These should be symlinks
 		cd ${D}${BINPATH}
-		rm -f ${CCHOST}-{gcc,g++,c++,g77}
-		[ -f gcc ] && ln -sf gcc ${CCHOST}-gcc
-		[ -f g++ ] && ln -sf g++ ${CCHOST}-g++
-		[ -f g++ ] && ln -sf g++ ${CCHOST}-c++
-		[ -f g77 ] && ln -sf g77 ${CCHOST}-g77
+		for x in gcc g++ c++ g77 gcj
+		do
+			rm -f ${CCHOST}-${x}
+			[ -f "${x}" ] && ln -sf ${x} ${CCHOST}-${x}
+
+			if [ -f "${CCHOST}-${x}-${PV}" ]
+			then
+				rm -f ${CCHOST}-${x}-${PV}
+				ln -sf ${x} ${CCHOST}-${x}-${PV}
+			fi
+		done
 	fi
 
 	# This one comes with binutils
-	if [ -f ${D}${LOC}/lib/libiberty.a ]
+	if [ -f "${D}${LOC}/lib/libiberty.a" ]
 	then
 		rm -f ${D}${LOC}/lib/libiberty.a
 	fi
@@ -529,7 +581,7 @@ src_install() {
 	then
 		cd ${S}
 		docinto /${CCHOST}
-		dodoc COPYING COPYING.LIB ChangeLog FAQ GNATS MAINTAINERS README
+		dodoc COPYING COPYING.LIB ChangeLog* FAQ MAINTAINERS README
 		docinto ${CCHOST}/html
 		dohtml *.html
 		cd ${S}/boehm-gc
@@ -542,16 +594,16 @@ src_install() {
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
 		cd ${S}/libf2c
 		docinto ${CCHOST}/libf2c
-		dodoc ChangeLog README TODO *.netlib
+		dodoc ChangeLog* README TODO *.netlib
 		cd ${S}/libffi
 		docinto ${CCHOST}/libffi
 		dodoc ChangeLog* LICENSE README
 		cd ${S}/libiberty
 		docinto ${CCHOST}/libiberty
-		dodoc ChangeLog COPYING.LIB README
+		dodoc ChangeLog* COPYING.LIB README
 		cd ${S}/libobjc
 		docinto ${CCHOST}/libobjc
-		dodoc ChangeLog README* THREADS*
+		dodoc ChangeLog* README* THREADS*
 		cd ${S}/libstdc++-v3
 		docinto ${CCHOST}/libstdc++-v3
 		dodoc ChangeLog* README
@@ -564,7 +616,7 @@ src_install() {
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
-			dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
+			dodoc AUTHORS CHANGES COPYING ChangeLog* NEWS README
 			cd ${S}/libjava
 			docinto ${CCHOST}/libjava
 			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
@@ -584,8 +636,15 @@ src_install() {
 	exeinto /sbin
 	doexe ${FILESDIR}/fix_libtool_files.sh
 
-	# Fix ncurses b0rking
-	find ${D}/ -name '*curses.h' -exec rm -f {} \;
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		# If using multilib, GCC has a bug, where it doesn't know where to find
+		# -lgcc_s when linking while compiling with g++ .  ${LIBPATH} is in
+		# it's path though, so ln the 64bit and 32bit versions of -lgcc_s
+		# to that directory.
+		ln -sf ${LIBPATH}/../lib64/libgcc_s.so ${D}/${LIBPATH}/libgcc_s.so
+		ln -sf ${LIBPATH}/../lib32/libgcc_s_32.so ${D}/${LIBPATH}/libgcc_s_32.so
+	fi
 }
 
 pkg_preinst() {
@@ -597,14 +656,25 @@ pkg_preinst() {
 
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
-	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		# Can't always find libgcc_s.so.1, make it find it
+		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
+	else
+		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	fi
 	${ROOT}/sbin/ldconfig
 }
 
 pkg_postinst() {
 
-	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		# Can't always find libgcc_s.so.1, make it find it
+		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
+	else
+		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	fi
 	if [ "${ROOT}" = "/" -a "${COMPILER}" = "gcc3" -a "${CHOST}" = "${CCHOST}" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
@@ -633,9 +703,6 @@ pkg_postinst() {
 
 		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
 	fi
-
-	# Fix ncurses b0rking (if r5 isn't unmerged)
-	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 
 	# http://dev.gentoo.org/~pappy/hardened-gcc/docs/etdyn-ssp.html
 	if has_version '>=sys-devel/hardened-gcc-1.2'

@@ -1,0 +1,43 @@
+diff -ruN gcc-3.3.2.orig/gcc/config/rs6000/rs6000.c gcc-3.3.2/gcc/config/rs6000/rs6000.c
+--- gcc-3.3.2.orig/gcc/config/rs6000/rs6000.c	2004-01-19 16:56:02.000000000 +0100
++++ gcc-3.3.2/gcc/config/rs6000/rs6000.c	2004-01-20 01:06:46.352118856 +0100
+@@ -264,7 +264,7 @@
+ static void is_altivec_return_reg PARAMS ((rtx, void *));
+ static rtx generate_set_vrsave PARAMS ((rtx, rs6000_stack_t *, int));
+ static void altivec_frame_fixup PARAMS ((rtx, rtx, HOST_WIDE_INT));
+-static int easy_vector_constant PARAMS ((rtx));
++int easy_vector_constant PARAMS ((rtx));
+ static rtx legitimize_tls_address PARAMS ((rtx, enum tls_model));
+ static rtx rs6000_tls_get_addr PARAMS ((void));
+ static rtx rs6000_got_sym PARAMS ((void));
+@@ -1401,7 +1401,7 @@
+ /* Return 1 if the operand is a CONST_INT and can be put into a
+    register with one instruction.  */
+ 
+-static int
++int
+ easy_vector_constant (op)
+      rtx op;
+ {
+diff -ruN gcc-3.3.2.orig/gcc/config/rs6000/rs6000.h gcc-3.3.2/gcc/config/rs6000/rs6000.h
+--- gcc-3.3.2.orig/gcc/config/rs6000/rs6000.h	2004-01-19 16:56:03.000000000 +0100
++++ gcc-3.3.2/gcc/config/rs6000/rs6000.h	2004-01-20 01:06:46.390113080 +0100
+@@ -1993,11 +1993,13 @@
+    acceptable.  */
+ 
+ #define LEGITIMATE_CONSTANT_P(X)				\
+-  ((GET_CODE (X) != CONST_DOUBLE || GET_MODE (X) == VOIDmode	\
+-    || (TARGET_POWERPC64 && GET_MODE (X) == DImode)		\
+-    || easy_fp_constant (X, GET_MODE (X)))			\
+-   && !rs6000_tls_referenced_p (X))
+-
++   (((GET_CODE (X) != CONST_DOUBLE				\
++      && GET_CODE (X) != CONST_VECTOR)				\
++      || GET_MODE (X) == VOIDmode					\
++      || (TARGET_POWERPC64 && GET_MODE (X) == DImode)		\
++      || easy_fp_constant (X, GET_MODE (X))			\
++      || easy_vector_constant (X, GET_MODE (X)))			\
++      && !rs6000_tls_referenced_p (X))
+ /* The macros REG_OK_FOR..._P assume that the arg is a REG rtx
+    and check its validity for a certain class.
+    We have two alternate definitions for each of them.
