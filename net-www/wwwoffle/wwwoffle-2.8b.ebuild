@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.1 2004/04/25 00:44:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.2 2004/04/28 08:58:31 dragonheart Exp $
 
 inherit eutils
 
@@ -83,8 +83,7 @@ src_install() {
 	# for those upgrading...
 	[ -f ${ROOT}/etc/wwwoffle.conf ] && \
 		sed -e 's/\(run-[gu]id\)[ \t]*=[ \t]*[a-zA-Z0-9]*[ \t]*$/\1 = wwwoffle/g' \
-			${ROOT}/etc/wwwoffle.conf \
-			${D}/etc/wwwoffle/wwwoffle.conf
+			${ROOT}/etc/wwwoffle.conf > ${D}/etc/wwwoffle/wwwoffle.conf
 }
 
 pkg_preinst() {
@@ -104,8 +103,8 @@ pkg_preinst() {
 pkg_postinst() {
 	# fix permissions for those upgrading
 	chown -R wwwoffle:wwwoffle \
-		${D}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime1,lastout,local} \
-	${D}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
+		${ROOT}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime1,lastout,local} \
+	${ROOT}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
 
 	[ -f ${T}/stopped ] && \
 		ewarn "wwwoffled was stopped. /etc/init.d/wwwoffled start to restart AFTER etc-update"
