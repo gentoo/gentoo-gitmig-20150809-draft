@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r4.ebuild,v 1.1 2005/02/10 19:15:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r4.ebuild,v 1.2 2005/02/11 00:06:41 taviso Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -71,7 +71,7 @@ src_install() {
 	rm -rf ${Ddir}/lib/modules/binary
 	# We also remove libgdk_pixbuf stuff, to resolve bug #81344.
 	rm -rf ${Ddir}/lib/lib/libgdk_pixbuf.so.2/libpixbufloader-{png,xpm}.so.1.0.0
-	cp ${S}/rpath-fix/* ${Ddir}/lib/lib/libgdk_pixbuf.so.2
+	cp ${WORKDIR}/rpath-fix/* ${Ddir}/lib/lib/libgdk_pixbuf.so.2
 	# We set vmware-vmx and vmware-ping suid
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
