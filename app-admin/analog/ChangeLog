@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.22 2004/04/19 14:46:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.23 2004/04/21 18:12:03 mr_bones_ Exp $
+
+  21 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> analog-5.24.ebuild,
+  analog-5.31.ebuild:
+  clean older versions of the ebuild
 
   20 Apr 2004; Daniel Black <dragonheart@gentoo.org> analog-5.32.ebuild,
   metadata.xml:
