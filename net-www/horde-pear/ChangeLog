@@ -1,6 +1,11 @@
 # ChangeLog for net-www/horde-pear
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-pear/ChangeLog,v 1.1 2003/04/08 21:53:19 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-pear/ChangeLog,v 1.2 2003/05/12 18:37:35 alron Exp $
+
+*horde-pear-1.0.1.1 (11 May 2003)
+
+ 11 May 2003; Dean Bailey <alron@netoptex.com> horde-pear-1.0.1.1 :
+ Version bump to 1.0.1.1.
 
 *horde-pear-1.0.1 (08 Apr 2003)
 
