@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-0.15-r1.ebuild,v 1.14 2004/06/24 22:27:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-0.15-r1.ebuild,v 1.15 2004/07/13 20:42:31 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,6 +12,7 @@ SRC_URI="http://www.aiksaurus.com/dist/TAR/Aiksaurus-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64"
+IUSE=""
 
 DEPEND="sys-devel/gcc"
 RDEPEND=""
