@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/kuake
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/ChangeLog,v 1.10 2004/09/28 17:29:20 centic Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/ChangeLog,v 1.11 2005/02/08 22:48:17 greg_g Exp $
+
+*kuake-0.3-r1 (08 Feb 2005)
+
+  08 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kuake-0.3-dropdown-fix.patch, -kuake-0.2.1.ebuild,
+  -kuake-0.2.2.ebuild, +kuake-0.3-r1.ebuild:
+  Add patch to fix dropdown bug (#79794). Remove old ebulds.
 
   12 Sep 2004; Dominik Stadler <centic@gentoo.org> kuake-0.3.ebuild:
   Mark 0.3 stable on x86
