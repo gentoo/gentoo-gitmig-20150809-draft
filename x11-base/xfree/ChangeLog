@@ -1,6 +1,20 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.248 2003/12/02 15:32:15 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.249 2003/12/03 09:33:14 spyderous Exp $
+
+*xfree-4.3.99.901 (03 Dec 2003)
+
+  03 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-4.3.99.901.ebuild:
+  4.4.0 RC 1. Fix bugs #21140 (Xsetup kdm), #23957 (wdm as *dm) and #26125 (wait
+  for gdm). Add 9960_all_4.3.0-exec-shield-GNU-stack.patch,
+  9961_all_4.3.0-libGL-exec-shield-fixes-v2.patch and
+  9962_all_text-relocations-BUSmemcpy.S.patch for hardened team. However, 9960
+  and 9961 aren't applied because they need to be ported from 4.3.0. Add
+  9840_all_4.3.0-sdk-gatos.patch, 9841_all_4.3.0-gatos-mesa-offset.patch and
+  9860_all_4.3.0-synaptics-sdk-includes.patch for building ati-gatos and
+  synaptics against the SDK. Update to 0119_all_exports-lib-v2.patch and fix
+  0127_all_4.3.99-makefile-fastbuild.patch accordingly.
 
   02 Dec 2003; Alexander Gabert <pappy@gentoo.org> xfree-4.3.0-r3.ebuild,
   xfree-4.3.99.15.ebuild, xfree-4.3.99.16.ebuild:
