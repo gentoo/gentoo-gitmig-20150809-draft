@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/gwget2-0.9.ebuild,v 1.1 2004/03/25 02:54:55 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/gwget2-0.9.ebuild,v 1.2 2004/03/25 11:37:14 dholm Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 #IUSE="nls"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=net-misc/wget-1.8
 	>=x11-libs/gtk+-2

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwget2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/ChangeLog,v 1.7 2004/03/25 02:54:55 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/ChangeLog,v 1.8 2004/03/25 11:37:14 dholm Exp $
+
+  25 Mar 2004; David Holm <dholm@gentoo.org> gwget2-0.9.ebuild:
+  Added to ~ppc.
 
 *gwget2-0.9 (25 Mar 2004)
 
