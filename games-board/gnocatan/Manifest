@@ -1,5 +1,5 @@
-MD5 6ba75f33852c2dc317fa8f8c506cd74f ChangeLog 2212
-MD5 4dd8b11410725cebe176694d321852b4 gnocatan-0.8.1.16-r1.ebuild 958
+MD5 b3cfc610e6ec51eb6697157c27721cc4 ChangeLog 2364
+MD5 dae8c02b7064a2941131c121a94b9113 gnocatan-0.8.1.16-r1.ebuild 1100
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 9022b7d722de7336e084c4a2e2f18763 files/chat.diff 1593
 MD5 f7edf2ac07200fa2cb176fd70558df99 files/digest-gnocatan-0.8.1.16-r1 70
