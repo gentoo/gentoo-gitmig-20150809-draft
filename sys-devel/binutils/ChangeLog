@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.94 2003/12/29 03:59:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.95 2003/12/30 23:03:14 bazik Exp $
+
+  30 Dec 2003; Sven Blumenstein <bazik@gentoo.org>
+  binutils-2.11.92.0.12.3-r2.ebuild, binutils-2.11.92.0.7.ebuild,
+  binutils-2.14.90.0.6-r6.ebuild:
+  Marked stable on sparc.
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org>
   binutils-2.14.90.0.7-r3.ebuild:
