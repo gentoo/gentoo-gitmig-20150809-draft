@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/ax25-apps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.5 2004/08/25 02:30:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.6 2004/10/18 12:28:19 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org> ax25-apps-0.0.6-r1.ebuild:
+  Added to ~ppc.
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> ax25-apps-0.0.6.ebuild:
   Changed SRC_URI to use mirror:// syntax.
