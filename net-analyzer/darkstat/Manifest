@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d30cc6f7d0b91709b1d0e1a4d8914bae ChangeLog 894
 MD5 6d712e4ffb73b80483aeff7101ff9950 darkstat-2.5.ebuild 971
 MD5 f95c4429615a9f4be3f0fa60e05599af darkstat-2.6.ebuild 1015
-MD5 d30cc6f7d0b91709b1d0e1a4d8914bae ChangeLog 894
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
+MD5 44483f0b13561a54b68949145198339f files/darkstat-confd 214
+MD5 4c5840c8f77c7a56b0541eaaabbfd46d files/darkstat-init 461
 MD5 11a0d835bd33988a1e21544896d0374e files/digest-darkstat-2.5 64
 MD5 65647b954a76c7c35eef2f47dfdb5355 files/digest-darkstat-2.6 64
-MD5 feea473ac0b7da77729aec50f439456f files/darkstat-confd 206
-MD5 4c5840c8f77c7a56b0541eaaabbfd46d files/darkstat-init 461
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fRJmdTrptrqvGERAnvmAJwOeuiYksFnCwrvWL6MyoM3y2b2YgCfY7Ji
+NQtEeRcUN8w0AdXrN1iurfM=
+=T/ob
+-----END PGP SIGNATURE-----

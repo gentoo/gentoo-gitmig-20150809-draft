@@ -1,4 +1,4 @@
 # Config file for /etc/init.d/darkstat
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/files/darkstat-confd,v 1.1 2003/10/18 16:59:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/files/darkstat-confd,v 1.2 2004/07/18 03:46:13 dragonheart Exp $
 # Set preferred options here
 DARKSTAT_OPTS="-i ppp0"
