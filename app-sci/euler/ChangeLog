@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/euler
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.5 2003/02/12 05:15:49 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.6 2004/03/15 14:26:26 phosphan Exp $
+
+*euler-1.60.6-r1 (15 Mar 2004)
+
+  15 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> euler-1.60.6-r1.ebuild,
+  euler-1.60.6.ebuild, files/euler-1.60.6.patch:
+  Fixing bug #41638, adding usage of CFLAGS in -r1
 
 *euler-1.60.6 (14 Dec 2002)
   

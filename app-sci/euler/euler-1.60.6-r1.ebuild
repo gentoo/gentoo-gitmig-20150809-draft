@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6.ebuild,v 1.6 2004/03/15 14:26:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6-r1.ebuild,v 1.1 2004/03/15 14:26:26 phosphan Exp $
 
 #euler only uses two major numners internally, need to do some mangling
 MajVer="$(echo ${PV}|cut -d '.' -f 1,2)"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/euler/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	virtual/x11
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.patch
 	sed -e "s:share/euler/docs/index.html:share/doc/${P}/html/index.html:" \
 		-i main.c
+	sed -e "s:-O2:\$(CFLAGS):" -i makefile	
 }
 
 src_compile() {
