@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4_p1.ebuild,v 1.1 2003/09/13 11:35:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4_p1.ebuild,v 1.2 2003/09/16 20:18:07 mholzer Exp $
 
 MY_P=${P/_p/-pl}
 
@@ -75,7 +75,15 @@ src_install() {
 	insinto ${DST_PATH}/setup
 	doins setup/*.{php,inc,template,txt} setup/.htaccess
 
-	dodoc AUTHORS ChangeLog README LICENSE.txt todo UPGRADING
+	# install locales
+	for d in locale/*
+	do
+		insinto ${DST_PATH}/$d/LC_MESSAGES
+		doins $d/LC_MESSAGES/*
+	done
+
+	dodoc AUTHORS ChangeLog README LICENSE.txt UPGRADING
+	dohtml docs/*
 }
 
 pkg_postinst() {
