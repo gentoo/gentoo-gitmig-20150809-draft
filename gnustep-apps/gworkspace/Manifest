@@ -1,13 +1,23 @@
-MD5 04f194acbd67ab74bd3f25c79fd39234 gworkspace-0.6.6_pre20040928-r2.ebuild 979
-MD5 17550668a1428fcc2a0e7bc989ac3931 gworkspace-0.6.6_pre20040928-r1.ebuild 931
-MD5 ede07b331a0a1569f53f1726abc2537f gworkspace-0.6.6_pre20041203.ebuild 1061
-MD5 4621c09b75acecd6d2ee3378a2305117 gworkspace-0.6.6_pre20040928-r3.ebuild 1005
-MD5 81d3fc472f0ca8c12e7ce9adc6926225 ChangeLog 3064
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 88395e53875a1f7e4e6b271d4d6d5238 gworkspace-0.6.6_pre20040928-r2.ebuild 982
+MD5 b7ac694346c76990413220b37e66576a gworkspace-0.6.6_pre20040928-r1.ebuild 937
+MD5 e36cede3aaa5561f2986d237dc9d2283 gworkspace-0.6.6_pre20041203.ebuild 1063
+MD5 278d67c76deac1b39b3e7f5fca92d302 gworkspace-0.6.6_pre20040928-r3.ebuild 1007
+MD5 685f2c96916355de8bfaff2a30b92d5f ChangeLog 3215
 MD5 144bf372071e2a59ced95e82e91531bd metadata.xml 391
-MD5 513c29d824c7e48febfad8e782fd3bee gworkspace-0.6.6_pre20040928.ebuild 894
+MD5 060f0e6ec655d6a5c06adace1e26acde gworkspace-0.6.6_pre20040928.ebuild 896
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gworkspace-0.6.6_pre20040928 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gworkspace-0.6.6_pre20041203 0
 MD5 660807348555935d3d149797044803b3 files/seperate-desktop-recycler.patch 316
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gworkspace-0.6.6_pre20040928-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gworkspace-0.6.6_pre20040928-r2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gworkspace-0.6.6_pre20040928-r3 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB4Q2+I1lqEGTUzyQRAqYJAKDbEjPD/MTjQd38nAriOj7idW9phgCfeniu
+CtFrXTbTrDTWNKer6nT/QXM=
+=NEeE
+-----END PGP SIGNATURE-----

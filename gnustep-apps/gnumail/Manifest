@@ -1,8 +1,18 @@
-MD5 e8d7e181e022e57bf061cbadc802fde3 ChangeLog 3444
-MD5 64583448e0fb271d1106b628ad9eee99 gnumail-1.2.0_pre20041108.ebuild 1690
-MD5 3053172261e1f5072bfde822b943c543 gnumail-1.2.0_pre20041203.ebuild 1690
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 acfd8e8a92075e909e4d18e9c6a5a7eb gnumail-1.2.0_pre20041030.ebuild 1660
+MD5 df8859fefa2afca7f6cc0aa3e8032810 gnumail-1.2.0_pre20041108.ebuild 1696
+MD5 3c772daa3d7ad32cc0e4e4ef4615c008 gnumail-1.2.0_pre20041203.ebuild 1696
+MD5 dc6acb84c28417fa4a9bebf34b1b9e70 ChangeLog 3658
 MD5 fd2a74704d1454dc7972123fded408cb metadata.xml 620
-MD5 a52906ad4ce135f97f055807a5ba3fe4 gnumail-1.2.0_pre20041030.ebuild 1654
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnumail-1.2.0_pre20041030 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnumail-1.2.0_pre20041203 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnumail-1.2.0_pre20041108 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnumail-1.2.0_pre20041203 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB4Q43I1lqEGTUzyQRAqMbAKCyLVwsut7cq/zo1p0qXwWCyJkvNwCffo63
+PtlUsBWGsfrqYEEGGRkWvYs=
+=+fHJ
+-----END PGP SIGNATURE-----
