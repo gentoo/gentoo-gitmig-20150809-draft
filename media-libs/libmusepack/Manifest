@@ -1,6 +1,16 @@
-MD5 c0bc030ee39673549e6ba98ce978123b libmusepack-1.0.3.ebuild 544
-MD5 722caae020e340b589ce23b30e2c9582 ChangeLog 1644
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 c2a767c47807b86b2570051f83a1fd5c libmusepack-1.1.ebuild 692
-MD5 d4e0b9147a15f75a6530a8c7a6d45194 files/digest-libmusepack-1.1 68
+MD5 c0bc030ee39673549e6ba98ce978123b libmusepack-1.0.3.ebuild 544
+MD5 c2dfc58379c6fa426872191ddfa0cedb ChangeLog 1819
+MD5 ba138241b407ded034c910a627d12ed9 libmusepack-1.1-r1.ebuild 693
 MD5 51b8f6a366771c5e79ab355b15ba9b9c files/digest-libmusepack-1.0.3 70
+MD5 d4e0b9147a15f75a6530a8c7a6d45194 files/digest-libmusepack-1.1-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCGLlvp5vW4rUFj5oRAubPAJ9qthZYVzCmPAHnhCRER6kzAi7isACfVkNN
+/tLGkFvmOEdyhSZD00A5twE=
+=kpYh
+-----END PGP SIGNATURE-----
