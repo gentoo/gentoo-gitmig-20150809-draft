@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.4 2003/02/12 04:59:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.5 2003/03/30 19:38:14 foser Exp $
+
+*gramps-0.9.0 (30 Mar 2003)
+
+  30 Mar 2003; foser <foser@gentoo.org> gramps-0.9.0.ebuild :
+  New version, now uses gtk2
+  Adapted to gnome2 eclass
 
 *gramps-0.8.0 (6 Sep 2002)
   6 Sep 2002; Jon Nelson <jnelson@gentoo.org> gramps-0.8.0.ebuild :
