@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.1 2005/01/29 06:48:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.2 2005/03/24 20:11:10 blubb Exp $
+
+  24 Mar 2005; <blubb@gentoo.org> at76c503a-0.12_beta19.ebuild:
+  added ~amd64
 
 *at76c503a-0.12_beta19 (29 Jan 2005)
 
