@@ -1,24 +1,25 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.19 2003/05/10 11:29:31 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.20 2003/05/12 22:16:49 twp Exp $
+
+*phpmyadmin-2.5.0 (12 May 2003)
+
+  12 May 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.5.0.ebuild :
+  Version bump. Ebuild tidy. Improved src_install. Bug # 20874.
 
 *phpmyadmin-2.4.0 (08 Apr 2003)
 
   10 May 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.4.0.ebuild :
-
   Always install to /home/httpd/htdocs. Bug # 20642.
 
   09 May 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.4.0.ebuild :
-
   Allow user to override document root with DOCUMENT_ROOT env var. Bug # 20642.
 
   09 Apr 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.4.0.ebuild :
-
   Dynamically determine DocumentRoot. No bump to ebuild revision number since
   existing users won't see a change.
 
   08 Apr 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.4.0.ebuild files/phpmyadmin-config.patch files/phpmyadmin-mysql-setup.sql.in :
-
   Version bump.  Improved config file handling (doesn't overwrite on upgrade,
   now stores config file in /etc/phpmyadmin so it is config-protected).  Added
   pkg_config to setup MySQL. Bug # 16521.
