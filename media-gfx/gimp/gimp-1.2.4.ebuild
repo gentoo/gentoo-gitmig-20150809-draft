@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.1 2003/05/27 14:48:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.2 2003/05/27 17:54:31 liquidx Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="python nls gnome aalib perl doc jpeg png tiff"
+IUSE="python nls gnome aalib perl doc jpeg png tiff doc"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
@@ -28,59 +28,12 @@ RDEPEND="=x11-libs/gtk+-1.2*
 
 DEPEND="nls? ( sys-devel/gettext )
 	doc? ( dev-util/gtk-doc )
-	sys-devel/autoconf
-	sys-devel/automake
 	>=media-libs/mpeg-lib-1.3.1
 	${RDEPEND}"
 
 src_unpack() {
-#	if [ "`use threads`" ]; then
-#		eerror "I'm sorry I can't build against a threaded perl,"
-#		eerror "please remerge perl and libperl without"
-#		eerror "'USE=threads' and try again.  (Note: this message"
-#		eerror "is triggered by having threads in USE so you must"
-#		eerror "leave threads out of your USE var when merging"
-#		eerror "gimp."
-#		die "Not compatible with threaded perl"
-#	fi
 	unpack ${A}
-	
-#	cd ${S}/plug-ins/common
-	# compile with nonstandard psd_save plugin
-#	cp ${FILESDIR}/psd_save.c .
-#	epatch ${FILESDIR}/${PF}-gentoo.diff
-#	cd ${S}
-	
-#	if [ -f ${ROOT}/usr/share/gettext/config.rpath ] ; then
-#		cp -f ${ROOT}/usr/share/gettext/config.rpath ${S}
-#	else
-#		touch ${S}/config.rpath
-#		chmod 0755 ${S}/config.rpath
-#	fi
-	
-#	echo ">>> Reconfiguring package..."
-#	export WANT_AUTOMAKE_1_4=1
-#	export WANT_AUTOCONF_2_1=1
-#	aclocal -I . -I ${S}/plug-ins/perl
-#	automake --add-missing --gnu
-# Do not run autoreconf, or even autoconf, as it (autoreconf at least)
-# needs cvs installed, and breaks configure (locales are not installed).
-# Our psd_save patch anyhow only touch .am files, so only automake is
-# needed ....  This should fix bug #8490, #6021 and #9621.
-#
-# <azarah@gentoo.org> (2 Nov 2002)
-#
-#	autoreconf --install --symlink &> ${T}/autoreconf.log || ( \
-#		echo "DEBUG: working directory is: `pwd`" >>${T}/autoreconf.log
-#		eerror "Reonfigure failed, please attatch the contents of:"
-#		eerror
-#		eerror "  ${T}/autoreconf.log"
-#		eerror
-#		eerror "in your bugreport."
-#		# we need an error here, else the ebuild do not die
-#		exit 1
-#	) || die "running autoreconf failed"
-
+	# here for a mysterious reason
 	touch ${S}/plug-ins/common/${P}.tar.bz2
 }
 
@@ -124,13 +77,8 @@ src_compile() {
 src_install() {
 
 	local mymake="" 
-	if [ -z "`use aalib`" ] ; then
-		mymake="LIBAA= AA="
-	fi
-
-	if [ -z "`use gnome`" ] ; then
-		mymake="${mymake} HELPBROWSER="
-	fi
+	use aalib || mymake="LIBAA= AA="
+	use gnome || mymake="${mymake} HELPBROWSER="
   
 	dodir /usr/lib/gimp/1.2/plug-ins
 	
@@ -154,17 +102,13 @@ src_install() {
 	#this next line closes bug #810
 	dosym gimptool-1.2 /usr/bin/gimptool
 
-	if [ "`use gnome`" ] && [ -d ${ROOT}/usr/share/applications ]
-	then
+	use gnome && (
 		insinto /usr/share/applications
 		doins ${FILESDIR}/gimp.desktop
-	fi
+	)
 	
 	preplib /usr
 	
 	dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
 	dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz
-#	dohtml -r devel-docs
-#	docinto devel
-#	dodoc devel-docs/*.txt
 }
