@@ -100,3 +100,5 @@ net-misc/netkit-telnetd
 net-misc/openssh
 net-ftp/ftp
 #sys-kernel/linux
+dev-libs/glib
+#the above is needed for our new env-update
