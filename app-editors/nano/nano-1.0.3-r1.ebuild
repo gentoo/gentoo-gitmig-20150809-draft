@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Prakash Shetty (Crux) <ps@gnuos.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.3-r1.ebuild,v 1.4 2001/08/11 09:27:09 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.3-r1.ebuild,v 1.5 2001/08/13 20:09:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Clone of PICO with more Fuctions in a smaller Size"
@@ -21,7 +21,7 @@ src_compile() {
 src_install () {
     cd ${S}
     try make DESTDIR=${D} install
-	if [ -z "`use bootcd`" ]
+	if [ -z "`use bootcd`" ] && [ -z "`use build`" ]
 	then
 		dodoc COPYING ChangeLog README
 	else
