@@ -1,0 +1,149 @@
+Binary files NVIDIA_kernel-0.9-4/.nv.c.swp and NVIDIA_kernel_devfs-0.9-4/.nv.c.swp differ
+Binary files NVIDIA_kernel-0.9-4/.nv.h.swp and NVIDIA_kernel_devfs-0.9-4/.nv.h.swp differ
+diff -urN NVIDIA_kernel-0.9-4/DEVFS_README NVIDIA_kernel_devfs-0.9-4/DEVFS_README
+--- NVIDIA_kernel-0.9-4/DEVFS_README	Wed Dec 31 18:00:00 1969
++++ NVIDIA_kernel_devfs-0.9-4/DEVFS_README	Mon Aug  7 00:06:11 2000
+@@ -0,0 +1,14 @@
++	The devfs patch should still compile if you have a 2.4.x kernel without
++devfs.  If you use devfs, all this patch does is create the devices for you
++whenever the module is loaded, so you don't have to create them manually every
++time you reboot.
++	It is normal to not have the /dev files nvidia1 - nvidia3, those are only for
++extra video cards and will be made if any other nvidia cards are found.
++	It would be much better to make it so the /dev files were not put in
++/dev but rather in a subdirectory in /dev (as is the point of creating devfs
++in the first place), but that would require changing source code that I do
++not have access to.
++
++Vomjom
++
++Any problems or questions, mail me at vomjom@earthlink.net
+diff -urN NVIDIA_kernel-0.9-4/nv.c NVIDIA_kernel_devfs-0.9-4/nv.c
+--- NVIDIA_kernel-0.9-4/nv.c	Mon Jul 10 17:32:13 2000
++++ NVIDIA_kernel_devfs-0.9-4/nv.c	Mon Aug  7 00:01:37 2000
+@@ -122,6 +122,13 @@
+ nv_client_t       nv_clients[NV_MAX_CLIENTS];
+ struct tq_struct  nv_bottom_halves[NV_MAX_CLIENTS];
+ 
++/* devfs stuff */
++#ifdef DEVFS
++#include<linux/devfs_fs_kernel.h>
++devfs_handle_t    nv_handles[NV_MAX_CLIENTS];
++devfs_handle_t    nv_ctl_handle;
++#endif
++
+ /*
+  * pick apart our minor device number
+  * low 3 bits is NV device
+@@ -324,7 +331,7 @@
+     return 0;
+ }
+ 
+-void nv_probe_devices(void)
++int nv_probe_devices(void)
+ {
+     int probenum = 0;
+     unsigned char bus, func;
+@@ -433,6 +440,7 @@
+     NV_DMSG((nv_state_t *) 0,
+             "nv_probe_devices: found %d device%s", dev_count,
+             dev_count == 1 ? "" : "s");
++    return dev_count;
+ }
+ 
+ 
+@@ -851,7 +859,9 @@
+     int rc;
+ 
+     // Register driver
++#ifndef DEVFS
+     rc = register_chrdev(nv_major, "nvidia", &nv_fops);
++
+     if (rc < 0) {
+         NV_EMSG((nv_state_t *) 0,
+                 "init_module: register failed %d", rc);
+@@ -860,10 +870,38 @@
+     // if we requested dynamic major assignment, then 'rc' will have new number
+     if (nv_major == 0)
+         nv_major = rc;
+-
+     NV_DMSG((nv_state_t *) 0, "init_module: major number %d", nv_major);
+ 
+     nv_probe_devices();
++#else
++    {
++    int i;
++    char device_name[16];
++    int ret;
++
++    if(devfs_register_chrdev(nv_major, "nvidia", &nv_fops))
++    {
++	    NV_EMSG((nv_state_t *) 0, "init_module: register failed %d", nv_major);
++	    return nv_major;
++    }
++/* It would be MUCH better to make devices in a subdirectory in /dev, but since the 
++ * location of the current devices is probably hard-coded elsewhere, and I can't access
++ * the source code, it's probably something for you guys to change later. */
++    nv_ctl_handle = devfs_register(NULL, "nvidiactl", DEVFS_FL_DEFAULT, nv_major, 0xFF,
++		    S_IFCHR | S_IRUGO | S_IWUGO, &nv_fops, NULL);
++    ret = nv_probe_devices();
++    for(i = 0; i < ret; i++)
++    {
++        sprintf(device_name, "nvidia%d", i);
++	nv_handles[i] = devfs_register(NULL, device_name, DEVFS_FL_DEFAULT, nv_major, i, 
++			S_IFCHR | S_IRUGO | S_IWUGO, &nv_fops, NULL);
++    }
++    while(i != NV_MAX_DEVICES)
++    {
++	nv_handles[++i] = 0;
++    }
++    }
++#endif
+ 
+     // init all the bottom half structures
+     for (nv = nv_devices; nv < nv_devices + NV_MAX_DEVICES; nv++)
+@@ -902,16 +940,30 @@
+ 
+     // make sure we freed up all the mappings
+     // kernel should do this automagically before calling close
+-    for (nv = &nv_devices[0]; nv < nv_devices + NV_MAX_DEVICES; nv++)
++    for (nv = nv_devices; nv < nv_devices + NV_MAX_DEVICES; nv++)
+         if (nv->alloc_queue)
+             NV_EMSG(nv,
+                     "still have vm que at cleanup_module(): 0x%x to 0x%x",
+                     nv->alloc_queue->vma->vm_start,
+                     nv->alloc_queue->vma->vm_end);
+ 
++#ifndef DEVFS
+     if ((rc = unregister_chrdev(nv_major, "nvidia")) < 0)
+         NV_EMSG((nv_state_t *) 0,
+                 "cleanup_module: unregister nv failed %d", rc);
++#else
++    {
++    int i = 0;
++    if(devfs_unregister_chrdev(nv_major, "nvidia"))
++        NV_EMSG((nv_state_t *) 0,
++		"cleanup_module: unregister nv failed %d", nv_major);
++    devfs_unregister(nv_ctl_handle);
++    while(nv_handles[i])
++    {
++        devfs_unregister(nv_handles[i++]);
++    }
++    }
++#endif
+ }
+ 
+ static void nv_interrupts_disable(
+diff -urN NVIDIA_kernel-0.9-4/nv.h NVIDIA_kernel_devfs-0.9-4/nv.h
+--- NVIDIA_kernel-0.9-4/nv.h	Mon Jul 10 17:32:13 2000
++++ NVIDIA_kernel_devfs-0.9-4/nv.h	Mon Aug  7 00:02:08 2000
+@@ -138,6 +138,9 @@
+ #ifdef CONFIG_AGP_MODULE
+     #define AGPGART
+ #endif
++#ifdef CONFIG_DEVFS_FS
++    #define DEVFS
++#endif
+ 
+ #ifdef AGPGART
+ #include <linux/types.h>
