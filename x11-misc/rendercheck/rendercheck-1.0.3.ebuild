@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/rendercheck-1.0.3.ebuild,v 1.1 2004/11/06 00:19:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/rendercheck-1.0.3.ebuild,v 1.2 2004/12/18 05:52:08 spyderous Exp $
 
 IUSE=""
 
-DESCRIPTION="X Compositing manager"
+DESCRIPTION="Tests for compliance with X RENDER extension"
 HOMEPAGE="http://freedesktop.org/Software/xapps"
 SRC_URI="http://freedesktop.org/~xapps/release/${P}.tar.bz2"
 
