@@ -101,6 +101,10 @@ nxserver_pkg_postinst() {
 		l_szPasswd=passwords
 	fi
 
+	if [ ! -d /usr/NX/home ]; then
+		ln -s /usr/NX/nxhome /usr/NX/home
+	fi
+
 	einfo "Changing permissions for files under /usr/NX"
 	chown nx:root /usr/NX/etc/$l_szPasswd
 	chown -R nx:root /usr/NX/nxhome
