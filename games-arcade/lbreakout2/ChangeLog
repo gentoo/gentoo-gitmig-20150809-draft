@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/lbreakout2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.13 2005/01/25 01:35:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.14 2005/03/30 19:40:08 kloeri Exp $
+
+  30 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  lbreakout2-2.5.2.ebuild:
+  Add ~alpha keyword, bug 86601.
 
 *lbreakout2-2.5.2 (24 Jan 2005)
 
