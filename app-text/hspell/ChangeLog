@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hspell
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.5 2003/12/22 22:22:27 coronalvr Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.6 2004/03/14 21:15:52 weeve Exp $
+
+  14 Mar 2004; Jason Wever <weeve@gentoo.org> hspell-0.6.ebuild:
+  Added ~sparc keyword.
 
 *hspell-0.7 (23 Dec 2003)
 
