@@ -1,11 +1,14 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.47 2002/11/18 22:19:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.48 2002/11/18 23:17:50 azarah Exp $
 
   19 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2_beta.ebuild :
 
   Do not enable Xft2.0 if we are building with gtk2, as it causes mozilla to
   segfault do to it being linked to libXft.so.1.1 *and* libXft.so.2.0.
+
+  Change the perl sed's for mozilla-config and pkgconfig files to use $MY_PV2
+  and *not* $PV.
 
 *mozilla-1.2_beta (18 Nov 2002)
 

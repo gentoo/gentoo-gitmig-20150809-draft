@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2_beta.ebuild,v 1.2 2002/11/18 22:19:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2_beta.ebuild,v 1.3 2002/11/18 23:17:50 azarah Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -387,8 +387,8 @@ src_install() {
 
 	cd ${S}/build/unix
 	# Fix mozilla-config and install it
-	perl -pi -e "s:/lib/mozilla-${PV}::g" mozilla-config
-	perl -pi -e "s:/mozilla-${PV}::g" mozilla-config
+	perl -pi -e "s:/lib/mozilla-${MY_PV2}::g" mozilla-config
+	perl -pi -e "s:/mozilla-${MY_PV2}::g" mozilla-config
 	exeinto /usr/lib/mozilla
 	doexe mozilla-config
 	# Fix pkgconfig files and install them
@@ -397,8 +397,8 @@ src_install() {
 	do
 		if [ -f ${x} ]
 		then
-			perl -pi -e "s:/lib/mozilla-${PV}::g" ${x}
-			perl -pi -e "s:/mozilla-${PV}::g" ${x}
+			perl -pi -e "s:/lib/mozilla-${MY_PV2}::g" ${x}
+			perl -pi -e "s:/mozilla-${MY_PV2}::g" ${x}
 			doins ${x}
 		fi
 	done
