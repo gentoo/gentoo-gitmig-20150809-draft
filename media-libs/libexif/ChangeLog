@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.11 2003/11/08 16:42:27 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.12 2003/11/15 02:40:27 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> libexif-0.5.12.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> libexif-0.5.12.ebuild:
   added sparc keyword

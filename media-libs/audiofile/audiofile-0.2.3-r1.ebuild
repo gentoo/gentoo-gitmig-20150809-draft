@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.3-r1.ebuild,v 1.17 2003/11/01 09:46:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.3-r1.ebuild,v 1.18 2003/11/15 02:38:49 agriffis Exp $
 
 inherit libtool gnuconfig
 
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips ia64"
 
 src_compile() {
 

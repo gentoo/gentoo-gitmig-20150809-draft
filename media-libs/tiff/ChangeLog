@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.10 2003/10/07 22:17:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.11 2003/11/15 02:39:06 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> tiff-3.6.0.ebuild:
+  Stable on ia64
 
 *tiff-3.6.0 (07 Oct 2003)
 
