@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/randomsig/randomsig-1.10.0.ebuild,v 1.9 2004/06/24 23:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/randomsig/randomsig-1.10.0.ebuild,v 1.10 2004/07/15 02:25:44 agriffis Exp $
 
 MY_P=${PN}-v${PV}
 S=${WORKDIR}/${MY_P}
@@ -12,6 +12,7 @@ SRC_URI="http://suso.suso.org/programs/randomsig/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc s390"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
