@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.37 2004/10/23 19:55:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.38 2004/11/14 22:30:45 mrness Exp $
+
+*rp-pppoe-3.5-r4 (15 Nov 2004)
+
+  15 Nov 2004; Alin Nastac <mrness@gentoo.org> +files/3.5-adsl-stop.patch,
+  +rp-pppoe-3.5-r4.ebuild:
+  Fix adsl-stop to kill pppoe instead pppd (see #67209). Avoid QA notices
+  regarding lazy bindings.
 
 *rp-pppoe-3.5-r3 (23 Oct 2004)
 
