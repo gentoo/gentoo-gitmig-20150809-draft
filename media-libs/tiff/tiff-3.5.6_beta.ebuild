@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.6_beta.ebuild,v 1.2 2001/08/08 13:17:55 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.6_beta.ebuild,v 1.3 2001/08/27 00:11:57 drobbins Exp $
 
 P=${PN}-v3.5.6-beta
 A=${P}.tar.gz
@@ -10,8 +10,7 @@ DESCRIPTION="libtiff"
 SRC_URI="http://www.libtiff.org/"${A}
 HOMEPAGE="http://www.libtiff.org/"
 
-DEPEND=">=media-libs/jpeg-6b
-	>=sys-libs/zlib-1.1.3-r2"
+DEPEND=">=media-libs/jpeg-6b >=sys-libs/zlib-1.1.3-r2"
 
 src_unpack() {
     unpack ${A}
@@ -25,17 +24,14 @@ src_unpack() {
 }
 
 src_compile() {
-    try ./configure --noninteractive
-    
-    try make OPTIMIZER="${CFLAGS}"
+    ./configure --noninteractive || die
+    make OPTIMIZER="${CFLAGS}" || die
 }
 
 src_install() {
     dodir /usr/{bin,lib,share/man,share/doc/${PF}/html}
-    
     dodir /usr/share/doc/${PF}/html
-    try make install
-    
+    make install || die
     prepalldocs
     
 #    rm ${D}/usr/lib/libtiff.so.3
