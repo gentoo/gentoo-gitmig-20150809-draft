@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/specemu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.1 2002/05/27 22:42:44 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.2 2002/07/27 15:51:37 stubear Exp $
+
+*specemu-0.9.4 (27 Jul 2002)
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> specemu-0.9.4.ebuild :
+
+  Added SLOT and KEYWORDS="x86".
 
 *specemu-0.9.4 (27 May 2002)
 
