@@ -1,31 +1,33 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ca9a6cf26b395926205dabf65ce08052 ck-sources-2.6.11-r2.ebuild 809
-MD5 07d302d5021bc0635909da0cf1bb90dc ck-sources-2.4.28-r3.ebuild 1272
-MD5 4097d82f8dea7e09fedbc1159d4c2706 ChangeLog 19944
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
-MD5 1d78b90e495e432432e095ee47bbc2fc files/ck-sources-2.4.28.77094.patch 452
-MD5 792fa9165e5ae65d46ee206c7f7a4fc9 files/ck-sources-2.4.28.78363.patch 788
-MD5 8c35751caf824a9dacb02e80d6189b2e files/ck-sources-2.4.28.CAN-2004-1137.patch 1764
-MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/ck-sources-2.4.28.CAN-2004-1016.patch 2835
-MD5 7695b79187fcc27339ab62af1112ec11 files/ck-sources-2.6.11-74070.patch 525
+MD5 07d302d5021bc0635909da0cf1bb90dc ck-sources-2.4.28-r3.ebuild 1272
+MD5 783998a38b9aed2335aab03acd4d1f2f ChangeLog 20078
+MD5 ca9a6cf26b395926205dabf65ce08052 ck-sources-2.6.11-r2.ebuild 809
+MD5 f50d4ada400d92dbbdabc01f43556740 ck-sources-2.6.11-r3.ebuild 809
 MD5 6cf860a301930c8cac126ab0c4d859d4 files/ck-sources-2.4.28.brk-locked.patch 8202
-MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.28.cmdlineLeak.patch 388
-MD5 38e8ce7cb288b0b9ed6ceb58d4103547 files/ck-sources-2.6.11-lowmem-reserve-oops.patch 2788
-MD5 c27699e9d62f7d46213bd51f87636163 files/ck-sources-2.4.28.vma.patch 8143
-MD5 ea61cd84e266e1ddfa963d27e9c1ba99 files/digest-ck-sources-2.4.28-r3 210
+MD5 1efe4024e443e60db5fd9b21b22fabd2 files/ck-sources-2.4.28.77666.patch 1724
+MD5 1d78b90e495e432432e095ee47bbc2fc files/ck-sources-2.4.28.77094.patch 452
+MD5 757ee1239c3f14645ccea3640d551e11 files/ck-sources-2.4.28.CAN-2004-1056.patch 11249
+MD5 896bbf9394c6574b046cbdbebdd0deb3 files/digest-ck-sources-2.6.11-r3 131
+MD5 792fa9165e5ae65d46ee206c7f7a4fc9 files/ck-sources-2.4.28.78363.patch 788
+MD5 7695b79187fcc27339ab62af1112ec11 files/ck-sources-2.6.11-74070.patch 525
 MD5 79a76d3cb0029b85d4303b0019e788a8 files/ck-sources-2.4.28.compileFix.patch 2070
+MD5 8c35751caf824a9dacb02e80d6189b2e files/ck-sources-2.4.28.CAN-2004-1137.patch 1764
+MD5 38e8ce7cb288b0b9ed6ceb58d4103547 files/ck-sources-2.6.11-lowmem-reserve-oops.patch 2788
+MD5 afa82ff12c32718492d20f7f28b72631 files/digest-ck-sources-2.6.11-r2 131
+MD5 c27699e9d62f7d46213bd51f87636163 files/ck-sources-2.4.28.vma.patch 8143
+MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.28.cmdlineLeak.patch 388
 MD5 b9a94233e1457787352e5f85e3e3582d files/ck-sources-2.4.28.binfmt_a.out.patch 2009
 MD5 0f93b46ae17cbd0fc9b4d1cf5d704296 files/ck-sources-2.4.28.81106.patch 2243
-MD5 757ee1239c3f14645ccea3640d551e11 files/ck-sources-2.4.28.CAN-2004-1056.patch 11249
+MD5 ea61cd84e266e1ddfa963d27e9c1ba99 files/digest-ck-sources-2.4.28-r3 210
+MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/ck-sources-2.4.28.CAN-2004-1016.patch 2835
 MD5 b6cd2468a246169a6e2f969c44e3f341 files/ck-sources-2.4.28.78362.patch 10372
-MD5 afa82ff12c32718492d20f7f28b72631 files/digest-ck-sources-2.6.11-r2 131
-MD5 1efe4024e443e60db5fd9b21b22fabd2 files/ck-sources-2.4.28.77666.patch 1724
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCM2SUnVkA0cTr1F4RApRWAJ9snhTi0NLyDPlU2y6bIvM3JJqiGQCfUdQl
-JLGoSGp26KwfVyCvLexZrlc=
-=E7eK
+iD8DBQFCRzzBp5vW4rUFj5oRApl3AJ4qxRLVIpx75DqFBNt1scUgaCljqgCgm1zo
+uHh0Z3UkbIPXosRlifEUIVU=
+=rpJF
 -----END PGP SIGNATURE-----
