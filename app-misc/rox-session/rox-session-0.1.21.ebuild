@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox-session/rox-session-0.1.20.ebuild,v 1.3 2003/10/27 12:35:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox-session/rox-session-0.1.21.ebuild,v 1.1 2003/10/27 12:35:49 matsuu Exp $
 
 MY_PN="ROX-Session"
 DESCRIPTION="Rox-Session is a really simple session manager"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/rox/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc"
 IUSE=""
 
 DEPEND="app-misc/rox"

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<longdescription>ROX-Session is a really simple session manager. It loads, runs any programs you asked it to, and then quits when you run it a second time (thus ending your session). It does not display any windows until you ask it to quit.</longdescription>
+</pkgmetadata>
