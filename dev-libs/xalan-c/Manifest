@@ -1,3 +1,13 @@
-MD5 e6334f1b108f47cc62247d3d52f45281 xalan-c-1.7.0.ebuild 1207
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a9a056a317dae080c1f9ff97256eddac ChangeLog 347
+MD5 66e06db2ec66a406e37f8bf62f4f60ef xalan-c-1.7.0.ebuild 1241
 MD5 a33c1f42e271ebd8c220bb0f3e2700a4 files/digest-xalan-c-1.7.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBPooMHTu7gpaalycRAosYAKDfnJBRiiVQWQVZTSy1UAWoAChlQgCgi+aY
+o/yrZ4RW/RoAGo+0cYZItJk=
+=xZdb
+-----END PGP SIGNATURE-----
