@@ -431,7 +431,7 @@ def spawn(mystring,debug=0):
 		#interrupted by signal
 		return 16
 
-def doebuild(myebuild,mydo,checkdeps=1,debug=0):
+def doebuild(myebuild,mydo,myroot,checkdeps=1,debug=0):
 	global settings
 	if not os.path.exists(myebuild):
 		print "!!!",myebuild,"not found."
@@ -441,7 +441,8 @@ def doebuild(myebuild,mydo,checkdeps=1,debug=0):
 		return 1
 	settings.reset()
 	settings["PORTAGE_DEBUG"]=str(debug)
-	settings["ROOT"]=root
+	#settings["ROOT"]=root
+	settings["ROOT"]=myroot
 	settings["STARTDIR"]=os.getcwd()
 	settings["EBUILD"]=os.path.abspath(myebuild)
 	settings["O"]=os.path.dirname(settings["EBUILD"])
@@ -522,16 +523,16 @@ def doebuild(myebuild,mydo,checkdeps=1,debug=0):
 		return spawn("/usr/sbin/ebuild.sh "+mydo)
 	elif mydo=="qmerge": 
 		#qmerge is specifically not supposed to do a runtime dep check
-		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info")
+		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info",myroot)
 	elif mydo=="merge":
 		retval=spawn("/usr/sbin/ebuild.sh fetch unpack compile install")
 		if retval: return retval
 		if checkdeps:
 			retval=dep_frontend("runtime",myebuild,mydeps[1])
 			if (retval): return retval
-		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info")
+		return merge(settings["CATEGORY"],settings["PF"],settings["D"],settings["BUILDDIR"]+"/build-info",myroot)
 	elif mydo=="unmerge": 
-		return unmerge(settings["CATEGORY"],settings["PF"])
+		return unmerge(settings["CATEGORY"],settings["PF"],myroot)
 	elif mydo=="rpm": 
 		return spawn("/usr/sbin/ebuild.sh fetch unpack compile install rpm")
 	elif mydo=="package":
@@ -602,15 +603,15 @@ def pathstrip(x,mystart):
     cpref=os.path.commonprefix([x,mystart])
     return [root+x[len(cpref)+1:],x[len(cpref):]]
 
-def merge(cat,pkg,mystart,myinfostart):
-	mylink=dblink(cat,pkg)
+def merge(mycat,mypkg,pkgloc,infloc,myroot):
+	mylink=dblink(mycat,mypkg,myroot)
 	if not mylink.exists():
 		mylink.create()
 		#shell error code
-	mylink.merge(mystart,myinfostart)
-
-def unmerge(cat,pkg):
-	mylink=dblink(cat,pkg)
+	mylink.merge(pkgloc,infloc,myroot)
+	
+def unmerge(cat,pkg,myroot):
+	mylink=dblink(cat,pkg,myroot)
 	if mylink.exists():
 		mylink.unmerge()
 	mylink.delete()
@@ -1533,12 +1534,13 @@ class binarytree(packagetree):
 
 class dblink:
 	"this class provides an interface to the standard text package database"
-	def __init__(self,cat,pkg):
+	def __init__(self,cat,pkg,myroot):
 		"create a dblink object for cat/pkg.  This dblink entry may or may not exist"
 		self.cat=cat
 		self.pkg=pkg
-		self.dbdir=root+"/var/db/pkg/"+cat+"/"+pkg
-	
+		self.dbdir=myroot+"/var/db/pkg/"+cat+"/"+pkg
+		self.myroot=myroot
+
 	def getpath(self):
 		"return path to location of db information (for >>> informational display)"
 		return self.dbdir
@@ -1611,7 +1613,7 @@ class dblink:
 				return
 		
 		#do prerm script
-		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","prerm")
+		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","prerm",self.myroot)
 		if a:
 			print "!!! pkg_prerm() script failed; exiting."
 			sys.exit(a)
@@ -1629,7 +1631,7 @@ class dblink:
 				#do some config file management prep
 		self.protect=[]
 		for x in string.split(settings["CONFIG_PROTECT"]):
-			ppath=os.path.normpath(root+"/"+x)+"/"
+			ppath=os.path.normpath(self.myroot+"/"+x)+"/"
 			if os.path.isdir(ppath):
 				self.protect.append(ppath)
 				print ">>> Config file management enabled for",ppath
@@ -1638,7 +1640,7 @@ class dblink:
 				print ">>> (This is not necessarily an error)"
 		self.protectmask=[]
 		for x in string.split(settings["CONFIG_PROTECT_MASK"]):
-			ppath=os.path.normpath(root+"/"+x)+"/"
+			ppath=os.path.normpath(self.myroot+"/"+x)+"/"
 			if os.path.isdir(ppath):
 				self.protectmask.append(ppath)
 			#if it doesn't exist, silently skip it
@@ -1669,7 +1671,7 @@ class dblink:
 					print "--- !sym  ","sym", obj
 					continue
 				mydest=os.readlink(obj)
-				if os.path.exists(os.path.normpath(root+mydest)):
+				if os.path.exists(os.path.normpath(self.myroot+mydest)):
 					if mydest != pkgfiles[obj][2]:
 						print "--- !destn","sym", obj
 						continue
@@ -1730,7 +1732,7 @@ class dblink:
 		for mycatpkg in self.getelements("PROVIDE"):
 			mycat,mypkg=string.split(mycatpkg,"/")
 			tcatpkg=self.cat+"/"+self.pkg
-			mylink=dblink(mycat,mypkg)
+			mylink=dblink(mycat,mypkg,self.myroot)
 			if not mylink.exists():
 				continue
 			myvirts=mylink.getelements("VIRTUAL")
@@ -1748,13 +1750,16 @@ class dblink:
 				mylink.setelements(myvirts,"VIRTUAL")
 		
 		#do original postrm
-		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","postrm")
+		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","postrm",self.myroot)
 		if a:
 			print "!!! pkg_postrm() script failed; exiting."
 			sys.exit(a)
 
-	def merge(self,mergeroot,inforoot,mergestart=None,outfile=None):
+	def merge(self,mergeroot,inforoot,myroot,mergestart=None,outfile=None):
 		global prevmask	
+		#myroot=os.environ["ROOT"]
+		#myroot should be set to the ROOT of where to merge to.
+
 		if mergestart==None:
 			origdir=os.getcwd()
 			if not os.path.exists(self.dbdir):
@@ -1764,12 +1769,12 @@ class dblink:
 			print ">>> Updating mtimes..."
 			#before merging, it's *very important* to touch all the files !!!
 			os.system("(cd "+mergeroot+"; for x in `find`; do  touch -c $x 2>/dev/null; done)")
-			print ">>> Merging",self.cat+"/"+self.pkg,"to",root
+			print ">>> Merging",self.cat+"/"+self.pkg,"to",myroot
 			
 		
 			#get old contents info for later unmerging
 			oldcontents=self.getcontents()
-			a=doebuild(inforoot+"/"+self.pkg+".ebuild","preinst")
+			a=doebuild(inforoot+"/"+self.pkg+".ebuild","preinst",root)
 			if a:
 				print "!!! pkg_preinst() script failed; exiting."
 				sys.exit(a)
@@ -1778,14 +1783,14 @@ class dblink:
 			#prep for config file management
 			self.protect=[]
 			for x in string.split(settings["CONFIG_PROTECT"]):
-				ppath=os.path.normpath(root+"/"+x)+"/"
+				ppath=os.path.normpath(myroot+"/"+x)+"/"
 				if os.path.isdir(ppath):
 					self.protect.append(ppath)
 				else:
 					print "!!!",ppath,"not found.  Config file management disabled for this directory."
 			self.protectmask=[]
 			for x in string.split(settings["CONFIG_PROTECT_MASK"]):
-				ppath=os.path.normpath(root+"/"+x)+"/"
+				ppath=os.path.normpath(myroot+"/"+x)+"/"
 				if os.path.isdir(ppath):
 					self.protectmask.append(ppath)
 				#if it doesn't exist, silently skip it
@@ -1800,7 +1805,7 @@ class dblink:
 		
 		for x in myfiles:
 			relfile=relstart+"/"+x
-			rootfile=os.path.normpath(root+relfile)
+			rootfile=os.path.normpath(myroot+relfile)
 			#symbolic link
 			if os.path.islink(x):
 				myto=os.readlink(x)
@@ -1828,7 +1833,7 @@ class dblink:
 				outfile.write("dir "+relfile+"\n")
 				#enter directory, recurse
 				os.chdir(x)
-				self.merge(mergeroot,inforoot,mergestart+"/"+x,outfile)
+				self.merge(mergeroot,inforoot,myroot,mergestart+"/"+x,outfile)
 				#return to original path
 				os.chdir(mergestart)
 			elif os.path.isfile(x):
@@ -1944,7 +1949,7 @@ class dblink:
 			#create virtual links
 			for mycatpkg in self.getelements("PROVIDE"):
 				mycat,mypkg=string.split(mycatpkg,"/")
-				mylink=dblink(mycat,mypkg)
+				mylink=dblink(mycat,mypkg,self.myroot)
 				#this will create the link if it doesn't exist
 				mylink.create()
 				myvirts=mylink.getelements("VIRTUAL")
@@ -1953,7 +1958,7 @@ class dblink:
 					mylink.setelements(myvirts,"VIRTUAL")
 
 			#do postinst script
-			a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","postinst")
+			a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","postinst",root)
 			if a:
 				print "!!! pkg_postinst() script failed; exiting."
 				sys.exit(a)
@@ -2053,7 +2058,7 @@ def cleanup_pkgmerge(mypkg,origdir):
 	shutil.rmtree(settings["PKG_TMPDIR"]+"/"+mypkg)
 	os.chdir(origdir)
 
-def pkgmerge(mytbz2):
+def pkgmerge(mytbz2,myroot):
 	"""will merge a .tbz2 file, returning a list of runtime dependencies that must be
 		satisfied, or None if there was a merge error.  This code assumes the package
 		exists."""
@@ -2088,7 +2093,11 @@ def pkgmerge(mytbz2):
 		cleanup_pkgmerge(mypkg,origdir)
 		return None
 	#the merge takes care of pre/postinst and old instance auto-unmerge, virtual/provides updates, etc.
-	merge(mycat,mypkg,pkgloc,infloc)
+	mylink=dblink(mycat,mypkg,myroot)
+	if not mylink.exists():
+		mylink.create()
+		#shell error code
+	mylink.merge(pkgloc,infloc,myroot)
 	if not os.path.exists(infloc+"/RDEPEND"):
 		returnme=""
 	else:

@@ -21,6 +21,6 @@ for opt in opts:
 		debug=1 
 
 for x in pargs[1:]:
-	a=portage.doebuild(pargs[0],x,debug=debug)
+	a=portage.doebuild(pargs[0],x,os.path.normpath(os.environ["ROOT"])+"/",debug=debug)
 	if a:
 		sys.exit(a)

@@ -52,7 +52,7 @@ class depgraph:
 				sys.exit(1)
 				mydep={}
 			myebuild=self.db[myroot]["porttree"].getname(mykey)
-			edepend=portage.doebuild(myebuild,"depend",1,edebug)
+			edepend=portage.doebuild(myebuild,"depend",myroot,1,edebug)
 			if edepend==1:
 				print "!!! emerge aborting."
 				sys.exit(1)
@@ -143,7 +143,7 @@ class depgraph:
 				
 	def merge(self,mylist):
 		for x in mylist:
-			os.environ["ROOT"]=x[1]
+			myroot=x[1]
 			print ">>> emerge",x[2],"to",x[1]
 			#the last argument in the portage.doebuild() tells doebuild to *not* do dep checking
 			#(emerge is already handling that)
@@ -151,27 +151,27 @@ class depgraph:
 			if x[0]=="ebuild":
 				if "--buildpkg" in self.myopts:
 					#create pkg, then merge pkg
-					retval=portage.doebuild(y,"clean",0,edebug)
+					retval=portage.doebuild(y,"clean",myroot,0,edebug)
 					if retval:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
-					retval=portage.doebuild(y,"package",0,edebug)
+					retval=portage.doebuild(y,"package",myroot,0,edebug)
 					if retval:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
 					#dynamically update our database	
 					self.db[portage.root]["bintree"].inject(x[2])
 					mytbz2=self.db[portage.root]["bintree"].getname(x[2])
-					retval=portage.pkgmerge(mytbz2)
+					retval=portage.pkgmerge(mytbz2,myroot)
 					if retval==None:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
 				else:
-					retval=portage.doebuild(y,"clean",0,edebug)
+					retval=portage.doebuild(y,"clean",myroot,0,edebug)
 					if retval:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
-					retval=portage.doebuild(y,"merge",0,edebug)
+					retval=portage.doebuild(y,"merge",myroot,0,edebug)
 					if retval:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
@@ -179,14 +179,14 @@ class depgraph:
 			else:
 				#merge the tbz2
 				mytbz2=self.db[portage.root]["bintree"].getname(x[2])
-				retval=portage.pkgmerge(mytbz2)
+				retval=portage.pkgmerge(mytbz2,x[1])
 				if retval==None:
 					print "!!! emerge aborting on ",y,"."
 					sys.exit(1)
 				#need to check for errors
 			self.db[x[1]]["vartree"].inject(x[2])
 			if "--autoclean" in self.myopts:
-				retval=portage.doebuild(y,"clean",0,edebug)
+				retval=portage.doebuild(y,"clean",myroot,0,edebug)
 				if retval:
 					print "!!! emerge aborting on ",y,"."
 					sys.exit(1)
