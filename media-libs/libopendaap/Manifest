@@ -1,4 +1,14 @@
-MD5 c6c6007674375b0528162aadd64fdf90 ChangeLog 609
-MD5 0b849986c49717e7073f0034b01d2d12 libopendaap-0.2.3.ebuild 671
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 155e889d6e17d9659bc66fb7ff4c3c28 ChangeLog 704
+MD5 3b8279e064bc47dbaa865d58777d6f67 libopendaap-0.2.3.ebuild 674
 MD5 8abcb326775f027b2e13f23344036e34 metadata.xml 224
 MD5 86148ed6cd259ca05147ab24675e5df3 files/digest-libopendaap-0.2.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQyKHcAgAdbxYsnERAkwBAKCKf1GQTuhHWXb8QIWOa3/BK97NxACfYyxe
+blfECBPs1Cjfj9ClFQmzDj8=
+=5JzC
+-----END PGP SIGNATURE-----
