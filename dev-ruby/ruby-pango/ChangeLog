@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.14 2004/10/05 08:01:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.15 2004/11/25 03:13:49 usata Exp $
+
+*ruby-pango-0.11.0 (25 Nov 2004)
+
+  25 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +ruby-pango-0.11.0.ebuild:
+  Version bumped.
 
   05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -ruby-pango-0.10.0.ebuild,
   ruby-pango-0.10.1.ebuild:
