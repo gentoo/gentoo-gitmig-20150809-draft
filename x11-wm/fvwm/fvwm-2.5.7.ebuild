@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.2 2003/07/30 16:02:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.3 2003/07/30 16:34:58 taviso Exp $
 
 inherit gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2"
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
-KEYWORDS="-x86 -alpha"
+KEYWORDS="~x86 ~alpha"
 LICENSE="GPL-2 FVWM"
 
 RDEPEND="oss? ( media-sound/rplay )
@@ -20,7 +20,9 @@ RDEPEND="oss? ( media-sound/rplay )
 		gtk? ( =x11-libs/gtk+-1.2* )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 		ncurses? ( >=sys-libs/readline-4.1 )
-		media-libs/fontconfig"
+		media-libs/fontconfig
+		dev-libs/expat
+		media-libs/libpng"
 DEPEND="${RDEPEND} sys-devel/automake
 	dev-util/pkgconfig"
 
