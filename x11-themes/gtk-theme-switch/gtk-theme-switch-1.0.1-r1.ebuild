@@ -1,19 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.10 2004/01/03 00:56:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1-r1.ebuild,v 1.1 2004/01/03 00:56:14 seemant Exp $
+
 S=${WORKDIR}/${P}
-
 DESCRIPTION="Application for easy change of GTK-Themes"
-
-SRC_URI="http://www.muhri.net/${P}.tar.gz"
-
 HOMEPAGE="http://www.muhri.net/nav.php3?node=gts"
+SRC_URI="http://www.muhri.net/${P}.tar.gz
+	mirror://gentoo/${P}b.patch.gz"
 
+SLOT="1.2"
 LICENSE="GPL-2"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64 ~ppc64"
 
 DEPEND="=x11-libs/gtk+-1.2*"
-SLOT="1.2"
-KEYWORDS="x86 ppc sparc alpha"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${WORKDIR}/${P}b.patch
+}
 
 src_compile() {
 	make || die
