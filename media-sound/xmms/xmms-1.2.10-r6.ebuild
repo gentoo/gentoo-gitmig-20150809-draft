@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.2 2004/09/30 23:29:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.3 2004/10/01 02:40:50 eradicator Exp $
 
-IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk alsa oss arts jack sndfile lirc"
+IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk alsa oss arts jack sndfile lirc flac"
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -34,10 +34,12 @@ RDEPEND="${DEPEND}
 	sys-devel/gettext
 	app-arch/unzip"
 
+# USE flags pull in xmms plugins
 PDEPEND="!alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( jack? ( media-plugins/xmms-jack ) ) ) ) ) )
 	 !alpha? ( !ia64? ( !ppc64? ( lirc? ( media-plugins/xmms-lirc ) ) ) )
 	 !ia64? ( !ppc64? ( arts? ( media-plugins/xmms-arts ) ) )
-	 !alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( sndfile? ( media-plugins/xmms-sndfile ) ) ) ) ) )"
+	 !alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( sndfile? ( media-plugins/xmms-sndfile ) ) ) ) ) )
+	 flac? ( media-libs/flac )"
 
 #We want these things in DEPEND only
 DEPEND="${DEPEND}
