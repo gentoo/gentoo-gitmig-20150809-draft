@@ -1,4 +1,6 @@
 MD5 e59ab81ed918e5d95b14e625ffc75a74 ChangeLog 956
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 40f4c0f18cd08fc3caa79e63b4c1f1b4 sound-juicer-0.3.ebuild 837
+MD5 40f4c0f18cd08fc3caa79e63b4c1f1b4 sound-juicer-0.4.1.ebuild 837
 MD5 efe7af84cebeb4a031076644ffde1240 files/digest-sound-juicer-0.3 68
+MD5 70e423e84a2d782f1abcd8cd92110af0 files/digest-sound-juicer-0.4.1 70
