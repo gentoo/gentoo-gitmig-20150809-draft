@@ -1,8 +1,8 @@
 # ChangeLog for media-gfx/elicit
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/elicit/ChangeLog,v 1.1 2003/10/20 15:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/elicit/ChangeLog,v 1.2 2004/01/20 05:03:29 vapier Exp $
 
-*elicit-0.7.20031020 (20 Oct 2003)
+*elicit-0.7.2004* (20 Oct 2003)
 
   20 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
