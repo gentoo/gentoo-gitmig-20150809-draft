@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.2 2004/11/02 01:23:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.3 2004/11/02 23:45:06 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,7 +56,7 @@ src_compile() {
 	config_cache jack header_jack_jack_h
 	config_cache cups header_cups_cups_h
 	config_cache alsa header_alsa_asoundlib_h header_sys_asoundlib_h lib_asound_snd_pcm_open
-	config_cache arts path_ARTSCCONFIG
+	use arts || export ARTSCCONFIG="/bin/false"
 	config_cache nas header_audio_audiolib_h header_audio_soundlib_h
 	config_cache gif header_gif_lib_h
 	config_cache glut lib_glut_glutMainLoop
