@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/mp3wrap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3wrap/ChangeLog,v 1.1 2003/05/24 11:38:29 jje Exp $
+
+*mp3wrap-0.5 (24 May 2003)
+
+  24 May 2003; jje <jje@gentoo.org> mp3wrap-0.5.ebuild:
+  Initial revision.
+  
+  Submitted by: TGL <degrenier@easyconnect.fr>
+
