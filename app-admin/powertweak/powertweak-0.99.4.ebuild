@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.9 2004/03/12 10:45:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.10 2004/04/16 09:02:59 dragonheart Exp $
+
+inherit libtool
 
 DESCRIPTION="tune your kernel and hardware settings for optimal performance"
 SRC_URI="mirror://sourceforge/powertweak/${P}.tar.bz2"
@@ -20,8 +22,6 @@ RDEPEND=">=sys-apps/pciutils-2.1.0
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
 S=${WORKDIR}/${PN}
-
-inherit libtool
 
 src_unpack() {
 	unpack ${A}
