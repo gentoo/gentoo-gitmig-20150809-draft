@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <vapier@gentoo.org> (13 Oct 2003)
+# if you're still using this i just deprecated you
+x11-libs/eprog
+
 # <spyderous@gentoo.org> (13 Oct 2003)
 # Masked until xfree stops installing the same files
 x11-misc/synaptics
