@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r2.ebuild,v 1.6 2004/09/03 23:50:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r2.ebuild,v 1.7 2004/11/15 19:25:20 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="A multi-system emulator"
 HOMEPAGE="http://www.dridus.com/~nyef/darcnes/"
@@ -23,15 +23,16 @@ DEPEND="svga? ( >=media-libs/svgalib-1.4.2 )
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
-	export build_X=true
+	build_X=true
 	use svga && build_X=false
 	use gtk && build_X=false
 	use X && build_X=true
+	games_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch ${FILESDIR}/${P}-gcc34.patch
 }

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ea98fe7ac8566d743a497c6a881c8d23 ChangeLog 2023
 MD5 2f325acc219e11ee2c60a675b51db067 darcnes-0401-r1.ebuild 1196
-MD5 6d61d2b47a0c1515b6adac2aaf3de110 darcnes-0401-r2.ebuild 1488
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 d046ad9231aec3a8efc2ff729620fec2 ChangeLog 1906
+MD5 aa0d493502a4961c794524941ec5dd8a darcnes-0401-r2.ebuild 1501
 MD5 97092964e106d48cc1b417ed92a14ed7 files/digest-darcnes-0401-r1 57
 MD5 97092964e106d48cc1b417ed92a14ed7 files/digest-darcnes-0401-r2 57
 MD5 335dea4e38703d1353b5cca128ec34b9 files/darcnes-0401-gcc34.patch 213
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOQXwI1lqEGTUzyQRAkWwAKDP/quUIBhIlirKaCRUqXKofTG7owCgsETE
-1HAAw+uGXtM739yj0sdTweI=
-=qXYR
------END PGP SIGNATURE-----
