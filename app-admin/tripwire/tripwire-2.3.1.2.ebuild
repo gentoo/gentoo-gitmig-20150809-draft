@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.5 2003/09/04 04:32:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.6 2003/09/19 11:07:06 taviso Exp $
 
 inherit eutils
 
 TW_VER="2.3.1-2"
 DESCRIPTION="Open Source File Integrity Checker and IDS"
 HOMEPAGE="http://www.tripwire.org/"
-SRC_URI="http://flow.dl.sourceforge.net/sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
+SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
 	http://non-us.debian.org/debian-non-US/pool/non-US/main/t/tripwire/tripwire_2.3.1.2-6.1.diff.gz"
 
 LICENSE="GPL-2"
