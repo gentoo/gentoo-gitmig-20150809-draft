@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/ttf-gentium
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ChangeLog,v 1.1 2004/07/05 06:51:09 usata Exp $
+
+*ttf-gentium-1.0.1 (05 Jul 2004)
+
+  05 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +ttf-gentium-1.0.1.ebuild:
+  Initial import. Ebuild submitted by Dorian Gray <gentoo-bugs@tintar.com>,
+  closing bug #38659
+
