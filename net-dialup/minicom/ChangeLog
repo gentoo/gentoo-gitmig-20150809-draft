@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.25 2004/11/21 00:40:51 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.26 2004/11/21 07:12:29 mrness Exp $
+
+  21 Nov 2004; Alin Nastac <mrness@gentoo.org> -minicom-1.83.1-r1.ebuild,
+  -minicom-2.00.0.ebuild, -minicom-2.1.ebuild:
+  Removed obsolete ebuilds.
 
   21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> minicom-2.1-r1.ebuild:
   Stable on amd64, bug #71817

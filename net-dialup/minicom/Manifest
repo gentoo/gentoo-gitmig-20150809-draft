@@ -1,22 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e17dabe9a6fd4b32569dc79c95d6e897 minicom-2.1.ebuild 823
-MD5 514ee3b7b28687395f306f4ce05d6094 minicom-2.1-r1.ebuild 1022
-MD5 99ed39f7c33b98ada39aecc3151bec37 minicom-2.00.0.ebuild 1044
-MD5 9b512974a07b7e5281e302eca05297d7 minicom-1.83.1-r1.ebuild 1713
-MD5 10af262772994ee8932862aca5e5eb28 ChangeLog 3100
+MD5 940b5402fa88f87c15a718cc4eb2f11f ChangeLog 3247
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 6362e781f7e7a1300d8a3c7b602ddd6f files/minirc.dfl 66
-MD5 67f667abec40aca4b4418ae3937105ff files/digest-minicom-2.1 63
-MD5 fc4dc154118b88e1aab6aab216bb70aa files/digest-minicom-1.83.1-r1 70
-MD5 a31777cb2fefdf6dde761b58a8076333 files/minicom-2.1-memcpy-bounds.diff 487
-MD5 bbd752eddf4c3da2156d40ae2713b371 files/digest-minicom-2.00.0 70
+MD5 514ee3b7b28687395f306f4ce05d6094 minicom-2.1-r1.ebuild 1022
 MD5 67f667abec40aca4b4418ae3937105ff files/digest-minicom-2.1-r1 63
+MD5 a31777cb2fefdf6dde761b58a8076333 files/minicom-2.1-memcpy-bounds.diff 487
+MD5 6362e781f7e7a1300d8a3c7b602ddd6f files/minirc.dfl 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBn+QdZ/iYVBmujdURAnt3AKCBIUluFzkMSYZrvA+iIWTnHHFagwCg5liJ
-ZaYZmX0M3th5bI7Dwhbc/4Y=
-=64P9
+iD8DBQFBoD/qjtv59x0+BrURAgQ8AKD1bimQohXdujhZP3ODaygDUajGAwCg2k/o
+ULFl3yA781QaEn4dRv5AlSM=
+=gkFb
 -----END PGP SIGNATURE-----
