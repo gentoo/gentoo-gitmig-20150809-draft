@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.8-r1.ebuild,v 1.5 2000/08/25 15:10:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.8-r1.ebuild,v 1.6 2000/09/14 22:41:27 achim Exp $
 
 P=joe-2.8      
 A=joe2.8.tar.Z
@@ -41,7 +41,12 @@ src_install() {
     dolib jstarrc
     dolib rjoerc
     dolib jpicorc
+
+    insinto /etc
+    doins termcap
+    dodoc copying INFO LIST README TODO VERSION
 }
+
 
 
 
