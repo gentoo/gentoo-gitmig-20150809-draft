@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r27.ebuild,v 1.1 2004/11/12 19:33:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r28.ebuild,v 1.1 2004/11/20 16:45:10 plasmaroo Exp $
 
 IUSE="aavm crypt evms2 usagi"
 
@@ -30,7 +30,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/r27/r14}.tar.bz2
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV}.tar.bz2
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
@@ -42,7 +42,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 
-	cd ${WORKDIR}/${KV/r27/r14}
+	cd ${WORKDIR}/${KV}
 
 	# This is the *ratified* aavm USE flag, enables aavm support in this kernel
 	if ! use aavm; then
@@ -150,6 +150,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.4.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 	epatch ${FILESDIR}/${PN}-2.4.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
 	epatch ${FILESDIR}/${PN}-2.4.binfmt_elf.patch || die "Failed to apply the binfmt_elf patch!"
+	epatch ${FILESDIR}/${P}-smbfs.patch || die "Failed to apply the SMBFS patch!"
 }
 
 pkg_postinst() {

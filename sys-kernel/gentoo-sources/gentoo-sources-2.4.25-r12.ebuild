@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.25-r11.ebuild,v 1.1 2004/11/12 19:33:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.25-r12.ebuild,v 1.1 2004/11/20 16:45:10 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -27,6 +27,7 @@ UNIPATCH_LIST="
 	${FILESDIR}/${PN}-2.4.cmdlineLeak.patch
 	${FILESDIR}/${PN}-2.4.XDRWrapFix.patch
 	${FILESDIR}/${PN}-2.4.binfmt_elf.patch
+	${FILESDIR}/${PN}-2.4.smbfs.patch
 	${DISTDIR}/linux-2.4.26-CAN-2004-0415.patch
 	${DISTDIR}/${PN}-2.4.22-CAN-2004-0814.patch"
 
