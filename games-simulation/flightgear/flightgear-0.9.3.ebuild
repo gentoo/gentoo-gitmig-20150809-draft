@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.3.ebuild,v 1.3 2003/11/11 02:52:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.3.ebuild,v 1.4 2004/01/25 10:37:30 vapier Exp $
 
-inherit games
+inherit games flag-o-matic
 
 MY_PN=FlightGear
 MY_P=${MY_PN}-${PV}
@@ -13,8 +13,8 @@ HOMEPAGE="http://www.flightgear.org/"
 SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
 	mirror://flightgear/Shared/fgfs-base-${PV}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
 
 DEPEND="=dev-games/simgear-0.3.4*
@@ -29,6 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use hppa && replace-flags -march=2.0 -march=1.0
 	egamesconf \
 		--with-multiplayer \
 		--with-network-olk \
