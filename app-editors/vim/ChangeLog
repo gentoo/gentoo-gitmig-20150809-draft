@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.14 2002/07/16 02:05:38 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.15 2002/07/30 07:22:48 rphillips Exp $
+
+vim-6.1-r9.ebuild (29 Jul 2002)
+
+  29 Jul 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r9.ebuild 
+  and patches :
+
+  Updated patches. The patches no longer take tons of space in portage.
 
 vim-6.1-r8.ebuild (06 Jul 2002)
 		
