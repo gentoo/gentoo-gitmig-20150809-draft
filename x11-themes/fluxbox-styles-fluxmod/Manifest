@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc87ef2fba2d8db9adb8d3cdc75e505f ChangeLog 3114
+MD5 6dc20c30395c1412dddc884c58b1abf4 ChangeLog 3224
+MD5 83b43d62d52aa4fe0805a6b5151729bd fluxbox-styles-fluxmod-20050128.ebuild 1781
 MD5 47eccc89f0a0175e5d5bcdfbd665dcc2 fluxbox-styles-fluxmod-20040809.ebuild 1126
 MD5 c76d326d94f8d1fa289e1517c8a772cb fluxbox-styles-fluxmod-20041024.ebuild 1525
-MD5 16add164624798c9490a05e20c748a96 fluxbox-styles-fluxmod-20050128.ebuild 1782
 MD5 579076f73457df8c5cba170b0e99634d metadata.xml 163
-MD5 413ae7a600614b5e276f85a301529764 files/styles-menu-fluxmod 116
 MD5 6d917a0eead4cbcd5b236a22c20ba209 files/digest-fluxbox-styles-fluxmod-20050128 85
 MD5 65c95cf3bdb69ad4ca8132bc287ccda8 files/digest-fluxbox-styles-fluxmod-20040809 84
 MD5 37e5a66e1eca2a46e5d52696577e4499 files/digest-fluxbox-styles-fluxmod-20041024 84
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCFjSmLLFUmVNQ7rkRAucFAJ9arDSp46vtEzZxkPo/mVq6pV+AbwCgkx1S
-KbLC0q2jz5v8uTC68cksI0E=
-=Mac+
------END PGP SIGNATURE-----
+MD5 413ae7a600614b5e276f85a301529764 files/styles-menu-fluxmod 116
