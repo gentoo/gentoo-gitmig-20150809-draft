@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c4579cacc2981cb5a8b5d7db161f6e5 ChangeLog 1462
-MD5 83d85442f5370d607bc3e7fc328d0578 jless-iso254-358.ebuild 1369
+MD5 6e11afedc77563a9ed52bd9fcf9b4ada ChangeLog 1558
+MD5 021caebf9340bbf503dea19a35aee582 jless-iso254-358.ebuild 1374
 MD5 26462c324a30c663f0721d42a1df048e metadata.xml 721
 MD5 e4b1a0cf24cc523bcbb54b6d77685b30 files/70jless 52
 MD5 09f1d81c202482a5575990f55b29f0bf files/digest-jless-iso254-358 128
 MD5 0cc555c44c02b9b457e98ed39a63f1a2 files/lesspipe.sh-r1 1429
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA33i9HTu7gpaalycRArFmAJ9rVeDww3zEtVNBZ0psFx56iRmqcwCeLA+d
-6ccdUJUroAHG1Fv5hHOm5SY=
-=l9Oh
------END PGP SIGNATURE-----
