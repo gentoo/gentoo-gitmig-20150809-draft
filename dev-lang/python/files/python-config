@@ -1,3 +1,0 @@
-#!/usr/bin/python
-import distutils.sysconfig, string
-print "-lpython2.1",string.join(string.split(distutils.sysconfig.get_config_var("MODLIBS")))
