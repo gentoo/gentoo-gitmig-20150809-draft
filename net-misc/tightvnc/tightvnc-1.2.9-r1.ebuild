@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r1.ebuild,v 1.4 2003/11/03 21:25:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r1.ebuild,v 1.5 2003/11/13 13:26:29 agriffis Exp $
 
 inherit eutils
 
@@ -34,15 +34,22 @@ src_unpack() {
 }
 
 src_compile() {
+	local CDEBUGFLAGS="${CFLAGS}"
+
+	use amd64 && CDEBUGFLAGS="${CDEBUGFLAGS} -m32 \
+		-L/emul/linux/x86/lib \
+		-L/emul/linux/x86/usr/lib/gcc-lib/i386-pc-linux-gnu/3.2.3 \
+		-L/emul/linux/x86/usr/lib -L/emul/linux/x86/usr/X11R6/lib"
+
 	xmkmf -a || die "xmkmf failed"
 
-	make CDEBUGFLAGS="$CFLAGS -m32 -L/emul/linux/x86/lib -L/emul/linux/x86/usr/lib/gcc-lib/i386-pc-linux-gnu/3.2.3 -L/emul/linux/x86/usr/lib -L/emul/linux/x86/usr/X11R6/lib" World || die "make World failed"
+	make CDEBUGFLAGS="${CDEBUGFLAGS}" World || die "make World failed"
 	cd Xvnc && ./configure || die "Configure failed."
 
 	if use tcpd; then
-		make EXTRA_LIBRARIES="-lwrap -lnss_nis" CDEBUGFLAGS="$CFLAGS" EXTRA_DEFINES="-DUSE_LIBWRAP=1"
+		make EXTRA_LIBRARIES="-lwrap -lnss_nis" CDEBUGFLAGS="${CDEBUGFLAGS}" EXTRA_DEFINES="-DUSE_LIBWRAP=1"
 	else
-		make CDEBUGFLAGS="$CFLAGS -m32 -L/emul/linux/x86/lib -L/emul/linux/x86/usr/lib/gcc-lib/i386-pc-linux-gnu/3.2.3 -L/emul/linux/x86/usr/lib -L/emul/linux/x86/usr/X11R6/lib"
+		make CDEBUGFLAGS="${CDEBUGFLAGS}"
 	fi
 }
 
