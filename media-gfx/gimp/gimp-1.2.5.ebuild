@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.17 2004/04/15 03:52:37 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.18 2004/06/05 09:50:02 kloeri Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
 
 SLOT="1.2"
-KEYWORDS="x86 ppc sparc ~alpha amd64 hppa mips"
+KEYWORDS="x86 ppc sparc alpha amd64 hppa mips"
 LICENSE="GPL-2"
 
 RDEPEND="=x11-libs/gtk+-1.2*
