@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.49 2004/01/29 20:50:34 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.50 2004/01/31 14:26:46 joker Exp $
+
+  31 Jan 2004; Christian Birchinger <joker@gentoo.org> proftpd-1.2.9.ebuild:
+  Added sparc stable keyword
 
   29 Jan 2004; <tuxus@gentoo.org> proftpd-1.2.9.ebuild:
   Added ~mips to KEYWORDS.
