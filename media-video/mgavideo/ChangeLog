@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mgavideo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/ChangeLog,v 1.2 2002/05/08 06:01:08 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/ChangeLog,v 1.3 2002/06/09 10:57:48 stroke Exp $
+
+*mgavideo-0.1.0 (08 Jun 2002)
+  
+  08 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> mgavideo-0.1.0.ebuild :
+
+  New version. (0.6 was a test version). See bug #3495
+ 
 
 *mgavideo-0.1.0.6 (1 Feb 2002)
 
