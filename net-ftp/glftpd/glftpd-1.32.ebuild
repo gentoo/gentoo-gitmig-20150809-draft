@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.30.ebuild,v 1.5 2003/07/25 03:56:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.32.ebuild,v 1.1 2003/12/03 05:01:57 vapier Exp $
+
+inherit eutils
 
 MY_P=${P/-/-LNX_}
 DESCRIPTION="a HIGHLY configurable ftp server"
@@ -11,64 +13,67 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="-* x86"
 
-DEPEND=""
-RDEPEND="sys-apps/xinetd"
-PDEPEND="net-ftp/glftpd-tls"
+DEPEND="dev-libs/openssl"
+RDEPEND="${DEPEND}
+	sys-apps/xinetd"
 
 S=${WORKDIR}/${MY_P}
-GLROOT=${D}/opt/glftpd/
-GLFTPD_PORT=${GLFTPD_PORT:-21}
+
+# custom options
+export CUSTOMGLROOT=${CUSTOMGLROOT:-/opt/glftpd}
+export GLROOT=${GLROOT:-${D}${CUSTOMGLROOT}}
+export GLFTPD_PORT=${GLFTPD_PORT:-21}
 
 pkg_setup() {
-	[ -d /proc/sysvipc/ ] || die "You need System V IPC support in your kernel"
+	[ -d /proc/sysvipc ] || die "You need System V IPC support in your kernel"
 }
 
-src_compile() {
-	[ `use tcpd` ]		&&	USETCPD=y	||	USETCPD=n
-	[ -z "${JAIL}" ]	&&	JAIL=y		||	JAIL=n
-	WHICHNETD=x
-
-	cp ${S}/installgl.sh ${S}/installgl.sh.old
-	sed -e "s:read usetcpd:usetcpd=${USETCPD}:" \
-	 -e "s:read jaildir:jaildir=${GLROOT}:" \
-	 -e "s:read jail:jail=y:" \
-	 -e "s:read reply:echo OMG; exit 1:" \
-	 -e "s:read useprivgroup:useprivgroup=n:" \
-	 -e "s:read glroot:break:" \
-	 -e "s:read port:port=${GLFTPD_PORT}:" \
-	 -e "s:read whichnetd:whichnetd=x:" \
-	 -e "s:killall -USR2 xinetd:0:" \
-	 -e "s:/etc/xinetd.d/glftpd:${D}/etc/xinetd.d/glftpd:" \
-	 -e "s:> /etc/services.new:>/dev/null:" \
-	 -e "s:mv -f /etc/services.new:dumbvar=:" \
-	 -e "s:| crontab -:>/dev/null:" \
-		${S}/installgl.sh.old > ${S}/installgl.sh
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	cp installgl.sh{,.orig}
+	epatch ${FILESDIR}/${PV}-install.patch
 }
+
+yesno() { if $@ ; then echo y ; else echo n ; fi ; }
 
 src_install() {
 	dodir /etc/xinetd.d
 
+	# custom options
+	export USETCPD=$(yesno [ `use tcpd` ])
+	export JAIL=y
+	export MAKETLS=$(yesno [ ! -e /etc/glftpd-dsa.pem ])
+	export WHICHNETD=x
 	${S}/installgl.sh
 
 	# fix the glftpd.conf file
-	cp ${GLROOT}/glftpd.conf ${GLROOT}/glftpd.conf.old
-	sed -e "s:${GLROOT}:/opt/glftpd/:" \
-		${GLROOT}/glftpd.conf.old > ${GLROOT}/glftpd.conf
-	rm ${GLROOT}/glftpd.conf.old
+	sed -i \
+		-e "s:${GLROOT}:${CUSTOMGLROOT}/:" \
+		${GLROOT}/glftpd.conf
 
 	mv ${GLROOT}/glftpd.conf ${D}/etc/
 	ln -s /etc/glftpd.conf ${GLROOT}/glftpd.conf
+	if [ -e /etc/glftpd-dsa.pem ] ; then
+		cp /etc/glftpd-dsa.pem ${D}/etc/
+	else
+		cp ftpd-dsa.pem ${D}/etc/glftpd-dsa.pem
+	fi
+	ln -s /etc/glftpd-dsa.pem ${GLROOT}/etc/glftpd-dsa.pem
+	fperms o-r /etc/glftpd-dsa.pem
 
 	# xinetd.d entry (use our custom one :])
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/glftpd.xinetd.d glftpd
+	dosed "s:GLROOT:${CUSTOMGLROOT}:g" /etc/xinetd.d/glftpd
 
 	# env entry to protect our ftp passwd/group files
 	insinto /etc/env.d
 	newins ${FILESDIR}/glftpd.env.d 99glftpd
+	dosed "s:GLROOT:${CUSTOMGLROOT}:g" /etc/env.d/99glftpd
 
 	# chmod the glftpd dir so that user files will work
-	chmod 711 ${D}/opt/glftpd
+	chmod 711 ${GLROOT}
 }
 
 pkg_postinst() {
@@ -83,7 +88,6 @@ pkg_postinst() {
 	einfo "just run this command after you install:"
 	echo
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
-	echo
 }
 
 pkg_config() {
@@ -95,6 +99,6 @@ pkg_config() {
 
 	einfo "Updating crontab"
 	{ crontab -l | grep -v "bin/reset"
-	echo "0  0 * * *      $jaildir$glroot/bin/reset $confpath"
+	echo "0  0 * * *      ${CUSTOMGLROOT}/bin/reset -r ${CUSTOMGLROOT}/glftpd.conf"
 	} | crontab - > /dev/null
 }

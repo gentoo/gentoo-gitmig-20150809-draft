@@ -1,1 +1,1 @@
-CONFIG_PROTECT=/opt/glftpd/etc
+CONFIG_PROTECT=GLROOT/etc
