@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.33 2005/01/02 21:54:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.34 2005/01/17 00:48:39 vapier Exp $
+
+  16 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  docbook-sgml-utils-0.6.12-r2.ebuild, docbook-sgml-utils-0.6.12.ebuild,
+  docbook-sgml-utils-0.6.14.ebuild:
+  Add sys-apps/which to DEPEND because the jw wrapper needs it. In a stage2 ->
+  stage3 scenario, we have to make sure it has been installed #76776.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
