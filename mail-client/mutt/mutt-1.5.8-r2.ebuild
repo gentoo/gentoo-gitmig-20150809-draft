@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r1.ebuild,v 1.4 2005/03/17 22:36:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r2.ebuild,v 1.1 2005/03/17 22:36:34 agriffis Exp $
 
 inherit eutils flag-o-matic
-IUSE="cjk ssl nls slang crypt imap mbox nntp sasl vanilla"
+IUSE="cjk ssl nls slang crypt imap mbox nntp sasl buffysize vanilla"
 
 edit_threads_patch="patch-1.5.5.1.cd.edit_threads.9.5-gentoo-r1.bz2"
 compressed_patch="patch-${PV}.rr.compressed.gz"
@@ -11,12 +11,14 @@ nntp_patch="patch-${PV}.vvv.nntp-gentoo.bz2"
 mbox_hook_patch="patch-1.5.6.dw.mbox-hook.1"
 header_cache_patch="mutt-cvs-header-cache.29"
 pgp_timeout_patch="patch-1.5.6.dw.pgp-timeout.1"
+assumed_charset_patch="patch-1.5.6.tt.assumed_charset.1.gz"
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 	!vanilla? (
 		mirror://gentoo/${edit_threads_patch}
+		http://www.emaillab.org/mutt/1.5/${assumed_charset_patch}
 		http://mutt.kiev.ua/download/${P}/${compressed_patch}
 		http://www.woolridge.ca/mutt/patches/${mbox_hook_patch}
 		nntp? (
@@ -40,7 +42,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~mips ~ppc64 ~ppc-macos"
 
 src_unpack() {
 	unpack ${P}i.tar.gz && cd ${S} || die "unpack failed"
@@ -50,6 +52,7 @@ src_unpack() {
 		epatch ${DISTDIR}/${mbox_hook_patch}
 		epatch ${DISTDIR}/${header_cache_patch}
 		epatch ${DISTDIR}/${pgp_timeout_patch}
+		epatch ${DISTDIR}/${assumed_charset_patch}
 		epatch ${DISTDIR}/${auto_decode_patch}
 		if use nntp; then
 			epatch ${DISTDIR}/${nntp_patch}
@@ -61,7 +64,7 @@ src_unpack() {
 		# header_cache_patch
 		aclocal -I m4					|| die "aclocal failed"
 		autoheader						|| die "autoheader failed"
-		make -C m4 -f Makefile.am.in	|| die "make in m4 failed"
+		emake -C m4 -f Makefile.am.in	|| die "emake in m4 failed"
 		automake --foreign				|| die "automake failed"
 		WANT_AUTOCONF=2.13 autoconf		|| die "autoconf failed"
 	fi
@@ -90,6 +93,11 @@ src_compile() {
 	case ${ARCH} in
 		alpha|ppc) replace-flags "-O[3-9]" "-O2" ;;
 	esac
+
+	if use buffysize; then
+		ewarn "You're using --enable-buffy-size. This is just a workaround. Disable it if you don't need it."
+		myconf="${myconf} --enable-buffy-size"
+	fi
 
 	if use slang; then
 		myconf="${myconf} --with-slang"
@@ -123,11 +131,11 @@ src_compile() {
 	fi
 
 	econf ${myconf}
-	make || die "make failed (myconf=${myconf})"
+	emake || die "emake failed (myconf=${myconf})"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	emake DESTDIR=${D} install || die "install failed"
 	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt
