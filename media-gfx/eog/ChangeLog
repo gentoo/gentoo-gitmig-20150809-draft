@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.86 2005/01/08 23:17:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.87 2005/03/20 22:53:29 joem Exp $
+
+*eog-2.9.0 (20 Mar 2005)
+
+  20 Mar 2005; Joe McCann <joem@gentoo.org> +eog-2.9.0.ebuild:
+  gnome-2.10 release
 
   08 Jan 2005; Tom Martin <slarti@gentoo.org> eog-2.8.2.ebuild:
   Stable on amd64.

@@ -1,24 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3c197f347d06b73b79134fc8dcb224f2 graphviz-1.16.ebuild 2120
-MD5 c984115aba076256f2fcce02f63fb625 graphviz-1.10.ebuild 1285
-MD5 6c4b71d19fbcec7d57ac69a7e612ebc6 graphviz-1.12-r1.ebuild 1887
-MD5 05eff836fed4bd79f75ee879b46fcb82 ChangeLog 5600
 MD5 e98595ce89ff0da26058b1e6e0ce3d31 metadata.xml 1540
+MD5 6c4b71d19fbcec7d57ac69a7e612ebc6 graphviz-1.12-r1.ebuild 1887
+MD5 938c7e9bd5812a82cd91635d4c8023a2 graphviz-2.2.ebuild 1898
 MD5 5b20f6746e2bc63d38738782bf17fe5c graphviz-1.12.ebuild 1382
+MD5 ff9a2989b785e7ca4e86393ea462510f ChangeLog 5714
+MD5 c984115aba076256f2fcce02f63fb625 graphviz-1.10.ebuild 1285
+MD5 3c197f347d06b73b79134fc8dcb224f2 graphviz-1.16.ebuild 2120
 MD5 5c7f01258da58810d0175461e0c1d14b files/graphviz-1.16-common_h.patch 292
+MD5 54cdc52906c56a19e4e09cd0773d4633 files/digest-graphviz-1.12-r1 139
+MD5 5e8726d7d859188692efcfe9e9155761 files/gdgen.c.patch 756
 MD5 280fc858f990639d5d8fb7102b2636ac files/graphviz-1.16-build.patch 6200
 MD5 6700ac8c3ea388f54326ca2a57784a1c files/graphviz-1.12-build.patch 1514
-MD5 5e8726d7d859188692efcfe9e9155761 files/gdgen.c.patch 756
-MD5 54cdc52906c56a19e4e09cd0773d4633 files/digest-graphviz-1.12-r1 139
-MD5 ea7e00b7c49179d3961458a98aee9d6c files/digest-graphviz-1.10 66
 MD5 cea8244a5db85a3bc5e74e4ecd3c9a2b files/digest-graphviz-1.12 66
+MD5 ea7e00b7c49179d3961458a98aee9d6c files/digest-graphviz-1.10 66
+MD5 9ebf9ffcce27ea71d28da323a9221356 files/digest-graphviz-2.2 65
 MD5 f903a12f0ed9c89432dee821776f4e97 files/digest-graphviz-1.16 141
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCGIoBI1lqEGTUzyQRApdBAJ45j2f4qdz8mnwOvX9sCop5WyPuuACfXcxx
-QfraeUjsLV3X21GxZIPtqBg=
-=zkyu
------END PGP SIGNATURE-----
