@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/signify-1.14.ebuild,v 1.1 2005/03/06 10:55:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/signify-1.14.ebuild,v 1.2 2005/03/07 16:38:31 gustavoz Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -14,7 +14,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~ppc ~sparc x86 ~amd64"
+KEYWORDS="~ppc sparc x86 ~amd64"
 IUSE=""
 
 src_unpack() {
