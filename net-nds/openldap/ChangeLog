@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.76 2004/06/13 04:34:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.77 2004/06/21 03:30:05 robbat2 Exp $
+
+*openldap-2.1.30-r1 (20 Jun 2004)
+
+  20 Jun 2004; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.1.30-r1.ebuild, files/openldap-2.2.14-db40.patch,
+  files/openldap-2.2.14-perlthreadsfix.patch:
+  move make test to src_test.
 
   12 Jun 2004; Tom Gall <tgall@gentoo.org> openldap-2.1.30.ebuild:
   stable on ppc64 bug 53766
