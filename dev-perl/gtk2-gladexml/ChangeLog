@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gtk2-gladexml
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.5 2003/12/30 17:05:24 mcummings Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.6 2004/06/06 01:22:16 mcummings Exp $
+
+*gtk2-gladexml-1.00 (05 Jun 2004)
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  gtk2-gladexml-1.00.ebuild:
+  new version on cpan
 
   30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
   gtk2-gladexml-0.26.ebuild, gtk2-gladexml-0.90.ebuild:
