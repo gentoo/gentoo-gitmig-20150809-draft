@@ -9,8 +9,8 @@ MD5 3fa2f9737e2c0ac4230fd12f3c8b54a5 db-3.2.9-r7.ebuild 4370
 MD5 09ddb16abbd409d87e899893d698dff3 db-3.2.9-r2.ebuild 3221
 MD5 01e9f1d4c2c9ac3dd639d98bd03c768c db-4.1.25.ebuild 2259
 MD5 6f3169cda6bac26f0aaa65dd76331c76 db-4.0.14.ebuild 2386
-MD5 3c3825495a8e1fd3477d7f3b87fca63e db-3.2.9-r9.ebuild 3533
-MD5 79300e270ae3e29b30ed3706832980ee ChangeLog 8439
+MD5 1dc382bd80bc8ff0298961f73ed2345d db-3.2.9-r9.ebuild 3516
+MD5 2ff7cea5a343406d88381685744c4b76 ChangeLog 8463
 MD5 5c921197970cd970a8fbb4cad2d7df7b metadata.xml 1457
 MD5 e6fb267b86831c5399fe6bb12b062481 db-4.0.14-r1.ebuild 2706
 MD5 eb9b0f2c1d8440c6c49fc1d916c2dc0e files/db-4.0.14-fix-dep-link.patch 1119
