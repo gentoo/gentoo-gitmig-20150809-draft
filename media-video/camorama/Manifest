@@ -1,4 +1,16 @@
-MD5 05ec49941fc158f97d89d611cfb2e806 ChangeLog 460
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 36c76f3ee02faac4176a744fba160905 ChangeLog 634
 MD5 99390add4fb129dc23b2391186372a08 camorama-0.16.ebuild 657
-MD5 7a0a409a5df288641e806a497ec9e3c0 metadata.xml 204
+MD5 6c09e582882781b8e5e951830cc70bf9 metadata.xml 224
+MD5 9831b8dbf8aaa8dac2bcf64868b6831b camorama-0.17.ebuild 661
 MD5 728eb1852fda23d5f256ad3407321e20 files/digest-camorama-0.16 65
+MD5 9a2c7e8eab2e03086ac2a287651ae019 files/digest-camorama-0.17 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBplQ3FdQwWVoAgN4RAvrnAJ4xkL5B10s4j6jG55eYE0Otvo2SXACgl64a
+Axd+vqOVXUbxxr5fQ7I0fm8=
+=S4eh
+-----END PGP SIGNATURE-----
