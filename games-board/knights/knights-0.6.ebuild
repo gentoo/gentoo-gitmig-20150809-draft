@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.9 2004/11/06 06:19:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.10 2004/11/17 18:49:09 wolf31o2 Exp $
 
-inherit kde
+inherit kde eutils
 need-kde 3
 
 THEME=${PN}-themepack-0.5.9

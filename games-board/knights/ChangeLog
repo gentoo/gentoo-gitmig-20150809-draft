@@ -1,6 +1,9 @@
 # ChangeLog for games-board/knights
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.7 2004/11/06 06:19:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.8 2004/11/17 18:49:09 wolf31o2 Exp $
+
+  17 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> knights-0.6.ebuild:
+  Added eutils to inherit.
 
   05 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +files/0.6-gcc34.patch,
   knights-0.6.ebuild:
