@@ -1,4 +1,14 @@
-MD5 72a3d2c3190a3fe9219b955d025686ab pcl-1.2.ebuild 810
-MD5 6efbe43e463eaf5195630fbbcb03aa7d ChangeLog 414
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc15dfdfde9f24837e13936a6666e073 ChangeLog 488
 MD5 de8a33b670c93b209e0f05e8f16635e9 metadata.xml 694
+MD5 3c48f3ab0ffd4571a4acf00a0d218422 pcl-1.2.ebuild 808
 MD5 940cf1ecea40633f72ffaaa437ba88a1 files/digest-pcl-1.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHiOHI1lqEGTUzyQRAsE0AJ4/Ro0/D+cmlgdypieOlpPy+l8vbgCgkEGT
+Feb4dCDMO9oYo01P4U8U63I=
+=eDpG
+-----END PGP SIGNATURE-----

@@ -1,8 +1,9 @@
 # ChangeLog for dev-libs/pcl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcl/ChangeLog,v 1.4 2004/06/24 23:31:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcl/ChangeLog,v 1.5 2004/08/14 14:35:36 swegener Exp $
 
-*pcl-1.2 (04 Nov 2003)
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> pcl-1.2.ebuild:
+  Trimmed trailing whitespace.
 
 *pcl-1.2 (04 Nov 2003)
 
