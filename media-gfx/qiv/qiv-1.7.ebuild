@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Thread <thread@threadbox.net>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.7.ebuild,v 1.1 2001/07/22 06:24:33 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.7.ebuild,v 1.2 2001/08/06 20:50:20 lordjoe Exp $
 
 A=${P}-src.tgz
 S=${WORKDIR}/${P}
@@ -20,6 +20,7 @@ src_compile(){
 }
 
 src_install () {
+    into /usr/X11R6
     dobin qiv
     doman qiv.1
     dodoc README*
