@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.9.ebuild,v 1.9 2003/06/25 22:35:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.9.ebuild,v 1.10 2003/12/01 20:13:46 mr_bones_ Exp $
 
-inherit kde-base
+inherit kde
 
 need-kde 3
 
