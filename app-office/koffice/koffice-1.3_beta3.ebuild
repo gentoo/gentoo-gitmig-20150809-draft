@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3_beta3.ebuild,v 1.2 2003/08/26 15:40:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3_beta3.ebuild,v 1.3 2003/09/08 02:30:47 caleb Exp $
 inherit kde-base flag-o-matic
 
 # TODO : mysql support
@@ -16,6 +16,7 @@ DESCRIPTION="A free, integrated office suite for KDE, the K Desktop Environment.
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 SRC_URI="mirror://kde/unstable/${MY_P}/src/${MY_P}.tar.bz2"
+PATCHES="${FILESDIR}/${P}-gcc33.diff"
 
 S="$WORKDIR/${MY_P}"
 
