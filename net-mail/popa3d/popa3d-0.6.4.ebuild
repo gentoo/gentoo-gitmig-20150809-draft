@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.ebuild,v 1.1 2003/11/19 03:14:46 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.ebuild,v 1.2 2003/12/16 05:24:18 port001 Exp $
 
 #
 # Mailbox format is determined by the 'mbox' and 'maildir'
@@ -154,9 +154,4 @@ src_install() {
 		insinto /etc/pam.d
 		newins ${FILESDIR}/pam popa3d
 	fi
-}
-
-pkg_postinst() {
-	einfo "Running depscan.sh..."
-	/sbin/depscan.sh
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.4 2003/11/19 03:14:45 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.5 2003/12/16 05:24:18 port001 Exp $
+
+  16 Dec 2003; Ian Leitch <port001@gentoo.org> popa3d-0.6.3.ebuild,
+  popa3d-0.6.4.ebuild:
+  No need to run depscan.sh in pkgpostinst
 
 *popa3d-0.6.4 (19 Nov 2003)
 
