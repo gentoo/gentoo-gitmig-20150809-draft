@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.3.ebuild,v 1.2 2001/01/08 05:51:37 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.3-r1.ebuild,v 1.1 2001/01/08 05:51:37 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac2
@@ -14,7 +14,7 @@ fi
 SRC_URI="
 http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0.tar.bz2
 http://www.de.kernel.org/pub/linux/kernel/people/alan/2.4/patch-2.4.0-ac3.bz2
-ftp://ftp.reiserfs.org/pub/2.4/linux-2.4.0-reiserfs-3.6.24-patch.gz
+ftp://ftp.reiserfs.org/pub/2.4/linux-2.4.0-reiserfs-3.6.25-patch.gz
 http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz
 http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz
 http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.1.1-patch.tar.gz
@@ -43,13 +43,13 @@ src_unpack() {
     cd ${S}
 
     echo "Applying ReiserFS patch..."
-    gzip -dc ${DISTDIR}/linux-2.4.0-reiserfs-3.6.24-patch.gz | patch -p1
+    gzip -dc ${DISTDIR}/linux-2.4.0-reiserfs-3.6.25-patch.gz | patch -p1 
 
     echo "Applying ReiserFS fixes patch..."
-    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac3-reiserfs-3.6.24-fixes.patch.gz | patch -p1
+    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac3-reiserfs-3.6.25-fixes.patch.gz | patch -p1
 
-    echo "Applying reiser-nfs patch..."
-    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac3-reiserfs-3.6.24-nfs.diff.gz | patch -p1
+#    echo "Applying reiser-nfs patch..."
+#    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac3-reiserfs-3.6.24-nfs.diff.gz | patch -p1
 
     mkdir extras
     if [ "`use jfs`" ]
@@ -167,6 +167,8 @@ src_install() {
 		doins arch/i386/boot/bzImage
 		#grab modules
 		dodir /lib/modules/${KV}
+		dodir ${D}/lib/modules/${KV}
+		dodir ${D}/lib/modules/`uname -r`
 		try make INSTALL_MOD_PATH=${D} modules_install
 		#install ALSA modules
 		cd ${S}/extras/alsa-driver-0.5.10
