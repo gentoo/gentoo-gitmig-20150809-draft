@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.2 2002/06/29 10:08:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.3 2002/06/29 10:35:36 seemant Exp $
 
 DESCRIPTION="Some nice themes for Sawfish"
 S=${WORKDIR}
@@ -74,6 +74,6 @@ src_install() {
   
 	dodir /usr/share/sawfish/themes
   
-	cp -a * ${D}/usr/share/sawfish/${version}/themes
+	cp -a * ${D}/usr/share/sawfish/themes
 
 }
