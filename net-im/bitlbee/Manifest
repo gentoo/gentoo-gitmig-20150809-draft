@@ -1,4 +1,4 @@
-MD5 94fa701ab9ce25fa488d3260bb35f470 ChangeLog 4337
+MD5 4c0550dd269e372c55d2392eb4b9470e ChangeLog 4554
 MD5 be64c422fc7b104525f44ec6936d97da bitlbee-0.80-r2.ebuild 1571
 MD5 3c19511150e0223b4b4ef30035afa937 bitlbee-0.82-r1.ebuild 2557
 MD5 fc51bd6f3a89c98a4a447e9b1725e488 metadata.xml 465
@@ -7,7 +7,7 @@ MD5 348ecbcec9cf34e7164b0f0189ea5963 files/bitlbee-0.80-xinetd.patch 730
 MD5 ccb2adcfc701f086102639f5d5b38802 files/bitlbee-0.82-segv.diff 415
 MD5 144e462c0af1d82a3412a237519b32ca files/bitlbee-xinetd.patch 519
 MD5 6ea807f03873746fb89cc62f5552cb9e files/bitlbeed.confd 556
-MD5 f30a0b316c8362446df532544d73a93c files/bitlbeed.init 733
+MD5 658374790b73d4b9550b497f55d0b9ed files/bitlbeed.init 730
 MD5 e20daee3dcba62b15424f0f72838bf64 files/digest-bitlbee-0.80-r2 64
 MD5 f28bfc3eed8f41e2ed33ce03e06a9659 files/digest-bitlbee-0.82-r1 64
 MD5 6668146d14da88ef8240b49671db3e9b files/yahoo.diff 25463
