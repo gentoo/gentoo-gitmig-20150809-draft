@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.12.0.ebuild,v 1.2 2004/09/23 13:07:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.12.0.ebuild,v 1.3 2004/09/23 19:34:52 mr_bones_ Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="-* ~x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	app-arch/rpm2targz
-	|| ( >=x11-base/xfree-4.3.0 
+	|| ( >=x11-base/xfree-4.3.0
 		 <x11-base/xorg-x11-6.7.99 )"
 
 RDEPEND="virtual/x11"
