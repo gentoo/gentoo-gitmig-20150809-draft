@@ -1,6 +1,11 @@
 # ChangeLog for net-news/pan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.21 2002/11/29 23:21:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.22 2003/01/03 20:19:44 foser Exp $
+
+*pan-0.13.3 (03 Jan 2003)
+
+  03 Jan 2003; foser <foser@gentoo.org> pan-0.13.3.ebuild :
+  New version
 
 *pan-0.13.2 (29 Nov 2002)
 
