@@ -85,7 +85,7 @@ src_compile() {
 	use decss  && myconf="${myconf} --enable-css"
 
 	./configure --mandir=/usr/share/man --prefix=/usr --host=${CHOST} ${myconf} || die
-	make OPTFLAGS="${CFLAGS}" all || die
+	emake OPTFLAGS="${CFLAGS}" all || die
 	
 }
 
