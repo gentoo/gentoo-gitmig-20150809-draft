@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/mupad
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mupad/ChangeLog,v 1.1 2004/12/28 14:43:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mupad/ChangeLog,v 1.2 2004/12/28 18:03:11 seemant Exp $
+
+  28 Dec 2004; Seemant Kulleen <seemant@gentoo.org> mupad-2.5.2-r1.ebuild,
+  mupad-2.5.2-r2.ebuild:
+  do NOT use awk in global scope. Use bash expressions or versionator.eclass.
+  I have switched to versionator.eclass for simplicity here.
 
 *mupad-2.5.2-r2 (28 Dec 2004)
 
