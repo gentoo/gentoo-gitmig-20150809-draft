@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.3.ebuild,v 1.2 2004/09/03 01:12:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.3.ebuild,v 1.3 2004/10/05 23:06:04 absinthe Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/abeni/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 IUSE=""
 DEPEND=">=dev-python/jaxml-3.01
