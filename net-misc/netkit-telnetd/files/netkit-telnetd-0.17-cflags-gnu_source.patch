@@ -9,3 +9,15 @@
  # LIBS += $(LIBTERMCAP)
  
  OBJS = telnetd.o state.o termstat.o slc.o sys_term.o utility.o \
+--- telnet/Makefile.orig    2004-11-01 15:23:29 -0500
++++ telnet/Makefile     2004-11-01 16:05:05 -0500
+@@ -6,7 +6,7 @@
+ #CXXFLAGS:=$(patsubst -O2, -g, $(CXXFLAGS))
+ 
+ # -DAUTHENTICATE
+-CXXFLAGS += -DUSE_TERMIO -DKLUDGELINEMODE
++CXXFLAGS += -DUSE_TERMIO -DKLUDGELINEMODE -D_GNU_SOURCE
+ LIBS = $(LIBTERMCAP)
+ 
+ SRCS = commands.cc main.cc network.cc ring.cc sys_bsd.cc telnet.cc \
+
