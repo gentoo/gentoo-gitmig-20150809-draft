@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.66 2005/01/23 21:15:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.67 2005/01/25 00:07:10 eradicator Exp $
+
+*ati-drivers-8.8.25-r3 (24 Jan 2005)
+
+  24 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -ati-drivers-8.8.25-r1.ebuild, -ati-drivers-8.8.25-r2.ebuild,
+  +ati-drivers-8.8.25-r3.ebuild, -ati-drivers-8.8.25.ebuild:
+  Don't install libMesaGL (bug #47598).  Set proper libdir in .la.
 
 *ati-drivers-8.8.25-r2 (23 Jan 2005)
 

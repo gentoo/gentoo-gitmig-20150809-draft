@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r1.ebuild,v 1.2 2005/01/22 02:08:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r3.ebuild,v 1.1 2005/01/25 00:07:10 eradicator Exp $
 
 IUSE=""
 
@@ -106,6 +106,8 @@ src_install() {
 	use amd64 && native_dir="lib64"
 
 	# Install the libs
+	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
+	local MLTEST=$(type dyn_unpack)
 	if [ "${MLTEST/set_abi}" = "${MLTEST}" ] && has_multilib_profile; then
 		local OABI=${ABI}
 		for ABI in $(get_abi_order); do
@@ -154,12 +156,16 @@ src_install-libs() {
 	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/libGL.so.1.2
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so.1
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so
-	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libMesaGL.so
+
+	# Don't do this... see bug #47598
+	#dosym libGL.so.1.2 ${ATI_ROOT}/lib/libMesaGL.so
 
 	# same as the xorg implementation
 	dosym ../${X11_IMPLEM}/extensions ${ATI_ROOT}/extensions
-	#Workaround that requires a newer opengl-update
-	dosym ../../${X11_IMPLEM}/lib/libGL.la ${ATI_ROOT}/lib/libGL.la
+	#Workaround 
+	sed -e "s:libdir=.*:libdir=${ATI_ROOT}/lib:" \
+		/usr/${inslibdir}/opengl/${X11_IMPLEM}/lib/libGL.la \
+		> $D/${ATI_ROOT}/lib/libGL.la
 	dosym ../${X11_IMPLEM}/include ${ATI_ROOT}/include
 
 	# X and DRI driver
