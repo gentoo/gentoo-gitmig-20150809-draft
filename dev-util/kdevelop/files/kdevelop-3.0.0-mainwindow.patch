@@ -1,0 +1,14 @@
+--- src/mainwindow.cpp.orig	2003-12-10 07:52:33.000000000 -0500
++++ src/mainwindow.cpp	2003-12-10 07:53:09.000000000 -0500
+@@ -602,9 +602,8 @@
+   }
+   
+   if( pDock ) {
+-	deleteToolWindow(view);
+-/*    pDock->undock();
+-    delete (KDockWidget*) pDock;*/
++    pDock->undock();
++    delete (KDockWidget*) pDock;
+   }
+   else {
+     kdDebug(9000) << "pDock already destroyed!!" << endl;
