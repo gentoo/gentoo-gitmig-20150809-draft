@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.15 2004/09/06 05:25:49 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.16 2004/09/10 16:48:21 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -45,7 +45,7 @@ fi
 LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="-* ~x86 mips amd64 ~hppa ~ppc ~ia64"
-IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
+IUSE="userlocales pic build nptl erandom hardened makecheck multilib debug"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -249,9 +249,9 @@ install_locales() {
 
 
 setup_locales() {
-	if use nls || use makecheck; then
-		einfo "nls or makecheck in USE, installing -ALL- locales..."
-		install_locales
+	if use !userlocales || use makecheck; then
+		einfo "makecheck in USE or userlocales not enabled, installing -ALL- locales..."
+		install_locales || die
 	elif [ -e /etc/locales.build ]; then
 		einfo "Installing locales in /etc/locales.build..."
 		echo 'SUPPORTED-LOCALES=\' > SUPPORTED.locales

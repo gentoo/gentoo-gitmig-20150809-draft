@@ -1,7 +1,7 @@
 MD5 5ae6312becb03d715cd266a3b6e8612c glibc-2.3.4.20040808.ebuild 21143
 MD5 4b47e58e600eebddddb96287bdcc42da glibc-2.3.2-r11.ebuild 20306
 MD5 c3e722bbae2f66c4ce6ad6a7ca8689b3 glibc-2.3.3.20040420-r1.ebuild 21628
-MD5 0b62134b0264dd64a7cdd053cfa0a1df glibc-2.3.4.20040619-r1.ebuild 20754
+MD5 f2d2c720363c4e526a3543c2b6b6b8e5 glibc-2.3.4.20040619-r1.ebuild 20795
 MD5 e617c070442c7f1fbf6b7bdc9deeaa35 ChangeLog 51385
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 f3cfb768f888ac432bddfa481c2febce glibc-2.2.5-r9.ebuild 10877
@@ -108,5 +108,5 @@ MD5 207e313566b3fc24e0a5ca2ffd2da1d9 files/2.3.4/glibc-2.3.4-nptl-altivec.patch 
 MD5 659a9d64935d67a5938d0cb4e5fe4899 files/2.3.4/glibc-2.3.4-hppa-hardened-disable__init_arrays.patch 2310
 MD5 340825c77e38e88e0ceaa12f154cbfa3 files/2.3.4/glibc-2.3.4.20040808-i386-got-fix.diff 4203
 MD5 03e0e9a2235886c0abbe98bdafd0d5ce files/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch 382
-MD5 f0efcaa682dcfdafd5f45b7995b17371 files/2.3.4/glibc-gentoo-libdir.patch 1349
+MD5 e109c03013bd08a2b96e2c2ca9017a4b files/2.3.4/glibc-gentoo-libdir.patch 1347
 MD5 16f18501efd56811e724231470dc5d00 files/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch 2562

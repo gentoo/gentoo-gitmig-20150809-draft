@@ -10,10 +10,10 @@ diff -Nru glibc-2.3.3.old/sysdeps/unix/sysv/linux/configure glibc-2.3.3/sysdeps/
 -  sparc/sparc64 | x86_64 | powerpc/powerpc64 | s390/s390-64 | \
 -  mips/mips64/n64/* )
 -    libc_cv_slibdir="/lib64"
-+  libc_cv_slibdir="/@GENTOO_LIBDIR@/"
++  libc_cv_slibdir="/@GENTOO_LIBDIR@"
      if test "$libdir" = '${exec_prefix}/lib'; then
 -      libdir='${exec_prefix}/lib64';
-+  	libdir='${exec_prefix}/@GENTOO_LIBDIR@/'
++  	libdir='${exec_prefix}/@GENTOO_LIBDIR@'
        # Locale data can be shared between 32bit and 64bit libraries
        libc_cv_localedir='${exec_prefix}/lib/locale'
      fi
