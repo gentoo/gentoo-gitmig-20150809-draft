@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.26 2005/01/12 12:24:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.27 2005/01/12 12:25:14 eradicator Exp $
 
 inherit eutils multilib flag-o-matic gcc versionator
 
@@ -708,7 +708,7 @@ src_compile() {
 		return 0
 	fi
 	unset MLTEST
-	
+
 	# do the linuxthreads build unless we're using nptlonly
 	if use !nptlonly ; then
 		glibc_do_configure linuxthreads
