@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.67 2004/10/30 22:17:27 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.68 2004/10/30 23:31:17 eradicator Exp $
+
+  30 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/0.59s-generic.patch, -files/mpg123-0.59s-CAN-2004-0805.patch,
+  -files/mpg123-0.59s-Makefile.patch, -files/mpg123-0.59s-amd64.patch,
+  -files/mpg123-0.59s-heapfix.diff, -files/mpg123-0.59s-ppc64.patch,
+  -files/mpg123-0.59s-security.diff, -mpg123-0.59s-r4.ebuild,
+  -mpg123-0.59s-r5.ebuild:
+  Removing insecure versions.
 
   30 Oct 2004; Stephen P. Becker <geoman@gentoo.org> mpg123-0.59s-r6.ebuild:
   stable on mips
