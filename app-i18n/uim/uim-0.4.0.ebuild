@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.0.ebuild,v 1.1 2004/07/09 07:28:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.0.ebuild,v 1.2 2004/07/10 07:07:54 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,8 @@ IUSE="gtk nls debug X m17n-lib"
 RDEPEND="X? ( virtual/x11 )
 	gtk? ( >=x11-libs/gtk+-2 )
 	m17n-lib? ( dev-libs/m17n-lib )
-	!app-i18n/uim-svn"
+	!app-i18n/uim-svn
+	!app-i18n/uim-fep"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser
