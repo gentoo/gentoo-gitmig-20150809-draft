@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>gnome</herd>
-	<herd>middle-east</herd>
+  <herd>gnome</herd>
+  <herd>middle-east</herd>
+  <maintainer>
+    <email>leonardop@gentoo.org</email>
+    <name>Leonardo Boshell</name>
+  </maintainer>
+  <longdescription>
+    Katoob is a light weight, multi lingual, BIDI-aware text editor
+    based on the Gtk+ 2 library. It supports opening and saving files
+    in multiple encodings. The main support was for Arabic language
+    but more languages are currently supported.
+  </longdescription>
 </pkgmetadata>

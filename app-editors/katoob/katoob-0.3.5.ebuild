@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.5.ebuild,v 1.4 2004/04/25 22:03:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.5.ebuild,v 1.5 2004/05/30 21:38:47 leonardop Exp $
 
 inherit eutils
 
@@ -19,9 +19,12 @@ RDEPEND="spell? ( app-text/aspell )"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
+
+	# Fix some compilation issues.
 	epatch ${FILESDIR}/${P}-misc_fixes.patch
+	# Fix compilation with recent Gtk+ libraries. See bug #52175.
+	sed -i -e 's:#define.*DISABLE_DEPRECATED.*::' src/katoob.h
 }
 
 src_compile() {
