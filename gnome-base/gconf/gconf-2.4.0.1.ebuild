@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.4.0.1.ebuild,v 1.1 2003/09/10 23:02:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.4.0.1.ebuild,v 1.2 2003/09/20 14:28:27 foser Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 IUSE="doc"
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 
 RDEPEND=">=dev-libs/glib-2.0.1
@@ -73,7 +73,7 @@ pkg_preinst () {
 	kill_gconf
 
 	dodir /etc/env.d
-	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${D}/../../etc/env.d/50gconf
+	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${D}/etc/env.d/50gconf
 
 	dodir /root/.gconfd
 
