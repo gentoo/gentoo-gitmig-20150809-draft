@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Arcady Genkin <agenkin@thpoon.com>
 # /space/gentoo/cvsroot/gentoo-x86/skel.build,v 1.14 2002/02/01 19:50:13 gbevin Exp
 
 # This portage installs binary XFree drivers for video cards
@@ -12,11 +11,10 @@ DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 
 NV_PACKAGE=NVIDIA_GLX-1.0-2313
 NV_ARCHIVE="${NV_PACKAGE}.tar.gz"
-
 SRC_URI="http://205.158.109.140/XFree86_40/1.0-2313/${NV_ARCHIVE}"
 HOMEPAGE="http://www.nvidia.com/"
-
 DEPEND="virtual/glibc >=x11-base/xfree-4.0.2 >=media-video/nvidia-kernel-1.0.2314"
+PROVIDE="virtual/opengl"
 
 src_unpack() {
         unpack "${NV_ARCHIVE}"
