@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.40 2004/11/26 21:16:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.41 2004/12/11 09:47:11 kloeri Exp $
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> libsoup-2.2.1.ebuild:
+  Stable on alpha.
 
   26 Nov 2004; Tom Martin <slarti@gentoo.org> libsoup-2.2.1.ebuild:
   Stable on amd64.
