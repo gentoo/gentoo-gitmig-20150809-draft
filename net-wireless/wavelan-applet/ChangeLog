@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavelan-applet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/ChangeLog,v 1.6 2003/02/12 08:45:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/ChangeLog,v 1.7 2003/08/31 02:03:51 liquidx Exp $
+
+  04 Jul 2003; Alastair Tse <liquidx@gentoo.org> wavelan-applet-0.5.ebuild:
+  fix gnome1 deps
 
   12 Feb 2003; Peter Johanson <latexer@gentoo.org> wavelan-applet-0.5.ebuild :
   Fixed some formatting
