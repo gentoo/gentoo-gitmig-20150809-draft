@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-base/xfce4-base-4.0.4.ebuild,v 1.1 2004/03/10 07:18:48 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-base/xfce4-base-4.0.4.ebuild,v 1.2 2004/03/14 03:48:50 bcowan Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -29,6 +29,10 @@ src_install() {
 	dodir /etc/X11/Sessions
 	echo startxfce4 > ${D}/etc/X11/Sessions/XFCE-4
 	fperms 755 /etc/X11/Sessions/XFCE-4
+
+	dodir /usr/share/xsessions
+	exeinto /usr/share/xsessions
+	doexe ${FILESDIR}/XFCE4.desktop
 
 	einfo "This is just a wrapper script to install all the base components of Xfce4"
 	einfo "Use startxfce4 to initialize. You also might want to emerge the extras"
