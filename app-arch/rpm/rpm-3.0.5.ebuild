@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.5.ebuild,v 1.1 2000/08/25 11:18:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.5.ebuild,v 1.2 2000/09/14 00:34:54 achim Exp $
 
 P=rpm-3.0.5
 A="${P}.tar.gz"
@@ -35,6 +35,9 @@ src_install() {
     dodoc CHANGES COPYING CREDITS GROUPS README* RPM* TODO
 }
 
+pkg_postinst() {
+  ${ROOT}/usr/bin/rpm --initdb --root=${ROOT}
+}
 
 
 
