@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.31 2004/01/12 14:38:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.32 2004/02/05 12:21:10 tuxus Exp $
+
+  05 Feb 2004; <tuxus@gentoo.org> strace-4.5.ebuild:
+  Move to mips stable
 
   12 Jan 2004; <gustavoz@gentoo.org> strace-4.5.1.ebuild:
   patch exclusion for sparc, it's b0rked
