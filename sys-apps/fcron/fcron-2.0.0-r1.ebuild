@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.10 2002/09/01 20:20:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.11 2002/09/27 03:50:28 seemant Exp $
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
@@ -31,15 +31,15 @@ src_unpack() {
 src_compile() {
 
 	./configure \
-	--prefix=/usr \
-	--with-username=cron \
-	--with-groupname=cron \
-	--with-piddir=/var/run \
-	--with-etcdir=/etc/fcron \
-	--with-spooldir=/var/spool/cron \
-	--with-sendmail=/usr/sbin/sendmail \
-	--with-editor=/usr/bin/nano \
-	--with-cflags="${CFLAGS}" --host=${CHOST} || die "bad configure"
+		--prefix=/usr \
+		--with-username=cron \
+		--with-groupname=cron \
+		--with-piddir=/var/run \
+		--with-etcdir=/etc/fcron \
+		--with-spooldir=/var/spool/cron \
+		--with-sendmail=/usr/sbin/sendmail \
+		--with-editor=/usr/bin/nano \
+		--with-cflags="${CFLAGS}" --host=${CHOST} || die "bad configure"
 
 	emake || die "compile problem"
 }
@@ -85,5 +85,4 @@ pkg_postinst() {
 	echo
 	einfo "!!! That will replace root's current crontab !!!"
 	echo
-
 }
