@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74c1d040c5378c3d829eb579c7ad548e ChangeLog 1988
-MD5 a0dba2e9f48960a31c0e5a25095e06f6 metadata.xml 426
+MD5 050d62ede05ec779662b50b8079882e4 pikdev-0.6.6.ebuild 1669
+MD5 b552eb398d6e4ccc5608d3c49ea09fc7 pikdev-0.6.5b.ebuild 803
 MD5 be16bff65ec63a4062d610d7f61b4c54 pikdev-0.4.4.ebuild 1003
-MD5 a73c3563aa312359e0ffc0e3800b72df pikdev-0.4.4-r1.ebuild 1156
-MD5 54517c35277ccee28b304abbf67280ec pikdev-0.6.5c.ebuild 1601
-MD5 67e90d5064512e7165f1674a0c647d80 pikdev-0.6.5c-r1.ebuild 1603
-MD5 75ad27933667d0e880dcd698a5353735 pikdev-0.6.5b.ebuild 803
-MD5 c2c7f52821ae8ab743a38a022b7eeeb6 pikdev-0.6.6.ebuild 1599
-MD5 4cc20f1fb9c988415a304ba922ca9dc3 files/digest-pikdev-0.4.4 64
+MD5 4a0424fa4e5808eac92cd4a701e1f58f pikdev-0.4.4-r1.ebuild 1156
+MD5 ae52d7ed0781584a455fbc53895b2536 pikdev-0.6.5c-r1.ebuild 1603
+MD5 fb5273222a2f3630f3285724c8267a92 pikdev-0.6.5c.ebuild 1600
+MD5 afac5d23bb2831f65538cacb348e2a27 ChangeLog 2183
+MD5 a0dba2e9f48960a31c0e5a25095e06f6 metadata.xml 426
 MD5 4cc20f1fb9c988415a304ba922ca9dc3 files/digest-pikdev-0.4.4-r1 64
+MD5 4cc20f1fb9c988415a304ba922ca9dc3 files/digest-pikdev-0.4.4 64
+MD5 1a530f198288beb88127022055b35b95 files/digest-pikdev-0.6.6 64
+MD5 151bd9a45a61454fb9fb1a3ceeed21e8 files/digest-pikdev-0.6.5b 66
 MD5 d3c152a6159a5b551409aa7622397e81 files/digest-pikdev-0.6.5c 65
 MD5 d3c152a6159a5b551409aa7622397e81 files/digest-pikdev-0.6.5c-r1 65
-MD5 151bd9a45a61454fb9fb1a3ceeed21e8 files/digest-pikdev-0.6.5b 66
-MD5 1a530f198288beb88127022055b35b95 files/digest-pikdev-0.6.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4W4wHTu7gpaalycRAmORAKCtvFlR9JRQjtAgKzwiw5+RPgZPRACdE2g/
-1JFi2OdERp9H+GIZy/sbhio=
-=4sG5
------END PGP SIGNATURE-----
