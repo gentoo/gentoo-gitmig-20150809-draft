@@ -1,6 +1,11 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.4 2004/03/05 13:00:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.5 2004/04/14 15:37:46 stuart Exp $
+
+*webapp-config-1.1 (14 Apr 2004)
+
+  14 Apr 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.1.ebuild:
+  Version bump; marked as stable
 
   03 Mar 2004; Stuart Herbert <stuart@gentoo.org> metadata.xml:
   Added the correct email address to the metadata
