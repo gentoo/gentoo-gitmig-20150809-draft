@@ -1,6 +1,6 @@
 # ChangeLog for app-office/ical
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.10 2004/10/05 14:04:06 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.11 2005/01/01 15:34:12 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> ical-2.2.1.ebuild:
   Masked ical-2.2.1.ebuild testing for ppc

@@ -1,6 +1,6 @@
 # ChangeLog for app-office/plan
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.7 2004/07/02 15:31:43 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.8 2005/01/01 15:40:04 eradicator Exp $
 
   02 Jul 2004; Aron Griffis <agriffis@gentoo.org> plan-1.8.6.ebuild,
   plan-1.8.7.ebuild:

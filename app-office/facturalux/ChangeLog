@@ -1,6 +1,6 @@
 # ChangeLog for app-office/facturalux
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/facturalux/ChangeLog,v 1.4 2004/07/01 13:19:33 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/facturalux/ChangeLog,v 1.5 2005/01/01 15:31:57 eradicator Exp $
 
   01 Jul 2004; Aron Griffis <agriffis@gentoo.org> facturalux-0.4.ebuild:
   sync IUSE (missing)

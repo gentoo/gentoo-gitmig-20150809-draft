@@ -1,6 +1,6 @@
 # ChangeLog for app-office/pybliographer
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.4 2004/11/17 04:06:13 usata Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.5 2005/01/01 15:40:48 eradicator Exp $
 
   17 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> pybliographer-1.2.4.ebuild:
   Added to ~ppc; bug #70211.

@@ -1,6 +1,6 @@
 # ChangeLog for app-office/lyx
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.55 2004/12/16 04:52:57 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.56 2005/01/01 15:36:38 eradicator Exp $
 
   15 Dec 2004; Dylan Carlson <absinthe@gentoo.org> lyx-1.3.5.ebuild:
   Stable on amd64.

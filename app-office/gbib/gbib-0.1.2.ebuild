@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gbib/gbib-0.1.2.ebuild,v 1.5 2005/01/01 04:39:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gbib/gbib-0.1.2.ebuild,v 1.6 2005/01/01 15:32:23 eradicator Exp $
 
 inherit eutils
 

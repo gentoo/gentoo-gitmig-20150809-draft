@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.1.ebuild,v 1.2 2004/12/15 18:22:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.1.ebuild,v 1.3 2005/01/01 15:33:56 eradicator Exp $
 
 inherit virtualx gnome2 eutils flag-o-matic
 

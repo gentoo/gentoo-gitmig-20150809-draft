@@ -1,6 +1,6 @@
 # ChangeLog for app-office/gnotime
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.8 2004/06/24 22:39:59 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.9 2005/01/01 15:32:54 eradicator Exp $
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> gnotime-2.1.7.ebuild:
   Stable on sparc.

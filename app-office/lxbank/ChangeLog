@@ -1,6 +1,6 @@
 # ChangeLog for app-office/lxbank
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.9 2004/07/02 02:28:39 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.10 2005/01/01 15:36:18 eradicator Exp $
 
   01 Jul 2004; Aron Griffis <agriffis@gentoo.org> lxbank-0.1.9.ebuild:
   inherit eutils

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.0.1.ebuild,v 1.6 2004/12/17 23:04:09 config Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.0.1.ebuild,v 1.7 2005/01/01 15:32:37 eradicator Exp $
 
 inherit eutils gnome2
 

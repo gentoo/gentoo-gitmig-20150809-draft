@@ -1,6 +1,6 @@
 # ChangeLog for app-office/mdbtools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.13 2004/09/20 18:20:23 robmoss Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.14 2005/01/01 15:37:10 eradicator Exp $
 
   20 Sep 2004; <rmoss@gentoo.org> mdbtools-0.5.ebuild:
   Adding GCC 3.4 compile fix submitted by Ed Catmur (ed@catmur.co.uk) and

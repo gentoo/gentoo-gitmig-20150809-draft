@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.93.ebuild,v 1.8 2004/12/11 17:05:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.93.ebuild,v 1.9 2005/01/01 15:31:31 eradicator Exp $
 
 inherit eutils gnome2
 
