@@ -9,3 +9,14 @@
  #endif
  
  /* filesystem internal functions */
+--- linux/include/linux/skbuff.h	Sun Sep  8 14:11:22 2002
++++ linux/include/linux/skbuff.h.new	Sun Sep  8 14:09:38 2002
+@@ -194,7 +194,7 @@
+ 	unsigned char 	*end;			/* End pointer					*/
+ 
+ 	void 		(*destructor)(struct sk_buff *);	/* Destruct function		*/
+-#if defined ( CONFIG_NETFILTER || CONFIG_IPSEC )
++#if defined(CONFIG_NETFILTER) || defined(CONFIG_IPSEC) || defined(CONFIG_IPSEC_MODULE)
+ 	/* Can be used for communication between hooks. */
+         unsigned long	nfmark;
+ 	/* Cache info */
