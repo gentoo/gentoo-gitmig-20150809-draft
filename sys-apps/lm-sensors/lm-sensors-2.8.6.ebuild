@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.6.ebuild,v 1.3 2004/05/06 10:48:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.6.ebuild,v 1.4 2004/05/28 16:37:53 kugelfang Exp $
 
 inherit flag-o-matic eutils
 
@@ -79,7 +79,18 @@ src_compile()  {
 	einfo "that contain 'No such file' references."
 
 	echo
-	filter-flags -fPIC -fstack-protector
+
+	# Please _don't_ use filter-flags -fPIC on apps that need it!
+	# [ amd64, hppa, ia64, etc... ]
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/05/28
+	case "${ARCH}" in
+		"amd64")
+			filter-flags -fstack-protector
+			;;
+		*)
+			filter-flags -fPIC -fstack-protector
+			;;
+	esac
 
 	cd ${S}
 	emake clean
