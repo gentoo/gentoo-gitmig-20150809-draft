@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/physfs
+# ChangeLog for dev-games/physfs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.1 2003/08/17 20:58:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.2 2003/08/23 00:39:25 vapier Exp $
 
 *physfs-0.1.8 (24 Apr 2003)
 
