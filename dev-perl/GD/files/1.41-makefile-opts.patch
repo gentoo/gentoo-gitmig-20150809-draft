@@ -1,0 +1,17 @@
+--- Makefile.PL.orig	2003-06-26 11:30:31.000000000 -0400
++++ Makefile.PL	2003-06-26 11:32:04.000000000 -0400
+@@ -10,10 +10,10 @@
+ # FEATURE FLAGS
+ warn "\nPlease choose the features that match how libgd was built:\n";
+ 
+-my $JPEG    = lc prompt('Build JPEG support?','y') eq 'y';
+-my $TTF     = lc prompt('Build FreeType support?','y') eq 'y';
+-my $XPM     = $^O !~ /^freebsd|MSWin32$/ && lc prompt('Build XPM support?','y') eq 'y';
+-my $GIF		= lc prompt('Build GIF support (for patched versions of gd)?','n') eq 'y';
++my $JPEG    = 'GENTOO_JPEG';
++my $TTF     = 'GENTOO_TTF';
++my $XPM     = 'GENTOO_XPM';
++my $GIF     = 'GENTOO_GIF';
+ 
+ my $FCGI    = 0;   # set to 1 to build compatability with fastCGI
+ 

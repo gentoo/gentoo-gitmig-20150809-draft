@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.16 2003/06/26 15:17:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.17 2003/06/26 15:46:18 vapier Exp $
 
 *GD-2.07 (26 Jun 2003)
 
@@ -23,6 +23,11 @@
   8 Sep 2002; <mcummings@gentoo.org> GD-2.01.ebuild :
   Updated version corrects some GD related problems, depends on new GD; thanks
   to Nicholas Wourms for doing the legwork on this one
+
+*GD-1.41 (26 Jun 2003)
+
+  26 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + rework optional jpeg/xpm/truetype/gif.
 
 *GD-1.32-r2 (18 Sep 2002)
 
