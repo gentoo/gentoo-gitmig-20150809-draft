@@ -1,8 +1,0 @@
-#define HasZlib YES
-#define HasGcc2ForCplusplus YES
-#define GccWarningOptions -Wall 
-#define ForceNormalLib YES
-#define BuildXinerama YES
-#define SharedLibXau YES
-
-
