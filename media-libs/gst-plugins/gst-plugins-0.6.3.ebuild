@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.7 2003/10/05 14:14:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.8 2003/10/10 19:00:57 foser Exp $
 
 # IMPORTANT
 #
@@ -79,13 +79,7 @@ src_compile() {
 
 }
 
-src_install() {
-
-	einstall || die
-
-	dodoc AUTHORS COPYING INSTALL README RELEASE TODO
-
-}
+DOCS="AUTHORS COPYING INSTALL README RELEASE TODO"
 
 pkg_postinst () {
 
