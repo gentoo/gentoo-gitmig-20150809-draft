@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r1.ebuild,v 1.1 2002/10/21 17:33:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r1.ebuild,v 1.2 2002/10/27 16:33:36 azarah Exp $
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="Unzipper for pkzip-compressed files"
 SRC_URI="ftp://ftp.info-zip.org/pub/infozip/src/${PN}${PV/.}.tar.gz"
 HOMEPAGE="ftp://ftp.info-zip.org/pub/infozip/UnZip.html"
@@ -21,12 +21,12 @@ src_compile() {
 		&& TARGET=linux \
 		|| TARGET=linux_noasm
 
-	make -f unix/Makefile $TARGET || die
+	make -f unix/Makefile ${TARGET} || die
 }
 
 src_install() {
 	dobin unzip funzip unzipsfx unix/zipgrep
 	dosym /usr/bin/unzip /usr/bin/zipinfo
 	doman man/*.1
-	dodoc BUGS COPYING.old History* LICENSE README ToDo WHERE
+	dodoc BUGS COPYING.OLD History* LICENSE README ToDo WHERE
 }
