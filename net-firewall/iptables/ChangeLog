@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.17 2003/11/04 08:28:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.18 2003/11/21 15:45:33 aliz Exp $
+
+  21 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.9.ebuild :
+  Replae -O0 with -O2, same as the the lack of -O flag problem. Closing #33899.
 
 *iptables-1.2.9 (04 Nov 2003)
 

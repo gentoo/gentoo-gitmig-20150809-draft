@@ -3,8 +3,8 @@ MD5 611eccaed05cd06e19488b1a14d78747 iptables-1.2.7a-r3.ebuild 1993
 MD5 59eb30b46fae4911251ff539850a4d0b iptables-1.2.8.ebuild 2105
 MD5 b76799632db21bda76bfaa16ce8bd9ac iptables-1.2.8-r2.ebuild 2731
 MD5 ceb03819b44784147104358fa559ba1d iptables-1.2.7a-r4.ebuild 2105
-MD5 a95df5a6c51da023e6116ec5305e4614 iptables-1.2.9.ebuild 2556
-MD5 d52409aeba135d65acf21a597f659902 ChangeLog 8587
+MD5 8884afba7d7232df3f7a997d8259fa92 iptables-1.2.9.ebuild 2579
+MD5 7f8f7b41124192f585896d8c8c9a50b2 ChangeLog 8740
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 f876be872ec78bc824f2503059338d8d files/iptables.confd 382
 MD5 1416ab080ec8704b26a5426976f17990 files/ip6tables.init 1864
