@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia.rc,v 1.4 2003/06/08 13:39:17 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia.rc,v 1.5 2004/02/04 22:35:33 latexer Exp $
 
 RUN=/var/run
 SC=${RUN}/pcmcia-scheme
@@ -13,6 +13,16 @@ cleanup()
 			/etc/pcmcia/${CLASS} stop ${DEV} 2> /dev/null
 		fi
 	done
+}
+
+pcmcia_probe()
+{
+	MODULE=$1
+	OPTS=$2
+
+	/sbin/modprobe $MODULE $OPTS 2>/dev/null
+
+	return $?
 }
 
 start() {
@@ -34,9 +44,15 @@ start() {
 	fi
 
 	if [ -z `fgrep "ds " /proc/modules | head -n1 | cut -c1` ] ; then
-		/sbin/modprobe pcmcia_core $CORE_OPTS 2> /dev/null
-		/sbin/modprobe $PCIC $PCIC_OPTS 2> /dev/null
-		/sbin/modprobe ds
+		pcmcia_probe pcmcia_core $CORE_OPTS
+		if [ -n "$PCIC" ]; then
+			pcmcia_probe $PCIC $PCIC_OPTS || {
+				ewarn "'modprobe ${PCIC}' failed"
+				ewarn "Trying alternative PCIC driver: ${PCIC_ALT}"
+				pcmcia_probe $PCIC_ALT $PCIC_ALT_OPTS
+			}
+		fi
+		pcmcia_probe ds
 	fi
 
 	ebegin "Starting pcmcia"
