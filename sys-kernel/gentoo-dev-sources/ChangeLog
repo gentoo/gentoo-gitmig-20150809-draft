@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.167 2005/01/09 16:30:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.168 2005/01/09 19:09:13 johnm Exp $
+
+  09 Jan 2005; John Mylchreest <johnm@gentoo.org>
+  gentoo-dev-sources-2.6.10-r4.ebuild:
+  Moving IUSE to before inherit, so kernel-2 is honoured
 
   09 Jan 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-dev-sources-2.6.10-r4.ebuild:
