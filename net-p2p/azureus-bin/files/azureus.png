@@ -1,0 +1,401 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head>
+<!-- ViewCVS -- http://viewcvs.sourceforge.net/
+by Greg Stein -- mailto:gstein@lyra.org
+-->
+<title>CVS log for azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png</title>
+</head>
+<body text="#000000" bgcolor="#ffffff">
+<center>
+<iframe SRC="http://ads.osdn.com/?op=iframe&position=1&allpositions=1&site_id=2&section=cvs" width="728" height="90" frameborder="0" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"></iframe>
+<!-- image audit code -->
+<script LANGUAGE="JAVASCRIPT">
+<!--
+now = new Date();
+tail = now.getTime();
+document.write("<IMG SRC='http://images-aud.sourceforge.net/pc.gif?l,");
+document.write(tail);
+document.write("' WIDTH=1 HEIGHT=1 BORDER=0>");
+//-->
+</SCRIPT>
+<noscript>
+<img src="http://images-aud.sourceforge.net/pc.gif?l,81677"
+WIDTH=1 HEIGHT=1 BORDER=0>
+</noscript>
+<!-- end audit code -->
+</center>
+<table width="100%" border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td rowspan=2><h1>CVS log for azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png</h1></td>
+<td align=right><img src="/sourceforge_whitebg.gif" alt="(logo)" border=0
+width=136 height=79></td>
+</tr>
+<tr>
+<td align=right><h3><b><a target="_blank"
+href="/viewcvs.py/*docroot*/help_log.html">ViewCVS and CVS Help</a></b></h3></td>
+</tr>
+</table>
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/#tray.png"><img src="/icons/small/back.gif" alt="(back)" border=0
+width=16 height=16></a>
+<b>Up to <a href="/viewcvs.py/#dirlist">[cvs]</a> / <a href="/viewcvs.py/azureus/#dirlist">azureus</a> / <a href="/viewcvs.py/azureus/azureus2/#dirlist">azureus2</a> / <a href="/viewcvs.py/azureus/azureus2/org/#dirlist">org</a> / <a href="/viewcvs.py/azureus/azureus2/org/gudy/#dirlist">gudy</a> / <a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/#dirlist">azureus2</a> / <a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/#dirlist">ui</a> / <a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/#dirlist">icons</a> / tray.png</b><p>
+<a href="#diff">Request diff between arbitrary revisions</a>
+
+<hr noshade>
+
+Default branch: INITAL_UPLOAD
+<br>
+Bookmark a link to:
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?view=markup"><b>HEAD</b></a>
+/
+(<a href="/viewcvs.py/*checkout*/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png" target="cvs_checkout"
+onclick="window.open('/viewcvs.py/*checkout*/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png', 'cvs_checkout',
+'resizable=1,scrollbars=1');return false"
+><b>download</b></a>)
+
+
+<br>
+
+
+
+ 
+
+
+
+<hr size=1 noshade>
+
+
+<a name="rev1.1.1.1"></a>
+<a name="RELEASE_2_0_1"></a>
+<a name="RELEASE-2_0_8_4"></a>
+<a name="RELEASE-2_0_8_2"></a>
+<a name="RELEASE-2_0_8_0"></a>
+<a name="RELEASE-2_0_7_0"></a>
+<a name="RELEASE-2_0_6_0"></a>
+<a name="RELEASE-2_0_4_2"></a>
+<a name="RELEASE-2_0_4_0"></a>
+<a name="RELEASE-2_0_3_2"></a>
+<a name="RELEASE-2_0_3_0"></a>
+<a name="RELEASE-2_0_2_7"></a>
+<a name="RELEASE-2_0_2_6"></a>
+<a name="RELEASE-2_0_2_5"></a>
+<a name="RELEASE-2_0_2_4"></a>
+<a name="RELEASE-2_0_2_2"></a>
+<a name="HEADLESS"></a>
+<a name="HEAD"></a>
+<a name="BETA-2_0_2_1"></a>
+<a name="BETA-2_0_2_0"></a>
+<a name="BETA-2_0_1_1"></a>
+<a name="BETA-2_0_1_0"></a>
+<a name="BETA-2_0_0_8"></a>
+
+<a name="MAIN"></a>
+<a name="INITAL_UPLOAD"></a>
+
+Revision <b>1.1.1.1</b> -
+
+
+, <a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?rev=1.1.1.1&view=markup">(view)</a>
+
+
+
+
+- <a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?r1=1.1.1.1">[select for diffs]</a>
+
+
+
+<i>(vendor branch)</i>
+
+<br>
+
+<i>Thu Jul 10 02:57:28 2003 UTC</i> (9 months, 3 weeks ago) by <i>tylerpitchford</i>
+
+<br>Branch:
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=MAIN"><b>MAIN</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=INITAL_UPLOAD"><b>INITAL_UPLOAD</b></a>
+
+
+
+<br>CVS Tags:
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE_2_0_1"><b>RELEASE_2_0_1</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_8_4"><b>RELEASE-2_0_8_4</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_8_2"><b>RELEASE-2_0_8_2</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_8_0"><b>RELEASE-2_0_8_0</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_7_0"><b>RELEASE-2_0_7_0</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_6_0"><b>RELEASE-2_0_6_0</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_4_2"><b>RELEASE-2_0_4_2</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_4_0"><b>RELEASE-2_0_4_0</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_3_2"><b>RELEASE-2_0_3_2</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_3_0"><b>RELEASE-2_0_3_0</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_2_7"><b>RELEASE-2_0_2_7</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_2_6"><b>RELEASE-2_0_2_6</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_2_5"><b>RELEASE-2_0_2_5</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_2_4"><b>RELEASE-2_0_2_4</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=RELEASE-2_0_2_2"><b>RELEASE-2_0_2_2</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=HEADLESS"><b>HEADLESS</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=HEAD"><b>HEAD</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=BETA-2_0_2_1"><b>BETA-2_0_2_1</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=BETA-2_0_2_0"><b>BETA-2_0_2_0</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=BETA-2_0_1_1"><b>BETA-2_0_1_1</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=BETA-2_0_1_0"><b>BETA-2_0_1_0</b></a>,
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=BETA-2_0_0_8"><b>BETA-2_0_0_8</b></a>
+
+
+
+
+
+
+<br>Changes since <b>1.1: +0 -0 lines</b>
+
+
+
+
+
+
+<br>Diff to <a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?r1=1.1&amp;r2=1.1.1.1">previous 1.1</a>
+
+
+
+
+
+
+
+<pre>NEW MODULE FOR AZUREUS 2 CLIENT
+</pre>
+
+<hr size=1 noshade>
+
+
+<a name="rev1.1"></a>
+
+
+Revision <b>1.1</b> -
+
+
+, <a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?rev=1.1&view=markup">(view)</a>
+
+
+
+
+- <a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?r1=1.1">[select for diffs]</a>
+
+
+
+<br>
+
+<i>Thu Jul 10 02:57:28 2003 UTC</i> (9 months, 3 weeks ago) by <i>tylerpitchford</i>
+
+
+
+<br>Branch point for:
+
+<a href="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png?only_with_tag=INITAL_UPLOAD"><b>INITAL_UPLOAD</b></a>
+
+
+
+
+
+
+
+
+
+
+<pre>Initial revision
+</pre>
+
+ 
+
+
+<a name=diff></a>
+<hr noshade>
+This form allows you to request diffs between any two revisions of
+a file. You may select a symbolic revision name using the selection
+box or you may type in a numeric name using the type-in text box.
+<p>
+<form method=get action="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png" name=diff_select>
+
+Diffs between
+<select name="r1">
+<option value="text" selected>Use Text Field</option>
+
+<option value="1.1.1.1:RELEASE_2_0_1">RELEASE_2_0_1</option>
+
+<option value="1.1.1.1:RELEASE-2_0_8_4">RELEASE-2_0_8_4</option>
+
+<option value="1.1.1.1:RELEASE-2_0_8_2">RELEASE-2_0_8_2</option>
+
+<option value="1.1.1.1:RELEASE-2_0_8_0">RELEASE-2_0_8_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_7_0">RELEASE-2_0_7_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_6_0">RELEASE-2_0_6_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_4_2">RELEASE-2_0_4_2</option>
+
+<option value="1.1.1.1:RELEASE-2_0_4_0">RELEASE-2_0_4_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_3_2">RELEASE-2_0_3_2</option>
+
+<option value="1.1.1.1:RELEASE-2_0_3_0">RELEASE-2_0_3_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_7">RELEASE-2_0_2_7</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_6">RELEASE-2_0_2_6</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_5">RELEASE-2_0_2_5</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_4">RELEASE-2_0_2_4</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_2">RELEASE-2_0_2_2</option>
+
+<option value="1.1.1.1:MAIN">MAIN</option>
+
+<option value="1.1.1.1:INITAL_UPLOAD">INITAL_UPLOAD</option>
+
+<option value="1.1.1.1:HEADLESS">HEADLESS</option>
+
+<option value="1.1.1.1:HEAD">HEAD</option>
+
+<option value="1.1.1.1:BETA-2_0_2_1">BETA-2_0_2_1</option>
+
+<option value="1.1.1.1:BETA-2_0_2_0">BETA-2_0_2_0</option>
+
+<option value="1.1.1.1:BETA-2_0_1_1">BETA-2_0_1_1</option>
+
+<option value="1.1.1.1:BETA-2_0_1_0">BETA-2_0_1_0</option>
+
+<option value="1.1.1.1:BETA-2_0_0_8">BETA-2_0_0_8</option>
+
+</select>
+<input type="TEXT" size="12" name="tr1" value="1.1"
+onChange="document.diff_select.r1.selectedIndex=0">
+and
+<select name="r2">
+<option value="text" selected>Use Text Field</option>
+
+<option value="1.1.1.1:RELEASE_2_0_1">RELEASE_2_0_1</option>
+
+<option value="1.1.1.1:RELEASE-2_0_8_4">RELEASE-2_0_8_4</option>
+
+<option value="1.1.1.1:RELEASE-2_0_8_2">RELEASE-2_0_8_2</option>
+
+<option value="1.1.1.1:RELEASE-2_0_8_0">RELEASE-2_0_8_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_7_0">RELEASE-2_0_7_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_6_0">RELEASE-2_0_6_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_4_2">RELEASE-2_0_4_2</option>
+
+<option value="1.1.1.1:RELEASE-2_0_4_0">RELEASE-2_0_4_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_3_2">RELEASE-2_0_3_2</option>
+
+<option value="1.1.1.1:RELEASE-2_0_3_0">RELEASE-2_0_3_0</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_7">RELEASE-2_0_2_7</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_6">RELEASE-2_0_2_6</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_5">RELEASE-2_0_2_5</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_4">RELEASE-2_0_2_4</option>
+
+<option value="1.1.1.1:RELEASE-2_0_2_2">RELEASE-2_0_2_2</option>
+
+<option value="1.1.1.1:MAIN">MAIN</option>
+
+<option value="1.1.1.1:INITAL_UPLOAD">INITAL_UPLOAD</option>
+
+<option value="1.1.1.1:HEADLESS">HEADLESS</option>
+
+<option value="1.1.1.1:HEAD">HEAD</option>
+
+<option value="1.1.1.1:BETA-2_0_2_1">BETA-2_0_2_1</option>
+
+<option value="1.1.1.1:BETA-2_0_2_0">BETA-2_0_2_0</option>
+
+<option value="1.1.1.1:BETA-2_0_1_1">BETA-2_0_1_1</option>
+
+<option value="1.1.1.1:BETA-2_0_1_0">BETA-2_0_1_0</option>
+
+<option value="1.1.1.1:BETA-2_0_0_8">BETA-2_0_0_8</option>
+
+</select>
+<input type="TEXT" size="12" name="tr2" value="1.1.1.1"
+onChange="document.diff_select.r1.selectedIndex=0">
+<br>Type of Diff should be a
+<select name="diff_format" onchange="submit()">
+<option value="h" selected>Colored Diff</option>
+<option value="l" >Long Colored Diff</option>
+<option value="u" >Unidiff</option>
+<option value="c" >Context Diff</option>
+<option value="s" >Side by Side</option>
+</select>
+<input type=submit value=" Get Diffs "></form>
+
+
+<hr noshade>
+<a name=branch></a>
+<form method=GET action="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png">
+
+View only Branch:
+<select name="only_with_tag" onchange="submit()">
+<option value="" selected>Show all branches</option>
+
+<option value="MAIN" >MAIN</option>
+
+<option value="INITAL_UPLOAD" >INITAL_UPLOAD</option>
+
+</select>
+<input type=submit value=" View Branch ">
+</form>
+
+
+<hr noshade>
+<a name=logsort></a>
+<form method=get action="/viewcvs.py/azureus/azureus2/org/gudy/azureus2/ui/icons/tray.png">
+
+Sort log by:
+<select name="logsort" onchange="submit()">
+<option value="cvs" >Not sorted</option>
+<option value="date" selected>Commit date</option>
+<option value="rev" >Revision</option>
+</select>
+<input type=submit value=" Sort ">
+</form>
+
+
+<hr noshade>
+<table width="100%" border=0 cellpadding=0 cellspacing=0><tr>
+<td align=left><address><a href="http://sourceforge.net/">Back to SourceForge.net</a></address></td>
+<td align=right>
+Powered by<br><a href="http://viewcvs.sourceforge.net/">ViewCVS</a>
+</td></tr></table>
+</body></html>
+

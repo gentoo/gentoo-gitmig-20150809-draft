@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.4.ebuild,v 1.2 2004/03/24 04:21:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.4.ebuild,v 1.3 2004/05/06 18:45:24 squinky86 Exp $
 
 inherit eutils
 
@@ -90,6 +90,12 @@ src_install() {
 	doexe *.so
 
 	dobin azureus
+
+	insinto /usr/share/pixmaps
+	doins ${FILESDIR}/azureus.png
+
+	insinto /usr/share/applications
+	doins ${FILESDIR}/azureus.desktop
 
 	dodoc README.linux seda-README.txt
 	dohtml swt-about.html
