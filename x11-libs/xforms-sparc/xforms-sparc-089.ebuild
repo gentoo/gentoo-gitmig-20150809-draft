@@ -4,7 +4,7 @@
 
 MY_P="bxform${PV}-glibc2.1"
 
-S=${WORKDIR}/${PN/-x86/}
+S=${WORKDIR}/${PN/-sparc/}
 DESCRIPTION="A GUI Toolkit based on Xlib"
 SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/linux-sparc/${MY_P}.tgz"
 HOMEPAGE="http://world.std.com/~xforms/"
