@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/lgrind
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.8 2004/08/18 13:47:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.9 2004/10/09 21:11:01 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -lgrind-3.67-r1.ebuild,
+  lgrind-3.67-r2.ebuild:
+  Stable on x86 and ppc.
 
 *lgrind-3.67-r2 (18 Aug 2004)
 

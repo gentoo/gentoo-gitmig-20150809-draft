@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/koma-script-20040616.ebuild,v 1.1 2004/08/18 00:10:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/koma-script-20040616.ebuild,v 1.2 2004/10/09 21:14:09 usata Exp $
 
 inherit latex-package
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/koma-script.html"
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 ~amd64 ~sparc ppc"
 IUSE=""
 
 src_compile() {

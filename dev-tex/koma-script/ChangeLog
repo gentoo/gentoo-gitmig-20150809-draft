@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/koma-script
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.10 2004/09/01 08:59:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.11 2004/10/09 21:14:09 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -koma-script-20040111-r1.ebuild, koma-script-20040616.ebuild:
+  Stable on x86 and ppc.
 
 *koma-script-20040824 (01 Sep 2004)
 
