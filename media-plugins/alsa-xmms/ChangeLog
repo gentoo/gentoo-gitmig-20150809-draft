@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/alsa-xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.7 2003/05/13 23:15:15 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.8 2003/07/11 20:38:50 agenkin Exp $
+
+*alsa-xmms-0.9.12 (11 July 2003)
+
+  11 July 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
+  Modified dependencies to be more specific about required version of
+  XMMS, as well as depend on virtual/alsa instead of alsa-driver.
 
 *alsa-xmms-0.9.11 (13 May 2003)
 
