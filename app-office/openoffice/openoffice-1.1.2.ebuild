@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.2.ebuild,v 1.2 2004/06/24 22:43:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.2.ebuild,v 1.3 2004/06/29 17:46:45 agriffis Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -285,7 +285,6 @@ get_EnvSet() {
 	# Determine what Env file we should be using (Az)
 	export LinuxEnvSet="LinuxIntelEnv.Set.sh"
 	use sparc && export LinuxEnvSet="LinuxSparcEnv.Set.sh"
-	use sparc64 && export LinuxEnvSet="LinuxSparcEnv.Set.sh"
 	use ppc && export LinuxEnvSet="LinuxPPCEnv.Set.sh"
 	use alpha && export LinuxEnvSet="LinuxAlphaEnv.Set.sh"
 

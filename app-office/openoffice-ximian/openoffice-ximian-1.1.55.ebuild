@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55.ebuild,v 1.11 2004/06/28 15:29:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55.ebuild,v 1.12 2004/06/29 17:45:02 agriffis Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -278,7 +278,6 @@ get_EnvSet() {
 	# Determine what Env file we should be using (Az)
 	export LinuxEnvSet="LinuxIntelEnv.Set.sh"
 	use sparc && export LinuxEnvSet="LinuxSparcEnv.Set.sh"
-	use sparc64 && export LinuxEnvSet="LinuxSparcEnv.Set.sh"
 	use ppc && export LinuxEnvSet="LinuxPPCEnv.Set.sh"
 	use alpha && export LinuxEnvSet="LinuxAlphaEnv.Set.sh"
 
