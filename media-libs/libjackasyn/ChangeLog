@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjackasyn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.7 2004/06/24 23:10:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.8 2004/09/01 17:11:58 eradicator Exp $
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libjackasyn-0.10.ebuild:
+  Stable amd64.
 
   24 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libjackasyn-0.10.ebuild:
