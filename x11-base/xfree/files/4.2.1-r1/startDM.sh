@@ -2,10 +2,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.1-r1/startDM.sh,v 1.1 2002/11/03 11:41:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.1-r1/startDM.sh,v 1.2 2002/11/07 09:13:21 azarah Exp $
 
 source /etc/init.d/functions.sh
 
+# We need to source /etc/profile for stuff like $LANG to work
+# bug #10190.
+source /etc/profile
 
 if [ -e ${svcdir}/options/xdm/service ]
 then
