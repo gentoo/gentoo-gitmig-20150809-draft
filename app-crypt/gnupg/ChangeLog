@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.93 2005/01/03 21:39:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.94 2005/01/04 20:55:36 dragonheart Exp $
+
+*gnupg-1.4.0-r1 (05 Jan 2005)
+
+  05 Jan 2005; Daniel Black <dragonheart@gentoo.org> +gnupg-1.4.0-r1.ebuild,
+  -gnupg-1.4.0.ebuild:
+  Hardened fix as per bug #76487. Thanks to Natanael Copa <mlists@tanael.org>
+  and Peter S. Mazinger <ps.m@gmx.net>
 
   04 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.4.0.ebuild:
   Removed sparc and hppa keywords until bug #76375 is solved

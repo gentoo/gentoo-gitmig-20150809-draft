@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0.ebuild,v 1.3 2005/01/03 21:39:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.1 2005/01/04 20:55:36 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -57,6 +57,9 @@ src_unpack() {
 		mv ${WORKDIR}/idea.c ${S}/cipher/idea.c || \
 			ewarn "failed to insert IDEA module"
 	fi
+	cd ${S}
+	sed -i -e 's:PIC:__PIC__:' mpi/i386/mpih-{add,sub}1.S intl/relocatable.c
+	sed -i -e 's:if PIC:ifdef __PIC__:' mpi/sparc32v8/mpih-mul{1,2}.S
 }
 
 src_compile() {
