@@ -195,7 +195,7 @@ net-www/zope
 # soon as a new version is available in Portage, otherwise you'll pollute 
 # the still-under-high-development network with old protocols and such.
   
->=net-misc/gift-0.10.0_pre020527
+net-misc/gift
 
 # Opera 6 final.
 # This package requires that qt2 package were linked against libpng 1.0.12,
