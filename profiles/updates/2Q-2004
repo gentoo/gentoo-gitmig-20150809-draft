@@ -45,3 +45,4 @@ move net-mail/evolution mail-client/evolution
 move net-mail/kbiff mail-client/kbiff
 move net-mail/mailx mail-client/mailx
 move net-mail/mailx-support mail-client/mailx-support
+move net-mail/mutt mail-client/mutt
