@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_beta1.ebuild,v 1.2 2002/08/24 11:45:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_beta1.ebuild,v 1.3 2002/08/29 11:46:20 danarmak Exp $
 inherit kde-dist flag-o-matic 
 
 DESCRIPTION="KDE $PV - multimedia apps"
@@ -30,6 +30,9 @@ myaudio="--enable-audio=oss"
 myinterface="--enable-interface=xaw,ncurses"
 myconf="$myconf --enable-xaw --enable-ncurses"
 myconf="$myconf --with-xine-prefix=/usr"
+
+# make -j2 fails
+export MAKEOPTS="-j1"
 
 # alsa 0.9 not supported
 #use alsa	&& myconf="$myconf --with-alsa --with-arts-alsa" && myaudio="$myaudio,alsa" ||
