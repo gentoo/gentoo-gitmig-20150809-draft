@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.7.1.ebuild,v 1.9 2004/06/24 22:11:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.7.1.ebuild,v 1.10 2004/10/05 13:34:50 pvdabeel Exp $
 
 DESCRIPTION="Mind-mapping software written in Java"
 HOMEPAGE="http://freemind.sf.net"
 SRC_URI="mirror://sourceforge/freemind/${PN}-src-${PV//./_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc amd64"
+KEYWORDS="x86 ~sparc ppc amd64"
 IUSE="doc jikes"
 DEPEND="dev-java/ant
 		>=virtual/jdk-1.4*

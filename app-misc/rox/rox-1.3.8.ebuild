@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.8.ebuild,v 1.5 2004/06/24 22:31:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.8.ebuild,v 1.6 2004/10/05 13:34:52 pvdabeel Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/rox/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=x11-libs/gtk+-2.0.5
 	>=dev-libs/glib-2.0.4

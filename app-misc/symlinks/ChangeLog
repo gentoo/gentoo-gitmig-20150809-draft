@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/symlinks
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.9 2004/09/22 20:08:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.10 2004/10/05 13:34:52 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  symlinks-1.2.ebuild:
+  Masked symlinks-1.2.ebuild stable for ppc
 
   22 Sep 2004; Michael Hanselmann <hansmi@gentoo.org> symlinks-1.2.ebuild:
   Added to ~ppc, bug 63719.

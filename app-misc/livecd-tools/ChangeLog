@@ -1,6 +1,27 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.21 2004/09/05 18:06:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.22 2004/10/05 13:34:51 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  livecd-tools-1.0.2.ebuild, livecd-tools-1.0.3.ebuild,
+  livecd-tools-1.0.4.ebuild, livecd-tools-1.0.5.ebuild:
+  Masked livecd-tools-1.0.5.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  livecd-tools-1.0.2.ebuild, livecd-tools-1.0.3.ebuild,
+  livecd-tools-1.0.4.ebuild:
+  Masked livecd-tools-1.0.4.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  livecd-tools-1.0.2.ebuild, livecd-tools-1.0.3.ebuild:
+  Masked livecd-tools-1.0.3.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  livecd-tools-1.0.2.ebuild:
+  Masked livecd-tools-1.0.2.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Masked livecd-tools-1.0.1.ebuild stable for ppc
 
   05 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> livecd-tools-1.0.2.ebuild:
   Add ~alpha keyword.

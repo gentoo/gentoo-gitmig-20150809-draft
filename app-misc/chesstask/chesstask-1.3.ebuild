@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/chesstask-1.3.ebuild,v 1.8 2004/06/24 22:05:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/chesstask-1.3.ebuild,v 1.9 2004/10/05 13:34:50 pvdabeel Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/chesstask/ChessTask${PV/./_}src.zip"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~ppc"
+KEYWORDS="ppc"
 
 DEPEND=">=x11-libs/qt-3
 	virtual/tetex"

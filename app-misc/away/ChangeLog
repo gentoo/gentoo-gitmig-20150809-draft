@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/away
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.7 2004/09/22 19:47:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.8 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> away-0.9.5.ebuild:
+  Masked away-0.9.5.ebuild stable for ppc
 
   22 Sep 2004; Michael Hanselmann <hansmi@gentoo.org> away-0.9.5.ebuild:
   Added to ~ppc, bug #63652.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.3 2004/06/24 22:05:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.4 2004/10/05 13:34:50 pvdabeel Exp $
 
 MY_P=cku209
 S=${WORKDIR}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kermit-project.org/"
 SLOT="0"
 LICENSE="Kermit"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/git
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/git/ChangeLog,v 1.5 2004/09/11 10:51:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/git/ChangeLog,v 1.6 2004/10/05 13:34:51 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> git-4.3.20.ebuild:
+  Masked git-4.3.20.ebuild stable for ppc
 
   11 Sep 2004; Tom Martin <slarti@gentoo.org> git-4.3.20.ebuild:
   Marked ~amd64.

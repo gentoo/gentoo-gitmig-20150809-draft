@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kfish
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kfish/ChangeLog,v 1.8 2004/06/24 22:19:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kfish/ChangeLog,v 1.9 2004/10/05 13:34:51 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kfish-2.01.ebuild:
+  Masked kfish-2.01.ebuild stable for ppc
 
   18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> kfish-1.0.ebuild,
   kfish-2.01.ebuild:

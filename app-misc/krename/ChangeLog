@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/krename
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.35 2004/08/09 21:08:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.36 2004/10/05 13:34:51 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  krename-3.0.2.ebuild:
+  Masked krename-3.0.2.ebuild stable for ppc
 
   09 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> krename-3.0.2.ebuild:
   Marked ~amd64 and ~ppc. See BUG #59880.

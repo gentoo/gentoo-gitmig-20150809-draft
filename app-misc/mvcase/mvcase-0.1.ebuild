@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/mvcase-0.1.ebuild,v 1.3 2004/06/28 04:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/mvcase-0.1.ebuild,v 1.4 2004/10/05 13:34:51 pvdabeel Exp $
 
 DESCRIPTION="A modified version of mv, used to convert filenames to lower/upper case"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/utils/file"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="ppc"
 IUSE=""
 
 DEPEND="dev-libs/shhopt"

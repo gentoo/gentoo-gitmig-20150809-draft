@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mvcase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/ChangeLog,v 1.2 2004/06/24 22:26:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/ChangeLog,v 1.3 2004/10/05 13:34:51 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> mvcase-0.1.ebuild:
+  Masked mvcase-0.1.ebuild stable for ppc
 
 *mvcase-0.1 (01 Mar 2004)
 

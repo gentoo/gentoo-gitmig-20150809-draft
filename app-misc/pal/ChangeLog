@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/pal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.11 2004/10/01 12:40:32 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.12 2004/10/05 13:34:52 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> pal-0.3.3.ebuild,
+  pal-0.3.4.ebuild:
+  Masked pal-0.3.4.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> pal-0.3.3.ebuild:
+  Masked pal-0.3.3.ebuild stable for ppc
 
   01 Oct 2004; <pyrania@gentoo.org> pal-0.3.4.ebuild:
   Marked stable on x86.

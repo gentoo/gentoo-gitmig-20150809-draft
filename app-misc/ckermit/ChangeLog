@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ckermit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.10 2004/06/24 22:05:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.11 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  ckermit-8.0.211.ebuild:
+  Masked ckermit-8.0.211.ebuild stable for ppc
 
   09 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> ckermit-8.0.209.ebuild:
   inherit eutils for epatch

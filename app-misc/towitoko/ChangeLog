@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/towitoko
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/ChangeLog,v 1.8 2004/09/29 23:39:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/ChangeLog,v 1.9 2004/10/05 13:34:52 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  towitoko-2.0.7-r1.ebuild:
+  Masked towitoko-2.0.7-r1.ebuild stable for ppc
 
   17 Jul 2004; David Holm <dholm@gentoo.org> towitoko-2.0.7-r1.ebuild:
   Added to ~ppc.

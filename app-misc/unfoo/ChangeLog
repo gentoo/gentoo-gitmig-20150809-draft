@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.3 2004/06/24 22:36:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.4 2004/10/05 13:34:52 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> unfoo-1.0.4.ebuild:
+  Masked unfoo-1.0.4.ebuild stable for ppc
 
   17 Apr 2004; Michael McCabe <randy@gentoo.org> unfoo-1.0.4.ebuild:
   added s390 keywords

@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.18 2004/09/21 15:22:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.19 2004/10/05 13:34:52 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  uptimed-0.3.0-r1.ebuild, uptimed-0.3.1.ebuild, uptimed-0.3.3.ebuild:
+  Masked uptimed-0.3.3.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  uptimed-0.3.0-r1.ebuild, uptimed-0.3.1.ebuild:
+  Masked uptimed-0.3.1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  uptimed-0.3.0-r1.ebuild:
+  Masked uptimed-0.3.0-r1.ebuild stable for ppc
 
   21 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> uptimed-0.3.3.ebuild:
   Added ~sparc

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.6 2004/08/15 06:16:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.7 2004/10/05 13:34:52 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  pax-utils-0.0.2.ebuild:
+  Masked pax-utils-0.0.2.ebuild stable for ppc
 
 *pax-utils-0.0.4 (15 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/jdictionary-1.8.ebuild,v 1.4 2004/08/24 03:06:47 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/jdictionary-1.8.ebuild,v 1.5 2004/10/05 13:34:51 pvdabeel Exp $
 
 DESCRIPTION="A online Java-based dictionary"
 HOMEPAGE="http://jdictionary.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/jdictionary/${P/./_}.zip"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 
 RDEPEND=">=virtual/jdk-1.3"
 

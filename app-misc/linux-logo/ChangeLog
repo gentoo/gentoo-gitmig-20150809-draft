@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.13 2004/06/28 01:35:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.14 2004/10/05 13:34:51 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  linux-logo-4.09.ebuild:
+  Masked linux-logo-4.09.ebuild stable for ppc
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> linux-logo-4.09.ebuild:
   Added ~mips

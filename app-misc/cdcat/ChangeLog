@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/ChangeLog,v 1.8 2004/06/24 22:04:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/ChangeLog,v 1.9 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> cdcat-0.3.ebuild:
+  Masked cdcat-0.3.ebuild stable for ppc
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   cdcat-0.2.ebuild, cdcat-0.3.ebuild:

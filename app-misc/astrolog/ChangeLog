@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/astrolog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.4 2004/09/20 02:26:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.5 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  astrolog-5.40.ebuild:
+  Masked astrolog-5.40.ebuild stable for ppc
 
   19 Sept 2004; Tom Gall <tgall@gentoo.org> astrolog-5.40.ebuild:
   stable on ppc64 bug #63655

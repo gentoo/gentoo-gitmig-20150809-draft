@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dtach
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.5 2004/08/29 01:22:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.6 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dtach-0.7.ebuild:
+  Masked dtach-0.7.ebuild stable for ppc
 
   29 Aug 2004; Sven Wegener <swegener@gentoo.org> -dtach-0.6.ebuild,
   dtach-0.7.ebuild:

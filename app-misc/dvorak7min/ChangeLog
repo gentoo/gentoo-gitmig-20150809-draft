@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/dvorak7min
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.5 2004/06/28 22:53:59 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.6 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  dvorak7min-1.6.1.ebuild:
+  Masked dvorak7min-1.6.1.ebuild stable for ppc
 
   29 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> dvorak7min-1.6.1.ebuild:
   Marked ~amd64.

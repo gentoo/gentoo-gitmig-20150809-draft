@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.0.6.ebuild,v 1.7 2004/08/26 03:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.0.6.ebuild,v 1.8 2004/10/05 13:34:51 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://melkor.dnp.fmph.uniba.sk/~garabik/grc/grc_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND="dev-lang/python"

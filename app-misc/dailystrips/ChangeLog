@@ -1,6 +1,19 @@
 # ChangeLog for app-misc/dailystrips
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.16 2004/06/24 22:07:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.17 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  dailystrips-1.0.27.ebuild, dailystrips-1.0.28-r1.ebuild,
+  dailystrips-1.0.28.ebuild:
+  Masked dailystrips-1.0.28.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  dailystrips-1.0.27.ebuild, dailystrips-1.0.28-r1.ebuild:
+  Masked dailystrips-1.0.28-r1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  dailystrips-1.0.27.ebuild:
+  Masked dailystrips-1.0.27.ebuild stable for ppc
 
   14 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
   dailystrips-1.0.24-r1.ebuild, dailystrips-1.0.24.ebuild,

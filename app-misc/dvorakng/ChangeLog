@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/dvorakng
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.5 2004/09/20 02:56:22 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.6 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  dvorakng-0.6.0.ebuild:
+  Masked dvorakng-0.6.0.ebuild stable for ppc
 
   19 Sep 2004; Tom Gall <tgall@gentoo.org> dvorakng-0.6.0.ebuild:
   stable on ppc64, bug #63664

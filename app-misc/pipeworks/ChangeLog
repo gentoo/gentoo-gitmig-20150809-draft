@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pipeworks
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pipeworks/ChangeLog,v 1.5 2004/07/10 15:20:54 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pipeworks/ChangeLog,v 1.6 2004/10/05 13:34:52 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  pipeworks-0.4.ebuild:
+  Masked pipeworks-0.4.ebuild stable for ppc
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> pipeworks-0.4.ebuild:
   Marked ~amd64.

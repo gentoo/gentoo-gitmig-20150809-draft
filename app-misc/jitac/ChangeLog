@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jitac
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.8 2004/10/03 21:30:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.9 2004/10/05 13:34:51 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> jitac-0.2.0.ebuild:
+  Masked jitac-0.2.0.ebuild stable for ppc
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> :
   Added ~sparc keyword rather, not stable ;)

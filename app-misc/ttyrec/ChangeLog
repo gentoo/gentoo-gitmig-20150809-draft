@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ttyrec
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.9 2004/09/22 20:26:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.10 2004/10/05 13:34:52 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Masked ttyrec-1.0.6.ebuild stable for ppc
 
   22 Sep 2004; Michael Hanselmann <hansmi@gentoo.org> ttyrec-1.0.6.ebuild:
   Added to ~ppc, bug 63720.

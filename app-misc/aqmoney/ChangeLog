@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/aqmoney
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aqmoney/ChangeLog,v 1.7 2004/09/20 16:08:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aqmoney/ChangeLog,v 1.8 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  aqmoney-0.6.2.ebuild:
+  Masked aqmoney-0.6.2.ebuild stable for ppc
 
 *aqmoney-0.6.3 (20 Sep 2004)
 

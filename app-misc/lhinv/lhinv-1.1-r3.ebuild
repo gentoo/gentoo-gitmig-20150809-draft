@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/lhinv-1.1-r3.ebuild,v 1.6 2004/07/10 13:33:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/lhinv-1.1-r3.ebuild,v 1.7 2004/10/05 13:34:51 pvdabeel Exp $
 
 DESCRIPTION="Linux Hardware Inventory"
 HOMEPAGE="http://lhinv.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/lhinv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"

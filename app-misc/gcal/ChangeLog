@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.7 2004/09/05 23:53:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.8 2004/10/05 13:34:50 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> gcal-3.01.ebuild:
+  Masked gcal-3.01.ebuild stable for ppc
 
   06 Sep 2004; Lars Weiler <pylon@gentoo.org> gcal-3.01-r1.ebuild:
   Stable on ppc.
