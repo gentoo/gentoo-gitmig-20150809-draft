@@ -1,0 +1,13 @@
+# ChangeLog for dev-java/wsdl4j
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j-bin/ChangeLog,v 1.1 2004/07/30 22:00:50 axxo Exp $
+
+  05 May 2004; <SeJo@gentoo.org> wsdl4j-1.4.ebuild:
+  added ~ppc keyword
+
+*wsdl4j-1.4 (19 Apr 2004)
+
+  19 Apr 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  wsdl4j-1.4.ebuild:
+  initial ebuild, written by myself as a dep for axis.
+
