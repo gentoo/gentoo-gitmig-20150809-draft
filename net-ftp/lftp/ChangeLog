@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.31 2003/09/21 19:24:26 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.32 2003/10/17 12:38:06 aliz Exp $
+
+*lftp-2.6.8 (17 Oct 2003)
+
+  17 Oct 2003; Daniel Ahlberg <aliz@gentoo.org> lftp-2.6.8.ebuild:
+  Version bump
 
   21 Sep 2003; Tavis Ormandy <taviso@gentoo.org> lftp-2.6.7.ebuild:
   sed to remove duplicate libraries on alpha no longer required, appears
