@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-3.9.ebuild,v 1.4 2004/04/07 19:47:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-3.9.ebuild,v 1.5 2004/04/07 19:56:56 vapier Exp $
 
-inherit eutils
+inherit gcc eutils
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
