@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.15 2004/06/24 22:43:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.16 2004/06/29 01:57:42 tgall Exp $
+
+  28 Jun 2004; Tom Gall <tgall@gentoo.org> netatalk-1.6.4.ebuild:
+  stable ppc64, bug #54188 
 
   10 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> netatalk-1.6.4.ebuild:
   Added ~sparc, thanks to Belinus in #gentoo-sparc
