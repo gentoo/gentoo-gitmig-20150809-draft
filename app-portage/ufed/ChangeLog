@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/ufed
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.12 2004/12/11 18:37:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.13 2004/12/15 12:03:29 genone Exp $
+
+*ufed-0.34 (15 Dec 2004)
+
+  15 Dec 2004; Marius Mauch <genone@gentoo.org> -ufed-0.34.ebuild,
+  -ufed-0.35-r1.ebuild, +ufed-0.35-r3.ebuild, -ufed-0.35.ebuild:
+  Another revision carrying a bunch of patches from bugzilla, this will
+  probably be the last release of ufed as it is. Removing old ebuilds.
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> ufed-0.35-r2.ebuild:
   Stable on alpha.
