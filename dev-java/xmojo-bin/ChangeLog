@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmojo-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/ChangeLog,v 1.4 2004/10/16 17:41:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/ChangeLog,v 1.5 2004/10/22 10:34:54 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xmojo-bin-5.0.0.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xmojo-bin-5.0.0.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/xmojo-bin-5.0.0.ebuild,v 1.4 2004/10/16 17:41:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/xmojo-bin-5.0.0.ebuild,v 1.5 2004/10/22 10:34:54 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.xmojo.org/"
 SRC_URI="http://www.xmojo.org/products/xmojo/downloads/XMOJO_5_0_0.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="5.0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 RDEPEND="=dev-java/crimson-1.1*
 	=dev-java/xalan-2.5*
