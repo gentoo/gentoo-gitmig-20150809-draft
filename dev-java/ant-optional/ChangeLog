@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/ant-optional
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ChangeLog,v 1.27 2004/07/31 11:36:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ChangeLog,v 1.28 2004/07/31 21:21:10 karltk Exp $
 
   31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> ant-optional-1.6.0-r2.ebuild,
   ant-optional-1.6.0-r3.ebuild, ant-optional-1.6.1-r1.ebuild,
@@ -31,6 +31,9 @@
   29 Jul 2004; Thomas Matthijs <axxo@gentoo.org>
   +ant-optional-1.6.2-r2.ebuild:
   actualy use the fixed wrapper script
+
+  30 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  Prepared (mostly) for the move of dev-java/jython to dev-java/jython-bin.
 
 *ant-optional-1.6.2-r1 (23 Jul 2004)
 

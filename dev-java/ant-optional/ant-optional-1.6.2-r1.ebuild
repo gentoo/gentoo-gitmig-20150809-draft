@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.2-r1.ebuild,v 1.5 2004/07/31 11:36:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.2-r1.ebuild,v 1.6 2004/07/31 21:21:10 karltk Exp $
 
 inherit java-pkg eutils
 
@@ -29,8 +29,8 @@ DEPEND="=dev-java/ant-${PVR}
 	>=dev-java/rhino-1.5_rc4
 	>=dev-java/jdepend-2.6
 	>=dev-java/jsch-0.1.12
+	|| ( >=dev-java/jython-2.1 >=dev-java/jython-bin-2.1 )
 	>=dev-java/regexp-bin-1.3
-	>=dev-java/jython-bin-2.1
 	javamail? ( >=dev-java/sun-javamail-bin-1.3 )"
 RDEPEND="${DEPEND}"
 
