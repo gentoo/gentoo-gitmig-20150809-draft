@@ -1,4 +1,5 @@
 MD5 4ca4938783a5d18876e862653fb7db30 kimagemapeditor-0.9.5.1.ebuild 602
-MD5 ad9471cbcdca53b52fb483ca6796198f ChangeLog 1078
+MD5 e50edfa8c6e9c40fc2f216edcd2dafdd ChangeLog 1163
+MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 6912f14eeb73b9559e0eccbf7c7618a7 files/digest-kimagemapeditor-0.9.5.1 80
 MD5 59fca5028829004350c717ca1825bb11 files/kimagemapeditor-0.9.5.1-gcc3.diff 403

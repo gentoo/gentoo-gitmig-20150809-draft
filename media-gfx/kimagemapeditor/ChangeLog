@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kimagemapeditor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimagemapeditor/ChangeLog,v 1.9 2004/12/02 15:43:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimagemapeditor/ChangeLog,v 1.10 2004/12/02 15:45:11 carlo Exp $
+
+  02 Dec 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml:
+  missing metadata
 
   02 Dec 2004; Carsten Lohrke <carlo@gentoo.org>
   kimagemapeditor-0.9.5.1.ebuild:
