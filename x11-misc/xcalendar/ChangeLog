@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/xcalendar
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.1 2002/12/15 22:23:33 seemant Exp $
+
+*xcalendar-4.0 (15 Dec 2002)
+
+  15 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xcalendar-4.0.ebuild
+  files/xcalendar-4.0-motif-gentoo.diff files/digest-xcalendar-4.0 ChangeLog :
+
+  New package which is an interactive calendar/notepad.  Submitted by:
+  scott@lampert.org (Scott Lampert) in bug #11255.
