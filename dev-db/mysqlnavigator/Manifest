@@ -1,5 +1,5 @@
 MD5 8837da27a5c7493e3b0c6f2c3d2101cc ChangeLog 1041
-MD5 85e3faeb8e68209b92538b17bc2bb9cd mysqlnavigator-1.4.1.ebuild 682
-MD5 0360049b1756e0dd23fdc6a7765be3bc mysqlnavigator-1.4.2.ebuild 1054
+MD5 14c6b3074a5e961c151f56e1a4f74314 mysqlnavigator-1.4.1.ebuild 687
+MD5 3f92e727a749027b8e17eac3421041b8 mysqlnavigator-1.4.2.ebuild 1058
 MD5 2ca75439ae281db9a0dd3e0aa0f2c1b5 files/digest-mysqlnavigator-1.4.1 72
 MD5 2c61d9267a3fcf7d12d94808d52aae15 files/digest-mysqlnavigator-1.4.2 72

@@ -1,5 +1,5 @@
-MD5 d9a6177f86907dde36ace8a7d76751a3 myodbc-3.51.06.ebuild 2376
 MD5 5e4b77146ef60d0a8b7cd46f6d54e888 ChangeLog 675
-MD5 753275c6a73d96238332d8e1d609b42d files/odbc.ini.m4 514
+MD5 72fa3eff40016d8924969ed6909ca51b myodbc-3.51.06.ebuild 2378
 MD5 af6071c0c469470111c00d957ccad675 files/digest-myodbc-3.51.06 66
+MD5 753275c6a73d96238332d8e1d609b42d files/odbc.ini.m4 514
 MD5 4d3adfd4f234604abd907ea0acaea437 files/odbcinst.ini.m4 230
