@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.159 2004/08/16 13:52:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.160 2004/08/16 14:57:58 caleb Exp $
+
+*qt-3.3.3 (16 Aug 2004)
+
+  16 Aug 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.3.ebuild:
+  New version
 
   16 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.2.ebuild:
   Updated immodule patch.
