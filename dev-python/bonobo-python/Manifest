@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e93fb445afdaeea3cb35dfc837d32f5e ChangeLog 2228
-MD5 2379ccbfaa13e112d8bee73ca8ab314c bonobo-python-0.2.0-r5.ebuild 1371
 MD5 f8f93e49c63791e7ba6c62fa763477cb bonobo-python-0.2.0-r3.ebuild 1321
+MD5 8e5b45d5df495009743b2ad01269993a ChangeLog 2337
+MD5 2379ccbfaa13e112d8bee73ca8ab314c bonobo-python-0.2.0-r5.ebuild 1371
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 fc866f776d304de89aa5cdfaf4c29235 bonobo-python-0.2.0-r4.ebuild 1352
-MD5 40e5326caea5a297e9e99af71f575dce files/digest-bonobo-python-0.2.0-r3 71
-MD5 40e5326caea5a297e9e99af71f575dce files/digest-bonobo-python-0.2.0-r5 71
 MD5 40e5326caea5a297e9e99af71f575dce files/digest-bonobo-python-0.2.0-r4 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBu39yugEuf3OQ0akRAhFcAJ9XlHy4/e/VjWwq71zOwl1lRjdjmACfZKkc
-oPbd+S4bZRKKwVHzjqiWZs4=
-=GAHZ
------END PGP SIGNATURE-----
+MD5 40e5326caea5a297e9e99af71f575dce files/digest-bonobo-python-0.2.0-r5 71
+MD5 40e5326caea5a297e9e99af71f575dce files/digest-bonobo-python-0.2.0-r3 71
