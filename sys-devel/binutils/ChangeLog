@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.159 2004/10/02 00:54:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.160 2004/10/03 07:55:50 lv Exp $
+
+  03 Oct 2004; Travis Tilley <lv@gentoo.org> binutils-2.15.92.0.2.ebuild:
+  added ~amd64 keyword. among other things, this release fixes an x86-64 linker
+  warning while building the Linux kernel.
 
 *binutils-2.15.92.0.2 (01 Oct 2004)
 
