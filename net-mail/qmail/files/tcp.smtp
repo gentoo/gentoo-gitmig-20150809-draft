@@ -1,0 +1,6 @@
+#/etc/tcp.smtp file to control mail relay using qmail.Relay also uses RBL SMTP Block
+#defaults to localhost only. Add your network as per your requirements.
+# Script by Parag Mehta <pm@gentoo.org>
+
+127.0.0.1:allow,RELAYCLIENT='',RBLSMTP=''
+:allow

@@ -8,6 +8,8 @@
 
 SERVICE=qmail
 EXE="/var/qmail/bin/qmail-start"
+#TCPS="/usr/local/bin/tcpserver"
+#RBL="/usr/local/bin/rblsmtpd"
 opts="start stop restart"
 export PATH="/var/qmail/bin:$PATH"
 
@@ -15,6 +17,8 @@ start()	{
 		einfo "Starting ${SERVICE}.."
 		export DEBUGLEVEL=255
 		exec $EXE ./.maildir/ splogger qmail &
+#		exec $TCPS -x/etc/tcp.smtp.cdb -uqmaild -gnofiles 0 smtp $RBL -b -rrbl.maps.vix.com qmail-smtpd 2>&1 | splogger &
+#		exec $TCPS -u0 -g0 0 110 qmail-popup /usr/local/bin/checkvpw qmail-pop3d .maildir 2>&1 | splogger &
 		eend $? "Error starting ${SERVICE}."
 }
 
