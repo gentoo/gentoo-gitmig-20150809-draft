@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-jack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.27 2005/03/16 11:56:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.28 2005/03/20 17:40:30 pylon Exp $
+
+  20 Mar 2005; Lars Weiler <pylon@gentoo.org> alsa-jack-1.0.8.ebuild:
+  Stable on ppc.
 
   16 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -alsa-jack-1.0.5.ebuild, -alsa-jack-1.0.6.ebuild,
