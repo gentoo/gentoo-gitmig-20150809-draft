@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mhxd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/ChangeLog,v 1.4 2004/07/01 09:32:21 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/ChangeLog,v 1.5 2004/07/17 10:42:14 kang Exp $
+
+  17 Jul 2004; Guillaume Destuynder <kang@gentoo.org> mhxd-0.4.9.ebuild:
+  Added ~sparc keyword (ebuild was tested and verified working for this arch)
+  Marked stable on x86 and ppc.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> mhxd-0.4.9.ebuild:
   virtual/glibc needs changed to virtual/libc

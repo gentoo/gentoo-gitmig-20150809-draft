@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.9.ebuild,v 1.4 2004/07/01 09:32:21 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.9.ebuild,v 1.5 2004/07/17 10:42:14 kang Exp $
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc ~sparc"
 
 DESCRIPTION="This is a Hotline 1.5+ compatible *nix Hotline Server. It supports IRC compatibility. See http://www.hotspringsinc.com/"
 SRC_URI="http://projects.acidbeats.de/${P}.tar.gz"
