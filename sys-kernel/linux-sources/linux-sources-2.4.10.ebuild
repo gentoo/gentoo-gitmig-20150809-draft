@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10.ebuild,v 1.2 2001/09/28 00:04:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10.ebuild,v 1.3 2001/09/28 00:08:25 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -115,7 +115,7 @@ src_unpack() {
 
 	#linux-sources needs to be fully configured, too.  Not just linux
 	#this is the configuration for the default kernel
-	cp ${FILESDIR}/config.default .config || die
+	cp ${PORTDIR}/sys-kernel/linux-sources/files/config.default .config || die
 	yes "" | make oldconfig
 	echo "Ignore any errors from the yes command above."
     
