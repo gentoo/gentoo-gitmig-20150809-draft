@@ -1,6 +1,11 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.12 2004/07/29 12:35:02 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.13 2004/07/29 23:53:00 nakano Exp $
+
+*kazehakase-0.1.8.1 (30 Jul 2004)
+
+  30 Jul 2004; Masatomo Nakano <nakano@gentoo.org> +kazehakase-0.1.8.1.ebuild:
+  Version bump. This version has fixed crash bug when adding a smart bookmark.
 
   29 Jul 2004; Masatomo Nakano <nakano@gentoo.org> kazehakase-0.1.8.ebuild:
   Removed app-text/cmigemo dependency.
