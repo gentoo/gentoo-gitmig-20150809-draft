@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r1.ebuild,v 1.2 2003/03/30 08:11:37 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r1.ebuild,v 1.3 2003/03/30 17:41:23 avenj Exp $
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
 
 DESCRIPTION="The /bin/mail program, which is used to send mail via shell scripts."
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/m/mailx/mailx_${MX_VER}.orig.tar.gz
-	mirror://gentoo/multifix.diff.gz"
+	mirror://gentoo/multifix.diff.gz
+	mirror://gentoo/20021129-cvs.diff.bz2"
 HOMEPAGE="http://www.debian.org"
 
 DEPEND=">=net-libs/liblockfile-1.03 
@@ -22,8 +23,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	bzcat ${FILESDIR}/20021129-cvs.diff.bz2 | patch -p1 \
-		|| die "patch failed"
+	epatch ${DISTDIR}/20021129-cvs.diff.bz2 || die "patch failed"
 	epatch ${DISTDIR}/multifix.diff.gz || die "patch failed"
 }
 
