@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0-r11.ebuild,v 1.1 2004/12/24 18:36:03 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0-r12.ebuild,v 1.1 2005/01/09 10:59:22 plasmaroo Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ DESCRIPTION="uCLinux kernel patches for CPUs without MMUs"
 SRC_URI="mirror://kernel/v${MMV}/linux-${OKV}.tar.bz2
 	http://www.uclinux.org/pub/uClinux/uClinux-${MMV}.x/${MY_P/linux/${base}}.${patch}.gz
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${POV}-CAN-2004-0415.patch
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0814.patch"
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0814.2.patch"
 
 HOMEPAGE="http://www.uclinux.org/"
 KEYWORDS="~x86 -ppc"
@@ -65,6 +65,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-1016.patch || die "Failed to apply the CAN-2004-1016 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-1137.patch || die "Failed to apply the CAN-2004-1137 patch!"
+	epatch ${FILESDIR}/${PN}.77094.patch || die "Failed to apply bug #77094 patch!"
+	epatch ${FILESDIR}/${P}.brk-locked.patch || die "Failed to apply do_brk_locked() patch!"
 
 	kernel_universal_unpack
 	set ARCH=${MY_ARCH}

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r12.ebuild,v 1.1 2004/12/20 21:23:13 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r13.ebuild,v 1.1 2005/01/09 10:59:22 plasmaroo Exp $
 
 IUSE=""
 
@@ -60,6 +60,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
 	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-1137.patch || die "Failed to apply the CAN-2004-1137 patch!"
 	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-1151.patch || die "Failed to apply the CAN-2004-1151 patch!"
+	epatch ${FILESDIR}/${PN}.77094.patch || die "Failed to apply bug #77094 patch!"
+	epatch ${FILESDIR}/${PN}-2.6.brk-locked.patch || die "Failed to apply do_brk_locked() patch!"
 
 	set MY_ARCH=${ARCH}
 	unset ARCH
