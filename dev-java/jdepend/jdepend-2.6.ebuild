@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.6.ebuild,v 1.7 2004/05/09 22:06:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.6.ebuild,v 1.8 2004/06/03 03:22:09 agriffis Exp $
 
 inherit java-pkg
 
@@ -23,7 +23,7 @@ RDEPEND=">=virtual/jdk-1.3"
 src_compile() {
 	local myc
 
-	if [ -n "`use jikes`" ] ; then
+	if use jikes ; then
 		myc="${myc} -Dbuild.compiler=jikes"
 	fi
 
@@ -31,7 +31,7 @@ src_compile() {
 
 	ANT_OPTS=${myc} ant jar || die "Failed Compiling"
 
-#	if [ -n "`use junit`" ] ; then
+#	if use junit ; then
 #		ant test || die "Failed Testing Packages Integrity"
 #	fi
 }
@@ -43,7 +43,7 @@ src_install() {
 	dodir /usr/share/ant/lib
 	dosym /usr/share/jdepend/lib/jdepend.jar /usr/share/ant/lib
 
-	if [ -n "`use doc`" ]; then
+	if use doc; then
 		dohtml docs/JDepend.html
 		cp -r docs/api ${D}/usr/share/doc/${PN}-${PV}/html
 		cp -r docs/images ${D}/usr/share/doc/${PN}-${PV}/html

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1.ebuild,v 1.5 2004/05/28 12:07:18 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1.ebuild,v 1.6 2004/06/03 03:24:11 agriffis Exp $
 
 IUSE="doc javacomm"
 
 inherit java nsplugins
 
-if [ `use ppc` ]; then
+if use ppc; then
 	S="${WORKDIR}/IBMJava2-ppc-141"
 else
 	S="${WORKDIR}/IBMJava2-141"
@@ -41,7 +41,7 @@ src_install() {
 	cp -a ${S}/{demo,src.jar} ${D}opt/${P}/share/
 
 	# setting the ppc stuff
-	if [ `use ppc` ]; then
+	if use ppc; then
 		dosed s:/proc/cpuinfo:/etc/cpuinfo:g ${D}opt/${P}/jre/bin/libjitc.so
 		dosed s:/proc/cpuinfo:/etc/cpuinfo:g ${D}opt/${P}/jre/bin/libjitc_g.so
 		insinto ${D}/etc
@@ -61,7 +61,7 @@ src_install() {
 pkg_postinst() {
 	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
 	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
-	if [ !`use X` ] ; then
+	if ! use X; then
 		einfo "********************************************************"
 		eerror "You're not using X so its possible that you dont have"
 		eerror "a X server installed, please read the following warning: "

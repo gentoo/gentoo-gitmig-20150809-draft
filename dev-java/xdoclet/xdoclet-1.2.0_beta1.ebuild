@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.0_beta1.ebuild,v 1.6 2004/05/21 17:24:24 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.0_beta1.ebuild,v 1.7 2004/06/03 03:28:20 agriffis Exp $
 
 DESCRIPTION="A code-generation engine primarily for EJB"
 HOMEPAGE="http://xdoclet.sf.net/"
@@ -19,7 +19,7 @@ S=${WORKDIR}/
 
 src_unpack() {
 	unpack ${A}
-	if [ -n "`use jikes`" ] ; then
+	if use jikes ; then
 		einfo "Configuring build for Jikes"
 		cp build.properties build.properties~ \
 			&& sed -e 's/compiler = modern/compiler = jikes/' <build.properties~ >build.properties

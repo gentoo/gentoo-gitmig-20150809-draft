@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r1.ebuild,v 1.6 2004/03/18 05:15:43 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r1.ebuild,v 1.7 2004/06/03 03:22:41 agriffis Exp $
 
 DESCRIPTION="Sun's Java 2 Enterprise Edition Development Kit"
 SRC_URI="j2sdkee-1_3_1-linux.tar.gz"
@@ -37,7 +37,7 @@ src_install () {
 	echo "J2EE_HOME=/opt/${P}" >> $j2eeenv
 	dodoc LICENSE README
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		dohtml -r doc/*
 	fi
 }
