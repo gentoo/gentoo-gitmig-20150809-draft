@@ -1,6 +1,9 @@
 # ChangeLog for app-office/phprojekt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.3 2004/08/25 08:10:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.4 2004/08/30 19:36:46 rl03 Exp $
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> phprojekt-4.2.ebuild:
+  Fixed DEPEND/RDEPEND, removed unneeded src_compile
 
   25 Aug 2004; Renat Lumpau <rl03@gentoo.org> phprojekt-4.2.ebuild:
   Fixed sleep and pkg_compile insanity.
