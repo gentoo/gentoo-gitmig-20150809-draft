@@ -1,12 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freedict.eclass,v 1.2 2003/03/18 03:54:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freedict.eclass,v 1.3 2003/06/03 23:26:46 liquidx Exp $
 
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # This eclass exists to ease the installation of freedict translation
 # dictionaries.  The only variables which need to be defined in the actual
 # ebuilds are FORLANG and TOLANG for the source and target languages,
 # respectively.
+
+ECLASS="freedict"
+INHERITED="$INHERITED $ECLASS"
 
 IUSE=""
 
@@ -23,8 +26,10 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="app-text/dictd"
 
-src_install() {
+freedict_src_install() {
 	insinto /usr/lib/dict
 	doins ${MY_P}.dict.dz
 	doins ${MY_P}.index
 }
+
+EXPORT_FUNCTIONS src_install
