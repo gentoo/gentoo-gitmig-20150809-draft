@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5e978b2388aad3240332338128c3140b ChangeLog 2108
+MD5 6f3a333ab2028b1baa062facc4c1927c ChangeLog 2233
 MD5 e5c9f896d0f29ffd4c705f0f40771bd6 metadata.xml 248
+MD5 3014fe1865009437f9cc637dd3fbf74b sary-ruby-1.2.0.ebuild 623
 MD5 ca0e437ce4a6f23690c37126887499f9 sary-ruby-1.1.0.1.ebuild 626
+MD5 4e257ea25af862c67764d1bbb040f7fb files/digest-sary-ruby-1.2.0 65
 MD5 65d972c2018bdf452949d646c380a09a files/digest-sary-ruby-1.1.0.1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFCDbdBVWNWqTUmv+0RAjeeAJ4w3kDSatQIhtZfK1btMRGL5EtR+gCY7Nae
-kBX636YBsxiOyajC4XN2+A==
-=Rzei
+iD8DBQFCSr+vVWNWqTUmv+0RAp8vAKCk9Iwsif1nTUeAwm8k0gfxhf0afwCePqYe
+74rdy92CD3rTIRh8968NQYM=
+=fGSi
 -----END PGP SIGNATURE-----
