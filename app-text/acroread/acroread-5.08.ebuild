@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.1 2003/08/11 08:09:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.2 2003/08/11 17:22:51 usata Exp $
 
 inherit nsplugins eutils
 
@@ -60,4 +60,10 @@ src_install() {
 		${D}/etc/env.d/10acroread5
 
 	inst_plugin ${INSTALLDIR}/Browsers/intellinux/nppdf.so
+}
+
+pkg_postinst () {
+
+        # fix wrong directory permissions (bug #25931)
+	find ${INSTALLDIR} -type d | xargs chmod 755 || die
 }
