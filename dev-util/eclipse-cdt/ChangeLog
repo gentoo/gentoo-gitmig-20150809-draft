@@ -1,0 +1,8 @@
+# ChangeLog for dev-util/eclipse-cdt
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/ChangeLog,v 1.1 2004/07/28 00:38:40 karltk Exp $
+
+*eclipse-cdt-2.0 (27 Jul 2004)
+
+  27 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> eclipse-cdt-2.0.ebuild:
+  Initial import. Ebuild submitted by myself. Needs a lot of work still.

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+<herd>java</herd>
+
+<longdescription>
+The CDT (C/C++ Development Tools) Project is working towards providing a fully
+functional C and C++ Integrated Development Environment (IDE) for the Eclipse
+platform. 
+
+Features:
+* C/C++ Editor (basic functionality, syntax highlighting, code completion etc.) 
+* C/C++ Debugger (APIs & Default implementation, using GDB) 
+* C/C++ Launcher (APIs & Default implementation, launches and external application) 
+* Parser
+* Search Engine
+* Content Assist Provider
+* Makefile generator
+</longdescription>
+</pkgmetadata>
