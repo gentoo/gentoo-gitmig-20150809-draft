@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/kdelibs-apidocs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.12 2003/04/11 16:33:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.13 2003/04/27 13:45:43 danarmak Exp $
+
+  24 Apr 2003; Dan Armak <danarmak@gentoo.org> kdelibs-apidocs-3.1-r1.ebuild,
+  kdelibs-apidocs-3.1.1.ebuild, kdelibs-apidocs-3.1.1a.ebuild:
+  Adapt for changes in kde eclasses: don't inherit kde.org.
 
   10 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-apidocs-3.1.1a.ebuild:
   fixed PATCHES1 var to fix bug #19079, thanks to Peter Ruskin
