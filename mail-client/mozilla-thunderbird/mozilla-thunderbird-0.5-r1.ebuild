@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.5-r1.ebuild,v 1.1 2004/05/30 19:41:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.5-r1.ebuild,v 1.2 2004/06/07 04:15:55 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -114,7 +114,7 @@ src_compile() {
 		--enable-necko-protocols=http,file,jar,viewsource,res,data \
 		--enable-image-decoders=png,gif,jpeg"
 
-	if [ -n "`use gtk2`" ] ; then
+	if use gtk2 ; then
 		myconf="${myconf} --enable-toolkit-gtk2 \
 							--enable-default-toolkit=gtk2 \
 							--disable-toolkit-gtk"
@@ -124,12 +124,12 @@ src_compile() {
 							--disable-toolkit-gtk2"
 	fi
 
-	if [ -n "`use ipv6`" ] ; then
+	if use ipv6 ; then
 		myconf="${myconf} --enable-ipv6"
 	fi
 
 	# Check for xinerama - closes #19369
-	if [ -n "`use xinerama`" ] ; then
+	if use xinerama ; then
 		myconf="${myconf} --enable-xinerama=yes"
 	else
 		myconf="${myconf} --enable-xinerama=no"
@@ -185,7 +185,7 @@ src_install() {
 	dobin ${FILESDIR}/thunderbird
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/pixmaps
 		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
