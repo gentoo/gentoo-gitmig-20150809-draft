@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.54.ebuild,v 1.3 2004/08/05 17:38:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.54.ebuild,v 1.4 2004/08/17 13:36:13 agriffis Exp $
 
 IUSE="static spell"
 
@@ -40,7 +40,7 @@ RDEPEND="virtual/x11
 	x11-libs/openmotif
 	spell? ( app-text/aspell )
 	amd64? ( app-emulation/emul-linux-x86-xlibs )
-	!amd64 ( !sparc? ( !static? ( =x11-libs/qt-3* ) ) )"
+	!amd64? ( !sparc? ( !static? ( =x11-libs/qt-3* ) ) )"
 
 #	static? (
 #		amd64? ( app-emulation/emul-linux-x86-xlibs ) )
