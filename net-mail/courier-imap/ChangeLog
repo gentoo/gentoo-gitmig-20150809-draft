@@ -1,24 +1,30 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.8 2002/06/20 21:37:38 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.9 2002/06/24 20:36:09 woodchip Exp $
 
+*courier-imap-1.5.0 (Jun 24 2002)
+
+  24 Jun 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Chase latest release.
 
 *courier-imap-1.4.5-r3 (20 Jun 2002)
+
   20 Jun 2002; Kyle Manna <nitro@gentoo.org> :
 
-    Moved maildirmake for /usr/sbin to /usr/bin, close bug #3844
+  Moved maildirmake for /usr/sbin to /usr/bin, close bug #3844
 
 *courier-imap-1.4.5-r2 (14 Jun 2002)
 
   14 Jun 2002; Kyle Manna <nitro@gentoo.org> :
 
-    Forgot to install /etc/init.d/authdaemond
+  Forgot to install /etc/init.d/authdaemond
 
 *courier-imap-1.4.5-r1 (8 Jun 2002)
 
   8 Jun 2002; Kyle Manna <nitro@gentoo.org> :
 
-    Added pop3 init scripts.
+  Added pop3 init scripts.
 
 *courier-imap-1.4.3-r1 (30 Apr 2002)
 
