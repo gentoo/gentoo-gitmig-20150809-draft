@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.0-r1.ebuild,v 1.2 2003/10/03 16:58:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.0-r1.ebuild,v 1.3 2003/10/03 17:54:50 foser Exp $
 
 inherit gnome2 eutils
 
@@ -45,6 +45,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.4-panel_size.patch
 
 	sed -i 's:--load:-v:' gnome-panel/Makefile.am
+
+	WANT_AUTOMAKE=1.4 automake || die
 
 	# FIXME : uh yeah, this is nice
 	touch gnome-panel/blah
