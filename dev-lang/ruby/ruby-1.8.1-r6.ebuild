@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r6.ebuild,v 1.4 2004/05/26 01:03:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r6.ebuild,v 1.5 2004/06/02 04:49:20 lv Exp $
 
 ONIGURUMA="onigd2_2_8"
 SNAP_DATE="20040424-1"
@@ -15,7 +15,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="x86 ppc sparc ~mips alpha arm ~hppa ~amd64 -ia64 ~s390"
+KEYWORDS="x86 ppc sparc ~mips alpha arm ~hppa amd64 -ia64 ~s390"
 IUSE="socks5 tcltk cjk"
 
 RDEPEND=">=sys-libs/glibc-2.1.3
