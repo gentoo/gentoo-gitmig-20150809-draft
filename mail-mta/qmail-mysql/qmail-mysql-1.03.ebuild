@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.3 2004/07/01 19:54:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.4 2004/07/14 16:54:24 agriffis Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~ppc ~sparc"
+IUSE=""
 
 PROVIDE="virtual/mta
 	 virtual/mda"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r2.ebuild,v 1.3 2004/07/01 19:53:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r2.ebuild,v 1.4 2004/07/14 16:51:37 agriffis Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://untroubled.org/${PN}/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 
 DEPEND="virtual/libc
 		sys-apps/groff"
@@ -96,4 +97,3 @@ pkg_postinst() {
 	einfo "ln -fs /var/nullmailer/service /service/nullmailer"
 	ewarn "Please ensure you have selected nullmailer in your /etc/mailer.conf"
 }
-
