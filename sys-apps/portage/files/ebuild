@@ -418,51 +418,6 @@ diropts() {
 	export DIROPTIONS
 }
 
-doins() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${INSDESTTREE} ]
-    then
-	install -d ${D}${INSDESTTREE}
-    fi
-    local x
-    local mysrc
-    for x in "$@"
-    do
-	if [ -L $x ]
-	then
-	    cp $x ${T}
-	    mysrc=${T}/`/usr/bin/basename ${x}`
-	elif [ -d $x ]
-	then
-	    echo "doins: warning, skipping directory ${x}"
-            continue
-        else
-	    mysrc=${x}
-	fi
-        install ${INSOPTIONS} ${mysrc} ${D}${INSDESTTREE}
-    done
-}
-
-donewins() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${INSDESTTREE} ]
-    then
-	install -d ${D}${INSDESTTREE}
-    fi
-    install -D ${INSOPTIONS} ${1} ${D}${INSDESTTREE}/${2}
-
-}
-
 exeopts() {
     EXEOPTIONS=""
     for x in $*
