@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.1 2004/03/17 03:44:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.2 2004/03/17 04:05:42 eradicator Exp $
 
 inherit eutils fixheadtails
 
@@ -24,11 +24,6 @@ src_unpack() {
 	ht_fix_file config.guess
 	sed -i 's:-O3:$(CFLAGS):' base_class/Makefile
 	sed -i 's/-fno-implicit-templates //' config/compilers/gcc_defaults.mak
-}
-
-src_compile() {
-	econf || die
-	make || die
 }
 
 src_install() {
@@ -69,7 +64,7 @@ src_install() {
 	insinto /etc/env.d
 	doins ${FILESDIR}/58speech-tools
 
-	cd ${D}/
+	cd ${D}
 
 	cd ${S}
 	dodoc README

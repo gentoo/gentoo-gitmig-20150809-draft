@@ -1,12 +1,9 @@
 # ChangeLog for app-accessibility/SphinxTrain
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.1 2004/03/17 04:10:20 eradicator Exp $
-
-*SphinxTrain-0.9.1-r1 (16 Mar 2004)
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.2 2004/03/17 04:12:27 eradicator Exp $
 
   16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  .#SphinxTrain-0.9.1-r1.ebuild.1.2, SphinxTrain-0.9.1-r1.ebuild,
-  metadata.xml, files/gcc.patch:
+  SphinxTrain-0.9.1-r1.ebuild metadata.xml, files/gcc.patch:
   Moved from media-sound/SphinxTrain to app-accessibility/SphinxTrain.
 
   16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>

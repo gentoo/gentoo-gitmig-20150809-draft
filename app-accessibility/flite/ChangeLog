@@ -1,11 +1,9 @@
 # ChangeLog for media-sound/flite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-#
-
-*flite-1.0 (16 Mar 2004)
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.2 2004/03/17 04:14:59 eradicator Exp $
 
   16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  .#flite-1.0.ebuild.1.6, flite-1.0.ebuild, metadata.xml:
+  flite-1.0.ebuild, metadata.xml:
   Moved from media-sound/flite to app-accessibility/flite.
 
   12 Jun 2003; <msterret@gentoo.org> flite-1.0.ebuild:
