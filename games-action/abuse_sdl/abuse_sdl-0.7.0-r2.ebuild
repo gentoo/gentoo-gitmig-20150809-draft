@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.2 2004/02/20 06:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.3 2004/04/19 06:08:13 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="port of Abuse by Crack Dot Com"
 HOMEPAGE="http://www.labyrinth.net.au/~trandor/abuse/"
@@ -13,11 +13,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
-DEPEND="virtual/x11
-	>=sys-apps/sed-4
+RDEPEND="virtual/x11
 	>=media-libs/libsdl-1.1.6"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
-DATA=${WORKDIR}/datafiles
+DATA="${WORKDIR}/datafiles"
 
 src_unpack() {
 	cd ${WORKDIR}
@@ -35,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf --datadir=${GAMES_DATADIR_BASE} || die
+	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
 	emake || die "emake failed"
 }
 
