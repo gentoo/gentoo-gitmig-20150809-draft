@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.10 2004/12/29 22:52:41 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.11 2005/01/13 02:21:38 gustavoz Exp $
+
+  12 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> BerkeleyDB-0.25.ebuild:
+  Stable on sparc
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

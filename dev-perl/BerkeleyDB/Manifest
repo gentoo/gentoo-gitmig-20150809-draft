@@ -1,8 +1,18 @@
-MD5 ff20e5c51edb189fa32304fecc1892b7 ChangeLog 1048
-MD5 6c96ff61503ad7025d3e2da84129e828 BerkeleyDB-0.25.ebuild 759
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b160b1c200a28344614ce64c1c67638d BerkeleyDB-0.25.ebuild 759
+MD5 64be7a873df14979cc1bc592bace188d BerkeleyDB-0.26.ebuild 724
+MD5 cfe6c472ee09efdbda739ad7467cf145 ChangeLog 1146
 MD5 3cf9a8e9b6c21daabc284cd62c32740e metadata.xml 419
-MD5 ede68f0f45815551cbd9cc76bac8a382 BerkeleyDB-0.26.ebuild 723
-MD5 7463cf48040ddb011b8d843ee0749c17 files/Gentoo-config.diff 592
-MD5 75d51d96614dc7634de3c7e19a943554 files/digest-BerkeleyDB-0.26 67
-MD5 d0108ca1b395d686172109e68c2ea99a files/digest-BerkeleyDB-0.25 67
 MD5 7087d023559a2843c354a731a21c2ddf files/Gentoo-config-0.26.diff 568
+MD5 7463cf48040ddb011b8d843ee0749c17 files/Gentoo-config.diff 592
+MD5 d0108ca1b395d686172109e68c2ea99a files/digest-BerkeleyDB-0.25 67
+MD5 75d51d96614dc7634de3c7e19a943554 files/digest-BerkeleyDB-0.26 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5ds5KRy60XGEcJIRAoFWAJ9j4BQ/lUxVaSC6sxt8H/+DVFBEzACeJ2IN
+wfVkJyLf/3od6od7tL5iQTw=
+=rF5Y
+-----END PGP SIGNATURE-----
