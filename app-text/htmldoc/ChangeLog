@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmldoc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.13 2003/09/25 17:55:40 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.14 2004/03/05 14:59:20 gustavoz Exp $
+
+  05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> htmldoc-1.8.23.ebuild:
+  stable on sparc
 
   26 Sep 2003; Martin Holzer <mholzer@gentoo.org> htmldoc-1.8.23.ebuild:
   Now used useflags for config. Closes #29576.
