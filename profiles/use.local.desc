@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.856 2005/01/11 21:11:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.857 2005/01/12 03:52:51 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -200,7 +200,6 @@ dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-libs/qsa:examples - build the examples that come with qsa
 dev-libs/qsa:ide - enable the qsa ide
 dev-libs/qsa:threads	- enable thread support
-dev-libs/uclibc:xattr - enables extended attributes
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
 dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
@@ -750,6 +749,7 @@ sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc e
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/libsepol:mls - Add experimental multi level security policy support
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
+sys-libs/uclibc:xattr - enables extended attributes
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
 www-client/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
