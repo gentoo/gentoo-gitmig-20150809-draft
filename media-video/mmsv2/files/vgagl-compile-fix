@@ -1,0 +1,28 @@
+--- orig/vgaglout.cpp
++++ mod/vgaglout.cpp
+@@ -81,7 +81,7 @@
+ 
+   if (mode < 1)
+   {
+-    std::cerr << gettexct("Can't find any valid VGAGL mode for ") << screen_width << 'x' << screen_height << std::endl;
++    std::cerr << gettext("Can't find any valid VGAGL mode for ") << screen_width << 'x' << screen_height << std::endl;
+     deinit();
+     return;
+   }
+@@ -229,10 +229,6 @@
+ 
+ void VGAGLdev::redraw()
+ {
+-  Render *render = Render::get_instance();
+-
+-  render->set_context_to_buffer(render->cur_image);
+-
+   vga_lockvc();
+   if (vga_oktowrite())
+ #ifdef resize_image
+@@ -245,5 +241,4 @@
+ #endif
+ #endif
+   vga_unlockvc();
+-
+ }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.ebuild,v 1.1 2005/01/24 01:58:53 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.ebuild,v 1.2 2005/03/01 22:19:19 arj Exp $
 
 inherit eutils
 
@@ -36,6 +36,8 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 
 	cd ${S}
+
+	epatch ${FILESDIR}/vgagl-compile-fix
 }
 
 src_compile() {
