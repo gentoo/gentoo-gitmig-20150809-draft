@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/popfile
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popfile/ChangeLog,v 1.1 2003/12/25 20:09:22 stuart Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popfile/ChangeLog,v 1.2 2004/03/17 19:07:20 stuart Exp $
+
+  17 Mar 2004; Stuart Herbert <stuart@gentoo.org> popfile-0.21.1.ebuild:
+  Added missing HTML-Tagset dependency, and tightended up security permissions.
+  Fixes for bugs #44394 and #44397
 
 *popfile-0.21.1 (25 Dec 2003)
 

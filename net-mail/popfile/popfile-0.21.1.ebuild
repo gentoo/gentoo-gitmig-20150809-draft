@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popfile/popfile-0.21.1.ebuild,v 1.1 2003/12/25 20:09:22 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popfile/popfile-0.21.1.ebuild,v 1.2 2004/03/17 19:07:20 stuart Exp $
 
 DESCRIPTION="Anti-spam filter"
 HOMEPAGE="http://foo.bar.com/"
@@ -12,7 +12,8 @@ IUSE=""
 DEPEND=">=dev-lang/perl-5.8
 	    >=dev-perl/BerkeleyDB-0.25
 		dev-perl/Text-Kakasi
-		dev-perl/MIME-Base64"
+		dev-perl/MIME-Base64
+		dev-perl/HTML-Tagset"
 
 #RDEPEND=""
 
@@ -27,6 +28,8 @@ src_install() {
 	# yes, this is crude, but it's a start
 
 	dodir /usr/share/popfile
+	find . -type f -print | xargs chmod 600
+	find . -type d -print | xargs chmod 700
 	tar -cf - * | ( cd ${D}/usr/share/popfile && tar -xf - )
 
 	fperms 0755 usr/share/popfile/popfile.pl
