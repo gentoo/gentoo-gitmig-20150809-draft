@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.12 2004/03/06 14:41:24 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.13 2004/04/27 17:44:20 pvdabeel Exp $
 
 NPV=20010309
 S=${WORKDIR}/pwm-${NPV}
@@ -9,7 +9,7 @@ SRC_URI="http://modeemi.cs.tut.fi/~tuomov/dl/pwm-${NPV}.tar.gz"
 HOMEPAGE="http://www.students.tut.fi/~tuomov/pwm"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 IUSE="gnome"
 
 DEPEND="virtual/x11"

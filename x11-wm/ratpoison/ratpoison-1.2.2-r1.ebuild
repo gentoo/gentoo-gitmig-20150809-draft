@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.2.2-r1.ebuild,v 1.2 2004/04/26 15:07:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.2.2-r1.ebuild,v 1.3 2004/04/27 17:45:45 pvdabeel Exp $
 
 DESCRIPTION="Ratpoison is an extremely light-weight and barebones wm modelled after screen."
 HOMEPAGE="http://ratpoison.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 
 DEPEND="virtual/x11"
 
