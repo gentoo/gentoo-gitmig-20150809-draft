@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.3-r4.ebuild,v 1.3 2005/02/17 20:42:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.3-r4.ebuild,v 1.4 2005/02/25 22:15:11 ciaranm Exp $
 
 inherit vim
 
@@ -21,4 +21,7 @@ IUSE="${IUSE} nls"
 PROVIDE="virtual/editor"
 DEPEND="${DEPEND}
 	~app-editors/vim-core-${PV}"
-RDEPEND="${RDEPEND} !app-editors/nvi"
+RDEPEND="${RDEPEND}
+	~app-editors/vim-core-${PV}
+	!app-editors/nvi"
+
