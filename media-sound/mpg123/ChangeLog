@@ -1,6 +1,20 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.17 2003/09/18 12:17:48 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.18 2003/09/30 07:42:52 seemant Exp $
+
+*mpg123-0.59s-r1 (30 Sep 2003)
+
+  30 Sep 2003; Seemant Kulleen <seemant@gentoo.org> mpg123-0.59r-r1.ebuild,
+  mpg123-0.59r-r3.ebuild, mpg123-0.59s-r1.ebuild,
+  files/mpg123-0.59r-alpha.diff, files/mpg123-0.59r-amd64.diff,
+  files/mpg123-0.59r-hppa.diff, files/mpg123-0.59r-make-fix.diff,
+  files/mpg123-0.59r-sparc.diff, files/mpg123-0.59s-security.diff:
+  Bug 26787 alerts to a local/remote exploit in mpg123-0.59s. In the process of
+  fixing this bug with patches available at:
+  http://archives.neohapsis.com/archives/bugtraq/2003-01/0117.html a potential
+  security fix in 0.59r was also fixed. Additionally, the patches for 0.59r now
+  reside in their own tarball on the mirrors, instead of cluttering up the files
+  subdirectory.
 
   18 Sep 2003; Todd Sunderlin <todd@gentoo.org> mpg123-0.59s.ebuild:
   Marked unstable for sparc
