@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/libspt
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspt/ChangeLog,v 1.1 2004/05/18 22:39:09 usata Exp $
+
+*libspt-1.1 (19 May 2004)
+
+  19 May 2004; Mamoru KOMACHI <usata@gentoo.org> libspt-1.1.ebuild:
+  Initial import.
+
