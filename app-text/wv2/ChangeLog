@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.10 2003/11/05 18:27:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.11 2003/11/16 17:46:13 brad_mssw Exp $
+
+*wv2-0.2 (16 Nov 2003)
+
+  16 Nov 2003; Brad House <brad_mssw@gentoo.org> wv2-0.2.ebuild:
+  mark stable on amd64
 
   05 Nov 2003; Caleb Tennis <caleb@gentoo.org> wv2-0.0.7.ebuild, wv2-0.0.8.ebuild,
   wv2-0.1.8.ebuild, wv2-0.1.ebuild:
