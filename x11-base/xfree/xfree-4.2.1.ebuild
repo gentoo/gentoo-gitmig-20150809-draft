@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.15 2002/10/14 19:49:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.16 2002/10/20 07:00:25 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -14,7 +14,7 @@ filter-flags "-funroll-loops"
 # combinations (protecting the user maybe from himeself) yet.
 #
 # This can clearly be seen in large builds like glibc, where too aggressive
-# CFLAGS cause the test to fail miserbly.
+# CFLAGS cause the tests to fail miserbly.
 #
 # Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
 # knows what he is talking about:
@@ -80,7 +80,7 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -480,6 +480,13 @@ pkg_postinst() {
 
 		einfo "Generating encodings..."
 		rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/fonts.{cache-1,dir,scale}
+		# Create the encodings.dir in /usr/X11R6/lib/X11/fonts/encodings
+		cd ${ROOT}/usr/X11R6/lib/X11/fonts/encodings
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+		${ROOT}/usr/X11R6/bin/mkfontdir -n \
+			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings \
+			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large
+		# Now create encodings.dir for the fonts
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			if [ "${x}" != "${ROOT}/usr/X11R6/lib/X11/fonts/encodings" ]
@@ -487,7 +494,8 @@ pkg_postinst() {
 				cd ${x}
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 				${ROOT}/usr/X11R6/bin/mkfontdir -n \
-					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings
+					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings \
+					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large
 			fi
 		done
 
