@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.3.ebuild,v 1.10 2004/04/12 22:02:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.3.ebuild,v 1.11 2004/05/14 01:34:58 geoman Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ DEPEND="virtual/python
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64 ppc64 ia64 ~mips"
+KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64 ppc64 ia64 mips"
 LICENSE="PYTHON"
 S=${WORKDIR}/${MY_P}
 
