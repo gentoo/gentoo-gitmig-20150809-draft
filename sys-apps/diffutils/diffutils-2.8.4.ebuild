@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4.ebuild,v 1.2 2002/09/25 15:15:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4.ebuild,v 1.3 2002/09/29 12:00:39 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools to make diffs and compare files"
@@ -35,7 +35,7 @@ src_compile() {
 	local myconf=""
 	[ -z "`use nls`" ] && myconf="--disable-nls"
 	
-	econf --datadir=${D}/usr/share --build=${CHOST} \
+	econf --build=${CHOST} \
 		${myconf} || die
 		
 	emake || die
@@ -43,6 +43,7 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr \
+		datadir=${D}/usr/share \
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
 		install || die
