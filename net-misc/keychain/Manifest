@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 98374788f185bbae499766843025f3c9 ChangeLog 3734
-MD5 b430691338f1714e7106333cfa99426f keychain-2.3.2.ebuild 764
+MD5 d8bf3eebb05714e4e38f5403689b688b keychain-2.2.2.ebuild 729
+MD5 90a7e742da7b3aff2fac5354daf43647 keychain-2.3.0.ebuild 729
+MD5 4a1fbf7567a2595dff6c4ab8e7f6a09e keychain-2.3.2.ebuild 758
+MD5 2f46c2f1fda0fdad6c5eee30f543bea7 ChangeLog 3726
 MD5 ec488c2827fab65ef67f47709c1c7de0 metadata.xml 253
-MD5 195d9fee33f5f12efe1406336e8e8e84 keychain-2.2.2.ebuild 738
-MD5 8c57c0e692ad1eb303429c79496d8e88 keychain-2.3.0.ebuild 738
-MD5 4655e4860cc168919d0504fb5beb4eac files/digest-keychain-2.3.2 66
 MD5 6faab688061bee4e50aae758fd9b537d files/digest-keychain-2.2.2 66
 MD5 60bad96f7626fef7b620afe969a375f5 files/digest-keychain-2.3.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA04VeHTu7gpaalycRAti4AJ4qfzxk0Bgp6cQjmqi1qy124TVdlACeM+3n
-jrZoZuDuyvFVYOyAAw1345M=
-=O4E9
------END PGP SIGNATURE-----
+MD5 4655e4860cc168919d0504fb5beb4eac files/digest-keychain-2.3.2 66

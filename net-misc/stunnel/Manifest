@@ -1,36 +1,26 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 62c7b90e85999a9c2b9d339b2cd473df ChangeLog 3642
-MD5 86eea6bc8f56e00074177c23bc9ddbfa stunnel-3.22-r2.ebuild 920
-MD5 56b1435200867f376c16f045cf081886 stunnel-3.26.ebuild 775
-MD5 46d08a84d32d31324508bc29a7f2da55 stunnel-4.04-r1.ebuild 1700
-MD5 abf2690f0d68c9d31321a3b9b508e3e0 stunnel-4.04-r2.ebuild 1770
-MD5 dc3d110d847ba43de37a1b5a9ec2445f stunnel-4.04-r3.ebuild 1761
+MD5 1a57fd7ab68d400930176591d985dc15 stunnel-4.04-r2.ebuild 1761
+MD5 ef7a46e81df1459fd0669498bf855eeb stunnel-3.22-r2.ebuild 911
+MD5 198735cae4add6628a6dd79aa0102bf1 stunnel-3.26.ebuild 766
+MD5 6b0e4f9178e38223a3a74e9e9272cc55 stunnel-4.05.ebuild 1699
+MD5 902de7ec1dac6cbd302430c196db2f41 stunnel-4.04-r1.ebuild 1691
+MD5 4e0542e57661ce764bca6ade6e738957 stunnel-4.04-r3.ebuild 1755
+MD5 0c638f35470e572d6aeae08af6f28663 ChangeLog 3636
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
-MD5 588f942c44f621f70916528fb0eb35b7 stunnel-4.05.ebuild 1705
+MD5 9177dd12df6261a5bde7e8756c0f1585 files/stunnel-3.22-blinding.patch 3756
+MD5 3a379f44f65498303a6e40d2507c5d69 files/stunnel.rc6 540
 MD5 bf10c9036f0ff4b8578c46b89538aed7 files/digest-stunnel-3.22-r2 64
-MD5 ea2086dcf69dddf6d075a7040d209335 files/digest-stunnel-3.26 64
+MD5 4f954fd61770afc292c04b81b6bf421a files/stunnel.rc6.4.04-r2 567
+MD5 c9f531a5e0d6f9cf2dda41d0d934842f files/stunnel.rc6.4.04-r3 604
+MD5 021f1b3d5a07aa11f572d4fa8a50b4f1 files/stunnel.conf.4.04-r2 721
+MD5 2f553bbcab5ab83a6e45e3ddd73f9944 files/stunnel.conf.4.04-r3 725
+MD5 6cdf521ff4c96a48e8863635b78fa596 files/stunnel-4.04-blinding.patch 2526
 MD5 dfc2feba647c5fb39db0bd98e769fb7e files/digest-stunnel-4.04-r1 64
 MD5 dfc2feba647c5fb39db0bd98e769fb7e files/digest-stunnel-4.04-r2 64
-MD5 9177dd12df6261a5bde7e8756c0f1585 files/stunnel-3.22-blinding.patch 3756
-MD5 60507279a2c9abbec2037b9e5a0840f7 files/stunnel-3.22-gentoo.diff 1170
-MD5 b42ca1fbeb5d6454de36aac4cb893294 files/stunnel-3.26-gentoo.diff 941
-MD5 6cdf521ff4c96a48e8863635b78fa596 files/stunnel-4.04-blinding.patch 2526
-MD5 2afb1fc42f8ea8f7b54d47a79f80e33a files/stunnel-4.04-gentoo.diff 321
-MD5 4839b059fba14c4f7f2acb50888aadac files/stunnel.conf 720
-MD5 021f1b3d5a07aa11f572d4fa8a50b4f1 files/stunnel.conf.4.04-r2 721
-MD5 de0ef08d91f0d3b050792c3b20394625 files/stunnel.rc6 541
-MD5 1b63ee5eed62e328acae738d1306b224 files/stunnel.rc6.4.04-r2 568
 MD5 dfc2feba647c5fb39db0bd98e769fb7e files/digest-stunnel-4.04-r3 64
-MD5 2f553bbcab5ab83a6e45e3ddd73f9944 files/stunnel.conf.4.04-r3 725
-MD5 f0bc7b1f2fbe0f8e9fe15b05b8add06d files/stunnel.rc6.4.04-r3 605
+MD5 ea2086dcf69dddf6d075a7040d209335 files/digest-stunnel-3.26 64
 MD5 c0fb8fc4f6d919edc9d76e0f423873eb files/digest-stunnel-4.05 64
+MD5 2afb1fc42f8ea8f7b54d47a79f80e33a files/stunnel-4.04-gentoo.diff 321
+MD5 b42ca1fbeb5d6454de36aac4cb893294 files/stunnel-3.26-gentoo.diff 941
+MD5 60507279a2c9abbec2037b9e5a0840f7 files/stunnel-3.22-gentoo.diff 1170
 MD5 2afb1fc42f8ea8f7b54d47a79f80e33a files/stunnel-4.05-gentoo.diff 321
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA09lfHTu7gpaalycRAkqxAJ40sTT3qHn9EI7HIYC90FQv4UIC3ACg1A4W
-5sgWLvVVXd7HLVFvnJBgE8o=
-=5qqK
------END PGP SIGNATURE-----
+MD5 4839b059fba14c4f7f2acb50888aadac files/stunnel.conf 720

@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 be370b5ca41aa33516d5ffd195c5c3d9 ChangeLog 7301
-MD5 4e22b7b0c7b8a312af968e94fc71e137 rsync-2.6.0-r1.ebuild 2435
-MD5 2b4231199efd5dc8f43008d49ab84680 rsync-2.6.0.ebuild 2262
-MD5 0f6471942961ced021588dac78273ac3 rsync-2.6.2-r1.ebuild 2060
-MD5 f444a8aab35c011e327bbef5dc8af423 rsync-2.6.2.ebuild 2146
-MD5 4274d0c059d7e425d8d0d1e9c6d7003b rsync-2.6.2-r2.ebuild 1968
-MD5 1f004a8a92bdfeca518fe7f57abbfc09 rsync-2.6.2-r3.ebuild 1997
-MD5 006e3a74eac31df7cb94aff567979d3f rsync-2.6.1.ebuild 1941
-MD5 d12329ba4505253f35b46e3446aaaebc files/digest-rsync-2.6.2 63
-MD5 4d441bf205926e27dd5a2f535c6a970c files/rsyncd.conf 413
-MD5 c5f7ff7f88f35b5f20b080b75cf801ce files/rsyncd.conf.d 356
-MD5 3ff6f8bc2cf6a0c67a94d80eaaa721c3 files/rsyncd.init.d 424
+MD5 f4f1aca86569535ec1b8cfae87bba6d7 rsync-2.6.2-r1.ebuild 2053
+MD5 21589a5628fb605c2cd7bf377258f741 rsync-2.6.0.ebuild 2252
+MD5 1a66fe9e646cd408e0fae4ee1c1a20d0 rsync-2.6.2-r3.ebuild 1989
+MD5 0ba7e84e5c641f14215e347941d010c0 rsync-2.6.2.ebuild 2140
+MD5 796351056f7dbfd2ec76759c3baf92f7 rsync-2.6.0-r1.ebuild 2428
+MD5 1a83d43313e7b5a4f3d0d2812242f752 rsync-2.6.2-r2.ebuild 1960
+MD5 66b35c38625366eb70d6cdbf9d9a3422 ChangeLog 7295
+MD5 81e8dcd1da92cc48f20ca4683f78314d rsync-2.6.1.ebuild 1935
+MD5 26ea2e2954b62709533eff01daab3d49 files/rsyncd.conf.d 355
+MD5 2da827d9c73bcfea40599ffe68f62b23 files/rsyncd.init.d 423
 MD5 2b5cd2c75632c28fb6d8a311e8548fa9 files/digest-rsync-2.6.0 136
+MD5 1b3c307f2cb9db6757a7b7a4aa8f345a files/digest-rsync-2.6.1 131
+MD5 d12329ba4505253f35b46e3446aaaebc files/digest-rsync-2.6.2 63
+MD5 9a7360370cdd4ef5aca784f9ea0973c2 files/rsyncd.conf 412
 MD5 e04533ca371c57d742250cc0622c005e files/digest-rsync-2.6.0-r1 204
 MD5 23ad40bb15faf7e2d3846ffb6d6eaee9 files/digest-rsync-2.6.2-r1 131
 MD5 23ad40bb15faf7e2d3846ffb6d6eaee9 files/digest-rsync-2.6.2-r2 131
 MD5 23ad40bb15faf7e2d3846ffb6d6eaee9 files/digest-rsync-2.6.2-r3 131
-MD5 1b3c307f2cb9db6757a7b7a4aa8f345a files/digest-rsync-2.6.1 131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA2NoLHTu7gpaalycRAlzRAKCdxz/m54OpslDuvRqtZNjSTiLYRACfRsCk
-MqdBueCuljTvfUX/F/ycLw4=
-=x9I7
------END PGP SIGNATURE-----

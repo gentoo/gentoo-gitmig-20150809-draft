@@ -1,16 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b2fbb71e3a1741cd3af8b7e23a440cc ChangeLog 5106
+MD5 9a8b80c2e781d16a881169b349908c11 neon-0.24.4.ebuild 946
+MD5 498198a9640e2b4968dae0d233ce710e neon-0.23.8.ebuild 774
+MD5 c98e191591e3f89968dc5f73f810a8f6 neon-0.24.6.ebuild 875
+MD5 439547a82610ff7f5ad68f5d0d186a99 neon-0.24.5.ebuild 934
+MD5 8a1ab96f148c00eb30226aab74a6a67d neon-0.24.0.ebuild 773
+MD5 aa49768557ba083494f8ea4d60f57c88 neon-0.21.3.ebuild 751
+MD5 5f784c9d4f0dbadbb3d2d42f7cc4d77c ChangeLog 5098
+MD5 9f8cc6a219ce2281ad843c8f1e7b5fce neon-0.23.9.ebuild 775
 MD5 2ae7200538068877dd6268e6a69a3c67 metadata.xml 635
-MD5 54ac22e6288caba92c73458df7b9a86a neon-0.21.3.ebuild 760
-MD5 8728a326c17358debc3071b3358028b9 neon-0.23.8.ebuild 783
-MD5 95635e33ee1b3a0fd9e24fb99b9d8ea6 neon-0.23.9.ebuild 784
-MD5 eec9097c35c5d41c31fc1c09bc0636e3 neon-0.24.0.ebuild 782
-MD5 ddf68c725af651f102bc700a433c9d2d neon-0.24.2.ebuild 782
-MD5 df8fe5ee06be8459e2766bfd55a955fd neon-0.24.4.ebuild 955
-MD5 672f8e3b677e51da7dd292ae524c68b3 neon-0.24.5.ebuild 941
-MD5 d14ff887dce99bd0f48b6cdb6d400829 neon-0.24.6.ebuild 882
+MD5 35d8ec39e427dffcca765c52e7b4022b neon-0.24.2.ebuild 773
 MD5 5a576942b2663898889c1239a5bec804 files/digest-neon-0.21.3 63
 MD5 e6994eafdacea2341c0b293f12a27e4c files/digest-neon-0.23.8 63
 MD5 9ea45811212cea8423e1fd38812675ed files/digest-neon-0.23.9 63
@@ -19,10 +16,3 @@ MD5 78a022284df1908c3c24448427111e6a files/digest-neon-0.24.2 63
 MD5 84942fd6f6fe937bf09d9649e6e14436 files/digest-neon-0.24.4 63
 MD5 97d9fa5100efbc5b63dbea48f7d36cf6 files/digest-neon-0.24.5 63
 MD5 1ff50f00a4a8371de1c523076d9fe45e files/digest-neon-0.24.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvldXHTu7gpaalycRAoa+AKDZgUuSnz7CUxtuCNVfn/pVe/+C9wCeOLtA
-rcbhBx5BpZaESz2JrELdSqA=
-=hshN
------END PGP SIGNATURE-----
