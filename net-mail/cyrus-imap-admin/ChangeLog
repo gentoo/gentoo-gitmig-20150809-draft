@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.30 2004/11/01 18:02:24 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.31 2004/11/23 23:48:32 langthang Exp $
+
+*cyrus-imap-admin-2.2.10 (23 Nov 2004)
+
+  23 Nov 2004; Tuan Van <langthang@gentoo.org>
+  +files/cyrus-imap-admin-2.2.10-fPIC.patch,
+  +cyrus-imap-admin-2.2.10.ebuild:
+  Version bump WRT #72194.
 
   01 Nov 2004; Tuan Van <langthang@gentoo.org> -files/2.1.14-db4.patch,
   -files/cyrus-imap-admin-2.1.12-libwrap.patch,
