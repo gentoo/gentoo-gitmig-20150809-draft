@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.4.1.ebuild,v 1.1 2005/03/19 00:08:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.4.1.ebuild,v 1.2 2005/03/19 04:08:00 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="a little puzzle game, similar to the famous Bejeweled or Zookeeper"
 HOMEPAGE="http://sam.zoy.org/projects/monsterz/"
-SRC_URI="http://sam.zoy.org/projects/monsterz/monsterz-0.4.1.tar.gz"
+SRC_URI="http://sam.zoy.org/projects/monsterz/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
@@ -14,6 +14,13 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-python/pygame"
+
+pkg_setup() {
+	if ! built_with_use media-libs/sdl-mixer mikmod ; then
+		die "${PN} requires that media-libs/sdl-mixer be built with USE=mikmod"
+	fi
+	games_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
@@ -27,7 +34,7 @@ src_unpack() {
 
 src_install() {
 	local dir=${GAMES_DATADIR}/${PN}
-	insinto ${dir}
+	insinto "${dir}"
 	doins *.wav *.s3m *.png || die "doins failed"
 	newgamesbin monsterz.py ${PN} || die "dobin failed"
 	dodir "${GAMES_STATEDIR}"
