@@ -4,7 +4,7 @@ MD5 2e1e561c91a1731a7e23e24c6b038dd5 gnumeric-1.2.13.ebuild 1961
 MD5 61d64e37e874d9bc6ae37673432e374c gnumeric-1.2.2.ebuild 1663
 MD5 546032c448fee580a876b6c02f6dc931 ChangeLog 9709
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 a7534e2d133adce0859c4174d8965532 gnumeric-1.0.13-r1.ebuild 2879
+MD5 3a1dab39ec097ff625edf1e92a12c52a gnumeric-1.0.13-r1.ebuild 2868
 MD5 3b0b9ef38a3445a52df579b1aff3e7b1 files/gnumeric-1.2.1-fix_doc_destdir_install.patch 532
 MD5 48c7f38d541d59ac1a888121072bc6df files/digest-gnumeric-1.2.12 70
 MD5 34982e496dcc5110bba611652645d400 files/digest-gnumeric-1.2.13 70
