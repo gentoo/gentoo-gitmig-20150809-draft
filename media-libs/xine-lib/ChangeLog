@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.41 2003/02/28 01:57:47 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.42 2003/03/07 23:01:10 agenkin Exp $
 
 *xine-lib-1_beta6 (25 Feb 2003)
+
+  07 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed installation problem for portage >=2.0.47.
 
   27 Feb 2003; Mark Guertin <gerk@gentoo.org> xine-lib-1_beta6.ebuild :
   set ~ppc in keywords
@@ -11,6 +14,9 @@
   Version bump to 1-beta6.
 
 *xine-lib-1_beta5-r1 (22 Feb 2003)
+
+  07 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed installation problem for portage >=2.0.47.
 
   22 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump to 1-beta5.
@@ -22,6 +28,9 @@
   <oscar10@yifan.net> bug #16112).
 
 *xine-lib-1_beta4 (28 Jan 2003)
+
+  07 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed installation problem for portage >=2.0.47.
 
   13 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Removed dependency on kdelibs (bug 15595).
@@ -39,6 +48,9 @@
   	
 *xine-lib-1_beta2 (02 Jan 2003)
 
+  07 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed installation problem for portage >=2.0.47.
+
   08 Jan 2003; Nick Hadaway <raker@gentoo.org> xine-lib-1_beta2.ebuild :
   Marked stable.
 
@@ -51,6 +63,9 @@
 
 *xine-lib-1_beta1 (24 Dec 2002)
 
+  07 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed installation problem for portage >=2.0.47.
+
   25 Dec 2002; Nick Hadaway <raker@gentoo.org> xine-lib-1_beta1.ebuild :
   Removed {C.CXX}FLAGS as configure sets very specific optimization
   settings already and this should solve problems such as those found
@@ -61,10 +76,16 @@
 
 *xine-lib-1_beta0 (28 Nov 2002)
 
+  07 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed installation problem for portage >=2.0.47.
+
   28 Nov 2002; Arcady Genkin <agenkin@gentoo.org> xine-lib-1_beta0.ebuild :
   Version bump.
 	
 *xine-lib-1_alpha2 (28 Nov 2002)
+
+  07 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed installation problem for portage >=2.0.47.
 
   28 Nov 2002; Arcady Genkin <agenkin@gentoo.org> xine-lib-1_alpha2.ebuild :
   Update to version 1-alpha2.
