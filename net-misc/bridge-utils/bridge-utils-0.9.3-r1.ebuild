@@ -1,7 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.3.ebuild,v 1.1 2001/12/05 20:31:32 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.3-r1.ebuild,v 1.1 2002/05/04 04:11:14 woodchip Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -12,14 +11,14 @@ S=${WORKDIR}/${PN}
 SRC_URI="http://bridge.sourceforge.net/bridge-utils/${P}.tar.gz"
 
 DEPEND="virtual/glibc"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_compile() {
-
 	make CFLAGS="${CFLAGS}" || die "compile problem"
 }
 
 src_install () {
-
 	dosbin brctl/brctl
 	doman doc/brctl.8
 

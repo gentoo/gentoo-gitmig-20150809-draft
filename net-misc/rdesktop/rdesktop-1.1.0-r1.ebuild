@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Jo Ryden <jo@our-own.net>
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.1.0.ebuild,v 1.1 2002/02/09 01:23:01 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.1.0-r1.ebuild,v 1.1 2002/05/04 04:11:14 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Remote Desktop Protocol Client"
@@ -10,6 +9,8 @@ SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://rdesktop.sourceforge.net/"
 
 DEPEND="x11-base/xfree ssl? ( >=dev-libs/openssl-0.9.6b )"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_compile() {
 	local myconf

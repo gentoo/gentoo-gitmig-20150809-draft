@@ -1,7 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.6.ebuild,v 1.1 2001/11/28 03:48:15 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.6-r1.ebuild,v 1.1 2002/05/04 04:11:14 woodchip Exp $
 
 DESCRIPTION="Client/Server system to control the Internet link of a masquerading server"
 HOMEPAGE="http://linecontrol.sourceforge.net"
@@ -12,16 +11,16 @@ SRC_URI="http://prdownloads.sourceforge.net/linecontrol/${PN}-${PV}.src.tar.bz2"
 
 DEPEND="virtual/glibc pam? ( >=sys-libs/pam-0.75 )"
 RDEPEND="virtual/glibc net-www/apache"
+LICENSE="GPL-2"
+SLOT="0"
 
-[ -z "$HTTPD_ROOT" ] && HTTPD_ROOT=/usr/local/httpd
+[ -z "$HTTPD_ROOT" ] && HTTPD_ROOT=/home/httpd
 
 src_unpack() {
-
 	unpack ${PN}-${PV}.src.tar.bz2
 }
 
 src_compile() {
-
 	local myconf
 	use pam || myconf="--disable-pamauth"
 
@@ -35,7 +34,6 @@ src_compile() {
 }
 
 src_install() {
-
 	dodir /usr/share/linesrv /var/log/linesrv ${HTTPD_ROOT}/htdocs/lclog
 
 	dosbin server/linesrv
