@@ -1,6 +1,9 @@
 # ChangeLog for games-board/knights
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.5 2004/06/24 22:19:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.6 2004/08/07 15:22:32 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> knights-0.6.ebuild:
+  Marked ~amd64; resolving 59658.
 
   06 Dec 2003; Jason Wever <weeve@gentoo.org> knights-0.6.ebuild:
   Marked stable on sparc.
