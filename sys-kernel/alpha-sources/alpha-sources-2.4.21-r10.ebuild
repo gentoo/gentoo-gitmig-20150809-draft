@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r9.ebuild,v 1.2 2004/07/15 03:45:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r10.ebuild,v 1.1 2004/08/04 20:51:14 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -16,14 +16,15 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Linux Alpha kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	mirror://gentoo/patches-${KV/9/3}.tar.bz2"
+	mirror://gentoo/patches-${KV/10/3}.tar.bz2
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 SLOT="${KV}"
 KEYWORDS="alpha -sparc -x86 -ppc -hppa -mips"
 
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-	cd ${WORKDIR}/${KV/9/1}
+	cd ${WORKDIR}/${KV/10/1}
 
 	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
 	if ! use crypt; then
@@ -67,6 +68,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch || die "Failed to add the CAN-2004-0415 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
