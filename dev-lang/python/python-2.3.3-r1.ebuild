@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.20 2004/08/15 05:59:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.21 2004/09/06 19:39:31 ciaranm Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -203,9 +203,5 @@ pkg_postinst() {
 	ewarn "Portage-2.0.49-r8 and below will continue to use python-2.2.x, so"
 	ewarn "think twice about uninstalling it, otherwise your system will break."
 	ewarn
-	echo -ne "\a"; sleep 1
-	echo -ne "\a"; sleep 1
-	echo -ne "\a"; sleep 1
-	echo -ne "\a"; sleep 1
-	echo -ne "\a"; sleep 1
+	ebeep 5
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r1.ebuild,v 1.6 2004/08/28 06:20:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r1.ebuild,v 1.7 2004/09/06 19:43:49 ciaranm Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -42,7 +42,7 @@ pkg_setup() {
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		ewarn ""
-		sleep 10
+		epause 10
 	else
 		ewarn ""
 		ewarn "PLEASE NOTE: If you want to compile perl-5.8 with"
