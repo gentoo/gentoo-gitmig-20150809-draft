@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r4.ebuild,v 1.11 2004/12/06 05:44:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r4.ebuild,v 1.12 2004/12/06 21:09:12 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-info-dir.patch
 	epatch ${FILESDIR}/${PV}-mkstemp.patch
+	chmod 755 configure #73575
 	WANT_AUTOCONF=2.1 autoconf || die "autoconf failed"
 }
 
