@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6111-r1.ebuild,v 1.1 2004/09/20 20:28:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6111-r1.ebuild,v 1.2 2004/09/21 00:09:17 azarah Exp $
 
 inherit eutils kmod
 
@@ -71,8 +71,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/power-suspend-2.6.9-changes.patch
 	# Update pci stuff to work with irqroutes being changed in kernels
 	epatch ${FILESDIR}/${PV}/nv_enable_pci.patch
-	(is_kernel 2 5 || is_kernel 2 6) && \
-		epatch ${FILESDIR}/${PV}/nv-pci_find_class.patch
+	if is_kernel 2 6 && [ "${KV_PATCH}" -ge 9 ]
+	then
+		grep -c 'pci_get_class' "${KERNEL_DIR}/include/linux/pci.h" >/dev/null && \
+			epatch ${FILESDIR}/${PV}/nv-pci_find_class.patch
+	fi
 
 	# if you set this then it's your own fault when stuff breaks :)
 	[ ! -z "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile.*

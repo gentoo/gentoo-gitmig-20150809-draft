@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.89 2004/09/20 20:28:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.90 2004/09/21 00:09:17 azarah Exp $
+
+  21 Sep 2004; Martin Schlemmer <azarah@gentoo.org>
+  nvidia-kernel-1.0.6111-r1.ebuild:
+  Ok, so we need a 2.6.9 or later kernel for nv-pci_find_class.patch. Reported
+  by Markus Layr <tuxian@yahoo.de>.
 
 *nvidia-kernel-1.0.6111-r1 (20 Sep 2004)
 
