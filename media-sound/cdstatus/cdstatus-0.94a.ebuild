@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.8 2004/07/08 08:39:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.9 2004/09/29 03:21:43 tgall Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cdstatus/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #-sparc -amd64: 0.94a: Generates bad wav files  x86 is good...
-KEYWORDS="x86 -amd64 -sparc"
+KEYWORDS="x86 -amd64 -sparc ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"

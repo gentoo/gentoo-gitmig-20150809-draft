@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdstatus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.6 2004/07/08 08:39:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.7 2004/09/29 03:21:43 tgall Exp $
+
+  28 Sep 2004; Tom Gall <tgall@gentoo.org> cdstatus-0.94a.ebuild:
+  added ~ppc64, bug #64239
 
   08 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cdstatus-0.94a.ebuild:
