@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.3 2004/05/12 02:28:48 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.4 2004/06/03 13:33:36 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Software for generating and retrieving SNMP data."
+DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa ~alpha ~ia64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~hppa ~amd64 ~ia64 s390"
 IUSE="perl ipv6 ssl tcpd X"
 
 PROVIDE="virtual/snmp"
@@ -50,7 +49,7 @@ src_compile() {
 
 	emake -j1 || die "compile problem"
 
-	if [ "`use perl`" ] ; then
+	if use perl ; then
 		emake perlmodules || die "compile perl modules problem"
 	fi
 }
@@ -58,9 +57,9 @@ src_compile() {
 src_install () {
 	einstall exec_prefix="${D}/usr" persistentdir="${D}/var/lib/net-snmp"
 
-	if [ "`use perl`" ] ; then
+	if use perl ; then
 		make DESTDIR="${D}" perlinstall || die "make perlinstall failed"
-		if [ ! "`use X`" ] ; then
+		if ! use X ; then
 			rm -f "${D}/usr/bin/tkmib"
 		fi
 	else
