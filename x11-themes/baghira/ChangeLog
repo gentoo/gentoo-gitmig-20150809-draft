@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.17 2004/10/07 15:40:11 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.18 2004/11/03 19:54:53 kloeri Exp $
+
+  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> baghira-0.5h-r1.ebuild:
+  ~alpha keyword.
 
 *baghira-0.5h-r1 (07 Oct 2004)
 
