@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.17.ebuild,v 1.10 2004/05/23 13:36:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.17.ebuild,v 1.11 2004/06/06 21:48:19 agriffis Exp $
 
 inherit eutils
 #to accomodate -laadeedah releases
@@ -47,8 +47,8 @@ pkg_setup() {
 	warning
 
 	# MySQL on mips cannot link to berkdb due to issues.
-	if [ "`use mips`" ]; then
-		if [ "`use berkdb`" ]; then
+	if use mips; then
+		if use berkdb; then
 			echo -e ""
 			eerror "You cannot link MySQL into berkeley db on mips.  Please remove the \"berkdb\""
 			eerror "flag from your USE settings and try again."
