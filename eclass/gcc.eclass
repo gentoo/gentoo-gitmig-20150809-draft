@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.12 2003/02/28 09:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.13 2003/06/25 19:22:00 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -123,7 +123,7 @@ gcc-libstdcxx-major-version() {
 # fixes.
 #
 # Export CFLAGS and CXXFLAGS that are compadible with gcc-2.95.3
-gcc2_flags() {
+gcc2-flags() {
 	CFLAGS=${CFLAGS//pentium-mmx/i586}
 	CFLAGS=${CFLAGS//pentium[234]/i686}
 	CFLAGS=${CFLAGS//k6-[23]/k6}
