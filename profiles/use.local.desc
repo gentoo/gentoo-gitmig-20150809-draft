@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.978 2005/03/01 21:22:01 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.979 2005/03/02 10:08:55 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -213,6 +213,13 @@ dev-util/catalyst:ccache - Enables ccache support
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/global:vim - vim funny stuff for global
+dev-util/kdevelop:ada - Enable support for the ada programming language
+dev-util/kdevelop:clearcase - Enable support for the clearcase version control system
+dev-util/kdevelop:haskell - Enable support for the haskell programming language
+dev-util/kdevelop:pascal - Enable support for the pascal programming language
+dev-util/kdevelop:perforce - Enable support for the perforce version control system
+dev-util/kdevelop:sql - Enable support for the sql language
+dev-util/kdevelop:subversion - Enable support for the subversion version control system
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
