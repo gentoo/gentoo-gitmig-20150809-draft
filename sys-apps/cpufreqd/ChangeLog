@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.16 2005/01/29 11:41:13 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.17 2005/03/02 21:08:04 brix Exp $
+
+  02 Mar 2005; Henrik Brix Andersen <brix@gentoo.org> cpufreqd-1.2.2.ebuild:
+  Stable on x86.
 
 *cpufreqd-1.2.2 (29 Jan 2005)
 
