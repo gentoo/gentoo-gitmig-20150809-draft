@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.98 2004/04/14 18:09:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.99 2004/04/27 08:45:51 aliz Exp $
 
   14 Apr 2004; Jason Wever <weeve@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on sparc wrt bug #46242.
@@ -10,6 +10,8 @@
 
   14 Apr 2004; Michael McCabe <randy@gentoo.org> mysql-4.0.18-r1.ebuild:
   Marking as stable on s390
+
+*mysql-4.0.18-r1 (13 Apr 2004)
 
   13 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.18-r1.ebuild,
   files/mysql-4.0.18-mysqlbugsecurity.diff:
