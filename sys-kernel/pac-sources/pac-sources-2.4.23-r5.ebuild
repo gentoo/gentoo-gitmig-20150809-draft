@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r4.ebuild,v 1.2 2004/04/15 10:03:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r5.ebuild,v 1.1 2004/04/17 12:02:54 plasmaroo Exp $
 
 IUSE="build"
 
@@ -57,10 +57,12 @@ src_unpack() {
 	fi
 
 	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-pac patch failed"
-	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
-	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 	epatch ${FILESDIR}/${PN}.munmap.patch || die "Failed to apply munmap patch!"
 	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
-
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 	kernel_universal_unpack
 }

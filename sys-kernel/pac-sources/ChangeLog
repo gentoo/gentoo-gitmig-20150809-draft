@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/pac-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/ChangeLog,v 1.5 2004/04/15 09:33:16 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/ChangeLog,v 1.6 2004/04/17 12:02:54 plasmaroo Exp $
+
+*pac-sources-2.4.23-r5 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org> +files/pac-sources.CAN-2004-0010.patch,
+  +files/pac-sources.CAN-2004-0177.patch,
+  +files/pac-sources.CAN-2004-0178.patch, -pac-sources-2.4.23-r4.ebuild,
+  +pac-sources-2.4.23-r5.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities. Old revision removed.
 
 *pac-sources-2.4.23-r4 (15 Apr 2004)
 
