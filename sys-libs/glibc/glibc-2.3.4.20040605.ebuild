@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.2 2004/06/05 17:26:49 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.3 2004/06/05 21:31:16 kumba Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -97,8 +97,10 @@ setup_flags() {
 
 			# Setup the CHOST properly to insure "sparcv9"
 			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
-			[ "${CHOST}" == "sparc-unknown-linux-gnu" ] && \
+			if [ "${CHOST}" = "sparc-unknown-linux-gnu" ]; then
 				export CHOST="sparcv9-unknown-linux-gnu"
+				export CCHOST="sparcv9-unknown-linux-gnu"
+			fi
 		fi
 	fi
 

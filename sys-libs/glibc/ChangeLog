@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.174 2004/06/05 17:16:30 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.175 2004/06/05 21:31:16 kumba Exp $
+
+  05 Jun 2004; Joshua Kinard <kumba@gentoo.org> glibc-2.3.4.20040605.ebuild:
+  for sparc64 systems, export CCHOST as well as CHOST so glibc configures itself
+  properly.
 
 *glibc-2.3.4.20040605 (05 Jun 2004)
 
