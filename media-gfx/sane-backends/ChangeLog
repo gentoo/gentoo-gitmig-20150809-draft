@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.5 2002/06/22 08:40:51 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.6 2002/06/24 12:05:49 seemant Exp $
+
+*sane-backends-1.0.8-r1 (24 Jun 2002)
+
+  24 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  sane-backends-1.0.8-r1.ebuild files/digest-sane-backends-1.0.8-r1 :
+
+  Made src_install() install the /etc/env.d file instead of pkg_postinst()
+  so that unmerge will remove it as well. Fix suggested by arcady@gentoo.org
 
 *sane-backends-1.0.8 (22 Jun 2002)
 
