@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-pydev-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/ChangeLog,v 1.1 2004/12/16 14:32:52 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/ChangeLog,v 1.2 2004/12/16 16:15:40 swegener Exp $
+
+  16 Dec 2004; Sven Wegener <swegener@gentoo.org>
+  eclipse-pydev-bin-0.8.0.ebuild:
+  Added missing digest. src_unpack is not needed if S is set correctly.
 
 *eclipse-pydev-bin-0.8.0 (16 Dec 2004)
 

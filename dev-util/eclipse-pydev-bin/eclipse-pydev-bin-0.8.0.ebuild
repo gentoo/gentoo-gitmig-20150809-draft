@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/eclipse-pydev-bin-0.8.0.ebuild,v 1.1 2004/12/16 14:32:52 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/eclipse-pydev-bin-0.8.0.ebuild,v 1.2 2004/12/16 16:15:40 swegener Exp $
 
 inherit eclipse-ext
 
@@ -16,12 +16,7 @@ IUSE=""
 DEPEND=">=dev-util/eclipse-sdk-3.0
 	dev-lang/python"
 
-src_unpack() {
-	mkdir ${S}
-	cd ${S}
-	unpack ${A}
-}
-
+S=${WORKDIR}
 
 src_compile() {
 	einfo "${P} is a binary package"
