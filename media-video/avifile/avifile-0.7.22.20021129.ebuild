@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.22.20021129.ebuild,v 1.3 2002/12/14 01:25:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.22.20021129.ebuild,v 1.4 2002/12/27 20:26:46 azarah Exp $
 
 IUSE="nas avi sdl kde oggvorbis 3dnow qt"
 
 inherit libtool
 
-MY_P=${P/.200/-200}
-MY_S=${PN}0.7-0.7.22
-S=${WORKDIR}/${MY_S}
+MY_P="${P/.200/-200}"
+MY_S="${PN}0.7-0.7.22"
+S="${WORKDIR}/${MY_S}"
 
 DESCRIPTION="Library for AVI-Files"
 SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz"
@@ -64,10 +64,10 @@ src_compile() {
 	# safe by itself.
 	unset CFLAGS CXXFLAGS LDFLAGS
 
-        # Make sure we include freetype2 headers before freetype1 headers, else Xft2
-        # borks, bug #11941.
-        export C_INCLUDE_PATH="${C_INCLUDE_PATH}:/usr/include/freetype2"
-        export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/usr/include/freetype2"
+	# Make sure we include freetype2 headers before freetype1 headers, else Xft2
+	# borks, bug #11941.
+	export C_INCLUDE_PATH="${C_INCLUDE_PATH}:/usr/include/freetype2"
+	export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/usr/include/freetype2"
 
 	# Fix qt detection
 	cp configure configure.orig
@@ -77,6 +77,7 @@ src_compile() {
 	econf \
 		--enable-quiet \
 		--disable-tsc \
+		--with-fpic \
 		${myconf} || die
 		
 	make || die
@@ -95,3 +96,4 @@ src_install () {
 	dodoc CREDITS EXCEPTIONS FreeBSD LICENSING TODO
 	dodoc VIDEO-PERFORMANCE WARNINGS
 }
+
