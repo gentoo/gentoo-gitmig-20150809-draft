@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p-r1.ebuild,v 1.2 2005/02/19 01:55:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p-r1.ebuild,v 1.3 2005/02/21 15:37:03 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -42,7 +42,7 @@ src_unpack() {
 		epatch ${WORKDIR}/util-linux-${OLD_CRYPT_VER}-cryptoapi-losetup.patch
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	# crypto support
 	! use old-crypt && \
@@ -114,6 +114,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die "install failed"
+	dosym ../man8/agetty.8 /usr/share/man/man1/getty.1
 	dosbin partx/{addpart,delpart,partx} || die "dosbin"
 	use perl || rm -f "${D}"/usr/bin/chkdupexe
 
