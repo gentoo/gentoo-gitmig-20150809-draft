@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.9 2002/08/14 12:12:12 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.10 2002/09/23 19:59:21 vapier Exp $
 
 
 # Its officially called nat10 but the name conflicts with other projects
@@ -10,12 +10,12 @@ MY_P=nat10
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="NetBIOS file sharing services scanner (nat10)"
 SRC_URI="http://www.tux.org/pub/security/secnet/tools/nat10/${MY_P}.tgz"
-HOMEPAGE="http://www.tux.org/pub/security/secnet/tools/nat10"
+HOMEPAGE="http://www.tux.org/pub/security/secnet/tools/nat10/"
 
 DEPEND=""
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
