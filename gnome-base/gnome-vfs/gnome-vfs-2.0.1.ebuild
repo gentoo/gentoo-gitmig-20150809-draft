@@ -19,7 +19,8 @@ RDEPEND="=dev-libs/glib-2.0*
 	>=gnome-base/libbonobo-2.0.0
 	>=gnome-base/bonobo-activation-1.0.2
 	>=sys-devel/gettext-0.10.40
-	>=dev-libs/openssl-0.9.5"
+	>=dev-libs/openssl-0.9.5
+	>=sys-apps/bzip2-1.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.17

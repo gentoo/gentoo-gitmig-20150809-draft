@@ -1,13 +1,18 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.18 2002/07/23 21:40:09 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.19 2002/07/24 05:26:03 spider Exp $
 
 *gnome-vfs-2.0.1 (21 Jun 2002)
   23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
+  25 Jul 2002; Spider <spider@gentoo.org> :
+  updated with a bzip2 dependency that was unmatched
+  
   21 Jun 2002; Spider <spider@gentoo.org> gnome-vfs-2.0.1.ebuild :
   version update, some dep updates
+
+  
 
 gnome-vfs-2.0.0-r1 (17 Jun 2002)
   17 Jun 2002; Spider <spider@gentoo.org> gnome-vfs-2.0.0-r1.ebuild :
