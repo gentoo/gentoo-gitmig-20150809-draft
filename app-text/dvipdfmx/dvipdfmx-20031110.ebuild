@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031110.ebuild,v 1.7 2004/04/25 15:13:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031110.ebuild,v 1.8 2004/06/18 17:16:29 usata Exp $
 
 inherit eutils
 
@@ -14,13 +14,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha sparc"
 
-DEPEND="app-text/ptex
-	!app-text/tetex
-	!app-text/cstetex
-	>=sys-apps/sed-4
+RDEPEND="virtual/tetex
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.6i"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
