@@ -1,4 +1,6 @@
+MD5 c71a61204444711fa0a8865199ca0d66 dccserver-0.4.ebuild 606
 MD5 0f05261d3c6e72b84fd98493058fe5d5 dccserver-0.3.ebuild 605
 MD5 899d4034688bf589943cdba007dd8c85 ChangeLog 516
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 d1498ac6e19cf127c0e6e9deb1ab07d2 files/digest-dccserver-0.3 65
+MD5 da02dbdf2d0cd4d2d7bceb04b6be5399 files/digest-dccserver-0.4 65

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/dccserver
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dccserver/ChangeLog,v 1.2 2003/11/21 20:22:00 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dccserver/ChangeLog,v 1.3 2003/11/21 20:25:25 zul Exp $
+
+  21 Nov 2003; Chuck Short <zul@gentoo.org> :
+  Updated SRC_URI, new release.
 
   21 Nov 2003; Chuck Short <zul@gentoo.org> dccserver-0.3.ebuild:
   Marked stable for x86.
