@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.4.11.ebuild,v 1.9 2004/06/24 22:31:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.4.11.ebuild,v 1.10 2004/08/21 17:09:35 spider Exp $
 
 inherit debug eutils
 
@@ -19,10 +19,10 @@ IUSE=""
 #    >=perl-5.6.1-r1
 DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*
-		>=gnome-base/ORBit-0.5.7
-		>=gnome-base/gnome-libs-1.4.0
-		<gnome-base/gnome-panel-2
-		>=dev-libs/libxml-1.8.16 "
+	=gnome-base/orbit-0*
+	>=gnome-base/gnome-libs-1.4.0
+	<gnome-base/gnome-panel-2
+	>=dev-libs/libxml-1.8.16 "
 # the tabulated section is only needed if Gnome is in USE, but their disable-gnome doesn't work for now.
 
 src_unpack() {
