@@ -6,7 +6,7 @@ MD5 7f79997b892a81c315b94cdc0bb97b5b libidn-0.3.7.ebuild 635
 MD5 1434b83540cb524dc9220a5956a41d83 libidn-0.5.0.ebuild 634
 MD5 56b951b69a34ad386e95371bca71ea85 libidn-0.5.4.ebuild 647
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 6732405fb8526afed05e96506f99f09f libidn-0.5.7.ebuild 599
+MD5 2bcede8f198a5e633fc5a1fb2e8fff54 libidn-0.5.7.ebuild 611
 MD5 71c9d73948b2aae62f1f91b02a24904c files/digest-libidn-0.3.7 65
 MD5 fc807c568d7d15366e98afb3b5d04911 files/digest-libidn-0.5.0 65
 MD5 34af7cf0c0c059728bc3b2870298d456 files/digest-libidn-0.5.4 65
@@ -14,7 +14,7 @@ MD5 9735250b9caf3517e94e86f3f18ef8cd files/digest-libidn-0.5.7 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBcWjkHTu7gpaalycRAphhAKCNjsCGHFkJ1uLpsWGdQ5AmXxGCAwCggz5T
-OG5//Akz9247/fPYMXz1LKE=
-=HGR7
+iD8DBQFBdSHEHTu7gpaalycRAmwsAKCcG+I9FrHrZWPGfWM4TXFLqHWm8wCg4wPj
+yObtQoAuLPoaWqQhLu3byEE=
+=foPb
 -----END PGP SIGNATURE-----
