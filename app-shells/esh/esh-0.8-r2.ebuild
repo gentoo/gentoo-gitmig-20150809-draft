@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8-r2.ebuild,v 1.10 2002/10/04 05:02:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8-r2.ebuild,v 1.11 2002/12/09 04:17:43 manson Exp $
 
 S=${WORKDIR}/esh
 DESCRIPTION="A UNIX Shell with a simplified Scheme syntax"
 SRC_URI="http://esh.netpedia.net/${P}.tar.gz"
 HOMEPAGE="http://esh.netpedia.net/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="GPL-2"
 

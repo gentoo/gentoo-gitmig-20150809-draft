@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r3.ebuild,v 1.1 2002/11/15 16:05:16 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r3.ebuild,v 1.2 2002/12/09 04:17:43 manson Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ LICENSE="ZSH"
 
 DEPEND=">=sys-libs/ncurses-5.1"
 
-KEYWORDS="x86 alpha ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 alpha ~ppc ~sparc "
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r3.ebuild,v 1.13 2002/10/17 14:31:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r3.ebuild,v 1.14 2002/12/09 04:17:43 manson Exp $
 
 IUSE="readline static"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.canb.auug.org.au/~dbell/ http://dimavb.st.simbirsk.su/vlk/"
 SLOT="0"
 LICENSE="freedist"
 
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 	unpack ${P}.tar.gz

@@ -1,7 +1,10 @@
 # ChangeLog for app-shells/esh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.4 2002/07/29 02:44:03 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.5 2002/12/09 04:17:43 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *esh-0.8.5 (26 Apr 2002)
 
   28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> esh-0.8.5.ebuild :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/lard-2.0.14.ebuild,v 1.4 2002/11/28 01:45:37 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/lard-2.0.14.ebuild,v 1.5 2002/12/09 04:17:43 manson Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/lard/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ~ppc ~sparc "
 
 DEPEND="sys-devel/flex
 	dev-lang/tcl

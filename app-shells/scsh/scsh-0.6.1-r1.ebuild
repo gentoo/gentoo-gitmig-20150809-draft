@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.9 2002/10/20 18:40:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.10 2002/12/09 04:17:43 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scsh is a Unix shell embedded in Scheme"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.scsh.net/"
 
 SLOT="0"
 LICENSE="as-is | BSD | GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc"
 

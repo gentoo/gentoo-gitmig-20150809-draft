@@ -1,7 +1,10 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.8 2002/11/29 03:34:13 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.9 2002/12/09 04:17:43 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *xdrawchem-1.6 (28 Nov 2002)
 
   27 Nov 2002; George Shapovalov <george@gentoo.org> xdrawchem-1.6.ebuild, files/digest-xdrawchem-1.6 :
