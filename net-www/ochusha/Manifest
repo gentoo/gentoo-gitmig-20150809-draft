@@ -6,9 +6,13 @@ MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 b1babce4cdb2b8d5856aed1a5eabed39 ochusha-0.4.7.1.ebuild 977
 MD5 c66d05fd2d287522373f4a74b69ed609 ochusha-0.4.8.1.ebuild 855
 MD5 74768209bc236bf45bc999ba43baa36d ochusha-0.4.8.2.ebuild 855
+MD5 8356194cc510d8c951335de1faebda9d ochusha-0.4.9.6.ebuild 855
+MD5 4b7f81c420af0e41deb094cebee71a7e ochusha-0.4.9.4.ebuild 855
 MD5 8d1ac90b46e82a4ad2b179f27e545d6d files/digest-ochusha-0.4.9.1 69
 MD5 9c50cbdf0a3223d766b4f2e76fa3217c files/digest-ochusha-0.4.9.3 69
 MD5 1c7a0792d3ff67ab1d2fb8b3cc6edfcf files/digest-ochusha-0.4.8.2 69
 MD5 82cf235da38d4010ea50fc2feba3a907 files/digest-ochusha-0.4.7.1 69
 MD5 01ba7682e40f9f9661455313334ceab2 files/digest-ochusha-0.4.9 67
 MD5 4dc24aba5a7ccda3a096e9af18567129 files/digest-ochusha-0.4.8.1 69
+MD5 d6fc200dc39273d20a7bc71d5a64a3be files/digest-ochusha-0.4.9.4 69
+MD5 f83f5278276b241cc8325b4ff6bdb53e files/digest-ochusha-0.4.9.6 69
