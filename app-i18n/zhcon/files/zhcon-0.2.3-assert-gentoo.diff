@@ -1,0 +1,33 @@
+diff -urN zhcon-0.2.3.GENTOO/src/inputclient.h zhcon-0.2.3/src/inputclient.h
+--- zhcon-0.2.3.GENTOO/src/inputclient.h	2002-05-12 12:58:28.000000000 +0900
++++ zhcon-0.2.3/src/inputclient.h	2004-03-14 17:50:44.581216200 +0900
+@@ -20,6 +20,7 @@
+ #define INPUTCLIENT_H
+ 
+ #include <string>
++#include <assert.h>
+ #include "console.h"
+ 
+ /**
+diff -urN zhcon-0.2.3.GENTOO/src/mouse.cpp zhcon-0.2.3/src/mouse.cpp
+--- zhcon-0.2.3.GENTOO/src/mouse.cpp	2002-05-27 11:51:02.000000000 +0900
++++ zhcon-0.2.3/src/mouse.cpp	2004-03-14 17:51:21.927538696 +0900
+@@ -19,6 +19,7 @@
+ #include "debug.h"
+ #include "mouse.h"
+ #include <sys/signal.h>
++#include <assert.h>
+ 
+ #if defined(__FreeBSD__)
+ Mouse* Mouse::pMouse = NULL;
+diff -urN zhcon-0.2.3.GENTOO/src/zhcon.cpp zhcon-0.2.3/src/zhcon.cpp
+--- zhcon-0.2.3.GENTOO/src/zhcon.cpp	2003-04-21 22:42:31.000000000 +0900
++++ zhcon-0.2.3/src/zhcon.cpp	2004-03-14 17:50:15.836586048 +0900
+@@ -47,6 +47,7 @@
+ #include <stdexcept>
+ #include <algorithm>
+ #include <locale.h>
++#include <assert.h>
+ 
+ #include "global.h"
+ #include "console.h"

@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/zhcon
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.1 2004/03/14 11:27:41 usata Exp $
+
+*zhcon-0.2.3 (14 Mar 2004)
+
+  14 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> zhcon-0.2.3.ebuild,
+  files/zhcon-0.2.3-assert-gentoo.diff, files/zhcon-0.2.3-gentoo.diff:
+  Initial import. Ebuild submitted by Ray Tsang <rayt@9pnet.com>,
+  closing bug #33746
+
