@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.1 2003/06/24 14:20:03 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.2 2003/06/24 15:10:10 kosmikus Exp $
 
 DESCRIPTION="a make tool for Haskell programs"
 
@@ -25,23 +25,6 @@ RDEPEND="readline?    ( sys-libs/readline )
 			sys-libs/readline )"
 
 SRC_URI="http://www.cs.york.ac.uk/ftpdir/pub/haskell/hmake/${P}.tar.gz"
-
-src_unpack() {
-	base_src_unpack
-
-	cd ${S}
-
-	# fix echo bug when using readline
-	pushd src/interpreter
-	mv SimpleLineEditor.hs SimpleLineEditor.hs.orig
-	cat SimpleLineEditor.hs.orig \
-		| sed 's/^.*system.*stty.*$/#ifndef USE_READLINE\n&\n#endif/' \
-		> SimpleLineEditor.hs
-	popd
-		
-	# patch cpp parser
-	patch -p0 < ${FILESDIR}/patch-3.08-cpp
-}
 
 src_compile() {
 	local buildwith
