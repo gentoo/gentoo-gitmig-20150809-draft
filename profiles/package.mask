@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2698 2004/02/14 15:38:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2699 2004/02/14 18:06:03 spyderous Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -119,10 +119,12 @@ net-im/msn4lin
 # prerelease version, but first that support signing
 >=dev-util/tla-20040113
 
+# <spyderous@gentoo.org> (14 Feb 2004)
+# change from -r5 to -r6 -- -r5 was another security release (sigh)
 # <spyderous@gentoo.org> (12 Feb 2004)
 # change from -r4 to -r5 -- -r4 was security release
 # <battousai@gentoo.org> (13 Jan 2004)
-# needs testing and xfree-4.3.0-r5 release first
+# needs testing and xfree-4.3.0-r6 release first
 >=media-video/ati-gatos-4.3
 
 # <mkennedy@gentoo.org> (12 Jan 2004)
