@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.1 2004/05/12 00:55:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.2 2004/05/12 15:27:04 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 # partly based on the deps suggested by Mandrake's RPM, and/or on my current versions
 # Also, definely needs coda.h from linux-headers.
