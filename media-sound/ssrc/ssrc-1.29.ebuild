@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ssrc/ssrc-1.29.ebuild,v 1.6 2004/07/19 22:37:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ssrc/ssrc-1.29.ebuild,v 1.7 2004/11/03 06:48:07 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="x86 -amd64 -sparc"
 IUSE=""
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
+DEPEND="app-arch/unzip"
 
 src_compile() {
 	append-flags -lm
