@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r8.ebuild,v 1.1 2002/04/12 23:21:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r8.ebuild,v 1.2 2002/04/13 04:25:01 azarah Exp $
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 
@@ -13,14 +13,14 @@ SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/
 	 http://www.ibiblio.org/gentoo/distfiles/teTeX-french.tar.gz"
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 
-DEPEND="media-libs/libpng
-	sys-apps/ed
+DEPEND="sys-apps/ed
+	>=media-libs/libpng-1.2.1
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )
 	X? ( virtual/x11 )"
 
 RDEPEND="X? ( virtual/x11 )
 	>=sys-devel/perl-5.2
-	media-libs/libpng
+	>=media-libs/libpng-1.2.1
 	dev-util/dialog"
 	
 
