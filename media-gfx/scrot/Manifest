@@ -1,4 +1,15 @@
-MD5 bcfa02e3db3ab5bed2a553a8c21ea509 ChangeLog 1544
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 d0ae27a835be4362bc5ee2d341a0f8b9 scrot-0.8.ebuild 583
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43e8e2c78a2038af1e8d48602cbebd8c scrot-0.8.ebuild 874
+MD5 705bceec2c45ee0621d6aec35d96159b ChangeLog 1734
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 b3873efbdcaeb0d52ab7ffd1ecbf5071 files/scrot.bash-completion 1063
 MD5 f7254c66a5852d7a6e48a39da63d5fe3 files/digest-scrot-0.8 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQ2VxEZCkKN40op4RApnGAJ4s1tNs66t1iLimoa52FojB/FYmvwCgm5id
+h5r9dhntwHIZdjthQJQUbgk=
+=w356
+-----END PGP SIGNATURE-----

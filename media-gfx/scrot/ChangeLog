@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.11 2004/07/31 01:37:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.12 2004/09/11 20:51:07 ka0ttic Exp $
+
+  11 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  scrot-0.8.ebuild:
+  Fixed LICENSE declaration, updated metadata info, and added a bash-completion
+  script (please test).
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> scrot-0.8.ebuild:
   stable on ppc64, bug #57034
