@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.14 2003/04/29 00:39:57 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.15 2003/05/21 15:44:04 taviso Exp $
+
+  21 May 2003; Tavis Ormandy <taviso@gentoo.org> libnet-1.1.0-r1.ebuild:
+  arking stable on alpha.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 

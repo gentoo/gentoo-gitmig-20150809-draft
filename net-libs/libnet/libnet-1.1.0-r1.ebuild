@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0-r1.ebuild,v 1.5 2003/04/23 00:12:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0-r1.ebuild,v 1.6 2003/05/21 15:44:04 taviso Exp $
 
 S=${WORKDIR}/Libnet-latest
 DESCRIPTION="library to provide an API for commonly used low-level network
@@ -13,7 +13,7 @@ DEPEND="=sys-apps/sed-4*"
 
 SLOT="1.1"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ~alpha"
+KEYWORDS="x86 alpha"
 
 src_compile(){
 	econf \
