@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.13.8.0.ebuild,v 1.3 2003/11/18 16:23:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.13.8.0.ebuild,v 1.4 2004/02/20 07:38:17 mr_bones_ Exp $
 
 inherit games
 
