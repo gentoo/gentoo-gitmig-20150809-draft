@@ -65,6 +65,8 @@ Hanterm*VT100*color12: #9999FF
 Hanterm*VT100*color13: #FF99FF
 Hanterm*VT100*color14: #99FFFF
 Hanterm*VT100*color15: #FFFFFF
+
+Hanterm*VT100*colorBD: yellow
 !!!!! Gentoo Linux Setting ----------------------------------------------------
 
 Hanterm*SimpleMenu*BackingStore: NotUseful
