@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.8.ebuild,v 1.1 2004/07/29 10:30:53 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.8.ebuild,v 1.2 2004/07/29 12:35:02 nakano Exp $
 
 inherit eutils
 
@@ -21,13 +21,13 @@ DEPEND="${DEPEND}
 	x11-libs/pango
 	>=x11-libs/gtk+-2*
 	dev-util/pkgconfig
-	migemo? ( || ( app-text/cmigemo app-text/migemo ) )
+	migemo? ( app-text/migemo dev-ruby/uconv )
 	estraier? ( app-text/estraier )"
 
 RDEPEND="net-www/mozilla
 	x11-libs/pango
 	>=x11-libs/gtk+-2*
-	migemo? ( || ( app-text/cmigemo app-text/migemo ) dev-ruby/uconv )
+	migemo? ( app-text/migemo dev-ruby/uconv )
 	estraier? ( app-text/estraier )"
 
 pkg_setup(){
