@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dog
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.10 2005/02/11 05:36:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.11 2005/03/28 20:01:38 ciaranm Exp $
+
+  28 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> metadata.xml:
+  Move from base-system to shell-tools
 
   11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
   +files/1.7-manpage-touchup.patch, dog-1.7.ebuild:

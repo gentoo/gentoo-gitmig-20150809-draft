@@ -1,5 +1,15 @@
-MD5 bc86344e5a69cddf5f2b2e42cbf5e3d3 ChangeLog 1215
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75f2e62e2a2b30bf8d191575b2e7c7b4 ChangeLog 1322
 MD5 8a5838fdfc978d8897bc8fd905a6d243 dog-1.7.ebuild 694
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d3467d0ce8367b6b549f383382437b24 files/digest-dog-1.7 58
+MD5 e2d614fd87eac1a4402def83a459af86 metadata.xml 164
 MD5 39566b62f641a9ca7555f7bbea2878d9 files/1.7-manpage-touchup.patch 498
+MD5 d3467d0ce8367b6b549f383382437b24 files/digest-dog-1.7 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSGKHLLFUmVNQ7rkRAkb9AJ0UVEnKiWzGLuJRpjDYVT4TAqMFHgCgu+mq
+NPIb9Y/y2pZFIoZabUZO//s=
+=qvJV
+-----END PGP SIGNATURE-----
