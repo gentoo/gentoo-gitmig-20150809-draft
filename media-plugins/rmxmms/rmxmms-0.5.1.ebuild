@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.8 2003/09/11 01:19:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.9 2003/09/16 19:57:18 mholzer Exp $
 
 IUSE=""
 
@@ -22,9 +22,9 @@ DEPEND="media-sound/xmms
 
 pkg_setup() {
 	if [ "`gcc-major-version`" -eq "3" ]; then
-		eerror "This plugin will not work when compiled with gcc-3.x"
-		eerror "Either install and select a gcc-2.95.x compiler with"
-		eerror  "gcc-config, or give up."
+		ewarn "This plugin will not work when compiled with gcc-3.x"
+		ewarn "Either install and select a gcc-2.95.x compiler with"
+		ewarn  "gcc-config, or give up."
 		die "Doesn't work with gcc-3.xx"
 	fi
 }

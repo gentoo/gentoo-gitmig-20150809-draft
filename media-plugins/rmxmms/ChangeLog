@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/rmxmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/ChangeLog,v 1.7 2003/07/04 07:49:34 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/ChangeLog,v 1.8 2003/09/16 19:57:17 mholzer Exp $
+
+  16 Sep 2003; Martin Holzer <mholzer@gentoo.org> rmxmms-0.5.1.ebuild:
+  eerror -> ewarn. Closes #28792.
 
   04 Jul 2003; jje <jje@gentoo.org> rmxmms-0.5.1.ebuild:
   Fixed test for gcc-3.
