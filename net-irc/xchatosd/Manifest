@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8bb7c5cd82642700f132fa51f2f0b272 xchatosd-5.12.ebuild 1076
-MD5 60b08f410c0cf347b33a510346b53c90 ChangeLog 836
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 d3e2a06152f8a2d1f7c2e5dd855459bb xchatosd-5.12.ebuild 1085
+MD5 d17f5cf174afb5bb7239c89ce777b6a6 ChangeLog 939
 MD5 81c1e430042db312cd8ebfcde85c3a25 files/digest-xchatosd-5.12 63
 MD5 aa8f7d8a41446470ada6599787802bd1 files/5.12-return-values.patch 1486
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsj3wI1lqEGTUzyQRAj2nAJ4jX6ifyNplCOOTbiVzgQGQsYgy/wCgqWlr
-sbq7mXgzyijGcHT0mbFGfsY=
-=Rews
+iD8DBQFBskWlArHZZzCEUG0RAqYZAJ4tA2hi3DdzBm53E5feryKT5CJT9QCfV8V9
+HV6DaJz4IVZQdds3OKjcAIM=
+=2sXH
 -----END PGP SIGNATURE-----
