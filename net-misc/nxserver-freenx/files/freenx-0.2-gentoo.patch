@@ -1,0 +1,25 @@
+--- nxserver.orig	2004-09-07 19:47:02.567669824 +0100
++++ nxserver	2004-09-07 19:47:17.755360944 +0100
+@@ -334,11 +334,6 @@
+ # Start!
+ log "-- NX SERVER START: $@"
+ 
+-if [ $# -gt 1 ]
+-then
+-	exit 0
+-fi
+-
+ echo_x "HELLO NXSERVER - Version $NX_VERSION $NX_LICENSE"
+ 
+ # Login stage
+--- nxserver.orig	2004-09-07 20:23:19.257762632 +0100
++++ nxserver	2004-09-07 20:23:31.000977392 +0100
+@@ -116,7 +116,7 @@
+ 	cp -f $NX_ETC_DIR/passwords $NX_ETC_DIR/passwords.orig
+ 	echo "$PASSDB_CHUSER:*" >> $NX_ETC_DIR/passwords
+ 	# deactivated to avoid problems with comm-server
+-	su - $PASSDB_CHUSER -c "$NX_DIR/nxnode --setkey"
++	su - $PASSDB_CHUSER -c "$NX_DIR/bin/nxnode --setkey"
+ }
+ 
+ passdb_list_user()
