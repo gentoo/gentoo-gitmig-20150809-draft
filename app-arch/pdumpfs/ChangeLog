@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/pdumpfs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/ChangeLog,v 1.7 2004/06/01 22:56:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/ChangeLog,v 1.8 2004/06/05 21:14:29 usata Exp $
+
+*pdumpfs-0.9 (06 Jun 2004)
+
+  06 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +pdumpfs-0.9.ebuild:
+  Version bumped.
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> pdumpfs-0.6.ebuild,
   pdumpfs-0.8.ebuild:
