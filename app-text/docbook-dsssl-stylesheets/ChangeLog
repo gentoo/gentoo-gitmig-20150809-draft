@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.6 2002/12/31 04:36:55 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.7 2003/02/08 03:04:48 satai Exp $
+
+*docbook-dsssl-stylesheets-1.77-r2 (07 Feb 2002)
+
+  07 Feb 2002; Matthew Turk <satai@gentoo.org> :
+  Bumped revision to link from not-quite-standard location to our location.
+  This should fix libgcrypt's compilation problem, and bug 15026.
 
 *docbook-dsssl-stylesheets-1.77-r1 (30 Dec 2002)
 
