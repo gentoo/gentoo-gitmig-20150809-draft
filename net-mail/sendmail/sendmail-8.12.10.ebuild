@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.10.ebuild,v 1.5 2004/02/12 05:05:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.10.ebuild,v 1.6 2004/02/12 15:19:06 vapier Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -18,7 +18,7 @@ DEPEND="!amd64? ( net-dns/hesiod )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.10 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
-	ldap? ( net-nds/openldap )"
+	ldap? ( net-nds/openldap )
 	|| (
 		gdbm? ( sys-libs/gdbm )
 		berkdb? ( >=sys-libs/db-3.2 )
