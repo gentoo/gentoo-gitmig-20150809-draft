@@ -1,9 +1,8 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.7 2002/12/09 04:42:03 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.8 2002/12/13 11:01:05 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   21 Oct 2002; Maik Schreiber <blizzy@gentoo.org> oroborus-2.0.7.ebuild:
   Changed KEYWORDS back to "x86" as it seems the package mask has been

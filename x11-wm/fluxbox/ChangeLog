@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.48 2002/12/10 19:02:31 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.49 2002/12/13 11:01:05 blizzy Exp $
 
 *fluxbox-0.1.14-r1 (10 Dec 2002)
 
@@ -23,8 +23,7 @@
 
   Changed from ~sparc to sparc, (tested + bug 11846)
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *fluxbox-0.1.13-r6 (07 Dec 2002)
 
