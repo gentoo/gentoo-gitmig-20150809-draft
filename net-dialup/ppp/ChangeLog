@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.23 2003/05/23 05:54:49 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.24 2003/05/25 23:17:54 lu_zero Exp $
+
+  26 May 2003; Luca Barbato <lu_zero@gentoo.org> ppp-2.4.1-r14.ebuild:
+  gcc-3.3 fix and moving the patches in src_unpack.
 
 *ppp-2.4.1-r14 (22 May 2003)
 

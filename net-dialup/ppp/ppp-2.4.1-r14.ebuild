@@ -17,9 +17,10 @@ SLOT="0"
 LICENSE="BSD GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa"
 
-src_compile() {
-
-    use crypt && {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use crypt && {
 		#I took the liberty of combining the two crypto patches
 		einfo "Applying ppp-crypto-fix.patch..."
 		bzcat ${FILESDIR}/ppp-crypto-fix.patch.bz2 | patch -p1
@@ -29,11 +30,18 @@ src_compile() {
 	epatch ${FILESDIR}/${P}-r10.patch
 
 	use activefilter && {
-    		# enable option active-filter
-    		mv pppd/Makefile.linux pppd/Makefile.linux.orig
-    		sed -e 's/^#FILTER=y/FILTER=y/' <pppd/Makefile.linux.orig >pppd/Makefile.linux
+    	# enable option active-filter
+    	einfo "Enabling active-filter"
+		mv pppd/Makefile.linux pppd/Makefile.linux.orig
+    	sed -e 's/^#FILTER=y/FILTER=y/' <pppd/Makefile.linux.orig > \
+		pppd/Makefile.linux
 	}
+	epatch ${FILESDIR}/gcc3.3-multiline.patch
+}
 
+src_compile() {
+	cd ${S}
+   
 	./configure --prefix=/usr || die
     
 	#fix Makefiles to compile optimized

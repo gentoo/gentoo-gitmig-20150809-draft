@@ -1,0 +1,39 @@
+diff -ruN ppp-2.4.1.pppoe4.orig/pppd/plugins/pppoe/pppoe.c ppp-2.4.1.pppoe4/pppd/plugins/pppoe/pppoe.c
+--- ppp-2.4.1.pppoe4.orig/pppd/plugins/pppoe/pppoe.c	2001-08-06 14:35:21.000000000 +0200
++++ ppp-2.4.1.pppoe4/pppd/plugins/pppoe/pppoe.c	2003-05-25 23:43:42.000000000 +0200
+@@ -197,8 +197,8 @@
+ 
+     if (pppoe_srv_name !=NULL) {
+ 	if (strlen (pppoe_srv_name) > 255) {
+-	    poe_error (ses," Service name too long
+-	                (maximum allowed 256 chars)");
++	    poe_error (ses," Service name too long "
++	                "(maximum allowed 256 chars)");
+ 	    poe_die(-1);
+ 	}
+ 	ses->filt->stag = make_filter_tag(PTT_SRV_NAME,
+diff -ruN ppp-2.4.1.pppoe4.orig/pppd/plugins/pppoe/pppoed.c ppp-2.4.1.pppoe4/pppd/plugins/pppoe/pppoed.c
+--- ppp-2.4.1.pppoe4.orig/pppd/plugins/pppoe/pppoed.c	2000-08-06 17:39:28.000000000 +0200
++++ ppp-2.4.1.pppoe4/pppd/plugins/pppoe/pppoed.c	2003-05-25 23:51:02.000000000 +0200
+@@ -168,8 +168,8 @@
+ 	case 'A':			/* AC override */
+ 	    poe_info (sess,"AC name override to %s", optarg);
+ 	    if (strlen (optarg) > 255) {
+-		poe_error (sess," AC name too long 
+-			  (maximum allowed 256 chars)");
++		poe_error (sess," AC name too long" 
++			  "(maximum allowed 256 chars)");
+ 		poe_die(-1);
+ 	    }
+ 	    if ((sess->filt->ntag= malloc (sizeof (struct pppoe_tag) + 
+@@ -186,8 +186,8 @@
+ 	case 'E':			/* AC service name override */
+ 	    poe_info (sess,"AC service name override to %s", optarg);
+ 	    if (strlen (optarg) > 255) {
+-		poe_error (sess," Service name too long 
+-	          (maximum allowed 256 chars)");
++		poe_error (sess," Service name too long" 
++	          "(maximum allowed 256 chars)");
+ 		poe_die(-1);
+ 	    }
+ 	    
