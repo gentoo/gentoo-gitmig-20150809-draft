@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.71 2004/08/12 00:48:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.72 2004/08/15 03:26:23 lv Exp $
+
+  14 Aug 2004; Travis Tilley <lv@gentoo.org> ncurses-5.4-r1.ebuild,
+  ncurses-5.4-r2.ebuild, ncurses-5.4-r3.ebuild:
+  added CONF_LIBDIR support for installing to lib64/lib32
 
   11 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> ncurses-5.3-r5.ebuild,
   ncurses-5.4-r1.ebuild, ncurses-5.4-r2.ebuild, ncurses-5.4-r3.ebuild:
