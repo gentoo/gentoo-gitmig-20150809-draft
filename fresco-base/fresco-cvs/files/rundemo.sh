@@ -12,7 +12,7 @@ echo "Starting up the server..."
 bin/server -R ior &> ${TMPFILE} &
 sleep 2
 
-REF=`head -1 ${TMPFILE} | cut -d " " -f 3`
+REF=`head -n 1 ${TMPFILE} | cut -d " " -f 3`
 rm ${TMPFILE}
 
 echo "Starting the demo..."
