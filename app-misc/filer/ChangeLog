@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/filer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.2 2004/06/24 22:11:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.3 2004/08/10 13:01:46 fmccor Exp $
+
+  10 Aug 2004; Ferris McCormick <fmccor@gentoo.org> filer-0.0.5.ebuild:
+  Add ~sparc keyword (Bug 59943).  filer.pl installs correctly and appears to
+  run correctly for sparc.
 
 *filer-0.0.5 (14 Feb 2004)
 
