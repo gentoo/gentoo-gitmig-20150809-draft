@@ -1,13 +1,13 @@
 # ChangeLog for net-nntp/klibido
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.5 2005/03/13 12:05:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.6 2005/03/13 12:09:46 swegener Exp $
 
 *klibido-0.2.1.1 (13 Mar 2005)
 
   13 Mar 2005; Sven Wegener <swegener@gentoo.org>
   -files/0.2.0-nntpthreadsocket.cpp.diff, -files/0.2.0-qmgr.cpp.diff,
   -klibido-0.2.0.ebuild, -klibido-0.2.0-r1.ebuild, +klibido-0.2.1.1.ebuild:
-  Version bump.
+  Version bump, bug #83439.
 
   11 Mar 2005; David Holm <dholm@gentoo.org> klibido-0.2.0-r1.ebuild:
   Added to ~ppc.
