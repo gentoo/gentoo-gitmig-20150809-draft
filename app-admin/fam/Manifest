@@ -1,10 +1,20 @@
-MD5 0bfd69a24b160d20dadc2d162d1bf6a6 ChangeLog 7287
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a23feab85a6a00218b5804e3b2827f33 fam-2.7.0-r1.ebuild 2086
-MD5 adaffb966e438eb1be9d9228dcc4c3b8 fam-2.7.0-r2.ebuild 2104
-MD5 067a8c7dc9a851716d40256fe989928c fam-2.7.0.ebuild 1924
+MD5 ab439f0d4820a5e6bf2e2567120aee21 fam-2.7.0-r2.ebuild 2103
+MD5 9eb68c393d737d07815721e75b2ba3be ChangeLog 7376
 MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
+MD5 067a8c7dc9a851716d40256fe989928c fam-2.7.0.ebuild 1924
+MD5 4c750113abbc289ee93c3aa378692f07 files/famd 490
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0 61
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0-r1 61
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0-r2 61
 MD5 46e90fb6975cfcaa7f5946ab36aa2023 files/fam-2.7.0-dnotify.patch 26419
-MD5 4c750113abbc289ee93c3aa378692f07 files/famd 490
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCQmA2M+I1L6GK/u4RAqjlAJ4y1QbZAIniC4Ok+2T0FlKx+odxPgCfRtrb
+mELWcyM0fu97PKgX3egiRnQ=
+=hRmC
+-----END PGP SIGNATURE-----
