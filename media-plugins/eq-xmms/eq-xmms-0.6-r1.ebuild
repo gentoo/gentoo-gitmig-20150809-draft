@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r1.ebuild,v 1.2 2004/09/01 17:34:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r1.ebuild,v 1.3 2004/10/07 04:09:01 eradicator Exp $
 
 IUSE=""
 
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" libdir=`xmms-config --effect-plugin-dir` install || die
 
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README README.BSD SKINS TODO
 }
