@@ -1,0 +1,7 @@
+# ChangeLog for net-misc/bo2k_plugins
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bo2k_plugins/ChangeLog,v 1.1 2003/09/11 12:40:00 lordvan Exp $
+
+*libbo2k-0.1.5pre (11 Sep 2003)
+    11 Sep 2003; Thomas Raschbacher <lordvan@gentoo.org>: bo2k_plugins-0.2.1, ChangeLog, metadata.xml:
+    initial release
