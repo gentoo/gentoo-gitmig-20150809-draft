@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.17 2003/04/23 02:27:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.18 2003/04/24 19:02:29 leahcim Exp $
+
+  24 Apr 2003; Michael Fitzpatrick <leahcim@gentoo.org>
+  xfree-drm-4.3.0-r2.ebuild, files/xfree-drm-4.3.0-r2-dristat.patch: Add
+  dristat (modified patch from Mathias Hasselmann) bug #18799. Fixed slot.
 
   23 Apr 2003; Luca Barbato <lu_zero@gentoo.org>
   xfree-drm-4.3.0-r2.ebuild, xfree-drm-4.3.0.ebuild:
