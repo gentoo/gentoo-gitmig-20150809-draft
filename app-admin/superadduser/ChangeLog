@@ -1,6 +1,22 @@
 # ChangeLog for app-admin/superadduser
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.24 2004/06/01 21:11:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.25 2004/06/09 08:43:51 seemant Exp $
+
+*superadduser-1.0.9 (09 Jun 2004)
+
+  09 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +files/superadduser.8,
+  -files/1.0.7/superadduser.8, -files/1.0.8/superadduser,
+  -files/1.0.8/superadduser.8, +files/1.0.9/superadduser,
+  superadduser-1.0.7.ebuild, -superadduser-1.0.8.ebuild,
+  +superadduser-1.0.9.ebuild:
+  since the manpage has never changed, it now resides in files/ rather than in
+  files/1.0.blah. Additionally, the REAL author of this script is now mentioned
+  in the manpage (Stuart Winter). Finally, 1.0.9 is simply an identical version
+  to 1.0.8, except that it has a clear license -- BSD. We had screwed up with
+  prior versions and assumed them to be GPL-2. This was our fault entirely, as
+  the actual implied license was BSD (Slackware's predominant license -- we
+  should have known). This fixes bug #53337 by Mike Valstar
+  <mikevalstar@gentoo-portage.com>
 
 *superadduser-1.0.8 (01 Jun 2004)
 
