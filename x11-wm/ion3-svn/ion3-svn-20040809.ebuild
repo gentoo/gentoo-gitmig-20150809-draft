@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040412.ebuild,v 1.3 2004/06/24 23:42:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040809.ebuild,v 1.1 2004/08/09 11:38:04 twp Exp $
 
 inherit eutils subversion
 
@@ -21,8 +21,6 @@ ESVN_REPO_URI="http://tao.uab.es/ion/svn/ion/trunk"
 ESVN_PROJECT="ion-snapshot"
 
 src_compile() {
-
-	epatch ${FILESDIR}/ion3-svn-20040412-rename.patch
 
 	local myconf=""
 
@@ -46,21 +44,19 @@ src_install() {
 
 	make \
 		prefix=${D}/usr \
+		PREFIX=${D}/usr \
 		ETCDIR=${D}/etc/X11/ion3 \
 		SHAREDIR=${D}/usr/share/ion3 \
 		MANDIR=${D}/usr/share/man \
 		DOCDIR=${D}/usr/share/doc/${PF} \
 		install || die
 
-	mv ${D}/usr/bin/ion ${D}/usr/bin/ion3
-	mv ${D}/usr/bin/pwm ${D}/usr/bin/pwm3
-	mv ${D}/usr/share/man/man1/ion.1 ${D}/usr/share/man/man1/ion3.1
-	mv ${D}/usr/share/man/man1/pwm.1 ${D}/usr/share/man/man1/pwm3.1
-
 	prepalldocs
 
 	insinto /usr/include/ion3
-	doins *.h *.mk mkexports.lua
+	doins *.h *.mk
+	insinto /usr/include/ion3/build
+	doins build/mkexports.lua
 	for i in de ioncore luaextl mod_floatws mod_ionws mod_menu mod_query mod_sm mod_sp; do
 		insinto /usr/include/ion3/${i}
 		doins ${i}/*.h
