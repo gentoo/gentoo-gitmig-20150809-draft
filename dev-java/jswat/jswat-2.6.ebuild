@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.6.ebuild,v 1.2 2002/07/08 20:52:40 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.6.ebuild,v 1.3 2002/07/17 19:51:14 drobbins Exp $
 
 S="${WORKDIR}/jswat"
 DESCRIPTION="Extensible graphical Java debugger"
@@ -11,7 +11,8 @@ SLOT="2"
 KEYWORDS="*"
 
 DEPEND=">=dev-java/ant-1.4.1"
-RDEPEND=">=virtual/jdk-1.4"
+#this next line should be changed to >=virtual/jdk once we have a bunch of 1.4 JDK's
+RDEPEND=">=dev-java/sun-jdk-1.4"
 
 src_compile() {
 	cd build
