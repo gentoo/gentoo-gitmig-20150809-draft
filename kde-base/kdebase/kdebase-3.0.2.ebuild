@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.1 2002/06/27 19:33:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.2 2002/06/28 17:16:12 danarmak Exp $
 
 
 inherit  kde-dist
@@ -32,6 +32,9 @@ use oggvorbis 	&& myconf="$myconf --with-vorbis"	|| myconf="$myconf --without-vo
 use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
 use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
+
+# fix for verwilst's gcc 3.1 & antialiasing problem
+PATCHES="$FILESDIR/${P}-fonts.cpp.patch"
 
 src_install() {
 

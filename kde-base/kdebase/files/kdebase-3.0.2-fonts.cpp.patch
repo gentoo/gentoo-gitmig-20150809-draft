@@ -1,0 +1,44 @@
+--- kcontrol/fonts/fonts.cpp	Fri Jun 28 09:49:12 2002
++++ kcontrol/fonts/fonts.cpp	Fri Jun 28 09:52:21 2002
+@@ -6,7 +6,7 @@
+ //
+ // Ported to kcontrol2 by Geert Jansen.
+ 
+-/* $Id: kdebase-3.0.2-fonts.cpp.patch,v 1.1 2002/06/28 17:16:12 danarmak Exp $ */
++/* $Id: kdebase-3.0.2-fonts.cpp.patch,v 1.1 2002/06/28 17:16:12 danarmak Exp $ */
+ 
+ #include <qlayout.h>
+ #include <qlabel.h>
+@@ -146,7 +146,7 @@
+ 
+ void FontUseItem::updateLabel()
+ {
+-  QString fontDesc = _font.family() + ' ' + QString::number(_font.pointSize());
++  QString fontDesc = _font.family() + " " + QString::number(_font.pointSize());
+   preview->setText(fontDesc);
+   preview->setFont(_font);
+ }
+@@ -227,15 +227,19 @@
+     QLabel * preview = new QLabel(this);
+     preview->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
+     // preview->setMaximumWidth(200);
++    QString name = *it; it++;
++    QString group = *it; it++;
++    QString key = *it; it++;
++    QString file = *it; it++;
+ 
+     FontUseItem * i =
+       new FontUseItem(
+         this,
+         preview,
+-        *it++,
+-        *it++,
+-        *it++,
+-        *it++,
++        name,
++        group,
++        key,
++        file,
+         *defaultFontIt++,
+         *fixedListIt++
+       );

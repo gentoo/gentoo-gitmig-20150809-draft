@@ -1,29 +1,36 @@
---- startkde.orig	Fri Jun 28 09:34:00 2002
-+++ startkde	Fri Jun 28 09:35:45 2002
-@@ -1,8 +1,20 @@
--#!/bin/sh
-+#!/bin/sh --login
+--- startkde	Mon Jun 24 14:54:36 2002
++++ startkde	Fri Jun 28 19:25:38 2002
+@@ -1,8 +1,22 @@
+ #!/bin/sh
  #
 -#  DEFAULT KDE STARTUP SCRIPT ( KDE-3.0.2 )
-+#  Gentoo KDE Startup Script ( KDE-3.0.2 )
++#  GENTOO CUSTOMIZED KDE STARTUP SCRIPT ( KDE-3.0.2 )
  #
  
 +# Gentoo part:
-+export PATH="/usr/kde/3/bin:${PATH}"
-+export KDEDIR="/usr/kde/3"
-+export KDEDIRS="/usr/kde/3:${KDEDIRS}"
-+export KDEMAINDIR="/usr/kde/3"
-+rm -rf ~/.kde
-+ln -fs ~/.kde3 ~/.kde
-+[ -e "~/.kde3" ] || mkdir ~/.kde3
++export PATH="_KDEDIR_/bin:${PATH}"
++export KDEDIR="_KDEDIR_"
++export KDEDIRS="_KDEDIR_:${KDEDIRS}"
++export KDEMAINDIR="_KDEDIR_"
 +
++cd ~
++[ -d .kde ] && mv .kde .kde.backup
++[ -e .kde3 ] || mkdir .kde3
++ln -sf .kde3 .kde
++export KDEHOME="${HOME}/.kde3"
 +
-+# Original KDE part:
++# Gentoo part ends
 +
  # Boot sequence:
  #
  # kdeinit is used to fork off processes which improves memory usage
-@@ -30,14 +42,14 @@
+@@ -25,12 +39,12 @@
+ # especially necessary on slow machines, where starting KDE takes one or two
+ # minutes until anything appears on the screen.
+ #
+-# Set the background to plain grey.
++# Set the background to cyan (Gentoo version change).
+ # The standard X background is nasty, causing moire effects and exploding
  # people's heads. We use colours from the standard KDE palette for those with
  # palettised displays.
  
@@ -32,11 +39,3 @@
  xsetroot -cursor_name left_ptr $bkg
  
  # The user's personal KDE directory is usually ~/.kde, but this setting
- # may be overridden by setting KDEHOME.
- 
- kdehome=$HOME/.kde
--test -n "$KDEHOME" && kdehome=`echo "$KDEHOME"|sed "s,^\~/,$HOME/,"`
-+test -n "$KDEHOME" && eval kdehome=$KDEHOME
- 
- # Activate the kde font directories.
- #
