@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.53 2005/03/11 16:30:24 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.54 2005/03/23 14:11:18 kosmikus Exp $
+
+  23 Mar 2005; Andres Loeh <kosmikus@gentoo.org> ghc-6.4.ebuild:
+  Added missing dependency on libxslt, and slightly cleaned up the ebuild.
 
 *ghc-6.4 (11 Mar 2005)
 

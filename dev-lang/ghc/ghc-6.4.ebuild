@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.ebuild,v 1.1 2005/03/11 16:30:24 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.ebuild,v 1.2 2005/03/23 14:11:18 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -49,6 +49,7 @@ DEPEND="virtual/ghc
 	>=sys-libs/readline-4.2
 	doc? (  ~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets
+		>=dev-libs/libxslt-1.1.2
 		java? ( >=dev-java/fop-0.20.5 ) )
 	opengl? ( virtual/opengl
 		virtual/glu
@@ -76,6 +77,9 @@ setup_cflags() {
 	check_cflags "-nopie -fno-stack-protector -fno-stack-protector-all"
 }
 
+# Portage's resolution of virtuals fails on virtual/ghc in some Portage releases,
+# the following function causes the build to fail with an informative error message
+# in such a case.
 pkg_setup() {
 	if ! has_version virtual/ghc; then
 		eerror "This ebuild needs a version of GHC to bootstrap from."
@@ -111,6 +115,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	local mydoc
+
 	if use opengl; then
 		myconf="--enable-hopengl"
 	fi
@@ -121,7 +127,6 @@ src_compile() {
 	# determine what to do with documentation
 	if use doc; then
 		mydoc="html"
-		insttarget="${insttarget} install-docs"
 		if use java; then
 			mydoc="${mydoc} ps"
 		fi
@@ -168,7 +173,6 @@ src_compile() {
 }
 
 src_install () {
-	local mydoc
 	local insttarget
 
 	insttarget="install"
