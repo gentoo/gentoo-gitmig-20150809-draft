@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.13 2002/06/11 18:43:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.14 2002/07/03 07:57:21 danarmak Exp $
+
+*kdelibs-3.0.2 (03 Jul 2002)
+
+  03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  : : : : : : : : : :
+
+  New stability release.
 
 *kdelibs-3.0.1.20020604 (4 Jun 2002)
 

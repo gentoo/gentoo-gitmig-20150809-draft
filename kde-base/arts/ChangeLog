@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.5 2002/06/20 11:22:45 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.6 2002/07/03 07:57:21 danarmak Exp $
+
+*arts-1.0.2 (03 Jul 2002)
+
+  03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New stability release (comes with kde 3.0.2).
 
 *arts-1.0.1.20020604 (4 Jun 2002)
 
