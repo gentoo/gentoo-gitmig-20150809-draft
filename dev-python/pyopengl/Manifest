@@ -1,0 +1,6 @@
+MD5 4a9b434ec90680c1fc7c0d8e12d86119 pyopengl-2.0.0.44.ebuild 1582
+MD5 2cc4edae0ad4e6b3b33d72ff940a867e ChangeLog 3197
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 ba0f0760a4a22fa7666205b8a5f4f514 files/pyopengl-2.0.0.44-disable_togl.patch 406
+MD5 67d2ad027cfd6d411a585b0e346606a8 files/config.diff 1175
+MD5 9feca450998c720327067463fea8cdc0 files/digest-pyopengl-2.0.0.44 70
