@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.22 2004/08/16 04:50:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.23 2004/08/16 21:04:23 vapier Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -46,7 +46,7 @@ src_compile() {
 		`use_with ruby ruby /usr/bin/ruby` \
 		`use_with guile` \
 		`use_with tcltk tcl` \
-		`use_with perl perl5` \
+		`use_with perl perl5 /usr/bin/perl` \
 		`use_with php` \
 		|| die
 
