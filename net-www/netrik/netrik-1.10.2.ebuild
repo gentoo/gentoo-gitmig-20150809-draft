@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netrik/netrik-1.10.2.ebuild,v 1.7 2004/07/14 06:04:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netrik/netrik-1.10.2.ebuild,v 1.8 2004/11/06 16:20:57 pyrania Exp $
 
 DESCRIPTION="A text based web browser with no ssl support."
 HOMEPAGE="http://netrik.sourceforge.net/"
@@ -8,8 +8,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
-IUSE=""
+KEYWORDS="x86 ~sparc"
+IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3

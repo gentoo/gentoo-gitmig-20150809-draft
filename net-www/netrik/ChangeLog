@@ -1,6 +1,10 @@
 # ChangeLog for net-www/netrik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netrik/ChangeLog,v 1.6 2004/06/25 01:07:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netrik/ChangeLog,v 1.7 2004/11/06 16:20:57 pyrania Exp $
+
+  06 Nov 2004; <pyrania@gentoo.org> netrik-1.10.2.ebuild,
+  netrik-1.6.0.ebuild:
+  Marked stable on x86, added nls to IUSE.
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> netrik-1.10.2.ebuild:
   Added ~sparc keyword.
