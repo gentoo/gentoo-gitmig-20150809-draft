@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/semantic-1.4.ebuild,v 1.3 2003/09/06 22:01:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/semantic-1.4.ebuild,v 1.4 2003/10/25 21:57:15 mkennedy Exp $
 
 inherit elisp
 
 IUSE=""
 
-DESCRIPTION="Enhanced Integration of Emacs Interpreted Objects"
+DESCRIPTION="The Semantic Bovinator is a lexer, parser-generator, and parser written in Emacs Lisp"
 HOMEPAGE="http://cedet.sourceforge.net/semantic.shtml"
 SRC_URI="mirror://sourceforge/cedet/${P}.tar.gz"
 LICENSE="GPL-2"
