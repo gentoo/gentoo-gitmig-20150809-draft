@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entice/entice-0.9.0.20031115.ebuild,v 1.1 2003/11/16 00:10:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entice/entice-0.9.0.20031129.ebuild,v 1.1 2003/11/30 02:01:56 vapier Exp $
 
 inherit enlightenment
 
