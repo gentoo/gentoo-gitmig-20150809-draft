@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.7 2004/04/08 11:11:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.8 2004/04/09 13:06:36 lanius Exp $
+
+  09 Apr 2004; Heinrich Wendel <lanius@gentoo.org> debootstrap-0.2.4.ebuild:
+  remove S=${WORKDIR}/${P}
 
 *debootstrap-0.2.31 (08 Apr 2004)
 
