@@ -1,15 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2367ea214ff272c8639465abeeb3356 ChangeLog 2040
 MD5 a58f7fbae7418de9bf3236a95c718f86 bonnie++-1.02c-r1.ebuild 897
 MD5 0cacd26108c279350b9739ddf5679a4a bonnie++-1.03.ebuild 853
-MD5 0c790252377cc712ba5b9d715e4fa9b7 files/digest-bonnie++-1.02c-r1 62
+MD5 6146ebf92c4fabf8a9a421e48be9e27a ChangeLog 2206
+MD5 6eb9c2fa2fae10ea7676c4e700086784 bonnie++-1.93c.ebuild 868
+MD5 aeb5a6b55ca2477b1f998c03e6c42a15 metadata.xml 493
 MD5 f7a1f45cf334317f5cbafa8ac9cea78a files/digest-bonnie++-1.03 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3zOZHTu7gpaalycRAlBEAJ9pAQqvClfaCG3HzU60E9Qj4IxMxgCg8W8r
-v6kumolF7fis/VHorYdOr5Y=
-=moyM
------END PGP SIGNATURE-----
+MD5 0c790252377cc712ba5b9d715e4fa9b7 files/digest-bonnie++-1.02c-r1 62
+MD5 52da670893e9dbaa752cd942a3e37eb2 files/digest-bonnie++-1.93c 63
