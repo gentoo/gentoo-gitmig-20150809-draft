@@ -1,6 +1,54 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.83 2003/01/15 14:08:46 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.84 2003/01/16 15:54:17 seemant Exp $
+
+*xfree-4.2.99.3-r2 (16 Jan 2003)
+
+  16 Jan 2002; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.99.3-r2.ebuild
+  files/digest-xfree-4.2.99.3-r2 files/4.2.99.3-r2/* :
+
+  new ebuild for updated snapshot.  this seems to be frozen code for the
+  X_4_2_99_3 branch.
+
+*xfree-4.2.99.3-r1 (23 Dec 2002)
+
+  24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
+                                                    xfree-4.2.99.3-r1.ebuild :
+
+  Do not let portage strip binaries and libraries, as then it stips the
+  DRI modules, which breaks things.  Change 4.2.99.3-r1 to compile fontconfig,
+  but then we just remove all fontconfig related stuff.  This should fix things
+  for Seemant and others.
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
+                                                    xfree-4.2.99.3-r1.ebuild :
+
+  Fix bug #12599 (type o in Xsession).
+  Update trident patches to fix bug #10624 again.
+  Fix check for $DEBUGBUILD to test for "yes" and not "true",
+  fixing bug #12572.
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.99.3-r1.ebuild :
+  Some form fixes.  Added some patches back in, although I should verify some
+  of the left out ones.  Fix to not build Xft2.0 and fontconfig .. we rather
+  depend on fontconfig and PDEPEND on x11-libs/xft.  Get it to depend on
+  fixed ttmkfdir.  Fix permissons on modules and drivers.  Some other things
+  I forgot.
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
+  Fix /usr/lib/X11 symlink.
+
+  13 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
+  Update Xrender to that of fontconfig-2.1.  Update fontconfig dep to 2.1.
+  Add glide-v3 to PDEPEND if '3dfx' in USE.
+
+  09 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
+  Also do not overwrite Xft headers if Xft2.0 are installed.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords.
+ 
+*xfree-4.2.1-r2 (05 Dec 2002)
 
   15 Jan 2002; Mark Guertin <gerk@gentoo.org> xfree-4.2.1-r2.ebuild :
   Removed patch 082 as it was the one breaking keycodes, set ppc in 
@@ -37,46 +85,6 @@
   Changes to Xsession of xfree-4.2.1-r2 and xfree-4.2.99.3-r1:
   - Change the shell to '/bin/bash --login' to at least for xdm fix
     the environment problem.
-
-  24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
-                                                    xfree-4.2.99.3-r1.ebuild :
-
-  Do not let portage strip binaries and libraries, as then it stips the
-  DRI modules, which breaks things.  Change 4.2.99.3-r1 to compile fontconfig,
-  but then we just remove all fontconfig related stuff.  This should fix things
-  for Seemant and others.
-
-  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
-                                                    xfree-4.2.99.3-r1.ebuild :
-
-  Fix bug #12599 (type o in Xsession).
-  Update trident patches to fix bug #10624 again.
-  Fix check for $DEBUGBUILD to test for "yes" and not "true",
-  fixing bug #12572.
-
-*xfree-4.2.99.3-r1 (23 Dec 2002)
-
-  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.99.3-r1.ebuild :
-  Some form fixes.  Added some patches back in, although I should verify some
-  of the left out ones.  Fix to not build Xft2.0 and fontconfig .. we rather
-  depend on fontconfig and PDEPEND on x11-libs/xft.  Get it to depend on
-  fixed ttmkfdir.  Fix permissons on modules and drivers.  Some other things
-  I forgot.
-
-  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
-  Fix /usr/lib/X11 symlink.
-
-  13 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
-  Update Xrender to that of fontconfig-2.1.  Update fontconfig dep to 2.1.
-  Add glide-v3 to PDEPEND if '3dfx' in USE.
-
-  09 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
-  Also do not overwrite Xft headers if Xft2.0 are installed.
-
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
-  Changed sparc ~sparc keywords.
- 
-*xfree-4.2.1-r2 (05 Dec 2002)
 
   05 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
   Basically cleanup 4.2.1-r1.
