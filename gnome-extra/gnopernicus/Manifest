@@ -1,4 +1,6 @@
 MD5 4cc9ad0b2a59e1d4f642d190d383ce73 ChangeLog 463
+MD5 54fa6e3e0a70d8d9fef77e279080643b gnopernicus-0.7.1.ebuild 1073
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 a3577281ca2639652301daa9932b84f4 gnopernicus-0.7.1.ebuild 1040
+MD5 c8062aaa933bf4da52290b6fb5bc13b9 gnopernicus-0.7.1-r1.ebuild 1122
 MD5 6508586c732cbf022831afa9d271225e files/digest-gnopernicus-0.7.1 71
+MD5 6508586c732cbf022831afa9d271225e files/digest-gnopernicus-0.7.1-r1 71
