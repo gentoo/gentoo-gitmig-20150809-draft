@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20040516.ebuild,v 1.1 2004/06/13 01:01:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20040516.ebuild,v 1.2 2004/06/15 01:26:05 george Exp $
 
 inherit eutils flag-o-matic
 
@@ -98,12 +98,9 @@ src_compile() {
 
 	touch ${S}/gcc/c-gperf.h
 
-	# Setup -j in MAKEOPTS
-	get_number_of_jobs
-
 	einfo "Building GPC..."
 	# Fix for our libtool-portage.patc
-	S="${WORKDIR}/build" emake LIBPATH="${LIBPATH}" || die "make failed"
+	MAKEOPTS="-j1" S="${WORKDIR}/build" emake LIBPATH="${LIBPATH}" || die "make failed"
 
 #	P="${SAVEP}"
 }
