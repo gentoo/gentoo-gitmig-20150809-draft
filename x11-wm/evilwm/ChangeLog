@@ -1,11 +1,14 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.10 2003/02/12 09:51:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.11 2003/03/09 19:48:28 agriffis Exp $
 
   09 Feb 2003; Aron Griffis <agriffis@gentoo.org> evilwm-0.99.14.ebuild :
   Add ~alpha to KEYWORDS
 
 *evilwm-0.99.14 (09 Feb 2003)
+
+  09 Mar 2003; Aron Griffis <agriffis@gentoo.org> evilwm-0.99.14.ebuild:
+  Mark stable on alpha
 
   09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> evilwm-0.99.14.ebuild
   files/digest-evilwm-0.99.14 :
