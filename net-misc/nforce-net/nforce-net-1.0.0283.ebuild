@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0283.ebuild,v 1.1 2004/09/25 15:41:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0283.ebuild,v 1.2 2004/09/29 09:15:35 dsd Exp $
 
 inherit gcc kmod eutils
 
@@ -107,8 +107,8 @@ pkg_postinst() {
 	einfo "the \"nvnet\" driver for throughput optimization the next time it"
 	einfo "is loaded."
 	echo
-	einfo "An open-source network driver (\"forcedeth\") is now included in"
-	einfo "both the 2.4 and 2.6 kernels. It is recommended that you use"
-	einfo "forcedeth as opposed to this driver, as nvidia appear to be"
-	einfo "supporting it now."
+	ewarn "This package will soon be removed from portage. Please use the"
+	ewarn "open-source network driver (\"forcedeth\") included in the kernel."
+	einfo "Please see http://dev.gentoo.org/~dsd/nforce-net-to-forcedeth.htm"
+	einfo "for more info."
 }
