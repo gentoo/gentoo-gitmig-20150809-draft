@@ -44,4 +44,4 @@ move dev-util/gnustep-gui gnustep-base/gnustep-gui
 move dev-util/gnustep-back gnustep-base/gnustep-back
 move dev-util/gnustep-guile gnustep-libs/gnustep-guile
 move x11-wm/gnustep-env gnustep-base/gnustep-env
-move media-sound/xmmsd media-plugins/xmmsd
+move media-sound/xmmsd media-plugins/xmms-xmmsd
