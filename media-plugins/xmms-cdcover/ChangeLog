@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-cdcover
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdcover/ChangeLog,v 1.1 2004/02/04 11:01:38 eradicator Exp $
+
+*xmms-cdcover-0.2 (04 Feb 2004)
+
+  04 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmms-cdcover-0.2.ebuild:
+  XMMS Visualization plugin to display cd album covers for the playing song.
+  Ebuild submitted by Bram De Smet <gentoo@menteb.org> in bug #39712.
+
