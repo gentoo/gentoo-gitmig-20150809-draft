@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.1 2004/11/11 00:06:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.2 2004/11/18 21:27:20 lu_zero Exp $
 
 inherit gnuconfig flag-o-matic libtool eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	gnuconfig_update
 	uclibctoolize
 	use ppc-macos && darwintoolize
+	epatch ${FILESDIR}/${P}-pic.patch
 }
 
 src_compile() {

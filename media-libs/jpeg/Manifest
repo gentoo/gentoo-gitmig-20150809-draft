@@ -1,4 +1,5 @@
-MD5 ace2914f510a9d68b6a9e98ebc757eff ChangeLog 3757
-MD5 49de48c1ef731ab31aec6ce73117ee3f jpeg-6b-r4.ebuild 1455
+MD5 c3a1a4bd624b4a423e8dc1c212572a5e ChangeLog 3876
 MD5 3637cbaea842b04f1aa4693a1f68e286 metadata.xml 224
+MD5 a2903869618482c418dab6572e2acb73 jpeg-6b-r4.ebuild 1491
+MD5 cd144246f6097eaa8509566385513018 files/jpeg-6b-pic.patch 537
 MD5 232dd13c6edffa89c6ccd5f911bbac64 files/digest-jpeg-6b-r4 63
