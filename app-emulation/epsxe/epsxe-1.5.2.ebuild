@@ -1,17 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/epsxe-1.5.2.ebuild,v 1.10 2003/02/13 07:13:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/epsxe-1.5.2.ebuild,v 1.11 2003/07/13 22:00:26 vapier Exp $
 
-S=${WORKDIR}
 DESCRIPTION="ePSXe Playstation Emulator"
-HOMEPAGE="http://www.epsxe.com"
-LICENSE="freedist"
-KEYWORDS="x86 -ppc"
-SLOT="0"
-IUSE="opengl"
+HOMEPAGE="http://www.epsxe.com/"
+SRC_URI="http://download.epsxe.com/files/epsxe152lin.zip"
 
-use opengl && GLDEPEND="app-emulation/psemu-gpupetemesagl"
-use opengl || GLDEPEND="app-emulation/psemu-peopssoftgpu"
+LICENSE="freedist"
+SLOT="0"
+KEYWORDS="x86"
+IUSE="opengl"
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=dev-libs/glib-1.2
@@ -20,29 +18,27 @@ RDEPEND=">=dev-libs/glib-1.2
 	=sys-libs/zlib-1*
 	net-misc/wget
 	app-emulation/psemu-peopsspu
-	${GLDEPEND}"
+	|| (
+		opengl? ( app-emulation/psemu-gpupetemesagl )
+		app-emulation/psemu-peopssoftgpu
+	)"
 
-SRC_URI="http://download.epsxe.com/files/epsxe152lin.zip"
+S=${WORKDIR}
 
 # For some strange reason, strip truncates the whole file
 RESTRICT="nostrip"
 
-src_unpack() {
-	unzip ${DISTDIR}/${A}
-}
-
-src_install () {
+src_install() {
 	dobin ${FILESDIR}/epsxe
 
-	insinto /opt/epsxe
-	doins epsxe
-	chmod 755 ${D}/opt/epsxe/epsxe
+	exeinto /opt/epsxe
+	doexe epsxe
 
 	insinto /usr/lib/psemu/cheats
 	doins cheats/*
 
-	dodoc docs/*
-
 	insinto /etc/epsxe
 	doins keycodes.lst
+
+	dodoc docs/*
 }

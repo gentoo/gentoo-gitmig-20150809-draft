@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/epsxe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/ChangeLog,v 1.7 2003/04/07 06:22:01 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/ChangeLog,v 1.8 2003/07/13 22:00:26 vapier Exp $
 
 *epsxe-1.5.2 (27 Jul 2002)
+
+  13 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Updated DEPEND to correctly include gl support #24387.
 
   07 Apr 2003; YAMAKURA Makoto <yakina@gentoo.org> files/epsxe:
   get rid of a possibility of copyright infringement
