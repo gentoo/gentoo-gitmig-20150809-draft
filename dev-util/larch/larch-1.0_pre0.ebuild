@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/larch-1.0_pre0.ebuild,v 1.5 2004/06/28 03:22:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/larch-1.0_pre0.ebuild,v 1.6 2004/07/14 23:51:52 agriffis Exp $
 
 MY_P="${P//_/}"
 DESCRIPTION="revision control system ideal for widely distributed development (see \"tla\" also)"
@@ -10,6 +10,7 @@ HOMEPAGE="http://regexps.srparish.net/www/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~ppc"
+IUSE="doc"
 
 S="${WORKDIR}/${MY_P}/src/=build"
 
