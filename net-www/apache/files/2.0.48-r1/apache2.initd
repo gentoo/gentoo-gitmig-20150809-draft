@@ -1,0 +1,63 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.48-r1/apache2.initd,v 1.1 2004/01/13 01:23:23 robbat2 Exp $
+
+opts="${opts} reload"
+
+[ "x${STARTUPERRORLOG}" != "x" ] && APACHE2_OPTS="${APACHE2_OPTS} -d ${STARTUPERRORLOG}"
+[ "x${CONFIGFILE}" != "x" ] && APACHE2_OPTS="${APACHE2_OPTS} -f ${CONFIGFILE}"
+[ "x${STARTUPERRORLOG}" != "x" ] && APACHE2_OPTS="${APACHE2_OPTS} -E ${STARTUPERRORLOG}"
+
+checkconfig() {
+	local myconf="/etc/apache2/conf/apache2.conf"
+	if [ "x${CONFIGFILE}" != "x" ]; then
+		if [ ${CONFIGFILE:0:1} = "/" ]; then
+			myconf="${CONFIGFILE}"
+		else
+			myconf="${STARTUPERRORLOG}/${CONFIGFILE}"
+		fi
+	fi
+	if [ ! -r "${myconf}" ]; then
+		eerror "Unable to read configuration file: ${myconf}"
+		return 1
+	fi
+	/usr/sbin/apache2 -t ${APACHE2_OPTS} 1>/dev/null 2>&1
+	ret=$?
+	if [ $ret -ne 0 ]; then
+		eerror "Apache2 has detected a syntax error in your configuration files:"
+		/usr/sbin/apache2 -t ${APACHE2_OPTS}
+	fi
+	return $ret
+}
+
+depend() {
+	need net
+	use mysql dns logger netmount
+	after sshd
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting apache2"
+	[ -f /var/log/apache2/ssl_scache ] && rm /var/log/apache2/ssl_scache
+	env -i PATH=$PATH /sbin/start-stop-daemon --quiet \
+		--start --startas /usr/sbin/apache2 \
+		--pidfile ${PIDFILE} -- -k start ${APACHE2_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping apache2"
+	/usr/sbin/apache2ctl stop >/dev/null
+	start-stop-daemon -o --quiet --stop --pidfile ${PIDFILE}
+	eend $?
+}
+
+reload() {
+	# restarting apache2 is much easier than apache1. The server handles most of the work for us. 
+	# see http://httpd.apache.org/docs-2.0/stopping.html for more details
+	ebegin "Restarting apache2"
+	/usr/sbin/apache2 ${APACHE2_OPTS} -k ${RESTARTSTYLE}
+	eend $?
+}
