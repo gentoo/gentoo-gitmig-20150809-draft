@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10.ebuild,v 1.2 2004/06/11 21:58:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10.ebuild,v 1.3 2004/06/12 17:18:56 stuart Exp $
 
 DESCRIPTION="Gentoo's installer for web-based applications"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="mirror://gentoo/${PN}-${PVR}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~stuart/${PN}/${PN}-${PVR}.tar.bz2"
 LICENSE="GPL-2"
 SLOT=0
 KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha ~hppa"
