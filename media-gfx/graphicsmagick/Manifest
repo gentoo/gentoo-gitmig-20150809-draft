@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f62db4ded938993aaec813d5d22825cd ChangeLog 1858
-MD5 001d284881e98d84e233af6e02359473 graphicsmagick-1.0.6.ebuild 2494
-MD5 01804297bf1653f111b77095b48617fa graphicsmagick-1.1.4.ebuild 2379
+MD5 77d89779745f89aa039d640ed8fba70f ChangeLog 1997
 MD5 eae2172901a7cc6b7a6e37fc9267a2b9 metadata.xml 197
+MD5 7710dcc9f2b1091d5140836154c5e74c graphicsmagick-1.1.4.ebuild 2366
+MD5 c4e472409bfc66a85dc433847ee3d4b7 graphicsmagick-1.0.6.ebuild 2483
 MD5 28bcb1e625a5c8fa5f3b40d749c0a52f files/digest-graphicsmagick-1.0.6 74
 MD5 e603f0e8f5061bf69c4ea7384ee6fa73 files/digest-graphicsmagick-1.1.4 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBnrhAmdTrptrqvGERAr9lAJ9L5RSrRPPX6GjIA/+vPAAZYFXGswCfaHM7
-X20K5FphrYW9NceYYKuD5bM=
-=zSe/
+iD8DBQFBuzCaugEuf3OQ0akRAnFpAJ9xoV0Ns2SdyJuvutQN5+5G1wscRQCfUVXe
+qOdgCe+RSLoBcqu4fk13I2M=
+=ahop
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.12 2004/11/20 03:21:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.13 2004/12/11 17:38:20 kloeri Exp $
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  graphicsmagick-1.0.6.ebuild, graphicsmagick-1.1.4.ebuild:
+  Fix ghostscript dependency.
 
   20 Nov 2004; Daniel Black <dragonheart@gentoo.org>
   graphicsmagick-1.1.4.ebuild:
