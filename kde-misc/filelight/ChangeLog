@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.3 2004/11/05 02:57:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.4 2004/11/10 22:09:38 carlo Exp $
+
+*filelight-1.0_beta4 (10 Nov 2004)
+
+  10 Nov 2004; Carsten Lohrke <carlo@gentoo.org> -filelight-0.6.4.1.ebuild,
+  -filelight-1.0_beta1.ebuild, -filelight-1.0_beta2-r1.ebuild,
+  -filelight-1.0_beta2-r2.ebuild, -filelight-1.0_beta2.ebuild,
+  +filelight-1.0_beta4.ebuild:
+  version bump and clean up
 
   04 Nov 2004; Jason Wever <weeve@gentoo.org> filelight-1.0_beta2-r2.ebuild:
   Added ~sparc keyword.
