@@ -1,0 +1,27 @@
+diff -ru mysql-3.23.32.orig/acinclude.m4 mysql-3.23.32/acinclude.m4
+--- mysql-3.23.32.orig/acinclude.m4	Mon Jan 22 08:37:02 2001
++++ mysql-3.23.32/acinclude.m4	Thu Feb 15 22:31:56 2001
+@@ -744,12 +744,12 @@
+     if test X"$bdb_version_ok" = Xyes; then
+       save_LDFLAGS="$LDFLAGS"
+       LDFLAGS="-L$lib $LDFLAGS"
+-      AC_CHECK_LIB(db,db_env_create, [
++      AC_CHECK_LIB(db-3.2,db_env_create, [
+         bdb_dir_ok=installed
+         MYSQL_TOP_BUILDDIR([inc])
+         MYSQL_TOP_BUILDDIR([lib])
+         bdb_includes="-I$inc"
+-        bdb_libs="-L$lib -ldb"
++        bdb_libs="-L$lib -ldb-3.2"
+       ])
+       LDFLAGS="$save_LDFLAGS"
+     else
+@@ -777,7 +777,7 @@
+         bdb="$dir"
+         MYSQL_TOP_BUILDDIR([dir])
+         bdb_includes="-I$dir/build_unix"
+-        bdb_libs="-L$dir/build_unix -ldb"
++        bdb_libs="-L$dir/build_unix -ldb-3.2"
+       else
+         bdb_dir_ok="$bdb_version_ok"
+       fi
