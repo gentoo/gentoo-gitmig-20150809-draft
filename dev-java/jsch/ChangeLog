@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/rhino
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.1 2004/01/04 03:11:17 strider Exp $
+
+*jsch-0.1.12 (03 Jan 2004)
+
+  03 Jan 2004; Adrian Almenar <strider@gentoo.org> jsch-0.1.12.ebuild, metadata.xml,
+  files/build.xml-dstamp.patch.gz:
+  Initial import of Jsch, It builds from sources. Dependency required to build
+  ANT.
+
