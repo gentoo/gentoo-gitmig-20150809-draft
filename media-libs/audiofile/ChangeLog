@@ -1,9 +1,13 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.8 2003/08/18 05:36:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.9 2003/08/18 05:50:11 kumba Exp $
 
 
 *audiofile-0.2.3-r1 (21 March 2002)
+
+  18 Aug 2003; Joshua Kinard <kumba@gentoo.org> audiofile-0.2.3-r1.ebuild:
+  Added gnuconfig_update if 'use mips' returns true so configure can detect mipslinux 
+  systems.
 
   18 Aug 2003; Joshua Kinard <kumba@gentoo.org> audiofile-0.2.3-r1.ebuild:
   Added ~mips to KEYWORDS
