@@ -1,6 +1,6 @@
 # ChangeLog for dev-cpp/gtkglextmm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.6 2004/10/17 18:21:59 liquidx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.7 2005/01/01 17:26:45 eradicator Exp $
 
   17 Oct 2004; Alastair Tse <liquidx@gentoo.org> gtkglextmm-1.0.1.ebuild:
   fix R/DEPENDs typo

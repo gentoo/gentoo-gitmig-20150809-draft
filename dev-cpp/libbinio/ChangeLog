@@ -1,6 +1,6 @@
 # ChangeLog for dev-cpp/libbinio
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.5 2004/10/04 20:06:19 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.6 2005/01/01 17:27:22 eradicator Exp $
 
   04 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libbinio-1.2.ebuild:

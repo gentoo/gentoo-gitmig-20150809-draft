@@ -1,6 +1,6 @@
 # ChangeLog for dev-cpp/glibmm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.13 2004/10/05 12:19:55 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.14 2005/01/01 17:26:02 eradicator Exp $
 
   05 Oct 2004; Jason Wever <weeve@gentoo.org> glibmm-2.4.4.ebuild:
   Added ~sparc keyword.
