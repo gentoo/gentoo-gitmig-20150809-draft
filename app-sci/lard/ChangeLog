@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lard
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.12 2004/06/24 22:08:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.13 2004/09/03 20:01:04 caleb Exp $
+
+  03 Sep 2004; Caleb Tennis <caleb@gentoo.org> -lard-20030204.ebuild:
+  Removing old masked version
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> lard-2.0.14.ebuild:
   Add die following econf for bug 48950
