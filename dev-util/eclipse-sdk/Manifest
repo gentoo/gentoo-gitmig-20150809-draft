@@ -1,6 +1,6 @@
 MD5 552f52186b331d0e145d31b9269c7202 eclipse-sdk-3.0.0-r3.ebuild 11909
 MD5 e8c9ed23291e8884deb225cb53db53dc eclipse-sdk-2.1.3-r3.ebuild 8828
-MD5 c40feb6b5b42b16ef16e6d27972de9f3 eclipse-sdk-2.1.3-r5.ebuild 9392
+MD5 fdf824892fcf842dea5cf51c78f034d0 eclipse-sdk-2.1.3-r5.ebuild 9322
 MD5 c9648e74a4ef58e39e4717e181c3eb4c ChangeLog 11571
 MD5 9cc8d5162e981d7b7fc1ef9fa1ac0e65 metadata.xml 919
 MD5 ab0f6620b4767e065bd533b06245b0fc files/01-distribute_ant_target-2.1.patch 1103

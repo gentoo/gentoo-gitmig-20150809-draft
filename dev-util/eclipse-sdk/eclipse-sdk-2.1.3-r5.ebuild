@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.2 2004/07/31 23:34:49 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.3 2004/07/31 23:36:19 karltk Exp $
 
 inherit eutils
 
@@ -13,12 +13,12 @@ LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND=">=virtual/jdk-1.3
-        gtk? ( >=x11-libs/gtk+-2.2.4 )
-        !gtk? ( kde? ( kde-base/kdelibs x11-libs/openmotif )
-                !kde? ( motif? ( x11-libs/openmotif )
-                        !motif? ( >=x11-libs/gtk+-2.2.4 )
-                      )
-              )
+	gtk? ( >=x11-libs/gtk+-2.2.4 )
+	!gtk? ( kde? ( kde-base/kdelibs x11-libs/openmotif )
+		!kde? ( motif? ( x11-libs/openmotif )
+			!motif? ( >=x11-libs/gtk+-2.2.4 )
+		      )
+	      )
 	gnome? ( =gnome-base/gnome-vfs-2* )
 	mozilla? ( net-www/mozilla )
 	jikes? ( >=dev-java/jikes-1.19 )
