@@ -1,0 +1,51 @@
+# ChangeLog for media-video/avidemux
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.1 2002/10/25 19:01:47 vapier Exp $
+
+*avidemux-0.9-pre18 (06 Okt 2002)
+
+  25 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuilds from #8621 and #7973
+  Ronny Pietschke <pietschke.r@t-online.de> (#8621)
+  Marc Hildebrand <marc.hildebrand@t-online.de>
+
+  06 Okt 2002; Marc Hildebrand <marc.hildebrand@t-online.de> :
+  Small fix.
+  see http://fixounet.free.fr/avidemux/ for details
+
+*avidemux-0.9-pre17-fixed (05 Okt 2002)
+
+  05 Okt 2002; Marc Hildebrand <marc.hildebrand@t-online.de> :
+  The author fixed the code, compiles now without ffmpeg.
+  see http://fixounet.free.fr/avidemux/ for details
+
+*avidemux-0.9-pre17 (03 Okt 2002)
+
+  05 Okt (Marc Hildebrand <marc.hildebrand@t-online.de> :
+  This version won't compile without ffmpeg installed:
+  Grab ffmpeg from cvs (or /usr/portage/distfiles) and install it this way:
+  ./configure --prefix=/usr --enable-shared && make && make install
+  
+  Then try to emerge avidemux again.
+  
+  New features/bugfixes:
+  see http://fixounet.free.fr/avidemux/ for details
+
+*avidemux-0.9-pre16 (15 Sep 2002)
+
+  23 Sep 2002; Marc Hildebrand <marc.hildebrand@t-online.de> :
+  Fixes and changes by the author. Changed name of ebuild-file to match
+  version better.
+  see http://fixounet.free.fr/avidemux/ for details
+
+*avidemux-0.9-pre14 (15 Sep 2002)
+
+  10 Sep 2002; Marc Hildebrand <marc.hildebrand@t-online.de> :
+  Small fixes and changes by the author.
+  see http://fixounet.free.fr/avidemux/ for details
+
+*avidemux-0.9-pre13 (30 Aug 2002)
+
+  10 Sep 2002; Marc Hildebrand <marc.hildebrand@t-online.de> :
+  Initial ebuild.
+  see http://fixounet.free.fr/avidemux/ for details
