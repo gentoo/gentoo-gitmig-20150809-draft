@@ -1,6 +1,9 @@
 # ChangeLog for media-video/asfrecorder
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/ChangeLog,v 1.5 2004/08/12 20:05:59 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/ChangeLog,v 1.6 2005/01/07 20:45:46 chriswhite Exp $
+
+  08 Jan 2005; Chris White <chriswhite@gentoo.org> asfrecorder-1.1.ebuild:
+  Fixing Bug #69831.
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.  Taking over as maintainer.

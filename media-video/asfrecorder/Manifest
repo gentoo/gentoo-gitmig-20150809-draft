@@ -1,4 +1,14 @@
-MD5 66d3e3d62f8e0f758c8bb2f998a0f102 asfrecorder-1.1.ebuild 876
-MD5 4166a2e6cd9a1353beef0637e8f2b0e5 ChangeLog 715
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3df8504521ce82b690ec10f44cddb593 ChangeLog 812
+MD5 89c0f567d489947c183447e5be4f7c38 asfrecorder-1.1.ebuild 895
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 fe471e385d94bb62aff194ad8f541441 files/digest-asfrecorder-1.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3vUIFdQwWVoAgN4RAkSoAKCkE55cUR2A4o5wSDE6q6SUEqN6pgCeN2/b
+ros9490eoqD9cuHG3eJmK/M=
+=RgOk
+-----END PGP SIGNATURE-----
