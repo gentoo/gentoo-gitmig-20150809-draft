@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/planet-ccrma-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.15 2004/06/02 13:52:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.16 2004/06/14 19:24:24 plasmaroo Exp $
+
+*planet-ccrma-sources-2.4.21-r9 (14 Jun 2004)
+
+  14 Jun 2004; <plasmaroo@gentoo.org> -planet-ccrma-sources-2.4.21-r8.ebuild,
+  +planet-ccrma-sources-2.4.21-r9.ebuild,
+  +files/planet-ccrma-sources.FPULockup-53804.patch:
+  Added a patch for the FPU-lockup issue; please see bug #58304 for details. Old
+  version removed.
 
 *planet-ccrma-sources-2.4.21-r8 (02 Jun 2004)
 
