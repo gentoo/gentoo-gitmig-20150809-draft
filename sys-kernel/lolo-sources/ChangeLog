@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.14 2002/10/17 17:58:29 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.15 2002/10/17 19:16:46 lostlogic Exp $
 
 *lolo-sources-2.4.20.1_pre1 (16 Oct 2002)
 
@@ -36,9 +36,7 @@
 
   Patches waiting for merging:
   - 03_xattr+acl-0.8.51
-  - 08_scheduler-hints
   - 12_cdda-dma
-  - 24_smptimers
   - 43_VIA-fixes
   - 44_VIA-northbridge-fixup
   - XFS
