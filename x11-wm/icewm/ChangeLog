@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.9 2002/08/16 11:41:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.10 2002/09/20 08:30:47 doctomoe Exp $
 
 *icewm-1.2.0-r1 (16 Aug 2002)
+
+  20 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> icewm-1.2.0-r1.ebuild:
+  Added ppc keyword
 
   16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> icewm-1.2.0-r1.ebuild
   files/digest-icewm-1.2.0-r1 :
