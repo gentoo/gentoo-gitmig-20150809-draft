@@ -1,10 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.2 2003/02/01 18:50:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.3 2003/02/02 07:37:23 vapier Exp $
 
 IUSE="ssl"
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and
 includes SSL, AUTH SMTP, queue optimization, and support"
@@ -20,7 +18,7 @@ DEPEND="virtual/glibc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	>=net-mail/checkpassword-0.90
-	>=net-mail/cmd5checkpasswd-0.22
+	>=net-mail/cmd5checkpw-0.22
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 RDEPEND="!virtual/mta
 	virtual/glibc
