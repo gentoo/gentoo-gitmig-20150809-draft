@@ -37,7 +37,7 @@
 *>=sys-apps/portage-1.8.9_pre25
 *~sys-devel/binutils-2.11.92.0.12.3
 *=sys-devel/gcc-2.95.3-r7
-*~sys-libs/glibc-2.2.5
+*=sys-libs/glibc-2.2.5-r5
 ~sys-kernel/linux-headers-2.4.18
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
@@ -169,7 +169,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages,v 1.17 2002/07/25 08:18:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages,v 1.18 2002/08/18 21:05:37 verwilst Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
