@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1.ebuild,v 1.2 2003/03/09 16:25:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1.ebuild,v 1.3 2003/03/09 17:20:28 liquidx Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -61,17 +61,18 @@ src_install () {
 	insinto /usr/share/pixmaps
 	doins share/*.png share/*.xpm
 
-	if [ -n "`use gnome`" ]
-	then
-		insinto /usr/share/gnome/apps/Internet
-		newins share/nt.desktop d4x.desktop
-	fi
-
     if [ -n "`use kde`" ]
     then
        insinto /usr/share/applnk/Internet
        newins share/nt.desktop d4x.desktop
     fi
+
+	if [ -n "`use gnome`" ]
+	then
+        echo "Categories=Application;Network;" >> ${S}/share/nt.desktop
+		insinto /usr/share/applications
+		newins share/nt.desktop d4x.desktop
+	fi
 
 	rm -rf ${D}/usr/share/d4x/{FAQ*,INSTALL*,README*,LICENSE,NAMES,TROUBLES}
 	dodoc AUTHORS COPYING ChangeLog* NEWS PLANS TODO \
