@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.10 2004/04/29 09:12:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.11 2004/05/04 03:58:00 eradicator Exp $
 
 inherit gcc flag-o-matic
 
@@ -24,10 +24,15 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	use hppa && [ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
+	local myconf
+
+	# --with-flac is not supported.  See bug #49763
+	use flac || myconf="${myconf} --without-flac"
+
 	econf \
 		`if ! use mips; then use_with speex; fi` \
 		`use_enable nls` \
-		`use_with flac` \
+		${myconf} \
 		|| die
 	emake || die
 }
