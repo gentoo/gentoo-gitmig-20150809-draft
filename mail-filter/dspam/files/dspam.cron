@@ -16,35 +16,49 @@ DSPAM_HOMEDIR="$(grep ^dspam /etc/passwd|awk -F : '{print $6}')"
 
 if [[ -f "${DSPAM_HOMEDIR}/mysql.data" ]]
 then
-	[[ ! -f "${DSPAM_HOMEDIR}/config/mysql_purge.sql" ]] && exit 3
+	DSPAM_MySQL_PURGE_SQL=""
+	[[ -f "${DSPAM_HOMEDIR}/config/mysql_purge.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/config/mysql_purge.sql"
+	[[ -f "${DSPAM_HOMEDIR}/mysql_purge.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/mysql_purge.sql"
+	[[ "${DSPAM_MySQL_PURGE_SQL}" == "" ]] && exit 3
 	[[ ! -f "/usr/bin/mysql" ]] && exit 4
 	DSPAM_MySQL_HOST="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 1|tail -n 1)"
 	DSPAM_MySQL_PORT="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 2|tail -n 1)"
 	DSPAM_MySQL_USER="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 3|tail -n 1)"
 	DSPAM_MySQL_PWD="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 4|tail -n 1)"
 	DSPAM_MySQL_DB="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 5|tail -n 1)"
-	(/usr/bin/mysql -u ${DSPAM_MySQL_USER} -p"${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_DB} < ${DSPAM_HOMEDIR}/config/mysql_purge.sql) 1>/dev/null 2>&1
-	exit $?
+	(/usr/bin/mysql -u ${DSPAM_MySQL_USER} -p"${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_DB} < ${DSPAM_MySQL_PURGE_SQL}) 1>/dev/null 2>&1
+	MYRC="$?"
+	for foo in $(/usr/bin/mysql -u ${DSPAM_MySQL_USER} -p"${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_DB} -e 'SHOW TABLES;' 2>&1 | grep -v "^+\|^Tables_in_${DSPAM_MySQL_DB}")
+	do
+		(/usr/bin/mysql -u ${DSPAM_MySQL_USER} -p"${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_DB} -e "OPTIMIZE TABLE ${foo};") 1>/dev/null 2>&1
+	done
+	exit ${MYRC}
 elif [[ -f "${DSPAM_HOMEDIR}/pgsql.data" ]]
 then
-	[[ ! -f "${DSPAM_HOMEDIR}/config/pgsql_purge.sql" ]] && exit 3
+	DSPAM_PgSQL_PURGE_SQL=""
+	[[ -f "${DSPAM_HOMEDIR}/config/pgsql_purge.sql" ]] && DSPAM_PgSQL_PURGE_SQL="${DSPAM_HOMEDIR}/config/pgsql_purge.sql"
+	[[ -f "${DSPAM_HOMEDIR}/pgsql_purge.sql" ]] && DSPAM_PgSQL_PURGE_SQL="${DSPAM_HOMEDIR}/pgsql_purge.sql"
+	[[ "${DSPAM_PgSQL_PURGE_SQL}" == "" ]] && exit 3
 	[[ ! -f "/usr/bin/psql" ]] && exit 4
 	DSPAM_PgSQL_HOST="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 1|tail -n 1)"
 	DSPAM_PgSQL_PORT="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 2|tail -n 1)"
 	DSPAM_PgSQL_USER="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 3|tail -n 1)"
 	DSPAM_PgSQL_PWD="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 4|tail -n 1)"
 	DSPAM_PgSQL_DB="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 5|tail -n 1)"
-	(PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -U ${DSPAM_PgSQL_USER} -d ${DSPAM_PgSQL_DB} -p ${DSPAM_PgSQL_PORT} -h ${DSPAM_PgSQL_HOST} -f ${DSPAM_HOMEDIR}/config/pgsql_purge.sql) 1>/dev/null 2>&1
+	(PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -U ${DSPAM_PgSQL_USER} -d ${DSPAM_PgSQL_DB} -p ${DSPAM_PgSQL_PORT} -h ${DSPAM_PgSQL_HOST} -f ${DSPAM_PgSQL_PURGE_SQL}) 1>/dev/null 2>&1
 	exit $?
 elif [[ -f "${DSPAM_HOMEDIR}/oracle.data" ]]
 then
-	[[ ! -f "${DSPAM_HOMEDIR}/config/oracle_purge.sql" ]] && exit 3
+	DSPAM_Oracle_PURGE_SQL=""
+	[[ -f "${DSPAM_HOMEDIR}/config/ora_purge.sql" ]] && DSPAM_Oracle_PURGE_SQL="${DSPAM_HOMEDIR}/config/ora_purge.sql"
+	[[ -f "${DSPAM_HOMEDIR}/ora_purge.sql" ]] && DSPAM_Oracle_PURGE_SQL="${DSPAM_HOMEDIR}/ora_purge.sql"
+	[[ "${DSPAM_Oracle_PURGE_SQL}" == "" ]] && exit 3
 	[[ ! -f "/usr/bin/sqlplus" ]] && exit 4
 	DSPAM_Oracle_DBLINK="$(cat ${DSPAM_HOMEDIR}/oracle.data|head -n 1|tail -n 1)"
 	DSPAM_Oracle_USER="$(cat ${DSPAM_HOMEDIR}/oracle.data|head -n 2|tail -n 1)"
 	DSPAM_Oracle_PWD="$(cat ${DSPAM_HOMEDIR}/oracle.data|head -n 3|tail -n 1)"
 	DSPAM_Oracle_SCHEMA="$(cat ${DSPAM_HOMEDIR}/oracle.data|head -n 4|tail -n 1)"
-	(/usr/bin/sqlplus -s ${DSPAM_Oracle_USER}/${DSPAM_Oracle_PWD} @${DSPAM_HOMEDIR}/config/ora_purge.sql) 1>/dev/null 2>&1
+	(/usr/bin/sqlplus -s ${DSPAM_Oracle_USER}/${DSPAM_Oracle_PWD} @${DSPAM_Oracle_PURGE_SQL}) 1>/dev/null 2>&1
 	exit $?
 else
 	[[ ! -f "/usr/bin/dspam_clean" ]] && exit 4
