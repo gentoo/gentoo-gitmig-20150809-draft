@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.01.ebuild,v 1.2 2004/02/17 03:23:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.01.ebuild,v 1.3 2004/02/21 01:00:11 lanius Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator"
 SRC_URI="http://www.conmicro.cx/hercules/${P}.tar.gz"
@@ -12,6 +14,8 @@ IUSE=""
 
 DEPEND="virtual/glibc
 	app-arch/bzip2"
+
+replace-flags -march=pentium3 -mcpu=pentium3
 
 src_compile() {
 	local mycflags
