@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.8 2004/01/11 03:14:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.9 2004/03/25 07:11:48 mr_bones_ Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
@@ -16,8 +16,10 @@ IUSE="X truetype freetype-version-1 jpeg"
 DEPEND="media-libs/libpng
 	jpeg? ( media-libs/jpeg )
 	X? ( virtual/x11 )
-	freetype-version-1? ( =media-libs/freetype-1* ) :
-		( truetype? ( =media-libs/freetype-2* ) )"
+	freetype-version-1? ( =media-libs/freetype-1* )
+	!freetype-version-1?  (
+		truetype? ( =media-libs/freetype-2* )
+	)"
 
 src_unpack() {
 	unpack ${A}
