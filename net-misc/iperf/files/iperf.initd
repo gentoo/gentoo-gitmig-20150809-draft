@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/files/iperf.initd,v 1.1 2005/01/21 23:47:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/files/iperf.initd,v 1.2 2005/01/23 10:52:13 ka0ttic Exp $
 
 depend() {
 	need net
@@ -10,7 +10,7 @@ depend() {
 start() {
 	ebegin "Starting iperf server"
 	start-stop-daemon --start --quiet \
-		--exec /usr/bin/iperf -- -s -D >/dev/null
+		--exec /usr/bin/iperf -- -s -D ${IPERF_OPTS} &>/dev/null
 	eend $?
 }
 
