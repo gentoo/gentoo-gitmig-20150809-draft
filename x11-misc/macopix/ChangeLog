@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/macopix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.8 2004/10/30 10:11:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.9 2004/11/06 11:02:59 usata Exp $
+
+  06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/macopix-1.2.1-gentoo.diff, macopix-1.2.1.ebuild:
+  Fixed compile bug with gcc-3.4. Thanks to Chris Arepantis
+  <ChrisArepantis@gmail.com>; bug #69482.
 
   30 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -macopix-1.0.3.ebuild,
   macopix-1.0.4.ebuild, macopix-1.2.1.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.2 2004/10/30 10:11:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.3 2004/11/06 11:02:59 usata Exp $
+
+inherit eutils
 
 DESCRIPTION="MaCoPiX (Mascot Constructive Pilot for X) is a desktop mascot application on UNIX / X Window system."
 HOMEPAGE="http://rosegray.sakura.ne.jp/macopix/index-e.html"
@@ -31,6 +33,12 @@ DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.0
 		>=media-libs/gdk-pixbuf-0.7 )
 	nls? ( >=sys-devel/gettext-0.10 )
 	media-libs/libpng"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff
+}
 
 src_compile() {
 	econf $(use_with gtk2) \
