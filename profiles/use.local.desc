@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.235 2004/02/06 03:29:51 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.236 2004/02/06 04:29:53 rizzo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -169,6 +169,8 @@ net-im/jabber-server:j-nojud - If you do NOT want the Jabber User Directory buil
 net-im/jabber-server:j-nomsn - If you do NOT want the MSN transport built with jabber-server
 net-im/jabber-server:j-nomuconf - If you do NOT want the mu-conference addon built with jabber-server
 net-im/jabber-server:j-noyahoo - If you do NOT want the Yahoo transport built with jabber-server (removes glib dependency)
+net-im/kadu:kadu-voice - Enables voice chat in kadu
+net-im/kadu:kadu-modules - Enables modules in kadu
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-libs/libnvcserver:no24bpp - disable 24bpp support
