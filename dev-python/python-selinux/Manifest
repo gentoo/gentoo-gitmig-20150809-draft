@@ -1,4 +1,6 @@
 MD5 afbd1cf62fa9f3d52ea9f0de38d5693b python-selinux-1.0-r1.ebuild 723
-MD5 b3f7051be1ae0b47fa182e948873285a ChangeLog 603
+MD5 afbd1cf62fa9f3d52ea9f0de38d5693b python-selinux-1.1.ebuild 723
+MD5 63935a81c3d9cf2860c4a4f3678903f0 ChangeLog 791
 MD5 f182ab46e74041b1e72cc2f0e31d09d7 metadata.xml 418
+MD5 1732ae6774faefc18325a59dbe3717fd files/digest-python-selinux-1.1 69
 MD5 f4f53a607d0d144110d027de26861546 files/digest-python-selinux-1.0-r1 69
