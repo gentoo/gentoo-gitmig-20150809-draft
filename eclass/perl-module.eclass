@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.22 2002/09/14 21:32:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.23 2002/09/15 13:18:23 mcummings Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
@@ -17,7 +17,7 @@ eval `perl '-V:version'`
 	if [ ${version} == '5.6.1' ];
 	then
 	DEPEND="${DEPEND} >=sys-devel/perl-5 \
-	dev-perl/ExtUtils-MakeMaker"
+	=dev-perl/ExtUtils-MakeMaker-6.03-r1"
 	else
 	DEPEND="${DEPEND} >=sys-devel/perl-5"
 	fi
