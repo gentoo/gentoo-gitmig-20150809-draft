@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 952747b4117033d16e8410ef5c2678e6 splashutils-0.9_pre09.ebuild 2669
-MD5 9f94ae9da485a4df719f196437ab53de splashutils-0.9_pre10.ebuild 2669
+MD5 699a08818403392c4f31748eb97bb084 splashutils-0.9_pre10.ebuild 2833
 MD5 2bd2053872674a084a5a30228414523c splashutils-0.9_pre08.ebuild 2624
-MD5 5a804e925cebd20746f03b6a844afeed ChangeLog 1704
+MD5 35e96aabc1bd25f15841b9950c227136 ChangeLog 1921
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 0de932509c67f9c98f8e8fecdf08639d splashutils-0.9_pre07.ebuild 2175
 MD5 ebf22f53007c23687b34a3131f69b230 files/digest-splashutils-0.9_pre07 299
@@ -14,7 +14,7 @@ MD5 d242827126175d455cd2d283e6246546 files/digest-splashutils-0.9_pre10 379
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBWHb8chej4aZK9/cRAuUDAJ9SFyUCK2BXOHP1BKDAy6Q9pYWKYACcDOsi
-gBcdREzbCy1jCWNXVXDOXGc=
-=r6IM
+iD8DBQFBXZ2Ichej4aZK9/cRAtk/AJsE7Wf1e40ouVvYZvAnCqxp3cp7UwCggKTK
+RFDFSwdDGuReFvh4uyM7nGM=
+=/ACr
 -----END PGP SIGNATURE-----

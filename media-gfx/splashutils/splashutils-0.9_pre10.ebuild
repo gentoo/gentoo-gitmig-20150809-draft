@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre10.ebuild,v 1.1 2004/09/27 20:23:56 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre10.ebuild,v 1.2 2004/10/01 18:10:01 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.2"
 GENTOOSPLASH="splashutils-gentoo-0.1.2"
@@ -53,6 +53,9 @@ src_unpack() {
 			sed -e "s@#CHANGEME#@${T}/@" -i ${S}/libs/klibc-0.179/klibc/makeerrlist.pl
 		fi
 	fi
+
+	# this should make this version of splashutils compile with the older kernels
+	sed -e 's@../linux/include/asm/unistd.h@@' -i ${S}/libs/klibc-0.179/klibc/Makefile
 }
 
 src_compile() {
