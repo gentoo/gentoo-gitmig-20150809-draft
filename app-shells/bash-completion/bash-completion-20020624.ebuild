@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020619.ebuild,v 1.2 2002/06/20 18:57:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020624.ebuild,v 1.1 2002/06/24 21:27:24 bangert Exp $
 
 S=${WORKDIR}/bash_completion
 
