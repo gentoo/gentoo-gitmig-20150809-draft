@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.7.ebuild,v 1.3 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.7.ebuild,v 1.4 2003/05/26 09:55:26 absinthe Exp $
 
 IUSE="java tcpd"
 
@@ -20,7 +20,7 @@ DEPEND=">=x11-base/xfree-4.2.1
 
 RDEPEND="${DEPEND}
 	dev-lang/perl
-	java? ( || ( >=virtual/jdk-1.3.1-r7 >=virtual/jre-1.3.1-r7 ) )"
+	java? ( || ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 ) )"
 
 src_unpack() {
 	unpack ${A} && cd ${S}
