@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.31.ebuild,v 1.1 2003/09/10 07:33:04 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.31.ebuild,v 1.2 2003/09/10 16:04:27 mholzer Exp $
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
@@ -12,10 +12,8 @@ KEYWORDS="~x86"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	mv Makefile Makefile.tmp
-	sed -e "s:gcc-3.2:gcc:" Makefile.tmp > Makefile
-	mv Makefile Makefile.tmp
-	sed -e "s:/usr/local/:/${D}/usr/:" Makefile.tmp > Makefile
+	sed -i "s:gcc-3.2:gcc:" Makefile
+	sed -i "s:/usr/local/:/${D}/usr/:" Makefile
 }
 
 src_compile() {
