@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.0.0.ebuild,v 1.2 2004/03/23 01:53:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.0.0.ebuild,v 1.3 2004/05/28 03:00:07 vapier Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -10,7 +10,8 @@ SRC_URI="mirror://sourceforge/linux-diag/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~hppa ~amd64 ~sparc ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips arm hppa ~amd64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -28,7 +29,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	# Detect mips systems properly
 	use mips && gnuconfig_update
 
@@ -43,7 +43,7 @@ src_install() {
 	# We do not distribute this
 	rm -f ${D}/usr/bin/dlist_test
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 	# FIXME: cmd/GPL and lib/LGPL do not exist - should we
 	#        then rather add them manually ?
 	dodoc cmd/GPL lib/LGPL docs/libsysfs.txt
