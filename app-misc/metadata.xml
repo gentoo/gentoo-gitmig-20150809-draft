@@ -5,5 +5,9 @@
 		The app-misc category contains various miscellaneous application
 		packages which don't belong anywhere else.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-misc enthält verschiedenste Applikationen welche
+		keiner anderen Kategorie zugeordnet werden konnten.
+	</longdescription>
 </catmetadata>
 
