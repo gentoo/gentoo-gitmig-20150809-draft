@@ -19,7 +19,7 @@ options {
 
 	// if you have problems and are behind a firewall:
 	//query-source address * port 53;
-	pid-file "/var/run/named/named.pid";
+	pid-file "/var/run/named.pid";
 };
 
 zone "." IN {
