@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/gnome2-perl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.1 2003/07/07 13:49:25 mcummings Exp $
+
+*gnome2-perl-0.03 (07 Jul 2003)
+
+  07 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  gnome2-perl-0.03.ebuild:
+  Bug 17224. Original ebuild submitted by Kfir Ozer, rewritten with liquidx's
+  help to make it work.
+
