@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape/navigator-4.75.ebuild,v 1.2 2000/09/15 16:35:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape/navigator-4.75.ebuild,v 1.3 2000/09/16 16:32:48 drobbins Exp $
 
 A=navigator-v475-us.x86-unknown-linux2.2.tar.gz
 S=${WORKDIR}/navigator-v475.x86-unknown-linux2.2
@@ -22,11 +22,8 @@ src_install() {
   cp ${O}/files/netscape ${D}/usr/X11R6/bin/netscape
   rm ${D}/opt/netscape/netscape-dynMotif
   rm ${D}/opt/netscape/libnullplugin-dynMotif.so
-  cat <<EOF > ${D}/usr/X11R6/bin/netscape
-#!/bin/bash
-export MOZILLA_HOME=/opt/netscape
-exec /opt/netscape/netscape
-EOF
+  insinto /usr/X11R6/bin
+  doins ${FILES}/netscape	 
   chmod +x ${D}/usr/X11R6/bin/netscape
 }
 
