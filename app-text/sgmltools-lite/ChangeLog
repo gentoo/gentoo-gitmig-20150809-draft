@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.23 2004/04/26 12:17:01 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.24 2004/04/29 00:21:55 avenj Exp $
+
+  28 Apr 2004; Jon Portnoy <avenj@gentoo.org> sgmltools-lite-3.0.3-r7.ebuild :
+  Stable on AMD64.
 
   26 Apr 2004; Mike Gardiner <obz@gentoo.org> sgmltools-lite-3.0.3-r6.ebuild,
   sgmltools-lite-3.0.3-r7.ebuild:
