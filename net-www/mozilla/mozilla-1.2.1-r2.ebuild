@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r2.ebuild,v 1.2 2002/12/14 17:34:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r2.ebuild,v 1.3 2002/12/15 07:43:55 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -32,7 +32,7 @@ filter-flags "-fomit-frame-pointer"
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
+#strip-flags
 
 EMVER="0.71.0"
 IPCVER="1.0.1"
@@ -354,7 +354,7 @@ src_compile() {
 
 	if [ -z "`use gtk2`" -a -z "`use moznoxft`" ]
 	then
-		mkdir -p ${WORKDIR}/Xft
+		mkdir -p ${WORKDIR}/Xft/{include,lib}
 
 		# We need to update Xrender ..
 		cd ${FC_S}/../Xrender
