@@ -1,9 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r1.ebuild,v 1.10 2003/12/31 04:15:20 obz Exp $
-
-inherit eutils flag-o-matic
-filter-flags "-fstack-protector"
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r1.ebuild,v 1.11 2004/02/21 12:17:18 usata Exp $
 
 IUSE="X"
 
@@ -67,6 +64,8 @@ src_unpack() {
 }
 
 src_compile() {
+
+	filter-flags "-fstack-protector"
 
 	econf \
 		--datadir=${S} \

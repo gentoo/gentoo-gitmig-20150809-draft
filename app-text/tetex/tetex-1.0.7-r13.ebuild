@@ -1,9 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.7 2003/12/10 07:33:57 seemant Exp $
-
-inherit flag-o-matic eutils
-filter-flags "-fstack-protector"
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.8 2004/02/21 12:17:18 usata Exp $
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 S=${WORKDIR}/teTeX-1.0
@@ -21,6 +18,7 @@ LICENSE="GPL-2"
 IUSE="X"
 
 DEPEND="!app-text/ptex
+	!app-text/cstetex
 	sys-apps/ed
 	X? ( virtual/x11 )
 	>=media-libs/libpng-1.2.1
@@ -83,6 +81,8 @@ src_unpack() {
 }
 
 src_compile() {
+
+	filter-flags "-fstack-protector"
 
 	local myconf=""
 	use X \

@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tetex
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.54 2004/01/11 22:39:02 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.55 2004/02/21 12:17:18 usata Exp $
+
+  21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r13.ebuild,
+  tetex-2.0.2-r1.ebuild, tetex-2.0.2-r3.ebuild:
+  Removed inherit eutils and flag-o-matic since epatch and filter-flags
+  are now part of portage.  Also moved filter-flags to src_compile() to
+  kill "has_version() in global scope" warning.
 
   31 Dec 2003; Mike Gardiner <obz@gentoo.org> tetex-2.0.2-r1.ebuild,
   tetex-2.0.2-r3.ebuild:
