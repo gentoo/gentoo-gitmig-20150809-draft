@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.44 2004/07/02 02:48:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.45 2004/07/19 17:10:10 vapier Exp $
+
+  19 Jul 2004; Mike Frysinger <vapier@gentoo.org> svgalib-1.4.3-r4.ebuild,
+  svgalib-1.9.17-r3.ebuild, svgalib-1.9.18-r1.ebuild, svgalib-1.9.19.ebuild:
+  Fix long standing typo #57591.  thee -> three
 
   01 Jul 2004; Mike Frysinger <vapier@gentoo.org> svgalib-1.9.18-r1.ebuild,
   svgalib-1.9.19.ebuild:

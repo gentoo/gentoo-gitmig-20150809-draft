@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.15 2004/07/01 08:04:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.16 2004/07/19 17:10:10 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -98,7 +98,7 @@ src_install() {
 	done
 
 	cd ${S}/threeDKit
-	exeinto /usr/lib/svgalib/theeDKit
+	exeinto /usr/lib/svgalib/threeDKit
 	local THREED_PROGS="plane wrapdemo"
 	doexe ${THREED_PROGS}
 
