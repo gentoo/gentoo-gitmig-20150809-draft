@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.15.ebuild,v 1.2 2003/09/30 05:33:24 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.15.ebuild,v 1.3 2003/10/06 22:44:32 hillster Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 inherit libtool
@@ -45,7 +45,7 @@ src_compile() {
 
 	use gtk2 && myconf="${myconf} --enable-gtk2"
 	use ssl || myconf="${myconf} --without-ssl"
-	use snmp || myconf="${myconf} --without-ucdsnmp"
+	use snmp || myconf="${myconf} --without-ucd-snmp"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
 	econf \
