@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.1 2003/06/16 22:04:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.2 2003/08/03 02:35:44 vapier Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -18,9 +18,7 @@ ECLASS="gst-plugins"
 INHERITED="$INHERITED $ECLASS"
 
 inherit libtool
-
-# accept both $DEBUG and USE="debug"
-[ -n "$DEBUG" -o -n "`use debug`" ] && inherit debug
+[ `use debug` ] && inherit debug
 
 # Create a major/minor combo for our SLOT and executables suffix
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.80 2003/07/29 10:39:02 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.81 2003/08/03 02:34:23 vapier Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -60,7 +60,7 @@ kde_src_compile() {
 
 	debug-print-function $FUNCNAME $*
 	[ -z "$1" ] && kde_src_compile all
-    
+
 	cd ${S}
 	export kde_widgetdir="$KDEDIR/lib/kde3/plugins/designer"
 
@@ -82,11 +82,10 @@ kde_src_compile() {
 				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR} --enable-mt"
 				# calculate dependencies separately from compiling, enables ccache to work on kde compiles
 				myconf="$myconf --disable-dependency-tracking"
-				# use debug is replacing $DEBUG
-				if [ -n "$DEBUG" -o -n "`use debug`" ]; then
-				    myconf="$myconf --enable-debug=full --with-debug"
+				if [ `use debug` ]; then
+					myconf="$myconf --enable-debug=full --with-debug"
 				else
-				    myconf="$myconf --disable-debug --without-debug"
+					myconf="$myconf --disable-debug --without-debug"
 				fi
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
