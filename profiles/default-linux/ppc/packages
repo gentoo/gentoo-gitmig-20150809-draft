@@ -1,11 +1,11 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/packages,v 1.6 2004/09/15 19:10:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/packages,v 1.7 2004/09/15 20:57:52 pvdabeel Exp $
 
-*>=sys-devel/binutils-2.14.90.0.6
-*>=sys-devel/gcc-3.2.3
-*>=sys-libs/glibc-2.3.2
+*sys-devel/binutils
+*sys-devel/gcc
+*sys-libs/glibc
 
 *sys-fs/hfsutils
-*sys-fs/mac-fdisk
+*sys-fs/hfsplusutils
 *virtual/bootloader
