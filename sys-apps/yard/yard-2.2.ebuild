@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.2.ebuild,v 1.6 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.2.ebuild,v 1.7 2003/09/07 00:27:47 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yard is a suite of Perl scripts for creating rescue disks (also
@@ -16,7 +16,7 @@ DEPEND="dev-lang/perl"
 RDEPEND=""
 
 src_unpack() {
-	unpack ${P}-extra.tar.bz2 
+	unpack ${P}-extra.tar.bz2
 	mv ${S} ${S}-extra
 	unpack ${P}.tar.gz
 	cd ${S}
@@ -45,12 +45,12 @@ src_install() {
 	insinto /etc/yard/Replacements/root
 	doins etc/Replacements/root/profile
 
-        # modified scripts
+	# modified scripts
 
 	exeinto /usr/sbin
 	doexe sbin/{*_root_fs,mklibs.sh,write_rescue_disk,reduce_libs_root_fs}
 
-        # devices
+	# devices
 
 	dodir /etc/yard/Replacements/dev
 	cd ${D}/etc/yard/Replacements/dev
