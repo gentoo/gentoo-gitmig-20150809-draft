@@ -1,6 +1,18 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.55 2005/02/13 03:42:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.56 2005/03/03 17:51:36 mkennedy Exp $
+
+*sbcl-0.8.20 (02 Mar 2005)
+
+  02 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.8.20/README.Gentoo,
+  +files/0.8.20/customize-target-features.lisp-prefix,
+  +files/0.8.20/customize-target-features.lisp-suffix,
+  +files/0.8.20/install-clc.lisp, +files/0.8.20/sbcl-gentoo.patch,
+  +files/0.8.20/sbcl-no-tests-gentoo.patch, +files/0.8.20/sbcl.sh,
+  +files/0.8.20/sbclrc, +sbcl-0.8.20.ebuild:
+  New upstream version; Added "callbacks" USE flag; Don't include futex support
+  on non-x86.
 
 *sbcl-0.8.19 (12 Feb 2005)
 
