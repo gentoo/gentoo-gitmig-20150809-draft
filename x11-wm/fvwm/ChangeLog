@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.66 2004/03/30 11:29:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.67 2004/04/20 11:03:04 taviso Exp $
+
+*fvwm-2.5.10-r2 (20 Apr 2004)
+
+  20 Apr 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.10-r2.ebuild,
+  files/fvwm-2.5.10-mips-compat.diff:
+  new release of FvwmTabs, patch for mips compatability.
 
   30 Mar 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.4.17.ebuild,
   fvwm-2.4.18.ebuild, fvwm-2.5.10.ebuild, fvwm-2.5.8-r4.ebuild,
