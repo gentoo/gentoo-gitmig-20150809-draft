@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.49 2003/06/17 14:55:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.50 2003/06/17 19:32:35 gmsoft Exp $
 
   26 May 2003; jje <jje@gentoo.org> xmms-1.2.7-r21.ebuild:
   Removing previous revision, patch needs more work - it breaks things.
@@ -12,6 +12,10 @@
   Submitted by: Christoph Richter <toph@abi2ooo.org>
 
 *xmms-1.2.7-r21 (17 May 2003)
+
+  17 Jun 2003; Guy Martin <gmsoft@gentoo.org> xmms-1.2.7-r21.ebuild :
+  Readded xmms-1.2.7-r21 from xmms-1.2.7-r20 but with ipv6 support for
+  non x86 arch. Fix #21830.
 
   17 May 2003; jje <jje@gentoo.org> xmms-1.2.7-r21.ebuild:
   Fix for people booting with gentoo=nodevfs - conditional setup defaults.
