@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.32.ebuild,v 1.5 2004/10/16 23:57:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.32.ebuild,v 1.6 2004/12/20 11:17:03 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,6 @@ KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~hppa"
 IUSE=""
 
 DEPEND="${DEPEND}
+		<dev-perl/Test-Simple-0.48
 		dev-perl/locale-maketext
 		dev-perl/regexp-common"

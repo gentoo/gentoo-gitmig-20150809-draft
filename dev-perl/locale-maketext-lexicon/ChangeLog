@@ -1,6 +1,18 @@
 # ChangeLog for dev-perl/locale-maketext-lexicon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/ChangeLog,v 1.7 2004/06/25 00:43:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/ChangeLog,v 1.8 2004/12/20 11:17:03 mcummings Exp $
+
+*locale-maketext-lexicon-0.46 (20 Dec 2004)
+
+  20 Dec 2004; Michael Cummings <mcummings@gentoo.org>
+  locale-maketext-lexicon-0.46.ebuild:
+  newer version; supports newer test-simple package api
+
+  20 Dec 2004; Michael Cummings <mcummings@gentoo.org>
+  locale-maketext-lexicon-0.32.ebuild, locale-maketext-lexicon-0.35.ebuild,
+  locale-maketext-lexicon-0.38.ebuild:
+  Bitten by the change in API's for Test-Simple. Forcing a dep on the older
+  Test-Simple package.
 
 *locale-maketext-lexicon-0.38 (06 Jun 2004)
 
