@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: tools@cvs.gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.1-r1.ebuild,v 1.1 2001/08/16 04:20:33 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.1-r1.ebuild,v 1.2 2001/11/16 05:53:55 drobbins Exp $
 
 S=${WORKDIR}/Python-${PV}
 DESCRIPTION="A really great language"
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install() {                 
     dodir /usr            
-    try make install prefix=${D}/usr
+    try make prefix=${D}/usr install
 	rm ${D}/usr/bin/python
 	dosym python2.1 /usr/bin/python
 #    mv ${D}/bin/python1.5 ${D}/bin/spython1.5
