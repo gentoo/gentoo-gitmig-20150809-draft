@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.3 2002/07/09 20:13:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.4 2002/07/10 13:45:38 aliz Exp $
 
 EGCSDATE=`echo $P| sed -e 's/egcs64-sparc-\([0-9]*\).*/\1/'`
 EGCSVER=2.92.11
@@ -11,6 +11,8 @@ DESCRIPTION="sparc64 crosscompiler for building sparc64 kernels on sparc32"
 SRC_URI="http://ftp.us.debian.org/debian/dists/stable/main/source/devel/${A}"
 HOMEPAGE="http://www.rocklinux.de/projects/sparc/sparc.html"
 LICENSE="GPL-2 LGPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 #RDEPEND="virtual/glibc"
 #MYCHOST=`echo $CHOST | sed 's/sparc-/sparc64-/'`

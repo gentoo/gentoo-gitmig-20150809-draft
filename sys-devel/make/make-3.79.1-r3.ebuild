@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r3.ebuild,v 1.3 2002/07/09 20:13:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r3.ebuild,v 1.4 2002/07/10 13:45:39 aliz Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,6 +9,8 @@ DESCRIPTION="Standard tool to compile source trees"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/make/${A}"
 HOMEPAGE="http://www.gnu.org/software/make/make.html"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"

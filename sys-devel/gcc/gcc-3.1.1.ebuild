@@ -27,6 +27,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}-20020701.tar.bz2
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc 
