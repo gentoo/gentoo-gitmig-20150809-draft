@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.3 2003/10/09 08:57:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.4 2003/10/09 15:11:24 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -25,6 +25,12 @@ INHERITED="$INHERITED $ECLASS"
 python_disable_pyc() {
 	export PYTHON_DONTCOMPILE=1
 }
+
+python_enable_pyc() {
+	unset PYTHON_DONTCOMPILE
+}
+
+python_disable_pyc
 
 #
 # name:   python_version
@@ -115,10 +121,10 @@ python_mod_compile() {
 #         python_mod_optimize ${ROOT}usr/share/codegen
 #
 python_mod_optimize() {
-	einfo "Byte Compiling Python modules .."
 	python_version
-	echo ${PYVER}
-	python ${ROOT}usr/lib/python${PYVER}/compileall.py $@
+	einfo "Byte Compiling Python modules for ${PYVER} .."
+	python ${ROOT}usr/lib/python${PYVER}/compileall.py -q $@
+	python -O ${ROOT}usr/lib/python${PYVER}/compileall.py -q $@
 }
 
 #
