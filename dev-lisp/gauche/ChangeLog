@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/gauche
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/ChangeLog,v 1.12 2004/02/04 13:24:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/ChangeLog,v 1.13 2004/02/06 09:35:58 hattya Exp $
+
+*gauche-0.7.4.1 (06 Feb 2004)
+
+  06 Feb 2004; Akinori Hattori <hattya@gentoo.org> gauche-0.7.4.1.ebuild:
+  Version bumped.
 
   04 Feb 2004; Akinori Hattori <hattya@gentoo.org> gauche-0.5.7.ebuild,
   gauche-0.6.ebuild, gauche-0.7.1.ebuild, gauche-0.7.2.ebuild,
