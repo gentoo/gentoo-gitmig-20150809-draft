@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.0-r1.ebuild,v 1.1 2004/01/06 21:48:33 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.2-r1.ebuild,v 1.1 2004/02/18 21:12:04 plasmaroo Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV}
@@ -42,6 +42,7 @@ src_unpack() {
 	eend $?
 
 	epatch ${FILESDIR}/${PN}-2.6.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}-2.6.munmap.patch || die "Failed to apply munmap patch!"
 
 	unset ARCH
 	# Sometimes we have icky kernel symbols; this seems to get rid of them

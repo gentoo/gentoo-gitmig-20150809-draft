@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.23-r1.ebuild,v 1.2 2004/01/07 00:16:47 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.23-r2.ebuild,v 1.1 2004/02/18 21:12:04 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -35,6 +35,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
 	epatch ${FILESDIR}/${PN}-2.4.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+	epatch ${FILESDIR}/${PN}-2.4.munmap.patch || die "Failed to apply munmap patch!"
 
 	kernel_universal_unpack
 
