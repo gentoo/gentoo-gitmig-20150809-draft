@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.6-r1.ebuild,v 1.1 2004/01/15 22:57:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.6-r1.ebuild,v 1.2 2004/02/06 06:53:30 usata Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://ctwm.free.lp.se/dist/${P}.tar.gz
 HOMEPAGE="http://ctwm.free.lp.se/"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="MIT"
 
 DEPEND="virtual/x11"
