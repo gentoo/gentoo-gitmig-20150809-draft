@@ -145,12 +145,19 @@
 	</table>
 	</td></tr></table>
 
-	<?php if ( $leader ) { ?>
+	<?php
+	$admin = mysql_query( "select admin from users where uid=$uid" );
+	list( $admin ) = mysql_fetch_row( $admin );
+	if ( $leader || $admin ) { ?>
 	<br>
 	<table border=0 cellpadding=1 cellspacing=0 width=175 bgcolor="black"><tr><td>
 	<table border=0 cellpadding=3 cellspacing=0 width="100%" bgcolor="white">
 	<tr>
-		<td><p>You are a leader of <?=$team;?>! Click <a href="teamedit.php?gid=<?=$team_num;?>">here</a> to edit the team info.</p></td>
+		<?php if ( $leader ) { ?>
+		<td><p>You're a leader of the <?=$team;?> team! Click <a href="teamedit.php?gid=<?=$team_num;?>">here</a> to edit the team info.</p></td>
+		<?php } else { ?>
+		<td><p>You're an admin! Click <a href="teamedit.php?gid=<?=$team_num;?>">here</a> to edit the <?=$team;?> team info.</p></td>
+		<?php } ?>
 	</tr>
 	</table>
 	</td></tr></table>

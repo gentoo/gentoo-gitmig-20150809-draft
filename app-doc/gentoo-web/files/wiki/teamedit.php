@@ -48,7 +48,7 @@ list( $summary, $status ) = mysql_fetch_row( $info );
 	<b>Status:</b><br>
 	<textarea name="status" rows=10 cols=60><?=$status;?></textarea>
 </p>
-<p><input type="submit" value="Submit Changes"></p>
+<p><input type="hidden" name="gid" value="<?=$gid;?>"><input type="submit" value="Submit Changes"></p>
 </form>
 
 <?php
