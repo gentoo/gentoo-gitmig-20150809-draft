@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.8.0.ebuild,v 1.9 2005/01/22 06:34:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.8.0.ebuild,v 1.10 2005/04/02 04:59:28 geoman Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.prettypeople.org/~iain/gnome-media/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="x86 ppc sparc amd64 alpha hppa ia64 ~mips"
+KEYWORDS="x86 ppc sparc amd64 alpha hppa ia64 mips"
 IUSE="oggvorbis mad"
 
 RDEPEND=">=dev-libs/glib-2

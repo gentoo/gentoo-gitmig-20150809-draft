@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.71 2005/03/21 22:44:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.72 2005/04/02 04:59:28 geoman Exp $
+
+  02 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
+  gnome-media-2.8.0.ebuild:
+  stable on mips
 
   21 Mar 2005; foser <foser@gentoo.org> gnome-media-2.10.0.ebuild :
   Add cdparanoia dep (#85595)

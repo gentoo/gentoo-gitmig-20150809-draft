@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.54 2005/03/09 05:33:12 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.55 2005/04/02 04:52:20 geoman Exp $
+
+  02 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
+  gconf-editor-2.8.2.ebuild:
+  stable on mips
 
 *gconf-editor-2.10.0 (08 Mar 2005)
 
