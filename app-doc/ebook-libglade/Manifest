@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5c352c94e58b24530a30065f08e07b29 ChangeLog 465
 MD5 bf69fd77742a1f6ea8208d229a2c1959 ebook-libglade-1.0.ebuild 344
-MD5 299365502f9bcae51b4f81a187679712 ChangeLog 445
 MD5 568a820f62b631041aec187e0075823f files/digest-ebook-libglade-1.0 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0H+I1lqEGTUzyQRAvg3AJwI5R/754/7msixkURTms1d5rJUnQCgl8YB
+hhLrntiKbM/QubDJyS/qM/g=
+=uPYa
+-----END PGP SIGNATURE-----

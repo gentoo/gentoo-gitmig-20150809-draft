@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c31ad6745afb63b00f6f2fc33d0b6a21 ChangeLog 556
 MD5 92c05ce4844810ab16fb0dfb4053adf8 ebook-gdk-pixbuf-1.0.ebuild 345
-MD5 33ccc936e270ed8634eb3b221f41dc12 ChangeLog 633
 MD5 7721fc142c98e4cec8c910351b17f41f ebook-gdk-pixbuf-2.0.ebuild 331
 MD5 923745d45ef9ff5346c8777de4264e18 files/digest-ebook-gdk-pixbuf-1.0 61
 MD5 157bc270312b9dc09d3d8148c672b437 files/digest-ebook-gdk-pixbuf-2.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0KAI1lqEGTUzyQRArgnAKC0if1xC0F1X0VUBmBoedOoJuAo0ACgyCpp
+wZULu9Yyqi6B1Ues8ZVACks=
+=8UjJ
+-----END PGP SIGNATURE-----

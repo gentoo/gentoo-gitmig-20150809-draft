@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb497538bf9a8cebca9344b02bb57948 ChangeLog 497
 MD5 cb5ad0d7144cea9418a76be4a959b42e ebook-pygtk-2.0.ebuild 347
-MD5 6bc5b5f7a6c1a9cf8510fd8e70dfe573 ChangeLog 480
 MD5 ec948525ab5eadc565113143a814f8a4 files/digest-ebook-pygtk-2.0 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0FtI1lqEGTUzyQRAs/OAKCOBM/+vUvAgFdUOuMxTggM4LIoOgCg1Ujk
+3FCZtptP+yNp1uJ/WR3Bf6k=
+=XYQq
+-----END PGP SIGNATURE-----

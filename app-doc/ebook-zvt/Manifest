@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 962758c4f7c84912e2636aa77191ecb7 ChangeLog 439
 MD5 e8e38bd6cf0887a958e3820b5028d345 ebook-zvt-1.2.ebuild 317
-MD5 cf1a9acd62581a45564d8b2a78ed9c5e ChangeLog 424
 MD5 ee22ab6acf1c03deb031830f9c71a8b4 files/digest-ebook-zvt-1.2 54
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0NRI1lqEGTUzyQRAqpbAJ9mt6aNk6tYldJA11+bv0M0Czp0FQCfcRY3
+4WaJAEQlf2aYvE7DQJ7okiQ=
+=ljhP
+-----END PGP SIGNATURE-----

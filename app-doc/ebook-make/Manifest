@@ -1,5 +1,15 @@
-MD5 2b7b4df312d5be2e7b0de11ca3e6171e ebook-make-3.79.1.ebuild 332
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4d1f20a8043167a8f96328fb4b23e285 ChangeLog 571
 MD5 f6c0c96d5b3d7f8cfe3647bf5bfad99b ebook-make-3.71.ebuild 325
-MD5 ccf0d72d9b358ee9281588d8e77bcb8a ChangeLog 555
-MD5 f838053d5acf0b5ac5a764aa0f4de827 files/digest-ebook-make-3.79.1 60
+MD5 2b7b4df312d5be2e7b0de11ca3e6171e ebook-make-3.79.1.ebuild 332
 MD5 eb869e5a2acdb34420c0b31acd590277 files/digest-ebook-make-3.71 56
+MD5 f838053d5acf0b5ac5a764aa0f4de827 files/digest-ebook-make-3.79.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0HSI1lqEGTUzyQRArxeAJ92ZjbW2rDYfO2Kun8XcbqVr+Ps6gCfQfvx
+BOEpZod1qOJ9bjjrGaSfsaU=
+=b40K
+-----END PGP SIGNATURE-----

@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8dae5f1f7e18b5846e975c22add5d6dd ChangeLog 725
+MD5 d0066d52b4dfe76320d2b31deb9527a0 ebook-automake-1.4.ebuild 338
 MD5 488361544f7fddeebbef4dd5719e0480 ebook-automake-1.6.3.ebuild 307
 MD5 da9f8691da4fe848cac9211691276b48 ebook-automake-1.7.ebuild 303
-MD5 d0066d52b4dfe76320d2b31deb9527a0 ebook-automake-1.4.ebuild 338
-MD5 8732cf0dc2f95622dd0b9e877dcaabb5 ChangeLog 705
 MD5 79b811479ef169fc63f01311d678e4ac files/digest-ebook-automake-1.4 59
-MD5 8aefa9f4a75ed0f8cfc31cb374a8a6b3 files/digest-ebook-automake-1.7 60
 MD5 8b28fb9c8b144a6c5a0360d1dec052fb files/digest-ebook-automake-1.6.3 62
+MD5 8aefa9f4a75ed0f8cfc31cb374a8a6b3 files/digest-ebook-automake-1.7 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0OkI1lqEGTUzyQRAlyqAJ9Seo8l0FtjGXlvdZV2oQRfVHbiXwCbBlnz
+CN9fkJLBje1QgBmqGOLO3CY=
+=3nKy
+-----END PGP SIGNATURE-----

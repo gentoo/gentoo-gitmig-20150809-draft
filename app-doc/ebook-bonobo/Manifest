@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd9c463da11de3dbdc14c806a9385c09 ChangeLog 451
 MD5 c3244ae0bcbf975f874fd73d6f6797f8 ebook-bonobo-1.0.ebuild 325
-MD5 fd62c1822cde154d65fdea990c6450da ChangeLog 433
 MD5 6783906c64970e9f801dc81fbc84e176 files/digest-ebook-bonobo-1.0 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0KpI1lqEGTUzyQRAk8XAJ43Kg7VNJcAo2AtX9PXznkT4kOnYQCfccB3
+hJHJ7nj05WNKSFMFGt02CuA=
+=MW9c
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
-MD5 0de19ba40dde5364d53087c68adf6f38 ebook-autoconf-2.53a.ebuild 307
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd719ea7d41e1705e52a1c1923f272e2 ChangeLog 594
 MD5 95cc37bca93d78d96d55323c89d9c4a9 ebook-autoconf-2.13.ebuild 380
-MD5 9fcaf289bc1f55666032fa898cb6eb0b ChangeLog 574
-MD5 188810b8a7811ea1456531f6a5004b77 files/digest-ebook-autoconf-2.53a 63
+MD5 0de19ba40dde5364d53087c68adf6f38 ebook-autoconf-2.53a.ebuild 307
 MD5 1c067c82a1a5f98376d20cefc84c0671 files/digest-ebook-autoconf-2.13 59
+MD5 188810b8a7811ea1456531f6a5004b77 files/digest-ebook-autoconf-2.53a 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0N3I1lqEGTUzyQRAvuGAKCckiLVHw7SGwD4vpU9JfFFWPSGdACbBnOQ
+X9/c5PMHqZrXU1fQPf2ozSU=
+=sDVl
+-----END PGP SIGNATURE-----
