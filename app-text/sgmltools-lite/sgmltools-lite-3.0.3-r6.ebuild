@@ -1,17 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.8 2003/11/16 18:06:46 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.9 2004/04/26 12:17:01 obz Exp $
 
 inherit sgml-catalog
 
-S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
 		 mirror://sourceforge/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
 HOMEPAGE="http://sgmltools-lite.sourceforge.net/"
-SLOT="0"
 LICENSE="GPL-2"
 DESCRIPTION="Python interface to SGML software specificially in a
 DocBook/OpenJade environment.  Provides sgml2{html,txt,rtf,dvi,ps}"
+
+SLOT="0"
+IUSE=""
+KEYWORDS="x86 ppc sparc alpha amd64"
 
 DEPEND="virtual/python
 	app-text/sgml-common
@@ -20,8 +22,6 @@ DEPEND="virtual/python
 	app-text/jadetex
 	app-text/openjade
 	net-www/lynx"
-
-KEYWORDS="x86 ppc sparc alpha amd64"
 
 src_compile() {
 	./configure 	\
