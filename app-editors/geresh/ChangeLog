@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/geresh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/geresh/ChangeLog,v 1.4 2004/06/24 21:54:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/geresh/ChangeLog,v 1.5 2004/11/22 05:03:50 vapier Exp $
+
+  22 Nov 2004; Mike Frysinger <vapier@gentoo.org> geresh-0.4.1.ebuild:
+  Use standard make install DESTDIR stuff.
 
   13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> geresh-0.4.1.ebuild:
   Don't assign default to S; header fix
