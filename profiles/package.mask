@@ -55,11 +55,6 @@ gnome-base/glibwww
 # conflict with linux-sources, to be resolved soon
 sys-kernel/linux-sources-vanilla
 
-# unstable release
-#>=kde-base/kde-env-2.2
->=kde-base/kdelibs-2.2_beta1
->=kde-base/kdebase-2.2_beta1
-
 # in development
 >=sys-devel/gcc-2.96
 
