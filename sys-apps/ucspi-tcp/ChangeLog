@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.25 2004/08/29 15:27:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.26 2004/08/30 03:20:42 tgall Exp $
+
+  29 Aug 2004; Tom Gall <tgall@gentoo.org> ucspi-tcp-0.88-r8.ebuild:
+  stable on ppc64, bug #61744
 
   29 Aug 2004; Mike Frysinger <vapier@gentoo.org> ucspi-tcp-0.88-r8.ebuild:
   Provide virtual/inetd #62032 by Sascha Silbe.
