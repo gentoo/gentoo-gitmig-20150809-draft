@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9.ebuild,v 1.4 2005/01/09 11:30:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9.ebuild,v 1.5 2005/01/10 18:47:54 wolf31o2 Exp $
 
 IUSE="cdr"
 MY_PV=${PV}-1
@@ -9,7 +9,7 @@ HOMEPAGE="http://pxes.sourceforge.net"
 SRC_URI="mirror://sourceforge/pxes/${PN}-base-i586-${MY_PV}.tar.gz
 	mirror://sourceforge/pxes/pxesconfig-${MY_PV}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64"
 
 SLOT="0"
 LICENSE="GPL-2"
