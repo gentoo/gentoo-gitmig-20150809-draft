@@ -1,16 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.0_rc1.ebuild,v 1.6 2003/10/11 16:34:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.0.ebuild,v 1.1 2003/10/14 13:17:24 caleb Exp $
 
 inherit kde
 need-qt 3.1
 
-MY_P=${P/_rc/-rc}
-S=${WORKDIR}/${MY_P}
-
 DESCRIPTION="QtParted is a nice Qt partition tool for Linux"
 HOMEPAGE="http://qtparted.sourceforge.net"
-SRC_URI="mirror://sourceforge/qtparted/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/qtparted/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
