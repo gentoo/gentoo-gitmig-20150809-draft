@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/files/ruby-config.sh,v 1.2 2004/01/30 07:50:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/files/ruby-config.sh,v 1.3 2004/07/14 22:04:35 agriffis Exp $
 
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 
