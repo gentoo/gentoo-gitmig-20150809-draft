@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.5 2003/09/12 16:48:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.6 2003/12/09 18:09:02 lanius Exp $
 
 inherit gcc
 
@@ -21,10 +21,10 @@ DEPEND=">=dev-lang/python-2.2.1-r2
 	>=sys-apps/texinfo-4.2-r5
 	>=sys-devel/flex-2.5.4a-r5
 	doc? ( >=app-text/mftrace-1.0.8
-		>=app-text/ghostscript-7.05.5
+		virtual/ghostscript
 		>=media-libs/netpbm-9.12-r2 )"
 RDEPEND=">=dev-util/guile-1.4-r3
-	>=app-text/ghostscript-7.05.5
+	virtual/ghostscript
 	>=app-text/tetex-1.0.7-r10
 	>=dev-lang/python-2.2.1-r2"
 

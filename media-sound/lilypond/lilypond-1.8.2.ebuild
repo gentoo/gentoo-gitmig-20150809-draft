@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.8.2.ebuild,v 1.2 2003/12/03 16:04:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.8.2.ebuild,v 1.3 2003/12/09 18:09:03 lanius Exp $
 
 IUSE="doc nopfa"
 
@@ -24,11 +24,11 @@ DEPEND=">=dev-lang/python-2.2.3-r1
 	!nopfa? ( >=app-text/mftrace-1.0.19 )
 	doc? ( media-gfx/imagemagick
 		>=app-text/mftrace-1.0.19
-		>=app-text/ghostscript-7.05.6-r3
+		virtual/ghostscript
 		>=media-libs/netpbm-9.12-r4 )"
 
 RDEPEND=">=dev-util/guile-1.6.4
-	>=app-text/ghostscript-7.05.6-r3
+	virtual/ghostscript
 	>=app-text/tetex-1.0.7-r12
 	>=dev-lang/python-2.2.3-r1"
 

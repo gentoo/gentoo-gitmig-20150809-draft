@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.15 2003/12/03 16:04:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.16 2003/12/09 18:09:00 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> lilypond-1.6.6.ebuild,
+  lilypond-1.6.9.ebuild, lilypond-1.8.2.ebuild, lilypond-2.0.0.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
   03 Dec 2003; Aron Griffis <agriffis@gentoo.org> lilypond-1.8.2.ebuild:
   Stable on alpha and x86
