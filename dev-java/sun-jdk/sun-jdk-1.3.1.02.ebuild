@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1-r3.ebuild,v 1.1 2002/04/09 22:13:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.02.ebuild,v 1.1 2002/04/24 20:03:49 karltk Exp $
 
 At="j2sdk-1_3_1_02-linux-i386.bin"
 S=${WORKDIR}/jdk1.3.1_02
