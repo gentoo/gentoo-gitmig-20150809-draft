@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/bluej-1.3.5.ebuild,v 1.4 2004/06/24 22:18:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/bluej-bin-1.3.5.ebuild,v 1.1 2004/07/30 19:10:17 axxo Exp $
 
 inherit java-pkg
 
 IUSE="doc"
 
-MY_P=`echo ${P}|sed -e 's/\.//g'`
-
+MY_P=${P//.}
+MY_P=${MY_P/-bin}
 DESCRIPTION="BlueJ is an integrated Java environment specifically designed for introductory teaching."
 SRC_URI="http://www.bluej.org/download/files/${MY_P}.jar
 	 doc? ( http://www.bluej.org/tutorial/tutorial.pdf
@@ -31,9 +31,7 @@ src_unpack()
 	unzip ${S}/Installer.class -d ${S}
 }
 
-src_compile() {
-	einfo "No compilation required"
-}
+src_compile() { :; }
 
 src_install()
 {
