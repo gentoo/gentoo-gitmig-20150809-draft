@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.6 2003/11/12 20:28:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.7 2004/03/04 18:53:40 usata Exp $
 
 inherit cannadic
 
@@ -8,7 +8,7 @@ IUSE="canna"
 
 DESCRIPTION="Japanese Canna dictionary for 2channelers"
 HOMEPAGE="http://omaemona.sourceforge.net/packages/Canna/"
-SRC_URI="http://dev.gentoo.org/~usata/distfiles/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 #SRC_URI="http://omaemona.sourceforge.net/packages/Canna/2ch.t"
 
 LICENSE="public-domain"
