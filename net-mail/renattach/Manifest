@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4821c19c6bb72e3366ef45d4b9c7a806 metadata.xml 352
+MD5 4f6137b6a202265fe16a393029846ac7 renattach-1.2.2.ebuild 753
+MD5 ba44fab5fa69508cf90cf9c41e1be804 ChangeLog 358
+MD5 2db7f3be7e5b698b12efef1505e48dec files/digest-renattach-1.2.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLLobgMUyd/cdjWsRAjBqAKCTPDEOZeQrDKigwalw7nEukmP71gCfZ/NL
+U72sAEYevg+vdIoxWjpP8pU=
+=8ZW/
+-----END PGP SIGNATURE-----
