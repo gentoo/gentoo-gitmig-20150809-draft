@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/proj
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/ChangeLog,v 1.1 2002/12/16 20:21:20 george Exp $
+
+*proj-4.4.5.ebuild (16 ‰≈À 2002)
+
+  16 ‰≈À 2002; George Shapovalov <george@gentoo.org> ChangeLog, proj-4.4.5.ebuild, files/digest-proj-4.4.5 :
+  initial release
+  cartographic projections library
+  ebuild submitted by Nathaniel C. Domingo <nathaniel.domingo@upd.edu.ph>
