@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 68ff58a2c9237ecc80a013841dfd1b5e ChangeLog 1015
-MD5 d06bcae979f6ab4c0bd5b36d2df5260a entrance-0.9.0.20041226.ebuild 2517
+MD5 bda99c1c1191d1c84800afe6a3115b9e entrance-0.9.0.20050116.ebuild 2499
 MD5 088d07394fa8372e79b7757075ea4a7d metadata.xml 515
-MD5 8e84124e92bc6b227f63790f5ff64dff entrance-9999.ebuild 2489
-MD5 a3887b02b2e4a19f8e96cfb0e3be3d34 files/digest-entrance-0.9.0.20041226 142
+MD5 7c1f50b2f7b7e2f4731d2685f567efd4 entrance-9999.ebuild 2489
+MD5 2f36b3ba720a7afd6b0905b5516c93f1 files/digest-entrance-0.9.0.20050116 142
 MD5 8c2c9320269ef791ea0b6a00729a9104 files/digest-entrance-9999 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFBzzfRroRuSHgZdywRAkFgAJ9kE4VYwVQm2a4IHIbAddlXhYpQRgCeK3EY
-Et0rjIkJyKXBSOAoCLEvQTU=
-=DmGY
+iD8DBQFB60gqroRuSHgZdywRArkvAJ4lopk386hqa7tonpAS9TbEYwZbwACfWb2c
+nACIG1DsjNtDv2ZSr5c5HDo=
+=KRZa
 -----END PGP SIGNATURE-----

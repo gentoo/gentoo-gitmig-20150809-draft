@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 28e6df93796ba296c36614aad2095363 ChangeLog 449
 MD5 156f5c0fef6f57c39e6cb18600811664 metadata.xml 581
-MD5 9793c7635bdbdf9e985b5852b5b62dcf iconbar-0.9.1.20041031.ebuild 564
-MD5 1c84adcbd79e9c44f11b2e687cf644f4 files/digest-iconbar-0.9.1.20041031 75
+MD5 7c742ad2e3f0ca4a6053057fe677b006 iconbar-0.9.1.20050116.ebuild 564
+MD5 b05ca73203055b680bcd4ce32821aada files/digest-iconbar-0.9.1.20050116 75
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFBhxHAHTu7gpaalycRAsXsAKDKkwr6UfrIZdmB4GdDzB9wCxg9ZgCgxDLY
-ek7jHeMcSbDN9mmVaAVNMBs=
-=Qtlc
+iD8DBQFB60ioroRuSHgZdywRAit0AJ9yqUMgnYZ4tX9AILAtgSP8XKTrhACeO0HZ
+pAPm2V3ZurKFVtIwd46Pfak=
+=NI7t
 -----END PGP SIGNATURE-----
