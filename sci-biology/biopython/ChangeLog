@@ -1,0 +1,59 @@
+# ChangeLog for app-sci/biopython
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.1 2004/12/23 22:16:34 ribosome Exp $
+
+*biopython-1.23 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +biopython-1.10.ebuild, +biopython-1.21.ebuild, +biopython-1.23.ebuild,
+  +biopython-1.24.ebuild, +biopython-1.30.ebuild:
+  Moved from app-sci/biopython to sci-biology/biopython.
+
+  13 Dec 2004; Jason Wever <weeve@gentoo.org> biopython-1.24.ebuild:
+  Stable on sparc.
+
+*biopython-1.30 (07 Oct 2004)
+
+  07 Oct 2004; George Shapovalvo <george@gentoo.org> biopython-1.30.ebuild :
+  new version (#51833)
+  amd64 has problems with KDTree, will try to look into this more later
+
+  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> biopython-1.24.ebuild:
+  Stable on alpha.
+
+  03 Apr 2004; Peter Bienstman <pbienst@gentoo.org> biopython-1.24.ebuild:
+  Marked stable on x86
+
+*biopython-1.24 (29 Feb 2004)
+
+  29 Feb 2004; Peter Bienstman <pbienst@gentoo.org> biopython-1.24.ebuild :
+  version bump
+
+*biopython-1.23 (30 Dec 2003)
+
+  29 Feb 2004; Peter Bienstman <pbienst@gentoo.org> biopython-1.23.ebuild :
+  marked stable on x86
+
+  30 Dec 2003; George Shapovalvo <george@gentoo.org> biopython-1.23.ebuild :
+  new version, reworked to use distutils. Thanks to 
+  Peter Bienstman <Peter.Bienstman@rug.ac.be> for an update (#35727)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> biopython-1.10.ebuild,
+  biopython-1.21.ebuild:
+  moved dev-python/Numeric to dev-python/numeric
+
+*biopython-1.21 (08 Aug 2003)
+
+  08 Aug 2003; George Shapovalov <george@gentoo.org> biopython-1.21.ebuild :
+  new version, added few docs (#25428)
+  thanks to Daniel Jaeggi <daniel@jaeggi.co.uk> for notification
+
+  04 Jul 2003; Alastair Tse <liquidx@gentoo.org> biopython-1.10.ebuild:
+  renamed reportlab dep
+
+*biopython-1.10 (18 Feb 2003)
+
+  18 Feb 2003; George Shapovalov <george@gentoo.org> ChangeLog, biopython-1.10.ebuild, files/digest-biopython-1.10 :
+  initial release (#11617)
+  Biopython - python module for Computational Moelcular Biology
+  ebuild submitted by Daniel Jaeggi <daniel@jaeggi.co.uk>
