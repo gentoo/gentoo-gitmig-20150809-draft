@@ -1,14 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20031223.ebuild,v 1.7 2004/08/15 09:17:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.1 2004/08/15 09:17:41 vapier Exp $
 
 inherit eutils games
 
-MY_P="cube_2003_12_23"
-
-DESCRIPTION="open source multiplayer and singleplayer first person shooter game"
-HOMEPAGE="http://www.cubeengine.com/"
-SRC_URI="mirror://sourceforge/cube/${MY_P}.zip"
+MY_PV="2004_05_22"
+MY_P=${PN}_${MY_PV}
+DESCRIPTION="Landscape-style engine that pretends to be an indoor first person shooter engine"
+HOMEPAGE="http://wouter.fov120.com/cube/"
+SRC_URI="mirror://sourceforge/cube/${MY_P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
@@ -33,31 +33,36 @@ src_unpack() {
 
 	cd ${S}/source
 	unzip -qn ${MY_P}_src.zip || die
+	epatch ${FILESDIR}/${PV}-compile-fixes.patch
 
-	cd ${MY_P}_src/src
+	cd src
 	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
 	echo "#define GAMES_DATADIR \"${CUBE_DATADIR}\"" >> tools.h
 	echo "#define GAMES_DATADIR_LEN ${#CUBE_DATADIR}" >> tools.h
 	sed -i \
 		-e "s:packages/:${CUBE_DATADIR}packages/:" \
 		renderextras.cpp rendermd2.cpp sound.cpp worldio.cpp \
-			|| die "fixing data path failed"
+		|| die "fixing data path failed"
 	# enable parallel make
 	sed -i \
-		-e 's/make -C/$(MAKE) -C/' Makefile \
-			|| die "sed Makefile failed"
+		-e 's/make -C/$(MAKE) -C/' \
+		Makefile \
+		|| die "sed Makefile failed"
 	edos2unix *.cpp
 }
 
 src_compile() {
-	cd source/${MY_P}_src/src
-	emake CXXOPTFLAGS="${CXXFLAGS}" || die "emake failed"
+	cd source/enet
+	chmod +x configure
+	econf || die "econf failed"
+	emake || die
+	cd ../src
+	emake CXXOPTFLAGS="-fpermissive ${CXXFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	dogamesbin source/${MY_P}_src/src/cube_{client,server} \
-		|| die "dogamesbin failed"
-	exeinto "${GAMES_LIBDIR}/${PN}"
+	dogamesbin source/src/cube_{client,server} || die "dogamesbin failed"
+	exeinto ${GAMES_LIBDIR}/${PN}
 	if [ "${ARCH}" == "x86" ] ; then
 		newexe bin_unix/linux_client cube_client
 		newexe bin_unix/linux_server cube_server
@@ -65,18 +70,16 @@ src_install() {
 		newexe bin_unix/ppc_linux_client cube_client
 		newexe bin_unix/ppc_linux_server cube_server
 	fi
-	dogamesbin ${FILESDIR}/cube_{client,server}-bin \
-		|| die "dogamesbin failed (bin)"
+	dogamesbin ${FILESDIR}/cube_{client,server}-bin || die "dogamesbin failed (bin)"
 	sed -i \
 		-e "s:GENTOO_DATADIR:${CUBE_DATADIR}:" \
 		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
 		${D}/${GAMES_BINDIR}/cube_{client,server}-bin
 
 	dodir ${CUBE_DATADIR}
-	cp -r *.cfg data packages ${D}/${CUBE_DATADIR} \
-		|| die "cp failed"
+	cp -r *.cfg data packages ${D}/${CUBE_DATADIR} || die "cp failed"
 
-	dodoc source/${MY_P}_src/src/CUBE_TODO.txt
+	dodoc source/src/CUBE_TODO.txt
 	dohtml -r docs/
 	prepgamesdirs
 }

@@ -1,8 +1,22 @@
-MD5 3aee14895f587d93118d7d6e583dbba5 cube-20031223.ebuild 2479
-MD5 d204a6923412caa347710ec8f027600b ChangeLog 981
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb0298dd16616e353b5a46f601232fb7 ChangeLog 1240
+MD5 a74725f4045bbbcf5723ee4c59b6ef0b cube-20031223.ebuild 2471
+MD5 59e6104504a6662b8a87d11a9d7af0ce cube-20040522.ebuild 2589
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f57600187e8eaa8d782ffd82c4aca198 files/cube-20021020-add-custom-paths.patch 1423
-MD5 fa21f6283022cf16fb521d15cd55b52d files/cube_server-bin 64
 MD5 d27138da021db62a9bf34a7ed5cc4cbb files/cube_client-bin 64
-MD5 1636e07fdf6a60dc5602818a61de0e37 files/digest-cube-20031223 66
+MD5 f57600187e8eaa8d782ffd82c4aca198 files/cube-20021020-add-custom-paths.patch 1423
 MD5 f57600187e8eaa8d782ffd82c4aca198 files/20031223-gentoo-paths.patch 1423
+MD5 fa21f6283022cf16fb521d15cd55b52d files/cube_server-bin 64
+MD5 aeaa776eba3ed9e2b7938d190a8361b1 files/digest-cube-20040522 69
+MD5 1636e07fdf6a60dc5602818a61de0e37 files/digest-cube-20031223 66
+MD5 0065c156760f7881f90a23993a89343d files/20040522-compile-fixes.patch 518
+MD5 f57600187e8eaa8d782ffd82c4aca198 files/20040522-gentoo-paths.patch 1423
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBHypxHTu7gpaalycRAs7VAJ0S5CcdrC2EZSsPZ6lfGSdudHb8cwCgtTTu
+CwiUHFqw2jBVu7sRHD/xGBI=
+=+SNu
+-----END PGP SIGNATURE-----
