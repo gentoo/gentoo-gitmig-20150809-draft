@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.5 2003/10/03 14:27:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.6 2003/10/21 16:07:00 mholzer Exp $
+
+  22 Oct 2003; Martin Holzer <mholzer@gentoo.org> kmyfirewall-0.4.5.ebuild,
+  kmyfirewall-0.9.4.ebuild, kmyfirewall-0.9.5.ebuild,
+  kmyfirewall-0.9.6.ebuild:
+  adding RESTRICT="nomirror"
 
   03 Oct 2003; Caleb Tennis <caleb@gentoo.org> kmyfirewall-0.9.6.ebuild:
   Supports something called Gentoo mode, so lets turn it on

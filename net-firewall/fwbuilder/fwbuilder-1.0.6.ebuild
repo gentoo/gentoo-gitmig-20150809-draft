@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.6.ebuild,v 1.5 2003/07/13 11:35:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.6.ebuild,v 1.6 2003/10/21 16:02:03 mholzer Exp $
 
 DESCRIPTION="A firewall GUI"
-SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://fwbuilder.sourceforge.net/"
+RESTRICT="nomirror"
 S=${WORKDIR}/${P}
 
 KEYWORDS="x86 sparc "
