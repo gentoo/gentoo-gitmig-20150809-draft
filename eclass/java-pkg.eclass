@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.15 2004/10/16 16:54:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.16 2004/10/16 21:32:09 axxo Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -255,6 +255,26 @@ java-pkg_jar-from()
 		return 1
 	fi
 }
+
+java-pkg_getjar() {
+	local pkg=$1
+	local jar=$2
+
+	for x in $(java-config --classpath=${pkg} | tr ':' ' '); do
+		if [ ! -f ${x} ] ; then
+			die "Installation problems with jars in ${pkg} - is it installed?"
+		elif [ "$(basename ${x})" == "${jar}" ] ; then
+			echo ${x}
+			return 0
+		fi
+	done
+	die "Could not find $2 in $1"
+}
+
+java-pkg_getjars() {
+	java-config --classpath=$1
+}
+
 
 java-pkg_dohtml() {
 	dohtml -f package-list $@
