@@ -1,0 +1,7 @@
+# This is the herds file. It provides the definitive list of herds. (In short,
+# herds are for ebuilds what teams like kde or sound are for developers.)
+# Format: comments are on lines starting with #. ':' is the delimiter.
+# First field is herd name, 2nd is description/comments (medium length). Any
+# additional fields are ignored.
+
+kde:Includes x11-libs/qt, kde-base/* and the kde-related eclasses.
