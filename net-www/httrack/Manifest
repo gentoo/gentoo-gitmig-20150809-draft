@@ -1,7 +1,0 @@
-MD5 5a33dcc9df7e83100a2aaaf02f558e78 ChangeLog 1527
-MD5 f92bc82f54d66932913caf9b788b3262 httrack-3.23.ebuild 1151
-MD5 daa50a1bed89ed16bbd394c241fd33c6 httrack-3.30.ebuild 1171
-MD5 b11d492b9098d230a18d1d59051d68e1 httrack-3.32.2.ebuild 738
-MD5 2d1981778d937bdda235adb91f403901 files/digest-httrack-3.23 64
-MD5 36573a44fc5c16e46aab2c991dac64ef files/digest-httrack-3.30 65
-MD5 b300cdb75d96c6d0184d6dae015e8fb3 files/digest-httrack-3.32.2 67

@@ -1,5 +1,5 @@
-MD5 4f552c28a73a4cf4dc30b981f4f31c2d ChangeLog 1256
-MD5 1ebc8cb33945a681a2972c93bee66ba8 khttrack-0.10.ebuild 636
+MD5 4fe20a3fb14eff1be3e560a27dc8e2d3 ChangeLog 1394
+MD5 0138873394bb1314775a9e19d66022ab khttrack-0.10.ebuild 644
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 b7559176556c585532688229e5222397 files/digest-khttrack-0.10 66
 MD5 7641fbc59a4910d2a24229ec84ed5c1c files/khttrack-0.10-configure-arts.patch 3131
