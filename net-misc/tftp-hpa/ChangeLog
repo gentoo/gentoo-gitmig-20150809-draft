@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tftp-hpa
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.3 2003/10/31 13:14:03 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.4 2004/03/22 04:33:29 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> tftp-hpa-0.34-r1.ebuild:
+  Marked stable on sparc.
 
   31 Oct 2003; Heinrich Wendel <lanius@gentoo.org> tftp-hpa-0.34-r1.ebuild,
   tftp-hpa-0.34.ebuild:
