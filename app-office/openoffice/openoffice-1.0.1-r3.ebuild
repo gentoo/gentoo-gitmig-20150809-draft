@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.5 2002/12/24 03:45:54 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.6 2003/01/12 19:57:53 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -171,6 +171,8 @@ oo_setup() {
 			fi
 		fi
 	fi
+
+	export JAVA_BINARY="`which java`"
 }
 
 src_unpack() {
@@ -193,13 +195,25 @@ src_unpack() {
 	# Get OO to build with gcc-3.2's libstdc++.so (Az)
 	if [ "$(gcc-version)" = "3.2" ]
 	then
-		if [ "$(gcc-fullversion)" = "3.2" ]
+		LIBLOCATION="/usr/lib"
+		if [ "${NEW_GCC}" -eq "1" ]
 		then
-			epatch ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.0.patch
+			LIBLOCATION=`gcc-config --get-lib-path`
+			LIBFILE=`readlink ${LIBLOCATION}/libstdc++.so`
+			LIBVERSION=`echo ${LIBFILE} | sed -e 's|libstdc++\.so\.||g'`
+			sed -e "s|<libversion>|${LIBVERSION}|g" \
+				${FILESDIR}/${PV}/${P}-use-libstdc++-generic.patch > \
+				${T}/${P}-use-libstdc++-${LIBVERSION}.patch
+			epatch ${T}/${P}-use-libstdc++-${LIBVERSION}.patch
+		else
+			if [ "$(gcc-fullversion)" = "3.2" ]
+			then
+				epatch ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.0.patch
 			
-		elif [ "$(gcc-fullversion)" = "3.2.1" ]
-		then
-			epatch ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.1.patch
+			elif [ "$(gcc-fullversion)" = "3.2.1" ]
+			then
+				epatch ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.1.patch
+			fi
 		fi
 	fi
 
@@ -244,6 +258,9 @@ src_unpack() {
 	# New gcc layout use /usr/include/g++-v3/, and not /usr/include/g++-v32 ...
 	if [ "${NEW_GCC}" -eq "1" ]
 	then
+		perl -pi -e \
+			's|_gxx_include_start=/usr/include|_gxx_include_start=/usr/lib/gcc-lib|g' \
+			${S}/config_office/configure
 		epatch ${FILESDIR}/${PV}/${P}-use-STLport-4.5.3-newgcc.patch
 	else
 		epatch ${FILESDIR}/${PV}/${P}-use-STLport-4.5.3.patch
@@ -264,8 +281,9 @@ src_unpack() {
 		# Fix ./configure for gcc3 (Az)
 		perl -pi -e 's|CC --version|CC -dumpversion|g' \
 			${S}/config_office/configure
+	
 #		perl -pi -e "s|_gccincname1=\"g++-v3\"|_gccincname1=\"g++-v${incver/\.}\"|g" \
-#			${S}/config_office/configure
+#				${S}/config_office/configure
 
 		# Fix header not supporting 3.2 and up (Az)
 		perl -pi -e "s|__GNUC_MINOR__ == 0|__GNUC_MINOR__ == ${minver}|g" \
@@ -288,10 +306,12 @@ src_unpack() {
 	done
 
 	# Seth -- Dec 1 2002
-	if [ "$(echo ${JDK_HOME} | grep "jdk-1.4")" ]
+	if [ "$(echo ${JAVA_BINARY} | grep "jdk-1.4")" ]
 	then 
 	        epatch ${FILESDIR}/${PV}/${P}-fix-jdk-1.4.0.patch
+		epatch ${FILESDIR}/${PV}/${P}-xinteraction-fix.patch
 	fi
+
 
 }
 

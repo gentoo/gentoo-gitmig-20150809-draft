@@ -1,8 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.15 2002/12/24 03:43:21 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.16 2003/01/12 19:57:53 sethbc Exp $
 
 *openoffice-1.0.1-r3 (12 Dec 2002)
+
+  12 Jan 2003; Seth Chandler <sethbc@gentoo.org> openoffice-1.0.1-r3.ebuild
+  Fixed several java problems, as well as a generic fix for the libstdc++ 
+  stuff.  Should fix most of the open compile error bugs in bugzilla.
 
   23 Dec 2002; Seth Chandler<sethbc@gentoo.org> openoffice-1.0.1.ebuild-r3 :
   Put in an addpredict to predict writes to /user and /share (same fix
@@ -11,6 +15,8 @@
 
   12 Dec 2002; Martin Schlemmer <azarah@gentoo.org> openoffice-1.0.1.ebuild-r3 :
   Fix to work with a gcc-config enabled gcc ...
+
+*openoffice-1.0.1-r2 (02 Dec 2002)
 
   02 Dec 2002; Seth Chandler <sethbc@gentoo.org> openoffice-1.0.1-r2.ebuild:
   Add -r2 to portage.  I'm requiring jdk 1.4.0 becuase i'm not yet sure if 
