@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.6 2004/04/01 17:27:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.7 2004/04/10 08:07:35 vapier Exp $
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
 SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
 IUSE="alsa oss oggvorbis mad encode"
-KEYWORDS="x86 amd64 ~sparc"
 SLOT="0"
+KEYWORDS="x86 ppc ~sparc amd64"
 LICENSE="LGPL-2.1"
 
 DEPEND="virtual/glibc
@@ -30,17 +30,15 @@ src_compile () {
 	emake || die
 }
 
-src_install () {
-	into /usr
-	dobin sox play soxeffect soxmix
+src_install() {
+	dobin sox play soxeffect soxmix || die
 	doman sox.1 play.1 soxexam.1
-	dodoc Changelog Copyright README TODO *.txt
+	dodoc Changelog README TODO *.txt
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	# the rec binary doesnt exist anymore
-	if([ ! -e /usr/bin/rec ]) then
-		ln -s /usr/bin/play /usr/bin/rec
+	if [ ! -e ${ROOT}/usr/bin/rec ] ; then
+		ln -s /usr/bin/play ${ROOT}/usr/bin/rec
 	fi
 }
-
