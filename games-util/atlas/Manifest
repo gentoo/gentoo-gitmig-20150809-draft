@@ -1,7 +1,5 @@
 MD5 9d486bd924276a85ab4bf58ac289ca3c ChangeLog 873
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 5367215dffb36aab4af65b0c3141a344 atlas-0.2.2-r1.ebuild 1761
-MD5 471cdf6e789bde460b4d209ccd41d27a atlas-0.2.2.ebuild 1702
 MD5 db161652379b66290a05d4a6e3631032 files/0.2.2-fix.patch 664
-MD5 c22c70a726175c84565f4182fff72185 files/digest-atlas-0.2.2 63
 MD5 c22c70a726175c84565f4182fff72185 files/digest-atlas-0.2.2-r1 63
