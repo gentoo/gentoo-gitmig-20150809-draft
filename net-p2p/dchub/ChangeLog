@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dchub
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.3 2002/08/26 21:20:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.4 2002/11/05 19:29:05 aliz Exp $
+
+*dchub-0.2.2 (05 Nov 2002)
+
+  05 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
 *dchub-0.1.1 (19 Jul 2002)
 

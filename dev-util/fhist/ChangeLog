@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/fhist
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.1 2002/04/13 21:10:35 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.2 2002/11/05 19:29:05 aliz Exp $
+
+*fhist-1.10 (05 Nov 2002)
+
+  05 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
 *fhist-1.8 (13 Apr 2002)
 
