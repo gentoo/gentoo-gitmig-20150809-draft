@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre5.ebuild,v 1.1 2005/02/21 09:48:33 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre5.ebuild,v 1.2 2005/03/03 11:44:46 karltk Exp $
 
 inherit eutils java-utils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.eclipse.org/downloads/drops/S-3.1M5a-200502191500/${MY_
 IUSE="gtk motif gnome kde mozilla"
 SLOT="3.1"
 LICENSE="CPL-1.0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="|| ( >=virtual/jdk-1.4.2 =dev-java/blackdown-jdk-1.4.2* )
 	gtk? ( >=x11-libs/gtk+-2.2.4 )
