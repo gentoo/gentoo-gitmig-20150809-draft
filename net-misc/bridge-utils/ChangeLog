@@ -1,16 +1,13 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.4 2002/07/06 14:38:28 phoenix Exp $
 
-*bridge-utils-0.9.3-r1 (6 July 2002)
-  
+*bridge-utils-0.9.3-r1 (3 May 2002)
+
   6 Jul 2002; phoen][x <phoenix@gentoo.org> :
  
   Added KEYWORDS.
-  
-
-*bridge-utils-0.9.3-r1 (3 May 2002)
-  
+    
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
   
   Added LICENSE, SLOT.

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cidr/cidr-2.3.1.ebuild,v 1.3 2002/07/06 14:42:41 phoenix Exp $
 
 A=cidr-current.tar.gz
 S=${WORKDIR}/${PN}-2.3

@@ -1,15 +1,14 @@
 # ChangeLog for net-misc/aria
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.4 2002/07/06 14:33:02 phoenix Exp $
 
  
-*aria-0.10.0.ebuild (06 Jul 2002)
+*aria-0.10.0.ebuild (04 July 2002)
   
   06 Jul 2002; phoen][x <phoenix@gentoo.org> aria-0.10.0.ebuild : 
+
   Added KEYWORDS.
 
-*aria-0.10.0.ebuild (04 Jul 2002)
-  
   04 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> aria-0.10.0.ebuild : 
   
   Initial CVS import. Aria is a download manager with a GTK+ GUI.

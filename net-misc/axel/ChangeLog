@@ -3,11 +3,11 @@
 # $Header:
 
 
-*axel-1.0a (6 July 2002)
-  6 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog :
+*axel-1.0a (1 June 2002)
+  6 Jul 2002; phoen][x <phoenix@gentoo.org> axel-1.0a.ebuild :
+
   Added KEYWORDS.
 
-*axel-1.0a (1 June 2002)
   13 May 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog :
 
   Added initial ChangeLog which should be updated whenever the package is

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.3-r1.ebuild,v 1.3 2002/07/06 14:38:28 phoenix Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
