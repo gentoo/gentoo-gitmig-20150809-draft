@@ -1,0 +1,17 @@
+--- tedia2sql.orig	2003-11-12 00:42:55.000000000 +0100
++++ tedia2sql	2003-11-12 01:00:52.000000000 +0100
+@@ -1761,8 +1761,12 @@
+ 	if (open (RCFILE, "< $rcFileName")) {
+ 		# all is cool
+ 	} elsif ($rcFileName =~ /.*?\/(\w+)$/) {
+-		my $tryThisFile = $ENV{HOME} . "/.$1";
+-		open (RCFILE, "< $tryThisFile") || die "Can't open $rcFileName or $tryThisFile";
++		my $systemFile = "/etc/$1";
++		my $privateFile = "$ENV{HOME}/.$1";
++
++		open (RCFILE, "< $systemFile") || 
++		open (RCFILE, "< $privateFile") || 
++		die "Can't open $rcFileName or $systemFile or $privateFile";
+ 	} else {
+ 		die "Can't open $rcFileName and can't determine what the rcfile should be...";
+ 	}
