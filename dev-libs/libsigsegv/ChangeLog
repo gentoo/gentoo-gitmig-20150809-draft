@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigsegv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.9 2004/11/17 04:49:46 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.10 2004/11/17 06:05:05 mr_bones_ Exp $
+
+  16 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> -libsigsegv-2.0.ebuild:
+  clean older ebuild
 
   16 Nov 2004; Nick Dimiduk <ndimiduk@gentoo.org> libsigsegv-2.1.ebuild:
   Fixed bad inherit as per bug #71463.
