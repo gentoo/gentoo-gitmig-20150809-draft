@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.10 2003/02/12 09:50:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.11 2003/06/12 16:58:26 seemant Exp $
+
+  12 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  afterstep-1.8.11-r1.ebuild:
+  xfree provides xpm
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -13,7 +13,6 @@ IUSE="nls"
 DEPEND="virtual/glibc virtual/x11
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
-	>=media-libs/xpm-3.4k
 	x11-wm/gnustep-env"
 
 RDEPEND="${DEPEND}
