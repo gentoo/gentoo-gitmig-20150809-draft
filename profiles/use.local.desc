@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.259 2004/03/04 19:12:43 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.260 2004/03/05 02:14:34 zul Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -177,6 +177,7 @@ net-im/kadu:kadu-modules - Enables modules in kadu
 net-im/kadu:kadu-voice - Enables voice chat in kadu
 net-im/silc-toolkit:client - Enables silc client
 net-im/silc-toolkit:server - Enables silc server
+net-irc/unrealircd - Enables leaf node
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-libs/libnvcserver:no24bpp - disable 24bpp support
