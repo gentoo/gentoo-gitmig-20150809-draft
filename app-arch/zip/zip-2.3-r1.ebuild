@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r1.ebuild,v 1.11 2002/08/14 15:08:34 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r1.ebuild,v 1.12 2002/08/16 02:34:06 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Info ZIP"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${PN}23
 HOMEPAGE="ftp://ftp.freesoftware.com/pub/infozip/Zip.html"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="Info-ZIP"
 
 DEPEND="virtual/glibc"
