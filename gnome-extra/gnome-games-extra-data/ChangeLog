@@ -1,0 +1,9 @@
+# ChangeLog for gnome-extra/gnome-games-extra-data
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.1 2004/10/11 23:05:58 foser Exp $
+
+*gnome-games-extra-data-2.8.0 (12 Oct 2004)
+
+  12 Oct 2004; foser <foser@gentoo.org> gnome-games-extra-data-2.8.0.ebuild :
+  initial release
+  extra artwork for gnome-games
