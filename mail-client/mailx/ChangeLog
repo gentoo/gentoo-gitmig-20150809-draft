@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.29 2005/01/30 15:44:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.30 2005/01/30 22:00:06 weeve Exp $
+
+  30 Jan 2005; Jason Wever <weeve@gentoo.org>
+  mailx-8.1.2.20040524-r1.ebuild:
+  Stable on sparc wrt bug #80067.
 
   30 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
   mailx-8.1.2.20040524-r1.ebuild:
