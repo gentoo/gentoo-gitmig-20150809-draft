@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.37 2004/07/26 02:06:40 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.38 2004/07/26 14:26:44 alexander Exp $
+  
+  26 Jun 2004; Alexander Plank <alexander@gentoo.org> ocaml-3.07-r1.ebuild
+  add ranlib bit to ebuild and rekeyword macos (i tested it with unison) (thanks 
+Philippe Bouamriou for bug #57917 ))
 
   25 Jun 2004; Alexander Plank <alexander@gentoo.org> ocaml-3.07-r1.ebuild
   ~macos keyword (unison fails and cites ocaml problems)

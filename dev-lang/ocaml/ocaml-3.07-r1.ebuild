@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.17 2004/07/26 02:06:40 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.18 2004/07/26 14:26:44 alexander Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://caml.inria.fr/distrib/${P}/${P}.tar.gz
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc alpha ~ia64 ~amd64 hppa ~macos"
+KEYWORDS="x86 ~sparc ~ppc alpha ~ia64 ~amd64 hppa macos"
 IUSE="tcltk"
 
 DEPEND="virtual/libc
@@ -65,6 +65,22 @@ src_install() {
 }
 
 pkg_postinst() {
+	ranlib /usr/lib/ocaml/libasmrunp.a
+	ranlib /usr/lib/ocaml/libbigarray.a
+	ranlib /usr/lib/ocaml/libcamlrun.a
+	ranlib /usr/lib/ocaml/libgraphics.a
+	ranlib /usr/lib/ocaml/libmldbm.a
+	ranlib /usr/lib/ocaml/libnums.a
+	ranlib /usr/lib/ocaml/libstr.a
+	ranlib /usr/lib/ocaml/libthreads.a
+	ranlib /usr/lib/ocaml/libthreadsnat.a
+	ranlib /usr/lib/ocaml/libunix.a
+	ranlib /usr/lib/ocaml/libstr.a
+	ranlib /usr/lib/ocaml/str.a
+	ranlib /usr/lib/ocaml/unix.a
+	ranlib /usr/lib/ocaml/stdlib.a
+	ranlib /usr/lib/ocaml/libasmrun.a
+
 	echo
 	einfo "OCaml is not binary compatible from version to version,"
 	einfo "so you (may) need to rebuild all packages depending on it that"
