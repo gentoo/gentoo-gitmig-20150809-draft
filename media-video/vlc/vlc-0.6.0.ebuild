@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0.ebuild,v 1.3 2003/07/09 11:47:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0.ebuild,v 1.4 2003/07/16 08:03:37 raker Exp $
 
 # NOTE: Some ideas for version specifics, etc...  have been referenced 
 # from the videolan.org ebuild.  Thanks guys!
@@ -47,7 +47,8 @@ DEPEND="X? ( virtual/x11 )
 	>=media-libs/libdv-0.98
         >=media-libs/libdvbpsi-0.1.2
 	>media-video/ffmpeg-0.4.6
-	>media-libs/libmpeg2-0.3.1"
+	>media-libs/libmpeg2-0.3.1
+	>=media-video/mplayer-0.90"
 
 # vlc requires cvs-pulled builds of ffmpeg and libmpeg2
 # I have added these builds to portage as...

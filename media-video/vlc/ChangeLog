@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.22 2003/07/09 11:47:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.23 2003/07/16 08:03:37 raker Exp $
+
+  16 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0.ebuild:
+  Adding mplayer as a dependancy until the libpostproc issue is
+  figured out.  See bug #22811
 
   09 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0.ebuild:
   A little sed to change glide location from /usr/include/glide to
