@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.36 2004/05/11 15:47:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.37 2004/06/11 10:38:13 phosphan Exp $
+
+  11 Jun 2004; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.12-r2.ebuild, sane-backends-1.0.13-r1.ebuild,
+  sane-backends-1.0.13-r2.ebuild, sane-backends-1.0.13.ebuild,
+  sane-backends-1.0.14-r1.ebuild, sane-backends-1.0.14-r2.ebuild,
+  sane-backends-1.0.14-r3.ebuild, sane-backends-1.0.14.ebuild:
+  Big cleanup. 1.0.14-r2 stable for x86.
 
 *sane-backends-1.0.14-r3 (11 May 2004)
 
