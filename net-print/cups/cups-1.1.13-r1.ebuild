@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Donny Davies <woodchip@gentoo.org>
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.13.ebuild,v 1.1 2002/02/02 04:27:49 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.13-r1.ebuild,v 1.1 2002/02/08 16:58:29 drobbins Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -19,6 +19,15 @@ DEPEND="virtual/glibc
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
 RDEPEND="${DEPEND} !virtual/lpr"
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	# make sure libcupsimage gets linked with libjpeg
+	patch -p0 < ${FILESDIR}/configure-jpeg-buildfix.diff
+	# This patch is stillr required for 1.1.13 and closes bug #608
+	assert "bad patchfile"
+	autoconf || die
+}
 
 src_compile() {
 
