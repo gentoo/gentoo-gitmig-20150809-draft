@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9f87ac613a80a7970961076719e57990 ChangeLog 1844
 MD5 9a7703df2f9b9ec806f1a981f950bbca kgraphspace-0.3.0_pre1.ebuild 568
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
+MD5 3f68a09646fbb76ab4fdc9d7eabde56b ChangeLog 1847
 MD5 0c58d548c0e64f8bf92ae514770de156 files/digest-kgraphspace-0.3.0_pre1 75
 MD5 8aeb4c1ce5b9fab4d89167227f68d932 files/kgraphspace-0.3.0_pre1-configure.patch 3567
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhCZfI1lqEGTUzyQRAv71AJ4rQ3N5w0b+cIyQs74bhvgfo14frwCgkHUP
-Ia+iTdq7VqvtkUYEVwxYFmk=
-=nO09
+iD8DBQFBhCtVI1lqEGTUzyQRAh3GAJ40u78dawkmr9W+m6fZUofgkjpRUACfZRCE
+F1guIPPQilnZUc1JEcHPc4Q=
+=KMr+
 -----END PGP SIGNATURE-----

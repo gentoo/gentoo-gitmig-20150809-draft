@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6f517670c87de82b7e04d02cd9fb2ed8 ChangeLog 4587
 MD5 47caf7250f8910d5ddfa4cca966fac10 krusader-1.40.ebuild 1074
 MD5 be88bba4b0fb03c88b8e9ddf445bb2f4 krusader-1.50_beta1.ebuild 1277
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 1e26141914c25d819dd73f2acf25a52e ChangeLog 4590
 MD5 49275a58f3cced10d296042c331d833e files/digest-krusader-1.40 66
 MD5 be6d149cdf6b7df43387e333c9e4e906 files/digest-krusader-1.50_beta1 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhCdOI1lqEGTUzyQRAi5xAKCczcGP1Gtrj1HfEKLXsFEYKET6DwCg1f6o
-zxdD3lB4VqOXzXTKsn4obQc=
-=Blwg
+iD8DBQFBhCxBI1lqEGTUzyQRAsBnAJ9MKee43ZfmcKeX9apSn78dtR7EUgCfYa6J
+vu+r+XsRdxY5N9yfbgTS3Ec=
+=CG06
 -----END PGP SIGNATURE-----

@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fca04c679c88f6b52ad6d9ef91c965b2 ChangeLog 2015
 MD5 67ff28d65d0b6a481e62f17fedebef7c ksensors-0.7.2-r1.ebuild 640
 MD5 628dbc8cce678892020eaf7ebbf2f23c ksensors-0.7.2.ebuild 586
 MD5 2878d4cdbf98ecc5c0fae1ebad40b7fe ksensors-0.7.3.ebuild 587
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 11f4e3f7fb5656b3650fcd8b675f702c ChangeLog 2018
 MD5 7e219e54436163ee72f99d92a157215a files/digest-ksensors-0.7.2 66
 MD5 7e219e54436163ee72f99d92a157215a files/digest-ksensors-0.7.2-r1 66
 MD5 5fd4df1755f6106cd51487b5399f82ee files/digest-ksensors-0.7.3 66
@@ -14,7 +14,7 @@ MD5 5735dac5885bda1ec14e3015ad47f87a files/startupcrash.diff 618
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhCfTI1lqEGTUzyQRAoJdAJ9C5C6zEklpa9ZID6kO3+R7bYSamwCgtGLM
-g0OY4obx9FWK4U3+RRCBYyo=
-=ka2D
+iD8DBQFBhCxsI1lqEGTUzyQRAvOuAJ0SWAJ6vvwF8b88GEWAN0ahH6IZqgCgzPlr
+9qQRXsAO3h2jn9emkew42Sc=
+=QT+R
 -----END PGP SIGNATURE-----
