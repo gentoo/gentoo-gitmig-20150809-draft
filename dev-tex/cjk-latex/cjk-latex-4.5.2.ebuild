@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.5.2.ebuild,v 1.6 2004/05/06 16:52:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.5.2.ebuild,v 1.7 2004/05/10 17:42:42 vapier Exp $
 
-IUSE="doc emacs"
-
-inherit latex-package elisp-common
+inherit latex-package elisp-common gcc
 
 MY_P="${P/-latex/}"
 
@@ -16,9 +14,9 @@ SRC_URI="ftp://ftp.ffii.org/pub/cjk/${MY_P}.tar.gz
 	doc? ( ftp://ftp.ffii.org/pub/cjk/${MY_P}-doc.tar.gz )"
 
 LICENSE="GPL-2"
-
 SLOT="0"
-KEYWORDS="~x86 amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc amd64"
+IUSE="doc emacs"
 
 DEPEND="virtual/tetex
 	emacs? ( virtual/emacs )"
@@ -26,7 +24,6 @@ DEPEND="virtual/tetex
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-
 	unpack ${MY_P}.tar.gz
 	use doc && unpack ${MY_P}-doc.tar.gz
 
@@ -43,15 +40,14 @@ src_unpack() {
 }
 
 src_compile() {
-
 	cd utils
 	for d in *conv; do
 		cd $d
 		local f=`echo $d | tr '[:upper:]' '[:lower:]'`
-		${CC} ${CFLAGS} -o $f $f.c || die
+		$(gcc-getCC) ${CFLAGS} -o $f $f.c || die
 		if [ $d = CEFconv ] ; then
-			${CC} ${CFLAGS} -o cef5conv cef5conv.c || die
-			${CC} ${CFLAGS} -o cefsconv cefsconv.c || die
+			$(gcc-getCC) ${CFLAGS} -o cef5conv cef5conv.c || die
+			$(gcc-getCC) ${CFLAGS} -o cefsconv cefsconv.c || die
 		fi
 		cd -
 	done
@@ -61,7 +57,7 @@ src_compile() {
 	make || die
 	cd -
 
-	if [ "`use emacs`" ] ; then
+	if use emacs ; then
 		cd lisp
 		elisp-compile *.el
 		cd emacs-20.3
@@ -79,7 +75,6 @@ src_compile() {
 }
 
 src_install() {
-
 	cd utils
 	for d in *conv; do
 		cd $d
@@ -96,7 +91,7 @@ src_install() {
 	cp -a texinput/* ${D}/${TEXMF}/tex/latex/${PN} || die
 	cp -a contrib/wadalab ${D}/${TEXMF}/tex/latex/${PN} || die
 
-	if [ "`use emacs`" ] ; then
+	if use emacs ; then
 		cd utils/lisp
 		elisp-install ${PN} *.el{,c} emacs-20.3/*.el{,c}
 		cd -
@@ -115,7 +110,7 @@ src_install() {
 	dodoc ChangeLog README doc/*
 	docinto chinese; dodoc doc/chinese/*
 	docinto japanese; dodoc doc/japanese/*
-	if [ "`use doc`" ] ; then
+	if use doc ; then
 		docinto cjk; dodoc doc/cjk/*
 		insinto /usr/share/doc/${P}/dvi
 		doins doc/dvi/*
@@ -124,7 +119,7 @@ src_install() {
 	fi
 
 	docinto examples; dodoc examples/*
-	if [ "`use doc`" ] ; then
+	if use doc ; then
 		docinto examples/cjk; dodoc examples/cjk/*
 		insinto /usr/share/doc/${P}/examples/dvi
 		doins examples/dvi/*
