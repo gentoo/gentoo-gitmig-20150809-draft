@@ -1,8 +1,14 @@
 # ChangeLog for net-misc/jumpgate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.2 2003/02/12 08:25:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.3 2003/12/10 22:37:25 avenj Exp $
+
+*jumpgate-0.7 (10 Dec 2003)
+
+  10 Dec 2003; Jon Portnoy <avenj@gentoo.org> :
+  AMD64 keyword.
 
 *jumpgate-0.7 (17 Dec 2002)
 
   17 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :
-  Initial import. Ebuild contributed by Jon Portnoy <avenj@gentoo.org> in #11412.
+  Initial import. Ebuild contributed by Jon Portnoy <avenj@tellink.net> 
+  in #11412.
