@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.16 2004/07/02 04:26:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.17 2004/10/17 09:05:32 absinthe Exp $
+
+*ghc-bin-6.2.1 (17 Oct 2004)
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> +ghc-bin-6.2.1.ebuild:
+  Version bump for amd64 only (~amd64).  Closes #58588.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ghc-bin-5.04.3.ebuild, ghc-bin-6.0.ebuild, ghc-bin-6.2.ebuild:
