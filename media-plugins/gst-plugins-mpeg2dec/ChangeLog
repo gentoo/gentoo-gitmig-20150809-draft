@@ -1,0 +1,9 @@
+# ChangeLog for media-plugins/gst-plugins-mpeg2dec
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2dec/ChangeLog,v 1.1 2004/10/22 11:05:12 foser Exp $
+
+*gst-plugins-mpeg2dec-0.8.5.ebuild (22 Oct 2004)
+
+  22 Oct 2004; foser <foser@gentoo.org> gst-plugins-mpeg2dec-0.8.5.ebuild, metadata.xml, ChangeLog :
+  Initial commit, plugin for mpeg1/2 playback
+  Added to gstreamer & gnome herd
