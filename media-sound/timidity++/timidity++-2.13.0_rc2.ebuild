@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.6 2004/04/03 23:55:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.7 2004/04/06 18:07:08 eradicator Exp $
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa kde jack portaudio"
+IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa kde jack portaudio emacs"
 
 inherit gnuconfig
 
@@ -26,7 +26,6 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	alsa? ( media-libs/alsa-lib )
 	motif? ( >=x11-libs/openmotif-2.1 )
 	slang? ( >=sys-libs/slang-1.4 )
-	tcltk? ( >=dev-lang/tk-8.1 )
 	kde? ( kde-base/arts )
 	jack? ( !sparc? ( virtual/jack ) )
 	portaudio? ( !ppc? ( media-libs/portaudio ) )
@@ -34,6 +33,10 @@ RDEPEND=">=sys-libs/ncurses-5.0
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
+
+RDEPEND="${RDEPEND}
+	tcltk? ( >=dev-lang/tk-8.1 )
+	emacs? ( virtual/emacs )"
 
 src_compile() {
 	local myconf
@@ -91,6 +94,12 @@ src_install () {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/init.d.timidity timidity
+
+	if use emacs; then
+		dosed 's:/usr/local/bin/timidity:/usr/bin/timidity:g' /usr/share/emacs/site-lisp/timidity.el
+	else
+		rm ${D}/timidity.el
+	fi
 }
 
 pkg_postinst () {
