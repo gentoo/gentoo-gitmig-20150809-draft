@@ -6,8 +6,12 @@
 		ML programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-ml enthält Bibliotheken und Werkzeuge für die 
+		Die Kategorie dev-ml enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die 
 		Programmiersprache ML.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-ml contiene librerías y utilidades referentes al
+		lenguaje de programación ML.
 	</longdescription>
 </catmetadata>
 
