@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6-r4.ebuild,v 1.8 2004/06/25 00:06:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6-r4.ebuild,v 1.9 2004/07/15 03:20:54 agriffis Exp $
 
-IUSE="ltsp"
+IUSE="cdr ltsp"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
 HOMEPAGE="http://pxes.sourceforge.net"
 SRC_URI="mirror://sourceforge/pxes/${PN}-base-i586-${PV}-4.tar.gz
@@ -21,7 +21,6 @@ RDEPEND="${DEPEND}
 	>=dev-perl/glade-perl-0.61
 	cdr? app-cdr/cdrtools"
 
-S=${WORKDIR}/${P}
 RESTRICT="nouserpriv"
 
 inherit perl-module
