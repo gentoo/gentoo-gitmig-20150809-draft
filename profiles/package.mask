@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2741 2004/03/11 00:42:35 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2742 2004/03/11 20:39:09 zx Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -64,11 +64,6 @@
 # <mksoft@gentoo.org> (26 Feb 2004)
 # Masked for testing
 >=dev-db/firebird-1.5.0
-
-# <absinthe@gentoo.org> (25 Feb 2004)
-# PropertyFile broken, and who knows what else
-=dev-java/ant-1.6*
-=dev-java/ant-optional-1.6*
 
 # <foser@gentoo.org> (24 Feb 2004)
 # breaks source builds 
