@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-1.8b.ebuild,v 1.4 2004/02/22 22:23:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-1.8b.ebuild,v 1.5 2004/03/13 19:52:35 usata Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Ruby Interactive reference"
@@ -11,9 +11,10 @@ SLOT="0"
 LICENSE="Ruby"
 KEYWORDS="alpha hppa mips sparc x86"
 
-DEPEND=">=dev-lang/ruby-1.8.0"
+DEPEND=">=dev-lang/ruby-1.6.2"
 
 src_install () {
-	dodoc COPYING ChangeLog README
+
 	DESTDIR=${D} ruby install.rb
+	dodoc COPYING ChangeLog README
 }
