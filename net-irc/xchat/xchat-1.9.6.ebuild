@@ -1,9 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.5-r1.ebuild,v 1.1 2002/11/19 22:26:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.6.ebuild,v 1.1 2002/11/26 12:08:32 foser Exp $
+
+inherit eutils
 
 IUSE="perl gnome ssl gtk python mmx ipv6 nls kde" 
-
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
 SRC_URI="http://www.xchat.org/files/source/1.9/${P}.tar.bz2"
@@ -45,28 +46,32 @@ src_compile() {
 	fi
 
 	use gtk \
+		&& myopts="${myopts} --enable-gtkfe" \
 		|| myopts="${myopts} --disable-gtkfe"
 	
 	use ssl \
-		&& myopts="${myopts} --enable-openssl"
+		&& myopts="${myopts} --enable-openssl" \
+		|| mypots="${myopts} --disable-openssl"
 
 	use perl \
+		&& myopts="${myopts} --enable-perl" \
 		|| myopts="${myopts} --disable-perl"
 
 	use python \
+		&& myopts="${myopts} --enable-python" \
                 || myopts="${myopts} --disable-python"
 
 	use nls \
-		&& myopts="${myopts} --enable-hebrew --enable-japanese-conv" \
-		|| myopts="${myopts} --disable-nls"
+		&& myopts="${myopts} --enable-hebrew --enable-japanese-conv --enable-nls" \
+		|| myopts="${myopts} --disable-hebrew --enable-japanese-conv --disable-nls"
 
 	use mmx	\
 		&& myopts="${myopts} --enable-mmx"	\
 		|| myopts="${myopts} --disable-mmx"
 	
 	use ipv6 \
-		&& myopts="${myopts} --enable-ipv6"
-
+		&& myopts="${myopts} --enable-ipv6" \
+		|| myopts="${myopts} --disable-ipv6"
 
 	[ -n "${DISABLE_XFT}" ] && myopts="${myopts} --disable-xft"
 	
@@ -74,7 +79,7 @@ src_compile() {
 		--program-suffix=-2 \
 		${myopts} || die "Configure failed"
 	
-	MAKEOPTS="-j1" emake || die "Compile failed"
+	emake || die "Compile failed"
 }
 
 src_install() {

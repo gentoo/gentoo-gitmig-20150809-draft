@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.5-r2.ebuild,v 1.1 2002/11/21 01:03:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.5-r2.ebuild,v 1.2 2002/11/26 12:08:32 foser Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-private-logging.patch
+	epatch ${FILESDIR}/${P}-fastdialogswitch.patch
 }
 
 src_compile() {
