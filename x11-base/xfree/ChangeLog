@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.350 2004/07/01 15:07:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.351 2004/07/16 08:57:53 spyderous Exp $
+
+  16 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  PATCH_VER 2.1.25.6. Add 9300_all_4.3.0-x86-xbox-nv-driver.patch and
+  9305_all_4.3.0-x86-xbox-xf86PciInfo.patch to get things working on xbox
+  (#51868).
 
   01 Jul 2004; Luca Barbato <lu_zero@gentoo.org> xfree-4.3.0-r6.ebuild:
   Maked ppc
