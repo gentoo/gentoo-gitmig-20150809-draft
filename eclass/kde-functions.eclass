@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.60 2003/07/29 10:39:02 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.61 2003/08/07 03:47:26 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -363,6 +363,18 @@ kde_sandbox_patch() {
 
 }
 
+#replace any instances of head -1 with head -n 1 in build files:
+kde_fix_head_instances() {
+	while [ -n "$1" ]; do
+		if [ -f "$1" ]; then
+			echo Performing head fix on $1
+			cp ${1} ${1}.orig
+			sed -e 's:head -1:head -n 1:g' -e 's:head -2:head -n 2:g' ${1}.orig > ${1}
+			rm ${1}.orig
+		fi
+	shift
+	done
+}
 
 # remove an optimization flag from a specific subdirectory's makefiles.
 # currently kdebase and koffice use it to compile certain subdirs without
