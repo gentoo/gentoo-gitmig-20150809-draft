@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.15 2004/12/16 10:29:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.16 2005/01/14 02:48:32 vapier Exp $
 
 inherit gnuconfig libtool eutils db
 

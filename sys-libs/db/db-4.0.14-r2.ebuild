@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.25 2004/12/16 10:29:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.26 2005/01/14 02:48:32 vapier Exp $
 
 IUSE="tcltk java doc"
 

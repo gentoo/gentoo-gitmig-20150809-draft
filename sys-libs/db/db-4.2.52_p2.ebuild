@@ -1,8 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p2.ebuild,v 1.12 2004/12/16 10:29:20 eradicator Exp $
-
-IUSE="tcltk java doc"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p2.ebuild,v 1.13 2005/01/14 02:48:32 vapier Exp $
 
 inherit eutils gnuconfig db
 
@@ -20,21 +18,19 @@ fi
 
 S=${WORKDIR}/${MY_P}/build_unix
 DESCRIPTION="Berkeley DB"
+HOMEPAGE="http://www.sleepycat.com/"
 SRC_URI="http://www.sleepycat.com/update/snapshot/${MY_P}.tar.gz"
-
-for (( i=1 ; i<=$PATCHNO ; i++ ))
-do
+for (( i=1 ; i<=$PATCHNO ; i++ )) ; do
 	export SRC_URI="${SRC_URI} http://www.sleepycat.com/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
-HOMEPAGE="http://www.sleepycat.com"
-SLOT="4.2"
 LICENSE="DB"
-KEYWORDS="~x86 ~sparc ~ia64 ~ppc ~amd64"
+SLOT="4.2"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+IUSE="tcltk java doc nocxx bootstrap"
 
 DEPEND="tcltk? ( >=dev-lang/tcl-8.4 )
 	java? ( virtual/jdk )"
-
 RDEPEND="tcltk? ( dev-lang/tcl )
 	java? ( virtual/jre )"
 
@@ -50,40 +46,31 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PN}-4.0.14-fix-dep-link.patch
 
+	gnuconfig_update "${S}/../dist"
 }
 
 src_compile() {
 	addwrite /proc/self/maps
 
-	# Mips needs a gnuconfig update so obscure things like mips64 are known
-	# db-4.1.25_p1 extracts to ${WORKDIR}/db-4.1.25, so we need to strip the _p1
-	if use mips; then
-		einfo "Updating config.{guess,sub} for mips"
-		local OLDS="${S}"
-		S="${S}/dist"
-		gnuconfig_update
-		S="${OLDS}"
-	fi
+	local myconf=""
 
+	use amd64 && myconf="${myconf} --with-mutex=x86/gcc-assembly"
 
-	local myconf="--enable-rpc"
-
-	use java \
-		&& myconf="${myconf} --enable-java" \
-		|| myconf="${myconf} --disable-java"
+	use bootstrap \
+		&& myconf="${myconf} --disable-cxx" \
+		|| myconf="${myconf} $(use_enable !nocxx cxx)"
 
 	use tcltk \
 		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \
 		|| myconf="${myconf} --disable-tcl"
 
-	if use java && [ -n "${JAVAC}" ]; then
+	myconf="${myconf} $(use_enable java)"
+	if use java && [[ -n ${JAVAC} ]] ; then
 		export PATH=`dirname ${JAVAC}`:${PATH}
 		export JAVAC=`basename ${JAVAC}`
 	fi
 
-	if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-		myconf="${myconf} --host=${CHOST}"
-	fi
+	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
 
 	../dist/configure \
 		--prefix=/usr \
@@ -94,14 +81,15 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--libdir=/usr/$(get_libdir) \
 		--enable-compat185 \
-		--enable-cxx \
 		--with-uniquename \
-		${myconf} || die
+		--enable-rpc \
+		--host=${CHOST} \
+		${myconf} || die "configure failed"
 
-	emake || make || die
+	emake || make || die "make failed"
 }
 
-src_install () {
+src_install() {
 
 	einstall libdir="${D}/usr/$(get_libdir)" || die
 
