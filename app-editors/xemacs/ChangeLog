@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.31 2003/01/16 15:17:16 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.32 2003/01/27 04:58:22 nall Exp $
 
 *xemacs-21.4.12 (16 Jan 2003)
   16 Jan 2003: Rendhalver <rendhalver@gentoo.org>
@@ -55,6 +55,11 @@
   Made openmotif dependency optional for people with motif in USE.
 	
 *xemacs-21.4.9 (26 Sep 2002)
+
+  26 Jan 2003; Jon Nall <nall@gentoo.org> files/xemacs-21.4.9-ppc.diff,
+  xemacs-21.4.9.ebuild :
+  added a patch that fixes bug #14458
+  http://sources.redhat.com/ml/bug-glibc/2002-11/msg00066.html
 
   16 Oct 2002; Mark Guertin <gerk@gentoo.org> files/xemacs-21.4.9-ppc.diff :
   copied this to the new version, it is still needed for this build.  closes

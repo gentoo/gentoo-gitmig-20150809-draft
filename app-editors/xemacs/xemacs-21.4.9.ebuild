@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.6 2003/01/07 17:46:30 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.7 2003/01/27 04:58:22 nall Exp $
 
 IUSE="gpm esd postgres xface nas X jpeg tiff png mule"
 
@@ -61,6 +61,16 @@ src_unpack() {
 	
 	if [ ${ARCH} = "ppc" ] ; then
 		patch -p0 < ${FILESDIR}/${P}-ppc.diff || die
+
+		# xemacs broke with glibc-2.3.x. this code checks that condition
+		# and patches xemacs appropriately.
+		# http://sources.redhat.com/ml/bug-glibc/2002-11/msg00066.html
+		glibc_version=`/sbin/ldconfig -V | head -1 | sed -e "s/[^0-9]*[0-9]\.//" | sed -e "s/\.//"`
+		if (( $glibc_version >= "31" ))
+		then
+			einfo "PPC runtime fix for glibc >= 2.3.1 (Gentoo bug #14458)"
+			patch -p0 < ${FILESDIR}/${P}-ppc-glibc-2.3.x.diff || die
+		fi
 	fi
 
 }
