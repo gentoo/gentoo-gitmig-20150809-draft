@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r4.ebuild,v 1.1 2003/10/18 14:30:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r5.ebuild,v 1.1 2003/10/20 13:59:19 taviso Exp $
 
 inherit gnuconfig
 
@@ -9,7 +9,7 @@ IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama cjk perl nls png
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-		perl? ( mirror://gentoo/FvwmTabs-2.2.tar.gz )"
+		perl? ( mirror://gentoo/FvwmTabs-2.3.tar.gz )"
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
