@@ -1,6 +1,7 @@
 MD5 93b9c4a740015eb7262b223c7b8b7bbf files/0.77.1-icc.patch 584
 MD5 d1ebc50ddf985d997fbaa2f2a6f5a8f8 files/digest-xmame-0.77.1 67
 MD5 97e593e1ae9774f4ef817e90f8b05d35 files/digest-xmame-0.78.1 67
+MD5 0f77c568ca5f6a46b543e899c910d38a files/0.78.1-osd_die.patch 521
 MD5 9bbbd2de60f0c41f643674a694cd2c90 files/0.77.1-alsa-1.0.0.patch 438
 MD5 93b9c4a740015eb7262b223c7b8b7bbf files/0.78.1-icc.patch 584
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.77.1-glx-fix.patch 597
@@ -8,4 +9,4 @@ MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.78.1-glx-fix.patch 597
 MD5 fbe05cad2b2b956aec5a1198bdfa15d7 xmame-0.77.1.ebuild 6263
 MD5 a804be3db0a8aed2d43ad64d595e4645 ChangeLog 4843
 MD5 0234d9024c471faf92bb1219242614ef metadata.xml 1566
-MD5 06de263560dc24a32deea2b433823336 xmame-0.78.1.ebuild 6221
+MD5 656ce33bf325760ae08da6003418cdfb xmame-0.78.1.ebuild 6266
