@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.264 2005/01/30 08:48:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.265 2005/02/03 22:19:24 chriswhite Exp $
+
+  04 Feb 2005; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r5.ebuild,
+  mplayer-1.0_pre6.ebuild:
+  Re-enabled sse2 as people with x86's say it works ok. Enabled new
+  ecpu_check-ing functionality.
 
   30 Jan 2005; Chris White <chriswhite@gentoo.org>
   +files/mplayer-avi_crash.patch, mplayer-1.0_pre5-r5.ebuild,

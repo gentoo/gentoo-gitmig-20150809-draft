@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.21 2005/01/30 08:48:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.22 2005/02/03 22:19:24 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dts
-dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -200,6 +200,13 @@ src_compile() {
 		export LINGUAS="en ${LINGUAS}"
 	fi
 
+	# check cpu flags
+	if use x86
+	then
+		CPU_FLAGS=(mmx mmx2 sse sse2)
+		ecpu_check CPU_FLAGS
+	fi
+
 	# let's play the filtration game!  MPlayer hates on all!
 	strip-flags
 
@@ -365,6 +372,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable 3dnow)"
 	myconf="${myconf} $(use_enable 3dnowex)";
 	myconf="${myconf} $(use_enable sse)"
+	myconf="${myconf} $(use_enable sse2)"
 	myconf="${myconf} $(use_enable mmx)"
 	myconf="${myconf} $(use_enable mmx2)"
 	myconf="${myconf} $(use_enable debug)"
@@ -425,7 +433,6 @@ src_compile() {
 		--enable-network --enable-ftp \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
-		--disable-sse2 \
 		${myconf} || die
 
 	einfo "Make"
