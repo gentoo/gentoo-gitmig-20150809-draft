@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.10.ebuild,v 1.2 2004/01/06 04:11:04 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.10.ebuild,v 1.3 2004/01/10 06:15:42 augustus Exp $
 
 inherit flag-o-matic
 
@@ -21,7 +21,7 @@ src_compile() {
 
 	replace-flags "-O?" "-O2"
 
-	if use ppc || use sparc || use alpha
+	if use ppc || use sparc || use alpha || use amd64
 	then
 		myconf="--disable-mmx"
 	else
