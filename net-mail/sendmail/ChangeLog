@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.18 2003/01/20 01:59:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.19 2003/01/20 14:25:03 raker Exp $
+
+*sendmail-8.12.7-r1 (20 Jan 2003)
+
+  20 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7-r1.ebuild,
+  files/digest-sendmail-8.12.7-r1 files/sendmail-r1 :
+  Updated init.d script and conf file so the clientmqueue flushing
+  daemon shuts down as well as the main mta daemon.
 
 *sendmail-8.12.7 (02 Jan 2003)
 
