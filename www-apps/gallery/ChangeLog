@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.14 2004/11/05 09:44:10 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.15 2004/11/05 17:37:56 gustavoz Exp $
+
+  05 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> gallery-1.4.4_p4.ebuild:
+  Stable on sparc wrt #69904
 
   05 Nov 2004; <SeJo@gentoo.org> gallery-1.4.4_p4.ebuild:
   stable on ppc bug: 69904
