@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/conserver
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.1 2003/10/03 23:40:16 weeve Exp $
+
+*conserver-8.0.1 (03 Oct 2003)
+
+  03 Oct 2003; Jason Wever <weeve@gentoo.org> conserver-8.0.1.ebuild,
+  metadata.xml, files/conserver.confd, files/conserver.initd:
+  Initial import.  Satisfies bug #8652.
+

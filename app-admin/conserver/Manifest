@@ -1,0 +1,4 @@
+MD5 862d21189f68c92225dd9f4f7112cb49 conserver-8.0.1.ebuild 1715
+MD5 7ed8772378681a38e0ea09e0b3f48036 files/conserver.confd 196
+MD5 f271312b525b0601b67e0e7c5b530d65 files/conserver.initd 1088
+MD5 3d435ff83d5bc903d39c0c25154442c2 files/digest-conserver-8.0.1 67
