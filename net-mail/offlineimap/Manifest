@@ -1,10 +1,22 @@
-MD5 ffb325c41c3393adba7b824442550bf7 offlineimap-4.0.3.ebuild 863
-MD5 0bc13c126f1bb222dd41cf4de671a348 offlineimap-3.99.17.ebuild 821
-MD5 5d97c55e515ee28782ebb31e29a87175 offlineimap-4.0.0.ebuild 855
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 52b3cc681e20b0118b54f77fffe7e79c ChangeLog 1460
 MD5 e53a4f50912094b729b66fc892809a9c offlineimap-4.0.6.ebuild 861
-MD5 961263897b6f734ba58d37dbd540b1cd ChangeLog 1271
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 a00d241e628c267d95d1af5b808e91be files/digest-offlineimap-4.0.0 69
-MD5 bee03ac2816d1cd387fc60021c9f1b70 files/digest-offlineimap-4.0.3 69
+MD5 0bc13c126f1bb222dd41cf4de671a348 offlineimap-3.99.17.ebuild 821
+MD5 ffb325c41c3393adba7b824442550bf7 offlineimap-4.0.3.ebuild 863
+MD5 044cad2991c3ca096dc020a1c0547ba8 offlineimap-4.0.7.ebuild 860
+MD5 5d97c55e515ee28782ebb31e29a87175 offlineimap-4.0.0.ebuild 855
+MD5 8123bb02a72904ca1bfd9eccfac0673b files/digest-offlineimap-4.0.7 69
 MD5 aab7ad7d1ca3e8fbe2e9a7494b3ee727 files/digest-offlineimap-4.0.6 69
+MD5 bee03ac2816d1cd387fc60021c9f1b70 files/digest-offlineimap-4.0.3 69
 MD5 7cffd8f0d44e0a87c762c69af2467bbe files/digest-offlineimap-3.99.17 71
+MD5 a00d241e628c267d95d1af5b808e91be files/digest-offlineimap-4.0.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXcYY10xuJSrg3/sRAkcuAJ4zmWqEkAV4iDJ1rDy7QnxNUFpgjACfdBWM
+OpxrPZ40m11AjebXW4vPEsM=
+=5xyD
+-----END PGP SIGNATURE-----
