@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.4 2004/06/06 15:49:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.5 2004/06/06 15:59:35 dragonheart Exp $
+
+*bcwipe-1.5_p2 (07 Jun 2004)
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +bcwipe-1.5_p2.ebuild:
+  version bump
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   bcwipe-1.2_p3.ebuild, bcwipe-1.3_p1.ebuild:
