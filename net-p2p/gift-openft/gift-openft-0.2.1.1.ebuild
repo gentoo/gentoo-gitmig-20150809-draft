@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.1.ebuild,v 1.4 2004/02/01 01:00:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.1.ebuild,v 1.5 2004/04/20 18:03:34 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="The giFT OpenFT plugin"
 HOMEPAGE="http://gift.sf.net/"

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.23 2004/03/25 08:26:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.24 2004/04/20 18:06:33 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gtk-gnutella-0.91.1.ebuild:
+  Added IUSE.
 
   25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   gtk-gnutella-0.93-r1.ebuild, gtk-gnutella-0.93.3.ebuild,

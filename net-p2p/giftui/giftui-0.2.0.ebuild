@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.2.0.ebuild,v 1.4 2004/03/13 10:14:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.2.0.ebuild,v 1.5 2004/04/20 18:04:16 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="A GTK+2 giFT frontend"
 HOMEPAGE="http://giftui.tuxfamily.org/"

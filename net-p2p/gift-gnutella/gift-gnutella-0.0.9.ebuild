@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.9.ebuild,v 1.1 2004/02/01 00:42:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.9.ebuild,v 1.2 2004/04/20 18:02:56 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="The giFT Gnutella plugin"
 HOMEPAGE="http://gift.sf.net/"

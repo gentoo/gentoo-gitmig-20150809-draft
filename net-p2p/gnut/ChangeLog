@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnut
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/ChangeLog,v 1.6 2003/10/01 18:09:58 lisa Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/ChangeLog,v 1.7 2004/04/20 18:05:12 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> gnut-0.4.28.ebuild:
+  Added IUSE.
 
 *gnut-0.4.28-r1 (01 Oct 2003)
 

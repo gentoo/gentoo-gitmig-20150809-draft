@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/kmldonkey
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.6 2004/03/08 18:35:31 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.7 2004/04/20 18:07:58 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> kmldonkey-0.3.ebuild,
+  kmldonkey-0.8.ebuild, kmldonkey-0.9.1.ebuild:
+  Added IUSE.
 
   08 Mar 2004; <augustus@gentoo.org> kmldonkey-0.9.1.ebuild:
   Added ~amd64 keyword.

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2.20.ebuild,v 1.5 2004/02/22 09:21:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2.20.ebuild,v 1.6 2004/04/20 18:00:09 eradicator Exp $
+
+IUSE=""
 
 inherit gcc eutils
 
