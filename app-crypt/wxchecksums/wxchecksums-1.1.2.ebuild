@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/wxchecksums/wxchecksums-1.1.2.ebuild,v 1.2 2004/07/22 23:40:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/wxchecksums/wxchecksums-1.1.2.ebuild,v 1.3 2004/07/26 23:59:08 mr_bones_ Exp $
 
 MY_P="wxChecksums-${PV}"
 
@@ -40,15 +40,14 @@ src_install() {
 	cd ..
 	dodoc AUTHORS.txt NEWS.txt README.txt TODO.txt
 
-	if [ `use doc` ] ; then
+	if use doc ; then
 		dohtml -r manual/*
 	fi
 }
 
 pkg_postinst() {
-	if [ `use doc` ] ; then
+	if use doc ; then
 		einfo "The manual has been installed in"
 		einfo "/usr/share/doc/${PF}/html"
 	fi
 }
-
