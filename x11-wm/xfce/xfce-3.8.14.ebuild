@@ -11,19 +11,20 @@ HOMEPAGE="http://www.xfce.org/"
 DEPEND="virtual/x11
 	>=x11-libs/gtk+-1.2.10-r4
 	gnome? ( dev-libs/libxml2 )
-	gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
+	gtk? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
 	arts? ( kde-base/kdelibs )
 	nls? ( sys-devel/gettext )"
 
-	use gnome || DEPEND="${DEPEND} >=media-libs/imlib-1.9.10-r1"
+	use gtk || DEPEND="${DEPEND} >=media-libs/imlib-1.9.10-r1"
 RDEPEND=""
 
 src_compile() {
 	local myconf
 
+	use gtk && myconf="--enable-imlib=no --enable-gdk-pixbuf=/usr"
+
 	if [ "`use gnome`" ]
 	then
-		myconf="--enable-imlib=no --enable-gdk-pixbuf=/usr"
 		myconf="${myconf} --enable-gdm"
 		myconf="${myconf} --enable-libxml2"
 	fi
@@ -36,7 +37,7 @@ src_compile() {
 	 	--mandir=/usr/share/man					\
 		--with-data-dir=/usr/share/xfce				\
 		--with-conf-dir=/etc/xfce 				\
-		--disable-xft						\
+		--enable-xft						\
 		--with-locale-dir=/usr/share/locale \
 		${myconf} || die
 
