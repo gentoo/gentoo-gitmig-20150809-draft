@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.7 2003/05/14 10:17:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.8 2003/05/14 20:08:59 robbat2 Exp $
 
 inherit php eutils
 
@@ -10,25 +10,29 @@ DESCRIPTION="Apache module for PHP"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~arm ~sparc"
 SLOT="0"
 
-	# users have been having problems with compiling the gmp support... disabled for now
-	# - rphillips
-	#>=dev-libs/gmp-3.1.1
-
 DEPEND="${DEPEND}
 	|| (
 		apache2? ( >=net-www/apache-2.0.43-r1 )
 		>=net-www/apache-1.3.26-r2
-	)
-	"
+	)"
 
 src_compile() {
 	#no readline on server SAPI
 	myconf="${myconf} --without-readline "
 
+	# Every Apache2 MPM EXCEPT prefork needs Zend Thread Safety
+	if [ "`use apache2`" ]; then
+		APACHE2_MPM="`apache2 -l |egrep 'worker|prechild|leader|threadpool|prefork'|xargs|cut -d. -f1`"
+		case "${APACHE2_MPM}" in
+			prefork) ;;
+			*) myconf="${myconf} --enable-experimental-zts" ;;
+		esac;
+	fi
+
 	# optional support for apache2
 	use apache2 \
-		&& myconf="${myconf} --with-apxs2=/usr/sbin/apxs2" \
-		|| myconf="${myconf} --with-apxs=/usr/sbin/apxs"
+	&& myconf="${myconf} --with-apxs2=/usr/sbin/apxs2" \
+	|| myconf="${myconf} --with-apxs=/usr/sbin/apxs"
 
 	#php CGI stuff
 	#--enable-discard-path --enable-force-cgi-redirect
