@@ -1,0 +1,2 @@
+virtual/kernel		sys-kernel/gentoo-dev-sources
+virtual/os-headers	sys-kernel/linux26-headers
