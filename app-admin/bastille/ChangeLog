@@ -1,0 +1,32 @@
+# ChangeLog for app-admin/bastille
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.1 2003/09/18 23:56:21 seemant Exp $
+
+*bastille-2.1.1 (17 Sep 2003)
+
+  17 Sep 2003; Seemant Kulleen <seemant@gentoo.org> bastille-2.1.1.ebuild,
+  metadata.xml:
+  moved from net-firewall to app-admin
+
+  05 Sep 2003; Seemant Kulleen <seemant@gentoo.org> bastille-2.1.1.ebuild:
+  using the X flag instead of tcltk
+
+  26 Aug 2003; Seemant Kulleen <seemant@gentoo.org> bastille-2.1.1.ebuild:
+  updated patch from Battousai.  Fixes for program and config file
+  locations.
+
+  03 Aug 2003; Seemant Kulleen <seemant@gentoo.org> :
+  Added iptables and logrotate to RDEPEND.  Thanks to Wingedone
+
+  02 Aug 2003; <solar@gentoo.org> bastille-2.1.1.ebuild:
+  Added support for console only building. Server installs are a place
+  that I think most admins/users would want the functionality of something 
+  like bastille without having to install X
+
+*bastille-2.1.1 (02 Aug 2003)
+
+  02 Aug 2003; Seemant Kulleen <seemant@gentoo.org> bastille-2.1.1.ebuild,
+  files/bastille-2.1.1.patch:
+  initial import. This was patched heavily to work with Gentoo (gentooficated)
+  by the venerable: Bryan Stine <admin@kentonet.net>
+
