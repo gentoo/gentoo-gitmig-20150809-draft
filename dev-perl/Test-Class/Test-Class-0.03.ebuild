@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.03.ebuild,v 1.4 2004/12/19 15:19:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.03.ebuild,v 1.5 2004/12/19 15:25:39 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="dev-perl/Attribute-Handlers
 		dev-perl/Class-ISA
 		>=dev-perl/Storable-2*
-		dev-perl/Test-Simple
+		<dev-perl/Test-Simple-0.48
 		dev-perl/Test-Builder-Tester
 		dev-perl/Test-Differences
 		dev-perl/Test-Exception
