@@ -1,6 +1,32 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.29 2004/01/16 04:00:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.30 2004/01/26 04:12:06 pylon Exp $
+
+*mol-0.9.70_rc2 (26 Jan 2004)
+
+  26 Jan 2004; Lars Weiler <pylon@gentoo.org> mol-0.9.69_pre3.ebuild,
+  mol-0.9.69_pre5.ebuild, mol-0.9.69_pre6.ebuild, mol-0.9.70_rc2.ebuild:
+  A new rsync snapshot and release candidate for an official version bump.
+
+  (taken from <20040108144104.GA23519@ibrium.se> at mol-general@lists.maconlinux.org)
+  Certainly; here is a summary of all changes since the last point
+  release (0.9.68 back in March): 
+
+  - ALSA support
+  - sound driver rewrite
+  - support for the 2.6 kernel
+  - fixes for SMP
+  - debugger improvements
+  - bootx bugfixes (10.3 won't boot without this one)
+  - improved tunconfig script
+  - virtualization engine fixes (makes it possible to run OSX on 604 cpus)
+  - reduced latency
+  - USB support
+  - generic SCSI support (and support for IDE burners)
+  - improved XDGA support (XDGA is obsolete though)
+  - sheep_net improvements
+  - performance improvements
+  - misc bugfixes
 
   16 Jan 2004; Luca Barbato <lu_zero@gentoo.org> :
   Digest fixed

@@ -1,15 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre5.ebuild,v 1.2 2003/11/14 20:07:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70_rc2.ebuild,v 1.1 2004/01/26 04:12:06 pylon Exp $
 
 inherit flag-o-matic
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${P/_rc2/}
 DESCRIPTION="MOL (Mac-on-Linux) lets PPC users run MacOS (X) under Linux (rsync snapshot)"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="ftp://ftp.nada.kth.se/pub/home/f95-sry/Public/mac-on-linux/${P/_/-}.tgz"
 HOMEPAGE="http://www.maconlinux.net/"
 
-DEPEND=">=sys-apps/sed-4"
+DEPEND=""
 RDEPEND="net-misc/dhcp
 	net-firewall/iptables
 	alsa? ( virtual/alsa )
@@ -17,47 +17,59 @@ RDEPEND="net-misc/dhcp
 	X? ( virtual/x11 )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc -x86 -sparc -alpha -mips"
-IUSE="alsa esd debug oldworld X"
+KEYWORDS="~ppc ~ppc64 -x86 -sparc -alpha -mips"
+IUSE="alsa oss debug fbcon X oldworld"
 
-src_compile() {
-
-	local myconf
-	use alsa     || myconf="${myconf} --disable-alsa"
-	use debug    || myconf="${myconf} --disable-debugger"
-	use esd      && myconf="${myconf} --enable-esd"
-	use oldworld || myconf="${myconf} --disable-oldworld"
-	use X        && myconf="${myconf} --with-x"
-
-	einfo "MOL will be build with the following options:"
-	einfo "${myconf}"
-
-	filter-flags -fsigned-char
+src_unpack() {
+	unpack ${A}
 
 	# dhcp config fix and show dchpd messages on starting mol
 	cd ${S}
 	sed -i "s:#ddns-update-style:ddns-update-style:g" Doc/config/dhcpd-mol.conf || die
 	sed -i "s:DHCPD\ -q\ -cf:DHCPD\ -cf:g" Doc/config/tunconfig || die
-	export KERNEL_SOURCE="/usr/src/linux"
-	export ARCH=ppc
+
+	sed -i "s:prefix		= /usr/local:prefix		= /usr:" Makefile.top || die
+	sed -i "s#VENDOR		:=#VENDOR		:= -gentoo#" Makefile.top || die
+
+}
+
+src_compile() {
+	filter-flags -fsigned-char
+
+	export KERNEL_SOURCE="/usr/src/${FK}"
+
+	# initialize all needed build-files
 	./autogen.sh
-	./configure ${myconf} --prefix=/usr || die "This is a ppc-only package (time to buy that iBook, no?)"
+
+	emake defconfig || die "This is a ppc-only package (time to buy that iBook, no?)"
+
+	sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config
+	sed -i "s:CONFIG_TAP=y:# CONFIG_TAP is not set:" .config
+	use alsa     || sed -i "s:CONFIG_ALSA=y:# CONFIG_ALSA is not set:" .config
+	use debug    && sed -i "s:# CONFIG_DEBUGGER is not set:CONFIG_DEBUGGER=y:" .config
+	use oss      || sed -i "s:CONFIG_OSS=y:# CONFIG_OSS is not set:" .config
+	use oldworld || sed -i "s:CONFIG_OLDWORLD=y:# CONFIG_OLDWORLD is not set:" .config
+	use oldworld || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config
+	use X        || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config
+	use fbcon    || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config
+
+	einfo "The configuration has been altered according to your USE-flags."
+	# reinitialize our changed configuration
+	emake oldconfig
 
 	addwrite "/usr/src/${FK}"
-
-	emake ARCH=ppc || die
+	emake || die "mol can't build with FEATURES 'userpriv' and 'strict' set."
 }
 
 src_install() {
-
 	# MOL needs write access to some .depend-files in the kernel-dir
 	# (at least arch/ppc/) to build the kernel-modules.  With
 	# sandboxing enabled this would result in an access violation.
 
-	emake DESTDIR=${D} install || die "Failed to install MOL"
+	addwrite "/usr/src/${FK}"
+	emake DESTDIR=${D} install || die "Failed to install MOL."
 
 	dodoc 0README BUILDING COPYRIGHT CREDITS Doc/*
-
 }
 
 pkg_postinst() {
@@ -83,8 +95,5 @@ pkg_postinst() {
 	einfo "    Packet filtering (CONFIG_IP_NF_FILTER)"
 	einfo "    Full NAT (CONFIG_IP_NF_NAT)"
 	einfo "    MASQUERADE target support (CONFIG_IP_NF_TARGET_MASQUERADE)"
-	echo
-	ewarn "ALSA support on Gentoo hasn't been tested yet.  If you have ALSA"
-	ewarn "working, we would like to hear your results with MOL."
 	echo
 }
