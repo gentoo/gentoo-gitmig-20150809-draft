@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.8 2004/09/07 22:04:29 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.9 2004/09/23 13:57:49 gustavoz Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ RDEPEND="=app-crypt/gpgme-0.3.14-r1
 	dev-lang/swig"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 
 inherit distutils
