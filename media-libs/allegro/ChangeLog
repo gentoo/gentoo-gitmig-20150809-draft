@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.24 2004/06/24 22:55:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.25 2004/07/06 22:31:02 eradicator Exp $
+
+  06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  allegro-4.1.14.ebuild:
+  ~amd64
 
   09 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   add metadata.xml

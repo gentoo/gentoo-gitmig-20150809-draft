@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.3 2004/06/24 22:55:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.4 2004/07/06 22:31:02 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 
 LICENSE="Allegro"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
 IUSE="static mmx sse oss alsa esd arts X fbcon svga tetex"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
