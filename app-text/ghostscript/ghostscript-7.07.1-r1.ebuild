@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r1.ebuild,v 1.7 2004/05/04 22:53:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r1.ebuild,v 1.8 2004/05/14 01:56:30 geoman Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="ia64 x86 ppc sparc alpha hppa amd64 ~mips"
+KEYWORDS="ia64 x86 ppc sparc alpha hppa amd64 mips"
 IUSE="X cups cjk"
 
 DEPEND="virtual/glibc
