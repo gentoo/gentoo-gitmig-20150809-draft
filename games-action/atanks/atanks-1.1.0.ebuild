@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.5 2004/09/04 20:40:00 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.6 2004/09/12 09:57:16 mr_bones_ Exp $
 
-inherit games gcc
+inherit eutils gcc games
 
 DATA_DIR="${GAMES_DATADIR}/${PN}"
 DESCRIPTION="Worms and Scorched Earth-like game"
@@ -14,26 +14,25 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/x11
+DEPEND="virtual/x11
 	>=media-libs/allegro-4.0.3
 	>=media-libs/allegttf-2.0"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	#apply both patches to compile with gcc-3.4.0 closing bug #49457
-	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	if [ "$(gcc-major-version)" -ge "3" -a "$(gcc-minor-version)" -ge "4" ]
 	then
-		epatch ${FILESDIR}/atanks-gcc34.patch
+		epatch "${FILESDIR}/atanks-gcc34.patch"
 	fi
 
 	sed -i \
-		-e "s:DATA_DIR=.*:DATA_DIR=\\\\\"${DATA_DIR}\\\\\":" src/Makefile || \
-			die "sed src/Makefile failed"
+		-e "s:DATA_DIR=.*:DATA_DIR=\\\\\"${DATA_DIR}\\\\\":" \
+		src/Makefile \
+		|| die "sed src/Makefile failed"
 }
 
 src_install() {
