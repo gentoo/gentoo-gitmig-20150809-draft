@@ -39,6 +39,10 @@
 # needs testing on 2.95.3
 =media-sound/audacity-1.0.0-r2
 
+# <agenkin@gentoo.org> (27 Aug 2002)
+# Ebuild for 1.1.0 is a work in progress, since it seems to be a mess.
+>=media-sound/audacity-1.1.0
+
 # <seemant@gentoo.org> (26 Aug 2002)
 # Masked for testing -- put into portage because the current version 
 # has a buggy od
