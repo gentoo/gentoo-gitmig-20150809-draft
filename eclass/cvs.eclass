@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.8 2002/08/02 09:44:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.9 2002/08/03 10:46:01 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -28,13 +28,13 @@ INHERITED="$INHERITED $ECLASS"
 # Where the cvs modules are stored/accessed
 [ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="/usr/src"
 
-# Name of cvs server, set to "" to disable fetching
+# Name of cvs server, set to "offline" to disable fetching
 # (i.e. to assume module is checked out already and don't update it).
 # Format is server:/dir e.g. "anoncvs.kde.org:/home/kde". remove the other
 # parts of the full CVSROOT (which looks like
 # ":pserver:anonymous@anoncvs.kde.org:/home/kde"); these are added from
 # other settings
-[ -z "$ECVS_SERVER" ] && ECVS_SERVER=""
+[ -z "$ECVS_SERVER" ] && ECVS_SERVER="offline"
 
 # Username to use
 [ -z "$ECVS_USER" ] && ECVS_USER="anonymous"
@@ -82,7 +82,7 @@ DIR=$DIR"
 	
 	addread $DIR
 	
-	if [ -z "$ECVS_SERVER" ]; then
+	if [ "$ECVS_SERVER" == "offline" ]; then
 		# we're not required to fetch anything, the module already exists and shouldn't be updated
 	    if [ -d "$DIR" ]; then
 			debug-print "$FUNCNAME: offline mode, exiting"
@@ -102,7 +102,9 @@ DIR=$DIR"
 	if [ ! -d "$DIR" ]; then
 		debug-print "$FUNCNAME: creating cvs directory $DIR"
 		einfo "Creating directory $DIR"
+		export SANDBOX_WRITE="$SANDBOX_WRITE:/foo:/"
 		mkdir -p /$DIR
+		export SANDBOX_WRITE=${SANDBOX_WRITE//:\/foo:\/}
 	fi
 
 	# prepare a cvspass file just for this session so that cvs thinks we're logged
