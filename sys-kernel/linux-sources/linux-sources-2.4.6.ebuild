@@ -78,7 +78,7 @@ then
 		RDEPEND=""
 	else
 		#ncurses is required for "make menuconfig"
-		RDEPEND=">=sys-libs/ncurses-5.2"
+		RDEPEND=">=sys-libs/ncurses-5.2 >=sys-apps/e2fsprogs-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1 mosix? ( ~sys-apps/mosix-user-1.0.5 )"
 	fi
 elif [ $PN = "linux-extras" ] || [ $PN = "linux-headers" ]
 then
