@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.12 2004/07/15 01:45:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.13 2004/07/24 18:05:47 alexander Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="x86 ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 ~ppc64 s390 macos"
 IUSE="build"
 
 DEPEND="virtual/libc"
