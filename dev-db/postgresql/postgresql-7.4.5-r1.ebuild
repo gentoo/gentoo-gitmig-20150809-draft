@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.5-r1.ebuild,v 1.2 2004/10/08 15:30:29 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.5-r1.ebuild,v 1.3 2004/10/09 23:17:17 matsuu Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -230,7 +230,7 @@ pkg_postinst() {
 
 	einfo ""
 	einfo "Python modules was removed from PostgreSQL package."
-	einfo "If you need it, please run \"emerge dev-db/pygresq\"."
+	einfo "If you need it, please run \"emerge dev-db/pygresql\"."
 	einfo ""
 }
 
