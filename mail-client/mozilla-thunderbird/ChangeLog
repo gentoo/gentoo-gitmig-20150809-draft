@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.53 2005/03/25 02:14:18 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.54 2005/03/25 03:18:09 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org>
+  mozilla-thunderbird-1.0.2.ebuild:
+  Stable on SPARC wrt security bug #84075.
 
   24 Mar 2005; Brad Laue <brad@gentoo.org> mozilla-thunderbird-1.0.2.ebuild:
   Adjust dep on gnupg to >=gnupg-1.4 per enigmail requirements.
