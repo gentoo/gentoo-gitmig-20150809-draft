@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.8 2004/03/24 01:09:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.9 2004/03/24 11:07:53 foser Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -160,7 +160,7 @@ gst-plugins_src_compile() {
 
 	gst-plugins_src_configure ${@}
 
-	if ! [ -z ${NEED_INTERFACE} ]; then
+	if ! [ -z ${GST_NEED_INTERFACE} ]; then
 		cd ${S}/gst-libs
 		emake
 	fi
