@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.2 2004/08/22 17:00:36 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.3 2004/08/26 09:53:08 st_lim Exp $
 
 inherit eutils
 
@@ -29,8 +29,6 @@ HOMEDIR="/etc/mail/dspam"
 DATADIR="/var/spool/dspam"
 LOGDIR="/var/log/dspam"
 CONFIGDIR="${HOMEDIR}/config"
-
-MYSQL_TABLE_TYPE="space.optimized"
 
 pkg_setup() {
 	if (use mysql && use postgres) || \
@@ -218,7 +216,8 @@ src_install () {
 			doins ${T}/mysql.data
 		fi
 
-		newins tools.mysql_drv/mysql_objects.sql mysql_objects.sql
+		newins tools.mysql_drv/mysql_objects.sql.speed.optimized mysql_objects.sql.speed.optimized
+		newins tools.mysql_drv/mysql_objects.sql.space.optimized mysql_objects.sql.space.optimized
 		newins tools.mysql_drv/virtual_users.sql mysql_virtual_users.sql
 		newins tools.mysql_drv/purge.sql mysql_purge.sql
 		newins ${FILESDIR}/upgrade.sql mysql_upgrade.sql
@@ -331,14 +330,30 @@ pkg_config () {
 		einfo "Creating DSPAM MySQL database \"${DSPAM_MySQL_DB}\""
 		/usr/bin/mysqladmin -u root -p create ${DSPAM_MySQL_DB}
 
-		einfo "Creating DSPAM MySQL tables"
-		/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFIGDIR}/mysql_objects.sql
+		einfo "Creating DSPAM MySQL tables for data objects"
+		einfo "  Please select what kind of object database you like to use."
+		einfo "    [1] Space optimized database"
+		einfo "    [2] Speed optimized database"
+		einfo
+		while true
+		do
+			read -n 1 -s -p "  Press 1 or 2 on the keyboard to select database" DSPAM_MySQL_DB_Type
+			[[ "${DSPAM_MySQL_DB_Type}" == "1" || "${DSPAM_MySQL_DB_Type}" == "2" ]] && break
+		done
+
+		if [ "${DSPAM_MySQL_DB_Type}" == "1" ]
+		then
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFIGDIR}/mysql_objects.sql.space.optimized
+		else
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFIGDIR}/mysql_objects.sql.speed.optimized
+		fi
+
+		einfo "Creating DSPAM MySQL database for virtual users"
 		/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFIGDIR}/mysql_virtual_users.sql
 
 		einfo "Creating DSPAM MySQL user \"${DSPAM_MySQL_USER}\""
 		/usr/bin/mysql -u root -p -e "GRANT SELECT,INSERT,UPDATE,DELETE ON ${DSPAM_MySQL_DB}.* TO ${DSPAM_MySQL_USER}@localhost IDENTIFIED BY '${DSPAM_MySQL_PWD}';FLUSH PRIVILEGES;" -D mysql
-	fi
-	if use postgres ; then
+	elif use postgres ; then
 		[[ -f ${CONFIGDIR}/pgsql.data ]] && mv -f ${CONFIGDIR}/pgsql.data ${HOMEDIR}
 		DSPAM_PgSQL_USER="$(cat ${HOMEDIR}/pgsql.data|head -n 3|tail -n 1)"
 		DSPAM_PgSQL_PWD="$(cat ${HOMEDIR}/pgsql.data|head -n 4|tail -n 1)"
@@ -375,8 +390,7 @@ pkg_config () {
 		done
 		/usr/bin/psql -d ${DSPAM_PgSQL_DB} -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE ${DSPAM_PgSQL_DB} TO ${DSPAM_PgSQL_USER};" 1>/dev/null 2>&1
 		/usr/bin/psql -d ${DSPAM_PgSQL_DB} -U postgres -c "GRANT ALL PRIVILEGES ON SCHEMA public TO ${DSPAM_PgSQL_USER};" 1>/dev/null 2>&1
-	fi
-	if use oci8 ; then
+	elif use oci8 ; then
 		[[ -f ${CONFIGDIR}/oracle.data ]] && mv -f ${CONFIGDIR}/oracle.data ${HOMEDIR}
 	fi
 

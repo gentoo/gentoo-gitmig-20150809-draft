@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.11 2004/08/22 17:00:36 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.12 2004/08/26 09:53:08 st_lim Exp $
+
+  26 Aug 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.1.1.ebuild:
+  Solved bug #61564 with the help of steveb <tp22a@softhome.net>.
+  Now able to offer a choice of speed optimized or space optimized mysql data.
 
   23 Aug 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.1.1.ebuild:
   Fixed bug #61200
