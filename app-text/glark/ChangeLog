@@ -1,6 +1,12 @@
 # ChangeLog for app-text/glark
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.10 2004/03/12 08:22:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.11 2004/04/11 16:51:57 usata Exp $
+
+*glark-1.6.8 (12 Apr 2004)
+
+  12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> glark-1.4.ebuild,
+  glark-1.6.4.ebuild, glark-1.6.8.ebuild:
+  Version bumped. virtual/ruby fix
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> glark-1.4.ebuild,
   glark-1.6.4.ebuild:
