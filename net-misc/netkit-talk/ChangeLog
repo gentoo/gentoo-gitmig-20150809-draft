@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.9 2003/05/05 15:29:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.10 2003/06/17 19:02:18 gmsoft Exp $
+*netkit-talk-0.17-r4 (17 Jun 2003)
+
+  17 Jun 2003; Guy ?artin <gmsoft@gentoo.org> netkit-talk-0.17-r4.ebuild,
+  files/netkit-talk-0.17-r3.diff, files/netkit-talk-0.17-ipv6.ebuild :
+  Added ipv6 support. Thanks to Andrey Ulanov <drey@rt.mipt.ru> for the bug report
+  and Sergey Ulanov for the patch.
 
 *netkit-talk-0.17-r3 (03 Apr 2003)
 
