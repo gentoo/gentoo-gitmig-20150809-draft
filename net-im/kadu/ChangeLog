@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kadu
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.8 2004/01/07 19:24:54 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.9 2004/02/06 04:28:18 rizzo Exp $
+
+*kadu-0.3.7 (05 Feb 2004)
+
+  05 Feb 2004; Don Seiler <rizzo@gentoo.org>; kadu-0.3.7.ebuild, metadata.xml:
+  Version bump, closes bug #40513.  Thanks to Adam Jakubek.
 
   07 Jan 2004; Martin Holzer <mholzer@gentoo.org> kadu-0.3.6.ebuild:
   x86 stable. Closes 37478
