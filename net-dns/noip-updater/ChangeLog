@@ -1,6 +1,17 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.10 2004/06/06 09:14:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.11 2004/06/09 07:50:04 seemant Exp $
+
+*noip-updater-2.1.1-r1 (09 Jun 2004)
+
+  09 Jun 2004; Seemant Kulleen <seemant@gentoo.org> -noip-updater-1.6.ebuild,
+  -noip-updater-2.0.12.ebuild, +noip-updater-2.1.1-r1.ebuild,
+  -noip-updater-2.1.1.ebuild:
+  part of the problem with the new version is that the sourcefile uses PREFIX so
+  it wants to put config files in /usr/etc of all things. Since this was in
+  stable, I'm moving this revision bump with a sed statement to remove the
+  nonsense in the sourcefile to stable x86. Closes bug #53374 by Joshua Banks
+  <l0f33t@yahoo.com>
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org>
   noip-updater-2.0.15.ebuild, noip-updater-2.1.1.ebuild:

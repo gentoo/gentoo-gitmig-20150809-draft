@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.1.ebuild,v 1.3 2004/06/06 09:14:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.1-r1.ebuild,v 1.1 2004/06/09 07:50:04 seemant Exp $
 
 inherit eutils
 
@@ -21,8 +21,20 @@ RDEPEND="virtual/glibc"
 
 DEPEND="${RDEPEND} sys-devel/gcc"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	sed -i \
+		-e "s:\(#define CONFIG_FILEPATH\).*:\1 \"/etc\":" \
+		-e "s:\(#define CONFIG_FILENAME\).*:\1 \"/etc/no-ip2.conf\":" \
+		noip2.c
+}
+
 src_compile() {
-	emake PREFIX=/usr || die
+	emake \
+		PREFIX=/usr \
+		CONFDIR=/etc || die
 }
 
 src_install() {
