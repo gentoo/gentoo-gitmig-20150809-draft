@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r3.ebuild,v 1.2 2004/05/07 21:27:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r3.ebuild,v 1.3 2004/06/08 01:46:14 agriffis Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -85,7 +85,7 @@ src_install() {
 	post-install ivtv /usr/local/bin/test_ioctl -d /dev/video0 -u 0x3000
 	myEOF
 
-	if [ `has app-misc/lirc` ] || [ `use lirc` ] ; then
+	if [ `has app-misc/lirc` ] || use lirc ; then
 		echo "alias char-major-61 lirc_i2c" >> ${D}/etc/modules.d/ivtv
 		echo "add above ivtv lirc_dev lirc_i2c" >> ${D}/etc/modules.d/ivtv
 	else
