@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2bb33e0141affae7d5803a49c58fa83b ChangeLog 1370
+MD5 51fe8f95ddecb67ad91de104752319a4 ChangeLog 1561
 MD5 04e61ab39618ff33b8e098b30ab1416b anubis-3.6.2-r1.ebuild 1076
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 b1d0274d10e9a5fda5310ce6b024c23f anubis-3.9.95.ebuild 1945
+MD5 14a00cccdcc2d9f32a99114789cbb4d8 anubis-3.9.95.ebuild 1918
 MD5 3c698e8a3f7f59300484418a07756c08 anubis-3.6.2.ebuild 975
 MD5 cc4ec1af9779d9945e617204d549a19f files/3.9.95-transmode.c.patch 321
 MD5 b2320df43592e63e327683a3e82928b1 files/3.9.95-authmode.c.patch 438
@@ -15,7 +15,7 @@ MD5 24def86bd1cfb613e6c0dcf55194d449 files/digest-anubis-3.6.2 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBP2Fq10xuJSrg3/sRAvwtAJ9k2ggTUoSEyjYTMc4LBgVdaEZAvQCfX/ao
-XSJ2keAGKrELIJ4SdA9QPOU=
-=WuJh
+iD8DBQFBP2x010xuJSrg3/sRAkA9AJ9T9efLQaJCKQuue+H79nOUz9xvMwCZAboN
+KQ7VWX7P0w2r5hI+e/PUNcg=
+=wk1w
 -----END PGP SIGNATURE-----
