@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $
 
+inherit eutils
+
 DESCRIPTION="Log parsing and notification program"
 HOMEPAGE="http://www.gentoo.org/~lcars/wasabi"
 SRC_URI="http://www.gentoo.org/~lcars/wasabi/${P}.tar.gz"
