@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.23 2004/11/02 03:04:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.24 2004/11/14 09:22:11 corsair Exp $
+
+  14 Nov 2004; Markus Rothe <corsair@gentoo.org> libebml-0.7.2.ebuild:
+  Marked ~ppc64; bug #68112
 
   01 Nov 2004; Jason Wever <weeve@gentoo.org> libebml-0.7.2.ebuild:
   Added ~sparc keyword as it mysteriously disappeared in the version bump.
