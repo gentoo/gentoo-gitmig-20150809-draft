@@ -235,10 +235,6 @@ net-misc/nt
 # masked for testing
 =net-dialup/speedtouch-1.1
 
-# <tantive@gentoo.org> (30 Aug 2002)
-# masked for further testing
-=sys-apps/openmosix-user-0.2.4-r1
-
 # <prez@gentoo.org> (29 Aug 2002)
 # Does not build successfully in an ebuild (but builds just fine outside of one)
 # Needs more investigation as to why.
@@ -262,10 +258,6 @@ dev-java/sun-j2sdk
 =sys-kernel/openmosix-sources-2.4.18-r4
 =sys-kernel/openmosix-sources-2.4.19-r1
 =sys-kernel/openmosix-sources-2.4.19-r2
-
-# <tantive@gentoo.org> (28 Aug 2002)
-# masked because there is a FREEZE
-=sys-apps/openmosix-user-0.2.4
 
 # <phoenix@gentoo.org> (28 Aug 2002)
 # masked new ppp release for testing
