@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.7.ebuild,v 1.2 2004/06/24 23:28:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.7.ebuild,v 1.3 2004/08/01 12:57:24 spider Exp $
 
 inherit gnome2 eutils
 
@@ -12,7 +12,8 @@ KEYWORDS="~x86 ~sparc ~hppa amd64 ppc"
 IUSE=""
 LICENSE="LGPL-2.1 GPL-2 DSL"
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND=">=x11-libs/gtk+-2
+	gnome-base/librsvg"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
