@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.14 2004/06/24 22:41:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.15 2004/08/18 04:08:57 vapier Exp $
+
+*duke3d-20040817 (18 Aug 2004)
+
+  18 Aug 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/20040817-credits.patch, +files/20040817-duke3d-makefile-opts.patch,
+  -files/duke3d, +duke3d-20040817.ebuild:
+  Version bump #60578.
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   duke3d-20030817-r1.ebuild:
