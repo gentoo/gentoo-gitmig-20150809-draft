@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.6-r2.ebuild,v 1.5 2003/11/22 02:15:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.6-r2.ebuild,v 1.6 2004/01/14 18:52:43 gmsoft Exp $
 
 IUSE="nls"
 MY_P=${P/-/_}
@@ -22,7 +22,7 @@ src_unpack() {
 
 	use nls && ( \
 		cd po
-		sed -i "s:/usr/bin/install:/bin/install:" Makefile
+		sed -i "s:/usr/bin/install:install:" Makefile
 	) || ( \
 		sed -i "s:cd po.*::" Makefile
 	)
