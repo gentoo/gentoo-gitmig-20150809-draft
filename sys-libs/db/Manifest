@@ -9,8 +9,8 @@ MD5 2b2c98cc29af812434da4f33ffa37901 db-3.2.9-r7.ebuild 4354
 MD5 b4e14b6f195b9dfba88ebf9197b4899d db-4.2.52_p2.ebuild 2767
 MD5 2610991dd48952fcccdff291615da976 db-4.0.14-r2.ebuild 2122
 MD5 f4fb5b01541980d1272802f3462495bb db-4.0.14-r3.ebuild 2370
-MD5 8379fdb69d1f2b41d554fb0f13b7ed7c db-4.1.25_p1-r4.ebuild 2923
-MD5 614efe97c52640e9d6fa811f34295ecd db-4.1.25_p1-r3.ebuild 2658
+MD5 cfbe0dddb4ddc9f6d5ced93783c65af0 db-4.1.25_p1-r4.ebuild 2702
+MD5 aca049c24337020e49ec1f5e89d5ca93 db-4.1.25_p1-r3.ebuild 2439
 MD5 5c921197970cd970a8fbb4cad2d7df7b metadata.xml 1457
 MD5 1570fff7e312929ed8b70ff24e8f828b db-1.85-r2.ebuild 1429
 MD5 194200b3295b95b46b4564980af27f1f files/db-3.2.9-fix-dep-link.patch 1005
@@ -36,7 +36,7 @@ MD5 8515e61281acd8588b8a79db1eba76a3 files/digest-db-1.85-r2 119
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBPkE4HTu7gpaalycRAhwpAKDALExyoTuS9Rgx3atcnqR/kePw1gCdGtSy
-r87zivEiTkh0hxpyfdLAqqI=
-=vDxn
+iD8DBQFBQE52HTu7gpaalycRApFdAJ4mlszbYx+kxM4vtUoPhoOksudumQCaAzWR
+fSvB/2UogwJ0z2s6YrN/68s=
+=+My8
 -----END PGP SIGNATURE-----

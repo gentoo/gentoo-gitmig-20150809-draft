@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.6 2004/09/01 18:24:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.7 2004/09/09 12:36:33 vapier Exp $
 
 inherit eutils gnuconfig db
 
@@ -47,25 +47,18 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PN}-4.0.14-fix-dep-link.patch
 	epatch ${FILESDIR}/${PN}-4.1.25-uclibc.patch
+	gnuconfig_update "${S}/../dist"
 }
 
 src_compile() {
 	addwrite /proc/self/maps
 
-	# Mips needs a gnuconfig update so obscure things like mips64 are known
-	# db-4.1.25_p1 extracts to ${WORKDIR}/db-4.1.25, so we need to strip the _p1
-	if use mips || use uclibc  ; then
-		einfo "Updating config.{guess,sub} for mips or uclibc"
-		local OLDS="${S}"
-		S="${S}/../dist"
-		gnuconfig_update
-		S="${OLDS}"
-	fi
+	local myconf=""
 
+	# FIXME: dont tie this to uclibc anymore
 	use uclibc \
-		&& local myconf="--disable-rpc" \
-		|| local myconf="--enable-rpc"
-
+		&& myconf="${myconf} --disable-rpc" \
+		|| myconf="${myconf} --enable-rpc"
 	use uclibc \
 		&& myconf="${myconf} --disable-cxx" \
 		|| myconf="${myconf} --enable-cxx"
