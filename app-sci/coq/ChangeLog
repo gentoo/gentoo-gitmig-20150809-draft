@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/coq
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/ChangeLog,v 1.7 2004/08/08 07:00:05 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/ChangeLog,v 1.8 2004/08/14 04:42:52 weeve Exp $
+
+  13 Aug 2004; Jason Wever <weeve@gentoo.org> coq-8.0-r1.ebuild:
+  Added ~sparc keyword.
 
 *coq-8.0-r1 (08 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-8.0-r1.ebuild,v 1.1 2004/08/08 07:00:05 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-8.0-r1.ebuild,v 1.2 2004/08/14 04:42:52 weeve Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ translator? ( ftp://ftp.inria.fr/INRIA/coq/V${MY_PV}/${MY_P}-translator.tar.gz )
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=dev-lang/ocaml-3.06
 ide? ( >=dev-ml/lablgtk-2.2.0 )"
