@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.6 2004/12/17 08:14:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.7 2004/12/19 10:47:56 eradicator Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -8,7 +8,8 @@ ACCEPT_KEYWORDS="${ARCH}"
 # Used in ebuilds for verifying multilib userland
 PROFILE_ARCH="sparc64-multilib"
 
-# We have the sparc64 platform
+# We're on sparc64 machines
+CHOST="sparc64-unknown-linux-gnu"
 PLATFORM="sparc64-unknown-linux-gnu"
 
 FEATURES="sandbox ccache autoconfig"
@@ -28,13 +29,11 @@ MULTILIB_ABIS="sparc32 sparc64"
 DEFAULT_ABI="sparc64"
 
 ARCH_WRAPPER_sparc64="sparc64"
-CHOST_sparc64="sparc64-unknown-linux-gnu"
 CFLAGS_sparc64="-m64"
 CXXFLAGS_sparc64="${CFLAGS_sparc64}"
 LIBDIR_sparc64="lib64"
 
 ARCH_WRAPPER_sparc32="sparc32"
-CHOST_sparc32="sparc-unknown-linux-gnu"
 CFLAGS_sparc32="-m32"
 CXXFLAGS_sparc32="${CFLAGS_sparc32}"
 LIBDIR_sparc32="lib"
@@ -43,7 +42,6 @@ LIBDIR_sparc32="lib"
 CONF_LIBDIR="lib64"
 CONF_MULTILIBDIR="lib"
 ARCH_WRAPPER="sparc32"
-CHOST="sparc64-unknown-linux-gnu"
 CHOST32="sparc-unknown-linux-gnu"
 CC32="gcc32"
 CPP32="g++32"
