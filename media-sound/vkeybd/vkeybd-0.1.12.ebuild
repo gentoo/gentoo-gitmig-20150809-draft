@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.12.ebuild,v 1.2 2002/12/25 18:01:12 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.12.ebuild,v 1.3 2002/12/26 16:37:47 agenkin Exp $
 
 DESCRIPTION="A virtual MIDI keyboard for X."
 HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="alsa"
+IUSE="alsa oss"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	=dev-lang/tk-8.3*
