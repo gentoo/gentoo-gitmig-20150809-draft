@@ -1,4 +1,4 @@
 MD5 80edfbdf8646501e1e721c4abb5818fd files/digest-twin-0.4.5 63
-MD5 c9f5f3d63fa80dc637303173230720eb twin-0.4.5.ebuild 1759
 MD5 cfed79c586aa66601a4f433d23706bad ChangeLog 1726
-MD5 a28ff68c987421df73dd99c6fd7e1e56 metadata.xml 1400
+MD5 75659ae17937f732013a241bbc2b9529 metadata.xml 1396
+MD5 6d212e55c874ba37f79bbd508d06c403 twin-0.4.5.ebuild 1744
