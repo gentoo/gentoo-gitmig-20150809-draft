@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.1 2003/10/21 17:33:18 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.2 2003/10/21 18:53:42 cretin Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -57,7 +57,7 @@ src_install() {
 	rm -f ${D}/usr/lib/libpopt*
 	rm -f ${D}/usr/include/popt.h
 	use nls && rm -f  ${D}/usr/share/locale/*/LC_MESSAGES/popt.mo
-	rm -f /usr/share/man/man3/popt*
+	rm -f ${D}/usr/share/man/man3/popt*
 
 	keepdir /var/lib/rpm
 	keepdir /usr/src/pc/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
