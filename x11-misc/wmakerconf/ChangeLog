@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wmakerconf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.9 2003/08/16 09:04:45 g2boojum Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.10 2004/06/20 18:04:51 port001 Exp $
+
+  20 Jun 2004; Ian Leitch <port001@gentoo.org> wmakerconf-2.8.1-r2.ebuild:
+  No need to set S
 
   16 Aug 2003; Nick Hadaway <raker@gentoo.org> wmakerconf-2.9.ebuild:
   Marked -* for all arches as it does not work.  Possibly due to the
