@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.2 2002/12/02 12:41:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.3 2002/12/06 20:20:58 mkennedy Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.gnu.org/software/emacs"
 # Never use the sandbox, it causes Emacs to segfault on startup
 SANDBOX_DISABLED="1"
 
-DEPEND=">=sys-libs/ncurses-5.2
+DEPEND=">=sys-libs/ncurses-5.3
 	sys-libs/gdbm
 	dev-util/cvs
 	X? ( virtual/x11
@@ -36,7 +36,7 @@ PROVIDE="virtual/emacs"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 src_compile() {
 	local myconf
@@ -72,6 +72,14 @@ src_install () {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
+
+	# fix info documentation
+	find ${D}/usr/share/info -type f -print |\
+		while read i
+		do
+			mv ${i} ${i}.info
+		done
+	
 
 	dodoc BUGS ChangeLog README
 }

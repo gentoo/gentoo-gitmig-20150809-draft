@@ -1,9 +1,16 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.2 2002/12/02 12:41:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.3 2002/12/06 20:20:58 mkennedy Exp $
 
 *emacs-cvs-21.3.50 (22 Nov 2002)
 
+  06 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  emacs-cvs-21.3.50.ebuild :
+
+  Back out of last ChangeLog entry as consensus on -core seems to be that
+  -cvs ebuilds should not be in the stable profiles. Added fix for info
+  documentation file names.
+	
   02 Dev 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   emacs-cvs-21.3.50.ebuild :
 
