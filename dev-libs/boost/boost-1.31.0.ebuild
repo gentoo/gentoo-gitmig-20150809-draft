@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.6 2004/06/24 23:01:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.7 2004/06/28 02:05:32 tgall Exp $
 
 MyPV=${PV//./_}
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${MyPV}.tar.bz2"
 S=${WORKDIR}/${PN}_${MyPV}
 
 LICENSE="freedist"
-KEYWORDS="x86 ~ppc ~amd64 sparc"
+KEYWORDS="x86 ~ppc ~amd64 sparc ppc64"
 SLOT="1"
 IUSE="icc"
 
@@ -44,6 +44,13 @@ src_compile() {
 		arch=
 	else
 		arch=${ARCH}
+	fi
+
+	if [ "${ARCH}" == "ppc64" ]; then
+		pushd .
+		cd tools/build/jam_src
+		ln -sf bin.linuxppc bin.linuxppc64
+		popd
 	fi
 
 	if use icc ; then
