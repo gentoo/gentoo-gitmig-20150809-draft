@@ -1,6 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.23.ebuild,v 1.2 2003/12/28 13:58:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.23-r1.ebuild,v 1.1 2004/01/07 10:15:33 plasmaroo Exp $
+
+ETYPE="sources"
+inherit kernel
 
 UML_PATCH="uml-patch-2.4.23-1"
 
@@ -12,6 +15,7 @@ HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="${PV}"
 KEYWORDS="x86"
+EXTRAVERSION=${PR}
 
 # console-tools is needed to solve the loadkeys fiasco.
 # binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
@@ -28,6 +32,11 @@ src_unpack() {
 	# apply usermode patch
 	cd ${S}
 	epatch ${DISTDIR}/${UML_PATCH}.bz2
+
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}-2.4.22.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+
+	kernel_universal_unpack
 }
 
 src_compile() {
