@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.8 2004/06/09 23:11:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.9 2004/06/14 07:10:09 mr_bones_ Exp $
+
+  14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> glob2-0.8.6.ebuild:
+  explicitly give the path for vorbis (bug #46352)
 
   09 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> glob2-0.8.2.ebuild,
   glob2-0.8.4.ebuild:

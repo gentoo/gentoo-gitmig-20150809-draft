@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.6.ebuild,v 1.1 2004/06/09 23:10:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.6.ebuild,v 1.2 2004/06/14 07:10:09 mr_bones_ Exp $
 
 inherit games
 
@@ -22,6 +22,14 @@ DEPEND="virtual/glibc
 	media-libs/libvorbis
 	=media-libs/freetype-2*
 	sys-libs/zlib"
+
+src_compile() {
+	#./configure assumes that vorbis will be installed under PREFIX bug #46352
+	egamesconf \
+		--with-vorbis=/usr \
+		|| die
+	emake || die "emake failed"
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
