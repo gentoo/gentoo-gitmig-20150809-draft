@@ -2,8 +2,8 @@ MD5 f06a38fe42dad7728a836afbb1cd640e ChangeLog 2436
 MD5 9702388e926411eb2dd07c06f3f029ac devhelp-0.4-r1.ebuild 1471
 MD5 7710509437bcf371af522ad704be6048 devhelp-0.6.0.ebuild 746
 MD5 8df94535e5bf0f0002800e236d5fcaac devhelp-0.7.ebuild 725
-MD5 20cc562f9b4aa7238ff08487a04cf3b4 devhelp-0.8.1.ebuild 735
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 cd67048acce3c217d6f4ab4eabafb706 devhelp-0.8.1.ebuild 732
 MD5 5d90dbc2df84cde18de2c06dc5ae551c files/digest-devhelp-0.4-r1 63
 MD5 7f0a1f022f0336946b60d6d450646775 files/digest-devhelp-0.6.0 66
 MD5 4d7c33ffd1bbabc83f7d822eac2faf6e files/digest-devhelp-0.7 64
