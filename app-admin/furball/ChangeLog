@@ -1,22 +1,19 @@
 # ChangeLog for app-admin/furball
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/furball/ChangeLog,v 1.6 2003/02/12 02:18:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/furball/ChangeLog,v 1.7 2003/12/02 22:07:59 plasmaroo Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords.
  
 *furball-0.5 (11 Apr 2002)
 
   29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> furball-0.5.euild :
-
-  Added ppc to KEYWORDS
+  Added 'ppc' to KEYWORDS.
 
   11 Mar 2002; Thilo Bangert <bangert@gentoo.org> furball-0.5.euild :
-
-  fixed DESCRIPTION
+  Fixed DESCRIPTION.
 
 
 *furball-0.5 (15 Mar 2002)
 
   15 Mar 2002; Thilo Bangert <thilo.bangert@gmx.net> ChangeLog :
-
-  created furball ebuild
+  Created furball ebuild.

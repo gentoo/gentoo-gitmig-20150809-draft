@@ -1,14 +1,14 @@
 # ChangeLog for app-admin/gnomesu
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/ChangeLog,v 1.2 2003/07/09 17:21:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/ChangeLog,v 1.3 2003/12/02 22:11:41 plasmaroo Exp $
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnomesu-0.3.1.ebuild:
-  add pkgconfig dep
+  Added a 'pkgconfig' dependency.
 
 *gnomesu-0.3.1 (08 Jun 2003)
 
   08 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnomesu-0.3.1.ebuild,
-  files/gnomesu-0.3.1-desktopfix.patch:
-  new package. thanks to Nicholas D. Wolfwood <wolfwood@users.sourceforge.net>
-  (#22133) (#14547)
+  files/gnomesu-0.3.1-desktopfix.patch: This is a new package. Thanks to 
+  Nicholas D. Wolfwood <wolfwood@users.sourceforge.net> -- bugs (#22133) 
+  and (#14547).
 
