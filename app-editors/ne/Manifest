@@ -1,9 +1,19 @@
-MD5 e56b230cbaa4eb155452962cf34bbd61 ChangeLog 2006
-MD5 96c5a9a96b7414a4cc00bb34c82d807c metadata.xml 275
-MD5 0461cc908b889531c103d2531bf1d6cc ne-1.36.ebuild 1067
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 02862d7c32f0cf95ae8cecacefdd2571 ChangeLog 2084
+MD5 fe5f26ef95d23b4f065e9384c2949306 ne-1.39.ebuild 1032
 MD5 498d40219269d178fea443f85429e642 ne-1.38.ebuild 975
-MD5 d705b2a3868f6ef59647a1ce1b6a1df5 ne-1.39.ebuild 1022
-MD5 f42f170988b1e65d3614a7f8c8e1e3d8 files/1.36-include-fix.patch 825
+MD5 0461cc908b889531c103d2531bf1d6cc ne-1.36.ebuild 1067
+MD5 96c5a9a96b7414a4cc00bb34c82d807c metadata.xml 275
 MD5 00fcc22f5e66eaa8d63653b147365adb files/digest-ne-1.36 60
 MD5 fee9c062d0bb6450e91880380c8f4331 files/digest-ne-1.38 60
+MD5 f42f170988b1e65d3614a7f8c8e1e3d8 files/1.36-include-fix.patch 825
 MD5 dbdd3b9510c60b4d23469fc0ff2a9861 files/digest-ne-1.39 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2VZwCHk4+ZoBpvsRAuitAKC7Xo+fi/Irr9tnR9sBMC3wRF/eRACgqIBs
+BwGehOQV53gI+zgUvdvUtCI=
+=BekB
+-----END PGP SIGNATURE-----
