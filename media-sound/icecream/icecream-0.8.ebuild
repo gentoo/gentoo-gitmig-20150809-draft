@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/media-sound/icecream-0.8, 2004/04/13 10:11:00
+# $Header: /var/cvsroot/gentoo-x86/media-sound/icecream/icecream-0.8.ebuild,v 1.2 2004/09/16 20:21:24 eradicator Exp $
 
 IUSE=""
 
