@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r2.ebuild,v 1.1 2004/07/09 16:25:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r3.ebuild,v 1.1 2004/07/21 10:36:49 plasmaroo Exp $
 
 IUSE=""
 
@@ -40,6 +40,7 @@ src_unpack() {
 	cd linux-${KV}
 	epatch ../${MY_P/linux/${base}}.${patch} || die "Failed to apply uClinux patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
+	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-0596.patch || die "Failed to apply the CAN-2004-0596 security patch!"
 	epatch ${FILESDIR}/${PN}-2.6.IPTables-RDoS.patch || die "Failed to apply the IPTables RDoS security patch!"
 	epatch ${FILESDIR}/${PN}-2.6.ProcPerms.patch || die "Failed to apply the /proc permissions security patch!"
 
