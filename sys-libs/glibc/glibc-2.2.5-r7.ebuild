@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.25 2002/12/09 04:37:29 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.26 2002/12/09 19:01:55 seemant Exp $
 
 IUSE="nls pic build"
 
@@ -36,7 +36,7 @@ SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 SLOT="2.2"
 LICENSE="GPL-2"
 
@@ -134,26 +134,22 @@ src_unpack() {
 		patch -p1 < ${FILESDIR}/${PV}/${P}-alpha-pcdyn-fix.diff > /dev/null || die
 	fi
 
-	# Some patches to fixup build on sparc and 
+	# Some patches to fixup build on sparc
 	
-	#This is a sparc mathinline.h update, fixes problems with C++ and the mathinline header, cretin@gentoo.org
-	einfo "Applying sparc-mathinline patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-mathinline.patch > /dev/null || die
-
-	if use  > /dev/null || use sparc > /dev/null
-	then
-		einfo "Applying sparc-misc patch..."
-		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-misc.diff > /dev/null || die
-	fi
-
-	if use  > /dev/null
-	then
-		einfo "Applying seemant's -fixups patch..."
-		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}--fixups.diff > /dev/null || die
-	fi
-
 	if use sparc > /dev/null
 	then
+		einfo "Applying sparc-mathinline patch..."
+		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-mathinline.patch > /dev/null || die
+
+		einfo "Applying sparc-misc patch..."
+		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-misc.diff > /dev/null || die
+
+		if [ "${ARCH}" = "sparc64" ]
+		then
+			einfo "Applying seemant's -fixups patch..."
+			cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc64-fixups.diff > /dev/null || die
+		fi
+
 		einfo "Applying nall's sparc32-semctl patch..."
 		cd ${S} 
 		patch -p1 < ${FILESDIR}/${PV}/${P}-sparc32-semctl.patch > /dev/null || die
