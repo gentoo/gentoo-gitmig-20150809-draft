@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.6.3.ebuild,v 1.1 2000/11/13 19:45:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.6.3.ebuild,v 1.2 2000/11/13 19:52:43 achim Exp $
 
 #P=
 A="${P}.tar.gz"
@@ -10,6 +10,10 @@ DESCRIPTION="Libpcap packet sniffer/logger/lightweight IDS"
 SRC_URI="http://www.snort.org/Files/${A}"
 HOMEPAGE="http://www.snort.org"
 
+DEPEND=">=net-libs/libpcap-0.5.2
+        >=dev-db/mysql-3.23.26"
+
+RDEPEND=">=dev-db/mysql-3.23.26"
 
 src_compile() {
 
