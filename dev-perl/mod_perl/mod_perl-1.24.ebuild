@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.24.ebuild,v 1.1 2000/08/28 02:36:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.24.ebuild,v 1.2 2000/09/15 20:08:51 drobbins Exp $
 
 P=mod_perl-1.24
 A=${P}.tar.gz
@@ -16,7 +16,7 @@ src_compile() {
 
     cd ${S}
     perl Makefile.PL NO_HTTPD=1 $PERLINSTALL
-    make
+    try make
     cd src/modules/perl
     apxs -c -I /usr/lib/perl5/5.6.0/i686-linux/CORE mod_perl.c
 }
@@ -24,7 +24,7 @@ src_compile() {
 src_install () {
 
     cd ${S}
-    make install
+    try make install
     prepman
     cd src/modules/perl
     insinto /usr/lib/apache

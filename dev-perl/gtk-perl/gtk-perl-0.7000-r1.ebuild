@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7000-r1.ebuild,v 1.2 2000/08/16 04:37:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7000-r1.ebuild,v 1.3 2000/09/15 20:08:51 drobbins Exp $
 
 P=gtk-perl-0.7000
 A=Gtk-Perl-0.7000.tar.gz
@@ -17,12 +17,12 @@ src_unpack() {
 src_compile() {                           
   cd ${S}
   perl Makefile.PL $PERLINSTALL
-  make
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/usr install
+  try make prefix=${D}/usr install
   prepman
   dodoc ChangeLog MANIFEST NOTES README VERSIONS WARNING
 }
