@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 250fcc41589ffac5e1f23da168311c60 Test-ClassAPI-1.02.ebuild 656
+MD5 340d791e8ec8e561cec1b64fffff82dd Test-ClassAPI-1.02.ebuild 653
+MD5 27cc75ff14d0e9ca84ecee377a3f1877 ChangeLog 500
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 d0ec8dc6081567a8f18b5232b3476b45 ChangeLog 389
 MD5 b1aaed28cc63062ded4c3eb7955d9336 files/digest-Test-ClassAPI-1.02 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBcd5atG5z4I8BtQoRAjLhAJ0YNcfmUWjT+RBwrJ8SWNqgqVP7NwCcC8sH
-nA9cs44UC/HEaMrSv5J1W2U=
-=AGQu
+iD8DBQFBrOunI1lqEGTUzyQRAhFYAJsH0fj4o8b7IkFs5Bc8i3GqB2w2TQCg1E+R
+vd+qP6ZNKbdzBEeN623NxxM=
+=jcaX
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-ClassAPI
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/ChangeLog,v 1.1 2004/10/17 02:55:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/ChangeLog,v 1.2 2004/11/30 21:52:32 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> Test-ClassAPI-1.02.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *Test-ClassAPI-1.02 (16 Oct 2004)
 
