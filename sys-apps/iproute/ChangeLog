@@ -1,7 +1,13 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.21 2003/07/06 14:19:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.22 2003/08/17 06:09:37 robbat2 Exp $
 
+*iproute-20010824-r4 (16 Aug 2003)
+
+  16 Aug 2003; Robin H. Johnson <robbat2@gentoo.org>
+  iproute-20010824-r4.ebuild:
+  update to latest debian patch, adds more manpages, also change to depend on
+  kernel headers and not kernel sources
 
 *iproute-20010824-r3 (04 May 2003)
 
