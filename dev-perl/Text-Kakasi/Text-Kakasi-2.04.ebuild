@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/Text-Kakasi-2.04.ebuild,v 1.1 2003/06/20 16:46:03 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/Text-Kakasi-2.04.ebuild,v 1.2 2003/06/20 17:16:32 yakina Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=app-text/kakasi-2.3.4"
+DEPEND=">=app-i18n/kakasi-2.3.4"
 
 src_unpack() {
 	unpack ${A}
