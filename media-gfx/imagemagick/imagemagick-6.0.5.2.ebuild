@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.5.2.ebuild,v 1.1 2004/08/20 17:25:25 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.5.2.ebuild,v 1.2 2004/08/23 00:04:37 mr_bones_ Exp $
 
 inherit libtool flag-o-matic eutils
 
