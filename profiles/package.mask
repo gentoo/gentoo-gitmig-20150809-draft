@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3248 2004/10/14 23:04:34 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3249 2004/10/15 23:50:00 seemant Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <seemant@gentoo.org> (15 Oct 2004)
+# This seems to want gcc-3.4.3 which does not even exist in portage yet!
+>=dev-lang/maude-2.1.1-r2
 
 # <chriswhite@gentoo.org> (14 Oct 2004)
 # This is a rather large program that will remained
