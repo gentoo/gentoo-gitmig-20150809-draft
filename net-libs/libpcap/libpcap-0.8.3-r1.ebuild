@@ -1,20 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.7 2004/04/05 03:14:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.8 2004/04/05 06:55:37 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="pcap-Library"
+HOMEPAGE="http://www.tcpdump.org/"
 SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 	http://www.jp.tcpdump.org/release/${P}.tar.gz"
-HOMEPAGE="http://www.tcpdump.org/"
-DEPEND="virtual/glibc"
-SLOT="0"
+
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha ~mips ~hppa amd64 ia64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha ~mips hppa amd64 ia64"
+
+DEPEND="virtual/glibc"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.8.1-fPIC.patch
 }
 
@@ -35,5 +38,5 @@ src_install() {
 	dosym /usr/lib/libpcap.so.${PV:0:3} /usr/lib/libpcap.so.0
 	dosym /usr/lib/libpcap.so.${PV:0:3} /usr/lib/libpcap.so
 
-	dodoc CREDITS CHANGES FILES README* VERSION LICENSE
+	dodoc CREDITS CHANGES FILES README* VERSION
 }
