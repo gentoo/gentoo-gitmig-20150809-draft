@@ -6,7 +6,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f72f4f19fcbf7bf962ae885d077142e0 readline-4.1-r5.ebuild 1762
 MD5 d3c4a60f05d3fdebd20bd21155c74fc8 readline-5.0.ebuild 2162
 MD5 c45be70cfbe979355e83578914ee1d41 readline-4.3-r4.ebuild 2380
-MD5 83dda0cb2f24ebf73ac0a8c92bc41661 readline-4.3-r5.ebuild 2640
+MD5 f4c5811fd947998514cf53ab29f8b467 readline-4.3-r5.ebuild 2641
 MD5 1026086175f3685832ab7c163c7c66af readline-4.3-r6.ebuild 3179
 MD5 101a71fff10aec638dd192ec5577c41d readline-5.0-r1.ebuild 2232
 MD5 f9e8af7cdcf7ac973c77fc6a712af5de files/digest-readline-4.1-r5 64
@@ -21,7 +21,7 @@ MD5 e3ee94eed45baf4ca76736da56d72bad files/digest-readline-5.0-r1 350
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWr6jHTu7gpaalycRAtcHAJ44uqs9kd5qrRFJd9opDeA1iQ8bHgCgsxGi
-BE8/JZwNLttpnXQbTLkWQtM=
-=HiAU
+iD8DBQFBWwP2HTu7gpaalycRAvVfAJ9/JXat2DKpFKXDkyQTrlJu207J+QCeJudl
+r/cN7sW8TLesdNZXF3bDrp4=
+=HUMU
 -----END PGP SIGNATURE-----
