@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gcdial
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/ChangeLog,v 1.3 2004/07/01 22:06:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/ChangeLog,v 1.4 2004/11/17 18:52:48 mrness Exp $
+
+  17 Nov 2004; Alin Nastac <mrness@gentoo.org> gcdial-0.7b.ebuild:
+  Marked stable on x86.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gcdial-0.7b.ebuild:
   virtual/glibc -> virtual/libc
