@@ -1,8 +1,13 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.16 2003/04/29 11:21:06 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.17 2003/04/29 17:53:57 brain Exp $
+*PyQt-3.6-r1 (29 Apr 2003)
+
+  29 Apr 2003; Michele Balistreri <brain@gentoo.org> PyQt-3.6-r1.ebuild :
+  Adding dependencie to qscintilla package
 
 *PyQt-3.6 (29 Apr 2003)
+
   29 Apr 2003; Michele Balistreri <brain@gentoo.org> PyQt-3.6.ebuild :
   Version bump
 
