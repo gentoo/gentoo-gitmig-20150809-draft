@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.5.ebuild,v 1.2 2004/01/16 19:19:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.5.ebuild,v 1.3 2004/01/24 07:30:03 robbat2 Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas esd motif slang tcltk oggvorbis cdr"
@@ -56,6 +56,10 @@ use oggvorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --witho
 use cdr		|| KDE_REMOVE_DIR="kaudiocreator"
 
 [ -z "`use cdr`" ] && KDE_REMOVE_DIR="$KDE_REMOVE_DIR kaudiocreator"
+
+# Robin Johnson <robbat2@gentoo.org> 23/01/2004
+# fixes bug #38326 
+myconf="${myconf} --disable-strict --disable-warnings"
 
 myconf="$myconf $myaudio $myinterface"
 
