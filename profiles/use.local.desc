@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.424 2004/06/07 13:54:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.425 2004/06/07 17:41:03 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -128,6 +128,7 @@ dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript packa
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/anygui:wxwin - enable wxwin support
 dev-python/ipython:gnuplot - enable gnuplot support
+dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 dev-python/wxPython:unicode - enable unicode support (must be enabled in wxGTK as well)
 dev-ruby/ruby-amazon:geoip - enable GeoIP support
