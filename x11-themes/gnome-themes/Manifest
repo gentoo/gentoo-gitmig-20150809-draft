@@ -3,11 +3,13 @@ MD5 83edbf70e321cc1c33419d093cec2053 gnome-themes-2.6.3.ebuild 915
 MD5 8bbf18038ba894fc36939965519113a4 gnome-themes-2.6.0.ebuild 913
 MD5 fec4a8df855c3f137dab1248084ce70b gnome-themes-2.4.1.ebuild 1010
 MD5 200ef26946b9fb060b9e39e1a54784f8 gnome-themes-2.6.2.ebuild 920
-MD5 f96eb6de68df1ac2fc730b642cefa965 ChangeLog 6641
+MD5 8b0c58818ec2d5f2df70fd6cca26f6fd ChangeLog 6839
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 3b241cf3a6a72eaadabf25af00eb823b gnome-themes-2.8.0.ebuild 1029
 MD5 c67472bc94190957a1022ba6a825f06c files/digest-gnome-themes-2.4.1 72
 MD5 6e40128c9d0805b462a28301a41b3b7c files/digest-gnome-themes-2.6.0 72
 MD5 a202134174c150a0c3bea128270b1104 files/digest-gnome-themes-2.6.1 72
 MD5 3897ab483f12d01196f5b5cf10d80ff8 files/digest-gnome-themes-2.6.2 72
 MD5 1518de7ec09f462e8ddfc392d24f0468 files/digest-gnome-themes-2.6.3 72
+MD5 dcd414e77b8ec5089e47243adfb6c266 files/digest-gnome-themes-2.8.0 72
 MD5 1c5f99943a8108a29d4a8eebbfb04db2 files/gnome-themes-2.4.0-nothinice.patch 1225
