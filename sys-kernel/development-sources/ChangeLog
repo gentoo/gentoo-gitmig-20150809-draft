@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/development-sources
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.155 2004/12/25 00:42:06 chainsaw Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.156 2005/01/03 00:17:35 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *development-sources-2.6.10 (25 Dec 2004)
 
@@ -52,7 +55,7 @@
   development-sources-2.6.10_rc1.ebuild:
   Remove 2.6.9 buildfix, no longer needed thanks to brix in bug 69361
 
-  23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  23 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   development-sources-2.6.9.ebuild:
   ~alpha keyword.
 
@@ -155,7 +158,7 @@
   development-sources-2.6.7.ebuild:
   Added a call to postinst_sources.
 
-  24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  24 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   development-sources-2.6.7.ebuild:
   Keyword ~alpha.
 

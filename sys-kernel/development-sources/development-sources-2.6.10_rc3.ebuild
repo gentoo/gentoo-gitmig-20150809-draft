@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.10_rc3.ebuild,v 1.2 2004/12/11 18:43:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.10_rc3.ebuild,v 1.3 2005/01/03 00:17:35 ciaranm Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"

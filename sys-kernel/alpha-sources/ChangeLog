@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/alpha-sources
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.39 2004/12/24 15:33:50 plasmaroo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.40 2005/01/03 00:14:09 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *alpha-sources-2.4.21-r17 (24 Dec 2004)
 
@@ -74,7 +77,7 @@
   alpha-sources-2.4.21-r6.ebuild, alpha-sources-2.4.21-r7.ebuild:
   QA - fix use invocation
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> :
   Security bump, see bug 47881.
 
 *alpha-sources-2.4.21-r7 (28 May 2004)
