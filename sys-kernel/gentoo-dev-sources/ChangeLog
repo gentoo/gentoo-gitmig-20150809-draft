@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.80 2004/08/10 14:41:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.81 2004/08/11 12:21:56 fmccor Exp $
+
+  11 Aug 2004; Ferris McCormick <fmccor@gentoo.org>
+  gentoo-dev-sources-2.6.7-r13.ebuild:
+  Remove ~sparc keyword.  This version will not build on sparc using the
+  default configuration parameter 'CONFIG_OBP_FLASH=m' for the reasons given
+  below concerning '-r12' and as described in more detail at bug 59984.
+  Because 2.6.7-r11 builds and runs without incident and because a correction
+  for this problem is expected, it seems cleanest just to remove this version
+  from consideration for sparc. (Instead of playing with configurations or with
+  kernel source to force a clean but nonstandard build.)
 
   10 Aug 2004; Ferris McCormick <fmccor@gentoo.org>
   gentoo-dev-sources-2.6.7-r12.ebuild:
