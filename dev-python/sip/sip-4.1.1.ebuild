@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.1.1.ebuild,v 1.6 2004/12/19 20:42:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.1.1.ebuild,v 1.7 2005/02/08 05:06:31 eradicator Exp $
 
 inherit distutils
 
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 src_compile(){
 	distutils_python_version
 
-	local myconf="-l qt-mt -b /usr/bin -d /usr/lib/python${PYVER}/site-packages -e /usr/include/python${PYVER}"
+	local myconf="-l qt-mt -b /usr/bin -d /usr/$(get_libdir)/python${PYVER}/site-packages -e /usr/include/python${PYVER}"
 	use debug && myconf="${myconf} -u"
 
 	python configure.py ${myconf} "CFLAGS+=${CFLAGS}" "CXXFLAGS+=${CXXFLAGS}"
@@ -31,7 +31,7 @@ src_compile(){
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog LICENSE NEWS README THANKS TODO
 	if use doc ; then dohtml doc/* ; fi
 }
