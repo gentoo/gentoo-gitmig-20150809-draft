@@ -1,16 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2514a44dd70e62016e73a07106cd648a kismet-2005.01.1.ebuild 2299
 MD5 3df1ca9aabc3a11a05762002ed770f98 kismet-2004.10.1-r1.ebuild 2268
-MD5 96ba11f9b8b54551ef4bc7d69e4f91fb ChangeLog 8313
+MD5 fcd45bd81298de6330421669974ce8cf ChangeLog 8507
 MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
+MD5 813a26c9847e745a1b65147e8e8e472e files/kismet-2005.01.1-init.d 1131
 MD5 ac3f64df09253e57accaee015fdd60bb files/kismet-2004.10.1-conf.d 805
 MD5 0d620d9840f740fd0914006eaf1a636d files/kismet-2004.10.1-init.d 1131
 MD5 2b5522ad006abb94c870187b1d687109 files/digest-kismet-2004.10.1-r1 138
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB4RZpI1lqEGTUzyQRAiTVAJ4zJ2+2atEDClx699y1t9Fr9XcOPgCeMwjZ
-lIlwx9cZLYrFjpN5G79HxIE=
-=BIFJ
------END PGP SIGNATURE-----
+MD5 c7f67b063ea9d619cb9472146b4c7163 files/digest-kismet-2005.01.1 138
+MD5 8408c7aaa657ab84dbb2c4ddc43b187b files/kismet-2005.01.1-conf.d 805
