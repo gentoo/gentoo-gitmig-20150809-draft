@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.10.3.ebuild,v 1.2 2003/12/30 06:38:08 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.10.4.ebuild,v 1.1 2003/12/31 04:01:46 jbms Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
