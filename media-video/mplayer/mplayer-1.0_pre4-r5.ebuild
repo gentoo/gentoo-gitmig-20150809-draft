@@ -1,14 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r5.ebuild,v 1.4 2004/07/19 04:34:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r5.ebuild,v 1.5 2004/07/22 19:35:26 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow X aalib alsa arts bidi debug directfb divx4linux dvb dvd encode esd fbcon ggi gif gnome gtk ipv6 joystick jpeg libcaca lirc live mad matroska matrox mmx mpeg nas nls oggvorbis opengl oss png samba sdl sse svga theora truetype v4l v4l2 xinerama xmms xvid"
-
-# NOTE to myself:  Test this thing with and without dvd/gtk+ support,
-#                  as it seems the mplayer guys dont really care to
-#                  make it work without dvd support.
+IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx nas network nls oggvorbis opengl oss png rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama xmms xvid"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -16,7 +12,7 @@ SVGV=1.9.17
 # Handle PREversions as well
 MY_PV="${PV/_/}"
 S="${WORKDIR}/MPlayer-${MY_PV}"
-SRC_URI="mirror://mplayer/releases/MPlayer-${MY_PV}.tar.bz2
+SRC_URI="http://www1.mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
@@ -33,45 +29,44 @@ RDEPEND="xvid? (
 		)
 	x86? ( divx4linux? (  >=media-libs/divx4linux-20030428 )
 		 >=media-libs/win32codecs-0.60 )
-	png? ( media-libs/libpng )
-	gtk? ( media-libs/libpng
-	       virtual/x11
-			=x11-libs/gtk+-1.2*
-			=dev-libs/glib-1.2* )
-	xinerama? ( virtual/x11 )
-	jpeg? ( media-libs/jpeg )
-	gif? ( media-libs/giflib
-	       media-libs/libungif )
-	truetype? ( >=media-libs/freetype-2.1 )
-	esd? ( media-sound/esound )
-	ggi? ( media-libs/libggi )
-	sdl? ( media-libs/libsdl )
+	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
-	nas? ( media-libs/nas )
-	lirc? ( app-misc/lirc )
-	aalib? ( media-libs/aalib )
-	svga? ( media-libs/svgalib )
-	encode? ( media-sound/lame
-	          >=media-libs/libdv-0.9.5 )
-	xmms? ( media-sound/xmms )
-	matroska? ( >=media-libs/libmatroska-0.6.0 )
-	opengl? ( virtual/opengl )
-	directfb? ( dev-libs/DirectFB )
-	oggvorbis? ( media-libs/libvorbis )
-	nls? ( sys-devel/gettext )
-	media-sound/cdparanoia
-	mpeg? ( media-libs/faad2 )
-	samba? ( >=net-fs/samba-2.2.8a )
-	theora? ( media-libs/libtheora )
-	live? ( >=media-plugins/live-2004.01.05 )
-	mad? ( media-libs/libmad )
 	bidi? ( dev-libs/fribidi )
+	cdparanoia? ( media-sound/cdparanoia )
+	directfb? ( dev-libs/DirectFB )
+	dvdread? ( media-libs/libdvdread )
+	encode? ( media-sound/lame
+			>=media-libs/libdv-0.9.5 )
+	esd? ( media-sound/esound )
+	gif? ( media-libs/giflib
+		media-libs/libungif )
+	ggi? ( media-libs/libggi )
+	gtk? ( media-libs/libpng
+		virtual/x11
+		=x11-libs/gtk+-1.2*
+		=dev-libs/glib-1.2* )
+	jpeg? ( media-libs/jpeg )
 	libcaca? ( media-libs/libcaca )
+	lirc? ( app-misc/lirc )
+	live? ( >=media-plugins/live-2004.01.05 )
+	lzo? ( dev-libs/lzo )
+	mad? ( media-libs/libmad )
+	matroska? ( >=media-libs/libmatroska-0.6.0 )
+	mpeg? ( media-libs/faad2 )
+	nas? ( media-libs/nas )
+	nls? ( sys-devel/gettext )
+	oggvorbis? ( media-libs/libvorbis )
+	opengl? ( virtual/opengl )
+	png? ( media-libs/libpng )
+	samba? ( >=net-fs/samba-2.2.8a )
+	sdl? ( media-libs/libsdl )
+	svga? ( media-libs/svgalib )
+	theora? ( media-libs/libtheora )
+	truetype? ( >=media-libs/freetype-2.1 )
+	xinerama? ( virtual/x11 )
+	xmms? ( media-sound/xmms )
 	>=sys-apps/portage-2.0.36"
-#	dvd? ( media-libs/libdvdnav )
-# Hardcode paranoia support for now, as there is no
-# related USE flag.
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
@@ -79,7 +74,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha amd64 -ia64 -hppa ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~ia64 ~hppa ~sparc"
 
 
 pkg_setup() {
@@ -106,45 +101,23 @@ src_unpack() {
 
 	cd ${S}
 
-
-	# fixes bug #55456 for amd64 and fullscreen Bug #43010
-	epatch ${FILESDIR}/gui_vuln_code.patch
-
-	# fixes missing str* linking bugs
-	cp ${FILESDIR}/strl.c ${S}/osdep
-	epatch ${FILESDIR}/str_undefined.patch
-
 	# Fix head/tail call for new coreutils
 	epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
 
-	#bug #49669, horrid syntax errors in help/help_mp-ro.h
-	epatch ${FILESDIR}/${P}-help_mp-ro.h.patch
+	#bug #49669, horrid syntax errors in help/help_mp-ro.h	
+	epatch ${FILESDIR}/mplayer-1.0_pre4-help_mp-ro.h.patch
 
-	#fixes bug #53634
-	epatch ${FILESDIR}/real_demux.patch
+	# GCC 3.4 fixes
+	epatch ${FILESDIR}/mplayer-1.0_pre4-alsa-gcc34.patch
 
-	epatch ${FILESDIR}/${P}-alsa-gcc34.patch
-	epatch ${FILESDIR}/${P}-altivec-gcc34.patch
-	epatch ${FILESDIR}/${P}-gcc34-mtune.patch
-	# fixes for mga driver with kernel 2.6
+	#Setup the matrox makefile
 	if use matrox; then
 		get_kernel_info
-
-		epatch ${FILESDIR}/mga-kernel-2.6.patch
-		sed -i -e "s/KERNEL_VERSION_HERE/${KV_VERSION_FULL}/" drivers/Makefile \
-			|| die "sed failed on kernel version substitution"
-
-		# preparing build for 2.6 mga kernel module
-		cp ${KV_OUTPUT}/.config ${T}/
-		ln -s /usr/src/linux/scripts ${T}/
-		ln -s /usr/src/linux/include ${T}/
-		sed -e "s:SUBDIRS:O=${T} SUBDIRS:" -i drivers/Makefile \
-			|| die "sed failed setting O=${T}"
-		sed -e "s:^MDIR = .*:MDIR = ${D}/lib/modules/${KV_VERSION_FULL}/kernel/drivers/char/:" -i drivers/Makefile \
-			|| die "sed failed correcting module install path"
-		sed -e "s:depmod -a::" -i drivers/Makefile \
-			|| die "sed failed removing depmod"
-
+		epatch ${FILESDIR}/mplayer-1.0_pre4-mga-kernel2.6.patch
+		sed -i -e \
+		"s:^#KERNEL_OUTPUT_PATH=: \
+		KERNEL_OUTPUT_PATH =${KV_OUTPUT}:" \
+		${S}/Makefile
 	fi # end of matrox related stuff
 
 	# Fix hppa compilation
@@ -159,73 +132,86 @@ src_unpack() {
 		echo
 
 		mv ${WORKDIR}/svgalib_helper ${S}/libdha
-		cd ${S}/libdha
-		sed -i -e "s/^#CFLAGS/CFLAGS/" Makefile
 	fi
 }
 
 src_compile() {
 
-	filter-flags -fPIC
-
-	use matrox && check_KV
-
 	local myconf=
+	################
+	#Optional features#
+	###############
+	use bidi && myconf="${myconf} $(use_enable bidi fribidi)"
+	use cdparanoia && myconf="${myconf} $(use_enable cdparanoia)"
+	use dvd && myconf="${myconf} $(use_enable dvd mpdvdkit)"
+	use dvdread &&myconf="${myconf} --disable-mpdvdkit $(use_enable dvdread)"
+	use edl && myconf="${myconf} $(use_enable edl)"
+	use encode && myconf="${myconf} $(use_enable encode mencoder)"
+	use gtk && myconf="${myconf} $(use_enable gtk gui) $(use_enable gtk x11) $(use_enable gtk xv)"
+	use ipv6 && myconf="${myconf} $(use_enable ipv6 inet6)"
+	use joystick && myconf="${myconf} $(use_enable joystick)"
+	use lirc && myconf="${myconf} $(use_enable lirc)"
+	use live && myconf="${myconf} $(use_enable live)"
+	use network && myconf="${myconf} $(use_enable network)"
+	use rtc && myconf="${myconf} $(use_enable rtc)"
+	use samba && myconf="${myconf} $(use_enable samba smb)"
+	use truetype && myconf="${myconf} $(use_enable truetype freetype)"
+	use v4l && myconf="${myconf} $(use_enable v4l tv-v4l)"
+	use v4l2 && myconf="${myconf} $(use_enable v4l tv-v4l2)"
 
-	use 3dnow \
-		|| myconf="${myconf} --disable-3dnow --disable-3dnowex"
-
-	use sse \
-		|| myconf="${myconf} --disable-sse --disable-sse2"
-
-	# Only disable MMX if 3DNOW or SSE is not in USE
-	use mmx || use 3dnow || use sse \
-		|| myconf="${myconf} --disable-mmx --disable-mmx2"
-
-	# Only disable X if gtk is not in USE
-	use X || use gtk \
-		|| myconf="${myconf} --disable-gui --disable-x11 --disable-xv \
-				--disable-xmga"
-
-	use png || use gtk \
-		|| myconf="${myconf} --disable-png"
-
-	( use matrox && use X ) \
-		&& myconf="${myconf} --enable-xmga" \
-		|| myconf="${myconf} --disable-xmga"
-
-	use gtk \
-		&& myconf="${myconf} --enable-gui --enable-x11 \
-		                     --enable-xv --enable-vm --enable-png"
-	use png \
-		&& myconf="${myconf} --enable-png"
-
-	myconf="${myconf} `use_enable encode mencoder`"
-	use encode && myconf="${myconf} --enable-tv"
-
-	myconf="${myconf} `use_enable dvd mpdvdkit`"
-	use dvd || myconf="${myconf} --disable-dvdread"
-
-	# Disable dvdnav support as its not considered to be
-	# functional anyhow, and will be removed.
-
-	myconf="${myconf} `use_enable dvb`"
-	use dvb || myconf="${myconf} --disable-dvbhead"
-
-	#if the flag is enabled, use external rather then internal
+	#########
+	# Codecs #
+	########
+	use divx4linux && myconf="${myconf} $(use_enable divx4linux)"
+	use gif && myconf="${myconf} $(use_enable gif)"
+	use jpeg && myconf="${myconf} $(use_enable jpeg)"
+	use lzo && myconf="${myconf} $(use_enable lzo liblzo)"
 	use matroska && myconf="${myconf} --disable-internal-matroska"
-	use mpeg && myconf="${myconf} --disable-internal-faad"
+	use mad && myconf="${myconf} --disable-internal-faad"
+	use oggvorbis && myconf="${myconf} $(use_enable oggvorbis vorbis)"
+	use png && myconf="${myconf} $(use_enable png)"
+	use theora && myconf="${myconf} $(use_enable theora)"
+	use xmms && myconf="${myconf} $(use_enable xmms)"
+	use xvid && mconf="${myconf} $(use_enable xvid)"
 
-	mconf="${myconf} `use_enable xvid`"
+	#############
+	# Video Output #
+	#############
+	use 3dfx && myconf="${myconf} $(use_enable 3dfx)"
 	( use xvid && use 3dfx ) \
 		&& myconf="${myconf} --enable-tdfxvid" \
 		||  myconf="${myconf} --disable-tdfxvid"
+	use aalib && myconf="${myconf} $(use_enable aalib aa)"
+	use directfb && myconf="${myconf} $(use_enable directfb)"
+	use dvb && myconf="${myconf} $(use_enable dvb)"
+	use fbdev && myconf="${myconf} $(use_enable fbdev)"
+	use ggi && myconf="${myconf} $(use_enable ggi)"
+	use libcaca && myconf="${myconf} $(use_enable libcaca caca)"
+	( use matrox && use gtk ) && myconf="${myconf} $(use_enable matrox xmga)"
+	use opengl && myconf="${myconf} $(use_enable opengl gl)"
+	use sdl && myconf="${myconf} $(use_enable sdl)"
+	use tga && myconf="${myconf} $(use_enable tga)"
+	use vesa && myconf="${myconf} $(use_enable vesa)"
+	use xinerama && myconf="${myconf} $(use_enable xinerama)"
 
-	use gif \
-		|| myconf="${myconf} --disable-gif"
+	#############
+	# Audio Output #
+	#############
+	use alsa && myconf="${myconf} $(use_enable alsa)"
+	use arts && myconf="${myconf} $(use_enable arts)"
+	use esd && myconf="${myconf} $(use_enable esd)"
+	use nas && myconf="${myconf} $(use_enable nas)"
+	use oss && myconf="${myconf} $(use_enable oss ossaudio)"
 
-	use debug \
-		&& myconf="${myconf} --enable-debug"
+	#################
+	# Advanced Options #
+	#################
+	use 3dnow && myconf="${myconf} $(use_enable 3dnow) $(use_enable 3dnow 3dnowex)"
+	use altivec && myconf="${myconf} $(use_enable altivec)"
+	use debug && myconf="${myconf} $(use_enable debug)"
+	use mmx && myconf="${myconf} $(use_enable mmx) $(use_enable mmx mmx2)"
+	use nls && myconf="${myconf} $(use_enable nls i18n)"
+	use sse && myconf="${myconf} $(use_enable sse) $(use_enable sse sse2)"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -244,63 +230,41 @@ src_compile() {
 		myconf="${myconf} --enable-linux-devfs"
 	fi
 
-	has_pic && CC="${CC} `test_flag -fno-pic` `test_flag -nopie`"
+	# Build the matrox driver before mplayer configuration.
+	# That way the configure script sees it and builds the support
+	#build the matrox driver before the 
+	if use matrox && use x86 ; then
+		check_KV
+		cd ${S}/drivers
+		# bad hack, will be fixed later
+		addwrite /usr/src/linux/
+		unset ARCH
+		make all || die "Matrox build failed!  Your kernel may need to have `make mrproper` run on it before trying to use matrox support in this ebuild again."
+		cd ${S}
+	else
+		einfo "Not building matrox driver.  It doesn't seem to like other archs.  Please let me know if you find out otherwise."
+	fi
 
-	# Crashes on start when compiled with most optimizations.
-	# The code have CPU detection code now, with CPU specific
-	# optimizations, so extra should not be needed and is not
-	# recommended by the authors
 	unset CFLAGS CXXFLAGS
 	./configure --prefix=/usr \
-		--datadir=/usr/share/mplayer \
 		--confdir=/usr/share/mplayer \
+		--datadir=/usr/share/mplayer \
 		--disable-runtime-cpudetection \
 		--enable-largefiles \
 		--enable-menu \
 		--enable-real \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
-		`use_enable xinerama` \
-		`use_enable oggvorbis vorbis` \
-		`use_enable esd` \
-		`use_enable truetype freetype` \
-		`use_enable opengl gl` \
-		`use_enable libcaca caca` \
-		`use_enable sdl` \
-		`use_enable nls i18n` \
-		`use_enable samba smb` \
-		`use_enable aalib aa` \
-		`use_enable oss ossaudio` \
-		`use_enable ggi` \
-		`use_enable svga` \
-		`use_enable directfb` \
-		`use_enable fbcon fbdev` \
-		`use_enable alsa` \
-		`use_enable arts` \
-		`use_enable lirc` \
-		`use_enable joystick` \
-		`use_enable theora` \
-		`use_enable bidi fribidi` \
-		`use_enable nas` \
-		`use_enable 3dfx tdfxfb` \
-		`use_enable matrox mga` \
-		`use_enable xmms` \
-		`use_enable ipv6 inet6` \
-		`use_enable live` \
-		`use_enable v4l tv-v4l` \
-		`use_enable v4l2 tv-v4l2` \
-		`use_enable mpeg external-faad` \
-		`use_enable matroska external-matroska` \
-		`use_enable jpeg` \
-		`use_enable mad` \
-		`use_enable divx4linux` \
 		${myconf} || die
-	# Breaks with gcc-2.95.3, bug #14479:
-	#  --enable-shared-pp \
-	# Enable untested and currently unused code:
-	#  --enable-dynamic-plugins \
 
-	# emake borks on fast boxes - Azarah (07 Aug 2002)
+		# config.mak doesn't set GIF_LIB so gif related source files fail
+		if use gif
+		then
+			sed -e "s:GIF_LIB =:GIF_LIB = -lgif:" -i config.mak
+		else
+			sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
+		fi
+
 	einfo "Make"
 	make all || die "Failed to build MPlayer!"
 	einfo "Make completed"
@@ -310,34 +274,6 @@ src_compile() {
 	# do not run into issues ... (bug #14479)
 	cd ${S}/libavcodec/libpostproc
 	make SHARED_PP="yes" || die "Failed to build libpostproc.so!"
-
-	if use matrox
-	then
-		unset ARCH
-		local driverwasbuilt="ok"
-		local dirtytrick="no"
-		local oldwrite="${SANDBOX_WRITE}"
-		cd ${S}/drivers
-		if [ ${KV_MAJOR}.${KV_MINOR} = "2.6" -a ${KV_PATCH} -le 5 ]; then
-			einfo "Kernel < 2.6.6, have to remove your include/asm and .config"
-			einfo "temporarily. Putting them into ${T}, will try to restore them later."
-			dirtytrick="yes"
-			addwrite /usr/src/linux/
-			mv /usr/src/linux/.config ${T}/savedconfig
-			mv /usr/src/linux/include/asm ${T}/savedasm
-			SANDBOX_WRITE="${oldwrite}"
-		fi
-		make all || driverwasbuilt="no"
-		if [ ${dirtytrick} = "yes" ]; then
-			addwrite /usr/src/linux
-			mv ${T}/savedconfig /usr/src/linux/.config
-			mv ${T}/savedasm /usr/src/linux/include/asm
-			SANDBOX_WRITE="${oldwrite}"
-		fi
-		if [ ${driverwasbuilt} = "no" ]; then
-			die "Failed to build matrox driver!"
-		fi
-	fi
 }
 
 src_install() {
@@ -357,13 +293,6 @@ src_install() {
 		insinto /lib/modules/${KV}/kernel/drivers/char
 		doins mga_vid.${KV_OBJ}
 	fi
-
-	# libpostproc is now installed by >=ffmpeg-0.4.8.20040222
-#	cd ${S}/libavcodec/libpostproc
-#	make prefix=${D}/usr \
-#	     SHARED_PP="yes" \
-#	     install || die "Failed to install libpostproc.so!"
-#	cd ${S}
 
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
@@ -462,3 +391,4 @@ pkg_postrm() {
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
 }
+
