@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.9.1.ebuild,v 1.4 2004/03/01 06:26:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.9.1.ebuild,v 1.5 2004/03/08 18:35:32 augustus Exp $
 
 inherit kde-base
 
 need-kde 3
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 SLOT="0"
 
 DESCRIPTION="Provides integration for the MLDonkey P2P software and KDE 3"
