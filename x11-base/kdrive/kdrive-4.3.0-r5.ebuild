@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.2 2004/03/24 17:45:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.3 2004/04/12 02:29:23 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -97,7 +97,7 @@ src_unpack() {
 		# We dont really want to spend twice as long compiling libraries
 		# if they exist of the system allready, so we check and change
 		# respectively here.
-		if [ "`best_version x11-base/xfree`" ] ; then
+		if [ "`best_version virtual/x11`" ] ; then
 			echo "#define BuildScreenSaverExt NO" >> config/cf/host.def
 			echo "#define BuildScreenSaverLibrary NO" >> config/cf/host.def
 			echo "#define SharedLibXss NO" >> config/cf/host.def
@@ -200,7 +200,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
 
 	# We need to modify xmakefile after it has been created
-	if [ ! "`best_version x11-base/xfree`" ] ; then
+	if [ ! "`best_version virtual/x11`" ] ; then
 		ebegin "Creating fake X includes..."
 			MY_PROJROOT="${S}/usr/X11R6/include/"
 			MY_INCROOT="${S}/include"
@@ -232,8 +232,8 @@ src_compile() {
 	get_number_of_jobs
 
 	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
-	# MAKEOPTS, they'll redefine an internal XFree86 Makefile variable and the
-	# xfree build will silently die. This is tricky to track down, so I'm
+	# MAKEOPTS, they'll redefine an internal X11 Makefile variable and the
+	# X11 build will silently die. This is tricky to track down, so I'm
 	# adding a preemptive fix for this issue by making sure that MAKE_OPTS is
 	# unset. (drobbins, 08 Mar 2003)
 	unset MAKE_OPTS
@@ -291,7 +291,7 @@ src_install() {
 	doexe ${PATCH_DIR}/startxkd
 
 	# Install man pages
-	if [ "`best_version x11-base/xfree`" ] ; then
+	if [ "`best_version virtual/x11`" ] ; then
 		doman -x11 ${MANDIR}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
 	else
 		doman -x11 ${MANDIR}/${S}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
