@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.16 2004/07/28 04:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.17 2004/07/29 05:25:01 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -25,6 +25,7 @@ src_unpack() {
 
 	cd ${S}
 	gnuconfig_update
+
 	if use build ; then
 		#disable texinfo building so we can remove the dep
 		sed -i -e 's:SUBDIRS = doc:SUBDIRS =:' \
