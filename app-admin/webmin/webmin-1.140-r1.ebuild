@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140-r1.ebuild,v 1.1 2004/04/23 00:56:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140-r1.ebuild,v 1.2 2004/04/23 01:26:34 eradicator Exp $
 
 inherit eutils
 
@@ -20,6 +20,14 @@ RDEPEND="dev-lang/perl
 	ssl? ( dev-perl/Net-SSLeay )
 	dev-perl/XML-Generator"
 
+src_unpack() {
+	unpack ${A}
+
+	# Bug #47020
+	cd ${S}/webalizer
+	epatch ${FILESDIR}/${PN}-1.130-webalizer.patch
+}
+
 src_install() {
 	rm -f mount/freebsd-mounts*
 	rm -f mount/openbsd-mounts*
@@ -33,11 +41,6 @@ src_install() {
 	mv ${D}/usr/libexec/webmin/openslp/config \
 		${D}/usr/libexec/webmin/openslp/config-gentoo-linux
 
-	# Bug #47020
-	pushd ${D}/usr/libexec/webmin/webalizer
-	epatch ${FILESDIR}/${PN}-1.130-webalizer.patch
-	popd
-
 	exeinto /etc/init.d
 	newexe webmin-gentoo-init webmin
 
@@ -47,7 +50,6 @@ src_install() {
 
 	exeinto /etc/webmin
 	doexe ${FILESDIR}/uninstall.sh
-	use ssl && sed -i 's:ssl=$ssl:ssl=1:' setup.sh
 }
 
 pkg_postinst() {
@@ -77,8 +79,11 @@ pkg_postinst() {
 		# Start if it was running before
 		/etc/init.d/webmin start
 	fi
+
+        einfo "Add webmin to your boot-time services with 'rc-update add webmin'."
+        einfo "Point your web browser to http://localhost:10000 to use webmin."
 }
 
 pkg_prerm() {
-	/etc/init.d/usermin stop >& /dev/null
+	/etc/init.d/webmin stop >& /dev/null
 }
