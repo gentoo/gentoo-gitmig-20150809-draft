@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.1.ebuild,v 1.2 2002/10/26 11:26:39 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.1.ebuild,v 1.3 2002/11/16 05:21:57 zwelch Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
@@ -26,11 +26,15 @@ src_unpack() {
 	unpack ${A}
 
 	cp -a ${WORKDIR}/gd1.2 ${S}/src/
-#	cp -a ${S} ${S}-orig
+	cp -a ${S} ${S}-orig
 	cd ${S}
 	sed -e 's:gentoo-version:gentoo-release:' configure >configure.1
 	sed -e '10627s:DISTVER=`uname -r`:DISTVER=$(sed -e "s/Gentoo Base System version//" /etc/gentoo-release):' configure.1 >configure
 	rm configure.1
+	cd src
+	mv powerflute.c powerflute.c.orig
+	sed -e 's:true:one:g' powerflute.c.orig >powerflute.c
+	rm powerflute.c.orig
 }
 
 src_compile() {
@@ -59,8 +63,7 @@ src_compile() {
 }
  
 src_install () {
-	GEN2DD=${D}
-	make DESTDIR=${GEN2DD%*/} install
+	make DESTDIR=${D} install
 
 	echo "Installing full documentation into /usr/share/doc/${P}..."
 	cd ${S}/doc
