@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.9.2_rc1.ebuild,v 1.3 2004/07/01 22:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.9.2_rc4.ebuild,v 1.1 2004/08/02 17:47:58 spock Exp $
 
 IUSE="gpm zlib ssl ipv6 X lua guile"
 
@@ -13,7 +13,7 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"
 
 DEPEND="virtual/libc
 	>=app-arch/bzip2-1.0.2*
@@ -26,22 +26,11 @@ DEPEND="virtual/libc
 	gpm? ( >=sys-libs/ncurses-5.2* >=sys-libs/gpm-1.20.0-r5 )
 	guile? ( >=dev-util/guile-1.6.4-r1 )"
 
-RDEPEND="virtual/libc
-	>=app-arch/bzip2-1.0.2*
-	>=dev-libs/expat-1.95.4*
-	>=app-arch/gzip-1.3.3
-	ssl? ( >=dev-libs/openssl-0.9.6g )
-	zlib? ( >=sys-libs/zlib-1.1.4 )
-	lua? ( >=dev-lang/lua-4* )
-	gpm? ( >=sys-libs/ncurses-5.2* >=sys-libs/gpm-1.20.0-r5 )
-	X? ( virtual/x11 )
-	guile? ( >=dev-util/guile-1.6.4-r1 )"
-
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
 
-	mv ${P}.conf ${PN}.conf
+	mv "${PN}-0.9.1.conf" "${PN}.conf"
 	sed -i -e 's:/\* #define CONFIG_256_COLORS \*/:#define CONFIG_256_COLORS:' ${S}/feature.h
 }
 
