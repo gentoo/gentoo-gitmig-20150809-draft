@@ -1,7 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.4 2002/04/04 16:14:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.5 2002/04/12 21:29:27 spider Exp $
 
+*abiword-0.99.3-r1 (12 Apr 2002)
+  12 Apr 2002; Spider <spider@gentoo.org>
+  force recompile with new -r due to libpng changes
+  
   3 Apr 2002; M.Schlemmer <azarah@gentoo.org> abiword-0.99.3.ebuild :
 
   Fix DEPEND for 'spell' USE var.
