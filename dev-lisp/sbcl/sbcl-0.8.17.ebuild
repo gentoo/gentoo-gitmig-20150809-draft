@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.16.ebuild,v 1.4 2004/12/13 06:20:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.17.ebuild,v 1.1 2004/12/13 06:20:25 mkennedy Exp $
 
 inherit common-lisp-common eutils
+
+BV_SBCL_AF=2004-10-22
 
 BV_X86=0.8.1
 BV_PPC=0.8.8
@@ -15,15 +17,16 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	x86? ( mirror://sourceforge/sbcl/${PN}-${BV_X86}-x86-linux-binary.tar.bz2 )
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-ppc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
-	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )"
+	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )
+	ftp://common-lisp.net/pub/project/lambda-gtk/sbcl-af-${BV_SBCL_AF}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips"
-IUSE="threads doc nosource"
+KEYWORDS="-*" # due to sb-unicode problems
+IUSE="threads doc nosource nounicode ldb nosbcl-af"
 
 DEPEND=">=dev-lisp/common-lisp-controller-3.91
-	>=dev-lisp/cl-defsystem3-3.3i-r3
+	>=cl-defsystem3-3.3i-r3
 	>=dev-lisp/cl-asdf-1.84
 	sys-apps/texinfo
 	doc? ( virtual/tetex )"
@@ -46,20 +49,29 @@ src_unpack() {
 		mv ${PN}-${BV_SPARC}-mips-linux mips-binary
 	fi
 
+	if use callbacks; then
+		unpack sbcl-af-${BV_SBCL}.tar.gz
+	fi
+
 	unpack ${P}-source.tar.bz2
 	epatch ${FILESDIR}/${PV}/sbcl-gentoo.patch
 	epatch ${FILESDIR}/${PV}/sbcl-no-tests-gentoo.patch
 
-	# Currently, thread support is only available for x86.	These
-	# features expressions also disable :sb-test.
-	if use x86 && use threads; then
-		cp ${FILESDIR}/${PV}/customize-target-features.lisp \
-			${S}/customize-target-features.lisp
-	else
-		cp ${FILESDIR}/${PV}/customize-target-features.lisp.no-threads \
-			${S}/customize-target-features.lisp
-	fi
-
+	cp ${FILESDIR}/${PV}/customize-target-features.lisp-prefix \
+		${S}/customize-target-features.lisp
+	use x86 && use threads \
+		&& echo '(enable :sb-threads)' \
+		>>${S}/customize-target-features.lisp
+	use ldb \
+		&& echo '(enable :sb-ldb)' \
+		>>${S}/customize-target-features.lisp
+	echo '(enable :sb-futex)' >>${S}/customize-target-features.lisp
+	echo '(disable :sb-test)' >>${S}/customize-target-features.lisp
+	use nounicode \
+		&& echo '(disable :sb-unicode)' \
+		>>${S}/customize-target-features.lisp
+	cat ${FILESDIR}/${PV}/customize-target-features.lisp-suffix \
+		>>${S}/customize-target-features.lisp
 	find ${S} -type f -name .cvsignore -exec rm -f '{}' \;
 	find ${S} -type d -name CVS \) -exec rm -rf '{}' \;
 	find ${S} -type f -name \*.c -exec chmod 644 '{}' \;
@@ -71,21 +83,16 @@ src_compile() {
 	use ppc && bindir=../ppc-binary
 	use sparc && bindir=../sparc-binary
 	use mips && bindir=../mips-binary
-
-	# TODO: allow the user to chose between SBCL, CMUCL and CLISP for bootstrapping
-	# build with previous SBCL
 	PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
-		./make.sh 'sbcl --sysinit /dev/null --userinit /dev/null --no-debugger --core ${bindir}/output/sbcl.core' \
-		|| die
-
-	# build with CMUCL
-#	GNUMAKE=make ./make.sh 'lisp -batch'
-
-	# Generation texinfo documentation
+		./make.sh 'sbcl
+			--sysinit /dev/null
+			--userinit /dev/null
+			--no-debugger
+			--core ${bindir}/output/sbcl.core' \
+				|| die
 	cd ${S}/doc/manual
 	make info
 	use doc && make ps pdf
-
 }
 
 src_install() {

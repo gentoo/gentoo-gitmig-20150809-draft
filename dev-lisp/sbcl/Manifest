@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d2fdff94a4bf5f38a2aab37a8bde1c99 sbcl-0.8.14.ebuild 3882
 MD5 88838d899eb117390ec723d3a00c5805 sbcl-0.8.9.ebuild 3569
-MD5 8b2eb26960c09cc248b465d6acacadc4 sbcl-0.8.16.ebuild 3941
+MD5 56f5ff2d739b83d12d0afd92c42e661e sbcl-0.8.16.ebuild 3940
 MD5 139b862b968e7e93728adc4635eb28ca sbcl-0.8.11.ebuild 3868
 MD5 09ca7de40173206338891e2a9723c6f7 sbcl-0.8.7-r1.ebuild 4236
 MD5 93b7c03dd1e5952d45e61a1b9c31c7de sbcl-0.8.13.ebuild 3882
@@ -11,6 +8,7 @@ MD5 ac7500d912d63c8a62b0116b2948b995 sbcl-0.8.8.ebuild 3489
 MD5 7f6f4c4cf1613e0fcfe094799baa391b sbcl-0.8.15.ebuild 3941
 MD5 4cf68e2406e345e39267d1b8060d7a7d sbcl-0.8.10.ebuild 3717
 MD5 452bd315ab639d1e2738c73c498be1ed sbcl-0.8.12-r1.ebuild 3878
+MD5 dfa89669bffea293b0d09910cb38caac sbcl-0.8.17.ebuild 4185
 MD5 bfec86129246e3243821520419058139 sbcl-0.8.12.ebuild 3823
 MD5 a5bff42d608a259ecbe2a58b27dec9f5 ChangeLog 11409
 MD5 c93195a12a4bb997ca623db927bb6676 metadata.xml 997
@@ -31,6 +29,7 @@ MD5 12dd45cfcd09d50683635790f81c88ca files/digest-sbcl-0.8.13 468
 MD5 c79912580313a9a43b0b9fd2aa794ba2 files/digest-sbcl-0.8.14 468
 MD5 74f94f11c31e6e9395b26994ebc70aa7 files/digest-sbcl-0.8.15 469
 MD5 a3c050d853b5f0484425c9e35fce226f files/digest-sbcl-0.8.16 469
+MD5 7fce2b38fce587a789c5cda34689352d files/digest-sbcl-0.8.17 288
 MD5 24a9e0ee9cf55fc23d01535520f03edc files/0.8.7/install-clc.lisp-gentoo.patch 675
 MD5 b8407a8b953cc86ccab6b4c9b3148024 files/0.8.7/customize-target-features.lisp.no-threads 557
 MD5 62313101e0dfbc6a70bd0a0f9b6c3304 files/0.8.7/customize-target-features.lisp 555
@@ -111,10 +110,11 @@ MD5 6f05f494b80fa25732a658deec4133c8 files/0.8.16/customize-target-features.lisp
 MD5 e2f493a1166fb49d0f7b4475c2fcb760 files/0.8.16/README.Gentoo 941
 MD5 653f804ebcd167d167f8163756b7da17 files/0.8.16/sbclrc 639
 MD5 476020b6b9b159a66445f36672d419ce files/0.8.16/sbcl-gentoo.patch 1172
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBrOt0I1lqEGTUzyQRArsDAKCZRmZokWL5JX1cYDWIRzW5w/PmEACeKFgE
-Hzj1sdnHpHv0yxHWcgzNERc=
-=eDUf
------END PGP SIGNATURE-----
+MD5 a816917795a2edb435b9d3831646eef1 files/0.8.17/install-clc.lisp 1360
+MD5 071f286575536d58bd93efe2f77cd24c files/0.8.17/sbcl.sh 2168
+MD5 6d391cbc2f1b6fe7ea8543a392357888 files/0.8.17/sbcl-no-tests-gentoo.patch 2609
+MD5 683427165f7d0717333bbb9762972b8d files/0.8.17/customize-target-features.lisp-prefix 95
+MD5 ed7478268ac66a720090e5930745dab8 files/0.8.17/README.Gentoo 1129
+MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.8.17/customize-target-features.lisp-suffix 8
+MD5 653f804ebcd167d167f8163756b7da17 files/0.8.17/sbclrc 639
+MD5 e27aa0d43ffa7f7a1bd96bf23d27e873 files/0.8.17/sbcl-gentoo.patch 1172
