@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.9 2004/02/27 19:30:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.10 2004/03/02 16:58:48 iggy Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="BSD | GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ppc sparc ~alpha ~mips hppa ~ia64 ppc64"
+KEYWORDS="amd64 x86 ppc sparc ~alpha ~mips hppa ~ia64 ppc64 s390"
 
 DEPEND="virtual/glibc
 	selinux? ( sys-libs/libselinux )"
