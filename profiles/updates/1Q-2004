@@ -12,3 +12,5 @@ move x11-misc/docker x11-plugins/docker
 move x11-wm/ion-devel x11-wm/ion2
 move app-benchmarks/volcanomark app-benchmarks/volanomark
 move net-www/mozilla-firebird-bin net-www/mozilla-firefox-bin
+move games-fps/d1x games-action/d1x
+move games-fps/descent1-maps games-action/descent1-maps
