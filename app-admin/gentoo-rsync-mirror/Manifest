@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f751e14b16c9d4ff11705231b62835be gentoo-rsync-mirror-1.0-r4.ebuild 2118
+MD5 2e256fe86ba442b027b5a6a0a1af1b9a ChangeLog 2512
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 cb5c64291a10b1f0c93778c0870337e5 ChangeLog 2384
-MD5 b85633577e1a773229e482f63b0dd12a gentoo-rsync-mirror-1.0-r4.ebuild 2117
-MD5 b378b8aab36575664a04d6e5adaa9e1e files/rsyncd.init 647
 MD5 106fe6e320ef412edeed16ce96f5128f files/rsync-gentoo-portage.sh 235
 MD5 220875d857476610ea757a365925fa5b files/gentoo-mirror.conf 463
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoo-rsync-mirror-1.0-r4 0
-MD5 4047d0e8a4cc37326c8f37d873b7ec09 files/rsyncd.conf 735
-MD5 508f4e735f2fbacd4a123c002c72e545 files/rsyncd.motd 44
 MD5 866f4631fad8ab795f8420dfb8144ffb files/rsynclogparse-extended.pl 3476
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBM7rBKtJO8LeSoosRAhesAJ4/pifRuCLjqm8vF1ZWu8MVF1jV0ACfdlY6
-L97naMrqZ8tCo50OSGDDunA=
-=gYHe
------END PGP SIGNATURE-----
+MD5 4047d0e8a4cc37326c8f37d873b7ec09 files/rsyncd.conf 735
+MD5 b378b8aab36575664a04d6e5adaa9e1e files/rsyncd.init 647
+MD5 508f4e735f2fbacd4a123c002c72e545 files/rsyncd.motd 44
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoo-rsync-mirror-1.0-r4 0
