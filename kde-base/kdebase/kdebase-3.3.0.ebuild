@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0.ebuild,v 1.4 2004/08/23 16:08:35 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0.ebuild,v 1.5 2004/08/26 15:48:31 caleb Exp $
 
 inherit kde-dist eutils
 
@@ -23,6 +23,8 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	kde_src_unpack
 	epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
+	epatch ${FILESDIR}/3.3.0-kwinrules-Makefile.am.diff
+	make -f admin/Makefile.common
 	sed -ie "s:sasl.h:sasl/sasl.h:" ${S}/configure
 }
 
