@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.1 2003/08/11 08:58:23 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.2 2003/08/12 14:27:47 jje Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -22,7 +22,7 @@ src_unpack() {
 	cd ${S}
 	if [ `use x86` ] ; then
 		use sse && epatch ${FILESDIR}/${PN}-simd.patch
-		use 3dnow && append-flags -Dsimd-3dn
+		use 3dnow && append-flags -Dsimd_3dn
 	fi
 
 	epatch ${FILESDIR}/${PN}-m4.patch || die "Patching failed"
