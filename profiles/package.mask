@@ -112,6 +112,9 @@ net-misc/radvd
 
 # <seemant@gentoo.org> (23 Jul 2002)
 # Masked while the system people put this through the test
+# (25 Jul 2002)  Discovered bugs in file completion, and error messaging
+# Best to leave this masked until we get either a patch or 2.05c or
+# something.
 =sys-apps/bash-2.05b
 
 # <seemant@gentoo.org> (23 Jul 2002)
@@ -187,10 +190,6 @@ x11-misc/tkseti
 # Masking mkisofs - this package is obsolete (cdrtools took its place)
 # and nothing depends on this package
 sys-apps/mkisofs
-
-# mjc@gentoo.org (17 Jul 2002)
-# New wine release, masked for testing and to wait for winesetuptk fix.
->=app-emulation/wine-20020710
 
 # raker@gentoo.org (16 Jul 2002)
 # libwmfun completes compiling but doesn't appear to support PLDrawString
