@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.8 2002/09/12 14:43:26 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.9 2002/10/27 08:27:29 woodchip Exp $
+
+*maildrop-1.5.0 (27 Oct 2002)
+
+  27 Oct 2002; Donny Davies <woodchip@gentoo.org> : Chase latest release.
+  Downloads .bz2 instead of .gz.
 
 *maildrop-1.4.0-r1 (5 Sep 2002)
 
@@ -25,29 +30,24 @@
 *maildrop-1.3.9-r1 (23 Jun 2002)
 
   23 Jun 2002; Ben Lutgens <lamer@gentoo.org> :
-
   I'm explicitly stripping out -funroll-loops cause it's causing maildrop
   to not compile.
 
 *maildrop-1.3.8-r1 (2 May 2002)
 
   2 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Zap -fomit-frame-pointer and -ffast-math from CFLAGS if present.
 
 *maildrop-1.3.8 (1 May 2002)
 
   1 May 2002; Donny Davies <woodchip@gentoo.org> maildrop-1.3.8.ebuild,
-  files/maildroprc :
-
-  Updated to latest release, added a system default maildroprc file,
-  added the documentation, added the development files, cleaned up
-  the /usr/share/maildrop dir, added SLOT and LICENSE.
+  files/maildroprc : Updated to latest release, added a system default
+  maildroprc file, added the documentation, added the development files,
+  cleaned up the /usr/share/maildrop dir, added SLOT and LICENSE.
 
 *maildrop-1.3.6 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
