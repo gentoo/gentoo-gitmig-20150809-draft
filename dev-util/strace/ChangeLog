@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.22 2003/07/15 09:26:12 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.23 2003/08/04 06:34:34 gmsoft Exp $
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org> strace-4.4.98.ebuild:
   Added sparc stable keyword
@@ -10,6 +10,9 @@
   added IUSE
 
 *strace-4.4.98 (12 Jun 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> strace-4.4.98.ebuild :
+  Marked stable on hppa.
 
   12 Jun 2003; <msterret@gentoo.org> strace-4.4.98.ebuild:
   version bump as per Bug 22718
