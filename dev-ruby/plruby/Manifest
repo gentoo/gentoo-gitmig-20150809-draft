@@ -1,4 +1,6 @@
+MD5 b3b21426c111e15766b2cc8804c8c297 plruby-0.4.3.ebuild 574
 MD5 ea0876432d4be91652ed231e577702ff plruby-0.4.2.ebuild 573
-MD5 c58463b6c2e890df38cd388ab22750df ChangeLog 572
+MD5 4c2b7b2a9440226849be181f2a0399ec ChangeLog 691
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 dd0d972d596a8d7143b35e007d21091e files/digest-plruby-0.4.2 64
+MD5 2a8f16c62608ea149c0fb7a7fda1293a files/digest-plruby-0.4.3 64

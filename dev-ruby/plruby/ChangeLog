@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/plruby
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.3 2005/01/12 18:38:51 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.4 2005/01/12 18:45:25 nakano Exp $
+
+*plruby-0.4.3 (12 Jan 2005)
+
+  12 Jan 2005; Masatomo Nakano <nakano@gentoo.org> +plruby-0.4.3.ebuild:
+  Version bump.
 
   12 Jan 2005; Masatomo Nakano <nakano@gentoo.org> plruby-0.4.2.ebuild:
   Marked stable on x86.
