@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.27 2003/06/01 05:22:40 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.28 2003/06/10 22:05:30 msterret Exp $
+
+  10 Jun 2003; <msterret@gentoo.org> bind-9.2.2-r2.ebuild:
+  DEPEND on sed >= 4
 
   01 Jun 2003; Brandon Low <lostlogic@gentoo.org> files/named.rc6:
   Fix rcfiles
@@ -35,9 +38,9 @@
   24 Mar 2003; Brandon Low <lostlogic@gentoo.org> bind-9.2.2.ebuild:
   move to stable on x86, others please follow
 
-  04 Mar 2003; Brandon Low <lostlogic@gentoo.org> bind-9.2.2.ebuild, 
+  04 Mar 2003; Brandon Low <lostlogic@gentoo.org> bind-9.2.2.ebuild,
   files/10bind.env:
-  Update to latest version, and add /var/bind to env.d, this should make 
+  Update to latest version, and add /var/bind to env.d, this should make
   it behave nicer when merging and no clobber config files.
 
 *bind-9.2.2_rc1-r2 (14 Feb 2003)
@@ -51,7 +54,7 @@
   Added "use logger" (bug #8771).
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *bind-9.2.2_rc1-r1 (16 Aug 2002)
 
   12 Oct 2002; Donny Davies <woodchip@gentoo.org> named.rc6 :
@@ -129,7 +132,7 @@
 
   21 Mar 2002; Ferry Meyndert <m0rpheus@gentoo.org> bind-9.2.0.ebuild:
 
-  Updated too new version  
+  Updated too new version
 
 *bind-9.1.3-r7 (8 Feb 2002)
 
@@ -141,7 +144,7 @@
 *bind-9.1.3-r6 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
