@@ -1,10 +1,11 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.20 2003/11/12 18:43:48 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.21 2003/11/12 18:52:09 pebenito Exp $
 
   12 Nov 2003; Chris PeBenito <pebenito@gentoo.org>
   files/vcron-3.0.1-close_stdin.diff:
-  Fixed close stdin patch, to close 32911.
+  Fixed close stdin patch, to close 32911.  Thanks to Mike Kordik
+  for some pointers.
 
   30 Oct 2003; Chris PeBenito <pebenito@gentoo.org> vcron-3.0.1-r2.ebuild:
   Mark stable on x86 and ppc.
