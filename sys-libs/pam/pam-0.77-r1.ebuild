@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.6 2004/06/24 23:08:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.7 2004/06/28 02:22:20 agriffis Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"
@@ -72,15 +72,14 @@ apply_pam_patches() {
 pkg_setup() {
 	local x=
 
-	for x in libpwdb.a libcrack.a
-	do
-		[ -z "$(use pwdb)" ] && continue
-
-		[ ! -f "${ROOT}/usr/lib/${x}" ] && {
-			eerror "Could not find /usr/lib/${x} needed to build Linux-PAM!"
-			die "Could not find /usr/lib/${x} needed to build Linux-PAM!"
-		}
-	done
+	if use pwdb; then
+		for x in libpwdb.a libcrack.a; do
+			if [ ! -f "${ROOT}/usr/lib/${x}" ]; then
+				eerror "Could not find /usr/lib/${x} needed to build Linux-PAM!"
+				die "Could not find /usr/lib/${x} needed to build Linux-PAM!"
+			fi
+		done
+	fi
 
 	return 0
 }
@@ -109,7 +108,7 @@ src_unpack() {
 src_compile() {
 	export CFLAGS="${CFLAGS} -fPIC"
 
-	if [ -n "$(use berkdb)" ]
+	if use berkdb
 	then
 		einfo "Building Berkley DB ${BDB_VER}..."
 		cd ${WORKDIR}
@@ -186,7 +185,7 @@ src_compile() {
 		sed -i -e "s:-Wpointer-arith::" Make.Rules
 	fi
 
-	if [ -z "$(use berkdb)" ]
+	if ! use berkdb
 	then
 		# Do not build pam_userdb.so ...
 		sed -i -e "s:^HAVE_NDBM_H=yes:HAVE_NDBM_H=no:" \
@@ -233,15 +232,15 @@ src_install() {
 			# Its OK if the module failed when we didnt ask for it anyway
 			if ! ls -1 ${D}/lib/security/$(basename ${x})*.so &> /dev/null
 			then
-				if [ -z "$(use berkdb)" -a "$(basename ${x})" = "pam_userdb" ]
+				if ! use berkdb && [ "$(basename ${x})" = "pam_userdb" ]
 				then
 					continue
 				fi
-				if [ -z "$(use pwdb)" -a "$(basename ${x})" = "pam_pwdb" ]
+				if ! use pwdb && [ "$(basename ${x})" = "pam_pwdb" ]
 				then
 					continue
 				fi
-				if [ -z "$(use pwdb)" -a "$(basename ${x})" = "pam_radius" ]
+				if ! use pwdb && [ "$(basename ${x})" = "pam_radius" ]
 				then
 					continue
 				fi
@@ -249,15 +248,15 @@ src_install() {
 				exit 1
 			else
 			# Remove the ones we didnt want if it ended up building ok anyways
-				if [ -z "$(use berkdb)" -a "$(basename ${x})" = "pam_userdb" ]
+				if ! use berkdb && [ "$(basename ${x})" = "pam_userdb" ]
 				then
 					rm -f ${D}/lib/security/pam_userdb*
 				fi
-				if [ -z "$(use pwdb)" -a "$(basename ${x})" = "pam_pwdb" ]
+				if ! use pwdb && [ "$(basename ${x})" = "pam_pwdb" ]
 				then
 					rm -f ${D}/lib/security/pam_pwdb*
 				fi
-				if [ -z "$(use pwdb)" -a "$(basename ${x})" = "pam_radius" ]
+				if ! use pwdb && [ "$(basename ${x})" = "pam_radius" ]
 				then
 					rm -f ${D}/lib/security/pam_radius*
 				fi

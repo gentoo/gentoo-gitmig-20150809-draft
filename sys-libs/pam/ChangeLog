@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.52 2004/06/24 23:08:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.53 2004/06/28 02:22:20 agriffis Exp $
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org> pam-0.75-r10.ebuild,
+  pam-0.75-r11.ebuild, pam-0.75-r7.ebuild, pam-0.75-r8.ebuild,
+  pam-0.75-r9.ebuild, pam-0.77-r1.ebuild, pam-0.77.ebuild:
+  QA - fix use invocation
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> pam-0.77-r1.ebuild:
   stable on amd64

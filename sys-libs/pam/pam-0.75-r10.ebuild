@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.15 2004/06/24 23:08:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.16 2004/06/28 02:22:20 agriffis Exp $
 
 IUSE="berkdb"
 
@@ -103,7 +103,7 @@ src_compile() {
 		rm -f Make.Rules.orig
 	fi
 
-	if [ -z "$(use berkdb)" ]
+	if ! use berkdb
 	then
 		cp Make.Rules Make.Rules.orig
 		sed -e "s:^HAVE_LIBNDBM=yes:HAVE_LIBNDBM=no:" \
@@ -129,7 +129,7 @@ src_install() {
 		then
 			if ! ls -1 ${D}/lib/security/$(basename ${x})*.so &> /dev/null
 			then
-				if [ -z "$(use berkdb)" -a "$(basename ${x})" = "pam_userdb" ]
+				if ! use berkdb && [ "$(basename ${x})" = "pam_userdb" ]
 				then
 					continue
 				fi
