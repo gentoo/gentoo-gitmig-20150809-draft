@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.8.1.ebuild,v 1.4 2005/01/03 22:56:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.9.2.ebuild,v 1.1 2005/01/03 22:56:05 vapier Exp $
 
-inherit games eutils
+inherit games eutils flag-o-matic
 
 MY_P="${PN}-src-${PV}"
 DESCRIPTION="turn-based strategy game project"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/attal/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-3*"
@@ -21,37 +21,29 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc34.patch
-	for lib in Client Common Fight Server ; do
-		sed -i \
-			-e "/^TARGET/s:= ${lib}:= ${PN}${lib}:" \
-			-e "s:lib${lib}\.so:lib${PN}${lib}.so:g" \
-			-e "s:-l${lib}:-l${PN}${lib}:g" \
-			*/*.pro \
-			|| die "renaming ${lib}"
-	done
+	cd "${S}"
 	qmake -o Makefile Makefile.pro || die "qmake failed"
 	sed -i \
 		"s:\./themes/:${GAMES_DATADIR}/${PN}/themes/:" \
 		`grep -Rl '\./themes/' *` \
 		|| die "fixing theme loc"
-	find "${WORKDIR}/themes" -name .cvsignore -exec rm -f \{\} \;
+	find "${WORKDIR}"/themes-${PV} -name .cvsignore | xargs rm -f
 }
 
 src_compile() {
 	# broken deps in the makefiles ...
+	append-flags -fPIC
 	emake \
-		CFLAGS="${CFLAGS} -fPIC" \
-		CXXFLAGS="${CXXFLAGS} -fPIC" \
+		CFLAGS="${CFLAGS}" \
+		CXXFLAGS="${CXXFLAGS}" \
 		sub-libCommon || die "emake sub-libCommon failed"
 	emake \
-		CFLAGS="${CFLAGS} -fPIC" \
-		CXXFLAGS="${CXXFLAGS} -fPIC" \
+		CFLAGS="${CFLAGS}" \
+		CXXFLAGS="${CXXFLAGS}" \
 		sub-{libFight,libClient,libServer} || die "emake libs failed"
 	emake \
-		CFLAGS="${CFLAGS} -fPIC" \
-		CXXFLAGS="${CXXFLAGS} -fPIC" \
+		CFLAGS="${CFLAGS}" \
+		CXXFLAGS="${CXXFLAGS}" \
 		|| die "emake failed"
 }
 
@@ -59,9 +51,9 @@ src_install() {
 	dogamesbin attal-* || die "dogamesbin failed"
 	into "${GAMES_PREFIX}"
 	dolib.so lib*.so* || die "dolib.so failed"
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r "${WORKDIR}/themes" "${D}/${GAMES_DATADIR}/${PN}/themes" \
-		|| die "cp failed"
+	dodir "${GAMES_DATADIR}"/${PN}
+	insinto "${GAMES_DATADIR}"/${PN}/themes
+	doins -r "${WORKDIR}"/themes-${PV}/* || die "doins themes failed"
 	dodoc AUTHORS NEWS README TODO
 	prepgamesdirs
 }
