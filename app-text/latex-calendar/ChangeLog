@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex-calendar/ChangeLog,v 1.1 2002/11/05 04:02:38 satai Exp $
+
+*latex-calendar-3.1 (04 Nov 2002)
+
+  04 Nov 2002; Matthew Turk <satai@gentoo.org> latex-calendar-3.1.ebuild :
+  Initial import.  A very useful and beautiful calendar creator package for
+  LaTeX.  Very flexible.
