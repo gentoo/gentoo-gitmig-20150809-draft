@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta11.ebuild,v 1.1 2003/11/27 01:37:23 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta11.ebuild,v 1.2 2003/11/27 01:38:12 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -21,8 +21,8 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the development branch of the Linux kernel (2.6)"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
-GPV_SRC="http://dev.gentoo.org/~brad_mssw/kernel_patches/2.6.0/genpatches-2.6-${GPV}.tar.bz2"
-#GPV_SRC="mirror://gentoo/genpatches-2.6-${GPV}.tar.bz2"
+#GPV_SRC="http://dev.gentoo.org/~brad_mssw/kernel_patches/2.6.0/genpatches-2.6-${GPV}.tar.bz2"
+GPV_SRC="mirror://gentoo/genpatches-2.6-${GPV}.tar.bz2"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 	 ${GPV_SRC}"
 LICENSE="GPL-2"
