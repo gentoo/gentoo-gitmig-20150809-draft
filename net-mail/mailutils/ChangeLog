@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.11 2004/08/19 07:07:18 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.12 2004/08/19 07:08:53 avenj Exp $
 
   26 Jul 2004; Tuan Van <langthang@gentoo.org> mailutils-0.5.ebuild:
   add virtual/mailx, wrt bug #58164.
@@ -44,5 +44,5 @@
   26 Mar 2003; Jon Portnoy <avenj@gentoo.org> mailutils-0.3.ebuild, 
 	digest-mailutils-0.3 :
   Initial import of GNU mailutils, a suite of mail-related tools
-  including POP3 and IMAP servers, parsing tools, and a mailx
+  including POP3/IMAP servers, parsing tools, and a mailx
   replacement.
