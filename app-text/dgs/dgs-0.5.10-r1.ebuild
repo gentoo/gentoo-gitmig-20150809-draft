@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.1 2001/03/14 15:29:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.2 2001/03/20 05:47:31 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,7 +21,7 @@ src_unpack() {
 
 src_compile() {
 
-    try ./configure --prefix=/usr --host=${CHOST} --with-x
+    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} --with-x
     try make
 
 }

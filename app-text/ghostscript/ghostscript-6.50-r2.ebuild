@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.50-r2.ebuild,v 1.1 2001/03/06 06:05:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.50-r2.ebuild,v 1.2 2001/03/20 05:47:31 achim Exp $
 
 GPV="4.1.1"
 A="${P}.tar.gz ghostscript-fonts-std-6.0.tar.gz print-${GPV}.tar.gz"
@@ -67,6 +67,7 @@ src_install() {
   dodir /usr/share/man/man1
   dobin bin/gs
   try make -f src/all-arch.mak prefix=${D}/usr BINDIR=${D}/usr/bin man1dir=${D}/usr/share/man/man1 install
+  rm -rf ${D}/usr/man
   cd ${WORKDIR}
   cp -a fonts ${D}/usr/share/ghostscript
   cd ${S}

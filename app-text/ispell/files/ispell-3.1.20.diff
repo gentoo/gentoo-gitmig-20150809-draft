@@ -28,7 +28,7 @@ diff -r -N -U3 ispell-3.1.orig/Makefile ispell-3.1/Makefile
 -local.h:
 -	set +e; [ -r local.h ]  ||  cp local.h.samp local.h
 +local.h:	local.h.samp
-+	set +e; sed "s/.[{(]\?RPM_OPT_FLAGS[})]\?/$(RPM_OPT_FLAGS)/" < local.h.samp > local.h
++	set +e; sed "s/.[{(]\?CFLAGS -pipe[})]\?/\$(CFLAGS) -pipe/" < local.h.samp > local.h
  
  msgs.h:	config.sh FRC
  	@. ./config.sh; \
@@ -1026,7 +1026,7 @@ diff -r -N -U3 ispell-3.1.orig/languages/portugues/Makefile ispell-3.1/languages
 diff -r -N -U3 ispell-3.1.orig/local.h.samp ispell-3.1/local.h.samp
 --- ispell-3.1.orig/local.h.samp	Mon Jan 23 18:28:27 1995
 +++ ispell-3.1/local.h.samp	Thu Feb  8 18:33:10 2001
-@@ -80,19 +80,48 @@
+@@ -80,19 +80,49 @@
   */
  
  #define MINIMENU	/* Display a mini-menu at the bottom of the screen */
@@ -1050,7 +1050,7 @@ diff -r -N -U3 ispell-3.1.orig/local.h.samp ispell-3.1/local.h.samp
 +#define LIBDIR		"/usr/lib/ispell"
 +#define ELISPDIR	"/usr/share/emacs/site-lisp"
 +#define TEXINFODIR	"/usr/share/info"
-+#define WORDS		"/usr/dict/words"
++#define WORDS		"/usr/share/dict/words"
 +#define MAN1DIR		"/usr/share/man/man1"
 +#define MAN4DIR		"/usr/share/man/man5"
 +#define MAN4EXT		".5"
@@ -1059,7 +1059,8 @@ diff -r -N -U3 ispell-3.1.orig/local.h.samp ispell-3.1/local.h.samp
   * Place any locally-required #include statements here
   */
 +#define CC		"gcc"
-+#define CFLAGS		"$RPM_OPT_FLAGS -pipe"
++#define YACC		"bison -y"
++#define CFLAGS		"$CFLAGS -pipe"
 +#define TERMLIB		"-lncurses"
 +#define LANGUAGES       "{american,MASTERDICTS=american.xlg,HASHFILES=americanxlg.hash,EXTRADICT=} {british,MASTERDICTS=british.xlg,HASHFILES=britishxlg.hash,EXTRADICT=} {american,MASTERDICTS=american.med,HASHFILES=americanmed.hash,EXTRADICT=} {british,MASTERDICTS=british.med,HASHFILES=britishmed.hash,EXTRADICT=}"
 +
