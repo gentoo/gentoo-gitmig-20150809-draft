@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hotplug
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.27 2003/12/22 04:12:36 drobbins Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.28 2004/01/06 00:19:49 azarah Exp $
+
+*hotplug-20040105 (06 Jan 2004)
+
+  06 Jan 2004; Martin Schlemmer <azarah@gentoo.org> hotplug-20040105.ebuild:
+  Update version.  Add extra 2.6 patch from Mans Rullgard <mru@kth.se>.
+  Fix copyright date.
 
   18 Dec 2003; Guy Martin <gmsoft@gentoo.org> hotplug-20030805-r2.ebuild:
   Marked stable on hppa.
