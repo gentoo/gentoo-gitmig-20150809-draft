@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.21 2004/08/27 05:05:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.22 2004/08/27 22:38:53 ciaranm Exp $
+
+*vixie-cron-4.1 (27 Aug 2004)
+
+  27 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/vixie-cron-4.1-pam.patch, +files/vixie-cron-4.1-selinux.diff.bz2,
+  +vixie-cron-4.1.ebuild:
+  Bump to version 4.1, package.masked for now. I've probably screwed up porting
+  some of the patches forward, and I can't test the selinux patch at all.
+  Feedback to bug #61961.
 
   27 Aug 2004; Mike Frysinger <vapier@gentoo.org> files/vixie-cron.rc6:
   Dont need logger, use logger #57787 by Paul Varner.
