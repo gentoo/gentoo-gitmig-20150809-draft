@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3748 2005/03/22 12:45:02 axxo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3749 2005/03/22 13:02:28 axxo Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1053,10 +1053,6 @@ dev-lisp/cl-rsm-genetic-alg
 # <twp@gentoo.org> (6 Aug 2004)
 # Masked until linking problems are solved
 =dev-lang/lua-5.0.2-r1
-
-# <axxo@gentoo.org> (Aug 1 2004)
-# Untill 1.5 jdk is unmasked
-=x11-misc/lookingglass-bin-0.5
 
 # <robbat2@gentoo.org> (19 July 2004)
 # Mask because it seems broken.
