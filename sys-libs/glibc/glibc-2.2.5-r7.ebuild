@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.14 2002/10/13 12:44:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.15 2002/10/13 21:15:56 azarah Exp $
 
 IUSE="nls pic build"
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 filter-flags "-fomit-frame-pointer -malign-double"
 
@@ -44,10 +44,6 @@ LICENSE="GPL-2"
 #drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
 DEPEND="sys-kernel/linux-headers
 	nls? ( sys-devel/gettext )"
-RDEPEND="sys-kernel/linux-headers"
-
-DEPEND="sys-kernel/linux-headers
-	nls? ( sys-devel/gettext )"
 RDEPEND="sys-kernel/linux-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )
@@ -64,83 +60,81 @@ src_unpack() {
 	cd ${S}
 	#extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir man; cd man
-	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 || die
+	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 > /dev/null || die
 	cd ${S}
 	unpack glibc-linuxthreads-${PV}.tar.bz2 || die
 	
 	# This patch apparently eliminates compiler warnings for some versions of gcc.
 	# For information about the string2 patch, see: 
 	# http://lists.gentoo.org/pipermail/gentoo-dev/2001-June/001559.html
-	patch -p0 < ${FILESDIR}/glibc-2.2.4-string2.h.diff || die
+	einfo "Applying string2.h patch..."
+	cd ${S}; patch -p0 < ${FILESDIR}/glibc-2.2.4-string2.h.diff > /dev/null || die
 
 	# This next one is a new patch to fix thread signal handling.  See:
 	# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00120.html
 	# (Added by drobbins on 05 Mar 2002)
-	patch -p0 < ${FILESDIR}/glibc-2.2.5-threadsig.diff || die
+	einfo "Applying threadsig patch..."
+	patch -p0 < ${FILESDIR}/${PV}/${P}-threadsig.diff > /dev/null || die
 
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
-	cd ${S}/io; patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch || die
-
-	# The following spinlock error should only bite if you compile without any -O in CFLAGS, so a tweak
-	# shouldn't be necessary.  The solution is to add -O2.  According to Andreas Jaeger of SuSE, "glibc
-	# *needs* to be compiled with optimization" (emphasis mine).  So let's fix the optimization settings,
-	# not tweak glibc.
-	# (drobbins, 10 Feb 2002)
-	# http://sources.redhat.com/ml/bug-glibc/2001-09/msg00041.html
-	# http://sources.redhat.com/ml/bug-glibc/2001-09/msg00042.html
-	# cd ${S}/linuxthreads
-	# cp spinlock.c spinlock.c.orig
-	# sed -e 's/"=m" (lock->__status) : "0" (lock->__status/"+m" (lock->__status/g' spinlock.c.orig > spinlock.c
-	
-	# The glob() buffer overflow in glibc 2.2.4 was fixed in 2.2.5; commenting out.
-	# http://lwn.net/2001/1220/a/glibc-vulnerability.php3
-	# cd ${S}
-	# patch -p1 < ${FILESDIR}/glibc-2.2.4-glob-overflow.diff || die
+	einfo "Applying test-lfs-timeout patch..."
+	cd ${S}/io; patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch > /dev/null || die
 
 	# A buffer overflow vulnerability exists in multiple implementations of DNS
 	# resolver libraries.  This affects glibc-2.2.5 and earlier. See bug #4923
 	# and:
 	#
 	#   http://www.cert.org/advisories/CA-2002-19.html
-	cd ${S}; patch -p1 < ${FILESDIR}/${P}-dns-network-overflow.diff || die
+	einfo "Applying dns-network-overflow patch..."
+	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-dns-network-overflow.diff >	/dev/null || die
 
 	# Security update for sunrpc
 	# <aliz@gentoo.org>
-	#
-	cd ${S}; patch -p1 < ${FILESDIR}/${P}-sunrpc-overflow.diff || die
+	einfo "Applying sunrpc-overflow patch..."
+	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sunrpc-overflow.diff > /dev/null || die
 
 	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" ]; then
 		# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
 		# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
-		cd ${S}; patch -p1 < ${FILESDIR}/${P}-divdi3.diff || die
+		einfo "Applying divdi3 patch..."
+		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-divdi3.diff > /dev/null || die
 	fi
 	
 	# Some gcc-3.1.1 fixes.  This works fine for other versions of gcc as well,
 	# and should generally be ok, as it just fixes define order that causes scope
 	# problems with gcc-3.1.1.
 	# (Azarah, 14 Jul 2002)
-	cd ${S}; patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311.patch || die
+	einfo "Applying gcc311 patch..."
+	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-gcc311.patch > /dev/null || die
+
+	if [ "`gcc-version`" = "3.2" ]; then
+		cd ${S}
+		einfo "Applying divbyzero patch..."
+		patch -p1 < ${FILESDIR}/${PV}/${P}.divbyzero.patch > /dev/null || die
+		einfo "Applying restrict_arr patch..."
+		patch -p1 < ${FILESDIR}/${PV}/${P}.restrict_arr.patch > /dev/null || die
+	fi
 
 	# Some patches to fixup build on alpha
 	if [ "${ARCH}" = "alpha" ]; then
 		cd ${S}
-		patch -p1 < ${FILESDIR}/glibc-2.2.5-alpha-gcc3-fix.diff || die
-		patch -p1 < ${FILESDIR}/glibc-2.2.5-alpha-pcdyn-fix.diff || die
+		einfo "Applying alpha-gcc3-fix patch..."
+		patch -p1 < ${FILESDIR}/${PV}/${P}-alpha-gcc3-fix.diff > /dev/null || die
+		einfo "Applying alpha-pcdyn-fix patch..."
+		patch -p1 < ${FILESDIR}/${PV}/${P}-alpha-pcdyn-fix.diff > /dev/null || die
 	fi
 
 	# Some patches to fixup build on sparc and sparc64
-	if use sparc64 || use sparc
+	if use sparc64 > /dev/null || use sparc > /dev/null
 	then
-		einfo "sparc patch"
-		cd ${S}
-		patch -p1 < ${FILESDIR}/${P}-sparc-misc.diff || die
+		einfo "Applying sparc-misc patch..."
+		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-misc.diff > /dev/null || die
 	fi
 
-	if use sparc64
+	if use sparc64 > /dev/null
 	then
-		einfo "seemant sparc64 patch"
-		cd ${S}
-		patch -p1 < ${FILESDIR}/${P}-sparc64-fixups.diff || die
+		einfo "Applying seemant's sparc64-fixups patch..."
+		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc64-fixups.diff > /dev/null || die
 	fi
 }
 
@@ -153,6 +147,7 @@ src_compile() {
 	
 	use nls || myconf="${myconf} --disable-nls"
 	
+	einfo "Configuring GLIBC..."
 	rm -rf buildhere
 	mkdir buildhere
 	cd buildhere
@@ -170,30 +165,37 @@ src_compile() {
 	#We should really keep compatibility with older kernels, anyway
 	#--enable-kernel=2.4.0
 	
+	einfo "Building GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
+	einfo "Doing GLIBC checks..."
 	make check
 }
 
 
 src_install() {
-	export LC_ALL=C
+	export LC_ALL="C"
+	einfo "Installing GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
 		install -C buildhere || die
 		
 	if [ -z "`use build`" ]
 	then
+		einfo "Installing Info pages..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			info -C buildhere || die
-			
+		
+		einfo "Installing Locale data..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			localedata/install-locales -C buildhere || die
-			
+		
+		einfo "Installing man pages and docs..."
 		#install linuxthreads man pages
 		dodir /usr/share/man/man3
-		doman ${S}/man/*.3thr	
+		doman ${S}/man/*.3thr
+		
 		install -m 644 nscd/nscd.conf ${D}/etc
 		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
