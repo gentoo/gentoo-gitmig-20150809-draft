@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/iiimecf-11.4.1467.ebuild,v 1.3 2004/06/24 22:15:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/iiimecf-12.0.1_pre1891.ebuild,v 1.1 2004/09/13 20:03:48 usata Exp $
 
 inherit elisp iiimf
 
