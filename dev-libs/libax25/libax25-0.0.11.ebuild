@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/libax25-0.0.11.ebuild,v 1.3 2003/06/19 19:08:16 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/libax25-0.0.11.ebuild,v 1.4 2003/09/08 07:19:26 msterret Exp $
 
 DESCRIPTION="AX.25 protocol library for various Amateur Radio programs"
 HOMEPAGE="http://ax25.sourceforge.net/"
