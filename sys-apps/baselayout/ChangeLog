@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.170 2004/09/15 21:11:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.171 2004/09/20 19:37:04 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  20 Sep 2004; Aron Griffis <agriffis@gentoo.org> baselayout-1.11.0.ebuild:
+  Stow our versions of critical files in /usr/share/baselayout so that quickpkg
+  won't pick up personal files like /etc/passwd
 
 *baselayout-1.11.0 (15 Sep 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.0.ebuild,v 1.1 2004/09/15 21:11:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.0.ebuild,v 1.2 2004/09/20 19:37:04 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -240,7 +240,12 @@ src_install() {
 	insinto /etc
 	find ${S}/etc -type f -maxdepth 1 -print0 | xargs --null doins
 
+	# Install some files to /usr/share/baselayout instead of /etc to keep from
+	# (1) overwriting the user's settings, (2) screwing things up when
+	# attempting to merge files, (3) accidentally packaging up personal files
+	# with quickpkg
 	fperms 0600 /etc/shadow
+	mv ${D}/etc/{passwd,shadow,group,fstab,hosts} ${D}/usr/share/baselayout
 
 	exeinto /etc/init.d
 	doexe ${S}/init.d/*
@@ -262,10 +267,6 @@ src_install() {
 	# As of baselayout-1.10-1-r1, sysvinit is its own package again, and
 	# provides the inittab itself
 	rm -f ${D}/etc/inittab
-
-	# We do not want to overwrite the user's settings during
-	# bootstrap;  put this somewhere for safekeeping until pkg_postinst
-	mv ${D}/etc/hosts ${D}/usr/share/baselayout
 
 	# Stash the rc-lists for use during pkg_postinst
 	cp -r ${S}/rc-lists ${D}/usr/share/baselayout
@@ -446,6 +447,13 @@ pkg_postinst() {
 		cp ${ROOT}/usr/share/baselayout/hosts ${ROOT}/etc
 	fi
 
+	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
+	# new users do not update them properly...  see src_install() for why they
+	# are in /usr/share/baselayout/
+	if use build || use bootstrap; then
+		cp ${ROOT}/usr/share/baselayout/{passwd,shadow,group,fstab} ${ROOT}/etc
+	fi
+
 	# Under what circumstances would mtab be a symlink?  It would be
 	# nice if there were an explanatory comment here
 	if [[ -L ${ROOT}/etc/mtab ]]; then
@@ -464,14 +472,6 @@ pkg_postinst() {
 		install -m 0664 -g utmp /dev/null "${ROOT}/var/run/utmp"
 	[[ -e ${ROOT}/var/log/wtmp ]] || \
 		install -m 0664 -g utmp /dev/null "${ROOT}/var/log/wtmp"
-
-	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
-	# new users do not update them properly.  thus remove all ._cfg files if
-	# we are not busy with a bootstrap.
-	if ! use build && ! use bootstrap; then
-		einfo "Removing invalid backup copies of critical config files..."
-		rm -f "${ROOT}"/etc/._cfg????_{passwd,shadow,group,fstab}
-	fi
 
 	# Reload init to fix unmounting problems of / on next reboot.
 	# This is really needed, as without the new version of init cause init
