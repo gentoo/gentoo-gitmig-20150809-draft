@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.35 2004/11/23 03:00:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.36 2004/11/29 12:45:58 eradicator Exp $
+
+*amarok-1.2_beta1 (29 Nov 2004)
+
+  29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  amarok-1.1.1.ebuild, +amarok-1.2_beta1.ebuild:
+  Version bump (package.mask'd beta) and fix missing depend on
+  media-sound/kdemultimedia for CD playback.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   amarok-1.1.1.ebuild:
