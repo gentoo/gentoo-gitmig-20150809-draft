@@ -23,7 +23,7 @@ else
         MY_EMAIL=${USER}"@"${HOSTNAME}
         echo Your email address is ${MY_EMAIL}.
         echo 'MY_EMAIL='${MY_EMAIL} >>$CONFIG_FILE
-        LICENSE="the GNU General Public License, v2 or later"
+        LICENSE="the GNU General Public License, v2"
         echo Your preferred license is ${LICENSE}.
         echo 'LICENSE="'${LICENSE}'"' >>${CONFIG_FILE}
         LOCAL_SOURCE=${HOME}
@@ -44,23 +44,27 @@ then
         PACKAGE_NAME=${PACKAGE_NAME%.tar}
 fi
 EBUILD_FILE=${PWD}/${PACKAGE_NAME}.ebuild
-echo "#Copyright" `date +"%Y"` ${COPYRIGHT} >${EBUILD_FILE}
-echo "#Distributed under the terms of" ${LICENSE} >>${EBUILD_FILE}
-echo "#Author" ${MY_NAME} '<'${MY_EMAIL}'>' >>${EBUILD_FILE}
+echo "# Copyright" `date +"%Y"` ${COPYRIGHT} >${EBUILD_FILE}
+echo "# Distributed under the terms of" ${LICENSE} >>${EBUILD_FILE}
+#echo "# Author" ${MY_NAME} '<'${MY_EMAIL}'>' >>${EBUILD_FILE}
+echo "# \$Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/mkebuild,v 1.2 2003/01/07 16:46:38 mholzer Exp $" >>${EBUILD_FILE}
 echo >>${EBUILD_FILE}
-echo 'A=${P}.'${FILE_EXTENSION} >>${EBUILD_FILE}
-echo 'S=${WORKDIR}/${P}' >>${EBUILD_FILE}
 echo 'DESCRIPTION=""' >>${EBUILD_FILE}
 echo 'SRC_URI="'${SOURCE_LOCATION}'/${P}.'${FILE_EXTENSION}'"' >>${EBUILD_FILE}
 echo 'HOMEPAGE="'${SOURCE_LOCATION}'/"' >>${EBUILD_FILE}
+echo 'LICENSE=""' >>${EBUILD_FILE}
+echo 'SLOT="0"' >>${EBUILD_FILE}
+echo 'KEYWORDS="~x86"' >>${EBUILD_FILE}
+echo 'IUSE=""' >>${EBUILD_FILE}
 echo >>${EBUILD_FILE}
 echo 'DEPEND=""' >>${EBUILD_FILE}
 echo >>${EBUILD_FILE}
-echo 'RDEPEND=$DEPEND' >>${EBUILD_FILE}
+echo '#RDEPEND=""' >>${EBUILD_FILE}
+echo 'S=${WORKDIR}/${P}' >>${EBUILD_FILE}
 echo >>${EBUILD_FILE}
 echo 'src_unpack() {' >>${EBUILD_FILE}
 echo >>${EBUILD_FILE}
-echo -e "\t"'unpack ${P}.'${FILE_EXTENSION} >>${EBUILD_FILE}
+echo -e "\t"'unpack ${A}' >>${EBUILD_FILE}
 echo -e "\t"'cd ${S}' >>${EBUILD_FILE}
 echo >>${EBUILD_FILE}
 echo '}' >>${EBUILD_FILE}

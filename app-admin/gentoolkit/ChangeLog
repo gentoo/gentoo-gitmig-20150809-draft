@@ -1,16 +1,21 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.48 2003/01/05 12:36:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.49 2003/01/07 16:46:38 mholzer Exp $
 
-*gentoolkit-0.1.17-r7 (04 Jan 2002)
+*gentoolkit-0.1.17-r8 (07 Jan 2003)
 
-  04 Jan 2002; Martin Holzer <mholzer@gentoo.org gentoolkit-0.1.17-r7.ebuild files/digest-gentoolkit-0.1.17-r7 ChangeLog :
+  07 Jan 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r8.ebuild files/digest-gentoolkit-0.1.17-r8 ChangeLog :
+  Updated mkebuild to meet skel.ebuild specs. This closes #13403. 
+
+*gentoolkit-0.1.17-r7 (04 Jan 2003)
+
+  04 Jan 2003; Martin Holzer <mholzer@gentoo.org gentoolkit-0.1.17-r7.ebuild files/digest-gentoolkit-0.1.17-r7 ChangeLog :
   since epm is now it's own package i removed it. Closes #13220. 
   Corrected qpkg help. Closes #5194.
 
-*gentoolkit-0.1.17-r6 (03 Jan 2002)
+*gentoolkit-0.1.17-r6 (03 Jan 2003)
 
-  03 Jan 2002; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r6.ebuild files/digest-gentoolkit-0.1.17-r6 files/scripts/emerge-webrsync Changelog :
+  03 Jan 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r6.ebuild files/digest-gentoolkit-0.1.17-r6 files/scripts/emerge-webrsync Changelog :
   Added -v option to emerge-webrsync to display wget status. Closes #12477.
  
 *gentoolkit-0.1.17-r5 (06 Dec 2002)
