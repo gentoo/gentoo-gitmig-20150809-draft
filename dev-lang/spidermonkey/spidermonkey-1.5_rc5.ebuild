@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc5.ebuild,v 1.2 2003/06/23 19:53:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc5.ebuild,v 1.3 2003/07/11 22:14:08 aliz Exp $
 
 inherit gcc flag-o-matic
 [ "`gcc-fullversion`" == "3.2.2" ] && replace-flags -march=pentium4 -march=pentium3
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/js/js-${MY_PV}.tar.gz"
 
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.16.ebuild,v 1.1 2003/04/15 10:09:52 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.16.ebuild,v 1.2 2003/07/11 22:14:07 aliz Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${P}/src
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}

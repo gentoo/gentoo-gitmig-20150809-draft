@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.8 2003/06/09 18:02:03 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.9 2003/07/11 22:14:08 aliz Exp $
 
   09 Jun 2003; George Shapovalov <george@gentoo.org> tcc-0.9.19.ebuild :
   changed LICENSE to LGPL-2.1 from GPL-2, seems to have changed recently.
@@ -24,6 +24,11 @@
   new version. 
   Now tcc compiles more packages (e.g. smarteiffel).
   Thanks to Per Wigren <wigren@home.se> for an update
+
+*tcc-0.9.8 (13 Feb 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *tcc-0.9.7 (19 Jul 2002)
 

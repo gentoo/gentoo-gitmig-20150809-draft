@@ -1,6 +1,6 @@
-# ChangeLog for dev-lang/gprologp
+# ChangeLog for dev-lang/gprolog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.3 2003/04/15 10:09:52 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.4 2003/07/11 22:14:07 aliz Exp $
 
 *gprolog-1.2.16 (15 Apr 2003)
 

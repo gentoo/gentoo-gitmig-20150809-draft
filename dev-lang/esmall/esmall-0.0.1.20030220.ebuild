@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/esmall/esmall-0.0.1.20030220.ebuild,v 1.4 2003/03/13 19:32:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/esmall/esmall-0.0.1.20030220.ebuild,v 1.5 2003/07/11 22:14:06 aliz Exp $
 
 DESCRIPTION="scripting language for use internally in enlightenment"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 
 DEPEND="virtual/glibc
 	sys-devel/gcc"

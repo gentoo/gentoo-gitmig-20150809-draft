@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0_beta.ebuild,v 1.1 2003/04/09 22:48:16 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0_beta.ebuild,v 1.2 2003/07/11 22:14:07 aliz Exp $
 
 MY_P=`echo ${P} | sed -e 's/_beta/-beta/'`
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.lua.org/"
 SRC_URI="http://www.lua.org/ftp/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND="virtual/glibc"
 S=${WORKDIR}/${MY_P}
 

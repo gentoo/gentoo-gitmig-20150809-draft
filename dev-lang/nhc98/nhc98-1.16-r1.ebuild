@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.16-r1.ebuild,v 1.1 2003/04/24 16:04:21 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.16-r1.ebuild,v 1.2 2003/07/11 22:14:07 aliz Exp $
 
 IUSE="readline"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cs.york.ac.uk/fp/nhc98/"
 
 SLOT="0"
 LICENSE="nhc98"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 ~sparc "
 
 DEPEND="virtual/glibc
 	readline? ( >=readline-4.1 )"

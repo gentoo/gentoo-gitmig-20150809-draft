@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.ebuild,v 1.1 2003/04/14 10:37:46 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.ebuild,v 1.2 2003/07/11 22:14:07 aliz Exp $
 
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
 HOMEPAGE="http://www.lua.org/"
 SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc x86"
 DEPEND="virtual/glibc"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.22 2003/06/27 17:53:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.23 2003/07/11 22:14:07 aliz Exp $
 
 *mono-0.25 (27 Jun 2003)
 
@@ -19,6 +19,11 @@
 
   08 May 2003; foser <foser@gentoo.org> mono-0.24.ebuild :
   New version, use new compiler for mcs compilation and path fixes (#17614)
+
+*mono-0.23-r1 (12 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *mono-0.23 (08 Mar 2003)
 

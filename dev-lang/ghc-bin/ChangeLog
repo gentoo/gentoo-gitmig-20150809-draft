@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.7 2003/07/02 10:28:00 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.8 2003/07/11 22:14:07 aliz Exp $
 
   02 Jul 2003; Andres Loeh <kosmikus@gentoo.org> ghc-bin-5.04.3.ebuild,
   ghc-bin-6.0.ebuild:
@@ -18,6 +18,11 @@
   ghc-bin-5.04.3.ebuild:
   Installs to /opt/ghc/bin now (bug #20185). Updated to version 5.04.3.
   Both updates are marked unstable for now.
+
+*ghc-bin-5.04.2-r1 (09 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *ghc-bin-5.04.2.ebuild (21 Mar 2003)
 

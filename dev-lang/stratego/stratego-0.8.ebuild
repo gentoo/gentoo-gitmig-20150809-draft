@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.8.ebuild,v 1.6 2003/02/13 10:29:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.8.ebuild,v 1.7 2003/07/11 22:14:08 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Stratego term-rewriting language"
@@ -11,7 +11,7 @@ DEPEND=">=dev-libs/aterm-1.6.7
 RDEPEND="$DEPEND"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 src_compile() {
 	./configure \
