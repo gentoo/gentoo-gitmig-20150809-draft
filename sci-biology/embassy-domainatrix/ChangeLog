@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/embassy-domainatrix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.4 2005/03/02 23:30:04 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.5 2005/03/25 17:40:02 ribosome Exp $
+
+*embassy-domainatrix-1.0.0-r1 (25 Mar 2005)
+
+  25 Mar 2005; Olivier Fisette <ribosome@gentoo.org>
+  +files/embassy-domainatrix-1.0.0-r1.patch,
+  +embassy-domainatrix-1.0.0-r1.ebuild:
+  Patched version for EMBOSS-2.10.
 
   02 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org>
   embassy-domainatrix-1.0.0.ebuild:
