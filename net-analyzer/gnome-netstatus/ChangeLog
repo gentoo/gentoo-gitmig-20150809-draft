@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/gnome-netstatus
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.1 2004/03/21 17:36:26 foser Exp $
+
+*gnome-netstatus-2.5.92 (21 Mar 2004)
+
+  21 Mar 2004; foser <foser@gentoo.org> gnome-netstaus-2.5.92.ebuild, metadata.xml, ChangeLog :
+  Initial commit for gnome 2.6
+  Gnome network device status monitor applet
+  Added to the gnome herd
