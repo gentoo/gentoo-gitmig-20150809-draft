@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>bug-wranglers@gentoo.org</email>
+  <description>See ChangeLog</description>
+</maintainer>
+<longdescription>A pcap based tool for network protocol monitoring and data acquisition.</longdescription>
+</pkgmetadata>
