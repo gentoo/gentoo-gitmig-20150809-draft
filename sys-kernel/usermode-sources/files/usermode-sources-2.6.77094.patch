@@ -64,7 +64,7 @@ diff -urp linux-2.6.8.1-r7/mm/mmap.c linux-2.6.8.1-r8/mm/mmap.c
  	}
 +	if ((vma->vm_flags & VM_LOCKED) && !capable(CAP_IPC_LOCK) &&
 +			((vma->vm_mm->locked_vm + grow) << PAGE_SHIFT) >
-+			current->signal->rlim[RLIMIT_MEMLOCK].rlim_cur) {
++			current->rlim[RLIMIT_MEMLOCK].rlim_cur) {
 +		anon_vma_unlock(vma);
 +		vm_unacct_memory(grow);
 +		return -ENOMEM;
@@ -78,7 +78,7 @@ diff -urp linux-2.6.8.1-r7/mm/mmap.c linux-2.6.8.1-r8/mm/mmap.c
  	}
 +	if ((vma->vm_flags & VM_LOCKED) && !capable(CAP_IPC_LOCK) &&
 +			((vma->vm_mm->locked_vm + grow) << PAGE_SHIFT) >
-+			current->signal->rlim[RLIMIT_MEMLOCK].rlim_cur) {
++			current->rlim[RLIMIT_MEMLOCK].rlim_cur) {
 +		anon_vma_unlock(vma);
 +		vm_unacct_memory(grow);
 +		return -ENOMEM;
