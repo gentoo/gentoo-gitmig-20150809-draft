@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.12.ebuild,v 1.1 2004/08/18 06:55:24 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.12.ebuild,v 1.2 2004/09/05 13:08:56 malc Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/acidrip/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~amd64"
 IUSE="encode"
 
 DEPEND="dev-lang/perl

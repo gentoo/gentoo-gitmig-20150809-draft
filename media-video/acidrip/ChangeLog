@@ -1,6 +1,9 @@
 # ChangeLog for media-video/acidrip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.12 2004/08/18 06:55:24 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.13 2004/09/05 13:08:56 malc Exp $
+
+  05 Sep 2004; Malcolm Lashley <malc@gentoo.org> acidrip-0.12.ebuild:
+  ~amd64 bug #60354
 
 *acidrip-0.12 (18 Aug 2004)
 
