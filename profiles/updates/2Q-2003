@@ -41,3 +41,4 @@ move app-text/ivritex dev-tex/ivritex
 move app-xemacs/ispell app-xemacs/xemacs-ispell
 move app-xemacs/eterm app-xemacs/xemacs-eterm
 move app-dicts/ispell-br app-dicts/ispell-pt-br
+move net-ftp/pycurl dev-python/pycurl
