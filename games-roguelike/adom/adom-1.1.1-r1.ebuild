@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/adom-1.1.1-r1.ebuild,v 1.3 2004/03/10 13:40:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/adom-1.1.1-r1.ebuild,v 1.4 2004/05/27 03:37:37 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -11,20 +11,20 @@ SRC_URI="http://www.adom.de/adom/download/linux/${P//.}-elf.tar.gz"
 LICENSE="adom"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.0
 	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_install() {
-	exeinto ${GAMES_PREFIX_OPT}/bin
+	exeinto "${GAMES_PREFIX_OPT}/bin"
 	doexe adom
 
-	dodir ${GAMES_STATEDIR}/${PN}
-	keepdir ${GAMES_STATEDIR}/${PN}
-	echo ${GAMES_STATEDIR}/${PN} > adom_ds.cfg
+	keepdir "${GAMES_STATEDIR}/${PN}"
+	echo "${GAMES_STATEDIR}/${PN}" > adom_ds.cfg
 	insinto /etc
 	doins adom_ds.cfg
 
@@ -32,5 +32,5 @@ src_install() {
 	dodoc adomfaq.txt manual.doc readme.1st
 
 	prepgamesdirs
-	fperms g+w ${GAMES_STATEDIR}/${PN}
+	fperms g+w "${GAMES_STATEDIR}/${PN}"
 }
