@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.5 2004/02/12 15:14:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.6 2004/03/09 17:52:56 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -14,7 +14,7 @@ INHERITED="$INHERITED $ECLASS"
 CLPACKAGE=
 newdepend "dev-lisp/common-lisp-controller"
 
-pkg_postinst() {
+common-lisp_pkg_postinst() {
 	if [ -z "${CLPACKAGE}" ]; then
 		die "CLPACKAGE was empty or undefined upon call to pkg_prerm"
 	else
@@ -25,7 +25,7 @@ pkg_postinst() {
 	fi
 }
 
-pkg_postrm() {
+common-lisp_pkg_postrm() {
 	if [ -z "${CLPACKAGE}" ]; then
 		die "CLPACKAGE was empty or undefined upon call to pkg_prerm"
 	else
@@ -37,6 +37,14 @@ pkg_postrm() {
 			fi
 		done
 	fi
+}
+
+pkg_postinst() {
+	common-lisp_pkg_postinst
+}
+
+pkg_postrm() {
+	common-lisp_pkg_postrm
 }
 
 #

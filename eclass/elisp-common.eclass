@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.4 2004/01/19 08:57:21 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.5 2004/03/09 17:52:56 mkennedy Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -43,25 +43,25 @@ elisp-site-regen() {
 ;;; -----------------------------------------------------------------
 
 EOF
-	ls ${SITELISP}/[0-9][0-9]* |sort -n |grep -vE '~$' | \
-	while read sf 
+	ls ${SITELISP}/[0-9][0-9]*-gentoo.el |sort -n | \
+	while read sf
 	do
-		einfo "  Adding $sf..."  
+		einfo "	 Adding $(basename $sf)..."
 		# Great for debugging, too noisy and slow for users though
-# 		echo "(message \"Loading $sf...\")" >>${SITELISP}/site-start.el
+#		echo "(message \"Loading $sf...\")" >>${SITELISP}/site-start.el
 		cat $sf >>${SITELISP}/site-gentoo.el
 	done
 	while read line; do einfo "${line}"; done <<EOF
 
 All site initialization for Gentoo-installed packages is now added to
 /usr/share/emacs/site-lisp/site-gentoo.el; site-start.el is no longer
-managed by Gentoo.  You may want to remove the generated
+managed by Gentoo.	You may want to remove the generated
 site-start.el.
 
 In order for this site initialization to be loaded for all users
 automatically, as was done previously, you can add a line like this:
 
-    (load "/usr/share/emacs/site-lisp/site-gentoo")
+	(load "/usr/share/emacs/site-lisp/site-gentoo")
 
 to /usr/share/emacs/site-lisp/site-start.el.  Alternatively, that line
 can be added by individual users to their initialization files, or for
@@ -85,7 +85,7 @@ elisp-comp() {
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
