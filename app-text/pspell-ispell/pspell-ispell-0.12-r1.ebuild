@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspell-ispell/pspell-ispell-0.12-r1.ebuild,v 1.1 2002/04/02 23:45:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspell-ispell/pspell-ispell-0.12-r1.ebuild,v 1.2 2002/04/02 23:57:46 azarah Exp $
 
 #Remove '-ispell' from name for download subdirectory
 MYPN=${PN/-ispell//}
@@ -15,7 +15,7 @@ SRC_URI="http://prdownloads.sourceforge.net/${MYPN}/${PN}-${MYPV}.tar.gz"
 HOMEPAGE="http://pspell.sourceforge.net"
 
 DEPEND=">=app-text/pspell-0.12.2-r2
-	app-text/ispell-3.2.06-r1"
+	>=app-text/ispell-3.2.06-r1"
 
 
 src_compile() {

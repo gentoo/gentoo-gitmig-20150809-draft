@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspell/pspell-0.12.2-r2.ebuild,v 1.1 2002/04/02 23:35:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspell/pspell-0.12.2-r2.ebuild,v 1.2 2002/04/03 00:01:02 azarah Exp $
 
 #Remove leading zero from version number
 MYPV=${PV#0}
@@ -10,7 +10,8 @@ DESCRIPTION="A spell checker frontend for aspell and ispell"
 SRC_URI="http://prdownloads.sourceforge.net/${PN}/${PN}-${MYPV}.tar.gz"
 HOMEPAGE="http://pspell.sourceforge.net"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-devel/libtool-1.4.1-r4"
 
 
 src_compile() {
