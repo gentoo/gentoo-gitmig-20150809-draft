@@ -1332,11 +1332,6 @@ app-cdr/eroaster
 # unstable package... masked for future use and testing
 =net-fs/openafs-1.3.2
 
-# stroke@gentoo.org 31 Jul 2002
-# Masked 'cause it needs to be tested with gcc versions > 2.95
-# lostologic can you please test it and patch it again if needed ?
-=gnome-extra/gnomemm-1.2.3
-
 # jnelson@gentoo.org 2 Aug 2002
 # mask python-fchksum because older versions of portage hork on the
 # circular dependency
