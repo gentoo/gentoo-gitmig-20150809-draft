@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/irssistats-0.6.ebuild,v 1.2 2004/05/29 16:16:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/irssistats-0.6.ebuild,v 1.3 2004/06/19 17:20:58 weeve Exp $
 
 DESCRIPTION="Generates HTML IRC stats based on irssi logs."
 HOMEPAGE="http://royale.zerezo.com/irssistats/"
@@ -9,7 +9,7 @@ SRC_URI="http://royale.zerezo.com/irssistats/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
 DEPEND="virtual/glibc
