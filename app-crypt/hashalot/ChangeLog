@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/hashalot
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.1 2003/12/03 00:13:46 brad_mssw Exp $
+
+*hashalot-0.1.0 (02 Dec 2003)
+
+  02 Dec 2003; Brad House <brad_mssw@gentoo.org> hashalot-0.1.0.ebuild:
+  initial revision of hashalot helper app for
+  2.6 kernel CryptoAPI, and util-linux-2.12 losetup patch
+
