@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol-sound-server/pysol-sound-server-3.00.ebuild,v 1.4 2004/04/19 21:35:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol-sound-server/pysol-sound-server-3.00.ebuild,v 1.5 2004/06/09 00:27:55 mr_bones_ Exp $
 
 DESCRIPTION="Sound server for PySol"
 HOMEPAGE="http://www.oberhumer.com/opensource/pysol/"
@@ -26,4 +26,3 @@ src_install () {
 	emake strip || die
 	python setup.py install --root=${D} || die
 }
-
