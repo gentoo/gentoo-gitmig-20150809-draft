@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.112 2003/09/10 18:52:19 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.113 2003/09/10 18:55:40 max Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -69,6 +69,7 @@ media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rhythmbox:xine - Use Xine backend
 media-sound/terminatorX:sox - Enable sox support
+media-tv/freevo:matrox - Enable output support on Matrox cards
 media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
 media-video/ffmpeg:faad - Enables faad2 support
