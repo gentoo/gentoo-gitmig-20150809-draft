@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rhythmlet/desklet-rhythmlet-0.3g.ebuild,v 1.4 2004/09/02 18:22:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rhythmlet/desklet-rhythmlet-0.3g.ebuild,v 1.5 2004/11/11 20:48:34 blubb Exp $
 
 DESKLET_NAME="Rhythmlet"
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ppc"
+KEYWORDS="~x86 ppc ~amd64"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.26
 	>=x11-plugins/desklet-psisensors-20040420
