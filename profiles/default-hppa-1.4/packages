@@ -31,6 +31,7 @@
 *>=sys-devel/binutils-2.13.90.0.16-r1
 *>=sys-devel/gcc-3.2.2
 *>=sys-libs/glibc-2.3.1-r2
+*virtual/modutils
 ~sys-kernel/hppa-headers-2.4.20_p32
 
 *dev-lang/python
