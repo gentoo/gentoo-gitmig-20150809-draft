@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipp2p
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.1 2004/10/26 08:31:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.2 2004/12/06 20:31:38 eradicator Exp $
+
+  06 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> ipp2p-0.6.ebuild:
+  Updated HOMEPAGE per request of upstream author.  Stable amd64, x86.
 
 *ipp2p-0.6 (26 Oct 2004)
 
