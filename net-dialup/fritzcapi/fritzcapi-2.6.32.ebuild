@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.2 2005/02/06 11:47:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.3 2005/02/17 22:54:34 mrness Exp $
 
 inherit linux-mod rpm eutils
 
@@ -131,10 +131,6 @@ src_install() {
 		doins ${WORKDIR}/usr/lib/isdn/*
 		echo -e "#fcusb2\tput_here_your_firmware\t-\t-\t-\t-\t-" >>${D}/etc/capi.conf
 	)
-
-	#Compatibility with <=net-dialup/isdn4k-utils-20041006-r3. 
-	#Please remove it when it becomes obsolete
-	dosym firmware /lib/isdn
 }
 
 pkg_postinst() {

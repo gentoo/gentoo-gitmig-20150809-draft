@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/isdn-firmware-2004.4.5-r1.ebuild,v 1.2 2004/12/22 22:17:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/isdn-firmware-2004.4.5-r1.ebuild,v 1.3 2005/02/17 22:57:07 mrness Exp $
 
 inherit rpm
 
@@ -20,8 +20,4 @@ src_install() {
 	insinto /lib/firmware
 	insopts -m 0644
 	doins *
-
-	#Compatibility with <=net-dialup/isdn4k-utils-20041006-r3. 
-	#Please remove it when it becomes obsolete
-	dosym firmware /lib/isdn
 }
