@@ -1,9 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.8 2005/01/07 07:55:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.9 2005/01/07 07:56:12 swegener Exp $
 
   07 Jan 2005; Sven Wegener <swegener@gentoo.org> lighttpd-1.3.5.ebuild:
-  Added missing -1 to enewuser.
+  Added missing -1 to enewuser. Closes bug #76989.
 
   04 Jan 2005; Sven Wegener <swegener@gentoo.org> lighttpd-1.3.5.ebuild:
   Several small fixes. Correctly install init script. Use enewuser.
