@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f90244d091a29e12bdfb2cf0f813591d ChangeLog 11702
+MD5 8e93b54a102e752cdc2ef067e5d7b6ef ChangeLog 11859
 MD5 6b6cb21d0fd78d28bc0d9ed60fbc0717 libtool-1.5.10-r2.ebuild 5197
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 bca2c76e573b140cc3fb59e3e3b7605f libtool-1.3.5.ebuild 1496
@@ -25,7 +25,7 @@ MD5 3b185e86e062b438eb8d418fc5af462f files/1.4.3/libtool-1.4.2-fix-linkage-of-cx
 MD5 f6f24e776d832798365777c26c2c56fc files/1.4.3/libtool-1.4.2-multilib.patch 1780
 MD5 e03f7ed340f294fdb7ddd6c84d4b6b09 files/1.4.3/libtool-1.4.2-relink-58664.patch 3213
 MD5 51df2f3c87ee74b80790edd735ddf565 files/1.4.3/libtool-1.4.2-s390_x86_64.patch 470
-MD5 346df8edf0af3e539da4b57957fffe21 files/1.4.3/libtool-1.4.2-portage.patch 2315
+MD5 696b0d0d16bb9f928647cff1cdf1099d files/1.4.3/libtool-1.4.2-portage.patch 2505
 MD5 191388758ae78d4982f143636e47f514 files/1.4.3/libtool-1.4.3-lib64.patch 1193
 MD5 ff5cf09ccda7f9a34f8c3c69e0c5047c files/1.4.3/libtool-1.4.3-libtoolize--config-only.patch 1288
 MD5 94591cd9fb847704a323c0faf31fdbf2 files/1.4.3/libtool-1.4.3-ltmain-SED.patch 363
@@ -42,7 +42,7 @@ MD5 b81a86ce5e9014e53bd7beb12e46ed12 files/1.5.2/libtool-1.5.2-ltmain_sh-max_cmd
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB7u0jroRuSHgZdywRAlMNAJ9AcpfChVl7Jqjg0kQxrBOmohtn3gCbBTXP
-QaQU/FgHFTQx2Nl8p37iRGY=
-=JY0o
+iD4DBQFB7yN8roRuSHgZdywRAgU1AJ9/yAD0hS/hi3qmMkZKQwpsTjwzlACWLaWu
+8S2Tq1HidZOzOqhDsZKINA==
+=xWaP
 -----END PGP SIGNATURE-----

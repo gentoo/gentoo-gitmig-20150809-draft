@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.65 2005/01/19 23:27:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.66 2005/01/20 03:19:36 vapier Exp $
+
+  19 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  files/1.4.3/libtool-1.4.2-portage.patch:
+  Touch up portage patch to pass libtools `make check` #70350.
 
   19 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   files/1.5.6/libtool-1.5-filter-host-tags.patch:
