@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.1.ebuild,v 1.11 2003/07/19 23:22:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.1.ebuild,v 1.12 2003/08/29 20:28:25 liquidx Exp $
 
 IUSE="doc nls"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.0.6
 	>=x11-libs/gtk+-2.0.6
 	>=dev-libs/atk-1.0.3
 	>=dev-libs/expat-1.95
-	dev-python/PyXML
+	dev-python/pyxml
 	>=dev-lang/python-2.0-r7
 	>=dev-libs/libxml2-2.4.24
 	nls? ( >=sys-devel/gettext-0.10.40 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0.ebuild,v 1.9 2003/08/03 02:37:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0.ebuild,v 1.10 2003/08/29 20:28:25 liquidx Exp $
 
 inherit flag-o-matic
 # Do _NOT_ strip symbols in the build!
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	>=x11-libs/gtk+-2.0.3
 	>=dev-libs/atk-1.0.0
 	>=dev-libs/expat-1.95
-	dev-python/PyXML
+	dev-python/pyxml
 	>=dev-lang/python-2.0-r7
 	>=sys-devel/gettext-0.10.40
 	>=dev-libs/libxml2-2.4.17"
