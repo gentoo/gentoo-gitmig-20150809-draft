@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/cel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cel/ChangeLog,v 1.1 2003/04/02 19:11:02 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cel/ChangeLog,v 1.2 2003/04/15 19:53:41 malverian Exp $
+
+*cel-20030413 (13 Apr 2003)
+
+  13 Apr 2003; Philip Walls <malverian@gentoo.org> cel-20030413.ebuild :
+  Cel snapshot that works with Planeshift
 
 *cel-0.96_p001 (02 Apr 2003)
 

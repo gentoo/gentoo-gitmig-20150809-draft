@@ -1,28 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/crystalspace/crystalspace-0.96_p002.ebuild,v 1.2 2003/04/02 19:40:00 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/crystalspace/crystalspace-20030413.ebuild,v 1.1 2003/04/15 19:52:46 malverian Exp $
 
 IUSE="oggvorbis mikmod"
 
 #Local USE flags
 IUSE="${IUSE} openal freetype 3ds mng"
 
-MY_PV0=${PV/_????}
-MY_PV=${MY_PV0/.}
-MY_PV1=${PV/p}
-MY_PV2=${MY_PV1/0.}
-
 S=${WORKDIR}/CS
 
 CRYSTAL_PREFIX="/opt/crystal"
 
 DESCRIPTION="A nice 3d engine"
-SRC_URI="ftp://sunsite.dk/projects/crystal/cs${MY_PV}/source/cs${MY_PV2}.tar.bz2"
-HOMEPAGE="http://crystal.sf.net"
+SRC_URI="mirror://gentoo/distfiles/${P}.tar.gz"
+HOMEPAGE="http://crystal.sourceforge.net"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86"
 
 DEPEND=">=media-libs/libpng-1.2.1
 	>=media-libs/jpeg-6b
@@ -39,26 +34,19 @@ DEPEND=">=media-libs/libpng-1.2.1
 	>=dev-lang/perl-5.6.1
 	"
 
-src_unpack() {
-	unpack cs${MY_PV2}.tar.bz2
-}
-
 src_compile() {
-	local myconf=""
-
-#	myconf="${myconf} --without-libode"
 
 	cd ${S}
-	./configure --prefix=${CRYSTAL_PREFIX} ${myconf} || die
+	./configure --prefix=${D}/${CRYSTAL_PREFIX} || die
 
-	emake all || die
+	make all
 }
 
 src_install() {
 	dodir /opt /etc/env.d /usr/bin
 
-	make INSTALL_DIR=${D}/${CRYSTAL_PREFIX} install
-	echo "CRYSTAL=${CRYSTAL_PREFIX}" > ${D}/etc/env.d/15crystalspace
+	make INSTALL_DIR=${D}/${CRYSTAL_PREFIX} install || die
+	echo "CRYSTAL=${CRYSTAL_PREFIX} CEL=${CRYSTAL_PREFIX}" > ${D}/etc/env.d/15crystalspace
 
 	dosym /opt/crystal/bin/cs-config /usr/bin/cs-config
 }
