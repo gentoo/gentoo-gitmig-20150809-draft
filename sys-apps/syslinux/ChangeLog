@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/syslinux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.1 2002/07/06 15:37:58 drobbins Exp $
+# $Id: ChangeLog,v 1.2 2002/07/06 22:22:21 seemant Exp $
 
-*syslinux-1.75 (28 June 2002); Bart Verwilst <verwilst@gentoo.org>
+*syslinux-1.75 (28 June 2002)
 
-	
+  28 Jun 2002; Bart Verwilst <verwilst@gentoo.org>  syslinux-1.75.ebuild
+  ChangeLog files/digest-syslinux-1.75 :
+
+  Initial package from an ebuild submitted by (whom?) in bug # (Which?)
