@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.10 2003/02/28 09:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.11 2003/05/19 23:29:41 tberman Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -68,6 +68,7 @@ set_java_env() {
 		-e "s/@PN@/${PN}/g" \
 		-e "s/@PV@/${PV}/g" \
 		-e "s/@PF@/${PF}/g" \
+                -e "/^ADDLDPATH=.*lib\\/\\"/s|\"\\(.*\\)\"|\"\\1${platform}/:\\1${platform}/server/\"|" \
 		< $1 \
 		> ${D}/etc/env.d/java/20`basename $1` || die
 }
