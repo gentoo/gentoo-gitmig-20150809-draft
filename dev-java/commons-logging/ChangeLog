@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.17 2004/07/16 19:49:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.18 2004/07/19 10:06:03 mr_bones_ Exp $
+
+  19 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  commons-logging-1.0.3-r1.ebuild, commons-logging-1.0.4.ebuild:
+  don't use deprecated ? : dep syntax
 
 *commons-logging-1.0.4 (16 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.3-r1.ebuild,v 1.5 2004/07/15 14:49:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.3-r1.ebuild,v 1.6 2004/07/19 10:06:03 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,8 @@ DEPEND=">=dev-java/log4j-1.2.5
 	dev-java/avalon-logkit
 	>=dev-java/ant-1.4
 	jikes? ( dev-java/jikes )
-	junit? ( >=dev-java/junit-3.7 >=virtual/jdk-1.4 ) : ( >=virtual/jdk-1.3 )"
+	junit? ( >=dev-java/junit-3.7 >=virtual/jdk-1.4 )
+	!junit? ( >=virtual/jdk-1.3 )"
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
