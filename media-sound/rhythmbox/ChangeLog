@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.43 2004/06/25 00:20:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.44 2004/07/12 13:23:15 foser Exp $
+
+*rhythmbox-0.8.5 (12 Jul 2004)
+
+  12 Jul 2004; foser <foser@gentoo.org> rhythmbox-0.8.5.ebuild :
+  Add faad support (m4a), closes bug #51529
 
 *rhythmbox-0.8.3 (05 May 2004)
 

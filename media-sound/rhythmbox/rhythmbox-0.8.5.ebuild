@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.3.ebuild,v 1.3 2004/07/12 13:23:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.5.ebuild,v 1.1 2004/07/12 13:23:15 foser Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 #IUSE="oggvorbis xine flac faad mad pda"
 IUSE="oggvorbis flac faad mad pda"
 SLOT="0"
@@ -18,13 +18,13 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2
-	>=media-libs/gst-plugins-0.8.1
-	>=media-plugins/gst-plugins-gnomevfs-0.8.1
-	oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.8.1
-	             >=media-plugins/gst-plugins-ogg-0.8.1 )
-	mad? ( >=media-plugins/gst-plugins-mad-0.8.1 )
-	flac? ( >=media-plugins/gst-plugins-flac-0.8.1 )
-	faad? ( >=media-plugins/gst-plugins-faad-0.8.1 )"
+	>=media-libs/gst-plugins-0.8.2
+	>=media-plugins/gst-plugins-gnomevfs-0.8.2
+	oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.8.2
+	             >=media-plugins/gst-plugins-ogg-0.8.2 )
+	mad? ( >=media-plugins/gst-plugins-mad-0.8.2 )
+	flac? ( >=media-plugins/gst-plugins-flac-0.8.2 )
+	faad? ( >=media-plugins/gst-plugins-faad-0.8.2 )"
 
 #	!xine? ( =media-libs/gst-plugins-0.8*
 #		=media-plugins/gst-plugins-gnomevfs-0.8*
@@ -39,11 +39,6 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 #		oggvorbis? ( >=media-libs/libvorbis-1 )
 #		mad? ( >=media-libs/libid3tag-0.15.0b )
 #		>=media-libs/xine-lib-1_rc3 )"
-
-# REMIND : should we really force flac ?
-# I want to drop flac deps when rb get proper gst only/non monkey-media
-# flac support. Made it a local USE flag for now
-# <foser@gentoo.org> 06 Oct 2003
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
