@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.23 2004/03/30 08:45:25 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.24 2004/03/30 16:30:10 agriffis Exp $
+
+  30 Mar 2004; Aron Griffis <agriffis@gentoo.org> clamav-0.68.1.ebuild:
+  Stable on alpha and ia64 for bug 45357
 
   30 Mar 2004; Thomas Raschbacher <lordvan@gentoo.org> clamav-0.68.1.ebuild,
   clamav-0.68.ebuild, clamav-0.70_rc.ebuild:
