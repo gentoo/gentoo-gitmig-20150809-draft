@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/File-Slurp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.1 2004/10/06 23:11:42 mcummings Exp $
+
+*File-Slurp-9999.06 (06 Oct 2004)
+
+  06 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +File-Slurp-9999.06.ebuild:
+  Dep for Plucene - perl port of lucene
+

@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Class-Virtual
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Virtual/ChangeLog,v 1.1 2004/10/06 23:09:51 mcummings Exp $
+
+*Class-Virtual-0.04 (06 Oct 2004)
+
+  06 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Class-Virtual-0.04.ebuild:
+  Dep for Plucene - perl port of lucene
+

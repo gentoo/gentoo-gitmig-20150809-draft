@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Snowball-Swedish
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/ChangeLog,v 1.1 2004/10/06 23:19:05 mcummings Exp $
+
+*Snowball-Swedish-1.01 (06 Oct 2004)
+
+  06 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Snowball-Swedish-1.01.ebuild:
+  Dep for Plucene - perl port of lucene
+

@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Bit-Vector-Minimal
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector-Minimal/ChangeLog,v 1.1 2004/10/06 23:08:28 mcummings Exp $
+
+*Bit-Vector-Minimal-1.0 (06 Oct 2004)
+
+  06 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Bit-Vector-Minimal-1.0.ebuild:
+  Dep for Plucene - perl port of lucene
+
