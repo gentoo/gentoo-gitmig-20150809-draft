@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/realvideo-codecs/realvideo-codecs-9.ebuild,v 1.1 2003/11/02 13:57:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/realvideo-codecs/realvideo-codecs-9.ebuild,v 1.2 2004/01/16 10:46:11 liquidx Exp $
 
 RESTRICT="nostrip"
 
@@ -10,7 +10,7 @@ SRC_URI="http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tgz"
 
 LICENSE="realplayer8"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 IUSE=""
 
 RDEPEND=">=media-video/realplayer-8"
