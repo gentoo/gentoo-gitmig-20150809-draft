@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-genmon
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-genmon/ChangeLog,v 1.1 2004/09/20 17:00:55 bcowan Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-genmon/ChangeLog,v 1.2 2005/01/07 01:49:40 bcowan Exp $
+
+*xfce4-genmon-1.0-r1 (06 Jan 2005)
+
+  06 Jan 2005; Brad Cowan <bcowan@gentoo.org> +xfce4-genmon-1.0-r1.ebuild:
+  Updated to use Xfce4 eclass.
 
 *xfce4-genmon-1.0 (20 Sep 2004)
 

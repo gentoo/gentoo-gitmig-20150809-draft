@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/xfce4-wavelan-0.4.1.ebuild,v 1.1 2004/12/14 06:35:12 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/xfce4-wavelan-0.4.1.ebuild,v 1.2 2005/01/07 01:49:40 bcowan Exp $
 
 MY_P="${PN}-plugin-${PV}"
 S=${WORKDIR}/${MY_P}
