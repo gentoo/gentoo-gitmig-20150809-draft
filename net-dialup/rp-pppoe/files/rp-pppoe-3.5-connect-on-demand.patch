@@ -1,0 +1,12 @@
+diff -Nru rp-pppoe-3.5.orig/scripts/adsl-connect.in rp-pppoe-3.5/scripts/adsl-connect.in
+--- rp-pppoe-3.5.orig/scripts/adsl-connect.in	2005-03-17 14:24:24.000000000 +0200
++++ rp-pppoe-3.5/scripts/adsl-connect.in	2005-03-17 14:26:28.444590880 +0200
+@@ -189,7 +189,7 @@
+ if test "$DEMAND" = "no" ; then
+     DEMAND=""
+ else
+-    DEMAND="demand persist idle $DEMAND 10.112.112.112:10.112.112.113 ipcp-accept-remote ipcp-accept-local connect true noipdefault ktune"
++    DEMAND="demand persist idle $DEMAND 10.112.112.112:10.112.112.113 ipcp-accept-remote ipcp-accept-local noipdefault ktune"
+ fi
+ 
+ case "$FIREWALL" in

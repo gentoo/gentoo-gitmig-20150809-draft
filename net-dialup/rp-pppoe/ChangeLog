@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.52 2005/03/07 23:16:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.53 2005/03/17 13:05:51 mrness Exp $
+
+*rp-pppoe-3.5-r9 (17 Mar 2005)
+
+  17 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  +files/rp-pppoe-3.5-connect-on-demand.patch, +rp-pppoe-3.5-r9.ebuild:
+  Fix pppd parameters when on-demand is enabled (#85535).
 
 *rp-pppoe-3.5-r8 (08 Mar 2005)
 
