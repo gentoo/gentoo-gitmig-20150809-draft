@@ -1,0 +1,22 @@
+#!/sbin/runscript
+                                                                                
+depend() {
+  need   net
+  before heartbeat
+  after  sshd           # In case there are sync problems
+}
+                                                                                
+start() {
+  ebegin "Starting drbd mirror driver"
+  ${DRBD} ${DRBDDEV} start
+  if [ "$?" == "1" ]; then      # In case you decide this
+    eend 0                      # node is primary the
+  fi                            # script returns 1
+  eend $?
+}
+                                                                                
+stop() {
+  ebegin "Stopping drbd mirror driver"
+  ${DRBD} ${DRBDDEV} stop
+  eend $?
+}

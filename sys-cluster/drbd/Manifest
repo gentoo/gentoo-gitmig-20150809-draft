@@ -1,13 +1,27 @@
-MD5 c189b2a85daa0f46bdfa881e5b936ed0 drbd-0.6.6-r2.ebuild 1920
-MD5 02564fab57e0c737ee7b981168b05c92 drbd-0.6.12.ebuild 2081
-MD5 0d5ef79b312e8d16ebf44916d5786e26 ChangeLog 1181
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 545a301fed86260ef910d0874f31bb2d files/0.6.6-Makefile.vars.patch 936
-MD5 7fccd0c1159fb79cd60fc45ace182a56 files/digest-drbd-0.6.6-r2 62
-MD5 3959588a14b9fba5df432a29d00fa63f files/digest-drbd-0.6.12 63
-MD5 54de4ff29f16698f6d1aa861935f7a53 files/0.6.6-drbd-Makefile.patch 816
-MD5 ce7682bc39b5263e80bea51b039e7252 files/0.6.6-init 256
-MD5 7416c44daab264a36cc8c5a2c35e757f files/0.6.12-scripts-Makefile.patch 1072
-MD5 52dc2e272f064349f8f70277159d4a5f files/0.6.12-module-Makefile.patch 776
+MD5 7e3f0df7e3abc647010506e9ce00c374 ChangeLog 1362
+MD5 b4ce1a4ad0f310ba649b88a09bf20c19 drbd-0.6.12-r1.ebuild 2179
+MD5 02564fab57e0c737ee7b981168b05c92 drbd-0.6.12.ebuild 2081
+MD5 c189b2a85daa0f46bdfa881e5b936ed0 drbd-0.6.6-r2.ebuild 1920
 MD5 f8ceed0b6be2ded4cdb079d38ac0c3d0 files/0.6.12-Makefile.vars.patch 675
+MD5 7416c44daab264a36cc8c5a2c35e757f files/0.6.12-scripts-Makefile.patch 1072
+MD5 3959588a14b9fba5df432a29d00fa63f files/digest-drbd-0.6.12 63
+MD5 ce7682bc39b5263e80bea51b039e7252 files/0.6.6-init 256
+MD5 54de4ff29f16698f6d1aa861935f7a53 files/0.6.6-drbd-Makefile.patch 816
+MD5 3959588a14b9fba5df432a29d00fa63f files/digest-drbd-0.6.12-r1 63
+MD5 4ab78154d6a32d13d416f9915ad4bc28 files/0.6.12-init 701
+MD5 545a301fed86260ef910d0874f31bb2d files/0.6.6-Makefile.vars.patch 936
 MD5 0fd7f6bf10cd5fc99f2c79c88355ea8c files/0.6.6-scripts-Makefile.patch 1008
+MD5 463c9c89c7d3f156fc5581070abce14d files/0.6.12-conf.d 69
+MD5 7fccd0c1159fb79cd60fc45ace182a56 files/digest-drbd-0.6.6-r2 62
+MD5 52dc2e272f064349f8f70277159d4a5f files/0.6.12-module-Makefile.patch 776
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBMzExKtJO8LeSoosRAuBAAKCPXigcgVzOpPd2q/83cCNvYa6Q5gCgiByA
+Nlr8m0DzMr+iad0VcLsj9pA=
+=qmoj
+-----END PGP SIGNATURE-----
