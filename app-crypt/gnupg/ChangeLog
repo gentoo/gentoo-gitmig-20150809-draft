@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.111 2005/03/24 20:44:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.112 2005/03/25 22:43:52 agriffis Exp $
+
+  25 Mar 2005; Aron Griffis <agriffis@gentoo.org> :
+  Stable on ia64 to support mozilla-thunderbird-1.0.2 enigmail dependency
 
   24 Mar 2005; Markus Rothe <corsair@gentoo.org> gnupg-1.4.1.ebuild:
   Added --disable-asm for ppc64 only; stable on ppc64; bug #85547
