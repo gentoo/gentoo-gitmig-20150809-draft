@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801.ebuild,v 1.2 2004/10/16 17:27:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801.ebuild,v 1.3 2004/10/17 09:50:10 dholm Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jtidy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-dev.zip"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 DEPEND="virtual/jdk
 	>=dev-java/ant-1.5.0"
