@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc52cdb3ed807293f59c7c1fe4e5dbdf ChangeLog 1041
-MD5 b807b01f2e4bbab81ecbe6b01657d13b metadata.xml 220
-MD5 2937d398ccfe907f15793596549d06d4 oinkmaster-0.9.ebuild 776
+MD5 095fe5adfe1e7b0435a316860b846173 oinkmaster-1.1.ebuild 852
 MD5 21dacbf8f309e31c8c8ef2f193150304 oinkmaster-1.0.ebuild 846
-MD5 d4065e6782a0f2a62ffee467bcb0ab8f oinkmaster-1.1.ebuild 847
-MD5 8a3bdfb991ed6d399d9b803b553e8d77 files/0.9-oinkmaster.conf.patch 1097
+MD5 2937d398ccfe907f15793596549d06d4 oinkmaster-0.9.ebuild 776
+MD5 a45f3d04a525f99f6038829818758886 ChangeLog 1161
+MD5 b807b01f2e4bbab81ecbe6b01657d13b metadata.xml 220
 MD5 98cb0dba8ab5abbc004c2b6cc9a15a5d files/digest-oinkmaster-0.9 65
 MD5 35309b89b051a4fda09d13915c69d2e8 files/digest-oinkmaster-1.0 65
 MD5 d39a6dd3af176592dc47aff3885ca667 files/digest-oinkmaster-1.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB5kiUmdTrptrqvGERAi5IAJsEfyTPUis7HwdRhmR0lHwIBxWYugCeNwfX
-xlxN/drOzTMAlYexRL6buX8=
-=Swxi
------END PGP SIGNATURE-----
+MD5 8a3bdfb991ed6d399d9b803b553e8d77 files/0.9-oinkmaster.conf.patch 1097

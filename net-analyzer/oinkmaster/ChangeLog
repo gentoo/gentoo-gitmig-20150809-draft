@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/oinkmaster
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.6 2005/01/13 10:08:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.7 2005/01/14 18:25:24 luckyduck Exp $
+
+  14 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> oinkmaster-1.1.ebuild:
+  added ~amd64 to KEYWORDS. fixes bug #73862.
 
 *oinkmaster-1.1 (13 Jan 2005)
 
