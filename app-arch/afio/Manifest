@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ed608256c001e40bde3695bae161dba4 ChangeLog 1106
-MD5 17695ca4b1eda65d6788aeee8f6a9cb6 afio-2.4.7.ebuild 1044
-MD5 1fef451300442b4bb6f77bac791088bd afio-2.5.ebuild 1005
+MD5 86203ed1333cf56e6810d5845757bd05 afio-2.5.ebuild 1012
 MD5 31ca2443d65d6c562052297342f73a50 metadata.xml 640
+MD5 b9ff7863404392f485dea21e2b39b3dc ChangeLog 1195
+MD5 17695ca4b1eda65d6788aeee8f6a9cb6 afio-2.4.7.ebuild 1044
 MD5 f66820d09ee18bc1250763fa4f3cdfd5 files/Makefile.patch 350
-MD5 220e2947e5808d60df6546914dee1d07 files/digest-afio-2.4.7 58
 MD5 59d440af39481f99cdca2c3dae7adaca files/digest-afio-2.5 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYepfI1lqEGTUzyQRAjrgAKDekGvIQrKD5gAiqIEFBGmWOvJHtwCaA0aw
-EQyCP8X4Wmm3umjW0D+jQj0=
-=Zy29
------END PGP SIGNATURE-----
+MD5 220e2947e5808d60df6546914dee1d07 files/digest-afio-2.4.7 58
