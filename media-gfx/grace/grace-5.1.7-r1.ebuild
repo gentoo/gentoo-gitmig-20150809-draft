@@ -1,32 +1,26 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Grant Goodyear <g2boojum@hotmail.com>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.6.ebuild,v 1.1 2002/01/29 00:38:48 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.7-r1.ebuild,v 1.1 2002/04/12 23:39:06 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Grace is a WYSIWYG 2D plotting tool for the X Window System"
 SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/${P}.tar.gz"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
 
-DEPEND="virtual/glibc virtual/x11
+DEPEND="virtual/x11
 	>=x11-libs/openmotif-2.1
-	>=media-libs/libpng-0.96
+	media-libs/libpng-0.96
 	>=media-libs/tiff-3.5
 	pdflib? ( >=media-libs/pdflib-3.0.2 )"
 	
-RDEPEND="virtual/glibc virtual/x11
-	>=x11-libs/openmotif-2.1
-	>=media-libs/libpng-0.96
-	>=media-libs/jpeg-6
-	pdflib? ( >=media-libs/pdflib-3.0.2 )"
-
+RDEPEND="${DEPEND}"
 	
 src_compile() {
 
 	local myconf
-	if [ -z "`use pdflib`" ] ; then
-		myconf="--disable-pdfdrv"
-	fi
+	
+	use pdflib || myconf="--disable-pdfdrv"
 	
 	./configure --with-grace-home=/usr/share/grace			\
 		--prefix=/usr						\
