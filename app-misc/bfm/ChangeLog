@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/bfm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.2 2005/04/02 10:02:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.3 2005/04/04 17:04:20 luckyduck Exp $
+
+  04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> bfm-1.2.ebuild:
+  added ~amd64 to KEYWORDS, now there are java3d implementations available for
+  amd64
 
   02 Apr 2005; Thomas Matthijs <axxo@gentoo.org> bfm-1.2.ebuild:
   adjust wrapper script closes 82904
