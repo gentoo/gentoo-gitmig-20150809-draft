@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.7.ebuild,v 1.2 2004/01/15 23:38:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.11.ebuild,v 1.1 2004/01/15 23:38:45 liquidx Exp $
 
 inherit gnuconfig
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"
-SRC_URI="ftp://ftp.dict.org/pub/dict/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/dict/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -21,25 +21,13 @@ src_compile() {
 
 	econf \
 		--with-cflags="${CFLAGS}" \
-		--sysconfdir=/etc/dict \
-		--with-etcdir=/etc/dict || die
+		--sysconfdir=/etc/dict || die
 	make || die
 }
 
 src_install() {
-	# gotta set up the dirs for it....
-	dodir /usr/bin
-	dodir /usr/sbin
-	dodir /usr/share/man/man1
-	dodir /usr/share/man/man8
-
 	# Now install it.
-	make \
-		prefix=${D}/usr \
-		man1_prefix=${D}/usr/share/man/man1 \
-		man8_prefix=${D}/usr/share/man/man8 \
-		conf=${D}/etc/dict \
-		install || die
+	make DESTDIR=${D} install || die "install failed"
 
 	# Install docs
 	dodoc README TODO COPYING ChangeLog ANNOUNCE
