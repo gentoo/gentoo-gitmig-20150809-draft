@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/rockdodger
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.1 2004/04/14 19:10:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.2 2004/04/15 19:48:48 dholm Exp $
+
+  15 Apr 2004; David Holm <dholm@gentoo.org> rockdodger-0.6.0a.ebuild:
+  Adding to ~ppc.
 
 *rockdodger-0.6.0a (14 Apr 2004)
 
