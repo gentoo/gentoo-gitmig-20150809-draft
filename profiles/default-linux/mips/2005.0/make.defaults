@@ -1,0 +1,19 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2005.0/make.defaults,v 1.1 2005/01/20 00:28:51 wolf31o2 Exp $
+
+ARCH="mips"
+
+FEATURES="ccache autoconfig"
+
+# Compiler flags
+# We build a *minimum* of mips2, because just about any mips box we theoretically
+# support should meet the mips2 standard
+CFLAGS="-O2 -pipe -march=mips2"
+CXXFLAGS=${CFLAGS}
+
+ACCEPT_KEYWORDS="mips"
+
+USE="readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips -multilib nomultilib -n32 -n64"
+GRP_STAGE23_USE="readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips -multilib nomultilib -n32 -n64"
+
