@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b73de80d5a14192a070dafe949f1865a ChangeLog 7274
 MD5 ea3ca69de19728fb2df040fad1621a0b metadata.xml 489
 MD5 ffd6d14fd61ebe084b4cf12df030212b naim-0.11.6.1.ebuild 883
 MD5 da47ec0b2dd98f234072aad7166bcd8c naim-0.11.6.4.ebuild 858
 MD5 c14f449fef05f21f124804689f10617f naim-0.11.6.7.ebuild 821
-MD5 2fd2486a9b586521172f3c9cec546579 naim-0.11.7.1.ebuild 824
-MD5 4cf27a81d76fa1fc53edf6a04ba85e25 naim-0.11.7.2.ebuild 831
+MD5 9bbc82d0aadcc9338d8beb62e1154cf7 naim-0.11.7.1.ebuild 837
+MD5 b35978a7be30cc7403bd4f65a29b2838 naim-0.11.7.2.ebuild 842
 MD5 cce37b118d5ddc9511362f4996c41680 files/digest-naim-0.11.6.1 66
 MD5 4f0d7cdac355995f31c937363881b089 files/digest-naim-0.11.6.4 66
 MD5 8173d59a57157573df8be77614285f60 files/digest-naim-0.11.6.7 66
 MD5 4483bed10e96873921b21e2622ea3568 files/digest-naim-0.11.7.1 66
 MD5 c27b1fe8e0711b6c14cda7a75f4c5188 files/digest-naim-0.11.7.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBR3NfKSoOBZY9iUIRAsEoAKCaIntwZG9vY/jRR7U1Arm+Hq/p/wCgjWSZ
-HRS66psZYA3sfOVGAuefWsc=
-=Ig5e
------END PGP SIGNATURE-----
