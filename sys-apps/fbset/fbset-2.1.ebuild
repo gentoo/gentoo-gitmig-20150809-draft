@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.25 2004/06/28 16:06:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.26 2004/07/17 01:36:49 mr_bones_ Exp $
 
 inherit gcc
 
@@ -21,15 +21,16 @@ src_unpack() {
 	sed -i \
 		-e "/^CC =/s:gcc:$(gcc-getCC):" \
 		-e "/^CC =/s:-O2:${CFLAGS}:" \
-		Makefile || die
+		-e 's/^modes.tab.c/modes.tab.h modes.tab.c/' \
+		Makefile || die "sed Makefile failed"
 }
 
 src_compile() {
-	make || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	dobin fbset modeline2fb || die
+	dobin fbset modeline2fb || die "dobin failed"
 	doman *.[58]
 	dodoc etc/fb.modes.* INSTALL
 }
