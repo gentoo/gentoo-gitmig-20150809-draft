@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r5.ebuild,v 1.2 2002/08/02 18:09:09 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r5.ebuild,v 1.3 2002/08/02 18:15:23 naz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text based WWW browser, supports tables and frames"
@@ -10,9 +10,9 @@ HOMEPAGE="http://w3m.sourceforge.net/"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
+	>=media-libs/imlib-1.9.14
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
-	ssl? ( >=dev-libs/openssl-0.9.6b )
-	imlib? ( >=media-libs/imlib-1.9.14 )"
+	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 SLOT="0"
 LICENSE="w3m"
@@ -66,7 +66,7 @@ src_compile() {
 		# Digest Auth support [y]? 
 		echo y
 		# Inline image support (you need Imlib library) [n]? 
-		use imlib &>/dev/null && echo y || echo n
+		echo y
 		# ANSI color escape sequences support [n]? 
 		echo y
 		# Use Migemo (Roma-ji search; Please see
