@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.575 2004/08/20 17:21:31 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.576 2004/08/23 18:36:08 s4t4n Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -544,6 +544,7 @@ x11-base/xorg-x11:dmx - Build the DMX extension for Xorg
 x11-base/xorg-x11:insecure-drivers - Builds the insecure DRI development
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-libs/fltk:nptl - Enable support for NPTL
+x11-libs/fox:freetype - Enable freetype support (allows for antialiased fonts)
 x11-libs/gtk-sharp:gnomedb - Enable gnomedb support
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/qt:immqt -Enable binary incompatible version of immodule for Qt
