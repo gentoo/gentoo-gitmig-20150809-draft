@@ -11,7 +11,7 @@ MD5 c26049067547fc7ff528bd0a4329794a arts-1.1.4.ebuild 3032
 MD5 9ffc978b18c6e1ad49a0c7eec49074f6 files/optional-deps.diff 3154
 MD5 8a2eb6e84c39661304e7c3c395ecb5b5 files/digest-arts-1.1.2 63
 MD5 be627646b998d386b73ecb0f03922ead files/digest-arts-1.1.4 63
-MD5 0d6456881128b5df087b2b1cbd203712 files/digest-arts-1.1.5 63
+MD5 2d584d662a2b0b0e7a278bde6cd42e8f files/digest-arts-1.1.5 63
 MD5 783f52e41abb732466bec517c6ff1ae1 files/digest-arts-1.0.5b 200
 MD5 9eb075bd57fb70c3cafa5cd05d36640b files/arts-1.1.4-alsafix.diff 1543
 MD5 e694f9e5ae5ca5755ea6938c0d90ec9c files/arts-1.1.4-amd64.patch 623
