@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.35 2002/08/07 21:59:59 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.36 2002/08/09 00:42:49 karltk Exp $
 
 *gentoolkit-0.1.16 (28 Jul 2002)
 
@@ -10,13 +10,13 @@
   implementation, very _DANGEROUS_ (in some common cases, it empties your 
   /etc/make.conf). If you still want to use it, don't 
   upgrade beyound 0.1.15-r2. See #5777 for details.
-  
+
   Old version kept for backwards compatibility.
 
 *gentoolkit-0.1.15-r2 (28 Jul 2002)
 
   28 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.15-r2.ebuild files/digest-gentoolkit-0.1.15-r2:
-	
+
   Added dependency on grep-2.5-r1 or newer, as old systems may actually not
   have 2.5 installed.
 
@@ -62,10 +62,9 @@
 
   Fixed non-functioning -y option.
 
-  14 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg files/scripts/qpkg.1
-						  files/etc-update/etc-update files/etc-update/ChangeLog: 
+  14 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg files/scripts/qpkg.1 files/etc-update/etc-update files/etc-update/ChangeLog : 
 
-  14 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg files/scripts/qpkg.1 files/etc-update/etc-update files/etc-update/ChangeLog: 
+  14 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg files/scripts/qpkg.1 files/etc-update/etc-update files/etc-update/ChangeLog : 
 
   Added -q --query-deps option to qpkg and qpkg.1.  
   See `man qpkg` or `qpkg --help` for more information
@@ -103,7 +102,7 @@
 
 *gentoolkit-0.1.11-r1 (08 Jun 2002)
 
-  08 Jun 2002: Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg
+  08 Jun 2002: Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg :
 
   More qpkg updates, -v and -vv are much more useful, -U works with 
   the massive number of packages now in portage, which means that 
@@ -113,42 +112,43 @@
 
 *gentoolkit-0.1.11 (04 Jun 2002)
 
-  04 Jun 2002: Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg
+  04 Jun 2002: Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg :
 
   Fixed better, now -c does check for mis-cased md5s, and our time is
   a nice compromise between everything.  To accomplish this, I used tr
   instead of awk to do the case change, and only check IF the first md5
   check fails.
 
-  04 Jun 2002: Brandon Low <lostlogic@gentoo.org> gentoolkit-0.1.11.ebuild
-						  files/scripts/qpkg
+  04 Jun 2002: Brandon Low <lostlogic@gentoo.org> gentoolkit-0.1.11.ebuild files/scripts/qpkg :
+
   Made qpkg root:wheel 0750 users really shouldn't have more than emerge -s
   permissions with this kind of stuff.
 
-  qpkg changes: package	names print without stupid " *" at the end if -nc
-		switch is given for easy piping to other programs (ie
-		emerge)
+  qpkg changes: 
 
-		increased comment verbosity in preparation for more
-		changes next time...
+  package names print without stupid " *" at the end if -nc switch is
+  given for easy piping to other programs (ie emerge)
 
-		--dups orders packages by COUNTER so that the old
-			version is always above the new version, and
-			also keeps packages of same base name together,
-			and is now colorized (disable with -nc)
+  increased comment verbosity in preparation for more changes next
+  time...
 
-		-c no longer awks md5s because it takes too long (5
-			times as long as w/o awking) this will report
-			broken files on systems installed with whatever
-			it was that was touppering all all md5s.
+  --dups orders packages by COUNTER so that the old version is always
+  above the new version, and also keeps packages of same base name
+  together, and is now colorized (disable with -nc)
+
+  -c no longer awks md5s because it takes too long (5 times as long as
+  w/o awking) this will report broken files on systems installed with
+  whatever it was that was touppering all all md5s.
 
 *gentoolkit-0.1.10-r1 (04 Jun 2002)
 
   04 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.10-r1.ebuild files/digest-gentoolkit-0.1.10-r1:
 
-  etc-update now considers all dirs listed in /etc/make.globals' CONFIG_PROTECT.
+  etc-update now considers all dirs listed in /etc/make.globals'
+  CONFIG_PROTECT.
 
-  pkg-size now handles very large packages, and packages that have files with space in their names.
+  pkg-size now handles very large packages, and packages that have files
+  with space in their names.
 
   Removed gentoolkit-0.1.10.ebuild files/digest-gentoolkit-0.1.10
 
@@ -198,14 +198,15 @@
   22 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.6.ebuild files/scripts/etc-update* files/etc-update/*:
 
   etc-update: Added patches from both M.Kennedy and J.Kossem that allow
-  system-wide configuration of auxiliary commands through /etc/etc-update.conf
+  system-wide configuration of auxiliary commands through
+  /etc/etc-update.conf
 
 *gentoolkit-0.1.5-r2 (18 Mar 2002)
 
   18 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.5-r1.ebuild files/scripts/etc-update:
 
-  etc-update: Removed the default "-E" option to less, which was causing a lot
-  of murmur in the crowd.
+  etc-update: Removed the default "-E" option to less, which was causing
+  a lot of murmur in the crowd.
 
   Removed old revisions.
 
@@ -241,8 +242,8 @@
   11 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org> files/scripts/qpkg:
 
   Bugfixes in qpkg:
-    Fixed "-f" mode for directories.
-    Fixed package name parsing to comply with the latest portage SLOT changes
+  Fixed "-f" mode for directories.
+  Fixed package name parsing to comply with the latest portage SLOT changes
   
 *gentoolkit-0.1.1 (3 Feb 2002)
 
@@ -256,19 +257,16 @@
 
   Jochem Kossen has added a nice diff/sdiff mode to etc-update.  As many
   people do not prefer vim, etc-update will now default to using diff for
-  displaying changes and sdiff for merging changes!  This means, if you use
-  any editor other than vim, the script will now work for you out of the box.
-  But, vim users need not panic!  Vim diff functionality is still there in the
-  script.  Just read the top of the etc-update file and configure it
-  appropriately.  To sum up: vim users keep getting what they've been getting,
-  and everyone else gets cool diff/sdiff mode.
+  displaying changes and sdiff for merging changes! This means, if you
+  use any editor other than vim, the script will now work for you out of
+  the box. But, vim users need not panic! Vim diff functionality is
+  still there in the script.  Just read the top of the etc-update file
+  and configure it appropriately.  To sum up: vim users keep getting
+  what they've been getting, and everyone else gets cool diff/sdiff
+  mode.
 
 *gentoolkit-0.1.0 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.
