@@ -1,13 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ca0009717f7252f4f6ee5ca31a5a6b2e ChangeLog 1453
-MD5 41732ed2064cbdba115858bb17a2d333 gtkdiskfree-1.9.3.ebuild 716
+MD5 6b322304f6113741e8e381c9bc56ed59 ChangeLog 1607
+MD5 cbba76bf28e73b08398a81f3674b373b gtkdiskfree-1.9.3.ebuild 818
 MD5 46985ea76022b80753931414d58952cc files/digest-gtkdiskfree-1.9.3 69
+MD5 fa185ac6a7e624389b664674be9ca275 files/1.9.3-makefile-DESTDIR.patch 663
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBoU9vHTu7gpaalycRAjbeAKCipRw/RHTL5gLe6QYXOe2Q0hfoJQCgh8Pi
-9lJq032z8mZWHjQ/u7nwrOo=
-=ykL/
+iD8DBQFBq9Q5roRuSHgZdywRAoXtAKCP5ZzdRNrEerBrx8+Ncm8K6gnzsQCfXXrj
+W+QkcM/GJ8J1JkPLm6fOY38=
+=OFFF
 -----END PGP SIGNATURE-----

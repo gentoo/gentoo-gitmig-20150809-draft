@@ -1,0 +1,17 @@
+--- gtkdiskfree-1.9.3/po/Makefile.in.in.orig	2004-11-29 20:41:48.448183016 -0500
++++ gtkdiskfree-1.9.3/po/Makefile.in.in	2004-11-29 20:42:11.534673336 -0500
+@@ -113,5 +113,5 @@
+ 	if test -r "$(MKINSTALLDIRS)"; then \
+-	  $(MKINSTALLDIRS) $(datadir); \
++	  $(MKINSTALLDIRS) $(DESTDIR)$(datadir); \
+ 	else \
+-	  $(SHELL) $(top_srcdir)/mkinstalldirs $(datadir); \
++	  $(SHELL) $(top_srcdir)/mkinstalldirs $(DESTDIR)$(datadir); \
+ 	fi
+@@ -121,4 +121,4 @@
+ 	  case "$$cat" in \
+-	    *.gmo) destdir=$(gnulocaledir);; \
+-	    *)     destdir=$(localedir);; \
++	    *.gmo) destdir=$(DESTDIR)$(gnulocaledir);; \
++	    *)     destdir=$(DESTDIR)$(localedir);; \
+ 	  esac; \

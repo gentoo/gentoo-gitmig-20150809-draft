@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.9.3.ebuild,v 1.9 2004/11/22 02:30:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.9.3.ebuild,v 1.10 2004/11/30 02:00:18 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Graphical tool to show free disk space"
 HOMEPAGE="http://gtkdiskfree.tuxfamily.org/"
@@ -15,9 +17,15 @@ DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
 	nls? ( sys-devel/gettext )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-makefile-DESTDIR.patch
+}
+
 src_compile() {
 	econf $(use_enable nls) || die
-	emake all || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.10 2004/11/17 16:23:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.11 2004/11/30 02:00:18 vapier Exp $
+
+  29 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.9.3-makefile-DESTDIR.patch, gtkdiskfree-1.9.3.ebuild:
+  Fix makefile to use DESTDIR #72413.
 
   17 Nov 2004; Mike Frysinger <vapier@gentoo.org> gtkdiskfree-1.8.4.ebuild,
   -gtkdiskfree-1.9.3.ebuild:
