@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220.ebuild,v 1.3 2003/03/09 14:30:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220.ebuild,v 1.4 2003/03/11 16:10:42 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 DEPEND="=media-libs/freetype-1*
 	ungif? ( media-libs/libungif )
@@ -26,6 +26,7 @@ DEPEND="=media-libs/freetype-1*
 replace-flags k6-3 i586
 replace-flags k6-2 i586
 replace-flags k6 i586
+[ $ARCH = alpha ] && append-flags -fPIC
 
 src_compile() {
 	cp autogen.sh{,.old}
