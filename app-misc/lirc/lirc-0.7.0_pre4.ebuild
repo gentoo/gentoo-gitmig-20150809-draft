@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre4.ebuild,v 1.3 2004/05/24 12:28:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre4.ebuild,v 1.4 2004/06/07 07:05:45 dragonheart Exp $
 
 inherit eutils kernel-mod
 
@@ -8,9 +8,7 @@ DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
 	signals of many (but not all) commonly used remote controls."
 HOMEPAGE="http://www.lirc.org"
 
-[ "x${LIRC_OPTS}" = x ] && LIRC_OPTS="--with-driver=serial \
-	--with-port=0x3f8 --with-irq=4"
-
+# LIRC_OPTS = ???? v
 # This are the defaults. With this support for all supported remotes
 # will be build.
 # If you want other options then set the Environment variable to your needs.
@@ -43,7 +41,8 @@ HOMEPAGE="http://www.lirc.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64"
+IUSE=""
+KEYWORDS="x86 ~ppc ~alpha ~ia64 ~amd64"
 
 DEPEND="virtual/linux-sources"
 
@@ -76,6 +75,9 @@ src_compile() {
 
 	# Let portage tell us where to put our modules
 	check_KV
+
+	[ "x${LIRC_OPTS}" = x ] && LIRC_OPTS="--with-driver=serial \
+		--with-port=0x3f8 --with-irq=4"
 
 	./configure \
 		--host=${CHOST} \
