@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.5 2002/08/27 20:38:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.6 2002/09/16 01:13:40 murphy Exp $
 
 inherit libtool
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://avifile.sourceforge.net/"
 
 DEPEND=">=media-libs/divx4linux-20020418
 	media-libs/jpeg
-	media-libs/win32codecs
+	x86? ( media-libs/win32codecs )
 	qt? ( >=x11-libs/qt-3.0.3 )
 	nas? ( >=media-libs/nas-1.4.2 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/divx4linux-20020418
 
 SLOT="0.7"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 

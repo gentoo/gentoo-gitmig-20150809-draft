@@ -1,12 +1,14 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.21 2002/08/27 20:58:43 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.22 2002/09/16 01:13:40 murphy Exp $
 
 *avifile-0.7.15.20020816 (27 Aug 2002)
 
-  27 Aug 2002; Nick Hadaway <raker@gentoo.org>
-  avifile-0.7.15.20020816.ebuild, files/digest-avifile-0.7.15.20020816 :
-  Version bump.  Currently masked for freeze.
+  Sep 2002; Maarten Thibaut <murphy@gentoo.org> avifile-0.7.15.20020816.ebuild :
+  Added sparc/sparc64 keywords.
+
+  27 Aug 2002; Nick Hadaway <raker@gentoo.org> avifile-0.7.15.20020816.ebuild,
+  files/digest-avifile-0.7.15.20020816 : Version bump.  Currently masked for freeze.
 
 *avifile-0.7.14.20020802 (04 Aug 2002)
 
@@ -17,82 +19,65 @@
   14 Aug 2002; Martin Schlemmer <azarah@gentoo.org> avifile-0.7.14.20020802.ebuild :
   Elibtoolize this one.
 
-  04 Aug 2002; Nick Hadaway <raker@gentoo.org>
-  avifile-0.7.14.20020802.ebuild, files/digest-avifile-0.7.14.2020802 :
-  Version bump.  Many bug fixes.
+  04 Aug 2002; Nick Hadaway <raker@gentoo.org> avifile-0.7.14.20020802.ebuild,
+  files/digest-avifile-0.7.14.2020802 : Version bump.  Many bug fixes.
 
 *avifile-0.7.7.20020523 (25 Jun 2002)
 
-  25 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
-
-  New version closing bug #3855.
+  25 Jun 2002; Martin Schlemmer <azarah@gentoo.org> : New version closing bug #3855.
 
 *avifile-0.7.4-20020426-r2 (26 May 2002)
 
-  26 May 2002; Martin Schlemmer <azarah@gentoo.org> :
-
-  Remove the suffix added to all binaries.
+  26 May 2002; Martin Schlemmer <azarah@gentoo.org> : Remove the suffix added to
+  all binaries.
 
 *avifile-0.7.4-20020426 (25 May 2002)
 
   25 May 2002; Matthew Kennedy <mkennedy@gentoo.org> avifile-0.7.4-20020426-r1.ebuild
   files/digest-avifile-0.7.4-r1-20020426,
-  files/avifile-0.7.4.20020426-gcc3.1-gentoo.patch :
-
-  Fix avifile code to compile under gcc3.1. This will be an upstream
-  patch also. I'm masking this until gcc-.2.95.3 users verify that it
-  works for them too.
+  files/avifile-0.7.4.20020426-gcc3.1-gentoo.patch : Fix avifile code to compile
+  under gcc3.1. This will be an upstream patch also. I'm masking this until
+  gcc-2.95.3 users verify that it works for them too.
 
 *avifile-0.7.4-20020426 (20 Apr 2002)
 
   30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> avifile-0.7.4-20020426.ebuild
-  files/digest-avifile-0.7.4-20020426 :
-
-  Version bump to newest snapshot.  Upstream claims this is a bugfix release.
+  files/digest-avifile-0.7.4-20020426 : Version bump to newest snapshot.
+  Upstream claims this is a bugfix release.
 
 *avifile-0.7.3.20020419-r1 (28 Apr 2002)
 
-  28 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
-  avifile-0.7.3.20020419-r1.ebuild, ChangeLog,
-  files/digest-avifile-0.7.3.20020419-r1 :
+  28 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> avifile-0.7.3.20020419-r1.ebuild,
+  ChangeLog, files/digest-avifile-0.7.3.20020419-r1 : Should be --without-qt
+  instead of --disable-qt (only users without qt installed will see this produce
+  a fatal error).
 
-  Should be --without-qt instead of --disable-qt (only users without
-  qt installed will see this produce a fatal error).
-
-avifile-0.7.3.20020419 (24 Apr 2002)
+*avifile-0.7.3.20020419 (24 Apr 2002)
 
   24 Apr 2002; Seemant Kulleen <seemant@gentoo.org> avifile-0.7.3.20020419.ebuild
-  files/digest-avifile-0.7.3.20020419 :
+  files/digest-avifile-0.7.3.20020419 : Version bump to newest snapshot.
+  This should work with the latest divx4linux and now has ffmpeg compiled as default.
+  And they have actually named this thing consistent with the 0.6 series!
 
-  Version bump to newest snapshot.  This should work with the latest 
-  divx4linux and now has ffmpeg compiled as default.  And they have actually
-  named this thing consistent with the 0.6 series!
+*avifile-0.6.0.20011220-r2 (13 Apr 2002) 
 
-avifile-0.6.0.20011220-r2 (13 Apr 2002) 
+  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org> :  Trying to make avifile more
+  friendly towards kde3 users.  This closes bug #1713 -- so thanks to
+  edwardam@interlix.com (Edward Muller) for discovering this.  Also, many thanks
+  to andee in #gentoo for being the tester, and woodchip for his insight.
 
-  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
-
-  Trying to make avifile more friendly towards kde3 users.  This closes bug
-  #1713 -- so thanks to edwardam@interlix.com (Edward Muller) for discovering
-  this.  Also, many thanks to andee in #gentoo for being the tester, and 
-  woodchip for his insight.
-
-  13 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
-
-  After much thought, decided to remove the "avi" USE flag, as it enabling or
-  disabling use of the win32 codecs is not valid.  Also, avifile's main use *is*
-  to do avi.
+  13 Apr 2002; M.Schlemmer <azarah@gentoo.org> : After much thought, decided to
+  remove the "avi" USE flag, as it enabling or disabling use of the win32 codecs
+  is not valid.  Also, avifile's main use *is* to do avi.
 
 *avifile-0.7.20020412 (12 Apr 2002)
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> avifile-0.7.20020412.ebuild:
-
   New release, and they keep changing the naming scheme -- aaarrgh
 
 *avifile-0.6.0.20011220-r1 (28 Mar 2002)
 
   28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> avifile-0.6.0-20011220-r1.ebuild :
-
   Many changes in here, involving USE dependent compilation of support for:
   oggvorbis, avi (win32codecs), sdl, mmx/3dnow/sse (x86 optimisation), kde
   (for kde sample somethings)
@@ -102,7 +87,6 @@ avifile-0.6.0.20011220-r2 (13 Apr 2002)
 *avifile-0.53.5-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
