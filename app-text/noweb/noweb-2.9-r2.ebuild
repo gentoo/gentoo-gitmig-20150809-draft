@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r2.ebuild,v 1.11 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r2.ebuild,v 1.12 2003/10/03 17:28:16 usata Exp $
 
 S=${WORKDIR}/src
 #SRC_URI="ftp://ftp.dante.de/tex-archive/web/noweb/src.tar.gz"
@@ -12,7 +12,7 @@ LICENSE="freedist"
 DESCRIPTION="a literate programming tool, lighter than web"
 
 DEPEND="sys-devel/gcc
-	app-text/tetex
+	virtual/tetex
 	sys-apps/gawk"
 KEYWORDS="x86 ppc sparc alpha"
 
