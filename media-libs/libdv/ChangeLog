@@ -1,8 +1,11 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.6 2002/08/07 15:01:57 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.7 2002/08/12 14:30:00 azarah Exp $
 
 *libdv-0.98 (07 Aug 2002)
+
+  12 Aug 2002; Martin Schlemmer <azarah@gentoo.org> libdv-0.98.ebuild :
+  USE=xv fails in some cases.  Enable always.
 
   07 Aug 2002; Mark Guertin <gerk@gentoo.org> libdv-0.9.8.ebuild 
   files/digest-libdv-0.98 :
