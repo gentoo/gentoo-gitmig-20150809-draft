@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.2.ebuild,v 1.4 2004/06/24 22:15:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.2.ebuild,v 1.5 2004/07/02 04:17:27 eradicator Exp $
 
 DESCRIPTION="A documentation generator for Haskell"
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 DEPEND="!nhc98? ( virtual/ghc )
 	nhc98?  ( dev-lang/nhc98
 		dev-haskell/hmake )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 SRC_URI="http://www.fmi.uni-passau.de/~groessli/hdoc/${P}.tar.gz"
 

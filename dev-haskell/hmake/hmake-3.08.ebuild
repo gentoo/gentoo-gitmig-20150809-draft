@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.9 2004/06/24 22:15:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.10 2004/07/02 04:17:40 eradicator Exp $
 
 inherit base fixheadtails
 
@@ -19,7 +19,7 @@ DEPEND="nhc98? ( dev-lang/nhc98 )
 	!nhc98? ( virtual/ghc )
 	readline?     ( sys-libs/readline )"
 RDEPEND="readline?    ( sys-libs/readline )
-	virtual/glibc
+	virtual/libc
 	!nhc98?       ( dev-libs/gmp
 			sys-libs/readline )"
 
