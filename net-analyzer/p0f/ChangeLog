@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/p0f
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.9 2003/12/14 04:05:49 pappy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.10 2004/02/06 14:56:04 aliz Exp $
+
+*p0f-2.0.3 (06 Feb 2004)
+
+  06 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> p0f-2.0.3.ebuild,
+  files/p0f-2.0.3-libpcap-include.patch:
+  Version bump and fix for libpcap include files.
 
   14 Dec 2003; Alexander Gabert <pappy@gentoo.org> :
   added digest and tested
