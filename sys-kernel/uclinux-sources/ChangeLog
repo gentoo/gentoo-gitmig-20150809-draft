@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.16 2004/08/05 11:15:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.17 2004/08/08 20:27:34 plasmaroo Exp $
+
+*uclinux-sources-2.4.26_p0-r5 (08 Aug 2004)
+
+  08 Aug 2004; <plasmaroo@gentoo.org> -uclinux-sources-2.4.26_p0-r4.ebuild,
+  +uclinux-sources-2.4.26_p0-r5.ebuild,
+  +files/uclinux-sources-2.4.26_p0.CAN-2004-0685.patch:
+  Version bump for CAN-2004-0685, bug #59769.
 
 *uclinux-sources-2.6.7_p0-r4 (05 Aug 2004)
 
