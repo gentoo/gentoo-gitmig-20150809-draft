@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/adodb-py
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.5 2005/01/09 00:54:55 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.6 2005/02/11 20:40:37 kloeri Exp $
+
+*adodb-py-1.10 (11 Feb 2005)
+
+  11 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> +adodb-py-1.10.ebuild:
+  Version bump, bug 81399.
 
   08 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> adodb-py-1.0.1.ebuild:
   Removed postgresql flag. Bug# 74568
