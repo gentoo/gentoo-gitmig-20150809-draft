@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.13.ebuild,v 1.4 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.13-r1.ebuild,v 1.1 2003/12/08 11:50:27 seemant Exp $
 
 IUSE=""
 
