@@ -13,9 +13,9 @@ MD5 8b46231139151cf788c6f689c7fe8ba1 files/digest-mit-krb5-1.2.8 63
 MD5 61a61d22565605924a06789f9da352bf files/mit-krb5kadmind.initd 687
 MD5 c214030264300e2d84375d23d7c1f892 files/mit-krb5kdc.initd 656
 MD5 893d3ba77db4bf3823b930144e17f47f files/digest-mit-krb5-1.3_alpha1 68
-MD5 b2607d4d43313944684475e9c2fc7512 mit-krb5-1.2.6-r2.ebuild 1892
-MD5 dc9b178c023a3fa29c50b4ecacdd9699 mit-krb5-1.2.6-r3.ebuild 1975
+MD5 ea50e8d7ebacf68c5bae2749897cffe7 mit-krb5-1.2.6-r2.ebuild 1910
+MD5 a3b00f0918092613758f4f3ece2abc62 mit-krb5-1.2.6-r3.ebuild 1978
 MD5 782668f3345c008916ffe4ef5f3d5537 ChangeLog 3673
-MD5 16ed0de83bce1d29e4e290a40ed98460 mit-krb5-1.2.7.ebuild 2779
-MD5 a90e821e8ce794c3893c69113728ce67 mit-krb5-1.2.8.ebuild 2586
-MD5 7dafd6b6daebb10450312fb0ba2e189c mit-krb5-1.3_alpha1.ebuild 2749
+MD5 eb084ce7b2e07ca2dbeeefbc1fbca9a7 mit-krb5-1.2.7.ebuild 2780
+MD5 28462630760e443aa5217321d89049e5 mit-krb5-1.2.8.ebuild 2582
+MD5 fbf160b05c04c6d7ab935524762a648f mit-krb5-1.3_alpha1.ebuild 2746
