@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.5 2003/03/28 19:24:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.6 2003/03/31 22:46:34 lu_zero Exp $
 
+  01 Apr 2003; Luca Barbato <lu_zero@gentoo.org> : ucl-1.01-r1.ebuild:
+  Marked unstable for ppc.
+ 
 *ucl-1.01-r1 (28 Mar 2003)
 
   28 Mar 2003; Guy Martin <gmsoft@gentoo.org> : ucl-1.01-r1.ebuild, files/digest-ucl-1.01-r1 :
