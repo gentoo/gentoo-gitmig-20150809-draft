@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/ask
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ChangeLog,v 1.1 2004/08/07 16:44:41 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ChangeLog,v 1.2 2004/08/07 23:24:29 tomk Exp $
+
+  08 Aug 2004; <tomk@gentoo.org> ask-2.4.1.ebuild:
+  Removed redundant functions
 
 *ask-2.4.1 (07 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ask-2.4.1.ebuild,v 1.1 2004/08/07 16:44:41 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ask-2.4.1.ebuild,v 1.2 2004/08/07 23:24:29 tomk Exp $
 
 DESCRIPTION="Active Spam Killer: A program to filter spam"
 HOMEPAGE="http://www.paganini.net/ask/index.html"
@@ -19,29 +19,22 @@ src_install() {
 	into /
 	dobin ask.py asksetup.py askversion.py utils/asksenders.py
 
-	dodir /usr/lib/ask
 	insinto /usr/lib/ask
 	doins askconfig.py asklock.py asklog.py askmail.py askmain.py \
 		 askmessage.py askremote.py
 
-	dodir /usr/share/ask/samples
 	insinto /usr/share/ask/samples
 	doins samples/*
 
-	dodir /usr/share/ask/templates
 	insinto /usr/share/ask/templates
 	doins templates/*
 
-	dodir /usr/share/ask/utils
 	insinto /usr/share/ask/utils
 	doins utils/*
 
 	doman docs/*.1
 
-	dodoc COPYING ChangeLog TODO
-
-	cd docs
-	dodoc ask_doc.*
+	dodoc ChangeLog TODO docs/ask_doc*
 }
 
 pkg_postinst() {
