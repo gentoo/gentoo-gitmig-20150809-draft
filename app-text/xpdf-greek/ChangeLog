@@ -1,9 +1,0 @@
-# ChangeLog for app-text/xpdf-greek
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-greek/ChangeLog,v 1.5 2004/06/24 22:58:04 agriffis Exp $
-
-*xpdf-greek-1 (16 Aug 2002)
-
-  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org>  xpdf-greek-1.ebuild,
-  ChangeLog, digest-xpdf-greek-1:
-  Initial ebuild submitted by Sam Yates <sam@quux.dropbear.id.au>
