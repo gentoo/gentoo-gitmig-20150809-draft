@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.6.1.ebuild,v 1.1 2003/05/19 11:41:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.7.3.ebuild,v 1.1 2003/06/29 22:02:45 foser Exp $
 
-inherit gnome2
+inherit gnome2 debug
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
 HOMEPAGE="http://epiphany.mozdev.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 G2CONF="${G2CONF} --with-mozilla-snapshot=1.3"
@@ -40,3 +40,7 @@ pkg_setup () {
 	fi
 }
 
+pkg_postinst() {
+	einfo "Gconf keys for some settings have changed,"
+	einfo "you may have to reset some settings."
+}
