@@ -1,6 +1,11 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.22 2003/09/17 10:44:55 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.23 2003/10/13 06:25:13 obz Exp $
+
+*totem-0.99.6 (13 Oct 2003)
+
+  13 Oct 2003; Mike Gardiner <obz@gentoo.org> totem-0.99.6.ebuild:
+  New version
 
 *totem-0.99.5 (17 Sep 2003)
 
