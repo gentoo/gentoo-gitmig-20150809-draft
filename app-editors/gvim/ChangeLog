@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.63 2004/03/15 19:36:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.64 2004/03/29 15:38:10 pylon Exp $
+
+  29 Mar 2004; Lars Weiler <pylon@gentoo.org> gvim-6.2-r7.ebuild:
+  stable on ppc
 
   15 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> gvim-6.2-r7.ebuild:
   Added ~mips
