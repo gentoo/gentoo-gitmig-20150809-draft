@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.2 2004/02/17 22:51:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.3 2004/02/23 19:45:06 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
-IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6 debug static pam sdk"
+IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6 debug static pam sdk bindist"
 
 filter-flags "-funroll-loops"
 
@@ -110,13 +110,14 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/XFree86-locale.alias.bz2
 	mirror://gentoo/XFree86-locale.dir.bz2
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
-	truetype? ( ${MS_FONT_URLS} )"
+	truetype? ( !bindist? ( ${MS_FONT_URLS} ) )"
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
+	>=sys-apps/portage-2.0.50_pre9
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
@@ -132,7 +133,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	media-libs/libpng
 	app-arch/unzip
 	pam? ( >=sys-libs/pam-0.75 )
-	truetype? ( app-arch/cabextract )
+	truetype? ( !bindist? ( app-arch/cabextract ) )
 	!x11-libs/xft"
 #RDEPEND="$DEPEND"
 # unzip - needed for savage driver (version 1.1.27t)
@@ -307,7 +308,7 @@ src_unpack() {
 	fi
 
 	# Unpack the MS fonts
-	if use truetype
+	if use truetype && use !bindist
 	then
 		einfo "Unpacking MS Core Fonts..."
 		mkdir -p ${WORKDIR}/truetype; cd ${WORKDIR}/truetype
@@ -692,7 +693,7 @@ src_install() {
 	newins ${S}/programs/Xserver/hw/xfree86/XF86Config XF86Config.example
 
 	# Install MS fonts.
-	if use truetype
+	if use truetype && use !bindist
 	then
 		ebegin "Installing MS Core Fonts"
 		dodir /usr/X11R6/lib/X11/fonts/truetype

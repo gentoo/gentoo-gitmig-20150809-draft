@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.288 2004/02/18 19:25:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.289 2004/02/23 19:45:06 spyderous Exp $
+
+  23 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r5.ebuild:
+  Add bindist support for binary distribution in GRP sets.
 
   18 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.2.1-r3.ebuild,
   xfree-4.3.0-r4.ebuild:
