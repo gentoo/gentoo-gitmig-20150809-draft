@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.46 2004/07/01 20:01:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.47 2004/07/05 05:34:17 robbat2 Exp $
+
+  04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> net-snmp-5.1.1.ebuild:
+  mark stable for x86, as requested by solar.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> net-snmp-5.0.9-r1.ebuild,
   net-snmp-5.0.9-r3.ebuild, net-snmp-5.1.1.ebuild, net-snmp-5.1.ebuild:
