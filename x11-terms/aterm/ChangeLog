@@ -1,6 +1,19 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.57 2005/02/05 11:10:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.58 2005/02/06 00:52:55 spock Exp $
+
+*aterm-1.00_beta2 (06 Feb 2005)
+
+  06 Feb 2005; Michał Januszewski <spock@gentoo.org>
+  +aterm-1.00_beta2.ebuild:
+  Version bump (closes #77615). All arches other than x86 got dropped due to
+  changes in the code and the new dependency on AfterStep. Most of the patches
+  we have been using so far either got integrated upstream or dropped. Those
+  that got dropped will most likely not be put back - if anyone wants some new
+  features, contact the upstream devs, and don't open bugs about them on the
+  Gentoo Bugzilla. Please note the lack of a -ja patch. No such patch has been
+  released for this new version of aterm. For now we'll have to rely on aterm's
+  support for big5/kanji/thai.
 
   05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
   aterm-0.4.2-r11.ebuild:
