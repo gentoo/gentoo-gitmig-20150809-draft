@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.0.2-r3.ebuild,v 1.8 2004/10/29 12:33:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.0.2-r3.ebuild,v 1.9 2004/11/30 21:35:52 swegener Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
 	app-arch/zip
 	jikes? ( dev-java/jikes )
-	junit? ( >=junit-3.7 )"
+	junit? ( >=dev-java/junit-3.7 )"
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/oro-2.0.6
 	>=dev-java/commons-digester-1.0

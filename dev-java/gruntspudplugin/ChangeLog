@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gruntspudplugin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gruntspudplugin/ChangeLog,v 1.1 2004/09/17 09:36:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gruntspudplugin/ChangeLog,v 1.2 2004/11/30 21:39:59 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  gruntspudplugin-0.4.6_beta.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *gruntspudplugin-0.4.6_beta (17 Sep 2004)
 

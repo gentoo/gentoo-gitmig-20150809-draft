@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1.ebuild,v 1.6 2004/11/03 11:39:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1.ebuild,v 1.7 2004/11/30 21:44:11 swegener Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ DEPEND=">=virtual/jdk-1.3
 		app-arch/unzip
 		>=dev-java/ant-1.6
 		jikes? ( >=dev-java/jikes-1.17 )
-		>=servletapi-2.4"
+		>=dev-java/servletapi-2.4"
 RDEPEND=">=virtual/jdk-1.3"
 IUSE="jikes doc"
 S="${WORKDIR}/${P}-src/tagunit-core"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons-resolver
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.4 2004/10/20 08:01:49 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.5 2004/11/30 21:44:59 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  xml-commons-resolver-1.1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   xml-commons-resolver-1.1.ebuild:

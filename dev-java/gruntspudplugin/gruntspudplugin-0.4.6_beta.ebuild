@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gruntspudplugin/gruntspudplugin-0.4.6_beta.ebuild,v 1.1 2004/09/17 09:36:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gruntspudplugin/gruntspudplugin-0.4.6_beta.ebuild,v 1.2 2004/11/30 21:39:59 swegener Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,7 @@ DEPEND=">=app-editors/jedit-4.2
 	>=dev-java/jakartacommons-0.4
 	>=dev-java/jdiffplugin-1.3.2
 	>=dev-java/xml-0.13
-	>=dev-util/gruntspud
+	dev-util/gruntspud
 	dev-java/netcomponents-bin
 	dev-java/cvslib-bin
 	dev-java/plugspud
