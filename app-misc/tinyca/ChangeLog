@@ -1,11 +1,11 @@
 # ChangeLog for app-misc/tinyca
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.17 2005/02/02 10:07:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.18 2005/02/02 10:08:30 dragonheart Exp $
 
 *tinyca-0.6.7 (02 Feb 2005)
 
   02 Feb 2005; Daniel Black <dragonheart@gentoo.org> +tinyca-0.6.7.ebuild:
-  Version bump as per bug #70122 thanks to Andreas Hinterland
+  Version bump as per bug #80122 thanks to Andreas Hinterland
   <ich@meister-rohrfix.de>
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> tinyca-0.5.4-r1.ebuild:
