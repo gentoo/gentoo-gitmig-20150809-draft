@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.1.ebuild,v 1.3 2003/08/07 04:02:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.1.ebuild,v 1.4 2004/03/26 22:27:02 eradicator Exp $
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}-${PV}
@@ -13,13 +13,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="media-libs/libsndfile"
-RDEPEND="media-sound/xmms"
+IUSE=""
 
-src_compile() {
-	econf || die
-	emake || die
-}
+DEPEND="media-libs/libsndfile
+	media-sound/xmms"
 
 src_install() {
 	make DESTDIR=${D} libdir=/usr/lib/xmms/Input install || die
