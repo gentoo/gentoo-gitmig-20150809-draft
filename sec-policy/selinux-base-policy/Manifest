@@ -7,7 +7,7 @@ MD5 2e73809684fe415f46227077effb292a selinux-base-policy-20040225.ebuild 2217
 MD5 1ec05b5603cc44bc8b406af4f6efd260 selinux-base-policy-20040509.ebuild 2673
 MD5 3552d68f16615f11fa6fd0afbdc871be selinux-base-policy-20040604.ebuild 2673
 MD5 c9ac9b3040b3cd2ed94ca63608899cfe selinux-base-policy-20040629.ebuild 2673
-MD5 e072d1ac900d493b546adc9c2f755bc5 selinux-base-policy-20040702.ebuild 2676
+MD5 72d9d7c392025ba8073509efd41d1b10 selinux-base-policy-20040702.ebuild 2673
 MD5 7afea4eea1a3c5611ca773551fbd1bb5 files/digest-selinux-base-policy-20040225 80
 MD5 0671869ee0d92a38cfabe4491da88e1c files/digest-selinux-base-policy-20040509 80
 MD5 0c51e2c101c04d1a58f6da20add86a86 files/digest-selinux-base-policy-20040604 80
@@ -16,7 +16,7 @@ MD5 aa75977434391487a1fe3dfe2394157d files/digest-selinux-base-policy-20040702 8
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBMoAUGFJQsIJWJy4RAlNcAJwIz77gXcybssk/sJRh14EjgoXyqgCfcGeS
-cZub3xvCtbY38G8wNgJMgZo=
-=YjBM
+iD8DBQFBOx1uGFJQsIJWJy4RArL6AJ9X09xO7I3An5kUYUTxuvvhjnfiogCfRKt4
+DM66htLA1PaUIaYEtYIZ8W4=
+=iPUj
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040702.ebuild,v 1.1 2004/07/02 23:45:39 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040702.ebuild,v 1.2 2004/09/05 14:06:09 pebenito Exp $
 
 IUSE="build"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 DEPEND="build? ( sys-devel/make
 		 sys-devel/m4 )"
 RDEPEND="sys-devel/m4
