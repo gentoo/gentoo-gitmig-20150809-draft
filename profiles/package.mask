@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <phoenix@gentoo.org> (28 Aug 2002)
+# masked new ppp release for testing
+=net-dialup/ppp-2.4.1-r11
+
 # <seemant@gentoo.org> (27 Aug 2002)
 # masked because there is a FREEZE, and things should be tested!
 dev-util/rats
