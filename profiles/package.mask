@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> 26 May 2003
+# Masking bsddb3-4.1.3 as it depends on db-4
+=dev-python/bsddb3-4.1.3
+
 # <pauldv@gentoo.org> 24 May 2003
 # Masking these db versions to make sure that absolutely noone will install them
 # without knowing the repercussions. There is no good upgrade path yet and these
