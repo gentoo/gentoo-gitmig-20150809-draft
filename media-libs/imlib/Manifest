@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ddc6782b8a7ae69abe752368aacb11ec ChangeLog 3465
 MD5 7aaf257fcfc9454467c6d23901e040af imlib-1.9.14-r1.ebuild 1034
-MD5 ba300950de9c2073288c0eecc9b32214 imlib-1.9.14-r2.ebuild 1119
+MD5 e006d6fc680728aad0788d997005809f imlib-1.9.14-r2.ebuild 1113
 MD5 249b41b845e39ccae3a4022bead066e9 files/digest-imlib-1.9.14-r1 65
 MD5 249b41b845e39ccae3a4022bead066e9 files/digest-imlib-1.9.14-r2 65
 MD5 785e01e32ee3640d632ac61e28d14aa4 files/imlib-1.9.14-bound.patch 11764
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBPk/CHTu7gpaalycRAuarAJ9Daf7xZcimK1nFH3Gh3wh0v6jnGQCeJkcE
+Om+IcKm5/cM0VFK6VOYyfso=
+=oryS
+-----END PGP SIGNATURE-----
