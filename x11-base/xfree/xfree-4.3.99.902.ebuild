@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902.ebuild,v 1.2 2003/12/20 15:56:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902.ebuild,v 1.3 2003/12/21 08:30:40 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -873,6 +873,8 @@ pkg_postinst() {
 
 		# This one cause ttmkfdir to segfault :/
 		#rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large/gbk-0.enc.gz
+		rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/iso8859-6.8x.enc.gz
+		rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/iso8859-6.16.enc.gz
 
 		# ********************************************************************
 		#  A note about fonts and needed files:
