@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vim-nogui/vim-nogui-5.7-r3.ebuild,v 1.2 2001/04/24 01:27:25 aj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vim-nogui/vim-nogui-5.7-r4.ebuild,v 1.1 2001/05/13 11:11:57 achim Exp $
 
 A="vim-5.7-src.tar.gz vim-5.7-rt.tar.gz"
 S=${WORKDIR}/vim-5.7
@@ -24,7 +24,11 @@ src_compile() {
     try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
 	 --enable-gui=no --with-cscope --without-x $myconf
     # Parallel make does not work
-    try make
+    if [ "`use build`" ] ; then
+        try make LDFLAGS=\"--static\"
+    else
+	try make
+    fi
 }
 
 src_install() {
@@ -32,8 +36,12 @@ src_install() {
     try make prefix=${D}/usr MANDIR=${D}/usr/share/man STRIP=echo install
     dodoc README*
 
-    cd ${D}/usr/share/doc/${PF}
-    ln -s ../../vim/vim57/doc ${P}
+    if [ "`use build`" ] ; then
+	rm -r ${D}/usr/share/vim
+    else
+        cd ${D}/usr/share/doc/${PF}
+        ln -s ../../vim/vim57/doc ${P}
+    fi
   
     cd ${D}/usr/bin
     ln -s vim vi                         
