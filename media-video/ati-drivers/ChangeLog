@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.75 2005/02/17 12:20:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.76 2005/02/18 00:54:17 lu_zero Exp $
+
+  18 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
+  files/fglrx-2.6-pagetable.patch:
+  Another typo fixed, thanks to Mark S <mszilveszter@gmail.com> for reporting it
 
   17 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
   files/fglrx-2.6-pagetable.patch:

@@ -59,7 +59,7 @@
  
      pte_linear = VMALLOC_VMADDR(virtual_addr);  // convert to pte linear address (x86 => nop)
      pgd_p = pgd_offset(vma->vm_mm, pte_linear);
-+#if LINUX_VERSION_CORE > 0x02060a	/* KERNEL_VERSION(2,6,10) */
++#if LINUX_VERSION_CODE > 0x02060a	/* KERNEL_VERSION(2,6,10) */
 +    pud_p = pud_offset(pgd_p, pte_linear);
 +    pmd_p = pmd_offset(pud_p, pte_linear);
 +#else
