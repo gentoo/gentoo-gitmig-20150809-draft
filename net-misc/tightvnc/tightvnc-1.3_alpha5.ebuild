@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha5.ebuild,v 1.8 2004/09/26 21:15:25 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha5.ebuild,v 1.9 2004/10/03 21:50:16 swegener Exp $
 
 inherit eutils gcc
 
