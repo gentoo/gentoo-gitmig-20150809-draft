@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.230 2004/02/02 16:44:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.231 2004/02/03 23:49:09 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -8,7 +8,7 @@
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-crypt/gnupg:caps - Use Linux capabilities library to control privileges.
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
-app-editors/nano:justify - Toggle the justify option ... god i hate that thing :)
+app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
 app-editors/vim:minimal - Build vim with minimal features, resulting in a ~430K binary
@@ -229,14 +229,15 @@ net-www/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgd
 net-www/w3m:migemo - Enables migemo support
 net-www/w3m:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
 sys-apps/busybox:diet - Compile and link with dietlibc
-sys-apps/busybox:uclibc - Compile with uclibc :)
+sys-apps/busybox:savedconfig - Adds support to user defined configs
+sys-apps/busybox:uclibc - Compile with uclibc
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tcng:tcsim - enable traffic simulator
-sys-apps/tinylogin:uclibc - Compile with uclibc :)
+sys-apps/tinylogin:uclibc - Compile with uclibc
 sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-devel/uclibc-buildroot:fullrpc - Defines xdr functions and some lesser used rpc stuff. Required for NFS
