@@ -196,3 +196,7 @@ gnome-apps/gwcc
 gnome-apps/netleds_applet
 gnome-apps/gnapster
 
+
+# Not tested properly - Azarah
+=gnome-base/gdm-2.2.4.2
+
