@@ -1,0 +1,7 @@
+MD5 1b73edfbb3acdc214df196b96283cac6 cpufreqd-1.2.2.ebuild 767
+MD5 6c49d51a07631c499f8cee617b131b47 ChangeLog 2718
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 cc6e6f72ccd258c507269d0549adaee1 cpufreqd-1.1.2-r1.ebuild 1241
+MD5 d80d3c22801187272f72a7de7fbd1bb1 files/digest-cpufreqd-1.1.2-r1 66
+MD5 67d3999fd7d01ffce53d07c879735c6e files/digest-cpufreqd-1.2.2 66
+MD5 1ecbd62bec29d7ef35701b3c71ffdc94 files/1.1.2-prefer-sysfs.patch 921

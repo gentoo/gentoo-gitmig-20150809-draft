@@ -1,0 +1,82 @@
+# ChangeLog for sys-apps/cpufreqd
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.1 2005/03/14 22:48:38 ciaranm Exp $
+
+*cpufreqd-1.2.2 (14 Mar 2005)
+*cpufreqd-1.1.2-r1 (14 Mar 2005)
+
+  14 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/1.1.2-prefer-sysfs.patch, +metadata.xml, +cpufreqd-1.1.2-r1.ebuild,
+  +cpufreqd-1.2.2.ebuild:
+  Moved from sys-apps/cpufreqd to sys-power/cpufreqd.
+
+  02 Mar 2005; Henrik Brix Andersen <brix@gentoo.org> cpufreqd-1.2.2.ebuild:
+  Stable on x86.
+
+*cpufreqd-1.2.2 (29 Jan 2005)
+
+  29 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> +cpufreqd-1.2.2.ebuild:
+  Version bump, fixing bug #61368. This version allows using percentages under
+  kernel 2.6.x. Transfering ownership to the mobile herd.
+
+*cpufreqd-1.1.2-r1 (27 Jul 2004)
+
+  27 Jul 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.1.2-prefer-sysfs.patch, -cpufreqd-1.1.1.ebuild,
+  +cpufreqd-1.1.2-r1.ebuild, -cpufreqd-1.1.2.ebuild, -cpufreqd-1.1.ebuild:
+  Verison bump to fix init.d script bug #46959 et al, add patch to use sysfs
+  over procfs #43567 by Dennis Nienhüser, and add amd64 #58127 by James Couzens.
+
+  23 Jul 2004; Alexander Gabert <pappy@gentoo.org> cpufreqd-1.1.1.ebuild,
+  cpufreqd-1.1.2.ebuild, cpufreqd-1.1.ebuild:
+  changed logic for filtering/suppressing PIE building, thanks to solar
+
+  22 Jul 2004; Alexander Gabert <pappy@gentoo.org> cpufreqd-1.1.1.ebuild,
+  cpufreqd-1.1.2.ebuild, cpufreqd-1.1.ebuild:
+  library load errors and segfaults when built as automatic PIE, disabling PIE
+  support for all packages
+
+*cpufreqd-1.1.2 (20 Jul 2004)
+
+  20 Jul 2004; <solar@gentoo.org> cpufreqd-1.1.2.ebuild:
+  version bump and added logic to disable the building of PIE by default for
+  this package. Some code in it seems to use abolute memory locations
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> cpufreqd-1.1.1.ebuild,
+  cpufreqd-1.1.ebuild:
+  sync IUSE (missing), add sed-4 dep
+
+*cpufreqd-1.1.1 (08 Feb 2004)
+
+  08 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #40823 by plasmagunman.
+
+*cpufreqd-1.1 (26 Jan 2004)
+
+  26 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #39483 by heiko hübscher.
+
+*cpufreqd-1.1_rc1-r1 (21 Nov 2003)
+
+  21 Nov 2003; Michael Imhof <tantive@gentoo.org> cpufreqd-1.1_rc1-r1.ebuild:
+  Had to correct the included init-script. Closes #33968.
+
+*cpufreqd-1.1_rc1 (19 Nov 2003)
+
+  19 Nov 2003; Michael Imhof <tantive@gentoo.org> cpufreqd-1.1_rc1.ebuild:
+  Version bumped. Closes #33793.
+
+*cpufreqd-1.0.1-r1 (07 Oct 2003)
+
+  02 Aug 2003; Michael Imhof <tantive@gentoo.org> cpufreqd-1.0.1-r1.ebuild:
+  Version bumped. Should close #25665.
+
+*cpufreqd-1.0.1 (02 Aug 2003)
+
+  02 Aug 2003; Michael Imhof <tantive@gentoo.org> cpufreqd-1.0.1.ebuild:
+  Version bumped. Should close #25665.
+
+*cpufreqd-1.0 (23 Jul 2003)
+
+  23 Jul 2003; Michael Imhof <tantive@gentoo.org> cpufreqd-1.0.ebuild :
+  Initial release. Taken from cpufreqd.sf.net.
