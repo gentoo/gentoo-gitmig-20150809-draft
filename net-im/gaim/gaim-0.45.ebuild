@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@bigfoot.com>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.45.ebuild,v 1.1 2001/10/06 17:48:08 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.45.ebuild,v 1.2 2001/10/06 17:52:28 lordjoe Exp $
 
-A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk AOL Instant Messenger client"
-SRC_URI="http://prdownloads.sourceforge.net/gaim/${A}"
+SRC_URI="http://prdownloads.sourceforge.net/gaim/${P}.tar.bz2"
 HOMEPAGE="http://gaim.sourceforge.net"
 
 DEPEND=">=x11-libs/gtk+-1.2.3
