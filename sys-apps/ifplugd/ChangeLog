@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.17 2005/03/22 13:05:53 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.18 2005/03/31 14:26:13 ka0ttic Exp $
+
+*ifplugd-0.27 (31 Mar 2005)
+
+  31 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +ifplugd-0.27.ebuild:
+  Version bump.
 
 *ifplugd-0.26-r1 (22 Mar 2005)
 

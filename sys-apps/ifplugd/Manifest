@@ -3,8 +3,9 @@ Hash: SHA1
 
 MD5 06eb9f949f16d25868b04222405798df ifplugd-0.25.ebuild 1679
 MD5 9835f287dd724e9e86f4890ad42f609b ifplugd-0.13-r1.ebuild 962
+MD5 544969397d70d8edf1797aba41e1ea5b ifplugd-0.27.ebuild 1453
 MD5 0ef391509e174e15fba4d7cde7e47d21 ifplugd-0.26-r1.ebuild 1449
-MD5 fc1057f5b7581a920eab125de860561e ChangeLog 3369
+MD5 c4e3bacb4f18aa6a5d47b30761433cd5 ChangeLog 3486
 MD5 f452b142802fc6ec5d75004af15d01e6 metadata.xml 258
 MD5 0f11772693878629fb851b68920004c5 files/gentoo-ifplugd.action-v2 703
 MD5 35a51405ec02cf2cf0116b7b75d98294 files/ifplugd-0.26-gentoo.diff 1547
@@ -13,12 +14,13 @@ MD5 3043ebbf928500cc8373f329d48eba7f files/gentoo-ifplugd-init-v3 2661
 MD5 046da68d6aa7665b0d3a9fd9e5a67b6a files/gentoo-ifplugd-conf-v3 2248
 MD5 69b2ed677c0524a1c6dd321e8ce5a6f0 files/ifplugd 892
 MD5 fb5b08b163ee5cef2761fa8c851c33c2 files/digest-ifplugd-0.25 64
+MD5 6ffdba40cd69c194ad974af95b512898 files/digest-ifplugd-0.27 64
 MD5 1b861d571aed96fc06f363f318fa7f98 files/digest-ifplugd-0.13-r1 63
 MD5 6f22a4f464e4c07ea9220fb81ba6848a files/digest-ifplugd-0.26-r1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCQBhTEZCkKN40op4RAsa2AJ9fnYZ191zD965r6MFH5yk77h0grwCfRKjI
-dXvrmRUa4hrIeCbmNSc4Owc=
-=y6xN
+iD8DBQFCTAiXEZCkKN40op4RAsdHAJ4uhnLKoXHDlqXbolg7CBjCydDUCQCfVPQp
+zVe3BaIWkfRYGsl/YL37gm4=
+=3uRG
 -----END PGP SIGNATURE-----
