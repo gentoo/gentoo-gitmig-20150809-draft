@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 81d647358f7689e6afb6381bf6c1dbc2 mirrorselect-0.86.ebuild 644
 MD5 ca90da2b74c74f83af9ce32dcd5d693b ChangeLog 7036
 MD5 f8fe019f1819a4ebfdfb7aca6da2ba5b metadata.xml 444
-MD5 79bc9d383ceaef34126da2537097b6b3 mirrorselect-0.84.ebuild 643
-MD5 46307fb5f211b4327c8606e98de6c117 mirrorselect-0.86.ebuild 654
-MD5 acead8bf0e384a3fbdffebcf6e61eb69 files/digest-mirrorselect-0.84 65
 MD5 868c9a3c457200af2942e560b77ba66b files/digest-mirrorselect-0.86 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.11 (GNU/Linux)
 
-iD8DBQFBcw4II1lqEGTUzyQRAtN8AJ9eep7JoLQf7KydO2cosAx/t1UgGwCdErNS
-PaLRV+gncsWfrWpbGs8BXQY=
-=pdDp
+iD8DBQFBjhB7EmYQUy2G5vQRAr92AJ4/hDImPZnEcBB1tcIhE1wK0HGGJQCeMZLZ
+8zoIZy17xBw5Bz64iFyVS7c=
+=Idll
 -----END PGP SIGNATURE-----
