@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre1,v 1.1 2005/01/25 01:13:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre1,v 1.2 2005/01/25 01:43:47 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -211,7 +211,7 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 
 				# Fix libtool archives (#48297)
 				if [ "${file%.la}" != "${file}" ]; then
-					sed "s:/usr/[^/]*/opengl/[^/]*/lib/:/usr/${LIBDIR}/:g" ${file} > $(basename ${file})
+					sed "s:/usr/[^/]*/opengl/[^/]*/lib:/usr/${LIBDIR}:g" ${file} > $(basename ${file})
 				else
 					ln -s ${file}
 				fi
@@ -228,7 +228,7 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 
 					# Fix libtool archives (#48297)
 					if [ "${file%.la}" != "${file}" ]; then
-						sed "s:/usr/[^/]*/opengl/[^/]*/lib/:/usr/${LIBDIR}/:g" ${file} > $(basename ${file})
+						sed "s:/usr/[^/]*/opengl/[^/]*/lib:/usr/${LIBDIR}:g" ${file} > $(basename ${file})
 					else
 						ln -s ${file}
 					fi
@@ -245,7 +245,7 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 
 					# Fix libtool archives (#48297)
 					if [ "${file%.la}" != "${file}" ]; then
-						sed "s:/usr/[^/]*/opengl/[^/]*/lib/:/usr/${LIBDIR}/:g" ${file} > $(basename ${file})
+						sed "s:/usr/[^/]*/opengl/[^/]*/lib:/usr/${LIBDIR}:g" ${file} > $(basename ${file})
 					else
 						ln -s ${file}
 					fi
