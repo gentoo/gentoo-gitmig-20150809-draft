@@ -318,7 +318,8 @@ sys-apps/sysvinit
 # works installs work fine.  So the 641b one will remain masked alone.
 =app-office/openoffice-641b
 # mask 641d to enable 1.0.0
-=app-office/openoffice-bin-641d*
+>app-office/openoffice-bin-2.0.0
+>app-office/openoffice-2.0.0
 
 #apparently has an fs unmount corruption bug
 =sys-kernel/linux-sources-2.4.15
