@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.19 2004/09/16 13:48:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.20 2004/09/18 10:31:26 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -21,9 +21,10 @@ src_compile() {
 	# Needed for mips and probably others
 	gnuconfig_update
 
-	use macos && EXTRA_ECONF="--program-prefix=g"
-	use ppc-macos && EXTRA_ECONF="--program-prefix=g"
-	econf `use_enable nls` || die "Configure failed"
+	if use macos || use ppc-macos ; then
+		EXTRA_ECONF="--program-prefix=g"
+	fi
+	econf $(use_enable nls) || die "Configure failed"
 	if use static ; then
 		emake LDFLAGS=-static || die "Static build failed"
 	else
@@ -32,19 +33,29 @@ src_compile() {
 }
 
 src_install() {
+	local x
+
 	into /
 	dobin sed/sed
 	if ! use build
 	then
 		einstall || die "Install failed"
-		dodoc COPYING NEWS README* THANKS AUTHORS BUGS ChangeLog
+		dodoc NEWS README* THANKS AUTHORS BUGS ChangeLog
 		docinto examples
-		dodoc ${FILESDIR}/dos2unix ${FILESDIR}/unix2dos
+		dodoc "${FILESDIR}/dos2unix" "${FILESDIR}/unix2dos"
 	else
 		dodir /usr/bin
 	fi
 
-	rm -f ${D}/usr/bin/sed
-	( use macos || use ppc-macos ) && cd ${D} && for x in `find . -name 'sed*' -print`; do mv "$x" "${x//sed/gsed}"; done && cd ${WORKDIR}/${P}
-	( use macos || use ppc-macos ) && dosym ../../bin/gsed /usr/bin/gsed || dosym ../../bin/sed /usr/bin/sed
+	rm -f "${D}/usr/bin/sed"
+	if use macos || use ppc-macos ; then
+		cd "${D}"
+		for x in $(find . -name 'sed*' -print);
+		do
+			mv "$x" "${x//sed/gsed}"
+		done
+		dosym ../../bin/gsed /usr/bin/gsed
+	else
+		dosym ../../bin/sed /usr/bin/sed
+	fi
 }
