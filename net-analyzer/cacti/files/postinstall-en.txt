@@ -22,36 +22,6 @@ New Install
    Make sure to fill in all of the path variables carefully and
     correctly on the following screen.
 
-
-Upgrading
-
-Before cacti works you must upgrade the cacti database:
-1. Backup the old cacti database:
-   shell> mysqlhotcopy --suffix=_old cacti
-2. Drop the old cacti database:
-   shell> mysqladmin -p drop cacti
-3. Create the new cacti database
-   shell> mysqladmin --user=root create cacti
-4. Import the default cacti database:
-   shell> mysql cacti < ${MY_INSTALLDIR}/cacti.sql
-5. Edit ${MY_INSTALLDIR}/include/config.php, and confirm that the MySQL user,
-   password and database is correct for your cacti configuration.
-
-   Example:
-	\$database_default = "cacti";
-	\$database_hostname = "localhost";
-	\$database_username = "cactiuser";
-	\$database_password = "cacti";
-
-6. Point your web browser to:  http://your-server/cacti/
-   Select "Upgrade".
-   Make sure to fill in all of the path variables carefully and
-   correctly on the following screen.
-7. Test your upgraded installation. When all is fine you can
-   drop the cacti_old database like so:
-   shell> mysqladmin -p drop cacti_old
-
-
 Cronjob
 
 Either new or upgrading, make sure you have a cron job - Add this line to 

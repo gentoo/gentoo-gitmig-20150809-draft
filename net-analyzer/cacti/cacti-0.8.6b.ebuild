@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6b.ebuild,v 1.6 2005/02/21 03:15:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6b.ebuild,v 1.7 2005/03/09 12:23:35 ka0ttic Exp $
 
 inherit eutils webapp
 
@@ -24,27 +24,12 @@ RDEPEND="net-www/apache
 	dev-php/php
 	dev-php/mod_php"
 
-check_useflag() {
-	local my_pkg=$(best_version ${1})
-	local my_flag=${2}
-
-	if [[ $(grep -wo ${my_flag} /var/db/pkg/${my_pkg}/USE) ]]
-	then
-		return 0
-	fi
-
-	eerror "${my_pkg} was compiled without ${my_flag}. Please re-emerge it with USE=${my_flag}"
-	die "check_useflag failed"
-
-}
-
 pkg_setup() {
 	webapp_pkg_setup
-
-	# Check if php, mod_php was emerged with mysql useflag
-
-	check_useflag dev-php/php mysql
-	check_useflag dev-php/mod_php mysql
+	built_with_use dev-php/php mysql || \
+		die "dev-php/php must be compiled with USE=mysql"
+	built_with_use dev-php/mod_php mysql || \
+		die "dev-php/mod_php must be compiled with USE=mysql"
 }
 
 src_compile() {
@@ -64,7 +49,7 @@ src_install() {
 
 	edos2unix `find -type f -name '*.php'`
 
-	dodir ${D}${MY_HTDOCSDIR}
+	dodir ${MY_HTDOCSDIR}
 	cp -r . ${D}${MY_HTDOCSDIR}
 
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt

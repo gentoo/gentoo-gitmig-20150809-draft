@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.39 2005/03/05 00:13:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.40 2005/03/09 12:23:35 ka0ttic Exp $
+
+  09 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> files/postinstall-en.txt,
+  cacti-0.8.6b.ebuild, cacti-0.8.6c.ebuild:
+  Update postinst-en.txt for bug 83673; updated both ebuilds to use
+  built_with_use instead of the homegrown check_with_use() function. Also
+  fixed the dodir ${D}... tidbit which caused obvious unwanted side effects.
 
   04 Mar 2005; Jason Wever <weeve@gentoo.org> cacti-0.8.6c.ebuild:
   Stable on sparc.
