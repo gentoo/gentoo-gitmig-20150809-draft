@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.5 2004/04/15 10:23:01 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.6 2004/04/19 06:43:50 mholzer Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 	myconf="${myconf} `use_enable x86 cmov-extensions`"
 
 	# Fix for Via C3-1, see #30345
-	grep -q cmov /proc/cpuinfo || myconf="${myconf} --disable-cmov"
+	grep -q cmov /proc/cpuinfo || myconf="${myconf} --enable-cmov-extension=no"
 
 	if [ "`use dv`" ] ; then
 		myconf="${myconf} --with-dv=/usr"
