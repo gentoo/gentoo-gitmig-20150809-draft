@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d728c2b3abd780b9925cb9303161ade4 ivcall-0.3.ebuild 737
+MD5 c1142dc0a0ffc5e8cbaac0db478de330 metadata.xml 252
+MD5 287ceadaab4668e9d73953a71215c6b2 ChangeLog 396
+MD5 f75547c2596e1e493f26174a0940c024 files/digest-ivcall-0.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpCwZjtv59x0+BrURAsQDAJ91a/uu5K35Pcz/scLE7hNGPqExaACgrBSJ
+tKHrcKecNECdMNl7P1BXVl0=
+=PTJA
+-----END PGP SIGNATURE-----

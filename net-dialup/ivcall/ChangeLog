@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/ivcall
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivcall/ChangeLog,v 1.1 2004/11/24 06:36:59 mrness Exp $
+
+*ivcall-0.3 (24 Nov 2004)
+
+  24 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +ivcall-0.3.ebuild:
+  Initial import from #71845, thanks to Stefan Briesenick <sbriesen@gmx.de>.
+
