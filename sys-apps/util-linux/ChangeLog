@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.6 2002/04/28 14:40:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.7 2002/07/06 23:08:03 azarah Exp $
+
+*util-linux-2.11r (7 Jul 2002)
+
+  7 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Version update.
 
 *util-linux-2.11o-r3 (28 Apr 2002)
 
