@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.7.ebuild,v 1.2 2004/09/10 16:47:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.7-r1.ebuild,v 1.1 2004/09/10 16:47:17 usata Exp $
 
 DESCRIPTION="Qt immodules input method framework plugin for SCIM"
 HOMEPAGE="http://scim.freedesktop.org/"
@@ -11,18 +11,22 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="nls"
 
-DEPEND=">=app-i18n/scim-0.99.9
-	|| ( =x11-libs/qt-3.3.3 =x11-libs/qt-3.3.2 )
+RDEPEND=">=app-i18n/scim-0.99.9
+	>=x11-libs/qt-3.3.3-r1
 	nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 pkg_setup() {
 	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
-		die "You need to rebuild qt-3.3.3 or qt-3.3.2 with immqt or immqt-bc USE flag enabled."
+		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt or immqt-bc USE flag enabled."
 	fi
 }
 
 src_compile() {
 	addpredict /usr/qt/3/etc/settings
+
+	sed -i -e "s/QCString/QString/g" src/qsciminputcontext.* || die
 
 	econf `use_enable nls` || die
 	emake -j1 || die "make failed."
