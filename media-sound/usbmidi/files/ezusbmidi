@@ -1,0 +1,41 @@
+#!/bin/sh
+FIRMWARE=
+FLAGS=
+LOADER=/sbin/fxload
+# pre-renumeration device IDs
+case $PRODUCT in
+# Midisport 1x1
+763/1010/*)
+    FIRMWARE=/usr/share/usb/ezusbmidi/ezusbmidi1x1.ihx
+    ;;
+# Midisport 2x2
+763/1001/*)
+    FIRMWARE=/usr/share/usb/ezusbmidi/ezusbmidi2x2.ihx
+    ;;
+esac
+# quit unless we were called to download some firmware
+if [ "$FIRMWARE" = "" ]; then
+    if [ -x /usr/bin/logger ]; then
+        /usr/bin/logger -t $0 "there is not a firmware for $PRODUCT ??"
+    fi
+    exit 1
+fi
+# missing firmware?
+if [ ! -r $FIRMWARE ]; then
+    if [ -x /usr/bin/logger ]; then
+        /usr/bin/logger -t $0 "missing $FIRMWARE for $PRODUCT ??"
+    fi
+    exit 1
+fi
+# missing loader?
+if [ ! -x $LOADER ]; then
+    if [ -x /usr/bin/logger ]; then
+        /usr/bin/logger -t $0 "missing $LOADER ??"
+    fi
+    exit 1
+fi
+if [ -x /usr/bin/logger ]; then
+    /usr/bin/logger -t $0 "load $FIRMWARE for $PRODUCT to $DEVICE"
+fi
+$LOADER $FLAGS -I $FIRMWARE
+
