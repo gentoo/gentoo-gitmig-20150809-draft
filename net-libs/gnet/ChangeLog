@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.31 2004/07/09 20:53:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.32 2004/11/15 03:18:19 kito Exp $
+
+  14 Nov 2004; Kito <kito@gentoo.org> gnet-2.0.5.ebuild:
+  added ~ppc-macos
 
   09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gnet-2.0.5.ebuild:
   Stable on alpha.
