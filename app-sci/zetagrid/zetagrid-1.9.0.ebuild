@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.8.6.ebuild,v 1.2 2003/12/08 12:11:17 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.9.0.ebuild,v 1.1 2004/02/15 01:58:02 tantive Exp $
 
 S=${WORKDIR}/zetagrid-${PV}
 DESCRIPTION="An open source and platform independent grid system"
