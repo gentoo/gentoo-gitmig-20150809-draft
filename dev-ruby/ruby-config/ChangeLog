@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.14 2004/08/19 15:31:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.15 2004/08/20 01:33:09 kloeri Exp $
+
+  20 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> ruby-config-0.3.ebuild:
+  Stable on alpha, bug 60525.
 
   20 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-config-0.3.ebuild:
   Stable on x86.
