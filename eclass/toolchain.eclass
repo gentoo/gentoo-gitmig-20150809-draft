@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.43 2004/11/07 21:20:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.44 2004/11/08 00:23:11 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -17,7 +17,7 @@ if [ "${ETYPE}" == "gcc-library" ] ; then
 	IUSE="nls build uclibc"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="static nls bootstrap build multilib gcj gtk f77 nocxx objc hardened uclibc n32 n64"
+	IUSE="static nls bootstrap build multilib gcj gtk fortran nocxx objc hardened uclibc n32 n64"
 	if [ -n "${HTB_VER}" ] ; then
 		IUSE="${IUSE} boundschecking"
 	fi
@@ -841,9 +841,22 @@ gcc-compiler-configure() {
 	if ! use build ; then
 		GCC_LANG="c"
 		use !nocxx && GCC_LANG="${GCC_LANG},c++"
-		use f77 && gcc-lang-supported f77 && GCC_LANG="${GCC_LANG},f77"
-		#use f95 && gcc-lang-supported f95 && GCC_LANG="${GCC_LANG},f95"
-		#use treelang && gcc-lang-supported treelang && GCC_LANG="${GCC_LANG},treelang"
+
+		# fortran support just got sillier! the lang value can be f77 for
+		# fortran77, f95 for fortran95, or just plain old fortran for the
+		# currently supported standard depending on gcc version.
+		if use fortran ; then
+			if gcc-lang-supported f95 ; then
+				GCC_LANG="${GCC_LANG},f95"
+			elif gcc-lang-supported f77 ; then
+				GCC_LANG="${GCC_LANG},f77"
+			elif gcc-lang-supported fortran ; then
+				GCC_LANG="${GCC_LANG},fortran"
+			else
+				die "GCC doesnt support fortran"
+			fi
+		fi
+
 		use objc && gcc-lang-supported objc && GCC_LANG="${GCC_LANG},objc"
 		use gcj && gcc-lang-supported java && GCC_LANG="${GCC_LANG},java"
 		# We do NOT want 'ADA support' in here!
