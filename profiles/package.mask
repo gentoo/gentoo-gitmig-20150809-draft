@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3115 2004/08/28 07:07:15 hattya Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3116 2004/08/28 09:06:00 hattya Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -482,7 +482,6 @@ net-misc/zebra
 # The sylpheed-0.9.8-r2 is probably the ugliest ebuild I've ever made.
 # But it works. sorta. :)
 =mail-client/sylpheed-claws-0.9.5-r1
-=mail-client/sylpheed-0.9.12-r1
 =mail-client/sylpheed-0.9.12-r2
 =mail-client/sylpheed-0.9.12-r4
 
