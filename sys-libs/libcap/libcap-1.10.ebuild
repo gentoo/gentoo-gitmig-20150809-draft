@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.5 2003/09/08 02:38:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.6 2003/09/27 21:29:41 pappy Exp $
 
 inherit base
 
@@ -36,6 +36,10 @@ src_compile() {
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages"
 		CFLAGS="${CFLAGS} -I/usr/include/python${PYTHONVER}"
 	fi
+
+	has_version 'sys-devel/hardened-gcc' && \
+	append-flags "-yet_exec -fstack-protector -Wl,$(gcc-config -L)/libgcc.a -Wl,/lib/libc.so.6"
+
 	emake COPTFLAG="${CFLAGS}" DEBUG="" ${myflags} || die
 }
 
