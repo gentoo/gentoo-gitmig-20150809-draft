@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6702d75f6585f2b3c23dfd59fd0d5cb6 ChangeLog 917
+MD5 84ffc22710760bc1d07140700b1b5870 coccinella-0.94.2.ebuild 917
 MD5 cd817ed5320c89cc45614f1ab0162450 coccinella-0.94.3.ebuild 917
 MD5 2d22a0a307be73ac052931f2fcd45312 coccinella-0.94.7.ebuild 1000
-MD5 84ffc22710760bc1d07140700b1b5870 coccinella-0.94.2.ebuild 917
-MD5 3bc026477ace8b3a01be47a9a38cd245 ChangeLog 971
 MD5 fd0197d2f2a85b87344579ce2845e9e4 coccinella-0.94.ebuild 796
+MD5 dbe55201273a216b7285ef20de102a96 files/97coccinella 46
+MD5 381b506a14f4c5bc63ed27526399bff3 files/digest-coccinella-0.94 68
 MD5 dd71087457abee2623b72bcb26b67020 files/digest-coccinella-0.94.2 70
 MD5 7901d625d2a3ae5ed6d3c42195de4fc4 files/digest-coccinella-0.94.3 70
 MD5 eef4be50a2378c6097ff83d1b613a107 files/digest-coccinella-0.94.7 79
-MD5 dbe55201273a216b7285ef20de102a96 files/97coccinella 46
-MD5 381b506a14f4c5bc63ed27526399bff3 files/digest-coccinella-0.94 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXssRI1lqEGTUzyQRAgwjAJ4wXnpTSyhZGM8fy+IAmhVmtOzdzACgg/9P
+jmT8VGBJ6T57cstjqUdv0x0=
+=a/EF
+-----END PGP SIGNATURE-----
