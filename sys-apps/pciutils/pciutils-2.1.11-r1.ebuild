@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r1.ebuild,v 1.7 2004/04/01 21:26:37 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r1.ebuild,v 1.8 2004/04/06 03:15:15 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Various utilities dealing with the PCI bus"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html"
@@ -15,8 +15,6 @@ KEYWORDS="~x86 ~ppc sparc ~alpha ~hppa ~ia64 ~ppc64 ~amd64 ppc64 ~mips"
 DEPEND="virtual/glibc
 	net-misc/wget"
 
-[ "${ARCH}" = "amd64" ] && append-flags -fPIC
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -24,6 +22,7 @@ src_unpack() {
 	epatch ${FILESDIR}/pcimodules-${P}.diff
 	epatch ${FILESDIR}/${PV}-sysfs.patch #38645
 
+	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 	sed -i "s:-O2:${CFLAGS}:" Makefile
 
 	./update-pciids.sh
@@ -45,11 +44,11 @@ src_compile() {
 
 src_install() {
 	into /
-	dosbin setpci lspci pcimodules update-pciids
+	dosbin setpci lspci pcimodules update-pciids || die
 	doman *.8
 
 	insinto /usr/share/misc
-	doins pci.ids
+	doins pci.ids || die
 
 	into /usr
 	dolib lib/libpci.a

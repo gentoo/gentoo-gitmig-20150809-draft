@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11.ebuild,v 1.12 2004/02/23 00:48:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11.ebuild,v 1.13 2004/04/06 03:15:15 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Various utilities dealing with the PCI bus"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html"
 SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
@@ -16,14 +15,13 @@ KEYWORDS="x86 amd64 ppc sparc alpha hppa ia64 ~ppc64"
 DEPEND="virtual/glibc
 	net-misc/wget"
 
-[ "${ARCH}" = "amd64" ] && append-flags -fPIC
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
 	epatch ${FILESDIR}/pcimodules-${P}.diff
 
+	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 	sed -i "s:-O2:${CFLAGS}:" Makefile
 
 	./update-pciids.sh
