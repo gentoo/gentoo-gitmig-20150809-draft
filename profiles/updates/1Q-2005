@@ -188,3 +188,4 @@ move sys-apps/nbd sys-block/nbd
 move sys-apps/gpart sys-block/gpart
 move sys-apps/partimage sys-block/partimage
 move sys-apps/di sys-block/di
+move sys-apps/noflushd sys-block/noflushd
