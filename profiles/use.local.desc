@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.703 2004/10/31 17:15:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.704 2004/11/01 00:12:25 g2boojum Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -220,6 +220,7 @@ dev-python/adodb-py:postgresql - Support psycopg (python postgresql bindings)
 dev-python/anygui:wxwin - enable wxwin support
 dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
 dev-python/epydoc:pdf - enable support for exporting to pdf
+dev-python/docutils:glep - Install support for GLEPs
 dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
