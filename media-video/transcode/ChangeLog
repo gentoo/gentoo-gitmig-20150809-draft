@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.43 2003/07/11 17:01:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.44 2003/07/11 18:23:20 mholzer Exp $
+
+  11 Jul 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.6.ebuild:
+  Marked stable on x86.
 
 *transcode-0.6.8 (11 Jul 2003)
 

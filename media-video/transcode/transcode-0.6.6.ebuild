@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.6.ebuild,v 1.1 2003/06/29 19:08:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.6.ebuild,v 1.2 2003/07/11 18:23:20 mholzer Exp $
 
 inherit libtool flag-o-matic
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
 HOMEPAGE="http://zebra.fh-weingarten.de/~transcode/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-libs/libdv-0.99
 	x86? ( >=dev-lang/nasm-0.98.34 )
