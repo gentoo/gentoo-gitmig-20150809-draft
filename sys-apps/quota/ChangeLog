@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/quota
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.5 2002/08/16 13:10:10 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.6 2002/08/23 06:18:23 styx Exp $
 
-*quota-3.06 (16 Aug 2002(
+*quota-3.06 (23 Aug 2002)
+
+  23 Aug 2002; Joachim Blaabjerg <styx@gentoo.org> quota-3.06.ebuild :
+
+  Partially fixed bug #6723, now installing quotatab to /etc
+
+*quota-3.06 (16 Aug 2002)
 
   16 Apr 2002; Joachim Blaabjerg <styx@gentoo.org> quota-3.06.ebuild :
 
