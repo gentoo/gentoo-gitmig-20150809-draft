@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.34 2005/01/23 20:10:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.35 2005/01/28 18:43:09 greg_g Exp $
 
   23 Jan 2005; Markus Rothe <corsair@gentoo.org> kdewebdev-3.3.2.ebuild:
   Stable on ppc64; bug #78619
@@ -15,7 +15,7 @@
 
 *kdewebdev-3.4.0_beta1 (13 Jan 2005)
 
-  13 Jan 2005; Gregorio Guidi <greg@gentoo.org> +kdewebdev-3.4.0_beta1.ebuild:
+  13 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> +kdewebdev-3.4.0_beta1.ebuild:
   Introducing kde-3.4.0_beta1. Add blocker on app-editors/quanta.
 
   04 Jan 2005; Guy Martin <gmsoft@gentoo.org> kdewebdev-3.3.2.ebuild:

@@ -1,13 +1,13 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.115 2005/01/23 20:05:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.116 2005/01/28 18:54:25 greg_g Exp $
 
   23 Jan 2005; Markus Rothe <corsair@gentoo.org> kdeaddons-3.3.2.ebuild:
   Stable on ppc64; bug #78619
 
 *kdeaddons-3.4.0_beta1 (13 Jan 2005)
 
-  13 Jan 2005; Gregorio Guidi <greg@gentoo.org> +kdeaddons-3.4.0_beta1.ebuild:
+  13 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> +kdeaddons-3.4.0_beta1.ebuild:
   Introducing kde-3.4.0_beta1. Add dependency on kdegeames (for the atlantik
   plugin). Removed the 'esd' and 'svga' flags (not supported anymore).
 

@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.186 2005/01/23 19:54:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.187 2005/01/28 18:45:33 greg_g Exp $
 
   23 Jan 2005; Markus Rothe <corsair@gentoo.org> kdelibs-3.3.2-r2.ebuild:
   Stable on ppc64; bug #78619
@@ -12,12 +12,12 @@
   19 Jan 2005; Marcus Hanwell <cryos@gentoo.org> kdelibs-3.3.2-r2.ebuild:
   Added some extra logic to create correct symlink for multilib.
 
-  18 Jan 2005; Gregorio Guidi <greg@gentoo.org> kdelibs-3.4.0_beta1.ebuild:
+  18 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> kdelibs-3.4.0_beta1.ebuild:
   Added optional support for spellcheckers.
 
 *kdelibs-3.4.0_beta1 (14 Jan 2005)
 
-  14 Jan 2005; Gregorio Guidi <greg@gentoo.org>
+  14 Jan 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/reference-list-rev-1.3.diff, +kdelibs-3.4.0_beta1.ebuild:
   Introducing kde-3.4.0_beta1. Removed dependency on openldap: code moved to
   kdebase. Added optional support for jpeg2000 and for openexr file format.
