@@ -1,4 +1,3 @@
-virtual/os-headers	sys-kernel/linux26-headers
 virtual/alsa            sys-kernel/hardened-dev-sources
 virtual/kernel          sys-kernel/linux26-headers
 virtual/linux-sources   sys-kernel/hardened-dev-sources
