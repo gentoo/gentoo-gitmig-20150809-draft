@@ -6,7 +6,7 @@ inherit perl-module
 
 CATEGORY="dev-perl"
 
-DESCRIPTION="module to create graphs"
+DESCRIPTION="Data structure and ops for directed graphs"
 SRC_URI="http://www.cpan.org/modules/by-module/Graph/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Graph/${P}.readme"
 
