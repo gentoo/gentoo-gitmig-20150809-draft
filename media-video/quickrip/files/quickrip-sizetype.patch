@@ -1,0 +1,291 @@
+
+--- guimain.py.orig	2005-02-22 21:35:16.000000000 +0100
++++ guimain.py	2005-02-22 21:35:16.000000000 +0100
+@@ -1350,7 +1350,7 @@
+         MainWindowLayout = QGridLayout(self.centralWidget(),1,1,12,6,"MainWindowLayout")
+ 
+         self.logo = QLabel(self.centralWidget(),"logo")
+-        self.logo.setSizePolicy(QSizePolicy(0,0,0,0,self.logo.sizePolicy().hasHeightForWidth()))
++        self.logo.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.logo.sizePolicy().hasHeightForWidth()))
+         self.logo.setFrameShape(QLabel.StyledPanel)
+         self.logo.setFrameShadow(QLabel.Plain)
+         self.logo.setPixmap(self.image0)
+@@ -1365,7 +1365,7 @@
+         self.dvdTracks.header().setClickEnabled(0,self.dvdTracks.header().count() - 1)
+         self.dvdTracks.addColumn(self.tr("Rip"))
+         self.dvdTracks.header().setClickEnabled(0,self.dvdTracks.header().count() - 1)
+-        self.dvdTracks.setSizePolicy(QSizePolicy(5,7,1,0,self.dvdTracks.sizePolicy().hasHeightForWidth()))
++        self.dvdTracks.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Expanding,1,0,self.dvdTracks.sizePolicy().hasHeightForWidth()))
+         self.dvdTracks.setCursor(QCursor(13))
+         self.dvdTracks.setFocusPolicy(QListView.TabFocus)
+         self.dvdTracks.setResizePolicy(QScrollView.Manual)
+@@ -1386,7 +1386,7 @@
+         groupBox3Layout.setAlignment(Qt.AlignTop)
+ 
+         self.textLabel1_4_2 = QLabel(self.groupBox3,"textLabel1_4_2")
+-        self.textLabel1_4_2.setSizePolicy(QSizePolicy(0,5,0,0,self.textLabel1_4_2.sizePolicy().hasHeightForWidth()))
++        self.textLabel1_4_2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Preferred,0,0,self.textLabel1_4_2.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox3Layout.addWidget(self.textLabel1_4_2,1,0)
+ 
+@@ -1403,7 +1403,7 @@
+         groupBox3Layout.addWidget(self.aLang,0,1)
+ 
+         self.textLabel3_2_2 = QLabel(self.groupBox3,"textLabel3_2_2")
+-        self.textLabel3_2_2.setSizePolicy(QSizePolicy(0,5,0,0,self.textLabel3_2_2.sizePolicy().hasHeightForWidth()))
++        self.textLabel3_2_2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Preferred,0,0,self.textLabel3_2_2.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox3Layout.addWidget(self.textLabel3_2_2,0,4)
+ 
+@@ -1412,12 +1412,12 @@
+         groupBox3Layout.addWidget(self.subTitles,0,3)
+ 
+         self.textLabel2_3_2 = QLabel(self.groupBox3,"textLabel2_3_2")
+-        self.textLabel2_3_2.setSizePolicy(QSizePolicy(0,5,0,0,self.textLabel2_3_2.sizePolicy().hasHeightForWidth()))
++        self.textLabel2_3_2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Preferred,0,0,self.textLabel2_3_2.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox3Layout.addWidget(self.textLabel2_3_2,0,2)
+ 
+         self.textLabel1_3_2 = QLabel(self.groupBox3,"textLabel1_3_2")
+-        self.textLabel1_3_2.setSizePolicy(QSizePolicy(0,5,0,0,self.textLabel1_3_2.sizePolicy().hasHeightForWidth()))
++        self.textLabel1_3_2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Preferred,0,0,self.textLabel1_3_2.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox3Layout.addWidget(self.textLabel1_3_2,0,0)
+ 
+@@ -1430,14 +1430,14 @@
+         layout4 = QVBoxLayout(None,0,6,"layout4")
+ 
+         self.b_Settings = QPushButton(self.centralWidget(),"b_Settings")
+-        self.b_Settings.setSizePolicy(QSizePolicy(0,0,0,0,self.b_Settings.sizePolicy().hasHeightForWidth()))
++        self.b_Settings.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.b_Settings.sizePolicy().hasHeightForWidth()))
+         self.b_Settings.setMinimumSize(QSize(150,0))
+         self.b_Settings.setAutoDefault(1)
+         self.b_Settings.setFlat(0)
+         layout4.addWidget(self.b_Settings)
+ 
+         self.b_ScanDVD = QPushButton(self.centralWidget(),"b_ScanDVD")
+-        self.b_ScanDVD.setSizePolicy(QSizePolicy(0,0,0,0,self.b_ScanDVD.sizePolicy().hasHeightForWidth()))
++        self.b_ScanDVD.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.b_ScanDVD.sizePolicy().hasHeightForWidth()))
+         self.b_ScanDVD.setMinimumSize(QSize(150,0))
+         self.b_ScanDVD.setAutoDefault(1)
+         self.b_ScanDVD.setDefault(1)
+@@ -1452,7 +1452,7 @@
+ 
+         self.b_RipDVD = QPushButton(self.centralWidget(),"b_RipDVD")
+         self.b_RipDVD.setEnabled(0)
+-        self.b_RipDVD.setSizePolicy(QSizePolicy(0,0,0,0,self.b_RipDVD.sizePolicy().hasHeightForWidth()))
++        self.b_RipDVD.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.b_RipDVD.sizePolicy().hasHeightForWidth()))
+         self.b_RipDVD.setMinimumSize(QSize(170,40))
+         self.b_RipDVD.setAutoDefault(1)
+         self.b_RipDVD.setFlat(0)
+@@ -1470,7 +1470,7 @@
+         groupBox1Layout.setAlignment(Qt.AlignTop)
+ 
+         self.textLabel1_4 = QLabel(self.groupBox1,"textLabel1_4")
+-        self.textLabel1_4.setSizePolicy(QSizePolicy(0,0,0,0,self.textLabel1_4.sizePolicy().hasHeightForWidth()))
++        self.textLabel1_4.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.textLabel1_4.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.textLabel1_4,0,0)
+ 
+@@ -1483,7 +1483,7 @@
+         groupBox1Layout.addWidget(self.fileSize,0,1)
+ 
+         self.videoBitRate = QSpinBox(self.groupBox1,"videoBitRate")
+-        self.videoBitRate.setSizePolicy(QSizePolicy(1,0,0,0,self.videoBitRate.sizePolicy().hasHeightForWidth()))
++        self.videoBitRate.setSizePolicy(QSizePolicy(QSizePolicy.Minimum,QSizePolicy.Fixed,0,0,self.videoBitRate.sizePolicy().hasHeightForWidth()))
+         self.videoBitRate.setMaxValue(10000)
+         self.videoBitRate.setMinValue(100)
+         self.videoBitRate.setLineStep(5)
+@@ -1492,14 +1492,14 @@
+         groupBox1Layout.addWidget(self.videoBitRate,1,1)
+ 
+         self.textLabel4_2 = QLabel(self.groupBox1,"textLabel4_2")
+-        self.textLabel4_2.setSizePolicy(QSizePolicy(0,5,0,0,self.textLabel4_2.sizePolicy().hasHeightForWidth()))
++        self.textLabel4_2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Preferred,0,0,self.textLabel4_2.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.textLabel4_2,1,0)
+ 
+         layout12 = QHBoxLayout(None,0,6,"layout12")
+ 
+         self.textLabel3_3_2 = QLabel(self.groupBox1,"textLabel3_3_2")
+-        self.textLabel3_3_2.setSizePolicy(QSizePolicy(0,0,0,0,self.textLabel3_3_2.sizePolicy().hasHeightForWidth()))
++        self.textLabel3_3_2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.textLabel3_3_2.sizePolicy().hasHeightForWidth()))
+         layout12.addWidget(self.textLabel3_3_2)
+ 
+         self.videoBitRateSlider = QSlider(self.groupBox1,"videoBitRateSlider")
+@@ -1515,23 +1515,23 @@
+         layout12.addWidget(self.videoBitRateSlider)
+ 
+         self.textLabel3_3_2_2 = QLabel(self.groupBox1,"textLabel3_3_2_2")
+-        self.textLabel3_3_2_2.setSizePolicy(QSizePolicy(0,0,0,0,self.textLabel3_3_2_2.sizePolicy().hasHeightForWidth()))
++        self.textLabel3_3_2_2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.textLabel3_3_2_2.sizePolicy().hasHeightForWidth()))
+         layout12.addWidget(self.textLabel3_3_2_2)
+ 
+         groupBox1Layout.addMultiCellLayout(layout12,1,1,2,4)
+ 
+         self.textLabel2_2_2 = QLabel(self.groupBox1,"textLabel2_2_2")
+-        self.textLabel2_2_2.setSizePolicy(QSizePolicy(5,0,0,0,self.textLabel2_2_2.sizePolicy().hasHeightForWidth()))
++        self.textLabel2_2_2.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Fixed,0,0,self.textLabel2_2_2.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.textLabel2_2_2,0,4)
+ 
+         self.textLabel3_3 = QLabel(self.groupBox1,"textLabel3_3")
+-        self.textLabel3_3.setSizePolicy(QSizePolicy(0,0,0,0,self.textLabel3_3.sizePolicy().hasHeightForWidth()))
++        self.textLabel3_3.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.textLabel3_3.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.textLabel3_3,0,2)
+ 
+         self.audioBitRate = QComboBox(0,self.groupBox1,"audioBitRate")
+-        self.audioBitRate.setSizePolicy(QSizePolicy(1,0,0,0,self.audioBitRate.sizePolicy().hasHeightForWidth()))
++        self.audioBitRate.setSizePolicy(QSizePolicy(QSizePolicy.Minimum,QSizePolicy.Fixed,0,0,self.audioBitRate.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.audioBitRate,0,3)
+ 
+--- guiprogressdialogue.py.orig	2005-02-22 21:35:16.000000000 +0100
++++ guiprogressdialogue.py	2005-02-22 21:35:16.000000000 +0100
+@@ -90,7 +90,7 @@
+         self.groupBox3Layout.setAlignment(Qt.AlignTop)
+ 
+         self.rippingXofY = QLabel(self.groupBox3,"rippingXofY")
+-        self.rippingXofY.setSizePolicy(QSizePolicy(7,0,0,0,self.rippingXofY.sizePolicy().hasHeightForWidth()))
++        self.rippingXofY.setSizePolicy(QSizePolicy(QSizePolicy.Expanding,QSizePolicy.Fixed,0,0,self.rippingXofY.sizePolicy().hasHeightForWidth()))
+ 
+         self.groupBox3Layout.addWidget(self.rippingXofY,0,0)
+ 
+@@ -105,14 +105,14 @@
+         layout8.addItem(spacer_2)
+ 
+         self.b_changeState = QPushButton(self.groupBox3,"b_changeState")
+-        self.b_changeState.setSizePolicy(QSizePolicy(0,0,0,0,self.b_changeState.sizePolicy().hasHeightForWidth()))
++        self.b_changeState.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.b_changeState.sizePolicy().hasHeightForWidth()))
+         layout8.addWidget(self.b_changeState)
+         spacer_3 = QSpacerItem(31,31,QSizePolicy.Expanding,QSizePolicy.Minimum)
+         layout8.addItem(spacer_3)
+ 
+         self.b_closeProgressDialogue = QPushButton(self.groupBox3,"b_closeProgressDialogue")
+         self.b_closeProgressDialogue.setEnabled(0)
+-        self.b_closeProgressDialogue.setSizePolicy(QSizePolicy(0,0,0,0,self.b_closeProgressDialogue.sizePolicy().hasHeightForWidth()))
++        self.b_closeProgressDialogue.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.b_closeProgressDialogue.sizePolicy().hasHeightForWidth()))
+         layout8.addWidget(self.b_closeProgressDialogue)
+         spacer_4 = QSpacerItem(31,31,QSizePolicy.Expanding,QSizePolicy.Minimum)
+         layout8.addItem(spacer_4)
+--- guisettings.py.orig	2005-02-22 21:35:16.000000000 +0100
++++ guisettings.py	2005-02-22 21:35:16.000000000 +0100
+@@ -299,13 +299,13 @@
+         if not name:
+             self.setName("dialogSettings")
+ 
+-        self.setSizePolicy(QSizePolicy(5,5,0,0,self.sizePolicy().hasHeightForWidth()))
++        self.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Preferred,0,0,self.sizePolicy().hasHeightForWidth()))
+         self.setIcon(self.image0)
+ 
+         dialogSettingsLayout = QGridLayout(self,1,1,12,6,"dialogSettingsLayout")
+ 
+         self.groupBox1 = QGroupBox(self,"groupBox1")
+-        self.groupBox1.setSizePolicy(QSizePolicy(5,1,0,0,self.groupBox1.sizePolicy().hasHeightForWidth()))
++        self.groupBox1.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Minimum,0,0,self.groupBox1.sizePolicy().hasHeightForWidth()))
+         self.groupBox1.setColumnLayout(0,Qt.Vertical)
+         self.groupBox1.layout().setSpacing(6)
+         self.groupBox1.layout().setMargin(12)
+@@ -313,7 +313,7 @@
+         groupBox1Layout.setAlignment(Qt.AlignTop)
+ 
+         self.l_tcprobe = QLabel(self.groupBox1,"l_tcprobe")
+-        self.l_tcprobe.setSizePolicy(QSizePolicy(0,0,0,0,self.l_tcprobe.sizePolicy().hasHeightForWidth()))
++        self.l_tcprobe.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.l_tcprobe.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.l_tcprobe,2,0)
+ 
+@@ -322,12 +322,12 @@
+         groupBox1Layout.addWidget(self.b_browseMPlayer,0,2)
+ 
+         self.l_mplayer = QLabel(self.groupBox1,"l_mplayer")
+-        self.l_mplayer.setSizePolicy(QSizePolicy(0,0,0,0,self.l_mplayer.sizePolicy().hasHeightForWidth()))
++        self.l_mplayer.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.l_mplayer.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.l_mplayer,0,0)
+ 
+         self.l_mencoder = QLabel(self.groupBox1,"l_mencoder")
+-        self.l_mencoder.setSizePolicy(QSizePolicy(0,0,0,0,self.l_mencoder.sizePolicy().hasHeightForWidth()))
++        self.l_mencoder.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.l_mencoder.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.l_mencoder,1,0)
+ 
+@@ -340,7 +340,7 @@
+         groupBox1Layout.addWidget(self.b_selectOutputDir,5,2)
+ 
+         self.l_outputDir = QLabel(self.groupBox1,"l_outputDir")
+-        self.l_outputDir.setSizePolicy(QSizePolicy(5,0,0,0,self.l_outputDir.sizePolicy().hasHeightForWidth()))
++        self.l_outputDir.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Fixed,0,0,self.l_outputDir.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addMultiCellWidget(self.l_outputDir,4,4,0,2)
+ 
+@@ -349,22 +349,22 @@
+         groupBox1Layout.addWidget(self.textLabel1,3,0)
+ 
+         self.mencoder = QLineEdit(self.groupBox1,"mencoder")
+-        self.mencoder.setSizePolicy(QSizePolicy(3,0,0,0,self.mencoder.sizePolicy().hasHeightForWidth()))
++        self.mencoder.setSizePolicy(QSizePolicy(QSizePolicy.MinimumExpanding,QSizePolicy.Fixed,0,0,self.mencoder.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.mencoder,1,1)
+ 
+         self.mplayer = QLineEdit(self.groupBox1,"mplayer")
+-        self.mplayer.setSizePolicy(QSizePolicy(3,0,0,0,self.mplayer.sizePolicy().hasHeightForWidth()))
++        self.mplayer.setSizePolicy(QSizePolicy(QSizePolicy.MinimumExpanding,QSizePolicy.Fixed,0,0,self.mplayer.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.mplayer,0,1)
+ 
+         self.tcprobe = QLineEdit(self.groupBox1,"tcprobe")
+-        self.tcprobe.setSizePolicy(QSizePolicy(3,0,0,0,self.tcprobe.sizePolicy().hasHeightForWidth()))
++        self.tcprobe.setSizePolicy(QSizePolicy(QSizePolicy.MinimumExpanding,QSizePolicy.Fixed,0,0,self.tcprobe.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.tcprobe,2,1)
+ 
+         self.dvdDevice = QLineEdit(self.groupBox1,"dvdDevice")
+-        self.dvdDevice.setSizePolicy(QSizePolicy(3,0,0,0,self.dvdDevice.sizePolicy().hasHeightForWidth()))
++        self.dvdDevice.setSizePolicy(QSizePolicy(QSizePolicy.MinimumExpanding,QSizePolicy.Fixed,0,0,self.dvdDevice.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox1Layout.addWidget(self.dvdDevice,3,1)
+ 
+@@ -383,7 +383,7 @@
+         dialogSettingsLayout.addWidget(self.groupBox1,0,0)
+ 
+         self.groupBox2 = QGroupBox(self,"groupBox2")
+-        self.groupBox2.setSizePolicy(QSizePolicy(5,1,0,0,self.groupBox2.sizePolicy().hasHeightForWidth()))
++        self.groupBox2.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Minimum,0,0,self.groupBox2.sizePolicy().hasHeightForWidth()))
+         self.groupBox2.setColumnLayout(0,Qt.Vertical)
+         self.groupBox2.layout().setSpacing(6)
+         self.groupBox2.layout().setMargin(12)
+@@ -391,12 +391,12 @@
+         groupBox2Layout.setAlignment(Qt.AlignTop)
+ 
+         self.l_aspectRatio = QLabel(self.groupBox2,"l_aspectRatio")
+-        self.l_aspectRatio.setSizePolicy(QSizePolicy(5,0,0,0,self.l_aspectRatio.sizePolicy().hasHeightForWidth()))
++        self.l_aspectRatio.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Fixed,0,0,self.l_aspectRatio.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox2Layout.addWidget(self.l_aspectRatio,0,2)
+ 
+         self.l_deinterlacing = QLabel(self.groupBox2,"l_deinterlacing")
+-        self.l_deinterlacing.setSizePolicy(QSizePolicy(5,0,0,0,self.l_deinterlacing.sizePolicy().hasHeightForWidth()))
++        self.l_deinterlacing.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Fixed,0,0,self.l_deinterlacing.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox2Layout.addWidget(self.l_deinterlacing,0,0)
+ 
+@@ -405,7 +405,7 @@
+         groupBox2Layout.addWidget(self.deInterlacing,0,1)
+ 
+         self.l_Passes = QLabel(self.groupBox2,"l_Passes")
+-        self.l_Passes.setSizePolicy(QSizePolicy(1,0,0,0,self.l_Passes.sizePolicy().hasHeightForWidth()))
++        self.l_Passes.setSizePolicy(QSizePolicy(QSizePolicy.Minimum,QSizePolicy.Fixed,0,0,self.l_Passes.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox2Layout.addWidget(self.l_Passes,1,0)
+ 
+@@ -414,7 +414,7 @@
+         groupBox2Layout.addWidget(self.c_pdamode,2,0)
+ 
+         self.encoderPasses = QComboBox(0,self.groupBox2,"encoderPasses")
+-        self.encoderPasses.setSizePolicy(QSizePolicy(1,0,0,0,self.encoderPasses.sizePolicy().hasHeightForWidth()))
++        self.encoderPasses.setSizePolicy(QSizePolicy(QSizePolicy.Minimum,QSizePolicy.Fixed,0,0,self.encoderPasses.sizePolicy().hasHeightForWidth()))
+ 
+         groupBox2Layout.addWidget(self.encoderPasses,1,1)
+ 
