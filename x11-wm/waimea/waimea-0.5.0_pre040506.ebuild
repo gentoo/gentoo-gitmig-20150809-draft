@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.3 2004/06/05 00:31:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.4 2004/06/05 17:24:43 dholm Exp $
 
 inherit eutils 64-bit
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="truetype xinerama"
 
 DEPEND="virtual/x11
-	x11-libs/cairo
+	>=x11-libs/cairo-0.1.22
 	x11-libs/libsvg-cairo"
 
 PROVIDE="virtual/blackbox"
