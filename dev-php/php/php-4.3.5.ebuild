@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.5.ebuild,v 1.2 2004/03/29 00:06:12 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.5.ebuild,v 1.3 2004/03/30 19:28:58 avenj Exp $
 
 PHPSAPI="cli"
 inherit php-sapi eutils
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 src_unpack() {
 	php-sapi_src_unpack
 	if [ "${ARCH}" == "amd64" ] ; then
-		epatch ${FILESDIR}/${P}-amd64hack.diff
+		epatch ${FILESDIR}/php-4.3.4-amd64hack.diff
 	fi
 }
 

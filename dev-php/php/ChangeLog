@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.78 2004/03/29 00:06:12 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.79 2004/03/30 19:28:58 avenj Exp $
+
+  30 Mar 2004; Jon Portnoy <avenj@gentoo.org> php-4.3.5.ebuild :
+  Fixed path for amd64 patch. Bug #46260.
 
   29 Mar 2004; Stuart Herbert <stuart@gentoo.org> php-4.3.5.ebuild:
   Fix for 'make install_modules' failing if no shared modules are built
