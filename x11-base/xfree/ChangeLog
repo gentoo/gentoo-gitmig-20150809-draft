@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.119 2003/04/11 18:11:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.120 2003/04/13 01:02:03 azarah Exp $
+
+  12 Apr 2003; Martin Schlemmer <azarah@gentoo.org> xfree-4.3.0-r2.ebuild,
+  files/4.3.0/xfs.start :
+  Add 'mkfontdirs' target for users that do not use xfs to be able to
+  regenerate the font dirs.  Some small tweaks to the ebuild for corner
+  cases.
 
 *xfree-4.3.0-r2 (08 Apr 2003)
 
