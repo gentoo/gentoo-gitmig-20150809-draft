@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/HTML-LinkExtractor
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-LinkExtractor/ChangeLog,v 1.1 2004/04/17 12:25:57 aliz Exp $
+
+*HTML-LinkExtractor-0.11 (17 Apr 2004)
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  HTML-LinkExtractor-0.11.ebuild:
+  Initial import.
+
