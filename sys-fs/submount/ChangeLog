@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/submount
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.10 2005/01/27 23:12:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.11 2005/01/28 05:39:27 genstef Exp $
+
+  28 Jan 2005; Stefan Schweizer <genstef@gentoo.org> submount-0.9-r1.ebuild,
+  -submount-0.9.ebuild:
+  x86 stable and remove older version for bug 79617
 
   28 Jan 2005; Joseph Jezak <josejx@gentoo.org> submount-0.9-r1.ebuild:
   Marked ppc stable for bug #79617.
