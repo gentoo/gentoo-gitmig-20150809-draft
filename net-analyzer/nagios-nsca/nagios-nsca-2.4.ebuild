@@ -1,17 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/nagios-nsca-2.4.ebuild,v 1.3 2004/01/03 13:55:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/nagios-nsca-2.4.ebuild,v 1.4 2004/03/19 10:04:31 mr_bones_ Exp $
 
 DESCRIPTION="Nagios $PV NSCA  - Nagios Service Check Acceptor"
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagios/nsca-${PV}.tar.gz"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE=""
+
 DEPEND=">=net-analyzer/nagios-plugins-1.3.1
-	>=libmcrypt-2.5.1-r4"
+	>=dev-libs/libmcrypt-2.5.1-r4"
 S="${WORKDIR}/nsca-${PV}"
 
 src_compile() {
@@ -24,7 +25,7 @@ src_compile() {
 		--with-nsca-grp=nagios \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "./configure failed"
-	emake all || die
+	emake all || die "emake failed"
 }
 
 src_install() {
