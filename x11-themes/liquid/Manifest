@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 741b38dcf11c9c30f2f9a9be2ae4822b liquid-0.9.7.ebuild 590
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 0676eb60b1dc883a3576a41aafaef96e ChangeLog 1016
-MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 741b38dcf11c9c30f2f9a9be2ae4822b liquid-0.9.7.ebuild 590
 MD5 4d49be9af9e317e1a33e1322b99c8c77 files/digest-liquid-0.9.7 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPy2306ebR+OMO78RAuUIAJ9A7mfO9xiIDXvGLv0JplqjR2x+6wCfQINz
-eXZH2kQzp4r5znderkP+gpY=
-=qiYy
------END PGP SIGNATURE-----
