@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.12 2004/02/20 23:00:25 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.13 2004/03/19 10:07:12 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  chrony-1.19.99.2.ebuild, chrony-1.19.ebuild, chrony-1.20.ebuild:
+  fix depend (bug #45110)
 
   20 Feb 2004; Ilya Volynets <ilya@total-knowledge.com> chrony-1.20.ebuild:
   Add ~mips to keywords
