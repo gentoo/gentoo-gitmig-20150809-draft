@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98-r1.ebuild,v 1.1 2004/02/04 18:52:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98-r1.ebuild,v 1.2 2004/02/10 12:11:02 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,7 +21,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="media-sound/xmms"
+DEPEND="media-sound/xmms
+	media-sound/esound"
 
 DOCS="ChangeLog README_mpc-plugin_english.txt README_mpc-plugin_finnish.txt README_mpc-plugin_german.txt README_mpc-plugin_korean.txt README_mpc-plugin_spanish.txt"
 
