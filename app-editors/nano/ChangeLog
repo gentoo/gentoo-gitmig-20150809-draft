@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.3 2002/03/12 13:22:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.4 2002/04/12 02:48:06 seemant Exp $
+
+	11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> nano-1.0.8-r1.ebuild :
+
+	I did not bump the revision number of this, but I added a flag to 
+	disable text wrapping as root, for when nano is built for the bootcd
+	or build environments.  This means that the nano -w instruction in
+	our Gentoo Installation docs will need to be adjusted to just say
+	"nano" now.  Thanks to chrisa@asty.org (Chris Allegretta) in bug
+	# 1565
 
 *nano-1.0.8-r1 (12 Mar 2002)
 	

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.1 2002/03/12 13:22:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.2 2002/04/12 02:48:06 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="clone of Pico with more functions in a smaller size"
@@ -18,6 +18,10 @@ src_compile() {
 
 	use slang && myconf="${myconf} --with-slang"
 	use nls   || myconf="${myconf} --disable-nls"
+	
+	if use bootcd || use build ; then
+		myconf="${myconf} --disable-wrapping-as-root"
+	fi
 
 	./configure \
 		--build=${CHOST} \
@@ -31,7 +35,10 @@ src_compile() {
 }
 
 src_install () {
-    make DESTDIR=${D} install || die
+    make 	\
+		DESTDIR=${D} 	\
+		install || die
+
 	if use bootcd || use build; then
 		rm -rf ${D}/usr/share
 	else
