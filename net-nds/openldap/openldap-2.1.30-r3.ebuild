@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r3.ebuild,v 1.1 2004/08/22 20:23:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r3.ebuild,v 1.2 2004/12/07 06:35:00 robbat2 Exp $
 
 inherit eutils
 
@@ -138,10 +138,10 @@ src_compile() {
 
 	make depend || die "make depend failed"
 	make || die "make failed"
-
 }
 
 src_test() {
+	einfo "Doing tests"
 	cd tests ; make tests || die "make tests failed"
 }
 

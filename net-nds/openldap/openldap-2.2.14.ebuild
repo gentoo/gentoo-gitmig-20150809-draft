@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.14.ebuild,v 1.2 2004/08/22 20:23:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.14.ebuild,v 1.3 2004/12/07 06:35:00 robbat2 Exp $
 
 inherit eutils
 
@@ -11,9 +11,8 @@ SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
 LICENSE="OPENLDAP"
 SLOT="0"
 IUSE="berkdb crypt debug gdbm ipv6 odbc perl readline samba sasl slp ssl tcpd"
-KEYWORDS="-*"
 #In portage for testing only
-#KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~amd64 s390 hppa ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~amd64 ~s390 ~hppa ~ppc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-apps/sed-4
@@ -145,6 +144,7 @@ src_compile() {
 }
 
 src_test() {
+	einfo "Doing tests"
 	cd tests ; make tests || die "make tests failed"
 }
 
@@ -172,7 +172,7 @@ src_install() {
 	fowners ldap:ldap /var/run/openldap
 	fperms 0755 /var/run/openldap
 	for f in /etc/openldap/slapd.conf /etc/openldap/slapd.conf.default; do
-		sed -e "s:/var/lib/slapd.:/var/run/openldap/slapd.:" -i ${D}/${f}
+		sed -e "s:/var/lib/run/slapd.:/var/run/openldap/slapd.:" -i ${D}/${f}
 		sed -e "/database\tbdb$/acheckpoint	32	30 # <kbyte> <min>" -i ${D}/${f}
 		fowners root:ldap ${f}
 		fperms 0640 ${f}

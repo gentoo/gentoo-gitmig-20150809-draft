@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.92 2004/12/02 04:54:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.93 2004/12/07 06:35:00 robbat2 Exp $
+
+  06 Dec 2004; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.1.30-r3.ebuild, openldap-2.1.30-r4.ebuild,
+  openldap-2.2.14.ebuild, openldap-2.2.19.ebuild:
+  More docs for 2.2 upgrade, fix slight glitch in slapd.conf.
 
 *openldap-2.1.30-r4 (01 Dec 2004)
 
