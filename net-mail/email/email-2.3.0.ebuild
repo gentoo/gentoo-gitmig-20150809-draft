@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-2.3.0.ebuild,v 1.1 2004/11/12 20:16:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-2.3.0.ebuild,v 1.2 2004/11/12 20:22:51 ticho Exp $
 
 DESCRIPTION="Advanced CLI tool for sending email."
 HOMEPAGE="http://email.cleancode.org"
@@ -23,6 +23,7 @@ src_compile() {
 
 src_install() {
 	doman email.1
+	dodoc INSTALL quoted-printable.rfc RFC821 TODO
 	make DEST_DIR=${D} install || die "install failed"
 }
 
