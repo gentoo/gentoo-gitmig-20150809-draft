@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0-r1.ebuild,v 1.6 2003/01/10 07:26:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0-r1.ebuild,v 1.7 2003/09/07 00:08:13 msterret Exp $
 
 MY_P=${PN/-/_}
 S=${WORKDIR}/${MY_P}
@@ -63,7 +63,7 @@ src_unpack() {
 	cp Makefile Makefile.orig
 	sed -e "s:c_flags:./c_flags:g"	\
 		Makefile.orig > Makefile
-  
+
 	# GCC-3.2.1 fix:
 	cd ${S}/audio_out
 	cp MPEGstream.h MPEGstream.h.orig
@@ -73,7 +73,7 @@ src_unpack() {
 	cp MPEGring.h MPEGring.h.orig
 	sed -e 's:\(#include "SDL_mutex.h"\):\1\n#include <cstring>:' \
 		MPEGring.h.orig > MPEGring.h
-  
+
 
 	cp mpeg_export.h mpeg_export.h.orig
 	sed -e 's:\(#include "quicktime.h"\):\1\n#include <cstring>:' \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.4 2003/08/03 03:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.5 2003/09/07 00:08:12 msterret Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:3:3}
@@ -120,7 +120,7 @@ src_compile() {
 	use X \
 		&& myconf="${myconf} --with-x --enable-xft" \
 		|| myconf="${myconf} --without-x --disable-xft"
-	
+
 	use qt \
 		&& myconf="${myconf} --with-qt-prefix=${QTDIR}" \
 		|| myconf="${myconf} --without-qt"
@@ -138,7 +138,7 @@ src_compile() {
 	cp configure configure.orig
 	sed -e "s:extern \"C\" void exit(int);:/* extern \"C\" void exit(int); */:" \
 		< configure.orig > configure
-		
+
 	econf \
 		--enable-samples \
 		--disable-vidix \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.13 2003/02/13 13:25:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.14 2003/09/07 00:08:13 msterret Exp $
 
 S="${WORKDIR}/${P}/modules"
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
@@ -51,7 +51,7 @@ src_install () {
 	# The driver goes into the standard modules location
 	insinto "/lib/modules/${KV}/kernel/drivers/video"
 	doins em8300.o bt865.o adv717x.o
-		
+
 	# Docs
 	dodoc README-modoptions \
 	      README-modules.conf \
@@ -79,10 +79,10 @@ pkg_postinst () {
 	einfo "the contents of /usr/share/doc/${P}/devfs_symlinks.gz"
 	einfo "to your devfsd.conf so that the em8300 devices will be linked"
 	einfo "correctly."
-	einfo 
+	einfo
 	einfo "You will also need to have the i2c kernel modules compiled for"
 	einfo "this to be happy, no need to patch any kernel though just turn"
 	einfo "all the i2c stuff in kernel config to M and you'll be fine."
-	einfo 
+	einfo
 
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.5 2003/09/05 10:02:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.6 2003/09/07 00:08:13 msterret Exp $
 
 inherit nsplugins
 
@@ -9,7 +9,7 @@ IUSE="kde gnome"
 DESCRIPTION="RealPlayer 8 is a streaming media player"
 HOMEPAGE="http://forms.real.com/real/player/unix/unix.html"
 
-# !! READ THIS !! 
+# !! READ THIS !!
 # Due to fetch restrictions, you need to go to the above URL and fill out the
 # form in order to be able to download the binary. When done, you should copy
 # or move the binary into /usr/portage/distfiles. No need to chmod +x
@@ -60,7 +60,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if use x86 ; then 
+	if use x86 ; then
 		BYTECOUNT=4799691
 		RP8_BIN=`echo ${MY_A} | awk '{ print $1 }'`
 		RV9_X86=`echo ${MY_A} | awk '{ print $2 }'`
@@ -72,7 +72,7 @@ src_unpack() {
 		fi
 	fi
 	tail -c ${BYTECOUNT} ${DISTDIR}/${RP8_BIN} | tar xz 2> /dev/null
-	if use x86 ; then 
+	if use x86 ; then
 		unpack ${RV9_X86}
 	fi
 }
@@ -92,7 +92,7 @@ src_install () {
 	insinto ${BASE}/Plugins/ExtResources
 	doins Plugins/ExtResources/*
 	insinto ${BASE}/Plugins
-	doins Plugins/*.so.6.0 
+	doins Plugins/*.so.6.0
 	insinto ${BASE}
 	doins *.xpm *.png *.rm rpnp.so LICENSE README ${FILESDIR}/mimeinfo
 	exeinto ${BASE}
@@ -101,7 +101,7 @@ src_install () {
 	dosym ${BASE}/realplay /opt/bin
 
 	# NS plugin
-	for b in /opt/netscape /usr/lib/mozilla /usr/lib/nsbrowser 
+	for b in /opt/netscape /usr/lib/mozilla /usr/lib/nsbrowser
 	do
 		if [ -d ${b} ] ; then
 			dodir ${b}/plugins
@@ -124,7 +124,7 @@ src_install () {
 	doins realplayer8.xpm
 
 	# Mimetypes - Intentionally left blank (for now)
-	# Better not use the provided scripts from Real, they are outdated 
+	# Better not use the provided scripts from Real, they are outdated
 	# See ${BASE}/mimeinfo for the correct mimetypes if you need them
 }
 

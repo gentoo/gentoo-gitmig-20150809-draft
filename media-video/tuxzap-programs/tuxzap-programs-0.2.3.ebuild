@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.2.3.ebuild,v 1.1 2003/06/18 12:48:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.2.3.ebuild,v 1.2 2003/09/07 00:08:13 msterret Exp $
 
 IUSE="gtk"
 
@@ -27,7 +27,7 @@ src_compile() {
     use gtk || MYCONF=${MYCONF}' --without-x'
     econf ${MYCONF}
 
-    # still assumes to be in the DVB dir 
+    # still assumes to be in the DVB dir
     sed -i \
 		-e s%../../../libdvb%/usr/include/libdvb%g  \
 		-e s%../../../include%/usr/include%g \
@@ -38,7 +38,7 @@ src_compile() {
 
 src_install() {
     make DESTDIR=${D} install || die
-    
+
     # docs
     dodoc ${S}/README ${S}/AUTHORS ${S}/NEWS ${S}/ChangeLog
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.0.0.ebuild,v 1.7 2003/02/14 08:54:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.0.0.ebuild,v 1.8 2003/09/07 00:08:12 msterret Exp $
 
-inherit gcc                                                                     
+inherit gcc
 export WANT_GCC_3="yes"
 
 DESCRIPTION="Cinelerra - Professional Video Editor"
@@ -27,7 +27,7 @@ src_compile() {
 src_install() {
 	cd ${S}/${PN}/i686
 
-	dobin ${PN} 
+	dobin ${PN}
 
 	cd ${S}/plugins
 	insinto /usr/lib/${PN}
@@ -35,7 +35,7 @@ src_install() {
 	doins titler/fonts
 
 	cd ${S}/libmpeg3/i686
-	dobin mpeg3dump mpeg3cat mpeg3toc 
+	dobin mpeg3dump mpeg3cat mpeg3toc
 
 	cd ${S}/mix/i686
 	dobin mix2000
@@ -49,7 +49,7 @@ src_install() {
 	cd ${S}/mplexlo/i686
 	dobin mplexlo
 
-	cd ${S} 
-	dodoc CVS COPYING 
+	cd ${S}
+	dodoc CVS COPYING
 	dohtml -a png,html,texi,sdw -r doc/*
 }

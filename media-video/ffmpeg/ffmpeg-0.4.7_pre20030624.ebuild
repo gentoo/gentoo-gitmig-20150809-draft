@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7_pre20030624.ebuild,v 1.6 2003/07/22 17:58:28 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7_pre20030624.ebuild,v 1.7 2003/09/07 00:08:13 msterret Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ IUSE="mmx encode oggvorbis doc faad dvd static sdl imlib truetype"
 inherit flag-o-matic
 filter-flags "-fforce-addr -fPIC"
 # fixes bug #16281
-use alpha && append-flags "-fPIC" 
+use alpha && append-flags "-fPIC"
 use amd64 && append-flags "-fPIC"
 
 SLOT="0"
@@ -55,7 +55,7 @@ src_compile() {
 	./configure ${myconf} \
 		--prefix=/usr || die "./configure failed."
 	make || die "make failed."
-	use doc && make -C doc all 
+	use doc && make -C doc all
 }
 
 src_install() {

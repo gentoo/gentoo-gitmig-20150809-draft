@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.3123-r2.ebuild,v 1.5 2003/08/03 03:14:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.3123-r2.ebuild,v 1.6 2003/09/07 00:08:13 msterret Exp $
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_kernel-${NV_V}"
@@ -29,7 +29,7 @@ src_unpack() {
 	# Many thanks to Christian Zander <zander@minion.de> for bringing
 	# these to us, and being so helpful to select which to use.
 	# This should close bug #9704.
-	
+
 	local KV_major="`uname -r | cut -d. -f1`"
 	local KV_minor="`uname -r | cut -d. -f2`"
 	local KV_micro="`uname -r | cut -d. -f3 | sed -e 's:[^0-9].*::'`"
@@ -70,7 +70,7 @@ src_install() {
 	# The driver goes into the standard modules location
 	insinto /lib/modules/${KV}/video
 	doins NVdriver
-    
+
 	# Add the aliases
 	insinto /etc/modules.d
 	doins ${FILESDIR}/nvidia

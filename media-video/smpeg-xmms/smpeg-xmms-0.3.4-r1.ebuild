@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/smpeg-xmms-0.3.4-r1.ebuild,v 1.7 2003/02/13 13:34:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/smpeg-xmms-0.3.4-r1.ebuild,v 1.8 2003/09/07 00:08:13 msterret Exp $
 
 IUSE="sdl"
 
@@ -22,7 +22,7 @@ src_compile() {
 	cd ${S}
 	local myconf
 	use sdl || myconf="${myconf} --disable-sdltest"
-	
+
 	econf ${myconf} || die
 	make || die
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r3.ebuild,v 1.4 2003/02/13 13:33:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r3.ebuild,v 1.5 2003/09/07 00:08:13 msterret Exp $
 
 inherit nsplugins
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~x86 -ppc -sparc "
 
 dyn_fetch() {
-	for y in ${A} 
+	for y in ${A}
 	do
 		digest_check ${y}
 			if [ $? -ne 0 ]; then
@@ -30,7 +30,7 @@ dyn_fetch() {
 }
 
 src_unpack() {
-	# You must download rp8_linux20_libc6_i386_cs2_rpm 
+	# You must download rp8_linux20_libc6_i386_cs2_rpm
 	# from real.com and put it in ${DISTDIR}
 	rpm2targz ${DISTDIR}/${A}
 	tar zxf ${WORKDIR}/${A}.tar.gz
@@ -58,7 +58,7 @@ src_install () {
 	#unzip raclass.zip
 	#rm raclass.zip
 	insinto /etc/env.d
-	doins ${FILESDIR}/10realplayer	
+	doins ${FILESDIR}/10realplayer
 
 	dodir /opt/netscape/plugins
 	for x in raclass.zip rpnp.so

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r3.ebuild,v 1.7 2003/03/04 03:16:53 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r3.ebuild,v 1.8 2003/09/07 00:08:13 msterret Exp $
 
 inherit flag-o-matic
 
@@ -60,14 +60,14 @@ A="xanim_exporting_edition.tar.gz \
 S=${WORKDIR}/xanim_exporting_edition
 DESCRIPTION="XAnim with Quicktime and RAW Audio export functions"
 SRC_URI="http://heroine.linuxave.net/xanim_exporting_edition.tar.gz \
-     ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_SPARC}${_XA_SPARC_EXT} 
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_SPARC}${_XA_SPARC_EXT} 
-	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_SPARC}${_XA_SPARC_EXT} 
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_PPC}${_XA_PPC_EXT} 
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_PPC}${_XA_PPC_EXT} 
-	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_PPC}${_XA_PPC_EXT} 
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_I386}${_XA_I386_EXT} 
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_I386}${_XA_I386_EXT} 
+     ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_SPARC}${_XA_SPARC_EXT}
+	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_SPARC}${_XA_SPARC_EXT}
+	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_SPARC}${_XA_SPARC_EXT}
+	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_PPC}${_XA_PPC_EXT}
+	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_PPC}${_XA_PPC_EXT}
+	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_PPC}${_XA_PPC_EXT}
+	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_I386}${_XA_I386_EXT}
+	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_I386}${_XA_I386_EXT}
 	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_I386}${_XA_I386_EXT}"
 
 HOMEPAGE="http://heroin.linuxave.net/toys.html"
@@ -77,7 +77,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=media-libs/libpng-1.2.1
 	virtual/x11"
 
-case $ARCH in 
+case $ARCH in
   sparc)
 	RDEPEND="app-arch/ncompress"
 	;;
@@ -88,7 +88,7 @@ case $ARCH in
 	RDEPEND="app-arch/ncompress"
 	;;
 esac
- 
+
 src_unpack() {
   unpack xanim_exporting_edition.tar.gz
   mkdir ${S}/mods

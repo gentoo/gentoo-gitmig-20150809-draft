@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_rc1.ebuild,v 1.3 2003/07/16 07:32:53 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_rc1.ebuild,v 1.4 2003/09/07 00:08:13 msterret Exp $
 
 inherit eutils libtool
 
@@ -24,7 +24,7 @@ RDEPEND="gnome-base/gnome-libs
 	sys-apps/eject
 	>=sys-devel/gcc-3"
 # As of 0.9.0-RC1 gcc3 is required
-	
+
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	>=sys-devel/automake-1.5-r1"
@@ -63,19 +63,19 @@ src_compile() {
 	elibtoolize
 
 	local myconf=
-	
+
 	use nls || myconf="${myconf} --disable-nls"
 
 	# Do not use custom CFLAGS !!!
 	unset CFLAGS CXXFLAGS
-	
+
 	econf ${myconf} || die
-			
+
 	make || die
 }
 
 src_install() {
-	
+
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \

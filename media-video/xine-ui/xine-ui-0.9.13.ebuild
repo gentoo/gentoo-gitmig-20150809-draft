@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.13.ebuild,v 1.7 2003/07/22 20:12:30 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.13.ebuild,v 1.8 2003/09/07 00:08:13 msterret Exp $
 
 IUSE="X aalib gnome nls directfb"
 
@@ -53,7 +53,7 @@ src_compile() {
 	local myconf
 	use X      || myconf="${myconf} --disable-x11 --disable-xv"
 	use nls    || myconf="${myconf} --disable-nls"
-  
+
 	econf ${myconf} || die
 
 	elibtoolize
@@ -62,7 +62,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	make DESTDIR=${D} \
 		docdir=/usr/share/doc/${PF} \
 		docsdir=/usr/share/doc/${PF} \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.5.ebuild,v 1.5 2003/02/13 13:33:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.5.ebuild,v 1.6 2003/09/07 00:08:13 msterret Exp $
 
 IUSE="nls"
 
@@ -30,17 +30,17 @@ src_compile() {
 	use nls || myconf="--disable-nls"
 
 	libtoolize --copy --force
-	
+
 	# libxml2 hack
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
 
 	econf ${myconf} || die
-	emake || die	
+	emake || die
 
 }
 
 src_install() {
-	
+
 	einstall || die
 	dodoc ABOUT-NLS AUTHORS COPYING INSTALL NEWS README
 }

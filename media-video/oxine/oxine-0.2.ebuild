@@ -1,6 +1,6 @@
 # Copyright 2003 Fridtjof Busse <fridtjof@fbunet.de>.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.2 2003/07/12 21:12:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.3 2003/09/07 00:08:13 msterret Exp $
 
 DESCRIPTION="OSD frontend for xine"
 HOMEPAGE="http://oxine.sourceforge.net/"
@@ -24,13 +24,13 @@ src_compile() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 	use lirc || myconf="${myconf} --disable-lirc"
-  
+
 	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
-	
+
 	make DESTDIR=${D} \
 		docdir=/usr/share/doc/${PF} \
 		docsdir=/usr/share/doc/${PF} \

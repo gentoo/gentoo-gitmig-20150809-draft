@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.ebuild,v 1.7 2003/08/06 13:37:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.ebuild,v 1.8 2003/09/07 00:08:13 msterret Exp $
 
 inherit libtool flag-o-matic
 
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
-filter-mfpmath "sse" 
+filter-mfpmath "sse"
 filter-flags -fPIC
 
 DESCRIPTION="video stream processing tool"

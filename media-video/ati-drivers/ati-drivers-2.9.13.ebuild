@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.13.ebuild,v 1.1 2003/07/03 20:35:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.13.ebuild,v 1.2 2003/09/07 00:08:12 msterret Exp $
 
 IUSE="qt kde gnome"
 
@@ -35,7 +35,7 @@ src_unpack() {
 	local ATIBIN="${D}/opt/ati/bin"
 	mkdir fglrx_panel
 	cd fglrx_panel
-	tar zxf ${WORKDIR}/usr/src/fglrx_panel_sources.tgz || die 
+	tar zxf ${WORKDIR}/usr/src/fglrx_panel_sources.tgz || die
 	sed -e "s:"${OLDBIN}":"${ATIBIN}":"\
 	Makefile >Makefile.new
 	mv Makefile.new Makefile
@@ -53,19 +53,19 @@ src_compile() {
 	sed -e 's:`id -u`:0:' make.sh >make.sh.new
 	sed -e 's:`uname -r`:${KV}:' make.sh.new >make.sh
 	chmod +x make.sh
-	./make.sh || ewarn "glx module not built" 
-	
+	./make.sh || ewarn "glx module not built"
+
 	einfo "building the fgl_glxgears sample"
 	cd ${WORKDIR}/fglrxgears
 	make -f Makefile.Linux || ewarn "fgl_glxgears sample not build"
-	
+
 	if [ "`use qt`" ]
-	then 
+	then
 	einfo "building the qt fglx panel"
 		cd ${WORKDIR}/fglrx_panel
 		emake || die
 	fi
-	#removing stuff 
+	#removing stuff
 	einfo "cleaning"
 	cd ${WORKDIR}
 	rm -fR usr/share
@@ -80,19 +80,19 @@ pkg_preinst() {
 	then
 		rm -rf ${ROOT}/usr/lib/opengl/ati/*
 	fi
-}		    
+}
 
 src_install() {
 	local ATI_ROOT="/usr/lib/opengl/ati"
 	cd ${WORKDIR}
 
-#drm module 
+#drm module
 	insinto /lib/modules/${KV}/video
 	doins lib/modules/fglrx/build_mod/fglrx.o
 
 #dri driver
 	exeinto ${ATI_ROOT}/lib
-	doexe usr/X11R6/lib/libGL.so.1.2 
+	doexe usr/X11R6/lib/libGL.so.1.2
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so.1
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libMesaGL.so
@@ -104,7 +104,7 @@ src_install() {
 	dosym ../xfree/include ${ATI_ROOT}/include
 	dosym ../xfree/extensions ${ATI_ROOT}/extensions
 	rm usr/X11R6/lib/libGL.so.1.2
-	
+
 #apps
 	insinto /etc/env.d
 	doins ${FILESDIR}/09ati
@@ -113,7 +113,7 @@ src_install() {
 	doexe usr/X11R6/bin/*
 	rm usr/X11R6/bin/*
 
-	if [ "`use qt`" ] 
+	if [ "`use qt`" ]
 	then
 		doexe fglrx_panel/fireglcontrol
 	fi

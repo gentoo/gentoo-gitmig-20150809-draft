@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1.ebuild,v 1.7 2003/07/12 21:12:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1.ebuild,v 1.8 2003/09/07 00:08:12 msterret Exp $
 
 IUSE="qt kde gnome"
 
@@ -39,9 +39,9 @@ src_compile() {
     tar -xzvf ${WORKDIR}/usr/src/fglrx_sample_source.tgz
     mv xc/programs/fgl_glxgears/* .
     make -f Makefile.Linux || die
-    
+
     if [ "`use qt`" ]
-	then 
+	then
 	    einfo "building the qt fglx panel"
 	    cd ${WORKDIR}
 	    local OLDBIN="/usr/X11R6/bin"
@@ -54,8 +54,8 @@ src_compile() {
 		mv Makefile.new Makefile
 	emake || die
     fi
-    
-#removing stuff 
+
+#removing stuff
     einfo "cleaning"
     cd ${WORKDIR}
     rm -fR usr/share
@@ -70,20 +70,20 @@ pkg_preinst() {
 	then
 	    rm -rf ${ROOT}/usr/lib/opengl/ati/*
     fi
-}			    
+}
 
 src_install() {
     local ATI_ROOT="/usr/lib/opengl/ati"
-    
+
     cd ${WORKDIR}
 
-#drm module 
+#drm module
     insinto /lib/modules/${KV}/video
     doins lib/modules/fglrx/build_mod/fglrx.o
 
 #dri driver
     exeinto ${ATI_ROOT}/lib
-    doexe usr/X11R6/lib/libGL.so.1.2 
+    doexe usr/X11R6/lib/libGL.so.1.2
     dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so.1
     dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so
     dosym libGL.so.1.2 ${ATI_ROOT}/lib/libMesaGL.so
@@ -104,7 +104,7 @@ src_install() {
     doexe usr/X11R6/bin/*
     rm usr/X11R6/bin/*
 
-    if [ "`use qt`" ] 
+    if [ "`use qt`" ]
 	then
 	    doexe fglrx_panel/fireglcontrol
     fi
@@ -122,14 +122,14 @@ pkg_postinst() {
 	then
 	    /usr/sbin/opengl-update ati
     fi
-    
+
     einfo
     einfo "To use the xfree GLX, run \"opengl-update xfree\""
     einfo
     einfo
     einfo "To chance your XF86Config you can use the bundled \"fglrxconfig\""
     einfo
-    
+
 #drm-module
     update-modules
 }

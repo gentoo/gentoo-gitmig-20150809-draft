@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2960-r1.ebuild,v 1.6 2003/08/03 03:14:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2960-r1.ebuild,v 1.7 2003/09/07 00:08:13 msterret Exp $
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_kernel-${NV_V}
@@ -33,7 +33,7 @@ src_install () {
 	# The driver goes into the standard modules location
 	insinto "/lib/modules/${KV}/video"
 	doins NVdriver
-    
+
 	# Add the aliases
 	insinto /etc/modules.d
 	doins "${FILESDIR}"/nvidia

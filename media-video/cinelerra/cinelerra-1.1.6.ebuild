@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.6.ebuild,v 1.4 2003/07/12 21:12:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.6.ebuild,v 1.5 2003/09/07 00:08:12 msterret Exp $
 
 inherit gcc eutils
 export WANT_GCC_3="yes"
@@ -24,7 +24,7 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/compile-${PV}.diff	
+	epatch ${FILESDIR}/compile-${PV}.diff
 }
 
 src_compile() {
@@ -44,7 +44,7 @@ src_install() {
 	myarch="i686"
 	fi
 	if [ -n "`use ppc`" ]; then
-	myarch="ppc"	
+	myarch="ppc"
 	fi
 	cd ${S}/${PN}/${myarch}
 	dobin ${PN}
@@ -56,7 +56,7 @@ src_install() {
 	doins titler/fonts/*
 
 	cd ${S}/libmpeg3/${myarch}
-	dobin mpeg3dump mpeg3cat mpeg3toc 
+	dobin mpeg3dump mpeg3cat mpeg3toc
 
 #	cd ${S}/mix/i686
 #	dobin mix2000
@@ -70,7 +70,7 @@ src_install() {
 	cd ${S}/mplexlo/${myarch}
 	dobin mplexlo
 
-	cd ${S} 
-#	dodoc CVS COPYING 
+	cd ${S}
+#	dodoc CVS COPYING
 	dohtml -a png,html,texi,sdw -r doc/*
 }

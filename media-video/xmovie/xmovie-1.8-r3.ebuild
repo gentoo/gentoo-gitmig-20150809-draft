@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.8-r3.ebuild,v 1.5 2003/02/13 13:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.8-r3.ebuild,v 1.6 2003/09/07 00:08:13 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Player for MPEG and Quicktime movies"
@@ -21,7 +21,7 @@ KEYWORDS="x86"
 src_compile() {
 	local myconf
 	use mmx || myconf="${myconf} --no-mmx"
-    
+
 	./configure ${myconf} || die
 	emake || die
 

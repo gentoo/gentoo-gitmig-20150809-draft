@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.4.ebuild,v 1.5 2003/08/07 04:18:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.4.ebuild,v 1.6 2003/09/07 00:08:13 msterret Exp $
 
 inherit eutils
 
@@ -27,5 +27,5 @@ src_install() {
 
 	dodoc README LICENSE
 	dodir /usr/bin
-	dosym /usr/share/quickrip/quickrip.py /usr/bin/quickrip 
+	dosym /usr/share/quickrip/quickrip.py /usr/bin/quickrip
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.9 2003/07/12 21:12:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.10 2003/09/07 00:08:13 msterret Exp $
 
 IUSE="gnome kde"
 
@@ -56,7 +56,7 @@ src_install() {
 	export maketype="./${INSTALL_BINARY}"
 	virtualmake < /dev/null >& /dev/null &
 	while ! [ -r rnsetup/realplaydoc.xpm -a -r rnsetup/EMBED/raclass.zip ]
-	do 
+	do
 		sleep 1
 	done
 	killall ${INSTALL_BINARY}
@@ -104,9 +104,9 @@ src_install() {
 	# Config files that are needed by the player
 	echo -e ${CONFIG_Gemini} > Gemini_0_1
 	echo -e ${CONFIG_RealMediaSDK} > RealMediaSDK_6_0
-	echo -e ${CONFIG_RealPlayer} > RealPlayer_9_0 
+	echo -e ${CONFIG_RealPlayer} > RealPlayer_9_0
 	echo -e ${CONFIG_RealShared} > RealShared_0_0
-	insinto ${RN}	
+	insinto ${RN}
 	doins Gemini_0_1 RealMediaSDK_6_0 RealPlayer_9_0 RealShared_0_0
 
 	# KDE desktop entry
@@ -114,16 +114,16 @@ src_install() {
 		insinto ${KDEDIR}/${APPLNK}
 		doins ${FILESDIR}/realone.desktop
 	fi
-    
+
     # Gnome desktop entry
     if [ -n "`use gnome`" ]; then
     	insinto /usr/share/applications
         doins ${FILESDIR}/realone.desktop
     fi
-    
+
     # Install pixmaps
 	insinto /usr/share/pixmaps
-	doins *.xpm    
+	doins *.xpm
 
 	# Wrapper script
 	exeinto /opt/bin

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.0.ebuild,v 1.1 2003/03/04 22:01:09 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.0.ebuild,v 1.2 2003/09/07 00:08:13 msterret Exp $
 
 inherit libtool
 
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 IUSE="oss mmx alsa"
 
 DEPEND=">=media-libs/libdvdcss-1.2.2
-	media-libs/jpeg 
-	>=media-libs/libdvdread-0.9.4 
+	media-libs/jpeg
+	>=media-libs/libdvdread-0.9.4
 	media-sound/mad
 	x11-base/xfree
 	>=dev-libs/libxml2-2.4.19
@@ -54,6 +54,6 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL NEWS README TODO 
+	dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL NEWS README TODO
 	dodoc doc/liba52.txt
 }

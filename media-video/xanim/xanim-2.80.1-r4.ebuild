@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.13 2003/03/04 02:34:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.14 2003/09/07 00:08:13 msterret Exp $
 
 inherit flag-o-matic
 
@@ -84,7 +84,7 @@ DEPEND="virtual/x11
 	ppc? ( app-arch/ncompress )
 	sparc? ( app-arch/ncompress )"
 
-  	
+
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	mkdir ${S}/mods
@@ -95,7 +95,7 @@ src_unpack() {
 	$_XA_UNCOMPRESS ${_XA_CVID}${_XA_EXT}
 	cp ${DISTDIR}/${_XA_IV32}${_XA_EXT} .
 	$_XA_UNCOMPRESS ${_XA_IV32}${_XA_EXT}
-	
+
 	# -O higher than -O2 breaks for GCC3.1
 	filter-flags -finline-functions
 	filter-flags "-O?" "-O2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.5 2003/08/07 04:16:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.6 2003/09/07 00:08:13 msterret Exp $
 
 #
 # You can set the default device that vidcat and w3camd use by setting
@@ -33,7 +33,7 @@ src_compile() {
 
 	use truetype && \
 		myconf="${myconf} --with-ttf-inc=/usr/include/freetype"
-	
+
 	./configure \
 	    --host=${CHOST} \
 	    --prefix=/usr \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.6 2003/07/16 07:32:53 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.7 2003/09/07 00:08:12 msterret Exp $
 
 AF_MINOR_VER="$(avifile-config --data-dir | cut -d. -f2)"
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ RDEPEND="gnome-base/gnome-libs
 	>=media-libs/libdvdcss-1.1.1
 	>=media-libs/libdvdread-0.9.2
 	media-libs/gdk-pixbuf"
-	
+
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	>=sys-devel/automake-1.5-r1"
@@ -89,12 +89,12 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--sysconfdir=/etc \
 		${myconf} || die
-			
+
 	emake || die
 }
 
 src_install() {
-	
+
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \

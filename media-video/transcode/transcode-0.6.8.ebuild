@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.8.ebuild,v 1.4 2003/08/06 13:37:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.8.ebuild,v 1.5 2003/09/07 00:08:13 msterret Exp $
 
 inherit libtool flag-o-matic eutils
 
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
-filter-mfpmath sse 
+filter-mfpmath sse
 filter-flags -fPIC
 filter-flags -maltivec -mabi=altivec
 
@@ -98,12 +98,12 @@ src_compile() {
 	[ -f ${ROOT}/usr/lib/libpostproc.a ] && \
 	[ -f ${ROOT}/usr/include/postproc/postprocess.h ] && \
 		myconf="${myconf} --with-libpostproc-builddir=${ROOT}/usr/lib"
-	
+
 	econf ${myconf} CFLAGS="${CFLAGS} -DDCT_YUV_PRECISION=1" || die
 
 	# Do not use emake !!
-	# export CFLAGS="${CFLAGS} -DDCT_YUV_PRECISION=1" 
-	
+	# export CFLAGS="${CFLAGS} -DDCT_YUV_PRECISION=1"
+
 	make all || die
 
 	# subrip stuff

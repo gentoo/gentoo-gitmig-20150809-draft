@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9-r1.ebuild,v 1.1 2003/07/21 19:05:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9-r1.ebuild,v 1.2 2003/09/07 00:08:12 msterret Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="virtual/x11
 	>=media-libs/xvid-0.9*
 	=media-libs/divx4linux-20020418*
 	nls? ( >=sys-devel/gettext-0.11.2 )
-	oggvorbis? ( >=media-libs/libogg-1.0 
+	oggvorbis? ( >=media-libs/libogg-1.0
     		    >=media-libs/libvorbis-1.0 )
 	arts? ( >=kde-base/arts-1.1.1 )
 	truetype? ( >=media-libs/freetype-2.1.2 )
@@ -54,9 +54,9 @@ src_compile() {
 	myconf="--with-gnu-ld --disable-warnings"
 
 	# --enable-profile        creates profiling infos default=no
-  	# --enable-pch            enables precompiled header support 
+  	# --enable-pch            enables precompiled header support
 	#                         (currently only KCC) default=no
-	# --enable-final          build size optimized apps 
+	# --enable-final          build size optimized apps
 	#                         (experimental - needs lots of memory)
 	# --disable-closure       don't delay template instantiation
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.3 2003/08/03 03:14:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.4 2003/09/07 00:08:13 msterret Exp $
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_kernel-${NV_V}"
@@ -45,7 +45,7 @@ check_version_h() {
 
 get_KV_info() {
 	check_version_h
-	
+
 	# Get the kernel version of sources in /usr/src/linux ...
 	export KV_full="$(awk '/UTS_RELEASE/ { gsub("\"", "", $3); print $3 }' \
 		"${ROOT}/usr/src/linux/include/linux/version.h")"
@@ -56,7 +56,7 @@ get_KV_info() {
 
 is_2_5_kernel() {
 	get_KV_info
-	
+
 	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
 	then
 		return 0
@@ -91,7 +91,7 @@ src_unpack() {
 
 	cd ${S}
 	einfo "Linux kernel ${KV_major}.${KV_minor}.${KV_micro}"
-	
+
 	if is_2_5_kernel || is_2_6_kernel
 	then
 		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.[56]..." \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.2.0.11-r1.ebuild,v 1.7 2003/02/13 13:23:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.2.0.11-r1.ebuild,v 1.8 2003/09/07 00:08:12 msterret Exp $
 
 S=${WORKDIR}/X11R6
 MY_P=ATI-4.2.0-11
@@ -19,7 +19,7 @@ src_install () {
 	cd ${S}/lib/modules
 	insinto /usr/X11R6/lib/modules/multimedia
 	doins multimedia/*.o
-	
+
 	cd ${S}/lib/modules/drivers
 	insinto /usr/X11R6/lib/modules/drivers
 	for x in *.o
