@@ -1,6 +1,7 @@
---- gdb-6.1/bfd/config.bfd.uclibc	2004-03-13 13:37:09.000000000 +0100
-+++ gdb-6.1/bfd/config.bfd	2004-05-11 17:59:12.000000000 +0200
-@@ -121,7 +121,7 @@ case "${targ}" in
+diff -ur gdb-6.2.orig/bfd/config.bfd gdb-6.2/bfd/config.bfd
+--- gdb-6.2.orig/bfd/config.bfd	2004-08-24 14:42:18.000000000 +0000
++++ gdb-6.2/bfd/config.bfd	2004-08-24 17:52:29.000000000 +0000
+@@ -129,7 +129,7 @@
      targ_defvec=ecoffalpha_little_vec
      targ_selvecs=bfd_elf64_alpha_vec
      ;;
@@ -9,7 +10,7 @@
      targ_defvec=bfd_elf64_alpha_vec
      targ_selvecs=ecoffalpha_little_vec
      ;;
-@@ -131,7 +131,7 @@ case "${targ}" in
+@@ -139,7 +139,7 @@
    alpha*-*-*)
      targ_defvec=ecoffalpha_little_vec
      ;;
@@ -18,7 +19,7 @@
      targ_defvec=bfd_elf64_ia64_little_vec
      targ_selvecs="bfd_elf64_ia64_big_vec bfd_efi_app_ia64_vec"
      ;;
-@@ -208,7 +208,7 @@ case "${targ}" in
+@@ -216,7 +216,7 @@
      targ_defvec=bfd_elf32_littlearm_vec
      targ_selvecs=bfd_elf32_bigarm_vec
      ;;
@@ -27,7 +28,16 @@
      targ_defvec=bfd_elf32_bigarm_vec
      targ_selvecs=bfd_elf32_littlearm_vec
      ;;
-@@ -350,7 +350,7 @@ case "${targ}" in
+@@ -225,7 +225,7 @@
+     targ_selvecs=bfd_elf32_bigarm_vec
+     ;;
+   arm-*-elf | arm-*-freebsd* | arm*-*-linux-gnu* | arm*-*-conix* | \
+-  arm*-*-uclinux* | arm-*-kfreebsd*-gnu | arm-*-vxworks)
++  arm*-*-uclinux* | arm-*-kfreebsd*-gnu | arm-*-vxworks | arm*-*-linux-uclibc* )
+     targ_defvec=bfd_elf32_littlearm_vec
+     targ_selvecs=bfd_elf32_bigarm_vec
+     ;;
+@@ -373,7 +373,7 @@
      ;;
  
  #ifdef BFD64
@@ -36,7 +46,7 @@
      targ_defvec=bfd_elf64_hppa_linux_vec
      targ_selvecs=bfd_elf64_hppa_vec
      ;;
-@@ -361,7 +361,7 @@ case "${targ}" in
+@@ -384,7 +384,7 @@
      ;;
  #endif
  
@@ -45,7 +55,7 @@
      targ_defvec=bfd_elf32_hppa_linux_vec
      targ_selvecs=bfd_elf32_hppa_vec
      ;;
-@@ -483,7 +483,7 @@ case "${targ}" in
+@@ -507,7 +507,7 @@
      targ_selvecs=bfd_elf32_i386_vec
      targ_underscore=yes
      ;;
@@ -54,7 +64,7 @@
      targ_defvec=bfd_elf32_i386_vec
      targ_selvecs="i386linux_vec bfd_efi_app_ia32_vec"
      targ64_selvecs=bfd_elf64_x86_64_vec
-@@ -497,7 +497,7 @@ case "${targ}" in
+@@ -521,7 +521,7 @@
      targ_defvec=bfd_elf64_x86_64_vec
      targ_selvecs="bfd_elf32_i386_vec i386netbsd_vec i386coff_vec bfd_efi_app_ia32_vec"
      ;;
@@ -63,7 +73,7 @@
      targ_defvec=bfd_elf64_x86_64_vec
      targ_selvecs="bfd_elf32_i386_vec i386linux_vec bfd_efi_app_ia32_vec"
      ;;
-@@ -667,7 +667,7 @@ case "${targ}" in
+@@ -691,7 +691,7 @@
      targ_defvec=hp300hpux_vec
      targ_underscore=yes
      ;;
@@ -72,7 +82,7 @@
      targ_defvec=m68klinux_vec
      targ_selvecs=bfd_elf32_m68k_vec
      targ_underscore=yes
-@@ -952,8 +952,8 @@ case "${targ}" in
+@@ -972,8 +972,8 @@
      ;;
  #endif
    powerpc-*-*bsd* | powerpc-*-elf* | powerpc-*-sysv4* | powerpc-*-eabi* | \
@@ -83,7 +93,7 @@
      targ_defvec=bfd_elf32_powerpc_vec
      targ_selvecs="rs6000coff_vec bfd_elf32_powerpcle_vec ppcboot_vec"
      targ64_selvecs="bfd_elf64_powerpc_vec bfd_elf64_powerpcle_vec"
-@@ -984,8 +984,8 @@ case "${targ}" in
+@@ -1009,8 +1009,8 @@
      targ_selvecs="rs6000coff_vec bfd_elf32_powerpc_vec ppcboot_vec"
      ;;
    powerpcle-*-elf* | powerpcle-*-sysv4* | powerpcle-*-eabi* | \
@@ -94,7 +104,7 @@
      targ_defvec=bfd_elf32_powerpcle_vec
      targ_selvecs="rs6000coff_vec bfd_elf32_powerpc_vec ppcboot_vec"
      targ64_selvecs="bfd_elf64_powerpc_vec bfd_elf64_powerpcle_vec"
-@@ -1141,7 +1141,7 @@ case "${targ}" in
+@@ -1177,7 +1177,7 @@
      targ_selvecs="bfd_elf32_sparc_vec sunos_big_vec"
      targ_underscore=yes
      ;;
@@ -103,7 +113,7 @@
      targ_defvec=bfd_elf32_sparc_vec
      targ_selvecs="sparclinux_vec bfd_elf64_sparc_vec sunos_big_vec"
      ;;
-@@ -1188,7 +1188,7 @@ case "${targ}" in
+@@ -1224,7 +1224,7 @@
      targ_defvec=sunos_big_vec
      targ_underscore=yes
      ;;
@@ -112,10 +122,10 @@
      targ_defvec=bfd_elf64_sparc_vec
      targ_selvecs="bfd_elf32_sparc_vec sparclinux_vec sunos_big_vec"
      ;;
- 		;;
---- gdb-6.1/libtool.m4.uclibc	2004-05-11 18:03:37.000000000 +0200
-+++ gdb-6.1/libtool.m4	2004-05-11 18:05:59.000000000 +0200
-@@ -645,6 +645,11 @@ linux-gnu*)
+diff -ur gdb-6.2.orig/libtool.m4 gdb-6.2/libtool.m4
+--- gdb-6.2.orig/libtool.m4	2004-08-24 14:42:13.000000000 +0000
++++ gdb-6.2/libtool.m4	2004-08-24 14:43:10.000000000 +0000
+@@ -645,6 +645,11 @@
    lt_cv_file_magic_test_file=`echo /lib/libc.so* /lib/libc-*.so`
    ;;
  
@@ -127,9 +137,10 @@
  netbsd*)
    if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
      [lt_cv_deplibs_check_method='match_pattern /lib[^/\.]+\.so\.[0-9]+\.[0-9]+$']
---- gdb-6.1/ltconfig.uclibc	2004-05-11 18:07:29.000000000 +0200
-+++ gdb-6.1/ltconfig	2004-05-11 18:11:59.000000000 +0200
-@@ -602,7 +602,7 @@ host_os=`echo $host | sed 's/^\([^-]*\)-
+diff -ur gdb-6.2.orig/ltconfig gdb-6.2/ltconfig
+--- gdb-6.2.orig/ltconfig	2004-08-24 14:42:13.000000000 +0000
++++ gdb-6.2/ltconfig	2004-08-24 14:43:10.000000000 +0000
+@@ -602,7 +602,7 @@
  
  # Transform linux* to *-*-linux-gnu*, to support old configure scripts.
  case $host_os in
@@ -138,7 +149,7 @@
  linux*) host=`echo $host | sed 's/^\(.*-.*-linux\)\(.*\)$/\1-gnu\2/'`
  esac
  
-@@ -1259,6 +1259,24 @@ linux-gnu*)
+@@ -1259,6 +1259,24 @@
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
