@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.54 2004/05/23 03:04:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.55 2004/05/31 05:00:04 eradicator Exp $
+
+*alsa-utils-1.0.5 (30 May 2004)
+
+  30 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-utils-1.0.5.ebuild:
+  Version Bump.
 
   22 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-utils-1.0.4.ebuild:

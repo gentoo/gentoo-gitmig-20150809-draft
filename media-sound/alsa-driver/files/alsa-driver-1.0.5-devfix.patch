@@ -1,0 +1,20 @@
+diff -Naur alsa-driver-1.0.5.orig/hal2/hal2.c alsa-driver-1.0.5/hal2/hal2.c
+--- alsa-driver-1.0.5.orig/hal2/hal2.c	2002-10-21 11:53:22.000000000 -0700
++++ alsa-driver-1.0.5/hal2/hal2.c	2004-05-30 20:18:34.000000000 -0700
+@@ -134,14 +134,14 @@
+ 	 * true, but it seems to work.
+ 	 */
+ 	if ((err = snd_register_dma_channel(card, "HAL2 record", 0,
+-					    SNDRV_DMA_TYPE_PCI,
++					    SNDRV_DMA_TYPE_DEV,
+ 					    dma1_size[dev], NULL,
+ 					    &hal2card->dma1ptr)) < 0) {
+ 		snd_printk("Couldn't get dma1\n");
+ 		return err;
+ 	}
+ 	if ((err = snd_register_dma_channel(card, "HAL2 playback", 0,
+-					    SNDRV_DMA_TYPE_PCI,
++					    SNDRV_DMA_TYPE_DEV,
+ 					    dma2_size[dev], NULL,
+ 					    &hal2card->dma2ptr)) < 0) {
+ 		snd_printk("Couldn't get dma2\n");

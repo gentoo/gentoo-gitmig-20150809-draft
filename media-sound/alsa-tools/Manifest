@@ -1,6 +1,7 @@
 MD5 091b34fa90d0ff4395892853b05d127c alsa-tools-0.9.0_rc1-r1.ebuild 1610
 MD5 4c7d2ebf4f61d8c9729799c41a18d6f4 alsa-tools-1.0.3.ebuild 2370
 MD5 19f798fb5c496d07007c9922d0db2c6e alsa-tools-0.9.8.ebuild 2119
+MD5 cb47f62cf834991a8e7c6f9eac801527 alsa-tools-1.0.5.ebuild 2352
 MD5 c144ad0f4a4bd920d4e8887dee3388dc alsa-tools-1.0.2.ebuild 2277
 MD5 cb47f62cf834991a8e7c6f9eac801527 alsa-tools-1.0.4.ebuild 2352
 MD5 cd7d6c17355eb3c5c99844222d097999 ChangeLog 7081
@@ -10,4 +11,5 @@ MD5 1671d48040628fff2ae90826203f01ec files/digest-alsa-tools-0.9.8 70
 MD5 483effb0ad68356ad0b27560efd9e908 files/digest-alsa-tools-1.0.2 69
 MD5 0d9226e726980c37ecbe4ca0ab3fb23e files/digest-alsa-tools-1.0.3 69
 MD5 1bdcd1721550eb1146185f185e4048c3 files/digest-alsa-tools-1.0.4 69
+MD5 6936bcab5224ab9b201832698db86d84 files/digest-alsa-tools-1.0.5 69
 MD5 2094cef02e54ae2c227bf442fa461f08 files/digest-alsa-tools-0.9.0_rc1-r1 72
