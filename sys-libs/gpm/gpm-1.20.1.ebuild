@@ -1,33 +1,29 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.16 2004/04/06 10:45:18 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.17 2004/05/23 23:50:25 vapier Exp $
 
-IUSE="selinux"
 # Please use this variable to keep patch names sane for our patches!
 PATCH_VER="1.0"
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Console-based mouse driver"
+HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
 # Future patch's for gpm should keep this format.  This should help others
 # maintain the ebuild and keep patch's simple and and easy to read.
 SRC_PATH="ftp://arcana.linux.it/pub/gpm/${P}.tar.bz2"
 GPM_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
-
 SRC_URI="${SRC_PATH}
-		${GPM_PATCHES}"
+	${GPM_PATCHES}"
 
-
-HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 ppc64 mips"
+IUSE="selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	sys-devel/autoconf"
 RDEPEND="selinux? ( sec-policy/selinux-gpm )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64 mips"
 
 PATCHDIR=${WORKDIR}/patches
 
@@ -53,7 +49,7 @@ src_compile() {
 	sed -e 's:all\: $(srcdir)/gpmdoc.ps:all\::' \
 		doc/Makefile.orig > doc/Makefile
 
-	MAKEOPTS="-j1" emake || die
+	emake -j1 || die
 }
 
 src_install() {
@@ -75,4 +71,3 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/gpm.conf.d gpm
 }
-
