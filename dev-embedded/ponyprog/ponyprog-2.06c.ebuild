@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.2 2004/03/30 20:06:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.3 2004/05/07 13:54:53 dragonheart Exp $
 
 RESTRICT="nomirror"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.lancos.com/ppwin95.html"
 SRC_URI="http://www.lancos.com/e2p/V2_06/${P}-rh70.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=""
 RDEPEND="virtual/x11
