@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/curphoo/curphoo-0.3.9.ebuild,v 1.1 2003/10/08 14:16:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/curphoo/curphoo-0.3.9.ebuild,v 1.2 2003/12/12 02:25:16 mkennedy Exp $
 
 DESCRIPTION="Curphoo is a console Yahoo! Chat client written in Python"
-HOMEPAGE="http://www.waduck.com/~curphoo/
-	https://savannah.nongnu.org/projects/curphoo/"
+HOMEPAGE="http://savannah.nongnu.org/projects/curphoo/"
 SRC_URI="http://savannah.nongnu.org/download/curphoo/curphoo.pkg/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
