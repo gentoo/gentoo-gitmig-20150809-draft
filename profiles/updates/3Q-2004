@@ -124,3 +124,4 @@ move net-www/mythweb www-apps/mythweb
 move net-misc/nut www-apps/nut
 move net-www/online-bookmarks www-apps/online-bookmarks
 move net-www/pcgi www-apps/pcgi
+move net-www/phpBB www-apps/phpBB
