@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+    <email>tanitive@gentoo.org</email>
+    <name>Michael Imhof</name>
+</maintainer>
+<maintainer>
+    <email>dragonheart@gentoo.org</email>
+    <name>Daniel Black</name>
+    <description>I just happened to fix this once or twice. Please take over if you want it
+    </description>
+</maintainer>
+<longdescription></longdescription>
+</pkgmetadata>

@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/ace
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.25 2004/12/20 01:34:53 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.26 2005/01/02 04:45:19 dragonheart Exp $
+
+*ace-5.4.3 (02 Jan 2005)
+
+  02 Jan 2005; Daniel Black <dragonheart@gentoo.org> +ace-5.4.3.ebuild,
+  +metadata.xml:
+  Version bump to fix gcc-3.4 compile problems. Noted in bug #71903 by  
+  Arkadi Shishlov <arkadi@it.lv>. Added myself and Michael Imhof as 
+  maintainters in the metadata.xml
 
   20 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> ace-5.4-r2.ebuild:
   Stable on alpha.
