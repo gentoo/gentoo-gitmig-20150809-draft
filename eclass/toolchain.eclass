@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.130 2005/03/18 03:01:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.131 2005/03/18 03:49:43 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1001,7 +1001,7 @@ gcc_do_configure() {
 
 	# All our cross-compile logic goes here !  woo !
 	confgcc="${confgcc} --host=${CHOST}"
-	if is_crosscompile; then
+	if is_crosscompile ; then
 		# Straight from the GCC install doc:
 		# "GCC has code to correctly determine the correct value for target 
 		# for nearly all native systems. Therefore, we highly recommend you
@@ -1012,10 +1012,6 @@ gcc_do_configure() {
 
 	# ppc altivec support
 	confgcc="${confgcc} $(use_enable altivec)"
-
-	# Fix linking problem with c++ apps which where linked
-	# against a 3.2.2 libgcc
-	[[ $(tc-arch) == "hppa" ]] && confgcc="${confgcc} --enable-sjlj-exceptions"
 
 	# Native Language Support
 	if use nls && ! use build ; then
@@ -1030,15 +1026,14 @@ gcc_do_configure() {
 	# for statically linked apps but not dynamic
 	# so use setjmp/longjmp exceptions by default
 	# uclibc uses --enable-clocale=uclibc (autodetected)
-	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
-	if ! is_uclibc ; then
-		confgcc="${confgcc} --enable-__cxa_atexit --enable-clocale=gnu"
+	if is_uclibc ; then
+		confgcc="${confgcc} --disable-__cxa_atexit --enable-sjlj-exceptions --enable-target-optspace"
 	else
-		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace \
-			--enable-sjlj-exceptions"
+		confgcc="${confgcc} --enable-__cxa_atexit --disable-sjlj-exceptions --enable-clocale=gnu"
 	fi
 
 	# reasonably sane globals (hopefully)
+	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
 	confgcc="${confgcc} \
 		--with-system-zlib \
 		--disable-checking \
@@ -1054,14 +1049,12 @@ gcc_do_configure() {
 	GCC_LANG=${GCC_LANG:-c}
 	confgcc="${confgcc} --enable-languages=${GCC_LANG}"
 
-	# When building a stage1 cross-compiler (just C compiler), we 
-	# have to disable shared gcc libs and threads or gcc goes boom
+	# When building a stage1 cross-compiler (just C compiler), we have to 
+	# disable a bunch of features or gcc goes boom
 	if is_crosscompile && [[ ${GCC_LANG} == "c" ]] ; then
 		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
-	elif use static ; then
-		confgcc="${confgcc} --disable-shared --enable-threads=posix"
 	else
-		confgcc="${confgcc} --enable-shared --enable-threads=posix"
+		confgcc="${confgcc} $(use_enable !static shared) --enable-threads=posix"
 	fi
 
 	# Nothing wrong with a good dose of verbosity
