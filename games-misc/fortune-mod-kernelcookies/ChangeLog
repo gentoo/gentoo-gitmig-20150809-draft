@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-kernelcookies
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/ChangeLog,v 1.4 2004/06/25 03:21:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/ChangeLog,v 1.5 2004/09/23 04:50:08 mr_bones_ Exp $
+
+  22 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/8-offensive.patch, fortune-mod-kernelcookies-8.ebuild:
+  support the offensive flag for bug #64985
 
 *fortune-mod-kernelcookies-8 (21 Jun 2004)
 

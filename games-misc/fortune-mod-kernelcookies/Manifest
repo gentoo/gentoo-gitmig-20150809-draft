@@ -1,4 +1,5 @@
-MD5 d21c605ff219adc38993823bd9195160 fortune-mod-kernelcookies-8.ebuild 682
-MD5 897b5fd476979449fdeaf04bd2c73f34 ChangeLog 766
+MD5 d2ac40628ac5db977fe5bde1e7891256 ChangeLog 931
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 1efd3e97b965b85eb56caae66bf4f575 fortune-mod-kernelcookies-8.ebuild 882
 MD5 5fd9719487741cb1f0af51c53c429b55 files/digest-fortune-mod-kernelcookies-8 65
+MD5 44290846f434d6e7c31bb3362e05c813 files/8-offensive.patch 3990
