@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.11 2004/06/16 15:36:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.12 2004/06/16 17:38:40 solar Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -43,7 +43,9 @@ SRC_URI="http://dev.gentoo.org/~lv/${P}.tar.bz2
 HOMEPAGE="http://sources.redhat.com/glibc/"
 
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
-KEYWORDS="-* ~amd64 ppc64"
+#KEYWORDS="-* ~amd64 ppc64"
+# yanking ~amd64 due to repoman bugs.. plz add back later.
+KEYWORDS="-* ppc64"
 
 SLOT="2.2"
 LICENSE="LGPL-2"
