@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/libextractor-0.1.0.ebuild,v 1.3 2002/08/14 11:52:27 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/libextractor-0.1.0.ebuild,v 1.4 2002/10/05 05:39:11 drobbins Exp $
+
+IUSE="oggvorbis"
 
 S=${WORKDIR}/extractor-${PV}
 DESCRIPTION="A simple library for keyword extraction"

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.7 2002/10/04 05:26:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.8 2002/10/05 05:39:11 drobbins Exp $
+
+IUSE="wxwin gtk qt tcltk"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Generic GUI Module for Python"

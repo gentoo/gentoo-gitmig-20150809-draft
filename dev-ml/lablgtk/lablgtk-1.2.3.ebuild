@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.3.ebuild,v 1.2 2002/07/22 06:57:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.3.ebuild,v 1.3 2002/10/05 05:39:11 drobbins Exp $
+
+IUSE="gnome opengl"
 
 DESCRIPTION="Objective CAML interface for Gtk+"
 HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html"
