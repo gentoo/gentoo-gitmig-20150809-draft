@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r2.ebuild,v 1.2 2002/02/01 11:26:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r2.ebuild,v 1.3 2002/03/10 21:50:49 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -14,7 +14,8 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	lame? ( >=media-sound/lame-3.89b )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta1 )
 	cups? ( net-print/cups )
-	ssl? ( >=dev-libs/openssl-0.9.6b )"
+	ssl? ( >=dev-libs/openssl-0.9.6b )
+	media-libs/lcms"
 #	opengl? ( virtual/opengl )" #this last for opengl screensavers
 #	samba? ( net-fs/samba ) #use flag doesn't exist yet and we don't want such a heavy dep by deafult
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
@@ -76,6 +77,16 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
     sed -e 's/SessionTypes=/SessionTypes=kde-2.2.2,kde-3.0,xsession,/' kdmrc.orig | cat > kdmrc
     rm kdmrc.orig
     
-    dodir ${KDEDIR}/share/templates/.source/emptydir
-  
+    rm -rf ${D}/${KDEDIR}/share/templates/.source/emptydir
+    
+}
+
+pkg_postinst() {
+    
+    # an empty dir that would otherwise be unmerged with the previous instance
+    #dodir ${KDEDIR}/share/templates/.source/emptydir
+    echo "i am here"
+    echo "KDEDIR=$KDEDIR"
+    mkdir -p ${D}/${KDEDIR}/share/templates/.source/emptydir
+
 }
