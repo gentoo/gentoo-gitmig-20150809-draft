@@ -1,0 +1,11 @@
+# ChangeLog for games-mud/smm++
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/smm++/ChangeLog,v 1.1 2004/09/02 09:59:54 mr_bones_ Exp $
+
+*smm++-6.1.1 (02 Sep 2004)
+
+  02 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +files/smm, +smm++-6.1.1.ebuild:
+  initial commit - ebuild based on the one provided by Aaron Walker via bug
+  #61706
+
