@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.22.ebuild,v 1.1 2003/08/13 16:13:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.22.ebuild,v 1.2 2003/08/13 16:23:46 stuart Exp $
 
 PHP_EXT_NAME="mmcache"
 PHP_EXT_ZENDEXT="yes"
@@ -42,9 +42,6 @@ src_install() {
 	doins encoder.php mmcache.php mmcache.gif
 
 	dodoc CREDITS LICENSE README TODO EXPERIMENTAL
-}
-
-pkg_postinst () {
 
 	php-ext-base_addtoinifiles "mmcache.shm_size" '"16"'
 	php-ext-base_addtoinifiles "mmcache.cache_dir" "\"${MMCACHE_CACHEDIR}\""
@@ -58,6 +55,10 @@ pkg_postinst () {
 	php-ext-base_addtoinifiles "mmcache.shm_prune_period" '"0"'
 	php-ext-base_addtoinifiles "mmcache.compress" '"0"'
 	php-ext-base_addtoinifiles "mmcache.shm_only" '"0"'
+
+}
+
+pkg_postinst () {
 
 	einfo "You need to restart apache to activate MMCache"
 	einfo
