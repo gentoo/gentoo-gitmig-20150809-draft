@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.1 2004/03/09 03:25:47 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.2 2004/03/17 21:43:42 g2boojum Exp $
+
+  17 Mar 2004; Grant Goodyear <g2boojum@hotmail.com> mailwrapper-0.1.ebuild:
+  Updated the ebuild to remove the protection that had kept users
+  from overwriting /usr/sbin/sendmail.  Now that we're gearing up to
+  have all mtas install mailwrapper this protection is unwanted.
 
 *mailwrapper-0.1 (08 Mar 2004)
 
