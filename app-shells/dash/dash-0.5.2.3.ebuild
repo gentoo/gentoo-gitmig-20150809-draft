@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.1.3-r1.ebuild,v 1.4 2005/02/05 11:23:14 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.2.3.ebuild,v 1.1 2005/04/02 16:22:26 ka0ttic Exp $
 
 inherit eutils versionator flag-o-matic toolchain-funcs
 
 DEB_P="${PN}_$(replace_version_separator 3 '-')"
 MY_P2="${DEB_P%-*}"
-MY_P=${MY_P2/_/-}
+MY_P="${MY_P2/_/-}"
 
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Debian-version of NetBSD's lightweight bourne shell"
 HOMEPAGE="http://ftp.debian.org/debian/pool/main/d/dash/"
 SRC_URI="mirror://debian/pool/main/d/dash/${MY_P2}.orig.tar.gz \
@@ -16,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/d/dash/${MY_P2}.orig.tar.gz \
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="diet static"
 
 RDEPEND="diet? ( dev-libs/dietlibc )
@@ -24,6 +23,8 @@ RDEPEND="diet? ( dev-libs/dietlibc )
 DEPEND="${RDEPEND}
 	sys-apps/sed
 	dev-util/yacc"
+
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -45,5 +46,5 @@ src_install() {
 	exeinto /bin
 	newexe src/dash dash
 	newman src/dash.1 dash.1
-	dodoc COPYING debian/changelog
+	dodoc COPYING ChangeLog
 }

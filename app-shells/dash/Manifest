@@ -1,10 +1,18 @@
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 ab5a04fcdad3f58ff4ccdbf0d3e056cd dash-0.5.1.1.ebuild 878
-MD5 e5208879b0a614dad665c06ea43b4140 ChangeLog 2552
-MD5 985945e745208c96da71e06d64ca4c70 dash-0.5.1.3-r1.ebuild 1185
-MD5 1b14ec97375cdebb74506feac7c885c2 dash-0.5.2.1.ebuild 1178
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e69317986be0d440b9cbc268998bfbc7 dash-0.5.2.2.ebuild 1181
-MD5 115b4f38170f7c82c6c9e3259c55108c files/digest-dash-0.5.1.1 131
-MD5 62cd384479c8aa7f4f6470c9e33c813b files/digest-dash-0.5.2.2 131
+MD5 1b14ec97375cdebb74506feac7c885c2 dash-0.5.2.1.ebuild 1178
+MD5 3776bde77d25365b8760dfb26aaa22f9 dash-0.5.2.3.ebuild 1181
+MD5 90fe13baa67c7013a254a5b24991619e ChangeLog 2757
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 f5e57aa40830691e81633f1bd244801c files/digest-dash-0.5.2.1 131
-MD5 789070e5451f8e3151926438cfb4744b files/digest-dash-0.5.1.3-r1 131
+MD5 62cd384479c8aa7f4f6470c9e33c813b files/digest-dash-0.5.2.2 131
+MD5 e59afdb878e45e78521df9aa5fd8cdfc files/digest-dash-0.5.2.3 131
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTsbbEZCkKN40op4RAsRbAJ0WfQG+ABFIG10NLsTSjjLRC+KjvACfa2PN
+2wTc74aWuIE712ULEuGs4bA=
+=/i6n
+-----END PGP SIGNATURE-----
