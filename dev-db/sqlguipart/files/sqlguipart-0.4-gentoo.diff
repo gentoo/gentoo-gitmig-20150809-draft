@@ -1,0 +1,116 @@
+--- sqlguipart/Makefile.am	Mon Jul 29 21:54:17 2002
++++ sqlguipart/Makefile.am	Wed Aug 21 16:52:44 2002
+@@ -24,62 +24,62 @@
+ install-data-local:
+ 	$(mkinstalldirs)  $(kde_datadir)/sqlguipart/
+ 	$(INSTALL_DATA) $(srcdir)/sqlguipart.rc  $(kde_datadir)/sqlguipart/sqlguipart.rc
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/sqlgui_factory.h $(kde_includes)/sqlgui/sqlgui_factory.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/sqlgui_part.h $(kde_includes)/sqlgui/sqlgui_part.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/adddata.h $(kde_includes)/sqlgui/adddata.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/basecreator.h $(kde_includes)/sqlgui/basecreator.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/cell.h $(kde_includes)/sqlgui/cell.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/export_csv.h $(kde_includes)/sqlgui/export_csv.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/export_excel.h $(kde_includes)/sqlgui/export_excel.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/export_formate.h $(kde_includes)/sqlgui/export_formate.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/export_html.h $(kde_includes)/sqlgui/export_html.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/export_text.h $(kde_includes)/sqlgui/export_text.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/export_xml.h $(kde_includes)/sqlgui/export_xml.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/exportbox.h $(kde_includes)/sqlgui/exportbox.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/loginbox.h $(kde_includes)/sqlgui/loginbox.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/sqlguiview.h $(kde_includes)/sqlgui/sqlguiview.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/tablegenerator.h $(kde_includes)/sqlgui/tablegenerator.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/sqlguidoc.h $(kde_includes)/sqlgui/sqlguidoc.h
+-	$(mkinstalldirs) $(kde_includes)/sqlgui/
+-	$(INSTALL_DATA) $(srcdir)/db_components.h $(kde_includes)/sqlgui/db_components.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/sqlgui_factory.h $(includedir)/sqlgui/sqlgui_factory.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/sqlgui_part.h $(includedir)/sqlgui/sqlgui_part.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/adddata.h $(includedir)/sqlgui/adddata.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/basecreator.h $(includedir)/sqlgui/basecreator.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/cell.h $(includedir)/sqlgui/cell.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/export_csv.h $(includedir)/sqlgui/export_csv.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/export_excel.h $(includedir)/sqlgui/export_excel.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/export_formate.h $(includedir)/sqlgui/export_formate.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/export_html.h $(includedir)/sqlgui/export_html.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/export_text.h $(includedir)/sqlgui/export_text.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/export_xml.h $(includedir)/sqlgui/export_xml.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/exportbox.h $(includedir)/sqlgui/exportbox.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/loginbox.h $(includedir)/sqlgui/loginbox.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/sqlguiview.h $(includedir)/sqlgui/sqlguiview.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/tablegenerator.h $(includedir)/sqlgui/tablegenerator.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/sqlguidoc.h $(includedir)/sqlgui/sqlguidoc.h
++	$(mkinstalldirs) $(includedir)/sqlgui/
++	$(INSTALL_DATA) $(srcdir)/db_components.h $(includedir)/sqlgui/db_components.h
+ 	$(mkinstalldirs) 
+ 	$(INSTALL_DATA) $(srcdir)/sqlguipart.desktop  $(kde_servicesdir)
+ 
+ uninstall-local:
+ 	-rm -f  $(kde_datadir)/sqlguipart/sqlguipart.rc
+-	-rm -f $(kde_includes)/sqlgui/sqlgui_factory.h
+-	-rm -f $(kde_includes)/sqlgui/sqlgui_part.h
+-	-rm -f $(kde_includes)/sqlgui/adddata.h
+-	-rm -f $(kde_includes)/sqlgui/basecreator.h
+-	-rm -f $(kde_includes)/sqlgui/cell.h
+-	-rm -f $(kde_includes)/sqlgui/export_csv.h
+-	-rm -f $(kde_includes)/sqlgui/export_excel.h
+-	-rm -f $(kde_includes)/sqlgui/export_formate.h
+-	-rm -f $(kde_includes)/sqlgui/export_html.h
+-	-rm -f $(kde_includes)/sqlgui/export_text.h
+-	-rm -f $(kde_includes)/sqlgui/export_xml.h
+-	-rm -f $(kde_includes)/sqlgui/exportbox.h
+-	-rm -f $(kde_includes)/sqlgui/loginbox.h
+-	-rm -f $(kde_includes)/sqlgui/sqlguiview.h
+-	-rm -f $(kde_includes)/sqlgui/tablegenerator.h
+-	-rm -f $(kde_includes)/sqlgui/sqlguidoc.h
+-	-rm -f $(kde_includes)/sqlgui/db_components.h
++	-rm -f $(includedir)/sqlgui/sqlgui_factory.h
++	-rm -f $(includedir)/sqlgui/sqlgui_part.h
++	-rm -f $(includedir)/sqlgui/adddata.h
++	-rm -f $(includedir)/sqlgui/basecreator.h
++	-rm -f $(includedir)/sqlgui/cell.h
++	-rm -f $(includedir)/sqlgui/export_csv.h
++	-rm -f $(includedir)/sqlgui/export_excel.h
++	-rm -f $(includedir)/sqlgui/export_formate.h
++	-rm -f $(includedir)/sqlgui/export_html.h
++	-rm -f $(includedir)/sqlgui/export_text.h
++	-rm -f $(includedir)/sqlgui/export_xml.h
++	-rm -f $(includedir)/sqlgui/exportbox.h
++	-rm -f $(includedir)/sqlgui/loginbox.h
++	-rm -f $(includedir)/sqlgui/sqlguiview.h
++	-rm -f $(includedir)/sqlgui/tablegenerator.h
++	-rm -f $(includedir)/sqlgui/sqlguidoc.h
++	-rm -f $(includedir)/sqlgui/db_components.h
+ 	-rm -f  $(kde_servicesdir)
+ 
+ ####### kdevelop will overwrite this part!!! (end)############

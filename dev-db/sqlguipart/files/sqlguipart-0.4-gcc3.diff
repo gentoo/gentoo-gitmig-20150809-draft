@@ -1,0 +1,77 @@
+--- sqlguipart/tablegenerator.cpp	Mon Jul 29 15:01:49 2002
++++ sqlguipart/tablegenerator.cpp	Wed Aug 21 15:21:14 2002
+@@ -6,6 +6,8 @@
+ **
+ ** WARNING! All changes made in this file will be lost!
+ ****************************************************************************/
++using namespace std;
++
+ #include "tablegenerator.h"
+ 
+ #include <qvariant.h>
+--- sqlguipart/sqlguiview.cpp	Mon Jul 29 15:54:54 2002
++++ sqlguipart/sqlguiview.cpp	Wed Aug 21 15:25:33 2002
+@@ -15,6 +15,8 @@
+  *                                                                         *
+  ***************************************************************************/
+ 
++using namespace std;
++
+ // include files for Qt
+ #include <qprinter.h>
+ #include <qpainter.h>
+--- sqlguipart/sqlguidoc.cpp	Mon Jul 29 16:05:10 2002
++++ sqlguipart/sqlguidoc.cpp	Wed Aug 21 15:27:36 2002
+@@ -25,6 +25,8 @@
+  *
+ */
+ 
++using namespace std;
++
+ // include files for Qt
+ #include <qdir.h>
+ #include <qwidget.h>
+--- sqlguipart/export_html.cpp	Wed Jul 10 14:42:38 2002
++++ sqlguipart/export_html.cpp	Wed Aug 21 15:38:00 2002
+@@ -18,7 +18,7 @@
+ /*
+ 	Vorerst gehen wir davon aus, daß die Daten bereits sortiert übergeben werden.
+ */
+-
++using namespace std;
+ 
+ #include <stdlib.h>
+ #include <export_html.h>
+--- sqlguipart/export.cpp	Thu Jul 11 15:21:09 2002
++++ sqlguipart/export.cpp	Wed Aug 21 15:38:41 2002
+@@ -15,6 +15,8 @@
+  *                                                                         *
+  ***************************************************************************/
+ 
++using namespace std;
++
+ #include <export_formate.h>
+ 
+ #include <string.h>
+--- sqlguipart/sqlgui_part.cpp	Wed Jul 31 16:12:12 2002
++++ sqlguipart/sqlgui_part.cpp	Wed Aug 21 15:57:26 2002
+@@ -15,6 +15,8 @@
+  *                                                                         *
+  ***************************************************************************/
+ 
++using namespace std;
++
+ // include files for QT
+ #include <qdir.h>
+ #include <qprinter.h>
+--- sqlguipart/adddata.cpp	Wed Aug 21 16:02:40 2002
++++ sqlguipart/adddata.cpp	Wed Aug 21 16:07:32 2002
+@@ -6,6 +6,8 @@
+ **
+ ** WARNING! All changes made in this file will be lost!
+ ****************************************************************************/
++using namespace std;
++
+ #include "adddata.h"
+ 
+ #include <qvariant.h>
