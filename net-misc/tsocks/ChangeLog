@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/tsocks
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/ChangeLog,v 1.1 2002/06/12 03:23:50 lamer Exp $
+
+*tsocks-1.8beta4  (10 Jun 2002)
+
+  10 Jun 2002; Ben Lutgens <lamer@gentoo.org> tsocks-1.8_beta4: Ebuild for
+  tsocks submitted to bugs.gentoo.org by a gentoo user *THANKS*
+  bardur-gta@odense.kollegienet.dk. It should be noted that as per the
+  install docs, this stuff gets installed to /lib. Mainly due to the fact
+  that it's often needed before /usr gets mounted. So the old
+  /etc/ld.so.preload trick won't work!

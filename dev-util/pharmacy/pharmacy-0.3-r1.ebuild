@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pharmacy/pharmacy-0.3-r1.ebuild,v 1.3 2002/05/27 17:27:38 drobbins Exp $
+# Author Ben Lutgens <lamer@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pharmacy/pharmacy-0.3-r1.ebuild,v 1.4 2002/06/12 03:23:50 lamer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Front-End to CVS"
