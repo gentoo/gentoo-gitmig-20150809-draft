@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.7 2004/10/24 05:31:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.8 2004/12/07 12:54:06 dragonheart Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -55,6 +55,8 @@ src_compile() {
 		myconf="${myconf} --disable-photo-viewers"
 	fi
 
+	append-ldflags -Wl,-z,now
+
 	econf \
 		--libexecdir=/usr/lib \
 		`use_enable smartcard scdaemon` \
@@ -67,14 +69,14 @@ src_compile() {
 }
 
 src_install() {
-	einstall libexecdir="${D}/usr/lib/gnupg" || die
+	emake DESTDIR=${D} libexecdir="/usr/lib/gnupg" install || die
 
 	dosym gpg2 /usr/bin/gpg
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
-	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO VERSION
+	dodoc ChangeLog INSTALL NEWS README THANKS TODO VERSION
 
 	if ! use caps ; then
 		fperms u+s /usr/bin/gpg2

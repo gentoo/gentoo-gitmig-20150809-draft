@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.24 2004/10/21 02:50:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.25 2004/12/07 12:54:06 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -95,12 +95,14 @@ src_compile() {
 		myconf="${myconf} --enable-m-guard"
 	fi
 
+	append-ldflags -Wl,-z,now
+
 	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
-	einstall libexecdir="${D}/usr/lib/gnupg"
+	emake DESTDIR=${D} libexecdir="/usr/lib/gnupg" install || die "install failed"
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"

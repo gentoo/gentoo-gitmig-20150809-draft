@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.15 2004/11/09 20:15:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.16 2004/12/07 12:54:06 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 
 LICENSE="GPL-2 idea? ( IDEA )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ppc-macos s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ppc ~ppc-macos s390 sparc x86 ~ia64 ~mips ~ppc64"
 IUSE="X ldap nls static idea"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
@@ -90,7 +90,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall libexecdir="${D}/usr/lib/gnupg" || die
+	emake DESTDIR=${D} libexecdir="/usr/lib/gnupg" install || die
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
