@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.4.4.ebuild,v 1.2 2002/12/01 18:06:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.4.4.ebuild,v 1.3 2002/12/09 04:22:37 manson Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND} >=dev-util/pkgconfig-0.12.0"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~sparc64 ~ppc ~alpha"
+KEYWORDS="x86 ~sparc  ~ppc ~alpha"
 
 
 DOCS="AUTHORS ChangeLog COPYING* README* HACKING INSTALL NEWS TODO MAINTAINERS"

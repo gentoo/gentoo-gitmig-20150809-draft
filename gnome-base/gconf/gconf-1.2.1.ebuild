@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.1.ebuild,v 1.6 2002/10/05 05:39:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.1.ebuild,v 1.7 2002/12/09 04:22:37 manson Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnome/2.0.0/sources/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 
 RDEPEND=">=dev-libs/glib-2.0.6
 		>=gnome-base/ORBit2-2.4.1

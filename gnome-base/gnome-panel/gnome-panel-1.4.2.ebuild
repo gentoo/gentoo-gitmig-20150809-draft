@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.2.ebuild,v 1.1 2002/10/24 20:00:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.2.ebuild,v 1.2 2002/12/09 04:22:38 manson Exp $
 
 IUSE="kde nls"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Split out panel from gnome-core"
 SRC_URI="mirror://gnome/sources/gnome-core/1.4/gnome-core-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1.4"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc "
 LICENSE="GPL-2"
 
 RDEPEND="=gnome-base/control-center-1.4*
