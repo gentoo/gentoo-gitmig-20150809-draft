@@ -1,10 +1,13 @@
 # ChangeLog for app-arch/guitar
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.9 2003/02/12 02:56:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.10 2003/03/28 10:53:18 pvdabeel Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *guitar-0.1.4 (21 May 2002)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> guitar-0.1.4.ebuild :
+  changed to ppc
 
   22 Jan 2003; Jon Nall <nall@gentoo.org> guitar-0.1.4.ebuild :
   changed to ~ppc after qualifying rar with x86? bug #14360
@@ -18,11 +21,8 @@
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> guitar-0.1.4.ebuild :
   Added IUSE.
 
-  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
-        Added ppc keyword
-
-  21 May 2002; J.Alberto S.L. <bass@gentoo.org> guitar-0.1.4.ebuild:
-	First relase, gnome USE don't works.
+  21 May 2002; J.Alberto S.L. <bass@gentoo.org> guitar-0.1.4.ebuild :
+  First relase, gnome USE don't works.
 
   26 May 2002: J.Alberto S.L. <bass@gentoo.org> guitar-0.1.4.ebuild:
-  	Fixed problem with gnome. Thanks Seemant.
+  Fixed problem with gnome. Thanks Seemant.

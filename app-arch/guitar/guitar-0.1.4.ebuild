@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.15 2003/02/13 05:54:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.16 2003/03/28 10:53:18 pvdabeel Exp $
 
 MY_P=guiTAR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 #app-arch/rar is binary for x86 only, how is sparc supported?
-KEYWORDS="x86 ~ppc -sparc"
+KEYWORDS="x86 ppc -sparc"
 
 DEPEND="x11-libs/gtk+
 	sys-apps/tar
