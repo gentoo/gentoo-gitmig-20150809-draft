@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.72.1.ebuild,v 1.1 2003/08/17 23:04:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.72.1.ebuild,v 1.2 2003/08/24 23:29:18 vapier Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -83,6 +83,10 @@ src_compile() {
 }
 
 src_install() {
+	sed -i \
+		-e "s:Xmame:${TARGET}:g" \
+		-e "s:xmame:${TARGET}:g" \
+		doc/*.6
 	sed -i \
 		-e "s:^PREFIX.*:PREFIX=${D}/usr:" \
 		-e "s:^BINDIR.*:BINDIR=${D}/${GAMES_BINDIR}:" \
