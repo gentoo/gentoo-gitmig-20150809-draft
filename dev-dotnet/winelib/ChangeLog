@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/winelib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.5 2004/06/24 22:05:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.6 2004/06/29 18:05:57 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> winelib-0.3.ebuild:
+  add sed-4 dep
 
   21 Jun 2004; Peter Johanson,,, <peter@gentoo.org> winelib-0.3.ebuild:
   Fixed dodoc stuff.
