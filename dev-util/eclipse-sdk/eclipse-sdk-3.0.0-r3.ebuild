@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.6 2004/08/22 16:01:43 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.7 2004/09/16 06:55:11 sejo Exp $
 
 inherit eutils java-utils
 
@@ -37,7 +37,10 @@ pkg_setup() {
 	ewarn "This package is _highly_ experimental."
 	ewarn "If you are using Eclipse 2.1.x for any serious work, stop now."
 	ewarn "You cannot expect to be productive with this packaging of 3.0!"
-
+	if use ppc; then
+		ewarn "This package needs 1 gig Ram on PPC !"
+	fi
+	
 	java-utils_setup-vm
 
 	# karltk: refactor, put in java-pkg.eclass?
