@@ -3,6 +3,5 @@ MD5 9683bb7323c40d69b48d54ad0eb169ed metadata.xml 221
 MD5 362a3ce953cac3609c8202c145bbffe4 ChangeLog 4848
 MD5 afb306ce3003c257a6c0c3c2dee6beb7 cacti-0.8.6b.ebuild 1571
 MD5 92214d64b7a546022d81ca37cb137262 files/digest-cacti-0.8.6c 65
-MD5 9921205d0e13d5948104d5de2e58d3ee files/cacti-0.8.5a-sql-injection.patch 625
 MD5 5415dc0df13fd1528eb90acce7f44989 files/digest-cacti-0.8.6b 65
 MD5 d7fa94819e0b14e84ee410d4afa7bb8f files/postinstall-en.txt 2359
