@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-4.1-r1.ebuild,v 1.9 2003/02/13 15:30:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-4.1-r1.ebuild,v 1.10 2003/02/20 17:22:41 lu_zero Exp $
 
 S=${WORKDIR}/Amaya/LINUX-ELF
 DESCRIPTION="The W3C Web-Browser"
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.w3.org/Amaya/"
 KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="BSD"
+IUSE=""
 
 DEPEND=">=x11-libs/openmotif-2.1.30 sys-devel/perl"
 RDEPEND=">=x11-libs/openmotif-2.1.30"
