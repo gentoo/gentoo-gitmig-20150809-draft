@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2-r1.ebuild,v 1.1 2004/04/09 22:39:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2-r2.ebuild,v 1.1 2004/04/13 18:44:08 seemant Exp $
 
 IUSE="nls oggvorbis flac gtk2"
 
 MY_PV=${PV/1_pre/0.}
 MY_P=${PN}-${MY_PV}
-DSD_PATCH=${MY_P}-dsd2.patch
+DSD_PATCH=${MY_P}-dsd3.patch.bz2
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="EasyTAG mp3/ogg ID3 tag editor"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
