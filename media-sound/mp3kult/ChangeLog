@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/mp3kult
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/ChangeLog,v 1.1 2002/12/05 22:52:19 rphillips Exp $
+
+*mp3kult-0.7 (05 Dec 2002)
+  05 Dec 2002; Ryan Phillips <rphillips@gentoo.org> mp3kult-0.7.ebuild :
+  New package. Submitted by Tobias Bayer. Fixes #8570
+  
