@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 346805b538ab1562cfadd9b127e3f3e6 ChangeLog 8712
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 92ec689b51607d1fb937ea7c2fba615f parted-1.6.10-r2.ebuild 1327
-MD5 6ff56233cfe26fa5e7844707e9a83a6e parted-1.6.6.ebuild 1333
-MD5 0df9004e28daa2db544ed65f852d695c files/digest-parted-1.6.10-r2 141
+MD5 06c5032f546579716b1211e46a9aae49 parted-1.6.6.ebuild 1331
+MD5 164e63e6a0ec131c3c6213dac3cf8636 parted-1.6.10-r2.ebuild 1324
 MD5 b020ac3a8080ad690bb3ce376e5273bb files/digest-parted-1.6.6 136
+MD5 0df9004e28daa2db544ed65f852d695c files/digest-parted-1.6.10-r2 141
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBJuTKHTu7gpaalycRAmPPAKCKVEF3ZmCgGHtw6SDOpRIzYhapLQCeKq9n
+TvenP134gETswppK6zXGYzY=
+=wT80
+-----END PGP SIGNATURE-----
