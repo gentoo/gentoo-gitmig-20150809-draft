@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1-r1.ebuild,v 1.4 2004/08/10 11:04:11 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1-r1.ebuild,v 1.5 2004/08/26 15:56:42 solar Exp $
 
 inherit eutils
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="perl ipv6 ssl tcpd X lm_sensors"
+IUSE="perl ipv6 ssl tcpd X lm_sensors minimal"
 
 PROVIDE="virtual/snmp"
 DEPEND="virtual/libc
-	<sys-libs/db-2
+	!minimal? ( <sys-libs/db-2 )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6d )
@@ -98,4 +98,14 @@ src_install () {
 	newins "${FILESDIR}/snmpd-5.1.conf" snmpd
 
 	keepdir /etc/snmp /var/lib/net-snmp
+
+	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
+	if use minimal; then
+		einfo "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
+		rm -rf ${D}/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform}}
+		rm -rf ${D}/usr/share/snmp/snmpconf-data ${D}/usr/share/snmp/*.conf
+		rm -rf ${D}/usr/bin/{net-snmp-config,fixproc,traptoemail} ${D}/usr/bin/snmpc{heck,onf}
+		find ${D} -name '*.pl' -exec rm -f '{}' \;
+		use ipv6 || rm -rf ${D}/usr/share/snmp/mibs/IPV6*
+	fi
 }
