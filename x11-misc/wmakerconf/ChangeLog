@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wmakerconf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.15 2004/12/05 19:53:24 fafhrd Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.16 2005/02/26 12:39:14 blubb Exp $
+
+  26 Feb 2005; Simon Stelling <blubb@gentoo.org> wmakerconf-2.9.2.ebuild:
+  added ~amd64
 
   05 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org>
   wmakerconf-2.8.1-r2.ebuild, wmakerconf-2.9.ebuild:
