@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a1c720226e315d6b14193d0421c435ac ChangeLog 1021
+MD5 8c85d0549daa71ded03a1592e32178ff xvkbd-2.5a.ebuild 671
+MD5 1e80455a14b744960218a0761f6e0fb9 ChangeLog 1127
+MD5 7fdb214504e52d0a92eb97a6cf039beb xvkbd-2.6.ebuild 683
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 3a86dbe325c7aa549e26e75d332dc4e2 xvkbd-2.5a.ebuild 670
-MD5 0f580db16f09db880be4cf39e9835d5b xvkbd-2.6.ebuild 674
 MD5 19a6bb0def1a6b9f6417b571eadcd7f8 files/digest-xvkbd-2.5a 61
 MD5 bb542bec9d1d8cb75d00c1fad9524fdb files/digest-xvkbd-2.6 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBf8cnI7fK2cqeyXkRAj/LAJ9ShhHr8dAqitMaTdRMRRlRJqf5QACgyKu7
-uQEuta7yi0k9h9UTdMsRiPg=
-=fvBY
+iD8DBQFB2/szZ/iYVBmujdURAkCZAJ4xrrWTfeo5ckMXcOS3c/rKjbtkagCgqodp
+FpTdwRFSAOhfviH1N8C20eE=
+=zqhW
 -----END PGP SIGNATURE-----
