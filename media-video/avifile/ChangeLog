@@ -1,6 +1,15 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.10 2002/04/24 21:09:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.11 2002/04/29 03:57:12 mkennedy Exp $
+
+*avifile-0.7.3.20020419-r1 (28 Apr 2002)
+
+  28 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  avifile-0.7.3.20020419-r1.ebuild, ChangeLog,
+  files/digest-avifile-0.7.3.20020419-r1 :
+
+  Should be --without-qt instead of --disable-qt (only users without
+  qt installed will see this produce a fatal error).
 
 avifile-0.7.3.20020419 (24 Apr 2002)
 
