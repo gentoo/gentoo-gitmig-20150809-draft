@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/piwi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.5 2003/12/18 06:34:26 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.6 2004/01/26 08:20:27 mboman Exp $
+
+*piwi-0.8.0.20031109-r1 (26 Jan 2004)
+
+  26 Jan 2004; Michael Boman <mboman@gentoo.org>
+  piwi-0.8.0.20031109-r1.ebuild:
+  Changed dependency on app-text/ghostscript to virtual/ghostscript. Closes bug
+  #39422
 
   18 Dec 2003; Michael Boman <mboman@gentoo.org> piwi-0.8.0.20031109.ebuild,
   files/make_release.sh, files/piwi-apache.conf:
