@@ -1,14 +1,21 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.15 2005/02/23 02:17:34 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.16 2005/03/18 04:39:07 kugelfang Exp $
+
+# UNKNOWN - SECTION
+
+afs
+drac
+
+# WON'T WORK - SECTION
+
+# 2005/03/18 - Danny van Dyk <kugelfang@gentoo.org>
+# net-libs/openslp doesn't pass make check. Security BUG #85347.
+slp
 
 # 2005/02/22 - Olivier Fisette <ribosome@gentoo.org>
 # EMBOSS is not available on amd64.
 emboss
-
-#unknowns
-afs
-drac
 
 # 2005/01/12 - Benjamin Schindler <config@gentoo.org>
 # Optional mono support will never work until we have a stable mono compiler
