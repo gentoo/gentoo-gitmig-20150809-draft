@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.4 2003/11/07 23:12:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.5 2003/11/21 05:11:06 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -70,7 +70,7 @@ php-ext_src_install() {
 	chmod +x build/shtool
 	#this will usually be /usr/lib/php/extensions/no-debug-no-zts-20020409/ 
 	#but i prefer not taking this risk
-	EXT_DIR=`php-config --extension-dir`
+	EXT_DIR="`php-config --extension-dir 2>/dev/null`"
 	insinto $EXT_DIR
 	doins modules/$PHP_EXT_NAME.so
 }
