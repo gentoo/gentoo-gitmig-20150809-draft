@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.5.ebuild,v 1.2 2002/11/21 10:16:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.5.ebuild,v 1.3 2002/11/26 07:35:13 raker Exp $
 
 IUSE="java tcpd"
 
@@ -22,9 +22,11 @@ S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	
+	export CXX="g++"
+
 	econf || die "./configure failed"
 
-	emake 
+	make 
 	
 	cd Xvnc
 	if use tcpd
