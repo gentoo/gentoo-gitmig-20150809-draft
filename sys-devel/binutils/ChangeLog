@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.120 2004/05/12 08:16:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.121 2004/05/14 01:05:44 solar Exp $
+
+  13 May 2004; <solar@gentoo.org> binutils-2.15.90.0.3-r3.ebuild:
+  bbconv.pl script is needed to convert profiling information in bb.out files to
+  format understood by gprof. reported by pasi valminen bug 50911
 
 *binutils-2.15.90.0.3-r3 (11 May 2004)
 
