@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.10 2005/03/17 14:17:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.11 2005/03/20 00:19:57 kloeri Exp $
+
+  20 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> rox-2.2.0.ebuild:
+  Stable on alpha.
 
   17 Mar 2005; Joseph Jezak <josejx@gentoo.org> rox-2.2.0.ebuild:
   Marked ppc stable for bug #85617.
