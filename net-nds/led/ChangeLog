@@ -1,0 +1,11 @@
+# ChangeLog for net-nds/led
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/led/ChangeLog,v 1.1 2004/12/08 11:28:06 robbat2 Exp $
+
+*led-1.79.4 (08 Dec 2004)
+
+  08 Dec 2004; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +led-1.79.4.ebuild:
+  New package, bug #71416. Based on submission by Gudleik Rasch
+  <gudleik@rastamatra.org>.
+
