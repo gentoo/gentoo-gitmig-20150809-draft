@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1b.ebuild,v 1.1 2004/02/08 16:49:38 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1b.ebuild,v 1.2 2004/02/10 10:20:03 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -260,11 +260,9 @@ src_unpack() {
 	rm stlport/STLport-4.5.3.patch
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 
-#	epatch ${FILESDIR}/${PV}/no-mozab.patch
-
 	epatch ${FILESDIR}/${PV}/nptl.patch
 
-#	epatch ${FILESDIR}/${PV}/openoffice-1.1.0-linux-2.6-fix.patch
+	epatch ${FILESDIR}/${PV}/openoffice-java.patch
 
 #	if [ ${ARCH} = "sparc" ]; then
 #		epatch ${FILESDIR}/${PV}/openoffice-1.1.0-sparc64-fix.patch

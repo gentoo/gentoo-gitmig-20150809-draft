@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.6 2004/02/05 10:34:16 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.7 2004/02/10 10:20:03 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -262,6 +262,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/no-mozab.patch
 
 	epatch ${FILESDIR}/${PV}/nptl.patch
+
+	epatch ${FILESDIR}/${PV}/openoffice-java.patch
 
 	epatch ${FILESDIR}/${PV}/openoffice-1.1.0-linux-2.6-fix.patch
 

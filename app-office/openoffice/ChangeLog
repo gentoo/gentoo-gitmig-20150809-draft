@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.57 2004/02/08 16:49:37 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.58 2004/02/10 10:20:03 pauldv Exp $
+
+  10 Feb 2004; Paul de Vrieze <pauldv@gentoo.org> openoffice-1.1.0-r3.ebuild,
+  openoffice-1.1.1b.ebuild, files/1.1.0/openoffice-java.patch,
+  files/1.1.1b/openoffice-java.patch:
+  A patch to fix compiling with sun-jdk. Thanks to jgonzalez@opentechnet.com in
+  bug #40942
 
 *openoffice-1.1.1b (08 Feb 2004)
 
