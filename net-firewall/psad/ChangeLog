@@ -1,11 +1,18 @@
 # ChangeLog for net-firewall/psad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.22 2005/01/05 20:46:48 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.23 2005/01/07 03:57:24 battousai Exp $
 
-  05 Jan 2005; Bryan D. Stine <bryan@gentoo.org> psad-1.3.2.ebuild:
+  06 Jan 2005; Bryan D. Stine <battousai@gentoo.org> psad-1.3.1.ebuild,
+  psad-1.3.2.ebuild, psad-1.3.4.ebuild, psad-1.4.0.ebuild:
+  A couple of fixes for unreported bugs. Typo fixes for postinst einfo in
+  1.3.1-1.3.4 ebuilds. Removed that same postinst einfo from 1.4.0 and added
+  detection for different sysloggers, giving conf suggestions for each. Closes
+  bug #76966.
+
+  05 Jan 2005; Bryan D. Stine <battousai@gentoo.org> psad-1.3.2.ebuild:
   x86 stable 1.3.2.
 
-  05 Jan 2005; Bryan D. Stine <bryan@gentoo.org> psad-1.3.1.ebuild,
+  05 Jan 2005; Bryan D. Stine <battousai@gentoo.org> psad-1.3.1.ebuild,
   psad-1.3.2.ebuild, psad-1.3.4.ebuild, psad-1.4.0.ebuild:
   Changed dependancy on mailx to virtual/mailx. Fixes bug #73972.
 

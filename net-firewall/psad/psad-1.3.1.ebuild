@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.12 2005/01/05 20:22:36 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.13 2005/01/07 03:57:24 battousai Exp $
 
 inherit eutils perl-module
 
@@ -77,18 +77,14 @@ src_install() {
 
 	cd ${S}
 
-	# Ditch the _CHANGEME_ for hostname, substituting in our real hostname
-	myhostname="$(< /etc/hostname)"
-	[ -e /etc/dnsdomainname ] && mydomain=".$(< /etc/dnsdomainname)"
-	cp psad.conf psad.conf.orig
-	sed -i "s:HOSTNAME\(.\+\)\_CHANGEME\_;:HOSTNAME\1${myhostname}${mydomain};:" psad.conf || die "Sed failed."
+	fix_psad_conf
 
 	insinto /etc/psad
 	doins *.conf
 	doins psad_*
 
 	exeinto /etc/init.d
-	doexe psad-init.gentoo psad
+	newexe psad-init.gentoo psad
 
 	cd ${S}/snort_rules
 	dodir /etc/psad/snort_rules
@@ -114,7 +110,22 @@ pkg_postinst() {
 	einfo "HOME_NET settings at the least."
 	echo
 	einfo "If you are using a logger other than sysklogd, please be sure to change the"
-	einfo "syslogCmd setting in /etc/psad/psad.conf. An example for syslog-ng users"
+	einfo "syslogdCmd setting in /etc/psad/psad.conf. An example for syslog-ng users"
 	einfo "would be:"
-	einfo "		syslogCmd = /usr/sbin/syslog-ng;"
+	einfo "		syslogdCmd	/usr/sbin/syslog-ng;"
+}
+
+fix_psad_conf() {
+	cp psad.conf psad.conf.orig
+
+	# Ditch the _CHANGEME_ for hostname, substituting in our real hostname
+	myhostname="$(< /etc/hostname)"
+	[ -e /etc/dnsdomainname ] && mydomain=".$(< /etc/dnsdomainname)"
+	sed -i "s:HOSTNAME\(.\+\)\_CHANGEME\_;:HOSTNAME\1${myhostname}${mydomain};:" psad.conf || die "fix_psad_conf failed"
+
+	# Fix up paths
+	sed -i "s:/sbin/syslogd:/usr/sbin/syslogd:g" psad.conf || die "fix_psad_conf failed"
+	sed -i "s:/sbin/syslog-ng:/usr/sbin/syslog-ng:g" psad.conf || die "fix_psad_conf failed"
+	sed -i "s:/bin/uname:/usr/bin/uname:g" psad.conf || die "fix_psad_conf failed"
+	sed -i "s:/bin/mknod:/usr/bin/mknod:g" psad.conf || die "fix_psad_conf failed"
 }
