@@ -1,6 +1,16 @@
-MD5 98c1afb05da798654bb856057daf8da6 mserver-0.5.5-r1.ebuild 1126
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3d9676baf1c6ae0101d262bf678015d6 ChangeLog 837
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 ab5275dadb8d579eb9204b98af8fe62f metadata.xml 269
+MD5 98c1afb05da798654bb856057daf8da6 mserver-0.5.5-r1.ebuild 1126
 MD5 946947bd8b3bb6e5521f666607498293 files/digest-mserver-0.5.5-r1 67
-MD5 b989a733671e0f1d0fe9ecf07d25f548 files/mserver-init 683
 MD5 7ec81b751992ca8b635dbe7b983be07c files/mserver-0.5.5-errno.patch 344
+MD5 b989a733671e0f1d0fe9ecf07d25f548 files/mserver-init 683
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnwhUjtv59x0+BrURAqemAKD1arUxeXaCSMnVqqEnTXgYPBV2ngCg8dNe
+2rf5kOq+DnntTkXVBiWaK24=
+=LW7+
+-----END PGP SIGNATURE-----
