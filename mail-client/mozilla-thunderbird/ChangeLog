@@ -1,6 +1,20 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.8 2004/06/17 03:01:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.9 2004/06/17 23:25:21 agriffis Exp $
+
+*mozilla-thunderbird-0.6-r2 (17 Jun 2004)
+
+  17 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-thunderbird-0.6-r2.ebuild, mozilla-thunderbird-0.7.ebuild:
+  - Fix bug 54100: export MOZ_THUNDERBIRD=1 at the top level instead
+    of in pkg_setup so that thunderbird will build.
+  - Fix bug 53092: Update 0.6 to -r2 to backport makemake from 0.7
+    ebuild.  Also use mozilla-launcher eclass for compatibility with the
+    -bin-0.7 release.
+  - Fix bug 54158: enigmail upstream changed the tarball content without
+    bumping the version. Use the new tarball on mirror://gentoo to solve
+    the problem. When the next version of enigmail is released, plan to
+    switch back to the upstream tarball.
 
 *mozilla-thunderbird-0.7 (16 Jun 2004)
 

@@ -1,24 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.ebuild,v 1.2 2004/06/17 23:25:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6-r2.ebuild,v 1.1 2004/06/17 23:25:21 agriffis Exp $
 
 IUSE="gnome gtk2 ipv6 ldap crypt xinerama"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher
 
-EMVER="0.84.1"
-IPCVER="1.0.6"
+EMVER="0.83.6"
+IPCVER="1.0.5"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thunderbird-${PV}-source.tar.bz2
-	 crypt? ( mirror://gentoo/enigmail-${EMVER}-r1.tar.gz
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thunderbird-source-${PV}.tar.bz2
+	 crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
-# Normally the following would be used instead of the mirror://gentoo/
-# reference above, but the upstream source tarball changed without
-# changing the filename.  (17 Jun 2004 agriffis)
-#	    http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
@@ -77,11 +73,6 @@ src_unpack() {
 			cd ${S}/extensions/${x} || die
 			makemake	# see function above
 		done
-
-		# Fix ipc-1.0.6 compilation problem by updating line from cvs
-		# (09 Jun 2004 agriffis)
-		cd ${S}/extensions/ipc
-		epatch ${FILESDIR}/ipc-1.0.6-nsPipeChannel.patch
 	fi
 }
 
@@ -292,12 +283,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaThunderbird"
-
-	# Normally thunderbird-0.7 must be run as root once before it can
-	# be run as a normal user.  Drop in some initialized files to
-	# avoid this.
-	einfo "Extracting thunderbird-${PV} initialization files"
-	cd ${MOZILLA_FIVE_HOME} && tar xjpf ${FILESDIR}/thunderbird-${PV}-init.tar.bz2
 
 	# Fix permissions on misc files
 	find ${MOZILLA_FIVE_HOME}/ -perm 0700 -exec chmod 0755 {} \; || :
