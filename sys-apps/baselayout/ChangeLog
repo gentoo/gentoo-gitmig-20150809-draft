@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.70 2003/03/23 09:01:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.71 2003/03/25 04:39:21 lostlogic Exp $
 
   23 Mar 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.4-r1.ebuild :
   Fix the check for 'si::sysinit:/sbin/rc sysinit' in /etc/inittab to also
@@ -8,6 +8,10 @@
   Norberto BENSA <nbensa@gmx.net>.
 
 *baselayout-1.8.6.4-r1 (21 Mar 2003)
+
+  24 Mar 2003; Brandon Low <lostlogic@gentoo.org>
+  baselayout-1.8.6.4-r1.ebuild:
+  Move a cd so that it gets done for all cases where it is needed
 
   21 Mar 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.4-r1.ebuild :
   Fix 'etc-update' to be 'env-update' as it *should* have been.  Tweak updating

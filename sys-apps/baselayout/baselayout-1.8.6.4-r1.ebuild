@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.4-r1.ebuild,v 1.2 2003/03/23 09:01:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.4-r1.ebuild,v 1.3 2003/03/25 04:39:21 lostlogic Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -78,9 +78,9 @@ src_unpack() {
 	fi
 	
 	# Fix Sparc specific stuff
+	cd ${S}/etc
 	if [ "${ARCH}" = "sparc" ]
 	then
-		cd ${S}/etc
 		cp rc.conf rc.conf.orig
 		sed -e 's:KEYMAP="us":KEYMAP="sun":' rc.conf.orig >rc.conf || die
 		rm -f rc.conf.orig
