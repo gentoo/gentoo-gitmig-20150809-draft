@@ -1,7 +1,17 @@
-MD5 ada48f5a50f897262f600bc22acccf99 ChangeLog 945
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b0376a3a63911905d80b073b56812ff7 lfhex-0.3.7.ebuild 765
+MD5 607bf5bef15edb8c37227d1ac9ae5f93 lfhex-0.3.7-r1.ebuild 877
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 81a50ab538344f3caee6da2044f74c10 lfhex-0.3.7-r1.ebuild 872
+MD5 b646aefa1261bb25acb01ab3988282f9 ChangeLog 1042
 MD5 278540748b028890d6885b09b0ab834c files/digest-lfhex-0.3.7 62
-MD5 278540748b028890d6885b09b0ab834c files/digest-lfhex-0.3.7-r1 62
 MD5 ee28bebce85257e0e2fc93bc323d4e9b files/lfhex-gcc3-inline-fix.patch 539
+MD5 278540748b028890d6885b09b0ab834c files/digest-lfhex-0.3.7-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBQxxWmdTrptrqvGERAsKeAKCWDsNE5kEiB/On89XB4Qg6jl4JbACggJPI
+nWKSNK3pJw5C0kUvvzVl9bA=
+=/nty
+-----END PGP SIGNATURE-----
