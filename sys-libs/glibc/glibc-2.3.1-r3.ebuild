@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r3.ebuild,v 1.1 2002/12/29 09:38:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r3.ebuild,v 1.2 2003/01/15 23:14:06 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -44,7 +44,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${PV}.tar.gz
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="GPL-2"
@@ -93,7 +93,7 @@ src_unpack() {
 	# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
 	#
 	# <azarah@gentoo.org> (26 Oct 2002).
-	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-ctype-compat-v2.patch
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-ctype-compat-v3.patch
 
 	# One more compat issue which breaks sun-jdk-1.3.1.  See bug #8766 for more
 	# info, and also:
@@ -117,10 +117,35 @@ src_unpack() {
 	# http://sources.redhat.com/ml/libc-alpha/2002-11/msg00151.html
 	# <cretin@gentoo.org> (17 Nov 2002).
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-prelinkfix.patch
+
+	# Fix 'locale -a' not listing all locales.  This to Stefan Jones
+	# <cretin@gentoo.org> for this fix, bug #13240.
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-locale.patch
+
+	# A few patches only for the MIPS platform.  Descriptions of what they
+	# do can be found in the patch headers.
+	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
+	if [ "${ARCH}" = "mips" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/${PV}/${P}-elf-machine-rela-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-exit-syscall-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-fpu-cw-mips.patch
+#		epatch ${FILESDIR}/${PV}/${P}-inline-syscall-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-libgcc-compat-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-librt-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-tst-rndseek-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-ulps-mips.patch
+	fi
+
 }
 
 src_compile() {
 	local myconf=""
+
+	# These should not be set, else the
+	# zoneinfo do not always get installed ...
+	unset LANGUAGE LANG LC_ALL
 	
 	# If we build for the build system we use the kernel headers from the target
 #	( use build || use sparc ) \
@@ -135,7 +160,7 @@ src_compile() {
 	# Thread Local Storage support.  This dont really work as of yet...
 #	use x86 && use tls \
 #		&& myconf="${myconf} --with-tls"
-	myconf="${myconf} --without-tls"
+	myconf="${myconf} --without-tls --without-__thread"
 
 	if [ "`uname -r | cut -d. -f2`" -ge "4" ]
 	then
@@ -168,7 +193,10 @@ src_compile() {
 
 
 src_install() {
-	export LC_ALL="C"
+	# These should not be set, else the
+	# zoneinfo do not always get installed ...
+	unset LANGUAGE LANG LC_ALL
+	
 	einfo "Installing GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
@@ -242,6 +270,18 @@ pkg_postinst() {
 		echo "Please remember to set your timezone using the zic command."
 		rm -f ${ROOT}/etc/localtime
 		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
+	fi
+
+	# Generate fastloading iconv module configuration file.
+	if [ -x ${ROOT}/usr/sbin/iconvconfig ]
+	then
+		${ROOT}/usr/sbin/iconvconfig --prefix=${ROOT}
+	fi
+
+	# Reload init ...
+	if [ "${ROOT}" = "/" ]
+	then
+		/sbin/init U &> /dev/null
 	fi
 }
 
