@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.14.ebuild,v 1.5 2004/03/24 21:01:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.14.ebuild,v 1.6 2004/06/09 17:47:22 agriffis Exp $
 
 inherit libtool
 
@@ -52,7 +52,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ -z "`use gtk`" ] && [ -z "`use gtk2`" ]; then
+	if ! use gtk && ! use gtk2; then
 		myconf="${myconf} --disable-ethereal"
 	fi
 
