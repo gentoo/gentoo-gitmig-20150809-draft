@@ -858,3 +858,6 @@ x11-base/xdirectfb
 # masked until we get the cups ghostscript in portage
 >=net-print-cups-1.1.15
 
+# rphillips@gentoo.org 27 Jun 2002
+# masked since package is not released
+>=dev-db/mysql-4.0.1_alpha
