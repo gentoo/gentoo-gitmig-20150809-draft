@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/divx4linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.12 2003/02/12 07:06:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.13 2003/06/29 19:51:50 cretin Exp $
+
+
+*divx4linux-20030428 (29 Jun 2003)
+
+  29 Jun 2003; Stefan Jones <cretin@gentoo.org> divx4linux-20030428.ebuild :
+  New version.
+
+*divx4linux-20020418-r1 (01 Dec 2002)
 
   18 Jan 2003; Martin Schlemmer <azarah@gentoo.org> divx4linux-20020418-r2.ebuild :
   Fix bug #13776, thanks to Joern Reder <j_gentoo@zyn.de>.
@@ -13,9 +21,7 @@
   02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
   Do not install if xvid is installed.
 
-*divx4linux-20020418-r1 (01 Dec 2002)
-
-  01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+ 01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
   Version bump so symlinks are created #11331
 
 *divx4linux-20020418 (5 May 2002)
