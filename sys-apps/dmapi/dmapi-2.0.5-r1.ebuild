@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5-r1.ebuild,v 1.6 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5-r1.ebuild,v 1.7 2003/09/07 02:46:32 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -16,9 +16,9 @@ LICENSE="LGPL-2.1"
 DEPEND="sys-apps/xfsprogs"
 
 src_unpack() {
-        unpack ${A}
+	unpack ${A}
 
-        cd ${S}
+	cd ${S}
 
 	cp include/builddefs.in include/builddefs.in.orig
 	sed -e 's:^PKG_\(.*\)_DIR[[:space:]]*= \(.*\)$:PKG_\1_DIR = $(DESTDIR)\2:' \
@@ -29,15 +29,15 @@ src_unpack() {
 src_compile() {
 	OPTIMIZER="${CFLAGS}"
 	DEBUG=-DNDEBUG
-	
+
 	autoconf || die
-	
+
 	./configure \
 	    --prefix=/usr \
 	    --libdir=/lib \
 	    --mandir=/usr/share/man \
 	    --libexecdir=/usr/lib || die
-	
+
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1k.ebuild,v 1.3 2003/06/23 00:12:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1k.ebuild,v 1.4 2003/09/07 02:44:10 msterret Exp $
 
 inherit mount-boot
 
@@ -16,31 +16,31 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc -x86 -amd64 -alpha -arm -hppa -mips -sparc"
 
 DEPEND="virtual/glibc
-        app-arch/rpm2targz"
+	app-arch/rpm2targz"
 
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	cd ${WORKDIR}
-    rpm2targz ${DISTDIR}/quik-${MY_PV}.src.rpm
-    tar -xzf ${WORKDIR}/quik-${MY_PV}.src.tar.gz || die
-    tar -xzf ${WORKDIR}/quik-2.0.tar.gz
-    
-    cd ${WORKDIR}/quik-2.0
-    epatch ${WORKDIR}/quik_2.0e-0.1.diff
-    epatch ${WORKDIR}/quik-glibc2.2.patch
-    epatch ${WORKDIR}/quik-noargs.patch
-    epatch ${WORKDIR}/quik-j-k-diff.patch
-    epatch ${WORKDIR}/quik-k-dac.patch
+	rpm2targz ${DISTDIR}/quik-${MY_PV}.src.rpm
+	tar -xzf ${WORKDIR}/quik-${MY_PV}.src.tar.gz || die
+	tar -xzf ${WORKDIR}/quik-2.0.tar.gz
+
+	cd ${WORKDIR}/quik-2.0
+	epatch ${WORKDIR}/quik_2.0e-0.1.diff
+	epatch ${WORKDIR}/quik-glibc2.2.patch
+	epatch ${WORKDIR}/quik-noargs.patch
+	epatch ${WORKDIR}/quik-j-k-diff.patch
+	epatch ${WORKDIR}/quik-k-dac.patch
 }
 
 src_compile() {
-    cd ${WORKDIR}/quik-2.0
+	cd ${WORKDIR}/quik-2.0
 	emake || die
 }
 
 src_install() {
-    cd ${WORKDIR}/quik-2.0
+	cd ${WORKDIR}/quik-2.0
 	DESTDIR=${D} make install
-    prepman /usr
+	prepman /usr
 }

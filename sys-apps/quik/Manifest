@@ -2,7 +2,7 @@ MD5 a538bc5bbe3895648417e0e691911e7b ChangeLog 1763
 MD5 0c0af75018819aebd074329366c1c06b quik-2.0.1.0-r1.ebuild 1700
 MD5 6ec3c4ce2e0bf6d226e0ad07219a725a quik-2.0.1.0-r2.ebuild 1833
 MD5 00428526554c7eb05dac8cf72c487fe6 quik-2.0.1.0-r3.ebuild 2010
-MD5 5aae4e810b50b47ab1dafa35ab33b01d quik-2.0.1k.ebuild 1144
+MD5 15c8943fba1fa6078f9868b50877b703 quik-2.0.1k.ebuild 1100
 MD5 8a63d4b2ce3cd4ebfc702aedef92c190 files/digest-quik-2.0.1.0-r1 127
 MD5 8a63d4b2ce3cd4ebfc702aedef92c190 files/digest-quik-2.0.1.0-r2 127
 MD5 8a63d4b2ce3cd4ebfc702aedef92c190 files/digest-quik-2.0.1.0-r3 127
