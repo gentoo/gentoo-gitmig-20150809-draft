@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.37 2003/06/22 19:00:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.38 2003/07/29 12:44:28 pauldv Exp $
+
+*kdeedu-3.1.3 (29 Jul 2003)
+
+  29 Jul 2003; Paul de Vrieze <pauldv@gentoo.org> kdeedu-3.1.3.ebuild:
+  Version bump
 
   20 Jun 2003l Caleb Tennis <caleb@gentoo.org>:
   Removing old ebuilds: 3.1, 3.1-r1 3.0.5a
