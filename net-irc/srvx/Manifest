@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f2954f3e5549ab6291205090d71bebe5 srvx-1.3_p84.ebuild 2175
-MD5 2691e18ce2f5e4a5bb667e01d198b54d ChangeLog 665
+MD5 534e5bad8c4d5d002eeea9559490807c srvx-1.3.0.2005_p2.ebuild 2242
+MD5 86efd12908f8341f56207b41e0e2a9ec srvx-1.3_p84.ebuild 2175
+MD5 32158e505c58d186674423b23db94de4 ChangeLog 809
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 9e5ed894ae56b7b15fe1b8e98397fd07 files/srvx.init.d 551
 MD5 2e3a0695e8e8e0b62236aa9e72866b94 files/digest-srvx-1.3_p84 65
+MD5 31bd5ff018e15409e2a79cfe15d0b2cc files/digest-srvx-1.3.0.2005_p2 71
 MD5 87389b529c1211f35ea5953858755262 files/srvx.conf.d 282
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBx25rI1lqEGTUzyQRAgdaAJsGtiryHA7IA5nsg3xac2xajsKh9gCfUWw4
-nAV+EtE3vJQ3wkaAKW160LQ=
-=ltFS
+iD8DBQFB3kehI1lqEGTUzyQRAgnqAJ9UJhRqzha5as9VQuHJyNE/LaCXsACgiEsL
+QzJ2IjPBp1AAgnOAlyxQdr4=
+=+s4x
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3_p84.ebuild,v 1.3 2005/01/07 08:26:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3.0.2005_p2.ebuild,v 1.1 2005/01/07 08:26:03 swegener Exp $
 
 inherit eutils
 
@@ -48,15 +48,17 @@ src_install() {
 
 	insinto /usr/share/srvx
 	for helpfile in \
-		chanserv.help global.help nickserv.help opserv.help \
-		modcmd.help saxdb.help sendmail.help mod-helpserv.help \
-		mod-memoserv.help mod-sockcheck.help
+		chanserv.help global.help mod-helpserv.help mod-memoserv.help \
+		mod-sockcheck.help modcmd.help nickserv.help opserv.help \
+		saxdb.help sendmail.help
 	do
-		doins "${helpfile}" || die "doins failed"
+		doins "src/${helpfile}" || die "doins failed"
 		dosym "../../../usr/share/srvx/${helpfile}" "/var/lib/srvx/${helpfile}" || die "dosym failed"
 	done
 
-	dodoc AUTHORS FAQ INSTALL NEWS README TODO srvx.conf.example sockcheck.conf.example || die "dodoc failed"
+	dodoc \
+		AUTHORS INSTALL NEWS README TODO srvx.conf.example sockcheck.conf.example \
+		docs/{access-levels,cookies,helpserv,ircd-modes}.txt || die "dodoc failed"
 
 	newinitd ${FILESDIR}/srvx.init.d srvx || die "newinitd failed"
 	newconfd ${FILESDIR}/srvx.conf.d srvx || die "newconfd failed"
