@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r7.ebuild,v 1.3 2004/01/30 07:16:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r8.ebuild,v 1.1 2004/02/07 09:25:01 usata Exp $
 
 W3M_CVS_PV="1.890"
 W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
@@ -39,12 +39,11 @@ RDEPEND=">=sys-libs/ncurses-5.2-r3
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	migemo? ( >=app-text/migemo-0.40 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
+PROVIDE="virtual/textbrowser
+	virtual/w3m"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
-
-PROVIDE="virtual/textbrowser
-	virtual/w3m"
 
 S=${WORKDIR}/${PN}
 
@@ -62,6 +61,7 @@ src_unpack() {
 	unpack ${W3M_CVS_P}.tar.gz
 	cd ${S}
 	epatch ${DISTDIR}/${W3M_CVS_P}-1.896.diff.gz
+	epatch ${FILESDIR}/${P}-form.diff
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 	epatch ${FILESDIR}/${PN}-m17n-search-gentoo.diff
 	epatch ${FILESDIR}/${PN}-libwc-gentoo.diff
