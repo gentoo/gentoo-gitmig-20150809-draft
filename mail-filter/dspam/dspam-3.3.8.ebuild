@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.3.8.ebuild,v 1.3 2005/01/05 01:17:46 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.3.8.ebuild,v 1.4 2005/01/12 08:50:45 st_lim Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ src_compile() {
 	myconf="${myconf} --enable-long-username"
 	myconf="${myconf} --enable-robinson"
 	#myconf="${myconf} --enable-chi-square"
-	myconf="${myconf} --enable-robinson-pvalues"
+	#myconf="${myconf} --enable-robinson-pvalues"
 	#myconf="${myconf} --enable-broken-mta"
 	use large-domain && myconf="${myconf} --enable-large-scale" || myconf="${myconf} --enable-domain-scale"
 

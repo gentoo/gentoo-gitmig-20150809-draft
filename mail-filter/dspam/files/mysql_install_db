@@ -1,3 +1,0 @@
-#!/bin/sh
-echo Type your mysql root password at the prompt
-/usr/bin/mysql -u root -p < @confdir@/mysql_setup.sql 

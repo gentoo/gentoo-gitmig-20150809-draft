@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.3.9.ebuild,v 1.1 2005/01/05 01:17:46 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.3.11.ebuild,v 1.1 2005/01/12 08:50:45 st_lim Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${PN}-${PV}
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
-SRC_URI="http://dspam.nuclearelephant.com/sources/${PN}-${PV}.tar.gz"
+SRC_URI="http://dspam.nuclearelephant.com/sources/${PN}-${PV}.tar.gz
+	http://dspam.nuclearelephant.com/sources/extras/dspam_sa_trainer.tar.gz"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
@@ -61,15 +62,15 @@ src_compile() {
 	local myconf
 
 	# these are the default settings
-	myconf="${myconf} --with-signature-life=14"
-	myconf="${myconf} --enable-broken-return-codes"
-	myconf="${myconf} --enable-experimental"
+	myconf="${myconf} --enable-daemon"
+	#myconf="${myconf} --enable-nodalcore"
+	myconf="${myconf} --enable-homedir"
 	myconf="${myconf} --enable-long-username"
 	myconf="${myconf} --enable-robinson"
 	#myconf="${myconf} --enable-chi-square"
-	myconf="${myconf} --enable-robinson-pvalues"
-	#myconf="${myconf} --enable-broken-mta"
-	use large-domain && myconf="${myconf} --enable-large-scale" || myconf="${myconf} --enable-domain-scale"
+	#myconf="${myconf} --enable-robinson-pvalues"
+	use large-domain && myconf="${myconf} --enable-large-scale" ||\
+		myconf="${myconf} --enable-domain-scale"
 
 	myconf="${myconf} --with-dspam-mode=4755"
 	myconf="${myconf} --with-dspam-owner=dspam"
@@ -77,8 +78,6 @@ src_compile() {
 	myconf="${myconf} --with-dspam-home=${HOMEDIR} --sysconfdir=${HOMEDIR}"
 	myconf="${myconf} --with-logdir=${LOGDIR}"
 
-	# enables support for debugging (touch /etc/dspam/.debug to turn on)
-	# optional: even MORE debugging output, use with extreme caution!
 	use debug && myconf="${myconf} --enable-debug --enable-verbose-debug"
 
 	# select storage driver
@@ -86,7 +85,6 @@ src_compile() {
 		myconf="${myconf} --with-storage-driver=mysql_drv"
 		myconf="${myconf} --with-mysql-includes=/usr/include/mysql"
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
-		myconf="${myconf} --with-client-compression"
 		myconf="${myconf} --enable-virtual-users"
 		myconf="${myconf} --enable-preferences-extension"
 
@@ -169,6 +167,7 @@ src_install () {
 		dodoc src/tools.sqlite_drv/README
 	fi
 	doman man/dspam*
+	dodoc ${DISTDIR}/dspam_sa_trainer.tar.gz
 
 	# build some initial configuration data
 	# Copy existing dspam.conf
@@ -223,7 +222,6 @@ src_install () {
 		newins src/tools.mysql_drv/neural.sql mysql_neural.sql
 		newins src/tools.mysql_drv/purge.sql mysql_purge.sql
 		newins src/tools.mysql_drv/purge-4.1.sql mysql_purge-4.1.sql
-		newins ${FILESDIR}/upgrade.sql mysql_upgrade.sql
 	elif use postgres ; then
 		if [ -f ${HOMEDIR}/pgsql.data ]; then
 			# Use an existing password
@@ -269,6 +267,13 @@ src_install () {
 	insopts -m644 -o dspam -g dspam
 	doins ${T}/dspam.conf
 
+	# installs the logrotation scripts to the logrotate.d directory
+	diropts -m0755 -o dspam -g dspam
+	dodir /etc/logrotate.d
+	keepdir /etc/logrotate.d
+	insinto /etc/logrotate.d
+	newins ${FILESDIR}/logrotate.dspam dspam
+
 	# installs the cron job to the cron directory
 	diropts -m0755 -o dspam -g dspam
 	dodir /etc/cron.daily
@@ -276,14 +281,6 @@ src_install () {
 	exeinto /etc/cron.daily
 	exeopts -m0755 -o dspam -g dspam
 	doexe ${FILESDIR}/dspam.cron
-
-	# installs the logrotation scripts to the logrotate.d directory
-	diropts -m0755 -o dspam -g dspam
-	dodir /etc/logrotate.d
-	keepdir /etc/logrotate.d
-	insinto /etc/logrotate.d
-	insopts -m0755 -o dspam -g dspam
-	newins ${FILESDIR}/logrotate.dspam dspam
 
 	# dspam enviroment
 	echo -ne "CONFIG_PROTECT_MASK=\"${HOMEDIR}\"\n\n" > ${T}/40dspam
