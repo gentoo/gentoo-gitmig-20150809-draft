@@ -1,6 +1,6 @@
 MD5 0bf4e0b17c916406a441b8d5e2ca8308 ChangeLog 9781
 MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
-MD5 7f85ee70d102141816130bdc7cea5fa0 nfs-utils-1.0.6-r6.ebuild 3021
+MD5 a5785bca6bda4d00aabdc28e36802df1 nfs-utils-1.0.6-r6.ebuild 2926
 MD5 d35b63443f735e275ff9937e4f463dd7 nfs-utils-1.0.7.ebuild 2905
 MD5 d8ecaecabf0d9c9bfb7d6c437e59bf5f files/nfs 5278
 MD5 46e91b0dea9cbbfedcdccc9386b6326d files/digest-nfs-utils-1.0.7 67
