@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.77 2004/10/17 11:28:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.78 2004/11/02 23:03:43 foser Exp $
+
+  03 Nov 2004; foser <foser@gentoo.org> gstreamer-0.8.{5,7}.ebuild :
+  Add another addpredict for root (#65900)
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> gstreamer-0.8.5.ebuild:
   stable on amd64.

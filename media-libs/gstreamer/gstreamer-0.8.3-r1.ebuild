@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3-r1.ebuild,v 1.12 2004/10/19 14:33:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3-r1.ebuild,v 1.13 2004/11/02 23:03:43 foser Exp $
 
 inherit eutils flag-o-matic libtool gnome2
 
@@ -42,6 +42,7 @@ src_compile() {
 
 	# FIXME : Ugly fix for docs generation gst cache problem (#57002)
 	addpredict /var
+	addpredict /root
 
 	elibtoolize
 
