@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.2.ebuild,v 1.2 2003/02/17 22:02:51 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.2.ebuild,v 1.3 2003/03/02 21:27:22 liquidx Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
@@ -36,20 +36,14 @@ RDEPEND="app-text/scrollkeeper
 	=dev-util/gob-1*
 	>=net-libs/soup-0.7.4-r1
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
-	ssl?     ( >=net-www/mozilla-0.9.9 )
-	ssl?     ( >=dev-libs/openssl-0.9.5 )
+	ssl? ( mozilla? ( >=net-www/mozilla-0.9.9 ) : ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
-	mozilla? ( >=net-www/mozilla-0.9.9 )
 	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2
 			>=dev-libs/pilot-link-0.11.5 )
 	spell?   ( >=app-text/gnome-spell-0.5 )"
 
 # the pilot-link dep is normally covered by gnome-pilot, but evo
 # requires an higher version then gnome-pilot (bug #10307)
-
-#	ssl?     ( mozilla? ( >=net-www/mozilla-0.9.9 ) )
-#	ssl?     ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
-# This is how the deps should be, but portage cannot handle it
 
 # Added dependency on "dev-util/gob" this should fix a configure bug
 
@@ -149,7 +143,7 @@ src_compile() {
 	fi
 
 	# Else use OpenSSL if 'mozilla' not in USE  ...
-	if [ -n "`use ssl`" ] && [ -z "`use mozilla`" ] ; then
+	if [ -n "`use ssl`" -a -z "`use mozilla`" ] ; then
 		myconf="${myconf} --enable-openssl=yes"
 	fi
 
