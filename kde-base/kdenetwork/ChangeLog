@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.50 2003/09/26 02:01:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.51 2003/09/26 17:26:11 weeve Exp $
+
+  26 Sep 2003; Jason Wever <weeve@gentoo.org> kdenetwork-3.1.4.ebuild:
+  Added sparc keyword.
 
 *kdenetwork-3.2.0_alpha2 (25 Sep 2003)
 
