@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.2 2004/04/06 06:43:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.3 2004/06/10 16:52:56 eradicator Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -202,10 +202,17 @@ then
 	echo "exporting FTP_PROXY=${FTP_PROXY}"
 	export FTP_PROXY
 fi
+if [ -x /usr/bin/gcc-config ]
+then
+	GCC_CONFIG="/usr/bin/gcc-config"
 
-# Make sure we automatically clean old instances, else we may run
-# into issues, bug #32140.
-export AUTOCLEAN="yes"
+elif [ -x /usr/sbin/gcc-config ]
+then
+	GCC_CONFIG="/usr/sbin/gcc-config"
+fi
+
+# Disable autoclean, or it b0rks
+export AUTOCLEAN="no"
 
 # Allow portage to overwrite stuff
 export CONFIG_PROTECT="-*"
@@ -213,9 +220,54 @@ export CONFIG_PROTECT="-*"
 USE="-* build bootstrap" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 
 export USE="${ORIGUSE} bootstrap"
-emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} \
-	${myGCC} ${myGLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
+emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
 
+# If say both gcc and binutils was build for i486, and we then merge
+# binutils for i686 without removing the i486 version (Note that this is
+# _only_ when its exactly the same version of binutils ... if we have say
+# 2.14.90.0.6 build for i486, and bootstrap then merge 2.14.90.0.7 for i686,
+# we will not have issues.  More below ...), gcc's search path will
+# still have
+#
+#   /usr/lib/gcc-lib/i486-pc-linux-gnu/<gcc_version>/../../../../i486-pc-linux-gnu/bin/
+#
+# before /usr/bin, and thus it will use the i486 versions of binutils binaries
+# which causes issues.  The reason for this issues is that when bootstrap merge
+# exactly the same version for i686, both will have installed the same files to
+# /usr/lib, and thus also USE the same libraries, cause as/ld to fail with
+# unresolved symbols during compiling/linking.
+#
+# More info on this can be found by looking at bug #32140:
+#
+#   http://bugs.gentoo.org/show_bug.cgi?id=32140
+#
+# We now thus run an 'emerge clean' just after merging binutils ...
+#
+# NB: thanks to <rac@gentoo.org> for bringing me on the right track
+#     (http://forums.gentoo.org/viewtopic.php?t=100263)
+#
+# <azarah@gentoo.org> (1 Nov 2003)
+if [ -n "${STRAP_RUN}" ]
+then
+    emerge clean || cleanup 1
+fi
+
+emerge ${STRAP_EMERGE_OPTS} ${myGCC} || cleanup 1
+
+# Basic support for gcc multi version/arch scheme ...
+if [ -n "${STRAP_RUN}" ]
+then
+	if test -x ${GCC_CONFIG} &>/dev/null && \
+	   ${GCC_CONFIG} --get-current-profile &>/dev/null
+	then
+		# Make sure we get the old gcc unmerged ...
+		emerge clean || cleanup 1
+		# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
+		${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &>/dev/null
+	fi
+fi
+
+emerge ${STRAP_EMERGE_OPTS} ${myGLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
 export USE="${ORIGUSE}"
 emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
