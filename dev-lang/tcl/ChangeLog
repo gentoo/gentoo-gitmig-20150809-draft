@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.29 2004/04/20 09:44:21 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.30 2004/04/20 09:46:57 port001 Exp $
+
+  20 Apr 2004; Ian Leitch <port001@gentoo.org> tcl-8.4.6.ebuild:
+  Marking stable on amd64 and s390
 
   20 Apr 2004; Ian Leitch <port001@gentoo.org> tcl-8.4.6.ebuild:
   Marking stable on mips
