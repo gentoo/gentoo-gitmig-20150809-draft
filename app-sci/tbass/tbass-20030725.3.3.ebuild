@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.1 2003/07/31 04:24:21 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.2 2003/08/01 20:55:15 george Exp $
 
 IUSE=""
 
 Name="balsa"
 My_PV="3.3"
-#quite custom anyway, this one has version number at the end 
+#quite custom anyway, this one has version number at the end
 #to indicate it is a release
 
 DESCRIPTION="Balsa is both a framework for synthesising asynchronous hardware systems and the language for describing such systems"
@@ -22,7 +22,7 @@ SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/${My_PV}/${Name}-${My_PV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
 DEPEND="virtual/glibc
 	sys-devel/binutils
