@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtpixmap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtpixmap/ChangeLog,v 1.13 2004/11/06 16:28:07 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtpixmap/ChangeLog,v 1.14 2004/11/12 09:23:52 kloeri Exp $
+
+  12 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> qtpixmap-0.28.ebuild:
+  Stable on alpha.
 
   06 Nov 2004; <pyrania@gentoo.org> qtpixmap-0.28.ebuild:
   Marked stable on x86.

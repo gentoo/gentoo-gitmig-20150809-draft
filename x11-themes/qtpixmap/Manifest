@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b7086fa82c2a9c22e9eae5be4d519be1 qtpixmap-0.25.ebuild 690
-MD5 a65ae6360206c47476a34b8f1f5be080 ChangeLog 1610
-MD5 19c5c3b5a0d12da221fd0d9359b0f3d7 qtpixmap-0.26.ebuild 692
+MD5 c89e520fc17fb79a61f04b316591b17f ChangeLog 1704
 MD5 b88cd6dde92a8fc5db52b30565e497e7 qtpixmap-0.27.ebuild 704
-MD5 4b37370978c2c350aa083025a548ca07 qtpixmap-0.28.ebuild 696
+MD5 f62a7b8365a2e9b3fb21acbb68c3a6fb qtpixmap-0.28.ebuild 694
+MD5 19c5c3b5a0d12da221fd0d9359b0f3d7 qtpixmap-0.26.ebuild 692
+MD5 b7086fa82c2a9c22e9eae5be4d519be1 qtpixmap-0.25.ebuild 690
+MD5 1f8fc66e7cb93fea9bfbf6c14e602457 files/digest-qtpixmap-0.27 70
 MD5 ceba151badaf6c45af4cbe68e732efa1 files/digest-qtpixmap-0.25 70
 MD5 adc4d4eee83455cd7c3c1962b59e0e74 files/digest-qtpixmap-0.26 70
-MD5 1f8fc66e7cb93fea9bfbf6c14e602457 files/digest-qtpixmap-0.27 70
 MD5 a97c99ae5788b9fcb012c99b38f5e803 files/digest-qtpixmap-0.28 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBjPubI7fK2cqeyXkRAviAAJ9Zueoe5B/lHp1/pHQwjURwvX4jzQCfT3mo
-bvYB2HQY+wy9CS56EAkee0s=
-=r2G9
+iD4DBQFBlIE3ugEuf3OQ0akRAoHQAJifizpV0YRJo0O0o9X3HASBNf0+AJ9lz5jR
+sPF9QMazr8y+84zWMmcy3Q==
+=QxMa
 -----END PGP SIGNATURE-----
