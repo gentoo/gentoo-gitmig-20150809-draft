@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r2.ebuild,v 1.3 2005/04/01 07:19:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r2.ebuild,v 1.4 2005/04/02 06:07:24 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -451,14 +451,6 @@ src_compile() {
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die
-
-	echo "!!! ERROR: media-video/mplayer-1.0_pre6-r2 failed."
-	echo "!!! Function src_makarena, Line 1000, Exitcode 555-5555"
-	echo "!!! All your base are belong to us!"
-
-	epause 6
-
-	eerror "APRIL FOOLS!"
 
 	einfo "Make"
 	make depend && emake || die "Failed to build MPlayer!"
