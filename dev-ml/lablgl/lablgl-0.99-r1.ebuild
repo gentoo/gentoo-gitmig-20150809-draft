@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-0.99-r1.ebuild,v 1.1 2004/02/03 01:22:40 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-0.99-r1.ebuild,v 1.2 2004/03/22 22:54:49 mattam Exp $
 
 IUSE="tcltk"
 
@@ -18,7 +18,7 @@ SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz
 	mirror://gentoo/LablGL-0.99-Makefile.config"
 S=${WORKDIR}/lablGL-${PV}
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 
 #need to do some mangling to keep ebuild name lowercase
 #(anyway package uses mixture of upper and lower case letters)
