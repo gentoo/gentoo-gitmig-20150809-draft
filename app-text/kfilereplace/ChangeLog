@@ -1,6 +1,12 @@
 # ChangeLog for app-text/kfilereplace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/ChangeLog,v 1.2 2002/05/29 12:22:45 verwilst Exp $
+
+*kfilereplace-0.7_pre2 (29 May 2002)
+
+  29 May 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+
+  Updated to newer version.
 
 *kfilereplace-0.6.1 (1 Feb 2002)
 
