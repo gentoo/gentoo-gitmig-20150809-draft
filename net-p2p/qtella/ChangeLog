@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qtella
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.4 2002/07/04 23:48:09 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.5 2002/07/27 13:56:11 danarmak Exp $
+
+  28 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Use correct SLOT='3'.
 
 *qtella-0.5.3-r1 (5 July 2002) Bart Verwilst <verwilst@gentoo.org>
 
