@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/aqhbci-qt-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-qt-tools/ChangeLog,v 1.3 2005/02/01 15:15:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-qt-tools/ChangeLog,v 1.4 2005/02/14 17:21:30 blubb Exp $
+
+  14 Feb 2005; Simon Stelling <blubb@gentoo.org>
+  aqhbci-qt-tools-1.0.1_beta.ebuild:
+  added ~amd64
 
 *aqhbci-qt-tools-1.0.1_beta (01 Feb 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.9 2005/02/05 18:20:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.10 2005/02/14 17:15:31 blubb Exp $
+
+  14 Feb 2005; Simon Stelling <blubb@gentoo.org>
+  aqbanking-1.0.4_beta.ebuild:
+  added ~amd64
 
   05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   aqbanking-1.0.4_beta.ebuild:
