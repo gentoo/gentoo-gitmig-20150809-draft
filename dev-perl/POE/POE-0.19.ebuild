@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.19.ebuild,v 1.5 2002/07/25 04:43:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.19.ebuild,v 1.6 2002/07/29 16:14:37 seemant Exp $
 
 inherit perl-module
 
@@ -20,9 +20,9 @@ DEPEND="${DEPEND}
 	dev-perl/Storable
 	dev-perl/IO-Tty
 	dev-perl/Filter
-	tcltk?  (dev-perl/perl-tk)
-	gtk?    (dev-perl/gtk-perl)
-	libwww? (dev-perl/libwww-perl)
-	curses? (dev-perl/Curses)"
+	tcltk? ( dev-perl/perl-tk )
+	gtk? ( dev-perl/gtk-perl )
+	libwww? ( dev-perl/libwww-perl )
+	curses? ( dev-perl/Curses )"
 
 mymake="/usr"
