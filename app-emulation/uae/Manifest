@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d6c5932f68f76bd87f30bdd192f57f89 ChangeLog 2854
-MD5 af8db5e7e94c29b370ea7f832f4506c4 uae-0.8.22.ebuild 1279
+MD5 64fce9607488a5f2f6d77b08c7524143 ChangeLog 2987
 MD5 800d59bca6b74f54268ca8c63af928ee metadata.xml 668
+MD5 af8db5e7e94c29b370ea7f832f4506c4 uae-0.8.22.ebuild 1279
 MD5 e3a6a31c581dbf492fdaa613502a6c51 uae-0.8.23_pre20040129.ebuild 1395
-MD5 97b5f8ca69c090ff4b28e93a8ed0f1f0 uae-0.8.25_pre20040302.ebuild 1779
+MD5 29d8dc818001e2f0ce15c9effdc2b36b uae-0.8.25_pre20040302.ebuild 1819
 MD5 b2fac0f21ee34abaa6279cf7ad023119 files/digest-uae-0.8.22 62
-MD5 4d3af2d2cc2945b006249066cb8c7adb files/uae-patch.diff 364
 MD5 24ce02be9243fef32739ff76bd9ba84c files/digest-uae-0.8.23_pre20040129 73
 MD5 02f734719ea8dc27787fb6be6ddcc11e files/digest-uae-0.8.25_pre20040302 73
 MD5 77b204c71d52f0a0423054b5a9b8a0cb files/split_cpuemu.pl 498
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA31NaHTu7gpaalycRAvsUAKC+RDEv9fnQYXNmCZUHy6X0ONLqOACdHvo/
-xO9GLkHNaSAxyHSAyfv4ZFQ=
-=eUea
------END PGP SIGNATURE-----
+MD5 4d3af2d2cc2945b006249066cb8c7adb files/uae-patch.diff 364

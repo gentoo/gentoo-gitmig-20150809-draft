@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.18 2004/06/24 22:35:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.19 2004/07/16 13:23:16 dholm Exp $
+
+  16 Jul 2004; David Holm <dholm@gentoo.org> uae-0.8.25_pre20040302.ebuild:
+  Strip -msse and -msse2 as they break compilation on x86.
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> uae-0.8.22.ebuild,
   uae-0.8.23_pre20040129.ebuild, uae-0.8.25_pre20040302.ebuild:

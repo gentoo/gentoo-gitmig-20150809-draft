@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25_pre20040302.ebuild,v 1.8 2004/06/27 23:07:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25_pre20040302.ebuild,v 1.9 2004/07/16 13:23:16 dholm Exp $
 
 inherit flag-o-matic
 
@@ -31,6 +31,7 @@ DEPEND="virtual/libc
 src_compile() {
 	# -O3 breaks compilation, GCC will eat all your RAM + Swap and die
 	replace-flags "-O3" "-O2"
+	use x86 && strip-flags "-msse" "-msse2"
 	use sdl && myconf="--with-sdl-sound --with-sdl-gfx"
 
 	cp ${FILESDIR}/split_cpuemu.pl ${S}/src
