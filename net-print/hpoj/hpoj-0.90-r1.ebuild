@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90-r1.ebuild,v 1.2 2003/07/20 09:41:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90-r1.ebuild,v 1.3 2003/07/29 13:45:22 lanius Exp $
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hpoj/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="ssl scanner qt X snmp cups usb"
 
 DEPEND="qt?      ( >=x11-libs/qt-3.1.0-r1 )
