@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giblib
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.11 2004/03/01 13:01:51 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.12 2004/05/10 19:43:57 lv Exp $
+
+  10 May 2004; Travis Tilley <lv@gentoo.org> giblib-1.2.3.ebuild:
+  added ~amd64 keyword
 
   22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Add logic to handle when imlib2 has been built w/out X support #41445.
