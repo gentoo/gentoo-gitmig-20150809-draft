@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r2.ebuild,v 1.4 2002/12/15 13:53:43 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r2.ebuild,v 1.5 2003/01/13 01:33:35 foser Exp $
 
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/libxml-1.8.14
 	bonobo? ( gnome-base/bonobo )
 	truetype? ( >=media-libs/freetype-2.0.5 )
 	png? ( media-libs/libpng
-		>=media-libs/libart_lgpl-2.1 )"
+		>=gnome-base/gnome-libs-1.4 )"
 # Python module needs some work
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
