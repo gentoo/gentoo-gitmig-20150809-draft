@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.3.0.ebuild,v 1.3 2003/12/25 18:09:40 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.3.0.ebuild,v 1.4 2004/02/27 13:38:15 stuart Exp $
 
 MY_P="${PN}-1.3.0-48"
 DESCRIPTION="X11 protocol compression library"
@@ -23,7 +23,7 @@ S=${WORKDIR}/${PN}
 
 src_compile() {
 	./configure
-	emake || die "compile problem"
+	DISTCC_HOSTS="localhost" CCACHE_DISABLE="1" emake || die "compile problem"
 }
 
 src_install() {
