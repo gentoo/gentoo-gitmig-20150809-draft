@@ -4,7 +4,7 @@ SRC_URI="http://www.gftp.org/${P}.tar.gz"
 HOMEPAGE="http://www.gftp.org"
 
 DEPEND=">=x11-libs/gtk+-1.2.10-r4
-	>=dev-libs/glib-1.2.10-r1
+	=dev-libs/glib-1.2*
         >=x11-base/xfree-4.1.0
 	nls? ( sys-devel/gettext )"
 
