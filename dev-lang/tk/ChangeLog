@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.30 2004/04/20 09:05:12 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.31 2004/04/20 09:49:31 port001 Exp $
+
+  20 Apr 2004; Ian Leitch <port001@gentoo.org> tk-8.4.6.ebuild:
+  Marked stable on amd64
 
   20 Apr 2004; Ian Leitch <port001@gentoo.org> -tk-8.3.3-r2.ebuild,
   -tk-8.3.3-r3.ebuild, -tk-8.3.3.ebuild, -tk-8.3.4.ebuild, -tk-8.4.3.ebuild,
