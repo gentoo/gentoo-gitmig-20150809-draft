@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/krusader
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.4 2002/06/14 13:22:30 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.5 2002/07/26 07:23:28 rphillips Exp $
+
+*krusader-1.0.3_beta2 (26 Jul 2002)
+
+  26 Jul 2002; Ryan Phillips <rphillips@gentoo.org> krusader-1.0.3_beta2.ebuild :
+
+  Updated version
 
 *krusader-1.0.3_beta1-r1 (14 Jun 2002)
 
