@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/DBI/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha sparc sparc64"
 
 DEPEND="${DEPEND}
 	>=dev-perl/PlRPC-0.2"
