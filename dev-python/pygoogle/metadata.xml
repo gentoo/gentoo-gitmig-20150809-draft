@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
+<longdescription>
+A Python wrapper for the Google web API. Allows you to do Google searches,
+retrieve pages from the Google cache, and ask Google for spelling suggestions.
+</longdescription>
 </pkgmetadata>

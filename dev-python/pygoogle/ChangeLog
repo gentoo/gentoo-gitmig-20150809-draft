@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygoogle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/ChangeLog,v 1.6 2004/06/25 01:39:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/ChangeLog,v 1.7 2004/10/30 14:24:33 lucass Exp $
+
+*pygoogle-0.6 (30 Oct 2004)
+
+  30 Oct 2004; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  +pygoogle-0.6.ebuild:
+  Version bump. Added commands to install documentation and added description
+  to metadata.
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pygoogle-0.5.3.ebuild:
   Remove default S.
