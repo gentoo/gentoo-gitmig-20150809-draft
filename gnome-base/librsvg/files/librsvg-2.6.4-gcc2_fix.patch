@@ -1,0 +1,24 @@
+diff -NurdB librsvg-2.6.4-orig/rsvg-paint-server.c librsvg-2.6.4/rsvg-paint-server.c
+--- librsvg-2.6.4-orig/rsvg-paint-server.c	2004-04-08 05:25:24.000000000 -0500
++++ librsvg-2.6.4/rsvg-paint-server.c	2004-04-08 05:32:19.000000000 -0500
+@@ -149,6 +149,9 @@
+ 	double x1, y1, x2, y2;
+ 	double dx, dy, scale;
+ 	double affine[6];
++	float xchange, ychange, pointlen,unitlen;
++	float nx2, ny2;
++	float x0, y0;
+ 	int i;
+ 
+ 	agl = z->agl;
+@@ -180,10 +183,6 @@
+ 
+ 	art_affine_multiply(affine, rlg->affine, affine);
+ 
+-	float xchange, ychange, pointlen,unitlen;
+-	float nx2, ny2;
+-	float x0, y0;
+-
+ 	xchange = rlg->x2 - rlg->x1;
+ 	ychange = rlg->y2 - rlg->y1;
+ 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.4.ebuild,v 1.1 2004/03/31 22:27:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.4.ebuild,v 1.2 2004/04/08 10:50:48 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
@@ -27,11 +27,18 @@ DEPEND="${RDEPEND}
 
 # FIXME : USEify croco support (?)
 G2CONF="${G2CONF} $(use_with zlib svgz) \
-	--enable-croco \
+	--with-croco \
 	--enable-pixbuf-loader \
 	--enable-gtk-theme"
 
 DOCS="AUTHORS ChangeLog COPYIN* README INSTALL NEWS TODO"
+
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+	# Make sure the source is proper ANSI C, so it compiles with gcc-2.
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
+}
 
 pkg_postinst() {
 
