@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/cpuspeedy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/ChangeLog,v 1.8 2004/05/12 00:06:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/ChangeLog,v 1.9 2004/06/22 21:00:30 dragonheart Exp $
+
+*cpuspeedy-0.4.0 (23 Jun 2004)
+
+  23 Jun 2004; Daniel Black <dragonheart@gentoo.org> +cpuspeedy-0.4.0.ebuild:
+  version bump. Bug number #54720 refers. Thanks to Gabriele Giorgetti
+  <gabriele_giorgetti@tin.it>
 
   07 May 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.2.1.ebuild,
   cpuspeedy-0.3.0.ebuild:
