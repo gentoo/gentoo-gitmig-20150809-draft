@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_rc1.ebuild,v 1.1 2004/03/21 19:18:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_rc1.ebuild,v 1.2 2004/03/22 01:28:36 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -56,6 +56,10 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/eel-2.5.91.1
 	>=gnome-base/nautilus-2.5.91
 
+	>=media-libs/gstreamer-0.8
+	>=media-libs/gst-plugins-0.8
+	>=gnome-extra/gnome-media-2.5.5
+
 	>=media-gfx/eog-2.5.91
 	>=net-www/epiphany-1.2
 	>=app-arch/file-roller-2.5.7
@@ -64,12 +68,12 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/gdm-2.4.4.7
 	>=app-editors/gedit-2.5.92
 
-	>=app-text/ggv-2.5.99.1
+	>=app-text/ggv-2.6
 	>=app-text/gpdf-0.125
 
 	>=gnome-base/gnome-session-2.5.92
 	>=gnome-base/gnome-panel-2.5.93
-	>=gnome-base/gnome-applets-2.5.8
+	>=gnome-base/gnome-applets-2.6
 	>=gnome-base/gnome-desktop-2.5.92
 
 	>=x11-themes/gnome-icon-theme-1.1.91
@@ -88,7 +92,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-games-2.5.8
 
 	>=gnome-base/libgtop-2.5.2
-	>=gnome-extra/gnome-system-monitor-2.5.4
+	>=gnome-extra/gnome-system-monitor-2.6
 
 	>=gnome-base/librsvg-2.6.3
 	>=x11-libs/libwnck-2.5.90
@@ -115,9 +119,6 @@ RDEPEND="!gnome-base/gnome-core
 
 # gst stuff
 #	>=gnome-extra/nautilus-media-0.7
-#	>=gnome-extra/gnome-media-2.5.5
-#	>=media-libs/gstreamer-0.8
-#	>=media-libs/gst-plugins-0.8
 #	applets
 
 # unrelated
