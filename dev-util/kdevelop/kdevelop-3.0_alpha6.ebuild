@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha6.ebuild,v 1.2 2003/09/17 02:37:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha6.ebuild,v 1.3 2003/09/17 02:38:00 caleb Exp $
 
 inherit kde-base
 need-kde 3
@@ -20,8 +20,8 @@ export MAKEOPTS="$MAKEOPTS -j1"
 newdepend ">=dev-lang/perl-5.0.4
 	sys-devel/flex
 	app-text/sgmltools-lite
-	doc? (app-doc/qt-docs)
-	doc? (app-doc/kdelibs-apidocs)
+	doc? ( app-doc/qt-docs )
+	doc? ( app-doc/kdelibs-apidocs )
 	sys-devel/gdb
 	java? ( virtual/jdk )
 	python? ( dev-lang/python )"
