@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a5f4eed28a7236af744549aa9dc5a18 ChangeLog 690
-MD5 fdc2cb808635ad3af51a79dbbe9feddc extsizes-1.0.ebuild 711
+MD5 309f9109a13132ddf8b0103eaa94fbeb ChangeLog 781
+MD5 2f8a76cfc2621ec15785dda7a18887fd extsizes-1.0.ebuild 767
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 caef2c572681b616ba21af21e79d9a64 files/digest-extsizes-1.0 55
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcURhVWNWqTUmv+0RAqxtAJsF3PECVvRkt2rsvFuKDnPwYW8DGgCfRW5u
-BHkU7vtl8rvStnlfRcL/Tfk=
-=sSfE
+iD8DBQFBdR/8VWNWqTUmv+0RArkEAKCik8Aht/AJgi8npafdxijQOogg/QCgtTlE
+vNyKELiHpLOjs1+IHBfIeX0=
+=ZpCh
 -----END PGP SIGNATURE-----
