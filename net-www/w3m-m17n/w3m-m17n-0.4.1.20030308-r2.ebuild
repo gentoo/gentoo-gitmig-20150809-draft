@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.1.20030308-r2.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.1.20030308-r2.ebuild,v 1.3 2003/09/25 08:58:57 usata Exp $
 
 IUSE="gpm imlib ssl"
 
@@ -33,6 +33,8 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
+
+	epatch ${FILESDIR}/w3m-w3mman-gentoo.diff
 
 	# the boehm-gc which comes with w3m cannot be compiled on alpha
 	rm -rf gc
@@ -68,10 +70,17 @@ src_compile() {
 		myuse="${myuse} use_image=n"
 	fi
 
+	if has_version 'app-emacs/migemo' ; then
+		myuse="${myuse} use_migemo=y"
+		export def_migemo_command="migemo -t egrep /usr/share/migemo/migemo-dict"
+	else
+		myuse="${myuse} use_migemo=n"
+	fi
+
 	env ${myuse} ./configure ${myconf} -cflags="${CFLAGS}" \
 		|| die "configure failed"
 
-	emake W3M=w3m-m17n MAN='env LC_MESSAGES=$${LC_MESSAGES:-$${LC_ALL:-$${LANG}}} LANG=C man' || die "make failed"
+	emake W3M=w3m-m17n || die "make failed"
 }
 
 src_install() {
