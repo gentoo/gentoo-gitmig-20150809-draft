@@ -1,5 +1,6 @@
 MD5 1165f9409004049e760858d0f6a12991 gthumb-2.1.8.ebuild 1033
 MD5 3c239def26205128d5fd212b0513a1a6 gthumb-0.13.ebuild 954
+MD5 971e6ed0b0a3f177236ec2b162bb8776 gthumb-2.2.0.ebuild 1012
 MD5 3d733bfba73e7dec93e0bbe9fc187329 gthumb-2.0.1.ebuild 1025
 MD5 971e6ed0b0a3f177236ec2b162bb8776 gthumb-2.1.9.ebuild 1012
 MD5 a2e7dcd2479c32792a2689023d7d5d44 ChangeLog 4134
@@ -9,4 +10,5 @@ MD5 ca0f5f3d6f82d7d700cf19e06bf70693 files/digest-gthumb-2.0.1 65
 MD5 3b615380ad468c5a65ac3289d648648f files/digest-gthumb-2.1.6 66
 MD5 c3c59db149eaddcc7a093e807a542bde files/digest-gthumb-2.1.8 66
 MD5 b979b6aa8302b6bd07e913deeb5db18a files/digest-gthumb-2.1.9 66
+MD5 86d5d66d8c44372a7b7b714df44fd2b0 files/digest-gthumb-2.2.0 66
 MD5 6552832e528ea12ac21ec464c103fc2f files/digest-gthumb-0.13 63
