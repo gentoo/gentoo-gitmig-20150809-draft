@@ -1,4 +1,4 @@
-MD5 04b435b6c6851df2bf23720cc9d9854e ChangeLog 1916
+MD5 4259945ea8cf114d601ede3024e20198 ChangeLog 2001
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 cea2b8fffbea91ff19d352a1e0901871 qjackctl-0.0.8.ebuild 625
 MD5 eb20654119431103111dce147accbcc4 qjackctl-0.0.9a.ebuild 591
@@ -6,7 +6,7 @@ MD5 37822d28e54c5f20d04a64922337eb8c qjackctl-0.1.3.ebuild 612
 MD5 2be87d9f03776af45e61011b0f247de3 qjackctl-0.2.1.ebuild 1119
 MD5 22feb489bcbe49f3cfeb9304d2eb901f qjackctl-0.2.3.ebuild 1126
 MD5 c1c816ba90d9ea891a4c01ac3e91b879 qjackctl-0.2.8.ebuild 1125
-MD5 8c2365093c9321b81c3d56719c5c8d66 qjackctl-0.2.9.ebuild 1155
+MD5 2cf1164dbc209dbbc10e64a453cbf775 qjackctl-0.2.9.ebuild 1159
 MD5 f5d50b9205aab08eb660ec99ebecd791 files/digest-qjackctl-0.0.8 65
 MD5 e29bf95ba874da16c49a6b98cd39bf61 files/digest-qjackctl-0.0.9a 66
 MD5 7f34b8256b9a7699fa7b49e5c635cec3 files/digest-qjackctl-0.1.3 66
