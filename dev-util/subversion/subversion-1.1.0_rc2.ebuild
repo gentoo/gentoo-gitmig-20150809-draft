@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0_rc2.ebuild,v 1.3 2004/09/01 11:00:21 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0_rc2.ebuild,v 1.4 2004/09/05 19:00:40 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -103,8 +103,14 @@ src_compile() {
 	use berkdb && myconf="${myconf} --with-berkeley-db"
 	use berkdb || myconf="${myconf} --without-berkeley-db"
 
-	use python && myconf="${myconf} --with-python=/usr/bin/python --with-swig"
-	use python || myconf="${myconf} --without-python --without-swig"
+	use python && myconf="${myconf} --with-python=/usr/bin/python"
+	use python || myconf="${myconf} --without-python"
+
+	if use python || use perl; then
+		myconf="${myconf} --with-swig"
+	else
+		myconf="${myconf} --without-swig"
+	fi
 
 	econf ${myconf} \
 		--with-neon=/usr \
