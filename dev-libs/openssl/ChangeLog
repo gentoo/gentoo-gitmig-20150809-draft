@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.72 2004/02/09 23:02:20 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.73 2004/02/16 22:48:23 gustavoz Exp $
+
+  16 Feb 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  openssl-0.9.7c-r1.ebuild:
+  Fixed compilation of sparc32 target on sparc64
 
   10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
   openssl-0.9.7c-r1.ebuild:

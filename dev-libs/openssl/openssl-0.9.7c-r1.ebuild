@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.19 2004/02/09 23:02:20 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.20 2004/02/16 22:48:23 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -120,6 +120,10 @@ src_compile() {
 	elif [ "`uname -m`" = "parisc" -o "`uname -m`" = "parisc64" ]; then
 		./Configure linux-parisc --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
+	# force sparcv8 on sparc32 profile
+	elif [ "$PROFILE_ARCH" = "sparc" ]; then
+		./Configure linux-sparcv8 --prefix=/usr --openssldir=/etc/ssl \
+			shared threads || die
 	else
 		./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
 	fi
@@ -132,7 +136,8 @@ src_compile() {
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
 		cd ${WORKDIR}/${OLD_096_P}
 
-		if [ "$PROFILE_ARCH" = "sparc" -a "`uname -m`" = "sparc64" ]; then
+		# force sparcv8 on sparc32 profile
+		if [ "$PROFILE_ARCH" = "sparc" ]; then
 			SSH_TARGET="linux-sparcv8"
 		elif [ "`uname -m`" = "parisc" -o "`uname -m`" = "parisc64" ]; then
 			SSH_TARGET="linux-parisc"
