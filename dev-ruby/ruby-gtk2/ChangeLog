@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.9 2004/03/18 23:37:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.10 2004/03/20 15:37:53 agriffis Exp $
+
+  20 Mar 2004; Aron Griffis <agriffis@gentoo.org> ruby-gtk2-0.9.1.ebuild:
+  Add missing depend on ruby-atk, thanks to Takayuki Yamaguchi and Xavier Neys
+  in bug 44739
 
 *ruby-gtk2-0.9.1 (18 Mar 2004)
 
