@@ -1,0 +1,12 @@
+# ChangeLog for x11-plugins/wmapmload
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapmload/ChangeLog,v 1.1 2002/10/29 07:21:26 bcowan Exp $
+
+*wmapmload-0.3.0 (29 Oct 2002)
+
+  29 Oct 2002; Brad Cowan <bcowan@gentoo.org> wmapmload-0.3.0.ebuild,
+  ChangeLog, files/digest-wmapmload-0.3.0 :
+  
+  Initial import thanks to Autobot.
+
+
