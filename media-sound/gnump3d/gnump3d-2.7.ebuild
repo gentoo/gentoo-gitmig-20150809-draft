@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.7.ebuild,v 1.2 2004/03/31 22:44:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.7.ebuild,v 1.3 2004/04/24 22:46:34 eradicator Exp $
 
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
 HOMEPAGE="http://www.gnump3d.org/"
@@ -48,6 +48,10 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/${PN}.init.d gnump3d
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/${PN}.conf.d gnump3d
+
 	dodir /etc/env.d
 	cat >${D}/etc/env.d/50gnump3d <<EOF
 # PERL5LIB="${LIBDIR}"
