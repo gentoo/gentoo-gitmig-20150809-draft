@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r4.ebuild,v 1.3 2004/09/01 20:43:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r4.ebuild,v 1.4 2004/09/04 12:58:55 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/ant/source/apache-ant-${PV}-src.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ppc sparc"
 IUSE="javamail noantlr nobcel nobeanutils nobsh nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
 
 DEPEND="=dev-java/ant-1.6.2-r5
@@ -30,8 +30,8 @@ DEPEND="=dev-java/ant-1.6.2-r5
 	!norhino? ( >=dev-java/rhino-1.5_rc4 )
 	!nojdepend? ( >=dev-java/jdepend-2.6 )
 	!nojsch? ( >=dev-java/jsch-0.1.12 )
-	!noregexp? ( >=dev-java/regexp-bin-1.3 )
-	!nojython? ( >=dev-java/jython-bin-2.1 )
+	!noregexp? ( >=dev-java/regexp-1.3-r1 )
+	!nojython? ( >=dev-java/jython-2.1-r5 )
 	javamail? ( >=dev-java/sun-javamail-bin-1.3 )"
 RDEPEND="${DEPEND}"
 
@@ -54,10 +54,10 @@ src_compile() {
 	use nocommonsnet || p="${p},commons-net"
 	use nojdepend || p="${p},jdepend"
 	use nojsch || p="${p},jsch"
-	use nojython || p="${p},jython-bin"
+	use nojython || p="${p},jython"
 	use nolog4j || p="${p},log4j"
 	use nooro || p="${p},oro"
-	use noregexp || p="${p},regexp-bin"
+	use noregexp || p="${p},regexp"
 	use norhino || p="${p},rhino"
 	use noxalan || p="${p},xalan"
 	use noxerces || p="${p},xerces-2"

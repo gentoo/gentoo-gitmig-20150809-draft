@@ -15,7 +15,7 @@
 #   limitations under the License.
 
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.6.2-r5/ant,v 1.2 2004/09/01 20:43:24 axxo Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.6.2-r5/ant,v 1.3 2004/09/04 12:58:31 axxo Exp $
 
 # Extract launch and ant arguments, (see details below).
 ant_exec_args=
@@ -102,7 +102,7 @@ else
 fi
 
 # add in the dependency .jar files
-LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant,ant-tasks,log4j,xerces-2,xalan,junit,antlr,bcel,bsh,commons-beanutils,commons-logging,commons-net,oro,jdepend,jsch,regexp,regexp-bin,rhino,jython,jython-bin,jta,jaf,javamail 2> /dev/null`"
+LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant,ant-tasks,log4j,xerces-2,xalan,junit,antlr,bcel,bsh,commons-beanutils,commons-logging,commons-net,oro,jdepend,jsch,regexp,rhino,jython,jta,jaf,javamail 2> /dev/null`"
 
 if [ -n "$JAVA_HOME" ] ; then
   if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then

@@ -1,4 +1,14 @@
-MD5 6c975b1cd290ab26e8f8b456bb948fc9 ChangeLog 965
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb0ac59fedcbcd430f9c40320a3db2bc bsf-2.3.0-r1.ebuild 1655
+MD5 372e74139154d2dcf30fe1888f1623ce ChangeLog 1066
 MD5 2a5c0decd09ba5a48289b129458bf44c metadata.xml 829
-MD5 e5a4d75faf2a6bd28de2f96ca6095b1e bsf-2.3.0-r1.ebuild 1650
 MD5 2d349b974ef57925e6b968aa654645b3 files/digest-bsf-2.3.0-r1 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBObyn/rLF9B432nYRAqzwAJ0WKF/vo4Z4Mjsd55fnl8XzR0+u8QCaA3+Q
+yUNk9iuqPCZ/mldkWOyR+68=
+=Q85M
+-----END PGP SIGNATURE-----
