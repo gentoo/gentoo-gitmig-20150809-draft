@@ -1,0 +1,16 @@
+# ChangeLog for sys-cluster/gfs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.1 2005/03/19 17:32:19 xmerlin Exp $
+
+*gfs-6.1_pre3 (19 Mar 2005)
+
+  19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +gfs-6.1_pre21.ebuild,
+  -gfs-6.1_pre3.ebuild:
+  gfs added to portage
+
+*gfs-6.1_pre3 (19 Mar 2005)
+
+  28 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  +files/gfs, +files/gfs-mount, +gfs-6.1_pre3.ebuild:
+  new in portage
+

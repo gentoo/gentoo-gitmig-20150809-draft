@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d3c09e42d7a70cd66a6114228b58da97 ChangeLog 523
+MD5 9aa78aee6bb4a2901a070ef20a2efc65 gfs-6.1_pre21.ebuild 1462
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 8b61a396206c23d7fb8e1adad649f8b7 files/digest-gfs-6.1_pre21 65
+MD5 b0cc9eee00d3d6398a6b64aed9e586a5 files/gfs 1424
+MD5 b61c5aba640725d80ee0d9a1ca9998c8 files/gfs-mount 797
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCPGN3gMUyd/cdjWsRAqBCAJ4jhMIompOukqsE05qxVPwwe9hcawCeJvii
+Yp1ysSaGPYvr9N/T9NPXU7w=
+=XDD0
+-----END PGP SIGNATURE-----
