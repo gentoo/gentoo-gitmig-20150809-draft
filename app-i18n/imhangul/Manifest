@@ -3,14 +3,12 @@ Hash: SHA1
 
 MD5 34930cd440baaa61dec0969a38c17fd7 ChangeLog 2102
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 23bc9904cb2eb57b1006dcfc87d38b46 imhangul-0.9.9.ebuild 965
 MD5 76a901cae5731ad102e8be65942ffa98 imhangul-0.9.11.ebuild 965
-MD5 9fbe16df6fd7d1e515c278443b84efba files/digest-imhangul-0.9.9 67
 MD5 5147a4fa4c75d57208363685a8d0b838 files/digest-imhangul-0.9.11 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYATXVWNWqTUmv+0RAoCuAJ9CHH/6BBKUwmKcGMR+SzXKUdfiFQCggey6
-jwoQtGH39FAAcqfxC0m5p6w=
-=+Hn3
+iD8DBQFBeilxVWNWqTUmv+0RApLMAKCP9AjC2hmXhCifDttqLTey7tFhKQCfUcBm
+KX6UWJOa5yptWR5HLUXqMuQ=
+=/L3f
 -----END PGP SIGNATURE-----
