@@ -1,27 +1,36 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.5.ebuild,v 1.6 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8.ebuild,v 1.1 2003/11/13 07:49:16 nerdboy Exp $
+
+# This is basically unchanged from the one supplied by Stephane Loeuillet
+# to Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574
+# Nice job, and thanks :)
+# Now with autoreconf for new gcc, and a new gentoo init script.
 
 IUSE="jpeg"
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Fax package for class 1 and 2 fax modems."
+DESCRIPTION="Client-server fax package for class 1 and 2 fax modems."
 HOMEPAGE="http://www.hylafax.org"
 SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
-LICENSE="freedist"
+LICENSE="hylafax"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="net-dialup/mgetty
-	sys-libs/zlib
-	app-text/ghostscript
-	media-libs/tiff
-	jpeg? ( media-libs/jpeg )"
+	>=sys-libs/zlib-1.1.4
+	>=app-text/ghostscript-5.50
+	>=media-libs/tiff-3.5.5
+	jpeg? ( media-libs/jpeg )
+	sys-apps/gawk"
+
+RDEPEND="${DEPEND}"
 
 src_compile() {
-
-	./configure	\
+	# no 'econf' here because does not support standard --prefix option (prehistoric autoconf v1.92 used !!!)
+	autoreconf -f
+	./configure \
 		--with-DIR_BIN=/usr/bin \
 		--with-DIR_SBIN=/usr/sbin \
 		--with-DIR_LIB=/usr/lib \
@@ -38,9 +47,10 @@ src_compile() {
 		--with-PATH_DPSRIP=/var/spool/fax/bin/ps2fax \
 		--with-PATH_IMPRIP=/usr/share/fax/psrip \
 		--with-SYSVINIT=/etc/init.d \
-		--with-INTERACTIVE=no || die
-
-	make OPTIMIZER="${CFLAGS}" || die
+		--with-INTERACTIVE=no \
+		--with-OPTIMIZER="${CFLAGS}" || die
+	# no 'emake' for the same reason (might use an old automake version)
+	make || die
 }
 
 src_install() {
@@ -62,10 +72,9 @@ src_install() {
 
 	insinto /etc/init.d
 	insopts -m 755
-	doins etc/hylafax
+	doins ${FILESDIR}/hylafax
 
 	dodoc COPYRIGHT README TODO VERSION
 
 	dohtml -r html/
-
 }
