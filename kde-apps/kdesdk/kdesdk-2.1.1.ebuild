@@ -10,14 +10,23 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 HOMEPAGE="http://www.kde.org/"
 
-DEPEND=">=kde-base/kdelibs-${PV}"
+DEPEND=">=kde-base/kdelibs-${PV} <sys-libs/db-2"
 
 RDEPEND=$DEPEND
 
 src_compile() {
     QTBASE=/usr/X11R6/lib/qt
-    try CFLAGS=\"$CFLAGS -I/usr/include/db1\" ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
-		--with-qt-dir=$QTBASE --with-db-name=libdb.so.2 
+     local myconf
+    if [ "`use qtmt`" ]
+    then
+      myconf="--enable-mt"
+    fi
+    if [ "`use mitshm`" ]
+    then
+      myconf="$myconf --enable-mitshm"
+    fi
+    try CFLAGS=\"$CFLAGS -I/usr/include/db1\" ./configure --prefix=$KDEDIR --host=${CHOST} \
+		--with-qt-dir=$QTBASE --with-db-name=libdb.so.2 $myconf
     try make
 }
 

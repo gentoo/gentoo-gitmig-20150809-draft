@@ -16,8 +16,17 @@ RDEPEND=$DEPEND
 
 src_compile() {
     QTBASE=/usr/X11R6/lib/qt
+     local myconf
+    if [ "`use qtmt`" ]
+    then
+      myconf="--enable-mt"
+    fi
+    if [ "`use mitshm`" ]
+    then
+      myconf="$myconf --enable-mitshm"
+    fi
     try ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
-		--with-qt-dir=$QTBASE
+		--with-qt-dir=$QTBASE $myconf
     try make
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.1.1-r1.ebuild,v 1.4 2001/05/07 19:30:40 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.1.1-r1.ebuild,v 1.5 2001/06/07 01:45:52 achim Exp $
 
 V="2.1"
 A=${P}.tar.bz2
@@ -14,6 +14,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 HOMEPAGE="http://www.kde.org/"
 
 DEPEND=">=kde-base/kdelibs-${PV}
+        >=media-sound/cdparanoia-3.9.8
 	ldap? ( >=net-nds/openldap-1.2 )
 	pam? ( >=sys-libs/pam-0.73 )
 	motif? ( >=x11-libs/openmotif-2.1.30 )"

@@ -14,6 +14,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
 	mozilla? ( >=net-www/mozilla-0.8-r1 )
+        >=media-sound/cdparanoia-3.9.8
         >=media-libs/freetype-2.0.1
         >=sys-libs/pam-0.73
 	>=gnome-base/bonobo-1.0.2
@@ -24,7 +25,17 @@ DEPEND="nls? ( sys-devel/gettext )
         >=gnome-libs/ammonite-1.0.2
 	>=gnome-libs/librsvg-1.0.0
 	>=gnome-libs/eel-1.0"
-
+RDEPEND="mozilla? ( >=net-www/mozilla-0.8-r1 )
+        >=media-sound/cdparanoia-3.9.8
+        >=media-libs/freetype-2.0.1
+        >=sys-libs/pam-0.73
+	>=gnome-base/bonobo-1.0.2
+	>=gnome-base/libghttp-1.0.9
+	>=gnome-base/control-center-1.4.0
+	>=gnome-libs/medusa-0.5.1
+        >=gnome-libs/ammonite-1.0.2
+	>=gnome-libs/librsvg-1.0.0
+	>=gnome-libs/eel-1.0"
 src_compile() {                           
   local myconf
   if [ -z "`use nls`" ]
@@ -33,7 +44,6 @@ src_compile() {
   fi
   if [ "`use mozilla`" ]
   then
-#    MOZILLA=${S}/../../../mozilla-0.8-r2/work/mozilla/dist
     MOZILLA=/opt/mozilla
     myconf="${myconf} --with-mozilla-lib-place=$MOZILLA \
 		--with-mozilla-include-place=$MOZILLA/include"
@@ -44,15 +54,14 @@ src_compile() {
     myconf="${myconf} --disable-mozilla-component"
   fi
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
-        --sysconfdir=/etc/opt/gnome --infodir=/opt/gnome/share/info \
-	--mandir=/opt/gnome/share/man --enable-eazel-services=1 ${myconf}
+        --sysconfdir=/etc/opt/gnome --infodir=/opt/gnome/info \
+	--mandir=/opt/gnome/man --enable-eazel-services=1 ${myconf}
   try make
 }
 
-src_install() {                               
-  cd ${S}
+src_install() {
   try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome \
-        mandir=${D}/opt/gnome/share/man infodir=${D}/opt/gnome/share/info install
+        mandir=${D}/opt/gnome/man infodir=${D}/opt/gnome/info install
   dodoc AUTHORS COPYING* ChangeLog* NEWS TODO
 }
 

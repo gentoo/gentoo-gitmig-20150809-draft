@@ -12,10 +12,17 @@ DEPEND=">=kde-base/kdelibs-2.0"
 RDEPEND=$DEPEND
 
 src_compile() {
-
-    cd ${S}
+    local myconf
+    if [ "`use qtmt`" ]
+    then
+      myconf="--enable-mt"
+    fi
+    if [ "`use mitshm`" ]
+    then
+      myconf="$myconf --enable-mitshm"
+    fi
     try ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
-		--with-kde-version=2
+		--with-kde-version=2 $myconf
     try make
 
 }

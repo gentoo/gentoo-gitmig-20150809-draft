@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/krusader/krusader-0.91.ebuild,v 1.1 2001/05/14 10:50:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/krusader/krusader-0.91.ebuild,v 1.2 2001/06/07 01:45:52 achim Exp $
 
 A=${PN}-0.91-1.tar.gz
 S=${WORKDIR}/${P}
@@ -10,12 +10,20 @@ SRC_URI="http://krusader.sourceforge.net/distributions/${A}"
 HOMEPAGE="http:/krusader.sourceforge.net/"
 
 DEPEND=">=kde-base/kdelibs-2.0
-	>=app-text/openjade-1.3
-	>=app-text/sgml-common-0.3"
+	app-text/sgml-docbook"
 RDEPEND=">=kde-base/kdelibs-2.0"
 
 src_compile() {
-    try ./configure --prefix=${KDEDIR} --host=${CHOST}
+    local myconf
+    if [ "`use qtmt`" ]
+    then
+      myconf="--enable-mt"
+    fi
+    if [ "`use mitshm`" ]
+    then
+      myconf="$myconf --enable-mitshm"
+    fi
+    try ./configure --prefix=${KDEDIR} --host=${CHOST} $myconf
     try make
 }
 

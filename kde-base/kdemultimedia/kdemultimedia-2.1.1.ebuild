@@ -60,7 +60,14 @@ src_compile() {
     then
 	myinterface="$myinterface,slang"
     fi
-
+    if [ "`use qtmt`" ]
+    then
+      myconf="$myconf --enable-mt"
+    fi
+    if [ "`use mitshm`" ]
+    then
+      myconf="$myconf --enable-mitshm"
+    fi
     QTBASE=/usr/X11R6/lib/qt
     try ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
 		--with-qt-dir=$QTBASE \

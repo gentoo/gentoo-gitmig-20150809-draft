@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.1.ebuild,v 1.5 2001/06/06 16:55:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.1.ebuild,v 1.6 2001/06/07 01:45:52 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -38,7 +38,7 @@ pkg_postinst() {
 
 pkg_prerm() {
     if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
-      [ -e "etc/sgml/sgml-docbook.cat" ] && install-catalog --remove /etc/sgml/sgml-docbook.cat /etc/sgml/sgml-ent.cat
-      [ -e "etc/sgml/sgml-ent.cat" ] && install-catalog --remove /etc/sgml/sgml-ent.cat /usr/share/sgml/sgml-iso-entities-8879.1986/catalog
+      install-catalog --remove /etc/sgml/sgml-docbook.cat /etc/sgml/sgml-ent.cat
+      install-catalog --remove /etc/sgml/sgml-ent.cat /usr/share/sgml/sgml-iso-entities-8879.1986/catalog
     fi
 }

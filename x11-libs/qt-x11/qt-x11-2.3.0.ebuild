@@ -11,7 +11,6 @@ HOMEPAGE="http://www.kde.org/"
 
 DEPEND=">=media-libs/libpng-1.0.9
 	>=media-libs/libmng-1.0.0
-	>=media-libs/jpeg-6b
 	opengl? ( virtual/opengl virtual/glu )
 	nas? ( >=media-sound/nas-1.4.1 )
 	virtual/x11"
