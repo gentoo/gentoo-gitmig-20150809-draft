@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.3.ebuild,v 1.7 2004/08/12 19:41:33 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.3.ebuild,v 1.8 2004/09/21 20:11:19 carlo Exp $
 
 inherit kde
 MY_PV=${PV}
@@ -55,7 +55,6 @@ SRC_URI="linguas_ar? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-ar-${P
 	linguas_pt_BR? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-pt_BR-${PV}.tar.bz2 )
 	linguas_ro? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-ro-${PV}.tar.bz2 )
 	linguas_ru? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-ru-${PV}.tar.bz2 )
-	linguas_se? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-se-${PV}.tar.bz2 )
 	linguas_sk? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-sk-${PV}.tar.bz2 )
 	linguas_sl? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-sl-${PV}.tar.bz2 )
 	linguas_sr? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-sr-${PV}.tar.bz2 )

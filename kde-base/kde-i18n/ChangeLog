@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.33 2004/09/15 02:33:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.34 2004/09/21 20:11:19 carlo Exp $
+
+  21 Sep 2004; Carsten Lohrke <carlo@gentoo.org> kde-i18n-3.2.3.ebuild:
+  linguas_se doesn't exist: #56194
 
   14 Sep 2004; Jason Wever <weeve@gentoo.org> kde-i18n-3.3.0.ebuild:
   Stable on sparc.
