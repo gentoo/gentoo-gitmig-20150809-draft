@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.1.0.ebuild,v 1.1 2002/10/27 15:05:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.1.1.ebuild,v 1.1 2002/10/28 14:44:57 foser Exp $
 
 inherit gnome2 debug
 
@@ -12,12 +12,15 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64 ppc alpha"
 
 RDEPEND=">=gnome-base/ORBit2-2.4.3
+	>=dev-libs/glib-2
 	=gnome-base/libgnomeui-2.1*
 	=gnome-base/libgnome-2.1*
-	>=gnome-base/gnome-vfs-2.0.4
+	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2.0.0
 	=gnome-extra/libgtkhtml-2.1*
-	>=dev-libs/libxslt-1.0.20"
+	>=dev-libs/libxslt-1.0.20
+	>=gnome-base/gconf-1.2
+	>=gnome-extra/libgtkhtml-2.1.1"
 	
 
 DEPEND="${DEPEND}
