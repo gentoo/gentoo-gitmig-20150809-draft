@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.61 2004/11/14 04:59:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.62 2004/11/27 00:45:16 kumba Exp $
+
+*mips-sources-2.4.26-r11 (26 Nov 2004)
+
+  26 Nov 2004; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.4.26-r10.ebuild, +mips-sources-2.4.26-r11.ebuild,
+  -mips-sources-2.4.27-r2.ebuild, +mips-sources-2.4.27-r3.ebuild,
+  -mips-sources-2.6.7-r8.ebuild, +mips-sources-2.6.7-r9.ebuild,
+  -mips-sources-2.6.8.1-r2.ebuild, +mips-sources-2.6.8.1-r3.ebuild,
+  -mips-sources-2.6.9-r3.ebuild, +mips-sources-2.6.9-r4.ebuild:
+  Bumped SECPATCHVER to 1.5. Includes fix for CAN-2004-0883 and a mips-specific
+  ptrace vuln.
 
 *mips-sources-2.6.8.1-r2 (13 Nov 2004)
 

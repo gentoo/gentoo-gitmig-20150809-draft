@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.8.1-r2.ebuild,v 1.1 2004/11/14 04:59:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.8.1-r3.ebuild,v 1.1 2004/11/27 00:45:16 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20040822"			# Date of diff between kernel.org and lmo CVS
 COBALTPATCHVER="1.7"			# Tarball version for cobalt patches
-SECPATCHVER="1.4"			# Tarball version for security patches
+SECPATCHVER="1.5"			# Tarball version for security patches
 GENPATCHVER="1.0"			# Tarball version for generic patches
 EXTRAVERSION=".$(echo ${OKV} | cut -d. -f4)-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -105,9 +105,11 @@ src_unpack() {
 	echo -e ""
 	ebegin ">>> Applying Security Fixes"
 		epatch ${WORKDIR}/security/CAN-2004-0814-2.6.8.1-tty_race_conditions.patch
+		epatch ${WORKDIR}/security/CAN-2004-0883-2.6.8.1-smbfs_remote_overflows.patch
 		epatch ${WORKDIR}/security/security-2.6-proc_race.patch
 		epatch ${WORKDIR}/security/security-2.6.8.1-binfmt_elf-fixes.patch
 		epatch ${WORKDIR}/security/security-2.6-remote_ddos.patch
+		epatch ${WORKDIR}/security/security-2.6.8.1-mips-ptrace.patch
 	eend
 
 
