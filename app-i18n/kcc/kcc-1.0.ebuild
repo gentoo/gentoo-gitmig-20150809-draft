@@ -7,7 +7,7 @@ S="${WORKDIR}/${PN}"
 DESCRIPTION="A Kanji code converter"
 SRC_URI="ftp://ftp.jp.freebsd.org/pub/FreeBSD/ports/distfiles/${PN}.tar.gz"
 HOMEPAGE=""  	#There doesn't seem to be a home page for this package!
-LICENSE="GPL2"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 

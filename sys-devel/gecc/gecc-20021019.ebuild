@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.5 2003/02/13 16:32:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.6 2003/02/28 13:18:14 liquidx Exp $
 
 # comprehensive list of any and all USE flags leveraged in the build, 
 # with the exception of any ARCH specific flags, i.e. ppc sparc sparc64
@@ -9,7 +9,7 @@ IUSE=""
 DESCRIPTION="gecc is a tool to speed up compilation of C/C++ sources. It distributes the compilation on a cluster of compilation nodes. It also caches the object files to save some unneeded work."
 HOMEPAGE="http://gecc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-LICENSE="gpl"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 DEPEND="sys-devel/gcc"

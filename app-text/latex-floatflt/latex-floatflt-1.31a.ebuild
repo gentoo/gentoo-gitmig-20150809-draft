@@ -8,7 +8,7 @@ S=${WORKDIR}/floatflt
 DESCRIPTION="LaTeX package used to warp figures around text"
 SRC_URI="ftp://ftp.dante.de/tex-archive/macros/latex/contrib/other/floatflt.tar.gz"
 HOMEPAGE="http://www.ctan.org/tex-archive/help/Catalogue/entries/floatflt.html?action=/tex-archive/macros/latex/contrib/other/floatflt/"
-LICENSE="LPPL"
+LICENSE="LPPL-1.2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc "
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.13 2003/02/13 12:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.14 2003/02/28 13:18:14 liquidx Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 KEYWORDS="x86 ppc sparc "
-LICENSE="GPL-"
+LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/oaf-0.6.8
 	>=gnome-base/ORBit-0.5.13

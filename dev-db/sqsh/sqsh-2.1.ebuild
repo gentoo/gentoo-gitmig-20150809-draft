@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.ebuild,v 1.3 2003/02/13 10:05:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.ebuild,v 1.4 2003/02/28 13:18:14 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Replacement for the venerable 'isql' program supplied by Sybase."
 HOMEPAGE="http://www.sqsh.org/"
-LICENSE="GPL"
+LICENSE="GPL-2"
 DEPEND="dev-db/freetds
 	readline? ( sys-libs/readline )
 	X? ( x11-base/xfree )

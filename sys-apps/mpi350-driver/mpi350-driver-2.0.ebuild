@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mpi350-driver/mpi350-driver-2.0.ebuild,v 1.2 2003/02/13 16:07:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mpi350-driver/mpi350-driver-2.0.ebuild,v 1.3 2003/02/28 13:18:14 liquidx Exp $
 
 DESCRIPTION="Cisco's wireless drivers and utilities"
 
@@ -10,7 +10,7 @@ SRC_DOWNLOAD="http://www.cisco.com/public/sw-center/sw-wireless.shtml"
 SRC_URI="Linux-ACU-Driver-v2.0.tar.gz"
 RESTRICT="fetch"
 
-LICENSE="MPL"
+LICENSE="MPL-1.1"
 
 SLOT="0"
 KEYWORDS="~x86 -ppc -sparc"

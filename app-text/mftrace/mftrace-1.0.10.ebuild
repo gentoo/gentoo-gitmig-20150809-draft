@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.10.ebuild,v 1.3 2003/02/13 09:41:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.10.ebuild,v 1.4 2003/02/28 13:18:14 liquidx Exp $
 
 IUSE="truetype"
 
@@ -8,7 +8,7 @@ PYVER=$(python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:')
 DESCRIPTION="traces TeX fonts to PFA or PFB fonts (formerly pktrace)"
 HOMEPAGE="http://www.cs.uu.nl/~hanwen/mftrace/"
 SRC_URI="http://www.cs.uu.nl/~hanwen/mftrace/${P}.tar.gz"
-LICENSE="GPL"
+LICENSE="GPL-1"
 # have only tested this ebuild version on x86, but old pktrace
 # ebuild had these keywords:
 KEYWORDS="x86"

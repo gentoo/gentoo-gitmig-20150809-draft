@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19.ebuild,v 1.1 2003/02/26 23:25:14 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19.ebuild,v 1.2 2003/02/28 13:18:14 liquidx Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
 DEPEND=""
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 ETYPE="sources"
 inherit kernel
