@@ -1,4 +1,4 @@
-MD5 da60471492fe561dd7c351a8fa8d6a0e dyndnsupdate-0.6.15.ebuild 808
+MD5 43e11dbd53a5b012d5497c6db19d8c63 dyndnsupdate-0.6.15.ebuild 817
 MD5 8e5fc0b251a230507c19d2c29e12c004 ChangeLog 1070
 MD5 da9aa966cf88a0f8be5fe2fda29697d6 files/dyndnsupdate-0.6.15-resolution-segfault-fix.patch 497
 MD5 5a003d566db91666d3206342c034fc5b files/digest-dyndnsupdate-0.6.15 70

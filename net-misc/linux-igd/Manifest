@@ -1,5 +1,5 @@
-MD5 fef66e410c3ca90a91fd99d07ed3d7c8 linux-igd-0.92.ebuild 1299
-MD5 a1a7f12c3fe0b11408f5c317ea7bc03f linux-igd-0.75.ebuild 1293
+MD5 d4eda908bea3774e1f2762e7f8a35e43 linux-igd-0.92.ebuild 1307
+MD5 33c6f681ba5aaa19a1d196f329844a53 linux-igd-0.75.ebuild 1302
 MD5 9c84a9e0b03e049a1c6a5bda2e1f59c5 ChangeLog 864
 MD5 3e13c42283a75a030090b2c87ff2fe65 files/rc_upnpd 601
 MD5 d558a748e7a1149c2afdf329e5c24a73 files/digest-linux-igd-0.75 60
