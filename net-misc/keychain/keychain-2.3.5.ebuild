@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.3.5.ebuild,v 1.2 2004/09/10 03:24:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.3.5.ebuild,v 1.3 2004/11/21 03:17:38 agriffis Exp $
 
 DESCRIPTION="ssh-agent manager"
-HOMEPAGE="http://www.gentoo.org/proj/en/keychain.xml"
+HOMEPAGE="http://www.gentoo.org/proj/en/keychain/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~agriffis/keychain/${P}.tar.bz2"
 
