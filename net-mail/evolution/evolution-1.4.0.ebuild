@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.1 2003/06/10 15:10:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.2 2003/06/10 22:55:10 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
-inherit flag-o-matic virtualx debug gnome2
+inherit flag-o-matic virtualx gnome2
 use kde && inherit kde
 
 DB3="db-3.1.17"
@@ -145,8 +145,5 @@ src_compile() {
 	Xemake || Xmake || die
 }
 
-src_install() {
-	export USE_DESTDIR="1"
-	export DOCS="AUTHORS COPYING* ChangeLog HACKING MAINTAINERS NEWS README"
-	gnome2_src_install
-}	
+USE_DESTDIR="1"
+DOCS="AUTHORS COPYING* ChangeLog HACKING MAINTAINERS NEWS README"
