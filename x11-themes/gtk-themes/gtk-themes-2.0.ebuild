@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-2.0.ebuild,v 1.2 2002/10/17 15:21:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-2.0.ebuild,v 1.3 2002/10/19 21:31:11 cselkirk Exp $
 
 DESCRIPTION="Some nice themes for GTK+ 2"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 BASE_URI="http://download.freshmeat.net/themes/"
 SRC_URI="${BASE_URI}aqualightblue-gtk2/aqualightblue-gtk2-default.tar.gz
