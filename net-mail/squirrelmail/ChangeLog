@@ -1,7 +1,14 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.2 2002/04/17 17:27:36 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.3 2002/05/21 22:03:34 g2boojum Exp $
 
+*squirrelmail-1.2.6 (21 May 2002)
+
+  21 May 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  New version.  Also moved HTTPDROOT to the new /home/httpd/ location.
+  Made sure that the squirrelmail directory is owned by apache.apache.
+  
 *squirrelmail-1.2.5 (17 Apr 2002)
 
   17 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
