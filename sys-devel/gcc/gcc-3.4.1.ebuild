@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.25 2004/09/06 20:51:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.26 2004/10/01 21:45:27 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -365,8 +365,6 @@ src_unpack() {
 	fi
 
 	cd ${S}
-	# Fixup libtool to correctly generate .la files with portage
-	elibtoolize --portage --shallow
 
 	# Branch update ...
 	if [ -n "${BRANCH_UPDATE}" ]
@@ -507,6 +505,9 @@ src_unpack() {
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+
+	# Fixup libtool to correctly generate .la files with portage
+	elibtoolize --portage --shallow
 
 	use uclibc && gnuconfig_update
 
