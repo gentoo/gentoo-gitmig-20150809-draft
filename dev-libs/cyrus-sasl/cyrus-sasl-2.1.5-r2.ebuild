@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.5-r1.ebuild,v 1.2 2002/07/13 20:01:59 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.5-r2.ebuild,v 1.1 2002/07/13 21:33:14 g2boojum Exp $
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/sasl/"
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
-	>=dev-libx/openssl-0.9.6d"
+	>=dev-libs/openssl-0.9.6d"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
