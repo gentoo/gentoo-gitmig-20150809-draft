@@ -1,4 +1,5 @@
 MD5 486e6e0d14b37fd77c0ca9fbcd791ccd wolk-sources-3.8.ebuild 998
+MD5 4b56f4e787d950a20d8511f45522f281 wolk-sources-4.0_rc7.ebuild 1558
 MD5 cde84f15ad89282ac27cb11d22aecdcc wolk-sources-4.0_rc2.ebuild 1573
 MD5 f65f6e7e554370ba5949520ec2d592ea wolk-sources-4.0_rc4.ebuild 1560
 MD5 9cb61bdbf44222070ce62850ba9e17a7 wolk-sources-4.0_rc6.ebuild 2128
@@ -10,5 +11,6 @@ MD5 7a609261ef06179659ad00a235355a10 files/digest-wolk-sources-4.0_rc2 148
 MD5 4d80c6ffe2def431ac67e8d7285189dc files/digest-wolk-sources-4.0_rc3 148
 MD5 b9837f10ede47bf3b5e8d2e298650a6b files/digest-wolk-sources-4.0_rc4 148
 MD5 4daa391fa9e3ea3c06bb1e574c393694 files/digest-wolk-sources-4.0_rc6 328
+MD5 c15eb631fa2091625f7c50b9b7c5e96e files/digest-wolk-sources-4.0_rc7 148
 MD5 e7b64a09d10444ca699e9696a4035c3e files/patches.txt 12893
 MD5 37d14c054323764430ce967a1de85a02 files/digest-wolk-sources-3.8 151
