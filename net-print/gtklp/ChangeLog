@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gtklp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.15 2004/11/23 00:09:17 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.16 2005/01/05 16:12:45 sekretarz Exp $
+
+  05 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org> gtklp-0.9p.ebuild:
+  Added to ~amd64, bug #76247
 
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
