@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.17 2003/07/06 14:12:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.18 2003/08/11 18:24:23 pappy Exp $
+
+  11 Aug 2003; Alexander Gabert <pappy@gentoo.org> file-4.02.ebuild:
+  file command segfaults on hppa when pa8000 schedule for gcc is used
 
   23 Jun 2003; Aron Griffis <agriffis@gentoo.org> file-4.02.ebuild:
   Mark stable on alpha
