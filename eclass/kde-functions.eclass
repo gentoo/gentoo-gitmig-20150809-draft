@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.15 2002/07/12 21:42:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.16 2002/07/13 17:29:41 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -147,16 +147,16 @@ set-kdedir() {
 		else
 		    # for kde base, equal to prefix
 		    if [ "${INHERITED//kde-dist}" != "$INHERITED" ] || [ "$PN" == kdelibs ] || [ "$PN" == arts ]; then
-			echo "base package"
+			debug-print "base package"
 			export KDEDIR=$PREFIX
 		    else
 			# for everything else: try to locate latest version
 			# of kdelibs installed. if yours is outside the standard
 			# paths, that's what KDE3LIBSDIR is for, use it
 			for x in /usr/kde/{cvs,3.2,3.1,3.0,3} $KDEDIR $KDE3DIR $KDE3LIBSDIR /usr/kde/*; do
-			    echo checking for $x/include/kwin.h...
+			    debug-print "checking for $x/include/kwin.h..."
 			    if [ -f "${x}/include/kwin.h" ]; then
-				echo found
+				debug-print found
 				export KDEDIR="$x"
 				break
 			    fi
@@ -172,7 +172,6 @@ set-kdedir() {
 	[ "${INHERITED//kde-dist}" != "${INHERITED}" -a -z "$KDEDIR" ] && die "$ECLASS: Error: could set kdelibs location, consult log"
 
 	debug-print "$FUNCNAME: result: KDEDIR=$KDEDIR, PREFIX=$PREFIX"
-	echo "$FUNCNAME: result: KDEDIR=$KDEDIR, PREFIX=$PREFIX"
 
 }
 
