@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e7bce4b8478b1128e86efb8bf43a7d08 c-client-2002e-r2.ebuild 2039
 MD5 ecdbce3ee2598f6cf9d5f037333c9766 c-client-2004a.ebuild 2183
 MD5 81f0f9656a107854fa3ddf25217525a6 c-client-2002e-r1.ebuild 1974
 MD5 5fb5acd5c2e0b78dbaca4aa75cb36b74 c-client-2002e.ebuild 1893
 MD5 47ac744573c05e8e5c5dc6b471bde3fa c-client-2002d-r1.ebuild 1869
-MD5 0870445965c8644a3f5da2933bf5bc70 c-client-2004a-r1.ebuild 2598
-MD5 554339862d201410f7c04c80cc95065a ChangeLog 3070
+MD5 82bbcf5790294052fe4819b7cc3fd2d3 c-client-2004a-r1.ebuild 2599
+MD5 0fd1d3d3901bf374ac08cbf74471ba01 ChangeLog 3185
 MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
 MD5 cc926ec2e710759c314acd92cd84b770 c-client-2002d.ebuild 1853
 MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d-r1 62
@@ -19,10 +16,3 @@ MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e 62
 MD5 86da98c03bc68723a437d2cf135b0775 files/digest-c-client-2004a 62
 MD5 cde23dc2375a8c33998202c8f0c9ae0e files/c-client-2004a-amd64-so-fix.patch 675
 MD5 c8cf618ac210e06a1641871b30550e8f files/2002d-Makefile.patch 2174
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCMNkfntT9W3vfTuoRAiOkAJ45UuSsRoSRGpQtjepCN6P7b+8e+gCgkshc
-9K9rYyiUeSyUVT9RcBxvUiQ=
-=rguR
------END PGP SIGNATURE-----
