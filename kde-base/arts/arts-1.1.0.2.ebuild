@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.2.ebuild,v 1.1 2002/11/05 00:03:57 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.2.ebuild,v 1.2 2002/11/05 03:13:35 hannes Exp $
 inherit kde-base flag-o-matic
 
 # this is the arts 1.1.0 rfom kde 3.1 rc2, as opposed to the arta 1.1.0 rfom kde 3.1 beta2
@@ -11,7 +11,7 @@ KEYWORDS="x86"
 HOMEPAGE="http://multimedia.kde.org"
 DESCRIPTION="KDE Sound Server"
 set-kdedir 3.1_rc1
-need-qt 3.1.0_pre20021024
+need-qt 3.1.0_pre20021104
 
 if [ "${COMPILER}" == "gcc3" ]; then
     # GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with 
