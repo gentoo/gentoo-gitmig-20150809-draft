@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.19 2003/12/02 21:26:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.20 2003/12/21 09:45:25 robbat2 Exp $
+
+*zlib-1.2.1-r1 (21 Dec 2003)
+
+  21 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> zlib-1.2.1-r1.ebuild:
+  move libraries from /usr/lib to /lib as per bug 27064
 
 *zlib-1.2.1 (02 Dec 2003)
 
