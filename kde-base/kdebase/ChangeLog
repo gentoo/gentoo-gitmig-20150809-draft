@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.177 2005/02/07 20:00:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.178 2005/02/08 15:49:59 greg_g Exp $
+
+  08 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  -files/3.3.0-kwinrules-Makefile.am.diff, -files/3.3.0-sasl-fix.diff,
+  -files/kdebase-3.2.0-kcontrol.patch, -files/kdebase-3.2.2-genkdmconf.c.diff,
+  -files/kscreensaver.pam, -kdebase-3.2.0.ebuild, -kdebase-3.2.2.ebuild,
+  -kdebase-3.3.0.ebuild:
+  Remove old ebuilds.
 
 *kdebase-3.3.2-r2 (07 Feb 2005)
 
