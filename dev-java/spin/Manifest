@@ -1,4 +1,14 @@
-MD5 ede3a3102c2ef2408ef399fe84aa5ecb spin-1.3.1.ebuild 805
-MD5 ed997b2df339a6afb197bdc510e85bfb ChangeLog 443
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b81b95228c4a64ca188c6334a1d1b99 spin-1.3.1.ebuild 996
+MD5 2dc0a35aad1d09f9cf30c44a0ba5ba5b ChangeLog 596
 MD5 13b8b328d61e84969e430e8647cd82f0 metadata.xml 218
 MD5 71f72cff8e3f6d99ba9c9e9c6b7b777b files/digest-spin-1.3.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSGnx06ebR+OMO78RAmThAJ9d9IgDmY5wI6YnVAsR/Tqg1YSB5gCfaClz
+kQgqUydbIlMJGnxzToMai0U=
+=z08P
+-----END PGP SIGNATURE-----

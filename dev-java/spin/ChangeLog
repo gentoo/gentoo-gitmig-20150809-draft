@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/spin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/ChangeLog,v 1.2 2005/02/17 17:42:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/ChangeLog,v 1.3 2005/03/28 20:32:22 luckyduck Exp $
+
+  28 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> spin-1.3.1.ebuild:
+  added ~amd64 to keywords, introduced support for the jikes and source useflag.
 
   17 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> spin-1.3.1.ebuild:
   added missing unzip dependency. see #69831
