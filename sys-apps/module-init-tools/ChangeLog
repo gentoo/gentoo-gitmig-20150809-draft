@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.31 2003/09/06 14:55:40 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.32 2003/09/15 21:35:05 azarah Exp $
+
+*module-init-tools-0.9.14 (15 Sep 2003)
+
+  15 Sep 2003; Martin Schlemmer <azarah@gentoo.org>
+  module-init-tools-0.9.14.ebuild,
+  files/module-init-tools-0.9.14-be-quiet-for-devfsd.patch:
+  New version.  Update patch to quiet output when called from devfsd
 
   06 Sep 2003; Alexander Gabert <pappy@gentoo.org>
   module-init-tools-0.9.12-r1.ebuild, module-init-tools-0.9.13_pre2.ebuild:
