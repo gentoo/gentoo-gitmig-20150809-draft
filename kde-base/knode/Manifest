@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0069a4b6acb0996dc45e0fa308a0fd3 knode-3.4.0.ebuild 904
-MD5 26c09a15c09f4f68516c1ed621c2a7c7 knode-3.4.0_rc1.ebuild 902
-MD5 7aa720c62ae7d1ac636b80f08c045371 ChangeLog 1310
+MD5 823c9d084c3d85492041f6904ebe0fd8 ChangeLog 1400
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 26c09a15c09f4f68516c1ed621c2a7c7 knode-3.4.0_rc1.ebuild 902
+MD5 072f6861fdd7748198d4967617b856c7 knode-3.4.0.ebuild 910
 MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-knode-3.4.0_rc1 373
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-knode-3.4.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwEOUpKYMelfdYERAj2fAJ46FnA4ppb+/63guxT7z3/kwMpcxgCeKAE+
-O2Nl0wXjjaNMu2o2/f7ACs4=
-=Apc0
------END PGP SIGNATURE-----

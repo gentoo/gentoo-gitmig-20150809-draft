@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7aa952ba65767c49ba4aca0f29dbe82a kompare-3.4.0.ebuild 435
-MD5 da00623342d4dd00e8face1b2f59306d ChangeLog 1223
-MD5 09a9f0581dc6c3fd941536ab673258f0 kompare-3.4.0_rc1.ebuild 433
+MD5 39dc54673c809a8c6abcba5b6ce1367d ChangeLog 1315
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 09a9f0581dc6c3fd941536ab673258f0 kompare-3.4.0_rc1.ebuild 433
+MD5 ef0fdd839c6290fca8c4a8ff8ccc00d8 kompare-3.4.0.ebuild 441
 MD5 5278998b3d2ca1313a1cd967b9c51b58 files/digest-kompare-3.4.0_rc1 368
 MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kompare-3.4.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwM4UpKYMelfdYERAvzXAJ93UOTQJm6Pp4bsVjM3LyQlaECrcQCeJfqs
-Ud21rFqh5C4tJBvONglY/oE=
-=o95F
------END PGP SIGNATURE-----

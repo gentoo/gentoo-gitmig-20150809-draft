@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d2fb92e0324c00978ac04afc288c58a kmobile-3.4.0.ebuild 406
-MD5 1f860231da1ca1cec0f3e600681c1387 kmobile-3.4.0_rc1.ebuild 404
-MD5 34bcad13f0602b5d393773a6a5a22c04 ChangeLog 1223
+MD5 538d04313bef0988ee2080e18c06dc63 ChangeLog 1315
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kmobile-3.4.0 67
+MD5 1f860231da1ca1cec0f3e600681c1387 kmobile-3.4.0_rc1.ebuild 404
+MD5 4e9672752b3e4b69327869e9c814c09f kmobile-3.4.0.ebuild 412
 MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-kmobile-3.4.0_rc1 373
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwKPUpKYMelfdYERAhh2AJ4tHMiqc73s6006owPwE5jt8tbRMQCgjccN
-qbjkoLQ7fJ6kUfoaGTjs+6E=
-=ogUd
------END PGP SIGNATURE-----
+MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kmobile-3.4.0 67

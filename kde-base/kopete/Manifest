@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb4ead5e71436950ac5c0d9e0559c273 kopete-3.4.0.ebuild 424
-MD5 47521719e566f408823d8be6669317fa ChangeLog 1213
+MD5 d67c8207f08c5bee877f44ab13ef2981 ChangeLog 1304
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 13f2e5a34a0ce548345d2b47c9801747 kopete-3.4.0_rc1.ebuild 422
-MD5 622d3497792334fa87e483e249da693d files/digest-kopete-3.4.0 70
+MD5 a1fcf20c08c25ac6bfa0230ecdc38f4a kopete-3.4.0.ebuild 430
 MD5 ee82ae945549a695ca5353dd33e3ce47 files/digest-kopete-3.4.0_rc1 389
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwzMUpKYMelfdYERAvfAAKCDBin8THLFzL6+WT6hBj1i8gy4dgCfZCrL
-locrYw59NLSY6W467lyBvoA=
-=Js8p
------END PGP SIGNATURE-----
+MD5 622d3497792334fa87e483e249da693d files/digest-kopete-3.4.0 70
