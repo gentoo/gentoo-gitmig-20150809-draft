@@ -17,7 +17,7 @@ diff -ur util-linux-2.12i.orig/fdisk/llseek.c util-linux-2.12i/fdisk/llseek.c
  
 -#if defined(__alpha__) || defined(__ia64__) || defined(__s390x__)
 +/* do not use assembler to put together syscalls at compile time (for llseek for example) when using PIC */
-+#if defined(__alpha__) || defined(__ia64__) || defined(__s390x__) || defined(__hppa__) \
++#if defined(__alpha__) || defined(__ia64__) || defined(__s390x__) \
 +    || defined(__PIC__) || defined(__pic__)
  
  #define my_llseek lseek
@@ -39,7 +39,7 @@ diff -ur util-linux-2.12i.orig/fdisk/sfdisk.c util-linux-2.12i/fdisk/sfdisk.c
  #undef use_lseek
 -#if defined (__alpha__) || defined (__ia64__) || defined (__x86_64__) || defined (__s390x__)
 +/* do not use the assembler constructed syscalls for seeking if compiled as PIC */
-+#if defined (__alpha__) || defined (__ia64__) || defined (__x86_64__) || defined (__s390x__) || defined (__hppa__) \
++#if defined (__alpha__) || defined (__ia64__) || defined (__x86_64__) || defined (__s390x__) \
 +    || defined(__PIC__) && defined(__pic__)
  #define use_lseek
  #endif
@@ -52,7 +52,7 @@ diff -ur util-linux-2.12i.orig/partx/partx.c util-linux-2.12i/partx/partx.c
   * sseek: seek to specified sector
   */
 -#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__)
-+#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__) && !defined(__hppa__) \
++#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__) \
 +    && !defined(__PIC__) && !defined(__pic__)
  #define NEED__llseek
  #endif

@@ -24,7 +24,7 @@
 +			struct stat swapstatbuf;
 +			for (i = 0; i < numSwaps; i++)
 +				if (swapFiles[i] && !stat(swapFiles[i], &swapstatbuf) && \
-+				    swapstatbuf.st_dev == fstatbuf.st_dev)
++				    swapstatbuf.st_rdev == fstatbuf.st_rdev)
 +					return 1;
 +		}
 +
