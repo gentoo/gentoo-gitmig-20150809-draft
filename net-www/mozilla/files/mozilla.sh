@@ -41,7 +41,13 @@ ulimit -c 0
 ##
 MOZ_DIST_BIN="/usr/lib/mozilla"
 MOZ_PROGRAM="/usr/lib/mozilla/mozilla-bin"
-MOZ_CLIENT_PROGRAM="/usr/lib/mozilla/mozilla-xremote-client"
+
+if [ -x /usr/lib/mozilla/mozilla-xremote-client ]
+then
+	MOZ_CLIENT_PROGRAM="/usr/lib/mozilla/mozilla-xremote-client"
+else
+	MOZ_CLIENT_PROGRAM="/usr/lib/mozilla/mozilla-bin"
+fi
 
 ##
 ## Set MOZILLA_FIVE_HOME
