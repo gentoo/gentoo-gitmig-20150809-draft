@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011109.ebuild,v 1.1 2001/11/12 15:59:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011109.ebuild,v 1.2 2001/11/12 16:26:37 achim Exp $
 
 P0=${PN}-0.6.0-20011109
 S=${WORKDIR}/${P0}
@@ -30,12 +30,12 @@ src_compile() {
     fi
     export CFLAGS=${CFLAGS/-O?/-O2}
     export LDFLAGS
-    try ./configure --prefix=/usr --host=${CHOST} \
-	--enable-quiet --disable-tsc $myconf
+    ./configure --prefix=/usr --host=${CHOST} \
+	--enable-quiet --disable-tsc $myconf || die
 #    cp Makefile Makefile.orig
 #    sed -e "s:/usr/lib/win32:${D}/usr/lib/win32:" \
 #	Makefile.orig > Makefile
-    try make
+    make || die
 }
 
 src_install () {
@@ -43,7 +43,7 @@ src_install () {
     dodir /usr/lib /usr/bin
     dodir /usr/lib/win32
 
-    make prefix=${D}/usr install
+    make prefix=${D}/usr install || die
 
     cd ${D}/usr/lib/win32
     unzip ${DISTDIR}/binaries-011002.zip
