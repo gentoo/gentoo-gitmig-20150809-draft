@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.5 2004/04/12 21:44:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.6 2004/04/18 06:11:37 wolf31o2 Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( ftp://ftp.linuxhardware.org/ut2004/ut2004-lnx-demo-${PV}.run.bz2
 IUSE="alsa"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* x86 amd64"
 
 DEPEND="!dedicated? ( virtual/opengl )
 	alsa? ( >=media-libs/alsa-lib-1.0.2

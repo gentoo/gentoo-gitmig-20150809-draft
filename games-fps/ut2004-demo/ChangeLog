@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.21 2004/04/12 21:44:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.22 2004/04/18 06:11:37 wolf31o2 Exp $
+
+  18 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-demo-3120-r1.ebuild, ut2004-demo-3120-r2.ebuild:
+  Removing -r1 and marking -r2 stable on x86 and amd64.
 
   12 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-demo-3120-r1.ebuild, ut2004-demo-3120-r2.ebuild,
