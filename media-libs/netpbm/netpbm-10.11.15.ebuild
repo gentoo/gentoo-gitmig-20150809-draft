@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.15.ebuild,v 1.1 2004/01/14 18:13:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.15.ebuild,v 1.2 2004/01/27 20:09:16 mholzer Exp $
 
 inherit flag-o-matic
 
@@ -12,12 +12,13 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64"
-IUSE="svga"
+IUSE="svga jpeg tiff png zlib"
 RESTRICT="nomirror"
 
-DEPEND=">=media-libs/jpeg-6b
-	>=media-libs/tiff-3.5.5
-	>=media-libs/libpng-1.2.1
+DEPEND="jpeg? ( >=media-libs/jpeg-6b )
+	tiff? ( >=media-libs/tiff-3.5.5 )
+	png? ( >=media-libs/libpng-1.2.1 )
+	zlib? ( sys-libs/zlib )
 	svga? ( media-libs/svgalib )"
 
 src_unpack() {
@@ -28,6 +29,22 @@ src_unpack() {
 	if [ `use svga` ] ; then
 	echo "LINUXSVGAHDR_DIR = /usr/include" >> Makefile.config
 	echo "LINUXSVGALIB = /usr/lib/libvga.so" >> Makefile.config
+	fi
+
+	if [ `use jpeg` ] ; then
+	echo "JPEGLIB = libjpeg.so" >> Makefile.config
+	fi
+
+	if [ `use png` ] ; then
+	echo "PNGLIB = libpng.so" >> Makefile.config
+	fi
+
+	if [ `use tiff` ] ; then
+	echo "TIFFLIB = libtiff.so" >> Makefile.config
+	fi
+
+	if [ `use zlib` ] ; then
+	echo "ZLIB = libz.so" >> Makefile.config
 	fi
 
 	# Sparc support ...
