@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.12.ebuild,v 1.1 2003/09/13 08:04:43 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.12.ebuild,v 1.2 2003/09/15 14:18:55 obz Exp $
 
-inherit nsplugins flag-o-matic
+inherit nsplugins
 
 MY_P="${PN}libre-${PV}"
 
@@ -13,10 +13,10 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc "
-IUSE="xml"
+IUSE="xml qt"
 
-DEPEND=">=x11-libs/qt-2.3
-		>=media-libs/jpeg-6b-r2"
+DEPEND=">=media-libs/jpeg-6b-r2
+	qt? ( >=x11-libs/qt-2.3 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -26,11 +26,14 @@ src_compile() {
 	# <obz@gentoo.org>
 	replace-flags "-march=pentium4" "-march=pentium3"
 
-	local xmlconf=""
+	local myconf=""
 	use xml \
-		&& xmlconf="${xmlconf} --enable-xmltools"
+		&& myconf="${myconf} --enable-xmltools"
+	use qt \
+		|| myconf="${myconf} --without-qt"
 
 	econf ${myconf} || die
+	make depend
 	emake || die
 
 }
