@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.9 2004/03/16 19:35:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.10 2004/03/30 05:48:39 spyderous Exp $
 
 inherit rpm
 
@@ -66,7 +66,7 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "If you want to run cpqimlview or hpimlview you will"
-	einfo "need to emerge xfree, tix, and tclx"
+	einfo "need to emerge an X11 implementation, tix, and tclx"
 	einfo ""
 	einfo "You now need to execute /etc/init.d/hpasm start in"
 	einfo "order to use the installed package. The kernel"
