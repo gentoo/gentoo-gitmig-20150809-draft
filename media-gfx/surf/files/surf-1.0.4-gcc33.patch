@@ -1,0 +1,67 @@
+diff -Naur surf-1.0.4.orig/gtkgui/MainWindowController.cc surf-1.0.4/gtkgui/MainWindowController.cc
+--- surf-1.0.4.orig/gtkgui/MainWindowController.cc	2000-07-22 06:04:44.000000000 +0900
++++ surf-1.0.4/gtkgui/MainWindowController.cc	2004-06-30 12:40:35.406192088 +0900
+@@ -28,7 +28,7 @@
+ 
+ #include <gtk/gtkitemfactory.h>
+ 
+-#include <strstream.h>
++#include <strstream>
+ 
+ // #define DEBUG
+ #include "debug.h"
+diff -Naur surf-1.0.4.orig/gtkgui/Requester.cc surf-1.0.4/gtkgui/Requester.cc
+--- surf-1.0.4.orig/gtkgui/Requester.cc	2000-03-13 02:02:00.000000000 +0900
++++ surf-1.0.4/gtkgui/Requester.cc	2004-06-30 12:40:21.682104294 +0900
+@@ -25,7 +25,7 @@
+ 
+ #include <assert.h>
+ #include <iostream.h>
+-#include <strstream.h>
++#include <strstream>
+ 
+ #include <gtk/gtk.h>
+ 
+diff -Naur surf-1.0.4.orig/gtkgui/SaveImageDialog.cc surf-1.0.4/gtkgui/SaveImageDialog.cc
+--- surf-1.0.4.orig/gtkgui/SaveImageDialog.cc	2000-03-13 02:02:00.000000000 +0900
++++ surf-1.0.4/gtkgui/SaveImageDialog.cc	2004-06-30 12:39:59.337217644 +0900
+@@ -23,10 +23,12 @@
+  */
+ 
+ 
+-#include <strstream.h>
++#include <strstream>
+ 
+ #include "SaveImageDialog.h"
+ 
++using std::ostrstream;
++
+ void SaveImageDialog::toggled_dither_method (GtkWidget *w, gpointer data)
+ {
+ 	SaveImageDialog *sid = (SaveImageDialog *)data;
+diff -Naur surf-1.0.4.orig/gtkgui/mycolor.cc surf-1.0.4/gtkgui/mycolor.cc
+--- surf-1.0.4.orig/gtkgui/mycolor.cc	2000-06-14 21:32:52.000000000 +0900
++++ surf-1.0.4/gtkgui/mycolor.cc	2004-06-30 12:39:24.224109990 +0900
+@@ -26,7 +26,7 @@
+ #include <assert.h>
+ #include <iostream.h>
+ #include <stdlib.h>
+-#include <strstream.h>
++#include <strstream>
+ 
+ #include <gtk/gtk.h>
+ #include <gdk/gdk.h>
+diff -Naur surf-1.0.4.orig/misc/Misc.h surf-1.0.4/misc/Misc.h
+--- surf-1.0.4.orig/misc/Misc.h	2000-03-13 02:02:00.000000000 +0900
++++ surf-1.0.4/misc/Misc.h	2004-06-30 12:38:58.375711455 +0900
+@@ -26,7 +26,9 @@
+ #ifndef MISC_H
+ #define MISC_H
+ 
+-#include <strstream.h>
++#include <strstream>
++
++using std::ostrstream;
+ 
+ class Misc
+ {
