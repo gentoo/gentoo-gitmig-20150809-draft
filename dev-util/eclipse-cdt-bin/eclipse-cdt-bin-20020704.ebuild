@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/eclipse-cdt-bin-20020704.ebuild,v 1.1 2002/07/13 23:59:04 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/eclipse-cdt-bin-20020704.ebuild,v 1.2 2002/07/14 05:49:26 blocke Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org"
@@ -8,7 +8,7 @@ SRC_URI="http://download.eclipse.org/tools/cdt/downloads/cdt/20020704-CDT-initia
 LICENSE="CPL-1.0"
 SLOT="2"
 KEYWORDS="x86"
-DEPEND="=dev-eclipse/eclipse-platform-bin-2.0*"
+DEPEND="=dev-util/eclipse-platform-bin-2.0*"
 RDEPEND="$DEPEND"
 S=${WORKDIR}/eclipse
 
