@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20040604.ebuild,v 1.1 2004/06/05 13:05:03 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20040604.ebuild,v 1.2 2004/06/06 03:32:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 	MY_CONF="${MY_CONF} --without-python"
 
 	env PATH="${CEL_PREFIX}/bin:${PATH}" ./configure ${MY_CONF} || die
-	
+
 	jam || die
 }
 
