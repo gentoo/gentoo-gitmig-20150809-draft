@@ -1,10 +1,10 @@
 # ChangeLog for app-cdr/burncdda
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/ChangeLog,v 1.5 2003/02/12 03:05:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/ChangeLog,v 1.6 2003/10/01 09:27:33 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*burncdda-1.1.2.ebuild (17 July 2002)
+*burncdda-1.1.2 (17 July 2002)
 
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Added ppc keyword

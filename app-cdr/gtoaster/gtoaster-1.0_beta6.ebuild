@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.10 2003/09/05 22:57:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.11 2003/10/01 09:27:33 aliz Exp $
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="`echo ${P} |sed -e 's:-::' -e 's:_b:B:'`"
@@ -31,7 +31,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	patch -p1 < ${FILESDIR}/scdtosr.diff || die "patch failed"
+	epatch ${FILESDIR}/scdtosr.diff
 }
 
 src_compile() {

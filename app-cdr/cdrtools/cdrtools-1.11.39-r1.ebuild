@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.39-r1.ebuild,v 1.2 2003/09/05 01:30:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.39-r1.ebuild,v 1.3 2003/10/01 09:27:33 aliz Exp $
 
 inherit eutils
 
@@ -20,8 +20,7 @@ SRC_URI="ftp://ftp.fokus.gmd.de:21/pub/unix/cdrecord/alpha/${MY_P}.tar.bz2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}/DEFAULTS
-	sed -e "s:/opt/schily:/usr:g" < Defaults.linux > Defaults.linux.hacked
-	mv Defaults.linux.hacked Defaults.linux
+	sed -i -e "s:/opt/schily:/usr:g" Defaults.linux
 
 	cd ${S}
 	epatch ${FILESDIR}/cdrecord-scsiopen-format.patch

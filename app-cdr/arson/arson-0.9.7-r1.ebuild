@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r1.ebuild,v 1.7 2003/09/05 22:57:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r1.ebuild,v 1.8 2003/10/01 09:27:33 aliz Exp $
 inherit kde-base
 
 DESCRIPTION="A KDE frontend to CD burning and CD ripping tools."
@@ -26,5 +26,5 @@ use oggvorbis && myconf="$myconf --with-vorbis" || myconf="$myconf --without-vor
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p0 <${FILESDIR}/${P}-write-img-fix.diff || die
+	epatch ${FILESDIR}/${P}-write-img-fix.diff
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha18-r1.ebuild,v 1.4 2003/09/11 22:45:19 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha18-r1.ebuild,v 1.5 2003/10/01 09:27:33 aliz Exp $
 
 inherit eutils
 
@@ -32,8 +32,7 @@ src_unpack() {
 	use dvdr && epatch ../${DVDR_PATCH_P}
 
 	cd ${S}/DEFAULTS
-	sed -e "s:/opt/schily:/usr:g" < Defaults.linux > Defaults.linux.hacked
-	mv Defaults.linux.hacked Defaults.linux
+	sed -i -e "s:/opt/schily:/usr:g" Defaults.linux
 
 	cd ${S}/RULES
 	cp i386-linux-cc.rul x86_64-linux-cc.rul

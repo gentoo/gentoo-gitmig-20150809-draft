@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/cdbkup-1.0.ebuild,v 1.8 2003/09/20 20:46:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/cdbkup-1.0.ebuild,v 1.9 2003/10/01 09:27:33 aliz Exp $
 
 DESCRIPTION="cdbkup performs full or incremental backups of local or remote filesystems onto CD-R(W)s."
 SRC_URI="mirror://sourceforge/cdbkup/${P}.tar.gz"
@@ -17,8 +17,7 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	cp Makefile.in Makefile.in.orig
-	sed "s:doc/cdbkup:doc/${P}:" Makefile.in.orig > Makefile.in
+	sed -i "s:doc/cdbkup:doc/${P}:" Makefile.in
 
 	#apply the patch
 	patch < ${S}/linuxtar_13.patch ${S}/src/cdbkup.in
