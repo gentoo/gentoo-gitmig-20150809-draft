@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.1.ebuild,v 1.9 2004/11/17 11:10:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.1.ebuild,v 1.10 2004/11/27 16:09:43 malverian Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.3
@@ -29,7 +29,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 	ldap? ( >=net-nds/openldap-2.1.26 )
 	tiff? ( media-libs/tiff )
 	kerberos? ( virtual/krb5 )
-	>=app-admin/fam-2.7.0
+	virtual/fam
 	virtual/ghostscript
 	media-libs/libart_lgpl
 	net-dns/libidn

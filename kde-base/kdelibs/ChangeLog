@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.167 2004/11/17 11:10:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.168 2004/11/27 16:09:43 malverian Exp $
+
+  27 Nov 2004; Philip Walls <malverian@gentoo.org> kdelibs-3.3.1.ebuild:
+  Migrate to virtual/fam
 
   17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdelibs-3.3.1.ebuild:
   Stable on alpha.
