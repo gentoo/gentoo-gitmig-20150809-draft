@@ -1,3 +1,4 @@
-MD5 5a9697c594c7a641c157a249b5c08c2e libyahoo2-0.7.2.ebuild 2178
-MD5 652f011c07ca925858993d5f54bc1f06 libyahoo2-0.7.2.ebuild~ 6006
+MD5 30597e2ae2d20acd4775afa1f9b955b2 libyahoo2-0.7.2.ebuild 875
+MD5 fade395d9db0cefc601510663b834b6f ChangeLog 384
 MD5 3fb42370f3e2bf66f10976db27b319b7 files/digest-libyahoo2-0.7.2 67
+MD5 de86c0af428d9f917da128e8b15b4e03 files/sample_client.c-gentoo.patch 462
