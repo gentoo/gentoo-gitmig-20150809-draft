@@ -1,6 +1,11 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.1 2003/06/24 00:52:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.2 2003/07/05 09:42:19 liquidx Exp $
+
+*libgnomecups-0.1.5 (05 Jul 2003)
+
+  05 Jul 2003; Alastair Tse <liquidx@gentoo.org> libgnomecups-0.1.5.ebuild:
+  version bump. now nautilus printers:// should work
 
 *libgnomecups-0.1.4 (24 Jun 2003)
 

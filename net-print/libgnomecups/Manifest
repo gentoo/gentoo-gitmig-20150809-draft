@@ -1,4 +1,6 @@
 MD5 f9b94316180d7b1b72eccc133a9e892c ChangeLog 379
 MD5 aa0094933ff21abfa10fc22ab50c95f7 libgnomecups-0.1.4.ebuild 471
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 aa0094933ff21abfa10fc22ab50c95f7 libgnomecups-0.1.5.ebuild 471
 MD5 6a5c3a74b29b623998f2d41d30149056 files/digest-libgnomecups-0.1.4 71
+MD5 8110d81fd1983a3589ad0cc450b81dd5 files/digest-libgnomecups-0.1.5 71
