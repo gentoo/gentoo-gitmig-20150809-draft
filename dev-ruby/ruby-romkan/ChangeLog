@@ -1,8 +1,11 @@
 # ChangeLog for dev-ruby/ruby-romkan
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.1 2003/06/10 18:28:51 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.2 2003/07/28 22:27:57 usata Exp $
 
 *ruby-romkan-0.4 (10 Jun 2003)
+
+  29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> ruby-romkan-0.4.ebuild:
+  Added ~ppc keyword
 
   10 Jun 2003; Tom Payne <twp@gentoo.org> ruby-romkan-0.4 :
   Initial release. Ebuild submitted by Matsuu Takuto. Bug # 22029.
