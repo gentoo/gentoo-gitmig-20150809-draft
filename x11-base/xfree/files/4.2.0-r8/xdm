@@ -1,4 +1,7 @@
-auth       required   pam_pwdb.so
-account    required   pam_pwdb.so
-password   required   pam_pwdb.so md5
-session    required   pam_pwdb.so
+#
+# The PAM configuration file for the `xdm' service
+#
+auth		required	pam_unix.so
+account		required	pam_unix.so
+password	required	pam_unix.so shadow md5 nullok
+session		required	pam_unix.so
