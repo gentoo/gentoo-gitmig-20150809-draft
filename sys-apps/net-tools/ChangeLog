@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.19 2003/05/18 21:36:52 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.20 2003/06/18 22:45:50 msterret Exp $
+
+  18 Jun 2003; <msterret@gentoo.org> net-tools-1.60-r7.ebuild:
+  Add support for use static (bug 22450) based on code from Sascha Silbe
+  Use sed -i
 
 *net-tools-1.60-r7 (18 May 2003)
 

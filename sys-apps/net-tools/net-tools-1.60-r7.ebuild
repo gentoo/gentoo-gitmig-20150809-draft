@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r7.ebuild,v 1.1 2003/05/18 21:36:52 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r7.ebuild,v 1.2 2003/06/18 22:45:53 msterret Exp $
 
 inherit eutils
 
@@ -12,11 +12,18 @@ HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
-IUSE="nls build"
+IUSE="nls build static"
 
-DEPEND="nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )
+	>=sys-apps/sed-4"
 
 src_unpack() {
+
+	if [ "`use static`" ] ; then
+		CFLAGS="${CFLAGS} -static"
+		LDFLAGS="${LDFLAGS} -static"
+	fi
+
 	PATCHDIR=${WORKDIR}/${P}-gentoo
 
 	unpack ${A}
@@ -36,23 +43,23 @@ src_unpack() {
 	cp ${PATCHDIR}/net-tools-1.60-config.h config.h
 	cp ${PATCHDIR}/net-tools-1.60-config.make config.make
 
-	cp Makefile Makefile.orig
-	sed -e "s:-O2 -Wall -g:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i \
+		-e "s:-O2 -Wall -g:${CFLAGS}:" \
+		-e "/^LOPTS =/ s/\$/${CFLAGS}/" Makefile ||
+			die "sed Makefile failed"
 
-	cd man
-	cp Makefile Makefile.orig
-	sed -e "s:/usr/man:/usr/share/man:" Makefile.orig > Makefile
+	sed -i -e "s:/usr/man:/usr/share/man:" man/Makefile || \
+		die "sed man/Makefile failed"
 
 	cp -f ${PATCHDIR}/ether-wake.c ${S}
 	cp -f ${PATCHDIR}/ether-wake.8 ${S}/man/en_US
-	cd ${S}
 
 	if [ -z "`use nls`" ] ; then
-		mv config.h config.h.orig
-		sed 's:\(#define I18N\) 1:\1 0:' config.h.orig > config.h
+		sed -i -e 's:\(#define I18N\) 1:\1 0:' config.h || \
+			die "sed config.h failed"
 
-		mv config.make config.make.orig
-		sed 's:I18N=1:I18N=0:' config.make.orig > config.make
+		sed -i -e 's:I18N=1:I18N=0:' config.make ||
+			die "sed config.make failed"
 	fi
 
 	touch config.{h,make}		# sync timestamps
