@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.5 2002/05/18 19:37:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.6 2002/07/23 04:11:56 george Exp $
 
 *nasm-0.98.31-r1 (18 May 2002)
 

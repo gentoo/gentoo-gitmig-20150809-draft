@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r3.ebuild,v 1.4 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r3.ebuild,v 1.5 2002/07/23 04:11:56 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="groovy little assembler"
@@ -15,6 +15,10 @@ RDEPEND="virtual/glibc"
 if [ -z "`use build`" ]; then
 	DEPEND="${DEPEND} sys-devel/perl"
 fi
+
+SLOT="0"
+LICENSE="LGPL-2.1"
+KEYWORDS="x86"
 
 src_compile() {                           
 	./configure --prefix=/usr || die
@@ -41,10 +45,10 @@ src_install() {
     		dodoc nasmdoc.txt
 		docinto html
 		dodoc html/*.html
-    		docinto ps
-    		dodoc nasmdoc.ps
-    		docinto rtf
-    		dodoc nasmdoc.rtf
+			docinto ps
+			dodoc nasmdoc.ps
+			docinto rtf
+			dodoc nasmdoc.rtf
 
 		doinfo info/*.info*
 	fi
