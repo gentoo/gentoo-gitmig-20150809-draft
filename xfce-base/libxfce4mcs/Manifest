@@ -1,5 +1,2 @@
-MD5 1528ddbf8f960c4bde3bf141b92e7c9c libxfce4mcs-3.99.1.ebuild 981
-MD5 cfd8195683666e31cfd8fe5e7c33b1f8 libxfce4mcs-3.99.2.ebuild 981
-MD5 29fe1cee8ff3e5b26cc61f0a88708f25 ChangeLog 632
-MD5 777956524e9391155f2335ddd2cc000b files/digest-libxfce4mcs-3.99.1 70
-MD5 62be8322642756853d4ec9c6e2aaded7 files/digest-libxfce4mcs-3.99.2 70
+MD5 693d5af0ca9376ff0c9622ac3638bac8 libxfce4mcs-3.99.3.ebuild 981
+MD5 6d3067a95fb3d45f6cd4b9ca5f9413fe files/digest-libxfce4mcs-3.99.3 70
