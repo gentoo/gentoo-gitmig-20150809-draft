@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/ut2003-bonuspack-epic
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ChangeLog,v 1.1 2004/02/27 21:59:22 wolf31o2 Exp $
+
+*ut2003-bonuspack-epic-1 (27 Feb 2004)
+
+  27 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  ut2003-bonuspack-epic-1.ebuild, files/epic-install:
+  Initial import.  Ebuild created by me.
+
