@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r2.ebuild,v 1.12 2005/02/11 23:01:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r2.ebuild,v 1.13 2005/03/04 06:17:07 vapier Exp $
 
-inherit gnuconfig eutils
+inherit eutils
 
 #
 # TODO: Fix support for krb4 and krb5
@@ -14,16 +14,16 @@ SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 
 LICENSE="Sudo"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha ~arm hppa amd64 ~ia64 ~s390 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="pam skey"
 
-DEPEND="pam? ( >=sys-libs/pam-0.73-r1 ) skey? ( >=app-admin/skey-1.1.5-r1 )"
+DEPEND="pam? ( >=sys-libs/pam-0.73-r1 )
+	skey? ( >=app-admin/skey-1.1.5-r1 )"
 
 S=${WORKDIR}/${P/_/}
 
 src_unpack() {
 	unpack ${A}
-	gnuconfig_update ${S}
 	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
 	epatch ${FILESDIR}/${P}-strip-bash-functions.diff
 }
@@ -33,8 +33,8 @@ src_compile() {
 		--with-all-insults \
 		--disable-path-info \
 		--with-env-editor \
-		`use_with pam` \
-		`use_with skey` \
+		$(use_with pam) \
+		$(use_with skey) \
 		|| die "econf failed"
 	emake || die
 }
