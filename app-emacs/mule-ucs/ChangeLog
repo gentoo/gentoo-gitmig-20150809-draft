@@ -1,6 +1,6 @@
-# ChangeLog for dev-lisp/mule-ucs
+# ChangeLog for app-emacs/mule-ucs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/ChangeLog,v 1.1 2003/12/14 18:27:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/ChangeLog,v 1.2 2003/12/15 17:47:03 usata Exp $
 
 *mule-ucs-0.84-r1 (15 Dec 2003)
 
