@@ -5,7 +5,7 @@ MD5 642ea25c3926d67609ba51eb5730114f kdelibs-3.2.3-r5.ebuild 2940
 MD5 e9880699449565ce112cfb096a2b73bf kdelibs-3.3.2-r3.ebuild 3291
 MD5 ea27e399daaad758dcac0697981f3584 kdelibs-3.4.0_beta1.ebuild 2813
 MD5 44687953bf585ff8ae2aabd2bd852ae5 kdelibs-3.4.0_rc1.ebuild 2747
-MD5 9b1725eec4a04d5bb45ab8834ac86e14 ChangeLog 31787
+MD5 16c54c4997817c96bf3619bc6d9d8891 ChangeLog 31862
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 e5285c7be708bc634b61a720515f2091 files/kdelibs-3.4.0_beta2-export-symbols-for-bindings.diff 5733
 MD5 1c47f3fafa13fcf69ce4cb1c474f5643 files/digest-kdelibs-3.4.0_beta1 69
