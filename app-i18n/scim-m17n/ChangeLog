@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/scim-m17n
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.1 2004/06/14 17:48:57 usata Exp $
+
+*scim-m17n-0.0.1_pre20040614 (15 Jun 2004)
+
+  15 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +scim-m17n-0.0.1_pre20040614.ebuild:
+  Initial import.
+
