@@ -8,6 +8,7 @@ MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
 MD5 0fbd7abab20dafe471b109984b81019a ChangeLog 11059
 MD5 f37c638c0e9d87183de38f8b761e53bb openbox-3.0_alpha6.ebuild 1021
 MD5 95a8f08230753633284a421a335ede0b openbox-3.0_beta1.ebuild 1168
+MD5 cd72b65b45965526c480200b393c2d9d openbox-3.0_beta2.ebuild 1137
 MD5 f0b52d0f48a8b10c418a6d6558c4198c files/digest-openbox-1.2.4 65
 MD5 14ea1589afa8d9807619faebdd1468b5 files/digest-openbox-2.1.3-r4 65
 MD5 e8173797964d97d9293eee8faa1a95aa files/digest-openbox-2.3.0 65
@@ -19,3 +20,4 @@ MD5 056f24d600f8f7ad2c02642ecd41ebfa files/openbox-gcc.patch 276
 MD5 ddf3ab0bf9a30ac2164629ddb9e78242 files/digest-openbox-3.0_alpha7 70
 MD5 4dec69cc9c61e06fc3b6d760e8b81400 files/digest-openbox-3.0_alpha8 70
 MD5 3e8eb0e0f083da7b579bfe79bf6b7414 files/digest-openbox-3.0_beta1 69
+MD5 6c3002effbdae89c99735ac482e5664a files/digest-openbox-3.0_beta2 69
