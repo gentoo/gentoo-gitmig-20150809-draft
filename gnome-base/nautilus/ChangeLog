@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.54 2003/08/22 17:04:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.55 2003/08/24 11:50:27 gmsoft Exp $
 
   22 Aug 2003; foser <foser@gentoo.org> nautilus-2.2.{3,4}*.ebuild :
   Make libbonoboui dep 2.2+ (#26434)
@@ -28,6 +28,9 @@
   new HOMEPAGE for nautilus (#21654)
 
 *nautilus-2.2.4 (08 May 2003)
+
+  24 Aug 2003; Guy Martin <gmsoft@gentoo.org> nautilus-2.2.4.ebuild :
+  Added hppa to KEYWORDS.
 
   08 May 2003; foser <foser@gentoo.org> nautilus-2.2.4.ebuild :
   New version, added snap-to-grid patch from HEAD
