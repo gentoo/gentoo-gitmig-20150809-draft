@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.7.ebuild,v 1.1 2004/08/04 01:05:48 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.7.ebuild,v 1.2 2004/08/04 01:07:02 tseng Exp $
 
 inherit gnome.org
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.freedesktop.org/software/startup-notification/"
 LICENSE="LGPL-2 BSD"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips ppc64"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/x11"
 
