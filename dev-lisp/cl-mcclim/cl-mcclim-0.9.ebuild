@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.ebuild,v 1.5 2004/07/14 15:55:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.ebuild,v 1.6 2005/02/09 07:55:59 mkennedy Exp $
 
 inherit common-lisp elisp eutils
 
@@ -15,7 +15,7 @@ IUSE="doc emacs"
 
 DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cmucl-source
-	dev-lisp/cl-clx-sbcl
+	dev-lisp/cl-clx
 	doc? ( media-gfx/transfig
 		media-libs/netpbm
 		virtual/tetex )
@@ -40,16 +40,16 @@ src_compile() {
 		if [ -x /usr/bin/lisp ]; then
 			lisp -batch -noinit -nosite-init -eval "
 (progn
-  (compile-file \"Tools/gilbert/clim-doc-convert\")
-  (quit))"
+(compile-file \"Tools/gilbert/clim-doc-convert\")
+quit))"
 			lisp -batch -noinit -nositeinit \
 				-load Tools/gilbert/clim-doc-convert \
 				-eval "
 (progn
-  (defparameter clim-doc-convert::*mcclim-base-dir* \"${S}/\")
-  (defparameter clim-doc-convert::*output-directory* \"${S}/clim-spec/\")
-  (clim-doc-convert:run)
-  (quit))"
+(defparameter clim-doc-convert::*mcclim-base-dir* \"${S}/\")
+(defparameter clim-doc-convert::*output-directory* \"${S}/clim-spec/\")
+(clim-doc-convert:run)
+(quit))"
 		elif [ -x /usr/bin/sbcl ]; then
 			ewarn "Documentation cannot be built with SBCL at this time"
 		elif [ -x /usr/bin/clisp ]; then

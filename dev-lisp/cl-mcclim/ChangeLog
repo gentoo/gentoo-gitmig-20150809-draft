@@ -1,6 +1,23 @@
 # ChangeLog for dev-lisp/cl-mcclim
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.5 2004/06/26 13:30:15 dholm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.6 2005/02/09 07:55:59 mkennedy Exp $
+
+*cl-mcclim-0.9.20050202 (04 Feb 2005)
+
+  04 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.9.20041227-gentoo.patch, files/50mcclim-gentoo.el,
+  files/TODO.Gentoo, cl-mcclim-0.9.20040603.ebuild,
+  +cl-mcclim-0.9.20041227.ebuild, +cl-mcclim-0.9.20050202.ebuild,
+  cl-mcclim-0.9.ebuild:
+  New upstream version; Remove dependency on cmucl-sources.
+
+*cl-mcclim-0.9.20041130 (14 Dec 2004)
+
+  14 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> files/TODO.Gentoo,
+  +files/0.9.20041130/50mcclim-gentoo.el, cl-mcclim-0.9.20040603.ebuild,
+  +cl-mcclim-0.9.20041130.ebuild, cl-mcclim-0.9.ebuild:
+  New upstream version; Simplified documentation generation; Depend on
+  dev-lisp/cl-clx and not dev-lisp/cl-sbcl-clx
 
   26 Jun 2004; David Holm <dholm@gentoo.org> cl-mcclim-0.9.20040603.ebuild:
   Added to ~ppc.

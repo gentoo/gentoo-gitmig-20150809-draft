@@ -1,12 +1,8 @@
+                                                                 -*- outline -*-
+* Investigate CLISP portability
 
--*- Outline -*-
+* Port CLIM based software
 
-  * Investigate CLISP portability
-
-  * Provide packages for the Listener and SciGraph
-    (dev-lisp/cl-clim-listener and dev-lisp/cl-clim-scigraph
-
-  * catalog other CLIM source for inclusion into portage
-
-
-
+  * dev-lisp/cl-clim-listener
+  * dev-lisp/cl-clim-scigraph
+  * dev-lisp/cl-org-davep-dict (CLIM client)
