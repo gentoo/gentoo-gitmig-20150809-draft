@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha36.ebuild,v 1.1 2004/08/16 23:09:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha37.ebuild,v 1.1 2004/08/22 22:26:23 pylon Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -8,7 +8,7 @@ DESCRIPTION="A set of tools for CD recording, including cdrecord"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 freedist"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~ppc64 ~mips"
 IUSE=""
@@ -21,11 +21,6 @@ S=${WORKDIR}/${PN}-2.01
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	# Add support for 2.5 kernels
-	# <azarah@gentoo.org> (05 Feb 2003)
-	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch
-
 	cd ${S}/DEFAULTS
 	dosed "s:/opt/schily:/usr:g" Defaults.linux
 	dosed "s:/usr/src/linux/include::g" Defaults.linux
@@ -34,8 +29,8 @@ src_unpack() {
 	dosed "s:/opt/schily:/usr:g" scsi-remote.c
 
 	cd ${S}/RULES
-	cp i386-linux-cc.rul x86_64-linux-cc.rul
-	cp i386-linux-gcc.rul x86_64-linux-gcc.rul
+	ln -sf x86_64-linux-cc.rul i386-linux-cc.rul
+	ln -sf x86_64-linux-gcc.rul i386-linux-gcc.rul
 	ln -sf ppc-linux-cc.rul ppc64-linux-cc.rul
 }
 
@@ -84,5 +79,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "Note the special license on cdrecord/cdrecord.c starting from line 4648."
+	echo
 	einfo "The command line option 'dev=ATAPI:' should be used for IDE CD writers."
+	echo
+	ewarn "As with kernel 2.6.8 it's currently not possible to write CDs or DVDs as"
+	ewarn "a non-root user.  Gentoo will take care for the patches soon."
 }

@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.87 2004/08/16 23:09:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.88 2004/08/22 22:26:23 pylon Exp $
+
+*cdrtools-2.01_alpha37 (22 Aug 2004)
+
+  22 Aug 2004; Lars Weiler <pylon@gentoo.org> -cdrtools-2.01_alpha36.ebuild,
+  +cdrtools-2.01_alpha37.ebuild:
+  Version bump. This version compiles only with a kernel 2.6.8 and newer. It
+  does not solve the issue with 2.6.8 kernels and non-root CD writing. Added
+  also a statement about the different license in cdrecord.c (Bug #60883).
 
 *cdrtools-2.01_alpha36 (17 Aug 2004)
 
