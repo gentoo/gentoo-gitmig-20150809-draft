@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.63 2004/11/24 13:57:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.64 2004/11/27 21:26:17 solar Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -25,7 +25,9 @@ progressfile=/var/run/bootstrap-progress
 [ -e ${progressfile} ] && source ${progressfile}
 export BOOTSTRAP_STAGE="${BOOTSTRAP_STAGE:-1}"
 set_bootstrap_stage() {
-	[ -n "${STRAP_RUN}" ] && return 0
+	# -n does not work correctly with unset
+	#[ -n "${STRAP_RUN}" ] && return 0
+	[ "${STRAP_RUN}" = "" ] && return 0
 	export BOOTSTRAP_STAGE=$1
 	echo "BOOTSTRAP_STAGE=$1" > ${progressfile}
 }
