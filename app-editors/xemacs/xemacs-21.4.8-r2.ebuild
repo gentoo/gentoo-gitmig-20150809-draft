@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8-r2.ebuild,v 1.1 2002/07/15 07:54:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8-r2.ebuild,v 1.2 2002/07/25 20:43:10 kabau Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -20,8 +20,6 @@ SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
 
 HOMEPAGE="http://www.xemacs.org"
 
-SLOT=""
-KEYWORDS="x86 ppc"
 
 RDEPEND="virtual/glibc
 	!virtual/xemacs
@@ -47,6 +45,11 @@ DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
 
 PROVIDE="virtual/xemacs"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
+
 
 src_unpack() {
 	cd ${WORKDIR}
