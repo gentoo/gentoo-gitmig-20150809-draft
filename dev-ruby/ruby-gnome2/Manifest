@@ -1,6 +1,9 @@
-MD5 ad90aafeeb71cbff08989fd6ed87641e ChangeLog 1916
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 62c7cfa926b9830759c85dda28d1f8bc ChangeLog 2047
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 6fc0dfdccac57ac4aa3a3faa839bd99c ruby-gnome2-0.11.0.ebuild 460
+MD5 3699dcbbafeca4bd3e21698bab007e0b ruby-gnome2-0.11.0.ebuild 460
 MD5 b70696b8419f847d2907625e28d40459 ruby-gnome2-0.8.0.ebuild 504
 MD5 d431e6e3b336a379edbeef4cc9d54a65 ruby-gnome2-0.8.1.ebuild 496
 MD5 539e41253b20d65c0ccb80466ff1b23d ruby-gnome2-0.9.1.ebuild 521
@@ -10,3 +13,10 @@ MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-gnome2-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-gnome2-0.8.1 73
 MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-gnome2-0.9.1 73
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gnome2-0.10.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpVPgVWNWqTUmv+0RAuwUAJwKCz4IcUYK/fnnwXs8OaNTpKxTGgCfbWHh
+nngMVk7BzGqUkU1uY3YpzCo=
+=nr2G
+-----END PGP SIGNATURE-----
