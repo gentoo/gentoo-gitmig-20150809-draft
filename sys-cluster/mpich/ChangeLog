@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/mpich
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.4 2003/03/29 07:38:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.5 2003/06/03 12:01:58 tantive Exp $
+
+*mpich-1.2.5-r1 (03 Jun 2003)
+  
+  03 Jun 2003; Michael Imhof <tantive@gentoo.org>:
+  Corrected ebuild. Submitted by Marc St-Pierre <marc@cyberlogic.ca>
 
 *mpich-1.2.5 (28 Mar 2003)
 
