@@ -15,13 +15,12 @@ src_compile() {
 
     cd ${S}
     try ./configure --with-kde-support
-    try make kvirc
-
 }
 
 src_install () {
 
     cd ${S}
+    try make kvirc DESTDIR=${D}
     try make install DESTDIR=${D}
     try make docs DESTDIR=${D}
 }
