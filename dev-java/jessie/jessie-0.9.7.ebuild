@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-0.9.7.ebuild,v 1.4 2004/06/24 22:34:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-0.9.7.ebuild,v 1.5 2004/07/14 02:25:00 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://syzygy.metastatic.org/jessie/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="doc jikes"
+IUSE="doc jikes ssl"
 RDEPEND=">=dev-java/gnu-classpath-0.08_rc1"
 
 DEPEND=">=virtual/jdk-1.3
@@ -42,4 +42,3 @@ src_install() {
 		lib/org-metastatic-jessie.jar
 	use doc && dohtml -r apidoc/*
 }
-
