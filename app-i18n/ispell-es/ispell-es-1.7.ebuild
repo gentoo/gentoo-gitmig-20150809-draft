@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-es/ispell-es-1.7.ebuild,v 1.7 2002/07/11 10:38:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-es/ispell-es-1.7.ebuild,v 1.8 2002/08/09 23:00:51 bass Exp $
 
 MY_P="espanol-"${PV}
 S=${WORKDIR}/${MY_P/n/~n}
@@ -30,4 +30,13 @@ src_install () {
 	doins espa~nol.aff espa~nol.hash
 	fperms 444 /usr/lib/ispell/espa~nol.*
 	dodoc LEAME README
+}
+
+pkg_postinst() {
+
+	einfo "If you are using pspell for spell in some app, like"
+	einfo "abiword, you need create the file:"
+	einfo "  /usr/share/pspell/es-ispell.pwli"
+	einfo "And add in:"
+	einfo "  /usr/lib/ispell/espa~nol.hash iso8859-1"
 }
