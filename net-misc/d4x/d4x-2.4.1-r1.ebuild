@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1-r1.ebuild,v 1.3 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1-r1.ebuild,v 1.4 2004/02/04 20:50:08 liquidx Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -37,22 +37,13 @@ src_unpack() {
 
 src_compile() {
 
-	myconf=""
-
-	use nls \
-		&& myconf="${myconf} --enable-nls" \
-		|| myconf="${myconf} --disable-nls"
-
-	use esd \
-		&& myconf="${myconf} --enable-esd" \
-		|| myconf="${myconf} --disable-esd"
-
-	use oss \
-		&& myconf="${myconf} --enable-oss" \
-		|| myconf="${myconf} --disable-oss"
-
 	econf --enable-release \
-		${myconf} || die
+		$(use_enable oss) \
+		$(use_enable esd) \
+		$(use_enable nls)
+
+	# workaround unsupported gtk_ calls for >=x11-libs/gtk+-2.2.4
+	sed -e 's:.*GTK_DISABLE_DEPRECATED.*::' -i ${S}/config.h
 
 	emake || die
 }
