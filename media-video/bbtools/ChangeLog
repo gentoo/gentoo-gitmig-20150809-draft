@@ -1,0 +1,11 @@
+# ChangeLog for media-video/bbtools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/bbtools/ChangeLog,v 1.1 2005/03/27 23:14:13 chriswhite Exp $
+
+*bbtools-1.9 (28 Mar 2005)
+
+  28 Mar 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/bbtools-1.9-gentoo.patch, +bbtools-1.9.ebuild:
+  Initial import into the tree. Closes bug #31632. Thanks to swegner for the
+  ebuild!
+

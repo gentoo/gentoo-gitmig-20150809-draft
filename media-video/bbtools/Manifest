@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b5f17784ef143c70691121c1e1fed9d bbtools-1.9.ebuild 844
+MD5 6059c9f32e94dffa31351ebdfa61917c metadata.xml 559
+MD5 c6c3e1f0d23b886133652cccf438a912 ChangeLog 453
+MD5 3935934a35196bfef16ebe39883f7200 files/bbtools-1.9-gentoo.patch 2768
+MD5 a4a1e55a94bc7019f6c88f684d1286f4 files/digest-bbtools-1.9 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCRzanFdQwWVoAgN4RAs8mAKCe11/r0FWJ6oxNwHfsHzlF+odgPwCfQFNY
+BygwJOTC4eSn9fHu8uBzl+w=
+=izSZ
+-----END PGP SIGNATURE-----
