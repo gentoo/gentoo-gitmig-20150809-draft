@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/authforce
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.1 2004/04/23 10:51:42 stuart Exp $
+
+*authforce-0.9.6 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> authforce-0.9.6.ebuild,
+  metadata.xml:
+  Initial import; from Daniel Fullmer <lsmod@hotmail.com>; bug #38217
+
