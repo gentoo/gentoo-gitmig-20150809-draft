@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.36 2005/01/04 04:47:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.37 2005/01/19 01:09:46 vapier Exp $
+
+  18 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  -files/iputils-021109-pfkey.patch, iputils-021109-r3.ebuild:
+  Punt setkey since ipsec-tools exists now to handle it #78588.
 
   03 Jan 2005; Mike Frysinger <vapier@gentoo.org> iputils-021109-r3.ebuild:
   Restore USE=doc with an extra check in case we're in the middle of a
