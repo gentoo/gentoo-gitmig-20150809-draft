@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.7 2002/08/04 09:53:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.8 2002/08/14 10:18:16 pvdabeel Exp $
 
 *gmp-4.1-r1 (06 Jul 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Added ppc keyword
 
   04 Aug 2002; Doug Goldstein <cardoe@gentoo.org> gmp-4.1-r1.ebuild :
   
