@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mandrake-artwork
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.21 2005/01/28 18:34:30 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.22 2005/03/24 18:05:27 greg_g Exp $
+
+  24 Mar 2005; Gregorio Guidi <greg_g@gentoo.org>
+  mandrake-artwork-1.0.2.ebuild:
+  Correct kde dependency (#84191).
 
   26 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> mandrake-artwork-1.0.2.ebuild:
   Clean up usage of kde eclasses.
