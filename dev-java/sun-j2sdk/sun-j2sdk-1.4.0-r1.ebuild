@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.7 2002/11/11 10:05:06 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.8 2002/11/11 19:19:03 cretin Exp $
 
 # Based on http://tushar.lfsforum.org/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
@@ -54,6 +54,15 @@ pkg_setup() {
 		eerror "it seems you don't have that much, quiting, sorry!"
 		die "Not enough disk space"
 	fi
+
+	#Check the Current java-version ~ 1.4 and is jdk
+	java-config --javac > /dev/null 2>&1 || die "The version of java set by java-config doesn't contain javac"
+
+	if [ `java-config --java-version 2>&1 | grep "1\.4\."  | wc -l` -lt 1 ]  ; then
+		eerror "JDK is too old, >= 1.4 is required"
+		die "The version of jdk pointed to by java-config is not >=1.4"
+	fi
+	
 }
 
 src_unpack() {
@@ -110,6 +119,8 @@ src_compile () {
 
 	# Any CFLAGS will cause the build to fail! 
 	# If you don't believe me ...
+	#export OTHER_CFLAGS=${CFLAGS}
+	#export OTHER_CXXFLAGS=${CXXFLAGS}
 	unset CFLAGS CXXFLAGS
 	
 	export ALT_MOZILLA_PATH="${S}/mozilla"

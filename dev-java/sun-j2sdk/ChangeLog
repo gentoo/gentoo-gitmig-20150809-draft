@@ -1,14 +1,18 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.3 2002/11/09 19:52:54 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.4 2002/11/11 19:19:03 cretin Exp $
 
 *sun-j2sdk-1.4.0-r1 (07 Nov 2002)
 
-  09 Nov 2002; Stefan A. Jones <cretin@gentoo.org> sun-j2sdk-1.4.0-r1.ebuild
+  11 Nov 2002; Stefan A. Jones <cretin@gentoo.org> sun-j2sdk-1.4.0-r1.ebuild:
+
+  Added some checks for valid versions of jdk and OTHER_C(XX)FLAGS hint.
+  
+  09 Nov 2002; Stefan A. Jones <cretin@gentoo.org> sun-j2sdk-1.4.0-r1.ebuild:
 
   Fixed bugs #10489 and #10485 with luck
 
-  07 Nov 2002; Stefan A. Jones <cretin@gentoo.org> sun-j2sdk-1.4.0-r1.ebuild
+  07 Nov 2002; Stefan A. Jones <cretin@gentoo.org> sun-j2sdk-1.4.0-r1.ebuild:
 
   This *should* work, please test and fix, and report abuse to me!
 
