@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/simgear
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/simgear/ChangeLog,v 1.3 2003/02/12 06:09:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/simgear/ChangeLog,v 1.4 2003/02/19 19:27:42 seemant Exp $
 
 *simgear-0.3.1 (09 Dec 2002)
+
+  19 Feb 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+
+  Note that Michael Pujos <pujos.michael@laposte.net> had submitted an
+  ebuild for this in the neglected bug #8167 :(
 
   09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> simgear-0.3.1.ebuild :
 
