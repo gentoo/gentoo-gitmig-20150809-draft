@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapfilter/imapfilter-0.9.2.ebuild,v 1.1 2003/08/14 05:40:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapfilter/imapfilter-0.9.2.ebuild,v 1.2 2003/08/14 18:12:50 g2boojum Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://imapfilter.hellug.gr/source/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	dev-libs/openssl"
