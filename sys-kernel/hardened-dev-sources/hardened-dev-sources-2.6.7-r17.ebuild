@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.7-r17.ebuild,v 1.1 2004/12/06 01:48:12 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.7-r17.ebuild,v 1.2 2004/12/06 02:01:09 tseng Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -13,7 +13,6 @@ HGPV=7.11
 HGPV_SRC="http://dev.gentoo.org/~tseng/kernel/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
 
 UNIPATCH_STRICTORDER="yes"
-UNIPATCH_EXCLUDE="1315_alpha"
 UNIPATCH_LIST="${DISTDIR}/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
 UNIPATCH_DOCS="${WORKDIR}/patches/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}/0000_README"
 

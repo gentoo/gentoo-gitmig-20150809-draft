@@ -1,8 +1,8 @@
 MD5 e4db64e91f846d43165a956b5b25abc4 hardened-dev-sources-2.6.7-r15.ebuild 1622
 MD5 73174f8e07b82c5df563b7196f87611c metadata.xml 299
 MD5 ab49025cc8effc213a74d841e4b03180 hardened-dev-sources-2.6.7-r16.ebuild 1098
-MD5 91b4c1f784be700245c2da35fd22ce2f hardened-dev-sources-2.6.7-r17.ebuild 873
 MD5 cf7ac7c64fc54e7d188cba6b6eb8c77e ChangeLog 9469
+MD5 7a726f7dd215ff2db03defbe362942a8 hardened-dev-sources-2.6.7-r17.ebuild 843
 MD5 9e6c1b6614cbee8ec1148ec31f9796d7 files/digest-hardened-dev-sources-2.6.7-r15 310
 MD5 7e3d1d44b244b238ff3e36bfe1f05c80 files/h-d-s-2.6.7-amd64-kill-vm_force_exec32.patch 871
 MD5 d7ed23c76699efe407ec668eeba30b1e files/hardened-2.6.7-binfmt_aout.patch 983
@@ -12,4 +12,4 @@ MD5 3966432dc4fe85d30f801c37737f0e6c files/hardened-dev-sources-2.6.7-ptmx.patch
 MD5 8204afea1d572b49a4a80d8da4eef0c9 files/hardened-dev-sources-2.6.7.CAN-2004-0596.patch 1033
 MD5 bc48c226344f94535c3ba2e0ce55bf24 files/hardened-dev-sources-2.6.7.CAN-2004-0816.patch 1694
 MD5 7ed7ee042a6bf15e314455a56850722e files/digest-hardened-dev-sources-2.6.7-r16 219
-MD5 9c7e97fdc377707873770391e7a5b4f8 files/digest-hardened-dev-sources-2.6.7-r17 144
+MD5 c31bb326fa501ea8c6ae2b8a9bb9856b files/digest-hardened-dev-sources-2.6.7-r17 144
