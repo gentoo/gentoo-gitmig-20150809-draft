@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.57 2002/09/07 20:09:57 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.58 2002/09/10 09:56:12 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -107,7 +107,9 @@ kde_src_install() {
 				;;
 	    	dodoc)
 				debug-print-section dodoc
-				dodoc AUTHORS ChangeLog README* COPYING NEWS TODO
+				for doc in AUTHORS ChangeLog* README* COPYING NEWS TODO; do
+				    [ -f "$doc" ] && dodoc $doc
+				done
 				;;
 	    	all)
 				debug-print-section all
