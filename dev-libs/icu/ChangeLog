@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.1 2002/02/25 00:46:08 chouser Exp $
+
+*icu-2.0 (24 Feb 2002)
+
+  24 Feb 2002; Chris Houser <chouser@gentoo.org> icu-2.0.ebuild
+	 files/digest-icu-2.0 ChangeLog :
+
+  Initial Gentoo package; thanks, Charles Kerr.
