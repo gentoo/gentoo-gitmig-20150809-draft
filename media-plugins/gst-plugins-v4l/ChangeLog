@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-v4l
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.1 2005/03/17 12:54:16 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.2 2005/03/24 11:04:19 zaheerm Exp $
+
+  24 Mar 2005; <zaheerm@gentoo.org> gst-plugins-v4l-0.8.8.ebuild:
+  Modified dependency from sys-kernel/linux-headers to virtual/os-headers 
+  Fixes #85916
 
 *gst-plugins-v4l-0.8.8 (17 Mar 2005)
 
