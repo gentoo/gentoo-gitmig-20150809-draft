@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10_rc10.ebuild,v 1.3 2000/11/20 16:47:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0_rc10-r1.ebuild,v 1.1 2000/11/22 21:25:18 drobbins Exp $
 
 A="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 	patch-2.4.0-test9.bz2 patch-2.4.0-test10.bz2
@@ -65,6 +65,13 @@ src_unpack() {
 	unpack alsa-driver-0.5.9d.tar.bz2
 	echo "Unpacking NVidia drivers..."
 	unpack NVIDIA_kernel-0.9-5.tar.gz
+	cd NVIDIA_kernel-0.9-5
+	# this is a little fix to make the NVidia drivers compile right with test10
+	mv nv.c nv.c.orig
+	echo '#define mem_map_inc_count(p) atomic_inc(&(p->count))' > nv.c
+	echo '#define mem_map_dec_count(p) atomic_dec(&(p->count))' >> nv.c
+	cat nv.c.orig >> nv.c
+	cd ${S}/extras
 	for x in lm_sensors i2c
 	do
 		echo "Unpacking and applying $x patch..."
@@ -78,8 +85,8 @@ src_unpack() {
 	echo "Preparing for compilation..."
 	cd ${S}
 	#this is the configuration for the bootdisk/cd
-	cp ${FILESDIR}/${P}.config .config
-	cp ${FILESDIR}/${P}.autoconf include/linux/autoconf.h
+	cp ${FILESDIR}/${PV}/${P}.config .config
+	cp ${FILESDIR}/${PV}/${P}.autoconf include/linux/autoconf.h
 	try make include/linux/version.h
     try make symlinks
 	try make dep
