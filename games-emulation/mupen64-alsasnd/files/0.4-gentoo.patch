@@ -1,0 +1,16 @@
+--- Makefile.orig	2003-12-27 04:24:26.397424080 -0500
++++ Makefile	2003-12-27 04:25:01.939020936 -0500
+@@ -1,4 +1,3 @@
+-GRAPHICAL_INTERFACE=gtk1
+ 
+ ifeq ($(GRAPHICAL_INTERFACE),gtk1)
+ 	GUICFLAGS = -DUSE_GTK `gtk-config --cflags`
+@@ -21,7 +20,7 @@
+ all: $(PLUGIN) instructions
+ 
+ DEBUGCXXFLAGS = -g -Wall -DDEBUG
+-CXXFLAGS = -DNO_DEBUG -DNDEBUG -O3 -Wall -mcpu=athlon -march=athlon -fomit-frame-pointer -ffast-math -fno-rtti
++CXXFLAGS += -DNO_DEBUG -DNDEBUG -fno-rtti
+ OBJECTS += string.o audio.o snd_plugin.o gui.o
+ 
+ string.o: string_class.cpp string_class.h

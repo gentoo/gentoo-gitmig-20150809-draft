@@ -1,0 +1,8 @@
+# ChangeLog for games-emulation/mupen64-alsasnd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.1 2003/12/27 09:37:27 vapier Exp $
+
+*mupen64-alsasnd-0.4 (27 Dec 2003)
+
+  27 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Marcelo Góes <blueboard@terra.com.br> #32749.
