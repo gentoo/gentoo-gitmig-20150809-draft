@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.0.6.ebuild,v 1.2 2000/09/15 20:09:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.0.6.ebuild,v 1.3 2000/10/03 16:02:04 achim Exp $
 
 P=gawk-3.0.6
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU awk pattern-matching language"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/gawk/${A}"
+SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gawk/${A}
+	 ftp://prep.ai.mit.edu/gnu/gawk/${A}"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
 
 src_compile() {                           

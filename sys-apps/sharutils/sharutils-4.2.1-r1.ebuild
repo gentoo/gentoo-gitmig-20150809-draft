@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r1.ebuild,v 1.3 2000/09/15 20:09:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r1.ebuild,v 1.4 2000/10/03 16:02:05 achim Exp $
 
 P=sharutils-4.2.1
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools to deal with shar archives"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/sharutils/${A}"
+SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/sharutils/${A}
+	 ftp://prep.ai.mit.edu/gnu/sharutils/${A}"
 
 src_compile() {                           
 	try ./configure --host=${CHOST} --prefix=/usr

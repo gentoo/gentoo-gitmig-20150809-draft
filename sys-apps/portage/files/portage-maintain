@@ -12,7 +12,7 @@ for x in os.listdir(os.getcwd()):
 
 current=[]
 currentdict={}
-mycurrent=open("/usr/portage/current-packages","r")
+mycurrent=open("/portage/current-packages","r")
 mylines=mycurrent.readlines()
 for x in mylines:
 	if x[:2]!="./":
@@ -25,7 +25,7 @@ mycurrent.close()
 del mylines
 		
 for x in installed:
-	myebuild="/usr/portage/"+x[0]+"/"+x[2][0]+"/"+x[1]+".ebuild"
+	myebuild="/portage/"+x[0]+"/"+x[2][0]+"/"+x[1]+".ebuild"
 	if x not in current:
 		if not currentdict.has_key(x[0]+"/"+x[2][0]):
 			print "!!!",x[0]+"/"+x[2][0]

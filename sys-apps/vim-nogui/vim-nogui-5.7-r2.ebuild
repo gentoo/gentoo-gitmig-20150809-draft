@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vim-nogui/vim-nogui-5.7-r2.ebuild,v 1.1 2000/09/29 18:17:33 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vim-nogui/vim-nogui-5.7-r2.ebuild,v 1.2 2000/10/03 16:02:06 achim Exp $
 
 A="vim-5.7-src.tar.gz vim-5.7-rt.tar.gz"
 S=${WORKDIR}/vim-5.7
@@ -21,7 +21,7 @@ src_install() {
     prepman
     dodoc README*
 
-    cd ${D}/usr/doc/${P}
+    cd ${D}/usr/doc/vim-nogui-5.7-r2
     ln -s ../../share/vim/vim57/doc ${P}
   
     cd ${D}/usr/bin
