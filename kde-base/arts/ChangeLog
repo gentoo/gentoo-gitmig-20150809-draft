@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.44 2003/05/19 12:50:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.45 2003/05/20 20:46:00 weeve Exp $
+
+  20 May 2003; Jason Wever <weeve@gentoo.org> arts-1.1.2.ebuild:
+  Changed ~sparc keyword to sparc.
 
   19 May 2003; Dan Armak <danarmak@gentoo.org> arts-1.1.2.ebuild:
   Use correct version number in the name of the env.d file.
