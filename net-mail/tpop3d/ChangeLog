@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.3 2003/02/12 08:17:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.4 2003/06/12 21:33:32 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> tpop3d-1.4.2.ebuild:
+  fix Header
 
 *tpop3d-1.4.2 (19 Jan 2003)
 

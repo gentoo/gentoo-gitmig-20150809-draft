@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r7.ebuild,v 1.5 2002/05/17 09:33:43 bangert Exp
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r8.ebuild,v 1.10 2003/06/12 21:29:40 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
