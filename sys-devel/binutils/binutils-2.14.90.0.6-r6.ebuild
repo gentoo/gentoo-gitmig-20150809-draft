@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r6.ebuild,v 1.12 2004/08/14 02:27:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r6.ebuild,v 1.13 2004/10/15 15:05:42 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -98,6 +98,13 @@ src_unpack() {
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
 	done
+
+	# some uclibc patches
+	epatch ${FILESDIR}/2.14/${P}-debian.patch
+	epatch ${FILESDIR}/2.14/${P}-conf.patch
+	epatch ${FILESDIR}/2.14/${P}-build_modules.patch
+	epatch ${FILESDIR}/2.14/${P}-cflags.patch
+	epatch ${FILESDIR}/2.15/40_all_binutils-uclibc-linker.patch
 }
 
 src_compile() {
