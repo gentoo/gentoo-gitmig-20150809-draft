@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/jump-0.4.1.ebuild,v 1.5 2004/06/24 22:36:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/jump-0.4.1.ebuild,v 1.6 2004/07/14 02:32:49 agriffis Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,6 @@ DEPEND=""
 RDEPEND=">=virtual/jdk-1.2"
 IUSE="doc"
 
-S=${WORKDIR}/${P}
 
 src_compile() { :; }
 
