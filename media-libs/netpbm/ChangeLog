@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.15 2003/02/23 02:53:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.16 2003/03/06 22:10:12 azarah Exp $
+
+*netpbm-10.11.5-r1 (06 March 2003)
+
+  06 March 2003; Martin Schlemmer <azarah@gentoo.org> netpbm-10.11.5-r1.ebuild :
+  Fix /usr/lib/libnetpbm.so symlink not being created.
 
 *netpbm-10.11.5 (13 Feb 2003)
 
