@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.5 2003/04/01 21:54:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.6 2003/06/05 00:46:20 robh Exp $
+
+*wmnd-0.4.5 (05 Jun 2003)
+
+  05 Jun 2003; robh <robh@gentoo.org> wmnd-0.4.5.ebuild:
+  version bump and new homepage. Thanks to Alex Fritze. Closes #19823.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
