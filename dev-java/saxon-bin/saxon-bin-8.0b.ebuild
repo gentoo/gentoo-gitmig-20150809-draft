@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.0b.ebuild,v 1.2 2004/06/24 22:42:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon-bin/saxon-bin-8.0b.ebuild,v 1.1 2004/07/30 21:46:14 axxo Exp $
 
 inherit java-pkg
 
@@ -17,9 +17,7 @@ RESTRICT="nomirror"
 
 S=${WORKDIR}
 
-src_compile() {
-	einfo "This is a binary-only ebuild (for now)."
-}
+src_compile() { :; }
 
 src_install() {
 	use doc && dohtml -r doc/*

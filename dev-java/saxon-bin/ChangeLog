@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/saxon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.7 2004/06/24 22:42:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon-bin/ChangeLog,v 1.1 2004/07/30 21:46:14 axxo Exp $
+
+*saxon-bin-6.5.3 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +saxon-bin-6.5.3.ebuild, +saxon-bin-7.8.ebuild, +saxon-bin-8.0b.ebuild:
+  move dev-java/saxon dev-java/saxon-bin
 
 *saxon-8.0b (20 Jun 2004)
 
