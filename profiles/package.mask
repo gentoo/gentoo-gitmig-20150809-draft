@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3093 2004/08/23 15:26:57 carlo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3094 2004/08/24 14:16:29 lucass Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -162,10 +162,6 @@ gnome-extra/evolution-data-server
 # <pylon@gentoo.org> (11 July 2004)
 # Does not compile with gcc-3.4 in the USE=gnome dependencies
 >=app-cdr/cdrdao-1.1.9
-
-# <lucass@gentoo.org> (10 July 2004)
-# unstable branch of pygtk.
-=dev-python/pygtk-2.3*
 
 # <pebenito@gentoo.org> (2 July 2004)
 # eventual use when SELinux kernel headers are updated
