@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/macopix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.6 2004/09/04 17:18:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.7 2004/10/17 16:45:34 usata Exp $
+
+*macopix-1.2.1 (18 Oct 2004)
+
+  18 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +macopix-1.2.1.ebuild:
+  Version bumped.
 
   04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> macopix-1.0.3.ebuild,
   macopix-1.0.4.ebuild:

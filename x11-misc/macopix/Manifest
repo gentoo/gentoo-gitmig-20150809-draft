@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc6989a1725e37defe2b740b629a6428 macopix-1.0.4.ebuild 1669
+MD5 d9f11a066d27eab8177d152bf004270b ChangeLog 998
 MD5 99dd966eed3cf1176f5980103490591e macopix-1.0.3.ebuild 1572
-MD5 7979d8c7e26523ba95c07d5d7f7a0aa1 ChangeLog 876
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
+MD5 fc6989a1725e37defe2b740b629a6428 macopix-1.0.4.ebuild 1669
+MD5 bfed115d057c922800c0faf43d5b8c40 macopix-1.2.1.ebuild 1708
 MD5 7021c1662a20043ccf690a2f2a6fe383 files/digest-macopix-1.0.3 807
 MD5 be15bd2a955689d7d9b76a8bb3ccb4d5 files/digest-macopix-1.0.4 807
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOflH/rLF9B432nYRAjV/AJ4hcG0eqY/Aro8Qj9DpARgGZ2BK0ACgwOK4
-UGLTkp3Fp1ZH04p41sbfOH4=
-=n4dI
------END PGP SIGNATURE-----
+MD5 b0a721eeda3f2435d25879a0cbab63f3 files/digest-macopix-1.2.1 811
