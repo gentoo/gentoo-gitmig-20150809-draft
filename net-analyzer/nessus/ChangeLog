@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.5 2002/07/17 10:41:02 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.6 2002/07/26 20:03:47 raker Exp $
+
+*nessus-1.2.3 (26 Jul 2002)
+
+  26 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  nessus-1.2.3.ebuild, files/digest-nessus-1.2.3.ebuild :
+
+  Split out the package to allow a clean installation of all components.
+  Kept the "nessus" package for easy install of all components.
 
 *nessus-1.2.2-r1 (17 Jul 2002)
 
