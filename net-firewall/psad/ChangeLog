@@ -1,6 +1,6 @@
 # ChangeLog for net-firewall/psad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.5 2003/10/21 06:43:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.6 2003/10/21 06:44:14 seemant Exp $
 
 *psad-1.2.4 (20 Oct 2003)
 
@@ -9,7 +9,7 @@
   /etc/hostname and /etc/dnsdomainname) into the psad.conf file. I also fixed a
   problem regarding the perl modules bundled with psad (they needed to be put
   into subdirs of the /usr/lib/psad directory). And finally, diskmond has been
-  removed from the package
+  removed from the package -- All this work was done by Battoussai.
 
 *psad-1.2.3-r1 (06 Oct 2003)
 
