@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.6.1.ebuild,v 1.2 2004/03/13 01:43:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.6.1.ebuild,v 1.3 2004/04/26 01:51:54 agriffis Exp $
 
 IUSE="ssl postgres"
 
@@ -17,20 +17,17 @@ DEPEND=">=sys-libs/glibc-2.2
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 src_compile() {
+	local myconf
 
-	# Patch configure to add -lssl when using postgresql and ssl
-	if [ "`use postgres`" ] && [ "`use ssl`" ]
-	then
-		sed -i "s/-lcrypt/-lcrypt -lssl/" configure
-	fi
-
-	myconf=""
-	if [ `use postgres` ]; then
+	if use postgres; then
 		myconf="--with-postgres=/usr"
+		if use ssl; then
+			# Patch configure to add -lssl when using postgresql and ssl
+			sed -i 's/-lcrypt/-lcrypt -lssl/' configure || die 'sed failed'
+		fi
 	fi
 
-	econf ${myconf} || edie
-
+	econf || die "econf failed"
 	emake || die
 }
 

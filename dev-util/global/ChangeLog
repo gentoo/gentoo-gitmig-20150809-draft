@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.5 2004/03/13 01:43:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.6 2004/04/26 01:51:54 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> global-4.6.1.ebuild:
+  Add die following econf for bug 48950
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> global-4.5.3.ebuild,
   global-4.5.ebuild, global-4.6.1.ebuild:
