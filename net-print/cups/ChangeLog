@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.73 2004/07/05 15:31:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.74 2004/07/05 15:43:39 lanius Exp $
+
+  05 Jul 2004; Heinrich Wendel <lanius@gentoo.org> cups-1.1.21_rc1.ebuild:
+  enable raw printing, bug #54981
 
 *cups-1.1.21_rc1 (05 Jul 2004)
 
