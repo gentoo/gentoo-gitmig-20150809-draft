@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.5 2003/12/04 16:38:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.6 2003/12/18 22:29:56 mholzer Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -59,11 +59,17 @@ start() {
 		fi
 		
 		[ -z "${DRIVERS}" ] && eerror "Unable to find any ALSA drivers. Have you compiled alsa-drivers correctly?"
-		OSS="$(modprobe -l | grep "snd.*oss" | sed -e "s:\/.*\/::" -e "s:\..*::")"
-		for i in ${OSS}
-		do
-			DRIVERS="${i} ${DRIVERS}"
-		done
+		# Test for use of OSS
+
+		if modprobe -c | grep -q "snd.*oss$" ; then
+		  einfo "Using ALSA OSS emulation"
+		  OSS="$(modprobe -l | grep "snd.*oss" | sed -e "s:\/.*\/::" -e "s:\..*::")"
+		  # Add oss modules to list
+		  for i in ${OSS}
+		  do
+		    DRIVERS="${i} ${DRIVERS}"
+		  done
+		fi
 		
 		for DRIVER in ${DRIVERS}
 		do
