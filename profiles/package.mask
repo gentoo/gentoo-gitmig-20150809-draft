@@ -147,7 +147,7 @@ net-www/galeon-cvs
 =dev-libs/libxml2-2.4.24
 =gnome-extra/libgtkhtml-2.0.2
 =gnome-base/control-center-2.0.1.1
-=gnome-base/gnome-2.0.2_pre1
+>=gnome-base/gnome-2.0.2_pre1
 
 # <spider@gentoo.org> (05 Sep 2002)
 # masked for testing and recheck of ebuild by rphillips
