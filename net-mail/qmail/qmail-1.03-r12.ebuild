@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.12 2003/09/24 04:06:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.13 2003/09/24 05:25:35 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -25,7 +25,14 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
 	http://www.ckdhr.com/ckd/qmail-103.patch
 	http://www.arda.homeunix.net/store/qmail/qregex-starttls-2way-auth.patch
 	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt
-	mirror://gentoo/qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2"
+	mirror://gentoo/qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2
+	http://www.dataloss.nl/software/patches/qmail-popupnofd2close.patch
+	http://js.hu/package/qmail/qmail-1.03-reread-concurrency.2.patch
+	http://www.mcmilk.de/qmail/dl/djb-qmail/patches/08-capa.diff
+	"
+# broken stuffs
+#http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
+#http://www.dataloss.nl/software/patches/qmail-pop3d-stat.patch 
 
 SLOT="0"
 LICENSE="as-is"
@@ -134,6 +141,21 @@ src_unpack() {
 	# as per bug #17283
 	# patch re-diffed from original at http://sys.pro.br/files/badrcptto-morebadrcptto-accdias.diff.bz2
 	epatch ${DISTDIR}/qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2
+
+	# TODO TESTING NEEDED
+	EPATCH_SINGLE_MSG="Enable stderr logging from checkpassword programs" \
+	epatch ${DISTDIR}/qmail-popupnofd2close.patch
+	EPATCH_SINGLE_MSG="Allow qmail to re-read concurrency limits on HUP" \
+	epatch ${DISTDIR}/qmail-1.03-reread-concurrency.2.patch
+	EPATCH_SINGLE_MSG="Add support for CAPA in POP3d" \
+	epatch ${DISTDIR}/08-capa.diff
+
+	# TODO REDIFF
+	#EPATCH_SINGLE_MSG="Refuse messages from the null envelope sender if they have more than one envelope recipient" \
+	#epatch ${DISTDIR}/nullenvsender-recipcount.patch
+	# TODO REDIFF
+	#EPATCH_SINGLE_MSG="qmail-pop3d reports erroneous figures on STAT after a DELE" \
+	#epatch ${DISTDIR}/qmail-pop3d-stat.patch 
 
 	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then

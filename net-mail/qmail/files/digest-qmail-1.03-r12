@@ -15,3 +15,8 @@ MD5 9140ad2b03017145cd7963c84bb24f16 qmail-103.patch 2104
 MD5 83bf5c4a4aade3c6c15faa9665ccfb71 qregex-starttls-2way-auth.patch 63825
 MD5 1d8b89607d35bfa409f8cfe6d23bc554 qmail-remote-auth-patch-doc.txt 1287
 MD5 fc00be3edc2827f1c93112d7d5147122 qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2 4524
+MD5 58d912de1ede57062fa8a3e2e0e75abf qmail-popupnofd2close.patch 401
+MD5 d7151dcbeb02eea1c24c1dedffe20e0b qmail-1.03-reread-concurrency.2.patch 1129
+MD5 a585997ef2f7755287272d80736d88f9 nullenvsender-recipcount.patch 2141
+MD5 ad597c93426c0938fdb36d853fbcf40d 08-capa.diff 1323
+MD5 0a5d43c817b2eb523616c384dfce561c qmail-pop3d-stat.patch 590
