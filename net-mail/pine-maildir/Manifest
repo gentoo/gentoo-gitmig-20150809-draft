@@ -13,5 +13,5 @@ MD5 7da3d2e0510c7a7d07859e1bf389710c files/pine-maildir-4.33-gentoo.diff 2108
 MD5 807a9808173bd97a65dbf329858497d2 files/digest-pine-maildir-4.56 123
 MD5 658413477556f9431995c30d73f8c6d7 pine-maildir-4.33.ebuild 1538
 MD5 83c7a62a56a6c9def2d0b6e681b3226e ChangeLog 1911
-MD5 c3081b5ec57c935e6e9b9fa67b63cb3a pine-maildir-4.56.ebuild 3305
+MD5 1b0c0453d14d3df5e6f88b80f00dfe3a pine-maildir-4.56.ebuild 3306
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
