@@ -130,14 +130,17 @@ dccc_set_env() {
 	shift
 	dccc_install_env
 	mv -f ${DISTCC_ENV_FILE} ${DISTCC_ENV_FILE}.tmp
+	if [ -n "${*}" ]; then
+		einfo "Setting ${xxENV}=\"${*}\""
+	else
+		einfo "Clearing ${xxENV}"
+	fi
 	# redirect the following block to create new file
 	{
 		egrep -v "${xxENV}[= ]" ${DISTCC_ENV_FILE}.tmp
 		if [ -n "${*}" ]; then
-			einfo "Setting ${xxENV}=\"${*}\""
 			echo "${xxENV}=\"${*}\""
 		else
-			einfo "Setting ${xxENV}=\"${*}\""
 			echo "# ${xxENV} is not set" 
 		fi 
 	} >> ${DISTCC_ENV_FILE}
