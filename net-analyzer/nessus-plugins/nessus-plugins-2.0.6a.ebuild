@@ -1,6 +1,6 @@
 # Copyright 2000-2002 Achim Gottinger
-# Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.0.6a.ebuild,v 1.3 2003/08/05 05:48:16 phosphan Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.0.6a.ebuild,v 1.4 2003/09/11 23:31:27 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A remote security scanner for Linux (nessus-plugins)"
