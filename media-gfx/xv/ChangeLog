@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.7 2002/10/13 16:37:52 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.8 2002/11/03 20:31:43 rphillips Exp $
+
+*xv-3.10a-r3 (03 Nov 2002)
+
+  03 Nov 2002; Ryan Phillips <rphillips@gentoo.org> xv-3.10a-r3.ebuild :
+
+  Added Bret Towes sed statements to produce an optimized build. Fixes #6756
 
 *xv-3.10a-r2 (05 Jun 2002)
 
