@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20.ebuild,v 1.2 2003/06/12 23:34:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20.ebuild,v 1.3 2003/07/08 23:07:30 tberman Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan exiscan-acl"
 
@@ -33,7 +33,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 
 RDEPEND="${DEPEND}
 	!virtual/mta
-	>=net-mail/mailbase-0.00"
+	>=net-mail/mailbase-0.00-r5"
 
 src_unpack() {
 	unpack ${A}
