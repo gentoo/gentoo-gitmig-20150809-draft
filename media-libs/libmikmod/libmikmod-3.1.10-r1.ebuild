@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.11 2004/01/29 19:17:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.12 2004/03/07 12:26:53 gustavoz Exp $
 
 inherit gnuconfig
 inherit flag-o-matic
@@ -18,7 +18,7 @@ DEPEND=">=media-libs/audiofile-0.2.3
 
 SLOT="0"
 LICENSE="LGPL-2.1 | LGPL-2"
-KEYWORDS="x86 amd64 hppa ~mips alpha ia64"
+KEYWORDS="x86 amd64 hppa sparc ~mips alpha ia64"
 
 src_compile() {
 	filter-flags -Os
