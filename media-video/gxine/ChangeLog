@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gxine
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.25 2004/11/07 21:11:58 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.26 2005/01/23 10:40:48 corsair Exp $
+
+*gxine-0.4.1 (23 Jan 2005)
+
+  23 Jan 2005; Markus Rothe <corsair@gentoo.org>
+  +files/gxine-0.4.1-menu-fix.patch, +gxine-0.4.1.ebuild:
+  version bump; bug #74916
 
   07 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -gxine-0.3.3.ebuild:
