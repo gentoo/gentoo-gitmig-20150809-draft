@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libical-moz/libical-moz-0.23.ebuild,v 1.8 2003/07/14 15:11:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libical-moz/libical-moz-0.23.ebuild,v 1.9 2004/06/05 18:20:46 kloeri Exp $
 
 S=${WORKDIR}/libical-0.23-moz
 DESCRIPTION="libical is used by the mozilla calendar component"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="MPL-1.1 | LGPL-2"
-KEYWORDS="x86 sparc ~alpha"
+KEYWORDS="x86 sparc alpha"
 
 src_compile() {
 
