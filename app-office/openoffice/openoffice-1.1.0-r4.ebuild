@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r4.ebuild,v 1.3 2004/05/05 10:41:56 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r4.ebuild,v 1.4 2004/05/07 14:40:14 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,19 +26,8 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils
-# Compile problems with these ...
-filter-flags "-funroll-loops"
-filter-flags "-fomit-frame-pointer"
-filter-flags "-fprefetch-loop-arrays"
-filter-flags "-fno-default-inline"
-append-flags "-fno-strict-aliasing"
-replace-flags "-O3" "-O2"
+inherit flag-o-matic eutils gcc
 
-# Enable Bytecode Interpreter for freetype ...
-append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
-
-inherit gcc
 # We want gcc3 if possible!!!!
 export WANT_GCC_3="yes"
 
@@ -298,6 +287,17 @@ src_unpack() {
 #	sed -i -e "s,\(PRODUCT[^a-zA-Z]*\)\(FULL\),\1full," ${S}/crashrep/source/unx/makefile.mk||die
 #	einfo "Removing crashrep from the installed set"
 #	sed -i -e "s,\(crashrep \),," ${S}/instsetoo/prj/build.lst
+
+	# Compile problems with these ...
+	filter-flags "-funroll-loops"
+	filter-flags "-fomit-frame-pointer"
+	filter-flags "-fprefetch-loop-arrays"
+	filter-flags "-fno-default-inline"
+	append-flags "-fno-strict-aliasing"
+	replace-flags "-O3" "-O2"
+
+	# Enable Bytecode Interpreter for freetype ...
+	append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
 
 	if [ "$(gcc-version)" == "3.2" ]; then
 		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"

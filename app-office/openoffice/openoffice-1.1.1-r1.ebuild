@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1-r1.ebuild,v 1.3 2004/05/05 10:41:56 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1-r1.ebuild,v 1.4 2004/05/07 14:40:14 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -27,18 +27,6 @@
 #   need to be able to install more than one language pack.
 
 inherit flag-o-matic eutils gcc
-
-# Compile problems with these ...
-filter-flags "-funroll-loops"
-filter-flags "-fomit-frame-pointer"
-filter-flags "-fprefetch-loop-arrays"
-filter-flags "-fno-default-inline"
-append-flags "-fno-strict-aliasing"
-replace-flags "-O3" "-O2"
-replace-flags "-Os" "-O2"
-
-# Enable Bytecode Interpreter for freetype ...
-append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
 
 # We want gcc3 if possible!!!!
 export WANT_GCC_3="yes"
@@ -277,6 +265,18 @@ src_unpack() {
 
 	#Security fix
 	epatch ${FILESDIR}/${PV}/neon.patch
+
+	# Compile problems with these ...
+	filter-flags "-funroll-loops"
+	filter-flags "-fomit-frame-pointer"
+	filter-flags "-fprefetch-loop-arrays"
+	filter-flags "-fno-default-inline"
+	append-flags "-fno-strict-aliasing"
+	replace-flags "-O3" "-O2"
+	replace-flags "-Os" "-O2"
+
+	# Enable Bytecode Interpreter for freetype ...
+	append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
 
 	if [ "$(gcc-version)" == "3.2" ]; then
 		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
