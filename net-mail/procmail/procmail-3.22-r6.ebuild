@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r6.ebuild,v 1.6 2004/01/18 23:02:29 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r6.ebuild,v 1.7 2004/01/29 21:34:01 blkdeath Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -51,6 +51,7 @@ src_install () {
 	doins lockfile
 
 	dobin formail mailstat
+	insopts -m 0644
 
 	doman *.1 *.5
 

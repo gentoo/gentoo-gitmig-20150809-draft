@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.22 2004/01/18 23:02:29 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.23 2004/01/29 21:34:01 blkdeath Exp $
+
+  29 Jan 2004; Stewart <blkdeath@gentoo.org> procmail-3.22-r6.ebuild:
+  Re: Bug #39793 - reset insopts to 0644 for man pages, docs, config files
 
   19 Jan 2004; <tuxus@gentoo.org> procmail-3.22-r6.ebuild:
   Added ~mips to KEYWORDS.
