@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.4 2004/08/18 13:56:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.5 2004/08/19 15:46:27 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -27,9 +27,9 @@ KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~alpha ~hppa"
 # excepting it here, hopefully that can be removed in the future.
 RDEPEND="!gnome-base/gnome-core
 
-	>=dev-libs/glib-2.4.5
+	>=dev-libs/glib-2.4.6
 	>=dev-libs/atk-1.6.1
-	>=x11-libs/gtk+-2.4.4
+	>=x11-libs/gtk+-2.4.7
 	>=x11-libs/pango-1.4.1
 
 	hppa? ( >=dev-libs/libxml2-2.6.9 )
@@ -69,7 +69,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-media-2.6.2
 
 	>=media-gfx/eog-2.6.1
-	!hppa? ( !mips? ( >=net-www/epiphany-1.2.7 ) )
+	!hppa? ( !mips? ( >=net-www/epiphany-1.2.7-r1 ) )
 	>=app-arch/file-roller-2.6.1
 	>=gnome-extra/gcalctool-4.3.51
 	>=gnome-extra/gconf-editor-2.6.2
