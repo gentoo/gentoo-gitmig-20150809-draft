@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/epix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.2 2003/02/14 16:40:09 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.3 2003/05/09 18:33:49 latexer Exp $
+
+  09 May 2003; Peter Johanson <latexer@gentoo.org> epix-0.8.8a.ebuild:
+  Add some sedding for bug #20633
 
 *epix-0.8.8a (14 Feb 2003)
 
