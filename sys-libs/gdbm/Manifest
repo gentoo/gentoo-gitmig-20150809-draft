@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4faf2a17dcd158dbd672626a78ff614c gdbm-1.8.3-r1.ebuild 1488
-MD5 a4fe73d1d73b0d60aefef9bd86254626 gdbm-1.8.3.ebuild 1323
 MD5 06e7f514a865833aee72358c5609d8a9 ChangeLog 3628
+MD5 7e43546dbd6c2deec41d67f81b08c7aa gdbm-1.8.0-r5.ebuild 1249
+MD5 a4fe73d1d73b0d60aefef9bd86254626 gdbm-1.8.3.ebuild 1323
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 76f059abb0bd0cef400c71abc61cc5cd gdbm-1.8.0-r5.ebuild 1251
+MD5 4faf2a17dcd158dbd672626a78ff614c gdbm-1.8.3-r1.ebuild 1488
 MD5 017b1a2d0ae227d89ee16480e3129a3b files/digest-gdbm-1.8.0-r5 62
+MD5 8640084b5d1f0e27de1d1c7da372f00a files/gdbm-1.8.0-r5-gentoo.diff 6093
 MD5 c7bef9bbd37f161be399c58c61edef94 files/digest-gdbm-1.8.3 62
 MD5 c7bef9bbd37f161be399c58c61edef94 files/digest-gdbm-1.8.3-r1 62
-MD5 8640084b5d1f0e27de1d1c7da372f00a files/gdbm-1.8.0-r5-gentoo.diff 6093
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBaXqqVWNWqTUmv+0RAn7UAJ9GDZliFqOH2JJkMPcsRbqA7GgD6ACfVhoK
-8hYExbCq7w/Qcus8m8KAwE8=
-=C/f7
------END PGP SIGNATURE-----
