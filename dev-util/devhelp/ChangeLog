@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.25 2004/09/29 15:34:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.26 2004/11/21 19:55:48 foser Exp $
+
+*devhelp-0.9.3 (21 Nov 2004)
+
+  21 Nov 2004; foser <foser@gentoo.org> devhelp-0.9.3.ebuild :
+  New release
 
 *devhelp-0.9.2 (29 Sep 2004)
 

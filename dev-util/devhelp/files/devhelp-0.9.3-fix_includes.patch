@@ -1,0 +1,15 @@
+diff -uNr devhelp-0.9.3/src/dh-gecko-utils.cpp devhelp-0.9.3.patched/src/dh-gecko-utils.cpp
+--- devhelp-0.9.3/src/dh-gecko-utils.cpp	2004-10-21 18:53:40.000000000 +0200
++++ devhelp-0.9.3.patched/src/dh-gecko-utils.cpp	2004-10-28 13:00:30.668166136 +0200
+@@ -29,11 +29,8 @@
+ #include <nsEmbedString.h>
+ #include <nsIPrefService.h>
+ #include <nsIServiceManager.h>
+-#include <nsIWindowWatcher.h>
+-#include <nsIIOService.h>
+ #include <nsISupportsPrimitives.h>
+ #include <nsILocalFile.h>
+-#include <nsIURI.h>
+ 
+ #include <stdlib.h>
+ 
