@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.17 2004/02/26 18:29:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.18 2004/03/13 15:52:14 tester Exp $
+
+*faad2-2.0 (13 Mar 2004)
+
+  13 Mar 2004; <tester@gentoo.org> faad2-2.0.ebuild,
+  files/faad2-2.0-configure-mpeg4ip.patch, files/mp4atom-sliver.patch,
+  files/faad2-2.0-makefile-space.patch:
+  Bump to 2.0. Add patch for sliver bug (from mpeg4ip), fix configure script to
+  check correctly for mpeg4ip and fix space-vs-tabs in Makefile. Fixes bug
+  #43096
 
   26 Feb 2004; Guy Martin <gmsoft@gentoo.org> faad2-2.0_rc3-r1.ebuild:
   Keyworded ~hppa.
