@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-en
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.10 2005/01/01 12:41:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.11 2005/02/20 10:18:16 arj Exp $
+
+  20 Feb 2005; Anders Rune Jensen <arj@gentoo.org> aspell-en-6.0.0.ebuild:
+  Fix KEYWORDS.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> aspell-en-6.0.0.ebuild:
   added forgotten IUSE=""

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-de
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.7 2005/01/01 12:41:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.8 2005/02/20 10:17:40 arj Exp $
+
+  20 Feb 2005; Anders Rune Jensen <arj@gentoo.org> aspell-de-0.60_pre20030222:
+  Fix KEYWORDS.
 
 *aspell-de-0.60_pre20030222 (21 Nov 2004)
 

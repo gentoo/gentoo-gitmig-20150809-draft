@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/aspell-he
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.7 2005/02/15 21:31:24 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.8 2005/02/20 10:23:13 arj Exp $
+
+  20 Feb 2005; Anders Rune Jensen <arj@gentoo.org> aspell-he-0.9.0.ebuild.
+  aspell-he-0.8.0.ebuild:
+  Fix KEYWORDS. IUSE not needed, provided by eclass. Repoman doesn't
+  understand this.
 
 *aspell-he-0.9.0 (15 Feb 2005)
 
