@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.63 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.64 2004/08/02 18:45:37 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -41,6 +41,8 @@ POD_DIR=""
 perl-module_src_prep() {
 
 	perlinfo
+
+	export PERL_MM_USE_DEFAULT=1
 
 	SRC_PREP="yes"
 	if [ "${style}" == "builder" ]; then
