@@ -2,7 +2,7 @@ MD5 393b6e6de2a6d35a842c64e774235712 mozilla-1.7_rc1-r1.ebuild 15831
 MD5 2078a4dd1a04cbc825ff7d3c827f0121 mozilla-1.7_beta-r1.ebuild 15917
 MD5 c908bcb957951df24e164b510db5dd3c mozilla-1.6-r1.ebuild 17204
 MD5 9443cf39e51d3c43bda236414dc5f6e5 mozilla-1.7_rc1.ebuild 16359
-MD5 c8d344f240ca290eec67b8b652ace6c6 ChangeLog 29284
+MD5 bba3448b4aae93c3a725099b9770b4af ChangeLog 29284
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 e816a98fb3581a6d4a050aa4cdf12905 files/mozilla-1.7-amd64.patch 25433
 MD5 d0e52abf109fe61c4195f0cbf002ae18 files/google.src 706
