@@ -1,18 +1,11 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.34 2003/12/02 08:00:05 seemant Exp $
-
-  01 Dec 2003; Seemant Kulleen <seemant@gentoo.org> libsdl-1.2.6-r2.ebuild:
-  epatch doesn't work
-
-  03 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.6-r2.ebuild:
-  mark stable on x86
-
-  01 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
-  files/libsdl-1.2.6-fullscreen.patch:
-  Remove rcs ids from patch so patch doesn't get confused.
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.35 2003/12/08 16:16:22 vapier Exp $
 
 *libsdl-1.2.6-r2 (01 Nov 2003)
+
+  08 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to work with alsa-1.0.0 #35049.
 
   01 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.6-r2.ebuild,
   files/libsdl-1.2.6-fullscreen.patch:

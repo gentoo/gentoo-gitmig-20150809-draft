@@ -1,0 +1,15 @@
+diff -ur SDL-1.2.6-orig/src/audio/alsa/SDL_alsa_audio.h SDL-1.2.6/src/audio/alsa/SDL_alsa_audio.h
+--- SDL-1.2.6-orig/src/audio/alsa/SDL_alsa_audio.h	2002-06-08 12:42:11.000000000 -0500
++++ SDL-1.2.6/src/audio/alsa/SDL_alsa_audio.h	2003-12-07 17:50:47.103963328 -0600
+@@ -24,6 +24,11 @@
+ #define _ALSA_PCM_audio_h
+ 
+ #include "SDL_sysaudio.h"
++#include <alsa/version.h>
++# if SND_LIB_MAJOR==1
++#define ALSA_PCM_OLD_HW_PARAMS_API
++#define ALSA_PCM_NEW_HW_PARAMS_API
++# endif
+ #include <alsa/asoundlib.h>
+ 
+ /* Hidden "this" pointer for the video functions */

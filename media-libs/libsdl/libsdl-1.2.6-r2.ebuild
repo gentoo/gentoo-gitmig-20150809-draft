@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r2.ebuild,v 1.8 2003/12/04 15:51:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r2.ebuild,v 1.9 2003/12/08 16:16:22 vapier Exp $
 
 inherit eutils
 
@@ -35,10 +35,8 @@ S=${WORKDIR}/SDL-${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# this should fix Bug 31235
-	# Cannot use epatch as this patch fails on the dry-run -- perhaps the
-	# patch needs to be regenerated?
-	epatch ${FILESDIR}/${P}-fullscreen.patch
+	epatch ${FILESDIR}/${P}-fullscreen.patch #31235
+	epatch ${FILESDIR}/${PV}-alsa-1.0.0.patch #35049
 
 	sed -i \
 		-e 's:head -1:head -n 1:' configure || \
