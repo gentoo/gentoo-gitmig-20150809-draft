@@ -1,12 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12.ebuild,v 1.1 2004/01/17 18:19:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12.ebuild,v 1.2 2004/02/07 19:17:42 vapier Exp $
 
 inherit libtool flag-o-matic eutils
-# Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
-filter-mfpmath sse
-filter-flags -fPIC
-filter-flags -maltivec -mabi=altivec
 
 MY_P="${P/_pre/.}"
 S=${WORKDIR}/${MY_P}
@@ -54,40 +50,14 @@ src_unpack() {
 }
 
 src_compile() {
+	# Don't build with -mfpmath=sse (Bug #14920)
+	filter-mfpmath sse
+	filter-flags -maltivec -mabi=altivec
+
 	local myconf="--with-dvdread"
 
 	# fix invalid paths in .la files of plugins
 	elibtoolize
-
-	use mmx \
-		&& myconf="${myconf} --enable-mmx"
-	use mmx || ( use 3dnow || use sse ) \
-		|| myconf="${myconf} --disable-mmx"
-	# Dont disable mmx if 3dnow or sse are requested.
-
-	use sse \
-		&& myconf="${myconf} --enable-sse" \
-		|| myconf="${myconf} --disable-sse"
-
-	use 3dnow \
-		&& myconf="${myconf} --enable-3dnow" \
-		|| myconf="${myconf} --disable-3dnow"
-
-	use altivec \
-		&& myconf="${myconf} --enable-altivec" \
-		|| myconf="${myconf} --disable-altivec"
-
-	use avi \
-		&& myconf="${myconf} --with-avifile-mods --enable-avifile6" \
-		|| myconf="${myconf} --without-avifile-mods --disable-avifile6"
-
-	use encode \
-		&& myconf="${myconf} --with-lame" \
-		|| myconf="${myconf} --without-lame"
-
-	use mpeg \
-		&& myconf="${myconf} --with-libmpeg3" \
-		|| myconf="${myconf} --without-libmpeg3"
 
 	if [ "`use quicktime`" ]; then
 		has_version 'media-libs/openquicktime' \
@@ -95,19 +65,24 @@ src_compile() {
 			|| myconf="${myconf} --without-openqt --with-qt"
 	fi
 
-	use X \
-		&& myconf="${myconf} --enable-x" \
-		|| myconf="${myconf} --disable-x"
-
 	# Use the MPlayer libpostproc if present
 	[ -f ${ROOT}/usr/lib/libpostproc.a ] && \
 	[ -f ${ROOT}/usr/include/postproc/postprocess.h ] && \
 		myconf="${myconf} --with-libpostproc-builddir=${ROOT}/usr/lib"
 
-	econf ${myconf} CFLAGS="${CFLAGS} -DDCT_YUV_PRECISION=1" || die
-
-	# Do not use emake !!
-	# export CFLAGS="${CFLAGS} -DDCT_YUV_PRECISION=1"
+	econf \
+		CFLAGS="${CFLAGS} -DDCT_YUV_PRECISION=1" \
+		`use_enable mmx` \
+		`use_enable sse` \
+		`use_enable 3dnow` \
+		`use_enable altivec` \
+		`use_with avi avifile-mods` \
+		`use_enable avi avifile6` \
+		`use_enable encode lame` \
+		`use_enable mpeg libmpeg3` \
+		`use_enable X x` \
+		${myconf} \
+		|| die
 
 	# workaround for including avifile haders, which are expected
 	# in an directory named "avifile"
@@ -117,7 +92,7 @@ src_compile() {
 		&& [ "$(basename "$avi_inc")" != "avifile" ] \
 		&& ln -s "$avi_inc" avifile
 
-	make all || die
+	emake -j1 all || die
 
 	# subrip stuff
 	cd contrib/subrip
