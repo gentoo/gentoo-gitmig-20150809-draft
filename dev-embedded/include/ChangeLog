@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/include
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/ChangeLog,v 1.4 2004/04/14 11:19:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/ChangeLog,v 1.5 2004/04/25 18:58:52 squinky86 Exp $
+
+  25 Apr 2004; Jon Hood <squinky86@gentoo.org> include-0.3.2.ebuild:
+  changed econf || dir to econf || die
 
   14 Apr 2004; Daniel Black <dragonheart@gentoo.org> include-0.3.2.ebuild:
   Changed ISUE to IUSE as it is more approprate;-)
