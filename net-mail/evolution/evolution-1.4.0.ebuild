@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.4 2003/07/07 02:19:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.5 2003/07/09 15:46:51 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -39,16 +39,18 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.5
     >=gnome-base/libgnomeprintui-2.2
     >=gnome-base/libgnomeprint-2.2
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
-	ssl? ( mozilla? ( >=net-www/mozilla-0.9.9 ) : ( >=dev-libs/openssl-0.9.5 ) )
+	ssl? ( mozilla? ( || ( >=net-www/mozilla-0.9.9 >=net-www/mozilla-firebird-0.6 ) ) )
+	ssl? ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
-    kerberos? ( >=app-crypt/mit-krb5-1.2.5 )"
+    kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
+	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
+	dev-util/pkgconfig
 	>=sys-devel/libtool-1.4.1-r1
 	>=dev-util/intltool-0.20
 	sys-devel/gettext
-	app-text/scrollkeeper	
 	doc? ( dev-util/gtk-doc )"
 
 pkg_setup() {
@@ -100,7 +102,15 @@ src_compile() {
 	cd ${S}
   
 	local myconf=""
-	local MOZILLA="${MOZILLA_FIVE_HOME}"
+	if [ -n "${MOZILLA_FIVE_HOME}" -o -f "/usr/lib/mozilla/include/nspr/nspr.h" ]; then
+		local MOZILLA="${MOZILLA_FIVE_HOME}"
+	elif [ -f "/usr/lib/MozillaFirebird/include/nspr/nspr.h" ]; then
+		local MOZILLA="/usr/lib/MozillaFirebird"
+	elif [ -n "`use ssl`" -a "`use mozilla`" ]; then
+		eerror "unable to find mozilla or mozilla-firebird installed"
+		eerror "please emerge with USE='-mozilla'"
+		die "unable to find mozilla/mozilla-firebird"
+	fi		
 
 	use pda \
 		&& myconf="${myconf} --with-pisock=/usr --enable-pilot-conduits=yes" \
