@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 329cff24cd774e0464e057e9961b32b9 ChangeLog 3501
-MD5 71dd1e3abcd8672b9dafbf7d4a6c7db3 openslp-1.0.11.ebuild 834
+MD5 e59243330c3e9b6fee24101b7bae0ba7 ChangeLog 3613
+MD5 fb07378e184212e79f4c4008b0e69239 openslp-1.0.11.ebuild 855
 MD5 16d4985dc3bbc616a5d8c0f08d9878fa openslp-1.0.9a.ebuild 705
+MD5 ea14bd09d8b2d929b9b37a1ffae49518 openslp-1.2.1.ebuild 940
 MD5 d7f79cffa0ae6dc390e87781e51f4248 metadata.xml 220
-MD5 5182396902f2698a8e5f3256af6e30cc openslp-1.2.1.ebuild 919
 MD5 570fc57cfed48b272c0d000a21927d26 files/digest-openslp-1.0.11 66
 MD5 67fd195194d45cffe4a08f4d0d0c5c2f files/digest-openslp-1.0.9a 66
 MD5 f87ab978aa65541b72c9aef6e1e5677e files/slpd-init 2294
 MD5 97a5b3202b42cbb36942b17299b2701d files/digest-openslp-1.2.1 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCOlxI5mJXAu5GbtIRApGcAJ95r5WoSK8IVrckBlwZpoSnUqfrGQCfdUmJ
-r1j7yqVuPQZ0yd0A3smVZnU=
-=VdTV
+iD8DBQFCOsGlRkyva5PS18kRAidxAJ9irsL7bmOmtZaaEsudPCJALXZ66gCgn8mB
+Fzd80cnekn8M4iL9XkOYsTg=
+=+lOh
 -----END PGP SIGNATURE-----
