@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/portage-prefpane
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-prefpane/ChangeLog,v 1.1 2004/08/21 14:31:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-prefpane/ChangeLog,v 1.2 2004/08/21 17:43:06 hansmi Exp $
+
+*portage-prefpane-0.1-r1 (21 Aug 2004)
+
+  21 Aug 2004; Michael Hanselmann <hansmi@gentoo.org>
+  +portage-prefpane-0.1-r1.ebuild:
+  Fixed a link-error during removing '-lObjC' with sed.
+
+*portage-prefpane-0.1 (21 Aug 2004)
 
   21 Aug 2004; Michael Hanselmann <hansmi@gentoo.org> : portage-prefpane-0.1.ebuild
   Added version 0.1 to portage. It is only experimental by now.
