@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.3 2004/12/18 11:51:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.4 2005/03/09 09:44:05 ferringb Exp $
+
+  09 Mar 2005; Brian Harring <ferringb@gentoo.org> quilt-0.32-r1.ebuild, 
+  quilt-0.37.ebuild:
+  Closed out #79192, #79195, and #79797. Thanks to James Rowe for the fixes/bugs.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> quilt-0.32.ebuild:
   added ~amd64
