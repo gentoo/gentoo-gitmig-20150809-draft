@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/ocamlweb
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.1 2004/02/05 14:42:26 mattam Exp $
+
+*ocamlweb-1.34 (05 Feb 2004)
+
+  05 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> metadata.xml,
+  ocamlweb-1.34.ebuild:
+  ocamlweb is a literate programming tool for ocaml, it can output TeX docs
+  from literate sources.
+
