@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/dosbox
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosbox/ChangeLog,v 1.1 2003/01/31 23:24:59 rphillips Exp $
+
+*dosbox-0.57 (31 Jan 2003)
+
+  31 Jan 2003; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  New package. Submitted by Dirk-Jan Heijs. 
