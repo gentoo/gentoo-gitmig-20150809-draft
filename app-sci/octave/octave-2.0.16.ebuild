@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tod Neidt <tod@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/octave/octave-2.0.16.ebuild,v 1.1 2002/02/19 19:15:14 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.0.16.ebuild,v 1.1 2002/05/08 02:04:28 george Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,6 +14,8 @@ HOMEPAGE="http://www.octave.org/"
 DEPEND="virtual/glibc
 		>=sys-libs/ncurses-5.2-r3
 		>=media-gfx/gnuplot-3.7.1"
+
+PROVIDE="dev-lang/octave"
 
 src_compile() {
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.59.1.ebuild,v 1.1 2002/05/07 00:30:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.59.1.ebuild,v 1.2 2002/05/08 02:04:28 george Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,6 +14,8 @@ HOMEPAGE="http://euler.sf.net"
 DEPEND="virtual/glibc
         virtual/x11
         >=x11-libs/gtk+-1.2"
+
+PROVIDE="app-misc/euler"
 
 src_unpack() {
 	unpack ${P}.tar.gz

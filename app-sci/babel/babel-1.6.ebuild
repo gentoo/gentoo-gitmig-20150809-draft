@@ -14,6 +14,8 @@ HOMEPAGE="http://smog.com/chem/babel/"
 #Doesn't really seem to depend on anything (?)
 DEPEND="virtual/glibc"
 
+PROVIDE="app-misc/babel"
+
 src_unpack() {
 
 	unpack ${P}.tar.Z
