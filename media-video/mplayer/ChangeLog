@@ -1,10 +1,14 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.76 2003/09/06 18:23:55 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.77 2003/09/06 18:43:31 azarah Exp $
 
   06 Sep 2003; Alexander Gabert <pappy@gentoo.org> mplayer-0.91.ebuild,
   mplayer-1.0_pre1.ebuild:
   added support for hardened-gcc, see bug 27507
+
+  06 Sep 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-1.0_pre1.ebuild:
+  Cleanup libpostproc stuff a bit. Last time I checked, we should not need to
+  install the static version of the library.
 
   04 Sep 2003; Heinrich Wendel <lanius@gentoo.org> mplayer-0.90-r2.ebuild,
   mplayer-0.90-r5.ebuild, mplayer-0.90_rc4.ebuild, mplayer-0.91.ebuild,

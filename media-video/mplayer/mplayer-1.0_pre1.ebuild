@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre1.ebuild,v 1.5 2003/09/06 18:23:55 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre1.ebuild,v 1.6 2003/09/06 18:43:31 azarah Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba"
 
@@ -103,8 +103,6 @@ src_unpack() {
 		cd ${S}/libdha
 		sed -i -e "s/^#CFLAGS/CFLAGS/" Makefile
 	fi
-
-	cp -r ${S}/postproc ${S}/postproc.so
 }
 
 src_compile() {
@@ -256,9 +254,10 @@ src_compile() {
 		myconf="${myconf} --enable-linux-devfs"
 	fi
 
-    if has_version 'sys-devel/hardened-gcc' && [ ${CC}="gcc" ] ; then
-        CC="${CC} -yet_exec"
-    fi
+	if has_version 'sys-devel/hardened-gcc' && [ "${CC}" = "gcc" ]
+	then
+		CC="${CC} -yet_exec"
+	fi
 
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
@@ -288,7 +287,7 @@ src_compile() {
 	# We build the shared libpostproc.so here so that our
 	# mplayer binary is not linked to it, ensuring that we
 	# do not run into issues ... (bug #14479)
-	cd ${S}/postproc.so
+	cd ${S}/libavcodec/libpostproc
 	make SHARED_PP="yes" || die "Failed to build libpostproc.so!"
 
 	if [ -n "`use matrox`" ]
@@ -316,18 +315,6 @@ src_install() {
 	     SHARED_PP="yes" \
 	     install || die "Failed to install libpostproc.so!"
 	cd ${S}
-
-	# Some stuff like transcode can use this one.
-	if [ -f ${S}/libavcodec/libpostproc/libpostproc.a ]
-	then
-		dolib ${S}/libavcodec/libpostproc/libpostproc.a
-
-		if [ ! -f ${D}/usr/include/postproc/postprocess.h ]
-		then
-			insinto /usr/include/postproc
-			doins ${S}/libavcodec/postproc/postprocess.h
-		fi
-	fi
 
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
