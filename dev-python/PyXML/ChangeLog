@@ -1,11 +1,14 @@
 # ChangeLog for dev-python/PyXML
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/ChangeLog,v 1.13 2003/06/12 20:36:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/ChangeLog,v 1.14 2003/07/01 19:16:05 gmsoft Exp $
 
   12 Jun 2003; <msterret@gentoo.org> PyXML-0.7.1.ebuild, PyXML-0.7.ebuild:
   fix Header
 
 *PyXML-0.8.2 (24 Apr 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> PyXML-0.8.2.ebuild :
+  Added hppa to KEYWORDS.
 
   24 Apr 2003; Alastair Tse <liquidx@gentoo.org> PyXML-0.8.2.ebuild:
   version bump because the older one doesn't work with newest expat (#14081)
