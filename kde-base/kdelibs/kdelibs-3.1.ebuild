@@ -1,11 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.15 2003/02/01 20:05:56 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.16 2003/02/12 17:17:13 hannes Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
-# check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
-
+IUSE="alsa ipv6 cups ssl"
 DESCRIPTION="KDE libraries needed by all kde programs" 
 KEYWORDS="x86 ppc ~sparc"
 HOMEPAGE="http//www.kde.org/"
@@ -55,20 +54,15 @@ need-qt $selected_version
 set-kdedir $PV
 
 src_unpack() {
-
-    kde_src_unpack
-    kde_sandbox_patch ${S}/kio/misc/kpac
-
+	kde_src_unpack
+	kde_sandbox_patch ${S}/kio/misc/kpac
 }
 
 src_install() {
-	
 	kde_src_install
-	
 	dohtml *.html
-	
-	dodir /etc/env.d
 
+	dodir /etc/env.d
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
@@ -76,7 +70,4 @@ KDEDIRS=${PREFIX}
 CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdelibs-${PV} # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/56kdedir-${PV} # number goes up with version upgrade
-	
 }
-
-

@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.3 2003/02/11 21:28:14 danarmak Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.4 2003/02/12 17:17:13 hannes Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -57,18 +56,15 @@ need-qt $selected_version
 set-kdedir $PV
 
 src_unpack() {
-    kde_src_unpack
-    kde_sandbox_patch ${S}/kio/misc/kpac
+	kde_src_unpack
+	kde_sandbox_patch ${S}/kio/misc/kpac
 }
 
 src_install() {
-
 	kde_src_install
-
 	dohtml *.html
 
 	dodir /etc/env.d
-
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib

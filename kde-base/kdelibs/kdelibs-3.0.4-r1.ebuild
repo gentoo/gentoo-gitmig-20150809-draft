@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.4-r1.ebuild,v 1.7 2003/01/07 08:24:20 hannes Exp $
-inherit kde kde.org
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.4-r1.ebuild,v 1.8 2003/02/12 17:17:13 hannes Exp $
+inherit kde kde.org eutils
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
-# check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
-
+IUSE="ipv6 ssl alsa cups"
 SRC_URI="$SRC_URI
 	mirror://kde/security_patches/post-${PV}-${PN}-kio-misc.diff"
 
@@ -59,20 +58,16 @@ set-kdedir $PV
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
-	patch -p1 < ${DISTDIR}/post-${PV}-${PN}-kio-misc.diff
-    kde_sandbox_patch ${S}/kio/misc/kpac
-
+	epatch ${DISTDIR}/post-${PV}-${PN}-kio-misc.diff
+	kde_sandbox_patch ${S}/kio/misc/kpac
 }
 
 
 src_install() {
-	
 	kde_src_install
-	
 	dohtml *.html
-	
-	dodir /etc/env.d
 
+	dodir /etc/env.d
 	echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/bin
 LDPATH=${PREFIX}/lib
@@ -80,7 +75,4 @@ KDEDIRS=$PREFIX
 CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/65kdelibs-${PV} # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/50kdedir-${PV} # number goes up with version upgrade
-	
 }
-
-

@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a-r1.ebuild,v 1.3 2003/02/01 20:05:56 jmorgan Exp $
-
-IUSE="ssl cups ipv6 alsa"
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a-r1.ebuild,v 1.4 2003/02/12 17:17:13 hannes Exp $
 inherit kde kde.org
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
 
+IUSE="ssl cups ipv6 alsa"
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs"
 KEYWORDS="x86 sparc "
 HOMEPAGE="http//www.kde.org/"
@@ -53,34 +52,26 @@ PATCHES="${FILESDIR}/${P}-gentoo.diff
 	${FILESDIR}/${P}-crosside.diff"
 
 src_unpack() {
-    
 	kde_src_unpack
-	
 	kde_sandbox_patch ${S}/{arts/soundserver,kio/kpac}
-	
 }
 
 src_compile() {
-    
 	kde_src_compile myconf
 
 	use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
 	use ssl		&& myconf="$myconf --with-ssl-dir=/usr"		|| myconf="$myconf --without-ssl"
 	use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 	use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
-	
-	kde_src_compile configure make
 
+	kde_src_compile configure make
 }
 
 src_install() {
-
 	kde_src_install
-	
 	dohtml *.html
-	
+
 	dodir /etc/env.d
-	
 	if [ "${PREFIX}" != "/usr/kde/2" ]; then
 echo "PATH=${PREFIX}/bin:/usr/kde/2/bin
 ROOTPATH=${PREFIX}/bin:/usr/kde/2/bin
@@ -92,7 +83,4 @@ LDPATH=${PREFIX}/lib" > ${D}/etc/env.d/70kdelibs-${PV}
 	fi
 
 	echo "KDEDIR=/usr/kde/2" > ${D}/etc/env.d/40kdedir-${PV}
-
 }
-
-
