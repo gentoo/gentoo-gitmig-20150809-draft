@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.1-r4.ebuild,v 1.1 2002/05/22 19:31:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.1-r4.ebuild,v 1.2 2002/07/09 10:53:20 aliz Exp $
 
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
@@ -14,6 +14,7 @@ CXXFLAGS="${CXXFLAGS} -g"
 
 
 SLOT="1"
+KEYWORDS="x86"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text rendering and Layout library"

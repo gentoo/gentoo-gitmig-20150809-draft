@@ -7,6 +7,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Gdkxft transparently adds anti-aliased font support to gtk+-1.2."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gdkxft.sourceforge.net"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	virtual/x11

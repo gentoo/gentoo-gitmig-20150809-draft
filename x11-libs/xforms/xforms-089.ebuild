@@ -8,6 +8,9 @@ S=${WORKDIR}/${PN}
 DESCRIPTION="A GUI Toolkit based on Xlib"
 SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/linux-i386/elf/${MY_P}.tgz"
 HOMEPAGE="http://world.std.com/~xforms/"
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.1 2002/06/20 20:46:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.2 2002/07/09 10:53:20 aliz Exp $
 
 inherit gnome2
 S=${WORKDIR}/${P}
@@ -9,6 +9,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/gtkglarea/${P}.tar.bz2
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2 LGPL-2.1"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	>=x11-libs/gtk+-2.0.3

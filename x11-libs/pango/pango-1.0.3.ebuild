@@ -2,13 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.3.ebuild,v 1.1 2002/06/16 02:18:02 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.3.ebuild,v 1.2 2002/07/09 10:53:20 aliz Exp $
 
 
 inherit debug
 inherit libtool
 
 SLOT="1"
+KEYWORDS="x86"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text rendering and Layout library"

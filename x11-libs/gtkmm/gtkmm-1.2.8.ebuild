@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
 # Maintainer:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.2.8.ebuild,v 1.3 2002/05/23 06:50:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.2.8.ebuild,v 1.4 2002/07/09 10:53:20 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ interface for GTK+"
@@ -10,6 +10,9 @@ SRC_URI="http://download.sourceforge.net/gtkmm/${P}.tar.gz"
 #	 ftp://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
 #	 http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
+LICENSE="GPL-2"
+SLOT="1.2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	=x11-libs/gtk+-1.2*

@@ -12,6 +12,7 @@ DEPEND="virtual/x11
 RDEPEND="${DEPEND}"
 LICENSE="GPL"
 SLOT="0"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}

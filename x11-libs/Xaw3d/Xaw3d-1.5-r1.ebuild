@@ -24,6 +24,9 @@ SRC_URI="ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz
 	 http://ibiblio.org/pub/X11/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz"
 # None so far as I know.
 #HOMEPAGE="http://"
+LICENSE="X11"
+SLOT="0"
+KEYWORDS="x86"
 
 # There _might_ be something else, but I doubt it.
 DEPEND="virtual/x11"
