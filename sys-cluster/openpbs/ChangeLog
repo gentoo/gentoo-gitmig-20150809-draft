@@ -2,6 +2,10 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /home/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog
 
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> openpbs-2.3.16-r1.ebuild,
+  openpbs-2.3.16.ebuild:
+  Typo in DESCRIPTION: queueing -> queuing. Bug 59717.
+
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   openpbs-2.3.16-r1.ebuild, openpbs-2.3.16.ebuild:
   virtual/glibc -> virtual/libc

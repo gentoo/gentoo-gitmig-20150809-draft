@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.0.1-r6.ebuild,v 1.6 2004/07/01 21:49:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.0.1-r6.ebuild,v 1.7 2004/08/08 00:41:24 slarti Exp $
 
 S=${WORKDIR}/`echo ${A} | sed -e 's/\.tar\.gz//g'`
 
-DESCRIPTION="A freely downloadable cluster resource manager and queueing system based on OpenPBS"
+DESCRIPTION="A freely downloadable cluster resource manager and queuing system based on OpenPBS"
 HOMEPAGE="http://www.supercluster.org/torque/"
 SRC_URI="http://supercluster.org/downloads/torque/torque-1.0.1p6.tar.gz"
 LICENSE="openpbs"

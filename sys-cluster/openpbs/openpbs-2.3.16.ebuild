@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16.ebuild,v 1.11 2004/07/01 21:49:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16.ebuild,v 1.12 2004/08/08 00:39:46 slarti Exp $
 
 NAME=`echo ${P} | sed -e "s|openpbs-|OpenPBS_|; y|.|_|"`
 B=${NAME}.tar.gz
 S="${WORKDIR}/${NAME}.tar.gz"
 
-DESCRIPTION="The Portable Batch System (PBS) is a flexible batch queueing and workload management system"
+DESCRIPTION="The Portable Batch System (PBS) is a flexible batch queuing and workload management system"
 HOMEPAGE="http://www.openpbs.org/"
 LICENSE="openpbs"
 
