@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.7 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.8 2004/06/26 19:08:36 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -55,7 +55,7 @@ EOF
 	fi
 	# install CLC into the lisp
 	sh "$FILE" install-clc || (echo "Installation of CLC failed" >&2 ; exit 3)
-	mkdir /usr/lib/common-lisp/$IMPL || true &>/dev/null
+	mkdir /usr/lib/common-lisp/$IMPL &>/dev/null || true
 	chown cl-builder:cl-builder /usr/lib/common-lisp/$IMPL
 
 	# now recompile the stuff
