@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/gnu-activation-20040331.ebuild,v 1.5 2004/10/16 17:13:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/gnu-activation-1.0.ebuild,v 1.1 2004/10/20 06:26:07 absinthe Exp $
 
 inherit java-pkg
 
 DESCRIPTION="GNU implementation of the Java Activation Framework"
 HOMEPAGE="http://www.gnu.org/software/classpathx/jaf/"
-SRC_URI="http://www.gentoo.org/~karltk/java/distfiles/activation-20040331-gentoo.tar.bz2"
+SRC_URI="http://ftp.gnu.org/gnu/classpathx/activation-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="doc"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4"

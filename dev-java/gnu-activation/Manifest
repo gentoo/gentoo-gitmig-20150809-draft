@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ecf994d3f77d0169c53f0694415385ca gnu-activation-20040331.ebuild 905
-MD5 c17c7adf3606296edf5167b65168a472 ChangeLog 1125
+MD5 ec9fc517ea4ac971b5655dbba876b42a ChangeLog 1337
 MD5 c448668ea8e648a4c33769a7b8abf74c metadata.xml 1000
-MD5 db9ee8703853fa0d290d274c3555673d files/digest-gnu-activation-20040331 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVbM/rLF9B432nYRApNSAJ9zPgrry2HBA/awXdqNqc1hVzUPCACeKM1u
-0E9kfD3ATHBdp3eQqgTmGwE=
-=Xh3u
------END PGP SIGNATURE-----
+MD5 6831618fed45bca9f92a81dc068cd2fd gnu-activation-1.0.ebuild 889
+MD5 7645f60d5936a5bac43a832d3aa143fc files/digest-gnu-activation-1.0 66
