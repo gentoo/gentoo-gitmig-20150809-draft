@@ -1,4 +1,6 @@
 MD5 67234e58e660237b4cf063ce4745dbc5 files/digest-pcgen-5.4 307
-MD5 445b700083e3757d53aaa30ad893c207 ChangeLog 831
+MD5 fdc525348f40d8ff972020c338a833d8 files/digest-pcgen-5.6.0 174
+MD5 ea263c2f56d219c877fc6d0dc9eb1de9 ChangeLog 965
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 a11115f770180d41d366c1b1bc713866 pcgen-5.4.ebuild 1333
+MD5 a11fafcce28b88b11ec879e448cd881b pcgen-5.6.0.ebuild 1194
