@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.15.ebuild,v 1.2 2005/02/07 06:49:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.17.ebuild,v 1.1 2005/02/07 06:49:51 mr_bones_ Exp $
 
 inherit games
 
@@ -8,9 +8,10 @@ DESCRIPTION="MOAGG (Mother Of All Gravity Games) combines several different grav
 HOMEPAGE="http://moagg.sourceforge.net"
 SRC_URI="mirror://sourceforge/moagg/${P}-src.tar.bz2
 	mirror://sourceforge/moagg/${P}-data.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2.6
