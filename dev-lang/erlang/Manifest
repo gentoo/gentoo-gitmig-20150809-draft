@@ -1,0 +1,7 @@
+MD5 ae3c7145f6a36cea4fde5ab484a33c48 ChangeLog 1101
+MD5 0ac90bddfb41ef436a67c4529d9c1b19 erlang-8b.ebuild 1284
+MD5 6d3cd91ca4f3f30c7e32bdc6109fa89b erlang-9b.ebuild 1699
+MD5 8c64d8207805c2c1b290fa988e9058e9 erlang-9c.ebuild 1698
+MD5 0ef311d4fbeb2b5e16aab201dcf37297 files/digest-erlang-8b 67
+MD5 81cd1f9e60918b09bcc61a42f4f9ab59 files/digest-erlang-9b 66
+MD5 9a235de49a6c0988f033448fdac8a0a8 files/digest-erlang-9c 66
