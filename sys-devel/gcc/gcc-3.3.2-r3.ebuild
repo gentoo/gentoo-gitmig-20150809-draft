@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r3.ebuild,v 1.8 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r3.ebuild,v 1.9 2004/08/25 13:55:48 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -623,7 +623,7 @@ pkg_postinst() {
 	else
 		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	fi
-	if [ "${ROOT}" = "/" -a "${COMPILER}" = "gcc3" -a "${CHOST}" = "${CCHOST}" ]
+	if [ "${ROOT}" = "/" -a "${CHOST}" = "${CCHOST}" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
 	fi
