@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.66 2004/12/29 00:06:53 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.67 2004/12/29 08:37:07 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -60,6 +60,9 @@ SLOT="${PVR}"
 #Eclass functions only from here onwards ...
 #==============================================================
 kernel_is() {
+	# And lets add a sanity check
+	[ -z "${KV_FULL}" ] && return 1	
+
 	local RESULT operator value test
 	RESULT=0
 	
