@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.7 2003/10/31 14:02:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.8 2004/01/18 20:22:40 mattam Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/auctex"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=sys-apps/sed-4
 	virtual/emacs
