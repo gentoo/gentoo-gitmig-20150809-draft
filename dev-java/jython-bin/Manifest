@@ -1,10 +1,20 @@
-MD5 c37549817564d9b6825efe30f51fee5f ChangeLog 1992
-MD5 cd81de4f38a9fb6a73d3a51f06f0153a jython-bin-2.1-r4.ebuild 1069
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8886eedc6c38ccded31929b70e547f3f jython-bin-2.1-r2.ebuild 948
+MD5 75d6fb707025e5d361365ffa9029f30e jython-bin-2.1-r4.ebuild 1070
+MD5 0a75b76522b3ed1ada150cd22186765d ChangeLog 2073
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 61d3aae70a79bd4b755cd408ad916037 files/2.1-jython 302
-MD5 371499092d6acc2155a3b21fe4da87df files/2.1-jythonc 217
-MD5 6b146a799308d0793ac04ee93bebfad2 files/digest-jython-bin-2.1-r4 61
-MD5 6b146a799308d0793ac04ee93bebfad2 files/digest-jython-bin-2.1-r2 61
-MD5 bc766076fc74f87782c093215e1fe1af files/jython 296
 MD5 735d15b2adcc2db8fdb6bac62fd847b7 files/jythonc 211
+MD5 371499092d6acc2155a3b21fe4da87df files/2.1-jythonc 217
+MD5 bc766076fc74f87782c093215e1fe1af files/jython 296
+MD5 61d3aae70a79bd4b755cd408ad916037 files/2.1-jython 302
+MD5 6b146a799308d0793ac04ee93bebfad2 files/digest-jython-bin-2.1-r2 61
+MD5 6b146a799308d0793ac04ee93bebfad2 files/digest-jython-bin-2.1-r4 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBL48V/rLF9B432nYRAlsYAKCGe3XPvU9AZs5OHBeSo4iL0QxbewCgqP4H
+KcLJaP7xzYnVC77VOeM+nJk=
+=C8/7
+-----END PGP SIGNATURE-----
