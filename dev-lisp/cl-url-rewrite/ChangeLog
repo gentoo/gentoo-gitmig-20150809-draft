@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-url-rewrite
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-url-rewrite/ChangeLog,v 1.1 2004/10/18 15:43:51 mkennedy Exp $
+
+*cl-url-rewrite-0.1.0 (18 Oct 2004)
+
+  18 Oct 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +cl-url-rewrite-0.1.0.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
