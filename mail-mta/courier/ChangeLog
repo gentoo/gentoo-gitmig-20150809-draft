@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.21 2004/10/02 05:42:17 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.22 2004/11/03 04:31:49 psi29a Exp $
+
+  02 Nov 2004; Bret Curtis,,, <psi29a@gentoo.org> courier-0.47.ebuild:
+  workes well on mips, but marked ~mips for now.
 
   02 Oct 2004; <iggy@gentoo.org> files/courier-init:
   fix bug #57310, thanks to Ben Kennedy
