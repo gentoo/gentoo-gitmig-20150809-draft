@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.7.ebuild,v 1.2 2005/01/02 19:18:43 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.7.ebuild,v 1.3 2005/01/04 11:17:48 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,11 +10,13 @@ SRC_URI="http://bhaak.dyndns.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="unicode kde"
-KEYWORDS="~x86 ~sparc ~amd64"
+#IUSE="unicode kde"
+IUSE="unicode"
+KEYWORDS="x86 ~sparc ~amd64"
 
-DEPEND="virtual/libc
-	kde? ( kde-misc/kaptain )"
+DEPEND="virtual/libc"
+# KDE support will be available once a version of kaptain in stable
+#    kde? ( kde-misc/kaptain )"
 
 src_unpack() {
 	unpack ${A}
