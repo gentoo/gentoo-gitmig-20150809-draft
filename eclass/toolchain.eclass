@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.115 2005/03/02 17:03:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.116 2005/03/03 05:06:00 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -56,6 +56,9 @@ fi
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
+}
+is_uclibc() {
+	use uclibc || [[ ${CTARGET} == *-uclibc ]]
 }
 
 GCC_RELEASE_VER=$(get_version_component_range 1-3)
@@ -301,17 +304,17 @@ SRC_URI=$(get_gcc_src_uri)
 hardened_gcc_works() {
 	if [[ $1 == "pie" ]] ; then
 		hardened_gcc_is_stable pie && return 0
-		if has ~${ARCH} ${ACCEPT_KEYWORDS} ; then
+		if has ~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
 			hardened_gcc_check_unsupported pie && return 1
-			ewarn "Allowing pie-by-default for an unstable arch (${ARCH})"
+			ewarn "Allowing pie-by-default for an unstable arch ($(tc-arch))"
 			return 0
 		fi
 		return 1
 	elif [[ $1 == "ssp" ]] ; then
 		hardened_gcc_is_stable ssp && return 0
-		if has ~${ARCH} ${ACCEPT_KEYWORDS} ; then
+		if has ~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
 			hardened_gcc_check_unsupported ssp && return 1
-			ewarn "Allowing ssp-by-default for an unstable arch (${ARCH})"
+			ewarn "Allowing ssp-by-default for an unstable arch ($(tc-arch))"
 			return 0
 		fi
 		return 1
@@ -324,18 +327,18 @@ hardened_gcc_works() {
 }
 
 hardened_gcc_is_stable() {
-	if [ "$1" == "pie" ] ; then
+	if [[ $1 == "pie" ]] ; then
 		# HARDENED_* variables are deprecated and here for compatibility
 		local tocheck="${HARDENED_PIE_WORKS} ${HARDENED_GCC_WORKS}"
-		if use uclibc ; then
+		if is_uclibc ; then
 			tocheck="${tocheck} ${PIE_UCLIBC_STABLE}"
 		else
 			tocheck="${tocheck} ${PIE_GLIBC_STABLE}"
 		fi
-	elif [ "$1" == "ssp" ] ; then
+	elif [[ $1 == "ssp" ]] ; then
 		# ditto
 		local tocheck="${HARDENED_SSP_WORKS} ${HARDENED_GCC_WORKS}"
-		if use uclibc ; then
+		if is_uclibc ; then
 			tocheck="${tocheck} ${SSP_UCLIBC_STABLE}"
 		else
 			tocheck="${tocheck} ${SSP_STABLE}"
@@ -344,7 +347,7 @@ hardened_gcc_is_stable() {
 		die "hardened_gcc_stable needs to be called with pie or ssp"
 	fi
 
-	hasq ${ARCH} ${tocheck} && return 0
+	hasq $(tc-arch) ${tocheck} && return 0
 	return 1
 }
 
@@ -354,27 +357,27 @@ hardened_gcc_check_unsupported() {
 	# this function is never called if hardened_gcc_is_stable returns true,
 	# this shouldn't cause problems... however, allowing this logic to work
 	# even with the variables unset will break older ebuilds that dont use them.
-	if [ "$1" == "pie" ] ; then
-		if use uclibc ; then
-			[ "${PIE_UCLIBC_UNSUPPORTED:-unset}" == "unset" ] && return 0
+	if [[ $1 == "pie" ]] ; then
+		if is_uclibc ; then
+			[[ -z ${PIE_UCLIBC_UNSUPPORTED} ]] && return 0
 			tocheck="${tocheck} ${PIE_UCLIBC_UNSUPPORTED}"
 		else
-			[ "${PIE_GLIBC_UNSUPPORTED:-unset}" == "unset" ] && return 0
+			[[ -z ${PIE_GLIBC_UNSUPPORTED} ]] && return 0
 			tocheck="${tocheck} ${PIE_GLIBC_UNSUPPORTED}"
 		fi
-	elif [ "$1" == "ssp" ] ; then
-		if use uclibc ; then
-			[ "${SSP_UCLIBC_UNSUPPORTED:-unset}" == "unset" ] && return 0
+	elif [[ $1 == "ssp" ]] ; then
+		if is_uclibc ; then
+			[[ -z ${SSP_UCLIBC_UNSUPPORTED} ]] && return 0
 			tocheck="${tocheck} ${SSP_UCLIBC_UNSUPPORTED}"
 		else
-			[ "${SSP_UNSUPPORTED:-unset}" == "unset" ] && return 0
+			[[ -z ${SSP_UNSUPPORTED} ]] && return 0
 			tocheck="${tocheck} ${SSP_UNSUPPORTED}"
 		fi
 	else
 		die "hardened_gcc_check_unsupported needs to be called with pie or ssp"
 	fi
 
-	hasq ${ARCH} ${tocheck} && return 0
+	hasq $(tc-arch) ${tocheck} && return 0
 	return 1
 }
 
@@ -964,7 +967,7 @@ gcc_do_configure() {
 	# so use setjmp/longjmp exceptions by default
 	# uclibc uses --enable-clocale=uclibc (autodetected)
 	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
-	if ! use uclibc ; then
+	if ! is_uclibc ; then
 		confgcc="${confgcc} --enable-__cxa_atexit --enable-clocale=gnu"
 	else
 		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace \
@@ -1592,7 +1595,7 @@ do_gcc_PIE_patches() {
 	# adds default pie support (rs6000 too) if DEFAULT_PIE[_SSP] is defined
 	epatch ${WORKDIR}/piepatch/def
 	# disable relro/now
-	#use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-norelro.patch
+	#is_uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-norelro.patch
 
 	# we want to be able to control the pie patch logic via something other
 	# than ALL_CFLAGS...
