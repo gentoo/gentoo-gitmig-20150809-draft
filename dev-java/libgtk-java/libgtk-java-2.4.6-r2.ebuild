@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.4.6-r2.ebuild,v 1.2 2005/03/12 19:08:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.4.6-r2.ebuild,v 1.3 2005/03/12 20:58:16 luckyduck Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 #
 SLOT="2.4"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="gcj"
 
 src_unpack() {
