@@ -1,16 +1,22 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.3 2003/02/12 05:32:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.4 2003/09/12 17:07:46 agriffis Exp $
 
-	07 Jan 2003; J Robert Ray <jrray@gentoo.org> : Unmasked for x86.
+*mftrace-1.0.19 (12 Sep 2003)
+
+  12 Sep 2003; Aron Griffis <agriffis@gentoo.org> mftrace-1.0.19.ebuild:
+  Version bump to 1.0.19 to support lilypond-1.8.2.  Thanks to Mike Ossman in
+  bug 24765
+
+  07 Jan 2003; J Robert Ray <jrray@gentoo.org> : Unmasked for x86.
 
 *mftrace-1.0.10 (12 Nov 2002)
 
-	12 Nov 2002; J Robert Ray <jrray@gentoo.org> :
-	New ebuild for mftrace, formerly known as pktrace.  Ebuild submitted
-	by Mike Ossmann <mike@ossmann.com>.
+  12 Nov 2002; J Robert Ray <jrray@gentoo.org> :
+  New ebuild for mftrace, formerly known as pktrace.  Ebuild submitted
+  by Mike Ossmann <mike@ossmann.com>.
 
 *pktrace-1.0.4 (11 Jul 2002)
 
-	11 Jul 2002; Aron Griffis <agriffis@gentoo.org> pktrace-1.0.4.ebuild:
-	New ebuild for pktrace, dependency of lilypond.
+  11 Jul 2002; Aron Griffis <agriffis@gentoo.org> pktrace-1.0.4.ebuild:
+  New ebuild for pktrace, dependency of lilypond.
