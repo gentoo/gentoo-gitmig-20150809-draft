@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3415 2004/12/24 02:52:50 kingtaco Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3416 2004/12/24 07:15:06 battousai Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -548,6 +548,8 @@ media-video/realone
 # blas dependants, will have to be unmasked after virtual is finalized and blas is unmasked
 =app-sci/xfoil-6.94-r1
 
+# <battousai@gentoo.org> (24 Dec 2004)
+# unmask 4.4.0+, working with xorg. merry x-mas
 # <spyderous@gentoo.org> (16 Sept 2004)
 # change from -r7 to xorg -- -r7 was a security release, xfree is deprecated
 # <spyderous@gentoo.org> (14 Feb 2004)
@@ -556,7 +558,7 @@ media-video/realone
 # change from -r4 to -r5 -- -r4 was security release
 # <battousai@gentoo.org> (13 Jan 2004)
 # needs testing and xfree-4.3.0-r7 release first
->=media-video/ati-gatos-4.3
+<media-video/ati-gatos-4.4.0
 
 # <robbat2@gentoo.org> (10 Jan 2004)
 # blocked for testing
