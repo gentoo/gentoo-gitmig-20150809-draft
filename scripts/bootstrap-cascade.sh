@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.4 2004/07/17 07:52:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.5 2004/07/17 21:28:12 solar Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -149,6 +149,7 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
 # this stuff should never fail but will if not enough is installed.
 [ "${myBASELAYOUT}" = "" ] && myBASELAYOUT="$(portageq best_version / virtual/baselayout)"
+[ "${myBASELAYOUT}" = "" ] && myBASELAYOUT="baselayout"
 [ "${myPORTAGE}" = "" ] && myPORTAGE="portage"
 [ "${myBINUTILS}" = "" ] && myBINUTILS="binutils"
 [ "${myGCC}" = "" ] && myGCC="gcc"
@@ -168,7 +169,7 @@ einfo "Using portage    : ${myPORTAGE}"
 einfo "Using os-headers : ${myOS_HEADERS}"
 einfo "Using binutils   : ${myBINUTILS}"
 einfo "Using gcc        : ${myGCC}"
-[ "${myGETTEXT}" != "" ] && echo "Using gettext    : ${myGETTEXT}"
+[ "${myGETTEXT}" != "" ] && einfo "Using gettext    : ${myGETTEXT}"
 einfo "Using libc       : ${myLIBC}"
 einfo "Using texinfo    : ${myTEXINFO}"
 einfo "Using zlib       : ${myZLIB}"
