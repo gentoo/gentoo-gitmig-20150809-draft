@@ -17,6 +17,7 @@ scanner
 tcltk
 tcl
 vim-with-x
+firebird
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
@@ -27,3 +28,4 @@ selinux
 # this repoman will fail on apps like sys-libs/db
 java
 
+media-sound/alsa-driver
