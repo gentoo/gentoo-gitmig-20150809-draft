@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.06.ebuild,v 1.2 2004/10/20 15:38:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.06.ebuild,v 1.3 2004/10/26 12:57:35 axxo Exp $
 
 inherit java eutils
 
@@ -37,7 +37,7 @@ PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar
 jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/javaws/javaws.jar"
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
-CHPAX_CONSERVATIVE_FLAGS="pemsv"
+CHPAX_CONSERVATIVE_FLAGS="pemrsv"
 
 DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=j2sdk-${MY_PV}-oth-JPR&SiteId=JSC&TransactionId=noreg"
 DOWNLOAD_URL_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=7503-jce-${MY_PVB}-oth-JPR&SiteId=JSC&TransactionId=noreg"
