@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mcp-plugins
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.1 2003/07/12 11:16:08 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.2 2004/01/19 09:01:49 torbenh Exp $
+
+*mcp-plugins-0.2.1b (19 Jan 2004)
+
+  19 Jan 2004; <torbenh@gentoo.org> mcp-plugins-0.0.2.ebuild,
+  mcp-plugins-0.2.1b.ebuild:
+  Version bumped and made 0.0.2 stable
 
 *mcp-plugins-0.0.2 (12 Jul 2003)
 
