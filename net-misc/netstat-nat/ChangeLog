@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netstat-nat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.1 2002/08/04 05:55:02 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.2 2002/08/14 17:00:42 blizzy Exp $
+
+*netstat-nat-1.3.1 (14 Aug 2002)
+
+  14 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
+  Closes bug #6392.
 
 *netstat-nat-1.3 (04 Aug 2002)
 
