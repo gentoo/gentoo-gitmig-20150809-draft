@@ -1,6 +1,11 @@
 # ChangeLog for net-im/everybuddy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/ChangeLog,v 1.2 2002/04/04 09:05:43 spider Exp $
+
+*everybuddy-0.2.1-r3 (04 Apr 2002)
+  04 Apr 2002; Spider <spider@gentoo.org> 
+  Update to check for arts, esound and gnome
+
 
 *everybuddy-0.2.1-r1 (1 Feb 2002)
 
