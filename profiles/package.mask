@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> (30 Aug 2002)
+# masked for further testing
+=sys-apps/openmosix-user-0.2.4-r1
 
 # <george@gentoo.org> (28 Aug 2002)
 # masked for testing
