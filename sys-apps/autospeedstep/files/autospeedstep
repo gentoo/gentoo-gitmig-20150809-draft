@@ -1,0 +1,7 @@
+#!/sbin/runscript
+
+start() {
+	ebegin "Starting autospeedstep"
+	/usr/sbin/autospeedstep
+	eend $? "Failed to start autospeedstep"
+}
