@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.6 2005/03/26 18:47:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.7 2005/04/01 05:54:02 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> kdebase-pam-4.ebuild:
+  stable on ia64
 
   26 Mar 2005; Jason Wever <weeve@gentoo.org> kdebase-pam-4.ebuild:
   Stable on SPARC.
