@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.4 2004/06/08 00:18:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.5 2004/06/12 00:04:56 dragonheart Exp $
+
+  12 Jun 2004; Daniel Black <dragonheart@gentoo.org> tre-0.6.6.ebuild,
+  tre-0.6.8.ebuild:
+  Added RDEPEND=!app-misc/glimpse due to both providing /usr/bin/agrep. Thanks
+  to John Hampton in bug #53250
 
 *tre-0.6.8 (08 Jun 2004)
 

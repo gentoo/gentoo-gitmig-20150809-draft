@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.6.8.ebuild,v 1.1 2004/06/08 00:18:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.6.8.ebuild,v 1.2 2004/06/12 00:04:56 dragonheart Exp $
 
 IUSE="nls static"
 
@@ -21,7 +21,8 @@ DEPEND="virtual/glibc
 	sys-devel/gcc
 	dev-util/pkgconfig"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/glibc
+	!app-misc/glimpse"
 
 src_compile() {
 	# Build TRE library.
