@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.1 2003/03/05 01:34:21 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.2 2003/04/19 16:32:37 lostlogic Exp $
 
 IUSE="nls gnome"
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/smpeg-0.4.4-r1
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 
 src_unpack() {
@@ -41,18 +41,15 @@ src_compile() {
 	econf ${myconf} || die "econf failed"
 
 	for file in `find . -iname "Makefile"`;do
-		mv ${file} ${file}.orig
-		sed -e "s:-Werror::g;s:-ldb1:-ldb:g" \
-			${file}.orig > ${file} || die "sed-fu failed"
+		sed -i -e "s:-Werror::g;s:-ldb1:-ldb:g" \
+			${file} || die "sed-fu failed"
 	done
 
-	mv intl/l10nflist.c intl/l10nflist.c.orig
-	sed -e "s:\(#ifdef HAVE_CONFIG_H\):#define _LIBC 1\n\1:" \
-		intl/l10nflist.c.orig > intl/l10nflist.c
+	sed -i -e "s:\(#ifdef HAVE_CONFIG_H\):#define _LIBC 1\n\1:" \
+		intl/l10nflist.c || die "sed-fu 2 failed"
 
-	mv Makefile Makefile.orig
-	sed -e "s:\$(bindir)/xmps-config:\$(DESTDIR)\$(bindir)/xmps-config:" \
-		Makefile.orig > Makefile
+	sed -i -e "s:\$(bindir)/xmps-config:\$(DESTDIR)\$(bindir)/xmps-config:" \
+		Makefile || die "sed-fu 3 failed"
 
 	emake || die "emake failed"
 
