@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.1.ebuild,v 1.5 2001/05/09 00:01:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.1.ebuild,v 1.6 2001/05/09 00:02:06 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,17 +12,18 @@ HOMEPAGE="http://home.sprynet.com/~cgabwell/sox.html"
 DEPEND="virtual/glibc"
 
 src_compile() {
-
-    cd ${S}
+    local myconf
+    if [ "`use alsa`" ] ; then
+	myconf="--with-alsa-dsp"
+    fi
     try ./configure --prefix=/usr --host=${CHOST} \
-	 --enable-fast-ulaw --enable-fast-alaw --with-alsa-dsp
+	 --enable-fast-ulaw --enable-fast-alaw $myconf
     try make
 
 }
 
 src_install () {
 
-    cd ${S}
     into /usr
     dobin sox
     doman sox.1
