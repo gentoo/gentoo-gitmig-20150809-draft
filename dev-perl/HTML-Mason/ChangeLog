@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.22 2004/09/28 19:46:30 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.23 2004/10/16 22:24:01 rac Exp $
+
+  16 Oct 2004; Robert Coie <rac@gentoo.org> HTML-Mason-1.26.ebuild:
+  keyword amd64
 
 *HTML-Mason-1.26 (28 Sep 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.26.ebuild,v 1.1 2004/09/28 19:46:30 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.26.ebuild,v 1.2 2004/10/16 22:24:01 rac Exp $
 
 inherit perl-module
 
@@ -9,8 +9,8 @@ SRC_URI="http://www.masonhq.com/download/${P}.tar.gz"
 HOMEPAGE="http://www.masonhq.com/"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
+LICENSE="|| ( Artistic GPL-2 )"
+KEYWORDS="~x86 amd64 ~ppc ~sparc ~alpha"
 IUSE=""
 
 DEPEND="${DEPEND}
