@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0-r1.ebuild,v 1.5 2004/07/14 20:07:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0-r1.ebuild,v 1.6 2004/07/29 03:56:26 tgall Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://fame.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ppc64"
 IUSE="mmx sse"
 
 DEPEND="virtual/libc"
