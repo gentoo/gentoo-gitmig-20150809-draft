@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r1.ebuild,v 1.2 2002/01/19 12:50:24 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r2.ebuild,v 1.1 2002/01/19 12:50:24 hallski Exp $
 
 
 S=${WORKDIR}/${P}
