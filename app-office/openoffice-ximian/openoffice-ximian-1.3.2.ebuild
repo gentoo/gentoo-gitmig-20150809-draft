@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.2.ebuild,v 1.1 2004/08/28 07:01:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.2.ebuild,v 1.2 2004/08/28 15:34:21 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -345,18 +345,21 @@ src_compile() {
 	# Build as minimal as possible
 	export BUILD_MINIMAL="${LANGNO}"
 
-	# Set $ECPUS to amount of processes multiprocessing build should use.
-	# NOTE:  Setting this too high might cause dmake to segfault!!
-	#        Setting this to anything but "1" on my pentium4 causes things
-	#        to segfault :(
-	[ -z "${ECPUS}" ] && export ECPUS="1"
+	#Get info for parallel build
+	export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
+
+	if [ "${JOBS}" -gt 10 ]
+	then
+		export JOBS="10"
+		einfo "dmake fails with too much parallel jobs, so limiting to 10"
+	fi
+
+	export buildcmd="${S}/solenv/bin/build.pl --all product=full strip=true --dlv_switch link"
 
 	# Should the build use multiprocessing?
-	if [ "${ECPUS}" -gt 1 ]
+	if [ "${JOBS}" -gt 1 ]
 	then
-		buildcmd="${S}/solenv/bin/build.pl --all -P${ECPUS} product=full strip=true --dlv_switch link"
-	else
-		buildcmd="${S}/solenv/bin/build.pl --all product=full strip=true --dlv_switch link"
+		export buildcmd="${buildcmd} -P${JOBS}"
 	fi
 
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
