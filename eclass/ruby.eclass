@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.8 2003/10/12 21:22:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.9 2003/10/19 16:08:20 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -10,7 +10,7 @@
 ECLASS=ruby
 INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS erubyconf erubymake erubyinstall erubydoc \
-	src_unpack src_compile src_install
+	src_unpack econf emake src_compile einstall src_install
 
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
@@ -19,11 +19,6 @@ SLOT="0"
 LICENSE="Ruby"
 
 newdepend ">=dev-lang/ruby-1.6.8"
-if [ "${WANT_RUBY_1_6}" ] ; then
-	alias ruby=ruby16
-elif [ "${WANT_RUBY_1_8}" ] ; then
-	alias ruby=ruby18
-fi
 if has_version '=dev-lang/ruby-1.6*' ; then
 	USE_RUBY_1_6=1
 fi
@@ -51,44 +46,64 @@ erubyconf() {
 	else
 		RUBY=ruby
 	fi
+	shift
 
 	if [ -f extconf.rb ] ; then
-		${RUBY} extconf.rb || die "extconf.rb failed"
+		${RUBY} extconf.rb $@ || die "extconf.rb failed"
 	elif [ -f install.rb ] ; then
-		${RUBY} install.rb config --prefix=/usr \
+		${RUBY} install.rb config --prefix=/usr $@ \
 			|| die "install.rb config failed"
-		${RUBY} install.rb setup \
+		${RUBY} install.rb setup $@ \
 			|| die "install.rb setup failed"
 	elif [ -f configure ] ; then
-		econf --with-ruby=${RUBY} || die "econf failed"
+		econf --with-ruby=${RUBY} $@ || die "econf failed"
+	fi
+}
+
+ruby_econf() {
+	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
+		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
+		einfo "running econf for ruby 1.6 ;)"
+		cd 1.6/${S#${WORKDIR}}
+		erubyconf ruby16 $@ || die
+		cd -
+		einfo "running econf for ruby 1.8 ;)"
+		cd 1.8/${S#${WORKDIR}}
+		erubyconf ruby18 $@ || die
+		cd -
+	else
+		einfo "running econf for ruby ;)"
+		erubyconf ruby $@ || die
 	fi
 }
 
 erubymake() {
-	if [ -f Makefile ] ; then
-		emake $@ || die "emake failed"
+	if [ -f makefiles -o -f GNUmakefile -o -f makefile -o -f Makefile ] ; then
+		make $@ || die "emake for ruby failed"
+	fi
+}
+
+ruby_emake() {
+	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
+		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
+		einfo "running emake for ruby 1.6 ;)"
+		cd 1.6/${S#${WORKDIR}}
+		erubymake $@ || die
+		cd -
+		einfo "running emake for ruby 1.8 ;)"
+		cd 1.8/${S#${WORKDIR}}
+		erubymake $@ || die
+		cd -
+	else
+		einfo "running emake for ruby ;)"
+		erubymake $@ || die
 	fi
 }
 
 ruby_src_compile() {
 
-	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
-		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
-		einfo "src_compiling for ruby 1.6 ;)"
-		cd 1.6/${S#${WORKDIR}}
-		erubyconf ruby16 || die
-		erubymake $@ || die
-		cd -
-		einfo "src_compiling for ruby 1.8 ;)"
-		cd 1.8/${S#${WORKDIR}}
-		erubyconf ruby18 || die
-		erubymake $@ || die
-		cd -
-	else
-		einfo "src_compiling ;)"
-		erubyconf || die
-		erubymake $@ || die
-	fi
+	ruby_econf || die
+	ruby_emake $@ || die
 }
 
 erubyinstall() {
@@ -100,14 +115,15 @@ erubyinstall() {
 	else
 		RUBY=ruby
 	fi
+	shift
 
 	if [ -f install.rb ] ; then
-		${RUBY} install.rb config --prefix=${D}/usr \
+		${RUBY} install.rb config --prefix=${D}/usr $@ \
 			|| die "install.rb config failed"
-		${RUBY} install.rb install \
+		${RUBY} install.rb install $@ \
 			|| die "install.rb install failed"
 	elif [ -f extconf.rb -o -f Makefile ] ; then
-		einstall DESTDIR=${D} || die "einstall failed"
+		make DESTDIR=${D} $@ install || die "make install failed"
 	else
 		if [ "${WANT_RUBY_1_6}" -o "${WANT_RUBY_1_8}" ] ; then
 			siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
@@ -119,8 +135,30 @@ erubyinstall() {
 	fi
 }
 
+ruby_einstall() {
+
+	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
+		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
+		einfo "running einstall for ruby 1.6 ;)"
+		cd ${S}/1.6/${S#${WORKDIR}}
+		erubyinstall ruby16 $@
+		cd -
+		einfo "running einstall for ruby 1.8 ;)"
+		cd ${S}/1.8/${S#${WORKDIR}}
+		erubyinstall ruby18 $@
+		S=${S}/1.8/${S#${WORKDIR}}
+		#cd -
+	else
+		einfo "running einstall for ruby ;)"
+		erubyinstall ruby $@
+	fi
+}
+
 erubydoc() {
 	local rdbase=/usr/share/doc/${PF}/rd rdfiles=$(find . -name '*.rd*')
+
+	einfo "running dodoc for ruby ;)"
+
 	insinto ${rdbase}
 	[ -n "${rdfiles}" ] && doins ${rdfiles}
 	rmdir --ignore-fail-on-non-empty ${D}${rdbase}
@@ -140,22 +178,7 @@ erubydoc() {
 
 ruby_src_install() {
 
-	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
-		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
-		einfo "src_installing for ruby 1.6 ;)"
-		cd ${S}/1.6/${S#${WORKDIR}}
-		erubyinstall ruby16
-		cd -
-		einfo "src_installing for ruby 1.8 ;)"
-		cd ${S}/1.8/${S#${WORKDIR}}
-		erubyinstall ruby18
-		S=${S}/1.8/${S#${WORKDIR}}
-		#cd -
-	else
-		einfo "src_installing ;)"
-		erubyinstall
-	fi
+	ruby_einstall $@ || die
 
-	einfo "dodoc'ing ;)"
 	erubydoc
 }
