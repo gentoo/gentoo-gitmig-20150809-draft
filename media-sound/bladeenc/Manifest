@@ -1,0 +1,6 @@
+MD5 cc425e40d1ad79c2d22f3878b93f00d6 ChangeLog 1032
+MD5 88d53861a3603dad14101173dedd0d68 bladeenc-0.94.2-r1.ebuild 690
+MD5 eb80c3d5a1b64afb11ee1257aab51109 bladeenc-0.94.2.ebuild 616
+MD5 b582b66a647571df5d3507528f8548cf files/bladeenc-0.94.2-secfix.diff 394
+MD5 a1cd123ae2cdc12d1c72ecb7d52df91d files/digest-bladeenc-0.94.2 78
+MD5 a1cd123ae2cdc12d1c72ecb7d52df91d files/digest-bladeenc-0.94.2-r1 78
