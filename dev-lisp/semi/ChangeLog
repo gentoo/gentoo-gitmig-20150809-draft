@@ -1,8 +1,11 @@
 # ChangeLog for dev-lisp/semi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/semi/ChangeLog,v 1.2 2002/08/01 19:43:44 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/semi/ChangeLog,v 1.3 2002/09/21 00:41:29 vapier Exp $
 
 *semi-1.14.3.ebuild (25 Jun 2002)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE variable, but it seems only the Japanese version exists atm :(
 
   25 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> semi-0.14.3.ebuild :
 
