@@ -1,0 +1,6 @@
+MD5 fcccd7f72f5ec28a031cd50fb1ba05be ChangeLog 1898
+MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
+MD5 41378e04a3de60eacea23649b38f87c7 nget-0.26.ebuild 1238
+MD5 81091fa8d9882a09fa0cc55c08f002d6 nget-0.27.ebuild 1083
+MD5 e60b241e5d6ce73c6516002f53529a1c files/digest-nget-0.26 67
+MD5 b8b9b7c4345bd3ca7601ee62d94e3489 files/digest-nget-0.27 61
