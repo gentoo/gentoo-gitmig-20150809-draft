@@ -1,31 +1,35 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.3.5.ebuild,v 1.8 2003/12/08 05:48:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.3.5.ebuild,v 1.9 2004/03/15 09:37:46 mr_bones_ Exp $
 
-IUSE="ssl tcltk"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="The Internet News daemon, fully featured NNTP server"
+HOMEPAGE="http://www.isc.org/products/INN"
 SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.tar.gz"
-HOMEPAGE="http://www.isc.org/products/INN"
 
-SLOT="0"
 LICENSE="as-is BSD"
+SLOT="0"
 KEYWORDS="x86"
+IUSE="ssl tcltk"
 
-DEPEND="app-crypt/gnupg
+RDEPEND="app-crypt/gnupg
 	virtual/mta
 	tcltk? ( dev-lang/tcl )
 	ssl? ( dev-libs/openssl )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i \
+		-e 's/\$(P) //' site/Makefile storage/Makefile \
+			|| die "sed failed"
+}
 
 src_compile() {
-	local myconf
-	use tcltk && myconf="${myconf} --with-tcl"
-	use ssl && myconf="${myconf} --with-openssl"
-
-	unset CFLAGS CXXFLAGS
-	./configure --prefix=/usr/lib/news \
+	./configure \
+		--prefix=/usr/lib/news \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--with-etc-dir=/etc/news \
@@ -38,20 +42,16 @@ src_compile() {
 		--enable-libtool \
 		--enable-setgid-inews \
 		--enable-uucp-rnews \
-		--with-gnu-ld \
 		--with-python \
 		--without-perl \
-		${myconf} || die "configure died"
+		`use_with tcltk tcl` \
+		`use_with ssl openssl` \
+			|| die "configure died"
 
-	OLD_P=${P}
-	unset P
-	make || die
-	P=${OLD_P}
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	OLD_P=${P}
-	unset P
 	make prefix=${D}/usr/lib/news \
 		PATHETC=${D}/etc/news \
 		PATHMAN=${D}/usr/share/man \
@@ -67,23 +67,21 @@ src_install() {
 		MAN3=${D}/usr/share/man/man3 \
 		MAN5=${D}/usr/share/man/man5 \
 		MAN8=${D}/usr/share/man/man8 \
-		install || die "make died"
-	P=${OLD_P}
+			install || die "make install failed"
 
-	keepdir /var/spool/news/tmp/
-	keepdir /var/spool/news/outgoing/
-	keepdir /var/spool/news/overview/
-	keepdir /var/spool/news/innfeed/
-	keepdir /var/spool/news/articles/
-	keepdir /var/spool/news/incoming/
-	keepdir /var/spool/news/incoming/bad/
-	keepdir /var/spool/news/archive/
-	keepdir /var/run/news/
-	keepdir /var/log/news/
+	keepdir \
+		/var/spool/news/tmp/ \
+		/var/spool/news/outgoing/ \
+		/var/spool/news/overview/ \
+		/var/spool/news/innfeed/ \
+		/var/spool/news/articles/ \
+		/var/spool/news/incoming/bad/ \
+		/var/spool/news/archive/ \
+		/var/run/news/ \
+		/var/log/news/
 
-	dodoc CONTRIBUTORS ChangeLog HACKING HISTORY INSTALL LICENSE
-	dodoc MANIFEST NEWS README*
-	dodoc doc/control-messages doc/sample-control
+	dodoc CONTRIBUTORS ChangeLog HACKING HISTORY INSTALL LICENSE \
+		MANIFEST NEWS README* doc/control-messages doc/sample-control
 
 # So other programs can build against INN.  (eg. Suck)
 	insinto /usr/lib/news/include
