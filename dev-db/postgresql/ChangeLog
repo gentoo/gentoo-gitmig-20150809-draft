@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.80 2004/01/07 00:01:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.81 2004/01/15 14:25:50 gmsoft Exp $
+
+  15 Jan 2004; root <root@gentoo.org> postgresql-7.4.1-r1.ebuild,
+  files/postgresql-7.4.1-hppa-testandset.patch:
+  Added hppa implementation of test and set.
 
   06 Jan 2004; <agriffis@gentoo.org> postgresql-7.3.5.ebuild,
   postgresql-7.4.1-r1.ebuild:
