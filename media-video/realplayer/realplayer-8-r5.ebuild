@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r5.ebuild,v 1.6 2003/03/16 14:35:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r5.ebuild,v 1.7 2003/07/13 22:34:49 seemant Exp $
 
 inherit nsplugins kde
 
@@ -29,7 +29,11 @@ then
 fi
 
 
-SRC_URI="x86? http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tgz"
+SRC_URI="x86? http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tgz
+	x86? rp8_linux20_libc6_i386_cs2.bin
+	ppc? rp8_linux_powerpc_cs1.bin
+	sparc? rp8_linux_sparc_cs1.bin
+	alpha? rp8_linux_alpha_rh62_cs1.bin"
 
 LICENSE="realplayer8"
 SLOT="0"
@@ -37,7 +41,7 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/x11"
-RESTRICT="nostrip"
+RESTRICT="nostrip fetch"
 
 BASE="/opt/RealPlayer8"
 S=${WORKDIR}
@@ -59,6 +63,82 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	if use x86 ; then 
+		BYTECOUNT=4799691
+		RP8_BIN=`echo ${A} | awk '{ print $1 }'`
+		RV9_X86=`echo ${A} | awk '{ print $2 }'`
+	else
+		RP8_BIN=${A}
+		if use ppc ; then BYTECOUNT=7260910
+		elif use alpha ; then BYTECOUNT=7130860
+		elif use sparc ; then BYTECOUNT=6375000
+		fi
+	fi
+	tail -c ${BYTECOUNT} ${DISTDIR}/${RP8_BIN} | tar xz 2> /dev/null
+	if use x86 ; then 
+		unpack ${RV9_X86}
+	fi
+}
+
+src_compile() {
+	einfo "Nothing to Compile, this is a binary package"
+}
+
+src_install () {
+	insinto ${BASE}/Codecs
+	doins Codecs/*
+	if [ -d rv9/codecs ] ; then
+		doins rv9/codecs/drv4.so.6.0 rv9/codecs/rv40.so.6.0
+	fi
+	insinto ${BASE}/Common
+	doins Common/*
+	insinto ${BASE}/Plugins/ExtResources
+	doins Plugins/ExtResources/*
+	insinto ${BASE}/Plugins
+	doins Plugins/*.so.6.0 
+	insinto ${BASE}
+	doins *.xpm *.png *.rm rpnp.so LICENSE README ${FILESDIR}/mimeinfo
+	exeinto ${BASE}
+	doexe realplay
+	dodir /opt/bin
+	dosym ${BASE}/realplay /opt/bin
+
+	# NS plugin
+	for b in /opt/netscape /usr/lib/mozilla /usr/lib/nsbrowser 
+	do
+		if [ -d ${b} ] ; then
+			dodir ${b}/plugins
+			dosym ${BASE}/rpnp.so ${b}/plugins
+		fi
+	done
+
+	# Desktop menu entry ; KDE, Gnome
+	if use kde ; then
+		insinto ${KDEDIR}/share/applnk/Multimedia
+		doins ${FILESDIR}/realplayer.desktop
+	fi
+	if use gnome ; then
+		insinto /usr/share/applications
+		doins ${FILESDIR}/realplayer.desktop
+	fi
+
+	cp rp7.xpm realplayer8.xpm
+	insinto /usr/share/pixmaps
+	doins realplayer8.xpm
+
+	# Mimetypes - Intentionally left blank (for now)
+	# Better not use the provided scripts from Real, they are outdated 
+	# See ${BASE}/mimeinfo for the correct mimetypes if you need them
+}
+
+pkg_postinst() {
+	echo
+	einfo "Finished installing RealPlayer8 into ${BASE}"
+	einfo "You can start the player by running 'realplay'"
+	einfo "You have to agree to the terms in ${BASE}/LICENSE or unmerge"
+	echo
+}
 src_unpack() {
 	if use x86 ; then 
 		BYTECOUNT=4799691
