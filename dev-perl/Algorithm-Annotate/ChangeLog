@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Annotate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Annotate/ChangeLog,v 1.5 2005/02/05 14:30:52 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Annotate/ChangeLog,v 1.6 2005/03/28 18:12:54 mcummings Exp $
+
+  28 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  Algorithm-Annotate-0.10.ebuild:
+  Mirror syntax
 
   05 Feb 2005; Dylan Carlson <absinthe@gentoo.org>
   Algorithm-Annotate-0.10.ebuild:
