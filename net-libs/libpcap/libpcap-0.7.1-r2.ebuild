@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.1-r2.ebuild,v 1.1 2003/01/03 07:40:35 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.1-r2.ebuild,v 1.2 2003/02/10 21:51:18 latexer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="pcap-Library"
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
 
 inherit flag-o-matic
 
