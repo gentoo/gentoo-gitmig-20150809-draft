@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/posadis
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.12 2004/12/25 01:39:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.13 2004/12/31 13:49:41 matsuu Exp $
+
+*posadis-0.60.6 (31 Dec 2004)
+
+  31 Dec 2004; MATSUU Takuto <matsuu@gentoo.org> +posadis-0.60.6.ebuild:
+  Version bumped.
 
   25 Dec 2004; MATSUU Takuto <matsuu@gentoo.org> files/posadis-init:
   Added "after famd" in files/posadis-init. Bug 71932.
