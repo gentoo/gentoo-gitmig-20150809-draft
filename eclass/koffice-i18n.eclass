@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.14 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.15 2002/10/27 11:09:12 danarmak Exp $
 
 inherit kde
 ECLASS=koffice-i18n
@@ -34,4 +34,4 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 DEPEND="~app-office/koffice-${PV}"
 
-myconf="$myconf --enable-final"
+set-enable-final

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.26 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.27 2002/10/27 11:09:12 danarmak Exp $
 
 inherit kde
 ECLASS=kde-i18n
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc"
 
 SLOT="$KDEMAJORVER.$KDEMINORVER"
 
-myconf="$myconf --enable-final"
+set-enable-final
 
 need-kde ${PV}
 
