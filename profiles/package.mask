@@ -391,10 +391,6 @@ x11-libs/gtkmm-addons
 # new ipv6 patch.  squashes ssl patch though.
 =sys-apps/ucspi-tcp-0.88-r4
 
-# <lostlogic@gentoo.org> (21 Sep 2002)
-# Needed for lolo-sources-2.4.19.10_pre[1-5]
-=sys-apps/jfsutils-1.0.22
-
 # <satai@gentoo.org> (20 Sep 2002)
 # Too many problems.  Masking to fix.
 >app-text/tetex-1.0.7-r11
