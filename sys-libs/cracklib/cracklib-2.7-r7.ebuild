@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.16 2003/09/04 08:01:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.17 2003/09/08 15:24:50 pappy Exp $
 
 IUSE=""
 
 inherit flag-o-matic
 
-# filter-flags "-fstack-protector"
+filter-flags "-fstack-protector"
 
 MY_P=${P/-/,}
 S=${WORKDIR}/${MY_P}
@@ -32,12 +32,11 @@ src_unpack() {
 	[ "$ARCH" == "alpha" -a "${CC}" == "ccc" ] && \
 		epatch ${FILESDIR}/cracklib-${PV}-dec-alpha-compiler.diff
 
-	# do not need to filter-flags any more
-	# propolice -fstack-protector might need this one
-	if [ ${CC} == "gcc" ]; then
-	einfo "adding libgcc for propolice __guard symbol to cracklib"
-	sed -i "s:= ld:= ld $(gcc-config -L)/libgcc_s.so:" \
-			${S}/cracklib/Makefile
+	# this is only needed for the transparent hgcc
+	if has_version 'sys-devel/hardened-gcc' && [ ${CC} == "gcc" ]
+	then
+		einfo "hardened-gcc: adding libgcc for propolice __guard symbol to cracklib"
+		sed -i "s:= ld:= ld $(gcc-config -L)/libgcc_s.so:" ${S}/cracklib/Makefile
 	fi
 }
 
