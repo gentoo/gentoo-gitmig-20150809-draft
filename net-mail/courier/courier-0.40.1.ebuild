@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.40.1.ebuild,v 1.1 2002/11/19 13:02:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.40.1.ebuild,v 1.2 2002/11/21 09:45:02 raker Exp $
 
 IUSE="gdbm tcltk postgres ldap berkdb mysql pam"
 
@@ -177,6 +177,13 @@ exeinto /etc/init.d
 	touch ${D}/var/lib/courier/allfilters/.keep
 
 	dodoc AUTHORS BENCHMARKS ChangeLog* NEWS README TODO
+
+	# See bug #10574
+	# file which describes the webadmin password file
+	insinto /etc/courier/webadmin
+	insopts -m 400 -o mail -g mail
+	doins ${FILESDIR}/password.dist
+
 }
 
 pkg_preinst() {
