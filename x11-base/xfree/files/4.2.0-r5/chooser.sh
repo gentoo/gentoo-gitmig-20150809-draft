@@ -1,7 +1,14 @@
 #!/bin/sh
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r5/chooser.sh,v 1.1 2002/01/27 09:19:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r5/chooser.sh,v 1.2 2002/03/01 23:08:12 azarah Exp $
+
+#if $XSESSION is "", source first /etc/conf.d/basic, and then /etc/rc.conf
+if [ -z "$XSESSION" ]
+then
+	[ -f /etc/conf.d/basic ] && source /etc/conf.d/basic
+	[ -f /etc/rc.conf ] && source /etc/rc.conf
+fi
 
 #find a match for $XSESSION in /etc/X11/Sessions
 GENTOO_SESSION=""

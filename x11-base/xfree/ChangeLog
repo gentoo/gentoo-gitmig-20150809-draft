@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.2 2002/02/23 15:47:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.3 2002/03/01 23:08:12 azarah Exp $
+
+  28 Feb 2002; M.Schlemmer <azarah@gentoo.org> ${FILESDIR}/chooser.sh :
+
+  Actually source /etc/conf.d/basic and /etc/rc.conf.
 
 *xfree-4.2.0-r6 (24 Feb 2002)
 
