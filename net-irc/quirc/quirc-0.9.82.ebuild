@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/quirc-0.9.82.ebuild,v 1.8 2004/06/17 22:57:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/quirc-0.9.82.ebuild,v 1.9 2004/06/19 01:48:02 swegener Exp $
 
 DESCRIPTION="A GUI IRC client scriptable in Tcl/Tk"
 SRC_URI="http://quirc.org/${P}.tar.gz"
@@ -12,6 +12,7 @@ DEPEND="dev-lang/tcl
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
 src_compile() {
 
