@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.8 2002/05/19 18:46:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.9 2002/05/19 18:48:37 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 
-# convinience functios for requesting autotoos versions
+# convinience functios for requesting autotools versions
 need-automake() {
 
     debug-print-function $FUNCNAME $*
