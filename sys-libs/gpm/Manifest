@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b77af6ebd557d292d5216c9445749e8 ChangeLog 5785
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b647deb1b712265176a1f1082921fc16 gpm-1.20.1-r4.ebuild 1494
 MD5 81f80af7a34f9e25f9213422bcb30b09 gpm-1.20.1.ebuild 1644
+MD5 04dd44372a4147995b791619caf41f68 ChangeLog 5870
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 68c17aaec01bbad27b97a5b60be5f458 gpm-1.20.1-r4.ebuild 1492
 MD5 d562712814b13d09904823bd3eb31269 files/gpm.conf.d 570
-MD5 1e2ab7c222263d460e9e881f7a1558c7 files/gpm-linux26-headers.patch 423
-MD5 b1364fd3bf27cda742dbcfc87497cc18 files/gpm.rc6 951
 MD5 97f0853f825f506bf47be3b8ce6f9ce9 files/digest-gpm-1.20.1 136
+MD5 b1364fd3bf27cda742dbcfc87497cc18 files/gpm.rc6 951
+MD5 1e2ab7c222263d460e9e881f7a1558c7 files/gpm-linux26-headers.patch 423
 MD5 73d6199d600c0f63c31a6de234159bba files/digest-gpm-1.20.1-r4 136
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPDKCugEuf3OQ0akRAsxGAKCQcDZlZfRCABHVn0Og1gf4GisLhACdE2kz
-gKeef+bd8XM4LgYb94h1pYQ=
-=LNIk
------END PGP SIGNATURE-----
