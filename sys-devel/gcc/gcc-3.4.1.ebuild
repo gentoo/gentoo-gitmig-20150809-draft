@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.1 2004/07/05 15:34:16 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.2 2004/07/06 00:53:29 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc n32 n64"
 
@@ -138,9 +138,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 
 
-# multilib is broken...
-KEYWORDS="-*"
-#KEYWORDS="-* ~amd64 ~mips ~ppc64"
+KEYWORDS="-* ~amd64 ~mips ~ppc64"
 #KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
 
 # Ok, this is a hairy one again, but lets assume that we
@@ -335,8 +333,6 @@ update_gcc_for_libc_ssp() {
 }
 
 src_unpack() {
-	# die right away with configurations known to break
-	use multilib && die "multilib doesnt work in this release yet :("
 	local release_version="Gentoo Linux ${PVR}"
 
 	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
