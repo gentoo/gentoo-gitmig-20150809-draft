@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <george@gentoo.org> (08 Nov 2003)
+# masking intermediat version before it goes away, now that the release is stable
+=app-sci/lard-20030204
+
 # <solar@gentoo.org> (6 Nov 2003)
 # dsniff has a dep of libnids-1.16 which no longer flys. my vote is for
 # removal of dsniff from portage till an upstream update happens.
