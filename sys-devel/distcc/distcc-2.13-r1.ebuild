@@ -1,22 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.13-r1.ebuild,v 1.1 2004/03/06 19:51:58 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.13-r1.ebuild,v 1.2 2004/03/12 11:20:20 vapier Exp $
 
 inherit eutils gcc flag-o-matic
-[ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 PATCHLEVEL="2.11.1p"
 
+DESCRIPTION="a program to distribute compilation of C code across several machines on a network"
 HOMEPAGE="http://distcc.samba.org/"
 SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
-DESCRIPTION="a program to distribute compilation of C code across several machines on a network"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~amd64"
-
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~mips ~ia64 ~amd64"
 IUSE="gnome gtk selinux ipv6"
-
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
 	>=sys-devel/gcc-config-1.3.1
@@ -48,9 +45,9 @@ src_compile() {
 	use gtk && ! use gnome && ! use mips && myconf="${myconf} --with-gtk"
 	use gtk && use gnome && ! use mips && myconf="${myconf} --with-gnome"
 	use mips && use gtk || use gnome && ewarn "X support for Mips has been disabled."
-
 	#Above, mips is excluded due to version issues. 2004-02-20
 
+	[ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 
 	if use ipv6; then
 		ewarn "To use IPV6 you must have IPV6 compiled into your kernel"
