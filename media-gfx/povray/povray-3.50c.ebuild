@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.5 2003/04/09 13:30:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.6 2003/04/18 13:30:25 malverian Exp $
 
 IUSE="icc X svga"
 
@@ -37,9 +37,10 @@ src_compile() {
 
 	# fix system default povray.ini to point to install directory
 	cp povray.ini povray.ini.orig
-	sed -e "s:\(/usr/\)local/\(lib\):\1share:" povray.ini.orig > povray.ini
+	sed -e "s:/usr/local/:/usr/:" povray.ini.orig > povray.ini
 
 	cd src
+
 	cp Makefile makefile.orig
 
 	DCPU=`echo ${CPPFLAGS} | sed -e "s/.*i\(.86\).*/\\1/"`
@@ -110,6 +111,7 @@ src_compile() {
 src_install ()
 {
 	emake DESTDIR=${D} install || die
+	mv ${D}/etc/povray.ini ${D}/usr/share/povray-3.5/
 
 	dodir /etc
 	dosym /usr/share/povray-3.5/povray.ini /etc/povray.ini
