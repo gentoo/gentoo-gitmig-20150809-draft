@@ -1,29 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e5c5b333c0f0346b8a3bd401858d2fb1 ChangeLog 6724
-MD5 1edda758e443285ff65aaebcaf893f26 apcupsd-3.10.9.ebuild 2505
-MD5 c7e7009608d846b75ae57616e5063db0 apcupsd-3.10.10.ebuild 2506
+MD5 0b9d7c00a7bfbc081a82a3f16ccdd1cf ChangeLog 6826
 MD5 79fbd20420f039a3ade2d1772723939b apcupsd-3.10.10-r1.ebuild 2551
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3fe72118440066f4063e3040f7073726 apcupsd-3.10.8.ebuild 2505
 MD5 350594bbff4af6f9d84642680267a533 apcupsd-3.10.10-r2.ebuild 2683
-MD5 9826593df4ff3e05a4db8e3b548280dd apcupsd-3.10.13.ebuild 2511
-MD5 ab17d3fa671f63d263570aebe6f611b1 files/digest-apcupsd-3.10.9 123
-MD5 41859fb08df1a1b50385b2e4a187a5cc files/digest-apcupsd-3.10.10-r1 124
-MD5 c5a0f1d4de26b7e7e76641d5c722cd9f files/digest-apcupsd-3.10.8 123
+MD5 c7e7009608d846b75ae57616e5063db0 apcupsd-3.10.10.ebuild 2506
+MD5 18e9f0c9dd32b437c9ba77c82d3a57bb apcupsd-3.10.13.ebuild 2514
+MD5 3fe72118440066f4063e3040f7073726 apcupsd-3.10.8.ebuild 2505
+MD5 1edda758e443285ff65aaebcaf893f26 apcupsd-3.10.9.ebuild 2505
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 41859fb08df1a1b50385b2e4a187a5cc files/digest-apcupsd-3.10.10 124
+MD5 41859fb08df1a1b50385b2e4a187a5cc files/digest-apcupsd-3.10.10-r1 124
 MD5 41859fb08df1a1b50385b2e4a187a5cc files/digest-apcupsd-3.10.10-r2 124
 MD5 706952fc576fc75365b88542aada9702 files/digest-apcupsd-3.10.13 124
-MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.9/apache.conf 157
-MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.9/apcupsd.in.patch 315
-MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.9/smtp.patch 2663
-MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.9/ucd-snmp.patch 425
+MD5 c5a0f1d4de26b7e7e76641d5c722cd9f files/digest-apcupsd-3.10.8 123
+MD5 ab17d3fa671f63d263570aebe6f611b1 files/digest-apcupsd-3.10.9 123
 MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.10/apache.conf 157
+MD5 a587dd06ee42560a7ece7a73ed769f04 files/3.10.10/apccontrol.diff 340
 MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.10/apcupsd.in.patch 315
 MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.10/smtp.patch 2663
 MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.10/ucd-snmp.patch 425
-MD5 a587dd06ee42560a7ece7a73ed769f04 files/3.10.10/apccontrol.diff 340
 MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.13/apache.conf 157
 MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.13/apcupsd.in.patch 315
 MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.13/smtp.patch 2663
@@ -32,10 +25,7 @@ MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.8/apache.conf 157
 MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.8/apcupsd.in.patch 315
 MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.8/smtp.patch 2663
 MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.8/ucd-snmp.patch 425
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4YiTHTu7gpaalycRArpqAKC+gt6zJkbJTRqPJFdaJeB3JhLr8gCeJpIs
-zX9sRmocJysZZUzAmane7gA=
-=JP+W
------END PGP SIGNATURE-----
+MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.9/apache.conf 157
+MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.9/apcupsd.in.patch 315
+MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.9/smtp.patch 2663
+MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.9/ucd-snmp.patch 425
