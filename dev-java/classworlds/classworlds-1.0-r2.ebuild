@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/classworlds-1.0-r2.ebuild,v 1.3 2004/06/24 22:19:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/classworlds-1.0-r2.ebuild,v 1.4 2004/06/27 17:02:44 zx Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,6 @@ SLOT="1"
 KEYWORDS="~x86 ~ppc"
 IUSE="doc jikes"
 DEPEND="=dev-java/xerces-2.6*"
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
