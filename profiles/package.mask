@@ -203,7 +203,6 @@ net-mail/sendmail
 # incompatible
 #added pspell-ispell till i sort out the *spells
 >=app-text/pspell-ispell-0.12
->=app-text/pspell-0.12
 >=app-text/aspell-0.33
 >=sys-libs/readline-4.2
 >=sys-devel/automake-1.5
