@@ -1,6 +1,6 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.27 2003/02/14 04:25:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.28 2003/02/15 16:53:06 mholzer Exp $
 
 *transcode-0.6.3.20030116-r1 (13 Feb 2003)
 
@@ -55,6 +55,9 @@
 
 *transcode-0.6.2 (11 Dec 2002)
 
+  15 Feb 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.2.ebuild :
+  Marking as stable.
+
   11 Dec 2002; B.Lauwers <blauwers@gentoo.org> Changelog, transcode-0.6.2.ebuild :
   Bumped to new version per Bug#11114
 
@@ -67,6 +70,9 @@
   for the contribution.
 
 *transcode-0.6.1-r1 (29 Oct 2002)
+
+  15 Feb 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.1-r1.ebuild :
+  Marking as stable
 
   29 Oct 2002; phoen][x <phoenix@gentoo.org> ChangeLog, transcode-0.6.1-r1.ebuild,
   files/digest-transcode-0.6.1-r1, transcode-0.6.1-PP_QUALITY_MAX.patch :
