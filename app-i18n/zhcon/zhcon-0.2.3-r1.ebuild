@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/zhcon-0.2.3-r1.ebuild,v 1.1 2005/01/25 17:59:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/zhcon-0.2.3-r1.ebuild,v 1.2 2005/01/26 18:09:30 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-assert-gentoo.diff
 	epatch ${FILESDIR}/${P}-gcc34.patch
-	
+
 	# bug #78117 - unauthorized file acess CAN-2005-0072
 	epatch ${FILESDIR}/${P}-CAN-2005-0072.patch
 }

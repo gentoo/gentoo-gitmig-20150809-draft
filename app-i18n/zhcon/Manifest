@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ecbc6024f0a645631078026084a51622 ChangeLog 952
 MD5 8ef70951aa06be1284427310a2ef8eb5 metadata.xml 466
-MD5 c51f9cb3d6880ccea8797d240eae6e57 zhcon-0.2.3-r1.ebuild 920
 MD5 ea6f351bede075734fe8e3e3c218603e zhcon-0.2.3.ebuild 811
+MD5 9e45e58e12a8ea807578c3bafcadc20a zhcon-0.2.3-r1.ebuild 921
 MD5 aaa0c58daca46525014d59831e32a3b8 files/digest-zhcon-0.2.3 64
 MD5 527bb0c1a80fcb0f8c916d2be40271e4 files/zhcon-0.2.3-assert-gentoo.diff 1063
-MD5 fa0b7fc976eef786cf9d61bbcd01584d files/zhcon-0.2.3-gcc34.patch 2127
 MD5 33c30557b9d62f9593d178f718431a1b files/zhcon-0.2.3-gentoo.diff 4788
-MD5 518fbcc054f6c160ab8c998cab64b8a1 files/zhcon-0.2.3-CAN-2005-0072.patch 547
+MD5 fa0b7fc976eef786cf9d61bbcd01584d files/zhcon-0.2.3-gcc34.patch 2127
 MD5 aaa0c58daca46525014d59831e32a3b8 files/digest-zhcon-0.2.3-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB9okkRkyva5PS18kRAtG7AJoCaLkATjch4sB43i0qNMX2jJrk/ACdGXYi
-LZPsQR9r5KBwiy/1sdQ6+WU=
-=dGH8
------END PGP SIGNATURE-----
+MD5 518fbcc054f6c160ab8c998cab64b8a1 files/zhcon-0.2.3-CAN-2005-0072.patch 547
