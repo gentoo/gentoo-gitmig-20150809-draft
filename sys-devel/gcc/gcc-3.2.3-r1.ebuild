@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.1 2003/04/29 20:32:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.2 2003/05/16 04:44:56 frogger Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -48,7 +48,7 @@ STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # ProPolice version
 PP_VER1="3_2_2"
-PP_VER2="3.2.2-6"
+PP_VER2="3.2.2-7"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
@@ -183,10 +183,8 @@ src_unpack() {
 	# Make gcc's version info specific to Gentoo
 	version_patch ${FILESDIR}/3.2.3/gcc323-gentoo-branding.patch
 
-	# ProPolice Stack Smashing protection - protector-3.2.2-6
-	cd ${WORKDIR}; epatch ${FILESDIR}/3.2.3/protector-3.2.2-6-PPC.patch; cd ${S}
+	# ProPolice Stack Smashing protection - protector-3.2.2-7
 	epatch ${WORKDIR}/protector.dif
-	epatch ${FILESDIR}/3.2.2/protector_parallel_make.patch
 	cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 	cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 	version_patch ${FILESDIR}/3.2.3/gcc-323-propolice-version.patch 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.95 2003/04/29 20:32:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.96 2003/05/16 04:44:56 frogger Exp $
+
+  16 May 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.3-r1.ebuild:
+  Updated ProPolice to Protector-3.2.2-7. This revision includes the PPC bug fix
+  and the parallel make fix, so these no longer need to be applied separately.
 
 *gcc-3.2.3-r1 (29 Apr 2003)
 
