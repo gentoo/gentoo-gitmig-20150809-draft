@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-shout
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.1 2004/01/31 08:36:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.2 2004/04/10 16:05:50 usata Exp $
+
+  11 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-shout-2.0.ebuild:
+  Marked as stable. virtual/ruby fix
 
 *ruby-shout-2.0 (31 Jan 2004)
 
