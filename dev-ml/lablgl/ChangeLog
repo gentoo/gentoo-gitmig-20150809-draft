@@ -1,8 +1,13 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.3 2002/10/25 09:38:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.4 2002/10/25 20:02:02 george Exp $
 
 *lablgl-0.98.ebuild (03 Sep 2002)
+
+  24 Oct 2002; George Shapovalov <george@gentoo.org> lablgl-0.98.ebuild :
+
+  made labltk and ocaml check-up logic more smart. Now should work fine in every situation.
+  Thanks to Jeffrey Palmer <jeffrey.palmer.acm.org> for the tip on checking labltk existance.
 
   24 Oct 2002; George Shapovalov <george@gentoo.org> lablgl-0.98.ebuild :
 
