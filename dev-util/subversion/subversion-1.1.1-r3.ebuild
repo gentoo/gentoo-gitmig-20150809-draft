@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.3 2004/11/30 09:08:34 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.4 2004/12/03 10:04:39 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://subversion.tigris.org/"
 SLOT="0"
 LICENSE="Apache-1.1"
 KEYWORDS="x86 ~sparc ~ppc ~amd64 ~alpha ~hppa ~ppc64 ~ia64"
-IUSE="ssl apache2 berkdb python emacs perl java jikes"
+IUSE="ssl apache2 berkdb python emacs perl java"
 
 S=${WORKDIR}/${P/_rc/-rc}
 
@@ -28,8 +28,9 @@ RDEPEND="apache2? ( >=net-www/apache-2.0.49 )
 
 DEPEND="${RDEPEND}
 	|| ( >=sys-devel/autoconf-2.59 =sys-devel/autoconf-2.57* )
-	!=sys-devel/autoconf-2.58
-	jikes? (dev-java/jikes)"
+	!=sys-devel/autoconf-2.58"
+# Does not work because jikes is broken
+#	jikes? (dev-java/jikes)"
 
 # Allow for custion repository locations.
 # This can't be in pkg_setup because the variable needs to be available to
@@ -95,7 +96,8 @@ src_compile() {
 	use apache2 || myconf="${myconf} --without-apxs"
 
 	myconf="${myconf} $(use_enable java javahl)"
-	use java && myconf="${myconf} $(use_with jikes)"
+#	use java && myconf="${myconf} $(use_with jikes)"
+	use java && myconf="${myconf} --without-jikes"
 
 	if use python || use perl; then
 		myconf="${myconf} --with-swig"
@@ -318,7 +320,7 @@ pkg_config() {
 	fi
 
 	einfo ">>> Initializing the database in ${SVN_REPOS_LOC}..."
-	if [[ -f ${SVN_REPOS_LOC}/repos ]]; then
+	if [[ -e ${SVN_REPOS_LOC}/repos ]]; then
 		echo "A subversion repository already exists and I will not overwrite it."
 		echo "Delete ${SVN_REPOS_LOC}/repos first if you're sure you want to have a clean version."
 	else

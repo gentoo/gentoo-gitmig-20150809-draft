@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.124 2004/11/30 09:08:34 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.125 2004/12/03 10:04:39 pauldv Exp $
+
+  03 Dec 2004; <pauldv@gentoo.org> subversion-1.1.1-r3.ebuild:
+  Fix a small bug in the config function, now checking for existence, not 
+  file existene in the src_config function. Thanks to John Croisant 
+  <jacius@gmail.com> in bug #73186 for pointing this out.
+
+  03 Dec 2004; <pauldv@gentoo.org> subversion-1.1.1-r3.ebuild:
+  Disable jikes for now as jikes is broken
 
   30 Nov 2004; <pauldv@gentoo.org> subversion-1.1.1-r3.ebuild:
   Mark stable
