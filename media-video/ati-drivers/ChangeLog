@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.13 2003/07/22 13:43:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.14 2003/08/12 00:04:53 lu_zero Exp $
+
+*ati-drivers-3.2.4 (12 Aug 2003)
+
+*ati-drivers-3.2.0 (12 Aug 2003)
+
+  12 Aug 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.0.ebuild,
+  ati-drivers-3.2.4.ebuild, files/fglrx-2.6-amd-adv-spec-fix.patch,
+  files/fglrx-2.6-fix-deprecated.patch, files/fglrx-2.6-makefile.patch:
+  New versions, thanks to Wedge_ for the work.
 
   22 Jul 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.13-r1.ebuild,
   ChangeLog: Added experimental support for 2.6 kernels.
