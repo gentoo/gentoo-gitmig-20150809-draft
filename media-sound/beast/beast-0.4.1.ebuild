@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.4.1.ebuild,v 1.2 2002/11/02 04:55:19 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.4.1.ebuild,v 1.3 2002/11/03 06:13:24 agenkin Exp $
 
 DESCRIPTION="BEAST - the Bedevilled Sound Engine"
 HOMEPAGE="http://beast.gtk.org"
@@ -16,7 +16,7 @@ DEPEND="dev-libs/glib
 	media-sound/alsa-driver"
 
 SRC_URI="ftp://beast.gtk.org/pub/beast/v0.4/${P}.tar.gz"
-KEYWORDS='x86'
+KEYWORDS='~x86'
 SLOT="0"
 S=${WORKDIR}/${P}
 
