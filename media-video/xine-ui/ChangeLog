@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.56 2004/04/29 10:19:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.57 2004/05/07 20:45:20 squash Exp $
+
+  07 May 2004; Josh Grebe <squash@gentoo.org> xine-ui-0.9.23-r2.ebuild:
+  Stable on sparc
 
   26 Apr 2004; Brandon Hale <tseng@gentoo.org> xine-ui-0.9.23-r2.ebuild:
   Stable on x86.
