@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion-devel
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.23 2003/12/29 01:54:59 twp Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.24 2004/01/03 10:37:43 avenj Exp $
+
+  03 Jan 2003; Jon Portnoy <avenj@gentoo.org> ion-devel-20031211.ebuild :
+  AMD64 keywords.
 
   28 Dec 2003; Tom Payne <twp@gentoo.org> :
   Removed old versions.
