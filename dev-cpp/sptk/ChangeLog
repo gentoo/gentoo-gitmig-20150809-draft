@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.4 2004/11/08 21:54:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.5 2004/11/28 21:44:09 iluxa Exp $
+
+*sptk-2.3.16 (28 Nov 2004)
+
+  28 Nov 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  +sptk-2.3.16.ebuild:
+  Add sptk 2.3.16 (By Alexey Parshin <alexeyp@tts-sf.com>)
 
   08 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> sptk-2.2.1.ebuild,
   sptk-2.2.ebuild:
