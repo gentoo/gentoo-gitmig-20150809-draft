@@ -1,0 +1,8 @@
+# ChangeLog for net-www/mozplugger
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.1 2004/04/08 21:16:34 centic Exp $
+
+  08 Apr 2004; Dominik Stadler <centic@gentoo.org> :
+  Add current Version 1.5.2 of mozplugger, thanks to multiple users for the
+  ebuild, see Bugs 27724 and 21265
+
