@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9_pre1.ebuild,v 1.6 2004/01/30 08:10:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r1.ebuild,v 1.1 2004/02/01 04:20:26 eradicator Exp $
 
 inherit flag-o-matic eutils
 
-PATCHVER="0.2"
+PATCHVER="0.3"
 
 MY_P=${P/_pre/-pre}
 S=${WORKDIR}/${MY_P}
@@ -20,7 +20,9 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
-DEPEND="=x11-libs/gtk+-1.2*
+DEPEND=">=sys-devel/automake-1.7.8
+	app-arch/unzip
+	=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	xml? ( >=dev-libs/libxml-1.8.15 )
@@ -30,13 +32,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
-	nls? ( dev-util/intltool )
-	app-arch/unzip"
-
-#We want these things in DEPEND only
-DEPEND="$DEPEND
-	>=sys-devel/automake-1.7.8
-	>=sys-devel/autoconf-2.58"
+	nls? ( dev-util/intltool )"
 
 PATCHDIR=${WORKDIR}/patches
 
@@ -49,7 +45,7 @@ src_unpack() {
 	epatch ${PATCHDIR}/${P}-dtd.patch
 
 	# Fix ansi C fubar so that it compiles with less-forgiving gcc2
-	epatch ${PATCHDIR}/${P}-gcc2_fix.patch
+	epatch ${PATCHDIR}/${P}-id3v2edit.patch
 
 	# Patch to allow external programmes to have the "jump to" dialog box
 	epatch ${PATCHDIR}/${P}-jump.patch
@@ -151,7 +147,8 @@ src_install() {
 
 	keepdir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
-	donewins gnomexmms/gnomexmms.xpm xmms.xpm
+#	donewins gnomexmms/gnomexmms.xpm xmms.xpm
+	donewins xmms/xmms_logo.xpm xmms.xpm
 	doins xmms/xmms_logo.xpm
 	insinto /usr/share/pixmaps/mini
 	doins xmms/xmms_mini.xpm
