@@ -2,6 +2,8 @@ MD5 fcac3a6f2354eb6f8870c827ae320254 kdelibs-apidocs-3.1.1.ebuild 1403
 MD5 b152f72ce3a438ef9bd46f412c5fa565 kdelibs-apidocs-3.1.1a.ebuild 1517
 MD5 a6cbc03274c603423a508be2474f1b9e ChangeLog 2514
 MD5 aa4fe7596009fc782ad834c47f96615f kdelibs-apidocs-3.1-r1.ebuild 1408
+MD5 8816597a5aaccd832a5c11c382193fb5 kdelibs-apidocs-3.1.2.ebuild 1408
 MD5 185c0cca81183c5659b62f91fd240771 files/digest-kdelibs-apidocs-3.1.1 68
+MD5 d93637de0cd50cb926c9eda49dd105a0 files/digest-kdelibs-apidocs-3.1.2 68
 MD5 fe5064a43dd8ed966e50aee8b8f3364a files/digest-kdelibs-apidocs-3.1.1a 136
 MD5 cc4a5df0791ae13159f71f47996a8b95 files/digest-kdelibs-apidocs-3.1-r1 66
