@@ -1,0 +1,8 @@
+# ChangeLog for app-xemacs/xemacs-ispell
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-ispell/ChangeLog,v 1.1 2003/02/20 11:25:05 rendhalver Exp $
+
+*xemacs-ispell-1.24 (20 Feb 2003)
+
+  20 Feb 2003; Rendhalver [Peter Brown] <rendhalver@gentoo.org> :
+  renamed from app-xemacs/ispell due to naming clash with ispell
