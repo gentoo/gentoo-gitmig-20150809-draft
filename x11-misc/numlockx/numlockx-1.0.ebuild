@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.0.ebuild,v 1.9 2004/02/29 15:14:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.0.ebuild,v 1.10 2004/03/12 14:42:13 aliz Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Turns on numlock in X"
@@ -9,7 +9,7 @@ SRC_URI="http://dforce.sh.cvut.cz/~seli/en/numlockx/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="EDB"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="x86 sparc amd64"
 
 DEPEND="virtual/x11"
 
