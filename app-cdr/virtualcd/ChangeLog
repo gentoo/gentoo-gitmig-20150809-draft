@@ -1,0 +1,8 @@
+# ChangeLog for app-cdr/virtualcd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/virtualcd/ChangeLog,v 1.1 2003/04/29 22:43:58 vapier Exp $
+
+*virtualcd-0.4 (29 Apr 2003)
+
+  29 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
