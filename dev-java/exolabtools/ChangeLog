@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/exolabtools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/ChangeLog,v 1.1 2005/02/05 21:56:41 luckyduck Exp $
+
+*exolabtools-1.0_p20050205 (05 Feb 2005)
+
+  05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +exolabtools-1.0_p20050205.ebuild:
+  Initial import, package is needed as a indirect dependency of openjms
+
