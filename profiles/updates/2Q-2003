@@ -50,6 +50,7 @@ move media-video/atitvout media-tv/atitvout
 move media-video/kwintv media-tv/kwintv
 move media-video/linuxtv-dvb media-tv/linuxtv-dvb
 move media-video/nvrec media-tv/nvrec
+move x11-misc/nxtvepg media-tv/nxtvepg
 move media-video/nvtv media-tv/nvtv
 move media-video/rivatv media-tv/rivatv
 move media-video/tvtime media-tv/tvtime
