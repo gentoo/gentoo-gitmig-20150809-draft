@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.6 2002/07/20 19:01:50 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.7 2002/09/30 01:18:25 woodchip Exp $
+
+inherit mount-boot
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
@@ -12,35 +14,6 @@ LICENSE="BSD"
 DEPEND="virtual/glibc >=sys-devel/bin86-0.15.5"
 
 RDEPEND="virtual/glibc"
-
-pkg_setup() {
-	[ "${ROOT}" != "/" ] && return 0
-	. ${ROOT}/etc/init.d/functions.sh
-	local fstabstate="$(cat /etc/fstab |grep -v -e '#' |awk '{print $2}')"
-	local procstate="$(cat /proc/mounts |awk '{print $2}')"
-	if [ -n "$(echo ${fstabstate} |grep -e "/boot")" ] && \
-	   [ -n "$(echo ${procstate} |grep -e "/boot")" ]
-	then
-		einfo "Your boot partition was detected as being mounted as /boot."
-		einfo "Files will be installed there for lilo to function correctly."
-	elif [ -n "$(echo ${fstabstate} |grep -e "/boot")" ] && \
-	     [ -z "$(echo ${procstate} |grep -e "/boot")" ]
-	then
-		mount /boot &>/dev/null
-		if [ "$?" -eq 0 ]
-		then
-			einfo "Your boot partition was not mounted as /boot, but portage was able to mount"
-			einfo "it without additional intervention."
-			einfo "Files will be installed there for lilo to function correctly."
-		else
-			eerror "Your boot partition has to be mounted on /boot before the installation"
-			eerror "can continue. Lilo needs to install important files there."
-			die "Please mount your /boot partition."
-		fi
-	else
-		einfo "You do not have a seperate /boot partition."
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
