@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.12 2002/06/12 00:05:40 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.13 2002/06/12 02:40:00 spider Exp $
 
 inherit libtool
 inherit debug
@@ -47,24 +47,17 @@ gnome2_src_install() {
 
 	# only update scrollkeeper if this package needs it
 	[ -d ${D}/var/lib/scrollkeeper ] && SCROLLKEEPER_UPDATE="1"
-
 }
 
 gnome2_pkg_postinst() {
-
+	# No more SCHEMAS variable :)
+	export GCONF_CONFIG_SOURCE=`/usr/bin/gconftool-2 --get-default-source`
+	
+	cat ${WORKDIR}/../build-info/CONTENTS | grep "obj /etc/gconf/schemas" | sed 's:obj \([^ ]*\) .*:\1:' |while read F; do
+		/usr/bin/gconftool-2  --makefile-install-rule ${F}
+	done
+	
 	# schema installation
-	if [ -n "${SCHEMAS}" ]
-	then
-
-		# install/update schemas the hard way
-		export GCONF_CONFIG_SOURCE=`/usr/bin/gconftool-2 --get-default-source`
-		echo ">>> Updating GConf2 Schemas for ${P}"
-		for x in $SCHEMAS
-		do
-			/usr/bin/gconftool-2  --makefile-install-rule \
-				/etc/gconf/schemas/${x}
-		done
-	fi
 
 	if [ -x /usr/bin/scrollkeeper-update ] && [ SCROLLKEEPER_UPDATE = "1" ]
 	then
