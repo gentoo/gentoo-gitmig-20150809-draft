@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mamory/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~alpha ~arm ~hppa ~mips ~sparc"
+KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~mips ~sparc"
 
 DEPEND=""
 RDEPEND=""
