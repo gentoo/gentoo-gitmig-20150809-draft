@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2f7ab672aaa6150703fc41be1a3e9cd mvc-0.8.7.ebuild 785
+MD5 c70f746ff6a8a29c10b05cf82325cf70 metadata.xml 381
+MD5 871878e00f17c2256db5efe04ace7231 ChangeLog 378
+MD5 14c54a64123849dbc25f63f1b4ad0491 files/digest-mvc-0.8.7 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCR28zFdQwWVoAgN4RAj2nAJ98PGsXCbY8CPuoZib5nAEn3ISF+wCgywkE
+hTRHfpZIpE7joWvpl4pq7QA=
+=MQlk
+-----END PGP SIGNATURE-----

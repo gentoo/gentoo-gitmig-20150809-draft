@@ -1,0 +1,10 @@
+# ChangeLog for media-video/mvc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mvc/ChangeLog,v 1.1 2005/03/28 03:15:28 chriswhite Exp $
+
+*mvc-0.8.7 (28 Mar 2005)
+
+  28 Mar 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +mvc-0.8.7.ebuild:
+  Initial import into the tree.  This closes bug #43152.
+
