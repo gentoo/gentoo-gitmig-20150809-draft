@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r19.ebuild,v 1.4 2003/03/14 06:53:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r19.ebuild,v 1.5 2003/03/19 08:10:31 nakano Exp $
 
-IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6"
+IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
 inherit libtool flag-o-matic eutils
 
@@ -70,6 +70,10 @@ src_unpack() {
 		fi
 	)
 
+	# Patch for mpg123 to convert Japanese character code of MP3 tag info
+	if use cjk; then
+		epatch ${FILESDIR}/${P}-mpg123j.patch
+	fi
 
 	[ ! -f ${S}/config.rpath ] && ( \
 		touch ${S}/config.rpath
@@ -97,7 +101,7 @@ src_compile() {
 		&& myconf="${myconf} --with-gnome" \
 		|| myconf="${myconf} --without-gnome"
 
-	use 3dnow || use mmx  \
+	use 3dnow || use mmx \
 		&& myconf="${myconf} --enable-simd" \
 		|| myconf="${myconf} --disable-simd"
 

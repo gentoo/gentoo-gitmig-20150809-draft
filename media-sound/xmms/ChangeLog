@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.43 2003/03/13 19:17:38 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.44 2003/03/19 08:10:31 nakano Exp $
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> xmms-1.2.7-r19.ebuild:
   Mark stable on ppc
@@ -9,6 +9,10 @@
   Add patch to save playlist, etc on SIGTERM and SIGINT, bug #13604.
 
 *xmms-1.2.7-r19 (04 March 2003)
+
+  19 Mar 2003; Masatomo Nakano <nakano@gentoo.org> xmms-1.2.7-r19.ebuild,
+  files/xmms-1.2.7-mpg123j.patch:
+  Added Japanese support.
 
   09 Mar 2003; Aron Griffis <agriffis@gentoo.org> xmms-1.2.7-r19.ebuild:
   Mark stable on alpha

@@ -1,0 +1,320 @@
+diff -urN xmms-1.2.7/Input/mpg123/common.c xmms-1.2.7-mpg123-iconv/Input/mpg123/common.c
+--- xmms-1.2.7/Input/mpg123/common.c	2002-02-20 23:17:30.000000000 +0900
++++ xmms-1.2.7-mpg123-iconv/Input/mpg123/common.c	2003-02-20 05:06:29.000000000 +0900
+@@ -16,6 +16,16 @@
+ #endif
+ #endif
+ 
++#ifdef HAVE_ICONV_OPEN
++#include <iconv.h>
++#endif
++
++#include <errno.h>
++
++#ifdef HAVE_CODESET
++#include <langinfo.h>
++#endif
++
+ #include "mpg123.h"
+ #include "id3.h"
+ #include "id3_header.h"
+@@ -23,6 +33,13 @@
+ /* max = 1728 */
+ #define MAXFRAMESIZE 1792
+ 
++/* Japanese charset list for mpg123_lconv() */
++#define MAXCHARSET 6
++char *mpg123_lconv_from[MAXCHARSET] =
++{
++	"ISO-2022-JP", "SJIS", "EUCJP", "UTF8", "UTF16", "UTF16BE"
++};
++
+ int tabsel_123[2][3][16] =
+ {
+ 	{
+@@ -718,3 +735,95 @@
+ 		return 0;
+ 	return ((double) stream_tell()) / mpg123_info->filesize;
+ }
++
++gchar *mpg123_lconv(char *string, char *outto, size_t allow_trunc)
++{
++#if !defined(HAVE_ICONV_OPEN) || !defined(HAVE_CODESET)
++	return g_strdup(string);
++#else
++	size_t length, bufsize, outleft, inleft, ret;
++	iconv_t cd;
++	char *out, *outptr, *inptr;
++	char *from, *to, *froml;
++	int i;
++
++	if (!string)
++		return NULL;
++	length = strlen(string);
++
++	if (outto) {
++		froml = nl_langinfo(CODESET);
++		to    = outto;
++	} else {
++		froml = NULL;
++		to    = nl_langinfo(CODESET);
++	}
++	if ((outto && !froml) || (!outto && !to)) {
++		g_warning("mpg123_lconv(): Cannot get current character set.");
++		return g_strdup(string);
++	}
++
++	/* Iconv() requires extra work area to outbuf.
++           Round outbuf_size up to 3 multiple of 4 */
++	bufsize = (length + 11) & ~3;
++	out = g_malloc(bufsize);
++	if (!out) {
++		g_warning("mpg123_lconv(): Cannot allocate %d bytes buffer.",
++			bufsize);
++		return NULL;
++	}
++
++	/* One shot for froml, or loop for mpg123_lconv_from[] */
++	for (i=0, from = froml ? froml : mpg123_lconv_from[i];
++		from && i < MAXCHARSET;
++		from = froml ? NULL : mpg123_lconv_from[++i])
++	{
++		inptr = string;
++		inleft = length;
++		outptr = out;
++		outleft = bufsize - 1;
++
++		cd = iconv_open(to, from);
++		if (cd == (iconv_t)-1) {
++			g_warning("mpg123_lconv(): iconv_open %s %s -> %s",
++				strerror(errno), from, to);
++			continue;
++		}
++
++		ret = iconv(cd, &inptr, &inleft, &outptr, &outleft);
++		if (ret == (size_t)-1) {
++			switch (errno) {
++			case E2BIG:
++				g_warning("mpg123_lconv(): iconv err %d; %s -> %s \"%s\"",
++					errno, from, to, string);
++				iconv_close(cd);
++				continue;
++			case EINVAL:
++			case EILSEQ:
++				if (inleft > allow_trunc) {
++					iconv_close(cd);
++					continue;
++				}
++				/* Truncate trailing incomplete or invalid */
++				g_message("xmms mpg123: Truncate %d byte.",
++					inleft);
++				break;
++			default:
++				g_warning("mpg123_lconv(): iconv err %d; %s -> %s \"%s\"",
++					errno, from, to, string);
++				iconv_close(cd);
++				continue;
++			}
++		}
++		/* Conversion suceeded */
++		*outptr = '\0';
++		iconv_close(cd);
++		return out;
++	}
++	/* All Conversion failed */
++	g_warning("mpg123_lconv(): Failed to convert to %s. \"%s\"",
++		outto ? outto : "locale", string);
++	g_free(out);
++	return g_strdup(string);
++#endif
++}
+diff -urN xmms-1.2.7/Input/mpg123/fileinfo.c xmms-1.2.7-mpg123-iconv/Input/mpg123/fileinfo.c
+--- xmms-1.2.7/Input/mpg123/fileinfo.c	2002-02-20 23:17:30.000000000 +0900
++++ xmms-1.2.7-mpg123-iconv/Input/mpg123/fileinfo.c	2003-02-20 05:14:56.000000000 +0900
+@@ -22,6 +22,10 @@
+ #include <stdarg.h>
+ #include "mpg123.h"
+ 
++#ifdef HAVE_CODESET
++#include <langinfo.h>
++#endif
++
+ static GtkWidget *window = NULL;
+ static GtkWidget *filename_entry, *id3_frame;
+ static GtkWidget *title_entry, *artist_entry, *album_entry, *year_entry, *tracknum_entry, *comment_entry;
+@@ -41,21 +45,29 @@
+ static void set_entry_tag(GtkEntry * entry, gchar * tag, gint length)
+ {
+ 	gint stripped_len;
+-	gchar *text;
++	gchar *text, *tmp;
+ 
+ 	stripped_len = mpg123_strip_spaces(tag, length);
+-	text = g_strdup_printf("%-*.*s", stripped_len, stripped_len, tag);
+-	gtk_entry_set_text(entry, text);
++	text = g_strndup(tag, stripped_len);
++	tmp = mpg123_lconv(text, NULL, 0);
++	gtk_entry_set_text(entry, tmp);
++	g_free(tmp);
+ 	g_free(text);
+ }
+ 
+ static void get_entry_tag(GtkEntry * entry, gchar * tag, gint length)
+ {
+-	gchar *text;
++	gchar *text, *tmp;
+ 
+ 	text = gtk_entry_get_text(entry);
++	tmp  = g_strndup(text, length);
++	if (strlen(text) - strlen(tmp) > 0)
++		g_message("xmms mpg123: Truncate to \"%s\"", tmp);
++	text = mpg123_lconv(tmp, "SJIS", 1);
+ 	memset(tag, ' ', length);
+ 	memcpy(tag, text, strlen(text) > length ? length : strlen(text));
++	g_free(text);
++	g_free(tmp);
+ }
+ 
+ static gint find_genre_id(gchar * text)
+diff -urN xmms-1.2.7/Input/mpg123/id3_frame_content.c xmms-1.2.7-mpg123-iconv/Input/mpg123/id3_frame_content.c
+--- xmms-1.2.7/Input/mpg123/id3_frame_content.c	2002-02-26 05:53:03.000000000 +0900
++++ xmms-1.2.7-mpg123-iconv/Input/mpg123/id3_frame_content.c	2003-02-20 05:06:29.000000000 +0900
+@@ -52,11 +52,17 @@
+     if (id3_decompress_frame(frame) == -1)
+ 	    return NULL;
+ 
+-    if (*(guint8 *) frame->fr_data == ID3_ENCODING_ISO_8859_1)
++    switch( *(guint8 *) frame->fr_data ) {
++      case ID3_ENCODING_ISO_8859_1:
++      case ID3_ENCODING_UTF8:
+ 	text_beg = text = g_strdup((char *) frame->fr_data + 1);
+-    else
++	break;
++      case ID3_ENCODING_UTF16:
++      case ID3_ENCODING_UTF16BE:
++      default:
+ 	text_beg = text = 
+ 	    id3_utf16_to_ascii((gint16 *) ((glong) frame->fr_data + 1));
++    }
+ 
+     /*
+      * If content is just plain text, return it.
+diff -urN xmms-1.2.7/Input/mpg123/id3_frame_text.c xmms-1.2.7-mpg123-iconv/Input/mpg123/id3_frame_text.c
+--- xmms-1.2.7/Input/mpg123/id3_frame_text.c	2002-03-05 06:50:26.000000000 +0900
++++ xmms-1.2.7-mpg123-iconv/Input/mpg123/id3_frame_text.c	2003-02-20 05:06:29.000000000 +0900
+@@ -130,28 +130,36 @@
+ char *id3_get_text(id3_frame_t *frame)
+ {
+     /* Type check */
+-    if ( frame->fr_desc->fd_idstr[0] != 'T' )
++    if ( frame->fr_desc->fd_idstr[0] != 'T' &&
++         frame->fr_desc->fd_id != ID3_COMM )
+ 	return NULL;
+ 
+     /* Check if frame is compressed */
+     if (id3_decompress_frame(frame) == -1)
+ 	    return NULL;
+ 
+-    if ( frame->fr_desc->fd_id == ID3_TXXX ) {
++    if ( frame->fr_desc->fd_id == ID3_TXXX ||
++         frame->fr_desc->fd_id == ID3_COMM )
++    {
+ 	/*
+ 	 * This is a user defined text frame.  Skip the description.
+ 	 */
+ 	switch ( *(guint8 *) frame->fr_data ) {
+ 	case ID3_ENCODING_ISO_8859_1:
++	case ID3_ENCODING_UTF8:
+ 	{
+ 	    char *text = (char *) frame->fr_data + 1;
++	    guint len = frame->fr_size - 1;
+ 
+-	    while ( *text != 0 )
++	    while ( *text != 0 ) {
+ 		text++;
++		len--;
++	    }
+ 
+-	    return g_strdup(++text);
++	    return g_strndup(++text,--len);
+ 	}
+ 	case ID3_ENCODING_UTF16:
++	case ID3_ENCODING_UTF16BE:
+ 	{
+ 	    gint16 *text16 = (gint16 *) ((glong) frame->fr_data + 1);
+ 
+@@ -165,10 +173,15 @@
+ 	}
+     }
+ 
+-    if (*(guint8 *) frame->fr_data == ID3_ENCODING_ISO_8859_1)
++    switch (*(guint8 *) frame->fr_data) {
++      case ID3_ENCODING_ISO_8859_1:
++      case ID3_ENCODING_UTF8:
+ 	return g_strdup((char *) frame->fr_data + 1);
+-    else
++      case ID3_ENCODING_UTF16:
++      case ID3_ENCODING_UTF16BE:
++      default:
+ 	return id3_utf16_to_ascii((gint16 *) ((glong) frame->fr_data + 1));
++    }
+ }
+ 
+ 
+diff -urN xmms-1.2.7/Input/mpg123/mpg123.c xmms-1.2.7-mpg123-iconv/Input/mpg123/mpg123.c
+--- xmms-1.2.7/Input/mpg123/mpg123.c	2002-02-20 23:17:31.000000000 +0900
++++ xmms-1.2.7-mpg123-iconv/Input/mpg123/mpg123.c	2003-02-20 05:06:29.000000000 +0900
+@@ -559,6 +559,33 @@
+ 
+ 	if (tag)
+ 	{
++		gchar *tmp;
++		
++		tmp = mpg123_lconv(tag->artist, NULL, 0);
++		strncpy(tag->artist, tmp, sizeof(tag->artist)-1);
++		tag->artist[sizeof(tag->artist)-1] = '\0';
++		g_free(tmp);
++                
++		tmp = mpg123_lconv(tag->album, NULL, 0);
++		strncpy(tag->album, tmp, sizeof(tag->album)-1);
++		tag->album[sizeof(tag->album)-1] = '\0';
++		g_free(tmp);
++                
++		tmp = mpg123_lconv(tag->title, NULL, 0);
++		strncpy(tag->title, tmp, sizeof(tag->title)-1);
++		tag->title[sizeof(tag->title)-1] = '\0';
++		g_free(tmp);
++                
++		tmp = mpg123_lconv(tag->genre, NULL, 0);
++		strncpy(tag->genre, tmp, sizeof(tag->genre)-1);
++		tag->genre[sizeof(tag->genre)-1] = '\0';
++		g_free(tmp);
++                
++		tmp = mpg123_lconv(tag->comment, NULL, 0);
++		strncpy(tag->comment, tmp, sizeof(tag->comment)-1);
++		tag->comment[sizeof(tag->comment)-1] = '\0';
++		g_free(tmp);
++                
+ 		input->performer = mpg123_getstr(tag->artist);
+ 		input->album_name = mpg123_getstr(tag->album);
+ 		input->track_name = mpg123_getstr(tag->title);
+@@ -640,7 +667,7 @@
+ 	ID3_SET		(ID3_TALB, album);
+ 	ID3_SET_NUM	(ID3_TYER, year);
+ 	ID3_SET_NUM	(ID3_TRCK, track_number);
+-	ID3_SET		(ID3_TXXX, comment);
++	ID3_SET		(ID3_COMM, comment);
+ 	ID3_SET		(ID3_TCON, genre);
+ }
+ 
+diff -urN xmms-1.2.7/Input/mpg123/mpg123.h xmms-1.2.7-mpg123-iconv/Input/mpg123/mpg123.h
+--- xmms-1.2.7/Input/mpg123/mpg123.h	2002-02-20 23:17:31.000000000 +0900
++++ xmms-1.2.7-mpg123-iconv/Input/mpg123/mpg123.h	2003-02-20 05:06:29.000000000 +0900
+@@ -292,6 +292,7 @@
+ void mpg123_get_id3v2(id3_t * id3d, struct id3tag_t *tag);
+ gchar *mpg123_format_song_title(struct id3tag_t *tag, gchar *filename);
+ double mpg123_relative_pos(void);
++gchar *mpg123_lconv(char *string, char *to, size_t allow_trunc);
+ 
+ 
+ 
