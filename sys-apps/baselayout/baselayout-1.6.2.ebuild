@@ -2,13 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.2 2001/09/03 05:43:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.3 2001/09/03 06:17:01 drobbins Exp $
 
 SV=1.1.5
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
+
+#This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
 src_compile() {
 	cp ${S}/init.d/runscript.c ${T}
@@ -29,6 +31,8 @@ keepdir() {
 src_install()
 {
 	local foo
+	local altmerge
+	altmerge=0
 	if [ "$MAINTAINER" != "yes" ] && [ "$ROOT" = "/" ]
 	then
 		echo '!!! baselayout should only be merged if you know what youre doing.'
@@ -38,6 +42,13 @@ src_install()
 		echo '!!! installed versions.  We will have an automated update system shortly.'
 		exit 1
 	fi
+	if [ "$ROOT" = "/" ] && [ "`cat /proc/mounts | grep '/dev devfs'`" ]
+	then
+		#we're installing to our current system and have devfs enabled.  We'll need to
+		#make adjustments
+		altmerge=1
+	fi
+	
 	keepdir /sbin
 	exeinto /sbin
 	doexe ${T}/runscript
@@ -101,11 +112,8 @@ src_install()
 		keepdir /opt/gnome/share
 		dosym ../man /opt/gnome/share/man
 	fi
-	
-	touch ${D}/var/log/lastlog
-	touch ${D}/var/run/utmp
-	touch ${D}/var/log/wtmp
-	#the .keep file messes up Portage when looking in /var/db/pkg
+
+#the .keep file messes up Portage when looking in /var/db/pkg
 	dodir /var/db/pkg 
 	keepdir /var/spool /var/tmp /var/lib/misc
 	chmod 1777 ${D}/var/tmp
@@ -134,7 +142,7 @@ src_install()
 		[ -f $foo ] && doins $foo
 	done
 	#going back to symlink mtab; it just plain works better
-	dosym /proc/mounts /etc/mtab
+	dosym ../proc/mounts /etc/mtab
 	chmod go-rwx ${D}/etc/shadow
 	keepdir /lib /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
@@ -143,11 +151,21 @@ src_install()
 #	insinto /usr/bin
 #	insopts -m0755
 #	doins colors
-  	keepdir /dev
-	keepdir /dev-state
-	keepdir /dev/pts /dev/shm
-	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
-	cd ${D}/dev
+	if [ $altmerge -ne 1 ]
+	then
+		#normal
+		keepdir /dev
+		keepdir /dev-state
+		keepdir /dev/pts /dev/shm
+		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
+		cd ${D}/dev-state
+	else
+		#rootfs and devfs
+		dosym /usr/sbin/MAKEDEV /dev-state/MAKEDEV
+		keepdir /dev-state
+		keepdir /dev-state/pts /dev-state/shm
+		cd ${D}/dev
+	fi
 	#These devices are also needed by many people and should be included
 	echo "Making device nodes... (this could take a minute or so...)"
 	${S}/sbin/MAKEDEV generic-i386
@@ -182,6 +200,9 @@ src_install()
 	#not the greatest location for this file; should move it on cvs at some point
 	rm ${S}/etc/init.d/runscript.c
 
+	#skip this if we are merging to ROOT
+	[ "$ROOT" = "/" ] && return
+	
 	#set up default runlevel symlinks
 	local bar
 	for foo in default boot nonetwork single
@@ -191,5 +212,14 @@ src_install()
 		do
 			[ -e ${S}/init.d/${bar} ] && dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
 		done
+	done
+}
+
+pkg_postinst() {
+	#we should only install empty files if these files don't already exist.
+	local x
+	for x in log/lastlog run/utmp log/wtmp
+	do
+		[ -e ${ROOT}var/${x} ] || touch ${ROOT}var/${x}
 	done
 }
