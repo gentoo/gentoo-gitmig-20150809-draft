@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.60 2003/06/26 20:35:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.61 2003/06/28 20:01:00 coredumb Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -28,7 +28,7 @@ S=${WORKDIR}/${MY_P}
 [ -z "$HOMEPAGE" ]	&& HOMEPAGE="http://www.php.net/"
 [ -z "$LICENSE" ]	&& LICENSE="PHP"
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
-# PHP does automatic mirroring from this URI
+# PHP.net does automatic mirroring from this URI
 if [ -z "$SRC_URI" ]; then
 	SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 	#Remove the DB4 stuff temporarily
