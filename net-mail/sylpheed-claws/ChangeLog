@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.40 2003/05/25 11:23:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.41 2003/06/07 07:18:01 seemant Exp $
+
+*sylpheed-claws-0.9.0-r1 (07 Jun 2003)
+
+  07 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.0-r1.ebuild:
+  Extra tools are now installed into /usr/lib/sylpheed-claws/tools. Closes bug
+  #22138 by Marius Mauch <genone@genone.de>
 
 *sylpheed-claws-0.9.0 (25 May 2003)
 
