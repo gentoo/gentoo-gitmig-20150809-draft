@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.12 2003/10/01 19:48:32 lisa Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.13 2004/02/11 14:01:02 lisa Exp $
+
+*gramps-0.99 (11 Feb 2004)
+
+  11 Feb 2004; Lisa Seelye <lisa@gentoo.org> gramps-0.99.ebuild:
+  version bump.. lets hope this cures bug #30112 !
 
 *gramps-0.9.4 (01 Oct 2003)
 
