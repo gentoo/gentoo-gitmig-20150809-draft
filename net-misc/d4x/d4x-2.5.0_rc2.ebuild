@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_rc2.ebuild,v 1.2 2004/04/11 14:55:06 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_rc2.ebuild,v 1.3 2004/04/29 15:35:31 liquidx Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -30,9 +30,7 @@ src_unpack() {
 	sed -e "s:CXXFLAGS=\"-O2\":CXXFLAGS=\"${CXXFLAGS}\":g;s:OPTFLAGS=\"-O2\":OPTFLAGS=\"\":g" \
 		configure.orig >configure
 
-	# Fix a miscompile with gcc-3.2.2 and CFLAGS="-O2"
-	# <azarah@gentoo.org> (30 Mar 2003)
-	#epatch ${FILESDIR}/${PN}-2.4.1-fix-statusbar-crash.patch
+    cd ${S}; epatch ${FILESDIR}/${P}-gtk24.patch
 }
 
 src_compile() {

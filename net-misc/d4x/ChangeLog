@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.17 2004/04/26 12:30:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.18 2004/04/29 15:35:31 liquidx Exp $
+
+  29 Apr 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/d4x-2.5.0_rc2-gtk24.patch, d4x-2.5.0_rc2.ebuild:
+  add patch for gtk2.4 compatibility (#47984)
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> d4x-2.4.1-r1.ebuild:
   Add die following econf for bug 48950
