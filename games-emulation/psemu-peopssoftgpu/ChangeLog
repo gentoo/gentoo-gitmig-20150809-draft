@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/psemu-peopssoftgpu
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.6 2004/08/15 06:31:49 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.7 2005/02/19 07:28:08 mr_bones_ Exp $
+
+*psemu-peopssoftgpu-1.16 (19 Feb 2005)
+
+  19 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/1.16-makefile-cflags.patch, psemu-peopssoftgpu-1.15.ebuild,
+  +psemu-peopssoftgpu-1.16.ebuild:
+  version bump (bug #52253)
 
   15 Aug 2004; Mike Frysinger <vapier@gentoo.org>
   psemu-peopssoftgpu-1.15.ebuild:
