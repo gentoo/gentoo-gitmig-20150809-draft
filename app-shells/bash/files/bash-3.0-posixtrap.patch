@@ -1,0 +1,21 @@
+--- bash-3.0/builtins/trap.def.noposix	2004-07-28 22:38:38.000000000 -0400
++++ bash-3.0/builtins/trap.def	2004-07-28 22:39:01.948314454 -0400
+@@ -122,12 +122,18 @@
+ 
+       operation = SET;
+       first_arg = list->word->word;
++#if 0
+       /* When in posix mode, the historical behavior of looking for a
+ 	 missing first argument is disabled.  To revert to the original
+ 	 signal handling disposition, use `-' as the first argument. */
+       if (posixly_correct == 0 && first_arg && *first_arg &&
+ 		(*first_arg != '-' || first_arg[1]) &&
+ 		signal_object_p (first_arg, opt) && list->next == 0)
++#else
++       if (first_arg && *first_arg &&
++ 		(*first_arg != '-' || first_arg[1]) &&
++ 		signal_object_p (first_arg, opt) && list->next == 0)
++#endif
+ 	operation = REVERT;
+       else
+ 	{
