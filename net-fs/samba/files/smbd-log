@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ ! -p logfifo ]
-then
-	rm -f logfifo
-	mknod logfifo p
-fi
-exec multilog t ./smbd-log < logfifo

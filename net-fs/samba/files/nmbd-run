@@ -1,9 +1,0 @@
-#!/bin/sh
-mypid=`pidof /usr/sbin/nmbd`
-if [ -z "$mypid" ]
-then
-	/usr/sbin/nmbd -l ./log/logfifo
-	sleep 2
-	mypid=`pidof /usr/sbin/nmbd`
-fi
-exec /usr/bin/watchpid $mypid
