@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3446cba6b43a943cacb9d90d57b1dcb3 ChangeLog 22200
+MD5 61a534d6766bc73930052f010d854675 ChangeLog 22353
 MD5 1bc0f485e700a65e4b15c87a21b85154 python-2.4-r2.ebuild 6777
 MD5 b0dabb5b661c34b2054f5ae852c2fd45 python-2.1.3-r1.ebuild 2329
-MD5 99f8bbd61c29e69242730071f964faf4 python-2.4-r1.ebuild 6826
+MD5 5cc96c3709ae06baddee984d80cfee3c python-2.4-r1.ebuild 6804
 MD5 4e13cc454dfecb01c82c17fe161de115 python-2.3.4-r1.ebuild 7160
 MD5 8145ce0144332d6caca98fa5fb648741 metadata.xml 221
 MD5 2b2c1c7fabbe14699111e59f9e78f65f python-2.3.3-r2.ebuild 7160
-MD5 396245c203626a66a3f756534777e944 python-2.3.5.ebuild 7750
+MD5 13d27236260c522d884865ddb1c48ff1 python-2.3.5.ebuild 7728
 MD5 1e424541a26b4d5785a6e830e6a14fe8 python-2.2.3-r6.ebuild 4498
 MD5 d74e7f0fd47f00e8b3fe7ca36b7eb629 files/python-config-2.4 179
 MD5 fccf57b8c47164b676517e516898dc46 files/digest-python-2.4-r1 64
@@ -50,7 +50,7 @@ MD5 d5e1334ddcc639401001d01f26ce0af5 files/digest-python-2.3.3-r2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCIRAkugEuf3OQ0akRAkO4AJ99dWGwhpzSIgxbGjs0fWQjpfdYCQCgjGpj
-B4myPsNtOXjHzVV0rw1hI7I=
-=FvEG
+iD8DBQFCJK9xugEuf3OQ0akRAkJnAJ9EFyTkuHQKJklANB8t6P0lbZPIkQCcDATA
+Y7ogXv/zWvGqoVR8QtWWQc0=
+=mtqB
 -----END PGP SIGNATURE-----

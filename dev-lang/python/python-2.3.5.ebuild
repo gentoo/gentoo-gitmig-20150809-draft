@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5.ebuild,v 1.1 2005/02/17 18:19:40 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5.ebuild,v 1.2 2005/03/01 18:07:27 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -119,7 +119,6 @@ src_compile() {
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
 		--with-threads \
-		--with-cxx=no \
 		${myconf} || die
 	emake || die "Parallel make failed"
 }
