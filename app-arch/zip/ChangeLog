@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.26 2004/11/06 14:32:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.27 2004/11/06 15:02:56 corsair Exp $
+
+  06 Nov 2004; Markus Rothe <corsair@gentoo.org> zip-2.3-r4.ebuild:
+  Stable on ppc64; bug #70227
 
 *zip-2.3-r4 (06 Nov 2004)
 
