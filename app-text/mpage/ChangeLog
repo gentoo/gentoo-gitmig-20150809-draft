@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mpage
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/ChangeLog,v 1.8 2004/03/12 08:26:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/ChangeLog,v 1.9 2004/03/30 12:20:08 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> mpage-2.5.3.ebuild:
+  Adding amd64 keyword. Closing #45660.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> mpage-2.5.1.ebuild,
   mpage-2.5.3.ebuild:
