@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jai
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/ChangeLog,v 1.1 2003/12/18 21:44:26 lostlogic Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/ChangeLog,v 1.2 2004/03/06 21:03:50 zx Exp $
+
+*jai-1.1.2-r1 (09 Mar 2004)
+
+  09 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jai-1.1.2-r1.ebuild,
+  jai-1.1.2.ebuild, metadata.xml:
+  Revised ebuild. JAI now installs into the JDK selected by java-config.
+  Closes #33297
 
 *jai-1.1.2 (18 Dec 2003)
 
