@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f8e50b0b294a5f1c4056174d84b51c70 ChangeLog 797
-MD5 cde7c1d9560ef4af174018eac02480ba brutefir-1.0a.ebuild 1268
+MD5 411f655a5aa2dbd61443bed22b0481d7 ChangeLog 795
+MD5 fbc39df0078bb9da1a8a714cdbeca9d9 brutefir-1.0a.ebuild 1376
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 e53cb835af1469d768807b0fd8ba01b5 files/digest-brutefir-1.0a 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZLdXArHZZzCEUG0RAnYiAJ9kTEkpW+VkothHIee1/MmP//I8wACeMP9r
-r917H8wWfrsRP//0+r5tOjo=
-=nQ6v
+iD8DBQFBZOTZArHZZzCEUG0RAmCtAJ9wvLOl8Ue0TdqUFcfa1J3lMPxgMwCfZRgW
+17+RTwhlyXFftBGFORuDhFc=
+=DQCw
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.4 2004/10/07 03:26:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.5 2004/10/07 06:40:14 eradicator Exp $
 
 IUSE=""
 
@@ -18,13 +18,21 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 	media-sound/jack-audio-connection-kit
 	>=dev-libs/fftw-3.0.0"
 
+src_compile() {
+	emake || die
+}
+
 src_install() {
 
 	mkdir -p ${D}/usr/bin
-	mkdir -p ${D}/usr/$(get_libdir)/brutefir
+	mkdir -p ${D}/usr/lib/brutefir
 
 	einstall DESTDIR=${D} \
 		INSTALL_PREFIX=${D}/usr	|| die
+
+	if [ "$(get_libdir)" != "lib" ]; then
+		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
+	fi
 
 	dodoc CHANGES README LICENSE
 
