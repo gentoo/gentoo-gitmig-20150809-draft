@@ -1,11 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 472fcbc096ab4d3187194a64a5b6530a vdr-1.2.6-r1.ebuild 1401
-MD5 f4d5d82ede8f96bd19ee8ca51ffd71d1 vdr-1.2.6.ebuild 1398
-MD5 00e9e2c6ec1631d96741301a556873fe vdr-1.1.27.ebuild 1096
-MD5 52f449b2a41753f8b85e14258246b50c ChangeLog 1321
+MD5 858116ee4314daf8c820b1a8cc83f6ab ChangeLog 1478
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 5df3de1f888e3fc8f8ba27623a19f40b files/digest-vdr-1.2.6 62
 MD5 aa18122fb081cdc19d419d53ad1f63de files/vdr-1.2.6_CAN-2005-0071.patch 893
-MD5 ba8d55fa3c89f6743f01007e67529e37 files/digest-vdr-1.1.27 63
 MD5 5df3de1f888e3fc8f8ba27623a19f40b files/digest-vdr-1.2.6-r1 62
 MD5 d0dc33e6e7863372013487b940482044 files/vdr-1.2.6-gentoo.diff 1848
-MD5 c83ab35c3973b06f5c72e1efc4c37c31 files/vdr-1.1.27-gentoo.diff 1015
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCM4RO06ebR+OMO78RAidYAJ40TEmkqNlii5ytpZdRywfYDmScUQCfSJzY
+XdDxzUPDJFct/1Cdft3cXBs=
+=IFuT
+-----END PGP SIGNATURE-----
