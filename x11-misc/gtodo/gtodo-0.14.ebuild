@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.14.ebuild,v 1.8 2004/07/03 12:01:48 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.14.ebuild,v 1.9 2005/01/01 15:54:44 josejx Exp $
 
 inherit debug flag-o-matic gnome2
 
@@ -12,7 +12,7 @@ DESCRIPTION="Gtodo is a Gtk+-2.0 Todo list manager written for use with gnome 2.
 HOMEPAGE="http://gtodo.qballcow.nl/"
 SRC_URI="mirror://sourceforge/gtodo/${P}.tar.gz
 	gnome? ( http://download.qballcow.nl/programs/${PN}/${PN}-applet-0.1.tar.gz )"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
