@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.32 2004/06/30 03:30:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.33 2004/07/07 16:42:37 usata Exp $
+
+  08 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> prime-0.8.3.1.ebuild,
+  prime-0.9.1.ebuild:
+  0.9.x doesn't require sary-ruby; but 0.8.x still needs it
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> prime-0.8.3.1.ebuild,
   prime-0.9.1.ebuild:
