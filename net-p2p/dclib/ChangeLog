@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.49 2004/11/11 21:11:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.50 2004/12/13 21:59:43 squinky86 Exp $
+
+*dclib-0.3.3-r1 (13 Dec 2004)
+
+  13 Dec 2004; Jon Hood <squinky86@gentoo.org>
+  -files/dclib-0.3.2-gcc2.patch, +files/dclib-0.3.3-xml.patch,
+  -dclib-0.3.2.ebuild, +dclib-0.3.3-r1.ebuild:
+  Add libxml2 patch from Marien <m_zwart@123mail.org> and dclib forums, #74279.
 
   11 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> dclib-0.3.3.ebuild:
   Stable on alpha.
