@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.41 2003/06/10 19:45:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.42 2003/06/12 08:45:26 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -235,7 +235,6 @@ php_src_compile() {
 	#	fi
 	fi
 
-	use cjk && myconf="${myconf} --enable-mbstring --enable-mbregex"
 	use crypt && myconf="${myconf} --with-mcrypt=/usr --with-mhash"
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
 	use flash && myconf="${myconf} --with-swf=/usr --with-ming=/usr"
@@ -249,13 +248,11 @@ php_src_compile() {
 	use oci8 && [ -n "${ORACLE_HOME}" ] && myconf="${myconf} --with-oci8=${ORACLE_HOME}"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
-	use memlimit && myconf="${myconf} --enable-memory-limit"
 	use png && myconf="${myconf} --with-png-dir=/usr" || myconf="${myconf} --without-png"
 	use postgres && myconf="${myconf} --with-pgsql=/usr" || myconf="${myconf} --without-pgsql"
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
 	use tiff && LDFLAGS="${LDFLAGS} -ltiff"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr" || myconf="${myconf} --without-tiff"
-	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
 	
 	#use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
 	if [ -n "`use mysql`" ] ; then
@@ -268,20 +265,14 @@ php_src_compile() {
 		myconf="${myconf} --without-mysql"
 	fi
 
-	#use gd && myconf="${myconf} --with-gd"
-	#use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
-	#use qt && myconf="${myconf} --with-qtdom" || myconf="${myconf} --without-qtdom"
-	#use spell && myconf="${myconf} --with-pspell"
-	#use ssl && myconf="${myconf} --with-openssl"
-	myconf="${myconf} `use_with gd` `use_with nls gettext` `use_with qt qtdom` `use_with spell pspell` `use_with ssl openssl`"
-	#use curl && myconf="${myconf} --with-curl"
-	#use imap && myconf="${myconf} --with-imap"
-	#use ldap && myconf="${myconf} --with-ldap"
-	#use pam && myconf="${myconf} --with-pam"
-	#use pic && myconf="${myconf} --with-pic"
-	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap` `use_with pam` `use_with pic`"
-	#use xml2 && myconf="${myconf} --with-dom --with-dom-xslt"
+	myconf="${myconf} `use_with nls gettext` `use_with qt qtdom`"
+	myconf="${myconf} `use_with spell pspell` `use_with ssl openssl`"
+	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap`"
 	myconf="${myconf} `use_with xml2 dom` `use_with xml2 dom-xslt`"
+	myconf="${myconf} `use_with kerberos` `use_with gd` `use_with pam`"
+	myconf="${myconf} `use_with truetype ttf` `use_with truetype t1lib`"
+	myconf="${myconf} `use_with pic` `use_enable memlimit memory-limit`"
+	myconf="${myconf} `use_enable cjk mbstring` `use_enable cjk mbregex`"
 
 	#Waiting for somebody to want Cyrus support :-)
 	#myconf="${myconf} `use_with cyrus`"
@@ -339,7 +330,6 @@ php_src_compile() {
 	myconf="${myconf} --enable-sysvsem --enable-sysvshm --enable-sysvipc"
 	myconf="${myconf} --with-iconv"
 	myconf="${myconf} --enable-shmop"
-	# this might be less than 100% stable, it needs testing
 	myconf="${myconf} --enable-dio"
 
 	# recode is NOT used as it conflicts with IMAP and YAZ
