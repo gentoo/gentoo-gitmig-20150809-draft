@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.1 2002/03/17 21:18:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.2 2002/04/03 13:04:16 seemant Exp $
 
 MY_P=${P/guppi/Guppi}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="GNOME Plottin Tool"
+DESCRIPTION="GNOME Plotting Tool"
 # ftp.gnome.org is slooow in updating ;/
 SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sources/Guppi/${MY_P}.tar.bz2
 	ftp://ftp.gnome.org/pub/GNOME/stable/sources/Guppi/${MY_P}.tar.bz2"
@@ -22,8 +22,8 @@ RDEPEND=">=sys-apps/portage-1.8.4
 	 >=gnome-base/bonobo-1.0.17"
 
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
-        >=dev-util/intltool-0.11
+	nls? ( sys-devel/gettext
+		>=dev-util/intltool-0.11 )
 	python? ( >=dev-lang/python-2.0 )"
 
 src_compile() {
