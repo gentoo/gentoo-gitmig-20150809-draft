@@ -1,6 +1,15 @@
 # ChangeLog for dev-lisp/mule-ucs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/ChangeLog,v 1.4 2003/02/12 06:12:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/ChangeLog,v 1.5 2003/05/18 09:05:03 yakina Exp $
+
+*mule-ucs-0.85_rc3 (18 May 2003)
+
+  18 May 2003; YAMAKURA Makoto <yakina@gentoo.org> Manifest, mule-ucs-0.85_rc3.ebuild,
+  files/digest-mule-ucs-0.85_rc3:
+  version bump. The archive this ebuild use (Mule-UCS-0.85_rc3) is identical
+  with ftp://ftp.m17n.org/pub/mule/Mule-UCS/test/Mule-UCS-current.tar.gz
+  (2003-1-29).
+  ebuild submitted by desperado <desperado@s17.xrea.com>
 
 *mule-ucs-0.84.ebuild (25 Jun 2002)
 
