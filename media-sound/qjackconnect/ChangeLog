@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/qjackconnect
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.1 2003/01/16 01:45:05 raker Exp $
+
+*qjackconnect-0.0.3b (15 Jan 2003)
+
+  15 Jan 2003; Nick Hadaway <raker@gentoo.org> qjackconnect-0.0.3b.ebuild,
+  files/digest-qjackconnect-0.0.3b :
+  New ebuild for qjackconnect.  Based on a suggestion by Jonathan
+  Kraut on bug #12407.
