@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pxml/cl-pxml-20030325.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pxml/cl-pxml-20030325.ebuild,v 1.3 2003/09/11 01:10:52 msterret Exp $
 
 inherit common-lisp
 
@@ -21,9 +21,9 @@ S=${WORKDIR}/xmlutils
 
 src_unpack() {
 	unpack ${A}
- 	cd ${S}
+	cd ${S}
 	# this is a bit beyond me at this point
- 	patch -p1 <${FILESDIR}/pxml-gentoo.patch || die
+	patch -p1 <${FILESDIR}/pxml-gentoo.patch || die
 	for i in *.cl ; do mv $i ${i/.cl/.lisp} ; done
 }
 

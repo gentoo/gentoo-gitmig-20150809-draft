@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.6.4.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.6.4.ebuild,v 1.3 2003/09/11 01:10:52 msterret Exp $
 
 inherit common-lisp
 
@@ -45,9 +45,9 @@ src_install() {
 	exeinto /usr/lib/clsql/
 	doexe uffi/clsql-uffi.so
 
- 	insinto $clsrc/clsql-uffi/uffi ; doins uffi/*.lisp
- 	insinto $clsrc/clsql-uffi ; doins clsql-uffi.asd
- 	dosym $clsrc/clsql-uffi/clsql-uffi.asd $clsys/clsql-uffi.asd
+	insinto $clsrc/clsql-uffi/uffi ; doins uffi/*.lisp
+	insinto $clsrc/clsql-uffi ; doins clsql-uffi.asd
+	dosym $clsrc/clsql-uffi/clsql-uffi.asd $clsys/clsql-uffi.asd
 
 	insinto $clsrc/clsql-postgresql-socket/db-postgresql-socket ; doins db-postgresql-socket/*.lisp
 	insinto $clsrc/clsql-postgresql-socket ; doins clsql-postgresql-socket.asd
@@ -59,8 +59,8 @@ src_install() {
 		dosym $clsrc/clsql-postgresql/clsql-postgresql.asd $clsys/clsql-postgresql.asd
 	fi
 
- 	dodoc COPYING* ChangeLog INSTALL NEWS README TODO
- 	tar xfz doc/html.tar.gz -C ${D}/usr/share/doc/${P}/
+	dodoc COPYING* ChangeLog INSTALL NEWS README TODO
+	tar xfz doc/html.tar.gz -C ${D}/usr/share/doc/${P}/
 }
 
 pkg_postinst() {

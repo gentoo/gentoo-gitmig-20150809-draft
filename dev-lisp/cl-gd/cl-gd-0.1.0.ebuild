@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.1.0.ebuild,v 1.1 2003/09/01 19:50:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.1.0.ebuild,v 1.2 2003/09/11 01:10:52 msterret Exp $
 
 inherit common-lisp
 
@@ -45,6 +45,6 @@ src_install() {
 # 	insinto /usr/share/common-lisp/source/cl-gd/test
 # 	doins test/*
 
- 	dodoc CHANGELOG README
- 	dohtml doc/*.html
+	dodoc CHANGELOG README
+	dohtml doc/*.html
 }

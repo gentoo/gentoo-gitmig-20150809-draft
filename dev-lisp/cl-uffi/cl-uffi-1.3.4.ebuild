@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/cl-uffi-1.3.4.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/cl-uffi-1.3.4.ebuild,v 1.3 2003/09/11 01:10:52 msterret Exp $
 
 inherit common-lisp
 
@@ -26,11 +26,11 @@ src_install() {
 	doins uffi.asd
 	dosym /usr/share/common-lisp/source/uffi/uffi.asd /usr/share/common-lisp/systems/uffi.asd
 
- 	insinto /usr/share/common-lisp/source/uffi-tests/tests
+	insinto /usr/share/common-lisp/source/uffi-tests/tests
 	doins tests/*.lisp
 	insinto /usr/share/common-lisp/source/uffi-tests/
 	doins uffi-tests.asd
-  	dosym /usr/share/common-lisp/source/uffi-tests/uffi-tests.asd /usr/share/common-lisp/systems/uffi-tests.asd
+	dosym /usr/share/common-lisp/source/uffi-tests/uffi-tests.asd /usr/share/common-lisp/systems/uffi-tests.asd
 
 	insinto /usr/lib/uffi
 	doins tests/*.so

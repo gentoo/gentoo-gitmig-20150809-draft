@@ -1,6 +1,6 @@
 MD5 580487742e927e3529ae3174be169061 ChangeLog 917
 MD5 a46b4dca3715557a001339fb2f96e36c ecls-0.2.ebuild 1372
-MD5 cf63447964363c5e3271ca924ea10994 ecls-0.9b.ebuild 1304
+MD5 7bdbffe97502b48f6b88fce443b77a06 ecls-0.9b.ebuild 1295
 MD5 e23cb04b0671bbdf6c508b87489570ee files/digest-ecls-0.2 58
 MD5 146550f52692408e4bbc8ff3b641a436 files/digest-ecls-0.9b 58
 MD5 d68b203008a4e745e31a492c1b5fe764 files/ecl-texi-gentoo.patch 1051

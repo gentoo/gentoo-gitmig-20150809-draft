@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.29.ebuild,v 1.5 2003/02/13 10:53:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.29.ebuild,v 1.6 2003/09/11 01:10:52 msterret Exp $
 
 IUSE="X"
 
@@ -23,9 +23,9 @@ src_compile() {
 	# compilation of modules fails if we don't do this (mkennedy: yep
 	# -- confirmed on gcc3.2 too)
 
- 	unset CHOST
- 	unset CFLAGS
- 	unset CXXFLAGS
+	unset CHOST
+	unset CFLAGS
+	unset CXXFLAGS
 
 	./configure --prefix=/usr ${myconf} || die "./configure failed"
 	cd src
