@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/euler
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.1 2002/05/07 00:30:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.2 2002/11/08 00:06:58 george Exp $
+
+*euler-1.60.6 (07 Nov 2002)
+
+  07 Nov 2002; George Shapovalov <george@gentoo.org> euler-1.60.6.ebuild :
+
+  new version
+  also removed PROVIDE="app-misc/euler" statment as it was moved over 6 month ago.
+  slightly updated ebuild submitted by James R. Webb <jrwebb@qwest.net>
 
 *euler-1.59.1 (06 May 2002)
   
