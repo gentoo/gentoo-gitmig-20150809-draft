@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.22 2004/12/17 19:57:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.23 2004/12/29 18:42:56 lanius Exp $
+
+*dbus-0.22-r3 (29 Dec 2004)
+
+  29 Dec 2004; Heinrich Wendel <lanius@gentoo.org> +files/dbus-0.22-qt.patch,
+  +dbus-0.22-r3.ebuild:
+  readd qt support, bug #65504
 
   17 Dec 2004; Markus Rothe <corsair@gentoo.org> dbus-0.22-r2.ebuild:
   Stable on ppc64

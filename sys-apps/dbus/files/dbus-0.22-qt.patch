@@ -1,0 +1,78 @@
+--- configure.in.org	2004-12-13 14:08:57.676399648 +0100
++++ configure.in	2004-12-13 14:09:31.113316464 +0100
+@@ -812,6 +812,7 @@
+         if test -f "$dir/qglobal.h"; then
+             have_qt=yes
+             DBUS_QT_CXXFLAGS="-I$dir"
++			DBUS_QT_LIBS="-I$QTDIR/lib/libqt-mt.la"
+        fi
+     done
+ fi
+@@ -821,18 +822,6 @@
+    AC_MSG_RESULT([not found])
+ fi
+ 
+-dnl linking to kdecore will give us a bit of help from libtool
+-if (! kde-config >& /dev/null); then
+-    have_qt=no
+-else
+-    kdelibs=`kde-config --install lib --expandvars 2>/dev/null`
+-    if test -z $kdelibs -o ! -f $kdelibs/libkdecore.la; then
+-        have_qt=no
+-    else
+-        DBUS_QT_LIBS="$kdelibs/libkdecore.la"
+-    fi
+-fi
+-
+ if test x$have_qt = xno ; then
+     AC_MSG_WARN([Qt development libraries not found])
+ fi
+--- qt/connection.h	2004-08-10 05:03:37.000000000 +0200
++++ /home/heino/connection.h	2004-12-13 14:07:26.804214320 +0100
+@@ -50,6 +50,7 @@
+     Message borrowMessage();
+     Message popMessage();
+     void stealBorrowMessage( const Message& );
++    void dbus_connection_setup_with_qt_main (DBusConnection *connection);
+ 
+   public slots:
+     void open( const QString& );
+--- qt/connection.cpp	2004-05-04 07:35:48.000000000 +0200
++++ /home/heino/connection.cpp	2004-12-13 14:07:11.503540376 +0100
+@@ -156,6 +156,13 @@
+ {
+ }
+ 
++void Connection::dbus_connection_setup_with_qt_main (DBusConnection *connection)
++{
++  d->setConnection( connection );
++}
++
++
++
+ /////////////////////////////////////////////////////////
+ 
+ #include "connection.moc"
+--- qt/integrator.cpp	2003-12-02 11:44:22.000000000 +0100
++++ /home/heino/integrator.cpp	2004-12-13 14:07:38.260472704 +0100
+@@ -162,13 +162,18 @@
+ 
+ void Integrator::slotRead( int fd )
+ {
+-  Q_UNUSED( fd );
++  QIntDictIterator<Watch>	it( m_watches );
++  for ( ; it.current(); ++it )
++    dbus_watch_handle ( it.current()->watch, DBUS_WATCH_READABLE );
++
+   emit readReady();
+ }
+ 
+ void Integrator::slotWrite( int fd )
+ {
+-  Q_UNUSED( fd );
++  QIntDictIterator<Watch>       it( m_watches );
++  for ( ; it.current(); ++it )
++    dbus_watch_handle ( it.current()->watch, DBUS_WATCH_WRITABLE );
+ }
+ 
+ void Integrator::slotTimeout( DBusTimeout *timeout )
