@@ -1,0 +1,16 @@
+# ChangeLog for dev-lisp/cl-mel-base
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mel-base/ChangeLog,v 1.1 2004/11/25 08:53:46 mkennedy Exp $
+
+*cl-mel-base-0.5.11 (25 Nov 2004)
+
+  25 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-mel-base-0.5.11.ebuild, +cl-mel-base-0.5.20.ebuild:
+  New upstream version; added app-misc/mime-types runtime dependency
+
+*cl-mel-base-0.5.11 (07 Nov 2004)
+
+  07 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-mel-base-0.5.11.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
