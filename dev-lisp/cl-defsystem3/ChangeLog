@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-defsystem3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.8 2004/08/01 22:34:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.9 2004/08/02 15:37:20 mkennedy Exp $
+
+  02 Aug 2004; <mkennedy@gentoo.org> :
+  SRC_URI file naming fix
 
 *cl-defsystem3-3.3i-r4 (01 Aug 2004)
 
