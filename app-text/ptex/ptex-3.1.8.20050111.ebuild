@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.4.20041109-r1.ebuild,v 1.2 2005/01/01 16:32:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.20050111.ebuild,v 1.1 2005/01/21 11:40:29 usata Exp $
 
-TETEX_PV=2.99.3.20041109
+TETEX_PV=2.99.9.20050111
 TEXMF_PATH=/var/lib/texmf
 
 inherit tetex eutils
@@ -12,10 +12,10 @@ HOMEPAGE="http://www.ascii.co.jp/pb/ptex/
 	http://www.misojiro.t.u-tokyo.ac.jp/~tutimura/ptetex3/0README
 	http://www.fsci.fuk.kindai.ac.jp/aftp/pub/ptex/utils/"
 
-PTEX_TEXMF_PV=2.2
-PTEX_SRC="ptex-src-${PV%.*}b.tar.gz"
+PTEX_TEXMF_PV=2.3
+PTEX_SRC="ptex-src-${PV%.*}.tar.gz"
 PTEX_TEXMF="ptex-texmf-${PTEX_TEXMF_PV}.tar.gz"
-PTETEX=ptetex3-20041118
+PTETEX=ptetex3-20050119
 
 S=${WORKDIR}/tetex-src-${TETEX_PV}-beta
 

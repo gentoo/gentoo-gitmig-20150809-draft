@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.4-r1.ebuild,v 1.3 2005/01/01 16:32:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.5.ebuild,v 1.1 2005/01/21 11:40:29 usata Exp $
 
-PTEX_TEXMF_PV=2.2
+PTEX_TEXMF_PV=2.3
 TETEX_PV=2.0.2
 
 inherit tetex eutils
@@ -60,6 +60,14 @@ src_unpack() {
 		cp -f ../xdvik/Makefile.in.oxdvi Makefile.in
 		cp -f ../xdvik/c-auto.in ./
 	fi
+
+	# bug 75801
+	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p0" epatch ${FILESDIR}/xpdf-CESA-2004-007-xpdf2-newer.diff
+	EPATCH_OPTS="-d ${S}/libs/xpdf -p1" epatch ${FILESDIR}/xpdf-goo-sizet.patch
+	EPATCH_OPTS="-d ${S}/libs/xpdf -p1" epatch ${FILESDIR}/xpdf2-underflow.patch
+	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p0" epatch ${FILESDIR}/xpdf-3.00pl2-CAN-2004-1125.patch
+	EPATCH_OPTS="-d ${S}/libs/xpdf/xpdf -p0" epatch ${FILESDIR}/xpdf-3.00pl3-CAN-2005-0064.patch
+	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/xdvizilla.patch
 }
 
 src_compile() {
