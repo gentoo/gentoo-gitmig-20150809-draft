@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1.ebuild,v 1.6 2004/07/01 11:19:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1.ebuild,v 1.7 2004/08/31 09:31:26 mr_bones_ Exp $
 
 inherit eutils
 
 DESCRIPTION="The notorious fortune program"
-HOMEPAGE="http://www.redellipse.net/code/fortune/"
+HOMEPAGE="http://www.redellipse.net/code/fortune"
 SRC_URI="http://www.redellipse.net/code/downloads/${P}.tar.gz"
 
 LICENSE="BSD"
