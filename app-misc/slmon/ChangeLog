@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/slmon
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/ChangeLog,v 1.1 2003/01/08 20:07:25 blizzy Exp $
+
+*slmon-0.5.12 (08 Dec 2003)
+
+123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-
+  08 Dec 2003; Maik Schreiber <blizzy@gentoo.org> : Initial import (bug #13056).
+  Thanks to CJ Kucera <pez@apocalyptech.com>.
