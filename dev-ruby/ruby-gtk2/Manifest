@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c46be67aaaa565eb75f39a0b98af065f ruby-gtk2-0.12.0.ebuild 542
-MD5 657fdf51fbb6448fc6b801de0864b9b8 ruby-gtk2-0.10.1.ebuild 564
-MD5 d7a729eb3849549116d60a6c9b5b5f93 ruby-gtk2-0.8.1.ebuild 606
-MD5 19e444a706387197eed805ce0f7cc47c ruby-gtk2-0.9.1.ebuild 566
-MD5 39f7c56b304fe3a44b695d487916d7ec ruby-gtk2-0.11.0.ebuild 537
-MD5 2ab96d75e2da6851ee84b251b2229440 ChangeLog 3914
+MD5 867114d954464a1cfa3a00ed736bf3cf ruby-gtk2-0.10.1.ebuild 566
+MD5 8442a986d90354580a31d9aabf644d6d ruby-gtk2-0.8.1.ebuild 609
+MD5 bbe0578f96c4868eb2f9ea71ab1c327b ruby-gtk2-0.9.1.ebuild 567
+MD5 6e1f5a77e5dd511e7270e7925f8aaaa1 ruby-gtk2-0.11.0.ebuild 540
+MD5 6ed427d20bc75d4421fea434e57993d2 ChangeLog 4005
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 3af648b2305c03f68d4635daaff35f31 ruby-gtk2-0.8.0.ebuild 482
+MD5 3d2346bf16d57d3173f8bb4ffe9f18b6 ruby-gtk2-0.8.0.ebuild 482
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-gtk2-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-gtk2-0.8.1 73
 MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-gtk2-0.9.1 73
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gtk2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gtk2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gtk2-0.12.0 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNMzh/UDVUK2NELYRAvLnAJ0YoUDEeFMT8sZONJXpbmHHq6/N2ACfd2TN
-0+xbWCDSGswVimLh60R0K6Y=
-=Igj7
------END PGP SIGNATURE-----
