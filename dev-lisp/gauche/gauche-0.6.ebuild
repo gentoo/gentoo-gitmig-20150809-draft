@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.6.ebuild,v 1.4 2003/02/13 10:53:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.6.ebuild,v 1.5 2003/09/06 18:09:25 karltk Exp $
 
 S=${WORKDIR}/Gauche-${PV}
 DESCRIPTION="A Unix system friendly scheme interpreter"
@@ -10,7 +10,7 @@ DEPEND="virtual/glibc"
 RDEPEND="$DEPEND"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc"
+KEYWORDS="sparc"
 
 src_compile() {
 	./configure \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/gauche
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/ChangeLog,v 1.6 2003/09/06 18:03:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/ChangeLog,v 1.7 2003/09/06 18:09:25 karltk Exp $
+
+  06 Sep 2003; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  gauche-0.6.ebuild, gauche-0.7.1.ebuild:
+  Fails to compile on x86. Unmasked 0.7.1 to cover.
 
 *gauche-0.7.1 (06 Sep 2003)
 
