@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.13 2004/03/20 09:25:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.14 2004/04/05 16:46:02 phosphan Exp $
+
+*a52dec-0.7.4-r1 (05 Apr 2004)
+
+  05 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> a52dec-0.7.4-r1.ebuild:
+  Adding djbfft support for x86
 
   20 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> a52dec-0.7.4.ebuild:
   RDEPEND fix for bug #44816.
