@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/ltrace
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.17 2004/07/02 05:10:21 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.18 2005/02/10 12:16:00 ka0ttic Exp $
+
+*ltrace-0.3.36 (10 Feb 2005)
+
+  10 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +files/ltrace-0.3.31-64bit-fixes.patch,
+  -files/ltrace-0.3.31-64bit-fixes.patch.bz2, ltrace-0.3.31.ebuild,
+  +ltrace-0.3.36.ebuild:
+  Version bump; 64-bit fixes are no longer required. Also uncompressed 64-bit
+  patch as compressed files are evil (and it's only 5k uncompressed).
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ltrace-0.3.31.ebuild:
   virtual/glibc -> virtual/libc

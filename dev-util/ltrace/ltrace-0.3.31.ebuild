@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.13 2004/07/02 05:10:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.14 2005/02/10 12:16:00 ka0ttic Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 		unpack ltrace-0.3.26-x86_64.tar.bz2
 	fi
 
-	epatch ${FILESDIR}/${P}-64bit-fixes.patch.bz2
+	epatch ${FILESDIR}/${P}-64bit-fixes.patch
 }
 
 src_compile() {
