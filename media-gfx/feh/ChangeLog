@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/feh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.7 2003/07/29 21:27:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.8 2003/09/07 14:33:25 karltk Exp $
+
+  07 Sep 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  feh-1.2.5.ebuild, feh-1.2.6.ebuild:
+  Added requirement for <media-libs/freetype-2, as it doesn't work
+  with the 2.x-series. Fixes #22174.
 
 *feh-1.2.6 (30 Jul 2003)
 

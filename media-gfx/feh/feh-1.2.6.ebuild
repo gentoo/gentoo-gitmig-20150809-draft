@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.2.6.ebuild,v 1.1 2003/07/29 21:27:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.2.6.ebuild,v 1.2 2003/09/07 14:33:25 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A fast, lightweight imageviewer using imlib2"
@@ -10,7 +10,8 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~ppc"
 DEPEND=">=media-libs/giblib-1.2.2
-	>=media-libs/imlib2-1.0.0"
+	>=media-libs/imlib2-1.0.0
+	<media-libs/freetype-2"
 RDEPEND="$DEPEND"
 IUSE=""
 
