@@ -1,15 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.6.ebuild,v 1.11 2003/02/13 16:15:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.6.ebuild,v 1.12 2003/04/12 11:15:36 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
-SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz"
 HOMEPAGE="http://www.geekreview.org/slocate/"
-KEYWORDS="x86 ppc sparc"
+SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz"
+
 SLOT="0"
-DEPEND="virtual/glibc"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc ~alpha ~hppa ~mips ~arm"
+
+DEPEND="virtual/glibc"
 
 src_compile() {
 	./configure --host=${CHOST} --prefix=/usr || die
