@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.05.ebuild,v 1.1 2003/10/09 22:03:05 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.05.ebuild,v 1.2 2003/10/12 05:52:20 kumba Exp $
 
 inherit flag-o-matic
 
@@ -10,11 +10,31 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~arm ~alpha ~hppa ~ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~arm ~alpha ~hppa ~mips ~ia64"
 SLOT="0"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc"
+
+src_unpack() {
+	unpack ${A}
+
+	# (12 Oct 2003) <kumba@gentoo.org>
+	# This sed command fixes file's src/patchlevel.h to report the proper version
+	# information.  Current, file-4.05 reports itself as file-4.04.  An email is
+	# Going to be sent to the author about this, so this little kludge will not
+	# be needed with the next version of file.
+	mv -f ${S}/src/patchlevel.h ${S}/src/patchlevel.h.orig
+	sed -re 's/(#define\W+)(patchlevel\W+)4/\1\25/g' ${S}/src/patchlevel.h.orig > ${S}/src/patchlevel.h
+
+	# (12 Oct 2003) <kumba@gentoo.org>
+	# This patch is for MIPS only.  It slightly changes the 'file' output
+	# on MIPS machines to a specific format so that other programs can 
+	# recognize things.
+	if [ "${ARCH}" = "mips" ]; then
+		epatch ${FILESDIR}/${P}-mips-gentoo.diff
+	fi
+}
 
 src_compile() {
 
