@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SAX
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.14 2004/02/16 15:23:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.15 2004/05/01 20:24:34 mcummings Exp $
+
+  01 May 2004; Michael Cummings <mcummings@gentoo.org> XML-SAX-0.12.ebuild:
+  Syntax change in the echo - seems to have changed between versions of XML-SAX,
+  but not reflected in the ebuild. Should finally close 26248
 
   16 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
   XML-SAX-0.10-r1.ebuild, XML-SAX-0.10-r2.ebuild:
