@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.1.6.ebuild,v 1.4 2004/09/12 17:17:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.1.6.ebuild,v 1.5 2004/10/16 21:15:01 axxo Exp $
 
 DESCRIPTION="A robust, clean, extremely portable, efficient, and specification-compliant Java virtual machine."
 HOMEPAGE="http://sablevm.org/"
@@ -25,39 +25,29 @@ DEPEND=">=dev-libs/libffi-1.20
 	)"
 #RDEPEND=""
 
-src_unpack() {
-	mkdir ${S}
-	cd ${S}
-	unpack ${A}
-}
+S=${WORKDIR}
 
 src_compile() {
-	use amd64 && export LDFLAGS="$LDFLAGS -L/usr/lib/libffi" CPPFLAGS="$CPPFLAGS -I/usr/include/libffi"
-	# Compile the Classpath
+	export LDFLAGS="$LDFLAGS -L/usr/lib/libffi" CPPFLAGS="$CPPFLAGS	-I/usr/include/libffi"
 
+	# Compile the Classpath
 	cd ${S}/sablevm-classpath-${PV}
 	local myc="--with-jikes"
-	use gtk && myc="${myc} --enable-gtk-peer" || myc="${myc} --disable-gtk-peer"
-	econf ${myc} || die
+	econf ${myc} $(use_enable gtk gtk-peer) || die
 	emake || die "emake failed"
 
 	# Compile the VM
 	cd ${S}/sablevm-${PV}
-	myc=""
-	use debug && myc="${myc} --enable-debugging-features" || myc="${myc} --disable-debugging-features"
-	econf ${myc} || die
+	econf $(use_enable debug debugging-features) || die
 	emake || die "emake failed"
 }
 
 src_install() {
-
 	# Install the Classpath
-
 	cd ${S}/sablevm-classpath-${PV}
 	einstall || die
 
 	# Install the VM
-
 	cd ${S}/sablevm-${PV}
 	einstall || die
 
