@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.69 2005/01/08 19:43:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.70 2005/01/09 10:15:11 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> pygtk-2.4.1.ebuild:
+  Added missing digest entries. Added missing parentheses in SRC_URI.
 
   08 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> pygtk-2.4.1.ebuild:
   Add doc USE flag, patch by Fernando Serboncini in bug 75308.

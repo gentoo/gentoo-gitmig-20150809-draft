@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.1.ebuild,v 1.8 2005/01/08 19:43:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.1.ebuild,v 1.9 2005/01/09 10:15:11 swegener Exp $
 
 inherit gnome.org python flag-o-matic
 
 DESCRIPTION="GTK+2 bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
 SRC_URI="ftp://ftp.gnome.org/pub/gnome/sources/pygtk/2.4/${P}.tar.bz2
-		doc? http://www.pygtk.org/dist/pygtk2reference.tbz2"
+		doc? ( http://www.pygtk.org/dist/pygtk2reference.tbz2 )"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
