@@ -1,4 +1,6 @@
-MD5 bf7f3988432ab41c15ff95d3c177ce7c ChangeLog 3466
+MD5 8410a413400a05a9977597b8f0f7a4c0 gtk-perl-0.7008-r10.ebuild 1093
 MD5 8410a413400a05a9977597b8f0f7a4c0 gtk-perl-0.7008-r9.ebuild 1093
+MD5 bf7f3988432ab41c15ff95d3c177ce7c ChangeLog 3466
+MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-0.7008-r10 67
 MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-0.7008-r9 67
 MD5 b5f56ac7a91d56a578d02fab47146a79 files/gtk-perl-0.7008-gdkpixbuf-detect-fix.patch 747
