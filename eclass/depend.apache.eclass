@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.6 2004/11/21 01:51:58 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.7 2005/01/13 04:36:58 vericgar Exp $
 ECLASS=depend.apache
 INHERITED="$INHERITED $ECLASS"
 
@@ -19,7 +19,7 @@ INHERITED="$INHERITED $ECLASS"
 ## Stores the version of apache we are going to be ebuilding.  This variable is
 ## set by the need_apache{|1|2} functions.
 ####
-APACHE_VERSION='2'
+APACHE_VERSION='1'
 
 ####
 ## APXS1, APXS2
@@ -86,6 +86,15 @@ APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
 APACHE1_DEPEND="=net-www/apache-1*"
 APACHE2_DEPEND="=net-www/apache-2*"
 
+
+####
+## APACHE_DEPEND
+##
+## Dependency magic based on useflags to use the right DEPEND
+####
+
+APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} ) !apache2? ( ${APACHE1_DEPEND} )"
+
 ####
 ## need_apache1
 ##
@@ -122,10 +131,10 @@ need_apache() {
 	debug-print-function need_apache
 
 	IUSE="${IUSE} apache2"
+	DEPEND="${DEPEND} ${APACHE_DEPEND}"
 	if useq apache2; then
-		need_apache2
+		APACHE_VERSION='2'
 	else
-		need_apache1
+		APACHE_VERSION='1'
 	fi
 }
-
