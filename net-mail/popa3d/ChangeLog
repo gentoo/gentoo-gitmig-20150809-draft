@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.11 2004/08/03 12:02:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.12 2004/09/06 19:02:47 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> popa3d-0.6.3.ebuild,
+  popa3d-0.6.4.1.ebuild, popa3d-0.6.4.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   03 Aug 2004; David Holm <dholm@gentoo.org> popa3d-0.6.4.1.ebuild:
   Added to ~ppc.

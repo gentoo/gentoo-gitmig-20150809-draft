@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1.ebuild,v 1.2 2004/08/03 12:02:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1.ebuild,v 1.3 2004/09/06 19:02:47 ciaranm Exp $
 
 inherit eutils
 
@@ -72,7 +72,7 @@ pkg_setup() {
 	ewarn "See inside this ebuild for details."
 	ewarn
 	echo
-	sleep 5
+	epause 5
 
 	if ! grep -q ^popa3d: /etc/group ; then
 		groupadd popa3d || die "Failed to add group: popa3d"
@@ -104,7 +104,7 @@ src_compile() {
 
 	if [ "${POPA3D_HOME_MAILBOX}" != "" ] ; then
 		einfo "Mailbox path: ~/$POPA3D_HOME_MAILBOX"
-		sleep 2
+		epause 2
 		sed -i -e "s:^\(#define MAIL_SPOOL_PATH.*\)$://\1:" params.h
 		sed -i -e "s:^#define HOME_MAILBOX_NAME.*$:#define HOME_MAILBOX_NAME \"${POPA3D_HOME_MAILBOX}\":" params.h
 	else
