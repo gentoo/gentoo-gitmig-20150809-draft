@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.3 2003/12/17 11:58:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.4 2004/04/24 10:37:30 robbat2 Exp $
 
 DESCRIPTION="tcng - Traffic Control Next Generation"
 HOMEPAGE="http://tcng.sourceforge.net/"
@@ -12,11 +12,11 @@ IUSE=""
 DEPEND="doc? ( virtual/ghostscript app-text/tetex media-gfx/transfig )
 	dev-lang/perl
 	virtual/os-headers
-	sys-apps/iproute"
+	sys-apps/iproute2"
 RDEPEND="sys-devel/gcc
 	tcsim? ( media-gfx/gnuplot )
 	dev-lang/perl
-	sys-apps/iproute"
+	sys-apps/iproute2"
 
 IPROUTE_PN="iproute"
 IPROUTE_PV="20010824"

@@ -1,10 +1,9 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.3 2004/04/24 10:37:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9l.ebuild,v 1.1 2004/04/24 10:37:30 robbat2 Exp $
 
-DESCRIPTION="Traffic Control Next Generation"
+DESCRIPTION="tcng - Traffic Control Next Generation"
 HOMEPAGE="http://tcng.sourceforge.net/"
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
@@ -15,11 +14,11 @@ IUSE="doc tcsim"
 # os-headers as it compiles stuff with them
 # gcc/binutils as it compiles stuff
 DEPEND_COMMON="dev-lang/perl
-	sys-apps/iproute2
-	net-dialup/linux-atm
-	virtual/os-headers
-	sys-devel/gcc
-	sys-devel/binutils"
+				sys-apps/iproute2
+				net-dialup/linux-atm
+				virtual/os-headers
+				sys-devel/gcc
+				sys-devel/binutils"
 
 DEPEND="doc? ( virtual/ghostscript app-text/tetex media-gfx/transfig )
 	sys-devel/make
@@ -43,7 +42,7 @@ IPROUTE_SRCFILE="iproute2-2.4.7-now-ss${IPROUTE_PV/20}.tar.gz"
 
 # we also need a vanilla kernel source to use with this
 KERNEL_PN=linux
-KERNEL_PV=2.4.23
+KERNEL_PV=2.4.25
 KERNEL_P=${KERNEL_PN}-${KERNEL_PV}
 
 # note this project does NOT use the SF mirroring system
@@ -60,7 +59,14 @@ src_unpack() {
 	# unpack tcng
 	unpack ${P}.tar.gz || die "failed to unpack tcng"
 	epatch ${FILESDIR}/${P}-fixes.patch
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${PN}-9i-gentoo.patch
+
+	for i in ${S}/tcsim/setup.*lib; do
+		sed -i 's/^mkdir /mkdir -p /g' ${i}
+	done
+
+	# add in the 2.4.26 kernel
+	sed -i '14iKVERSIONS=$KVERSIONS,2.4.26' ${S}/configure
 
 	if use tcsim; then
 		# unpack kernel
@@ -103,6 +109,8 @@ src_compile() {
 	# upstream package uses CFLAGS var for it's own uses
 	sed -i Common.make -e "s/^\(CC_OPTS=\)\(.*\)/\1${CFLAGS} #\2/"
 	unset CFLAGS
+	# tcsim fails to build in parallel make!
+	use tcsim && export MAKEOPTS="${MAKEOPTS} -j1"
 	emake || die
 	cd ${S}/doc
 	make tcng.txt
