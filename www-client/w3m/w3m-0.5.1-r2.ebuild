@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r2.ebuild,v 1.4 2004/11/25 11:31:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r2.ebuild,v 1.5 2005/02/12 09:26:25 usata Exp $
 
 inherit eutils
 
@@ -9,20 +9,19 @@ HOMEPAGE="http://w3m.sourceforge.net/
 	http://www.page.sannet.ne.jp/knabe/w3m/w3m.html"
 PATCH_PATH="http://www.page.sannet.ne.jp/knabe/w3m/"
 SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
-	async? ( ${PATCH_PATH}/${P}-async-1.diff.gz )
-	nls? ( ${PATCH_PATH}/w3m-cvs-1.916-nlsfix-2.diff )
+	async? ( ${PATCH_PATH}/w3m-cvs-1.942-async-7.diff.gz )
 	http://dev.gentoo.org/~usata/distfiles/${P}-cvs1.938.diff.gz"
 # w3m color patch:
 #	http://homepage3.nifty.com/slokar/w3m/${P}_256-005.patch.gz
 # w3n canna inline patch:
 #	canna? ( http://www.j10n.org/files/w3m-cvs-1.914-canna.patch )
 # w3m bookmark charset patch:
-#	nls? ( ${PATCH_PATH}/${W3M_CVS_P}-bkmknls-1.diff )
+#	nls? ( ${PATCH_PATH}/w3m-cvs-1.942-nls-2.diff.gz )
 
 LICENSE="w3m"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64 ~ia64 ~ppc-macos"
-IUSE="X gtk gtk2 imlib imlib2 xface ssl migemo gpm cjk nls lynxkeymap"
+IUSE="X gtk gtk2 imlib imlib2 xface ssl migemo gpm cjk nls lynxkeymap async"
 #IUSE="canna unicode"
 
 # canna? ( app-i18n/canna )
@@ -53,9 +52,7 @@ src_unpack() {
 	epatch ${DISTDIR}/${P}-cvs1.938.diff.gz
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 
-	#if use async ; then
-	#	epatch ${DISTDIR}/${P}-async-1.diff.gz
-	#fi
+	use async && epatch ${DISTDIR}/w3m-cvs-1.942-async-7.diff.gz
 
 	#epatch ${DISTDIR}/${P}_256-005.patch.gz
 	#use canna && epatch ${DISTDIR}/w3m-cvs-1.914-canna.patch
