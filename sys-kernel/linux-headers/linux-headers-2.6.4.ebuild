@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.4.ebuild,v 1.7 2004/04/12 21:28:36 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.4.ebuild,v 1.8 2004/04/14 22:01:01 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -109,13 +109,16 @@ src_install() {
 		# Check if generate-asm-sparc exists
 		if [ -a "${FILESDIR}/generate-asm-sparc" ]; then
 
-			# Just incase generate-asm-sparc isn't executable, make it so
-			if [ ! -x "${FILESDIR}/generate-asm-sparc" ]; then
-				chmod +x ${FILESDIR}/generate-asm-sparc
+			# Copy generate-asm-sparc into the sandox
+			cp ${FILESDIR}/generate-asm-sparc ${WORKDIR}/generate-asm-sparc
+
+			# Just in case generate-asm-sparc isn't executable, make it so
+			if [ ! -x "${WORKDIR}/generate-asm-sparc" ]; then
+				chmod +x ${WORKDIR}/generate-asm-sparc
 			fi
 
 			# Generate /usr/include/asm for sparc systems
-			${FILESDIR}/generate-asm-sparc ${D}/usr/include
+			${WORKDIR}/generate-asm-sparc ${D}/usr/include
 		else
 			eerror "${FILESDIR}/generate-asm-sparc doesn't exist!"
 			die
