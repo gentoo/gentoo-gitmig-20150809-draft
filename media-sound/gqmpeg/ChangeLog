@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gqmpeg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/ChangeLog,v 1.4 2003/02/12 07:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/ChangeLog,v 1.5 2003/06/25 20:46:19 mholzer Exp $
+
+*gqmpeg-0.20.0 (25 Jun 2003)
+
+  25 Jun 2003; Martin Holzer <mholzer@gentoo.org> gqmpeg-0.20.0.ebuild:
+  Version bumped. Closes #19017.
 
 *gqmpeg-0.19.0 (22 Oct 2002)
 
