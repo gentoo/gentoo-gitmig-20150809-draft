@@ -1,10 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom ryan@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcat/nc-110.ebuild,v 1.2 2001/05/15 20:48:02 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcat/netcat-110.ebuild,v 1.1 2001/05/18 19:52:37 achim Exp $
 
 A="nc110.tgz"
-S=${WORKDIR}/${P}
+S=${WORKDIR}/nc-${PV}
 DESCRIPTION="A network piping program"
 SRC_URI="http://www.l0pht.com/~weld/netcat/${A}"
 HOMEPAGE="http://www.l0pht.com/~weld/netcat"
