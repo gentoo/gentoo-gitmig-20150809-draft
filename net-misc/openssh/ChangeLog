@@ -1,37 +1,40 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.18 2002/10/18 08:30:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.19 2002/10/23 14:49:21 blizzy Exp $
+
+  23 Oct 2002; Maik Schreiber <blizzy@gentoo.org> openssh-3.5_p1.ebuild: Changed
+  "~x86" to "x86" in KEYWORDS.
 
 *openssh-3.5_p1 (18 Oct 2002)
 
-  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> openssh-3.5_p1.ebuild :
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> openssh-3.5_p1.ebuild:
   Version bump, found by fluxbox <fluxbox@cox.net> in bug #9262.
 
 *openssh-3.4_p1-r3 (04 July 2002)
 
-  25 Jul 2002; Nicholas Jones <carpaski@gentoo.org> openssh-3.4_p1-r3.ebuild :
+  25 Jul 2002; Nicholas Jones <carpaski@gentoo.org> openssh-3.4_p1-r3.ebuild:
 	
   Bopped Brandon on the head. Added -passwords to the end of --with-md5
   No version bump as this doesn't affect most people, and those who need it
   can just rsync and emerge.
 
-  09 Jul 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r3.ebuild :
+  09 Jul 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r3.ebuild:
 
   New revision enables md5 passwords, please test and let me know how it
   goes so I can unmask.  Thanks.
 
 *openssh-3.4_p1-r2 (04 July 2002)
 
-  09 Jul 2002; phoen][x <phoenix@gentoo.org> openssh-3.4_p1-r2.ebuild :
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> openssh-3.4_p1-r2.ebuild:
   Added KEYWORDS.
 
-  04 July 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r2.ebuild :
+  04 July 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r2.ebuild:
   Fixes problem of /var/empty being removed if immediately do emerge openssh
   emerge openssh.  Not an urgent upgrade, but recommended.
 
 *openssh-3.4_p1-r1 (02 July 2002)
 
-  02 July 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r1.ebuild :
+  02 July 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r1.ebuild:
   This closes bugs 4169, 4170, and 4193.  This new ebuild changes the sshd
   user from whatever it may be to UID 22, this shouldn't mean anything to most
   people because no scripts, nor programs use the sshd UID directly (for that
@@ -78,19 +81,19 @@
 
 *openssh-3.1_p1 (7 Mar 2002)
 
-  15 Mar 2002; Bruce A. Locke <blocke@shivan.org> files/sshd.rc6 files/sshd.rc5 :
+  15 Mar 2002; Bruce A. Locke <blocke@shivan.org> files/sshd.rc6, files/sshd.rc5:
   ssh1 keygen requires a new option in the initscripts
 
-  13 Mar 2002; M.Schlemmer <azarah@gentoo.org> openssh-3.1_p1-r1.ebuild :
+  13 Mar 2002; M.Schlemmer <azarah@gentoo.org> openssh-3.1_p1-r1.ebuild:
   Update rc-script not to fail on restart if there is open sessions.
 
-  7 Mar 2002; F.Meyndert <m0rpheus@gentoo.org> openssh-3.1_p1.ebuild :
+  7 Mar 2002; F.Meyndert <m0rpheus@gentoo.org> openssh-3.1_p1.ebuild:
   Updated openssh to version 3.1 that fixes a nasty off by one bug in all
   previous version. That caused a local root hole.
 
-*openssh-3.0.2_p1-r1 (1 Feb 2002)
+*openssh-3.0.2_p1-r1 (01 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog:
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
