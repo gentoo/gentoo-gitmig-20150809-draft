@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r2.ebuild,v 1.21 2004/05/23 23:24:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r2.ebuild,v 1.22 2004/05/23 23:30:38 vapier Exp $
 
 DESCRIPTION="Configure your serial ports with it"
 HOMEPAGE="http://setserial.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	econf || die
-	pmake setserial || die
+	emake setserial || die
 }
 
 src_install() {

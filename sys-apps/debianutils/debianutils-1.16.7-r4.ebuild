@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.6 2004/04/26 04:13:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.7 2004/05/23 23:30:16 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="static build"
 
 DEPEND="virtual/glibc"
@@ -38,9 +38,9 @@ src_unpack() {
 src_compile() {
 	if use static
 	then
-		pmake LDFLAGS=-static || die
+		emake LDFLAGS=-static || die
 	else
-		pmake || die
+		emake || die
 	fi
 }
 
