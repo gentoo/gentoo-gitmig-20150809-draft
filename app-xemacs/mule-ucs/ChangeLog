@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mule-ucs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-ucs/ChangeLog,v 1.4 2003/10/03 02:32:24 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-ucs/ChangeLog,v 1.5 2004/03/16 20:58:26 rac Exp $
+
+  16 Mar 2004; <rac@gentoo.org> metadata.xml, mule-ucs-1.04.ebuild:
+  keyword amd64
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> mule-ucs-1.04.ebuild:
   Stable on alpha
