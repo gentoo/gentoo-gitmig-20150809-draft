@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.6.ebuild,v 1.5 2004/03/22 15:42:07 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.6.ebuild,v 1.6 2004/06/20 20:41:54 zx Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/java-config-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 RDEPEND="virtual/python"
-KEYWORDS="x86 alpha ia64 amd64 sparc ppc ~hppa"
+KEYWORDS="x86 alpha ia64 amd64 sparc ppc hppa"
 IUSE=""
 
 src_install() {
