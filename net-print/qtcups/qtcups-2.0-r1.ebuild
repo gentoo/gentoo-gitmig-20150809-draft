@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/qtcups/qtcups-2.0-r1.ebuild,v 1.5 2002/07/14 20:41:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/qtcups/qtcups-2.0-r1.ebuild,v 1.6 2002/08/01 11:59:03 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="QT Frontend for the Common UNIX printing system"

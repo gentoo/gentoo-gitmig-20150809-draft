@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r4.ebuild,v 1.4 2002/07/16 04:54:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r4.ebuild,v 1.5 2002/08/01 11:59:03 seemant Exp $
 
 S=${WORKDIR}/lynx2-8-4
 DESCRIPTION="An excellent console-based web browser with ssl support"

@@ -1,4 +1,4 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Frank C. Barton <bartof@rpi.edu>
 # /home/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.5.ebuild,v 1.0 2002/07/10 09:52:39 pm Exp

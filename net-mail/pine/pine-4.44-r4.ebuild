@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r4.ebuild,v 1.3 2002/07/17 05:07:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r4.ebuild,v 1.4 2002/08/01 11:59:03 seemant Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
