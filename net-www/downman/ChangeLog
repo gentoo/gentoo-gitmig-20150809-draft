@@ -1,6 +1,10 @@
 # ChangeLog for net-www/downman
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/downman/ChangeLog,v 1.7 2004/12/29 21:07:26 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/downman/ChangeLog,v 1.8 2005/02/20 12:38:29 luckyduck Exp $
+
+  20 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +files/0.0.5-gcc34.patch,
+  downman-0.0.5.ebuild:
+  added patch for gcc3.4. fixes #82528
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

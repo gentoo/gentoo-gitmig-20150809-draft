@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/downman/downman-0.0.5.ebuild,v 1.6 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/downman/downman-0.0.5.ebuild,v 1.7 2005/02/20 12:38:29 luckyduck Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Download Manager (aka downman) is a suite of programs to download files"
 HOMEPAGE="http://downman.sourceforge.net"
@@ -21,3 +21,10 @@ DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/libxml2-2.0"
 
 DOCS="ABOUT-NLS AUTHORS ChangeLog COPYING README INSTALL NEWS"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PV}-gcc34.patch
+}
