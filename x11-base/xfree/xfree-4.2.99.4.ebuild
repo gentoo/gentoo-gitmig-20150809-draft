@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.4.ebuild,v 1.4 2003/02/05 11:30:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.4.ebuild,v 1.5 2003/02/09 22:49:48 lu_zero Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -803,6 +803,16 @@ pkg_postinst() {
 		einfo "  # emerge media-libs/glide-v3"
 		echo
 	fi
+	echo
+	ewarn "BEWARE 1:"
+	ewarn "This version of XFree won't work with ati-drivers-2.5.1-r1"
+	ewarn "if you are using them please unmerge ati-drivers"
+	ewarn " and emerge xfree-drm"
+	echo
+	ewarn "BEWARE 2:"
+	ewarn "If you experience font corruption on OpenOffice.org or similar"
+	ewarn "glitches please remake your XF86Config"
+	echo
 }
 
 pkg_postrm() {
