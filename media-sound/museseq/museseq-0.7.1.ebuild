@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1.ebuild,v 1.1 2005/02/01 22:51:32 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1.ebuild,v 1.2 2005/02/18 17:13:03 luckyduck Exp $
 
 inherit kde-functions gcc virtualx eutils
 need-qt 3
@@ -9,7 +9,7 @@ MY_P=${P/museseq/muse}
 MY_P=${MY_P/_/}
 
 DESCRIPTION="The Linux (midi) MUSic Editor (a sequencer)"
-SRC_URI="mirror://sourceforge/lmuse/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/lmuse/${MY_P}fixed.tar.bz2"
 HOMEPAGE="http://lmuse.sourceforge.net/"
 
 LICENSE="GPL-2"

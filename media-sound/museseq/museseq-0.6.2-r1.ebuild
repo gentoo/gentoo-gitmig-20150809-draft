@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.6 2005/01/09 22:19:14 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.7 2005/02/18 17:13:03 luckyduck Exp $
 
 IUSE="jack fluidsynth ladcca doc alsa"
 
@@ -33,7 +33,7 @@ src_unpack() {
 	sed -i "s/HAVE_JACK_JACK_H/HAVE_JACK/" widgets/audioconf.cpp
 	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" driver/alsaaudio.cpp
 	epatch ${FILESDIR}/${P}-fPIC.patch
-	epatch ${FILESDIR}/${P}-int2ptr.patch
+	epatch ${FILESDIR}/${P}-int2ptr.patch.gz
 	epatch ${FILESDIR}/${P}-memory.patch
 	epatch ${FILESDIR}/${P}-drumport.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
