@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/polarblog
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/ChangeLog,v 1.1 2004/08/28 11:31:02 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/ChangeLog,v 1.2 2004/08/28 12:22:06 rl03 Exp $
+
+  28 Aug 2004; Renat Lumpau <rl03@gentoo.org> polarblog-1.02.ebuild:
+  Don't rm docs, and cp -R selectively.
 
 *polarblog-1.02 (28 Aug 2004)
 
