@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/isdn4k-utils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.35 2004/12/23 22:12:34 mrness Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.36 2005/02/06 09:43:58 mrness Exp $
+
+  06 Feb 2005; Alin Nastac <mrness@gentoo.org>
+  -files/3.6_pre20041219/ip-down, -files/3.6_pre20041219/ip-up,
+  isdn4k-utils-3.6_pre20041219.ebuild:
+  Remove ip-up & ip-down scripts - using net-dialup/ppp scripts instead. Mark
+  as stable on x86. See bug #76641.
 
 *isdn4k-utils-3.6_pre20041219 (24 Dec 2004)
 
