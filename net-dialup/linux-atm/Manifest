@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f92b07928eca793c02ad9e56ef106b66 ChangeLog 816
+MD5 a0371081d8e80a52bc459b9a4db3bb98 ChangeLog 1007
 MD5 0a27d5257c7f3393651e06c91c3bdd0a linux-atm-2.4.1.ebuild 857
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 6a54ce48b2a9cb74b5b968847fe7a1ea files/digest-linux-atm-2.4.1 67
+MD5 92e79640e626c97e4e546417a69d6fd6 linux-atm-2.4.1-r1.ebuild 1005
 MD5 377f9a635f2f11c0d0e8b5c6b83d14d7 files/2.4.1-gcc34.patch 1175
+MD5 6a54ce48b2a9cb74b5b968847fe7a1ea files/digest-linux-atm-2.4.1 67
+MD5 6a54ce48b2a9cb74b5b968847fe7a1ea files/digest-linux-atm-2.4.1-r1 67
+MD5 2513dd16d6943f14795364d0d71aab50 files/2.4.1-uclibc.patch 497
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBVP2HHTu7gpaalycRAkqnAKCdqu4GG+XLREJrTFx9txzROwGXNACfeqbK
-8J1deStMFaUDT1XUpCIAgSs=
-=ltqo
+iD8DBQFBlQg3jtv59x0+BrURAkMuAJ9UtQEQw5TdQLfKcqoKsKdQC5Rs3ACgqsjj
+L7hUK6Lg7BsO4K58yl3vvZg=
+=PeQz
 -----END PGP SIGNATURE-----
