@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.31 2003/09/25 00:46:15 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.32 2003/09/25 05:44:20 rac Exp $
+
+*ExtUtils-MakeMaker-6.11-r1 (24 Sep 2003)
+
+  24 Sep 2003; <rac@gentoo.org> ExtUtils-MakeMaker-6.11-r1.ebuild,
+  ExtUtils-MakeMaker-6.15-r1.ebuild, ExtUtils-MakeMaker-6.16-r1.ebuild:
+  Attempt to fix DESTDIR again
 
   24 Sep 2003; <rac@gentoo.org> ExtUtils-MakeMaker-6.11.ebuild:
   mark x86 and amd64 - other arches may need this version stable quickly
