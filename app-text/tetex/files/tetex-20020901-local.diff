@@ -1,0 +1,24 @@
+diff -ru teTeX-src-beta-20020901/texk/kpathsea/texmf.in teTeX-src-beta-20020901-fixed/texk/kpathsea/texmf.in
+--- teTeX-src-beta-20020901/texk/kpathsea/texmf.in	Sun Sep  1 05:44:23 2002
++++ teTeX-src-beta-20020901-fixed/texk/kpathsea/texmf.in	Thu Sep 12 11:28:59 2002
+@@ -58,7 +58,7 @@
+ TEXMFMAIN = @texmf@
+ 
+ % A place for local additions to a "standard" texmf tree.  For example:
+-TEXMFLOCAL = @texmf@-local
++TEXMFLOCAL = /usr/local/share/texmf
+ 
+ % If defined, teTeX's texconfig stores modifications here (instead of the
+ % TEXMFMAIN tree).
+diff -ru teTeX-src-beta-20020901/texmf/web2c/texmf.cnf teTeX-src-beta-20020901-fixed/texmf/web2c/texmf.cnf
+--- teTeX-src-beta-20020901/texmf/web2c/texmf.cnf	Sun Sep  1 15:00:52 2002
++++ teTeX-src-beta-20020901-fixed/texmf/web2c/texmf.cnf	Thu Sep 12 11:31:19 2002
+@@ -58,7 +58,7 @@
+ TEXMFMAIN = /usr/local/teTeX/share/texmf
+ 
+ % A place for local additions to a "standard" texmf tree.  For example:
+-TEXMFLOCAL = /usr/local/teTeX/share/texmf-local
++TEXMFLOCAL = /usr/local/share/texmf
+ 
+ % If defined, teTeX's texconfig stores modifications here (instead of the
+ % TEXMFMAIN tree).
