@@ -1,6 +1,18 @@
-MD5 d4063879c00ffca25cb4bf86c6934c97 ChangeLog 1022
-MD5 e9ffe7893794c78f867fa5d907d9a1ca File-Temp-0.12.ebuild 620
-MD5 4e4e74f31679bf2ad34ae48c154e40bd File-Temp-0.14.ebuild 644
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a787a1781b43e141402ea740014b4796 ChangeLog 1174
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 e9ffe7893794c78f867fa5d907d9a1ca File-Temp-0.12.ebuild 620
+MD5 af02abdccbc0c07aeda3ca6fba708517 File-Temp-0.14.ebuild 641
+MD5 50ea04c639886cf98f71d6fecbeda1b6 File-Temp-0.16.ebuild 579
+MD5 222c236bc63a5223f6333ac0b8a23a74 files/digest-File-Temp-0.16 65
 MD5 8a558f899f968d36b3173ec8b830e5c8 files/digest-File-Temp-0.12 65
 MD5 a7c29fdf7d2b55c5a7dc99ac85c73a68 files/digest-File-Temp-0.14 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSe3OtG5z4I8BtQoRAoadAJ94mOSbzDmDpGy8L2IefUnPoQF3YQCffH/+
+RBnnKXdG/rlUpcMoadu0crg=
+=vjHy
+-----END PGP SIGNATURE-----
