@@ -5,9 +5,11 @@ MD5 3737f25e505457525feb06e460f91790 hppa-sources-2.4.21_p7.ebuild 1095
 MD5 2ff9de45472bbc0b821ca1af8dec454e hppa-sources-2.4.21_p8.ebuild 1498
 MD5 ede15d1dc00b4ab56374f197ab3c9b04 hppa-sources-2.4.21_p9.ebuild 1574
 MD5 4f813c843aeead2bc983383a932ea109 hppa-sources-2.4.21_p10.ebuild 1575
+MD5 feff753daa8805d3855be0633e14234c hppa-sources-2.4.21_p13.ebuild 1892
 MD5 605092c92ae7fda21bdfc646556c3318 files/digest-hppa-sources-2.4.21_p2 136
 MD5 b2a01f9d9202ffe4b10185dcc41f55ec files/digest-hppa-sources-2.4.21_p6 136
 MD5 9713ddfd2816df19fe5a221d409997d6 files/digest-hppa-sources-2.4.21_p7 136
 MD5 c16dd23afd0850e41877ee85a61a1a55 files/digest-hppa-sources-2.4.21_p8 202
 MD5 93220ee92a635bcde32a9c516ae5601c files/digest-hppa-sources-2.4.21_p9 267
 MD5 7743c939ccccf0343faed987e12b489b files/digest-hppa-sources-2.4.21_p10 334
+MD5 306724fa77532e2a73c383f7322f1e56 files/digest-hppa-sources-2.4.21_p13 469
