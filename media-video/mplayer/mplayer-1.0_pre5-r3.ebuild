@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.13 2004/11/09 15:07:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.14 2004/11/29 09:07:34 eradicator Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -71,7 +71,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 		)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
-	!mips? ( !hppa? ( !ia64? ( jack? ( >=media-libs/bio2jack-0.3-r1 ) ) ) )
+	!mips? ( !hppa? ( jack? ( >=media-libs/bio2jack-0.3-r1 ) ) )
 	xmms? ( media-sound/xmms )
 	>=sys-apps/portage-2.0.36
 	sys-libs/ncurses"
