@@ -1,9 +1,11 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.4 2002/07/14 19:20:19 aliz Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.5 2002/08/06 08:25:20 aliz Exp $
 
 *vcron-3.0.1-r1 (20 Apr 2002)
+
+  06 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> vcron-3.0.1.ebuild :
+  Updated homepage tag.
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> vcron-3.0.1.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
