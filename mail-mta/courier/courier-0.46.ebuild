@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/net-mail/courier/courier-0.41.0.ebuild
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.46.ebuild,v 1.2 2004/09/06 20:39:03 ciaranm Exp $
 
 inherit eutils
 
@@ -283,11 +283,7 @@ pkg_postinst() {
 	ewarn "hint: look for a line at the bottom of the file that looks like so"
 	ewarn "ESMTPDSTART=NO"
 	ewarn "and change it to YES for the services that you use"
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 1
+	ebeep 5
 }
 
 pkg_config() {
