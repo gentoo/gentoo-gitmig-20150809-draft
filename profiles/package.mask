@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <cselkirk@gentoo.org> (31 Aug 2002)
+# masked for testing
+=net-libs/libpcap-0.7.1-r1
+
 # <phoenix@gentoo.org> (31 Aug 2002)
 # masked for testing
 =app-emulation/wine-20020710-r2
