@@ -1,12 +1,15 @@
 # ChangeLog for net-misc/rp-l2tp
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: 
+# $Header:
+
+*rp-l2tp-0.3-r1 (05 Apr 2003)
+
+  05 Apr 2003; Donny Davies <woodchip@gentoo.org> rp-l2tp-0.3-r1.ebuild,
+  rp-l2tp-0.3.ebuild, files/rp-l2tpd-init:
+  Old patch had `$Id:' tag which got munged when committed to CVS.  This
+  one has the patchfile on the mirrors instead so it'll apply properly.
 
 *rp-l2tp-0.3 (24 Feb 2003)
-
-  05 Apr 2003; Donny Davies <woodchip@gentoo.org> files/rp-l2tp-0.3-gentoo.diff:
-  Patchfile had $Id: tag in it; munged that so it'll apply properly after being
-  commited to CVS.
 
   24 Feb 2003; Donny Davies <woodchip@gentoo.org> :
   Initial import, created by me.

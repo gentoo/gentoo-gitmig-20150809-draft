@@ -1,10 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rp-l2tp/rp-l2tp-0.3-r1.ebuild,v 1.1 2003/04/05 20:20:48 woodchip Exp $
+
+inherit eutils
 
 DESCRIPTION="RP-L2TP is a user-space implementation of L2TP for Linux and other UNIX systems"
 HOMEPAGE="http://sourceforge.net/projects/rp-l2tp/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${P}-gentoo.diff.bz2"
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
@@ -14,7 +17,7 @@ IUSE=""
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	patch -p1 <${FILESDIR}/${P}-gentoo.diff || die
+	epatch ../${P}-gentoo.diff
 }
 
 src_compile() {
