@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.1.ebuild,v 1.3 2004/11/05 19:22:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.1.ebuild,v 1.4 2004/11/08 00:20:33 motaboy Exp $
 
 inherit kde
 MY_PV=${PV}
@@ -66,7 +66,8 @@ SRC_URI="linguas_ar? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-ar-${P
 	linguas_uk? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-uk-${PV}.tar.bz2 )
 	linguas_uz? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-uz-${PV}.tar.bz2 )
 	linguas_zh_CN? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-zh_CN-${PV}.tar.bz2 )
-	linguas_zh_TW? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-zh_TW-${PV}.tar.bz2 )"
+	linguas_zh_TW? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-zh_TW-${PV}.tar.bz2 )
+	linguas_it? ( http://dev.gentoo.org/~motaboy/files/kde-i18n-3.3.1-patches.tar.bz2 )"
 
 src_unpack() {
 
@@ -80,6 +81,10 @@ src_unpack() {
 	fi
 
 	base_src_unpack unpack
+
+	hasq "it" ${LINGUAS} && epatch ${WORKDIR}/patches/kde-i18n-it-3.3.1.patch
+
+	rm -r ${WORKDIR}/patches/
 }
 
 src_compile() {

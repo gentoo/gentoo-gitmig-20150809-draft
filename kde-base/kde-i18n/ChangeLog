@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.39 2004/11/05 19:22:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.40 2004/11/08 00:20:33 motaboy Exp $
+
+  08 Nov 2004; Simone Gotti <motaboy@gentoo.org> kde-i18n-3.3.1.ebuild:
+  Added a patch to fix compilation problems for the italian localization.
+  Fixes bug #67674
 
   05 Nov 2004; Caleb Tennis <caleb@gentoo.org> kde-i18n-3.3.1.ebuild:
   x86 stable
