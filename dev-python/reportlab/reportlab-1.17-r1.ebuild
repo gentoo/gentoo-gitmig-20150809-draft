@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.17-r1.ebuild,v 1.1 2003/07/04 12:16:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.17-r1.ebuild,v 1.2 2003/07/04 12:23:30 liquidx Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.reportlab.com/"
 DEPEND="virtual/python
 	>=sys-libs/zlib-0.95
 	dev-python/Imaging
-	sys-apps/sed-4"
+	>=sys-apps/sed-4"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~sparc ~alpha"
