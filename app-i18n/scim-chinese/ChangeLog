@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-chinese
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/ChangeLog,v 1.9 2004/02/07 07:20:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/ChangeLog,v 1.10 2004/05/04 07:27:27 liquidx Exp $
+
+*scim-chinese-0.3.0 (04 May 2004)
+
+  04 May 2004; Alastair Tse <liquidx@gentoo.org> +scim-chinese-0.3.0.ebuild:
+  new GPL'ed version of scim-chinese (smart pinyin input). Ebuild submitted by
+  Ming Zhao <zhaoming@tsinghua.org.cn> (#49674)
 
 *scim-chinese-0.2.7 (07 Feb 2004)
 
