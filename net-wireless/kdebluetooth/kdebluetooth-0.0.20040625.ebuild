@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20040625.ebuild,v 1.1 2004/07/31 15:10:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20040625.ebuild,v 1.2 2004/07/31 16:02:21 carlo Exp $
 
 inherit kde
 
@@ -14,11 +14,9 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-libs/openobex-1
-	>=net-wireless/bluez-libs-2
-	>=net-wireless/bluez-sdp-1"
+	>=net-wireless/bluez-libs-2.7"
 RDEPEND=">=dev-libs/openobex-1
-	>=net-wireless/bluez-libs-2
-	>=net-wireless/bluez-sdp-1"
+	>=net-wireless/bluez-libs-2.7"
 need-kde 3
 
 pkg_postinst() {
