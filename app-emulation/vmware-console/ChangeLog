@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-console
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/ChangeLog,v 1.6 2004/06/24 22:36:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/ChangeLog,v 1.7 2004/07/14 11:52:17 jmglov Exp $
+
+*vmware-console-3.1.0.9089 (14 Jul 2004)
+
+  14 Jul 2004; Josh Glover <jmglov@gentoo.org> metadata.xml,
+  vmware-console-3.1.0.9089.ebuild, files/99vmware-console:
+  Version bump; submitted by Jacob Gemmell in bug #47253
 
   03 Jun 2004; <jmglov@gentoo.org> metadata.xml,
   vmware-console-3.0.0.7592.ebuild:

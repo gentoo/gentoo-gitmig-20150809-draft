@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-3.0.0.7592.ebuild,v 1.5 2004/07/14 11:52:17 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-3.1.0.9089.ebuild,v 1.1 2004/07/14 11:52:17 jmglov Exp $
 
 MY_PN="VMware-console"
 MY_PV=`echo ${PV} | sed -e 's/\.\([0-9]\+\)$/-\1/'`
@@ -15,8 +15,8 @@ SRC_URI="${FN}"
 LICENSE="vmware"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="esx"
 RESTRICT="fetch nostrip"
+IUSE="esx"
 
 DEPEND="virtual/glibc
 	virtual/x11"
@@ -25,7 +25,7 @@ pkg_nofetch() {
 	einfo "Please obtain ${FN} and place it in ${DISTDIR}"
 }
 
-src_install() {
+src_install () {
 	# Set up config database
 	echo 'libdir = "/opt/vmware-console/lib"' >etc/config
 	cat >etc/locations <<EOF
@@ -67,6 +67,10 @@ EOF
 	dodir /etc
 	dosym /opt/vmware-console/etc /etc/vmware-console
 
+	# Setup environment to include our bin directory in the PATH
+	insinto /etc/env.d
+	doins ${FILESDIR}/99vmware-console
+
 	# We already installed the HTML docs, so we can use symlinks
 	dodir /opt/vmware-console/lib
 	rm -rf lib/help lib/help-guestinstall lib/help-manual
@@ -78,11 +82,15 @@ EOF
 
 pkg_postinst() {
 	if use esx; then
+		echo
 		ewarn "By setting the 'esx' USE flag, the documentation that is accessed from the Help menu will be for ESX Server"
 		ewarn "You can still access the GSX Server documentation in /usr/share/doc/${P}/html"
+		echo
 	else
+		echo
 		ewarn "The documentation that is accessed from the Help menu will be for GSX Server"
 		ewarn "You may select ESX Server documentation by setting the 'esx' USE flag"
 		ewarn "You can still access the ESX Server documentation in /usr/share/doc/${P}/html"
+		echo
 	fi
 }

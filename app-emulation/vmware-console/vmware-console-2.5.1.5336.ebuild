@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-2.5.1.5336.ebuild,v 1.4 2004/06/27 23:08:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-2.5.1.5336.ebuild,v 1.5 2004/07/14 11:52:17 jmglov Exp $
 
 MY_PN="VMware-console-2.5.1-5336.tar.gz"
 S="${WORKDIR}/vmware-console-distrib"
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE=""
 RESTRICT="fetch nostrip"
 
-DEPEND="virtual/libc
+DEPEND="virtual/glibc
 	virtual/x11"
 
 pkg_nofetch() {
