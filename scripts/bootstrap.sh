@@ -1,15 +1,12 @@
 #!/bin/sh
-
-LIST=$1
+MYPROFILE=default-1.0_rc6
 
 #We really need to upgrade baselayout now that it's possible:
-myBASELAYOUT=`grep "sys-apps/baselayout" $1`
-myPORTAGE=`grep "sys-apps/portage" $1`
-myGETTEXT=`grep "sys-devel/gettext" $1`
-myBINUTILS=`grep "sys-devel/binutils" $1`
-myGCC=`grep "sys-devel/gcc" $1`
-myGLIBC=`grep "sys-libs/glibc" $1`
-myTEXINFO=`grep "sys-apps/texinfo" $1`
+myBASELAYOUT=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-apps/baselayout | sed 's:^\*::'`
+myPORTAGE=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-apps/portage | sed 's:^\*::'`
+myGETTEXT=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-devel/gettext | sed 's:^\*::'`
+myBINUTILS=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-devel/binutils | sed 's:^\*::'`
+myGCC=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-devel/gcc | sed 's:^\*::'`
 
 echo "Using $myBASELAYOUT"
 echo "Using $myPORTAGE"
@@ -42,6 +39,6 @@ emerge $myBASELAYOUT $myBINUTILS $myGCC $myGETTEXT || cleanup 1
 #make.conf has been overwritten, so we explicitly export our original settings
 export USE="$ORIGUSE"
 # This line should no longer be required
-emerge $myGLIBC $myGETTEXT $myBINUTILS $myGCC $myTEXINFO || cleanup 1
+emerge $myGLIBC $myGETTEXT $myBINUTILS $myGCC || cleanup 1
 #restore original make.conf
 cleanup 0
