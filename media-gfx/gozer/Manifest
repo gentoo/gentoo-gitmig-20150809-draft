@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85ed00fd4b1a5125374756503af6aa01 ChangeLog 873
-MD5 2fe9d1773b621ea29f8d2b3cd6166f56 gozer-0.7-r1.ebuild 607
+MD5 11ba7a7fb313af8d50d3cbdcd1455a98 ChangeLog 956
+MD5 9a374c3b290f46415c89151469310a54 gozer-0.7-r1.ebuild 611
 MD5 afe60e5504a333966022a8a15093db9d files/digest-gozer-0.7-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA9JsCHTu7gpaalycRAjm0AJsEHZn59yDPefkEAUOrwhatxuBGiwCfYhfa
-YDJd9bomK1q9SB3izPshMUQ=
-=IhAc
------END PGP SIGNATURE-----
