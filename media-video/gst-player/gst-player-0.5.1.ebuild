@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND=">=media-libs/gstreamer-0.6
-	>=media-libs/gst-plugins-0.6
+RDEPEND=">=media-libs/gstreamer-0.6.1
+	>=media-libs/gst-plugins-0.6.1
 	>=x11-libs/gtk+-2.2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gconf-1.2
