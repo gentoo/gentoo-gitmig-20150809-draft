@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r6.ebuild,v 1.1 2002/12/31 04:36:56 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r6.ebuild,v 1.2 2003/02/10 16:58:21 gmsoft Exp $
 
 inherit libtool flag-o-matic 
 inherit sgml-catalog
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc
 RDEPEND="virtual/glibc
 	app-text/sgml-common"
 
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 src_compile() {
 	# Please note!  Opts are disabled.  If you know what you're doing
