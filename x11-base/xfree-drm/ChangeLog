@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.49 2004/01/19 07:20:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.50 2004/01/23 17:15:05 spyderous Exp $
+
+  23 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r7.ebuild:
+  Marking stable on x86. It's been in testing for a month and a half without a
+  whisper. Keep in mind that the gatos USE flag only works in combination with
+  the gatos USE flag on 4.3.0-r4 (soon to be released) and the ati-gatos
+  package.
 
   19 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r2.ebuild, xfree-drm-4.3.0-r6.ebuild,
