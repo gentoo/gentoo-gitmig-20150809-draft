@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-2.1-r1.ebuild,v 1.1 2002/11/02 22:04:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-2.1-r1.ebuild,v 1.2 2002/11/05 03:00:49 strider Exp $
 
 S=${WORKDIR}/${PN}-${PV}-src
 DESCRIPTION="Jakarta-Commons Collections Component"
@@ -12,7 +12,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86"
 IUSE="jikes junit"
 
 src_compile() {
