@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.105 2005/02/11 16:35:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.106 2005/02/11 16:43:59 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -23,23 +23,6 @@ kde-base/kdeaccessibility kde-base/ksayit
 kde-base/kdeaddons kde-base/atlantikdesigner
 kde-base/kdeaddons kde-base/kaddressbook-plugins
 kde-base/kdeaddons kde-base/kate-plugins
-kde-base/kdeaddons kde-base/kate-cppsymbolviewer
-kde-base/kdeaddons kde-base/kate-filelistloader
-kde-base/kdeaddons kde-base/kate-filetemplates
-kde-base/kdeaddons kde-base/kate-helloworld
-kde-base/kdeaddons kde-base/kate-htmltools
-kde-base/kdeaddons kde-base/kate-insertcommand
-kde-base/kdeaddons kde-base/kate-kjswrapper
-kde-base/kdeaddons kde-base/kate-kpybrowser
-kde-base/kdeaddons kde-base/kate-make
-kde-base/kdeaddons kde-base/kate-modeline
-kde-base/kdeaddons kde-base/kate-openheader
-kde-base/kdeaddons kde-base/kate-scripts
-kde-base/kdeaddons kde-base/kate-snippets
-kde-base/kdeaddons kde-base/kate-tabbarextension
-kde-base/kdeaddons kde-base/kate-textfilter
-kde-base/kdeaddons kde-base/kate-xmlcheck
-kde-base/kdeaddons kde-base/kate-xmltools
 kde-base/kdeaddons kde-base/kdeaddons-docs-kate-plugins
 kde-base/kdeaddons kde-base/kdeaddons-docs-kicker-applets
 kde-base/kdeaddons kde-base/kdeaddons-docs-konq-plugins
