@@ -451,13 +451,6 @@ dev-java/sun-j2sdk
 # added -r1, threads and fixes to ebuild - 08/10/02
 >=sys-devel/perl-5.8.0
 
-# <seemant@gentoo.org> (27 Aug 2002)
-# masked because there is a FREEZE, and things should be tested!
-dev-util/rats
-net-im/linphone
-net-libs/libosip
-dev-perl/CDDB-File
-
 # <spider@gentoo.org> (26 Aug 2002)
 # Masked for testing -- tore out the broken id3lib included and
 # added the final + patches to make it work
@@ -477,11 +470,6 @@ dev-perl/CDDB-File
 # binary packages (Win4Lin and Realplayer to name a few)
 =sys-libs/glibc-2.2.5-r8
 
-
-# <seemant@gentoo.org> (23 Aug 2002)
-# masked for testing.  x3270 for version bump, and xmms for removal of avi
-# stuff, gpgme for version bump.
-=net-misc/x3270-3.2.19
 
 # <danarmak@gentoo.org> (22 Aug 2002)
 # kde 3.1 beta1: masked permanently; some people like prereleases
@@ -519,10 +507,6 @@ x11-libs/qt-embedded
 # Masked for testing
 >=sys-apps/quota-3.04
 
-# <seemant@gentoo.org> (16 Aug 2002)
-# Masked for testing
-=app-admin/modlogan-0.7.18
-
 # <blizzy@gentoo.org> (14 Aug 2002)
 # masked since there doesn't seem to be a download location
 =net-misc/netstat-nat-1.3
@@ -545,10 +529,6 @@ x11-libs/qt-embedded
 # 08/13/02 fixed more hardcoded values 
 # in default Makefile
 =dev-perl/SGMLSpm-1.03-r2
-
-# <seemant@gentoo.org> (05 Aug 2002)
-# masked for testing
-=net-analyzer/rrdtool-1.0.39
 
 # Leonardo Boshell <leonardop@gentoo.org> (04 Aug 2002)
 # These packages have been replaced with the new gtk-engines-* form
