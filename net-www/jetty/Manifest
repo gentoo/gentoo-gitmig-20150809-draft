@@ -1,8 +1,18 @@
-MD5 def37ff374d0646d9ad8837bc78e8ed5 jetty-4.2.19.ebuild 3066
-MD5 435752924c9ad1f28406a83a52383f6e ChangeLog 784
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0165aa0d9bdc5a681e58455c84a6074d jetty-4.2.19.ebuild 2693
+MD5 c18dfc0edbf583c91dc39a6c0395f208 ChangeLog 882
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 0395650cdf6ad11208dcddb344d31e7b files/digest-jetty-4.2.19 70
 MD5 c06bb0261951f980b4c2609682d49972 files/4.2.19/21jetty 52
 MD5 a381ae9ba82a2b10ea75e22acfafeedc files/4.2.19/jetty 948
 MD5 0ab3a07453141d8fab987dcd1f0cfd9e files/4.2.19/jetty.conf 41
 MD5 5c60daab6efd3ff566ca07e68c8f6556 files/4.2.19/jetty.init 1110
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBBjuu/rLF9B432nYRAmHuAKDO9UZaA9udhje8twh82cunOp4F3wCdHvMR
+eKwrUoyl0zEXeY6l+btqUIw=
+=DvCU
+-----END PGP SIGNATURE-----

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jetty/jetty-4.2.19.ebuild,v 1.2 2004/06/25 00:56:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jetty/jetty-4.2.19.ebuild,v 1.3 2004/07/27 11:23:54 axxo Exp $
+
+inherit eutils
 
 DESCRIPTION="A Lightweight Servlet Engine"
 SRC_URI="http://dl.sourceforge.net/sourceforge/jetty/${PN/j/J}-${PV}-all.tar.gz"
@@ -10,22 +12,20 @@ LICENSE="Apache-1.1"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.2
 		dev-java/ant"
+IUSE=""
 
 S=${WORKDIR}/Jetty-${PV}
 
-pkg_setup() {
-	if ! groupmod jetty ; then
-		groupadd -g 365 jetty || die "problem adding group jetty, gid 365"
-	fi
-	if ! id jetty; then
-		useradd -u 365 -g jetty -s /bin/bash -d /opt/jetty -c "Jetty Web Application Container" jetty || die "problem adding user jetty, uid 365"
-	fi
+pkg_preinst() {
+	enewgroup jetty
+	enewuser jetty -1 /bin/bash /opt/jetty jetty
+	chown -R jetty:jetty ${D}
 }
 
 src_install() {
 	JETTY_HOME="/opt/jetty"
 	INSTALLING="yes"
-	DIROPTIONS="--mode=0750 --owner=jetty --group=jetty"
+	diropts -m0750
 
 	# Create directories
 	dodir ${JETTY_HOME}
@@ -34,8 +34,6 @@ src_install() {
 	dodir /var/log/${PN}
 	touch ${D}/var/log/${PN}/jetty.log
 	keepdir /var/log/${PN}
-
-	cd ${S}
 
 	# INIT SCRIPTS AND ENV
 	insinto /etc/init.d
@@ -58,8 +56,6 @@ src_install() {
 	dohtml *.html
 
 	chmod u+x ${S}/bin/jetty.sh
-	chown -R jetty:jetty ${S}
-	DIROPTIONS="--mode=0750 --owner=jetty --group=jetty"
 
 	ant
 	cp -Rdp * ${D}/${JETTY_HOME}
@@ -92,7 +88,7 @@ pkg_postinst() {
 	einfo " "
 	einfo " NETWORK CONFIGURATION:"
 	einfo " By default, Jetty runs on port 8080.  You can change this"
-	einfo " value by setting ${JETTY_PORT} in /etc/conf.d/jetty ."
+	einfo " value by setting JETTY_PORT in /etc/conf.d/jetty ."
 	einfo " "
 	einfo " To test Jetty while it's running, point your web browser to:"
 	einfo " http://localhost:8080/"
@@ -101,6 +97,4 @@ pkg_postinst() {
 	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	einfo " may not get seen. Thank you!"
 	einfo
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	sleep 10
 }
