@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.52 2004/09/03 18:54:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.53 2004/09/05 12:06:49 dsd Exp $
+
+*ck-sources-2.6.8.1-r6 (05 Sep 2004)
+
+  05 Sep 2004; Daniel Drake <dsd@gentoo.org> ck-sources-2.4.26-r1.ebuild,
+  ck-sources-2.6.8.1-r5.ebuild, ck-sources-2.6.8.1-r6.ebuild:
+  2.4.26-r1 stable on x86, and version bump to 2.6.8.1-r6 thanks to affinity
+  <waffinity@gmail.com> in bug #62731.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   ck-sources-2.6.8.1-r5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.26-r1.ebuild,v 1.8 2004/08/09 22:51:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.26-r1.ebuild,v 1.9 2004/09/05 12:06:49 dsd Exp $
 
 IUSE=""
 
@@ -46,7 +46,7 @@ fi
 DESCRIPTION="Full sources for the Stock Linux kernel Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
 
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 SLOT="${KV}"
 
 src_unpack() {
