@@ -3,11 +3,11 @@ MD5 dd23c6c6f8cdaeff6319e358601547be apache-1.3.29-r2.ebuild 7144
 MD5 9d7d4e87f62b4c1667fb9016fd36b9d9 apache-1.3.31.ebuild 6701
 MD5 b5761918f0ae5bd1e2eda8c3b259dc65 apache-2.0.49-r1.ebuild 12505
 MD5 738de16a708fdae922876faebfa4ddd7 apache-2.0.48-r4.ebuild 12398
-MD5 0c65f2702126dd400d1ef92c9294be99 apache-2.0.49-r3.ebuild 12819
+MD5 49e75f661e5197d265ea264a3100a734 apache-2.0.49-r3.ebuild 12818
 MD5 e0f991e03523c04fc281041e5a6c88c6 apache-1.3.29-r1.ebuild 7442
 MD5 393a81b82d3926a4118bc16e885c57f6 apache-2.0.49.ebuild 12811
-MD5 e9cf79f0c3f368a15d18e95c7ac4474d apache-1.3.31-r1.ebuild 6710
-MD5 f903f354ee4328a834784e36b0c54e6b ChangeLog 33932
+MD5 c57c6cdcf528ca5d01fa13e8e8436c5e apache-1.3.31-r1.ebuild 6703
+MD5 adf3ec9fe9b5df902820a0b59b70c429 ChangeLog 34054
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 d4b8a4908870107e15cc1edbd0ec6ebb files/apache-1.3.29_mod_auth_db.patch 729
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
