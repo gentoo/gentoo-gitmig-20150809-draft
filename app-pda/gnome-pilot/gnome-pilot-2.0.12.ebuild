@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.12.ebuild,v 1.1 2004/09/04 01:56:33 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.12.ebuild,v 1.2 2004/09/22 00:20:52 liquidx Exp $
 
 inherit gnome2 eutils
 
-DESCRIPTION="Gnome Pilot apps"
+DESCRIPTION="Gnome Palm Pilot and Palm OS Device Syncing Library"
 HOMEPAGE="http://www.gnome.org/projects/gnome-pilot/"
 
 IUSE=""
@@ -30,3 +30,10 @@ G2CONF="${G2CONF} --enable-usb --enable-network --enable-pilotlinktest"
 
 DOCS="AUTHORS COPYING* ChangeLog README NEWS"
 SCROLLKEEPER_UPDATE="0"
+
+src_unpack() {
+	unpack ${A}
+	
+	cd ${S}
+	epatch ${FILESDIR}/${P}-zire31.patch
+}			 
