@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r1.ebuild,v 1.5 2004/11/08 05:42:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r1.ebuild,v 1.6 2004/11/16 04:56:31 vapier Exp $
 
-inherit eutils flag-o-matic kernel-mod
+inherit eutils flag-o-matic toolchain-funcs kernel-mod
 
 DESCRIPTION="A library for running svga graphics on the console"
 HOMEPAGE="http://www.svgalib.org/"
@@ -43,10 +43,14 @@ src_unpack() {
 
 	# PCI functions have been renamed with newer kernels #69580
 	epatch ${FILESDIR}/${P}-pci-get-class.patch
+
+	# Link like the other packages
+	sed -i 's:$(FLAGS):$(CFLAGS) $(LDFLAGS):' demos/Makefile || die
 }
 
 src_compile() {
 	filter-flags -fPIC
+	export CC="$(tc-getCC)"
 
 	# First build static
 	make OPTIMIZE="${CFLAGS}" static || die "Failed to build static libraries!"
