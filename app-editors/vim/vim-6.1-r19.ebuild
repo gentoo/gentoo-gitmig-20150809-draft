@@ -1,10 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r19.ebuild,v 1.7 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r19.ebuild,v 1.8 2003/03/13 22:18:23 seemant Exp $
 
 IUSE="nls perl python ruby tcltk gpm X"
 
-VIMPATCH="vimpatch-1-300.tar.bz2"
+VIMPATCH="300"
+EXCLUDE_PATCH="093 100 119 121 126 138 152 164 258 \
+304 314 322 334 335 340 346 352 353 354 355 356 374"
+
+use nls || EXCLUDE_PATCH="${EXCLUDE_PATCH} 295 301"
+
 inherit vim
 
 DESCRIPTION="Vi IMproved!"
@@ -52,10 +57,10 @@ src_compile() {
 	#
 	# Build a nogui version, this will install as /usr/bin/vim
 	#
-	./configure \
-		--prefix=/usr --mandir=/usr/share/man --host=$CHOST \
-		--with-features=huge --enable-cscope $myconf \
+	econf \
 		--enable-gui=no \
+		--with-features=huge \
+		--enable-cscope ${myconf} \
 		|| die "vim configure failed"
 
 	# move config files to /etc/vim/
@@ -78,10 +83,11 @@ src_install() {
 	
 	# Default vimrc
 	insinto /etc/vim/
-	doins ${FILESDIR}/vimrc
+	doins ${WORKDIR}/gentoo/vimrc
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
+	einfo
 }

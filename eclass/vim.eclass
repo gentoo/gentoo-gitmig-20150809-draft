@@ -1,49 +1,60 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.7 2003/03/12 06:45:49 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.8 2003/03/13 22:18:23 seemant Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
 #
 # Ripped from the vim ebuilds. src_compile and install
 # should be integrated in at some point
 
+inherit eutils
+
 # Calculate the version based on the name of the ebuild
 vim_version="${PV%_pre*}"
 vim_pre="${PV##*_pre}"
 
-if [ "$vim_version" = "$vim_pre" ]; then
+if [ "${vim_version}" = "${vim_pre}" ]; then
 	# Final releases prior to 6.0 include a dash and decimal point in
 	# the directory name
 	if [ "${vim_version%%.*}" -lt 6 ]; then
-		S="$WORKDIR/vim-$vim_version"
+		S="$WORKDIR/vim-${vim_version}"
 	else
 		S="$WORKDIR/vim${vim_version//.}"
 	fi
 	vim_letters=
-	A="vim-$vim_version.tar.bz2"
-	SRC_URI="ftp://ftp.vim.org/pub/vim/unix/$A
-			 ftp://ftp.us.vim.org/pub/vim/unix/$A
-			 http://www.ibiblio.org/gentoo/distfiles/${VIMPATCH}"
-elif [ "$vim_pre" -lt 27 ]; then
+	MY_P="vim-${vim_version}"
+	SRC_URI="ftp://ftp.vim.org/pub/vim/unix/${MY_P}.tar.bz2
+		ftp://ftp.us.vim.org/pub/vim/unix/${MY_P}.tar.bz2"
+#		ftp://ftp.vim.org/pub/vim/extra/${MY_P}-extra.tar.gz"
+elif [ "${vim_pre}" -lt 27 ]; then
 	# Handle (prerelease) versions with one trailing letter
-	vim_letters=`echo $vim_pre | awk '{printf "%c", $0+96}'`
-	S="$WORKDIR/vim${vim_version//.}$vim_letters"
-	A="vim-$vim_version$vim_letters.tar.bz2"
-	SRC_URI="ftp://ftp.vim.org/pub/vim/unreleased/unix/$A
-			 ftp://ftp.us.vim.org/pub/vim/unreleased/unix/$A
-			 http://www.ibiblio.org/gentoo/distfiles/${VIMPATCH}"
+	vim_letters=`echo ${vim_pre} | awk '{printf "%c", $0+96}'`
+	S="$WORKDIR/vim${vim_version//.}${vim_letters}"
+	MY_P="vim-${vim_version}${vim_letters}"
+	SRC_URI="ftp://ftp.vim.org/pub/vim/unreleased/unix/${MY_P}.tar.bz2
+		ftp://ftp.us.vim.org/pub/vim/unreleased/unix/${MY_P}.tar.bz2"
+#		ftp://ftp.vim.org/pub/vim/extra/${MY_P}-extra.tar.gz"
 
-elif [ "$vim_pre" -lt 703 ]; then
+elif [ "${vim_pre}" -lt 703 ]; then
 	# Handle (prerelease) versions with two trailing letters
-	vim_letters=`echo $vim_pre | awk '{printf "%c%c", $0/26+96, $0%26+96}'`
-	S="$WORKDIR/vim${vim_version//.}$vim_letters"
-	A="vim-$vim_version$vim_letters.tar.bz2"
-	SRC_URI="ftp://ftp.vim.org/pub/vim/unreleased/unix/$A
-			 ftp://ftp.us.vim.org/pub/vim/unreleased/unix/$A
-			 http://www.ibiblio.org/gentoo/distfiles/${VIMPATCH}"
+	vim_letters=`echo ${vim_pre} | awk '{printf "%c%c", $0/26+96, $0%26+96}'`
+	S="$WORKDIR/vim${vim_version//.}${vim_letters}"
+	MY_P="vim-${vim_version}${vim_letters}"
+	SRC_URI="ftp://ftp.vim.org/pub/vim/unreleased/unix/${MY_P}.tar.bz2
+		ftp://ftp.us.vim.org/pub/vim/unreleased/unix/${MY_P}.tar.bz2"
+#		ftp://ftp.vim.org/pub/vim/extra/${MY_P}-extra.tar.gz"
 else
 	die "Eek!  I don't know how to interpret the version!"
 fi
+
+[ ! -z "${VIMPATCH}" ] && \
+	SRC_URI="${SRC_URI}
+		http://cvs.gentoo.org/~seemant/vim-${PV}-patches-001-${VIMPATCH}.tar.bz2
+		mirror://gentoo/vim-${PV}-patches-001-${VIMPATCH}.tar.bz2"
+
+SRC_URI="${SRC_URI}
+	mirror://vim-${PV}-gentoo-patches.tar.bz2
+	http://cvs.gentoo.org/~seemant/vim-${PV}-gentoo-patches.tar.bz2"
 
 LANG="vim-${vim_version}-lang.tar.gz"
 if [ ! -z "${LANG}" ]; then
@@ -54,46 +65,142 @@ HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
 
+epatch_prep() {
+	
+	ebegin "Removing superfluous patches..."
+	awk '/\(extra\).* Win32:|\(extra\) MS-DOS:|VMS:|\(extra\) BC5:|\(extra\) Mac:/ {print $2}' ${WORKDIR}/README | \
+		xargs -i rm -f ${WORKDIR}/vimpatches/{}.gz
+
+	for i in ${EXCLUDE_PATCH}
+	do
+		rm -f ${WORKDIR}/vimpatches/${PV}.${i}.gz
+	done
+
+	eend $?
+}
+
+
 src_unpack() {
 	unpack ${A}
-	use nls && unpack ${LANG}
 	# Fixup a script to use awk instead of nawk
 	cd ${S}/runtime/tools
 	mv mve.awk mve.awk.old
 	( read l; echo "#!/usr/bin/awk -f"; cat ) <mve.awk.old >mve.awk
-	# Another set of patch's borrowed from src rpm to fix syntax error's etc.
-	cd ${WORKDIR}
-	tar xvjf  ${FILESDIR}/vimpatch.tar.bz2 
-	cd $S
-	patch -p1 < ${WORKDIR}/vim-4.2-speed_t.patch || die
-	patch -p1 < ${WORKDIR}/vim-5.1-vimnotvi.patch || die
-	patch -p1 < ${WORKDIR}/vim-5.6a-paths.patch || die
-	patch -p1 < ${WORKDIR}/vim-6.0-fixkeys.patch || die
-	patch -p1 < ${WORKDIR}/vim-6.0-specsyntax.patch || die
-	patch -p1 < ${WORKDIR}/vim-6.0r-crv.patch || die
-			
-	cd ${WORKDIR}
-	tar xvjf ${DISTDIR}/${VIMPATCH}
-	cd ${S}
-	
+
 	# Apply any patches available for this version
-	local patches=`echo ${WORKDIR}/${PV}.[0-9][0-9][0-9]`
-	case "$patches" in
-		*\]) 
-			;; # globbing didn't work; no patches available
-		*)
-			cd $S
-			for a in $patches; do
-				echo -n "Applying patch $a..."
-				patch -p0 < $a > /dev/null || die
-				echo "OK"
-			done
-			;;
-	esac
-	
-	# Also apply the ebuild syntax patch, until this is in Vim proper
-	cd $S/runtime
-	patch -f -p0 < ${FILESDIR}/ebuild.patch
+	cd ${S}
+	epatch_prep
+
+	EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
+		epatch ${WORKDIR}/vimpatches/
+
+	# Another set of patch's borrowed from src rpm to fix syntax error's etc.
+	cd ${S}
+	EPATCH_SUFFIX="" \
+		EPATCH_FORCE="yes" \
+		epatch ${WORKDIR}/gentoo/patches
+}
+
+src_compile() {
+	local myconf
+	local guiconf
+	myconf="--with-features=big --enable-multibyte"
+	use nls	|| myconf="${myconf} --disable-nls"
+	use perl   && myconf="${myconf} --enable-perlinterp"
+	use python && myconf="${myconf} --enable-pythoninterp"
+	use ruby   && myconf="${myconf} --enable-rubyinterp"
+
+# tclinterp is BROKEN.  See note above DEPEND=
+#   use tcltk  && myconf="$myconf --enable-tclinterp"
+
+# Added back gpm for temporary will remove if necessary, I think that I
+# have
+# fixed most of gpm so it should be fine.
+	use gpm	|| myconf="${myconf} --disable-gpm"
+
+	# the console vim will change the caption of a terminal in X.
+	# the configure script should autodetect X being installed, so
+	# we'll specifically turn it off if X is not in the USE vars.
+	# -rphillips
+	use X \
+		&& myconf="${myconf} --with-x" \
+		 || myconf="${myconf} --without-x"
+
+	# This should fix a sandbox violation.
+	for file in /dev/pty/s*
+	do
+		addwrite $file
+	done
+
+
+	if [ "${EGUI_ENABLE}" = "yes" ]
+	then
+		myconf="${myconf} --with-vim-name=gvim --with-x"
+		if use gnome; then
+			myconf="${myconf} --enable-gui=gnome"
+		elif use gtk; then
+			myconf="${myconf} --enable-gui=gtk"
+		else
+			myconf="${myconf} --enable-gui=athena"
+		fi
+	else
+		myconf="${myconf} --enable-gui=no"
+	fi
+
+
+	econf \
+		--with-features=huge \
+		--enable-cscope ${myconf} \
+		|| die "vim configure failed"
+
+	# move config files to /etc/vim/
+	echo "#define SYS_VIMRC_FILE \"/etc/vim/vimrc\"" \
+		>>${WORKDIR}/vim61/src/feature.h
+	echo "#define SYS_GVIMRC_FILE \"/etc/vim/gvimrc\"" \
+		>>${WORKDIR}/vim61/src/feature.h
+
+	# Parallel make does not work
+	make || die "vim make failed"
+}
+
+src_install() {
+
+	if [ "${EGUI_ENABLE}" = "yes" ]
+	then
+		dobin src/gvim
+		dosym gvim /usr/bin/gvimdiff
+		insinto /etc/vim
+		doins ${FILESDIR}/gvimrc
+	else
+		dobin src/vim
+		ln -s vim ${D}/usr/bin/vimdiff
+		ln -s vim ${D}/usr/bin/rvim
+		ln -s vim  ${D}/usr/bin/ex
+		ln -s vim  ${D}/usr/bin/view
+		ln -s vim  ${D}/usr/bin/rview
+
+		# Default vimrc
+		insinto /etc/vim/
+		doins ${FILESDIR}/vimrc
+	fi
 
 }
 
+pkg_postinst() {
+	einfo
+	if [ "${EGUI_ENABLE}" = "yes" ]
+	then
+		einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
+		einfo ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
+		einfo ":set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1"
+		einfo
+		einfo "note: to find out which fonts you can use, please read the UTF-8 help:"
+		einfo ":h utf-8"
+		einfo
+		einfo "Then, set read encoding to UTF-8:"
+		einfo ":set encoding=utf-8"
+	else
+		einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
+	fi
+	einfo
+}
