@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/elfsh
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfsh/ChangeLog,v 1.1 2003/07/08 19:47:18 solar Exp $
+
+*elfsh-0.5_beta8 (08 Jul 2003)
+
+  08 Jul 2003; <solar@gentoo.org> elfsh-0.5_beta8.ebuild, metadata.xml:
+  initial import of elfsh to portage
+
