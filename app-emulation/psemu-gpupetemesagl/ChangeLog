@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/psemu-gpupetemesagl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-gpupetemesagl/ChangeLog,v 1.1 2002/06/03 02:53:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-gpupetemesagl/ChangeLog,v 1.2 2002/07/10 20:30:29 rphillips Exp $
+
+*psemu-gpupetemesalgl-1.6.3 (10 Jul 2002)
+
+  10 Jul 2002; Ryan Phillips <rphillips@gentoo.org> psemu-gpupetemesalgl-1.6.3.ebuild :
+
+  New release
 
 *psemu-gpupetemesalgl-1.6.2 (2 June 2002)
 
