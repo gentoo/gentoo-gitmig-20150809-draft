@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.15 2004/05/13 19:13:18 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.16 2004/05/13 19:14:26 lostlogic Exp $
+
+  13 May 2004; Brandon Low <lostlogic@gentoo.org>
+  -files/reiserfsprogs-3.6.4-bitops.patch,
+  -files/reiserfsprogs-3.6.5-flush_buffers-bug.patch:
+  More cruft
 
   13 May 2004; Brandon Low <lostlogic@gentoo.org>
   -reiserfsprogs-3.6.10.ebuild, -reiserfsprogs-3.6.4-r1.ebuild,
