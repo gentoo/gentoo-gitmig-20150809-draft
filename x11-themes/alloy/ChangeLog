@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.1 2003/06/18 14:45:48 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.2 2003/09/10 13:38:20 tad Exp $
+
+*alloy-0.4.1a (10 Sep 2003)
+
+  10 Sep 2003; Troy Dack <tad@gentoo.org> alloy-0.4.1a.ebuild:
+  Version Bump. Thanks to Carlo <current@myrealbox.com> for the ebuild. Closes
+  Bug #26870.
 
 *alloy-0.3 (19 Jun 2003)
 
