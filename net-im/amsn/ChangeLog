@@ -1,8 +1,12 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.1 2002/07/04 12:32:50 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.2 2002/09/01 11:10:02 verwilst Exp $
 
-*amsn-0.60 (3 July 2002) Bart Verwilst <verwilst@gentoo.org>
+* amsn-0.60 (3 July 2002) Bart Verwilst <verwilst@gentoo.org>
 
   Initial ebuild
+
+  1 Sept 2002; Bart Verwilst <verwilst@gentoo.org>:
+
+  Added tk to the DEPEND, wouldn't start otherwise
 

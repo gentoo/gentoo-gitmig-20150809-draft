@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7-r1.ebuild,v 1.5 2002/06/08 15:38:09 spider Exp
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.60.ebuild,v 1.4 2002/09/01 11:10:02 verwilst Exp $
 
 S="${WORKDIR}/msn"
 DESCRIPTION="Alvarro's Messenger client for MSN"
@@ -11,7 +11,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=">=dev-lang/tcl-8.3.3"
+DEPEND=">=dev-lang/tcl-8.3.3
+	>=dev-lang/tk-8.3.3"
 
 src_compile() {
 	
