@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.65 2003/08/19 22:27:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.66 2003/08/20 12:28:39 latexer Exp $
+
+  20 Aug 2003; Peter Johanson <latexer@gentoo.org>
+  mm-sources-2.6.0_beta3-r3.ebuild:
+  Added module-init-tools as an RDEPEND
 
 *mm-sources-2.6.0_beta3-r3 (19 Aug 2003)
 
