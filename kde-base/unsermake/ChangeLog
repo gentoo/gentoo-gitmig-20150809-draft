@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/unsermake
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.1 2004/05/05 21:52:34 caleb Exp $
+
+*unsermake-0.0_pre20040505 (05 May 2004)
+
+  05 May 2004; Caleb Tennis <caleb@gentoo.org> metadata.xml,
+  unsermake-0.0_pre20040505.ebuild:
+  Initial import
+
