@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tinyqt/tinyqt-3.0.1.ebuild,v 1.4 2002/02/22 20:31:41 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tinyqt/tinyqt-3.0.2.ebuild,v 1.1 2002/02/26 10:45:09 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -24,7 +24,7 @@ src_unpack() {
     unpack ${A}
 
     cd ${S}
-	patch -p0 < ${FILESDIR}/configure.patch
+	patch -p0 < ${FILESDIR}/configure.patch || die
 	cp -a ${FILESDIR}/tinyqt ${S}/src
 	
 	mv src/kernel/qurl.cpp src/kernel/qurl.cpp_orig
@@ -62,11 +62,10 @@ src_install() {
     dobin bin/*
 
     # libraries
-#	strip lib/libtinyqt.a
     dolib lib/libtinyqt.a
-    dolib lib/libtinyqt.so.3.0.1
+    dolib lib/libtinyqt.so.${PV}
     cd ${D}$QTBASE/lib
-    ln -s libtinyqt.so.3.0.1 libtinyqt.so.3.0
+    ln -s libtinyqt.so.${PV} libtinyqt.so.3.0
     ln -s libtinyqt.so.3.0 libtinyqt.so.3
     ln -s libtinyqt.so.3 libtinyqt.so
 

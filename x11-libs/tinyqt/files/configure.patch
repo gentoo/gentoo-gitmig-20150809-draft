@@ -1,39 +1,42 @@
---- configure_orig	2002-02-22 00:23:34.000000000 +0100
-+++ configure	2002-02-22 00:24:28.000000000 +0100
-@@ -994,44 +994,6 @@
- #unix
- unixtests=$relpath/config.tests/unix
+--- configure_orig	2002-02-26 11:28:25.000000000 +0100
++++ configure	2002-02-26 11:42:31.000000000 +0100
+@@ -1053,127 +1053,6 @@
+ # tests that don't need qmake (must be run before displaying help)
+ #-------------------------------------------------------------------------------
  
--# Auto-detect SQL-modules support
+-# unix
+-unixtests=$relpath/config.tests/unix
+-
+-# auto-detect SQL-modules support
 -if echo $MODULES | grep sql >/dev/null
 -then
--    SQL_AVAIL=`find $relpath/plugins/src/sqldrivers/* -prune -type d -print | awk -F/ '{print $NF}'`
--    SQL_AVAIL=`echo $SQL_AVAIL`
+-    CFG_SQL_AVAILABLE=`find $relpath/plugins/src/sqldrivers/* -prune -type d -print | awk -F/ '{print $NF}'`
+-    CFG_SQL_AVAILABLE=`echo $CFG_SQL_AVAILABLE` ### is this really needed???
 -    MYSQL_REQ="-lmysqlclient mysql.h"
 -    OCI_REQ="-lclntsh -lwtc8 oci.h"
 -    PSQL_REQ="-lpq postgres.h libpq/libpq-fs.h catalog/pg_type.h libpq-fe.h"
 -    ODBC_REQ="-lodbc sql.h sqlext.h"
 -    TDS_REQ="-lsybdb sybfront.h sybdb.h"
--    for _SQLDR in $SQL_AVAIL
+-    for _SQLDR in $CFG_SQL_AVAILABLE
 -    do
 -	case $_SQLDR in
 -	mysql)
--	    $unixtests/checkavail "MySQL" $VERBOSE $MYSQL_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED mysql"
+-	    $unixtests/checkavail "MySQL" $OPT_VERBOSE $MYSQL_REQ $L_FLAGS $I_FLAGS && CFG_SQL_AUTODETECTED="$CFG_SQL_AUTODETECTED mysql"
 -	;;
 -	psql)
--	    $unixtests/checkavail "PostgreSQL" $VERBOSE $PSQL_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED psql"
+-	    $unixtests/checkavail "PostgreSQL" $OPT_VERBOSE $PSQL_REQ $L_FLAGS $I_FLAGS && CFG_SQL_AUTODETECTED="$CFG_SQL_AUTODETECTED psql"
 -	    ;;
 -	odbc)
--	    $unixtests/checkavail "ODBC" $VERBOSE $ODBC_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED odbc"
+-	    $unixtests/checkavail "ODBC" $OPT_VERBOSE $ODBC_REQ $L_FLAGS $I_FLAGS && CFG_SQL_AUTODETECTED="$CFG_SQL_AUTODETECTED odbc"
 -	    ;;
 -	oci)
--	    $unixtests/checkavail "OCI" $VERBOSE $OCI_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED oci"
+-	    $unixtests/checkavail "OCI" $OPT_VERBOSE $OCI_REQ $L_FLAGS $I_FLAGS && CFG_SQL_AUTODETECTED="$CFG_SQL_AUTODETECTED oci"
 -	    ;;
 -	tds)
--	    $unixtests/checkavail "TDS" $VERBOSE $TDS_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED tds"
+-	    $unixtests/checkavail "TDS" $OPT_VERBOSE $TDS_REQ $L_FLAGS $I_FLAGS && CFG_SQL_AUTODETECTED="$CFG_SQL_AUTODETECTED tds"
 -	    ;;
 -	*)
--	    if [ "x$VERBOSE" = "xyes" ]
+-	    if [ "$OPT_VERBOSE" = "yes" ]
 -	    then
 -		echo "unknown SQL driver: $_SQLDR"
 -	    fi
@@ -42,24 +45,103 @@
 -    done
 -fi
 -
- #x11
- if [ "$X11_PLATFORM" = "yes" ]
- then
-@@ -1396,7 +1358,7 @@
+-# auto-detect NIS support
+-    if [ "$CFG_NIS" != "no" ]
+-    then
+-	CFG_NIS=yes
+-	$unixtests/nis.test $XQMAKESPEC $OPT_VERBOSE $L_FLAGS $I_FLAGS && CFG_NIS=no
+-    else
+-	CFG_NIS=no
+-    fi
+-
+-# x11
+-if [ "$X11_PLATFORM" = "yes" ]
+-then
+-    x11tests=$relpath/config.tests/x11
+-
+-    # auto-detect OpenGL support
+-    if echo $MODULES | grep opengl >/dev/null
+-    then
+-	$x11tests/opengl.test $XQMAKESPEC $CFG_THREAD $OPT_VERBOSE $L_FLAGS $I_FLAGS && MODULES=`echo $MODULES | sed -e 's/opengl//'`
+-    fi
+-    # auto-detect XRender support
+-    if [ "$CFG_XRENDER" != "no" ]
+-    then
+-	CFG_XRENDER=yes
+-	$x11tests/xrender.test $XQMAKESPEC $OPT_VERBOSE $L_FLAGS $I_FLAGS && CFG_XRENDER=no && CFG_FREETYPE=no
+-    else
+-	CFG_FREETYPE=no
+-    fi
+-    # auto-detect XftFreeType support
+-    if [ "$CFG_XRENDER" = "yes" ] && [ "$CFG_FREETYPE" != "no" ]
+-    then
+-	CFG_FREETYPE=yes
+-	$x11tests/xfreetype.test $XQMAKESPEC $OPT_VERBOSE $x11tests $L_FLAGS $I_FLAGS && CFG_FREETYPE=no
+-    fi
+-    # add freetype2 include path
+-    if [ "$CFG_FREETYPE" = "yes" ] && [ -f $x11tests/xfreetype.inc ]
+-    then
+-	QMAKE_VARS="$QMAKE_VARS \"INCLUDEPATH+=`cat $x11tests/xfreetype.inc`\""
+-    fi
+-    rm -f $x11tests/xfreetype.inc
+-    # add XftFreetype specific config options
+-    if [ "$CFG_FREETYPE" = "yes" ] && [ -f $x11tests/xfreetype.cfg ]
+-    then
+-	QMAKE_CONFIG="$QMAKE_CONFIG `cat $x11tests/xfreetype.cfg`"
+-    fi
+-    rm -f $x11tests/xfreetype.cfg
+-    # auto-detect Session Management support
+-    if [ "$CFG_SM" = "auto" ]
+-    then
+-	CFG_SM=yes
+-	$x11tests/sm.test $XQMAKESPEC $OPT_VERBOSE $L_FLAGS $I_FLAGS && SM=no
+-    fi
+-    # auto-detect Xinerama support
+-    if [ "$CFG_XINERAMA" != "no" ]
+-    then
+-	CFG_XINERAMA=yes
+-	$x11tests/xinerama.test $XQMAKESPEC $OPT_VERBOSE $L_FLAGS $I_FLAGS && CFG_XINERAMA=no
+-    fi
+-    # auto-detect tablet support (currenlty only in IRIX)
+-    if [ "$CFG_TABLET" = "auto" ]
+-    then
+-	case $PLATFORM in
+-	irix-*)
+-	    CFG_TABLET=yes
+-	    $x11tests/xinput.test $XQMAKESPEC $OPT_VERBOSE $L_FLAGS $I_FLAGS && CFG_TABLET=no
+-	    ;;
+-	*)
+-	    CFG_TABLET=no
+-	    ### add error message for the "yes" case on non-IRIX systems
+-	    ;;
+-	esac
+-    fi
+-    # auto-detect XKB support
+-    if [ "$CFG_XKB" != "no" ]
+-    then
+-	CFG_XKB=yes
+-	$x11tests/xkb.test $XQMAKESPEC $OPT_VERBOSE $L_FLAGS $I_FLAGS && CFG_XKB=no
+-    fi
+-fi
+-
+-
+ #-------------------------------------------------------------------------------
+ # help - interactive parts of the script _after_ this section please
+ #-------------------------------------------------------------------------------
+@@ -1487,7 +1366,7 @@
  	echo "Type 'no' to decline this license offer."
  	echo
- 	echo "Do you accept the terms of $QWS_EITHER license?"
+ 	echo "Do you accept the terms of $affix license?"
 -	read acceptance
 +	acceptance=yes
- 	if [ "$acceptance" = yes ]
+ 	if [ "$acceptance" = "yes" ]
  	then
  	    break
-@@ -1544,6 +1506,8 @@
-     QMAKE_VARS="$QMAKE_VARS  \"QMAKE_CXXFLAGS+=-fpermissive\""
+@@ -1662,6 +1541,7 @@
+     (cd $outpath/qmake; $MAKE || (echo "QMake failed to build. Aborting." && exit 2)) || exit 2
  fi
  
 +exit 0
-+
- # STL must be way down here after qmake has been made, because the test itself uses qmake
  
- if [ $PLATFORM = "hpux-acc" -a $STL != no ]
+ #-------------------------------------------------------------------------------
+ # tests that need qmake

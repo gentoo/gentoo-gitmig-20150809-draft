@@ -10,9 +10,9 @@
 
 
 #define QT_NO_ACTION
-#ifndef QT_NO_TEXTCODEC // moc?
-#define QT_NO_TEXTCODEC
-#endif
+//#ifndef QT_NO_TEXTCODEC // moc?
+//#define QT_NO_TEXTCODEC
+//#endif
 #define QT_NO_UNICODETABLES
 #define QT_NO_IMAGEIO_BMP
 #define QT_NO_IMAGEIO_PPM
@@ -24,10 +24,10 @@
 #define QT_NO_FREETYPE //done by configure -no-freetype
 #define QT_NO_BDF
 #define QT_NO_FONTDATABASE
-#define QT_NO_TRANSLATION
+//#define QT_NO_TRANSLATION
 #define QT_NO_MIME
 #define QT_NO_SOUND
-#define QT_NO_PROPERTIES
+//#define QT_NO_PROPERTIES
 
 #define QT_NO_QWS_GFX_SPEED
 #define QT_NO_NETWORK //??????????????
