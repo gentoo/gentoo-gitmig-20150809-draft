@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/liece-2.0.0_alpha20030526.ebuild,v 1.2 2004/03/04 19:04:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/liece-2.0.0_alpha20030526.ebuild,v 1.3 2004/05/04 15:35:54 kloeri Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # This is unstable branch taken from CVS snapshot, so please not to
 # mark it stable at any point. btw, I recommend you to use app-emacs/riece ;)
-KEYWORDS="~x86 ~alpha ~sparc ~ppc"
+KEYWORDS="~x86 alpha ~sparc ~ppc"
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.6"
