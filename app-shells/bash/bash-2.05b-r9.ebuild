@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.11 2004/04/17 06:18:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.12 2004/04/24 08:04:28 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/bash/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa mips amd64 ia64 ~ppc64 s390"
+KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="nls build"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -59,7 +59,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	# If running mips64, we need updated configure data
 	use mips && gnuconfig_update
 
@@ -97,7 +96,7 @@ src_install() {
 		&& rm -rf ${D}/usr \
 		|| ( \
 			doman doc/*.1
-			dodoc README NEWS AUTHORS CHANGES COMPAT COPYING Y2K
+			dodoc README NEWS AUTHORS CHANGES COMPAT Y2K
 			dodoc doc/FAQ doc/INTRO
 
 			dosym bash.info.gz /usr/share/info/bashref.info.gz
