@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>python</herd>
+<longdescription>
+The chm package provides three modules, chm, chmlib and extra, which
+provide access to the API implemented by the C library chmlib and some
+additional classes and functions. They are used to access MS-ITSS
+encoded files - Compressed Html Help files (.chm).
+</longdescription>
+</pkgmetadata>
