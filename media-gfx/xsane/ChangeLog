@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.5 2002/09/14 03:12:44 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.6 2002/12/14 06:43:47 woodchip Exp $
+
+*xsane-0.89 (14 Dec 2002)
+
+  14 Dec 2002; Donny Davies <woodchip@gentoo.org> : Version bump.
 
 *xsane-0.86-r1 (16 Jul 2002)
 
@@ -19,12 +23,3 @@
   11 June 2002; Ryan Phillips <rphillips@gentoo.org> xsane-0.86.ebuild :
   Thanks to Bret the ebuild will install the plugin link into the correct
   location.  Updated Revision.
-  
-*xsane-0.77-r1 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
