@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.7 2005/03/13 19:34:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.8 2005/03/23 14:48:50 gustavoz Exp $
+
+  23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> hsqldb-1.7.3.1.ebuild:
+  Keyworded ~sparc wrt #84992
 
   13 Mar 2005; Markus Rothe <corsair@gentoo.org> hsqldb-1.7.3.1.ebuild:
   Added ~ppc64 to KEYWORDS

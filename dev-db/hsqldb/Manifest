@@ -1,9 +1,19 @@
-MD5 b90e832d89ec176ee79c81d5d5ca3ed2 ChangeLog 1151
-MD5 a9935465c8e90ffa4f47759f2253b2db hsqldb-1.7.2.4.ebuild 2509
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 0a04d88cc33e0eeff0fc2d699bf7a9c5 hsqldb-1.7.3.1.ebuild 2514
-MD5 eb7b48e9b818783d80ec3b27816f52d4 files/digest-hsqldb-1.7.2.4 64
+MD5 d48e9f164441b3f78c6d3c25a362a5dd ChangeLog 1260
+MD5 09b6d35c9335f82121a05f5f3c883972 hsqldb-1.7.3.1.ebuild 2522
+MD5 a9935465c8e90ffa4f47759f2253b2db hsqldb-1.7.2.4.ebuild 2509
+MD5 bf129311ef11ab7952cef6512717408d files/digest-hsqldb-1.7.3.1 64
 MD5 e49b3a828d2623b4b12e5546ee5c7da6 files/hsqldb 461
 MD5 2298ddc531a6368d3a5c0f13148f9fe2 files/server.properties 153
 MD5 392821346cd206b7b3060d45d2c6dd0f files/sqltool.rc 339
-MD5 bf129311ef11ab7952cef6512717408d files/digest-hsqldb-1.7.3.1 64
+MD5 eb7b48e9b818783d80ec3b27816f52d4 files/digest-hsqldb-1.7.2.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQYHfKRy60XGEcJIRAu1NAKCMntAgJ5mNNYbRFusL5sCqRg5TDQCfZmom
+fsRZ1zyIaXyQLjBX3I+2JEg=
+=wPTm
+-----END PGP SIGNATURE-----
