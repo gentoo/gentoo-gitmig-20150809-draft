@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.41 2004/10/31 11:18:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.42 2004/11/01 19:32:35 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  aumix-2.8-r2.ebuild:
+  Marked ~ppc64; bug #64627
 
   31 Oct 2004; Michael Hanselmann <hansmi@gentoo.org> aumix-2.8-r2.ebuild:
   Stable on ppc.
