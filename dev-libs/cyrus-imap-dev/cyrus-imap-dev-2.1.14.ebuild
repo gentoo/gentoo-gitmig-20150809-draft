@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.14.ebuild,v 1.8 2004/02/22 20:01:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.14.ebuild,v 1.9 2004/04/26 00:39:56 agriffis Exp $
 
 inherit eutils
 
@@ -82,7 +82,7 @@ src_compile() {
 		--without-perl \
 		--disable-cyradm \
 		--with-libwrap=/usr \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	# make depends break with -f... in CFLAGS
 	make depend CFLAGS="" || die "make depend problem"
