@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.3.3.ebuild,v 1.1 2004/07/17 19:31:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.3.3.ebuild,v 1.2 2004/07/23 22:38:41 mr_bones_ Exp $
 
 inherit games
 
@@ -20,6 +20,8 @@ DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	media-sound/timidity++"
+DEPEND="${DEPEND}
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
