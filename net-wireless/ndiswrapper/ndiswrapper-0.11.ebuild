@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.10.ebuild,v 1.3 2004/10/09 07:30:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.11.ebuild,v 1.1 2004/10/09 07:30:13 cardoe Exp $
 
 inherit kernel-mod
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND="sys-apps/pciutils"
 S=${WORKDIR}/${PN}-${PV}
@@ -52,6 +52,7 @@ src_install() {
 	dosbin ${S}/utils/ndiswrapper-buginfo
 
 	dodoc ${S}/README ${S}/INSTALL ${S}/AUTHORS ${S}/ChangeLog
+	doman ${S}/ndiswrapper.8
 
 	insinto /lib/modules/${KV}/misc
 	doins ${S}/driver/ndiswrapper.${MOD_SUFFIX}
