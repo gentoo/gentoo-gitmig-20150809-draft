@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b8571fc87d1724aa6328d200e3262384 ChangeLog 804
 MD5 c8e46848806b0c22df3ab8da97312dc3 libmath++-0.0.3.ebuild 868
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 92e1c48feb0d3ca507c78d871e85ecbc libmath++-0.0.4.ebuild 870
+MD5 a99b74e1be61d9bf0f2109ff6ce0ebcf libmath++-0.0.4.ebuild 866
 MD5 73713c10ae2dee9691819175196d971e files/digest-libmath++-0.0.3 67
 MD5 cde912b2e24516456741854dd6875294 files/digest-libmath++-0.0.4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBssmBroRuSHgZdywRAu19AJ0b/henI2NcWG2ojlP6htz9ZGI/xgCgjJeB
+los3LdkTZflgN5p8nLvkdoY=
+=2TOH
+-----END PGP SIGNATURE-----
