@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.7_p1.ebuild,v 1.4 2004/07/22 02:18:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.7_p1.ebuild,v 1.5 2004/07/22 21:08:57 twp Exp $
 
 inherit eutils webapp
 
 MY_P=phpMyAdmin-${PV/_p/-pl}
 DESCRIPTION="Web-based administration for MySQL database in PHP"
-HOMEPAGE="http://phpmyadmin.sourceforge.net/"
+HOMEPAGE="http://www.phpmyadmin.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~alpha -arm ~ppc -hppa -mips sparc x86 ~amd64"
