@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.32 2004/09/13 07:51:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.33 2004/09/22 21:57:26 lv Exp $
+
+  22 Sep 2004; Travis Tilley <lv@gentoo.org> e2fsprogs-1.35-r1.ebuild:
+  $(get_libdir)-ized and fixed a sandbox violation when libdir is set. marked
+  stable on amd64 for this fix.
 
 *e2fsprogs-1.35-r1 (13 Sep 2004)
 

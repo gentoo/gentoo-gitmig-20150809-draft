@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.1 2004/09/13 07:51:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.2 2004/09/22 21:57:26 lv Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm hppa amd64 ~ia64 ~ppc64 ~s390"
 IUSE="nls static"
 
 DEPEND="virtual/libc
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall libdir=zapme || die
+	make DESTDIR=${D} libdir=/zapme install || die
 	#evil e2fsprogs makefile -- I'll get you!
 	rm -rf ${D}/zapme
 
@@ -68,22 +68,22 @@ src_install() {
 	docinto e2fsck
 	dodoc e2fsck/ChangeLog e2fsck/CHANGES
 
-	dodir /lib /bin /sbin
-	cd ${D}/usr/lib
-	mv * ../../lib
-	cd ${D}/lib
-	mv *.a ../usr/lib
+	dodir /$(get_libdir) /bin /sbin
+	cd ${D}/usr/$(get_libdir)
+	mv * ../../$(get_libdir)
+	cd ${D}/$(get_libdir)
+	mv *.a ../usr/$(get_libdir)
 	local mylib=""
 	local x=""
 	#install ldscripts to fix bug #4411
-	cd ${D}/usr/lib
+	cd ${D}/usr/$(get_libdir)
 	for x in *.a
 	do
 		[ ! -f ${x} ] && continue
 		gen_usr_ldscript ${x/a}so
 	done
 	#normalize evil symlinks
-	cd ${D}/lib
+	cd ${D}/$(get_libdir)
 	for x in *
 	do
 		[ ! -L ${x} ] && continue
@@ -111,10 +111,10 @@ src_install() {
 	# a 'make install'.  They are the template files for
 	# /bin/compile_et.
 
-	cd ${S}/lib/et
+	cd ${S}/$(get_libdir)/et
 	insinto /usr/share/et
 	doins et_c.awk et_h.awk
-	cd ${S}/lib/ss
+	cd ${S}/$(get_libdir)/ss
 	insinto /usr/share/ss
 	doins ct_c.awk
 }
