@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.2 2002/12/27 00:29:11 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.3 2003/01/02 23:12:28 raker Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
