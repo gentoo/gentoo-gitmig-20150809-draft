@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.72 2004/07/07 01:09:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.73 2004/08/08 13:26:00 gmsoft Exp $
+
+  08 Aug 2004; Guy Martin <gmsoft@gentoo.org> kde-3.2.3.ebuild:
+  Stable on hppa.
 
   07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> kde-3.2.2.ebuild:
   Stable on alpha.
