@@ -2,6 +2,9 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/dev-libs/tinyqt/ChangeLog,v 1.1 2002/03/26 10:52:11 gbevin Exp
 
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> tinyq-3.0.6.ebuild:
+  Marked stable on sparc.
+
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> tinyq-3.0.4.ebuild,
   tinyq-3.0.5.ebuild, tinyq-3.0.6.ebuild:
   Don't assign default to S; header fix
