@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.44-r2.ebuild,v 1.1 2000/11/14 14:38:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.44-r2.ebuild,v 1.2 2000/12/17 20:09:01 achim Exp $
 
 A="Sablot-${PV}.tar.gz Sablot-Expat-1.1.2.tar.gz"
 S=${WORKDIR}/Sablot-${PV}
@@ -17,11 +17,12 @@ src_unpack() {
   unpack Sablot-${PV}.tar.gz
   cd ${S}
   unpack Sablot-Expat-1.1.2.tar.gz
-  if [ -n "`use glibc22`" ]
+  if [ "`use glibc22`" ]
   then
 	cp ${FILESDIR}/utf8.cpp Sablot/engine/
   fi
 }
+
 src_compile() {
 
     cd ${S}

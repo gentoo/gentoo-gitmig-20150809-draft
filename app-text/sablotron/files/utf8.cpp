@@ -123,7 +123,7 @@ int utf8Recode(char* dest, const char* src, Encoding enc)
     size_t   outbytesleft = SMALL_BUFFER_SIZE;
     char    *outbuf       = dest;
     
-    cd = iconv_open (iconv_encoding[enc], "UTF-8");
+    cd = iconv_open (iconv_encoding[enc],"UTF-8");
     assert(cd != (iconv_t)(-1));
     while (inbytesleft && 
         iconv(cd,(char **) &src, &inbytesleft, &outbuf, &outbytesleft) != -1);
