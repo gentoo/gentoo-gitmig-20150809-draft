@@ -1,12 +1,16 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.23 2003/05/12 22:54:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.24 2003/05/13 04:46:30 george Exp $
 
-  11 May 2003; George Shapovalov <george@gentoo.org> phoenix-bin-0.5-r1.ebuild :
+  12 May 2003; George Shapovalov <george@gentoo.org> phoenix-bin-0.5-r1.ebuild :
   added announcement of move to pkg_postinst per killian's request
+
   corrected DEPEND to use =x11-libs/gtk+-1.2* strictly (it's already 
   compiled! What was the deal?)
   see #20809, thanks to Stuart Still <stustill@hotmail.com> for spotting this
+
+  fixed nsplugins.eclass to create absolute symlink instead of local to plugins dir,
+  added missing inherit nsplugins (#20762)
 
 *phoenix-bin-0.5-r1 (09 May 2003)
 
