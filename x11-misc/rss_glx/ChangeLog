@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rss_glx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss_glx/ChangeLog,v 1.2 2002/11/27 22:22:21 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss_glx/ChangeLog,v 1.3 2002/12/17 20:59:49 vapier Exp $
+
+*rss_glx-0.6.8 (17 Nov 2002)
+
+  17 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + files now go in /usr/lib/xscreensaver #12316.
 
 *rss_glx-0.6.7 (27 Nov 2002)
 
