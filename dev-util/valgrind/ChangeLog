@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.12 2003/06/13 20:09:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.13 2003/08/09 15:27:53 solar Exp $
+
+*valgrind-2.0_pre20030725 (09 Aug 2003)
+
+  09 Aug 2003; <solar@gentoo.org> metadata.xml,
+  valgrind-2.0_pre20030725.ebuild:
+  version bump Bug 24640, added a metadata.xml herd=no-herd
 
   13 Jun 2003; <msterret@gentoo.org> valgrind-1.9.6.ebuild:
   Add FAQ.txt per Bug 22744
