@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.956 2005/02/18 19:11:30 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.957 2005/02/18 21:43:59 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -177,6 +177,7 @@ dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
+dev-libs/pwlib:v4l2 - Enable video4linux2 support
 dev-libs/qsa:examples - build the examples that come with qsa
 dev-libs/qsa:ide - enable the qsa ide
 dev-lisp/cl-sql:sqlite3 - build support for sqlite3
