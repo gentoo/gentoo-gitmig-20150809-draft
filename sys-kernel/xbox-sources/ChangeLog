@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.8 2004/08/08 21:13:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.9 2004/08/09 12:40:59 chrb Exp $
+
+*xbox-sources-2.4.27 (09 Aug 2004)
+
+  09 Aug 2004; Chris Bainbridge <chrb@gentoo.org> +xbox-sources-2.4.27.ebuild:
+  Version bump submitted by Edgar Hucek
 
 *xbox-sources-2.4.26-r5 (08 Aug 2004)
 
@@ -37,7 +42,7 @@
 
   19 Jul 2004; Chris Bainbridge <chrb@gentoo.org>
   +xbox-sources-2.4.26-r3.ebuild:
-  Added 2.4 kernel ebuild submitted by Ed Schouten in bug #45100
+  Added 2.4 kernel ebuild submitted by Ed Hucek in bug #45100
 
 *xbox-sources-2.6.7-r2 (09 Jul 2004)
 
