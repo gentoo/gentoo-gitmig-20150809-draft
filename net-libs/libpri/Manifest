@@ -1,5 +1,5 @@
+MD5 23e5548e39766bc4bd66633a60c9238d ChangeLog 2095
 MD5 c2e30097b166fd685cfc695acc2deb1f libpri-0.4.0.ebuild 577
-MD5 3c1f29304ee37f84694050d23e500bb9 ChangeLog 1957
 MD5 b3e2dcac0b1648321b4cf6cf5202ee64 libpri-0.6.0.ebuild 569
 MD5 01cd448bb10692f8b9c4d13fa24a40c4 libpri-1.0.0.ebuild 578
 MD5 7c953191baecf0f3725cc836c770e214 libpri-1.0.1.ebuild 578
@@ -7,6 +7,7 @@ MD5 5fdc7b4e3c52ec3ee5d93f8a050e5927 libpri-1.0.2.ebuild 585
 MD5 f9c52de2d4793ce020544d73d2ef816c libpri-1.0.3.ebuild 593
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
 MD5 909addb123e7d76e5d48344fc3d1ce82 libpri-1.0.4.ebuild 597
+MD5 1b72e130e2353924eb0cc2c0dd350361 libpri-1.0.6.ebuild 1003
 MD5 846aaf8d6e64aa71cc5c0cf41b433de9 files/digest-libpri-0.4.0 63
 MD5 89a24c5e9f51174fa8897690de68dd7a files/digest-libpri-0.6.0 63
 MD5 b848f8ca12534d2485b65498cc04bd67 files/digest-libpri-1.0.0 63
@@ -14,3 +15,4 @@ MD5 5a128ba669946d5098fd9424db8004e1 files/digest-libpri-1.0.1 63
 MD5 a7f846957d273f43795da42818bc566c files/digest-libpri-1.0.2 63
 MD5 3b2d9be4ce31399486626f6979f62f33 files/digest-libpri-1.0.3 63
 MD5 854a97c4aecaf1536521b247dcdbd3a1 files/digest-libpri-1.0.4 63
+MD5 4077c9b011632414cb2cdb36e1b24c27 files/digest-libpri-1.0.6 134
