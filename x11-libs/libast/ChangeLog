@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libast
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.8 2003/04/09 15:50:10 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.9 2004/02/23 00:44:14 vapier Exp $
+
+*libast-0.5-r2 (22 Feb 2004)
+
+  22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Don't enable imlib if X is not in USE #38596.
 
 *libast-0.5-r1 (20 Mar 2003)
 
