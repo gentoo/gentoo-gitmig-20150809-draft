@@ -1,6 +1,2 @@
-MD5 a0e21c42131e6cbd32163a7caf2424a1 xfce4-systray-4.2.0.ebuild 400
-MD5 51d08ab5c96bfe33da5c521f4f941954 xfce4-systray-4.0.6.ebuild 878
-MD5 591d443a4c1a3c51233ca4c2aabc204e ChangeLog 5750
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 f4e5b4968d8a9aa9bf0990bc82674656 files/digest-xfce4-systray-4.0.6 71
+MD5 b22a03bbf6181569775400464769ad36 xfce4-systray-4.2.0.ebuild 399
 MD5 e85fda8f975f52b28b8a6db70e898b21 files/digest-xfce4-systray-4.2.0 72

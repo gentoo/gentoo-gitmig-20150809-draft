@@ -1,6 +1,2 @@
-MD5 76f1b431be30dd4a8a5e811bcf7f7a82 xfce4-iconbox-4.2.0.ebuild 356
-MD5 930a93dd1a5fc36f5e859a2d2fd886ad xfce4-iconbox-4.0.6.ebuild 841
-MD5 714630abf24bffca27cd38e1864c1ba1 ChangeLog 5756
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 68ea90dcca1e6c0b4b14af49f5232865 files/digest-xfce4-iconbox-4.0.6 71
+MD5 d4dcc184d1494c5d4578dd0f431a1fd6 xfce4-iconbox-4.2.0.ebuild 395
 MD5 b3d9957586020c5efecd0607e3491765 files/digest-xfce4-iconbox-4.2.0 72
