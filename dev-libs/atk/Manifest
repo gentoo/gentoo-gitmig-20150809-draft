@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2f228fb02ef548935854e564f74f24fe ChangeLog 5596
-MD5 b6eba2b70157d8dc00178686bda7ed81 atk-1.6.0.ebuild 615
-MD5 6dc1fcd6ac30ca23fa487b0dbb05468b atk-1.6.1.ebuild 613
-MD5 debf8e3f88dd11a9c9d0604b18126352 atk-1.4.1.ebuild 609
+MD5 4b4ee5b523124483dc170557995b6396 atk-1.6.0.ebuild 614
+MD5 c51082247e234d43a728ee819ea261e2 atk-1.4.1.ebuild 608
+MD5 2d68a68e53f7caa487ff8c2593628450 atk-1.6.1.ebuild 607
+MD5 00773a3a5a326eda0ea5bab6ed3dd0a3 ChangeLog 5595
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 9f00e078476622e337bb091d52c8cdb6 files/digest-atk-1.4.1 62
 MD5 3787be02270406d8259ad5b6584276d9 files/digest-atk-1.6.0 62
 MD5 3a1c0bfede3ee5b267426cbabd0e9a00 files/digest-atk-1.6.1 62
-MD5 9f00e078476622e337bb091d52c8cdb6 files/digest-atk-1.4.1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvys5HTu7gpaalycRAiHwAJ4keYA5+07uolALlbhTxq0ysbV8wACg6q78
-b5G5hdGHs1uhC5owetKc9Vc=
-=OR9x
------END PGP SIGNATURE-----
