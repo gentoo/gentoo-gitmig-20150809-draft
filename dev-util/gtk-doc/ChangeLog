@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-util/gtk-doc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.2 2002/08/02 03:51:03 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.3 2002/11/06 06:25:08 vapier Exp $
 
 *gtk-doc-0.9-r2 (Mar 29 2002)
 	Initial changelog and release of gtk-doc
