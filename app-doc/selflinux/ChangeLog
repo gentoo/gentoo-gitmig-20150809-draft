@@ -1,19 +1,19 @@
 # ChangeLog for app-doc/selflinux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.7 2003/03/23 17:38:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.8 2003/06/29 17:33:11 aliz Exp $
 
 *selflinux-0.6.0 (23 Mar 2003)
 
   23 Mar 2003; Lars Weiler <pylon@gentoo.org> selflinux-0.6.0.ebuild:
   version bump
 
-* selflinux-0.4.0 (11 December 2002)
+*selflinux-0.4.0 (11 December 2002)
 
   11 December 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, selflinux-0.4.0.ebuild
 
   Version bump..
 
-* selflinux-0.2.1 (11 December 2002)
+*selflinux-0.2.1 (11 December 2002)
   
   11 December 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, selflinux-0.2.1.ebuild
 
@@ -21,7 +21,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-* selflinux-0.1 (15 August 2002)
+*selflinux-0.1 (15 August 2002)
 
   15 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, selflinux-0.1.ebuild, files/digest-selflinux-0.1
 
