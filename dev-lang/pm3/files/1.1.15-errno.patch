@@ -1,0 +1,245 @@
+--- graphics/displayps/dps/src/ccDisplayPS.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ graphics/displayps/dps/src/ccDisplayPS.c	2003-04-15 08:40:49.000000000 -0400
+@@ -19,8 +19,6 @@
+ #include "dpsfriends.h"
+ #include "wraps.h"
+ 
+-extern int errno;
+-
+ #define FullWidth 1024   /* Congruent to definition in DPS.i3 */
+ #define FullHeight 1024  /* Congruent to definition in DPS.i3 */
+ 
+--- language/modula3/m3compiler/m3cc/gcc/c-lex.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/c-lex.c	2003-04-15 08:40:57.000000000 -0400
+@@ -40,9 +40,6 @@
+ #include <locale.h>
+ #endif
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+ 
+ /* The elements of `ridpointers' are identifier nodes
+    for the reserved type names and storage classes.
+--- language/modula3/m3compiler/m3cc/gcc/c-parse.in.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/c-parse.in	2003-04-15 08:41:03.000000000 -0400
+@@ -89,10 +89,6 @@
+ char *language_string = "GNU C";
+ end ifc
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+-
+ void yyerror ();
+ 
+ /* Like YYERROR but do call yyerror.  */
+--- language/modula3/m3compiler/m3cc/gcc/cccp.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/cccp.c	2003-04-15 08:41:19.000000000 -0400
+@@ -365,9 +365,6 @@
+ HOST_WIDE_INT parse_escape PROTO((char **, HOST_WIDE_INT));
+ HOST_WIDE_INT parse_c_expression PROTO((char *));
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+ 
+ /* Name under which this program was invoked.  */
+ 
+--- language/modula3/m3compiler/m3cc/gcc/collect2.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/collect2.c	2003-04-15 08:41:24.000000000 -0400
+@@ -42,10 +42,6 @@
+ #include "obstack.h"
+ #include "gansidecl.h"
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+-
+ #ifndef HAVE_STRERROR
+ #if defined(bsd4_4) 
+ extern const char *const sys_errlist[];
+--- language/modula3/m3compiler/m3cc/gcc/cpplib.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/cpplib.c	2003-04-15 08:45:20.000000000 -0400
+@@ -7437,9 +7437,6 @@
+ 
+ /* This defines "errno" properly for VMS, and gives us EACCES.  */
+ #include <errno.h>
+-#ifndef errno
+-extern int errno;
+-#endif
+ 
+ #ifndef VMS
+ #ifndef HAVE_STRERROR
+--- language/modula3/m3compiler/m3cc/gcc/dbxout.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/dbxout.c	2003-04-15 08:41:46.000000000 -0400
+@@ -81,10 +81,6 @@
+ #include "defaults.h"
+ #include "output.h" /* ASM_OUTPUT_SOURCE_LINE may refer to sdb functions.  */
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+-
+ #ifdef XCOFF_DEBUGGING_INFO
+ #include "xcoffout.h"
+ #endif
+--- language/modula3/m3compiler/m3cc/gcc/fix-header.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/fix-header.c	2003-04-15 08:42:20.000000000 -0400
+@@ -802,7 +802,7 @@
+     {
+     case errno_h:
+       if (!seen_errno)
+-	fprintf (outf, "extern int errno;\n");
++	fprintf (outf, "#include <errno.h>\n");
+       break;
+     case stdlib_h:
+       if (!seen_EXIT_FAILURE)
+--- language/modula3/m3compiler/m3cc/gcc/gcc.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/gcc.c	2003-04-15 08:42:26.000000000 -0400
+@@ -143,10 +143,6 @@
+ 
+ extern char *choose_temp_base PROTO((void));
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+-
+ #ifndef HAVE_STRERROR
+ extern int sys_nerr;
+ #if defined(bsd4_4)
+--- language/modula3/m3compiler/m3cc/gcc/getpwd.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/getpwd.c	2003-04-15 08:42:31.000000000 -0400
+@@ -6,10 +6,6 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+-
+ /* Virtually every UN*X system now in common use (except for pre-4.3-tahoe
+    BSD systems) now provides getcwd as called for by POSIX.  Allow for
+    the few exceptions to the general rule here.  */
+--- language/modula3/m3compiler/m3cc/gcc/m3.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/m3.c	2003-04-15 08:42:36.000000000 -0400
+@@ -65,10 +65,6 @@
+ #define LONG_DOUBLE_TYPE_SIZE 64
+ #endif
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+-
+ /*  #define NEST_NESTED 1  */
+ /* comment out NEST_NESTED if the front-end delivers nested procedure
+    bodies where they appear in the source */
+--- language/modula3/m3compiler/m3cc/gcc/mips-tfile.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/mips-tfile.c	2003-04-15 08:42:40.000000000 -0400
+@@ -744,10 +744,6 @@
+ #include <unistd.h>
+ #endif
+ 
+-#ifndef errno
+-extern int errno;			/* MIPS errno.h doesn't declare this */
+-#endif
+-
+ #ifndef MALLOC_CHECK
+ #ifdef	__SABER__
+ #define MALLOC_CHECK
+--- language/modula3/m3compiler/m3cc/gcc/protoize.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/protoize.c	2003-04-15 08:42:45.000000000 -0400
+@@ -83,10 +83,6 @@
+ #include "getopt.h"
+ #undef getopt
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+-
+ #ifndef HAVE_STRERROR
+ extern int sys_nerr;
+ #if defined(bsd4_4)
+--- language/modula3/m3compiler/m3cc/gcc/real.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/real.c	2003-04-15 08:42:49.000000000 -0400
+@@ -25,10 +25,6 @@
+ #include "config.h"
+ #include "tree.h"
+ 
+-#ifndef errno
+-extern int errno;
+-#endif
+-
+ /* To enable support of XFmode extended real floating point, define
+ LONG_DOUBLE_TYPE_SIZE 96 in the tm.h file (m68k.h or i386.h).
+ 
+--- language/modula3/m3compiler/m3cc/gcc/config/convex/fixinc.convex.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/config/convex/fixinc.convex	2003-04-15 08:45:00.000000000 -0400
+@@ -17,6 +17,7 @@
+ 
+ #include_next <limits.h>
+ 
++#include <errno.h>
+ /* Minimum and maximum values a `char' can hold.  */
+ #ifdef __CHAR_UNSIGNED__
+ #undef CHAR_MIN
+@@ -263,7 +264,6 @@
+ 
+ static __inline__ double __inline_ldexp (double x, int n)
+ {
+-  extern int errno;
+   union { double d; long long ll; unsigned sexp : 12; } u;
+   if ((u.d = x) != 0)
+     {
+@@ -288,7 +288,6 @@
+ 
+ static __inline__ float __inline_ldexpf (float x, int n)
+ {
+-  extern int errno;
+   union { float f; int i; unsigned sexp : 9; } u;
+   if ((u.f = x) != 0)
+     {
+--- language/modula3/m3compiler/m3cc/gcc/config/pa/xm-pa.h.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/config/pa/xm-pa.h	2003-04-15 08:43:36.000000000 -0400
+@@ -19,7 +19,7 @@
+ the Free Software Foundation, 59 Temple Place - Suite 330,
+ Boston, MA 02111-1307, USA.  */
+ 
+-extern int errno;
++#include <errno.h>
+ 
+ /* #defines that need visibility everywhere.  */
+ #define FALSE 0
+--- language/modula3/m3compiler/m3cc/gcc/config/pa/xm-papro.h.orig	2003-04-15 08:40:37.000000000 -0400
++++ language/modula3/m3compiler/m3cc/gcc/config/pa/xm-papro.h	2003-04-15 08:43:43.000000000 -0400
+@@ -19,7 +19,7 @@
+ the Free Software Foundation, 59 Temple Place - Suite 330,
+ Boston, MA 02111-1307, USA.  */
+ 
+-extern int errno;
++#include <errno.h>
+ 
+ /* #defines that need visibility everywhere.  */
+ #define FALSE 0
+--- network/mail/llscan/src/err.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ network/mail/llscan/src/err.c	2003-04-15 08:43:50.000000000 -0400
+@@ -26,7 +26,7 @@
+ static char errfmt[MAXERRMSG];
+ static char errbuf[MAXERRMSG];
+ 
+-extern int sys_nerr, errno;
++extern int sys_nerr;
+ 
+ /***************************************************************/
+ /* Local function declarations                                 */
+--- network/mail/llscan/src/llscan.c.orig	2003-04-15 08:40:37.000000000 -0400
++++ network/mail/llscan/src/llscan.c	2003-04-15 08:43:55.000000000 -0400
+@@ -39,8 +39,6 @@
+ #include <varrayptr.h>
+ #include <inttable.h>
+ 
+-extern int errno;
+-
+ extern int sys_nerr;
+ 
+ /***************************************************************/

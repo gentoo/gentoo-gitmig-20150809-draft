@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/pm3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pm3/ChangeLog,v 1.3 2003/02/12 05:57:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pm3/ChangeLog,v 1.4 2003/04/15 13:27:24 vapier Exp $
+
+*pm3-1.1.15-r1 (15 Apr 2003)
+
+  15 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added patch for errno issue (#16267) to fix #17744.
 
 *pm3-1.1.15 (16 Dec 2002)
 
