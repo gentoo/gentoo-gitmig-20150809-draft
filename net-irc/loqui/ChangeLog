@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/loqui
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.11 2004/06/10 01:37:21 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.12 2004/06/17 18:48:49 swegener Exp $
+
+*loqui-0.3.6 (17 Jun 2004)
+
+  17 Jun 2004; Sven Wegener <swegener@gentoo.org> -loqui-0.2.2.ebuild,
+  -loqui-0.2.3.ebuild, loqui-0.3.3.ebuild, +loqui-0.3.6.ebuild:
+  Version bump, closes bug #53776. Removed the dependency on dev-perl/XML-Parser
+  for loqui-0.3.* as they build fine without it. Removed some older ebuilds.
 
 *loqui-0.3.3 (09 Jun 2004)
 
