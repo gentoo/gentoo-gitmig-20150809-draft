@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.2.ebuild,v 1.7 2004/07/18 17:26:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.2.ebuild,v 1.8 2004/08/07 10:17:31 slarti Exp $
 
 IUSE="kde ssl crypt"
 RESTRICT="nomirror"
@@ -11,7 +11,7 @@ HOMEPAGE="http://psi.affinix.com"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc hppa ~amd64"
+KEYWORDS="x86 ppc hppa amd64"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c >=app-crypt/qca-tls-1.0 )
 	crypt? ( >=app-crypt/gnupg-1.2.2 )
