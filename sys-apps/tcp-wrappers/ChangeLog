@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.10 2003/02/10 09:05:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.11 2003/02/10 15:10:20 seemant Exp $
 
 *tcp-wrappers-7.6-r5.ebuild (16 Dec 2002)
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  tcp-wrappers-7.6-r3.ebuild :
+
+  Added back (with similar fixes as in -r4 and -r5 with sed statement and
+  patch tarball on mirrors), because the 1.0 x86 profile still needs this.
 
   09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 
