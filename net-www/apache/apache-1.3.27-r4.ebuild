@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r4.ebuild,v 1.6 2003/06/22 18:35:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r4.ebuild,v 1.7 2003/07/11 08:04:44 woodchip Exp $
 
 IUSE="ipv6 pam"
 
@@ -29,6 +29,9 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	bzip2 -dc ${DISTDIR}/${P}-gentoo.diff.bz2 | patch -p1 || die
+
+	#Make apachectl read /etc/conf.d/apache
+	patch -p1 <${FILESDIR}/apache-1.3.27-apachectl.patch || die
 
 	# yet another perl path fix..
 	cp htdocs/manual/search/manual-index.cgi \
@@ -70,7 +73,7 @@ src_compile() {
 
 	# Allow users to move the default data directory by setting the
 	# home directory of the 'apache' user elsewhere.
-	DATA_DIR=`grep ^apache: /etc/passwd | cut -d: -f6`
+	DATA_DIR=`getent passwd apache | cut -d: -f6`
 	if [ -z "$DATA_DIR" ]; then
 		DATA_DIR="/home/httpd"
 		eerror "DATA_DIR is null! Using default."
@@ -132,14 +135,14 @@ src_compile() {
 src_install() {
 	# Allow users to move the default data directory by setting the
 	# home directory of the 'apache' user elsewhere.
-	DATA_DIR=`grep ^apache: /etc/passwd | cut -d: -f6`
+	DATA_DIR=`getent passwd apache | cut -d: -f6`
 	if [ -z "$DATA_DIR" ]; then
 		eerror "DATA_DIR is null! Using defaults."
 		eerror "You probably want to check /etc/passwd"
 		DATA_DIR="/home/httpd"
 	fi
 
-	GID=`grep ^apache: /etc/group |cut -d: -f3`
+	GID=`getent group apache | cut -d: -f3`
 	if [ -z "${GID}" ]; then
 		einfo "Using default GID of 81 for Apache"
 		GID=81
@@ -233,13 +236,16 @@ src_install() {
 pkg_postinst() {
 	# these are in baselayout now; it will not hurt to leave them here though
 	# moved to pkg_postinst by jnelson, moved to pkg_preinst by lostlogic
-	if ! groupmod apache; then
+	getent group apache >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
 		groupadd -g 81 apache || die "problem adding group apache"
 	fi
 
 	# usermod returns 2 on user-exists-but-no-flags-given
-	usermod apache &>/dev/null
-	if [ $? != 2 ]; then
+	#usermod apache &>/dev/null
+	#if [ $? != 2 ]; then
+	getent passwd apache >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
 		useradd -u 81 -g apache -s /bin/false -d /home/httpd -c "apache" apache
 		assert "problem adding user apache"
 	fi
