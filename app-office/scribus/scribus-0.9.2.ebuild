@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.9.2.ebuild,v 1.1 2002/11/17 10:56:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.9.2.ebuild,v 1.2 2002/11/28 22:17:14 hanno Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scribus is a Layout program"
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND="=x11-libs/qt-3*
 	media-libs/freetype
-	media-libs/lcms"
+	media-libs/lcms
+	sys-libs/zlib"
 
 CXXFLAGS="${CXXFLAGS} -I/usr/include/lcms"
 
