@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12_pre8.ebuild,v 1.2 2002/10/24 17:34:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12_pre8.ebuild,v 1.3 2002/11/15 17:14:54 raker Exp $
 
 DESCRIPTION="A perl module which integrates virus scanning software with your MTA"
 HOMEPAGE="http://www.amavis.org"
@@ -21,7 +21,6 @@ DEPEND="sys-devel/perl
 	sys-apps/sharutils
 	app-arch/unrar
 	app-arch/zoo
-	net-mail/postfix
 	dev-perl/IO-stringy
 	dev-perl/Unix-Syslog
 	dev-perl/MailTools
@@ -32,7 +31,9 @@ DEPEND="sys-devel/perl
 	>=dev-perl/Compress-Zlib-1.14
 	dev-perl/Archive-Tar
 	>=dev-perl/Archive-Zip-1.0
-	dev-perl/libnet"
+	dev-perl/libnet
+	virtual/mta
+	virtual/mda"
 
 S="${WORKDIR}/${P/_/}"
 
@@ -61,11 +62,16 @@ pkg_setup() {
 
 }
 
+mymta=`grep "^virtual/mta net-mail\/\(exim\|postfix\|qmail\)" /var/cache/edb/virtuals | awk -F/ '{print $3}'`
+
 src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/0.3.12-postfix.diff || die "patch failed"
+
+	if [ "$mymta" == "postfix" ]; then
+		patch -p1 < ${FILESDIR}/0.3.12-postfix.diff || die "patch failed"
+	fi
 
 }
 
@@ -73,8 +79,15 @@ src_compile() {
 
 	local myconf
 
-	# Postfix is the only one supported currently.  More mta's coming soon.
-	myconf="--enable-postfix"
+	if [ "$mymta" == "postfix" ]; then
+		myconf="--enable-postfix"
+	elif [ "$mymta" == "qmail" ]; then
+		myconf="--enable-qmail"
+	elif [ "$mymta" == "exim" ]; then
+		myconf="--enable-exim"
+	elif [ "$mymta" == "sendmail" ]; then
+		mycfonf="--enable-sendmail"
+	fi
 
 	# The quarantine directory for infected emails
 	myconf="${myconf} --with-virusdir=/var/amavis/quarantine"
@@ -88,8 +101,16 @@ src_compile() {
 src_install() {
 
 	dodir /var/amavis/quarantine
-	chown -R postfix:postfix ${D}/var/amavis
-	chmod -R ${D}/var/amavis
+
+	if [ "$mymta" == "postfix" ]; then
+		chown -R postfix:postfix ${D}/var/amavis
+	elif [ "$mymta" == "qmail" ]; then
+		chown -R qmailq:qmail ${D}/var/amavis
+	fi
+		
+
+	chmod -R 770 ${D}/var/amavis
+
 	keepdir /var/amavis /var/amavis/quarantine
 
 	einstall \
@@ -105,10 +126,10 @@ src_install() {
 pkg_postinst() {
 
 	einfo ""
-	einfo "For amavis to work properly with your postfix installation"
+	einfo "For amavis to work properly with your $mymta installation"
 	einfo "there are some configuration changes required"
 	einfo ""
-	einfo "less /usr/share/doc/amavis-0.3.12_pre8/README.postfix.gz"
+	einfo "less /usr/share/doc/amavis-0.3.12_pre8/README.$mymta.gz"
 	einfo ""
 
 }
