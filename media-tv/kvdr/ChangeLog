@@ -1,6 +1,8 @@
 # ChangeLog for media-tv/kvdr
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.1 2004/03/03 17:58:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.2 2004/03/19 09:39:00 aliz Exp $
+
+*kvdr-0.61 (03 Mar 2004)
 
   03 Mar 2004; Martin Holzer <mholzer@gentoo.org> kvdr-0.61.ebuild:
   Initial ebuild.
