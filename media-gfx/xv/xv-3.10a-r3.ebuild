@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.10 2003/09/28 17:22:11 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.11 2003/11/05 18:26:30 usata Exp $
 
 inherit ccc eutils
 
@@ -39,11 +39,12 @@ src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
 
+	# LIBDIR is where xv installs xvdocs.ps and we dodoc it below
 	make \
 		DESTDIR=${D} \
 		BINDIR=${D}/usr/bin \
 		MANDIR=${D}/usr/share/man/man1 \
-		LIBDIR=${D}/usr/lib \
+		LIBDIR=/dev/null \
 		install || die
 
 	dodoc README INSTALL CHANGELOG BUGS IDEAS docs/*.ps docs/*.doc

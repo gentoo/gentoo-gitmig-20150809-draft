@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.22 2003/10/28 14:20:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.23 2003/11/05 18:26:30 usata Exp $
+
+  06 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> xv-3.10a-r3.ebuild,
+  xv-3.10a-r5.ebuild, xv-3.10a-r6.ebuild:
+  Changed to LIBDIR=/dev/null. xvdocs.ps was installed to /usr/lib
+  (not a directory, but a file called /usr/lib !) due to absence of
+  /usr/lib (we should dodir before calling make, if it is really
+  necessary in the ebuild), but anyhow we dodoc xvdocs.ps in
+  src_install so we don't need it.
 
 *xv-3.10a-r6 (28 Oct 2003)
 
