@@ -1,6 +1,19 @@
 # ChangeLog for dev-lisp/cl-sql
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.13 2004/08/05 23:26:47 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.14 2004/10/14 18:47:48 mkennedy Exp $
+
+*cl-sql-3.0.8 (14 Oct 2004)
+
+  14 Oct 2004; <mkennedy@gentoo.org>
+  -files/1.8.7-no-shared-object-asdf-gentoo.patch,
+  -files/2.10.5-no-shared-object-asdf-gentoo.patch,
+  -files/2.8.2-no-shared-object-asdf-gentoo.patch,
+  -files/2.9.2-no-shared-object-asdf-gentoo.patch,
+  +files/3.0.8-no-shared-object-asdf-gentoo.patch, -cl-sql-1.6.4.ebuild,
+  -cl-sql-1.7.6.ebuild, -cl-sql-1.8.7.ebuild, -cl-sql-2.10.5.ebuild,
+  -cl-sql-2.8.2.ebuild, -cl-sql-2.9.2.ebuild, +cl-sql-3.0.8.ebuild:
+  New major upstream version; Removed previous version while preserving the
+  last major versions.
 
   05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> cl-sqlite-2.8.2,
   cl-sqlite-2.9.2, cl-sqlite-2.10.5, cl-sqlite-2.10.14:
