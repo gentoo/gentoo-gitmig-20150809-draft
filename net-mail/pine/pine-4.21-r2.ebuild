@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.21-r2.ebuild,v 1.1 2000/11/15 16:49:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.21-r2.ebuild,v 1.2 2001/04/29 22:44:00 achim Exp $
 
 P=pine-4.21
 A=pine4.21.tar.gz
@@ -21,12 +21,8 @@ src_unpack() {
   cp makefile.lnx makefile.orig
   sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
 
-  if [ -n "`use glibc22`" ]
-  then
-     echo "Using glibc-2.2"
      cp ${FILESDIR}/os.c osdep/os-lnx.c
      cp ${FILESDIR}/filter.c filter.c
-  fi
 
   cd ${S}/pico
   cp makefile.lnx makefile.orig
@@ -36,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {                           
-  ./build lnp
+  try ./build lnp
 }
 
 src_install() {                               

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/smpeg-xmms-0.3.2.ebuild,v 1.1 2000/11/26 20:54:18 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/smpeg-xmms-0.3.2.ebuild,v 1.2 2001/04/29 22:44:00 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,8 +9,8 @@ DESCRIPTION="A MPEG Plugin for XMMS"
 SRC_URI="ftp://ftp.xmms.org/xmms/plugins/smpeg-xmms/${A}"
 HOMEPAGE="http://www.xmms.org/plugins_input.html"
 
-DEPEND=">=media-sound/xmms-1.2.3"
-RDEPEND=">=media-sound/xmms-1.2.3"
+DEPEND=">=media-sound/xmms-1.2.3
+	>=media-libs/smpeg-0.4.2"
 
 src_compile() {
 
