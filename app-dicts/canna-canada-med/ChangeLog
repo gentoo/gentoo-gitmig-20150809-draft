@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/canna-canada-med
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/ChangeLog,v 1.4 2004/09/01 15:51:44 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/ChangeLog,v 1.5 2004/11/30 21:01:47 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  canna-canada-med-20030309.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   01 Sep 2004; Tom Gall <tgall@gentoo.org> canna-canada-med-20030309.ebuild:
   stable on ppc64, bug #61775

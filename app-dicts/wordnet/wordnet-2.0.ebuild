@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.2 2004/08/03 11:43:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.3 2004/11/30 21:06:29 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="WordNet : a lexical database for the English language"
 HOMEPAGE="http://www.cogsci.princeton.edu/~wn/"
 SRC_URI="ftp://ftp.cogsci.princeton.edu/pub/wordnet/${PV}/WordNet-${PV}.tar.gz"
-DEPEND="tcl tk"
+DEPEND="dev-lang/tcl
+	dev-lang/tk"
 LICENSE="Princeton"
 IUSE=""
 SLOT="0"

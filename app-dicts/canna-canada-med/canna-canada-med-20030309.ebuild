@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/canna-canada-med-20030309.ebuild,v 1.4 2004/09/01 15:51:44 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/canna-canada-med-20030309.ebuild,v 1.5 2004/11/30 21:01:47 swegener Exp $
 
 inherit cannadic
 
@@ -15,7 +15,7 @@ LICENSE="canada-med"
 SLOT="0"
 KEYWORDS="x86 alpha ppc ppc64"
 
-DEPEND="canna? ( >=canna-3.6_p4 )"
+DEPEND="canna? ( >=app-i18n/canna-3.6_p4 )"
 
 S="${WORKDIR}/canada_med"
 

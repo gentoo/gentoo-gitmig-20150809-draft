@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/canna-shion
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-shion/ChangeLog,v 1.4 2004/09/01 15:41:28 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-shion/ChangeLog,v 1.5 2004/11/30 21:04:17 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  canna-shion-20010916.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   01 Sep 2004; Tom Gall <tgall@gentoo.org> canna-shion-20010916.ebuild:
   stable on ppc64, bug #61773

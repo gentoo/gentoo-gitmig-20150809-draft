@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.4 2004/11/22 05:20:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.5 2004/11/30 21:08:43 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> verbiste-0.1.9.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   22 Nov 2004; Olivier Crete <tester@gentoo.org> verbiste-0.1.9.ebuild:
   Replaced einstall with make install DESTDIR=, fixes 72018 thanks vapier

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.9.ebuild,v 1.4 2004/11/22 05:20:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.9.ebuild,v 1.5 2004/11/30 21:08:43 swegener Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="gnome"
 
 DEPEND="dev-libs/libxml2
 	gnome? ( >=gnome-base/gnome-panel-2.0
-		>=libgnomeui-2.0 )"
+		>=gnome-base/libgnomeui-2.0 )"
 
 src_compile() {
 	cd ${S}

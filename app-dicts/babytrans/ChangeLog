@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/babytrans
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/ChangeLog,v 1.10 2004/11/22 18:59:51 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/ChangeLog,v 1.11 2004/11/30 20:59:09 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> babytrans-0.9.2-r2.ebuild,
+  babytrans-0.9.2-r3.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *babytrans-0.9.2-r3 (22 Nov 2004)
 
