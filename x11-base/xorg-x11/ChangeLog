@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.47 2004/06/03 07:30:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.48 2004/06/03 21:19:17 spyderous Exp $
+
+  03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Add credit for netwinder.org ARM patch.
 
   03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   PATCH_VER 1.0. This patchset should get xorg-x11-6.7.0 ready to go stable on
@@ -8,7 +11,8 @@
   holding some non-crucial patches out for 6.7.0-r1.
   
   -Add 9210_all_XFree86-4.3.0-arm32-compiler.h.patch (#52707) from
-  netwinder.org. This fixes compiles for the ARM architecture.
+  netwinder.org. This fixes compiles for the ARM architecture. Patch from PhilB,
+  according to netwinder's RPM spec file.
   -Add 9215_all_xorg-x11-6.7.0-char-bit-and-ia64-asm-page.patch to remove a
   compiler-intrinsic define since it dies on makedepend otherwise (fd.o #601),
   and fix the IA64 build (broken because it includes kernel header asm/page.h,
