@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r2.ebuild,v 1.8 2004/06/28 03:16:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r2.ebuild,v 1.9 2004/08/25 02:15:13 swegener Exp $
 
 DESCRIPTION="Free computer algebra environment, based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
-SRC_URI="http://dl.sourceforge.net/sourceforge/maxima/maxima-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/maxima/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r3.ebuild,v 1.1 2004/08/08 20:34:22 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r3.ebuild,v 1.2 2004/08/25 02:15:13 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="Free computer algebra environment, based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
-SRC_URI="http://dl.sourceforge.net/sourceforge/maxima/maxima-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/maxima/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
