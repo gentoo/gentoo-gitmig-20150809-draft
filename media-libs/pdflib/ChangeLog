@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.46 2004/12/01 13:05:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.47 2004/12/01 20:19:50 corsair Exp $
+
+  01 Dec 2004; Markus Rothe <corsair@gentoo.org> pdflib-5.0.4_p1.ebuild:
+  Stable on ppc64; bug #69043
 
   01 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> pdflib-5.0.4_p1.ebuild:
   Stable on sparc wrt #69043
