@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.26 2004/04/26 12:39:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.27 2004/04/26 13:21:31 pauldv Exp $
+
+  26 Apr 2004; Paul de Vrieze <pauldv@gentoo.org> neon-0.24.4.ebuild:
+  Mark stable so that subversion can be marked stable
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> neon-0.23.8.ebuild,
   neon-0.23.9.ebuild, neon-0.24.0.ebuild, neon-0.24.2.ebuild,
