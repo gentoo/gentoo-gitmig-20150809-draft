@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.3 2004/12/06 03:44:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.4 2004/12/06 04:29:22 vapier Exp $
+
+*autoconf-wrapper-2 (05 Dec 2004)
+
+  05 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/ac-wrapper-2.sh,
+  +autoconf-wrapper-2.ebuild:
+  When guessing which version to run, dont try to use autoconf-2.1x if we are
+  running automake-1.7 or better.
 
 *autoconf-wrapper-1-r1 (05 Dec 2004)
 
