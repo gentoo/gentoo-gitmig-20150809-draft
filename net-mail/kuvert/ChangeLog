@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/kuvert
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/ChangeLog,v 1.1 2004/09/03 20:47:12 slarti Exp $
+
+*kuvert-1.1.8 (03 Sep 2004)
+
+  03 Sep 2004; Tom Martin <slarti@gentoo.org> +kuvert-1.1.8.ebuild:
+  Initial import. The ebuild and the patch to get rid of idea stuff were
+  both submitted by Clemens Örtel <gentoo+sender+d53c44@kriegste.net> in bug
+  14567.
