@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <usata@gentoo.org> (22 Jan 2004)
+# masked because of chkfontpath, bug #36109
+=media-fonts/unifont-1.0
+
 # <suka@gentoo.org> (21 Jan 2004)
 # now parallel installable to vanilla openoffice
 # needs some testing
