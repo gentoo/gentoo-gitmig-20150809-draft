@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.ebuild,v 1.6 2002/05/25 09:35:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.ebuild,v 1.7 2002/06/11 18:16:03 drobbins Exp $
 
 inherit kde-dist
 
@@ -19,7 +19,7 @@ newdepend ">=sys-libs/ncurses-5.2
 	app-cdr/cdrtools
 	>=app-cdr/cdrdao-1.1.5
 	>=media-sound/mpg123-0.59r
-	tcltk? ( >=dev-lang/tcl-tk.8.0.5-r2 )"
+	tcltk? ( >=dev-lang/tk-8.0.5-r2 )"
 	#alsa? ( >=media-libs/alsa-lib-0.5.9 )
 
 myaudio="--enable-audio=oss"
