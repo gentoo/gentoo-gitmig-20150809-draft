@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.7 2004/04/12 18:17:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.8 2004/04/14 23:37:13 mr_bones_ Exp $
+
+  14 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  flightgear-0.9.4.ebuild:
+  this version's configure looks for plib >= 1.7.0; fix deps (bug #47855)
 
   12 Apr 2004; Jason Wever <weeve@gentoo.org> flightgear-0.9.4.ebuild:
   Added ~sparc keyword.
