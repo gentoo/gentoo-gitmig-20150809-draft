@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.28 2004/03/11 22:45:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.29 2004/04/19 01:48:53 solar Exp $
+
+*gradm-2.0 (18 Apr 2004)
+
+  18 Apr 2004; <solar@gentoo.org> gradm-1.9.11.ebuild, gradm-1.9.12.ebuild,
+  gradm-1.9.13.ebuild, gradm-2.0.ebuild:
+  grsec1 has been deprecated upstream and thus will no longer be supported by
+  gentoo either. This means it's time to flush your old policies and begin using
+  the really nice gradm2 learning mode offers. Note: also that the gradm2
+  package has also been deprecated and is now simply this one. This gradm-2
+  works for both 2.4.x and 2.6.x kernels. Gentoo init.d/conf.d scripts comming
+  in due time.. User contributions welcome for that.
 
 *gradm-1.9.14 (11 Mar 2004)
 
