@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r7.ebuild,v 1.10 2004/09/09 20:37:34 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r7.ebuild,v 1.11 2004/09/22 00:27:01 vapier Exp $
 
 inherit sgml-catalog
 
-DESCRIPTION="Python interface to SGML software specifically in a
-DocBook/OpenJade environment.  Provides sgml2{html,txt,rtf,dvi,ps}"
+DESCRIPTION="Python interface to SGML software in a DocBook/OpenJade env"
 HOMEPAGE="http://sgmltools-lite.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
-		 mirror://sourceforge/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
-LICENSE="GPL-2"
+	mirror://sourceforge/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="alpha arm amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="tetex"
-KEYWORDS="x86 ~ppc ~ppc64 sparc alpha amd64 hppa ~mips"
 
 DEPEND="virtual/python
 	app-text/sgml-common
