@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.23 2004/04/01 04:15:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.24 2004/04/03 01:48:43 pylon Exp $
+
+  03 Apr 2004; Lars Weiler <pylon@gentoo.org> tcpdump-3.8.3-r1.ebuild:
+  stable on ppc as requested in bug #46258
 
 *tcpdump-3.8.3-r1 (31 Mar 2004)
 
