@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.13 2004/12/19 05:46:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.14 2005/04/01 20:35:07 luckyduck Exp $
 
 IUSE=""
 
-inherit versionator
+inherit eutils versionator
 
 S="${WORKDIR}/${PN}-$(replace_version_separator 2 '-pl' )"
 
@@ -17,6 +17,12 @@ LICENSE="OSI-Approved"
 KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${A}
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.diff
+}
 
 src_compile() {
 	emake CCFLAGS="${CFLAGS} -c -DNeedFunctionPrototypes=1" || die
