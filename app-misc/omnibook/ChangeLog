@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/omnibook
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/ChangeLog,v 1.6 2004/07/20 16:56:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/ChangeLog,v 1.7 2004/11/15 18:33:30 genstef Exp $
+
+*omnibook-20040916 (15 Nov 2004)
+
+  15 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +omnibook-20040916.ebuild:
+  Version bump, migration to kernel-mod and closes bug 69944 thanks to Tom A.
+  Bergmann <botas@gmx.net>
 
 *omnibook-20040701 (20 Jul 2004)
 
