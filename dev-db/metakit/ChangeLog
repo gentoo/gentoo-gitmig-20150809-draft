@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.9 2004/01/29 21:33:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.10 2004/02/03 15:38:14 gmsoft Exp $
 
 *metakit-2.4.9.3 (29 Jan 2004)
 
@@ -16,6 +16,9 @@
   Fix Python-2.3 issues, closes bug #35168
 
 *metakit-2.4.9.2-r1 (12 Jul 2003)
+
+  03 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Marked stable on hppa.
 
   12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump to fix python support #23704.
