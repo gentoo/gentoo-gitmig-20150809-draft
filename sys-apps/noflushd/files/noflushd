@@ -11,9 +11,21 @@ PIDFILE=/var/run/noflushd.pid
 EXE=/usr/sbin/noflushd
 
 start() {
-	ebegin "Starting $SERVICE"
-	start-stop-daemon --start --quiet --exec "$EXE" -- -n $NOFLUSHD_TIMEOUT $NOFLUSHD_DISKS
-	eend $? "Started $SERVICE." "Error starting $SERVICE."
+    
+    # defaults
+    TIMEOUT=60
+    DISKS='/dev/discs/disc0/disc'
+    EXTRA=''
+    
+    # Pull in configuration file if exists, overrides defaults
+    [ -f /etc/noflushd.conf ] && . /etc/noflushd.conf
+    
+    OPTIONS='-n $TIMEOUT $DISKS $EXTRA'
+    
+    ebegin "Starting $SERVICE"
+    start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $EXE -- $OPTIONS
+    eend $? "Started $SERVICE." "Error starting $SERVICE."
+
 }
 
 stop() {
@@ -24,6 +36,7 @@ stop() {
 
 restart() {
 	stop
+	sleep 1s
 	start
 }
 

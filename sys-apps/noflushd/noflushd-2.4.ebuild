@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4.ebuild,v 1.1 2001/07/23 19:47:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4.ebuild,v 1.2 2001/07/24 08:33:34 danarmak Exp $
 # Note: the daemon's current 2.4 version has nothing to do with kernel versions
 
 #P=""
@@ -42,26 +42,20 @@ src_install () {
     exeinto /etc/rc.d/init.d
     doexe ${FILESDIR}/noflushd
     
-    insinto /etc/env.d
-    doins ${FILESDIR}/70noflushd
+    insinto /etc
+    doins ${FILESDIR}/noflushd.conf
     
 }
 
 pkg_postinst() {
     
-    # try to enable env-update settings
-    . /etc/profile.env
-    
     echo "
-    Run rc-update add noflushd to add it to runlevels 2 3 4.
+    Run 'rc-update add noflushd' to add it to runlevels 2 3 4.
 
-    Edit /etc/env.d/70noflushd to change the default spindown
+    Edit /etc/noflushd.conf to change the default spindown
     timeout and the disks handled; the defaults are 60 minutes
     and /dev/discs/disc0/disc (i.e. hda).
-    
-    NOTE: you should re-login for the env-update changes to take
-    effect before you run noflushd for the first time.
-    
+
     WARNING:
     WARNING: Do NOT use with SCSI, unstable!
     WARNING:
