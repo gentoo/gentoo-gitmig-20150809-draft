@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.13 2004/12/03 04:51:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.14 2004/12/03 16:52:34 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -13,6 +13,9 @@ BRANCH_UPDATE="20040808"
 # also, we do not have a single 2.4 kernel in the tree with backported
 # support required to enable nptl.
 MIN_KERNEL_VERSION="2.6.5"
+
+# (very) Theoretical cross-compiler support
+export CTARGET="${CTARGET:-${CHOST}}"
 
 
 if [ -z "${BRANCH_UPDATE}" ]; then
@@ -39,7 +42,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 	http://dev.gentoo.org/~lv/${PN}-${NEW_PV}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 
 LICENSE="LGPL-2"
-SLOT="2.2"
+SLOT="${CTARGET}-2.2"
 KEYWORDS="x86 amd64 hppa ppc64 ~ppc -mips"
 IUSE="nls pic build nptl erandom hardened multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
@@ -62,17 +65,21 @@ PDEPEND="amd64? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
 
 PROVIDE="virtual/glibc virtual/libc"
 
-
-# (very) Theoretical cross-compiler support
-export CTARGET="${CTARGET:-${CHOST}}"
-
 # We need to be able to set alternative headers for
 # compiling for non-native platform
 # Will also become useful for testing kernel-headers without screwing up
 # the whole system.
 # note: intentionally undocumented.
-[ -z "${ALT_HEADERS}" ] && ALT_HEADERS="${ROOT}/usr/include"
-
+alt_headers() {
+	if [ -z "${ALT_HEADERS}" ] ; then
+		if [[ ${CTARGET} = ${CHOST} ]] ; then
+			ALT_HEADERS="${ROOT}/usr/include"
+		else
+			ALT_HEADERS="${ROOT}/usr/${CTARGET}/include"
+		fi
+	fi
+	echo "${ALT_HEADERS}"
+}
 
 setup_flags() {
 	# Over-zealous CFLAGS can often cause problems.  What may work for one
@@ -126,7 +133,7 @@ setup_flags() {
 
 
 check_kheader_version() {
-	local header="${ALT_HEADERS}/linux/version.h"
+	local header="$(alt_headers)/linux/version.h"
 
 	[ -z "$1" ] && return 1
 
@@ -231,7 +238,7 @@ install_locales() {
 	cd ${WORKDIR}/build
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} localedata/install-locales || die
-	keepdir /usr/lib/locale/ru_RU/LC_MESSAGES
+	[[ ${CTARGET} = ${CHOST} ]] && keepdir /usr/lib/locale/ru_RU/LC_MESSAGES
 }
 
 
@@ -560,7 +567,7 @@ src_compile() {
 		--disable-profile \
 		--without-gd \
 		--without-cvs \
-		--with-headers=${ALT_HEADERS} \
+		--with-headers=$(alt_headers) \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
@@ -613,9 +620,26 @@ EOF
 		done
 	fi
 
-	if ! use build; then
-		cd ${WORKDIR}/build
+	if use pic && ! use amd64 ; then
+		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
+		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
+		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}/lib \;
+		find ${S}/${buildtarget}/ -name "*.map" -exec cp {} ${D}/lib \;
 
+		for i in ${D}/lib/*.map; do
+			mv ${i} ${i%.map}_pic.map
+		done
+	fi
+
+	# We'll take care of the cache ourselves
+	rm -f ${D}/etc/ld.so.cache
+
+	#################################################################
+	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
+	[[ ${CTARGET} != ${CHOST} ]] && return 0
+
+	cd ${WORKDIR}/build
+	if ! use build ; then
 		if ! has noinfo ${FEATURES} ; then
 			einfo "Installing Info pages..."
 			make PARALLELMFLAGS="${MAKEOPTS}" \
@@ -635,7 +659,7 @@ EOF
 		exeinto /etc/init.d ; doexe ${FILESDIR}/nscd
 
 		cd ${S}
-		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
+		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
 	else
 		rm -rf ${D}/usr/share ${D}/usr/lib/gconv
@@ -643,30 +667,12 @@ EOF
 		einfo "Installing Timezone data..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
-			timezone/install-others -C ${WORKDIR}/build || die
-	fi
-
-	if use pic && ! use amd64 ; then
-		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
-		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
-		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}/lib \;
-		find ${S}/${buildtarget}/ -name "*.map" -exec cp {} ${D}/lib \;
-
-		for i in ${D}/lib/*.map; do
-			mv ${i} ${i%.map}_pic.map
-		done
+			timezone/install-others || die
 	fi
 
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.
 	fperms 4711 /usr/lib/misc/pt_chown
-
-	# Currently libraries in  /usr/lib/gconv do not get loaded if not
-	# in search path ...
-#	insinto /etc/env.d
-#	doins ${FILESDIR}/03glibc
-
-	rm -f ${D}/etc/ld.so.cache
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	# creation of the "factory" symlink in pkg_postinst().
