@@ -1,5 +1,5 @@
-MD5 a9e600c6abae0e37ae9f7b1e5dc286a9 ChangeLog 1060
-MD5 f9ffce7fdb5679bbad0594dbaa694efb jabber-server-1.4.2-r2.ebuild 3967
+MD5 ca8d476e3ffc885b0032384c1df67e4b ChangeLog 1182
+MD5 ad1c92493e7d65a46207d8720f94ac22 jabber-server-1.4.2-r2.ebuild 3968
 MD5 56c6d30985fe5f4ce2ecbc717f2b0f11 files/config-1.4.2-r1.tbz2 3202
 MD5 9729606a22930fc068220751ef1a6f89 files/digest-jabber-server-1.4.2-r2 426
 MD5 3f7e7d44eb27017153b85a4e51857d2b files/hash_map_gcc32.patch 328
