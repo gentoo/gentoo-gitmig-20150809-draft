@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/lapack-atlas
 # Copyright 2004-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.5 2004/06/05 23:08:32 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.6 2004/06/11 01:48:31 george Exp $
+
+  10 Jun 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild, files/{atlas3.6.0-shared-libs.patch.bz2,} pack-20020531-20021004.patch.bz2,lapack-gentoo.patch,digest-lapack-atlas-3.6.0 :
+  moved files shared with lapack-reference to mirrors (one of them was a large patch as well)
+  unmasked in package.mask
 
   05 Jun 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild :
   fixed check for g77 - it is always necessary, even if ifc is installed (#30459)
