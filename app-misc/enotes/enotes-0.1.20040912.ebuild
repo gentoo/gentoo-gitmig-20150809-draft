@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/enotes/enotes-0.1.20040508.ebuild,v 1.3 2004/08/12 02:31:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/enotes/enotes-0.1.20040912.ebuild,v 1.1 2004/09/14 23:06:07 vapier Exp $
 
 inherit enlightenment
 
