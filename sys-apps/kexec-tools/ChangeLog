@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.1 2005/01/31 16:19:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.2 2005/02/04 21:15:32 genstef Exp $
+
+*kexec-tools-1.100-r1 (04 Feb 2005)
+
+  04 Feb 2005; Stefan Schweizer <genstef@gentoo.org> files/kexec.init,
+  +kexec-tools-1.100-r1.ebuild:
+  Making initrd support actually work, thanks to mayday147 in
+  http://forums.gentoo.org/viewtopic.php?p=2055679#2055679
 
 *kexec-tools-1.100 (31 Jan 2005)
 

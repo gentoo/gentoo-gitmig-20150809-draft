@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.100.ebuild,v 1.2 2005/02/01 23:50:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.100-r1.ebuild,v 1.1 2005/02/04 21:15:32 genstef Exp $
 
 DESCRIPTION="Load another kernel from the currently executing Linux kernel"
 HOMEPAGE="http://www.xmission.com/~ebiederm/files/kexec/"
