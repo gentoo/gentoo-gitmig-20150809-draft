@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/molden
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.1 2003/11/10 05:49:47 spyderous Exp $
+
+*molden-3.9 (10 Nov 2003)
+
+  10 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; molden-3.9.ebuild,
+  files/molden-3.9-fixMakefile.patch:
+  Thanks to Rossen Apostolov <rossen@protein.osaka-u.ac.jp> on bug #33001 for
+  the initial ebuild, with further modifications by me.
+
