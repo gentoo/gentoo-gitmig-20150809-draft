@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c2c51d9f7c551fcb447c79f830bd408 ChangeLog 7974
+MD5 d60b486899f2f6d8d388d91525fcc402 ChangeLog 8065
 MD5 f42245d74e6ad4a0ba5cebf5c5bc8c8a cvs-1.11.17.ebuild 1534
-MD5 33e45e9809a0895fcf63e939272695aa cvs-1.11.18.ebuild 1536
+MD5 f7c9eed6ccafd237c799102e18387ee8 cvs-1.11.18.ebuild 1535
 MD5 52cd05cf6ac8e51e83db35e4adff1c55 cvs-1.12.10.ebuild 1816
 MD5 defc46ea8970a99ae567789a8924571f cvs-1.12.9.ebuild 1815
 MD5 7164d2a546785fee1e77dac8839fdeaa metadata.xml 224
@@ -15,10 +12,3 @@ MD5 f508ce9e581877cbd33e11fbac72fc59 files/digest-cvs-1.11.18 276
 MD5 b20f44a825bed58f0e28635b827cb7fd files/digest-cvs-1.12.10 276
 MD5 cc3afaf974475188ce0d80b0b919f611 files/digest-cvs-1.12.9 272
 MD5 2d7e539e53af2be97ecf96f0ba454a18 files/digest-cvs-1.12.11 276
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwtNNKRy60XGEcJIRArsNAJ9jToNO6z5emNlhj5GTy9wv/cIgVgCfYWE/
-i53YyGciuTwJg3HjD4VdpC4=
-=h89Y
------END PGP SIGNATURE-----
