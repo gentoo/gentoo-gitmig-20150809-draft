@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.9 2004/07/30 02:30:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.10 2004/09/12 19:20:10 pvdabeel Exp $
 
 IUSE="debug nls esd"
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha sparc hppa ~mips ~ia64 amd64 ~macos ppc64"
+KEYWORDS="x86 ~ppc ~alpha sparc hppa ~mips ~ia64 amd64 ppc64"
 
 #	~media-libs/libmad-${PV}
 #	~media-libs/libid3tag-${PV}
