@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/hx-0.4.10.ebuild,v 1.1 2004/07/28 12:25:11 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/hx-0.4.10.ebuild,v 1.2 2004/07/30 10:11:09 kang Exp $
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
@@ -37,5 +37,5 @@ src_install() {
 	dodoc AUTHORS INSTALL PROBLEMS README* ChangeLog TODO NEWS run/hx/ghxvars run/hx/ghxvars.jp \
 	run/hx/hxrc run/hx/hxvars
 
-	dosbin run/hx/bin/hx
+	dobin run/hx/bin/hx
 }
