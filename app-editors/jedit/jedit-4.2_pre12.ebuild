@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre12.ebuild,v 1.2 2004/05/28 15:40:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre12.ebuild,v 1.3 2004/06/01 23:25:24 agriffis Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_compile() {
 	fi
 
 	antflags=""
-	if [ `use jikes` ] ; then
+	if use jikes ; then
 		einfo "Please ignore the following compiler warnings."
 		einfo "Jikes is just too pedantic..."
 		antflags="${antflags} -Dbuild.compiler=jikes"

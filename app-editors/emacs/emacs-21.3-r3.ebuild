@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.3 2004/05/26 02:48:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.4 2004/06/01 23:23:25 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -62,9 +62,9 @@ src_compile() {
 			--with-tiff
 			--with-gif
 			--with-png"
-		if [ "`use motif`" ] ; then
+		if use motif ; then
 			myconf="${myconf} --with-x-toolkit=motif"
-		elif [ "`use Xaw3d`" ] ; then
+		elif use Xaw3d ; then
 			myconf="${myconf} --with-x-toolkit=athena"
 		else
 			# do not build emacs with any toolkit, bug 35300
