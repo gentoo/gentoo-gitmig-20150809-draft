@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc12d696a633aa54219f7993151c86c4 tkabber-0.9.5b.ebuild 951
-MD5 e0fe8a0ec07042691245d3d372f66fb5 tkabber-0.9.7.ebuild 978
-MD5 9ac0609bbb9bea2419322284d1d90aa9 tkabber-0.9.6_beta.ebuild 1046
-MD5 f33ee237e5b199dbae64762c75b09287 ChangeLog 2625
+MD5 847a4175b0432ba751682321d39fbc1a ChangeLog 2717
 MD5 cd9273bd69fcf81aa554c63b904726df metadata.xml 328
-MD5 7157d1f9fa47d3801d41735957b78e4c files/digest-tkabber-0.9.6_beta 69
+MD5 e0fe8a0ec07042691245d3d372f66fb5 tkabber-0.9.7.ebuild 978
+MD5 fc12d696a633aa54219f7993151c86c4 tkabber-0.9.5b.ebuild 951
+MD5 1700f2c6dbd3028e4d201e912668139d tkabber-0.9.6_beta.ebuild 1044
 MD5 4e2858f909c71b96869a466c000cc7cd files/digest-tkabber-0.9.7 65
 MD5 7602cd4d7daafafe0bf585fa67b29bed files/digest-tkabber-0.9.5b 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBw0tpI1lqEGTUzyQRApYaAJ9/u6Mcmv2gnySkFp+rLRi9KmBozgCg0+j9
-o6JnBtkUwVO2kOjLecuD00A=
-=ol3/
------END PGP SIGNATURE-----
+MD5 7157d1f9fa47d3801d41735957b78e4c files/digest-tkabber-0.9.6_beta 69

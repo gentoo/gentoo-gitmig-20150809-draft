@@ -1,6 +1,9 @@
 # ChangeLog for net-im/tkabber
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.19 2004/11/27 00:04:58 tester Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.20 2005/04/02 15:55:38 weeve Exp $
+
+  02 Apr 2005; Jason Wever <weeve@gentoo.org> tkabber-0.9.6_beta.ebuild:
+  Stable on SPARC.
 
   26 Nov 2004; Olivier Crete <tester@gentoo.org> tkabber-0.9.5b.ebuild:
   Remove sed in global scope
