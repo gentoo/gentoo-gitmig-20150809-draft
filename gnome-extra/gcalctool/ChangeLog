@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.5 2003/05/29 15:49:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.6 2003/07/20 11:07:31 liquidx Exp $
+
+*gcalctool-4.2.99 (20 Jul 2003)
+
+  20 Jul 2003; Alastair Tse <liquidx@gentoo.org> gcalctool-4.2.99.ebuild:
+  version bump
 
 *gcalctool-4.2.86 (29 May 2003)
 
