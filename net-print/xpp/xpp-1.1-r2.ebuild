@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.1-r2.ebuild,v 1.3 2004/01/22 14:04:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.1-r2.ebuild,v 1.4 2004/03/31 13:55:00 aliz Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="X Printing Panel"
 SRC_URI="mirror://sourceforge/cups/${P}.tar.gz"
 HOMEPAGE="http://cups.sourceforge.net/xpp/"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 
