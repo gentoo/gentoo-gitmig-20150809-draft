@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.7 2002/04/09 22:39:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.8 2002/04/12 16:59:45 seemant Exp $
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gnome-print-0.35-r3.ebuild :
+
+  Changed tex USE flag to tetex instead.
 
   9 Apr 2002; M.Schlemmer <azarah@gentoo.org> gnome-print-0.35-r3.ebuild :
 
