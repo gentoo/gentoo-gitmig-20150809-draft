@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-kernel/kyro-kernel-2.00.20.0427.ebuild,v 1.3 2003/02/13 13:28:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-kernel/kyro-kernel-2.00.20.0427.ebuild,v 1.4 2003/05/03 12:20:38 karltk Exp $
 
 DEBUG="yes"
 RESTRICT="nostrip"
@@ -17,6 +17,12 @@ DEPEND="virtual/x11
 	>=sys-apps/portage-1.9.10"
 RDEPEND="virtual/x11"
 S="${WORKDIR}/powervr-2.00.20-427"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S} 
+	patch < ${FILESDIR}/mtrr-include-fix.diff || die
+}
 
 src_compile() {
 	check_KV
