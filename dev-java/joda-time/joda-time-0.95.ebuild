@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-0.95.ebuild,v 1.1 2004/02/26 05:28:36 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-0.95.ebuild,v 1.2 2004/02/26 15:03:39 zx Exp $
 
 inherit java-pkg
 
@@ -18,12 +18,12 @@ RDEPEND=">=virtual/jre-1.3"
 
 src_compile() {
 	local antflags="jar"
-	use jikes && antflags="${antflags} -Dbuild.compiler=jike"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc"
 	ant ${antflags}
 }
 
 src_install() {
 	java-pkg_dojar build/*.jar
-	use d7c && dohtml -r build/docs/
+	use doc && dohtml -r build/docs/
 }
