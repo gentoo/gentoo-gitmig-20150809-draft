@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+ <email>vapier@gentoo.org</email>
+ <name>Mike Frysinger</name>
+</maintainer>
+ <longdescription>
+Enlightenment is a completely themeable, highly configurable Window Manager for 
+the X Window System, traditionally used in Unix environments.
+
+Enlightenment Features:
+* Fully configurable window borders
+* Iconboxes to store icons in
+* Graphical Pager that also does miniature snapshots of your screen
+* IPC mechanism to remote-control Enlightenment
+* Theme support
+* Menus
+* Translucent moving of windows
+* Window groups
+* Virtual Desktops
+* Multiple Desktops (more than one desktop of Virtual Desktops)
+* Desktop Background selection and management
+* Sound support
+* Multiple focus modes
+* Many resize and move mode settings
+* Manual placement of windows option
+* Autoraising of windows option
+* Tooltips
+* Configurable keybindings
+* Configurable desktop bindings
+* DGA support for fullscreen client zoom
+* Window shading
+* Miniature snapshot icons
+* Multiple border styles at once
+* Window layers
+* Array menus
+* Internal configuration dialogs
+* Auto-scrolling menus
+* KDE hint support
+* GNOME hint support
+* Primitive Windowmaker/Afterstep dock App support.
+* X11R6 session management support
+* Internal per-app based session and property management.
+* Background auto scanning support
+* Truetype anti-aliased font support
+* Window auto-cleanup support
+* Graphical on-line help.
+ </longdescription>
+</pkgmetadata>
