@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.25 2004/04/28 05:51:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.26 2004/06/02 22:37:37 agriffis Exp $
 
 inherit java
 
@@ -24,13 +24,13 @@ PROVIDE="virtual/jdk-1.3.1
 	virtual/java-scheme-2"
 
 src_unpack () {
-	if (use ppc) || (use sparc) ; then
+	if use ppc || use sparc ; then
 		tail -n +400 ${DISTDIR}/${A} | tar jxpf -
 	else
 		unpack ${A}
 	fi
 
-	if (use sparc) ; then
+	if use sparc ; then
 		# Everything is owned by 1000.100, for some reason..
 		chown -R root:root .
 	fi
@@ -76,7 +76,7 @@ pkg_postinst () {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 
-	if [ -z "`use mozilla`" ] ; then
+	if ! use mozilla ; then
 		einfo "For instructions on installing the ${P} browser plugin for"
 		einfo "Netscape and Mozilla, see /usr/share/doc/${P}/INSTALL."
 	fi
