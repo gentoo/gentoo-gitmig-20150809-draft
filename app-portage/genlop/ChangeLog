@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.18 2004/10/13 23:31:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.19 2004/10/28 12:56:19 pyrania Exp $
+
+  28 Oct 2004; <pyrania@gentoo.org> genlop-0.30.2.ebuild:
+  Added ~s390 keyword.
 
   14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> genlop-0.16.3.ebuild:
   Added to ~ppc-macos.
