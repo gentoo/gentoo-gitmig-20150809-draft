@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.6.3.ebuild,v 1.3 2004/07/12 04:15:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.6.3.ebuild,v 1.4 2004/10/02 14:05:40 pvdabeel Exp $
 
 inherit gnome2 mono
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE="xine mad oggvorbis flac"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=dev-dotnet/mono-0.96
 	>=x11-libs/gtk-sharp-0.98
