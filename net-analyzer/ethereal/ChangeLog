@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.55 2004/03/27 20:31:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.56 2004/03/28 01:33:11 lu_zero Exp $
+
+  28 Mar 2004; Luca Barbato <lu_zero@gentoo.org> ethereal-0.10.3.ebuild:
+  Marked ppc to solve a security issue, see bug #45543
 
   27 Mar 2004; Jason Wever <weeve@gentoo.org> ethereal-0.10.3.ebuild:
   Marked stable on sparc wrt bug #45543.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.3.ebuild,v 1.3 2004/03/27 23:03:33 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.3.ebuild,v 1.4 2004/03/28 01:33:11 lu_zero Exp $
 
 IUSE="adns gtk ipv6 snmp ssl gtk2"
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 HOMEPAGE="http://www.ethereal.com/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 sparc ~ppc ~alpha amd64 ~ia64"
+KEYWORDS="~x86 sparc ppc ~alpha amd64 ~ia64"
 
 replace-flags '-O3' '-O'
 replace-flags '-O2' '-O'
