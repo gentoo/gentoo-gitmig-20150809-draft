@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/gromit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/ChangeLog,v 1.2 2004/11/18 19:08:26 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/ChangeLog,v 1.3 2004/12/16 09:04:17 brix Exp $
+
+*gromit-20041213 (16 Dec 2004)
+
+  16 Dec 2004; Henrik Brix Andersen <brix@gentoo.org> +gromit-20041213.ebuild:
+  Version bump.
 
   18 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> gromit-20041014.ebuild:
   Adhere to CFLAGS.
