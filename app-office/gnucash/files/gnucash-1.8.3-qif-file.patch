@@ -1,0 +1,11 @@
+--- gnucash-1.8.3/src/import-export/qif-import/qif-file.scm	2003-05-17 20:01:50.000000000 +0100
++++ gnucash-1.8.3/src/import-export/qif-import/qif-file.scm	2003-05-17 20:02:04.000000000 +0100
+@@ -18,7 +18,7 @@
+  (else (use-modules (ice-9 rdelim))))
+ 
+ (define qif-bad-numeric-rexp 
+-  (make-regexp "^\.\.\."))
++  (make-regexp "^\\.\\.\\."))
+ 
+ (define (not-bad-numeric-string? input)
+   (if (regexp-exec qif-bad-numeric-rexp input) #f #t))
