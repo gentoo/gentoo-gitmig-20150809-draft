@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/baekmuk-fonts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.2 2003/07/03 19:40:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.3 2003/07/30 20:29:44 usata Exp $
+
+*baekmuk-fonts-2.1-r1 (31 Jul 2003)
+
+  31 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> baekmuk-fonts-2.1-r1.ebuild:
+  Changed default font path and font format from bdf to pcf.
+  Added HOMEPAGE (in Korean). Added ~alpha keywords and two USE flags, 
+  X and truetype. This closes bug #22401.
 
 *baekmuk-fonts-2.1 (02 Jun 2003)
 
