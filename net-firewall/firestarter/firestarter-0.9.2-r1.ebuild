@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.2-r1.ebuild,v 1.3 2004/03/20 07:34:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.2-r1.ebuild,v 1.4 2004/06/05 16:29:59 kloeri Exp $
 
 inherit gnome2 eutils
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 
 src_unpack() {
 
