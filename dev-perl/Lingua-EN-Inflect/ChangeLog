@@ -1,8 +1,8 @@
 # ChangeLog for dev-perl/Lingua-EN-Inflect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.2 2003/02/12 06:20:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.3 2003/07/12 10:49:57 aliz Exp $
 
-*Lingua-EN-Inflect (14 Dec 2002)
+*Lingua-EN-Inflect-1.88 (14 Dec 2002)
 
   14 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org>
   files/digest-Lingua-EN-Inflect-1.88, Lingua-EN-Inflect-1.88.ebuild,

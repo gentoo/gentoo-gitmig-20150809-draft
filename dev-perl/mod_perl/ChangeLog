@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.23 2003/06/25 20:04:36 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.24 2003/07/12 10:49:57 aliz Exp $
+
+*mod_perl-1.27-r1 (24 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   25 Jun 2003; <rac@gentoo.org> mod_perl-1.27-r2.ebuild,
   mod_perl-1.27-r3.ebuild:
@@ -34,6 +39,11 @@
   19 May 2003; <rac@gentoo.org> mod_perl-1.99.09.ebuild:
   Upstream version bump, enable "make test". Major kudos to Corporate Gadfly
   <corporate_gadfly@hotmail.com> in bugs #19951 and #20124.
+
+*mod_perl-1.99.08 (24 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *mod_perl-1.27-r2 (01 Mar 2003)
 

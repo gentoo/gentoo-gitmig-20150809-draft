@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.19 2003/06/02 01:18:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.20 2003/07/12 10:49:57 aliz Exp $
 
 *XML-LibXML-1.52-r2 (01 Jun 2003)
 
@@ -13,6 +13,16 @@
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> XML-LibXML-1.52-r1.ebuild XML-LibXML-1.52.ebuild XML-LibXML-1.54.ebuild :
   set ppc in keywords
+
+*XML-LibXML-1.52-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*XML-LibXML-1.54-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *XML-LibXML-1.54 (02 Jan 2003)
 

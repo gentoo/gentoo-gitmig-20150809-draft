@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Storable
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.16 2003/07/02 19:34:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.17 2003/07/12 10:49:57 aliz Exp $
 
   03 Jun 2003; Christian Birchinger <joker@gentoo.org> Storable-2.07.ebuild:
   Added sparc stable keyword
@@ -34,6 +34,11 @@
   9 Sep 2002; <mcummings@gentoo.org> Storable-2.04.ebuild :
   Syntax fixes
   
+*Storable-1.0.14-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *Storable-1.0.14 (6 May 2002)
 
   1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> Storable-1.0.14.ebuild :

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Memoize
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/ChangeLog,v 1.9 2003/05/31 21:19:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
 
 *Memoize-1.01 (31 May 2003)
 
@@ -14,6 +14,11 @@
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
+
+*Memoize-1.00-r2 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *Memoize-1.00-r1 (8 Sep 2002)
   08 Sep 2002; <mcummings@gentoo.org> Memoize-1.00-r1.ebuild

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Jcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.8 2003/05/31 21:08:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.9 2003/07/12 10:49:57 aliz Exp $
 
 *Jcode-0.83 (31 May 2003)
 
@@ -13,6 +13,11 @@
 
   forced version bump to install into correct locations
 # ChangeLog for dev-perl/Jcode
+
+*Jcode-0.80-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *Jcode-0.80 (28 Jun 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Scalar-List-Utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-List-Utils/ChangeLog,v 1.5 2003/06/16 14:24:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-List-Utils/ChangeLog,v 1.6 2003/07/12 10:49:57 aliz Exp $
 
 *Scalar-List-Utils-1.11 (16 Jun 2003)
 
@@ -10,7 +10,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*Class-Container-0.08 (13 Nov 2002)
+*Scalar-List-Utils-1.08 (13 Nov 2002)
 
   13 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>
   Scalar-List-Utils-1.08.ebuild, ChangeLog,

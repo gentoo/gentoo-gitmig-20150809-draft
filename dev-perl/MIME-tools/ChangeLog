@@ -1,10 +1,10 @@
 # ChangeLog for dev-perl/MIME-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.8 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.9 2003/07/12 10:49:57 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-* MIME-tools-5.411a-r2 (26 Nov 2002)
+*MIME-tools-5.411a-r2 (26 Nov 2002)
 
   26 Nov 2002; Michael Cummings <mcummings@gentoo.org> 
   MIME-tools-5.411a-r2.ebuild digest-MIME-tools-5.411a-r2:
@@ -13,6 +13,11 @@
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
+
+*MIME-tools-5.411a-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *MIME-tools-5.411a (23 Oct 2002)
 

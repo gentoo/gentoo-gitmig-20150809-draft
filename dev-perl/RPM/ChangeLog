@@ -1,17 +1,27 @@
 # ChangeLog for dev-perl/RPM
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/ChangeLog,v 1.10 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/ChangeLog,v 1.11 2003/07/12 10:49:57 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
 
+*RPM-0.40-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *RPM-0.40 (9 Sep 2002)
 
   9 Sep 2002; <mcummings@gentoo.org> RPM-0.40.ebuild :
   Corrects syntax changes
   
+*RPM-0.32-r2 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *RPM-0.32-r1 (3 May 2002)
   
   31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> RPM-0.32-r1.ebuild :

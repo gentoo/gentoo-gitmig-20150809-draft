@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-Tty
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.9 2003/04/03 23:19:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
+
+*IO-Tty-1.02-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -14,6 +19,11 @@
   Not sure why were keeping with IO-Tty that was five years old. The newer 
   version contains additional modules that are required by POE and other modules
   that use IO.
+
+*IO-Tty-0.04-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *IO-Tty-0.04 (11 May 2002)
 

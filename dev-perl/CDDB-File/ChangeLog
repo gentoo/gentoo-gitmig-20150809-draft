@@ -1,7 +1,11 @@
 # ChangeLog for dev-perl/CDDB-File
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/ChangeLog,v 1.4 2003/02/12 06:14:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/ChangeLog,v 1.5 2003/07/12 10:49:57 aliz Exp $
 
+*CDDB-File-1.03-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *CDDB-File-1.03 (28 Aug 2002)
 

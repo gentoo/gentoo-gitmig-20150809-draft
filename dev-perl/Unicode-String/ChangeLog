@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Unicode-String
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.10 2003/06/16 14:49:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.11 2003/07/12 10:49:57 aliz Exp $
 
 *Unicode-String-2.07 (16 Jun 2003)
 
@@ -12,6 +12,11 @@
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
+
+*Unicode-String-2.06-r2 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *Unicode-String-2.06-r1 (6 May 2002)
   

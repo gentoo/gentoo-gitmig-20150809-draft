@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.10 2003/07/04 05:34:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.11 2003/07/12 10:49:57 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -19,6 +19,16 @@
   files/digest-XML-Writer-0.5-r1 :
 
   eclassed
+
+*XML-Writer-0.4-r2 (04 Jul 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*XML-Writer-0.4-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *XML-Writer-0.4 (1 Feb 2002)
 

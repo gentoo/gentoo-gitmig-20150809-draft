@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.22 2003/06/25 07:46:50 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.23 2003/07/12 10:49:57 aliz Exp $
 
 *ExtUtils-MakeMaker-6.05-r6 (25 Jun 2003)
 
@@ -23,6 +23,11 @@
   Because perl-post and perl-module have been rolled into one, needed to add
   those portions that were pertinent and remove the perl-module dep. This caused
   a loop condition during install since MakeMaker was a dep of perl-module.
+
+*ExtUtils-MakeMaker-6.05-r4 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *ExtUtils-MakeMaker-6.05-r3 (30 May 2003)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-Netmask
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.6 2003/06/16 14:02:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.7 2003/07/12 10:49:57 aliz Exp $
+
+*Net-Netmask-1.9004 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   16 Jun 2003; Michael Cummings <mcummings@gentoo.org> :
   CPAN version bump; needs testing

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Net-IRC
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.10 2003/06/29 02:07:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.11 2003/07/12 10:49:57 aliz Exp $
 
 *Net-IRC-0.74 (28 Jun 2003)
 
@@ -16,6 +16,16 @@
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
+
+*Net-IRC-0.70-r2 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*Net-IRC-0.70-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *Net-IRC-0.70 (1 Feb 2002)
 

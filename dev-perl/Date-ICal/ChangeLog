@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Date-ICal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.9 2003/06/08 02:55:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
 
 *Date-ICal-1.72 (07 Jun 2003)
 
@@ -11,6 +11,11 @@
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
+
+*Date-ICal-1.69-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *Date-ICal-1.69 (28 Jun 2002)
 

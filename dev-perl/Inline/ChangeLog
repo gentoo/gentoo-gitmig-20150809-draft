@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.12 2003/07/03 21:40:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.13 2003/07/12 10:49:57 aliz Exp $
 
 *Inline-0.44-r1 (02 Jul 2003)
 
@@ -23,6 +23,11 @@
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
+
+*Inline-0.43-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *Inline-0.43 (16 Jul 2002)
 

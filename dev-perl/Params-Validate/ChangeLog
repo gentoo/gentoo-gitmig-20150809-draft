@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Params-Validate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.9 2003/06/16 14:17:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
 
 *Params-Validate-0.59 (16 Jun 2003)
 
@@ -13,7 +13,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*Params-Validate-0.24-2 (26 Nov 2002)
+*Params-Validate-0.24-r2 (26 Nov 2002)
 
   26 Nov 2002; Michael Cummings <mcummings@gentoo.org> 
   Params-Validate-0.24-r2.ebuild:
@@ -25,7 +25,7 @@
   forced version bump to install into correct locations
 # ChangeLog for dev-perl/Params-Validate
 
-*Params-Validate-0.24-1 (14 OCT 2002)
+*Params-Validate-0.24-r1 (14 OCT 2002)
 
   14 OCT 2002; <mcummings@gentoo.org>Params-Validate-0.24-1.ebuild ChangeLog : 
   Initial import. Ebuild submitted by John Cappiello john@apt202.net.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-ShowTable
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/ChangeLog,v 1.9 2003/04/03 22:44:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
+
+*Data-ShowTable-3.3-r2 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

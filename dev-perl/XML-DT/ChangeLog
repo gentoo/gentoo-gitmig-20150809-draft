@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.12 2003/06/23 12:26:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.13 2003/07/12 10:49:57 aliz Exp $
 
   22 Jun 2003; <rac@gentoo.org> XML-DT-0.24.ebuild:
   re -x86 -amd64 to fix keywords
@@ -22,6 +22,11 @@
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
+
+*XML-DT-0.20-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *XML-DT-0.20 (6 May 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.9 2003/06/16 14:22:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
 
 *RPC-XML-0.53 (16 Jun 2003)
 
@@ -13,6 +13,11 @@
 
   forced version bump to install into correct locations
 # ChangeLog for dev-perl/RPC-XML
+
+*RPC-XML-0.40-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *RPC-XML-0.40 (6 May 2002)
 

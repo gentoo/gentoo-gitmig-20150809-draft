@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-NamespaceSupport
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.13 2003/06/17 12:20:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.14 2003/07/12 10:49:57 aliz Exp $
 
 *XML-NamespaceSupport-1.08 (17 Jun 2003)
 
@@ -15,6 +15,11 @@
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : 
   forced version bump to install into correct locations
+
+*XML-NamespaceSupport-1.07-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *XML-NamespaceSupport-1.07 (18 Aug 2002)
 

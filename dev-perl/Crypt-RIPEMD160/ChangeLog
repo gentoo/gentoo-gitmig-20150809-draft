@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Crypt-RIPEMD160
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/ChangeLog,v 1.8 2003/06/07 12:17:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/ChangeLog,v 1.9 2003/07/12 10:49:57 aliz Exp $
 
 *Crypt-RIPEMD160-0.04 (07 Jun 2003)
 
@@ -10,6 +10,11 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*Crypt-RIPEMD160-0.03-r3 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *Crypt-RIPEMD160-0.03-r2 (5 May 2002)
 
   31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Crypt-RIPEMD160-r2.ebuild :
