@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.1.ebuild,v 1.10 2003/02/13 13:16:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.1.ebuild,v 1.11 2003/05/12 20:02:24 weeve Exp $
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://www.stack.nl/~brama/mp3blaster/"
 SRC_URI="ftp://mud.stack.nl/pub/mp3blaster/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha ~sparc"
 IUSE="nas oggvorbis mysql"
 LICENSE="GPL-2"
 

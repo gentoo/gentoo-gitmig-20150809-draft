@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.8 2003/02/12 07:31:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.9 2003/05/12 20:02:24 weeve Exp $
+
+  12 May 2003; Jason Wever <weeve@gentoo.org> mp3blaster-3.1.1.ebuild,
+  mp3blaster-3.1.3.ebuild:
+  Added ~sparc to keywords.
 
 *mp3blaster-3.1.3 (05 Nov 2002)
 
