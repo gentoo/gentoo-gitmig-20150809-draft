@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.2.1.ebuild,v 1.1 2004/12/24 16:41:38 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.2.1.ebuild,v 1.2 2004/12/29 03:05:38 ribosome Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 amd64"
 
 #mpi is a local USE flag now
 #May become official when situation with mpich is cleared (now the only mpi implementation awailable is lam-mpi)
-DEPEND="=dev-libs/fftw-2.1*
+DEPEND="=sci-libs/fftw-2.1*
 	mpi? ( >=sys-cluster/lam-mpi-6.5.6 )
 	>=sys-devel/binutils-2.10.91.0.2
 	app-shells/tcsh
