@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.7-r1.ebuild,v 1.9 2005/01/02 23:20:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.7-r1.ebuild,v 1.10 2005/02/19 20:50:51 corsair Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/system/hardware/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
