@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/mhash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.2 2002/03/27 12:26:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.3 2002/06/13 23:14:56 stroke Exp $
+
+*mhash-0.8.16 (14 Jun 2002)
+
+  14 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> mhash-0.8.16.ebuild :
+
+  New version. Changed the SRC_URI location to a working sf.net mirror.
+
 
 *mhash-0.8.9 (1 Feb 2002)
 
