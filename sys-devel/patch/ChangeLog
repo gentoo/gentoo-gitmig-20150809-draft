@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/patch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.2 2002/04/15 20:36:20 murphy Exp $
+
+*patch-2.5.4-r4 (15 Feb 2002)
+
+  15 Feb 2002; M.Thibaut <murphy@gentoo.org> ChangeLog :
+
+  Added configuration flags that ensure correct compilation of the program
+  on all Linux platforms (more notably 64-bit ones). Fixes bug 1726
+  "fseek: invalid argument" on sparc64 machines with sparc32 userland.
 
 *patch-2.5.4-r3 (1 Feb 2002)
 
