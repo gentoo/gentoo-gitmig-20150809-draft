@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f231d1f2b3836b15e2a2afbc7cca4ab ChangeLog 627
-MD5 34909cb05806cd741e9e4ac39e69463e clustalw-1.83.ebuild 878
+MD5 1e973de2babd867be15cda83655ee358 clustalw-1.83-r1.ebuild 1126
+MD5 94ed28e3b9a07a98dcd58dce4300b30a ChangeLog 815
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 59931bb873b284e7ab0b7c452e87d075 files/digest-clustalw-1.83 69
 MD5 c0269ebe063d17c20c037e7e97e16701 files/optimize-clustalw1.83.patch 327
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBU2KeHTu7gpaalycRAmXpAKCiMv89Bueri9i5HHQ1PUjUHPaOBACfTkyZ
-4ZLdU+u6CINftchHHRR2p/o=
-=VlEF
------END PGP SIGNATURE-----
+MD5 59931bb873b284e7ab0b7c452e87d075 files/digest-clustalw-1.83-r1 69
