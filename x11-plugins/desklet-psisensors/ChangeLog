@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-psisensors
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.8 2004/06/24 22:50:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.9 2004/07/14 00:31:23 obz Exp $
+
+  14 Jul 2004; Mike Gardiner <obz@gentoo.org> desklet-psisensors-20031028.ebuild,
+  desklet-psisensors-20040420.ebuild:
+  Removed blocks on the *info desklets that have now been removed from portage
 
   22 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   desklet-psisensors-20040420.ebuild:

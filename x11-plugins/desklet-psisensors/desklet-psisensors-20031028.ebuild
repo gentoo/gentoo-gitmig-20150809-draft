@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/desklet-psisensors-20031028.ebuild,v 1.4 2004/07/13 04:09:09 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/desklet-psisensors-20031028.ebuild,v 1.5 2004/07/14 00:31:23 obz Exp $
 
 MY_PN="PsiSensorPackage"
 MY_P=${MY_PN}-${PV}
@@ -15,11 +15,12 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ~ppc ~alpha"
 
-DEPEND=">=gnome-extra/gdesklets-core-0.23
-	!x11-plugins/desklet-cpuinfo
-	!x11-plugins/desklet-diskinfo
-	!x11-plugins/desklet-meminfo
-	!x11-plugins/desklet-networkinfo"
+DEPEND=">=gnome-extra/gdesklets-core-0.23"
+# The following have been removed from portage now
+#	!x11-plugins/desklet-cpuinfo
+#	!x11-plugins/desklet-diskinfo
+#	!x11-plugins/desklet-meminfo
+#	!x11-plugins/desklet-networkinfo"
 # This package provides all of the *info desklets,
 # which are now outdated. We need to block them, or 
 # we could have two packages providing the same file.
