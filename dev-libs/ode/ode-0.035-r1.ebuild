@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ode-0.035-r1.ebuild,v 1.3 2003/07/01 00:49:30 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ode-0.035-r1.ebuild,v 1.4 2003/07/02 07:27:52 george Exp $
 
 inherit flag-o-matic
 
@@ -21,6 +21,19 @@ DEPEND="virtual/opengl"
 replace-flags -O? -O
 #this is necessary here because of the way Makefile is composed
 append-flags -c
+
+pkg_setup() {
+	#this (version of) package fails when built with gcc-3.3*
+	GCC_VER=`gcc -dumpversion |cut -d. -f1,2`
+	if [ $GCC_VER == "3.3" ]; then
+		ewarn "Unfortunately this version of the package cannot (yet) be built with >=gcc-3.3"
+		ewarn "You can install an older version of gcc and then use gcc-config to switch"
+		ewarn "compiler version for the duration of the build."
+		ewarn "Alternatively please see #22071 for more options."
+		ewarn "We apologise for the inconvinience."
+		die
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

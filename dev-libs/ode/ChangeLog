@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ChangeLog,v 1.5 2003/06/24 05:02:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ChangeLog,v 1.6 2003/07/02 07:27:52 george Exp $
+
+  01 Jul 2003; George Shapovalov <george@gentoo.org> ode-0.035-r1.ebuild :
+  package build fails with >=gcc-3.3 (#22071)
+  I added pkg_setup which checks gcc version and if 3.3* is found
+  outputs explanation and possible resolutions and then dies.
 
 *ode-0.035-r1 (23 Jun 2003)
 
