@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r9.ebuild,v 1.2 2004/11/26 16:27:19 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r10.ebuild,v 1.1 2004/11/27 20:04:10 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -39,7 +39,9 @@ UNIPATCH_LIST="${DISTDIR}/${UML_PATCH}.bz2
 	${FILESDIR}/${PN}-2.4.cmdlineLeak.patch
 	${FILESDIR}/${PN}-2.4.XDRWrapFix.patch
 	${FILESDIR}/${PN}-2.4.binfmt_elf.patch
-	${FILESDIR}/${PN}-2.4.smbfs.patch"
+	${FILESDIR}/${PN}-2.4.smbfs.patch
+	${FILESDIR}/${PN}-2.4.binfmt_a.out.patch
+	${FILESDIR}/${PN}.AF_UNIX.patch"
 
 src_install() {
 	kernel-2_src_install
