@@ -96,11 +96,6 @@ net-mail/vqadmin
 # this is an alpha
 =net-www/opera-7.50_alpha1
 
-# <usata@gentoo.org> (25 Dec 2003)
-# PRIME 0.7.x hangs when you select number with app-emacs/prime-el client,
-# while this doesn't occur if you use app-i18n/uim (uim-prime)
->=app-i18n/prime-0.7
-
 # <pauldv@gentoo.org> (22 Dec 2003)
 # Some testing is needed before unmasking. It should run well, but this package
 # is quite critical
