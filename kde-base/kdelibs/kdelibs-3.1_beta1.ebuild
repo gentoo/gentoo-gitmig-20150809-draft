@@ -1,13 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_beta1.ebuild,v 1.2 2002/09/06 12:00:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_beta1.ebuild,v 1.3 2002/09/27 20:32:26 bjb Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 # check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
 
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs" 
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
@@ -65,6 +65,7 @@ src_compile() {
 	
 	[ "$ARCH" != "ppc" ] && \
 		[ "$ARCH" != "sparc" ] && [ "$ARCH" != "sparc64" ] && \
+		[ "$ARCH" != "alpha" ] && \
 		myconf="$myconf --enable-fast-malloc=full"
 	
 	kde_src_compile configure make

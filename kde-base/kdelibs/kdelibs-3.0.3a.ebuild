@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.3a.ebuild,v 1.1 2002/09/10 18:53:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.3a.ebuild,v 1.2 2002/09/27 20:32:26 bjb Exp $
 inherit kde kde.org
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -10,7 +10,7 @@ inherit kde kde.org
 SRC_URI="mirror://kde/stable/3.0.3/src/$P.tar.bz2"
 
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc alpha"
 HOMEPAGE="http//www.kde.org/"
 
 SLOT="3.0"
@@ -51,6 +51,7 @@ use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
 
 [ "$ARCH" != "ppc" ] && \
     [ "$ARCH" != "sparc" ] && [ "$ARCH" != "sparc64" ] && \
+	[ "$ARCH" != "alpha" ] && \
     myconf="$myconf --enable-fast-malloc=full"
 
 qtver-from-kdever ${PV}
