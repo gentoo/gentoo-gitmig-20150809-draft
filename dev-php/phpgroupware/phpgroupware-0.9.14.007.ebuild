@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.007.ebuild,v 1.4 2003/12/05 16:34:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.007.ebuild,v 1.5 2003/12/06 21:04:13 mholzer Exp $
 
 inherit webapp-apache
 
@@ -47,6 +47,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Follow the instructions at /usr/share/doc/${PF}/html/x62.html#AEN134 "
-	einfo "to complete the install.  You need to add MySQL users and configure phpGroupWare"
+	einfo "Follow the instructions at"
+	einfo "/usr/share/doc/${PF}/html/x62.html#AEN134"
+	einfo "to complete the install."
+	einfo "You need to add MySQL users and configure ${PN}"
 }
