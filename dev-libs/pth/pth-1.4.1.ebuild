@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.1.ebuild,v 1.17 2004/11/30 06:18:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.1.ebuild,v 1.18 2004/11/30 16:07:42 swegener Exp $
 
 inherit gnuconfig
 
 DESCRIPTION="GNU Portable Threads"
 HOMEPAGE="http://www.gnu.org/software/pth/"
-SRC_URI="ftp://ftp.gnu.org/gnu/pth/pth-1.4.1.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

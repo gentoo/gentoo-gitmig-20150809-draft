@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.20 2004/11/30 06:18:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.21 2004/11/30 16:07:42 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> pth-1.4.0.ebuild,
+  pth-1.4.1.ebuild, pth-2.0.2.ebuild:
+  Changed SRC_URI to use mirror:// syntax and ${PN}/${P} variables. Version
+  2.0.2 is not parallel build safe, appended -j1 to emake. Closes bug #72898.
+  Fixed obsolete head -1 syntax in configure script. Fixed digest for 1.4.1.
 
 *pth-2.0.2 (30 Nov 2004)
 
