@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.43 2004/11/06 14:40:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.44 2004/11/13 01:52:19 kito Exp $
+
+  12 Nov 2004; Kito <kito@gentoo.org> +files/libao-0.8.5-ppc-macos.patch,
+  libao-0.8.5.ebuild:
+  added ppc-macos patch
 
   06 Nov 2004; Lars Weiler <pylon@gentoo.org> libao-0.8.5.ebuild:
   Stable on ppc.

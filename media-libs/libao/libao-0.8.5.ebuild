@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.14 2004/11/06 14:40:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.15 2004/11/13 01:52:19 kito Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="the audio output library"
 HOMEPAGE="http://www.xiph.org/ao/"
@@ -22,6 +22,7 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	use ppc-macos && epatch ${FILESDIR}/${P}-ppc-macos.patch
 	elibtoolize
 }
 
