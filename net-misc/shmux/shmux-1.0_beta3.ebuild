@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/shmux-1.0_beta3.ebuild,v 1.3 2004/07/13 23:31:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/shmux-1.0_beta3.ebuild,v 1.4 2004/07/17 10:08:01 dholm Exp $
 
 MY_P=${P/_beta/b}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://web.taranis.org/shmux/"
 SRC_URI="http://web.taranis.org/${PN}/dist/${MY_P}.tgz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="pcre"
 
 RDEPEND="pcre? ( dev-libs/libpcre )"
