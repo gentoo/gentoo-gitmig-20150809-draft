@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.117 2004/03/31 19:10:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.118 2004/04/03 23:48:29 lu_zero Exp $
+
+  04 Apr 2004; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre3-r5.ebuild,
+  files/ppc750FX-fix.patch:
+  Minor fix to extend the G3 cpu supported, thanks to Simon Strandman
+  <simon.strandman@telia.com>, bug #44276
 
   31 Mar 2004; Martin Holzer <mholzer@gentoo.org> mplayer-1.0_pre3-r5.ebuild:
   adding ipv6 configure. closes 42940

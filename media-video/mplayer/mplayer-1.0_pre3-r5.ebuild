@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.2 2004/03/31 19:10:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.3 2004/04/03 23:48:29 lu_zero Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick theora ipv6"
 
@@ -117,6 +117,8 @@ src_unpack() {
 		cd ${S}; epatch ${FILESDIR}/${P}-libmatroska063.diff
 	fi
 
+	#Add support for another G3 cpu
+	epatch ${FILESDIR}/ppc750FX-fix.patch
 
 	# Fix hppa detection
 	[ "${ARCH}" = "hppa" ] && sed -i -e "s/9000*/parisc*/" "${S}/configure"

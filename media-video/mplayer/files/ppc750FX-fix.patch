@@ -1,0 +1,11 @@
+--- configure	2003-12-08 22:33:31.000000000 +0100
++++ configure	2004-03-10 14:37:09.000000000 +0100
+@@ -890,7 +890,7 @@
+ 	    603e|603ev) _march='-mcpu=603e' _mcpu='-mtune=603e' ;;
+ 	    604|604e|604r|604ev) _march='-mcpu=604' _mcpu='-mtune=604' ;;
+ 	    740|740/750|745/755) _march='-mcpu=740' _mcpu='-mtune=740' ;;
++	    750|750CX|750FX) _march='-mcpu=750' _mcpu='-mtune=750' ;;
+-	    750|750CX) _march='-mcpu=750' _mcpu='-mtune=750' ;;
+     	    *) ;;
+         esac
+ 	# gcc 3.1(.1) and up supports 7400 and 7450
