@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/tome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.9 2004/06/03 10:38:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.10 2004/06/03 20:57:37 mr_bones_ Exp $
+
+  03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> tome-2.2.3.ebuild,
+  tome-2.2.5.ebuild:
+  clean older ebuilds
 
 *tome-2.2.7 (03 Jun 2004)
 
