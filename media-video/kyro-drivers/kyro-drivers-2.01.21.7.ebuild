@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-drivers/kyro-drivers-2.01.21.7.ebuild,v 1.3 2004/07/14 21:50:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-drivers/kyro-drivers-2.01.21.7.ebuild,v 1.4 2004/10/04 06:42:18 spyderous Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.powervr.com/Drivers/Linux/${MY_P}.tgz"
 
 LICENSE="ImaginationTechnologies"
 SLOT="${KV}"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE=""
 RESTRICT="nostrip"
 
