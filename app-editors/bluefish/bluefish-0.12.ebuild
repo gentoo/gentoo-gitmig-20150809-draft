@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.12.ebuild,v 1.1 2003/11/25 22:56:51 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.12.ebuild,v 1.2 2003/11/26 02:12:45 lu_zero Exp $
 
 IUSE="nls spell"
 
@@ -49,4 +49,10 @@ src_install() {
 		gnome2menupath=${D}/usr/share/applications \
 		gnome1menupath=${D}/usr/share/gnome/apps \
 		|| die "make install failed"
+	#fix to remove unneeded path
+	sed -e "s:${D}::" ${D}/usr/share/applications/bluefish.desktop \
+	> ${S}/tmp.desktop
+	mv ${S}/tmp.desktop ${D}/usr/share/applications/bluefish.desktop
+	cp  ${D}/usr/share/applications/bluefish.desktop \
+		${D}/usr/share/gnome/apps/Applications/
 }
