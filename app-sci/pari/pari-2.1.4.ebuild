@@ -18,7 +18,7 @@ src_compile() {
 		--prefix=/usr \
 		--miscdir=/usr/share/doc/${P} \
 		--datadir=/usr/share/${P} \
-		--mandir=/usr/share/man || die "./configure failed"
+		--mandir=/usr/share/man/man1 || die "./configure failed"
 	addwrite "/var/lib/texmf"
 	addwrite "/usr/share/texmf"
 	addwrite "/var/cache/fonts"
