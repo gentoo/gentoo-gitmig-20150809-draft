@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.32 2004/08/19 16:24:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.33 2004/08/20 08:36:03 taviso Exp $
+
+*grep-2.5.1-r6 (20 Aug 2004)
+
+  20 Aug 2004; Tavis Ormandy <taviso@gentoo.org>
+  +files/2.5.1-manpage-line-buffering.diff, +grep-2.5.1-r6.ebuild:
+  fix manpage reference to --line-buffering
 
 *grep-2.5.1-r5 (19 Aug 2004)
 
