@@ -479,7 +479,7 @@ move media-libs/gst-plugins-mad media-plugins/gst-plugins-mad
 move media-libs/gst-plugins-oss media-plugins/gst-plugins-oss
 move media-libs/gst-plugins-vorbis media-plugins/gst-plugins-vorbis
 move sys-apps/cramfs sys-fs/cramfs
-move sys-apps dd_rescue sys-fs/dd-rescue
+move sys-apps/dd_rescue sys-fs/dd-rescue
 move sys-apps/devfsd sys-fs/devfsd
 move sys-apps/e2fsprogs sys-fs/e2fsprogs
 move sys-apps/efsd sys-fs/efsd
