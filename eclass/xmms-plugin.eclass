@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.12 2005/02/12 00:31:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.13 2005/02/12 00:45:26 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 
@@ -23,7 +23,7 @@
 # Example:
 # SONAME="libmpg123.so"
 
-inherit eutils multilib
+inherit eutils
 
 ECLASS=xmms-plugin
 INHERITED="${INHERITED} ${ECLASS}"
@@ -60,7 +60,7 @@ xmms-plugin_src_unpack() {
 		libtoolize --force --copy || die "libtoolize --force --copy failed"
 
 		[[ ! -f ltmain.sh ]] && ln -s ../ltmain.sh
-		aclocal -I ${PATCHDIR}/m4 || die "aclocal failed"
+		aclocal -I ${WORKDIR}/patches/m4 || die "aclocal failed"
 		autoheader || die "autoheader failed"
 		automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
 		autoconf || die "autoconf failed"
@@ -84,8 +84,6 @@ xmms-plugin_src_compile() {
 xmms-plugin_src_install() {
 	cd ${S}/${PLUGIN_PATH}
 	make DESTDIR="${D}" install || die
-#	exeinto $(xmms-config --plugin-dir)"/"${PLUGIN_PATH%%/*}
-#	doexe ${SONAME} || die
 }
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
