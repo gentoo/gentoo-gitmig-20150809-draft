@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomecanvasmm/libgnomecanvasmm-1.3.5.ebuild,v 1.1 2002/06/02 17:24:26 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomecanvasmm/libgnomecanvasmm-1.3.5.ebuild,v 1.2 2002/06/04 09:32:09 blocke Exp $
 
 inherit gnome2
 
@@ -19,4 +19,4 @@ RDEPEND=">=gnome-base/libgnomecanvas-1.117.0
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
 
-DOC="AUTHORS COPYING ChangeLog NEWS README TODO"
+DOCS="AUTHORS COPYING ChangeLog NEWS README TODO"
