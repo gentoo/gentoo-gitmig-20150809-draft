@@ -1,6 +1,14 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.26 2004/06/28 00:10:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.27 2004/06/30 00:28:52 pebenito Exp $
+
+*selinux-base-policy-20040629 (29 Jun 2004)
+
+  29 Jun 2004; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-base-policy-20040629.ebuild:
+  Large sysadmfile cleanup: disable admin_separation to give sysadm_r back its
+  ablility to modify all files. Minor fixes: portage_r works again, syslog-ng
+  breakage fixed, put back manual PaX policy for pageexec/segmexec.
 
   16 Jun 2004; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20040604.ebuild:

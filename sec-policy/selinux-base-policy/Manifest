@@ -3,16 +3,18 @@ Hash: SHA1
 
 MD5 3552d68f16615f11fa6fd0afbdc871be selinux-base-policy-20040604.ebuild 2673
 MD5 2e73809684fe415f46227077effb292a selinux-base-policy-20040225.ebuild 2217
-MD5 0f81d95b55b5ae6e975a337aa9c0a7ac ChangeLog 7688
+MD5 674034903cf497b7f46d20ed62479e1f selinux-base-policy-20040629.ebuild 2676
+MD5 f46fe24a0972386c043945f7391c4ee2 ChangeLog 8051
 MD5 1ec05b5603cc44bc8b406af4f6efd260 selinux-base-policy-20040509.ebuild 2673
 MD5 808b5f7f5d6654666e9193672d463229 metadata.xml 473
 MD5 7afea4eea1a3c5611ca773551fbd1bb5 files/digest-selinux-base-policy-20040225 80
 MD5 0c51e2c101c04d1a58f6da20add86a86 files/digest-selinux-base-policy-20040604 80
+MD5 b04dbcde2eb7e0f4177e3076075fe6ca files/digest-selinux-base-policy-20040629 80
 MD5 0671869ee0d92a38cfabe4491da88e1c files/digest-selinux-base-policy-20040509 80
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA32JgGFJQsIJWJy4RAhvxAJ41SOCLik/xWWXSbx7r34Rb42M6dACePxBv
-qbfpjcOB0bbEIeUTd8m+Kho=
-=4hek
+iD8DBQFA4glQGFJQsIJWJy4RAop3AJ99WlaWmcB2Y2jT+hKVGH2ZJ4gBGgCeL/1t
+dX3ZvBpKRGDnI/FDhZXq3c8=
+=xNLz
 -----END PGP SIGNATURE-----
