@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.35 2002/10/25 19:57:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.36 2002/10/27 10:37:52 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -382,4 +382,40 @@ kde_remove_dir(){
 	done
 
 }
+
+# return the $1th parameter, starting from $2
+get_param() {
+
+    num=$1
+
+    for x in `seq $num`; do shift; done
+    echo "$1"
+
+}
+
+# return total amount of free memory (ram+swap) assuming /proc/meminfo exists and is readable
+get_free_mem() {
+
+    free_ram=`get_param 2 \`grep MemFree /proc/meminfo\``
+    free_swap=`get_param 2 \`grep SwapFree /proc/meminfo\``
+    declare -i total
+    total=$free_ram+$free_swap
+    echo $total
+
+}
+
+# decide whether to set --enable-final, based on the amount of free memory
+# if someone complains that he still gets OOM, we can increase the limit here
+# is only called by ebuilds (& kde-dist.eclass) that actually support enable-final!
+set_enable_final() {
+
+    # current limit is 200,000 kB
+    if [ "`get_free_mem`" -ge 200000 ]; then
+	myconf="$myconf --enable-final"
+    else
+	myconf="$myconf --disable-final" # just to be sure :-)
+    fi
+
+}
+
 
