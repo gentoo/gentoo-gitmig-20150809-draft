@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r1.ebuild,v 1.3 2005/02/06 09:11:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r1.ebuild,v 1.4 2005/02/19 17:57:03 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -37,11 +37,11 @@ src_install () {
 
 	if use doc ; then
 		mkdir docs
-		cd ${S}/jsr154/dist
+		cd ${S}/jsr154/build
 		mv docs ${S}/docs/servlet
 		mv examples ${S}/docs/servlet/examples
 
-		cd ${S}/jsr152/dist
+		cd ${S}/jsr152/build
 		mv docs ${S}/docs/jsp
 		mv examples ${S}/docs/jsp/examples
 	fi
