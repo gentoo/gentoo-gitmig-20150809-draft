@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.46 2004/04/27 22:13:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.47 2004/06/04 15:54:18 plasmaroo Exp $
+
+*xfs-sources-2.4.24-r6 (04 Jun 2004)
+
+  04 Jun 2004; <plasmaroo@gentoo.org> -xfs-sources-2.4.19-r3.ebuild,
+  -xfs-sources-2.4.20-r1.ebuild, -xfs-sources-2.4.20-r2.ebuild,
+  -xfs-sources-2.4.20-r3.ebuild, -xfs-sources-2.4.20-r4.ebuild,
+  -xfs-sources-2.4.20-r5.ebuild, -xfs-sources-2.4.20.ebuild,
+  -xfs-sources-2.4.23-r1.ebuild, +xfs-sources-2.4.24-r6.ebuild,
+  +files/xfs-sources.CAN-2004-...patch:
+  Added patches for the CAN-2004-0075, CAN-2004-0133, CAN-2004-0181,
+  CAN-2004-0394, and CAN-2004-0427 vulnerabilities. Bug #47881. Old versions of
+  sources removed.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   xfs-sources-2.4.19-r3.ebuild, xfs-sources-2.4.20-r1.ebuild,
@@ -8,7 +20,7 @@
   xfs-sources-2.4.20-r4.ebuild, xfs-sources-2.4.20-r5.ebuild,
   xfs-sources-2.4.20.ebuild, xfs-sources-2.4.23-r1.ebuild,
   xfs-sources-2.4.24-r2.ebuild:
-  Add inherit eutils
+  Add inherit eutils.
 
 *xfs-sources-2.4.24-r5 (17 Apr 2004)
 
