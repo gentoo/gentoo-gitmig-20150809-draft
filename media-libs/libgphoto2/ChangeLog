@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libgphoto2
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.1 2003/02/12 15:46:26 spider Exp $
+
+
+*libgphoto2-2.1.1 (12 Feb 2002)
+  
+  12 Feb 2003; Spider <spider@gentoo.org> libgphoto2-2.1.1.ebuild :
+  copied the gphoto2 ebuilds, bumped and tweaked
+  tried to enable doc's , but appears they dont work properly. disabled for now  
