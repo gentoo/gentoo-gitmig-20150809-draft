@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.3 2004/09/27 10:35:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.4 2004/09/27 10:39:22 lanius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/pcap.patch
 	epatch ${FILESDIR}/${PV}/control_c.patch
 	epatch ${FILESDIR}/${PV}/stdopt-mppe-mppc-0.82.patch.gz
+	epatch ${FILESDIR}/${PV}/endless-loop.patch
 
 	if use atm; then
 		einfo "Enabling PPPoATM support"

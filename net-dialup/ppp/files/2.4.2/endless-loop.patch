@@ -1,0 +1,12 @@
+--- ppp-2.4.2/pppd/main.c.orig	2004-07-29 15:16:52.518106400 +0200
++++ ppp-2.4.2/pppd/main.c	2004-07-29 15:17:09.099585632 +0200
+@@ -1342,8 +1342,8 @@
+ 
+     act.sa_handler = SIG_IGN;
+     act.sa_flags = 0;
+-    sigaction(sig, &act, &oldact);
+     kill(0, sig);
++    sigaction(sig, &act, &oldact);
+     sigaction(sig, &oldact, NULL);
+ }
+ 
