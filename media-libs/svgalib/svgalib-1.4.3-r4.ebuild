@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.14 2004/04/06 03:05:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.15 2004/05/12 12:30:06 pappy Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,8 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
-	has_version "sys-devel/hardened-gcc" && append-flags "-yet_exec"
+	filter-flags "-fPIC"
 
 	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils || die
 	# Build the gl stuff tpp

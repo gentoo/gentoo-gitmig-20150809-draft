@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.11 2004/02/01 22:16:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.12 2004/05/12 12:30:06 pappy Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A library for running svga graphics on the console"
 HOMEPAGE="http://www.svgalib.org/"
@@ -38,8 +38,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
-	has_version "sys-devel/hardened-gcc" && CC="${CC} -yet_exec"
+
+	filter-flags "-fPIC"
 
 	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils \
 		|| die "Failed to build libraries and utils!"
