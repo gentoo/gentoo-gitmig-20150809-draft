@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.11 2004/03/10 04:32:22 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.12 2004/04/24 17:05:14 max Exp $
+
+*lvm2-2.00.15 (24 Apr 2004)
+
+  24 Apr 2004; Max Kalika <max@gentoo.org> lvm2-2.00.15.ebuild:
+  Bump to version 2.0.15. Install a default lvm.conf file.
 
   09 Mar 2004; Max Kalika <max@gentoo.org> lvm2-2.00.06.ebuild,
   lvm2-2.00.07.ebuild, lvm2-2.00.08.ebuild:
