@@ -1,8 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04-r1.ebuild,v 1.10 2003/02/13 10:27:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04-r1.ebuild,v 1.11 2003/04/11 18:32:16 method Exp $
 
 IUSE="tcltk"
+
+inherit flag-o-matic
+filter-flags "-fstack-protector"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Objective Caml is a fast modern type-inferring functional programming language descended from the ML (Meta Language) family."
