@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r2.ebuild,v 1.2 2004/02/13 09:54:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r2.ebuild,v 1.3 2004/03/19 23:26:12 eradicator Exp $
 
 inherit webapp-apache
 
@@ -27,9 +27,9 @@ IUSE="crypt virus-scan ldap"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 
-RDEPEND=">=mod_php-4.1
+RDEPEND=">=dev-php/mod_php-4.1
 	dev-perl/DB_File
 	crypt? ( app-crypt/gnupg )
 	ldap? ( net-nds/openldap )"
