@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta2.ebuild,v 1.4 2003/12/28 03:32:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta2.ebuild,v 1.5 2003/12/28 14:52:57 caleb Exp $
 inherit kde flag-o-matic
 
 IUSE="alsa oggvorbis esd artswrappersuid mad"
@@ -17,13 +17,12 @@ DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manag
 
 KEYWORDS="~x86"
 
-newdepend "alsa? ( media-libs/alsa-lib virtual/alsa )
+DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	esd? ( media-sound/esound )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
 	>=dev-libs/glib-2
-	dev-util/pkgconfig
 	>=sys-apps/portage-2.0.49-r8"
 
 if [ "${COMPILER}" == "gcc3" ]; then
@@ -39,7 +38,7 @@ SLOT="3.2"
 LICENSE="GPL-2 LGPL-2"
 
 myconf="$myconf `use_enable alsa`"
-myconf="$myconf `use_enable oggvorbis`"
+myconf="$myconf `use_enable oggvorbis vorbis`"
 myconf="$myconf `use_enable mad libmad`"
 
 # patch to configure.in.in that makes the vorbis, libmad deps optional
