@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.16 2004/11/10 01:24:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.17 2004/12/04 21:29:26 eradicator Exp $
+
+*xmms-jack-0.11 (04 Dec 2004)
+
+  04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  files/xmms-jack-0.10-cflags.patch,
+  +files/xmms-jack-0.11-sysbio2jack.patch, +xmms-jack-0.11.ebuild:
+  Version bump.  Now using system installed bio2jack.  Closes bug #73373.
 
   09 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-jack-0.10.ebuild:
