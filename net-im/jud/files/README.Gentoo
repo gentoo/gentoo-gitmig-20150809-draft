@@ -1,0 +1,32 @@
+This is a small help to get you started with the JUD (Jabber User Directory) in
+Gentoo.
+
+You must add this to multiple.xml in the services section:
+
+<service id="jud">
+  <host>jud.localhost</host>
+  <load><jud>/usr/lib/jabberd/jud.so</jud></load>
+  <jud xmlns="jabber:config:jud">
+    <vCard>
+      <FN>Local User Directory</FN>
+      <DESC>This service provides a simple user directory service.</DESC>
+      <URL>http://jud.jabberstudio.org/</URL>
+    </vCard>
+  </jud>
+</service>
+
+
+And this to the browse section:
+
+<service type="jud" jid="jud.localhost" name="Jabber User Directory">
+	<ns>jabber:iq:search</ns>
+	<ns>jabber:iq:register</ns>
+</service>
+
+(By know you know you have to change localhost for you FQDN).
+One very importante thing: even if it is the same machine the name's for the 
+various services must be diferent, that means that there must be valid aliases 
+for jud.FQDN.
+
+If you need help with configuration you can try the Jabber Admin Mailling list:
+http://mailman.jabber.org/listinfo/jadmin

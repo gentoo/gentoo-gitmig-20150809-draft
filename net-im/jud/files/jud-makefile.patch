@@ -1,0 +1,11 @@
+--- Makefile	2003-11-12 09:12:20.000000000 +0000
++++ Makefile.new	2004-01-09 19:50:00.224467512 +0000
+@@ -1,6 +1,6 @@
+-include ../platform-settings
++include /usr/lib/jabberd/platform-settings
+ 
+-CFLAGS=$(CCFLAGS) -I../jabberd
++CFLAGS=$(CCFLAGS) -I/usr/include/jabberd
+ 
+ jud_OBJECTS=jud.o jud_reg.o jud_search.o
+ 
