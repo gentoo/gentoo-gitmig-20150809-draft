@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.1 2004/11/19 03:00:05 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.2 2004/11/19 03:08:42 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -14,18 +14,6 @@ LICENSE="LGPL-2"
 
 HOMEPAGE="http://gtk-sharp.sourceforge.net/"
 LICENSE="LGPL-2.1"
-
-SRC_URI="mirror://sourceforge/gtk-sharp/${MY_P}.tar.gz
-		mirror://gentoo/${MY_P}-configurable.diff.gz"
-
-S=${WORKDIR}/${MY_P}
-
-# Make sure we're building with the same version.
-DEPEND="${DEPEND}
-	=dev-dotnet/${MY_P}*
-	sys-devel/automake
-	sys-devel/autoconf
-	>=sys-apps/sed-4"
 
 ###
 # variable declarations
@@ -57,6 +45,18 @@ GTK_SHARP_COMPONENT_BUILD_DEPS=""
 GTK_SHARP_COMPONENT_BUILD_DIR=${PN/-sharp/}
 
 DESCRIPTION="${GTK_SHARP_COMPONENT_BUILD} plugin for gstreamer"
+SRC_URI="mirror://sourceforge/gtk-sharp/${MY_P}.tar.gz
+		mirror://gentoo/${MY_P}-configurable.diff.gz"
+
+S=${WORKDIR}/${MY_P}
+
+# Make sure we're building with the same version.
+DEPEND="${DEPEND}
+	=dev-dotnet/${MY_P}*
+	sys-devel/automake
+	sys-devel/autoconf
+	>=sys-apps/sed-4"
+
 
 ###
 # public functions
