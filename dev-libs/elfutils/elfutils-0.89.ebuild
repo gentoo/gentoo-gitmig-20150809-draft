@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.89.ebuild,v 1.1 2003/10/21 00:43:44 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.89.ebuild,v 1.2 2003/10/29 20:21:07 seemant Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="nls"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Libraries and utilities to handle compiled objects.
@@ -35,7 +35,8 @@ src_unpack() {
 
 src_compile() {
 	econf --program-prefix="eu-" \
-		--enable-shared || die "./configure failed"
+		--enable-shared \
+		`use_enable nls` || die "./configure failed"
 
 	emake || die
 }

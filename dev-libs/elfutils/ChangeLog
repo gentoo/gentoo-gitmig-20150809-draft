@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.21 2003/10/27 03:31:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.22 2003/10/29 20:21:07 seemant Exp $
+
+  29 Oct 2003; Seemant Kulleen <seemant@gentoo.org> elfutils-0.89.ebuild:
+  added nls USE flag check
 
   26 Oct 2003; Aron Griffis <agriffis@gentoo.org>
   files/elfutils-0.89-atime.diff:
