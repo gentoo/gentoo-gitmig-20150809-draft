@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.2.0.ebuild,v 1.2 2004/05/08 23:58:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.3.1.ebuild,v 1.1 2004/05/08 23:58:36 mkennedy Exp $
 
 inherit common-lisp
 
-DESCRIPTION="CL-GD is a library for Common Lisp which provides an interface to the GD Graphics Library for the dynamic creation of images. It is based on UFFI and should thus be portable to all CL implementations supported by UFFI."
+DESCRIPTION="CL-GD is a library for Common Lisp which interfaces ti the GD Graphics Library"
 HOMEPAGE="http://weitz.de/cl-gd
 	http://www.cliki.net/cl-gd"
 SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="gif"
 DEPEND="dev-lisp/common-lisp-controller
 	>=dev-lisp/cl-uffi-1.3.4
 	media-libs/libpng
@@ -26,9 +26,16 @@ CLPACKAGE=cl-gd
 S=${WORKDIR}/${P}
 
 src_compile() {
-	gcc ${CFLAGS} -fPIC -c cl-gd-glue.c
-	ld -lgd -lz -lpng -ljpeg -lfreetype -lm -shared cl-gd-glue.o -o cl-gd-glue.so
-	rm cl-gd-glue.o
+	local csource
+	if use gif; then
+		csource=cl-gd-glue-gif.c
+		echo '(push :cl-gd-gif *features*)' >>cl-gd.asd
+	else
+		csource=cl-gd-glue.c
+	fi
+	gcc ${CFLAGS} -fPIC -c ${csource}
+	ld -lgd -lz -lpng -ljpeg -lfreetype -lm -shared ${csource%.c}.o -o cl-gd-glue.so
+	rm ${csource%.c}.o
 }
 
 src_install() {

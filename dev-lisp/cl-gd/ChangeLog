@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-gd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.5 2004/02/12 09:13:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.6 2004/05/08 23:58:36 mkennedy Exp $
+
+*cl-gd-0.3.1 (08 May 2004)
+
+  08 May 2004; <mkennedy@gentoo.org> +cl-gd-0.3.1.ebuild:
+  New upstream version; Support for new USE gif flag
 
 *cl-gd-0.2.0-r1 (12 Feb 2004)
 
