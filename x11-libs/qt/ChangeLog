@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.18 2002/07/16 03:16:42 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.19 2002/07/23 04:19:01 danarmak Exp $
+
+  23 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix #5346: correct -system-nas-sound configure option.
 
 *qt-3.0.4.20020606-r1 (8 Jun 2002)
 

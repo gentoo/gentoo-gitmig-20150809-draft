@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5.ebuild,v 1.2 2002/07/18 19:10:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5.ebuild,v 1.3 2002/07/23 04:19:01 danarmak Exp $
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -43,8 +43,7 @@ src_unpack() {
 
 	cd ${S}
 	cp configure configure.orig
-	sed -e 's:read acceptance:acceptance=yes:' \
-	    -e 's:|-repeater|:|-nas-sound|-repeater|:' configure.orig > configure
+	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
 
 }
 
@@ -54,7 +53,7 @@ src_compile() {
 	
 	export LDFLAGS="-ldl"
 
-	use nas		&& myconf="${myconf} -nas-sound"
+	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
