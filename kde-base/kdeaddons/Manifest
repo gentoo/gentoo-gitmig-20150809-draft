@@ -1,5 +1,6 @@
 MD5 83b687e3313d86f989609b93cd5960e7 kdeaddons-3.2.0.ebuild 967
 MD5 051f739ad0f7b2d5a92077edb9e25d11 kdeaddons-3.2.2.ebuild 1055
+MD5 4692a342a3c18082c801a6a7740e9e87 kdeaddons-3.3.0_beta2.ebuild 947
 MD5 0a8bea2fdb4c16061a36f1c51ff483fe kdeaddons-3.2.1.ebuild 969
 MD5 a94cb41a182cbfbe96f724057418e8ee ChangeLog 11947
 MD5 07126e65623acf7e4ac846890e5044c4 kdeaddons-3.1.5.ebuild 1415
@@ -9,6 +10,7 @@ MD5 4ba1727d4ba2f7215199804a243e59c4 kdeaddons-3.2.3.ebuild 980
 MD5 ee9fff88c4c48e7e34d37f8bb495db0d files/kdeaddons-3.1.5-enable-crashes.diff 1415
 MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
 MD5 110cc10bff714d001b195918f31942ea files/digest-kdeaddons-3.3.0_beta1 70
+MD5 d9d26f156ac0b697ca6f636c8cefa60a files/digest-kdeaddons-3.3.0_beta2 70
 MD5 913bd9f1c52d68ec7faa72960464132e files/kdeaddons-3.2.2-gcc34.patch 1256
 MD5 2ee3ac63e93c7273ade0f6392ebea71a files/digest-kdeaddons-3.1.5 69
 MD5 22eee0845b6b7a62a9289a761f7632c1 files/digest-kdeaddons-3.2.0 69

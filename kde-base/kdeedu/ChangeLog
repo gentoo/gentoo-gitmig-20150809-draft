@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.80 2004/07/08 22:42:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.81 2004/07/23 12:20:33 caleb Exp $
+
+*kdeedu-3.3.0_beta2 (23 Jul 2004)
+
+  23 Jul 2004; Caleb Tennis <caleb@gentoo.org> +kdeedu-3.3.0_beta2.ebuild:
+  new beta
 
 *kdeedu-3.3.0_beta1 (08 Jul 2004)
 
