@@ -1,15 +1,20 @@
 # this is a list of USE flags
-# that should not be used on PPC
+# that should not be used on PPC64
+# Tom Gall <tgall@gentoo.org> handles this
+acl
 afs
 3dfx
 3dnow
 avi
 icc
 icc-pgo
+ruby
 mmx
 svga
 sse
 scanner 
+X
+vim-with-x
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
