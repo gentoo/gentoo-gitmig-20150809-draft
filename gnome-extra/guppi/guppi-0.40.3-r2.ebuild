@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r2.ebuild,v 1.5 2003/07/24 18:35:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r2.ebuild,v 1.6 2003/10/17 08:05:59 liquidx Exp $
 
 IUSE="python nls readline"
 
@@ -23,7 +23,8 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	 >=gnome-base/gnome-print-0.31
 	 >=media-libs/gdk-pixbuf-0.13
 	 >=dev-util/guile-1.4
-	 >=gnome-base/bonobo-1.0.17"
+	 >=gnome-base/bonobo-1.0.17
+	 <gnome-extra/gal-1.99"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext
