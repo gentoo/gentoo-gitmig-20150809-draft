@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.21 2004/08/06 05:39:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.22 2004/08/17 18:13:04 vapier Exp $
 
 inherit eutils
 
@@ -33,8 +33,11 @@ src_compile() {
 src_install() {
 	dodir /etc/watchdog
 	make DESTDIR="${D}" install || die
+
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/watchdog
+	insinto /etc/conf.d
+	newins ${FILESDIR}/watchdog.conf.d watchdog
 }
 
 pkg_postinst() {
