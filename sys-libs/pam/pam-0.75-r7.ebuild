@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.1 2002/07/30 22:11:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r7.ebuild,v 1.2 2002/07/30 23:48:02 azarah Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -39,6 +39,13 @@ src_unpack() {
 		bzip2 -dc ${S2}/patchdir/${x} | patch -p1 || \
 			die "Failed to apply ${x}"
 	done
+
+	# Fixes a segfault in module pam_wheel.so when "use_uid" is not
+	# used as argument to module.  This should resolve bug #5686.
+	#
+	# Martin Schlemmer <azarah@gentoo.org> (31 Jul 2002)
+	#
+	patch -p1 < ${FILESDIR}/${P}-pam_wheel-segfault.patch || die
 
 	export WANT_AUTOCONF_2_5=1
 	autoconf
