@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.5.ebuild,v 1.2 2004/03/22 19:57:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.5.ebuild,v 1.3 2004/03/23 20:26:28 dholm Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jre-1.4"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 
 S=${WORKDIR}/${PN}
 
