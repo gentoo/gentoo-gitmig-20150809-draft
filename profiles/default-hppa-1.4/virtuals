@@ -27,7 +27,7 @@ virtual/mda		net-mail/procmail
 virtual/xft             x11-libs/xft
 virtual/krb5		app-crypt/heimdal
 virtual/motif           x11-libs/openmotif
-virtual/bootloader	sys-apps/aboot
+virtual/bootloader	sys-apps/palo
 virtual/editor		app-editors/nano
 virtual/os-headers	sys-kernel/hppa-headers
 virtual/modutils 	sys-apps/modutils

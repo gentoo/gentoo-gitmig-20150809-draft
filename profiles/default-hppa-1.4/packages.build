@@ -1,6 +1,5 @@
-sys-libs/glibc
 sys-apps/baselayout
-sys-libs/ncurses
+sys-libs/glibc
 sys-apps/texinfo
 app-shells/bash
 sys-apps/bzip2
@@ -24,10 +23,8 @@ sys-devel/gcc
 sys-devel/make
 sys-devel/patch
 dev-lang/python
-dev-libs/popt
 net-misc/wget
 net-misc/rsync
 app-editors/nano
 sys-apps/net-tools
 sys-apps/less
-sys-apps/procps

@@ -26,22 +26,18 @@
 # versions of binutils, gcc and glibc, so we lock them down here.  This
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
-!dev-lang/gpc
-*>=sys-apps/baselayout-1.8.3
+*>=sys-apps/baselayout-1.8.5.8
 *>=sys-apps/portage-2.0.36
-*>=sys-devel/binutils-2.13.90.0.4
-*>=sys-devel/gcc-3.2
-*>=sys-libs/glibc-2.2.5-r7
-~sys-kernel/linux-headers-2.4.20
->=sys-apps/sysklogd-1.4.1
+*>=sys-devel/binutils-2.13.90.0.18
+*>=sys-devel/gcc-3.2.2
+*>=sys-libs/glibc-2.3.1-r2
+~sys-kernel/hppa-headers-2.4.20_p32
+
 *dev-lang/python
 # sash - static shell for system recovery
 *app-shells/sash
-*dev-libs/libelf
 *dev-lang/perl
-*dev-perl/ExtUtils-MakeMaker
 *virtual/editor
-#no real cost for nano, since we already have ncurses
 *net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/rsync
@@ -62,13 +58,12 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
+*virutal/bootloader
 *sys-apps/gzip
 *sys-apps/hdparm
-*sys-apps/palo
 *sys-apps/less
 *sys-apps/man
 *sys-apps/man-pages
-*sys-apps/modutils
 *sys-apps/net-tools
 *sys-apps/netkit-base
 *sys-apps/procps
