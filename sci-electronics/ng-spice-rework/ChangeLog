@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/ng-spice-rework
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.4 2005/01/15 11:58:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.5 2005/03/25 23:41:54 plasmaroo Exp $
+
+  25 Mar 2005; <plasmaroo@gentoo.org> -ng-spice-rework-14.ebuild:
+  Remove redundant ng-spice-rework-14.
 
   15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> ng-spice-rework-15.ebuild:
   added ~amd64 to KEYWORDS. fixes bug #77716.
