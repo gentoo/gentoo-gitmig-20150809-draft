@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stripogram-py21
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stripogram-py21/ChangeLog,v 1.1 2003/04/08 08:29:04 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stripogram-py21/ChangeLog,v 1.2 2003/06/23 02:52:05 kutsuya Exp $
+
+  22 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> stripogram-py21-1.4.ebuild:
+  ~x86 ~ppc -> x86 ppc
 
 *stripogram-py21-1.4 (08 Apr 2003)
 
