@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3693 2005/03/09 03:23:25 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3694 2005/03/09 08:08:30 leonardop Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -83,8 +83,11 @@
 >=media-video/totem-1.0
 >=media-sound/sound-juicer-2.10
 #accessibility pkgs
-
+>=app-accessibility/gnopernicus-0.10
+>=app-accessibility/gok-0.12
+>=dev-libs/atk-1.9
 #End of gnome-2.10 mask
+
 # Michael Januszewski <spock@gentoo.org> (09 Mar 2005)
 # A development version of splashutils which includes many new features
 # and can therefore be slightly broken. Feel free to test and report bugs.
