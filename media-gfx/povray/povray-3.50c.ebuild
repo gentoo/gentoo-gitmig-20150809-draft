@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.4 2003/04/01 14:30:29 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.5 2003/04/09 13:30:43 lu_zero Exp $
 
 IUSE="icc X svga"
 
@@ -86,6 +86,15 @@ src_compile() {
 		echo 's/LIBS = \(.*\)/LIBS = \1 -ldl/' >> makefile.sed
 	fi
 
+
+	# strip the x86 specific options if on non x86
+	if [ ${ARCH} != "x86" ]; then 
+		echo "s/-minline-all-stringops//" >> makefile.sed
+		echo "s/-malign-double//" >> makefile.sed
+		echo "s/-mcpu=i586//" >> makefile.sed
+	 	echo "s/-march=i586//" >> makefile.sed
+	fi
+	
 	cp Makefile Makefile.orig
 	sed -f makefile.sed Makefile.orig > Makefile
 
