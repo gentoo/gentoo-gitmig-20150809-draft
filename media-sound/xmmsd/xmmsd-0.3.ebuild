@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/xmmsd-0.3.ebuild,v 1.6 2004/04/20 17:40:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/xmmsd-0.3.ebuild,v 1.7 2004/06/24 08:00:35 eradicator Exp $
 
 IUSE=""
 
@@ -13,14 +13,14 @@ DEPEND="media-sound/xmms
 	=x11-libs/gtk+-1*"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 RESTRICT="nomirror"
 
 src_compile() {
 	econf || die
-	emake MAKEOPTS="-j1" || die
+	emake -j1 || die
 }
 
 src_install() {
