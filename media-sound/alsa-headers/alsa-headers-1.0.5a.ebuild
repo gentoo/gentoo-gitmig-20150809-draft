@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.5a.ebuild,v 1.7 2004/08/17 22:21:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.5a.ebuild,v 1.8 2004/09/22 22:35:54 eradicator Exp $
 
 IUSE=""
 
-inherit kernel-mod flag-o-matic eutils
+inherit eutils
 
 MY_PN=${PN/headers/driver}
 MY_P="${MY_PN}-${PV}"
