@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.2 2002/04/14 02:11:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r3.ebuild,v 1.1 2002/04/14 02:11:31 seemant Exp $
 
 MY_P=${P/.200/-200}
 MY_S=${MY_P/avifile-/avifile}
@@ -14,7 +14,7 @@ HOMEPAGE="http://divx.euro.ru/"
 DEPEND=">=media-libs/divx4linux-20011025
 	media-libs/jpeg
 	media-libs/win32codecs
-	qt? ( =x11-libs/qt-2* )
+	qt? ( =x11-libs/qt-2.3.2* )
 	nas? ( >=media-libs/nas-1.4.2 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	oggvorbis? ( media-libs/libvorbis )"
@@ -23,7 +23,8 @@ DEPEND=">=media-libs/divx4linux-20011025
 src_compile() {
 
 	local myconf
-	
+	local kdepre 
+
 	use mmx && myconf="--enable-x86opt"
 	use sse && myconf="--enable-x86opt"
 	use 3dnow && myconf="--enable-x86opt"
@@ -47,10 +48,18 @@ src_compile() {
 		|| myconf="${myconf} --disable-vorbis --disable-oggtest --disable-vorbistest"
 	
 	use kde \
-		&& LDFLAGS="${LDFLAGS} -L/usr/kde/2/lib -L/usr/kde/2/lib" \
-		&& myconf="${myconf} --with-extra-libraries=/usr/kde/2" \
-		&& myconf="${myconf} --with-extra-libraries=/usr/kde/3" \
-		|| LDFLAGS="${LDFLAGS}"
+		
+	use kde \
+		&& ( \ 
+			kdepre=`kde-config --prefix`
+			myconf="${myconf} --enable-kde" \
+			&& LDFLAGS="${LDFLAGS} -L${kdepre}/lib" \
+			&& myconf="${myconf} --with-extra-libraries=${kdepre}" \
+		) || (
+			myconf="${myconf} --disable-kde" \
+			&& LDFLAGS="${LDFLAGS}"
+		)
+
 	
 	export CFLAGS=${CFLAGS/-O?/-O2}
 	export LDFLAGS

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.6 2002/04/14 01:47:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.7 2002/04/14 02:11:31 seemant Exp $
+
+avifile-0.6.0.20011220-r3 (13 Apr 2002)
+
+  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
+
+  A more dynamic way to cohese with kde2/kde3.  If this works through testing
+  I will make this the r2 ebuild instead.
 
 avifile-0.6.0.20011220-r2 (13 Apr 2002) 
 
