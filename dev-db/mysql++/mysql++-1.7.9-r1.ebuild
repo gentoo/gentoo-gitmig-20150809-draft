@@ -11,7 +11,8 @@ SRC_URI="http://mysql.he.net/Downloads/${PN}/${P}.tar.gz
 	http://mysql.adgrafix.com/Downloads/${PN}/${P}.tar.gz
 	http://mysql.fastmirror.com/Downloads/${PN}/${P}.tar.gz
 	http://mysql.oms-net.nl/Downloads/${PN}/${P}.tar.gz
-	mirror://gentoo/mysql++-gcc-3.0.patch.gz"
+	mirror://gentoo/mysql++-gcc-3.0.patch.gz
+	mirror://gentoo/mysql++-gcc-3.2.patch.gz"
 
 # This is the download page but includes links to other places
 HOMEPAGE="http://www.mysql.org/downloads/api-mysql++.html"
@@ -22,23 +23,27 @@ KEYWORDS="~x86"
 LICENSE="LGPL-2"
 DEPEND=">=dev-db/mysql-3.23.49"
 
-src_compile() {
-
- if [[ "${COMPILER}" == "gcc3" ]];then
-	EPATCH_SINGLE_MSG="Patching for gcc 3.0..."
-	epatch ${DISTDIR}/mysql++-gcc-3.0.patch.gz
-	EPATCH_SINGLE_MSG="Patching for gcc 3.2..."
-	epatch ${DISTDIR}/mysql++-gcc-3.2.patch.gz
-	EPATCH_SINGLE_MSG="Patching to fix some warnings and errors..."
-	epatch ${FILESDIR}/mysql++-1.7.9-gcc_throw.patch
-	EPATCH_SINGLE_MSG="Patch for const char* error"
-	epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc3.patch	
- else
-	EPATCH_SINGLE_MSG="Patch for const char* error"
-	epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc295.patch	
- fi
-	EPATCH_SINGLE_MSG="fixing examples directory bug..."
+src_unpack() {
+	unpack "${A}"
+	EPATCH_OPTS="-p1 -d ${S}"
+	if [[ "${COMPILER}" == "gcc3" ]];then
+		EPATCH_SINGLE_MSG="Patching for gcc 3.0..."
+		epatch ${DISTDIR}/mysql++-gcc-3.0.patch.gz
+		EPATCH_SINGLE_MSG="Patching for gcc 3.2..."
+		epatch ${DISTDIR}/mysql++-gcc-3.2.patch.gz
+		EPATCH_SINGLE_MSG="Patching to fix some warnings and errors..."
+		epatch ${FILESDIR}/mysql++-1.7.9-gcc_throw.patch
+		EPATCH_SINGLE_MSG="Patch for const char* error"
+		epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc3.patch	
+	else
+		EPATCH_SINGLE_MSG="Patch for const char* error"
+		epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc295.patch	
+	fi
+	EPATCH_SINGLE_MSG="Fixing examples directory bug..."
 	epatch ${FILESDIR}/mysql++-1.7.9_example.patch
+}
+
+src_compile() {
 
 	local myconf
 	# we want C++ exceptions turned on
@@ -49,7 +54,8 @@ src_compile() {
 	# not including the directives to where MySQL is because it seems to find it
 	# just fine without
 	# force the cflags into place otherwise they get totally ignored by configure
-	CFLAGS="${CFLAGS}" CXXFLAGS="${CFLAGS} ${CXXFLAGS}" econf \
+	CFLAGS="${CFLAGS}" CXXFLAGS="${CFLAGS} ${CXXFLAGS}" \
+	econf \
 		--enable-exceptions \
 		--includedir=/usr/include/mysql++ 
 
@@ -62,6 +68,7 @@ src_install () {
 	dodoc README LGPL
 	dodoc doc/*
 	dohtml doc/man-html/*
+	prepalldocs
 	ewarn "The MySQL++ include directory has changed compared to previous versions"
 	ewarn "It was previously /usr/include, but now it is /usr/include/mysql++"
 }

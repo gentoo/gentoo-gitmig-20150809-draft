@@ -1,6 +1,6 @@
 MD5 fbdfacb7177f528d0e9f268d06c5b5c2 mysql++-1.7.9.ebuild 1518
 MD5 efa9d28bfb9f662057ce1f82df1464b4 mysql++-1.7.9-r1.ebuild 2726
-MD5 5490886355b67fb83f1de91805e331e4 ChangeLog 1649
+MD5 e16882d3a186835b119b72e8d37873d5 ChangeLog 1649
 MD5 29dd283bdc19e7542a9f50501d4eda70 files/mysql++-1.7.9_example.patch 1203
 MD5 027947f703cc541c6b056955cf5606be files/mysql++-1.7.9-gcc_throw.patch 7310
 MD5 54b8d3ba432ce4cad6c23fa32ac17042 files/mysql++-1.7.9-mysql4-gcc295.patch 421
