@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.160 2004/04/07 22:53:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.161 2004/04/08 15:29:19 rizzo Exp $
+
+*gaim-0.76-r1 (08 Apr 2004)
+
+  08 Apr 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.76-r1.ebuild,
+  files/gaim-0.76-yahoo-decode.diff:
+  Patch for yahoo security fix, bumping rev
 
   07 Apr 2004; Guy Martin <gmsoft@gentoo.org> gaim-0.76.ebuild:
   Added ~hppa to KEYWORDS.

@@ -1,0 +1,28 @@
+===================================================================
+RCS file: /cvsroot/gaim/gaim/src/protocols/yahoo/yahoo.c,v
+retrieving revision 1.216
+retrieving revision 1.219
+diff -u -r1.216 -r1.219
+--- gaim/gaim/src/protocols/yahoo/yahoo.c	2004/04/06 02:28:01	1.216
++++ gaim/gaim/src/protocols/yahoo/yahoo.c	2004/04/08 14:03:17	1.219
+@@ -902,16 +902,17 @@
+ 	char *converted;
+ 	char *n, *new;
+ 	const char *end, *p;
+-	int i;
++	int i, k;
+ 
+ 	n = new = g_malloc(strlen (text) + 1);
+ 	end = text + strlen(text);
+ 
+ 	for (p = text; p < end; p++, n++) {
+ 		if (*p == '\\') {
+-			sscanf(p + 1, "%3o\n", &i);
++			k = 0;
++			sscanf(p + 1, "%3o%n\n", &i, &k);
+ 			*n = i;
+-			p += 3;
++			p += k;
+ 		}
+ 		else
+ 			*n = *p;
