@@ -1,0 +1,83 @@
+--- configure.in.orig	2003-04-17 03:59:57.000000000 -0400
++++ configure.in	2003-04-17 04:00:28.000000000 -0400
+@@ -10,11 +10,6 @@
+ AC_PROG_CPP
+ AC_PROG_MAKE_SET
+ 
+-dnl Don't want the default "-O2 -g" that autoconf uses for gcc.
+-if [[ x"$GXX" = "xyes" ]]; then
+-  CFLAGS="-O2 -g -fomit-frame-pointer -Wall -Wno-unused -Wno-format"
+-fi
+-
+ UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
+ UNAME_SYSTEM=`(uname -s) 2>/dev/null` || UNAME_SYSTEM=unknown
+ 
+--- C64_x.i.orig	2003-04-17 04:20:41.000000000 -0400
++++ C64_x.i	2003-04-17 04:21:03.000000000 -0400
+@@ -100,7 +100,7 @@
+ 	gui = 0;
+ #else
+ 	// try to start up Tk gui.
+-	gui = new CmdPipe("wish", "TkGui.tcl");
++	gui = new CmdPipe("wish", "/usr/bin/TkGui.tcl");
+ 	if (gui) {
+ 		if (gui->fail) {
+ 			delete gui; gui = 0;
+--- main.cpp.orig	2003-04-17 04:32:24.000000000 -0400
++++ main.cpp	2003-04-17 04:33:20.000000000 -0400
+@@ -24,10 +24,10 @@
+ #define CHAR_ROM_FILE	"FrodoRsrc:Char_ROM"
+ #define FLOPPY_ROM_FILE	"FrodoRsrc:1541_ROM"
+ #else
+-#define BASIC_ROM_FILE	"Basic ROM"
+-#define KERNAL_ROM_FILE	"Kernal ROM"
+-#define CHAR_ROM_FILE	"Char ROM"
+-#define FLOPPY_ROM_FILE	"1541 ROM"
++#define BASIC_ROM_FILE	"/usr/share/frodo/Basic ROM"
++#define KERNAL_ROM_FILE	"/usr/share/frodo/Kernal ROM"
++#define CHAR_ROM_FILE	"/usr/share/frodo/Char ROM"
++#define FLOPPY_ROM_FILE	"/usr/share/frodo/1541 ROM"
+ #endif
+ 
+ 
+--- Prefs.cpp.orig	2003-04-17 04:34:05.000000000 -0400
++++ Prefs.cpp	2003-04-17 04:38:07.000000000 -0400
+@@ -25,7 +25,7 @@
+ 
+ Prefs::Prefs()
+ {
+-	NormalCycles = 63;
++	NormalCycles = 3;
+ 	BadLineCycles = 23;
+ 	CIACycles = 63;
+ 	FloppyCycles = 64;
+@@ -39,7 +39,7 @@
+ 	for (int i=0; i<4; i++)
+ 		DriveType[i] = DRVTYPE_DIR;
+ 
+-	strcpy(DrivePath[0], "64prgs");
++	strcpy(DrivePath[0], "/usr/share/frodo/64prgs");
+ 	strcpy(DrivePath[1], "");
+ 	strcpy(DrivePath[2], "");
+ 	strcpy(DrivePath[3], "");
+--- TkGui.tcl.orig	2003-04-17 04:41:53.000000000 -0400
++++ TkGui.tcl	2003-04-17 04:42:45.000000000 -0400
+@@ -9,15 +9,15 @@
+ 
+ proc defaults {} {
+ 	global pref
+-	set pref(NormalCycles) "63"
++	set pref(NormalCycles) "3"
+ 	set pref(BadLineCycles) "23"
+ 	set pref(CIACycles) "63"
+ 	set pref(FloppyCycles) "64"
+ 	set pref(SkipFrames) "4"
+ 	set pref(DriveType8) "DIR"
+-	set pref(DrivePath8) "./64prgs"
++	set pref(DrivePath8) "~/64prgs"
+ 	set pref(DriveType9) "D64"
+-	set pref(DrivePath9) "./disk1.d64"
++	set pref(DrivePath9) "~/disk1.d64"
+ 	set pref(DriveType10) "DIR"
+ 	set pref(DrivePath10) ""
+ 	set pref(DriveType11) "DIR"
