@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.4.ebuild,v 1.1 2004/11/18 03:25:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.4.ebuild,v 1.2 2004/11/18 12:07:31 lu_zero Exp $
 
 inherit libtool flag-o-matic perl-module
 replace-flags k6-3 i586
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.graphicsmagick.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-apps/sed-4
 	>=app-arch/bzip2-1
