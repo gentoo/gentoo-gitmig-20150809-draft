@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3fa35aa3d8ed35ccd3e18745871cd8db lapack-reference-3.0.ebuild 3170
 MD5 7edf7f8dbd869eebafa5dd9819ce4f35 ChangeLog 975
+MD5 2d0ea8f55177aa097c5354bdb3e5ccea lapack-reference-3.0.ebuild 3172
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 0c26dd04f98f6c5cb6fdddfaa2c50905 files/f77-reference 436
 MD5 94944935d82f5f98cc414ddd175839c7 files/digest-lapack-reference-3.0 196
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0yhCI1lqEGTUzyQRAu+cAJ4hChlAqUjXMKeZ/Jh7YJ0yG7EJtACdEDfb
-IakrGggb9tbT+ntFmWw7x+Q=
-=Xwr5
------END PGP SIGNATURE-----
+MD5 0c26dd04f98f6c5cb6fdddfaa2c50905 files/f77-reference 436
