@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_lisp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/ChangeLog,v 1.4 2004/10/18 15:22:51 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/ChangeLog,v 1.5 2005/01/09 00:41:41 hollow Exp $
+
+*mod_lisp-2.33-r1 (09 Jan 2005)
+
+  09 Jan 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +files/10_mod_lisp.conf, +mod_lisp-2.33-r1.ebuild:
+  Apache herd package refresh
 
   18 Oct 2004; <mkennedy@gentoo.org> +files/README.Gentoo,
   -files/Readme.Gentoo, +files/apache.conf, mod_lisp-2.33.ebuild:
