@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.2.2.ebuild,v 1.2 2004/07/23 21:00:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.2.2.ebuild,v 1.3 2004/07/26 18:28:36 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -21,7 +21,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/gentoo-1.2.diff
 	#for some reason 1.2.2 claims its 1.3
-	sed "s/commons-net-1.3.0-dev/commons-net-1.2.2-dev/" -i build.xml
+	sed "s/commons-net-1.3.0-dev/commons-net-1.2.2-dev/" -i build.xml || die "sed failed"
 }
 
 src_compile() {
