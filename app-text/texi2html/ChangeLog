@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.20 2004/11/11 18:16:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.21 2004/12/03 03:30:01 usata Exp $
+
+  03 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> texi2html-1.64.ebuild,
+  texi2html-1.70.ebuild:
+  Remove dead symbolic link before merge; bug #72753.
 
   11 Nov 2004; Markus Rothe <corsair@gentoo.org> texi2html-1.64-r1.ebuild:
   Marked ~ppc64
