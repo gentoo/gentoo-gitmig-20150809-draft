@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.4.ebuild,v 1.1 2004/08/05 13:37:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.4.ebuild,v 1.2 2004/08/08 14:36:33 chainsaw Exp $
 
 inherit gnome2 eutils
 
@@ -32,8 +32,10 @@ src_unpack() {
 	cd ${S}; intltoolize --force || die
 	# Avoid documentation problems. See bug #46275.
 	epatch ${FILESDIR}/${PN}-1.0.3-gtkdoc_fix.patch
-	# add extra selector #48611
-	epatch ${FILESDIR}/${PN}-1.0.4-selector.patch
+	# Add extra selector. See bug #48611.
+	epatch ${FILESDIR}/${P}-selector.patch
+	# Fix GCC 3.4 compilation. See bug #49236.
+	epatch ${FILESDIR}/${PN}-1.0.3-gcc34.patch
 }
 
 src_install() {
