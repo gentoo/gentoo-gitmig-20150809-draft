@@ -1,11 +1,14 @@
 # ChangeLog for dev-util/indent
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.10 2003/06/30 23:14:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.11 2003/07/01 18:17:19 gmsoft Exp $
 
   30 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> indent-2.2.9.ebuild :
   Changed SRC_URI to use mirror://gnu.
 
 *indent-2.2.9 (22 Feb 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> indent-2.2.9.ebuild :
+  Added hppa to KEYWORDS.
 
   04 Apr 2003; Jason Wever <weeve@gentoo.org> indent-2.2.9.ebuild:
   Changed ~sparc keyword to sparc.
