@@ -88,7 +88,6 @@
 *sys-apps/sed
 *sys-apps/setserial
 *>=app-arch/sharutils-4.2.1-r6
-*sys-apps/slocate
 *sys-apps/texinfo
 *sys-apps/which
 *sys-devel/autoconf

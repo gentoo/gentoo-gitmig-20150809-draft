@@ -80,7 +80,6 @@
 *sys-apps/net-tools
 *sys-apps/sed
 *sys-apps/setserial
-*sys-apps/slocate
 *sys-apps/sparc-utils
 *>=sys-apps/texinfo-4.2-r1
 *sys-apps/which
