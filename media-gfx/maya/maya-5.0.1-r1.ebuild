@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.6 2004/04/30 07:31:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.1 2004/04/30 07:46:03 eradicator Exp $
 
 inherit rpm
 
@@ -108,8 +108,8 @@ src_install() {
 
 	# The RPM puts these in /usr/local/bin
 	keepdir /usr/bin
-	dosym /usr/aw/maya5.0/bin/Maya5.0 /usr/bin/maya
-	for mayaexec in Render fcheck imgcvt; do
+	dosym /usr/aw/maya5.0/bin/Maya5.0 /usr/aw/maya5.0/bin/maya
+	for mayaexec in Render fcheck imgcvt maya; do
 		dosym /usr/aw/maya5.0/bin/${mayaexec} /usr/bin/${mayaexec}
 	done
 
