@@ -1,0 +1,8 @@
+# ChangeLog for net-libs/enet
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.1 2003/07/22 04:16:53 vapier Exp $
+
+*enet-0_pre20030720 (22 Jul 2003)
+
+  22 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
