@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.13 2003/01/19 20:03:42 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.14 2003/02/09 19:26:55 gmsoft Exp $
 
 MY_P="tcp_wrappers_${PV}"
 PATCH0="${MY_P}.dif"
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="tcp wrappers"
 SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 SLOT="0"
 LICENSE="freedist"
 DEPEND="virtual/glibc"
