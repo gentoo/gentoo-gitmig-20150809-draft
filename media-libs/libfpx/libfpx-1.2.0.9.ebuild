@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/libfpx-1.2.0.9.ebuild,v 1.5 2004/10/20 18:49:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/libfpx-1.2.0.9.ebuild,v 1.6 2004/10/20 23:31:11 vapier Exp $
 
 MY_PN=libfpx
 
@@ -17,7 +17,7 @@ HOMEPAGE=""
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~x86"
 IUSE=""
 
 src_compile() {
