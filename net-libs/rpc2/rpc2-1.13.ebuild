@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/rpc2-1.13.ebuild,v 1.7 2003/12/26 13:11:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/rpc2-1.13.ebuild,v 1.8 2004/04/26 12:13:05 agriffis Exp $
 
 DESCRIPTION="Remote procedure call package for IP/UDP (used by Coda)"
 HOMEPAGE="http://www.coda.cs.cmu.edu/"
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/readline-4.1"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die "emake failed"
 }
 
