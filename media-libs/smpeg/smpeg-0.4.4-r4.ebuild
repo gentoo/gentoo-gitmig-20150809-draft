@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.13 2004/06/07 22:58:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.14 2004/06/24 00:03:16 vapier Exp $
+
+inherit eutils gcc
 
 DESCRIPTION="SDL MPEG Player Library"
 HOMEPAGE="http://www.lokigames.com/development/smpeg.php3"
@@ -8,49 +10,41 @@ SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
-IUSE="X gtk opengl"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64"
+IUSE="X gtk opengl debug"
 
 DEPEND=">=media-libs/libsdl-1.2.0
 	opengl? ( virtual/opengl virtual/glu )
-	gtk? ( =x11-libs/gtk+-1.2* )"
+	gtk? ( =x11-libs/gtk+-1.2* )
+	X? ( virtual/x11 )"
 
 src_unpack() {
-	unpack ${P}.tar.gz
-
-	## GCC 3.1 fix from bug #5558 (cardoe 08/03/02)
+	unpack ${A}
 	cd ${S}
-	if [ `gcc -dumpversion | cut -d"." -f1` == "3" ] ; then
-		patch -p1 < ${FILESDIR}/${P}-gcc-3.1.patch || die
-	fi
+	sed -i \
+		-e 's:-mcpu=ev4 -Wa,-mall::' \
+		-e 's:-march=486::' \
+		-e 's:-march=pentium -mcpu=pentiumpro::' \
+		configure || die "sed failed"
+	# GCC 3.1 fix from bug #5558 (cardoe 08/03/02)
+	sed -i '/^libsmpeg_la_LIBADD =/s:$: -lsupc++:' Makefile.in
 }
 
 src_compile() {
-	local myconf
-# --enable-mmx causes test apps to crash on startup .. smpeg bug?
-# bugzilla bug #470 -- azarah (03/02/2002)
-#	if use mmx ; then
-#		myconf="--enable-mmx"
-#	fi
-	if ! use gtk ; then
-		myconf="${myconf} --disable-gtk-player"
-	fi
-	if ! use X ; then
-		myconf="${myconf} --disable-gtk-player --without-x"
-	fi
-	if ! use opengl ; then
-		myconf="${myconf} --disable-opengl-player"
-	fi
-
-	export CC=g++
-	export CXX=g++
-
-	econf ${myconf} || die "configure failed"
+	# --enable-mmx causes test apps to crash on startup #470
+	#	`use_enable mmx` \
+	econf \
+		`use_enable debug` \
+		`use_enable debug assertions` \
+		`use_enable gtk gtk-player` \
+		`use_with X x` \
+		`use_enable opengl opengl-player` \
+		${myconf} || die "configure failed"
 
 	emake || die "parallel make failed"
 }
 
 src_install() {
-	einstall || die "make install failed"
+	make install DESTDIR=${D} || die "make install failed"
 	dodoc CHANGES README* TODO
 }

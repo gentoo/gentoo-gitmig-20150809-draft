@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.14 2004/06/07 22:58:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.15 2004/06/24 00:03:16 vapier Exp $
+
+  23 Jun 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/smpeg-0.4.4-gcc-3.1.patch, -smpeg-0.4.4-r2.ebuild,
+  smpeg-0.4.4-r4.ebuild:
+  Clean up ebuild to remove issues with autotools #54423 by Ludootje.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> smpeg-0.4.4-r2.ebuild,
   smpeg-0.4.4-r4.ebuild:
