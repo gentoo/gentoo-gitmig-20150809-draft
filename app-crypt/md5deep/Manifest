@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 01dbb50c4d90ef8088b2e4e99a350663 ChangeLog 1110
-MD5 959e1c3a43dc10d79ab9092650d52229 md5deep-1.2.ebuild 660
-MD5 ca193a9a9adf851ad5afa6965216dd56 md5deep-1.5.ebuild 695
+MD5 679fcffa6212e37a00d2cbacefc04bd3 md5deep-1.5.ebuild 692
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 4d364233cac8eda91f0d3dea09745e00 ChangeLog 1200
+MD5 959e1c3a43dc10d79ab9092650d52229 md5deep-1.2.ebuild 660
 MD5 bc30d9148d8e1893b83f6647dddaefe2 files/digest-md5deep-1.2 62
 MD5 7e67a84d4478da9c787c3010a611f5d0 files/digest-md5deep-1.5 62
 MD5 1ebf78ad61dc5647440e0a66a9a85bb1 files/md5deep-0.16-gentoo.diff 35
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8WdbKRy60XGEcJIRAuJZAJ9WCx5brj4XZlSZccyZH9cloxjSXACfe9El
-YoyxL1cfhioRb0Cz71Gfno8=
-=JRoO
------END PGP SIGNATURE-----
