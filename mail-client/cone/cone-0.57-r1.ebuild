@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.57-r1.ebuild,v 1.2 2004/07/14 16:16:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.57-r1.ebuild,v 1.3 2004/09/24 00:02:55 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Cone: COnsole News reader and Emailer"
-SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+DESCRIPTION="COnsole News reader and Emailer"
 HOMEPAGE="http://www.courier-mta.org/cone/"
+SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+SLOT="0"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE="crypt fam spell"
 
 RDEPEND="virtual/libc
@@ -22,17 +22,18 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
-EXTRA_ECONF="--with-devel"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
 	epatch ${FILESDIR}/cone-dotsignature.patch
 }
 
+src_compile() {
+	econf --with-devel || die
+	emake || die
+}
+
 src_install() {
-	make check DESTDIR=${D} || die
-	make install DESTDIR=${D} || die
-	DESTDIR=${D} make install-configure || die
+	make DESTDIR=${D} \
+		check install install-configure || die
 }
