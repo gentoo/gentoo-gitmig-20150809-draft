@@ -1,6 +1,8 @@
 # ChangeLog for dev-java/randomguid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/ChangeLog,v 1.5 2004/03/07 02:50:38 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/ChangeLog,v 1.6 2004/03/15 15:28:48 aliz Exp $
+
+*randomguid-1.2.1 (09 Mar 2004)
 
   09 Mar 2004; Chris Aniszczyk <zx@gentoo.org> randomguid-1.2.ebuild:
   Version bump and clean up.

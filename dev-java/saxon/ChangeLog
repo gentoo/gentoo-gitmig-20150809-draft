@@ -1,8 +1,9 @@
 # ChangeLog for dev-java/saxon
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.3 2004/03/07 02:57:23 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.4 2004/03/15 15:28:48 aliz Exp $
 
 *saxon-7.8 (09 Mar 2004)
+*saxon-6.5.3 (09 Mar 2004)
 
   09 Mar 2004; Chris Aniszczyk <zx@gentoo.org> saxon-6.5.2.ebuild,
   saxon-6.5.3.ebuild, saxon-7.3.1.ebuild, saxon-7.5.ebuild, saxon-7.8.ebuild:
