@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gpc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.6 2003/02/12 05:56:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.7 2003/02/15 04:37:05 george Exp $
+
+*gpc-20030209 (14 Feb 2003)
+
+  14 Feb 2003; George Shapovalov <george@gentoo.org> gpc-20030209.ebuild, files/digest-gpc-20030209 :
+
+  new version, now works with gcc-3.x
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
