@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.21 2003/03/20 01:18:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.22 2003/03/20 13:59:36 vladimir Exp $
+
+*libgd-2.0.11-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org> libgd-2.0.11-r1.ebuild:
+  Removed usage of pic USE flag
 
 *libgd-2.0.11 (23 Feb 2003)
 

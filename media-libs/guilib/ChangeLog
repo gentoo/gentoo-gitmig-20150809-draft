@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/guilib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/ChangeLog,v 1.2 2003/02/12 07:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/ChangeLog,v 1.3 2003/03/20 13:59:36 vladimir Exp $
+
+*guilib-1.1.0-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org> guilib-1.1.0-r1.ebuild:
+  Removed usage of pic USE flag
 
 *guilib-1.1.0 (16 Dec 2002)
 
