@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/mailfilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.9 2004/10/03 22:38:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.10 2004/10/04 09:06:33 ticho Exp $
+
+*mailfilter-0.6.2 (04 Oct 2004)
+
+  04 Oct 2004; Andrej Kacian <ticho@gentoo.org> +mailfilter-0.6.2.ebuild:
+  Version bump. Closes #66273, reported by Daniel Webert
+  <rockoo@rockoo.homelinux.org>.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> mailfilter-0.6.1.ebuild:
   Stable on sparc.
