@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.21 2005/01/04 14:16:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.22 2005/03/22 19:07:06 mcummings Exp $
+
+  22 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  XML-LibXSLT-1.57.ebuild:
+  Bug 86161 - threaded perl and tests
 
   04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
   XML-LibXSLT-1.50-r1.ebuild, XML-LibXSLT-1.50.ebuild,
