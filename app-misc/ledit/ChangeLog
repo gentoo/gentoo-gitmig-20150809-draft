@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ledit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.4 2005/01/01 15:11:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.5 2005/01/12 14:55:05 sekretarz Exp $
+
+  12 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org> ledit-1.11.ebuild:
+  Marked stable on amd64, bug #75587
 
   23 May 2004; Matthieu Sozeau <mattam@gentoo.org> ledit-1.11.ebuild:
   Remove rdepend on ocaml (static binary) and move to stable.

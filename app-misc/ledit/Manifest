@@ -1,4 +1,14 @@
-MD5 04c7a13373693a8a691d8ec4db02018d ChangeLog 570
-MD5 4bff120740d4ceb9eb241542d46abfa4 ledit-1.11.ebuild 692
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3c72c518ee1aafc2149a168ac6e5bd24 ledit-1.11.ebuild 698
+MD5 a88a049e2eaabfa291c2ab457c075620 ChangeLog 680
 MD5 648a541494aceee26dbcfd76164f37ea metadata.xml 157
 MD5 ebd27d57928935b7692a6499cf7dfde8 files/digest-ledit-1.11 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5UhwZ/iYVBmujdURAnRhAKDIEsXp66YstTPuqJ8ZKaYpghF3bgCfbi3O
+jWDb69cFwwh/LR0UvOPg9+g=
+=Qsty
+-----END PGP SIGNATURE-----
