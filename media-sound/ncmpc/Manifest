@@ -1,6 +1,18 @@
-MD5 ff137f22766277356416a349ed2a895f ChangeLog 1105
-MD5 c4e28bd2fb3236dbb92211b844c34d44 metadata.xml 222
-MD5 bcfe0c5c50fd0000efa148ff61ee5c24 ncmpc-0.10.1.ebuild 664
-MD5 b96768e4a3adedfa3f918a15de380d29 ncmpc-0.11.0.ebuild 665
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c1a2abea06fef22c4a68d1fac60ff044 ncmpc-0.10.1.ebuild 660
+MD5 c840dcc00c3d9d5fce5b40543b6c62bc ncmpc-0.11.1.ebuild 711
+MD5 cf38d881dcdcc6e98cf3bdf2a48e6060 ncmpc-0.11.0.ebuild 659
+MD5 c557090643aeac8079b18966a80323c0 ChangeLog 1231
+MD5 d0d7a22ea15c7bc5927bf6f24149d4f8 metadata.xml 218
 MD5 981af082baec0896a3afa3f9c79df043 files/digest-ncmpc-0.10.1 64
 MD5 15d947021147e010e4721bd8acb0cbd2 files/digest-ncmpc-0.11.0 64
+MD5 f618389275480629891a25befac11a7f files/digest-ncmpc-0.11.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCC/NB/rLF9B432nYRAsFnAJsER4gimCvbFsG0KEUEvASobtQGLACbBPww
+r4yu3TOtLDf4+UOilIQD5pM=
+=CV5e
+-----END PGP SIGNATURE-----
