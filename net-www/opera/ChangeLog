@@ -1,6 +1,12 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.29 2003/08/24 16:21:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.30 2003/08/26 16:54:32 lanius Exp $
+
+*opera-7.20_beta4 (26 Aug 2003)
+
+  26 Aug 2003; Heinrich Wendel <lanius@gentoo.org> opera-7.20_beta3.ebuild,
+  opera-7.20_beta4.ebuild, opera-7.20_beta5.ebuild:
+  added beta5, removed beta3, added support for sparc and ppc in beta4/5
 
 *opera-6.12_beta1 (24 Aug 2003)
 
