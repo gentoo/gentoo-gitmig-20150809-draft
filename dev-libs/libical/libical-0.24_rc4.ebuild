@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.24_rc4.ebuild,v 1.5 2004/07/02 04:46:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.24_rc4.ebuild,v 1.6 2004/07/22 22:34:07 s4t4n Exp $
 
 IUSE=""
 
@@ -21,5 +21,5 @@ KEYWORDS="x86 ppc"
 S=${WORKDIR}/libical-0.24
 
 src_install () {
-	einstall
+	einstall || die "Installation failed..."
 }
