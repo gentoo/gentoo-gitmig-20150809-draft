@@ -1,4 +1,6 @@
-MD5 ba2a4835113b032b3b2cac805875c671 ChangeLog 1325
+MD5 a011e0eef0cceacb1e8e7e8cf324ad9a ChangeLog 1447
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e4630d70675682463a46d8a20d34d9cf loudmouth-0.14.1.ebuild 674
+MD5 ea3113a22ace78ec64667e298af64648 loudmouth-0.15.ebuild 660
 MD5 f5b80f908d06d5918627e63ecc6e87f3 files/digest-loudmouth-0.14.1 69
+MD5 5a6309e180cac3972b4cfe242cc7a56b files/digest-loudmouth-0.15 67
