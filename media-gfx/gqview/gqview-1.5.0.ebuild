@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.5.0.ebuild,v 1.1 2004/03/12 12:23:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.5.0.ebuild,v 1.2 2004/03/30 16:36:33 avenj Exp $
 
 DESCRIPTION="A GTK-based image browser"
 HOMEPAGE="http://gqview.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/gqview/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc amd64"
 IUSE="nls xinerama"
 
 DEPEND="media-libs/libpng
