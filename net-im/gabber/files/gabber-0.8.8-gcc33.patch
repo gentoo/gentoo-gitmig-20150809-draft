@@ -1,0 +1,27 @@
+--- gabber-0.8.8/src/GladeHelper.hh.orig	2003-06-29 13:04:51.000000000 +0200
++++ gabber-0.8.8/src/GladeHelper.hh	2003-06-29 13:12:56.000000000 +0200
+@@ -25,12 +25,14 @@
+ #include <gtk/gtkobject.h>
+ #include <gtk--/base.h>
+ 
++#include <iostream>
++
+ template<class T> T* getWidgetPtr(GladeXML* g, const char* name)
+ {
+      T* result = static_cast<T*>(Gtk::wrap_auto((GtkObject*)glade_xml_get_widget(g, name)));
+      if (result == NULL)
+      {
+-	  cerr << "** ERROR **: unable to load widget: " << name << endl;
++	  std::cerr << "** ERROR **: unable to load widget: " << name << std::endl;
+ 	  g_assert(result != NULL);
+      }
+      return result;
+@@ -41,7 +43,7 @@
+      T* result = (T*)glade_xml_get_widget(g, name);
+      if (result == NULL)
+      {
+-	  cerr << "** ERROR **: unable to load widget: " << name << endl;
++	  std::cerr << "** ERROR **: unable to load widget: " << name << std::endl;
+ 	  g_assert(result != NULL);
+      }
+      return result;     

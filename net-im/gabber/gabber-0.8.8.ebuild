@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.4 2003/06/21 00:07:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.5 2003/06/29 11:36:53 azarah Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="The GNOME Jabber Client"
 SRC_URI="mirror://sourceforge/gabber/${P}.tar.gz"
 HOMEPAGE="http://gabber.sourceforge.net"
@@ -29,8 +29,14 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	
 	cd ${S}/omf-install
 	sed -i -e "s/-scrollkeeper-update.*//" Makefile.in
+
+	if [ "`gcc-major-version`" -eq 3 -a "`gcc-minor-version`" -ge 3 ]
+	then
+		cd ${S}; epatch ${FILESDIR}/${P}-gcc33.patch
+	fi
 }
 
 src_compile() {
@@ -38,7 +44,7 @@ src_compile() {
 
 	CFLAGS="${CFLAGS} -I/usr/include"
 
-	local myconf
+	local myconf=
 
 	use ssl \
 		&& myconf="${myconf} --with-ssl-dir=/usr" \
