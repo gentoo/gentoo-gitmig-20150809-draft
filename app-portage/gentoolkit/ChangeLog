@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.20 2004/01/12 14:35:57 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.21 2004/01/23 07:05:36 genone Exp $
+
+*gentoolkit-0.2.0_pre5 (23 Jan 2004)
+
+  23 Jan 2004; <genone@gentoo.org> gentoolkit-0.1.38.ebuild,
+  gentoolkit-0.2.0_pre5.ebuild:
+  pre5 with lots of bugfixes again, changed portage dependency to pre19 for
+  stacked profile stuff
 
 *gentoolkit-0.2.0_pre4 (12 Jan 2004)
 
