@@ -4,8 +4,8 @@ MD5 5f05a1d8b40dbeeac1408f95bc9994d7 bind-9.2.2-r2.ebuild 4821
 MD5 270a1229bbc2dc79dab3e13a2b04a641 bind-9.2.2.ebuild 4607
 MD5 dd6e3cefff04ee6141a57ec7b0ec04af bind-9.2.2_rc1-r2.ebuild 4485
 MD5 451001436c55689a8423ed11d222e1b4 bind-9.2.2-r3.ebuild 5582
-MD5 f70f4d85a13d09a52e66b0a2d8f60985 bind-9.2.3.ebuild 5713
 MD5 63bd6e87942a25d48bd5365edd8246c0 metadata.xml 268
+MD5 ddd50d1bbf915738189f2eb1c13febd3 bind-9.2.3.ebuild 5762
 MD5 42b5ed5adcee33cf40531d7955412b21 files/10bind.env 27
 MD5 51197afe8da37b1b453456de90ca4f25 files/127 227
 MD5 51197afe8da37b1b453456de90ca4f25 files/127.zone 227
@@ -20,6 +20,7 @@ MD5 b5605e61fab3836f54d54acfba68b09f files/named.ca 2499
 MD5 93246d599352b489da51f7ada3186802 files/named.conf-r1 756
 MD5 20f93349185d27963c279254fe494b34 files/named.conf-r2 766
 MD5 21e3efd21e18f4c660155978105f8ebe files/named.confd 351
-MD5 4c2d6ae455ffd54c35345189cdbc8ee7 files/named.rc6 1399
 MD5 309110e09d923344a34a803f8906fae3 files/digest-bind-9.2.2-r3 121
 MD5 feb1027d97d15dcf8fdc57b2de185af2 files/digest-bind-9.2.3 63
+MD5 004f67eae6f1ff5da82798c8a6178864 files/named.conf-r3 1313
+MD5 67b793369b81fd5ba2a7dc721c5c69fd files/named.rc6 1420

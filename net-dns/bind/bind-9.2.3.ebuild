@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.6 2003/11/05 07:45:58 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.7 2003/11/19 22:26:49 blkdeath Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -40,13 +40,13 @@ src_compile() {
 		--enable-threads \
 		--with-libtool \
 		--enable-libbind \
-		${myconf}
+		${myconf} || die "configure failed"
 
 	MAKEOPTS="${MAKEOPTS} -j1" emake || die "failed to compile bind"
 }
 
 src_install() {
-	einstall || die "failed to install bind"
+	make install DESTDIR=${D} || die "failed to install bind"
 
 	dodoc CHANGES COPYRIGHT FAQ README
 
