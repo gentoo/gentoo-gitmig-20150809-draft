@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0.ebuild,v 1.8 2005/02/17 17:27:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0-r1.ebuild,v 1.1 2005/03/06 02:03:43 humpback Exp $
 
 RESTRIC="nomirror"
 DESCRIPTION="Some nice themes for the GDM Greeter"
@@ -114,11 +114,9 @@ SRC_URI="${THEME_URI}GDM-300-lantueno.tar.gz
 	${THEME_URI}GDM-Valladolid.tar.gz
 	${THEME_URI}GDM-xpto.tar.gz
 	${THEME_URI}GDM-gcr-ddlm.tar.gz
-	${THEME_URI}GDM-gentoo-cow.tar.bz2
 	${THEME_URI}GDM-labisbal.tar.gz
 	${THEME_URI}GDM-penguin.tar.gz
-	${THEME_URI}GDM-pixelgdm.tar.gz
-	mirror://gentoo/GDM-gentoo-emergance_2.tar.gz"
+	${THEME_URI}GDM-pixelgdm.tar.gz"
 
 HOMEPAGE="http://art.gnome.org/themes/gdm_greeter/"
 

@@ -1,8 +1,18 @@
-MD5 02cdfbda1c3a41b221a44b8efc1ada3b gdm-themes-2.0.ebuild 4549
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7e51d32e00414a14d02345e877a8b3b5 ChangeLog 2066
 MD5 cab833ea192155065c07aac34424a76c gdm-themes-1.0-r1.ebuild 1727
-MD5 6dcd89f964c6cc7dc3edb2db9b28ffd9 ChangeLog 1862
-MD5 9ea9a9c5601b7f2be3f46b882cbf3f03 metadata.xml 416
 MD5 766c9ab191efc4bdaa274b934c3eb6b3 gdm-themes-1.0.ebuild 1653
-MD5 267b9a61fd87562b2472231edfcd1e85 files/digest-gdm-themes-1.0-r1 1911
+MD5 0e9dce2d4db2e22ef16c9a6390f10081 gdm-themes-2.0-r1.ebuild 4470
+MD5 9ea9a9c5601b7f2be3f46b882cbf3f03 metadata.xml 416
 MD5 4521cae17d4d1e38070589d7f7135c63 files/digest-gdm-themes-1.0 1837
-MD5 cc166a9e5c2242656be4dfe3e1b5b383 files/digest-gdm-themes-2.0 7171
+MD5 267b9a61fd87562b2472231edfcd1e85 files/digest-gdm-themes-1.0-r1 1911
+MD5 f5aff27dab41a4e481725a9cd2022b1d files/digest-gdm-themes-2.0-r1 7031
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCKmT28zY1VwezZiERApZpAKCqNOATrcZjiWHToFfCp6qQxBPg4QCfTLoq
+QPzDdLRgG2iQ/k18Cedrndo=
+=s0gO
+-----END PGP SIGNATURE-----
