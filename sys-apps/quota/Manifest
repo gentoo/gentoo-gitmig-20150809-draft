@@ -3,7 +3,7 @@ MD5 a9db5b0423856e997a83ca33e1d84732 quota-3.06.ebuild 1039
 MD5 290ed25b1c73c7eae235fe750bbf159d quota-3.06-r2.ebuild 1218
 MD5 b80f9464e51dc32d41dfedb8a8790740 quota-3.06-r1.ebuild 1106
 MD5 59794de48cc0a148367f179d357b1eac quota-3.09.ebuild 1485
-MD5 339eea2bcd58895a70134cd468a4085d ChangeLog 3725
+MD5 6e19a7c3f086b6911eb487b8a92b80cd ChangeLog 3724
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0d3ff3aaef898c9bb1d7243e20e93913 files/quota-no-quotactl-manpage.patch 958
 MD5 b2a668400536083d045cb65ad51a34b2 files/quota.rc 440

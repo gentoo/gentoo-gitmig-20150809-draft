@@ -1,5 +1,4 @@
-MD5 7ced0f46ff9b510c6a49801830223c4b files/digest-memtester-2.93.1 68
-MD5 5f5768ff0f48b6d683742e158abc2b30 .#Manifest.1.4 240
-MD5 249929f763b809ab9b7a5034b9a96bd9 ChangeLog 433
+MD5 f1c5b4372f9d9263e926876e910b648b ChangeLog 425
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5a1be0505517caf2823a846ae1350e1f memtester-2.93.1.ebuild 592
+MD5 7ced0f46ff9b510c6a49801830223c4b files/digest-memtester-2.93.1 68

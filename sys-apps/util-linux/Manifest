@@ -4,7 +4,7 @@ MD5 6191d64f4084a732f36b174edf10073a util-linux-2.11z-r9.ebuild 3410
 MD5 3f7236955557dab55a94580cbecd6b29 util-linux-2.12-r2.ebuild 3301
 MD5 2407419c432051c10ba774e32033abeb util-linux-2.12-r4.ebuild 3843
 MD5 87a7eefb2df3b1f7d0ecef6032075481 util-linux-2.11z-r8.ebuild 3220
-MD5 7f5b7cdf0424caae62c2442a2a76746c ChangeLog 11568
+MD5 bbe911e17faa11676bf855e3355ceb25 ChangeLog 11668
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0be8df03dae23c81a0e929e58a4114e0 files/util-linux-2.11z-01-nfsv4.dif 13442
 MD5 18371db840b08f5782e3f8f96c4efe8d files/util-linux-2.11z-pic.patch 3056
