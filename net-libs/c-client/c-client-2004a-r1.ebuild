@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004a-r1.ebuild,v 1.1 2005/02/01 15:33:05 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004a-r1.ebuild,v 1.2 2005/03/10 23:32:27 cryos Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -75,10 +75,10 @@ src_install() {
 
 	# Now the shared library created for amd64
 	if use amd64; then
-		dolib.so c-client/libc-client.so*
+		dolib.so c-client/libc-client.so.1.0.0
 		cd ${D}/usr/$(get_libdir)
 		ln -s libc-client.so.1.0.0 libc-client.so.1
-		ln -s libc-client.so.1 libc-client.so
+		ln -s libc-client.so.1.0.0 libc-client.so
 	fi
 
 	cd ${S}
