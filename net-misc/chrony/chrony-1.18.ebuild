@@ -1,14 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Bardur Arantsson <bardur@imada.sdu.dk>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.18.ebuild,v 1.2 2002/05/12 19:50:29 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.18.ebuild,v 1.3 2002/07/06 07:34:02 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NTP client and server programs"
 SRC_URI="http://chrony.sunsite.dk/download/${P}.tar.gz"
 HOMEPAGE="http://chrony.sunsite.dk"
 LICENSE="GPL-2"
-SLOT=0
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 		readline? ( >=readline-4.1-r4 )"
