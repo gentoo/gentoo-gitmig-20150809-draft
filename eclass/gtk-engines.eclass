@@ -7,11 +7,12 @@
 inherit base
 
 ECLASS=gtk-engines
+INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 HOMEPAGE=""
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 newdepend /c virtual/x11
 
