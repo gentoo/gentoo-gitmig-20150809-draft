@@ -1,0 +1,20 @@
+# ChangeLog for net-www/mod_tcl
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/ChangeLog,v 1.1 2004/08/15 17:22:51 stuart Exp $
+
+*mod_tcl-1.0 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/27_mod_tcl.conf, +mod_tcl-1.0.ebuild:
+  Moved from net-www/mod_tcl to www-apache/mod_tcl.
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml, mod_tcl-1.0.ebuild:
+  Updated header. Added metatadata.
+
+  12 Jul 2003; Donny Davies <woodchip@gentoo.org> mod_tcl-1.0.ebuild:
+  Marked x86 stable.
+
+*mod_tcl-1.0 (28 Nov 2002)
+
+  28 Nov 2002; Donny Davies <woodchip@gentoo.org> :
+  Initial import; created by me.
