@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.5 2003/02/13 11:30:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.6 2003/02/14 21:20:54 rphillips Exp $
 
 inherit flag-o-matic 
 
@@ -226,7 +226,7 @@ src_compile() {
 src_install() {
 	addwrite /usr/share/snmp/mibs/.index
 
- 	make INSTALL_ROOT=${D} install-pear install-headers || die
+ 	make INSTALL_ROOT=${D} install-pear install-headers install-programs || die
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
 	dodoc README.* TODO NEWS
