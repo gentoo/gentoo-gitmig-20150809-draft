@@ -1,0 +1,7 @@
+MD5 5229ceb3a99a376cc22c8d80da658490 ChangeLog 1763
+MD5 a24cd67551710cb07bda95c1967cf410 mad-0.14.2b-r1.ebuild 822
+MD5 3108fb5dc5a80fd5bb623b23cf04cc95 mad-0.14.2b-r2.ebuild 937
+MD5 053e274e7bef9cbde5da56f0f2fc8659 files/digest-mad-0.14.2b-r1 63
+MD5 053e274e7bef9cbde5da56f0f2fc8659 files/digest-mad-0.14.2b-r2 63
+MD5 d5d48834adfd42cf4de3bdbfa0889115 files/id3tag.pc 222
+MD5 a22a9b578702add15a41c2d46d091d7d files/mad.pc 211

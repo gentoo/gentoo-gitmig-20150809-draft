@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.9 2003/03/09 19:49:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.10 2003/05/20 20:44:53 weeve Exp $
+
+  20 May 2003; Jason Wever <weeve@gentoo.org> mad-0.14.2b-r2.ebuild:
+  Changed ~sparc keyword to sparc.
 
   10 Feb 2003; Aron Griffis <agriffis@gentoo.org> mad-0.14.2b-r2.ebuild :
   Add ~alpha to KEYWORDS
