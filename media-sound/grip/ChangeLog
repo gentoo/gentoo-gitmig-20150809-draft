@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.43 2004/10/31 10:58:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.44 2004/11/01 19:46:31 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  grip-3.2.0.ebuild:
+  Marked ~ppc64; bug #64636
 
   31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> grip-3.2.0.ebuild:
   Only install .desktop to applications.
