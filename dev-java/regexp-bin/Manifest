@@ -1,4 +1,14 @@
-MD5 e52fa6dd6e7392f40c2c254b26996556 regexp-bin-1.3.ebuild 649
-MD5 ccc38a4133067604b05a546408431a03 ChangeLog 2103
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ea37cf23a540e113f3bd299bad28047f regexp-bin-1.3.ebuild 653
+MD5 09df9ea23554938465dd64fabed23cfa ChangeLog 2266
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 6eac4bdeb129dbd95c52ac349db33c61 files/digest-regexp-bin-1.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCr78/rLF9B432nYRAjswAKDOVoP+4HvOvaxSyWWPoOL791JvDgCgy0N8
+Uw8cg+EcTHduWTh1k27zzas=
+=Ao5K
+-----END PGP SIGNATURE-----
