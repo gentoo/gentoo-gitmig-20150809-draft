@@ -1,7 +1,7 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.6.4-r1.ebuild,v 1.1 2001/06/17 17:28:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.6.4-r1.ebuild,v 1.2 2001/07/29 10:53:03 hallski Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -9,15 +9,16 @@ DESCRIPTION="xchat"
 SRC_URI="http://www.xchat.org/files/source/1.6/"${A}
 HOMEPAGE="http://www.xchat.org/"
 
-DEPEND=">=gnome-base/gdk-pixbuf-0.11.0 
+DEPEND=">=media-libs/gdk-pixbuf-0.11.0 
         perl? ( sys-devel/perl )
 	python? ( dev-lang/python )
 	nls? ( >=sys-devel/gettext-0.10.38 )
 	gnome? ( >=gnome-base/gnome-core-1.2.2.1 )
         ssl? ( >=dev-libs/openssl-0.9.6a )"
 
-RDEPEND=">=gnome-base/gdk-pixbuf-0.11.0
-	gnome? ( >=gnome-base/gnome-core-1.2.2.1 ) ssl? ( >=dev-libs/openssl-0.9.6a )"
+RDEPEND=">=media-libs/gdk-pixbuf-0.11.0
+	gnome? ( >=gnome-base/gnome-core-1.2.2.1 ) 
+        ssl? ( >=dev-libs/openssl-0.9.6a )"
 
 src_unpack() {
   unpack ${A}
