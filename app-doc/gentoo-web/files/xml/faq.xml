@@ -1,0 +1,170 @@
+<?xml version='1.0'?>
+<guide>
+<title>Gentoo Linux Frequently Asked Questions</title>
+<author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
+
+<abstract>This FAQ is a collection of questions and answers collected from the gentoo-dev mailing list and from IRC -- if you have any questions (or answers!) to add, please contact an author.</abstract>
+
+<version>1.0</version>
+<date>20 April 2001</date>
+
+<chapter>
+	<title>Getting Started</title>
+
+	<section>
+		<title>How is Gentoo pronounced, and what does it mean?</title>
+		<body><p>Gentoo is a species of small fast penguin, pronounced "jen-two".</p></body>
+	</section>
+
+	<section>
+		<title>What makes Gentoo different?</title>
+		<body>
+			<p>Gentoo Linux is a fast, modern distribution with a clean and flexible design -- in this respect, Gentoo may appeal to <uri link="http://www.slackware.com/">Slackware</uri>, <uri link="http://www.linuxfromscratch.org">Linux From Scratch</uri> or <uri link="http://www.bsd.org">BSD</uri> users. Unlike most Linux distros, Gentoo has a package system reminscient of BSD's ports, meaning the packages are continually updated to the lastest versions.</p></body> 
+	</section>
+</chapter>
+
+<chapter>
+	<title>Installation</title>
+
+	<section>
+		<title>What is the differenence between the sys and build tarballs?</title>
+		<body><p>The <e>build</e> tarball is a minimal system capable of connecting to the internet and rebuilding itself, whereas <e>sys</e> is a complete comfortable system.</p>
+		<note>If you need a minimal system for recovery, you might want to try the bootable <uri link="http://www.ibiblio.org/gentoo/gentoo-x86-distro/gentoo-1.0_rc4/images/">rescue disk images</uri> instead.</note></body>
+	</section>
+
+	<section>
+		<title>What's the default root password after installation?</title>
+		<body><p>The default password is blank; hit enter.</p></body>
+	</section>
+</chapter>
+
+<chapter>
+	<title>Package Management</title>
+	<section>
+		<title>In what format are the packages stored?</title>
+		<body><p>They exist in our portage tree as <e>ebuilds</e>; we are primarily a ports-based distribution, meaning that we provide scripts (<c>.ebuild</c> files) and a special system (Portage) so
+that you can build apps from sources. We generally only build binaries for releases and snapshots. The <uri link="/doc/gentoo-howto">Development HOWTO</uri> covers the contents of an ebuild script in detail.</p>
+		</body>
+	</section>
+
+	<section>
+		<title>Why write a new port system (Portage) instead of using BSD's version?</title>
+		<body>
+			<p>One of the design philosophies of the <c>.ebuild</c> syntax was to make it an analog of what you'd type to install the program manually, thus making Portage very easy to learn and modify to your needs.</p>
+			<p>Gentoo Linux is designed from the ground up to be as fast as possible; Open, Net and FreeBSD use make for their ports system, which keeps it relativley slow; ebuild is specifcally designed to be small, fast, clean and extensible. Whereas BSD's ports is 
+ a relativley unchangable system, Portage can be adapted to your specific needs - Portage is meant to be a working tool, not just a "system" that comes "as-is". It is designed to allow you to interact with it at all levels.</p>
+		</body>
+	</section>
+
+	<section>
+		<title>How does this differ from Debian's apt or BSD's ports?</title>
+		<body><p>Portage features the best of apt and ports; for example, USE options, a full dependency system, safe installs and uninstalls, and a true package database.  Think of Portage as the best of both worlds; a ports system with the sensibilities and safety of a package management system built-in.</p></body>
+	</section>
+
+	<section>
+	        <title>How do I install and uninstall packages?</title>
+	        <body>
+	                <p>The <uri link="/doc/portage-user.html">Portage User Guide</uri> details how to install and uninstall packages, and update Portage.</p>
+	        </body>
+	</section>
+
+	<section>
+		<title>How can I set a global configuration for compiling packages?</title>
+		<body><p><path>/etc/make.conf</path> should be modified to override global and profile-specific default options used to compile and merge packages. The most common options are as follows:</p>
+		<table>
+		<tr>
+			<th>Flag</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<ti>CHOST</ti>
+			<ti>This sets the HOST variable for compiles, e.g. <c>i686-pc-linux-gnu</c></ti>
+		</tr>
+		<tr>
+			<ti>CFLAGS</ti>
+			<ti>The options for <c>gcc</c> when compiling programs written in C (*.c files)</ti>
+		</tr>
+		<tr>
+			<ti>CXXFLAGS</ti>
+			<ti>The options for <c>gcc</c> when compiling programs written in C++ (*.c files)</ti>
+		</tr>
+		<tr>
+			<ti>USE</ti>
+			<ti>This allows you to set what optional components you'd like compiled-in, if available.  For example, if you have <c>gnome</c> inside the USE string, then when you compile <c>xchat</c>, it will include GNOME support.  All our dependencies are also USE-aware.</ti>
+
+		</tr>
+		<tr>
+			<ti>GENTOO_MIRRORS</ti>
+			<ti>A space separated list of uris currently mirroring the Gentoo packages</ti>
+		</tr>
+		</table>
+		</body>
+	</section>
+
+	<section>
+		<title>What happened to <path>/etc/make.defaults</path>?</title>
+		<body><p>As of portage 1.5 onwards, <path>/etc/make.defaults</path> is antiquated -- if you have portage-1.5-r1 or above installed then you can safely delete it. This file has been replaced by <path>/etc/make.profile/make.defaults</path>, which contains system profile-specific default settings. The priority order of the various configuration files is as follows (highest first):
+		<ol>
+			<li>Environment variables</li>
+			<li><path>/etc/make.conf</path> -- for your use</li>
+			<li><path>/etc/make.profile/make.defaults</path> -- for profile-specific defaults</li>
+			<li><path>/etc/make.globals</path> -- for global defaults (settings not specified in any other place come from ehere)</li>
+		</ol></p></body>
+	</section>
+
+	<section>
+		<title>Can I rsync from another operating system?</title>
+		<body><p>There's a program called unison that works under both UNIX and Win32, available from <uri>http://www.cis.upenn.edu/~bcpierce/unison/</uri>.</p></body>
+	</section>
+</chapter>
+
+<chapter>
+	<title>Maintenance</title>
+	<section>
+		<title>reiserfs and filesystem corruption issues -- how to fix'em, etc</title>
+		<body><p>TODO: link to ibm article</p></body>
+	</section>
+</chapter>
+
+<chapter>
+	<title>Development</title>
+	<section>
+		<title>Where can I report bugs?</title>
+		<body><p>For bugs within a specific program, contact the program's author. Otherwise, contact the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</uri> mailing list, or on <c>#gentoo</c> on the <uri link="http://www.openprojects.net">openprojects</uri> irc network.</p></body>
+	</section>
+
+	<section>
+		<title>How oftern are new releases made?</title>
+		<body><p>New releases are announced on the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</uri> mailing lists<!-- TODO: approximatley every X months-->.</p></body>
+	</section>
+
+	<section>
+		<title>I would like a package to be added to portage; how would I go about this?</title>
+		<body><p>Send an email to the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-dev">Developer Discussion</uri> mailing list, and it will be comitted to cvs. If you are making regular packages, contact <mail link="drobbins@gentoo.org">Daniel Robbins</mail> for write access to the cvs tree.</p></body>
+	</section>
+
+	<section>
+		<title>How can I add a question or answer to this FAQ?</title>
+		<body><p>You could email an author directly, email the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-dev">Developer Discussion</uri> mailing list, or drop by on <c>#gentoo</c> on the <uri link="http://www.openprojects.net">openprojects</uri> irc network.</p></body>
+	</section>
+</chapter>
+
+<chapter>
+<title>Resources</title>
+	<section>
+		<title>Where can I find more about supervise?</title>
+		<body><p>TODO: <uri>http://cr.yp.to</uri></p></body>
+	</section>
+
+	<section>
+		<title>Where can I find more information about Gentoo Linux?</title>
+		<body><p>The official Gentoo documentation can be found on <uri>http://www.gentoo.org</uri>; general Linux information is at <uri>http://www.linuxdoc.org</uri>.</p></body>
+	</section>
+
+	<section>
+		<title>Can I buy a CD of Gentoo Linux?</title>
+		<body><p>Not currently, although we will most likely be selling CDs in the future. 
+		</p></body>
+	</section>
+</chapter>
+</guide>

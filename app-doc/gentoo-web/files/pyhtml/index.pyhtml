@@ -36,14 +36,15 @@
 					</td>
 					<td align="left" valign="top">
 						<b>
-						<a href="doc/xml-guide.html">NEW! Documentation Guide</a><br>
-						<a href="doc/install.html">NEW! Install Guide</a><br>
-						<a href="doc/portage-user.html">NEW! Portage User Guide</a><br>	
-						<a href="doc/gentoo-howto">NEW! Development HOWTO</a><br>
+						<a href="doc/faq.html">NEW! Gentoo Linux FAQ</a><br>
+						<a href="doc/xml-guide.html">Documentation Guide</a><br>
+						<a href="doc/install.html">Install Guide</a><br>
+						<a href="doc/portage-user.html">Portage User Guide</a><br>	
+						<a href="doc/gentoo-howto">Development HOWTO</a><br>
 						<a href="doc/nvidia_tsg.html">NVIDIA Troubleshooting Guide [Feb 2001]</a></b><br>
-						Latest release: Gentoo Linux 1.0_rc4_pre2<br>
-						Next release: Gentoo Linux 1.0_rc5 (Apr. 2001)<br>
-						Recommended kernel: Linux 2.4.2-r3
+						Latest release: 01 May 2001 system snapshot<br>
+						Next release: Gentoo Linux 1.0_rc5 (May 2001)<br>
+						Recommended kernel: Linux 2.4.4+
 					</td>
 				</tr>
 			</table>
@@ -80,10 +81,10 @@
 						<font size=+1><b>Features</b></font><br>
 
 						<ul>
-							<li><b>Linux 2.4.0</b>, <b>glibc 2.2</b>, <b>gcc 2.95.2</b> and the latest development tools</li>
+							<li><b>Linux 2.4</b>, <b>glibc 2.2</b>, <b>gcc 2.95.3</b> and the latest development tools</li>
 							<li><b>ReiserFS</b> support built-in; in fact, we recommend a ReiserFS root filesystem</li>
 							<li><b>GRUB</b>, the Grand Unified Boot Loader replaces LILO (LILO is still available for those who need it)</li>
-							<li>Xfree86 4.0.2, <b>KDE 2.0.1</b> (with <b>anti-aliased</b> fonts) and <b>GNOME 1.2.4</b></li>
+							<li>Xfree86 4.0.3, <b>KDE 2.1.1</b> (with <b>anti-aliased</b> fonts) and <b>GNOME 1.4</b></li>
 							<li><b>Portage</b>, a next-generation ports system for Linux :) Finally, a Linux distro that BSD fans can use and enjoy</li>
 							<li>Simple, clean design -- <b>no red tape</b> to get in your way</li>
 							<li><b>Simplified SysV-style</b> initialization scripts</li>
