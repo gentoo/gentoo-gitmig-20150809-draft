@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 84514fc23847c1e7276483a12d84b3fb penggy-0.2.1.ebuild 1005
+MD5 7fe523e7849f470d83739affceb98d60 penggy-0.2.1.ebuild 1004
 MD5 5ddfe3e822ebc731531b534f93754082 ChangeLog 658
 MD5 edfb29e672017e419f873320672daf52 metadata.xml 228
 MD5 0fea2d99dcce8ec0912ba6875a84c8e3 files/digest-penggy-0.2.1 64
@@ -9,7 +9,7 @@ MD5 edb75009c0f9bb4195cb9f103fe75957 files/rc_net.aol 1016
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB0earjtv59x0+BrURAntjAKDHf2HMQ4kIBIjmK0UoqysagYTmWQCfUHH1
-UmFwnM+0CNikQ/APXYEqEjQ=
-=ITMJ
+iD8DBQFB0m/wjtv59x0+BrURAvOuAJ9PHYaex18052LJNnY3HRUZWUVzygCgrq7f
+Qm+iDlUO9CEuhNPRHNKaefg=
+=L3Ym
 -----END PGP SIGNATURE-----
