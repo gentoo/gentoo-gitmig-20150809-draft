@@ -1,7 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/packages.build,v 1.2 2004/06/26 23:29:25 solar Exp $
-
-# This file inherits from the parent profiles as well.  The packages listed
-# in this file enumerate those which are needed to build a stage 1 based on
-# this profile.

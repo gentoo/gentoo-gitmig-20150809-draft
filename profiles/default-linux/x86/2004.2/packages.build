@@ -1,7 +1,0 @@
-# Copyright 2001-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.2/packages.build,v 1.1 2004/07/13 19:26:17 beejay Exp $
-
-# This file describes the packages needed to build a stage 1 based on this
-# profile
-
