@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.15 2002/12/21 14:02:39 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.16 2002/12/21 19:28:35 hannes Exp $
+
+  21 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kdeadmin-3.1_rc5.ebuild:
+  added patch to compile with qt-3.1.1, fixes bug #12506. thanks to
+  lichte@ctcis.net (Cletus Lichte)
 
 *kdeadmin-3.0.5a (21 Dec 2002)
 
