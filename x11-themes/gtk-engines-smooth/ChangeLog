@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-smooth
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/ChangeLog,v 1.1 2003/06/19 09:51:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/ChangeLog,v 1.2 2003/10/14 07:05:53 obz Exp $
+
+  14 Oct 2003; Mike Gardiner <obz@gentoo.org> gtk-engines-smooth-0.5.2.ebuild:
+  Fixed HOMEPAGE re bug #31097
 
 *gtk-engines-smooth-0.5.2 (19 Jun 2003)
 
