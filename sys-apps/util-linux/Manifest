@@ -3,15 +3,11 @@ Hash: SHA1
 
 MD5 0df0c65fbb00a9153c30046cd435bb47 ChangeLog 15902
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3d7c72c204740c895976624e87fbe860 util-linux-2.12-r2.ebuild 3172
-MD5 210baaa6b9086d6dcb1cf73b8f35f8aa util-linux-2.12-r3.ebuild 3673
 MD5 956fda46dcf04bbb717ec282840edada util-linux-2.12-r4.ebuild 4101
 MD5 b1770169fdbfa0b28480dbebf67d3222 util-linux-2.12-r5.ebuild 4196
 MD5 4bb184b87ec90bdc579a71f53214f21a util-linux-2.12b-r1.ebuild 4983
 MD5 46b84caf300acc762451ca3631a2bb14 util-linux-2.12b.ebuild 4874
 MD5 eeb64f7c42637a4750b79aadbfa7120c util-linux-2.12i-r1.ebuild 3682
-MD5 830453d37b748b7e2ec454603e33b920 files/digest-util-linux-2.12-r2 151
-MD5 5a1bf3d383850b6c8ca05cc4fe76c813 files/digest-util-linux-2.12-r3 154
 MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
 MD5 0f2f1ddaeaf52622fa80f4f08bb25a6b files/util-linux-2.11z-01-nfsv4-crypt.dif 13460
 MD5 482305a63e330c809dc808af25ecfe33 files/util-linux-2.12i-pic.patch 2522
@@ -45,7 +41,7 @@ MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4cviroRuSHgZdywRArz1AJ9hEVNjC9re4tbFFXbBaErJKzz1NACfca0B
-9lqZlKY+Ca/wlDWg/T8sAWI=
-=I5mq
+iD8DBQFB4dC/roRuSHgZdywRAldgAJ9x5QDf6UpaqefQSJ9VMtyuIaxKZACfayJT
+ONbnkBOfRKMbRGJ5V/Ti/EE=
+=gGNC
 -----END PGP SIGNATURE-----
