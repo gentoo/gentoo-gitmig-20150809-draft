@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r2.ebuild,v 1.4 2001/09/10 02:06:30 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r6.ebuild,v 1.1 2001/09/10 02:06:30 woodchip Exp $
 
 S=${WORKDIR}/${P}   
 DESCRIPTION="Netkit - timed"
@@ -26,6 +26,6 @@ src_install() {
         doman  timed/timedc/timedc.8
         dodoc  README ChangeLog BUGS
         
-        exeinto /etc/rc.d/init.d
-        newexe ${FILESDIR}/timed.rc5 timed
+        exeinto /etc/init.d
+        newexe ${FILESDIR}/timed.rc6 timed
 }
