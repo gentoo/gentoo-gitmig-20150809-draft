@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/icewm-themes
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.1 2004/06/20 20:27:47 usata Exp $
+
+*icewm-themes-0.0.1 (21 Jun 2004)
+
+  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +icewm-themes-0.0.1.ebuild:
+  Initial import. Ebuild submitted by <seather@scygro.za.net>,
+  closing bug #53207
+
