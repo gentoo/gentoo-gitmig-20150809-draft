@@ -1,7 +1,17 @@
-MD5 8e8bf32d4c3c190652318b25ee6915de ChangeLog 1447
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 40456074a05019d19001fcd2e259398a ChangeLog 1525
 MD5 7939460d94beefba8c6bfb8ad4e670d6 monit-4.2.1.ebuild 1042
-MD5 5a78c6597106b17034263646a52fbae7 monit-4.3.ebuild 1042
-MD5 e046f9b22ab549e59bf3917a649ee97c files/digest-monit-4.2.1 63
+MD5 935708fb054223beb8bcf559d2cab186 monit-4.3.ebuild 1041
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 20bccc05e56a6f6901c39dd535e0a5d6 files/digest-monit-4.3 61
 MD5 12c8e7df38eb7ec788a1a5d54e144998 files/monit.initd 624
+MD5 e046f9b22ab549e59bf3917a649ee97c files/digest-monit-4.2.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnJCPI7fK2cqeyXkRAm4DAKC1G8O5i9hS5+wtP9JxI4OaNZgIhQCgquEJ
+jyWfrjQEp6ZKTZN7ZgedqRI=
+=YUFY
+-----END PGP SIGNATURE-----
