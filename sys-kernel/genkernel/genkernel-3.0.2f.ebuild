@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.2e.ebuild,v 1.2 2004/07/28 12:17:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.2f.ebuild,v 1.1 2004/08/23 11:31:50 plasmaroo Exp $
 
 IUSE="bootsplash"
 
