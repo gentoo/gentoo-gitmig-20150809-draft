@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.7 2002/11/13 20:35:11 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.8 2002/11/14 17:03:34 verwilst Exp $
 
 IUSE="ssl"
 
@@ -103,7 +103,7 @@ src_install() {
 	cp ${S}/mu-conference/src/mu-conference.so ${D}/usr/lib/jabber/
 	cp ${S}/yahoo-transport-2/yahoo-transport.so ${D}/usr/lib/jabber/
 	cd ${D}/etc/jabber
-	tar -xjf ${FILESDIR}/config-1.4.2-r1.tar.bz2
+	tar -xjf ${FILESDIR}/config-1.4.2-r1.tbz2
 
 
 
