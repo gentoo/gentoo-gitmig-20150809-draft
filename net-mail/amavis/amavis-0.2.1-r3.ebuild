@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.10 2004/04/27 20:43:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.11 2004/05/30 01:38:21 robbat2 Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 -sparc"
 
 DEPEND="net-mail/maildrop
 	>=net-mail/tnef-0.13
-	>=net-mail/vlnx-407e
+	>=app-antivirus/vlnx-407e
 	net-mail/qmail"
 
 src_unpack() {
