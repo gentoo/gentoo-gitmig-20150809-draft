@@ -17,7 +17,7 @@ src_compile() {
 		    --infodir=/usr/share/info			\
 		    --host=${CHOST} || die
     
-    emake || die
+	emake || die
 }
 
 src_install () {
