@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.9 2002/08/03 10:46:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.10 2002/08/03 15:31:09 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -191,8 +191,8 @@ cvs_src_unpack() {
 	debug-print "Copying module $ECVS_MODULE from $ECVS_TOP_DIR..."
 	
 	if [ -n "$ECVS_SUBDIR" ]; then
-			mkdir $WORKDIR/$ECVS_MODULE
-			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR $WORKDIR/$ECVS_MODULE
+			mkdir -p $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
+			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR/* $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR/
 	else
 		if [ -n "$ECVS_LOCAL" ]; then
 			cp -f $ECVS_TOP_DIR/$ECVS_MODULE/* $WORKDIR/$ECVS_MODULE
@@ -200,7 +200,15 @@ cvs_src_unpack() {
 			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
 		fi
 	fi
-    
+	
+	# if the directory is empty, remove it; empty directories cannot exist in cvs.
+	# this happens when fex. kde-source requests module/doc/subdir which doesn't exist.
+	# still create the empty directory in workdir though.
+	if [ "`ls -A $DIR`" == "CVS" ]; then
+		debug-print "$FUNCNAME: removing cvs-empty directory $ECVS_MODULE/$ECVS_SUBDIR"
+		rm -rf $DIR
+	fi
+	    
     # implement some of base_src_unpack's functionality;
     # note however that base.eclass may not have been inherited!
     if [ -n "$PATCHES" ]; then
