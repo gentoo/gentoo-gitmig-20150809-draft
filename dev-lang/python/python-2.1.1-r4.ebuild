@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.1-r4.ebuild,v 1.2 2002/04/07 13:33:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.1-r4.ebuild,v 1.3 2002/04/29 21:20:00 sandymac Exp $
 
 S=${WORKDIR}/Python-${PV}
 FCHKSUM="python-fchksum-1.6"
@@ -10,6 +10,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz
 	http://www.azstarnet.com/~donut/programs/fchksum/${FCHKSUM}.tar.gz"
 
 HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum/"
+LICENSE="PSF-2.1.1"
 
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
