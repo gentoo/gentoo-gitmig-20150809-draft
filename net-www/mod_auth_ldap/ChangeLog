@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/ChangeLog,v 1.12 2005/02/17 14:14:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/ChangeLog,v 1.13 2005/02/25 11:54:23 hollow Exp $
+
+  25 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  files/55_mod_auth_ldap.conf:
+  fixed module config
 
 *mod_auth_ldap-3.3 (17 Feb 2005)
 
