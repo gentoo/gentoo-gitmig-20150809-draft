@@ -1,15 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.4 2002/08/16 02:55:07 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.5 2002/09/29 10:07:33 bjb Exp $
 
 LICENSE="XAnim"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 _XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
 _XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
 _XA_IV32_SPARC=xa2.0_iv32_sparcELF.o
 _XA_SPARC_EXT=.Z
+
+_XA_CYUV_ALPHA=xa1.0_cyuv_linuxAlpha.o
+_XA_CVID_ALPHA=xa2.0_cvid_linuxAlpha.o
+_XA_IV32_ALPHA=xa2.0_iv32_linuxAlpha.o
+_XA_ALPHA_EXT=.gz
 
 _XA_CYUV_I386=xa1.0_cyuv_linuxELFg21.o
 _XA_CVID_I386=xa2.0_cvid_linuxELFg21.o
@@ -29,6 +34,13 @@ case $ARCH in
 			_XA_EXT=$_XA_SPARC_EXT
 			_XA_UNCOMPRESS=uncompress
 			;;
+    alpha)
+            _XA_CYUV=$_XA_CYUV_ALPHA
+            _XA_CVID=$_XA_CVID_ALPHA
+            _XA_IV32=$_XA_IV32_ALPHA
+            _XA_EXT=$_XA_ALPHA_EXT
+            _XA_UNCOMPRESS=gunzip
+            ;;
 	ppc)
 			_XA_CYUV=$_XA_CYUV_PPC
 			_XA_CVID=$_XA_CVID_PPC
@@ -48,6 +60,8 @@ esac
 A="xanim2801.tar.gz \
 	${_XA_CYUV_SPARC}${_XA_SPARC_EXT} ${_XA_CVID_SPARC}${_XA_SPARC_EXT} \
 	${_XA_IV32_SPARC}${_XA_SPARC_EXT} \
+    ${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT} ${_XA_CVID_ALPHA}${_XA_ALPHA_EXT} \
+    ${_XA_IV32_ALPHA}${_XA_ALPHA_EXT} \
 	${_XA_CYUV_I386}${_XA_I386_EXT} ${_XA_CVID_I386}${_XA_I386_EXT} \
 	${_XA_IV32_I386}${_XA_I386_EXT} \
 	${_XA_CYUV_PPC}${_XA_PPC_EXT} ${_XA_CVID_PPC}${_XA_PPC_EXT} \
@@ -58,6 +72,9 @@ SRC_URI="ftp://xanim.va.pubnix.com/xanim2801.tar.gz
 	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_SPARC}${_XA_SPARC_EXT}
 	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_SPARC}${_XA_SPARC_EXT}
 	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_SPARC}${_XA_SPARC_EXT}
+     ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT}
+     ftp://xanim.va.pubnix.com/modules/${_XA_CVID_ALPHA}${_XA_ALPHA_EXT}
+     ftp://xanim.va.pubnix.com/modules/${_XA_IV32_ALPHA}${_XA_ALPHA_EXT}
 	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_PPC}${_XA_PPC_EXT}
 	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_PPC}${_XA_PPC_EXT}
 	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_PPC}${_XA_PPC_EXT}
