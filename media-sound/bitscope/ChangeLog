@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/bitscope
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bitscope/ChangeLog,v 1.1 2004/08/20 17:36:07 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bitscope/ChangeLog,v 1.2 2004/08/21 23:48:00 mr_bones_ Exp $
+
+*bitscope-1.1 (21 Aug 2004)
+
+  21 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> bitscope-1.1.ebuild:
+  Fix dep; use generic src_compile; tidy
 
   20 Aug 2004; <frank@gentoo.org> :
   New ebuild submitted by  
