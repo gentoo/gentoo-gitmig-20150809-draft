@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/directvnc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.4 2002/08/08 14:14:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.5 2002/11/06 06:26:20 vapier Exp $
 
 *directvnc-0.6.1 (06 Jul 2002)
 
@@ -20,7 +20,7 @@
   03 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
 
   Fixed DirectFB dep to be ~0.9.10
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for net-misc/directvnc
 
 *directvnc-0.6 (31 May 2002)
 
