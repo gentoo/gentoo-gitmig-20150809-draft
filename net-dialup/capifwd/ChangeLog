@@ -1,0 +1,11 @@
+# ChangeLog for net-dialup/capifwd
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capifwd/ChangeLog,v 1.1 2004/11/24 06:04:45 mrness Exp $
+
+*capifwd-0.6.3 (24 Nov 2004)
+
+  24 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +files/capifwd-0.6.3.patch, +files/capifwd.conf, +files/capifwd.init,
+  +capifwd-0.6.3.ebuild:
+  Initial import from #71845, thanks to Stefan Briesenick <sbriesen@gmx.de>.
+
