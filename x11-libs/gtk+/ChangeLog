@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.4 2002/03/21 10:43:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.5 2002/03/24 02:52:51 seemant Exp $
+
+*gtk+-1.2.10-r7 (23 Mar 2002)
+
+  23 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-1.2.10-r7.ebuild :
+
+  Man pages are now in LFH compliant /usr/share/man tree.  Changes submitted by
+  Matthew Kennedy.
 
 *gtk+-1.2.10-r6 (21 Mar 2002)
 
