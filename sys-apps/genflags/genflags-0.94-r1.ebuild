@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/genflags/genflags-0.94-r1.ebuild,v 1.1 2003/07/27 19:28:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/genflags/genflags-0.94-r1.ebuild,v 1.2 2003/08/06 20:01:34 robbat2 Exp $
 
 DESCRIPTION="Gentoo CFLAGS generator"
 
@@ -54,5 +54,5 @@ pkg_postinst() {
 	ewarn "AMD-K6{,-2,-3} and Athlon vs. Athlon-4."
 	einfo "Please file any patches/bugs to robbat2@gentoo.org via the Gentoo"
 	einfo "Bugzilla."
-	einfo "See /usr/share/doc/${P}/README for quick instructions."
+	einfo "See /usr/share/doc/${PF}/README for quick instructions."
 }
