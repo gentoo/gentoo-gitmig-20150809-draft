@@ -1,15 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2004.2/make.defaults,v 1.6 2004/09/09 12:58:03 vapier Exp $
-
-GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
-
-ARCH="ppc"
-
-USE="oss dvd xv slang readline gpm berkdb gdbm tcpd pam libwww ssl jpeg
-nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk gtk2 X qt kde
-motif opengl mozilla png truetype ppc cups foomaticdb"
+# Copyright 2004 Pieter Van den Abeele, Gentoo Foundation.
+# Gentoo Linux PowerPC system defaults
 
 ACCEPT_KEYWORDS="ppc"
-
-FEATURES="sandbox sfperms"
+ARCH="ppc"
+CFLAGS="-O2 -pipe"
+CHOST="powerpc-unknown-linux-gnu"
+CXXFLAGS=${CFLAGS}
+FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
+MAKEOPTS="-j2"
+PLATFORM=$CHOST
+USE="dvd jpeg nls gif png truetype ppc"
