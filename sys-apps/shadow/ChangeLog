@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.76 2004/11/02 02:21:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.77 2004/11/02 03:25:08 pylon Exp $
+
+  02 Nov 2004; Lars Weiler <pylon@gentoo.org> shadow-4.0.5.ebuild:
+  Stable on ppc.  Bug #69212.
 
   01 Nov 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.5.ebuild, 
   +files/shadow-4.0.5-skey.patch:
