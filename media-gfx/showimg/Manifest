@@ -1,0 +1,6 @@
+MD5 0bc91b24faad6375827441a78d8a91eb ChangeLog 505
+MD5 61474e98106f9a2e566ce6bf9ce11a02 showimg-0.7-r1.ebuild 543
+MD5 9339eabe62185aa9b4df68ceeb9f06f1 showimg-0.7.ebuild 467
+MD5 bd5e53826c366a9820057d9aa6b0ebba files/digest-showimg-0.7 64
+MD5 bd5e53826c366a9820057d9aa6b0ebba files/digest-showimg-0.7-r1 64
+MD5 2c45074e21cbb35c306b58e61dd0b5ed files/showimg-0.7-gcc3.diff 1985
