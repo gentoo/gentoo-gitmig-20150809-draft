@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r5.ebuild,v 1.10 2005/02/21 13:17:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r5.ebuild,v 1.11 2005/03/09 00:49:13 vapier Exp $
 
 inherit tetex eutils flag-o-matic
 
 DESCRIPTION="a complete TeX distribution"
 HOMEPAGE="http://tug.org/teTeX/"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ppc64 ~ppc-macos ~s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~ppc-macos s390 sparc x86"
 IUSE=""
 
 src_unpack() {
