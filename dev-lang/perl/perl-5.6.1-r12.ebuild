@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r12.ebuild,v 1.7 2003/09/06 22:27:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r12.ebuild,v 1.8 2003/09/10 01:52:16 msterret Exp $
 
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 MM_VERSION="6.05"
@@ -46,39 +46,39 @@ src_unpack() {
 src_compile() {
 	use gdbm || use berkdb || die "You must have either gdbm or berkdb installed and in your use flags."
 
-    #The following is to handle international users. Perl does nls post-install
-    export LC_ALL=C
+	#The following is to handle international users. Perl does nls post-install
+	export LC_ALL=C
 
-    if [ "${ARCH}" = "alpha" ]; then
-        CFLAGS="${CFLAGS} -fPIC"
-        CXXFLAGS="${CXXFLAGS} -fPIC"
-    fi
+	if [ "${ARCH}" = "alpha" ]; then
+		CFLAGS="${CFLAGS} -fPIC"
+		CXXFLAGS="${CXXFLAGS} -fPIC"
+	fi
 
-    local myconf
-    if [ "`use gdbm`" ]
-    then
+	local myconf
+	if [ "`use gdbm`" ]
+	then
 		myconf="-Di_gdbm"
-    fi
+	fi
 
-    # It seems that perl config use the hostname instead of the osname on hppa
-    if [ "`use hppa`" ]
-    then
-        myconf="${myconf} -Dosname=linux"
-    fi
+	# It seems that perl config use the hostname instead of the osname on hppa
+	if [ "`use hppa`" ]
+	then
+		myconf="${myconf} -Dosname=linux"
+	fi
 
-    if [ "`use berkdb`" ]
-    then
+	if [ "`use berkdb`" ]
+	then
 		myconf="${myconf} -Di_db -Di_ndbm"
-    else
+	else
 		myconf="${myconf} -Ui_db -Ui_ndbm"
-    fi
+	fi
 
 	# put in built-in removal patch
 	patch -p1 < ${FILESDIR}/${PV}-builtin-fixup.diff || die
 	patch -p0 < ${FILESDIR}/${PV}-op-test-fix.diff || die
 
 	# configure for libperl.so
-    sh Configure -des \
+	sh Configure -des \
 		-Darchname=${CHOST%%-*}-linux \
 		-Dcccdlflags='-fPIC' \
 		-Dcc=gcc \
@@ -98,14 +98,14 @@ src_compile() {
 		-Ud_csh \
 		${myconf} || die
 	# add optimization flags
-    cp config.sh config.sh.orig
-    sed -e "s:optimize='-O2':optimize=\'${CFLAGS}\':" config.sh.orig > config.sh
+	cp config.sh config.sh.orig
+	sed -e "s:optimize='-O2':optimize=\'${CFLAGS}\':" config.sh.orig > config.sh
 	# create libperl.so and move it out of the way
 	mv -f Makefile Makefile_orig
 	sed -e 's#^CCDLFLAGS = -rdynamic -Wl,-rpath,/usr/lib/perl5/.*#CCDLFLAGS = -rdynamic#' \
 	    -e 's#^all: $(FIRSTMAKEFILE) #all: README #' \
 		Makefile_orig > Makefile
-    export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
+	export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
 	make -f Makefile depend || die
 	make -f Makefile libperl.so || die
@@ -143,7 +143,7 @@ installsitelib=\`echo \$installsitelib | sed "s!\$prefix!\$installprefix!"\`
 installsitearch=\`echo \$installsitearch | sed "s!\$prefix!\$installprefix!"\`
 EOF
 
-    sh Configure -des \
+	sh Configure -des \
 		-Dcc=gcc \
 		-Dprefix='/usr' \
 		-Dvendorprefix='/usr' \
@@ -159,11 +159,11 @@ EOF
 		-Ud_csh \
 		${myconf} || die
 
-    #Optimize ;)
-    cp config.sh config.sh.orig
-    sed -e "s:optimize='-O2':optimize=\'${CFLAGS}\':" config.sh.orig > config.sh
-    #THIS IS USED LATER:
-    export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
+	#Optimize ;)
+	cp config.sh config.sh.orig
+	sed -e "s:optimize='-O2':optimize=\'${CFLAGS}\':" config.sh.orig > config.sh
+	#THIS IS USED LATER:
+	export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
 # Umm, for some reason this doesn't want to work, so we'll just remove
 #  the makefiles and let make rebuild them itself. (It seems to do it
@@ -175,9 +175,9 @@ EOF
 	sed -e 's#^all: $(FIRSTMAKEFILE) #all: README #' \
 		Makefile_orig > Makefile
 
-    make || die
+	make || die
 
-    # Parallel make fails
+	# Parallel make fails
 	# dont use the || die since some tests fail on bootstrap
 	if [ `expr "$PARCH" ":" "sparc"` -gt 4 ]; then
 		echo "Skipping tests on this platform"
@@ -188,9 +188,9 @@ EOF
 
 src_install() {
 #The following is to handle international users. Perl does nls post-install
-    export LC_ALL=C
+	export LC_ALL=C
 
-    export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
+	export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
 	insinto /usr/lib/perl5/${PV}/${PARCH}/CORE/
 	doins ${WORKDIR}/libperl.so
@@ -207,7 +207,7 @@ src_install() {
 		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
 		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
 		install || die "Unable to make install"
-    install -m 755 utils/pl2pm ${D}/usr/bin/pl2pm
+	install -m 755 utils/pl2pm ${D}/usr/bin/pl2pm
 
 	#man pages
 
@@ -225,8 +225,8 @@ src_install() {
 
 	# DOCUMENTATION
 
-    dodoc Changes* Artistic Copying README Todo* AUTHORS
-    prepalldocs
+	dodoc Changes* Artistic Copying README Todo* AUTHORS
+	prepalldocs
 
 
 	# HTML Documentation

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/squeak-vm-3.5.5180.ebuild,v 1.2 2003/05/23 17:35:40 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/squeak-vm-3.5.5180.ebuild,v 1.3 2003/09/10 01:53:06 msterret Exp $
 
 MAJOR=3
 MINOR=5
@@ -15,7 +15,7 @@ DESCRIPTION="Squeak image file"
 HOMEPAGE="http://www.squeak.org/"
 
 SRC_URI="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MM}/Squeak${MMDASHR}.zip
-         ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MM}/SqueakV3.sources.gz"
+	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MM}/SqueakV3.sources.gz"
 
 LICENSE="Apple"
 
@@ -32,7 +32,7 @@ RDEPEND=""
 S=${WORKDIR}
 
 src_compile() {
-    einfo "Compressing Image/Changes files..."
+	einfo "Compressing Image/Changes files..."
 	gzip Squeak${MMDASHR}.image
 	gzip Squeak${MMDASHR}.changes
 	einfo "done!"
