@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.33.ebuild,v 1.1 2004/03/09 02:14:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.33.ebuild,v 1.2 2004/03/19 08:25:42 dholm Exp $
 
 inherit fixheadtails
 
@@ -8,7 +8,7 @@ DESCRIPTION="Lightweight library used to easily extract data from files archived
 HOMEPAGE="http://zziplib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/zziplib/${P}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="LGPL-2.1 | MPL-1.1"
 SLOT="0"
 
