@@ -1,0 +1,8 @@
+# ChangeLog for media-video/mkvtoolnix
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.1 2003/07/20 08:01:32 raker Exp $
+
+*mkvtoolnix-0.5.0 (20 Jul 2003)
+
+  20 Jul 2003; Nick Hadaway <raker@gentoo.org> mkvtoolnix-0.5.0.ebuild:
+  New ebuild.  The matroska toolkit.
