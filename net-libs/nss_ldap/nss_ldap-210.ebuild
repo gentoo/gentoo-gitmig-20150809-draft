@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-210.ebuild,v 1.3 2003/09/11 01:25:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-210.ebuild,v 1.4 2003/11/07 01:17:58 robbat2 Exp $
 
+inherit fixheadtails
 IUSE="berkdb debug ssl"
 
 DESCRIPTION="NSS LDAP Module"
@@ -14,6 +15,12 @@ KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=net-nds/openldap-1.2.11
 	berkdb? ( =sys-libs/db-3* )"
+
+src_unpack() {
+	unpack ${A}
+	# fix head/tail stuff
+	ht_fix_file ${S}/Makefile.am ${S}/Makefile.in ${S}/depcomp ${S}/config.guess
+}
 
 src_compile() {
 	local myconf=""

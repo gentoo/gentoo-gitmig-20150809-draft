@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-207-r1.ebuild,v 1.3 2003/09/06 22:04:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-207-r1.ebuild,v 1.4 2003/11/07 01:17:58 robbat2 Exp $
 
+inherit fixheadtails
 DESCRIPTION="NSS LDAP Module"
 HOMEPAGE="http://www.padl.com/OSS/nss_ldap.html"
 
@@ -11,6 +12,12 @@ SLOT="0"
 IUSE=""
 LICENSE="LGPL-2"
 KEYWORDS="x86 sparc"
+
+src_unpack() {
+	unpack ${A}
+	# fix head/tail stuff
+	ht_fix_file ${S}/Makefile.am ${S}/Makefile.in ${S}/depcomp ${S}/config.guess
+}
 
 src_compile() {
 	./configure \
