@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gai
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.9 2004/08/08 00:50:25 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.10 2004/10/08 16:37:54 lordvan Exp $
+
+*gai-0.5.6 (08 Oct 2004)
+
+  08 Oct 2004; root <root@gentoo.org> gai-0.5.6.ebuild:
+  version bump fixed Bug #59277 (Thanks to Daniel Webert
+  <rockoo@rockoo.homelinux.org>)
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> gai-0.5.2.ebuild,
   gai-0.5.3.ebuild, gai-0.5.5.ebuild:
