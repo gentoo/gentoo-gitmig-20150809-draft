@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mkennedy@gentoo.org> (05 Oct 2003)
+# maxima depending on cmucl and not cmucl-bin needs testing
+=app-sci/maxima-5.9.0-r2
+
 # <hillster@gentoo.org> (04 Oct 2003)
 # moving glext.h out of distfiles onto mirrors needs testing
 =media-video/mtxdrivers-pro-1.0_beta4-r1
