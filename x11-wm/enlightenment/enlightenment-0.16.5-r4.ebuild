@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.19 2004/03/09 23:43:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.20 2004/06/25 03:13:40 agriffis Exp $
 
 DESCRIPTION="Enlightenment Window Manager"
 SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
