@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.40 2004/04/13 16:07:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.41 2004/04/27 16:33:21 mholzer Exp $
+
+*squirrelmail-1.4.2-r4 (27 Apr 2004)
+
+  27 Apr 2004; Martin Holzer <mholzer@gentoo.org>
+  squirrelmail-1.4.2-r4.ebuild:
+  Minor plugins update.
 
   13 Apr 2004; Martin Holzer <mholzer@gentoo.org>
   squirrelmail-1.4.2-r1.ebuild, squirrelmail-1.4.2-r3.ebuild:
