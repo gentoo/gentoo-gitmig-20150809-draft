@@ -1,4 +1,6 @@
 MD5 6a0e742d84261cee53bb9d4e4603eb9a hibernate-2.1.4.ebuild 1159
-MD5 b1028452720cf95942053a1c7f7741c2 ChangeLog 1203
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 2d2212510ba1d0228054208720b37465 hibernate-2.1.6.ebuild 1160
+MD5 360aa8b4a6469f6c1b2e7061b69e817a ChangeLog 1336
 MD5 f4c584ffbcff0c2ea90066bbb9b63f46 files/digest-hibernate-2.1.4 69
+MD5 163de5d55acbb8583aace22a4aeb455c files/digest-hibernate-2.1.6 69
