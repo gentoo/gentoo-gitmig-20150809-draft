@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.16 2004/09/06 00:40:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.17 2004/09/06 17:48:37 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -40,7 +40,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="-* ~x86 ~amd64 ~hppa ppc64 ~ppc"
-IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
+IUSE="nls pic build nptl erandom hardened makecheck multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -245,9 +245,9 @@ install_locales() {
 
 
 setup_locales() {
-	if use nls || use makecheck; then
-		einfo "nls or makecheck in USE, installing -ALL- locales..."
-		install_locales
+	if use !userlocales || use makecheck; then
+		einfo "makecheck in USE or userlocales not enabled, installing -ALL- locales..."
+		install_locales || die
 	elif [ -e /etc/locales.build ]; then
 		einfo "Installing locales in /etc/locales.build..."
 		echo 'SUPPORTED-LOCALES=\' > SUPPORTED.locales
@@ -285,11 +285,9 @@ pkg_setup() {
 
 do_arch_amd64_patches() {
 	cd ${S};
-	# multilib!!! i lovesdidid youuuu!
-	#epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-amd64-nomultilib.patch
-	# commented out broken patch that destroyed the possibility of ever
-	# being FHS compliant or having multilib capabilities.
-	# Travis Tilley <lv@gentoo.org> (08 Aug 2004)
+	# CONF_LIBDIR support
+	epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
+	sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
 }
 
 
@@ -388,8 +386,9 @@ do_arch_sparc_patches() {
 
 do_arch_x86_patches() {
 	cd ${S};
-
-	# Any needed patches for x86 go here
+	# CONF_LIBDIR support
+	epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
+	sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
 }
 
 
@@ -718,7 +717,7 @@ pkg_preinst() {
 	# decide to be multilib compatible and FHS compliant. note that this 
 	# chunk of FHS compliance only applies to 64bit archs where 32bit
 	# compatibility is a major concern (not IA64, for example).
-	use amd64 && fix_lib64_symlinks
+	use amd64 && [ "$(get_libdir)" == "lib64" ] && fix_lib64_symlinks
 }
 
 pkg_postinst() {
