@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0256.ebuild,v 1.1 2003/05/04 12:37:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0256.ebuild,v 1.2 2003/05/05 14:07:39 drobbins Exp $
 
 inherit gcc
 
@@ -20,26 +20,13 @@ HOMEPAGE="http://www.nvidia.com/"
 # modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="-* ~x86"
 
 DEPEND="virtual/linux-sources >=sys-apps/portage-1.9.10"
-
-src_unpack() {
-	unpack ${A}
-	if [ `gcc-major-version` -eq 2 ] ; then
-		einfo "Applying gcc2 compatability patch"
-	        cp nforce/nvnet/Makefile{,.old}
-        	sed -e "s/-falign-functions/-malign-functions/" nforce/nvnet/Makefile.old > nforce/nvnet/Makefile
-	fi
-}
 
 src_compile() {
 	# Portage should determine the version of the kernel sources
 	check_KV
-	#IGNORE_CC_MISMATCH disables a sanity check that's needed when gcc has been
-	#updated but the running kernel is still compiled with an older gcc.  This is
-	#needed for chrooted building, where the sanity check detects the gcc of the
-	#kernel outside the chroot rather than within.
 	cd ${S}/nvnet
 	make KERNSRC="/usr/src/linux" || die
 }
@@ -50,7 +37,7 @@ src_install() {
 	doins nvnet/nvnet.o
     
 	# Docs
-	dodoc ${S}/README
+	dodoc ${S}/ReleaseNotes.html
 }
 
 pkg_postinst() {
@@ -62,6 +49,8 @@ pkg_postinst() {
 
 	echo
 	einfo "You need to add \"nvnet\" to your /etc/modules.autoload to load"
-	einfo "this module when the system is started."
+	einfo "this module when the system is started. Alternatively, you can"
+	einfo "use the 'hotplug' package ('emerge hotplug' then 'rc-update add"
+	einfo "hotplug default') to auto-detect and load \"nvnet\" on startup."
 }
 
