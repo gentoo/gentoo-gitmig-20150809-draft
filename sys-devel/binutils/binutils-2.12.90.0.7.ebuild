@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.7.ebuild,v 1.10 2002/08/14 03:43:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.7.ebuild,v 1.11 2002/08/14 20:14:27 azarah Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -17,21 +17,12 @@ KEYWORDS="x86 ppc sparc sparc64"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
 DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )"
-
-if [ -z "`use build`" ] && [ -z "`use bootstrap`" ]
-then
-	DEPEND="${DEPEND}
-		sys-devel/perl"
-fi
-
-#DEPEND="virtual/glibc
-#	>=sys-apps/portage-2.0.21
-#	nls? ( sys-devel/gettext )
-#	|| ( sys-devel/perl 
-#	     ( !build?     ( sys-devel/perl ) )
-#	     ( !bootstrap? ( sys-devel/perl ) )
-#	    )"
+	>=sys-apps/portage-2.0.21
+	nls? ( sys-devel/gettext )
+	|| ( sys-devel/perl 
+	     ( !build?     ( sys-devel/perl ) )
+	     ( !bootstrap? ( sys-devel/perl ) )
+	    )"
 # This is a hairy one.  Basically depend on sys-devel/perl
 # if "build" or "bootstrap" not in USE.
 
