@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3e30aaa55021671d30d0ec026f0ce96d ChangeLog 905
+MD5 34b21a9996ca768e77c00be122c58bb4 connectorj-3.0.15.ebuild 860
 MD5 ba5b2e331f913f1d8c077a168b37af36 connectorj-3.0.14.ebuild 882
+MD5 aa833a43ccd1562b54415b6693a3dbde ChangeLog 999
 MD5 ca65727ae27910b7c0adc7dc970c5ce7 metadata.xml 254
-MD5 cc88aeefe1be28f54b5071b84d8febd5 connectorj-3.0.15.ebuild 861
 MD5 1b9097830d40bcd6e4fd18b9b581e561 files/digest-connectorj-3.0.14 91
 MD5 694330698852b516b00653716134d612 files/digest-connectorj-3.0.15 83
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0zDI1lqEGTUzyQRAlmNAJ9M/0Uk7xe0P4ENdNJ7lFa5rAbTywCdFdG9
-PVGUuDSqsJ8fnErWZF7SkkY=
-=TmFj
------END PGP SIGNATURE-----
