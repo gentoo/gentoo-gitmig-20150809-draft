@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.2 2003/12/20 18:23:37 dholm Exp $
 
 inherit games gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.squish.net/generator/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="svga tcltk gtk" #allegro fails to compile
 
 DEPEND="gtk? ( =x11-libs/gtk+-1* media-libs/libsdl )
@@ -19,6 +19,15 @@ DEPEND="gtk? ( =x11-libs/gtk+-1* media-libs/libsdl )
 	x86? ( dev-lang/nasm )"
 #	allegro? ( media-libs/allegro )
 #	tcltk? ( dev-lang/tk dev-lang/tcl ) #deprecated upstream
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	if [ "${ARCH}" == "ppc" ]; then
+		sed -i -e 's/-minline-all-stringops//g' configure
+	fi
+}
 
 src_compile() {
 	mkdir my-bins
