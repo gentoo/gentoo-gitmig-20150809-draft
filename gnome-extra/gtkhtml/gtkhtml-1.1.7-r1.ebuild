@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.7-r1.ebuild,v 1.4 2003/01/24 20:35:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.7-r1.ebuild,v 1.5 2003/02/04 19:15:21 seemant Exp $
 
 IUSE="nls gnome"
 
@@ -112,10 +112,7 @@ CONFSHEND
 src_install() {
 	local fullname=""
 	
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/lib \
-		install || die
+	einstall || die
 
 	# Fix the double entry in Control Center
 	rm -f ${D}/usr/share/control-center/capplets/gtkhtml-properties.desktop

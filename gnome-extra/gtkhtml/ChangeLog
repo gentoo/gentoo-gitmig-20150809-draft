@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.19 2003/01/24 20:35:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.20 2003/02/04 19:15:21 seemant Exp $
+
+*gtkhtml-1.1.7-r1 (22 Dec 2002)
+
+  04 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  gtkhtml-1.1.7-r1.ebuild :
+
+  Changed to use einstall || die, thanks to a report from KG-awol in
+  #gentoo on freenode.
 
   24 Jan 2003; foser <foser@gentoo.org> gtkhtml-1.1.7-r1.ebuild :
   Removed the evolution blocking dep (#13624)
@@ -10,8 +18,6 @@
 
   24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gtkhtml-1.1.7-r1.ebuild :
   Fix deps as well for gconf fix (should always depend on gconf)...
-
-*gtkhtml-1.1.7-r1 (22 Dec 2002)
 
   22 Dec 2002; Stefan Jones <cretin@gento.org> :
   To fix a gconf include dir not found bug.
