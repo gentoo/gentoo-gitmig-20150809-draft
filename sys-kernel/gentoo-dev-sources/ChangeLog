@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.78 2004/08/07 00:10:29 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.79 2004/08/09 23:06:19 gregkh Exp $
+
+*gentoo-dev-sources-2.6.7-r13 (09 Aug 2004)
+
+  09 Aug 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +gentoo-dev-sources-2.6.7-r13.ebuild:
+  Fix security bug #59905 (affects all archs).
+  Fix input driver bugs #57741
 
 *gentoo-dev-sources-2.6.7-r12 (06 Aug 2004)
 
