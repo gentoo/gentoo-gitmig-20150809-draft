@@ -1,6 +1,6 @@
-MD5 8a0e2ba2d2650d3faea1de3effc37e68 gentoolkit-0.1.25.ebuild 2728
+MD5 c0c8c529c6310d7ed4aa32e73e7a2138 gentoolkit-0.1.25.ebuild 2728
 MD5 8a0e2ba2d2650d3faea1de3effc37e68 gentoolkit-0.1.24.ebuild 2728
-MD5 8ca2899b858ceb5eb568db54f416af7d ChangeLog 17416
+MD5 5ebf3ae27591c39dff53d14b894fb90a ChangeLog 17609
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.24 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.25 0
 MD5 300f133ec5d3f34b92165edfd2d54538 files/euse/euse 33484
@@ -21,7 +21,7 @@ MD5 347e69e1c9fba8b60fa631d92ea0a8f2 files/scripts/useflag 16164
 MD5 0a120feea2b79a3731c7912926421a27 files/scripts/useflag.1 5461
 MD5 8a01b5a884ddc44af62ddf32f44e4bde files/scripts/mkebuild 7806
 MD5 66c792cf569cddd351bcccedd69d659f files/scripts/echangelog 6106
-MD5 1b22af5aca4a1373c53d44a0743d02a4 files/scripts/ChangeLog 2215
+MD5 990536b35649142ebeddebd3f411efee files/scripts/ChangeLog 2215
 MD5 ae1ecff118b5583eac443b6afbccb0fd files/scripts/dep-clean.1 5645
 MD5 08871c6fedbd9385ef8a55e1f72f3a14 files/scripts/ekeyword 917
 MD5 8bd1ba99607f3b9c421aa0ba44e84fcc files/portage-statistics/pst-total-coverage 156

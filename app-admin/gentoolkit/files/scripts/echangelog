@@ -9,7 +9,10 @@
 #   >
 
 use strict;
-use POSIX qw(strftime getcwd);
+use POSIX qw(strftime getcwd setlocale);
+
+# Fix bug 21022 by restricting to C locale
+setlocale(&POSIX::LC_ALL, "C");
 
 use Text::Wrap;
 $Text::Wrap::columns = 79;
