@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.48 2003/07/09 13:53:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.49 2003/07/15 07:39:31 pvdabeel Exp $
+
+  15 Jul 2003; root <root@gentoo.org> kdemultimedia-3.1.2-r1.ebuild:
+  ~ppc keyworded
 
   09 Jul 2003; Caleb Tennis <caleb@gentoo.org); kdemultimedia-3.1.2-r1.ebuild:
   Remove non x86 flags from ebuild as xine-lib may cause problems.
