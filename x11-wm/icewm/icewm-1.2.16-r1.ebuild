@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.8 2004/09/26 22:08:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.9 2004/09/29 17:07:16 morfic Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ IUSE="esd gnome imlib nls spell truetype xinerama silverxp"
 
 RDEPEND="virtual/x11
 	esd? ( media-sound/esound )
-	gnome? ( gnome-base/gnome-libs gnome-base/gnome-desktop )
+	gnome? ( gnome-base/gnome-libs gnome-base/gnome-desktop dev-util/pkgconfig)
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )
