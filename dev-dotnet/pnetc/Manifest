@@ -1,6 +1,14 @@
-MD5 b0554c259ae0aa404e67369d78479f2c pnetc-0.6.6.ebuild 613
-MD5 bd634cc3c4849ce623ae24eea5905a36 pnetc-0.6.8.ebuild 625
-MD5 5fb92ef4e24f8e53c57c8e6292f3a523 ChangeLog 2258
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 07fbfd4940f7ed4ca05cce2c7fd4f472 pnetc-0.6.8.ebuild 622
+MD5 18a0be87344f39b06eaa1999943d9013 ChangeLog 2367
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
-MD5 bc831ddb23e2bdaaa7ea87dd529037b1 files/digest-pnetc-0.6.6 63
 MD5 1cc1a024c81b35766e976f510f8b3093 files/digest-pnetc-0.6.8 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBILyhPgS8WLD64cERAgtzAJwKSdqP84daIL9Rima6VPigHF1cXgCeNz/d
+VjL1LB7ATTv0r8f0ZwFr7m8=
+=nKwO
+-----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
-MD5 c92761a79632c71cce17824269c4646e pnetlib-0.6.6.ebuild 619
-MD5 c478a7581f2aaacda0cd14dd2a50af4e pnetlib-0.6.8.ebuild 780
-MD5 c5ff4ddae99e6e22f3c98ec578423bf3 ChangeLog 2929
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f40a819b2f90bfb778d745485a661b6d pnetlib-0.6.8.ebuild 777
+MD5 ef376aa4f6896590eaca1578eb8bcf67 ChangeLog 3040
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
-MD5 38b16af13955333cde7a6a0d2e7b37cd files/digest-pnetlib-0.6.6 66
 MD5 31f5801d28cd1fec7f8de3caff8b4da0 files/digest-pnetlib-0.6.8 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBILxSPgS8WLD64cERAm0XAJ9UxcjSxd1eDDv8IH9nbLfwOr+SogCfbui8
+23/LSOt0Dg7dGuh2/aQksNc=
+=rccp
+-----END PGP SIGNATURE-----
