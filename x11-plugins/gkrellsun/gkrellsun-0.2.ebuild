@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-0.2.ebuild,v 1.3 2002/09/12 05:19:36 owen Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-0.2.ebuild,v 1.4 2002/10/04 06:45:36 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GKrellM plugin that shows sunrise and sunset times."
