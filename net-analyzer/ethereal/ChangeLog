@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.14 2002/11/06 06:41:17 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.15 2002/11/14 00:27:45 spider Exp $
+
+*ethereal-0.9.7-r1 (13 Nov 2002) 
+  
+  13 Nov 2002; Spider <spider@gentoo.org> ethereal-0.9.7-r1.ebuild :
+  Testing revision with gtk2 support.  
 
 *ethereal-0.9.7 (11 Oct 2002)
 
