@@ -1,11 +1,19 @@
 # ChangeLog for sys-apps/supersed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/ChangeLog,v 1.5 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/ChangeLog,v 1.6 2003/02/07 03:51:39 seemant Exp $
+
+*supersed-3.60 (06 Feb 2003)
+
+  06 Feb 2003; Seemant Kulleen <seemant@gentoo.org> supersed-3.60.ebuild
+  files/digest-supersed-3.60 :
+
+  Version bump thanks to: Maurizio Disimino <maurizio@iridium.aetheric.org>
+  in bug #14423.
+
+*supersed-3.58-r2 (28 Aug 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*supersed-3.58-r2 (28 Aug 2002)
-
   28 Aug 2002; Seemant Kulleen <seemant@gentoo.org> supersed-3.58-r2.ebuild
   files/digest-supersed-3.58-r2 :
 
