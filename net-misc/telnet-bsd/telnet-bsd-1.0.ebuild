@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.6 2003/08/03 15:26:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.7 2003/08/25 10:02:47 trance Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -14,7 +14,7 @@ HOMEPAGE="ftp://ftp.suse.com/pub/people/kukuk/ipv6/"
 
 DEPEND="virtual/glibc"
 
-KEYWORDS="x86 ~sparc hppa"
+KEYWORDS="x86 ~sparc hppa ~ppc"
 SLOT="0"
 LICENSE="BSD"
 
