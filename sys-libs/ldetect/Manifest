@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 142ccd66dc1890357491547e463f59fe ChangeLog 580
+MD5 bf7e2854fe10d68c0c362a3ea8092a48 ChangeLog 685
+MD5 2f1ef2c63b283c0396a6bc168fdfcf80 ldetect-0.4.7.ebuild 910
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 4c9f52d1950d20899a9c4de8f1e1e791 ldetect-0.4.7.ebuild 911
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ldetect-0.4.7 0
 MD5 b6094324c4a30c43d28844eca14b3496 files/ldetect-0.4.7.patch 320
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBKsHLI1lqEGTUzyQRAv+/AKCDLZpiQ9wuS9xMtiR+I6baM8LZHgCeI1Lu
-yQX8XXHuDO73Uqt8RRki/j4=
-=XU8G
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ldetect-0.4.7 0
