@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.19 2004/01/17 02:30:58 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.20 2004/02/17 06:47:19 kumba Exp $
+
+  17 Feb 2004; Joshua Kinard <kumba@gentoo.org> zip-2.3-r2.ebuild:
+  Added ~mips to keywords
 
   17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
   manifest fix
