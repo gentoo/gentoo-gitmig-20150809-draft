@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_encoding
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_encoding/ChangeLog,v 1.1 2003/06/22 18:59:46 woodchip Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_encoding/ChangeLog,v 1.2 2004/04/04 22:45:28 zul Exp $
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml:
+  Added metadata.xml updated headers.
 
 *mod_encoding-20021209 (22 Jun 2003)
 
