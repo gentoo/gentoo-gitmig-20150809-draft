@@ -42,10 +42,6 @@ dev-lang/cm3
 # upstream found big bugs, will make another release soon
 =dev-util/kdevelop-3.0_alpha4
 
-# <seemant@gentoo.org> (08 Apr 2003)
-# mask for severe testing
-=x11-base/xfree-4.3.0-r2
-
 # <zwelch@gentoo.org> (06 Apr 2003)
 # New versions of packages that have new cross-compiling support
 #  These will be unmasked once everything has been fully tested 
