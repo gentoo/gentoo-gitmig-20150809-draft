@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.3 2002/07/25 19:18:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.4 2002/07/26 01:52:49 kabau Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an X11 based presentation tool"
@@ -18,6 +18,10 @@ DEPEND="virtual/x11
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
+
+SLOT="0"
+LICENSE="Sleepycat"
+KEYWORDS="x86"
 
 src_compile() {
  	
