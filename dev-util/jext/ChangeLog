@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/jext
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jext/ChangeLog,v 1.1 2003/04/30 00:16:19 tberman Exp $
+
+*jext-3.2_pre3 (29 Apr 2003)
+
+  29 Apr 2003; Todd Berman <tberman@gentoo.org> jext-3.2_pre3.ebuild:
+  Initial Import.
+
