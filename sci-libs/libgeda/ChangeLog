@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.3 2005/01/04 12:12:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.4 2005/02/17 23:26:37 hansmi Exp $
+
+  18 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
+  libgeda-20041228.ebuild:
+  Added to ~ppc.
 
 *libgeda-20041228 (04 Jan 2005)
 
