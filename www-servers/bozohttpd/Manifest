@@ -1,0 +1,7 @@
+MD5 8df14c5bb6425860f3d4ad5ac3e76bc5 bozohttpd-20040218.ebuild 962
+MD5 27518017d627885c45b8f2f6c02598be ChangeLog 767
+MD5 8574132eb9ab5f7b8455a49e11860ce4 metadata.xml 401
+MD5 10a103f61bdbfd7cd72c44bd9da660b4 files/digest-bozohttpd-20040218 70
+MD5 8ba8e430cb53030e75557268c3b5d472 files/bozohttpd-20040218.conffile 221
+MD5 77cccde698590fed2f71d3002db53fe0 files/bozohttpd-20040218.initscript 952
+MD5 c099ee5b2237f0c0e202fe25980e3877 files/bozohttpd-20040218.Makefile 534
