@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r2.ebuild,v 1.5 2003/12/01 10:05:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r2.ebuild,v 1.6 2003/12/01 21:23:05 vapier Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# this should fix Bug 31235
-	epatch -${FILESDIR}/${P}-fullscreen.patch
+	epatch ${FILESDIR}/${P}-fullscreen.patch
 	sed -i \
 		-e 's:head -1:head -n 1:' configure || \
 			die "sed configure failed"
