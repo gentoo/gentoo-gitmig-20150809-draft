@@ -1,6 +1,16 @@
-MD5 cd1a439917c3f8beea8475b01f366fd5 pam_mysql-0.4.7.ebuild 875
-MD5 fc7f25048278b3d5e0fd95b947fe15a6 pam_mysql-0.5.ebuild 973
-MD5 c8091436e07fb779089c1c9b2566aef7 ChangeLog 738
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 af6bb86efd2aa8d91efa45bcfb6427e1 ChangeLog 859
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a7e0e0308d553dc4013157deceb6bb21 files/digest-pam_mysql-0.5 64
+MD5 54b9caa5e46840fd943cb10611ee29ed pam_mysql-0.4.7.ebuild 883
+MD5 01938a4e455863127cf606cf085febd2 pam_mysql-0.5.ebuild 981
 MD5 321f5b5eb63426fa78d6f069aeb5e1d5 files/digest-pam_mysql-0.4.7 65
+MD5 a7e0e0308d553dc4013157deceb6bb21 files/digest-pam_mysql-0.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKsZgI1lqEGTUzyQRAgbgAKDErxTdEw9fqMOeV72Vtun+4gOd0QCfdAta
+S2iM6rx9CC7ZJGJq+/M9Ogs=
+=nYex
+-----END PGP SIGNATURE-----

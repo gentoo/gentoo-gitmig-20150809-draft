@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.1-r5.ebuild,v 1.9 2004/07/02 08:50:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.1-r5.ebuild,v 1.10 2004/08/24 04:36:42 swegener Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Another cute console display library"
-SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz
-	ftp://sunsite.uio.no/pub/gnu/readline/${P}.tar.gz"
+SRC_URI="mirror://gnu/readline/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
+IUSE=""
 SLOT="0"
 HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0.ebuild,v 1.2 2004/08/15 06:33:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0.ebuild,v 1.3 2004/08/24 04:36:42 swegener Exp $
 
 inherit eutils gnuconfig
 
@@ -9,10 +9,8 @@ PLEVEL=""
 
 DESCRIPTION="Another cute console display library"
 HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
-SRC_URI="ftp://ftp.cwru.edu/pub/bash/${P}.tar.gz
-	mirror://gnu/readline/${P}.tar.gz
-	ftp://gatekeeper.dec.com/pub/GNU/readline/${P}.tar.gz
-	${PLEVEL//x/ftp://ftp.gnu.org/gnu/${PN}/${PN}-${PV}-patches/${PN}${PV/\.}-}"
+SRC_URI="mirror://gnu/readline/${P}.tar.gz
+	${PLEVEL//x/mirror://gnu/${PN}/${PN}-${PV}-patches/${PN}${PV/\.}-}"
 
 LICENSE="GPL-2"
 SLOT="0"
