@@ -1,15 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.2 2004/10/26 04:13:51 vapier Exp $
-
-IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64 boundschecking"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.3 2004/10/26 04:24:12 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
-LICENSE="GPL-2 LGPL-2.1"
 
+LICENSE="GPL-2 LGPL-2.1"
 #KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa -ppc"
 KEYWORDS="-*"
 
@@ -20,31 +18,30 @@ KEYWORDS="-*"
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
-DEPEND="virtual/libc
-	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
-	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
-	( !sys-devel/hardened-gcc )
-	>=sys-devel/binutils-2.14.90.0.8-r1
-	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )
-	>=sys-devel/bison-1.875
-	>=sys-devel/gcc-config-1.3.1
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
-	!build? ( gcj? ( gtk? ( >=x11-libs/gtk+-2.2 ) ) )
-	!build? ( gcj? ( >=media-libs/libart_lgpl-2.1 ) )
-	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
-
 RDEPEND="virtual/libc
-	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
-	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
-	>=sys-devel/gcc-config-1.3.6-r3
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
+	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
+	!sys-devel/hardened-gcc
+	!uclibc? (
+		>=sys-libs/glibc-2.3.3_pre20040420-r1
+		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
+	)
+	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
+	!build? (
+		gcj? (
+			gtk? ( >=x11-libs/gtk+-2.2 )
+			>=media-libs/libart_lgpl-2.1
+		)
+		>=sys-libs/ncurses-5.2-r2
+		nls? ( sys-devel/gettext )
+	)"
+DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
-	!build? ( >=sys-libs/ncurses-5.2-r2 )"
-
+	>=sys-devel/bison-1.875
+	>=sys-devel/binutils-2.14.90.0.8-r1
+	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
 PDEPEND="sys-devel/gcc-config
-	!n32? ( !n64? ( !uclibc? ( !build ( sys-libs/libstdc++-v3 ) ) ) )"
+	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build ( sys-libs/libstdc++-v3 ) ) ) ) )"
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 BRANCH_UPDATE="20041025"
