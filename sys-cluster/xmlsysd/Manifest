@@ -1,4 +1,4 @@
-MD5 61366b33f6f96dd5365027e87326de7f ChangeLog 467
-MD5 af5785542182c83c4a04c0ac6690ba14 xmlsysd-0.1.5.ebuild 1210
+MD5 343066fe02a3290a343fd7bffe93e65f ChangeLog 547
+MD5 f24efe93f0ea03ccf904886be4b7248d xmlsysd-0.1.5.ebuild 1210
 MD5 0528b886e5382516cbe9c57dbaa814ab files/digest-xmlsysd-0.1.5 56
 MD5 12fc753f112c9c92326cb50caf79a3c8 files/xmlsysd.xinetd 621

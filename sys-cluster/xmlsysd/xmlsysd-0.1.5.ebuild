@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/xmlsysd-0.1.5.ebuild,v 1.4 2004/07/01 21:50:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/xmlsysd-0.1.5.ebuild,v 1.5 2004/10/18 12:31:30 dholm Exp $
 
 DESCRIPTION="A beowulf monitor daemon."
 SRC_URI="http://www.phy.duke.edu/~rgb/Beowulf/xmlsysd/${PN}.tgz"
 HOMEPAGE="http://www.phy.duke.edu/~rgb/Beowulf/xmlsysd.php"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
