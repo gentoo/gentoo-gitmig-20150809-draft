@@ -1,0 +1,18 @@
+# ChangeLog for app-sci/gt-itm
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/ChangeLog,v 1.1 2004/12/27 21:03:43 ribosome Exp $
+
+*gt-itm-19961004 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +gt-itm-19961004.ebuild:
+  Moved from app-sci/gt-itm to sci-misc/gt-itm.
+
+  24 May 2004; Michael Sterrett <mr_bones_@gentoo.org> gt-itm-19961004.ebuild:
+  fix DESCRIPTION - Peter Jensen (bug #51382)
+
+*gt-itm-19961004 (11 Jan 2004)
+
+  11 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> gt-itm-19961004.ebuild:
+  initial commit, ebuild by robbat2@gentoo.org
+
