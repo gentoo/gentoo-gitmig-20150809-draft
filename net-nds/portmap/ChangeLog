@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.13 2003/12/28 10:52:25 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.14 2004/02/08 14:55:36 azarah Exp $
+
+  08 Feb 2004; Martin Schlemmer <azarah@gentoo.org> portmap-5b-r8.ebuild:
+  Bump to stable for x86.
 
   28 Dec 2003; Martin Schlemmer <azarah@gentoo.org> portmap-5b-r8.ebuild:
   Make last fix more dynamic.
