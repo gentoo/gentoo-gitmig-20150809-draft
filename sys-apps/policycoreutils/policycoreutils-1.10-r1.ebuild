@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.10-r1.ebuild,v 1.1 2004/04/28 21:28:40 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.10-r1.ebuild,v 1.2 2004/05/07 20:18:49 pebenito Exp $
 
 IUSE="build"
 
@@ -19,8 +19,6 @@ KEYWORDS="x86 ppc sparc"
 DEPEND=">=sys-libs/libselinux-${PV}
 	sys-devel/gettext
 	!build? ( sys-libs/pam )"
-
-RDEPEND="${DEPEND}"
 
 S2=${WORKDIR}/policycoreutils-extra
 
