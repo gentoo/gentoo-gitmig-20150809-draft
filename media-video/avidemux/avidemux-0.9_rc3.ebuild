@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_rc3.ebuild,v 1.1 2003/03/23 17:32:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_rc3.ebuild,v 1.2 2003/03/29 12:57:29 mholzer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 S="${WORKDIR}/${MY_P}"
 
