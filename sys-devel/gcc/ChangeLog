@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.12 2002/05/24 15:26:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.13 2002/05/25 13:37:26 azarah Exp $
+
+*gcc-3.1-r3 (25 May 2002)
+
+  25 May 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.1-r3.ebuild :
+
+  Added some Redhat/Suse/Mandrake patches.
 
 *gcc-3.1-r2 (24 May 2002)
 
