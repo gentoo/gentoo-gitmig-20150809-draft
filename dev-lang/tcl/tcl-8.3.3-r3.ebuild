@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r3.ebuild,v 1.4 2002/08/02 04:44:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r3.ebuild,v 1.5 2002/08/03 04:56:33 gerk Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 # hyper-optimizations untested...
 #

@@ -1,8 +1,12 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.4 2002/06/24 23:20:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.5 2002/08/03 04:56:33 gerk Exp $
 
 *tcl-8.3.3-r3 (25 Jun 2002)
+
+  02 Aug 2002; mark Guertin <gerk@gentoo.org> tuxracer-0.61-r1.ebuild :
+
+  Added ppc to keywords
 
   25 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> tcl-8.3.3-r3.ebuild files/digest-tcl-8.3.3-r3:
 
@@ -18,6 +22,10 @@
   Fixed the soft links created in the install process.
 
 *tcl-8.3.3-r1 (24 Apr 2002)
+
+  02 Aug 2002; mark Guertin <gerk@gentoo.org> tuxracer-0.61-r1.ebuild :
+
+  Added ppc to keywords
 
   24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> tcl-8.3.3-r1.ebuild files/digest-tcl-8.3.3-r1:
 
