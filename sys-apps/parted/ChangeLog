@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.32 2004/03/20 06:39:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.33 2004/04/05 04:39:29 lu_zero Exp $
+
+*parted-1.6.8 (05 Apr 2004)
+
+  05 Apr 2004; Luca Barbato <lu_zero@gentoo.org> parted-1.6.8.ebuild:
+  New version
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> parted-1.6.5-r1.ebuild:
   fix depend (bug # 45110)
