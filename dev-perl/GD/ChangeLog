@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.6 2002/09/21 19:11:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.7 2002/10/24 15:35:47 mcummings Exp $
 
 *GD-1.32-r2 (18 Sep 2002) <mcummings@gentoo.org> 
+
+  24 Oct 2002; <mcummings@gentoo.org> : Fixed JPEG dep check - there
+  was no correction clause for jpeg if use jpeg was no. Thanks to
+  Lasse Mikkelsen who pointed this out months ago in bug 7136
 
   21 Sep 2002; <mcummings@gentoo.org> : Fixed X dep check - there
   was no correction clause for xpm if use X was no. Thanks ska-fan!

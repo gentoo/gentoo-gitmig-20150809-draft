@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32-r2.ebuild,v 1.5 2002/10/17 16:43:13 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32-r2.ebuild,v 1.6 2002/10/24 15:35:47 mcummings Exp $
 
 IUSE="X"
 
@@ -37,6 +37,17 @@ src_unpack() {
 		sed -e "s:my \$XPM.*:my \$XPM='n';:" \
 			Makefile.PL.orig > Makefile.PL
 	)
+	use jpeg && ( \
+		cp Makefile.PL Makefile.PL.orig
+		sed -e "s:my \$JPEG.*:my \$JPEG='y';:" \
+			Makefile.PL.orig > Makefile.PL
+	) || ( \
+		cp Makefile.PL Makefile.PL.orig
+		sed -e "s:my \$JPEG.*:my \$JPEG='n';:" \
+			Makefile.PL.orig > Makefile.PL
+	)
+	
+	myconf="${myconf} --with-jpeg-dir=/usr"
 
 	perl-module_src_prep
 }
