@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/chess
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.2 2003/02/12 03:51:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.3 2003/09/10 21:44:46 msterret Exp $
+
+  10 Sep 2003; Michael Sterrett <msterret@gentoo.org> chess-2.0_beta3.ebuild:
+  app-games/gnuchess -> games-board/gnuchess (games reorg)
 
 *chess-2.0_beta3 (31 Oct 2002)
 
