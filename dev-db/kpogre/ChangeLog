@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/kpogre
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.8 2004/09/28 00:58:16 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.9 2004/10/03 14:35:54 nakano Exp $
+
+  03 Oct 2004; Masatomo Nakano <nakano@gentoo.org>
+  -files/kpogre-0.97-gentoo.patch, -kpogre-0.97.ebuild, -kpogre-0.99.ebuild:
+  Removed old ebuilds.
 
 *kpogre-1.1.0 (23 Sep 2004)
 
