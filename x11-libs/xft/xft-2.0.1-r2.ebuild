@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.7 2004/01/26 01:13:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.8 2004/01/30 07:31:04 drobbins Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc alpha sparc hppa arm ~amd64"
 RDEPEND="x11-base/xfree
 	>=media-libs/fontconfig-2.1-r1"
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.53a
+	>=sys-devel/autoconf-2.58
 	!>=x11-base/xfree-4.3.0-r2"
 PROVIDE="virtual/xft"
 
