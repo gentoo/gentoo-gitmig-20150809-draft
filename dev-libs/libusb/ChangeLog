@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.20 2004/07/02 04:51:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.21 2004/07/19 02:48:40 tgall Exp $
+
+  18 Jul 2004; Tom Gall <tgall@gentoo.org> libusb-0.1.8.ebuild: 
+  stable on ppc64, bug #57128
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libusb-0.1.7-r1.ebuild, libusb-0.1.7.ebuild:
