@@ -1,10 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r6.ebuild,v 1.2 2001/12/23 23:25:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r6.ebuild,v 1.3 2001/12/27 22:16:17 azarah Exp $
 # Note: the daemon's current 2.4 version has nothing to do with kernel versions
 
-MY_P=${P/-/_}.orig
+MY_P=${P/-/_}
 S=${WORKDIR}/${P}.orig
 SRC_URI="http://download.sourceforge.net/noflushd/${MY_P}.orig.tar.gz"
 HOMEPAGE="http://noflushd.sourceforge.net"
