@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.3 2003/10/21 22:52:59 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.4 2003/12/03 07:32:24 max Exp $
+
+*lvm2-2.00.08 (02 Dec 2003)
+
+  02 Dec 2003; <max@gentoo.org> lvm2-2.00.08.ebuild:
+  Bump to version 2.00.08 ~x86 for now. This version requires the very latest
+  device-mapper-1.00.07 to build properly.
 
   21 Oct 2003; Max Kalika <max@gentoo.org> lvm2-2.00.06.ebuild,
   lvm2-2.00.07.ebuild:
