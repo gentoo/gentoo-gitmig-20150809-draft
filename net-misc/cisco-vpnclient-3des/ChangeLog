@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.9 2004/02/14 23:08:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.10 2004/02/25 14:37:31 wolf31o2 Exp $
+
+*cisco-vpnclient-3des-4.0.3b-r3 (25 Feb 2004)
+
+  25 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.0.3b-r3.ebuild, files/register_netdevice.patch:
+  Adding patch to allow cisco_ipsec module to work with kernel 2.6.x, submitted
+  by Kent Skaar <skaar@aol.net> to bugzilla and originally submitted to LMKL by
+  by Gertjan van Wingerde <gwingerde@home.nl>. Closing bug #40730.
 
   14 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> files/vpnclient.rc:
   Removing -qs from insmod line to allow proper support with newer
