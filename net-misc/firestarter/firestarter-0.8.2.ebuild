@@ -29,8 +29,9 @@ src_compile() {
 
 src_install() {
 	
-	einstall PIXMAPSDIR=${D}/usr/share/pixmaps/ || die "einstall failed"
+	einstall destdir=${D} graphicsdir=${D}/usr/share/pixmaps || die "einstall failed"
 	dodoc AUTHORS Changelog README TODO
+
 }
 
 pkg_postinstall() {
