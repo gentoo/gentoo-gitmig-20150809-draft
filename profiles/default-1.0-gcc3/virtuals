@@ -20,3 +20,4 @@ sys-apps/console-tools	sys-apps/kbd
 virtual/blackbox	x11-wm/blackbox
 virtual/emacs		app-editors/emacs
 virtual/cron		sys-apps/dcron
+sys-apps/reiserfs-utils sys-apps/reiserfsprogs

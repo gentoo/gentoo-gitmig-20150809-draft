@@ -21,3 +21,4 @@ virtual/blackbox	x11-wm/blackbox
 virtual/emacs		app-editors/emacs
 net-www/netscape	net-www/netscape-communicator
 virtual/cron		sys-apps/dcron
+sys-apps/reiserfs-utils sys-apps/reiserfsprogs
