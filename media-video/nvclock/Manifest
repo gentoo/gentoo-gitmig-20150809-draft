@@ -1,0 +1,5 @@
+MD5 7c7f6df7f585a5753a769ceb36632d6b ChangeLog 1280
+MD5 624b1b2ad847f53732aa504523e80d76 nvclock-0.6.2-r1.ebuild 1245
+MD5 f67b707dada0b65403208150063ae2c8 files/0.6.2-configure.in.patch 1169
+MD5 4cb45c458284815823717e4a8dbd0e60 files/0.6.2-qt-version-check.patch 516
+MD5 97349e83a1718eab21d4b1959b7e6bed files/digest-nvclock-0.6.2-r1 63
