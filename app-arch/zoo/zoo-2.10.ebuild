@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10.ebuild,v 1.18 2004/06/24 21:39:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10.ebuild,v 1.19 2004/12/29 09:54:04 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.kiarchive.ru/pub/unix/arcers/${P}pl1.tar.gz"
 SLOT="0"
 LICENSE="zoo"
 IUSE=""
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64 ~ppc64"
 
 S=${WORKDIR}
 
