@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sel
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.4 2003/02/12 06:46:22 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.5 2004/04/15 23:49:23 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> sel-0.08.2.ebuild:
+  adding s390 keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
