@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.6 2002/04/24 18:56:22 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.7 2002/04/27 12:18:39 pvdabeel Exp $
 
 *blackdown-jdk-1.3.1-r5 (24 Apr 2002)
+
+  27 Apr 2002; pvdabeel <pvdabeel@gentoo.org> 
+
+  ppc/sparc fix
 
   24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r5.ebuild files/digest-blackdown-jdk-1.3.1-r5:
 
