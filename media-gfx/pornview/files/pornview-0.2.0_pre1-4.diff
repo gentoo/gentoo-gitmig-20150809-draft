@@ -1,0 +1,326 @@
+--- pornview-0.2pre1.orig/src/support/image_loader.c
++++ pornview-0.2pre1/src/support/image_loader.c
+@@ -81,7 +81,7 @@
+ image_loader_stop (ImageLoader * il)
+ {
+ #ifdef USE_GTK2
+-    GError *err;
++    GError *err = NULL;
+ #endif
+ 
+     if (!il)
+@@ -174,7 +174,7 @@
+     gint    c;
+ 
+ #ifdef USE_GTK2
+-    GError *err;
++    GError *err = NULL;
+ #endif
+ 
+     if (!il)
+@@ -241,7 +241,7 @@
+     int     b;
+ 
+ #ifdef USE_GTK2
+-    GError *err;
++    GError *err = NULL;
+ #endif
+ 
+     if (!il->loader || il->pixbuf)
+--- pornview-0.2pre1.orig/src/support/widgets/gtkxine.c
++++ pornview-0.2pre1/src/support/widgets/gtkxine.c
+@@ -632,7 +632,7 @@
+      */
+     if (this->vo_driver != NULL)
+ 	xine_close_video_driver (this->xine, this->vo_driver);
+-    if (this->vo_driver != NULL)
++    if (this->ao_driver != NULL)
+ 	xine_close_audio_driver (this->xine, this->ao_driver);
+ 
+     /*
+@@ -1920,7 +1920,7 @@
+  *  This function was pinched from filter_yuy2tov12.c, part of
+  *  transcode, a linux video stream processing tool
+  *
+- *  Copyright (C) Thomas ŽÖstreich - June 2001
++ *  Copyright (C) Thomas ï¿½ï¿½streich - June 2001
+  *
+  *  Thanks Thomas
+  *      
+--- pornview-0.2pre1.orig/src/support/widgets/zlist.c
++++ pornview-0.2pre1/src/support/widgets/zlist.c
+@@ -634,7 +634,8 @@
+ 					   CELL_X_FROM_COL (list, j), area->y,
+ 					   list->cell_x_pad, area->height);
+ 
+-		cell = ZLIST_CELL_FROM_INDEX (list, idx);
++		if (idx < list->cell_count)
++		    cell = ZLIST_CELL_FROM_INDEX (list, idx);
+ 
+ 		cell_area.x = CELL_X_FROM_COL (list, j) + list->cell_x_pad;
+ 		cell_area.y = CELL_Y_FROM_ROW (list, i) + list->cell_y_pad;
+--- pornview-0.2pre1.orig/debian/changelog
++++ pornview-0.2pre1/debian/changelog
+@@ -0,0 +1,87 @@
++pornview (0.2pre1-4) unstable; urgency=low
++
++  * Applied Akira TAGOH's patch to fix GdkPixbuf errors and consequent
++    brokeness that occur with the latest gtk+. (Closes: #201160)
++
++ -- Brian Nelson <pyro@debian.org>  Sun, 13 Jul 2003 23:32:44 -0700
++
++pornview (0.2pre1-3) unstable; urgency=low
++
++  * Fixed an out-of-bounds error in src/support/widgets/zlist.c discovered
++    by Matthias Urlichs. (Closes: #189342)
++  * Modified debian/control and debian/rules to build with gtk 2.0.
++  * Fixed a segfault on exit when no audio device available.
++
++ -- Brian Nelson <pyro@debian.org>  Sun, 20 Apr 2003 18:52:34 -0700
++
++pornview (0.2pre1-2) unstable; urgency=low
++
++  * Performed an audit of the code to ensure nothing malicious is present.
++  * Updated maintainer email address.
++  * Use debian/compat instead of DH_COMPAT=n in debian/rules.
++  * debian/control: added the homepage to the description.
++  * Removed unnecessary dh_testroot from debian/rules clean target.
++  * Re-enable stripping of the binary. (Closes: #187514)
++  * Bumped up standards version.
++
++ -- Brian Nelson <pyro@debian.org>  Fri,  4 Apr 2003 20:16:32 -0800
++
++pornview (0.2pre1-1) unstable; urgency=low
++
++  * New upstream release.
++  * Link against new libxine. (Closes: #176324)
++
++ -- Brian Nelson <nelson@bignachos.com>  Thu,  9 Jan 2003 16:04:32 -0800
++
++pornview (0.1.5-1) unstable; urgency=low
++
++  * New upstream release.
++  * Don't strip binary to help debugging segfaults.
++
++ -- Brian Nelson <nelson@bignachos.com>  Thu, 26 Dec 2002 22:04:21 -0500
++
++pornview (0.1.4-1) unstable; urgency=low
++
++  * New upstream release.
++  * Upstream code borrowed from GImageView now acknowledges its source.
++  * Corrected an #include error in src/support/menu_option.c.
++
++ -- Brian Nelson <nelson@bignachos.com>  Fri, 13 Dec 2002 13:39:32 -0800
++
++pornview (0.1.3.1-1) unstable; urgency=low
++
++  * Removed empty upstream changelog. (Closes: #172054)
++  * Repackaged upstream tarball to replace the probably copyrighted logo
++    image with an image I believe to be in the public domain.
++    (Closes: #171988)
++  * Improved the description in the control file - thanks Colin Walters
++    for the suggestions. (Closes: 172168)
++  * Removed the icon since it had too many colors by Debian's menu policy,
++    and looks like ass if the number of colors is reduced.
++
++ -- Brian Nelson <nelson@bignachos.com>  Sat,  7 Dec 2002 20:24:52 -0800
++
++pornview (0.1.3-1) unstable; urgency=low
++
++  * New upstream release
++
++ -- Brian Nelson <nelson@bignachos.com>  Sun,  1 Dec 2002 15:37:03 -0800
++
++pornview (0.1.2b-1) unstable; urgency=low
++
++  * New upstream release
++
++ -- Brian Nelson <nelson@bignachos.com>  Sun, 24 Nov 2002 18:11:58 -0800
++
++pornview (0.1.1-1) unstable; urgency=low
++
++  * New upstream release
++
++ -- Brian Nelson <nelson@bignachos.com>  Mon, 11 Nov 2002 22:56:23 -0800
++
++pornview (0.1.0-1) unstable; urgency=low
++
++  * Initial Release (Closes: #167488)
++
++ -- Brian Nelson <nelson@bignachos.com>  Sat,  2 Nov 2002 17:18:01 -0800
++
+--- pornview-0.2pre1.orig/debian/compat
++++ pornview-0.2pre1/debian/compat
+@@ -0,0 +1 @@
++4
+--- pornview-0.2pre1.orig/debian/control
++++ pornview-0.2pre1/debian/control
+@@ -0,0 +1,18 @@
++Source: pornview
++Section: utils
++Priority: optional
++Maintainer: Brian Nelson <pyro@debian.org>
++Build-Depends: debhelper (>> 4.0.0), libgtk2.0-dev, libpng12-0-dev, libxine-dev (>= 1-beta1-1)
++Standards-Version: 3.5.9
++
++Package: pornview
++Architecture: any
++Depends: ${shlibs:Depends}
++Description: Image and movie viewer/manager
++ PornView is an image and movie viewer/manager with thumbnail previews.
++ Additional features includes thumbnail caching, directory tree views,
++ adjustable zoom, and fullscreen view. Slideshows allow for unattended
++ presentation of images for hands-free viewing. Pornview is written
++ using GTK+.
++ .
++  Homepage: http://pornview.sourceforge.net/
+--- pornview-0.2pre1.orig/debian/copyright
++++ pornview-0.2pre1/debian/copyright
+@@ -0,0 +1,9 @@
++This package was debianized by Brian Nelson <nelson@bignachos.com> on
++Sat,  2 Nov 2002 17:18:01 -0800.
++
++It was downloaded from http://pornview.sourceforge.net/
++
++The upstream author is trem0r <trem0r@tlen.pl>.
++
++pornview is licensed under the GNU GPL which you can find in
++/usr/share/common-licenses/GPL on your Debian system.
+--- pornview-0.2pre1.orig/debian/docs
++++ pornview-0.2pre1/debian/docs
+@@ -0,0 +1,2 @@
++NEWS
++README
+--- pornview-0.2pre1.orig/debian/menu
++++ pornview-0.2pre1/debian/menu
+@@ -0,0 +1,4 @@
++?package(pornview):needs=X11\
++  section=Apps/Viewers\
++  title="PornView" command="/usr/bin/pornview"\
++  hints="Images"
+--- pornview-0.2pre1.orig/debian/pornview.1
++++ pornview-0.2pre1/debian/pornview.1
+@@ -0,0 +1,50 @@
++.\"                                      Hey, EMACS: -*- nroff -*-
++.\" First parameter, NAME, should be all caps
++.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
++.\" other parameters are allowed: see man(7), man(1)
++.TH PORNVIEW 1 "November 2, 2002"
++.\" Please adjust this date whenever revising the manpage.
++.\"
++.\" Some roff macros, for reference:
++.\" .nh        disable hyphenation
++.\" .hy        enable hyphenation
++.\" .ad l      left justify
++.\" .ad b      justify to both left and right margins
++.\" .nf        disable filling
++.\" .fi        enable filling
++.\" .br        insert line break
++.\" .sp <n>    insert n+1 empty lines
++.\" for manpage-specific macros, see man(7)
++.SH NAME
++PornView \- GTK+-based image viewer/manager
++.SH SYNOPSIS
++.B pornview
++.br
++.SH DESCRIPTION
++This manual page documents briefly the
++.B pornview
++command.
++This manual page was written for the Debian distribution
++because the original program does not have a manual page.
++.PP
++.B PornView
++is a GTK+-based image viewer/manager.  Features include thumbnail
++previews, thumbnail caching, directory tree views, adjustable zoom, and
++fullscreen view.  Slideshows allow for unattended presentation of images
++for hands-free viewing.
++
++.SH OPTIONS
++.B PornView
++does not support any command-line options other than the common options
++supported by all gtk commands.  All 
++.B PornView
++operations may be controlled with only one hand using a mouse or the
++keyboard arrow keys.
++
++.SH WARRANTY
++This is free software with NO warranty whatsoever; not even for keyboard
++damage or grounding by your parent or legal guardian.
++
++.SH AUTHOR
++This manual page was written by Brian Nelson <nelson@bignachos.com>,
++for the Debian GNU/Linux system (but may be used by others).
+--- pornview-0.2pre1.orig/debian/rules
++++ pornview-0.2pre1/debian/rules
+@@ -0,0 +1,70 @@
++#!/usr/bin/make -f
++
++DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
++DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
++
++CFLAGS = -Wall -g
++ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
++	CFLAGS += -O0
++else
++	CFLAGS += -O2
++endif
++
++
++config.status: configure
++	dh_testdir
++
++	CFLAGS='$(CFLAGS)' ./configure --host=$(DEB_HOST_GNU_TYPE) \
++		--build=$(DEB_BUILD_GNU_TYPE) \
++		--prefix=/usr \
++		--mandir=\$${prefix}/share/man \
++		--infodir=\$${prefix}/share/info \
++		--with-gtk2 \
++		--enable-xine
++
++build: build-stamp
++
++build-stamp:  config.status
++	dh_testdir
++
++	$(MAKE)
++
++	touch build-stamp
++
++clean:
++	dh_testdir
++	rm -f build-stamp 
++
++	-$(MAKE) distclean
++
++	dh_clean
++
++install: build
++	dh_testdir
++	dh_testroot
++	dh_clean -k
++	dh_installdirs
++
++	$(MAKE) install prefix=$(CURDIR)/debian/pornview/usr
++
++binary-indep: build install
++
++binary-arch: build install
++	dh_testdir
++	dh_testroot
++	dh_installdocs
++	dh_installmenu
++	dh_installman debian/pornview.1
++	dh_installchangelogs
++	dh_link
++	dh_strip
++	dh_compress
++	dh_fixperms
++	dh_installdeb
++	dh_shlibdeps
++	dh_gencontrol
++	dh_md5sums
++	dh_builddeb
++
++binary: binary-indep binary-arch
++.PHONY: build clean binary-indep binary-arch binary install 

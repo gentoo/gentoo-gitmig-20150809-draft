@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.2 2003/10/18 19:15:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.3 2003/11/16 22:12:19 mholzer Exp $
 
 IUSE="avi gtk2 jpeg mpeg nls static"
 
@@ -20,6 +20,7 @@ DEPEND=">=media-libs/gdk-pixbuf-0.16
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.gz"
+RESTRICT="nomirror"
 
 S="${WORKDIR}/${P/_/}"
 
@@ -45,6 +46,8 @@ src_compile() {
 	use nls || myflags="${myflags} --disable-nls"
 
 	use static && myflags="${myflags} --enable-static"
+
+	epatch ${FILESDIR}/${P}-4.diff || die
 
 	econf ${myflags} || die "./configure failed"
 
