@@ -1,12 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.4.ebuild,v 1.4 2002/08/23 05:50:09 seemant Exp $
+# $ Header: $
 
 PN0=qpopper
 S=${WORKDIR}/${PN0}4.0.4
 DESCRIPTION="Qpopper enables a unix/linux machine to act as a Post Office Protocol version 3 (pop) server"
-SRC_URI="ftp://ftp.qualcomm.com/eudora/servers/unix/popper/${PN0}4.0.4.tar.gz
-			http://www.ibiblio.org/gentoo/distfiles/qpopper-files.tar.bz2"
+SRC_URI="ftp://ftp.qualcomm.com/eudora/servers/unix/popper/${PN0}4.0.4.tar.gz"
 HOMEPAGE="http://www.qpopper.org/"
 
 DEPEND="virtual/glibc \
@@ -14,15 +13,11 @@ DEPEND="virtual/glibc \
 	  sys-apps/xinetd \
 	  pam? ( >=sys-libs/pam-0.72 ) \
 	  ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
-
-SLOT="0"
+KEYWORDS="x86"
 LICENSE="GPL"
-KEYWORDS="x86 sparc sparc64"
+SLOT="0"
 
 src_unpack() {
-	
-	unpack qpopper-files.tar.bz2
 	unpack ${A}
 	cd ${S}
 }
@@ -78,30 +73,29 @@ src_install() {
 	dosbin popper/popper  popper/popauth 
 
 	if use ssl; then
-		dodir /etc/mail/certs
-		fowners root.mail /etc/mail/certs
-		fperms 660 /etc/mail/certs
-		mv cert.pem /etc/mail/certs
-		fperms 600 /etc/mail/certs/cert.pem
-		fowners root.0 /etc/mail/certs/cert.pem
+		mkdir -p -m665 ${D}/etc/mail/certs
+		chown root.mail ${D}/etc/mail/certs
+		chmod 660 ${D}/etc/mail/certs
+		mv cert.pem ${D}/etc/mail/certs
+		chmod 600 ${D}/etc/mail/certs/cert.pem
+		chown root.0 ${D}/etc/mail/certs/cert.pem
 	fi
 
 	doman man/popauth.8  man/poppassd.8  man/popper.8
 
-	dodoc ${WORKDIR}/GUIDE.pdf
+	dodoc GUIDE.pdf
 
 	docinto rfc
 	dodoc doc/rfc*.txt
-}
-pkg_config () {
+
     # gentoo config stuff
 	if use pam; then
 		insinto /etc/pam.d
-		newins ${WORKDIR}/pop3.pam-system-auth pop3
+		newins ${FILESDIR}/pop3.pam-system-auth pop3
 	fi
 
 	insinto /etc/xinetd.d
-	newins ${WORKDIR}/pop3.xinetd  pop-3
+	newins ${FILESDIR}/pop3.xinetd  pop-3
 
 	echo "----------------------------------------------------------------"
 	echo " PS. If you use APOP service to authenticate "
