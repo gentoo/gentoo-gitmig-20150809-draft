@@ -159,41 +159,41 @@ gnome-apps/gnome-games
 gnome-apps/gnome-media
 gnome-apps/gnome-utils
 gnome-apps/bug-buddy
+gnome-apps/mc
+gnome-apps/gthumb
+gnome-apps/gtktalog
+gnome-apps/memprof
+gnome-apps/ee
+gnome-apps/gtop
+gnome-apps/seahorse
+gnome-apps/gnome-iconedit
+gnome-apps/gedit
+gnome-apps/gtkdiff
+gnome-apps/battstat
+gnome-apps/ggv
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
 # /Hallski
 
 dev-util/anjuta
-gnome-extra/battstat
 gnome-extra/bonobo-conf
-media-gfx/ee
 app-office/evolution
 net-im/gabber
-app-editors/gedit
 app-misc/gentoo
-app-text/ggv
 dev-util/glade
 dev-util/glademm
 dev-util/glimmer
 app-office/gnofin
-media-gfx/gnome-iconedit
 app-arch/gnorpm
 app-office/gnucash
-media-gfx/gthumb
-app-misc/gtkdiff
-app-misc/gtktalog
-gnome-extra/gtop
 net-misc/gupsc
 app-admin/gwcc
-gnome-extra/mc
-dev-util/memprof
 net-analyzer/netleds_applet
 net-news/pan
 x11-terms/powershell
 gnome-extra/procman
 net-www/screem
-app-crypt/seahorse
 gnome-extra/users-guide
 media-video/zapping
 
