@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.2 2004/09/27 10:51:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.3 2004/09/28 09:22:37 dragonheart Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 ### This package requires a Mac II/Classic ROM, A Mac OS Image
 ### Mac OS 7.5.3r2 is available freely from the Apple Homepage
@@ -65,7 +65,7 @@ src_compile() {
 		-e 's:-o $(OBJ_DIR)/gencpu:-lstdc++ -o $(OBJ_DIR)/gencpu:' \
 		Makefile || die "sed Makefile failed"
 
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
