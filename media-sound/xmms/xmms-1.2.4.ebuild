@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.3.ebuild,v 1.5 2001/01/04 21:12:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.4.ebuild,v 1.1 2001/01/20 04:59:50 drobbins Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
-SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/"${A}
+SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz"
 HOMEPAGE="http://www.xmms.org/"
 
 DEPEND="gnome? ( >=gnome-base/gnome-core-1.2.2.1 )
