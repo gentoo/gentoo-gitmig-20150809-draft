@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-gtk
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.1 2003/12/02 16:21:58 latexer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.2 2004/03/15 13:49:05 coredumb Exp $
+
+  15 Mar 2004; Tal Peer <coredumb@gentoo.org> php-gtk-1.0.0.ebuild:
+  Added dep on libglade-0.17.
+  Fixes bug #40220.
 
 *php-gtk-1.0.0 (01 Dec 2003)
 

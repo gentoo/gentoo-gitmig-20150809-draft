@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/php-gtk-1.0.0.ebuild,v 1.1 2003/12/02 16:21:58 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/php-gtk-1.0.0.ebuild,v 1.2 2004/03/15 13:49:05 coredumb Exp $
 
 PHP_EXT_NAME="php_gtk"
 PHP_EXT_ZENDEXT="no"
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 
 DEPEND="$DEPEND"
 
-RDEPEND="=x11-libs/gtk+-1.2*"
+RDEPEND="=x11-libs/gtk+-1.2* =gnome-base/libglade-0.17*"
 
 # Fails to compile with higher MAKEOPTS
 MAKEOPTS="-j1"
@@ -27,7 +27,7 @@ src_compile() {
 	#
 	# pixbuf / canvas is missing
 	#
-	myconf="--enable-php-gtk=shared"
+	myconf="--enable-php-gtk=shared --enable-glade"
 
 	php-ext-source_src_compile
 }
