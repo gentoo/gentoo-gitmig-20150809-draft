@@ -46,3 +46,4 @@
 
 #no idea why this is in base system
 -*sys-apps/ed
+<dev-libs/glib-2.5
