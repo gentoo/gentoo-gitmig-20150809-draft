@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.22 2003/03/27 01:04:28 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.23 2003/03/30 10:11:34 azarah Exp $
+
+*man-1.5l-r2 (30 Mar 2003)
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> man-1.5l-r2.ebuild :
+  Cleanup the CC mess, fixing bug #18361.
 
 *man-1.5l-r1 (19 Mar 2003)
 
