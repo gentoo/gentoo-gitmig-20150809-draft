@@ -1,3 +1,4 @@
+MD5 a10094dc696e92a9164ec0df8ff0b2ba xfs-sources-2.4.23.ebuild 1710
 MD5 dd6ee1f917d97dff4db5e3ce25c4486d xfs-sources-2.4.20-r1.ebuild 2193
 MD5 db428299389ac834854b0732c5d0bec4 xfs-sources-2.4.19-r2.ebuild 2123
 MD5 7d250d77b5ca14b9e7b5f37d6ab79dd7 xfs-sources-2.4.20.ebuild 2203
@@ -8,6 +9,7 @@ MD5 3e1479535c336200a4cc66e7b22887d3 xfs-sources-2.4.20-r4.ebuild 2322
 MD5 6b1d2613d69c6e124f178ae24f1897f8 ChangeLog 8721
 MD5 a728d28dca69f5ae16aab56cd2fc6110 files/digest-xfs-sources-2.4.20 139
 MD5 26b986cdd4c24df8ad3d0f0b21e802be files/digest-xfs-sources-2.4.22 139
+MD5 14debb591d3f9f421190973411bc3751 files/digest-xfs-sources-2.4.23 139
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 3afd3962750ab6706f9a9878a94cfd8d files/xfs-sources-2.4.20-gcc33.patch 10849
 MD5 b0c3e68e37892be35fc1c33723bbbdc3 files/xfs-sources-2.4.19.patch 497
