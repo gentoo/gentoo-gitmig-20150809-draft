@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.7 2000/11/02 08:31:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.8 2001/05/01 18:29:06 achim Exp $
 
 P=mpeg-movie-1.6.0
 A=mpeg_movie-1.6.0.tar.gz
@@ -14,7 +14,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-devel/gcc-2.95.2
 	>=media-libs/jpeg-6b
 	>=media-libs/libsdl-1.1.5
-	>=x11-base/xfree-4.0.1"
+	virtual/x11"
 
 src_unpack() {
   unpack ${A}

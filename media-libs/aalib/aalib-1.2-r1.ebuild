@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.2-r1.ebuild,v 1.4 2001/03/06 05:27:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.2-r1.ebuild,v 1.5 2001/05/01 18:29:05 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,11 +11,11 @@ HOMEPAGE="http://www.ta.jcu.cz/aa/"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	    slang? ( >=sys-libs/slang-1.4.2 )
-	    X? ( >=x11-base/xfree-4.0.1 )"
+	    X? ( virtual/x11 )"
 
 RDEPEND=">=sys-libs/ncurses-5.1
 	    slang? ( >=sys-libs/slang-1.4.2 )
-	    X? ( >=x11-base/xfree-4.0.1 )"
+	    X? ( virtual/x11 )"
 
 src_unpack() {
 

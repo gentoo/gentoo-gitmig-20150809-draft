@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.4-r1.ebuild,v 1.5 2001/04/28 05:24:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.4-r1.ebuild,v 1.6 2001/05/01 18:29:06 achim Exp $
 
 P=MesaLib-${PV}
 A0=${P}.tar.bz2
@@ -14,7 +14,7 @@ SRC_URI="http://download.sourceforge.net/mesa3d/${A0}
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
 DEPEND="virtual/glibc
-	    X? ( >=x11-base/xfree-4.0.2 )
+	    X? ( virtual/x11 )
         ggi? ( >=media-libs/libggi-2.0_beta3 )
         svga? ( >=media-libs/svgalib-1.4.2-r1 )"
 

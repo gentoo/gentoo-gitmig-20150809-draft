@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1.ebuild,v 1.4 2000/11/02 08:31:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1.ebuild,v 1.5 2001/05/01 18:29:06 achim Exp $
 
 A="xanim2801.tar.gz xa1.0_cyuv_linuxELFg21.o.gz xa2.0_cvid_linuxELFg21.o.gz
    xa2.1_iv32_linuxELFg21.o.gz"
@@ -13,8 +13,7 @@ SRC_URI="ftp://xanim.va.pubnix.com/xanim2801.tar.gz
 	 ftp://xanim.va.pubnix.com/modules/xa2.1_iv32_linuxELFg21.o.gz"
 HOMEPAGE="http://xanim.va.pubnix.com"
 
-DEPEND=">=sys-libs/glibc-2.1.3
-	>=x11-base/xfree-4.0.1"
+DEPEND="virtual/glibc virtual/x11"
 
 src_unpack() {
   unpack xanim2801.tar.gz

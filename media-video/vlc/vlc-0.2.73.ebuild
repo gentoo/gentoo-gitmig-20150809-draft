@@ -1,6 +1,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Nathaniel Hirsch <nh2@njit.edu> Achim Gottinge <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.73.ebuild,v 1.1 2001/04/29 20:09:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.73.ebuild,v 1.2 2001/05/01 18:29:06 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DVD / video player"
@@ -14,7 +14,7 @@ DEPEND=">=media-libs/libsdl-1.1.8-r1
     qt? ( >=x11-libs/qt-x11-2.3.0 )
     gtk? ( >=x11-libs/gtk+-1.2.9 )
     alsa? ( >=media-libs/alsa-lib-0.5.10 )
-    X? ( >=x11-base/xfree-4.0.2 )"
+    X? ( virtual/x11 )"
     #kde? ( >=kde-base/kdelibs-2.1.1 )
 
 src_compile(){

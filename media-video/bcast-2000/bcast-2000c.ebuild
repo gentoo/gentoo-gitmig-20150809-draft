@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000c.ebuild,v 1.1 2001/01/05 07:03:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000c.ebuild,v 1.2 2001/05/01 18:29:06 achim Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.0.7
-	>=x11-base/xfree-4.0.1"
+	virtual/x11"
 
 src_unpack() {
   unpack ${A}

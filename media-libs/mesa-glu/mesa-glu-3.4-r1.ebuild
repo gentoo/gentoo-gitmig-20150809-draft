@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.4-r1.ebuild,v 1.1 2001/04/29 18:56:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.4-r1.ebuild,v 1.2 2001/05/01 18:29:06 achim Exp $
 
 P=MesaLib-${PV}
 A0=${P}.tar.bz2
@@ -13,8 +13,7 @@ SRC_URI="http://download.sourceforge.net/mesa3d/${A0}
          http://download.sourceforge.net/mesa3d/${A1}"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-DEPEND="virtual/glibc
-	>=x11-base/xfree-4.0.2"
+DEPEND="virtual/glibc virtual/x11"
 
 PROVIDE="virtual/glu virtual/glut"
 

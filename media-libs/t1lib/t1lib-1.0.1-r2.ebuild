@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.0.1-r2.ebuild,v 1.2 2001/02/21 06:25:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.0.1-r2.ebuild,v 1.3 2001/05/01 18:29:06 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/T1-${PV}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib/t1l
 
 DEPEND="virtual/glibc
 	tetex? ( >=app-text/tetex-1.0.7 )
-	X? ( >=x11-base/xfree-4.0.1 )"
+	X? ( virtual/x11 )"
 
 src_compile() {
 
