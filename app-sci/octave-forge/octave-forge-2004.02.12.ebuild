@@ -1,42 +1,49 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.06.02.ebuild,v 1.5 2004/03/10 13:00:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.1 2004/03/10 13:00:08 phosphan Exp $
 
 DESCRIPTION="A collection of custom scripts, functions and extensions for GNU Octave"
 HOMEPAGE="http://octave.sourceforge.net/"
 SRC_URI="mirror://sourceforge/octave/${P}.tar.gz"
 
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 IUSE="ginac qhull"
 
 DEPEND=">=app-sci/octave-2.1.40
 		>=sys-apps/sed-4
 		sys-libs/libtermcap-compat
-		virtual/tetex
 		ginac? ( app-sci/ginac )
 		qhull? ( >=media-libs/qhull-3.1-r1 )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -e 's:a"key":a["key"]:' -i configure || die "sed failed on configure"
+	sed -e 's:\(^man1dir = \):\1$(DESTDIR)/:; s:$(bindir):$(DESTDIR)/$(bindir):' -i extra/mex/Makefile \
+		|| die "sed failed on mex/Makefile"
+}
 
 src_compile() {
 	econf || die "econf failed"
 
-	# The MPATH, OPATH, and XPATH variables need to be changed, or they will
+	# The *XPATH variables need to be changed, or they will
 	# cause Portage access violations. They cannot be easily set just using
 	# arguments passed to ./configure (at least, they can not easily be set
 	# correctly)
 	echo -en "Modifying paths..."
-	sed -i "s|^\(MPATH = \)|\1${D}|" Makeconf || die "failed to modify MPATH"
-	sed -i "s|^\(OPATH = \)|\1${D}|" Makeconf || die "failed to modify OPATH"
-	sed -i "s|^\(XPATH = \)|\1${D}|" Makeconf || die "failed to modify XPATH"
+	for path in M O X ALTM ALTO; do
+		sed -i "s|^\(${path}PATH = \)|\1${D}|" Makeconf || \
+			die "failed to modify ${path}PATH"
+	done
 	echo -e "done.\n"
 
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	# strip the fudged install paths
 	sed -i "s|${D}||g" ${D}/usr/bin/mex || die "sed failed"
