@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r3.ebuild,v 1.2 2005/03/29 22:47:05 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r4.ebuild,v 1.1 2005/03/29 22:55:10 vanquirius Exp $
 
 inherit eutils
 

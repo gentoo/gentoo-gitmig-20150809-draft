@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.14 2005/03/29 22:47:05 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.15 2005/03/29 22:55:10 vanquirius Exp $
+
+*dsniff-2.3-r4 (29 Mar 2005)
+
+  29 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> -dsniff-2.3-r3.ebuild,
+  +dsniff-2.3-r4.ebuild:
+  Doing a revision bump to push bug fix.
 
   29 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> dsniff-2.3-r3.ebuild:
   Fix bug 87166. Thanks to Brandyn A. White <e133tc1pher@gmail.com> for
