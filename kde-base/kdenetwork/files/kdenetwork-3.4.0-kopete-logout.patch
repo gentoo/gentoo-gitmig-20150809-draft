@@ -1,0 +1,534 @@
+diff -Nur kdenetwork-3.4.0.orig/kopete/kopete/chatwindow/kopetechatwindow.cpp kdenetwork-3.4.0/kopete/kopete/chatwindow/kopetechatwindow.cpp
+--- kdenetwork-3.4.0.orig/kopete/kopete/chatwindow/kopetechatwindow.cpp	2005-02-23 11:30:49.000000000 +0100
++++ kdenetwork-3.4.0/kopete/kopete/chatwindow/kopetechatwindow.cpp	2005-04-04 00:12:30.000000000 +0200
+@@ -26,6 +26,7 @@
+ #include <qtooltip.h>
+ #include <qfileinfo.h>
+ 
++#include <kapplication.h>
+ #include <kcursor.h>
+ #include <klocale.h>
+ #include <kmenubar.h>
+@@ -49,6 +50,7 @@
+ #include "chatmessagepart.h"
+ #include "chattexteditpart.h"
+ #include "chatview.h"
++#include "../kopeteapplication.h"
+ #include "kopetechatwindow.h"
+ #include "kopeteemoticonaction.h"
+ #include "kopetegroup.h"
+@@ -214,6 +216,7 @@
+ 	KGlobal::config()->setGroup( QString::fromLatin1("ChatWindowSettings") );
+ 	m_alwaysShowTabs = KGlobal::config()->readBoolEntry( QString::fromLatin1("AlwaysShowTabs"), false );
+ //	kdDebug( 14010 ) << k_funcinfo << "Open Windows: " << windows.count() << endl;
++	kapp->ref();
+ }
+ 
+ KopeteChatWindow::~KopeteChatWindow()
+@@ -261,6 +264,7 @@
+ 	}
+ 
+ 	delete anim;
++	kapp->deref();
+ }
+ 
+ void KopeteChatWindow::windowListChanged()
+@@ -1030,13 +1034,8 @@
+ 		m_activeView->addText( sm );
+ }
+ 
+-void KopeteChatWindow::closeEvent( QCloseEvent *e )
++bool KopeteChatWindow::queryClose()
+ {
+-//	kdDebug( 14010 ) << k_funcinfo << endl;
+-
+-	// FIXME: This should only check if it *can* close
+-	// and not start closing if the close can be aborted halfway, it would
+-	// leave us with half the chats open and half of them closed. - Martijn
+ 	bool canClose = true;
+ 
+ //	kdDebug( 14010 ) << " Windows left open:" << endl;
+@@ -1049,6 +1048,10 @@
+ 		// move out of the way before view is removed
+ 		++it;
+ 
++		// FIXME: This should only check if it *can* close
++		// and not start closing if the close can be aborted halfway, it would
++		// leave us with half the chats open and half of them closed. - Martijn
++
+ 		// if the view is closed, it is removed from chatViewList for us
+ 		if ( !view->closeView() )
+ 		{
+@@ -1056,21 +1059,44 @@
+ 			canClose = false;
+ 		}
+ 	}
++	return canClose;
++}
+ 
+-	if ( canClose )
++bool KopeteChatWindow::queryExit()
++{
++	KopeteApplication *app = static_cast<KopeteApplication *>( kapp );
++ 	if ( app->sessionSaving()
++		|| app->isShuttingDown() /* only set if KopeteApplication::quitKopete() or
++									KopeteApplication::commitData() called */
++		|| !KopetePrefs::prefs()->showTray() /* also close if our tray icon is hidden! */
++		|| !isShown() )
+ 	{
++		Kopete::PluginManager::self()->shutdown();
++		return true;
++	}
++	else 
++		return false;
++}
++
++void KopeteChatWindow::closeEvent( QCloseEvent * e )
++{
++	// if there's a system tray applet and we are not shutting down then just do what needs to be done if a
++	// window is closed.
++	KopeteApplication *app = static_cast<KopeteApplication *>( kapp );
++	if ( KopetePrefs::prefs()->showTray() && !app->isShuttingDown() && !app->sessionSaving() ) {
++		hide();
++/*		// BEGIN of code borrowed from KMainWindow::closeEvent
+ 		// Save settings if auto-save is enabled, and settings have changed
+ 		if ( settingsDirty() && autoSaveSettings() )
+ 			saveAutoSaveSettings();
+-
+-		e->accept();
+-
+-		// DO NOT call base class's closeEvent - see comment in KopeteApplication constructor for reason
++	
++		if ( queryClose() ) {
++			e->accept();
++		}
++		// END of code borrowed from KMainWindow::closeEvent*/
+ 	}
+ 	else
+-	{
+-		e->ignore();
+-	}
++		KMainWindow::closeEvent( e );
+ }
+ 
+ void KopeteChatWindow::slotConfKeys()
+diff -Nur kdenetwork-3.4.0.orig/kopete/kopete/chatwindow/kopetechatwindow.h kdenetwork-3.4.0/kopete/kopete/chatwindow/kopetechatwindow.h
+--- kdenetwork-3.4.0.orig/kopete/kopete/chatwindow/kopetechatwindow.h	2004-11-17 13:05:31.000000000 +0100
++++ kdenetwork-3.4.0/kopete/kopete/chatwindow/kopetechatwindow.h	2005-04-04 00:12:30.000000000 +0200
+@@ -94,6 +94,13 @@
+ 	void updateMembersActions();
+ 	void setStatus( const QString & );
+ 
++	/** 
++	 * Reimplemented from KMainWindow - asks each ChatView in the window if it is ok to close the window 
++	 * @return true if no ChatView objects to closing.
++	 */
++	virtual bool queryClose();
++	virtual bool queryExit();
++
+ 	KTempFile *backgroundFile;
+ 	QPtrList<ChatView> chatViewList;
+ 
+diff -Nur kdenetwork-3.4.0.orig/kopete/kopete/kopeteapplication.cpp kdenetwork-3.4.0/kopete/kopete/kopeteapplication.cpp
+--- kdenetwork-3.4.0.orig/kopete/kopete/kopeteapplication.cpp	2005-02-03 23:52:01.000000000 +0100
++++ kdenetwork-3.4.0/kopete/kopete/kopeteapplication.cpp	2005-04-04 00:12:30.000000000 +0200
+@@ -55,25 +55,7 @@
+ 	m_isShuttingDown = false;
+ 	m_mainWindow = new KopeteWindow( 0, "mainWindow" );
+ 
+-	/* KMainWindow is very broken from our point of view - it deref()'s the app
+-	 * when the last visible KMainWindow is destroyed. This is broken for a number
+-	 * of reasons, not least because it can happen more than once within a single
+-	 * instance of Kopete. Also, our main window is hidden when it's in the tray,
+-	 * and closing the last chatwindow when in that state can cause the app to quit.
+-	 *
+-	 * KopeteApplication's reference counting scheme is different to that of a normal
+-	 * KDE application. It works as follows: the Kopete::PluginManager has a reference
+-	 * to the application. No windows ever call KMainWindow::closeEvent, so KMainWindow
+-	 * doesn't stupidly deref() our application. This ensures that the application
+-	 * reference counting still works properly, and that the application terminates
+-	 * neither too early (bug 75805) nor too late (bug 71657). - Richard
+-	 */
+-
+-	// KApplication sets the reference count to 1 on startup. Kopete::PluginManager has a
+-	// reference to us once created, so create it and drop our own reference.
+ 	Kopete::PluginManager::self();
+-	deref();
+-
+ 
+ 	Kopete::UI::Global::setMainWidget( m_mainWindow );
+ 
+@@ -106,6 +88,8 @@
+ 
+ 	//Create the emoticon installer
+ 	m_emoticonHandler = new Kopete::EmoticonMimeTypeHandler;
++
++	QObject::connect( this, SIGNAL( aboutToQuit() ), SLOT( slotCleanShutdown() ) );
+ }
+ 
+ KopeteApplication::~KopeteApplication()
+@@ -223,7 +207,6 @@
+ 	}
+ }
+ 
+-
+ void KopeteApplication::slotAllPluginsLoaded()
+ {
+ 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+@@ -320,41 +303,28 @@
+ {
+ 	kdDebug( 14000 ) << k_funcinfo << endl;
+ 
+-	if ( !m_isShuttingDown )
+-	{
+-		m_isShuttingDown = true;
++	m_isShuttingDown = true;
+ 
+-#if KDE_VERSION < KDE_MAKE_VERSION( 3, 1, 90 )
+-		// When we close Kopete through KSystemTray, kdelibs will close all open
+-		// windows first. However, despite the destructive close the main window
+-		// is _NOT_ yet deleted at this point (it's a scheduled deleteLater()
+-		// call).
+-		// Due to a bug in KMainWindow prior to KDE 3.2 calling close() a second
+-		// time also derefs KApplication a second time, which causes a premature
+-		// call to KApplication::quit(), so we never go through the plugin
+-		// manager's shutdown process.
+-		// Unfortunately we can't assume close() ever being called though,
+-		// because the code paths not using the system tray still need this.
+-		// As a workaround we schedule a call to quitKopete() through a timer,
+-		// so the event loop is processed and the window is already deleted.
+-		// - Martijn
+-		QTimer::singleShot( 0, this, SLOT( quitKopete() ) );
+-		return;
+-#endif
++	// close all windows
++	QPtrListIterator<KMainWindow> it(*KMainWindow::memberList);
++	for (it.toFirst(); it.current(); ++it)
++	{
++		if ( !it.current()->close() )
++		{
++			m_isShuttingDown = false;
++			break;
++		}
+ 	}
++}
+ 
+-	if ( !m_mainWindow.isNull() )
+-		m_mainWindow->close();
+-
++void KopeteApplication::slotCleanShutdown()
++{
+ 	// save the contact list now, just in case a change was made very recently
+ 	// and it hasn't autosaved yet
+ 	Kopete::ContactList::self()->save();
+ 	Kopete::AccountManager::self()->save();
+ 
+-	//unload plugins and shutdown
+-	Kopete::PluginManager::self()->shutdown();
+ }
+-
+ void KopeteApplication::commitData( QSessionManager &sm )
+ {
+ 	m_isShuttingDown = true;
+diff -Nur kdenetwork-3.4.0.orig/kopete/kopete/kopeteapplication.h kdenetwork-3.4.0/kopete/kopete/kopeteapplication.h
+--- kdenetwork-3.4.0.orig/kopete/kopete/kopeteapplication.h	2004-02-29 04:52:59.000000000 +0100
++++ kdenetwork-3.4.0/kopete/kopete/kopeteapplication.h	2005-04-04 00:12:30.000000000 +0200
+@@ -58,7 +58,8 @@
+ 
+ public slots:
+ 	/**
+-	 * Quit Kopete. This method marks Kopete as 'shutting down' to avoid
++	 * Quit Kopete, closing all the windows, which causes application shutdown
++	 * This method marks Kopete as 'shutting down' to avoid
+ 	 * showing the message box that Kopete will be left running in the
+ 	 * system tray before calling qApp->quit().
+ 	 */
+@@ -75,7 +76,7 @@
+ 	 * auto-connect
+ 	 */
+ 	void slotAllPluginsLoaded();
+-
++	void slotCleanShutdown();
+ private:
+ 	// The main window might get deleted behind our back (W_DestructiveClose),
+ 	// so use a guarded pointer
+diff -Nur kdenetwork-3.4.0.orig/kopete/kopete/kopetewindow.cpp kdenetwork-3.4.0/kopete/kopete/kopetewindow.cpp
+--- kdenetwork-3.4.0.orig/kopete/kopete/kopetewindow.cpp	2005-02-25 11:52:29.000000000 +0100
++++ kdenetwork-3.4.0/kopete/kopete/kopetewindow.cpp	2005-04-04 00:12:30.000000000 +0200
+@@ -67,9 +67,32 @@
+ #include "kopeteuiglobal.h"
+ #include "systemtray.h"
+ 
++/* KMainWindow is very broken from our point of view - it deref()'s the app
++ * when the last visible KMainWindow is destroyed. But when our main window is 
++ * hidden when it's in the tray,closing the last chatwindow would cause the app 
++ * to quit. - Richard
++ *
++ * Fortunately KMainWindow checks queryExit before deref()ing the Kapplication. 
++ * KopeteWindow reimplements queryExit() and only returns true if it is shutting down 
++ * (either because the user quit Kopete, or the session manager did).
++ *
++ * KopeteWindow and ChatWindows are closed by session management.
++ * App shutdown is not performed by the KopeteWindow but by KopeteApplication:
++ * 1) user quit - KopeteWindow::slotQuit() was called, calls KopeteApplication::quitKopete(),
++ *                which closes all chatwindows and the KopeteWindow.  The last window to close
++ *                shuts down the PluginManager in queryExit().  When the PluginManager has completed its
++ *                shutdown, the app is finally deref()ed, and the contactlist and accountmanager 
++ *                are saved.
++ *                and calling KApplication::quit()
++ * 2) session   - KopeteWindow and all chatwindows are closed by KApplication session management.
++ *     quit        Then the shutdown proceeds as above.
++ *
++ * queryClose() is honoured so group chats and chats receiving recent messages can interrupt 
++ * (session) quit.
++ */
+ 
+ KopeteWindow::KopeteWindow( QWidget *parent, const char *name )
+-: KMainWindow( parent, name )
++: KMainWindow( parent, name, WType_TopLevel )
+ {
+ 	// Applications should ensure that their StatusBar exists before calling createGUI()
+ 	// so that the StatusBar is always correctly positioned when KDE is configured to use
+@@ -446,42 +469,59 @@
+ 	Kopete::AccountManager::self()->setAwayAll( awayReason );
+ }
+ 
+-void KopeteWindow::closeEvent( QCloseEvent *e )
++
++bool KopeteWindow::queryClose()
+ {
+-	// Note that KSystemTray closes all windows when you select quit()
+-	// from it. This means that closeEvent will be called twice on exit.
+ 	KopeteApplication *app = static_cast<KopeteApplication *>( kapp );
++	if ( !app->sessionSaving()	// if we are just closing but not shutting down
++		&& !app->isShuttingDown()
++		&& KopetePrefs::prefs()->showTray()
++		&& isShown() )
++		// I would make this a KMessageBox::queuedMessageBox but there doesn't seem to be don'tShowAgain support for those
++		KMessageBox::information( this,
++								  i18n( "<qt>Closing the main window will keep Kopete running in the "
++								        "system tray. Use 'Quit' from the 'File' menu to quit the application.</qt>" ),
++								  i18n( "Docking in System Tray" ), "hideOnCloseInfo" );
++// 	else	// we are shutting down either user initiated or session management
++// 		Kopete::PluginManager::self()->shutdown();
++
++	return true;
++}
+ 
+-	// also close if our tray icon is hidden!
+-	if( app->isShuttingDown() || !KopetePrefs::prefs()->showTray() || !isShown() )
++bool KopeteWindow::queryExit()
++{
++	KopeteApplication *app = static_cast<KopeteApplication *>( kapp );
++ 	if ( app->sessionSaving()
++		|| app->isShuttingDown() /* only set if KopeteApplication::quitKopete() or
++									KopeteApplication::commitData() called */
++		|| !KopetePrefs::prefs()->showTray() /* also close if our tray icon is hidden! */
++		|| !isShown() )
+ 	{
+-		// DO NOT call base class's closeEvent - see comment in KopeteApplication constructor for reason
++		Kopete::PluginManager::self()->shutdown();
++		return true;
++	}
++	else 
++		return false;
++}
++
++void KopeteWindow::closeEvent( QCloseEvent *e )
++{
++	// if there's a system tray applet and we are not shutting down then just do what needs to be done if a
++	// window is closed.
++	KopeteApplication *app = static_cast<KopeteApplication *>( kapp );
++	if ( KopetePrefs::prefs()->showTray() && !app->isShuttingDown() && !app->sessionSaving() ) {
++		// BEGIN of code borrowed from KMainWindow::closeEvent
+ 		// Save settings if auto-save is enabled, and settings have changed
+ 		if ( settingsDirty() && autoSaveSettings() )
+ 			saveAutoSaveSettings();
+-
+-		e->accept();
+-
+-		//If we're not showing the tray, and they close the window (via the 'X' in the titlebar),
+-		//workaround the fact that accepting the close event doesn't cause kopete to shutdown
+-		if ( !app->isShuttingDown() )
+-		{
+-			queryExit();
+-			slotQuit();
++	
++		if ( queryClose() ) {
++			e->accept();
+ 		}
+-
+-		//may never get called
+-		return;
++		// END of code borrowed from KMainWindow::closeEvent
+ 	}
+-
+-	// FIXME: KDE 3.3:  use queuedMessageBox
+-	KMessageBox::information( this,
+-		i18n( "<qt>Closing the main window will keep Kopete running in the "
+-		"system tray. Use 'Quit' from the 'File' menu to quit the application.</qt>" ),
+-		i18n( "Docking in System Tray" ), "hideOnCloseInfo" );
+-
+-	hide();
+-	e->ignore();
++	else
++		KMainWindow::closeEvent( e );
+ }
+ 
+ void KopeteWindow::slotQuit()
+diff -Nur kdenetwork-3.4.0.orig/kopete/kopete/kopetewindow.h kdenetwork-3.4.0/kopete/kopete/kopetewindow.h
+--- kdenetwork-3.4.0.orig/kopete/kopete/kopetewindow.h	2005-02-23 11:30:49.000000000 +0100
++++ kdenetwork-3.4.0/kopete/kopete/kopetewindow.h	2005-04-04 00:12:30.000000000 +0200
+@@ -190,6 +190,8 @@
+ 	void makeTrayToolTip();
+ 	void startAutoHideTimer();
+ 
++	virtual bool queryClose();
++	virtual bool queryExit();
+ private:
+ 	int docked;
+ 	bool hidden;
+diff -Nur kdenetwork-3.4.0.orig/kopete/kopete/systemtray.cpp kdenetwork-3.4.0/kopete/kopete/systemtray.cpp
+--- kdenetwork-3.4.0.orig/kopete/kopete/systemtray.cpp	2005-02-03 23:52:01.000000000 +0100
++++ kdenetwork-3.4.0/kopete/kopete/systemtray.cpp	2005-04-04 00:12:30.000000000 +0200
+@@ -25,6 +25,7 @@
+ 
+ #include <kwin.h>
+ #include <kaboutdata.h>
++#include <kactioncollection.h>
+ #include <kapplication.h>
+ #include <kdebug.h>
+ #include <kiconloader.h>
+@@ -36,7 +37,7 @@
+ #include "kopeteaccount.h"
+ #include "kopeteaccountmanager.h"
+ #include "kopetecontact.h"
+-
++#include "kopetewindow.h"
+ 
+ KopeteSystemTray* KopeteSystemTray::s_systemTray = 0L;
+ 
+@@ -70,6 +71,18 @@
+ 		const Kopete::OnlineStatus &, const Kopete::OnlineStatus &)),
+ 	this, SLOT(slotReevaluateAccountStates()));
+ 
++	// the slot called by default by the quit action, KSystemTray::maybeQuit(),
++	// just closes the parent window, which is hard to distinguish in that window's closeEvent()
++	// from a click on the window's close widget
++	// in the quit case, we want to quit the application
++ 	// in the close widget click case, we only want to hide the parent window
++	// so instead, we make it call our general purpose quit slot on the window, which causes a window close and everything else we need
++	// KDE4 - app will have to listen for quitSelected instead
++	KAction *quit = actionCollection()->action( "file_quit" );
++	quit->disconnect();
++	KopeteWindow *myParent = static_cast<KopeteWindow *>( parent );
++    connect( quit, SIGNAL( activated() ), myParent, SLOT( slotQuit() ) );
++
+ 	//setPixmap(mKopeteIcon);
+ 	slotReevaluateAccountStates();
+ 	slotConfigChanged();
+diff -Nur kdenetwork-3.4.0.orig/kopete/libkopete/kopeteaccount.cpp kdenetwork-3.4.0/kopete/libkopete/kopeteaccount.cpp
+--- kdenetwork-3.4.0.orig/kopete/libkopete/kopeteaccount.cpp	2005-03-04 10:53:38.000000000 +0100
++++ kdenetwork-3.4.0/kopete/libkopete/kopeteaccount.cpp	2005-04-04 00:12:30.000000000 +0200
+@@ -97,6 +97,7 @@
+ 	while ( !d->contacts.isEmpty() )
+ 		delete *QDictIterator<Contact>( d->contacts );
+ 
++	kdDebug( 14010 ) << k_funcinfo << " account '" << d->id << "' about to emit accountDestroyed " << endl;
+ 	emit accountDestroyed(this);
+ 
+ 	delete d->myself;
+diff -Nur kdenetwork-3.4.0.orig/kopete/libkopete/kopetepluginmanager.cpp kdenetwork-3.4.0/kopete/libkopete/kopetepluginmanager.cpp
+--- kdenetwork-3.4.0.orig/kopete/libkopete/kopetepluginmanager.cpp	2004-10-17 20:37:16.000000000 +0200
++++ kdenetwork-3.4.0/kopete/libkopete/kopetepluginmanager.cpp	2005-04-04 00:12:30.000000000 +0200
+@@ -101,7 +101,7 @@
+ PluginManager::~PluginManager()
+ {
+ 	if ( d->shutdownMode != Private::DoneShutdown )
+-		kdWarning( 14010 ) << k_funcinfo << "Destructing plugin manager without going through the shutdown process!" << endl << kdBacktrace() << endl;
++		kdWarning( 14010 ) << k_funcinfo << "Destructing plugin manager without going through the shutdown process! Backtrace is: " << endl << kdBacktrace() << endl;
+ 
+ 	// Quick cleanup of the remaining plugins, hope it helps
+ 	// Note that deleting it.data() causes slotPluginDestroyed to be called, which
+@@ -160,7 +160,7 @@
+ 
+ void PluginManager::shutdown()
+ {
+-	//kdDebug( 14010 ) << k_funcinfo << endl;
++	kdDebug( 14010 ) << k_funcinfo << kdBacktrace() << endl;
+ 	
+ 	d->shutdownMode = Private::ShuttingDown;
+ 	
+@@ -200,6 +200,7 @@
+ 	// FIXME: I don't buy the above argument. Add a Kopete::Plugin::emitReadyForUnload(void),
+ 	//        and make readyForUnload be passed a plugin. - Richard
+ 	Plugin *plugin = dynamic_cast<Plugin *>( const_cast<QObject *>( sender() ) );
++	kdDebug( 14010 ) << k_funcinfo << plugin->pluginId() << "ready for unload" << endl;
+ 	if ( !plugin )
+ 	{
+ 		kdWarning( 14010 ) << k_funcinfo << "Calling object is not a plugin!" << endl;
+diff -Nur kdenetwork-3.4.0.orig/kopete/libkopete/kopetepluginmanager.h kdenetwork-3.4.0/kopete/libkopete/kopetepluginmanager.h
+--- kdenetwork-3.4.0.orig/kopete/libkopete/kopetepluginmanager.h	2004-11-18 23:12:09.000000000 +0100
++++ kdenetwork-3.4.0/kopete/libkopete/kopetepluginmanager.h	2005-04-04 00:12:30.000000000 +0200
+@@ -175,7 +175,6 @@
+ 	 * is neglectable for the user.
+ 	 */
+ 	void allPluginsLoaded();
+-
+ private slots:
+ 	/**
+ 	 * @brief Cleans up some references if the plugin is destroyed
+diff -Nur kdenetwork-3.4.0.orig/kopete/libkopete/kopeteprotocol.cpp kdenetwork-3.4.0/kopete/libkopete/kopeteprotocol.cpp
+--- kdenetwork-3.4.0.orig/kopete/libkopete/kopeteprotocol.cpp	2004-12-04 15:39:03.000000000 +0100
++++ kdenetwork-3.4.0/kopete/libkopete/kopeteprotocol.cpp	2005-04-04 00:12:30.000000000 +0200
+@@ -96,6 +96,8 @@
+ {//slot connected in aboutToUnload
+ 	if ( !self || !self->account() || self->account()->isConnected())
+ 		return;
++	// some protocols change status several times during shutdown.  We should only call deleteLater() once
++	disconnect( self, 0, this, 0 );
+ 
+ 	connect( self->account(), SIGNAL(accountDestroyed(const Kopete::Account* )),
+ 		this, SLOT( slotAccountDestroyed( ) ) );
+@@ -105,15 +107,23 @@
+ 
+ void Protocol::slotAccountDestroyed( )
+ {
++	kdDebug( 14010 ) << k_funcinfo << " an account was destroyed" << endl;
+ 	QDict<Account> dict = AccountManager::self()->accounts( this );
+ 	if ( dict.isEmpty() )
+ 	{
++		kdDebug( 14010 ) << "all gone, we are ready for unload" << endl;
+ 		// While at this point we are still in a stack trace from the destroyed
+ 		// account it's safe to emit readyForUnload already, because it uses a
+ 		// deleteLater rather than a delete for exactly this reason, to keep the
+ 		// API managable
+ 		emit( readyForUnload() );
+ 	}
++	else
++	{
++		kdDebug( 14010 ) << "protocol still has " << dict.count() << " accounts:" << endl;
++		for( QDictIterator<Account> di(dict); di.current(); ++di )
++			kdDebug( 14010 ) << "    " << di.currentKey() << " : " << di.current()->accountId() << endl; 
++	}
+ }
+ 
+ void Protocol::aboutToUnload()
+@@ -121,8 +131,6 @@
+ 
+ 	d->unloading = true;
+ 
+-	bool allDisconnected = true;
+-
+ 	// Disconnect all accounts
+ 	QDict<Account> accounts = AccountManager::self()->accounts( this );
+ 	
+@@ -139,8 +147,6 @@
+ 				SIGNAL( onlineStatusChanged( Kopete::Contact *, const Kopete::OnlineStatus &, const Kopete::OnlineStatus & ) ),
+ 				this, SLOT( slotAccountOnlineStatusChanged( Kopete::Contact * ) ) );
+ 			it.current()->disconnect();
+-
+-			allDisconnected = false;
+ 		}
+ 		else
+ 		{

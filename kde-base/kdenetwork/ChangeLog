@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.134 2005/03/18 18:02:42 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.135 2005/04/03 23:37:27 greg_g Exp $
+
+*kdenetwork-3.4.0-r1 (03 Apr 2005)
+
+  03 Apr 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdenetwork-3.4.0-kopete-logout.patch,
+  +files/kdenetwork-3.4.0-kopete-spaces.patch, +kdenetwork-3.4.0-r1.ebuild:
+  Add patches for bug #86446 (crash on logout) and for bug #87485 (handling of
+  names with spaces).
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdenetwork-3.4.0.ebuild:
   Added to ~ppc
