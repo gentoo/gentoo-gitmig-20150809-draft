@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.12 2004/06/02 16:07:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.13 2004/06/03 02:01:55 latexer Exp $
+
+  02 Jun 2004; Peter Johanson <latexer@gentoo.org> monodoc-0.10.ebuild,
+  monodoc-0.11.ebuild, monodoc-0.13.ebuild, monodoc-0.16.ebuild:
+  Added more verbose output if failing, and remove the pre-Beta1 stuff.
 
 *monodoc-0.16 (02 Jun 2004)
 
