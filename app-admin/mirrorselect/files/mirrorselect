@@ -103,7 +103,7 @@ elif [ "${1}" = "-i" ] ; then
 
 	# Format list properly
 	# we want Name (Loc)
-	CHECKLIST="`echo $MIRROR_LIST | sed 's:http\::\nhttp\::g' | sed 's:ftp\::\nftp\::g' | sed 's:>:(:g' | cut -f1,3 -d"(" | sed 's: ::g' | sed 's:(: (:g' | sed 's:):) OFF:g' | sed 's:/ftp)::g' | sort`"
+	CHECKLIST="`echo $MIRROR_LIST | sed 's:http\::\nhttp\::g' | sed 's:ftp\::\nftp\::g' | sed 's:>:(:g' | cut -f1,3 -d"(" | sed 's: ::g' | sed 's:(: (:g' | sed 's:):) OFF:g' | sed 's:/ftp):):g' | sort`"
 
 	MIRRORS=`dialog --title "GENTOO MIRRORS LIST" \
 		--checklist "Please select your desired mirror(s):" 20 80 14 \
