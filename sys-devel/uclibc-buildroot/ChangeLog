@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/uclibc-buildroot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.6 2004/02/09 23:41:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.7 2004/02/20 02:24:11 dragonheart Exp $
+
+*uclibc-buildroot-20040218 (20 Feb 2004)
+
+  20 Feb 2004; Daniel Black <dragonheart@gentoo.org>
+  uclibc-buildroot-20040218.ebuild:
+  version bump. Now uses binutils 2.14.90.0.8 and gcc-3.3.3. Lots of syntax/log
+  errors fixed too.
 
 *uclibc-buildroot-20040209 (10 Feb 2004)
 

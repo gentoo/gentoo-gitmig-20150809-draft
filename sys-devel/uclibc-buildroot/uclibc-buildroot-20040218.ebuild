@@ -1,34 +1,41 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040131.ebuild,v 1.4 2004/02/05 06:14:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040218.ebuild,v 1.1 2004/02/20 02:24:11 dragonheart Exp $
 
 inherit eutils crosscompile
 
+
 # Derived from gcc-3_3.mk and binutils.mk
-GCCVER=3.3.2
-BINUTILSVER=2.14.90.0.6
+GCCVER=3.3.3
+BINUTILSVER=2.14.90.0.8
 UCLIBCVER=0.9.26
-BUSYBOXVER=1.00-pre6
+BUSYBOXVER=1.00-pre7
 TINYLOGINVER=1.4
+KERNELHEADERSVER=2.4.25
 
 DESCRIPTION="Embedded root file system"
 HOMEPAGE="http://www.uclibc.org/"
-SRC_URI="mirror://gnu/gcc/gcc-${GCCVER}/gcc-${GCCVER}.tar.bz2
+SRC_URI="http://gcc.get-software.com/releases/gcc-${GCCVER}.tar.bz2
 	http://dev.gentoo.org/~dragonheart/buildroot-${PV}.tar.bz2
 	mirror://kernel/linux/devel/binutils/binutils-${BINUTILSVER}.tar.bz2
-	mirror://kernel/linux/libs/uclibc/toolchain/kernel-headers-2.4.21.tar.bz2
+	mirror://kernel/linux/libs/uclibc/toolchain/kernel-headers-${KERNELHEADERSVER}.tar.bz2
 	mirror://kernel/linux/libs/uclibc/uClibc-${UCLIBCVER}.tar.bz2
-	nls? ( mirror://kernel/linux/libs/uclibc/uClibc-locale-030818.tgz )
 	nommu? ( mirror://kernel/linux/libs/uclibc/toolchain/elf2flt-20030620.tar.bz2 )
 	debug? ( http://www.busybox.net/downloads/busybox-${BUSYBOXVER}.tar.bz2 )
 	debug? ( http://tinylogin.busybox.net/downloads/tinylogin-${TINYLOGINVER}.tar.bz2 )
 	softfloat? ( mirror://debian/pool/main/libf/libfloat/libfloat_990616.orig.tar.gz )
 	softfloat? ( mirror://debian/pool/main/libf/libfloat/libfloat_990616-3.diff.gz )"
 
-# TODO pregen local is only x86
-#nls? ( x86? ( mirror://kernel/linux/libs/uclibc/uClibc-locale-030818.tgz ) )
+# gcc-3/3/3 hasn't hit all mirrors yet.
+#mirror://gnu/gcc/gcc-${GCCVER}/gcc-${GCCVER}.tar.bz2
+
+# Not using pregen  locale for the time being.
+#	nls? ( mirror://kernel/linux/libs/uclibc/uClibc-locale-030818.tgz )
+#
 #
 # nested SRC_URI are not supported until portage-2.0.50pre19 bug #16159
+# will stuff up if FEATURES="cvs" is set.
+# nls? ( x86? ( mirror://kernel/linux/libs/uclibc/uClibc-locale-030818.tgz ) )
 
 RESTRICT="nomirror"
 
@@ -187,7 +194,7 @@ src_unpack() {
 
 	# these hacks affect the search path of the uclibc-toolchain to prevent
 	# leakage of gcclibs into the target
-#-e "/DIR2)\/\.configured/,/DIR2)\/.configured/ s/--\(.*\)=\$(STAGING_DIR)/--\1=\/usr\/${TARGETARCH}-uclibc/g" \
+#-e "/DIR2)\/\.configured/,/DIR2)\/.configured/ s/--\(.*\)=\$(STAGING_DIR)/--\1=\/usr\/${TARGETARCH}-uclibc/g"
 
 	sed -i \
 -e "/DIR2)\/\.installed:/,/\.installed/ s/\$(MAKE)/\$(MAKE) DESTDIR=\$(STAGING_DIR)/" \
@@ -198,10 +205,11 @@ src_unpack() {
 
 	sed -i -e 's#cp -fa#cp --preserve=mode -dPRf#g' ${UCLIBCDIR}/Makefile
 
+	# sed -i -e "s/2.14.90.0.8/${BINUTILSVER}/g" make/binutils.mk
 	cd ${UCLIBCDIR}
 	local patches="uClibc-0.9.26-Makefile.patch"
 
-	#[ `use pie` && ${TARGETARCH}=="i386" ] && patches="${patches} uClibc-${PV}-pie-option.patch"
+	#[ `use pie` && ${TARGETARCH} == "i386" ] && patches="${patches} uClibc-${PV}-pie-option.patch"
 
 	for patch in ${patches} ; do
 		[ -f ${FILESDIR}/${UCLIBCVER}/${patch} ] && epatch ${FILESDIR}/${UCLIBCVER}/${patch}
@@ -228,7 +236,7 @@ src_compile() {
 
 
 	# restore last config
-	if [ -f /etc/embedded/uClibc.config && `use savedconfig` ]; then
+	if [ -f /etc/embedded/uClibc.config ] && use savedconfig; then
 		cp /etc/embedded/uClibc.config ${uconfig}
 	else
 		# or make the default with a few changes
@@ -253,10 +261,10 @@ src_compile() {
 		uclibc_config_option y UNIX98PTY_ONLY
 		uclibc_config_option n UCLIBC_HAS_TZ_FILE_READ_MANY
 		uclibc_config_option y UCLIBC_HAS_LFS
-		uclibc_config_option y UCLIBC_COMPLETELY_PIC
+		use pie && uclibc_config_option y UCLIBC_COMPLETELY_PIC
 
 
-		if [ `use debug` ]; then
+		if use debug; then
 			uclibc_config_option y DODEBUG
 			uclibc_config_option y PTHREADS_DEBUG_SUPPORT
 			uclibc_config_option y CONFIG_PROFILING
@@ -280,7 +288,7 @@ src_compile() {
 			uclibc_config_option y UCLIBC_HAS_MMU
 
 
-		if [ `use pie` && ${TARGETARCH}=="i386" ]; then
+		if [ `use pie` ] && ${TARGETARCH} == "i386"; then
 			uclibc_config_option y UCLIBC_PIE_SUPPORT
 			uclibc_config_option n CONFIG_PROFILING
 		else
@@ -290,7 +298,7 @@ src_compile() {
 		use propolice && uclibc_config_option y UCLIBC_PROPOLICE || \
 			uclibc_config_option n UCLIBC_PROPOLICE
 
-		if [ `use softfloat` ]; then
+		if use softfloat; then
 			uclibc_config_option n HAS_FPU
 			uclibc_config_option y UCLIBC_HAS_FLOATS
 			uclibc_config_option y UCLIBC_HAS_SOFT_FLOAT
@@ -302,14 +310,14 @@ src_compile() {
 		uclibc_config_option n UCLIBC_PREGENERATED_LOCALE_DATA
 		uclibc_config_option n UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA
 
-		if [ `use nls` ]; then
+		if use nls; then
 			uclibc_config_option y UCLIBC_HAS_LOCALE
 
 			#pregen is for i386 architectures only
-			if [ ${TARGETARCH}=="i386" ]; then
-				uclibc_config_option y UCLIBC_PREGENERATED_LOCALE_DATA
-				cp ${DISTDIR}/uClibc-locale-030818.tgz ${UCLIBCDIR}/extra/locale
-			else
+			#if [ ${TARGETARCH} == "i386" ]; then
+			#	uclibc_config_option y UCLIBC_PREGENERATED_LOCALE_DATA
+			#	cp ${DISTDIR}/uClibc-locale-030818.tgz ${UCLIBCDIR}/extra/locale
+			#else
 				uclibc_config_option n UCLIBC_PREGENERATED_LOCALE_DATA
 
 				#TODO - below needs to be done for savedconfig too
@@ -318,7 +326,7 @@ src_compile() {
 				cp LOCALES locales.txt
 				emake clean all || die "Could not generate codepages"
 				popd
-			fi
+			#fi
 			uclibc_config_option y UCLIBC_HAS_XLOCALE
 			uclibc_config_option y UCLIBC_HAS_HEXADECIMAL_FLOATS
 			uclibc_config_option y UCLIBC_HAS_GLIBC_DIGIT_GROUPING
@@ -343,8 +351,8 @@ src_compile() {
 	cd ${S}
 	emake -j1 || die "Could not make uclibc-buildroot"
 
-	if [ `use debug` ]; then
-		if [ -f /etc/embedded/busybox.config && `use savedconfig` ]; then
+	if use debug; then
+		if [ -f /etc/embedded/busybox.config } && use savedconfig; then
 			emake BUSYBOX_CONFIG=/etc/embedded/busybox.config busybox \
 				|| "Error making busybox old config"
 		else

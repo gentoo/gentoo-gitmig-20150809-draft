@@ -4,6 +4,6 @@
 <herd>embedded</herd>
 <maintainer>
   <email>dragonheart@gentoo.org</email>
-  <name>Primary Maintainer</name>
 </maintainer>
+<longdescription>a root filesytem using the embedded c library - uclibc</longdescription>
 </pkgmetadata>
