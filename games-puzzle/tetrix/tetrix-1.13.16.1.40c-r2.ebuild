@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrix/tetrix-1.13.16.1.40c-r2.ebuild,v 1.1 2003/09/18 03:35:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrix/tetrix-1.13.16.1.40c-r2.ebuild,v 1.2 2003/09/19 06:41:27 vapier Exp $
 
 inherit games gcc
 
@@ -48,7 +48,10 @@ src_install() {
 	newexe ${FILESDIR}/tetrix.rc tetrix
 
 	keepdir ${GAMES_STATEDIR}/${PN}
+	dodir ${GAMES_LOGDIR}
+	touch ${GAMES_LOGDIR}/${PN}.log
 
 	prepgamesdirs
-	fowners ${GAMES_USER_DED} ${GAMES_STATEDIR}/${PN}
+	fowners ${GAMES_USER_DED}:${GAMES_GROUP} ${GAMES_STATEDIR}/${PN}
+	fowners ${GAMES_USER_DED}:${GAMES_GROUP} ${GAMES_LOGDIR}/${PN}.log
 }
