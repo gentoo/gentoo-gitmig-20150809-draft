@@ -1,0 +1,140 @@
+diff -Naur aterm-0.4.2-orig/src/command.c aterm-0.4.2/src/command.c
+--- aterm-0.4.2-orig/src/command.c	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/src/command.c	2004-01-31 20:13:29.442207872 +0100
+@@ -975,6 +975,8 @@
+     signal(SIGTERM, Exit_signal);
+     signal(SIGCHLD, Child_signal);
+ 
++	tt_winsize(ptyfd);		/* set window size */
++
+ /* need to trap SIGURG for SVR4 (Unixware) rlogin */
+ /* signal (SIGURG, SIG_DFL); */
+ 
+@@ -1014,7 +1016,6 @@
+ 	    }
+ #endif				/* SRIOCSREDIR */
+ 	}
+-	tt_winsize(0);		/* set window size */
+ 
+     /* reset signals and spin off the command interpreter */
+ 	signal(SIGINT, SIG_DFL);
+@@ -2025,19 +2026,21 @@
+ 
+     /* See if we can read from the application */
+ 	if (FD_ISSET(cmd_fd, &readfds)) {
+-	    unsigned int    count = BUFSIZ;
++	    int             n;
++	    unsigned int    count;
+ 
+ 	    cmdbuf_ptr = cmdbuf_endp = cmdbuf_base;
+-
+-	/* while (count > sizeof(cmdbuf_base) / 2) */
+-	    while (count) {
+-		int             n = read(cmd_fd, cmdbuf_endp, count);
+-
+-		if (n <= 0)
++	    for (count = BUFSIZ; count; count -= n, cmdbuf_endp += n)
++		if ((n = read(cmd_fd, cmdbuf_endp, count)) > 0)
++		    continue;
++		else if (n == 0 || (n < 0 && errno == EAGAIN))
+ 		    break;
+-		cmdbuf_endp += n;
+-		count -= n;
+-	    }
++		else {
++#if !defined (HAVE_ATEXIT) && !defined (__sun__)
++		    clean_exit();
++#endif
++		    exit(EXIT_SUCCESS);
++		}
+ 	/* some characters read in */
+ 	    if (count != BUFSIZ)
+ 		goto Return_Char;
+@@ -2116,6 +2119,11 @@
+ 		      + (MEvent.clicks > 1 ? 8 : 0)
+ #endif
+ 		     ) << 2);
++	/* Report mouse wheel events. */
++	if (ev->button == Button4 || ev->button == Button5) {
++	    key_state |= 1 << 6;
++	    button_number = ev->button - Button4;
++	}
+     }
+ 
+ #ifdef DEBUG_MOUSEREPORT
+@@ -2315,10 +2323,7 @@
+     		    	    if( TermWin.background.trgType != BGT_None )
+ 		    	    {
+ 		        	SetSrcPixmap(currentRPixmap);
+-		        	RenderPixmap(1);
+-				/* don't want to check if pixmap is valid
+-				   it's unlikely that user would set it to
+-				   something bogus. */
++		        	RenderPixmap(0);
+ 		    	    }
+ 		    	    scr_clear();
+ 		    	    scr_touch();
+@@ -2623,6 +2628,9 @@
+ 		Gr_ButtonRelease(ev->xbutton.x, ev->xbutton.y);
+ 	    else {
+ 		if (reportmode) {
++		/* Don't report release events for the mouse wheel */
++		if (ev->xbutton.button == Button4 || ev->xbutton.button == Button5)
++		    return;
+ 		/* mouse report from vt window */
+ #ifdef MOUSE_REPORT_DOUBLECLICK
+ 		/* only report the release of 'slow' single clicks */
+diff -Naur aterm-0.4.2-orig/src/main.c aterm-0.4.2/src/main.c
+--- aterm-0.4.2-orig/src/main.c	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/src/main.c	2004-01-31 20:13:29.432209392 +0100
+@@ -129,11 +129,6 @@
+ 
+ /*}}} */
+ 
+-/* have we changed the font? Needed to avoid raceconditions
+- * while window resizing                                 */
+-static int      font_change_count = 0;
+-
+-
+ /*----------------------------------------------------------------------*/
+ /* ARGSUSED */
+ /* PROTO */
+@@ -917,12 +912,6 @@
+     int             x, y;
+     unsigned int    border, depth, width, height, vt_width, vt_height;
+ 
+-/* do we come from an fontchange? */
+-    if (font_change_count > 0) {
+-	font_change_count--;
+-	return;
+-    }
+-
+     resize_window1((ev->xconfigure).width, (ev->xconfigure).height);
+ 
+ #if defined(TRANSPARENT) || defined(BACKGROUND_IMAGE) || defined(_MYSTYLE_)
+@@ -936,17 +925,11 @@
+     {
+         unsigned w, h;
+ 	XEvent evt ;
+-	int bNoTint = 0 ;
+ 	/* that is to make it working smooth with AfterStep shading*/
+ 	if( XCheckMaskEvent(Xdisplay, StructureNotifyMask, &evt ))
+ 	{
+-	    /*    printf( "\n there are more ConfigureNotifyEvents there !");*/
+-	    if( evt.xany.type == ConfigureNotify )    bNoTint = 1 ;
+ 	    XPutBackEvent( Xdisplay, &evt );
+ 	}
+-	if( bNoTint )
+-	    scr_clear_tint(0);	    /* no tinting for faster redraw */
+-	else
+ 	{
+ 	  int abs_x, abs_y;
+           static int old_abs_x=0, old_abs_y=0,
+@@ -1417,7 +1400,6 @@
+     szHint.flags = PMinSize | PResizeInc | PBaseSize | PWinGravity;
+ 
+     if (!init) {
+-	font_change_count++;
+ 	resize();
+     }
+     return;
