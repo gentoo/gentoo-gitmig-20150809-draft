@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/mysqltool
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.1 2002/04/18 00:30:53 woodchip Exp $
+
+*mysqltool-0.95 (17 Apr 2002)
+
+  17 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Created an ebuild for mysqltool, a perl-based frontend for administering
+  MySQL servers.  Similiar to phpMyAdmin.
