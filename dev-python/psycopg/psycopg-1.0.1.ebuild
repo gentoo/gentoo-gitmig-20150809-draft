@@ -35,7 +35,7 @@ src_install () {
 			-e 's:\(echo "  install -m 555 $$mod \)\($(PY_MOD_DIR)\)\("; \\\):\1${D}\2/$$mod\3:' \
 			-e 's:\($(INSTALL)  -m 555 $$mod \)\($(PY_MOD_DIR)\)\(; \\\):\1${D}\2/$$mod\3:' > Makefile
 	make install || die
-	mkdir -p ${D}/usr/share/doc/${P}
+	dodir /usr/share/doc/${P}
 	cp -r doc ${D}/usr/share/doc/${P}
 	dodoc AUTHORS ChangeLog COPYING CREDITS INSTALL README NEWS RELEASE-1.0 SUCCESS TODO
 }
