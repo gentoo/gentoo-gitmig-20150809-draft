@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/showmarks-2.2.ebuild,v 1.1 2004/08/20 23:11:38 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/showmarks-2.2.ebuild,v 1.2 2004/09/05 01:44:13 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -10,6 +10,8 @@ HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=152"
 LICENSE="public-domain"
 KEYWORDS="~alpha ~sparc ~x86 ~ia64 ~ppc ~amd64 ~mips"
 IUSE=""
+
+VIM_PLUGIN_HELPFILES="showmarks.txt"
 
 function src_unpack() {
 	unpack ${A}
