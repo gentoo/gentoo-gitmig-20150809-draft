@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.14.ebuild,v 1.1 2003/09/07 03:11:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.14.ebuild,v 1.2 2003/11/16 22:12:03 usata Exp $
 
 IUSE=""
 
@@ -11,9 +11,10 @@ HOMEPAGE="http://www2.pos.to/~tosh/ruby/rdtool/en/index.html"
 SRC_URI="http://www2.pos.to/~tosh/ruby/rdtool/archive/${P}.tar.gz"
 LICENSE="Ruby GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
-DEPEND=">=dev-lang/ruby-1.8.0"
+DEPEND=">=dev-lang/ruby-1.8.0
+	dev-ruby/amstd"
 
 src_unpack() {
 	unpack ${A}
