@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/geomview-1.8.1-r3.ebuild,v 1.5 2004/06/24 22:00:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/geomview-1.8.1-r3.ebuild,v 1.6 2004/06/26 01:37:39 george Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,8 +17,6 @@ DEPEND="dev-lang/tk
 	x11-libs/xforms
 	x11-libs/lesstif
 	virtual/opengl"
-
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
