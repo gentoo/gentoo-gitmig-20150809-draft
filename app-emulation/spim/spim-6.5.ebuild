@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5.ebuild,v 1.8 2004/03/02 21:16:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5.ebuild,v 1.9 2004/04/11 02:03:39 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="MIPS Simulator"
 HOMEPAGE="http://www.cs.wisc.edu/~larus/spim.html"
@@ -11,11 +13,18 @@ SRC_URI="mirror://gentoo//${P}.tar.gz"
 KEYWORDS="x86 amd64 ~ppc"
 LICENSE="as-is"
 SLOT="0"
+IUSE="X"
 
-DEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( virtual/x11 )"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-IUSE="X"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# fix bad code generation (bug #47141)
+	epatch "${FILESDIR}/${PV}-parser.patch"
+}
 
 src_compile() {
 	./Configure || die "Configure script failed"
@@ -27,21 +36,19 @@ src_compile() {
 	    -e "s:\(TRAP_DIR = \).*$:\1/usr/sbin:" Makefile \
 			|| die "sed Makefile failed"
 
-	einfo "Making console spim"
 	emake spim || die "make spim failed"
-	if [ `use X` ]; then
-		einfo "Making xspim"
+	if use X ; then
 		emake xspim || die "emake xspim failed"
 	fi
 }
 
 src_install() {
-	dobin spim                   || die "dobin failed"
-	newman spim.man spim.1       || die "newman failed (spim)"
-	if [ `use X` ]; then
-		dobin xspim              || die "dobin failed"
-		newman xspim.man xspim.1 || die "newman failed (xspim)"
+	dobin spim || die "dobin failed"
+	newman spim.man spim.1
+	if use X ; then
+		dobin xspim || die "dobin failed"
+		newman xspim.man xspim.1
 	fi
-	dosbin trap.handler          || die "dosbin failed"
-	dodoc BLURB README VERSION ChangeLog Documentation/* || die "dodoc failed"
+	dosbin trap.handler || die "dosbin failed"
+	dodoc BLURB README VERSION ChangeLog Documentation/*
 }
