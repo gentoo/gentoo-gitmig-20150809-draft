@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5100.ebuild,v 1.1 2004/03/01 16:31:28 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5100.ebuild,v 1.2 2004/03/13 11:05:04 hattya Exp $
 
 inherit elisp-common
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/8433/${P}.tar.gz"
 
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 S="${WORKDIR}/${P}"
 
