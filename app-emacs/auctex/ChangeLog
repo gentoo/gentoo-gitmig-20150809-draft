@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.3 2003/02/12 03:50:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.4 2003/03/28 19:19:14 mkennedy Exp $
+
+*auctex-11.14 (28 Mar 2003)
+
+  28 Mar 2003; Matthew Kennedy <mkennedy@gentoo.org> auctex-11.14.ebuild:
+  minor version bump
 
 *auctex-11.13 (09 Feb 2003)
 
