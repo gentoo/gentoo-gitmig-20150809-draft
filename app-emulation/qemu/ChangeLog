@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.21 2004/11/16 21:03:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.22 2004/11/17 18:44:35 lu_zero Exp $
+
+  17 Nov 2004; Luca Barbato <lu_zero@gentoo.org> qemu-0.6.1.ebuild:
+  Removed qemu-fast since that feature won't build on most systems
 
   16 Nov 2004; Luca Barbato <lu_zero@gentoo.org> qemu-0.6.1.ebuild:
   Stray useflag removed

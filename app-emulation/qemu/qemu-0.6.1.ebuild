@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.1.ebuild,v 1.3 2004/11/17 16:00:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.1.ebuild,v 1.4 2004/11/17 18:44:35 lu_zero Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://fabrice.bellard.free.fr/qemu/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc -alpha -sparc"
-IUSE="softmmu qemu-fast sdl nptl" #nptlonly"
+IUSE="softmmu sdl" # nptl qemu-fast nptlonly"
 RESTRICT="nostrip"
 
 DEPEND="virtual/libc
@@ -21,18 +21,18 @@ RDEPEND=""
 set_target_list() {
 	TARGET_LIST="arm-user i386-user ppc-user sparc-user" #i386-softmmu ppc-softmmu
 	use softmmu && TARGET_LIST="${TARGET_LIST} i386-softmmu ppc-softmmu"
-	use qemu-fast && \
-		if use nptl # && use nptlonly
-		then
-			ewarn "qemu-fast won't build with nptl, useflag disabled"
-		else
-			if use sdl ; then
-				ewarn "qemu-fast enabled beware you need every library that"
-				ewarn "qemu would link compiled static you may need to emerge"
-				ewarn "again alsa-lib and nas"
-			fi
-			TARGET_LIST="${TARGET_LIST} i386"
-		fi
+#	use qemu-fast && \
+#		if use nptl # && use nptlonly
+#		then
+#			ewarn "qemu-fast won't build with nptl, useflag disabled"
+#		else
+#			if use sdl ; then
+#				ewarn "qemu-fast enabled beware you need every library that"
+#				ewarn "qemu would link compiled static you may need to emerge"
+#				ewarn "again alsa-lib and nas"
+#			fi
+#			TARGET_LIST="${TARGET_LIST} i386"
+#		fi
 	export TARGET_LIST
 }
 
