@@ -1,6 +1,16 @@
 # ChangeLog for dev-perl/module-build
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.20 2005/03/12 11:00:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.21 2005/03/15 14:37:52 mcummings Exp $
+
+  15 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  module-build-0.22.ebuild, module-build-0.25.ebuild,
+  module-build-0.26.08.ebuild:
+  What a mess. I had included a dependancy for dev-perl/extutils-parsexs becaue
+  module-build *can* use it. But extutils-parsexs now ships with a Build.PL,
+  which our intelligent new eclass saw (if it ships with a Build.PL, use it) and
+  caused a loop of dependancy nightmares. I've removed the dependancy, and we
+  can revisit this later for a better bootstrapping method if needed, but right
+  now it is out. This should finalize the additional reports on bug 68570.
 
   12 Mar 2005; Markus Rothe <corsair@gentoo.org> module-build-0.25.ebuild:
   Stable on ppc64

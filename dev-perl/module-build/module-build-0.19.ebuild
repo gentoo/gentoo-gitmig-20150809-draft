@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.19.ebuild,v 1.9 2005/03/11 17:32:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.19.ebuild,v 1.10 2005/03/15 14:37:52 mcummings Exp $
 
 inherit perl-module
 
@@ -19,4 +19,3 @@ DEPEND="dev-perl/module-info
 		dev-perl/yaml
 		>=dev-perl/Archive-Tar-1*"
 
-style="builder"
