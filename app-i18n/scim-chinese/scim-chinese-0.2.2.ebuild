@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.2.2.ebuild,v 1.2 2003/06/11 22:15:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.2.2.ebuild,v 1.3 2003/06/26 00:09:28 liquidx Exp $
+
+inherit rpm
 
 DESCRIPTION="Smart Common Input Method (SCIM) Closed Source Pinyin Input Method"
 HOMEPAGE="http://www.gnuchina.org/~suzhe/scim/"
@@ -13,16 +15,11 @@ IUSE=""
 
 RDEPEND="virtual/x11
 	>=app-i18n/scim-0.4.1"
-	
+
 DEPEND="${RDEPEND}
-	app-arch/rpm"
+	>=app-arch/rpm2targz-9.0-r1"
 
 S=${WORKDIR}
-
-src_unpack() {
-	cd ${S}
-	rpm2cpio ${DISTDIR}/${A} | cpio -i --make-directories
-}
 
 src_compile() {
 	return
