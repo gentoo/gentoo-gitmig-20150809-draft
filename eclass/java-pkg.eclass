@@ -1,14 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.18 2004/11/15 23:31:08 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.19 2004/11/16 12:17:36 karltk Exp $
 
 ECLASS=java-pkg
 INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE}"
 SLOT="${SLOT}"
 
-
-pkglistpath=${S}/.java-pkg-pkglist
+pkglistpath="${T}/java-pkg-list"
 
 java-pkg_doclass()
 {
@@ -253,7 +252,7 @@ java-pkg_dozip()
 
 _record-jar()
 {
-	echo "$2@$1" >> ${pkglistpath}
+	echo "$(basename $2)@$1" >> ${pkglistpath}
 }
 
 java-pkg_jar-from()
@@ -273,9 +272,9 @@ java-pkg_jar-from()
 			eerror "Installation problems with jars in ${pkg} - is it installed?"
 			return 1
 		fi
-		_record-jar ${pkg} $(basename ${x})
+		_record-jar ${pkg} ${x}
 		if [ -z "${jar}" ] ; then
-			ln -sf ${x} $(basename ${x})
+			ln -sf ${x} ${x}
 		elif [ "`basename ${x}`" == "${jar}" ] ; then
 			ln -sf ${x} ${destjar}
 			return 0
