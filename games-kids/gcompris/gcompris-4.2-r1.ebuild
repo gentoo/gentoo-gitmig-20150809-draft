@@ -30,6 +30,12 @@ DEPEND="virtual/x11
 			media-libs/libvorbis
 			media-libs/libao )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-lang.patch
+}
+
 src_compile() {
 	export GNUCHESS="${GAMES_BINDIR}/gnuchess"
 

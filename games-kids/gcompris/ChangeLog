@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.5 2003/12/31 17:13:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.6 2003/12/31 18:41:01 vapier Exp $
+
+*gcompris-4.2-r1 (31 Dec 2003)
+
+  31 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fix segfault when all locale vars are unset in environment (LANG, etc...) #35443.
 
 *gcompris-4.2 (08 Dec 2003)
 
