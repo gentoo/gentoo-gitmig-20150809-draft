@@ -1,2 +1,3 @@
 virtual/libc					dev-libs/uclibc
+virtual/glibc					dev-libs/uclibc
 virtual/logger					app-admin/sysklogd
