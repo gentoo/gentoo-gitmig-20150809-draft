@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.6 2004/01/07 15:29:51 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.7 2004/02/17 19:31:41 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> lam-mpi-7.0.3.ebuild:
+  add ~alpha
 
 *lam-mpi-6.5.6-r1 (07 Jan 2004)
 
