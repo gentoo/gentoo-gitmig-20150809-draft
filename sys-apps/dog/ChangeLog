@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/dog
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.1 2003/03/14 18:50:41 rac Exp $
+
+*dog-1.7 (14 Mar 2003)
+
+  14 Mar 2003; <rac@gentoo.org> dog-1.7.ebuild:
+  Initial commit.  Ebuild submitted by Remco B. Brink <remco@opera.com>
+  in bug #16742.
+
