@@ -146,58 +146,47 @@
 	<!--<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">-->
 	<table border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tr>
-			<td rowspan="2" valign="top" height="125" width="1%" bgcolor="#45347b">
+			<td valign="top" height="125" width="1%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
 					<tr><td class="logobg" valign="top" align="center" height="88"><a href="/index.html"><img border="0" src="/images/gtop-s.jpg"/></a></td></tr>
 					<tr><td class="logobg" valign="top" align="center" height="36"><a href="/index.html"><img border="0" src="/images/gbot-s.gif"/></a></td></tr>
 	</table>
 			</td>
 			
-			<td valign="middle" align="center" bgcolor="#000000">
-				<table border="0" cellpadding="0" cellspacing="0">
-				<tr>
-					<td align="center">
-<!--						<p class="infotext"><font color="#00ff00"><br/><a href="http://www.qksrv.net/click-477620-5032686" target="_top" ><img src="http://www.qksrv.net/image-477620-5032686" width="468" height="60" alt="DDR Memory at Crucial.com" border="0"/></a><br/><b>inventor</b> and <b>cvs.gentoo.org</b> use Crucial RAM; click above, buy some... and support <i>us</i>!</font></p> -->
-</td>
-				</tr>
-				</table>
-			</td>
-		</tr>
-		<tr>
-			<td valign="bottom" align="left" bgcolor="#000000">
-			<p class="menu">
-				<xsl:choose>
-					<xsl:when test="/mainpage/@id='about'">
-						<a class="highlight" href="/index.html"> About Gentoo Linux</a> |
-					</xsl:when>
-					<xsl:otherwise>
-						<a class="menulink" href="/index.html"> About Gentoo Linux</a> |
-					</xsl:otherwise>
-				</xsl:choose>
-				<xsl:choose>
-					<xsl:when test="/mainpage/@id='download'">
-						<a class="highlight" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
-					</xsl:when>
-					<xsl:otherwise>
-						<a class="menulink" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
-					</xsl:otherwise>
-				</xsl:choose>
-				<xsl:choose>
-					<xsl:when test="/mainpage/@id='changelog'">
-						<a class="highlight" href="/index-changelog.html">CVS Changelog</a> |
-					</xsl:when>
-					<xsl:otherwise>
-						<a class="menulink" href="/index-changelog.html">CVS Changelog</a> |
-					</xsl:otherwise>
-				</xsl:choose>
-				<xsl:choose>
-					<xsl:when test="/mainpage/@id='projects'">
-						<a class="highlight" href="/index-projects.html">Projects</a>
-					</xsl:when>
-					<xsl:otherwise>
-						<a class="menulink" href="/index-projects.html">Projects</a>
-					</xsl:otherwise>
-				</xsl:choose>
+			<td colspan="2" valign="bottom" align="left" bgcolor="#000000">
+				<p class="menu">
+					<xsl:choose>
+						<xsl:when test="/mainpage/@id='about'">
+							<a class="highlight" href="/index.html"> About Gentoo Linux</a> |
+						</xsl:when>
+						<xsl:otherwise>
+							<a class="menulink" href="/index.html"> About Gentoo Linux</a> |
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:choose>
+						<xsl:when test="/mainpage/@id='download'">
+							<a class="highlight" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
+						</xsl:when>
+						<xsl:otherwise>
+							<a class="menulink" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:choose>
+						<xsl:when test="/mainpage/@id='changelog'">
+							<a class="highlight" href="/index-changelog.html">CVS Changelog</a> |
+						</xsl:when>
+						<xsl:otherwise>
+							<a class="menulink" href="/index-changelog.html">CVS Changelog</a> |
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:choose>
+						<xsl:when test="/mainpage/@id='projects'">
+							<a class="highlight" href="/index-projects.html">Projects</a>
+						</xsl:when>
+						<xsl:otherwise>
+							<a class="menulink" href="/index-projects.html">Projects</a>
+						</xsl:otherwise>
+					</xsl:choose>
 				</p>
 			</td>
 		</tr>
@@ -249,38 +238,56 @@ User Docs:<br/>
 					</td></tr>
 				</table>
 			</td>
-			<td valign="top" align="right" bgcolor="#ffffff">
-		
-<!--content begin-->
-
-<!--Netscape 4.7 hack table start-->
-<!--<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">-->
-<table border="0" cellspacing="5" cellpadding="0" width="100%">
-<tr><td class="content" valign="top" align="left">
-	<xsl:if test="/mainpage/standout">
-	<table class="infotab" width="50%" align="right" cellpadding="0" cellspacing="0" border="0">
+			<xsl:choose>
+				<xsl:when test="/mainpage/standout">
+					<td valign="top" align="right" bgcolor="#ffffff">
+						<table border="0" cellspacing="5" cellpadding="0" width="100%">
+						<tr>
+							<td class="content" valign="top" align="left">
+								<img src="/images/gentoo-new.gif"/><br/>
+								<p class="subhead"><xsl:value-of select="/mainpage/title"/></p>
+								<xsl:apply-templates select="chapter"/> 
+								<br/>
+								<br/>
+								<!--content end-->
+							</td>
+						</tr>
+						</table>
+					</td>
+					<td width="15%" class="infotext" valign="top" align="left" bgcolor="#ddddff">
+						<table border="0" cellspacing="5" cellpadding="0" width="100%">
+						<tr>
+							<td>
+								<br/>
+								<p><xsl:value-of select="/mainpage/standout/title"/></p>
+								<p>
+								<xsl:apply-templates select="/mainpage/standout/body"/>
+								</p>
+							</td>
+						</tr>
+						</table>
+					</td>
+				</xsl:when>
+				<xsl:otherwise>
+					<td colspan="2" valign="top" align="right" bgcolor="#ffffff">
+						<table border="0" cellspacing="0" cellpadding="0" width="100%">
+						<tr>
+							<td class="content" valign="top" align="left">
+								<img src="/images/gentoo-new.gif"/><br/>
+								<p class="subhead"><xsl:value-of select="/mainpage/title"/></p>
+								<xsl:apply-templates select="chapter"/> 
+								<br/>
+								<br/>
+								<!--content end-->
+							</td>
+						</tr>
+						</table>
+					</td>
+				</xsl:otherwise>
+			</xsl:choose>
+		</tr>
 		<tr>
-			<td class="infohead" align="center" bgcolor="#7a5ada"><xsl:value-of select="/mainpage/standout/title"/></td>
-		</tr>
-		<tr valign="top" bgcolor="#ddddff">
-			<td class="infotext">
-				<xsl:apply-templates select="/mainpage/standout/body"/>
-			</td>
-		</tr>
-	</table>
-	</xsl:if>
-		<img src="/images/gentoo-new.gif"/><br/>
-		<p class="subhead"><xsl:value-of select="/mainpage/title"/></p>
-<xsl:apply-templates select="chapter"/> 
-<br/>
-<br/>
-<!--content end-->
-</td></tr></table>
-<!--Netscape 4.7 hack end-->
-			</td>
-		</tr>
-		<tr>
-			<td align="right" class="infohead" width="100%" colspan="2" bgcolor="#7a5ada">
+			<td align="right" class="infohead" width="100%" colspan="3" bgcolor="#7a5ada">
 			Copyright 2001 Gentoo
 		Technologies, Inc.  Questions, Comments, Corrections?  Email <a class="highlight"
 		href="mailto:gentoo-dev@gentoo.org">gentoo-dev@gentoo.org</a>.

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.10 2001/08/08 19:01:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.11 2001/08/09 15:52:52 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -90,6 +90,8 @@ src_install() {
 	dosbin ${FILESDIR}/bin/wiki.pl
 	chmod o-rwx,g+rx ${D}/usr/sbin/wiki.pl
 	chown root.dbadmin ${D}/usr/sbin/wiki.pl
+
+	ln -s /home/mailman/icons ${D}/usr/local/httpd/htdocs/mailman-images
 }
 
 pkg_preinst() {
