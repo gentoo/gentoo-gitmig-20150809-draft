@@ -1,6 +1,14 @@
 # ChangeLog for net-www/htdig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.4 2002/04/15 11:12:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.5 2002/04/24 18:59:23 seemant Exp $
+
+*htdig-3.1.6-r1 (22 Apr 2002)
+
+  22 Apr 2002; Seemant Kulleen <seemant@gentoo.org> htdig-3.1.6-r1.ebuild
+  files/digest-htdig-3.1.6-r1:
+
+  stuart@palette.plala.or.jp (Stuart Bouyer) in bug report #1970 pointed
+  out that things were being installed into /usr/bin/bin instead of /usr/bin.
 
 *htdig-3.1.6 (15 Apr 2002)
 
