@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.36 2004/09/06 19:07:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.37 2004/09/28 17:25:36 solar Exp $
+
+*uclibc-0.9.26-r7 (28 Sep 2004)
+
+  28 Sep 2004; <solar@gentoo.org>
+  +files/0.9.26/uClibc-20040921-ldso-unsecvars.patch,
+  +files/0.9.26/unsecvars.h, +uclibc-0.9.26-r7.ebuild:
+  added unsecvars handling to uclibc. testing ground here and going mainline
+  afterwords
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> uclibc-0.9.26-r3.ebuild,
   uclibc-0.9.26-r4.ebuild, uclibc-0.9.26-r5.ebuild, uclibc-9999.ebuild:
