@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.17 2002/10/31 22:26:34 lostlogic Exp $
-ID='$Id: qpkg,v 1.17 2002/10/31 22:26:34 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.18 2003/01/05 12:36:25 mholzer Exp $
+ID='$Id: qpkg,v 1.18 2003/01/05 12:36:25 mholzer Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -204,7 +204,7 @@ ${YL}*${NO} When using${BL} -q${NO}, it is important to note that the querying o
 ${YL}Examples${NO}:
   ${PROG} --dups		print duplicates oldest first
   ${PROG} --dups -v	.. with versions
-  ${PROG}			print list of installed packages
+  ${PROG}			print list of all packages
   ${PROG} porta -I		print versions of installed portage
   ${PROG} porta -i		.. + versions in portage tree + descriptions 
 			and homepages
