@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.2 2002/03/17 21:46:27 azarah Exp $
+
+*librep-0.15.2-r1 (16 Mar 2002)
+
+  16 Mar 2002; M.Schlemmer <azarah@gentoo.org> :
+
+  Fix compile error with libtool-1.4 or later.
 
 *librep-0.15.2 (1 Feb 2002)
 
