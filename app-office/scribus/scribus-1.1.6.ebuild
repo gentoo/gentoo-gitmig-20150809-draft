@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.6.ebuild,v 1.5 2004/06/24 22:45:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.6.ebuild,v 1.6 2004/06/25 23:47:06 kugelfang Exp $
 
 inherit kde-functions
 need-qt 3
@@ -10,7 +10,7 @@ HOMEPAGE="http://web2.altmuehlnet.de/fschmid/"
 SRC_URI="http://ahnews.music.salford.ac.uk/scribus/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~amd64"
+KEYWORDS="x86 ~ppc sparc amd64"
 IUSE="kde"
 S=${WORKDIR}/${P}
 
