@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.74 2004/03/07 23:31:23 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.75 2004/03/13 01:47:51 tseng Exp $
+
+  12 Mar 2004; Brandon Hale <tseng@gentoo.org> openbox-3.0-r1.ebuild,
+  openbox-3.0.ebuild, openbox-3.1-r1.ebuild, openbox-3.1.ebuild:
+  Cleaned up {R,}DEPEND, closes bug #44508
 
   07 Mar 2004; Brandon Hale <tseng@gentoo.org> openbox-1.2.4.ebuild,
   openbox-2.1.3-r4.ebuild:
