@@ -1,4 +1,5 @@
 MD5 95672a6aa92eeb1fc9ab0cbcfb8d87a7 files/digest-xkeycaps-2.46 64
-MD5 e916d317f65a09c9979507ff9504856d xkeycaps-2.46.ebuild 774
-MD5 419ce39362b8b8b6cfab81c47ff4d9df ChangeLog 1079
+MD5 f22d961023c7dc9527a112fb95edd8cd files/Imakefile.patch 664
+MD5 573455311b09c0902a8cc3abbaef6147 xkeycaps-2.46.ebuild 848
+MD5 b869b6e968b560dbb427c410283cc5e2 ChangeLog 1256
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
