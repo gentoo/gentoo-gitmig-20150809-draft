@@ -1,0 +1,18 @@
+--- build.xml.orig	2005-02-28 16:33:15.757740112 +0100
++++ build.xml	2005-02-28 19:21:12.306871800 +0100
+@@ -173,14 +173,7 @@
+ 
+   <path id="libs-build-classpath">
+     <fileset dir="lib">
+-      <include name="xalan*.jar"/>
+-      <include name="xerces*.jar"/>
+-      <include name="xml-apis.jar"/>
+-      <include name="avalon-framework*.jar"/>
+-      <include name="batik*.jar"/>
+-      <include name="jimi*.jar"/>
+-      <include name="jai*.jar"/>
+-      <include name="jce*.jar"/>
++	    <include name="*.jar"/>
+     </fileset>
+   </path>
+   
