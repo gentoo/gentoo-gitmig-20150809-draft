@@ -1,3 +1,5 @@
 MD5 a3807c581ae92c17e0492958cb87401c files/digest-streamripper-1.32 68
+MD5 462c52302e394dc8b61def99acfc1b15 files/digest-streamripper-1.32-r1 148
 MD5 509658b7df9784f52d1299dd5d95affb streamripper-1.32.ebuild 628
-MD5 0ffe26b1800f772489456e1ab569011e ChangeLog 418
+MD5 84d929ed1dcc591eb5686f580b42abe8 ChangeLog 590
+MD5 3b62a7eb2c0498d9ecc143f2bf03f958 streamripper-1.32-r1.ebuild 792
