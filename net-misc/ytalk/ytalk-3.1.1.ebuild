@@ -1,24 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ytalk-3.1.1.ebuild,v 1.16 2004/07/01 22:13:12 squinky86 Exp $
-
-IUSE="X"
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ytalk-3.1.1.ebuild,v 1.17 2004/07/14 06:34:33 mr_bones_ Exp $
 
 DESCRIPTION="Multi-user replacement for UNIX talk"
-SRC_URI="http://www.iagora.com/~espel/ytalk/${P}.tar.gz"
 HOMEPAGE="http://www.iagora.com/~espel/ytalk/ytalk.html"
-KEYWORDS="x86 sparc ppc alpha"
+SRC_URI="http://www.iagora.com/~espel/ytalk/${P}.tar.gz"
+
 LICENSE="freedist"
 SLOT="0"
+KEYWORDS="x86 sparc ppc alpha"
+IUSE="X"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
 	X? ( virtual/x11 )"
 
 src_compile() {
-
 	local myconf=""
 	use X || myconf="$myconf --without-x" #default enabled
 
@@ -33,11 +30,9 @@ src_compile() {
 	|| die "./configure failed"
 
 	emake || die "Parallel Make Failed"
-
 }
 
 src_install() {
-
 	make \
 		prefix=${D}/usr \
 		sysconfdir=${D}/etc \
@@ -47,7 +42,4 @@ src_install() {
 		install || die "Installation Failed"
 
 	dodoc BUGS ChangeLog INSTALL README README.old
-
 }
-
-
