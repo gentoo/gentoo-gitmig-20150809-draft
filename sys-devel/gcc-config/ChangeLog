@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.69 2004/12/08 23:47:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.70 2004/12/23 18:04:06 vapier Exp $
+
+*gcc-config-1.3.8 (23 Dec 2004)
+
+  23 Dec 2004; Mike Frysinger <vapier@gentoo.org>:
+  Make sure GCC_SPECS doesn't hang around when switching between profiles. 
+  Copy libgcc_s.so to /lib (since some systems link files in /bin against it). 
+  Make sure the wrapper can locate cross-compilers via /etc/env.d files when 
+  the active environment is empty.
 
 *gcc-config-1.3.7-r6 (08 Dec 2004)
 
