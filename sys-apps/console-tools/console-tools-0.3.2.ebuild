@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.1 2003/03/07 20:56:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.2 2003/03/09 05:26:19 seemant Exp $
 
 inherit libtool
 
@@ -40,7 +40,7 @@ src_compile() {
 
 src_install() {
 	# DESTDIR does not work correct
-	make DESTDIR=${D} install || die
+	einstall || die
 
 	dodoc BUGS COPYING* CREDITS ChangeLog NEWS README RELEASE TODO
 	docinto txt

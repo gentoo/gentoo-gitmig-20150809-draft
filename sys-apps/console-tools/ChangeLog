@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/console-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/ChangeLog,v 1.9 2003/03/07 20:56:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/ChangeLog,v 1.10 2003/03/09 05:26:19 seemant Exp $
 
 *console-tools-0.3.2 (07 Mar 2003)
+
+  08 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  console-tools-0.3.2.ebuild:
+  switch to einstall, stops sandbox violoation; closing bug #17078 by Peter
+  Ruskin <aoyu93@dsl.pipex.com>
 
   07 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
   console-tools-0.3.2.ebuild:
