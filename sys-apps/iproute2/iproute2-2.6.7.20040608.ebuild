@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.7.20040608.ebuild,v 1.5 2004/06/30 02:43:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.7.20040608.ebuild,v 1.6 2004/09/15 21:29:45 vapier Exp $
 
 inherit eutils gcc
 
@@ -63,7 +63,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="$(gcc-getCC)" KERNEL_INCLUDE=/usr/include || die
+	emake CC="$(gcc-getCC)" KERNEL_INCLUDE="${ROOT}/usr/include" || die
 }
 
 src_install() {
