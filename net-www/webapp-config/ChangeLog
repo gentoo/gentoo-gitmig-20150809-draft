@@ -1,6 +1,11 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.11 2004/04/30 08:24:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.12 2004/05/01 00:44:43 stuart Exp $
+
+*webapp-config-1.7 (01 May 2004)
+
+  01 May 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.7.ebuild:
+  Fix for directories always being root-owned
 
 *webapp-config-1.6 (30 Apr 2004)
 
