@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.7 2002/12/09 04:41:47 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.8 2003/01/09 16:05:40 mholzer Exp $
 
 inherit gnome2
 
 DESCRIPTION="GL extensions for gtk+"
-SRC_URI="ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/gtkglarea/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnome.org/pub/gnome/sources/gtkglarea/1.99/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="2"

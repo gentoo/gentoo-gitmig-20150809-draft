@@ -1,10 +1,11 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.6 2002/12/13 11:00:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.7 2003/01/09 16:05:40 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *gtkglarea-1.99.0 (20 Jun 2002)
+
+  09 Jan 2003; Martin Holzer <mholzer@gentoo.org> gtkglarea-1.99.0.ebuild : 
+  Corrected SRC_URI.
 
   02 Nov 2002; Olivier Reisch <doctomoe@gentoo.org> :
   Added ppc keyword.
