@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 02df4ae9a9f3904ad46f63197732f47a ChangeLog 5954
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 2cfd331c4234b3d109bf51d1697bd461 tcl-8.3.4.ebuild 2538
 MD5 d2bf35d1b9d4e346394bc2a823fcdf02 tcl-8.4.6.ebuild 2921
+MD5 2cfd331c4234b3d109bf51d1697bd461 tcl-8.3.4.ebuild 2538
+MD5 2c4d8bc953f226e5dd76d4ac61c6fd96 ChangeLog 6057
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 b3d04a7fddf65f7c6f8a9c6a6c5f30e9 tcl-8.4.6-r1.ebuild 3329
-MD5 d8691f60be4023222834ccdf6ee6d498 files/digest-tcl-8.3.4 61
-MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6 65
-MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6-r1 65
 MD5 1209abd340cad17f50f87c58f1c0f9f5 files/tcl-8.4.6-multilib.patch 1070
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByAQ4ArHZZzCEUG0RAiX6AJ9cqN/SMH0h/1z1ucJa3y91LtJMyQCaA6/M
-QM51H+hoTlWqQRLFKt0LX74=
-=C+bN
------END PGP SIGNATURE-----
+MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6-r1 65
+MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6 65
+MD5 d8691f60be4023222834ccdf6ee6d498 files/digest-tcl-8.3.4 61
