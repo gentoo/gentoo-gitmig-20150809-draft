@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-7.0.25.ebuild,v 1.4 2005/02/11 09:13:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-7.0.25.ebuild,v 1.5 2005/03/26 23:25:03 kugelfang Exp $
 
 inherit nsplugins
 
@@ -26,6 +26,11 @@ DEPEND="!net-www/gplflash
 		=x11-libs/gtk+-1.2* ) )"
 
 RESTRICT="nostrip"
+
+# This is a binary x86 package => ABI=x86
+# Please keep this in future versions
+# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+has_multilib_profile && ABI="x86"
 
 src_install() {
 	exeinto /opt/netscape/plugins

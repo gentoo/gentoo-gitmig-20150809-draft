@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 3819c3f51b697f58044910b6a7d93c8f ChangeLog 4203
-MD5 45dd0b2c81e08a7c81affbec243b82ca netscape-flash-6.0.81.ebuild 1347
-MD5 4a9adc68aabed4140b40684e49ac893f netscape-flash-7.0.25.ebuild 1376
-MD5 8115e80eb6be76b5add14e23635ecd97 netscape-flash-6.0.79.ebuild 1192
+MD5 a18ec0550b4cd80b68a137f0b52efd68 netscape-flash-6.0.79.ebuild 1358
+MD5 ed0d7c1f88417c91836ca8820ed56d6a netscape-flash-6.0.81.ebuild 1513
+MD5 89e5cae689260814e76b5bb316a8686e netscape-flash-7.0.25.ebuild 1539
+MD5 49a191691f09c2436f41c87d3ca8b276 files/digest-netscape-flash-6.0.79 144
 MD5 553a045f5175d5cb331b737777e17cc0 files/digest-netscape-flash-6.0.81 144
 MD5 12d4887a4d1906a8d8a558f6607ad579 files/digest-netscape-flash-7.0.25 142
-MD5 49a191691f09c2436f41c87d3ca8b276 files/digest-netscape-flash-6.0.79 144
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCDHdTmdTrptrqvGERAofYAJ0eAWYPhQOjiMdKY3wK+qI4UulagACcCinW
-QREACEuxbydAc8VuSTeJnyo=
-=neq8
+iD8DBQFCRe+y5mJXAu5GbtIRAqJpAJ9UFMXFmF+WgVytxP18ZoLXOEzfugCfSUXD
+nfT+Bzd7u42IsHt3GryHnTA=
+=4qa7
 -----END PGP SIGNATURE-----
