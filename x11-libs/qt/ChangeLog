@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.9 2002/04/17 05:04:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.10 2002/04/18 08:01:59 danarmak Exp $
+
+*qt-3.0.3.1 (18 Apr 2002)
+
+  18 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  This is the qt-copy-3.0.3 snapshot distributed with KDE 3.0. It includes several fixes
+  to qt-3.0.3 which will be in 3.0.4. Closes bugs #1828 and (hopefully) #1610.
+  Also, added libqt.so.* -> libqt-mt.so.* symlinks. Closes bug #1787.
 
 *qt-2.3.2-r1 and qt-3.0.3-r1 (16 Apr 2002)
 
