@@ -1,0 +1,55 @@
+# ChangeLog for app-sci/iverilog
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.1 2004/12/27 19:51:43 ribosome Exp $
+
+*iverilog-20031009 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +iverilog-0.6.1.ebuild, +iverilog-0.7.ebuild, +iverilog-20031009.ebuild,
+  +iverilog-20040606.ebuild:
+  Moved from app-sci/iverilog to sci-electronics/iverilog.
+
+  08 Sep 2004; <blubb@gentoo.org> iverilog-20040606.ebuild:
+  added ~amd64 keyword
+
+*iverilog-20040606 (26 Aug 2004)
+
+  26 Aug 2004; Michael Imhof <tantive@gentoo.org> +iverilog-20040606.ebuild:
+  Version bumped.
+
+  15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> iverilog-0.6.1.ebuild,
+  iverilog-20031009.ebuild:
+  PROVIDE is for virtuals
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> iverilog-0.7.ebuild:
+  Added to ~ppc.
+
+  25 Apr 2004; Jon Hood <squinky86@gentoo.org> iverilog-0.6.1.ebuild,
+  iverilog-0.7.0.ebuild, iverilog-20031009.ebuild:
+  add "die" to failure messages in econf and emake lines
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> iverilog-20031009.ebuild:
+  Adding IUSE
+
+*iverilog-20031009 (28 Nov 2003)
+
+  28 Nov 2003; <plasmaroo@gentoo.org> iverilog-0.7.ebuild,
+  iverilog-20031009.ebuild: Added a development snapshot of Icarus Verilog, 
+  which should clear up any compile problems and freshen up the tree.
+
+  11 Jun 2003; <msterret@gentoo.org> iverilog-0.7.ebuild:
+  Based on Bug#: 20350, add -j1 to emake.
+
+*iverilog-0.7 (09 Mar 2003)
+
+  09 Mar 2003; George Shapovalov <george@gentoo.org> iverilog-0.7.ebuild :
+  new version (14900)
+  some updates to fix compilation, thanks to Justin Huff <jjhuff@mspin.net>
+
+*iverilog-0.6.1 (04 Mar 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  added make option -j1 to fix #9767
+
+  3 Apr 2002; Chad Huneycutt <chadh@gentoo.org> icarus_verilog-0.6.1.ebuild :
+  Ebuild created
