@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>hardened</herd>
+<maintainer>
+  <email>zhen@gentoo.org</email>
+  <name>John Davis</name>
+  <description>Full time maintainer, please post all bugs to me.</description>
+</maintainer>
+<longdescription>sal-client is the client side logging utility for SAL, the Secure
+Audting for Linux, projec</longdescription>
+</pkgmetadata>
