@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.4 2004/05/08 12:58:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.5 2004/05/30 15:41:42 gustavoz Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 IUSE=""
 
 RDEPEND="media-libs/libsdl

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monkey-bubble
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.10 2004/05/07 20:42:57 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.11 2004/05/30 15:37:35 gustavoz Exp $
+
+  30 May 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  monkey-bubble-0.1.9.ebuild:
+  Stable on sparc
 
   07 May 2004; Josh Grebe <squash@gentoo.org> monkey-bubble-0.1.9.ebuild:
   Adding ~sparc, bug #50391

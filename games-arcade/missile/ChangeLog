@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/missile
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/ChangeLog,v 1.4 2004/05/07 20:43:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/ChangeLog,v 1.5 2004/05/30 15:42:41 gustavoz Exp $
+
+  30 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> missile-1.0.1.ebuild:
+  Stable on sparc
 
   07 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> missile-1.0.1.ebuild:
   Added ~sparc, #50388
