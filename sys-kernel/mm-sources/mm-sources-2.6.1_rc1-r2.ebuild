@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1_rc1-r2.ebuild,v 1.1 2004/01/05 21:31:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1_rc1-r2.ebuild,v 1.2 2004/01/06 21:58:32 plasmaroo Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -41,6 +41,7 @@ src_unpack() {
 	cd ${S}
 	bzcat ${DISTDIR}/patch-${PKV}.bz2 | patch -p1 || die "2.6.1-rc1 patch failed!"
 	bzcat ${DISTDIR}/${KV}.bz2 | patch -p1 || die "mm patch failed"
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
 	find . -iname "*~" | xargs rm 2> /dev/null
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
