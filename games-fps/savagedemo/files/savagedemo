@@ -1,5 +1,0 @@
-#!/bin/sh
-mkdir ${HOME}/.savage >& /dev/null
-cd /opt/savagedemo
-export LD_LIBRARY_PATH="libs:${LD_LIBRARY_PATH}"
-exec ./savage.bin "$@"
