@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.33 2005/02/20 17:03:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.34 2005/04/03 08:01:20 compnerd Exp $
+
+*mp-3.3.12 (03 Apr 2005)
+
+  03 Apr 2005; Saleem Abdulrasool <compnerd@gentoo.org> +mp-3.3.12.ebuild:
+  Version bump from upstream; Changed default config flags
 
 *mp-3.3.11 (20 Feb 2005)
 
