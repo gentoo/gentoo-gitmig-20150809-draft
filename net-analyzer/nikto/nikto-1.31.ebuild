@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-1.31.ebuild,v 1.1 2003/10/06 12:06:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-1.31.ebuild,v 1.2 2004/02/27 14:14:57 mcummings Exp $
 
 DESCRIPTION="Web Server vulnerability scanner."
 HOMEPAGE="http://www.cirt.net/code/nikto.shtml"
 SRC_URI="http://www.cirt.net/source/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 DEPEND=">=perl-5.6.1
 		>=libwhisker-1.5
 		>=nmap-3.00
