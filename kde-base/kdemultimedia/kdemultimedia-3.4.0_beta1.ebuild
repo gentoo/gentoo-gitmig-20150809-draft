@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.4 2005/01/20 16:34:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.5 2005/01/23 21:01:00 greg_g Exp $
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, juk..."
 
 KEYWORDS="~x86"
-IUSE="alsa audiofile cdparanoia encode flac gstreamer oggvorbis speex theora xine"
+IUSE="alsa audiofile encode flac gstreamer oggvorbis speex theora xine"
 
 DEPEND="~kde-base/kdebase-${PV}
+	media-sound/cdparanoia
 	audiofile? ( media-libs/audiofile )
-	cdparanoia? ( media-sound/cdparanoia )
 	flac? ( media-libs/flac )
 	encode? ( media-sound/lame )
 	oggvorbis? ( media-sound/vorbis-tools )
@@ -29,7 +29,7 @@ src_compile() {
 	use xine && myconf="$myconf --with-xine-prefix=/usr"
 	use xine || DO_NOT_COMPILE="$DO_NOT_COMPILE xine_artsplugin"
 
-	myconf="${myconf} $(use_with cdparanoia)"
+	myconf="${myconf} --with-cdparanoia --enable-cdparanoia"
 
 	# make -j2 fails, at least on ppc
 	use ppc && export MAKEOPTS="$MAKEOPTS -j1"
