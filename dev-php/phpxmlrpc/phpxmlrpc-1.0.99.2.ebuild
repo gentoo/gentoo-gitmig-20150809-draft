@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpxmlrpc/phpxmlrpc-1.0.99.2.ebuild,v 1.5 2004/07/06 23:01:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpxmlrpc/phpxmlrpc-1.0.99.2.ebuild,v 1.6 2004/08/03 19:20:22 agriffis Exp $
 
 inherit php-lib
 
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~ia64"
 
 IUSE=""
 DEPEND=""
