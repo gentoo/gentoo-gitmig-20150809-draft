@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.78 2004/12/29 19:56:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.79 2005/01/13 16:56:11 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -9,11 +9,6 @@
 
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
-
-# since it's always possible, that kde_sandbox_patch() gets called, the dependency is needed
-# at least with the slotted autotools, we have the same problem identifying and adding the correct
-# dependency like with the need-kde/qt functions. this needs to be changed
-DEPEND="sys-apps/sed"
 
 # convinience functions for requesting autotools versions
 need-automake() {
@@ -441,8 +436,9 @@ qtver-from-kdever() {
 		3.1*)	ver=3.1;;
 		3.2*)	ver=3.2;;
 		3.3*)	ver=3.3;;
+		3.4*)	ver=3.3;;
 		3*)	ver=3.0.5;;
-		5)	ver=3.2;; # cvs version
+		5)	ver=3.3;; # cvs version
 		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
@@ -467,6 +463,8 @@ min-kde-ver() {
 		3.0*)			selected_version="3.0";;
 		3.1*)			selected_version="3.1";;
 		3.2*)			selected_version="3.2";;
+		3.3*)			selected_version="3.3";;
+		3.4*)			selected_version="3.4";;
 		3*)			selected_version="3.0";;
 		5)			selected_version="5";;
 		*)			echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
