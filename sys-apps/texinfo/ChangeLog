@@ -1,14 +1,12 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.14 2002/12/09 22:30:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.15 2003/01/02 06:04:29 satai Exp $
 
-  10 Dec 2002; Martin Schlemmer <azarah@gentoo.org> texinfo-4.3.ebuild :
+*texinfo-4.3-r1 (21 Nov 2002)
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
-  Changed sparc ~sparc keywords
- 
-  27 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
-  Update SRC_URI to fix bug #11297.
+  20 Nov 2002; Ingo Krabbe <ikrabbe@dokom.net> :
+  apply localization bugfix for install-info.
+  committed by satai@gentoo.org.
 
 *texinfo-4.3 (18 Nov 2002)
 
