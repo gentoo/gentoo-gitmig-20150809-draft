@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.12 2004/07/15 03:36:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.13 2005/03/03 18:33:41 ciaranm Exp $
 
 DESCRIPTION="A secure, lightweight ident daemon."
 SRC_URI="http://www.uncarved.com/slidentd/${P}.tar.gz"
@@ -13,7 +13,7 @@ SLOT="0"
 DEPEND="dev-libs/dietlibc
 	dev-libs/libowfat"
 
-RDEPEND="sys-apps/daemontools
+RDEPEND="sys-process/daemontools
 	sys-apps/ucspi-tcp"
 
 src_unpack() {

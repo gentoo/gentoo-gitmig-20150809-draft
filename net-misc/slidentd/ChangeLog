@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/slidentd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.12 2004/08/31 08:38:47 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.13 2005/03/03 18:33:41 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> slidentd-0.0.15.ebuild:
+  Dependency update: sys-apps/daemontools -> sys-process/daemontools.
 
   31 Aug 2004; Daniel Black <dragonheart@gentoo.org> slidentd-1.0.0.ebuild:
   removed RDEPEND=sys-apps/ucspi-tcp. Fixes bug #35511. Thanks Sascha
