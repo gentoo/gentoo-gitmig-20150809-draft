@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.21 2005/04/01 17:20:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.22 2005/04/06 19:16:45 luckyduck Exp $
+
+  06 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jdom-1.0.ebuild,
+  jdom-1.0_beta10-r3.ebuild, jdom-1.0_beta6.ebuild, jdom-1.0_beta9-r1.ebuild:
+  modified regexp to get correct jaxen, fixes #88157
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org> jdom-1.0_beta10-r3.ebuild:
   stable on amd64

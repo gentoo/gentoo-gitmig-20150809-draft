@@ -1,10 +1,20 @@
-MD5 e5c9c835a2222d5fb5b7f5b07022f39f ChangeLog 3468
-MD5 1ef97c59b33b835d529959178d4ad81e jdom-1.0.ebuild 1561
-MD5 2eb886e545279316dd5969adbcae9564 jdom-1.0_beta10-r3.ebuild 1566
-MD5 270acc9b7a83cf45c73eb5ff792d7841 jdom-1.0_beta6.ebuild 1590
-MD5 9d14fccab0b153b52069fc90f38489e9 jdom-1.0_beta9-r1.ebuild 1512
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e724cc3dffa094f7814322f56587a033 jdom-1.0.ebuild 1585
+MD5 f9e167ea3c7f3948d442a42cd33d8d53 jdom-1.0_beta10-r3.ebuild 1593
+MD5 29b4970f94782257d2503fcf84952978 jdom-1.0_beta6.ebuild 1613
+MD5 d390a489933e3af6959db57434c413ef jdom-1.0_beta9-r1.ebuild 1535
+MD5 341da81e58d26aca7d646d6b542786dc ChangeLog 3673
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 8841cddf25b660d205766f7468ba608d files/digest-jdom-1.0 61
-MD5 cad484f43c69253a8823f7d668b6c0ab files/digest-jdom-1.0_beta10-r3 61
 MD5 bb9b91ebd19835161b889abf889afda2 files/digest-jdom-1.0_beta6 60
+MD5 cad484f43c69253a8823f7d668b6c0ab files/digest-jdom-1.0_beta10-r3 61
+MD5 8841cddf25b660d205766f7468ba608d files/digest-jdom-1.0 61
 MD5 5387342ae9576c96d6fab009ed1c306f files/digest-jdom-1.0_beta9-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCVDW906ebR+OMO78RAgjSAJ44iOpn1qdR5uQN7tJa/O5aRm4fyQCeICx1
+hfnwuDJvx+BmcIIb7vSHE7Q=
+=8rH4
+-----END PGP SIGNATURE-----

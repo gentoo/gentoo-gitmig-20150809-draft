@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta9-r1.ebuild,v 1.3 2005/02/06 01:52:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta9-r1.ebuild,v 1.4 2005/04/06 19:16:45 luckyduck Exp $
 
 inherit java-pkg
 
@@ -33,7 +33,8 @@ src_unpack() {
 	java-pkg_jar-from xalan
 
 	if has_version jaxen; then
-		java-pkg_jar-from `best_version dev-java/jaxen | sed -s s/"dev-java\/"// | sed -e s/_beta.//`
+		jaxenlib="`best_version dev-java/jaxen | sed s/"dev-java\/"//|sed -e s/_beta.-r.//`"
+		java-pkg_jar-from ${jaxenlib}
 	fi
 }
 
