@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.22 2004/04/27 21:09:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.23 2004/06/11 00:08:22 mr_bones_ Exp $
+
+*grep-2.5.1-r2 (10 Jun 2004)
+
+  10 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> grep-2.5.1-r2.ebuild:
+  Add support for the -P (perl regex) option (bug #51215) For bootstrap,
+  using -perl should work fine.  For people with /bin and /usr on different
+  partitions USE="static" works fine. (see bug #1638 for discussion)
+  Fixed the formatting for the -P option in the man page.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r1.ebuild:
   Add inherit eutils
@@ -86,7 +94,7 @@
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
+  updated in any way. This changelog is targeted to users. This means that the
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
