@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/pcsc-slb-rf72-drv
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.2 2002/12/17 20:09:55 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.3 2003/02/12 09:05:42 vapier Exp $
 
 *pcsc-slb-rf72-drv-1.1.0 (15 Nov 2002)
 

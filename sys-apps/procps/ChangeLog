@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/procps
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.20 2003/02/10 09:17:22 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.21 2003/02/12 09:06:18 vapier Exp $
 
 *procps-3.1.5 (21 Dec 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/groff
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.14 2003/02/08 21:18:38 azarah Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.15 2003/02/12 08:59:22 vapier Exp $
 
 *groff-1.18.1-r1 (08 Feb 2003)
 

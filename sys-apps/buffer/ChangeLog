@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/buffer
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/ChangeLog,v 1.2 2002/10/20 07:10:19 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/ChangeLog,v 1.3 2003/02/12 08:55:35 vapier Exp $
 
 *buffer-1.19-r1 (20 Oct 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/net-tools
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.13 2003/02/10 09:58:08 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.14 2003/02/12 09:04:27 vapier Exp $
 
 *net-tools-1.60-r5 (16 Jul 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/silo
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.7 2003/01/06 09:18:00 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.8 2003/02/12 09:07:53 vapier Exp $
 
 *silo-1.2.5 (15 Feb 2002)
 

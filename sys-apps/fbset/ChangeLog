@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/fbset
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/ChangeLog,v 1.5 2003/02/09 00:52:21 gmsoft Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/ChangeLog,v 1.6 2003/02/12 08:58:18 vapier Exp $
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> fbset-2.1.ebuild :
   Added hppa to keywords.

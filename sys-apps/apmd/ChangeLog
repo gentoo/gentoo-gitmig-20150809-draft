@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/apmd
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.7 2003/02/07 02:49:22 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.8 2003/02/12 08:55:05 vapier Exp $
 
 *apmd-3.0.2-r3 (12 July 2002)
 

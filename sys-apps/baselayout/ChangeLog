@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/baselayout
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.62 2003/02/08 20:18:41 gmsoft Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.63 2003/02/12 08:55:23 vapier Exp $
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/linux-ntfs
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-ntfs/ChangeLog,v 1.4 2002/11/02 07:51:43 woodchip Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-ntfs/ChangeLog,v 1.5 2003/02/12 09:01:54 vapier Exp $
 
 *linux-ntfs-1.6.0 (02 Nov 2002)
 

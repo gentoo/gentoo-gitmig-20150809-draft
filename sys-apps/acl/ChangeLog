@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/acl
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.10 2002/12/22 05:29:35 drobbins Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.11 2003/02/12 08:54:38 vapier Exp $
 
   21 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: 20020330 ->
   2.0.5_p20020330 version rename to fix policy violation for naming of CVS

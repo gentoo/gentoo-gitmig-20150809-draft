@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/usbd
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/ChangeLog,v 1.1 2003/01/16 07:27:45 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/ChangeLog,v 1.2 2003/02/12 09:10:53 vapier Exp $
 
 *usbd-0.1 (15 Jan 2003)
 
