@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.31 2005/02/15 12:03:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.32 2005/02/26 03:53:24 dragonheart Exp $
+
+  26 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  nagios-plugins-1.4.ebuild:
+  Fix for ps synax as per bug #82591. Thanks to marcelogoes@gmail.com
 
 *nagios-plugins-1.4 (15 Feb 2005)
 

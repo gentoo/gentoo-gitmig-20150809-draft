@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.1 2005/02/15 12:03:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.2 2005/02/26 03:53:24 dragonheart Exp $
 
 inherit eutils
 
@@ -60,6 +60,10 @@ src_compile() {
 		--sysconfdir=/etc/nagios \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "./configure failed"
+
+	#fix problem with additional -
+	sed -i -e 's:/bin/ps -axwo:/bin/ps axwo:g' config.h || die "sed failed"
+
 	make || die
 }
 
