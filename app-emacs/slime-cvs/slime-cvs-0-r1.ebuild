@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0.ebuild,v 1.4 2004/01/26 18:10:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r1.ebuild,v 1.1 2004/01/26 18:10:54 mkennedy Exp $
 
 ECVS_SERVER="common-lisp.net:/project/slime/cvsroot"
-if [ -z "${ECVS_BRANCH}" ]; then
+if [ -z "${ECVS_BRANCH}" ]; then # user configurable
 	ECVS_BRANCH="FAIRLY-STABLE"
 fi
 ECVS_MODULE="slime"
@@ -21,7 +21,8 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="virtual/emacs
-	dev-lisp/common-lisp-controller"
+	dev-lisp/common-lisp-controller
+	virtual/commonlisp"
 
 S="${WORKDIR}/slime"
 
@@ -59,4 +60,28 @@ pkg_postrm() {
 pkg_postinst() {
 	/usr/sbin/register-common-lisp-source $CLPACKAGE
 	elisp-site-regen
+	while read line; do einfo "${line}"; done <<EOF
+
+SLIME notes for Gentoo
+----------------------
+
+You can elect to set the ECVS_BRANCH environment variable when
+emerging slime-cvs.	 If unset, the default is to pull the
+FAIRLY-STABLE tag. eg.
+
+   ECVS_BRANCH=HEAD emerge slime-cvs
+
+While this ebuild attempts to work for the FAIRLY-STABLE tag, it may
+not always work with CVS HEAD.
+
+If you're interested in hacking this ebuild, slime-cvs uses its own
+swank.asd system definition file and swank-loader.lisp.
+
+As always with CVS ebuilds, DO NOT report problems to upstream.
+Always report problems to the Gentoo Bugzilla at
+http://bugs.gentoo.org.
+
+Matthew Kennedy <mkennedy@gentoo.org>
+
+EOF
 }
