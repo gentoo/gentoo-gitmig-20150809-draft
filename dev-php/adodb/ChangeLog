@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.19 2004/12/11 23:06:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.20 2004/12/30 20:40:11 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   12 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> adodb-4.53.ebuild:
   Stable on alpha.
@@ -16,7 +19,7 @@
   30 Oct 2004; Jay Pfeifer <pfeifer@gentoo.org> adodb-4.53.ebuild:
   Mark stable on x86. 
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> adodb-4.52.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> adodb-4.52.ebuild:
   Stable on alpha.
 
 *adodb-4.53 (02 Oct 2004)
@@ -55,7 +58,7 @@
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> adodb-4.0.5.ebuild:
   stable on x86.
 
-  31 May 2004; Bryan Østergaard <kloeri@gentoo.org> adodb-4.0.5.ebuild:
+  31 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> adodb-4.0.5.ebuild:
   Stable on alpha.
 
   05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> adodb-4.0.5.ebuild:
