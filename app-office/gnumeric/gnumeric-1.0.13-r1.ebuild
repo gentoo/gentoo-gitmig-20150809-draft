@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13.ebuild,v 1.3 2003/06/08 19:31:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.1 2003/06/08 19:31:10 foser Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 IUSE="libgda gb evo python bonobo guile perl"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
@@ -32,13 +32,9 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	gb?     ( ~gnome-extra/gb-0.0.17 )
 	libgda? ( <gnome-extra/libgda-0.10.0
 	          >=gnome-base/bonobo-1.0.17 )
-	evo?    ( <net-mail/evolution-1.3 )"
+	evo?    ( <net-mail/evolution-1.3 )
+	guile?  ( >=dev-util/guile-1.6 )"
 	 
-#will only work once everybody has decided that they should support
-#the latest versions of programs, or if we live in a perfect world,
-#and subsequent versions do not break compatibility.
-#	 guile?  ( >=dev-util/guile-1.5 )"
-
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.11"
@@ -59,12 +55,6 @@ src_compile() {
   	else
     		myconf="${myconf} --without-gb"
   	fi
-	#broken as we cannot use guile-1.5 (break gnucash)
-	if [ -n "`use guile`" ]; then
-		myconf="${myconf} --without-guile"
-	else
-		myconf="${myconf} --without-guile"
-	fi
   	if [ -n "`use perl`" ]; then
     		myconf="${myconf} --with-perl"
   	else
@@ -88,6 +78,10 @@ src_compile() {
 	elif [ -z "`use libgda`" ]; then
 		myconf="${myconf} --without-bonobo"
 	fi
+
+	use guile \
+		&& myconf="${myconf} --with-guile" \
+		|| myconf="${myconf} --without-guile"
 
 	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
 
@@ -121,4 +115,6 @@ src_install() {
 
 pkg_postinst() {
 	scrollkeeper-update
+
+	einfo "For plotting/graph support in gnumeric emerge guppi"
 }
