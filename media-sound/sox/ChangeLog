@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.5 2002/08/14 09:21:17 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.6 2002/10/16 14:09:24 agriffis Exp $
+
+*sox-12.17.3-r2 (16 Oct 2002)
+
+  16 Oct 2002; Aron Griffis <agriffis@gentoo.org> sox-12.17.3-r2.ebuild :
+  Fixed to build even when Alsa libraries are present on the system.
 
 *sox-12.17.3-r1 (12 Jul 2002)
 
