@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.6 2002/04/30 03:27:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.7 2002/05/12 14:36:48 spider Exp $
+
+*libglade-1.99.12 (12 May 2002)
+  12 May 2002; Spider <spider@gentoo.org> libglade-1.99.12.ebuild :
+  Updated version, copy the old one 
 
 *libglade-1.99.11 (29 Apr 2002) 
   29 Apr 2002; Spider <spider@gentoo.org> libglade-1.99.11.ebuild :
