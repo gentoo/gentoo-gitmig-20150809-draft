@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.139 2003/06/02 14:56:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.140 2003/06/02 23:02:21 seemant Exp $
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r2.ebuild:
+  Bumped to patch_ver 1.1.7 which contains a patch to fix the crappy displaying
+  of underlined truetype fonts. The patch was given from the 4.3.99 series in
+  cvs to me by: Juliusz Chroboczek <jch@xfree86.org> in xfree's bug #330. Closes
+  our bug #19965 by DC <ddcc@email.com>
 
   02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r2.ebuild:
   Added a patch to the patch tarball for Sun Type6 keyboards. Thanks to: Jeremy
