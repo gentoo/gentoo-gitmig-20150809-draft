@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.2 2004/08/08 03:12:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.3 2004/08/08 20:05:16 dragonheart Exp $
 
 DESCRIPTION="GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications."
 HOMEPAGE="http://www.gnupg.org/gpgme.html"
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	find . -name Makefile -o -name Makefile.in -exec rm {} \;
+	rm doc/gpgme.info-?
 
 	sed -i -e 's:libgpgme:libgpgme3:g' \
 		`find . -name Makefile.am` doc/gpgme.info
@@ -49,7 +50,8 @@ src_unpack() {
 
 	sed -i -e 's:gpgme\.m4:gpgme3.m4:g' \
 		-e 's:gpgme\.h:gpgme3.h:g' \
-		gpgme/Makefile.am configure.ac doc/gpgme.texi
+		gpgme/Makefile.am configure.ac doc/gpgme.texi \
+		`find . -name \*.c -o -name \*.h`
 
 	sed -i -e 's:gpgme\.info:gpgme3.info:' doc/gpgme.texi
 
