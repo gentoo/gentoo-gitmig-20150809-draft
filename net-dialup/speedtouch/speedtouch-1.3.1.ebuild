@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1.ebuild,v 1.3 2004/10/31 08:24:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1.ebuild,v 1.4 2004/11/02 10:46:08 blubb Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/speedtouch/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~ppc x86"
+KEYWORDS="alpha amd64 hppa ~ppc x86"
 IUSE="static debug"
 
 DEPEND=""
