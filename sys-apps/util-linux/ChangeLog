@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.45 2003/07/12 17:42:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.46 2003/07/13 17:44:32 solar Exp $
+
+  13 Jul 2003; <solar@gentoo.org> util-linux-2.11z-r5.ebuild:
+  verified -fPIC works with this pkg on sparc,ppc and hppa
 
 *util-linux-2.11z-r5 (12 Jul 2003)
 
