@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.3 2004/06/24 22:00:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.4 2004/09/26 23:28:50 sekretarz Exp $
 
 inherit eutils
 
 S=${WORKDIR}/toshutils-${PV}
 DESCRIPTION="Toshiba Laptop Utilities"
 HOMEPAGE="http://www.buzzard.org.uk/toshiba/"
-SRC_URI="http://www.buzzard.org.uk/toshiba/toshutils-${PV}.tar.gz"
+SRC_URI="http://www.buzzard.org.uk/toshiba/downloads/toshutils-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
