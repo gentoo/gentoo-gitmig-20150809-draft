@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.1-r1.ebuild,v 1.1 2004/10/27 11:14:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.1-r2.ebuild,v 1.1 2004/11/03 00:11:12 foser Exp $
 
 inherit gnome2 eutils
 
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/libxml2-2.6
 	app-arch/bzip2
 
-	app-admin/fam
 
 	gnome-base/gnome-mime-data
 	>=x11-misc/shared-mime-info-0.14
@@ -35,6 +34,7 @@ RDEPEND=">=dev-libs/glib-2
 	hal? ( >=sys-apps/hal-0.2.92
 		>=sys-apps/dbus-0.22 )
 	howl? ( >=net-misc/howl-0.9.6-r1 )"
+#	app-admin/fam
 
 # FIXME : make the fam dep a virtual
 
@@ -72,6 +72,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-eggdesktop.patch
 	# make howl a real switch (#64906)
 	epatch ${FILESDIR}/${P}-howl_config.patch
+	# fix oh add reiser4 support (#57756)
+	epatch ${FILESDIR}/${P}-reiser4_support.patch
 	autoconf
 
 }
