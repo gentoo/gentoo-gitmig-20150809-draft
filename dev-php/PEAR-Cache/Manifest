@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 746e4b02e71f997db72c9dcad62a4240 PEAR-Cache-1.5.4.ebuild 385
 MD5 077b280e38e4bf4ebdb054e685bfc162 PEAR-Cache-1.5.3.ebuild 370
-MD5 53cca6ba9813282f1df4ce9427b09f1b ChangeLog 2415
+MD5 8e209b4056ddb35ca78061d881f87c0d ChangeLog 2512
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 e9db02c419e10fe49ec2ce4b0964197b files/digest-PEAR-Cache-1.5.3 59
+MD5 abe7367cc6414d721311f225b050fac0 PEAR-Cache-1.5.4.ebuild 381
 MD5 15934848cc3337f670e2497b7af4b20e files/digest-PEAR-Cache-1.5.4 59
+MD5 e9db02c419e10fe49ec2ce4b0964197b files/digest-PEAR-Cache-1.5.3 59
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMt0RaGfFFLhbXWkRAoy1AKCV/9irW1yPW5IsaLy9yM1ejWavAQCfZ7lQ
-Eun467DCG0bBE7Hjr5n9E4A=
-=P4CJ
+iD8DBQFCRsXEugEuf3OQ0akRAm/qAKCEUpuhhBcW4Yj6oFQ26fWrlrYa5wCgmcNh
+iL6+E9W3KkqPBDejdojt5oA=
+=puNf
 -----END PGP SIGNATURE-----

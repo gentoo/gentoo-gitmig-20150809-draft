@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5015f7e54404d64974a4a4829cf8e6fc PEAR-Net_Socket-1.0.1-r1.ebuild 371
-MD5 82e282f80259c2d11f656a4fb30be3f6 PEAR-Net_Socket-1.0.5.ebuild 398
-MD5 fbdb3fd2ac3b56bc9755df9ca400f418 ChangeLog 2557
+MD5 4f7370413a7fa64daec73e970fd00d38 ChangeLog 2659
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 5015f7e54404d64974a4a4829cf8e6fc PEAR-Net_Socket-1.0.1-r1.ebuild 371
+MD5 57e2628465ec42f577b80efb76933284 PEAR-Net_Socket-1.0.5.ebuild 387
 MD5 1e3fb090d5a7053f58557783f2c114c7 files/digest-PEAR-Net_Socket-1.0.1-r1 63
 MD5 c5da95fc0e50b850db1d691af4123319 files/digest-PEAR-Net_Socket-1.0.5 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMt67aGfFFLhbXWkRAmwAAJwIUzjPsIoh4hBa8H4qx+J9OCFzHQCfTpfB
-scNbSnJlrBDiV5jn68gsAA8=
-=rgNq
+iD8DBQFCRscOugEuf3OQ0akRArUxAJ0Wn3Un2NchG7/5f3rnLtH+i13G/wCfYkoo
+/Y/kalfyiPRiGx9vu8n2UEc=
+=iYWa
 -----END PGP SIGNATURE-----
