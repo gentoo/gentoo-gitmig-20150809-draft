@@ -4,20 +4,20 @@ Hash: SHA1
 MD5 dc49d5a6adedfeaad0c322fe6295f400 ChangeLog 15305
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 23ef7363bf5ffa1d0f3343ff2a618e5d shadow-4.0.4.1-r4.ebuild 5943
-MD5 8d71d78a50435bde7d53843287cb64a4 shadow-4.0.5.ebuild 5027
+MD5 62785e1a26fe63b7ccc57707e6d16270 shadow-4.0.5.ebuild 5068
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r4 67
+MD5 2d2faa6b9a837f9319de52a780485743 files/securetty 243
 MD5 058f760e522ab65e270293003805fe61 files/shadow-4.0.4.1-userdel-missing-brackets.patch 380
 MD5 a99f871c88548d503bad935d2aa6f412 files/shadow-4.0.4.1-nls-manpages.patch 355
 MD5 d8b8542a7bc013011a293732ca504a50 files/digest-shadow-4.0.5 66
-MD5 2d2faa6b9a837f9319de52a780485743 files/securetty 243
-MD5 7becc41b4f7264483ee3ff0ca8277084 files/shadow-4.0.4.1-passwd-typo.patch 438
-MD5 38ab75648a10b5d49d2aaffab77d787e files/shadow-4.0.5-login.defs.patch 753
 MD5 c31db5c71b0cdfca75346abc2887aa02 files/shadow-4.0.5-nls-manpages.patch 362
+MD5 38ab75648a10b5d49d2aaffab77d787e files/shadow-4.0.5-login.defs.patch 753
 MD5 636f233fa173a998195016c3808173d4 files/shadow-4.0.5-skey.patch 395
-MD5 b8efca60a25e256eebe54c3d0db0760f files/shadow-4.0.4.1-gcc34-xmalloc.patch 361
 MD5 aaf16ddabef285df169e37254b13561c files/shadow-4.0.4.1-selinux.diff 4296
 MD5 201f1321262da41ccd1a0283216ae9a7 files/shadow-4.0.4.1-su-pam_open_session.patch 4886
 MD5 bb55107c3a9354ef2d1977547fdb5a83 files/shadow-4.0.4.1-useradd-manpage-update.patch 958
+MD5 7becc41b4f7264483ee3ff0ca8277084 files/shadow-4.0.4.1-passwd-typo.patch 438
+MD5 b8efca60a25e256eebe54c3d0db0760f files/shadow-4.0.4.1-gcc34-xmalloc.patch 361
 MD5 020e030c2d09b206e88cf9051ced6244 files/shadow-4.0.4.1-nonis.patch 1504
 MD5 6e0bc0211949c624da0ea08d994a7038 files/default/useradd 96
 MD5 51b0337bd261f6ed5e53af5dc196431a files/pam.d/system-auth 499
@@ -28,9 +28,9 @@ MD5 60d44a6f43aafcb9ca35858ab2534a49 files/pam.d/shadow 227
 MD5 0a8b62ed0426b607b92e275d63fa7cbf files/pam.d/su 1247
 MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth-1.1 491
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBh+mhArHZZzCEUG0RAh53AJ0SlGIzrxv5bqzJ92SfX0THbqwA1ACfXJtw
-FM8AKgk2/OBjFHiZC2ZbZ8Q=
-=iJlE
+iD8DBQFBiPFMHTu7gpaalycRAuVGAJwIbRA43mbN09W+dG2bW8K3IFYkjACfWOK0
+cxkMVbXiKDIK9OYMJC5RaEo=
+=un4Y
 -----END PGP SIGNATURE-----
