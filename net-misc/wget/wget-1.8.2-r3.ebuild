@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.4 2003/11/18 06:38:16 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.5 2003/11/18 07:06:30 gregf Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/wget/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa arm mips amd64 ia64"
 IUSE="ssl nls static ipv6 debug"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
