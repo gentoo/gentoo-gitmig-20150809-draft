@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/tagsoup
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.1 2004/09/19 15:08:22 axxo Exp $
+
+*tagsoup-0.10.2 (19 Sep 2004)
+
+  19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +tagsoup-0.10.2.ebuild:
+  initial import, ebuild created by me as a dep
+
