@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.1-r1.ebuild,v 1.2 2003/05/09 15:23:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.1-r1.ebuild,v 1.3 2003/06/18 14:19:51 vapier Exp $
 
 DESCRIPTION="A scalable configuration management system."
 HOMEPAGE="http://www.bitkeeper.com/"
@@ -18,12 +18,7 @@ IUSE="X"
 
 # binary package, so no DEPENDs; X optional in RDEPENDs
 DEPEND=""
-RDEPEND="x86? ( >=virtual/glibc-2.2 )
-	ppc? ( >=virtual/glibc-2.1 )
-	sparc? ( >=virtual/glibc-2.1 )
-	alpha? ( >=virtual/glibc-2.1 )
-	arm? ( >=virtual/glibc-2.1 )
-	hppa? ( >=virtual/glibc-2.2 )
+RDEPEND="virtual/glibc
 	>=dev-lang/tcl-8.3.3
 	X? ( >=dev-lang/tk-8.3.3 )"
 

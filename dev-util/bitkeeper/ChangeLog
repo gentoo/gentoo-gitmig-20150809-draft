@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/bitkeeper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.9 2003/05/09 15:23:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.10 2003/06/18 14:19:51 vapier Exp $
 
 *bitkeeper-3.0.1-r1 (31 Mar 2003)
 
@@ -38,4 +38,3 @@
 
   10 Nov 2002; Evan Powers <powers.161@osu.edu> :
   User submitted ebuild, bug 10549
-
