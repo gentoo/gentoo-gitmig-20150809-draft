@@ -6,7 +6,7 @@ PARENT=id3lib-3.8.0pre2
 A=${PARENT}.tar.gz
 S=${WORKDIR}/${PARENT}
 DESCRIPTION="Id3 library for C/C++ -- API Refrence"
-SRC_URI="http://prdownloads.sourceforge.net/id3lib/${A}"
+SRC_URI="mirror://sourceforge/id3lib/${A}"
 HOMEPAGE="http://id3lib.sourceforge.net/"
 
 

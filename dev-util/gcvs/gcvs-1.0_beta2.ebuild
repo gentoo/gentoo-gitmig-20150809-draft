@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta2.ebuild,v 1.2 2002/05/23 06:50:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta2.ebuild,v 1.3 2002/05/27 17:27:38 drobbins Exp $
 
 Z="gcvs-1.0b2"
 S=${WORKDIR}/${Z}
 DESCRIPTION="GUI frontend for CVS from the CVSGUI project"
-SRC_URI="http://prdownloads.sourceforge.net/cvsgui/${Z}.tar.gz"
+SRC_URI="mirror://sourceforge/cvsgui/${Z}.tar.gz"
 HOMEPAGE="http://cvsgui.sourceforge.net/"
 
 DEPEND="=x11-libs/gtk+-1.2* >=dev-lang/tcl-8.3.3 sys-devel/perl sys-devel/bison dev-util/glademm"

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License
 # Maintainer: George Shapovalov <georges@cco.caltech.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.2.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.2.ebuild,v 1.3 2002/05/27 17:27:38 drobbins Exp $
 
 #The configure script finds the 5.50 ghostscript Fontmap file while run.
 #This will probably work, especially since the real one (6.50) in this case
@@ -10,7 +10,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="library for converting WMF files"
-SRC_URI="http://prdownloads.sourceforge.net/wvware/libwmf-0.2.2.tar.gz"
+SRC_URI="mirror://sourceforge/wvware/libwmf-0.2.2.tar.gz"
 HOMEPAGE="http://www.wvware.com/libwmf.html"
 
 DEPEND="virtual/glibc

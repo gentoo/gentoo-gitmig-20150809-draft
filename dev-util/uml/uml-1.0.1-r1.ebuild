@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uml/uml-1.0.1-r1.ebuild,v 1.2 2002/05/21 18:14:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uml/uml-1.0.1-r1.ebuild,v 1.3 2002/05/27 17:27:38 drobbins Exp $
 
 inherit kde-base
  
 DESCRIPTION="KDE 2.2 UML Drawing Utility"
-SRC_URI="http://prdownloads.sourceforge.net/uml/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/uml/${P}.tar.gz"
 HOMEPAGE="http://uml.sourceforge.net"
 
 newdepend ">=kde-base/kdebase-2.2 virtual/glibc"

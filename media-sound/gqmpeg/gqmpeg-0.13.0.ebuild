@@ -6,7 +6,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="front end to various audio players, including mpg123"
-SRC_URI="http://prdownloads.sourceforge.net/gqmpeg/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gqmpeg/${P}.tar.gz"
 HOMEPAGE="http://gqmpeg.sourceforge.net/"
 
 DEPEND="=x11-libs/gtk+-1.2*

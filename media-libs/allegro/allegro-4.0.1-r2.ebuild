@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gantoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.1-r2.ebuild,v 1.1 2002/05/13 06:09:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.1-r2.ebuild,v 1.2 2002/05/27 17:27:38 drobbins Exp $
 
 LICENSE="Allegro"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Allegro is a cross-platform multimedia library"
-SRC_URI="http://prdownloads.sourceforge.net/alleg/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 HOMEPAGE="http://alleg.sourceforge.net/"
 
 RDEPEND="X? ( virtual/x11 )

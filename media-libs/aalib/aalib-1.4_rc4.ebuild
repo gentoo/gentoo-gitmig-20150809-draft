@@ -1,12 +1,12 @@
 ## Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4.ebuild,v 1.2 2001/06/23 16:07:46 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4.ebuild,v 1.3 2002/05/27 17:27:38 drobbins Exp $
 
 A=${PN}-1.4rc4.tar.gz
 S=${WORKDIR}/${PN}-1.4.0
 DESCRIPTION="A ASCI-Graphics Library"
-SRC_URI="http://prdownloads.sourceforge.net/aa-project/${A}"
+SRC_URI="mirror://sourceforge/aa-project/${A}"
 HOMEPAGE="http://www.ta.jcu.cz/aa/"
 
 DEPEND=">=sys-libs/ncurses-5.1

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.1.ebuild,v 1.1 2002/04/28 23:47:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.1.ebuild,v 1.2 2002/05/27 17:27:38 drobbins Exp $
 
 MY_P="${PN}-`echo ${PV} |sed -e 's:_:-:' -e 's:eta::'`"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Gimp Plugin and Ghostscript driver for Gimp"
-SRC_URI="http://prdownloads.sourceforge.net/gimp-print/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.gz"
 HOMEPAGE="http://gimp-print.sourceforge.net/"
 
 DEPEND=">=media-gfx/gimp-1.2.1

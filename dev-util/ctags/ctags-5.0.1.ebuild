@@ -1,13 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.0.1.ebuild,v 1.1 2001/07/08 18:30:22 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.0.1.ebuild,v 1.2 2002/05/27 17:27:38 drobbins Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Ctags generates an index (or tag) file of C language objects found in C source and header files that allows these items to be quickly and easily located by a text editor or other utility. Currently supports 22 programming languages."
 
-SRC_URI="http://prdownloads.sourceforge.net/ctags/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/ctags/${P}.tar.gz"
 
 #Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="http://ctags.sourceforge.net"

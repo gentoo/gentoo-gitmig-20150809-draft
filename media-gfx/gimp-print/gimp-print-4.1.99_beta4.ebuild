@@ -5,7 +5,7 @@
 MY_P="${PN}-`echo ${PV} |sed -e 's:_:-:' -e 's:eta::'`"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Gimp Plugin and Ghostscript driver for Gimp"
-SRC_URI="http://prdownloads.sourceforge.net/gimp-print/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.gz"
 HOMEPAGE="http://gimp-print.sourceforge.net/"
 
 DEPEND=">=media-gfx/gimp-1.2.1"

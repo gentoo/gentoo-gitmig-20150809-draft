@@ -5,7 +5,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PNG optimizing tool"
-SRC_URI="http://prdownloads.sourceforge.net/pmt/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/pmt/${P}.tar.gz"
 HOMEPAGE="http://pmt.sourceforge.net/pngcrush/"
 DEPEND=""
 

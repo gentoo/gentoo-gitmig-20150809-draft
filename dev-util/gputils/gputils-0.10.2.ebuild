@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later 
 # Author: Jeffry Molanus  <gila@home.nl>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gputils/gputils-0.10.2.ebuild,v 1.1 2002/04/24 20:20:08 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gputils/gputils-0.10.2.ebuild,v 1.2 2002/05/27 17:27:38 drobbins Exp $
 
 S=${WORKDIR}/${P} 
 DESCRIPTION="Utils for the PICxxx procesors" 
-SRC_URI="http://prdownloads.sourceforge.net/gputils/${P}.tar.gz" 
+SRC_URI="mirror://sourceforge/gputils/${P}.tar.gz" 
 HOMEPAGE="http://gputils.sourceforge.net/" 
  
 src_compile(){ 

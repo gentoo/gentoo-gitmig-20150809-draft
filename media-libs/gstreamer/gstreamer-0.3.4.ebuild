@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Artem Baguinski <artm@v2.nl> 
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.3.4.ebuild,v 1.3 2002/05/06 16:27:34 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.3.4.ebuild,v 1.4 2002/05/27 17:27:38 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Streaming media framework"
-SRC_URI="http://prdownloads.sourceforge.net/gstreamer/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.gz"
 HOMEPAGE="http://gstreamer.sourceforge.net"
 
 # required packages

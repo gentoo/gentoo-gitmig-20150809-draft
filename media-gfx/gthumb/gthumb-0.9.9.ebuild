@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author Jens Blaesche <mr.big@pc-trouble.de>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-0.9.9.ebuild,v 1.3 2002/04/28 04:50:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-0.9.9.ebuild,v 1.4 2002/05/27 17:27:38 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gthumb is an Image Viewer and Browser for Gnome."
-SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gthumb.sourceforge.net/"
 
 DEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1

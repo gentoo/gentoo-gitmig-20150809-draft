@@ -6,7 +6,7 @@
 P_VERSION="1.1.9-1"
 S=${WORKDIR}/glimmer-${P_VERSION}
 DESCRIPTION="All-purpose gnome code editor."
-SRC_URI="http://prdownloads.sourceforge.net/glimmer/${PN}-${P_VERSION}.tar.gz"
+SRC_URI="mirror://sourceforge/glimmer/${PN}-${P_VERSION}.tar.gz"
 HOMEPAGE="http://glimmer.sourceforge.net"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1

@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/usermode/usermode-20020104.ebuild,v 1.2 2002/01/08 04:28:17 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/usermode/usermode-20020104.ebuild,v 1.3 2002/05/27 17:27:38 drobbins Exp $
 
 S=${WORKDIR}/tools
 DESCRIPTION="Tools for use with Usermode Linux virtual machines"
-SRC_URI="http://prdownloads.sourceforge.net/user-mode-linux/uml_utilities_20020104.tar.bz2"
+SRC_URI="mirror://sourceforge/user-mode-linux/uml_utilities_20020104.tar.bz2"
 HOMEPAGE="http://user-mode-linux.sourceforge.net/"
 
 DEPEND=""

@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.5.ebuild,v 1.1 2002/02/28 22:55:43 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.5.ebuild,v 1.2 2002/05/27 17:27:38 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical file comparator and merge tool simular to xdiff."
-SRC_URI="http://prdownloads.sourceforge.net/xxdiff/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xxdiff/${P}.tar.gz"
 HOMEPAGE="http://xxdiff.sourceforge.net/"
 
 DEPEND="virtual/glibc

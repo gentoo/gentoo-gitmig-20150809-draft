@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3studio/k3studio-0.97.ebuild,v 1.3 2002/05/21 18:14:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3studio/k3studio-0.97.ebuild,v 1.4 2002/05/27 17:27:38 drobbins Exp $
 
 inherit kde-base || die
 
@@ -19,7 +19,7 @@ newdepend "=dev-lang/python-2.0*
 #	>=media-libs/gltt
 
 DESCRIPTION="KDE universal workbench for 2D/3D modeling, visualization and simulation."
-SRC_URI="http://prdownloads.sourceforge.net/k3studio/k3studio-0.97.tar.gz"
+SRC_URI="mirror://sourceforge/k3studio/k3studio-0.97.tar.gz"
 HOMEPAGE="http://k3studio.sourceforge.net"
 
 src_compile() {

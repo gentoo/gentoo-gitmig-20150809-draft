@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Tim Hobbs <rectrix@rectrix.cx>
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-0.9.9.4.ebuild,v 1.1 2002/04/18 08:06:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-0.9.9.4.ebuild,v 1.2 2002/05/27 17:27:38 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
-SRC_URI="http://prdownloads.sourceforge.net/gnump3d/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gnump3d/${P}.tar.gz"
 HOMEPAGE="http://gnump3d.sourceforge.net/"
 
 DEPEND="virtual/glibc"

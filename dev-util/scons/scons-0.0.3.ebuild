@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.0.3.ebuild,v 1.1 2002/02/03 17:57:13 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.0.3.ebuild,v 1.2 2002/05/27 17:27:38 drobbins Exp $
 
 S=${WORKDIR}/scons-0.03
 DESCRIPTION="Extensible python-based build utility"
-SRC_URI="http://prdownloads.sourceforge.net/scons/scons-0.03.tar.gz"
+SRC_URI="mirror://sourceforge/scons/scons-0.03.tar.gz"
 HOMEPAGE="http://www.scons.org"
 
 DEPEND=">=dev-lang/python-2.0"
