@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.4 2003/03/13 18:19:22 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.5 2003/05/08 10:07:11 jje Exp $
 
 inherit flag-o-matic
 
@@ -26,9 +26,9 @@ src_compile() {
 	sed -e "s:gtk12-config:gtk-config:" < configure.orig > configure
 
 	# take out -fomit-frame-pointer from CFLAGS if k6-2
-	is-flag "-march=k6-3" && strip-flags "-fomit-frame-pointer"
-	is-flag "-march=k6-2" && strip-flags "-fomit-frame-pointer"
-	is-flag "-march=k6" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6-3" && filter-flags "-fomit-frame-pointer"
+	is-flag "-march=k6-2" && filter-flags "-fomit-frame-pointer"
+	is-flag "-march=k6" && filter-flags "-fomit-frame-pointer"
 
 	local myconf=""
 	if [ "`use gtk`" ] ; then
