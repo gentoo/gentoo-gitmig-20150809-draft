@@ -34,7 +34,7 @@ if [ "${1}" = "-a" ] ; then
 	echo "Fetching server list from web"
 	# nastiness, but it should work for now
 	MIRROR_LIST=$((echo -e "GET /main/en/mirrors.xml HTTP/0.9\r\n\r\n" 1>&3 & cat 0<&3) 3<> /dev/tcp/gentoo.org/80 | \
-	(read i; while [ "$(echo $i | tr -d '\r')" != "" ]; do read i; echo "." > 2; done; cat) | \
+	(read i; while [ "$(echo $i | tr -d '\r')" != "" ]; do read i; done; cat) | \
 	perl -nle'print $1 if /\s{5}<a href="((htt|ft)p[^"]+)/' | grep -v "MIRRORS")
 
 	for i in $MIRROR_LIST

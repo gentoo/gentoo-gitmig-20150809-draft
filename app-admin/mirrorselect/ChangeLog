@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/mirrorselect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.9 2003/02/27 16:24:43 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.10 2003/02/27 21:44:26 gerk Exp $
+
+*mirrorselect-0.2-r1 (27 Feb 2003)
+
+  27 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.2-r1.ebuild files/mirrorselect :
+  fixup to close bug #16315.
 
 *mirrorselect-0.2 (27 Feb 2003)
 
