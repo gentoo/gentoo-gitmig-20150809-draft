@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gtksee
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/ChangeLog,v 1.3 2003/07/08 00:29:47 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/ChangeLog,v 1.4 2003/08/21 11:07:08 msterret Exp $
+
+*gtksee-0.5.3 (21 Aug 2003)
+
+  21 Aug 2003; Michael Sterrett <msterret@gentoo.org> gtksee-0.5.3.ebuild:
+  version bump (bug 27033)
 
 *gtksee-0.5.2 (08 Jul 2003)
 
