@@ -1,0 +1,7 @@
+MD5 4630a93355a12d73dc5f3d2982f71cc0 ChangeLog 1080
+MD5 0612d54d729c2bb85e3d468cdfd351f6 tkcvs-6.4-r2.ebuild 2701
+MD5 ed07c9684742e9260d18cc22841dbf83 tkcvs-7.03.ebuild 1039
+MD5 e651223d3c9fd03e8700c144c261d149 tkcvs-7.1.2.ebuild 1039
+MD5 a2adb60698610b1d76c1e96c4602a728 files/digest-tkcvs-6.4-r2 61
+MD5 2db9709aee2b88cebb52bb629c6973f5 files/digest-tkcvs-7.03 62
+MD5 a486fecd4b2c20cadbf1c98802422084 files/digest-tkcvs-7.1.2 63

@@ -1,0 +1,4 @@
+MD5 12244f143c4636a9ff9c0b56dd7a2170 ChangeLog 503
+MD5 d14cad05004ae604d857006689e73959 cproto-4.6.ebuild 740
+MD5 d765e837084055cec0ef65e3f765a728 files/cproto-4.6-mkstemp.patch 1077
+MD5 7697a7cacbdf87628dfeae27bb4dd163 files/digest-cproto-4.6 62

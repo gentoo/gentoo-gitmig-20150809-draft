@@ -1,0 +1,7 @@
+MD5 a69c5cb1f5fdff91df5cbf27c49d4911 ChangeLog 1086
+MD5 400b9e3250ebe27c48eaabac7a92c28e cweb-3.63-r1.ebuild 1100
+MD5 d2ec07a3faf6696d7a4a91db154cc666 cweb-3.63.ebuild 683
+MD5 9e3fc313754333e302ae9310abcc1465 cweb-3.64.ebuild 1103
+MD5 7914c82607f883e5bd3505709eb5ca1d files/digest-cweb-3.63 56
+MD5 7914c82607f883e5bd3505709eb5ca1d files/digest-cweb-3.63-r1 56
+MD5 8ffe77d7422e69d54e1d5e8c49ede9e1 files/digest-cweb-3.64 61
