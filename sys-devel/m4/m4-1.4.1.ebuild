@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.6 2004/07/04 19:59:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.7 2004/07/15 03:34:18 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc64 ~ppc ~sparc mips alpha ~arm hppa ~amd64 ia64 ~s390"
-IUSE="nls"
+IUSE="bootstrap nls"
 
 DEPEND="virtual/libc
 	!bootstrap? ( >=sys-devel/libtool-1.3.5-r2 )
@@ -28,7 +28,7 @@ src_unpack() {
 	cd ${S}
 #	epatch ${DISTDIR}/${PN}_1.4-${PVER}.diff.gz
 
-	use alpha && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {

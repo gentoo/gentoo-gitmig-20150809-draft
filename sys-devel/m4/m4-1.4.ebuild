@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.ebuild,v 1.15 2004/07/02 08:40:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.ebuild,v 1.16 2004/07/15 03:34:18 agriffis Exp $
 
-IUSE="nls"
+IUSE="bootstrap nls"
 
 inherit eutils gnuconfig
 
@@ -28,7 +28,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${DISTDIR}/${PN}_1.4-15.diff.gz
 
-	use alpha && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {
