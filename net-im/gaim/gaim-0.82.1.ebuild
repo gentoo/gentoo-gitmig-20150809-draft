@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.82.1.ebuild,v 1.1 2004/08/27 14:12:20 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.82.1.ebuild,v 1.2 2004/08/28 18:43:24 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -64,6 +64,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
+	cd ${S}/src
+	epatch ${FILESDIR}/gaim-0.83cvs-gtkcellrendererprogress.diff
 }
 
 src_compile() {
