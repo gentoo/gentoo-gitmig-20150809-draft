@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/elph
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/elph/ChangeLog,v 1.1 2003/05/22 15:44:09 avenj Exp $
+
+*elph-0.1.2 (22 May 2003)
+
+  22 May 2003; Jon Portnoy <avenj@gentoo.org> elph-0.1.2.ebuild :
+  Initial import. Ebuild submitted by Stephen Diener in bug
+  #21308.
