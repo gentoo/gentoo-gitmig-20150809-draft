@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/sonar-1.2.0.ebuild,v 1.1 2003/09/29 03:18:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/sonar-1.2.0.ebuild,v 1.2 2003/10/02 18:09:23 vapier Exp $
 
 inherit gcc eutils
 
@@ -13,6 +13,12 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-doc.patch
+}
 
 src_install() {
 	make install DESTDIR=${D} || die
