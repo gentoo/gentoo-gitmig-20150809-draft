@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.3 2002/04/03 04:25:43 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.4 2002/06/09 14:34:40 nitro Exp $
+
+
+*proftpd-1.2.5 (9 Jun 2002)
+
+  9 Jun 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.5.ebuild :
+
+  Version bump, added SLOT="0" and LICENSE="GPL-2"
 
 *proftpd-1.2.4-r7 (18 March 2002)
 
