@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.113 2005/03/01 02:32:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.114 2005/03/01 03:06:47 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -779,6 +779,7 @@ gcc_src_unpack() {
 	cd ${S:=$(gcc_get_s_dir)}
 
 	[[ -n ${PATCH_VER} ]] && epatch ${WORKDIR}/patch
+	[[ -n ${UCLIBC_VER} ]] && epatch ${WORKDIR}/uclibc
 
 	if ! want_boundschecking ; then
 		[[ -n ${PP_VER} ]] && do_gcc_SSP_patches
@@ -1460,7 +1461,7 @@ gcc_quick_unpack() {
 		unpack ${PN}-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
 
 	[[ -n ${UCLIBC_VER} ]] && \
-		unpack ${PN}-${PATCH_GCC_VER}-patches-${UCLIBC_VER}.tar.bz2
+		unpack ${PN}-${PATCH_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
 
 	if [[ -n ${PP_VER} ]] ; then
 		# The gcc 3.4 propolice versions are meant to be unpacked to ${S}
