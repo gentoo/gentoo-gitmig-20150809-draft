@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c924526e2fa04ae857461c9d1d90c9dd ChangeLog 2229
-MD5 32b9338faa049e67945a040980bff247 zisofs-tools-1.0.3.ebuild 638
-MD5 68495a8b55d84cd91785b7a909d31681 zisofs-tools-1.0.4-r1.ebuild 723
-MD5 be012f3d82cfe80caad0c3fa25e0660b zisofs-tools-1.0.4.ebuild 634
+MD5 a3437e488bd694b4dde013a0778e9418 zisofs-tools-1.0.3.ebuild 636
+MD5 c17e5f559b544106bb2c558f2c1ad172 zisofs-tools-1.0.4-r1.ebuild 728
+MD5 7a3c26b0e8ae2a1fd308d6c6c6849bd1 zisofs-tools-1.0.4.ebuild 632
 MD5 ea481c547072fedc8d9e4bef6e3dd2aa files/digest-zisofs-tools-1.0.3 70
 MD5 b62467b86e7d52b16211e0170b39e94d files/digest-zisofs-tools-1.0.4 70
 MD5 b62467b86e7d52b16211e0170b39e94d files/digest-zisofs-tools-1.0.4-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdVgaHTu7gpaalycRAivtAJ9EccsW5FDimBOA2ZhMVJNuimpMrQCfd3xE
+RTXQPDqiD2eJ5EdpCvHu1fs=
+=UpIC
+-----END PGP SIGNATURE-----
