@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.5 2002/10/27 22:52:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.6 2002/11/12 22:34:23 rphillips Exp $
 
   16 Sep 2002; Hannes Mehnert <hannes@gentoo.org> gvim-6.1.ebuild:
   added dependency app-editors/vim-core
@@ -9,6 +9,10 @@
   commited wrong ebuild (wrong dependencies), corrected now)
 
 *gvim-6.1-r3.ebuild (27 Oct 2002)
+
+  12 Nov 2002; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r3.ebuild :
+
+  Added libtermcap dep
 
   27 Oct 2002; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r3.ebuild :
 
