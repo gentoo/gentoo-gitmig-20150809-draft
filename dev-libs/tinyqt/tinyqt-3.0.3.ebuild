@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyqt/tinyqt-3.0.3.ebuild,v 1.1 2002/03/26 10:52:55 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyqt/tinyqt-3.0.3.ebuild,v 1.2 2002/03/29 18:45:30 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -63,9 +63,9 @@ src_install() {
 
     # libraries
     dolib lib/libtinyqt.a
-    dolib lib/libtinyqt.so.${PV}
+    dolib lib/libtinyqt.so.3.0.2
     cd ${D}$QTBASE/lib
-    ln -s libtinyqt.so.${PV} libtinyqt.so.3.0
+    ln -s libtinyqt.so.3.0.2 libtinyqt.so.3.0
     ln -s libtinyqt.so.3.0 libtinyqt.so.3
     ln -s libtinyqt.so.3 libtinyqt.so
 
