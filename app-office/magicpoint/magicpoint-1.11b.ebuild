@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.4 2005/01/01 15:36:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.5 2005/02/05 05:58:04 usata Exp $
 
 inherit elisp-common eutils
 
@@ -49,7 +49,8 @@ src_compile() {
 		$(use_enable truetype xft2) \
 		$(use_with m17n-lib) \
 		--disable-vflib \
-		--disable-freetype || die
+		--disable-freetype \
+		--x-libraries=/usr/X11R6/lib || die
 
 	xmkmf || die
 	make Makefiles || die
