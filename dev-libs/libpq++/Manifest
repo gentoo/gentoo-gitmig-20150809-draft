@@ -1,3 +1,5 @@
-MD5 312b07ad4bf840d75840b7410d48f268 files/digest-libpq++-4.0 62
 MD5 87948bd0bf5c59d5a009fa0ee9210bd5 ChangeLog 441
-MD5 7fa4bb43a332bba3c4444e5ba82bee50 libpq++-4.0.ebuild 999
+MD5 2f4facaee06dd3a2b3bece164ee66dc1 libpq++-4.0-r1.ebuild 1073
+MD5 312b07ad4bf840d75840b7410d48f268 files/digest-libpq++-4.0 62
+MD5 530daffcb76569636aa08cb163318b88 files/libpq++-gentoo.patch 3559
+MD5 312b07ad4bf840d75840b7410d48f268 files/digest-libpq++-4.0-r1 62
