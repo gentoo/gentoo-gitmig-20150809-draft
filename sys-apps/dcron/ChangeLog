@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.40 2005/02/10 04:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.41 2005/02/19 20:45:40 vapier Exp $
+
+*dcron-2.9-r4 (19 Feb 2005)
+
+  19 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/dcron-2.9-Makefile.patch, +files/dcron-2.9-pidfile.patch,
+  +files/dcron-r4, +dcron-2.9-r4.ebuild:
+  Clean up the init.d script and add support for writing of the pid file in
+  dcron itself.
 
 *dcron-2.9-r3 (09 Feb 2005)
 
