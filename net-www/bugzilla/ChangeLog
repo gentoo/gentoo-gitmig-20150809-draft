@@ -1,6 +1,29 @@
 # ChangeLog for net-www/bugzilla
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.6 2004/06/25 00:49:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.7 2004/07/17 11:54:02 stuart Exp $
+
+*bugzilla-2.18.0_rc1 (17 Jul 2004)
+
+  17 Jul 2004; Stuart Herbert <stuart@gentoo.org> files/bz.cfg.templ,
+  +files/2.18.0_rc1/apache.htaccess, +files/2.18.0_rc1/reconfig,
+  -bugzilla-2.17.6-r1.ebuild, -bugzilla-2.17.6-r2.ebuild,
+  +bugzilla-2.18.0_rc1.ebuild:
+  Insecure versions removed; see bug #56826
+
+*bugzilla-2.18.0_rc1 (17 Jul 2004)
+
+  17 Jul 2004; Stuart Herbert <stuart@gentoo.org> files/bz.cfg.templ,
+  +files/2.18.0_rc1/apache.htaccess, +files/2.18.0_rc1/reconfig,
+  -bugzilla-2.17.6-r1.ebuild, +bugzilla-2.18.0_rc1.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+*bugzilla-2.18.0_rc1 (17 Jul 2004)
+
+  17 Jul 2004; Stuart Herbert <stuart@gentoo.org> files/bz.cfg.templ,
+  +files/2.18.0_rc1/apache.htaccess, +files/2.18.0_rc1/reconfig,
+  +bugzilla-2.18.0_rc1.ebuild:
+  Version bump, for security bug #56826; new ebuild and reconfig script from
+  Renat Lumpau <lumpau@freeshell.org>; see bug #51979
 
 *bugzilla-2.17.6-r2 (23 Apr 2004)
 
