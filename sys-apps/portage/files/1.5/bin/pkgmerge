@@ -37,7 +37,7 @@ def digraph_create(digraph,mykey,myprovides=None):
 	mytbz2=xpak.tbz2(bintree.getname(mykey))
 	mydep=mytbz2.getelements("RDEPEND")
 	dig_addnode(digraph,mykey,myprovides)
-	mycheck=portage.roottree.depcheck(string.join(mydep," "))
+	mycheck=roottree.depcheck(string.join(mydep," "))
 	if mycheck[0]==0:
 		print "!!! Error: RDEPEND string formatted incorrectly:",mydep
 		return None 
@@ -51,7 +51,7 @@ def digraph_create(digraph,mykey,myprovides=None):
 	return 1
 
 #main program loop
-
+roottree=portage.vartree(portage.root)
 bintree=portage.binarytree()
 pretend=0
 if len(sys.argv)>=2:
