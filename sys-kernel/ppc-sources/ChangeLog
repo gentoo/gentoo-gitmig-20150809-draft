@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/ppc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.14 2002/12/27 21:11:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.15 2003/02/08 16:44:22 gerk Exp $
 
 *ppc-sources-2.4.20-r2 (18 Dec 2002)
+
+  08 Jan 2003; Mark Guertin <gerk@gentoo.org> ppc-sources-2.4.20-r2.ebuild:
+  Set keyword to ppc
 
   23 Dec 2002; Christian Birchinger <joker@gentoo.org> :     
   Removed sparc64 keyword.
