@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49_pre19.ebuild,v 1.2 2003/08/21 01:10:53 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49_pre21.ebuild,v 1.1 2003/08/21 02:05:25 carpaski Exp $
 
 IUSE="build"
 
@@ -75,7 +75,7 @@ src_install() {
 	./setup.py install --root ${D} || die
 	cd ${S}/pym
 	insinto /usr/lib/python2.2/site-packages
-	doins xpak.py portage.py output.py cvstree.py getbinpkg.py dispatch-conf.py
+	doins xpak.py portage.py output.py cvstree.py getbinpkg.py dispatch_conf.py
 
 
 	#binaries, libraries and scripts
@@ -234,6 +234,7 @@ pkg_postinst() {
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/cvstree.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/emergehelp.py[co]
+	rm -f ${ROOT}usr/lib/python2.2/site-packages/dispatch_conf.py[co]
 	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
 	chown -R root.wheel ${ROOT}var/cache/edb/dep
 	
@@ -244,8 +245,10 @@ pkg_postinst() {
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/output.py')" || die
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/cvstree.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/cvstree.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/dispatch_conf.py')" || die
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/dispatch_conf.py')" || die
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 
