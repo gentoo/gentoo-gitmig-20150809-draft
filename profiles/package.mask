@@ -42,6 +42,7 @@
 ~kde-base/kdetoys-3.1_rc2
 ~kde-base/kdeutils-3.1_rc2
 #kde-i18n ebuilds
+~app-i18n/kde-i18n-3.1_rc2
 ~app-i18n/kde-i18n-af-3.1_rc2
 ~app-i18n/kde-i18n-ar-3.1_rc2
 ~app-i18n/kde-i18n-bg-3.1_rc2
