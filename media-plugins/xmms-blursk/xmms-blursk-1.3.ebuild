@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-blursk/xmms-blursk-1.3.ebuild,v 1.7 2004/07/06 23:10:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-blursk/xmms-blursk-1.3.ebuild,v 1.8 2004/07/14 20:41:32 agriffis Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ KEYWORDS="x86 ~ppc -amd64 ~sparc"
 
 src_unpack() {
 	unpack ${A}
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_install () {

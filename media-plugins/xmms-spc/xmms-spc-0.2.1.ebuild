@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1.ebuild,v 1.11 2004/06/24 23:46:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1.ebuild,v 1.12 2004/07/14 20:45:22 agriffis Exp $
 
 IUSE=""
 
@@ -36,7 +36,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}.patch
 
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.10 2004/06/24 23:43:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.11 2004/07/14 20:44:00 agriffis Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 ~ppc ~sparc ~amd64"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {

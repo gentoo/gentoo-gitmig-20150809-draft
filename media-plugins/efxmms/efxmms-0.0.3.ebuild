@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/efxmms/efxmms-0.0.3.ebuild,v 1.8 2004/07/06 21:04:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/efxmms/efxmms-0.0.3.ebuild,v 1.9 2004/07/14 20:40:10 agriffis Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ DEPEND="media-sound/xmms"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_install() {

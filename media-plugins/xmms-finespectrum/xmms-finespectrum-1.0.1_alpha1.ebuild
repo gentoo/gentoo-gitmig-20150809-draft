@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/xmms-finespectrum-1.0.1_alpha1.ebuild,v 1.6 2004/06/24 23:39:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/xmms-finespectrum-1.0.1_alpha1.ebuild,v 1.7 2004/07/14 20:42:16 agriffis Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ DEPEND="media-sound/xmms"
 
 src_unpack() {
 	unpack ${A}
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_install() {
