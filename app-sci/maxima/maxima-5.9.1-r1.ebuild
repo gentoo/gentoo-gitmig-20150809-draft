@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.1-r1.ebuild,v 1.1 2004/10/08 03:20:24 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.1-r1.ebuild,v 1.2 2004/10/14 16:13:56 cretin Exp $
 
 inherit eutils elisp-common
 
@@ -88,5 +88,13 @@ pkg_postinst() {
 	then
 		einfo "Running mktexlsr to rebuild ls-R database...."
 		mktexlsr
+	fi
+}
+
+pkg_postrm() {
+	if use emacs
+	then
+		einfo "Running elisp-site-regen...."
+		elisp-site-regen
 	fi
 }
