@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.28 2004/11/29 13:02:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.29 2004/12/11 21:24:26 eradicator Exp $
+
+  11 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  audacity-1.2.3.ebuild:
+  -x86 because of bad assembly.
 
 *audacity-1.2.3 (29 Nov 2004)
 
