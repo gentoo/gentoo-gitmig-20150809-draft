@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.8-r1.ebuild,v 1.1 2003/11/23 23:51:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.8-r1.ebuild,v 1.2 2003/11/24 04:07:34 mr_bones_ Exp $
 
 inherit fixheadtails
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A} && cd "${S}"
 
 	sed -e "s/install: install-dirs/install: install-dirs install-conf/" \
- 		-i Makefile.in || die "sed failed"
+		-i Makefile.in || die "sed failed"
 
 	ht_fix_file configure.in config.guess
 
