@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.27 2005/01/18 06:15:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.28 2005/03/01 01:48:11 vapier Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -38,7 +38,6 @@ DEPEND="${RDEPEND}
 PDEPEND="sys-devel/gcc-config
 	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
 
-GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 PATCH_VER="1.1"
 PIE_VER="8.7.6.5"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.16 2005/01/18 06:15:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.17 2005/03/01 01:48:11 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64 emul-linux-x86"
 
@@ -60,7 +60,7 @@ PDEPEND="sys-devel/gcc-config"
 # would just make the files unavailable until they get mirrored. All files
 # in SRC_URI will eventually get mirrored and mirrors will be tried before
 # falling back on this location anyways.
-GENTOO_BASE_URI="http://dev.gentoo.org/~lv/"
+GENTOO_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 
 # Patch tarball support ...
 PATCH_VER="1.1"
