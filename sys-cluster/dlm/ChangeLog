@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/dlm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.5 2005/01/27 14:34:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.6 2005/03/19 15:56:38 xmerlin Exp $
+
+*dlm-1.0_pre21 (19 Mar 2005)
+
+  19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +dlm-1.0_pre21.ebuild:
+  dlm-1.0_pre21 in portage
 
 *dlm-1.0_pre6 (27 Jan 2005)
 
