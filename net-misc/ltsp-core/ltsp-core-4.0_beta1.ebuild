@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0_beta1.ebuild,v 1.3 2003/09/05 22:13:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0_beta1.ebuild,v 1.4 2003/10/30 17:36:53 lanius Exp $
 
 # TODO: xdm configuration, dhcp-pxe example
 
@@ -35,7 +35,7 @@ SRC_URI="mirror://sourceforge/ltsp/ltsp_kernel-3.0.9-i386.tgz
 		http://www.ltsp.org/ltsp/ltsp-x-fonts-100dpi-0.02-0-i386.tgz )"
 
 RDEPEND="X? ( x11-base/xfree )
-	net-misc/tftp-hpa
+	virtual/tftp
 	sys-apps/xinetd
 	net-misc/dhcp
 	net-fs/nfs-utils
