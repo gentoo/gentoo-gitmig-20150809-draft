@@ -1,6 +1,24 @@
 # ChangeLog for net-www/jboss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/ChangeLog,v 1.12 2003/12/08 22:36:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/ChangeLog,v 1.13 2003/12/20 08:49:23 mkennedy Exp $
+
+*jboss-3.2.3 (20 Dec 2003)
+
+  20 Dec 2003; <mkennedy@gentoo.org> jboss-3.2.3.ebuild, metadata.xml,
+  files/3.2.1/conf.d/jboss, files/3.2.3/README.Gentoo, files/3.2.3/catalog,
+  files/3.2.3/log4j.xml, files/3.2.3/conf.d/jboss, files/3.2.3/env.d/50jboss,
+  files/3.2.3/init.d/jboss:
+  Minor version update to latest.  Resolution of bug #30554
+  (hypersonicsql vulnerable via. default config).  Corrected temporary
+  file directory, bug #28284.  Resolved bug #24256 (JJTree build
+  failure in 3.2.1).  Added metadata.xml with maintainer information.
+  Moved install files from /opt to /usr/share/jboss, /var/log/jboss,
+  /var/cache/jboss and /var/tmp/jboss.  Build all groups by default
+  (see src_compile).  Expanded JBoss configuration file for Gentoo
+  (/etc/conf.d/jboss).  Replace useradd/groupadd with enewuser,
+  enewgroup and make robust.  Add SGML catalogs for DTDs distributed
+  with JBoss.  Add CONFIG_PROTECT for server directories.  Corrected
+  Java package.env file list.
 
   08 Dec 2003; <spider@gentoo.org> files/3.2.1/init.d/jboss:
   fixed chown issue ( bug #35127 )
