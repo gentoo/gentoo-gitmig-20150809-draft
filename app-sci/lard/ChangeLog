@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lard
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.7 2003/07/25 02:02:27 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.8 2004/04/19 10:32:35 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> lard-20030204.ebuild:
+  Using epatch instead of patch.
 
 *lard-2.0.15 (24 Jul 2003)
 
