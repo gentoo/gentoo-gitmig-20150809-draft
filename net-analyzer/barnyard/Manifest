@@ -1,5 +1,5 @@
-MD5 bec036c4adbf649ec5dbb7fb15b06518 ChangeLog 513
-MD5 0cb7d9f663bc8d3935f4682f239ea3c3 barnyard-0.1.0.ebuild 1437
+MD5 f6ae819ce119279888cc86c3b54a7f63 ChangeLog 629
+MD5 fbadcf0d4fc19bb40ff12af12baae1a6 barnyard-0.1.0.ebuild 1419
 MD5 1f0bf4b85cf9b28ddc987c3121b53c76 metadata.xml 497
 MD5 f2180306ab489100fe8729115dc23942 files/barnyard.confd 435
 MD5 14b507a1b966099205218e226083097d files/barnyard.rc6 769
