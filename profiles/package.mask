@@ -361,10 +361,6 @@ media-video/lumiere
 # cvs snapshot in testing for bug #7131
 =net-irc/kvirc-3.0.0_pre20021217
 
-# <aliz@gentoo.org> (16 Dec 2002)
-# Becuse .so doesnt function correctly
-=sys-apps/tcp-wrappers-7.6-r5
-
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # see dev-db/postgresql #11822, net-im/sim #11654, and net-misc/mico
 # (btw, all the other distros are using 2.5.4a)
