@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-1.4.12.ebuild,v 1.1 2005/03/01 07:13:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-1.4.12.ebuild,v 1.2 2005/03/01 07:18:58 robbat2 Exp $
 
 DESCRIPTION="Library interface to IPMI"
 HOMEPAGE="http://sourceforge.net/projects/${PN}/"
@@ -17,6 +17,8 @@ S="${WORKDIR}/${MY_P}"
 DEPEND="virtual/libc
 		dev-libs/glib
 		>=dev-lang/swig-1.3.21
+		sys-libs/gdbm
+		dev-util/pkgconfig
 		crypt? ( dev-libs/openssl )
 		snmp? ( net-analyzer/net-snmp )
 		perl? ( dev-lang/perl )"
