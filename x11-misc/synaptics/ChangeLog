@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.33 2004/10/24 05:45:54 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.34 2004/11/05 05:04:29 battousai Exp $
+
+  05 Nov 2004; Bryan Stine <battousai@gentoo.org> synaptics-0.13.4.ebuild,
+  synaptics-0.13.5.ebuild, synaptics-0.13.6.ebuild:
+  Switched from $(gcc-getCC) from gcc.eclass to $(tc-getCC) from
+  toolchain-funcs.eclass.
 
 *synaptics-0.13.6 (24 Oct 2004)
 
