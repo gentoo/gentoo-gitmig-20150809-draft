@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbh
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/ChangeLog,v 1.4 2003/12/18 20:55:51 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/ChangeLog,v 1.5 2004/01/16 21:15:03 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> dbh-1.0.15.ebuild:
+  set ppc in keywords
 
   18 Dec 2003; Jason Wever <weeve@gentoo.org> dbh-1.0.15.ebuild:
   Marked stable on sparc.
