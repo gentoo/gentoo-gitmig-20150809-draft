@@ -1,12 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r2.ebuild,v 1.8 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r2.ebuild,v 1.9 2002/10/13 16:37:52 doctomoe Exp $
 
 IUSE="png"
 
 S=${WORKDIR}/${P}
-DESCRIPTION="An interactive image manipulation program for X which can
-deal with a wide variety of image formats"
+DESCRIPTION="An interactive image manipulation program for X which can deal with a wide variety of image formats"
 SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
 	png? http://www.ibiblio.org/gentoo/distfiles/xv-png-patch.tar.bz2"
 HOMEPAGE="http://www.trilon.com/xv/index.html"
@@ -30,10 +29,11 @@ src_unpack() {
 		cd ${S}
 		patch -p1 < ${WORKDIR}/${P}-naz-gentoo.patch || die
 	)
-	if [ ${ARCH} = "ppc" ]
+	
+        if [ `use ppc` ] && [ -z `use png` ]
 	then
-	cd ${S}
-	patch -p1 < ${FILESDIR}/xv-${PV}-ppc.patch || die
+		cd ${S}
+		patch -p1 < ${FILESDIR}/xv-${PV}-ppc.patch || die
 	fi
 }
 
