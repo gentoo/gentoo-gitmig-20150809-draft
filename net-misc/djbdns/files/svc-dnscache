@@ -1,0 +1,91 @@
+#!/bin/sh
+#RCUPDATE:3 4:80:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=`basename ${0}`
+opts="setup start stop"
+
+#this service is designed to *only* run supervised
+
+setup() {
+	einfo "${SERVICE} Setup"
+	echo
+	echo "After completing this setup process, your system will be configured to run a"
+	echo "dnscache service.  This service caches DNS (domain name service) lookups; in"
+	echo "other words, it speeds up the time it takes for your machine to resolve hostnames."
+	echo "More information on this package can be found at http://cr.yp.to/djbdns.html."
+	echo
+	einfo "After this script completes, dnscache will be configured and running.  Your"
+	einfo "/etc/resolv.conf will be updated so that all DNS lookups are directed to dnscache."
+	einfo "Your original /etc/resolv.conf will be backed up to /etc/resolv.conf.orig."
+	einfo "In addition, dnscache will be configured to start every time your system boots."
+	echo
+	echo "(press any key to begin setup, or press control-C to abort)"
+	echo
+	read
+	echo
+	addrs=`ifconfig -a | grep "inet addr" | cut -f2 -d":" | cut -f1 -d" "`
+	echo "The dnscache program binds to a single IP address.  Please enter the IP"
+	echo "address to which dnscache should bind.  Currently available IP addresses:"
+	echo
+	echo $addrs
+	echo
+	read -p "enter IP> " myip
+	
+	if [ ! -e /var/lib/supervise/services/dnscache ]
+	then
+		einfo ">>> Setting up dnscache..."
+		/usr/bin/dnscache-conf dnscache dnslog /var/lib/supervise/services/dnscache $myip
+	fi
+	echo "dnscache can be configured to forward queries to another nameserver"
+	echo "(such as the nameserver of your ISP) rather than perform the lookups"
+	echo "itself.  If you would like to enable this forwarding mode (a good idea"
+	echo "most of the time), then enter the IP of your ISP\'s nameserver now,"
+	echo "otherwise just hit Enter."
+	echo
+	read -p "enter IP> " myforward
+	if [ "$myforward" != "" ]
+	then
+		echo "Forwarding requests to $myforward"
+		echo $myforward > /var/lib/supervise/services/dnscache/root/servers/\@
+	fi
+	start	
+	if [ ! -e /var/log/${SERVICE}.d ]
+	then
+		einfo ">>> /var/log/${SERVICE}.d points to the dnscache log..."
+		ln -s ${SVCDIR}/log/main /var/log/${SERVICE}.d
+	fi
+	if [ -e /etc/resolv.conf ]
+	then
+		einfo ">>> Backing up /etc/resolv.conf to resolv.conf.orig..."
+		cp /etc/resolv.conf /etc/resolv.conf.orig
+		cat /etc/resolv.conf.orig | grep -v nameserver > /etc/resolv.conf
+		echo nameserver $myip >> /etc/resolv.conf
+		einfo ">>> New /etc/resolv.conf has been created."
+	fi
+	echo
+	einfo ">>> Configuring ${SERVICE} to start at system boot..."
+	/usr/sbin/rc-update add svc-dnscache
+	einfo "${SERVICE} setup is complete!"
+}
+
+start() {
+    ebegin "Starting ${SERVICE}"
+	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping ${SERVICE}"
+   	if [ -e ${SVCDIR}/control/${SERVICE} ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}/log
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
+		rm ${SVCDIR}/control/${SERVICE}
+	fi
+	eend $?
+}
+
+doservice ${@}
+

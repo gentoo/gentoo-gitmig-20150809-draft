@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/djbdns/djbdns-1.02.ebuild,v 1.2 2001/01/01 18:45:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/djbdns/djbdns-1.02-r1.ebuild,v 1.1 2001/01/10 07:04:58 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -35,7 +35,7 @@ src_install() {
 	doins dnsroots.global
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
 	exeinto /etc/rc.d/init.d
-	doexe ${FILESDIR}/dnscache
+	doexe ${FILESDIR}/svc-dnscache
 }
 
 
