@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.1.ebuild,v 1.1 2004/01/13 01:14:56 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.1.ebuild,v 1.2 2004/03/06 13:27:25 zul Exp $
 
 inherit base
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://lostirc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 S=${WORKDIR}/${P}
 DEPEND=">=sys-apps/sed-4*
 	>=dev-cpp/gtkmm-2.0
