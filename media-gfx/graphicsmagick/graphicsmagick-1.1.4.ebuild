@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.2.ebuild,v 1.4 2004/11/02 01:39:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.4.ebuild,v 1.1 2004/11/18 03:25:39 kloeri Exp $
 
 inherit libtool flag-o-matic perl-module
 replace-flags k6-3 i586
@@ -39,17 +39,17 @@ DEPEND=">=sys-apps/sed-4
 
 src_compile() {
 	local myconf=""
-	use X    || myconf="${myconf} --with-x=no"
-	use jbig || myconf="${myconf} --without-jbig"
-	use jp2 || myconf="${myconf} --without-jp2"
-	use jpeg || myconf="${myconf} --without-jpeg"
-	use lcms || myconf="${myconf} --without-lcms"
-	use lzw && myconf="${myconf} --enable-lzw"
-	use png || myconf="${myconf} --with-png=no"
-	use tiff || myconf="${myconf} --without-tiff"
-	use truetype || myconf="${myconf} --without-ttf"
-	use wmf || myconf="${myconf} --without-wmf"
-	use xml2 || myconf="${myconf} --without-xml"
+	myconf="${myconf} $(use_with X x)"
+	myconf="${myconf} $(use_with jbig)"
+	myconf="${myconf} $(use_with jp2)"
+	myconf="${myconf} $(use_with jpeg)"
+	myconf="${myconf} $(use_with lcms)"
+	myconf="${myconf} $(use_enable lzw)"
+	myconf="${myconf} $(use_with png)"
+	myconf="${myconf} $(use_with tiff)"
+	myconf="${myconf} $(use_with ttf)"
+	myconf="${myconf} $(use_with wmf)"
+	myconf="${myconf} $(use_with xml2 xml)"
 
 	# Netscape is still used ?  More people should have Mozilla
 	sed -i 's:netscape:mozilla:g' configure
@@ -83,8 +83,6 @@ src_install() {
 	fi
 
 	dosym /usr/lib/${MY_P}/ /usr/lib/GraphicsMagick
-
-	mydoc="*.txt"
 
 	rm -f ${D}/usr/share/GraphicsMagick/*.txt
 
