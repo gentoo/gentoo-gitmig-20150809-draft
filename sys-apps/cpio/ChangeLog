@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpio
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.9 2003/02/12 08:56:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.10 2003/02/15 20:09:08 tuxus Exp $
+
+  15 Feb 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
