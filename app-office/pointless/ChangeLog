@@ -1,6 +1,9 @@
 # ChangeLog for app-office/pointless
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pointless/ChangeLog,v 1.4 2004/09/03 00:42:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pointless/ChangeLog,v 1.5 2004/12/28 13:10:08 humpback Exp $
+
+  28 Dec 2004; Gustavo Felisberto <humpback@gentoo.org>; pointless-0.5.ebuild:
+  Removing freetype from use flag's.
 
   03 Sep 2004; David Holm <dholm@gentoo.org> pointless-0.5.ebuild:
   Added to ~ppc.
