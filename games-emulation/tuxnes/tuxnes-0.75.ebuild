@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.3 2004/06/24 22:36:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.4 2004/09/27 15:04:28 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,6 +22,10 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/configure.in-${P}-gentoo.diff
+
+	#gcc-3.4 fix
+	epatch ${FILESDIR}/${P}-gcc34.patch
+
 	autoreconf &>/dev/null
 }
 
