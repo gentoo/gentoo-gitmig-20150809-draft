@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-0.9h.ebuild,v 1.1 2004/08/15 19:18:52 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-0.9h.ebuild,v 1.2 2004/08/30 23:26:09 dholm Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.lag.net/~robey/paramiko"
 SRC_URI="http://www.lag.net/~robey/paramiko/${PN}-${MY_PV}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/python
 	>=dev-python/pycrypto-1.9_alpha6"
