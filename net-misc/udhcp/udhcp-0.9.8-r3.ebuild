@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.4 2004/03/18 03:15:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.5 2004/03/22 03:22:41 vapier Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake SYSLOG=1 || die
+	emake CROSS_COMPILE=${CHOST}- STRIP=true SYSLOG=1 || die
 }
 
 src_install() {
@@ -30,7 +30,13 @@ src_install() {
 	insinto /etc
 	doins samples/udhcpd.conf
 
-	make prefix=${D}/usr SBINDIR=${D}/sbin install || die
+	make \
+		prefix=${D}/usr \
+		SBINDIR=${D}/sbin \
+		CROSS_COMPILE=${CHOST}- \
+		STRIP=true \
+		install \
+		|| die
 
 	dodoc AUTHORS COPYING ChangeLog README* TODO
 
