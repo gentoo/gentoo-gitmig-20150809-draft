@@ -1,8 +1,10 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.19 2004/04/13 17:32:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.20 2004/04/13 18:16:33 eradicator Exp $
 
-  13 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> nas-1.6c-r1.ebuild:
+  13 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> nas-1.6c-r1.ebuild,
+  files/nas.init.d:
+  Fix nas init.d file to work with 1.5
   Remove the static lib if USE=-static
 
 *nas-1.5-r1 (13 Apr 2004)
