@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/komics-1.3.ebuild,v 1.1 2004/10/30 18:44:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/komics-1.3.ebuild,v 1.2 2004/12/07 20:20:30 carlo Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="Komics - a KDE panel applet for fetching comics strips from web."
 HOMEPAGE="http://www.orson.it/~domine/komics/"
