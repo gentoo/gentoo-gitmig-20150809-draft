@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.35 2004/12/28 21:57:03 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.36 2005/02/19 08:03:26 corsair Exp $
+
+  19 Feb 2005; Markus Rothe <corsair@gentoo.org> fox-1.2.6-r2.ebuild:
+  Stable on ppc64
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
