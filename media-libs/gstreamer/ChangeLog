@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.7 2002/09/23 19:41:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.8 2002/10/18 00:06:52 foser Exp $
+
+*gstreamer-0.4.1-r2 (17 Oct 2002)
+
+  17 Oct 2002; foser <foser@gentoo.org> gstreamer-0.4.1-r2.ebuild:
+  Disable compiling with -O3 (bug #8217)
 
 *gstreamer-0.4.1-r1 (23 Sep 2002)
 

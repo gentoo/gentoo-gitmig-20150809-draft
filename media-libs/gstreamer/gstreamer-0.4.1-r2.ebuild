@@ -1,18 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.4.1.ebuild,v 1.4 2002/10/05 17:58:30 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.4.1-r2.ebuild,v 1.1 2002/10/18 00:06:52 foser Exp $
+
+inherit flag-o-matic
 
 IUSE="doc"
 
-
 S=${WORKDIR}/${P}
+
 DESCRIPTION="Streaming media framework"
 SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.gz"
 HOMEPAGE="http://gstreamer.sourceforge.net"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 # required packages
 # there are many many optional libraries. features are compiled if the libraries
@@ -34,8 +36,19 @@ RDEPEND=">=dev-libs/glib-2.0
 	>=dev-libs/popt-1.5
 	>=sys-libs/zlib-1.1.4"
 
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	# patch for problems compiling when specifying USE="doc"
+	patch -p1 < ${FILESDIR}/xsl.diff || die "patch failed"
+
+}
 
 src_compile() {
+
+	replace-flags "-03" "-O2"
+
 	local myconf
 	use doc \
 		&& myconf="${myconf} --enable-docs-build" \
