@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.13 2004/04/15 23:31:58 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.14 2004/04/27 05:08:32 vapier Exp $
 
 inherit flag-o-matic ccc eutils
 
 DESCRIPTION="Linux Port of OpenBSD Single-key Password System"
 HOMEPAGE="http://www.sparc.spb.su/solaris/skey/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
-		doc? ( http://www.ietf.org/rfc/rfc2289.txt )"
+	doc? ( http://www.ietf.org/rfc/rfc2289.txt )"
 
 LICENSE="BSD X11"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64 s390"
-
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="doc"
+
 DEPEND="virtual/glibc
 	sys-apps/shadow
 	sys-libs/cracklib
@@ -46,7 +46,7 @@ src_compile() {
 
 src_install() {
 	doman skey.1 skeyaudit.1 skeyinfo.1 skeyinit.1 skeyprune.8
-	dobin skey skeyinit skeyinfo
+	dobin skey skeyinit skeyinfo || die
 	newbin skeyprune.pl skeyprune
 	newbin skeyaudit.sh skeyaudit
 	dolib.a libskey.a
@@ -74,8 +74,7 @@ src_install() {
 	prepallman
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	einfo "For an instroduction into using s/key authentication, take"
 	einfo "a look at the EXAMPLES section from the skey(1) manpage."
 	einfo
@@ -83,4 +82,3 @@ pkg_postinst()
 	einfo "syntax or source compatible with the previous version."
 	einfo "Please report any issues with skey using http://bugs.gentoo.org/"
 }
-
