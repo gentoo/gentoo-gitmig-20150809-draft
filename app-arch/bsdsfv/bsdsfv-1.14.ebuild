@@ -1,13 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/bsdsfv-1.14.ebuild,v 1.4 2003/06/29 20:34:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/bsdsfv-1.14.ebuild,v 1.5 2003/08/05 14:36:31 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="BSDSFV: All-in-one SFV checksum utility"
-SRC_URI="mirror://sourceforge/bsdsfv/${PN}.${PV}.tar.gz"
 HOMEPAGE="http://bsdsfv.sourceforge.net/"
+SRC_URI="mirror://sourceforge/bsdsfv/${PN}.${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/glibc"
