@@ -13,7 +13,7 @@ MD5 1bce86c66f42d204c0780faee28004d6 files/Config.h-0.60.5-cd 14299
 MD5 3d2f032de478151319a640c020fa492e files/busybox-1.00_pre8-amd64.patch 862
 MD5 9750d4004e6507d35f9aa67d2785fdd3 files/dodeps 2015
 MD5 607bbb12af0241b696df9dbfcd71d8c4 files/digest-busybox-1.00_pre8 70
-MD5 4a494db80b8a7be5fdf3d4cd78c8d40c files/digest-busybox-1.0_pre20040720 70
+MD5 1a57398f7824bb811bc887fd1a29d918 files/digest-busybox-1.0_pre20040720 70
 MD5 4e80b04a6c57cb7341be774b55b7229c files/busybox-cmdedit-sparc.diff 568
 MD5 9167897ed0b558e714a92f7e2d2fe534 files/busybox-1.00-pre3.config 8804
 MD5 2a162a491ef2162ee773767a8dbca4da files/digest-busybox-0.60.3-r1 513
