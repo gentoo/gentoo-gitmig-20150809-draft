@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# robbat2@gentoo.org (05 Aug 2003)
+# Work in progress, some limited testing going on before rolling out to
+# unstable. BIG WARNING: this may break your qmail at the moment!
+=net-mail/qmail-1.03-r11
+
 # foser@gentoo.org (04 Aug 2003)
 # Buggy version (#25776)
 =gnome-base/libbonoboui-2.2.3*
@@ -206,10 +211,6 @@ media-libs/gst-plugins-cdparanoia
 # net-www/opera-static is removed in favor of the unified
 # net-www/opera.
 net-www/opera-static
-
-# <g2boojum@gentoo.org> 28 May 2003
-# Masking >=openldap-2.1 until db4 stuff gets settled
->=net-nds/openldap-2.1
 
 # <tantive@gentoo.org> 26 May 2003
 # Masking bsddb3-4.1.3 as it depends on db-4
