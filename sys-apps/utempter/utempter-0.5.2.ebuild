@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.2.ebuild,v 1.7 2003/10/19 00:33:36 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.2.ebuild,v 1.8 2004/01/18 00:56:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="App that allows non-privileged apps to write utmp (login) info, which needs root access"
@@ -10,18 +10,18 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~mips ~arm amd64 ~ia64 ~ppc64"
 
 RDEPEND="virtual/glibc"
 
 
 src_compile() {
-	export RPM_OPT_FLAGS="$CFLAGS"
+	export RPM_OPT_FLAGS="${CFLAGS}"
 	make || die
 }
 
 src_install() {
-	make RPM_BUILD_ROOT="$D" install
+	make RPM_BUILD_ROOT="${D}" install
 	dobin utmp
 	dodoc COPYING
 }
