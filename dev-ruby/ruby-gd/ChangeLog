@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/ruby-gd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.1 2004/05/01 12:19:04 usata Exp $
+
+*ruby-gd-0.7.4 (01 May 2004)
+
+  01 May 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  ruby-gd-0.7.4.ebuild:
+  Initial import. Ebuild submitted by a5hr <a5hr@cibicc.org> at
+  GentooJP ebuild Project.
+
