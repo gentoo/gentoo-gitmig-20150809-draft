@@ -1,10 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta12-r1.ebuild,v 1.3 2003/07/18 05:15:32 gmsoft Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta12-r1.ebuild,v 1.4 2003/07/23 15:44:30 vapier Exp $ 
 
-DESCRIPTION="Core libraries for Xine movie player."
+# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
+# Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
+# at make time any way.
+# Brandon Low (29 Apr 2003)
+# inherit flag-o-matic
+# filter-flags "-maltivec -mabi=altivec"
+# replace-flags k6-3 i686
+# replace-flags k6-2 i686
+# replace-flags k6   i686
+
+#13 Jul 2003: drobbins: build failure using -j5 on a dual Xeon in 1_beta12
+MAKEOPTS="$MAKEOPTS -j1"
+
+DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
+SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ppc hppa"
+IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome"
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
@@ -24,32 +42,12 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/libsdl-1.1.5
 	>=media-libs/libfame-0.9.0
 	>=media-libs/xvid-0.9.0"
-
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
-IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome"
-
-SLOT="0"
-KEYWORDS="~x86 ppc hppa"
-
 S=${WORKDIR}/${PN}-${PV/_/-}
-SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}.tar.gz"
 
-# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-# Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
-# at make time any way.
-# Brandon Low (29 Apr 2003)
-# inherit flag-o-matic  || die "I lost my inheritance"
-# filter-flags "-maltivec -mabi=altivec"
-# replace-flags k6-3 i686
-# replace-flags k6-2 i686
-# replace-flags k6   i686
-
-#13 Jul 2003: drobbins: build failure using -j5 on a dual Xeon in 1_beta12
-MAKEOPTS="$MAKEOPTS -j1"
 src_compile() {
-
 	# Make sure that the older libraries are not installed (bug #15081).
 	if [ -f /usr/lib/libxine.so.0 ]
 	then
@@ -107,7 +105,6 @@ src_compile() {
 }
 
 src_install() {
-	
 	einstall || die "Install failed"
 
 	# Xine's makefiles install some file incorrectly. (Gentoo bug #8583, #16112).
@@ -117,11 +114,9 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	cd ${S}/doc
 	dodoc dataflow.dia README*
-
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "Please note, a new version of xine-lib has been installed,"
 	einfo "for library consistency you need to unmerge old versions"
@@ -134,5 +129,4 @@ pkg_postinst() {
 	einfo "Also make sure to remove your ~/.xine if upgrading from"
 	einfo "a previous version."
 	einfo
-
 }
