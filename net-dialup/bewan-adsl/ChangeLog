@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/bewan-adsl
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.4 2004/12/14 21:20:09 mrness Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.5 2005/02/25 06:40:35 mrness Exp $
+
+*bewan-adsl-0.9.0 (25 Feb 2005)
+
+  25 Feb 2005; Alin Nastac <mrness@gentoo.org> +bewan-adsl-0.9.0.ebuild:
+  Version bump.
 
   14 Dec 2004; Alin Nastac <mrness@gentoo.org>
   +files/bewan-adsl-kill-timeout.patch, bewan-adsl-0.8.7.ebuild:

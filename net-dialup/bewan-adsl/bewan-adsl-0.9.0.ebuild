@@ -1,17 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.8.7.ebuild,v 1.5 2005/02/25 06:40:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.0.ebuild,v 1.1 2005/02/25 06:40:35 mrness Exp $
 
 inherit eutils linux-mod
 
 DESCRIPTION="Bewan ADSL PCI&USB st driver"
 SRC_URI="http://www.bewan.com/bewan/drivers/bast-${PV}.tgz"
 HOMEPAGE="http://www.bewan.com/"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="usb doc"
+
 DEPEND="virtual/linux-sources"
+RDEPEND=""
 
 S="${WORKDIR}/unicorn"
 
@@ -31,12 +34,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
-	#As of Linux 2.6.9, timeout is no longer in the URB structure, see:
-	#http://linux.bkbits.net:8080/linux-2.6/cset@1.1832.8.20
-	if [ ${KV_MINOR} -ge 6 ] && [ ${KV_PATCH} -ge 9 ]; then
-		epatch ${FILESDIR}/bewan-adsl-kill-timeout.patch
-	fi
 
 	# Fix up broken Makefiles
 	convert_to_m ${PCI_S}/Makefile

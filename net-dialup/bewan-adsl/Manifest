@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 354bbd631742846e2b856921c4ca5165 ChangeLog 947
-MD5 ee9027e27ff203a68109c02d09fc8dc6 bewan-adsl-0.8.7.ebuild 2353
+MD5 d0efc1235be91ab4c58bddd5f1b38b59 bewan-adsl-0.8.7.ebuild 2353
+MD5 bd16ca2d11981fbdae9a990f3af11ff5 bewan-adsl-0.9.0.ebuild 2127
+MD5 cab4920134945b23afc63871d177e72b ChangeLog 1070
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 96c16fb5ea4312bc3e4b2300e0a7ce69 files/digest-bewan-adsl-0.8.7 59
 MD5 0572b020603885cca9caf29f664e2f44 files/bewan-adsl-kill-timeout.patch 1093
+MD5 96c16fb5ea4312bc3e4b2300e0a7ce69 files/digest-bewan-adsl-0.8.7 59
+MD5 d93f0e970aec5e90512811f43cd55c48 files/digest-bewan-adsl-0.9.0 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBv1kejtv59x0+BrURAn/TAKDve9ZvvnM3I3V9zWZSgrp+5vxjCACfYhsj
-bozMLZZCkAIJ0qiStNDc9Dc=
-=qNuM
+iD8DBQFCHsh2jiC39V7gKu0RAqkoAKDHzoKqeE2wxD8ekY1PhTz+d5UZjACgoRX6
+HW4rORLpZ+WNHm2RurEQjgE=
+=K4lW
 -----END PGP SIGNATURE-----
