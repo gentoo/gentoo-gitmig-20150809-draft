@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.2 2004/10/08 04:53:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.3 2004/10/10 03:29:28 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -89,7 +89,9 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "install problem"
 
-#	dodir /etc/default /etc/skel
+	# lock down setuid perms #47208
+	fperms go-r /bin/su /usr/bin/ch{fn,sh,age} \
+		/usr/bin/{expiry,newgrp,passwd,gpasswd} || die "fperms"
 
 	# Remove libshadow and libmisc; see bug 37725 and the following
 	# comment from shadow's README.linux:
@@ -139,16 +141,13 @@ src_install() {
 		newins shadow groupadd
 	fi
 
+	# Remove manpages that are handled by other packages
+	cd ${D}/usr/share/man
+	find \
+		-name 'id.1' \
+		-o -name 'passwd.5' \
+		-exec rm {} \;
 	cd ${S}
-	# The manpage install is beyond my comprehension, and
-	# also broken. Just do it over.
-	rm -rf ${D}/usr/share/man/*
-
-	rm -f man/id.1 man/getspnam.3 man/passwd.5
-	for x in man/*.[0-9]
-	do
-		[ -f ${x} ] && doman ${x}
-	done
 
 	if ! use pam; then
 		# Dont install the manpage, since we dont use
