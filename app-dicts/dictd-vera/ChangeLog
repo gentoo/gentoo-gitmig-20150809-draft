@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/dictd-vera
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.7 2004/02/09 07:20:19 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.8 2004/03/06 12:02:43 liquidx Exp $
+
+*dictd-vera-1.12 (06 Mar 2004)
+
+  06 Mar 2004; Alastair Tse <liquidx@gentoo.org> dictd-vera-1.12.ebuild:
+  version bump. added debian patches. thanks to José Romildo Malaquias
+  <romildo@uber.com.br> (#38305)
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> dictd-vera-1.9_pre.ebuild:
   added amd64 keyword.
