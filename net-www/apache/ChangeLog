@@ -1,6 +1,17 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.74 2003/10/30 15:44:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.75 2003/10/30 17:51:18 woodchip Exp $
+
+*apache-2.0.48 (30 Oct 2003)
+
+  30 Oct 2003; Donny Davies <woodchip@gentoo.org> apache-2.0.48.ebuild,
+  files/apache-2.0.48-gentoo.diff, files/2.0.40/40_mod_ssl.conf,
+  files/2.0.40/apache2-builtin-mods, files/2.0.40/apache2.initd,
+  files/2.0.40/vhosts.con, files/apache.rc6:
+  Bump for security fixes.  Remove dupe 'mod_alias' from apache2-builtin-mods.
+  Re-diff our patch; added two mod_ssl fixes from Rawhide and fix hardcoded
+  path to /usr/sbin/suexec2.  Fix/close #31427, #32035, #31787, #31503, #30161.
+  Added comments to the patchfile (please maintain these).
 
   30 Oct 2003; Jason Wever <weeve@gentoo.org> apache-2.0.47.ebuild:
   Marked stable for sparc.
