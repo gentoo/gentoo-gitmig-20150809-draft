@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/jot
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/ChangeLog,v 1.1 2003/04/22 21:11:33 avenj Exp $
+
+*jot-0.9 (22 Apr 2003)
+
+   22 Apr 2003; Jon Portnoy <avenj@gentoo.org> jot-0.9.ebuild :
+   Initial import of jot. Ebuild submitted in bug #19750 by
+   Ryan Shaw <ryan.shaw@stanfordalumni.org>.
