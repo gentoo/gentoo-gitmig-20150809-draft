@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.28 2004/10/12 19:21:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.29 2004/10/12 19:23:54 axxo Exp $
+
+  12 Oct 2004; Thomas Matthijs <axxo@gentoo.org> -jikes-1.22.ebuild:
+  removing broken version
 
 *jikes-1.22-r1 (12 Oct 2004)
 
