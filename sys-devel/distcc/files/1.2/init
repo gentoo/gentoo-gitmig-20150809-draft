@@ -1,8 +1,5 @@
 #!/sbin/runscript
 
-# get our configuration options
-source /etc/conf.d/distccd
-
 depend() {
 	need net
 }
@@ -15,19 +12,13 @@ start() {
 	        --startas ${DISTCCD_EXEC} \
 		-c distcc --pidfile ${DISTCCD_PIDFILE} \
 		-- --pid-file ${DISTCCD_PIDFILE} ${DISTCCD_OPTS}
-	eend $? "Failed to Start distccd"
+	eend $?
 }
 
 stop() {
 	ebegin "Stopping distccd"
 	start-stop-daemon --stop --quiet --pidfile "${DISTCCD_PIDFILE}"
 	rm -f "${DISTCCD_PIDFILE}"
-	eend $? "Failed to Stop distccd"
+	eend $?
 }
 
-restart() {
-	ebegin "Restarting distccd"
-	svc_stop
-	svc_start
-	eend $? "Failed to Restart distccd"
-}
