@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.4 2004/10/09 17:13:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.5 2004/10/13 09:08:22 usata Exp $
+
+  13 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> w3m-0.5.1-r2.ebuild:
+  Removed async for the moment; bug #67082.
 
 *w3m-0.5.1-r2 (10 Oct 2004)
 

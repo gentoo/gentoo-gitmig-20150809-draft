@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r2.ebuild,v 1.1 2004/10/09 17:13:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r2.ebuild,v 1.2 2004/10/13 09:08:22 usata Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
 LICENSE="w3m"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64"
-IUSE="X gtk gtk2 imlib imlib2 xface ssl migemo gpm cjk nls lynxkeymap async"
+IUSE="X gtk gtk2 imlib imlib2 xface ssl migemo gpm cjk nls lynxkeymap"
 #IUSE="canna unicode"
 
 # canna? ( app-i18n/canna )
@@ -48,9 +48,11 @@ src_unpack() {
 	cd ${S}
 	epatch ${DISTDIR}/${P}-cvs1.938.diff.gz
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
-	if use async ; then
-		epatch ${DISTDIR}/${P}-async-1.diff.gz
-	fi
+
+	#if use async ; then
+	#	epatch ${DISTDIR}/${P}-async-1.diff.gz
+	#fi
+
 	#epatch ${DISTDIR}/${P}_256-005.patch.gz
 	#use canna && epatch ${DISTDIR}/w3m-cvs-1.914-canna.patch
 }
