@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.14 2005/01/30 01:38:24 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.15 2005/01/31 17:26:03 eradicator Exp $
+
+  31 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  bio2jack-0.4.ebuild:
+  Stable amd64, sparc, x86.
 
   29 Jan 2005; Eric Shattow <jnc@gentoo.org> bio2jack-0.3-r1.ebuild:
   closes bug #74980
