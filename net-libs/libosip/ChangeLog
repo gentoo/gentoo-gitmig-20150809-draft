@@ -1,6 +1,18 @@
 # ChangeLog for net-libs/libosip
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.5 2003/05/04 18:20:25 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.6 2004/03/14 16:09:20 stkn Exp $
+
+*libosip-2.0.6 (14 Mar 2004)
+
+  14 Mar 2004; Stefan Knoblich <stkn@gentoo.org> libosip-2.0.6.ebuild:
+  Initial import of oSIP version 2 ebuild.
+
+*libosip-0.9.7 (14 Mar 2004)
+
+  14 Mar 2004; Stefan Knoblich <stkn@gentoo.org> libosip-0.8.8-r1.ebuild,
+  libosip-0.8.8.ebuild, libosip-0.9.6.ebuild, libosip-0.9.7.ebuild,
+  metadata.xml:
+  Version bump and assigned to voip herd.
 
 *libosip-0.9.6 (04 May 2003)
 
