@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.30 2004/11/03 09:42:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.31 2004/11/06 14:47:07 pylon Exp $
+
+  06 Nov 2004; Lars Weiler <pylon@gentoo.org> speex-1.1.6.ebuild:
+  Stable on ppc.
 
   03 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -speex-1.1.4.ebuild:
   Removing 1.1.4 because of bug #69743.
