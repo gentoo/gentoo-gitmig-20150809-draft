@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/epstool-3.02.ebuild,v 1.3 2003/12/09 17:42:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/epstool-3.02.ebuild,v 1.4 2004/05/03 12:42:17 kugelfang Exp $
 
 DESCRIPTION="Creates or extracts preview images in EPS files, fixes bounding boxes,converts to bitmaps."
 HOMEPAGE="http://www.cs.wisc.edu/~ghost/gsview/epstool.htm"
