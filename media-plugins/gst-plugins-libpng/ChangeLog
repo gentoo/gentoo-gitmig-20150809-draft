@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-libpng
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/ChangeLog,v 1.37 2005/04/05 16:53:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/ChangeLog,v 1.38 2005/04/06 15:24:21 zaheerm Exp $
+
+  06 Apr 2005; <zaheerm@gentoo.org>  -gst-plugins-libpng-0.6.4.ebuild:
+  Removing gstreamer 0.6.x
 
   05 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
   gst-plugins-libpng-0.8.7.ebuild:
