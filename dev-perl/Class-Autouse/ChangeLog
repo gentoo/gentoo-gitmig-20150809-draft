@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Class-Autouse
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.1 2003/06/02 20:56:20 mcummings Exp $
+
+*Class-Autouse-0.7 (02 Jun 2003)
+
+  02 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Class-Autouse-0.7.ebuild:
+  Fills bug 21791
+
