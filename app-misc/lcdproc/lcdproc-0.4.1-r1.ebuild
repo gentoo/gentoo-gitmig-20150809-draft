@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.1-r1.ebuild,v 1.11 2002/11/12 15:40:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.1-r1.ebuild,v 1.12 2002/11/30 21:09:30 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="lcdproc - displays system status on Matrix-Orbital 20x4 LCD on a serial port."
 SRC_URI="http://lcdproc.omnipotent.net/${P}.tar.gz"
 HOMEPAGE="http://lcdproc.omnipotent.net/"
@@ -14,7 +13,7 @@ KEYWORDS="x86"
 DEPEND=">=sys-apps/baselayout-1.6.4"
 
 src_compile() {
-	econf || die
+	econf
 	make || die
 }
 
