@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cd-discid
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/ChangeLog,v 1.6 2003/09/21 21:14:55 drobbins Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/ChangeLog,v 1.7 2004/02/10 07:07:46 augustus Exp $
+
+  10 Feb 2004; <augustus@gentoo.org> cd-discid-0.8.ebuild:
+  Not much to it.  Works on amd64.  ~amd64 added.
 
 *cd-discid-0.8 (21 Sep 2003)
 
