@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.7 2004/03/26 20:20:53 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.8 2004/03/31 00:30:57 twp Exp $
+
+  31 Mar 2004; Tom Payne <twp@gentoo.oth> ion2-20040211-r2.ebuild :
+  Added sys-devel/libtool-1.4.3 dependency. Bug # 46156.
 
   26 Mar 2004; Tom Payne <twp@gentoo.org> ion2-20040211-r2.ebuild, ion2-20040211-r1.ebuild :
   Marked stable on x86. Bug # 45739. Removed old version.
