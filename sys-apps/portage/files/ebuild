@@ -82,6 +82,11 @@ gzunpack()
 	tar xzf $1 
     }
 
+pkunpack()
+    {
+	unzip $i
+    }
+
 pmake() 
     { 
 	make ${MAKEOPTS} MAKE="make ${MAKEOPTS}" $* 
@@ -279,6 +284,12 @@ unpack() {
 		tbz2)
 	    		bz2unpack ${DISTDIR}/${x}
 	    		;;
+		zip)
+			pkunpack ${DISTDIR}/${x}
+			;;
+		ZIP)
+			pkunpack ${DISTDIR}/${x}
+			;;
         	*)
             		echo "Archive format not recognized."
 	    		exit
@@ -1017,26 +1028,22 @@ dyn_unmerge() {
 
 
 dyn_spec() {
+    
+    tar czf /usr/src/redhat/SOURCES/${PF}.tar.gz ${O}/${PF}.ebuild ${O}/files
 
-    tar czf /usr/src/redhat/SOURCES/${P}.tar.gz ${P}.* files
-
-    local V
-
-    V=${P#${O##*/}*}
-    V=${V/[!digit]/}
-    V=${V/-/.}
-
-    cat <<__END1__ > ${P}.spec
+    cat <<__END1__ > ${PF}.spec
 Summary: ${DESCRIPTION}
-Name: ${O##*/}
-Version: ${V}
-Release: 1
+Name: ${PN}
+Version: ${PV}
+Release: ${PR}
 Copyright: GPL
 Group: portage/${CATEGORY}
-Source: ${P}.tar.gz
+Source: ${PF}.tar.gz
 Buildroot: ${D}
 %description
 ${DESCRIPTION}
+
+${HOMEPAGE}
 
 %prep
 %setup -c
@@ -1054,16 +1061,9 @@ __END1__
 }
 dyn_rpm () {
     dyn_spec
-    rpm -bb ${P}.spec
-    local V
+    rpm -bb ${PF}.spec
 
-    V=${P#${O##*/}*}
-    V=${V/[!digit]/}
-    V=${V/-/.}
-    local W
-    W="portage/${CATEGORY}"
-    
-    install -D /usr/src/redhat/RPMS/i386/${O##*/}-${V}-1.i386.rpm ${RPMDIR}/${W}/${O##*/}-${V}.rpm
+    install -D /usr/src/redhat/RPMS/i386/${PN}-${PV}-${PR}.i386.rpm ${RPMDIR}/${CATEGORY}/${PN}-${PV}-${PR}.rpm
 }
 
 dyn_help() {
