@@ -1,17 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d1dd329ad5341061d0ccf2b6306c081a mhash-0.9.1.ebuild 993
-MD5 0334d0d69ce7df4fb08d9a5d5a1aa450 ChangeLog 3225
+MD5 c2898e702ba9d02702277c8be7512abf mhash-0.9.1.ebuild 989
+MD5 673bc7f641679a4d78b461c5e370dd84 ChangeLog 3312
 MD5 00136355633cacf55c75e0942edce4fb mhash-0.9.2.ebuild 989
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 b82524ff78b486ef79cccd400ad79348 files/digest-mhash-0.9.1 63
 MD5 fb060fa52ccd63f4970aa3099a43c235 files/digest-mhash-0.9.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFCEJ2iPpIsIjIzwiwRApL6AJ9GQSyPKmSvlqlCgprKzAjJrUJrUACg1fLu
-CYiXRXDjqXvacluM9HH2ckc=
-=tfev
------END PGP SIGNATURE-----
