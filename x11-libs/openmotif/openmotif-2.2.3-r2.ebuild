@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r2.ebuild,v 1.2 2005/02/16 14:08:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r2.ebuild,v 1.3 2005/02/21 18:35:28 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -72,15 +72,12 @@ src_compile() {
 	# get around some LANG problems in make (#15119)
 	unset LANG
 
-	# fails to copmile with -jx
-	export MAKEOPTS="${MAKEOPTS} -j1"
-
 	# bug #80421
 	filter-flags -ftracer
 
 	econf --with-x || die "configuration failed"
 
-	emake || die "make failed, if you have lesstif installed removed it, compile openmotif and recompile lesstif"
+	emake -j1 || die "make failed, if you have lesstif installed removed it, compile openmotif and recompile lesstif"
 }
 
 
