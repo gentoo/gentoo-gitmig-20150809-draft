@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_rc1.ebuild,v 1.3 2004/08/07 17:52:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_rc2.ebuild,v 1.1 2004/08/10 14:49:31 caleb Exp $
 
 inherit kde eutils
 set-kdedir 3.3
 
-MY_PV=3.3.0-rc1
-S=${WORKDIR}/${PN}-${MY_PV/-rc1//}
+MY_PV=3.3.0-rc2
+S=${WORKDIR}/${PN}-${MY_PV/-rc2//}
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http//www.kde.org/"
-SRC_URI="mirror://kde/unstable/${MY_PV/-rc1/rc1/}/src/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://kde/unstable/${MY_PV/-rc2/rc2/}/src/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
@@ -27,7 +27,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 	>=dev-libs/libpcre-4.2
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	alsa? ( media-libs/alsa-lib virtual/alsa )
-	arts? ( ~kde-base/arts-1.3.0_rc1 )
+	arts? ( ~kde-base/arts-1.3.0_rc2 )
 	cups? ( >=net-print/cups-1.1.19 )
 	ldap? ( >=net-nds/openldap-2.1.26 )
 	tiff? ( media-libs/tiff )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.3.0_rc1.ebuild,v 1.1 2004/08/06 18:31:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.3.0_rc2.ebuild,v 1.1 2004/08/10 14:52:48 caleb Exp $
 
 inherit kde-dist
 
