@@ -1,5 +1,5 @@
 MD5 85c6fc83d51be0fbb4f8205accbaff59 gcc-3.4.0.tar.bz2 27258902
+MD5 a3cc31720c6322efd1053e202e8f90e9 gcc-3.4.0-branch-update-20040519.patch.bz2 927608
 MD5 6231e229fb4cdf27f83c4b480700e6e3 protector-3.4-1.tar.gz 30975
 MD5 59888ad7dd14f022f2ee461a894da531 gcc-3.4.0-manpages.tar.bz2 616854
-MD5 b787401ba46cc16fb3bc7894f86d06ef gcc-3.4.0-piepatches-v8.7.4.tar.bz2 8485
-MD5 fd6ef77953886d6ff74410188faafbb7 gcc-3.3.3-v8.7.0-gcc-ssp-exclusion.patch.bz2 316
+MD5 aac42693151bf45c14508f99cd795730 gcc-3.4.0-piepatches-v8.7.6.tar.bz2 14674

@@ -1,10 +1,10 @@
---- gcc/version.c.old	2004-04-21 21:55:54.128578312 +0100
-+++ gcc/version.c	2004-04-21 21:56:35.749251008 +0100
+--- gcc/version.c.old	2004-05-20 05:20:46.352804640 -0400
++++ gcc/version.c	2004-05-20 05:23:53.833303272 -0400
 @@ -5,7 +5,7 @@
     please modify this string to indicate that, e.g. by putting your
     organization's name in parentheses at the end of the string.  */
  
--const char version_string[] = "3.4.0";
+-const char version_string[] = "3.4.1 20040519 (prerelease)";
 +const char version_string[] = "3.4.0 @GENTOO@";
  
  /* This is the location of the online document giving instructions for

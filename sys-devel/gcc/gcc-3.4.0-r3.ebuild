@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r2.ebuild,v 1.4 2004/05/18 00:53:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r3.ebuild,v 1.1 2004/05/19 13:13:43 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -60,7 +60,7 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # PIE support
-PIE_VER="8.7.4"
+PIE_VER="8.7.6"
 
 # ProPolice version
 PP_VER="3_4"
@@ -76,9 +76,7 @@ SNAPSHOT=
 
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
-
-#BRANCH_UPDATE="20021208"
-BRANCH_UPDATE=
+BRANCH_UPDATE=20040519
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -94,7 +92,7 @@ then
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
 		SRC_URI="${SRC_URI}
-		         mirror://gentoo/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+		         http://dev.gentoo.org/~lv/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 	fi
 else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
@@ -112,14 +110,12 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-manpages.tar.bz2"
 
 # bug #6148 - the bounds checking patch interferes with gcc.c
-# PaX Team, Peter S. Mazinger, pappy, solar, swtaylor, tseng.
 
 # just till the mirrors update...
 #PIE_BASE_URI="mirror://gentoo/"
 PIE_BASE_URI="http://dev.gentoo.org/~lv/"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
-SSP_EXCLUSION_PATCH="gcc-3.3.3-v8.7.0-gcc-ssp-exclusion.patch.bz2"
-SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_CORE} ${PIE_BASE_URI}${SSP_EXCLUSION_PATCH}"
+SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_CORE}"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extentions"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -298,12 +294,6 @@ update_gcc_for_libc_ssp() {
 }
 
 src_unpack() {
-	# I think it's a little messed up to allow people to compile just to have
-	# it fail right near the end, so lets die right away when parts that are
-	# known to be broken are going to be compiled.
-	# Travis Tilley <lv@gentoo.org>
-	use amd64 && use multilib && die "multilib support will not compile yet with gcc 3.4.0. re-emerge with USE=-multilib"
-
 	local release_version="Gentoo Linux ${PVR}"
 
 	ewarn "GCC 3.4 support in Gentoo is still in an early experimental stage."
@@ -314,8 +304,7 @@ src_unpack() {
 	ewarn "of software, emits strange and confusing error messages, frustrates"
 	ewarn "you and your porting efforts, eats your cat, humps your leg, or pees"
 	ewarn "on your rug. You have been warned!"
-	ewarn "NOTE: the piessp patch isnt as complete as the 3.3.3 version on archs"
-	ewarn "other than x86 and amd64!"
+	ewarn "NOTE: the piessp patch isnt as complete as the 3.3.3 version"
 
 	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
 	then
@@ -380,15 +369,19 @@ src_unpack() {
 		epatch ${FILESDIR}/gcc331_use_multilib.amd64.patch
 	fi
 
-	#if [ -n "${PIE_VER}" ]
-	#then
+	if [ -n "${PIE_VER}" ]
+	then
+		# broken as of the moment...
+		mkdir ${WORKDIR}/piepatch/skip
+		mv ${WORKDIR}/piepatch/upstream/*arm* ${WORKDIR}/piepatch/skip
+		mv ${WORKDIR}/piepatch/def/*arm* ${WORKDIR}/piepatch/skip
 		# corrects startfile/endfile selection and shared/static/pie flag usage
 		epatch ${WORKDIR}/piepatch/upstream
 		# adds non-default pie support (for now only rs6000)
 		epatch ${WORKDIR}/piepatch/nondef
 		# adds default pie support for all archs less rs6000 if DEFAULT_PIE[_SSP] is defined
 		epatch ${WORKDIR}/piepatch/def
-	#fi
+	fi
 
 	# non-default SSP support.
 	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ]
@@ -400,6 +393,7 @@ src_unpack() {
 		cp ${WORKDIR}/gcc/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 		cp -R ${WORKDIR}/gcc/testsuite/* ${WORKDIR}/${P}/gcc/testsuite/ || die "testsuite not found"
 		epatch ${FILESDIR}/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch
+		epatch ${WORKDIR}/protectonly.dif
 
 		#use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
 
@@ -410,19 +404,9 @@ src_unpack() {
 
 	cd ${WORKDIR}/${P}
 
-	# ARM was having issues with static linking as the spec file
-	# calls for crtbeginT.o vs crtbeginS.o. SpanKY looked through
-	# the gcc/config/arm/t-* files, it's appears that it's not meant
-	# to build crtbeginT.o (May 2 2004)
-	# Testing arm again (May 3 2004)
-	# solved hopefully as of pie/ssp v8.7.1
-
-	epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
-
 	release_version="${release_version}, pie-${PIE_VER}"
-	if  ( use x86 || use amd64 && use hardened )
+	if  ( use hardened && ( use x86 || use sparc || use amd64 ) )
 	then
-		# [ "${ARCH}" != "sparc" && "${ARCH}" != "ppc64" && "${ARCH}" != "s390" ]
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
@@ -431,16 +415,14 @@ src_unpack() {
 		release_version="${release_version/Gentoo/Gentoo Hardened}"
 	fi
 
-	version_patch ${FILESDIR}/3.4.0/gcc-${PV}-gentoo-branding.patch \
+	# corrects text relocations in libiberty.a
+	use pic && epatch ${FILESDIR}/3.4.0/gcc-3.4-libiberty-pic.patch
+
+	version_patch ${FILESDIR}/3.4.0/gcc-${PV}-r3-gentoo-branding.patch \
 		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
 
 	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
 	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
-
-	# apps like openoffice break without this
-	cd ${S} ; epatch ${FILESDIR}/3.4.0/gcc-3.4.0-fno-for-scope.patch
-	# needed on ppc/ppc64
-	cd ${S} ; epatch ${FILESDIR}/3.3.3/gcc333_pre20040408-stack-size.patch
 
 	# Install our pre generated manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
@@ -524,19 +506,18 @@ src_compile() {
 	if ! use uclibc
 	then
 		# it's getting close to a time where we are going to need USE=glibc, uclibc, bsdlibc -solar
-		myconf="${myconf} --enable-__cxa_atexit --enable-clocale=generic"
+		myconf="${myconf} --enable-__cxa_atexit --enable-clocale=gnu"
 	else
-		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions"
+		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions --enable-clocale=ieee_1003.1-2001"
 	fi
 
-	# Default arch support
-	use amd64 && myconf="${myconf} --with-arch=k8"
+	# Default arch support disabled for now...
+	#use amd64 && myconf="${myconf} --with-arch=k8"
 	#use s390 && myconf="${myconf} --with-arch=nofreakingclue"
 	#use x86 && myconf="${myconf} --with-arch=i586"
 	#use mips && myconf="${myconf} --with-arch=mips3"
 
 	do_filter_flags
-	use hardened && append-flags -fPIC
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
 	einfo "GCJFLAGS=\"${GCJFLAGS}\""
