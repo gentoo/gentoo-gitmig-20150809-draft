@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.14 2002/11/28 16:25:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.15 2002/11/29 22:28:50 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -68,12 +68,12 @@ dogameslib.a() { gameswrapper lib.a $@; }
 dogameslib.so() { gameswrapper lib.so $@; }
 
 gamesowners() { chown ${GAMES_USER}.${GAMES_GROUP} $@; }
-gamesperms() { chmod ug+r,o-rwx $@; }
+gamesperms() { chmod u+rw,g+r-w,o-rwx $@; }
 prepgamesdirs() {
 	for dir in ${GAMES_PREFIX} ${GAMES_PREFIX_OPT} ${GAMES_DATADIR} ${GAMES_SYSCONFDIR} \
-			${GAMES_STATEDIR} ${GAMES_LIBDIR} ${GAMES_BINDIR} ; do
+			${GAMES_STATEDIR} ${GAMES_LIBDIR} ${GAMES_BINDIR} $@ ; do
 		(
-			chown -R ${GAMES_USER}.${GAMES_GROUP} ${D}/${dir}
+			gamesowners -R ${D}/${dir}
 			find ${D}/${dir} -type d -print0 | xargs --null chmod 750
 			find ${D}/${dir} -type f -print0 | xargs --null chmod o-rwx
 		) >& /dev/null
