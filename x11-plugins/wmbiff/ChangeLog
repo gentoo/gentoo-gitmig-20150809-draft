@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.11 2004/06/24 23:05:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.12 2004/07/25 20:50:51 s4t4n Exp $
+
+*wmbiff-0.4.25 (25 Jul 2004)
+
+  25 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmbiff-0.4.25.ebuild:
+  Version bump, closes #57965. Update ebuild not to install the gnutls/libgcrypt
+  patch as the issue has been solved upstream. Also install a sample .wmbiffrc file.
+  wmbiff-0.4.15.ebuild, wmbiff-0.4.17.ebuild:
+  Wipe out old ebuilds.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> wmbiff-0.4.15.ebuild:
   Add die following econf for bug 48950
