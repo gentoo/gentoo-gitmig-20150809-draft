@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.13 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.14 2003/11/06 20:27:05 robbat2 Exp $
 
 inherit perl-module
 
@@ -44,7 +44,7 @@ src_install() {
 	# the config file..
 	insinto /etc/apache/conf/addon-modules
 	doins htdocs/mysqltool.conf
-	fowners apache.apache /etc/apache/conf/addon-modules/mysqltool.conf
+	fowners apache:apache /etc/apache/conf/addon-modules/mysqltool.conf
 	fperms 0600 /etc/apache/conf/addon-modules/mysqltool.conf
 
 	# now fix its location in the main cgi..

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.5 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.6 2003/11/06 20:27:05 robbat2 Exp $
 
 inherit perl-module
 
@@ -66,7 +66,7 @@ src_install() {
 	insinto ${__apache_modules_conf_dir__}
 	cp ${S}/htdocs/mysqltool.conf ${S}/htdocs/mysqltool.pl
 	doins htdocs/mysqltool.pl
-	fowners apache.apache ${__apache_modules_conf_dir__}/mysqltool.pl
+	fowners apache:apache ${__apache_modules_conf_dir__}/mysqltool.pl
 	fperms 0600 ${__apache_modules_conf_dir__}/mysqltool.pl
 	m4 -D__APACHE_SERVER_ROOT__=${__apache_server_root__} -D__APACHE_DOCUMENT_ROOT__=${__apache_document_root__} -D__APACHE_MODULES_CONF_DIR__=${__apache_modules_conf_dir__} ${apacheconfbase} >${D}/${__apache_modules_conf_dir__}/`basename ${apacheconfbase} .m4`
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.13 2003/05/12 16:08:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.14 2003/11/06 20:27:05 robbat2 Exp $
+
+  06 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> mysqltool-0.95-r1.ebuild,
+  mysqltool-0.95-r2.ebuild:
+  : instead of . for chown
 
 *mysqltool-0.95-r2 (04 May 2003)
   
