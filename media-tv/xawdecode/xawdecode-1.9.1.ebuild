@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.8.2.ebuild,v 1.6 2004/08/29 10:57:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.9.1.ebuild,v 1.1 2004/08/29 10:57:14 mholzer Exp $
 
-inherit eutils
-
-IUSE="alsa jpeg encode ffmpeg xvid lirc xosd"
+IUSE="alsa jpeg encode ffmpeg xvid lirc xosd xinerama"
 
 DESCRIPTION="TV viewer with support for AVI recording and plugins"
 HOMEPAGE="http://xawdecode.sourceforge.net/"
@@ -19,7 +17,7 @@ RDEPEND="virtual/x11
 	|| ( x11-libs/neXtaw x11-libs/Xaw3d )
 	x86? ( >=media-libs/divx4linux-20030428 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
-	xvid? ( >=media-libs/xvid-0.9.1 )
+	xvid? ( =media-libs/xvid-1* )
 	encode? ( >=media-sound/lame-3.93 )
 	jpeg? ( media-libs/jpeg )
 	lirc? ( app-misc/lirc )
@@ -31,32 +29,30 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-configure-alsa-fixes.patch
+	cp ${S}/configure ${S}/configure.orig
+	sed -e 's:XVID_INIT_PARAM:xvid_gbl_init_t:' \
+		< ${S}/configure.orig > ${S}/configure
 }
 
 src_compile() {
-	local myconf
-
-	use x86 \
-		&& myconf="${myconf} --enable-divx4linux" \
-		|| myconf="${myconf} --disable-divx4linux"
-
 	econf \
+		`use_enable x86 divx4linux` \
 		`use_enable alsa` \
 		`use_enable jpeg` \
 		`use_enable lirc` \
 		`use_enable ffmpeg` \
 		`use_enable xvid` \
 		`use_enable xosd` \
-		${myconf} || die "Configuration failed."
+		`use_enable xinerama` \
+		--disable-cpu-detection \
+		|| die "Configuration failed."
 
-	emake || die "Compilation failed."
+	emake OPT="${CFLAGS}" PERF_FLAGS="${CFLAGS}" || die "Compilation failed."
 }
 
 src_install() {
 
-	sed -i "/^SUBDIRS=/s:font::" Makefile
+	sed -i "/^SUBDIRS/s:font::" Makefile
 
 	gzip font/led-fixed.pcf
 	insinto /usr/X11R6/lib/X11/fonts/misc
@@ -69,9 +65,11 @@ src_install() {
 		ROOT=${D} || die "Installation failed."
 
 	dodoc COPYING ChangeLog AUTHORS INSTALL
-	dodoc FAQ* README.* lisez-moi* libavc-rate-control.txt
+	dodoc FAQ* README.* TODO lisez-moi* libavc-rate-control.txt
 	dodoc xawdecoderc.sample lircrc.*.sample
 
+	docinto alevt
+	dodoc alevt/README alevt/ReadmeGR alevt/CHANGELOG alevt/COPYRIGHT
 }
 
 pkg_postinst() {
