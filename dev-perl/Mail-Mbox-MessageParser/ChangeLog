@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Mail-Mbox-MessageParser
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Mbox-MessageParser/ChangeLog,v 1.1 2004/08/06 01:25:40 mcummings Exp $
+
+*Mail-Mbox-MessageParser-1.20 (05 Aug 2004)
+
+  05 Aug 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Mail-Mbox-MessageParser-1.20.ebuild:
+  Initial import, original ebuild submitted by mholzer in bug 33944.
+
