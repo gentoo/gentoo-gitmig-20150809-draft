@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/palmos-sdk
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/ChangeLog,v 1.1 2003/12/25 19:19:25 plasmaroo Exp $
+
+*palmos-sdk-5.0-r3 (25 Dec 2003)
+
+  25 Dec 2003; <plasmaroo@gentoo.org> palmos-sdk-3.5.ebuild,
+  palmos-sdk-4.0.ebuild, palmos-sdk-5.0-r3.ebuild:
+  Initial commit. These ebuilds based on those contributed by Caleb 
+  Shay, bug #16998.
