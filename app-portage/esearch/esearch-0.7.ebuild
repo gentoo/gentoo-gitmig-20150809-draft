@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.ebuild,v 1.2 2004/10/13 23:26:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.ebuild,v 1.3 2004/11/10 07:44:45 mr_bones_ Exp $
 
 DESCRIPTION="Replacement for 'emerge --search' with search-index"
 HOMEPAGE="http://david-peter.de/esearch.html"
@@ -12,22 +12,20 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64 ~ppc64 ~ppc-maco
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2
-		 >=sys-apps/portage-2.0.50"
+	>=sys-apps/portage-2.0.50"
 
 src_install() {
-	dodir /usr/bin/
-	dodir /usr/sbin/
-	dodir /usr/share/man/it
+	dodir /usr/bin/ /usr/sbin/
 
 	exeinto /usr/lib/esearch
-	doexe eupdatedb.py esearch.py esync.py common.py || die
+	doexe eupdatedb.py esearch.py esync.py common.py || die "doexe failed"
 
 	dosym /usr/lib/esearch/esearch.py /usr/bin/esearch
 	dosym /usr/lib/esearch/eupdatedb.py /usr/sbin/eupdatedb
 	dosym /usr/lib/esearch/esync.py /usr/sbin/esync
 
 	doman en/{esearch,eupdatedb,esync}.1
-	dodoc ChangeLog ${FILESDIR}/eupdatedb.cron
+	dodoc ChangeLog "${FILESDIR}/eupdatedb.cron"
 
 	if use linguas_it; then
 		insinto /usr/share/man/it/man1

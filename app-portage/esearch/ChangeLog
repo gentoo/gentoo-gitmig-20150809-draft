@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/esearch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.24 2004/10/13 23:26:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.25 2004/11/10 07:44:45 mr_bones_ Exp $
+
+  09 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> esearch-0.7.ebuild:
+  dodir takes a list; only create /usr/share/man/it for linguas_it; error
+  message; tidy
 
   14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> esearch-0.7.ebuild:
   Added to ~ppc-macos.
