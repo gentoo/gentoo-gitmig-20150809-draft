@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.9 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.10 2004/07/30 13:23:16 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -72,6 +72,8 @@ horde_src_unpack() {
 	else
 		unpack ${A}
 	fi
+	cd ${S}
+	[ -f test.php ] && chmod 000 test.php
 }
 
 horde_src_install() {
