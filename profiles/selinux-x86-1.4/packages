@@ -23,28 +23,38 @@
 >=x11-base/xfree-4.1.0-r12
 
 ##############################################################################
-# SELinux stuff -- Need to make sure that the selinux patches stay in these
-# packages, otherwise we'll need to lock down the ver/rev
+# SELinux versionings
+
+# Base SELinux packages
 *sys-apps/selinux-small
+#*sys-libs/libselinux
+#*sys-apps/checkpolicy
+#*sys-apps/policycoreutils
 *sec-policy/selinux-base-policy
 *dev-python/python-selinux
 
+# SELinux-patched packages
+*>=net-misc/openssh-3.5_p1-r1
+*>=sys-apps/coreutils-5.0
 *>=sys-apps/findutils-4.1.7-r3
 *=sys-apps/procps-3.1.12
-*>=sys-apps/tar-1.13.25-r3
-*>=net-misc/openssh-3.5_p1-r1
+*sys-apps/psmisc
 *>=sys-apps/pam-login-3.11
+*sys-apps/util-linux
+*>=sys-libs/pam-0.75-r9
+*sys-libs/pwdb      
 
-# (file|sh-|text)utils have been replaced by coreutils
-*>=sys-apps/coreutils-5.0
-!sys-apps/fileutils
-!sys-apps/sh-utils
-!sys-apps/textutils
+# optional SELinux-patched programs:
+>=app-admin/logrotate-3.6.5
+>=sys-apps/vcron-3.0.1-r1
+
+# must use coreutils (these RDEP on it):
+>=sys-apps/fileutils-4.1.11-r2
+>=sys-apps/textutils-2.1-r1
+>=sys-apps/sh-utils-2.0.15-r1
 
 =dev-util/strace-4.4-r1
 >=sys-apps/stat-2.5
->=app-admin/logrotate-3.6.5
->=sys-apps/vcron-3.0.1-r1
 ##############################################################################
 
 *app-shells/bash
@@ -73,13 +83,12 @@
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/net-tools
-*sys-apps/psmisc
 *sys-apps/sed
 *sys-apps/setserial
 *<sys-apps/shadow-5
 *sys-apps/sharutils
+*sys-apps/tar
 *>=sys-apps/texinfo-4.2-r1
-*sys-apps/util-linux
 *sys-apps/which
 *sys-devel/autoconf
 *>=sys-devel/automake-1.6.1-r5
@@ -96,8 +105,6 @@
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
 *>=sys-libs/ncurses-5.2.20020112a
-*>=sys-libs/pam-0.75-r9
-*sys-libs/pwdb      
 *sys-libs/readline  
 *sys-libs/zlib
 *virtual/editor
