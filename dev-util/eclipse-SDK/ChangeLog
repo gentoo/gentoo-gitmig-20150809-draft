@@ -1,6 +1,12 @@
 # ChangeLog for dev-utils/eclipse-SDK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/ChangeLog,v 1.1 2002/10/21 11:51:59 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/ChangeLog,v 1.2 2002/10/23 10:55:23 cybersystem Exp $
+
+*eclipse-SDK-20021016 (23 Oct 2002)
+
+  23 Oct 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog:
+  
+  Version bump. Again thanks to Lim Swee Tat <st_lim@stlim.net>..
 
 *eclipse-SDK-20020920 (21 Oct 2002)
 
