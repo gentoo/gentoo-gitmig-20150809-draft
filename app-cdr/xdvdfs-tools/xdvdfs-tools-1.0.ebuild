@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xdvdfs-tools/xdvdfs-tools-1.0.ebuild,v 1.3 2004/07/11 16:10:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xdvdfs-tools/xdvdfs-tools-1.0.ebuild,v 1.4 2004/08/08 08:41:43 kugelfang Exp $
 
 DESCRIPTION="Tools for manipulating Xbox ISO images"
 HOMEPAGE="http://xbox-scene.org"
@@ -12,7 +12,7 @@ SRC_URI="http://dwl.xbox-scene.com/~xbox/xbox-scene/tools/isotools/XDVDFS_Tools.
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND=""
 S=${WORKDIR}/"XDVDFS_Tools/src"
 
