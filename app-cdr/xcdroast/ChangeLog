@@ -2,13 +2,16 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
-  Nov 28 2002; Mark Guertin <gerk@gentoo.org> xcdroast-0.98_alpha-r2.ebuild:
-  set x86 and ppc in keywords, was set to *
-
+*xcdroast-0.98_alpha13 (04 Jan 2003)
+  
+  04 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump (thanks to Lars Weiler <lars.weiler@chaosdorf.de>).
+  This one works with cdrtools 2.0.
+  Downloading from a SF mirror.
+	
 *xcdroast-0.98_alpha10 (16 Jun 2002)
   
   21 Oct 2002; Arcady Genkin <agenkin@gentoo.org> xcdroast-0.98_alpha10-r2 :
-
   xcdroast does not work with cdrtools above 1.11.33.
 
   16 Jun 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu>
@@ -17,31 +20,26 @@
   bugs unless you use the latest version.  Fixed lintool errors too. :)
 
   4 Jun 2002; Brandon Low <lostlogic@gentoo.org>  xcdroast-0.98_alpha10-r1.ebuild:
-
   Changed dependency for new version, it don't b0rk now.
 
 *xcdroast-0.98_alpha10 (23 Apr 2002)
 
   23 Apr 2002; Ryan Phillips <rphillips@gentoo.org> xcdroast-0.98_alpha10.ebuild:
-
   Patched ebuild to actually download and compile alpha10 release.
 
 *xcdroast-0.98_alpha10 (23 Apr 2002)
 
   23 Apr 2002; Ryan Phillips <rphillips@gentoo.org> xcdroast-0.98_alpha10.ebuild:
-
   Update to newer version of xcdroast.
   
 *xcdroast-0.98_alpha9-r2 (16 Apr 2002)
 
   16 Apr 2002; Bruce A. Locke <blocke@shivan.org> xcdroast-0.98_alpha9-r2.ebuild:
-
   Update to newer version of cdrtools
 
 *xcdroast-0.98_alpha9-r1 (16 Apr 2002)
 
   16 Apr 2002; Bruce A. Locke <blocke@shivan.org> xcdroast-0.98_alpha9-r1.ebuild:
-
   Fixed xcdroast's hardcoded dependency versions to work with a newer version 
   of cdrtools (hardcoding is because of xcdroast itself, not our packaging)
 
@@ -49,14 +47,3 @@
 
   11 Apr 2002; Spider <spider@gentoo.org>
   Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
-     
-
-*xcdroast-0.98_alpha9 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
