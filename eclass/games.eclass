@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.53 2003/11/04 07:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.54 2003/11/10 20:04:53 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -69,7 +69,9 @@ gameswrapper() {
 	into ${GAMES_PREFIX}
 	local cmd=$1; shift
 	${cmd} "$@"
+	local ret=$?
 	into ${oldtree}
+	return ${ret}
 }
 
 dogamesbin() { gameswrapper ${FUNCNAME/games} "$@"; }
