@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc. and Shane Hathaway
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.68.ebuild,v 1.1 2003/09/10 04:51:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.68.ebuild,v 1.2 2003/09/19 00:53:13 vapier Exp $
 
 inherit games
 
 DESCRIPTION="A suite of educational games for young children"
+HOMEPAGE="http://childsplay.sourceforge.net"
 SRC_URI="mirror://sourceforge/childsplay/${P}.tar.gz
 	mirror://sourceforge/childsplay/${PN}-plugins-${PV}.tar.gz"
-HOMEPAGE="http://childsplay.sourceforge.net"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
-IUSE=""
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=dev-lang/python-2.1
 	>=dev-python/pygame-1.4
@@ -32,7 +31,7 @@ src_unpack() {
 src_compile() {
 	python -c "import compileall; compileall.compile_dir('.')"
 	cp -r lib/MemoryData lib/LettersData
-# Fix a locale-related bug.  On some systems, the locale is "C".
+	# Fix a locale-related bug.  On some systems, the locale is "C".
 	ln -s words-en lib/PackidData/words-C
 }
 
@@ -55,12 +54,9 @@ src_install() {
 	dodoc doc/README* doc/changelog.text doc/copyright
 
 	# Make a launcher.
-	LAUNCHER="${D}${GAMES_BINDIR}/childsplay"
-	echo "#!/bin/sh" > $LAUNCHER
-	echo "python ${MYDATA}/childsplay.py \$*" >> $LAUNCHER
-	chmod +x $LAUNCHER
+	dogamesbin ${FILESDIR}/childsplay
+	dosed "s:GENTOO_DIR:${MYDATA}:" ${GAMES_BINDIR}/childsplay
 
 	prepgamesdirs
-	fperms 664 ${MYSCORE}
+	fperms g+w ${MYSCORE}
 }
-
