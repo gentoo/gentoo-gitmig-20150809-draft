@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.5 2004/01/15 19:02:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.6 2004/01/24 23:07:36 liquidx Exp $
 
 DESCRIPTION="Beecrypt is a general-purpose cryptography library."
 HOMEPAGE="http://sourceforge.net/projects/beecrypt"
@@ -10,7 +10,7 @@ LICENSE="LGPL-2"
 KEYWORDS="~x86 ~ppc ~sparc alpha ~amd64 ia64"
 SLOT="0"
 
-DEPEND="python? ( =dev-lang/python-2.2* )
+DEPEND="python? ( >=dev-lang/python-2.2 )
 		!<app-arch/rpm-4.2.1"
 
 IUSE="python"
@@ -28,6 +28,8 @@ src_unpack() {
 		# (11 Nov 2003 agriffis)
 		epatch ${FILESDIR}/beecrypt-3.1.0-alpha.patch
 	fi
+	# fix for python paths (#39282)
+	epatch ${FILESDIR}/beecrypt-3.1.0-python2.3.patch
 }
 
 src_compile() {
