@@ -1,6 +1,16 @@
-MD5 f4ee8a2ef7ca2edf8adb470205ecc056 ChangeLog 1505
-MD5 3cb2972bf491e94b6b807dd100f5c5f3 downman-0.0.4.ebuild 712
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1d67a1bc79b983f9b1988a5d70ff330 downman-0.0.5.ebuild 797
-MD5 aa707c9bac84ee5c03190a1f073a9af9 files/0.0.5-gcc34.patch 1544
+MD5 3cb2972bf491e94b6b807dd100f5c5f3 downman-0.0.4.ebuild 712
+MD5 4aa4bf66fa415c2ed894a76a41d8dd96 ChangeLog 1509
 MD5 d8c0577adf02470a6535ac25fd5a48ea files/digest-downman-0.0.4 65
 MD5 5eb901a7966e529a4203e5476b37b614 files/digest-downman-0.0.5 65
+MD5 aa707c9bac84ee5c03190a1f073a9af9 files/0.0.5-gcc34.patch 1544
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCOq8LI1lqEGTUzyQRAmxDAJ9N71QFTwGCOZk2LpYBrE2afyFrHwCgpbCN
+tNHyRWHidBQR2yEAyZtuQbQ=
+=O8vW
+-----END PGP SIGNATURE-----

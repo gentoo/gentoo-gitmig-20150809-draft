@@ -1,3 +1,13 @@
-MD5 2fcc7eeb4d865bd1983f3fae030db816 ChangeLog 689
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3f22d5e92d11409dfe300ba7585ea9ca fetch-1.0.ebuild 791
+MD5 a74bd80a7d61929b889f9b40f96592b2 ChangeLog 693
 MD5 9571362b47e4b247406f3ce844289ee7 files/digest-fetch-1.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCOq8zI1lqEGTUzyQRAljcAJ4o2vlGyFxL5dkZVQzc+QdcD+cWygCfU4ad
++AYpKt1Z8vU6RqyF8oT9PqI=
+=62s5
+-----END PGP SIGNATURE-----
