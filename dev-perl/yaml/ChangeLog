@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.9 2005/03/12 10:54:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.10 2005/03/13 13:22:33 mcummings Exp $
+
+*yaml-0.36 (13 Mar 2005)
+
+  13 Mar 2005; Michael Cummings <mcummings@gentoo.org> yaml-0.35.ebuild,
+  +yaml-0.36.ebuild:
+  Version bump, bug 84989
 
   12 Mar 2005; Markus Rothe <corsair@gentoo.org> yaml-0.35.ebuild:
   Stable on ppc64
