@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.13.ebuild,v 1.1 2004/09/03 06:19:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.13.ebuild,v 1.2 2004/09/18 13:21:07 kumba Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 	epatch ${FILESDIR}/colo-linker-overlap-fix.patch
 
 	# cp the bootscripts to WORKDIR
-	cp ${FILESDIR}/menu-linux.colo ${FILESDIR}/menu-linuxold.colo ${WORKDIR}
+	cp ${FILESDIR}/menu-linux.colo ${WORKDIR}
 
 	# sed the primary boot script and stick the current colo version in there
 	sed "s:@COLOVER@:${PV}:g" ${FILESDIR}/default.colo > ${WORKDIR}/default.colo
