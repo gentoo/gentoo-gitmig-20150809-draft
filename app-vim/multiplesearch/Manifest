@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 25e4e120ac21c5544af09a8e1d8ab40b multiplesearch-1.2.1.ebuild 445
 MD5 d583e0a6c572b92be2a045e1179412f2 ChangeLog 1169
-MD5 e0ec5e409a46c90d758c39577cc3046f multiplesearch-1.2.1-r1.ebuild 894
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 64fe0344ec90c56bfaa53518f5b29f11 files/digest-multiplesearch-1.2.1-r1 71
+MD5 25e4e120ac21c5544af09a8e1d8ab40b multiplesearch-1.2.1.ebuild 445
+MD5 1caafc07ecaec6638f6be4246d0065f7 multiplesearch-1.2.1-r1.ebuild 893
 MD5 64fe0344ec90c56bfaa53518f5b29f11 files/digest-multiplesearch-1.2.1 71
+MD5 64fe0344ec90c56bfaa53518f5b29f11 files/digest-multiplesearch-1.2.1-r1 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBZXBZLLFUmVNQ7rkRAhiNAJ9CfXzvi7cxewK1bk+0cKvgALcYTgCfVA7+
-hDB26cUTuRJ/lNL/4HpSV9A=
-=+bZU
+iD8DBQFBZf5XHTu7gpaalycRApEsAKDT9eCibLVzeU+ah4ZlVG6Ix2OPFACgj3Wt
+n0/8GGwQyXx8miwJVH8lUIk=
+=abxu
 -----END PGP SIGNATURE-----
