@@ -1,12 +1,17 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.11 2004/01/10 02:27:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.12 2004/01/18 04:14:05 vapier Exp $
+
+*clanlib-0.7.7 (17 Jan 2004)
+
+  17 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + patch #38464.
+
+*clanlib-0.7.6 (11 Nov 2003)
 
   09 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
   clanlib-0.6.5-r1.ebuild:
   call replace-flags in src_compile; more error checking/messages
-
-*clanlib-0.7.6 (11 Nov 2003)
 
   15 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
   Add small patch to fix #33453.

@@ -1,0 +1,9 @@
+--- Sources/API/GL/opengl_wrap.h.orig	2004-01-17 22:59:57.862435912 -0500
++++ Sources/API/GL/opengl_wrap.h	2004-01-17 23:00:54.660801248 -0500
+@@ -1887,5 +1887,5 @@
+ 	typedef void (CL_GLFUNC *ptr_glDrawPixels)(CLsizei width, CLsizei height, CLenum format, CLenum type, const CLvoid *pixels);
+ 	typedef void (CL_GLFUNC *ptr_glEdgeFlag)(CLboolean flag);
+-	typedef void (CL_GLFUNC *ptr_glEdgeFlagPointer)(CLsizei stride, const CLvoid *pointer);
++	typedef void (CL_GLFUNC *ptr_glEdgeFlagPointer)(CLsizei stride, const CLboolean *pointer);
+ 	typedef void (CL_GLFUNC *ptr_glEdgeFlagv)(const CLboolean *flag);
+ 	typedef void (CL_GLFUNC *ptr_glEnable)(CLenum cap);
