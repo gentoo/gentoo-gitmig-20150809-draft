@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/fresco-base/fresco-cvs/fresco-cvs-20030127.ebuild,v 1.2 2003/02/13 12:03:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/fresco-base/fresco-cvs/fresco-cvs-20030127.ebuild,v 1.3 2003/02/19 07:43:53 lordvan Exp $
 
 ECVS_SERVER="cvs.fresco.org:/cvs/fresco"
 ECVS_MODULE="Fresco"
@@ -41,7 +41,7 @@ src_compile() {
 #		bunzip2 ${S}/${PATCH}.bz2
 #		patch -p0 < ${PATCH}
 #	fi
-	patch -p0 < ${FILESDIR}/Dictionary.diff
+	#patch -p0 < ${FILESDIR}/Dictionary.diff # now in HEAD :)
 	./autogen.sh || die "autogen.sh failed"
 	./configure --prefix=/opt/fresco --enable-tracer || die "configure failed" 
 	make || die "make failed"
