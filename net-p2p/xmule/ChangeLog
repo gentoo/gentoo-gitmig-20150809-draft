@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.45 2004/08/16 16:57:18 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.46 2004/08/23 00:47:29 squinky86 Exp $
+
+*xmule-1.9.0 (22 Aug 2004)
+
+*xmule-1.8.4-r1 (22 Aug 2004)
+
+  22 Aug 2004; Jon Hood <squinky86@gentoo.org> -files/xmule.sh,
+  -xmule-1.8.2-r3.ebuild, +xmule-1.8.4-r1.ebuild, -xmule-1.8.4.ebuild,
+  +xmule-1.9.0.ebuild:
+  Fix bug #61148, thanks Antonio <netbix@tiscali.it> :). Version bump,
+  closes #60954.
 
   16 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> xmule-1.8.2-r3.ebuild,
   xmule-1.8.4.ebuild:

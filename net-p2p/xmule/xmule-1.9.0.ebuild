@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.4.ebuild,v 1.3 2004/08/16 16:57:18 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.9.0.ebuild,v 1.1 2004/08/23 00:47:29 squinky86 Exp $
 
 inherit wxwidgets
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 IUSE="nls gtk2"
 
@@ -44,12 +44,5 @@ src_compile () {
 
 src_install () {
 	einstall mkinstalldirs=${S}/mkinstalldirs DESTDIR=${D} || die
-	dodir /usr/share/xmule
-	insinto /usr/share/xmule
-	doins src/resource/*
-	mv ${D}/usr/bin/xmule ${D}/usr/bin/xmule-bin
-	mv ${D}/var/tmp/portage/${PF}/image/usr/share/locale/* ${D}/usr/share/locale/
-	rm -f ${D}/var
-	exeinto /usr/bin
-	newexe ${FILESDIR}/xmule.sh xmule
+	rm -rf ${D}/var || die
 }
