@@ -1,0 +1,35 @@
+# ChangeLog for app-sci/bioperl-run
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.1 2004/12/23 22:09:47 ribosome Exp $
+
+*bioperl-run-1.2.2 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/bioperl-run-Pise-test-patch.diff, +bioperl-run-1.2.2.ebuild,
+  +bioperl-run-1.4.ebuild:
+  Moved from app-sci/bioperl-run to sci-biology/bioperl-run.
+
+  23 Sep 2004; Stephen Diener <sediener@gentoo.org> bioperl-run-1.4.ebuild:
+  Bumped 1.4 to stable on x86
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> bioperl-run-1.4.ebuild:
+  Added to ~ppc.
+
+  22 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> bioperl-run-1.2.2.ebuild,
+  bioperl-run-1.4.ebuild:
+  removing DEPEND="${RDEPEND}"
+
+*bioperl-run-1.4 (08 Jan 2004)
+
+  08 Jan 2004; Stephen Diener <sediener@gentoo.org> bioperl-run-1.4.ebuild:
+  version bump to 1.4
+
+  14 Dec 2003; Stephen Diener <sediener@gentoo.org> bioperl-run-1.2.2.ebuild:
+  Bump to stable
+
+*bioperl-run-1.2.2 (29 Sep 2003)
+
+  29 Sep 2003; <sediener@gentoo.org> bioperl-run-1.2.2.ebuild, metadata.xml,
+  files/bioperl-run-Pise-test-patch.diff:
+  Initial Import. Built of of the bioperl ebuild from Gontran Zepeda.
+
