@@ -1,34 +1,31 @@
 # ChangeLog for sys-kernel/planet-ccrma-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.7 2003/12/02 08:13:04 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.8 2003/12/04 22:18:09 plasmaroo Exp $
 
   02 Dec 2003; <nerdboy@gentoo.org> planet-ccrma-sources-2.4.21-r3.ebuild:
-  updated to -r3 and x86 for brk expploit patch
+  Updated to -r3 and bumped to 'x86' for the 'do_brk' exploit patch.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   planet-ccrma-sources-2.4.21-r1.ebuild,
   planet-ccrma-sources-2.4.21-r2.ebuild, planet-ccrma-sources-2.4.21.ebuild,
-  files/do_brk_fix.patch:
-  fix do_brk vuln
-
-*planet-ccrma-sources-2.4.21-r2 (23 Nov 2003)
+  files/do_brk_fix.patch: Fix 'do_brk' vulnerability.
 
   23 Nov 2003; <nerdboy@gentoo.org> planet-ccrma-sources-2.4.21-r2.ebuild:
-  switched to the rpm eclass
+  Switched to the 'rpm' eclass.
 
 *planet-ccrma-sources-2.4.21-r1 (30 Oct 2003)
 
   30 Oct 2003; <nerdboy@gentoo.org> planet-ccrma-sources-2.4.21-r1.ebuild:
-  added RedHat kernel.h file due to scrllock's troubles
+  Added RedHat kernel.h file due to troubles with ScrollLock.
 
   18 Oct 2003; <nerdboy@gentoo.org> planet-ccrma-sources-2.4.21.ebuild:
-  Bumped to x86 since it now works with Alsa 0.9.6 or better
+  Bumped to 'x86' since it now works with Alsa 0.9.6 or better
 
 *planet-ccrma-sources-2.4.21 (20 Sep 2003)
 
   20 Sep 2003; <nerdboy@gentoo.org> planet-ccrma-sources-2.4.21.ebuild:
-  added missing acpi headers but still has alsa unresolved symbol errors
+  Added missing ACPI headers but this still has ALSA unresolved symbol errors.
 
   18 Sep 2003; <nerdboy@gentoo.org> :
-  new Planet CCRMA kernel sources
+  New Planet CCRMA kernel sources...
 
