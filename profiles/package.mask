@@ -23,6 +23,7 @@
 
 # <vladimir@gentoo.org> 10 June 2003
 # As per Luca's request
+# buffer issue on ncurses application (e.g. BitchX)
 >=x11-libs/vte-0.10.28
 
 # <vladimir@gentoo.org> 10 June 2003
