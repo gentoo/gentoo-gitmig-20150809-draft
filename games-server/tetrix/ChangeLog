@@ -1,0 +1,24 @@
+# ChangeLog for games-puzzle/tetrix
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.1 2003/09/21 04:47:33 vapier Exp $
+
+*tetrix-1.13.16.1.40c-r2 (17 Sep 2002)
+
+  17 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add a custom drop root patch.  Hate to see this sucker
+  run as root on servers :).
+
+*tetrix-1.13.16.1.40c-r1 (13 Sep 2002)
+
+  13 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + games.eclass support + reworked init script.
+
+*tetrix-1.13.16.1.40c (24 May 2002)
+
+  02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  tetrix-1.13.16.1.40c.ebuild:
+  Fixed to use mirror://sourceforge
+
+  31 Mar 2003; Philip Walls <malverian@gentoo.org>
+  tetrix-1.13.16.1.40c.ebuild, files/tetrix, files/launch_tetrix :
+  Initial import.
