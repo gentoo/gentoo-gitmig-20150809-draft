@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audiotag
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.8 2004/12/19 05:35:40 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.9 2005/01/01 11:09:31 corsair Exp $
+
+  01 Jan 2005; Markus Rothe <corsair@gentoo.org> audiotag-0.13.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   audiotag-0.13.ebuild:
