@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.50 2004/09/06 02:17:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.51 2004/09/08 16:22:46 lanius Exp $
+
+*hdparm-5.7-r1 (08 Sep 2004)
+
+  08 Sep 2004; Heinrich Wendel <lanius@gentoo.org> +files/hdparm-init-7,
+  +hdparm-5.7-r1.ebuild:
+  support non-devfs compatible udev systems, bug #62915
 
   06 Sep 2004; Sven Wegener <swegener@gentoo.org> files/hdparm-conf.d,
   files/hdparm-conf.d.3:
