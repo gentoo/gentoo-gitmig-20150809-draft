@@ -1,8 +1,14 @@
 # ChangeLog for sys-kernel/hppa-dev-sources
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.6 2004/02/05 22:10:00 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.7 2004/02/18 19:13:49 plasmaroo Exp $
 
-*hppa-dev-sources-2.6.2_p3 (005 Feb 2004)
+*hppa-dev-sources-2.6.2_p3-r1 (18 Feb 2004)
+
+  18 Feb 2004; <plasmaroo@gentoo.org> hppa-dev-sources-2.6.2_p3-r1.ebuild,
+  files/hppa-dev-sources-2.6.2_p3.munmap.patch:
+  Added the patch for the mremap/munmap vulnerability. Bug #42024.
+
+*hppa-dev-sources-2.6.2_p3 (05 Feb 2004)
 
   05 Feb 02004; Guy Martin <gmsoft@gentoo.org> hppa-dev-sources-2.6.2_p3.ebuild :
   Version bump.
