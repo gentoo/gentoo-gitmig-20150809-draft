@@ -1,0 +1,8 @@
+# ChangeLog for gnome-extra/lock-keys-applet
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/lock-keys-applet/ChangeLog,v 1.1 2003/05/06 17:52:44 foser Exp $
+
+*lock-keys-applet-1.0 (06 May 2003)
+
+  06 May 2003; foser <foser@gentoo.org> lock-keys-applet-1.0.ebuild, ChangeLog :
+  Initial commit (#15179)
