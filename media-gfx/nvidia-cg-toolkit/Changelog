@@ -1,0 +1,10 @@
+# ChangeLog for <media-gfx>/<nvidia-cg-toolkit>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/Changelog,v 1.1 2002/12/10 22:32:13 blauwers Exp $
+
+*nvidia-cg-toolkit-2.1-r6 (10 DEC 2002)
+
+  10 DEC 2002; B.Lauwers <blauwers@gentoo.org> nvidia-cg-toolkit-2.1-r6.ebuild :
+
+  Initial import of the cg toolkit from NVIDIA, find more great examples on
+  http://www.csit.fsu.edu/~blanco/Cg/Cg_projects.htm
