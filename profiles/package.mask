@@ -50,16 +50,6 @@
 # breaks xfree
 =sys-devel/bison-1.75
 
-# <carpaski@gentoo.org> (20 Oct 2002)
-# Quick testing for public release
-=sys-apps/portage-2.0.42
-# Testing! perfect_beta1 :) MANY MANY bugfixes.
-=sys-apps/portage-2.0.41
-# Testing! portage-2.0.40-Perfect_alpha1 :)
-=sys-apps/portage-2.0.40
-# B0rken make.globals -- trivial.
-=sys-apps/portage-2.0.39
-
 # <blizzy@gentoo.org> (19 Oct 2002)
 # 1.16 breaks jEdit, better use >=1.17
 =dev-java/jikes-1.16
