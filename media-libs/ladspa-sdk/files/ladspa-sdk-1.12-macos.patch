@@ -1,0 +1,54 @@
+diff -uNr ladspa_sdk_orig/src/applyplugin.c ladspa_sdk/src/applyplugin.c
+--- ladspa_sdk_orig/src/applyplugin.c	Sat May 18 12:01:36 2002
++++ ladspa_sdk/src/applyplugin.c	Thu Sep  9 17:57:11 2004
+@@ -6,7 +6,7 @@
+ /*****************************************************************************/
+ 
+ #include <dlfcn.h>
+-#include <endian.h>
++#include <machine/endian.h>
+ #include <errno.h>
+ #include <math.h>
+ #include <stdlib.h>
+diff -uNr ladspa_sdk_orig/src/makefile ladspa_sdk/src/makefile
+--- ladspa_sdk_orig/src/makefile	Sat Jul  6 12:34:20 2002
++++ ladspa_sdk/src/makefile	Thu Sep  9 18:00:07 2004
+@@ -28,6 +28,7 @@
+ 			../bin/listplugins
+ CC		=	cc
+ CPP		=	c++
++LD		=	$(CC)
+ 
+ ###############################################################################
+ #
+@@ -36,11 +37,11 @@
+ 
+ ../plugins/%.so:	plugins/%.c ladspa.h
+ 	$(CC) $(CFLAGS) -o plugins/$*.o -c plugins/$*.c
+-	$(LD) -o ../plugins/$*.so plugins/$*.o -shared
++	$(LD) -bundle -o ../plugins/$*.so plugins/$*.o
+ 
+ ../plugins/%.so:	plugins/%.cpp ladspa.h
+ 	$(CPP) $(CXXFLAGS) -o plugins/$*.o -c plugins/$*.cpp
+-	$(CPP) -o ../plugins/$*.so plugins/$*.o -shared
++	$(CPP) -bundle -o ../plugins/$*.so plugins/$*.o
+ 
+ ###############################################################################
+ #
+diff -uNr ladspa_sdk_orig/src/search.c ladspa_sdk/src/search.c
+--- ladspa_sdk_orig/src/search.c	Sat Jul 21 11:04:23 2001
++++ ladspa_sdk/src/search.c	Thu Sep  9 18:01:08 2004
+@@ -5,12 +5,12 @@
+ 
+ /*****************************************************************************/
+ 
++#include <sys/types.h>
+ #include <dirent.h>
+ #include <dlfcn.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <sys/types.h>
+ #include <unistd.h>
+ 
+ /*****************************************************************************/
