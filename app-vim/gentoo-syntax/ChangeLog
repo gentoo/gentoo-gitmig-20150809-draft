@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.36 2005/02/18 20:00:58 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.37 2005/02/21 16:26:05 ciaranm Exp $
+
+*gentoo-syntax-20050211-r1 (21 Feb 2005)
+
+  21 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/gentoo-syntax-20050211-fix-xml.patch,
+  +gentoo-syntax-20050211-r1.ebuild:
+  Fix xml, bug #82789
 
   18 Feb 2005; Tom Martin <slarti@gentoo.org> gentoo-syntax-20041227.ebuild:
   amd64 stable.
