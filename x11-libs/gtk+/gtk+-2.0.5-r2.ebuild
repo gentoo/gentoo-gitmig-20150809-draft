@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.5.ebuild,v 1.3 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.5-r2.ebuild,v 1.1 2002/07/15 11:17:49 seemant Exp $
 
 inherit libtool
 
@@ -15,12 +15,10 @@ CFLAGS="${CFLAGS} -g"
 CXXFLAGS="${CXXFLAGS} -g"
 
 
-use directfb && MY_P=gtk+-directfb-${PV} || MY_P=${P}
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${P}
 DESCRIPTION="Gimp ToolKit + "
-ORIG="ftp://ftp.gtk.org/pub/gtk/v2.0/${MY_P}.tar.bz2"
-DFB="http://directfb.org/download/GTK+-DirectFB/${MY_P}.tar.gz"
-use directfb && SRC_URI=${DFB} || SRC_URI=${ORIG}
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.0/${P}.tar.bz2
+	directfb? ( mirror://gentoo//gtk+-directfb-2.0.5-gentoo.patch.bz2 )"
 HOMEPAGE="http://www.gtk.org/"
 LICENSE="LGPL-2.1"
 
@@ -36,6 +34,15 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	 doc? ( >=dev-util/gtk-doc-0.9 )"
+
+src_unpack() {
+	
+	unpack ${P}.tar.bz2
+	use directfb && ( \
+		cd ${S}
+		bzcat ${DISTDIR}/${PN}-directfb-${PV}-gentoo.patch.bz2 | patch -p1
+	)
+}
 
 src_compile() {
 	elibtoolize

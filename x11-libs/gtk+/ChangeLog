@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.18 2002/07/03 17:17:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.19 2002/07/15 11:17:49 seemant Exp $
+
+*gtk+-2.0.5-r2 (15 Jul 2002)
+
+  15 Jul 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-2.0.5-r2.ebuild
+  files/digest-gtk+-2.0.5-r2 :
+
+  directfb enabled GTK is now a patch on our mirrors instead of being a
+  separate tarball.  This makes the behaviour better for portage's server
+  side caching.
 
 *gtk+-2.0.5-r1 (03 Jul 2002)
 
