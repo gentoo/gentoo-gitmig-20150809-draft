@@ -3,6 +3,8 @@ MD5 39a41fc158f35b594e68ae4e7c444604 bzflag-1.7.7.1.ebuild 706
 MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
 MD5 58b1d46eb5b3f4db81baa736785e6cb8 bzflag-1.10.2.ebuild 840
 MD5 974030b3d211067161a136e1a191c3c7 bzflag-1.10.ebuild 838
+MD5 6ac5cc8a7c280934e90377ebd0141b92 bzflag-1.10.4.ebuild 841
 MD5 cf10d4c3763257d658661b492f15e9f8 files/digest-bzflag-1.7.7.1 62
 MD5 ef0f58d8eaa9ff60b2d3c2a31f9dc8d8 files/digest-bzflag-1.10.2 75
 MD5 4b194b2cb83e9243d18bf008d0ebe483 files/digest-bzflag-1.10 73
+MD5 6fadc41f4074e508579a3a7ba2a4187d files/digest-bzflag-1.10.4 76
