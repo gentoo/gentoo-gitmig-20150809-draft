@@ -1,0 +1,8 @@
+# ChangeLog for net-analyzers/ipac-ng
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.1 2003/09/29 02:16:00 vapier Exp $
+
+*ipac-ng-1.27_p1 (28 Sep 2002)
+
+  28 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial ebuild.  Ebuild made by Philipp Lopaur <fips@fips.at> #19246.
