@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.93.ebuild,v 1.1 2004/06/07 21:59:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.93.ebuild,v 1.2 2004/06/15 04:37:33 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Diagram/flowchart creation program"
 HOMEPAGE="http://www.gnome.org/projects/dia/"
