@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.8.0_beta1.ebuild,v 1.3 2004/03/29 01:13:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.8.0_beta1.ebuild,v 1.4 2004/05/28 19:13:08 g2boojum Exp $
 
 PVPREV=0.7.10
 S=${WORKDIR}/${PN}-${PVPREV}
@@ -12,6 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/stable.pkg/${PV}/${PN}_${PVPR
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
+IUSE=""
 
 DEPEND="virtual/glibc
 	net-misc/curl
