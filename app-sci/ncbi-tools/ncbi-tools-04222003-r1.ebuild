@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-04222003-r1.ebuild,v 1.3 2003/09/06 22:23:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-04222003-r1.ebuild,v 1.4 2003/09/10 01:44:24 msterret Exp $
 
 DESCRIPTION="NCBI toolkit including the BLAST group of programs, entrez, ddv, udv, sequin and others"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
@@ -42,7 +42,7 @@ src_install() {
 	cd ${WORKDIR}
 	dodir /usr/var/ncbi
 	insinto /usr/var/ncbi
-        doins data/*
+	doins data/*
 
 	dodoc README README.htm VERSION checkout.date
 

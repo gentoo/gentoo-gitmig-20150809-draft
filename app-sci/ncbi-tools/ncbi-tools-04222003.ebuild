@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-04222003.ebuild,v 1.3 2003/09/06 22:23:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-04222003.ebuild,v 1.4 2003/09/10 01:44:24 msterret Exp $
 
 DESCRIPTION="NCBI toolkit including the BLAST group of programs, entrez, ddv, udv, sequin and others"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
@@ -41,8 +41,8 @@ src_install() {
 
 	cd ${WORKDIR}
 	dodir /usr/var/ncbi
-        insinto /usr/var/ncbi
-        doins data/*
+	insinto /usr/var/ncbi
+	doins data/*
 
 	dodoc README README.htm VERSION checkout.date
 
@@ -51,17 +51,17 @@ src_install() {
 }
 
 pkg_postinst() {
-    einfo "--------------------------"
-    einfo "You must create a .ncbirc file "
+	einfo "--------------------------"
+	einfo "You must create a .ncbirc file "
 	einfo "for the majority of these programs"
 	einfo "to work right"
 	einfo " "
-    einfo "See README.bls for more information"
-    einfo "--------------------------"
-    einfo "The file should contain the two following lines:"
-    einfo "[NCBI]"
-    einfo "Data=/usr/var/ncbi"
-    einfo "--------------------------"
+	einfo "See README.bls for more information"
+	einfo "--------------------------"
+	einfo "The file should contain the two following lines:"
+	einfo "[NCBI]"
+	einfo "Data=/usr/var/ncbi"
+	einfo "--------------------------"
 	einfo " "
 	einfo "It should be placed in the user's home directory"
 }
