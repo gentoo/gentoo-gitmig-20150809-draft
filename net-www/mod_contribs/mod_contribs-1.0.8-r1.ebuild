@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.17 2004/07/01 22:45:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.18 2004/07/06 01:01:54 zul Exp $
 
 # The mod_layout and mod_random that come in the archive are really old,
 # so I've replaced them with more current versions.
@@ -21,11 +21,11 @@ DEPEND="virtual/libc
 RDEPEND=""
 IUSE=""
 
-MY_MODS="mod_allowdev mod_auth_system mod_disallow_id mod_lock mod_random
+MY_MODS="mod_allowdev mod_auth_system mod_disallow_id mod_lock
 	mod_auth_cookie mod_bandwidth mod_eaccess mod_macro mod_roaming
 	mod_auth_cookie_file mod_cache mod_fastcgi mod_peephole mod_session
 	mod_auth_external mod_cgisock mod_ip_forwarding mod_put mod_ticket
-	mod_auth_inst mod_cvs mod_layout mod_qs2ssi mod_urlcount"
+	mod_auth_inst mod_cvs mod_qs2ssi mod_urlcount"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
