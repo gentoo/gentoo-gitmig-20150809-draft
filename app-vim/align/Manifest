@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21fd49011227b5376468f680b54455d8 align-30-r1.ebuild 641
-MD5 ac1469301f14e23d6d988999b1c4b59b ChangeLog 3040
+MD5 b3ad28caffb10ec8813ec250efbe7746 ChangeLog 3122
+MD5 d08f2bc80726c3de286641a472bcb2d3 align-30-r1.ebuild 639
 MD5 b841d0359022c0c085f20f473aaf68dc align-28.ebuild 485
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 57b7519b6aff9ec1faeafa11a872fbf5 files/digest-align-30-r1 60
 MD5 bcf8adf15332e65feb57ba3cf13b63df files/digest-align-28 60
+MD5 57b7519b6aff9ec1faeafa11a872fbf5 files/digest-align-30-r1 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCFjemLLFUmVNQ7rkRAuTGAKCgqxV+Cxe+TVmxvBH0z4XV+hupUwCcD/28
-SYct7iznX2t5VlTSrKkGaUA=
-=XPDD
+iD8DBQFCFkCNCHk4+ZoBpvsRAtjRAJ4x8ylX/znBSC0ligsZbOqkdAdDsACfSkdz
+Va65jDj3fFYN1zFXqBcu6Vk=
+=urO4
 -----END PGP SIGNATURE-----
