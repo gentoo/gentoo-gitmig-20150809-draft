@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.2.1-r8.ebuild,v 1.5 2004/04/08 14:36:40 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.2.1-r8.ebuild,v 1.6 2004/04/10 07:20:17 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,8 +14,10 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc sparc alpha hppa ia64 ~ppc64 s390 mips"
 IUSE="nls"
 
-DEPEND="sys-apps/texinfo
+RDEPEND="sys-apps/texinfo
 	nls? ( >=sys-devel/gettext-0.10.35 )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -26,13 +28,17 @@ src_unpack() {
 	cd ${S}/po
 	cp ja_JP.EUC.po ja.po
 	cp ja_JP.EUC.gmo ja.gmo
-	sed -i -e 's/aangemaakt/aangemaakt\\n/' nl.po
-	sed -i -e 's/de %dk/de %dk\\n/' pt.po
+	sed -i \
+		-e 's/aangemaakt/aangemaakt\\n/' nl.po \
+			|| die "sed nl.po failed"
+	sed -i \
+		-e 's/de %dk/de %dk\\n/' pt.po \
+			|| die "sed pt.po failed"
 }
 
 src_compile() {
 	econf `use_enable nls` || die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
