@@ -1,11 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.37 2003/11/02 16:33:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.38 2003/11/05 15:53:40 usata Exp $
 
   03 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.0-r1.ebuild,
   ruby-1.8.1_pre2.ebuild:
   Make GC_MALLOC_LIMIT configurable. Added ruby18 IUSE flag. Fixed a
-  typo in pkg_postrm.
+  typo in pkg_postrm. NOTE: If you see 'N' when you run `emerge -uUp
+  world` please unmerge <=ruby-1.6.8-r1 or <=ruby-1.8.0, and then
+  emerge =ruby-1.6.8-r2 and/or >=ruby-1.8.0-r1. See also bug #32526.
 
 *ruby-1.8.1_pre2 (01 Nov 2003)
 
