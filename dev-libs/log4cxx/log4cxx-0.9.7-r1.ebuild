@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7.ebuild,v 1.2 2004/12/23 17:09:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r1.ebuild,v 1.1 2004/12/28 10:42:23 ka0ttic Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i "s:\(htmldir = \).*\(/html\):\1\$(datadir)/${PF}\2:" \
+	sed -i "s:\(htmldir = \).*\(/html\):\1\$(datadir)/doc/${PF}\2:" \
 		docs/Makefile.am || die "sed failed"
 	epatch ${FILESDIR}/${P}-gentoo.diff
 }

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.6 2004/12/23 17:09:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.7 2004/12/28 10:42:23 ka0ttic Exp $
+
+*log4cxx-0.9.7-r1 (28 Dec 2004)
+
+  28 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> +log4cxx-0.9.7-r1.ebuild,
+  -log4cxx-0.9.7.ebuild:
+  Revbump; install html docs in correct location.
 
   23 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> log4cxx-0.9.7.ebuild:
   Don't use use_enable for unicode, as the configure.in doesn't respect
