@@ -1,0 +1,7 @@
+# to update the database after changing this file, run:
+# tcprules /etc/tcp.pop3.cdb /etc/.tcp.pop3.tmp < /etc/tcp.pop3
+# Allow any client to connect to us via POP3
+# If people are abusing POP3 such as denial-of-service on POP3, 
+# you can add their ips here to block them out
+:allow
+
