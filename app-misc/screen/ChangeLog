@@ -1,7 +1,17 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.11 2002/09/25 14:32:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.12 2002/11/07 08:52:09 naz Exp $
   
+
+*screen-3.9.11-r4 (7 Nov 2002)
+
+  7 Nov 2002; Michael Nazaroff <naz@gentoo.org> screen-3.9.11-r3.ebuild :
+
+  I added in addpredict "${SSH_TTY}" and "`tty`" line into the ebuild to see if
+  maybe this will actually fix the ebuild.  I've been getting support
+  from Andreas Fink <koba@braindead.de> with the ebuild, since he can produce
+  the issue and I cannot on my machine.
+
 *screen-3.9.11-r3 (27 Jul 2002)
 
   25 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
