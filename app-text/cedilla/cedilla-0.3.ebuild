@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/cedilla-0.3.ebuild,v 1.3 2003/11/25 01:36:53 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/cedilla-0.3.ebuild,v 1.4 2004/02/11 23:34:35 zul Exp $
 
 DESCRIPTION="Utf-8 to postscript converter."
 HOMEPAGE="http://www.pps.jussieu.fr/~jch/software/cedilla/"
@@ -12,7 +12,8 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND=">=dev-lisp/clisp-2.29"
+DEPEND=">=dev-lisp/clisp-2.29
+		>=sys-apps/sed-4"
 RDEPEND=""
 
 S="${WORKDIR}/${P}"
@@ -25,6 +26,7 @@ src_compile() {
 }
 
 src_install() {
+	sed -i 's#/var/tmp/portage/cedilla-0.3/image##g' ${S}/cedilla
 	./install-cedilla || die "Install failed"
 
 	newman cedilla.man cedilla.1
