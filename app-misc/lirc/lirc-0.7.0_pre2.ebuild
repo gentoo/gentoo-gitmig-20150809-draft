@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.6 2003/11/29 21:24:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.7 2003/12/29 18:58:05 lanius Exp $
 
 inherit eutils kernel-mod
 
@@ -76,13 +76,8 @@ src_compile() {
 	ewarn "make sure you have IrDA (infrared) support"
 	ewarn "in your kernel or this will fail"
 
-	#Let portage tell us where to put our modules
+	# Let portage tell us where to put our modules
 	check_KV
-
-	#
-	if kernel-mod_is_2_6_kernel; then
-		LIRC_OPTS="--with-driver=none"
-	fi
 
 	./configure \
 		--host=${CHOST} \
@@ -95,47 +90,58 @@ src_compile() {
 		--enable-sandboxed \
 		${LIRC_OPTS} || die "./configure failed"
 
-	emake || die
+	if kernel-mod_is_2_6_kernel; then
+		(cd daemons; emake) || die
+		(cd tools; emake) || die
+	else
+		emake || die
 
-	case ${LIRC_OPTS}
-	in
-	  *"any"*)
-		if [ "${SMP}" = 1 ]; then
-			# The parallel driver will not work with SMP kernels
-			# so we need to compile without it
-			emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
-			lirc_sir lirc_it87 lirc_i2c lirc_gpio" || die
-		else
-			emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
-			lirc_parallel lirc_sir lirc_it87 lirc_i2c \
-			lirc_gpio" || die
-		fi
-	;;
-	esac
+		case ${LIRC_OPTS}
+		in
+		  *"any"*)
+			if [ "${SMP}" = 1 ]; then
+				# The parallel driver will not work with SMP kernels
+				# so we need to compile without it
+				emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
+				lirc_sir lirc_it87 lirc_i2c lirc_gpio" || die
+			else
+				emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
+				lirc_parallel lirc_sir lirc_it87 lirc_i2c \
+				lirc_gpio" || die
+			fi
+		;;
+		esac
+	fi
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	if kernel-mod_is_2_6_kernel; then
+		(cd daemons; make DESTDIR=${D} install) || die
+		(cd tools; make DESTDIR=${D} install) || die
+	else
+		emake || die
+		make DESTDIR=${D} install || die
 
-	case ${LIRC_OPTS}
-	in
-	  *"any"*)
-		insinto /lib/modules/${KV}/misc
-		if [ "${SMP}" = 1 ]; then
-			for i in lirc_dev lirc_serial \
-				lirc_sir lirc_it87 lirc_i2c lirc_gpio
-			do
-			doins drivers/${i}/${i}.o
-			done
-		else
-			for i in lirc_dev lirc_serial \
-				lirc_parallel lirc_sir lirc_it87 lirc_i2c lirc_gpio
-			do
-			doins drivers/${i}/${i}.o
-			done
-		fi
-	;;
-	esac
+		case ${LIRC_OPTS}
+		in
+		  *"any"*)
+			insinto /lib/modules/${KV}/misc
+			if [ "${SMP}" = 1 ]; then
+				for i in lirc_dev lirc_serial \
+					lirc_sir lirc_it87 lirc_i2c lirc_gpio
+				do
+				doins drivers/${i}/${i}.o
+				done
+			else
+				for i in lirc_dev lirc_serial \
+					lirc_parallel lirc_sir lirc_it87 lirc_i2c lirc_gpio
+				do
+				doins drivers/${i}/${i}.o
+				done
+			fi
+		;;
+		esac
+	fi
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/lircd
@@ -144,7 +150,9 @@ src_install() {
 }
 
 pkg_postinst () {
-	/usr/sbin/update-modules
+	if kernel-mod_is_2_4_kernel; then
+		/usr/sbin/update-modules
+	fi
 
 	einfo
 	einfo "The lirc Linux Infrared Remote Control Package has been"
