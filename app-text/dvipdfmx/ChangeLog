@@ -1,6 +1,13 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.20 2005/01/01 16:12:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.21 2005/03/29 15:58:06 usata Exp $
+
+*dvipdfmx-20050201 (29 Mar 2005)
+
+  29 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> -dvipdfmx-20031110.ebuild,
+  -dvipdfmx-20031207.ebuild, dvipdfmx-20040411.ebuild,
+  +dvipdfmx-20050201.ebuild:
+  Version bumped. Marked 20040411 stable on x86 and ppc; bug #87072.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> dvipdfmx-20031116.ebuild:
   Stable on sparc.
