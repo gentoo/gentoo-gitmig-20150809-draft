@@ -1,8 +1,11 @@
 # ChangeLog for net-libs/gnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.9 2003/03/11 18:03:39 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.10 2003/04/06 04:05:12 weeve Exp $
 
 *gnet-1.1.8 (11 mar 2003)
+
+  28 Mar 2003; Jason Wever <weeve@gentoo.org> gnet-1.1.8.ebuild:
+  Added ~sparc to keywords.
 
   11 mar 2003; <spider@gentoo.org> gnet-1.1.8.ebuild:
   no changes to the ebuild necessary
@@ -10,6 +13,10 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gnet-1.1.5 (14 Aug 2002)
+
+  05 Apr 2003; Jason Wever <weeve@gentoo.org> gnet-1.1.5.ebuild:
+  Added sparc to keywords.
+
   14 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> gnet-1.1.5.ebuild :
   Version bump.
 
