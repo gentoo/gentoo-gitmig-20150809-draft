@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.6.0.ebuild,v 1.2 2003/07/16 15:25:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.6.0.ebuild,v 1.3 2003/10/01 09:44:33 aliz Exp $
 
 DESCRIPTION="Japanese dictionary for ChaSen"
 HOMEPAGE="http://chasen.aist-nara.ac.jp/"
@@ -15,8 +15,7 @@ DEPEND="app-text/chasen"
 S="${WORKDIR}/${P}"
 
 src_compile() {
-	cp Makefile.in Makefile.in.orig
-	sed -e "/^install-data-am:/s/install-data-local//" < Makefile.in.orig > Makefile.in
+	sed -i -e "/^install-data-am:/s/install-data-local//" Makefile.in
 	econf || die
 	make || die
 }
