@@ -1,0 +1,23 @@
+--- contrib/mp32dao/MediaHandler.pm        2002-10-30 11:29:05.000000000 +0100
++++ contrib/mp32dao/MediaHandler.pm     2002-10-30 11:45:28.000000000 +0100
+@@ -16,6 +16,7 @@
+ #Copyright 2001 Giuseppe Corbelli - cowo@lugbs.linux.it
+ #builds a list of handlers for all mediafiles in a directory
+
++use lib '/usr/share/cdrdao/mp32dao';
+ package MediaHandler;
+ require mp3handler;
+ require ogghandler;
+
+--- contrib/mp32dao/mp32dao.pl     2002-10-30 11:04:26.000000000 +0100
++++ contrib/mp32dao/mp32dao.pl 2002-10-30 11:47:07.000000000 +0100
+@@ -19,6 +19,7 @@
+ #Support for cdrecord: builds .inf files
+ #Giuseppe Corbelli <cowo@lugbs.linux.it>
+ #Original code by Joe Steward <mp32dao@httptech.com>
++use lib '/usr/share/cdrdao/mp32dao';
+ use FindBin;
+ use lib $FindBin::Bin;
+ use Cwd;
+
+

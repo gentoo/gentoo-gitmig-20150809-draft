@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.18 2003/06/21 00:11:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.19 2003/06/29 14:28:03 aliz Exp $
+
+*cdrdao-1.1.7-r2 (29 Jun 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> cdrda-1.1.7-r2.ebuild :
+  Build against libs from cdrtools. Closes #23384.
 
   21 Jun 2003; Alastair Tse <liquidx@gentoo.org> cdrdao-1.1.5-r1.ebuild,
   cdrdao-1.1.7-r1.ebuild, cdrdao-1.1.7.ebuild:
