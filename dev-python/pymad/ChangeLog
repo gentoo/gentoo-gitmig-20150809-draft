@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pymad
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.1 2003/03/13 22:57:40 liquidx Exp $
+
+*pymad-0.4.1 (13 Mar 2003)
+
+  13 Mar 2003; Alastair Tse <liquidx@gentoo.org> pymad-0.4.1.ebuild:
+  initial ebuild. Thanks to Mike Wakerly <mikew@wakerly.com> in bug #17270.
+
