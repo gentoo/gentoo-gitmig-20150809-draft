@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20040906.ebuild,v 1.2 2004/10/19 18:49:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20041019.ebuild,v 1.1 2004/10/19 18:49:42 solar Exp $
 
 # All work on madwifi is pretty much done under the WPA branch. At some
 # point in the near future it should be merged back into HEAD. 
@@ -13,7 +13,8 @@ HOMEPAGE="http://madwifi.sourceforge.net/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-SRC_URI="mirror://gentoo/${P}.tar.bz2 mirror://gentoo/${PN}-${PV}-gentoo.patch.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
+#SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PV}-gentoo.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -40,7 +41,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${DISTDIR}/${PN}-${PV}-gentoo.patch.bz2
+	epatch ${FILESDIR}/madwifi-multi-ssid-support.patch
 
 	if kernel-mod_is_2_6_kernel && [ ${KV_PATCH} -gt 5 ]; then
 		for dir in ath ath_hal net80211; do

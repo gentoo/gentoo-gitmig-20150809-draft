@@ -1,6 +1,18 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.14 2004/09/06 18:46:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.15 2004/10/19 18:49:42 solar Exp $
+
+*madwifi-driver-0.1_pre20041019 (19 Oct 2004)
+
+  19 Oct 2004; <solar@gentoo.org> -madwifi-driver-0.1_pre20031213-r1.ebuild,
+  -madwifi-driver-0.1_pre20040108.ebuild,
+  -madwifi-driver-0.1_pre20040212.ebuild,
+  -madwifi-driver-0.1_pre20040514.ebuild,
+  -madwifi-driver-0.1_pre20040726.ebuild,
+  madwifi-driver-0.1_pre20040906.ebuild,
+  +madwifi-driver-0.1_pre20041019.ebuild:
+  Flushed a few of the older ebuilds and added a new 20041019 snapshot for
+  kernel 2.6.9 - madwifi-multi-ssid.patch still appears to be needed
 
 *madwifi-driver-0.1_pre20040906 (06 Sep 2004)
 
