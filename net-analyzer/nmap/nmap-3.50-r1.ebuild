@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.50-r1.ebuild,v 1.7 2004/06/24 22:13:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.50-r1.ebuild,v 1.8 2004/07/01 20:11:51 squinky86 Exp $
 
 inherit gcc eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha arm hppa amd64"
 IUSE="gtk gnome"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-libs/libpcre
 	gtk? ( =x11-libs/gtk+-1.2* )"
 

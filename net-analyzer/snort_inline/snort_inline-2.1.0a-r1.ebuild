@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/snort_inline-2.1.0a-r1.ebuild,v 1.3 2004/06/24 22:18:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/snort_inline-2.1.0a-r1.ebuild,v 1.4 2004/07/01 20:19:11 squinky86 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="ssl postgres mysql"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/libpcre-4.2-r1
 	>=net-libs/libpcap-0.6.2-r1
 	>=net-firewall/iptables-1.2.7a-r4
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-libs/libpcre-4.2-r1
 	dev-lang/perl
 	net-firewall/iptables

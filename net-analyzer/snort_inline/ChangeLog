@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort_inline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/ChangeLog,v 1.7 2004/06/24 22:18:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/ChangeLog,v 1.8 2004/07/01 20:19:11 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> snort_inline-2.1.0a-r1.ebuild,
+  snort_inline-2.1.0a-r2.ebuild, snort_inline-2.1.0a.ebuild,
+  snort_inline-2.1.1.ebuild:
+  change virtual/glibc to virtual/libc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   snort_inline-2.1.0a-r1.ebuild, snort_inline-2.1.0a-r2.ebuild,

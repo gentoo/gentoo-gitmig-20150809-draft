@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.1 2004/07/01 00:08:16 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.2 2004/07/01 20:18:32 squinky86 Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ IUSE="ssl postgres mysql flexresp selinux snortsam"
 # IUSE="${IUSE} snmp"
 
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/libpcre-4.2-r1
 	>=net-libs/libpcap-0.6.2-r1
 	flexresp? (	<net-libs/libnet-1.1
@@ -35,7 +35,7 @@ DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 #	prelude? ( >=dev-libs/libprelude-0.8 )
 #	snmp? ( >=net-analyzer/net-snmp-5.0 )
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-libs/libpcre-4.2-r1
 	dev-lang/perl
 	>=net-libs/libpcap-0.6.2-r1

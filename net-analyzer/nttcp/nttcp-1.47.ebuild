@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/nttcp-1.47.ebuild,v 1.4 2004/06/25 03:21:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/nttcp-1.47.ebuild,v 1.5 2004/07/01 20:12:58 squinky86 Exp $
 
 inherit gcc
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha ~amd64 ~ia64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	emake ARCH= CC="$(gcc-getCC)" OPT="${CFLAGS}" || die "build failed"

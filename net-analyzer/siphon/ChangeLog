@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/siphon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.5 2004/06/24 22:17:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.6 2004/07/01 20:16:53 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> siphon-666.ebuild:
+  change virtual/glibc to virtual/libc
 
   22 Mar 2004; Michael Boman <mboman@gentoo.org> metadata.xml,
   siphon-666.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/portmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.5 2004/06/24 22:15:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.6 2004/07/01 20:13:37 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> portmon-1.9.ebuild,
+  portmon-2.0.ebuild:
+  change virtual/glibc to virtual/libc
 
   28 Apr 2004; David Holm <dholm@gentoo.org> portmon-2.0.ebuild:
   Added to ~ppc.
