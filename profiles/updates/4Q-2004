@@ -247,3 +247,4 @@ move dev-libs/torch sci-libs/torch
 move dev-libs/proj sci-libs/proj
 move dev-libs/fftw sci-libs/fftw
 move app-sci/gempak sci-geosciences/gempak
+move app-sci/gmt sci-geosciences/gmt
