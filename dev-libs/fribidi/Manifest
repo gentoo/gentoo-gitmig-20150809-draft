@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 193e7181dbb444a077eb94cdec680ce3 fribidi-0.10.4.ebuild 705
 MD5 13de2a5177dad6f17f0b1777da95e369 ChangeLog 1909
 MD5 5f66b70950879378d85d3b9371eb2725 metadata.xml 168
-MD5 97b9a9ed447a2d99db7f9b018438e03d files/digest-fribidi-0.10.4 131
+MD5 9a610e878fe5f7a2a3e5a855a54b41a5 files/digest-fribidi-0.10.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBo4jMI1lqEGTUzyQRAmuHAKCimSROI3LgEKe8TjeXf4E6+tpgcgCghF+v
+IEPkrJ6sJ+ltuhw1F8M1KUc=
+=YJSD
+-----END PGP SIGNATURE-----
