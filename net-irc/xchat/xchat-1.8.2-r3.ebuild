@@ -1,7 +1,7 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.2-r2.ebuild,v 1.3 2001/10/07 11:11:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.2-r3.ebuild,v 1.1 2001/10/15 14:36:05 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xchat irc client"
@@ -30,7 +30,7 @@ src_compile() {
   use gnome  && myopts="--enable-gnome --enable-panel"
   use gnome  || myopts="--enable-gtkfe --disable-gnome --disable-gdk-pixbuf --disable-zvt"
   use ssl    && myopts="$myopts --enable-openssl"
-  use perl   && myopts="$myopts --disable-perl"
+  use perl   || myopts="$myopts --disable-perl"
   use python && myflags="`python-config --libs` -lm"
   use python || myopts="$myopts --disable-python"
   use nls    || myopts="$myopts --disable-nls"
