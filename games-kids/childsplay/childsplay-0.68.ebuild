@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc. and Shane Hathaway
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.68.ebuild,v 1.2 2003/09/19 00:53:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.68.ebuild,v 1.3 2003/09/19 00:54:06 vapier Exp $
 
 inherit games
 
 DESCRIPTION="A suite of educational games for young children"
-HOMEPAGE="http://childsplay.sourceforge.net"
+HOMEPAGE="http://childsplay.sourceforge.net/"
 SRC_URI="mirror://sourceforge/childsplay/${P}.tar.gz
 	mirror://sourceforge/childsplay/${PN}-plugins-${PV}.tar.gz"
 
