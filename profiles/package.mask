@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2772 2004/03/25 15:11:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2773 2004/03/25 19:23:24 rizzo Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -877,10 +877,6 @@ app-misc/todo-manager-bronze
 # mask arch in favor of tla
 dev-util/arch
 
-# rizzo@gentoo.org 12 Feb 2004
-# mask libsqlora8 until I can find an oracle 8i install
-dev-libs/libsqlora8
-
 # weeve@gentoo.org 02 Mar 2004
 # mask slib-3.1.1 until gnucash can get a fix for it
 =dev-libs/slib-3.1.1
@@ -890,8 +886,3 @@ dev-libs/libsqlora8
 # in favour of patched 0.5.9-r1
 =sys-apps/pbbuttonsd-0.5.9
 
-# rizzo@gentoo.org 22 Mar 2004
-# mask Oracle 10g instantclient builds
-dev-db/oracle-instantclient-basic
-dev-db/oracle-instantclient-jdbc
-dev-db/oracle-instantclient-sqlplus
