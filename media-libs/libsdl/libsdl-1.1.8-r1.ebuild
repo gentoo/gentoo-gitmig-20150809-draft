@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.1.8-r1.ebuild,v 1.2 2001/04/17 00:39:41 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.1.8-r1.ebuild,v 1.3 2001/04/23 19:10:55 drobbins Exp $
 
 A=SDL-${PV}.tar.gz
 S=${WORKDIR}/SDL-${PV}
@@ -13,7 +13,6 @@ DEPEND="virtual/glibc
     >=dev-lang/nasm-0.98
     >=media-libs/audiofile-0.1.9
     >=media-libs/alsa-lib-0.5.9
-    opengl? ( >=media-libs/mesa-3.4 )
     svga? ( >=media-libs/svgalib-1.4.2 )
     esd? ( >=media-sound/esound-0.2.19 )
     X? ( >=x11-base/xfree-4.0.1 )
