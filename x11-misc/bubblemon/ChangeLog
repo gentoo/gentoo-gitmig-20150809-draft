@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bubblemon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.4 2003/02/12 09:27:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.5 2003/08/04 17:13:06 mholzer Exp $
+
+  04 Aug 2003; Martin Holzer <mholzer@gentoo.org> bubblemon-1.4-r1.ebuild:
+  Fixing sed state. closes #25300.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
