@@ -1,7 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnomemm/gnomemm-1.2.3.ebuild,v 1.4 2002/10/04 05:38:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnomemm/gnomemm-1.2.3.ebuild,v 1.5 2002/10/07 20:57:01 foser Exp $
 
+inherit gcc
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ binding for the GNOME libraries"
@@ -17,17 +18,15 @@ RDEPEND="=x11-libs/gtkmm-1.2*
 
 DEPEND="${RDEPEND}"
 
-# The following patches seems to be no longer actual
-# stroke@gentoo.org
-# src_unpack() {
-#	
-#	unpack ${A}
-#
-#	cd ${S}/src
-#	patch < ${FILESDIR}/${P}-gentoo.patch
-#	cd ${S}
-#	patch -p1 < ${FILESDIR}/${P}-gentoo.patch2
-# }
+src_unpack() {
+	unpack ${A}
+
+	if [ "$(gcc-major-version)" == 2 ]
+	then
+		cd ${S}/src
+		patch < ${FILESDIR}/${P}-gentoo.patch
+	fi
+}
 
 src_compile() {
 	
