@@ -1,7 +1,11 @@
 # ChangeLog for dev-util/poseidonCE
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/ChangeLog,v 1.12 2004/11/03 11:42:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/ChangeLog,v 1.13 2004/12/07 05:46:41 jhhudso Exp $
 
+*poseidonCE-3.0.0 (06 Dec 2004)
+
+  06 Dec 2004; Jared Hudson <jhhudso@gentoo.org> : Version bump.
+	
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> poseidonCE-2.4.1.ebuild,
   poseidonCE-2.5.0.ebuild, poseidonCE-2.5.1.ebuild:
   depend on app-arch/unzip
