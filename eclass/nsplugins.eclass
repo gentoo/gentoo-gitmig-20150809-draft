@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.11 2003/03/22 05:58:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.12 2003/05/13 04:42:54 george Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -23,7 +23,7 @@ src_mv_plugins() {
 	keepdir /usr/lib/${PLUGINS_DIR}
 	cp -a ${D}/$1/* ${D}/usr/lib/${PLUGINS_DIR}
 	rm -rf ${D}/$1
-	dosym ../${PLUGINS_DIR} $1
+	dosym /usr/lib/${PLUGINS_DIR} $1
 }
 
 # This function move plugins in pkg_preinst() in old dir to 
