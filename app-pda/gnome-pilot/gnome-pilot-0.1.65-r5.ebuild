@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.65-r5.ebuild,v 1.2 2003/08/30 10:13:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.65-r5.ebuild,v 1.3 2003/09/06 22:21:40 msterret Exp $
 
 DESCRIPTION="Gnome Pilot apps"
 SRC_URI="ftp://ftp.gnome.org/pub/gnome/unstable/sources/gnome-pilot/${P}.tar.bz2"
@@ -38,17 +38,17 @@ src_compile() {
 	use nls \
 		&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"
-	
+
 	myconf="${myconf} --enable-usb-visor=yes --with-gnome-libs=/usr/lib"
-	
+
 	mkdir intl && touch intl/libgettext.h
-	
+
 	econf ${myconf} || die
-	
+
 	perl -pi -e 's/PISOCK_LIBS = -lpisock/PISOCK_LIBS = -lpisock -lpisync/g' \
 		`find . -name Makefile`
 
-	
+
 	emake || die
 }
 

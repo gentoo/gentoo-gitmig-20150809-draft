@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.11.ebuild,v 1.4 2003/04/19 01:15:00 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.11.ebuild,v 1.5 2003/09/06 22:21:40 msterret Exp $
 
 DESCRIPTION="Libraries and utilities to communicate with a Psion palmtop via serial."
 HOMEPAGE="http://plptools.sourceforge.net"
@@ -18,19 +18,19 @@ src_compile() {
 	local myconf
 
 	myconf="${myconf} --disable-kde"
-	
+
 	./configure ${myconf} --prefix=/usr || die
 	emake || die
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
-	
+
 	dodoc CHANGES README TODO
-	
+
 	insinto /etc/conf.d
 	newins ${FILESDIR}/psion.conf psion
-	
+
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/psion
 }

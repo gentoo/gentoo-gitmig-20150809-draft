@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.3.ebuild,v 1.1 2003/08/30 10:06:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.3.ebuild,v 1.2 2003/09/06 22:21:40 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A suite of tools contains a series of conduits for moving
@@ -43,7 +43,7 @@ src_install() {
 	make \
 		DESTDIR=${D} \
 		install || die
-		
+
 	mv ${D}/*.hxx ${D}/usr/include/libpisock/
 
 	dodoc ChangeLog README TODO NEWS AUTHORS

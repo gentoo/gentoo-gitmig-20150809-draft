@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/gnome-pilot-conduits-0.9.ebuild,v 1.1 2003/08/30 09:51:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/gnome-pilot-conduits-0.9.ebuild,v 1.2 2003/09/06 22:21:40 msterret Exp $
 
 DESCRIPTION="Gnome Pilot Conduits"
 SRC_URI="ftp://ftp.gnome.org/pub/gnome/unstable/sources/${PN}/${P}.tar.bz2"
@@ -20,7 +20,7 @@ src_unpack() {
 
 	unpack ${A}
 
-	# the new gnome-pilot works better, but redefines 
+	# the new gnome-pilot works better, but redefines
 	# PI_AF_SLP to PI_AF_PILOT for some reason.
 	cd ${S}/mal-conduit/mal/client/unix
 	cp malsync.c malsync.c.orig
@@ -29,12 +29,12 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	local myconf
-	
+
 	myconf="--enable-pilotlinktest"
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	econf ${myconf} || die
 	emake || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.2-r1.ebuild,v 1.2 2003/08/30 10:11:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.2-r1.ebuild,v 1.3 2003/09/06 22:21:40 msterret Exp $
 
 IUSE="nls"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://jpilot.org/"
 
 # In order to use the malsync plugin you'll need to refer to the homepage
 # for jpilot-syncmal http://jasonday.home.att.net/code/syncmal/
-# And you'll also need an avangto account. 
+# And you'll also need an avangto account.
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -61,6 +61,6 @@ src_install() {
 
 	newdoc jpilot-syncmal_${SYNCMAL}/ChangeLog ChangeLog.jpilot-syncmal
 	newdoc jpilot-syncmal_${SYNCMAL}/README README.jpilot-syncmal
-	dodoc jpilot-syncmal_${SYNCMAL}/malsync/Doc/README_AvantGo 
+	dodoc jpilot-syncmal_${SYNCMAL}/malsync/Doc/README_AvantGo
 	dodoc jpilot-syncmal_${SYNCMAL}/malsync/Doc/README_malsync
 }
