@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/halflife-adminmod-2.50.59-r1.ebuild,v 1.1 2004/06/22 04:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/halflife-adminmod-2.50.59-r1.ebuild,v 1.2 2004/06/25 03:02:22 agriffis Exp $
 
 inherit games eutils
 
