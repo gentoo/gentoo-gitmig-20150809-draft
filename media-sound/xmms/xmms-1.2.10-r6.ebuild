@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.4 2004/10/03 23:20:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.5 2004/10/04 04:58:47 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk alsa oss arts jack sndfile lirc flac"
 
@@ -19,6 +19,9 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
+# Notice to arch maintainers:
+# Please test out the plugins listed below in PDEPEND.  They should
+# work on most of your archs, but haven't been marked yet.
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 
 DEPEND="=x11-libs/gtk+-1.2*
@@ -43,9 +46,9 @@ PDEPEND="!alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( jack? ( media-plugins/xm
 
 #We want these things in DEPEND only
 DEPEND="${DEPEND}
-	nls? ( dev-util/intltool )
-	>=sys-devel/automake-1.7.8
-	>=sys-devel/autoconf-2.58"
+	nls? ( dev-util/intltool )"
+#	>=sys-devel/automake-1.7.8
+#	>=sys-devel/autoconf-2.58"
 
 PATCHDIR=${WORKDIR}/patches
 
@@ -126,29 +129,32 @@ src_unpack() {
 		chmod +x ${S}/config.rpath
 	fi
 
-	# dtd updates Makefile.am, but not Makefile.in
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.7
-	for subd in .; do
-		cd ${S}/${subd}
+#	# dtd updates Makefile.am, but not Makefile.in
+#	export WANT_AUTOCONF=2.5
+#	export WANT_AUTOMAKE=1.7
+#	for subd in .; do
+#		cd ${S}/${subd}
+#
+#		ebegin "Running aclocal in ${S}/${subd}"
+#		aclocal
+#		eend $?
+#
+#		ebegin "Running automake in ${S}/${subd}"
+#		automake --gnu --add-missing --include-deps
+#		retval=$?
+#		eend $retval
+#
+#		if [ $retval -ne 0 ]; then
+#			exit 1;
+#		fi
+#	done
 
-		ebegin "Running aclocal in ${S}/${subd}"
-		aclocal
-		eend $?
+	elibtoolize
 
-		ebegin "Running automake in ${S}/${subd}"
-		automake --gnu --add-missing --include-deps
-		retval=$?
-		eend $retval
-
-		if [ $retval -ne 0 ]; then
-			exit 1;
-		fi
-	done
-
-	#elibtoolize
+	# Gentoo versioning
 	cd ${S}
-	libtoolize --force --copy || die
+	sed -i "s:^ VERSION=.*$: VERSION=${PF}:" configure
+	sed -i "s:^\(%define\W*version\W*\).*$:\1${PF}": xmms.spec
 }
 
 src_compile() {
