@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.98.ebuild,v 1.1 2002/08/07 15:01:57 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.98.ebuild,v 1.2 2002/08/07 15:22:44 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="software codec for dv-format video (camcorders etc)"
@@ -18,6 +18,7 @@ DEPEND=" dev-libs/popt
 	xv? ( x11-base/xfree )
 	dev-util/pkgconfig
 	sdl? ( >=media-libs/libsdl-1.2.4.20020601 )"
+RDEPEND=""
 	
 src_compile() {
 
