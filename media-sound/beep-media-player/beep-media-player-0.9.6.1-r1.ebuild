@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.6.1-r1.ebuild,v 1.1 2004/03/03 12:18:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.6.1-r1.ebuild,v 1.2 2004/03/10 10:46:39 spider Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ RDEPEND="app-arch/unzip
 	>=dev-libs/libxml-1.8.15
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	esd? ( >=media-sound/esound-0.2.29 )
-	gnome? ( >=gnome-base/gnome-2.2 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0 )"
@@ -67,6 +66,7 @@ src_install() {
 	# Get the app registered in gnome
 
 	if use gnome; then
+		dodir /usr/share/gnome/apps
 		insinto /usr/share/gnome/apps/Multimedia
 		doins ${FILESDIR}/beep-media-player.desktop
 	fi

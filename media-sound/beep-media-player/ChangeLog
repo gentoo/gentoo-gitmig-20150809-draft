@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.5 2004/03/03 12:18:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.6 2004/03/10 10:46:39 spider Exp $
+
+  10 Mar 2004; <spider@gentoo.org> beep-media-player-0.9.6.1-r1.ebuild,
+  beep-media-player-1.0.0_pre5-r1.ebuild:
+  Fixed another braindead case of DEPEND on gnome-base/gnome.
+  AGH
 
 *beep-media-player-0.9.6.1-r1 (03 Mar 2004)
 
