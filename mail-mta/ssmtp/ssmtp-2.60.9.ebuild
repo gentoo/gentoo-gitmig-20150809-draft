@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.9.ebuild,v 1.12 2004/09/21 23:29:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.9.ebuild,v 1.13 2004/12/25 20:37:50 slarti Exp $
 
 inherit eutils
 
@@ -79,6 +79,18 @@ src_install() {
 	#else
 	#        mv ${conffile}.pre ${conffile}
 	#fi
+
+	# set up config file, v2. Bug 47562
+	local conffile="${D}/etc/ssmtp/ssmtp.conf"
+	mv "${conffile}" "${conffile}.orig"
+	# Sorry about the weird indentation, I couldn't figure out a cleverer way
+	# to do this without having horribly >80 char lines.
+	sed -e "s:^hostname=:\n# Gentoo bug #47562\\
+# Commenting the following line will force ssmtp to figure\\
+# out the hostname itself.\n\\
+# hostname=:" \
+		"${conffile}.orig" > "${conffile}" \
+		|| die "sed failed"
 }
 
 pkg_postinst() {
