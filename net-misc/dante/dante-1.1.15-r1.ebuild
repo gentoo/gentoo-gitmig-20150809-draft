@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.15.ebuild,v 1.12 2005/02/18 22:47:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.15-r1.ebuild,v 1.1 2005/02/22 18:45:03 mrness Exp $
 
 inherit gcc fixheadtails eutils
 
@@ -28,9 +28,10 @@ S=${WORKDIR}/${PN}-${MY_PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/dante-1.1.15_pre1-socksify.patch
-	epatch ${FILESDIR}/dante-1.1.14-bindresvport.patch
+	epatch ${FILESDIR}/${P}_pre1-socksify.patch
+	epatch ${FILESDIR}/${P}-bindresvport.patch
 	epatch ${FILESDIR}/${P}-optionalpam.patch
+	epatch ${FILESDIR}/${P}-getipnodebyname.patch
 
 	ht_fix_file configure configure.ac
 	sed -i \
@@ -65,9 +66,9 @@ src_install() {
 
 	# our init script
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/dante-sockd-init-1.1.14-r2 dante-sockd
+	newexe ${FILESDIR}/dante-sockd-init dante-sockd
 	insinto /etc/conf.d
-	newins ${FILESDIR}/dante-sockd-conf-1.1.14-r2 dante-sockd
+	newins ${FILESDIR}/dante-sockd-conf dante-sockd
 
 	# install documentation
 	dodoc BUGS CREDITS NEWS README SUPPORT TODO VERSION
