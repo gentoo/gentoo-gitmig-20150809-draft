@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-0.9.3.ebuild,v 1.2 2004/11/30 03:02:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-0.9.5.ebuild,v 1.1 2004/11/30 03:02:50 usata Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="XMLStarlet is a set of XML command line utilities"
 HOMEPAGE="http://xmlstar.sourceforge.net/"
@@ -10,13 +12,16 @@ LICENSE="MIT"
 
 SLOT="0"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
-DEPEND="dev-libs/libxml2
-	dev-libs/libxslt"
+DEPEND=">=dev-libs/libxml2-2.6.12
+	>=dev-libs/libxslt-1.1.9
+	dev-libs/libgcrypt
+	dev-libs/libgpg-error"
 
 src_compile() {
+	append-ldflags -lgcrypt
 	econf || die
 	emake || die
 }

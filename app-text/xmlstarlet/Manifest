@@ -1,4 +1,16 @@
-MD5 3bbd3dec87b5ebc66b267709ed8ae78e xmlstarlet-0.9.3.ebuild 702
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3fa3e969cd79fa202494efe6e6f4f6d9 xmlstarlet-0.9.3.ebuild 701
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 dd26a97d17c9e470348e3e97b647d3e4 ChangeLog 433
+MD5 364c7242de2aa6461456d11fa43a39ca ChangeLog 615
+MD5 31b1860b29a632ce7442e07dae56cf07 xmlstarlet-0.9.5.ebuild 809
 MD5 0935f1c792a257568d986aefebb92f09 files/digest-xmlstarlet-0.9.3 68
+MD5 e9d9af08aed6ffccf668033fc6f07ed3 files/digest-xmlstarlet-0.9.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBq+FBVWNWqTUmv+0RAtz8AKCnlPeqiVMRbxOc42agAS4WDmlFhQCeI0O+
+8F3+NsOg1RTA5+NKwpmtpLY=
+=OmRI
+-----END PGP SIGNATURE-----
