@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.57 2004/08/09 13:45:46 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.58 2004/08/21 22:20:38 karltk Exp $
+
+  22 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-3.0.0-r3.ebuild, eclipse-sdk-2.1.3-r5.ebuild:
+  Added the graphics.jar to the IBM JDK classpath. Ugh, when will
+  we learn;) Should fix #59673.
 
   09 Aug 2004; <SeJo@gentoo.org> eclipse-sdk-2.1.3-r5.ebuild:
   added the xml.jar to the ppc classpath

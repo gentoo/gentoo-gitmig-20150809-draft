@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.4 2004/08/09 13:45:46 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.5 2004/08/21 22:20:38 karltk Exp $
 
 inherit eutils
 
@@ -199,7 +199,7 @@ src_compile() {
 	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
 		# IBM JRE
 		einfo "Using the IBM JDK"
-		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/xml.jar:$(java-config --jdk-home)/jre/lib/core.jar"
+		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/xml.jar:$(java-config --jdk-home)/jre/lib/core.jar:$(java-config --jdk-home)/jre/lib/graphics.jar"
 	else
 		# Sun derived JREs (Blackdown, Sun)
 		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/rt.jar"
