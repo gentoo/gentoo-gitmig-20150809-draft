@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.5 2004/07/22 14:47:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.6 2004/09/19 08:25:58 axxo Exp $
+
+*poi-2.5-r1 (19 Sep 2004)
+
+  19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +poi-2.5-r1.ebuild:
+  Doesn't use packed jars anymore, thanks too Mark Wolfe
+  <mwolfe@netspace.net.au>. The ebuild also evilly fetched other jars it then
+  used, i corrected those. closes #63263
 
 *poi-2.5 (22 Jul 2004)
 
