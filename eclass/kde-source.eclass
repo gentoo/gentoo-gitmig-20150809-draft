@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.3 2002/08/01 19:16:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.4 2002/08/01 22:14:10 danarmak Exp $
 
 # This is for kde-base cvs ebuilds. Read comments about settings.
 # It uses $S and sets $SRC_URI, so inherit it as late as possible (certainly after any other eclasses).
@@ -38,8 +38,7 @@ INHERITED="$INHERITED $ECLASS"
 
 # --- end user-configurable settings ---
 
-# cvs modules don't have a version in their names
-S="$WORKDIR/$PN" 
+S="$WORKDIR/$ECVS_MODULE" 
 
 DESCRIPTION="$DESCRIPTION (cvs) "
 
@@ -58,28 +57,30 @@ kde-source_src_unpack() {
 	# kde-source.eclass defaults, which in turn override cvs.eclass defaults
 	inherit cvs
 	
-	# this fetches cvs sources and copies them to $WORKDIR
 	cvs_src_unpack
+
+	# subdirs of kde modules get special treatment that is designed for
+	# subdirs which are separate selfcontained apps and only need
+	# automake/autoconf stuff etc. added to them.
+	# this fits for apps from kdenonbeta, kdeextragear modules etc.
+	# So, if we just fetched a module's subdir, fetch the top directory
+	# of the module (non-recursively) and make it build only the subdirectory
+	# we need
+	if [ -n "$ECVS_SUBDIR" -a -n "$ECVS_SERVER" ]; then
+		ECVS_SUBDIR= ECVS_LOCAL=yes cvs_src_unpack
+		
+	fi
 	
 	# typically for kde cvs, the admin subdir lives in the kde-common module
 	# which is also needed
 	if [ ! -d "$S/admin" ]; then
 		ECVS_MODULE="kde-common" ECVS_SUBDIR="admin" cvs_src_unpack
-#		einfo "Copying admin/ subdir from module kde-common..."
-#		debug-print "Copying admin/ subdir from module kde-common..."
-    	mv ${WORKDIR}/admin $S/
+    	mv ${WORKDIR}/kde-common/admin $WORKDIR/$ECVS_MODULE
 	fi
-	
-	# make sure checked-out module is accessible at $S, in case
-	# the ebuild overrode our S=$WORKDIR/$PN setting
-#	if [ "$S" != "$WORKDIR/$PN" ]; then
-#		cd $WORKDIR
-#		ln -sf $PN $S
-#	fi
-	
+
 	# make sure we give them a clean cvs checkout
 	cd ${S}
-	[ -f "Makefile" ] && make cvs-clean
+	[ -f "Makefile" ] && make -f Makefile.cvs cvs-clean
 	[ -f "config.cache" ] && rm config.cache
 
 }

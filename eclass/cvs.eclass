@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.6 2002/08/01 19:16:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.7 2002/08/01 22:14:10 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -17,6 +17,13 @@ INHERITED="$INHERITED $ECLASS"
 # on the cvs onnection. the default of "cvs -q -f -z4" means to be quiet, to disregard
 # the ~/.cvsrc config file and to use maximum compression.
 [ -z "$ECVS_CVS_COMMAND" ] && ECVS_CVS_COMMAND="cvs -f -z4"
+
+# cvs options given after the command (i.e. cvs update foo)
+# don't remove -dP or things won't work
+[ -z "$ECVS_CVS_OPTIONS" ] && ECVS_CVS_OPTIONS="-dP"
+
+# set this for the module/subdir to be fetched non-recursively
+#[ -n "$ECVS_LOCAL" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -l"
 
 # Where the cvs modules are stored/accessed
 [ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="/usr/src"
@@ -57,17 +64,21 @@ cvs_fetch() {
 
 	debug-print "$FUNCNAME: init:
 ECVS_CVS_COMMAND=$ECVS_CVS_COMMAND
+ECVS_CVS_OPTIONS=$ECVS_CVS_OPTIONS
 ECVS_TOP_DIR=$ECVS_TOP_DIR
 ECVS_SERVER=$ECVS_SERVER
 ECVS_USER=$ECVS_USER
 ECVS_PASS=$ECVS_PASS
 ECS_MODULE=$ECVS_MODULE
 ECVS_MODULE_SUBDIR=$ECVS_SUBDIR
+ECVS_LOCAL=$ECVS_LOCAL
 DIR=$DIR"
 	
 	# a shorthand
 	[ -n "$ECVS_SUBDIR" ] && DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}/${ECVS_SUBDIR}" || \
 							DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}"
+
+	[ -n "$ECVS_LOCAL" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -l"
 	
 	addread $DIR
 	
@@ -163,9 +174,9 @@ DIR=$DIR"
 	fi
 
 	# finally run the cvs update command
-	debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update with $ECVS_SERVER for module $ECVS_MODULE subdir $ECVS_SUBDIR"
-	einfo "Running $ECVS_CVS_COMMAND update with $ECVS_SERVER for $ECVS_MODULE/$ECVS_SUBDIR..."
-	$ECVS_CVS_COMMAND update -dP || die "died running cvs update"
+	debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS with $ECVS_SERVER for module $ECVS_MODULE subdir $ECVS_SUBDIR"
+	einfo "Running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS with $ECVS_SERVER for $ECVS_MODULE/$ECVS_SUBDIR..."
+	$ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS || die "died running cvs update"
 
 }
 
@@ -176,11 +187,17 @@ cvs_src_unpack() {
 
     einfo "Copying module $ECVS_MODULE from $ECVS_TOP_DIR..."
 	debug-print "Copying module $ECVS_MODULE from $ECVS_TOP_DIR..."
-	# the reason this lives here and not in kde-source_src_unpack
-	# is that in the future after copying the sources we might need to 
-	# delete them, so this has to be self-contained
-    [ -n "$ECVS_SUBDIR" ] && cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR $WORKDIR \
-						|| cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
+	
+	if [ -n "$ECVS_SUBDIR" ]; then
+			mkdir $WORKDIR/$ECVS_MODULE
+			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR $WORKDIR/$ECVS_MODULE
+	else
+		if [ -n "$ECVS_LOCAL" ]; then
+			cp -f $ECVS_TOP_DIR/$ECVS_MODULE/* $WORKDIR/$ECVS_MODULE
+		else
+			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
+		fi
+	fi
     
     # implement some of base_src_unpack's functionality;
     # note however that base.eclass may not have been inherited!
