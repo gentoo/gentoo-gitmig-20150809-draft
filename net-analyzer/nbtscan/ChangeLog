@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nbtscan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.2 2002/02/13 02:57:51 blocke Exp $
+
+*nbtscan-1.0.3 (12 Feb 2002)
+
+  12 Feb 2002; Bruce A. Locke <blocke@shivan.org> ChangeLog:
+
+  Update to 1.0.3
+
 
 *nbtscan-1.0.2 (1 Feb 2002)
 
