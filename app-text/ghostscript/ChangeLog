@@ -1,8 +1,12 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.16 2002/10/05 11:14:00 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.17 2002/10/07 17:43:23 raker Exp $
 
 *ghostscript-7.05.5 (18 Sep 2002)
+
+  07 Oct 2002; Nick Hadaway <raker@gentoo.org> ghostscript-7.05.5.ebuild :
+  Added gnome use variable for gimp-print plugin support.  added gnome
+  to IUSE variables.
 
   18 Sep 2002; Nick Hadaway <raker@gentoo.org>
   ghostscript-7.05.5.ebuild, files/digest-ghostscript-7.05.5 :

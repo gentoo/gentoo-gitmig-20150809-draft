@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.4 2002/10/05 11:14:00 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.5 2002/10/07 17:43:23 raker Exp $
 
-IUSE="X cups"
+IUSE="X cups gnome"
 
 S=${WORKDIR}/espgs-${PV}
 
@@ -47,6 +47,9 @@ src_compile() {
 
 	use cups && myconf="${myconf} --enable-cups" \
 		|| myconf="${myconf} --disable-cups"
+
+	use gnome && myconf="${myconf} --with-gimp-print" \
+		|| myconf="${myconf} --without-gimp-print"
 
 	econf ${myconf} || die "./configure failed"
 
