@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.3-r1.ebuild,v 1.4 2002/07/16 04:54:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.3-r1.ebuild,v 1.5 2002/07/23 02:05:15 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="kernel NFS client and server daemons"
@@ -24,7 +24,9 @@ src_compile() {
 		sed -e "s:-lwrap::" -e "s:-DHAVE_TCP_WRAPPER::" \
 			config.mk.orig > config.mk
 	fi
-	emake || die
+
+	# nitro: parallel make fails sometimes
+	make || die
 }
 
 src_install() {
