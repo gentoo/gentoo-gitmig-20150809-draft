@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.3 2003/02/13 09:16:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.4 2003/11/15 08:52:51 brandy Exp $
 
+PATCH_VER="0.1"
 DESCRIPTION="Calendar program"
 HOMEPAGE="http://www.fnal.gov/docs/products/tktools/ical.html"
 SRC_URI="http://helios.dii.utk.edu/ftp/pub/tcl/apps/ical/${P}a.tar.bz2
-		 http://www.ibiblio.org/gentoo/distfiles/${P}a.patch.tar.bz2"
+		 http://www.ibiblio.org/gentoo/distfiles/${P}a.patch-${PATCH_VER}.tar.bz2"
 LICENSE="as-is GPL-2"
 SLOT="0"
 KEYWORDS="x86"
@@ -27,12 +28,16 @@ src_unpack() {
 	D=${S}/ dosed "s: \@TCL_LIBS\@::" Makefile.in
 	D=${S}/ dosed "s:mkdir:mkdir -p:" Makefile.in
 
+	if has_version '=dev-lang/tcl-8.4*' ; then
+		patch -p0 < ${P}a-tcl8.4.patch || die
+	fi
+
 }
 
 src_compile() {
 	autoconf
-	econf
-	emake || die
+	econf --with-tclsh=/usr/bin/tclsh
+	emake || die "parallel make failed"
 }
 
 src_install () {
@@ -41,5 +46,5 @@ src_install () {
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
-		install || die
+		install || die "install failed"
 }

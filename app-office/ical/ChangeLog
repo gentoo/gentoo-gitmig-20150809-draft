@@ -1,6 +1,10 @@
 # ChangeLog for app-office/ical
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.4 2003/02/12 05:13:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.5 2003/11/15 08:52:51 brandy Exp $
+
+  15 Nov 2003; Brandy Westcott brandy@gentoo.org ical-2.2.1.ebuild:
+  Fixed up ebuild to play nice with tcl. Added patch for tcl-8.4. Closes bug
+  #22924.
 
 *ical-2.2.1 (31 Jul 2002)
   03 Aug 2002; Chad Huneycutt <chadh@gentoo.org> ical-2.2.1.ebuild: added die
