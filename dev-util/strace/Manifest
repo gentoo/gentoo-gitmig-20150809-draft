@@ -1,20 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f65249ad321b4cb2b0efe1a4f81b0227 ChangeLog 5431
 MD5 b2ee1ed38bdd780b03b2718f53c3dbb5 strace-4.4.94.ebuild 1193
 MD5 0f7e44ef2b6c2598f320eb7e5390b11c strace-4.4.98.ebuild 1320
-MD5 c8f6e53db1108edf6a09cf9d662899b5 strace-4.5.1.ebuild 1299
 MD5 fe3a541c05056316939e1370a1726380 strace-4.5.ebuild 1239
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 c8f6e53db1108edf6a09cf9d662899b5 strace-4.5.1.ebuild 1299
 MD5 962d17f7bdafc82ed4880f08ddf63fe5 strace-4.4.98-r1.ebuild 1461
 MD5 d810bed8094c68bd75e705e9624a1abb strace-4.5.6.ebuild 1147
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 524ab1339a4490ba27a8a897c402c1be strace-4.5.7.ebuild 1147
 MD5 2ab6aadb2e19d5489bce0b509e45a9d0 strace-4.5.2.ebuild 1314
-MD5 1c269bae9f741bbe53fe641a0da876bc files/digest-strace-4.4.94 360
+MD5 38e4a65d3a6a6e39695752ba68b2db78 files/digest-strace-4.5.1 65
+MD5 e7e0a0acba5aac5b227dbe5961373270 files/digest-strace-4.4.94 66
 MD5 45f2fb0d3dc9d9f796448a40d38edc0b files/digest-strace-4.4.98 66
 MD5 5c3b3bb609d3956a94ec20b4a39da546 files/digest-strace-4.5 63
-MD5 38e4a65d3a6a6e39695752ba68b2db78 files/digest-strace-4.5.1 65
 MD5 b7c93d383818fc6aa8ac330514b866e0 files/strace-4.5.1-2.6.patch 5756
 MD5 45f2fb0d3dc9d9f796448a40d38edc0b files/digest-strace-4.4.98-r1 66
 MD5 4fdbcdca139cfe298999551cd9ba97bf files/strace-get_scno.patch 515
@@ -22,10 +19,3 @@ MD5 f18a719a3d60b0a6f6fd89949d1db35c files/digest-strace-4.5.6 65
 MD5 332b30ad46b6f4ee72387a779580f321 files/digest-strace-4.5.7 65
 MD5 b2d46a601a4bd117795f40178cf40612 files/digest-strace-4.5.2 65
 MD5 3d30271a2e23ac6401b2b54f99b91e5c files/strace-4.5.2-s390-april2004.diff 11986
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBazJSHTu7gpaalycRAvJEAJ0WQ8VF+XR8cM6OGUrI487qP4b/HwCgoot2
-1yrmmHnQDWieaDR/EQlSYLg=
-=Rz9M
------END PGP SIGNATURE-----
