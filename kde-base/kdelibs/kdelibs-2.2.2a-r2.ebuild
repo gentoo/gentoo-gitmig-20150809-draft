@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a-r2.ebuild,v 1.2 2003/04/27 13:43:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a-r2.ebuild,v 1.3 2003/07/16 16:23:02 pvdabeel Exp $
 inherit kde eutils
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
 
 IUSE="ssl cups ipv6 alsa"
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ppc"
 HOMEPAGE="http//www.kde.org/"
 SRC_URI="mirror://kde/2.2.2/src/${PN}-${PV/a/}.tar.bz2
 		mirror://kde/security_patches/post-${PV/a/}-${PN}-kimgio.diff"
