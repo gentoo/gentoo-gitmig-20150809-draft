@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.1 2002/08/12 14:33:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.2 2002/08/12 15:08:34 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ user interface toolkit for X and OpenGL."
@@ -42,4 +42,8 @@ src_install () {
 	dodir /usr/share/doc/${PF}/html
 	mv ${D}/usr/share/doc/fltk/* ${D}/usr/share/doc/${PF}/html
 	rmdir ${D}/usr/share/doc/fltk
+
+	echo "LDPATH=/usr/lib/fltk-1.0" > 99fltk1.0
+	insinto /etc/env.d
+	doins 99fltk1.0
 }
