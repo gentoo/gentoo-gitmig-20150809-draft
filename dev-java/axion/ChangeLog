@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/axion
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.4 2004/06/27 16:58:50 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.5 2004/07/30 21:36:12 axxo Exp $
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> axion-1.0_rc2.ebuild:
+  move dev-java/regexp dev-java/regexp-bin
 
   27 Jun 2004; Chris Aniszczyk <zx@gentoo.org> axion-1.0_rc2.ebuild:
   Marking stable on x86
