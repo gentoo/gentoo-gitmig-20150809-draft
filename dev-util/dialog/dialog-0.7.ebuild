@@ -9,7 +9,7 @@ SRC_URI="http://www.advancedresearch.org/dialog/${A}"
 HOMEPAGE="http://www.advancedresearch.org/dialog/"
 
 DEPEND=">=sys-apps/bash-2.04-r3
-	>=sys-libs/ncurses-5.2-r4"
+	>=sys-libs/ncurses-5.2"
 
 src_install () {
 
