@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.10 2003/07/09 18:19:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.11 2004/02/26 02:53:44 bazik Exp $
+
+  26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> oroborus-2.0.9.ebuild:
+  KEYWORDS got sparced.
 
 *oroborus-2.0.13 (09 Jul 2003)
 
