@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-0.6.2.ebuild,v 1.4 2003/02/13 06:15:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-0.6.2.ebuild,v 1.5 2003/09/06 22:15:09 msterret Exp $
 
 DESCRIPTION="Gringotts is a utility that allows you to jot down sensitive data"
 SRC_URI="http://devel.pluto.linux.it/projects/Gringotts/current/${P}.tar.bz2"
@@ -22,7 +22,7 @@ src_compile() {
 	econf
 	emake || die
 }
- 
+
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc COPYING ChangeLog README AUTHORS

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.3 2003/06/29 22:18:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.4 2003/09/06 22:15:09 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Quintuple Agent stores your (GnuPG) secrets in a secure manner."
@@ -25,7 +25,7 @@ src_compile() {
 src_install () {
 	einstall
 	chmod +s "${D}/usr/bin/q-agent"
-	
+
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README THANKS TODO
 	docinto doc
 	dodoc doc/*.sgml

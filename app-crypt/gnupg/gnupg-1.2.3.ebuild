@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3.ebuild,v 1.1 2003/08/26 00:42:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3.ebuild,v 1.2 2003/09/06 22:15:09 msterret Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha"
 IUSE="X zlib ldap nls"
 
-DEPEND="dev-lang/perl 
+DEPEND="dev-lang/perl
 	X? ( x11-misc/xloadimage )
 	zlib? ( sys-libs/zlib )
 	ldap? ( net-nds/openldap )"

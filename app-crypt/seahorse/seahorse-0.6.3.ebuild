@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.3.ebuild,v 1.3 2003/07/09 17:26:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.3.ebuild,v 1.4 2003/09/06 22:15:09 msterret Exp $
 
 inherit gnome2
 
@@ -22,5 +22,5 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3
 	dev-util/pkgconfig"
-	
+
 DOCS="AUTHORS COPYING* ChangeLog NEWS README TODO THANKS"

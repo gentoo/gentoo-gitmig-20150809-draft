@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.2.ebuild,v 1.6 2003/07/09 17:26:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.2.ebuild,v 1.7 2003/09/06 22:15:09 msterret Exp $
 
 IUSE=""
 DESCRIPTION="gnome front end to gnupg"
@@ -21,7 +21,7 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {                           
+src_compile() {
 	econf
 	emake || die "parallel make failed"
 }

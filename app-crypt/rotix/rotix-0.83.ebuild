@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/rotix-0.83.ebuild,v 1.4 2003/03/28 12:43:22 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/rotix-0.83.ebuild,v 1.5 2003/09/06 22:15:09 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rotix allows you to generate rotational obfuscations."
@@ -21,7 +21,7 @@ src_compile() {
 	use nls && myconf="--i18n=1"
 
 	econf ${myconf} || die
-	
+
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.4.5.ebuild,v 1.1 2003/09/02 22:15:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.4.5.ebuild,v 1.2 2003/09/06 22:15:09 msterret Exp $
 
 DESCRIPTION="Open Crypto Development Kit for basic OpenPGP message manipulation"
 HOMEPAGE="http://www.gnutls.org/"
@@ -23,7 +23,7 @@ src_compile() {
 
 src_install() {
 	einstall || die "installed failed"
-	
+
 	dodoc AUTHORS COPYING ChangeLog NEWS README \
 		README-alpha THANKS TODO
 	[ "`use doc`" ] && dohtml doc/opencdk-api.html
