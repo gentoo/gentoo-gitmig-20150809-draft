@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.3.ebuild,v 1.7 2004/10/16 18:16:29 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.3.ebuild,v 1.8 2005/01/14 19:19:29 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://checkstyle.sourceforge.net"
 SRC_URI="mirror://sourceforge/checkstyle/${PN}-src-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="doc jikes"
 
 S=${WORKDIR}/${PN}-src-${PV}
@@ -42,4 +42,11 @@ src_install() {
 	mv docs/checkstyle_checks.xml ${D}/usr/share/checkstyle/checkstyle_checks.xml
 	mv docs/sun_checks.xml ${D}/usr/share/checkstyle/sun_checks.xml
 	mv contrib ${D}/usr/share/checkstyle
+
+	echo '#!/bin/bash' > checkstyle
+	echo '' >> checkstyle
+	echo '`java-config -J` -cp `java-config -p checkstyle,antlr,commons-beanutils,commons-cli-1,commons-collections,commons-logging,regexp` com.puppycrawl.tools.checkstyle.Main "$@"' >> checkstyle
+
+	insinto /usr
+	dobin checkstyle
 }

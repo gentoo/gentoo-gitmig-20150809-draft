@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/checkstyle
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.9 2004/10/21 12:14:24 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.10 2005/01/14 19:19:29 luckyduck Exp $
+
+  14 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> checkstyle-3.3.ebuild,
+  checkstyle-3.4-r2.ebuild:
+  both ebuilds now generate a bash script to make this package easy to use.
+  fixes bug #77767.
 
   21 Oct 2004; Simon Stelling <blubb@gentoo.org> checkstyle-3.4-r2.ebuild:
   added ~amd64
