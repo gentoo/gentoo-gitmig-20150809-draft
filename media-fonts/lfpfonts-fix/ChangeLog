@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/lfpfonts-fix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/ChangeLog,v 1.1 2003/06/02 13:47:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/ChangeLog,v 1.2 2003/12/05 22:07:03 agriffis Exp $
+
+  05 Dec 2003; <agriffis@gentoo.org> lfpfonts-fix-0.82-r1.ebuild:
+  Stable on ia64
 
 *lfpfonts-fix-0.82-r1 (02 Jun 2003)
 
