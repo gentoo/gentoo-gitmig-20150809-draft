@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.3.4.ebuild,v 1.1 2004/11/06 11:25:31 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.3.4.ebuild,v 1.2 2004/11/06 12:25:20 sekretarz Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -37,7 +37,8 @@ DEPEND=">=sys-apps/sed-4
 	graphviz? ( media-gfx/graphviz )
 	fpx? ( media-libs/libfpx )"
 
-RDEPEND=">=sys-devel/libtool-1.5.2-r6"
+RDEPEND="${DEPEND}
+		>=sys-devel/libtool-1.5.2-r6"
 
 src_unpack() {
 	unpack ${A}
