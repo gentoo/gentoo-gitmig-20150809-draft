@@ -21,13 +21,7 @@
 ##   End example
 ##
 
-# <avenj@gentoo.org> (07 Feb 2003)
-# Borking for a lot of people and digests are missing from the tree.
-=sys-apps/portage-2.0.46-r11
-
 # <carpaski@gentoo.org> (07 Feb 2003)
-# Testing. Happy release.
-=sys-apps/portage-2.0.46-r12
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
 >=sys-apps/portage-2.0.47_pre1
 
