@@ -1,0 +1,117 @@
+
+	* config/sparc/sparc.c (compare_operand): New predicate.
+	* config/sparc/sparc.h (PREDICATE_CODES): Add it.
+	* config/sparc/sparc.md (cmpsi expander): Use it.  If the first
+	operand is a ZERO_EXTRACT and the second operand is not zero,
+	force the former to a register.
+	(cmpdi expander): Likewise.
+
+
+> install_page:
+>         !#PROLOGUE# 0
+>         !#PROLOGUE# 1
+>         srl     %o0, 16, %o0
+>         andcc   %o0, 1, %g0
+>         te      5
+>         retl
+>         nop
+
+We still emit this code with the patch.
+
+-- 
+Eric Botcazou
+--------------
+Index: config/sparc/sparc.c
+===================================================================
+RCS file: /cvs/gcc/gcc/gcc/config/sparc/sparc.c,v
+retrieving revision 1.233.4.9
+diff -u -p -r1.233.4.9 sparc.c
+--- gcc/config/sparc/sparc.c	30 Jan 2004 07:19:32 -0000	1.233.4.9
++++ gcc/config/sparc/sparc.c	29 May 2004 23:41:41 -0000
+@@ -1357,6 +1357,34 @@ input_operand (op, mode)
+   return 0;
+ }
+ 
++/* Return 1 if OP is valid for the lhs of a compare insn.  */
++
++int
++compare_operand (op, mode)
++     rtx op;
++     enum machine_mode mode;
++{
++  if (GET_CODE (op) == ZERO_EXTRACT)
++    return (register_operand (XEXP (op, 0), mode)
++	    && small_int_or_double (XEXP (op, 1), mode)
++	    && small_int_or_double (XEXP (op, 2), mode)
++	    /* This matches cmp_zero_extract.  */
++	    && ((mode == SImode
++		 && ((GET_CODE (XEXP (op, 2)) == CONST_INT
++		      && INTVAL (XEXP (op, 2)) > 19)
++		     || (GET_CODE (XEXP (op, 2)) == CONST_DOUBLE
++			 && CONST_DOUBLE_LOW (XEXP (op, 2)) > 19)))
++		/* This matches cmp_zero_extract_sp64.  */
++		|| (mode == DImode
++		    && TARGET_ARCH64
++		    && ((GET_CODE (XEXP (op, 2)) == CONST_INT
++			 && INTVAL (XEXP (op, 2)) > 51)
++			|| (GET_CODE (XEXP (op, 2)) == CONST_DOUBLE
++			    && CONST_DOUBLE_LOW (XEXP (op, 2)) > 51)))));
++  else
++    return register_operand (op, mode);
++}
++
+ 
+ /* We know it can't be done in one insn when we get here,
+    the movsi expander guarentees this.  */
+Index: config/sparc/sparc.h
+===================================================================
+RCS file: /cvs/gcc/gcc/gcc/config/sparc/sparc.h,v
+retrieving revision 1.215.4.5
+diff -u -p -r1.215.4.5 sparc.h
+--- gcc/config/sparc/sparc.h	29 Apr 2004 04:42:52 -0000	1.215.4.5
++++ gcc/config/sparc/sparc.h	29 May 2004 23:41:53 -0000
+@@ -3059,6 +3059,7 @@ do {									\
+ {"uns_arith_operand", {SUBREG, REG, CONST_INT}},			\
+ {"clobbered_register", {REG}},						\
+ {"input_operand", {SUBREG, REG, CONST_INT, MEM, CONST}},		\
++{"compare_operand", {SUBREG, REG, ZERO_EXTRACT}},			\
+ {"const64_operand", {CONST_INT, CONST_DOUBLE}},				\
+ {"const64_high_operand", {CONST_INT, CONST_DOUBLE}},
+ 
+Index: config/sparc/sparc.md
+===================================================================
+RCS file: /cvs/gcc/gcc/gcc/config/sparc/sparc.md,v
+retrieving revision 1.181.4.10
+diff -u -p -r1.181.4.10 sparc.md
+--- gcc/config/sparc/sparc.md	12 Feb 2004 13:42:46 -0000	1.181.4.10
++++ gcc/config/sparc/sparc.md	29 May 2004 23:42:03 -0000
+@@ -290,10 +290,13 @@
+ 
+ (define_expand "cmpsi"
+   [(set (reg:CC 100)
+-	(compare:CC (match_operand:SI 0 "register_operand" "")
++	(compare:CC (match_operand:SI 0 "compare_operand" "")
+ 		    (match_operand:SI 1 "arith_operand" "")))]
+   ""
+ {
++  if (GET_CODE (operands[0]) == ZERO_EXTRACT && operands[1] != const0_rtx)
++    operands[0] = force_reg (SImode, operands[0]);
++
+   sparc_compare_op0 = operands[0];
+   sparc_compare_op1 = operands[1];
+   DONE;
+@@ -301,10 +304,13 @@
+ 
+ (define_expand "cmpdi"
+   [(set (reg:CCX 100)
+-	(compare:CCX (match_operand:DI 0 "register_operand" "")
++	(compare:CCX (match_operand:DI 0 "compare_operand" "")
+ 		     (match_operand:DI 1 "arith_double_operand" "")))]
+   "TARGET_ARCH64"
+ {
++  if (GET_CODE (operands[0]) == ZERO_EXTRACT && operands[1] != const0_rtx)
++    operands[0] = force_reg (DImode, operands[0]);
++
+   sparc_compare_op0 = operands[0];
+   sparc_compare_op1 = operands[1];
+   DONE;

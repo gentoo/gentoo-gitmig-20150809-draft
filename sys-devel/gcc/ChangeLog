@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.291 2004/07/22 13:11:14 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.292 2004/07/22 18:22:54 azarah Exp $
+
+*gcc-3.3.3-r1 (22 Jul 2004)
+
+  22 Jul 2004; Martin Schlemmer <azarah@gentoo.org>
+  +files/3.3.3/gcc333-pr15693.patch, +gcc-3.3.3-r1.ebuild:
+  Bug #57182.  This is sparc only fixup.
 
   22 Jul 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.4-r1.ebuild:
   fire up hardened changes for sparc and hppa, though still leaving keyworded on
