@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.61 2004/12/29 00:17:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.62 2004/12/30 21:21:01 kloeri Exp $
+
+  30 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> sylpheed-0.9.99.ebuild:
+  Stable on alpha.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
