@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.36 2003/11/07 19:18:47 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.37 2003/11/16 18:17:28 kumba Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -112,8 +112,15 @@ kernel_universal_unpack() {
 	cd ${S}
 	mv Makefile Makefile.orig
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-	    -e "s:^\(EXTRAVERSION =\).*:\1 -$(echo ${KV} | cut -d- -f2,3,4,5):" \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
+
+	# <kumba@gentoo.org> (16 Nov 2003)
+	# We don't need to append an EXTRAVERSION all the time, so see if EXTRAVERSION contains 1 space
+	# If it does, don't run this sed command
+	if [ "${EXTRAVERSION}" != " " ]; then
+		sed -e "s:^\(EXTRAVERSION =\).*:\1 -$(echo ${KV} | cut -d- -f2,3,4,5):" \
+			Makefile.orig >Makefile || die # test, remove me if Makefile ok
+	fi
 	rm Makefile.orig
 	
 	if [ -d "${S}/Documentation/DocBook" ]
