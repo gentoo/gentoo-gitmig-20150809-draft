@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d700f490627e992861947c08896ec0fa ChangeLog 516
-MD5 2e0d4cbfdf06d41264e694b197110239 smtptools-0.2.3.ebuild 730
 MD5 76d3681a949c983c4790bcd7e89d77bc metadata.xml 254
+MD5 0c856e6bee267a6a26560dd34e34fdbd smtptools-0.2.3.ebuild 632
 MD5 b9039ecb54e23c7820331c02902fa2a0 files/digest-smtptools-0.2.3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBviSqQlM6RnzZP+IRAoq4AJwJjdPyQt49GEFYjt390P7bDV1QNACgwYPI
-HeRtjU7y6RYZgXhuBYku/g8=
-=yj2f
------END PGP SIGNATURE-----
