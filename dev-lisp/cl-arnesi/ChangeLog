@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-arnesi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/ChangeLog,v 1.4 2004/06/24 23:40:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/ChangeLog,v 1.5 2004/08/04 15:28:36 mkennedy Exp $
+
+*cl-arnesi-1.2.0 (04 Aug 2004)
+
+  04 Aug 2004; <mkennedy@gentoo.org> +cl-arnesi-1.2.0.ebuild:
+  New upstream version; Marking stable
 
 *cl-arnesi-1.1.2 (14 Feb 2004)
 
