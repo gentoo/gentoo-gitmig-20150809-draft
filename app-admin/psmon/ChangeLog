@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/psmon
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.1 2003/10/30 13:19:10 mholzer Exp $
+
+*psmon-1.0.4 (30 Oct 2003)
+
+  30 Oct 2003; Martin Holzer <mholzer@gentoo.org> psmon-1.0.4.ebuild:
+  Inital ebuild. Submitted by Janne Pikkarainen <jaba@mikrobitti.fi> in #27237.
+
