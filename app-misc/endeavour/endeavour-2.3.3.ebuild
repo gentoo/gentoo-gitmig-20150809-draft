@@ -1,16 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20.ebuild,v 1.5 2003/06/29 23:17:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.3.ebuild,v 1.1 2003/10/01 09:49:53 hanno Exp $
+
+IUSE=""
 
 M=endeavour2-mimetypes
-DESCRIPTION="powerful file and image browser"
+DESCRIPTION="Powerful file and image browser"
 HOMEPAGE="http://wolfpack.twu.net/Endeavour2/"
 SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/${M}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="sys-apps/bzip2
 	=x11-libs/gtk+-1.2*
@@ -18,21 +20,14 @@ DEPEND="sys-apps/bzip2
 
 src_unpack() {
 	unpack ${P}.tar.bz2
+	epatch ${FILESDIR}/endeavour_gcc33_fix
 	unpack ${M}.tgz
-
-	#need to remove reference to ctypes.h from fio.cpp to make gcc-3.x compile the package
-	cd ${S}/endeavour2
-	mv fio.cpp fio.cpp-orig
-	sed -e "s:#include <ctype.h>://#include <ctype.h>:" fio.cpp-orig >fio.cpp
 }
 
 src_compile() {
-	cd ${P}
-	./configure Linux \
-		--prefix=/usr
+	./configure Linux --prefix=/usr || die
 	emake || die "Parallel make failed"
 }
-
 
 src_install() {
 	dodoc AUTHORS HACKING INSTALL README TODO
