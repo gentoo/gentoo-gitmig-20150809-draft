@@ -1,12 +1,12 @@
 # ChangeLog for net-misc/nt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/ChangeLog,v 1.7 2002/07/23 18:17:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/ChangeLog,v 1.8 2002/08/27 06:55:11 aliz Exp $
 
 *nt-2.0.2 (23 Jul 2002)
 
   18 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> nt-2.02.ebuild :
-
-  New version that should fix GCC 3.1 compile problems.
+  New version that should fix GCC 3.1 compile problems. Ebuild
+  submitted by Daniel Mettler <mettlerd@icu.unizh.ch>.
 
 *nt-2.01 (7 Jun 2002)
 
