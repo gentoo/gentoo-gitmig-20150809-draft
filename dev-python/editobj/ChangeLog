@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/editobj
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.7 2004/12/30 21:26:34 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.8 2005/01/04 10:49:08 kloeri Exp $
+
+*editobj-0.5.6 (04 Jan 2005)
+
+  04 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> +editobj-0.5.6.ebuild:
+  Version bump, bug 76129.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
