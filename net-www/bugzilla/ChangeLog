@@ -1,6 +1,11 @@
 # ChangeLog for net-www/bugzilla
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.4 2004/04/17 16:02:11 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.5 2004/04/23 17:10:08 stuart Exp $
+
+*bugzilla-2.17.6-r2 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> bugzilla-2.17.6-r2.ebuild:
+  Attempted(!!) fix for mysql password problem; see bug #46436
 
   17 Apr 2004; Stuart Herbert <stuart@gentoo.org> bugzilla-2.17.6-r1.ebuild:
   Fix for bug #48026
