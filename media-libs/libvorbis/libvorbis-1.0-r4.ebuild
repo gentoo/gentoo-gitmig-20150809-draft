@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.2 2003/08/12 14:27:47 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.3 2003/08/16 11:34:07 jje Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -40,6 +40,9 @@ src_compile() {
         is-flag "-march=k6-3" && filter-flags "-fomit-frame-pointer"
         is-flag "-march=k6-2" && filter-flags "-fomit-frame-pointer"
         is-flag "-march=k6" && filter-flags "-fomit-frame-pointer"
+
+	# filter march, see bug #26463 for details
+	filter-flags "-march=pentium?"
 
 	./configure --prefix=/usr \
 		--host=${CHOST} || die
