@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/osiris
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.5 2004/03/20 07:04:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.6 2004/03/20 07:06:06 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> osiris-1.5.2.ebuild:
+  fix depend (bug #45110)
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> osiris-1.5.1b.ebuild:
   clean older version
