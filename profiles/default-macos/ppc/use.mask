@@ -1,8 +1,17 @@
 # Add USE flags that don't work on Mac OS X here
 
-# these will more than likely never compile on os x
+# these will more than likely never work on os x
+3dnow
+3dnowex
 alsa
 gpm
+jack-tmpfs
+mmx
+mmx2
+oss
+rtc
+v4l
+v4l2
 
 # these are still a ways off
 acl
@@ -24,7 +33,8 @@ tcltk
 gtk
 gtk2
 
-# masking xmms until we get deps sorted out
+# masking these until we get deps sorted out
+mikmod
 xmms
 
 # net-misc/dante fails to compile, so we mask it until we succeed
