@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.1.ebuild,v 1.2 2004/07/14 16:20:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.1.ebuild,v 1.3 2004/07/15 02:50:57 brad Exp $
 
-IUSE="crypt debug gnome gtk2 ipv6 ldap xinerama"
+IUSE="crypt debug gtk2 ipv6 ldap xinerama"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher
@@ -266,14 +266,12 @@ src_install() {
 	dosym /usr/libexec/mozilla-launcher /usr/bin/thunderbird
 
 	# Install icon and .desktop for menu entry
-	if use gnome; then
-		insinto /usr/share/pixmaps
-		doins ${FILESDIR}/icon/thunderbird-icon.png
-		# Fix bug 54179: Install .desktop file into /usr/share/applications
-		# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
-		insinto /usr/share/applications
-		doins ${FILESDIR}/icon/mozillathunderbird.desktop
-	fi
+	insinto /usr/share/pixmaps
+	doins ${FILESDIR}/icon/thunderbird-icon.png
+	# Fix bug 54179: Install .desktop file into /usr/share/applications
+	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+	insinto /usr/share/applications
+	doins ${FILESDIR}/icon/mozillathunderbird.desktop
 
 	# Normally thunderbird-0.7.1 must be run as root once before it can
 	# be run as a normal user.  Drop in some initialized files to
