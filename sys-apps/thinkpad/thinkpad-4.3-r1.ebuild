@@ -1,19 +1,25 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-4.3-r1.ebuild,v 1.2 2003/11/28 13:22:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-4.3-r1.ebuild,v 1.3 2004/01/26 02:21:30 vapier Exp $
+
+inherit eutils
 
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}
 MYP="${PN}_${MYPV}"
 DESCRIPTION="Thinkpad system control kernel modules"
-SRC_URI="mirror://sourceforge/tpctl/${MYP}.tar.gz"
 HOMEPAGE="http://tpctl.sourceforge.net/tpctlhome.htm"
-KEYWORDS="x86 amd64 -ppc -mips -sparc"
-SLOT="0"
-LICENSE="GPL-2"
+SRC_URI="mirror://sourceforge/tpctl/${MYP}.tar.gz"
 
-#virtual/glibc should depend on specific kernel headers
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="-* x86 amd64"
+
 DEPEND="virtual/glibc"
+
+pkg_setup() {
+	enewgroup thinkpad
+}
 
 src_unpack() {
 	check_KV
