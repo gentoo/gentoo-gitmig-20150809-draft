@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.17 2003/10/29 19:24:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.18 2003/12/29 11:47:13 mholzer Exp $
+
+  29 Dec 2003; Martin Holzer <mholzer@gentoo.org> flac-1.0.3.ebuild,
+  flac-1.0.4.ebuild, flac-1.1.0.ebuild:
+  adding RESTRICT=nomirror
 
   29 Oct 2003; Guy Martin <gmsoft@gentoo.org> flac-1.1.0.ebuild :
   Added -fPIC to CFLAGS when USE="+X +xmms" on hppa to fix a compilation error.

@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.3.ebuild,v 1.13 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.3.ebuild,v 1.14 2003/12/29 11:47:13 mholzer Exp $
 
 inherit libtool
 
 DESCRIPTION="A free lossless audio encoder"
 SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://flac.sourceforge.net/"
 
 SLOT="0"
