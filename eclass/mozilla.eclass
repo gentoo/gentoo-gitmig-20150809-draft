@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.11 2004/08/11 19:41:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.12 2004/08/18 16:26:35 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -227,7 +227,9 @@ mozilla_conf() {
 
 	# Some browser-only flags
 	if ${MOZ} || ${FF}; then
-		myconf="${myconf} $(mozilla_use_enable java oji)"
+		# Bug 60668: Galeon doesn't build without oji enabled, so enable it
+		# regardless of java setting.
+		myconf="${myconf} --enable-oji"
 	else
 		mozilla_annotate "n/a on ${PN}" --disable-oji
 	fi
