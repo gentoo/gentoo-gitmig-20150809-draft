@@ -1,6 +1,10 @@
 # ChangeLog for net-www/dotproject
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/ChangeLog,v 1.1 2004/07/11 19:53:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/ChangeLog,v 1.2 2004/07/15 18:52:50 tigger Exp $
+
+  15 Jul 2004; Rob Holland <tigger@ereet.co.uk> dotproject-1.0.2.ebuild:
+  Updated the description and keywords. Closes #57100. Thanks to
+  jesse@boldandbusted.com for pointing out the blunder ;)
 
 *dotproject-1.0.2 (11 Jul 2004)
 
