@@ -1,11 +1,16 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.4 2003/07/14 23:22:20 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.5 2003/07/31 06:05:07 drobbins Exp $
+
+* genkernel-1.4 (30 Jul 2003)
+
+  30 Jul 2003; Daniel Robbins <drobbins@gentoo.org>: new version with lots
+  of fixes.
 
 * genkernel-1.2 (14 07 2003)
 
-	14 07 2003; Bob Johnson <livewire@gentoo.org>
-	-minor typo fixes
+  14 07 2003; Bob Johnson <livewire@gentoo.org>
+  -minor typo fixes
 
 * genkernel-1.1 (26 04 2003)
 
