@@ -1,11 +1,14 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.19 2003/01/08 21:45:57 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.20 2003/02/01 18:50:52 jmorgan Exp $
+
+*kdeadmin-3.1_rc6 (05 Jan 2003)
+
+  01 Feb 2003; Jack Morgan <jmorgan@gentoo.org> kdeaddons-3.1.ebuild:
+  added ~sparc to keywords
 
   08 Jan 2003; Mark Guertin <gerk@gentoo.org> kdeadmin-3.1_rc6.ebuild:
   added ~ppc to keywords
-
-*kdeadmin-3.1_rc6 (05 Jan 2003)
 
   05 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kdeadmin-3.1_rc6.ebuild:
   version bump
