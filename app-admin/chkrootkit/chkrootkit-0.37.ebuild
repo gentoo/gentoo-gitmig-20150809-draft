@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.37.ebuild,v 1.3 2002/10/18 13:31:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.37.ebuild,v 1.4 2002/10/20 18:14:57 vapier Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,7 +14,6 @@ SLOT="0"
 IUSE=""
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 

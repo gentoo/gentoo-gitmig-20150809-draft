@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.35.ebuild,v 1.10 2002/10/20 16:34:59 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.35.ebuild,v 1.11 2002/10/20 18:14:57 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="chkrootkit is a tool to locally check for signs of a rootkit."
@@ -13,7 +13,6 @@ SLOT="0"
 IUSE=""
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	make sense

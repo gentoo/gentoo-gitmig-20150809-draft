@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r3.ebuild,v 1.5 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r3.ebuild,v 1.6 2002/10/20 18:14:57 vapier Exp $
 
 IUSE="postgres mysql"
 
@@ -19,7 +19,6 @@ KEYWORDS="x86 ppc sparc sparc64"
 DEPEND="mysql? ( >=dev-db/mysql-3.23 )
 	postgres? ( >=dev-db/postgresql-7 )"
 
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

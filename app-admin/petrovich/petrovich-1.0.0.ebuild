@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.10 2002/10/18 13:31:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.11 2002/10/20 18:14:57 vapier Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Filesystem Integrity Checker"
@@ -13,7 +13,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="dev-perl/Digest-MD5"
-RDEPEND="${DEPEND}"
 
 src_unpack () {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.10 2002/10/04 03:47:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.11 2002/10/20 18:14:57 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an interactive who-like program that displays information
@@ -13,7 +13,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
