@@ -48,7 +48,7 @@
  	$(LINK) -rpath $(libdir) $(libopenobex_la_LDFLAGS) $(libopenobex_la_OBJECTS) $(libopenobex_la_LIBADD) $(LIBS)
  
 +libopenobex.so:
-+	$(LINK) -rpath $(libdir) -shared $(libopenobex_la_LDFLAGS) shared/*.o
++	$(LINK) -rpath $(libdir) -shared -Wl,-shared,-soname,libopenobex.so -o libopenobex.so $(libopenobex_la_LDFLAGS) shared/*.o
 +
  install-includeHEADERS: $(include_HEADERS)
  	@$(NORMAL_INSTALL)

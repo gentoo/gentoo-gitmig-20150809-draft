@@ -5,4 +5,4 @@ MD5 68c34f348e6b568530bf9af2c7522553 ChangeLog 423
 MD5 7f2be560ee41e4fa72e98c101d03f606 files/digest-openobex-0.9.8 66
 MD5 165cdde955fa7f445d03005d25665e20 files/digest-openobex-1.0.0 66
 MD5 a577e794f16a7f437408fcbd5861b9ed files/digest-openobex-1.0.1 66
-MD5 54835000f8720ac7294cfaec66819720 files/openobex-1.0.1-shared-object.patch 1867
+MD5 5d15b9110d8811e635f436f52ee24e48 files/openobex-1.0.1-shared-object.patch 1920
