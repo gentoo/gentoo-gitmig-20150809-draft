@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r1.ebuild,v 1.1 2002/08/17 01:56:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r1.ebuild,v 1.2 2002/08/20 04:02:46 gerk Exp $
 
 MY_P=${P/_}
 S=${WORKDIR}/${MY_P}
@@ -8,7 +8,7 @@ DESCRIPTION="BIND - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9-beta.html"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="as-is"
 SLOT="0"
 

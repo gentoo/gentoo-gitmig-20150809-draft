@@ -1,8 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.8 2002/08/17 01:56:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.9 2002/08/20 04:02:46 gerk Exp $
 
 *bind-9.2.2_rc1-r1 (16 Aug 2002)
+
+  19 Aug 2002; Mark Guertin <gerk@gentoo.org> bind-9.2.2_rc1-r1.ebuild :
+  Added ppc to keywords
 
   16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> bind-9.2.2_rc1-r1.ebuild :
 
