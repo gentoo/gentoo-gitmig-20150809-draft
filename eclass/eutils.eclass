@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.150 2005/02/08 10:59:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.151 2005/02/11 22:56:51 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1649,21 +1649,29 @@ epunt_cxx() {
 	eend 0
 }
 
-# dopamd [ file ] [ new file ]
+# dopamd <file> [more files]
 #
 # Install pam auth config file in /etc/pam.d
-#
-#   The first argument, 'file' is required.  Install as 'new file', if
-#   specified.
-
 dopamd() {
-	local pamd="$1" newpamd="${2:-$1}"
-	[[ -z "$1" ]] && die "dopamd requires at least one argument."
+	[[ -z $1 ]] && die "dopamd requires at least one argument"
 
 	use pam || return 0
 
 	insinto /etc/pam.d
 	# these are the default doins options, but be explicit just in case
 	insopts -m 0644 -o root -g root
-	newins ${pamd} ${newpamd} || die "failed to install ${newpamd}"
+	doins "$@" || die "failed to install $@"
+}
+# newpamd <old name> <new name>
+#
+# Install pam file <old name> as <new name> in /etc/pam.d
+newpamd() {
+	[[ $# -ne 2 ]] && die "newpamd requires two arguements"
+
+	use pam || return 0
+
+	insinto /etc/pam.d
+	# these are the default doins options, but be explicit just in case
+	insopts -m 0644 -o root -g root
+	newins "$1" "$2" || die "failed to install $1 as $2"
 }
