@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.14 2005/02/06 17:27:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.15 2005/02/20 05:21:00 josejx Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -45,14 +45,11 @@ src_unpack() {
 		# in the compiler
 		epatch "${FILESDIR}/altivec-fix-${PV}.patch"
 		sed -i 's:-O3::' configure.in
-		autoreconf || die
 	fi
 
-	if use amd64; then
-		aclocal
-		libtoolize --copy --force
-		autoreconf || die
-	fi
+	aclocal
+	libtoolize --copy --force
+	autoreconf || die
 
 	use X || epatch "${FILESDIR}/no-x11-lib-2.patch"
 }
