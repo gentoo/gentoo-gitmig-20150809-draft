@@ -1,6 +1,10 @@
 # ChangeLog for net-www/bookmarksync
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.1 2004/08/15 18:03:24 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.2 2004/09/03 16:15:13 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bookmarksync-0.3.4.ebuild:
+  Masked bookmarksync-0.3.4.ebuild stable for ppc
 
 *bookmarksync-0.3.4 (15 Aug 2004)
 

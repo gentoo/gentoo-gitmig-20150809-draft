@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mergelog
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.1 2004/08/15 18:12:10 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.2 2004/09/03 16:15:14 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mergelog-4.5.ebuild:
+  Masked mergelog-4.5.ebuild stable for ppc
 
 *mergelog-4.5 (15 Aug 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/visitors
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.1 2004/08/15 18:16:21 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.2 2004/09/03 16:15:14 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  visitors-0.2a.ebuild:
+  Masked visitors-0.2a.ebuild stable for ppc
 
 *visitors-0.2a (15 Aug 2004)
 
