@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pyparsing
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.1 2004/03/29 01:22:32 kloeri Exp $
+
+*pyparsing-1.1.2 (29 Mar 2004)
+
+  29 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> metadata.xml,
+  pyparsing-1.1.2.ebuild:
+  Initial import, ebuild submitted by Bardur Arantsson <gentoo@scientician.org>
+
