@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.3 2004/01/07 15:28:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.4 2004/01/07 18:28:12 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="as-is"
 SLOT="2.0"
 
-IUSE="cdr doc accessibility samba"
+IUSE="cdr dvdr doc accessibility samba"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
@@ -108,7 +108,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=dev-util/pkgconfig-0.15
 	>=dev-util/intltool-0.27.2
 
-	cdr? ( >=gnome-extra/nautilus-cd-burner-0.5.3 )
+	cdr? ( >=gnome-extra/nautilus-cd-burner-0.6.1 )
+	dvdr? ( >=gnome-extra/nautilus-cd-burner-0.6.1 )
 	doc? ( >=dev-util/gtk-doc-1.1 )
 
 	accessibility? ( >=gnome-extra/libgail-gnome-1.0.2
