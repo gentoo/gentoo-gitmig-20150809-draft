@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.5.ebuild,v 1.3 2004/02/24 08:49:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.5.ebuild,v 1.4 2004/06/24 22:27:22 agriffis Exp $
 
 DESCRIPTION="daemon to control the CPU speed in 2.6 kernels"
 HOMEPAGE="http://www.goop.org/~jeremy/speedfreq/"

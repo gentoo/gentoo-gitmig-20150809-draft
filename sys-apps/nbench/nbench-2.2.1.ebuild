@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/nbench-2.2.1.ebuild,v 1.2 2004/03/15 04:00:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/nbench-2.2.1.ebuild,v 1.3 2004/06/24 22:18:55 agriffis Exp $
 
 MY_P="${PN}-byte-${PV}"
 DESCRIPTION="Linux/Unix of release 2 of BYTE Magazine's BYTEmark benchmark"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.2.3.ebuild,v 1.4 2003/12/06 17:02:04 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.2.3.ebuild,v 1.5 2004/06/24 22:23:10 agriffis Exp $
 
 DESCRIPTION="Qingy is a DirectFB getty replacement."
 HOMEPAGE="http://qingy.sourceforge.net/"

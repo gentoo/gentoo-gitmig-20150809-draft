@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/minutils
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/minutils/ChangeLog,v 1.2 2003/08/26 13:39:02 stuart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/minutils/ChangeLog,v 1.3 2004/06/24 22:16:56 agriffis Exp $
 
 *minutils-0.16 (25 Aug 2003)
 

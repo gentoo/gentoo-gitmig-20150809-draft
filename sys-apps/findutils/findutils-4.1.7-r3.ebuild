@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r3.ebuild,v 1.12 2004/04/29 22:46:45 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r3.ebuild,v 1.13 2004/06/24 22:06:58 agriffis Exp $
 
 IUSE="nls build afs"
 

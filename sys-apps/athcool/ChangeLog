@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/athcool
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/ChangeLog,v 1.6 2004/05/30 09:23:33 lisa Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/ChangeLog,v 1.7 2004/06/24 21:58:26 agriffis Exp $
 
 *athcool-0.3.5 (30 May 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.33.1.ebuild,v 1.5 2004/06/11 13:35:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.33.1.ebuild,v 1.6 2004/06/24 22:09:44 agriffis Exp $
 
 MY_P="${P/-/_}"
 DESCRIPTION="GNU utility to convert program --help output to a man page"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/cloop-0.68.ebuild,v 1.5 2003/12/29 11:11:07 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/cloop-0.68.ebuild,v 1.6 2004/06/24 22:00:19 agriffis Exp $
 
 inherit kernel-mod
 

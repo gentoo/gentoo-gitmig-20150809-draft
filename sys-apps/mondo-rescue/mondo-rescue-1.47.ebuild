@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.10 2004/04/26 14:30:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.11 2004/06/24 22:18:03 agriffis Exp $
 
 DESCRIPTION="a nice backup tool"
 SRC_URI="http://www.microwerks.net/~hugo/download/daily/${PN/-rescue/}-${PV}_20021020.tgz"

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/dog
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.4 2003/10/01 20:06:29 taviso Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.5 2004/06/24 22:04:22 agriffis Exp $
 
   01 Oct 2003; Tavis Ormandy <taviso@gentoo.org> dog-1.7.ebuild:
   Stable on alpha

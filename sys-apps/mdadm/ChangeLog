@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/mdadm
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.12 2004/06/09 09:29:59 dholm Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.13 2004/06/24 22:15:07 agriffis Exp $
 
   09 Jun 2004; David Holm <dholm@gentoo.org> mdadm-1.6.0.ebuild:
   Added to ~ppc.

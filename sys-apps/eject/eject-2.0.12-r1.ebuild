@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.12-r1.ebuild,v 1.7 2004/05/14 03:34:14 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.12-r1.ebuild,v 1.8 2004/06/24 22:04:45 agriffis Exp $
 
 inherit eutils
 

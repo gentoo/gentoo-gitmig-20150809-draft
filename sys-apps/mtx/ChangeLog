@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/mtx
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtx/ChangeLog,v 1.10 2004/06/11 13:50:30 kloeri Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtx/ChangeLog,v 1.11 2004/06/24 22:18:45 agriffis Exp $
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> mtx-1.2.18.ebuild:
   Stable on alpha.

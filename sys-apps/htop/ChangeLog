@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/htop
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/htop/ChangeLog,v 1.6 2004/06/21 20:49:15 wschlich Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/htop/ChangeLog,v 1.7 2004/06/24 22:10:39 agriffis Exp $
 
   21 Jun 2004; Wolfram Schlich <wschlich@gentoo.org> :
   version bump

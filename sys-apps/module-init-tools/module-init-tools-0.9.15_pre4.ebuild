@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.15_pre4.ebuild,v 1.11 2004/04/26 19:27:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.15_pre4.ebuild,v 1.12 2004/06/24 22:17:30 agriffis Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""

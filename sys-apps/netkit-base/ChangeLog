@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/netkit-base
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.21 2003/08/12 12:38:24 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.22 2004/06/24 22:19:06 agriffis Exp $
 
   12 Aug 2003; Jason Wever <weeve@gentoo.org> netkit-base-0.17-r8.ebuild:
   Added sparc to keywords.

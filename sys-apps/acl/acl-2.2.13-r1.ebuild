@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r1.ebuild,v 1.11 2004/06/14 07:59:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r1.ebuild,v 1.12 2004/06/24 21:56:53 agriffis Exp $
 
 DESCRIPTION="Access control list utilities, libraries and headers"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"

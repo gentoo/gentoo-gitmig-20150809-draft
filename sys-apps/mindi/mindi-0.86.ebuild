@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.86.ebuild,v 1.7 2004/04/27 21:18:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.86.ebuild,v 1.8 2004/06/24 22:16:25 agriffis Exp $
 
 inherit eutils
 

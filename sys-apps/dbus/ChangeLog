@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/dbus
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.7 2004/04/07 14:26:18 foser Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.8 2004/06/24 22:02:09 agriffis Exp $
 
 *dbus-0.21 (07 Apr 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/s3switch-19990826.ebuild,v 1.10 2004/03/23 18:53:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/s3switch-19990826.ebuild,v 1.11 2004/06/24 22:25:06 agriffis Exp $
 
 DESCRIPTION="S3 video chipset output selection utility"
 HOMEPAGE="http://www.probo.com/timr/savage40.html"

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/air
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/air/ChangeLog,v 1.4 2004/05/23 20:11:54 dragonheart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/air/ChangeLog,v 1.5 2004/06/24 21:57:25 agriffis Exp $
 
   24 May 2004; Daniel Black <dragonheart@gentoo.org> air-1.2.3_beta3.ebuild:
   Perl-tk no longer accepts '-col' as a synonym for '-column.' Replaced in

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powernowd/powernowd-0.90.ebuild,v 1.5 2004/05/17 20:38:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powernowd/powernowd-0.90.ebuild,v 1.6 2004/06/24 22:22:26 agriffis Exp $
 
 EV=hun6
 DESCRIPTION="Daemon to control the speed and voltage of CPUs"

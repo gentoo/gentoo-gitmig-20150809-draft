@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/ddcxinfo-knoppix
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ChangeLog,v 1.4 2004/05/14 15:43:21 wolf31o2 Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ChangeLog,v 1.5 2004/06/24 22:02:42 agriffis Exp $
 
   14 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Changing maintainers to newly formed livecd herd.

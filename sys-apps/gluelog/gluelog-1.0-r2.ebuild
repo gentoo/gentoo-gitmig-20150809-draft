@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0-r2.ebuild,v 1.13 2004/06/14 08:12:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0-r2.ebuild,v 1.14 2004/06/24 22:07:51 agriffis Exp $
 
 DESCRIPTION="Pipe and socket fittings for the system and kernel logs"
 HOMEPAGE="http://www.linuxuser.co.za/projects.php3"

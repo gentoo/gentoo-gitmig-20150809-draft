@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r4.ebuild,v 1.1 2004/06/12 05:36:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r4.ebuild,v 1.2 2004/06/24 22:08:40 agriffis Exp $
 
 inherit gnuconfig flag-o-matic eutils
 

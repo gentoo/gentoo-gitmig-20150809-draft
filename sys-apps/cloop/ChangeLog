@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/cloop
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/ChangeLog,v 1.7 2004/03/01 19:59:51 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/ChangeLog,v 1.8 2004/06/24 22:00:19 agriffis Exp $
 
   29 Dec 2003; Stuart Herbert <stuart@gentoo.org> cloop-0.68.ebuild:
   New digest (original tarball no longer available; made a new one from source

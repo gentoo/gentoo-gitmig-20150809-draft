@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.4.21.ebuild,v 1.1 2004/04/18 04:12:09 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.4.21.ebuild,v 1.2 2004/06/24 22:24:35 agriffis Exp $
 
 
 DESCRIPTION="Object-code only (OCO) modules for s390"

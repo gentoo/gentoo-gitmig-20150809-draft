@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/pciutils
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.29 2004/06/22 23:04:11 malc Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.30 2004/06/24 22:20:45 agriffis Exp $
 
   22 Jun 2004; <malc@gentoo.org> pciutils-2.1.11-r1.ebuild:
   Mark stable on amd64

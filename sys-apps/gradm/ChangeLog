@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/gradm
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.33 2004/06/20 18:24:11 pfeifer Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.34 2004/06/24 22:08:29 agriffis Exp $
 
 *gradm-2.0-r1 (20 Jun 2004)
 

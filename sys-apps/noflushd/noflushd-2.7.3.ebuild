@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.7.3.ebuild,v 1.1 2004/04/13 17:42:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.7.3.ebuild,v 1.2 2004/06/24 22:19:50 agriffis Exp $
 
 S="${WORKDIR}/${P}"
 

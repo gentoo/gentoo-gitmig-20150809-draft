@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/bar
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.5 2004/03/01 19:59:51 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.6 2004/06/24 21:58:59 agriffis Exp $
 
   02 Feb 2004; Heinrich Wendel <lanius@gentoo.org> bar-1.07.ebuild:
   mark 1.07 x86

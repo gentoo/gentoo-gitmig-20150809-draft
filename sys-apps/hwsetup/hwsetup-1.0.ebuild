@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.0.ebuild,v 1.11 2004/06/01 11:45:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.0.ebuild,v 1.12 2004/06/24 22:11:06 agriffis Exp $
 
 DESCRIPTION="Hardware setup program"
 SRC_URI="mirror://gentoo/hwsetup_1.0-9.tar.gz"

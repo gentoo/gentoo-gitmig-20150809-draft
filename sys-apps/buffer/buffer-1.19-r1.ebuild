@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/buffer-1.19-r1.ebuild,v 1.4 2003/09/07 00:51:33 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/buffer-1.19-r1.ebuild,v 1.5 2004/06/24 21:59:32 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a tapedrive tool for speeding up reading from and writing to tape"

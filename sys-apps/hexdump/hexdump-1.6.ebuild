@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump/hexdump-1.6.ebuild,v 1.3 2004/04/25 11:45:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump/hexdump-1.6.ebuild,v 1.4 2004/06/24 22:10:00 agriffis Exp $
 
 DESCRIPTION="Eric Raymond's hex dumper"
 HOMEPAGE="http://www.catb.org/~esr/hexdump/"

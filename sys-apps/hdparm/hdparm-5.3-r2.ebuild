@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.3-r2.ebuild,v 1.12 2004/03/24 21:19:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.3-r2.ebuild,v 1.13 2004/06/24 22:09:33 agriffis Exp $
 
 DESCRIPTION="Utility to change hard drive performance parameters"
 SRC_URI="http://www.ibiblio.org/pub/Linux/system/hardware/${P}.tar.gz"

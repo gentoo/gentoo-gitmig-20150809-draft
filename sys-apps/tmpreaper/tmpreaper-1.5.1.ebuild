@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/tmpreaper-1.5.1.ebuild,v 1.1 2004/02/13 00:44:23 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/tmpreaper-1.5.1.ebuild,v 1.2 2004/06/24 22:30:26 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A utility for removing files based on when they were last accessed"

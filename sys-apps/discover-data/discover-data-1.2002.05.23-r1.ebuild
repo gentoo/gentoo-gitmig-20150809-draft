@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/discover-data-1.2002.05.23-r1.ebuild,v 1.12 2004/02/25 01:24:44 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/discover-data-1.2002.05.23-r1.ebuild,v 1.13 2004/06/24 22:03:40 agriffis Exp $
 
 S=${WORKDIR}/discover-data-${P}-1
 DESCRIPTION="data for discover. list of pci ids. pnp ids etc."

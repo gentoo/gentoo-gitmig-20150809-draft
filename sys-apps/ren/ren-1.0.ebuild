@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ren-1.0.ebuild,v 1.9 2003/09/07 01:31:55 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ren-1.0.ebuild,v 1.10 2004/06/24 22:23:43 agriffis Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Renames multiple files"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.9.ebuild,v 1.6 2004/06/16 00:26:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.9.ebuild,v 1.7 2004/06/24 22:20:13 agriffis Exp $
 
 inherit eutils
 

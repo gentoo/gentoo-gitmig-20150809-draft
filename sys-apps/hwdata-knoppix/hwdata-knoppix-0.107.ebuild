@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107.ebuild,v 1.4 2004/06/02 13:20:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107.ebuild,v 1.5 2004/06/24 22:10:55 agriffis Exp $
 
 MY_PV=${PV}-4
 DESCRIPTION="Data for the hwsetup program"

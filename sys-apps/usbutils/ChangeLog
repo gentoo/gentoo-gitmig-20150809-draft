@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/usbutils
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.25 2004/06/14 22:07:47 hansmi Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.26 2004/06/24 22:31:35 agriffis Exp $
 
   15 Jun 2004; Michael Hanselmann <hansmi@gentoo.org>
   +files/0.11/lsusb-endian.patch, usbutils-0.11-r3.ebuild:

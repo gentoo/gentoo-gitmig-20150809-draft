@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/memtest86+
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.6 2004/05/17 14:08:47 spock Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.7 2004/06/24 22:15:39 agriffis Exp $
 
 *memtest86+-1.15 (17 May 2004)
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/tmpreaper
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.8 2004/03/01 19:59:51 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.9 2004/06/24 22:30:26 agriffis Exp $
 
 *tmpreaper-1.5.1 (12 Feb 2004)
 

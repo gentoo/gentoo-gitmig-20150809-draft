@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.12 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.13 2004/06/24 22:07:13 agriffis Exp $
 
 # source maintainers named it fxload-YYYY_MM_DD instead of fxload-YYYYMMDD
 MY_P=`echo $P|sed 's/-\(....\)\(..\)\(..\)/-\1_\2_\3/'`
