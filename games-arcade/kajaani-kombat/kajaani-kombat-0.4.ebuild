@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.4.ebuild,v 1.5 2004/11/09 06:56:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.4.ebuild,v 1.6 2004/12/21 14:06:49 josejx Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ DESCRIPTION="A rampart-like game set in space"
 HOMEPAGE="http://kombat.kajaani.net/"
 SRC_URI="http://kombat.kajaani.net/dl/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
