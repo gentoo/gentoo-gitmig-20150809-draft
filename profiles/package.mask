@@ -639,9 +639,6 @@ dev-lang/tcl-tk
 #jnelson@gentoo.org 28 Apr 2002
 # fixed ebuild to use --root (as all DistUtils should be using)
 
-# Testing this from gnome2 source tree
->=app-text/scrollkeeper-0.3.4-r4
-
 #seemant@gentoo.org 28 Mar 2002
 # sourceforge no longer has an ftp mirror for these themes
 # until we figure out how to use gtk.themes.org or gtk.classic.themes.org
@@ -673,6 +670,8 @@ dev-lang/tcl-tk
 >=gnome-base/libglade-1.99.10-r1
 >=x11-libs/rep-gtk-20020419
 >=dev-libs/librep-20020201
+>=app-text/scrollkeeper-0.3.0
+
 
 
 # spider@gentoo.org ; 18 Apr 2002
