@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/framerd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/ChangeLog,v 1.7 2004/03/24 21:47:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/ChangeLog,v 1.8 2004/04/25 23:23:49 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> framerd-2.4.3-r1.ebuild:
+  Add die following econf for bug 48950
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   framerd-2.4.3-r1.ebuild:

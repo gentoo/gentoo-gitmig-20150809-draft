@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r1.ebuild,v 1.10 2004/03/14 13:19:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r1.ebuild,v 1.11 2004/04/25 23:37:13 agriffis Exp $
 
 inherit gcc eutils
 
@@ -53,7 +53,7 @@ src_compile() {
 	CFLAGS="${CFLAGS}" CXXFLAGS="${CFLAGS} ${CXXFLAGS}" \
 	econf \
 		--enable-exceptions \
-		--includedir=/usr/include/mysql++
+		--includedir=/usr/include/mysql++ || die "econf failed"
 
 	emake || die "unable to make"
 }

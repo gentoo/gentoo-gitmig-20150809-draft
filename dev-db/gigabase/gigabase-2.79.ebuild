@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-2.79.ebuild,v 1.4 2004/03/14 13:19:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-2.79.ebuild,v 1.5 2004/04/25 23:31:11 agriffis Exp $
 
 DESCRIPTION="OO-DBMS with interfaces for C/C++/Java/PHP/Perl"
 HOMEPAGE="http://www.garret.ru/~knizhnik/gigabase.html"
@@ -16,7 +16,7 @@ S=${WORKDIR}/gigabase
 src_compile() {
 	mf="${S}/Makefile"
 
-	econf
+	econf || die "econf failed"
 
 	sed -r -e 's/subsql([^\.]|$)/subsql-gdb\1/' ${mf} > ${mf}.tmp
 	mv ${mf}.tmp ${mf}

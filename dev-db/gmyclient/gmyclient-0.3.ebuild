@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.7 2004/03/14 13:19:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.8 2004/04/25 23:33:28 agriffis Exp $
 
 DESCRIPTION="Gnome based mysql client"
 SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND=">=gnome-base/gnome-libs-1.2
 		=gnome-base/libglade-0*"
 
 src_compile() {
-	econf `use_enable nls`
+	econf `use_enable nls` || die "econf failed"
 	emake || die
 }
 
