@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.2 2002/05/20 10:54:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.3 2002/05/27 10:07:14 seemant Exp $
+
+*lcd4linux-0.98-r2 (27 May 2002)
+
+  27 May 2002; Seemant Kulleen <seemant@gentoo.org> lcd4linux-0.98-r2.ebuild
+  files/digest-lcd4linux-0.98-r2 :
+
+  I goofed on the touch thing.  Thanks to Francisco Gimeno
+  <kikov@fco-gimeno.com> in bug #2390 for the fix.
 
 *lcd4linux-0.98-r1 (20 May 2002)
 
