@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.13 2004/09/01 16:56:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.14 2004/09/22 09:54:35 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ladspa-cmt-1.15.ebuild:
+  Removing || die which caused bug #64523.
 
   01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ladspa-cmt-1.15.ebuild:
