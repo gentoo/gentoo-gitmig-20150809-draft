@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.4 2005/02/06 16:59:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.5 2005/02/07 06:38:21 eradicator Exp $
 
-KEYWORDS="-*"
+KEYWORDS="~mips ~sparc ~x86"
 
 BRANCH_UPDATE=""
-GLIBC_MANPAGE_VERSION="none"
+GLIBC_MANPAGE_VERSION="2.3.4-r1"
 GLIBC_INFOPAGE_VERSION="none"
 
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 
 # (Recent snapshots fails with 2.6.5 and earlier)
 MIN_KERNEL_VERSION="2.6.6"
@@ -74,7 +74,7 @@ MIN_KERNEL_VERSION=${MIN_KERNEL_VERSION:-"2.6.6"}
 #
 #	GLIBC_MANPAGE_VERSION
 #	GLIBC_INFOPAGE_VERSION
-#			The version of glibc for which we will download manpages. This will
+#			The version of glibc for which we will download pages. This will
 #			default to ${GLIBC_RELEASE_VER}, but we may not want to pre-generate man pages
 #			for prerelease test ebuilds for example. This allows you to
 #			continue using pre-generated manpages from the last stable release.
@@ -261,9 +261,10 @@ toolchain-glibc_src_install() {
 			install_root=${D} \
 			install || die
 	fi
+
 	if is_crosscompile; then
 		# punt all the junk not needed by a cross-compiler
-		rm -r "${D}"/usr/${CTARGET}/{bin,etc,$(get_libdir)/gconv,sbin,share}
+		rm -rf "${D}"/usr/${CTARGET}/{bin,etc,$(get_libdir)/gconv,sbin,share}
 	fi
 
 	if use !nptlonly && want_nptl ; then
@@ -384,8 +385,10 @@ EOF
 
 	cd ${WORKDIR}/${MYMAINBUILDDIR}
 	if ! use build ; then
-		if ! has noinfo ${FEATURES} ; then
-			einfo "Installing Info pages..."
+		if ! has noinfo ${FEATURES} && [[ "${GLIBC_INFOPAGE_VERSION}" != "none" ]]; then
+			einfo "Installing info pages..."
+
+			cd ${S}/info
 			make PARALLELMFLAGS="${MAKEOPTS}" \
 				install_root=${D} \
 				info -i
@@ -393,14 +396,20 @@ EOF
 
 		setup_locales
 
-		einfo "Installing man pages and docs..."
-		# Install linuxthreads man pages even if nptl is enabled
-		dodir /usr/share/man/man3
-		doman ${S}/man/*.3thr
+		if [[ "${GLIBC_MANPAGE_VERSION}" != "none" ]]; then
+			einfo "Installing man pages..."
+
+			# Install linuxthreads man pages even if nptl is enabled
+			cd ${S}/man
+			doman *.3thr
+		fi
 
 		# Install nscd config file
-		insinto /etc ; doins ${FILESDIR}/nscd.conf
-		exeinto /etc/init.d ; doexe ${FILESDIR}/nscd
+		insinto /etc
+		doins ${FILESDIR}/nscd.conf
+
+		exeinto /etc/init.d
+		doexe ${FILESDIR}/nscd
 
 		cd ${S}
 		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE NEWS NOTES PROJECTS README*
@@ -856,7 +865,6 @@ crosscompile_setup() {
 
 				export MULTILIB_ABIS="x86 amd64"
 				export DEFAULT_ABI="amd64"
-				export ABI="amd64"
 			;;
 			mips)
 				export CFLAGS_o32="${CFLAGS_o32--mabi=32}"
@@ -865,7 +873,6 @@ crosscompile_setup() {
 
 				export MULTILIB_ABIS="n64 n32 o32"
 				export DEFAULT_ABI="o32"
-				export ABI="o32"
 			;;
 			ppc64)
 				export CFLAGS_ppc="${CFLAGS_ppc--m32}"
@@ -873,7 +880,6 @@ crosscompile_setup() {
 
 				export MULTILIB_ABIS="ppc ppc64"
 				export DEFAULT_ABI="ppc64"
-				export ABI="ppc64"
 			;;
 			sparc)
 				export CFLAGS_sparc="${CFLAGS_sparc--m32}"
@@ -881,9 +887,13 @@ crosscompile_setup() {
 
 				export MULTILIB_ABIS="sparc64 sparc"
 				export DEFAULT_ABI="sparc"
-				export ABI="sparc"
 			;;
 		esac
+		export ABI="${DEFAULT_ABI}"
+	else
+		unset MULTILIB_ABIS
+		unset DEFAULT_ABI
+		unset ABI
 	fi
 }
 
@@ -977,23 +987,8 @@ src_unpack() {
 	# disable binutils -as-needed
 	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
 
-	# Glibc is stupid sometimes, and doesn't realize that with a
-	# static C-Only gcc, -lgcc_eh doesn't exist.
-	# http://sources.redhat.com/ml/libc-alpha/2003-09/msg00100.html
-	echo 'int main(){}' > ${T}/gcc_eh_test.c
-	if ! $(tc-getCC) ${T}/gcc_eh_test.c -lgcc_eh 2>/dev/null ; then
-		sed -i -e 's:-lgcc_eh::' Makeconfig || die "sed gcc_eh"
-	fi
-
-	# If gcc supports __thread, test it even in --with-tls --without-__thread
-	# builds.
-	if echo '__thread int a;' | $(tc-getCC) -xc - -S -o /dev/null 2>/dev/null; then
-		sed -i -e 's~0 ||~1 ||~' ./elf/tst-tls10.h ./linuxthreads/tst-tls1.h
-	fi
-
 	find . -type f -size 0 -o -name "*.orig" -exec rm -f {} \;
-
-	touch `find . -name configure`
+	find . -name configure -exec touch {} \;
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
@@ -1020,6 +1015,22 @@ src_compile() {
 }
 
 src_test() {
+	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
+	local MLTEST=$(type dyn_unpack)
+	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
+		OABI="${ABI}"
+		for ABI in $(get_install_abis); do
+			export ABI
+			einfo "Testing ${ABI} glibc"
+			src_test
+		done
+		ABI="${OABI}"
+		unset OABI
+		return 0
+	fi
+	unset MLTEST
+
+	ABI=${ABI:-default}
 	toolchain-glibc_src_test
 }
 

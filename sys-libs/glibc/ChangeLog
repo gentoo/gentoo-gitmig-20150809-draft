@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.311 2005/02/06 13:23:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.312 2005/02/07 06:38:20 eradicator Exp $
+
+  06 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20050125.ebuild:
+  Updated patchset for mips. Removed a few old sed calls from src_unpack which
+  don't do anything any more or were fixed in another way upstream. Adding
+  tested archs: ~mips, ~sparc, ~x86. Still in package.mask.  Added linuxthreads
+  manpages.
 
   06 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20041102.ebuild:
@@ -21,9 +28,9 @@
   05 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   +glibc-2.3.4.20050125.ebuild:
   Version bump to upstream's 2.3.4 final release. Now using a patch tarball
-  instead of ${FILESDIR}. -* for testing. Patchset is subject to change while
-  masked -*, so if you test it out during that time, you might want to
-  re-emerge it once it goes into ~arch.
+  instead of ${FILESDIR}. package.mask for testing. Patchset is subject to
+  change while it is in package.mask, so if you test it out during that time,
+  you might want to re-emerge it once it goes into ~arch.
 
   02 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20041102.ebuild:
