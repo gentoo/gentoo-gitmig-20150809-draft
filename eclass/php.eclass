@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.43 2003/06/12 08:50:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.44 2003/06/14 03:39:13 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -19,6 +19,13 @@ ECLASS=php
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install 
+
+function runningunstable() {
+local data="`echo "${ACCEPT_KEYWORDS}" |grep '~'`"
+local retval=false
+[ -n "${data}" ] && retval=true
+return ${retval} 
+}
 
 MY_PN=php
 MY_P=${MY_PN}-${PV}
@@ -66,19 +73,27 @@ RDEPEND="
     spell? ( app-text/aspell )
     ssl? ( >=dev-libs/openssl-0.9.5 )
     tiff? ( >=media-libs/tiff-3.5.5 )
-    truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
+	xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
+    >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 dev-libs/expat
 	sys-libs/zlib 
 	virtual/mta"
-# These will become explicit soon, and not optional
-RDEPEND="${RDEPEND}
-	xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
-    >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 dev-libs/expat"
+	
+	# Testing per bug #13382
+if runningunstable; then
+    RDEPEND="${RDEPEND}
+		truetype? ( >=media-libs/freetype-2 )"
+else
+    RDEPEND="${RDEPEND}
+		truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )"
+fi
+
 # These are extra bits we need only at compile time
 DEPEND="${RDEPEND} ${DEPEND}
     imap? ( >=net-mail/uw-imap-2001a-r1 )
 	mcal? ( dev-libs/libmcal )"
 #9libs causes a configure error
 DEPEND="${DEPEND} !dev-libs/9libs"
+
 
 #Waiting for somebody to want this:
 #cyrus? ( net-mail/cyrus-imapd net-mail/cyrus-imap-admin dev-libs/cyrus-imap-dev ) 
@@ -153,49 +168,6 @@ php_src_unpack() {
     # fix PEAR installer
 	cp pear/PEAR/Registry.php pear/PEAR/Registry.old
 	sed "s:\$pear_install_dir\.:\'$D/usr/lib/php/\' . :g" pear/PEAR/Registry.old > pear/PEAR/Registry.php
-	
-	## ----- Obsolete, pending removal ------
-	#if [ "`use java`" ] ; then
-
-	## Umm, did something get lost here????
-	## Obsolete, pending removal
-	#	cp configure configure.orig
-	#	cat configure.orig | \
-	#		sed -e 's/LIBS="-lttf $LIBS"/LIBS="-lttf $LIBS"/' \
-	#		> configure
-	
-	## What is the purpose of this change?
-	## Obsolete, pending removal
-	#	cp ext/gd/gd.c ext/gd/gd.c.orig
-	#	cat ext/gd/gd.c.orig | \
-	#		sed -e "s/typedef FILE gdIOCtx;//" \
-	#		> ext/gd/gd.c
-	
-	## Obsolete, pending removal
-	#	if [ -n "$JAVAC" ];
-	#	then
-	#              cp ext/java/Makefile.in ext/java/Makefile.in.orig
-	#              cat ext/java/Makefile.in.orig | \
-	#                      sed -e "s/^\tjavac/\t\$(JAVAC)/" \
-	#                      > ext/java/Makefile.in
-	#	fi
-	#fi
-	## --------------------------------------
-
-	# pear's world writable files is a php issue fixed in their cvs tree.
-	# http://bugs.php.net/bug.php?id=20978
-	# http://bugs.php.net/bug.php?id=20974
-	#if [ -z "${EXCLUDE_PEAR_FIX}" ]; then
-	#	EPATCH_SINGLE_MSG="Applying fix for PEAR world writable files"
-	#	epatch ${FILESDIR}/pear_config.diff || die "epatch failed"
-	#fi
-
-	#if [ -z "${EXCLUDE_DB4_FIX}" ]; then
-	#	EPATCH_SINGLE_MSG="Applying DB4 patch"
-	#	epatch ${DISTDIR}/php-${PV}-db4.diff.gz
-	#	cd ${S}
-	#	autoconf
-	#fi
 }
 
 
@@ -268,12 +240,18 @@ php_src_compile() {
 		myconf="${myconf} --without-mysql"
 	fi
 
+	# Testing per bug #13382
+	if runningunstable; then
+		use truetype && myconf="${myconf} --with-freetype-dir=/usr"
+	else
+		myconf="${myconf} `use_with truetype ttf` `use_with truetype t1lib`"
+	fi
+
 	myconf="${myconf} `use_with nls gettext` `use_with qt qtdom`"
 	myconf="${myconf} `use_with spell pspell` `use_with ssl openssl`"
 	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap`"
 	myconf="${myconf} `use_with xml2 dom` `use_with xml2 dom-xslt`"
 	myconf="${myconf} `use_with kerberos` `use_with gd` `use_with pam`"
-	myconf="${myconf} `use_with truetype ttf` `use_with truetype t1lib`"
 	myconf="${myconf} `use_with pic` `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable cjk mbstring` `use_enable cjk mbregex`"
 
