@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.6 2003/08/21 15:14:23 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.7 2003/09/04 12:38:31 obz Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="perl tcltk python ssl gtk mmx ipv6 nls"
 # Added for to fix a sparc seg fault issue by Jason Wever <weeve@gentoo.org>
 if [ ${ARCH} = "sparc" ]
 then
-        replace-flags "-O3" "-O2"
+	replace-flags "-O3" "-O2"
 fi
 
 
@@ -35,7 +35,7 @@ src_compile() {
 	# xchat's configure script uses sys.path to find library path
 	# instead of python-config (#25943)
 	unset PYTHONPATH
-	
+
 	econf \
 		`use_enable gtk gtkfe` \
 		`use_enable ssl openssl` \
@@ -48,7 +48,7 @@ src_compile() {
 		--enable-textfe \
 		--program-suffix=-2 \
 		|| die "Configure failed"
-	
+
 	MAKEOPTS="-j1" emake || die "Compile failed"
 }
 
@@ -60,7 +60,7 @@ src_install() {
 	einstall install || die "Install failed"
 
 	# install plugin development header
-	insinto /usr/include/xchat	
+	insinto /usr/include/xchat
 	doins src/common/xchat-plugin.h
 
 	dodoc AUTHORS COPYING ChangeLog README*
