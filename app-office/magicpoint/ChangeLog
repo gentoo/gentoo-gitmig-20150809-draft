@@ -1,0 +1,81 @@
+# ChangeLog for app-office/magicpoint
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.1 2003/12/15 17:47:45 usata Exp $
+
+*magicpoint-1.10a (16 Dec 2003)
+
+  16 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.09a-r1.ebuild,
+  magicpoint-1.10a-r1.ebuild, magicpoint-1.10a.ebuild, metadata.xml,
+  files/50mgp-mode-gentoo.el, files/magicpoint-1.10a-gentoo.diff,
+  files/magicpoint-1.10a-r1-gentoo.diff:
+  Moved from app-misc/magicpoint. Closing bug #35858
+
+  22 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a-r1.ebuild,
+  magicpoint-1.10a.ebuild:
+  Changed elisp.eclass to elisp-common.eclass
+
+*magicpoint-1.10a-r1 (02 Sep 2003)
+
+  11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a-r1.ebuild:
+  Marked stable on x86 and alpha.
+
+  02 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a-r1.ebuild,
+  files/magicpoint-1.10a-r1-gentoo.diff:
+  Defaults to Xft2 instead of VFlib2 (added a patch to fix Xft2 problem)
+
+*magicpoint-1.10a (06 Aug 2003)
+
+  02 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.09a-r1.ebuild,
+  magicpoint-1.10a.ebuild:
+  Removed redundant SLOT, KEYWORDS and LICENSE variables.
+
+  25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a.ebuild:
+  Fixed emacs dependency problem with inherit elisp.  Added ~alpha,
+  ~ppc and ~sparc keywords.  Changed ~x86 to x86.  Simplified conditionals.
+
+  06 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a.ebuild,
+  files/50mgp-mode-gentoo.el, files/magicpoint-1.10a-gentoo.diff:
+  Version bump.  Added cjk and emacs USE flags.  Upstream now supports
+  Xft2 rendering engine.  However, it is not enabled because there is
+  some problem with Xft2.  Included default font configuration file. 
+  Added support scripts and sample presentation files.
+
+*magicpoint-1.09a-r1 (12 Apr 2002)
+
+  15 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.09a-r1.ebuild:
+  Disabled VFlib support because it fails to build if VFlib is installed
+  and no --with-vfontcap specified
+
+  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> magicpoint-1.09a-r1.ebuild :
+
+  Added charset16 support if both nls and truetype are in USE.  Closes bug
+  #12801 by nakano@gentoo.org (Masatomo Nakano)
+
+  23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> magicpoint-1.09a-r1.ebuild :
+
+  For some silly upstream reason, --enable-freetype disables it.  So, this
+  is removed.  Thanks to: jherfurth@arafox.com (Julien Herfurth) in bug
+  #6856.
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> magicpoint-1.09a-r1.ebuild :
+
+  Removed the ungif USE flag, and added nls and imlib and truetype USE dependent
+  compilation.
+
+*magicpoint-1.09a (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> magicpoint-1.09a.ebuild :
+
+  Version upgrade -- copied the 1.07a ebuild over, and updated its syntax from
+  try to die and the copyright info.  Thanks to Matthew Kennedy for the update
+  info.
+
+*magicpoint-1.07a (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
