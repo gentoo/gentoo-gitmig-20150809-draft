@@ -1,0 +1,7 @@
+--- MPlayer-0.90/version.sh.orig	2003-04-27 16:23:59.000000000 +0200
++++ MPlayer-0.90/version.sh	2003-04-27 16:24:08.000000000 +0200
+@@ -1,3 +1,3 @@
+ #!/bin/sh
+ 
+-echo "#define VERSION \"0.90rc5-$1 \"" >version.h
++echo "#define VERSION \"0.90-$1 \"" >version.h
