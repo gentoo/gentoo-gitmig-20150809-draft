@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/id3ed-1.10.4.ebuild,v 1.1 2003/02/08 01:09:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/id3ed-1.10.4.ebuild,v 1.2 2003/02/08 01:23:27 seemant Exp $
 
-IUSE="X gnome"
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="id3ed is an ID3 tag editor for mp3 files. You can set tags interactively or from the command line, or a combination of both. id3ed can set genre by name or number. You can also remove or view tags."
