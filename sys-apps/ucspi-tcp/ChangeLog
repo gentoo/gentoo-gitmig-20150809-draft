@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.30 2005/01/06 20:10:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.31 2005/01/07 08:55:50 hansmi Exp $
+
+  07 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ucspi-tcp-0.88-r9.ebuild:
+  Apply big endian patch only when using IPv6.
 
 *ucspi-tcp-0.88-r9 (06 Jan 2005)
 

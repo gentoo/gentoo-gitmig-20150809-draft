@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r9.ebuild,v 1.1 2005/01/06 20:10:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r9.ebuild,v 1.2 2005/01/07 08:55:50 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,8 +26,11 @@ PROVIDE="virtual/inetd"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	if use ipv6; then
 		epatch ${WORKDIR}/ucspi-tcp-0.88-ipv6.diff13
+		# Fixes bug 18892
+		epatch ${FILESDIR}/${PV}-bigendian.patch
 	fi
 	if use ssl; then
 		# this is a merged thingy. Thanks to Stephen Olesen <slepp.netmonks.ca>
@@ -41,8 +44,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-errno.patch
 	epatch ${DISTDIR}/ucspi-rss.diff
 	epatch ${FILESDIR}/${PV}-head-1.patch
-	# Fixes bug 18892
-	epatch ${FILESDIR}/${PV}-bigendian.patch
 
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
