@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.21 2003/11/16 18:56:43 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.22 2003/12/06 13:01:44 caleb Exp $
+
+  06 Dec 2003; Caleb Tennis <caleb@gentoo.org> graphviz-1.10.ebuild,
+  graphviz-1.9.ebuild:
+  Changed dep versions ( >=pkg-ver* to >=pkg-ver ) fixing bug 35193
 
   16 Nov 2003; Brad House <brad_mssw@gentoo.org> graphviz-1.8.10-r3.ebuild,
   graphviz-1.8.10.ebuild:
