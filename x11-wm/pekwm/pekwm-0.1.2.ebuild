@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.2.ebuild,v 1.1 2002/11/19 09:50:29 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.2.ebuild,v 1.2 2002/11/19 10:06:58 bcowan Exp $
 
 IUSE=""
 
@@ -8,7 +8,8 @@ S="${WORKDIR}/${P}"
 
 DESCRIPTION="A small window mananger based on aewm++"
 HOMEPAGE="http://pekwm.pekdon.net/"
-SRC_URI="ftp://pekwm.pekdon.net/files/source/${P}.tar.gz"
+SRC_URI="http://pekwm.pekdon.net/files/source/${P}.tar.gz
+	mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
