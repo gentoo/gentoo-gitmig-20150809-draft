@@ -1,4 +1,14 @@
-MD5 ef597904ce2d0376eba591e1042fab7a ChangeLog 823
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 01c494fd8cc9bcb3acebab702cb598f4 xml-commons-resolver-1.1.ebuild 829
+MD5 99273e1cc60821433d5c6374f504c9ba ChangeLog 943
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 afc594d463b39192af2b09faa2878c06 xml-commons-resolver-1.1.ebuild 831
 MD5 c0c9047ccd57e4f7c4abb514e1bf3e14 files/digest-xml-commons-resolver-1.1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrOnkI1lqEGTUzyQRAnVgAJ9igsFNt8mQAyg94CEBrFB++zjvaQCeOXMi
+kSe0WfuCY4m84aL3qEQ0d20=
+=Spi3
+-----END PGP SIGNATURE-----

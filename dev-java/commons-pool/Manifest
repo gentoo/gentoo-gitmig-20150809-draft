@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fa486f50d1e57e78cb49779312ea204e commons-pool-1.2.ebuild 1413
-MD5 071c791093965221715026e598b7a32f commons-pool-1.1.ebuild 1426
-MD5 af247a076e6ef5935a72d172607b12dd ChangeLog 3022
+MD5 7e1c52e459a3e323592228f21c78a5bc commons-pool-1.2.ebuild 1426
+MD5 c2b9566cf856c8958c503953890c7c61 commons-pool-1.1.ebuild 1439
+MD5 bc0682589ab00bef7de8fa9c6da885ec ChangeLog 3163
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b8d9ac4e67767842878c535474df7961 files/digest-commons-pool-1.1 71
 MD5 d41c8c7c7d3b3490c197807fbe38f8a6 files/digest-commons-pool-1.2 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBcVXE/rLF9B432nYRAoNhAKCDnx6msVQw2IPHIn6srITbCP8x5wCbBQxd
-OkOTiccFfEIDG6zQw3BMqEM=
-=m9P+
+iD8DBQFBrOcqI1lqEGTUzyQRAjy/AJoDJJAczPuzH33xlXHKy4P6KmBMXACdESXh
+is4SlQmBA8evkSVsaGAc1ho=
+=i8mP
 -----END PGP SIGNATURE-----
