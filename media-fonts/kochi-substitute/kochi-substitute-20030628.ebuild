@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030628.ebuild,v 1.3 2003/07/18 21:37:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030628.ebuild,v 1.4 2004/05/14 01:53:52 geoman Exp $
 
 IUSE="X"
 
