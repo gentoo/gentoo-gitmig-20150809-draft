@@ -393,6 +393,14 @@ net-p2p/giftcurs
 #
 net-www/opera
 
+# Arcady Genkin <agenkin@gentoo.org>
+# Jul 22, 2002
+# Masking this for a week, until the removed _beta10 packages
+# become a thing in the past.
+=media-sound/alsa-utils-0.9.0.1_beta10
+=media-libs/alsa-lib-0.9.0.1_beta10
+=media-libs/alsa-oss-0.9.0.1_beta10
+
 # 18 Feb 2002, azarah.
 # Gnumeric needs 0.0.17, and most other stuff should work with this version
 >gnome-extra/gb-0.0.17
