@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.6 2004/06/24 22:13:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.7 2004/07/29 10:40:43 chrb Exp $
+
+*ode-0.5-r1 (29 Jul 2004)
+
+  29 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +ode-0.5-r1.ebuild:
+  Added debug build, TriMesh support, and extended docs with examples
 
 *ode-0.5 (01 Jun 2004)
 
