@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.25 2002/08/18 23:54:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.26 2002/08/26 09:49:54 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -206,9 +206,11 @@ need-qt() {
 	debug-print-function $FUNCNAME $*
 	QTVER="$1"
 
+	QT=qt
+
 	case $QTVER in
-	    2*)	newdepend "=x11-libs/qt-2.3*" ;;
-	    3*)	newdepend ">=x11-libs/qt-3" ;;
+	    2*)	newdepend "=x11-libs/${QT}-2.3*" ;;
+	    3*)	newdepend ">=x11-libs/${QT}-3" ;;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
 
@@ -220,6 +222,7 @@ set-qtdir() {
 
 	debug-print-function $FUNCNAME $*
 
+
 	# select 1st element in dot-separated string
 	IFSBACKUP=$IFS
 	IFS="."
@@ -230,6 +233,7 @@ set-qtdir() {
 	IFS=$IFSBACKUP
 
 	export QTDIR="/usr/qt/$QTMAJORVER"
+
 
 }
 
@@ -315,6 +319,8 @@ kde_sandbox_patch() {
 # $2: flag to remove
 kde_remove_flag() {
     
+    debug-print-function $FUNCNAME $*
+
     cd ${S}/${1} || die
     [ -n "$2" ] || die
     
@@ -323,5 +329,13 @@ kde_remove_flag() {
 /CXXFLAGS/ s/${2}//g" Makefile.orig > Makefile
 
     cd $OLDPWD
+    
+}
+
+
+# get new admin/ files
+kde-new-admin() {
+
+    SRC_URI="$SRC_URI mirror://gentoo/admin-new-20020826.tar.gz"
     
 }

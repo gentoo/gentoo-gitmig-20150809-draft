@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.53 2002/08/14 19:45:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.54 2002/08/26 09:49:54 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -45,7 +45,7 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
-			myconf="$myconf --prefix=${PREFIX} --host=${CHOST} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
+			myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
 			# calculate dependencies separately from compiling, enables ccache to work on kde compiles
 			myconf="$myconf --disable-dependency-tracking"
 			use qtmt 	&& myconf="$myconf --enable-mt"
@@ -55,6 +55,18 @@ kde_src_compile() {
 		configure)
 			debug-print-section configure
 			debug-print "$FUNCNAME::configure: myconf=$myconf"
+
+			# fix the infamous kde-widget problem group and other stuff
+			# by getting a new admin/ dir
+			if [ -d "$WORKDIR/admin-new" ]; then
+			
+			    cd $S/admin
+			    patch -p0 < $WORKDIR/admin-new/*
+			    # stop make from regenerating stuff
+			    touch -t 199001010000 acinclude.m4.in
+			    cd $S
+			    
+			fi
 
 			# This can happen with e.g. a cvs snapshot			
 			if [ ! -f "./configure" ]; then
@@ -67,12 +79,14 @@ kde_src_compile() {
 			fi
 
 			export PATH="${KDEDIR}/bin:${PATH}"
+			
+			cd $S
 			./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
 			;;
 		make)
 			export PATH="${KDEDIR}/bin:${PATH}"
 			debug-print-section make
-			 emake || die "died running emake, $FUNCNAME:make"
+			emake || die "died running emake, $FUNCNAME:make"
 			;;
 		all)
 			debug-print-section all
