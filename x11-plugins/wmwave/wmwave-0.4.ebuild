@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.4 2004/07/17 15:19:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.5 2004/08/01 23:27:42 s4t4n Exp $
 
 IUSE=""
 S="${WORKDIR}/wmwave"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 DESCRIPTION="wmwave is a dockapp that displays quality, link, level and noise of an iee802.11 (wavelan) connection."
 SRC_URI="mirror://sourceforge/wmwave/${PN}-0-4.tgz"
 HOMEPAGE="http://wmwave.sourceforge.net/"
