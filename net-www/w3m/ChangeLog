@@ -1,8 +1,11 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.21 2003/03/11 03:08:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.22 2003/03/30 21:53:11 joker Exp $
 
 *w3m-0.4 (05 Mar 2003)
+
+  30 Mar 2003; Christian Birchinger <joker@gentoo.org> w3m-0.4.ebuild:
+  Added sparc stable keyword
 
   10 Mar 2003; Aron Griffis <agriffis@gentoo.org> w3m-0.4.ebuild:
   Fix bug #17205 by answering compface question conditionally on "use imlib".
