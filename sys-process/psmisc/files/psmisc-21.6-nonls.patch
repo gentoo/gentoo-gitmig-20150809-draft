@@ -1,0 +1,14 @@
+--- psmisc-21.6/src/i18n.h	2004-11-09 06:25:15.000000000 -0500
++++ psmisc-21.6.nonls/src/i18n.h	2005-03-14 00:21:53.000000000 -0500
+@@ -13,6 +13,11 @@
+ #define _(String) gettext (String)
+ #else
+ #define _(String) (String)
++#define rpmatch(x) \
++	( (line == NULL) ? -1 : \
++	  (*line == 'y' || *line == 'Y') ? 1 : \
++	  (*line == 'n' || *line == 'N') ? 0 : \
++	  -1 )
+ #endif
+ 
+ #endif
