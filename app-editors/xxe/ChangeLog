@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/xxe
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.4 2003/11/11 16:50:22 rizzo Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.5 2004/02/26 14:47:16 rizzo Exp $
+
+*xxe-2.5_p2 (26 Feb 2004)
+
+  26 Feb 2004; Don Seiler <rizzo@gentoo.org>; xxe-2.3_p1.ebuild,
+  xxe-2.4.ebuild, xxe-2.5.ebuild, xxe-2.5_p2.ebuild:
+  Patch version bump upstream. Upstream has also pulled all older files, so it's
+  pointless for us to keep them.  Thanks Pascal Roussel for notification.
 
 *xxe-2.5 (11 Nov 2003)
 
