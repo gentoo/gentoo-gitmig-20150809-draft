@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.9 2004/06/03 17:00:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.10 2004/06/13 04:12:03 tgall Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~x86 ~ppc sparc ~mips ~alpha arm ~hppa amd64 ~ia64 s390"
+KEYWORDS="~x86 ~ppc sparc ~mips ~alpha arm ~hppa amd64 ~ia64 s390 ppc64"
 IUSE="gdbm ldap mysql postgres kerberos static ssl java pam"
 
 RDEPEND="virtual/glibc
@@ -91,6 +91,7 @@ src_compile() {
 
 	# Detect mips systems properly.
 	use mips && gnuconfig_update
+	use ppc64 && gnuconfig_update
 
 	econf \
 		--with-saslauthd=/var/lib/sasl2 \
