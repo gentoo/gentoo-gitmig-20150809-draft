@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.4.0.ebuild,v 1.10 2003/12/04 13:35:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.4.0.ebuild,v 1.11 2003/12/13 22:22:27 foser Exp $
 
 inherit gnome2
 
-DESCRIPTION="rendering svg library"
-HOMEPAGE="http://www.gnome.org/"
+DESCRIPTION="SVG rendering library"
+HOMEPAGE="http://librsvg.sourceforge.net/"
 
 IUSE="doc zlib"
 SLOT="2"
