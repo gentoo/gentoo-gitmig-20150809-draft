@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.55 2003/03/04 21:34:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.56 2003/03/08 18:33:03 foser Exp $
+
+*gtk+-1.2.10-r10 (08 Mar 2003)
+
+  08 Mar 2003; foser <foser@gentoo.org> gtk+-1.2.10-r10.ebuild :
+  New patch to fix locale problems that have been bugging us for a long time
+  Patch done by Stanislav Brabec <sbrabec@suse.cz> 
+  Related gentoo bugs #10529, #16883
 
 *gtk+-2.2.1 (04 Feb 2003)
 
