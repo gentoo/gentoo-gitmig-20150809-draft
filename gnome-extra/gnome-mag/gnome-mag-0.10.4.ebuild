@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-mag/gnome-mag-0.10.4.ebuild,v 1.5 2004/01/29 03:07:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-mag/gnome-mag-0.10.4.ebuild,v 1.6 2004/02/02 03:28:21 avenj Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="x86 sparc hppa alpha ia64"
+KEYWORDS="x86 sparc hppa alpha ia64 ~amd64"
 
 IUSE="debug"
 
