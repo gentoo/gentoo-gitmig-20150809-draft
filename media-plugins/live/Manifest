@@ -1,9 +1,19 @@
-MD5 6b46b51d0accff4375adf7763c65ef6d ChangeLog 4627
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 67e951ed161d8e0653f6b2704e118732 ChangeLog 4723
 MD5 336def274ce31b4a5d97fc4e7a6045b2 live-2004.09.30.ebuild 1944
-MD5 a1b852f3ba27d6362a79462677209cee live-2004.03.27.ebuild 1908
-MD5 4e82bf97d32168eea2ec08b373aa5774 live-2004.07.20.ebuild 1916
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 ad8ee57b807e858f0f5d7de2c4caf587 files/digest-live-2004.09.30 67
-MD5 2351d6af96c8b0b3bd8bc5bd838b949c files/digest-live-2004.03.27 68
+MD5 4bb6f00228f2f1c5f415cd1dc49f273e live-2004.07.20.ebuild 1915
+MD5 a1b852f3ba27d6362a79462677209cee live-2004.03.27.ebuild 1908
 MD5 11468abfa77dd248fa59bc2adf5fae2c files/digest-live-2004.07.20 67
+MD5 ad8ee57b807e858f0f5d7de2c4caf587 files/digest-live-2004.09.30 67
 MD5 6bb1c32b2f11c1b8ebae9b31257982e8 files/gcc-3.3.patch 786
+MD5 2351d6af96c8b0b3bd8bc5bd838b949c files/digest-live-2004.03.27 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBeyORugEuf3OQ0akRAj5wAJ4+Br3WSZ0VcS7nqiSnY7qUwAIh0gCgnryA
+Y/hXp64/mf8bMxKoj8PQnBU=
+=gRJX
+-----END PGP SIGNATURE-----
