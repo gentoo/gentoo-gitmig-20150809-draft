@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/autoprofile
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.1 2004/05/26 02:52:18 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.2 2004/05/31 16:35:33 rizzo Exp $
+
+*autoprofile-2.06 (31 May 2004)
+
+  31 May 2004; Don Seiler <rizzo@gentoo.org>; +autoprofile-2.06.ebuild:
+  Version bump: 2.06 only works with gaim-0.78
 
 *autoprofile-2.04 (25 May 2004)
 
