@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/commonc++
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.13 2004/03/11 14:19:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.14 2004/03/12 02:54:32 mr_bones_ Exp $
+
+  11 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  commonc++-1.9.7-r2.ebuild, commonc++-1.9.7-r3.ebuild:
+  inherit eutils for epatch
 
   11 Mar 2004; Luca Barbato <lu_zero@gentoo.org> commonc++-1.9.7-r3.ebuild:
   I didn't fix the behavour previously, now I workaround it.

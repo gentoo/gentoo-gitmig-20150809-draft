@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.10 2004/03/12 02:53:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.11 2004/03/12 02:54:32 mr_bones_ Exp $
+
+inherit eutils
 
 S=${WORKDIR}/CommonC++-1.9.7
 DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\
