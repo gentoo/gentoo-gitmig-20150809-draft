@@ -1,12 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Reviewed by Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.3 2002/04/01 02:55:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.4 2002/07/25 03:38:18 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-utils"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
+SLOT="0"
+KEYWORDS="x86 ppc"
+LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
 	=dev-util/guile-1.4*
