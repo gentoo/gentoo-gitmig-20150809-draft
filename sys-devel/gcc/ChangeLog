@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.263 2004/06/04 14:41:56 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.264 2004/06/04 15:27:38 lv Exp $
+
+  04 Jun 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r6.ebuild:
+  stable on amd64
 
   04 Jun 2004; Brandon Hale <tseng@gentoo.org>
   +files/3.3.3/gcc-3.3.3-libiberty-pic.patch, gcc-3.3.3-r6.ebuild:

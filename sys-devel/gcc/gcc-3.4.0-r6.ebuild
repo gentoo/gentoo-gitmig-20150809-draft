@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.6 2004/06/04 03:35:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.7 2004/06/04 15:27:38 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc n32 n64"
 
@@ -131,7 +131,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-* ~amd64 ~mips ppc64"
+KEYWORDS="-* amd64 ~mips ppc64"
 #KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
 
 # Ok, this is a hairy one again, but lets assume that we
