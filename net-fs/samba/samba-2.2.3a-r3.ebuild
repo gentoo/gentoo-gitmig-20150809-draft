@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.3a-r2.ebuild,v 1.1 2002/03/27 22:54:21 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.3a-r3.ebuild,v 1.1 2002/05/04 03:29:35 woodchip Exp $
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://samba.org http://www.amherst.edu/~bbstone/howto/samba.html"
@@ -20,6 +19,8 @@ RDEPEND="virtual/glibc
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_unpack() {
 	unpack ${P}.tar.gz ; cd ${S}
