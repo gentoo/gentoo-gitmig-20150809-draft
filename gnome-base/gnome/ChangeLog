@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.30 2002/06/29 09:23:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.31 2002/07/16 20:05:22 stroke Exp $
+
+*gnome-2.0.0-r1 (16 Jul 2002)
+  16 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-2.0.0-r1.ebuild :
+  Few packages in the list have been updated. Debugging is still there.
 
 *gnome-2.0.0 (27 Jun 2002)
   27 Jun 2002; Spider <spider@gentoo.org> gnome-2.0.0.ebuild :

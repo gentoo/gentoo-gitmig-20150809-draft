@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0_rc2.ebuild,v 1.2 2002/06/23 02:49:44 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0-r1.ebuild,v 1.1 2002/07/16 20:05:22 stroke Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -24,29 +24,32 @@ HOMEPAGE="http://www.gnome.org/"
 # after the blank line are the "complete" list we use for gnome2 betas
 
 RDEPEND="!gnome-base/gnome-core
-	>=x11-wm/metacity-2.3.987
-	>=gnome-base/gnome-session-2.0.1
+	>=x11-wm/metacity-2.3.987-r2
+	>=gnome-base/gnome-session-2.0.2-r1
 	>=gnome-extra/bug-buddy-2.2.0
-	>=gnome-base/gdm-2.4.0.0
-	>=media-gfx/eog-1.0.1
-	>=app-editors/gedit-2.0.0
+	>=gnome-base/gdm-2.4.0.1
+	>=media-gfx/eog-1.0.1-r2
+	>=app-editors/gedit-2.0.1-r1
 	>=gnome-extra/yelp-1.0.1
-	>=gnome-base/nautilus-2.0.0-r1
-	>=x11-terms/gnome-terminal-2.0.0
-	>=gnome-base/gnome-applets-2.0.0
+	>=gnome-base/nautilus-2.0.0-r3
+	>=x11-terms/gnome-terminal-2.0.0-r1
+	>=gnome-base/gnome-applets-2.0.0-r1
 	>=gnome-base/control-center-2.0.0
 	>=gnome-extra/gnome-utils-2.0.0
 	>=gnome-extra/gnome-media-2.0.0
-	>=gnome-extra/gnome-system-monitor-2.0.0
+	>=gnome-extra/gnome-system-monitor-2.0.0-r1
 	>=gnome-extra/gnome-games-2.0.1
+	>=gnome-extra/gconf-editor-0.2
+	gnome-extra/gnome2-user-docs
+
 
 	>=x11-libs/gtk+-2.0.5
 	>=x11-libs/pango-1.0.3
 	>=dev-libs/atk-1.0.2
 	>=dev-libs/glib-2.0.4
 	>=gnome-base/eel-2.0.0-r1
-	>=gnome-base/gnome-panel-2.0.1
-	>=gnome-base/gnome-desktop-2.0.1
+	>=gnome-base/gnome-panel-2.0.2
+	>=gnome-base/gnome-desktop-2.0.3
 	>=gnome-base/gnome-vfs-2.0.1
 	>=gnome-base/libbonoboui-2.0.0
 	>=gnome-base/libbonobo-2.0.0
@@ -55,8 +58,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnomecanvas-2.0.1
 	>=gnome-base/libgnomeui-2.0.1
 	>=gnome-base/bonobo-activation-1.0.2
-	>=net-libs/linc-0.5.0
-	>=x11-libs/libzvt-2.0.0
+	>=net-libs/linc-0.5.0-r1
+	>=x11-libs/libzvt-2.0.1
 	>=gnome-base/libglade-2.0.0
-	>=x11-libs/libwnck-0.14"
+	>=x11-libs/libwnck-0.14-r1
+	>=gnome-base/ORBit2-2.4.0-r1"
 
