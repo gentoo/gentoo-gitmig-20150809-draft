@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/xnap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xnap/ChangeLog,v 1.5 2004/08/11 17:55:44 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xnap/ChangeLog,v 1.6 2004/09/11 17:06:24 squinky86 Exp $
+
+  11 Sep 2004; Jon Hood <squinky86@gentoo.org> xnap-2.5-r3.ebuild:
+  Stable on x86,
 
 *xnap-2.5-r3 (11 Aug 2004)
 
