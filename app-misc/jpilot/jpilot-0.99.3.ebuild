@@ -1,24 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.2.ebuild,v 1.9 2002/10/20 18:40:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.3.ebuild,v 1.1 2002/11/18 05:35:36 blocke Exp $
 
-SYNCMAL="0.62.2"
+SYNCMAL="0.71"
 MALSYNC="2.0.7"
 S=${WORKDIR}/${P}
 DESCRIPTION="Desktop Organizer Software for the Palm Pilot"
-SRC_URI="http://jpilot.org/${P}.tar.gz http://www.tomw.org/malsync/malsync_${MALSYNC}.src.tar.gz http://people.atl.mediaone.net/jasonday/code/syncmal/jpilot-syncmal_${SYNCMAL}.tar.gz"
+SRC_URI="http://jpilot.org/${P}.tar.gz
+	http://www.tomw.org/malsync/malsync_${MALSYNC}.src.tar.gz
+	http://jasonday.home.att.net/code/syncmal/jpilot-syncmal_${SYNCMAL}.tar.gz"
 HOMEPAGE="http://jpilot.org/"
 IUSE="nls"
 
 # In order to use the malsync plugin you'll need to refer to the homepage
-# for jpilot-syncmal http://people.atl.mediaone.net/jasonday/code/syncmal/
+# for jpilot-syncmal http://jasonday.home.att.net/code/syncmal/
 # And you'll also need an avangto account. 
 
-DEPEND="=x11-libs/gtk+-1.2* >=dev-libs/pilot-link-0.9.5"
+DEPEND="=x11-libs/gtk+-1.2* >=dev-libs/pilot-link-0.11.5"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -29,12 +31,9 @@ src_unpack() {
 }
 
 src_compile() {
+	use nls || NLS_OPTION="--disable-nls"
 
-	if [ -z "`use nls`" ] ; then
-		NLS_OPTION="--disable-nls"
-	fi
-
-	./configure --prefix=/usr --host=${CHOST} ${NLS_OPTION} || die
+	econf ${NLS_OPTION} || die
 
 	# make sure we use $CFLAGS
 	mv Makefile Makefile.old
@@ -44,7 +43,7 @@ src_compile() {
 
 	# build malsync plugin
 	cd ${S}/jpilot-syncmal_${SYNCMAL}
-	./configure --prefix=/usr --host=${CHOST} || die
+	econf || die
 	emake || die
 }
 
@@ -52,7 +51,7 @@ src_install() {
 	# work around for broken Makefile
 	dodir /usr/bin
 
-	make prefix=${D}/usr install
+	einstall || die
 
 	insinto /usr/lib/jpilot/plugins
 	doins jpilot-syncmal_${SYNCMAL}/.libs/libsyncmal.so

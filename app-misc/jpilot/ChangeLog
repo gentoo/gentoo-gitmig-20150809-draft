@@ -1,15 +1,20 @@
 # ChangeLog for app-misc/jpilot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.5 2002/10/17 14:16:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.6 2002/11/18 05:35:36 blocke Exp $
 
-  22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
-  Fixed Various to make package Repoman Complaint.
+*jpilot-0.99.3 (18 Nov 2002)
+
+  18 Nov 2002; Bruce A. Locke <blocke@shivan.org> jpilot-0.99.3.ebuild:
+  Version bump and pilot-link version dependency bump (see bug #9640)
 
 *jpilot-0.99.2-r1 (27 May 2002)
 
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> jpilot-0.99.2-r1.ebuild :
   Added IUSE.
  
+  22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  Fixed Various to make package Repoman Complaint.
+
   27 May 2002; Seemant Kulleen <seemant@gentoo.org> jpilot-0.99.2-r1.ebuild
   files/digest-jpilot-0.99.2-r1 :
 
@@ -34,10 +39,3 @@
 
 *jpilot-0.99-r2 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
