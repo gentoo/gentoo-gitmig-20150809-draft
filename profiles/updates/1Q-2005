@@ -1,4 +1,3 @@
-move net-mail/poppassd_pam net-mail/poppassd_ceti
 move net-zope/simpletal dev-python/simpletal
 move x11-base/xfree x11-base/xorg-x11
 move net-dialup/hsflinmodem net-dialup/hsfmodem
@@ -12,3 +11,4 @@ move games-emulation/mupen-blight-uhleaudio games-emulation/mupen64-blight-uhlea
 move games-emulation/mupen64-blight-glN64 games-emulation/mupen64-glN64
 move sci-biology/njplot-unrooted sci-biology/njplot
 move www-proxy/dnrd net-dns/dnrd
+move net-mail/poppassd_pam net-mail/poppassd_ceti
