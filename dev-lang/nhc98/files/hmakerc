@@ -1,0 +1,23 @@
+HmakeConfig
+  { defaultCompiler = "/usr/bin/nhc98"
+  , knownCompilers =
+    [ CompilerConfig
+      { compilerStyle = nhc98
+      , compilerPath = "/usr/bin/nhc98"
+      , compilerVersion = "v1.12"
+      , includePaths = ["/usr/include/nhc98"]
+      , cppSymbols = ["__NHC__"]
+      , extraCompilerFlags = []
+      , isHaskell98 = True
+      }
+    , CompilerConfig
+      { compilerStyle = nhc98
+      , compilerPath = "nhc98"
+      , compilerVersion = "v1.12"
+      , includePaths = ["/usr/include/nhc98"]
+      , cppSymbols = ["__NHC__"]
+      , extraCompilerFlags = []
+      , isHaskell98 = True
+      }
+    ]
+  }
