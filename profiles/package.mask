@@ -302,11 +302,12 @@ media-video/kxine
 #>=sys-apps/groff-1.17
 
 
-# <blizzy@gentoo.org> (28 Jul 2002)
-# new version, please test!
+# <mcummings@gentoo.org> (28 Jul 2002)
+# new version of perl - incompatible with 5.6 IO model
 # tested on 05 Aug 2002 on ppc by pvdabeel@gentoo.org
 # make test failed on ppc
-=sys-devel/perl-5.8.0
+# added -r1, threads and fixes to ebuild - 08/10/02
+>=sys-devel/perl-5.8.0
 
 # <raker@gentoo.org> (26 Jul 2002)
 # New libgda masked for testing.
