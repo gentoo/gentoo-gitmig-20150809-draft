@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-fchksum
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.13 2003/09/17 19:14:01 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.14 2003/10/02 22:38:42 liquidx Exp $
+
+*python-fchksum-1.7.1 (02 Oct 2003)
+
+  02 Oct 2003; Alastair Tse <liquidx@gentoo.org> python-fchksum-1.7.1.ebuild:
+  version bump. nothing changed with fmd5t() so it should be safe for all
+  archs. needs testing though.
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> :
   ia64 keywords.
