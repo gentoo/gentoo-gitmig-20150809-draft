@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptplug
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.5 2004/01/04 15:23:22 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.6 2004/01/08 02:25:23 avenj Exp $
+
+  07 Jan 2004; Jon Portnoy <avenj@gentoo.org> cryptplug-0.3.15.ebuild :
+  AMD64 keywords.
 
   04 Jan 2004; Jason Wever <weeve@gentoo.org> cryptplug-0.3.15.ebuild:
   Added ~sparc keyword.
