@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.53 2004/11/21 23:02:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.54 2004/11/25 19:28:28 lv Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -275,17 +275,81 @@ SRC_URI="$(get_gcc_src_uri)"
 # 3) SSP by default
 hardened_gcc_works() {
 	if [ "$1" == "pie" ] ; then
-		local tocheck=${HARDENED_PIE_WORKS}
+		hardened_gcc_is_stable pie && return 0
+		if has ~${ARCH} ${ACCEPT_KEYWORDS} ; then
+			hardened_gcc_check_unsupported pie && return 1
+			ewarn "Allowing pie-by-default for an unstable arch (${ARCH})"
+			return 0
+		fi
+		return 1
 	elif [ "$1" == "ssp" ] ; then
-		local tocheck=${HARDENED_SSP_WORKS}
+		hardened_gcc_is_stable ssp && return 0
+		if has ~${ARCH} ${ACCEPT_KEYWORDS} ; then
+			hardened_gcc_check_unsupported ssp && return 1
+			ewarn "Allowing ssp-by-default for an unstable arch (${ARCH})"
+			return 0
+		fi
+		return 1
 	else
-		local tocheck=${HARDENED_GCC_WORKS}
+		# laziness ;)
+		hardened_gcc_works pie || return 1
+		hardened_gcc_works ssp || return 1
+		return 0
+	fi
+}
+
+hardened_gcc_is_stable() {
+	if [ "$1" == "pie" ] ; then
+		# HARDENED_* variables are deprecated and here for compatibility
+		local tocheck="${HARDENED_PIE_WORKS} ${HARDENED_GCC_WORKS}"
+		if use uclibc ; then
+			tocheck="${tocheck} ${PIE_UCLIBC_STABLE}"
+		else
+			tocheck="${tocheck} ${PIE_GLIBC_STABLE}"
+		fi
+	elif [ "$1" == "ssp" ] ; then
+		# ditto
+		local tocheck="${HARDENED_SSP_WORKS} ${HARDENED_GCC_WORKS}"
+		if use uclibc ; then
+			tocheck="${tocheck} ${SSP_UCLIBC_STABLE}"
+		else
+			tocheck="${tocheck} ${SSP_STABLE}"
+		fi
+	else
+		die "hardened_gcc_stable needs to be called with pie or ssp"
 	fi
 
-	for myarch in ${tocheck}
-	do
-		[ "${ARCH}" == "${myarch}" ] && return 0
-	done
+	hasq ${ARCH} ${tocheck} && return 0
+	return 1
+}
+
+hardened_gcc_check_unsupported() {
+	local tocheck=""
+	# if a variable is unset, we assume that all archs are unsupported. since
+	# this function is never called if hardened_gcc_is_stable returns true,
+	# this shouldn't cause problems... however, allowing this logic to work
+	# even with the variables unset will break older ebuilds that dont use them.
+	if [ "$1" == "pie" ] ; then
+		if use uclibc ; then
+			[ "${PIE_UCLIBC_UNSUPPORTED:-unset}" == "unset" ] && return 0
+			tocheck="${tocheck} ${PIE_UCLIBC_UNSUPPORTED}"
+		else
+			[ "${PIE_GLIBC_UNSUPPORTED:-unset}" == "unset" ] && return 0
+			tocheck="${tocheck} ${PIE_GLIBC_UNSUPPORTED}"
+		fi
+	elif [ "$1" == "ssp" ] ; then
+		if use uclibc ; then
+			[ "${SSP_UCLIBC_UNSUPPORTED:-unset}" == "unset" ] && return 0
+			tocheck="${tocheck} ${SSP_UCLIBC_UNSUPPORTED}"
+		else
+			[ "${SSP_UNSUPPORTED:-unset}" == "unset" ] && return 0
+			tocheck="${tocheck} ${SSP_UNSUPPORTED}"
+		fi
+	else
+		die "hardened_gcc_check_unsupported needs to be called with pie or ssp"
+	fi
+
+	hasq ${ARCH} ${tocheck} && return 0
 	return 1
 }
 
