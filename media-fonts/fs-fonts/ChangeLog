@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/fs-fonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/fs-fonts/ChangeLog,v 1.1 2004/10/22 09:46:12 usata Exp $
+
+*fs-fonts-0.1_alpha3 (22 Oct 2004)
+
+  22 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +fs-fonts-0.1_alpha3.ebuild:
+  Initial import.
+

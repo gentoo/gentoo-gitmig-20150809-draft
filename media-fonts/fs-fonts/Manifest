@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c58d7841cc1d3e4f2b99b57bd19f37aa fs-fonts-0.1_alpha3.ebuild 770
+MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
+MD5 d10c43ddbc15f1606bdea03e603492b2 ChangeLog 362
+MD5 1159f975b85c5e8526a47e7214d29231 files/digest-fs-fonts-0.1_alpha3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBeNbuVWNWqTUmv+0RAnxqAKCGIytttObZAbVXH2Rg12YiBLwuUgCff+Ay
+/UTG0pw71gB8/GHaTc7iy/M=
+=mNEv
+-----END PGP SIGNATURE-----
