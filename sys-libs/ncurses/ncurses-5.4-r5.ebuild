@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.6 2004/09/21 14:40:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.7 2004/09/21 14:41:31 lanius Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -90,7 +90,8 @@ src_install() {
 	mv libform* libmenu* libpanel* *.a ${D}/usr/$(get_libdir)
 
 	if use unicode ; then
-		gen_usr_ldscript libncursesw.so
+		gen_usr_ldscript libncursesw.so || die "gen_usr_ldscript failed"
+		gen_usr_ldscript libcursesw.so || die "gen_usr_ldscript failed"
 		for i in ${D}/usr/$(get_libdir)/*w.*; do
 			local libncurses=${i/${D}/}
 			dosym ${libncurses} ${libncurses/w./.}
