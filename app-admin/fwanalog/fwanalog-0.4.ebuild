@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/fwanalog-0.4.ebuild,v 1.1 2001/10/02 07:47:57 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/fwanalog-0.4.ebuild,v 1.2 2001/10/10 20:20:26 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Script to parse firewall logs and analyze them with Analog"
@@ -10,17 +10,18 @@ HOMEPAGE="http://tud.at/programm/fwanalog/"
 
 DEPEND="" # this is just a bash script
 RDEPEND="virtual/glibc
-         sys-apps/bash
-         sys-apps/grep
-         sys-apps/gawk
-         sys-apps/sed
-         sys-apps/gzip
-         sys-apps/diffutils
-	 sys-devel/perl
-         >=app-admin/analog-5.03"
+	sys-apps/bash
+	sys-apps/grep
+	sys-apps/gawk
+	sys-apps/sed
+	sys-apps/gzip
+	sys-apps/diffutils
+	sys-devel/perl
+	>=app-admin/analog-5.03"
 
 src_install () {
 	insinto /etc/fwanalog
+
 	insopts -m0700 ; doins fwanalog.sh
 
 	insopts -m0600
